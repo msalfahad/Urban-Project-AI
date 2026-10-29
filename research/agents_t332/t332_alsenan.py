@@ -334,6 +334,34 @@ def _rows_csv(rows, cols):
     return s.getvalue()
 
 
+FILL_COLS = ["line_id", "item_code", "line_state", "status", "alternative", "method", "faces", "m2", "lo", "hi",
+             "held_from", "bound_classes", "face_ids"]
+
+
+def fill_rows_of(fill, after):
+    """The FILL rows T-199 consumes unchanged; every row passes R.check_fill_row (R-T332-8: held never printed as 0)."""
+    by_id = {x["face_id"]: x for x in after}
+    rows = []
+    for lid, e in fill.items():
+        for k, v in sorted(e["totals"].items()):
+            st, alt, m = k.split("|")
+            fids = [fid for fid in e["faces"] if R.key(by_id[fid]) == k]
+            row = {"line_id": lid, "item_code": e["item_code"], "line_state": e["line_state"], "status": st,
+                   "alternative": alt, "method": m, "faces": v["faces"], "m2": v["m2"], "lo": v["lo"], "hi": v["hi"],
+                   "held_from": v["held_from"], "bound_classes": v["bound_classes"], "face_ids": " ".join(fids)}
+            R.check_fill_row(row, [by_id[f] for f in fids])
+            rows.append(row)
+    return rows
+
+
+def fill_csv(rows, faces_by_id):
+    """Write the FILL table and re-read it: a printed number that no face carries (a held face as 0.000000) is refused."""
+    text = _rows_csv(rows, FILL_COLS)
+    for r in csv.DictReader(io.StringIO(text)):
+        R.check_fill_row(r, [faces_by_id[f] for f in r["face_ids"].split()])
+    return text
+
+
 FACE_COLS = ["face_id", "element", "floor", "item", "face_kind", "contact", "alternative", "method", "status",
              "m2", "lo", "hi", "held_from", "line_id", "element_id", "r5_line_state", "tie", "new_line_id",
              "new_item_code", "new_state", "tie_reason", "rule", "delta_cause", "delta_source", "basis_note"]
@@ -346,15 +374,7 @@ def outputs(B):
         s = src.get(r["face_id"])
         r.setdefault("r5_line_state", "" if s is None else s.get("r5_line_state", ""))
     fill = R.fill_table(after)
-    fill_rows = []
-    for lid, e in fill.items():
-        for k, v in sorted(e["totals"].items()):
-            st, alt, m = k.split("|")
-            fill_rows.append({"line_id": lid, "item_code": e["item_code"], "line_state": e["line_state"], "status": st,
-                              "alternative": alt, "method": m, "faces": v["faces"], "m2": v["m2"], "lo": v["lo"],
-                              "hi": v["hi"], "held_from": v["held_from"],
-                              "face_ids": " ".join(fid for fid in e["faces"]
-                                                   if R.key(next(x for x in after if x["face_id"] == fid)) == k)})
+    fill_rows = fill_rows_of(fill, after)
     no_line = [r for r in after if r.get("tie") not in ("SAME", "REBOUND") and r.get("status") != "REMOVED"]
     rebound = [r for r in after if r.get("tie") == "REBOUND"]
     held_by_state = [r for r in after if "R-T332-2" in (r.get("rule") or "")]
@@ -395,8 +415,7 @@ def outputs(B):
                 "no_line": [{c: r.get(c) for c in FACE_COLS} for r in sorted(no_line, key=lambda r: r["face_id"])]}
     return {
         "FORMWORK_T332_BY_FACE.csv": _rows_csv(sorted(after, key=lambda r: r["face_id"]), FACE_COLS),
-        "T199_FILL_T332.csv": _rows_csv(fill_rows, ["line_id", "item_code", "line_state", "status", "alternative", "method",
-                                                    "faces", "m2", "lo", "hi", "held_from", "face_ids"]),
+        "T199_FILL_T332.csv": fill_csv(fill_rows, {x["face_id"]: x for x in after}),
         "T199_FORMWORK_BY_LINE_T332.json": json.dumps(consumer, indent=1, sort_keys=True) + "\n",
         "summary_t332.json": json.dumps(summary, indent=1, sort_keys=True) + "\n",
     }

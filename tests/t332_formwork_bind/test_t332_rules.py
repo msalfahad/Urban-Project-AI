@@ -65,7 +65,11 @@ def test_normal_rebind_same_lines():
     assert t["HELD||G"]["m2"] == 0.0 and t["HELD||G"]["faces"] == 1
     fill = R.fill_table(out)
     assert fill["L-B2"]["totals"]["CALCULATED||G"]["m2"] == pytest.approx(0.900)  # the edge band on the beam line
-    assert "L-P1" in fill and fill["L-P1"]["totals"]["HELD||G"]["m2"] == 0.0
+    # R-T332-8 (rework r2, D-T332-1): the held pit face is BLANK in the FILL table, never 0 (r1 asserted 0.0 here)
+    assert "L-P1" in fill and fill["L-P1"]["totals"]["HELD||G"]["m2"] is None
+    assert fill["L-P1"]["totals"]["HELD||G"]["lo"] is None and fill["L-P1"]["totals"]["HELD||G"]["hi"] is None
+    assert fill["L-P1"]["totals"]["HELD||G"]["bound_classes"] == "UNBOUNDED 1"
+    assert fill["L-B1"]["totals"]["CALCULATED||G"]["lo"] is None      # no face carries a range: blank, not 0
 
 
 def test_rebind_by_element_and_no_line():
@@ -209,3 +213,68 @@ def test_mirror_and_order_invariant():
     assert a == b
     # mirrored villa (x -> -x): face areas do not depend on orientation
     assert R.fill_table(R.rebind(faces(), LINES_OLD)) == R.fill_table(R.rebind(list(reversed(faces())), LINES_OLD))
+
+
+# ---- R-T332-8 FILL aggregate (rework r2 of D-T332-1: missing never becomes 0) ----------------------------------------
+
+def _held(fid, **kw):
+    return dict({"face_id": fid, "line_id": "L-P1", "element_id": "PIT:P1", "element": "PIT_WALL", "face_kind": "SIDE",
+                 "contact": "FORM", "alternative": "", "method": "G", "status": "HELD", "m2": None}, **kw)
+
+
+def _fill(fs):
+    return R.fill_table(R.rebind(fs, LINES_OLD))["L-P1"]["totals"]["HELD||G"]
+
+
+def test_fill_held_range_rows_sum_their_bounds():
+    # P1 inner 4.800 m2/m, two printed candidate heights 1.00 .. 1.50 m -> 4.800 .. 7.200; outer 6.400 .. 9.600
+    v = _fill([_held("A", lo=4.800, hi=7.200), _held("B", lo=6.400, hi=9.600)])
+    assert v["m2"] is None
+    assert v["lo"] == pytest.approx(11.200) and v["hi"] == pytest.approx(16.800)
+    assert v["held_from"] is None and v["bound_classes"] == "RANGE 2"
+
+
+def test_fill_unbounded_face_blanks_the_row_range():
+    # adverse: one face of the row has no bound -> the row range is unknown (the old writer printed 4.800 .. 7.200)
+    v = _fill([_held("A", lo=4.800, hi=7.200), _held("B")])
+    assert v["m2"] is None and v["lo"] is None and v["hi"] is None
+    assert v["bound_classes"] == "RANGE 1; UNBOUNDED 1"
+
+
+def test_fill_single_bound_faces_blank_the_end_they_lack():
+    v = _fill([_held("A", lo=4.800, hi=7.200), _held("B", hi=9.600)])          # AT_MOST: no low end
+    assert v["lo"] is None and v["hi"] == pytest.approx(16.800)
+    v = _fill([_held("A", lo=4.800, hi=7.200), _held("B", lo=6.400)])          # AT_LEAST: no high end
+    assert v["lo"] == pytest.approx(11.200) and v["hi"] is None
+
+
+def test_fill_held_from_kept_apart_from_the_range():
+    v = _fill([_held("A", lo=4.800, hi=7.200), _held("B", held_from=0.900)])
+    assert (v["lo"], v["hi"], v["held_from"]) == (pytest.approx(4.800), pytest.approx(7.200), pytest.approx(0.900))
+    v = _fill([_held("B", held_from=0.900)])
+    assert v["lo"] is None and v["hi"] is None and v["held_from"] == pytest.approx(0.900)
+
+
+@pytest.mark.parametrize("bad", [
+    {"m2": 0.0}, {"m2": "0.000000"}, {"lo": 0.0, "hi": 0.0}, {"lo": "0.000000"}, {"hi": "0.000000"},
+    {"held_from": "0.000000"},
+])
+def test_adverse_fill_writer_printing_a_held_unbounded_face_as_zero_refused(bad):
+    face = _held("R-UNB")
+    row = dict({"line_id": "L-P1", "status": "HELD", "m2": "", "lo": "", "hi": "", "held_from": ""}, **bad)
+    with pytest.raises(R.BindError, match="FILL L-P1"):
+        R.check_fill_row(row, [face])
+
+
+def test_fill_writer_accepts_the_correct_rows():
+    R.check_fill_row({"line_id": "L-P1", "status": "HELD", "m2": "", "lo": "", "hi": "", "held_from": ""}, [_held("U")])
+    R.check_fill_row({"line_id": "L-P1", "status": "HELD", "m2": "", "lo": "0.000000", "hi": "4.800000",
+                      "held_from": ""}, [_held("J", lo=0.0, hi=4.8)])      # a face's own printed 0 low end is kept
+    R.check_fill_row({"line_id": "L-B1", "status": "CALCULATED", "m2": "0.800000", "lo": "", "hi": "",
+                      "held_from": ""}, [faces()[2]])
+
+
+def test_adverse_fill_row_mixing_valued_and_blank_faces_refused():
+    a, b = dict(faces()[2]), dict(faces()[3], m2=None)
+    with pytest.raises(R.BindError, match="mixes valued and blank"):
+        R._aggregate([a, b])

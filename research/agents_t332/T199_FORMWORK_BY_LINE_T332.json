@@ -37,11 +37,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -242,17 +243,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.964
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 5",
      "faces": 5,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.409512
     }
    }
@@ -319,17 +322,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.6
     }
    }
@@ -504,25 +509,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.354296
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.930244
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.033996,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -588,18 +596,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.4674
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.253239,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -746,17 +756,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.04
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.980167
     }
    }
@@ -931,18 +943,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 5",
      "faces": 5,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.546233
     },
     "HELD||G": {
+     "bound_classes": "HELD_FROM 1",
      "faces": 1,
      "held_from": 0.045378,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -1008,17 +1022,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.02
     }
    }
@@ -1085,18 +1101,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "HELD_FROM 1",
      "faces": 1,
      "held_from": 2.38,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "NOT_APPLICABLE||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -1162,17 +1180,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.1
     }
    }
@@ -1320,17 +1340,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.118016
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.182445
     }
    }
@@ -1559,25 +1581,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.04375
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 4",
      "faces": 4,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.870502
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.907419,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -1616,10 +1641,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.3043
     }
    }
@@ -1686,17 +1712,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 13.455
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.4e-05
     }
    }
@@ -1763,10 +1791,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.3894
     }
    }
@@ -1887,18 +1916,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.94152,
      "lo": 1.45614,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.15,
      "lo": 0.06,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -1937,11 +1968,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.0,
      "lo": 0.75,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -2061,17 +2093,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.19
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.19
     }
    }
@@ -2192,17 +2226,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.089472
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.088972
     }
    }
@@ -2323,32 +2359,36 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.82
     },
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.82,
      "lo": 2.82,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -2387,10 +2427,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 15.1084
     }
    }
@@ -2457,18 +2498,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.92,
      "lo": 1.44,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.0,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -2588,11 +2631,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3; HELD_FROM 1",
      "faces": 4,
      "held_from": 0.036016,
      "hi": 6.500426,
      "lo": 4.870471,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -2658,17 +2702,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 13.485
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.000133
     }
    }
@@ -2708,10 +2754,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.16
     }
    }
@@ -2832,32 +2879,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.743091
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.35
     },
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.856909,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -2977,32 +3028,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.1825
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.1825
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -3122,17 +3177,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.96
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.96
     }
    }
@@ -3415,17 +3472,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 4",
      "faces": 4,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 15.454068
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 6",
      "faces": 6,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 17.064132
     }
    }
@@ -3546,17 +3605,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.9996
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.9996
     }
    }
@@ -3704,17 +3765,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.224
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.22357
     }
    }
@@ -3754,11 +3817,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.12,
      "lo": 2.053333,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -3824,18 +3888,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.96,
      "lo": 1.47,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -3955,18 +4021,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.0,
      "lo": 3.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.27,
      "lo": -0.36,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -4032,17 +4100,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.8555
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.7e-05
     }
    }
@@ -4109,17 +4179,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.01
     }
    }
@@ -4267,32 +4339,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.098008
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 15.982699
     },
     "HELD||E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 4.2,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -4358,18 +4434,20 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.22,
      "lo": 4.65,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.21,
      "lo": -0.35,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -4516,17 +4594,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.151007
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.417498
     }
    }
@@ -4593,10 +4673,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.062
     }
    }
@@ -4636,10 +4717,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     }
    }
@@ -4706,17 +4788,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.455
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9e-06
     }
    }
@@ -4864,17 +4948,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.0536
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.560392
     }
    }
@@ -4968,24 +5054,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.24
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.2136
     }
    }
@@ -5133,17 +5222,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.68
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.680334
     }
    }
@@ -5237,18 +5328,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.128
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 8.062,
      "lo": 6.912318,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -5368,18 +5461,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.005241
     },
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 8.121014,
      "lo": 7.609325,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -5445,17 +5540,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.36
     }
    }
@@ -5522,17 +5619,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.764
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.3e-05
     }
    }
@@ -5653,11 +5752,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3; HELD_FROM 1",
      "faces": 4,
      "held_from": 7.7e-05,
      "hi": 11.584204,
      "lo": 10.650578,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -5696,11 +5796,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.22,
      "lo": 3.04,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -5766,17 +5867,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.02
     }
    }
@@ -5897,17 +6000,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.224
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.1879
     }
    }
@@ -5947,10 +6052,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.8875
     }
    }
@@ -6017,10 +6123,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.935
     }
    }
@@ -6168,25 +6275,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.066146
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.409263
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.656868,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -6306,18 +6416,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.15
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.264,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -6383,11 +6495,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "AT_MOST 1; HELD_FROM 1",
      "faces": 2,
      "held_from": 0.1922,
      "hi": 5.32,
-     "lo": 0.0,
-     "m2": 0.0
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -6534,32 +6647,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.61
     },
     "HELD|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.805,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.285,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -6598,10 +6715,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0665
     }
    }
@@ -6776,32 +6894,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.36
     },
     "HELD|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 4.18,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.18,
      "lo": -0.405,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -6840,10 +6962,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     }
    }
@@ -6991,17 +7114,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.608
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.608018
     }
    }
@@ -7095,11 +7220,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.464,
      "lo": 5.18,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -7273,25 +7399,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.04
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.52
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.048,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -7384,10 +7513,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.088928
     }
    }
@@ -7454,17 +7584,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.52
     }
    }
@@ -7558,11 +7690,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.555045,
      "hi": 3.178188,
      "lo": 3.178188,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -7682,17 +7815,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.816
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.814691
     }
    }
@@ -7840,17 +7975,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.70694
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 12.188391
     }
    }
@@ -7998,17 +8135,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.778464
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.019533
     }
    }
@@ -8183,25 +8322,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.7
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.580005
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.599997,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -8348,17 +8490,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.476
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.588147
     }
    }
@@ -8398,10 +8542,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 11.7
     }
    }
@@ -8495,18 +8640,20 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.112002
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.243007,
      "lo": 5.243007,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -8626,18 +8773,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.194995
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.295,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -8703,17 +8852,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.4135
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.9e-05
     }
    }
@@ -8753,11 +8904,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -8796,10 +8948,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.0534
     }
    }
@@ -8893,11 +9046,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.560111,
      "lo": 5.512211,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -8990,24 +9144,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.8
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.1602
     }
    }
@@ -9155,17 +9312,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.224
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.511995
     }
    }
@@ -9205,10 +9364,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0488
     }
    }
@@ -9302,24 +9462,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.71
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.225
     }
    }
@@ -9413,18 +9576,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.16,
      "lo": 2.16,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -9517,25 +9682,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.599115
     },
     "HELD||E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.4,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -9682,17 +9850,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.292
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.241382
     }
    }
@@ -9786,11 +9956,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.001251,
      "hi": 3.900192,
      "lo": 3.900192,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -9829,10 +10000,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.3517
     }
    }
@@ -9899,17 +10071,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.235
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.6e-05
     }
    }
@@ -9976,17 +10150,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 18.0
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-05
     }
    }
@@ -10161,25 +10337,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 11.28714
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 12.036346
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.242,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -10245,18 +10424,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.44,
      "lo": 3.44,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -10457,25 +10638,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.516
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.628158
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.88799,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -10568,18 +10752,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -10645,18 +10831,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.0,
      "lo": 3.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -10776,17 +10964,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.551964
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.435987
     }
    }
@@ -10988,17 +11178,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.0931
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 5",
      "faces": 5,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.14258
     }
    }
@@ -11065,17 +11257,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.6836
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.5e-05
     }
    }
@@ -11250,25 +11444,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.656
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.140017
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.472,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -11388,18 +11585,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.32,
      "lo": 2.32,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.11,
      "lo": -0.14,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -11492,18 +11691,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.096
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.722,
      "lo": 4.854,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -11596,11 +11797,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 2e-06,
      "hi": 1.095006,
      "lo": 1.095006,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -11801,17 +12003,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.43325
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 5",
      "faces": 5,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.429326
     }
    }
@@ -11905,24 +12109,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.565
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.565
     }
    }
@@ -12070,17 +12277,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.666
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.616943
     }
    }
@@ -12147,18 +12356,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -12197,11 +12408,12 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -12240,10 +12452,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.0803
     }
    }
@@ -12364,17 +12577,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.732912
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.747129
     }
    }
@@ -12441,11 +12656,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 9.2283,
      "lo": 8.4203,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -12511,17 +12727,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.4
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-06
     }
    }
@@ -12642,11 +12860,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 9.645026,
      "lo": 7.547304,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -12712,17 +12931,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.6
     }
    }
@@ -12762,10 +12983,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.9374
     }
    }
@@ -12940,25 +13162,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.656
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.140592
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.472,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13051,11 +13276,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 9e-06,
      "hi": 0.690094,
      "lo": 0.690094,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13121,17 +13347,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.02
     }
    }
@@ -13306,25 +13534,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.813
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.808334
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.089666,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13417,11 +13648,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.128122,
      "lo": 7.080222,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13514,11 +13746,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.064134,
      "hi": 5.302493,
      "lo": 4.612493,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13584,17 +13817,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.38
     }
    }
@@ -13634,10 +13869,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 11.0285
     }
    }
@@ -13704,17 +13940,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.4
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8e-06
     }
    }
@@ -13781,18 +14019,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.0,
      "lo": 4.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -13858,17 +14098,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.5444
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.000128
     }
    }
@@ -14043,25 +14285,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.6013
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.927816
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.118,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -14289,25 +14534,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.379
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.385522
     },
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.902337,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -14400,24 +14648,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.0
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.5095
     }
    }
@@ -14592,25 +14843,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.836
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.188316
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.648,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -14730,17 +14984,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.816
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.766941
     }
    }
@@ -14780,10 +15036,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.6
     }
    }
@@ -14877,11 +15134,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.535933,
      "hi": 3.067069,
      "lo": 3.067069,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -15055,17 +15313,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.313
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 4",
      "faces": 4,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.812183
     }
    }
@@ -15105,11 +15365,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.14,
      "lo": 0.36,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -15148,11 +15409,12 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 110.328,
      "lo": 56.392,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -15245,24 +15507,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.085
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.085
     }
    }
@@ -15410,17 +15675,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.836
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.728334
     }
    }
@@ -15568,25 +15835,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.112646
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.579588
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.486542,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -15652,17 +15922,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 17.705
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.6e-05
     }
    }
@@ -15702,11 +15974,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -15799,18 +16072,20 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.722695
     },
     "HELD||G": {
+     "bound_classes": "HELD_FROM 1",
      "faces": 1,
      "held_from": 0.028653,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -15876,18 +16151,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.5818
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.289498,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -16034,17 +16311,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.646
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.699264
     }
    }
@@ -16111,10 +16390,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.8553
     }
    }
@@ -16208,11 +16488,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.064,
      "hi": 6.098052,
      "lo": 6.098052,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -16386,25 +16667,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.073
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.826316
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.087394,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -16470,18 +16754,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -16601,17 +16887,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.005992
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.949633
     }
    }
@@ -16813,25 +17101,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.74
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.922408
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.006,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -16924,10 +17215,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.438509
     }
    }
@@ -17048,32 +17340,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.963657
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.239008
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -17139,17 +17435,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.1176
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-06
     }
    }
@@ -17324,25 +17622,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.7
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.5
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.599905,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -17381,10 +17682,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.5725
     }
    }
@@ -17586,25 +17888,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.156
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.734956
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.53,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -17697,10 +18002,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.559993
     }
    }
@@ -17848,25 +18154,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 11.894442
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.789418
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.874472,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -17959,18 +18268,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.128007
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 9.5488,
      "lo": 8.3663,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -18090,17 +18401,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.52
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.51827
     }
    }
@@ -18167,18 +18480,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.44,
      "lo": 3.44,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -18298,17 +18613,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.784
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.784
     }
    }
@@ -18483,25 +18800,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.18575
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.503358
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.688838,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -18648,17 +18968,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.884
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.410529
     }
    }
@@ -18779,17 +19101,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.268
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.268
     }
    }
@@ -18910,11 +19234,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 1; HELD_FROM 2; UNBOUNDED 1",
      "faces": 4,
      "held_from": 5.706,
-     "hi": 1.562,
-     "lo": 1.44,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -19061,17 +19386,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.124
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.69199
     }
    }
@@ -19111,10 +19438,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.5223
     }
    }
@@ -19208,18 +19536,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 8.064,
      "lo": 8.064,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.24,
      "lo": -0.24,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -19312,10 +19642,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.66137
     }
    }
@@ -19463,17 +19794,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.513556
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.31274
     }
    }
@@ -19567,11 +19900,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.032067,
      "hi": 0.28,
      "lo": 0.28,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -19718,25 +20052,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 13.104
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.4215
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.3305,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -19802,11 +20139,12 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.346205,
      "lo": 6.346205,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -19872,17 +20210,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     }
    }
@@ -19922,10 +20262,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.5823
     }
    }
@@ -19965,11 +20306,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.16,
      "lo": 0.87,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -20008,11 +20350,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -20105,18 +20448,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.096
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.219,
      "lo": 5.125,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -20263,17 +20608,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.7886
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.259595
     }
    }
@@ -20367,11 +20714,12 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.11619,
      "lo": 7.086431,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -20410,10 +20758,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.0804
     }
    }
@@ -20507,11 +20856,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.717052,
      "lo": 6.9,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -20550,10 +20900,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.2148
     }
    }
@@ -20593,10 +20944,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.84
     }
    }
@@ -20744,17 +21096,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.058
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.058012
     }
    }
@@ -20821,17 +21175,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.64
     }
    }
@@ -20979,11 +21335,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 4; HELD_FROM 1",
      "faces": 5,
      "held_from": 7.7e-05,
      "hi": 1.935625,
      "lo": 1.935625,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21130,17 +21487,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.143
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.139429
     }
    }
@@ -21261,17 +21620,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.916
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.916
     }
    }
@@ -21392,18 +21753,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.032014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.895095,
      "lo": 5.792976,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21550,18 +21913,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.820014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.192073,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21654,11 +22019,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.212807,
      "hi": 0.226,
      "lo": 0.226,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21724,17 +22090,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.25
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-06
     }
    }
@@ -21828,18 +22196,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.08
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.98,
      "lo": 5.545933,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21932,18 +22302,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.096014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.09003,
      "lo": 7.09003,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -21982,10 +22354,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.3525
     }
    }
@@ -22052,18 +22425,20 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 24.15
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -22129,11 +22504,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.52168,
      "lo": 2.52168,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -22253,18 +22629,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.080019
     },
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.844461,
      "lo": 5.3225,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -22357,10 +22735,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.704922
     }
    }
@@ -22454,11 +22833,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "AT_MOST 1; HELD_FROM 2",
      "faces": 3,
      "held_from": 0.632116,
      "hi": 4.83,
-     "lo": 0.0,
-     "m2": 0.0
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -22497,10 +22877,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0315
     }
    }
@@ -22567,17 +22948,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.02
     }
    }
@@ -22725,17 +23108,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.803
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.992909
     }
    }
@@ -22883,17 +23268,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.922
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.022973
     }
    }
@@ -23041,17 +23428,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.928284
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.794378
     }
    }
@@ -23145,10 +23534,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.001
     }
    }
@@ -23215,18 +23605,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.6312,
      "lo": 0.4734,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.24,
      "lo": 0.18,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -23346,18 +23738,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.422014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.101985,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -23477,18 +23871,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.600007
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.119989,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -23608,17 +24004,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.857738
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.724102
     }
    }
@@ -23685,17 +24083,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 15.0
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.000124
     }
    }
@@ -23843,17 +24243,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.484
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.47677
     }
    }
@@ -23947,18 +24349,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.064
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.6043,
      "lo": 4.7363,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24132,25 +24536,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.836
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.188009
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.648,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24378,39 +24785,44 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.27
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.27
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.18,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24503,11 +24915,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 9.276688,
      "lo": 5.280567,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24546,11 +24959,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.522667,
      "lo": 2.456,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24643,11 +25057,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.064018,
      "hi": 5.792052,
      "lo": 5.792052,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -24713,17 +25128,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.52
     }
    }
@@ -24952,25 +25369,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.836
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.020158
     },
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.007989,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -25117,18 +25537,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.032
     },
     "HELD||G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.588015,
      "lo": 5.248,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -25221,11 +25643,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 8.347052,
      "lo": 7.875,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -25345,17 +25768,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.543816
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.608227
     }
    }
@@ -25503,17 +25928,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.04
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.040005
     }
    }
@@ -25607,18 +26034,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.04,
      "lo": 0.78,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.2,
      "lo": 0.15,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -25684,17 +26113,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.24
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.4e-05
     }
    }
@@ -25761,17 +26192,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.8
     }
    }
@@ -25865,11 +26298,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3",
      "faces": 3,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.268,
      "lo": 5.92,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -25962,10 +26396,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.888007
     }
    }
@@ -26032,18 +26467,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.68,
      "lo": 1.26,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -26082,10 +26519,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 12.3205
     }
    }
@@ -26152,17 +26590,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.1402
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-05
     }
    }
@@ -26202,11 +26642,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -26407,25 +26848,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.89
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.812739
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.474218,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -26545,11 +26989,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 2",
      "faces": 4,
      "held_from": 0.201192,
      "hi": 0.251489,
      "lo": 0.251489,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -26615,17 +27060,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.3009
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.3e-05
     }
    }
@@ -26773,17 +27220,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.701632
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.100018
     }
    }
@@ -26931,17 +27380,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.816
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.816334
     }
    }
@@ -27089,11 +27540,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 5",
      "faces": 5,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 7.212026,
      "lo": 6.739793,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -27132,10 +27584,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.2205
     }
    }
@@ -27202,17 +27655,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.2878
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.3e-05
     }
    }
@@ -27333,17 +27788,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.284658
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.197365
     }
    }
@@ -27464,17 +27921,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.04
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.039754
     }
    }
@@ -27568,25 +28027,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.6064
     },
     "HELD|OQ10_SOFFIT|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.629,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -27733,17 +28195,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.484
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.713057
     }
    }
@@ -27783,10 +28247,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.7619
     }
    }
@@ -27880,18 +28345,20 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -27930,11 +28397,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -28081,17 +28549,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.398
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.36507
     }
    }
@@ -28266,25 +28736,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.224
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.512
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.096,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -28350,17 +28823,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.7
     }
    }
@@ -28481,17 +28956,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.244
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.244
     }
    }
@@ -28558,10 +29035,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.682581
     }
    }
@@ -28709,17 +29187,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.884
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.884158
     }
    }
@@ -28840,11 +29320,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3; HELD_FROM 1",
      "faces": 4,
      "held_from": 0.096014,
      "hi": 5.656026,
      "lo": 5.538052,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -28937,10 +29418,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.980256
     }
    }
@@ -29115,25 +29597,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.7
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.1
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.096,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -29280,17 +29765,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.5026
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.123243
     }
    }
@@ -29384,24 +29871,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.8
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.5095
     }
    }
@@ -29495,24 +29985,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.28
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.28
     }
    }
@@ -29579,18 +30072,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.5221
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.270505,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -29656,18 +30151,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.41784,
      "lo": 3.41784,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -29760,11 +30257,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.09607,
      "hi": 5.792233,
      "lo": 5.792233,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -29803,11 +30301,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.86,
      "lo": 1.395,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -29927,11 +30426,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.617436,
      "lo": 4.76987,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -30024,25 +30524,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.4563
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.3e-05
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.375993,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -30189,25 +30692,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.544
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.16
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.384,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -30273,17 +30779,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 16.2536
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.000133
     }
    }
@@ -30350,11 +30858,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 9.596509,
      "lo": 9.596509,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -30501,17 +31010,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.400544
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.159694
     }
    }
@@ -30659,17 +31170,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.7
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.049908
     }
    }
@@ -30736,17 +31249,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.325
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.3e-05
     }
    }
@@ -30840,24 +31355,27 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.5824
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     }
    }
@@ -30951,18 +31469,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.096014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.732,
      "lo": 5.52,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -31136,25 +31656,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 14.347025
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 14.99646
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.483,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -31220,17 +31743,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.0794
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-05
     }
    }
@@ -31378,17 +31903,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.224
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.511842
     }
    }
@@ -31563,25 +32090,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.1676
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.385833
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.781567,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -31809,25 +32339,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.127
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.315
     },
     "HELD||G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.01997,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -31974,17 +32507,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.639
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.453009
     }
    }
@@ -32078,24 +32613,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.14
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.14
     }
    }
@@ -32270,25 +32808,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.94
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.274546
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.546605,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -32354,17 +32895,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 15.54
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.000236
     }
    }
@@ -32458,25 +33001,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.55
     },
     "HELD|OQ10_SOFFIT|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.185,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -32596,17 +33142,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.346
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.755197
     }
    }
@@ -32673,17 +33221,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.36
     }
    }
@@ -32804,31 +33354,35 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.82625
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.12
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.82625
     }
    }
@@ -32976,18 +33530,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.08
     },
     "HELD||G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.06,
      "lo": 5.44,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -33161,25 +33717,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.214
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.268702
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.828938,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -33272,24 +33831,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.95
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.95
     }
    }
@@ -33383,24 +33945,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     },
     "ALTERNATIVE|OQ10_FORMED|G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": -0.225
     }
    }
@@ -33494,18 +34059,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.080014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.983774,
      "lo": 5.983774,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -33544,10 +34111,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.8165
     }
    }
@@ -33641,25 +34209,28 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.2927
     },
     "HELD|OQ10_SOFFIT|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.2927,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -33725,17 +34296,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 13.8041
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.3e-05
     }
    }
@@ -33829,18 +34402,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.22936,
      "lo": 0.92202,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.0324,
      "lo": -0.0543,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -33933,11 +34508,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -33976,10 +34552,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 11.0285
     }
    }
@@ -34073,11 +34650,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.032067,
      "hi": 0.62,
      "lo": 0.62,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -34197,17 +34775,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.3
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.252
     }
    }
@@ -34274,11 +34854,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "AT_MOST 1; HELD_FROM 1",
      "faces": 2,
      "held_from": 0.1382,
      "hi": 5.32,
-     "lo": 0.0,
-     "m2": 0.0
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -34317,11 +34898,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||E=G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   },
@@ -34414,18 +34996,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.080014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.921052,
      "lo": 5.921052,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -34545,31 +35129,35 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.0875
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.0875
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.285
     }
    }
@@ -34690,17 +35278,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.742312
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.742277
     }
    }
@@ -34848,17 +35438,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.476
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.587999
     }
    }
@@ -34925,17 +35517,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.5034
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.8e-05
     }
    }
@@ -35083,17 +35677,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.694
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.27627
     }
    }
@@ -35187,11 +35783,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.032067,
      "hi": 0.28,
      "lo": 0.28,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -35257,17 +35854,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     }
    }
@@ -35307,10 +35906,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 4.5573
     }
    }
@@ -35377,10 +35977,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.836
     }
    }
@@ -35474,18 +36075,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.080014
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.856,
      "lo": 5.452,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -35524,11 +36127,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.96,
      "lo": 0.72,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -35675,18 +36279,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.024,
      "lo": 6.024,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 4",
      "faces": 4,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.36,
      "lo": -0.36,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -35779,10 +36385,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 8.095527
     }
    }
@@ -35849,17 +36456,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2993
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.3e-05
     }
    }
@@ -35953,11 +36562,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 2; HELD_FROM 1",
      "faces": 3,
      "held_from": 0.096063,
      "hi": 5.722026,
      "lo": 5.722026,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -36212,17 +36822,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 6",
      "faces": 6,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.988304
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.197688
     }
    }
@@ -36289,17 +36901,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.31
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-06
     }
    }
@@ -36339,10 +36953,11 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 20.855
     }
    }
@@ -36463,32 +37078,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.45775
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.45775
     },
     "HELD|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 5.45775,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -36635,25 +37254,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.087
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.215036
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.718926,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -36773,32 +37395,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.0325
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 6.0325
     },
     "HELD|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 6.0325,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.09,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -36864,17 +37490,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.375
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7e-05
     }
    }
@@ -37022,17 +37650,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.564
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.564305
     }
    }
@@ -37153,17 +37783,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.816
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.816
     }
    }
@@ -37311,32 +37943,36 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.2015
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.2015
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.21,
      "lo": -0.24,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -37375,11 +38011,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.1,
      "lo": 0.1,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -37418,10 +38055,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0875
     }
    }
@@ -37461,11 +38099,12 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.96,
      "lo": 0.72,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -37558,10 +38197,11 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 10.8364
     }
    }
@@ -37628,18 +38268,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.65856,
      "lo": 1.24392,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.028,
      "lo": 0.021,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -37813,25 +38455,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.813
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.808334
     },
     "HELD||G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 1.089666,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -38086,25 +38731,28 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.108
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 6",
      "faces": 6,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 9.602627
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.118,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -38170,17 +38818,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.2
     }
    }
@@ -38247,11 +38897,12 @@
    "line_state": "BOUNDED_EXPOSURE",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 1; HELD_FROM 1",
      "faces": 2,
      "held_from": 0.128002,
      "hi": 0.16,
      "lo": 0.16,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -38371,18 +39022,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 5.614893
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.295466,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -38583,17 +39236,19 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.188896
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 5",
      "faces": 5,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 7.603558
     }
    }
@@ -38714,11 +39369,12 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD||G": {
+     "bound_classes": "RANGE 3; HELD_FROM 1",
      "faces": 4,
      "held_from": 0.047944,
      "hi": 6.207,
      "lo": 6.089,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -38784,17 +39440,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.52
     }
    }
@@ -38888,18 +39546,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 3.44,
      "lo": 3.44,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 2",
      "faces": 2,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.03,
      "lo": -0.06,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -39208,25 +39868,28 @@
    "line_state": "BLOCKED_RFI",
    "totals": {
     "HELD|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "HELD_FROM 5",
      "faces": 5,
      "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "HELD_FROM 5",
      "faces": 5,
      "held_from": 35.256,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "hi": null,
+     "lo": null,
+     "m2": null
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.08,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -39292,18 +39955,20 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.4674
     },
     "HELD||G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 0.253239,
      "lo": 0.0,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -39450,17 +40115,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.948
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 3.41592
     }
    }
@@ -39608,17 +40275,19 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "CALCULATED||E": {
+     "bound_classes": "VALUE 2",
      "faces": 2,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.006
     },
     "CALCULATED||G": {
+     "bound_classes": "VALUE 3",
      "faces": 3,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 1.958158
     }
    }
@@ -39739,32 +40408,36 @@
    "line_state": "PROVISIONAL",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 2.82
     },
     "HELD|OQ10_FORMED|E=G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": 2.82,
      "lo": 2.82,
-     "m2": 0.0
+     "m2": null
     },
     "HELD|OQ10_FORMED|G": {
+     "bound_classes": "RANGE 1",
      "faces": 1,
-     "held_from": 0.0,
+     "held_from": null,
      "hi": -0.12,
      "lo": -0.12,
-     "m2": 0.0
+     "m2": null
     }
    }
   },
@@ -39857,24 +40530,27 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.0
     },
     "ALTERNATIVE|OQ10_FORMED|E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.345705
     },
     "CALCULATED||E=G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 0.345705
     }
    }
@@ -39941,18 +40617,20 @@
    "line_state": "SOURCE_DERIVED",
    "totals": {
     "CALCULATED||G": {
+     "bound_classes": "VALUE 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
+     "held_from": null,
+     "hi": null,
+     "lo": null,
      "m2": 24.15
     },
     "HELD||G": {
+     "bound_classes": "UNBOUNDED 1",
      "faces": 1,
-     "held_from": 0.0,
-     "hi": 0.0,
-     "lo": 0.0,
-     "m2": 0.0
+     "held_from": null,
+     "hi": null,
+     "lo": null,
+     "m2": null
     }
    }
   }

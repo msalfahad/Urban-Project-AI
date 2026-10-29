@@ -31,6 +31,10 @@ Rules (each guarded below; a refusal raises BindError):
            (ScenarioLeak).
   R-T332-7 CLOSURE. Totals per (status, alternative, method) after binding = source totals + the named deltas, residual
            0.000000; a face counts once (a face id on two lines is refused).
+  R-T332-8 FILL AGGREGATE (rework r2, D-T332-1). A FILL row never prints a number no face carries: a HELD row's m2
+           is blank; lo / hi only when every bounded face of the row carries that end (an AT_MOST / AT_LEAST /
+           UNBOUNDED face blanks the end it lacks), held_from only over HELD_FROM faces; bound_classes counts the
+           faces per class. check_fill_row refuses a written row that breaks this (held printed as 0).
 """
 
 from __future__ import annotations
@@ -251,9 +255,79 @@ def closure(source_rows, bound_rows):
     return res
 
 
+BOUND_CLASSES = ("VALUE", "RANGE", "AT_MOST", "AT_LEAST", "HELD_FROM", "UNBOUNDED")
+
+
+def bound_class(f):
+    """R-T332-8: what one face carries. VALUE (m2), RANGE (lo and hi), AT_MOST (hi only), AT_LEAST (lo only),
+    HELD_FROM (a measured value held by its line's state, R-T332-2), UNBOUNDED (nothing: blank)."""
+    if _num(f.get("m2")) is not None:
+        return "VALUE"
+    lo, hi = _num(f.get("lo")), _num(f.get("hi"))
+    if lo is not None and hi is not None:
+        return "RANGE"
+    if hi is not None:
+        return "AT_MOST"
+    if lo is not None:
+        return "AT_LEAST"
+    if _num(f.get("held_from")) is not None:
+        return "HELD_FROM"
+    return "UNBOUNDED"
+
+
+def _aggregate(faces):
+    """R-T332-8 FILL AGGREGATE (rework r2 of D-T332-1: missing never becomes 0). One FILL row = the faces of one line
+    under one (status, alternative, method) key.
+      m2        : the sum when every face carries m2; BLANK (None) when none does (a HELD row is always blank);
+                  a key mixing valued and blank faces is refused.
+      lo        : the sum of the faces' low ends, printed only when every non-HELD_FROM face carries one (a face with no
+                  low end, AT_MOST or UNBOUNDED, makes the row's low end unknown: never read as 0); else BLANK.
+      hi        : likewise, printed only when every non-HELD_FROM face carries a high end (an AT_LEAST or UNBOUNDED face
+                  makes the row unbounded above: a partial sum would understate it); else BLANK.
+      held_from : the sum over the HELD_FROM faces; BLANK when the row has none.
+      bound_classes : the count of faces per class, so a partial row is visible without the face ledger."""
+    cls = [bound_class(f) for f in faces]
+    n = {c: cls.count(c) for c in BOUND_CLASSES if cls.count(c)}
+    vals = [_num(f.get("m2")) for f in faces]
+    if any(v is None for v in vals) and any(v is not None for v in vals):
+        raise BindError("one FILL row mixes valued and blank faces: " + " ".join(str(f.get("face_id")) for f in faces))
+    m2 = None if vals and vals[0] is None else round(sum(vals), 6)
+    rest = [f for f, c in zip(faces, cls) if c not in ("VALUE", "HELD_FROM")]
+    lo = hi = None
+    if rest and all(_num(f.get("lo")) is not None for f in rest):
+        lo = round(sum(_num(f.get("lo")) for f in rest), 6)
+    if rest and all(_num(f.get("hi")) is not None for f in rest):
+        hi = round(sum(_num(f.get("hi")) for f in rest), 6)
+    hf = [_num(f.get("held_from")) for f, c in zip(faces, cls) if c == "HELD_FROM"]
+    held_from = round(sum(hf), 6) if hf else None
+    return {"faces": len(faces), "m2": m2, "lo": lo, "hi": hi, "held_from": held_from,
+            "bound_classes": "; ".join(f"{c} {k}" for c, k in n.items())}
+
+
+def check_fill_row(row, faces):
+    """R-T332-8 guard on one written FILL row (the writer calls it before printing): a HELD / NOT_APPLICABLE row with a
+    number in m2, a number in lo / hi / held_from that no face of the row carries, or a numeric bound while a face of
+    the row has no such bound, is refused (a consumer wiring the table unchanged must never read a held face as 0)."""
+    lid = row.get("line_id")
+    if row.get("status") in ("HELD", "NOT_APPLICABLE") and _num(row.get("m2")) is not None:
+        raise BindError(f"FILL {lid}: {row.get('status')} row prints m2 {row.get('m2')} (held is blank, never 0)")
+    cls = [bound_class(f) for f in faces]
+    rest = [f for f, c in zip(faces, cls) if c not in ("VALUE", "HELD_FROM")]
+    for kk in ("lo", "hi"):
+        if _num(row.get(kk)) is not None and (not rest or any(_num(f.get(kk)) is None for f in rest)):
+            raise BindError(f"FILL {lid}: {kk} {row.get(kk)} printed while a face of the row carries no {kk}")
+    if _num(row.get("held_from")) is not None and "HELD_FROM" not in cls:
+        raise BindError(f"FILL {lid}: held_from {row.get('held_from')} printed while no face carries one")
+    if _num(row.get("m2")) is not None and any(_num(f.get("m2")) is None for f in faces):
+        raise BindError(f"FILL {lid}: m2 {row.get('m2')} printed while a face of the row is blank")
+    return row
+
+
 def fill_table(rows):
-    """Per new line id: face ids and totals per key. Only tied (SAME / REBOUND) rows; REMOVED excluded."""
+    """Per new line id: face ids and totals per key (R-T332-8 aggregate). Only tied (SAME / REBOUND) rows; REMOVED
+    excluded."""
     t = {}
+    grp = defaultdict(list)
     for r in rows:
         if r.get("tie") not in ("SAME", "REBOUND") or r.get("status") in ("REMOVED",):
             continue
@@ -261,11 +335,10 @@ def fill_table(rows):
         e = t.setdefault(lid, {"line_id": lid, "item_code": r.get("new_item_code", ""), "line_state": r.get("new_state", ""),
                                "faces": [], "totals": {}})
         e["faces"].append(r["face_id"])
-        k = key(r)
-        v = e["totals"].setdefault(k, {"faces": 0, "m2": 0.0, "lo": 0.0, "hi": 0.0, "held_from": 0.0})
-        v["faces"] += 1
-        for kk in ("m2", "lo", "hi", "held_from"):
-            v[kk] = round(v[kk] + (_num(r.get(kk)) or 0.0), 6)
+        grp[(lid, key(r))].append(r)
+    for (lid, k), fs in grp.items():
+        t[lid]["totals"][k] = _aggregate(fs)
     for e in t.values():
         e["faces"].sort()
+        e["totals"] = dict(sorted(e["totals"].items()))
     return dict(sorted(t.items()))

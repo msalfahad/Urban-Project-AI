@@ -5,6 +5,37 @@ nothing wired, no candidate or released line changed, no method version, no quan
 of T-199 (formwork is a BOQ category the candidate lacks): T-199 only wires the FILL table below. Development villa, not
 an accuracy claim. ERS s.2.1 - 2.6, s.3, s.4, s.7 applied.
 
+## r2 (rework of D-T332-1, Worker 1, 2026-10-29 21:2x UTC, run session_01E6cPncGg8a6q3YcW1Efqmz)
+
+Defect (Checker, Gate A d): the FILL writer re-aggregated HELD faces with a float formatter, so every HELD row printed
+m2 0.000000 (201 / 201) and rows whose faces carry no bound printed lo / hi / held_from 0.000000: a consumer wiring the
+table unchanged would read a held face as a known 0 m2. Every re-measure, binding and total of r1 is unchanged (the face
+ledger, `summary_t332.json` and the chain are byte for byte the r1 build).
+
+New rule **R-T332-8 FILL AGGREGATE** (`t332_rules.py` `bound_class` / `_aggregate` / `check_fill_row`, `fill_table`):
+each face is VALUE, RANGE (lo and hi), AT_MOST (hi only), AT_LEAST (lo only), HELD_FROM (a measured value held by its
+line's state) or UNBOUNDED. A FILL row prints m2 only when every face carries one (HELD always blank; a key mixing valued
+and blank faces is refused); lo only when every bounded face carries a low end, hi only when every bounded face carries a
+high end (an AT_MOST / AT_LEAST / UNBOUNDED face blanks the end it lacks: a partial sum would understate the row);
+held_from only over HELD_FROM faces; the new trailing column `bound_classes` counts the faces per class. The writer
+(`t332_alsenan.py` `fill_rows_of` / `fill_csv`) checks every row before and after printing and refuses a number that no
+face carries.
+
+Effect on `T199_FILL_T332.csv` (678 rows, same rows / lines / face ids / statuses; m2 of every CALCULATED and
+ALTERNATIVE row unchanged): 201 HELD + 1 NOT_APPLICABLE m2 0.000000 -> blank; lo / hi / held_from 0.000000 -> blank
+where no face carries them (476 CALCULATED / ALTERNATIVE rows, 171 / 27 / 24 HELD rows for held_from / lo / hi); 19 HELD
+rows are wholly UNBOUNDED (e.g. L-00465df980165c529476 GROUND_BEAM, R4-071 annex exterior span, D-35: all blank). One
+row changed from a number to blank because the old sum was an understatement, not a 0: **L-7863355dfcb68a681d2d
+STR.CONC.STAIR HELD G**, r1 printed lo 1.440 / hi 1.562 m2, but its four faces are R4-316 winder slab RANGE 1.440 ..
+1.562, R4-317 / R4-318 HELD_FROM 2.000 + 3.706 and R4-319 MS1-T winder faces UNBOUNDED, so the row has no range (r2: lo
+/ hi blank, held_from 5.706, `RANGE 1; HELD_FROM 2; UNBOUNDED 1`). AT_MOST rows (e.g. L-26f6b6f2365c72e42291 COL-2F-54
+shaft <= 5.320) now print lo blank instead of 0. A face's own printed low end of 0 (the JOINT_HELD 0 .. x ranges, 60
+cells) is kept: it is carried by the face, not invented.
+
+Not changed (named): `summary_t332.json` ledger totals (`R.totals`) still add HELD m2 / lo / hi as sums over faces (the
+closure view, not consumed by T-199); the r1 test line asserting the FILL HELD m2 == 0.0 is replaced by `is None`
+(stricter, the defect it pinned).
+
 ## 0. Run, identity, sources
 
 Own run, Python 3.11.18, Drive "Alsenan chalet project": P7757.dxf from P7757_DXF_COMPRESSED.zip (`ab54dd55`) and
