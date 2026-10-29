@@ -1,0 +1,30 @@
+door,finish_m2,wp_m2,difference_m2,result,finish_material,cause
+A-1F-01,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),the floor finish continued,dry / external doorway: the membrane rule does not reach it
+A-GF-01,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),the floor finish continued,dry / external doorway: the membrane rule does not reach it
+D-1F-01,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-1F-02,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-1F-03,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-1F-04,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-1F-05,0.180000,0.180000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-1F-06,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-1F-07,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-1F-08,0.135000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-1F-09,0.135000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-1F-10,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-2F-01,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),"HELD (exterior sill: by specification, n",dry / external doorway: the membrane rule does not reach it
+D-2F-02,0.180000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-2F-03,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-01,0.200000,,,FINISH ONLY (no wet doorway: no membrane piece),"HELD (exterior sill: by specification, n",dry / external doorway: the membrane rule does not reach it
+D-GF-02,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-03,0.180000,,,FINISH ONLY (no wet doorway: no membrane piece),"HELD (exterior sill: by specification, n",dry / external doorway: the membrane rule does not reach it
+D-GF-04,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-05,0.200000,0.200000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-06,0.200000,0.200000,0.000000,EQUAL,"HELD (exterior sill: by specification, n","one strip, two layers: T-336's 'D-GF-07-PANTRY' is census D-GF-06 (INSERT 33E D120 into the pantry GF-07); finish material HELD (external-entrance class, T-240), membrane Q-37 A"
+D-GF-07,0.400000,,,FINISH ONLY (no wet doorway: no membrane piece),"HELD (exterior sill: by specification, n",dry / external doorway: the membrane rule does not reach it
+D-GF-08,0.200000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-GF-09,0.180000,,,FINISH ONLY (no wet doorway: no membrane piece),"HELD (exterior sill: by specification, n",dry / external doorway: the membrane rule does not reach it
+D-GF-10,0.120000,0.119556,-0.000444,DIFFERS (named),MARBLE,the WP piece is the drawn jamb gap (wall-face ends) x depth; the finish ledger used the T-237 width 0.800 (matched within 0.06): drawn width 0.7970392 m
+D-GF-11,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-12,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
+D-GF-13,0.150000,,,FINISH ONLY (no wet doorway: no membrane piece),FLOOR PORCELAIN,dry / external doorway: the membrane rule does not reach it
+D-GF-14,0.120000,0.120000,0.000000,EQUAL,MARBLE,"one strip, two layers, equal"
