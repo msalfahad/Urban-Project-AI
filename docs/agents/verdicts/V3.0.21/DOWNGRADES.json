@@ -1,0 +1,110 @@
+{
+ "downgrades": [
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "binding": "LINE_CONTENT_V1",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261029T045049-398-12655",
+    "verdict_commit": "e7dc5761"
+   },
+   "downgrade_id": "DG-3521554d2fd011b9",
+   "engine_qty": 15.179437,
+   "evidence": [
+    {
+     "printed_value": "blinding projection 10 cm beyond the footing face (typical isolated footing only)",
+     "sheet": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING"
+    },
+    {
+     "printed_value": "10cm blinding printed, projection NOT printed (scaled 0.148 / 0.151 m at 1:20)",
+     "sheet": "ST7757.pdf p.14 lift pit / FF detail"
+    }
+   ],
+   "line_content_sha256": "d208de8a9993aeda3107c950b5a862685afad55fec3c3051aa48a67389376c57",
+   "line_ids": [
+    "L-98eb2d58075c9eddf1b4"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: the footing-blinding line (25 members, union of (L + 2p)(W + 2p) x t, convention only) applies the ST p.13 TYPICAL isolated-footing projection p = 0.10 to the FF raft (lift pit) as well: an INHERITED reading of another element's detail; the FF governing detail ST p.14 draws the blinding without a printed projection (about 0.15 scaled at 1:20, evidence only). FF piece 2.256 m3 (p 0.10) -> HELD >= 2.070 m3 (4.60 x 4.50 x 0.10, no projection), readings 2.256 / 2.352 (designer item, RFI S23). The 24 pit footings inside the plot stay at 12.734438 m3 VERIFIED (Checker T-322 verdict 2026-10-29 01:55); a downgrade record cannot split a line, so the whole line is HELD and the engine quantity 15.179437 m3 is kept in the audit only (owner 2026-10-24 23:57 (1), 2026-10-25 13:25). Candidate line unchanged; released V2.9 unchanged.",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-29T05:49:18Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "binding": "LINE_CONTENT_V1",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "downgrade_id": "DG-a97ec2ea66e02194",
+   "engine_qty": 874.862227,
+   "evidence": [
+    {
+     "printed_value": "not less than 7 cm in concrete in contact with soil (a minimum)",
+     "sheet": "ST7757.pdf p.8 general note 22"
+    },
+    {
+     "printed_value": "Boxed bars enclose the bottom short / long bars; boxed-bar diameter not printed",
+     "sheet": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING (both variants)"
+    }
+   ],
+   "line_content_sha256": "6b939b187f9126cb7bc26c5f2b6cbd78bf668caab51ca06a4c4138b09f77112b",
+   "line_ids": [
+    "L-00fbbdf4ad454311231c",
+    "L-051b0cbef708cb567bd2",
+    "L-05e4a7b454924f5be7a0",
+    "L-088b45c9873d688d6f52",
+    "L-1c78440a3b292c1bd74f",
+    "L-26bb0cbf2f5139012587",
+    "L-2ac8b46c7b13a676c6c5",
+    "L-2e9f42cd1fe33881bf9e",
+    "L-30a75768bff1eca80ba6",
+    "L-431be773722b25fd5732",
+    "L-46467b7f9b3bd3f5cac9",
+    "L-47d15b75ac564b3fea5f",
+    "L-537d7f905671fd153135",
+    "L-563e929e1d46e8fc82bc",
+    "L-5957becf8de2591ec109",
+    "L-59b250be1a19df95642e",
+    "L-5c79d4b2d31e1ad1e668",
+    "L-730e09029fdab4addb2f",
+    "L-75b6059a924d25d986df",
+    "L-7b256278e76e2ba02e39",
+    "L-8e643df3573359880004",
+    "L-9743395b41f23545cb69",
+    "L-9846765d37c07a3f1fbd",
+    "L-a10f5df7dfdae7546a7b",
+    "L-a8cd9aee86f286e92901",
+    "L-ad31fe8e5a3057feadd4",
+    "L-bbe6f9f9c1a914bf3d51",
+    "L-bbec301164cabd703903",
+    "L-c85e79f574783cc3c91e",
+    "L-c8fb3ba1fa73f030bcd9",
+    "L-c919d773ac98b00928b1",
+    "L-c91c2b0a3aebc5ce149f",
+    "L-dc64a341c71d602ccd92",
+    "L-e672220d63f32c6d79c2",
+    "L-f5629f916a963e3e2d0f",
+    "L-f8117e2a6d3b3f3bc1c7",
+    "L-f81cd4eb42d5f41bbd2a",
+    "L-fd1555721223e52523d5"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: 38 footing mesh lines (19 count-printed footings, BOTTOM_LONG + BOTTOM_SHORT, FOOTING_REBAR_POPULATION_V1) carry straight runs side - 2 x 70 mm, i.e. the note-22 MINIMUM cover used as the bar-end position (the method's own AT_PRINTED_MINIMUM_COVER = a maximum run) with a drawn boxed-bar leg of unprinted diameter between bar end and face (p.13): weights are UPPER values with no printed lower bound. Count and diameter stand as printed; engine kg and audit trail kept; released V2.9 unchanged (T-299 PART F, owner 13:25 C4 / C5) [re-issued on V3.0.20, lines byte-identical to V3.0.19 b35475bf (Verifier T-244 Gate B 2026-10-28); was DG-eba2b0b8c7397b9a]",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-28T20:52:02Z",
+   "unit": "kg"
+  }
+ ],
+ "schema": "URBAN_CHECKER_DOWNGRADE_V1_SET"
+}
