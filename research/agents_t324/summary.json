@@ -1,0 +1,162 @@
+{
+ "components": {
+  "INNER_FACE_ABOVE_UPTURN|1F": [
+   41.82353,
+   56.608545,
+   "HELD"
+  ],
+  "INNER_FACE_ABOVE_UPTURN|2F": [
+   8.49,
+   14.15,
+   "HELD"
+  ],
+  "INNER_FACE_ABOVE_UPTURN|ANNEX": [
+   8.88843,
+   14.91405,
+   "HELD"
+  ],
+  "INNER_FACE_ABOVE_UPTURN|GF": [
+   8.209433,
+   13.88495,
+   "HELD"
+  ],
+  "INNER_FACE_UPTURN_ZONE|1F": [
+   0,
+   9.668,
+   "HELD"
+  ],
+  "INNER_FACE_UPTURN_ZONE|2F": [
+   0,
+   5.66,
+   "HELD"
+  ],
+  "INNER_FACE_UPTURN_ZONE|ANNEX": [
+   0,
+   5.96562,
+   "HELD"
+  ],
+  "INNER_FACE_UPTURN_ZONE|GF": [
+   0,
+   5.55398,
+   "HELD"
+  ],
+  "INNER_TOP_ARRIS|1F": [
+   48.2649,
+   48.34,
+   "HELD"
+  ],
+  "INNER_TOP_ARRIS|2F": [
+   28.3,
+   28.3,
+   "DRAWING-CONFIRMED"
+  ],
+  "INNER_TOP_ARRIS|ANNEX": [
+   29.6281,
+   29.8281,
+   "HELD"
+  ],
+  "INNER_TOP_ARRIS|GF": [
+   27.364778,
+   27.7699,
+   "HELD"
+  ],
+  "OUTER_FACE|1F": [
+   53.913501,
+   59.291501,
+   "HELD"
+  ],
+  "OUTER_FACE|2F": [
+   14.9,
+   14.9,
+   "DRAWING-CONFIRMED"
+  ],
+  "OUTER_FACE|ANNEX": [
+   15.27105,
+   15.27105,
+   "HELD"
+  ],
+  "OUTER_FACE|GF": [
+   14.38495,
+   14.38495,
+   "DRAWING-CONFIRMED"
+  ],
+  "OUTER_TOP_ARRIS|1F": [
+   50.2901,
+   50.5688,
+   "HELD"
+  ],
+  "OUTER_TOP_ARRIS|2F": [
+   29.8,
+   29.8,
+   "DRAWING-CONFIRMED"
+  ],
+  "OUTER_TOP_ARRIS|ANNEX": [
+   30.5421,
+   30.5421,
+   "HELD"
+  ],
+  "OUTER_TOP_ARRIS|GF": [
+   28.7699,
+   28.7699,
+   "DRAWING-CONFIRMED"
+  ],
+  "STOP_END|GF": [
+   0,
+   1.2,
+   "HELD"
+  ],
+  "TOP_SURFACE|1F": [
+   9.83151,
+   9.84653,
+   "HELD"
+  ],
+  "TOP_SURFACE|2F": [
+   5.415,
+   5.415,
+   "DRAWING-CONFIRMED"
+  ],
+  "TOP_SURFACE|ANNEX": [
+   5.99701,
+   6.03701,
+   "HELD"
+  ],
+  "TOP_SURFACE|GF": [
+   5.592956,
+   5.67398,
+   "HELD"
+  ],
+  "UPTURN_ML|1F": [
+   48.2649,
+   48.34,
+   "HELD"
+  ],
+  "UPTURN_ML|2F": [
+   28.3,
+   28.3,
+   "HELD"
+  ],
+  "UPTURN_ML|ANNEX": [
+   29.6281,
+   29.8281,
+   "HELD"
+  ],
+  "UPTURN_ML|ANNEX|GF": [
+   2.6,
+   2.6,
+   "DRAWING-CONFIRMED"
+  ],
+  "UPTURN_ML|GF": [
+   27.364778,
+   27.7699,
+   "HELD"
+  ],
+  "VERTICAL_ARRIS_PARAPET_PART|ALL": [
+   4.0,
+   15.9,
+   "HELD"
+  ]
+ },
+ "rows": 183,
+ "sea_side_0p20_wall_m2_0_11600": 2.32,
+ "sea_side_plan_area_m2_0_11600": 4.8258
+}
