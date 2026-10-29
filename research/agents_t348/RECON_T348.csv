@@ -1,13 +1,15 @@
 his_row,part,m2,class
 70,"pier fronts NW-1 + NW-3, storey + parapet (T-337, bound)",9.614500,MAPPED
-70,"screen front parapet band on the chord (T-337 NW-2 PARAPET, re-measured)",3.977220,MAPPED
-70,"screen front storey band, gross (NEW face; his rows deduct openings elsewhere)",12.849480,MAPPED
+70,"screen front parapet band on the chord (T-337 NW-2 PARAPET, re-measured)",3.977236,MAPPED
+70,"screen front storey band, gross (NEW face; his rows deduct openings elsewhere)",12.849530,MAPPED
 70,GF pool-court front slab edge +5.30 -> +5.50 in his band (HELD: trade),0.961540,MAPPED
-70,CAD parapet tops of NW-1 / NW-3 at +10.999 (T-305 4-decimal areas) vs his +11.00,0.001150,BAND TERM
+70,"CAD parapet tops of NW-1 / NW-3 at +10.999 (T-305 4-decimal areas) vs his +11.00 (+0.001150), less the DXF chord 3.059412 vs the 3.0594 inside 4.8077 x 5.50 (-0.000066)",0.001084,BAND TERM
 70,his width 4.95 vs the drawn 4.8077 x 5.70,0.811110,BAND TERM
-71,"screen back storey band, gross (NEW face)",12.849480,MAPPED
+71,"screen back storey band, gross (NEW face)",12.849530,MAPPED
 71,"recessed curved wall NW-2 storey band (T-337, bound)",14.818800,MAPPED
 71,his band above +9.70: the recess is roofed at +9.70 (no face),6.435000,BAND TERM
-71,"two faces stacked in depth (chord 3.0594 x 4.20 + T-337 NW-2 14.8188, arc 3.5283) vs his one width 4.95 x 4.20",-6.878280,BAND TERM
-74,"two more 4.95 x 5.50 faces of the pool block: no exterior face exists (its NE side is in his row 64, its SW side is the 1F-11 / bath partition)",54.450000,NO DRAWN EXTERIOR FACE
+71,"two faces stacked in depth (chord 3.059412 x 4.20 + T-337 NW-2 14.8188, arc 3.5283) vs his one width 4.95 x 4.20",-6.878330,BAND TERM
+74,"SW side: pier NW-3 SW end return, storey band (1F plan CA2; NEW, r2)",1.252688,MAPPED
+74,"SW side: pier NW-3 SW end return, parapet band (2F plan 1311 beside the +10.80 strip; NEW, r2)",0.427737,MAPPED
+74,the rest of two 4.95 x 5.50 side faces of the pool block: no exterior face exists (its NE side runs on as NE-2 in his row 64; its SW side is the 1F-11 / bath partition behind the W18 strip),52.769576,NO DRAWN EXTERIOR FACE
 70+71+74,TOTAL his 109.890 = sum of parts; residual,0.000000,RESIDUAL

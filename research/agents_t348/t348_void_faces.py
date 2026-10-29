@@ -14,6 +14,16 @@ R-T348-3  A face already carried by a ledger key is bound to that key, never emi
           reported NOT_A_FACE with its evidence, never measured.
 R-T348-4  A face whose height or hole is not settled by a printed source is HELD with its bound beside it, blank in
           the quantity column, never 0; a freelancer row is evidence to trace, never a quantity.
+R-T348-5  (r2) An element standing in front of the facade ring (a pier, a fin, a screen) is measured on its OWN outline:
+          every open-air segment of that outline (front, rounded corner, end return) is claimed once, in full, by a
+          bound ledger key or a NEW face; a ring key on the wall line carries only the projected width, so binding the
+          element to it alone leaves the corner and the returns out. Closure: outline open-air length = claimed length,
+          residual 0, else refused.
+R-T348-6  (r2) A pier end return beside a lower neighbour (a strip parapet whose outer face lies behind the pier front)
+          is exposed only in front of the neighbour's outer face up to the neighbour's top, and over its full depth
+          above it. A drawn line around an opening that steps the face plane (a moulding: lip, recess, projecting band)
+          is a step face of depth x developed path, never the opening's edge; the opening edge is where the solid stops
+          in plan (the pier end lines).
 
 Pure functions; metres, m2. No drawing, coordinate or client data in this module."""
 import math
@@ -161,6 +171,60 @@ def reconcile(his_total, parts, tol=1e-6):
     if abs(res) > tol:
         raise T348Error("parts do not add up: residual %.6f" % res)
     return round(res, 6)
+
+
+# ----------------------------------------------------------------------------------------------- R-T348-5 / 6
+def outline_closure(outline, claims, tol=1e-6):
+    """R-T348-5. outline: [(segment_id, length_m, side)] = the element's own plan outline, side 'OPEN_AIR' | 'ABUTS'
+    (against the wall or a neighbour: no face); claims: [(segment_id, length_m)] = what bound keys and NEW faces carry.
+    Every open-air segment must be claimed exactly once and in full; a claim on an abutting or unknown segment is
+    refused. Returns the claimed open-air length (= the outline's open-air length)."""
+    sides = {}
+    for sid, ln, side in outline:
+        if side not in ("OPEN_AIR", "ABUTS"):
+            raise T348Error("unknown side %r for %s" % (side, sid))
+        if ln <= 0:
+            raise T348Error("outline segment %s has no length" % sid)
+        if sid in sides:
+            raise T348Error("outline segment %s listed twice" % sid)
+        sides[sid] = (ln, side)
+    got = {}
+    for sid, ln in claims:
+        if sid not in sides:
+            raise T348Error("claim on %s, which is not on the element's outline" % sid)
+        if sides[sid][1] != "OPEN_AIR":
+            raise T348Error("claim on %s, which abuts and carries no face" % sid)
+        if sid in got:
+            raise T348Error("segment %s claimed twice" % sid)
+        got[sid] = ln
+    for sid, (ln, side) in sides.items():
+        if side != "OPEN_AIR":
+            continue
+        if sid not in got:
+            raise T348Error("open-air segment %s (%.6f m) claimed by no key and no NEW face" % (sid, ln))
+        if abs(got[sid] - ln) > tol:
+            raise T348Error("segment %s claimed %.6f m of %.6f m (projected width?)" % (sid, got[sid], ln))
+    return sum(got.values())
+
+
+def end_return_area(depth_front, depth_full, bottom, neighbour_top, top):
+    """R-T348-6. End face of a pier beside a lower neighbour: depth_front (pier front to the neighbour's outer face)
+    exposed from bottom to the neighbour's top, depth_full above it up to the pier top."""
+    if not (0 < depth_front <= depth_full):
+        raise T348Error("return depths out of order")
+    if not (bottom <= neighbour_top <= top):
+        raise T348Error("neighbour top outside the pier band")
+    return depth_front * (neighbour_top - bottom) + depth_full * (top - neighbour_top)
+
+
+def step_faces(steps):
+    """R-T348-6. steps: [(name, depth_m, developed_path_m)] of a moulding's plane steps; returns [(name, m2)]."""
+    out = []
+    for name, d, p in steps:
+        if d <= 0 or p <= 0:
+            raise T348Error("step %s needs a positive depth and path" % name)
+        out.append((name, d * p))
+    return out
 
 
 def his_row_as_quantity(row):

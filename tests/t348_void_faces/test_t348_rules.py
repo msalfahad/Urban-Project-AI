@@ -14,6 +14,11 @@ Freelancer-style rows (one plane each, 2.50 x 3.60 = 9.000, three of them = 27.0
   row b (back plane):  drawn 7.200 + 7.722012 = 14.922012 + above-roof term 2.50 x 0.60 = 1.500
                        + width term 2.50 x 3.00 - 14.922012 = -7.422012 -> 9.000
   row c: no exterior face (9.000)                                   total 27.000, residual 0.000000
+r2 (R-T348-5 / 6), villa C piers: the left pier stands 0.30 m in front of the wall line, ring key 1.00 m (projected);
+its own outline: straight front 0.70 + quarter arc r 0.30 (0.471239) = 1.171239 m -> +0.171239 m beyond the key;
+x 3.00 = 0.513717 m2. Its end return beside a lower strip parapet (outer face on the wall line, top +7.40; the pier's
+parapet is 0.50 deep to its inner face, top +7.60, roof +7.00): 0.30 x (7.40 - 7.00) + 0.50 x (7.60 - 7.40)
+= 0.120 + 0.100 = 0.220 m2. Moulding steps 0.05 x 6.00 + 0.10 x 7.00 = 0.300 + 0.700 = 1.000 m2.
 """
 import math
 import sys
@@ -129,3 +134,46 @@ def test_adverse_hole_larger_than_face_and_levels():
         R.screen_faces(2.4, 7.0, 4.0, 7.6, 1.0, 1.0, 0.25, 5.0, 5.0)
     with pytest.raises(R.T348Error):
         R.segment_area(1.0, 2.5)
+
+
+def test_r2_pier_outline_closes_by_hand():
+    arc = math.pi / 2 * 0.30
+    outline = [("front+arc", 0.70 + arc, "OPEN_AIR"), ("end", 0.30, "OPEN_AIR"), ("back", 1.00, "ABUTS")]
+    inc = 0.70 + arc - 1.00
+    assert inc == pytest.approx(0.171239, abs=1e-6)
+    assert inc * 3.00 == pytest.approx(0.513717, abs=1e-6)
+    assert R.outline_closure(outline, [("front+arc", 1.00 + inc), ("end", 0.30)]) == pytest.approx(1.30 + inc)
+
+
+def test_r2_adverse_pier_bound_to_the_ring_key_only():
+    arc = math.pi / 2 * 0.30
+    outline = [("front+arc", 0.70 + arc, "OPEN_AIR"), ("end", 0.30, "OPEN_AIR"), ("back", 1.00, "ABUTS")]
+    with pytest.raises(R.T348Error):                   # projected width only: the arc beyond the key is missing
+        R.outline_closure(outline, [("front+arc", 1.00), ("end", 0.30)])
+    with pytest.raises(R.T348Error):                   # the end return claimed by nothing
+        R.outline_closure(outline, [("front+arc", 0.70 + arc)])
+    with pytest.raises(R.T348Error):                   # a face claimed on the abutting back
+        R.outline_closure(outline, [("front+arc", 0.70 + arc), ("end", 0.30), ("back", 1.00)])
+    with pytest.raises(R.T348Error):                   # a segment not on the outline
+        R.outline_closure(outline, [("front+arc", 0.70 + arc), ("end", 0.30), ("ghost", 0.10)])
+
+
+def test_r2_end_return_beside_a_lower_strip_by_hand():
+    assert R.end_return_area(0.30, 0.50, 7.00, 7.40, 7.60) == pytest.approx(0.22, abs=1e-12)
+    # mirror: the same pier on the other side gives the same face; units in mm scale by 1e6
+    assert R.end_return_area(300, 500, 7000, 7400, 7600) / 1e6 == pytest.approx(0.22)
+    with pytest.raises(R.T348Error):                   # neighbour top above the pier
+        R.end_return_area(0.30, 0.50, 7.00, 7.80, 7.60)
+    with pytest.raises(R.T348Error):                   # front depth deeper than the full end
+        R.end_return_area(0.60, 0.50, 7.00, 7.40, 7.60)
+
+
+def test_r2_moulding_steps_by_hand_and_adverse():
+    st = R.step_faces([("lip", 0.05, 6.00), ("band", 0.10, 7.00)])
+    assert sum(v for _, v in st) == pytest.approx(1.00)
+    with pytest.raises(R.T348Error):
+        R.step_faces([("lip", 0.0, 6.00)])
+    # adverse: the moulding's outer line taken as the hole edge would deduct its lip band from the face
+    inner = [(0.0, 0.0), (0.0, 2.0), (1.6, 2.0), (1.6, 0.0)]
+    outer = [(-0.05, 0.0), (-0.05, 2.05), (1.65, 2.05), (1.65, 0.0)]
+    assert R.poly_area(outer) - R.poly_area(inner) == pytest.approx(0.285, abs=1e-12)
