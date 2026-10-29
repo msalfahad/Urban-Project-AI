@@ -1,0 +1,13 @@
+his_row,band_bottom,band_top,his_width_m,drawn_width_m,his_minus_drawn_m2,cause
+68,0.000000,1.000000,1.500000,1.500000,0.000000,
+68,1.000000,5.500000,1.500000,1.500000,0.000000,
+68,5.500000,6.000000,1.500000,1.500000,0.000000,
+69,1.000000,5.500000,6.750000,6.400000,1.575000,width: his 6.75 against GF NW-7 6.40 under the 1F
+69,5.500000,6.000000,6.750000,13.125000,-3.187500,one plane hides the 0.50 m band where the GF parapet stands 1.50 m in front of the 1F face
+69,6.000000,9.700000,6.750000,6.725000,0.092500,width: his 6.75 against 1F NW-5 6.725
+69,9.700000,10.148089,6.750000,6.725000,0.011202,width over the drawn parapet mean height
+69,10.148089,10.800000,6.750000,0.000000,4.400398,height: his top +10.80 (6.75 x 9.80 from +1.00) above the CAD wave's mean top; +10.80 is not printed
+65,0.000000,0.150000,1.500000,0.000000,0.225000,his +-0.00 against the passage floor +0.15
+65,0.150000,1.000000,1.500000,1.300000,0.170000,"0.20 m of his 1.50 is the boundary wall closing the passage (no house face, Q-65 C)"
+65,1.000000,5.500000,1.500000,1.300000,0.900000,"0.20 m of his 1.50 is the boundary wall closing the passage (no house face, Q-65 C)"
+65,5.500000,6.000000,1.500000,0.000000,0.750000,the GF roof slab runs on over the passage (T-123): no face at that line above +5.50
