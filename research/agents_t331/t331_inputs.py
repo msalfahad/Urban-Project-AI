@@ -43,6 +43,8 @@ ASSUMPTION = ("backing coat behind the wall tile its own line (UP-FIN-PAINT-001 
               "2.20 where none is printed (Q-55 C): ASSUMED - OWNER-APPROVED (OWNER_QUESTIONS_ANSWERED.md Q-43, Q-45, "
               "Q-48, Q-55; OWNER_RECONCILIATION_2026-10-20 G1)")
 BAND_OWNER = "Q-43 plaster top = Q-48 A tile top: no band above the tile"
+BAND_OWNER_HELD = ("Q-43 plaster top = Q-48 A tile top: no band above the tile (both tops HELD with the room "
+                   "height)")
 BAND_REASON = ("Q-52 C MODIFIED: plaster may run above the false ceiling depending on the specification; no "
                "specification or section prints it; the drawing method takes plaster to the slab soffit, the tile to "
                "the underside of the 0.15 decor ceiling, so the band is the decor zone x face length; the beam faces "
@@ -141,7 +143,8 @@ def build(project_id=None):
         tl = tl.pop()
         tl = PANTRY_TILE_LINE if tl == "NO_LINE" else tl
         lo, hi = _range(room["dwg_band_m2"])
-        band = {"owner_m2": 0.0, "owner_basis": BAND_OWNER, "drawing_low": lo, "drawing_high": hi,
+        band = {"owner_m2": 0.0, "owner_basis": BAND_OWNER if m["proposal"] == "FILL" else BAND_OWNER_HELD,
+                "drawing_low": lo, "drawing_high": hi,
                 "status": "HELD", "reason": BAND_REASON}
         base = {"line_id": lid, "tile_line_id": tl, "room": m["room"], "engine_room": m["engine_room"],
                 "floor": m["floor"], "task": "T-329", "band": band, "downstream": DOWNSTREAM,
@@ -177,7 +180,11 @@ def build(project_id=None):
             "BAND_HIGH_FILL": round(sum(r["band"]["drawing_high"] for r in fills), 4), "FACES": nfaces}
     if pins != PINS:
         raise SystemExit(f"the merged ledger is not the pinned one: {pins} != {PINS}")
+    sys.path.insert(0, str(ROOT / "research/agents_t193"))
+    import t193_inputs as L7   # noqa: E402  (the V3.0.7 guard inputs, unchanged, as V3.0.8 .. V3.0.21)
+    g = dict(L7.inputs(project_id)["guard"], new_records=[])
     return {"schema": "URBAN_V3022_INPUTS_V1", "project": project_id, "sources": [_source()], "records": recs,
+            "guard": g,
             "keep": [{"line_id": k, "task": "T-329", "why": lmap[k]["basis"]} for k in KEEP],
             "note_fixes": [{"line_id": k, "task": "T-331", "field": "base_ownership_v3021"} for k in NOTE_FIXES],
             "declared": {"FILL": {"lines": len(fills), "m2": m2}, "HELD": {"lines": len(recs) - len(fills)}}}

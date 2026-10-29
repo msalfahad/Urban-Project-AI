@@ -400,7 +400,7 @@ def _band_rec(r):
 
 def _band_text(r):
     b = r["band"]
-    return (f"band above the tile: owner method {_r(b['owner_m2'], 4)} m2 ({b['owner_basis'][:80]}); drawing-derived "
+    return (f"band above the tile: owner method {_r(b['owner_m2'], 4)} m2 ({b['owner_basis']}); drawing-derived "
             f"{_r(b['drawing_low'], 4)} .. {_r(b['drawing_high'], 4)} m2 {b.get('status') or ''}".strip())
 
 
@@ -438,7 +438,7 @@ def filled_line(before, r, src, gross, deds):
                                     f"{_r(r['value'] - r['band']['owner_m2'], 4)} + owner band "
                                     f"{_r(r['band']['owner_m2'], 4)} = {_r(r['value'], 4)} m2; {_band_text(r)}")[:600]
     A305._note(ln, f"{METHOD}: plaster backing under the wall tile from the merged ledger ({src['task']}, MERGED "
-                   f"{src['merge_commit'][:8]}): {r['evidence_status']} ({(r.get('assumption') or '')[:300]}); "
+                   f"{src['merge_commit'][:8]}): {r['evidence_status']} ({r.get('assumption') or ''}); "
                    f"{_band_text(r)}; paint on these faces 0 by rule (UP-FIN-PAINT-001)")
     return BL.validate(ln)
 
