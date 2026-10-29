@@ -181,11 +181,13 @@ cannot move (no reference line answered by a parapet line). Not re-run here (the
 
 ## 10. Final run and validation on the task head
 
-- **Full CLI run (research/agents_t319/v3023_run.py, one process) on the task head 1f6e107f** (the code of the hand-in;
-  later commits are report / maps only): V3_0_19 json `b35475bf`, V3_0_21 json `be22a4e4` / csv `3548e39c`, V3_0_22 json
-  `7199c8b6` / csv `924a60b4` (= the candidates of record, reproduced), **V3_0_23_BOQ_LINES json `0026800b` / csv
-  `a819c9f8`**, DIFF `867c3003`, INTEGRATION_LEDGER csv `5c7dc89f` / json `8d2f6d20`, RUNS `0566e0a9` (=
-  research/agents_t319/V3_0_23_RUNS_T319.csv), RUN `6799f5ca`: byte-identical to v3023_direct.py on the same V3.0.22.
+- **Full CLI run (research/agents_t319/v3023_run.py, one process) on the task head ff0af52a** (the code and inputs of
+  the hand-in; later commits are report / maps only): V3_0_21 json `be22a4e4` / csv `3548e39c`, V3_0_22 json `7199c8b6` /
+  csv `924a60b4` (= the candidates of record, reproduced; V3_0_19 json `b35475bf` on the first run), **V3_0_23_BOQ_LINES
+  json `19f654bd` / csv `a819c9f8`**, DIFF `867c3003`, INTEGRATION_LEDGER csv `5c7dc89f` / json `e6e5895e`, RUNS
+  `0566e0a9` (= research/agents_t319/V3_0_23_RUNS_T319.csv), RUN `6799f5ca`: byte-identical to v3023_direct.py on the
+  same V3.0.22. (Earlier runs this session on 88f4c3cf / 1f6e107f differ only in the RFI and exclusive texts of the 4
+  new lines: the bound added to the RFI question, the binding tasks named without their board status.)
 - Export / checks on these lines: section 6 (export rows 3,710, every V3.0.22 row equal; the 4 parapet rows HELD with
   the bound in the held reason; FF blinding HELD by DG-3521554d; line-state OK 3,344 / 351 / 15; deductions OK 74 /
   FLAG 41 unchanged).
@@ -195,7 +197,10 @@ cannot move (no reference line answered by a parapet line). Not re-run here (the
   (arch_v3023 names reinforcement) -> fixed in 59d4a0b2 by declaring the module in the registry (as arch_v30 ..
   arch_v305); the 395 are the known private-input / environment failures (pa08 / pa09 private workpapers, the rebuild
   packages that need private drawings, r8_* import boundaries, one control-plane gate), the same 395 T-331 reported.
-  Full suite again on c09b4dcb: FULL_SUITE_RESULT.
+  **Full suite again on c09b4dcb (to the end, one session): 395 FAILED / ERROR = exactly the base's 395 ids, NEW 0,
+  GONE 0, no DETERMINISM GUARD line.** Later commits (ff0af52a: two text strings of the inputs; report / maps) were
+  validated at L3: tests/t319_parapet_rc_integration, t331, t315, t329, t330, t334, t311, t324, t212, t061,
+  structural_comparison_engine (firewall), m9_s6, m9_s5, m9_kb, m9_p2b0, m9_p2a, m9_p2b2 on the final head.
 - Freeze 0 differing; codemap stale none (maps by the tool, last); rules manifest drift none; master 1.18.0 equals its
   builder, FMC problems none.
 - Verdict / downgrade records: no record of docs/agents/verdicts/V3.0.22 binds a parapet line (they are new); every
