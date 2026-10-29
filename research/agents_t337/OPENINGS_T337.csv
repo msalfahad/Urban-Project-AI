@@ -1,0 +1,40 @@
+floor,side,opening,face_key,line,hole_m2,fixed,lo,hi,status,sill_abs,head_abs,t305_line,check
+1F,NE-2,W19,1F/NE-2/STOREY/storey,L-8bb83e16cc7b104ab88b,0.480000,0.480000,,,DRAWING-CONFIRMED,7.200000,8.000000,L-8bb83e16cc7b104ab88b,hole 7.20 -> 8.00 inside the band 5.50 -> 9.70
+1F,NE-2,W20,1F/NE-2/STOREY/storey,L-8bb83e16cc7b104ab88b,0.480000,0.480000,,,DRAWING-CONFIRMED,7.200000,8.000000,L-8bb83e16cc7b104ab88b,hole 7.20 -> 8.00 inside the band 5.50 -> 9.70
+1F,NE-2,W24,1F/NE-2/STOREY/storey,L-8bb83e16cc7b104ab88b,2.325000,2.325000,,,DRAWING-CONFIRMED,6.500000,8.000000,L-8bb83e16cc7b104ab88b,hole 6.50 -> 8.00 inside the band 5.50 -> 9.70
+1F,NW-2,W17,1F/NW-2/STOREY/storey,L-8bb83e16cc7b104ab88b,8.143400,8.143400,,,DRAWING-CONFIRMED,,,L-8bb83e16cc7b104ab88b,datum not printed (area established): band 5.50 -> 9.70 (4.20 m) holds the hole; a window cannot rise into the roof slab / parapet above the band top
+1F,NW-5,W15,1F/NW-5/STOREY/storey,L-8bb83e16cc7b104ab88b,4.363000,4.363000,,,DRAWING-CONFIRMED,5.500000,8.600000,L-8bb83e16cc7b104ab88b,hole 5.50 -> 8.60 inside the band 5.50 -> 9.70
+1F,NW-5,W16,1F/NW-5/STOREY/storey,L-8bb83e16cc7b104ab88b,4.363000,4.363000,,,DRAWING-CONFIRMED,5.500000,8.600000,L-8bb83e16cc7b104ab88b,hole 5.50 -> 8.60 inside the band 5.50 -> 9.70
+1F,SE-1,W14,1F/SE-1/STOREY/storey,L-8bb83e16cc7b104ab88b,3.920000,3.920000,,,DRAWING-CONFIRMED,6.900000,8.500000,L-8bb83e16cc7b104ab88b,hole 6.90 -> 8.50 inside the band 5.50 -> 9.70
+1F,SE-2,W13,1F/SE-2/STOREY/storey,L-8bb83e16cc7b104ab88b,2.760000,2.760000,,,DRAWING-CONFIRMED,6.500000,8.800000,L-8bb83e16cc7b104ab88b,hole 6.50 -> 8.80 inside the band 5.50 -> 9.70
+1F,SW-3,W25,1F/SW-3/STOREY/storey,L-8bb83e16cc7b104ab88b,1.500000,1.500000,,,DRAWING-CONFIRMED,5.500000,7.000000,L-8bb83e16cc7b104ab88b,hole 5.50 -> 7.00 inside the band 5.50 -> 9.70
+1F,SW-3,W21,1F/SW-3/STOREY/storey,L-8bb83e16cc7b104ab88b,0.480000,0.480000,,,DRAWING-CONFIRMED,7.200000,8.000000,L-8bb83e16cc7b104ab88b,hole 7.20 -> 8.00 inside the band 5.50 -> 9.70
+1F,SW-3,W22,1F/SW-3/STOREY/storey,L-8bb83e16cc7b104ab88b,0.480000,0.480000,,,DRAWING-CONFIRMED,7.200000,8.000000,L-8bb83e16cc7b104ab88b,hole 7.20 -> 8.00 inside the band 5.50 -> 9.70
+1F,SW-3,W23,1F/SW-3/STOREY/storey,L-8bb83e16cc7b104ab88b,0.480000,0.480000,,,DRAWING-CONFIRMED,7.200000,8.000000,L-8bb83e16cc7b104ab88b,hole 7.20 -> 8.00 inside the band 5.50 -> 9.70
+2F,NE-1,D-2F-01,2F/NE-1/STOREY+PARAPET/storey,L-d52c4f763b19aedf8b8b,2.200000,2.200000,,,ASSUMED — OWNER-APPROVED,9.700000,11.900000,L-d52c4f763b19aedf8b8b,hole 9.70 -> 11.90 inside the band 9.70 -> 13.90
+2F,SE-1,W26,2F/SE-1/STOREY+PARAPET/storey,L-d52c4f763b19aedf8b8b,1.875000,1.875000,,,DRAWING-CONFIRMED,10.800000,12.500000,L-d52c4f763b19aedf8b8b,hole 10.80 -> 12.50 inside the band 9.70 -> 13.90
+2F,SW-1,W27,2F/SW-1/STOREY+PARAPET/storey,L-d52c4f763b19aedf8b8b,1.500000,1.500000,,,DRAWING-CONFIRMED,9.700000,11.200000,L-d52c4f763b19aedf8b8b,hole 9.70 -> 11.20 inside the band 9.70 -> 13.90
+2F,SW-1,W28,2F/SW-1/STOREY+PARAPET/storey,L-d52c4f763b19aedf8b8b,0.480000,0.480000,,,DRAWING-CONFIRMED,11.400000,12.200000,L-d52c4f763b19aedf8b8b,hole 11.40 -> 12.20 inside the band 9.70 -> 13.90
+2F,SW-1,W29,2F/SW-1/STOREY+PARAPET/storey,L-d52c4f763b19aedf8b8b,1.800000,1.800000,,,DRAWING-CONFIRMED,10.700000,12.200000,L-d52c4f763b19aedf8b8b,hole 10.70 -> 12.20 inside the band 9.70 -> 13.90
+GF,NE-6,none (OP-001 0.200 m),-,-,,,,,NOT_AN_OPENING,,,L-b05f70c92405dbcfbe62,OP-001 0.200 m drafting gap (T-109): wall face
+GF,NW-7,W02,GF/NW-7/EDGE/storey,L-b05f70c92405dbcfbe62,,,0.000000,28.485000,HELD,,,L-b05f70c92405dbcfbe62,datum not printed (area established): band 1.00 -> 5.50 (4.50 m) holds the hole; a window cannot rise into the roof slab / parapet above the band top
+GF,P-1,D-GF-05,GF/P-1/COVERED/storey,L-b05f70c92405dbcfbe62,2.200000,2.200000,,,ASSUMED — OWNER-APPROVED,0.300000,2.500000,L-b05f70c92405dbcfbe62,hole 0.30 -> 2.50 inside the band 0.30 -> 5.50
+GF,P-2,W09,GF/P-2/COVERED/storey,L-b05f70c92405dbcfbe62,2.250000,2.250000,,,DRAWING-CONFIRMED,2.000000,3.500000,L-b05f70c92405dbcfbe62,hole 2.00 -> 3.50 inside the band 1.00 -> 5.50
+GF,P-2,W10,GF/P-2/COVERED/storey,L-b05f70c92405dbcfbe62,1.500000,1.500000,,,DRAWING-CONFIRMED,2.000000,3.500000,L-b05f70c92405dbcfbe62,hole 2.00 -> 3.50 inside the band 1.00 -> 5.50
+GF,SE-1,W11,GF/SE-1/EDGE/storey,L-b05f70c92405dbcfbe62,4.290000,4.290000,,,DRAWING-CONFIRMED,,,L-b05f70c92405dbcfbe62,datum not printed (area established): band 0.30 -> 4.30 (4.00 m) holds the hole; a window cannot rise into the roof slab / parapet above the band top
+GF,SE-1,W12,GF/SE-1/EDGE/storey,L-b05f70c92405dbcfbe62,4.290000,4.290000,,,DRAWING-CONFIRMED,,,L-b05f70c92405dbcfbe62,datum not printed (area established): band 0.30 -> 4.30 (4.00 m) holds the hole; a window cannot rise into the roof slab / parapet above the band top
+GF,SE-2,D-GF-07,GF/SE-2/COVERED/storey,L-b05f70c92405dbcfbe62,,,0.000000,5.000000,HELD,1.000000,3.500000,L-b05f70c92405dbcfbe62,hole 1.00 -> 3.50 inside the band 1.00 -> 5.50
+GF,SE-4,W01,GF/SE-4/FLUSH/storey,L-b05f70c92405dbcfbe62,2.400000,2.400000,,,DRAWING-CONFIRMED,2.000000,4.000000,L-b05f70c92405dbcfbe62,hole 2.00 -> 4.00 inside the band 1.00 -> 5.50
+GF,SW-1,D-GF-01,GF/SW-1/EDGE/storey,L-b05f70c92405dbcfbe62,2.200000,2.200000,,,ASSUMED — OWNER-APPROVED,0.300000,2.500000,L-b05f70c92405dbcfbe62,hole 0.30 -> 2.50 inside the band 0.30 -> 4.30
+GF,SW-3,W04,GF/SW-3/EDGE/storey,L-b05f70c92405dbcfbe62,0.480000,0.480000,,,DRAWING-CONFIRMED,2.000000,2.800000,L-b05f70c92405dbcfbe62,hole 2.00 -> 2.80 inside the band 0.30 -> 4.30
+GF,SW-3,D-GF-03,GF/SW-3/EDGE/storey,L-b05f70c92405dbcfbe62,1.980000,1.980000,,,ASSUMED — OWNER-APPROVED,0.300000,2.500000,L-b05f70c92405dbcfbe62,hole 0.30 -> 2.50 inside the band 0.30 -> 4.30
+GF,SW-3,W08,GF/SW-3/EDGE/storey,L-b05f70c92405dbcfbe62,2.250000,2.250000,,,DRAWING-CONFIRMED,1.300000,2.800000,L-b05f70c92405dbcfbe62,hole 1.30 -> 2.80 inside the band 0.30 -> 4.30
+GF,SW-5,D-GF-06,GF/SW-5/COVERED/storey,L-b05f70c92405dbcfbe62,2.200000,2.200000,,,ASSUMED — OWNER-APPROVED,1.000000,3.200000,L-b05f70c92405dbcfbe62,hole 1.00 -> 3.20 inside the band 1.00 -> 5.50
+GF,SW-7,D-GF-09,GF/SW-7/FLUSH/storey,L-b05f70c92405dbcfbe62,1.980000,1.980000,,,ASSUMED — OWNER-APPROVED,1.000000,3.200000,L-b05f70c92405dbcfbe62,hole 1.00 -> 3.20 inside the band 1.00 -> 5.50
+GF,SW-7,W05,GF/SW-7/FLUSH/storey,L-b05f70c92405dbcfbe62,0.480000,0.480000,,,DRAWING-CONFIRMED,,,L-b05f70c92405dbcfbe62,datum not printed (area established): band 1.00 -> 5.50 (4.50 m) holds the hole; a window cannot rise into the roof slab / parapet above the band top
+GF,SW-7,W06,GF/SW-7/FLUSH/storey,L-b05f70c92405dbcfbe62,0.480000,0.480000,,,DRAWING-CONFIRMED,2.700000,3.500000,L-b05f70c92405dbcfbe62,hole 2.70 -> 3.50 inside the band 1.00 -> 5.50
+GF,SW-7,W07,GF/SW-7/FLUSH/storey,L-b05f70c92405dbcfbe62,0.480000,0.480000,,,DRAWING-CONFIRMED,2.700000,3.500000,L-b05f70c92405dbcfbe62,hole 2.70 -> 3.50 inside the band 1.00 -> 5.50
+1F,NW-4,W18,1F/NW-4/STOREY/storey,L-8bb83e16cc7b104ab88b,1.009372,1.009372,,,DRAWING-CONFIRMED,6.340000,8.500000,L-8bb83e16cc7b104ab88b,hole 6.34 -> 8.50 inside the band 5.50 -> 9.70
+GF,NW-3,W03 (frame end on NW-3),GF/NW-3/COVERED/storey,L-b05f70c92405dbcfbe62,0.616994,0.616994,,,DRAWING-CONFIRMED,1.000000,5.300000,L-b05f70c92405dbcfbe62,hole 1.00 -> 5.30 inside the band 1.00 -> 5.50
+GF,NW-4,W03,GF/NW-4/COVERED/storey,L-b05f70c92405dbcfbe62,28.628041,28.628041,,,DRAWING-CONFIRMED,1.000000,5.300000,L-b05f70c92405dbcfbe62,hole 1.00 -> 5.30 inside the band 1.00 -> 5.50
+GF,NW-5,W03 (frame end on NW-5),GF/NW-5/COVERED/storey,L-b05f70c92405dbcfbe62,0.444994,0.444994,,,DRAWING-CONFIRMED,1.000000,5.300000,L-b05f70c92405dbcfbe62,hole 1.00 -> 5.30 inside the band 1.00 -> 5.50

@@ -1,0 +1,15 @@
+check,lo,hi,note
+T-305 faces measured (every drawn face once),1022.533700,1022.533700,T-305 FACE_LINE_LEDGER
+T-305 HELD faces,6.822226,13.261431,T-305 FACE_LINE_LEDGER
+this binding: drawing-confirmed faces,1017.948400,1017.948400,BINDING_T337
+"this binding: HELD faces (incl. NW-2 now HELD, C5 added)",11.045334,18.446731,BINDING_T337
+named: 1F NW-2 parapet moved from measured to HELD (T-324 C3),-4.585300,-4.585300,measured part leaves DC
+named: 1F NW-2 as HELD,4.223108,4.585300,chord: -0.362192 m2
+named: annex C5 outer face on AC7 (not in T-305),0.000000,0.600000,T-324 C5
+residual DC (must be 0),0.000000,0.000000,named closure
+residual HELD (must be 0),0.000000,0.000000,named closure
+parapet outer ANNEX: binding gross vs T-324 OUTER_FACE,-0.600028,-0.000028,named: annex lo = C5 taken 0 .. 0.600 (T-324 carries 0.600); 1F lo = C3 chord -0.362192; <= 0.0007 = T-305 4-decimal faces vs T-311 / T-324 run lengths
+parapet outer GF: binding gross vs T-324 OUTER_FACE,0.000050,0.000050,named: annex lo = C5 taken 0 .. 0.600 (T-324 carries 0.600); 1F lo = C3 chord -0.362192; <= 0.0007 = T-305 4-decimal faces vs T-311 / T-324 run lengths
+parapet outer 1F: binding gross vs T-324 OUTER_FACE,-0.362857,-0.000665,named: annex lo = C5 taken 0 .. 0.600 (T-324 carries 0.600); 1F lo = C3 chord -0.362192; <= 0.0007 = T-305 4-decimal faces vs T-311 / T-324 run lengths
+parapet outer 2F: binding gross vs T-324 OUTER_FACE,0.000000,0.000000,named: annex lo = C5 taken 0 .. 0.600 (T-324 carries 0.600); 1F lo = C3 chord -0.362192; <= 0.0007 = T-305 4-decimal faces vs T-311 / T-324 run lengths
+plinth: binding gross vs T-311 PLINTH_SEGMENT (29 segments),0.000000,0.000000,T-311 4-decimal segments

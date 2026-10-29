@@ -1,0 +1,146 @@
+{
+ "all_face_lines_net": [
+  897.719933,
+  938.60633
+ ],
+ "candidate": {
+  "lines_csv_sha256_8": "924a60b4",
+  "lines_json_sha256_8": "7199c8b6",
+  "lines_total": 3706
+ },
+ "closure_residuals": {
+  "residual DC (must be 0)": [
+   "0.000000",
+   "0.000000"
+  ],
+  "residual HELD (must be 0)": [
+   "0.000000",
+   "0.000000"
+  ]
+ },
+ "faces": 109,
+ "freelancer": {
+  "his_gross_J93": 1502.8399999999997,
+  "his_net_F25": 1469.9674999999997,
+  "his_openings_full_J97": 65.74499999999999,
+  "his_openings_half_D25": 32.872499999999995,
+  "his_parapet_rows_78_84": 146.659,
+  "his_walls_rows_51_77": 968.2375
+ },
+ "his_walls_net_rows_51_77_minus_half_openings": 935.365,
+ "items": 46,
+ "lines_m2": {
+  "L-8bb83e16cc7b104ab88b": {
+   "gross": [
+    265.3093,
+    265.3093
+   ],
+   "net": [
+    234.525528,
+    234.525528
+   ],
+   "status": "DRAWING-CONFIRMED"
+  },
+  "L-b05f70c92405dbcfbe62": {
+   "gross": [
+    469.329178,
+    469.329178
+   ],
+   "net": [
+    376.694149,
+    410.179149
+   ],
+   "status": "HELD (bounded)"
+  },
+  "L-d52c4f763b19aedf8b8b": {
+   "gross": [
+    125.16,
+    125.16
+   ],
+   "net": [
+    117.305,
+    117.305
+   ],
+   "status": "ASSUMED — OWNER-APPROVED part"
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": {
+   "gross": [
+    53.550644,
+    59.290836
+   ],
+   "net": [
+    53.550644,
+    59.290836
+   ],
+   "status": "HELD (bounded)"
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 2F +13.90": {
+   "gross": [
+    14.9,
+    14.9
+   ],
+   "net": [
+    14.9,
+    14.9
+   ],
+   "status": "DRAWING-CONFIRMED"
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER ANNEX +4.30": {
+   "gross": [
+    14.671022,
+    15.271022
+   ],
+   "net": [
+    14.671022,
+    15.271022
+   ],
+   "status": "HELD (bounded)"
+  },
+  "NEW FIN.EXT.FINISH PARAPET-OUTER GF +5.50": {
+   "gross": [
+    14.385,
+    14.385
+   ],
+   "net": [
+    14.385,
+    14.385
+   ],
+   "status": "DRAWING-CONFIRMED"
+  },
+  "NEW FIN.EXT.FINISH PLINTH GF": {
+   "gross": [
+    71.68859,
+    72.749795
+   ],
+   "net": [
+    71.68859,
+    72.749795
+   ],
+   "status": "HELD (bounded)"
+  },
+  "NEW FIN.EXT.FINISH SLAB-EDGE 1F": {
+   "gross": [
+    null,
+    null
+   ],
+   "net": [
+    null,
+    null
+   ],
+   "status": "HELD (blank: no area)"
+  }
+ },
+ "openings": 39,
+ "parapet_inner_face_total_plus_top_m2": [
+  120.959425,
+  126.530065
+ ],
+ "storey_lines_net": [
+  728.524677,
+  762.009677
+ ],
+ "wall_face_lines_plus_parapet_inner_and_top_net": [
+  1018.679358,
+  1065.136395
+ ]
+}
