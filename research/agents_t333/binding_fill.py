@@ -32,6 +32,14 @@ Rules (each refusal code is the first word of the error):
 5. TOTALS. Per line and per block type (m2 and m3 apart): before (the line's own figure or BLANK) and after (the
    determinate sum + the established parts + the drop term U - L x d + the HELD walls by name). HELD and the drop term
    are never folded into a figure; m2 and m3 are never added.
+6. FALLBACK VISIBLE (r2, D-T333-1). A wall's net is built gross minus its DEDUCTED openings, so the net's evidence is
+   no stronger than the weakest deduction in it. When any DEDUCTED opening of a wall (or of the established part of a
+   wall) rests on an owner-approved fallback height (Q-55: no printed door height, 2.20 m), the label of that net is
+   ASSUMED — OWNER-APPROVED, for an established part exactly as for a whole wall (WORKFLOW_CONTROLS s.4 / s.5: the
+   fallback stays visible even after an independent check). Window-only and opening-free nets keep their own label.
+   A determinate status or a part_status VERIFIED / DRAWING-CONFIRMED over a fallback deduction is refused
+   (FALLBACK_HIDDEN); a DEDUCTED opening whose height basis is not established is refused (STATE_UNKNOWN). The
+   quantity never changes: only its label.
 """
 from __future__ import annotations
 
@@ -156,6 +164,46 @@ def check_components(components):
         rc = [c for c in cs if c["kind"] == "ALTERNATIVE_RC" and c.get("above_upstand_carried")]
         if blk and rc:
             raise FillError(f"PARAPET_BOTH: run {run} carried as block and as RC above the upstand")
+    return True
+
+
+OWNER_APPROVED = "ASSUMED — OWNER-APPROVED"
+HEIGHT_BASES = ("VERIFIED", "DRAWING-CONFIRMED", OWNER_APPROVED)
+
+
+def _fallback_ops(wall_id, deducted):
+    ops = deducted.get(wall_id, [])
+    for o in ops:
+        if o.get("height_basis") not in HEIGHT_BASES:
+            raise FillError(f"STATE_UNKNOWN: opening {o.get('opening_id')} on {wall_id} is DEDUCTED with height basis "
+                            f"{o.get('height_basis')!r}")
+    return [o for o in ops if o["height_basis"] == OWNER_APPROVED]
+
+
+def apply_fallback_labels(rows, deducted):
+    """rule 6 -> rows with part_status lifted to ASSUMED — OWNER-APPROVED where a DEDUCTED opening of the wall rests
+    on an owner-approved fallback height. deducted: {wall_id: [{opening_id, height_basis}]} (DEDUCTED openings only,
+    i.e. those inside the carried net, the established part or the U of a drop wall). Quantities untouched."""
+    out = []
+    for r in rows:
+        r = dict(r)
+        if _fallback_ops(r["wall_id"], deducted) and r.get("part_status") is not None:
+            r["part_status"] = OWNER_APPROVED
+        out.append(r)
+    check_fallback_labels(out, deducted)
+    return out
+
+
+def check_fallback_labels(rows, deducted):
+    """rule 6: refuse a VERIFIED / DRAWING-CONFIRMED label over a fallback deduction (status or part_status)."""
+    for r in rows:
+        fb = _fallback_ops(r["wall_id"], deducted)
+        if not fb:
+            continue
+        for fld in ("status", "part_status"):
+            if r.get(fld) in ("VERIFIED", "DRAWING-CONFIRMED"):
+                raise FillError(f"FALLBACK_HIDDEN: {r['wall_id']} {fld} {r[fld]} but its net deducts "
+                                f"{', '.join(o['opening_id'] for o in fb)} at an owner-approved fallback height")
     return True
 
 

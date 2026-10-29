@@ -150,3 +150,43 @@ REGISTER_DETERMINATE** (UNRESOLVED on the held walls); parapet: RULE_DIFFERENCE 
    m3 row 10.897200 = 54.4860 x 0.20.
 4. The plinth containment: the GF wall course 0.05 m (+0.95 -> +1.00) inside the GF wall heights (T-311 s.4).
 5. One parapet run's exclusivity: 1F NE-2 block 0 .. 19.0700 m2 in no line, RC part with T-319.
+
+## 10. Rework r2 (D-T333-1, Checker 2026-10-29 13:30; worker 3 2026-10-29 19:03 UTC)
+
+Defect: three ESTABLISHED PART + HELD walls carried part_status DRAWING-CONFIRMED although their established net
+deducts a door at the Q-55 fallback height 2.20 m (no Alsenan sheet prints a door height except the main entrance;
+OWNER_QUESTIONS_ANSWERED Q-55), while every whole wall with such a door was already ASSUMED — OWNER-APPROVED. Cause:
+the label was inherited from the merged T-291 ledger, which takes part_status from the register v4 class of the wall,
+not from the evidence of the deductions inside the part.
+
+Physical reasoning: net = gross panel - DEDUCTED openings; the net's evidence is no stronger than its weakest term. A
+door height that is an owner fallback makes the deducted area, and so the net, rest on that fallback.
+
+Fix (R-T333-1 rule 6, binding_fill.py `apply_fallback_labels` / `check_fallback_labels`): every DEDUCTED opening of the
+T-291 table gets a height basis (OPENING_HEIGHT_BASIS_T333.csv, 32 openings): ASSUMED — OWNER-APPROVED when T-175 gives
+its height that status AND T-291 still deducts width x 2.20 (13 doors); otherwise the later drawing reading T-291 cites
+(T-227 s.6 heights, T-261 split, T-274 / T-288 jambs) = DRAWING-CONFIRMED (19 windows; T-175 HELD heights there are
+superseded and named). A part_status over a fallback deduction is lifted to ASSUMED — OWNER-APPROVED; a VERIFIED or
+DRAWING-CONFIRMED status or part_status over one is refused (FALLBACK_HIDDEN); a DEDUCTED opening with no established
+basis is refused (STATE_UNKNOWN).
+
+| wall | established part m2 | door | deduction | part_status r1 -> r2 |
+|---|---|---|---|---|
+| 1F-W13 | 16.8073 | D-1F-08 | 0.90 x 2.20 = 1.9800 | DRAWING-CONFIRMED -> ASSUMED — OWNER-APPROVED |
+| 1F-W17 | 4.6943 | D-1F-10 | 0.80 x 2.20 = 1.7600 | DRAWING-CONFIRMED -> ASSUMED — OWNER-APPROVED |
+| 2F-W03 | 25.8850 | D-2F-01 | 1.00 x 2.20 = 2.2000 | DRAWING-CONFIRMED -> ASSUMED — OWNER-APPROVED |
+
+Established parts by part_status after r2: ASSUMED — OWNER-APPROVED 47.3866 m2 (3 walls) + DRAWING-CONFIRMED 109.1831
+m2 (7 walls, window-only or no opening) = 156.5697 m2 unchanged. Every m2 / m3 figure of r1 is unchanged: FILL_T333.csv
+differs from r1 in 9 rows (3 walls x MAS.BLOCK / WALL_PANEL / WALL_VOLUME), column part_status only; WALL_TABLE in the
+same 3 rows; LINE_BEFORE_AFTER, TYPE_BEFORE_AFTER, LINE_REBIND, COMPONENTS, CHECKER_VALUES byte-identical; the FILL
+columns T-279 consumes are unchanged. Consistency now holds across the table: all 11 walls that deduct a Q-55 door
+carry ASSUMED — OWNER-APPROVED in status or part_status.
+
+Tests: villa M (normal: window-only part stays DRAWING-CONFIRMED, quantity 10.800; adverse: Q-55 door part 10.020 m2
+labelled DRAWING-CONFIRMED or VERIFIED refused; whole wall VERIFIED over a Q-55 door refused; DEDUCTED opening with
+basis None / HELD / UNKNOWN refused) and an Alsenan pin (the 3 walls, 47.3866 / 109.1831, all 11 Q-55 hosts labelled).
+
+Lesson row (s.7, as the Checker proposed): 2026-10-29 | a deduction resting on an owner fallback height makes the net
+ASSUMED — OWNER-APPROVED for a part as for a whole wall | normal: window-only part stays DRAWING-CONFIRMED; adverse: Q-55
+door part labelled DRAWING-CONFIRMED -> refused.

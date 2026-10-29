@@ -120,5 +120,45 @@
  "plinth_course_house_zone_m2 (inside the GF 0.20 exterior wall heights; T-311 gives no per-wall split, so it rides each wall's own status)": 3.5822,
  "plinth_course_annex_zone_inside_held_walls_m2": 1.4771,
  "plinth_segments": 29,
- "plinth_segments_held": 1
+ "plinth_segments_held": 1,
+ "rule6_r2_D-T333-1": {
+  "deducted_openings": 32,
+  "on_q55_fallback_height": [
+   "D-1F-02",
+   "D-1F-03",
+   "D-1F-04",
+   "D-1F-07",
+   "D-1F-08",
+   "D-1F-10",
+   "D-2F-01",
+   "D-2F-03",
+   "D-GF-06",
+   "D-GF-10",
+   "D-GF-11",
+   "D-GF-12",
+   "D-GF-13"
+  ],
+  "part_status_relabelled (wall, r1, r2)": [
+   [
+    "1F-W13",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ],
+   [
+    "1F-W17",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ],
+   [
+    "2F-W03",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ]
+  ],
+  "established_parts_m2_by_part_status": {
+   "ASSUMED — OWNER-APPROVED": 47.3866,
+   "DRAWING-CONFIRMED": 109.1831
+  },
+  "quantities_changed": "none (labels only)"
+ }
 }

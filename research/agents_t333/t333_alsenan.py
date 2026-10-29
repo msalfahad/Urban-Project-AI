@@ -38,6 +38,7 @@ CANDIDATE_NAME = "ARCH_TAKEOFF_V3.0.21"
 SCHEMA = "T333_BLOCKWORK_FILL_V1"
 REG_V3 = ROOT / "research" / "agents_t285" / "BLOCKWORK_WALL_REGISTER_V3.csv"
 REG_V4 = ROOT / "research" / "agents_t288" / "BLOCKWORK_WALL_REGISTER_V4.csv"
+T175 = ROOT / "research" / "agents_t175" / "T175_OPENING_CONSEQUENCES.csv"
 
 # The Checker's own values on the walls the row names (BOARD Verifier T-180 slot notes; SCOREBOARD BLOCKWORK row).
 # A wall is carried at the Checker's own value; where the Checker re-measured twice, the later whole-wall value rules.
@@ -102,6 +103,16 @@ def build():
         n = mapping[r["line_id"]]
         rows.append(dict(r, line_id=n["line_id"], line_id_v3015=r["line_id"]))
     F.check_rows(rows, thick)
+    basis = opening_height_basis(B["openings"])
+    deducted = {}
+    for o in basis:
+        deducted.setdefault(o["host"], []).append(o)
+    rows_r1 = rows
+    rows = F.apply_fallback_labels(rows, deducted)          # rule 6 (r2, D-T333-1): labels only
+    relabelled = sorted({(a["wall_id"], a["part_status"], b["part_status"]) for a, b in zip(rows_r1, rows)
+                         if a["part_status"] != b["part_status"]})
+    for a, b in zip(rows_r1, rows):                         # quantities are never touched by rule 6
+        assert all(a[k] == b[k] for k in a if k != "part_status")
     closures = {it: R.closure(B["walls"], rows, it, "m3" if it == "ARCH.WALL_VOLUME" else "m2")
                 for it in A291.AREA_VOLUME}
 
@@ -156,7 +167,36 @@ def build():
                          "after_expression": t["expression"]})
     return {"base": B, "candidate": cand, "new_lines": new_lines, "mapping": mapping, "unbound": unbound,
             "actions": actions, "rows": rows, "closures": closures, "checker": checker, "components": components,
-            "line_summary": lsum, "type_summary": tsum, "walls": walls}
+            "line_summary": lsum, "type_summary": tsum, "walls": walls, "opening_basis": basis,
+            "relabelled": relabelled}
+
+
+def opening_height_basis(openings):
+    """rule 6 input: the height basis of every DEDUCTED opening of the merged T-291 opening table. An opening rests on
+    the Q-55 fallback (ASSUMED — OWNER-APPROVED) when T-175 gives its height that status AND the deduction T-291
+    carries is still width x that height (to 0.00005 m2), i.e. no later drawing reading superseded it; otherwise the
+    deduction comes from the later drawing reading T-291 cites (T-227 s.6 heights, T-261 split, T-274 / T-288 jambs:
+    DRAWING-CONFIRMED). A Q-55-status opening whose deduction differs from width x 2.20 without a drawing source is
+    refused."""
+    t175 = {r["opening"]: r for r in csv.DictReader(open(T175, encoding="utf-8"))}
+    out = []
+    for o in openings:
+        if o["state"] != "DEDUCTED":
+            continue
+        r = t175.get(o["opening_id"])
+        hs = r["height_status"] if r else None
+        if hs == F.OWNER_APPROVED and abs(float(r["width_m"]) * float(r["height_m"]) - o["deduction_m2"]) <= 0.00005:
+            b, why = F.OWNER_APPROVED, (f"Q-55 fallback height {r['height_m']} m (OWNER_QUESTIONS_ANSWERED Q-55; T-175 "
+                                        f"height_status); {r['width_m']} x {r['height_m']} = {o['deduction_m2']:.4f}")
+        elif hs == F.OWNER_APPROVED:
+            raise F.FillError(f"STATE_UNKNOWN: {o['opening_id']} T-175 Q-55 height but T-291 deducts "
+                              f"{o['deduction_m2']} from {o['source']!r}")
+        else:
+            b, why = "DRAWING-CONFIRMED", f"T-291 source: {o['source']}" + (
+                f" (T-175 height_status {hs}, superseded)" if hs and hs != "DRAWING-CONFIRMED" else "")
+        out.append({"opening_id": o["opening_id"], "host": o["host"], "kind": r["kind"] if r else None,
+                    "deduction_m2": o["deduction_m2"], "height_basis": b, "basis_source": why})
+    return out
 
 
 def components_t311(mapping, new_lines):
@@ -284,6 +324,9 @@ def outputs(X):
         "WALL_TABLE_T333.csv": _csv(wall_table(X), list(wall_table(X)[0])),
         "COMPONENTS_T333.csv": _csv(comps, list(comps[0])),
         "CHECKER_VALUES_T333.csv": _csv(X["checker"], list(X["checker"][0])),
+        "OPENING_HEIGHT_BASIS_T333.csv": _csv(
+            [dict(o, deduction_m2=_num(o["deduction_m2"])) for o in
+             sorted(X["opening_basis"], key=lambda o: (o["host"], o["opening_id"]))], list(X["opening_basis"][0])),
     }
     par = [c for c in X["components"] if c["kind"] == "ALTERNATIVE_BLOCK"]
     pl = [c for c in X["components"] if c["kind"] == "CONTAINED"]
@@ -338,6 +381,16 @@ def outputs(X):
         "plinth_course_annex_zone_inside_held_walls_m2": round(sum(c["low"] for c in pl if c["low"] is not None
                                                                    and c["held_item"]), 4),
         "plinth_segments": len(pl), "plinth_segments_held": sum(1 for c in pl if c["low"] is None),
+        "rule6_r2_D-T333-1": {
+            "deducted_openings": len(X["opening_basis"]),
+            "on_q55_fallback_height": sorted(o["opening_id"] for o in X["opening_basis"]
+                                             if o["height_basis"] == F.OWNER_APPROVED),
+            "part_status_relabelled (wall, r1, r2)": [list(x) for x in X["relabelled"]],
+            "established_parts_m2_by_part_status": {
+                s: round(sum(r["carried"] for r in X["rows"] if r["item_code"] == "MAS.BLOCK"
+                             and r["status"] == F.PART_PLUS_HELD and r["part_status"] == s), 4)
+                for s in sorted({r["part_status"] for r in X["rows"] if r["status"] == F.PART_PLUS_HELD})},
+            "quantities_changed": "none (labels only)"},
     }
     files["summary.json"] = json.dumps(summary, indent=1, ensure_ascii=False) + "\n"
     return files

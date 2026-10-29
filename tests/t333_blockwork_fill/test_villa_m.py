@@ -192,3 +192,59 @@ def test_lost_and_ambiguous_lines_and_unknown_state_refused():
 def test_thickness_in_millimetres_refused():
     with pytest.raises(R.LedgerError, match="^BAD_UNITS"):
         R.family_key(150)
+
+
+# --- rule 6 (r2, D-T333-1): a fallback-height deduction keeps the net ASSUMED — OWNER-APPROVED -----------------------
+# Villa M, 1F, established part of M-P1 0.20: 4.000 x 3.000 = 12.000 m2 built; held piece 'beam B9 depth (RFI-7)'.
+#   case W (normal): window W-1 printed 1.200 x 1.000 = 1.200 -> part 10.800 m2 stays DRAWING-CONFIRMED
+#   case D (adverse): door D-1 0.900 wide, no printed height, Q-55 fallback 2.20 -> 0.900 x 2.200 = 1.980
+#                     -> part 10.020 m2 ASSUMED — OWNER-APPROVED; labelling it DRAWING-CONFIRMED is refused
+PART = "ESTABLISHED PART + HELD"
+
+
+def part_row(carried, ps="DRAWING-CONFIRMED", wid="M-P1", st=PART):
+    r = row("L-B1F20", MB, "m2", wid, st, carried=carried, held="beam B9 depth (RFI-7)")
+    r["part_status"] = ps
+    return r
+
+
+def test_rule6_window_only_part_stays_drawing_confirmed():
+    ded = {"M-P1": [{"opening_id": "W-1", "height_basis": "DRAWING-CONFIRMED"}]}
+    out = F.apply_fallback_labels([part_row(4.0 * 3.0 - 1.2 * 1.0)], ded)
+    assert out[0]["part_status"] == "DRAWING-CONFIRMED"
+    assert out[0]["carried"] == pytest.approx(10.8, abs=1e-9)
+    assert F.apply_fallback_labels([part_row(12.0)], {})[0]["part_status"] == "DRAWING-CONFIRMED"   # no opening
+
+
+def test_rule6_q55_door_part_is_owner_approved_and_quantity_unchanged():
+    ded = {"M-P1": [{"opening_id": "W-1", "height_basis": "DRAWING-CONFIRMED"},
+                    {"opening_id": "D-1", "height_basis": F.OWNER_APPROVED}]}
+    r = part_row(4.0 * 3.0 - 0.9 * 2.2)
+    out = F.apply_fallback_labels([r], ded)
+    assert out[0]["part_status"] == F.OWNER_APPROVED
+    assert out[0]["carried"] == r["carried"] == pytest.approx(10.02, abs=1e-9)
+    assert r["part_status"] == "DRAWING-CONFIRMED"           # input not mutated
+    assert F.line_totals(out, "m2")["established_parts"] == F.line_totals([r], "m2")["established_parts"]
+
+
+def test_rule6_adverse_q55_door_part_labelled_drawing_confirmed_refused():
+    ded = {"M-P1": [{"opening_id": "D-1", "height_basis": F.OWNER_APPROVED}]}
+    with pytest.raises(F.FillError, match="^FALLBACK_HIDDEN"):
+        F.check_fallback_labels([part_row(10.02)], ded)
+    with pytest.raises(F.FillError, match="^FALLBACK_HIDDEN"):
+        F.check_fallback_labels([part_row(10.02, ps="VERIFIED")], ded)
+
+
+def test_rule6_adverse_whole_wall_verified_over_a_q55_door_refused():
+    ded = {"M-W1": [{"opening_id": "D-2", "height_basis": F.OWNER_APPROVED}]}
+    r = row("L-B20", MB, "m2", "M-W1", "VERIFIED", carried=12.9, vb="C-9")
+    with pytest.raises(F.FillError, match="^FALLBACK_HIDDEN"):
+        F.apply_fallback_labels([r], ded)
+    ok = dict(r, status=F.OWNER_APPROVED, part_status=None)
+    assert F.apply_fallback_labels([ok], ded)[0]["status"] == F.OWNER_APPROVED
+
+
+def test_rule6_adverse_deducted_opening_without_height_basis_refused():
+    for bad in (None, "HELD", "UNKNOWN"):
+        with pytest.raises(F.FillError, match="^STATE_UNKNOWN"):
+            F.apply_fallback_labels([part_row(10.02)], {"M-P1": [{"opening_id": "D-1", "height_basis": bad}]})

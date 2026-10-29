@@ -117,3 +117,29 @@ def test_v3021_masonry_lines_equal_v3015_except_the_revision_identity():
     assert {l["revision_set_sha256"][:8] for l in b.values()} == {"5e369075"}
     fill = _rows("FILL_T333.csv")
     assert {r["revision_set_sha256"][:8] for r in fill} == {"5e369075"}
+
+
+def test_rule6_q55_door_parts_relabelled_owner_approved_d_t333_1():
+    """D-T333-1 (Checker 2026-10-29 13:30): 1F-W13 / 1F-W17 / 2F-W03 established parts deduct a door at the Q-55
+    fallback height 2.20 -> ASSUMED — OWNER-APPROVED; 47.3866 m2; no quantity moves."""
+    r6 = S["rule6_r2_D-T333-1"]
+    assert [x[0] for x in r6["part_status_relabelled (wall, r1, r2)"]] == ["1F-W13", "1F-W17", "2F-W03"]
+    assert r6["established_parts_m2_by_part_status"] == {"ASSUMED — OWNER-APPROVED": 47.3866,
+                                                          "DRAWING-CONFIRMED": 109.1831}
+    assert round(16.8073 + 4.6943 + 25.8850, 4) == 47.3866
+    fill = _rows("FILL_T333.csv")
+    for r in fill:
+        if r["wall_id"] in ("1F-W13", "1F-W17", "2F-W03"):
+            assert r["part_status"] == "ASSUMED — OWNER-APPROVED", r["wall_id"]
+    # every row whose wall deducts a Q-55 door is labelled ASSUMED — OWNER-APPROVED in status or part_status
+    q55 = {o["host"] for o in X["opening_basis"] if o["height_basis"] == "ASSUMED — OWNER-APPROVED"}
+    assert q55 == {"1F-W12", "1F-W13", "1F-W17", "1F-W19", "1F-W23", "2F-W03", "2F-W08", "GF-W05", "GF-W28",
+                   "GF-W29", "GF-W32"}
+    for r in fill:
+        if r["wall_id"] in q55:
+            assert "ASSUMED — OWNER-APPROVED" in (r["status"], r["part_status"]), r["wall_id"]
+    # window-only / no-opening parts keep DRAWING-CONFIRMED
+    for wid in ("1F-W04", "1F-W10", "1F-W24", "2F-W02", "2F-W05", "2F-W07", "GF-W10"):
+        assert {r["part_status"] for r in fill if r["wall_id"] == wid} == {"DRAWING-CONFIRMED"}, wid
+    # m2 / m3 unchanged against r1 (summary totals pinned in the earlier tests stay as they were)
+    assert S["MAS.BLOCK_m2_after"]["established_parts"] == pytest.approx(156.5697, abs=1e-6)
