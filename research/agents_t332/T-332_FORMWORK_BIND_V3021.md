@@ -41,8 +41,11 @@ r5 change, re-measured from the drawing.
 
 V3.0.18 (r5's candidate) -> V3.0.21: the 521 STR.CONC lines are the same ids and element ids; **one** concrete line
 changed: ring ground beam BAND0043 L-7076482d75ca42691468 1.7349 -> 1.746943 m3 (T-255 V3.0.19, end closure).
-So **1,189 / 1,189 tied faces SAME** (0 REBOUND, 0 lost, 0 newly held by a line state), 351 lines carry faces, 26 live
-concrete lines carry none (named in the summary: necks, ground slabs on blinding, the D-05 / D-26 strips, etc., as r5).
+So **1,189 / 1,189 tied faces SAME** (0 REBOUND, 0 lost, 0 newly held by a line state), 351 lines carry faces, 26
+concrete lines WITH a quantity carry none (summary `live_concrete_lines_without_faces_ids`): 24 STR.CONC.GROUND_SLAB
+(cast on blinding between ground-beam faces: no slab-edge form row in any revision), the footing blinding line (no
+form) and BAND0013.1 (the ARC:139+13A sliver, SPLIT_UNRESOLVED as in r5). V3.0.22 (T-331, merged during this run) changes
+FIN.PLASTER lines only (its Gate B: every other line byte-identical to V3.0.21), so the binding holds on it unchanged.
 Untied rows keep their reasons: 69 SPLIT_UNRESOLVED, 38 NO_LINE (12 r5 + 2 lift-pit faces + 24 parapet runs), 7 INFO,
 7 S1 scenario, 5 named.
 
