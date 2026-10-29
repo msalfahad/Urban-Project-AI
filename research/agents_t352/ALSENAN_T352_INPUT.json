@@ -1,0 +1,80 @@
+{
+ "schema": "T352_ALSENAN_STAIR_FORMWORK_INPUT",
+ "project": "development villa (Drive 'Alsenan chalet project'); drawings named by Drive title, entities by DXF handle; printed values, relative lengths and areas only (no coordinates, no drawing content); every length re-read by research/agents_t352/t352_extract.py from the private copy",
+ "drawings": {
+  "ST": "'ST7757 dxf.dxf' sha256 9f9d1179... (= manifest): p.4 GF roof slab plan (ST-01 GF -> 1F, ST-02), p.5 1F roof slab plan (ST-01 1F -> 2F), p.3 ground-beam plan (ST-01b D1, ST-03 E1)"
+ },
+ "unit": "m",
+ "waist_t": {"value": 0.16, "src": "PRINTED 'T 16' stair panels (Q-47 A; T-184 / T-281)"},
+ "landing_t": {"value": 0.16, "src": "PRINTED 'T 16' (T-258 landing plates)"},
+ "risers": {
+  "ST01-GF": {"rise": 4.50, "count": 27, "evidence": "DRAWING-CONFIRMED", "src": "section A-A (Q-46 A, T-184 / T-281)"},
+  "ST01-1F": {"rise": 4.20, "count": 25, "evidence": "DRAWING-CONFIRMED", "src": "section A-A, 12 + turn riser + 12 (T-258 s.3)"},
+  "ST02": {"rise": 4.50, "count": 28, "evidence": "ASSUMED — OWNER-APPROVED", "src": "Q-50 A cond (no section through ST-02; T-184 / T-258)"}
+ },
+ "going": 0.30,
+ "concrete_t258": {
+  "_src": "research/agents_t258/LEDGER_T258.csv r2 (MERGED; Checker-verified values), m3; cited, not re-derived; used only as the cross-check of each side profile (side = stair-owned m3 / width for a prism)",
+  "ST01-MS1-L": {"lo": 0.863029, "hi": 1.054813, "w": 1.20, "cls": "CONFLICT"},
+  "ST01-MS1-U": {"m3": 0.997552, "w": 1.20, "owned_elsewhere": {"head in B20": 0.057261}},
+  "ST01-MS2-L": {"m3": 1.033444, "w": 1.20, "owned_elsewhere": {"foot below the floor inside B20": 0.025448}},
+  "ST01-MS2-U": {"m3": 1.001373, "w": 1.20, "owned_elsewhere": {"head in B23": 0.057451}},
+  "ST02-RS-S": {"m3": 0.942732, "w": 1.20},
+  "ST02-RS-A": {"m3": 0.377093, "w": 1.20}
+ },
+ "flights": {
+  "ST01-MS1-L": {"riser": "ST01-GF", "readings": {"A_architectural": 10, "B_structural": 12}, "w": 1.20,
+                 "src": "p.4 west lane wall 284 -> well 256 (1.200); B: riser lines 45A (s 0) .. 25E (s 3.300); A: 10 lines from 0.600 later to 25E (C-ST-4)",
+                 "well": "p.4 S-OPENING 256 / 25A, 0.100 wide, 3.100 long from the B20 face 2C6 (s 0.150 .. 3.250 on B)",
+                 "head_junction": "p.4 0.100 x 0.050 between the well end (256 / 25A end) and the turn start 25E: the T-184 'well strip' held in MS1-T"},
+  "ST01-MS1-U": {"riser": "ST01-GF", "n_lines": 12, "w": 1.20, "s_free": [0.0, 3.10],
+                 "src": "p.4 east lane 2F3 / 296 (1.200); riser lines 25B (s 0, landing edge) .. 459 (s 3.300); B20 face 2C6 at s 3.100 (head 0.200 inside the band, owned by B20)",
+                 "well": "p.4 S-OPENING 256 / 25A over s 0 .. 3.100 (the whole stair-owned length)"},
+  "ST01-MS2-L": {"riser": "ST01-1F", "n_lines": 12, "w": 1.20, "s_free": [0.0, 3.25], "s_junction": [3.25, 3.30],
+                 "src": "p.5 west lane 5E3 -> well 62D (1.200); riser lines 646 (s 0, 0.150 inside the B20 band, above the 1F floor) .. 632 (s 3.300)",
+                 "well": "p.5 S-OPENING 62D / 62E over s 0.150 .. 3.250, closed by 633 at s 3.250; s 0 .. 0.150 faces the 1F arrival floor (open above +5.50)",
+                 "head_junction": "p.5 0.100 x 0.050 well end between 633 and the plate line 632 (held in MS2-TR, T-258)"},
+  "ST01-MS2-U": {"riser": "ST01-1F", "n_lines": 12, "w": 1.20, "s_free": [0.0, 3.10],
+                 "src": "p.5 east lane 5E2 / 5D4 (1.200); riser lines 62F (s 0) .. 644 (s 3.000) + arrival line (s 3.300); B23 face 5E1 at s 3.100 (head owned by B23)",
+                 "well": "p.5 S-OPENING 62E over s 0 .. 3.100"},
+  "ST02-RS-S": {"riser": "ST02", "n_lines": 11, "w": 1.20, "s_free": [0.0, 2.95], "s_junction": [2.95, 3.00],
+                "src": "p.4 lane B3 band face 283 -> light-well edge 2D0 (1.200); riser lines 2BA (s 0) .. 2C4 (s 3.000)",
+                "free_side": "2D0 S-OPENING (light well / reception void) over s -0.099 .. 2.950: the edge turns north at 2CF (s 2.950)",
+                "head_junction": "s 2.950 .. 3.000 beside the 0.050 strip between 2CF and 2C4 where the RS-A lane starts (corner of two lanes)"},
+  "ST02-RS-A": {"riser": "ST02", "n_lines": 5, "w": 1.20,
+                "src": "p.4 lane S-OPENING 2CF -> slab edge 289 (1.200, R-STAIR-LANE-1); riser lines 2C8 (s 0) .. 315 (s 1.200)",
+                "west": "2CF S-OPENING over the whole flight (2CF runs past 315)",
+                "east": "289 = free edge of the 1F slab wedge GF-146 (T-139: 'T 16', bars hooked at 289); the stair-owned profile tops at +4.696 + 4 x 0.160714 = +5.3393, the slab soffit at +5.50 - 0.16 = +5.34: the side is below the slab, open to the reception below"}
+ },
+ "landings": {
+  "ST01-MS1-LD": {"edges": {"north 279": [1.20, "MEMBER", "'B3 (With Stair)' band 274 / 279 (Q-61 C)"], "east 296": [1.20, "WALL", "lift-shaft wall line (blockwork, D-43 lift walls; T-173 shaft walls)"]},
+                  "continuous": "west 2F3 = the winder turn MS1-T at +3.50; south 25B = MS1-U first riser"},
+  "ST01-MS2-LD-W": {"edges": {"west 5E3": [1.15, "WALL", "stair-shaft wall line (blockwork, T-173)"], "north 5C0": [1.30, "MEMBER", "band 5BE / 5C0 ('B3 (With Stair)' at the landing north edge, Q-61 C)"]},
+                    "continuous": "south 632 = MS2-L; east 5E2 = the turn riser MS2-TR (HELD, R4-325)"},
+  "ST01-MS2-LD-E": {"edges": {"north 5C0": [1.20, "MEMBER", "band 5BE / 5C0 (Q-61 C)"], "east 5D4": [1.20, "WALL", "lift-shaft wall line (blockwork, D-43)"]},
+                    "continuous": "south 62F = MS2-U; west 5E2 = MS2-TR"},
+  "ST02-RS-LD": {"edges": {"east 289": [1.15, "VOID", "free edge 289 of the slab opening; column 374 covers 0.050 of it (y 0 .. 0.050)"], "south 283": [1.15, "MEMBER", "B3 'With Stair' band 0.600 + column 374 corner 0.550"]},
+                 "continuous": "west 2C4 = RS-S; north 2C8 = RS-A"}
+ },
+ "winders_ST01_MS1_T": {"drawn_lines": {"2F6": 1.2587, "2F4": 1.6263, "2F5": 1.2587, "2F3 (closing)": 1.15},
+                        "status": "HELD: drawn on p.4 but 4 riser lines in the turn against 5 risers on section A-A, and the MS1-L reading conflict C-ST-4 sets which riser lines the turn holds; no turn dimension other than its outline 1.30 x 1.15 (S-9: drawn AND dimensioned)",
+                        "information_m2": "drawn line length x 4.50 / 27 = information only, never a bound (the count is not settled)"},
+ "ends": {
+  "ST01b-D1": {"sides": ["lane edge 1C3 (layer-5 pair 1C3 / 143, 0.100 apart)", "ground-beam band face 15F"], "why": "waist / support not printed (T-258 D1-WAIST): the side profile below the step triangles is not established"},
+  "ST03-E1": {"ends": ["south end on ground-beam band 145 / 7CA (0.300)", "north end on layer-5 lines 186 / 187"], "why": "waist / support not printed (T-258 E1-WAIST); section B-B draws the flight on fill"}
+ },
+ "line_ids_V3_0_24": {
+  "_src": "research/agents_t332/CANDIDATE_V3021_CONCRETE_LINES.json (V3.0.21); the 11 STR.CONC.STAIR lines are outside every replaced / added set of V3.0.22 (T-331: 20 finish lines), V3.0.23 (T-319: 4 parapet lines added) and V3.0.24 (T-338: 366 rebar / finish text lines; no STR.CONC.STAIR in V3_0_24_LINE_STATE_FIXES.csv): byte-identical in V3.0.24 by those runs' identity assertions (Checker to confirm on json 19394733)",
+  "ST01-GF-PARENT": "L-7863355dfcb68a681d2d",
+  "ST01-MS1-U+LD": "L-e37d81a8be8e0aa0010c",
+  "ST01-MS2-L": "L-67e4b0485135f84acc46",
+  "ST01-MS2-LD": "L-2416e65f053a14199cfc",
+  "ST01-MS2-TR": "L-659243ed9fc2831c3ae8",
+  "ST01-MS2-U": "L-bb0e57b1948175a3d5b8",
+  "ST01b-D1-STEPS": "L-85f64587588af8537b4b",
+  "ST01b-D1-WAIST": "L-821032bc04a0b0d02133",
+  "ST02-CLOSABLE": "L-056402f98a6dbbcde0a0",
+  "ST02-RS-C": "L-b6b0354b7842f0ed6e41",
+  "ST03-E1": "L-061e18cf35a4b6b33d68"
+ }
+}

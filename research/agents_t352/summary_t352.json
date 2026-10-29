@@ -1,0 +1,64 @@
+{
+ "rule": "STAIR_FORMWORK_T352_V1",
+ "new_faces": 27,
+ "new": {
+  "calculated_m2": 4.1054,
+  "calculated_faces": 7,
+  "held_faces": 20,
+  "held_bounded_hi_m2": 6.434161,
+  "held_bounded_lo_m2": 0.709344,
+  "held_unbounded_faces": 4
+ },
+ "existing_stair_faces_t332": 59,
+ "existing_stair_element_calculated_m2": 32.822036,
+ "existing_all_listed_calculated_m2": 32.822036,
+ "stair_family_calculated_after_m2": 36.927436,
+ "cross_check_side_vs_t258_net_over_width": {
+  "ST01-MS1-L": {
+   "A": [
+    0.7191902467673759,
+    0.7191908333333334
+   ],
+   "B": [
+    0.8790103016045705,
+    0.8790108333333334
+   ]
+  },
+  "ST01-MS1-U": [
+   0.8312925055477277,
+   0.8312933333333333
+  ],
+  "ST01-MS2-L": [
+   0.8611464468859822,
+   0.8612033333333334,
+   {
+    "foot_geo": 0.021206973661237253,
+    "foot_t192": 0.021206666666666665
+   }
+  ],
+  "ST01-MS2-U": [
+   0.8344774556655696,
+   0.8344775000000001
+  ],
+  "ST02-RS-S": [
+   0.7856101774034945,
+   0.78561
+  ],
+  "ST02-RS-A": [
+   0.3142440709613977,
+   0.3142441666666667
+  ]
+ },
+ "overlaps": [
+  "OV-1",
+  "OV-2",
+  "OV-3",
+  "OV-4",
+  "OV-5",
+  "OV-6",
+  "OV-7",
+  "OV-8",
+  "OV-9"
+ ],
+ "double_count": 0
+}
