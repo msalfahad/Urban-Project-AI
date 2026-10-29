@@ -1,3 +1,89 @@
+## LEAD REPORT 2026-10-29 04:15 UTC
+
+Drive readable: nothing created or modified in "Urban BOQ private data" or the Alsenan folder since 29 Oct 00:00; no new
+images (no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared
+automatically ("setup by auto", 04:12). Working branch 5ddb2ba1 -> 4410fb03 (six Checker merges via 'engine push'); no
+owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since your
+28 Oct 21:44 'Halve runs' (applied).
+
+HEADLINE: six research pieces merged, the wall-tile integration sent back once for a narrow cross-trade fault (figures
+sound), and the Checker corrected one of his own verified components downward (footing blinding). No run failed.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; candidate of
+record still ARCH_TAKEOFF_V3.0.20 (097a80b6), NOT RELEASED; whole verified lines in the candidate export 2, released 0;
+no scoreboard cell moved except CONC.BLINDING's verified component):
+- WALL TILE (m2), V3.0.21 Gate B REJECTED narrow: Checker's own re-measure of all 12 valued lines 340.2484 vs 340.3038
+  (-0.016 %; max GF-14 -0.32 %, a 5 mm walk on diagonals, not material); full suite NEW 0; reproduced byte for byte.
+  Fault F-T315-C1: the pantry's full-height tile was added while two skirting lines on the same faces (1.9 lm released
+  + 0 .. 1.0 lm bounded) stayed = base priced twice; F-T315-C2: the pantry part of the second open-plan room's skirting
+  (28.172 lm / 0 .. 7.832) unchecked. Cause: attribution by the room's open-plan note, not by source entity. Engine vs
+  freelancer unchanged: 11 rooms 307.96 vs 295.44 m2, +12.52 (+4.24 %): height +43.19 RULE_DIFFERENCE (your Q-48 A vs
+  his flat 3.00), doors -23.10 / windows -4.92 ENGINE_RIGHT, pantry +32.34 SCOPE ENGINE_RIGHT.
+- CONCRETE / BLINDING (m3): FF raft 4.60 x 4.50 x 0.55 = 11.385 DRAWING-CONFIRMED (= earlier ledgers, 0.000); the FF
+  blinding had used the p.13 typical 0.10 projection while p.14 (the lift footing's own detail) prints none: the
+  Checker DOWNGRADED the verified footing-layer component 14.990 -> 12.734438 m3 VERIFIED + FF HELD >= 2.070 (readings
+  2.256 at 0.10 / 2.352 at 0.15 scaled, spread 0.096). CONC.BLINDING stays PARTIALLY VERIFIED. Freelancer whole-plot
+  plate 47.055 RULE_DIFFERENCE unchanged. Designer item S23 added.
+- OPENING REVEALS (m2) MERGED: 20 door reveals EQUAL 17.740 inside FIN.PLASTER (no second carrier); missing 13.637
+  (window outside jambs + heads 9.667, W18 sill 0.040, 5 doors 3.930); D-GF-07 at the printed 2.50 = 1.400 (line low
+  end 1.28 ENGINE_WRONG). Freelancer: no reveal row to compare.
+- ROOFING (m2 / m3) MERGED (research): layer areas ROOF-430 54.920 .. 55.560, TERRACE-550 32.721, ROOF-970 115.656 ..
+  115.814, ROOF-1390 49.665 HELD (Q-34); falls screed 14.208 .. 17.470 m3 (one SCREED volume); two older edges proven
+  wrong (ROOF-430 short 2.0787 m2; ROOF-970 on the outer face).
+- PARAPET FINISH (m2 / m.l) MERGED (research): inner faces 94.123 .. 99.558, tops 26.836 .. 26.973, arrises 577.870 ..
+  578.829 m.l; vs freelancer rows 78 / 79 / 83 / 84 +20.2 .. +25.4 m2 net with causes named; coping / drip UNKNOWN.
+- SILLS / THRESHOLDS (m2 / m.l / pcs) READY: wet marble 14 pcs / 1.820 m2 (10 lines EQUAL, residual 0.000), dry strips
+  7 / 1.100, external window sills 23 / 2.5614 m2 / 29.530 m.l (material UNKNOWN), external door sills 6 / 1.310
+  WITHIN_BOUND; 0 DIFFERS; freelancer has no sill / threshold row (his 7.70 'door steps' are lengths in an area column).
+- SLABS: sunken-step concrete only from a printed step detail (Alsenan 0 m3); 14 slab hatches vs panels: no candidate
+  line reads a hatch (ENGINE_RIGHT).
+- Learned (lessons register +2): attribute a finish line by its source entities and the merged room split, never by an
+  open-plan note (PROPOSED, accepted when T-315 r2 passes); a typical detail of another element type gives an INHERITED
+  reading only, and a verified component on a wrong basis is downgraded by record (ACCEPTED).
+- Missing (unchanged): designer answers (S1 - S23 incl. new S23 FF blinding projection, A1 - A13 incl. new A13 sill /
+  coping materials, Q-65 C, D-39, D-41, Q-21 C); the canonical 'deductions' field is empty on the V3.0.20 / V3.0.21 finish
+  lines (net correct, but an export consumer computing gross - deductions would get gross): new export check.
+
+GATES: lowest open gate 1 (T-330 export integrity, tooling); quantity work at gate 2: T-315 r2 TODO, T-325 READY, T-329
+TODO; T-319 / T-279 / T-326 / T-327 / T-199 / T-328 / T-284 / T-246 / T-310 / T-314 QUEUED (lane I serial). Gate 3:
+T-318 BLOCKED-OWNER.
+
+MILESTONES: M2 (28 Oct) LATE; its last exit piece (reveal ledger) PASSED at 01:29; exit = the Checker's census statement,
+asked in his queue. Week 2 (3 Nov): wall tile by about 29 Oct evening if r2 passes first time, then parapet RC and
+blockwork; reveals / sills after. Mitigation: any idle worker may now claim the next lane I row once the previous merged.
+
+CLOSE THE LOOP since 00:21: WORKED x6 (T-321, T-224 r2, T-313 r2, T-324, T-322, T-323); PARTIAL x1 (T-315 Gate B ->
+TODO r2 with the 4 exact items); READY 1 (T-325). New rows: T-326 reveals, T-327 sills / thresholds, T-328 roof build-up
+(lane I, serial), T-329 wet-room backing plaster (lane A), T-330 export deductions check (tooling, worker 1). Downgrade
+record for the FF blinding = Checker item (his file), checked by T-319's export. RFI S23 / A13 added (unsent).
+
+VERIFIER QUEUE (READY 1, CHECKER-RUNS, 0.3 h): standing slot T-132; Gate A T-325 FIRST; the Checker-issued downgrade
+record on the candidate blinding line; the M2 census statement; Gate B T-315 r2 when READY; T-329 / T-330 when READY.
+
+LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-330; A worker 2: T-329; I worker 3:
+T-315 r2, T-319, T-279, T-326, T-327, T-199, T-328, T-284, T-246, T-310, T-314, T-318 (only after your approval). TODO 3:
+below 8 - 12 on purpose: lane I is serial on the integration files and every open structural line is held on a designer
+or owner item; your integration-first (24 Oct) and no-exploratory-work (28 Oct) rules allow no filler rows.
+
+TEAM HEALTH (since 00:21): every run closed with a final line (Workers 1 / 2 / 3, Checker x4); all self-checks PASS;
+Worker 1 03:21 and Checker 03:54 found nothing to do and ended at once, as you asked. Worker 3 took a lane S row
+(T-323) when lane I had nothing claimable (allowed). Recurring tool issue (all four code agents, every run): the Drive
+connector saves raw binary and `agent_env.sh decode` accepts only base64; each agent re-encodes in its scratch folder
+first (sha256 checked; no private data entered the repository). Dashboard 00:54 SUCCEEDED (next 12:54). Scout paused.
+
+OWNER PACKAGE (2 items, unchanged; neither blocks the critical path, not pushed)
+1. Slab reinforcement bar-end split into the CANDIDATE (not the release): full ERS s.6 text in archive/LEAD_REPORT_older.md
+   (26 Oct 06:15 entry): alternatives A keep note-9 lengths / B split with every undrawn part HELD; impact 0.56 .. 1.03 t
+   plus the T-316 findings (0.12 .. 0.15 t missing across edge beams, 0.08 t past short spans); recommendation B; next
+   action T-318.
+2. Q-77 joint mesh over block-to-concrete joints: full s.6 text in the 00:15 entry below (A not an item / B your finish
+   band about 281.6 m inside + 230.1 m outside / C full drawn joint about 528.2 + 230.1 m; recommendation B).
+
+NEEDS FIXING (only the owner):
+(1) `scripts/agent_env.sh decode` (main) should accept the raw binary the Drive connector now saves, and names with
+    spaces; four agents work around it by hand every run (time, and a manual step near private data).
+(2) Designer / consultant RFIs (now S1 - S23, A1 - A13) stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-29 00:15 UTC
 
 Drive readable: nothing created or modified in "Urban BOQ private data" or the Alsenan folder since 28 Oct 20:00; no new

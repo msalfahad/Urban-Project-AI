@@ -46,7 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-29 12:30; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-29 16:30; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-29 16:30: T-319 passed Gate B FIRST TIME at 15:45: candidate of record V3.0.23 (4 STR.CONC.PARAPET m3 lines HELD BLANK with bound >= 8.050943 m3; every other line byte-identical). T-342 (M2 MET on rooms and openings for P7757), T-341 (deductions FILL, one line UNEXPLAINED) and T-337 (exterior plaster FILL for T-314) MERGED; T-332 / T-333 sent back narrow (one defect each); T-339 / T-340 READY. Week 2 (by 3 Nov) re-estimate: T-338 export text fix 30 Oct morning; T-333 r2 + T-279 blockwork 30-31 Oct (first verified-quantity increase of the week if it passes first time); T-343 outdoor floors (new, M2 follow-up) 31 Oct; T-326 / T-327 reveals / sills 1 Nov; T-199 formwork by 3 Nov now unlikely (six lane I rows ahead). Verified SHARE still at risk: the new lines are owner-approved or held, not whole-line verified.
+
+### Earlier status (Lead, 2026-10-29 12:30)
 
 Lead 2026-10-29 12:30: T-331 passed Gate B FIRST TIME at 11:38: candidate of record V3.0.22 (FIN.PLASTER 234.9481 -> 575.2519 m2, the wet-room backing 340.3038 m2 ASSUMED — OWNER-APPROVED with the drawing band 0 .. 23.0970 HELD beside); T-330 / T-334 export checks, T-335 ceiling and T-336 wet-area WP bindings MERGED; T-332 formwork and T-333 blockwork bindings READY 12:15. P-06 (plaster / paint) has both methods in the candidate for every tiled room; P-07 (blockwork) and P-10 (formwork) now have their FILL tables in Gate A, so T-279 / T-199 are wiring. Week 2 (by 3 Nov) re-estimate at the halved cadence: T-319 parapet RC (HELD family) 29 Oct evening, T-338 export text fix 30 Oct, T-279 blockwork 30-31 Oct (first verified-quantity increase of the week if it passes first time), then T-326 / T-327 reveals / sills; T-199 formwork by 3 Nov is at risk (five lane I rows ahead of it). Verified SHARE still at risk: the new lines are owner-approved or held, not whole-line verified. M2: census statement written (10:00), NOT MET on 8 room labels; T-342 (gate 1, lane A first) decides each; estimate 30 Oct.
 

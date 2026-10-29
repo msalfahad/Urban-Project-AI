@@ -1,18 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 12:30 UTC (Lead). Previous version: 2026-10-29 08:20 UTC. The released numbers did not change
+Last update: 2026-10-29 16:30 UTC (Lead). Previous version: 2026-10-29 12:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.22 (not released).
+line among them); released: 0. The candidate under review is now V3.0.23 (not released).
 
-THE PLASTER BEHIND WALL TILES IS IN THE CANDIDATE, and it passed the checker first time: interior plaster in the
-candidate 234.95 -> 575.25 m2 (+340.30 m2 at your tiling height on 12 wet-room and pantry lines; 6 rooms still held,
-never zero; the band above the tile, 0 .. 23.10 m2, held beside every line because no drawing prints where it stops).
-Four more pieces were checked and merged, every worker run closed properly, and nothing new waits on you. The checker's
-room census found the ground floor bathroom label and seven other labels (pool, four garden areas, a void, a roof) that
-no candidate line refers to: openings are complete, rooms are not, so the 28 Oct milestone stays late until each of the
-eight is bound to a line, shown not applicable from the drawing, or listed as missing.
+THE ROOM MILESTONE IS MET for the Alsenan drawings, one day late: the checker's own census now accounts for every one of
+the 41 room labels (28 measured, 1 held, 1 unsupported, 11 tied to a line, shown not applicable from the drawing, or
+listed as missing with their scope), so no room is silently left out. The "bathroom" it was chasing is the pool (the
+label sits inside the pool on the drawing), and the pool is drawn as a D-shape, not a circle, so the paved deck around it
+is 7.11 m2, not 7.94 m2. Two things remain, both additions, not omissions: the outdoor court (166.88 m2 in six pieces,
+interlock by your chalet rule) and the pool deck must become lines, and the census tool must learn to read the tie-ups.
+Parapet concrete is now its own set of lines in the candidate (held blank: at least 8.05 m3 whatever the roof build-up
+depth; the freelancer has no parapet concrete at all). Nothing new waits on you.
+
+Since 29 Oct 12:30 (newest first; four checked and merged, two handed in, two sent back for one fix each):
+- Roof build-up table and window / door reveals, sills and thresholds table: HANDED IN (wait for the checker).
+- Outside plaster tied face by face to the candidate: CHECKED AND MERGED. Every outside face once (closure 0); walls
+  897.72 .. 938.61 m2 vs the freelancer's 935.37 (-4.0 .. +0.3 %): a rule difference (he deducts half of each opening,
+  your rule deducts the full hole). Three of his rows (93.15 m2) match no face on the drawings: being traced.
+- Parapet concrete: CHECKED AND MERGED into the candidate (4 lines held with the bound beside; the top floor ring
+  re-measured by the checker: 5.415 m2 -> 1.62 m3 at the printed 0.30 m upstand, 0.000 %).
+- Deductions table for the export: CHECKED AND MERGED; 40 of 41 lines close; one first-floor porcelain line has 5.89 m2
+  that nothing explains yet, so it stays unfilled and is being traced.
+- Room census: CHECKED AND MERGED (see above).
+- Blockwork table and formwork table: SENT BACK for one fix each, every measurement kept: the formwork table wrote held
+  faces as 0 (they must stay blank), and three block walls with a door at your approved 2.20 m height were labelled
+  drawing-confirmed instead of owner-approved.
 
 Since 29 Oct 08:20 (newest first; five checked and merged, two handed in):
 - Blockwork wall-by-wall table for the candidate: HANDED IN. The candidate's 21 blockwork lines are all still blank;
@@ -1131,15 +1146,14 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-26 02:15)
-- Checker: the scoring fix first (so the scoreboard shows the current candidate again), then the slab steel range;
-  the windows / curved ground beam integration when it is handed in.
-- Structural (worker 1): classify every slab bar end against the typical detail (after the checker verifies the slab
-  range); the consolidated formwork corrections for the candidate.
-- Architecture and finishes (worker 2): tie every outside plaster face to a candidate line; then the pool membrane and
-  screed.
-- Integration (worker 3): windows W18 / W03 and the curved ground beam correction into the candidate (in work); then
-  plaster / paint, blockwork, ceilings, skirting, the wet-room waterproofing fixes and formwork, one at a time.
+(Lead 2026-10-29 16:30)
+- Checker: the reveals / sills and roof build-up tables, then the two sent-back tables, then the export text fix.
+- Structural (worker 1): the formwork table fix (held faces blank), then tracing the unexplained 5.89 m2 porcelain.
+- Architecture and finishes (worker 2): the census tool upgrade, then the three freelancer outside-plaster rows with no
+  drawn face.
+- Integration (worker 3): the blockwork table fix, then the export text fix in the candidate, then the outdoor court and
+  pool deck lines, then blockwork, reveals / sills, formwork, roof build-up, ceilings, skirting, waterproofing and outside
+  plaster, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

@@ -42,6 +42,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-29 16:30 (lead run; covers 12:30 - 16:30)
+
+- T-342 M2 label binding: WORKED (Gate A PASS 14:39; Checker own census 41 labels reproduced; AT19 = pool by position inside the water D; pool is a D not a circle, deck 7.9392 -> 7.1058 m2; M2 MET on rooms and openings for P7757 on this ledger). Decisions: NEW T-343 outdoor floor lines (lane I, after T-338), NEW T-344 census tool v2 (lane A) so the tool stops printing SILENT_OMISSION for bound labels; lessons row ADOPTED (research scope).
+- T-319 parapet RC line family: WORKED (Gate B PASS FIRST TIME 15:45; candidate of record V3.0.23; 4 lines HELD BLANK with bound >= 8.050943 m3; 2F ring 5.415 m2 -> 1.6245 m3 0.000 %; 3,706 lines byte-identical; L4 NEW 0). Decision: T-338 TODO on V3.0.23; F-T311-C2 band and divider CEC / CED placed in the element register.
+- T-341 deductions FILL: WORKED (Gate A PASS 15:45; 40 / 41 lines close; 1F-01 plaster 51.415 own 0.000 %). PARTIAL element: 1F porcelain L-b06400d4 5.890817 m2 UNEXPLAINED, correctly left unfilled. Decision: NEW T-345 trace (lane S) before T-246.
+- T-337 exterior plaster / Sigma FILL: WORKED (Gate A PASS 16:06; 2F ring 125.160 / 14.900 own 0.000 %; closure 1,017.948 residual 0). Freelancer rows 65 / 68 / 69 93.150 m2 with no drawn face. Decision: NEW T-346 investigation (lane A).
+- T-332 formwork binding: PARTIAL (REJECTED 13:25, narrow r2: FILL writer turns 201 HELD rows into 0.000000 and 25 unbounded rows into 0 .. 0; every re-measure sound). Decision: rework r2 CLAIMABLE, worker 1 first; acceptance = blank m2 / bounds where no bound, test on the committed CSV.
+- T-333 blockwork binding: PARTIAL (REJECTED 13:30, narrow r2: 3 established parts 47.3866 m2 deduct a Q-55 2.20 m door yet carry DRAWING-CONFIRMED). Decision: rework r2 CLAIMABLE, worker 3 first (blocks T-279); rule in binding_fill.py with normal + adverse test.
+- T-339 roof layers binding / T-340 reveals binding: READY 16:21 / 16:02 (CHECKER-RUNS).
+- Supervision note: the 12:30 lane order did not yet carry the two 13:25 reworks, so worker 1 took T-339 next (in its order) and the reworks waited 3 h: no fault of the worker; reworks now first in their lanes.
+- Recurring (every code agent, every run): Drive connector saves raw binary, `agent_env.sh decode` accepts only base64; worked round by hand in scratch (5 runs today). The automatic prepare leaves the venv without pytest (Worker 1 16:21, Worker 2 13:44, Verifier earlier; fixed by one `setup`). Both stay in NEEDS FIXING (wrapper is the owner's main chat's file).
+
 ## 2026-10-29 12:30 (lead run; covers 08:20 - 12:30)
 
 - T-330 export canonical-deductions check: WORKED (Gate A PASS 09:48; Checker re-ran on V3.0.21: 41 FLAG / 0 REFUSED, hand check L-af9621f4 +15.33 % over-read with an empty list). Decision: FILL table NEW T-341 (lane S) for T-246.

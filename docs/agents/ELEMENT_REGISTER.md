@@ -46,6 +46,35 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-29 16:30 (from T-342 / T-319 Gate B (V3.0.23) / T-341 / T-337 MERGED; T-332 / T-333 REJECTED narrow r2; T-339 / T-340 READY; new T-343 .. T-346)
+
+- PARAPET (kind WALL on ROOF / annex / GF terrace edges; every villa): ONE element per run, owner trade CONCRETE for the
+  printed RC upstand (STR.CONC.PARAPET, 4 lines in V3.0.23, HELD BLANK, bound >= 8.050943 m3, Q-65 C / D-39), its
+  alternative above the upstand RC OR BLOCK, never both (MAS.BLOCK alternative 0 .. 60.596 m2 in no line until Q-65 C
+  settles it); outer face = FACADE (T-337 parapet-outer rows 97.507 .. 103.847 m2), inner face / top / up-turn = ROOFING
+  and WP (T-324, T-339). Footprint shared with no beam line (Checker 15:46) and no roof layer (T-339 0.000 m2, pending
+  Gate A). Formwork faces -> T-199 via T-332 (HELD blank, never 0).
+- F-T311-C2 BAND (1F, 0.20 x 7.500 strip on the outer side of SE-1, handles 12C4 / 12C6 / 12C7): no roof inside it; kind
+  EXT (frames / architectural band), owner trade FACADE / FRAMES item, status UNKNOWN by name (not 0, not concrete, not
+  parapet). Designer item only if the facade package needs a figure (ERS s.2.7 test first).
+- ROOF DIVIDER CEC / CED (T-324 / T-339 divider 0.260 m2): owner trade ROOFING (a build-up divider, not a parapet run);
+  carried in the cross-check tables only, in no line yet.
+- POOL (EXT, GF court; every villa with a pool): the outline is the drawn D (ARC 200 / 202 + LINEs 203-206 to wall face B7),
+  never the printed radius as a circle (R-T342-POOL-OUTLINE-1). Shell = CONCRETE (PARTIALLY VERIFIED line); water-face
+  membrane / screed = WP (T-310, MISSING 29.582 m2 / 1.525 m3 today); water-face finish = POOL FINISH (HELD blank, rim
+  height from the section first: 1.20 to the structure line + 0.15 upstand per owner 2026-10-22 15:55 vs the 1.15 used in
+  the T-342 bound); pool deck = EXTERNAL FLOOR, 7.1058 m2 DRAWING-CONFIRMED (corrected from T-157 7.9392), material HELD
+  unless the outdoor-floor owner rule covers it (T-343). AT19 / AT20 are pool labels, not wet rooms.
+- OUTDOOR COURT (EXT, GF; chalet): 6 pieces 166.883 m2 MISSING from every line today; owner trade EXTERNAL FLOOR, finish
+  interlock by OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 (chalet court; ASSUMED — OWNER-APPROVED with that source); never on an
+  interior tile line, never shares area with the pool deck, porch (10.680) or the GF north side walk (house, porcelain /
+  ceramic) (T-343).
+- FREELANCER EXTERIOR ROWS 65 / 68 / 69 (93.150 m2, no face drawn per T-337): element UNDEFINED until T-346 names it;
+  candidate kinds: boundary / court wall faces (owner trade BOUNDARY WORKS, with the boundary ground beam rows above, not
+  the house facade) or a face the plans do not draw. Never a quantity from the freelancer figure.
+- ROOF BUILD-UP (ROOF, every roof / terrace): unchanged from 08:20 (screed SCREED one m3 per roof, finish ROOFING B13-01,
+  insulation / protection UNKNOWN); T-339 binds 24 rows = 4 roofs x 6 layers, edges at the parapet inner face.
+
 ### Lead 2026-10-29 08:20 (from T-325 / T-315 r2 / T-329 MERGED; T-330 READY; new T-331 .. T-337)
 
 - WET-ROOM WALL FACE (ZONE-FIN, wet rooms + pantry; every villa): three layers, three owner lines, each once per face:
