@@ -53,12 +53,12 @@ CHAINS = {  # chain -> (location floor, element id, the roof's WP line that carr
 PINS = {"runs": 25, "top_lo": 26.836476, "top_hi": 26.972520, "floor": 8.050943, "t311_runs": 24,
         "t311_block_hi": 60.596453}
 EXCLUSIVE = [
-    "parapet BLOCKWORK above the upstand (MAS.BLOCK, HELD 0 .. 60.596 m2 on the T-311 runs, T-333 binding READY): an "
+    "parapet BLOCKWORK above the upstand (MAS.BLOCK, HELD 0 .. 60.596 m2 on the T-311 runs; blockwork binding T-333): an "
     "EXCLUSIVE alternative of the same element under Q-65 C: a run is RC OR block above the upstand, never both, and "
     "the two are never added",
 ]
 DOWNSTREAM = [
-    "parapet FORMWORK faces of the RC reading (T-311 81.589 .. 202.782 m2, T-332 READY): the formwork family (T-199), "
+    "parapet FORMWORK faces of the RC reading (T-311 81.589 .. 202.782 m2; formwork binding T-332): the formwork family (T-199), "
     "not this line",
     "parapet REINFORCEMENT: HELD (type unkeyed; no rebar change before an approved stage)",
     "parapet outer face (FIN.EXT.FINISH, T-314), inner face above / in the upturn zone, top surface, arrises (T-324 "

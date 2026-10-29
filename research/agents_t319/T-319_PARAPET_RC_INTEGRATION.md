@@ -152,9 +152,10 @@ cannot move (no reference line answered by a parapet line). Not re-run here (the
 
 - HELD (never 0): the parapet RC volume of every chain (material per run Q-65 C designer; b_edge D-39 and the P1
   margin); the 1F heights NE-1 / SW-1 / SW-2; the D-band run ends C1 / C2 / C6.
-- Not in this line (named): block alternative (MAS.BLOCK, exclusive; T-333 READY binds 0 .. 60.5965 m2 on the T-311
-  runs; NE-6x owed); formwork 81.589 .. 202.782 m2 (T-311 basis; T-199 / T-332); reinforcement HELD; faces / top /
-  arrises / coping (T-324 items, T-314); upturn (roof WP lines); the strip of F-T311-C2 (frames item); the divider.
+- Not in this line (named): block alternative (MAS.BLOCK, exclusive; the blockwork binding T-333, sent back 13:30 for
+  an unrelated door-height status label, carries 0 .. 60.5965 m2 on the T-311 runs; NE-6x owed by it); formwork
+  81.589 .. 202.782 m2 (T-311 basis; T-199 / T-332, whose Checker pass 13:25 confirmed the 24 parapet rows HELD
+  blank); reinforcement HELD; faces / top / arrises / coping (T-324 items, T-314); upturn (roof WP lines); the strip of F-T311-C2 (frames item); the divider.
 - Downstream: SCOREBOARD v2 unchanged (unkeyed family, section 4); coverage registry: BOQ_FAMILY_MASTER 1.18.0 declares
   V3.0.23 PENDING (rule r3); once merged the B10-12 parapet family is HELD_IN_CANDIDATE (released_in_candidate none).
 
@@ -180,4 +181,38 @@ cannot move (no reference line answered by a parapet line). Not re-run here (the
 
 ## 10. Final run and validation on the task head
 
-(filled at hand-in)
+- **Full CLI run (research/agents_t319/v3023_run.py, one process) on the task head 1f6e107f** (the code of the hand-in;
+  later commits are report / maps only): V3_0_19 json `b35475bf`, V3_0_21 json `be22a4e4` / csv `3548e39c`, V3_0_22 json
+  `7199c8b6` / csv `924a60b4` (= the candidates of record, reproduced), **V3_0_23_BOQ_LINES json `0026800b` / csv
+  `a819c9f8`**, DIFF `867c3003`, INTEGRATION_LEDGER csv `5c7dc89f` / json `8d2f6d20`, RUNS `0566e0a9` (=
+  research/agents_t319/V3_0_23_RUNS_T319.csv), RUN `6799f5ca`: byte-identical to v3023_direct.py on the same V3.0.22.
+- Export / checks on these lines: section 6 (export rows 3,710, every V3.0.22 row equal; the 4 parapet rows HELD with
+  the bound in the held reason; FF blinding HELD by DG-3521554d; line-state OK 3,344 / 351 / 15; deductions OK 74 /
+  FLAG 41 unchanged).
+- **L4 full suite (tests/ + agents/, one session) on 88f4c3cf** (module, wiring, inputs, tests, master, maps): 396
+  FAILED / ERROR; all 43 failing files re-run on the base head c4246877 (.work/engine): 395 fail there too; **NEW 1**:
+  tests/structural_comparison_engine/test_rebar_product_firewall.py::test_every_rebar_module_in_engine_is_declared
+  (arch_v3023 names reinforcement) -> fixed in 59d4a0b2 by declaring the module in the registry (as arch_v30 ..
+  arch_v305); the 395 are the known private-input / environment failures (pa08 / pa09 private workpapers, the rebuild
+  packages that need private drawings, r8_* import boundaries, one control-plane gate), the same 395 T-331 reported.
+  Full suite again on c09b4dcb: FULL_SUITE_RESULT.
+- Freeze 0 differing; codemap stale none (maps by the tool, last); rules manifest drift none; master 1.18.0 equals its
+  builder, FMC problems none.
+- Verdict / downgrade records: no record of docs/agents/verdicts/V3.0.22 binds a parapet line (they are new); every
+  bound line is byte-identical in V3.0.23, so each record re-binds to the same content unchanged (no record edited here:
+  the Checker owns them); the export shows DG-3521554d and DG-a97ec2ea APPLIED as on V3.0.22.
+- self-gate: a c d f h PASS (a: only the new integration module, runner wiring, registry version file, rules manifest,
+  the firewall registry declaration, research and tests/t319_*; no frozen / rule / knowledge file edited, no client
+  data, no coordinate in tracked files (the DXF handles of F-T311-C2 only); c: freeze 0, maps by the tool; d: hand
+  fixture P319 not Alsenan with adverse cases, missing never 0; f: every V3.0.22 line byte-identical, held stays held
+  (4 blank lines); h: one owner per component, RC and block exclusive, no figure chosen, the floor never presented as
+  the quantity).
+
+## 11. For the Checker (Gate B)
+
+Re-measure (WORKFLOW_CONTROLS s.1): all 4 lines are hand-check lines (new method, new scope, structural element).
+Suggested own checks: the 2F floor 0.30 x 5.415 = 1.6245 m3 (your T-311 ring); the annex chain top 5.997 .. 6.037 m2 x
+0.30 (your T-324 own) = 1.7991 .. ; the 1F NE-2 run 19.07 x 0.20 = 3.814 m2 x 0.30 = 1.1442 m3; that no STR.CONC.BEAM
+line rises above the slab top (R-T311-2); the F-T311-C2 classification on P7757.dxf (12C4 / 12C7 / 12C9 / 12C6);
+that the 4 lines are blank in the export with the bound in the held reason; plus 2 random lines by the s.1 rule on
+the merge-candidate sha. Quick re-run: research/agents_t319/v3023_direct.py on a finished V3.0.22 run.
