@@ -1,0 +1,1680 @@
+{
+ "agrees": [
+  {
+   "after": "10.010 (unchanged)",
+   "drawn": "4.60 x 4.50 x 0.55",
+   "element": "FF raft (lift footing)",
+   "merge": "T-322 MERGED d3bcd9d4",
+   "r5_face": "R4-026 FORMED 2 (4.60 + 4.50) 0.55 = 10.010",
+   "source": "1B2B + p.9 row FF + p.14",
+   "why": "raft = schedule = outline (DC); base on 0.05 screed over membrane over blinding: no form; the p.14 side build-up (membrane + board outside the face) does not settle OQ-10: pair kept"
+  },
+  {
+   "after": "none",
+   "drawn": "projection not printed",
+   "element": "FF / footing blinding (DG-3521554d)",
+   "merge": "T-322 / Checker downgrade",
+   "r5_face": "none (blinding has no formwork row)",
+   "source": "p.14",
+   "why": "a blinding edge is not in any formwork revision and no footing base is formed: no face moves"
+  },
+  {
+   "after": "10.640 (unchanged)",
+   "drawn": "4.40 x 3.20 x 0.70",
+   "element": "F12 footing",
+   "merge": "T-320 MERGED 5ddb2ba1",
+   "r5_face": "R4-018 FORMED 2 (4.40 + 3.20) 0.70 = 10.640",
+   "source": "1ABF + p.9",
+   "why": "T-320 pit chain uses the same outline; F12 is 0.5998 m clear of FF (T-322): no shared face"
+  },
+  {
+   "after": "unchanged",
+   "drawn": "157 R 2.250 x 167.236 deg = 6.567377 m; 158 R 2.550 x 150.086 deg = 6.679704 m",
+   "element": "ring ground beam ARC:157+158 (BAND0043)",
+   "merge": "T-255 V3.0.19 (concrete end closure)",
+   "r5_face": "R4-148 6.239008 CALC; R4-149 5.963657 FORMED",
+   "source": "arcs 157 / 158",
+   "why": "T-255 moved the concrete END closure (+0.012043 m3: ends close on the drawn straight-beam face and neck columns); an end that closes on a drawn face has no formed end face, and both arc faces are measured on the full drawn arcs already (6.567377 x 0.95 = 6.239008)"
+  },
+  {
+   "after": "unchanged",
+   "drawn": "4.1176 / 7.3009 m2",
+   "element": "slab panels GF-081 (hatch 298) / GF-141 (hatch 280)",
+   "merge": "T-323 MERGED 4410fb03",
+   "r5_face": "PANEL:GF-081 / PANEL:GF-141 soffits",
+   "source": "T-139 faces (panel by member faces)",
+   "why": "r5 soffits are the T-139 panels (member faces), never the hatch: the hatch-cut does not reach formwork"
+  },
+  {
+   "after": "HELD (unchanged)",
+   "drawn": "no free edge on any sunken panel",
+   "element": "sunken panels (275 / 276 / 280 / 287 / 298 / 5BF)",
+   "merge": "T-224 r2 MERGED f8180b18",
+   "r5_face": "sunken-panel faces HELD x 50.885 m (D-41)",
+   "source": "slab_step_v2 StepDetail; no printed step section",
+   "why": "all six are beam-framed: the step faces are beam sides above / below the drop d (D-41 unprinted)"
+  }
+ ],
+ "candidate": {
+  "formwork_lines_in_candidate": [],
+  "lines_csv_sha256": "3548e39ca1c9d130a9536d89098e87e8286cd0777ec93080cc08707482837fff",
+  "lines_json_sha256": "be22a4e4b68dbaa9e87a39ad45f7dec3be64b04aca3a5843301458720b645ad0",
+  "lines_total": 3706,
+  "method": "ARCH_TAKEOFF_V3.0.21",
+  "str_conc_lines": 521
+ },
+ "chain_by_element": [
+  {
+   "element": "BEAM",
+   "r3": 387.936,
+   "r4": 393.235388,
+   "r4_source": 393.234766,
+   "r5": 390.251472,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": -0.0,
+   "residual r4 source -> r5": -0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 390.251472
+  },
+  {
+   "element": "BOUNDARY",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  },
+  {
+   "element": "COLUMN",
+   "r3": 183.967,
+   "r4": 117.461,
+   "r4_source": 117.461,
+   "r5": 117.461,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 117.461
+  },
+  {
+   "element": "DOME",
+   "r3": 48.3,
+   "r4": 48.3,
+   "r4_source": 48.3,
+   "r5": 48.3,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 48.3
+  },
+  {
+   "element": "FOOTING",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  },
+  {
+   "element": "GROUND_BEAM",
+   "r3": 0.0,
+   "r4": 47.662713,
+   "r4_source": 47.947713,
+   "r5": 47.947713,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 47.947713
+  },
+  {
+   "element": "JOINT",
+   "r3": 11.878,
+   "r4": 9.638828,
+   "r4_source": 9.639228,
+   "r5": 8.712728,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 8.712728
+  },
+  {
+   "element": "LIFT",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  },
+  {
+   "element": "NECK",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  },
+  {
+   "element": "POOL",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 15.982699
+  },
+  {
+   "element": "SLAB",
+   "r3": 375.048,
+   "r4": 375.048,
+   "r4_source": 375.0481,
+   "r5": 375.0481,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": -0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 375.0481
+  },
+  {
+   "element": "SLAB_EDGE",
+   "r3": 26.612,
+   "r4": 27.747032,
+   "r4_source": 27.746809,
+   "r5": 25.201745,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 25.201745
+  },
+  {
+   "element": "STAIR",
+   "r3": 44.533,
+   "r4": 44.533,
+   "r4_source": 44.428,
+   "r5": 32.822036,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": -0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 32.822036
+  },
+  {
+   "element": "STRAP",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  },
+  {
+   "element": "TANK",
+   "r3": 0.0,
+   "r4": 0.0,
+   "r4_source": 0.0,
+   "r5": 0.0,
+   "residual r3 -> r4": 0.0,
+   "residual r4 -> r4 source rows": 0.0,
+   "residual r4 source -> r5": 0.0,
+   "residual r5 -> T-332": 0.0,
+   "t332": 0.0
+  }
+ ],
+ "chain_steps": {
+  "r3 -> r4 | BEAM | T-252 R-BEAM-CURVED-AREA-2: ring B7 soffit": 0.391303,
+  "r3 -> r4 | BEAM | T-252 ring B7 sides on its arcs": 4.908085,
+  "r3 -> r4 | COLUMN | T-248 / T-256 section CONFLICT": -57.246,
+  "r3 -> r4 | COLUMN | T-248 D-39 roof datum": -15.47,
+  "r3 -> r4 | COLUMN | T-248 planted column from its slab top": 6.21,
+  "r3 -> r4 | GROUND_BEAM | T-242 / T-253 ring on its arcs": 6.239008,
+  "r3 -> r4 | GROUND_BEAM | T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED)": 41.423705,
+  "r3 -> r4 | JOINT | T-248 / T-256 joints": -2.239172,
+  "r3 -> r4 | SLAB_EDGE | T-252 void band owned by the ring / CB1": 1.135032,
+  "r4 -> r4 source rows | BEAM | unrounded recomputation of 3-dp printed r4 rows (T-293 part 2, each row <= 0.0005)": -0.000622,
+  "r4 -> r4 source rows | GROUND_BEAM | T-282 ground-beam edge delta row 170+7C3#4 side B (+0.285)": 0.285,
+  "r4 -> r4 source rows | JOINT | unrounded recomputation of 3-dp printed r4 rows (T-293 part 2, each row <= 0.0005)": 0.0004,
+  "r4 -> r4 source rows | SLAB | unrounded recomputation of 3-dp printed r4 rows (T-293 part 2, each row <= 0.0005)": 0.0001,
+  "r4 -> r4 source rows | SLAB_EDGE | unrounded recomputation of 3-dp printed r4 rows (T-293 part 2, each row <= 0.0005)": -0.000223,
+  "r4 -> r4 source rows | STAIR | T-290 stair pointer rows MS2-LD -0.065 / RS-A -0.040": -0.105,
+  "r4 source -> r5 | BEAM | R-T308-3": 2.601098,
+  "r4 source -> r5 | BEAM | T-293 ledger SPLIT_UNRESOLVED": -5.584392,
+  "r4 source -> r5 | JOINT | R-T308-5": -0.9265,
+  "r4 source -> r5 | SLAB_EDGE | R-T308-3": 0.326718,
+  "r4 source -> r5 | SLAB_EDGE | R-T308-5": -2.330871,
+  "r4 source -> r5 | SLAB_EDGE | T-293 ledger SPLIT_UNRESOLVED": -0.540911,
+  "r4 source -> r5 | STAIR | R-T308-2": -2.797014,
+  "r4 source -> r5 | STAIR | T-293 ledger HELD": -8.160031,
+  "r4 source -> r5 | STAIR | T-293 ledger NO_CANDIDATE_LINE": -0.648919,
+  "r5 -> T-332 | POOL | T332-POOL-OUT-ABOVE-EG": 2.699336,
+  "r5 -> T-332 | POOL | T332-POOL-WATER": 13.283363
+ },
+ "chain_totals": {
+  "r3": 1078.274,
+  "r4": 1063.625961,
+  "r4_source": 1063.805616,
+  "r5": 1045.744794,
+  "t332": 1061.727493
+ },
+ "closure": {
+  "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_EARTH_CAST|G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_FORMED|E=G": {
+   "bound_m2": 180.045419,
+   "named_m2": 9.840214,
+   "residual_m2": 0.0,
+   "source_m2": 170.205205
+  },
+  "ALTERNATIVE|OQ10_FORMED|G": {
+   "bound_m2": 3.650857,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 3.650857
+  },
+  "CALCULATED||E": {
+   "bound_m2": 422.69342,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 422.69342
+  },
+  "CALCULATED||E=G": {
+   "bound_m2": 434.854504,
+   "named_m2": 15.982699,
+   "residual_m2": 0.0,
+   "source_m2": 418.871805
+  },
+  "CALCULATED||G": {
+   "bound_m2": 626.872989,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 626.872989
+  },
+  "HELD|OQ10_EARTH_CAST|E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "HELD|OQ10_FORMED|E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "HELD|OQ10_FORMED|G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "HELD|OQ10_SOFFIT|E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "HELD||E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "HELD||G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "INFO||E-UB": {
+   "bound_m2": 208.858,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 208.858
+  },
+  "INFO||G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "INFO||G-DRAWN": {
+   "bound_m2": 13.254,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 13.254
+  },
+  "NOT_APPLICABLE||E=G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "NOT_APPLICABLE||G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "OWNED_BY_OTHER_LINE||G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  },
+  "S1_NOT_RELEASED||G": {
+   "bound_m2": 0.0,
+   "named_m2": 0.0,
+   "residual_m2": 0.0,
+   "source_m2": 0.0
+  }
+ },
+ "deltas": [
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "REMOVED"
+   },
+   "before": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "HELD"
+   },
+   "cause": "r4 placeholder 'pool walls (two faces) and floor edges' (HELD, no value) replaced by the measured faces",
+   "face_id": "R4-340.WALLS",
+   "kind": "REMOVE",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-36efa902da4263479e0b",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-36efa902da4263479e0b",
+    "status": "REMOVED"
+   },
+   "before": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-36efa902da4263479e0b",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-36efa902da4263479e0b",
+    "status": "HELD"
+   },
+   "cause": "r4 placeholder (HELD, no value) replaced by the measured base-edge faces",
+   "face_id": "R4-340.BASE",
+   "kind": "REMOVE",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": 13.283363,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "CALCULATED"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-WATER",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": 2.699336,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "CALCULATED"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-OUT-ABOVE-EG",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": 8.098008,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "ALTERNATIVE"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-OUT-BURIED-F",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_EARTH_CAST",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-15a128c38982af899894",
+    "lo": null,
+    "m2": 0.0,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "ALTERNATIVE"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-OUT-BURIED-E",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-36efa902da4263479e0b",
+    "lo": null,
+    "m2": 3.599115,
+    "method": "E=G",
+    "new_line_id": "L-36efa902da4263479e0b",
+    "status": "ALTERNATIVE"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-BASE-EDGE-F",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_EARTH_CAST",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-36efa902da4263479e0b",
+    "lo": null,
+    "m2": 0.0,
+    "method": "E=G",
+    "new_line_id": "L-36efa902da4263479e0b",
+    "status": "ALTERNATIVE"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-BASE-EDGE-E",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 4.2,
+    "line_id": "L-15a128c38982af899894",
+    "lo": 0.0,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-15a128c38982af899894",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-BACK-WALL",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 1.4,
+    "line_id": "L-36efa902da4263479e0b",
+    "lo": 0.0,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-36efa902da4263479e0b",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-183 r2 (MERGED) pool geometry never carried by r3 / r4 / r5 (r3 s.00 named it a follow-up) + T-320 (MERGED 5ddb2ba1) existing-ground split",
+   "face_id": "T332-POOL-BACK-BASE",
+   "kind": "ADD",
+   "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BW 7C6 (outer D) / 7C5 (water D); ST p.7 pool detail"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-10f3cd1eb0f81a3892f2",
+    "lo": null,
+    "m2": 5.743091,
+    "method": "E=G",
+    "new_line_id": "L-10f3cd1eb0f81a3892f2",
+    "status": "ALTERNATIVE"
+   },
+   "before": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": null,
+    "line_id": "L-10f3cd1eb0f81a3892f2",
+    "lo": null,
+    "m2": 7.6,
+    "method": "E=G",
+    "new_line_id": "L-10f3cd1eb0f81a3892f2",
+    "status": "ALTERNATIVE"
+   },
+   "cause": "T-320 F-T320-02 (MERGED 5ddb2ba1): F8 collides with the pool envelope at the printed limit (CONFLICT); the F8 faces inside the envelope leave the FORMED alternative for a HELD conflict face",
+   "face_id": "R4-012.L-10f3cd1eb0f81a3892f2",
+   "kind": "REPLACE",
+   "source": "'ST7757 dxf.dxf' S-FOOTINGS 1B24 (F8) vs S-BW 7C6 + 0.10 (p.7 layers), sheet translation 10EB / 7C2"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": 1.856909,
+    "line_id": "L-10f3cd1eb0f81a3892f2",
+    "lo": 0.0,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "L-10f3cd1eb0f81a3892f2",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-320 F-T320-02 (MERGED): F8 / pool CONFLICT at the printed limit (designer item, T-183 interface 1)",
+   "face_id": "T332-F8-POOL-CONFLICT",
+   "kind": "ADD",
+   "source": "'ST7757 dxf.dxf' 1B24 faces N / E inside 7C6 buffered 0.10"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "",
+    "status": "REMOVED"
+   },
+   "before": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "cause": "T-322 (MERGED d3bcd9d4) fixes the pit ring and the wall base (raft top): the aggregate row is replaced by its two faces per metre of pit height",
+   "face_id": "R4-342",
+   "kind": "REMOVE",
+   "source": "'ST7757 dxf.dxf' S-BW 10EB / 10EA, S-COL.BON 1099 / 1093 / 1096 / 1090; ST p.14"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": null,
+    "line_id": "",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-322 (MERGED): pit walls 20 on the raft top, pit depth 'as per lift manufacturer' (D-43)",
+   "face_id": "T332-LIFT-PIT-INNER",
+   "kind": "ADD",
+   "source": "'ST7757 dxf.dxf' 10EA 1.80 x 1.80 less the four columns"
+  },
+  {
+   "after": {
+    "alternative": "OQ10_FORMED",
+    "held_from": null,
+    "hi": null,
+    "line_id": "",
+    "lo": null,
+    "m2": null,
+    "method": "E=G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-322 (MERGED): outer face of the pit walls below EG, membrane + board outside it (OQ-10)",
+   "face_id": "T332-LIFT-PIT-OUTER",
+   "kind": "ADD",
+   "source": "'ST7757 dxf.dxf' 10EB 2.20 x 2.20 less the four columns"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 10.60005,
+    "line_id": "",
+    "lo": 6.36003,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-NE-6",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 6.5,
+    "line_id": "",
+    "lo": 3.9,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-SE-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 3.0,
+    "line_id": "",
+    "lo": 1.8,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-SW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 1.88495,
+    "line_id": "",
+    "lo": 1.13097,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-SW-2",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 0.6,
+    "line_id": "",
+    "lo": 0.36,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-NW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 6.3001,
+    "line_id": "",
+    "lo": 3.78006,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-ANNEX-SW-3",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 1.3999,
+    "line_id": "",
+    "lo": 0.83994,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-GF-SW-9",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 7.7,
+    "line_id": "",
+    "lo": 4.62,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-GF-NW-7",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 19.27,
+    "line_id": "",
+    "lo": 11.562,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-GF-NE-4",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 17.34174,
+    "line_id": "",
+    "lo": 4.00194,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-SW-3",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 2.657104,
+    "line_id": "",
+    "lo": 0.61365,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 9.38782,
+    "line_id": "",
+    "lo": 2.16642,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NW-2",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 1.378109,
+    "line_id": "",
+    "lo": 0.31827,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NW-3",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 0.103968,
+    "line_id": "",
+    "lo": 0.024,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NE-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 1.027125,
+    "line_id": "",
+    "lo": 0.28038,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NW-4",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 0.103968,
+    "line_id": "",
+    "lo": 0.024,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-SW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 5.936,
+    "line_id": "",
+    "lo": 3.975,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NW-5",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 49.582,
+    "line_id": "",
+    "lo": 11.442,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-NE-2",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 15.1986,
+    "line_id": "",
+    "lo": 4.38,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-SE-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 13.76016,
+    "line_id": "",
+    "lo": 2.58003,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-1F-SW-2",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 6.625,
+    "line_id": "",
+    "lo": 3.975,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-2F-NW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 7.9,
+    "line_id": "",
+    "lo": 4.74,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-2F-NE-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 6.625,
+    "line_id": "",
+    "lo": 3.975,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-2F-SE-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  },
+  {
+   "after": {
+    "alternative": "",
+    "held_from": null,
+    "hi": 7.9,
+    "line_id": "",
+    "lo": 4.74,
+    "m2": null,
+    "method": "G",
+    "new_line_id": "",
+    "status": "HELD"
+   },
+   "before": null,
+   "cause": "T-311 (MERGED bd7b8c23): parapet RC part in NO concrete line (MISSING; T-319 QUEUED)",
+   "face_id": "T332-PARAPET-2F-SW-1",
+   "kind": "ADD",
+   "source": "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv (Checker Gate A 2026-10-28 22:09)"
+  }
+ ],
+ "held_by_line_state_R-T332-2": [],
+ "inputs_sha256": {
+  "research/agents_t163/FORMWORK_LINES.csv": "9e897861cf812725c0fbc051a44eba025be2396f4c52c71361bc7748ab317505",
+  "research/agents_t264/FORMWORK_DELTA_R3_R4.csv": "e98b4a3e4d1b774b8267cf842e961f1d3cec533e9c24e68cde2d915cf5cf2785",
+  "research/agents_t264/FORMWORK_LINES_R4.csv": "8681948753f37c8137956c07f378767b7a9b511fac1d5c781331a5de5a847dd2",
+  "research/agents_t308/FORMWORK_R5_BY_FACE_T308.csv": "079f89cf262338cc9098a747f1c7236aeb1a92dcd34bfeab97ae75232a99018c",
+  "research/agents_t308/T199_FORMWORK_BY_LINE_T308.json": "270ac5a955d3a155db7d3fcf879f5aefe7e0cf6a090171868af1ff577aaa3326",
+  "research/agents_t311/PARAPET_RUN_LEDGER_T311.csv": "2de6c11389e862ad55bd26ce9451a9c1f0cae3cb4ddfc36ff0b636509a06ac12",
+  "research/agents_t332/ALSENAN_T332_INPUT.json": "488eea3a4e1baff2c56f24a2c2487601b32d217542168bc6822623affffeeda6",
+  "research/agents_t332/CANDIDATE_V3021_CONCRETE_LINES.json": "60e642193f0c77f8ea9199ee7a20c1bc876e870d2ce7d58fb73765ffe93928d2"
+ },
+ "lines_with_faces": 351,
+ "live_concrete_lines_without_faces": 26,
+ "live_concrete_lines_without_faces_ids": [
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-720fbae909da79f9",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-01ab48550ede182f95f8"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-d74f3fe29b88467a",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-1031c9be9aaae364fef4"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-c26e93b649f5066b",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-12a2c3c89221d4e4470b"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-f22fd4467ee5a144",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-16dd2274da8100309927"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-2d53359453ef2573",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-22f26ff4a88e16eccff1"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-4bb22fd85925adb0",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-318b26bd7fe7b9c0a026"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-7fae2795d77272cb",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-3e491437888384514498"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-dddf2004a2525169",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-5e79c7fa289cf65458d4"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-0caa2bd2c0478041",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-5e881fd31885949d4e66"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-49a7dae5c139aebb",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-69527cb9affdad474268"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-b1e0844b87508d13",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-8134577db97df050ff28"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-3f7728a83b30ec14",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-8b681fdaa3b3910b2b7b"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-67b20a045d91a15c",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-90b863dddb0d2d66006d"
+  },
+  {
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTINGS_RELEASED",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-98eb2d58075c9eddf1b4"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-b8f67954c29b4613",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-9ee6ac27fb8cd893eb93"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-cd1f57cc06b2f5af",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-a36f703f0b42eed2195c"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-2870ca7b6a82bfa0",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-a7ab57d873e26a587fd9"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-997c65af642cbd7e",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-ac92bcb7d88ef65bc82f"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-f98829c44e7af78b",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-b27103a640f67f285132"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-77b8830f567fb93d",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-bb5f541401f358993181"
+  },
+  {
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-be6708e07b40efa02779"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-659735106ca717bc",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-e2c5b39a34b082f7048c"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-e4c2bd9d98ce6a72",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-e99390a3f7025b2195a5"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-5922f7d38ef95d0f",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-ecc50c39d9be087ead23"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-c1b4b440fb6ecf4c",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-f192ff5f4962efa8d08f"
+  },
+  {
+   "element_id": "P-C:GROUND_SLAB:GROUND:SITE-01e75a66f002baa9",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-f8a170a867d268254e07"
+  }
+ ],
+ "rebound": [],
+ "schema": "T332_SUMMARY_V1",
+ "source": {
+  "faces": 1280,
+  "r5": "research/agents_t308 (T-308 MERGED efb38618)",
+  "r5_candidate": "ARCH_TAKEOFF_V3.0.18 (V3.0.16 lines + T-254 V3.0.17 table + T-266 V3.0.18 stair / dome lines)",
+  "tied_in_r5": 1180
+ },
+ "ties": {
+  "INFO_NOT_A_QUANTITY": 7,
+  "NAMED_NOT_TIED": 5,
+  "NO_LINE": 38,
+  "SAME": 1189,
+  "SCENARIO_NOT_IN_CANDIDATE": 7,
+  "SPLIT_UNRESOLVED": 69
+ },
+ "totals_r5_bound": {
+  "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+   "faces": 47,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_EARTH_CAST|G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_FORMED|E=G": {
+   "faces": 51,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 170.205205
+  },
+  "ALTERNATIVE|OQ10_FORMED|G": {
+   "faces": 10,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 3.650857
+  },
+  "CALCULATED||E": {
+   "faces": 220,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 422.69342
+  },
+  "CALCULATED||E=G": {
+   "faces": 78,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 418.871805
+  },
+  "CALCULATED||G": {
+   "faces": 417,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 626.872989
+  },
+  "HELD|OQ10_EARTH_CAST|E=G": {
+   "faces": 9,
+   "held_from": 0.0,
+   "hi": 17.47525,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|E=G": {
+   "faces": 37,
+   "held_from": 35.256,
+   "hi": 196.497147,
+   "lo": 130.397653,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|G": {
+   "faces": 46,
+   "held_from": 0.0,
+   "hi": -2.6744,
+   "lo": -3.9433,
+   "m2": 0.0
+  },
+  "HELD|OQ10_SOFFIT|E=G": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 7.1067,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||E=G": {
+   "faces": 14,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||G": {
+   "faces": 330,
+   "held_from": 18.191624,
+   "hi": 348.249429,
+   "lo": 269.659765,
+   "m2": 0.0
+  },
+  "INFO||E-UB": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 208.858
+  },
+  "INFO||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "INFO||G-DRAWN": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 13.254
+  },
+  "NOT_APPLICABLE||E=G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "NOT_APPLICABLE||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "OWNED_BY_OTHER_LINE||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  }
+ },
+ "totals_t332": {
+  "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+   "faces": 49,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_EARTH_CAST|G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_FORMED|E=G": {
+   "faces": 53,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 180.045419
+  },
+  "ALTERNATIVE|OQ10_FORMED|G": {
+   "faces": 10,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 3.650857
+  },
+  "CALCULATED||E": {
+   "faces": 220,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 422.69342
+  },
+  "CALCULATED||E=G": {
+   "faces": 80,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 434.854504
+  },
+  "CALCULATED||G": {
+   "faces": 417,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 626.872989
+  },
+  "HELD|OQ10_EARTH_CAST|E=G": {
+   "faces": 9,
+   "held_from": 0.0,
+   "hi": 17.47525,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|E=G": {
+   "faces": 39,
+   "held_from": 35.256,
+   "hi": 198.354056,
+   "lo": 130.397653,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|G": {
+   "faces": 46,
+   "held_from": 0.0,
+   "hi": -2.6744,
+   "lo": -3.9433,
+   "m2": 0.0
+  },
+  "HELD|OQ10_SOFFIT|E=G": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 7.1067,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||E=G": {
+   "faces": 14,
+   "held_from": 0.0,
+   "hi": 5.6,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||G": {
+   "faces": 354,
+   "held_from": 18.191624,
+   "hi": 551.031023,
+   "lo": 351.248455,
+   "m2": 0.0
+  },
+  "INFO||E-UB": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 208.858
+  },
+  "INFO||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "INFO||G-DRAWN": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 13.254
+  },
+  "NOT_APPLICABLE||E=G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "NOT_APPLICABLE||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "OWNED_BY_OTHER_LINE||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  }
+ },
+ "totals_t332_tied": {
+  "ALTERNATIVE|OQ10_EARTH_CAST|E=G": {
+   "faces": 49,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_EARTH_CAST|G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "ALTERNATIVE|OQ10_FORMED|E=G": {
+   "faces": 53,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 180.045419
+  },
+  "ALTERNATIVE|OQ10_FORMED|G": {
+   "faces": 10,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 3.650857
+  },
+  "CALCULATED||E": {
+   "faces": 220,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 422.69342
+  },
+  "CALCULATED||E=G": {
+   "faces": 80,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 434.854504
+  },
+  "CALCULATED||G": {
+   "faces": 417,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 626.872989
+  },
+  "HELD|OQ10_EARTH_CAST|E=G": {
+   "faces": 9,
+   "held_from": 0.0,
+   "hi": 17.47525,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|E=G": {
+   "faces": 38,
+   "held_from": 35.256,
+   "hi": 198.354056,
+   "lo": 130.397653,
+   "m2": 0.0
+  },
+  "HELD|OQ10_FORMED|G": {
+   "faces": 46,
+   "held_from": 0.0,
+   "hi": -2.6744,
+   "lo": -3.9433,
+   "m2": 0.0
+  },
+  "HELD|OQ10_SOFFIT|E=G": {
+   "faces": 3,
+   "held_from": 0.0,
+   "hi": 7.1067,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||E=G": {
+   "faces": 10,
+   "held_from": 0.0,
+   "hi": 5.6,
+   "lo": 0.0,
+   "m2": 0.0
+  },
+  "HELD||G": {
+   "faces": 250,
+   "held_from": 11.417402,
+   "hi": 346.75091,
+   "lo": 269.327227,
+   "m2": 0.0
+  },
+  "NOT_APPLICABLE||G": {
+   "faces": 1,
+   "held_from": 0.0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0
+  }
+ }
+}
