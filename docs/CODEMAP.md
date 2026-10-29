@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 665 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 666 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 24 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1753 | pytest suites, one folder per round. |
+| `tests/` | 1755 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (313 modules)
+## `engine/source/` (314 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -642,6 +642,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `slab_rebar_qto.py` | 314 | CRITICAL | 9 | S7 SLAB REBAR QTO - restricted project-basis slab reinforcement quantities over a frozen readiness register (generic). |
 | `slab_rebar_readiness.py` | 571 | CRITICAL | 5 | SLAB REBAR READINESS - what an elevated structural slab may release to an accurate rebar takeoff (generic, no kg). |
 | `slab_region.py` | 179 | MEDIUM | 1 | SLAB REGION ENGINE (V1) - slab plate, openings and thickness from the slab plan's own line work. Never fitted to |
+| `slab_step_v2.py` | 533 | MEDIUM | 1 | SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing |
 | `source_anchor.py` | 79 | MEDIUM | 1 | SOURCE ANCHOR - CONTROLLED EXPORT IDENTITY (R8.20). |
 | `source_exceptions.py` | 344 | MEDIUM | 1 | SOURCE EXCEPTIONS (R8.5 §10-§14) — resolve unrealised source objects by POSITIVE evidence, never by look. |
 | `source_identity.py` | 81 | CRITICAL | 2 | SOURCE IDENTITY - is a re-supplied file the same source as one registered earlier (generic). |
@@ -1139,6 +1140,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t221_roof_falls/` | 2 |
 | `tests/t222_bay_and_heads/` | 2 |
 | `tests/t223_floor_typing/` | 2 |
+| `tests/t224_slab_step_v2/` | 1 |
 | `tests/t225_wall_register/` | 1 |
 | `tests/t226_heights/` | 1 |
 | `tests/t227_resolution/` | 1 |
