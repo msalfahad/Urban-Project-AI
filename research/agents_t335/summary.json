@@ -1,0 +1,35 @@
+{
+ "schema": "T335_CEILING_V3021_BINDING_V1",
+ "rule": "R-T335-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.21",
+ "candidate_lines_json_sha256": "be22a4e4b68dbaa9e87a39ad45f7dec3be64b04aca3a5843301458720b645ad0",
+ "candidate_lines_csv_sha256": "3548e39ca1c9d130a9536d89098e87e8286cd0777ec93080cc08707482837fff",
+ "lines_total": 3706,
+ "inputs_sha256": {
+  "CEILING_FACE_LINE_LEDGER_T295.csv": "8e3427ca210a7b2f",
+  "LINE_SUMMARY_T295.csv": "1a2e8622f783697b",
+  "CANDIDATE_V3015_CEILING_LINES.json": "33ad65e30da508fd",
+  "VS_FREELANCER_T271.csv": "02d0a2d9b510ab70",
+  "CANDIDATE_V3021_T335.json": "7ac4ca7373c94b0c"
+ },
+ "ceiling_lines_v3021": 36,
+ "rebind_verdicts": {
+  "SAME": 36
+ },
+ "wall_lines_in_ceiling_rooms": 108,
+ "wall_lines_with_a_horizontal_term": 0,
+ "claims": 66,
+ "totals": {
+  "decor_dc_m2": 362.006092,
+  "bulkhead_aoa_m2": 27.9345,
+  "engine_interior_ceiling_m2": 403.162928,
+  "wall_band_held_hi_m2": 53.8506,
+  "double_count_m2": 0
+ },
+ "owner_rules": [
+  "Q-48 A + Q-43 (owner 2026-10-19/20: wall finish to the underside of the 0.15 decor ceiling, GF 3.65, 1F / 2F 3.35)",
+  "Q-52 C MODIFIED: plaster MAY run above the false ceiling depending on the specification; no specification or section prints it -> the band (wall run x 0.15) is HELD 0 .. run x 0.15, in no line",
+  "T-295 MERGED 964c5ebe (Verifier 2026-10-25 15:33, Gate A)"
+ ],
+ "released": "NOTHING RELEASED; candidate and released lines unchanged (research ledger)"
+}
