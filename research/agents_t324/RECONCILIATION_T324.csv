@@ -1,0 +1,10 @@
+reference,reference_lo,reference_hi,this_ledger_lo,this_ledger_hi,delta_lo,delta_hi,named_causes
+T-305 parapet items m2: inner faces,94.431000,99.534000,94.122949,99.557545,-0.308051,0.023545,C1 annex SW-3 D band -0.100 .. 0; C2 1F SW-2 D band (x HELD h); C3 sea-side chord -0.577; C4 GF NE-4 to the divider -0.100; C5 B34 extension +0.700; C6 GF SW-9 D band -0.203 .. 0
+T-305 parapet items m2: tops,26.801000,26.801000,26.836476,26.972520,0.035476,0.171520,C1 -0.040 .. 0; C2 -0.015 .. 0; C3 -0.089; C5 +0.260; C6 -0.081 .. 0; divider top UNKNOWN (no level)
+T-305 parapet items m2: inner + top,121.232000,126.335000,120.959425,126.530065,-0.272575,0.195065,sum of the two rows above
+T-305 corners m.l: parapet outer top arrises,138.481000,138.481000,139.402100,139.680800,0.921100,1.199800,C3 sea-side outer edge HELD on the frame profile (chord .. arc); C5 +1.200 HELD (boundary)
+T-305 corners m.l: parapet inner top arrises,133.482000,133.482000,133.557778,134.238000,0.075778,0.756000,C1 -0.200 .. 0; C2 -0.075 .. 0; C3 -0.4435; C4 -0.200; C5 +1.400; C6 -0.405 .. 0
+T-305 corners m.l: vertical convex arrises (not parapet items),124.700000,124.700000,124.700000,124.700000,0.000000,0.000000,OTHER_LINE: their parapet-height part 4.000 DC (+ 0 .. 11.900 HELD 1F ends) stays in this line
+T-305 corners m.l: passage-mouth wall ends (not parapet),43.100000,43.100000,43.100000,43.100000,0.000000,0.000000,not a parapet item; GF stop-end HELD 0 .. 1.20 kept apart
+T-305 corners m.l: opening arrises (not parapet),137.110000,137.110000,137.110000,137.110000,0.000000,0.000000,not a parapet item
+T-305 corners m.l: total DRAWING-CONFIRMED,576.872000,576.872000,577.869878,578.828800,0.997878,1.956800,parapet arrises (corrected) + the three non-parapet groups unchanged
