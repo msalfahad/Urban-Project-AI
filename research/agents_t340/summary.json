@@ -1,0 +1,145 @@
+{
+ "actions": {
+  "T-326:ADD_HELD_ROW": {
+   "carriers": 7,
+   "m2": 0
+  },
+  "T-326:ADD_ROW": {
+   "carriers": 32,
+   "m2": 13.597
+  },
+  "T-326:KEEP": {
+   "carriers": 21,
+   "m2": 18.82
+  },
+  "T-326:NARROW": {
+   "carriers": 1,
+   "m2": 1.4
+  },
+  "T-327:ADD_HELD_ROW": {
+   "carriers": 2,
+   "m2": 0
+  },
+  "T-327:ADD_ROW": {
+   "carriers": 1,
+   "m2": 0.04
+  },
+  "T-327:FILL": {
+   "carriers": 27,
+   "m2": 3.0794
+  },
+  "T-327:HOLD": {
+   "carriers": 1,
+   "m2": 0
+  },
+  "T-327:KEEP": {
+   "carriers": 23,
+   "m2": 3.75
+  },
+  "T-327:RETYPE_FILL": {
+   "carriers": 5,
+   "m2": 0.63
+  }
+ },
+ "candidate": {
+  "lines_json_sha8": {
+   "V3_0_20": "097a80b6",
+   "V3_0_21": "be22a4e4",
+   "V3_0_22": "7199c8b6"
+  },
+  "lines_total": {
+   "V3_0_20": 3705,
+   "V3_0_21": 3706,
+   "V3_0_22": 3706
+  }
+ },
+ "carriers": 120,
+ "closure_trace": {
+  "D-1F-03": "TRACED: the closure polygon runs 0.2385198 m past the jamb (",
+  "D-1F-04": "TRACED: the closure polygon runs 0.0798447 m past the jamb (",
+  "D-GF-02": "TRACED: the closure polygon runs 0.2236149 m past the jamb (",
+  "D-GF-10": "TRACED: the closure polygon runs 0.2529608 m past the jamb (",
+  "D-GF-14": "TRACED: the polygon runs past both jambs: east nib + cross w"
+ },
+ "components": 264,
+ "openings": 59,
+ "rebind": {
+  "changed": [],
+  "lines": 92,
+  "same": 92
+ },
+ "t326_reveals": {
+  "held_beside": [
+   "NEW:REVEAL.WINDOW_OUT|window jambs and head|W02"
+  ],
+  "held_rows": [
+   "NEW:FIN.PLASTER|gate jambs and head|D-GF-15",
+   "NEW:REVEAL.ARCH|arch jambs and head|A-1F-01",
+   "NEW:REVEAL.ARCH|arch jambs and head|A-GF-01",
+   "NEW:REVEAL.WINDOW_IN|window jambs and head|W03",
+   "NEW:REVEAL.WINDOW_IN|window jambs and head|W17",
+   "NEW:REVEAL.WINDOW_OUT|window jambs and head|W03",
+   "NEW:REVEAL.WINDOW_OUT|window jambs and head|W17"
+  ],
+  "in_line_kept_m2": 20.22,
+  "narrowed": [
+   "L-2f94dca4dd5f2ec05822"
+  ],
+  "new_door_rows_m2": 3.93,
+  "new_rows_m2": 13.597,
+  "new_window_out_rows_m2": 9.667
+ },
+ "t327_sills_thresholds": {
+  "filled_m2": 3.0794,
+  "held": [
+   "L-c90d5d6c06a671fc3b99",
+   "NEW:ARCH.THRESHOLD|threshold strip|D-GF-15",
+   "NEW:ARCH.WINDOW_REVEAL|window sill / floor-level strip|W03"
+  ],
+  "kept_m2": 3.75,
+  "new_rows_m2": 0.04,
+  "retyped_filled_m2": 0.63
+ },
+ "threshold_layers": {
+  "A-1F-01": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "A-GF-01": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-1F-01": "EQUAL",
+  "D-1F-02": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-1F-03": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-1F-04": "EQUAL",
+  "D-1F-05": "EQUAL",
+  "D-1F-06": "EQUAL",
+  "D-1F-07": "EQUAL",
+  "D-1F-08": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-1F-09": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-1F-10": "EQUAL",
+  "D-2F-01": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-2F-02": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-2F-03": "EQUAL",
+  "D-GF-01": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-02": "EQUAL",
+  "D-GF-03": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-04": "EQUAL",
+  "D-GF-05": "EQUAL",
+  "D-GF-06": "EQUAL",
+  "D-GF-07": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-08": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-09": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-10": "DIFFERS (named)",
+  "D-GF-11": "EQUAL",
+  "D-GF-12": "EQUAL",
+  "D-GF-13": "FINISH ONLY (no wet doorway: no membrane piece)",
+  "D-GF-14": "EQUAL"
+ },
+ "wet_cross_check": {
+  "backing_lines": {
+   "filled_equal": 12,
+   "filled_m2": 340.3038,
+   "held_blank": 6
+  },
+  "faces_closed": 146,
+  "max_abs_face_residual_m2": 0.0001,
+  "overlap_m2": 0,
+  "rows": 141
+ }
+}
