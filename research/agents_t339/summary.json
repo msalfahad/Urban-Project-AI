@@ -1,0 +1,250 @@
+{
+ "candidate": {
+  "lines_sha256_8": "7199c8b6",
+  "slab_source": "V3_0_22_BOQ_LINES.json sha256 7199c8b6"
+ },
+ "closures": [
+  {
+   "closes": true,
+   "layer": "FALLS_SCREED / MEMBRANE / INSULATION / PROTECTION (to the wall face)",
+   "residual_m2": -1.9e-05,
+   "roof": "ROOF-430",
+   "unexplained_m2": -1.8e-05
+  },
+  {
+   "closes": true,
+   "layer": "face layers to the D band (lo)",
+   "residual_m2": 0.679981,
+   "roof": "ROOF-430",
+   "unexplained_m2": -1.8e-05
+  },
+  {
+   "closes": true,
+   "layer": "FINISH (designer hatch)",
+   "residual_m2": 0.640013,
+   "roof": "ROOF-430",
+   "unexplained_m2": 4.6e-05
+  },
+  {
+   "closes": true,
+   "layer": "face layers to the wall face (hi)",
+   "residual_m2": -0.03998,
+   "roof": "TERRACE-550",
+   "unexplained_m2": 0.0
+  },
+  {
+   "closes": true,
+   "layer": "face layers to the D band (lo) = FINISH",
+   "residual_m2": 1.119044,
+   "roof": "TERRACE-550",
+   "unexplained_m2": 2e-05
+  },
+  {
+   "closes": true,
+   "layer": "face layers to the wall face (hi), domes beside",
+   "residual_m2": 30.69951,
+   "roof": "ROOF-970",
+   "unexplained_m2": 1e-05
+  },
+  {
+   "closes": true,
+   "layer": "face layers to the D band (lo) = FINISH (domes excluded)",
+   "residual_m2": 30.87203,
+   "roof": "ROOF-970",
+   "unexplained_m2": 1e-05
+  },
+  {
+   "closes": true,
+   "layer": "drawing-derived beside (HELD Q-34): outer 8.10 x 6.80 vs inner 7.70 x 6.45",
+   "residual_m2": 0.0,
+   "roof": "ROOF-1390",
+   "unexplained_m2": 0.0
+  }
+ ],
+ "closures_close": true,
+ "existing_lines": [
+  "L-2f7502be6f501baf49b1",
+  "L-3e8fe55da71851816dd4",
+  "L-5ce5ba49792e8f9d1f6f",
+  "L-636fd3ff1784a12e653b",
+  "L-994b88140f2ea50f1b31",
+  "L-aac1f35e08f85b643692",
+  "L-d4c73babd2a275c28929",
+  "L-d57d2dc2fafac8bc72d8"
+ ],
+ "finish_new_rows_m2": 202.21976,
+ "line_vs_layer": [
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "engine face (T-071 / T-062 trace) with the arc B2B as a polyline: arc flattening; T-321 compared the hand 55.560 and wrote 0.000",
+   "difference": -0.001332,
+   "layer": "MEMBRANE",
+   "layer_hi": 55.560332,
+   "line": "L-d57d2dc2fafac8bc72d8",
+   "line_qty": 55.559,
+   "roof": "ROOF-430"
+  },
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "arc B2B length rounding (T-321)",
+   "difference": -0.0009,
+   "layer": "UPTURN",
+   "layer_hi": 35.7279,
+   "line": "L-d4c73babd2a275c28929",
+   "line_qty": 35.727,
+   "roof": "ROOF-430"
+  },
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "line = the wall-face reading (Checker 21:05); the D-band reading 31.643 is the range's low end (F-T339-1)",
+   "difference": 0.0,
+   "layer": "MEMBRANE",
+   "layer_hi": 32.721,
+   "line": "L-2f7502be6f501baf49b1",
+   "line_qty": 32.721,
+   "roof": "TERRACE-550"
+  },
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "-",
+   "difference": 0.0,
+   "layer": "UPTURN",
+   "layer_hi": 52.94,
+   "line": "L-994b88140f2ea50f1b31",
+   "line_qty": 52.94,
+   "roof": "TERRACE-550"
+  },
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "candidate deducts the domes as polygons (2 x 15.350), not circles (2 x 15.359) (T-321)",
+   "difference": 0.01804,
+   "layer": "MEMBRANE",
+   "layer_hi": 115.81396,
+   "line": "L-636fd3ff1784a12e653b",
+   "line_qty": 115.832,
+   "roof": "ROOF-970"
+  },
+  {
+   "action": "none (line unchanged; T-339 binds only)",
+   "cause": "dome rings as polygons (27.784) vs circles 27.7854 (T-321)",
+   "difference": -0.003402,
+   "layer": "UPTURN",
+   "layer_hi": 92.925402,
+   "line": "L-5ce5ba49792e8f9d1f6f",
+   "line_qty": 92.922,
+   "roof": "ROOF-970"
+  }
+ ],
+ "new_rows": 16,
+ "roofs": {
+  "ROOF-1390": {
+   "domes_m2": {
+    "DOME-3": 15.274751
+   },
+   "face_m2": [
+    49.665,
+    49.665
+   ],
+   "finish_m2": null,
+   "footprint_m2": [
+    5.415,
+    5.415
+   ],
+   "held": "owner Q-34: the +13.90 roof stays HELD (no number, never 0); no roof plan (D-62)",
+   "outer_m2": 55.08
+  },
+  "ROOF-430": {
+   "domes_m2": {},
+   "face_m2": [
+    54.920332,
+    55.560332
+   ],
+   "finish_m2": [
+    54.9203,
+    54.9203
+   ],
+   "footprint_m2": [
+    5.99701,
+    6.03701
+   ],
+   "held": "",
+   "outer_m2": 61.597323
+  },
+  "ROOF-970": {
+   "domes_m2": {
+    "DOME-E": 15.35902,
+    "DOME-W": 15.35902
+   },
+   "face_m2": [
+    115.65646,
+    115.81396
+   ],
+   "finish_m2": [
+    115.65646,
+    115.65646
+   ],
+   "footprint_m2": [
+    9.83151,
+    9.84653
+   ],
+   "held": "",
+   "outer_m2": 156.36
+  },
+  "TERRACE-550": {
+   "domes_m2": {},
+   "face_m2": [
+    31.643,
+    32.721
+   ],
+   "finish_m2": [
+    31.643,
+    31.643
+   ],
+   "footprint_m2": [
+    5.592956,
+    5.67398
+   ],
+   "held": "",
+   "outer_m2": 38.355
+  }
+ },
+ "rows": 24,
+ "shared_with_parapet_m2": 2e-06,
+ "slab": [
+  {
+   "relation": "UNDER every layer; untouched by the build-up rows; the per-panel attribution of the slab lines to this roof is NOT made here (panel ids are SITE ids of the structural sheet)",
+   "roof": "ROOF-430",
+   "slab_floor": "GF",
+   "slab_lines": 40,
+   "slab_m3": 33.069524
+  },
+  {
+   "relation": "UNDER every layer; untouched by the build-up rows; the per-panel attribution of the slab lines to this roof is NOT made here (panel ids are SITE ids of the structural sheet)",
+   "roof": "TERRACE-550",
+   "slab_floor": "GF",
+   "slab_lines": 40,
+   "slab_m3": 33.069524
+  },
+  {
+   "relation": "UNDER every layer; untouched by the build-up rows; the per-panel attribution of the slab lines to this roof is NOT made here (panel ids are SITE ids of the structural sheet)",
+   "roof": "ROOF-970",
+   "slab_floor": "1F",
+   "slab_lines": 26,
+   "slab_m3": 19.756334
+  },
+  {
+   "relation": "UNDER every layer; untouched by the build-up rows; the per-panel attribution of the slab lines to this roof is NOT made here (panel ids are SITE ids of the structural sheet)",
+   "roof": "ROOF-1390",
+   "slab_floor": "2F",
+   "slab_lines": 9,
+   "slab_m3": 7.4543
+  }
+ ],
+ "status_count": {
+  "ASSUMED - OWNER-APPROVED": 6,
+  "DRAWING-CONFIRMED": 3,
+  "HELD": 9,
+  "UNKNOWN": 6,
+  "VERIFIED": 0
+ }
+}

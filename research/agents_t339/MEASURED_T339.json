@@ -1,0 +1,293 @@
+{
+ "roofs": {
+  "ROOF-430": {
+   "domes_in_parapet_strip_m2": null,
+   "finish_gap_pieces": [
+    {
+     "area_m2": 0.64,
+     "bounds": [
+      4.0,
+      1.3,
+      11.8,
+      4.5
+     ]
+    }
+   ],
+   "finish_hatch_in_parapet_strip_m2": 2e-06,
+   "finish_hatch_m2": 54.9203,
+   "finish_hatch_outside_inner_face_m2": 2e-06,
+   "inner_outside_outer_m2": 0.0,
+   "outer": [
+    [
+     -0.2,
+     -0.2
+    ],
+    [
+     11.8,
+     -0.2
+    ],
+    [
+     11.8,
+     1.3
+    ],
+    [
+     10.4,
+     1.3
+    ],
+    [
+     10.4,
+     4.7
+    ],
+    [
+     4.2,
+     4.7
+    ],
+    [
+     4.2,
+     5.2
+    ],
+    [
+     "ARC",
+     [
+      2.9,
+      5.2
+     ],
+     1.3,
+     0.0,
+     90.0,
+     "B29"
+    ],
+    [
+     -0.2,
+     6.5
+    ]
+   ],
+   "outer_edges": {
+    "building wall faces (no parapet)": "ADF, B3A",
+    "divider west face (no parapet)": "CEC",
+    "north outer": "B36, B39, arc B29 (r 1.300)",
+    "north-west outer": "B26",
+    "south outer (boundary line, T-324 relation AC7 0.200 off B34)": "AC7",
+    "west outer": "C6F (x start)"
+   },
+   "outer_m2_exact": 61.597323,
+   "strip_m2": 6.037
+  },
+  "ROOF-970": {
+   "domes_in_parapet_strip_m2": 0.0,
+   "finish_gap_pieces": [
+    {
+     "area_m2": 0.6221,
+     "bounds": [
+      4.876,
+      4.11,
+      5.766,
+      5.0
+     ]
+    },
+    {
+     "area_m2": 0.1575,
+     "bounds": [
+      0.0,
+      4.268,
+      4.2,
+      7.1
+     ]
+    },
+    {
+     "area_m2": 0.0224,
+     "bounds": [
+      12.3,
+      0.0,
+      18.87,
+      11.6
+     ]
+    },
+    {
+     "area_m2": 0.0224,
+     "bounds": [
+      0.0,
+      1.201,
+      0.102,
+      4.268
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      3.878,
+      2.151,
+      4.42,
+      3.501
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      2.313,
+      1.395,
+      3.664,
+      1.936
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      0.758,
+      1.395,
+      2.109,
+      1.936
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      0.002,
+      2.151,
+      0.544,
+      3.501
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      18.326,
+      2.151,
+      18.868,
+      3.501
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      16.761,
+      1.395,
+      18.112,
+      1.936
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      15.206,
+      1.395,
+      16.557,
+      1.936
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "bounds": [
+      14.45,
+      2.151,
+      14.992,
+      3.501
+     ]
+    }
+   ],
+   "finish_hatch_in_parapet_strip_m2": 0.0,
+   "finish_hatch_m2": 114.9849,
+   "finish_hatch_outside_inner_face_m2": 0.0,
+   "inner_outside_outer_m2": 0.0,
+   "outer": [
+    [
+     -0.2,
+     -0.2
+    ],
+    [
+     19.07,
+     -0.2
+    ],
+    [
+     19.07,
+     11.8
+    ],
+    [
+     12.3,
+     11.8
+    ],
+    [
+     12.3,
+     5.0
+    ],
+    [
+     4.2,
+     5.0
+    ],
+    [
+     4.2,
+     7.3
+    ],
+    [
+     -0.2,
+     7.3
+    ]
+   ],
+   "outer_edges": {
+    "SW-2 outer": "12A8",
+    "building wall faces (no parapet)": "1291, 1281, 1288",
+    "north outer": "1273",
+    "sea side 0.20 wall line": "12A5 / 131C / 131B (layer 2)",
+    "south outer": "127F (+ 131E layer 2, same y)",
+    "west outer": "12C7"
+   },
+   "outer_m2_exact": 156.36,
+   "strip_m2": 9.828
+  },
+  "TERRACE-550": {
+   "domes_in_parapet_strip_m2": null,
+   "finish_gap_pieces": [
+    {
+     "area_m2": 1.078,
+     "bounds": [
+      16.67,
+      1.0,
+      18.075,
+      7.5
+     ]
+    }
+   ],
+   "finish_hatch_in_parapet_strip_m2": 0.0,
+   "finish_hatch_m2": 31.643,
+   "finish_hatch_outside_inner_face_m2": 0.0,
+   "inner_outside_outer_m2": 0.0,
+   "outer": [
+    [
+     0.0,
+     -0.2
+    ],
+    [
+     19.17,
+     -0.2
+    ],
+    [
+     19.17,
+     7.7
+    ],
+    [
+     17.67,
+     7.7
+    ],
+    [
+     17.67,
+     1.3
+    ],
+    [
+     0.0,
+     1.3
+    ]
+   ],
+   "outer_edges": {
+    "building wall faces (no parapet)": "B5D, AE3",
+    "divider east face (no parapet)": "CED",
+    "east outer": "C7F (x end)",
+    "north outer (SW-9 / gate stub)": "BDC",
+    "south outer (boundary line)": "AC7"
+   },
+   "outer_m2_exact": 38.355,
+   "strip_m2": 5.634
+  }
+ },
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf",
+ "units": "local m (T-321 frames)"
+}
