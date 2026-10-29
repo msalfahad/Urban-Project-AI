@@ -179,8 +179,15 @@ def run(private):
         y = sum(p[1] for p in loops[0]) / len(loops[0])
         sh = sheet_of(x, y)
         if sh is None:
-            off_sheet.append({"handle": hd, "pattern": pat, "scale": sc,
-                              "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"})
+            row = {"handle": hd, "pattern": pat, "scale": sc,
+                   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"}
+            if pat != "SOLID":       # a wall / ring hatch on the foundation / ground sheets: its ring, for the record
+                polys = sorted((E.Polygon(lp).buffer(0) for lp in loops if len(lp) >= 3), key=lambda q: -q.area)
+                inner = [q for q in polys[1:] if polys[0].contains(q.representative_point())]
+                row.update(outer_m2=round(polys[0].area, 4), islands_m2=[round(q.area, 4) for q in inner],
+                           ring_net_m2=round(polys[0].area - sum(q.area for q in inner), 4),
+                           role="not a slab legend on these sheets (wall / ring hatch)")
+            off_sheet.append(row)
             continue
         if pat == "SOLID":
             off_sheet.append({"handle": hd, "pattern": pat, "scale": sc, "why": "solid fill on a roof-slab sheet"})

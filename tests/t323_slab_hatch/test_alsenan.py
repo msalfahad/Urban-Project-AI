@@ -29,6 +29,14 @@ def test_census_is_complete():
         assert c["edge_m"]["UNEXPLAINED"] == 0.0 and c["edge_m"]["FREE_EDGE"] == 0.0
 
 
+def test_off_plan_hatches_are_wall_rings_not_slabs():
+    rings = {o["handle"]: o for o in RES["off_sheet"] if o["pattern"] != "SOLID"}
+    assert sorted(rings) == ["10E9", "1657", "7BD", "7C4", "7FB", "7FD", "80F"]
+    assert rings["7BD"]["ring_net_m2"] == rings["10E9"]["ring_net_m2"] == pytest.approx(1.6)      # T-322 gross ring
+    assert rings["7C4"]["ring_net_m2"] == pytest.approx(2.356726, abs=1.5e-3)                     # T-193 pool band
+    assert sum(o["pattern"] == "SOLID" for o in RES["off_sheet"]) == 22
+
+
 def test_five_sunken_hatches_are_their_panels():
     for h in SUNKEN_EXACT:
         c = H[h]

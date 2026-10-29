@@ -678,13 +678,25 @@
    "handle": "10E9",
    "pattern": "ANSI37",
    "scale": 1000.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 4.84,
+   "islands_m2": [
+    3.24
+   ],
+   "ring_net_m2": 1.6,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "1657",
    "pattern": "ANSI37",
    "scale": 1000.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 470.55,
+   "islands_m2": [
+    452.162
+   ],
+   "ring_net_m2": 18.388,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "1A21",
@@ -822,31 +834,55 @@
    "handle": "7BD",
    "pattern": "ANSI37",
    "scale": 1000.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 4.84,
+   "islands_m2": [
+    3.24
+   ],
+   "ring_net_m2": 1.6,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "7C4",
    "pattern": "ANSI37",
    "scale": 800.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 10.9364,
+   "islands_m2": [
+    8.5786
+   ],
+   "ring_net_m2": 2.3578,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "7FB",
    "pattern": "AR-B816C",
    "scale": 15.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 0.23,
+   "islands_m2": [],
+   "ring_net_m2": 0.23,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "7FD",
    "pattern": "AR-B816C",
    "scale": 15.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 8.344,
+   "islands_m2": [],
+   "ring_net_m2": 8.344,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   },
   {
    "handle": "80F",
    "pattern": "AR-B816",
    "scale": 15.0,
-   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 0.24,
+   "islands_m2": [],
+   "ring_net_m2": 0.24,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
   }
  ]
 }

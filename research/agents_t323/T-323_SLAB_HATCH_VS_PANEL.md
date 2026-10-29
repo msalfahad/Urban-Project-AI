@@ -33,8 +33,18 @@ loops, annotation islands not deducted (T-213 rules (a) / (b), reused).
 
 ## 2. Census: 43 hatches on S-HAT.BAT, 14 on the three roof-slab plans
 
-29 are not on a roof-slab plan (22 SOLID fills in the section details, 7 ANSI37 / AR-B816 hatches on the foundation /
-ground sheets): listed by handle in the JSON, not classified (outside the slab-plan scope of this task).
+29 are not on a roof-slab plan: 22 SOLID fills in the section details (bar dots) and 7 wall / ring hatches on the
+foundation and ground sheets. **None of the 7 is a slab hatch** (the ground-bearing slab is not hatched); each was
+checked against the merged ledger that measures its element from the drawn outlines, never from the hatch:
+
+| Handle | Pattern | Ring net m2 (outer - island) | Element and ledger | Ledger m2 | Hatch - ledger |
+|---|---|---|---|---|---|
+| 7BD / 10E9 | ANSI37 | 4.8400 - 3.2400 = 1.6000 | lift-pit wall ring, foundation and ground sheets (T-322 / T-204, S-BW 10EB / 10EA) | 1.600 gross (1.100 net of C1 / C2 / C2 / C9) | 0.0000 |
+| 7C4 | ANSI37 | 10.9364 - 8.5786 = 2.3578 | pool wall band (T-183 r2 / T-193 VERIFIED, S-BW 7C6 / 7C5) | 2.356726 | +0.0011 (+0.05 %, the hatch's own arc drafting; below every threshold) |
+| 1657 | ANSI37 | 470.5500 - 452.1620 = 18.3880 | boundary-wall band on the foundation plan (S-BOUN outline) | not compared here (wall lane) | - |
+| 7FD / 7FB / 80F | AR-B816C / AR-B816 | 8.3440 / 0.2300 / 0.2400 | block-wall bands on the ground sheet (S-BOUN outline) | not compared here (blockwork lane) | - |
+
+So the slab-hatch question is confined to the 14 hatches on the three roof-slab plans.
 
 | Handle | Sheet | Legend | Hatch m2 | Hatch P m | MEMBER m | ANNOT. m | Panel (T-139 face) | Panel m2 | Panel P m | Residual m2 | Verdict |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -137,5 +147,6 @@ support-face alignment), not a panel; a hatch region is the union of all its reg
 
 - T-209 overlay not re-run (bound given); T-213 / T-288 JSONs are not edited here (a research ledger correction for the
   lane that owns them, or for lane I when it wires sunken panels: use panel 4.1176 m2 / P_ext 8.8413 m for 298).
-- The 29 off-plan hatches (foundation / ground sheets, section details) are listed, not classified.
+- The 22 SOLID section fills are listed only; 1657 / 7FD / 7FB / 80F rings are recorded, not compared with the wall
+  and blockwork ledgers (not slab elements).
 - d (the drop) stays HELD on D-41; nothing here makes a d-driven quantity determinate.
