@@ -146,7 +146,10 @@ def build(project_id=None):
                 note = ("run found after T-311 (T-324 C5): not in the merged block-alternative ledger; the blockwork "
                         "binding owes it (by the T-311 rule: centreline x (h - 0.30))")
                 task = "T-324"
-            runs.append({"run": side, "kind": base["kind"] if base else "STRAIGHT", "t_m": t,
+            kind = base["kind"] if base else "STRAIGHT"
+            if any(x.startswith("C3 ") for x in corr.get((c, side), [])):
+                kind = "STRAIGHT (T-324 C3: drawn straight at roof level; T-311 carried the floor-outline arc)"
+            runs.append({"run": side, "kind": kind, "t_m": t,
                          "centreline_lo_m": round(tl / t, 6), "centreline_hi_m": round(th / t, 6),
                          "top_lo_m2": tl, "top_hi_m2": th, "h_lo_m": hl, "h_hi_m": hh, "h_source": hsrc,
                          "h_status": "HELD" if hh > hl else None,
