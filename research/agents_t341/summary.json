@@ -1,0 +1,48 @@
+{
+ "by_family": {
+  "ARCH.WALL_RUN (lm)": {
+   "RECONCILED_BY_ELEMENT": 7
+  },
+  "FIN.CEILING (m2)": {
+   "RECONCILED_BY_ELEMENT": 2
+  },
+  "FIN.FLOOR.PORCELAIN (m2)": {
+   "RECONCILED_GROSS_RESTATED": 1,
+   "UNEXPLAINED": 1
+  },
+  "FIN.PAINT (m2)": {
+   "RECONCILED": 4
+  },
+  "FIN.PLASTER (m2)": {
+   "RECONCILED": 4
+  },
+  "FIN.SKIRTING (lm)": {
+   "RECONCILED": 10
+  },
+  "FIN.WALL.TILE (m2)": {
+   "RECONCILED": 12
+  }
+ },
+ "fill_lines": 41,
+ "fill_rows": 129,
+ "lines": 3706,
+ "lines_sha256_8": "7199c8b6",
+ "status": {
+  "RECONCILED": 30,
+  "RECONCILED_BY_ELEMENT": 9,
+  "RECONCILED_GROSS_RESTATED": 1,
+  "UNEXPLAINED": 1
+ },
+ "t330_after_fill_applied_in_memory": {
+  "flagged": 1,
+  "refused": 0,
+  "remaining": [
+   "L-b06400d46d252f242018"
+  ]
+ },
+ "t330_before": {
+  "flagged": 41,
+  "refused": 0
+ },
+ "task": "T-341"
+}
