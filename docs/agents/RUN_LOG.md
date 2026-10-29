@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29T01:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T01:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T00:59Z | Worker 2 | SUCCESS | T-324 READY (agents/task-T-324 @ 816b125a) | Parapet components each own item/unit/owner: inner faces 94.123..99.558 m2 (T-305 94.431..99.534; split above upturn 67.411..99.558 / upturn zone 0..26.848 HELD), tops 26.836..26.973 m2 (was 26.801), corners 577.870..578.829 m.l (was 576.872; only parapet top arrises move), coping/drip/beads UNKNOWN; re-measured P7757.dxf: B34 boundary parapet +1.400 m confirmed, GF NE-4 -0.200 m at divider, 1F sea side straight -0.4435 m, 3 D-band ranges; inner faces close on T-321 roof faces 0.000; freelancer rows 78/79/83/84 by cell (+20.2..+25.4 m2 net, causes named); 29 tests pass | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: the Drive connector saved binary files that 'decode' could not read directly (base64 error), re-encoded to base64 in the scratchpad and decoded through the wrapper
 - 2026-10-29T00:51Z | Verifier | STARTED | run session_01E6cPnf8qRPBgb1M77HyvHi | repo-attached routine | task state: T-313 r2, T-321, T-224 r2 READY (per run log) | self-check pending
