@@ -13,6 +13,12 @@
   "t170_ff_neat_status": [
    "HELD / NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)"
   ],
+  "t170_neat_plan_m2": {
+   "INHERITED": 22.56,
+   "SCALED_NOT_PRINTED": 23.52,
+   "at_least": 20.7,
+   "status": "HELD (same unprinted projection)"
+  },
   "t233_ff_blinding_m3": 2.256,
   "t320_ff_blinding_row": [
    "0.0..2.256 HELD"
@@ -225,6 +231,7 @@
   "scale_pt_per_m": 141.6,
   "scale_ratio_1_to": 20.01868410516482
  },
+ "second_plan_check": "GROUND BEAMS plan: ring S-BW 7C2 2200 x 2200 / 7BE 1800 x 1800 + hatch 7BD at x 98517.8, y 44448.0 = the foundation-plan ring 10EB / 10EA (+ hatch 10E9) shifted by the plan translation -38724.4 mm (T-205), same size and y: AGREE. The DXF (model space + every layout) has no lift detail text (only TEXT 1877 '10cm PLAIN CONCRETE.' of the pool detail): p.14 exists only in the PDF (R-ABSENT-SHEET-1, T-204).",
  "totals": {
   "blinding_at_least_m3": 2.07,
   "blinding_m3": null,

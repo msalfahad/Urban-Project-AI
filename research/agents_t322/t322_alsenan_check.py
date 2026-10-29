@@ -105,8 +105,11 @@ def run():
             "corrected_status": bl["status"], "corrected_value": bl["value"],
             "at_least_m3": bl["low"], "readings_m3": readings,
             "impact_between_readings_m3": round(readings[X.SCALED] - readings[X.INHERITED], 6),
+            "t170_neat_plan_m2": {"status": "HELD (same unprinted projection)", "at_least": round(4.6 * 4.5, 6),
+                                  X.INHERITED: round(4.8 * 4.7, 6), X.SCALED: round(4.9 * 4.8, 6)},
             "per_cm_projection_m3_first_order": round(0.10 * 2 * (4.6 + 4.5) * 0.01, 6),
         },
+        "second_plan_check": inp["second_plan_check"],
         "closure": {
             "t233_footing_FF_m3": ff_foot_233, "ledger_raft_m3": raft,
             "raft_residual_m3": round(raft - ff_foot_233, 6),

@@ -66,3 +66,11 @@ def test_p14_scale_proven_and_reading(out):
     assert sc["scale_ratio_1_to"] == pytest.approx(20.0, abs=0.1)           # 5 cm screed and 10 cm blinding agree
     assert sc["beyond_footing_face_m"] == [pytest.approx(0.150, abs=1e-3)] * 2
     assert sc["membrane_under_screed_m"] == pytest.approx(0.020, abs=1e-3)  # = p.13's printed '2'
+
+
+def test_excavation_neat_plan_follows_the_same_hold(out):
+    res, _ = out
+    n = res["F_T320_03"]["t170_neat_plan_m2"]
+    assert n["at_least"] == pytest.approx(20.70)
+    assert n[X.INHERITED] == pytest.approx(22.56) and n[X.SCALED] == pytest.approx(23.52)
+    assert "AGREE" in res["second_plan_check"]

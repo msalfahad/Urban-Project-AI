@@ -6,7 +6,7 @@ by Drive folder and title; entities by DXF handle; sizes, areas and counts only.
 
 Files: `lift_base_ledger_v1.py` (LIFT_BASE_LEDGER_V1, stdlib), `t322_alsenan_check.py` (reads the own-read input and the
 merged ledgers T-170 / T-204 / T-219 / T-233 / T-320 read only) -> `LEDGER_T322.csv`, `summary.json`;
-`ALSENAN_LIFT_BASE_INPUT.json` (values only); tests `tests/t322_lift_base_ledger` (19).
+`ALSENAN_LIFT_BASE_INPUT.json` (values only); tests `tests/t322_lift_base_ledger` (20).
 
 ## 0. Inputs (own reads, this task)
 
@@ -66,6 +66,8 @@ thicknesses) / outside: 'Well graded clean compacted fill from excavation materi
 | T-320 Z1 established | 105.162974 (no FF value) | no FF value added | 0.000 (FF blinding hold re-based: 0 .. 2.256 -> HELD, AT_LEAST 2.070 when wholly below EG) |
 | T-219 lift screed | 20.70 m2 / 1.035 m3 | 20.70 / 1.035 | 0.000 |
 | T-204 ring net | 1.100 m2 | 1.100 m2 | 0.000 |
+| T-170 FF neat plan (HELD) | HELD | HELD, AT_LEAST 20.70 m2; readings 22.56 (p 0.10) / 23.52 (p 0.15) | same hold, same cause |
+| Second plan | ring on the GROUND BEAMS plan 7C2 / 7BE / 7BD | = 10EB / 10EA shifted -38724.4 mm (T-205), same size | AGREE; DXF carries no lift detail (p.14 is PDF only) |
 | Neighbours | F12 1ABF clear gap 0.5998 m; others >= 0.71 m; plot line 3.70 m | no blinding overlap in either reading (gap >= 0.35 m); no D-14 part | none |
 
 ## 4. Engine, candidate and freelancer (m3)
@@ -85,7 +87,7 @@ another element type is an INHERITED reading, never DRAWING-CONFIRMED; an unprin
 blinding HELD with the AT_LEAST bound (plan of what stands on it x printed thickness); a scaled length off a detail whose
 scale two printed dimensions prove is designer evidence, never a quantity; the pit floor is the raft top and the pit
 walls start there (a wall reaching into the raft, or a raft depth carrying the wall, is refused).
-Tests `tests/t322_lift_base_ledger` (19): villa R by hand (raft 4.00 x 4.50 x 0.55 = 9.900, pit 1.60 x 1.80 in a 0.20
+Tests `tests/t322_lift_base_ledger` (20): villa R by hand (raft 4.00 x 4.50 x 0.55 = 9.900, pit 1.60 x 1.80 in a 0.20
 ring 1.520 m2 x 1.40 = 2.128, blinding p 0.10 printed 1.974, screed 0.900; corner column 1.480 / 2.072; proud column);
 adverse: offset not printed -> HELD >= 1.800; offset from a typical detail -> INHERITED, HELD; scaled reading never a
 quantity, inconsistent scale refused, one printed dimension refused; pit wall in raft and wall refused (two ways), pit

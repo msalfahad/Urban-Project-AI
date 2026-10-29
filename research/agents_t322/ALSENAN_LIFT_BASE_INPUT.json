@@ -49,6 +49,7 @@
   {"name": "membrane", "t": null, "owner": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)"},
   {"name": "protection board", "t": null, "owner": "WP.LIFT_PIT_BOARD_FIXED (T-219)"}
  ],
+ "second_plan_check": "GROUND BEAMS plan: ring S-BW 7C2 2200 x 2200 / 7BE 1800 x 1800 + hatch 7BD at x 98517.8, y 44448.0 = the foundation-plan ring 10EB / 10EA (+ hatch 10E9) shifted by the plan translation -38724.4 mm (T-205), same size and y: AGREE. The DXF (model space + every layout) has no lift detail text (only TEXT 1877 '10cm PLAIN CONCRETE.' of the pool detail): p.14 exists only in the PDF (R-ABSENT-SHEET-1, T-204).",
  "neighbours": {
   "nearest_footing": "F12 1ABF (4400 x 3200 at 131342.2, 43598.0): clear gap to FF 599.8 mm",
   "others_within_1_5m": "INSERT F 1663 / 1664 at 999.9 mm; S-FOOTINGS 1B19 710.6 mm; lines 10FA / 10FB 868.3 mm",
