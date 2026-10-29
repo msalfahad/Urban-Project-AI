@@ -97,9 +97,29 @@ BOQ_AUDIT_UNSUPPORTED_BASIS byte-equal.
   check refuses the export otherwise).
 - Downstream: none in quantity. SCOREBOARD cells: not re-run (no quantity moved; the Checker owns the scoreboard).
 
-## 7. Validation (filled at hand-in)
+## 7. Validation
 
-See the handoff in the board row and section 7 below once the runs end.
+- **Full CLI run** (research/agents_t338/v3024_run.py, one process, `tools/urban_boq_m9.py arch --method
+  ARCH_TAKEOFF_V3.0.24`) on ff2dcc41 (the code and inputs of the hand-in): V3_0_23 json `19f654bd` reproduced on the
+  way; every V3_0_24_* file byte-identical to v3024_direct.py (json `19394733`, csv `3bd1c5c6`, DIFF `6256baef`,
+  ledger csv `41877846` / json `97068868`, RUN `923eb18f`); totals moved {}.
+- **L4 full suite** (tests/ + agents/, one session) on ff2dcc41: 396 FAILED / ERROR in 43 files; the 43 files re-run
+  on the base engine head 25c1f52c: 395 fail there (the known private-input / environment failures, the same 395
+  T-319 reported). **NEW 1** = tests/codemap/test_codemap.py::test_repository_maps_are_current: the maps were stale
+  while that session ran (new files, rebuilt by the tool in a3f9af29); passes on a3f9af29 and on the merge head.
+  **NEW 0.**
+- Merge head 5ed524fa (= a3f9af29 + working head 6bd0385c, T-344; map-only conflict rebuilt by the tool): tests/
+  t338_line_state_v3024 (31), t319_parapet_rc_integration, t344_label_census_v2, t334_line_state_check,
+  t330_deductions_check, m9_kb, codemap, structural_comparison_engine/test_rebar_product_firewall.py,
+  t130_family_master, t061_room_label_guard: all pass; freeze 0 differing; codemap stale none.
+- tests/t338_line_state_v3024 (villa VG-338 by hand, not Alsenan): normal (3 released rebar lines incl. the 4-decimal
+  length case, NA gross, PROVISIONAL and BOUNDED formula ends, 4 clean lines byte-identical, shuffle, a for_lead line
+  kept, the merged T-334 check as the judge: clean after, 6 findings before); adverse (product not the net, length in
+  mm, 5-decimal length, no diameter, no count, a non-released valued line under hold text, a bounded line with a gross,
+  unlisted finding, stale listing, wrong kind, twice, fixed and for_lead, declared totals, unit-mass method / source /
+  length precision, a quantity / rfi / calculation change in integrate, a fixed line still stating two states, schema
+  / project / source); master 1.19.0 (builder, copies 1.18.0, checks clean, dropping the entry is stale); inputs pins
+  (366 fixes, edited findings file stops the build).
 
 ## 8. Lessons-register row (proposed)
 
