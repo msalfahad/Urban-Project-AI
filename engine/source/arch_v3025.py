@@ -82,7 +82,7 @@ CLOSURE_TOL_MAX = 0.01                  # the largest closure tolerance a projec
 RIM_MIN, RIM_MAX = 0.30, 3.00           # a pool finished depth, m (mm or a typo is refused)
 RULE = ("R-OUTDOOR-FLOOR-1", "T-343")
 MATERIAL_HELD_ITEM = "EXT.FLOOR.OUTDOOR"
-POOL_FINISH_ITEM = "FIN.POOL.WATER_FACE"
+POOL_FINISH_ITEM = "EXT.POOL.WATER_FACE"
 # the family's items: code -> (en, ar, trade, unit). The marble items are the item master's own (boq_line.ITEMS).
 ITEMS = {
     "EXT.PAVING.INTERLOCK": ("Interlock paving (outdoor court)", "انترلوك أرضيات الحوش", "EXTERNAL_WORKS", "m2"),

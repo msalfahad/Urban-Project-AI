@@ -187,9 +187,47 @@ def build(project_id=None):
             "guard": g}
 
 
-# The V3.0.24 lines that border or could share area with the pieces (line ids of the V3.0.24 run, own run): each
-# measures another face or another element, so the area shared is 0.000 m2 (filled from the run by v3025_run.py).
-CROSS_CHECK = []
+# The V3.0.24 lines that border or could share area with the pieces (line ids of the V3.0.24 run, own run of
+# v3025_run.py, V3_0_24_BOQ_LINES.json sha256 19394733 = the Checker's candidate of record). The room-face lines come
+# from the same polygonization of the GF plan as the court face (T-147 rooms.py, the call T-153 / T-157 used): faces of
+# one planar partition are disjoint, so a room-face line shares 0.000 m2 with a court piece by construction; the
+# pool lines measure the court's HOLE (the deck is the face less the exact outer D); the soffit is a ceiling surface.
+# T-342 (merged): no candidate line binds the court face (its labels AT21 / AT22 / AT39 / AT40 were MISSING).
+_FACE = ("a separate face of the same GF polygonization (planar partition, disjoint from the court face); T-342 "
+         "merged: no candidate line binds GF-COURT")
+CROSS_CHECK = [
+    {"line_id": "L-e653ef87a06a97903b0a", "item_code": "ARCH.SPACE", "element_id": "HL:FLOOR_SCOPE:OUTDOOR:GF:GF-SIDE-PASSAGE",
+     "why": "side passage 1.20 x 4.70 = 5.64 m2 (Q-67 A), T-157 OD-08: its own face between the annex and the house, "
+            "outside the court face (not in the 177.1154 re-add)", "shared_m2": 0.0},
+    {"line_id": "L-5431fa278fbb44816a08", "item_code": "ARCH.EXTERIOR", "element_id": "GF-R9A05AA:space",
+     "why": "GF garden band part 9.101 m2 (T-157 OD-09: physically inside, HELD_CONFLICT, designer D-48); " + _FACE,
+     "shared_m2": 0.0},
+    {"line_id": "L-6b6412e885390b434819", "item_code": "ARCH.SPACE", "element_id": "GF-RFD4E1D:space",
+     "why": "GF garden band part 4.885 m2 (T-153 / T-157 OD-09 9.101 + 4.885 = 13.986); " + _FACE, "shared_m2": 0.0},
+    {"line_id": "L-554a525edce9a9235bee", "item_code": "ARCH.SPACE",
+     "element_id": "HL:FLOOR_SCOPE:HELD_WITH:GF:GF-OP-003-NO-OPENING:band",
+     "why": "6.82 x 0.20 strip HELD with the garden band (P-2), inside the south facade: not in the court face",
+     "shared_m2": 0.0},
+    {"line_id": "L-36efa902da4263479e0b", "item_code": "STR.CONC.POOL", "element_id": "pool base",
+     "why": "pool base concrete (m3) on the outer D incl. the back wall 10.935564 m2: the court's hole; the deck is the "
+            "face less the outer D cut at the wall face 10.235564 (the 0.70 m2 under the back wall is outside the face)",
+     "shared_m2": 0.0},
+    {"line_id": "L-15a128c38982af899894", "item_code": "STR.CONC.POOL", "element_id": "pool walls",
+     "why": "pool wall ring concrete (m3) inside the outer D: the court's hole; its 0.15 upstand top and outer face "
+            "are pool faces, not deck floor", "shared_m2": 0.0},
+    {"line_id": "L-b62a7065645589011141", "item_code": "STR.CONC.POOL", "element_id": "pool steps",
+     "why": "pool steps BLOCKED (not drawn): inside the water D, never a floor", "shared_m2": 0.0},
+    {"line_id": "L-23072352a28aeca7b051", "item_code": "FIN.CEILING", "element_id": "SOFFIT:GF:PL-03",
+     "why": "pool court soffit 16.525 - 3.690 = 12.834 m2: the ceiling under the 1F over the pool court, another "
+            "surface (not a floor)", "shared_m2": 0.0},
+    {"line_id": "L-1983e89d8b619eade1db", "item_code": "FIN.MARBLE.LANDING", "element_id": "GF-R31F8AE:landings",
+     "why": "landings of the interior stair room GF-R31F8AE (face area 12.475, TS01): " + _FACE + "; E1 and its "
+            "landing lie outside the main door in the court face", "shared_m2": 0.0},
+    {"line_id": "L-151d92470a81dd1c450b", "item_code": "FIN.MARBLE.TREAD", "element_id": "GF-R31F8AE:flight 1",
+     "why": "treads of the interior stair room GF-R31F8AE: " + _FACE, "shared_m2": 0.0},
+    {"line_id": "L-fa534ec5f9dc14947899", "item_code": "FIN.MARBLE.TREAD", "element_id": "GF-RC99C2A:flight 1",
+     "why": "treads of the main stair room GF-RC99C2A: " + _FACE, "shared_m2": 0.0},
+]
 
 
 if __name__ == "__main__":
