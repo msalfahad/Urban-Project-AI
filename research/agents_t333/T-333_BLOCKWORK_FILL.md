@@ -16,6 +16,11 @@ candidate of record**. Extract: `python3 -I research/agents_t333/t333_alsenan.py
 CANDIDATE_V3021_MASONRY_LINES.json (28 masonry lines: id, item, storey, element, unit, state, quantity, RFI text; no
 coordinate, no name). Fill: `--write`; `--check` rebuilds byte-identical.
 
+**V3.0.22 (T-331, MERGED 15ac21f7 during this run) changes no masonry line:** own run of
+research/agents_t331/v3022_direct.py on the V3.0.21 run above reproduces V3_0_22 json `7199c8b6` / csv `924a60b4` (the
+T-331 record, 3,706 lines), and each of the 28 masonry line objects is byte-identical (sorted JSON) between V3.0.21 and
+V3.0.22. The FILL therefore applies unchanged to the candidate of record V3.0.22; T-279 wires it there.
+
 ## 2. Physical element and what the candidate carries today
 
 A block wall is the masonry between its two faces, from the structural floor to the underside of the member over it,
