@@ -178,6 +178,7 @@ a finished V3.0.21 run (same module functions, same files).
   the held band basis text; the merge of T-330; f3bc2779: report + one test) were validated at L3 on f3bc2779:
   tests/t331_wet_backing_integration (32), t315, t329, t330, t212, t061, m9_s6, m9_s5, m9_s4, m9_kb, m9_s3, m9_p2b0,
   m9_p2a, m9_p2b2, t240, t255, t244_finish_revision, t312: all pass.
+- Verdict / downgrade records: the 122 line ids bound by docs/agents/verdicts/V3.0.20 (URBAN_CHECKER_VERDICT_V2_SET + DOWNGRADES, the latest set on the board) include none of the 20 lines this package changes, so every bound line is byte-identical in V3.0.22 and its record re-binds to the same content unchanged (no record edited here: the Checker owns them).
 - Freeze 0 differing; codemap stale none (maps by the tool, last); rules manifest drift none; master 1.17.0 equals its
   builder, FMC problems none.
 - self-gate: a c d f h PASS (a: only the integration module, runner wiring, registry version file, manifest, research
