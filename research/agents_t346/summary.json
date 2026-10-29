@@ -1,0 +1,32 @@
+{
+ "drawing_net_m2": [
+  897.72,
+  938.606
+ ],
+ "his_walls_net_of_half_openings_m2": {
+  "less_double_count": 926.365,
+  "t337": 935.365
+ },
+ "new_t314_fill_rows": 0,
+ "rows": {
+  "65": 18.0,
+  "68": 9.0,
+  "69": 66.15
+ },
+ "statement_m2": {
+  "double_count": 9.0,
+  "drawn_matched": 79.2134,
+  "his_total": 93.15,
+  "named_terms": 4.9366,
+  "residual": 0.0,
+  "unresolved": 0
+ },
+ "t162_drawn_faces_in_no_row_m2": {
+  "after": 156.406,
+  "before": 210.761,
+  "now_in_row_65": 6.955,
+  "now_in_rows_68_69": 47.4
+ },
+ "t162_rows_70_71_74_lose_nw5_m2": 31.2584,
+ "task": "T-346"
+}
