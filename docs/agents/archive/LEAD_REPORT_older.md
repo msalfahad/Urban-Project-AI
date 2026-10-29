@@ -1,3 +1,90 @@
+## LEAD REPORT 2026-10-26 06:15 UTC
+
+Drive readable: nothing created or modified in any Drive folder since 04:00, no new images (no photo review task).
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+06:13). Working branch 1157b8f8 -> c48f7062 (Checker merges via 'engine push': T-305 9d71ef09, T-308 efb38618, T-309
+834ada3e at 05:03; T-307 c48f7062 at 05:55); no owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: no entry since 25 Oct 13:25.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+CANDIDATE OF RECORD: ARCH_TAKEOFF_V3.0.19 unchanged (NOT RELEASED; whole verified lines in the export 2). Every merge
+this run is a research ledger: no candidate or released quantity moved; scoreboard restated 05:06 and 06:00 by the
+Checker with no cell moving (FLOOR_AREA 381.464 vs 409.58 m2 -6.86 %; CONCRETE 1 / 8 compared +0.77 %).
+- REINFORCEMENT (kg / t), slab bottom-bar ends MERGED: continuous ends 1591 / 1683 -> 0 m (no bar drawn on p.15);
+  edge-beam ends 1004 / 1044 -> drawn straight w - 0.040 (0.160 m at a 0.200 beam), one bar per pair up-turned with
+  the leg HELD; step / irregular / opening ends HELD. Checker own GF-135 x 3.160494 / 3.259259 kg = worker (0.000).
+  Drawn straight parts 136.573 .. 150.696 kg vs note-9 298.750 .. 541.472 kg on the same ends (ENGINE_WRONG basis).
+  Valued slab bound 4,643.766 .. 6,832.326 -> 3,811.621 .. 5,241.324 kg (research; partly a move to HELD, not a
+  resolved total). Freelancer 5,400 kg lump: RULE_DIFFERENCE, no %. Candidate kg unchanged: the split needs your stage
+  approval (OWNER PACKAGE 1). Remaining largest cause: top-bar extent 1,113.683 kg -> NEW T-316.
+- EXTERIOR PLASTER (m2) MERGED: every drawn face once 1,022.534 (residual 0.000); Checker own parapet outer faces
+  48.237 of 66.428 agree 0.000; GF two-F.F.L. +3.430 confirmed. Candidate FIN.EXT.FINISH all blank = HELD vs freelancer
+  net 1,469.97 (no %). NO_LINE 137.244 + 6.822 .. 13.261 -> T-311 (now TODO), T-314.
+- FORMWORK (m2) MERGED: BAND0049 = curved B7 corner beam, Checker 2.927965 vs worker 2.927816 (-0.005 %), ENGINE_RIGHT;
+  E CALC 425.209 -> 422.693 (CB5 span 2 once); stair lines 36.447 -> 32.822. Freelancer no formwork row. -> T-199.
+- WATERPROOFING (m2 / m3) MERGED: pool membrane 29.582355 m2 / protection screed 1.524503 m3 = Checker; upstand
+  0 .. 1.350 m2 HELD (termination undimensioned); function WP vs insulation HELD (S8.2, designer). Freelancer no row
+  (RULE / SCOPE). -> T-310.
+- WALL TILE (m2) READY, not verified: candidate's 17 FIN.WALL.TILE lines all blank; owner method (Q-48 A) fills 11
+  lines 307.9616, 6 HELD (annex G2 / Q-54 B / D-39; GF-10 / 11 level), pantry 32.3422 NO_LINE; vs freelancer on the
+  11 rooms 295.44 -> 307.96 (+12.52, +4.24 %, height RULE_DIFFERENCE, openings / lobby ENGINE_RIGHT proposed).
+- Learned (lessons register +3: T-305, T-307, T-309 rows; T-306 row now points to T-318): read a typical detail at
+  a resolution where each bar layer separates (the Checker revised his own 220 dpi reading); exterior finish by face,
+  never run x storey height; book each printed layer of a build-up by its hatch, its function a separate fact.
+- Missing (unchanged): designer answers (S19 - S22, D-35 / D-39 / D-41 / D-44 / D-53, M4, slab leg / step / composite /
+  opening ends, '50 % top extension where possible', S8.2), excavation formation, dome drums; spatter dash and
+  block / concrete joint mesh now have a piece (T-317).
+
+GATES: lowest open gate 1 (lane I: T-244 READY 06:19, Gate B pending). Gate 2: T-312 READY; T-311 / T-313 / T-317 / T-224
+TODO; T-315 / T-314 / T-310 / T-199 QUEUED. Gate 3: T-316 TODO; T-318 BLOCKED-OWNER.
+
+CLOSE THE LOOP since 04:15: WORKED x4 (T-305, T-308, T-309, T-307); READY 1 (T-312); PARTIAL / FAILED none. Every
+finding routed: T-305 -> T-311 PROMOTED; T-308 -> T-199; T-309 -> T-310; T-307 -> T-316 + T-318; T-312 -> T-315.
+
+VERIFIER QUEUE (READY 2 at 06:25, CHECKER-RUNS): standing slot restated 06:00; Gate B T-244 FIRST (READY 06:19,
+V3.0.20: interior plaster / paint at the merged opening outlines; 1F-11 59.4511 released -> 61.4626 .. 61.7177 m2 HELD
+(W17 band ENGINE_WRONG); 1F-13 W15 / W16; paint released 166.8792 -> 217.2081 m2, held 529.47 .. 595.05 -> 487.12 ..
+542.86 m2; 3,697 lines byte-identical; freelancer 1,191.13 m2 not compared while lines are held). Lead challenge: the
+1F-04 / 2F-03 changes (W24 / W29 heads) were not in the row's list: the Checker accepts them only on verified inputs
+within the acceptance, else they go back as their own package. Then Gate A T-312 (re-measure a wet room with an
+opening in the tile band and the pantry yourself); then T-311, T-313, T-316, T-317, T-224; light run T-180.
+
+LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-311, T-316; A worker 2: T-313, T-317;
+I worker 3: T-244 (CLAIMED), T-224, T-315, T-318 (only after your approval), T-279, T-284, T-246, T-310, T-199, T-314.
+TODO 5 + 1 CLAIMED + 1 READY: below the 8-12 target because lane I is single-threaded on the integration files; lanes
+S and A carry 2 each.
+
+ELEMENT REGISTER +6 (slab bottom-bar end classes, slab top-bar groups, pool membrane / screed, B7 corner band, pantry
+wall tile, exposed concrete faces + block / concrete joints).
+
+TEAM HEALTH: every run since 04:15 closed with a final line (Worker 3 05:00 closed 06:20 SUCCESS, T-244 READY) except
+this Lead run. Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock were
+correct (their 04:21 / 04:40 runs were still working). All code runs report self-check PASS. Dashboard 04:54 SUCCEEDED,
+next 08:54. Main daily update fired 04:31 (SUCCEEDED).
+
+OWNER PACKAGE (1 item; ERS s.2.7: an implementation approval you reserved on 25 Oct 10:33)
+1. Slab reinforcement: may the checker-verified bar-end correction enter the CANDIDATE (not the release)?
+   Issue: the candidate's slab development lines book a 40 d .. 70 d anchorage (general note 9) on every bottom-bar end.
+   Evidence: typical slab detail ST p.15 (Drive 'Alsenan chalet project', ST7757.pdf) and 'ST7757 dxf.dxf' slab plan.
+   Investigation: every bottom-bar end classified by the support it meets (98 lines); the checker re-read p.15 at 400 dpi
+   and re-measured panel GF-135 by hand: over a continuous support no anchorage is drawn (0 m); at an edge beam the bar
+   runs straight to the 40 mm cover mark (0.160 m at a 0.200 m beam) and one bar of each pair turns up with an
+   undimensioned leg. Alternatives: (A) keep the candidate's note-9 lengths until the designer answers the leg / step
+   items; (B) split the line now: continuous ends 0 m, edge-beam ends the drawn straight part, every undrawn part
+   (legs, steps, irregular panels, openings) HELD blank, never 0. Quantity impact: the anchorage booked on continuous
+   ends with no drawn bar is 556 .. 1,027 kg (0.56 .. 1.03 t); on edge-beam ends the drawn straight part is 137 .. 151 kg
+   against 299 .. 541 kg booked; the valued slab range moves from 4.64 .. 6.83 t to 3.81 .. 5.24 t, part of it to HELD.
+   Recommendation: B, because the drawing draws no bar where the candidate books one (two independent re-measures
+   agree), and B adds no value of its own: what is not drawn stays held. Status: candidate and released steel unchanged;
+   the corrected line stays research. Next action: on your approval lane I runs T-318 (Gate B with the checker's hand
+   re-derivation of two lines); without it, nothing moves and the top-bar census (T-316) continues read-only.
+
+NEEDS FIXING (only the owner): (1) the cadence review you set on 25 Oct 04:38 (hourly kept provisionally, review after
+24 - 48 h) is due today; no usage-limit failure since 21:40 on 25 Oct; IDLE run-lock stand-downs this run: 2; the Lead
+changed no schedule. (2) Designer / consultant RFIs (S19 - S22, B27 link, CB3 / CB8 supports, S8.2 pool membrane
+function, slab bar-end leg / step / composite / opening items, '50 % top extension where possible') stay unsent until
+you decide to send the package.
+
 ## LEAD REPORT 2026-10-26 04:15 UTC
 
 Drive readable: nothing created or modified in any Drive folder since 02:00, no new images (no photo review task).

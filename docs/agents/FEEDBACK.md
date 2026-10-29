@@ -42,6 +42,19 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-29 04:15 (lead run; covers 00:15 - 04:15)
+
+- T-313 r2 (opening reveal ledger) WORKED: 20 door reveals bound to FIN.PLASTER (17.740 m2 EQUAL), missing scope 13.637 m2 own-confirmed; D-GF-07 line low end 1.28 ENGINE_WRONG (printed 1.400). Decision: NEW T-326 (lane I, reveals into the candidate).
+- T-321 (roof build-up) WORKED: T-221 ROOF-430 short by 2.0787 m2 and ROOF-970 on the outer face, both CONFIRMED. Decision: NEW T-328 (lane I).
+- T-224 r2 (sunken-slab step) WORKED: free-edge concrete only from a printed step detail; Alsenan effect 0 m3. F-T224-C2 stays with the unwired module.
+- T-324 (parapet components) WORKED: inner faces 94.123 .. 99.558, tops 26.836 .. 26.973 m2; coping / drip / beads UNKNOWN -> RFI A13.
+- T-322 (FF / lift base) WORKED: the Checker DOWNGRADED the verified footing-blinding component 14.990 -> 12.734438 m3 + FF HELD >= 2.070. Decision: Checker-issued downgrade record on the candidate line; RFI S23; T-319 acceptance checks the export.
+- T-323 (slab hatches vs panels) WORKED: no candidate line reads a hatch (ENGINE_RIGHT).
+- T-315 Gate B PARTIAL (REJECTED narrow: pantry base carried twice, skirting under full-height tile; tile figures sound). Decision: TODO r2 with the Checker's 4 items, first in lane I; lessons row PROPOSED.
+- T-325 (sills / thresholds) READY: 0 DIFFERS, 32 fill proposals, external materials UNKNOWN. Decision: Gate A first; then T-327; RFI A13.
+- Recurring cause (new): cross-trade attribution by room name / note instead of by source entity (T-315). Decision: lessons row; T-329 / T-326 acceptance carry 'by id, never twice'.
+- Recurring tool issue (unchanged): Drive downloads arrive raw binary, `decode` expects base64; every agent re-encodes by hand (NEEDS FIXING (1)).
+
 ## 2026-10-29 00:15 (lead run; covers 2026-10-28 20:15 - 2026-10-29 00:15)
 
 - T-244 (Gate B, plaster / paint at the merged opening outlines, V3.0.20) WORKED: candidate of record V3.0.20; 1F-11 released 59.4511 m2 ENGINE_WRONG -> HELD 61.4626 .. 61.7177; paint released 166.8792 -> 217.2081 m2; Checker reproduced byte for byte. Decision: T-315 (wall tile) PROMOTED onto this base.

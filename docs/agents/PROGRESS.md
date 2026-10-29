@@ -1,18 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 00:15 UTC (Lead). Previous version: 2026-10-28 20:20 UTC. The released numbers did not change
+Last update: 2026-10-29 04:15 UTC (Lead). Previous version: 2026-10-29 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.20 (not released).
+line among them); released: 0. The candidate under review is still V3.0.20 (not released).
 
-THE TEAM IS RUNNING AGAIN ON YOUR HALVED CADENCE. After the 60-hour stop, the checker cleared the whole backlog in three
-runs tonight: six pieces checked and merged, two sent back for a narrow fault (both already reworked), and no run failed
-since 19:19. Workers now run every 2 hours, the checker hourly, the Lead every 4 hours; the research scout is paused.
-Two decisions wait on you (OWNER PACKAGE in the Lead report): the slab steel anchorage (from 26 Oct) and, new today,
-whether mesh strips over block-to-concrete joints are a BOQ item at all and how they are measured.
+A STEADY NIGHT. Six pieces checked and merged since midnight, one integration sent back for a single narrow fault, one
+piece handed in; no run failed. The checker also found that one quantity he had verified earlier rested on a borrowed
+dimension and corrected it downward himself (details below). Nothing new waits on you beyond the two decisions already
+in the Lead report (slab steel anchorage; joint mesh), and neither blocks today's work.
 
-Since 28 Oct 20:20 (newest first; six checked and merged, two sent back, two handed in):
+Since 29 Oct 00:15 (newest first; six checked and merged, one sent back, one handed in):
+- Wall tiles into the candidate: SENT BACK for one fix. Every tile figure was re-measured by the checker and is sound
+  (his 340.25 vs our 340.30 m2 over 12 lines), but adding the open pantry's full-height tile left its old skirting lines
+  in place (about 1.9 m plus up to 1.0 m), so the pantry wall base would be priced twice. The fix is narrow and first in
+  line for the integration worker.
+- Lift base and the big FF footing: CHECKED AND MERGED. The raft (11.39 m3) and pit walls match the earlier ledgers
+  exactly, but the blinding under this footing had been taken from the typical footing detail (10 cm projection) while
+  the lift detail prints no projection. The checker therefore lowered the verified blinding from 14.99 to 12.73 m3 and
+  holds the FF part at 2.07 m3 or more until the designer dimensions it (added to the designer list).
+- Window and door reveals: CHECKED AND MERGED. The 20 door reveals stay where the plaster line already carries them
+  (17.74 m2, no double count); 13.64 m2 of reveal scope is truly missing and is now queued for the candidate.
+- Roof build-up: CHECKED AND MERGED (research). No roof layer is printed on any sheet, so insulation and protection stay
+  unknown; areas per roof by layer edge total about 284.5 m2 (the freelancer's 285.00 m2 covers the same scope; his
+  cells not read). The roof screed to falls is one layer and one volume (14.21 .. 17.47 m3). Queued for the candidate.
+- Parapet tops, inner faces and corners: CHECKED AND MERGED (research): inner faces 94.12 .. 99.56 m2, tops 26.84 ..
+  26.97 m2; coping and drip material not drawn (designer list).
+- Sunken-slab step concrete and slab outlines: CHECKED AND MERGED. Step concrete now comes only from a printed step
+  detail (no effect on this villa); slab outlines cut by drawing annotations confirmed: no candidate line used them.
+- Sills and thresholds: HANDED IN, waiting for the checker. 14 wet-room marble thresholds (1.82 m2), 7 dry porcelain
+  strips (1.10 m2), 23 outside window sills (2.56 m2, material not specified anywhere), nothing counted twice with the
+  floor tiles.
+
+Earlier, since 28 Oct 20:20 (newest first; six checked and merged, two sent back, two handed in):
 - Inside plaster and paint at the corrected window and door outlines: CHECKED AND MERGED into the candidate. One room's
   released wall area (59.45 m2) was too low because of the arched window's real outline; it is now held at 61.46 ..
   61.72 m2. Released paint in the candidate 166.88 -> 217.21 m2; held 487.12 .. 542.86 m2. The checker rebuilt the whole

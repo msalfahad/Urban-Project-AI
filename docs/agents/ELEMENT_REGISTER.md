@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-29 04:15 (from T-321 / T-224 r2 / T-313 r2 / T-324 / T-322 / T-323 MERGED; T-315 Gate B REJECTED narrow; T-325 READY; new T-326 .. T-330)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Pantry GF-07 wall BASE (engine rooms GF-RC06FED wholly inside, GF-RC99C2A part) | wall tile, skirting, paint | WALL TILE (full height, wet area: Q-37 A / Q-48 A, UP-PANTRY-003); skirting NOT_APPLICABLE on every tiled face (one owner per base, T-296); the open-plan rest of GF-RC99C2A keeps its skirting | ruling; carried in T-315 r2 | T-296 MERGED, Verifier T-315 note 03:48 (F-T315-C1 / C2) | attribution by source entity / room split, never by an OPEN_PLAN note (lessons row) |
+| Wet-room PLASTER BACKING under wall tile, and the plaster band above the tile | plaster, wall tile, paint | PLASTER (its own line, UP-FIN-PAINT-001 'substrate'); the tile line never carries it; the band above the tile belongs to ONE plaster line (T-329 rules which, never both) | HELD by name (no merged ledger) | T-315 r1 cross-trade note | T-329 |
+| Opening REVEALS: door jambs and heads (20 doors) | plaster, reveal family | FIN.PLASTER 'door jambs and head' (already carried, 17.740 m2 EQUAL); a reveal line on the same face is refused | ruling (T-313 r2 MERGED) | Verifier 01:29 | T-326 integrates the missing scope 13.637 m2 only |
+| Window and door SILLS / THRESHOLDS (wet marble, dry porcelain strip, external sills) | thresholds, floor tile, reveals, terrace finish | THRESHOLD family (UP-THR-001, URBAN-WET-SERVICE-MARBLE-THRESHOLD v1); a strip polygon inside a floor-tile line refused (max overlap 0.000394 m2); W15 / W16 floor-level = terrace finish continued OUTSIDE the TERRACE-550 outline | geometry measured; external materials UNKNOWN / HELD | T-325 READY | RFI A13; T-327 |
+| Parapet TOP / COPING / DRIP / corner beads | parapet finish, plaster, roofing | parapet finish items (T-324), never inside the parapet RC (T-319) or a roof layer (T-328) | geometry measured, material UNKNOWN | T-324 MERGED bc5df868 | RFI A13 |
+| FF raft (lift base) BLINDING | blinding, raft | CONC.BLINDING (footing layer); the p.13 typical projection is an INHERITED reading for FF only | HELD >= 2.070 m3; the footing-layer verified component downgraded 14.990 -> 12.734438 | T-322 MERGED d3bcd9d4 (Checker downgrade) | RFI S23; Checker-issued downgrade record on the candidate line |
+| Sunken slab panels vs their hatches | slab concrete, drafting | SLAB: panel = concrete between member faces; a hatch is a drafting fill (298: panel 4.1175 vs hatch 4.1076 m2) | ENGINE_RIGHT (no candidate line reads a hatch) | T-323 MERGED 4410fb03 | none |
+
 ### Lead 2026-10-29 00:15 (from T-244 Gate B (V3.0.20) / T-312 / T-311 / T-316 / T-317 / T-320 MERGED; T-313 r2 / T-321 READY; T-224 r2 CLAIMED; new T-322 .. T-325)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

@@ -46,7 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-29 00:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-29 04:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-29 04:15: six research pieces MERGED since 00:15 (reveals r2, roof build-up, parapet components, FF / lift base, sunken-slab step r2, slab hatches); the wall-tile integration (T-315, V3.0.21) was REJECTED once at Gate B for a single cross-trade fault (pantry base), so the candidate of record is still V3.0.20 and whole verified lines stay 2. Week 2 (by 3 Nov) re-estimate: T-315 r2 Gate B by about 29 Oct evening; then T-319 (parapet RC) and T-279 (blockwork) by 3 Nov only if each passes Gate B first time at the halved cadence; reveals (T-326) and sills / thresholds (T-327) follow. Mitigation this run: any idle worker may now claim the next lane I row once the previous one merged (lane I no longer waits for worker 3's 2-hour slot). One verified component went DOWN (footing blinding 14.990 -> 12.734 m3, FF HELD): honest correction, not a regression. Risks: (1) lane I serial + Gate B rejections; (2) owner decisions pending (slab anchorage split, joint mesh); (3) usage budget.
+
+### Earlier status (Lead, 2026-10-29 00:15)
 
 Lead 2026-10-29 00:15: RECOVERED. The Checker cleared the outage backlog in three runs (19:51 - 23:23): T-244 Gate B (V3.0.20 = candidate of record, 8 plaster / paint lines), T-312, T-311, T-316, T-317, T-320 MERGED; T-313 / T-224 rejected narrow and reworked. Week 2 (by 3 Nov, measurable increase in verified coverage): integration chain moving again; wall tile (T-315) is TODO for lane I tonight on V3.0.20. Re-estimate at the OWNER'S HALVED CADENCE (28 Oct 21:44: lane I one run every 2 h, Checker hourly): T-315 Gate B by about 30 Oct, then T-319 (parapet RC) and one of T-279 (masonry) / T-199 (formwork) by 3 Nov only if each passes Gate B first time; any rejection pushes the second past 3 Nov. Whole verified lines still 2 (no change). Risks: (1) lane I single-threaded on the integration files and now at half cadence (largest risk to Week 2); (2) owner decisions pending (slab anchorage split T-318; joint mesh scope); (3) usage budget (owner managing cadence).
 
