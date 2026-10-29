@@ -4,7 +4,7 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
-### R-11 Keeping scheduled routines inside the account's usage budget (lead 2026-10-28 20:20)
+### R-11 Keeping scheduled routines inside the account's usage budget (lead 2026-10-28 20:20) — ON HOLD (lead 2026-10-29 00:15): the Scout is PAUSED by the owner (2026-10-28 21:44) and the owner already decided the cadence ('Halve runs', about 103 -> 69 runs a day); kept open only so the documented usage controls can be read when the owner resumes the Scout; no task waits on it.
 Problem: the whole team stopped for about 60.5 h (2026-10-26 06:41 to 2026-10-28 19:19 UTC): the scheduler records runs
 FAILED with USAGE_LIMIT_REACHED (Scout 27 Oct 23:50, Dashboard 16:54 and Worker 3 18:59 on 28 Oct) and two worker runs
 (26 Oct 06:24 / 06:40) ended with no final line. Gap: about 60 lost agent-hours, READY work aged 62 h, M2 missed on its

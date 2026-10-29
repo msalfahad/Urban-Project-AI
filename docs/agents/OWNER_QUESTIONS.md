@@ -298,6 +298,26 @@ NEXT ACTION (continues without you): doors and windows go into the candidate in 
 held; every other window line continues. Waits on: the windows line of Alsenan becoming closable (T-232, T-238).
 Answer: A (owner, main chat 2026-10-24 23:53 UTC), his words (essentials): "Approve Option A, subject to the drawing evidence you described. Use the confirmed opening dimensions 3.29 m x 3.00 m = 9.870 m2 for the applicable window/opening measurement. Exclude the separate 0.45 m decorative wall band from the window quantity. The 3.50 m in Q-39 was an example, not a universal window-height rule. Preserve the distinction between opening area, aluminium assembly area and net glass area. Follow the approved BOQ measurement basis. Do not use this decision to resolve D-53 automatically. W02's one-window-versus-two-window classification remains subject to the actual drawing or designer evidence." LEAD: move this entry to OWNER_QUESTIONS_ANSWERED.md and add the index line.
 
+### Q-77 Mesh strips over block-to-concrete joints: is it a BOQ item, and over which band? (lead 2026-10-29 00:15, today's owner package item 2; from T-317 MERGED 328a7095, Checker 23:22; ERS 2.7: a contractual measurement decision that no drawing note, specification, answered rule or freelancer line covers)
+
+ISSUE: the missing-category list names "mesh at block-to-concrete joints" (B9-03, m.l), but nothing defines whether it is
+measured or where. EVIDENCE: text census of 675 architectural and 2,339 structural texts (no mesh / spatter note); no
+answered question or owner rule mentions it; the freelancer has no line. INVESTIGATION: every joint between blockwork
+and a column, beam or slab was listed per finished side from the verified wall register (1,440 rows), cut at column
+outlines, beam bands and slab faces. Interior, YOUR band (finished floor to 3.75 m GF / 3.45 m 1F-2F, your height rule):
+horizontal joints inside the band 2.70 m (almost all sit at or above the plaster stop / decor ceiling), vertical joints
+at columns 278.85 m. Interior, DRAWING band (floor to soffit): horizontal 215.17 m + vertical 294.44 m + level-change
+steps 18.59 m. Exterior (Sigma side, whole storey): 106.11 + 121.80 + 2.23 = 230.14 m. Held (walls not resolved): inside
+134.33 m + 76 vertical joints, outside 50.86 m + 44 vertical joints.
+ALTERNATIVES: (A) not a BOQ item (in the plaster rate): nothing added. (B) a BOQ item in m.l on the band your finish
+heights define: about 281.6 m inside + 230.1 m outside. (C) a BOQ item on every drawn joint floor to soffit: about
+528.2 m inside + 230.1 m outside. The strip width is a product property, never part of the quantity.
+RECOMMENDATION: B: your answered finish heights already decide which faces are plastered, and a joint behind the decor
+ceiling is never plastered over. WHAT STAYS HELD: B9-03 blank by name (never 0). WHAT CONTINUES: everything; nothing waits
+on this answer.
+
+Answer: (pending)
+
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.

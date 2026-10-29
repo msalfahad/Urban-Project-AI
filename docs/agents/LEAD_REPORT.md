@@ -1,5 +1,108 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-29 00:15 UTC
+
+Drive readable: nothing created or modified in "Urban BOQ private data" or the Alsenan folder since 28 Oct 20:00; no new
+images (no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared
+automatically ("setup by auto", 00:12). Working branch c48f7062 -> 5ddb2ba1 (Checker merges via 'engine push'); no owner
+commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: your 28 Oct 21:44 'Halve
+runs' entry applied (workers 2-hourly, Checker hourly, Lead 4-hourly, Dashboard 12-hourly, Scout paused): the queue below
+is sized so each TODO fits one 2-h worker run, and a run with nothing claimable ends at once.
+
+HEADLINE: BACKLOG CLEARED. The Checker's 19:51 / 21:51 / 22:52 runs merged everything the outage had stranded: the
+plaster / paint integration package (candidate of record now ARCH_TAKEOFF_V3.0.20, NOT RELEASED) and five research
+ledgers; two hand-ins were rejected narrowly and are already reworked. No run has failed since 19:19.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; whole verified
+lines in the candidate export 2, released 0; scoreboard restated 23:23, no compared cell moved):
+- PLASTER / PAINT (m2), V3.0.20 MERGED: 8 lines changed, Checker reproduced byte for byte (097a80b6), residual 0.0000.
+  1F-11 released 59.4511 ENGINE_WRONG -> HELD 61.4626 .. 61.7177 (arched W17 outline); 1F-04 52.005 / 2F-03 57.775
+  ASSUMED - OWNER-APPROVED (Q-43 / Q-48 A, Q-55 C); paint released 166.8792 -> 217.2081, held 487.121 .. 542.861 m2.
+  Freelancer 1,191.13 m2 not compared while reference lines are held.
+- WALL TILE (m2) MERGED (ledger): 11 lines 307.9616 by your method (Q-48 A) vs freelancer 295.44 on the same rooms
+  (+12.52, +4.24 %; height RULE_DIFFERENCE, openings / lobby ENGINE_RIGHT); 6 HELD; pantry 32.3422 NO_LINE (Checker
+  own 32.375, +0.10 %). Into the candidate next (T-315 TODO).
+- CONCRETE (m3): parapet RC 8.040 .. 20.081 MISSING CONFIRMED by the Checker's own ST p.14 / section read; his
+  addition: lower bound = max(0.30, the roof build-up depth at the edge) while b_edge (D-39) is unprinted. Backfill
+  displacement 105.163 m3 below EG, closes 0.000 on the footing / excavation ledgers (Checker own F12 pit 12.6513, footing
+  population 52.919 net + FF 11.385 = CONC.FOOTING 64.304); backfill / disposal HELD (formation Q-21 C / OQ-13); F8 /
+  pool collision 0 .. 1.121 m3 CONFLICT (designer).
+- REINFORCEMENT (kg): slab top bars MERGED (research): F-T316-01 drawn across-beam part 122.574 .. 150.278 kg in no
+  reading; F-T316-02 81.746 kg past the clear span of short panels; both ENGINE_WRONG, both wait with T-318 on you.
+- SPATTER DASH (m2) MERGED (research): your OD-V3B-4 .. 7 sequence puts it under every finished face: 913.7202 + HELD
+  1,016.75 .. 1,112.66 m2 vs freelancer 504.5425 m2 (inside only; Checker read his cells: 433.83 + 282.85 x 0.25).
+  JOINT MESH (m.l): no rule, note or specification -> OWNER PACKAGE item 2.
+- OPENING REVEALS (m2): r1 REJECTED (22 door reveals booked missing although FIN.PLASTER 'door jambs and head' carries
+  them: a 24.150 m2 double count avoided); r2 READY: 20 doors EQUAL 17.740 m2 residual 0.000, missing scope 13.637 m2
+  (window outside jambs + heads 9.667 DC, W18 sill 0.040, 5 doors 3.930).
+- ROOFING (m2 / m3) READY (research): no roof layer printed on any sheet (insulation / protection UNKNOWN, thickness HELD
+  D-39); areas by layer edge ROOF-430 54.920 .. 55.560, TERRACE-550 32.721, ROOF-970 115.656 .. 115.814; ROOF-1390
+  49.665 HELD (Q-34); falls screed above t0 14.208 .. 17.470 m3; total 284.478 vs freelancer 285.00 m2 (+0.18 %, scope
+  match only, his cells not read). Worker 3 flagged a trade CONFLICT on the falls layer (Q-41 vs Q-45): I ruled it one
+  physical layer, one SCREED volume (your Q-41 words), Q-45 setting its mix only; no owner question needed.
+- Learned (lessons register +6; T-311 row now ACCEPTED): map each answered rule to the physical layer it governs before
+  giving it a line; search every line family before calling a component missing; a hatch cut by an annotation is not a
+  panel; scope a preparation coat from the answered build-up; classify each bar end by its support; backfill =
+  excavated - displacement net of overlaps.
+- Missing (unchanged except new pieces): designer answers (Q-65 C parapet material, D-39 b_edge, D-41 step depth,
+  Q-21 C formation, roof build-up, S19 - S22, S8.2); new pieces T-322 (FF / lift-pit foundation, F-T320-03), T-323 (slab
+  panels cut by annotations), T-324 (parapet top / coping / drip / corners), T-325 (sills and thresholds).
+
+GATES: lowest open gate 2 (gate 1 closed with T-244). Gate 2: T-313 r2 / T-321 READY; T-224 r2 CLAIMED; T-315 / T-323 /
+T-324 TODO; T-319 / T-325 / T-279 / T-284 / T-246 / T-310 / T-199 / T-314 QUEUED. Gate 3: T-322 TODO; T-318 BLOCKED-OWNER.
+
+MILESTONES: M2 (28 Oct) LATE; its exit pieces cleared the Checker tonight except the reveal ledger (r2 READY, first in the
+queue); exit = the Checker's census statement once it passes. Week 2 (3 Nov): wall tile can integrate by about 30 Oct; a
+second integration by 3 Nov only if each Gate B passes first time at the halved lane I cadence.
+
+CLOSE THE LOOP since 20:26: WORKED x6 (T-244 Gate B, T-312, T-311, T-316, T-317, T-320); PARTIAL x2 (T-313 r1 -> r2
+READY; T-224 r1 -> r2 CLAIMED); READY 1 new (T-321). Every finding routed: F-T311-C1 / C2 + F-T321-02 -> T-319;
+F-T316-01 / 02 -> T-318; F-T320-03 -> T-322; F-T224-C1 -> T-323; T-313 thresholds -> T-325; T-305 parapet items -> T-324.
+
+VERIFIER QUEUE (READY 2, both CHECKER-RUNS, < 1 h): standing slot T-132; Gate A T-313 r2 FIRST; Gate A T-321; Gate B
+T-315 when READY; Gate A T-224 r2 when READY (structural, at most 2 Checker runs).
+
+LANES (queue check: 43 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-224 (CLAIMED), T-322, T-323; A worker 2:
+T-324, T-325 (after T-313 MERGED); I worker 3: T-315, T-319, T-279, T-284, T-246, T-310, T-199, T-314, T-318 (only after
+your approval). TODO 5 + 1 CLAIMED: below 8 - 12 on purpose (lane I serial on the integration files; your 21:44 note
+asks for no exploratory work).
+
+TEAM HEALTH (since 20:26): every run closed with a final line except the open Worker 1 23:20 run (T-224 r2, within its
+window) and this Lead run; all code runs self-check PASS. Recurring tool issue (Workers 1 / 2 / 3, Checker): the Drive
+connector saves raw binary and `agent_env.sh decode` accepts only base64 (and refuses names with spaces); every agent
+re-encodes in scratch by hand (no private data entered the repository). Worker 3 left a stray empty log outside the repo
+(removal refused by the safety check; harmless). Dashboard 20:55 SUCCEEDED (next 00:54). Scout paused by you.
+
+OWNER PACKAGE (2 items; neither blocks the critical path, so not pushed)
+1. Slab reinforcement bar-end split into the CANDIDATE (not the release): unchanged since 26 Oct 06:15 (full ERS s.6 text
+   in the 26 Oct 06:15 entry below: issue, evidence ST p.15 + slab plan, two independent
+   re-measures, alternatives A keep note-9 lengths / B split with every undrawn part HELD, impact 0.56 .. 1.03 t,
+   recommendation B, next action T-318). T-316 adds two more ENGINE_WRONG findings to the same split (0.12 .. 0.15 t
+   missing across edge beams, 0.08 t past short spans), so approving B now also lets T-318 carry them.
+2. Q-77 Mesh strips over block-to-concrete joints (B9-03): is it a BOQ item, and over which band?
+   Issue: the missing category list names it, but no drawing note, no specification, no answered rule and no freelancer
+   line covers it (text census of 675 architectural and 2,339 structural texts: nothing). ERS s.2.7: a contractual
+   measurement decision. Evidence: T-317 MERGED 328a7095 (joint population 1,440 rows from the verified wall register,
+   cut at column outlines, beam bands and slab faces). Investigation: per finished side, interior: OWNER band (your
+   height rule: finished floor to 3.75 GF / 3.45 1F-2F) puts almost every horizontal joint at or above the plaster stop /
+   decor ceiling, so horizontal inside the band 2.70 m, vertical at columns 278.85 m; DRAWING-DERIVED band (floor to
+   soffit) gives horizontal 215.17 m + vertical 294.44 m + level-change steps 18.59 m; exterior (Sigma side) 106.11 +
+   121.80 + 2.23 = 230.14 m; held 134.33 m + 76 vertical joints inside and 50.86 m + 44 outside (walls not resolved).
+   Alternatives: (A) not a BOQ item (contractor's means in the plaster rate): nothing added; (B) a BOQ item in m.l on
+   the finished face band your height rule defines: about 281.6 m inside + 230.1 m outside; (C) a BOQ item on the full
+   drawn joint (floor to soffit): about 528.2 m inside + 230.1 m outside. Strip width is a product property and never part
+   of the quantity. Recommendation: B, because your answered finish heights already define which faces are plastered,
+   and a joint behind the decor ceiling is never plastered over. What stays HELD: B9-03 blank by name. Next action: on
+   your answer a ledger rule version and a lane I line; nothing waits on it.
+
+NEEDS FIXING (only the owner):
+(1) `scripts/agent_env.sh decode` (main) should accept the raw binary the Drive connector now saves and file names with
+    spaces; four agents work around it by hand every run (time, and a manual step near private data).
+(2) Designer / consultant RFIs (S19 - S22, B27, CB3 / CB8, S8.2, slab bar-end items, '50 % top extension', Q-65 C
+    parapet material, D-39 b_edge, D-41 step depth, Q-21 C / OQ-13 formation, NEW: roof build-up layers and thicknesses,
+    F8 / pool collision 0 .. 1.121 m3) stay unsent until you decide to send the package.
+(3) Cadence: your 21:44 decision is applied; the 25 Oct cadence review is closed by it. No schedule changed by the Lead.
+
 ## LEAD REPORT 2026-10-28 20:20 UTC
 
 Drive readable: nothing created or modified in "Urban BOQ private data" or its project folders since 26 Oct 06:00; no
@@ -167,71 +270,3 @@ NEEDS FIXING (only the owner): (1) the cadence review you set on 25 Oct 04:38 (h
 changed no schedule. (2) Designer / consultant RFIs (S19 - S22, B27 link, CB3 / CB8 supports, S8.2 pool membrane
 function, slab bar-end leg / step / composite / opening items, '50 % top extension where possible') stay unsent until
 you decide to send the package.
-
-## LEAD REPORT 2026-10-26 04:15 UTC
-
-Drive readable: nothing created or modified in any Drive folder since 02:00, no new images (no photo review task).
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-04:11). Working branch dd6a6114 -> 1157b8f8 (Checker merges via 'engine push': T-255 e9eaaeac, T-304 aacb1b23, T-306
-01358449 at 02:52, T-294 1157b8f8 at 04:00); no owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
-OWNER_SESSION_CHANGES: no entry since 25 Oct 13:25.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-CANDIDATE OF RECORD: ARCH_TAKEOFF_V3.0.19 (NOT RELEASED; Gate B PASS 03:43; 3,705 lines, 1 changed, 3,704 byte-identical;
-vs V2.9 + route G: SAME 715 / DIFFERS 875 / NOT_IN_RELEASED 2,115). V3.0.19 record set issued (8 re-issued + ring
-COMPONENT V2-47f38a21 + DG); whole verified lines in the export 2 (Checker count).
-- CONCRETE (m3): ring ground beam BAND0043 ENGINE_WRONG (chord end) 1.7349 -> 1.746943 (+0.012043, +0.69 %); Checker
-  own 1.746916 (-0.0015 %) on the drawn faces; GROUND_BEAM 29.557243 -> 29.569286 m3; the north triangle 0.01306 m2
-  owned by the ring only, 3 columns stay COLUMN (0 double). Compared 1 / 8 (CONC.SLAB +0.77 %), the rest HELD.
-- OPENINGS / FINISHES (m2): W03 / W18 traced per wall side (window pcs / m2 once: 28.251 / 1.08 m2; W03 plaster /
-  paint 18.6369 + 5.93125 = 24.56815 once): ENGINE_RIGHT on every released deduction. MISSING named by the Checker:
-  27 reveal lines blank, no FIN.WALL.TILE row -> NEW T-313, T-312.
-- FLOOR AREA (m2): tool-scored again (F-SCORE-01 closed by T-304): 381.464 on 41 lines vs freelancer 409.58 (-28.116,
-  -6.86 %; was -7.13 % on V3.0.14). One 'item' line excluded by id (WP.FOUNDATION.PROCUREMENT).
-- REINFORCEMENT (t): slab bound 4.643766 .. 6.832326 t MERGED as research (spread 2.188560 t by cause, residual
-  0.000); F-T306-01 CONFIRMED by the Checker's own p.15 read: no development drawn at continuous supports (0.556205 ..
-  1.027310 t of the dev lines has no drawn bar, ENGINE_WRONG basis); O-T306-01 'extend 50 % of top reinf. into
-  adjacent slab where possible' -> both in T-307 acceptance. No steel quantity moved. Freelancer 5.400 t lump:
-  RULE_DIFFERENCE, no %.
-- EXTERIOR PLASTER (m2), READY not verified: every drawn face once 1,022.534 (residual 0.000): IN_LINE 885.290 into
-  FIN.EXT.FINISH lines that are all BLOCKED_RFI blank (vs freelancer net 1,469.97 = HELD, never 0); NO_LINE 137.244 +
-  6.822 .. 13.261 HELD (parapet outer 66.428, plinth 66.736, annex band 4.080) + parapet items 121.2 .. 126.3 m2 +
-  corners 576.872 m.l = missing category. -> NEW T-311 (parapets / plinth element definition), T-314 (face rows).
-- FORMWORK (m2), READY not verified: r5 rows (E CALC 425.209 -> 422.693 with CB5 span 2 once; stair lines 36.447 ->
-  32.822; BAND0049 ruled = curved B7 corner +2.928 G CALC, end 0 .. 0.118 HELD; TANK = B15 removed; 3.257 HELD).
-  Freelancer has no formwork row.
-- Learned (lessons register +3, T-306 row now ACCEPTED): bind evidence to its own lines; one unknown unit never blinds
-  the scorer; trace an opening per trade side with parts that close.
-- Missing (unchanged except new pieces): designer answers (S19 - S22, D-35 / D-39 / D-41 / D-44 / D-53, M4, footing
-  boxed bars, B27 link, CB3 / CB8, slab top extent / bar ends / up-turn leg / boundary bars), pool membrane function
-  (S8.2), excavation formation, dome drums; wall tile, reveals, parapets / plinth now have pieces.
-
-GATES: lowest open gate 1 (lane I: T-244 TODO). Gate 2: T-305 / T-308 READY, T-309 CLAIMED, T-312 / T-313 / T-224
-TODO, T-311 / T-314 / T-310 QUEUED. Gate 3: T-307 TODO.
-
-CLOSE THE LOOP since 02:15: WORKED x4 (T-255 Gate B, T-304, T-306, T-294); READY 2 (T-305, T-308); PARTIAL / FAILED
-none. Every finding routed: T-255 MISSING -> T-312 / T-313; T-306 F-01 / O-01 -> T-307; T-294 -> verdict-rebind with
-T-244; T-305 NO_LINE -> T-311 / T-314.
-
-VERIFIER QUEUE (READY 2, CHECKER-RUNS): standing slot done 03:50 (restate after each merge); Gate A T-305 first (largest
-m2 at risk, unblocks T-311 / T-314), Gate A T-308 (re-read BAND0049 yourself); Gate B T-244 first in its run when
-READY, with verdict-rebind of the V3.0.19 records; then T-307, T-309, T-312, T-313, T-224; light run T-180.
-
-LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks; the T-307 stall check was investigated: the fallback
-T-308 was correctly taken while T-306 was unverified): S worker 1: T-307, T-311 (after T-305); A worker 2: T-309
-(CLAIMED), T-312, T-313; I worker 3: T-244, T-224, T-279, T-284, T-246, T-310, T-199, T-314. TODO 5 + 1 CLAIMED + 2 READY;
-lane I keeps one integration row at a time (T-224 runs beside it on disjoint files).
-
-ELEMENT REGISTER +5 (ring BAND0043, W03 / W18 per side, parapets / plinth (owner trade OPEN -> T-311), wall tile faces,
-reveals / sills).
-
-TEAM HEALTH: every run since 02:15 closed with a final line except the open Worker 2 03:40 run (T-309, 35 min) and this
-Lead run. Verifier 03:51 overlap-guard stand-down and Worker 1 03:20 run-lock IDLE were correct. All code runs report
-self-check PASS. Dashboard 00:54 SUCCEEDED, next 04:54. Main daily update next 04:31.
-
-OWNER PACKAGE: none today (no question meets ERS s.2.7; the open inputs are designer / consultant items).
-
-NEEDS FIXING (only the owner): (1) the cadence review you set on 25 Oct 04:38 (hourly kept provisionally, review after
-24 - 48 h) is due; no usage-limit failure since 21:40 on 25 Oct; the Lead changed no schedule. (2) Designer / consultant
-RFIs (S19 - S22, B27 link, CB3 / CB8 supports, S8.2 pool membrane function, slab bar-end / top-extension items now
-confirmed by the Checker's p.15 read) stay unsent until you decide to send the package.

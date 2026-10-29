@@ -1,20 +1,52 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-28 20:20 UTC (Lead). Previous version: 2026-10-26 06:15 UTC. The released numbers did not change
+Last update: 2026-10-29 00:15 UTC (Lead). Previous version: 2026-10-28 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified: unchanged at 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard
-reference line among them); released: 0.
+lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
+line among them); released: 0. The candidate under review is now V3.0.20 (not released).
 
-THE TEAM WAS STOPPED FOR ABOUT 60 HOURS. No agent ran from 26 Oct 06:41 to 28 Oct 19:19 UTC. The scheduler records the
-runs as failed because the account's usage limit was reached; two worker runs that had just started on 26 Oct ended
-without finishing (their work was picked up again tonight, nothing was lost or double-claimed). So nothing was checked or
-merged in that time, and the plaster / paint and wall-tile pieces have waited 62 hours for the checker. The 28 Oct
-milestone (no silent omissions of rooms and openings, wet vs dry correct) is therefore not confirmed on its date. How
-often the agents run against your usage budget is your call (see the Lead report, NEEDS FIXING). The one decision from
-26 Oct still waits on you: whether the corrected slab steel anchorage may enter the candidate (OWNER PACKAGE).
+THE TEAM IS RUNNING AGAIN ON YOUR HALVED CADENCE. After the 60-hour stop, the checker cleared the whole backlog in three
+runs tonight: six pieces checked and merged, two sent back for a narrow fault (both already reworked), and no run failed
+since 19:19. Workers now run every 2 hours, the checker hourly, the Lead every 4 hours; the research scout is paused.
+Two decisions wait on you (OWNER PACKAGE in the Lead report): the slab steel anchorage (from 26 Oct) and, new today,
+whether mesh strips over block-to-concrete joints are a BOQ item at all and how they are measured.
 
-Since 26 Oct 06:15 (newest first; one piece handed in, nothing checked):
+Since 28 Oct 20:20 (newest first; six checked and merged, two sent back, two handed in):
+- Inside plaster and paint at the corrected window and door outlines: CHECKED AND MERGED into the candidate. One room's
+  released wall area (59.45 m2) was too low because of the arched window's real outline; it is now held at 61.46 ..
+  61.72 m2. Released paint in the candidate 166.88 -> 217.21 m2; held 487.12 .. 542.86 m2. The checker rebuilt the whole
+  candidate himself and it matched byte for byte. Not compared with the freelancer's 1,191.13 m2 while lines are held.
+- Wall tiles: CHECKED AND MERGED (ledger). Your tiling heights fill 11 wet-room lines with 307.96 m2 against the
+  freelancer's 295.44 m2 on the same rooms (+12.52 m2, +4.24 %: his height rule differs; our openings and lobby lengths
+  checked right); 6 lines held; the open pantry has no tile line yet (32.34 m2; checker measured 32.375). Next: these go
+  into the candidate (released to the integration worker tonight).
+- Parapets and the plinth: CHECKED AND MERGED. The checker read the structural sheet and sections himself: every
+  alternative has at least 0.30 m of concrete above the slab, so 8.04 .. 20.08 m3 of parapet concrete is in no line,
+  ours or the freelancer's (missing, not zero). He adds: while the edge width is unprinted, the lower bound is the larger
+  of 0.30 m and the roof build-up at the edge. Next: the parapet concrete line.
+- Top bars in suspended slabs: CHECKED AND MERGED (research). Two errors in the old reading confirmed: the drawn part of
+  the top bar that crosses an edge beam (0.12 .. 0.15 t) is in no reading, and 0.08 t is booked past the clear span of
+  short panels. No candidate steel moved; it joins the anchorage correction that waits on you.
+- Spatter dash and joint mesh: CHECKED AND MERGED (research). By your own finishing sequence, spatter dash goes under
+  every finished face once: 913.72 m2 measured + 1,016.75 .. 1,112.66 m2 held, against the freelancer's 504.54 m2
+  (inside, baths and kitchens plus a band under the skirting). Joint mesh has no rule, note or specification: held by
+  name, and asked of you.
+- Backfill: CHECKED AND MERGED (research). What the buried structure displaces below ground level is now listed:
+  105.16 m3, closing exactly on the merged excavation and footing ledgers; backfill and disposal stay held until the
+  excavation level is printed or answered. One collision (footing F8 against the pool, up to 1.12 m3) is for the
+  designer.
+- Sent back, reworked: the opening reveal ledger had counted 22 door reveals as missing when an existing plaster line
+  already carries them (it would have doubled 24.15 m2); the rework binds them and the truly missing scope drops from
+  36.78 to 13.64 m2 (waiting for the checker). The sunken-slab step method labelled a modelling width as a drawing fact;
+  the rework holds it unless a step detail is drawn (in progress, no Alsenan quantity affected).
+- Roof build-up: HANDED IN. No roof layer (insulation, protection, thickness) is printed on any sheet; areas by layer
+  are measured (roof +5.50 54.92 .. 55.56 m2, terrace 32.72 m2, roof +9.70 115.66 .. 115.81 m2; the top roof 49.67 m2
+  held on your earlier question); screed to falls 14.21 .. 17.47 m3 above the thinnest level (its base thickness held).
+  Total roof area 284.48 m2 against the freelancer's 285.00 m2 (scope match only, his cells not read). A 1.4 m length
+  of boundary parapet on the annex roof was missing from the parapet list and is now added to the parapet concrete line.
+
+Earlier, 26 Oct 06:15 - 28 Oct 20:20 (newest first; one piece handed in, nothing checked: the team was stopped about 60 h by the usage limit):
 - Parapets and the plinth, as physical things: HANDED IN, waiting for the checker. Every roof and terrace parapet run and
   every plinth segment is now defined from the structural details and sections, and each part is given to one trade.
   Finding: whatever the parapet material turns out to be, every alternative on the structural sheet has at least a
