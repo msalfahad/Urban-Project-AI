@@ -62,3 +62,11 @@ Q-50 straight flights (T-266).
 | Ledger reconciliation | Approved, start now, read only; replace / independent / overlap / held; never add alternative ledgers; T-280 replaces 26 S3 rows | T-299 |
 | Completeness safeguard | Approved (Stage C for this safeguard only); missing groups HELD blank; no invented tonnage; no frozen / V2.9 change | T-300 |
 | Q-71 link counting | Drawing spacing, first-link offset, support faces, zones; N = n x L + 1 not universal; ambiguity PROVISIONAL / HELD; not a design standard. Footing '/m' scope asked back to the owner | OWNER_QUESTIONS.md Q-71 |
+
+## Owner answers 2026-10-29 21:22
+
+| Item | Decision | Carried |
+|---|---|---|
+| Q-77 | Mesh strip every 3 courses (m.l) + sharmat per wall-column junction every 3 courses (pcs): separate optional blocks items, priced by quality; joint mesh kept separate | T-355 |
+| Slab bar ends | B: count only bars the structural drawings show or explain; undrawn parts HELD unless certain | T-318 |
+| RFI package | Owner reviewing; not sent | CLARIFICATIONS_CONSULTANT_2026-10-24.md |
