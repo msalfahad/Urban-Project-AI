@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29T04:51Z | Verifier | STARTED | run session_01E6cPnb344B7qTAh6nteP1g | repo-attached routine | task state: checking board for READY tasks | self-check pending
 - 2026-10-29T04:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29 04:21 UTC | Lead | SUCCESS | board | Since 00:21: T-321, T-224 r2, T-313 r2, T-324, T-322, T-323 WORKED and MERGED (research, no candidate line moved; Checker downgraded verified footing blinding 14.990 -> 12.734438 m3 + FF HELD >= 2.070); T-315 Gate B PARTIAL -> TODO r2 (pantry base double count, 4 items); T-325 READY; VERIFIER QUEUE: T-325 first, Checker-issued FF downgrade record, M2 census statement, T-315 r2 Gate B; NEW T-326 reveals / T-327 sills / T-328 roof build-up (lane I), T-329 wet-room backing plaster (A), T-330 export deductions check (tooling, worker 1); lane I throughput rule: any idle worker may claim the next lane I row; RFI S23 / A13; register +7, lessons +2; OWNER PACKAGE unchanged (not pushed); Drive no new files or images; queue check: 42 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-29 04:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
