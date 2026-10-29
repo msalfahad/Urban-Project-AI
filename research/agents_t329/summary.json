@@ -1,0 +1,58 @@
+{
+ "coat": {
+  "layer": "cement-sand backing coat under wall tile",
+  "mix": "1:4",
+  "source": "owner Q-45 B (2026-10-19 21:40), PROVISIONAL; UP-FIN-PAINT-001 'substrate' own line",
+  "status": "ASSUMED — OWNER-APPROVED",
+  "thickness_m": 0.02
+ },
+ "drawing_method": {
+  "backing": "HELD (= the tile faces; roof datum DCR-6, sunken panels, build-up b)",
+  "band_above_tile_hi_m2": 23.097,
+  "band_status": "HELD: Q-52 C MODIFIED: 'plaster may run above the false ceiling ... depending on the specification'; no specification or section prints it; URBAN-PLASTER-TO-MASONRY-TERMINATION@v1 (drawing method) takes plaster to the soffit -> band 0 .. length x 0.15 decor; beam faces on the wall line not split"
+ },
+ "faces": {
+  "backing": 115,
+  "open_sides": 2
+ },
+ "freelancer": {
+  "diff_m2": 12.5216,
+  "diff_pct": 4.24,
+  "his_m2": 295.44,
+  "own_m2": 307.9616,
+  "rooms": 11
+ },
+ "inputs": {
+  "candidate": {
+   "file": "agents_t311/CANDIDATE_V3019_T311.json",
+   "json_sha256_8": "b35475bf",
+   "lines_total": 3705
+  },
+  "t312_face_ledger": "FACE_LEDGER_T312.csv (MERGED 8943b5ed)"
+ },
+ "lines": {
+  "fill": 12,
+  "held": 6,
+  "mapped": 19,
+  "not_applicable": 1
+ },
+ "owner_method": {
+  "backing_m2": 340.3038,
+  "band_above_tile_m2": 0.0,
+  "closure_to_tile_max_abs_m2": 0.0,
+  "determinate_rooms": 12,
+  "held_rooms": [
+   "GF-02",
+   "GF-03",
+   "GF-05",
+   "GF-06",
+   "GF-10",
+   "GF-11"
+  ],
+  "in_wet_lines_m2": 307.9616,
+  "mortar_m3_info": 6.806,
+  "pantry_m2": 32.3422
+ },
+ "rooms": 18,
+ "rule": "R-T329-1..4"
+}
