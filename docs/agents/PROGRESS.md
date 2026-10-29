@@ -1,17 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 04:15 UTC (Lead). Previous version: 2026-10-29 00:15 UTC. The released numbers did not change
+Last update: 2026-10-29 08:20 UTC (Lead). Previous version: 2026-10-29 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is still V3.0.20 (not released).
+line among them); released: 0. The candidate under review is now V3.0.21 (not released).
 
-A STEADY NIGHT. Six pieces checked and merged since midnight, one integration sent back for a single narrow fault, one
-piece handed in; no run failed. The checker also found that one quantity he had verified earlier rested on a borrowed
-dimension and corrected it downward himself (details below). Nothing new waits on you beyond the two decisions already
-in the Lead report (slab steel anchorage; joint mesh), and neither blocks today's work.
+WALL TILES ARE IN THE CANDIDATE. The tiling integration passed the checker on its second attempt: 340.30 m2 of wall tile
+on 12 wet-room and pantry lines (6 lines still held, never shown as zero), and the open pantry's wall base is now priced
+once (as tile, not also as skirting). The plaster coat behind those tiles was measured and checked too (340.30 m2 at your
+tiling height) and is next in line for the candidate. No run failed; three workers found nothing to pick up this
+morning, so the board was refilled. Nothing new waits on you beyond the two decisions already in the Lead report.
 
-Since 29 Oct 00:15 (newest first; six checked and merged, one sent back, one handed in):
+Since 29 Oct 04:15 (newest first; three checked and merged, one handed in):
+- Plaster behind wall tiles: CHECKED AND MERGED (ledger). By your own approved finishing rule the cement-sand coat
+  behind tile is its own line: 340.30 m2 at the tile height on 11 wet rooms and the pantry (6 rooms held). Where the wall
+  rises above the tile, the drawings do not print how high the plaster goes, so that band (0 .. 23.10 m2) stays held
+  beside it, not zero. The freelancer prices no plaster behind wet-wall tile (a rule difference). Next: into the
+  candidate, first in line.
+- Wall tiles into the candidate: CHECKED AND MERGED (second attempt). Pantry base split checked by hand to the
+  millimetre (7.00 m of base, 0 difference); released skirting in the candidate 185.52 -> 180.12 m (-2.91 %); wall tile
+  vs freelancer on the same 11 rooms unchanged: 307.96 vs 295.44 m2 (+4.24 %, his flat 3.00 m height vs your rule).
+- Sills and thresholds: CHECKED AND MERGED (ledger). 14 wet-room marble thresholds (1.82 m2), 7 dry strips (1.10 m2),
+  23 outside window sills (2.56 m2, material not specified anywhere), one missing sill found (0.04 m2); nothing counted
+  twice with the floors or the roof terrace.
+- Export check for deductions: HANDED IN, waiting for the checker. Some candidate lines give the correct net but do not
+  list what was deducted (plaster and paint 42.30 m2, skirting 13.57 m, porcelain 39.31 m2), so a spreadsheet user would
+  read the gross. The check finds them; filling the lists is queued for the candidate.
+
+Earlier, since 29 Oct 00:15 (newest first; six checked and merged, one sent back, one handed in):
 - Wall tiles into the candidate: SENT BACK for one fix. Every tile figure was re-measured by the checker and is sound
   (his 340.25 vs our 340.30 m2 over 12 lines), but adding the open pantry's full-height tile left its old skirting lines
   in place (about 1.9 m plus up to 1.0 m), so the pantry wall base would be priced twice. The fix is narrow and first in

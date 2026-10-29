@@ -46,6 +46,29 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-29 08:20 (from T-325 / T-315 r2 / T-329 MERGED; T-330 READY; new T-331 .. T-337)
+
+- WET-ROOM WALL FACE (ZONE-FIN, wet rooms + pantry; every villa): three layers, three owner lines, each once per face:
+  wall tile (FIN.WALL.TILE, owner trade TILING, V3.0.21: 340.3038 m2 on 12 valued lines, 6 HELD blank), its backing coat
+  (FIN.PLASTER wet-room lines, owner trade PLASTER, 340.3038 m2 at tile height ASSUMED — OWNER-APPROVED, band above tile
+  HELD 0 .. 23.0970 m2 beside it; integration T-331), paint 0 on any tiled face BY RULE (UP-FIN-WALL-001 / Q-48 A).
+  Adhesive is its own (procurement) item, never folded into the backing. Status: tile and backing not VERIFIED as whole
+  lines (owner-approved heights); GF-12 backing face Checker re-measured.
+- PANTRY BASE (GF open plan; ZONE-FIN): owner trade TILING (full-height tile to the floor); skirting NOT_APPLICABLE on
+  the 7.000 lm of tiled base (1.900 GF-RC06FED wholly inside + 3.500 from the open-plan room + 1.600 on no engine room),
+  Checker-confirmed 07:46. Rule: attribution by source entity and the merged room split (lessons register 2026-10-29).
+- SILLS / THRESHOLDS (OPEN): owner trade per component from T-325 (MERGED 98f50f0f): wet-door marble thresholds 14 pcs /
+  1.820 m2 (FINISHES-MARBLE), dry strips 1.100 m2 (floor finish line of the room), window external sills 23 / 2.5614 m2
+  material UNKNOWN (A13), floor-level W15 / W16 0.248 m2 OUTSIDE the TERRACE-550 outline (no double with T-321 / T-328).
+  Integration T-327; reveal lines T-326 must not carry a sill a T-325 line carries.
+- FORMWORK FACE (every concrete element): owner trade FORMWORK, one face once, bound to its V3.0.21 concrete line by
+  T-332 before T-199; ground-cast / blinding-cast faces not formed only by an answered rule, else HELD by name.
+- BLOCKWORK WALL vs PARAPET ABOVE THE UPSTAND: a parapet run is RC OR block above the 0.30 RC upstand, never both
+  (T-319 RC line, T-333 binds the block alternative 0 .. 60.596 m2 exclusively); the upstand to the scheduled beam depth
+  stays CONC.BEAM.
+- CEILING SOFFIT (ZONE-FIN): gypsum decor / bulkhead (FIN.CEILING) and plaster + paint on the slab soffit may meet on one
+  face; T-335 names every double and its owner by rule, else HELD by name, before T-284.
+
 ### Lead 2026-10-29 04:15 (from T-321 / T-224 r2 / T-313 r2 / T-324 / T-322 / T-323 MERGED; T-315 Gate B REJECTED narrow; T-325 READY; new T-326 .. T-330)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

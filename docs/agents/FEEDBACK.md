@@ -42,6 +42,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-29 08:20 (lead run; covers 04:15 - 08:20)
+
+- T-325 (sills / thresholds ledger) WORKED: Checker own re-measure of 2 doors by their decimal door-symbol handle, W18 sill 0.040 m2, W15 / W16 0.2484 m2 outside the TERRACE-550 outline (no double count); materials UNKNOWN kept. Decision: T-327 (lane I) stays queued after T-326.
+- T-315 r2 (wall-tile integration, Gate B) WORKED: candidate of record V3.0.21; pantry base owned once (skirting 185.52 -> 180.12 lm, -2.91 %), every split piece re-measured by hand 0.00 %. Decision: lessons row ADOPTED; cosmetic cut note text -> T-331.
+- T-329 (wet-room backing plaster ledger) WORKED: 340.3038 m2 at tile height (owner method, ASSUMED — OWNER-APPROVED), band above tile HELD 0 .. 23.097 m2 (Q-52 C); Checker GF-12 own 25.3011 = ledger. Decision: NEW T-331 (lane I, first) with the Checker's 'band beside every fill' condition verbatim; lessons row ACCEPTED.
+- T-330 (canonical deductions check) READY: 92 lines with gross+net, 30 FLAG (plaster / paint 42.302 m2 listed nowhere, skirting 13.569 lm, porcelain 39.308 m2). Decision: Gate A first; its fill folded into T-246.
+- Idle runs (Workers 1 / 2 / 3, 06:41 - 07:22): the board had 0 TODO because lane I is serial on the integration files and lanes S / A had no unblocked rows. Decision: binding tables T-332 / T-333 / T-335 / T-336 / T-337 (the measured content each queued lane I package needs, on the current candidate's line ids) + T-334 line-state check; lane I packages then only wire.
+- Checker observation (random draw): a STR.REBAR line SOURCE_DERIVED with a 'held:' formula string. Decision: NEW T-334 (population check, no line changed).
+- Gap found by the Lead: verdict records (incl. downgrade DG-3521554d) not yet re-bound to V3.0.21 (no verdicts/V3.0.21 folder). Decision: Checker queue item (1).
+- Recurring tool issue (unchanged, every code agent, every run): Drive downloads arrive raw binary, `decode` expects base64 (NEEDS FIXING (1)).
+
 ## 2026-10-29 04:15 (lead run; covers 00:15 - 04:15)
 
 - T-313 r2 (opening reveal ledger) WORKED: 20 door reveals bound to FIN.PLASTER (17.740 m2 EQUAL), missing scope 13.637 m2 own-confirmed; D-GF-07 line low end 1.28 ENGINE_WRONG (printed 1.400). Decision: NEW T-326 (lane I, reveals into the candidate).
@@ -249,17 +260,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-265 ground-beam rebar | handed in (READY 14:13 @ 4353552a) | boundary G.B 315.56 kg lower bound, exterior top / bottom 796.32 kg, side bars 199.08 and stirrups HELD | Gate A next (structural); new T-272 closes stirrups / side bars / laps from prints only |
 | T-180 slot | nothing measurable left on CLOSABLE rows (Verifier 14:02) | every CLOSABLE row waits on lane I or consultant items | light runs go to the blockwork register v2 SS walls (verified share ahead of T-261) |
 | Overlap IDLE lines (worker 1 12:20, worker 2 12:39) | team health, not a failure | the 11:20 / 11:40 runs still held their locks; each run takes > 1 h | no action (cadence is the owner's); each IDLE line carried its reason |
-
-## 2026-10-24 12:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-219 foundation / pit waterproofing | WORKED (line PARTIALLY VERIFIED) | MERGED de7c1c4c (Verifier 10:40): own footing membrane 109.85 m2 (24 sizes x tag count on 9 outlines), screed 5.4925 m3, pit 47.43 / 26.73 m2 / 1.035 m3 = worker 0.000; F10 / F, pit walls, sides, procurement HELD | new T-270 integrates the verified parts (HELD BLANK, owner 10:56); T-263 continues the buried-concrete coat |
-| T-250 plaster / paint face crosswalk | WORKED | MERGED 47390c9b: own W03 room side 6.7294 m (T-128 6.731), W06 in GF-13, GF-16 strip 0.300 m2; no quantity change | T-244 may take its faces when lane I reaches it |
-| T-260 aluminium doors evidence | WORKED | MERGED c6732efe (11:55): own both-face widths 1.000 x3 / 0.900, class ALUMINIUM x3 from the side spaces; line 12.760 m2 / 6 pcs vs freelancer 12.000 (+6.33 %: heights -1.000 Q-55 C, widths -0.440, count +2.200 ENGINE_RIGHT) | T-268 PROMOTED, first in lane I (one run, closes the line) |
-| T-228 r2 blockwork register v2 | WORKED (after one rework) | MERGED bf4dd2a9 (11:59): 3 '(With Stair)' marks own, 1F-W10 HELD; established net 494.189 -> 449.260 m2 (-9.1 %), held-net walls 39 / 76 | T-261 PROMOTED (wall blockers the drawings settle); lessons row closed |
-| T-235 r2 + part (4) V2 verdict / export | WORKED (tooling) | MERGED 3bd09b62 (12:01): own adversarial probe passed; no quantity | real export still refused by probe 10 until T-245 (lane I chain) |
-| T-180 slot CONC.GROUND main exterior | PARTIAL (16 / 17) | Verifier 12:10: 15.9692 vs 15.9600 m3 (+0.06 %); stub strip 0.0026 m2 unconfirmed; ring +0.67 % = end-closure convention | both written into T-254's acceptance (show or drop the strip; state the end rule with a test) |
-| T-240 WP1 floor area | progress (not a hand-in) | worker 3 11:48: V3.0.13 @ 5e12fa50, internal floor 340.7645 -> 342.6645 m2 (+0.56 %); GF OP-003 carried twice found | WP2 after T-268; twin strip in the element register |
-| Worker 1 WIP | team health | T-258, T-264, T-265 all evidence complete, none READY (head moved twice: re-merge cost each time) | WIP limit: no new claim by worker 1 until the three are handed in (T-258 at 12:19) |
-

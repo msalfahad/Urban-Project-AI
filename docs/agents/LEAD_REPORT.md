@@ -1,5 +1,95 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-29 08:20 UTC
+
+Drive readable: nothing created in "Urban BOQ private data" or the Alsenan folder since 29 Oct 04:00; no new images
+(no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared
+automatically ("setup by auto", 08:18). Working branch 4410fb03 -> 1c82807b (three Checker merges via 'engine push');
+no owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since
+your 28 Oct 21:44 'Halve runs' (applied).
+
+HEADLINE: wall tile is in the candidate (V3.0.21, Gate B passed on the second attempt), the plaster behind it is
+measured and checked, and the sills / thresholds ledger merged. Three workers then found an empty board; it is refilled
+with work that turns the queued integrations into pure wiring. No run failed.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; candidate of
+record now ARCH_TAKEOFF_V3.0.21 (be22a4e4), NOT RELEASED; whole verified lines in the candidate export 2, released 0;
+scored verified share unchanged: CONCRETE 12.50 %, other trades 0):
+- WALL TILE (m2), V3.0.21 Gate B PASS 07:46: 340.3038 on 12 valued lines (was 0: 17 blank), 6 HELD blank (annex G2 /
+  T-088 level), never 0; Checker own 340.2484 (-0.016 %). Engine vs freelancer on the same 11 rooms unchanged: 307.96 vs
+  295.44 (+12.52, +4.24 %): height RULE_DIFFERENCE (your Q-48 A vs his flat 3.00), openings and lobby ENGINE_RIGHT; pantry
+  32.34 SCOPE ENGINE_RIGHT. Status ASSUMED — OWNER-APPROVED (heights), so 0 VERIFIED.
+- SKIRTING (lm): released in the candidate 185.516658 -> 180.116658 (-5.40, -2.91 %): the pantry's 7.000 lm of base is
+  now owned by the full-height tile only (1.900 + 3.500 + 1.600, every piece hand-measured by the Checker on the DXF,
+  0.00 %). Freelancer's dry skirting row not re-scored (rule difference: he does not separate the pantry).
+- PLASTER BEHIND WET-WALL TILE (m2), ledger MERGED 07:48 (not yet in the candidate): 340.3038 at tile height on 11 wet
+  rooms + pantry (your approved rule UP-FIN-PAINT-001: the substrate behind porcelain is its own line; mix Q-45 2 cm 1:4
+  PROVISIONAL), 6 HELD. Drawing-derived band above the tile 0 .. 23.097 HELD (Q-52 C: no ceiling detail prints where the
+  plaster stops), kept beside it, never 0. Checker own GF-12 7.4140 m x 3.65 - 0.80 x 2.20 = 25.3011 = ledger. vs
+  freelancer: he prices spatter dash on 295.44 and no plaster coat behind wet-wall tile: element RULE_DIFFERENCE.
+  Mortar 6.806 m3 is the same layer's procurement, not a second quantity.
+- SILLS / THRESHOLDS (pcs / m2 / m.l), ledger MERGED 04:59: wet-door marble 14 pcs / 1.820 m2 (Checker re-located 2 doors
+  himself), dry strips 1.100, external window sills 23 / 2.5614 m2 / 29.530 m.l material UNKNOWN (RFI A13), W18 sill
+  0.040 found missing, W15 / W16 0.2484 outside the terrace outline (no double count). Freelancer: no sill / threshold row.
+- EXPORT INTEGRITY: canonical-deductions check READY: 92 lines with gross + net, 30 FLAG: plaster / paint 4 + 4 lines
+  42.302 m2 deducted but listed nowhere (+19.5 % over-read for a consumer computing gross - list), skirting 9 lines
+  13.569 lm, porcelain 2 lines 39.308 m2. Nets are right; the lists are empty. Fill folded into the skirting-deductions
+  integration.
+- CONCRETE / BLINDING: no change since 04:15; the Checker issued the downgrade record on the V3.0.20 blinding line
+  (FF part HELD >= 2.070 m3). Gap found this run: the verdict records are not yet carried to V3.0.21 (Checker item 1).
+- Learned (lessons register): ADOPTED: attribute a finish line by its source entities and the merged room split, never
+  by an open-plan note (test in t315). ACCEPTED: search an approved rule by its logic / substrate field before calling a
+  layer unruled; a layer behind a finish takes the finish's height under your method with the drawing band HELD beside it.
+- Missing (unchanged): designer answers (S1 - S23, A1 - A13, Q-65 C, D-39, D-41, Q-21 C); parapet RC line; blockwork,
+  formwork, ceiling, wet-area waterproofing and exterior plaster integrations (queued).
+
+GATES: lowest open gate 1 (T-330 READY, T-334 TODO: export integrity tooling); quantity work at gate 2: T-331 TODO
+(backing fill, lane I first), T-332 / T-333 / T-335 / T-336 / T-337 TODO (binding tables), lane I queue T-319, T-279,
+T-326, T-327, T-199, T-328, T-284, T-246, T-310, T-314; gate 3: T-318 BLOCKED-OWNER.
+
+MILESTONES: M2 (28 Oct) LATE: its exit is only the Checker's census paragraph, not written in his 05:50 / 07:50 runs
+(both took merges first); asked again as item (3). Week 2 (3 Nov): finish families on track (tile in; backing fill,
+parapet RC and blockwork next: estimates 29 Oct evening / 30 Oct / 31 Oct if each passes first time); the verified SHARE
+is at risk because every new line is owner-approved or held, not hand-verified as a whole line.
+
+CLOSE THE LOOP since 04:21: WORKED x3 (T-325 sills / thresholds, T-315 r2 wall-tile integration, T-329 backing plaster);
+READY 1 (T-330, CHECKER-RUNS 1.8 h). No PARTIAL or FAILED. Decisions: T-329 fill -> NEW T-331 (lane I first, Checker's
+'band beside every fill' condition verbatim; also fixes the cut note text he flagged); T-330 fill -> T-246 scope;
+Checker's random-draw observation (a rebar line SOURCE_DERIVED with a 'held:' formula) -> NEW T-334; T-319 parapet RC
+moved behind T-331 (integration of passed quantities before a new held family, your 24 Oct order).
+
+WHY THE BOARD WAS EMPTY AND WHAT CHANGED: the lane I packages all edit the one integration module, so they run one at a
+time, and every open structural line waits on a designer or owner item; with your no-exploratory-work rule the other
+lanes had nothing. New rows T-333 (blockwork, worker 1), T-332 (formwork, worker 1), T-335 (ceiling, worker 2), T-336
+(wet-area waterproofing, worker 2), T-337 (exterior plaster, worker 2) each prepare, on the CURRENT candidate's line
+ids, the checked content one queued integration needs (research files only, Gate A, a hand check each), so the
+integration package itself becomes wiring and its Gate B shorter. T-334 is a second export check (worker 1).
+
+VERIFIER QUEUE (READY 1): standing slot T-132; (1) carry the verdict records and the blinding downgrade to V3.0.21;
+(2) Gate A T-330; (3) M2 census statement; (4) Gate B T-331 when READY; (5) the binding tables as they go READY.
+
+LANES (queue check: 46 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-333, T-332, T-334; A worker 2: T-335,
+T-336, T-337; I worker 3: T-331, T-319, T-279, T-326, T-327, T-199, T-328, T-284, T-246, T-310, T-314, T-318 (only after
+your approval). TODO 7 (target 8 - 12; lane I can hold only one TODO at a time on its shared files).
+
+TEAM HEALTH (since 04:21): every run closed with a final line (Workers 1 x2 / 2 x2 / 3 x2, Checker x3 incl. two overlap
+guards); all self-checks PASS; three idle worker runs ended at once as you asked. Recurring tool issue, every code agent
+every run: the Drive connector saves raw binary and `agent_env.sh decode` accepts only base64 (and no spaces in names);
+each agent re-encodes in its scratch folder (sha256 checked; no private data entered the repository). Dashboard 00:54
+SUCCEEDED (next 12:54); Main 04:31 SUCCEEDED. Scout paused.
+
+OWNER PACKAGE (2 items, unchanged; neither blocks the critical path, not pushed)
+1. Slab reinforcement bar-end split into the CANDIDATE (not the release): full ERS s.6 text in archive/LEAD_REPORT_older.md
+   (26 Oct 06:15 entry): A keep note-9 lengths / B split with every undrawn part HELD; impact 0.56 .. 1.03 t plus the
+   T-316 findings (0.12 .. 0.15 t missing across edge beams, 0.08 t past short spans); recommendation B; next action T-318.
+2. Q-77 joint mesh over block-to-concrete joints: full s.6 text in the 00:15 entry below (A not an item / B your finish
+   band about 281.6 m inside + 230.1 m outside / C full drawn joint about 528.2 + 230.1 m; recommendation B).
+
+NEEDS FIXING (only the owner):
+(1) `scripts/agent_env.sh decode` (main) should accept the raw binary the Drive connector now saves, and names with
+    spaces; four agents work around it by hand every run (raised 28 Oct 21:20; still open).
+(2) Designer / consultant RFIs (S1 - S23, A1 - A13) stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-29 04:15 UTC
 
 Drive readable: nothing created or modified in "Urban BOQ private data" or the Alsenan folder since 29 Oct 00:00; no new
@@ -188,85 +278,3 @@ NEEDS FIXING (only the owner):
     parapet material, D-39 b_edge, D-41 step depth, Q-21 C / OQ-13 formation, NEW: roof build-up layers and thicknesses,
     F8 / pool collision 0 .. 1.121 m3) stay unsent until you decide to send the package.
 (3) Cadence: your 21:44 decision is applied; the 25 Oct cadence review is closed by it. No schedule changed by the Lead.
-
-## LEAD REPORT 2026-10-28 20:20 UTC
-
-Drive readable: nothing created or modified in "Urban BOQ private data" or its project folders since 26 Oct 06:00; no
-new images (no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared;
-this session's venv lacked pytest after a status call timed out during auto-setup (first self-check: pytest t061 FAIL
-"No module named pytest"); `agent_env.sh setup` repaired it and the re-run self-check is PASS x3.
-
-HEADLINE: THE TEAM WAS STOPPED FOR ABOUT 60.5 H. No agent ran from 2026-10-26 06:41 to 2026-10-28 19:19 UTC. The
-scheduler records FAILED / USAGE_LIMIT_REACHED for the Scout (27 Oct 23:50), the Dashboard (28 Oct 16:54) and Worker 3
-(28 Oct 18:59); the Worker 1 (26 Oct 06:24) and Worker 2 (06:40) runs STARTED and left no final line (UNCLOSED =
-INCOMPLETE; cause not in the log, consistent with the limit). Nothing merged, rejected or verified since my 26 Oct 06:27
-run; engine branch unchanged at c48f7062. The stale-lock recovery worked: both open claims (T-311, T-313) were recovered
-and re-claimed tonight without a double claim.
-
-ALSENAN, per trade (candidate of record still V3.0.19, NOT RELEASED; released V2.9 + route G unchanged; whole verified
-lines in the export 2, released 0; SCOREBOARD v2 cells unchanged since 26 Oct 03:50 because no input moved):
-- CONCRETE (m3): released 92.77 vs freelancer 111.81 (-17.03 %), unchanged. NEW FINDING (T-311 READY, not verified):
-  roof / terrace parapets carry at least a 0.30 m RC upstand above the slab in every structural alternative (ST p.14 P1
-  brick on 0.30 RC; P2 / P3 all RC; no detail keyed to a run; sections hatch parapets as RC), so 8.040 .. 20.081 m3 of
-  parapet concrete (+26.801 m3 per m of the unprinted edge width b_edge, D-39) is in NO candidate line and in NO
-  freelancer RC row: MISSING, held as a bound, never 0. Material HELD (Q-65 C, designer).
-- BLOCKWORK (m2): parapet blockwork 0 .. 60.596 (material HELD) vs freelancer 172.93: his heights 1.0 / 1.8 / 1.0 m vs
-  printed 0.50 / 1.30 / 0.50 + b_edge = RULE_DIFFERENCE (height), not proof either way until the Checker reads sheets
-  09 / 10. Plinth 71.689 .. 72.750 m2 of face = ground-beam outer face 65.924 .. 66.985 (m3 stays CONC.GROUND) + GF wall
-  course 5.059 already in MAS.BLOCK: face only, no new concrete or block.
-- FORMWORK (m2): parapet formwork faces 81.589 .. 202.782 NO_LINE (range from the held material / b_edge) -> T-199.
-- PLASTER / PAINT (m2), WALL TILE (m2): no change since 26 Oct (V3.0.20 and the wall-tile ledger READY 62 h).
-- Learned (lessons register +1, PROPOSED until Gate A): a parapet / plinth / edge band must be defined as a physical
-  element (material and build-up per run) before any finish is measured on it; the parapet RC fell between CONC.BEAM
-  (scheduled depth only) and MAS.BLOCK because nobody defined the element.
-- Missing: parapet RC line (now T-319), backfill / disposal (NOT_IMPLEMENTED; T-320 measures the displacement side net
-  of the T-170 overlaps; the excavated side stays HELD on Q-21 C / OQ-13 / D-62), roof build-up layers (NOT_IMPLEMENTED;
-  T-321, incl. the main roof outline never measured), designer answers as before.
-
-GATES: lowest open gate 1 (T-244 Gate B READY). Gate 2: T-312 / T-311 READY; T-313 CLAIMED; T-317 / T-321 / T-224 TODO;
-T-315 / T-319 / T-314 / T-310 / T-199 QUEUED. Gate 3: T-316 / T-320 TODO; T-318 BLOCKED-OWNER.
-
-MILESTONES: M2 (28 Oct) NOT CONFIRMED on its date (no Checker statement of the exit; its last pieces stuck READY by the
-outage); re-dated to the first Checker run that clears T-244 and T-312. Week 2 (3 Nov) has lost about 2.5 of 8 days.
-
-CLOSE THE LOOP since 26 Oct 06:27: no WORKED / PARTIAL / FAILED (nothing reached a verdict). T-311 READY 20:09: handoff
-reviewed, no assumed or freelancer value, so not sent back; one gap: worker full suite NOT completed (lock window) ->
-Checker runs it to the end. Every finding routed: T-311 -> T-319 (new), T-199 acceptance, T-314 (plinth faces),
-register +5.
-
-VERIFIER QUEUE (READY 3 = target; CHECKER-RUNS for all three, T-311 also EVIDENCE): standing slot T-132; Gate B T-244
-FIRST (62 h, challenges of 26 Oct 06:25 stand); Gate A T-312 (62 h); Gate A T-311 (structural safety element, at most 2
-Checker runs; re-read ST p.14 / sections and sheets 09 / 10 yourself; full suite to the end). The Checker run STARTED
-19:51 is open and holds the first two.
-
-LANES (queue check: 45 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-316, T-320; A worker 2: T-313
-(CLAIMED), T-317, T-321; I worker 3: T-244 (READY), T-224, T-315, T-319, T-318 (only after your approval), T-279, T-284,
-T-246, T-310, T-199, T-314. TODO 6 (T-224, T-316, T-317, T-320, T-321 + T-313 claimed): below 8 - 12 because lane I is
-single-threaded on the integration files behind T-244; READY = 3, so workers take only backlog-permitted rows (all
-five TODO are).
-
-TEAM HEALTH (since 26 Oct 06:27): code runs that closed: Worker 1 19:20 -> 20:09 SUCCESS (self-check PASS x3). Open now:
-Verifier 19:51, Worker 2 19:41 (scheduler PENDING), this Lead run. UNCLOSED: Worker 1 26 Oct 06:24, Worker 2 26 Oct
-06:40 = INCOMPLETE. FAILED by the scheduler (usage limit): Scout 27 Oct 23:50, Dashboard 28 Oct 16:54, Worker 3 18:59.
-Main daily last fired 28 Oct 04:31 (scheduler SUCCEEDED) but left no board commit or RUN_LEDGER row since 26 Oct
-(cause not shown). Tool issue (Worker 1): the decode wrapper expects base64 but the Drive connector now saves raw binary;
-worked around via a scratch base64 copy (deleted); no private data entered the repository.
-
-OWNER PACKAGE (1 item, unchanged since 26 Oct 06:15; not re-pushed)
-1. Slab reinforcement: may the checker-verified bar-end correction enter the CANDIDATE (not the release)? Full ERS s.6
-   text in the 26 Oct 06:15 entry below (issue, evidence ST p.15 + slab plan, two independent re-measures, alternatives
-   A keep note-9 lengths / B split with every undrawn part HELD, impact 0.56 .. 1.03 t on continuous ends, slab range
-   4.64 .. 6.83 -> 3.81 .. 5.24 t partly to HELD, recommendation B, next action T-318). Nothing moves without you.
-
-NEEDS FIXING (only the owner):
-(1) USAGE BUDGET vs CADENCE: the account's usage limit stopped every agent for about 60.5 h (26 Oct 06:41 - 28 Oct
-    19:19); this is the second limit episode (one on 25 Oct around 21:40). Your 25 Oct 04:38 decision kept the hourly
-    cadence provisionally with a review after 24 - 48 h; that review is now overdue and the outage is its evidence. Facts
-    for it: 3 hourly workers + hourly Checker + 2-hourly Lead + 4-hourly Dashboard + Main; READY never exceeded 3 in the
-    last runs, and IDLE run-lock stand-downs still spend a session start. The Lead changes no schedule; I asked the Scout
-    (R-11) for the documented usage controls so you get a supported recommendation, but its next run is 31 Oct.
-(2) `scripts/agent_env.sh decode` (on main, which only you change) should accept the raw binary the Drive connector now
-    saves, not only base64; agents are working around it by hand.
-(3) Designer / consultant RFIs (S19 - S22, B27, CB3 / CB8, S8.2, slab bar-end items, '50 % top extension', Q-65 C
-    parapet material, D-39 b_edge, Q-21 C / OQ-13 formation) stay unsent until you decide to send the package.
-

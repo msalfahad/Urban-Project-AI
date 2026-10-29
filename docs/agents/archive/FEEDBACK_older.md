@@ -1,5 +1,18 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-24 12:15 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-219 foundation / pit waterproofing | WORKED (line PARTIALLY VERIFIED) | MERGED de7c1c4c (Verifier 10:40): own footing membrane 109.85 m2 (24 sizes x tag count on 9 outlines), screed 5.4925 m3, pit 47.43 / 26.73 m2 / 1.035 m3 = worker 0.000; F10 / F, pit walls, sides, procurement HELD | new T-270 integrates the verified parts (HELD BLANK, owner 10:56); T-263 continues the buried-concrete coat |
+| T-250 plaster / paint face crosswalk | WORKED | MERGED 47390c9b: own W03 room side 6.7294 m (T-128 6.731), W06 in GF-13, GF-16 strip 0.300 m2; no quantity change | T-244 may take its faces when lane I reaches it |
+| T-260 aluminium doors evidence | WORKED | MERGED c6732efe (11:55): own both-face widths 1.000 x3 / 0.900, class ALUMINIUM x3 from the side spaces; line 12.760 m2 / 6 pcs vs freelancer 12.000 (+6.33 %: heights -1.000 Q-55 C, widths -0.440, count +2.200 ENGINE_RIGHT) | T-268 PROMOTED, first in lane I (one run, closes the line) |
+| T-228 r2 blockwork register v2 | WORKED (after one rework) | MERGED bf4dd2a9 (11:59): 3 '(With Stair)' marks own, 1F-W10 HELD; established net 494.189 -> 449.260 m2 (-9.1 %), held-net walls 39 / 76 | T-261 PROMOTED (wall blockers the drawings settle); lessons row closed |
+| T-235 r2 + part (4) V2 verdict / export | WORKED (tooling) | MERGED 3bd09b62 (12:01): own adversarial probe passed; no quantity | real export still refused by probe 10 until T-245 (lane I chain) |
+| T-180 slot CONC.GROUND main exterior | PARTIAL (16 / 17) | Verifier 12:10: 15.9692 vs 15.9600 m3 (+0.06 %); stub strip 0.0026 m2 unconfirmed; ring +0.67 % = end-closure convention | both written into T-254's acceptance (show or drop the strip; state the end rule with a test) |
+| T-240 WP1 floor area | progress (not a hand-in) | worker 3 11:48: V3.0.13 @ 5e12fa50, internal floor 340.7645 -> 342.6645 m2 (+0.56 %); GF OP-003 carried twice found | WP2 after T-268; twin strip in the element register |
+| Worker 1 WIP | team health | T-258, T-264, T-265 all evidence complete, none READY (head moved twice: re-merge cost each time) | WIP limit: no new claim by worker 1 until the three are handed in (T-258 at 12:19) |
+
 ## 2026-10-23 14:20 (lead run)
 
 - **Worker 1 11:25 -> 11:42 / Checker 12:51 -> 13:11**: T-213 MERGED 0ec8c496 -> **WORKED** (one set of 6 sunken panels
