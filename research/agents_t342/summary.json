@@ -1,0 +1,145 @@
+{
+ "binding": {
+  "by_binding": {
+   "BOUND": 3,
+   "DUPLICATE_OF": 5,
+   "MISSING": 1,
+   "NOT_APPLICABLE": 1,
+   "PARTIAL": 1
+  },
+  "labels": 11,
+  "policy": "URBAN_LABEL_BINDING_T342",
+  "refused": 0,
+  "retyped": [
+   "AT19"
+  ],
+  "rule": "R-T342-BIND-1",
+  "scopes": {
+   "BOUND": 7,
+   "MISSING": 10,
+   "NOT_APPLICABLE": 3
+  }
+ },
+ "candidate": {
+  "lines_json_sha256": "7199c8b6f122f54dda9de3fdbfd73b70b7991d7030b4e570d808fe00c4d21587",
+  "lines_total": 3706
+ },
+ "census": {
+  "HELD": 1,
+  "MEASURED": 28,
+  "SILENT_OMISSION": 11,
+  "UNSUPPORTED": 1,
+  "labels": 41,
+  "method": "ARCH_TAKEOFF_V2.9",
+  "unread_shx": 47
+ },
+ "rows": {
+  "AT19": {
+   "binding": "PARTIAL",
+   "duplicate_of": null,
+   "face": "GF-POOL-WATER",
+   "lines": [
+    "L-15a128c38982af899894",
+    "L-36efa902da4263479e0b",
+    "L-b62a7065645589011141"
+   ],
+   "retype": "RETYPED BATHROOM -> POOL (compound phrase read before the bare word)"
+  },
+  "AT20": {
+   "binding": "DUPLICATE_OF",
+   "duplicate_of": "AT19",
+   "face": "GF-POOL-WATER",
+   "lines": [
+    "L-15a128c38982af899894",
+    "L-36efa902da4263479e0b",
+    "L-b62a7065645589011141"
+   ],
+   "retype": null
+  },
+  "AT21": {
+   "binding": "MISSING",
+   "duplicate_of": null,
+   "face": "GF-COURT",
+   "lines": [],
+   "retype": null
+  },
+  "AT216": {
+   "binding": "BOUND",
+   "duplicate_of": null,
+   "face": "1F-ROOF-AT216",
+   "lines": [
+    "L-2f7502be6f501baf49b1",
+    "L-994b88140f2ea50f1b31"
+   ],
+   "retype": null
+  },
+  "AT22": {
+   "binding": "DUPLICATE_OF",
+   "duplicate_of": "AT21",
+   "face": "GF-COURT",
+   "lines": [],
+   "retype": null
+  },
+  "AT220": {
+   "binding": "BOUND",
+   "duplicate_of": null,
+   "face": "1F-ROOF-AT220",
+   "lines": [
+    "L-d4c73babd2a275c28929",
+    "L-d57d2dc2fafac8bc72d8"
+   ],
+   "retype": null
+  },
+  "AT225": {
+   "binding": "NOT_APPLICABLE",
+   "duplicate_of": null,
+   "face": "1F-VOID-POOLCOURT",
+   "lines": [],
+   "retype": null
+  },
+  "AT379": {
+   "binding": "BOUND",
+   "duplicate_of": null,
+   "face": "2F-ROOF-1",
+   "lines": [
+    "L-5ce5ba49792e8f9d1f6f",
+    "L-636fd3ff1784a12e653b"
+   ],
+   "retype": null
+  },
+  "AT385": {
+   "binding": "DUPLICATE_OF",
+   "duplicate_of": "AT379",
+   "face": "2F-ROOF-1",
+   "lines": [
+    "L-5ce5ba49792e8f9d1f6f",
+    "L-636fd3ff1784a12e653b"
+   ],
+   "retype": null
+  },
+  "AT39": {
+   "binding": "DUPLICATE_OF",
+   "duplicate_of": "AT21",
+   "face": "GF-COURT",
+   "lines": [],
+   "retype": null
+  },
+  "AT40": {
+   "binding": "DUPLICATE_OF",
+   "duplicate_of": "AT21",
+   "face": "GF-COURT",
+   "lines": [],
+   "retype": null
+  }
+ },
+ "target": [
+  "AT19",
+  "AT20",
+  "AT21",
+  "AT22",
+  "AT39",
+  "AT40",
+  "AT225",
+  "AT385"
+ ]
+}

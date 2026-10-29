@@ -1,0 +1,450 @@
+{
+ "source": "tools/label_census.py on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip, P7757.dxf (sha256 ab54dd55..), method ARCH_TAKEOFF_V2.9",
+ "summary": {
+  "policy": "URBAN_LABEL_CENSUS_V1",
+  "rule": "UP-QTY-STATUS-001",
+  "labels": 41,
+  "by_status": {
+   "MEASURED": 28,
+   "HELD": 1,
+   "UNSUPPORTED": 1,
+   "SILENT_OMISSION": 11
+  },
+  "unread_shx": 47,
+  "silent_by_cause": {
+   "NO_ROOM": 11
+  },
+  "by_floor": {
+   "1F": {
+    "UNSUPPORTED": 1,
+    "SILENT_OMISSION": 3,
+    "MEASURED": 11,
+    "UNREAD_SHX": 19
+   },
+   "2F": {
+    "SILENT_OMISSION": 2,
+    "MEASURED": 2,
+    "UNREAD_SHX": 8
+   },
+   "GF": {
+    "MEASURED": 15,
+    "SILENT_OMISSION": 6,
+    "HELD": 1,
+    "UNREAD_SHX": 20
+   }
+  },
+  "method": "ARCH_TAKEOFF_V2.9"
+ },
+ "labels": [
+  {
+   "text_id": "AT14",
+   "text": "PANTRY",
+   "code": "PANTRY",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RC99C2A",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:OPEN_PLAN_FLOOR"
+  },
+  {
+   "text_id": "AT16",
+   "text": "SALOON",
+   "code": "LIVING",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RC99C2A",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:OPEN_PLAN_FLOOR"
+  },
+  {
+   "text_id": "AT18",
+   "text": "RECEPTION",
+   "code": "RECEPTION",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RC99C2A",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:OPEN_PLAN_FLOOR"
+  },
+  {
+   "text_id": "AT19",
+   "text": "حمام سباحة",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT20",
+   "text": "swimming pool",
+   "code": "POOL",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT21",
+   "text": "حوش",
+   "code": "GARDEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT22",
+   "text": "COURT",
+   "code": "GARDEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT24",
+   "text": "DEWANEYA",
+   "code": "MAJLIS",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-R7512EA",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT25",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RFAD3C4",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT29",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RB62B55",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT31",
+   "text": "KITCHEN",
+   "code": "KITCHEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RA3AD49",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT33",
+   "text": "DINING",
+   "code": "DINING",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RC99C2A",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:OPEN_PLAN_FLOOR"
+  },
+  {
+   "text_id": "AT37",
+   "text": "سائق",
+   "code": "DRIVER",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-R51E127",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT38",
+   "text": "DRIVER",
+   "code": "DRIVER",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-R51E127",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT39",
+   "text": "حوش",
+   "code": "GARDEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT40",
+   "text": "COURT",
+   "code": "GARDEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT41",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RDF7D28",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT43:2ED",
+   "text": "BATH",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RD6F891",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT46",
+   "text": "MASTER BED ROOM",
+   "code": "MASTER_BEDROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-R75FBAE",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT48",
+   "text": "GARDEN",
+   "code": "GARDEN",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-R9A05AA",
+   "status": "HELD",
+   "cause": "LEDGER_RFI:EXTERNAL"
+  },
+  {
+   "text_id": "AT49",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RB28769",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT51",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "region_id": "SH05:GF",
+   "room_id": "GF-RF38DAF",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT215",
+   "text": "VOID",
+   "code": "VOID",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R78C367",
+   "status": "UNSUPPORTED",
+   "cause": "LEDGER_EXCLUDED:VOID"
+  },
+  {
+   "text_id": "AT216",
+   "text": "ROOF",
+   "code": "ROOF",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT218",
+   "text": "LIVING AREA",
+   "code": "LIVING",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R78C367",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT220",
+   "text": "ROOF",
+   "code": "ROOF",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT223",
+   "text": "MASTER BED ROOM",
+   "code": "MASTER_BEDROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-RB72F22",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT225",
+   "text": "VOID",
+   "code": "VOID",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT226",
+   "text": "LAUNDRY",
+   "code": "LAUNDRY",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R26FA0D",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT229",
+   "text": "MASTER BED ROOM",
+   "code": "MASTER_BEDROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R3CFCFD",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT230",
+   "text": "BATH",
+   "code": "BATHROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-RED23B8",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT233",
+   "text": "MASTER BED ROOM",
+   "code": "MASTER_BEDROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R0E919A",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT234",
+   "text": "BATH",
+   "code": "BATHROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R48CDA5",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT236",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R52AC05",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT238",
+   "text": "BATH",
+   "code": "BATHROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R8BDA49",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT240",
+   "text": "BATH",
+   "code": "BATHROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-R48AA46",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT243",
+   "text": "MASTER BED ROOM",
+   "code": "MASTER_BEDROOM",
+   "floor": "1F",
+   "region_id": "SH04:1F",
+   "room_id": "1F-RED0D19",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT379",
+   "text": "ROOF",
+   "code": "ROOF",
+   "floor": "2F",
+   "region_id": "SH03:2F",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  },
+  {
+   "text_id": "AT381",
+   "text": "W.C",
+   "code": "BATHROOM",
+   "floor": "2F",
+   "region_id": "SH03:2F",
+   "room_id": "2F-RE83BED",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT383",
+   "text": "MAID R.",
+   "code": "MAID",
+   "floor": "2F",
+   "region_id": "SH03:2F",
+   "room_id": "2F-R1DB2D2",
+   "status": "MEASURED",
+   "cause": "LEDGER_LINE:ROOM_FLOOR"
+  },
+  {
+   "text_id": "AT385",
+   "text": "ROOF",
+   "code": "ROOF",
+   "floor": "2F",
+   "region_id": "SH03:2F",
+   "room_id": null,
+   "status": "SILENT_OMISSION",
+   "cause": "NO_ROOM"
+  }
+ ]
+}
