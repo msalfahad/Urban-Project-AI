@@ -14,10 +14,12 @@ reading, not the line's own quantity). Each such line is corrected from ITS OWN 
                   with a hold word (the arch_v303 fallback 'held: ' + no reasons) prints its arithmetic from the
                   record's own inputs: count x length_m x kg/m = kg, kg/m from the project's unit-mass method
                   (engine.source.rebar_unit_mass, method named in the inputs) of the bar diameter the line carries
-                  (its subtrade '<element> / <d> mm', written by arch_v303 from the record's dia_mm). The product must
-                  equal the line's measured_net to its rounding (|product - net| <= 0.0005 kg, the export tolerance);
-                  otherwise the line is refused (its quantity does not follow from its inputs: a state question for
-                  the Lead, never fixed here).
+                  (its subtrade '<element> / <d> mm', written by arch_v303 from the record's dia_mm). The product of
+                  the printed figures must equal the line's measured_net within the rounding of what is printed: the
+                  net's (0.0005 kg, the export tolerance) plus the printed length's (the ledgers print length_m to
+                  `length_decimals`, named in the inputs with its source, and compute kg from the unrounded length:
+                  count x kg/m x 0.5 x 10^-length_decimals). Otherwise the line is refused (its quantity does not
+                  follow from its inputs: a state question for the Lead, never fixed here).
   NA_GROSS        a NOT_APPLICABLE_WITH_EVIDENCE line that still carries a numeric gross drops the gross (None): a line
                   taken off carries no figure. The old gross is kept in calculation.inputs (and in the line's own
                   earlier record, e.g. base_ownership_v3021.before).
@@ -180,7 +182,8 @@ def scan(lines):
 def load_inputs(doc, project_id=None):
     """URBAN_V3024_INPUTS_V1 or None:
         {"schema", "project", "sources": [{file, sha256, task, merge_commit, checker_run}] (the merged T-334 check),
-         "unit_mass": {"method" (rebar_unit_mass.METHODS), "source"},
+         "unit_mass": {"method" (rebar_unit_mass.METHODS), "source", "length_decimals" (the ledgers' printed
+                       length precision, 1 .. 6), "length_decimals_source"},
          "fixes": [{"line_id", "kind" (KINDS), "task"}],
          "for_lead": [{"line_id", "why"}] (lines kept as they are: a state question, never a text fix),
          "declared": {"REBAR_FORMULA": {"lines", "kg"}, "NA_GROSS": {"lines", "gross"}, "FORMULA_END": {"lines"}},
@@ -205,6 +208,10 @@ def load_inputs(doc, project_id=None):
         raise InputsError(f"unit_mass: {e}") from None
     if not um.get("source"):
         raise InputsError("unit_mass: the source of the project's unit-mass method (never a default)")
+    ld = um.get("length_decimals")
+    if not (isinstance(ld, int) and not isinstance(ld, bool) and 1 <= ld <= 6) or not um.get("length_decimals_source"):
+        raise InputsError("unit_mass: length_decimals 1 .. 6 (the ledgers' printed length precision) with its source "
+                          "(never a default)")
     seen = set()
     fixes = doc.get("fixes") or []
     if not fixes:
@@ -239,7 +246,12 @@ def load_inputs(doc, project_id=None):
 
 # ================================================================================================ fixes
 def _um_cfg(um):
-    return {k: v for k, v in um.items() if k != "source"}
+    return {k: v for k, v in um.items() if k not in ("source", "length_decimals", "length_decimals_source")}
+
+
+def _decimals(x):
+    t = repr(float(x))
+    return 0 if "e" in t or "." not in t else len(t.split(".")[1].rstrip("0"))
 
 
 def _fmt(x):
@@ -260,13 +272,17 @@ def rebar_arithmetic(ln, um):
     if not m:
         raise InputsError(f"rebar fix {lid}: no bar diameter on the line (subtrade {ln.get('subtrade')!r})")
     d = float(m.group(1))
+    ld = um["length_decimals"]
+    if _decimals(L) > ld:
+        raise InputsError(f"rebar fix {lid}: length {L} m printed beyond the declared {ld} decimals")
     kgm = UM.kg_per_m(d, _um_cfg(um))
     prod = n * L * kgm
-    if abs(prod - ln["measured_net"]) > QTY_TOL:
+    tol = QTY_TOL + n * kgm * 0.5 * 10 ** -ld + 1e-9
+    if abs(prod - ln["measured_net"]) > tol:
         raise InputsError(f"rebar fix {lid}: count {n} x length {L} m x {_fmt(kgm)} kg/m = {_fmt(prod)} kg is not the "
-                          f"line's {ln['measured_net']} kg: the quantity does not follow from its inputs (a state "
-                          "question for the Lead, never a text fix)")
-    return n, L, d, kgm, prod
+                          f"line's {ln['measured_net']} kg within the printed rounding ({_fmt(tol)} kg): the quantity "
+                          "does not follow from its inputs (a state question for the Lead, never a text fix)")
+    return n, L, d, kgm, prod, tol
 
 
 def _record(before, kind, src, extra):
@@ -285,13 +301,15 @@ def fixed_line(before, kind, src, um):
     if kind == "REBAR_FORMULA":
         if not hold_text(_formula(before)):
             raise InputsError(f"rebar fix {lid}: its formula does not open with a hold word (stale inputs)")
-        n, L, d, kgm, prod = rebar_arithmetic(before, um)
+        n, L, d, kgm, prod, tol = rebar_arithmetic(before, um)
         calc["formula"] = (f"{_fmt(n)} x {_fmt(L)} m x {_fmt(kgm)} kg/m ({_fmt(d)} mm, "
-                           f"{UM.describe(_um_cfg(um))}) = {_fmt(before['measured_net'])} kg (released ledger record; "
-                           f"product {_fmt(prod)} to 3 decimals; {METHOD})")
+                           f"{UM.describe(_um_cfg(um))}) = {_fmt(before['measured_net'])} kg (the released ledger "
+                           f"record's kg, from its unrounded length; the printed figures multiply to {_fmt(prod)}, "
+                           f"within their rounding {_fmt(tol)}; {METHOD})")
         rec = _record(before, kind, src, {"count": n, "length_m": L, "dia_mm": d, "kg_per_m": _r(kgm, 6),
-                                          "product_kg": _r(prod, 6), "unit_mass_method": um["method"],
-                                          "unit_mass_source": um["source"][:300]})
+                                          "product_kg": _r(prod, 6), "rounding_bound_kg": _r(tol, 6),
+                                          "unit_mass_method": um["method"], "unit_mass_source": um["source"][:300],
+                                          "length_decimals": um["length_decimals"]})
         note = (f"{METHOD}: the released quantity prints its arithmetic (count x length x unit mass) in place of the "
                 f"empty 'held: ' text of the arch_v303 fallback; quantity and state unchanged")
     elif kind == "NA_GROSS":

@@ -32,7 +32,13 @@ KIND = {"VALUED_WITH_HELD_TEXT": "REBAR_FORMULA", "HELD_WITH_FIGURE": "NA_GROSS"
 UNIT_MASS = {"method": "D2_OVER_162",
              "source": "engine/source/rebar_unit_mass.py D2_OVER_162 (kg/m = d^2 / 162), the method of the merged "
                        "hand ledgers the released rebar lines come from (research/agents_t138/t138_hand_ledger.py, "
-                       "research/agents_t148/t148_column_steel.py, research/agents_t149/t149_beam_steel.py: d^2/162)"}
+                       "research/agents_t148/t148_column_steel.py, research/agents_t149/t149_beam_steel.py: d^2/162)",
+             "length_decimals": 4,
+             "length_decimals_source": ("the merged ledgers print length_m to at most 4 decimals (all 350 lines) "
+                                        "and kg (3 decimals) from the unrounded length: research/agents_t149/"
+                                        "T149_BEAMS.csv R073 CB9 span 2 top corner 2 x 1.6338 m printed, 2.904 kg; "
+                                        "R047 CB1 support 1 3.3732 m = 0.22 x 7.4500 + 0.5020 + 0.22 x 5.6010 = "
+                                        "3.37322 m, 8 x 2.000 = 53.972 kg")}
 
 
 def _sha(p):

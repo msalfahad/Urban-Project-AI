@@ -6,7 +6,10 @@ NON-Alsenan villa (VG-338), normal and adverse. The independent judge is the mer
 Villa VG-338, by hand (unit mass d^2/162):
   R12  beam B1 bottom, 6 bars 12 mm x 3.40 m: 144/162 = 0.888889 kg/m; 6 x 3.40 x 0.888889 = 18.133333 -> 18.133 kg
   R20  column C1 main, 3 bars 20 mm x 5.15 m: 400/162 = 2.469136 kg/m; 3 x 5.15 x 2.469136 = 38.148148 -> 38.148 kg
-  (both RELEASED ledger records printing 'held: ' as their formula: VALUED_WITH_HELD_TEXT)
+  R12r beam B2 top, 2 bars 12 mm, unrounded length 1.63376 m printed 1.6338 (4 decimals): kg from the unrounded
+       length 2 x 1.63376 x 0.888889 = 2.904462 -> 2.904 kg; the printed figures give 2.904533 (+0.000533 > 0.0005),
+       inside the printed rounding 0.0005 + 2 x 0.888889 x 0.00005 = 0.000589 kg
+  (the three RELEASED ledger records print 'held: ' as their formula: VALUED_WITH_HELD_TEXT)
   SK   skirting NOT_APPLICABLE (base on full-height tile) keeping gross 4.25 lm: HELD_WITH_FIGURE
   PL1  plaster PROVISIONAL: 4.00 m x 3.00 m = 12.0 m2 less W1 1.20 x 1.40 = 1.68 -> net 10.32 m2; formula concludes
        '= 12.0 m2' (the gross): FORMULA_FIGURE_DISAGREES
@@ -35,7 +38,8 @@ from tools import t334_line_state_check as LS  # noqa: E402
 
 PID, REV = "villa-vg338", "a" * 64
 DOCS = [{"file": "vg338_st.dxf", "sha256": "d" * 64}]
-UMS = {"method": "D2_OVER_162", "source": "project unit-mass method d^2/162 (the hand ledgers' method)"}
+UMS = {"method": "D2_OVER_162", "source": "project unit-mass method d^2/162 (the hand ledgers' method)",
+       "length_decimals": 4, "length_decimals_source": "the hand ledgers print length_m to 4 decimals"}
 
 
 def _bar(eid, n, L, d, net, state="RELEASED", ev="SOURCE_DERIVED", formula="held: ", sub=True):
@@ -61,6 +65,7 @@ def lines_3023():
     return [
         _bar("R12", 6, 3.40, 12, 18.133),
         _bar("R20", 3, 5.15, 20, 38.148),
+        _bar("R12r", 2, 1.6338, 12, 2.904),
         _bar("R16ok", 4, 2.65, 16, 16.751, formula="4 x 2.65 m x 1.580247 kg/m = 16.751 kg"),
         _bar("R16held", 4, 2.65, 16, None, state="HELD_DEFINED", ev="BLOCKED_RFI", formula="held: bar count"),
         _fin("FIN.SKIRTING", "SK", "NOT_APPLICABLE_WITH_EVIDENCE", unit="lm", gross=4.25,
@@ -84,6 +89,7 @@ def doc(ls=None, **kw):
     ls = ls or lines_3023()
     fixes = [{"line_id": _id(ls, "R12"), "kind": "REBAR_FORMULA", "task": "T-P334"},
              {"line_id": _id(ls, "R20"), "kind": "REBAR_FORMULA", "task": "T-P334"},
+             {"line_id": _id(ls, "R12r"), "kind": "REBAR_FORMULA", "task": "T-P334"},
              {"line_id": _id(ls, "SK"), "kind": "NA_GROSS", "task": "T-P334"},
              {"line_id": _id(ls, "PL1"), "kind": "FORMULA_END", "task": "T-P334"},
              {"line_id": _id(ls, "PL2"), "kind": "FORMULA_END", "task": "T-P334"}]
@@ -91,7 +97,7 @@ def doc(ls=None, **kw):
          "sources": [{"file": "vg338_findings.csv", "sha256": "c" * 64, "task": "T-P334", "merge_commit": "m334",
                       "checker_run": "checker c334"}],
          "unit_mass": dict(UMS), "fixes": fixes, "for_lead": [],
-         "declared": {"REBAR_FORMULA": {"lines": 2, "kg": 56.281}, "NA_GROSS": {"lines": 1, "gross": 4.25},
+         "declared": {"REBAR_FORMULA": {"lines": 3, "kg": 59.185}, "NA_GROSS": {"lines": 1, "gross": 4.25},
                       "FORMULA_END": {"lines": 2}}}
     d.update(kw)
     return d
@@ -113,7 +119,8 @@ def _by(out):
 def test_the_t334_check_finds_the_five_findings_before():
     rep = LS.check_lines(lines_3023())
     kinds = {r["element_id"]: r["category"] for r in rep["findings"]}
-    assert kinds == {"R12": "VALUED_WITH_HELD_TEXT", "R20": "VALUED_WITH_HELD_TEXT", "SK": "HELD_WITH_FIGURE",
+    assert kinds == {"R12": "VALUED_WITH_HELD_TEXT", "R20": "VALUED_WITH_HELD_TEXT", "R12r": "VALUED_WITH_HELD_TEXT",
+                     "SK": "HELD_WITH_FIGURE",
                      "PL1": "FORMULA_FIGURE_DISAGREES", "PL2": "FORMULA_FIGURE_DISAGREES"}
 
 
@@ -121,9 +128,9 @@ def test_hand_fixture_after_v3024_the_t334_check_is_clean():
     ls, ch, logs, out, ident = run()
     rep = LS.check_lines(out)
     assert rep["refused"] == 0 and rep["flagged"] == 0, rep["findings"]
-    assert ident["replaced"] == 5 and ident["added"] == 0 and ident["outside_rows"] == 4
-    assert ident["by_kind"] == {"FORMULA_END": 2, "NA_GROSS": 1, "REBAR_FORMULA": 2}
-    assert logs[0]["rebar_kg"] == pytest.approx(56.281, abs=1e-9) and logs[0]["na_gross"] == 4.25
+    assert ident["replaced"] == 6 and ident["added"] == 0 and ident["outside_rows"] == 4
+    assert ident["by_kind"] == {"FORMULA_END": 2, "NA_GROSS": 1, "REBAR_FORMULA": 3}
+    assert logs[0]["rebar_kg"] == pytest.approx(59.185, abs=1e-9) and logs[0]["na_gross"] == 4.25
 
 
 def test_rebar_formula_is_the_hand_arithmetic_and_the_quantity_is_unchanged():
@@ -136,6 +143,9 @@ def test_rebar_formula_is_the_hand_arithmetic_and_the_quantity_is_unchanged():
     assert b["R12"]["measured_net"] == 18.133 and b["R12"]["evidence_state"] == "SOURCE_DERIVED"
     assert "= 38.148 kg" in b["R20"]["calculation"]["formula"] and "2.469136 kg/m" in b["R20"]["calculation"]["formula"]
     assert LS.formula_figure(f12, "kg") == (18.133, 3)
+    r = b["R12r"]["calculation"]
+    assert "= 2.904 kg" in r["formula"] and "multiply to 2.904533" in r["formula"]
+    assert r["inputs"]["line_state_v3024"]["rounding_bound_kg"] == pytest.approx(0.000589, abs=1e-6)
 
 
 def test_na_line_drops_its_gross_and_keeps_it_on_record():
@@ -166,7 +176,7 @@ def test_every_other_line_is_byte_identical_and_no_quantity_moves():
             assert A30.line_sha(o) == A30.line_sha(ln)
     d = A.diff_rows(ls, out)
     assert {r["vs_v3_0_23"] for r in d} == {"SAME", "CHANGED_TEXT_ONLY"}
-    assert sum(r["vs_v3_0_23"] == "CHANGED_TEXT_ONLY" for r in d) == 5
+    assert sum(r["vs_v3_0_23"] == "CHANGED_TEXT_ONLY" for r in d) == 6
 
 
 def test_line_order_does_not_matter():
@@ -214,6 +224,18 @@ def test_adverse_length_in_mm_is_refused():
     _refused(doc(ls), ls, match="does not follow")
 
 
+def test_adverse_rounding_bound_is_the_printed_precision_not_more():
+    ls = lines_3023()
+    ls[2] = _bar("R12r", 2, 1.6338, 12, 2.903)      # 0.001533 off: beyond 0.000589, refused
+    _refused(doc(ls), ls, match="does not follow")
+    ls = lines_3023()
+    ls[2] = _bar("R12r", 2, 1.63376, 12, 2.904)     # 5 decimals printed: beyond the declared precision
+    _refused(doc(ls), ls, match="beyond the declared")
+    u = dict(UMS)
+    del u["length_decimals"]
+    _refused(doc(unit_mass=u), match="length_decimals")
+
+
 def test_adverse_no_diameter_is_refused():
     ls = lines_3023()
     ls[0] = _bar("R12", 6, 3.40, 12, 18.133, sub=False)
@@ -233,7 +255,7 @@ def test_adverse_a_valued_non_released_line_under_hold_text_is_not_fixed():
     _refused(doc(ls), ls, match="neither fixed nor listed")
     d = doc(ls)
     d["fixes"].append({"line_id": _id(ls, "R14odd"), "kind": "REBAR_FORMULA", "task": "T-P334"})
-    d["declared"]["REBAR_FORMULA"] = {"lines": 3, "kg": 66.181}
+    d["declared"]["REBAR_FORMULA"] = {"lines": 4, "kg": 69.085}
     _refused(d, ls, match="not a text fix")
 
 
@@ -268,8 +290,8 @@ def test_adverse_stale_listing_is_refused():
 def test_adverse_wrong_kind_twice_and_both_lists_are_refused():
     ls = lines_3023()
     d = doc(ls)
-    d["fixes"][2]["kind"] = "FORMULA_END"
-    d["declared"] = {"REBAR_FORMULA": {"lines": 2, "kg": 56.281}, "NA_GROSS": {"lines": 0}, "FORMULA_END": {"lines": 3}}
+    d["fixes"][3]["kind"] = "FORMULA_END"
+    d["declared"] = {"REBAR_FORMULA": {"lines": 3, "kg": 59.185}, "NA_GROSS": {"lines": 0}, "FORMULA_END": {"lines": 3}}
     _refused(d, ls, match="shows NA_GROSS")
     d = doc(ls)
     d["fixes"].append(dict(d["fixes"][0]))
@@ -286,10 +308,10 @@ def test_adverse_declared_totals_and_unit_mass_are_checked():
     d = doc()
     d["declared"]["FORMULA_END"]["lines"] = 1
     _refused(d, match="declared FORMULA_END.lines")
-    _refused(doc(unit_mass={"method": "RATIO_80_KG_M3", "source": "x"}), match="unit_mass")
-    _refused(doc(unit_mass={"method": "D2_OVER_162"}), match="source")
+    _refused(doc(unit_mass=dict(UMS, method="RATIO_80_KG_M3")), match="unit_mass")
+    _refused(doc(unit_mass={k: v for k, v in UMS.items() if k != "source"}), match="source")
     # a different (valid) method: the product no longer equals the net -> refused, never a re-computed quantity
-    _refused(doc(unit_mass={"method": "EXACT_DENSITY", "density_kg_m3": 7000, "source": "x"}), match="does not follow")
+    _refused(doc(unit_mass=dict(UMS, method="EXACT_DENSITY", density_kg_m3=7000)), match="does not follow")
 
 
 def test_adverse_integrate_refuses_a_quantity_or_field_change():
@@ -301,7 +323,7 @@ def test_adverse_integrate_refuses_a_quantity_or_field_change():
     with pytest.raises(ValueError):
         A.integrate(ls, bad, d)
     bad = copy.deepcopy(ch)
-    bad[3]["after"]["rfi"] = {"question": "x"}
+    bad[4]["after"]["rfi"] = {"question": "x"}
     with pytest.raises(ValueError, match="outside its formula"):
         A.integrate(ls, bad, d)
     bad = copy.deepcopy(ch)
@@ -332,8 +354,8 @@ def test_write_files_and_identity(tmp_path):
                             "V3_0_24_INTEGRATION_LEDGER.csv", "V3_0_24_DIFF.csv", "V3_0_24_RUN.json"])
     run = json.loads((tmp_path / "V3_0_24_RUN.json").read_text(encoding="utf-8"))
     assert run["totals_moved_by_code"] == {} and run["released_default"] is False
-    assert ident["diff"]["vs_v3_0_23"] == {"SAME": 4, "CHANGED_TEXT_ONLY": 5}
-    assert len(led["rows"]) == 5 and led["integration_package"] is True
+    assert ident["diff"]["vs_v3_0_23"] == {"SAME": 4, "CHANGED_TEXT_ONLY": 6}
+    assert len(led["rows"]) == 6 and led["integration_package"] is True
     out = json.loads((tmp_path / "V3_0_24_BOQ_LINES.json").read_text(encoding="utf-8"))
     out = out if isinstance(out, list) else out["lines"]
     assert LS.check_lines(out)["findings"] == []
