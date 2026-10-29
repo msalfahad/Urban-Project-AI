@@ -1,0 +1,47 @@
+item,line,line_state,unit,lo,hi,status,source,why
+parapet inner_face_above_upturn ANNEX,NEW FIN.EXT.PARAPET-INNER ANNEX +4.30,NEW,m2,8.888430,14.914050,HELD,T-324 COMPONENT_SUMMARY,"inner face above the membrane upturn top (plaster scope: owner trade PLASTER_PARAPET_INNER; split height HELD, D-39)"
+parapet inner_face_above_upturn GF,NEW FIN.EXT.PARAPET-INNER GF +5.50,NEW,m2,8.209433,13.884950,HELD,T-324 COMPONENT_SUMMARY,"inner face above the membrane upturn top (plaster scope: owner trade PLASTER_PARAPET_INNER; split height HELD, D-39)"
+parapet inner_face_above_upturn 1F,NEW FIN.EXT.PARAPET-INNER 1F +9.70,NEW,m2,41.823530,56.608545,HELD,T-324 COMPONENT_SUMMARY,"inner face above the membrane upturn top (plaster scope: owner trade PLASTER_PARAPET_INNER; split height HELD, D-39)"
+parapet inner_face_above_upturn 2F,NEW FIN.EXT.PARAPET-INNER 2F +13.90,NEW,m2,8.490000,14.150000,HELD,T-324 COMPONENT_SUMMARY,"inner face above the membrane upturn top (plaster scope: owner trade PLASTER_PARAPET_INNER; split height HELD, D-39)"
+parapet inner_face_upturn_zone ANNEX,NEW FIN.WP.UPTURN-ZONE-FACE ANNEX +4.30,NEW,m2,0.000000,5.965620,HELD,T-324 COMPONENT_SUMMARY,"exposed upturn zone: protection over the membrane, WATERPROOFING edge detail (never plaster, never 0 as a split)"
+parapet inner_face_upturn_zone GF,NEW FIN.WP.UPTURN-ZONE-FACE GF +5.50,NEW,m2,0.000000,5.553980,HELD,T-324 COMPONENT_SUMMARY,"exposed upturn zone: protection over the membrane, WATERPROOFING edge detail (never plaster, never 0 as a split)"
+parapet inner_face_upturn_zone 1F,NEW FIN.WP.UPTURN-ZONE-FACE 1F +9.70,NEW,m2,0.000000,9.668000,HELD,T-324 COMPONENT_SUMMARY,"exposed upturn zone: protection over the membrane, WATERPROOFING edge detail (never plaster, never 0 as a split)"
+parapet inner_face_upturn_zone 2F,NEW FIN.WP.UPTURN-ZONE-FACE 2F +13.90,NEW,m2,0.000000,5.660000,HELD,T-324 COMPONENT_SUMMARY,"exposed upturn zone: protection over the membrane, WATERPROOFING edge detail (never plaster, never 0 as a split)"
+parapet top_surface ANNEX,NEW FIN.EXT.PARAPET-TOP ANNEX +4.30,NEW,m2,5.997010,6.037010,HELD,T-324 COMPONENT_SUMMARY,plain top (section A-A); a printed coping would replace it
+parapet top_surface GF,NEW FIN.EXT.PARAPET-TOP GF +5.50,NEW,m2,5.592956,5.673980,HELD,T-324 COMPONENT_SUMMARY,plain top (section A-A); a printed coping would replace it
+parapet top_surface 1F,NEW FIN.EXT.PARAPET-TOP 1F +9.70,NEW,m2,9.831510,9.846530,HELD,T-324 COMPONENT_SUMMARY,plain top (section A-A); a printed coping would replace it
+parapet top_surface 2F,NEW FIN.EXT.PARAPET-TOP 2F +13.90,NEW,m2,5.415000,5.415000,DRAWING-CONFIRMED,T-324 COMPONENT_SUMMARY,plain top (section A-A); a printed coping would replace it
+outer_top_arris ANNEX,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,30.542100,30.542100,HELD,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+outer_top_arris GF,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,28.769900,28.769900,DRAWING-CONFIRMED,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+outer_top_arris 1F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,50.290100,50.568800,HELD,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+outer_top_arris 2F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,29.800000,29.800000,DRAWING-CONFIRMED,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+inner_top_arris ANNEX,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,29.628100,29.828100,HELD,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+inner_top_arris GF,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,27.364778,27.769900,HELD,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+inner_top_arris 1F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,48.264900,48.340000,HELD,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+inner_top_arris 2F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,28.300000,28.300000,DRAWING-CONFIRMED,T-324 COMPONENT_SUMMARY,"parapet top arris: its own m.l, never m2"
+vertical convex arrises GF,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,66.900000,66.900000,DRAWING-CONFIRMED,T-162 r2 / T-172,"external arris, full physical length"
+vertical convex arrises 1F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,39.000000,39.000000,DRAWING-CONFIRMED,T-162 r2 / T-172,"external arris, full physical length"
+vertical convex arrises 2F,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,18.800000,18.800000,DRAWING-CONFIRMED,T-162 r2 / T-172,"external arris, full physical length"
+GF wall ends at the two passage mouths,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,43.100000,43.100000,DRAWING-CONFIRMED,T-162 r2 / T-172,"external arris, full physical length"
+opening arrises (head + 2 jambs + sill),"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,137.110000,137.110000,DRAWING-CONFIRMED,T-162 r2,"external arris, full physical length"
+door arrises at the 2.20 m door height,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,32.200000,32.200000,ASSUMED — OWNER-APPROVED,T-162 r2; Q-55 C,doors without a printed height: 2.20 m (owner Q-55 C)
+GF pool-court corners below the court level,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,2.100000,2.550000,HELD,T-162 r2 / T-324,3 x 0.70 .. 0.85: pool-court plinth HELD
+1F vertical arrises: parapet end parts,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,0.000000,11.900000,HELD,T-162 r2 / T-324,parapet end heights NE-1 / SW-1 / SW-2 HELD
+GF passage-mouth parapet stop-end,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,0.000000,1.200000,HELD,T-162 r2 / T-324,T-324 STOP_END = T-162 r2 mouth held part (one item)
+arch frames SE stair tower / NW pool court,"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,98.002000,195.180000,HELD,T-162 r2 / T-324,frame profile not detailed (designer)
+1F slab edge over open air (lower arris),"NEW FIN.EXT.CORNERS (m.l, all floors)",NEW,m.l,,,HELD,T-162 r2,"13.079 m run; finish / depth not printed (Q-68 C): blank, never 0"
+coping,NEW FIN.EXT.COPING (m.l),NEW,m.l,,,UNKNOWN,T-305 / T-324,none printed; ST p.14 P1 cap 'as per arc.'
+drip / throat,NEW FIN.EXT.DRIP (m.l),NEW,m.l,,,UNKNOWN,T-305 / T-324,nothing drawn; owner not answered
+corner beads,"NEW FIN.EXT.CORNERS (m.l, all floors) accessory",NEW,m.l,,,UNKNOWN,T-305 / T-324,"accessory ON the arrises (same edges, never a second length); no specification"
+SE projecting band 0.20 m return faces,NEW FIN.EXT.FRAME (m2),NEW,m2,,,UNKNOWN,T-305 / T-324,Checker T-159 observation
+parapet divider faces / top (annex | GF terrace),NEW FIN.EXT.FINISH DIVIDER (m2),NEW,m2,,,UNKNOWN,T-305 / T-324,no top level printed (T-324)
+"facade frame mouldings (SE stair tower, NW pool court)",NEW FIN.EXT.FRAME (m2),NEW,m2,,,HELD,T-305 / T-172,"profile not detailed: blank, never 0"
+pool-court soffit,L-23072352a28aeca7b051,OTHER_LINE,m2,12.834000,12.834000,VERIFIED (Checker 12.8343),cited,"ceiling side, not a wall face (owner item 4 accepts 12.834)"
+"membrane upturn base (inner base junction), annex",L-d4c73babd2a275c28929,OTHER_LINE,m.l,,,IN_LINE,cited,the roof WP line's m.l contains it (T-311 / T-324)
+"membrane upturn base, GF terrace",L-994b88140f2ea50f1b31,OTHER_LINE,m.l,,,IN_LINE,cited,as above
+"membrane upturn base, 1F roof",L-5ce5ba49792e8f9d1f6f,OTHER_LINE,m.l,,,IN_LINE,cited,as above
+"membrane upturn base, 2F roof",L-aac1f35e08f85b643692,OTHER_LINE,m.l,,,HELD,cited,line BLOCKED_RFI: 2F run HELD
+plinth wall course substrate,L-4165954ce4871eda30cc,OTHER_LINE,m2,5.059000,5.059000,DRAWING-CONFIRMED,cited,"block substrate of the plinth face (T-311): the wall's own line, not a second finish"
+spatter dash under the exterior plaster (B4-05),T-317 B4-05 item (no candidate line yet),OTHER_ITEM,m2,,,per T-317,cited,"a separate item on the same faces (URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1), never inside these m2 lines"
+boundary / street fence faces,site boundary element,OTHER_TRADE,m2,,,HELD,cited,not a house face (owner Q-65 C)
+domes inside and outside,-,NOT_APPLICABLE,m2,,,NOT_APPLICABLE,cited,owner item 3: no domes

@@ -1,0 +1,13 @@
+item_code,unit,block_type,thickness_m,walls,before,verified,drawing_confirmed,owner_approved,determinate,established_parts,drop_upper_at_d0,drop_coefficient,held_or_part_walls,after_expression
+MAS.BLOCK,m2,-,0.2,1,BLANK (every line BLOCKED_RFI),0,0,0,0,0,0,0,1,"0.0000 determinate + HELD [1 walls / pieces, blank] m2"
+MAS.BLOCK,m2,-,0.4,1,BLANK (every line BLOCKED_RFI),0,0,0,0,0,0,0,1,"0.0000 determinate + HELD [1 walls / pieces, blank] m2"
+MAS.BLOCK,m2,BLACK,0.15,30,BLANK (every line BLOCKED_RFI),62.213,41.2587,70.6287,174.1004,27.0417,29.4129,4.5131,12,"174.1004 determinate + 27.0417 established parts + (29.4129 - 4.5131 x d) drop walls + HELD [12 walls / pieces, blank] m2"
+MAS.BLOCK,m2,BLACK,0.2,16,BLANK (every line BLOCKED_RFI),107.724,0,0,107.724,3.8,0,0,10,"107.7240 determinate + 3.8000 established parts + HELD [10 walls / pieces, blank] m2"
+MAS.BLOCK,m2,WHITE,0.15,1,BLANK (every line BLOCKED_RFI),0,0,0,0,25.885,0,0,1,"0.0000 determinate + 25.8850 established parts + HELD [1 walls / pieces, blank] m2"
+MAS.BLOCK,m2,WHITE,0.2,27,BLANK (every line BLOCKED_RFI),127.91,7.207,5.59,140.707,99.843,17.389,3.4,13,"140.7070 determinate + 99.8430 established parts + (17.3890 - 3.4000 x d) drop walls + HELD [13 walls / pieces, blank] m2"
+ARCH.WALL_VOLUME,m3,-,0.2,1,BLANK (every line BLOCKED_RFI),0,0,0,0,0,0,0,1,"0.000000 determinate + HELD [1 walls / pieces, blank] m3"
+ARCH.WALL_VOLUME,m3,-,0.4,1,BLANK (every line BLOCKED_RFI),0,0,0,0,0,0,0,1,"0.000000 determinate + HELD [1 walls / pieces, blank] m3"
+ARCH.WALL_VOLUME,m3,BLACK,0.15,30,BLANK (every line BLOCKED_RFI),9.33195,6.188805,10.594305,26.11506,4.056255,4.411935,0.676965,12,"26.115060 determinate + 4.056255 established parts + (4.411935 - 0.676965 x d) drop walls + HELD [12 walls / pieces, blank] m3"
+ARCH.WALL_VOLUME,m3,BLACK,0.2,16,BLANK (every line BLOCKED_RFI),21.5448,0,0,21.5448,0.76,0,0,10,"21.544800 determinate + 0.760000 established parts + HELD [10 walls / pieces, blank] m3"
+ARCH.WALL_VOLUME,m3,WHITE,0.15,1,BLANK (every line BLOCKED_RFI),0,0,0,0,3.88275,0,0,1,"0.000000 determinate + 3.882750 established parts + HELD [1 walls / pieces, blank] m3"
+ARCH.WALL_VOLUME,m3,WHITE,0.2,27,BLANK (every line BLOCKED_RFI),25.582,1.4414,1.118,28.1414,19.9686,3.4778,0.68,13,"28.141400 determinate + 19.968600 established parts + (3.477800 - 0.680000 x d) drop walls + HELD [13 walls / pieces, blank] m3"

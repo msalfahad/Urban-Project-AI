@@ -1,0 +1,164 @@
+{
+ "task": "T-333",
+ "rule": "R-T333-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.21",
+ "candidate_lines_csv_sha256": "3548e39ca1c9d130a9536d89098e87e8286cd0777ec93080cc08707482837fff",
+ "candidate_lines_json_sha256": "be22a4e4b68dbaa9e87a39ad45f7dec3be64b04aca3a5843301458720b645ad0",
+ "candidate_lines_total": 3706,
+ "base_ledger": "T-291 MERGED 0c6b2ba5 (V3.0.15 csv a4dc01dd, register v4 T-288 643b310b)",
+ "masonry_lines": 28,
+ "lines_same_id_as_v3015": 28,
+ "lines_unbound_in_v3021": [],
+ "filled_lines_actions": {
+  "REPLACE_BLANK": 21
+ },
+ "run_lines_not_filled_lm": [
+  "L-398c6524bf38218ef946",
+  "L-683374ca04c7f06f82b6",
+  "L-ac7c90ccdf5d88bbc3ce",
+  "L-b5b4b55f919e85de3fd8",
+  "L-c264d4945a1acceea2cd",
+  "L-d48c81598860135326b1",
+  "L-ed4acba0b5bdac60df1e"
+ ],
+ "area_volume_lines_with_quantity_before": 0,
+ "fill_rows": 228,
+ "walls": 76,
+ "closures": {
+  "ARCH.WALL_PANEL": {
+   "VERIFIED": 0.0,
+   "DRAWING-CONFIRMED": 0.0,
+   "ASSUMED — OWNER-APPROVED": 0.0,
+   "HELD ON DROP": 0.0,
+   "HELD": 0.0,
+   "ESTABLISHED PART + HELD": 0.0,
+   "upper": 0.0,
+   "drop_length_m": 0.0,
+   "conflict_increment": 0.0
+  },
+  "MAS.BLOCK": {
+   "VERIFIED": 0.0,
+   "DRAWING-CONFIRMED": 0.0,
+   "ASSUMED — OWNER-APPROVED": 0.0,
+   "HELD ON DROP": 0.0,
+   "HELD": 0.0,
+   "ESTABLISHED PART + HELD": 0.0,
+   "upper": 0.0,
+   "drop_length_m": 0.0,
+   "conflict_increment": 0.0
+  },
+  "ARCH.WALL_VOLUME": {
+   "VERIFIED": 0.0,
+   "DRAWING-CONFIRMED": 0.0,
+   "ASSUMED — OWNER-APPROVED": 0.0,
+   "HELD ON DROP": 0.0,
+   "HELD": 0.0,
+   "ESTABLISHED PART + HELD": 0.0,
+   "upper": 0.0,
+   "drop_length_m": 0.0,
+   "conflict_increment": 0.0
+  }
+ },
+ "MAS.BLOCK_m2_after": {
+  "verified": 297.847,
+  "drawing_confirmed": 48.4657,
+  "owner_approved": 76.2187,
+  "determinate": 422.5314,
+  "established_parts": 156.5697,
+  "drop_upper_at_d0": 46.8019,
+  "drop_coefficient_m2_per_m_of_d": 7.9131,
+  "held_walls": 28,
+  "established_part_plus_held_walls": 10,
+  "held_on_drop_walls": 6,
+  "conflict_increments_outside": 0.0947
+ },
+ "ARCH.WALL_VOLUME_m3_after": {
+  "determinate": 75.80126,
+  "established_parts": 28.667605,
+  "drop_upper_at_d0": 7.889735,
+  "drop_coefficient_m3_per_m_of_d": 1.356965
+ },
+ "checker_values": [
+  {
+   "wall_id": "1F-W20",
+   "checker_value_m2": 24.5073,
+   "checker_status": "VERIFIED",
+   "fill_status": "VERIFIED",
+   "fill_m2": 24.507,
+   "difference_m2": -0.0003,
+   "source": "Checker 2026-10-25 02:00 own whole-wall 24.5073 (reported 24.507)"
+  },
+  {
+   "wall_id": "1F-W22",
+   "checker_value_m2": 20.401,
+   "checker_status": "VERIFIED",
+   "fill_status": "VERIFIED",
+   "fill_m2": 20.401,
+   "difference_m2": 0.0,
+   "source": "Checker 2026-10-25 01:43 own whole-wall 20.401 (supersedes its 15:59 piece value 20.402: B4 0.1245 read in the 01:43 re-measure)"
+  },
+  {
+   "wall_id": "GF-W16",
+   "checker_value_m2": 15.4356,
+   "checker_status": "HELD ON DROP",
+   "fill_status": "HELD ON DROP",
+   "fill_m2": 15.436,
+   "difference_m2": 0.0004,
+   "source": "Checker 2026-10-25 02:00: 15.4356 - 2.950 d under sunken GF-141 (D-41; the d = 0 bound, never a quantity); register v4 15.4360 = +0.0004 from the drawn B5 band edge (T-288 s.3, Gate A PASS 643b310b)"
+  }
+ ],
+ "parapet_block_alternative_m2": [
+  0.0,
+  60.5965
+ ],
+ "parapet_block_alternative_m3": [
+  0.0,
+  12.040291
+ ],
+ "parapet_runs": 24,
+ "plinth_course_contained_m2": 5.0593,
+ "plinth_course_house_zone_m2 (inside the GF 0.20 exterior wall heights; T-311 gives no per-wall split, so it rides each wall's own status)": 3.5822,
+ "plinth_course_annex_zone_inside_held_walls_m2": 1.4771,
+ "plinth_segments": 29,
+ "plinth_segments_held": 1,
+ "rule6_r2_D-T333-1": {
+  "deducted_openings": 32,
+  "on_q55_fallback_height": [
+   "D-1F-02",
+   "D-1F-03",
+   "D-1F-04",
+   "D-1F-07",
+   "D-1F-08",
+   "D-1F-10",
+   "D-2F-01",
+   "D-2F-03",
+   "D-GF-06",
+   "D-GF-10",
+   "D-GF-11",
+   "D-GF-12",
+   "D-GF-13"
+  ],
+  "part_status_relabelled (wall, r1, r2)": [
+   [
+    "1F-W13",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ],
+   [
+    "1F-W17",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ],
+   [
+    "2F-W03",
+    "DRAWING-CONFIRMED",
+    "ASSUMED — OWNER-APPROVED"
+   ]
+  ],
+  "established_parts_m2_by_part_status": {
+   "ASSUMED — OWNER-APPROVED": 47.3866,
+   "DRAWING-CONFIRMED": 109.1831
+  },
+  "quantities_changed": "none (labels only)"
+ }
+}

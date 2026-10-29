@@ -1,0 +1,4 @@
+wall_id,checker_value_m2,checker_status,fill_status,fill_m2,difference_m2,source
+1F-W20,24.5073,VERIFIED,VERIFIED,24.507,-0.0003,Checker 2026-10-25 02:00 own whole-wall 24.5073 (reported 24.507)
+1F-W22,20.401,VERIFIED,VERIFIED,20.401,0.0,Checker 2026-10-25 01:43 own whole-wall 20.401 (supersedes its 15:59 piece value 20.402: B4 0.1245 read in the 01:43 re-measure)
+GF-W16,15.4356,HELD ON DROP,HELD ON DROP,15.436,0.0004,"Checker 2026-10-25 02:00: 15.4356 - 2.950 d under sunken GF-141 (D-41; the d = 0 bound, never a quantity); register v4 15.4360 = +0.0004 from the drawn B5 band edge (T-288 s.3, Gate A PASS 643b310b)"
