@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29 11:33 UTC | Worker 2 | SUCCESS | T-336 READY @ c00eb983 | wet-area + pool WP bound to V3.0.21 (reproduced be22a4e4; 150 WP lines SAME as V3.0.17): FILL for T-310 KEEP 108 / CORRECT 4 / door-row REPLACE 4 / ADD 12 / NA 4; floor 85.621 -> 85.576 m2 (pantry column 2FAE -0.045), upturn +0.100 (1F east bath), thresholds 1.930 -> 2.020 m2 (D-GF-14 and D-1F-04 0.219 / 0.132 -> 0.120 by jamb read, pantry D120 0.200 NEW), 15 transitions one per door (held blank), pool 29.582 m2 + 1.525 m3 NEW; new finding: 10 upturn lines run under windows with no printed sill = owner method (ASSUMED-OA), drawing method HELD 0 .. 1.380 m2 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: decode wrapper refuses the connector's raw-binary save (base64 expected), worked round by base64-encoding the file in the scratchpad first
 - 2026-10-29 11:30 UTC | Worker 1 | STARTED | run session_01E6cPnbYRdr5n6hha9zZLSB | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T11:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T10:53Z | Verifier | STARTED | run session_01E6cPndiVBrvsw1yUTJGs7D | repo-attached routine | task state: T-331 (Gate B), T-334, T-335 READY (per run log) | self-check pending
