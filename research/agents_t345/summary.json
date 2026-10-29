@@ -1,0 +1,116 @@
+{
+ "floor_lines": 52,
+ "lines": 3706,
+ "lines_sha256_8": "7199c8b6",
+ "piece_applied": 1,
+ "step_items": {
+  "L-b06400d46d252f242018": [
+   [
+    "SITE-a95bf979baf4cfae:F2",
+    "TREADS_OWN",
+    -3.5e-05
+   ],
+   [
+    "SITE-a95bf979baf4cfae:F5",
+    "TREADS_OWN",
+    0.353736
+   ],
+   [
+    "SITE-a95bf979baf4cfae:F1",
+    "TREADS_BELOW_SEEN",
+    7.5e-05
+   ],
+   [
+    "SITE-a95bf979baf4cfae:F4",
+    "TREADS_BELOW_SEEN",
+    -0.057558
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R01",
+    "VOID_RESIDUE",
+    1.437249
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R02",
+    "VOID_RESIDUE",
+    0.59742
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R03",
+    "STAIR_FOOTPRINT",
+    2.119832
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R04",
+    "STAIR_FOOTPRINT",
+    1.352454
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R05",
+    "STAIR_FOOTPRINT",
+    0.0575
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R06",
+    "STAIR_FOOTPRINT",
+    0.021884
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R07",
+    "STAIR_FOOTPRINT",
+    0.001783
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R08",
+    "STAIR_FOOTPRINT",
+    0.001092
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R09",
+    "STAIR_FOOTPRINT",
+    0.00109
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R10",
+    "STAIR_FOOTPRINT",
+    0.001082
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R11",
+    "STAIR_FOOTPRINT",
+    0.001082
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R12",
+    "STAIR_FOOTPRINT",
+    0.001066
+   ],
+   [
+    "SITE-a95bf979baf4cfae:R13",
+    "STAIR_FOOTPRINT",
+    0.001065
+   ]
+  ]
+ },
+ "t330_on_traced_lines": {
+  "L-b06400d46d252f242018": {
+   "after": "OK",
+   "before": "NOT_SUMMING"
+  }
+ },
+ "task": "T-345",
+ "traced": [
+  {
+   "base_list_sum": 31.113649,
+   "cause": "",
+   "gross_used": 75.983002,
+   "line_id": "L-b06400d46d252f242018",
+   "measured_net": 33.711036,
+   "residual": 0.0,
+   "rows": 22,
+   "status": "TRACED",
+   "step_named": 5.890817,
+   "trace_sum": 42.271966
+  }
+ ]
+}
