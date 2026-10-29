@@ -127,7 +127,7 @@ REGISTER_DETERMINATE** (UNRESOLVED on the held walls); parapet: RULE_DIFFERENCE 
   state carried (blank replaced, figure corrected, both stated); every wall once per item; m3 = m2 x t; held blank and
   named, drop never evaluated; contained components never added; a held alternative in no line, outside totals,
   exclusive with its RC twin.
-- **tests/t333_blockwork_fill** (26): villa M hand truth (M-W1 5.000 x 3.000 - 1.000 x 2.100 = 12.900 m2 / 2.580 m3
+- **tests/t333_blockwork_fill** (27): villa M hand truth (M-W1 5.000 x 3.000 - 1.000 x 2.100 = 12.900 m2 / 2.580 m3
   VERIFIED; M-W3 6.000 - 2.000 d; M-W4 9.000 DRAWING-CONFIRMED; parapet P-1 0 .. 5.000 m2; plinth 0.500 m2 contained),
   rebinding to new ids, a new line listed, a line with a figure CORRECTED, order / mirror invariance; adverse: a wall
   under two ids, one id twice, a held wall as 0 or unnamed, a drop term evaluated, a volume at the wrong thickness, a
