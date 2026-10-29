@@ -580,3 +580,37 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 25 Oct 04:31 - 26 Oct 04:31 | 97 slots: 79 with a final line (69 SUCCESS, 10 IDLE), 3 INCOMPLETE (W1 17:21, Verifier 17:52, Lead 18:11), 14 NO LINE (18:12 - 21:40, cause NOT KNOWN), 1 OPEN; 82 % vs 90 % | RUN_LOG lines, main-chat ledger script |
 | 26 Oct 06:41 - 28 Oct 19:19 | TEAM STOPPED about 60.5 h: no agent ran; scheduler FAILED / USAGE_LIMIT_REACHED (Scout 27 Oct 23:50, Dashboard 28 Oct 16:54, Worker 3 28 Oct 18:59); W1 06:24 / W2 06:40 26 Oct STARTED without a final line (INCOMPLETE) | Lead report 28 Oct 20:20 |
 | 28 Oct 19:19 - 21:40 | runs resumed; stale locks recovered (T-311, T-313 re-claimed, no double claim) | Lead report 28 Oct 20:20 |
+
+## 2026-10-28 04:31 to 2026-10-29 04:31 UTC (daily audit 2026-10-29, compact)
+
+04:31 - 19:19 inside the usage-limit outage (section above). From 19:19: 27 runs logged, 26 SUCCESS + 1 IDLE, 0 INCOMPLETE, 0 FAILED = 100 % with a final line (Lead 3, Verifier 9, W1 6, W2 6, W3 3). Reduced cadence live from 21:44.
+
+| Slot start (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 10-28 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 20:09; T-311 READY (agents/task-T-311 @ 8bfa0359) / Parapets / plinth defined from ST p.14 + sections A-A / B-B (own  |
+| 10-28 19:41 | Worker 2 | SUCCESS | STARTED 19:41, final 20:43; T-313 READY (agents/task-T-313 @ 8ab3fbde) / Opening reveal ledger, 59 openings x side once: all 27 straight w |
+| 10-28 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:52; none (overlap guard: run session_01E6cPnf7RbZ6BEcf9myfarL active since 2026-10-28T19:51Z) / no check, no merge |
+| 10-28 20:16 | Lead | SUCCESS | STARTED 20:16, final 20:26; board / Team outage recorded: no agent ran 26 Oct 06:41 - 28 Oct 19:19 (scheduler USAGE_LIMIT_REACHED; Worker  |
+| 10-28 20:22 | Worker 1 | SUCCESS | STARTED 20:22, final 21:06; T-316 READY (agents/task-T-316 @ 5f723f30) / Slab top bars by support: T-306's 1,113.683 kg split by class (co |
+| 10-28 20:42 | Worker 2 | IDLE | 20:42 run lock held by the previous run; IDLE line written, run ended |
+| 10-28 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 22:09; T-224 READY (agents/task-T-224 @ 1641e4f3; unwired, no BOQ line moved) / SLAB_STEP_V2: sunken-panel step from  |
+| 10-28 21:20 | Verifier | SUCCESS | final 21:20 (single line); T-244 Gate B PASS MERGED 59dbfd0e (candidate of record ARCH_TAKEOFF_V3.0.20, NOT RELEASED); T-312 Gate A PASS  |
+| 10-28 21:23 | Worker 1 | SUCCESS | STARTED 21:23, final 22:12; T-320 READY (agents/task-T-320 @ c5ef369f) / Backfill/disposal displacement ledger below EG +-0.00: 105.163 m3 |
+| 10-28 21:42 | Worker 2 | SUCCESS | STARTED 21:42, final 22:35; T-317 READY (agents/task-T-317 @ c9a8fe39) / Spatter dash scope found in owner OD-V3B-4..7: the whole finished |
+| 10-28 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:31; T-311 Gate A PASS MERGED bd7b8c23; T-316 Gate A PASS MERGED ebe99ecf; T-313 REJECTED / T-311: full suite on th |
+| 10-28 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 23:59; T-313 r2 READY (agents/task-T-313 @ c7a3343c; rework of the 22:14 rejection) / Every item family of the candid |
+| 10-28 22:52 | Verifier | SUCCESS | STARTED 22:52, final 23:23; T-317 Gate A PASS MERGED 328a7095; T-320 Gate A PASS MERGED 5ddb2ba1 (engine push); T-224 REJECTED narrow / T- |
+| 10-28 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 00:36; T-224 r2 READY (agents/task-T-224 @ 2cb07800; lane S had no claimable TODO, rework of the Checker's 23:01 narr |
+| 10-28 23:52 | Verifier | SUCCESS | STARTED 23:52, final 23:58; none / No READY task (run log: last handoffs T-317 / T-320 / T-224 settled 23:23; Workers 1 / 2 / 3 runs open, |
+| 10-29 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:21; board / Since 20:26: T-244 Gate B (V3.0.20 candidate of record), T-312, T-311, T-316, T-317, T-320 WORKED and  |
+| 10-29 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 00:59; T-324 READY (agents/task-T-324 @ 816b125a) / Parapet components each own item/unit/owner: inner faces 94.123.. |
+| 10-29 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:29; T-321 Gate A PASS MERGED 59c82a05; T-224 r2 Gate A PASS MERGED f8180b18; T-313 r2 Gate A PASS MERGED 5f2bf0d5; |
+| 10-29 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:17; T-315 READY (integration package V3.0.21, agents/task-T-315 @ 21250605) / Wall tile now in the candidate: 11 b |
+| 10-29 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:32; T-322 READY (agents/task-T-322 @ 63995e72) / FF lift base ledger: raft 4.60 x 4.50 x 0.55 = 11.385 m3, screed  |
+| 10-29 01:50 | Verifier | SUCCESS | STARTED 01:50, final 01:55; T-322 Gate A PASS MERGED d3bcd9d4 (engine push) / Own p.14 raster read: lift detail prints 10cm blinding but N |
+| 10-29 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 03:56; T-325 READY (agents/task-T-325 @ c82a1e65) / Sills / thresholds, 59 openings x component once on V3.0.20 (097a |
+| 10-29 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:48; T-315 Gate B REJECTED (narrow); T-323 Gate A PASS MERGED 4410fb03 (engine push) / T-315: every tile figure re- |
+| 10-29 03:02 | Worker 3 | SUCCESS | STARTED 03:02, final 03:24; T-323 READY (agents/task-T-323 @ 7a6dd836; lane S row taken under the Lead's 00:15 rule, lane I had no claimab |
+| 10-29 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:21; none / No claimable TODO: lane S T-224 / T-322 MERGED, T-323 CLAIMED by worker 3; lane A T-325 CLAIMED by work |
+| 10-29 03:51 | Verifier | SUCCESS | STARTED 03:51, final 03:54; none / No READY task (T-315 Gate B REJECTED and T-323 MERGED by the 03:48 run; T-325 CLAIMED by Worker 2, T-22 |
+| 10-29 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:21; board / Since 00:21: T-321, T-224 r2, T-313 r2, T-324, T-322, T-323 WORKED and MERGED (research, no candidate  |
