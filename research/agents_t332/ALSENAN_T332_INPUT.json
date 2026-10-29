@@ -1,0 +1,156 @@
+{
+ "f8_vs_pool": {
+  "f8": "1B24",
+  "f8_size": [
+   4.0,
+   3.6
+  ],
+  "faces": [
+   {
+    "face": "N",
+    "inside_envelope": 3.113818,
+    "len": 4.0
+   },
+   {
+    "face": "W",
+    "inside_envelope": 0.0,
+    "len": 3.6
+   },
+   {
+    "face": "S",
+    "inside_envelope": 0.0,
+    "len": 4.0
+   },
+   {
+    "face": "E",
+    "inside_envelope": 0.6,
+    "len": 3.6
+   }
+  ],
+  "overlap_f8_envelope_m2": 1.616091,
+  "overlap_f8_outer_m2": 1.296546
+ },
+ "footings": {
+  "F12": {
+   "handle": "1ABF",
+   "size": [
+    4.4,
+    3.2
+   ]
+  },
+  "FF": {
+   "handle": "1B2B",
+   "size": [
+    4.6,
+    4.5
+   ]
+  }
+ },
+ "handles": {},
+ "lift_ring": {
+  "band_gross_m2": 1.6,
+  "band_net_of_columns_m2": 1.1,
+  "columns": [
+   "1099",
+   "1093",
+   "1096",
+   "1090"
+  ],
+  "inner": {
+   "handle": "10EA",
+   "not_on_a_column": 5.5,
+   "perimeter": 7.2,
+   "size": [
+    1.8,
+    1.8
+   ]
+  },
+  "outer": {
+   "handle": "10EB",
+   "not_on_a_column": 5.5,
+   "perimeter": 8.8,
+   "size": [
+    2.2,
+    2.2
+   ]
+  }
+ },
+ "pool": {
+  "outer": {
+   "closed_in_dxf": true,
+   "curved": 5.497787,
+   "handle": "7C6",
+   "layer": "S-BW",
+   "perimeter": 12.497787,
+   "segments": [
+    {
+     "kind": "LINE",
+     "len": 3.5
+    },
+    {
+     "kind": "LINE",
+     "len": 1.75
+    },
+    {
+     "kind": "ARC",
+     "len": 5.497787,
+     "r": 1.75,
+     "sweep_deg": 180.0
+    },
+    {
+     "kind": "LINE",
+     "len": 1.75
+    }
+   ]
+  },
+  "water": {
+   "closed_in_dxf": false,
+   "curved": 4.869469,
+   "handle": "7C5",
+   "layer": "S-BW",
+   "perimeter": 11.069469,
+   "segments": [
+    {
+     "kind": "LINE",
+     "len": 3.1
+    },
+    {
+     "kind": "LINE",
+     "len": 1.55
+    },
+    {
+     "kind": "ARC",
+     "len": 4.869469,
+     "r": 1.55,
+     "sweep_deg": 180.0
+    },
+    {
+     "kind": "LINE",
+     "len": 1.55
+    }
+   ]
+  }
+ },
+ "ring_ground_beam_arcs": {
+  "157": {
+   "len": 6.567377,
+   "r": 2.250011,
+   "sweep_deg": 167.236034
+  },
+  "158": {
+   "len": 6.679704,
+   "r": 2.55,
+   "sweep_deg": 150.085829
+  }
+ },
+ "schema": "T332_ALSENAN_INPUT_V1",
+ "sheet_translation_ground_to_foundation": {
+  "dx_m": 38.7244,
+  "dy_m": 0.0,
+  "from": "7C2",
+  "same_size": true,
+  "to": "10EB"
+ },
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+ "units": "m, m2"
+}
