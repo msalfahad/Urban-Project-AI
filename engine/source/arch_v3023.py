@@ -326,8 +326,11 @@ def added_line(template, c, doc, src):
     inputs = {"chain": c["chain"], "record_state": "ADD", "evidence_status": "HELD",
               "owner_manual_method": PIECES["PARAPET_RC"]["owner_manual_method"],
               "drawing_derived_method": PIECES["PARAPET_RC"]["drawing_method"], "parapet_rc_v3023": rec}
-    q = (f"Parapet RC, {c['chain']} roof {c['roof_level']}: which detail governs each run ({c['material_item']}) and "
-         f"the roof build-up depth at the edge ({c['b_edge_item']})")
+    q = (f"Parapet RC, {c['chain']} roof {c['roof_level']}: HELD bound at least {b['floor_at_least_m3']} m3 (top "
+         f"{b['top_m2'][0]} m2 x {u0}, any b_edge), all RC {b['all_rc_printed_part_m3'][0]} .. "
+         f"{b['all_rc_printed_part_m3'][1]} m3 at b_edge 0 + {b['held_increment_m3_per_m_b_edge']} m3 per m of b_edge; "
+         f"unlocks: which detail governs each run ({c['material_item']}) and the roof build-up depth at the edge "
+         f"({c['b_edge_item']})")
     ln = BL.make_line(project_id=pid, revision_set_sha256=rev, item_code=PARAPET, unit="m3", evidence_state=STATE,
                       measured_net=None, element_id=c["element_id"], floor=c["floor"],
                       physical_element="parapet_rc", gross=None, bounded_range=None,
@@ -338,7 +341,7 @@ def added_line(template, c, doc, src):
                       geometry_source=(template.get("source") or {}).get("geometry_source") or "CAD_VECTOR",
                       geometry_confidence="TOLERANCE_CERTIFIED", rule_id=RULE[0], rule_version=RULE[1],
                       material_state=template.get("material_state") or "BY_SPEC",
-                      rfi={"question": q[:400], "items": [c["material_item"], c["b_edge_item"]],
+                      rfi={"question": q[:700], "items": [c["material_item"], c["b_edge_item"]],
                            "blocks": "the parapet RC volume of this chain"},
                       notes=(f"{METHOD}: a MISSING structural category (no candidate concrete line carried the parapet; "
                              f"the beam lines stop at the slab top) added HELD from the merged run ledgers "

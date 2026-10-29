@@ -305,3 +305,9 @@ def test_v3022_line_changed_refused():
 def test_no_project_input_changes_nothing():
     ch, logs, rows = A.changes_for(None, lines_3022())
     assert ch == [] and rows == [] and logs[0]["state"] == "NO_PROJECT_INPUT"
+
+
+def test_the_export_reader_sees_the_bound_in_the_held_reason():
+    _ls, _ch, _l, _r, out, _i = run()
+    q = _par(out)["R1#PARAPET_RC"]["rfi"]["question"]
+    assert "at least 1.058496 m3" in q and "3.348319 .. 3.708319 m3 at b_edge 0" in q and "per m of b_edge" in q
