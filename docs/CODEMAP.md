@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3579 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3605 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 25 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1759 | pytest suites, one folder per round. |
+| `tests/` | 1767 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -419,7 +419,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3019.py` | 675 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.19 (T-255): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.18 (engine.source.arch_v30, |
 | `arch_v302.py` | 838 | HIGH | 22 | ARCH_TAKEOFF_V3.0.2 (T-142): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 (engine.source.arch_v30, |
 | `arch_v3020.py` | 607 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.20 (T-244): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.19 (engine.source.arch_v30, |
-| `arch_v3021.py` | 715 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.21 (T-315): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.20 (engine.source.arch_v30, |
+| `arch_v3021.py` | 739 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.21 (T-315): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.20 (engine.source.arch_v30, |
 | `arch_v303.py` | 614 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.3 (T-151): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 / V3.0.2 |
 | `arch_v304.py` | 539 | HIGH | 24 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v305.py` | 515 | HIGH | 18 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
@@ -1225,11 +1225,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t309_pool_membrane/` | 2 |
 | `tests/t311_parapet_plinth/` | 2 |
 | `tests/t312_wall_tile_ledger/` | 2 |
+| `tests/t313_reveal_ledger/` | 2 |
 | `tests/t315_wall_tile_family/` | 3 |
 | `tests/t316_slab_top_bars/` | 2 |
 | `tests/t317_spatter_mesh/` | 2 |
 | `tests/t320_displacement_ledger/` | 2 |
 | `tests/t321_roof_buildup/` | 2 |
+| `tests/t322_lift_base_ledger/` | 2 |
+| `tests/t324_parapet_components/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1553,11 +1556,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t309/` | 5 |
 | `research/agents_t311/` | 10 |
 | `research/agents_t312/` | 11 |
-| `research/agents_t315/` | 4 |
+| `research/agents_t313/` | 9 |
+| `research/agents_t315/` | 5 |
 | `research/agents_t316/` | 7 |
 | `research/agents_t317/` | 8 |
 | `research/agents_t320/` | 5 |
 | `research/agents_t321/` | 8 |
+| `research/agents_t322/` | 6 |
+| `research/agents_t324/` | 10 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

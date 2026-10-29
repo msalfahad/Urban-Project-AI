@@ -1,0 +1,364 @@
+{
+ "identity": {
+  "plan": "ab54dd55",
+  "rooms": "06ac74eb",
+  "record": "097a80b6",
+  "record_lines": 3705
+ },
+ "openings": 59,
+ "rows": 234,
+ "reveal_lines": 27,
+ "lines_bound": 49,
+ "lines_unbound": [],
+ "totals": {
+  "IN:FLOOR_STRIP": {
+   "m2": 0.0,
+   "ml": 0.0,
+   "n_measured": 0,
+   "none": [
+    "W15",
+    "W16",
+    "W25",
+    "W27"
+   ],
+   "held": [],
+   "unresolved": [
+    "W03"
+   ]
+  },
+  "IN:HEAD": {
+   "m2": 0.0,
+   "ml": 0.0,
+   "n_measured": 0,
+   "none": [
+    "W01",
+    "W02",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15",
+    "W16",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W28",
+    "W29"
+   ],
+   "held": [],
+   "unresolved": [
+    "W03",
+    "W17"
+   ]
+  },
+  "IN:JAMBS": {
+   "m2": 0.0,
+   "ml": 0.0,
+   "n_measured": 0,
+   "none": [
+    "W01",
+    "W02",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15",
+    "W16",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W28",
+    "W29"
+   ],
+   "held": [],
+   "unresolved": [
+    "W03",
+    "W17"
+   ]
+  },
+  "IN:SILL": {
+   "m2": 0.0,
+   "ml": 0.0,
+   "n_measured": 0,
+   "none": [
+    "W01",
+    "W02",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W26",
+    "W28",
+    "W29"
+   ],
+   "held": [],
+   "unresolved": [
+    "W17"
+   ]
+  },
+  "OUT:HEAD": {
+   "m2": 2.9694,
+   "ml": 34.63,
+   "n_measured": 27,
+   "none": [],
+   "held": [],
+   "unresolved": [
+    "W03",
+    "W17"
+   ]
+  },
+  "OUT:JAMBS": {
+   "m2": 6.6976,
+   "ml": 77.72,
+   "n_measured": 26,
+   "none": [],
+   "held": [
+    "W02"
+   ],
+   "unresolved": [
+    "W03",
+    "W17"
+   ]
+  },
+  "OUT:SILL": {
+   "m2": 2.5614,
+   "ml": 29.53,
+   "n_measured": 23,
+   "none": [],
+   "held": [],
+   "unresolved": [
+    "W17"
+   ]
+  },
+  "OUT:THRESHOLD": {
+   "m2": 0.408,
+   "ml": 0.0,
+   "n_measured": 4,
+   "none": [],
+   "held": [],
+   "unresolved": [
+    "W03"
+   ]
+  },
+  "THROUGH:HEAD": {
+   "m2": 4.23,
+   "ml": 25.0,
+   "n_measured": 27,
+   "none": [],
+   "held": [
+    "A-GF-01"
+   ],
+   "unresolved": [
+    "D-GF-15",
+    "A-1F-01"
+   ]
+  },
+  "THROUGH:JAMBS": {
+   "m2": 19.92,
+   "ml": 119.4,
+   "n_measured": 27,
+   "none": [],
+   "held": [
+    "A-GF-01"
+   ],
+   "unresolved": [
+    "D-GF-15",
+    "A-1F-01"
+   ]
+  }
+ },
+ "exterior_edge_ml_measured": 141.88,
+ "door_lines_bound": 22,
+ "door_reconciliation": {
+  "EQUAL": 20,
+  "WITHIN_BOUND": 2
+ },
+ "door_ledger_m2_in_line": 20.22,
+ "door_line_m2_provisional": 17.74,
+ "missing_scope": {
+  "DOOR:THROUGH:HEAD": {
+   "m2": 0.63,
+   "ml": 4.2,
+   "openings": [
+    "D-GF-02",
+    "D-GF-10",
+    "D-GF-14",
+    "D-1F-03",
+    "D-1F-04"
+   ]
+  },
+  "DOOR:THROUGH:JAMBS": {
+   "m2": 3.3,
+   "ml": 22.0,
+   "openings": [
+    "D-GF-02",
+    "D-GF-10",
+    "D-GF-14",
+    "D-1F-03",
+    "D-1F-04"
+   ]
+  },
+  "FLOOR_GLAZING:OUT:HEAD": {
+   "m2": 0.408,
+   "ml": 5.1,
+   "openings": [
+    "W15",
+    "W16",
+    "W25",
+    "W27"
+   ]
+  },
+  "FLOOR_GLAZING:OUT:JAMBS": {
+   "m2": 1.472,
+   "ml": 18.4,
+   "openings": [
+    "W15",
+    "W16",
+    "W25",
+    "W27"
+   ]
+  },
+  "WINDOW:OUT:HEAD": {
+   "m2": 2.5614,
+   "ml": 29.53,
+   "openings": [
+    "W01",
+    "W02",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W26",
+    "W28",
+    "W29"
+   ]
+  },
+  "WINDOW:OUT:JAMBS": {
+   "m2": 5.2256,
+   "ml": 59.32,
+   "openings": [
+    "W01",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W26",
+    "W28",
+    "W29"
+   ]
+  },
+  "WINDOW:OUT:SILL": {
+   "m2": 0.04,
+   "ml": 0.5,
+   "openings": [
+    "W18"
+   ]
+  }
+ },
+ "missing_scope_m2": 13.637,
+ "family_lines_on_openings": {
+  "ARCH.PASSAGE": 2,
+  "ARCH.THRESHOLD": 8,
+  "ARCH.WINDOW": 27,
+  "ARCH.WINDOW_REVEAL": 27,
+  "DOOR.EXTERNAL.ALUMINIUM": 2,
+  "DOOR.INTERNAL.PVC": 15,
+  "FIN.FLOOR.PORCELAIN": 13,
+  "FIN.MARBLE.THRESHOLD": 10,
+  "FIN.PLASTER": 22,
+  "FIN.WP.DOORWAY": 10,
+  "FIN.WP.DOORWAY_TRANSITION": 7,
+  "FIN.WP.DOORWAY_TRANSITION_NR": 14,
+  "FIN.WP.TERMINATION": 1
+ },
+ "edge_reconciliation": {
+  "t162_r2_measured_ml": 137.11,
+  "t162_r2_assumed_ml": 32.2,
+  "register_r1_ml": 189.63,
+  "r1_minus_r2": 52.52,
+  "t313_windows_measured_ml": 129.22,
+  "t162_known_part_same_openings_ml": 85.42,
+  "openings_open": [
+   "D-GF-01",
+   "D-GF-03",
+   "D-GF-06",
+   "D-GF-07",
+   "D-GF-09",
+   "W02",
+   "W03",
+   "D-GF-05",
+   "W17",
+   "D-2F-01"
+  ]
+ }
+}

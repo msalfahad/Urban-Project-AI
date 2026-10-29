@@ -1,0 +1,7 @@
+id,chain,run,component,unit,delta_lo,delta_hi,evidence,status
+C1,ANNEX,SW-3,inner run / inner face / top,m,-0.200000,0.000000,B35 ends on D band B3C; B3A 0.200 m further (P7757.dxf),HELD (D band: what it is is not printed)
+C2,1F,SW-2,inner run / inner face / top,m,-0.075100,0.000000,12B9 4.125 m ends on D band 12E2,HELD (D band)
+C3,1F,NW-2,inner run / inner face / top / inner arris,m,-0.443500,-0.443500,12A7 = 11.600 m straight = NW-1 + chord + NW-3 + NW-4 + NW-5 (chord 3.2496),DRAWING-CONFIRMED
+C4,GF,NE-4,inner run / inner face / inner arris / upturn,m,-0.200000,-0.200000,B25 18.970 m from CED (divider 0.200) to B33,DRAWING-CONFIRMED
+C6,GF,SW-9,inner run / inner face / top / inner arris / upturn,m,-0.405122,0.000000,BDB ends on D band C9E; T-311 to the 1F wall face,HELD (D band)
+C5,ANNEX,NE-6x,new run: inner / top / outer / arrises,m,1.400000,1.400000,B34 11.800 - B3A->CEC; divider CEC/CED 0.200 reaches AC7,DRAWING-CONFIRMED (outer face owner HELD: on the boundary line AC7)

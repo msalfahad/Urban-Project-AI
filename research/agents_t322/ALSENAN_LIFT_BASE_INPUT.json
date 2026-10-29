@@ -1,0 +1,58 @@
+{
+ "schema": "URBAN_T322_LIFT_BASE_INPUT_V1",
+ "note": "Values, DXF handles and page references only (own reads, T-322, 2026-10-29); no drawing content copied.",
+ "sources": {
+  "dxf": {"title": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'", "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "frame": "FOUNDATION PLAN"},
+  "pdf": {"title": "Drive 'Alsenan chalet project' / 'ST7757.pdf'", "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"}
+ },
+ "unit": "mm",
+ "governing_detail": "ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'",
+ "typical_detail": "ST p.13 'TYP. DETAIL OF ISOLATED FOOTING.' (right)",
+ "raft": {
+  "rect": [136342.0, 43148.1, 140942.0, 47648.1],
+  "handle": "1B2B (S-FOOTINGS, closed LWPOLYLINE), tag TEXT 1676 'FF'",
+  "schedule": [4600, 4500],
+  "schedule_source": "DXF INSERT 2B1E (FTB: FO-TY FF, W 460, H 450, DEPHT 55) = ST p.9 Schedule of Footings row FF 460 / 450 / 55, remark 'lift base' (Arabic)",
+  "H": {"value": 550, "source": "ST p.9 schedule FF H 55 (cm); p.14 footing depth 'AS PER SCHEDULE'", "detail": "ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'", "status": "PRINTED"}
+ },
+ "ring": {
+  "outer": [137242.2, 44448.0, 139442.2, 46648.0],
+  "inner": [137442.2, 44648.0, 139242.2, 46448.0],
+  "handles": "S-BW 10EB (outer) / 10EA (inner); p.14 wall '20'",
+  "columns": [[137242.2, 46148.0, 137442.2, 46648.0], [139242.2, 46148.0, 139442.2, 46648.0], [137242.2, 44448.0, 137442.2, 44948.0], [139242.2, 44448.0, 139492.2, 45448.0]],
+  "column_handles": "S-COL.BON 1099 C1, 1093 C2, 1096 C2, 1090 C9 (C9 0.05 proud of the ring over 1.00 m)"
+ },
+ "pit_height": {"value": null, "source": "ST p.14 'As Per Lift Manufactures recommendations' (no value)"},
+ "blinding": {
+  "t": {"value": 100, "source": "ST p.14 label '10cm Plain con.'", "detail": "ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'", "status": "PRINTED"},
+  "p": null
+ },
+ "p13_projection": {"value": 100, "source": "ST p.13 typical isolated footing '10 | L x W | 10' (T-233 / T-170 own reads)", "kind": "INHERITED"},
+ "p14_vector_read": {
+  "how": "PyMuPDF get_drawings on page 14 (rotation 270, transformed to the displayed sheet), lift detail lines; paper points (pt)",
+  "screed": {"printed_m": 0.05, "drawn_pt": 7.08, "lines_y_pt": [329.80, 336.88]},
+  "blinding": {"printed_m": 0.10, "drawn_pt": 14.16, "lines_y_pt": [339.76, 353.92]},
+  "membrane_under_screed_drawn_pt": 2.88,
+  "footing_faces_x_pt": [86.36, 410.96],
+  "membrane_side_x_pt": [[83.60, 86.36], [410.96, 413.84]],
+  "board_outer_x_pt": [76.40, 420.92],
+  "blinding_edges_x_pt": [65.12, 432.20],
+  "projection_beyond_footing_face_pt": [21.24, 21.24],
+  "projection_beyond_board_pt": [11.28, 11.28],
+  "board_drawn_pt": [7.20, 7.08]
+ },
+ "underlay": [
+  {"name": "screed", "t": {"value": 50, "source": "ST p.14 label '5cm Screed'", "detail": "ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'", "status": "PRINTED"}, "owner": "SCREED.LIFT_PIT_BASE (T-219)"},
+  {"name": "membrane", "t": null, "owner": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)"}
+ ],
+ "side_buildup": [
+  {"name": "membrane", "t": null, "owner": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)"},
+  {"name": "protection board", "t": null, "owner": "WP.LIFT_PIT_BOARD_FIXED (T-219)"}
+ ],
+ "second_plan_check": "GROUND BEAMS plan: ring S-BW 7C2 2200 x 2200 / 7BE 1800 x 1800 + hatch 7BD at x 98517.8, y 44448.0 = the foundation-plan ring 10EB / 10EA (+ hatch 10E9) shifted by the plan translation -38724.4 mm (T-205), same size and y: AGREE. The DXF (model space + every layout) has no lift detail text (only TEXT 1877 '10cm PLAIN CONCRETE.' of the pool detail): p.14 exists only in the PDF (R-ABSENT-SHEET-1, T-204).",
+ "neighbours": {
+  "nearest_footing": "F12 1ABF (4400 x 3200 at 131342.2, 43598.0): clear gap to FF 599.8 mm",
+  "others_within_1_5m": "INSERT F 1663 / 1664 at 999.9 mm; S-FOOTINGS 1B19 710.6 mm; lines 10FA / 10FB 868.3 mm",
+  "plot_line": "S-BOUN 1658 x 119542.2 .. 150912.2, y 36348.0 .. 51348.0: FF inside, nearest edge 3699.9 mm (top)"
+ }
+}

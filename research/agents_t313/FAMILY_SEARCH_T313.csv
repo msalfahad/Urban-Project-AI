@@ -1,0 +1,159 @@
+opening,floor,engine_ref,item_code,line_id,evidence_state,measured_net,low,high,physical_element,role
+D-GF-01,GF,OP-009,FIN.PLASTER,L-f4175f9915208dc5f9f7,BOUNDED_EXPOSURE,,1.08,1.2,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-01,GF,OP-009,FIN.FLOOR.PORCELAIN,L-d624b862024252463c55,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-01,GF,OP-009,ARCH.THRESHOLD,L-b3933a51bd95e9bc542b,BOUNDED_EXPOSURE,,0.2,0.2,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-02,GF,DOOR-GF-ab2b06fc,FIN.WP.DOORWAY_TRANSITION_NR,L-9d525f70200a4d241c07,SOURCE_DERIVED,1,,,wp_door_transition:DOOR-GF-ab2b06fc,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-03,GF,OP-005,FIN.PLASTER,L-9cf5a4b4db78cf57cf7f,PROVISIONAL,1.06,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-03,GF,OP-005,FIN.FLOOR.PORCELAIN,L-86977fa4d8a72a6ae2dc,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-03,GF,DOOR-GF-89957284,DOOR.EXTERNAL.ALUMINIUM,L-d6d16ad8d0df48804ba2,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-89957284,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-03,GF,OP-005,ARCH.THRESHOLD,L-74cd61b430eec9933d15,BOUNDED_EXPOSURE,,0.18,0.18,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-04,GF,OP-026,FIN.WP.DOORWAY,L-a6dffed80be55d5adf1f,SOURCE_DERIVED,0.12,,,doorway OP-026,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-04,GF,OP-026,FIN.PLASTER,L-f4e9614350ce4659d186,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-04,GF,OP-026,FIN.MARBLE.THRESHOLD,L-8901e416cbce62854fbe,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-GF-04,GF,DOOR-GF-88236964,DOOR.INTERNAL.PVC,L-5b9edd0e5e9b0c6e0cf8,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-88236964,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-04,GF,OP-026,FIN.WP.DOORWAY_TRANSITION,L-b4a23dc5fc953bc5a163,BOUNDED_EXPOSURE,,0.0,0.16,doorway transition OP-026,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-04,GF,OP-026,FIN.WP.DOORWAY_TRANSITION_NR,L-4ba8626fa078c17133ec,SOURCE_DERIVED,1,,,wp_door_transition:OP-026,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-05,GF,OP-025,FIN.WP.DOORWAY,L-e18901e01bc3d7a3fbd4,SOURCE_DERIVED,0.2,,,doorway OP-025,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-05,GF,OP-025,FIN.PLASTER,L-3ae66decd178e43c61e0,PROVISIONAL,1.08,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-05,GF,OP-025,FIN.MARBLE.THRESHOLD,L-c8b5c7f742b22388339e,SOURCE_DERIVED,0.2,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-GF-05,GF,OP-025,FIN.WP.DOORWAY_TRANSITION,L-b46013c737051e5441fe,BOUNDED_EXPOSURE,,0.0,0.2,doorway transition OP-025,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-05,GF,OP-025,FIN.WP.DOORWAY_TRANSITION_NR,L-926a7a01b22bb6dba63e,SOURCE_DERIVED,1,,,wp_door_transition:OP-025,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-06,GF,OP-008,FIN.PLASTER,L-e11de0ecd42fcb0b5756,PROVISIONAL,1.08,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-06,GF,OP-008,FIN.FLOOR.PORCELAIN,L-ed66b38026446c4cb230,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-06,GF,OP-008,ARCH.THRESHOLD,L-9fa69ef1a11ef9987967,BOUNDED_EXPOSURE,,0.2,0.2,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-07,GF,OP-021,FIN.PLASTER,L-2f94dca4dd5f2ec05822,BOUNDED_EXPOSURE,,1.28,1.4,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-07,GF,OP-021,FIN.FLOOR.PORCELAIN,L-e6e75fa6443bb0c9fd6a,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-07,GF,OP-021,ARCH.THRESHOLD,L-ad41b065d825c0190b7d,BOUNDED_EXPOSURE,,0.4,0.4,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-08,GF,OP-010,FIN.PLASTER,L-1f443fe4e172a90ddd7c,PROVISIONAL,1.08,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-08,GF,OP-010,FIN.FLOOR.PORCELAIN,L-a3bbe40ac52ff6f2764b,SOURCE_DERIVED,0.2,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-08,GF,DOOR-GF-028c6893,DOOR.INTERNAL.PVC,L-670576b22cfdb91523ad,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-028c6893,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-09,GF,OP-013,FIN.PLASTER,L-3c21b044ce980ec0ee75,PROVISIONAL,1.06,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-09,GF,OP-013,FIN.FLOOR.PORCELAIN,L-f475680e53ad96aabdaa,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-09,GF,OP-013,ARCH.THRESHOLD,L-8111095f6db78f0e674b,BOUNDED_EXPOSURE,,0.18,0.18,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-10,GF,DOOR-GF-2001e93f,FIN.WP.DOORWAY_TRANSITION_NR,L-fd2a8ebde5a4dce8bf0e,SOURCE_DERIVED,1,,,wp_door_transition:DOOR-GF-2001e93f,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-11,GF,OP-017,FIN.WP.DOORWAY,L-e3ffb8005f85e89113cb,SOURCE_DERIVED,0.12,,,doorway OP-017,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-11,GF,OP-017,FIN.PLASTER,L-7dcb2bab84655929f7e8,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-11,GF,OP-017,FIN.MARBLE.THRESHOLD,L-cbf11d0c1befb0519e98,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-GF-11,GF,DOOR-GF-e9e668bd,DOOR.INTERNAL.PVC,L-1832f4022abafcef39a6,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-e9e668bd,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-11,GF,OP-017,FIN.WP.DOORWAY_TRANSITION_NR,L-4bf0adee5d140bed7a5a,SOURCE_DERIVED,1,,,wp_door_transition:OP-017,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-12,GF,OP-018,FIN.WP.DOORWAY,L-9cbc8b1b9ebf6e79df66,SOURCE_DERIVED,0.12,,,doorway OP-018,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-12,GF,OP-018,FIN.PLASTER,L-672329032e0d70329d5f,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-12,GF,OP-018,FIN.MARBLE.THRESHOLD,L-07ce1d24164207cd06ca,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-GF-12,GF,DOOR-GF-de29a655,DOOR.INTERNAL.PVC,L-a3a4750c564f013002e1,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-de29a655,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-12,GF,OP-018,FIN.WP.DOORWAY_TRANSITION_NR,L-0884ba473e168f7002fb,SOURCE_DERIVED,1,,,wp_door_transition:OP-018,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-GF-13,GF,OP-012,FIN.PLASTER,L-61825a3103a391956d70,PROVISIONAL,0.81,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-GF-13,GF,OP-012,FIN.FLOOR.PORCELAIN,L-25915d704e8aa6e868af,SOURCE_DERIVED,0.15,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-GF-13,GF,DOOR-GF-5d1c808a,DOOR.INTERNAL.PVC,L-895c02bc2652eb51c405,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-GF-5d1c808a,"OTHER ELEMENT: the door set (nr), not a surface"
+D-GF-14,GF,,ARCH.THRESHOLD,L-8c2040d7c6ecce827316,BLOCKED_RFI,,,,threshold strip,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-GF-14,GF,DOOR-GF-e419ef5c,FIN.WP.DOORWAY_TRANSITION_NR,L-6f59a586f6703501e0ea,SOURCE_DERIVED,1,,,wp_door_transition:DOOR-GF-e419ef5c,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+A-GF-01,GF,OP-027,ARCH.PASSAGE,L-4f7b4d60c72563479f49,SOURCE_DERIVED,1,,,OP-027,"OTHER ELEMENT: the opening as a passage (nr), not a surface"
+A-GF-01,GF,OP-027,ARCH.THRESHOLD,L-868aee125705bb8d17f6,BLOCKED_RFI,,,,threshold strip,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+A-GF-01,GF,OP-027,FIN.WP.TERMINATION,L-9592048116294937ab6f,BOUNDED_EXPOSURE,,0.0,1.0,termination passage OP-027,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+W01,GF,OP-022,ARCH.WINDOW,L-d0d89b89aad0de8e121d,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-022,"OTHER ELEMENT: the window unit (nr), not a surface"
+W01,GF,OP-022,ARCH.WINDOW_REVEAL,L-0de10f4db591a2467b82,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W02,GF,OP-019,ARCH.WINDOW,L-bbc21f172b6ba5fff44b,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-019,"OTHER ELEMENT: the window unit (nr), not a surface"
+W02,GF,OP-019,ARCH.WINDOW_REVEAL,L-a430e89b6d52e1c994e0,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W04,GF,OP-004,ARCH.WINDOW,L-d1134b846364b94ad1da,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-004,"OTHER ELEMENT: the window unit (nr), not a surface"
+W04,GF,OP-004,ARCH.WINDOW_REVEAL,L-6add1d9c5ce0493a3e60,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W05,GF,OP-014,ARCH.WINDOW,L-fa338c218a2fcd27b2d4,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-014,"OTHER ELEMENT: the window unit (nr), not a surface"
+W05,GF,OP-014,ARCH.WINDOW_REVEAL,L-bd633784436adfde4033,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W06,GF,OP-015,ARCH.WINDOW,L-962b7e1207a28c986794,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-015,"OTHER ELEMENT: the window unit (nr), not a surface"
+W06,GF,OP-015,ARCH.WINDOW_REVEAL,L-eef0162ee1ce392fc7d5,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W07,GF,OP-016,ARCH.WINDOW,L-2887890e5b7db8db5399,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-016,"OTHER ELEMENT: the window unit (nr), not a surface"
+W07,GF,OP-016,ARCH.WINDOW_REVEAL,L-dec26399645ab26c13f9,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W08,GF,OP-006,ARCH.WINDOW,L-d58bc65c85a166151cd4,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-006,"OTHER ELEMENT: the window unit (nr), not a surface"
+W08,GF,OP-006,ARCH.WINDOW_REVEAL,L-b6691e6f54bf47eb4f89,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W09,GF,OP-024,ARCH.WINDOW,L-73171f7723fe82ad7df8,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-024,"OTHER ELEMENT: the window unit (nr), not a surface"
+W09,GF,OP-024,ARCH.WINDOW_REVEAL,L-1bedabba8af5d2529e77,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W10,GF,OP-023,ARCH.WINDOW,L-2077415d578e3d636f00,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-023,"OTHER ELEMENT: the window unit (nr), not a surface"
+W10,GF,OP-023,ARCH.WINDOW_REVEAL,L-bea7d46e51c809fbe623,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W11,GF,OP-028,ARCH.WINDOW,L-d25a4217b70f95caee7e,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-028,"OTHER ELEMENT: the window unit (nr), not a surface"
+W11,GF,OP-028,ARCH.WINDOW_REVEAL,L-10af4bb68e88181775a7,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W12,GF,OP-029,ARCH.WINDOW,L-46f4b2fc80c5ca3e0c2a,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-029,"OTHER ELEMENT: the window unit (nr), not a surface"
+W12,GF,OP-029,ARCH.WINDOW_REVEAL,L-36e2b88d45f02c84a404,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+D-1F-01,1F,OP-004,FIN.WP.DOORWAY,L-415228b01d9471c888e1,SOURCE_DERIVED,0.12,,,doorway OP-004,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-01,1F,OP-004,FIN.PLASTER,L-54b2eb0ad40cc47b9be5,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-01,1F,OP-004,FIN.MARBLE.THRESHOLD,L-709aba3ec07bb0f26319,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-1F-01,1F,DOOR-1F-4c77d0af,DOOR.INTERNAL.PVC,L-e22be2562e2d66b72809,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-4c77d0af,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-01,1F,OP-004,FIN.WP.DOORWAY_TRANSITION,L-aed6f48195f99648c3f3,BOUNDED_EXPOSURE,,0.0,0.16,doorway transition OP-004,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-01,1F,OP-004,FIN.WP.DOORWAY_TRANSITION_NR,L-c9f50613bf7075e4ef79,SOURCE_DERIVED,1,,,wp_door_transition:OP-004,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-02,1F,OP-020,FIN.PLASTER,L-0bc19199447147ca226a,PROVISIONAL,0.81,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-02,1F,OP-020,FIN.FLOOR.PORCELAIN,L-47d54293f7a3856044e1,SOURCE_DERIVED,0.15,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-1F-02,1F,DOOR-1F-68111f0f,DOOR.INTERNAL.PVC,L-c8d14c393de2e1e8be09,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-68111f0f,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-04,1F,DOOR-1F-0c35dbd6,FIN.WP.DOORWAY_TRANSITION_NR,L-530e99c7e323bc4f2be4,SOURCE_DERIVED,1,,,wp_door_transition:DOOR-1F-0c35dbd6,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-05,1F,OP-008,FIN.WP.DOORWAY,L-e023ab45fd02c8531234,SOURCE_DERIVED,0.18,,,doorway OP-008,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-05,1F,OP-008,FIN.PLASTER,L-f3590fade6406f912d2e,PROVISIONAL,1.06,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-05,1F,OP-008,FIN.MARBLE.THRESHOLD,L-ccb1182ae9409b432968,SOURCE_DERIVED,0.18,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-1F-05,1F,DOOR-1F-fc80ac97,DOOR.INTERNAL.PVC,L-18b987012548fce6a23f,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-fc80ac97,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-05,1F,OP-008,FIN.WP.DOORWAY_TRANSITION,L-689197a4778b786de143,BOUNDED_EXPOSURE,,0.0,0.18,doorway transition OP-008,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-05,1F,OP-008,FIN.WP.DOORWAY_TRANSITION_NR,L-94891a6fcb948fb080fe,SOURCE_DERIVED,1,,,wp_door_transition:OP-008,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-06,1F,OP-010,FIN.WP.DOORWAY,L-bdf48c327992229649ca,SOURCE_DERIVED,0.12,,,doorway OP-010,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-06,1F,OP-010,FIN.PLASTER,L-f8a0d9bfc3e6a3f113b2,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-06,1F,OP-010,FIN.MARBLE.THRESHOLD,L-92721c425ab3612bb035,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-1F-06,1F,DOOR-1F-16058561,DOOR.INTERNAL.PVC,L-30db386905784a3799aa,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-16058561,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-06,1F,OP-010,FIN.WP.DOORWAY_TRANSITION_NR,L-ad75db1b19e23beede53,SOURCE_DERIVED,1,,,wp_door_transition:OP-010,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-07,1F,OP-019,FIN.WP.DOORWAY,L-925603593b80b629965f,SOURCE_DERIVED,0.12,,,doorway OP-019,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-07,1F,OP-019,FIN.PLASTER,L-f38f6ecefecd7e617cac,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-07,1F,OP-019,FIN.MARBLE.THRESHOLD,L-f2d296f1fc5184419774,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-1F-07,1F,DOOR-1F-a575d967,DOOR.INTERNAL.PVC,L-ac6227202ed9e9f75ea4,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-a575d967,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-07,1F,OP-019,FIN.WP.DOORWAY_TRANSITION,L-19f6405a5e60a99c29f7,BOUNDED_EXPOSURE,,0.0,0.16,doorway transition OP-019,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-07,1F,OP-019,FIN.WP.DOORWAY_TRANSITION_NR,L-066dbbae8a2695a0e405,SOURCE_DERIVED,1,,,wp_door_transition:OP-019,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-08,1F,OP-005,FIN.PLASTER,L-a85b83a93486fdc400f8,PROVISIONAL,0.795,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-08,1F,OP-005,FIN.FLOOR.PORCELAIN,L-fcf9fbf8a5145fbd7bca,SOURCE_DERIVED,0.135,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-1F-08,1F,DOOR-1F-3b125f0d,DOOR.INTERNAL.PVC,L-234e7738e3c3e1e960f8,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-3b125f0d,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-09,1F,OP-006,FIN.PLASTER,L-5d309e25e8b180283606,PROVISIONAL,0.795,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-09,1F,OP-006,FIN.FLOOR.PORCELAIN,L-05443e1e907e1a21c4a3,SOURCE_DERIVED,0.135,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-1F-09,1F,DOOR-1F-e308dda9,DOOR.INTERNAL.PVC,L-c89459d24f20a9c967a3,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-e308dda9,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-10,1F,OP-018,FIN.WP.DOORWAY,L-9c34349b61d8d9103bce,SOURCE_DERIVED,0.12,,,doorway OP-018,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-10,1F,OP-018,FIN.PLASTER,L-537fc3896f24cf408fe6,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-1F-10,1F,OP-018,FIN.MARBLE.THRESHOLD,L-a4909527ff598315be61,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-1F-10,1F,DOOR-1F-e6b4f8dc,DOOR.INTERNAL.PVC,L-340b9ef8ee4ff5c70e00,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-1F-e6b4f8dc,"OTHER ELEMENT: the door set (nr), not a surface"
+D-1F-10,1F,OP-018,FIN.WP.DOORWAY_TRANSITION,L-dfc4e74604047cb21407,BOUNDED_EXPOSURE,,0.0,0.16,doorway transition OP-018,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-1F-10,1F,OP-018,FIN.WP.DOORWAY_TRANSITION_NR,L-4df996d13688a37d0ef7,SOURCE_DERIVED,1,,,wp_door_transition:OP-018,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+A-1F-01,1F,OP-011,ARCH.PASSAGE,L-9e954a8e7da9329acc4f,SOURCE_DERIVED,1,,,OP-011,"OTHER ELEMENT: the opening as a passage (nr), not a surface"
+A-1F-01,1F,OP-011,FIN.FLOOR.PORCELAIN,L-e2eb7cee560d74ae91e4,SOURCE_DERIVED,0.15,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+W13,1F,OP-021,ARCH.WINDOW,L-be58427866630e301943,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-021,"OTHER ELEMENT: the window unit (nr), not a surface"
+W13,1F,OP-021,ARCH.WINDOW_REVEAL,L-ec91f75c35edf30f9c65,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W14,1F,OP-022,ARCH.WINDOW,L-7e20d57085d918cff70c,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-022,"OTHER ELEMENT: the window unit (nr), not a surface"
+W14,1F,OP-022,ARCH.WINDOW_REVEAL,L-ea48300c45f8efa96ffe,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W15,1F,OP-016,ARCH.WINDOW,L-38fb200ae48d50d4b2c3,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-016,"OTHER ELEMENT: the window unit (nr), not a surface"
+W15,1F,OP-016,ARCH.WINDOW_REVEAL,L-0e2e7299371efb8338cc,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W16,1F,OP-017,ARCH.WINDOW,L-f8521458abbe65fcfe91,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-017,"OTHER ELEMENT: the window unit (nr), not a surface"
+W16,1F,OP-017,ARCH.WINDOW_REVEAL,L-146170b53ca02c2456f9,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W17,1F,COP-001,ARCH.WINDOW,L-eee37318afd2ecd161a2,NOT_APPLICABLE_WITH_EVIDENCE,,,,COP-001,"OTHER ELEMENT: the window unit (nr), not a surface"
+W17,1F,COP-001,ARCH.WINDOW_REVEAL,L-c90d5d6c06a671fc3b99,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W19,1F,OP-001,ARCH.WINDOW,L-51b6e5ac629929c4210d,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-001,"OTHER ELEMENT: the window unit (nr), not a surface"
+W19,1F,OP-001,ARCH.WINDOW_REVEAL,L-e709025cfb48633cc369,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W20,1F,OP-002,ARCH.WINDOW,L-96ba5678e8c0a732f1c6,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-002,"OTHER ELEMENT: the window unit (nr), not a surface"
+W20,1F,OP-002,ARCH.WINDOW_REVEAL,L-e60b1ffc24c8bc76ec1a,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W21,1F,OP-013,ARCH.WINDOW,L-ead5c08041465d308adb,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-013,"OTHER ELEMENT: the window unit (nr), not a surface"
+W21,1F,OP-013,ARCH.WINDOW_REVEAL,L-cdd13c017d2f5328032e,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W22,1F,OP-014,ARCH.WINDOW,L-50aab12d0b118910f5c4,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-014,"OTHER ELEMENT: the window unit (nr), not a surface"
+W22,1F,OP-014,ARCH.WINDOW_REVEAL,L-dbec1a970ca591bebd43,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W23,1F,OP-015,ARCH.WINDOW,L-9c928d8c9728511a9804,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-015,"OTHER ELEMENT: the window unit (nr), not a surface"
+W23,1F,OP-015,ARCH.WINDOW_REVEAL,L-1b5962c15890ecb2f6da,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W24,1F,OP-003,ARCH.WINDOW,L-f7c951a57e6cf491f564,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-003,"OTHER ELEMENT: the window unit (nr), not a surface"
+W24,1F,OP-003,ARCH.WINDOW_REVEAL,L-560e87c03e18569ae941,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W25,1F,OP-012,ARCH.WINDOW,L-a2c86f17ff10988bf09e,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-012,"OTHER ELEMENT: the window unit (nr), not a surface"
+W25,1F,OP-012,ARCH.WINDOW_REVEAL,L-63087103666a3c4b177b,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+D-2F-01,2F,OP-001,FIN.PLASTER,L-ca7d121f07fd1a73536d,PROVISIONAL,0.81,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-2F-01,2F,OP-001,FIN.FLOOR.PORCELAIN,L-3f8fc80a79a098d4d81d,NOT_APPLICABLE_WITH_EVIDENCE,,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-2F-01,2F,DOOR-2F-3fd80af9,DOOR.EXTERNAL.ALUMINIUM,L-13a9b6f838e8fc4e0c13,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-2F-3fd80af9,"OTHER ELEMENT: the door set (nr), not a surface"
+D-2F-01,2F,OP-001,ARCH.THRESHOLD,L-3e5c6b7af8dd06b2836c,BOUNDED_EXPOSURE,,0.15,0.15,THRESHOLD,"OTHER ELEMENT: floor-level strip across the opening (a floor / threshold element; a door or an arch has no sill reveal, so not a reveal component of this ledger)"
+D-2F-02,2F,OP-007,FIN.PLASTER,L-39497d7b7639a776f8f2,PROVISIONAL,1.06,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-2F-02,2F,OP-007,FIN.FLOOR.PORCELAIN,L-dc5434957e2f76cc794b,SOURCE_DERIVED,0.18,,,doorway strip,"OTHER ELEMENT: floor finish through the opening (doorway strip), not a reveal component"
+D-2F-02,2F,DOOR-2F-20974d83,DOOR.INTERNAL.PVC,L-48607261d2c129ffc8b6,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-2F-20974d83,"OTHER ELEMENT: the door set (nr), not a surface"
+D-2F-03,2F,OP-006,FIN.WP.DOORWAY,L-cc37f166bbea265ed2cf,SOURCE_DERIVED,0.12,,,doorway OP-006,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-2F-03,2F,OP-006,FIN.PLASTER,L-833ba74bab1404d1f6cc,PROVISIONAL,0.78,,,door jambs and head,BOUND: door reveal jambs + head (UP-FIN-PLASTER-001)
+D-2F-03,2F,OP-006,FIN.MARBLE.THRESHOLD,L-0ca0f91144403e323c68,SOURCE_DERIVED,0.12,,,marble threshold,"OTHER ELEMENT: floor-level strip across the opening (threshold finish), not a reveal component"
+D-2F-03,2F,DOOR-2F-a016c240,DOOR.INTERNAL.PVC,L-f5473cc47bf3f970867a,NOT_APPLICABLE_WITH_EVIDENCE,,,,DOOR-2F-a016c240,"OTHER ELEMENT: the door set (nr), not a surface"
+D-2F-03,2F,OP-006,FIN.WP.DOORWAY_TRANSITION,L-b5a04e7c058346b6f734,BOUNDED_EXPOSURE,,0.0,0.16,doorway transition OP-006,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+D-2F-03,2F,OP-006,FIN.WP.DOORWAY_TRANSITION_NR,L-0b2c2c88e3ae80b345b3,SOURCE_DERIVED,1,,,wp_door_transition:OP-006,"OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+W26,2F,OP-008,ARCH.WINDOW,L-82367b94ec3d8a42cba7,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-008,"OTHER ELEMENT: the window unit (nr), not a surface"
+W26,2F,OP-008,ARCH.WINDOW_REVEAL,L-d91627a1feb6dc854723,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W27,2F,OP-003,ARCH.WINDOW,L-564fc95719802ea1d84e,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-003,"OTHER ELEMENT: the window unit (nr), not a surface"
+W27,2F,OP-003,ARCH.WINDOW_REVEAL,L-d540d2198577747bcf84,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W28,2F,OP-004,ARCH.WINDOW,L-9a76882c29c3afc17e82,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-004,"OTHER ELEMENT: the window unit (nr), not a surface"
+W28,2F,OP-004,ARCH.WINDOW_REVEAL,L-44f5f5c49b50d62b44f3,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows
+W29,2F,OP-005,ARCH.WINDOW,L-8e61653767b71ba11fcd,NOT_APPLICABLE_WITH_EVIDENCE,,,,OP-005,"OTHER ELEMENT: the window unit (nr), not a surface"
+W29,2F,OP-005,ARCH.WINDOW_REVEAL,L-a6565fe2cd9df42f77fd,BLOCKED_RFI,,,,window reveal strip,BOUND: window sill / threshold rows

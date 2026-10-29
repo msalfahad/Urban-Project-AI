@@ -1,0 +1,106 @@
+{
+ "handles": {
+  "12A5": {
+   "layer": "2",
+   "length_m": 5.68708,
+   "what": "1F roof +9.70: sea-side 0.20 wall line (layer 2) south part"
+  },
+  "12A7": {
+   "layer": "5",
+   "length_m": 11.6,
+   "what": "1F roof +9.70: sea-side parapet inner face (layer 5), straight"
+  },
+  "12B9": {
+   "layer": "5",
+   "length_m": 4.125,
+   "what": "1F roof +9.70: SW-2 parapet inner face (layer 5), stops on the D band"
+  },
+  "12E2": {
+   "layer": "D",
+   "length_m": 2.768416,
+   "what": "1F roof +9.70: D band edge (layer D)"
+  },
+  "131B": {
+   "layer": "2",
+   "length_m": 4.807698,
+   "what": "1F roof +9.70: sea-side 0.20 wall line (layer 2) north part"
+  },
+  "131C": {
+   "layer": "2",
+   "length_m": 1.005222,
+   "what": "1F roof +9.70: sea-side 0.20 wall line (layer 2) middle part"
+  },
+  "AC7": {
+   "layer": "5",
+   "length_m": 31.37,
+   "what": "boundary / parapet outer line (layer 5), neighbour side"
+  },
+  "B25": {
+   "layer": "5",
+   "length_m": 18.97,
+   "what": "GF terrace +5.50: NE-4 parapet inner face (layer 5), from the divider east face"
+  },
+  "B33": {
+   "layer": "5",
+   "length_m": 7.7,
+   "what": "GF terrace +5.50: NW-7 parapet inner line (layer 5)"
+  },
+  "B34": {
+   "layer": "5",
+   "length_m": 11.8,
+   "what": "annex roof: boundary parapet inner face (layer 5), full run to the divider"
+  },
+  "B35": {
+   "layer": "5",
+   "length_m": 6.2,
+   "what": "annex roof: north parapet inner face (layer 5), stops on the D band"
+  },
+  "B3A": {
+   "layer": "1",
+   "length_m": 4.018241,
+   "what": "house SW wall face (layer 1) on the annex roof"
+  },
+  "B3C": {
+   "layer": "D",
+   "length_m": 4.018241,
+   "what": "D band edge (layer D) on the annex roof"
+  },
+  "BDB": {
+   "layer": "5",
+   "length_m": 0.894778,
+   "what": "GF terrace +5.50: SW-9 parapet inner face (layer 5), stops on a D-band curve"
+  },
+  "C9E": {
+   "layer": "D",
+   "length_m": 0.6,
+   "what": "GF terrace +5.50: D band (layer D)"
+  },
+  "CEC": {
+   "layer": "5",
+   "length_m": 1.5,
+   "what": "annex roof: divider west face (layer 5), runs to the outer boundary line"
+  },
+  "CED": {
+   "layer": "5",
+   "length_m": 1.3,
+   "what": "annex roof: divider east face (layer 5)"
+  }
+ },
+ "relations": {
+  "12B9_ends_on_D_band": true,
+  "AC7_offset_from_B34_m": 0.2,
+  "B25_ends_on_CED": true,
+  "B34_east_end_on_CEC_m": 0.0,
+  "B35_ends_on_D_band": true,
+  "B35_west_of_D_band_gap_m": 0.2,
+  "B3A_to_CEC_m": 1.4,
+  "BDB_ends_on_C9E": true,
+  "CEC_reaches_AC7": true,
+  "divider_length_CED_m": 1.3,
+  "divider_thickness_CEC_CED_m": 0.2,
+  "sea_wall_line_offset_from_12A7_m": 0.2
+ },
+ "sha256_8": "ab54dd55",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf",
+ "units": "m (drawing mm / 1000)"
+}
