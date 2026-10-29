@@ -323,3 +323,12 @@ def test_note_already_complete_refused():
     ln = _noted(full, cut_at=len(full))
     with pytest.raises(A.InputsError, match="nothing cut"):
         A.note_line(ln, {"line_id": ln["line_id"], "task": "T-W2", "field": "base_ownership_v3021"})
+
+
+# ------------------------------------------------------------------------------------------------ export integrity
+def test_merged_t330_check_reads_the_filled_line_ok_and_the_held_line_not_applicable():
+    from tools import t330_deductions_check as C
+    _ls, _ch, _l, _f, out, _i, _d = run()
+    by = {(ln["location"]["room_id"], ln["item_code"]): ln for ln in out}
+    assert C.check_line(by[("B1", A.PLASTER)])["category"] == "OK"          # gross - deductions = net, ids named
+    assert C.check_line(by[("B2", A.PLASTER)])["category"] == "NOT_APPLICABLE"   # held: no arithmetic, never OK
