@@ -1,0 +1,888 @@
+{
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179...)",
+ "hatch_layer": "S-HAT.BAT",
+ "census": [
+  {
+   "handle": "273",
+   "sheet": "GF roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.75,
+   "hatch_perimeter_m": 4.0,
+   "edge_m": {
+    "MEMBER_FACE": 3.75,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.25,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {
+    "S-REIN-SLAB LINE 439": 0.25
+   },
+   "hatch_is_panel_outline": false,
+   "faces_under": [],
+   "rebuilt_status": "HELD",
+   "rebuilt_m2": null,
+   "rebuilt_perimeter_m": null,
+   "residual_m2": null,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": null,
+   "held_why": "the hatch marks a PORTION of a larger drawn face (a division inside one member or panel), not a panel",
+   "host_faces": [
+    {
+     "t139_id": "GF-011",
+     "t139_class": "BEAM",
+     "face_m2": 2.7,
+     "under_hatch_m2": 0.75
+    }
+   ],
+   "annotation_cut_on_member_alignment_m": 0.25,
+   "consumer_readings": {
+    "loop1_only_m2": 0.75,
+    "loop1_only_perimeter_m": 4.0,
+    "t209_chord_union_m2": 0.75
+   },
+   "residual_other_m2": null,
+   "hatch_outside_panel_m2": null,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "275",
+   "sheet": "GF roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 1,
+   "islands": 4,
+   "hatch_m2": 3.325,
+   "hatch_perimeter_m": 7.3,
+   "edge_m": {
+    "MEMBER_FACE": 7.3,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-016",
+     "t139_class": "SLAB",
+     "face_m2": 3.325,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 3.325,
+   "rebuilt_perimeter_m": 7.3,
+   "residual_m2": 0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 3.325,
+    "loop1_only_perimeter_m": 7.3,
+    "t209_chord_union_m2": 3.3316
+   },
+   "residual_other_m2": 0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-c544aa98e09609150e4d",
+     "element_id": "P-C:SLABS:GF:SITE-5870887b5dbc8980",
+     "m3": 0.532
+    }
+   ]
+  },
+  {
+   "handle": "276",
+   "sheet": "GF roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 1,
+   "islands": 3,
+   "hatch_m2": 2.5725,
+   "hatch_perimeter_m": 6.44,
+   "edge_m": {
+    "MEMBER_FACE": 6.44,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-015",
+     "t139_class": "SLAB",
+     "face_m2": 2.5725,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 2.5725,
+   "rebuilt_perimeter_m": 6.44,
+   "residual_m2": 0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 2.5725,
+    "loop1_only_perimeter_m": 6.44,
+    "t209_chord_union_m2": 2.6048
+   },
+   "residual_other_m2": 0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-7117723666e439340d84",
+     "element_id": "P-C:SLABS:GF:SITE-850b776ade14170d",
+     "m3": 0.4116
+    }
+   ]
+  },
+  {
+   "handle": "280",
+   "sheet": "GF roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 2,
+   "islands": 4,
+   "hatch_m2": 7.3009,
+   "hatch_perimeter_m": 11.6255,
+   "edge_m": {
+    "MEMBER_FACE": 11.626,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-141",
+     "t139_class": "SLAB",
+     "face_m2": 7.3009,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 7.3009,
+   "rebuilt_perimeter_m": 11.6255,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 7.1231,
+    "loop1_only_perimeter_m": 11.6122,
+    "t209_chord_union_m2": 7.3009
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-abe0c36f94dba208300f",
+     "element_id": "P-C:SLABS:GF:SITE-26def7f328877275",
+     "m3": 1.168145
+    }
+   ]
+  },
+  {
+   "handle": "287",
+   "sheet": "GF roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 1,
+   "islands": 2,
+   "hatch_m2": 2.0804,
+   "hatch_perimeter_m": 7.0778,
+   "edge_m": {
+    "MEMBER_FACE": 7.078,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-128",
+     "t139_class": "SLAB",
+     "face_m2": 2.0804,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 2.0804,
+   "rebuilt_perimeter_m": 7.0778,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 2.0804,
+    "loop1_only_perimeter_m": 7.0778,
+    "t209_chord_union_m2": 2.1456
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-84ca57fea5c1db2a0076",
+     "element_id": "P-C:SLABS:GF:SITE-f945be5158a99f81",
+     "m3": 0.332868
+    }
+   ]
+  },
+  {
+   "handle": "298",
+   "sheet": "GF roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 2,
+   "islands": 5,
+   "hatch_m2": 4.1076,
+   "hatch_perimeter_m": 8.8426,
+   "edge_m": {
+    "MEMBER_FACE": 8.052,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.791,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {
+    "S-TEXT-SLAB CIRCLE 31C r 0.515": 0.791
+   },
+   "hatch_is_panel_outline": false,
+   "faces_under": [
+    {
+     "t139_id": "GF-081",
+     "t139_class": "SLAB",
+     "face_m2": 4.1176,
+     "share_under_hatch": 0.9945
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 4.1176,
+   "rebuilt_perimeter_m": 8.8413,
+   "residual_m2": 0.01,
+   "residual_annotation_m2": {
+    "S-TEXT TEXT 46C": 0.0031,
+    "S-TEXT-SLAB CIRCLE 31C r 0.515": 0.0225
+   },
+   "hatch_beyond_panel_under_annotation_m2": {
+    "S-TEXT-SLAB CIRCLE 31C r 0.515": 0.0125
+   },
+   "residual_annotation_net_m2": 0.01,
+   "held_why": null,
+   "host_faces": [
+    {
+     "t139_id": "GF-082",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.0903,
+     "under_hatch_m2": 0.0125
+    }
+   ],
+   "annotation_cut_on_member_alignment_m": 0.341,
+   "consumer_readings": {
+    "loop1_only_m2": 3.8808,
+    "loop1_only_perimeter_m": 8.5594,
+    "t209_chord_union_m2": 4.1096
+   },
+   "residual_other_m2": 0.0,
+   "hatch_outside_panel_m2": 0.0125,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-70830345ffdabc4cf7d5",
+     "element_id": "P-C:SLABS:GF:SITE-85224b7aeee85ea1",
+     "m3": 0.658817
+    }
+   ]
+  },
+  {
+   "handle": "2B1",
+   "sheet": "GF roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.1,
+   "hatch_perimeter_m": 1.4,
+   "edge_m": {
+    "MEMBER_FACE": 1.4,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-112",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.1,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 0.1,
+   "rebuilt_perimeter_m": 1.4,
+   "residual_m2": 0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 0.1,
+    "loop1_only_perimeter_m": 1.4,
+    "t209_chord_union_m2": 0.1
+   },
+   "residual_other_m2": 0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "2B4",
+   "sheet": "GF roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 1.2,
+   "hatch_perimeter_m": 6.8,
+   "edge_m": {
+    "MEMBER_FACE": 6.65,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.15,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {
+    "S-REIN-SLAB LINE 486": 0.15
+   },
+   "hatch_is_panel_outline": false,
+   "faces_under": [],
+   "rebuilt_status": "HELD",
+   "rebuilt_m2": null,
+   "rebuilt_perimeter_m": null,
+   "residual_m2": null,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": null,
+   "held_why": "the hatch marks a PORTION of a larger drawn face (a division inside one member or panel), not a panel",
+   "host_faces": [
+    {
+     "t139_id": "GF-066",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 2.64,
+     "under_hatch_m2": 1.2
+    }
+   ],
+   "annotation_cut_on_member_alignment_m": 0.15,
+   "consumer_readings": {
+    "loop1_only_m2": 1.2,
+    "loop1_only_perimeter_m": 6.8,
+    "t209_chord_union_m2": 1.2
+   },
+   "residual_other_m2": null,
+   "hatch_outside_panel_m2": null,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "38C",
+   "sheet": "2F roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.226,
+   "hatch_perimeter_m": 2.66,
+   "edge_m": {
+    "MEMBER_FACE": 2.66,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "2F-007",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.226,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 0.226,
+   "rebuilt_perimeter_m": 2.66,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 0.226,
+    "loop1_only_perimeter_m": 2.66,
+    "t209_chord_union_m2": 0.226
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "390",
+   "sheet": "2F roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.62,
+   "hatch_perimeter_m": 6.6,
+   "edge_m": {
+    "MEMBER_FACE": 6.6,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "2F-032",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.62,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 0.62,
+   "rebuilt_perimeter_m": 6.6,
+   "residual_m2": 0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 0.62,
+    "loop1_only_perimeter_m": 6.6,
+    "t209_chord_union_m2": 0.62
+   },
+   "residual_other_m2": 0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "391",
+   "sheet": "2F roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.3563,
+   "hatch_perimeter_m": 3.9635,
+   "edge_m": {
+    "MEMBER_FACE": 3.963,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "2F-048",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.3563,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 0.3563,
+   "rebuilt_perimeter_m": 3.9635,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 0.3563,
+    "loop1_only_perimeter_m": 3.9635,
+    "t209_chord_union_m2": 0.3563
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "54D",
+   "sheet": "GF roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 0.345,
+   "hatch_perimeter_m": 2.9,
+   "edge_m": {
+    "MEMBER_FACE": 2.9,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "GF-143",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.03,
+     "share_under_hatch": 1.0
+    },
+    {
+     "t139_id": "GF-144",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.1725,
+     "share_under_hatch": 1.0
+    },
+    {
+     "t139_id": "GF-158",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 0.1425,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 0.345,
+   "rebuilt_perimeter_m": 2.9,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 0.345,
+    "loop1_only_perimeter_m": 2.9,
+    "t209_chord_union_m2": 0.345
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": []
+  },
+  {
+   "handle": "5BF",
+   "sheet": "1F roof slab",
+   "legend": "Sunken slab.",
+   "region_loops": 1,
+   "islands": 3,
+   "hatch_m2": 5.4,
+   "hatch_perimeter_m": 9.6,
+   "edge_m": {
+    "MEMBER_FACE": 9.6,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {},
+   "hatch_is_panel_outline": true,
+   "faces_under": [
+    {
+     "t139_id": "1F-018",
+     "t139_class": "SLAB",
+     "face_m2": 5.4,
+     "share_under_hatch": 1.0
+    }
+   ],
+   "rebuilt_status": "DRAWING-CONFIRMED",
+   "rebuilt_m2": 5.4,
+   "rebuilt_perimeter_m": 9.6,
+   "residual_m2": -0.0,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": 0.0,
+   "held_why": null,
+   "host_faces": [],
+   "annotation_cut_on_member_alignment_m": 0.0,
+   "consumer_readings": {
+    "loop1_only_m2": 5.4,
+    "loop1_only_perimeter_m": 9.6,
+    "t209_chord_union_m2": 5.4
+   },
+   "residual_other_m2": -0.0,
+   "hatch_outside_panel_m2": 0.0,
+   "candidate_slab_lines": [
+    {
+     "line_id": "L-4baffcb95570ca418d0c",
+     "element_id": "P-C:SLABS:1F:SITE-516a3b7ae454a85c",
+     "m3": 0.864
+    }
+   ]
+  },
+  {
+   "handle": "5E0",
+   "sheet": "1F roof slab",
+   "legend": "Cantilever portion.",
+   "region_loops": 1,
+   "islands": 0,
+   "hatch_m2": 1.35,
+   "hatch_perimeter_m": 6.9,
+   "edge_m": {
+    "MEMBER_FACE": 6.7,
+    "FREE_EDGE": 0.0,
+    "ANNOTATION_CUT": 0.2,
+    "UNEXPLAINED": 0.0
+   },
+   "annotation_cuts": {
+    "S-REIN-SLAB LINE 6E1": 0.2
+   },
+   "hatch_is_panel_outline": false,
+   "faces_under": [],
+   "rebuilt_status": "HELD",
+   "rebuilt_m2": null,
+   "rebuilt_perimeter_m": null,
+   "residual_m2": null,
+   "residual_annotation_m2": {},
+   "hatch_beyond_panel_under_annotation_m2": {},
+   "residual_annotation_net_m2": null,
+   "held_why": "the hatch marks a PORTION of a larger drawn face (a division inside one member or panel), not a panel",
+   "host_faces": [
+    {
+     "t139_id": "1F-045",
+     "t139_class": "BEAM_OR_COLUMN",
+     "face_m2": 2.995,
+     "under_hatch_m2": 1.35
+    }
+   ],
+   "annotation_cut_on_member_alignment_m": 0.2,
+   "consumer_readings": {
+    "loop1_only_m2": 1.35,
+    "loop1_only_perimeter_m": 6.9,
+    "t209_chord_union_m2": 1.35
+   },
+   "residual_other_m2": null,
+   "hatch_outside_panel_m2": null,
+   "candidate_slab_lines": []
+  }
+ ],
+ "off_sheet": [
+  {
+   "handle": "10E9",
+   "pattern": "ANSI37",
+   "scale": 1000.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 4.84,
+   "islands_m2": [
+    3.24
+   ],
+   "ring_net_m2": 1.6,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "1657",
+   "pattern": "ANSI37",
+   "scale": 1000.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 470.55,
+   "islands_m2": [
+    452.162
+   ],
+   "ring_net_m2": 18.388,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "1A21",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A23",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A25",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A2A",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A2C",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A2E",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A30",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A32",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A34",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A48",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A4C",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A4E",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A50",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A52",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A54",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A59",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A5B",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A5D",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A5F",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A61",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A63",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "1A69",
+   "pattern": "SOLID",
+   "scale": 1.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)"
+  },
+  {
+   "handle": "7BD",
+   "pattern": "ANSI37",
+   "scale": 1000.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 4.84,
+   "islands_m2": [
+    3.24
+   ],
+   "ring_net_m2": 1.6,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "7C4",
+   "pattern": "ANSI37",
+   "scale": 800.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 10.9364,
+   "islands_m2": [
+    8.5786
+   ],
+   "ring_net_m2": 2.3578,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "7FB",
+   "pattern": "AR-B816C",
+   "scale": 15.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 0.23,
+   "islands_m2": [],
+   "ring_net_m2": 0.23,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "7FD",
+   "pattern": "AR-B816C",
+   "scale": 15.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 8.344,
+   "islands_m2": [],
+   "ring_net_m2": 8.344,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  },
+  {
+   "handle": "80F",
+   "pattern": "AR-B816",
+   "scale": 15.0,
+   "why": "not on a roof-slab plan (outside the three T-139 sheet windows)",
+   "outer_m2": 0.24,
+   "islands_m2": [],
+   "ring_net_m2": 0.24,
+   "role": "not a slab legend on these sheets (wall / ring hatch)"
+  }
+ ]
+}

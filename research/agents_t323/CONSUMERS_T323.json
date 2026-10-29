@@ -1,0 +1,250 @@
+{
+ "t213": {
+  "275": {
+   "A_hatch_m2": 3.325,
+   "A_panel_m2": 3.325,
+   "P_hatch_m": 7.3,
+   "P_panel_m": 7.3,
+   "P_ext_hatch_m": 5.55,
+   "P_ext_panel_m": 5.55,
+   "P_shared_hatch_m": 1.75,
+   "P_shared_panel_m": 1.75
+  },
+  "276": {
+   "A_hatch_m2": 2.5725,
+   "A_panel_m2": 2.5725,
+   "P_hatch_m": 6.44,
+   "P_panel_m": 6.44,
+   "P_ext_hatch_m": 4.69,
+   "P_ext_panel_m": 4.69,
+   "P_shared_hatch_m": 1.75,
+   "P_shared_panel_m": 1.75
+  },
+  "280": {
+   "A_hatch_m2": 7.3009,
+   "A_panel_m2": 7.3009,
+   "P_hatch_m": 11.6255,
+   "P_panel_m": 11.6255,
+   "P_ext_hatch_m": 8.6418,
+   "P_ext_panel_m": 8.6527,
+   "P_shared_hatch_m": 2.9838,
+   "P_shared_panel_m": 2.9728
+  },
+  "287": {
+   "A_hatch_m2": 2.0804,
+   "A_panel_m2": 2.0804,
+   "P_hatch_m": 7.0778,
+   "P_panel_m": 7.0778,
+   "P_ext_hatch_m": 4.1268,
+   "P_ext_panel_m": 4.1268,
+   "P_shared_hatch_m": 2.951,
+   "P_shared_panel_m": 2.951
+  },
+  "298": {
+   "A_hatch_m2": 4.1076,
+   "A_panel_m2": 4.1176,
+   "P_hatch_m": 8.8426,
+   "P_panel_m": 8.8413,
+   "P_ext_hatch_m": 8.8426,
+   "P_ext_panel_m": 8.8413,
+   "P_shared_hatch_m": 0,
+   "P_shared_panel_m": 0
+  },
+  "5BF": {
+   "A_hatch_m2": 5.4,
+   "A_panel_m2": 5.4,
+   "P_hatch_m": 9.6,
+   "P_panel_m": 9.6,
+   "P_ext_hatch_m": 9.6,
+   "P_ext_panel_m": 9.6,
+   "P_shared_hatch_m": 0,
+   "P_shared_panel_m": 0
+  }
+ },
+ "t288": {
+  "walls_hatch_vs_panel": {
+   "GF-W12 under GF-081": {
+    "axis_in_hatch_m": [
+     0.4,
+     0.45
+    ],
+    "hatch_to_column_gap_m": [
+     0.05,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     0.45,
+     0.45
+    ],
+    "exclusive_under_panel_m": [
+     0.45,
+     0.45
+    ]
+   },
+   "GF-W16 under GF-141": {
+    "axis_in_hatch_m": [
+     2.95,
+     2.95
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     2.95,
+     2.95
+    ],
+    "exclusive_under_panel_m": [
+     2.95,
+     2.95
+    ]
+   },
+   "GF-W20 under GF-016": {
+    "axis_in_hatch_m": [
+     0.9678,
+     0.9678
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     0.9678,
+     0.9678
+    ],
+    "exclusive_under_panel_m": [
+     0.9185,
+     0.9185
+    ]
+   },
+   "GF-W31 under GF-016": {
+    "axis_in_hatch_m": [
+     1.0751,
+     1.0751
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     1.0751,
+     1.0751
+    ],
+    "exclusive_under_panel_m": [
+     1.0751,
+     1.0751
+    ]
+   },
+   "GF-W32 under GF-015": {
+    "axis_in_hatch_m": [
+     0.3117,
+     0.3117
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     0.3117,
+     0.3117
+    ],
+    "exclusive_under_panel_m": [
+     0.3117,
+     0.3117
+    ]
+   },
+   "GF-W32 under GF-016": {
+    "axis_in_hatch_m": [
+     0.621,
+     0.6124
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     0.621,
+     0.6124
+    ],
+    "exclusive_under_panel_m": [
+     0.546,
+     0.5374
+    ]
+   },
+   "GF-W34 under GF-015": {
+    "axis_in_hatch_m": [
+     1.7231,
+     1.7231
+    ],
+    "hatch_to_column_gap_m": [
+     0.0,
+     0.0
+    ],
+    "axis_under_panel_m": [
+     1.7231,
+     1.7231
+    ],
+    "exclusive_under_panel_m": [
+     1.7231,
+     1.7231
+    ]
+   }
+  },
+  "clip_region_m2_hatch_vs_panel": {
+   "275": [
+    3.3316,
+    3.325
+   ],
+   "276": [
+    2.6048,
+    2.5725
+   ],
+   "280": [
+    7.3009,
+    7.3009
+   ],
+   "287": [
+    2.1456,
+    2.0804
+   ],
+   "298": [
+    4.1076,
+    4.1176
+   ],
+   "5BF": [
+    5.4,
+    5.4
+   ]
+  },
+  "unclaimed_hatch_vs_panel": [
+   [],
+   []
+  ],
+  "face_lines_inside_hatch_vs_panel": {
+   "275": [
+    6,
+    6
+   ],
+   "276": [
+    5,
+    5
+   ],
+   "280": [
+    6,
+    6
+   ],
+   "287": [
+    0,
+    0
+   ],
+   "298": [
+    3,
+    3
+   ],
+   "5BF": [
+    0,
+    0
+   ]
+  }
+ }
+}
