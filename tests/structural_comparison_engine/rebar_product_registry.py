@@ -236,6 +236,10 @@ OTHER_REBAR_AWARE = (
     # reinforcement only as a waiting item (the parapet steel stays HELD, no rebar change) and in 'reinforced
     # concrete'; it writes no reinforcement quantity, computes no kg and applies no ratio
     "engine/source/arch_v3023.py",
+    # T-338: the V3.0.24 extension rewrites the printed formula TEXT of released STR.REBAR ledger lines (count x length
+    # x kg/m = kg from the line's own record, kg/m through rebar_unit_mass, the product only CHECKED against the line's
+    # net, never written as a quantity); it changes no reinforcement quantity, state or range and applies no ratio
+    "engine/source/arch_v3024.py",
     # T-140: the coverage census V2 names STR.REBAR / reinforcement only to report which families' steel is missing
     # (MISSING_DATA, as census V1); it writes no reinforcement quantity and applies no ratio
     "engine/source/coverage_census_v2.py",
