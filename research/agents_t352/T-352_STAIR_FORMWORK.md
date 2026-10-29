@@ -37,6 +37,12 @@ aggregate row without a value (R4-339). This piece measures the sides.
   beam 'B3 (With Stair)', column) -> HELD 0 .. area: formed or cast against it depends on the construction sequence,
   which no sheet prints; JUNCTION (well ends, corner strips whose own concrete is HELD) -> HELD; UNKNOWN (support / waist
   not printed: D1, E1) -> HELD unbounded.
+* Evidence of absence for the sequence (own read this run of ST7757.pdf p.8, the structural general notes 1 - 24,
+  raster, read visually; note numbers only): notes 17 and 23 deal with timber shuttering (striking period, camber of
+  long spans) for columns, beams, slabs and RC walls and name no stair; note 19 ties the lift columns with beams at
+  3.00 m (so the lift-shaft walls are infill masonry, D-43, not RC: the WALL class of the east sides is right); note 20
+  sets infill wall thickness to the columns it contains. No note sets whether a stair is cast before or after the shaft
+  blockwork. The ST plans (p.3 - p.6) carry no stair note. So the WALL / MEMBER sides stay HELD by name.
 * Owner manual method: none on record for formwork (no answer names one; T-163 s.6). The element method E (struct_n10)
   does not measure stairs. The drawing-derived method below is the only method; nothing is chosen for size.
 
