@@ -1,0 +1,18 @@
+{
+ "task": "T-330",
+ "kind": "export integrity check (tooling; no quantity changed)",
+ "candidate": {"version": "ARCH_TAKEOFF_V3.0.20", "boq_lines_json_sha256_8": "097a80b6", "lines": 3705},
+ "check_report_sha256_8": "2c8fb5d0",
+ "lines_with_arithmetic": 92, "ok": 62, "flagged": 30, "refused": 0, "not_applicable": 3613,
+ "families": [
+  {"item_code": "FIN.PLASTER", "unit": "m2", "failing": 4, "gross_minus_net": 42.30195, "cause": "EMPTY_DEDUCTIONS (owner-method inputs only)"},
+  {"item_code": "FIN.PAINT", "unit": "m2", "failing": 4, "gross_minus_net": 42.30195, "cause": "EMPTY_DEDUCTIONS (owner-method inputs only)"},
+  {"item_code": "FIN.SKIRTING", "unit": "lm", "failing": 11, "not_summing": 9, "unlisted_lm": 13.568824, "cause": "window-threshold length not listed; export total blank; no ids"},
+  {"item_code": "FIN.FLOOR.PORCELAIN", "unit": "m2", "failing": 2, "listed_beside_gross_equal_net": 39.308061, "cause": "gross set equal to net beside a deduction list"},
+  {"item_code": "ARCH.WALL_RUN", "unit": "lm", "failing": 7, "cause": "export total blank; no ids (arithmetic exact)"},
+  {"item_code": "FIN.CEILING", "unit": "m2", "failing": 2, "cause": "export total blank; no ids (arithmetic exact)"}
+ ],
+ "plain_export": {"rows_with_deductions": 22, "of_which_total_blank": 22, "rows_gross_ne_net_with_no_deductions": 8},
+ "guarded_export": "refused, exit 2, nothing written",
+ "t315_r2_candidate": "not merged: not run"
+}
