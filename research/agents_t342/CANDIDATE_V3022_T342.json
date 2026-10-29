@@ -1,0 +1,408 @@
+{
+ "source": "V3_0_22_BOQ_LINES.json (ARCH_TAKEOFF_V3.0.22 run, own)",
+ "lines_json_sha256": "7199c8b6f122f54dda9de3fdbfd73b70b7991d7030b4e570d808fe00c4d21587",
+ "lines_total": 3706,
+ "kept": 29,
+ "lines": [
+  {
+   "line_id": "L-10404364d725471e3213",
+   "item_code": "FIN.CEILING",
+   "floor": "GF",
+   "element_id": "SOFFIT:GF:PL-02",
+   "room_id": "PL-02",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 5.64,
+   "source": [
+    "PL-02",
+    "SOFFIT"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-15a128c38982af899894",
+   "item_code": "STR.CONC.POOL",
+   "floor": "GROUND",
+   "element_id": "HL:POOL_CONCRETE:POOL-1:WALLS",
+   "room_id": null,
+   "unit": "m3",
+   "state": "SOURCE_DERIVED",
+   "quantity": 2.828071,
+   "source": [
+    "POOL-1",
+    "POOL_CONCRETE"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-224e2fa47fb86db548b6",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:UNDER_STAIR:GF:GF-RC99C2A-UNDER-STAIR",
+   "room_id": null,
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 2.07,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-23072352a28aeca7b051",
+   "item_code": "FIN.CEILING",
+   "floor": "GF",
+   "element_id": "SOFFIT:GF:PL-03",
+   "room_id": "PL-03",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 12.834,
+   "source": [
+    "PL-03",
+    "SOFFIT"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-2f7502be6f501baf49b1",
+   "item_code": "FIN.WP.ROOF",
+   "floor": "1F",
+   "element_id": "1F-ROOF-AT216:wp_membrane",
+   "room_id": "1F-ROOF-AT216",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 32.721,
+   "source": [
+    "D2:3035:0"
+   ],
+   "cites": [
+    "AT216"
+   ]
+  },
+  {
+   "line_id": "L-36efa902da4263479e0b",
+   "item_code": "STR.CONC.POOL",
+   "floor": "GROUND",
+   "element_id": "HL:POOL_CONCRETE:POOL-1:BASE",
+   "room_id": null,
+   "unit": "m3",
+   "state": "SOURCE_DERIVED",
+   "quantity": 4.374226,
+   "source": [
+    "POOL-1",
+    "POOL_CONCRETE"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-3e8fe55da71851816dd4",
+   "item_code": "FIN.WP.ROOF",
+   "floor": "2F",
+   "element_id": "2F-ROOF-TOP:wp_membrane",
+   "room_id": "2F-ROOF-TOP",
+   "unit": "m2",
+   "state": "BLOCKED_RFI",
+   "quantity": null,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-428b44ee2f5f1c1c118f",
+   "item_code": "ARCH.SPACE",
+   "floor": "1F",
+   "element_id": "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing",
+   "room_id": null,
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 4.9225,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-50307dd94f499430bd43",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:TO_WET:GF:GF-OP-003-NO-OPENING:pantry",
+   "room_id": null,
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 0.6,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-5431fa278fbb44816a08",
+   "item_code": "ARCH.EXTERIOR",
+   "floor": "GF",
+   "element_id": "GF-R9A05AA:space",
+   "room_id": "GF-R9A05AA",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 9.101000000015258,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-554a525edce9a9235bee",
+   "item_code": "ARCH.SPACE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:HELD_WITH:GF:GF-OP-003-NO-OPENING:band",
+   "room_id": null,
+   "unit": "m2",
+   "state": "BOUNDED_EXPOSURE",
+   "quantity": null,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-5ce5ba49792e8f9d1f6f",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "floor": "2F",
+   "element_id": "2F-ROOF-AT379:wp_upturn",
+   "room_id": "2F-ROOF-AT379",
+   "unit": "lm",
+   "state": "SOURCE_DERIVED",
+   "quantity": 92.922,
+   "source": [
+    "D2:4793:0"
+   ],
+   "cites": [
+    "AT379"
+   ]
+  },
+  {
+   "line_id": "L-636fd3ff1784a12e653b",
+   "item_code": "FIN.WP.ROOF",
+   "floor": "2F",
+   "element_id": "2F-ROOF-AT379:wp_membrane",
+   "room_id": "2F-ROOF-AT379",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 115.832,
+   "source": [
+    "D2:4793:0"
+   ],
+   "cites": [
+    "AT379"
+   ]
+  },
+  {
+   "line_id": "L-6485382cd3b6f09c192c",
+   "item_code": "ARCH.SPACE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:UNDER_STAIR_HELD:GF:GF-RC99C2A-UNDER-STAIR",
+   "room_id": null,
+   "unit": "m2",
+   "state": "BOUNDED_EXPOSURE",
+   "quantity": null,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-6c83b9fcaa8684a4b85b",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:WET:GF:SITE-0a31aaa10796d33a",
+   "room_id": null,
+   "unit": "m2",
+   "state": "PROVISIONAL",
+   "quantity": 1.1,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-6dcad5ae573eec5aac19",
+   "item_code": "STR.CONC.POOL",
+   "floor": "GROUND",
+   "element_id": "P-C:SCOPE:POOL:GROUND:CC-4075a81d7f:WALLS",
+   "room_id": null,
+   "unit": "m3",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "quantity": null,
+   "source": [
+    "POOL"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-771d52d71dc386b53d29",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:WET:GF:GF-PANTRY-RC06FED",
+   "room_id": null,
+   "unit": "m2",
+   "state": "PROVISIONAL",
+   "quantity": 2.800001,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-7cd2cd75128f101a208c",
+   "item_code": "FIN.CEILING",
+   "floor": "1F",
+   "element_id": "SOFFIT:1F:PL-05",
+   "room_id": "PL-05",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 2.417,
+   "source": [
+    "PL-05",
+    "SOFFIT"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-8011889d84788553a6b1",
+   "item_code": "FIN.MARBLE.LANDING",
+   "floor": "1F",
+   "element_id": "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing#MATERIAL:FIN_MARBLE_LANDING",
+   "room_id": null,
+   "unit": "m2",
+   "state": "PROVISIONAL",
+   "quantity": 4.9225,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-80bc93761800e7ba1968",
+   "item_code": "FIN.CEILING",
+   "floor": "1F",
+   "element_id": "SOFFIT:1F:PL-04",
+   "room_id": "PL-04",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 4.374,
+   "source": [
+    "PL-04",
+    "SOFFIT"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-83b9e52902ffa5681c28",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:WET:GF:GF-PANTRY-RC99C2A-PART",
+   "room_id": null,
+   "unit": "m2",
+   "state": "PROVISIONAL",
+   "quantity": 8.954867,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-8ca24b308e52eb6a7cf0",
+   "item_code": "STR.CONC.POOL",
+   "floor": "GROUND",
+   "element_id": "P-C:SCOPE:POOL:GROUND:CC-4075a81d7f:FLOOR",
+   "room_id": null,
+   "unit": "m3",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "quantity": null,
+   "source": [
+    "POOL"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-994b88140f2ea50f1b31",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "floor": "1F",
+   "element_id": "1F-ROOF-AT216:wp_upturn",
+   "room_id": "1F-ROOF-AT216",
+   "unit": "lm",
+   "state": "SOURCE_DERIVED",
+   "quantity": 52.94,
+   "source": [
+    "D2:3035:0"
+   ],
+   "cites": [
+    "AT216"
+   ]
+  },
+  {
+   "line_id": "L-aac1f35e08f85b643692",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "floor": "2F",
+   "element_id": "2F-ROOF-TOP:wp_upturn",
+   "room_id": "2F-ROOF-TOP",
+   "unit": "lm",
+   "state": "BLOCKED_RFI",
+   "quantity": null,
+   "source": [],
+   "cites": []
+  },
+  {
+   "line_id": "L-b62a7065645589011141",
+   "item_code": "STR.CONC.POOL",
+   "floor": "GROUND",
+   "element_id": "HL:POOL_CONCRETE:POOL-1:STEPS",
+   "room_id": null,
+   "unit": "m3",
+   "state": "BLOCKED_RFI",
+   "quantity": null,
+   "source": [
+    "POOL-1",
+    "POOL_CONCRETE"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-c041069e7b1c0dffcd8c",
+   "item_code": "FIN.CEILING",
+   "floor": "GF",
+   "element_id": "SOFFIT:GF:PL-01",
+   "room_id": "PL-01",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 19.181,
+   "source": [
+    "PL-01",
+    "SOFFIT"
+   ],
+   "cites": []
+  },
+  {
+   "line_id": "L-d4c73babd2a275c28929",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "floor": "1F",
+   "element_id": "1F-ROOF-AT220:wp_upturn",
+   "room_id": "1F-ROOF-AT220",
+   "unit": "lm",
+   "state": "SOURCE_DERIVED",
+   "quantity": 35.727,
+   "source": [
+    "D2:2869:0"
+   ],
+   "cites": [
+    "AT220"
+   ]
+  },
+  {
+   "line_id": "L-d57d2dc2fafac8bc72d8",
+   "item_code": "FIN.WP.ROOF",
+   "floor": "1F",
+   "element_id": "1F-ROOF-AT220:wp_membrane",
+   "room_id": "1F-ROOF-AT220",
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 55.559,
+   "source": [
+    "D2:2869:0"
+   ],
+   "cites": [
+    "AT220"
+   ]
+  },
+  {
+   "line_id": "L-e653ef87a06a97903b0a",
+   "item_code": "ARCH.SPACE",
+   "floor": "GF",
+   "element_id": "HL:FLOOR_SCOPE:OUTDOOR:GF:GF-SIDE-PASSAGE",
+   "room_id": null,
+   "unit": "m2",
+   "state": "SOURCE_DERIVED",
+   "quantity": 5.64,
+   "source": [],
+   "cites": []
+  }
+ ]
+}
