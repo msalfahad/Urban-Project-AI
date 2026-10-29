@@ -1,0 +1,2 @@
+line_id,item_code,floor,element_id,unit,scope,status,gross_used,measured_net,base_list_sum,trace_sum,residual,step_named,rows,cause
+L-b06400d46d252f242018,FIN.FLOOR.PORCELAIN,1F,1F-R78C367:floor,m2,STAIR_PASSES_THROUGH_SLAB,TRACED,75.983002,33.711036,31.113649,42.271966,0.000000,5.890817,22,

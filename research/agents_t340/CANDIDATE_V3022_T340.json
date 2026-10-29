@@ -1,0 +1,3272 @@
+{
+ "families": [
+  "FIN.PLASTER",
+  "ARCH.WINDOW_REVEAL",
+  "ARCH.THRESHOLD",
+  "FIN.MARBLE.THRESHOLD",
+  "FIN.FLOOR.PORCELAIN",
+  "FIN.WALL.TILE",
+  "FIN.WP.DOORWAY"
+ ],
+ "gone_since_v3020": [],
+ "lines": [
+  {
+   "digest": {
+    "V3_0_20": "092da7e1bcc7b6d1",
+    "V3_0_21": "092da7e1bcc7b6d1",
+    "V3_0_22": "092da7e1bcc7b6d1"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:1F:OP-007",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "high": 0.2,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-084df97d3d41525a65c2",
+   "low": 0.2,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "7d543483d347d793",
+    "V3_0_21": "7d543483d347d793",
+    "V3_0_22": "7d543483d347d793"
+   },
+   "element_id": "GF-STRIP-SITE-e3b5d3227c61bc6c:unattributed strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-1c71cd45a5116bdc5260",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "bd3649fd5bd4e0f7",
+    "V3_0_21": "bd3649fd5bd4e0f7",
+    "V3_0_22": "bd3649fd5bd4e0f7"
+   },
+   "element_id": "GF-STRIP-SITE-19643bcc262b322f:unattributed strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-2991f35326b961a6d238",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1fcae565cebfdd58",
+    "V3_0_21": "1fcae565cebfdd58",
+    "V3_0_22": "1fcae565cebfdd58"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-002",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "high": 0.2,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-3c5a3be22e861d9d4cfb",
+   "low": 0.2,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8ff969ed9bf38dfe",
+    "V3_0_21": "8ff969ed9bf38dfe",
+    "V3_0_22": "8ff969ed9bf38dfe"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-001",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "high": 0.15,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-3e5c6b7af8dd06b2836c",
+   "low": 0.15,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2cf7c080b9634294",
+    "V3_0_21": "2cf7c080b9634294",
+    "V3_0_22": "2cf7c080b9634294"
+   },
+   "element_id": "1F-STRIP-SITE-fd160ff889cc7481:unattributed strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-44b8dcf4b30e11a464f5",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8cb6cb685ca58d38",
+    "V3_0_21": "8cb6cb685ca58d38",
+    "V3_0_22": "8cb6cb685ca58d38"
+   },
+   "element_id": "1F-STRIP-SITE-29faecd848edfdc3:unattributed strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-479acdcb1e5e01bf3957",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "faf21b4e5d5b82bc",
+    "V3_0_21": "faf21b4e5d5b82bc",
+    "V3_0_22": "faf21b4e5d5b82bc"
+   },
+   "element_id": "1F-STRIP-CLOSURE_D2_3118_D2_417_D2_3118_0:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-63c15e31faff037fcdde",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1973a0fa1f7e0e00",
+    "V3_0_21": "1973a0fa1f7e0e00",
+    "V3_0_22": "1973a0fa1f7e0e00"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-011",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.2,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-6f5806adbacba9118497",
+   "low": 0.2,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8019bc75253ec43f",
+    "V3_0_21": "8019bc75253ec43f",
+    "V3_0_22": "8019bc75253ec43f"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-005",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.18,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-74cd61b430eec9933d15",
+   "low": 0.18,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a481335ba3962a1e",
+    "V3_0_21": "a481335ba3962a1e",
+    "V3_0_22": "a481335ba3962a1e"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-013",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.18,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-8111095f6db78f0e674b",
+   "low": 0.18,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "861f6fe54e8f13fe",
+    "V3_0_21": "861f6fe54e8f13fe",
+    "V3_0_22": "861f6fe54e8f13fe"
+   },
+   "element_id": "GF-STRIP-OP-027:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-868aee125705bb8d17f6",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ce02f404e0c83562",
+    "V3_0_21": "ce02f404e0c83562",
+    "V3_0_22": "ce02f404e0c83562"
+   },
+   "element_id": "GF-STRIP-CLOSURE_D2_820_0_D2_820_0:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-8c2040d7c6ecce827316",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "13f93b9087103aaa",
+    "V3_0_21": "13f93b9087103aaa",
+    "V3_0_22": "13f93b9087103aaa"
+   },
+   "element_id": "GF-STRIP-CLOSURE_D2_825_D2_417_D2_825_0:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-95bb76ee6c98edac0179",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b8f7096ac6eb9274",
+    "V3_0_21": "b8f7096ac6eb9274",
+    "V3_0_22": "b8f7096ac6eb9274"
+   },
+   "element_id": "GF-STRIP-OP-020:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-9bcc79e76f84667b244a",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "f0ed03553d253ea5",
+    "V3_0_21": "f0ed03553d253ea5",
+    "V3_0_22": "f0ed03553d253ea5"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-008",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.2,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-9fa69ef1a11ef9987967",
+   "low": 0.2,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c0f19cec49c3c96e",
+    "V3_0_21": "c0f19cec49c3c96e",
+    "V3_0_22": "c0f19cec49c3c96e"
+   },
+   "element_id": "1F-STRIP-CLOSURE_D2_3122_D2_757_D2_3122_0:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-a4c323cb1e402c9127d2",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e901af060b02dc05",
+    "V3_0_21": "e901af060b02dc05",
+    "V3_0_22": "e901af060b02dc05"
+   },
+   "element_id": "GF-STRIP-OP-003:unattributed strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-ac75e02c2ad9260223c4",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "76f3448ef6c3c073",
+    "V3_0_21": "76f3448ef6c3c073",
+    "V3_0_22": "76f3448ef6c3c073"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-021",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.4,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-ad41b065d825c0190b7d",
+   "low": 0.4,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b41ac26b80e1df87",
+    "V3_0_21": "b41ac26b80e1df87",
+    "V3_0_22": "b41ac26b80e1df87"
+   },
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-009",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 0.2,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-b3933a51bd95e9bc542b",
+   "low": 0.2,
+   "measured_net": null,
+   "physical_element": "THRESHOLD",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "49dfec8a41e71299",
+    "V3_0_21": "49dfec8a41e71299",
+    "V3_0_22": "49dfec8a41e71299"
+   },
+   "element_id": "GF-STRIP-CLOSURE_D2_495_D2_417_D2_495_0:threshold strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-cb2fdcac375323371bdf",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "threshold strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "df180672fee6cf5b",
+    "V3_0_21": "df180672fee6cf5b",
+    "V3_0_22": "df180672fee6cf5b"
+   },
+   "element_id": "GF-STRIP-OP-001:unattributed strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-d967928104c6e384865e",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "898a378011d9c161",
+    "V3_0_21": "898a378011d9c161",
+    "V3_0_22": "898a378011d9c161"
+   },
+   "element_id": "GF-STRIP-SITE-f829b5b7d673a747:unattributed strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-f4cfd731c98468026078",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "unattributed strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "07fd134cfa4c141a",
+    "V3_0_21": "07fd134cfa4c141a",
+    "V3_0_22": "07fd134cfa4c141a"
+   },
+   "element_id": "GF-STRIP-OP-022:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-0de10f4db591a2467b82",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fd8db19644127717",
+    "V3_0_21": "fd8db19644127717",
+    "V3_0_22": "fd8db19644127717"
+   },
+   "element_id": "1F-STRIP-OP-016:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-0e2e7299371efb8338cc",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2f8443623266a2a0",
+    "V3_0_21": "2f8443623266a2a0",
+    "V3_0_22": "2f8443623266a2a0"
+   },
+   "element_id": "GF-STRIP-OP-028:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-10af4bb68e88181775a7",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a9fb7a24c1a74ce2",
+    "V3_0_21": "a9fb7a24c1a74ce2",
+    "V3_0_22": "a9fb7a24c1a74ce2"
+   },
+   "element_id": "1F-STRIP-OP-017:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-146170b53ca02c2456f9",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fa3620591bad9916",
+    "V3_0_21": "fa3620591bad9916",
+    "V3_0_22": "fa3620591bad9916"
+   },
+   "element_id": "1F-STRIP-OP-015:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-1b5962c15890ecb2f6da",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1a2bec0a8c593fab",
+    "V3_0_21": "1a2bec0a8c593fab",
+    "V3_0_22": "1a2bec0a8c593fab"
+   },
+   "element_id": "GF-STRIP-OP-024:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-1bedabba8af5d2529e77",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d7e3613ccb5c5aa3",
+    "V3_0_21": "d7e3613ccb5c5aa3",
+    "V3_0_22": "d7e3613ccb5c5aa3"
+   },
+   "element_id": "GF-STRIP-OP-029:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-36e2b88d45f02c84a404",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b991cfbda66222cc",
+    "V3_0_21": "b991cfbda66222cc",
+    "V3_0_22": "b991cfbda66222cc"
+   },
+   "element_id": "2F-STRIP-OP-004:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-44f5f5c49b50d62b44f3",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4d9ffd4e96819f59",
+    "V3_0_21": "4d9ffd4e96819f59",
+    "V3_0_22": "4d9ffd4e96819f59"
+   },
+   "element_id": "1F-STRIP-OP-003:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-560e87c03e18569ae941",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "33284383f3bb056f",
+    "V3_0_21": "33284383f3bb056f",
+    "V3_0_22": "33284383f3bb056f"
+   },
+   "element_id": "1F-STRIP-OP-012:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-63087103666a3c4b177b",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "890e8cbf6cd3eae6",
+    "V3_0_21": "890e8cbf6cd3eae6",
+    "V3_0_22": "890e8cbf6cd3eae6"
+   },
+   "element_id": "GF-STRIP-OP-004:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-6add1d9c5ce0493a3e60",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "3baeddb3742fda26",
+    "V3_0_21": "3baeddb3742fda26",
+    "V3_0_22": "3baeddb3742fda26"
+   },
+   "element_id": "GF-STRIP-OP-019:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-a430e89b6d52e1c994e0",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "9c6c938b576cae70",
+    "V3_0_21": "9c6c938b576cae70",
+    "V3_0_22": "9c6c938b576cae70"
+   },
+   "element_id": "2F-STRIP-OP-005:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-a6565fe2cd9df42f77fd",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "836100459f16e69a",
+    "V3_0_21": "836100459f16e69a",
+    "V3_0_22": "836100459f16e69a"
+   },
+   "element_id": "GF-STRIP-OP-006:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-b6691e6f54bf47eb4f89",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "cba2725e4f9d4327",
+    "V3_0_21": "cba2725e4f9d4327",
+    "V3_0_22": "cba2725e4f9d4327"
+   },
+   "element_id": "GF-STRIP-OP-014:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-bd633784436adfde4033",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "47c4c2c6afcba461",
+    "V3_0_21": "47c4c2c6afcba461",
+    "V3_0_22": "47c4c2c6afcba461"
+   },
+   "element_id": "GF-STRIP-OP-023:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-bea7d46e51c809fbe623",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6f7016c097df51b2",
+    "V3_0_21": "6f7016c097df51b2",
+    "V3_0_22": "6f7016c097df51b2"
+   },
+   "element_id": "1F-STRIP-COP-001:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-c90d5d6c06a671fc3b99",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "eda41ec75a25dce5",
+    "V3_0_21": "eda41ec75a25dce5",
+    "V3_0_22": "eda41ec75a25dce5"
+   },
+   "element_id": "1F-STRIP-OP-013:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-cdd13c017d2f5328032e",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "3a19f0394bf3193a",
+    "V3_0_21": "3a19f0394bf3193a",
+    "V3_0_22": "3a19f0394bf3193a"
+   },
+   "element_id": "2F-STRIP-OP-003:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-d540d2198577747bcf84",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "f426abc8a1cc1395",
+    "V3_0_21": "f426abc8a1cc1395",
+    "V3_0_22": "f426abc8a1cc1395"
+   },
+   "element_id": "2F-STRIP-OP-008:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-d91627a1feb6dc854723",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d2be66aeddd348b6",
+    "V3_0_21": "d2be66aeddd348b6",
+    "V3_0_22": "d2be66aeddd348b6"
+   },
+   "element_id": "1F-STRIP-OP-014:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-dbec1a970ca591bebd43",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ad1a6ad189833429",
+    "V3_0_21": "ad1a6ad189833429",
+    "V3_0_22": "ad1a6ad189833429"
+   },
+   "element_id": "GF-STRIP-OP-016:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-dec26399645ab26c13f9",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "3d014c1855969be8",
+    "V3_0_21": "3d014c1855969be8",
+    "V3_0_22": "3d014c1855969be8"
+   },
+   "element_id": "1F-STRIP-OP-002:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-e60b1ffc24c8bc76ec1a",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "18dc73d8376dd2a3",
+    "V3_0_21": "18dc73d8376dd2a3",
+    "V3_0_22": "18dc73d8376dd2a3"
+   },
+   "element_id": "1F-STRIP-OP-001:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-e709025cfb48633cc369",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "59d7850e590baf50",
+    "V3_0_21": "59d7850e590baf50",
+    "V3_0_22": "59d7850e590baf50"
+   },
+   "element_id": "1F-STRIP-OP-022:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-ea48300c45f8efa96ffe",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "352052f2bd139b9a",
+    "V3_0_21": "352052f2bd139b9a",
+    "V3_0_22": "352052f2bd139b9a"
+   },
+   "element_id": "1F-STRIP-OP-021:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-ec91f75c35edf30f9c65",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "62a2f7087667abb4",
+    "V3_0_21": "62a2f7087667abb4",
+    "V3_0_22": "62a2f7087667abb4"
+   },
+   "element_id": "GF-STRIP-OP-015:window reveal strip",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-eef0162ee1ce392fc7d5",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "window reveal strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "af964decfb6947c6",
+    "V3_0_21": "af964decfb6947c6",
+    "V3_0_22": "af964decfb6947c6"
+   },
+   "element_id": "1F-STRIP-OP-006:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-05443e1e907e1a21c4a3",
+   "low": null,
+   "measured_net": 0.135,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "534cbe247fb71b0d",
+    "V3_0_21": "534cbe247fb71b0d",
+    "V3_0_22": "534cbe247fb71b0d"
+   },
+   "element_id": "2F-STRIP-OP-002:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-17a56dfafc5504f41a28",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a337003ec250317f",
+    "V3_0_21": "a337003ec250317f",
+    "V3_0_22": "a337003ec250317f"
+   },
+   "element_id": "GF-R7512EA:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-195fd34c0f12929af15d",
+   "low": null,
+   "measured_net": 24.940332,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b012f3bdbae33507",
+    "V3_0_21": "b012f3bdbae33507",
+    "V3_0_22": "b012f3bdbae33507"
+   },
+   "element_id": "HL:FLOOR_SCOPE:UNDER_STAIR:GF:GF-RC99C2A-UNDER-STAIR",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-224e2fa47fb86db548b6",
+   "low": null,
+   "measured_net": 2.07,
+   "physical_element": "FLOOR",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fdd79df2af09428f",
+    "V3_0_21": "fdd79df2af09428f",
+    "V3_0_22": "fdd79df2af09428f"
+   },
+   "element_id": "GF-STRIP-OP-012:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-25915d704e8aa6e868af",
+   "low": null,
+   "measured_net": 0.15,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c7da2609001bf2c3",
+    "V3_0_21": "c7da2609001bf2c3",
+    "V3_0_22": "c7da2609001bf2c3"
+   },
+   "element_id": "GF-STRIP-OP-011:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-2621372661b2eb15b748",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8bbc8d237ae28e8a",
+    "V3_0_21": "8bbc8d237ae28e8a",
+    "V3_0_22": "8bbc8d237ae28e8a"
+   },
+   "element_id": "2F-STRIP-OP-001:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-3f8fc80a79a098d4d81d",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4401e02d155d3493",
+    "V3_0_21": "4401e02d155d3493",
+    "V3_0_22": "4401e02d155d3493"
+   },
+   "element_id": "1F-STRIP-OP-020:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-47d54293f7a3856044e1",
+   "low": null,
+   "measured_net": 0.15,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ee0866e7042287b9",
+    "V3_0_21": "ee0866e7042287b9",
+    "V3_0_22": "ee0866e7042287b9"
+   },
+   "element_id": "1F-RED0D19:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-5161f80a62f58377d3c5",
+   "low": null,
+   "measured_net": 18.215001,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "49238539ffb999af",
+    "V3_0_21": "49238539ffb999af",
+    "V3_0_22": "49238539ffb999af"
+   },
+   "element_id": "GF-R51E127:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-53e9fd815b28f4305ac8",
+   "low": null,
+   "measured_net": 7.875,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1847dd9a0483ffa3",
+    "V3_0_21": "1847dd9a0483ffa3",
+    "V3_0_22": "1847dd9a0483ffa3"
+   },
+   "element_id": "1F-R3CFCFD:floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-5f19de4863fe78185308",
+   "low": null,
+   "measured_net": 19.016545,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "64eade88dcd5d61a",
+    "V3_0_21": "64eade88dcd5d61a",
+    "V3_0_22": "64eade88dcd5d61a"
+   },
+   "element_id": "GF-RC99C2A:floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "low": null,
+   "measured_net": 109.778417,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c54f08a723f1d7f9",
+    "V3_0_21": "c54f08a723f1d7f9",
+    "V3_0_22": "c54f08a723f1d7f9"
+   },
+   "element_id": "GF-RA3AD49:floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-83609efc5fdb5d38f059",
+   "low": null,
+   "measured_net": 9.630001,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "af12a89906d42ade",
+    "V3_0_21": "af12a89906d42ade",
+    "V3_0_22": "af12a89906d42ade"
+   },
+   "element_id": "GF-STRIP-OP-005:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-86977fa4d8a72a6ae2dc",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a23324a209ad1744",
+    "V3_0_21": "a23324a209ad1744",
+    "V3_0_22": "a23324a209ad1744"
+   },
+   "element_id": "GF-R75FBAE:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-902e5372c7aadf158006",
+   "low": null,
+   "measured_net": 16.54964,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "74c684fa106028dc",
+    "V3_0_21": "74c684fa106028dc",
+    "V3_0_22": "74c684fa106028dc"
+   },
+   "element_id": "2F-R1DB2D2:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-90c68468f3972623bd54",
+   "low": null,
+   "measured_net": 19.350001,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "914563307684c298",
+    "V3_0_21": "914563307684c298",
+    "V3_0_22": "914563307684c298"
+   },
+   "element_id": "GF-STRIP-OP-001:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-a16274386ece316167c4",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4f51b556a1434a30",
+    "V3_0_21": "4f51b556a1434a30",
+    "V3_0_22": "4f51b556a1434a30"
+   },
+   "element_id": "GF-STRIP-OP-010:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-a3bbe40ac52ff6f2764b",
+   "low": null,
+   "measured_net": 0.2,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "5b02e0f1e7f9d08d",
+    "V3_0_21": "5b02e0f1e7f9d08d",
+    "V3_0_22": "5b02e0f1e7f9d08d"
+   },
+   "element_id": "1F-R78C367:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-b06400d46d252f242018",
+   "low": null,
+   "measured_net": 33.711036,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "448b5a2c601eb797",
+    "V3_0_21": "448b5a2c601eb797",
+    "V3_0_22": "448b5a2c601eb797"
+   },
+   "element_id": "1F-STRIP-OP-007:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-bb09715ec8ccdd5d11a8",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "992f8989eeee52be",
+    "V3_0_21": "992f8989eeee52be",
+    "V3_0_22": "992f8989eeee52be"
+   },
+   "element_id": "GF-STRIP-OP-003:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-be3ae55b5aec3eca8875",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "3c72e6e5923fd338",
+    "V3_0_21": "3c72e6e5923fd338",
+    "V3_0_22": "3c72e6e5923fd338"
+   },
+   "element_id": "1F-R0E919A:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-c044aeccd28ff9700c1d",
+   "low": null,
+   "measured_net": 16.34,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "691c6109fb96ab55",
+    "V3_0_21": "691c6109fb96ab55",
+    "V3_0_22": "691c6109fb96ab55"
+   },
+   "element_id": "1F-RB72F22:floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-d32b451c37e87c191a4b",
+   "low": null,
+   "measured_net": 19.05,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e426a4d1bffc6115",
+    "V3_0_21": "e426a4d1bffc6115",
+    "V3_0_22": "e426a4d1bffc6115"
+   },
+   "element_id": "GF-STRIP-OP-007:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-d4f6d6a2f6ef61468f55",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4cfe5b6e5c940444",
+    "V3_0_21": "4cfe5b6e5c940444",
+    "V3_0_22": "4cfe5b6e5c940444"
+   },
+   "element_id": "GF-STRIP-OP-009:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-d624b862024252463c55",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1151eb2a4820b498",
+    "V3_0_21": "1151eb2a4820b498",
+    "V3_0_22": "1151eb2a4820b498"
+   },
+   "element_id": "2F-STRIP-OP-007:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-dc5434957e2f76cc794b",
+   "low": null,
+   "measured_net": 0.18,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0deac0b05b444e7e",
+    "V3_0_21": "0deac0b05b444e7e",
+    "V3_0_22": "0deac0b05b444e7e"
+   },
+   "element_id": "1F-STRIP-OP-011:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-e2eb7cee560d74ae91e4",
+   "low": null,
+   "measured_net": 0.15,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "91e13fbe6397c188",
+    "V3_0_21": "91e13fbe6397c188",
+    "V3_0_22": "91e13fbe6397c188"
+   },
+   "element_id": "GF-STRIP-OP-021:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-e6e75fa6443bb0c9fd6a",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c2fe2a6138a0feb0",
+    "V3_0_21": "c2fe2a6138a0feb0",
+    "V3_0_22": "c2fe2a6138a0feb0"
+   },
+   "element_id": "GF-STRIP-OP-008:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-ed66b38026446c4cb230",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "41855ee060ba758e",
+    "V3_0_21": "41855ee060ba758e",
+    "V3_0_22": "41855ee060ba758e"
+   },
+   "element_id": "GF-STRIP-OP-013:doorway strip",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-f475680e53ad96aabdaa",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a469d84e23620a8e",
+    "V3_0_21": "a469d84e23620a8e",
+    "V3_0_22": "a469d84e23620a8e"
+   },
+   "element_id": "1F-STRIP-OP-005:doorway strip",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-fcf9fbf8a5145fbd7bca",
+   "low": null,
+   "measured_net": 0.135,
+   "physical_element": "doorway strip",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c855c6c8677e1276",
+    "V3_0_21": "c855c6c8677e1276",
+    "V3_0_22": "c855c6c8677e1276"
+   },
+   "element_id": "GF-RC06FED:floor",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-fee41ab88a4419e68a5c",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "floor",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "195e0b8bd42faed7",
+    "V3_0_21": "195e0b8bd42faed7",
+    "V3_0_22": "195e0b8bd42faed7"
+   },
+   "element_id": "GF-STRIP-OP-018:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-07ce1d24164207cd06ca",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ee388baf6b61d81d",
+    "V3_0_21": "ee388baf6b61d81d",
+    "V3_0_22": "ee388baf6b61d81d"
+   },
+   "element_id": "2F-STRIP-OP-006:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-0ca0f91144403e323c68",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "aa197a3bbddeca1e",
+    "V3_0_21": "aa197a3bbddeca1e",
+    "V3_0_22": "aa197a3bbddeca1e"
+   },
+   "element_id": "1F-STRIP-OP-004:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-709aba3ec07bb0f26319",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0391fcc935796146",
+    "V3_0_21": "0391fcc935796146",
+    "V3_0_22": "0391fcc935796146"
+   },
+   "element_id": "GF-STRIP-OP-026:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-8901e416cbce62854fbe",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "00a54fe4cba3b31f",
+    "V3_0_21": "00a54fe4cba3b31f",
+    "V3_0_22": "00a54fe4cba3b31f"
+   },
+   "element_id": "1F-STRIP-OP-010:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-92721c425ab3612bb035",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "06a16dc4443eadea",
+    "V3_0_21": "06a16dc4443eadea",
+    "V3_0_22": "06a16dc4443eadea"
+   },
+   "element_id": "1F-STRIP-OP-018:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-a4909527ff598315be61",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6368fb1999016076",
+    "V3_0_21": "6368fb1999016076",
+    "V3_0_22": "6368fb1999016076"
+   },
+   "element_id": "GF-STRIP-OP-025:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-c8b5c7f742b22388339e",
+   "low": null,
+   "measured_net": 0.2,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4eb18f0788ccbad5",
+    "V3_0_21": "4eb18f0788ccbad5",
+    "V3_0_22": "4eb18f0788ccbad5"
+   },
+   "element_id": "GF-STRIP-OP-017:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-cbf11d0c1befb0519e98",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b828c5f4f11192c3",
+    "V3_0_21": "b828c5f4f11192c3",
+    "V3_0_22": "b828c5f4f11192c3"
+   },
+   "element_id": "1F-STRIP-OP-008:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-ccb1182ae9409b432968",
+   "low": null,
+   "measured_net": 0.18,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "28b6fca73e2de2db",
+    "V3_0_21": "28b6fca73e2de2db",
+    "V3_0_22": "28b6fca73e2de2db"
+   },
+   "element_id": "1F-STRIP-OP-019:marble threshold",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-f2d296f1fc5184419774",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "marble threshold",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8c5bd81317c03b1a",
+    "V3_0_21": "8c5bd81317c03b1a",
+    "V3_0_22": "013d99d31daf2f33"
+   },
+   "element_id": "1F-R52AC05:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-005cb3310fbebd97d563",
+   "low": null,
+   "measured_net": 19.6691,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6a54075272382315",
+    "V3_0_21": "6a54075272382315",
+    "V3_0_22": "6a54075272382315"
+   },
+   "element_id": "1F-OPENING-OP-020:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0bc19199447147ca226a",
+   "low": null,
+   "measured_net": 0.81,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "23befa91c2a38540",
+    "V3_0_21": "23befa91c2a38540",
+    "V3_0_22": "23befa91c2a38540"
+   },
+   "element_id": "HL:WALL_FINISH:GF_15:PLASTER",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "low": null,
+   "measured_net": 56.0131,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4c42031fc6a921e8",
+    "V3_0_21": "4c42031fc6a921e8",
+    "V3_0_22": "4c42031fc6a921e8"
+   },
+   "element_id": "HL:WALL_FINISH:ST_1F:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "high": 47.67,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-0eac839f9132da7bd116",
+   "low": 42.48,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "29f57bc1b5134a14",
+    "V3_0_21": "29f57bc1b5134a14",
+    "V3_0_22": "ed5ce747f2c7e5cc"
+   },
+   "element_id": "1F-R48CDA5:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-12b83d399be186804faf",
+   "low": null,
+   "measured_net": 26.3051,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "33572468f27f8a3e",
+    "V3_0_21": "33572468f27f8a3e",
+    "V3_0_22": "33572468f27f8a3e"
+   },
+   "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "661eccf960b5719a",
+    "V3_0_21": "661eccf960b5719a",
+    "V3_0_22": "661eccf960b5719a"
+   },
+   "element_id": "GF-OPENING-OP-010:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-1f443fe4e172a90ddd7c",
+   "low": null,
+   "measured_net": 1.08,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d44b03702cd66e7e",
+    "V3_0_21": "d44b03702cd66e7e",
+    "V3_0_22": "51872ec9a08f90ed"
+   },
+   "element_id": "GF-R8496F0:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2211463bba5eeb2e4282",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "64a0e0ea88e94899",
+    "V3_0_21": "64a0e0ea88e94899",
+    "V3_0_22": "f900868228f464f3"
+   },
+   "element_id": "1F-R26FA0D:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2948639faa08fa1cff81",
+   "low": null,
+   "measured_net": 52.529,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "acea0dddba69195b",
+    "V3_0_21": "acea0dddba69195b",
+    "V3_0_22": "16ae8268f29f67b0"
+   },
+   "element_id": "GF-RF38DAF:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2b9a85e1bedf161c0c21",
+   "low": null,
+   "measured_net": 25.3011,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "79df645f6fa032d0",
+    "V3_0_21": "79df645f6fa032d0",
+    "V3_0_22": "79df645f6fa032d0"
+   },
+   "element_id": "HL:WALL_FINISH:1F_10:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "high": 52.29,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "low": 48.94,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fcfbd6578c915c38",
+    "V3_0_21": "fcfbd6578c915c38",
+    "V3_0_22": "fcfbd6578c915c38"
+   },
+   "element_id": "GF-R7512EA:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2d034d6592850b456295",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c9fbcc4b26ca3422",
+    "V3_0_21": "c9fbcc4b26ca3422",
+    "V3_0_22": "c9fbcc4b26ca3422"
+   },
+   "element_id": "GF-OPENING-OP-021:door jambs and head",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 1.4,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2f94dca4dd5f2ec05822",
+   "low": 1.28,
+   "measured_net": null,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "bd79b2c9d1f6c742",
+    "V3_0_21": "bd79b2c9d1f6c742",
+    "V3_0_22": "61838a7915c55ef1"
+   },
+   "element_id": "GF-RB28769:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-302f7235046bbe0b6c09",
+   "low": null,
+   "measured_net": 22.6165,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "5d6ec11d2ce251da",
+    "V3_0_21": "5d6ec11d2ce251da",
+    "V3_0_22": "5d6ec11d2ce251da"
+   },
+   "element_id": "HL:WALL_FINISH:1F_11:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "high": 61.7177,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-31db3c83552682d92ca3",
+   "low": 61.4626,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "84bd2a148f5159db",
+    "V3_0_21": "84bd2a148f5159db",
+    "V3_0_22": "84bd2a148f5159db"
+   },
+   "element_id": "GF-R51E127:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-37a862c12cdcbb113486",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "154719fad1a3ba03",
+    "V3_0_21": "154719fad1a3ba03",
+    "V3_0_22": "154719fad1a3ba03"
+   },
+   "element_id": "2F-OPENING-OP-007:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-39497d7b7639a776f8f2",
+   "low": null,
+   "measured_net": 1.06,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8128e235bbd1b40c",
+    "V3_0_21": "8128e235bbd1b40c",
+    "V3_0_22": "8128e235bbd1b40c"
+   },
+   "element_id": "GF-OPENING-OP-025:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3ae66decd178e43c61e0",
+   "low": null,
+   "measured_net": 1.08,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0eb77311df402316",
+    "V3_0_21": "0eb77311df402316",
+    "V3_0_22": "0eb77311df402316"
+   },
+   "element_id": "GF-OPENING-OP-013:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3c21b044ce980ec0ee75",
+   "low": null,
+   "measured_net": 1.06,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d7fb6fb5c7cee8dc",
+    "V3_0_21": "d7fb6fb5c7cee8dc",
+    "V3_0_22": "52ae91a9d216565a"
+   },
+   "element_id": "1F-R8BDA49:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3eba04f2458578e7dc19",
+   "low": null,
+   "measured_net": 27.9101,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "106c4e94af5016a9",
+    "V3_0_21": "106c4e94af5016a9",
+    "V3_0_22": "ccd1626b845adcea"
+   },
+   "element_id": "GF-RDF7D28:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d3b1e48d06e1ff20",
+    "V3_0_21": "d3b1e48d06e1ff20",
+    "V3_0_22": "d3b1e48d06e1ff20"
+   },
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-418121a4b223cb4e8646",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "779582b2dc0a18e4",
+    "V3_0_21": "779582b2dc0a18e4",
+    "V3_0_22": "779582b2dc0a18e4"
+   },
+   "element_id": "1F-R78C367:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-47317d02e1a6402e3370",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ae10dd964c847011",
+    "V3_0_21": "ae10dd964c847011",
+    "V3_0_22": "ae10dd964c847011"
+   },
+   "element_id": "1F-RB72F22:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-4c59e238e753faa61ee7",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c50d704d775fba99",
+    "V3_0_21": "c50d704d775fba99",
+    "V3_0_22": "c50d704d775fba99"
+   },
+   "element_id": "HL:WALL_FINISH:2F_03:PLASTER",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "low": null,
+   "measured_net": 57.775,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2c07a37fb3c210ea",
+    "V3_0_21": "2c07a37fb3c210ea",
+    "V3_0_22": "2c07a37fb3c210ea"
+   },
+   "element_id": "1F-OPENING-OP-018:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-537fc3896f24cf408fe6",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8fc08d603d5b56b9",
+    "V3_0_21": "8fc08d603d5b56b9",
+    "V3_0_22": "8fc08d603d5b56b9"
+   },
+   "element_id": "1F-OPENING-OP-004:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-54b2eb0ad40cc47b9be5",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8a50cf6dc40429f1",
+    "V3_0_21": "8a50cf6dc40429f1",
+    "V3_0_22": "7ebe71fc34ec3018"
+   },
+   "element_id": "GF-RA3AD49:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "9bdff5c8566cbb42",
+    "V3_0_21": "9bdff5c8566cbb42",
+    "V3_0_22": "9bdff5c8566cbb42"
+   },
+   "element_id": "1F-OPENING-OP-006:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-5d309e25e8b180283606",
+   "low": null,
+   "measured_net": 0.795,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1f2da248ecea3526",
+    "V3_0_21": "1f2da248ecea3526",
+    "V3_0_22": "cf2f92a4244f1389"
+   },
+   "element_id": "1F-RED23B8:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-5e5e62e91688eebfb285",
+   "low": null,
+   "measured_net": 23.2201,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d7e63565e6051765",
+    "V3_0_21": "d7e63565e6051765",
+    "V3_0_22": "d7e63565e6051765"
+   },
+   "element_id": "1F-RED0D19:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-5f35942de5e9c9acb98c",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a6ef6695083a2b9e",
+    "V3_0_21": "a6ef6695083a2b9e",
+    "V3_0_22": "a6ef6695083a2b9e"
+   },
+   "element_id": "GF-RC99C2A:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-6094c3f914c57ab4f361",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "21adbbaf984678f0",
+    "V3_0_21": "21adbbaf984678f0",
+    "V3_0_22": "21adbbaf984678f0"
+   },
+   "element_id": "1F-R0E919A:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-6171609d7fbe427cba07",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "61cc2c57416ddc52",
+    "V3_0_21": "61cc2c57416ddc52",
+    "V3_0_22": "61cc2c57416ddc52"
+   },
+   "element_id": "GF-OPENING-OP-012:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-61825a3103a391956d70",
+   "low": null,
+   "measured_net": 0.81,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4e60a09591c36656",
+    "V3_0_21": "4e60a09591c36656",
+    "V3_0_22": "4e60a09591c36656"
+   },
+   "element_id": "GF-RC06FED:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-6470c6f20f86e542a5ce",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "902dd0b11bd61080",
+    "V3_0_21": "902dd0b11bd61080",
+    "V3_0_22": "902dd0b11bd61080"
+   },
+   "element_id": "GF-OPENING-OP-018:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-672329032e0d70329d5f",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0e03c6c9cbb03095",
+    "V3_0_21": "0e03c6c9cbb03095",
+    "V3_0_22": "589695e5c2abae75"
+   },
+   "element_id": "HL:WALL_FINISH:GF_07:PLASTER",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-721a0f1441436193978c",
+   "low": null,
+   "measured_net": 32.3422,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d9187154d79e79ae",
+    "V3_0_21": "d9187154d79e79ae",
+    "V3_0_22": "d9187154d79e79ae"
+   },
+   "element_id": "1F-R3CFCFD:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-7301f9ff1fd78401329f",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "538ecefe840c5469",
+    "V3_0_21": "538ecefe840c5469",
+    "V3_0_22": "538ecefe840c5469"
+   },
+   "element_id": "2F-R4D1B62:stair hall plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-7afc2b10a88c0d2c0462",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "stair hall plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e36678761d89b3b3",
+    "V3_0_21": "e36678761d89b3b3",
+    "V3_0_22": "e36678761d89b3b3"
+   },
+   "element_id": "GF-OPENING-OP-017:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-7dcb2bab84655929f7e8",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "f1f398b786304c47",
+    "V3_0_21": "f1f398b786304c47",
+    "V3_0_22": "f1f398b786304c47"
+   },
+   "element_id": "GF-R75FBAE:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-823f8b28e3aefb931fad",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2ea3f5644fa8545e",
+    "V3_0_21": "2ea3f5644fa8545e",
+    "V3_0_22": "2ea3f5644fa8545e"
+   },
+   "element_id": "2F-OPENING-OP-006:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-833ba74bab1404d1f6cc",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "de4ea24699a65be3",
+    "V3_0_21": "de4ea24699a65be3",
+    "V3_0_22": "de4ea24699a65be3"
+   },
+   "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 178.805,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "low": 152.0505,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "30304ba9703ba83d",
+    "V3_0_21": "30304ba9703ba83d",
+    "V3_0_22": "30304ba9703ba83d"
+   },
+   "element_id": "2F-R1DB2D2:plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-8d487acc15ffa6bc2fff",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "1161e4e8a3896484",
+    "V3_0_21": "1161e4e8a3896484",
+    "V3_0_22": "b7fe3a97b346163c"
+   },
+   "element_id": "GF-RDBD4F9:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-910672305a87544d4d72",
+   "low": null,
+   "measured_net": 26.6544,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "34f15d9641fe9723",
+    "V3_0_21": "34f15d9641fe9723",
+    "V3_0_22": "fdd65ac29a36a7dc"
+   },
+   "element_id": "1F-R48AA46:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-9473c0c6ce4e11e4d162",
+   "low": null,
+   "measured_net": 27.91,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "eef0c65d0630423f",
+    "V3_0_21": "eef0c65d0630423f",
+    "V3_0_22": "eef0c65d0630423f"
+   },
+   "element_id": "HL:WALL_FINISH:ST_GF:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 62.01,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-95f2c45c2eccaaeccb08",
+   "low": 48.52,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "f307c8e0c1bcabca",
+    "V3_0_21": "f307c8e0c1bcabca",
+    "V3_0_22": "f307c8e0c1bcabca"
+   },
+   "element_id": "HL:WALL_FINISH:1F_04:PLASTER",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "low": null,
+   "measured_net": 52.005,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6d3a53e43cfbce8c",
+    "V3_0_21": "6d3a53e43cfbce8c",
+    "V3_0_22": "6d3a53e43cfbce8c"
+   },
+   "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "high": 114.3677,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "low": 111.0177,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c20dd11425b4f290",
+    "V3_0_21": "c20dd11425b4f290",
+    "V3_0_22": "c20dd11425b4f290"
+   },
+   "element_id": "GF-OPENING-OP-005:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-9cf5a4b4db78cf57cf7f",
+   "low": null,
+   "measured_net": 1.06,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d54e44c21985073d",
+    "V3_0_21": "d54e44c21985073d",
+    "V3_0_22": "50ff0515df115a0a"
+   },
+   "element_id": "GF-RD36087:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6bdca017e0b7e602",
+    "V3_0_21": "6bdca017e0b7e602",
+    "V3_0_22": "6bdca017e0b7e602"
+   },
+   "element_id": "1F-OPENING-OP-005:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-a85b83a93486fdc400f8",
+   "low": null,
+   "measured_net": 0.795,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "40e4b452f607b925",
+    "V3_0_21": "40e4b452f607b925",
+    "V3_0_22": "40e4b452f607b925"
+   },
+   "element_id": "GF-R31F8AE:stair hall plaster",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-acc2563d9293de219c3a",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "stair hall plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "cbcc02fe185f469d",
+    "V3_0_21": "cbcc02fe185f469d",
+    "V3_0_22": "cbcc02fe185f469d"
+   },
+   "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "high": 26.0002,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "low": 22.6502,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ec9d8d76de73d8a9",
+    "V3_0_21": "ec9d8d76de73d8a9",
+    "V3_0_22": "ec9d8d76de73d8a9"
+   },
+   "element_id": "HL:WALL_FINISH:1F_01:PLASTER",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-af9621f43bc316a871ea",
+   "low": null,
+   "measured_net": 51.415,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "31bc543ee9b01097",
+    "V3_0_21": "31bc543ee9b01097",
+    "V3_0_22": "31bc543ee9b01097"
+   },
+   "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-b152995525ed123ddac9",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall face plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "5f4eb47deb737900",
+    "V3_0_21": "5f4eb47deb737900",
+    "V3_0_22": "478154ba9fd833c5"
+   },
+   "element_id": "2F-RE83BED:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-bec624729c89553f720f",
+   "low": null,
+   "measured_net": 30.255,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "43c53baf94ce5bd6",
+    "V3_0_21": "43c53baf94ce5bd6",
+    "V3_0_22": "43c53baf94ce5bd6"
+   },
+   "element_id": "2F-OPENING-OP-001:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-ca7d121f07fd1a73536d",
+   "low": null,
+   "measured_net": 0.81,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e84e4f59d8a3104d",
+    "V3_0_21": "e84e4f59d8a3104d",
+    "V3_0_22": "07dda7cd7366111a"
+   },
+   "element_id": "GF-RD6F891:plaster",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-ccc97166c57999d5a303",
+   "low": null,
+   "measured_net": 25.5912,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ad6b58a7eeafd58a",
+    "V3_0_21": "ad6b58a7eeafd58a",
+    "V3_0_22": "ad6b58a7eeafd58a"
+   },
+   "element_id": "GF-OPENING-OP-008:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-e11de0ecd42fcb0b5756",
+   "low": null,
+   "measured_net": 1.08,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0c80b8c9e085b711",
+    "V3_0_21": "0c80b8c9e085b711",
+    "V3_0_22": "abdcd204d2795a53"
+   },
+   "element_id": "GF-RFAD3C4:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f179fc08a266294ad4a4",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "5520105c711e4965",
+    "V3_0_21": "5520105c711e4965",
+    "V3_0_22": "5520105c711e4965"
+   },
+   "element_id": "1F-OPENING-OP-008:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f3590fade6406f912d2e",
+   "low": null,
+   "measured_net": 1.06,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "83ea78651aae04ab",
+    "V3_0_21": "83ea78651aae04ab",
+    "V3_0_22": "83ea78651aae04ab"
+   },
+   "element_id": "1F-OPENING-OP-019:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f38f6ecefecd7e617cac",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "737f910fa2076a8f",
+    "V3_0_21": "737f910fa2076a8f",
+    "V3_0_22": "737f910fa2076a8f"
+   },
+   "element_id": "GF-OPENING-OP-009:door jambs and head",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "high": 1.2,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f4175f9915208dc5f9f7",
+   "low": 1.08,
+   "measured_net": null,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "baf04e91232fc8bc",
+    "V3_0_21": "baf04e91232fc8bc",
+    "V3_0_22": "1931ef93a2a09370"
+   },
+   "element_id": "GF-RB62B55:plaster",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f43782d52f32b53a6f1e",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "plaster",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c80fd4443b4e2980",
+    "V3_0_21": "c80fd4443b4e2980",
+    "V3_0_22": "c80fd4443b4e2980"
+   },
+   "element_id": "GF-OPENING-OP-026:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f4e9614350ce4659d186",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ca6f1302281696b6",
+    "V3_0_21": "ca6f1302281696b6",
+    "V3_0_22": "ca6f1302281696b6"
+   },
+   "element_id": "1F-OPENING-OP-010:door jambs and head",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f8a0d9bfc3e6a3f113b2",
+   "low": null,
+   "measured_net": 0.78,
+   "physical_element": "door jambs and head",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "82d817f379a2837b",
+    "V3_0_21": "5ee08e82b092a020",
+    "V3_0_22": "5ee08e82b092a020"
+   },
+   "element_id": "2F-RE83BED:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-065bafe1b98e3a43881c",
+   "low": null,
+   "measured_net": 30.255,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a528a9fdb66a2a55",
+    "V3_0_21": "4b78bd584b2e3d4a",
+    "V3_0_22": "4b78bd584b2e3d4a"
+   },
+   "element_id": "1F-RED23B8:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-086e72207311265f81ab",
+   "low": null,
+   "measured_net": 23.2201,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ccbc118bda349f9e",
+    "V3_0_21": "235bde740dd0e57b",
+    "V3_0_22": "235bde740dd0e57b"
+   },
+   "element_id": "1F-R52AC05:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-1090bb5c8226afec2235",
+   "low": null,
+   "measured_net": 19.6691,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2b2aebf1d3e25d72",
+    "V3_0_21": "2b2aebf1d3e25d72",
+    "V3_0_22": "2b2aebf1d3e25d72"
+   },
+   "element_id": "GF-RDF7D28:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-1341e0410a469089c3be",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "c79144d19e3d774d",
+    "V3_0_21": "d46157df433eae0e",
+    "V3_0_22": "d46157df433eae0e"
+   },
+   "element_id": "1F-R48CDA5:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-82cd58d4a16fb94ddfc6",
+   "low": null,
+   "measured_net": 26.3051,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8d2d6a444255d6b0",
+    "V3_0_21": "8d2d6a444255d6b0",
+    "V3_0_22": "8d2d6a444255d6b0"
+   },
+   "element_id": "GF-RFAD3C4:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-88c11c5d8dc1dfd7c27e",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e95acdab60f5ac08",
+    "V3_0_21": "62bf56467bb35e24",
+    "V3_0_22": "62bf56467bb35e24"
+   },
+   "element_id": "1F-R48AA46:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-88ed2535c1975adb702e",
+   "low": null,
+   "measured_net": 27.91,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "dc2e7196aa62ee60",
+    "V3_0_21": "dc2e7196aa62ee60",
+    "V3_0_22": "dc2e7196aa62ee60"
+   },
+   "element_id": "GF-RB62B55:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-96d9839bd3bca4c08a67",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a33d49704fa32f97",
+    "V3_0_21": "5a8f91d90ce1f66d",
+    "V3_0_22": "5a8f91d90ce1f66d"
+   },
+   "element_id": "1F-R8BDA49:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-a34d09209fb5aad3eb63",
+   "low": null,
+   "measured_net": 27.9101,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "37a19b86b3214100",
+    "V3_0_21": "c2b2399a4d00c4e1",
+    "V3_0_22": "c2b2399a4d00c4e1"
+   },
+   "element_id": "GF-RB28769:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-a3cb2c8a9b6080769ebc",
+   "low": null,
+   "measured_net": 22.6165,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "ba33f26bb2037ca4",
+    "V3_0_21": "c1945e66a5df9339",
+    "V3_0_22": "c1945e66a5df9339"
+   },
+   "element_id": "1F-R26FA0D:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-b2077eee5a71a975bd74",
+   "low": null,
+   "measured_net": 52.529,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "8d4a2570d5977781",
+    "V3_0_21": "8d4a2570d5977781",
+    "V3_0_22": "8d4a2570d5977781"
+   },
+   "element_id": "GF-RA3AD49:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-c330b8dc47261d5ada7e",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "77eea55aa55c06ae",
+    "V3_0_21": "9ba3ce35bac4f892",
+    "V3_0_22": "9ba3ce35bac4f892"
+   },
+   "element_id": "GF-RF38DAF:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-c34694477f67800ae2e3",
+   "low": null,
+   "measured_net": 25.3011,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "d168c924228fb64a",
+    "V3_0_21": "0136e4768cd5823a",
+    "V3_0_22": "0136e4768cd5823a"
+   },
+   "element_id": "GF-RD6F891:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-ca4e74c59364f665b102",
+   "low": null,
+   "measured_net": 25.5912,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4c6e973e875bacc4",
+    "V3_0_21": "4c6e973e875bacc4",
+    "V3_0_22": "4c6e973e875bacc4"
+   },
+   "element_id": "GF-R8496F0:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-d0858b30e0ea869bd047",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4ca9fc4afd6a2691",
+    "V3_0_21": "4ca9fc4afd6a2691",
+    "V3_0_22": "4ca9fc4afd6a2691"
+   },
+   "element_id": "GF-RD36087:wall_tile",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-de4088e7012e655bb071",
+   "low": null,
+   "measured_net": null,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": null,
+    "V3_0_21": "5436163ccc1828f6",
+    "V3_0_22": "5436163ccc1828f6"
+   },
+   "element_id": "GF-RC06FED#WALL_TILE:GF-07",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-f5c5a1a9c9ee2b644cb5",
+   "low": null,
+   "measured_net": 32.3422,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "681f4965b8c9ff1b",
+    "V3_0_21": "8c1c307b3882516d",
+    "V3_0_22": "8c1c307b3882516d"
+   },
+   "element_id": "GF-RDBD4F9:wall_tile",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "low": null,
+   "measured_net": 26.6544,
+   "physical_element": "wall_tile",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "209bde0354a78c70",
+    "V3_0_21": "209bde0354a78c70",
+    "V3_0_22": "209bde0354a78c70"
+   },
+   "element_id": "1F-R8BDA49:doorway CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-0627bac3a224d7fab8de",
+   "low": null,
+   "measured_net": 0.131977,
+   "physical_element": "doorway CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fc50bae390813b5b",
+    "V3_0_21": "fc50bae390813b5b",
+    "V3_0_22": "fc50bae390813b5b"
+   },
+   "element_id": "GF-RD6F891:doorway CLOSURE|D2:820:0|D2:820:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-0f04f1a49d795b14d1af",
+   "low": null,
+   "measured_net": 0.218846,
+   "physical_element": "doorway CLOSURE|D2:820:0|D2:820:0",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2370646e54602cb4",
+    "V3_0_21": "2370646e54602cb4",
+    "V3_0_22": "2370646e54602cb4"
+   },
+   "element_id": "GF-RDF7D28:doorway CLOSURE|D2:825|D2:417@D2:825:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-3444beb08ce0719127ac",
+   "low": null,
+   "measured_net": 0.119556,
+   "physical_element": "doorway CLOSURE|D2:825|D2:417@D2:825:0",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "7fbcd53ac646c71e",
+    "V3_0_21": "7fbcd53ac646c71e",
+    "V3_0_22": "7fbcd53ac646c71e"
+   },
+   "element_id": "1F-R48AA46:doorway OP-004",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-415228b01d9471c888e1",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-004",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "fd618f4dda5d7c94",
+    "V3_0_21": "fd618f4dda5d7c94",
+    "V3_0_22": "fd618f4dda5d7c94"
+   },
+   "element_id": "1F-RED23B8:doorway OP-019",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-925603593b80b629965f",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-019",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "e0a02dd300765ad2",
+    "V3_0_21": "e0a02dd300765ad2",
+    "V3_0_22": "e0a02dd300765ad2"
+   },
+   "element_id": "GF-RB62B55:doorway CLOSURE|D2:495|D2:417@D2:495:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-936d4f0c4514923ad9c0",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway CLOSURE|D2:495|D2:417@D2:495:0",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "b261c8d578c541ae",
+    "V3_0_21": "b261c8d578c541ae",
+    "V3_0_22": "b261c8d578c541ae"
+   },
+   "element_id": "1F-R48CDA5:doorway OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-9c34349b61d8d9103bce",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-018",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "34368d9d6373332c",
+    "V3_0_21": "34368d9d6373332c",
+    "V3_0_22": "34368d9d6373332c"
+   },
+   "element_id": "GF-RB28769:doorway OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-9cbc8b1b9ebf6e79df66",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-018",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "5f52dd7dc85a1127",
+    "V3_0_21": "5f52dd7dc85a1127",
+    "V3_0_22": "5f52dd7dc85a1127"
+   },
+   "element_id": "GF-RFAD3C4:doorway OP-026",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-a6dffed80be55d5adf1f",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-026",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "4c084fca9dce9c98",
+    "V3_0_21": "4c084fca9dce9c98",
+    "V3_0_22": "4c084fca9dce9c98"
+   },
+   "element_id": "1F-R26FA0D:doorway OP-010",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-bdf48c327992229649ca",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-010",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "2fb0ed97d65eb615",
+    "V3_0_21": "2fb0ed97d65eb615",
+    "V3_0_22": "2fb0ed97d65eb615"
+   },
+   "element_id": "2F-RE83BED:doorway OP-006",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-cc37f166bbea265ed2cf",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-006",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "6e9a8abce5ab396a",
+    "V3_0_21": "6e9a8abce5ab396a",
+    "V3_0_22": "6e9a8abce5ab396a"
+   },
+   "element_id": "1F-R26FA0D:doorway OP-008",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e023ab45fd02c8531234",
+   "low": null,
+   "measured_net": 0.18,
+   "physical_element": "doorway OP-008",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "0ddc0f7950b08a47",
+    "V3_0_21": "0ddc0f7950b08a47",
+    "V3_0_22": "0ddc0f7950b08a47"
+   },
+   "element_id": "GF-RA3AD49:doorway OP-025",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e18901e01bc3d7a3fbd4",
+   "low": null,
+   "measured_net": 0.2,
+   "physical_element": "doorway OP-025",
+   "unit": "m2"
+  },
+  {
+   "digest": {
+    "V3_0_20": "a5f6e5ca181f7c27",
+    "V3_0_21": "a5f6e5ca181f7c27",
+    "V3_0_22": "a5f6e5ca181f7c27"
+   },
+   "element_id": "GF-RF38DAF:doorway OP-017",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "high": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e3ffb8005f85e89113cb",
+   "low": null,
+   "measured_net": 0.12,
+   "physical_element": "doorway OP-017",
+   "unit": "m2"
+  }
+ ],
+ "lines_json_sha8": {
+  "V3_0_20": "097a80b6",
+  "V3_0_21": "be22a4e4",
+  "V3_0_22": "7199c8b6"
+ },
+ "lines_total": {
+  "V3_0_20": 3705,
+  "V3_0_21": 3706,
+  "V3_0_22": 3706
+ },
+ "source": "own run research/agents_t167/v304_run.py -> research/agents_t331/v3022_run.py"
+}
