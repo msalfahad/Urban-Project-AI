@@ -6,6 +6,40 @@
    "candidate_version": "ARCH_TAKEOFF_V3.0.20",
    "checker": {
     "routine": "Verifier",
+    "run_token": "20261029T045049-398-12655",
+    "verdict_commit": "e7dc5761"
+   },
+   "downgrade_id": "DG-3521554d2fd011b9",
+   "engine_qty": 15.179437,
+   "evidence": [
+    {
+     "printed_value": "blinding projection 10 cm beyond the footing face (typical isolated footing only)",
+     "sheet": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING"
+    },
+    {
+     "printed_value": "10cm blinding printed, projection NOT printed (scaled 0.148 / 0.151 m at 1:20)",
+     "sheet": "ST7757.pdf p.14 lift pit / FF detail"
+    }
+   ],
+   "line_content_sha256": "d208de8a9993aeda3107c950b5a862685afad55fec3c3051aa48a67389376c57",
+   "line_ids": [
+    "L-98eb2d58075c9eddf1b4"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: the footing-blinding line (25 members, union of (L + 2p)(W + 2p) x t, convention only) applies the ST p.13 TYPICAL isolated-footing projection p = 0.10 to the FF raft (lift pit) as well: an INHERITED reading of another element's detail; the FF governing detail ST p.14 draws the blinding without a printed projection (about 0.15 scaled at 1:20, evidence only). FF piece 2.256 m3 (p 0.10) -> HELD >= 2.070 m3 (4.60 x 4.50 x 0.10, no projection), readings 2.256 / 2.352 (designer item, RFI S23). The 24 pit footings inside the plot stay at 12.734438 m3 VERIFIED (Checker T-322 verdict 2026-10-29 01:55); a downgrade record cannot split a line, so the whole line is HELD and the engine quantity 15.179437 m3 is kept in the audit only (owner 2026-10-24 23:57 (1), 2026-10-25 13:25). Candidate line unchanged; released V2.9 unchanged.",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-29T05:49:18Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "binding": "LINE_CONTENT_V1",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
     "run_token": "20261028T195035-394-19343",
     "verdict_commit": "59dbfd0e"
    },
