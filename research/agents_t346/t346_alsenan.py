@@ -17,7 +17,9 @@ Drawing evidence for the splits (no coordinates committed):
   * passage face P-2 (house side, Q-67 A cond.): 4.700 m from the boundary wall's inner face; its first 1.300 m (0.100
     wall + 1.000 W10 + 0.200 wall) lies inside the 1.500 m GF roof band; the band's other 0.200 m is the boundary wall
     that closes the passage (T-123 section 3), not a house face; the GF roof slab +5.50 runs on over the passage (T-123
-    section 4: 0 .. 1300 under the exposed GF roof), so no face stands at that line above +5.50.
+    section 4: 0 .. 1300 under the exposed GF roof), so no face stands at that line above +5.50;
+  * NW elevation (Drive single-sheet set, Alsenan_Architectural_P7757_Pages_07-08, sheet 08): outer chain '100' / '870'
+    (+1.00 -> +9.70) and '110' from +9.70 to the PEAK of the 1F sea parapet wave (+10.80): his 9.80 = 870 + 110.
 """
 
 from __future__ import annotations
@@ -137,7 +139,8 @@ CAUSE = {
     (69, 5.50, 6.00): "one plane hides the 0.50 m band where the GF parapet stands 1.50 m in front of the 1F face",
     (69, 6.00, 9.70): "width: his 6.75 against 1F NW-5 6.725",
     (69, 9.70): "width over the drawn parapet mean height",
-    (69, "top"): "height: his top +10.80 (6.75 x 9.80 from +1.00) above the CAD wave's mean top; +10.80 is not printed",
+    (69, "top"): ("height: his rectangle to the wave's printed PEAK +10.80 (sheet 08: '870' + '110' = his 9.80) against "
+                  "the drawn wave profile (CAD area, mean top +10.148)"),
     (65, 0.00, 0.15): "his +-0.00 against the passage floor +0.15",
     (65, 0.15, 1.00): "0.20 m of his 1.50 is the boundary wall closing the passage (no house face, Q-65 C)",
     (65, 1.00, 5.50): "0.20 m of his 1.50 is the boundary wall closing the passage (no house face, Q-65 C)",
@@ -164,8 +167,8 @@ def outputs():
                           "no new T-314 FILL row", "MAPPED (agrees 0.000 m2)"),
         (69, "MATCHED"): ("drawn faces already bound once in T-337 (GF storey line, PARAPET-OUTER GF, 1F storey line, "
                           "PARAPET-OUTER 1F; plinth below his band in PLINTH): no new T-314 FILL row",
-                          "RULE_DIFFERENCE (one plane for set-back faces, as row 64) + his height UNRESOLVED (+10.80 "
-                          "not printed)"),
+                          "RULE_DIFFERENCE (one plane for set-back faces, as row 64; a rectangle to the wave's "
+                          "printed peak): ENGINE_RIGHT on the physical face"),
         (65, "DOUBLE_COUNT"): ("double count in his sheet: no face, no FILL row", "ENGINE_RIGHT (the face once)"),
         (65, "MATCHED"): ("drawn face already bound once in T-337 (P-2, GF storey line and PLINTH; Q-67 A cond.): no "
                           "new T-314 FILL row; the 0.20 m boundary wall part is OTHER_TRADE (Q-65 C)",

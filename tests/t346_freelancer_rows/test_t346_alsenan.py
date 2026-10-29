@@ -57,10 +57,10 @@ def test_no_new_fill_row_and_every_part_classified():
     assert float(parts[0]["named_terms_m2"]) == pytest.approx(0.0)     # row 68 agrees with the drawn 1.50 m portion
 
 
-def test_row69_height_term_is_named_unresolved_not_absorbed():
+def test_row69_height_term_is_named_not_absorbed():
     b69 = [b for b in rows("BANDS_T346.csv") if b["his_row"] == "69"]
     top = b69[-1]
-    assert float(top["drawn_width_m"]) == 0.0 and "not printed" in top["cause"]
+    assert float(top["drawn_width_m"]) == 0.0 and "PEAK +10.80" in top["cause"]
     assert float(top["his_minus_drawn_m2"]) == pytest.approx(4.400398, abs=1e-6)
     hidden = [b for b in b69 if float(b["drawn_width_m"]) > float(b["his_width_m"])]
     assert len(hidden) == 1 and float(hidden[0]["his_minus_drawn_m2"]) == pytest.approx(-3.1875)

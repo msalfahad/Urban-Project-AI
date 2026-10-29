@@ -25,6 +25,10 @@ UNRESOLVED: no face of those sizes on the elevations; possible double counts. Ev
 - Passage (T-123, slab sheet registered 30 / 30 columns): the NE end is closed by the 0.200 m boundary wall; the house
   passage face P-2 runs 4.700 m from that wall's inner face; its first 1.300 m lies inside the 1.500 m NE band; the GF
   roof slab +5.50 runs on over the passage (0 .. 1300 mm under the exposed GF roof).
+- Sheet 08 (NW elevation, Drive 'Alsenan_Architectural_P7757_Pages_07-08'): outer chain '100' (+-0.00 -> +1.00),
+  '870' (+1.00 -> +9.70), '420' / '50' to +14.40, and **'110' from +9.70 to the peak of the 1F sea parapet wave
+  (+10.80)**: his 9.80 = 870 + 110 is printed. The 1F sea face carries the two arched doors W15 / W16 (155 each); the
+  1F face over the pool carries the arched opening (269 / 305) above the GF pool glazing (430) and the pool (115).
 - Sheet 09 (NE view, single sheet PDF): GF +-0.00 / +1.00 / +5.50, parapet '50' to +6.00, 1F to +11.00, 2F +14.40;
   the GF part of that view is drawn as a cut. At its cut the passage reads covered at about +4.30; the cut position is
   not established, so T-123's slab-sheet reading stands (this changes no face area: P-2 is measured to +5.50 either way).
@@ -34,16 +38,16 @@ UNRESOLVED: no face of those sizes on the elevations; possible double counts. Ev
 | His row (cells) | Physical element | Drawing evidence | Drawn m2 (his band) | His - drawn | Classification / owner lines | Verdict proposal |
 |---|---|---|---|---|---|---|
 | 68 (F 6.00, H 1.50 = 9.000) | GF sea face NW-7, its 1.50 m at the NE band's end, +-0.00 -> +6.00 (0.600 m of W02's width is in it) | plan 1500; NW-7 7.900, levels +1.00 / +5.50 / +6.00 | 9.000 (plinth 1.500, storey 6.750, parapet 0.750) | **0.000** | drawn, already bound once in T-337: GF storey L-b05f70c92405dbcfbe62, PLINTH GF, PARAPET-OUTER GF; no new FILL row | MAPPED |
-| 69 (F 9.80, H 6.75 = 66.150) | the sea face as ONE plane from +1.00 (his row 64 practice): GF NW-7 6.40 m under the 1F + 1F NW-5 6.725 m above it, to +10.80 | NW-7, NW-5 (T-305 / T-337); the 2F sea face is his row 77 (4.70 high), so 69 is NOT the 2F face | 63.258 (GF 32.000 + 1F 28.245 + 3.013); plinth 6.400 below his band | **+2.892** = width +1.679 (6.75 vs 6.40 / 6.725), hidden overlap **-3.188** (the 0.50 m where the GF parapet stands 1.50 m in front of the 1F face), height **+4.400** (his top +10.80 vs the CAD wave's mean top +10.148; +10.80 is not printed) | drawn, bound once in T-337: GF storey, PARAPET-OUTER GF, 1F storey L-8bb83e16cc7b104ab88b, PARAPET-OUTER 1F; no new FILL row | RULE_DIFFERENCE (one plane) + height part UNRESOLVED (4.400) |
+| 69 (F 9.80, H 6.75 = 66.150) | the sea face as ONE plane from +1.00 (his row 64 practice): GF NW-7 6.40 m under the 1F + 1F NW-5 6.725 m above it, to +10.80 | NW-7, NW-5 (T-305 / T-337); the 2F sea face is his row 77 (4.70 high), so 69 is NOT the 2F face | 63.258 (GF 32.000 + 1F 28.245 + 3.013); plinth 6.400 below his band | **+2.892** = width +1.679 (6.75 vs 6.40 / 6.725), hidden overlap **-3.188** (the 0.50 m where the GF parapet stands 1.50 m in front of the 1F face), height **+4.400** (his rectangle to the wave's printed peak +10.80, sheet 08 '110', vs the drawn wave profile, CAD mean top +10.148) | drawn, bound once in T-337: GF storey, PARAPET-OUTER GF, 1F storey L-8bb83e16cc7b104ab88b, PARAPET-OUTER 1F; no new FILL row | RULE_DIFFERENCE (one plane; rectangle to the printed wave peak): ENGINE_RIGHT on the physical face |
 | 65, first half (9.000) | NW end return of the NE band = the SAME NW-7 1.50 m portion as row 68 | the band is an L: its NW end turns into the sea face | 0 | +9.000 | **double count in his sheet** (no face, no FILL row) | ENGINE_RIGHT (the face once) |
 | 65, second half (9.000) | SE end return of the NE band, at the passage: P-2's first 1.300 m (+0.15 -> +5.50, W10 1.00 x 1.50 in it) + 0.200 boundary wall | T-123 passage faces, slab sheet; plan 1500 | 6.955 (plinth 1.105, storey 5.850) | **+2.045** = datum 0.225 (his +-0.00 vs floor +0.15) + boundary wall 0.200 m wide 1.070 (no house face) + 0.750 above +5.50 (roof runs on, no face) | drawn, bound once in T-337 (P-2: GF storey, PLINTH; Q-67 A cond.); the 0.20 m part is the boundary wall, OTHER_TRADE (Q-65 C) | RULE_DIFFERENCE (ENGINE_RIGHT on the geometry) |
 
 ## 3. Reconciliation statement (acceptance e)
 
 **93.150 m2 = 79.213 drawn faces matched (63.258 + 9.000 + 6.955) + 9.000 double count + 4.937 named band terms
-(+2.892 row 69, 0.000 row 68, +2.045 row 65), residual 0.000000.** Of the named terms only row 69's height part
-(4.400 m2, his +10.80 top) is not explained by a physical or rule difference: it stays UNRESOLVED by name (the 1F sea
-parapet is a CAD wave without a printed top), never a quantity.
+(+2.892 row 69, 0.000 row 68, +2.045 row 65), residual 0.000000.** Every named term has a physical or rule cause:
+row 69 width +1.679, hidden overlap -3.188, rectangle to the printed wave peak +4.400; row 65 datum 0.225, boundary
+wall 1.070, roof running on 0.750. Nothing of the 93.150 m2 stays UNRESOLVED.
 
 Portions close on the T-337 faces (CLOSURE_T346.csv): NW-7 plinth / storey / parapet 7.900 / 35.550 / 3.950 and NW-5
 28.245 / 3.0134 rebuilt to 0.000000; P-2 1.300 of 4.700 m on the same bands and lines.
@@ -60,8 +64,11 @@ Portions close on the T-337 faces (CLOSURE_T346.csv): NW-7 plinth / storey / par
 - **Finding for the Lead (F-T346-1, not resolved here):** row 69 holds 1F NW-5 (31.258 m2), which T-162 / T-337 had
   placed in his rows 70 + 71 + 74 ("faces above the swimming pool", 4 x 4.95 m at 5.50 / 5.70, 109.890). Those rows
   then match only 1F NW-1 .. NW-4 and two returns (5.903 m, 32.167 m2 drawn): their unexplained part grows from 7.17 m
-  of run to 13.90 m. Candidates (pool-court walls, the GF pool glazing face NW-4, a court face) need their own
-  investigation row; until then rows 70 / 71 / 74 stay PARTIAL.
+  of run to 13.90 m. Sheet 08 evidence for that row (not resolved here): the 1F face over the pool is drawn with its
+  slab edge ('20') under it, so his row 70 (5.70 x 4.95) fits that face from the slab soffit +5.30 to +11.00, and his
+  rows 71 / 74 (three more 4.95 x 5.50 panels, +5.50 -> +11.00) are candidates for the faces round the 1F void over
+  the pool (T-342: 1F VOID AT225), which would be faces this facade ledger does not hold yet. Until a row measures
+  them, rows 70 / 71 / 74 stay PARTIAL.
 - Element register (acceptance c, Lead content): no boundary or site wall is measured by these rows; the only site
   element touched is the **0.200 m boundary wall that closes the GF side passage at its NE end** (T-123), OTHER_TRADE
   (Q-65 C): proposed register row "boundary wall, passage NE closure, 1.200 m x 0.200 m, owner trade OTHER (Q-65 C),
@@ -89,13 +96,13 @@ millimetres give the same terms. Adverse: a freelancer row as a FILL quantity re
 rows refused, a double count without a first claim refused; parts that do not add up to his row refused; UNRESOLVED
 never 0; HELD with a point value and a blank DRAWING-CONFIRMED refused; a face with a missing height refused.
 `test_t346_alsenan.py`: byte rebuild, statement residual 0, portions close on T-337 to 0.000000, no new FILL row,
-row 68 0.000, row 69's height term named and not absorbed, the hidden overlap -3.1875.
+row 68 0.000, row 69's height term named (the printed peak) and not absorbed, the hidden overlap -3.1875.
 
 ## 7. Lessons-register row (ERS s.7, proposed)
 
 2026-10-29 | his rows 65 / 68 / 69 (93.150 m2) labelled "no face drawn" | each row was matched against single
-elevation faces of the same size; a one-plane elevation practice and the end returns of a set-back band were not
-decomposed | before calling a row "no face", decompose set-backs: a row (band depth x lower height) x 2 is the band's
+elevation faces of the same size; a one-plane elevation practice, the end returns of a set-back band and a
+rectangle drawn to a wave's printed peak were not decomposed | before calling a row "no face", decompose set-backs: a row (band depth x lower height) x 2 is the band's
 two end returns, a row (upper width x full height from the floor) is the stacked faces as one plane; map each end to
 its face and flag a return that another row already holds as a double count (every villa) | tests/t346_freelancer_rows
 | proposed.
