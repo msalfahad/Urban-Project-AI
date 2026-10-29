@@ -22,26 +22,47 @@ carries no paint (UP-FIN-PAINT-001); the plaster / render behind the tile is its
           ONE new FIN.WALL.TILE line of the same family in its engine room (refused when that room already has one).
 
 The whole family is integrated at once: every FIN.WALL.TILE line of the run is named by exactly one FILL or HELD
-record (a line left out is refused, never silently kept). CROSS-TRADE (per face, cross_trade): in a room whose faces
-are all in its tile record, a figure on a paint line (paint under tile) or a skirting line (full-height tile) is
-refused; a room with not-tiled faces gets its paint figure named for a per-face check; in a shared engine room a line
-naming no room is listed as not attributable; the plaster lines are listed with what they carry (backing: its own
-line, reported, never derived here).
+record (a line left out is refused, never silently kept).
+
+ENGINE-ROOM SPLIT (r2, Gate B F-T315-C1 / C2): a valued record names the engine rooms its tiled room lies in by a
+merged room-split ledger (engine_room_split: [{engine_room, share WHOLE | PART, source}]): WHOLE = the engine room lies
+wholly inside the tiled room, so EVERY finish line of it is the tiled room's; PART = the engine room also holds other
+rooms. Without a split the record's own engine room is WHOLE. An engine room is never called shared from its
+open-plan note (engine_room_shared is refused: attribution by a room name or note double-counted the pantry base).
+
+BASE OWNERSHIP (r2): one owner per wall base (T-296; Q-37 A / Q-48 A: full-height wall tile owns the base). A
+base_ownership record carries a skirting (or paint) line of a split engine room off the tiled faces, by the source
+entities the line itself names, each with its length on a tiled face of the record (face id of the tile record):
+  NOT_APPLICABLE  every metre of the line's figure lies on tiled faces (sum of the entities = the line's net, or a
+                  bounded line's high): the line becomes NOT_APPLICABLE_WITH_EVIDENCE, no figure, never 0;
+  SPLIT           part of the line lies on tiled faces: that part is taken off (a live net less the part, a bounded
+                  high less the part), the rest is kept with its state, never 0 (a part >= the figure is refused).
+Each base record asserts the line's figure before (stale), names entities the line's source lists, and its parts on
+faces of the tiled record only. CROSS-TRADE (per face, cross_trade): a WHOLE engine room of a room whose faces are all
+in its tile record may keep no figure on a paint line (paint under tile) or a skirting line (full-height tile); a PART
+engine room may keep a skirting or paint figure only when a base record of the tiled room names that line (its tiled
+share taken off); a room with not-tiled faces gets its paint figure named for a per-face check; the plaster lines are
+listed with what they carry (backing: its own line, reported, never derived here).
 
 Refused (InputsError / ValueError, nothing written): a record whose line the run does not carry, or that is not a
 blank FIN.WALL.TILE line of its engine room (stale ledger); a line named twice; a face in two records; an opening twice
 in one room; a face net that is not length x height - its openings (> 1e-4 m2), a record value that is not the sum of
 its faces (> 0.006 m2), a height without its source, a height outside 1.0 .. 6.0 m (mm or a typo), a known value <= 0;
 a HELD record with a figure; a VERIFIED record without the checker run; an ADD into a room with a tile line; a candidate
-tile line no record names; a figure on a paint or skirting line of a room whose faces are all tiled. Inside a FILL line only quantity, state, rfi,
-gross, geometry confidence, calculation and notes change; every other line is byte-identical to V3.0.20 (asserted),
+tile line no record names; a figure on a paint or skirting line of a room whose faces are all tiled; a shared-room
+note in place of a split; a base record whose figure is stale, whose entities the line does not name, whose part lies
+on no face of the tiled record, or whose part is the whole figure in a SPLIT / not the whole in a NOT_APPLICABLE; an
+unnamed skirting / paint figure in a PART engine room of a tiled room. Inside a FILL line only quantity, state, rfi,
+gross, geometry confidence, calculation and notes change (a base line: also its deductions list); every other line is
+byte-identical to V3.0.20 (asserted),
 including the project identity block; the merged default guard runs again over the result (arch_v307.guard_changes)
 and may not flag a line this version adds or fills.
 
 Files: V3_0_21_BOQ_LINES.json / .csv, V3_0_21_INTEGRATION_LEDGER.json / .csv (per line: before V3.0.20, after, released
 V2.9, faces, owner manual method beside the drawing-derived method, status, source task / merge / checker run),
 V3_0_21_FACES.csv (every face once: line, length, height and source, openings, net), V3_0_21_CROSS_TRADE.csv (per
-face: tile line, paint lines and what they carry, plaster lines and what they carry), V3_0_21_DIFF.csv (every line
+face: tile line, paint lines and what they carry, plaster lines and what they carry), V3_0_21_BASE.csv (per base
+record entity: line, engine room, entity, face, length, before / after of the line), V3_0_21_DIFF.csv (every line
 against V3.0.20 and the released V2.9), V3_0_21_RUN.json. Nothing here names a project, a sheet, a layer or a
 coordinate: every value comes from the inputs.
 """
@@ -90,6 +111,11 @@ KINDS = ("FILL", "HELD", "ADD")
 QTY_STATUS = (VER, DC, OA)
 HELD_STATUS = ("HELD", "UNKNOWN")
 RULE = ("R-WALL-TILE-FAMILY-1", "T-315")
+SHARES = ("WHOLE", "PART")
+BASE_ACTIONS = ("NOT_APPLICABLE", "SPLIT")
+BASE_CODES = SKIRT_CODES + PAINT_CODES
+BASE_TOL = 1e-4                         # an entity sum vs the line's figure (6-decimal lines, 4-decimal entity parts)
+BASE_ALLOWED = ("evidence_state", "measured_net", "bounded_range", "rfi", "notes", "calculation", "deductions")
 
 PIECES = {
     "WALL_TILE_FAMILY": {
@@ -112,6 +138,18 @@ PIECES = {
         "drawing_method": "the room contour walked on the drawn faces (each face once, closure per room), the openings "
                           "from the merged opening list, the height from the drawn section / roof datum: shown beside "
                           "on the line (drawing_derived_method), never used to fill a blank"},
+    "BASE_OWNERSHIP": {
+        "module": "engine/source/arch_v3021.py (one owner per wall base: a skirting / paint line of an engine room "
+                  "split with a tiled room carried off the tiled faces by its own source entities)",
+        "policy": "BASE_OWNERSHIP_V1", "rule_id": RULE[0], "rule_version": RULE[1],
+        "owner_rules": ["Q-37 A / Q-48 A (wet area: full-height wall porcelain owns every wall base)",
+                        "URBAN-NO-SKIRTING-FULL-TILE-WET@v1", "T-296 (MERGED: one owner per base)",
+                        "UP-QTY-STATUS-001 (never 0: the open-plan rest is kept)"],
+        "owner_manual_method": "manual QS: skirting runs on the dry walls of a room only; a wall tiled to full height "
+                               "carries no skirting, so its length comes off the room's skirting run",
+        "drawing_method": "each boundary edge of the engine room laid on the drawn entity it runs along (the line's "
+                          "own source entities), kept when it lies on a tiled face of the record (inside the tiled "
+                          "room's walls, not past its open edge)"},
     "DEFAULT_GUARD": A307.PIECES["DEFAULT_GUARD"],
 }
 WAITING = dict(A3020.WAITING)
@@ -121,6 +159,9 @@ WAITING.update({
     "WALL_TILE_BACKING": "the plaster / render behind the wall tile is its own line (UP-FIN-PAINT-001 'substrate'): no "
                          "checker-merged ledger carries it yet; the tiled rooms' plaster lines are listed per face in "
                          "V3_0_21_CROSS_TRADE.csv, nothing is derived here",
+    "BASE_OUTSIDE_ANY_ENGINE_ROOM": "wall base of a tiled room on no engine room boundary (no line carries it): "
+                                    "reported per record (base_not_in_any_line_lm when the inputs give it), "
+                                    "never added",
 })
 
 
@@ -188,6 +229,25 @@ def _check_faces(faces, where, seen_faces, contour=None):
     return tot, gross, deds
 
 
+def split_rooms(r, where="record"):
+    """{engine room: WHOLE | PART} of one record: its engine_room_split (a merged room-split ledger), or its own engine
+    room WHOLE."""
+    sp = r.get("engine_room_split")
+    if sp is None:
+        return {r.get("engine_room"): "WHOLE"}
+    out = {}
+    for s in sp:
+        er, sh = s.get("engine_room"), s.get("share")
+        if not er or sh not in SHARES or not s.get("source"):
+            raise InputsError(f"{where}: engine_room_split [{{engine_room, share {SHARES}, source}}]")
+        if er in out:
+            raise InputsError(f"{where}: engine room {er} twice in the split")
+        out[er] = sh
+    if r.get("engine_room") not in out:
+        raise InputsError(f"{where}: the record's engine room {r.get('engine_room')} is not in its split")
+    return out
+
+
 def _check_record(r, where, tasks, seen_faces):
     k = r.get("kind")
     if k not in KINDS:
@@ -201,6 +261,11 @@ def _check_record(r, where, tasks, seen_faces):
         raise InputsError(f"{where}: a {k} record names its candidate line_id")
     if k == "ADD" and r.get("line_id"):
         raise InputsError(f"{where}: an ADD record names no candidate line (its line id is made by this version)")
+    if "engine_room_shared" in r:
+        raise InputsError(f"{where}: an engine room is not called shared from its open-plan note: name the "
+                          "engine-room split by a merged room-split ledger (engine_room_split), so each finish line "
+                          "is attributed by its source entities (ERS lesson 2026-10-29)")
+    split_rooms(r, where)
     if k == "HELD":
         for x in ("value", "faces"):
             if r.get(x) not in (None, [], ()):
@@ -272,10 +337,64 @@ def load_inputs(doc, project_id=None):
         d = dec.get(k) or {"lines": 0, "m2": 0.0}
         if d.get("lines", 0) != tot[k]["lines"] or (k != "HELD" and abs(d.get("m2", 0.0) - tot[k]["m2"]) > 1e-4):
             raise InputsError(f"declared {k} {d} != the records' {tot[k]['lines']} lines / {round(tot[k]['m2'], 4)} m2")
+    _check_base(doc, tasks, seen_lines)
     g = doc.get("guard")
     if g is not None:
         A307.load_inputs({"schema": A307.INPUTS_SCHEMA, "project": doc.get("project"), "guard": g}, project_id)
     return doc
+
+
+def _check_base(doc, tasks, tile_lines):
+    """the base_ownership records (static part; the line checks run in base_changes)."""
+    recs = {r["room"]: r for r in doc["records"] if r["kind"] != "HELD"}
+    seen = set()
+    for i, b in enumerate(doc.get("base_ownership") or ()):
+        lid = b.get("line_id")
+        where = f"base record {lid or i}"
+        for x in ("line_id", "item_code", "engine_room", "floor", "tiled_room", "task", "action", "evidence_status",
+                  "basis"):
+            if not b.get(x):
+                raise InputsError(f"{where}: {x} required")
+        if lid in seen or lid in tile_lines:
+            raise InputsError(f"{where}: the line is named twice (one owner per base)")
+        seen.add(lid)
+        if b["item_code"] not in BASE_CODES:
+            raise InputsError(f"{where}: {b['item_code']} is not one of {BASE_CODES}")
+        if b["task"] not in tasks:
+            raise InputsError(f"{where}: task {b['task']!r} is not one of the sources {sorted(tasks)}")
+        if b["action"] not in BASE_ACTIONS:
+            raise InputsError(f"{where}: action {b['action']!r} not one of {BASE_ACTIONS}")
+        if b["evidence_status"] not in QTY_STATUS:
+            raise InputsError(f"{where}: evidence status one of {QTY_STATUS}")
+        if b["evidence_status"] == OA and not b.get("assumption"):
+            raise InputsError(f"{where}: ASSUMED - OWNER-APPROVED carries its owner source (WORKFLOW_CONTROLS s.4)")
+        r = recs.get(b["tiled_room"])
+        if r is None:
+            raise InputsError(f"{where}: tiled room {b['tiled_room']!r} is no valued tile record")
+        if b["engine_room"] not in split_rooms(r) or r["floor"] != b["floor"]:
+            raise InputsError(f"{where}: engine room {b['engine_room']} {b['floor']} is not in the split of "
+                              f"{b['tiled_room']} (a merged room-split ledger names it)")
+        faces = {f["face_id"] for f in r.get("faces") or ()}
+        parts = b.get("on_tiled_faces") or []
+        if not parts:
+            raise InputsError(f"{where}: on_tiled_faces [{{entity, face_id, qty}}] (the line's entities on tiled faces)")
+        ents = set()
+        for p in parts:
+            if not p.get("entity") or not (_num(p.get("qty")) and p["qty"] > 0):
+                raise InputsError(f"{where}: every part names its entity and a qty > 0")
+            if p.get("face_id") not in faces:
+                raise InputsError(f"{where}: entity {p['entity']} on {p.get('face_id')!r}: not a tiled face of "
+                                  f"{b['tiled_room']} (a base past the open edge / outside the room is not the tile's)")
+            if (p["entity"], p["face_id"]) in ents:
+                raise InputsError(f"{where}: entity {p['entity']} twice on face {p['face_id']}")
+            ents.add((p["entity"], p["face_id"]))
+        bf = b.get("before")
+        if not (_num(bf) or (isinstance(bf, list) and len(bf) == 2 and all(_num(x) for x in bf))):
+            raise InputsError(f"{where}: before = the line's figure (a live net, or [low, high]) asserted")
+
+
+def _part(b):
+    return sum(p["qty"] for p in b["on_tiled_faces"])
 
 
 # ================================================================================================ lines
@@ -373,6 +492,105 @@ def _tile_lines(lines):
     return [ln for ln in lines if ln["item_code"] == TILE]
 
 
+def _handles(ln):
+    return {e.get("handle") for e in ((ln.get("source") or {}).get("entities") or {}).get("entities") or ()}
+
+
+def base_line(before, b, src):
+    """the V3.0.21 line of one base record: NOT_APPLICABLE (no figure) or SPLIT (the tiled part taken off). -> line"""
+    from engine.source import boq_line as BL
+    ln = copy.deepcopy(before)
+    part = _r(_part(b), 6)
+    fig = A309._carried(before)
+    p = PIECES["BASE_OWNERSHIP"]
+    rec = {"policy": p["policy"], "action": b["action"], "tiled_room": b["tiled_room"], "task": src["task"],
+           "ledger": src["file"], "ledger_sha256": src["sha256"], "merge_commit": src["merge_commit"],
+           "checker_run": src["checker_run"], "evidence_status": b["evidence_status"],
+           "assumption": b.get("assumption"), "basis": b["basis"][:600], "measured_by": b.get("measured_by"),
+           "on_tiled_faces": [{"entity": x["entity"], "face_id": x["face_id"], "qty": _r(x["qty"], 4),
+                               "role": x.get("role")} for x in b["on_tiled_faces"]],
+           "part_on_tiled_faces": part, "before": A3018._before_rec(before), "rule_id": RULE[0],
+           "rule_version": RULE[1]}
+    ln["calculation"].setdefault("inputs", {})["base_ownership_v3021"] = rec
+    what = (f"{before['item_code']} on the full-height wall tile of {b['tiled_room']} (one owner per base, "
+            f"{(b.get('assumption') or '')[:120]})")
+    if b["action"] == "NOT_APPLICABLE":
+        ln["evidence_state"] = "NOT_APPLICABLE_WITH_EVIDENCE"
+        ln["measured_net"] = None
+        ln["bounded_range"] = None
+        ln["rfi"] = None
+        ln["calculation"]["formula"] = (f"NOT_APPLICABLE: all {part} of the line on tiled faces of "
+                                        f"{b['tiled_room']} ({METHOD}); was {fig}")[:600]
+        A305._note(ln, f"{METHOD}: NOT_APPLICABLE_WITH_EVIDENCE: {what}; source entities on tiled faces "
+                       f"{part} = the line's figure; ruling {src['task']} MERGED {src['merge_commit'][:8]}")
+    else:
+        if isinstance(fig, list):
+            hi = _r(fig[1] - part, 6)
+            ln["bounded_range"] = dict(ln["bounded_range"], high=hi, low=min(ln["bounded_range"]["low"], hi))
+            ln["calculation"]["formula"] = (f"{before['calculation'].get('formula') or ''}; {METHOD}: range high "
+                                            f"{fig[1]} - {part} on tiled faces of {b['tiled_room']} = {hi}")[:600]
+        else:
+            ln["measured_net"] = _r(fig - part, 6)
+            ln["calculation"]["formula"] = (f"{before['calculation'].get('formula') or ''}; {METHOD}: {fig} - {part} "
+                                            f"on tiled faces of {b['tiled_room']} = {ln['measured_net']}")[:600]
+        if isinstance(ln.get("deductions"), list):
+            ln["deductions"] = ln["deductions"] + [{"lm" if ln["unit"] == "lm" else ln["unit"]: part,
+                                                    "what": f"{METHOD}: {what}"[:300]}]
+        A305._note(ln, f"{METHOD}: SPLIT: {part} on tiled faces of {b['tiled_room']} taken off ({what}); the rest is "
+                       f"kept as it was")
+    return BL.validate(ln)
+
+
+def base_changes(doc, l3020):
+    """-> (changes, rows) of the base_ownership records."""
+    by = {ln["line_id"]: ln for ln in l3020}
+    ch, rows = [], []
+    for b in doc.get("base_ownership") or ():
+        where = f"base record {b['line_id']}"
+        ln = by.get(b["line_id"])
+        if ln is None:
+            raise InputsError(f"{where}: the run carries no such line (stale ledger)")
+        if ln["item_code"] != b["item_code"] or _room_id(ln) != b["engine_room"] or \
+                (ln.get("location") or {}).get("floor") != b["floor"]:
+            raise InputsError(f"{where}: the line is {ln['item_code']} in {_room_id(ln)} {ln['location'].get('floor')},"
+                              f" the record {b['item_code']} {b['engine_room']} {b['floor']} (stale ledger)")
+        fig = A309._carried(ln)
+        bf = b["before"]
+        if fig == A309.NO_FIGURE:
+            raise InputsError(f"{where}: the line carries no figure: nothing to carry off (left as it is)")
+        if isinstance(fig, list) != isinstance(bf, list) or \
+                any(abs(x - y) > 1e-6 for x, y in zip(fig if isinstance(fig, list) else [fig],
+                                                        bf if isinstance(bf, list) else [bf])):
+            raise InputsError(f"{where}: before {bf} != the line's {fig} (stale ledger)")
+        miss = sorted({p["entity"] for p in b["on_tiled_faces"]} - _handles(ln))
+        if miss:
+            raise InputsError(f"{where}: entities {miss} are not source entities of the line (attribution by the "
+                              "line's own source entities only)")
+        part = _part(b)
+        top = fig[1] if isinstance(fig, list) else fig
+        if b["action"] == "NOT_APPLICABLE" and abs(part - top) > BASE_TOL:
+            raise InputsError(f"{where}: NOT_APPLICABLE needs every metre of the figure on tiled faces: {round(part, 6)}"
+                              f" != {top} (a part only is a SPLIT, the rest kept)")
+        if b["action"] == "SPLIT" and not (part < top - BASE_TOL):
+            raise InputsError(f"{where}: a SPLIT part {round(part, 6)} >= the figure {top}: the rest would be 0 "
+                              "(the whole on tiled faces is NOT_APPLICABLE, never a 0 line)")
+        src = A3018._src_of(doc, b["task"])
+        after = base_line(ln, b, src)
+        ch.append(A305._change("BASE_OWNERSHIP", "REPLACE", ln, after, drawing_reference=src["file"], held=[],
+                               downstream=[], evidence_status=b["evidence_status"],
+                               verification={"task": src["task"], "merge_commit": src["merge_commit"],
+                                             "verifier_run": src["checker_run"], "ledger": src["file"],
+                                             "ledger_sha256": src["sha256"], "measured_by": b.get("measured_by")},
+                               codes=["BASE_OWNERSHIP", b["action"]], group=b["tiled_room"],
+                               guard_element={"element_id": after["location"]["element_id"], "part": "WHOLE"}))
+        for p in b["on_tiled_faces"]:
+            rows.append({"line_id": ln["line_id"], "item_code": ln["item_code"], "engine_room": b["engine_room"],
+                         "tiled_room": b["tiled_room"], "action": b["action"], "entity": p["entity"],
+                         "face_id": p["face_id"], "role": p.get("role") or "", "qty": _r(p["qty"], 4),
+                         "unit": ln["unit"], "before": A302._q(A30._qty(ln)), "after": A302._q(A30._qty(after))})
+    return ch, rows
+
+
 def family_changes(doc, l3020):
     """-> (changes, log, face rows)."""
     by = {ln["line_id"]: ln for ln in l3020}
@@ -431,31 +649,48 @@ def _ledger_room(ln):
 def cross_trade(lines, doc, faces):
     """per face: the tile line, the paint / skirting lines of its room and the plaster lines of its room. -> rows
 
-    A finish line belongs to a tiled room when it lies in the record's engine room AND names the record's room, or names
-    no room while the engine room is the record's alone. In a SHARED engine room (one engine room holding several
-    drawn rooms, the record says engine_room_shared), a line naming no room is listed as not attributable, never
-    attributed. Every face of a room in its tile record (a wet room, or a pantry whose drawn walls all host): a paint
-    figure is refused (UP-FIN-PAINT-001: no paint under tile) and a skirting figure is refused
-    (URBAN-NO-SKIRTING-FULL-TILE-WET@v1). A room with not-tiled drawn faces: a paint figure is named for a per-face
-    check, never refused. Plaster lines are listed with what they carry: the backing behind the tile is its own line
-    (UP-FIN-PAINT-001 substrate), reported, never derived here."""
+    Attribution is by the merged engine-room split of the record (split_rooms), never by a room-name note. In a WHOLE
+    engine room (it lies wholly inside the tiled room) every finish line is the tiled room's, unless it names another
+    room. In a PART engine room (it also holds other rooms) a line is the tiled room's when it names it; a skirting or
+    paint line naming no room carries the tiled room's base / faces in part, so it may keep a figure only when a base
+    record of this tiled room names it (its tiled share carried off by source entity: SPLIT, or NOT_APPLICABLE); an
+    unnamed figure is refused (an unchecked double count). Every face of a room in its tile record (a wet room, or a
+    pantry whose drawn walls all host): a paint figure is refused (UP-FIN-PAINT-001: no paint under tile) and a
+    skirting figure is refused (URBAN-NO-SKIRTING-FULL-TILE-WET@v1). A room with not-tiled drawn faces: a paint figure
+    is named for a per-face check, never refused. Plaster lines are listed with what they carry: the backing behind the
+    tile is its own line (UP-FIN-PAINT-001 substrate), reported, never derived here."""
     recs = {(r["engine_room"], r["room"]): r for r in doc["records"]}
+    based = {}
+    for b in doc.get("base_ownership") or ():
+        based.setdefault(b["tiled_room"], {})[b["line_id"]] = b["action"]
     by_er = {}
     for ln in lines:
         if ln["item_code"] in PAINT_CODES + PLASTER_CODES + SKIRT_CODES:
             by_er.setdefault(_room_id(ln), []).append(ln)
-    own, unattributed, partial = {}, {}, {}
-    for (er, room), r in sorted(recs.items()):
-        shared = bool(r.get("engine_room_shared"))
-        mine, other = [], []
-        for ln in by_er.get(er, ()):
-            lr = _ledger_room(ln)
-            if lr == room or (lr is None and not shared):
-                mine.append(ln)
-            elif lr is None:
-                other.append(ln)
-        own[room], unattributed[room] = mine, other
+    own, unattributed, partial, carried = {}, {}, {}, {}
+    for (_er, room), r in sorted(recs.items()):
         all_tiled = r["kind"] == "HELD" or not (r.get("contour") or {}).get("not_tiled_m")
+        mine, other, split = [], [], []
+        for er, share in sorted(split_rooms(r).items()):
+            for ln in by_er.get(er, ()):
+                lr = _ledger_room(ln)
+                if lr == room or (lr is None and share == "WHOLE"):
+                    mine.append(ln)
+                    continue
+                if lr is not None:
+                    continue                    # another room's line
+                fig = A309._carried(ln)
+                if ln["item_code"] in PLASTER_CODES or fig == A309.NO_FIGURE:
+                    other.append(ln)
+                    continue
+                act = (based.get(room) or {}).get(ln["line_id"])
+                if act is None:
+                    raise ValueError(f"{METHOD}: {ln['item_code']} line {ln['line_id']} of engine room {er} (PART of "
+                                     f"tiled room {room}) carries {fig} and names no room: its share on the tiled "
+                                     "faces is unchecked; carry it off by source entity (base_ownership SPLIT / "
+                                     "NOT_APPLICABLE), never attribute it by a room note")
+                split.append(ln)
+        own[room], unattributed[room], carried[room] = mine, other, split
         for ln in mine:
             fig = A309._carried(ln)
             if fig == A309.NO_FIGURE or ln["item_code"] in PLASTER_CODES:
@@ -463,7 +698,7 @@ def cross_trade(lines, doc, faces):
             if all_tiled:
                 why = ("paint under wall tile (UP-FIN-PAINT-001)" if ln["item_code"] in PAINT_CODES else
                        "skirting on a full-height tiled face (URBAN-NO-SKIRTING-FULL-TILE-WET@v1)")
-                raise ValueError(f"{METHOD}: {ln['item_code']} line {ln['line_id']} of tiled room {room} ({er}) "
+                raise ValueError(f"{METHOD}: {ln['item_code']} line {ln['line_id']} of tiled room {room} ({_room_id(ln)}) "
                                  f"carries {fig}: {why}; every face of the room is in its tile record")
             partial.setdefault(room, []).append(ln["line_id"])
 
@@ -480,9 +715,11 @@ def cross_trade(lines, doc, faces):
                                  "face): " + " ".join(partial[room])),
                 "skirting_lines": _desc(own.get(room) or (), SKIRT_CODES),
                 "plaster_lines": _desc(own.get(room) or (), PLASTER_CODES),
-                "shared_engine_room_lines": ("NOT ATTRIBUTABLE to this room (shared engine room, the line names no "
-                                             "room): " + _desc(un, PAINT_CODES + PLASTER_CODES + SKIRT_CODES))
-                if un else "",
+                "shared_engine_room_lines": "; ".join(x for x in (
+                    ("PART engine room, tiled share carried off by source entity (base record): " +
+                     _desc(carried.get(room) or (), PAINT_CODES + SKIRT_CODES)) if carried.get(room) else "",
+                    ("PART engine room, no figure: " + _desc(un, PAINT_CODES + PLASTER_CODES + SKIRT_CODES))
+                    if un else "") if x),
                 "backing": backing}
     rows = []
     for f in faces:
@@ -524,6 +761,10 @@ def changes_for(doc, l3020):
     if not doc:
         return [], [{"piece": "WALL_TILE_FAMILY", "state": "NO_PROJECT_INPUT"}], []
     ch, log, faces = family_changes(doc, l3020)
+    bch, brows = base_changes(doc, l3020)
+    log["base_ownership"] = {"lines": len(bch), "actions": A302._count(c["codes"][1] for c in bch),
+                             "rows": brows}
+    ch = ch + bch
     rep = {c["before"]["line_id"]: c["after"] for c in ch if c["action"] == "REPLACE"}
     view = [rep.get(ln["line_id"], ln) for ln in l3020]
     ch_g, log_g = A307.guard_changes(doc, view, [c for c in ch if c["action"] == "ADD"], set(rep))
@@ -543,7 +784,7 @@ def integrate(l3020, changes):
     """-> (V3.0.21 lines, identity). Every line outside the V3.0.21 rows is byte-identical to the V3.0.20 line."""
     from engine.source import boq_line as BL
     sid = {ln["line_id"] for ln in l3020}
-    rep, adds = {}, []
+    rep, adds, pieces = {}, [], {}
     for c in changes:
         if c["action"] == "REPLACE":
             lid = c["before"]["line_id"]
@@ -551,7 +792,10 @@ def integrate(l3020, changes):
                 raise ValueError(f"{METHOD}: line {lid}: changed twice, not in V3.0.20, or its id changed")
             if c["piece"] == "WALL_TILE_FAMILY" and c["before"]["item_code"] != TILE:
                 raise ValueError(f"{METHOD}: the family piece replaces {TILE} lines only ({lid})")
+            if c["piece"] == "BASE_OWNERSHIP" and c["before"]["item_code"] not in BASE_CODES:
+                raise ValueError(f"{METHOD}: the base piece replaces {BASE_CODES} lines only ({lid})")
             rep[lid] = c["after"]
+            pieces[lid] = c["piece"]
         elif c["action"] == "ADD":
             if c["piece"] != "WALL_TILE_FAMILY" or c["after"]["item_code"] != TILE:
                 raise ValueError(f"{METHOD}: only the family piece adds, and only {TILE} lines")
@@ -584,13 +828,15 @@ def integrate(l3020, changes):
     for lid, ln in rep.items():   # inside a row only quantity, state, basis and notes change
         a, b = copy.deepcopy(by20[lid]), copy.deepcopy(ln)
         for x in (a, b):
-            for k in ROW_KEYS:
+            for k in (BASE_ALLOWED if pieces[lid] == "BASE_OWNERSHIP" else ROW_KEYS):
                 x.pop(k, None)
-            x["source"].pop("geometry_confidence", None)
+            if pieces[lid] != "BASE_OWNERSHIP":
+                x["source"].pop("geometry_confidence", None)
         if json.dumps(a, sort_keys=True) != json.dumps(b, sort_keys=True):
             raise ValueError(f"{METHOD}: line {lid} changed outside quantity / state / basis")
     ident = {"v3_0_20_lines": len(l3020), "v3_0_21_lines": len(out), "v3_0_21_rows": len(changes),
              "replaced": len(rep), "added": len(adds), "outside_rows": len(outside),
+             "base_ownership_replaced": sum(1 for p in pieces.values() if p == "BASE_OWNERSHIP"),
              "outside_rows_identical_to_v3_0_20": len(outside), "wall_tile_family": fam,
              "outside_rows_sha256": hashlib.sha256("".join(A30.line_sha(x) for x in outside).encode()).hexdigest()}
     return out, ident
@@ -607,6 +853,7 @@ def ledger_rows(changes, doc, released_lines=None):
             b29 = A30._qty(rel[A30._key(ref)]) if A30._key(ref) in rel else dict(A30._qty(None),
                                                                                  state="NOT_IN_RELEASED")
         inp = ref["calculation"]["inputs"]
+        bo = inp.get("base_ownership_v3021") if c["piece"] == "BASE_OWNERSHIP" else None
         loc = ref.get("location") or {}
         pp = PIECES[c["piece"]]
         rows.append({"version": METHOD, "piece": c["piece"], "action": c["action"], "line_id": ref["line_id"],
@@ -616,7 +863,8 @@ def ledger_rows(changes, doc, released_lines=None):
                      "before_v3_0_20": A30._qty(c["before"]) if c["before"] else dict(A30._qty(None),
                                                                                       state="NOT_IN_V3_0_20"),
                      "after_v3_0_21": A30._qty(ref), "evidence_status": c.get("evidence_status"),
-                     "assumption": inp.get("assumption"), "release_status": "NOT RELEASED",
+                     "assumption": bo["assumption"] if bo else inp.get("assumption"), "release_status": "NOT RELEASED",
+                     "base_ownership": bo,
                      "faces": (inp.get("wall_tile_v3021") or {}).get("faces") or [],
                      "owner_manual_method": inp.get("owner_manual_method"),
                      "drawing_derived_method": inp.get("drawing_derived_method"),
@@ -651,6 +899,8 @@ FACES_CSV = ("face_id", "room", "engine_room", "floor", "line_id", "kind", "wall
              "height_source", "openings", "net_m2", "correction", "evidence_status")
 CROSS_CSV = ("face_id", "room", "engine_room", "tile_line", "tile_net_m2", "paint_lines", "paint_figure",
              "skirting_lines", "plaster_lines", "shared_engine_room_lines", "backing")
+BASE_CSV = ("line_id", "item_code", "engine_room", "tiled_room", "action", "entity", "face_id", "role", "qty", "unit",
+            "before", "after")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_v3_0_20", "vs_released_v2_9", "v2_9",
             "v3_0_20", "v3_0_21")
 
@@ -693,6 +943,8 @@ def write(out, l3020, changes, logs, faces, doc, released_lines=None):
     out = Path(out)
     l3021, ident = integrate(l3020, changes)
     xrows = cross_trade(l3021, doc, faces)
+    brows = next((lg.get("base_ownership") or {} for lg in logs if lg.get("piece") == "WALL_TILE_FAMILY"),
+                 {}).get("rows") or []
     rows = ledger_rows(changes, doc, released_lines)
     diff = diff_rows(l3020, l3021, released_lines)
     dsum = {}
@@ -708,7 +960,8 @@ def write(out, l3020, changes, logs, faces, doc, released_lines=None):
              if t20.get(k) != t21.get(k)}
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
            "base": A30.BASE_METHOD, "released": A30.RELEASED_METHOD, "released_default": False, "rows": rows,
-           "faces": faces, "cross_trade": xrows, "waiting_pieces": WAITING, "integration_package": True}
+           "faces": faces, "cross_trade": xrows, "base_ownership": brows, "waiting_pieces": WAITING,
+           "integration_package": True}
     run = {"method": METHOD, "policy": POLICY_ID, "extends": EXTENDS, "candidate": CANDIDATE,
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": logs,
@@ -721,6 +974,7 @@ def write(out, l3020, changes, logs, faces, doc, released_lines=None):
              "V3_0_21_FACES.csv": A305._csv([dict(f, openings=" ".join(f"{o['id']} {o['m2']}" for o in f["openings"]))
                                              for f in faces], FACES_CSV),
              "V3_0_21_CROSS_TRADE.csv": A305._csv(xrows, CROSS_CSV),
+             "V3_0_21_BASE.csv": A305._csv(brows, BASE_CSV),
              "V3_0_21_DIFF.csv": A305._csv(diff, DIFF_CSV),
              "V3_0_21_RUN.json": A30._j(run)}
     for name, text in files.items():
@@ -735,4 +989,4 @@ def policy_record():
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "filled_line",
            "added_line", "family_changes", "cross_trade", "check_tile_family", "changes_for", "integrate",
-           "ledger_rows", "diff_rows", "write", "InputsError"]
+           "ledger_rows", "diff_rows", "write", "InputsError", "split_rooms", "base_line", "base_changes"]

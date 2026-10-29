@@ -290,20 +290,24 @@ def test_skirting_figure_on_a_full_height_tiled_bath_refused():
     _bad(lambda d: None, ls=ls)
 
 
-def test_shared_engine_room_line_naming_no_room_is_not_attributed():
-    """an open zone (dining + pantry) in one engine room: a room-level paint line with a figure that names no room is
-    listed as not attributable to the pantry, never refused and never counted as the pantry's."""
+def test_shared_engine_room_note_is_refused_and_a_part_room_figure_needs_its_split():
+    """r2 (Gate B 2026-10-29 F-T315-C1): r1 listed a room-level line of an engine room called 'shared' from its
+    open-plan note as 'not attributable' and so carried the pantry base twice. Now (1) the note itself is refused, and
+    (2) with the merged split naming the engine room PART of the pantry, a room-level paint figure that names no room
+    is refused until a base record carries the pantry's share off it (tests/t315_*/test_base_ownership.py)."""
     ls = lines()
     zone = _ln("FIN.PAINT", "P1", "PROVISIONAL", 55.0, floor="GF", el="W:FIN.PAINT:P1:ZONE")
     zone["calculation"]["inputs"] = {}
     ls.append(zone)
     d = doc(ls)
     d["records"][2]["engine_room_shared"] = True
-    d["records"][2]["contour"]["not_tiled_m"] = 3.0
+    with pytest.raises(A.InputsError, match="open-plan note"):
+        A.load_inputs(d)
+    d = doc(ls)
+    d["records"][2]["engine_room_split"] = [{"engine_room": "P1", "share": "PART", "source": "w315 room split"}]
     _ls, _c, _l, faces, out, _i, dd = run(d=d, ls=ls)
-    rows = [r for r in A.cross_trade(out, dd, faces) if r["engine_room"] == "P1"]
-    assert all(zone["line_id"] in r["shared_engine_room_lines"] for r in rows)
-    assert all(zone["line_id"] not in r["paint_lines"] for r in rows)
+    with pytest.raises(ValueError, match="names no room"):
+        A.cross_trade(out, dd, faces)
 
 
 def test_same_zone_line_not_shared_is_attributed_and_checked():

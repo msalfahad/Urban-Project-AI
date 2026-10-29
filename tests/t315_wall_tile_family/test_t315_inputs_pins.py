@@ -105,3 +105,39 @@ def test_edited_ledger_stops_the_build(tmp_path, monkeypatch):
     monkeypatch.setattr(L, "FACES", p)
     with pytest.raises((SystemExit, A.InputsError)):
         A.load_inputs(L.build(PID))
+
+
+# ------------------------------------------------------------------------------------------------ r2: base ownership
+def test_pantry_split_from_the_merged_room_crosswalk(doc):
+    """the pantry GF-07 lies in GF-RC06FED wholly (T-262 0.209 / 1.000) and in GF-RC99C2A in part (0.665 / 0.070):
+    the split comes from the merged crosswalk, never from an open-plan note."""
+    rec = next(r for r in doc["records"] if r["kind"] == "ADD")
+    assert "engine_room_shared" not in rec
+    assert {(s["engine_room"], s["share"]) for s in rec["engine_room_split"]} == {("GF-RC06FED", "WHOLE"),
+                                                                                  ("GF-RC99C2A", "PART")}
+
+
+def test_pantry_base_by_hand(doc):
+    """by hand from the entity lengths (t315_base_split on P7757.dxf; Checker 2026-10-29 03:45 for GF-RC06FED):
+    GF-RC06FED 2FAB 0.2 + A6 1.4 + AF 0.2 + B0 0.1 = 1.9 = its whole skirting line -> NOT_APPLICABLE; its W10 frame
+    0.05 + 0.90 + 0.05 = 1.0 = its whole range line -> NOT_APPLICABLE; GF-RC99C2A 159 0.3409 + 158 0.7591 + 2FAE 0.95
+    + AE 0.8 + AF 0.65 = 3.5 of 28.171589 -> 24.671589 kept; its W09 frame 0.05 + 1.40 + 0.05 = 1.5 of the range
+    0 .. 7.831578 -> 0 .. 6.331578; 1.9 + 3.5 + 1.6 (no engine room) = 7.000 = T-296 GF-07 base."""
+    b = {x["line_id"]: x for x in doc["base_ownership"]}
+    want = {"L-af6fb2d3474c5fbdb80a": ("NOT_APPLICABLE", 1.9, 1.9),
+            "L-73ff85e30e3a8c639e20": ("NOT_APPLICABLE", [0.0, 1.0], 1.0),
+            "L-71e2e002a3af624097f0": ("SPLIT", 28.171589, 3.5),
+            "L-e7dcdc69e1a2b24f8616": ("SPLIT", [0.0, 7.831578], 1.5)}
+    assert set(b) == set(want)
+    for lid, (act, before, part) in want.items():
+        assert b[lid]["action"] == act and b[lid]["before"] == before
+        assert sum(p["qty"] for p in b[lid]["on_tiled_faces"]) == pytest.approx(part, abs=1e-9)
+        assert all(p["face_id"].startswith("GF-07|") for p in b[lid]["on_tiled_faces"])
+    assert 1.9 + 3.5 + sum(L.NO_ENGINE_ROOM.values()) == pytest.approx(L.T296_PANTRY_BASE_LM, abs=1e-9)
+    assert 28.171589 - 3.5 == pytest.approx(24.671589, abs=1e-9)
+
+
+def test_base_records_carry_the_owner_source(doc):
+    for b in doc["base_ownership"]:
+        assert b["evidence_status"] == L.OA and "Q-37 A / Q-48 A" in b["assumption"]
+        assert b["task"] == "T-296" and "DRAWING-CONFIRMED" in b["measured_by"]

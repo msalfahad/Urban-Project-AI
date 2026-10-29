@@ -5624,13 +5624,15 @@
    "module": "engine/source/arch_v3021.py",
    "status": "READY_FOR_GATE_B",
    "integrates": [
-    "T-312"
+    "T-312",
+    "T-296",
+    "T-262"
    ],
    "tests": [
     "tests/t315_wall_tile_family"
    ],
    "changes_families_by_item_code": [],
-   "note": "T-315 (research/agents_t315/T-315_WALL_TILE_FAMILY.md): the wall-tile family FIN.WALL.TILE from the merged T-312 face ledger: 11 blank lines filled 307.9616 m2 (ASSUMED - OWNER-APPROVED: Q-48 A heights, Q-55 C door heads), 6 lines kept BLANK (annex G2 / Q-54 B / D-39; GF-10 / GF-11 level T-088), ONE new pantry line 32.3422 m2 (UP-PANTRY-003 host walls); paint of every tiled room carries no figure (asserted); the Gate B integration package; names no family until merged",
+   "note": "T-315 (research/agents_t315/T-315_WALL_TILE_FAMILY.md): the wall-tile family FIN.WALL.TILE from the merged T-312 face ledger: 11 blank lines filled 307.9616 m2 (ASSUMED - OWNER-APPROVED: Q-48 A heights, Q-55 C door heads), 6 lines kept BLANK (annex G2 / Q-54 B / D-39; GF-10 / GF-11 level T-088), ONE new pantry line 32.3422 m2 (UP-PANTRY-003 host walls); paint of every tiled room carries no figure (asserted); r2 (Gate B F-T315-C1 / C2): one owner per wall base by source entity and the merged room split (T-262): the pantry skirting L-af6fb2d3 1.9 lm and its range L-73ff85e3 0 .. 1.0 -> NOT_APPLICABLE (T-296), the pantry share of the open-plan skirting L-71e2e002 (3.5 of 28.171589 lm -> 24.671589) and of its range L-e7dcdc69 (W09 1.5 of 0 .. 7.831578 -> 0 .. 6.331578) carried off, the open-plan rest kept; the Gate B integration package; names no family until merged",
    "task_commit": "f507d75d4487364355347e0143e70d6403b7cab9"
   }
  ]

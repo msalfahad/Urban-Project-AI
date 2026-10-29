@@ -47,6 +47,138 @@ DOWNSTREAM = ["wall-tile backing plaster / render behind the tile: its own line 
               "no paint on these faces (UP-FIN-PAINT-001): the room's paint lines carry no figure (asserted)"]
 
 
+# ---------------------------------------------------------------------------------------------- r2: base ownership
+# Gate B 2026-10-29 03:45 (F-T315-C1 / C2): the pantry base was carried twice (tile 0 .. 3.65 m AND skirting). The
+# pantry lies in two engine rooms by the merged room split (T-262 ENGINE_ROOM_XWALK: GF-RC06FED GF-07 = 0.209 / 1.000
+# -> wholly inside; GF-RC99C2A GF-07 = 0.665 / 0.070 -> in part); the merged T-296 ledger rules one owner per base (the
+# wet pantry's full-height wall porcelain owns every base: Q-37 A / Q-48 A). The base on the tiled faces is measured
+# per engine room by the line's own source entities (research/agents_t315/t315_base_split.py, own walk on P7757.dxf,
+# DRAWING-CONFIRMED, not yet independently verified) and pinned here (an edited drawing or room stops the build).
+T296 = ROOT / "research/agents_t296"
+T262 = ROOT / "research/agents_t262"
+T296_MERGE = "57c31ae4b590dc9b710eeb445d37ffb7c1789c16"
+T262_MERGE = "c8dba740700c6b7ed06cca7c3b9fe9ab884bc125"
+T296_CHECKER = "Verifier 2026-10-25 16:08 UTC (Gate A PASS a-h)"
+T262_CHECKER = "Verifier 2026-10-24 14:00 UTC (Gate A PASS a-h)"
+BASE_RULE = ("one owner per wall base: the wet pantry's full-height wall porcelain owns every base, no skirting under "
+             "it (Q-37 A / Q-48 A, URBAN-NO-SKIRTING-FULL-TILE-WET@v1; T-296 MERGED ROOMS_T296 GF-07 NOT_APPLICABLE): "
+             "ASSUMED - OWNER-APPROVED (OWNER_QUESTIONS_ANSWERED.md Q-37, Q-48)")
+MEASURED_BY = ("T-315 r2 own walk (research/agents_t315/t315_base_split.py on P7757.dxf ab54dd55 + the run's v29 "
+               "ARCH_ROOMS.json): each engine-room edge on the entity it runs along, inside the pantry walls; "
+               "DRAWING-CONFIRMED, not independently verified")
+PANTRY = "GF-07"
+# engine room -> {entity: lm on the pantry's tiled faces} (t315_base_split.measure on the run, 1e-4 m)
+BASE = {"GF-RC06FED": {"2FAB": 0.2, "A6": 1.4, "AF": 0.2, "B0": 0.1, "3C9": 0.05, "3CC": 0.9, "3D3": 0.05},
+        "GF-RC99C2A": {"158": 0.7591, "159": 0.3409, "2FAE": 0.95, "AE": 0.8, "AF": 0.65,
+                       "3BC": 0.05, "3BF": 1.4, "3C6": 0.05}}
+NO_ENGINE_ROOM = {"A6": 1.4, "AF": 0.2}          # pantry base on no engine room boundary (counter cells): no line
+T296_PANTRY_BASE_LM = 7.0                        # ROOMS_T296 GF-07 base_wc_m (wall + column base of the pantry)
+FACE = {"A6": "GF-07|GF-W01", "2FAB": "GF-07|GF-W01", "158": "GF-07|GF-W05", "159": "GF-07|GF-W05",
+        "AE": "GF-07|GF-W16", "AF": "GF-07|GF-W16", "B0": "GF-07|GF-W16", "3BC": "GF-07|GF-W16",
+        "3BF": "GF-07|GF-W16", "3C6": "GF-07|GF-W16", "3C9": "GF-07|GF-W16", "3CC": "GF-07|GF-W16",
+        "3D3": "GF-07|GF-W16"}
+ROLE = {"2FAB": "COLUMN top face collinear with the south wall face (engine: WALL / COLUMN halves)",
+        "2FAE": "COLUMN (NW column 2FAE: face 0.900 + return 0.050)", "3BC": "W09 frame", "3BF": "W09 frame",
+        "3C6": "W09 frame", "3C9": "W10 frame", "3CC": "W10 frame", "3D3": "W10 frame"}
+# an entity on two tiled faces: the NW column 2FAE face 0.900 (T-312 GF-07|OFF:COLUMN 0.9000) and its return 0.050
+# (a jamb-return piece in T-250's off-band wall metres, T-312 GF-07|OFF:WALL 0.1650)
+FACE_SPLIT = {"2FAE": (("GF-07|OFF:COLUMN", 0.9), ("GF-07|OFF:WALL", 0.05))}
+WINDOW = ("3BC", "3BF", "3C6", "3C9", "3CC", "3D3")
+# line id -> (engine room, kind of figure, figure before, action)
+BASE_LINES = {
+    "L-af6fb2d3474c5fbdb80a": ("GF-RC06FED", "BASE", 1.9, "NOT_APPLICABLE"),
+    "L-73ff85e30e3a8c639e20": ("GF-RC06FED", "WINDOW", [0.0, 1.0], "NOT_APPLICABLE"),
+    "L-71e2e002a3af624097f0": ("GF-RC99C2A", "BASE", 28.171589, "SPLIT"),
+    "L-e7dcdc69e1a2b24f8616": ("GF-RC99C2A", "WINDOW", [0.0, 7.831578], "SPLIT"),
+}
+
+
+def base_pins():
+    return {er: dict(v) for er, v in BASE.items()}
+
+
+def _rows_by(p, key):
+    return {r[key]: r for r in _rows(p)}
+
+
+def _source_t296():
+    p = T296 / "LINE_LEDGER_T296.csv"
+    return {"file": str(p.relative_to(ROOT)), "sha256": _sha(p), "task": "T-296", "merge_commit": T296_MERGE,
+            "checker_run": T296_CHECKER, "also": {str((T296 / "ROOMS_T296.csv").relative_to(ROOT)):
+                                                  _sha(T296 / "ROOMS_T296.csv")}}
+
+
+def _source_t262():
+    p = T262 / "ENGINE_ROOM_XWALK_T262.csv"
+    return {"file": str(p.relative_to(ROOT)), "sha256": _sha(p), "task": "T-262", "merge_commit": T262_MERGE,
+            "checker_run": T262_CHECKER}
+
+
+def _split(room, engine_room):
+    """the pantry's engine rooms from the merged T-262 crosswalk: WHOLE when the engine room lies wholly in the room
+    (its own share 1.000), PART otherwise."""
+    out = []
+    for r in _rows(T262 / "ENGINE_ROOM_XWALK_T262.csv"):
+        for ov in r["T128_OVERLAPS"].split():
+            rm, frac = ov.split("=")
+            if rm != room:
+                continue
+            _of_room, of_er = (float(x) for x in frac.split("/"))
+            out.append({"engine_room": r["ENGINE_ROOM"], "share": "WHOLE" if of_er >= 0.999 else "PART",
+                        "source": f"T-262 ENGINE_ROOM_XWALK_T262.csv {r['ENGINE_ROOM']} {ov} (MERGED {T262_MERGE[:8]})"})
+    if sorted((s["engine_room"], s["share"]) for s in out) != [("GF-RC06FED", "WHOLE"), ("GF-RC99C2A", "PART")] or \
+            engine_room not in {s["engine_room"] for s in out}:
+        raise SystemExit(f"{room}: the merged room split is not the pinned one: {out}")
+    return out
+
+
+def _t296_state(t296, lid):
+    if lid in t296:
+        return f"ledger_status {t296[lid]['ledger_status']}"
+    main = next(k for k, r in t296.items() if r["range_line"] == lid)
+    return f"range line of {main} (ledger_status {t296[main]['ledger_status']})"
+
+
+def base_records(recs):
+    """the base_ownership records of the pantry (r2). The T-296 rows and the closure are asserted."""
+    t296 = _rows_by(T296 / "LINE_LEDGER_T296.csv", "line_id")
+    rooms = _rows_by(T296 / "ROOMS_T296.csv", "room")
+    if rooms[PANTRY]["status"] != "NOT_APPLICABLE" or abs(float(rooms[PANTRY]["base_wc_m"]) - T296_PANTRY_BASE_LM) > 1e-9:
+        raise SystemExit("T-296 ROOMS_T296 GF-07 is not the pinned NOT_APPLICABLE ruling / 7.000 lm base")
+    if t296["L-af6fb2d3474c5fbdb80a"]["ledger_status"] != "NOT_APPLICABLE":
+        raise SystemExit("T-296 L-af6fb2d3 is not NOT_APPLICABLE")
+    for lid in BASE_LINES:
+        if lid not in rooms[PANTRY]["lines"]:
+            raise SystemExit(f"T-296 GF-07 does not name {lid}")
+    base = round(sum(v for er in BASE.values() for h, v in er.items() if h not in WINDOW)
+                 + sum(NO_ENGINE_ROOM.values()), 4)
+    if abs(base - T296_PANTRY_BASE_LM) > 1e-4:
+        raise SystemExit(f"pantry base {base} lm != T-296 {T296_PANTRY_BASE_LM}")
+    pantry = next(r for r in recs if r["room"] == PANTRY)
+    faces = {f["face_id"] for f in pantry["faces"]}
+    out = []
+    for lid, (er, kind, before, action) in BASE_LINES.items():
+        ents = {h: v for h, v in BASE[er].items() if (h in WINDOW) == (kind == "WINDOW")}
+        parts = []
+        for h, v in ents.items():
+            fs = FACE_SPLIT.get(h) or ((FACE[h], v),)
+            if abs(sum(q for _f, q in fs) - v) > 1e-9:
+                raise SystemExit(f"{h}: the face split {fs} != {v}")
+            parts += [{"entity": h, "face_id": f, "qty": q, "role": ROLE.get(h, "WALL")} for f, q in fs]
+        if not {p["face_id"] for p in parts} <= faces:
+            raise SystemExit(f"{lid}: a part on a face that is not a tiled pantry face")
+        what = ("the pantry wall base" if kind == "BASE" else
+                "the base below the pantry window (sill 1.0 m, wall tile below it: T-312 W09 / W10)")
+        out.append({"line_id": lid, "item_code": "FIN.SKIRTING", "engine_room": er, "floor": "GF",
+                    "tiled_room": PANTRY, "task": "T-296", "action": action, "before": before,
+                    "on_tiled_faces": parts, "evidence_status": OA, "assumption": BASE_RULE,
+                    "measured_by": MEASURED_BY,
+                    "basis": (f"{what} in engine room {er} ({'wholly inside' if er == 'GF-RC06FED' else 'part of'} "
+                              f"the pantry by T-262), on the tiled faces of the pantry wall-tile line by the line's own "
+                              f"source entities; T-296 {_t296_state(t296, lid)}")})
+    return out
+
+
 def _sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -156,9 +288,7 @@ def build(project_id=None):
                             "not_tiled_m": float(cl["not_tiled_m"]),
                             "source": "T-312 ROOM_CLOSURE_T312.csv (T-074 / T-128 r3 walked contour)"})
         if s["line_id"] == "NO_LINE":
-            rec.update(kind="ADD", scope=PANTRY_SCOPE, engine_room_shared=True,
-                       engine_room_shared_basis="the engine room holds the open dining + living + pantry + reception "
-                                                "zone (T-128 / T-312): its room-level lines are not the pantry's")
+            rec.update(kind="ADD", scope=PANTRY_SCOPE, engine_room_split=_split(room, rec["engine_room"]))
             rec["assumption"] = ASSUMPTION + "; scope " + PANTRY_SCOPE
         else:
             rec.update(kind="FILL", line_id=s["line_id"])
@@ -182,8 +312,9 @@ def build(project_id=None):
     sys.path.insert(0, str(ROOT / "research/agents_t193"))
     import t193_inputs as L7   # noqa: E402  (the V3.0.7 guard inputs, unchanged, as V3.0.8 .. V3.0.15)
     g = dict(L7.inputs(project_id)["guard"], new_records=[])
-    return {"schema": "URBAN_V3021_INPUTS_V1", "project": project_id, "sources": [_source()], "records": recs,
-            "declared": dec, "guard": g}
+    return {"schema": "URBAN_V3021_INPUTS_V1", "project": project_id,
+            "sources": [_source(), _source_t296(), _source_t262()], "records": recs,
+            "base_ownership": base_records(recs), "declared": dec, "guard": g}
 
 
 if __name__ == "__main__":
