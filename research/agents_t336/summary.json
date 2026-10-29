@@ -1,0 +1,299 @@
+{
+ "actions": {
+  "ADD_ROW": 12,
+  "CORRECT": 4,
+  "KEEP": 108,
+  "REPLACE_BY_DOOR_ROW": 4,
+  "SET_NOT_APPLICABLE": 4
+ },
+ "candidate_wp_lines": 150,
+ "changes": [
+  {
+   "action": "ADD_ROW",
+   "after": 29.582355,
+   "before": null,
+   "change": null,
+   "piece": "WP.POOL_TANK.POOL_MEMBRANE[m2]/POOL-1/BASE_AND_OUTER_WALLS",
+   "row": "WP.POOL_TANK.POOL_MEMBRANE[m2]/POOL-1/BASE_AND_OUTER_WALLS",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": 1.524503,
+   "before": null,
+   "change": null,
+   "piece": "WP.POOL_TANK.POOL_PROTECTION_SCREED[m3]/POOL-1/BASE_AND_OUTER_WALLS",
+   "row": "WP.POOL_TANK.POOL_PROTECTION_SCREED[m3]/POOL-1/BASE_AND_OUTER_WALLS",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "SET_NOT_APPLICABLE",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "WP.POOL_TANK.TANK_MEMBRANE[m2]/TANK-01/ALL_FACES",
+   "row": "WP.POOL_TANK.TANK_MEMBRANE[m2]/TANK-01/ALL_FACES",
+   "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "CORRECT",
+   "after": 13.455,
+   "before": 13.5,
+   "change": -0.045,
+   "piece": "FIN.WP.FLOOR[m2]/GF-07/FLOOR",
+   "row": "L-f32abcdb3b4db6877c64",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+   "row": "FIN.WP.PENETRATION[pcs]/GF-07/FLOOR_PENETRATIONS",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+   "row": "FIN.WP.TERMINATION[lm]/GF-07:OPEN_SIDE_DINING/MEMBRANE_EDGE",
+   "status": "HELD"
+  },
+  {
+   "action": "SET_NOT_APPLICABLE",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.TERMINATION[lm]/LINE:L-0a7238edb9989d99d37a",
+   "row": "L-0a7238edb9989d99d37a",
+   "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "SET_NOT_APPLICABLE",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.TERMINATION[lm]/LINE:L-1ef59757a75524c397d7",
+   "row": "L-1ef59757a75524c397d7",
+   "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "SET_NOT_APPLICABLE",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.TERMINATION[lm]/LINE:L-8fb80f626889e06f6f97",
+   "row": "L-8fb80f626889e06f6f97",
+   "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "CORRECT",
+   "after": 0.12,
+   "before": 0.131977,
+   "change": -0.011977,
+   "piece": "FIN.WP.DOORWAY[m2]/DOOR:D-1F-04/THRESHOLD_FLOOR",
+   "row": "L-0627bac3a224d7fab8de",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": 0.2,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+   "row": "FIN.WP.DOORWAY[m2]/DOOR:D-GF-07-PANTRY/THRESHOLD_FLOOR",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "CORRECT",
+   "after": 0.12,
+   "before": 0.218846,
+   "change": -0.098846,
+   "piece": "FIN.WP.DOORWAY[m2]/DOOR:D-GF-14/THRESHOLD_FLOOR",
+   "row": "L-0f04f1a49d795b14d1af",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-1F-06/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-1F-06/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-02/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-02/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "REPLACE_BY_DOOR_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-02/TRANSITION|RETIRED:L-1c36054a8cadc0726e65",
+   "row": "L-1c36054a8cadc0726e65",
+   "status": "HELD"
+  },
+  {
+   "action": "REPLACE_BY_DOOR_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-02/TRANSITION|RETIRED:L-b60811f60f8fdc9a4447",
+   "row": "L-b60811f60f8fdc9a4447",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-10/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-10/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "REPLACE_BY_DOOR_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-10/TRANSITION|RETIRED:L-77a630d7e60ca6c404ba",
+   "row": "L-77a630d7e60ca6c404ba",
+   "status": "HELD"
+  },
+  {
+   "action": "REPLACE_BY_DOOR_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-10/TRANSITION|RETIRED:L-e0c34550b13267b4e0f7",
+   "row": "L-e0c34550b13267b4e0f7",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-11/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-11/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": null,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-12/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-12/TRANSITION",
+   "status": "HELD"
+  },
+  {
+   "action": "ADD_ROW",
+   "after": 1,
+   "before": null,
+   "change": null,
+   "piece": "FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "row": "FIN.WP.DOORWAY_TRANSITION_NR[pcs]/DOOR:D-GF-07-PANTRY/TRANSITION",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "CORRECT",
+   "after": 1.58,
+   "before": 1.48,
+   "change": 0.1,
+   "piece": "FIN.WP.WALL_UPTURN[m2]/1F-12/WALLS",
+   "row": "L-60f100105399a9bdfb08",
+   "status": "DRAWING-CONFIRMED"
+  }
+ ],
+ "inputs": {
+  "CANDIDATE_V3017_WP.json": "3582920f",
+  "CANDIDATE_V3021_WP.json": "6b6b1523",
+  "POOL_MEMBRANE_LINES_T309.json": "48e07a7c"
+ },
+ "pieces": 132,
+ "pool": {
+  "m2": 29.582355,
+  "m3": 1.524503
+ },
+ "rebind": {
+  "ADDED": 0,
+  "CHANGED": 0,
+  "REMOVED": 0,
+  "SAME": 150
+ },
+ "rule": "R-T336-WP-BIND-1",
+ "schema": "T336_WP_BINDING_V1",
+ "statuses": {
+  "ASSUMED - OWNER-APPROVED": 10,
+  "DRAWING-CONFIRMED": 57,
+  "HELD": 43,
+  "NOT_APPLICABLE_WITH_EVIDENCE": 4,
+  "PROCUREMENT": 18,
+  "UNKNOWN": 0,
+  "VERIFIED": 0
+ },
+ "upturn_under_unprinted_sills": {
+  "drawing_method": "HELD 0 .. that m2 (rule 3, sill printed on no sheet)",
+  "lm": 6.9,
+  "m2_owner_method_kept": 1.38,
+  "rooms": [
+   "1F-02",
+   "1F-03",
+   "1F-07",
+   "1F-08",
+   "1F-09",
+   "2F-02",
+   "GF-06",
+   "GF-10",
+   "GF-13",
+   "GF-16"
+  ]
+ },
+ "wet_area_lines": 119,
+ "wet_m2_by_kind": {
+  "FLOOR": {
+   "after": 85.57571,
+   "before": 85.62071,
+   "held_rows": 0,
+   "rows": 18
+  },
+  "THRESHOLD": {
+   "after": 2.019556,
+   "before": 1.930379,
+   "held_rows": 0,
+   "rows": 15
+  },
+  "TRANSITION": {
+   "after": 0.0,
+   "before": 0.0,
+   "held_rows": 19,
+   "rows": 19
+  },
+  "WALL_UPTURN": {
+   "after": 25.214585,
+   "before": 25.114585,
+   "held_rows": 1,
+   "rows": 18
+  }
+ }
+}
