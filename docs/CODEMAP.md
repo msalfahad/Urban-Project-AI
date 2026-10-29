@@ -18,12 +18,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3718 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3720 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 28 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1811 | pytest suites, one folder per round. |
-| `tools/` | 116 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1814 | pytest suites, one folder per round. |
+| `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -398,7 +398,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_measure.py` | 1165 | HIGH | 20 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 478 | HIGH | 19 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
-| `arch_rooms.py` | 2250 | HIGH | 39 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
+| `arch_rooms.py` | 2250 | HIGH | 40 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v211.py` | 659 | MEDIUM | 6 | ARCH_TAKEOFF_V2.11 (board task T-079): ARCH_TAKEOFF_V2.10 + the verified waterproofing pieces wired into a method. |
 | `arch_v212.py` | 273 | MEDIUM | 4 | ARCH_TAKEOFF_V2.12 (board task T-096): ARCH_TAKEOFF_V2.11 + complete membrane coverage (MEMBRANE_FOLD_V3). |
 | `arch_v213.py` | 502 | MEDIUM | 4 | ARCH_TAKEOFF_V2.13 (board task T-120; opt-in, NOT the released default): ARCH_TAKEOFF_V2.12 + two membrane purchase |
@@ -622,7 +622,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `room_slice.py` | 165 | MEDIUM | 1 | ROOM SLICE (M2) - architectural rooms from wall line work: floor area, perimeter, skirting and wet-room |
 | `room_topology.py` | 461 | HIGH | 33 | TS01 - ROOM / SPACE TOPOLOGY METHOD on CANONICAL_MEASUREMENT_INPUT (R8.8, SHADOW). |
 | `room_topology_v3.py` | 231 | HIGH | 1 | TS01 V3 - the frozen TS01 room topology (room_topology) with two injection points, nothing else changed: |
-| `room_vocab.py` | 121 | MEDIUM | 8 | ROOM VOCABULARY V2 (T-022) - a room label's type, compound phrases before bare words (generic, bilingual). |
+| `room_vocab.py` | 121 | MEDIUM | 9 | ROOM VOCABULARY V2 (T-022) - a room label's type, compound phrases before bare words (generic, bilingual). |
 | `rough_rebar_sanity.py` | 227 | MEDIUM | 6 | ROUGH_REBAR_SUMMARY - the Urban estimating / sanity product (generic). |
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
@@ -729,7 +729,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (109 modules)
+## `tools/` (110 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -791,7 +791,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `kb_build_1_7.py` | 145 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.7.0 BUILDER (board task T-079) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.7.0.json is the |
 | `kb_build_1_8.py` | 141 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.8.0 BUILDER (board task T-081 rework) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json is the |
 | `kb_index.py` | 178 | MEDIUM | 0 | KNOWLEDGE SOURCE INDEX (M9 Phase 2B-1) - one generated inventory of every place an owner rule, owner fact, |
-| `label_census.py` | 188 | MEDIUM | 1 | LABEL CENSUS (T-004a): every room label of a plan drawing against what the architectural route made of it. |
+| `label_census.py` | 188 | MEDIUM | 3 | LABEL CENSUS (T-004a): every room label of a plan drawing against what the architectural route made of it. |
+| `label_census_v2.py` | 355 | MEDIUM | 2 | LABEL CENSUS V2 (T-344): the label census read with the compound room vocabulary and the merged label binding. |
 | `lineage_chain.py` | 101 | MEDIUM | 1 | §5, §6. The real 6C -> 6D -> 6E lineage, from the frozen bundles. |
 | `live_smoke.py` | 95 | MEDIUM | 0 | LIVE smoke test of every agent on real Urban Projects inputs. Cheap models for |
 | `m1_report.py` | 285 | CRITICAL | 1 | M1 BOQ REPORT - the printable HTML summary of one urban_structural_boq run (a view; it computes nothing new). |
@@ -835,7 +836,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `t334_line_state_check.py` | 332 | MEDIUM | 3 | LINE-STATE CONSISTENCY CHECK (task T-334) - a read-only export-integrity check beside tools/boq_export_v1.py. It |
 | `trade_completeness.py` | 106 | MEDIUM | 2 | Trade completeness runner (T-236): engine/source/trade_completeness_v1.check() on one project's input file. |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3995 | HIGH | 46 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3995 | HIGH | 48 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -1253,6 +1254,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t340_reveal_sill_binding/` | 2 |
 | `tests/t341_fill/` | 1 |
 | `tests/t342_label_binding/` | 2 |
+| `tests/t344_label_census_v2/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1599,6 +1601,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t340/` | 13 |
 | `research/agents_t341/` | 5 |
 | `research/agents_t342/` | 8 |
+| `research/agents_t344/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
