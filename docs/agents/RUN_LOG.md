@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29T17:52Z | Verifier | STARTED | run session_01E6cPnewJPmSD4FdGLKYGki | repo-attached routine | task state: none READY (T-338, T-345 CLAIMED; T-332 / T-333 r2 CLAIMABLE) | self-check pending
 - 2026-10-29 17:20 UTC | Worker 1 | STARTED | run session_01E6cPne1AHgD1LoofZWhQ95 | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T17:11Z | Verifier | SUCCESS | T-340 Gate A PASS MERGED 25c1f52c; T-339 Gate A PASS MERGED 04f371ba; T-344 Gate A PASS MERGED 6bd0385c (engine push each) | research / tool only, no quantity change (candidate V3.0.23, released A unchanged). Own P7757.dxf re-measures: W02 head 6.331578 x 0.080 = 0.506526 vs 0.5064 (0.025 %), D-1F-03 / D-1F-04 thresholds 0.150 / 0.120 (0.000 %), 1F terrace zone 38.355 / footprint 5.553 / finish hatch 31.6433 m2 closes to D band 1.078 + 0.081; D-GF-10 0.797 width proposal NOT ADOPTED (wall line overruns the 0.800 D315 frame by 2.961 mm; T-336 membrane piece 0.119556 -> 0.120 routed to T-310); census V2 own run 41 = 28/1/1/11, SILENT 0, V1 byte-identical cba0762b, unknown-line tamper refused. No new owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive download raw binary (base64-encoded before decode); T-344 row READY stamp '17:44 UTC' written before that time (noted)
 - 2026-10-29T17:02Z | Worker 3 | STARTED | run session_01E6cPnb7gNBAdFSvvf78cst | repo-attached routine | task state: none yet | self-check pending
