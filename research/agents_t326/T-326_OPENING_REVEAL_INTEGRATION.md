@@ -12,6 +12,53 @@ face). Inputs: `research/agents_t326/t326_inputs.py` reads REVEAL_LEDGER_T313.cs
 DOOR_PLASTER_RECONCILIATION_T313.csv and SILL_THRESHOLD_LEDGER_T325.csv, each pinned by sha256; nothing is typed; the
 T-325 sill figures must equal T-313 row by row or the build stops (26 / 26 equal).
 
+## 0. r2 (2026-10-30 17:45 UTC): D-T326-1 fixed, the three ARCHED windows on their outline
+
+Checker Gate B r1 (Verifier 2026-10-30 15:35 UTC) rejected r1 narrowly: W15 / W16 / W26 are ARCHED (T-238, MERGED
+242e50b2, outline DRAWING-CONFIRMED; Checker re-walk on P7757.dxf layer 1 under T-326), but the merged T-313 r2 ledger
+booked their OUTSIDE jambs and head on the band-crown rectangle (2 x d x 3.10 + d x 1.55; 2 x d x 1.70 + d x 1.20).
+Everything else in r1 was accepted as checked and is NOT redone here.
+
+| Line | Opening | r1 (rectangle) m2 | r2 (outline) m2 | Basis r2 | vs Checker hand |
+|---|---|---|---|---|---|
+| L-bafe179181f1 | W15 out jambs + head | 0.620 | 0.547688 | 2 x 0.080 x 2.1609 + 0.080 x 2.5243 | 0.5477 (arch 2.5240): +0.004 % |
+| L-f9f1a4cddf86 | W16 out jambs + head | 0.620 | 0.547688 | as W15 | 0.5477: +0.004 % |
+| L-d9ffbb4edfee | W26 out jambs + head | 0.460 | 0.40709 | 2 x 0.100 x 1.0500 + 0.100 x 1.9709 | 0.4071 (arch 1.9706): +0.007 % |
+
+ARCH.WINDOW_REVEAL valued 12.6364 -> 12.438866 m2 (-0.197534, -1.56 %); FIN.PLASTER 580.5819 unchanged; nothing else
+moves. Physical reason: the jamb faces stop at the springing (2.1609 / 1.05 above the sill / floor), the head soffit
+follows the developed arch (2.5243 / 1.9709 m), not the 0.10 / 0.05 surround band crown and not the chord.
+
+- Correction ledger (separate, pinned; the merged T-313 file is never edited, sha256 still 2cfa4211):
+  `ARCHED_REVEAL_CORRECTION_T326.csv` (sha256 7cbe36f9), built deterministically by `build_arched_correction.py`
+  from the pinned T-313 r2 ledger (depth d, the rectangle rows replaced, carried as ledger_*) and the pinned T-238
+  `summary.json` (sha256 84b5b1f8: width, springing, crown, developed arch, status). `t326_inputs.py` applies each
+  correction only if the T-313 row is still exactly the one it replaces and the correction re-derives from the outline
+  (2 x d x springing / d x arch); else the build stops. Only DRAWING-CONFIRMED outlines with MEASURED outside faces
+  are corrected (W15, W16, W26); W17 (curved on plan), A-GF-01 (pending check) and A-1F-01 (not drawn) stay BLANK.
+- Rule R-T326-2 (every villa) in `engine/source/arch_v3028.py` (`load_inputs` outlines + `arched_face`): a valued
+  jambs / head face of an opening with an ARCHED outline record must equal 2 x d x springing / d x developed arch,
+  else refused (the message names the rectangle value); missing depth is refused (HELD, never a rectangle); a bad
+  outline (no springing, springing not below the crown, unknown shape) is refused. The added line records the outline
+  and `outline_rule: R-T326-2`. Line ids unchanged (rule id of the line stays R-T326-1).
+- Tests `tests/t326_reveal_fill/test_arched_r2.py` (15): villa V326 window W4 (w 1.00, semicircle r 0.50, springing
+  1.40, d 0.08) by hand 0.224 + 0.125664 = 0.349664 m2; adverse: the enclosing rectangle 0.384 refused, jambs to the
+  crown refused, chord head refused, no depth refused, 4 bad outlines refused; rectangular W1 / W2 byte-identical to r1;
+  Alsenan: the correction file is its build and matches T-238 (and the Checker's own walk within 0.0001 m2), the
+  T-313 file untouched, W15 / W16 / W26 lines and 12.438866 total, the rectangle put back refused, an edited
+  correction refused even when re-pinned. `test_t326_inputs_pins.py` expected JAMBS_HEAD 9.667 -> 9.469466 (by design).
+- Validation on the r2 head (after merging working head 8f2b0354; CODEMAP / ROUTING by the tool, stale none; freeze
+  0): own Drive copies P7757.dxf ab54dd55 + ST7757 9f9d1179, fresh T-167 base, full CLI `v3028_run.py`: V3_0_26
+  8959989c and V3_0_27 f7972540 REPRODUCED; V3_0_28 json 6f19b32b (csv 6bd10592, ledger csv efcdfa58, diff csv
+  dba4c588); `v3028_direct.py` byte-identical 6f19b32b; the r1 code (ff04ac6c) re-run on the same V3.0.27 gives
+  a410b6fc (= the Checker's r1 hash): r1 -> r2 3,956 / 3,956 same ids, 3,953 byte-identical, 3 changed (above).
+  Full suite tests/ + agents/ to the end on the code of the r2 head: 396 FAILED / ERROR, test by test against
+  research/agents_t202/known_failures.json: 395 listed + tests/t212_guard_property (tools/label_census_v2.py, T-344,
+  unclassified on the working head 8f2b0354, the Verifier's known 'label_census_v2'); christiannp WORKTREE_GITDIR
+  passes here. NEW from this package: 0.
+- Lessons row (ERS s.7, as proposed by the Checker): every reveal / arris / perimeter quantity of an opening reads the
+  opening's OUTLINE record (T-238 class) first; R-T326-2 + its regression test; status 'fixed in T-326 r2'.
+
 ## 1. The physical question and the answer (ERS s.2.1, s.3)
 
 The element is ONE FACE of the wall thickness at an opening: a jamb, the head soffit, the outside sill (raised window)
