@@ -1,0 +1,9 @@
+handle,frame,pattern,layer,width_m,height_m,role,b4_11_kind,what
+1C01,SE,LINE,3,6.700,1.050,section_cut,SECTION_CUT,section-cut band at the annex roof level
+23DE,SE,LINE,3,15.000,0.300,section_cut,SECTION_CUT,section-cut band along the base
+23E3,SE,LINE,3,0.200,0.200,section_cut,SECTION_CUT,cut element end at the annex section edge
+23E7,SE,AR-PARQ1,3,18.898,0.650,ground,GROUND,earth below the ground line
+27AF,NW,LINE,3,1.438,2.850,section_cut,SECTION_CUT,section-cut band in the pool-court cut (below +0.15)
+27D1,NW,LINE,3,9.538,1.050,section_cut,SECTION_CUT,slab cut band
+27D2,NW,LINE,3,15.000,2.000,section_cut,SECTION_CUT,section-cut band along the base
+27D4,NW,AR-PARQ1,3,19.416,2.350,ground,GROUND,earth below the ground line

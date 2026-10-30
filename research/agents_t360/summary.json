@@ -1,0 +1,37 @@
+{
+ "candidate_porch_arch": {
+  "pieces": 20,
+  "state": "MARKED_FORM_MATERIAL_HELD",
+  "status": "HELD (blank; hidden half UNKNOWN)",
+  "visible_face_m2": 1.5102
+ },
+ "cladding_m2_established": 0.0,
+ "curved_shading_sw_p7": true,
+ "double_count_m2": 0.0,
+ "dxf_material_keyword_hits": 0,
+ "dxf_texts": 675,
+ "elevation_frame_hatches": 8,
+ "elevation_frame_hatches_finish": 0,
+ "face_keys": 109,
+ "face_states": {
+  "NOT_MARKED": 109
+ },
+ "family": "B4-11 FACADE CLADDING / STONE",
+ "freelancer": {
+  "cladding_keyword_cells": 0,
+  "per_file": {
+   "ALU": 50,
+   "BLK": 190,
+   "FIN": 197,
+   "PLS": 115,
+   "PNT": 77,
+   "RC": 256
+  },
+  "pls_facade_rows": 12,
+  "rows": 885
+ },
+ "sheets_marking_form_only": 1,
+ "sheets_marking_material": 0,
+ "sheets_searched": 14,
+ "task": "T-360"
+}
