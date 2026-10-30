@@ -1,0 +1,70 @@
+wall_id,floor,group,block_type,t_m,block_run_m,levels,net_m,held_m,state,notes,alt210_levels,alt210_net_m
+GF-W00,GF,EXTERNAL,BLACK,0.2,9.900000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W01,GF,EXTERNAL,BLACK,0.2,16.470000,6,98.804406,0.015594,ASSUMED — OWNER-APPROVED,,6,83.483704
+GF-W02,GF,INTERNAL,BLACK,0.2,1.650000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W03,GF,INTERNAL,BLACK,0.2,2.650000,0,,,HELD: no block top established on the wall,,0,
+GF-W04,GF,EXTERNAL,WHITE,0.2,5.850000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W05,GF,EXTERNAL,WHITE,0.2,1.900000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W06,GF,EXTERNAL,WHITE,0.2,2.500000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W07,GF,EXTERNAL,WHITE,0.2,1.100000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W08,GF,INTERNAL,BLACK,0.2,4.300000,0,,,HELD: lift tie beam size (ST p.8 n.19),,0,
+GF-W09,GF,INTERNAL,BLACK,0.2,1.800000,0,,,HELD: lift tie beam size (ST p.8 n.19),,0,
+GF-W10,GF,EXTERNAL,WHITE,0.2,12.870000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+GF-W11,GF,EXTERNAL,WHITE,0.2,7.000000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W12,GF,EXTERNAL,WHITE,0.2,0.450000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W13,GF,INTERNAL,BLACK,0.2,0.700000,0,,,HELD: lift tie beam size (ST p.8 n.19),,0,
+GF-W14,GF,INTERNAL,BLACK,0.2,3.900000,0,,,HELD: lift tie beam size (ST p.8 n.19),,0,
+GF-W15,GF,EXTERNAL,WHITE,0.2,7.100000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W16,GF,EXTERNAL,WHITE,0.2,4.450000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W17,GF,EXTERNAL,WHITE,0.2,3.700000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W18,GF,EXTERNAL,WHITE,0.2,6.100000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W19,GF,INTERNAL,BLACK,0.15,2.000000,7,13.750000,0.000000,ASSUMED — OWNER-APPROVED,,6,12.000000
+GF-W20,GF,INTERNAL,BLACK,0.15,1.017842,6,0.300000,5.807052,ASSUMED — OWNER-APPROVED,,6,0.300000
+GF-W21,GF,INTERNAL,BLACK,0.15,1.023977,7,7.167839,0.000000,ASSUMED — OWNER-APPROVED,,6,6.143862
+GF-W22,GF,INTERNAL,BLACK,0.15,2.887272,7,20.210518,0.000000,ASSUMED — OWNER-APPROVED,,6,17.323632
+GF-W23,GF,INTERNAL,BLACK,0.15,1.300000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W24,GF,INTERNAL,BLACK,0.15,4.500000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W25,GF,INTERNAL,BLACK,0.15,4.500000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W26,GF,INTERNAL,BLACK,0.15,4.450000,6,15.900000,10.800000,ASSUMED — OWNER-APPROVED,,6,15.899094
+GF-W27,GF,INTERNAL,BLACK,0.15,1.500000,0,,,HELD: annex datum (Q-54 B),,0,
+GF-W28,GF,INTERNAL,BLACK,0.15,5.527211,7,30.094309,1.800000,ASSUMED — OWNER-APPROVED,,6,26.367098
+GF-W29,GF,INTERNAL,BLACK,0.15,1.350000,7,5.700000,0.550000,ASSUMED — OWNER-APPROVED,,6,5.700000
+GF-W31,GF,INTERNAL,BLACK,0.15,1.278577,6,1.484634,6.186828,ASSUMED — OWNER-APPROVED,,6,1.484634
+GF-W32,GF,INTERNAL,BLACK,0.15,2.842313,7,2.256385,17.072624,ASSUMED — OWNER-APPROVED,,6,2.423603
+GF-W33,GF,INTERNAL,BLACK,0.15,1.256041,7,8.792287,0.000000,ASSUMED — OWNER-APPROVED,,6,7.536246
+GF-W34,GF,INTERNAL,BLACK,0.15,2.355244,7,4.140099,12.061959,ASSUMED — OWNER-APPROVED,,6,3.792642
+1F-W00,1F,EXTERNAL,WHITE,0.2,6.570767,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD","width in masonry 0.4673 (jamb 0.0327 inside a column, T-274 scan)",0,
+1F-W01,1F,EXTERNAL,WHITE,0.2,0.820767,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+1F-W02,1F,INTERNAL,BLACK,0.2,0.700000,6,4.200000,0.000000,ASSUMED — OWNER-APPROVED,,6,4.200000
+1F-W03,1F,INTERNAL,BLACK,0.2,3.900000,6,22.200000,0.000000,ASSUMED — OWNER-APPROVED,,6,22.200000
+1F-W04,1F,EXTERNAL,WHITE,0.2,3.600000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+1F-W05,1F,EXTERNAL,WHITE,0.2,6.300000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+1F-W06,1F,EXTERNAL,WHITE,0.2,16.470000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+1F-W07,1F,INTERNAL,BLACK,0.2,3.220000,6,2.980000,10.114815,ASSUMED — OWNER-APPROVED,,6,4.400000
+1F-W08,1F,EXTERNAL,WHITE,0.2,3.600000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+1F-W09,1F,INTERNAL,BLACK,0.2,1.800000,6,10.800000,0.000000,ASSUMED — OWNER-APPROVED,,6,10.800000
+1F-W10,1F,EXTERNAL,WHITE,0.2,12.870000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+1F-W11,1F,INTERNAL,BLACK,0.15,4.250000,6,0.000000,25.500000,ASSUMED — OWNER-APPROVED,,5,0.000000
+1F-W12,1F,INTERNAL,BLACK,0.15,3.725000,6,17.550000,0.800000,ASSUMED — OWNER-APPROVED,,5,15.625000
+1F-W13,1F,INTERNAL,BLACK,0.15,8.225000,6,15.498980,33.251020,ASSUMED — OWNER-APPROVED,T-261 piece heights not tied to the column stations and not all equal in levels: HELD,6,17.098980
+1F-W14 + 1F-W15,1F,INTERNAL,BLACK,0.15,4.015716,6,24.094296,0.000000,ASSUMED — OWNER-APPROVED,,6,24.094296
+1F-W16,1F,INTERNAL,BLACK,0.15,5.420000,6,17.720000,11.600000,ASSUMED — OWNER-APPROVED,,6,18.319316
+1F-W17,1F,INTERNAL,BLACK,0.15,2.100000,6,4.212880,8.387120,ASSUMED — OWNER-APPROVED,T-261 piece heights not tied to the column stations and not all equal in levels: HELD,6,4.562880
+1F-W18,1F,INTERNAL,BLACK,0.15,5.200000,6,31.184850,0.000000,ASSUMED — OWNER-APPROVED,T-261 piece heights not tied to the column stations and not all equal in levels: HELD,6,27.459850
+1F-W19,1F,INTERNAL,BLACK,0.15,1.800000,6,6.800000,0.800000,ASSUMED — OWNER-APPROVED,,6,7.598944
+1F-W20,1F,INTERNAL,BLACK,0.15,6.125000,6,36.346336,0.000000,ASSUMED — OWNER-APPROVED,,6,36.346336
+1F-W21,1F,INTERNAL,BLACK,0.15,1.950000,6,11.700000,0.000000,ASSUMED — OWNER-APPROVED,,6,11.698989
+1F-W22,1F,INTERNAL,BLACK,0.15,5.075000,6,30.349556,0.000000,ASSUMED — OWNER-APPROVED,,6,30.223800
+1F-W23,1F,INTERNAL,BLACK,0.15,6.400000,6,27.551044,3.400000,ASSUMED — OWNER-APPROVED,,5,26.600000
+1F-W24,1F,INTERNAL,BLACK,0.15,2.450000,6,8.354040,6.345960,ASSUMED — OWNER-APPROVED,T-261 piece heights not tied to the column stations and not all equal in levels: HELD,6,8.104040
+2F-W00,2F,INTERNAL,BLACK,0.2,1.800000,6,0.000000,10.800000,ASSUMED — OWNER-APPROVED,,6,0.000000
+2F-W01,2F,INTERNAL,BLACK,0.2,1.800000,6,10.800000,0.000000,ASSUMED — OWNER-APPROVED,,6,10.800000
+2F-W02,2F,EXTERNAL,WHITE,0.2,7.000000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+2F-W03,2F,EXTERNAL,WHITE,0.15,7.900000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+2F-W04,2F,EXTERNAL,WHITE,0.2,6.225000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+2F-W05,2F,INTERNAL,BLACK,0.2,2.250000,6,0.500000,13.000000,ASSUMED — OWNER-APPROVED,T-261 piece heights not tied to the column stations and not all equal in levels: HELD,6,0.600000
+2F-W06,2F,INTERNAL,BLACK,0.2,3.900000,6,23.400000,0.000000,ASSUMED — OWNER-APPROVED,,6,23.400000
+2F-W07,2F,EXTERNAL,WHITE,0.2,5.725000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",T-261 piece heights not tied to the column stations and not all equal in levels: HELD,0,
+2F-W08,2F,INTERNAL,BLACK,0.15,3.000000,6,13.199700,1.600000,ASSUMED — OWNER-APPROVED,,6,14.799700
+GF-W35,GF,EXTERNAL,WHITE,0.2,0,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
+GF-W36,GF,EXTERNAL,WHITE,0.2,0.500000,0,,,"HELD: WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD",,0,
