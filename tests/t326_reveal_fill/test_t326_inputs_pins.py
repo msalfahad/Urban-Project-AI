@@ -29,14 +29,15 @@ def test_counts_and_m2(doc):
     assert (s["fills"], s["fill_m2"]) == (26, 2.9294)                      # 22 raised sills 2.5214 + 4 thresholds 0.408
     assert s["narrow"] == [("D-GF-07", {"low": 1.28, "high": 1.4}, 1.4)]
     assert (s["adds_valued"], s["adds_held"]) == (33, 10)
-    assert s["added_m2_by_item"] == {"ARCH.REVEAL": 9.667, "ARCH.WINDOW_REVEAL": 0.04, "FIN.PLASTER": 3.93}
+    assert s["added_m2_by_item"] == {"ARCH.WINDOW_REVEAL JAMBS_HEAD": 9.667, "ARCH.WINDOW_REVEAL SILL": 0.04,
+                                     "FIN.PLASTER JAMBS_HEAD": 3.93}
     assert round(sum(s["added_m2_by_item"].values()), 6) == 13.637            # T-313 r2 missing scope
 
 
 def test_each_face_once_and_loads(doc):
     inp = A.load_inputs(doc, "p")
     assert len(inp["_faces"]) == len(set(inp["_faces"]))
-    plaster_doors = {a["opening"] for a in doc["adds"] if a["item_code"] == "FIN.PLASTER"}
+    plaster_doors = {a["opening"] for a in doc["adds"] if a["item_code"] == "FIN.PLASTER" and a["status"] == "VALUED"}
     assert plaster_doors == {"D-GF-02", "D-GF-10", "D-GF-14", "D-1F-03", "D-1F-04"}
     d1f03 = next(a for a in doc["adds"] if a["opening"] == "D-1F-03")
     assert round(sum(c["m2"] for c in d1f03["components"]), 6) == 0.81
@@ -47,7 +48,7 @@ def test_each_face_once_and_loads(doc):
 
 def test_held_faces_blank(doc):
     held = {(a["opening"], a["side"], a["item_code"]) for a in doc["adds"] if a["status"] == "HELD"}
-    assert ("W02", "OUT", "ARCH.REVEAL") in held and ("D-GF-15", "THROUGH", "ARCH.REVEAL") in held
+    assert ("W02", "OUT", "ARCH.WINDOW_REVEAL") in held and ("D-GF-15", "THROUGH", "FIN.PLASTER") in held
     assert all(c["m2"] is None for a in doc["adds"] if a["status"] == "HELD" for c in a["components"])
 
 

@@ -21,10 +21,11 @@ Records (nothing typed: every figure is read from the merged files):
             frame bed, which is not a finish); W17's line stays as it is (curved, UNRESOLVED);
   narrow    FIN.PLASTER D-GF-07: the line's bound 1.28 .. 1.40 (h class pending 2.20 / 2.50) -> 1.400 m2 at the
             printed 2.50 (T-313 r2 re-measure, Checker-confirmed);
-  adds      missing scope by opening and side: window outside jambs + head (valued components in one line), W18's
-            external sill (an ARCH.WINDOW_REVEAL line of its own), the five unlined doors' jambs + head (FIN.PLASTER
-            'door jambs and head', UP-FIN-PLASTER-001, like the other 22), and one BLANK line per opening / side / item
-            for every HELD / UNRESOLVED component that no line carries (never 0);
+  adds      missing scope by opening, side and face group: window outside jambs + head (valued faces in one line) and
+            W18's external sill (its own line), both ARCH.WINDOW_REVEAL (BOQ family B4-08 'Reveals and returns'); the
+            five unlined doors' jambs + head (FIN.PLASTER 'door jambs and head', UP-FIN-PLASTER-001, like the other
+            22); one BLANK line per opening / side / group for every HELD / UNRESOLVED face no line carries (never 0;
+            arch / gate faces through the wall under FIN.PLASTER, as a door's);
   carried   every (opening, component) a candidate line already carries: the 22 FIN.PLASTER door lines (jambs and
             head) and the T-325 closure / threshold lines (the door's floor face): a second carrier is refused.
 
@@ -146,20 +147,19 @@ def build(project_id=None):
                 continue
             if r["state"] == "NONE":
                 continue
-            if kind == "DOOR":
-                if op in dp:      # carried by its FIN.PLASTER line (T-313 bound): not added again
-                    continue
-                item = "FIN.PLASTER"
-            else:
-                item = "ARCH.WINDOW_REVEAL" if comp in SILL_COMPONENTS else "ARCH.REVEAL"
+            if kind == "DOOR" and op in dp:      # carried by its FIN.PLASTER line (T-313 bound): not added again
+                continue
+            # through the wall (door / arch / gate): FIN.PLASTER (UP-FIN-PLASTER-001); a window side: the B4-08 code
+            item = "FIN.PLASTER" if r["side"] == "THROUGH" else "ARCH.WINDOW_REVEAL"
+            group = "SILL" if comp in SILL_COMPONENTS else "JAMBS_HEAD"
             valued = r["state"] == "MEASURED"
-            groups[(r["side"], item, valued)].append(r)
-        for (side, item, valued), rs in sorted(groups.items()):
+            groups[(r["side"], item, group, valued)].append(r)
+        for (side, item, group, valued), rs in sorted(groups.items()):
             comps = [{"component": r["component"], "m2": _f(r["m2"]) if valued else None,
                       "ml": _f(r["ml"]) if valued else None, "depth_m": _f(r["depth_m"]), "basis": r["basis"],
                       "state": r["state"], "evidence": _evidence(r), "height_status": r["height_status"]}
                      for r in rs]
-            adds.append({"opening": op, "kind": kind, "floor": floor, "side": side, "item_code": item,
+            adds.append({"opening": op, "kind": kind, "floor": floor, "side": side, "item_code": item, "group": group,
                          "status": "VALUED" if valued else "HELD", "components": comps,
                          "rooms": rows[0]["room"], "source_task": "T-313"})
     for op in ("D-GF-07",):
@@ -186,7 +186,7 @@ def summary(doc):
          "carried": len(doc["carried"])}
     for a in doc["adds"]:
         if a["status"] == "VALUED":
-            k = a["item_code"]
+            k = f"{a['item_code']} {a['group']}"
             s["added_m2_by_item"][k] = round(s["added_m2_by_item"].get(k, 0.0)
                                              + sum(c["m2"] for c in a["components"]), 6)
     return s

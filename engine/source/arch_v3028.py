@@ -14,10 +14,13 @@ the head soffit, the sill (raised window, outside) or the floor-level threshold,
             frame is drawn flush with the room face). Material stays as the ledger states it (UNKNOWN / by spec);
   NARROW    a FIN.PLASTER 'door jambs and head' line held as a bound only because the door height class was pending,
             where the drawing prints the height: the one figure at the printed height (inside the old bound);
-  ADD       a face no line carries: valued faces of one opening, side and item in ONE line (window outside jambs +
-            head: ARCH.REVEAL; an external sill with no line: ARCH.WINDOW_REVEAL; a door reveal (UP-FIN-PLASTER-001
-            2 x t x h + t x w): FIN.PLASTER 'door jambs and head', as the candidate's other door lines);
-            HELD / UNRESOLVED faces of one opening, side and item in ONE BLANK line naming each face (never 0).
+  ADD       a face no line carries: valued faces of one opening, side and face group in ONE line (window jambs +
+            head and an external sill with no line: ARCH.WINDOW_REVEAL, the code of BOQ family B4-08 'Reveals and
+            returns', the sill and the jambs / head in separate lines, the physical element naming which; a reveal
+            through the wall of a door / arch / gate (UP-FIN-PLASTER-001 2 x t x h + t x w): FIN.PLASTER '<kind> jambs
+            and head', as the candidate's other door lines); HELD / UNRESOLVED faces of one opening, side and group in
+            ONE BLANK line naming each face (never 0). No new item code: every face sits in a family the registry
+            already names.
 
 Refused (InputsError / ValueError, nothing written): a FILL on a line that is not a blank ARCH.WINDOW_REVEAL line, or a
 second window on one line, or a fill with no measured external surface; a NARROW whose figure is outside the line's
@@ -74,11 +77,13 @@ SIDES = ("IN", "OUT", "THROUGH")
 FACE = {"JAMBS": "jambs", "HEAD": "head soffit", "SILL": "external sill", "THRESHOLD": "floor-level threshold",
         "FLOOR_STRIP": "floor strip"}
 SILL_FACES = ("SILL", "THRESHOLD", "FLOOR_STRIP")
-REVEAL_CODE, SILL_CODE, PLASTER_CODE = "ARCH.REVEAL", "ARCH.WINDOW_REVEAL", "FIN.PLASTER"
+SILL_CODE, PLASTER_CODE = "ARCH.WINDOW_REVEAL", "FIN.PLASTER"
 DOOR_PHYSICAL = "door jambs and head"
-REVEAL_ITEM = ("Opening reveal jambs and head (finish to be confirmed)", "جوانب وسقف الفتحة (التشطيب يحدد لاحقاً)",
-               "OPENINGS")
-ITEMS = {REVEAL_CODE: ("JAMBS", "HEAD"), SILL_CODE: SILL_FACES, PLASTER_CODE: ("JAMBS", "HEAD")}
+JAMB_FACES = ("JAMBS", "HEAD")
+GROUPS = {"SILL": SILL_FACES, "JAMBS_HEAD": JAMB_FACES}
+ITEMS = {SILL_CODE: ("SILL", "JAMBS_HEAD"), PLASTER_CODE: ("JAMBS_HEAD",)}       # item -> the face groups it books
+JAMB_ITEM = ("Window reveal jambs and head (finish to be confirmed)", "جوانب وسقف فتحة الشباك (التشطيب يحدد لاحقاً)")
+THROUGH_KINDS = ("DOOR", "ARCH", "GATE")
 VALUED_STATES = ("MEASURED",)
 HELD_STATES = ("HELD", "UNRESOLVED")
 TOL = 1e-6
@@ -196,20 +201,25 @@ def load_inputs(doc, project_id=None):
             raise InputsError(f"{where}: no merged source")
         if a.get("item_code") not in ITEMS:
             raise InputsError(f"{where}: item {a.get('item_code')!r}")
+        if a.get("group") not in ITEMS[a["item_code"]]:
+            raise InputsError(f"{where}: face group {a.get('group')!r} is not booked under {a['item_code']}")
         if a.get("status") not in ("VALUED", "HELD"):
             raise InputsError(f"{where}: status {a.get('status')!r}")
-        key = (a["opening"], a["side"], a["item_code"], a["status"])
+        key = (a["opening"], a["side"], a["group"], a["status"])
         if key in seen_add:
             raise InputsError(f"{where}: twice")
         seen_add.add(key)
-        if a["item_code"] == PLASTER_CODE and (a["side"] != "THROUGH" or a.get("kind") != "DOOR"):
-            raise InputsError(f"{where}: a FIN.PLASTER reveal is a door reveal through the wall")
+        if (a["item_code"] == PLASTER_CODE) != (a["side"] == "THROUGH"):
+            raise InputsError(f"{where}: a reveal through the wall (door / arch / gate) is FIN.PLASTER, a window "
+                              f"side is {SILL_CODE}")
+        if a["side"] == "THROUGH" and a.get("kind") not in THROUGH_KINDS:
+            raise InputsError(f"{where}: kind {a.get('kind')!r} has no reveal through the wall")
         comps = a.get("components") or ()
         if not comps:
             raise InputsError(f"{where}: no face")
         for c in comps:
-            if c.get("component") not in ITEMS[a["item_code"]]:
-                raise InputsError(f"{where}: face {c.get('component')!r} is not a {a['item_code']} face")
+            if c.get("component") not in GROUPS[a["group"]]:
+                raise InputsError(f"{where}: face {c.get('component')!r} is not a {a['group']} face")
             if a["status"] == "VALUED":
                 if c.get("state") not in VALUED_STATES:
                     raise InputsError(f"{where}: {c['component']} state {c.get('state')!r} in a valued line")
@@ -241,7 +251,7 @@ def _fmt(x):
 
 
 def element_id(a):
-    return f"{a['floor']}-REVEAL-{a['opening']}:{a['side']}:{a['item_code']}:{a['status']}"
+    return f"{a['floor']}-REVEAL-{a['opening']}:{a['side']}:{a['group']}:{a['status']}"
 
 
 def _template(lines, floor):
@@ -311,7 +321,8 @@ def add_line(a, src, tmpl):
     total = _r(sum(c["m2"] for c in a["components"])) if valued else None
     faces = [{k: c.get(k) for k in ("component", "m2", "ml", "depth_m", "basis", "state", "evidence",
                                     "height_status")} for c in a["components"]]
-    lrec = _rec(src, action="ADD", opening=a["opening"], kind=a.get("kind"), side=a["side"], status=a["status"],
+    lrec = _rec(src, action="ADD", opening=a["opening"], kind=a.get("kind"), side=a["side"], group=a["group"],
+                status=a["status"],
                 faces=faces, rooms=a.get("rooms"), evidence_status=_add_evidence(a) if valued else "HELD")
     names = " + ".join(f"{FACE[c['component']]} {c['basis']}" for c in a["components"])
     if valued:
@@ -329,10 +340,10 @@ def add_line(a, src, tmpl):
         rfi = {"question": formula[:900], "unlocks": eid}
         note = f"{METHOD}: reveal faces HELD by name ({src['task']} MERGED {src['merge_commit'][:8]})"
     if a["item_code"] == PLASTER_CODE:
-        item_kw = {"physical_element": DOOR_PHYSICAL}
-    elif a["item_code"] == REVEAL_CODE:
-        item_kw = {"physical_element": f"opening reveal {a['side'].lower()}", "item_en": REVEAL_ITEM[0],
-                   "item_ar": REVEAL_ITEM[1], "trade": REVEAL_ITEM[2]}
+        item_kw = {"physical_element": f"{str(a.get('kind')).lower()} jambs and head"}
+    elif a["group"] == "JAMBS_HEAD":
+        item_kw = {"physical_element": f"window reveal jambs and head ({'outside' if a['side'] == 'OUT' else 'room side'})",
+                   "item_en": JAMB_ITEM[0], "item_ar": JAMB_ITEM[1]}
     else:
         item_kw = {"physical_element": "window reveal strip"}
     ln = BL.make_line(project_id=pr["project_id"], revision_set_sha256=pr["revision_set_sha256"],

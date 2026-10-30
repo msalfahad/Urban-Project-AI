@@ -34,7 +34,8 @@ PENDING = {
             "T-313 r2 ledger, cross-checked row by row against the merged T-325 sills ledger: 26 blank ARCH.WINDOW_REVEAL "
             "lines filled with the outside sill / floor-level threshold only (2.9294 m2), FIN.PLASTER D-GF-07 narrowed "
             "to 1.400 m2 at the printed 2.50, missing scope added once per opening / side / item (window outside jambs "
-            "+ head 9.6670 m2 ARCH.REVEAL, W18 sill 0.040 m2, five unlined doors 3.930 m2 FIN.PLASTER), held faces "
+            "+ head 9.6670 m2 and W18 sill 0.040 m2 as ARCH.WINDOW_REVEAL (B4-08, no new item code), five unlined doors "
+            "3.930 m2 FIN.PLASTER), held faces "
             "BLANK by name (10 lines); every other V3.0.27 line byte-identical; the Gate B integration package; names "
             "no family",
 }
