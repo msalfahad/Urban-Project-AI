@@ -1,0 +1,117 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.24 (json 19394733; plaster / tile lines = V3.0.22 json 7199c8b6, quantity fields asserted)",
+ "double_count_m2": 0.0,
+ "exterior": {
+  "ASSUMED — OWNER-APPROVED": {
+   "blank": 0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 159.145,
+   "n": 6
+  },
+  "DRAWING-CONFIRMED": {
+   "blank": 0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 714.229599,
+   "n": 84
+  },
+  "HELD": {
+   "blank": 9,
+   "hi": 191.761796,
+   "lo": 118.593203,
+   "m2": 0.0,
+   "n": 27
+  },
+  "UNKNOWN": {
+   "blank": 3,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "n": 3
+  }
+ },
+ "exterior_wall_side_split_T317_by_floor": {
+  "1F": {
+   "blk": 95.6952,
+   "conc": 38.7532,
+   "face": 134.4484,
+   "held": 3
+  },
+  "2F": {
+   "blk": 0.0,
+   "conc": 0.0,
+   "face": 0.0,
+   "held": 4
+  },
+  "GF": {
+   "blk": 67.1476,
+   "conc": 29.1524,
+   "face": 96.3,
+   "held": 11
+  }
+ },
+ "interior": {
+  "ASSUMED — OWNER-APPROVED": {
+   "blank": 0,
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 575.2519,
+   "n": 97
+  },
+  "HELD": {
+   "blank": 45,
+   "hi": 545.4606,
+   "lo": 489.481,
+   "m2": 0.0,
+   "n": 54
+  }
+ },
+ "interior_determinate_equals_FIN_PLASTER_live_V3_0_24": 575.2519,
+ "line_level": {
+  "EXT": {
+   "blank_lines": 3,
+   "determinate": 386.530528,
+   "held_hi": 678.605867,
+   "held_lo": 605.437274,
+   "lines": 19
+  },
+  "INT": {
+   "blank_lines": 9,
+   "determinate": 575.2519,
+   "held_hi": 545.4606,
+   "held_lo": 489.481,
+   "lines": 54
+  },
+  "PENDING": {
+   "blank_lines": 7,
+   "determinate": 13.597,
+   "held_hi": 0.0,
+   "held_lo": 0.0,
+   "lines": 39
+  }
+ },
+ "not_applicable_plaster_lines": 13,
+ "pending_reveal_carriers": 40,
+ "pins": {
+  "ext_det": 873.3746,
+  "ext_faces": 109,
+  "int_det": 575.2519,
+  "plaster_lines": 67,
+  "t317_hosts": 60,
+  "tile_lines": 18,
+  "wet_faces": 115
+ },
+ "schema": "T349_SPATTER_BINDING_V1",
+ "scope": "OD-V3B-4 / OD-V3B-5 / OD-V3B-6 / OD-V3B-7 (owner 2026-10-04, Alsenan); URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1 (OD-V3-4)",
+ "substrate_states": {
+  "ESTABLISHED": 2,
+  "HELD": 216
+ },
+ "t317_line_level": {
+  "blank_hosts": 10,
+  "determinate": 913.7202,
+  "held_hi": 1112.6565,
+  "held_lo": 1016.7526
+ }
+}
