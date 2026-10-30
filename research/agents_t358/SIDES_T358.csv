@@ -1,0 +1,5 @@
+side,name,status,nearest_m,on_or_beyond_line_m,within_depth_only_m,on_or_beyond,within,conditional_min_trigger_m,quantity
+S0,lower neighbour (31.37),TRIGGERED,-0.1,15.15,4.2,F10/F:1B1B F11:1B07 F14:1B1A F15:1B2A F:INSERT 1669 F layer S-DIM F:INSERT 166A F layer S-DIM,F3:INSERT 166C F layer S-DIM F5:INSERT 166D F layer S-DIM,3.3,
+S1,upper neighbour (31.37),TRIGGERED,0.0,31.37,11.2,BW-S1:7FE BW-S2:7FE BW-S3:7FE,F2:INSERT 165C F layer S-DIM F2:INSERT 1663 F layer S-DIM F4:INSERT 1665 F layer S-DIM F4:INSERT 1666 F layer S-DIM F5:INSERT 1664 F layer S-DIM,3.6,
+S2,street (15.00),TRIGGERED,-0.1,10.0,0,BW-S1:7FE BW-S2:7FE F:INSERT 1668 F layer S-DIM F:INSERT 1669 F layer S-DIM,,2.3,
+S3,sea view (15.00),TRIGGERED,-0.1,11.85,2.2,BW-S1:7FE BW-S3:7FC BW-S3:7FE F10/F:1B1B F8:1B24 FN:4 LINEs 1100 POOL:7C6,F4:INSERT 1666 F layer S-DIM,3.55,
