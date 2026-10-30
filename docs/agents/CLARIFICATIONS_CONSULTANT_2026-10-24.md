@@ -1,5 +1,9 @@
 # Consolidated designer / consultant RFI package, Alsenan (owner 2026-10-24; DRAFT, NOT TO BE SENT YET)
 
+LEAD 2026-10-30 00:50 (owner 2026-10-29 22:05): this file is now the SOURCE register only; the revalidated, consultant-
+facing questions are in docs/agents/rfi/ (A_PRIORITY_RFI.md, C_UNLOCK_MATRIX.md, D_REMOVED_REVISED.md; B_REMAINING_RFI.md
+next Lead run). Rows here are not edited further. STILL NOT SENT.
+
 OWNER 23:57: do not send. LEAD: verify every row against all drawings, schedules and sections, remove any the sources answer, and split into (1) PRIORITY RFIs that each unlock a complete BOQ line (name the line) and (2) REMAINING unresolved questions; keep each row's drawing reference, missing / conflicting information, affected quantity and the clarification required.
 
 ## 0. LEAD VERIFICATION 2026-10-25 00:15-00:40 UTC (Lead run session_01M9dY6Pw5JtHHF5a4sbrrDw) — STILL NOT TO BE SENT

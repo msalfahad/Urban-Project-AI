@@ -1,18 +1,38 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 20:30 UTC (Lead). Previous version: 2026-10-29 16:30 UTC. The released numbers did not change
+Last update: 2026-10-30 00:50 UTC (Lead). Previous version: 2026-10-29 20:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.24 (not released).
+line among them); released: 0. The candidate under review is still V3.0.24 (not released); nothing entered it tonight.
 
-THE CANDIDATE'S EXPORT NOW WRITES CLEANLY: the 350 released reinforcement lines (8,311 kg) print their own arithmetic
-(bars x length x kg/m) instead of starting with "held", a not-applicable skirting line no longer carries a length, and
-15 finish lines end on their own figure. Not one quantity moved (the checker compared all 3,710 lines). The unexplained
-5.89 m2 on a first-floor porcelain line is fully explained: the net was right, the deduction list was an older one
-(a curved winder clipped as a straight shape, two lower flights' overlap deducted twice). Three freelancer outside-plaster
-rows that seemed to have no face on the drawings are faces already counted, plus a 9.00 m2 strip he counted twice.
-Nothing new waits on you.
+THE CONSULTANT QUESTION LIST IS REVALIDATED (your 22:05 instruction; NOT SENT). Two of the four items that were missing
+are settled from the drawings themselves and dropped (the column level where the two ground-slab levels meet, and the
+pantry doorway strip, which was an engine error: +1.10 m2 floor); the other two (the main stair's winder turn and three
+stair waists, the tower dome and drums) are now written as questions. Result: 36 priority questions (28 structural,
+8 architect), each answerable on its own with the sheet, what is missing, what we ask and which BOQ line it holds;
+together they close 9 whole lines (windows, pool concrete, footings, blinding, ground beams, beams, columns, stairs and
+domes, floor area). The checker re-checks every sheet citation next. The remaining questions (reinforcement, blockwork,
+finishes, the sharmat restraint you asked to add, document control) follow next run; lift-pit depth and lift door heads
+go to the lift supplier list, not the structural consultant.
+
+Since 29 Oct 20:30 (newest first; five checked and merged, one handed in, one sent back):
+- Stair formwork sides: CHECKED AND MERGED. 7 side faces the drawing shows open (well sides, round-stair sides, a landing
+  edge) measured 4.105 m2, the checker's own re-measure agrees within 0.000002 m2; 16 sides beside walls or beams held
+  (the drawings do not say what is built first); stair formwork 32.82 -> 36.93 m2, freelancer has no row.
+- Excavation / backfill / disposal binding: HANDED IN. Missing from both the engine and the freelancer. Every buried
+  element is tied to exactly one concrete or waterproofing line (256 pieces, double count 0). Only lower bounds can be
+  given: footing pits at least 188.0 m3 and pool at least 17.8 m3 at the printed 1.50 m minimum depth; everything else
+  held (founding level, working space, bulking: no drawing value or rule). Four concrete lines below ground found
+  carrying an old or one-sided range (new task).
+- Outdoor court and pool deck lines: SENT BACK for one fix. Court interlock 119.54 m2, north walk 21.02, entrance marble
+  checked by hand and right; the pool deck 7.106 m2 is 8.5 % too large because it runs to the window frame and takes a
+  0.56 m2 recess that belongs to the glazing reveal (deck 6.549 m2).
+- Faces above the pool (freelancer rows 109.89 m2): CHECKED AND MERGED after one rework (a pier corner and a wall return
+  added from the drawing; residual 0).
+- Blockwork table fix, freelancer outside-plaster rows, formwork table fix: CHECKED AND MERGED (no m2 moved; his 9.00 m2
+  double count confirmed by position).
+- Your approvals applied: the slab bar-end split is released to the integration lane (only drawn bar parts count); the
+  mesh strip / sharmat ties task is first for the finishes worker, with your four answers in its row.
 
 Since 29 Oct 16:30 (newest first; five checked and merged, two handed in):
 - Export text fix: CHECKED AND MERGED into the candidate (V3.0.24, passed first time, no quantity change).
@@ -1160,14 +1180,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-29 16:30)
-- Checker: the reveals / sills and roof build-up tables, then the two sent-back tables, then the export text fix.
-- Structural (worker 1): the formwork table fix (held faces blank), then tracing the unexplained 5.89 m2 porcelain.
-- Architecture and finishes (worker 2): the census tool upgrade, then the three freelancer outside-plaster rows with no
-  drawn face.
-- Integration (worker 3): the blockwork table fix, then the export text fix in the candidate, then the outdoor court and
-  pool deck lines, then blockwork, reveals / sills, formwork, roof build-up, ceilings, skirting, waterproofing and outside
-  plaster, one at a time.
+(Lead 2026-10-30 00:50)
+- Checker: the earthworks binding, then the outdoor floors fix when handed in, and a light check of every sheet citation
+  in the priority consultant questions.
+- Structural (worker 1): the four below-ground concrete range findings (after the earthworks check), the soil treatment
+  check, then the site and existing-ground levels the excavation bounds measure from.
+- Architecture and finishes (worker 2): mesh strip / sharmat ties / plaster joint mesh (your answers), then spatter dash,
+  then kitchen / laundry / pantry tile zones.
+- Integration (worker 3): the pool deck fix in the outdoor floors package, then blockwork into the candidate, then the
+  slab bar-end split, reveals, sills, formwork, roof build-up, ceilings, skirting, waterproofing, outside plaster and
+  earthworks, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -1186,8 +1208,10 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision for you today. You answered the curved window (9.87 m2 opening area) at 23:53; it is applied.
-- The designer / consultant list: NOT ready to send yet (your 23:57 instruction). I checked all 30 rows against the
+- No decision for you today. Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.
+- The consultant list (30 Oct 00:50): the priority part is revalidated and complete (36 questions, 9 lines), NOT sent;
+  the checker re-checks the sheet citations, the remaining part follows next run. Older note, superseded: NOT ready to
+  send yet (your 23:57 instruction). I checked all 30 rows against the
   merged, checked work: none is answered by the drawings, so none was removed; two "search still open" notes are now
   closed (the lift tie beam is a designer question, the lift pit depth goes to the lift supplier instead). I split the
   list into 9 priority requests, each unlocking one complete BOQ line (windows, pool concrete, footings, blinding,

@@ -784,3 +784,17 @@ Every hand check must come from printed dimensions or a separate reading (checke
   lane S; register rulings LIFT-01 / TANK-01.
 - Recurring cause 8 (stale map) did not recur in this window (every handoff regenerated the map last). New process gap:
   pilot_metrics.py counts 0 merges in a window with 8 (auditor to fix; Lead edits no dashboard code).
+
+## 2026-10-24 20:15 (lead run; covers 18:15 - 20:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-240 floor area V3.0.14 (Gate B) | WORKED | MERGED d07af773 (Verifier 18:44): 37 changed rows by hand, pantry wet 8.955 own, full suite NEW 0; internal 380.364 vs released 385.634 m2 (-1.37 %), NOT VERIFIED as a whole | T-278 (key map misses 7.8925 m2 typed spaces); T-270 unblocked, first in lane I |
+| T-261 r3 blockwork split | WORKED | MERGED 164b189f (Verifier 18:56): 11 / 11 rising walls own (1F-W13 16.8073, 1F-W17 4.6943, 1F-W18 19.7326, 1F-W24 5.5401 + 1.0577 held) | T-274 promoted TODO; T-279 (walls into the candidate) queued after T-274 + T-270 |
+| T-273 r1 laps + metric ton | PARTIAL | REJECTED narrow 18:59 against owner s.6 (18:38, after the 18:26 hand-in, not a worker fault): boundary tests 12.00 / 12.01 / 22.80 / 22.81 m at 1.2 m, 30 FOUNDATION LAP rows 288.897 kg vs STARTER 40 D on the same chains not reconciled, detailing categories | TODO r2; row was UNCLEAR_STATUS (note before the status word): fixed, first in lane S |
+| T-272 r2 ground-beam links | WORKED | Gate A PASS 19:59: Checker own 7E0+FD#1 19 .. 23, 7D0+FC#2 36 .. 40, ring 35 .. 44 by radial admissibility (his 40 .. 45 withdrawn); count / mass HELD | merge after T-267 r2 (in the Checker run 19:51); lessons row |
+| T-271 r1 ceilings r2 | PARTIAL | REJECTED narrow 19:59: light-well no-ceiling taken as face GF-130 23.237 where the slab plan's S-OPENING is 16.005 m2 (= released engine); bulkhead CB6 1.200 agrees | TODO r2 (files research/agents_t271 + tests/t271_*); lessons row |
+| T-267 r2 stair manifest | handed in (READY 19:38) | manifest +1 AUTHORED entry, full suite NEW 0 | in the Checker run 19:51 (critical dependency, never delayed > 2 runs) |
+| T-276 buried faces r2 | in work (CLAIMED 19:47) | worker 2 | Gate A when READY; feeds T-270 as a later delta |
+| Row stamps | process fault | T-272 READY stamp 20:05 written by 19:35-19:59; worker 3 run-log 19:40 committed 19:36 | lessons row (stamp = `date -u` at writing); watch |
+

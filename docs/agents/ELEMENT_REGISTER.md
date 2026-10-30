@@ -46,6 +46,27 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-30 00:50 (from T-332 r2 / T-346 / T-333 r2 / T-348 r2 / T-352 MERGED; T-343 Gate B REJECTED narrow; T-347 READY; new T-356, T-357)
+
+- BURIED STRUCTURE (T-347, pending its verdict): each buried element's volume is owned ONCE by its concrete / WP line id
+  (256 components; footings / necks / ground beams / straps CONC.*, footing-layer blinding CONC.BLINDING, the 0.07
+  underlay = 5 cm screed WP.FOUNDATION.FOOTING_SCREED (m3) + 2 cm membrane WP.FOUNDATION.FOOTING_MEMBRANE (m2), pool
+  envelope in its 9 components); EARTHWORKS owns only excavation / backfill / disposal and never re-measures a concrete
+  volume (it subtracts the bound displacement). Pool water space = VOID (no line). Lift-pit walls and void: NO LINE yet
+  (named). Conflicts open: SB3-in-F3 range (F-T347-1, T-350), strap blinding (F-T347-2), boundary lower band Q-28
+  (F-T347-3), interior GB depth class (F-T347-4) -> T-356.
+- EXISTING GROUND REFERENCE (new element kind ZONE-SITE, T-357): the level every below-grade quantity measures from;
+  not printed so far (p.1 note 1 gives only a minimum 1.50 m below it); owner trade EARTHWORKS; HELD until printed.
+- STAIR SIDE FORMS (T-352 MERGED b12e10de): owner trade FORMWORK, carried on the STR.CONC.STAIR line set (8 of 11
+  lines), face ids T352-nn; side faces against walls / members HELD (sequence not printed) and NEVER also counted as
+  blockwork or wall-plaster faces; the slab-soffit line never includes a stair soffit (adverse test). V-slot note
+  N-T352-1 at RS-A east (B21).
+- POOL DECK vs GLAZING REVEAL (T-343 verdict): the deck floor face stops at the 0.20 glazed band's court face (ARC 201,
+  printed 657); the SX-02 recess 0.561447 m2 in front of the frame line is OPENINGS (glazing reveal strip, T-127 / T-154,
+  HELD there), never deck, never 0. Deck 6.548911 m2 DRAWING-CONFIRMED, finish HELD.
+- FACES ABOVE THE POOL (T-348 r2 MERGED 623885fd): screen front / back, NW-1 pier corner arc, NW-3 return and the ring
+  faces are FACADE faces once (T-314 consumes them); the round void AT225 has no face of its own (screen + recessed wall).
+
 ### Lead 2026-10-29 20:30 (from T-340 / T-339 / T-344 / T-345 MERGED, T-338 Gate B (V3.0.24); T-333 r2 / T-346 READY; new T-347 .. T-354)
 
 - STAIR FLOOR FACE WITH A RE-NETTING PIECE (1F +5.50 floor face round the two stairs and the void; every villa): the line's

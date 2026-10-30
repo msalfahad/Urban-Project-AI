@@ -42,6 +42,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-30 00:50 (lead run; covers 20:30 - 00:50)
+
+- T-333 r2 blockwork status labels: WORKED (Gate A PASS 20:59; 3 parts 47.3866 m2 -> ASSUMED — OWNER-APPROVED (Q-55 2.20 m door deductions), 156.5697 m2 unchanged; own door widths 0.000 %). Decision: T-279 (blockwork into the candidate) unblocked, after T-343 in lane I.
+- T-346 freelancer exterior rows 65/68/69: WORKED (Gate A PASS 20:59; 93.150 = 79.213 bound + 9.000 his double count by position + 4.937 named; ENGINE_RIGHT on the double count). Decision: none.
+- T-332 r2 formwork FILL: WORKED (Gate A PASS 22:02; 201 HELD rows blank, unbounded blank; stair row 1.440 .. 1.562 understated -> blank, ENGINE_WRONG corrected). Decision: none; T-199 consumes it (lo/hi exclude HELD_FROM faces: Checker note carried).
+- T-348 faces above the pool: PARTIAL then WORKED (REJECTED 22:02 D-T348-1 pier corner arc +0.170 m; r2 PASS 23:10, residual 0). Decision: none; T-314 consumes the new faces.
+- T-343 outdoor floor lines (Gate B): PARTIAL (REJECTED 23:05, narrow D-T343-1: deck 7.105836 includes the SX-02 recess 0.561447 m2 that T-127 / T-154 give to the glazing reveal strip; deck by the band face 6.548911 m2; 7 of 8 lines agree by hand). Decision: rework r2 with the exact fault (deck input + closure text + rule + test only); status set to TODO first in lane I (status-word lesson); lessons row added (Checker's).
+- T-352 stair formwork side faces: WORKED (Gate A PASS 00:05; 7 / 7 valued faces agree within 2e-6 m2; 16 HELD 0 .. area). Decision: T-199 ACCEPTANCE ADDED (FILL addendum by face id, N-T352-1 V-slot note, F-T352-1 / -2); lessons row added.
+- T-347 earthworks binding: READY 23:56 (CHECKER-RUNS, first in queue). Decision ahead of the verdict: F-T347-1 (SB3 held range) -> T-350 acceptance; F-T347-2 / -3 / -4 -> NEW T-356 (lane S investigation); existing-ground reference + site clearance -> NEW T-357.
+- Owner decisions applied: T-318 BLOCKED-OWNER -> TODO (option B, lane I after T-279); T-355 first in lane A with the owner's four answers; RFI package revalidated (rfi/A_PRIORITY_RFI.md, C_UNLOCK_MATRIX.md, D_REMOVED_REVISED.md; B next run).
+- Recurring: none new; every run since 20:30 closed with a final line; worker 3 took a lane S row (T-347) correctly under the throughput rule while T-343 was not yet rejected.
+
 ## 2026-10-29 20:30 (lead run; covers 16:30 - 20:30)
 
 - T-340 reveals / sills / thresholds FILL: WORKED (Gate A PASS 16:58; W02 head 6.331578 x 0.080 = 0.506526 vs 0.5064 own (0.025 %), D-1F-03 / D-1F-04 thresholds 0.000 %; D-GF-10 0.797 width proposal NOT ADOPTED: the wall line overruns the 0.800 frame by 2.961 mm). Decision: none; T-326 / T-327 consume it in lane I order.
@@ -259,16 +271,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-270 WP foundation into V3.0.15 | handed in (READY 21:58, Gate B) | 3,680 lines byte-identical + 19 added; 11 held lines BLANK | Gate B first; Lead challenge: the 35.404 m2 buried sub-line contains faces T-276 r1 showed are not earth faces |
 | T-277 beam width census | handed in (READY 21:59, Gate A) | 137 runs: 105 AGREE / 7 CONFLICT = D-02 + D-27 exactly; CONC.BEAM drawn 5.4421 vs schedule 5.7665 m3 (-0.3244) | Gate A next; worker full suite not run to the end (10-min shell): Checker runs the level's suite |
 | Checker T-180 slot 1F-W00 | finding | own net 12.935 vs register 12.863 m2: W18 deducted over 0.0327 m already inside column 2FD8 (0.0706 m2 removed twice); length ruled 6.571 m | added to T-274 acceptance (part-in-masonry deduction + register-wide jamb scan); T-279 carries 1F-W00 only after it |
-
-## 2026-10-24 20:15 (lead run; covers 18:15 - 20:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-240 floor area V3.0.14 (Gate B) | WORKED | MERGED d07af773 (Verifier 18:44): 37 changed rows by hand, pantry wet 8.955 own, full suite NEW 0; internal 380.364 vs released 385.634 m2 (-1.37 %), NOT VERIFIED as a whole | T-278 (key map misses 7.8925 m2 typed spaces); T-270 unblocked, first in lane I |
-| T-261 r3 blockwork split | WORKED | MERGED 164b189f (Verifier 18:56): 11 / 11 rising walls own (1F-W13 16.8073, 1F-W17 4.6943, 1F-W18 19.7326, 1F-W24 5.5401 + 1.0577 held) | T-274 promoted TODO; T-279 (walls into the candidate) queued after T-274 + T-270 |
-| T-273 r1 laps + metric ton | PARTIAL | REJECTED narrow 18:59 against owner s.6 (18:38, after the 18:26 hand-in, not a worker fault): boundary tests 12.00 / 12.01 / 22.80 / 22.81 m at 1.2 m, 30 FOUNDATION LAP rows 288.897 kg vs STARTER 40 D on the same chains not reconciled, detailing categories | TODO r2; row was UNCLEAR_STATUS (note before the status word): fixed, first in lane S |
-| T-272 r2 ground-beam links | WORKED | Gate A PASS 19:59: Checker own 7E0+FD#1 19 .. 23, 7D0+FC#2 36 .. 40, ring 35 .. 44 by radial admissibility (his 40 .. 45 withdrawn); count / mass HELD | merge after T-267 r2 (in the Checker run 19:51); lessons row |
-| T-271 r1 ceilings r2 | PARTIAL | REJECTED narrow 19:59: light-well no-ceiling taken as face GF-130 23.237 where the slab plan's S-OPENING is 16.005 m2 (= released engine); bulkhead CB6 1.200 agrees | TODO r2 (files research/agents_t271 + tests/t271_*); lessons row |
-| T-267 r2 stair manifest | handed in (READY 19:38) | manifest +1 AUTHORED entry, full suite NEW 0 | in the Checker run 19:51 (critical dependency, never delayed > 2 runs) |
-| T-276 buried faces r2 | in work (CLAIMED 19:47) | worker 2 | Gate A when READY; feeds T-270 as a later delta |
-| Row stamps | process fault | T-272 READY stamp 20:05 written by 19:35-19:59; worker 3 run-log 19:40 committed 19:36 | lessons row (stamp = `date -u` at writing); watch |
