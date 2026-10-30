@@ -253,3 +253,110 @@ adds them in its citation run).
 - Ground water / dewatering (ST p.8 notes 14 / 15, p.9 note 4): an internal investigation first (Lead 2026-10-30); an RFI
   only if that investigation shows a conditional scope the drawings cannot settle.
 - Every item marked "(asked in A)" above.
+
+---
+
+## Checker citation verdicts (Verifier 2026-10-30 ~05:00 UTC, run session_01E6cPnazw4bAh9U4qdKdMqL; light run, queue item 1)
+
+Sources read this run (Drive "Alsenan chalet project", read-only, decoded into .work/private, sha recorded):
+'ST7757.pdf' (16 pages, no text layer: rendered at 100 / 200 dpi, read by eye, plus OCR of every page's stamps and
+titles; sha256 74da1523..), 'ST7757 dxf.dxf' (texts by handle / position; sha256 9f9d1179..), 'p7757_arch_sheet03.pdf'
+(GROUND FLOOR PLAN 1:100), 'p7757_arch_sheet04.pdf' (1st.FLOOR PLAN 1:100), 'p7757_arch_sheet10.pdf' (SECTION A-A
+1:100), 'Alsenan_Architectural_P7757_Pages_01-02.pdf' (p.1 / p.2 = GF, 1F and 2F FLOOR AREA PLANS 1:200 with the area
+tables) and 'Alsenan_Architectural_P7757_Pages_11-12.pdf' (p.11 SECTION B-B 1:100, p.12 FENCE PLAN / FENCE ELEVATION /
+SECTION). Not opened this run: Pages_05-06 (2F plan p.5, SE elevation p.6), Pages_07-08, sheet09, sanitary-7757.pdf.
+ST page map as in A (p.1 columns / axes ... p.16 stair details). No quantity, status or V2.9 cell changed by these
+verdicts.
+
+- RFI-B-S09: CITATION OK: p.8 note 9 = development length 70 d tension / 40 d compression, written for 'اشاير' (starter
+  bars), no zone; p.9 = 'Schedule of Footings' + 'Schedule of Columns'; p.10 SB2 row 100 x 50, 10ø16 bottom, 20ø18 top,
+  10ø8/m (DXF attribs 2ABB .. 2AC3, y -5678); the second SB2 insert (DXF 1FBC .. 1FC4, y -9548: 80 x 50, 10ø18, 10ø18,
+  10ø8) lies below the printed table and is not on the print. Wording OK.
+- RFI-B-S10: CORRECTED: the tank-slab reinforcement is printed on ST p.6 (2F roof slab: 'WATER TANK PLACE', panels
+  '7ø14/m (T&B)' and '6ø12/m (T&B)', slab T18), NOT on a p.7 tank detail (p.7 holds only DETAIL OF SWIMMING POOL and
+  DETAIL OF DOME). Note 2 (top bars 5ø10/m over beams, one third of the span, both directions) is printed in the notes
+  box of p.4, p.5 AND p.6, so the note-2 vs (T&B) conflict sits on p.6 itself. p.15 TYP. SLAB ON BEAMS DETAIL: '.30 L1 OR
+  .30 L2 WHICHEVER LARGER' and '.25 L1': OK. The 13 bar-less panels and the GF-126 zone were not recounted.
+- RFI-B-S11: CITATION OK: p.7 DETAIL OF SWIMMING POOL draws a deep zone, a slope and a shallow zone (7ø14/m, 6ø12/m,
+  ø12/20cm, ø10/20cm). Note for the sent text: 'R1 / R2' are our zone names, not printed: describe them as the deep
+  floor and the sloped / shallow floor.
+- RFI-B-S12: WRONG (stale): the bar count IS printed. Planted-column tags on the slab plans: ST p.4 'P.C 20x70 / 10ø16'
+  (on B27) and 'P.C 20x50 / 8ø16' (on B26); ST p.5 'P.C 20x50 / 8ø16' (on B19); same finding as merged T-220
+  (DXF 543 / 547 / 77D; D-46 narrowed to links and bar lengths). p.15 has no 'planted-column detail' as such: it has TYP.
+  DETAIL OF TWISTED COLUMN (x2), BEAM IN CASEMENT WITH COLUMN (x2) and BEAM CARRYING PLANTED COL. DETAIL (column bars
+  cranked into the beam, a 100 cm dimension, no link spacing). Rewrite: ask only the links (size, spacing) and the bar
+  ends / laps of the three planted columns; delete 'no schedule row, no bar count'. Lead: the internal impact line
+  ('column steel unquantified') should cite T-220 (main bars printed, steel HELD on links and lengths).
+- RFI-B-S19: CITATION OK: p.10 remarks verified row by row: 2ø12/30cm on B7 .. B15, B17, B18, B20 .. B25, B28, B29;
+  2ø14/20cm on B19; 2ø16/20cm on B16, B26, B27 (exact). MIDDLE REINT. 2ø12/30cm: p.11 CB1, CB6, CB7, CB12; p.12 CB3, CB8,
+  CB11 (exact; CB2, CB4, CB5, CB9, CB10, CB13 blank). p.8 note 21 = 2ø12 / 3ø12 / 4ø12 side bars in beams deeper than
+  60 cm according to the beam width, unless stated otherwise: OK.
+- RFI-B-S20: CITATION OK, one addition: the nested-link symbol on p.10 is on B17, B19, B20 .. B26 (B18 none: exact);
+  the SB1 and SB3 rows also print a two-link symbol and the SB2 row a three-link symbol (no size): add 'SB1 / SB2 / SB3'
+  to the question or route them under S09 (SB2 is already there).
+- RFI-B-S21: CITATION OK: p.8 note 9 is the starter-bar ('اشاير') development note; p.11 / p.12 typical span details
+  print 0.22 Ln / 0.3 Ln2 support bars, '7.5cm' first link and 0.15 L; no hook, bend or end detail for beam bars or links
+  on p.8 .. p.16.
+- RFI-B-S22: CORRECTED: (a) stair beam: OK (p.16 TYPICAL DETAIL OF STAIR BEAM, cranked, 'AS PER SCH.', no crank
+  dimension; 'B3 (With Stair)' printed twice on p.4 and once on p.5). (b) planted-column beams: the detail governs
+  THREE beams, B27 and B26 (ST p.4) AND B19 (ST p.5, P.C 20x50 8ø16), not only B26 / B27. On BEAM CARRYING PLANTED COL.
+  DETAIL the label is '4ø16' (the word 'EXTRA' is printed only on the twisted-column details, '4ø16 EXTRA'), and the bar
+  extent IS drawn symbolically: a 'DEPTH' dimension beyond the column face (each side, by symmetry). Rewrite: ask the
+  designer to confirm the 4ø16 length = column width + 2 x beam depth (as drawn) and its end anchorage, not 'length not
+  dimensioned'.
+- RFI-B-S13: CORRECTED: the sunken panels of the 1F floor are on ST p.4 (GF ROOF SLAB: 5 hatched 'Sunken slab' panels:
+  B1 panel and B4 panel at the north, the B4 / B28 panel at the east, and the panel south of the D.C split in two by
+  B27), and the 2F floor panel on ST p.5 (1F ROOF SLAB: 1 panel between the two B2 west of B3 (With Stair)); ST p.6
+  (2F roof) draws none. 'ST p.5 / p.6' -> 'ST p.4 / p.5'. No drop printed: OK. Panel areas not re-measured.
+- RFI-B-S14: CITATION OK: p.8 note 19 = tie beams joining the lift columns at 3.00 m where the storey height exceeds
+  4.30 m, around the lift shaft; p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (without basement) draws no tie-beam section.
+- RFI-B-S16: CITATION OK: p.1 notes box ('ملاحظات'), second item: neighbour-side external tie beams, black block above
+  and below, built from foundation level; no upper limit printed.
+- RFI-B-S17: CITATION OK, sheet number to add: p.8 note 20 (walls containing columns are built at the column
+  thickness); GF = arch sheet 03, 1F = sheet 04 (titles confirmed); the 2F plan is Pages_05-06 p.5 (sheet 05; identity
+  from merged T-220 / T-194, not opened this run). Wall thicknesses not re-measured.
+- RFI-B-SH: CITATION OK for the pages read: no wall-to-column tie, restraint or connection detail on ST p.1, p.4 .. p.8,
+  p.10 .. p.12, p.14 .. p.16 (viewed) or in the OCR of p.2 / p.3 / p.9 / p.13 (foundation, ground beams, schedules,
+  footing / ground-beam / lintel details). Wording (structural requirement only) OK.
+- RFI-B-S18: CORRECTED: title-block DATE box: p.1 .. p.7 'May 06, 2025'; p.9, p.10, p.13, p.14, p.15, p.16 'May 06,
+  2026'; p.11 and p.12 have NO title block (schedule frames 'Ref. S-2' / 'S-3' only); p.8 (RECOMMENDATIONS) has a header
+  block (design / drawn / checked by, client) WITHOUT a date field: add p.8 to the undated group. Every one of the 16
+  pages also carries the same plot stamp '... ST7757.dwg / T7757.dwg ... May 06, 2026 - 12:04pm A008-PC' (p.1 .. p.7 from
+  ST7757.dwg, p.8 .. p.16 from T7757.dwg: two source files), and p.1 .. p.7 a 'May 06, 2026' print stamp top left. Ask
+  also which of the two source drawings (ST7757 / T7757) is the issue of record.
+- RFI-B-A01: CITATION OK: sheet 10 (A-A) and sheet 11 (B-B) print levels and storey chains only (±0.00, +0.15, +0.30,
+  +1.00, +4.30, +5.50, +9.70, +13.90; 100 / 450 / 420 / 50); no ceiling line, no RCP among the 12 sheets.
+- RFI-B-A02: CORRECTED: sections A-A (sheet 10) and B-B (sheet 11) print NO sill or head dimension and no opening tag
+  (openings drawn only); the 9 sills / heads were read from the elevations (sheets 06 .. 09, per merged T-082 / T-083 /
+  T-201), which this run did not reopen: cite 'elevations sheets 06 .. 09' as the source and the sections only as
+  drawn outlines. The main-entrance 2.00 width is on sheet 03 (double leaf, chain 80 / 200 / 90); its 2.50 height is not
+  on the plan (T-175 records it PRINTED; sheet not re-read).
+- RFI-B-A03: PARTIAL: sheet 03 = GROUND FLOOR PLAN confirmed; '452' printed on the sea-view chain under the pool with
+  the '45' return (SX-01 width); main door double leaf 2.00 on sheet 03; the '2.50' height is not on sheet 03 (see A02).
+  Renders not checked.
+- RFI-B-A04: PARTIAL: structural side OK (B8 20 x 75 on ST p.4 at the east wing; CB12 25 x 75 on ST p.5; GF roof slab
+  top +5.50 on sections, so a 0.75 m beam soffit <= +4.75); the architectural sheets printing W03 head +5.30 and W17
+  crown +9.20 were not reopened: Lead, name them (elevations 06 .. 09) before sending.
+- RFI-B-A05: CITATION OK for sheets 10 / 11 (roof levels +4.30, +9.70, +13.90; slabs drawn without any build-up layer);
+  no roof section or build-up detail on the sheets read; sanitary sheet not reopened.
+- RFI-B-A07: CITATION OK (ST p.5 dome rings 'SEE DETAIL', ST p.7 DETAIL OF DOME; sheet 11 B-B draws the two domes
+  over the +9.70 roof); no ceiling or glazing under them is drawn.
+- RFI-B-A08: CITATION OK for the sheets read (03, 04, 10, 11, 12: no soffit finish or insulation drawn).
+- RFI-B-A09: CITATION OK for sheet identity (sheet 03; '+0.15' outdoor marks printed); the six level changes and 7.30 m
+  were not recounted.
+- RFI-B-A10: CITATION OK for sheet identity (sheet 03 GF, sheet 04 1F); the opening ids are ours (not printed):
+  identify D-GF-06 and P-1F-01 by position and size in the sent text, as for A08 in A.
+- RFI-B-A11: CITATION OK: 'the fence drawing' = sheet 12 (FENCE PLAN / FENCE ELEVATION / SECTION, street front only);
+  it does not draw the sea-side element.
+- RFI-B-A12: CITATION OK with one precision: the set does contain p.1 / p.2 FLOOR AREA PLANS 1:200 (plot outline,
+  setbacks, area tables), which are not a site plan (no levels, paving, fence or services); the fence elevation on
+  sheet 12 prints small squares (6 visible); the SE elevation squares not reopened.
+- RFI-B-A13: CITATION OK (no finishes schedule or specification among the 12 sheets).
+- L-1: CITATION OK: ST p.14 'As Per Lift Manufactures recommendations' on the pit depth dimension.
+- L-2, C-1: no drawing citation to check (C-1 matches the merged T-357 verdict: +-0.00 only at the plot corners).
+
+Totals: 26 questions: CITATION OK 18 (S09, S11, S14, S16, S17, SH, S19, S20 with an addition, S21, A01, A05, A07, A08,
+A09, A10, A11, A12, A13), CORRECTED 5 (S10 tank sheet p.6, S13 sheets p.4 / p.5, S18 p.8 undated + plot stamps, S22 third
+beam B19 + 'DEPTH' extent, A02 sections print no sill / head), WRONG 1 (S12: bar counts printed, stale since T-220),
+PARTIAL 2 (A03, A04: elevation sheets not reopened); L-1 OK; 0 NOT CHECKED. Lead: apply the five corrections and the S12
+rewrite before the owner's review; nothing sent.
