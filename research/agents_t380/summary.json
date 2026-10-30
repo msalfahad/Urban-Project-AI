@@ -1,0 +1,148 @@
+{
+ "task": "T-380",
+ "family": "B12-02",
+ "status_basis": "DRAWING-CONFIRMED (not verified, not released)",
+ "counted_pcs": {
+  "MANHOLE": 1,
+  "GROUND_CLEAN_OUT": 2,
+  "CLEAN_OUT": 1,
+  "SOIL_STACK": 4,
+  "RAIN_WATER_PIPE": 5
+ },
+ "held": {
+  "RODDING_EYE": "HELD",
+  "NON_RETURN_VALVE": "HELD",
+  "AREA_DRAIN": "HELD",
+  "SUMP_PUMP": "HELD",
+  "WATER_TANK": "HELD",
+  "WATER_HEATER": "HELD",
+  "SUPPLY_POINT": "HELD"
+ },
+ "stacks": [
+  [
+   "RWP-NE/2F",
+   "RWP-NE/1F",
+   "RWP-NE/GF"
+  ],
+  [
+   "RWP-SE2/2F",
+   "RWP-SE2/1F"
+  ],
+  [
+   "RWP-SW2/2F",
+   "RWP-SW2/1F"
+  ],
+  [
+   "SS-A/2F",
+   "SS-A/1F",
+   "SS-A/GF"
+  ],
+  [
+   "RWP-ANX/1F",
+   "RWP-ANX/GF"
+  ],
+  [
+   "RWP-TER/1F",
+   "RWP-TER/GF"
+  ],
+  [
+   "SS-B/1F",
+   "SS-B/GF"
+  ],
+  [
+   "SS-C/1F",
+   "SS-C/GF"
+  ],
+  [
+   "SS-D/1F",
+   "SS-D/GF"
+  ]
+ ],
+ "one_sided_links": [
+  "RWP-TER/1F -> RWP-TER/GF: link printed on one side only (F/A below); the other tag is not printed",
+  "SS-B/1F -> SS-B/GF: link printed on one side only (T/B above); the other tag is not printed"
+ ],
+ "runs": [
+  {
+   "id": "RUN-MAIN",
+   "kind": "DRAIN_MAIN",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "6in",
+   "slope": "1%"
+  },
+  {
+   "id": "RUN-GF-SOIL",
+   "kind": "SOIL_BRANCH",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "not printed",
+   "slope": "-"
+  },
+  {
+   "id": "RUN-WASTE",
+   "kind": "WASTE_BRANCH",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "not printed",
+   "slope": "-"
+  },
+  {
+   "id": "RUN-1F-BTTS",
+   "kind": "SUSPENDED_DRAIN",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "4in",
+   "slope": "1%"
+  },
+  {
+   "id": "RUN-1F-SOIL",
+   "kind": "SOIL_BRANCH",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "not printed",
+   "slope": "-"
+  },
+  {
+   "id": "RUN-STACKS",
+   "kind": "STACK_VERTICAL",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "4in",
+   "slope": "-"
+  },
+  {
+   "id": "RUN-RWP",
+   "kind": "RWP_VERTICAL",
+   "status": "SCHEMATIC_ONLY",
+   "diameter": "4in",
+   "slope": "-"
+  },
+  {
+   "id": "RUN-SUPPLY",
+   "kind": "WATER_SUPPLY",
+   "status": "NOT_PRINTED",
+   "diameter": "not printed",
+   "slope": "-"
+  }
+ ],
+ "measurable_runs": 0,
+ "run_groups": 8,
+ "family_proposal": {
+  "capability": "BLOCKED_BY_SOURCE (lm, unchanged)",
+  "new_count_scope": "NOT_IMPLEMENTED (pcs: MH 1, GCO 2, CO 1, SS 4, RWP 5)"
+ },
+ "freelancer": {
+  "pipe_length": "none (lump sum): NOT COMPARABLE",
+  "shower": {
+   "freelancer": 11,
+   "drawn": 6,
+   "diff": -5,
+   "verdict": "UNRESOLVED"
+  },
+  "pit_covers": {
+   "freelancer": 2,
+   "drawn_MH": 1,
+   "verdict": "UNRESOLVED"
+  },
+  "water_tanks": {
+   "freelancer": 2,
+   "drawn": "NOT_PRINTED as a count (one WATER TANK PLACE panel on ST p.6, merged T-221 s.5)",
+   "verdict": "UNRESOLVED"
+  }
+ }
+}
