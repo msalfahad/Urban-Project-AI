@@ -1,0 +1,4 @@
+room,code,engine_room,own_tiled_m,t312_tiled_m,d_tiled_m,own_open_m,t312_open_m,own_net_m2,line_net_m2,d_net_m2,wall_tile_line,t312_line,line_agrees,b4_02_new_faces,b4_02_overlap_m2,backing_line,backing_faces_t329,status,held_item
+GF-06,KITCHEN,GF-RA3AD49,14.5000,14.5000,0.0000,0.0000,0.0000,,,,L-c330b8dc47261d5ada7e,L-c330b8dc47261d5ada7e,YES,0,0.0000,L-595181aa140e7efb2ac7,10,HELD,"annex owner height not established (G2; Q-54 B HOLD, D-39): owner 3.15 information only"
+1F-07,LAUNDRY,1F-R26FA0D,16.9400,16.9400,0.0000,0.0000,0.0000,52.5290,52.5290,0.0000,L-b2077eee5a71a975bd74,L-b2077eee5a71a975bd74,YES,0,0.0000,L-2948639faa08fa1cff81,11,ASSUMED — OWNER-APPROVED,
+GF-07,PANTRY,GF-RC06FED,10.5000,10.4910,0.0090,4.5000,4.4900,32.3750,32.3422,0.0328,L-f5c5a1a9c9ee2b644cb5,NO_LINE,ADDED BY T-315 r2 (T-312 NO_LINE; MERGED b0041dd2),0,0.0000,L-721a0f1441436193978c,7,ASSUMED — OWNER-APPROVED,

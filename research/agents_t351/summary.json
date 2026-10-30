@@ -1,0 +1,24 @@
+{
+ "b4_02_new_faces": 0,
+ "b4_02_overlap_m2": 0.0,
+ "bound_to_wall_tile": {
+  "1F-07": "L-b2077eee5a71a975bd74",
+  "GF-06": "L-c330b8dc47261d5ada7e",
+  "GF-07": "L-f5c5a1a9c9ee2b644cb5"
+ },
+ "drawing_derived": "HELD on every room (no printed band); host backs GF-06 5.150 m, 1F-07 0.000 m, GF-07 5.916 m",
+ "faces": 24,
+ "family": "B4-02 kitchen / laundry / pantry tiled zones",
+ "line_net_m2": {
+  "1F-07": "52.5290",
+  "GF-06": "HELD",
+  "GF-07": "32.3422"
+ },
+ "owner_method_net_m2": {
+  "1F-07": "52.5290",
+  "GF-06": "HELD",
+  "GF-07": "32.3750"
+ },
+ "rooms": 3,
+ "task": "T-351"
+}
