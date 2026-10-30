@@ -240,6 +240,10 @@ OTHER_REBAR_AWARE = (
     # x kg/m = kg from the line's own record, kg/m through rebar_unit_mass, the product only CHECKED against the line's
     # net, never written as a quantity); it changes no reinforcement quantity, state or range and applies no ratio
     "engine/source/arch_v3024.py",
+    # T-318: the V3.0.27 extension re-books the suspended-slab DEVELOPMENT / TOP STR.REBAR lines from checker-merged
+    # support-class ledgers (T-307, T-316): states, ranges and blanks only, each figure read from the merged ledger
+    # (no unit mass, no length, no ratio of its own); legs / undrawn ends BLANK, never 0
+    "engine/source/arch_v3027.py",
     # T-140: the coverage census V2 names STR.REBAR / reinforcement only to report which families' steel is missing
     # (MISSING_DATA, as census V1); it writes no reinforcement quantity and applies no ratio
     "engine/source/coverage_census_v2.py",
