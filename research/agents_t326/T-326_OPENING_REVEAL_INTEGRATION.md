@@ -27,8 +27,10 @@ the ledger, D-GF-01 / D-GF-07 a class bound); NO line for any window jamb or hea
 Rule **R-T326-1** (engine/source/arch_v3028.py, every villa): a reveal face is booked in ONE line; a blank reveal-strip
 line is filled with the external sill / threshold surface only (the frame bed is not a finish surface); a door bound held
 for a pending height class is narrowed to the printed height when the drawing prints it; a face no line carries is
-added once per opening / side / item (valued faces summed in one line, held / unresolved faces in one BLANK line naming
-each face, never 0); a face already carried (the 22 FIN.PLASTER doors, a door's floor face in its threshold / closure
+added once per opening / side / face group (valued faces summed in one line, held / unresolved faces in one BLANK line
+naming each face, never 0) under a code the family registry already names (windows: ARCH.WINDOW_REVEAL = B4-08 'Reveals
+and returns', sill and jambs / head in separate lines; through the wall: FIN.PLASTER '<kind> jambs and head' = B4-03,
+as the 22 door lines; no new item code); a face already carried (the 22 FIN.PLASTER doors, a door's floor face in its threshold / closure
 line) is refused a second carrier; every other line byte-identical.
 
 ## 2. BOQ lines (V3.0.27 -> V3.0.28), m2
@@ -38,13 +40,13 @@ line) is refused a second carrier; every other line byte-identical.
 | ARCH.WINDOW_REVEAL, 26 lines FILLED | BLOCKED_RFI blank | **2.9294 m2** MEASURED: 22 raised outside sills 2.5214 + 4 floor-level outside thresholds W15 / W16 / W25 / W27 0.4080 | DRAWING-CONFIRMED (T-313 = T-325); material UNKNOWN (no spec printed), W15 / W16 = the terrace finish continued |
 | ARCH.WINDOW_REVEAL W17 | BLOCKED_RFI | unchanged (curved, UNRESOLVED) | UNKNOWN |
 | ARCH.WINDOW_REVEAL W18 sill (ADDED) | no line | **0.040 m2** MEASURED | DRAWING-CONFIRMED |
-| ARCH.REVEAL window outside jambs + head (27 ADDED) | no line | **9.6670 m2** MEASURED (jambs 6.6976 + heads 2.9694) | DRAWING-CONFIRMED; finish candidate URBAN-REVEAL-FINISH-METHOD v1 (not DC) |
+| ARCH.WINDOW_REVEAL 'window reveal jambs and head (outside)' (27 ADDED) | no line | **9.6670 m2** MEASURED (jambs 6.6976 + heads 2.9694) | DRAWING-CONFIRMED; finish candidate URBAN-REVEAL-FINISH-METHOD v1 (not DC) |
 | FIN.PLASTER 'door jambs and head' D-GF-07 (NARROWED) | BOUNDED 1.28 .. 1.40 | **1.400 m2** PROVISIONAL (h 2.50 printed: 2 x 0.20 x 2.50 + 0.20 x 2.00) | DRAWING-CONFIRMED height; plastered extent PROVISIONAL (frame detail) |
 | FIN.PLASTER 'door jambs and head' D-GF-02 / -10 / -14, D-1F-03 / -04 (5 ADDED) | no line | **3.930 m2** PROVISIONAL (D-1F-03 0.810 = 2 x 0.15 x 2.20 + 0.15 x 1.00; the others 0.780) | ASSUMED — OWNER-APPROVED (Q-55 C door height 2.20) + head DC |
-| BLANK held lines (10 ADDED) | no line | blank by name: W02 outside jambs (height HELD, D-53); W03 room side jambs / head / floor strip and outside jambs / head / threshold (curved glazing); W17 room side and outside jambs / head (curved wall); gate D-GF-15 (width / height not established); A-GF-01 (D-45; candidate jambs 0.660 + head 0.1836 not booked); A-1F-01 (not drawn) | HELD / UNKNOWN |
+| BLANK held lines (10 ADDED) | no line | blank by name: ARCH.WINDOW_REVEAL W02 outside jambs (height HELD, D-53), W03 room side jambs / head and floor strip, outside jambs / head and threshold (curved glazing), W17 room side and outside jambs / head (curved wall); FIN.PLASTER 'gate jambs and head' D-GF-15 (width / height not established; finish of a boundary gate reveal not established), 'arch jambs and head' A-GF-01 (D-45; candidate jambs 0.660 + head 0.1836 not booked) and A-1F-01 (not drawn) | HELD / UNKNOWN |
 
-Totals (code totals): ARCH.WINDOW_REVEAL valued 0 -> 2.9694 m2 (27 -> 3 blank lines); ARCH.REVEAL new 9.667 m2 on 27
-valued + 8 blank lines; FIN.PLASTER valued 575.2519 -> 580.5819 m2 (+3.930 added + 1.400 narrowed), bound 489.481 ..
+Totals (code totals): ARCH.WINDOW_REVEAL (B4-08) valued 0 -> 12.6364 m2 = sills / thresholds 2.9694 + jambs / heads
+9.6670 (27 blank lines -> 55 valued + 8 blank; the physical element tells sill from jambs / head); FIN.PLASTER valued 575.2519 -> 580.5819 m2 (+3.930 added + 1.400 narrowed), bound 489.481 ..
 545.4606 -> 488.201 .. 544.0606 (the D-GF-07 bound leaves). Net new physical scope: 13.637 m2 (= the T-313 r2 restated
 missing scope) + 2.9294 m2 now valued in the formerly blank strip lines; D-GF-07 +0.120 / 0.000 against its bound.
 
@@ -59,7 +61,7 @@ line before / after / faces / evidence: V3_0_28_INTEGRATION_LEDGER.csv (both in 
 |---|---|---|
 | Window reveal | UP-REVEAL-001: 2 x depth x height + depth x width where a reveal exists; the sill its own item | room side NONE (frame flush, drawn); outside 0.080 / 0.100 m x T-237 sizes; the two agree (no room-side reveal under either) |
 | Door reveal | UP-FIN-PLASTER-001: 2 x t x h + t x w through the wall (frame detail decides the plastered extent: PROVISIONAL) | t T-150, w T-237, h printed (D-GF-07 2.50) or Q-55 C 2.20 (ASSUMED — OWNER-APPROVED) |
-| Finish | URBAN-REVEAL-FINISH-METHOD v1 candidate (default plaster; WIN-REVEAL owner decision queued) | area only; finish not drawing-confirmed; ARCH.REVEAL 'finish to be confirmed' |
+| Finish | URBAN-REVEAL-FINISH-METHOD v1 candidate (default plaster; WIN-REVEAL owner decision queued) | area only; finish not drawing-confirmed; the jambs / head lines' item text says 'finish to be confirmed' |
 
 ## 4. Against the freelancer (not proof)
 
@@ -93,7 +95,10 @@ now added); the strip lines' w x 0.20 basis ENGINE_WRONG (now the outside sill o
 - Pool court: the OD-07 deck line names an 'SX-02 reveal strip 0.561577 m2' excluded from the deck: the curved glazed
   band's outside floor strip (W03 outside threshold here, BLANK): when W03 is resolved, that strip is its candidate figure,
   once.
-- Totals moved only on ARCH.WINDOW_REVEAL, ARCH.REVEAL and FIN.PLASTER m2 (asserted); every other item byte-identical.
+- Totals moved only on ARCH.WINDOW_REVEAL and FIN.PLASTER m2 (asserted); every other item byte-identical. No new item
+  code: the first design booked the jambs / heads under a new code ARCH.REVEAL, which the L4 suite refused
+  (tests/t130_family_master: every written code belongs to one family; BOQ_FAMILY_MASTER 1.1.0 is frozen), so they sit in
+  B4-08's own code as the registry intends; a consumer separating sills from jambs uses the physical element.
 
 ## 7. Validation
 
@@ -101,10 +106,13 @@ now added); the strip lines' w x 0.20 basis ENGINE_WRONG (now the outside sill o
   dxf.dxf' `9f9d1179`), decoded into the private folder only; fresh T-167 base run, then the full CLI run
   `research/agents_t326/v3028_run.py` (`tools/urban_boq_m9.py arch --method ARCH_TAKEOFF_V3.0.28 --v3028-inputs`):
   **V3_0_26 json 8959989c and V3_0_27 json f7972540 reproduced (= the candidate of record, T-318 Gate B)**; V3_0_28 json
-  dd0ad4b2 / csv 08cef00c, ledger csv bd280cf5, diff csv 37310a71.
-- tests/t326_reveal_fill: villa V326 by hand (not Alsenan): fill 0.096 (never the 0.240 plan strip), W1 reveal 0.336,
-  W2 sill 0.048 + reveal 0.144, D1 0.795, D3 narrowed 1.400, W3 blank; outside lines byte-identical, D2 not added, order
-  invariance, held text states no result, files / totals; adverse: shared jamb counted twice, a door's floor face in a
+  a410b6fc / csv ded019b0, ledger csv b43c605c, diff csv 3b41c1a9, run json 4586eaee; `v3028_direct.py` on the same
+  V3_0_27 gives the same json byte for byte. Independent re-derivation of the 59 valued lines + the narrowing straight
+  from REVEAL_LEDGER_T313.csv (not through t326_inputs): 0 mismatches, 16.5664 m2.
+- tests/t326_reveal_fill: villa V326 by hand (not Alsenan): fill 0.096 (never the 0.240 plan strip), W1 jambs + head 0.336,
+  W2 sill 0.048 + jambs / head 0.144, D1 0.795, D3 narrowed 1.400, W3 blank; outside lines byte-identical, D2 not added,
+  order invariance, held text states no result, no new item code, files / totals; adverse: sill and jambs mixed in one
+  line, a face carried by a closure line filled again, shared jamb counted twice, a door's floor face in a
   reveal line, held as 0, valued at 0, fill of a non-blank line, fill with jambs, two windows on one line, narrow outside
   the bound, faces not summing, stale line, stale bound, units, missing source, source without checker run, unknown face,
   plaster reveal on a window, applied twice, outside line changed, double booking on finished lines; Alsenan pins
@@ -114,12 +122,12 @@ now added); the strip lines' w x 0.20 basis ENGINE_WRONG (now the outside sill o
 
 ## 8. For the Checker (Gate B always-checked lines)
 
-ARCH.REVEAL is a new item and a new scope: every line is always-checked by rule. Suggested re-derivations: W01 fill
-L-0de10f4db591a2467b82 0.120 (0.100 x 1.200) and reveal L-18697e07350593a76139 0.520 (2 x 0.100 x 2.000 + 0.100 x
-1.200); W15 floor-level threshold L-0e2e7299371efb8338cc 0.124 and reveal L-5e0394fc1ed614745eb7 0.620; W18 sill
-L-c38a451ea827e373ac0d 0.040 and reveal L-dc22c7e4e0de36e98c08 0.3856 (2 x 0.080 x 2.160 + 0.080 x 0.500); W02 head
-L-7d3fc14b52969c328c2e 0.5064 beside its blank jambs L-85014bdb76140dad2ae3; D-1F-03 L-28bdec18307660786387 0.810; D-GF-07
-L-2f94dca4dd5f2ec05822 1.400.
+The jambs / heads are a newly introduced scope: every such line is always-checked by rule. Suggested re-derivations: W01 fill
+L-0de10f4db591a2467b82 0.120 (0.100 x 1.200) and jambs / head L-2d36229b4db5c798dc3b 0.520 (2 x 0.100 x 2.000 + 0.100 x
+1.200); W15 floor-level threshold L-0e2e7299371efb8338cc 0.124 and jambs / head L-bafe179181f10f0a85af 0.620; W18 sill
+L-cd88cb0d77ee82dc7259 0.040 and jambs / head L-0b1e539750a921554749 0.3856 (2 x 0.080 x 2.160 + 0.080 x 0.500); W02
+head L-429605a88ef09abda085 0.5064 beside its blank jambs L-bcc55693d203e384d46e; D-1F-03 L-f0668097e8d872925fdf 0.810;
+D-GF-07 L-2f94dca4dd5f2ec05822 1.400.
 
 ## 9. Lessons-register row (proposed)
 
