@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-30T05:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPnazw4bAh9U4qdKdMqL active since 2026-10-30T04:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-10-30 05:30 UTC | Worker 1 | SUCCESS | T-354 READY (agents/task-T-354 @ 227923bb) | B1-05 soil treatment / anti-termite NOT_IN_DRAWN_SCOPE: 31/31 sheets (ST 16, ARCH 12, SAN 3) + DXF census 2 253 + 276 records searched, no note / spec / owner rule; engine 0 lines, freelancer 0 rows -> no difference; quantity None (never 0); 8 look-alike earth-contact layers bound to their owners; SOIL_TREATMENT_V1 rules R-ST-1..4 + 29 tests (villa K354 PLAN 93.000 / SURFACES 103.450 m2, 15 adverse) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (Drive returned raw files: base64-wrapped in scratchpad, decoded with agent_env.sh decode)
 - 2026-10-30 05:20 UTC | Worker 1 | STARTED | run session_01E6cPnedtPJCw1picM7SRyq | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-30T05:00Z | Worker 3 | STARTED | run session_01E6cPnaYETjmo6G4hqdvMrH | repo-attached routine | task state: none yet | self-check pending
