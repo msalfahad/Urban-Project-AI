@@ -1,0 +1,754 @@
+{
+ "project": "development villa (Drive folder 'Alsenan chalet project')",
+ "task": "T-365",
+ "read_by": "Worker 1, 2026-10-30, run session_01E6cPnav3d5R3ry3qkULcez (own reads; sheet / note numbers, handles, pattern names only; no note text copied)",
+ "sources": {
+  "structural_pdf": "ST7757.pdf sha256 74da1523...",
+  "structural_dxf": "ST7757 dxf.dxf sha256 9f9d1179...",
+  "architectural_dxf": "P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55... (zip 52692e3f...)",
+  "architectural_pdf": "p7757_arch_sheet10.pdf e20fcf2c..., Alsenan_Architectural_P7757_Pages_11-12 9c72175c... (read this run); the other 9 pages by T-091 (merged)",
+  "sanitary_pdf": "sanitary-7757.pdf sha256 11673687...",
+  "specification": "none issued (T-354 Drive listing)"
+ },
+ "dxf_text_census": {
+  "keywords": "EN: joint, J.T, E.J, C.J, I.J, expan, contrac, movement, isolat, seal, mastic, filler / fill board, polysulphide, silicon, bitum, cork, backer, dowel, water stop, gap, separat, flexib, compress, neoprene, styrofoam, polystyrene, foam, saw cut, groove, strip, caulk, PU, polyurethane; AR: separator / separators, expansion, contraction, movement, insulation / barrier, mastic, sealant, silicone, cork, foam, polystyrene, filling, cut / saw, strip, bitumen, gap / void, flexible, neoprene (SHX decoded with engine/source/cad/shx_arabic)",
+  "ST7757 dxf.dxf": {
+   "records": 2253,
+   "by_status": {
+    "LATIN_FONT_UNTOUCHED": 2152,
+    "DECODED": 44,
+    "PARTIAL_DECODE": 17,
+    "UNICODE_FONT_UNTOUCHED": 8,
+    "EMPTY_TEXT": 32
+   },
+   "hits": []
+  },
+  "P7757.dxf": {
+   "records": 276,
+   "by_status": {
+    "LATIN_FONT_UNTOUCHED": 155,
+    "DECODED": 121
+   },
+   "hits": [
+    {
+     "handles": [
+      "1578",
+      "1581",
+      "1598",
+      "15A1",
+      "15B8",
+      "15C1",
+      "15D8",
+      "15E1",
+      "15F8",
+      "1601"
+     ],
+     "layer": "TEXT",
+     "class": "FALSE_POSITIVE",
+     "why": "title-block field 'plot number' (the Arabic word contains the 'cut' root); not a joint"
+    }
+   ]
+  }
+ },
+ "dxf_layers_linetypes": {
+  "ST7757 dxf.dxf": {
+   "layers": 49,
+   "layers_named_joint": 0,
+   "linetypes": [
+    "BYBLOCK",
+    "BYLAYER",
+    "CENTER",
+    "CENTER2",
+    "CONTINUOUS",
+    "HIDDEN"
+   ],
+   "blocks": 420,
+   "blocks_named_joint": 0
+  },
+  "P7757.dxf": {
+   "layers": 19,
+   "layers_named_joint": 0,
+   "linetypes": [
+    "BYBLOCK",
+    "BYLAYER",
+    "CENTER",
+    "CONTINUOUS",
+    "HIDDEN"
+   ],
+   "blocks": 442,
+   "blocks_named_joint": 0
+  }
+ },
+ "hatches": {
+  "ST7757 dxf.dxf": {
+   "modelspace_non_solid": [
+    {
+     "handle": "159",
+     "layer": "2",
+     "pattern": "MUDST"
+    },
+    {
+     "handle": "273",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "275",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "276",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "280",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "287",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "298",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "2B1",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "2B4",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "31A",
+     "layer": "S-COL.HAT",
+     "pattern": "ANSI35"
+    },
+    {
+     "handle": "321",
+     "layer": "S-COL.HAT",
+     "pattern": "ANSI35"
+    },
+    {
+     "handle": "328",
+     "layer": "S-COL.HAT",
+     "pattern": "ANSI35"
+    },
+    {
+     "handle": "385",
+     "layer": "S-COL.HAT",
+     "pattern": "ANSI35"
+    },
+    {
+     "handle": "38C",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "390",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "391",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "54D",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "5BF",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "5E0",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI31"
+    },
+    {
+     "handle": "77A",
+     "layer": "S-COL.HAT",
+     "pattern": "ANSI35"
+    },
+    {
+     "handle": "7BD",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI37"
+    },
+    {
+     "handle": "7C4",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI37"
+    },
+    {
+     "handle": "7FB",
+     "layer": "S-HAT.BAT",
+     "pattern": "AR-B816C"
+    },
+    {
+     "handle": "7FD",
+     "layer": "S-HAT.BAT",
+     "pattern": "AR-B816C"
+    },
+    {
+     "handle": "80F",
+     "layer": "S-HAT.BAT",
+     "pattern": "AR-B816"
+    },
+    {
+     "handle": "10E9",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI37"
+    },
+    {
+     "handle": "1657",
+     "layer": "S-HAT.BAT",
+     "pattern": "ANSI37"
+    },
+    {
+     "handle": "184E",
+     "layer": "S-SECRH.D",
+     "pattern": "DOTS"
+    },
+    {
+     "handle": "1851",
+     "layer": "S-INSU.D",
+     "pattern": "ANSI37"
+    },
+    {
+     "handle": "1855",
+     "layer": "S-PLAH.D",
+     "pattern": "AR-CONC"
+    },
+    {
+     "handle": "1FED",
+     "layer": "S-LINE.SCH",
+     "pattern": "PLAST"
+    },
+    {
+     "handle": "1FEE",
+     "layer": "S-LINE.SCH",
+     "pattern": "PLAST"
+    },
+    {
+     "handle": "270A",
+     "layer": "S-LINE.SCH",
+     "pattern": "PLAST"
+    }
+   ],
+   "in_blocks": {
+    "MUDST": 1,
+    "ANSI31": 14,
+    "ANSI35": 5,
+    "ANSI37": 5,
+    "AR-B816C": 2,
+    "AR-B816": 1,
+    "DOTS": 1,
+    "AR-CONC": 1,
+    "PLAST": 3,
+    "NET": 1
+   }
+  },
+  "P7757.dxf": {
+   "modelspace_non_solid": [
+    {
+     "handle": "207",
+     "layer": "2",
+     "pattern": "MUDST"
+    },
+    {
+     "handle": "2E9",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "664",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "665",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "702",
+     "layer": "3",
+     "pattern": "ANGLE"
+    },
+    {
+     "handle": "A75",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "A76",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "A77",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "AE0",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "B2A",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "D1A",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "D1F",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "FB6",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "1250",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "1252",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "1253",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "1254",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "1255",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "1256",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "148E",
+     "layer": "3",
+     "pattern": "NET"
+    },
+    {
+     "handle": "1C01",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "23DE",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "23E3",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "23E7",
+     "layer": "3",
+     "pattern": "AR-PARQ1"
+    },
+    {
+     "handle": "27AF",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "27D1",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "27D2",
+     "layer": "3",
+     "pattern": "LINE"
+    },
+    {
+     "handle": "27D4",
+     "layer": "3",
+     "pattern": "AR-PARQ1"
+    },
+    {
+     "handle": "2F21",
+     "layer": "3",
+     "pattern": "LINE"
+    }
+   ],
+   "in_blocks": {
+    "MUDST": 1,
+    "NET": 11,
+    "ANGLE": 1,
+    "LINE": 14,
+    "AR-PARQ1": 2
+   }
+  }
+ },
+ "twin_column_check": {
+  "layer": "*COL* closed outlines + hatch paths, ST DXF",
+  "shapes": 171,
+  "pairs_gap_1_to_100_mm": 0,
+  "touching_pairs": [
+   [
+    "1E8",
+    "17C0"
+   ],
+   [
+    "82A",
+    "17CF"
+   ],
+   [
+    "108D",
+    "17C8"
+   ]
+  ],
+  "why": "touching pairs share an edge (two outline pieces of one cruciform / L column, distance < 0.001 mm): one column, not a joint"
+ },
+ "sheet_search": [
+  {
+   "sheet": "ST p.1",
+   "read": "110 dpi + DXF S-NOTE 7D / 7E / B8",
+   "found": "column and axis plan; 3 bullet notes (slab thickness, prop striking, neighbour-side ground beams on brick): no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.2",
+   "read": "30 dpi + DXF foundation plan",
+   "found": "foundation plan, no note block; no joint line, no twin footing",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.3",
+   "read": "30 dpi + DXF",
+   "found": "ground-beam / ground-slab plan; slab on grade drawn without a joint line or saw-cut",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.4",
+   "read": "110 dpi + DXF D5 .. EC",
+   "found": "GF roof slab: one continuous frame 31.37 x 15.00 (annex tied to the house by continuous beams (CB6, CB7)), 2 notes (parapet check, top bars over beams): no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.5",
+   "read": "30 dpi + DXF",
+   "found": "1F roof slab, same notes: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.6",
+   "read": "30 dpi + DXF",
+   "found": "2F roof slab, same notes: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.7",
+   "read": "200 dpi quadrants",
+   "found": "DETAIL OF SWIMMING POOL (5 cm screed / 5 cm insulation membrane / 10 cm plain concrete) and DETAIL OF DOME: no construction joint, water stop or movement joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.8",
+   "read": "170 dpi, notes 1-24 read",
+   "found": "24 structural notes (guidance status, coordination, dimensions, openings, ready-mix, fc', cubes, steel grade, development length, founding soil, beam widening, founding level, sulphate cement, dewatering, shoring, plain mix, props, slab 16 cm, lift-shaft tie beams, walls with columns, side bars, cover, prop striking, services coordination): none names a joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.9",
+   "read": "30 dpi + DXF S-TEXT.SCH",
+   "found": "schedules of footings and columns, bearing table, boxed notes 1-4: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.10",
+   "read": "30 dpi + DXF",
+   "found": "schedule of simple beams: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.11",
+   "read": "30 dpi + DXF",
+   "found": "continuous beams (2 span): no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.12",
+   "read": "30 dpi + DXF",
+   "found": "continuous beams (3 span): no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.13",
+   "read": "200 dpi quadrants",
+   "found": "typical isolated footings (liquid waterproofing two layers, insulation membrane, 5 cm screed), lintel detail and schedule, ground-beam sections: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.14",
+   "read": "200 dpi quadrants",
+   "found": "lift pit (protection board, waterproofing membrane, 'Slab on grade.' abutting the pit wall with no joint drawn), TYPICAL BOUNDARY WALL plan + section A-A (20 x 30 columns, ground beam 20 x 40, brick wall, 15 cm plain concrete at N.G. level drawn against the wall, break line only), parapet details: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.15",
+   "read": "200 dpi quadrants",
+   "found": "twisted columns, beam in casement, slab-on-beams detail, temperature reinforcement schedule + notes 1-3 (lap 40 d for temperature bars): no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ST p.16",
+   "read": "110 dpi",
+   "found": "stair beam, stair sections, opening in beam, ribs: no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.1",
+   "read": "see found",
+   "found": "area plans GF / 1F (T-091 whole page; this run: DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.2",
+   "read": "see found",
+   "found": "2F area plan (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.3",
+   "read": "see found",
+   "found": "GF plan (T-091 single sheet; DXF census): court, side walk, pool deck drawn without a joint line; kitchen ANGLE hatch and wet-room NET hatches are patterns",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.4",
+   "read": "see found",
+   "found": "1F plan (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.5",
+   "read": "see found",
+   "found": "2F plan (T-091; DXF census): roofs with LINE hatches (patterns)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.6",
+   "read": "see found",
+   "found": "SE elevation (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.7",
+   "read": "see found",
+   "found": "SW elevation (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.8",
+   "read": "see found",
+   "found": "NW elevation (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.9",
+   "read": "see found",
+   "found": "NE elevation (T-091; DXF census)",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.10",
+   "read": "see found",
+   "found": "SECTION A-A, read this run at 60 dpi (Drive single sheet 10): monolithic section, no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.11",
+   "read": "see found",
+   "found": "SECTION B-B, read this run at 60 dpi: annex and house one structure, no joint",
+   "joints": []
+  },
+  {
+   "sheet": "ARCH p.12",
+   "read": "see found",
+   "found": "FENCE PLAN / ELEVATION / SECTION, read this run at 200 dpi: street fence runs 580 / 250 / 81 / 195 / 115 / 195 / 83 cm, no joint mark",
+   "joints": []
+  },
+  {
+   "sheet": "SAN p.1",
+   "read": "70 dpi this run + T-091 150 dpi",
+   "found": "GF drainage plan; legend has no joint symbol",
+   "joints": []
+  },
+  {
+   "sheet": "SAN p.2",
+   "read": "70 dpi this run + T-091 150 dpi",
+   "found": "drainage plan; legend has no joint symbol; roof slope arrows only",
+   "joints": []
+  },
+  {
+   "sheet": "SAN p.3",
+   "read": "70 dpi this run + T-091 150 dpi",
+   "found": "drainage plan; legend has no joint symbol; roof slope arrows only",
+   "joints": []
+  }
+ ],
+ "owner": {
+  "Q-42": "answered 2026-10-19 22:55: expansion joint 3 mm wide; tile joints 1 mm inside, 2 mm roofs / outside; the picture's 5-6 m spacing and 12 mm profile are NOT Urban rules; spacing and whether it is its own BOQ line (lm) HELD (Lead asks when the roof tile count is built)",
+  "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21": "court = interlock; sides (side walk, side passage) porcelain / ceramic, part of the house; pool deck and covered porch finish HELD; no joint rule",
+  "other": "OWNER_QUESTIONS(_ANSWERED), OWNER_RULE_*, DECISION_REGISTER searched: no other joint / sealant rule"
+ },
+ "freelancer": {
+  "searched": "FREELANCER_RAW_ROWS 885 rows (FIN 197, BLK 190, PNT 77, RC 256, ALU 50, PLS 115) + the concrete / rebar workbook (384 text cells) + the by-category workbook (521 text cells), Arabic / English joint / sealant keywords",
+  "rows": [
+   {
+    "file": "PLS",
+    "sheet": "invoice",
+    "row": 26,
+    "item": "external plaster: corners, grooves and rounded arrises (m.l)",
+    "physical_m": 1297.35,
+    "payable_m": 648.675,
+    "convention": "2 m = 1 m (half rate)",
+    "also": "by-category workbook A51: 1,300 m.l labour line of the same item",
+    "class": "PLASTER_ACCESSORY_NOT_B13_05"
+   }
+  ],
+  "limit": "the floors / insulation workbook (23.6 MB) cannot be downloaded through the connector (limit about 6.2 MB); its 197 register rows were searched, not every cell"
+ },
+ "engine": {
+  "family": "B13-05 BLOCKED_BY_SOURCE, NOT_IN_CANDIDATE (BOQ_FAMILY_MASTER 1.21.0); no item code",
+  "candidate": "ARCH_TAKEOFF_V3.0.26 (not released)",
+  "related_lines": {
+   "B13-02 paving": "NOT_IN_CANDIDATE (no line)",
+   "B13-01 roof build-up / screed": "NOT_IN_CANDIDATE (no line)",
+   "B3-05 screed": "NOT_IN_CANDIDATE (no line)",
+   "B8-06 roof waterproofing": "FIN.WP.ROOF / FIN.WP.ROOF_UPTURN (m2)",
+   "B10-05 ground slab": "STR.CONC.GROUND_SLAB (m3)",
+   "B10-10 pool": "STR.CONC.POOL (m3)",
+   "B10-11 boundary wall": "STR.CONC.BOUNDARY_WALL (m3)",
+   "B10-12 parapets": "STR.CONC.PARAPET (m3)"
+  }
+ },
+ "joints": [
+  {
+   "id": "J1",
+   "kind": "STRUCTURAL_MOVEMENT",
+   "trade": "structural (concrete)",
+   "line": "NO LINE",
+   "evidence": "ST p.1 - p.6 + DXF: one continuous frame 31.37 x 15.00, annex tied to the house by continuous beams (CB6, CB7); 171 column shapes, 0 twin columns (gap 1 - 100 mm); SECTION A-A / B-B monolithic; no note"
+  },
+  {
+   "id": "J2",
+   "kind": "SLAB_ON_GRADE",
+   "trade": "structural (concrete)",
+   "line": "NO LINE (STR.CONC.GROUND_SLAB is m3; a joint is its own m.l item)",
+   "evidence": "ST p.3 ground slab and ST p.14 'Slab on grade.' at the lift pit: no joint line, no saw-cut, no isolation joint at the pit wall"
+  },
+  {
+   "id": "J3",
+   "kind": "CONSTRUCTION_JOINT",
+   "trade": "structural (concrete)",
+   "line": "NO LINE (STR.CONC.POOL / footing lines are m3)",
+   "evidence": "ST p.7 pool section (walls, inclined floor, steps), ST p.13 footings, ST p.8 notes 1-24: no construction joint, no water stop"
+  },
+  {
+   "id": "J4",
+   "kind": "ROOF_FIELD",
+   "trade": "roofing (B13-01)",
+   "line": "NO LINE (B13-01 not in candidate; FIN.WP.ROOF is m2 and not reduced or added to)",
+   "evidence": "no roof finish, screed thickness or roof joint printed (T-091; SAN p.2 / p.3 roofs: slope 1 % arrows only); roof tiles exist only by the owner's Q-42 wording ('2 mm for roof or outside area')",
+   "owner_rule": {
+    "id": "Q-42",
+    "width_mm": 3,
+    "spacing": null
+   }
+  },
+  {
+   "id": "J5",
+   "kind": "TILE_FIELD",
+   "trade": "finishes (outside floors)",
+   "line": "NO LINE (side walk / side passage tile lines not in candidate)",
+   "evidence": "outside tiled areas by OWNER_RULE_OUTDOOR_FLOORS (side walk, side passage porcelain / ceramic); no joint drawn on ARCH p.3; Q-42 gives the expansion-joint width 3 mm only",
+   "owner_rule": {
+    "id": "Q-42",
+    "width_mm": 3,
+    "spacing": null
+   }
+  },
+  {
+   "id": "J6",
+   "kind": "TILE_PERIMETER",
+   "trade": "finishes (floors)",
+   "line": "NO LINE",
+   "evidence": "no perimeter joint printed on any floor; Q-42 rules the grout joint (1 / 2 mm, inside the tile count), not a perimeter joint; no owner rule"
+  },
+  {
+   "id": "J7",
+   "kind": "PAVING",
+   "trade": "external works (B13-02)",
+   "line": "NO LINE (B13-02 not in candidate)",
+   "evidence": "court = interlock (owner rule); no joint, edge or kerb joint printed on ARCH p.3 / ST p.3"
+  },
+  {
+   "id": "J8",
+   "kind": "BOUNDARY_WALL_BUILDING",
+   "trade": "structural (boundary wall)",
+   "line": "NO LINE (STR.CONC.BOUNDARY_WALL is m3)",
+   "evidence": "ST p.14 boundary wall: own strip footing 80 + 10, 20 x 30 columns, ground beams 20 x 40; 15 cm plain concrete drawn against the wall at N.G. level ending in a break line; no separation joint printed between the wall, the ground slab or the building"
+  },
+  {
+   "id": "J9",
+   "kind": "BOUNDARY_WALL_PANEL",
+   "trade": "structural (boundary wall)",
+   "line": "NO LINE",
+   "evidence": "ST p.14 plan: column spacing 'SEE ARCH PLAN'; ARCH p.12 fence plan / elevation / section: no joint mark on the street fence runs"
+  },
+  {
+   "id": "J10",
+   "kind": "PARAPET",
+   "trade": "structural (parapets)",
+   "line": "NO LINE (STR.CONC.PARAPET is m3)",
+   "evidence": "ST p.14 parapet details (typical, 130 cm and 105 cm sections): no joint; p.4 note 1 sends the parapet to the architectural detail, which prints none"
+  },
+  {
+   "id": "J11",
+   "kind": "OPENING_SEALANT",
+   "trade": "openings (aluminium)",
+   "line": "NO LINE",
+   "evidence": "no sealant printed on any sheet (no window / door detail issued); freelancer ALU rows: no sealant row"
+  }
+ ]
+}

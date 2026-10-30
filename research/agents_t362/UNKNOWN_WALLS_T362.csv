@@ -1,0 +1,8 @@
+wall_id,block_type,t_m,length_m,register_state,mesh,sharmat,cause
+1F-W00/W01 BAY-ENDS,WHITE,0.2,0.166,ESTABLISHED,HELD,HELD,"T-222 bay-end row: area ESTABLISHED 0.572 m2, no run pieces (split between the two runs of one band not drawn)"
+1F-W25,WHITE,0.2,0.415,ESTABLISHED,HELD,HELD,"T-222 bay row: area ESTABLISHED 1.490 m2, but no run pieces (base, top, columns) to place levels"
+GF P-GF-05 ABOVE-LINTEL,WHITE,0.2,1.200,ESTABLISHED,HELD,HELD,"masonry above the P-GF-05 lintel, 2.640 m2 ESTABLISHED; its course datum is the lintel top, no piece record: levels not placed"
+GF-H01,-,0.4,0.600,HELD,HELD,HELD,"block type not established ('-' in register v4), 0.40 band; glazed line / held strip: designer"
+GF-H02,-,0.2,0.900,HELD,HELD,HELD,block type not established ('-' in register v4); glazed line / held strip: designer
+GF-W30,BLACK,0.15,1.525,HELD,HELD,HELD,no census run: held opening (T-228 / T-274 hand row); no pieces or block tops
+GF-W37,WHITE,0.2,0.100,HELD,HELD,HELD,"no wall band or member bound (glazed line / held strip; T-228 designer list): material, base, top"

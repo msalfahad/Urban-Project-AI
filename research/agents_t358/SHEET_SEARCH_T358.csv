@@ -1,0 +1,32 @@
+sheet,searched,b1_06,read,notes_read
+ST p.1,True,states (note bullet 2 (DXF B8): EXCAVATION_AT_LINE),40 dpi + DXF S-NOTE B8,3 bullet notes; DXF B8
+ST p.2,True,absent,40 dpi + DXF foundation plan,"foundation plan, no note block; footing outlines on the plot lines (geometry, section 4)"
+ST p.3,True,absent,40 dpi + DXF S-BOUN 7FE / 7FC,ground-beam plan; NOTES (stated dimensions) + LEGEND; boundary-wall runs
+ST p.4,True,absent,40 dpi,GF roof slab; parapet box + NOTES + LEGEND
+ST p.5,True,absent,40 dpi,1F roof slab; parapet box + NOTES + LEGEND
+ST p.6,True,absent,40 dpi,2F roof slab; parapet box + NOTES + LEGEND
+ST p.7,True,absent,40 dpi,"pool / dome details; NOTES + LEGEND; pool build-up (formation -1.50, T-183)"
+ST p.8,True,states (note 14: DEWATERING; note 15: SUPPORT; note 17: FORMWORK_PROPS; note 23: FORMWORK_PROPS; note 10: SITE_INVESTIGATION; note 12: FOUNDING_LEVEL_CHECK; note 13: CONCRETE_MATERIAL),160 dpi,RECOMMENDATIONS notes 1-24 read in full
+ST p.9,True,states (note 1 (DXF 1E11): EXCAVATION_LEVEL; note 2 + bearing table: DESIGN_FOUNDING_DEPTH; note 4 (DXF 1E0E): GROUNDWATER),300 dpi (boxed notes) + DXF 1E0E / 1E11,bearing table + boxed notes 1-4
+ST p.10,True,absent,40 dpi,simple-beam schedule; no note block
+ST p.11,True,absent,40 dpi,continuous-beam schedule; no note block
+ST p.12,True,absent,40 dpi,continuous-beam schedule; no note block
+ST p.13,True,absent,40 dpi (labels per T-354 at 110 dpi),"typical footing / ground-beam details: compacted fill, N.G. labels"
+ST p.14,True,states (note TYPICAL BOUNDARY WALL section A-A: EXCAVATION_AT_LINE; note DETAIL OF LIFT WITH ISOLATED FOOTING: PARAMETRIC_DEPTH),220 dpi (boundary wall) + 40 dpi,"lift footing, boundary wall, parapet details"
+ST p.15,True,absent,40 dpi,column / slab details; NOTE 1-3
+ST p.16,True,absent,40 dpi,stair / rib / beam-opening details; no note block
+ARCH p.1,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,"area plan (GF, 1F); no note block; no note block"
+ARCH p.2,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,"area plan (2F, totals); no note block; no note block"
+ARCH p.3,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,GF plan (sheet03 single); no note block
+ARCH p.4,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,1F plan (sheet04 single); no note block
+ARCH p.5,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,2F plan; no note block
+ARCH p.6,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,SE elevation; ground line +-0.00; no note block
+ARCH p.7,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,SW elevation; no note block
+ARCH p.8,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,NW elevation; no note block
+ARCH p.9,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,NE elevation (sheet09 single); no note block
+ARCH p.10,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,"SECTION A-A (sheet10 single, ground zone 90 dpi): ground line +-0.00 both ends, no below-ground construction, no water line; no note block"
+ARCH p.11,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,section; no note block
+ARCH p.12,True,absent,30 dpi (+90 dpi p.10) + P7757.dxf text census,fence elevation / section; no note block
+SAN p.1,True,absent,30 dpi (notes block per T-354 at 200 dpi),drainage plan + legend + one note (stated dimensions)
+SAN p.2,True,absent,30 dpi (notes block per T-354 at 200 dpi),drainage plan + legend + one note (stated dimensions)
+SAN p.3,True,absent,30 dpi (notes block per T-354 at 200 dpi),drainage plan + legend + one note (stated dimensions)

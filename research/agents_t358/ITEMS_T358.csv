@@ -1,0 +1,4 @@
+item,status,trigger,source,quantity,extent
+B1-06a DEWATERING,CONDITIONAL,"water -4.50 (ST p.9 note 4, EG datum INTERPRETED); drawn formations -1.50 (pits / boundary trenches AT_MOST, pool PRINTED): clearance 3.00 m; lift FF only if lift pit depth below the GF FFL +1.00 plus the membrane thickness >= 4.800 m (and never above -1.500); ST p.8 note 14 'if groundwater is found'","ST p.8 note 14; ST p.9 notes 1, 2, 4",,
+B1-06b EXCAVATION SUPPORT / PROTECTION,TRIGGERED,ST p.8 note 15 requires a specialist study and the protection / shoring needed; faces on or beyond the plot line on all four sides at >= 1.50 m (section 4),ST p.8 note 15; ST p.1 bullet 2; ST p.14 boundary wall; ST p.9 note 1,,
+B1-06c OTHER TEMPORARY WORKS,NOT_IN_DRAWN_SCOPE,"no sheet prints hoarding, site office, access road, scaffold or other site temporary works; the formwork props of p.8 notes 17 / 23 are the formwork item (T-163 / T-199)",31 sheets searched,,
