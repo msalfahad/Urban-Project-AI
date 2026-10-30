@@ -1,0 +1,7 @@
+opening,side,component,depth_m,spring_m,arch_length_m,width_m,crown_m,m2,ml,basis,ledger_m2,ledger_ml,ledger_basis,outline_task,outline_merge,outline_status,rule_id
+W15,OUT,JAMBS,0.08,2.1609,2.5243,1.5523,3.0,0.345744,4.3218,"2 x 0.080 x 2.1609 (jambs to the springing, T-238 outline)",0.496,6.2,2 x 0.080 x 3.100,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
+W15,OUT,HEAD,0.08,2.1609,2.5243,1.5523,3.0,0.201944,2.5243,"0.080 x 2.5243 (developed arch soffit, T-238 outline)",0.124,1.55,0.080 x 1.550,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
+W16,OUT,JAMBS,0.08,2.1609,2.5243,1.5523,3.0,0.345744,4.3218,"2 x 0.080 x 2.1609 (jambs to the springing, T-238 outline)",0.496,6.2,2 x 0.080 x 3.100,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
+W16,OUT,HEAD,0.08,2.1609,2.5243,1.5523,3.0,0.201944,2.5243,"0.080 x 2.5243 (developed arch soffit, T-238 outline)",0.124,1.55,0.080 x 1.550,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
+W26,OUT,JAMBS,0.1,1.05,1.9709,1.2,1.7,0.21,2.1,"2 x 0.100 x 1.0500 (jambs to the springing, T-238 outline)",0.34,3.4,2 x 0.100 x 1.700,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
+W26,OUT,HEAD,0.1,1.05,1.9709,1.2,1.7,0.19709,1.9709,"0.100 x 1.9709 (developed arch soffit, T-238 outline)",0.12,1.2,0.100 x 1.200,T-238,242e50b2,DRAWING-CONFIRMED,R-T326-2
