@@ -47,7 +47,7 @@ READINGS = [
      R.Evidence(tray_symbol=True, floor_drain=True,
                 source="sanitary p.1: square tray with diagonal and drain in the north-west corner of the bath by the "
                        "master bedroom (WC, basin on the diagonal wall, FD 4\" beside it)")),
-    ("SH-1F-01", "1F", "1F-02", "1F-BATH-W1", "bath insert C2C or C2F (twin rooms 2.45 x 2.05, same fixtures; which twin is 1F-02 is not needed)", 2,
+    ("SH-1F-01", "1F", "1F-02", "1F-BATH-W1", "bath insert C2C or C2F (twin rooms 2.45 x 2.05 with the same fixtures)", 2,
      R.Evidence(screen_line=True, mixer_symbol=True, floor_drain=True,
                 source="sanitary p.2: double screen line with a centre mark across the room, wall mixer in the zone "
                        "beyond it, FD 3\"; WC and basin on the other side")),
@@ -72,14 +72,24 @@ READINGS = [
                        "tray, no screen line, no text; the legend does not name the symbol")),
 ]
 
-# the T-010 / T-074 reading (research/agents_t010/sanitary_reading.json; T-074 hand table) put showers in GF-13 (core
-# W.C. 245 x 167), 1F-02, 1F-03 and 2F-02. This reading differs on four rooms:
+# engine room ids of the candidate (V3.0.27 / V3.0.28 BOQ_LINES room_id of the B8-01 lines above; this task's run)
+ENGINE_ROOM = {"GF-16": "GF-RD6F891", "1F-02": "1F-R48AA46", "1F-03": "1F-R8BDA49", "1F-09": "1F-RED23B8",
+               "1F-12": "1F-R48CDA5", "2F-02": "2F-RE83BED", "GF-05": "GF-RFAD3C4", "GF-13": "GF-RB28769"}
+
+# T-010 sanitary reading (research/agents_t010/sanitary_reading.json, by engine room id): SHOWER in GF-RD6F891,
+# 1F-RED23B8, 1F-R48CDA5, 2F-RE83BED = GF-16, 1F-09, 1F-12, 2F-02 (all four AGREE with this read). It lists the two 1F
+# west twins (1F-R48AA46, 1F-R8BDA49) as WC + BASIN + FD: their walk-in zones (screen line + mixer, no tray) were missed.
 DIFFERS_FROM_T010 = {
-    "GF-BATH-MASTER": "tray read here; T-010 / T-074: WC + basin + FD (no shower)",
-    "GF-WC-CORE-245": "no shower mark read here (WC + basin + FD); T-010 / T-074 put the GF shower here (T-010 flagged "
-                      "the GF core attribution as uncertain)",
-    "1F-BATH-N": "tray read here; T-010 / T-074: WC + basin + FD",
-    "1F-BATH-E": "tray read here; T-010 / T-074: WC + basin + FD",
+    "1F-BATH-W1": "walk-in zone (screen line + wall mixer) read here; T-010: WC + BASIN + FLOOR_DRAIN",
+    "1F-BATH-W2": "walk-in zone (screen line + wall mixer) read here; T-010: WC + BASIN + FLOOR_DRAIN",
+}
+# T-074 hand table (research/agents_t074/wet_areas_hand_table.json, by printed room) put its showers in the GF core
+# W.C. 245 x 167 (GF-13), the 1F west twins (1F-02 / 1F-03) and the 2F W.C.; it differs from this read on:
+DIFFERS_FROM_T074 = {
+    "GF-BATH-MASTER": "tray read here (and in T-010); T-074: WC + basin + FD",
+    "GF-WC-CORE-245": "no shower mark read here (WC + basin + FD); T-074: WC + shower + basin + FD",
+    "1F-BATH-N": "tray read here (and in T-010); T-074: WC + basin + FD",
+    "1F-BATH-E": "tray read here (and in T-010); T-074: WC + basin + FD",
 }
 
 
@@ -87,7 +97,7 @@ def register():
     out = []
     for sid, floor, room, label, handle, page, ev in READINGS:
         kind = R.classify(ev)
-        row = {"shower_id": sid, "floor": floor, "room_id": room, "room": label, "dxf_label": handle,
+        row = {"shower_id": sid, "floor": floor, "room_id": room, "engine_room_id": ENGINE_ROOM.get(room), "room": label, "dxf_label": handle,
                "sanitary_page": page, "kind": kind, "evidence": ev.source, "arch_plan": "NOT_DRAWN",
                "source_status": R.reconcile_sources(None, kind)}
         rooms = room.split("|")
@@ -132,6 +142,7 @@ def summary():
         "shower_room_membrane_m2_already_in_b8_01": round(
             sum(FLOOR_M2[r] for r in ("GF-16", "1F-02", "1F-03", "1F-09", "1F-12", "2F-02")), 6),
         "differs_from_t010": sorted(DIFFERS_FROM_T010),
+        "differs_from_t074": sorted(DIFFERS_FROM_T074),
         "freelancer": "FIN workbook sheet 'العازل' rows 14-36: floors 72.01 m2 + upturn 144.61 m.l (height column 1); "
                       "no shower or tanking row; summary sheet rows 27-30 the same",
     }
@@ -139,7 +150,7 @@ def summary():
 
 def write(outdir):
     reg = register()
-    cols = ["shower_id", "floor", "room_id", "room", "dxf_label", "sanitary_page", "kind", "source_status",
+    cols = ["shower_id", "floor", "room_id", "engine_room_id", "room", "dxf_label", "sanitary_page", "kind", "source_status",
             "arch_plan", "floor_extent_m2", "floor_extent_status", "walls_touched_lm", "walls_status", "tanking_m2",
             "tanking_status", "extra_floor_m2", "extra_floor_status", "b8_01_lines", "extra_upturn_m2", "b8_03_lines",
             "room_floor_m2", "evidence"]

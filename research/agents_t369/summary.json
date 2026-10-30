@@ -9,6 +9,10 @@
   "WALK_IN_SCREENED": 3
  },
  "differs_from_t010": [
+  "1F-BATH-W1",
+  "1F-BATH-W2"
+ ],
+ "differs_from_t074": [
   "1F-BATH-E",
   "1F-BATH-N",
   "GF-BATH-MASTER",

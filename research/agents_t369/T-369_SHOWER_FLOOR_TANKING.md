@@ -65,24 +65,29 @@ a missing extent or wall run stays None (HELD), never 0.
 
 ## 4. Double count against the candidate (acceptance c)
 
-Line ids (T-336 piece table, V3.0.21 ids; re-checked on V3.0.28, section 5):
+Line ids and quantities as emitted by the candidate (own run, section 5); engine room id in brackets:
 
-| Room | B8-01 floor line | B8-03 upturn line |
+| Room | B8-01 floor line (FIN.WP.FLOOR, m2) | B8-03 upturn line (FIN.WP.WALL_UPTURN, m2) |
 |---|---|---|
-| GF-16 | L-538c929be1d81708f09f (3.717683) | L-8b981cb63e87f18b13d4 (1.364933) |
-| 1F-02 | L-790a3049c29eda7dad2a (5.0225) | L-ba15212ec9887e6d4f73 (1.640) |
-| 1F-03 | L-f15325df772daa7ceec0 (5.0225) | L-6e6daedebef2db6a83bd (1.640) |
-| 1F-09 | L-6477c7ef451aae374ecc (3.5775) | L-a93486d24647a9e14445 (1.360) |
-| 1F-12 | L-ef429ae8e32c8b5cc641 (4.725) | L-60f100105399a9bdfb08 (1.580) |
-| 2F-02 | L-bed47a63708c41b2b150 (5.550) | L-b842beb71b67af783cd7 (1.780) |
+| GF-16 (GF-RD6F891) | L-538c929be1d81708f09f 3.717683 | L-8b981cb63e87f18b13d4 1.364933 |
+| 1F-02 (1F-R48AA46) | L-790a3049c29eda7dad2a 5.0225 | L-ba15212ec9887e6d4f73 1.640 |
+| 1F-03 (1F-R8BDA49) | L-f15325df772daa7ceec0 5.0225 | L-6e6daedebef2db6a83bd 1.640 |
+| 1F-09 (1F-RED23B8) | L-6477c7ef451aae374ecc 3.5775 | L-a93486d24647a9e14445 1.360 |
+| 1F-12 (1F-R48CDA5) | L-ef429ae8e32c8b5cc641 4.725 | L-60f100105399a9bdfb08 1.480 (T-336 correction to 1.580 waits for T-310) |
+| 2F-02 (2F-RE83BED) | L-bed47a63708c41b2b150 5.550 | L-b842beb71b67af783cd7 1.780 |
 
-B8-04 adds nothing on top of these lines: double count **0**. An integration that emits a B8-04 line must emit it as
-0.000 ASSUMED - OWNER-APPROVED (Q-40 A, UP-WP-004) or not at all; `b8_04_floor(add_on_top=True)` is refused.
+B8-04 adds nothing on top of these lines: double count **0**. No line of the candidate carries a shower or tanking item
+code. An integration that emits a B8-04 line must emit it as 0.000 ASSUMED - OWNER-APPROVED (Q-40 A, UP-WP-004) or not
+at all; `b8_04_floor(add_on_top=True)` is refused.
 
-## 5. Candidate re-check
+## 5. Candidate re-check (own run)
 
-See the handoff on the board: the V3.0.28 run of this task (research/agents_t326/v3028_run.py on the Drive copies) and the
-presence of the twelve line ids above with the quantities shown.
+research/agents_t167/v304_run.py then research/agents_t326/v3028_run.py on the Drive copies (P7757.dxf ab54dd55..,
+"ST7757 dxf.dxf" 9f9d1179..), output outside the repository: V3_0_27_BOQ_LINES.csv sha256 27329efb.. (3,913 lines) and
+V3_0_28_BOQ_LINES.csv 6bd10592.. (3,956 lines). The 14 FIN.WP.FLOOR / FIN.WP.WALL_UPTURN lines of the eight rooms above
+(six shower rooms + GF-05 + GF-13) are present in both with the same ids and quantities; every FIN.WP.FLOOR /
+FIN.WP.WALL_UPTURN row of V3.0.27 and V3.0.28 is byte-identical (diff 0 lines). The T-336 line ids (V3.0.21) are the
+candidate's ids.
 
 ## 6. Against the freelancer (acceptance d)
 
@@ -93,20 +98,21 @@ rows 27-30 the same. **No shower, tray or tanking row.** Engine (this task) 0.00
 upturn). His floor rows for the six shower rooms (rows 16, 30, 31, 28, 27, 36: 3.70, 5.00, 5.00, 3.60, 4.72, 5.62 m2)
 belong to B8-01 and were reconciled by T-074.
 
-## 7. Differences from the earlier reading (T-010 / T-074)
+## 7. Differences from the earlier readings (T-010, T-074)
 
-T-010's sanitary reading (and the T-074 hand table built on it) has 4 showers: GF-13 (core W.C. 245 x 167), 1F-02,
-1F-03, 2F-02. This read finds 6, and differs on four rooms:
+- **T-010** (research/agents_t010/sanitary_reading.json, by engine room id) lists SHOWER in GF-RD6F891, 1F-RED23B8,
+  1F-R48CDA5 and 2F-RE83BED = GF-16, 1F-09, 1F-12, 2F-02: all four AGREE with this read. It lists the two 1F west twins
+  (1F-R48AA46, 1F-R8BDA49) as WC + BASIN + FLOOR_DRAIN: their **walk-in zones** (screen line + wall mixer, no tray) were
+  missed.
+- **T-074** hand table (by printed room) puts its four showers in the GF core W.C. 245 x 167 (GF-13), the 1F west twins
+  and the 2F W.C.: it differs from this read on four rooms (GF-16 and 1F-09 / 1F-12 have trays it lists without a
+  shower; GF-13 shows WC + basin + FD only). Q-40's wording ("two first-floor showers on the west side") came from it.
 
-- GF: the tray is in the bath by the master bedroom (GF-16, label BATH), not in the core W.C. GF-13 (T-010 itself flagged
-  the GF core attribution as uncertain). GF-13 shows WC + basin + FD only.
-- 1F: the bath by the laundry (1F-09, `bath` C01) and the east bath (1F-12, `bath` C11) each show a square tray that
-  T-010 / T-074 list as WC + basin + FD.
-
-**Quantity effect: none** (all these rooms are wet already; B8-01 / B8-03 unchanged; Q-40 A gives no tanking). It
-matters for B12-01 fixture counts (T-370 should count 6 showers, not 4) and for any wet-room evidence that cites the
-shower as its reason. Cause: room-level fixture lists read at 110 dpi and attributed by position, without the symbol per
-room at a resolution where the tray outline is legible.
+**Quantity effect: none** (every one of these rooms is wet already; B8-01 / B8-03 unchanged; Q-40 A gives no tanking on
+any shower wall). It matters for B12-01 fixture counts (T-370: **6 showers**, 3 trays + 3 walk-in zones, not 4) and for
+any wet-room evidence that cites a shower as its reason. Cause: room-level fixture lists read at 110 dpi; a walk-in
+zone (screen line + mixer) has no tray outline and was not counted as a shower; the T-074 table re-attributed fixtures by
+printed room name without the engine room id.
 
 ## 8. General rule (proposed, research; ERS s.4 B) and test
 
@@ -126,7 +132,7 @@ unitless refused, Q-40 A with tiling unknown HELD; Alsenan register pins.
 
 ## 9. Lessons register row (proposed, ERS s.7)
 
-| 2026-10-30 | Two shower trays missed and one shower placed in the wrong GF room by the T-010 / T-074 sanitary reading (6 showers, not 4) | fixtures read as room lists at low resolution and attributed by position; no per-room symbol record | every fixture reading records the symbol kind per room with the sheet page and the room's plan label; a shower needs a printed mark (tray, screen + mixer, text); a mixer alone is UNKNOWN (scope: every villa; provenance T-369) | tests/t369_shower_tanking (register pins; mixer-only and bath-only refused as showers) | PROPOSED |
+| 2026-10-30 | Two earlier sanitary readings each found 4 showers on Alsenan and disagreed on which rooms; there are 6 (T-010 missed 2 walk-in zones; T-074 set 4 rooms differently) | fixtures read as room lists at 110 dpi; a walk-in zone (screen line + mixer, no tray) not recognised as a shower; re-attribution by printed room name without the engine room id | every fixture reading records the symbol kind per room with the sheet page, the plan label and the engine room id; a shower needs a printed mark (tray, screen + mixer, text); a mixer alone is UNKNOWN (scope: every villa; provenance T-369) | tests/t369_shower_tanking (register pins; mixer-only and bath-only refused as showers) | PROPOSED |
 
 ## 10. Open
 

@@ -182,5 +182,8 @@ def test_alsenan_totals_and_prior_reading_differences():
     s = A.summary()
     assert s["b8_04_extra_floor_m2"] == 0.0 and s["b8_04_extra_tanking_m2"] == 0.0
     assert s["shower_extent_held"] == 6
-    # the T-010 / T-074 reading had 4 showers: two 1F trays missed, the GF shower set in the core W.C.
-    assert set(s["differs_from_t010"]) == {"1F-BATH-N", "1F-BATH-E", "GF-BATH-MASTER", "GF-WC-CORE-245"}
+    # T-010 (4 showers) missed the two 1F walk-in zones; T-074 (4 showers) differs on four rooms
+    assert set(s["differs_from_t010"]) == {"1F-BATH-W1", "1F-BATH-W2"}
+    assert set(s["differs_from_t074"]) == {"1F-BATH-N", "1F-BATH-E", "GF-BATH-MASTER", "GF-WC-CORE-245"}
+    reg = {r["room_id"]: r for r in A.register()}
+    assert reg["GF-16"]["engine_room_id"] == "GF-RD6F891" and reg["2F-02"]["engine_room_id"] == "2F-RE83BED"
