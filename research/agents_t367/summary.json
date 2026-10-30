@@ -1,0 +1,132 @@
+{
+ "black_by_area_status": {
+  "ASSUMED - OWNER-APPROVED": {
+   "area": 92.1303,
+   "mortar": 1.019191,
+   "walls": 8.0
+  },
+  "DRAWING-CONFIRMED": {
+   "area": 50.5988,
+   "mortar": 0.573762,
+   "walls": 5.0
+  },
+  "VERIFIED": {
+   "area": 169.937,
+   "mortar": 2.27716,
+   "walls": 11.0
+  }
+ },
+ "black_by_t": {
+  "0.15": {
+   "alt": 2.155094,
+   "area": 201.1421,
+   "mortar": 2.225134,
+   "walls": 17.0
+  },
+  "0.2": {
+   "alt": 1.5932,
+   "area": 111.524,
+   "mortar": 1.644979,
+   "walls": 7.0
+  }
+ },
+ "black_established_m2": 312.6661,
+ "black_held_named": [
+  "1F-W07",
+  "1F-W11",
+  "1F-W14 + 1F-W15",
+  "1F-W16",
+  "2F-W00",
+  "GF-W00",
+  "GF-W02",
+  "GF-W03",
+  "GF-W08",
+  "GF-W09",
+  "GF-W13",
+  "GF-W14",
+  "GF-W20",
+  "GF-W23",
+  "GF-W24",
+  "GF-W25",
+  "GF-W26",
+  "GF-W27",
+  "GF-W30",
+  "GF-W31",
+  "GF-W32",
+  "GF-W34"
+ ],
+ "black_mortar_alt_0x21_m3": 3.748294,
+ "black_mortar_bed_m3": 2.623806,
+ "black_mortar_head_m3": 1.246308,
+ "black_mortar_m3": 3.870113,
+ "black_part_walls_held_piece_on_parent": [
+  "1F-W13",
+  "1F-W17",
+  "1F-W24",
+  "2F-W05"
+ ],
+ "black_walls_established": 24,
+ "candidate": "ARCH_TAKEOFF_V3.0.26",
+ "candidate_merge": "88ef8cb8",
+ "cement_sand": {
+  "status": "HELD",
+  "why": [
+   "mortar waste: no approved source (owner 2026-10-23: never a hardcoded %)",
+   "masonry laying-mortar mix: printed on no sheet, no owner answer names it"
+  ]
+ },
+ "freelancer": {
+  "his_15cm_m3": 6.828306,
+  "his_20cm_m3": 1.23369,
+  "mortar_if_his_15_20cm_areas_m3": 8.061996,
+  "rows": {
+   "exterior": 559.8015,
+   "glue_rows": 0,
+   "mortar_rows": 0,
+   "t0.15": 617.248,
+   "t0.20": 83.64,
+   "total": 1260.6895
+  },
+  "verdict_proposal": "RULE_DIFFERENCE (no mortar / glue row: blockwork priced per m2, mortar inside his rate); no numeric verdict on mortar"
+ },
+ "method": "MASONRY_JOINT_MORTAR_V1",
+ "mortar_status": "ASSUMED — OWNER-APPROVED (every wall; module PROVISIONAL Q-75 + owner 2026-10-29)",
+ "task": "T-367",
+ "unknown_type": [
+  "GF-H01",
+  "GF-H02"
+ ],
+ "white_established_m2": 266.435,
+ "white_held_walls": [
+  "GF-W04",
+  "GF-W06",
+  "GF-W12",
+  "GF-W15",
+  "GF-W16",
+  "GF-W17",
+  "GF-W18",
+  "GF-W35",
+  "GF-W36",
+  "GF-W37"
+ ],
+ "white_walls_adhesive_held": [
+  "1F-W00",
+  "1F-W00/W01 BAY-ENDS",
+  "1F-W01",
+  "1F-W04",
+  "1F-W05",
+  "1F-W06",
+  "1F-W08",
+  "1F-W10",
+  "1F-W25",
+  "2F-W02",
+  "2F-W03",
+  "2F-W04",
+  "2F-W07",
+  "GF P-GF-05 ABOVE-LINTEL",
+  "GF-W05",
+  "GF-W07",
+  "GF-W10",
+  "GF-W11"
+ ]
+}
