@@ -1,8 +1,9 @@
 """T-343: the V3.0.25 project inputs come ONLY from the merged T-342 / T-157 / T-183 ledgers, pinned by sha256 (areas,
 statuses, Drive titles and DXF handles only, no private data). Normal: 7 pieces + the pool finish, plan pieces
-166.878936 m2 (deck 7.105836 = 17.3414 - the exact outer D 10.235564), risers 1.96, held finish 17.784336, pool
-bound 21.308727 m2, the inputs load and re-add to the face within 0.0008 m2; adverse: an edited ledger stops the
-build."""
+166.322012 m2 (r2, R-T343-1: deck 6.548912 = the face to the glazed band's court face 16.784476 - the exact outer D
+10.235564; the SX-02 reveal strip 0.561577 and the T-157 frame-line tessellation -0.004653 named in the closure),
+risers 1.96, held finish 17.227412, pool bound 21.308727 m2, the inputs load and re-add to the face within 0.001 m2;
+adverse: an edited ledger stops the build."""
 from __future__ import annotations
 
 import shutil
@@ -25,14 +26,20 @@ def test_inputs_from_the_merged_ledgers():
         ("WEST-OPEN", "EXT.PAVING.INTERLOCK", 119.5416, A.OA), ("PORCH", "EXT.FLOOR.OUTDOOR", 10.6785, "HELD"),
         ("E1-TREADS", "FIN.MARBLE.TREAD", 3.3594, A.OA), ("E1-RISERS", "FIN.MARBLE.RISER", 1.96, A.OA),
         ("E1-LANDING", "FIN.MARBLE.LANDING", 5.1794, A.OA), ("NORTH-WALK", "EXT.FLOOR.PORCELAIN", 21.0142, A.OA),
-        ("POOL-DECK", "EXT.FLOOR.OUTDOOR", 7.105836, "HELD")]
-    assert d["declared"] == {"lines": 8, "plan_m2": 166.878936, "vertical_m2": 1.96, "held_material_m2": 17.784336,
+        ("POOL-DECK", "EXT.FLOOR.OUTDOOR", 6.548912, "HELD")]
+    assert d["declared"] == {"lines": 8, "plan_m2": 166.322012, "vertical_m2": 1.96, "held_material_m2": 17.227412,
                              "pool_bound_m2": 21.308727}
     assert [s["merge_commit"][:8] for s in d["sources"]] == ["4dd9cff8", "554c1c46", "63802945"]
     assert A.load_inputs(d, "p") is d
     clo = A.closure(d)
     assert clo["holes"][0]["exact_m2"] == 10.235564 and clo["holes"][0]["tessellation_residual_m2"] == -0.003564
-    assert abs(clo["difference_m2"]) < 0.001 and clo["vs_reference_m2"] == round(166.878936 - 166.883, 6)
+    assert abs(clo["difference_m2"]) < 0.001 and clo["vs_reference_m2"] == round(166.322012 - 166.883, 6)
+    assert clo["difference_m2"] == -0.0009                                   # the T-157 re-add rounding, named
+    assert clo["reveal_strips"][0]["m2"] == 0.561577 and clo["reading_residuals"][0]["residual_m2"] == -0.004653
+    deck = d["pieces"][6]
+    assert deck["derived"]["face_m2"] == 16.784476 and deck["derived"]["face_edge_kind"] == "BAND_COURT_FACE"
+    assert deck["derived"]["polygon_reading"]["m2"] == 17.3414                # T-157 frame-walked polygon, not used
+    assert [t["edges"].split(" ")[0] for t in deck["derived"]["construction"]["terms"]] == ["house", "ARC", "LWPOLYLINE"]
     pf = d["pool_finish"]
     assert (pf["rim_height_m"], pf["structural_height_m"], pf["rim_basis"]) == (1.15, 1.20, "FINISHED_FLOOR_TO_RIM")
     assert "2E5E" in pf["rim_height_source"]

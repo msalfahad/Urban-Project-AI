@@ -314,3 +314,127 @@ def test_order_reversed_gives_the_same_lines():
     o1 = _run(d1)[5]
     o2 = _run(d2)[5]
     assert sorted(A30.line_sha(x) for x in o1) == sorted(A30.line_sha(x) for x in o2)
+
+
+# ================================================================================================ r2: R-T343-1
+# Villa P343-B (a villa with a curved glazed band on the pool court; hand-calculated, not Alsenan):
+#   deck face to the band's COURT face: rectangle 3.00 x 4.00 = 12.000 + band segment r 2.00 beyond the chord at 0.50
+#   = 4 acos(0.25) - 0.5 sqrt(3.75) = 5.272464 - 0.968246 = 4.304218 - column 0.30 x 0.30 = 0.090 -> 16.214218 m2;
+#   deck = 16.214218 - outer D 9.534292 = 6.679926 m2 (finish HELD).
+#   the window frame inside the band: r 2.08 at 0.58 (segment 4.414736) + straights 0.08 x 3.60 = 0.288; the recess
+#   in front of the frame = 4.414736 + 0.288 - 4.304218 = 0.398518 m2 (the opening's reveal strip, never deck);
+#   the court polygon walked the frame: frame face 16.612736 read 16.608736 (tessellation -0.004 named);
+#   filled = 80 + 15 + 6 + 2.4 + 3 + 16.612736 - 0.004 = 123.008736 m2;
+#   closure: 123.008736 + 0.004 - 9.534292 - 0.398518 = 113.079926 = plan pieces 106.4 + 6.679926 (difference 0).
+SEG = lambda r, d: r * r * math.acos(d / r) - d * math.sqrt(r * r - d * d)  # noqa: E731
+BAND_FACE = 12.0 + SEG(2.0, 0.5) - 0.09                    # 16.214218
+STRIP = SEG(2.08, 0.58) + 0.08 * 3.6 - SEG(2.0, 0.5)       # 0.398518
+DECK_B = round(BAND_FACE, 6) - OUTER                       # 6.679926
+BAND_TERMS = [
+    {"what": "rect 3.00 x 4.00", "kind": "RECT", "a_m": 3.0, "b_m": 4.0, "sign": 1, "edge_kind": "DRAWN_LINE",
+     "edges": "house face + boundary wall + cut lines"},
+    {"what": "band segment r 2.00 at 0.50", "kind": "SEGMENT", "r_m": 2.0, "d_m": 0.5, "sign": 1,
+     "edge_kind": "BAND_COURT_FACE", "edges": "band court face ARC r 2000 (printed dimension line)"},
+    {"what": "column 0.30 x 0.30", "kind": "RECT", "a_m": 0.3, "b_m": 0.3, "sign": -1, "edge_kind": "DRAWN_LINE",
+     "edges": "column outline"}]
+STRIP_TERMS = [
+    {"what": "frame segment r 2.08 at 0.58", "kind": "SEGMENT", "r_m": 2.08, "d_m": 0.58, "sign": 1,
+     "edge_kind": "FRAME_LINE", "edges": "frame polyline bulge r 2080"},
+    {"what": "frame straights 0.08 x 3.60", "kind": "RECT", "a_m": 0.08, "b_m": 3.6, "sign": 1, "edge_kind": "FRAME_LINE",
+     "edges": "frame polyline straights"},
+    {"what": "band segment r 2.00 at 0.50", "kind": "SEGMENT", "r_m": 2.0, "d_m": 0.5, "sign": -1,
+     "edge_kind": "BAND_COURT_FACE", "edges": "band court face ARC r 2000"}]
+
+
+def doc_band():
+    d = doc()
+    deck = d["pieces"][6]
+    deck["area_m2"] = round(DECK_B, 6)
+    deck["derived"] = {"face_m2": round(BAND_FACE, 6), "face_edge_kind": "BAND_COURT_FACE",
+                       "face_source": "drawn construction", "construction": {"terms": copy.deepcopy(BAND_TERMS)},
+                       "polygon_reading": {"m2": 16.608736, "edge_kind": "FRAME_LINE", "source": "court polygon"},
+                       "less": copy.deepcopy(deck["derived"]["less"])}
+    d["face"]["filled_m2"] = round(106.4 + BAND_FACE + STRIP - 0.004, 6)               # 123.008736
+    d["face"]["reveal_strips"] = [{"what": "recess in front of the frame", "scope": "glazing reveal strip",
+                                   "held_with": "the opening's reveal strip line", "edges": "band face to frame line",
+                                   "construction": {"terms": copy.deepcopy(STRIP_TERMS)}, "m2": round(STRIP, 6)}]
+    d["face"]["reading_residuals"] = [{"what": "court polygon along the frame", "tessellated_m2": 16.608736,
+                                       "exact_m2": round(BAND_FACE + STRIP, 6), "basis": "frame face exact"}]
+    d["face"]["reference_total_m2"] = 113.08
+    d["declared"].update(plan_m2=round(106.4 + DECK_B, 6), held_material_m2=round(6 + DECK_B, 6))
+    return d
+
+
+def test_hand_values_of_the_band_fixture():
+    assert round(SEG(2.0, 0.5), 6) == 4.304218 and round(BAND_FACE, 6) == 16.214218
+    assert round(STRIP, 6) == 0.398518 and round(DECK_B, 6) == 6.679926
+    assert round(A.terms_area(BAND_TERMS, "t", floor_face=True)[0], 6) == 16.214218
+    assert round(A.circular_segment(2.25, 0.25), 6) == 6.829476          # the T-127 hand 6.8295 (band segment)
+
+
+def test_r2_deck_to_the_band_court_face_with_the_reveal_strip_named():
+    d, base, ch, logs, clo, out, ident = _run(doc_band())
+    assert abs(clo["difference_m2"]) < 1e-6 and clo["face_net_exact_m2"] == round(106.4 + DECK_B, 6)
+    assert clo["reveal_strips"][0]["m2"] == round(STRIP, 6) > 0
+    assert clo["reading_residuals"][0]["residual_m2"] == -0.004
+    by = {ln["location"]["element_id"]: ln for ln in out[3:]}
+    deck = by["GF-COURT#DECK"]
+    assert deck["bounded_range"]["low"] == deck["bounded_range"]["high"] == round(DECK_B, 6)
+    rec = deck["calculation"]["inputs"]["outdoor_floor_v3025"]
+    assert rec["face_edge_kind"] == "BAND_COURT_FACE" and "R-T343-1" in rec["rules_applied"]
+    assert [t["m2"] for t in rec["face_construction"]] == [12.0, 4.304218, 0.09]
+    assert not any(ln["location"]["element_id"].endswith("recess in front of the frame") for ln in out)  # not a line
+    assert ident["added"] == 8
+
+
+def test_r2_closure_csv_names_the_strip_and_the_residual(tmp_path):
+    d, base, ch, logs, clo, out, ident = _run(doc_band())
+    A.write(tmp_path, base, ch, logs, clo, d, released_lines=base[:1])
+    t = (tmp_path / "V3_0_25_CLOSURE.csv").read_text(encoding="utf-8")
+    assert "REVEAL_STRIP" in t and str(round(STRIP, 6)) in t and "READING_RESIDUAL" in t and "-0.004" in t
+
+
+def test_adverse_r2_deck_walked_along_the_frame_line_is_refused():
+    def m(d):                                         # the deck face built with the frame segment instead of the band
+        dv = d["pieces"][6]["derived"]
+        dv["construction"]["terms"][1].update(r_m=2.08, d_m=0.58, edge_kind="FRAME_LINE")
+    _refused(lambda d: (d.update(doc_band()), m(d)), "window-frame line")
+
+    def m2(d):                                        # the frame-walked polygon taken as the deck face
+        dv = d["pieces"][6]["derived"]
+        dv.pop("construction")
+        dv.update(face_m2=16.608736, face_edge_kind="FRAME_LINE")
+        d["pieces"][6]["area_m2"] = round(16.608736 - OUTER, 6)
+    _refused(lambda d: (d.update(doc_band()), m2(d)), "window-frame line")
+
+
+def test_adverse_r2_frame_face_without_the_flag_fails_the_closure():
+    def m(d):                                         # deck = frame face - D, strip still named: counted twice
+        dv = d["pieces"][6]["derived"]
+        dv.pop("construction")
+        dv.update(face_m2=round(BAND_FACE + STRIP, 6), face_edge_kind="DRAWN_LINE")
+        a = round(BAND_FACE + STRIP - OUTER, 6)
+        d["pieces"][6]["area_m2"] = a
+        d["declared"].update(plan_m2=round(106.4 + a, 6), held_material_m2=round(6 + a, 6))
+    _refused(lambda d: (d.update(doc_band()), m(d)), "missing or counted twice")
+
+
+def test_adverse_r2_strip_as_zero_without_scope_or_off_its_construction():
+    for mut, msg in ((lambda s: s.update(m2=0.0), "must be > 0"), (lambda s: s.pop("scope"), "scope required"),
+                     (lambda s: s.update(m2=0.5), "construction")):
+        def m(d, mut=mut):
+            d.update(doc_band())
+            mut(d["face"]["reveal_strips"][0])
+        _refused(m, msg)
+
+
+def test_adverse_r2_face_off_its_construction_and_a_large_residual():
+    def m(d):
+        d.update(doc_band())
+        d["pieces"][6]["derived"]["construction"]["terms"][0]["a_m"] = 3.10
+    _refused(m, "drawn construction")
+
+    def m2(d):
+        d.update(doc_band())
+        d["face"]["reading_residuals"][0]["tessellated_m2"] = 16.0
+    _refused(m2, "not a tessellation residual")

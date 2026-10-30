@@ -35,11 +35,13 @@ PENDING = {
     "note": "T-343 (research/agents_t343/T-343_OUTDOOR_FLOOR_INTEGRATION.md): an OMISSION closed: the GF court face "
             "(T-342 binding, T-157 pieces) as 7 outdoor floor lines (west court interlock 119.5416 m2 ASSUMED - "
             "OWNER-APPROVED; north side walk porcelain 21.0142 m2 with the owner manual 23.955 beside; E1 marble "
-            "treads 3.3594, risers 1.96, landing 5.1794 m2; covered porch 10.6785 and pool deck 7.105836 m2 by the "
-            "exact D, finish HELD as ranges [a, a]) and the pool water-face finish HELD BLANK (bound 21.308727 m2, "
-            "finished depth 1.15 from DIMENSION 2E5E); the plan pieces close on the face less the exact pool D within "
-            "0.0009 m2 (named; the T-342 166.883 used the tessellated hole: -0.003564 m2); every V3.0.24 line "
-            "byte-identical; the Gate B integration package; names no family",
+            "treads 3.3594, risers 1.96, landing 5.1794 m2; covered porch 10.6785 and pool deck 6.548912 m2 (r2, "
+            "R-T343-1: face to the glazed band's court face ARC 201, less the exact D), finish HELD as ranges [a, a]) "
+            "and the pool water-face finish HELD BLANK (bound 21.308727 m2, finished depth 1.15 from DIMENSION 2E5E); "
+            "the plan pieces close on the face less the exact pool D, less the SX-02 glazing reveal strip 0.561577 "
+            "(held with T-154, never deck), with the T-157 frame-line tessellation -0.004653 named, within 0.0009 m2 "
+            "(T-157 re-add rounding); every V3.0.24 line byte-identical; the Gate B integration package r2; names "
+            "no family",
 }
 
 

@@ -13,8 +13,14 @@ side walk, pool deck), each with its own finish:
                  measured as a polygon is re-derived from the curve itself: area = the face it was cut from less the
                  EXACT outline it borders (a D = half disc r + rectangle 2r x straight; a printed radius never makes a
                  circle, R-T342-POOL-OUTLINE-1), and the residual of the tessellated reading is named in m2;
-  closure        the plan pieces re-add to the face (filled area less its holes, each hole by its exact outline) within
-                 the declared tolerance; a vertical piece (visible risers) is outside the plan closure by kind;
+  band edge      (R-T343-1, T-343 r2) a floor face meeting a glazed band stops at the band's COURT face (the printed
+                 dimension line), never at a window-frame line inside the band; the recess between the band face and
+                 the frame is the opening's reveal strip (another element, held with the glazing reveal scope): it is
+                 named in the closure by its own construction, never a floor piece, never 0; a face built from drawn
+                 terms (rectangles, circular segments beyond a chord) is re-computed from those terms;
+  closure        the plan pieces re-add to the face (filled area less its holes, each hole by its exact outline, less
+                 the reveal strips named inside it, corrected by the named tessellation residuals of its polygon
+                 reading) within the declared tolerance; a vertical piece (visible risers) is outside the plan closure by kind;
   finish         from an owner rule (ASSUMED - OWNER-APPROVED with its source: interlock on the chalet court, porcelain
                  on the sides, marble on every tread / riser / landing of a stair assembly) or HELD; a piece whose
                  finish is HELD keeps its area as a held range [a, a] (BOUNDED_EXPOSURE, never 0, never released) on
@@ -81,6 +87,10 @@ SUM_TOL = 1e-4                          # declared totals vs the records' sums
 CLOSURE_TOL_MAX = 0.01                  # the largest closure tolerance a project may declare, m2
 RIM_MIN, RIM_MAX = 0.30, 3.00           # a pool finished depth, m (mm or a typo is refused)
 RULE = ("R-OUTDOOR-FLOOR-1", "T-343")
+RULE_BAND = ("R-T343-1", "T-343 r2")   # a floor face meeting a glazed band stops at the band's court face
+EDGE_KINDS = ("BAND_COURT_FACE", "DRAWN_LINE")   # the edges a floor face may be walked along
+FRAME_LINE = "FRAME_LINE"               # a window-frame line inside a glazed band: never a floor edge (R-T343-1)
+TERM_KINDS = ("RECT", "SEGMENT")
 MATERIAL_HELD_ITEM = "EXT.FLOOR.OUTDOOR"
 POOL_FINISH_ITEM = "EXT.POOL.WATER_FACE"
 # the family's items: code -> (en, ar, trade, unit). The marble items are the item master's own (boq_line.ITEMS).
@@ -114,6 +124,8 @@ PIECES = {
                         "included); UP-STAIR-002 (drawn geometry governs); UP-STAIR-003 / -006 (visible riser)",
                         "Q-67 A (open-air side passage outside); Q-26 A (pool finished depth)",
                         "UP-QTY-STATUS-001 (held never 0); UP-SPACE-001 (a label alone never decides)",
+                        "R-T343-1 (T-343 r2): a floor face meeting a glazed band stops at the band's court face; the "
+                        "recess in front of the frame is the opening's reveal strip (named in the closure, not a floor)",
                         "WORKFLOW_CONTROLS 2026-10-21 s.4 / s.5; ERS 2026-10-22 s.2 - s.4"],
         "owner_manual_method": "the owner's manual method measures an outdoor floor by printed length x printed width "
                                "of each strip (the north side walk 1.50 x 15.97 to the plot line, incl. the boundary "
@@ -148,12 +160,61 @@ def d_outline(r, straight, width):
     return math.pi * r * r / 2 + width * straight, math.pi * r + 2 * straight + width
 
 
+def circular_segment(r, d):
+    """the area of a disc of radius r beyond a chord at distance d from its centre (0 <= d < r), m2."""
+    if not (_num(r) and _num(d)) or r <= 0 or not (0 <= d < r):
+        raise InputsError(f"circular segment: r {r}, chord distance {d} (need 0 <= d < r)")
+    return r * r * math.acos(d / r) - d * math.sqrt(r * r - d * d)
+
+
+def terms_area(terms, where, *, floor_face=False):
+    """a face built from drawn terms: +/- RECT a x b, +/- SEGMENT (r, chord distance d). A floor face (floor_face)
+    never takes a term walked along a window-frame line (R-T343-1). -> (area m2, term records)."""
+    if not terms:
+        raise InputsError(f"{where}: construction.terms names the drawn terms")
+    tot, recs = 0.0, []
+    for t in terms:
+        k, sg = t.get("kind"), t.get("sign", 1)
+        if k not in TERM_KINDS or sg not in (1, -1) or not t.get("what") or not t.get("edges"):
+            raise InputsError(f"{where}: term {t.get('what')!r}: kind in {TERM_KINDS}, sign +1 / -1, what and edges")
+        ek = t.get("edge_kind")
+        if floor_face and ek == FRAME_LINE:
+            raise InputsError(f"{where}: term {t['what']!r} is walked along a window-frame line inside a glazed band: "
+                              f"a floor face stops at the band's court face ({RULE_BAND[0]}); the recess in front of "
+                              "the frame is the opening's reveal strip")
+        if ek is not None and ek not in EDGE_KINDS + (FRAME_LINE,):
+            raise InputsError(f"{where}: term {t['what']!r}: edge_kind {ek!r} not one of {EDGE_KINDS + (FRAME_LINE,)}")
+        if k == "RECT":
+            a, b = t.get("a_m"), t.get("b_m")
+            if not (_num(a) and _num(b) and a > 0 and b > 0):
+                raise InputsError(f"{where}: term {t['what']!r}: RECT a_m, b_m > 0")
+            v = a * b
+        else:
+            v = circular_segment(t.get("r_m"), t.get("d_m"))
+        tot += sg * v
+        recs.append({"what": t["what"], "kind": k, "sign": sg, "m2": _r(v), "edges": t["edges"], "edge_kind": ek})
+    if tot <= 0:
+        raise InputsError(f"{where}: the terms add to {tot} m2")
+    return tot, recs
+
+
 def _derived_area(p, where):
     """a piece cut by a drawn curve: face_m2 less the exact outlines it borders. -> (area, residual record)."""
     dv = p["derived"]
     face = dv.get("face_m2")
     if not (_num(face) and face > 0) or not dv.get("face_source"):
         raise InputsError(f"{where}: derived.face_m2 > 0 with its source")
+    ek = dv.get("face_edge_kind")
+    if ek == FRAME_LINE:
+        raise InputsError(f"{where}: the derived face is walked along a window-frame line inside a glazed band: a "
+                          f"floor face stops at the band's court face ({RULE_BAND[0]})")
+    if ek is not None and ek not in EDGE_KINDS:
+        raise InputsError(f"{where}: face_edge_kind {ek!r} not one of {EDGE_KINDS}")
+    con = dv.get("construction")
+    if con is not None:
+        c, _t = terms_area(con.get("terms"), where, floor_face=True)
+        if abs(c - face) > DERIVED_TOL_M2:
+            raise InputsError(f"{where}: derived.face_m2 {face} != its drawn construction {_r(c)} m2")
     less = dv.get("less") or []
     if not less:
         raise InputsError(f"{where}: derived.less names the exact outline(s) the face is cut by")
@@ -285,6 +346,10 @@ def load_inputs(doc, project_id=None):
         if not h.get("what") or not h.get("edges"):
             raise InputsError("face: each hole names what it is and its drawn edges")
         d_outline(h.get("r_m"), h.get("straight_m"), h.get("width_m"))
+    for x in face.get("reveal_strips") or ():
+        _reveal_strip(x)
+    for x in face.get("reading_residuals") or ():
+        _reading_residual(x)
     pieces = doc.get("pieces") or []
     if not pieces:
         raise InputsError("no pieces")
@@ -328,6 +393,33 @@ def load_inputs(doc, project_id=None):
 
 
 # ================================================================================================ closure
+def _reveal_strip(x):
+    """a strip of the face that is another element's scope (R-T343-1: the recess between a glazed band's court face and
+    its frame line = the opening's reveal strip): m2 from its own drawn construction, > 0, with the scope that owns it.
+    -> record."""
+    w = f"reveal strip {x.get('what')!r}"
+    for k in ("what", "scope", "edges", "held_with"):
+        if not x.get(k):
+            raise InputsError(f"{w}: {k} required (the scope that owns it; never deck, never 0)")
+    a, recs = terms_area((x.get("construction") or {}).get("terms"), w)
+    m = x.get("m2")
+    if not (_num(m) and m > 0) or abs(m - a) > DERIVED_TOL_M2:
+        raise InputsError(f"{w}: m2 {m!r} must be > 0 and its construction {_r(a)} m2")
+    return {"what": x["what"], "scope": x["scope"], "held_with": x["held_with"], "edges": x["edges"], "m2": _r(a),
+            "terms": recs, "rule_id": RULE_BAND[0], "rule_version": RULE_BAND[1]}
+
+
+def _reading_residual(x):
+    """a named residual of the face's polygon reading: tessellated - exact of one curved stretch. -> record."""
+    w = f"reading residual {x.get('what')!r}"
+    t, e = x.get("tessellated_m2"), x.get("exact_m2")
+    if not x.get("what") or not x.get("basis") or not (_num(t) and _num(e) and t > 0 and e > 0):
+        raise InputsError(f"{w}: what, basis, tessellated_m2 > 0 and exact_m2 > 0")
+    if abs(t - e) > CLOSURE_TOL_MAX:
+        raise InputsError(f"{w}: residual {_r(t - e)} m2 is beyond {CLOSURE_TOL_MAX}: not a tessellation residual")
+    return {"what": x["what"], "basis": x["basis"], "tessellated_m2": t, "exact_m2": _r(e), "residual_m2": _r(t - e)}
+
+
 def closure(doc):
     """the plan pieces re-added against the face less its holes (exact outlines). -> record (raises beyond tol)."""
     f = doc["face"]
@@ -337,16 +429,22 @@ def closure(doc):
         t = h.get("tessellated_m2")
         holes.append({"what": h["what"], "edges": h["edges"], "exact_m2": _r(a), "exact_perimeter_m": _r(per),
                       "tessellated_m2": t, "tessellation_residual_m2": _r(t - a) if _num(t) else None})
-    net = f["filled_m2"] - sum(h["exact_m2"] for h in holes)
+    strips = [_reveal_strip(x) for x in f.get("reveal_strips") or ()]
+    resid = [_reading_residual(x) for x in f.get("reading_residuals") or ()]
+    net = (f["filled_m2"] - sum(r["residual_m2"] for r in resid) - sum(h["exact_m2"] for h in holes)
+           - sum(x["m2"] for x in strips))
     plan = sum(p["area_m2"] for p in doc["pieces"] if p["kind"] == "PLAN")
     diff = plan - net
     if abs(diff) > f["closure_tol_m2"] + TOL:
         raise InputsError(f"face {f['face_id']}: plan pieces {_r(plan)} m2 != face {f['filled_m2']} less holes "
-                          f"{_r(sum(h['exact_m2'] for h in holes))} = {_r(net)} m2 (difference {_r(diff)} m2 beyond "
-                          f"{f['closure_tol_m2']}): a piece is missing or counted twice")
+                          f"{_r(sum(h['exact_m2'] for h in holes))} less reveal strips "
+                          f"{_r(sum(x['m2'] for x in strips))} (reading residuals "
+                          f"{_r(sum(r['residual_m2'] for r in resid))}) = {_r(net)} m2 (difference {_r(diff)} m2 "
+                          f"beyond {f['closure_tol_m2']}): a piece is missing or counted twice")
     ref = f.get("reference_total_m2")
     return {"face_id": f["face_id"], "filled_m2": f["filled_m2"], "filled_source": f["filled_source"],
-            "holes": holes, "face_net_exact_m2": _r(net), "plan_pieces_m2": _r(plan),
+            "holes": holes, "reveal_strips": strips, "reading_residuals": resid,
+            "face_net_exact_m2": _r(net), "plan_pieces_m2": _r(plan),
             "difference_m2": _r(diff), "tolerance_m2": f["closure_tol_m2"],
             "reference_total_m2": ref, "reference_source": f.get("reference_source"),
             "vs_reference_m2": _r(plan - ref) if _num(ref) else None,
@@ -375,7 +473,12 @@ def piece_line(pid, rev, docs, p, src):
     en, ar, tr = _item(p["item_code"])
     held = p["material_status"] == "HELD"
     res = _derived_area(p, f"piece {p['piece']}")[1] if p.get("derived") else None
-    rec = dict({"policy": PIECES["OUTDOOR_FLOOR"]["policy"], "piece": p["piece"], "kind": p["kind"],
+    dv = p.get("derived") or {}
+    con = (terms_area(dv["construction"].get("terms"), f"piece {p['piece']}", floor_face=True)[1]
+           if dv.get("construction") else None)
+    rec = dict({"face_construction": con, "face_edge_kind": dv.get("face_edge_kind"),
+                "polygon_reading": dv.get("polygon_reading"),
+                "rules_applied": [RULE[0]] + ([RULE_BAND[0]] if dv.get("face_edge_kind") or con else []),"policy": PIECES["OUTDOOR_FLOOR"]["policy"], "piece": p["piece"], "kind": p["kind"],
                 "record_state": "ADD", "area_m2": _r(a), "area_status": p["area_status"],
                 "area_basis": p["area_basis"][:400], "edges": p["edges"][:400], "derived": res,
                 "material": p["material"], "material_status": p["material_status"],
@@ -712,6 +815,14 @@ def closure_csv(clo, doc):
         rows.append({"kind": "HOLE_EXACT", "what": h["what"], "m2": h["exact_m2"],
                      "note": f"edges {h['edges']}; tessellated {h['tessellated_m2']}, residual "
                              f"{h['tessellation_residual_m2']}"})
+    for x in clo.get("reveal_strips") or ():
+        rows.append({"kind": "REVEAL_STRIP", "what": x["what"], "m2": x["m2"],
+                     "note": (f"{x['scope']}; held with {x['held_with']}; {x['rule_id']}; "
+                              + " ".join(f"{'+' if t['sign'] > 0 else '-'}{t['what']} {t['m2']}" for t in x["terms"])
+                              + f"; edges {x['edges']}")[:600]})
+    for r in clo.get("reading_residuals") or ():
+        rows.append({"kind": "READING_RESIDUAL", "what": r["what"], "m2": r["residual_m2"],
+                     "note": f"tessellated {r['tessellated_m2']} - exact {r['exact_m2']}; {r['basis']}"[:600]})
     for p in doc["pieces"]:
         rows.append({"kind": f"PIECE_{p['kind']}", "what": p["piece"], "m2": p["area_m2"],
                      "note": f"{p['item_code']}; {p['area_status']}; {p['material']} {p['material_status']}"})

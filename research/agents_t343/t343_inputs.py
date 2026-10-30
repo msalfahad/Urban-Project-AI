@@ -10,10 +10,20 @@ Checker-merged ledgers, each pinned by sha256 (an edited ledger stops the build)
         beside it): research/agents_t183/T-183_POOL_RC.md, the pool D outlines and the NW elevation cut levels.
 
 Every area is read from the merged CSVs (no figure is typed here except the D radii / straights / backs, which are
-the drawn ARC / LINE lengths both merged ledgers print, and the T-071 tessellated hole they name). The pool deck is
-the T-157 pool court face 17.3414 m2 less the EXACT outer D cut at the boundary-wall face (ARC 200 r 1750 + LINEs
-204 / 206 1550, back 3.50 on the wall face) = 10.235564 m2: 7.105837 m2 (T-342 7.1094 used the T-071 tessellated hole
-10.232: residual -0.003564 m2, named). Drawing references are Drive titles and DXF entity handles only.
+the drawn ARC / LINE lengths both merged ledgers print, and the T-071 tessellated hole they name).
+
+r2 (D-T343-1, Checker Gate B 2026-10-29 23:05, own re-read of the DXF handles 2026-10-30): the pool deck face stops at
+the COURT face of the 0.20 curved glazed band (ARC 201, r 2.25, the printed 657 line, owner Q-38 A), not at the
+window-frame line W 280 (r 2.33, its straights 0.08 inside the house face) that the T-157 polygon walked (rule
+R-T343-1). Its face is built from the drawn terms: rectangle 1.80 x 5.60 (house east face LINEs 94 / 95 / 96 on the
+chord, boundary-wall inner face LINE B7, south face LINE E2, house north-face line 2BC) + the band segment r 2.25
+beyond the chord at 0.25 from the pool centre - column LWPOLYLINE 2F87 0.50 x 0.25 = 16.784476 m2; less the EXACT
+outer D cut at the boundary-wall face (ARC 200 r 1750 + LINEs 204 / 206 1550, back 3.50 on the wall face, DIMENSION
+6A1 3500) 10.235564 = 6.548912 m2. The recess between the band face and the frame line (segment r 2.33 at 0.33 +
+0.08 x 4.95 - segment r 2.25 at 0.25 = 0.561577 m2) is the glazing reveal strip SX-02 of the merged T-127 / T-154
+ledgers (one surface, one line, HELD there): named in the closure, never deck, never 0, not a line here. The T-157
+polygon 17.3414 is the frame-walked face 17.346053 read with a -0.004653 m2 tessellation residual (named). Drawing
+references are Drive titles and DXF entity handles only.
 
     python3 -I research/agents_t343/t343_inputs.py            # prints the pieces and the declared totals
 """
@@ -51,12 +61,39 @@ OUTER_D = {"what": "pool outer D cut at the boundary-wall face", "r_m": 1.75, "s
 WATER_D = {"r_m": 1.55, "straight_m": 1.55, "width_m": 3.10,
            "edges": f"{DRIVE_ARCH}: ARC 202 (r 1550, 90 -> 270 deg) + LINEs 203 / 205 (1550 each), back 3.10 on the "
                     "pool back wall face"}
+# the deck face and the SX-02 strip, from the drawn terms (DXF handles of P7757.dxf; lengths in m, as printed / drawn)
+DECK_FACE_TERMS = [
+    {"what": "court rectangle 1.80 x 5.60", "kind": "RECT", "a_m": 1.80, "b_m": 5.60, "sign": 1, "edge_kind": "DRAWN_LINE",
+     "edges": "house east face LINEs 94 / 95 / 96 (chord) to boundary-wall inner face LINE B7; south face LINE E2 to "
+              "house north-face line 2BC"},
+    {"what": "band segment r 2.25 beyond the chord at 0.25", "kind": "SEGMENT", "r_m": 2.25, "d_m": 0.25, "sign": 1,
+     "edge_kind": "BAND_COURT_FACE",
+     "edges": "ARC 201 (layer 5, r 2250, 96.38 -> 263.62 deg, concentric with the pool ARCs 200 / 202): the glazed "
+              "band's court face, the printed 657 line (owner Q-38 A)"},
+    {"what": "column 0.50 x 0.25", "kind": "RECT", "a_m": 0.50, "b_m": 0.25, "sign": -1, "edge_kind": "DRAWN_LINE",
+     "edges": "LWPOLYLINE 2F87 (S-COL.BON), inside the rectangle"},
+]
+SX02_TERMS = [
+    {"what": "frame segment r 2.33 beyond its straights at 0.33", "kind": "SEGMENT", "r_m": 2.33, "d_m": 0.33, "sign": 1,
+     "edge_kind": "FRAME_LINE", "edges": "LWPOLYLINE W 280 bulge 0.86711 (chord 4.613, r 2330)"},
+    {"what": "strip 0.08 x 4.95 between the house face and the frame straights", "kind": "RECT", "a_m": 0.08,
+     "b_m": 4.95, "sign": 1, "edge_kind": "FRAME_LINE",
+     "edges": "LWPOLYLINE W 280 straights (x 0.08 inside LINEs 94 / 95 / 96; y +2.500 .. -2.450 about the pool centre)"},
+    {"what": "band segment r 2.25 beyond the chord at 0.25", "kind": "SEGMENT", "r_m": 2.25, "d_m": 0.25, "sign": -1,
+     "edge_kind": "BAND_COURT_FACE", "edges": "ARC 201 (r 2250)"},
+]
 OUTDOOR_RULE = ("OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 (answers OQ-04) with the owner decisions 23:20: chalet court "
                 "INTERLOCK, owner choice over the renders")
 SIDES_RULE = ("OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 owner addition 20:45: the sides are part of the house, porcelain / "
               "ceramic, never interlock")
 STAIR_RULE = ("UP-STAIR-001 (marble on the tread, riser AND landing of every stair assembly, external steps "
               "included); OWNER_RULE_OUTDOOR_FLOORS (outside stairs marble)")
+
+
+sys.path.insert(0, str(ROOT))
+from engine.source import arch_v3025 as A  # noqa: E402
+
+SX02 = A.terms_area(SX02_TERMS, "SX-02")[0]                                            # 0.561577
 
 
 def _sha(p):
@@ -112,7 +149,8 @@ def build(project_id=None):
             "note": "covers open court + porch + north side walk 151.234 (-0.566, -0.37 %): AGREE / RULE_DIFFERENCE "
                     "(T-157); no pool deck, no side passage in his yard"}
     court_face = _f(a["OD-07"]["hand_formula"].split("face ")[1].split(" ")[0])        # 17.3414 (T-157 polygon)
-    deck = court_face - (3.141592653589793 * 1.75 ** 2 / 2 + 3.50 * 1.55)
+    deck_face = A.terms_area(DECK_FACE_TERMS, "deck face", floor_face=True)[0]          # 16.784476 (band face)
+    deck = deck_face - (3.141592653589793 * 1.75 ** 2 / 2 + 3.50 * 1.55)
     t342_deck = _f(s[("GF-COURT", "pool deck")]["quantity"])
     pieces = [
         _piece("WEST-OPEN", "EXT.PAVING.INTERLOCK", _f(a["OD-01"]["drawn_m2"]), a["OD-01"], material="interlock",
@@ -139,13 +177,22 @@ def build(project_id=None):
                              "m2": _f(a["OD-06M"]["hand_m2"])}, freelancer=yard),
         _piece("POOL-DECK", "EXT.FLOOR.OUTDOOR", deck, a["OD-07"], material="undecided", ms="HELD",
                item="owner: pool deck finish (OWNER_RULE_OUTDOOR_FLOORS: pool deck HELD, undecided)",
-               basis=(f"OD-07 pool court deck: the T-157 pool court face {court_face} m2 less the exact outer D cut "
-                      f"at the boundary-wall face (corrected by T-342 from the T-157 circle r 1.75, 9.4022; T-342 "
-                      f"{t342_deck} took the T-071 tessellated hole 10.232)"),
-               edges=(f"{DRIVE_ARCH}: pool court face cut by T-157 along the drawn lines (curved GF glazing, 1F edge "
-                      f"band at the mouth, boundary-wall inner face); hole {OUTER_D['edges']}"),
-               derived={"face_m2": court_face, "face_source": "T-157 AREAS_T157.csv OD-07 pool court face (CAD "
-                                                              "polygon, DRAWING-CONFIRMED, merged)",
+               basis=(f"OD-07 pool court deck (r2, R-T343-1): the pool court face to the glazed band's court face "
+                      f"(ARC 201 r 2.25) {round(deck_face, 6)} m2 less the exact outer D cut at the boundary-wall face "
+                      f"(T-157 {court_face} walked the frame line W 280: + SX-02 reveal strip {round(SX02, 6)}, "
+                      f"named in the closure; T-342 {t342_deck} took the T-071 tessellated hole 10.232; T-157 first "
+                      f"used a circle r 1.75)"),
+               edges=(f"{DRIVE_ARCH}: house east face LINEs 94 / 95 / 96, boundary-wall inner face LINE B7, south "
+                      f"face LINE E2, house north-face line 2BC, glazed band court face ARC 201 (r 2250), column "
+                      f"LWPOLYLINE 2F87; hole {OUTER_D['edges']}"),
+               derived={"face_m2": round(deck_face, 6), "face_edge_kind": "BAND_COURT_FACE",
+                        "face_source": ("drawn construction from DXF handles (Checker Gate B T-343 2026-10-29 23:05 "
+                                        "own construction = T-127 hand 6.8295 for the band segment; re-read from the "
+                                        "handles by worker 3 on 2026-10-30)"),
+                        "construction": {"terms": DECK_FACE_TERMS},
+                        "polygon_reading": {"m2": court_face, "edge_kind": "FRAME_LINE",
+                                            "source": "T-157 AREAS_T157.csv OD-07 (CAD polygon along W 280): not "
+                                                      "used; = band face + SX-02 - 0.004653 tessellation"},
                         "less": [dict(OUTER_D)]}, task="T-342"),
     ]
     pool = {"element_id": "GF-POOL-WATER#FINISH", "floor": "GF", "water_outline": dict(WATER_D),
@@ -178,7 +225,21 @@ def build(project_id=None):
                      "filled_source": ("T-157 open face inside the plot boundary-wall inner faces, 177.1154 m2 (T-157 "
                                        "polygon of the GF plan = T-153 177.115; T-071 filled 177.299 closes the face "
                                        "with a 0.232 m closure line instead, not used)"),
-                     "holes": [dict(OUTER_D)], "closure_tol_m2": 0.005, "reference_total_m2": 166.883,
+                     "holes": [dict(OUTER_D)],
+                     "reveal_strips": [{"what": "SX-02 recess in front of the curved glazing frame (pool court)",
+                                        "scope": ("openings / glazing reveal strip (T-127 0.561 / T-154 0.5609 merged: "
+                                                  "one surface one line, HELD there with T-123); R-T343-1"),
+                                        "held_with": "T-154 glazing reveal strip SX-02 (HELD), not a floor line here",
+                                        "edges": (f"{DRIVE_ARCH}: frame LWPOLYLINE W 280 (bulge r 2330, straights "
+                                                  "0.08 inside the house face), band court face ARC 201 (r 2250), "
+                                                  "house east face LINEs 94 / 95 / 96 (chord)"),
+                                        "construction": {"terms": SX02_TERMS}, "m2": round(SX02, 6)}],
+                     "reading_residuals": [{"what": "T-157 pool court face polygon along the curved frame line W 280",
+                                            "tessellated_m2": court_face, "exact_m2": round(deck_face + SX02, 6),
+                                            "basis": ("T-157 OD-07 polygon 17.3414 vs the exact frame-walked face = "
+                                                      "band face construction + SX-02 (inside the T-157 filled face "
+                                                      "177.1154)")}],
+                     "closure_tol_m2": 0.005, "reference_total_m2": 166.883,
                      "reference_source": "T-342 SCOPES_T342.csv / T-342 report: 6 pieces 166.883 = 177.115 - 10.232 "
                                          "(tessellated hole)"},
             "pieces": pieces, "pool_finish": pool, "cross_check": CROSS_CHECK,
