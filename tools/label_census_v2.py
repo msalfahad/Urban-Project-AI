@@ -56,6 +56,9 @@ STATUSES = ("MEASURED", "HELD", "UNSUPPORTED", "ACCOUNTED_BY_BINDING", "SILENT_O
 BINDINGS = ("BOUND", "PARTIAL", "MISSING", "NOT_APPLICABLE")
 ROW_BINDINGS = BINDINGS + ("DUPLICATE_OF", "MISSING_NO_FACE")
 SCOPE_STATUS = ("BOUND", "NOT_APPLICABLE", "MISSING")
+# T-212 P1 (T-379): a read-only census; it emits one status row per label and never a BOQ quantity (its CLI reads lines
+# from a guarded run of tools/urban_boq_m9.py and writes only the census JSON), so no default guard is due here.
+DEFAULT_GUARD_CLASS = "CHECK_ONLY"
 
 
 # ---- vocabulary --------------------------------------------------------------------------------------------------

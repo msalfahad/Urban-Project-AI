@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 32 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1879 | pytest suites, one folder per round. |
+| `tests/` | 1881 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -796,7 +796,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `kb_build_1_8.py` | 141 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.8.0 BUILDER (board task T-081 rework) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json is the |
 | `kb_index.py` | 178 | MEDIUM | 0 | KNOWLEDGE SOURCE INDEX (M9 Phase 2B-1) - one generated inventory of every place an owner rule, owner fact, |
 | `label_census.py` | 188 | MEDIUM | 3 | LABEL CENSUS (T-004a): every room label of a plan drawing against what the architectural route made of it. |
-| `label_census_v2.py` | 355 | MEDIUM | 2 | LABEL CENSUS V2 (T-344): the label census read with the compound room vocabulary and the merged label binding. |
+| `label_census_v2.py` | 358 | MEDIUM | 2 | LABEL CENSUS V2 (T-344): the label census read with the compound room vocabulary and the merged label binding. |
 | `lineage_chain.py` | 101 | MEDIUM | 1 | §5, §6. The real 6C -> 6D -> 6E lineage, from the frozen bundles. |
 | `live_smoke.py` | 95 | MEDIUM | 0 | LIVE smoke test of every agent on real Urban Projects inputs. Cheap models for |
 | `m1_report.py` | 285 | CRITICAL | 1 | M1 BOQ REPORT - the printable HTML summary of one urban_structural_boq run (a view; it computes nothing new). |
@@ -1288,6 +1288,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t371_shape_census/` | 1 |
 | `tests/t373_lap_binding/` | 1 |
 | `tests/t377_arched_audit/` | 1 |
+| `tests/t379_census_guard_class/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
