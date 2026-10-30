@@ -1,0 +1,138 @@
+{
+ "door_exposure_held_range_m": [
+  0.0,
+  73.1
+ ],
+ "double_count_vs_reveal_and_sill_ledgers_m": 0.0,
+ "dxf_sha256_8": "ab54dd55",
+ "edges": 93,
+ "exposed_by_type_m": {
+  "EXTERNAL_CORNER": 24.35,
+  "FLAT_STOP": 7.3,
+  "WALL_END": 7.3
+ },
+ "exposed_determinate_m": 38.95,
+ "finish": {
+  "alternative_MITRED_45_DEGREE_EDGE": 38.95,
+  "alternative_STEEL_EDGE_PROFILE": 38.95,
+  "choice": "HELD",
+  "status": "EDGE_FINISH_NOT_ESTABLISHED (UP-CER-007: alternatives on the same m.l, never summed)"
+ },
+ "freelancer": {
+  "basis": "no edge / profile / 45-degree row in his finishes workbook (cover: floors, skirting, walls, stairs, decor, cornices, waterproofing)",
+  "rows": 0
+ },
+ "held_edge_count": 27,
+ "not_exposed_listed_m": 376.557,
+ "rooms": {
+  "1F-02": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-a34d09209fb5aad3eb63"
+  },
+  "1F-03": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-88ed2535c1975adb702e"
+  },
+  "1F-07": {
+   "exposed_m": 10.05,
+   "held_edges": 2,
+   "held_hi_m": 10.5,
+   "line_id": "L-b2077eee5a71a975bd74"
+  },
+  "1F-08": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-1090bb5c8226afec2235"
+  },
+  "1F-09": {
+   "exposed_m": 3.35,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-086e72207311265f81ab"
+  },
+  "1F-12": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-82cd58d4a16fb94ddfc6"
+  },
+  "2F-02": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-065bafe1b98e3a43881c"
+  },
+  "GF-02": {
+   "exposed_m": 0.0,
+   "held_edges": 3,
+   "held_hi_m": 0.0,
+   "line_id": "L-d0858b30e0ea869bd047"
+  },
+  "GF-03": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 0.0,
+   "line_id": "L-96d9839bd3bca4c08a67"
+  },
+  "GF-05": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 0.0,
+   "line_id": "L-88c11c5d8dc1dfd7c27e"
+  },
+  "GF-06": {
+   "exposed_m": 0.0,
+   "held_edges": 5,
+   "held_hi_m": 0.0,
+   "line_id": "L-c330b8dc47261d5ada7e"
+  },
+  "GF-07": {
+   "exposed_m": 10.95,
+   "held_edges": 1,
+   "held_hi_m": 5.4,
+   "line_id": "L-f5c5a1a9c9ee2b644cb5"
+  },
+  "GF-10": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 0.0,
+   "line_id": "L-1341e0410a469089c3be"
+  },
+  "GF-11": {
+   "exposed_m": 0.0,
+   "held_edges": 2,
+   "held_hi_m": 0.0,
+   "line_id": "L-de4088e7012e655bb071"
+  },
+  "GF-12": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-c34694477f67800ae2e3"
+  },
+  "GF-13": {
+   "exposed_m": 3.65,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-a3cb2c8a9b6080769ebc"
+  },
+  "GF-14": {
+   "exposed_m": 10.95,
+   "held_edges": 2,
+   "held_hi_m": 10.4,
+   "line_id": "L-fa408571a8adcfaf1a1f"
+  },
+  "GF-16": {
+   "exposed_m": 0.0,
+   "held_edges": 1,
+   "held_hi_m": 5.2,
+   "line_id": "L-ca4e74c59364f665b102"
+  }
+ },
+ "task": "T-368"
+}
