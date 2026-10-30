@@ -12,7 +12,12 @@ file pinned by sha256 (an edited ledger stops the build):
   research/agents_t325/SILL_THRESHOLD_LEDGER_T325.csv   T-325 (MERGED 98f50f0f, Verifier 2026-10-29 04:59 UTC Gate A
       PASS): the second, independent read of every external sill / floor-level threshold (must equal T-313 row by
       row, else the build stops) and the T-325 correction of T-313's five 'no line' doors: each DOES carry a BLOCKED
-      ARCH.THRESHOLD closure strip = the FLOOR face of that door; the reveal (jambs + head) faces stay unlined.
+      ARCH.THRESHOLD closure strip = the FLOOR face of that door; the reveal (jambs + head) faces stay unlined;
+  research/agents_t326/ARCHED_REVEAL_CORRECTION_T326.csv   T-326 r2 (D-T326-1, rule R-T326-2): the OUTSIDE jambs and
+      head of the ARCHED windows W15 / W16 / W26 on the T-238 opening-line outline (jambs to the springing, head on the
+      developed arch) instead of the band-crown rectangle the T-313 ledger carries; built by build_arched_correction.py
+      from the pinned T-313 ledger and research/agents_t238/summary.json (T-238 MERGED 242e50b2); each corrected row
+      must still show the T-313 figure it replaces (else the build stops); the merged T-313 file is never edited.
 
 Records (nothing typed: every figure is read from the merged files):
 
@@ -46,10 +51,14 @@ LED = ROOT / "research/agents_t313/REVEAL_LEDGER_T313.csv"
 FAM = ROOT / "research/agents_t313/FAMILY_SEARCH_T313.csv"
 DPR = ROOT / "research/agents_t313/DOOR_PLASTER_RECONCILIATION_T313.csv"
 STL = ROOT / "research/agents_t325/SILL_THRESHOLD_LEDGER_T325.csv"
+ARC = ROOT / "research/agents_t326/ARCHED_REVEAL_CORRECTION_T326.csv"
+T238 = ROOT / "research/agents_t238/summary.json"
 PINS = {LED: "2cfa42112aa470c8792d4abe07c9b7471ceecd526974dcd2276dacbff5598730",
         FAM: "6cc2c8f5723d0473c470a0af40be8596441b20463f55103f2b35ca2f24570437",
         DPR: "9c010fc31a762c18cd9b6f0ed7d9b34603e70ea5486cc85a9d5e5c4735a61c63",
-        STL: "ef6f2cb0c0d7619e37f985947a82f1834a948995033af12e73d129bae54e7b68"}
+        STL: "ef6f2cb0c0d7619e37f985947a82f1834a948995033af12e73d129bae54e7b68",
+        ARC: "7cbe36f93ab863fe190d102747d89bf34a017ce1f742f11140bc4729225a1eac",
+        T238: "84b5b1f8c368ef8f051c1577c9656537d969e0261377c8a849b122d9d2fda438"}
 SOURCES = {
     "T-313": {"merge_commit": "5f2bf0d5b5b981b13ecc9e58ec07058f3644f7ae",
               "checker_run": "Verifier 2026-10-29 01:24 UTC: T-313 r2 Gate A PASS, MERGED 5f2bf0d5 (D-GF-07 at the "
@@ -57,6 +66,10 @@ SOURCES = {
     "T-325": {"merge_commit": "98f50f0ff72bdf13d2ede3ee9ad5b91d17fbfbb4",
               "checker_run": "Verifier 2026-10-29 04:59 UTC: T-325 Gate A PASS, MERGED 98f50f0f (sills / thresholds "
                              "ledger; the five T-313 no-line doors re-located in their BLOCKED closure strips)"},
+    "T-238": {"merge_commit": "242e50b28ce43ee2e7ee07077ea4bfcdcb134c20",
+              "checker_run": "Verifier 2026-10-23 22:50 UTC: T-238 Gate A PASS, MERGED 242e50b2 (arched openings on "
+                             "the opening line: W15 / W16 / W26 outlines DRAWING-CONFIRMED; Checker re-walk 2026-10-30 "
+                             "15:35 under T-326: arch chain 2.5240 / 1.9706 m, springing 2.1609 / 1.05 m)"},
 }
 TOL = 1e-9
 SILL_COMPONENTS = ("SILL", "THRESHOLD", "FLOOR_STRIP")
@@ -98,11 +111,43 @@ def _evidence(r):
     return "DRAWING-CONFIRMED" if ev.startswith("DRAWING-CONFIRMED") else ev
 
 
+def _pinned_bytes(p):
+    b = p.read_bytes()
+    h = hashlib.sha256(b).hexdigest()
+    if h != PINS[p]:
+        raise PinError(f"{p.name}: sha256 {h[:12]} is not the pinned file {PINS[p][:12]} (edited ledger)")
+    return b
+
+
+def arched():
+    """-> (outlines, corrections): the T-238 DRAWING-CONFIRMED arched outlines and the R-T326-2 correction rows,
+    each correction re-derived from the outline and its depth (a correction that is not 2 x d x springing / d x
+    developed arch stops the build)."""
+    outl = json.loads(_pinned_bytes(T238).decode("utf-8"))["outlines"]
+    outlines = {op: {"shape": "ARCHED", "width_m": o["width_m"], "spring_m": o["spring_m"], "crown_m": o["crown_m"],
+                     "arch_length_m": o["arch_length_m"], "status": o["status"], "source_task": "T-238"}
+                for op, o in sorted(outl.items()) if o.get("status") == "DRAWING-CONFIRMED"}
+    corr = {}
+    for r in _rows(ARC):
+        op, d = r["opening"], float(r["depth_m"])
+        o = outlines.get(op)
+        if o is None:
+            raise PinError(f"{op}: correction without a DRAWING-CONFIRMED T-238 outline")
+        want = 2 * d * o["spring_m"] if r["component"] == "JAMBS" else d * o["arch_length_m"]
+        if r["component"] not in ("JAMBS", "HEAD") or abs(float(r["m2"]) - want) > TOL:
+            raise PinError(f"{op} {r['component']}: {r['m2']} m2 is not the T-238 outline value {want}")
+        corr[(op, r["side"], r["component"])] = r
+    return outlines, corr
+
+
 def build(project_id=None):
     led, fam, dpr, stl = _rows(LED), _rows(FAM), _rows(DPR), _rows(STL)
+    outlines, corr = arched()
     src = [dict(task="T-313", file=str(p.relative_to(ROOT)), sha256=PINS[p], **SOURCES["T-313"])
            for p in (LED, FAM, DPR)] + [dict(task="T-325", file=str(STL.relative_to(ROOT)), sha256=PINS[STL],
-                                             **SOURCES["T-325"])]
+                                             **SOURCES["T-325"])] + [
+        dict(task="T-238", file=str(T238.relative_to(ROOT)), sha256=PINS[T238], **SOURCES["T-238"])]
+    used = set()
     fam_floor = {}
     carried = []
     for f in fam:
@@ -124,7 +169,18 @@ def build(project_id=None):
             t325[s["opening"]] = s
     by = defaultdict(list)
     for r in led:
+        k = (r["opening"], r["side"], r["component"])
+        if k in corr:                    # R-T326-2: the arched outline replaces the band-crown rectangle
+            c = corr[k]
+            if (r["m2"], r["ml"], r["basis"], r["state"]) != (c["ledger_m2"], c["ledger_ml"], c["ledger_basis"],
+                                                              "MEASURED"):
+                raise PinError(f"{k}: the T-313 row is not the one the correction replaces (stale correction)")
+            r = dict(r, m2=c["m2"], ml=c["ml"], basis=c["basis"],
+                     evidence=f"{r['evidence']} (outline T-238 MERGED {c['outline_merge']}, R-T326-2)")
+            used.add(k)
         by[r["opening"]].append(r)
+    if used != set(corr):
+        raise PinError(f"corrections not applied: {sorted(set(corr) - used)}")
     dp = {d["opening"]: d for d in dpr}
     fills, adds, narrow = [], [], []
     for op, rows in sorted(by.items()):
@@ -161,7 +217,11 @@ def build(project_id=None):
                      for r in rs]
             adds.append({"opening": op, "kind": kind, "floor": floor, "side": side, "item_code": item, "group": group,
                          "status": "VALUED" if valued else "HELD", "components": comps,
-                         "rooms": rows[0]["room"], "source_task": "T-313"})
+                         "rooms": rows[0]["room"], "source_task": "T-313",
+                         **({"outline": outlines[op]} if op in outlines and group == "JAMBS_HEAD" else {}),
+                         **({"correction": {"file": str(ARC.relative_to(ROOT)), "sha256": PINS[ARC],
+                                            "rule_id": "R-T326-2", "outline_task": "T-238"}}
+                            if any((op, side, r["component"]) in corr for r in rs) else {})})
     for op in ("D-GF-07",):
         d = dp[op]
         jh = [r for r in by[op] if r["component"] in ("JAMBS", "HEAD")]
@@ -174,7 +234,7 @@ def build(project_id=None):
                        "basis": f"door h {d['ledger_h']} PRINTED (T-313 r2 re-measure): 2 x {d['ledger_t']} x "
                                 f"{d['ledger_h']} + {d['ledger_t']} x {d['ledger_w']}", "source_task": "T-313"})
     doc = {"schema": "URBAN_V3028_INPUTS_V1", "project_id": project_id, "unit": "m2", "sources": src,
-           "fills": fills, "narrow": narrow, "adds": adds, "carried": carried}
+           "fills": fills, "narrow": narrow, "adds": adds, "carried": carried, "outlines": outlines}
     return doc
 
 

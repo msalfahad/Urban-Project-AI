@@ -29,9 +29,11 @@ def test_counts_and_m2(doc):
     assert (s["fills"], s["fill_m2"]) == (26, 2.9294)                      # 22 raised sills 2.5214 + 4 thresholds 0.408
     assert s["narrow"] == [("D-GF-07", {"low": 1.28, "high": 1.4}, 1.4)]
     assert (s["adds_valued"], s["adds_held"]) == (33, 10)
-    assert s["added_m2_by_item"] == {"ARCH.WINDOW_REVEAL JAMBS_HEAD": 9.667, "ARCH.WINDOW_REVEAL SILL": 0.04,
+    # r2 (D-T326-1, R-T326-2): the T-313 r2 missing scope 13.637 m2 less the three arched windows' band-crown
+    # rectangles (W15 / W16 0.620 -> 0.547688, W26 0.460 -> 0.40709: -0.197534 m2)
+    assert s["added_m2_by_item"] == {"ARCH.WINDOW_REVEAL JAMBS_HEAD": 9.469466, "ARCH.WINDOW_REVEAL SILL": 0.04,
                                      "FIN.PLASTER JAMBS_HEAD": 3.93}
-    assert round(sum(s["added_m2_by_item"].values()), 6) == 13.637            # T-313 r2 missing scope
+    assert round(sum(s["added_m2_by_item"].values()), 6) == round(13.637 - 0.197534, 6)
 
 
 def test_each_face_once_and_loads(doc):

@@ -22,6 +22,12 @@ the head soffit, the sill (raised window, outside) or the floor-level threshold,
             ONE BLANK line naming each face (never 0). No new item code: every face sits in a family the registry
             already names.
 
+R-T326-2 (T-326 r2, every villa): the reveal of an ARCHED (or curved-head) opening = 2 x d x springing height (the jambs
+stop at the springing) + d x developed arch length (the head soffit follows the arch), read from the opening's OUTLINE
+record (inputs 'outlines', a merged arched-opening census such as T-238); a valued jambs / head face of an opening that
+has an outline record and does not equal that value (e.g. booked on the enclosing or band-crown rectangle 2 x d x crown
++ d x width) is refused. A rectangular opening (no outline record) is unchanged.
+
 Refused (InputsError / ValueError, nothing written): a FILL on a line that is not a blank ARCH.WINDOW_REVEAL line, or a
 second window on one line, or a fill with no measured external surface; a NARROW whose figure is outside the line's
 bound or whose line is not the stated bound; an ADD of a face that a candidate line already carries (the 22 door reveals
@@ -70,6 +76,8 @@ ROLLBACK = A30.ROLLBACK
 InputsError = A3015.InputsError
 _r = A3018._r
 RULE_ID, RULE_VERSION = "R-T326-1", "T-326"
+ARCH_RULE_ID = "R-T326-2"      # T-326 r2 (D-T326-1): an arched opening's reveal follows its outline, never a rectangle
+OUTLINE_SHAPES = ("ARCHED",)
 UNIT = "m2"
 PIECE = "OPENING_REVEAL_FILL"
 REC_KEY = "opening_reveal_v3028"
@@ -98,7 +106,8 @@ PIECES = {
                         "item)", "UP-FIN-PLASTER-001 (door reveal through the wall: 2 x t x h + t x w, PROVISIONAL "
                         "until the frame detail)", "Q-32 A", "Q-55 C (door height 2.20 where none is printed: "
                         "ASSUMED - OWNER-APPROVED)", "UP-REF-REVEAL-001 (reference only)",
-                        "UP-QTY-STATUS-001 (held never 0)", "WORKFLOW_CONTROLS 2026-10-21 s.4 / s.5; ERS 2026-10-22 "
+                        "UP-QTY-STATUS-001 (held never 0)", "R-T326-2 (T-326 r2: an arched opening's reveal on its "
+                        "outline: 2 x d x springing + d x developed arch, never the rectangle)", "WORKFLOW_CONTROLS 2026-10-21 s.4 / s.5; ERS 2026-10-22 "
                         "s.2 - s.4"],
         "owner_manual_method": "owner method (UP-REVEAL-001 / UP-FIN-PLASTER-001): window reveal = 2 x depth x height "
                                "+ depth x width where a reveal exists, the sill its own item; door reveal = 2 x t x h + "
@@ -146,6 +155,17 @@ def load_inputs(doc, project_id=None):
     for s in doc.get("sources") or ():
         _src(s)
         srcs.setdefault(s["task"], s)
+    outlines = {}
+    for op, o in (doc.get("outlines") or {}).items():
+        if o.get("shape") not in OUTLINE_SHAPES:
+            raise InputsError(f"outline {op}: shape {o.get('shape')!r}")
+        for k in ("spring_m", "arch_length_m", "crown_m"):
+            if not isinstance(o.get(k), (int, float)) or o[k] <= TOL:
+                raise InputsError(f"outline {op}: {k} {o.get(k)!r} (an arched outline needs springing, crown and "
+                                  f"developed arch length)")
+        if not o["spring_m"] < o["crown_m"]:
+            raise InputsError(f"outline {op}: springing {o['spring_m']} is not below the crown {o['crown_m']}")
+        outlines[op] = o
     faces = {}                      # (opening, side, face) -> who books it
 
     def book(op, side, face, who):
@@ -224,6 +244,8 @@ def load_inputs(doc, project_id=None):
                 if c.get("state") not in VALUED_STATES:
                     raise InputsError(f"{where}: {c['component']} state {c.get('state')!r} in a valued line")
                 _pos(c.get("m2"), f"{where} {c['component']}")
+                if a["opening"] in outlines:
+                    arched_face(a["opening"], outlines[a["opening"]], c, where)
             else:
                 if c.get("state") not in HELD_STATES:
                     raise InputsError(f"{where}: {c['component']} state {c.get('state')!r} in a held line")
@@ -231,7 +253,24 @@ def load_inputs(doc, project_id=None):
                     raise InputsError(f"{where}: held face {c['component']} given a figure (held is BLANK, never 0)")
             book(a["opening"], a["side"], c["component"], f"added {a['item_code']} ({a['status']})")
         adds.append(a)
-    return dict(doc, fills=fills, narrow=narrow, adds=adds, _sources=srcs, _faces=faces)
+    return dict(doc, fills=fills, narrow=narrow, adds=adds, outlines=outlines, _sources=srcs, _faces=faces)
+
+
+def arched_face(opening, o, c, where=""):
+    """R-T326-2: a valued jambs / head face of an arched opening equals 2 x d x springing / d x developed arch."""
+    comp = c.get("component")
+    if comp not in JAMB_FACES:
+        return None
+    d = c.get("depth_m")
+    if not isinstance(d, (int, float)) or d <= TOL:
+        raise InputsError(f"{where} {comp}: arched opening {opening} without a reveal depth (HELD, never a rectangle)")
+    want = 2 * d * o["spring_m"] if comp == "JAMBS" else d * o["arch_length_m"]
+    if abs(float(c["m2"]) - want) > TOL:
+        rect = 2 * d * o["crown_m"] if comp == "JAMBS" else d * (o.get("width_m") or 0)
+        raise InputsError(f"{where} {comp}: {c['m2']} m2 is not the arched outline value {_r(want)} m2 "
+                          f"({ARCH_RULE_ID}: jambs to the springing {o['spring_m']}, head on the developed arch "
+                          f"{o['arch_length_m']}; the enclosing rectangle would give {_r(rect)})")
+    return want
 
 
 # ================================================================================================ lines
@@ -321,9 +360,16 @@ def add_line(a, src, tmpl):
     total = _r(sum(c["m2"] for c in a["components"])) if valued else None
     faces = [{k: c.get(k) for k in ("component", "m2", "ml", "depth_m", "basis", "state", "evidence",
                                     "height_status")} for c in a["components"]]
+    extra = {}
+    if a.get("outline") and a["group"] == "JAMBS_HEAD":     # R-T326-2: the outline the faces were measured on
+        extra = {"outline": {k: a["outline"].get(k) for k in ("shape", "width_m", "spring_m", "crown_m",
+                                                               "arch_length_m", "status", "source_task")},
+                 "outline_rule": ARCH_RULE_ID}
+        if a.get("correction"):
+            extra["correction"] = dict(a["correction"])
     lrec = _rec(src, action="ADD", opening=a["opening"], kind=a.get("kind"), side=a["side"], group=a["group"],
                 status=a["status"],
-                faces=faces, rooms=a.get("rooms"), evidence_status=_add_evidence(a) if valued else "HELD")
+                faces=faces, rooms=a.get("rooms"), evidence_status=_add_evidence(a) if valued else "HELD", **extra)
     names = " + ".join(f"{FACE[c['component']]} {c['basis']}" for c in a["components"])
     if valued:
         ev = "PROVISIONAL" if a["item_code"] == PLASTER_CODE or any(
@@ -649,6 +695,6 @@ def policy_record():
             "released_default": False, "rollback": ROLLBACK, "items": sorted(ITEMS)}
 
 
-__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "fill_line",
+__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "arched_face", "fill_line",
            "narrow_line", "add_line", "element_id", "changes_for", "check_reveals", "integrate", "ledger_rows",
            "diff_rows", "write", "InputsError"]
