@@ -163,8 +163,11 @@ def test_parent_blank_with_every_held_item_named():
     par = next(ln for ln in _by(out, "MAS.BLOCK", "GF") if "#" not in ln["location"]["element_id"])
     assert par["evidence_state"] == "BLOCKED_RFI" and par["measured_net"] is None and par["bounded_range"] is None
     q = par["rfi"]["question"]
-    assert "W4 HELD_PIECE" in q and "W5 HELD_WALL" in q and "W6 DROP 9.0 - 3.0 d" in q
+    assert "HELD_PIECE: W4" in q and "HELD_WALL: W5" in q and "DROP: W6 9.0 - 3.0 d" in q
     rec = par["calculation"]["inputs"]["blockwork_fill_v3026"]
+    assert [(h["wall"], h["kind"]) for h in rec["still_held"]] == [("W4", "HELD_PIECE"), ("W5", "HELD_WALL"),
+                                                                  ("W6", "DROP")]
+    assert rec["still_held"][0]["item"] == "2.000 m under an unlabelled beam, depth not printed"
     assert rec["action"] == "PARENT" and len(rec["parts"]) == 3
     one = next(ln for ln in _by(out, "MAS.BLOCK", "1F") if "#" not in ln["location"]["element_id"])
     assert one["calculation"]["inputs"]["blockwork_fill_v3026"]["still_held"] == []

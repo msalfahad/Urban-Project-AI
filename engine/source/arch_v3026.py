@@ -361,14 +361,19 @@ def parent_line(parent, rec, src, part_ids):
     from engine.source import boq_line as BL
     ln = copy.deepcopy(parent)
     held = held_of(rec)
-    htxt = "; ".join(f"{h['wall']} {h['kind']}" + (f" {h['terms']}" if h.get("terms") else "") + f": {h['item']}"
-                     for h in held)
+    groups = {}
+    for h in held:   # every held item by id in the question (complete); its full text in the inputs record
+        groups.setdefault(h["kind"], []).append(h["wall"] + (f" {h['terms']}" if h.get("terms") else ""))
+    htxt = "; ".join(f"{k}: {', '.join(v)}" for k, v in groups.items())
+    q = (f"HELD walls / pieces (blank, never 0; drop terms never evaluated; each item's reason in "
+         f"calculation.inputs.blockwork_fill_v3026.still_held): {htxt}")
+    if len(q) > 900:
+        raise ValueError(f"{METHOD}: the held list of {parent['line_id']} does not fit the RFI question ({len(q)} > 900)")
     carried = "; ".join(f"{k} on {v}" for k, v in part_ids.items())
     ln["evidence_state"] = "BLOCKED_RFI"
     ln["measured_net"] = None
     ln["bounded_range"] = None
-    ln["rfi"] = {"question": f"HELD walls / pieces (blank, never 0; drop terms never evaluated): {htxt}"[:900],
-                 "unlocks": ln["location"].get("element_id")}
+    ln["rfi"] = {"question": q, "unlocks": ln["location"].get("element_id")}
     ln["calculation"]["formula"] = (f"HELD remainder (blank in the BOQ, never 0): {len(held)} named item(s)"
                                     + (f" | closable walls carried on their own lines: {carried}" if part_ids else
                                        " | no closable wall in this line"))[:600]

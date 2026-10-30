@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3827 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3828 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 30 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -424,7 +424,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3023.py` | 650 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.23 (T-319): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.22 (engine.source.arch_v30, |
 | `arch_v3024.py` | 599 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.24 (T-338): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.23 (engine.source.arch_v30, |
 | `arch_v3025.py` | 915 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.25 (T-343): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.24 (engine.source.arch_v30, |
-| `arch_v3026.py` | 703 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.26 (T-279): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.25 (engine.source.arch_v30, |
+| `arch_v3026.py` | 708 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.26 (T-279): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.25 (engine.source.arch_v30, |
 | `arch_v303.py` | 614 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.3 (T-151): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 / V3.0.2 |
 | `arch_v304.py` | 539 | HIGH | 29 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v305.py` | 515 | HIGH | 23 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
@@ -1564,7 +1564,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t276/` | 10 |
 | `research/agents_t277/` | 11 |
 | `research/agents_t278/` | 1 |
-| `research/agents_t279/` | 4 |
+| `research/agents_t279/` | 5 |
 | `research/agents_t280/` | 3 |
 | `research/agents_t281/` | 7 |
 | `research/agents_t282/` | 7 |
