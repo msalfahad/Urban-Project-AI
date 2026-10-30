@@ -6,52 +6,52 @@
   "last_run": "2026-10-30T04:32:08Z",
   "result": "ok",
   "working_on": "Daily update sent 30 Oct 04:32 UTC; next 31 Oct 04:31 UTC",
-  "as_of": "2026-10-30T16:35:00Z"
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-10-30T16:27:00Z",
+  "last_run": "2026-10-30T20:13:00Z",
   "result": "running",
-  "working_on": "Since 12:40: 5 research pieces checked and merged (lap sources, bar shapes, pool/stair bar details, tile edges, fence/gates); reveals package sent back narrow (3 arched windows); 5 new tasks incl. the 470 lines on a borrowed lap basis and an arched-opening check across trades",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "Since 16:30: reveals fix into the candidate (V3.0.28) and two research pieces merged; 3 hand-ins queued for the checker; the 351-line lap 'held' record goes into the next candidate with the sills; a failing guard test found (fix first in the architectural lane)",
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T15:22:00Z",
+  "last_run": "2026-10-30T19:22:00Z",
   "result": "ok",
-  "working_on": "15:36 bar-shape census handed in, merged 15:57; next: the 470 lines on the starter-bar lap note, straight-bar cutting list, splice-count fix, bar-shape / lap consultant questions",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "19:35 straight-bar cutting list handed in (442 lines, 5,124.317 kg); 18:17 lap binding merged 19:57; next: the 22 stair lines on the starter-bar note",
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T14:40:00Z",
+  "last_run": "2026-10-30T18:40:00Z",
   "result": "ok",
-  "working_on": "14:58 fence / gates census handed in, merged 15:37; next: arched-opening check across trades, shower tanking, sanitary fixtures",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "19:32 shower floor / tanking handed in (6 showers); 17:41 arched-opening check merged 18:26; next: guard-test fix, drainage source check",
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-10-30T15:00:00Z",
+  "last_run": "2026-10-30T19:00:00Z",
   "result": "ok",
-  "working_on": "14:19 reveals package handed in, sent back 15:35 (3 arched windows on the rectangle); 15:15 lap-source census merged 15:56; next: the reveals fix",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "20:08 sanitary fixture count handed in; 17:46 reveals fix merged 18:26 (V3.0.28); next: sills / thresholds into the candidate with the lap 'held' record",
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-10-30T15:50:00Z",
+  "last_run": "2026-10-30T19:50:06Z",
   "result": "ok",
-  "working_on": "Since 12:51: 5 merged (bar-detail census r2, tile edges r2, fence/gates, lap sources, bar shapes) and 1 sent back (reveals package); queue now empty",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "18:51-19:58: lap binding merged; 17:52-18:26: reveals fix (V3.0.28) and arched-opening check merged; 19:51 run stood down (overlap guard); 3 hand-ins waiting",
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-10-30T16:35:00Z"
+  "as_of": "2026-10-30T20:25:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -68,7 +68,7 @@
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
   "last_run": "2026-10-30T12:55:14Z",
   "result": "ok",
-  "working_on": "Next refresh 30 Oct 12:54 UTC",
-  "as_of": "2026-10-30T16:35:00Z"
+  "working_on": "Next refresh 31 Oct 00:54 UTC",
+  "as_of": "2026-10-30T20:25:00Z"
  }
 ]

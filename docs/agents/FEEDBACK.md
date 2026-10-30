@@ -16,6 +16,9 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    now on adds "run tests/structural_comparison_engine/test_rebar_product_firewall.py" to its acceptance check.
    REPEATED 2026-10-22 17:00 (T-186 default_guard.py merged undeclared; fix T-190 with a known-failure register; the
    Checker's gate b now runs the firewall test for every new engine/ module).
+   REPEATED 2026-10-30 20:20 (T-344 tools/label_census_v2.py merged 29 Oct 17:10 without a default-guard class:
+   t212_guard_property red on the working head since; L3 of a new tools/ file did not include t212. Fix T-379 gate 0;
+   the Checker's gate b now adds t212 for every new engine/ or tools/ file).
 2. **A new ledger version inherits the holds of the one under it**: T-097 V3 carries the V2 holds (footing band Q-28 A
    provisional, pool), so its compared concrete shrinks to stairs + domes (12.01 vs 21.83 m3) and its released total over
    all keys drops 236.27 -> 229.57 m3 while beams rise +4.02 m3. Decision: every ledger handoff states released and held
@@ -41,6 +44,14 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    two worker runs (26 Oct 06:24 / 06:40) died without a final line. READY work aged 62 h. Decision: owner item in
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
+
+## 2026-10-30 20:20 (lead run; covers 16:30 - 20:20)
+
+- T-326 r2 reveals into the candidate (Gate B): WORKED (18:26, PASS on the exact r1 fault; CANDIDATE OF RECORD V3.0.28; ARCH.WINDOW_REVEAL 12.6364 -> 12.4389 m2, -1.56 %; 3,953 lines byte-identical; one Gate B round lost at r1). Decision: none; T-327 next in lane I.
+- T-377 arched-opening audit: WORKED (Gate A 18:26, first time; T-162 arrises 21.30 vs outline 18.96 m (+12.3 %), spatter on reveals +0.1975 m2, 1F-W00 mesh cut at full width; carriers T-314 / T-363 / T-364). Decision: carriers already in those rows; T-327 reads R-T377-1 / -2 for sills.
+- T-373 note-9 lap binding: WORKED (Gate A 19:57, first time; the Checker's own classifier finds the same 351 lines, 0 kg mismatches; 3,001.680 .. 5,359.210 kg borrowed basis). Decision: Checker issues DGP-T373-LAP on V3.0.28 (queue item 1); T-327 applies it as a downgrade-only step; F-T373-2 (22 stair lines) -> NEW T-378 first in lane S.
+- READY at 20:20 (not yet judged): T-374 straight-bar schedule, T-369 shower tanking, T-370 sanitary count. Follow-ups already routed: T-370 residuals -> NEW T-380 / T-381; T-374 F-T374-1 / -2 -> Checker items.
+- Recurring: (1) guard test not run on a new tools/ file (cause 7 REPEATED) -> T-379; (2) the Drive connector's output form varies (raw bytes for Worker 1 18:17, base64 JSON for the Checker 19:58): wrapper fix for the owner / main chat; (3) Worker 1 found the venv empty at 19:22 and re-ran setup (setup reliability, main chat).
 
 ## 2026-10-30 16:30 (lead run; covers 12:38 - 16:30)
 
@@ -242,14 +253,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - V3.0.16 Checker records (8 V2 verdicts, 7 downgrades over 43 lines, 21.953969 m3 to HELD / CONFLICT): WORKED as records, PARTIAL in effect: 0 whole lines countable in the export (F-REC-01 slab completeness join on the V3.0.8 grain; F-REC-02 no waterproofing inventory). Decision: T-298 (owner row) FIRST for worker 2 cross-lane; NEW T-301 (WP inventory).
 - T-292 (plaster / paint face-to-line) and T-293 (formwork face-to-member part 1): READY, classified at their verdicts; both hand-ins left the full suite unfinished (lock window). Decision: the Checker runs the suite to the end; new rows sized about 35 min + suite.
 - Team: Worker 1 11:20 / Worker 2 11:40 IDLE on their own run locks (previous runs about 80 min). Recurring cause 'package + full suite longer than the cadence': lessons row OPEN, monitored 24 h.
-
-## 2026-10-25 10:15 (lead run; covers 08:15 - 10:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-289 | WORKED | MERGED 455c93c4 (Verifier 09:33: own V3.0.15 csv a4dc01dd, all 43 ids, residual 0.000 m3; own re-derives L-e9a88532 1.80975 m3 and interior-typed L-27d104ca 1.2540 m3; 2F id set = 8 measured of 14) | main-house exterior GB 15.9600 m3 DRAWING-CONFIRMED (engine 8.1642, +95.5 %) goes to T-254 with the generic regression pair and F-T289-01; lessons row CLOSED on the rule |
-| T-275 r2 | WORKED | MERGED 6c4c9700 (Verifier 09:46: sealed bytes as candidate-side MATERIAL_RESULTS.json -> exit 2, clean -> exit 0) | lessons row CLOSED; O-T275-01 (symlink name check) folded into T-294 part (g) |
-| T-286 | WORKED | MERGED e861e390 (Verifier 09:51: own 1.100 m2, 0.0 %; box closure -0.0001 m2; W03 6.7292 m) | +1.100 m2 WET had no lane I carrier: now in T-266's acceptance; lessons row added CLOSED |
-| T-245 r2 | WORKED | MERGED ef3305f1 (Verifier 10:17 Gate B PASS: full suite NEW 0 in 4 chunks, own run json 3181cf12 / csv a4dc01dd, one identity on 3,699 lines, F-T245-01 on the real 14 ids) | records not issued (lock margin): path named docs/agents/verdicts/<candidate>/, first in the 10:51 run; T-254 promoted; O-T245-03 -> T-294 (h); lessons json-hash row CLOSED |
-| T-290, T-291 | (READY, not classified) | r2: F-T245-01 fixed, maps LAST, full suite NEW 0; T-290: 14 lines residual 0.000 m3, closable 2.864463 (not 2.915), drums omission, formwork r4 on retired readings; T-291: all 21 masonry lines BLOCKED blank, determinate 422.5314 m2 | VERIFIER QUEUE T-245 r2 -> T-290 -> T-291 with Lead challenges; T-266 / T-279 / T-293 acceptance extended |
-| Worker 1 09:19, Worker 2 09:40 | (IDLE on own run lock; not a failure) | 08:20 / 08:40 runs took 101 / 84 min on packages sized about 50 min | stop points named in every new row (owner 04:38 sizing) |

@@ -1,4 +1,15 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
+## 2026-10-25 10:15 (lead run; covers 08:15 - 10:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-289 | WORKED | MERGED 455c93c4 (Verifier 09:33: own V3.0.15 csv a4dc01dd, all 43 ids, residual 0.000 m3; own re-derives L-e9a88532 1.80975 m3 and interior-typed L-27d104ca 1.2540 m3; 2F id set = 8 measured of 14) | main-house exterior GB 15.9600 m3 DRAWING-CONFIRMED (engine 8.1642, +95.5 %) goes to T-254 with the generic regression pair and F-T289-01; lessons row CLOSED on the rule |
+| T-275 r2 | WORKED | MERGED 6c4c9700 (Verifier 09:46: sealed bytes as candidate-side MATERIAL_RESULTS.json -> exit 2, clean -> exit 0) | lessons row CLOSED; O-T275-01 (symlink name check) folded into T-294 part (g) |
+| T-286 | WORKED | MERGED e861e390 (Verifier 09:51: own 1.100 m2, 0.0 %; box closure -0.0001 m2; W03 6.7292 m) | +1.100 m2 WET had no lane I carrier: now in T-266's acceptance; lessons row added CLOSED |
+| T-245 r2 | WORKED | MERGED ef3305f1 (Verifier 10:17 Gate B PASS: full suite NEW 0 in 4 chunks, own run json 3181cf12 / csv a4dc01dd, one identity on 3,699 lines, F-T245-01 on the real 14 ids) | records not issued (lock margin): path named docs/agents/verdicts/<candidate>/, first in the 10:51 run; T-254 promoted; O-T245-03 -> T-294 (h); lessons json-hash row CLOSED |
+| T-290, T-291 | (READY, not classified) | r2: F-T245-01 fixed, maps LAST, full suite NEW 0; T-290: 14 lines residual 0.000 m3, closable 2.864463 (not 2.915), drums omission, formwork r4 on retired readings; T-291: all 21 masonry lines BLOCKED blank, determinate 422.5314 m2 | VERIFIER QUEUE T-245 r2 -> T-290 -> T-291 with Lead challenges; T-266 / T-279 / T-293 acceptance extended |
+| Worker 1 09:19, Worker 2 09:40 | (IDLE on own run lock; not a failure) | 08:20 / 08:40 runs took 101 / 84 min on packages sized about 50 min | stop points named in every new row (owner 04:38 sizing) |
+
 ## 2026-10-25 08:15 (lead run; covers 06:15 - 08:15)
 
 | Task | Result | Evidence | Decision |

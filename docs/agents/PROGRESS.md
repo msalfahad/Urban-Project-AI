@@ -1,10 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 16:30 UTC (Lead). Previous version: 2026-10-30 12:40 UTC. The released numbers did not change
+Last update: 2026-10-30 20:20 UTC (Lead). Previous version: 2026-10-30 16:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 2 in the candidate's export (the concrete slab 60.28
-m3 is the one scoreboard reference line among them); released: 0. The candidate under review stays V3.0.27 (not
+m3 is the one scoreboard reference line among them); released: 0. The candidate under review is now V3.0.28 (not
 released).
+
+Since 30 Oct 16:30 (newest first; three checked and merged, one of them an integration into the candidate):
+- Rebar lap lengths taken from the starter-bar note: CHECKED AND MERGED. The checker's own count over all 2,643
+  candidate rebar lines finds the same 351 lines (beam ends, column laps, ground-beam ends) valued from a note that
+  only covers starter bars: 3,002 .. 5,359 kg on a borrowed basis. They will be moved to "held" (blank, never 0) in the
+  next candidate; the candidate's rebar range goes from 14,278 .. 19,647 kg to 11,277 .. 14,288 kg. This is steel whose
+  length the drawings do not print, not steel that is absent. Released 10,250 kg unchanged. 22 more stair lines need
+  their own reading (a stair can have real starter bars).
+- Door / window reveals INTO THE CANDIDATE: CHECKED AND MERGED after one fix (V3.0.28). The three arched windows now
+  follow the arch: total window reveal faces 12.64 -> 12.44 m2 (-1.6 %); plaster 580.58 m2 unchanged. The freelancer
+  has no reveal rows.
+- Arched openings in every other trade: CHECKED AND MERGED (research). The same rectangle mistake sits in the opening
+  edge lengths (21.30 m where the arch gives 18.96 m, +12 %), in the spatter coat on reveals (+0.20 m2) and in one
+  white-block mesh cut; each is queued for the integration step that carries that trade.
+- Handed in, waiting for the checker: straight-bar cutting list (442 lines; 5,124.317 kg = the candidate's 5,124.313
+  kg), shower floor and tanking (6 showers; no extra membrane beyond the wet-room lines under your rules), sanitary
+  fixtures count (WC 12, basins 17, showers 6, floor drains 19, roof outlets 5; kitchen sink not drawn anywhere).
+- Found: a test that guards the default BOQ path has been failing since 29 Oct because a new census tool was merged
+  without its guard classification (no quantity effect). Fix is first in the architectural lane.
+- Next: the checker files the lap "held" record; sills / thresholds into the candidate together with it; the 22 stair
+  lines; drainage pipework source check; consultant questions for the architectural holds.
 
 Since 30 Oct 12:40 (newest first; five checked and merged, all research, none of them moves a candidate number; one
 integration sent back for a narrow fix):

@@ -46,6 +46,24 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-30 20:20 (from T-326 r2 / T-377 / T-373 MERGED; T-369 / T-370 / T-374 READY; new T-378 .. T-381)
+
+- LAP / DEVELOPMENT COMPONENTS ON NOTE 9 (T-373, Checker 19:58): 351 component lines of beams (254 ends), columns (56
+  storey laps), ground beams / straps (39 ends + 2 laps) are separate END / LAP components of their population (span
+  bars are separate lines, untouched): real steel, no printed length -> HELD BLANK by name via DGP-T373-LAP, applied in
+  T-327's candidate. Owner trade REINFORCEMENT. STAIR STARTERS (22 lines): kind STAIR-FLIGHT / LANDING bars whose role
+  (starter into the flight vs main bar end) decides whether note 9 applies; not ruled until T-378.
+- SHOWER (T-369 / T-370 agree: 6 = 3 trays GF-16 / 1F-09 / 1F-12 + 3 screened walk-in zones 1F-02 / 1F-03 / 2F-02;
+  GF-05 mixer-only UNKNOWN): kind ROOM sub-zone. Owner trades: floor and wall membrane WATERPROOFING inside the B8-01 /
+  B8-03 lines (UP-WP-004, Q-40 A, Q-48 A: no extra tanking line, one face once); tray / screen / mixer SANITARY count
+  (B12-01). Zone extents HELD (not dimensioned; RFI candidate T-381). Earlier readings (T-010, T-074: 4 showers) are
+  superseded by the two-source reconciliation once the Checker verifies it.
+- FLOOR DRAIN vs ROOF OUTLET (T-370): two element kinds, never one count: FD 19 (wet-room floors, SANITARY / drainage)
+  and RWD 5 (roof outlets, ROOF drainage, B13-01 / B12-02). The freelancer's 24 'gratings' = 19 + 5 (RULE_DIFFERENCE).
+  Pipework between them and the chambers: B12-02, source census T-380 (no length from a schematic line).
+- ARCHED OPENINGS: T-326 r2 merged the outline reading for reveals (V3.0.28); remaining carriers per trade unchanged
+  (arrises T-314, spatter T-364, white mesh T-363, sills / thresholds T-327).
+
 ### Lead 2026-10-30 16:30 (from T-359 r2 / T-368 r2 / T-361 / T-366 / T-371 MERGED; T-326 Gate B REJECTED narrow; new T-373 .. T-377)
 
 - ARCHED OPENINGS (T-238 set: W15, W16, W26; W17 UNRESOLVED; A-GF-01, A-1F-01): the physical edge is the jambs to the
