@@ -1,0 +1,82 @@
+{
+  "project": "development villa (Drive folder 'Alsenan chalet project')",
+  "task": "T-354",
+  "read_by": "Worker 1, 2026-10-30, this run (own reads; no note text copied, sheet / note numbers and handles only)",
+  "sources": {
+    "structural_pdf": "ST7757.pdf sha256 74da1523..., 16 raster pages",
+    "structural_dxf": "ST7757 dxf.dxf sha256 9f9d1179... (= route G input)",
+    "architectural_dxf": "P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55...",
+    "architectural_pdf": "Alsenan_Architectural_P7757_Pages_01-02 (bb2363f2...), _05-06 (d6480919...), _07-08 (991dc783...), _11-12 (9c72175c...); p7757_arch_sheet03 (f12d7db7...), _sheet04 (c712da4a...), _sheet09 (ff539473...), _sheet10 (e20fcf2c...)",
+    "sanitary_pdf": "sanitary-7757.pdf sha256 11673687..., 3 pages",
+    "specification": "none issued: no specification document in the project's Drive folder (listing of 52 files this run: drawings, freelancer workbooks, photos)"
+  },
+  "set_sheets": ["ST p.1", "ST p.2", "ST p.3", "ST p.4", "ST p.5", "ST p.6", "ST p.7", "ST p.8", "ST p.9", "ST p.10",
+                 "ST p.11", "ST p.12", "ST p.13", "ST p.14", "ST p.15", "ST p.16", "ARCH p.1", "ARCH p.2", "ARCH p.3",
+                 "ARCH p.4", "ARCH p.5", "ARCH p.6", "ARCH p.7", "ARCH p.8", "ARCH p.9", "ARCH p.10", "ARCH p.11",
+                 "ARCH p.12", "SAN p.1", "SAN p.2", "SAN p.3"],
+  "sheet_search": [
+    {"sheet": "ST p.1", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "3 bullet notes (slab thickness, neighbour-side ground beams on black brick from founding level, formwork stripping time); DXF S-NOTE 78 / 7D / 7E / B8"},
+    {"sheet": "ST p.2", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "foundation plan; no note block"},
+    {"sheet": "ST p.3", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "ground-beam plan; NOTES (work to stated dimensions) + LEGEND"},
+    {"sheet": "ST p.4", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "GF roof slab; parapet box notes 1-2 (DXF D5 / D7 / D8 / DA) + NOTES + LEGEND"},
+    {"sheet": "ST p.5", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "1F roof slab; parapet box notes 1-2 (DXF DF / E0 / E1 / E3) + NOTES + LEGEND"},
+    {"sheet": "ST p.6", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "2F roof slab; parapet box notes 1-2 (DXF E8 / E9 / EA / EC) + NOTES + LEGEND"},
+    {"sheet": "ST p.7", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "pool / dome details; NOTES (stated dimensions) + LEGEND; pool build-up labels (DXF 1876)"},
+    {"sheet": "ST p.8", "searched": true, "requires": [], "read": "130 dpi", "notes_read": "RECOMMENDATIONS notes 1-24 read in full"},
+    {"sheet": "ST p.9", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "bearing table + boxed notes 1-4 (DXF 1B33, 1E0E, 1E10, 1E11, 1E12); schedules"},
+    {"sheet": "ST p.10", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "simple-beam schedule; no note block"},
+    {"sheet": "ST p.11", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "continuous-beam schedule; no note block"},
+    {"sheet": "ST p.12", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "continuous-beam schedule; no note block"},
+    {"sheet": "ST p.13", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "typical footing / ground-beam / lintel details: every label read (fill, compacted soil, earth-contact waterproofing, under-footing build-up)"},
+    {"sheet": "ST p.14", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "lift footing, boundary wall, parapet details: every label read ('Slab on grade' named at the lift pit)"},
+    {"sheet": "ST p.15", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "column / slab details; NOTE 1-3 (temperature bars)"},
+    {"sheet": "ST p.16", "searched": true, "requires": [], "read": "110 dpi", "notes_read": "stair / rib / beam-opening details; no note block"},
+    {"sheet": "ARCH p.1", "searched": true, "requires": [], "read": "40 dpi (part 01-02)", "notes_read": "GF + 1F area plans; no note block"},
+    {"sheet": "ARCH p.2", "searched": true, "requires": [], "read": "40 dpi (part 01-02)", "notes_read": "2F area plan + total; no note block"},
+    {"sheet": "ARCH p.3", "searched": true, "requires": [], "read": "60 dpi (sheet03) + DXF text census", "notes_read": "GF plan; title block only, no note block"},
+    {"sheet": "ARCH p.4", "searched": true, "requires": [], "read": "40 dpi (sheet04) + DXF text census", "notes_read": "1F plan; no note block"},
+    {"sheet": "ARCH p.5", "searched": true, "requires": [], "read": "40 dpi (part 05-06) + DXF text census", "notes_read": "2F plan; no note block"},
+    {"sheet": "ARCH p.6", "searched": true, "requires": [], "read": "40 dpi (part 05-06) + DXF text census", "notes_read": "SE elevation; no note block"},
+    {"sheet": "ARCH p.7", "searched": true, "requires": [], "read": "40 dpi (part 07-08)", "notes_read": "SW elevation; no note block"},
+    {"sheet": "ARCH p.8", "searched": true, "requires": [], "read": "40 dpi (part 07-08) + DXF text census", "notes_read": "NW elevation; no note block"},
+    {"sheet": "ARCH p.9", "searched": true, "requires": [], "read": "40 dpi (sheet09)", "notes_read": "NE elevation; no note block"},
+    {"sheet": "ARCH p.10", "searched": true, "requires": [], "read": "60 dpi + 150 dpi on the ground zone (sheet10)", "notes_read": "SECTION A-A: levels and dimensions only, no build-up label under the GF floor"},
+    {"sheet": "ARCH p.11", "searched": true, "requires": [], "read": "60 dpi (part 11-12)", "notes_read": "SECTION B-B: levels and dimensions only"},
+    {"sheet": "ARCH p.12", "searched": true, "requires": [], "read": "60 dpi (part 11-12)", "notes_read": "fence elevation / plan / section; no note block"},
+    {"sheet": "SAN p.1", "searched": true, "requires": [], "read": "200 dpi notes block", "notes_read": "NOTES: one note (work to stated dimensions) + LEGEND (drainage symbols)"},
+    {"sheet": "SAN p.2", "searched": true, "requires": [], "read": "50 dpi", "notes_read": "same notes block as p.1"},
+    {"sheet": "SAN p.3", "searched": true, "requires": [], "read": "50 dpi", "notes_read": "same notes block as p.1"}
+  ],
+  "dxf_text_census": {
+    "method": "engine/source/cad/shx_arabic.records_from_doc on both DXFs (every TEXT / MTEXT / ATTRIB incl. nested blocks, Arabic SHX decoded); keyword search in English (termite, anti-termite, soil, poison, pesticide, insecticide, chemical, treat, polythene, polyethylene, nylon, DPM, membrane, vapour, sheet, bitumen, insulation, waterproof, spray) and Arabic (termite / white ant, pesticide, insects, treatment, soil, polyethylene, nylon, spray, insulation, bitumen, chemical; each searched in both letter orders)",
+    "records": {"ST": 2253, "P": 276},
+    "hits": [
+      {"file": "ST", "handle": "1876", "sheet": "ST p.7", "class": "NOT_SOIL_TREATMENT", "what": "pool build-up label (insulation membrane under the pool, T-309)"},
+      {"file": "ST", "handle": "1B33", "sheet": "ST p.9", "class": "NOT_SOIL_TREATMENT", "what": "boxed note 2: design soil bearing stress"},
+      {"file": "P", "handle": "10 title-block records", "sheet": "ARCH title blocks", "class": "FALSE_POSITIVE", "what": "the reversed Arabic keyword for 'termite' is a substring of the title-block word for 'area / district'"}
+    ],
+    "coverage_limit": "ST7757 dxf.dxf carries the plan / schedule text but NOT the p.8 RECOMMENDATIONS notes or the p.13 / p.14 detail labels (their English labels give no census hit); P7757.dxf carries the plans and the SE / NW elevations only, not the sections or the fence sheet: those sheets were read on the PDF"
+  },
+  "related_printed_layers": [
+    {"sheet": "ST p.8", "ref": "note 13", "layer": "sulphate-resisting cement for plain and reinforced concrete in contact with soil and groundwater", "class": "CONCRETE_MATERIAL", "owner": "concrete lines (material specification), not a soil surface"},
+    {"sheet": "ST p.8", "ref": "note 22", "layer": "7 cm cover for concrete against soil", "class": "REBAR_COVER", "owner": "rebar lines"},
+    {"sheet": "ST p.8", "ref": "notes 10 / 12", "layer": "no foundation on fill; founding level and soil check by the contractor", "class": "FOUNDING_LEVEL", "owner": "earthworks (Q-21 C, T-170 / T-347 / T-357)"},
+    {"sheet": "ST p.13", "ref": "isolated-footing details (both)", "layer": "two layers liquid waterproofing to every surface in contact with earth", "class": "FOUNDATION_WATERPROOFING", "owner": "foundation WP lines (T-219 / T-263 / T-270 / T-353)"},
+    {"sheet": "ST p.13 / p.14", "ref": "under-footing build-up", "layer": "5 cm screed + membrane + 10 cm plain concrete", "class": "UNDERLAY_BLINDING", "owner": "blinding / underlay lines (T-206 / T-233)"},
+    {"sheet": "ST p.13 / p.14", "ref": "fill labels", "layer": "well graded clean compacted fill from excavation material; compacted soil under the GF slab", "class": "FILL", "owner": "backfill / Z2 fill (T-320 / T-347)"},
+    {"sheet": "ST p.14", "ref": "lift detail", "layer": "'Slab on grade.' named; waterproofing membrane + protection board on the pit walls", "class": "SLAB_AND_PIT_WP", "owner": "GF slab and lift-pit WP lines"},
+    {"sheet": "ST p.7", "ref": "pool detail", "layer": "5 cm screed + 5 cm insulation membrane + 10 cm plain concrete under the pool", "class": "POOL_BUILD_UP", "owner": "pool lines (T-309)"}
+  ],
+  "rules_searched": [
+    "OWNER_QUESTIONS_ANSWERED.md, OWNER_QUESTIONS.md, OWNER_RULE_* (4 files), DECISION_REGISTER.md, OWNER_SESSION_CHANGES.md, rfi/A-D, knowledge/ and rules/ (except the BOQ family registry entry itself): no soil treatment / anti-termite rule or question",
+    "freelancer workbooks (tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, 885 rows incl. the 30-row insulation sheet and the 22-row concrete summary): no soil treatment row",
+    "Drive reference folders (two engineering reference folders) and the project folder, full-text 'termite': no file"
+  ],
+  "zones_if_required": [
+    {"zone": "Z-S", "surface": "SLAB_ON_GRADE_FILL_TOP", "where": "top of the Z2 fill under the GF ground slab (slab underside about +0.85 on dry floors, T-214 / T-320)", "ledger": "T-320 zone Z2: NOT FORMED (enclosed plan and wet-floor b HELD)", "plan_m2": null},
+    {"zone": "Z-P", "surface": "PIT_BOTTOM", "where": "24 neat footing pits at the formation (AT_MOST -1.50, Q-21 C)", "ledger": "T-347 / T-357 Z1 in-plot plan 125.344805 m2", "plan_m2": 125.344805},
+    {"zone": "Z-T", "surface": "TRENCH_BOTTOM", "where": "ground-beam / strap trenches (main exterior GB blinding on EG +-0.00)", "ledger": "T-170 / T-253 / T-320 (trench plan not restated here)", "plan_m2": null},
+    {"zone": "Z-W", "surface": "PIT_SIDE", "where": "pit sides from formation to EG", "ledger": "depth HELD (formation is a bound)", "plan_m2": null},
+    {"zone": "Z-POOL", "surface": "PIT_BOTTOM", "where": "pool envelope at formation -1.50", "ledger": "T-347 / T-357 pool envelope in plot 11.851051 m2", "plan_m2": 11.851051}
+  ]
+}
