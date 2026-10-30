@@ -1,0 +1,9 @@
+sheet,read,found
+DXF GF plan (P7757.dxf),read this run,"street gap 110 (HIDDEN) 2.500 + cap 10B; sea gate D120 2D8; north fence 99 / 98 / 13A; lower 1.20 86 / 106; ST-03 edges 368 / 367, wall 15A / 158; no fence infill symbol on any side"
+DXF SE elevation,read this run,"sea gate leaf 23F1 / 23F2 + knob 23F6, frame 23F4 / 23F3, head 23F8; RL-01 street-face posts under 223C"
+DXF NW elevation,read this run,sea gate zone 27FA + pier 2880 / 2881 + north fence end 27EA / 27EB; RL-02 posts under 279F; the 5.17 m solid sea wall 8D is not drawn in front of the pool drum
+Pages_11-12 p.12 FENCE PLAN / ELEVATION / SECTION,"read this run (200 dpi, by eye)","Pages_11-12 p.12 FENCE PLAN 1:100: chain 580 / 250 / 81 / 195 / 115 / 195 / 83 (fence, gate, annex face); the 250 gap is crossed by a dashed line only, no leaf or swing; Pages_11-12 p.12 FENCE ELEVATION 1:100: low wavy wall with an X railing in its dip and a rounded end pier; the 250 gap shows a ground strip only (no leaf, no post, no frame); Pages_11-12 p.12 SECTION: 265 = 50 + 215"
+p7757_arch_sheet03 (GF plan),read this run (50 dpi overview),"sheet03 GF plan: STREET 15.00, SEA VIEW 15.00, NEIGHBOUR 31.37 (both sides)"
+"1F / 2F plans, SW p.7, NE p.9, section A-A","cited, not re-read (merged T-164 / T-162)","railing bands RL-01 .. RL-09, parapet chains"
+ST7757 p.14 TYPICAL BOUNDARY WALL,cited (merged T-253 / Q-65 text),"brick wall on 20 x 40 ground beams, 20 x 30 columns; no gate, no infill, no railing detail"
+Renders (T-161),never a source of quantity,"porch balustrade, pool-court railing, street fence railing: R-T361-4"

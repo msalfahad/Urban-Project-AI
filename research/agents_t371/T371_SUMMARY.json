@@ -1,0 +1,46 @@
+{
+ "policy": "BAR_SHAPE_SOURCE_CENSUS_V1",
+ "populations": 38,
+ "status_counts": {
+  "SCHEDULABLE_NOW": 7,
+  "SCHEDULABLE_AFTER": 10,
+  "GAP": 19,
+  "OWNED_ELSEWHERE": 2
+ },
+ "lines_bound": 2505,
+ "lines_to_other_census": {
+  "T-359": 88
+ },
+ "leg_bound_proposals": [
+  {
+   "pop_id": "SLAB-BOTTOM",
+   "status": "PROPOSAL_ONLY",
+   "value": null,
+   "basis": "up-turn leg drawn inside the slab, from the bottom layer to the top layer: bounded above by D - bottom cover ('25 CL' printed in the same detail) - top cover (p.8 note 22, >= 2.5 cm: a minimum, so the bound is an upper bound only); D = panel thickness from the plan",
+   "holds_under": "owner option B 2026-10-29: leg HELD blank"
+  },
+  {
+   "pop_id": "SLAB-TOP",
+   "status": "PROPOSAL_ONLY",
+   "value": null,
+   "basis": "F-T371-1: the hook-down leg is drawn past the slab soffit into the edge beam, so 'D less note-22 covers' (F-T318-1) does NOT bound it; the drawn bound is the EDGE BEAM depth (p.10 / p.11 schedule D of the supporting beam) less its bottom cover and less the beam's own bar layers: still undimensioned, HELD",
+   "holds_under": "owner option B 2026-10-29: leg HELD blank"
+  }
+ ],
+ "gaps": {
+  "G-T371-0": "bend diameter / standard hook extension: printed for no population (p.8 notes 1 - 24; no BBS legend); a cutting length of any bent bar (leg, hook, crank, link) needs it",
+  "G-T371-1": "footing BOXED bars: diameter, leg end level, the marks at the upper corners (T-171 / T-299 designer item; in no RFI of rfi/A or rfi/B)",
+  "G-T371-2": "starter foot: exact length ('Min. 30cm' printed), foot-end up-bend and the deep detail's crank offset",
+  "G-T371-3": "column / neck / ground-beam link hook (angle, extension) and column head / section-change bar shapes: RFI-B-S21 asks beam links only, RFI-B-S09 ground-beam bar ends only",
+  "G-T371-4": "twisted-column spiral: diameter and end turns",
+  "G-T371-5": "upstands on B20 / B23: no bar print (RFI-S18 covers projection bands only)",
+  "G-T371-6": "unlabelled G.B section marks: the X between exterior-G.B side bars and the second-layer verticals",
+  "G-T371-7": "slab bar-end legs (bottom up-turn, top hook-down), corner / extra bar shapes, ground-slab edges: RFI-B-S10 asks the top-bar extent only; held under owner option B meanwhile"
+ },
+ "findings": [
+  "F-T371-1: p.15 TYP. SLAB ON BEAMS DETAIL draws the top anchor bar's hook-down leg passing below the slab soffit into the edge beam: the Checker's F-T318-1 bound 'D less note-22 covers' holds for the bottom up-turn leg only.",
+  "F-T371-2: p.13 G.B sections draw unlabelled marks (X between exterior side bars; verticals from the second bottom layer): neither is in the candidate; never added before G-T371-6 is answered.",
+  "F-T371-3: no bend diameter / hook extension is printed for any population (G-T371-0): no bent BBS shape is schedulable now, even where every leg is drawn.",
+  "F-T371-4: the footing BOXED-bar request (T-171 / T-299 'designer item') reached neither rfi/A nor rfi/B."
+ ]
+}

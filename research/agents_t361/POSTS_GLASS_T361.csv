@@ -1,0 +1,6 @@
+id,item,pcs,positions_m,rail_m,status,source
+PG-01,"posts, RL-02 1F roof sea (NW) railing",6,"[0.401, 1.438, 2.475, 3.512, 3.666, 4.702]",4.9211,DRAWN (component count; no separate line without a specification),NW elevation DXF: vertical line pairs under top rail 279F (single 251F excluded)
+PG-02,"posts, RL-01 1F roof street (SE) face",4,"[0.109, 0.959, 1.835, 2.712]",3.7533,DRAWN (component count; the 2.470 SW return is not in this elevation: its posts NOT COUNTED here),SE elevation DXF: vertical line pairs under top rail 223C
+PG-03,"posts, RL-03 annex roof railing / street fence X railing",,[],,NOT COUNTED (raster sheet p.12 / p.7 / p.9 only; a count from a raster is left to the Checker's own reading),Pages_11-12 p.12 FENCE ELEVATION
+PG-04,"stair balusters / posts (ST-01, ST-01b, ST-02)",,[],,NOT DRAWN on the plans (continuous 50 mm band only); section A-A rails per T-164,GF / 1F / 2F plan bands (T-164)
+PG-05,glass panels (balustrade / guard / fence),,[],,"NOT_DRAWN (m2 None, never 0 by default)","DXF hatch patterns {'ANGLE': 1, 'AR-PARQ1': 2, 'LINE': 14, 'MUDST': 1, 'NET': 11, 'SOLID': 59} (no glass pattern); the DXF holds 24 distinct texts, none names glass; no schedule / specification issued (RFI-B-A12)"

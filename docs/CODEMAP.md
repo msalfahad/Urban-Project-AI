@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3906 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3933 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 32 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1872 | pytest suites, one folder per round. |
+| `tests/` | 1876 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -405,7 +405,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v27.py` | 1135 | MEDIUM | 5 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 9 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
 | `arch_v29.py` | 809 | MEDIUM | 7 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
-| `arch_v30.py` | 872 | HIGH | 54 | ARCH_TAKEOFF_V3.0 (T-131): ONE opt-in BOQ candidate that consolidates the checker-verified pieces into the |
+| `arch_v30.py` | 872 | HIGH | 55 | ARCH_TAKEOFF_V3.0 (T-131): ONE opt-in BOQ candidate that consolidates the checker-verified pieces into the |
 | `arch_v301.py` | 510 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.1 (T-133): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 (engine.source.arch_v30), extended |
 | `arch_v3010.py` | 745 | HIGH | 20 | ARCH_TAKEOFF_V3.0.10 (T-232): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.9 (engine.source.arch_v30, |
 | `arch_v3011.py` | 573 | HIGH | 18 | ARCH_TAKEOFF_V3.0.11 (T-239): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.10 (engine.source.arch_v30, |
@@ -426,7 +426,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3025.py` | 915 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.25 (T-343): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.24 (engine.source.arch_v30, |
 | `arch_v3026.py` | 708 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.26 (T-279): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.25 (engine.source.arch_v30, |
 | `arch_v3027.py` | 660 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.27 (T-318): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.26 (engine.source.arch_v30, |
-| `arch_v3028.py` | 655 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.28 (T-326): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.27 (engine.source.arch_v30, |
+| `arch_v3028.py` | 701 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.28 (T-326): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.27 (engine.source.arch_v30, |
 | `arch_v303.py` | 614 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.3 (T-151): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 / V3.0.2 |
 | `arch_v304.py` | 539 | HIGH | 31 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v305.py` | 515 | HIGH | 25 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
@@ -475,7 +475,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `concrete_overlap_ownership.py` | 474 | MEDIUM | 3 | CONCRETE_OVERLAP_OWNERSHIP_V1 (T-189): concrete at intersecting structural elements is measured EXACTLY ONCE. |
 | `concrete_strip_guard.py` | 506 | MEDIUM | 4 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
 | `conservation.py` | 72 | MEDIUM | 2 | Source conservation (R8.2 §21) — nothing silently disappears. |
-| `continuous_beams.py` | 496 | CRITICAL | 3 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
+| `continuous_beams.py` | 496 | CRITICAL | 4 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
 | `corner_bead.py` | 93 | MEDIUM | 1 | CORNER BEAD GEOMETRY (V3b) - steel plaster angle beads as segments at exposed plaster edges. |
 | `cover_authority.py` | 232 | CRITICAL | 5 | COVER AUTHORITY - what a concrete-cover rule lets a bar length, count or mass claim (generic, stdlib only). |
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
@@ -1248,7 +1248,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t323_slab_hatch/` | 2 |
 | `tests/t324_parapet_components/` | 2 |
 | `tests/t325_sills_thresholds/` | 2 |
-| `tests/t326_reveal_fill/` | 3 |
+| `tests/t326_reveal_fill/` | 4 |
 | `tests/t329_wet_backing/` | 2 |
 | `tests/t330_deductions_check/` | 1 |
 | `tests/t331_wet_backing_integration/` | 3 |
@@ -1279,10 +1279,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t358_tempworks/` | 2 |
 | `tests/t359_bar_census/` | 1 |
 | `tests/t360_facade_cladding/` | 1 |
+| `tests/t361_fencing_gates/` | 1 |
 | `tests/t362_masonry_white/` | 2 |
 | `tests/t365_joints/` | 2 |
+| `tests/t366_lap_census/` | 1 |
 | `tests/t367_masonry_mortar/` | 2 |
 | `tests/t368_exposed_tile_edges/` | 1 |
+| `tests/t371_shape_census/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1619,7 +1622,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t323/` | 6 |
 | `research/agents_t324/` | 10 |
 | `research/agents_t325/` | 9 |
-| `research/agents_t326/` | 5 |
+| `research/agents_t326/` | 7 |
 | `research/agents_t329/` | 8 |
 | `research/agents_t330/` | 3 |
 | `research/agents_t331/` | 5 |
@@ -1650,10 +1653,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t358/` | 9 |
 | `research/agents_t359/` | 6 |
 | `research/agents_t360/` | 8 |
+| `research/agents_t361/` | 11 |
 | `research/agents_t362/` | 10 |
 | `research/agents_t365/` | 9 |
+| `research/agents_t366/` | 7 |
 | `research/agents_t367/` | 6 |
 | `research/agents_t368/` | 6 |
+| `research/agents_t371/` | 7 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
