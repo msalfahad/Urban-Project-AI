@@ -48,8 +48,8 @@ def test_top_kg_and_closure(doc):
     assert len(v) == 86
     assert round(sum(x["p15_valued"]["low"] for x in v), 3) == 1404.705     # T-316 s.3
     assert round(sum(x["p15_valued"]["high"] for x in v), 3) == 1546.858
-    assert round(sum(x["note2_valued"]["low"] for x in v), 3) == 612.077
-    assert round(sum(x["note2_valued"]["high"] for x in v), 3) == 1407.225
+    assert round(sum(x["note2_valued"]["low"] for x in v), 3) == 612.076
+    assert round(sum(x["note2_valued"]["high"] for x in v), 3) == 1407.226
     # the note-2 split over ALL groups reproduces the line ledger (else build() raises)
     assert abs(sum(x["note2_all"]["low"] for x in t) - sum(x["before"]["low"] for x in t)) < 0.0015 * len(t)
 
@@ -59,7 +59,7 @@ def test_loads_and_envelope(doc):
     acts = Counter(x["action"] for x in inp["lines"])
     assert acts == {"PARENT": 59 + 68 + 11, "RESTATE": 31 + 8 + 4, "NA": 8, "REBASE": 7}
     parts = [x["part"] for x in inp["lines"] if x["population"] == L.TOP_POP and x.get("part")]
-    assert (round(sum(p["low"] for p in parts), 3), round(sum(p["high"] for p in parts), 3)) == (612.077, 1618.961)
+    assert (round(sum(p["low"] for p in parts), 3), round(sum(p["high"] for p in parts), 3)) == (612.076, 1618.961)
     for x in inp["lines"]:
         if x["action"] in ("RESTATE", "PARENT"):
             assert x["held"], x["line_id"]

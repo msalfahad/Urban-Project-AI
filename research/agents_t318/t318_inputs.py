@@ -138,7 +138,10 @@ def top_lines():
                "unresolved_ends": {k: list(v) for k, v in sorted(unresolved.items())},
                "hook_legs_held": legs if any(legs) else None}
         if r["p15_valued_low_kg"] != "":
-            rec["note2_valued"] = {"low": round(val["i_A"] * U10, 6), "high": round(val["ii_B"] * U10, 6)}
+            if held_groups:   # valued groups only: the ledger rows summed (closure asserted above)
+                rec["note2_valued"] = {"low": round(val["i_A"] * U10, 6), "high": round(val["ii_B"] * U10, 6)}
+            else:             # every group valued: the line ledger's own figures (no re-rounding)
+                rec["note2_valued"] = {"low": float(r["note2_i_A_kg"]), "high": float(r["note2_ii_cross_B_kg"])}
             rec["p15_valued"] = {"low": float(r["p15_valued_low_kg"]), "high": float(r["p15_valued_high_kg"])}
         out.append(rec)
     return out
