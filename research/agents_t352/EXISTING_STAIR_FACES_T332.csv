@@ -1,0 +1,60 @@
+face_id,item,status,m2,lo,hi,held_from,line_id,t352_treatment
+R4-261.GF-002.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.599905,,L-71144bbcfce0b1dbbdef,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-024.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.647989,,L-a2bc431068c8113f71eb,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-026.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.648000,,L-5d6f86944074e7c8a2b6,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-042.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.192000,,L-c254e0d17c22fcae49fe,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-046.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.472000,,L-4f30f08b15e9ab008e7a,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-066~BM-GF-043#BAND0043.2.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,1.475000,,L-d06033aa8d5f29aef490,KEPT HELD; contact with the MS1-U head (OV-1 / OV-4)
+R4-261.GF-108.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,3.996121,,L-9e4895663f76d7f03ac9,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-109.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.933626,,L-1fd49f3e7c5a7dd19d4d,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-125.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,2.330500,,L-7ca10403edee7eb03ce5,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-144.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.493000,,L-c914cb3a65e76883a827,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-154~BM-GF-018#BAND0019.1.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,1.781567,,L-c9044bed39bc76ca6b2f,KEPT HELD (member face next to a stair; not a stair face)
+R4-261.GF-158.BEAM_SIDE_HELD_M2,GF roof slab (p.4) beam_side faces next to STAIR (32.075 m),HELD,,0.000000,0.161485,,L-c914cb3a65e76883a827,KEPT HELD (member face next to a stair; not a stair face)
+R4-263.GF-146.EDGE_HELD_M2,GF roof slab (p.4) edge faces next to STAIR (2.350 m),HELD,,0.000000,0.375993,,L-c18e5714727c841ee613,KEPT HELD; finding F-T352-2 (OV-6)
+R4-267.GF-000.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.071989,,L-8b751f06280405a6b658,KEPT HELD (member face next to a stair; not a stair face)
+R4-267.GF-003.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.102119,,L-8a88f805c490b970d754,KEPT HELD (member face next to a stair; not a stair face)
+R4-267.GF-041.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.143810,,L-26491bc55abff7518911,KEPT HELD (member face next to a stair; not a stair face)
+R4-267.GF-045.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.295466,,L-fa1c346855c5040632a5,KEPT HELD (member face next to a stair; not a stair face)
+R4-267.GF-155.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.295259,,L-4c4496579e5bfa20ae9f,KEPT HELD (member face next to a stair; not a stair face)
+R4-267.GF-162.JOINT_HELD_M2,GF roof slab (p.4) joint faces next to STAIR (2.726 m),HELD,,0.000000,0.309750,,L-ae51e56262137366926b,KEPT HELD (member face next to a stair; not a stair face)
+R4-285.1F-002.BEAM_SIDE_HELD_M2,1F roof slab (p.5) beam_side faces next to STAIR (9.300 m),HELD,,0.000000,0.599997,,L-2f97020ab26bff341fe4,KEPT HELD (member face next to a stair; not a stair face)
+R4-285.1F-017.BEAM_SIDE_HELD_M2,1F roof slab (p.5) beam_side faces next to STAIR (9.300 m),HELD,,0.000000,0.648000,,L-9d4f3289050a31f13951,KEPT HELD (member face next to a stair; not a stair face)
+R4-285.1F-034.BEAM_SIDE_HELD_M2,1F roof slab (p.5) beam_side faces next to STAIR (9.300 m),HELD,,0.000000,0.472000,,L-4299f559bf9509418385,KEPT HELD (member face next to a stair; not a stair face)
+R4-285.1F-045~BM-1F-026#BAND0031.2.BEAM_SIDE_HELD_M2,1F roof slab (p.5) beam_side faces next to STAIR (9.300 m),HELD,,0.000000,1.474594,,L-5ca0573b64ee1cb22e0e,KEPT HELD; contact with the MS2-U head (OV-2 / OV-5)
+R4-285.1F-045~REST.BEAM_SIDE_HELD_M2,1F roof slab (p.5) beam_side faces next to STAIR (9.300 m),HELD,,0.000000,0.000406,,,KEPT HELD (member face next to a stair; not a stair face)
+R4-290.1F-000.JOINT_HELD_M2,1F roof slab (p.5) joint faces next to STAIR (2.100 m),HELD,,0.000000,0.119989,,L-9a33d59e28a53df74b18,KEPT HELD (member face next to a stair; not a stair face)
+R4-290.1F-003.JOINT_HELD_M2,1F roof slab (p.5) joint faces next to STAIR (2.100 m),HELD,,0.000000,0.101985,,L-99451ab1afb179bfb75c,KEPT HELD (member face next to a stair; not a stair face)
+R4-290.1F-029.JOINT_HELD_M2,1F roof slab (p.5) joint faces next to STAIR (2.100 m),HELD,,0.000000,0.192003,,L-cc702b8541c15fdfd98c,KEPT HELD (member face next to a stair; not a stair face)
+R4-290.1F-033.JOINT_HELD_M2,1F roof slab (p.5) joint faces next to STAIR (2.100 m),HELD,,0.000000,0.295000,,L-322d1a1a7d9504e9cbc6,KEPT HELD (member face next to a stair; not a stair face)
+R4-316,slab under the main-stair winders (warped soffit),HELD,,1.440000,1.562000,,L-7863355dfcb68a681d2d,KEPT HELD; finding F-T352-1 on its bound (OV-9)
+R4-317,MS1-L riser forms (10 x 1.20 x 0.1667),HELD,,,,2.000000,L-7863355dfcb68a681d2d,"CARRIED (T-332 value, not re-added)"
+R4-318,MS1-L waist soffit,HELD,,,,3.706000,L-7863355dfcb68a681d2d,"CARRIED (T-332 value, not re-added)"
+R4-319,MS1-T (turn (winders)) faces,HELD,,,,,L-7863355dfcb68a681d2d,KEPT HELD (turn faces; OV-8 information only)
+R4-320,MS1-LD landing soffit,CALCULATED,1.440000,,,,L-e37d81a8be8e0aa0010c,"CARRIED (T-332 value, not re-added)"
+R4-321,MS1-U riser forms (12 x 1.20 x 0.1667),CALCULATED,2.400000,,,,L-e37d81a8be8e0aa0010c,CARRIED; overlap listed (OV-1 / OV-2 / OV-3)
+R4-322.SOFFIT,MS1-U waist soffit,CALCULATED,4.255527,,,,L-e37d81a8be8e0aa0010c,"CARRIED (T-332 value, not re-added)"
+R4-323,MS2-L riser forms (12 x 1.20 x 0.1680),CALCULATED,2.419000,,,,L-67e4b0485135f84acc46,"CARRIED (T-332 value, not re-added)"
+R4-324.COL691,MS2-L waist soffit,HELD,,,,0.028653,L-67e4b0485135f84acc46,"CARRIED (T-332 value, not re-added)"
+R4-324.SOFFIT,MS2-L waist soffit,CALCULATED,4.303695,,,,L-67e4b0485135f84acc46,"CARRIED (T-332 value, not re-added)"
+R4-325,MS2-TR (closing riser quarter -> NE la) faces,HELD,,,,,L-659243ed9fc2831c3ae8,"CARRIED (T-332 value, not re-added)"
+R4-326.E,MS2-LD landing soffit,CALCULATED,1.440000,,,,L-2416e65f053a14199cfc,"CARRIED (T-332 value, not re-added)"
+R4-326.W,MS2-LD landing soffit,CALCULATED,1.495000,,,,L-2416e65f053a14199cfc,"CARRIED (T-332 value, not re-added)"
+R4-327,MS2-U riser forms (12 x 1.20 x 0.1680),CALCULATED,2.419000,,,,L-bb0e57b1948175a3d5b8,CARRIED; overlap listed (OV-1 / OV-2 / OV-3)
+R4-328.SOFFIT,MS2-U waist soffit,CALCULATED,4.263581,,,,L-bb0e57b1948175a3d5b8,"CARRIED (T-332 value, not re-added)"
+R4-329,E1 riser forms (5 x 2.80 x 0.170),HELD,,,,2.380000,L-061e18cf35a4b6b33d68,"CARRIED (T-332 value, not re-added)"
+R4-330,E1 waist soffit,NOT_APPLICABLE,,,,,L-061e18cf35a4b6b33d68,"CARRIED (T-332 value, not re-added)"
+R4-331,D1 riser forms (4 x 1.20 x 0.175),CALCULATED,0.840000,,,,L-85f64587588af8537b4b,"CARRIED (T-332 value, not re-added)"
+R4-332,D1 waist soffit,HELD,,,,,L-821032bc04a0b0d02133,"CARRIED (T-332 value, not re-added)"
+R4-333,RS-C (curved (12 tapered treads)) faces,HELD,,,,,L-b6b0354b7842f0ed6e41,"CARRIED (T-332 value, not re-added)"
+R4-334,RS-S riser forms (11 x 1.20 x 0.1607),CALCULATED,2.121000,,,,L-056402f98a6dbbcde0a0,"CARRIED (T-332 value, not re-added)"
+R4-335.COL380,RS-S waist soffit,HELD,,,,0.045378,L-056402f98a6dbbcde0a0,"CARRIED (T-332 value, not re-added)"
+R4-335.HIDDEN_535_536,RS-S waist soffit,HELD,,,,0.306303,,"CARRIED (T-332 value, not re-added)"
+R4-335.SOFFIT,RS-S waist soffit,CALCULATED,2.093071,,,,L-056402f98a6dbbcde0a0,"CARRIED (T-332 value, not re-added)"
+R4-336.HIDDEN_2CC_2CD,RS-LD landing soffit,HELD,,,,0.118750,,"CARRIED (T-332 value, not re-added)"
+R4-336.HIDDEN_535_536,RS-LD landing soffit,HELD,,,,0.087731,,"CARRIED (T-332 value, not re-added)"
+R4-336.SOFFIT,RS-LD landing soffit,CALCULATED,0.870394,,,,L-056402f98a6dbbcde0a0,"CARRIED (T-332 value, not re-added)"
+R4-337.LANE,RS-A riser forms (5 x 1.25 x 0.1607),CALCULATED,0.964286,,,,L-056402f98a6dbbcde0a0,CARRIED; overlap listed (OV-1 / OV-2 / OV-3)
+R4-338.HIDDEN_2CC_2CD,RS-A waist soffit,HELD,,,,0.136135,,"CARRIED (T-332 value, not re-added)"
+R4-338.SOFFIT,RS-A waist soffit,CALCULATED,1.497482,,,,L-056402f98a6dbbcde0a0,"CARRIED (T-332 value, not re-added)"
+R4-339,flight and landing side faces (stringer profiles) at the walls and the well,HELD,,,,,,SUPERSEDED by the T352 flight-side / landing-edge rows (OV-7)

@@ -1,0 +1,103 @@
+{
+ "task": "T-348",
+ "his_total_m2": 109.89,
+ "residual_m2": 0.0,
+ "his_rows_m2": {
+  "70": 28.215,
+  "71": 27.225,
+  "74": 54.45
+ },
+ "drawn_in_row70_band_m2": 27.402806,
+ "drawn_in_row71_band_m2": 27.66833,
+ "drawn_in_row74_m2": 1.680424,
+ "no_exterior_face_m2": 52.769576,
+ "screen_hole_m2": 8.13382,
+ "screen_outer_arch_m2_not_the_hole": 8.524556,
+ "screen_storey_net_m2_each_face": 4.71571,
+ "screen_intrados_m2": 2.30724,
+ "moulding_step_faces_m2": {
+  "lip -> recess (outer arch line)": 0.394686,
+  "recess -> projecting band": 0.915802,
+  "projecting band -> front plane": 0.465803
+ },
+ "moulding_paths_m": {
+  "OUTER": 7.89373,
+  "MOULD2": 9.158016,
+  "MOULD3": 9.316052
+ },
+ "pier_outline_closure_m": {
+  "NW-1": 1.638804,
+  "NW-3": 1.174518
+ },
+ "recess_soffit_segment_m2": 1.600907,
+ "nw2_arc_m": 3.528278,
+ "new_faces": [
+  "1F/NW-1/CORNER-ARC/parapet",
+  "1F/NW-1/CORNER-ARC/storey",
+  "1F/NW-2/RECESS-SOFFIT/soffit",
+  "1F/NW-2/SCREEN-BACK/storey",
+  "1F/NW-2/SCREEN-FRONT/storey",
+  "1F/NW-2/SCREEN-INTRADOS/reveal",
+  "1F/NW-2/SCREEN-MOULDING-STEPS/storey",
+  "1F/NW-3/SW-RETURN/parapet",
+  "1F/NW-3/SW-RETURN/storey",
+  "GF/AT225/RING-INNER/slab_edge",
+  "GF/POOL-COURT-FRONT/slab_edge"
+ ],
+ "re_measured_t337": [
+  "1F/NW-1/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-2/PARAPET/parapet",
+  "1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-3/SLAB_EDGE_BELOW/slab_edge"
+ ],
+ "interior_cross_check": {
+  "lines": [
+   "L-31db3c83552682d92ca3",
+   "L-349db74a70e1eecda2d2"
+  ],
+  "room_face": "r 2.135 (BD2), 1F-11",
+  "shared_faces": 0,
+  "overlap_m2": 0.0
+ },
+ "not_in_rows_70_71_74": [
+  "1F/NW-4 (W18 strip, outside the pool-block width)",
+  "1F/NE-1",
+  "1F/SW-1",
+  "1F/NW-1/CORNER-ARC (his row 70 is the projected plane): 0.936347 m2"
+ ],
+ "levels": {
+  "C_SOFFIT": 5.3,
+  "F1": 5.5,
+  "F2": 9.7,
+  "TOP": 11.0
+ },
+ "t337_line_effects": {
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": {
+   "before": [
+    53.550644,
+    59.290836
+   ],
+   "after": [
+    53.953827,
+    59.331827
+   ],
+   "cause": "NW-2 parapet band on the screen chord 3.059412 (DC 3.977236), not the arc 3.5283 (HELD 4.223108 .. 4.585300); r2: + NW-1 corner arc 0.221319 + NW-3 SW end return 0.427737"
+  },
+  "L-8bb83e16cc7b104ab88b (1F exterior storey)": {
+   "added_m2": 1.967717,
+   "cause": "r2: NW-1 corner arc 0.715029 + NW-3 SW end return 1.252688 (faces in no ring key)"
+  },
+  "NEW FIN.EXT.FINISH SLAB-EDGE 1F": {
+   "before": "9 faces, all blank",
+   "after": "7 faces: NW-1 / NW-3 removed (NOT_A_FACE); NW-2 = void ring landward arc 2.675 m, HELD 0.535 .. 2.006 m2"
+  }
+ },
+ "finding_for_the_lead": {
+  "element": "1F, the element SW of the W18 strip (layer D, up to 0.405 m seaward of the sea line), handles CA1 CA3 C9E CA0 C9D C9F",
+  "developed_outline_m": 2.693113,
+  "ring_segment": "B60",
+  "ring_segment_m": 2.099512,
+  "difference_m": 0.593601,
+  "status": "NOT MEASURED here (outside rows 70 / 71 / 74): same R-T348-5 pattern; check which ring key holds B60 and whether it carries the projected width"
+ }
+}
