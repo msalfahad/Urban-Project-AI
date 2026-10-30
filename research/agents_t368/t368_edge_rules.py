@@ -51,7 +51,10 @@ Rules (research, proposed; scope every villa; provenance T-368):
             the head's underside arris (the opening width) is a third exposed edge on that face. Head not established:
             wall end and flat stop are HELD in the range head .. band top (never 0, never the full band) and the head
             arris is HELD in the range 0 .. width, by name OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED. A door-height
-            fallback (Q-55 C, doors) is not a head level for a doorless opening.
+            fallback (Q-55 C, doors) is not a head level for a doorless opening. The overhead element may be drawn
+            only on the structural slab plan (a beam band along or across the open side, no HIDDEN line on the
+            architectural plan): every open side is therefore also read on the slab plan, and a beam there is treated
+            the same way (crossing "BEAM"; head = storey - printed depth - floor allowance, in the band's own frame).
 """
 
 from __future__ import annotations
@@ -195,8 +198,9 @@ def end_edges(room, wall_ends, flat_stops, band, line_id, source):
 @dataclass(frozen=True)
 class OpenSide:
     """An open side of a tiled room (a gap in its wall line with no door leaf) and what the plan draws across it.
-    crossing: "NONE" (nothing drawn across: clear to the ceiling, R-T368-1/2) | "HIDDEN" (an overhead element drawn
-    with a HIDDEN linetype, R-T368-7) | "CONTINUOUS" (a solid line: not an open side, refused here).
+    crossing: "NONE" (nothing drawn across on either plan: clear to the ceiling, R-T368-1/2) | "HIDDEN" (an overhead
+    element drawn with a HIDDEN linetype, R-T368-7) | "BEAM" (a beam on the slab plan over the side's ends, R-T368-7) |
+    "CONTINUOUS" (a solid line: not an open side, refused here).
     head_m: soffit of the overhead element above the finished floor, m; None = not established."""
     side_id: str
     width_m: float
@@ -210,7 +214,7 @@ class OpenSide:
 def open_side_edges(room, side: OpenSide, band: Band, line_id, source):
     """R-T368-7. Edges of one open side: the wall end(s) / flat stop(s) at its two ends and, under a head below the
     tile top, the head arris on this face."""
-    if side.crossing not in ("NONE", "HIDDEN"):
+    if side.crossing not in ("NONE", "HIDDEN", "BEAM"):
         raise EdgeError(f"{room} {side.side_id}: crossing {side.crossing!r} is not an open side")
     if side.width_m <= 0 or side.width_m > 20:
         raise EdgeError(f"{room} {side.side_id}: width {side.width_m} m out of range (mm given?)")
@@ -218,7 +222,7 @@ def open_side_edges(room, side: OpenSide, band: Band, line_id, source):
         raise EdgeError(f"{room} {side.side_id}: head {side.head_m} m out of range (mm given?)")
     src = source + (f"; {side.evidence}" if side.evidence else "")
     if side.crossing == "NONE" or band.top_m is None:
-        if side.crossing == "HIDDEN" and band.top_m is None:
+        if side.crossing != "NONE" and band.top_m is None:
             src += f"; {HEAD_HELD} too"
         return end_edges(room, side.wall_ends, side.flat_stops, band, line_id, src)
     top = band.top_m
@@ -251,11 +255,11 @@ def check_open_sides(edges, sides):
     """Refuse a ledger that gives a HIDDEN-crossed open side with no established head a determinate band
     (R-T368-7). sides = {room: OpenSide}."""
     for room, side in sides.items():
-        if side.crossing != "HIDDEN" or side.head_m is not None:
+        if side.crossing == "NONE" or side.head_m is not None:
             continue
         for e in edges:
             if e.room == room and e.etype in ("WALL_END", "FLAT_STOP", "HEAD_ARRIS") and e.exposed != HELD:
-                raise EdgeError(f"{e.edge_id}: open side {side.side_id} lies under a HIDDEN overhead element with no "
+                raise EdgeError(f"{e.edge_id}: open side {side.side_id} lies under a {side.crossing} overhead element with no "
                                 f"established head: {HEAD_HELD} (R-T368-7)")
         if not any(e.room == room and e.etype == "HEAD_ARRIS" for e in edges):
             raise EdgeError(f"{room}: head arris of {side.side_id} missing (R-T368-7)")

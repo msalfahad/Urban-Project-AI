@@ -322,3 +322,26 @@ def test_alsenan_gf14_open_side_is_held_under_the_hidden_head():
     assert edges["GF-07#WEND"].length_m == pytest.approx(3.65)      # the pantry's open edge has no overhead element
     assert edges["GF-07#FSTOP"].length_m == pytest.approx(3.65)
     assert "2DB / 2DC" in A.OPEN_SIDES["GF-14"].evidence and "HIDDEN" in A.OPEN_SIDES["GF-14"].evidence
+
+
+def test_slab_plan_beam_over_the_open_side_is_read_like_a_hidden_element():
+    # villa E368 kitchen: no HIDDEN line on the plan, but a 20 x 50 beam runs along the open side on the slab plan.
+    # band 3.10 (storey 3.95); head = 3.95 - 0.50 - 0.10 = 3.35 >= 3.10: full band, no head arris (normal)
+    side = R.OpenSide("OS1", 2.00, 1, 1, crossing="BEAM", head_m=3.35, evidence="fixture slab plan")
+    edges = R.open_side_edges("K1", side, B310, "L-E368-K1", "fixture plan")
+    assert sorted((e.etype, e.length_m) for e in edges) == [("FLAT_STOP", 3.10), ("WALL_END", 3.10)]
+    # a 20 x 90 beam: head 3.95 - 0.90 - 0.10 = 2.95 < 3.10: 2 x 2.95 + 2.00 head arris = 7.90 m.l (hand)
+    deep = R.OpenSide("OS1", 2.00, 1, 1, crossing="BEAM", head_m=2.95)
+    assert R.check_ledger(R.open_side_edges("K1", deep, B310, "L-E368-K1", "x"))["EXPOSED_m"] == pytest.approx(7.90)
+
+
+def test_slab_plan_beam_with_no_printed_depth_full_band_refused():
+    side = R.OpenSide("OS1", 2.00, 1, 1, crossing="BEAM", head_m=None)
+    with pytest.raises(R.EdgeError, match="BEAM overhead element"):
+        R.check_open_sides(R.end_edges("K1", 1, 1, B310, "L-E368-K1", "x"), {"K1": side})
+
+
+def test_alsenan_pantry_ends_checked_on_the_slab_plan():
+    side = A.OPEN_SIDES["GF-07"]
+    assert side.crossing == "BEAM" and side.head_m == pytest.approx(4.50 - 0.50 - 0.10)
+    assert "CB4" in side.evidence and "B27" in side.evidence

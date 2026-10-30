@@ -35,6 +35,24 @@ here on the nearest column: arch S-COL.BON 2F8A lands on ST S-COL.BON 338 with 0
 GF-14#FSTOP HELD head .. 3.65 m.l (never 0, never the full band by default), GF-14#OS1#HEAD (head arris on the GF-14
 face, the head's underside edge) HELD 0 .. 1.256 m.l (0 if the head is at or above the 3.65 tile top, 1.256 if below).
 
+**R-T368-7 applied to the other open side (pantry GF-07), read on the slab plan too.** The architectural plan draws no
+HIDDEN line across the pantry's open edge (layer-5 CONTINUOUS AD + B3 only), but the ST GF roof-slab plan does carry a
+beam over it: CB4 span 1 (band 288 / 285, B 20 / H 50, schedule p.11; merged T-252 r2 ledger BM-GF-021#BAND0021.1)
+runs ALONG the open edge, face 285 exactly in its plane, from column 362 over the north end (the wall end at AC) to the
+B27 east face 325. Head at the wall end = 4.50 - 0.50 - 0.10 floor allowance = 3.90 m >= 3.65 tile top (owner-manual
+frame of the band; drawing-derived build-up b 0 .. 0.10 gives 3.90 .. 4.00): **full band confirmed**. B27 (90 x 85, ST
+p.10, S-BEAM faces 326 / 325) crosses the open edge obliquely 0.34 .. 1.86 m north of the south end (325 at the edge
+line 38.403, 326 at 36.887, the end at 36.547, ST frame m): the flat stop at the south end is under no beam: **full
+band confirmed**. The pantry's 7.30 m.l stand with the head now drawing-confirmed (band still ASSUMED — OWNER-APPROVED);
+the rule docstring says every open side is read on the slab plan as well (crossing 'BEAM'), with tests.
+
+**F-T368-3 (ceilings / wall-tile top, not this ledger).** B27's soffit in the same frame is 4.50 - 0.85 - 0.10 = 3.55 m,
+0.10 m BELOW the pantry's 3.65 tile top / decor-ceiling underside: the owner's 0.60 m beam allowance (G1) is exceeded by
+this 0.85 m beam, so inside B27's footprint across the pantry (west wall to the open edge) the tile top and the decor
+ceiling cannot be at 3.65 m. The pantry is also 39 % under the 'Sunken slab.' hatch 287 (T-209, drop not printed). For
+the ceiling line (T-284 / T-271) and the wall-tile area (T-312) as a drawing-derived difference beside the owner
+method (G1: 'show both results'), not a silent change; no B4-10 edge moves (no tiled face meets B27 in the open plane).
+
 **Totals restated:** determinate exposed **31.65 m.l** (external corners 24.35 + pantry wall end 3.65 + pantry flat
 stop 3.65; was 38.95, -7.30 m.l, -18.7 %), finish HELD between 45-degree 31.65 **or** steel profile 31.65 (never 63.30);
 HELD at GF-14: 2 edges head .. 3.65 each (upper 7.30) + head arris 0 .. 1.256; doors HELD 0 .. 73.10 unchanged; the
@@ -160,7 +178,8 @@ edge as its own item; his method has none). No percentage is meaningful against 
   external, with mirror / clockwise / unit invariance), wall-only corners (R-T368-6), edge builders, opening perimeter
   in the band, finish alternatives, `check_ledger` refusals, `refuse_summed_finishes`.
 - `research/agents_t368/t368_alsenan.py` (development villa), `EDGE_LEDGER_T368.csv`, `CROSSCHECK_T368.csv`, `summary.json`.
-- `tests/t368_exposed_tile_edges` (40; r2 adds 8 for R-T368-7: HIDDEN header above the decor ceiling = full band
+- `tests/t368_exposed_tile_edges` (43; r2 adds 11 for R-T368-7: slab-plan BEAM over an open side (20 x 50 full band,
+  20 x 90 head 2.95: 2 x 2.95 + 2.00 = 7.90 m.l hand), BEAM with no printed depth refused, Alsenan pantry; HIDDEN header above the decor ceiling = full band
   (normal), head 2.40 under a 3.10 band = 2 x 2.40 + 1.20 = 6.00 m.l (hand), clear open side, head unknown HELD by name,
   **full band with head unknown refused (adverse, the r1 defect)**, missing head arris refused, a solid line is no open
   side, units; Alsenan GF-14 held / pantry determinate): villa E368 hand fixture (bath 2.40 x 1.80 with a column 0.40 x 0.30 proud:
@@ -180,3 +199,4 @@ edge as its own item; his method has none). No percentage is meaningful against 
 | 2026-10-30 | the pantry room polygon's only reflex vertex is a counter end, not a tile arris | a room polygon closed on furniture / zone lines | corners of a finish are read between two solid faces (wall / column entities) only (every villa, R-T368-6) | test_counter_reflex_is_not_a_wall_corner | PROPOSED |
 | 2026-10-30 | an exposed-edge total could add the 45-degree and the profile m.l on the same edges | two owner rules for one edge read as two items | one edge, one finish; with no printed finish both shown, choice HELD, total never summed (every villa, R-T368-4) | test_both_finishes_summed_refused | PROPOSED |
 | 2026-10-30 | a wall-tile edge at an open side given the full band where the plan draws a HIDDEN overhead pair | layer linetype not read; open side assumed clear to the ceiling | read the linetype of every line closing an open side; HIDDEN = overhead element; the slab plan decides beam vs header; head HELD until established (every villa, R-T368-7) | test_hidden_pair_head_unknown_full_band_refused | PROPOSED |
+| 2026-10-30 | an open side's overhead element exists only on the structural slab plan (a beam band along the pantry's open edge, nothing HIDDEN on the architectural plan) | the architectural plan alone does not draw every overhead element | read every open side on the slab plan too; head = storey - printed depth - floor allowance (every villa, R-T368-7) | test_slab_plan_beam_with_no_printed_depth_full_band_refused | PROPOSED |

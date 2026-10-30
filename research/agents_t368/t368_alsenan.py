@@ -47,11 +47,11 @@ CORNERS = {
     "GF-05": ("GF-RFAD3C4", 0, 4, 0, 0, "rectangle"),
     "GF-06": ("GF-RA3AD49", 4, 8, 0, 0, "reflex: column 2FB7 proud 0.05 both sides (0.05 / 0.50, 0.50 / 0.05), "
                                        "column 2FB1 proud 0.05 (0.05 / 0.40), WC block corner, walls 135 / 14F (1.65 / 1.50)"),
-    "GF-07": ("GF-RC06FED", 1, 3, 1, 1, "handle reading (the engine room is a partial polygon whose one reflex is the "
+    "GF-07": ("GF-RC06FED", 1, 3, 0, 0, "handle reading (the engine room is a partial polygon whose one reflex is the "
                                        "counter end AA / B2, not a wall): column 2FAE proud 0.05 below wall 158 "
                                        "(face 0.90 / return 0.05); open edge B3 "
-                                       "(layer 5): north end = free end of wall 159 (wall end line AC), south end = "
-                                       "wall A6 continues as line 104 in the same plane"),
+                                       "(layer 5): its two ends are OPEN_SIDES['GF-07'] (r2, R-T368-7 slab-plan "
+                                       "read)"),
     "GF-10": ("GF-RDF7D28", 0, 4, 0, 0, "rectangle"),
     "GF-11": ("GF-RD36087", 0, 4, 0, 0, "rectangle"),
     "GF-12": ("GF-RF38DAF", 0, 4, 0, 0, "rectangle"),
@@ -78,6 +78,20 @@ OPEN_SIDES = {
                   "is a door-height fallback, not a head for a doorless opening. Comparison: the HIDDEN pair 33C / "
                   "33D (0.200, stair side) DOES lie under ST beam band 292 / 296, so a HIDDEN pair alone does not say "
                   "beam or header: the ST plan decides, and here it shows none")),
+    "GF-07": R.OpenSide(
+        "OS1", 4.500, wall_ends=1, flat_stops=1, crossing="BEAM", head_m=3.90,
+        evidence=("open edge 4.500 m (layer-5 lines AD + B3, CONTINUOUS, no HIDDEN line across it): north end = free "
+                  "end of wall 159 (wall end line AC), south end = wall A6 continues as line 104 in the same plane. "
+                  f"ST7757 dxf.dxf {ST_SHA8}, GF roof-slab plan (T-108 translation): CB4 span 1 band 288 / 285 (B 20 / "
+                  "H 50, schedule p.11; merged T-252 r2 ledger BM-GF-021#BAND0021.1) runs ALONG the open edge, face "
+                  "285 in its plane, from column 362 over the north end (wall end AC) to the B27 east face 325: head "
+                  "at the wall end = 4.50 - 0.50 - 0.10 floor allowance = 3.90 m >= tile top 3.65 (the band's own "
+                  "owner-manual frame; with the drawing-derived build-up b 0 .. 0.10 the soffit is 3.90 .. 4.00): "
+                  "full band. B27 (90 x 85, ST p.10, S-BEAM faces 326 / 325) crosses the open edge obliquely 0.34 .. "
+                  "1.86 m north of the south end: the flat stop at the south end is under no beam (full band); no "
+                  "tiled face lies in the open-edge plane, so B27 adds no tile edge here (its soffit 4.50 - 0.85 - "
+                  "0.10 = 3.55 m is 0.10 below the tile top / decor ceiling: finding F-T368-3, ceilings and the "
+                  "wall-tile top inside its footprint, not this ledger)")),
 }
 GEOMETRY_SOURCE = (f"own reading: engine room polygon (ARCH_ROOMS, ARCH_TAKEOFF_V2.9 run on P7757.dxf {DXF_SHA8}); "
                    "reflex vertex = external corner")
