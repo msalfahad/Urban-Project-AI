@@ -1,6 +1,6 @@
 # B. Remaining RFIs, Alsenan chalet (DRAFT, NOT TO BE SENT; owner 2026-10-29 22:05)
 
-Prepared by the Lead 2026-10-30 04:15-04:40 UTC (run session_01E6cPnckUhqJQdZyhEFoLeU) from
+Prepared by the Lead 2026-10-30 04:15-04:25 UTC (run session_01E6cPnckUhqJQdZyhEFoLeU) from
 CLARIFICATIONS_CONSULTANT_2026-10-24.md section 0.2 and the list at the end of A_PRIORITY_RFI.md, revalidated against
 the merged, Checker-verified evidence up to engine head 90135e91 (T-357) and candidate of record ARCH_TAKEOFF_V3.0.25.
 Companion files: A_PRIORITY_RFI.md (the 36 questions that close whole lines), C_UNLOCK_MATRIX.md (internal),

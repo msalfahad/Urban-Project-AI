@@ -1,19 +1,43 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 00:25 UTC (Lead). Previous version: 2026-10-29 20:30 UTC. The released numbers did not change
+Last update: 2026-10-30 04:25 UTC (Lead). Previous version: 2026-10-30 00:25 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is still V3.0.24 (not released); nothing entered it tonight.
+line among them); released: 0. The candidate under review is now V3.0.25 (not released): it adds the outdoor court
+floors.
 
-THE CONSULTANT QUESTION LIST IS REVALIDATED (your 22:05 instruction; NOT SENT). Two of the four items that were missing
-are settled from the drawings themselves and dropped (the column level where the two ground-slab levels meet, and the
-pantry doorway strip, which was an engine error: +1.10 m2 floor); the other two (the main stair's winder turn and three
-stair waists, the tower dome and drums) are now written as questions. Result: 36 priority questions (28 structural,
-8 architect), each answerable on its own with the sheet, what is missing, what we ask and which BOQ line it holds;
-together they close 9 whole lines (windows, pool concrete, footings, blinding, ground beams, beams, columns, stairs and
-domes, floor area). The checker re-checks every sheet citation next. The remaining questions (reinforcement, blockwork,
-finishes, the sharmat restraint you asked to add, document control) follow next run; lift-pit depth and lift door heads
-go to the lift supplier list, not the structural consultant.
+THE CONSULTANT QUESTION LIST IS COMPLETE FOR YOUR REVIEW (NOT SENT). The checker re-checked every sheet citation of the
+36 priority questions against the prints: 21 right, 15 needed a sheet number corrected, none wrong; the corrections are
+now written into the questions, and the 1F space we called "dressing room" is now described by its position and size
+(the architect prints no name there) and its use is asked. The remaining list is written: 26 questions (reinforcement
+details, sunken-slab drop, lift tie beam, black block height, walls round columns, the wall-to-column restraint asked
+only as "does the structure require one", the issue date of the structural set, and 12 architect items such as ceiling
+levels, the door / window schedule, roof build-up, soffits and external sills), 2 lift-supplier items, and one new item
+for the client: a level survey inside the plot (the drawings print the ground level only at the plot corners, outside
+the boundary). Nothing goes out until you say so.
+
+Since 30 Oct 00:25 (newest first; six checked and merged, one of them after one fix):
+- Site levels, plot and site clearance: CHECKED AND MERGED. The existing ground is +-0.00 only where printed at the plot
+  corners; inside the plot it is not surveyed. Plot 15.00 x 31.37 = 470.55 m2 (the four printed coverage percentages
+  only fit this area). Site clearance is not in the drawn scope (31 sheets searched; the freelancer has no row either).
+- Spatter dash: CHECKED AND MERGED (research; not yet in the candidate). Every plastered face tied to one plaster line: interior 575.25 m2 established plus
+  489.5 .. 545.5 m2 held, exterior 386.53 m2 plus 605.4 .. 678.6 m2 held. It found that the parapet inner faces
+  (67.4 .. 99.6 m2) and parapet tops were missing from the exterior face list: now part of the exterior plaster
+  integration.
+- Outdoor court floors: CHECKED AND MERGED INTO THE CANDIDATE after one fix (V3.0.25): court interlock 119.54 m2, north
+  walk 21.01 m2, entrance marble, porch held, pool deck 6.549 m2 (area confirmed from the drawing; finish held, no rule).
+- Mesh strip / sharmat ties / plaster joint mesh (optional items, your method): CHECKED AND MERGED after one fix. Black
+  walls: mesh strip 543.47 m.l measured, 164.46 m.l held; sharmat 182 ties at 31 measured junctions, the rest held (white
+  blocks: no adhesive specification); never inside the block m2. White walls and lintel bearings are the next task.
+- Buried concrete ranges: CHECKED AND MERGED. Three lines below ground stood on a wrong basis: strap blinding (range now
+  0 .. 0.91 m3), the boundary lower band (7.22 m3 used one plot side too few: range 5.64 .. 11.03 m3) and 9 ground beams
+  carrying one section title as a value (1.94 m3 vs 1.64 .. 2.29 m3); all go to held through the checker's downgrade
+  record, no quantity guessed.
+- Excavation binding: CHECKED AND MERGED. Footing pits at least 188.0 m3 and pool at least 17.8 m3 (lower bounds at the
+  printed minimum depth); everything else held by name.
+- Next: blockwork walls into the candidate (the first verified-quantity increase of the week if it passes first time),
+  then the slab bar-end split; new investigations: kitchen tile zones, ground water / excavation support, bar details of
+  stairs / pool / domes, facade stone, gates and guards, white-wall mesh strip.
 
 Since 29 Oct 20:30 (newest first; five checked and merged, one handed in, one sent back):
 - Stair formwork sides: CHECKED AND MERGED. 7 side faces the drawing shows open (well sides, round-stair sides, a landing

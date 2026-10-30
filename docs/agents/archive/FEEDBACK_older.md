@@ -1,4 +1,17 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
+## 2026-10-24 22:15 (lead run; covers 20:15 - 22:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-267 r2 stair rule store registration | WORKED | MERGED e7eaee64 (Verifier 20:24): full suite on d2135e30 to the end NEW 0 / KNOWN 395 / ABSENT 1; manifest sha = own sha of 1.7.0; SOFTWARE_VERIFIED, QUANTITY none, CODE_NOT_VERIFIED | closed; T-281 builds stair soffits on it (read-only) |
+| T-272 r2 ground-beam links | WORKED | MERGED ba626832 (Verifier 20:24): links per drawn clear span; count 333 .. 392 and mass HELD, never 0 | lessons row CLOSED; cut length stays HELD (hook tail / bend unprinted, designer list) |
+| T-273 r2 laps + metric ton | WORKED | MERGED 42e32cf3 (Verifier 20:58): boundary set 0 / 1 / 1 / 2 at 1.2 m in 4 input forms; 31 starter chains + 56 joints, each lap zone counted exactly twice; five categories; all laps HELD / PROVISIONAL, 0 released | NEW T-280 from finding F-T273R2-01 (core lower bound ignores the 0.17 m underlay, -74.381 kg at the formation limit) |
+| T-271 r2b ceilings, GF light well | WORKED | MERGED 789ebbb4 (Verifier 21:58): GF-130 23.2371 = light well 13.392 + pocket 1.552 + stair zone 7.402 (HELD stair soffit) + slab 0.891, every part within 0.0014 m2; R2 decor 363.173 vs released 403.163 (-9.92 %), freelancer 409.58 (-11.33 %), not verified as a whole | NEW T-281 (stair soffits), T-283 (ceilings r3 integration-ready + hidden-stair test), T-284 (ceiling integration, QUEUED) |
+| T-276 r1 buried faces traced | PARTIAL | REJECTED narrow 20:59: band 177 + 7CD cut square at the shorter edge -> 0.3708 m of false ring earth face + spurious end faces; COL:255 0.052 mm sliver taken as a 0.5948 m2 beam face; DC total <= 45.611 vs 46.521 m2, HELD; three checked runs agree to 0.03 % | TODO r2 claimed 21:45 (worker 2); cross-trade: NEW T-282 (the same check on formwork r4); lessons row |
+| T-270 WP foundation into V3.0.15 | handed in (READY 21:58, Gate B) | 3,680 lines byte-identical + 19 added; 11 held lines BLANK | Gate B first; Lead challenge: the 35.404 m2 buried sub-line contains faces T-276 r1 showed are not earth faces |
+| T-277 beam width census | handed in (READY 21:59, Gate A) | 137 runs: 105 AGREE / 7 CONFLICT = D-02 + D-27 exactly; CONC.BEAM drawn 5.4421 vs schedule 5.7665 m3 (-0.3244) | Gate A next; worker full suite not run to the end (10-min shell): Checker runs the level's suite |
+| Checker T-180 slot 1F-W00 | finding | own net 12.935 vs register 12.863 m2: W18 deducted over 0.0327 m already inside column 2FD8 (0.0706 m2 removed twice); length ruled 6.571 m | added to T-274 acceptance (part-in-masonry deduction + register-wide jamb scan); T-279 carries 1F-W00 only after it |
+
 
 ## 2026-10-24 18:15 (lead run; covers 16:15 - 18:15)
 

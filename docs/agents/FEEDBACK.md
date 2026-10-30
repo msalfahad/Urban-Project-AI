@@ -42,6 +42,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-30 04:25 (lead run; covers 00:25 - 04:25)
+
+- T-347 earthworks binding: WORKED (Gate A PASS 01:05; Checker's own pit union 129.234375 m2, AT_LEAST 188.017207 m3, 256 bindings unique). Decision: none beyond T-350 (F-T347-1); note N-T347-1 (F8 in pool beyond plot excluded twice, 0.10 m3 low on the bound) carried in T-350.
+- T-356 buried-concrete ranges: WORKED (Gate A PASS 01:59; own S-BOUN 91.94 / 21.45 m; strap blinding 0 .. 0.912684; band UNSUPPORTED BASIS; GB D-34 range). Decision: T-350 ACCEPTANCE ADDED; downgrade records DGP-T356-BAND / -GB-D34 queued for the Checker (VERIFIER QUEUE item 2); pad-overlap ownership ruled in ELEMENT_REGISTER.
+- T-355 masonry accessories: PARTIAL then WORKED (REJECTED 02:02 D-T355-1: over-lintel width held at 21 levels; r2 PASS 03:03, +15.43 m.l measured). Decision: NEW T-362 (white AAC courses, lintel bearings, 7 unknown walls) and T-363 (integration, after T-279 and T-362); lessons row.
+- T-343 r2 outdoor floors (Gate B): WORKED on the second pass (03:32; deck 6.5489118 own vs 6.548912; 3,710 lines byte-identical + 8 added; candidate of record V3.0.25). Decision: T-279 TODO first in lane I.
+- T-349 spatter dash binding: WORKED (Gate A PASS 03:37; closure on T-317 residual 0). Decision: F-T349-1 -> T-314 ACCEPTANCE ADDED; NEW T-364 integration (after T-314 and T-326).
+- T-357 existing ground / plot / site clearance: WORKED (Gate A PASS 03:53; own plot 470.55 m2, 6 corner marks). Decision: F-T357-3 -> NEW T-358 (groundwater / excavation support); EG coefficients into T-350; client survey item C-1 in RFI B (owner approval needed to send).
+- Checker light runs: RFI A citations 36 / 36 checked (21 OK, 15 CORRECTED, 0 WRONG). Decision: Lead applied all corrections in A; wrote B_REMAINING_RFI.md; Checker checks B next.
+- Recurring: (1) research-script reproduction refused by the 'run' wrapper (only two tools allowed): covered by each task's test_outputs_reproduce; (2) Drive binaries arrive raw and 'decode' expects base64; one garbled copy (T-356) caught by sha: workers record the decoded sha. Both need only the owner's main chat to change the wrapper if he wants; not blocking.
+
 ## 2026-10-30 00:25 (lead run; covers 20:30 - 00:25)
 
 - T-333 r2 blockwork status labels: WORKED (Gate A PASS 20:59; 3 parts 47.3866 m2 -> ASSUMED — OWNER-APPROVED (Q-55 2.20 m door deductions), 156.5697 m2 unchanged; own door widths 0.000 %). Decision: T-279 (blockwork into the candidate) unblocked, after T-343 in lane I.
@@ -258,16 +269,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-278 floor-area scoring key | handed in (READY 23:50, Gate A) | T001C keys FLOOR.INTERNAL 380.364 m2 on 40 lines (was 372.472 on 38), -7.13 % vs freelancer; T001B outputs byte-identical | Gate A next; Lead challenge: 1F landing 4.9225 m2 not also in a marble / stair finish line |
 | Checker T-180 slots 23:00 / 00:06 | findings | jamb scan: exactly one jamb inside a column (OP-1F-026, 32.7 mm, two routes); blockwork VERIFIED 95.633 -> 105.004 of 449.260 m2 (GF-W33 5.586, 1F-W01 2.832, GF-W12 1.953) | into T-285 (register v3 carries the VERIFIED values) |
 | RFI package (owner 23:57) | Lead verification | 30 rows, 0 removed, 2 search notes closed, 4 missing rows G1-G4, 9 PRIORITY RFIs (6 ready) | NEW T-287 (G1-G3), T-286 (G4 + plaster blockers); not to be sent until both return |
-
-## 2026-10-24 22:15 (lead run; covers 20:15 - 22:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-267 r2 stair rule store registration | WORKED | MERGED e7eaee64 (Verifier 20:24): full suite on d2135e30 to the end NEW 0 / KNOWN 395 / ABSENT 1; manifest sha = own sha of 1.7.0; SOFTWARE_VERIFIED, QUANTITY none, CODE_NOT_VERIFIED | closed; T-281 builds stair soffits on it (read-only) |
-| T-272 r2 ground-beam links | WORKED | MERGED ba626832 (Verifier 20:24): links per drawn clear span; count 333 .. 392 and mass HELD, never 0 | lessons row CLOSED; cut length stays HELD (hook tail / bend unprinted, designer list) |
-| T-273 r2 laps + metric ton | WORKED | MERGED 42e32cf3 (Verifier 20:58): boundary set 0 / 1 / 1 / 2 at 1.2 m in 4 input forms; 31 starter chains + 56 joints, each lap zone counted exactly twice; five categories; all laps HELD / PROVISIONAL, 0 released | NEW T-280 from finding F-T273R2-01 (core lower bound ignores the 0.17 m underlay, -74.381 kg at the formation limit) |
-| T-271 r2b ceilings, GF light well | WORKED | MERGED 789ebbb4 (Verifier 21:58): GF-130 23.2371 = light well 13.392 + pocket 1.552 + stair zone 7.402 (HELD stair soffit) + slab 0.891, every part within 0.0014 m2; R2 decor 363.173 vs released 403.163 (-9.92 %), freelancer 409.58 (-11.33 %), not verified as a whole | NEW T-281 (stair soffits), T-283 (ceilings r3 integration-ready + hidden-stair test), T-284 (ceiling integration, QUEUED) |
-| T-276 r1 buried faces traced | PARTIAL | REJECTED narrow 20:59: band 177 + 7CD cut square at the shorter edge -> 0.3708 m of false ring earth face + spurious end faces; COL:255 0.052 mm sliver taken as a 0.5948 m2 beam face; DC total <= 45.611 vs 46.521 m2, HELD; three checked runs agree to 0.03 % | TODO r2 claimed 21:45 (worker 2); cross-trade: NEW T-282 (the same check on formwork r4); lessons row |
-| T-270 WP foundation into V3.0.15 | handed in (READY 21:58, Gate B) | 3,680 lines byte-identical + 19 added; 11 held lines BLANK | Gate B first; Lead challenge: the 35.404 m2 buried sub-line contains faces T-276 r1 showed are not earth faces |
-| T-277 beam width census | handed in (READY 21:59, Gate A) | 137 runs: 105 AGREE / 7 CONFLICT = D-02 + D-27 exactly; CONC.BEAM drawn 5.4421 vs schedule 5.7665 m3 (-0.3244) | Gate A next; worker full suite not run to the end (10-min shell): Checker runs the level's suite |
-| Checker T-180 slot 1F-W00 | finding | own net 12.935 vs register 12.863 m2: W18 deducted over 0.0327 m already inside column 2FD8 (0.0706 m2 removed twice); length ruled 6.571 m | added to T-274 acceptance (part-in-masonry deduction + register-wide jamb scan); T-279 carries 1F-W00 only after it |

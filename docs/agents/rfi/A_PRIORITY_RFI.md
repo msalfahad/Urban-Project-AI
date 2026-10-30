@@ -5,7 +5,7 @@ revalidated against the merged, Checker-verified evidence up to engine head b12e
 Companion files: D_REMOVED_REVISED.md (what was removed or changed, with evidence), C_UNLOCK_MATRIX.md (internal: which
 questions together close each whole BOQ line), B_REMAINING_RFI.md (next Lead run: the remaining questions).
 
-CORRECTIONS APPLIED (Lead 2026-10-30 04:25 UTC): every CORRECTED and PARTIAL citation verdict of the Checker (01:30
+CORRECTIONS APPLIED (Lead 2026-10-30 04:20 UTC): every CORRECTED and PARTIAL citation verdict of the Checker (01:30
 run and the 03:56 addendum, at the end of this file) is now written into the question text: S01 (ST p.9 note 1), S04,
 S12, S13, S14, S15, S16, S18 (note sheet still to confirm), S19 / S21 (ST p.1), S20, S22 (ST p.6), S23 (sheets 10 / 11 /
 04), A01, A03, A04, A05, A06, A07 and A08 (the space is now identified by position and size, and its use is asked; the

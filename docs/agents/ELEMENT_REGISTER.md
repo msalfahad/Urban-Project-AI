@@ -46,6 +46,34 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-30 04:25 (from T-347 / T-356 / T-355 r2 / T-343 r2 / T-349 / T-357 MERGED; new T-358 .. T-364)
+
+- BURIED STRUCTURE (T-347 MERGED 509f90c2): the 00:25 ruling stands, now Checker-verified (256 components, double count
+  0, 24 footing closures 0.000000 m3). Conflicts: F-T347-1 SB3-in-F3 -> T-350 held range; F-T347-2 strap blinding
+  LEDGER_RIGHT, range 0 .. 0.912684 m3 (T-356); F-T347-3 boundary lower band UNSUPPORTED BASIS -> downgrade record
+  DGP-T356-BAND (Checker), section still Q-28 / RFI-S03; F-T347-4 9 GB lines -> downgrade record DGP-T356-GB-D34. NEW
+  (T-356): the lower G.B of the boundary wall reaches the pad soffit inside each 130 x 80 x 30 pad (ST p.14 A-A): the
+  0.078 m3 per pad overlap is owned ONCE by the PAD (CONC.FOOTING), never by the band; pad count UNKNOWN (RFI-S04).
+- EXISTING GROUND REFERENCE (ZONE-SITE, T-357 MERGED 90135e91): EG DERIVED +-0.00 from the corner prints (outside the
+  boundary), interior UNKNOWN; owner trade EARTHWORKS; plot 470.55 m2 DERIVED is a site fact, never a quantity; site
+  clearance B1-01 NOT IN DRAWN SCOPE (no line, no owner trade).
+- POOL DECK (T-343 r2 MERGED bb772f51, V3.0.25): the deck face stops at the glazed band's court face (ARC 201 r 2.25);
+  the SX-02 recess 0.561577 m2 in front of the window frame is owned by the GLAZING REVEAL STRIP (T-127 / T-154, held
+  with T-154), never by the deck; deck 6.548912 m2 area DRAWING-CONFIRMED, owner trade OUTDOOR FLOORS (A), finish HELD.
+- MASONRY ACCESSORIES (T-355 r2 MERGED 21f7b58a): mesh strip (m.l), sharmat ties (pcs) and plaster joint mesh (m.l by
+  face class) are three separate OPTIONAL items owned by BLOCKWORK ACCESSORIES (A), never inside block m2 / m3; a
+  junction tie is owned once per wall-column junction (never from both walls); integration T-363, open parts T-362.
+- SPATTER DASH (T-349 MERGED 2d22bce1): owned by the PLASTER family (A) face by face: the coat directly under the
+  plaster; a tiled face's spatter dash rides on its backing-plaster line, never the tile line; substrate share HELD
+  (no face-station crosswalk), never pro-rated; integration T-364.
+- PARAPET INNER FACES AND TOPS (F-T349-1): finished exterior faces owned by EXTERIOR PLASTER (A) via T-314 (inner 67.4114
+  .. 99.5575 m2 HELD; tops 5.415 m2 DC + 21.4215 .. 21.5575 HELD); not in the T-317 face set until T-314 carries them.
+- GROUNDWATER / EXCAVATION SUPPORT (new, T-358): temporary works owned by EARTHWORKS (S); status per item TRIGGERED /
+  NOT TRIGGERED / CONDITIONAL from the notes, never a quantity without an extent.
+- FACADE CLADDING (new, T-360), GATES / GUARDS (new, T-361): owner trades FACADE FINISHES (A) and METALWORK (A); a
+  cladding face REPLACES the plaster / paint / spatter faces it covers (named per face, applied only at integration);
+  block fence walls stay BLOCKWORK, the B7-10 handrail stays STAIRS.
+
 ### Lead 2026-10-30 00:25 (from T-332 r2 / T-346 / T-333 r2 / T-348 r2 / T-352 MERGED; T-343 Gate B REJECTED narrow; T-347 READY; new T-356, T-357)
 
 - BURIED STRUCTURE (T-347, pending its verdict): each buried element's volume is owned ONCE by its concrete / WP line id
