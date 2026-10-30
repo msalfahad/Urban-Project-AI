@@ -1,0 +1,118 @@
+wall_id,floor,group,block_type,column_at,face,block_segment_m,top,state,ties,alt210_ties,held
+GF-W00,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#1@0.000,column_end,5.450000,,HELD,,,annex datum (Q-54 B)
+GF-W00,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#1@5.480,column_start,5.450000,,HELD,,,annex datum (Q-54 B)
+GF-W00,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#1@5.480,column_end,4.450000,,HELD,,,annex datum (Q-54 B)
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@0.000,column_end,3.075000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@3.475,column_start,3.075000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@3.475,column_end,5.745000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@10.320,column_start,5.745000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@10.320,column_end,6.350000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@17.170,column_start,6.350000,3.750000,MEASURED,6,5,
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@17.170,column_end,1.300000,,HELD,,,block top beside the column not established
+GF-W01,GF,EXTERNAL,BLACK,GF|WB-FL0001-FL0002#2@19.170,column_start,1.300000,3.750000,MEASURED,6,5,
+GF-W04,GF,EXTERNAL,WHITE,GF|WB-FL0017-FL0018#1@0.000,column_end,5.850000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W04,GF,EXTERNAL,WHITE,GF|WB-FL0017-FL0018#1@6.250,column_start,5.850000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W05,GF,EXTERNAL,WHITE,GF|WB-FL0017-FL0018#2@0.000,column_end,1.900000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W05,GF,EXTERNAL,WHITE,GF|WB-FL0017-FL0018#2@3.000,column_start,1.900000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W06,GF,EXTERNAL,WHITE,GF|WB-FL0020-FL0021@0.000,column_end,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W06,GF,EXTERNAL,WHITE,GF|WB-FL0020-FL0021@2.600,column_start,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W07,GF,EXTERNAL,WHITE,GF|WB-FL0023-FL0024@0.000,column_end,1.100000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W07,GF,EXTERNAL,WHITE,GF|WB-FL0023-FL0024@1.900,column_start,1.100000,3.750000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W08,GF,INTERNAL,BLACK,GF|WB-FL0025-FL0026@2.500,column_start,2.500000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W08,GF,INTERNAL,BLACK,GF|WB-FL0025-FL0026@2.500,column_end,1.800000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W08,GF,INTERNAL,BLACK,GF|WB-FL0025-FL0026@4.500,column_start,1.800000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W09,GF,INTERNAL,BLACK,GF|WB-FL0032-FL0033@1.800,column_start,1.800000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@0.000,column_end,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@2.600,column_start,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@2.600,column_end,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@6.270,column_start,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@6.270,column_end,3.350000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@10.220,column_start,3.350000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W10,GF,EXTERNAL,WHITE,GF|WB-FL0041-FL0042@10.220,column_end,3.550000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W11,GF,EXTERNAL,WHITE,GF|WB-FL0055-FL0056@0.000,column_end,7.000000,3.750000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W11,GF,EXTERNAL,WHITE,GF|WB-FL0055-FL0056@7.300,column_start,7.000000,3.750000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W12,GF,EXTERNAL,WHITE,GF|WB-FL0057-FL0058@0.000,column_end,0.450000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W13,GF,INTERNAL,BLACK,GF|WB-FL0068-FL0069@0.000,column_end,0.700000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W13,GF,INTERNAL,BLACK,GF|WB-FL0068-FL0069@1.600,column_start,0.700000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W14,GF,INTERNAL,BLACK,GF|WB-FL0076-FL0077@0.000,column_end,1.200000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W14,GF,INTERNAL,BLACK,GF|WB-FL0076-FL0077@1.500,column_start,1.200000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W14,GF,INTERNAL,BLACK,GF|WB-FL0076-FL0077@1.500,column_end,2.700000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W14,GF,INTERNAL,BLACK,GF|WB-FL0076-FL0077@4.700,column_start,2.700000,,HELD,,,lift tie beam size (ST p.8 n.19)
+GF-W15,GF,EXTERNAL,WHITE,GF|WB-FL0078-FL0079@0.000,column_end,4.400000,4.000000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W15,GF,EXTERNAL,WHITE,GF|WB-FL0078-FL0079@5.000,column_start,4.400000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W15,GF,EXTERNAL,WHITE,GF|WB-FL0078-FL0079@5.000,column_end,2.700000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W15,GF,EXTERNAL,WHITE,GF|WB-FL0078-FL0079@8.200,column_start,2.700000,4.100000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W16,GF,EXTERNAL,WHITE,GF|WB-FL0081-FL0082@4.450,column_start,4.450000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W17,GF,EXTERNAL,WHITE,GF|WB-FL0083-FL0084@1.400,column_start,1.400000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W17,GF,EXTERNAL,WHITE,GF|WB-FL0083-FL0084@1.400,column_end,2.300000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W17,GF,EXTERNAL,WHITE,GF|WB-FL0083-FL0084@4.200,column_start,2.300000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W18,GF,EXTERNAL,WHITE,GF|WB-FL0097-FL0098@6.100,column_start,6.100000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W26,GF,INTERNAL,BLACK,GF|WB-FL0095-FL0096@4.450,column_start,4.450000,4.000000,MEASURED,6,6,
+GF-W28,GF,INTERNAL,BLACK,GF|WB-FL0030-FL0031@3.764,column_start,3.764348,3.750000,MEASURED,6,5,
+GF-W28,GF,INTERNAL,BLACK,GF|WB-FL0030-FL0031@3.764,column_end,1.762863,3.750000,MEASURED,6,5,
+GF-W32,GF,INTERNAL,BLACK,GF|WB-FL0048-FL0049@0.000,column_end,2.842313,4.340000,MEASURED,7,6,
+1F-W00,1F,EXTERNAL,WHITE,1F|WB-FL0041-FL0042#1@0.000,column_end,5.625000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W00,1F,EXTERNAL,WHITE,1F|WB-FL0041-FL0042#1@5.725,column_start,5.625000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W00,1F,EXTERNAL,WHITE,1F|WB-FL0041-FL0042#1@5.725,column_end,0.945767,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W01,1F,EXTERNAL,WHITE,1F|WB-FL0041-FL0042#2@0.821,column_start,0.820767,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W02,1F,INTERNAL,BLACK,1F|WB-FL0059-FL0061@0.000,column_end,0.700000,3.800000,MEASURED,6,6,
+1F-W02,1F,INTERNAL,BLACK,1F|WB-FL0059-FL0061@1.500,column_start,0.700000,3.800000,MEASURED,6,6,
+1F-W03,1F,INTERNAL,BLACK,1F|WB-FL0068-FL0070@0.000,column_end,1.200000,3.450000,MEASURED,5,5,
+1F-W03,1F,INTERNAL,BLACK,1F|WB-FL0068-FL0070@1.600,column_start,1.200000,3.450000,MEASURED,5,5,
+1F-W03,1F,INTERNAL,BLACK,1F|WB-FL0068-FL0070@1.600,column_end,2.700000,3.800000,MEASURED,6,6,
+1F-W03,1F,INTERNAL,BLACK,1F|WB-FL0068-FL0070@4.800,column_start,2.700000,3.800000,MEASURED,6,6,
+1F-W04,1F,EXTERNAL,WHITE,1F|WB-FL0074-FL0076@0.900,column_start,0.900000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W04,1F,EXTERNAL,WHITE,1F|WB-FL0074-FL0076@0.900,column_end,2.700000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W04,1F,EXTERNAL,WHITE,1F|WB-FL0074-FL0076@4.100,column_start,2.700000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W05,1F,EXTERNAL,WHITE,1F|WB-FL0082-FL0083@0.000,column_end,2.300000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W05,1F,EXTERNAL,WHITE,1F|WB-FL0082-FL0083@2.700,column_start,2.300000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W05,1F,EXTERNAL,WHITE,1F|WB-FL0082-FL0083@2.700,column_end,4.000000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@0.000,column_end,3.811731,3.700000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@3.912,column_start,3.811731,3.700000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@3.912,column_end,6.708269,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@11.320,column_start,6.708269,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@11.320,column_end,2.650000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@14.770,column_start,2.650000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@14.770,column_end,3.300000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W06,1F,EXTERNAL,WHITE,1F|WB-FL0002-FL0003@18.670,column_start,3.300000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W07,1F,INTERNAL,BLACK,1F|WB-FL0016-FL0018@0.000,column_end,1.800000,3.450000,MEASURED,5,5,
+1F-W07,1F,INTERNAL,BLACK,1F|WB-FL0016-FL0018@1.900,column_start,1.800000,3.450000,MEASURED,5,5,
+1F-W07,1F,INTERNAL,BLACK,1F|WB-FL0016-FL0018@1.900,column_end,1.420000,3.450000,MEASURED,5,5,
+1F-W08,1F,EXTERNAL,WHITE,1F|WB-FL0020-FL0021@2.900,column_start,2.900000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W08,1F,EXTERNAL,WHITE,1F|WB-FL0020-FL0021@2.900,column_end,0.700000,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W09,1F,INTERNAL,BLACK,1F|WB-FL0024-FL0025@1.800,column_start,1.800000,3.800000,MEASURED,6,6,
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@0.000,column_end,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@2.600,column_start,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@2.600,column_end,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@6.270,column_start,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@6.270,column_end,3.350000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@10.220,column_start,3.350000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@10.220,column_end,3.550000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W10,1F,EXTERNAL,WHITE,1F|WB-FL0030-FL0031@14.270,column_start,3.550000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+1F-W14 + 1F-W15,1F,INTERNAL,BLACK,1F|WB-FL0022-FL0023@0.000,column_end,4.015716,4.040000,MEASURED,6,6,
+1F-W18,1F,INTERNAL,BLACK,1F|WB-FL0046-FL0047@1.725,column_start,1.725000,,HELD,,,block top beside the column not established
+1F-W18,1F,INTERNAL,BLACK,1F|WB-FL0046-FL0047@1.725,column_end,3.475000,,HELD,,,block top beside the column not established
+1F-W18,1F,INTERNAL,BLACK,1F|WB-FL0046-FL0047@6.200,column_start,3.475000,,HELD,,,block top beside the column not established
+1F-W20,1F,INTERNAL,BLACK,1F|WB-FL0054-FL0055#2@1.750,column_start,1.750000,4.040000,MEASURED,6,6,
+1F-W23,1F,INTERNAL,BLACK,1F|WB-FL0074-FL0075@3.000,column_start,3.000000,3.700000,MEASURED,6,5,
+1F-W23,1F,INTERNAL,BLACK,1F|WB-FL0074-FL0075@3.000,column_end,3.400000,3.700000,MEASURED,6,5,
+2F-W00,2F,INTERNAL,BLACK,2F|WB-FL0004-FL0005@0.000,column_end,1.800000,3.800000,MEASURED,6,6,
+2F-W01,2F,INTERNAL,BLACK,2F|WB-FL0006-FL0007@1.800,column_start,1.800000,3.800000,MEASURED,6,6,
+2F-W02,2F,EXTERNAL,WHITE,2F|WB-FL0010-FL0011@0.000,column_end,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W02,2F,EXTERNAL,WHITE,2F|WB-FL0010-FL0011@2.600,column_start,2.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W02,2F,EXTERNAL,WHITE,2F|WB-FL0010-FL0011@2.600,column_end,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W02,2F,EXTERNAL,WHITE,2F|WB-FL0010-FL0011@6.270,column_start,3.470000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W02,2F,EXTERNAL,WHITE,2F|WB-FL0010-FL0011@6.270,column_end,1.030000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W04,2F,EXTERNAL,WHITE,2F|WB-FL0020-FL0021@1.707,column_start,1.706732,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W04,2F,EXTERNAL,WHITE,2F|WB-FL0020-FL0021@1.707,column_end,4.518268,3.450000,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W05,2F,INTERNAL,BLACK,2F|WB-FL0024-FL0026@1.250,column_start,1.250000,,HELD,,,block top beside the column not established
+2F-W05,2F,INTERNAL,BLACK,2F|WB-FL0024-FL0026@1.250,column_end,1.000000,,HELD,,,block top beside the column not established
+2F-W05,2F,INTERNAL,BLACK,2F|WB-FL0024-FL0026@2.950,column_start,1.000000,,HELD,,,block top beside the column not established
+2F-W06,2F,INTERNAL,BLACK,2F|WB-FL0031-FL0032@0.000,column_end,1.200000,3.800000,MEASURED,6,6,
+2F-W06,2F,INTERNAL,BLACK,2F|WB-FL0031-FL0032@1.600,column_start,1.200000,3.800000,MEASURED,6,6,
+2F-W06,2F,INTERNAL,BLACK,2F|WB-FL0031-FL0032@1.600,column_end,2.700000,3.800000,MEASURED,6,6,
+2F-W06,2F,INTERNAL,BLACK,2F|WB-FL0031-FL0032@4.800,column_start,2.700000,3.800000,MEASURED,6,6,
+2F-W07,2F,EXTERNAL,WHITE,2F|WB-FL0035-FL0036@3.025,column_start,3.025000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W07,2F,EXTERNAL,WHITE,2F|WB-FL0035-FL0036@3.025,column_end,2.700000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+2F-W07,2F,EXTERNAL,WHITE,2F|WB-FL0035-FL0036@6.225,column_start,2.700000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"
+GF-W36,GF,EXTERNAL,WHITE,GF|WB-FL0094-FL0096@0.000,column_end,0.500000,,HELD,,,"WHITE (AAC) block, thin-bed adhesive: no adhesive specification, two face families (Q-60): course HELD"

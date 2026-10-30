@@ -1,0 +1,167 @@
+{
+ "course_alt": {
+  "module": 0.21,
+  "source": "Q-77 point 1 example (200 mm block -> 210 mm module)"
+ },
+ "course_primary": {
+  "block_h": 0.19,
+  "joint": 0.01,
+  "module": 0.2,
+  "source": "Q-77 point 1 (owner 2026-10-29: provisional 10 mm bed joint, actual block dimensions where available) + Q-75 decision 2026-10-23 (provisional 40 x 20 module; owner 2025 sales order: 39 x 19 face + 1 cm joint)",
+  "status": "ASSUMED — OWNER-APPROVED"
+ },
+ "freelancer": "no mesh-strip, sharmat or joint-mesh line in the freelancer workbooks (T-317 census)",
+ "hosted_walls_without_runs": [
+  "GF-W30"
+ ],
+ "joint_mesh_by_class": {
+  "A": {
+   "drawing_band_m": 216.6229,
+   "owner_band_m": 109.85,
+   "sides": 43
+  },
+  "B": {
+   "drawing_band_m": 111.0228,
+   "owner_band_m": 67.9,
+   "sides": 38
+  },
+  "C": {
+   "drawing_band_m": 230.1439,
+   "owner_band_m": 230.1439,
+   "sides": 25
+  },
+  "MIXED": {
+   "drawing_band_m": 174.4379,
+   "owner_band_m": 87.05,
+   "sides": 17
+  },
+  "UNKNOWN": {
+   "drawing_band_m": 26.1185,
+   "owner_band_m": 16.75,
+   "sides": 9
+  }
+ },
+ "junctions_total": 117,
+ "mesh_alt210_by_floor": {
+  "1F": {
+   "held_m": 79.2813,
+   "levels": 99,
+   "net_m": 278.8801,
+   "walls": 17
+  },
+  "2F": {
+   "held_m": 21.0,
+   "levels": 30,
+   "net_m": 53.0997,
+   "walls": 5
+  },
+  "GF": {
+   "held_m": 42.6945,
+   "levels": 72,
+   "net_m": 188.2545,
+   "walls": 12
+  }
+ },
+ "mesh_alt210_total_net_m": 520.2343,
+ "mesh_held_by_cause_m": {
+  "BLOCK_TOP_UNKNOWN": 92.1498,
+  "LINTEL_BEARING": 6.95,
+  "OPENING_EXTENT_UNKNOWN": 41.7148,
+  "POSITION_UNKNOWN": 23.6466
+ },
+ "mesh_levels_with_partial_course_above": 22,
+ "mesh_partial_course_above_block_m": 45.9347,
+ "mesh_partial_course_above_net_m": 70.0325,
+ "mesh_primary_by_floor": {
+  "1F": {
+   "held_m": 93.0513,
+   "levels": 102,
+   "net_m": 278.6896,
+   "walls": 17
+  },
+  "2F": {
+   "held_m": 22.8,
+   "levels": 30,
+   "net_m": 50.4997,
+   "walls": 5
+  },
+  "GF": {
+   "held_m": 48.61,
+   "levels": 80,
+   "net_m": 214.2846,
+   "walls": 12
+  }
+ },
+ "mesh_primary_total_net_m": 543.4739,
+ "openings_not_in_register_gross": [
+  "D-GF-15",
+  "W02",
+  "W03",
+  "W17",
+  "SX-01",
+  "SX-03",
+  "U-01",
+  "P-1F-01",
+  "P-GF-02",
+  "P-GF-03",
+  "P-GF-04",
+  "P-GF-05"
+ ],
+ "schema": "T355_MASONRY_ACCESSORIES_V1",
+ "specification": "SHARMAT material / size / anchorage / embedment / fixing: SPECIFICATION HELD (no fixing detail; owner Q-77 point 3); never a structural design approval",
+ "ties_alt210_by_floor": {
+  "1F": {
+   "held_white": 28,
+   "junctions": 14,
+   "junctions_held": 31,
+   "ties": 77
+  },
+  "2F": {
+   "held_white": 10,
+   "junctions": 6,
+   "junctions_held": 13,
+   "ties": 36
+  },
+  "GF": {
+   "held_white": 28,
+   "junctions": 11,
+   "junctions_held": 42,
+   "ties": 57
+  }
+ },
+ "ties_alt210_total": 170,
+ "ties_primary_by_floor": {
+  "1F": {
+   "held_white": 28,
+   "junctions": 14,
+   "junctions_held": 31,
+   "ties": 79
+  },
+  "2F": {
+   "held_white": 10,
+   "junctions": 6,
+   "junctions_held": 13,
+   "ties": 36
+  },
+  "GF": {
+   "held_white": 28,
+   "junctions": 11,
+   "junctions_held": 42,
+   "ties": 67
+  }
+ },
+ "ties_primary_total": 182,
+ "walls_by_state": {
+  "ASSUMED — OWNER-APPROVED": 34,
+  "HELD": 35
+ },
+ "walls_unknown": [
+  "GF-W30",
+  "GF-W37",
+  "GF-H01",
+  "GF-H02",
+  "1F-W25",
+  "1F-W00/W01 BAY-ENDS",
+  "GF P-GF-05 ABOVE-LINTEL"
+ ]
+}
