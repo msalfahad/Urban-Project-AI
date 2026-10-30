@@ -1,0 +1,176 @@
+{
+ "rule": "JOINT_SCOPE_V1",
+ "sheets_searched": 31,
+ "sheets_printing_a_joint": 0,
+ "dxf_text_records": {
+  "ST7757 dxf.dxf": 2253,
+  "P7757.dxf": 276
+ },
+ "dxf_text_joint_hits": {
+  "ST7757 dxf.dxf": 0,
+  "P7757.dxf": 1
+ },
+ "dxf_false_positives": 10,
+ "hatches_not_joint": 62,
+ "twin_columns_gap_1_100_mm": 0,
+ "by_status": {
+  "MEASURED": 0,
+  "HELD": 2,
+  "NOT_IN_DRAWN_SCOPE": 9
+ },
+ "measured_total_m": null,
+ "rfi_candidates": [],
+ "joints": [
+  {
+   "id": "J1",
+   "kind": "STRUCTURAL_MOVEMENT",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (concrete)",
+   "v3_0_26_line": "NO LINE",
+   "owner_rule": "",
+   "evidence": "ST p.1 - p.6 + DXF: one continuous frame 31.37 x 15.00, annex tied to the house by continuous beams (CB6, CB7); 171 column shapes, 0 twin columns (gap 1 - 100 mm); SECTION A-A / B-B monolithic; no note"
+  },
+  {
+   "id": "J2",
+   "kind": "SLAB_ON_GRADE",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (concrete)",
+   "v3_0_26_line": "NO LINE (STR.CONC.GROUND_SLAB is m3; a joint is its own m.l item)",
+   "owner_rule": "",
+   "evidence": "ST p.3 ground slab and ST p.14 'Slab on grade.' at the lift pit: no joint line, no saw-cut, no isolation joint at the pit wall"
+  },
+  {
+   "id": "J3",
+   "kind": "CONSTRUCTION_JOINT",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (concrete)",
+   "v3_0_26_line": "NO LINE (STR.CONC.POOL / footing lines are m3)",
+   "owner_rule": "",
+   "evidence": "ST p.7 pool section (walls, inclined floor, steps), ST p.13 footings, ST p.8 notes 1-24: no construction joint, no water stop"
+  },
+  {
+   "id": "J4",
+   "kind": "ROOF_FIELD",
+   "status": "HELD",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "roofing (B13-01)",
+   "v3_0_26_line": "NO LINE (B13-01 not in candidate; FIN.WP.ROOF is m2 and not reduced or added to)",
+   "owner_rule": "Q-42",
+   "evidence": "no roof finish, screed thickness or roof joint printed (T-091; SAN p.2 / p.3 roofs: slope 1 % arrows only); roof tiles exist only by the owner's Q-42 wording ('2 mm for roof or outside area')"
+  },
+  {
+   "id": "J5",
+   "kind": "TILE_FIELD",
+   "status": "HELD",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "finishes (outside floors)",
+   "v3_0_26_line": "NO LINE (side walk / side passage tile lines not in candidate)",
+   "owner_rule": "Q-42",
+   "evidence": "outside tiled areas by OWNER_RULE_OUTDOOR_FLOORS (side walk, side passage porcelain / ceramic); no joint drawn on ARCH p.3; Q-42 gives the expansion-joint width 3 mm only"
+  },
+  {
+   "id": "J6",
+   "kind": "TILE_PERIMETER",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "finishes (floors)",
+   "v3_0_26_line": "NO LINE",
+   "owner_rule": "",
+   "evidence": "no perimeter joint printed on any floor; Q-42 rules the grout joint (1 / 2 mm, inside the tile count), not a perimeter joint; no owner rule"
+  },
+  {
+   "id": "J7",
+   "kind": "PAVING",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "external works (B13-02)",
+   "v3_0_26_line": "NO LINE (B13-02 not in candidate)",
+   "owner_rule": "",
+   "evidence": "court = interlock (owner rule); no joint, edge or kerb joint printed on ARCH p.3 / ST p.3"
+  },
+  {
+   "id": "J8",
+   "kind": "BOUNDARY_WALL_BUILDING",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (boundary wall)",
+   "v3_0_26_line": "NO LINE (STR.CONC.BOUNDARY_WALL is m3)",
+   "owner_rule": "",
+   "evidence": "ST p.14 boundary wall: own strip footing 80 + 10, 20 x 30 columns, ground beams 20 x 40; 15 cm plain concrete drawn against the wall at N.G. level ending in a break line; no separation joint printed between the wall, the ground slab or the building"
+  },
+  {
+   "id": "J9",
+   "kind": "BOUNDARY_WALL_PANEL",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (boundary wall)",
+   "v3_0_26_line": "NO LINE",
+   "owner_rule": "",
+   "evidence": "ST p.14 plan: column spacing 'SEE ARCH PLAN'; ARCH p.12 fence plan / elevation / section: no joint mark on the street fence runs"
+  },
+  {
+   "id": "J10",
+   "kind": "PARAPET",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "structural (parapets)",
+   "v3_0_26_line": "NO LINE (STR.CONC.PARAPET is m3)",
+   "owner_rule": "",
+   "evidence": "ST p.14 parapet details (typical, 130 cm and 105 cm sections): no joint; p.4 note 1 sends the parapet to the architectural detail, which prints none"
+  },
+  {
+   "id": "J11",
+   "kind": "OPENING_SEALANT",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "length_m": null,
+   "sealant_m": null,
+   "owner_trade": "openings (aluminium)",
+   "v3_0_26_line": "NO LINE",
+   "owner_rule": "",
+   "evidence": "no sealant printed on any sheet (no window / door detail issued); freelancer ALU rows: no sealant row"
+  }
+ ],
+ "double_count": {
+  "segments_checked": 0,
+  "result": "0 (no joint measured; B13-02 paving and B13-01 roof build-up have no line in V3.0.26; FIN.WP.ROOF m2 neither reduced nor added)"
+ },
+ "freelancer": [
+  {
+   "file": "PLS",
+   "row": 26,
+   "item": "external plaster: corners, grooves and rounded arrises (m.l)",
+   "physical_m": 1297.35,
+   "payable_m": 648.675,
+   "class": "PLASTER_ACCESSORY_NOT_B13_05",
+   "verdict_proposal": "RULE_DIFFERENCE (scope): a plaster-accessory row (corners, grooves, arrises) of the external plaster trade, not a movement joint; B13-05 double count 0; 1,297.35 m physical = 648.675 m at the doubled rate (ERS s.3), never 648.675 m of joint"
+  }
+ ],
+ "engine": {
+  "family": "B13-05 BLOCKED_BY_SOURCE, NOT_IN_CANDIDATE (BOQ_FAMILY_MASTER 1.21.0); no item code",
+  "candidate": "ARCH_TAKEOFF_V3.0.26 (not released)",
+  "related_lines": {
+   "B13-02 paving": "NOT_IN_CANDIDATE (no line)",
+   "B13-01 roof build-up / screed": "NOT_IN_CANDIDATE (no line)",
+   "B3-05 screed": "NOT_IN_CANDIDATE (no line)",
+   "B8-06 roof waterproofing": "FIN.WP.ROOF / FIN.WP.ROOF_UPTURN (m2)",
+   "B10-05 ground slab": "STR.CONC.GROUND_SLAB (m3)",
+   "B10-10 pool": "STR.CONC.POOL (m3)",
+   "B10-11 boundary wall": "STR.CONC.BOUNDARY_WALL (m3)",
+   "B10-12 parapets": "STR.CONC.PARAPET (m3)"
+  }
+ },
+ "verdict_proposal": "NO_QUANTITY_BOTH: neither BOQ carries a B13-05 joint and the drawings print none; the two owner-scoped joints (roof field, outside tile field: Q-42 width 3 mm) are HELD on the Q-42 residual (spacing / own line), never 0; the freelancer's only 'joints' row is plaster (RULE_DIFFERENCE, scope)"
+}
