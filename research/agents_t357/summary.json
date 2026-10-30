@@ -1,0 +1,134 @@
+{
+ "existing_ground": {
+  "status": "DERIVED",
+  "value_m": 0.0,
+  "per_corner": {
+   "C1": 0.0,
+   "C2": 0.0,
+   "C3": 0.0,
+   "C4": 0.0
+  },
+  "refs_n": 18,
+  "reasons": [
+   "every plot corner carries a ground mark, all equal; no spot level inside the plot (flat plane through printed values; interior undulation UNKNOWN)"
+  ]
+ },
+ "plot": {
+  "area_m2": 470.55,
+  "sides_printed_equal_dxf": true,
+  "status": "DERIVED",
+  "basis": "15.00 x 31.37 printed side lengths; DXF boundary lines agree; plot area itself not printed"
+ },
+ "coverage_check": {
+  "status": "CONSISTENT",
+  "rows": [
+   {
+    "name": "GF area plan (ARCH p.1)",
+    "area_m2": 319.99,
+    "pct_printed": 68.0,
+    "pct_calc": 68.0034,
+    "implied_plot_m2": 470.574,
+    "agreement": "TRUNCATED"
+   },
+   {
+    "name": "1F area plan after deduction (ARCH p.1)",
+    "area_m2": 208.2,
+    "pct_printed": 44.24,
+    "pct_calc": 44.2461,
+    "implied_plot_m2": 470.615,
+    "agreement": "TRUNCATED"
+   },
+   {
+    "name": "2F area plan (ARCH p.2)",
+    "area_m2": 55.08,
+    "pct_printed": 11.7,
+    "pct_calc": 11.7055,
+    "implied_plot_m2": 470.769,
+    "agreement": "TRUNCATED"
+   },
+   {
+    "name": "total floors area (ARCH p.2)",
+    "area_m2": 583.27,
+    "pct_printed": 123.95,
+    "pct_calc": 123.9549,
+    "implied_plot_m2": 470.569,
+    "agreement": "TRUNCATED"
+   }
+  ]
+ },
+ "storeys_printed_m2": {
+  "GF": 319.99,
+  "1F": 208.2,
+  "2F": 55.08
+ },
+ "plot_minus_gf_printed_m2": 150.56,
+ "clearance": {
+  "status": "NOT_IN_DRAWN_SCOPE",
+  "refs": [],
+  "area_m2": null,
+  "unsearched": [],
+  "reason": "all 31 sheets searched; no note, specification line or answered rule requires it"
+ },
+ "eg_coefficients": [
+  {
+   "id": "Z1 24 neat footing pits (in plot, T-347 lo 188.017207)",
+   "side": "BELOW_EG",
+   "reference": "RELATIVE_TO_EG",
+   "plan_m2": 125.344805,
+   "coef_m3_per_m": 0.0
+  },
+  {
+   "id": "Z1 24 pits, absolute formation once printed (designer item RFI S1)",
+   "side": "BELOW_EG",
+   "reference": "HELD",
+   "plan_m2": 125.344805,
+   "coef_m3_per_m": null
+  },
+  {
+   "id": "Z1 pool envelope in plot (T-347 lo 17.776576)",
+   "side": "BELOW_EG",
+   "reference": "ABSOLUTE",
+   "plan_m2": 11.851051,
+   "coef_m3_per_m": 11.851051
+  },
+  {
+   "id": "pool walls below EG (displacement 2.121053)",
+   "side": "BELOW_EG",
+   "reference": "ABSOLUTE",
+   "plan_m2": 2.356727,
+   "coef_m3_per_m": 2.356727
+  },
+  {
+   "id": "pool walls above EG (0.707018)",
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "plan_m2": 2.356727,
+   "coef_m3_per_m": -2.356727
+  },
+  {
+   "id": "boundary upper ground beam at N.G. (3.5256 m3, T-253)",
+   "side": "BELOW_EG",
+   "reference": "RELATIVE_TO_EG",
+   "plan_m2": 8.814,
+   "coef_m3_per_m": 0.0
+  },
+  {
+   "id": "Z2 fill above EG under the GF slabs",
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "plan_m2": null,
+   "coef_m3_per_m": null
+  },
+  {
+   "id": "court bedding / paving between EG and +0.15",
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "plan_m2": null,
+   "coef_m3_per_m": null
+  }
+ ],
+ "counts": {
+  "level_marks": 28,
+  "sheets_searched": 31
+ }
+}

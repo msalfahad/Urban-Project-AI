@@ -1,0 +1,29 @@
+kind,value_m,sheet,handle,corner,labels
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,37A,C1,"ground at the plot edge, street side, 1.286 m outside the boundary line (block LEL, layer 3)"
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,A86,,"street side, mid-side"
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,A87,C4,"street side, upper corner"
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,A88,C2,"sea side, 0.809 m outside the boundary line, lower corner"
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,A89,C3,"sea side, upper corner"
+PLOT_EDGE_GROUND,0.0,P7757.dxf GF plan,A8A,,"sea side, mid-side"
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,18B,C1,same position as P7757 37A (one translation)
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,1CE,,= P7757 A86
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,1CF,C4,= P7757 A87
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,1D0,C2,= P7757 A88
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,1D1,C3,"near P7757 A89 (0.222 m / 0.101 m apart: drafted separately, same corner)"
+PLOT_EDGE_GROUND,0.0,ST7757 dxf.dxf SH08 ground-beam plan,1D2,,= P7757 A8A
+PLOT_EDGE_GROUND,0.0,sanitary-7757.pdf p.1 GF drainage plan,PDF,,"the same +-0.00 marks at the street and sea edges (visual read, 170 dpi)"
+CUT_GROUND_LINE,0.0,P7757.dxf SE elevation,2439,,"ground line, one end (block 'level', layer 4)"
+CUT_GROUND_LINE,0.0,P7757.dxf SE elevation,2448,,"ground line, other end"
+CUT_GROUND_LINE,0.0,P7757.dxf NW elevation,2A42,,"ground line, one end"
+CUT_GROUND_LINE,0.0,P7757.dxf NW elevation,2A43,,"ground line, other end"
+CUT_GROUND_LINE,0.0,ARCH p.10 SECTION A-A,PDF,,"ground line at both plot ends on hatched earth (visual read, 150 dpi); +0.15 court finish above it"
+NAMED_NO_VALUE,,ST7757.pdf p.9 boxed note 1,PDF,,names the existing plot ground level as the excavation reference (minimum 1.5 m below it); prints no value
+NAMED_NO_VALUE,,ST7757.pdf p.14 TYPICAL BOUNDARY WALL section A-A,PDF,,'N.G. LEVEL' at the top of the boundary ground beam (T-253 read)
+NAMED_NO_VALUE,,ST7757.pdf p.13 ground beams for exterior walls,PDF,,'Outer Normal ground level' at the beam underside (T-253 read)
+FINISHED_GROUND,0.15,P7757.dxf GF plan,"394, 407, 409, 40B, 40D, 4AE",,courts (finished paving)
+FINISHED_FLOOR,0.3,P7757.dxf GF plan,"401, 403, 405, 4AC",,annex / terrace finished floor
+FINISHED_FLOOR,1.0,P7757.dxf GF plan,"40F, 411, 413, A74",,main house GF FFL
+FINISHED_GROUND,0.15,ST7757 dxf.dxf SH08,"1A9, 1B6, 1B8, 1BA, 1BC, 1CB",,= the architectural court marks (T-200: 19 / 20 SH08 marks coincide)
+FINISHED_FLOOR,0.3,ST7757 dxf.dxf SH08,"1B0, 1B2, 1B4, 1C9",,= architectural
+FINISHED_FLOOR,1.0,ST7757 dxf.dxf SH08,"1BE, 1C0, 1C2, 1CD",,= architectural
+FINISHED_GROUND,0.15,P7757.dxf SE / NW elevations,"242C, 2883",,court finish on the elevations
