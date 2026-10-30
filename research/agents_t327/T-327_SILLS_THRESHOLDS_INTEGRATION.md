@@ -120,7 +120,31 @@ omission (-100 % on his side); dry strips 7 pcs / 1.100 m2 (6 + D-1F-03) vs 0: R
 
 ## 7. Validation
 
-@@VALID@@
+- Own Drive copies this run ('Alsenan chalet project': P7757_DXF_COMPRESSED.zip -> P7757.dxf `ab54dd55`, 'ST7757
+  dxf.dxf' `9f9d1179`), decoded into the private folder only; fresh T-167 base run (`research/agents_t167/v304_run.py`),
+  then `research/agents_t326/v3028_run.py`: **V3_0_26 json 8959989c, V3_0_27 f7972540, V3_0_28 json 6f19b32b / csv
+  6bd10592 REPRODUCED (= the candidate of record, T-326 r2 Gate B)**. Full CLI run `research/agents_t327/v3029_run.py`
+  (`tools/urban_boq_m9.py arch --method ARCH_TAKEOFF_V3.0.29 --v3029-inputs`): V3_0_28 6f19b32b again; **V3_0_29 json
+  6b5dc44f / csv 09b3493b**, ledger csv 0b29f826, diff csv 76d5f4eb, run json 5b43d8e6; `v3029_direct.py` on the same
+  V3_0_28 gives the same json byte for byte.
+- Independent re-derivation of the five valued lines straight from SILL_THRESHOLD_LEDGER_T325.csv (width x depth and
+  wet / dry material, not through t327_inputs): 0 mismatches, 0.630 m2.
+- tests/t327_sill_threshold (45): villa V327 by hand (marble 0.120 never the 0.165 polygon, porcelain 0.180, sills 0.080
+  / 0.120, m2 / m.l / pcs totals, retired lines with a live successor, held line blank, outside lines byte-identical,
+  order invariance, floor-level window onto a floor accepted only outside the floor line, untraced residual kept BLANK
+  with the residual named); adverse: marble on a dry door, porcelain on a wet door, marble without the wet rule,
+  external entrance retyped, polygon as the strip (two ways), strip inside a floor line, overlap missing, m.l
+  relabelled, two pcs, millimetres, terrace and sill twice, outside not established, wet rule on a window, sill material
+  without a source, held as 0, second carrier, one line two openings, carried line differing, stale line, non-blank
+  line, source without checker run, applied twice, a change outside quantity / state / basis, double booking on
+  finished lines, unit; Alsenan pins (54 carried, 5 retyped 0.630 m2, polygons and traces, D-GF-10 on 0.800, A-GF-01
+  blank, D-GF-15 held, external doors unchanged, V3.0.28 ids re-derived, an edited ledger stops the build); master
+  1.24.0 (builder, checks clean, dropping the entry is stale).
+- L4 full suite tests/ + agents/ to the end on 3491e1a6's code (task commits 9cb4c477 + master): 396 FAILED / ERROR,
+  test by test against research/agents_t202/known_failures.json: 395 listed + tests/codemap test_repository_maps_are_current
+  (the maps were rebuilt by the tool during the run; re-run after: PASS); christiannp WORKTREE_GITDIR passes here.
+  **NEW from this package: 0.** After merging the working head 6b9ce820 (T-369 / T-370 research only; CODEMAP conflict
+  resolved by the tool, stale none): t327 / t326 / t325 / t340 / t369 / t370 / codemap / t061 / t130 pass; freeze 0.
 
 ## 8. For the Checker (Gate B always-checked lines)
 
