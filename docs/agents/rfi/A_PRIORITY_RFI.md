@@ -420,7 +420,7 @@ status or V2.9 cell changed by these verdicts.
 Totals: 36 questions (A09 is a pointer, not counted): CITATION OK 19, CORRECTED 13, PARTIAL 2, NOT CHECKED 2 (S23, A08); 0 WRONG
 beyond the corrections. The Lead applies the corrections in the question text (S01, S19, S21 change a page number).
 
-### Addendum: the 2 NOT CHECKED + 3 PARTIAL items (Verifier 2026-10-30 ~04:30 UTC, run session_01E6cPnbD7nsBT15vQKR9kA7)
+### Addendum: the 2 NOT CHECKED + 3 PARTIAL items (Verifier 2026-10-30 ~03:56 UTC, run session_01E6cPnbD7nsBT15vQKR9kA7)
 
 Sources read this run (Drive, Alsenan chalet project, read-only, decoded into .work/private; raster prints read as
 images): 'p7757_arch_sheet04.pdf' (= 1st FLOOR PLAN 1:100), 'p7757_arch_sheet10.pdf' (= SECTION A-A 1:100),
