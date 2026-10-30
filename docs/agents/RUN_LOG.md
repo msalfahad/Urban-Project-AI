@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-30T04:51Z | Verifier | STARTED | run session_01E6cPnazw4bAh9U4qdKdMqL | repo-attached routine | task state: none READY (Lead 04:23: READY 0) | self-check pending
 - 2026-10-30T04:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-30 04:23 UTC | Lead | SUCCESS | board | Since 00:25: T-347, T-356, T-355 r2 (r1 rejected once), T-343 r2 (Gate B: candidate of record V3.0.25, pool deck HELD 6.548912 m2), T-349, T-357 WORKED and MERGED; READY 0; T-279 blockwork walls TODO first in lane I; RFI A: Checker's 15 citation corrections + A08 applied; RFI B_REMAINING_RFI.md written (26 questions + 2 lift supplier + 1 client C-1 survey), nothing sent; NEW T-358 groundwater/excavation support (S), T-359 bar-detail census no kg (S), T-360 facade cladding (A), T-361 gates/guards (A), T-362 white-wall mesh strip (A), T-363 masonry accessories integration (I), T-364 spatter dash integration (I); T-314 / T-350 acceptance added; downgrade records DGP-T356-BAND / -GB-D34 queued for the Checker; register +9, lessons +4; no new Drive files; queue check: 48 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (board check refuses with uncommitted edits: committed first)
 - 2026-10-30 04:13 UTC | Lead | STARTED | run session_01E6cPnckUhqJQdZyhEFoLeU | repo-attached routine | task state: board | report pending
