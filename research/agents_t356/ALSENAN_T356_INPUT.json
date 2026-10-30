@@ -1,0 +1,147 @@
+{
+ "band": {
+  "band_area_m2": 18.388,
+  "centreline_m": 91.94,
+  "crossing_outline_count": 9,
+  "crossing_total_m": 21.45,
+  "crossings_m": [
+   [
+    "F10/F:1B1B",
+    4.45
+   ],
+   [
+    "F11:1B07",
+    3.5
+   ],
+   [
+    "F14:1B1A",
+    3.8
+   ],
+   [
+    "F15:1B2A",
+    1.8
+   ],
+   [
+    "F8:1B24",
+    3.6
+   ],
+   [
+    "F:1668",
+    0.9
+   ],
+   [
+    "F:1669",
+    1.5
+   ],
+   [
+    "F:166A",
+    0.9
+   ],
+   [
+    "FN:1100",
+    1.0
+   ]
+  ],
+  "inner_handle": "1659",
+  "outer_handle": "1658",
+  "width_m": 0.2
+ },
+ "candidate_basis_reproduction_m2": {
+  "all_outlines|gb_blinding_strips": 6.695821,
+  "all_outlines|gb_strips": 7.360478,
+  "all_outlines|no_gb": 8.530149,
+  "f10_outline_missing|gb_blinding_strips": 7.595821,
+  "f10_outline_missing|gb_strips": 8.440478,
+  "f10_outline_missing|no_gb": 9.745196
+ },
+ "schema": "URBAN_T356_INPUT_V1",
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "frame": "FOUNDATION PLAN",
+  "projection_m": 0.1,
+  "projection_source": "ST7757.pdf p.13 typical footing / ground-beam details",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "strap_blinding_plan_overlap_with_gb_blinding_m2": 1.834328,
+ "straps": {
+  "SB1": {
+   "axis_clear_m": 4.55,
+   "clear_concrete_plan_m2": 3.185,
+   "drawn_width_m": [
+    0.7,
+    0.7
+   ],
+   "edge_handles": [
+    "1689",
+    "1B1C"
+   ],
+   "edge_lengths_m": [
+    7.3501,
+    7.3501
+   ],
+   "footings_joined": [
+    "F10/F:1B1B",
+    "F8:1B24"
+   ],
+   "in_footing_blinding_band_m2": 0.18,
+   "merged_strip_m2": 3.915,
+   "own_strip_m2": 4.095,
+   "strip_outside_plot_m2": 0.0
+  },
+  "SB2": {
+   "axis_clear_m": 2.2927,
+   "clear_concrete_plan_m2": 2.264406,
+   "drawn_width_m": [
+    0.9871,
+    0.9884
+   ],
+   "edge_handles": [
+    "1B08",
+    "1B09"
+   ],
+   "edge_lengths_m": [
+    5.1054,
+    5.2985
+   ],
+   "footings_joined": [
+    "F11:1B07",
+    "F6:1B19"
+   ],
+   "in_footing_blinding_band_m2": 0.24204,
+   "merged_strip_m2": 2.480908,
+   "own_strip_m2": 2.722948,
+   "strip_outside_plot_m2": 0.0
+  },
+  "SB3": {
+   "axis_clear_m": 3.258,
+   "clear_concrete_plan_m2": 1.63242,
+   "drawn_width_m": [
+    0.5022,
+    0.5
+   ],
+   "edge_handles": [
+    "1B26",
+    "1B27"
+   ],
+   "edge_lengths_m": [
+    4.6964,
+    4.7849
+   ],
+   "footings_joined": [
+    "F15:1B2A",
+    "F3:166B"
+   ],
+   "in_footing_blinding_band_m2": 0.149771,
+   "merged_strip_m2": 2.134241,
+   "own_strip_m2": 2.284012,
+   "strip_outside_plot_m2": 0.0
+  }
+ },
+ "straps_total": {
+  "clear_concrete_plan_m2": 7.081826,
+  "in_footing_blinding_band_m2": 0.571811,
+  "merged_strip_m2": 8.530149,
+  "own_strip_m2": 9.10196,
+  "strip_outside_plot_m2": 0.0
+ }
+}
