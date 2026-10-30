@@ -1,0 +1,66 @@
+{
+ "proposals": [
+  {
+   "audit_range_m3": [
+    5.6392,
+    11.0328
+   ],
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.24",
+   "engine_qty": 7.2204,
+   "evidence": [
+    {
+     "printed_value": "band 0.20 closed round the plot, centreline 91.94 m",
+     "sheet": "ST7757 dxf.dxf FOUNDATION PLAN S-BOUN 1658/1659"
+    },
+    {
+     "printed_value": "B.W 20 x 60",
+     "sheet": "ST7757.pdf p.10"
+    },
+    {
+     "printed_value": "GROUND BEAM (20x40); A-A lower G.B depth not written; pads 130x80x30",
+     "sheet": "ST7757.pdf p.14"
+    }
+   ],
+   "issued_by": "PROPOSAL (Worker 1, T-356): the Checker issues or refuses",
+   "line_ids": [
+    "L-6290a9f3d93f38cd46d6"
+   ],
+   "line_low_end": "NOT_ESTABLISHED (pad split, M4)",
+   "proposal_id": "DGP-T356-BAND",
+   "proposed_state": "HELD",
+   "reason": "UNSUPPORTED BASIS: the line is 60.17 m x 0.20 x 0.60 SOURCE_DERIVED; 60.17 m is the band with one plot side lost (T-037), neither the free 70.49 m nor the drawn 91.94 m, and 0.60 is one of two printed sections (Q-28 A PROVISIONAL, not released)"
+  },
+  {
+   "audit_range_m3": [
+    1.643901,
+    2.291867
+   ],
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.24",
+   "engine_qty": 1.943901,
+   "evidence": [
+    {
+     "printed_value": "three ground-beam sections titled by span length (> 5 m: 30 x 60; < 5 m: 30 x 40; < 2.5 m: 30 x 30); no precedence printed",
+     "sheet": "ST7757.pdf p.13"
+    }
+   ],
+   "issued_by": "PROPOSAL (Worker 1, T-356): the Checker issues or refuses",
+   "line_ids": [
+    "L-0c5ede7fd2c9e425aa8d",
+    "L-5af89b9f1e5b90daf8f5",
+    "L-81444e222487437e257e",
+    "L-970bac563cbcd69e2a30",
+    "L-a8c5c32c7a785c1e3f05",
+    "L-d53e5eb08e2c6c668254",
+    "L-e2134034441cb7db7bd7",
+    "L-f0e25ad2cf73bf2a35ea",
+    "L-f24cf117a9ce1e875785"
+   ],
+   "proposal_id": "DGP-T356-GB-D34",
+   "proposed_state": "HELD",
+   "reason": "UNSUPPORTED BASIS: each line shows the 'less than 2.5 m' depth 0.30 as its value although the 'less than 5 m' title also holds literally (D-34, designer item S8); the candidate's range rule only varies the length basis (clear vs c/c), never the title"
+  }
+ ],
+ "schema": "URBAN_T356_DOWNGRADE_PROPOSALS_V1"
+}
