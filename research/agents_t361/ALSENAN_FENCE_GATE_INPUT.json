@@ -1,0 +1,155 @@
+{
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd554c31fe4a...",
+ "unit": "m",
+ "street": {
+  "fence_line_outer_10F": 8.3,
+  "gap_110_hidden": 2.5,
+  "solid": 5.8,
+  "end_cap_10B": 0.2,
+  "inner_face_13A_street_leg": 5.6,
+  "leaf_symbols_in_gap": [],
+  "leaf_symbols_at_gap_end_outside": [
+   "15E"
+  ]
+ },
+ "upper_neighbour": {
+  "outer_99_98": 31.37,
+  "inner_13A_leg": 30.97
+ },
+ "lower_neighbour_short": {
+  "outer_86": 1.2,
+  "inner_106": 1.2
+ },
+ "sea": {
+  "gate_block_2D8": "D120",
+  "gate_block_width": 1.0,
+  "gate_leaf_swing_radius": 0.89,
+  "zone_8E": 1.7,
+  "solid_8D": 5.1684,
+  "element_column_face_to_corner": 7.1
+ },
+ "se_elevation_sea_gate": {
+  "leaf_w_23F1_23F2": 0.9,
+  "leaf_h": 2.1,
+  "leaf_h_check": 2.1,
+  "knob_23F6": "CIRCLE",
+  "frame_w_23F4_23F3": 1.0,
+  "head_23F8_above_court_23E5": 2.2,
+  "frame_line_h_23F4": 2.5
+ },
+ "nw_elevation_sea_gate_zone": {
+  "pier_2880_2881": 0.2,
+  "panel_27FA": 1.3,
+  "panel_h_above_27F1": 2.5,
+  "end_27EA_27EB": 0.2
+ },
+ "st03": {
+  "open_side_368": 1.2,
+  "top_strip_367": 0.2,
+  "wall_side_15A_158_thickness": 0.2
+ },
+ "posts": {
+  "nw_top_rail_279F": 4.9211,
+  "nw_vertical_lines": [
+   [
+    0.383,
+    "25C6"
+   ],
+   [
+    0.419,
+    "25C7"
+   ],
+   [
+    1.42,
+    "276E"
+   ],
+   [
+    1.456,
+    "276C"
+   ],
+   [
+    2.457,
+    "2763"
+   ],
+   [
+    2.493,
+    "2761"
+   ],
+   [
+    3.494,
+    "2762"
+   ],
+   [
+    3.53,
+    "275F"
+   ],
+   [
+    3.648,
+    "2758"
+   ],
+   [
+    3.683,
+    "275B"
+   ],
+   [
+    4.234,
+    "251F"
+   ],
+   [
+    4.685,
+    "25B8"
+   ],
+   [
+    4.72,
+    "25B9"
+   ]
+  ],
+  "se_top_rail_223C": 3.7533,
+  "se_vertical_lines": [
+   [
+    0.067,
+    "23C1"
+   ],
+   [
+    0.122,
+    "23C0"
+   ],
+   [
+    0.137,
+    "23A3"
+   ],
+   [
+    0.944,
+    "1D20"
+   ],
+   [
+    0.974,
+    "1D1F"
+   ],
+   [
+    1.82,
+    "2249"
+   ],
+   [
+    1.851,
+    "2247"
+   ],
+   [
+    2.697,
+    "223D"
+   ],
+   [
+    2.727,
+    "2240"
+   ]
+  ]
+ },
+ "hatch_patterns": {
+  "ANGLE": 1,
+  "AR-PARQ1": 2,
+  "LINE": 14,
+  "MUDST": 1,
+  "NET": 11,
+  "SOLID": 59
+ }
+}
