@@ -1,0 +1,42 @@
+{
+ "references": [
+  {
+   "file": "engine/source/continuous_beams.py",
+   "line": 373,
+   "symbol": "_with_laps",
+   "in_function": "physical_bars"
+  },
+  {
+   "file": "engine/source/generic_route.py",
+   "line": 2178,
+   "symbol": "physical_bars",
+   "in_function": "_cb_model"
+  }
+ ],
+ "frozen_form_copies": [
+  {
+   "file": "engine/source/continuous_beams.py",
+   "line": 454,
+   "in_function": "_with_laps",
+   "verdict": "THE DEFECT (frozen, route G continuous-beam bar groups)"
+  },
+  {
+   "file": "engine/source/rebar_laps_v1.py",
+   "line": 167,
+   "in_function": "frozen_with_laps",
+   "verdict": "reproduction for before / after only (T-273), not on a route"
+  },
+  {
+   "file": "engine/source/rebar_laps_v1.py",
+   "line": 180,
+   "in_function": "compare_with_frozen",
+   "verdict": "reproduction for before / after only (T-273)"
+  },
+  {
+   "file": "engine/source/rebar_laps_v1.py",
+   "line": 350,
+   "in_function": "_coupler_row",
+   "verdict": "CORRECT here: a mechanical coupler consumes no bar length, so joints = ceil(L / S) - 1 (owner s.6.1 category)"
+  }
+ ]
+}
