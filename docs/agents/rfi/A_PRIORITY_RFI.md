@@ -347,3 +347,75 @@ coping material. Other: S13 sunken-panel drop, A3 main door and SX-01, A9 D-55 l
 sea-side element. Document control (not a design question): S18 issue date and revision per structural sheet.
 Lift supplier (to CLARIFICATIONS_SUPPLIER, not the structural designer): lift-pit depth (S14 / D-43); landing door
 heads L-GF-01 / L-1F-01 / L-2F-01.
+
+---
+
+## Checker citation verdicts (Verifier 2026-10-30 ~01:30 UTC; owner 2026-10-29 22:05 (3) light run)
+
+Sources read this run (Drive, Alsenan chalet project, read-only, decoded into .work/private): 'ST7757.pdf' (16 pages
+rendered; the print has no text layer, pages read as images), 'ST7757 dxf.dxf' (handles and texts by position),
+'p7757_arch_sheet03.pdf'. ST page map, from the printed sheet titles and the DXF frame positions: p.1 columns and axes
+plan (x about 157 .. 190 k); p.2 foundations (119 .. 151 k); p.3 ground beams / tie beams (81 .. 113 k); p.4 GF roof slab
+(43 .. 75 k); p.5 1F roof slab (5 .. 37 k); p.6 2F roof slab (-33 .. -1 k); p.7 pool and dome details; p.8
+recommendations; p.9 schedules of columns and footings + general notes box; p.10 schedule of simple beams (incl. B.W, SB1
+.. SB3); p.11 / p.12 continuous-beam schedules; p.13 footing / ground-beam / lintel details; p.14 lift, boundary wall,
+parapets; p.15 column details; p.16 stair details. Architectural P7757 sheet 03 = GROUND FLOOR PLAN 1:100. No quantity,
+status or V2.9 cell changed by these verdicts.
+
+- RFI-S01: CORRECTED: the 1.50 m note is ST p.9 general note 1 (notes box under the bearing-capacity table: excavation
+  level not less than 1.5 m below the existing plot level), NOT p.1 (p.1 notes: slab 16 cm, neighbour-side tie beams,
+  striking 21 days). p.13 footing detail (10 cm plain concrete, membrane, 5 cm screed, 10 cm projection), p.2 and p.9
+  column schedule: OK.
+- RFI-S02: CITATION OK: p.2 open outline 1B1B 3.25 x 1.40 with tag F10 (text at 147842, 36930) and F; p.9 F10 280 x 140
+  x 50, F 90 x 80 x 30.
+- RFI-S03: CITATION OK: p.10 B.W 20 x 60; p.14 TYPICAL BOUNDARY WALL G.B 20 x 40 and 'AS PER EXCAVATION DEPTH BELOW N.G.
+  LEVEL'; p.1 note 2 (neighbour-side tie beams above and below the black block from foundation level). 91.94 / 21.45 m
+  not re-measured.
+- RFI-S04: CORRECTED: '(sheet no. to confirm)' -> architectural P7757 sheet 03 (GROUND FLOOR PLAN 1:100); p.14 pads
+  (130x80x30) and 'SEE ARCH PLAN': OK; sheet 03 marks no boundary-wall column at the printed scale.
+- RFI-S05: CITATION OK: p.10 SB3 50 x 40; p.2 (SB3 into F3).
+- RFI-S06: CITATION OK: p.13 projection 10; p.2: own check, 8 footings with a face on the plot line (south F11, F14,
+  F15, F x 2 incl. the corner F; west F; east F8, FN).
+- RFI-S07: CITATION OK: p.13 shows blinding under the footing and the ground-beam sections, no strap section.
+- RFI-S08: CITATION OK: p.14 DETAIL OF LIFT WITH ISOLATED FOOTING prints '10cm Plain con.' with no projection dimension.
+- RFI-S09: CITATION OK: p.13 'Ground Beams for exterior walls' with 'FOLLOW ARCH.' and 'Outer Normal ground level'.
+- RFI-S10: CITATION OK: p.13 section titles read 'without concentrated load'; the 15 loaded spans were not recounted.
+- RFI-S11: CITATION OK: p.13 titles 'More than 5m', 'Less than 5m', 'Less than 2.5m length'.
+- RFI-S12: CORRECTED: name the sheet: the CB10 labels are in the ST p.5 frame (1F roof slab plan), not 'roof slab plan'
+  unspecified; p.11 / p.12 schedule row not re-read.
+- RFI-S13: CORRECTED (sheet names): GF B29 / CB2 / B21 on ST p.4, 1F B6 on ST p.5; p.10 widths B29 25, B21 45, B6 25
+  confirmed; CB2 (p.11 / p.12) not re-read.
+- RFI-S14: CORRECTED (sheet name): ST p.4 (labels CB3, B3 and '(With Stair)' on the south line, y about 37.45 .. 38.13 m);
+  p.16 not re-read.
+- RFI-S15: CORRECTED: '(sheet no. to confirm)' -> ST p.4 (GF roof slab) and ST p.5 (1F roof slab); the six handles were
+  not re-checked this run.
+- RFI-S16: CORRECTED (sheet names): ST p.4 / p.5.
+- RFI-S17: CITATION OK: ST p.5: circle 649 r 2.211 and arcs 64A .. 64D r 2.411 at (30.828, 41.651), 'SEE DETAIL' texts,
+  west ring B4 texts; p.7 DETAIL OF DOME.
+- RFI-S18: CORRECTED (sheet names): ST p.4 / p.5; the Arabic 'slab note 1' on parapets / projections was NOT found on
+  p.1 (whose note 1 is the 16 cm slab): its sheet stays to confirm.
+- RFI-S19: CORRECTED: '30X80' is printed on ST p.1 (columns and axes plan, two C8 positions), not on the storey slab
+  plans; p.9 C8 30 x 90 (FOUNDATION) confirmed.
+- RFI-S20: CITATION OK, sheet names to add: GF RS 347 / 359 / 344 / 380 in the ST p.4 frame, 1F RS 691 .. 667 / 69A in
+  the ST p.5 frame (all S-COL.BON outlines).
+- RFI-S21: CORRECTED: '20X50' (three) and '25X100' are printed on ST p.1 (columns and axes plan), not p.2; p.9
+  FOUNDATION C1 / C2 30 x 50, C9 30 x 100 confirmed.
+- RFI-S22: CORRECTED (sheet name): the B15 label is on ST p.6 (2F roof slab plan); p.10 B15 20 x 120 confirmed.
+- RFI-S23: NOT CHECKED this run (architectural sections and roof plans: sheet numbers not cited, not opened).
+- RFI-S24: CITATION OK: ST p.4: LINEs 2F6 / 2F4 / 2F5 / 2F3 and INSERT 580 in the p.4 frame; architectural sheets not
+  opened.
+- RFI-S25: CITATION OK: ST p.5: LINE 5E2 and S-OPENING LINE 633.
+- RFI-S26: CITATION OK: ST p.3: LINEs 1C4 .. 1C7 (D1) and 18A .. 179 (E1) in the p.3 frame.
+- RFI-S27: CITATION OK: ST p.4: LINEs 2DF .. 2EA, S-OPENING arcs 2DD / 2DE, INSERT 5B6.
+- RFI-S28: CITATION OK for ST p.6 / p.7 sheet identity; the p.6 panel B2 bar text not re-read; architectural sheets not
+  opened.
+- RFI-A01: CORRECTED: '(sheet no. to confirm)' -> P7757 sheet 03 (GF plan; '633' on the sea-view side).
+- RFI-A02: CITATION OK: sheet 03 pool (no step drawn at 1:100) and ST p.7 pool detail.
+- RFI-A03: PARTIAL: GF = sheet 03 (round stair drawn); the 1F plan and sections A-A / B-B sheet numbers not checked.
+- RFI-A04: PARTIAL: ST linework = p.4; architectural sheet numbers not cited, not checked.
+- RFI-A05: CITATION OK for ST p.5 (arcs 5FE / 5FF = west ring, circle 649 = east ring); section B-B sheet not checked.
+- RFI-A06: CORRECTED: '(sheet no. to confirm)' -> P7757 sheet 03 (band 'GARDEN', 150 wide, west of the reception).
+- RFI-A07: CITATION OK: sheet 03 (space under the round stair).
+- RFI-A08: NOT CHECKED this run (1F plan not opened).
+Totals: 36 questions (A09 is a pointer, not counted): CITATION OK 19, CORRECTED 13, PARTIAL 2, NOT CHECKED 2 (S23, A08); 0 WRONG
+beyond the corrections. The Lead applies the corrections in the question text (S01, S19, S21 change a page number).
