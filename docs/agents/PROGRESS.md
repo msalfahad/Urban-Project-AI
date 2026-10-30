@@ -1,10 +1,37 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 12:40 UTC (Lead). Previous version: 2026-10-30 08:25 UTC. The released numbers did not change
+Last update: 2026-10-30 16:30 UTC (Lead). Previous version: 2026-10-30 12:40 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 2 in the candidate's export (the concrete slab 60.28
-m3 is the one scoreboard reference line among them); released: 0. The candidate under review is now V3.0.27 (not
-released): it re-books the slab bar ends.
+m3 is the one scoreboard reference line among them); released: 0. The candidate under review stays V3.0.27 (not
+released).
+
+Since 30 Oct 12:40 (newest first; five checked and merged, all research, none of them moves a candidate number; one
+integration sent back for a narrow fix):
+- Door / window reveals INTO THE CANDIDATE: SENT BACK for a narrow fix. 67 of 70 lines agree with the checker's own
+  reading of the drawing (outside depth 0.08 / 0.10 m on all 27 windows). Three arched windows were booked on their
+  enclosing rectangle instead of the arch: 0.62 / 0.62 / 0.46 m2 where the arch gives 0.55 / 0.55 / 0.41 m2 (+13 %).
+  Total window reveal faces go from 12.64 to about 12.44 m2 after the fix. A new check looks for the same mistake in
+  every other trade that touches these arched openings (sills, plaster returns, corner beads, ceilings, skirting).
+- Where the structural drawings print lap lengths: CHECKED AND MERGED. Only three places print one (temperature bars
+  40 x diameter; starter bars, note 9; the typical footing '40 ø', which contradicts note 9: a designer question).
+  The candidate uses the starter-bar note for about 470 lines that are not starter bars (beam ends, column laps,
+  ground-beam ends, slab development): that steel is valued on a borrowed basis and is being bound line by line so the
+  checker can move it to "held". The splice-count formula in the old frozen method is wrong for long runs at larger
+  laps (no effect on Alsenan today); a corrected formula is being proposed as a new version.
+- Which bar shapes the drawings print: CHECKED AND MERGED. Of 38 bar groups, 7 can be scheduled now (all straight bars,
+  442 lines); 10 after a named consultant answer; 19 have a shape the drawings never dimension (bend diameter, hooks,
+  boxed footing bars, starter feet). A straight-bar cutting list for the 7 is next; the gaps become consultant
+  questions (not sent).
+- Bar details of the pool, stairs and tank: CHECKED AND MERGED after one fix: every bar label on the detail is now cited;
+  one bar is drawn as 12 mm in one place and 14 mm in another (designer question).
+- Exposed wall-tile edges: CHECKED AND MERGED after one fix: 31.65 m.l determinate (was 38.95); at the ground-floor
+  lobby opening the structural roof plan shows no beam under the overhead element, so those edges stay held by name.
+- Fence and gates: CHECKED AND MERGED (research): street side 8.30 m = 5.80 m fence + 2.50 m opening with no gate leaf
+  drawn; sea gate 1.00 m (leaf 0.90 x 2.10 drawn, type not specified); north side 31.37 m. The freelancer's fence
+  37.20 m agrees with the same scope (37.17 m); he has no gate row.
+- Next: the reveals fix; the 470-line lap binding; the arched-opening check; straight-bar cutting list; shower tanking;
+  sanitary fixtures count.
 
 Since 30 Oct 08:25 (newest first; six checked and merged, one of them after one fix; two sent back for a narrow fix):
 - Slab bar ends INTO THE CANDIDATE: CHECKED AND MERGED first time (V3.0.27), under your 29 Oct rule (only drawn bars
@@ -1254,16 +1281,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-30 00:25)
-- Checker: the earthworks binding, then the outdoor floors fix when handed in, and a light check of every sheet citation
-  in the priority consultant questions.
-- Structural (worker 1): the four below-ground concrete range findings (after the earthworks check), the soil treatment
-  check, then the site and existing-ground levels the excavation bounds measure from.
-- Architecture and finishes (worker 2): mesh strip / sharmat ties / plaster joint mesh (your answers), then spatter dash,
-  then kitchen / laundry / pantry tile zones.
-- Integration (worker 3): the pool deck fix in the outdoor floors package, then blockwork into the candidate, then the
-  slab bar-end split, reveals, sills, formwork, roof build-up, ceilings, skirting, waterproofing, outside plaster and
-  earthworks, one at a time.
+(Lead 2026-10-30 16:30)
+- Checker: the reveals fix first when handed in, then the lap binding and the arched-opening check, then the research
+  pieces in hand-in order.
+- Structural (worker 1): the 470 lines valued on the starter-bar lap note, then a straight-bar cutting list for the 7
+  bar groups the drawings fully dimension, the splice-count formula, and the consultant questions for the bar shapes
+  and laps the drawings leave open.
+- Architecture and finishes (worker 2): every trade line on the arched openings checked against the arch, then shower
+  floors and tanking, then the sanitary fixture and floor-drain count.
+- Integration (worker 3): the reveals fix, then sills, formwork, roof build-up, ceilings, skirting, waterproofing,
+  outside plaster, earthworks, foundation waterproofing, spatter dash, masonry accessories and mortar, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -1282,7 +1309,7 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- One decision today (30 Oct 12:40, in the Lead report): which cement : sand mix Urban prices for the block-joint
+- One decision still open (asked 30 Oct 12:40, in the Lead report; nothing new at 16:30): which cement : sand mix Urban prices for the block-joint
   mortar of black block walls, so cement bags and sand can be counted (3.87 m3 of mortar measured; nothing is held up
   meanwhile). Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.
 - The consultant list: the checker's corrections to the remaining 26 questions are applied (30 Oct 12:40); two elevation

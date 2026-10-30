@@ -1,4 +1,16 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
+## 2026-10-25 08:15 (lead run; covers 06:15 - 08:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-287 | WORKED | MERGED 542b64c7 (Verifier 07:58: own C5 / C3 on the CB5 ground beam, base +0.25, 1.430 m3 vs candidate 1.2375, -13.5 %) | CB5 pair VERIFIED AS A COMPONENT; T-254 carries 1.4300 m3; G2 / G3 are designer-package rows |
+| T-280 | WORKED | MERGED 86fdc315 (Verifier 08:05: 2 chains by hand, 26 restated 734.779 vs 734.781 kg, LOWER bounds labelled, 10 HELD blank) | lessons row 'a bound is only as good as its datum' CLOSED; F-T280-01 into the element register (CN tops = T-214 slab top) |
+| T-245 | PARTIAL | REJECTED narrow 07:58: full suite NEW 1 = codemap test (report committed after the maps); every other Gate B check PASSED on the real candidate (determinism across local names, one id + one revision set, export one command, invalidation STALE) | TODO r2 (worker 3 08:59): merge 86fdc315, F-T245-01 (EXCLUDED stays EXCLUDED + adverse test), maps LAST; REPEAT of the 'maps as the LAST commit' rule, written into every hand-in instruction; whole-file binding LIMIT -> T-294 (queued after T-255) |
+| T-289 | (READY 07:10, not classified) | basis ledger, residual 0.000 m3 on all four; FOUND 3 exterior runs in interior-typed lines: main-house exterior GB 8.1642 -> 15.9600 m3 (+95.5 %); 2F columns 8 line ids vs the Checker's 14 | Gate A FIRST 08:51 with 5 Lead challenges; T-254 acceptance extended |
+| T-275 r2, T-286, T-170 | (READY / set READY / complete, not classified) | guard on every census read (+4 tests); G4 settled from the drawing (+1.100 m2 WET floor); excavation ledger, every volume HELD blank | Gate A in order T-275 r2, T-286; T-170 next free slot |
+| Worker 1 07:20, Worker 2 07:41 | FAILED (planning, Lead's) | both runs ended 'no claimable TODO row' (0 TODO, READY 5) | Lead fault: the queue held no row outside lane I; four integration-dependency rows added (T-290 .. T-293), each claimable while READY > 3 |
+
+
 ## 2026-10-25 00:15 (lead run; covers 22:15 - 00:15)
 
 | Task | Result | Evidence | Decision |

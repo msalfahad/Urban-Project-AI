@@ -42,6 +42,16 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-30 16:30 (lead run; covers 12:38 - 16:30)
+
+- T-359 r2 bar-detail census: WORKED (Gate A 13:59; 110 / 110 bar labels cited; R2 outer vertical COUNTABLE_AFTER RFI-B-S11; R1 d12 vs d14 CONFLICT confirmed, designer). Decision: its gaps go into T-376 RFI rows.
+- T-368 r2 exposed wall-tile edges: WORKED (Gate A 13:59; Checker's own ST strip query: no beam under the GF-14 HIDDEN pair, edges HELD by name, determinate 31.65 m.l). Decision: integration rides with T-327 (already an acceptance add).
+- T-361 fencing / gates / guards census: WORKED (Gate A 15:37; street 8.30 = 2.50 + 5.80, sea gate 1.00, north 31.37). Decision: none now; integration row when a lane I slot frees (not queued yet: research only, leafs / infill HELD).
+- T-366 lap-authority census: WORKED (Gate A 15:56; only 3 printed lap sources; frozen _with_laps splice-count defect confirmed, 0.000 kg Alsenan). Decision: F-T366-2 (470 candidate lines on note 9 outside its starter group) -> NEW T-373 gate 2 first in lane S (downgrade-only input); defect -> NEW T-375; F-T366-1 conflict -> T-376.
+- T-371 bar-shape census: WORKED (Gate A 15:57; 7 populations schedulable now, all straight, 442 lines). Decision: NEW T-374 straight-bar cutting schedule; G-T371-0 .. 7 and F-T371-1 / -4 -> NEW T-376 designer RFI rows.
+- T-326 reveals into the candidate (Gate B): FAILED narrow at r1 (15:35, D-T326-1: arched W15 / W16 / W26 outside jambs + head on the band-crown rectangle, +13 % on 3 of 70 lines; 67 lines agree with the Checker's own DXF depths). Decision: TODO r2 first in lane I with NEEDS (a)-(d); cause lies in a merged Gate A ledger (T-313 r2) -> NEW T-377 audits every other trade line of the arched set (gate 2, first in lane A).
+- Recurring: (1) the Drive connector's raw download still needs base64-encoding before 'agent_env.sh decode' (6 runs reported it since 12:38); workaround works, no private file left .work/private; wrapper fix for the owner / main chat; (2) an opening's SHAPE (arch) was again a hidden input: the size table carries the band-crown rectangle, the outline record carries the arch; T-377 + lessons row.
+
 ## 2026-10-30 12:40 (lead run; covers 08:25 - 12:40)
 
 - T-318 slab bar ends into the candidate (Gate B): WORKED first pass (11:35; Checker re-derived all 196 changed + 138 added lines by his own script from the merged ledgers, 0 mismatches; CANDIDATE OF RECORD V3.0.27). Decision: T-326 TODO first in lane I; F-T318-1 (legs bounded by D less note-22 covers) goes to T-371 as a proposal only.
@@ -243,14 +253,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-245 r2 | WORKED | MERGED ef3305f1 (Verifier 10:17 Gate B PASS: full suite NEW 0 in 4 chunks, own run json 3181cf12 / csv a4dc01dd, one identity on 3,699 lines, F-T245-01 on the real 14 ids) | records not issued (lock margin): path named docs/agents/verdicts/<candidate>/, first in the 10:51 run; T-254 promoted; O-T245-03 -> T-294 (h); lessons json-hash row CLOSED |
 | T-290, T-291 | (READY, not classified) | r2: F-T245-01 fixed, maps LAST, full suite NEW 0; T-290: 14 lines residual 0.000 m3, closable 2.864463 (not 2.915), drums omission, formwork r4 on retired readings; T-291: all 21 masonry lines BLOCKED blank, determinate 422.5314 m2 | VERIFIER QUEUE T-245 r2 -> T-290 -> T-291 with Lead challenges; T-266 / T-279 / T-293 acceptance extended |
 | Worker 1 09:19, Worker 2 09:40 | (IDLE on own run lock; not a failure) | 08:20 / 08:40 runs took 101 / 84 min on packages sized about 50 min | stop points named in every new row (owner 04:38 sizing) |
-
-## 2026-10-25 08:15 (lead run; covers 06:15 - 08:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-287 | WORKED | MERGED 542b64c7 (Verifier 07:58: own C5 / C3 on the CB5 ground beam, base +0.25, 1.430 m3 vs candidate 1.2375, -13.5 %) | CB5 pair VERIFIED AS A COMPONENT; T-254 carries 1.4300 m3; G2 / G3 are designer-package rows |
-| T-280 | WORKED | MERGED 86fdc315 (Verifier 08:05: 2 chains by hand, 26 restated 734.779 vs 734.781 kg, LOWER bounds labelled, 10 HELD blank) | lessons row 'a bound is only as good as its datum' CLOSED; F-T280-01 into the element register (CN tops = T-214 slab top) |
-| T-245 | PARTIAL | REJECTED narrow 07:58: full suite NEW 1 = codemap test (report committed after the maps); every other Gate B check PASSED on the real candidate (determinism across local names, one id + one revision set, export one command, invalidation STALE) | TODO r2 (worker 3 08:59): merge 86fdc315, F-T245-01 (EXCLUDED stays EXCLUDED + adverse test), maps LAST; REPEAT of the 'maps as the LAST commit' rule, written into every hand-in instruction; whole-file binding LIMIT -> T-294 (queued after T-255) |
-| T-289 | (READY 07:10, not classified) | basis ledger, residual 0.000 m3 on all four; FOUND 3 exterior runs in interior-typed lines: main-house exterior GB 8.1642 -> 15.9600 m3 (+95.5 %); 2F columns 8 line ids vs the Checker's 14 | Gate A FIRST 08:51 with 5 Lead challenges; T-254 acceptance extended |
-| T-275 r2, T-286, T-170 | (READY / set READY / complete, not classified) | guard on every census read (+4 tests); G4 settled from the drawing (+1.100 m2 WET floor); excavation ledger, every volume HELD blank | Gate A in order T-275 r2, T-286; T-170 next free slot |
-| Worker 1 07:20, Worker 2 07:41 | FAILED (planning, Lead's) | both runs ended 'no claimable TODO row' (0 TODO, READY 5) | Lead fault: the queue held no row outside lane I; four integration-dependency rows added (T-290 .. T-293), each claimable while READY > 3 |

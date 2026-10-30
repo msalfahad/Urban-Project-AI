@@ -46,6 +46,22 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-30 16:30 (from T-359 r2 / T-368 r2 / T-361 / T-366 / T-371 MERGED; T-326 Gate B REJECTED narrow; new T-373 .. T-377)
+
+- ARCHED OPENINGS (T-238 set: W15, W16, W26; W17 UNRESOLVED; A-GF-01, A-1F-01): the physical edge is the jambs to the
+  springing plus the developed arch, never the size-table rectangle (that height is the 0.10 band crown). Every trade
+  quantity on a jamb, head, perimeter or arris of these openings (reveal, plaster / paint return, corner bead, sill,
+  threshold, lintel, tile edge, frame) reads the OUTLINE record first (Checker D-T326-1; proposed R-T326-2). Owner
+  trades unchanged: reveal faces FINISHES (B4-08 / B4-03 codes, T-326), sills / thresholds T-327; the audit is T-377.
+- LAPS AND DEVELOPMENT LENGTHS (T-366): owner trade REINFORCEMENT; a component of a bar population, procurement length,
+  never net. Printed authorities only: ST p.15 NOTE 1 (40 x DIA, temperature bars), p.8 note 9 (starters only), p.13
+  typical footing '40 ø' (CONFLICT with note 9, designer). A lap booked from note 9 on a non-starter bar has no
+  authority: HELD by name (T-373 binds the 470 lines for a Checker downgrade-only record).
+- BAR SHAPES (T-371): one schedule row per physical bar shape; only straight shapes of 7 populations are schedulable
+  now (T-374); bends, hooks, boxed bars and legs stay GAP / AFTER RFI by name (T-376).
+- FENCE / GATES (T-361): owner trade EXTERNAL WORKS (B13-04); boundary run conserved per side (street 8.30 = 2.50
+  opening + 5.80, sea 7.10 = 6.10 + 1.00 gate); railing posts drawn on the balcony guards belong to B7-11, not fencing.
+
 ### Lead 2026-10-30 12:40 (from T-318 / T-358 / T-362 / T-365 / T-367 / T-360 r2 MERGED; T-359 / T-368 r1 verdicts; new T-369 .. T-372)
 
 - GF-14 OPEN SIDE UNDER A HIDDEN OVERHEAD ELEMENT (Checker D-T368-1, 2026-10-30 12:02; architectural DXF layer 2
