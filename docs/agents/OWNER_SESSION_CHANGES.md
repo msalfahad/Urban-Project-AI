@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-31 | OWNER: ChatGPT audit follow-up: A08 re-filed to floor finishes (no engine fix); B-S12 narrowed; B-S18 document-control draft; consultant-facing drafts per recipient + evidence register; Checker attaches per-question evidence in light runs; whole-line count stays 1; join owner to be named by the Lead; nothing sent | BOARD.md note, docs/agents/rfi/ | Owner's words in the main chat |
 | 2026-10-29 | OWNER: four mesh / sharmat points answered; T-355 released to TODO with the method; sharmat spec HELD + consultant RFI | BOARD.md T-355, note | Owner's words in the main chat |
 | 2026-10-29 22:05 | OWNER review: T-355 method tightened and HELD pending objections; T-318 notes/details first, no invented anchorage; RFI package revalidation into four files (A priority / B remaining / C unlock matrix / D removed) by the Lead, Checker checks A citations; nothing sent | BOARD.md note, T-355, T-318 | Owner's words in the main chat |
 | 2026-10-29 21:22 | OWNER: Q-77 answered (mesh strip every 3 courses m.l + sharmat ties per wall-column junction, separate optional blocks items; joint mesh kept separate) -> T-355; slab bar ends option B approved (only drawn bars, undrawn HELD unless certain) -> T-318 unblocked; RFI package under owner review, not sent | BOARD.md note + T-355, OWNER_QUESTIONS.md Q-77 | Owner's words in the main chat |

@@ -58,15 +58,16 @@ adds them in its citation run).
 - Requested: the floor and wall reinforcement of the pool as built flat at 1.15 m.
 - Internal impact: pool steel R1 888.90 .. 927.54 / R2 615.34 .. 639.45 kg. (Pool access is asked in A, RFI-A02.)
 
-### RFI-B-S12 Three planted columns: links and bar ends
-- Drawing: the planted-column tags on the slab plans print the main bars: ST p.4 'P.C 20x70 / 10ø16' (on B27) and
-  'P.C 20x50 / 8ø16' (on B26); ST p.5 'P.C 20x50 / 8ø16' (on B19). ST p.15 BEAM CARRYING PLANTED COL. DETAIL draws the
-  column bars cranked into the beam (a 100 cm dimension) and prints no link size or spacing.
-- Missing information: the links (size, spacing) of the three planted columns and the end / lap of their main bars.
-- Requested: the link size and spacing, and the bar ends / laps, of each of the three planted columns.
-- Internal impact: column main bars printed (merged T-220); column steel HELD on the links and bar lengths only (the
-  frozen route's 172.56 kg comes from a duplicated row and is not used). [Lead 2026-10-30 12:40: rewritten per the
-  Checker's verdict WRONG (stale since T-220): 'no schedule row, no bar count' deleted.]
+### RFI-B-S12 Three planted columns: link applicability, bar ends, anchorage and laps
+- Drawing: planted-column tags ST p.4 'P.C 20x70 / 10ø16' (on B27), 'P.C 20x50 / 8ø16' (on B26); ST p.5 'P.C 20x50 / 8ø16'
+  (on B19); ST p.9 DETAILS OF COLUMN REINFORCEMENT '* ST. OF COLUMN- 6ø8/m' (DXF 1BAA); ST p.15 BEAM CARRYING PLANTED COL.
+  DETAIL (column bars entering the beam, 100 cm shown; no link, anchorage or lap note).
+- Missing information: whether the general column-link note on p.9 applies to the planted columns (not assumed); the bar
+  ends, anchorage into the supporting beam and laps of the planted-column bars.
+- Requested: confirmation that the p.9 link note applies to the three planted columns (or their links); their bar ends,
+  anchorage and lap requirements.
+- Internal impact: main bars printed; links HELD until the applicability is confirmed; bar lengths HELD. [main chat
+  2026-10-31, owner instruction: narrowed to applicability, bar ends, anchorage and laps.]
 
 ### RFI-B-S19 Beam side bars "2ø12/30cm"
 - Drawing: ST p.10 Schedule of Simple Beams remarks: 2ø12/30cm (B7 .. B15, B17, B18, B20 .. B25, B28, B29), 2ø14/20cm
