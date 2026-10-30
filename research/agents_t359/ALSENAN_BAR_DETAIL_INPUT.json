@@ -1,0 +1,3349 @@
+{
+ "schema": "T359_BAR_DETAIL_INPUT_V2",
+ "villa": "development villa (Drive folder 'Alsenan chalet project')",
+ "rfi_register": [
+  "C-1",
+  "L-1",
+  "L-2",
+  "RFI-A01",
+  "RFI-A02",
+  "RFI-A03",
+  "RFI-A04",
+  "RFI-A05",
+  "RFI-A06",
+  "RFI-A07",
+  "RFI-A08",
+  "RFI-A09",
+  "RFI-B-A01",
+  "RFI-B-A02",
+  "RFI-B-A03",
+  "RFI-B-A04",
+  "RFI-B-A05",
+  "RFI-B-A07",
+  "RFI-B-A08",
+  "RFI-B-A09",
+  "RFI-B-A10",
+  "RFI-B-A11",
+  "RFI-B-A12",
+  "RFI-B-A13",
+  "RFI-B-S09",
+  "RFI-B-S10",
+  "RFI-B-S11",
+  "RFI-B-S12",
+  "RFI-B-S13",
+  "RFI-B-S14",
+  "RFI-B-S16",
+  "RFI-B-S17",
+  "RFI-B-S18",
+  "RFI-B-S19",
+  "RFI-B-S20",
+  "RFI-B-S21",
+  "RFI-B-S22",
+  "RFI-B-SH",
+  "RFI-S01",
+  "RFI-S02",
+  "RFI-S03",
+  "RFI-S04",
+  "RFI-S05",
+  "RFI-S06",
+  "RFI-S07",
+  "RFI-S08",
+  "RFI-S09",
+  "RFI-S10",
+  "RFI-S11",
+  "RFI-S12",
+  "RFI-S13",
+  "RFI-S14",
+  "RFI-S15",
+  "RFI-S16",
+  "RFI-S17",
+  "RFI-S18",
+  "RFI-S19",
+  "RFI-S20",
+  "RFI-S21",
+  "RFI-S22",
+  "RFI-S23",
+  "RFI-S24",
+  "RFI-S25",
+  "RFI-S26",
+  "RFI-S27",
+  "RFI-S28"
+ ],
+ "answered_rules": [
+  "OPTION_B_2026-10-29",
+  "Q-71",
+  "Q-26 A",
+  "Q-47 A"
+ ],
+ "elements_required": [
+  "STAIR ST-01",
+  "STAIR ST-02",
+  "STAIR E1",
+  "STAIR D1",
+  "POOL",
+  "TERRACE DOMES",
+  "TOWER DOME",
+  "ROOF WATER TANK",
+  "LIFT PIT",
+  "BOUNDARY WALL"
+ ],
+ "released_lines": [
+  {
+   "line_id": "BM-1F-028 bottom 4ø16",
+   "element_id": "DOME-A-RING",
+   "component": "beam B4 bottom bars"
+  },
+  {
+   "line_id": "BM-1F-028 top 2ø12",
+   "element_id": "DOME-A-RING",
+   "component": "beam B4 top bars"
+  }
+ ],
+ "populations": [
+  {
+   "pop_id": "ST-01-GF-MAIN",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01-GF",
+   "component": "main bottom bars along the flights",
+   "label": "8%%C16/m",
+   "source": "dxf 490 / 491 (p.4 plan, vertical labels on the two flights)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.)",
+     "note": "bottom layer only on the typical; the plan label gives no layer"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 490 / 491",
+     "note": "label and bar line along the flight"
+    },
+    "extent": {
+     "state": "PRINTED",
+     "ref": "dxf 490 / 491 + verified flight concrete (T-184 / T-290)",
+     "note": "bar line over the straight flights; the winder turn is its own row"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINH / pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINF / pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-MAIN (typical)",
+     "note": "shape drawn: typical only: horizontal into the head + hook, horizontal into the landing bottom at a foot, vertical leg into a G.B; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "dxf 490",
+    "dxf 491",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-MAIN",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINF",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-MAIN",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-MAIN"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-L:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-01:MS1-L:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT",
+    "ST-01:MS1-U:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-01:MS1-U:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT",
+    "ST-01:GF-STRIP:FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP"
+   ],
+   "note": "T 16 waist on the plan (T-184, Q-47 A); layer from the typical only"
+  },
+  {
+   "pop_id": "ST-01-GF-LAND",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01-GF",
+   "component": "landing strip bottom bars across the shaft",
+   "label": "8%%C16/m",
+   "source": "dxf 48F (p.4 plan, horizontal label over the landing)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.)",
+     "note": "landing bottom 8ø16/m on the typical"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 48F",
+     "note": "across the shaft"
+    },
+    "extent": {
+     "state": "PRINTED",
+     "ref": "dxf 48F",
+     "note": "bar line wall to wall of the 2.50 m shaft"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "dxf 48F",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LAND",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LAND",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LAND",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-LAND"
+   ],
+   "candidate_lines": [
+    "ST-01:GF-STRIP:LANDING_STRIP_BOTTOM_BARS_ACROSS_THE_STAIR",
+    "ST-01:GF-STRIP:LANDING_STRIP_BOTTOM_BARS_ACROSS_THE_STAIR:DEVELOPMENT"
+   ],
+   "note": "the typical's landing-bottom shape (UX-LAND / LX-LAND) runs on down the flight as a main bar: on the typical the landing bottom and the flight main bars are one cranked bar"
+  },
+  {
+   "pop_id": "ST-01-1F-MAIN",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01-1F",
+   "component": "main bottom bars along the flights",
+   "label": "8%%C16/m",
+   "source": "dxf 748 / 749 (p.5 plan, vertical labels on the two flights)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.)",
+     "note": "bottom layer only on the typical; the plan label gives no layer"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 748 / 749",
+     "note": "label and bar line along the flight"
+    },
+    "extent": {
+     "state": "PRINTED",
+     "ref": "dxf 748 / 749 + verified flight concrete (T-184 / T-290)",
+     "note": "bar line over the straight flights; the winder turn is its own row"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINH / pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINF / pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-MAIN (typical)",
+     "note": "shape drawn: typical only: horizontal into the head + hook, horizontal into the landing bottom at a foot, vertical leg into a G.B; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "dxf 748",
+    "dxf 749"
+   ],
+   "candidate_lines": [
+    "ST-01:MS2-L:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-01:MS2-L:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT",
+    "ST-01:MS2-U:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-01:MS2-U:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT",
+    "ST-01:1F-STRIP:FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP"
+   ],
+   "note": "T 16 waist on the plan (T-184, Q-47 A); layer from the typical only"
+  },
+  {
+   "pop_id": "ST-01-1F-LAND",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01-1F",
+   "component": "landing strip bottom bars across the shaft",
+   "label": "8%%C16/m",
+   "source": "dxf 747 (p.5 plan, horizontal label over the landing)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.)",
+     "note": "landing bottom 8ø16/m on the typical"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 747",
+     "note": "across the shaft"
+    },
+    "extent": {
+     "state": "PRINTED",
+     "ref": "dxf 747",
+     "note": "bar line wall to wall of the 2.50 m shaft"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "dxf 747"
+   ],
+   "candidate_lines": [
+    "ST-01:1F-STRIP:LANDING_STRIP_BOTTOM_BARS_ACROSS_THE_STAIR",
+    "ST-01:1F-STRIP:LANDING_STRIP_BOTTOM_BARS_ACROSS_THE_STAIR:DEVELOPMENT"
+   ],
+   "note": "the typical's landing-bottom shape (UX-LAND / LX-LAND) runs on down the flight as a main bar: on the typical the landing bottom and the flight main bars are one cranked bar"
+  },
+  {
+   "pop_id": "ST-01-T-TOPH",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "top bars at the head of each flight",
+   "label": "6%%c14/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPH / LX-TOPH",
+     "note": "shape drawn: slope + horizontal into the head / landing top + end hook; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPH"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-L:TOP_BARS_AT_THE_HEAD",
+    "ST-01:MS1-U:TOP_BARS_AT_THE_HEAD",
+    "ST-01:MS2-L:TOP_BARS_AT_THE_HEAD",
+    "ST-01:MS2-U:TOP_BARS_AT_THE_HEAD"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-TOPF",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "top bars at a foot on a landing",
+   "label": "6%%c14/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPF",
+     "note": "shape drawn: horizontal in the landing top + slope + end hook; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPF"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-U:TOP_BARS_AT_THE_FOOT",
+    "ST-01:MS2-L:TOP_BARS_AT_THE_FOOT",
+    "ST-01:MS2-U:TOP_BARS_AT_THE_FOOT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-TOPG",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "top bars at a foot on a ground beam (G.B)",
+   "label": "6%%c16/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPG",
+     "note": "shape drawn: slope + vertical leg down to the +0.00 T.O.B; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPG"
+   ],
+   "candidate_lines": [],
+   "no_line_reason": "no candidate line: the merged T-166 ledger carries no top bar over a flight foot on a ground beam (F-T359-1, G-T359-1); an integration must not add one before the applicability is answered",
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-DIST",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "distribution bars under the main bars",
+   "label": "%%c12/20cm",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-DIST / LX-DIST",
+     "note": "shape drawn: straight (seen as a dot); leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-DIST"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-L:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-01:MS1-L:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT",
+    "ST-01:MS1-U:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-01:MS1-U:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT",
+    "ST-01:MS2-L:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-01:MS2-L:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT",
+    "ST-01:MS2-U:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-01:MS2-U:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-STEP",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "step bars (tread + riser shape)",
+   "label": "%%c8/15",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-STEP / LX-STEP",
+     "note": "shape drawn: tread + riser L; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-STEP"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-L:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-01:MS1-L:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT",
+    "ST-01:MS1-U:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-01:MS1-U:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT",
+    "ST-01:MS2-L:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-01:MS2-L:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT",
+    "ST-01:MS2-U:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-01:MS2-U:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-NOSE",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "nosing bar, one per tread",
+   "label": "1%%c12",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-NOSE / LX-NOSE",
+     "note": "shape drawn: straight (dot at the step-bar corner); leg / crank lengths not dimensioned: option B holds them"
+    },
+    "spacing_or_count": {
+     "state": "NOT_APPLICABLE",
+     "note": "one bar per tread"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-NOSE"
+   ],
+   "candidate_lines": [
+    "ST-01:MS1-L:NOSING_BAR_ONE_PER_TREAD",
+    "ST-01:MS1-U:NOSING_BAR_ONE_PER_TREAD",
+    "ST-01:MS2-L:NOSING_BAR_ONE_PER_TREAD",
+    "ST-01:MS2-U:NOSING_BAR_ONE_PER_TREAD"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-LTOP",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "landing top bars",
+   "label": "6%%c12/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LTOP / LX-LTOP",
+     "note": "shape drawn: straight; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-LTOP"
+   ],
+   "candidate_lines": [
+    "ST-01:GF-STRIP:LANDING_STRIP_TOP_BARS_ACROSS_THE_STAIR",
+    "ST-01:GF-STRIP:LANDING_STRIP_TOP_BARS_ACROSS_THE_STAIR:DEVELOPMENT",
+    "ST-01:1F-STRIP:LANDING_STRIP_TOP_BARS_ACROSS_THE_STAIR",
+    "ST-01:1F-STRIP:LANDING_STRIP_TOP_BARS_ACROSS_THE_STAIR:DEVELOPMENT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-01-T-LEB",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "landing edge beam 20 x 40 of the typical (2ø12 top, 4ø16 bottom)",
+   "label": null,
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBT / U-LEBB / L-LEBT / L-LEBB",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBB",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBB"
+   ],
+   "no_line_reason": "no candidate line and no member: the Alsenan landings sit on B2 / B3 / walls (T-166 s.5); never counted",
+   "note": "a member of the typical only; no such beam on the Alsenan plans"
+  },
+  {
+   "pop_id": "ST-01-T-GB",
+   "element": "STAIR ST-01",
+   "element_id": "ST-01",
+   "component": "ground beam under the typical's flight foot (3ø14 / 2ø14/30cm / ø8/15cm / 4ø16)",
+   "label": null,
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBT / L-GBS / L-GBL / L-GBB",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBS",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBL",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBB"
+   ],
+   "no_line_reason": "no candidate line here: a ground beam under a flight foot, where one exists, is a ground-beam ledger member",
+   "note": "the typical's G.B; an Alsenan foot member, where one exists, is a ground-beam ledger member with its own schedule: these bars are never added from the typical"
+  },
+  {
+   "pop_id": "ST-02-T-TOPH",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "top bars at the head of each flight",
+   "label": "6%%c14/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH / UX-TOPH / L-TOPH / LX-TOPH"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPH / LX-TOPH",
+     "note": "shape drawn: slope + horizontal into the head / landing top + end hook; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPH",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPH"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:TOP_BARS_AT_THE_HEAD",
+    "ST-02:RS-S:TOP_BARS_AT_THE_HEAD"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-TOPF",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "top bars at a foot on a landing",
+   "label": "6%%c14/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF / UX-TOPF"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPF",
+     "note": "shape drawn: horizontal in the landing top + slope + end hook; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPF"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:TOP_BARS_AT_THE_FOOT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-TOPG",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "top bars at a foot on a ground beam (G.B)",
+   "label": "6%%c16/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG / LX-TOPG"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPG",
+     "note": "shape drawn: slope + vertical leg down to the +0.00 T.O.B; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPG"
+   ],
+   "candidate_lines": [],
+   "no_line_reason": "no candidate line: the merged T-166 ledger carries no top bar over a flight foot on a ground beam (F-T359-1, G-T359-1); an integration must not add one before the applicability is answered",
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-DIST",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "distribution bars under the main bars",
+   "label": "%%c12/20cm",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST / UX-DIST / L-DIST / LX-DIST"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-DIST / LX-DIST",
+     "note": "shape drawn: straight (seen as a dot); leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-DIST",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-DIST"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-02:RS-A:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT",
+    "ST-02:RS-S:DISTRIBUTION_UNDER_THE_MAIN_BARS",
+    "ST-02:RS-S:DISTRIBUTION_UNDER_THE_MAIN_BARS:DEVELOPMENT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-STEP",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "step bars (tread + riser shape)",
+   "label": "%%c8/15",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP / UX-STEP / L-STEP / LX-STEP"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-STEP / LX-STEP",
+     "note": "shape drawn: tread + riser L; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-STEP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-STEP"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-02:RS-A:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT",
+    "ST-02:RS-S:STEP_BARS_TREAD_RISER_SHAPE",
+    "ST-02:RS-S:STEP_BARS_TREAD_RISER_SHAPE:DEVELOPMENT"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-NOSE",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "nosing bar, one per tread",
+   "label": "1%%c12",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE / UX-NOSE / L-NOSE / LX-NOSE"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-NOSE / LX-NOSE",
+     "note": "shape drawn: straight (dot at the step-bar corner); leg / crank lengths not dimensioned: option B holds them"
+    },
+    "spacing_or_count": {
+     "state": "NOT_APPLICABLE",
+     "note": "one bar per tread"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-NOSE",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-NOSE"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:NOSING_BAR_ONE_PER_TREAD",
+    "ST-02:RS-S:NOSING_BAR_ONE_PER_TREAD"
+   ],
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-LTOP",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "landing top bars",
+   "label": "6%%c12/m",
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP / UX-LTOP / L-LTOP / LX-LTOP"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "bar lengths drawn, not dimensioned (N.T.S.)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LTOP / LX-LTOP",
+     "note": "shape drawn: straight; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "typical_only": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LTOP",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-LTOP"
+   ],
+   "candidate_lines": [],
+   "no_line_reason": "no candidate line: the round stair has no landing-top family in the T-166 ledger",
+   "note": "typical arrangement; no Alsenan print ties it to this stair (family master B7-14: 'typical-only stair families, p.16 reading not ruled')"
+  },
+  {
+   "pop_id": "ST-02-T-LEB",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "landing edge beam 20 x 40 of the typical (2ø12 top, 4ø16 bottom)",
+   "label": null,
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBT / U-LEBB / L-LEBT / L-LEBB",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBB",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBB"
+   ],
+   "no_line_reason": "no candidate line and no member: the Alsenan landings sit on B2 / B3 / walls (T-166 s.5); never counted",
+   "note": "a member of the typical only; no such beam on the Alsenan plans"
+  },
+  {
+   "pop_id": "ST-02-T-GB",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "ground beam under the typical's flight foot (3ø14 / 2ø14/30cm / ø8/15cm / 4ø16)",
+   "label": null,
+   "source": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBT / L-GBS / L-GBL / L-GBB",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBT",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBS",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBL",
+    "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBB"
+   ],
+   "no_line_reason": "no candidate line here: a ground beam under a flight foot, where one exists, is a ground-beam ledger member",
+   "note": "the typical's G.B; an Alsenan foot member, where one exists, is a ground-beam ledger member with its own schedule: these bars are never added from the typical"
+  },
+  {
+   "pop_id": "ST-02-MAIN-S",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "main bottom bars along the straight flight",
+   "label": "8%%C16/m",
+   "source": "dxf 53D (p.4 plan, vertical label on the straight flight)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 typical",
+     "note": "bottom on the typical only"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 53D"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "waist profile of the straight part from levels not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-A03"
+   },
+   "gap": "G-T359-1",
+   "note": "riser count / landing levels asked in RFI-A03",
+   "labels": [
+    "dxf 53D"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-A:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-02:RS-A:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT",
+    "ST-02:RS-S:MAIN_BOTTOM_BARS_ALONG_THE_WAIST",
+    "ST-02:RS-S:MAIN_BOTTOM_BARS_ALONG_THE_WAIST:DEVELOPMENT"
+   ]
+  },
+  {
+   "pop_id": "ST-02-MAIN-H",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "bars along the straight landing run",
+   "label": "8%%C16/m",
+   "source": "pdf p.4 plan, horizontal label east of column CA (no modelspace text entity found for it)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 typical"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.4"
+    },
+    "extent": {
+     "state": "PRINTED",
+     "ref": "pdf p.4",
+     "note": "bar line drawn from the curve to beam B21"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-1",
+   "labels": [
+    "pdf p.4 ST-02 horizontal 8ø16/m east of column CA"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-LD:BOTTOM_BARS"
+   ]
+  },
+  {
+   "pop_id": "ST-02-MAIN-C",
+   "element": "STAIR ST-02",
+   "element_id": "ST-02",
+   "component": "main bars along the curved part RS-C",
+   "label": "8%%C16/m",
+   "source": "dxf 5BC (p.4 plan, label on the arc bar line)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED_TYPICAL",
+     "ref": "pdf p.16 typical"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 5BC",
+     "note": "along the arc"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "soffit form and thickness of the curved part not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S27"
+   },
+   "gap": "G-T359-1",
+   "labels": [
+    "dxf 5BC"
+   ],
+   "candidate_lines": [
+    "ST-02:RS-C:ALL_FAMILIES"
+   ]
+  },
+  {
+   "pop_id": "ST-02-GF126",
+   "element": "STAIR ST-02",
+   "element_id": "GF-126",
+   "component": "slab bars beside the round stair",
+   "label": "6%%C14/m",
+   "source": "dxf 533 (p.4)",
+   "attrs": {},
+   "owned_by": "slab ledger T-152 panel GF-126 (HELD, RFI-B-S10)",
+   "labels": [
+    "dxf 533"
+   ],
+   "rfi": {}
+  },
+  {
+   "pop_id": "BM-GF-015-STAIRBEAM",
+   "element": "STAIR ST-01",
+   "element_id": "BM-GF-015",
+   "component": "stair beam B3 '(With Stair)' (p.16 TYPICAL DETAIL OF STAIR BEAM, cranked)",
+   "label": "",
+   "source": "dxf 6B8 / 6B6 / 1826 '(With Stair)'",
+   "attrs": {},
+   "labels": [
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T2",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-B",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L2"
+   ],
+   "owned_by": "beam ledger T-149 BM-GF-015 (HELD; crank RFI-B-S22)",
+   "rfi": {}
+  },
+  {
+   "pop_id": "BM-1F-001-STAIRBEAM",
+   "element": "STAIR ST-01",
+   "element_id": "BM-1F-001",
+   "component": "stair beam B3 '(With Stair)' (p.16 TYPICAL DETAIL OF STAIR BEAM, cranked)",
+   "label": "",
+   "source": "dxf 6B8 / 6B6 / 1826 '(With Stair)'",
+   "attrs": {},
+   "labels": [
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T2",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-B",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L2"
+   ],
+   "owned_by": "beam ledger T-149 BM-1F-001 (HELD; crank RFI-B-S22)",
+   "rfi": {}
+  },
+  {
+   "pop_id": "BM-GF-057-STAIRBEAM",
+   "element": "STAIR ST-02",
+   "element_id": "BM-GF-057",
+   "component": "stair beam B3 '(With Stair)' (p.16 TYPICAL DETAIL OF STAIR BEAM, cranked)",
+   "label": "",
+   "source": "dxf 6B8 / 6B6 / 1826 '(With Stair)'",
+   "attrs": {},
+   "labels": [
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L1",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T2",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-B",
+    "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L2"
+   ],
+   "owned_by": "beam ledger T-149 BM-GF-057 (HELD; crank RFI-B-S22)",
+   "rfi": {}
+  },
+  {
+   "pop_id": "E1-ALL",
+   "element": "STAIR E1",
+   "element_id": "E1",
+   "component": "every bar",
+   "label": null,
+   "source": "dxf riser lines 18A .. 179 (p.3); no bar text within 3 m",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {
+    "all": "RFI-S26"
+   },
+   "candidate_lines": [
+    "ST-03:E1:ALL_FAMILIES"
+   ]
+  },
+  {
+   "pop_id": "D1-ALL",
+   "element": "STAIR D1",
+   "element_id": "D1",
+   "component": "every bar",
+   "label": null,
+   "source": "dxf riser lines 1C4 .. 1C7 (p.3); no bar text within 3 m",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {
+    "all": "RFI-S26"
+   },
+   "candidate_lines": [
+    "ST-01b:D1:ALL_FAMILIES"
+   ]
+  },
+  {
+   "pop_id": "ST-01-WINDER",
+   "element": "STAIR ST-01",
+   "element_id": "MS1-T",
+   "component": "winder turn bars",
+   "label": null,
+   "source": "p.4 wedge lines; p.16 typical shows no winder",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {
+    "all": "RFI-S24"
+   },
+   "candidate_lines": [
+    "ST-01:MS1-T:STEP_NOSING_BARS"
+   ]
+  },
+  {
+   "pop_id": "POOL-R1-WV-OUT",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "deep-end wall, vertical bars, outer face",
+   "label": "7%%C14/m",
+   "source": "dxf 1893 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 1893",
+     "note": "outer face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1893",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 187C on 185B; section 1879 + bend 1886 into 1870",
+     "note": "shape drawn: L-bar: outer-face vertical, foot bent into the floor BOTTOM layer; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1893",
+    "dxf 187C"
+   ],
+   "candidate_lines": [
+    "POOL:R1:WALL_VERTICAL_OUTER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R1-WV-IN",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "deep-end wall, vertical bars, water face",
+   "label": "7%%C12/m",
+   "source": "dxf 1906 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 1906",
+     "note": "water face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1906",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 18A8 on 185C; section 18A2 + bend 1904 + cap 186C",
+     "note": "shape drawn: top cap toward the outer face, U at the foot, leg into the floor TOP layer; leg / crank lengths not dimensioned: option B holds them"
+    },
+    "diameter": {
+     "state": "CONFLICT",
+     "refs": [
+      "dxf 1906 section label '7ø12/m' at the water-face bar 18A2",
+      "dxf 18A8 '7ø14/m' on the exploded shape 185C (one polyline: water-face vertical + foot U + floor-top leg)"
+     ],
+     "note": "one bar cannot be both: d 12 (section) vs d 14 (shape row, the floor-top value 18B0); not resolved by choice"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1906",
+    "dxf 18A8"
+   ],
+   "candidate_lines": [
+    "POOL:R1:WALL_VERTICAL_INNER_FACE"
+   ],
+   "gap": "G-T359-8"
+  },
+  {
+   "pop_id": "POOL-R1-WH-OUT",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "deep-end wall, horizontal bars, outer face",
+   "label": "%%c12/20cm",
+   "source": "dxf 188D (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 188D",
+     "note": "outer face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 188D",
+     "note": "horizontal"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 188D"
+   ],
+   "candidate_lines": [
+    "POOL:R1:WALL_HORIZONTAL_HOOPS_OUTER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R1-WH-IN",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "deep-end wall, horizontal bars, water face",
+   "label": "%%c12/20cm",
+   "source": "dxf 18FC (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 18FC",
+     "note": "water face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 18FC",
+     "note": "horizontal"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 18FC"
+   ],
+   "candidate_lines": [
+    "POOL:R1:WALL_HORIZONTAL_HOOPS_INNER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R2-WV-IN",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "shallow-end wall, vertical bars, water face",
+   "label": "6%%c12/m",
+   "source": "dxf 192F (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 192F",
+     "note": "water face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 192F",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 18DD on 18DC; section 189F + bends 1922 / 1924 + cap 1925",
+     "note": "shape drawn: top cap toward the outer face, U at the foot, leg into the floor TOP layer; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 192F",
+    "dxf 18DD"
+   ],
+   "candidate_lines": [
+    "POOL:R2:WALL_VERTICAL_INNER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R2-WH-IN",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "shallow-end wall, horizontal bars, water face",
+   "label": "%%c10/20cm",
+   "source": "dxf 191F (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 191F",
+     "note": "water face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 191F",
+     "note": "horizontal"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 191F"
+   ],
+   "candidate_lines": [
+    "POOL:R2:WALL_HORIZONTAL_HOOPS_INNER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R2-WH-OUT",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "shallow-end wall, horizontal bars, outer face",
+   "label": "%%c10/20cm",
+   "source": "dxf 192E (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 192E",
+     "note": "outer face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 192E",
+     "note": "horizontal"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 192E"
+   ],
+   "candidate_lines": [
+    "POOL:R2:WALL_HORIZONTAL_HOOPS_OUTER_FACE"
+   ]
+  },
+  {
+   "pop_id": "POOL-R2-WV-OUT",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "shallow-end wall, vertical bars, outer face",
+   "label": "6%%c12/m",
+   "source": "dxf 1929 (p.7 DETAIL OF SWIMMING POOL (N.I.S.), exploded bar-shape row) on polyline 184C; section bar 1928",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 1928 (outer-face bar) + 184C at the same x",
+     "note": "outer face"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1929 / 184C",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 1929 on 184C; section 1928 + bend 1849 into 18E0",
+     "note": "shape drawn: L-bar: outer-face vertical, foot bent into the floor BOTTOM layer; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1929"
+   ],
+   "candidate_lines": [
+    "POOL:R2:WALL_VERTICAL_OUTER_FACE"
+   ],
+   "note": "r1 NOT_DRAWN reversed: printed by the shape row (1929); T-166 read it as one U over the top serving both faces, the shape row draws two bars (1929 outer L, 18DD water-face U)"
+  },
+  {
+   "pop_id": "POOL-RIM",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "rim bars at the deep-end wall top (3 dots 1899 / 189B / 1903 under the cap)",
+   "label": "3%%c16",
+   "source": "dxf 1896 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle at a corner"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1896",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "printed on the two-zone section only; which zone's bars run round the built flat pool (Q-26 A) is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1896"
+   ],
+   "candidate_lines": [
+    "POOL:R1:RIM_BARS_AT_THE_WALL_TOP"
+   ],
+   "note": ""
+  },
+  {
+   "pop_id": "POOL-CORNER",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "corner bars at the deep-end wall / floor junction",
+   "label": "3%%c16",
+   "source": "dxf 1881 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle at a corner"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1881",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "printed on the two-zone section only; which zone's bars run round the built flat pool (Q-26 A) is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1881"
+   ],
+   "candidate_lines": [
+    "POOL:R1:CORNER_BARS_FLOOR_WALL"
+   ],
+   "note": ""
+  },
+  {
+   "pop_id": "POOL-R2-CORNER",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "corner bars at the shallow-end wall / floor junction (dots 18F1 / 18F2 / 18F3)",
+   "label": "4%%c16",
+   "source": "dxf 192B (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle at a corner"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 192B",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "printed on the two-zone section only; which zone's bars run round the built flat pool (Q-26 A) is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 192B"
+   ],
+   "candidate_lines": [
+    "POOL:R2:CORNER_BARS_FLOOR_WALL"
+   ],
+   "note": "r1 called 192B 'bars at the floor step'; its leader reaches the dots at the shallow-end wall foot"
+  },
+  {
+   "pop_id": "POOL-R2-RIM",
+   "element": "POOL",
+   "element_id": "POOL-WALL",
+   "component": "rim bars at the shallow-end wall top (2 dots 1842 / 1923 under the cap 1925)",
+   "label": null,
+   "source": "dxf 1842 / 1923 (p.7 DETAIL OF SWIMMING POOL (N.I.S.)): drawn, no label",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle under the cap"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1842 / 1923",
+     "note": "along the wall (dots)"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep-end (R1) and a shallow-end (R2) wall with different bars; which population each wall of the flat 1.15 m pool (owner Q-26 A) takes is not printed; wall 1.20 m to the structure line is verified concrete (T-183 r2)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "mark": "RFI-B-S11",
+    "diameter": "RFI-B-S11",
+    "spacing_or_count": "RFI-B-S11",
+    "extent": "RFI-B-S11"
+   },
+   "candidate_lines": [
+    "POOL:R2:RIM_BARS_AT_THE_WALL_TOP"
+   ],
+   "note": "two bars drawn, no notation: diameter and count not printed (2 dots drawn is a drawing, not a printed count)"
+  },
+  {
+   "pop_id": "POOL-F-MAIN-T",
+   "element": "POOL",
+   "element_id": "POOL-FLOOR",
+   "component": "deep floor, main bars, top",
+   "label": "7%%c14/m",
+   "source": "dxf 18B0 / 1860 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 18B0",
+     "note": "by position on the section"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 18B0"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep zone, a slope and a shallow zone; the built floor is flat at 1.15 m (owner Q-26 A): which population the flat floor takes is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 1860 on 1867 + 1862 + hook 18AB; section 1872 + 189E",
+     "note": "shape drawn: horizontal in the deep floor top, crank up into the slope, end hook; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 18B0",
+    "dxf 1860"
+   ],
+   "candidate_lines": [
+    "POOL:R1:FLOOR_TOP_SECTION_LINE_BARS"
+   ],
+   "note": ""
+  },
+  {
+   "pop_id": "POOL-F-MAIN-B",
+   "element": "POOL",
+   "element_id": "POOL-FLOOR",
+   "component": "deep floor, main bars, bottom",
+   "label": "7%%c14/m",
+   "source": "dxf 18AA / 19B0 / 1869 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 18AA",
+     "note": "by position on the section"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 18AA"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep zone, a slope and a shallow zone; the built floor is flat at 1.15 m (owner Q-26 A): which population the flat floor takes is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 1869 on 1866 + 1861; section 19A9 + 19A7",
+     "note": "shape drawn: horizontal in the deep floor bottom, crank up along the slope; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 18AA",
+    "dxf 19B0",
+    "dxf 1869"
+   ],
+   "candidate_lines": [
+    "POOL:R1:FLOOR_BOTTOM_SECTION_LINE_BARS"
+   ],
+   "note": ""
+  },
+  {
+   "pop_id": "POOL-F-DIST",
+   "element": "POOL",
+   "element_id": "POOL-FLOOR",
+   "component": "deep floor, distribution bars (dot rows, both mats)",
+   "label": "6%%c14/m",
+   "source": "dxf 18AD (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 18AD",
+     "note": "by position on the section"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 18AD"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep zone, a slope and a shallow zone; the built floor is flat at 1.15 m (owner Q-26 A): which population the flat floor takes is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 18AD"
+   ],
+   "candidate_lines": [
+    "POOL:R1:FLOOR_TOP_DOT_ROW_BARS",
+    "POOL:R1:FLOOR_BOTTOM_DOT_ROW_BARS"
+   ],
+   "note": ""
+  },
+  {
+   "pop_id": "POOL-F-SLOPE",
+   "element": "POOL",
+   "element_id": "POOL-FLOOR",
+   "component": "sloped floor bars (both mats)",
+   "label": "6%%c12/m",
+   "source": "dxf 1907 / 18D3 / 18DB (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 1907",
+     "note": "by position on the section"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1907"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep zone, a slope and a shallow zone; the built floor is flat at 1.15 m (owner Q-26 A): which population the flat floor takes is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 18DB on 185E + 18DA (and the unlabelled 1868 + 1865 + 1863)",
+     "note": "shape drawn: slope, then horizontal into the shallow floor; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 1907",
+    "dxf 18D3",
+    "dxf 18DB"
+   ],
+   "candidate_lines": [
+    "POOL:R2:FLOOR_TOP_SECTION_LINE_BARS",
+    "POOL:R2:FLOOR_BOTTOM_SECTION_LINE_BARS"
+   ],
+   "note": "the shape row shows the slope and shallow 6ø12/m as one cranked bar per mat; which shape is which mat is not printed"
+  },
+  {
+   "pop_id": "POOL-F-SHALLOW",
+   "element": "POOL",
+   "element_id": "POOL-FLOOR",
+   "component": "shallow floor bars",
+   "label": "6%%c12/m",
+   "source": "dxf 18F0 / 18F8 / 18D7 (p.7 DETAIL OF SWIMMING POOL (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "dxf 18F0",
+     "note": "by position on the section"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 18F0"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "the detail draws a deep zone, a slope and a shallow zone; the built floor is flat at 1.15 m (owner Q-26 A): which population the flat floor takes is not printed"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf 18D7 on hook 186B + 185F + 18D9 (and the unlabelled 185D + 18D8 + 18DE)",
+     "note": "shape drawn: hook, slope, then horizontal along the shallow floor; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-B-S11"
+   },
+   "labels": [
+    "dxf 18F0",
+    "dxf 18F8",
+    "dxf 18D7"
+   ],
+   "candidate_lines": [
+    "POOL:R2:FLOOR_TOP_DOT_ROW_BARS",
+    "POOL:R2:FLOOR_BOTTOM_DOT_ROW_BARS"
+   ],
+   "note": "the shape row shows the slope and shallow 6ø12/m as one cranked bar per mat; which shape is which mat is not printed"
+  },
+  {
+   "pop_id": "DOME-A-SHELL-MER",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A",
+   "component": "shell bars, meridians",
+   "label": "%%C12MM/15cm",
+   "source": "dxf 1A0E (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "r2 correction: no bar line is drawn in the shell (only the concrete arcs 182B / 182E, layer S-EXTL.D); the leaders 1A0E / 1A15 end inside the 10 cm shell: one mat or two, and its position, not printed"
+    },
+    "direction": {
+     "state": "NOT_PRINTED",
+     "note": "the two labels are identical and neither says meridian or hoop"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "shell 10 cm (19B1), span 442 (1A38), rise 190 (1A6D) printed; curtailment of the meridians near the crown and the bar position in the 10 cm shell (cover) not printed"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "no shell bar drawn: anchorage into the ring and hoop laps not printed"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A0E",
+    "dxf 1A15"
+   ],
+   "no_line_reason": "no candidate line: the dome shells are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-A-SHELL-HOOP",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A",
+   "component": "shell bars, hoops",
+   "label": "%%C12MM/15cm",
+   "source": "dxf 1A15 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "r2 correction: no bar line is drawn in the shell (only the concrete arcs 182B / 182E, layer S-EXTL.D); the leaders 1A0E / 1A15 end inside the 10 cm shell: one mat or two, and its position, not printed"
+    },
+    "direction": {
+     "state": "NOT_PRINTED",
+     "note": "the two labels are identical and neither says meridian or hoop"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "shell 10 cm (19B1), span 442 (1A38), rise 190 (1A6D) printed; curtailment of the meridians near the crown and the bar position in the 10 cm shell (cover) not printed"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "no shell bar drawn: anchorage into the ring and hoop laps not printed"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A0E",
+    "dxf 1A15"
+   ],
+   "no_line_reason": "no candidate line: the dome shells are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-B-SHELL-MER",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B",
+   "component": "shell bars, meridians",
+   "label": "%%C12MM/15cm",
+   "source": "dxf 1A0E (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "r2 correction: no bar line is drawn in the shell (only the concrete arcs 182B / 182E, layer S-EXTL.D); the leaders 1A0E / 1A15 end inside the 10 cm shell: one mat or two, and its position, not printed"
+    },
+    "direction": {
+     "state": "NOT_PRINTED",
+     "note": "the two labels are identical and neither says meridian or hoop"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "shell 10 cm (19B1), span 442 (1A38), rise 190 (1A6D) printed; curtailment of the meridians near the crown and the bar position in the 10 cm shell (cover) not printed"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "no shell bar drawn: anchorage into the ring and hoop laps not printed"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A0E",
+    "dxf 1A15"
+   ],
+   "no_line_reason": "no candidate line: the dome shells are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-B-SHELL-HOOP",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B",
+   "component": "shell bars, hoops",
+   "label": "%%C12MM/15cm",
+   "source": "dxf 1A15 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "r2 correction: no bar line is drawn in the shell (only the concrete arcs 182B / 182E, layer S-EXTL.D); the leaders 1A0E / 1A15 end inside the 10 cm shell: one mat or two, and its position, not printed"
+    },
+    "direction": {
+     "state": "NOT_PRINTED",
+     "note": "the two labels are identical and neither says meridian or hoop"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "shell 10 cm (19B1), span 442 (1A38), rise 190 (1A6D) printed; curtailment of the meridians near the crown and the bar position in the 10 cm shell (cover) not printed"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "no shell bar drawn: anchorage into the ring and hoop laps not printed"
+    }
+   },
+   "rfi": {},
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A0E",
+    "dxf 1A15"
+   ],
+   "no_line_reason": "no candidate line: the dome shells are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-A-RING-T",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A-RING",
+   "component": "edge ring top bars",
+   "label": "3%%c16",
+   "source": "dxf 1A47 / 1A68 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {},
+   "owned_by": "beam ledger T-149 BM-1F-028 (B4, RELEASED with the schedule bars 4ø16 / 2ø12 / 6ø8/m); the detail's ring bars CONFLICT with it (CF-S8.3-04): never added",
+   "labels": [
+    "dxf 1A47",
+    "dxf 1A68"
+   ],
+   "note": "same physical ring as BM-1F-028",
+   "rfi": {}
+  },
+  {
+   "pop_id": "DOME-B-RING-T",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B-RING",
+   "component": "edge ring top bars",
+   "label": "3%%c16",
+   "source": "dxf 1A47 / 1A68 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle / face position drawn"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1A47 / 1A68"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "ring section not printed for the east ring (no mark, SEE DETAIL); depth AS PER ARCH (182F)"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "closure / laps of the ring bars not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S17",
+    "end_shape": "RFI-S17"
+   },
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A47",
+    "dxf 1A68"
+   ],
+   "no_line_reason": "no candidate line: the east dome ring is not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-A-RING-B",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A-RING",
+   "component": "edge ring bottom bars",
+   "label": "3%%c18",
+   "source": "dxf 1A4B / 1A6C (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {},
+   "owned_by": "beam ledger T-149 BM-1F-028 (B4, RELEASED with the schedule bars 4ø16 / 2ø12 / 6ø8/m); the detail's ring bars CONFLICT with it (CF-S8.3-04): never added",
+   "labels": [
+    "dxf 1A4B",
+    "dxf 1A6C"
+   ],
+   "note": "same physical ring as BM-1F-028",
+   "rfi": {}
+  },
+  {
+   "pop_id": "DOME-B-RING-B",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B-RING",
+   "component": "edge ring bottom bars",
+   "label": "3%%c18",
+   "source": "dxf 1A4B / 1A6C (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle / face position drawn"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1A4B / 1A6C"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "ring section not printed for the east ring (no mark, SEE DETAIL); depth AS PER ARCH (182F)"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "closure / laps of the ring bars not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S17",
+    "end_shape": "RFI-S17"
+   },
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A4B",
+    "dxf 1A6C"
+   ],
+   "no_line_reason": "no candidate line: the east dome ring is not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-A-RING-S",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A-RING",
+   "component": "edge ring side bars",
+   "label": "2%%c14/20cm",
+   "source": "dxf 1A37 / 1A66 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {},
+   "owned_by": "beam ledger T-149 BM-1F-028 (B4, RELEASED with the schedule bars 4ø16 / 2ø12 / 6ø8/m); the detail's ring bars CONFLICT with it (CF-S8.3-04): never added",
+   "labels": [
+    "dxf 1A37",
+    "dxf 1A66"
+   ],
+   "note": "same physical ring as BM-1F-028",
+   "rfi": {}
+  },
+  {
+   "pop_id": "DOME-B-RING-S",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B-RING",
+   "component": "edge ring side bars",
+   "label": "2%%c14/20cm",
+   "source": "dxf 1A37 / 1A66 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle / face position drawn"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1A37 / 1A66"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "ring section not printed for the east ring (no mark, SEE DETAIL); depth AS PER ARCH (182F)"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "closure / laps of the ring bars not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S17",
+    "end_shape": "RFI-S17"
+   },
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A37",
+    "dxf 1A66"
+   ],
+   "no_line_reason": "no candidate line: the east dome ring is not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-A-RING-L",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-A-RING",
+   "component": "edge ring links",
+   "label": "8%%c8/m",
+   "source": "dxf 1A29 / 1A58 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {},
+   "owned_by": "beam ledger T-149 BM-1F-028 (B4, RELEASED with the schedule bars 4ø16 / 2ø12 / 6ø8/m); the detail's ring bars CONFLICT with it (CF-S8.3-04): never added",
+   "labels": [
+    "dxf 1A29",
+    "dxf 1A58"
+   ],
+   "note": "same physical ring as BM-1F-028",
+   "rfi": {}
+  },
+  {
+   "pop_id": "DOME-B-RING-L",
+   "element": "TERRACE DOMES",
+   "element_id": "DOME-B-RING",
+   "component": "edge ring links",
+   "label": "8%%c8/m",
+   "source": "dxf 1A29 / 1A58 (p.7 DETAIL OF DOME (N.I.S.))",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "closed link"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "dxf 1A29 / 1A58"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "ring section not printed for the east ring (no mark, SEE DETAIL); depth AS PER ARCH (182F)"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "dxf links 1A0B / 1A08 (closed rectangles)",
+     "note": "shape drawn: closed link, no hook length; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S17",
+    "end_shape": "RFI-S17"
+   },
+   "gap": "G-T359-3",
+   "labels": [
+    "dxf 1A29",
+    "dxf 1A58"
+   ],
+   "no_line_reason": "no candidate line: the east dome ring is not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "DOME-T-ALL",
+   "element": "TOWER DOME",
+   "element_id": "DOME-TOWER",
+   "component": "every bar",
+   "label": null,
+   "source": "ST p.6: flat +13.90 slab panel, no opening / ring; p.7 one generic detail",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {
+    "all": "RFI-S28"
+   },
+   "no_line_reason": "no candidate line: tower dome not drawn"
+  },
+  {
+   "pop_id": "TANK-SLAB",
+   "element": "ROOF WATER TANK",
+   "element_id": "2F-011",
+   "component": "roof slab under the tank (T 18, T&B)",
+   "label": "7%%C14/m",
+   "source": "dxf 7A7 / 7A8 / 7AF / 7B0 (p.6, 'WATER TANK PLACE' 1A85)",
+   "attrs": {},
+   "owned_by": "slab ledger T-152 panel 2F-011 (HELD 143.382 .. 149.310 kg; RFI-B-S10)",
+   "rfi": {}
+  },
+  {
+   "pop_id": "TANK-STRUCT",
+   "element": "ROOF WATER TANK",
+   "element_id": "TANK",
+   "component": "tank walls, base and cover",
+   "label": null,
+   "source": "ST p.6 cloud 'WATER TANK PLACE' only; no tank section in either discipline (T-204)",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-4",
+   "candidate_lines": [
+    "TANK:2F:ALL_FAMILIES"
+   ]
+  },
+  {
+   "pop_id": "LIFT-WV",
+   "element": "LIFT PIT",
+   "element_id": "LIFT-PIT-WALL",
+   "component": "pit wall vertical bars, both faces",
+   "label": "6%%c16/m",
+   "source": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WV / R-WV",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WV / R-WV",
+     "note": "two faces drawn"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WV / R-WV",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pit depth 'As per Lift Manufactures recommendations'; vertical embedment in the raft drawn, not dimensioned"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical: vertical lines",
+     "note": "shape drawn: closed over the wall top, both faces run down to the raft bottom bars; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "L-1"
+   },
+   "gap": "",
+   "labels": [
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-WV",
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-WV"
+   ],
+   "no_line_reason": "no candidate line: the lift pit walls are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "LIFT-WH",
+   "element": "LIFT PIT",
+   "element_id": "LIFT-PIT-WALL",
+   "component": "pit wall horizontal bars, both faces",
+   "label": "6%%c12/m",
+   "source": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WH / R-WH",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WH / R-WH",
+     "note": "two faces drawn"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-WH / R-WH",
+     "note": "horizontal"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pit depth 'As per Lift Manufactures recommendations'; vertical embedment in the raft drawn, not dimensioned"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / corner anchorage not printed"
+    }
+   },
+   "rfi": {
+    "extent": "L-1"
+   },
+   "gap": "G-T359-5",
+   "labels": [
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-WH",
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-WH"
+   ],
+   "no_line_reason": "no candidate line: the lift pit walls are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "LIFT-TOP",
+   "element": "LIFT PIT",
+   "element_id": "LIFT-PIT-WALL",
+   "component": "bars at the wall top",
+   "label": "2%%c12",
+   "source": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, R-TOP",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, R-TOP",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pit depth 'As per Lift Manufactures recommendations'; vertical embedment in the raft drawn, not dimensioned"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / corner anchorage not printed"
+    }
+   },
+   "rfi": {
+    "extent": "L-1"
+   },
+   "gap": "G-T359-5",
+   "labels": [
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-TOP"
+   ],
+   "no_line_reason": "no candidate line: the lift pit walls are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "LIFT-BASE",
+   "element": "LIFT PIT",
+   "element_id": "LIFT-PIT-WALL",
+   "component": "bars at the wall foot in the raft (2ø16 at the raft top and 2ø16 at the raft bottom)",
+   "label": "2 %%c16",
+   "source": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-BT / L-BB",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "bundle"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical, L-BT / L-BB",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pit depth 'As per Lift Manufactures recommendations'; vertical embedment in the raft drawn, not dimensioned"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / corner anchorage not printed"
+    }
+   },
+   "rfi": {
+    "extent": "L-1"
+   },
+   "gap": "G-T359-5",
+   "labels": [
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-BT",
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-BB"
+   ],
+   "no_line_reason": "no candidate line: the lift pit walls are not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "LIFT-RAFT",
+   "element": "LIFT PIT",
+   "element_id": "FF",
+   "component": "lift raft bars ('AS PER SCH.')",
+   "label": "",
+   "source": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical: 'AS PER SCH.' -> p.9 footing schedule FF",
+   "attrs": {},
+   "labels": [
+    "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): RAFT"
+   ],
+   "owned_by": "footing ledger T-136 FF (HELD, owner 2026-10-25 13:16)",
+   "rfi": {}
+  },
+  {
+   "pop_id": "BW-COL",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-COLUMN",
+   "component": "column 20 x 30 main bars",
+   "label": "4%%c14",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.), label 'COLUMN 4ø14'; plan '(20x30) R.C COLUMNS 4ø14'",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "corner bars"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "vertical"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "column height and positions not printed (spacing 'SEE ARCH PLAN')"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "starter / anchorage into the ground beam not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S04"
+   },
+   "gap": "G-T359-6",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: COL",
+    "pdf p.14 TYPICAL BOUNDARY WALL: PLAN-COL"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-COL-LINK",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-COLUMN",
+   "component": "column links",
+   "label": null,
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.): ties drawn in the column, no label",
+   "attrs": {},
+   "not_drawn": true,
+   "rfi": {},
+   "gap": "G-T359-6",
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBUP-A",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-UP",
+   "component": "upper G.B 20 x 40 at N.G. LEVEL: bars labelled 2ø14 (T&B)",
+   "label": "2%%c14 (T&B)",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "'(T&B)' on both labels while the section draws 2 bars top and 3 bottom"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: UP-A"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBUP-B",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-UP",
+   "component": "upper G.B 20 x 40 at N.G. LEVEL: bars labelled 3ø16 (T&B)",
+   "label": "3%%c16 (T&B)",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "'(T&B)' on both labels while the section draws 2 bars top and 3 bottom"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: UP-B"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBUP-L",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-UP",
+   "component": "upper G.B 20 x 40 at N.G. LEVEL: stirrups",
+   "label": "%%c8/20 STIRRUPS",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "closed stirrup"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: UP-L"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBLO-A",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-LO",
+   "component": "lower G.B at excavation depth: bars labelled 2ø14 (T&B)",
+   "label": "2%%c14 (T&B)",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "'(T&B)' on both labels while the section draws 2 bars top and 3 bottom"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: LO-A"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBLO-B",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-LO",
+   "component": "lower G.B at excavation depth: bars labelled 3ø16 (T&B)",
+   "label": "3%%c16 (T&B)",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_PRINTED",
+     "note": "'(T&B)' on both labels while the section draws 2 bars top and 3 bottom"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: LO-B"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-GBLO-L",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-GB-LO",
+   "component": "lower G.B at excavation depth: stirrups",
+   "label": "%%c8/20 STIRRUPS",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "NOT_APPLICABLE",
+     "note": "closed stirrup"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "along the wall"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "wall length and the lower beam level ('AS PER EXCAVATION DEPTH BELOW N.G. LEVEL') not printed; section 20 x 40 vs schedule B.W 20 x 60"
+    },
+    "end_shape": {
+     "state": "NOT_PRINTED",
+     "note": "laps / ends at columns not printed"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S03"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: LO-L"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-PAD-A",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-PAD",
+   "component": "pad 130 x 80 x 30: pad bars labelled 7ø12",
+   "label": "7%%c12",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "bottom"
+    },
+    "direction": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "across the 80 width, up-turned ends drawn"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pad positions 'SEE ARCH PLAN', none marked"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "shape drawn: U with both ends turned up to the pad top; leg / crank lengths not dimensioned: option B holds them"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S04"
+   },
+   "gap": "",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: PAD-A"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  },
+  {
+   "pop_id": "BW-PAD-B",
+   "element": "BOUNDARY WALL",
+   "element_id": "BW-PAD",
+   "component": "pad 130 x 80 x 30: pad bars labelled 4ø12 (B.W)",
+   "label": "4%%c12 (B.W)",
+   "source": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+   "attrs": {
+    "layer": {
+     "state": "PRINTED",
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL section A-A (N.I.S.)",
+     "note": "bottom"
+    },
+    "direction": {
+     "state": "NOT_PRINTED",
+     "note": "four dots drawn (bars along the 1.30 m pad), but '(B.W)' is defined nowhere on the sheet (both ways would add a second direction)"
+    },
+    "extent": {
+     "state": "NOT_PRINTED",
+     "note": "pad positions 'SEE ARCH PLAN', none marked"
+    },
+    "end_shape": {
+     "state": "RULE",
+     "rule": "OPTION_B_2026-10-29",
+     "note": "end drawn without a dimension: the drawn straight part only, the leg / anchorage HELD"
+    }
+   },
+   "rfi": {
+    "extent": "RFI-S04"
+   },
+   "gap": "G-T359-7",
+   "labels": [
+    "pdf p.14 TYPICAL BOUNDARY WALL: PAD-B"
+   ],
+   "no_line_reason": "no candidate line: boundary wall not in the V3.0.16 rebar lines"
+  }
+ ],
+ "details": [
+  {
+   "detail": "dxf p.7 DETAIL OF SWIMMING POOL (title 1864, N.I.S 186A)",
+   "source": "ST7757 dxf, TEXT sweep of the detail extent",
+   "labels": [
+    {
+     "ref": "dxf 1896",
+     "text": "3%%c16"
+    },
+    {
+     "ref": "dxf 192F",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 1906",
+     "text": "7%%C12/m"
+    },
+    {
+     "ref": "dxf 1893",
+     "text": "7%%C14/m"
+    },
+    {
+     "ref": "dxf 191F",
+     "text": "%%c10/20cm"
+    },
+    {
+     "ref": "dxf 188D",
+     "text": "%%c12/20cm"
+    },
+    {
+     "ref": "dxf 192E",
+     "text": "%%c10/20cm"
+    },
+    {
+     "ref": "dxf 18FC",
+     "text": "%%c12/20cm"
+    },
+    {
+     "ref": "dxf 1907",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 192B",
+     "text": "4%%c16"
+    },
+    {
+     "ref": "dxf 18D3",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18F8",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18F0",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18B0",
+     "text": "7%%c14/m"
+    },
+    {
+     "ref": "dxf 1881",
+     "text": "3%%c16"
+    },
+    {
+     "ref": "dxf 18AD",
+     "text": "6%%c14/m"
+    },
+    {
+     "ref": "dxf 19B0",
+     "text": "7%%c14/m"
+    },
+    {
+     "ref": "dxf 18AA",
+     "text": "7%%c14/m"
+    },
+    {
+     "ref": "dxf 1874",
+     "text": "5cm SECREED."
+    },
+    {
+     "ref": "dxf 1876",
+     "text": "5cm INSULATION MEMBRANE."
+    },
+    {
+     "ref": "dxf 1877",
+     "text": "10cm PLAIN CONCRETE."
+    },
+    {
+     "ref": "dxf 1929",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18DD",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18DB",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18D7",
+     "text": "6%%c12/m"
+    },
+    {
+     "ref": "dxf 18A8",
+     "text": "7%%C14/m"
+    },
+    {
+     "ref": "dxf 187C",
+     "text": "7%%C14/m"
+    },
+    {
+     "ref": "dxf 1860",
+     "text": "7%%c14/m"
+    },
+    {
+     "ref": "dxf 1869",
+     "text": "7%%c14/m"
+    },
+    {
+     "ref": "dxf 1864",
+     "text": "%%uDETAIL OF SWIMMING POOL."
+    },
+    {
+     "ref": "dxf 186A",
+     "text": "(N.I.S)"
+    }
+   ]
+  },
+  {
+   "detail": "dxf p.7 DETAIL OF DOME (title 1A18)",
+   "source": "ST7757 dxf, TEXT sweep of the detail extent",
+   "labels": [
+    {
+     "ref": "dxf 1A0E",
+     "text": "%%C12MM/15cm"
+    },
+    {
+     "ref": "dxf 1A15",
+     "text": "%%C12MM/15cm"
+    },
+    {
+     "ref": "dxf 1A47",
+     "text": "3%%c16"
+    },
+    {
+     "ref": "dxf 1A68",
+     "text": "3%%c16"
+    },
+    {
+     "ref": "dxf 1A29",
+     "text": "8%%c8/m"
+    },
+    {
+     "ref": "dxf 1A58",
+     "text": "8%%c8/m"
+    },
+    {
+     "ref": "dxf 1A37",
+     "text": "2%%c14/20cm"
+    },
+    {
+     "ref": "dxf 1A66",
+     "text": "2%%c14/20cm"
+    },
+    {
+     "ref": "dxf 1A4B",
+     "text": "3%%c18"
+    },
+    {
+     "ref": "dxf 1A6C",
+     "text": "3%%c18"
+    },
+    {
+     "ref": "dxf 1A18",
+     "text": "%%uDETAIL OF DOME"
+    },
+    {
+     "ref": "dxf 1A19",
+     "text": "(N.I.S)"
+    }
+   ]
+  },
+  {
+   "detail": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION",
+   "source": "ST7757.pdf p.16 at 170 / 200 dpi (no text layer)",
+   "labels": [
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPH",
+     "text": "6%%c14/m",
+     "position": "upper section, top bars at the +4.00 head"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-NOSE",
+     "text": "1%%c12",
+     "position": "upper section, nosing"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-STEP",
+     "text": "%%c8/15",
+     "position": "upper section, step bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-MAIN",
+     "text": "8%%c16/m",
+     "position": "upper section, waist bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-DIST",
+     "text": "%%c12/20cm",
+     "position": "upper section, under the main bars"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-TOPF",
+     "text": "6%%c14/m",
+     "position": "upper section, top bars from the S.S.L +2.00 landing (flight foot)"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBT",
+     "text": "2%%c12",
+     "position": "upper section, landing edge beam 20 x 40 top"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LTOP",
+     "text": "6%%c12/m",
+     "position": "upper section, landing top dot row"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LEBB",
+     "text": "4%%c16",
+     "position": "upper section, landing edge beam bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: U-LAND",
+     "text": "8%%c16/m",
+     "position": "upper section, landing bottom dot row"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-NOSE",
+     "text": "1%%c12",
+     "position": "upper exploded row, nosing bar at the step bar corner"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-STEP",
+     "text": "%%c8/15",
+     "position": "upper exploded row, step bar (tread + riser L)"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPH",
+     "text": "6%%c14/m",
+     "position": "upper exploded row, head top bar: slope + horizontal + end hook"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINH",
+     "text": "8%%c16/m",
+     "position": "upper exploded row, main bar: slope + horizontal into the head + end hook"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-DIST",
+     "text": "%%c12/20cm",
+     "position": "upper exploded row, distribution dot on the main bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-MAINF",
+     "text": "8%%c16/m",
+     "position": "upper exploded row, main bar: slope + horizontal into the landing bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LTOP",
+     "text": "6%%c12/m",
+     "position": "upper exploded row, landing top bar (straight)"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-TOPF",
+     "text": "6%%c14/m",
+     "position": "upper exploded row, foot top bar: horizontal in the landing top + slope + end hook"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: UX-LAND",
+     "text": "8%%c16/m",
+     "position": "upper exploded row, landing bottom bar: horizontal + slope up the flight"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBT",
+     "text": "2%%c12",
+     "position": "lower section, landing edge beam top"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LTOP",
+     "text": "6%%c12/m",
+     "position": "lower section, landing top"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LEBB",
+     "text": "4%%c16",
+     "position": "lower section, landing edge beam bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-LAND",
+     "text": "8%%c16/m",
+     "position": "lower section, landing bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPH",
+     "text": "6%%c14/m",
+     "position": "lower section, top bars from the landing into the flight (head)"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-NOSE",
+     "text": "1%%c12",
+     "position": "lower section, nosing"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-STEP",
+     "text": "%%c8/15",
+     "position": "lower section, step bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-MAIN",
+     "text": "8%%c16/m",
+     "position": "lower section, waist bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-TOPG",
+     "text": "6%%c16/m",
+     "position": "lower section, top bars over the foot on the G.B"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-DIST",
+     "text": "%%c12/20cm",
+     "position": "lower section, under the main bars"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBT",
+     "text": "3%%c14",
+     "position": "lower section, G.B top"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBS",
+     "text": "2%%c14/30cm",
+     "position": "lower section, G.B sides"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBL",
+     "text": "%%c8/15cm",
+     "position": "lower section, G.B links"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: L-GBB",
+     "text": "4%%c16",
+     "position": "lower section, G.B bottom"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-LTOP",
+     "text": "6%%c12/m",
+     "position": "lower exploded row, landing top bar (straight)"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPH",
+     "text": "6%%c14/m",
+     "position": "lower exploded row, head top bar: hook + horizontal in the landing top + slope down"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-LAND",
+     "text": "8%%c16/m",
+     "position": "lower exploded row, landing bottom bar: hook + horizontal + slope down the flight"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-DIST",
+     "text": "%%c12/20cm",
+     "position": "lower exploded row, distribution dot on the main bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-MAIN",
+     "text": "8%%c16/m",
+     "position": "lower exploded row, main bar: slope + vertical leg down into the G.B"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-STEP",
+     "text": "%%c8/15",
+     "position": "lower exploded row, step bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-NOSE",
+     "text": "1%%c12",
+     "position": "lower exploded row, nosing bar"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION: LX-TOPG",
+     "text": "6%%c16/m",
+     "position": "lower exploded row, foot top bar: slope + vertical leg down to the +0.00 T.O.B"
+    }
+   ]
+  },
+  {
+   "detail": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM",
+   "source": "ST7757.pdf p.16 at 170 dpi",
+   "labels": [
+    {
+     "ref": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T1",
+     "text": "2%%c12",
+     "position": "top bars over the cranked part"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L1",
+     "text": "6%%c8/m",
+     "position": "links in the cranked part"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-T2",
+     "text": "2%%c12",
+     "position": "top bars in the straight part"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-B",
+     "text": "4%%c16",
+     "position": "bottom bars"
+    },
+    {
+     "ref": "pdf p.16 TYPICAL DETAIL OF STAIR BEAM: SB-L2",
+     "text": "6%%c8/m",
+     "position": "links in the straight part"
+    }
+   ]
+  },
+  {
+   "detail": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)",
+   "source": "ST7757.pdf p.14 at 250 dpi",
+   "labels": [
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-WH",
+     "text": "6%%c12/m",
+     "position": "left wall, leader to the dot row"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-WV",
+     "text": "6%%c16/m",
+     "position": "left wall, leader to the vertical bar lines"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-BT",
+     "text": "2%%c16",
+     "position": "left wall foot, raft top"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): L-BB",
+     "text": "2%%c16",
+     "position": "left wall foot, raft bottom"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): RAFT",
+     "text": "AS PER SCH.",
+     "position": "raft bars (three leaders)"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-TOP",
+     "text": "2%%c12",
+     "position": "right wall top"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-WH",
+     "text": "6%%c12/m",
+     "position": "right wall, dot row"
+    },
+    {
+     "ref": "pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT): R-WV",
+     "text": "6%%c16/m",
+     "position": "right wall, vertical lines"
+    }
+   ]
+  },
+  {
+   "detail": "pdf p.14 TYPICAL BOUNDARY WALL",
+   "source": "ST7757.pdf p.14 at 250 dpi",
+   "labels": [
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: COL",
+     "text": "COLUMN 4%%c14",
+     "position": "section A-A column 20 x 30"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: PLAN-COL",
+     "text": "(20x30) R.C COLUMNS 4%%c14",
+     "position": "plan"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: UP-A",
+     "text": "2%%c14 (T&B)",
+     "position": "upper G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: UP-L",
+     "text": "%%c8/20 STIRRUPS",
+     "position": "upper G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: UP-B",
+     "text": "3%%c16 (T&B)",
+     "position": "upper G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: LO-A",
+     "text": "2%%c14 (T&B)",
+     "position": "lower G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: LO-L",
+     "text": "%%c8/20 STIRRUPS",
+     "position": "lower G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: LO-B",
+     "text": "3%%c16 (T&B)",
+     "position": "lower G.B"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: PAD-A",
+     "text": "7%%c12",
+     "position": "pad, bar line across the 80 with up-turned ends"
+    },
+    {
+     "ref": "pdf p.14 TYPICAL BOUNDARY WALL: PAD-B",
+     "text": "4%%c12 (B.W)",
+     "position": "pad, leader to the four dots"
+    }
+   ]
+  },
+  {
+   "detail": "stair-panel callouts on the slab plans p.4 / p.5 (cited, not a full plan sweep)",
+   "source": "ST7757 dxf + pdf p.4",
+   "labels": [
+    {
+     "ref": "dxf 490",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 491",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 48F",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 748",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 749",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 747",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 53D",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 5BC",
+     "text": "8%%C16/m"
+    },
+    {
+     "ref": "dxf 533",
+     "text": "6%%C14/m"
+    },
+    {
+     "ref": "pdf p.4 ST-02 horizontal 8ø16/m east of column CA",
+     "text": "8%%C16/m"
+    }
+   ]
+  }
+ ],
+ "unlabelled_shapes": [
+  {
+   "ref": "dxf 1868 + 1865 + 1863",
+   "shape": "hook + horizontal in the deep floor + long slope up (no label on it)",
+   "tied_to": "POOL-F-SLOPE",
+   "note": "same course as the section's 199F + 189C (deep floor -> slope); diameter and rate are those of the section labels 18D3 / 1907 only by position: the shape itself prints none"
+  },
+  {
+   "ref": "dxf 185D + 18D8 + 18DE",
+   "shape": "slope + horizontal into the shallow floor + end hook (no label on it)",
+   "tied_to": "POOL-F-SHALLOW",
+   "note": "the 18DB label sits on the parallel shape 185E + 18DA, not on this one"
+  }
+ ],
+ "candidate": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json (ARCH_TAKEOFF_V3.0.16)",
+ "candidate_prefix": "HL:STAIR_POOL_TANK_STEEL:",
+ "candidate_scope": [
+  "POOL:",
+  "ST-0",
+  "TANK:"
+ ]
+}
