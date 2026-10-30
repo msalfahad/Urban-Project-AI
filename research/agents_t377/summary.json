@@ -1,0 +1,92 @@
+{
+ "task": "T-377",
+ "openings": [
+  "W15",
+  "W16",
+  "W26",
+  "W17",
+  "A-GF-01",
+  "A-1F-01"
+ ],
+ "outline_own_reread": {
+  "W15": {
+   "hole_m2": 4.3629,
+   "segment_m2": 1.0086,
+   "arch_len_m": 2.5241,
+   "segments": 46
+  },
+  "W16": {
+   "hole_m2": 4.3629,
+   "segment_m2": 1.0086,
+   "arch_len_m": 2.5241,
+   "segments": 49
+  },
+  "W26": {
+   "hole_m2": 1.8745,
+   "segment_m2": 0.6145,
+   "arch_len_m": 1.9706,
+   "segments": 29
+  }
+ },
+ "outline_record_hole_m2": {
+  "W15": 4.3632,
+  "W16": 4.3632,
+  "W26": 1.8747
+ },
+ "rows": 44,
+ "by_basis": {
+  "NOT_APPLICABLE": 3,
+  "NOT_APPLICABLE (HELD)": 3,
+  "OUTLINE": 8,
+  "OUTLINE (merged size 1.875, room HELD)": 1,
+  "RECTANGLE (archivolt 3.50)": 1,
+  "RECTANGLE (band crown)": 10,
+  "RECTANGLE (crown)": 8,
+  "RECTANGLE (crown) in a HELD bound": 2,
+  "RULE RECTANGLE (Q-32 A)": 3,
+  "WIDTH_ONLY": 5
+ },
+ "rectangle_rows": 21,
+ "rectangle_difference_by_trade": {
+  "opening arrises / corner bead (exterior, Sigma) (m)": 2.3369,
+  "reveal (outside jambs + head) (m2)": 0.1975,
+  "reveal edge length (m)": 2.3369,
+  "spatter dash on the reveal (B4-05) (m2)": 0.1975
+ },
+ "mesh_spandrel_held_m": {
+  "1F-W00 family A": [
+   1.8298,
+   2.1724
+  ],
+  "1F-W00 family B": [
+   1.9156,
+   2.3398
+  ]
+ },
+ "carriers": [
+  "T-314 (EXTERIOR PLASTER / SIGMA integration)",
+  "T-314 (carry HELD, blank)",
+  "T-326 r2 (own: D-T326-1)",
+  "T-363 (MASONRY ACCESSORIES integration)",
+  "T-363 (bound text only)",
+  "T-363 input note (no quantity moves: no mesh level lies between 3.10 and 3.20 on 1F-W00)",
+  "T-364 (SPATTER integration), after T-326 r2"
+ ],
+ "held_check": {
+  "rows": 42,
+  "findings": [
+   "W17 T-162 CORNERS opening arris: W17: figure 10.29 with status 'PRINTED' on a HELD outline and no developed source"
+  ]
+ },
+ "candidate_lines": 33,
+ "candidate_by_basis": {
+  "BLANK (carrier pending)": 9,
+  "HELD (Q-76 A bound 9.87 .. 11.515)": 1,
+  "HELD BOUND (T-302 developed room-side hole 8.7414 .. 8.9965)": 2,
+  "NOT_APPLICABLE (count)": 8,
+  "OUTLINE": 8,
+  "RULE RECTANGLE (Q-32 A)": 2,
+  "WIDTH_ONLY": 3
+ },
+ "candidate_rectangle_lines": 0
+}
