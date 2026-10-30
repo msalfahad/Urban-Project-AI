@@ -1,0 +1,93 @@
+{
+ "schema": "T359_SUMMARY_V1",
+ "totals": {
+  "COUNTABLE_NOW": 0,
+  "COUNTABLE_AFTER": 19,
+  "GAP": 38,
+  "OWNED_ELSEWHERE": 10,
+  "NOT_DRAWN": 7
+ },
+ "by_element": {
+  "STAIR ST-01": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 11,
+   "OWNED_ELSEWHERE": 2,
+   "NOT_DRAWN": 1
+  },
+  "STAIR ST-02": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 10,
+   "OWNED_ELSEWHERE": 2,
+   "NOT_DRAWN": 0
+  },
+  "STAIR E1": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 0,
+   "OWNED_ELSEWHERE": 0,
+   "NOT_DRAWN": 1
+  },
+  "STAIR D1": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 0,
+   "OWNED_ELSEWHERE": 0,
+   "NOT_DRAWN": 1
+  },
+  "POOL": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 15,
+   "GAP": 0,
+   "OWNED_ELSEWHERE": 0,
+   "NOT_DRAWN": 1
+  },
+  "TERRACE DOMES": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 3,
+   "GAP": 5,
+   "OWNED_ELSEWHERE": 4,
+   "NOT_DRAWN": 0
+  },
+  "TOWER DOME": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 0,
+   "OWNED_ELSEWHERE": 0,
+   "NOT_DRAWN": 1
+  },
+  "ROOF WATER TANK": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 0,
+   "OWNED_ELSEWHERE": 1,
+   "NOT_DRAWN": 1
+  },
+  "LIFT PIT": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 0,
+   "GAP": 4,
+   "OWNED_ELSEWHERE": 1,
+   "NOT_DRAWN": 0
+  },
+  "BOUNDARY WALL": {
+   "COUNTABLE_NOW": 0,
+   "COUNTABLE_AFTER": 1,
+   "GAP": 8,
+   "OWNED_ELSEWHERE": 0,
+   "NOT_DRAWN": 1
+  }
+ },
+ "gaps": [
+  "G-T359-1",
+  "G-T359-3",
+  "G-T359-4",
+  "G-T359-5",
+  "G-T359-6",
+  "G-T359-7"
+ ],
+ "double_count": [],
+ "kg_computed": 0,
+ "populations": 74
+}
