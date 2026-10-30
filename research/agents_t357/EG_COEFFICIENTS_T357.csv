@@ -1,0 +1,9 @@
+id,side,reference,plan_m2,coef_m3_per_m
+"Z1 24 neat footing pits (in plot, T-347 lo 188.017207)",BELOW_EG,RELATIVE_TO_EG,125.344805,0.0
+"Z1 24 pits, absolute formation once printed (designer item RFI S1)",BELOW_EG,HELD,125.344805,
+Z1 pool envelope in plot (T-347 lo 17.776576),BELOW_EG,ABSOLUTE,11.851051,11.851051
+pool walls below EG (displacement 2.121053),BELOW_EG,ABSOLUTE,2.356727,2.356727
+pool walls above EG (0.707018),ABOVE_EG,ABSOLUTE,2.356727,-2.356727
+"boundary upper ground beam at N.G. (3.5256 m3, T-253)",BELOW_EG,RELATIVE_TO_EG,8.814,0.0
+Z2 fill above EG under the GF slabs,ABOVE_EG,ABSOLUTE,,
+court bedding / paving between EG and +0.15,ABOVE_EG,ABSOLUTE,,

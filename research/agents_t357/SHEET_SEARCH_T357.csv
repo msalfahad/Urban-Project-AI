@@ -1,0 +1,32 @@
+sheet,searched,clearance_notes,ground_level_values,what
+ST p.1,True,absent,,"3 bullet notes (slab thickness, neighbour-side ground beams on brick from founding level, stripping time); DXF S-NOTE 78 / 7D / 7E / B8"
+ST p.2,True,absent,,foundation plan + legend; no note block
+ST p.3,True,absent,+-0.00 x6 (LEL);+0.15;+0.30;+1.00,ground-beam plan (DXF SH08) + legend
+ST p.4,True,absent,,GF roof slab plan + legend + 'check architectural detail' box (parapet)
+ST p.5,True,absent,,1F roof slab plan + legend + parapet box
+ST p.6,True,absent,,2F roof slab plan + legend + parapet box
+ST p.7,True,absent,,pool / dome details
+ST p.8,True,absent,,"RECOMMENDATIONS notes 1-24, read in full (130 dpi): founding level verified on site (12), no foundation on fill ground (10), groundwater dewatering (14), excavation support (15); none on clearance, none prints a ground value"
+ST p.9,True,absent,,"footing schedule + boxed notes 1-4 (150 dpi): 1 names the existing plot level (no value), 4 groundwater depth"
+ST p.10,True,absent,,beam schedule
+ST p.11,True,absent,,continuous beams schedule
+ST p.12,True,absent,,continuous beams schedule
+ST p.13,True,absent,,"typical footing / ground-beam details ('Outer Normal ground level' named, T-253)"
+ST p.14,True,absent,,"lift footing, typical boundary wall ('N.G. LEVEL' named, T-253)"
+ST p.15,True,absent,,column / starter details
+ST p.16,True,absent,,stair details
+ARCH p.1,True,absent,,"GF + 1F area plans: plot sides 15.00 / 31.37 printed, coverage %"
+ARCH p.2,True,absent,,2F area plan + total floors area
+ARCH p.3,True,absent,+-0.00 x6;+0.15;+0.30;+1.00,GF plan (P7757.dxf frame); title block owner box only
+ARCH p.4,True,absent,,1F plan
+ARCH p.5,True,absent,,2F plan
+ARCH p.6,True,absent,"+-0.00 both ends (P7757.dxf blocks level 2439 / 2448, 2A42 / 2A43)",SE elevation
+ARCH p.7,True,absent,level marks at both ground-line ends (seen at 45 dpi; value not read: not used),SW elevation
+ARCH p.8,True,absent,"+-0.00 both ends (P7757.dxf blocks level 2439 / 2448, 2A42 / 2A43)",NW elevation
+ARCH p.9,True,absent,level marks at both ground-line ends (seen at 45 dpi; value not read: not used),NE elevation
+ARCH p.10,True,absent,+-0.00 both ends,SECTION A-A
+ARCH p.11,True,absent,level marks at both ground-line ends (seen at 45 dpi; value not read: not used),SECTION B-B
+ARCH p.12,True,absent,,fence elevation / plan / section
+SAN p.1,True,absent,+-0.00 at street and sea edges;+0.15,GF drainage plan; one note (work to stated dimensions)
+SAN p.2,True,absent,,1F drainage plan; same note
+SAN p.3,True,absent,,2F drainage plan; same note

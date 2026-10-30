@@ -1,0 +1,674 @@
+{
+ "project": "development villa (Alsenan); references are Drive folder 'Alsenan chalet project' / file title + layer / handle / page only; no coordinates, no note text, no client data",
+ "sources": {
+  "architectural_dxf": "P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd554c31fe4a...",
+  "structural_dxf": "ST7757 dxf.dxf sha256 9f9d1179a5d2a663...",
+  "structural_pdf": "ST7757.pdf (16 pages, raster, no text layer)",
+  "architectural_pdf": "Alsenan_Architectural_P7757_Pages_01-02 .. 11-12.pdf (12 pages, raster)",
+  "sanitary_pdf": "sanitary-7757.pdf (3 pages)"
+ },
+ "unit": "m",
+ "plot": {
+  "boundary_basis": "outer face line of the boundary wall drawn on the plot line; the four side lengths are printed on the area plans (ARCH p.1, p.2: street 15.00, sea view 15.00, neighbour 31.37 x 2) and the drainage plans (sanitary p.1 - p.3: same four values)",
+  "polygon_local_m": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    31.37,
+    0.0
+   ],
+   [
+    31.37,
+    15.0
+   ],
+   [
+    0.0,
+    15.0
+   ]
+  ],
+  "corners": {
+   "C1": "street / lower-neighbour corner",
+   "C2": "sea / lower-neighbour corner",
+   "C3": "sea / upper-neighbour corner",
+   "C4": "street / upper-neighbour corner"
+  },
+  "sides": [
+   {
+    "side": "lower neighbour",
+    "printed_m": 31.37,
+    "dxf_length_m": 31.37,
+    "handles": "P7757 LINE 85, 86, 9A, 105, 8A / 103 (layers 1, 5)"
+   },
+   {
+    "side": "upper neighbour",
+    "printed_m": 31.37,
+    "dxf_length_m": 31.37,
+    "handles": "P7757 LINE 98 + 99 (layer 5); ST S-BOUN 7FE run #1 = 31.37 (T-253)"
+   },
+   {
+    "side": "street",
+    "printed_m": 15.0,
+    "dxf_length_m": 15.0,
+    "handles": "P7757 LINE 107, 108, 109, 10F, 341, 347 (layers 1, 5)"
+   },
+   {
+    "side": "sea",
+    "printed_m": 15.0,
+    "dxf_length_m": 15.0,
+    "handles": "P7757 LINE 8B, 8C, 8D, 8E, 261 (layers 1, 5) + door symbols 39D, 39E (layer D)"
+   }
+  ],
+  "right_angles": "the four sides are axis-parallel lines in both DXFs (P7757 and ST SH08 ground-beam plan frame, same 31.37 x 15.00 extent)"
+ },
+ "coverage_rows": [
+  {
+   "name": "GF area plan (ARCH p.1)",
+   "area_m2": 319.99,
+   "pct": 68.0,
+   "decimals": 2
+  },
+  {
+   "name": "1F area plan after deduction (ARCH p.1)",
+   "area_m2": 208.2,
+   "pct": 44.24,
+   "decimals": 2
+  },
+  {
+   "name": "2F area plan (ARCH p.2)",
+   "area_m2": 55.08,
+   "pct": 11.7,
+   "decimals": 2
+  },
+  {
+   "name": "total floors area (ARCH p.2)",
+   "area_m2": 583.27,
+   "pct": 123.95,
+   "decimals": 2
+  }
+ ],
+ "storey_areas_printed": {
+  "GF": {
+   "area_m2": 319.99,
+   "build_up": "6 printed parts 220.99 + 18.08 + 51.83 + 23.76 + 4.87 + 0.46",
+   "basis": "municipal area calculation (gross built area), not a measured slab or fill plan"
+  },
+  "1F": {
+   "area_m2": 208.2,
+   "build_up": "178.44 + 33.00 = 211.44 - 3.24 (void 1.80 x 1.80)",
+   "basis": "municipal area calculation"
+  },
+  "2F": {
+   "area_m2": 55.08,
+   "build_up": "8.10 x 6.80",
+   "basis": "municipal area calculation"
+  },
+  "merged_ledger": "research/alsenan_arch_truth_05/registers/FLOOR_AREA_CONSERVATION_REGISTER.json uses the same printed GF 319.99 (architect_area_sheet_m2)"
+ },
+ "level_marks": [
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "37A",
+   "corner": "C1",
+   "labels": "ground at the plot edge, street side, 1.286 m outside the boundary line (block LEL, layer 3)"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "A86",
+   "corner": null,
+   "labels": "street side, mid-side"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "A87",
+   "corner": "C4",
+   "labels": "street side, upper corner"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "A88",
+   "corner": "C2",
+   "labels": "sea side, 0.809 m outside the boundary line, lower corner"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "A89",
+   "corner": "C3",
+   "labels": "sea side, upper corner"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "A8A",
+   "corner": null,
+   "labels": "sea side, mid-side"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "18B",
+   "corner": "C1",
+   "labels": "same position as P7757 37A (one translation)"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "1CE",
+   "corner": null,
+   "labels": "= P7757 A86"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "1CF",
+   "corner": "C4",
+   "labels": "= P7757 A87"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "1D0",
+   "corner": "C2",
+   "labels": "= P7757 A88"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "1D1",
+   "corner": "C3",
+   "labels": "near P7757 A89 (0.222 m / 0.101 m apart: drafted separately, same corner)"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08 ground-beam plan",
+   "handle": "1D2",
+   "corner": null,
+   "labels": "= P7757 A8A"
+  },
+  {
+   "kind": "PLOT_EDGE_GROUND",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "sanitary-7757.pdf p.1 GF drainage plan",
+   "handle": "PDF",
+   "corner": null,
+   "labels": "the same +-0.00 marks at the street and sea edges (visual read, 170 dpi)"
+  },
+  {
+   "kind": "CUT_GROUND_LINE",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf SE elevation",
+   "handle": "2439",
+   "corner": null,
+   "labels": "ground line, one end (block 'level', layer 4)"
+  },
+  {
+   "kind": "CUT_GROUND_LINE",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf SE elevation",
+   "handle": "2448",
+   "corner": null,
+   "labels": "ground line, other end"
+  },
+  {
+   "kind": "CUT_GROUND_LINE",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf NW elevation",
+   "handle": "2A42",
+   "corner": null,
+   "labels": "ground line, one end"
+  },
+  {
+   "kind": "CUT_GROUND_LINE",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "P7757.dxf NW elevation",
+   "handle": "2A43",
+   "corner": null,
+   "labels": "ground line, other end"
+  },
+  {
+   "kind": "CUT_GROUND_LINE",
+   "value": 0.0,
+   "unit": "m",
+   "sheet": "ARCH p.10 SECTION A-A",
+   "handle": "PDF",
+   "corner": null,
+   "labels": "ground line at both plot ends on hatched earth (visual read, 150 dpi); +0.15 court finish above it"
+  },
+  {
+   "kind": "NAMED_NO_VALUE",
+   "value": null,
+   "unit": "m",
+   "sheet": "ST7757.pdf p.9 boxed note 1",
+   "handle": "PDF",
+   "corner": null,
+   "labels": "names the existing plot ground level as the excavation reference (minimum 1.5 m below it); prints no value"
+  },
+  {
+   "kind": "NAMED_NO_VALUE",
+   "value": null,
+   "unit": "m",
+   "sheet": "ST7757.pdf p.14 TYPICAL BOUNDARY WALL section A-A",
+   "handle": "PDF",
+   "corner": null,
+   "labels": "'N.G. LEVEL' at the top of the boundary ground beam (T-253 read)"
+  },
+  {
+   "kind": "NAMED_NO_VALUE",
+   "value": null,
+   "unit": "m",
+   "sheet": "ST7757.pdf p.13 ground beams for exterior walls",
+   "handle": "PDF",
+   "corner": null,
+   "labels": "'Outer Normal ground level' at the beam underside (T-253 read)"
+  },
+  {
+   "kind": "FINISHED_GROUND",
+   "value": 0.15,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "394, 407, 409, 40B, 40D, 4AE",
+   "corner": null,
+   "labels": "courts (finished paving)"
+  },
+  {
+   "kind": "FINISHED_FLOOR",
+   "value": 0.3,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "401, 403, 405, 4AC",
+   "corner": null,
+   "labels": "annex / terrace finished floor"
+  },
+  {
+   "kind": "FINISHED_FLOOR",
+   "value": 1.0,
+   "unit": "m",
+   "sheet": "P7757.dxf GF plan",
+   "handle": "40F, 411, 413, A74",
+   "corner": null,
+   "labels": "main house GF FFL"
+  },
+  {
+   "kind": "FINISHED_GROUND",
+   "value": 0.15,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08",
+   "handle": "1A9, 1B6, 1B8, 1BA, 1BC, 1CB",
+   "corner": null,
+   "labels": "= the architectural court marks (T-200: 19 / 20 SH08 marks coincide)"
+  },
+  {
+   "kind": "FINISHED_FLOOR",
+   "value": 0.3,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08",
+   "handle": "1B0, 1B2, 1B4, 1C9",
+   "corner": null,
+   "labels": "= architectural"
+  },
+  {
+   "kind": "FINISHED_FLOOR",
+   "value": 1.0,
+   "unit": "m",
+   "sheet": "ST7757 dxf.dxf SH08",
+   "handle": "1BE, 1C0, 1C2, 1CD",
+   "corner": null,
+   "labels": "= architectural"
+  },
+  {
+   "kind": "FINISHED_GROUND",
+   "value": 0.15,
+   "unit": "m",
+   "sheet": "P7757.dxf SE / NW elevations",
+   "handle": "242C, 2883",
+   "corner": null,
+   "labels": "court finish on the elevations"
+  }
+ ],
+ "sheet_search": [
+  {
+   "sheet": "ST p.1",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "3 bullet notes (slab thickness, neighbour-side ground beams on brick from founding level, stripping time); DXF S-NOTE 78 / 7D / 7E / B8"
+  },
+  {
+   "sheet": "ST p.2",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "foundation plan + legend; no note block"
+  },
+  {
+   "sheet": "ST p.3",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 x6 (LEL)",
+    "+0.15",
+    "+0.30",
+    "+1.00"
+   ],
+   "what": "ground-beam plan (DXF SH08) + legend"
+  },
+  {
+   "sheet": "ST p.4",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "GF roof slab plan + legend + 'check architectural detail' box (parapet)"
+  },
+  {
+   "sheet": "ST p.5",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "1F roof slab plan + legend + parapet box"
+  },
+  {
+   "sheet": "ST p.6",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "2F roof slab plan + legend + parapet box"
+  },
+  {
+   "sheet": "ST p.7",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "pool / dome details"
+  },
+  {
+   "sheet": "ST p.8",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "RECOMMENDATIONS notes 1-24, read in full (130 dpi): founding level verified on site (12), no foundation on fill ground (10), groundwater dewatering (14), excavation support (15); none on clearance, none prints a ground value"
+  },
+  {
+   "sheet": "ST p.9",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "footing schedule + boxed notes 1-4 (150 dpi): 1 names the existing plot level (no value), 4 groundwater depth"
+  },
+  {
+   "sheet": "ST p.10",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "beam schedule"
+  },
+  {
+   "sheet": "ST p.11",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "continuous beams schedule"
+  },
+  {
+   "sheet": "ST p.12",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "continuous beams schedule"
+  },
+  {
+   "sheet": "ST p.13",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "typical footing / ground-beam details ('Outer Normal ground level' named, T-253)"
+  },
+  {
+   "sheet": "ST p.14",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "lift footing, typical boundary wall ('N.G. LEVEL' named, T-253)"
+  },
+  {
+   "sheet": "ST p.15",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "column / starter details"
+  },
+  {
+   "sheet": "ST p.16",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "stair details"
+  },
+  {
+   "sheet": "ARCH p.1",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "GF + 1F area plans: plot sides 15.00 / 31.37 printed, coverage %"
+  },
+  {
+   "sheet": "ARCH p.2",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "2F area plan + total floors area"
+  },
+  {
+   "sheet": "ARCH p.3",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 x6",
+    "+0.15",
+    "+0.30",
+    "+1.00"
+   ],
+   "what": "GF plan (P7757.dxf frame); title block owner box only"
+  },
+  {
+   "sheet": "ARCH p.4",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "1F plan"
+  },
+  {
+   "sheet": "ARCH p.5",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "2F plan"
+  },
+  {
+   "sheet": "ARCH p.6",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 both ends (P7757.dxf blocks level 2439 / 2448, 2A42 / 2A43)"
+   ],
+   "what": "SE elevation"
+  },
+  {
+   "sheet": "ARCH p.7",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "level marks at both ground-line ends (seen at 45 dpi; value not read: not used)"
+   ],
+   "what": "SW elevation"
+  },
+  {
+   "sheet": "ARCH p.8",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 both ends (P7757.dxf blocks level 2439 / 2448, 2A42 / 2A43)"
+   ],
+   "what": "NW elevation"
+  },
+  {
+   "sheet": "ARCH p.9",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "level marks at both ground-line ends (seen at 45 dpi; value not read: not used)"
+   ],
+   "what": "NE elevation"
+  },
+  {
+   "sheet": "ARCH p.10",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 both ends"
+   ],
+   "what": "SECTION A-A"
+  },
+  {
+   "sheet": "ARCH p.11",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "level marks at both ground-line ends (seen at 45 dpi; value not read: not used)"
+   ],
+   "what": "SECTION B-B"
+  },
+  {
+   "sheet": "ARCH p.12",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "fence elevation / plan / section"
+  },
+  {
+   "sheet": "SAN p.1",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [
+    "+-0.00 at street and sea edges",
+    "+0.15"
+   ],
+   "what": "GF drainage plan; one note (work to stated dimensions)"
+  },
+  {
+   "sheet": "SAN p.2",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "1F drainage plan; same note"
+  },
+  {
+   "sheet": "SAN p.3",
+   "searched": true,
+   "clearance_notes": [],
+   "ground_level_values": [],
+   "what": "2F drainage plan; same note"
+  }
+ ],
+ "rules_searched": "OWNER_QUESTIONS_ANSWERED.md, OWNER_QUESTIONS.md, OWNER_RULE_*.md, DECISION_REGISTER.md, OWNER_SESSION_CHANGES.md for 'clearance', 'site', 'existing level', 'N.G.L', 'natural ground', 'plot level', 'site plan': only Q-21 C (excavation >= 1.50 m below the existing plot level is a minimum, not the founding level); no clearance rule",
+ "eg_components": [
+  {
+   "id": "Z1 24 neat footing pits (in plot, T-347 lo 188.017207)",
+   "plan_m2": 125.344805,
+   "side": "BELOW_EG",
+   "reference": "RELATIVE_TO_EG",
+   "why": "the lo bound uses p.9 note 1 'not less than 1.5 m below the existing plot level': the limit moves with EG"
+  },
+  {
+   "id": "Z1 24 pits, absolute formation once printed (designer item RFI S1)",
+   "plan_m2": 125.344805,
+   "side": "BELOW_EG",
+   "reference": "HELD",
+   "why": "formation not printed as a value"
+  },
+  {
+   "id": "Z1 pool envelope in plot (T-347 lo 17.776576)",
+   "plan_m2": 11.851051,
+   "side": "BELOW_EG",
+   "reference": "ABSOLUTE",
+   "why": "pool formation -1.50 from the printed finished chain (T-183 r2 / T-200), not from EG"
+  },
+  {
+   "id": "pool walls below EG (displacement 2.121053)",
+   "plan_m2": 2.356727,
+   "side": "BELOW_EG",
+   "reference": "ABSOLUTE",
+   "why": "wall plan 0.707018 / 0.30 (above-EG height rim +0.30); bottom absolute"
+  },
+  {
+   "id": "pool walls above EG (0.707018)",
+   "plan_m2": 2.356727,
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "why": "top = rim +0.30 absolute"
+  },
+  {
+   "id": "boundary upper ground beam at N.G. (3.5256 m3, T-253)",
+   "plan_m2": 8.814,
+   "side": "BELOW_EG",
+   "reference": "RELATIVE_TO_EG",
+   "why": "top at 'N.G. LEVEL': moves with N.G."
+  },
+  {
+   "id": "Z2 fill above EG under the GF slabs",
+   "plan_m2": null,
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "why": "slab underside absolute (FFL - build-up, HELD) and zone plan not formed (T-347 D-33 / D-34)"
+  },
+  {
+   "id": "court bedding / paving between EG and +0.15",
+   "plan_m2": null,
+   "side": "ABOVE_EG",
+   "reference": "ABSOLUTE",
+   "why": "court plan not bound in this task"
+  }
+ ],
+ "dxf_text_census": {
+  "method": "engine/source/cad/shx_arabic.records_from_doc on both DXFs (every TEXT / MTEXT / ATTRIB incl. nested blocks, Arabic SHX decoded), keyword search for clearance, levelling, fill, site, existing level, plot ground (Arabic and English)",
+  "records": {
+   "ST7757 dxf.dxf": 2253,
+   "P7757.dxf": 276
+  },
+  "hits": "ST: p.9 boxed note 1 (existing plot level, minimum 1.5 m), p.9 note 3, p.1 neighbour-side ground-beam note, a slab title; P7757: plan titles and title-block labels only. No clearance, levelling, topsoil or demolition text in either file."
+ }
+}
