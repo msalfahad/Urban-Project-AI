@@ -5,6 +5,12 @@ revalidated against the merged, Checker-verified evidence up to engine head b12e
 Companion files: D_REMOVED_REVISED.md (what was removed or changed, with evidence), C_UNLOCK_MATRIX.md (internal: which
 questions together close each whole BOQ line), B_REMAINING_RFI.md (next Lead run: the remaining questions).
 
+CORRECTIONS APPLIED (Lead 2026-10-30 04:25 UTC): every CORRECTED and PARTIAL citation verdict of the Checker (01:30
+run and the 03:56 addendum, at the end of this file) is now written into the question text: S01 (ST p.9 note 1), S04,
+S12, S13, S14, S15, S16, S18 (note sheet still to confirm), S19 / S21 (ST p.1), S20, S22 (ST p.6), S23 (sheets 10 / 11 /
+04), A01, A03, A04, A05, A06, A07 and A08 (the space is now identified by position and size, and its use is asked; the
+internal name 'dressing room' is removed). No question was added, removed or reworded beyond its citation, except A08.
+
 STATUS: NOT SENT. The owner reviews; nothing goes to any designer until he says so. CHECKER (light run): re-check the
 sheet / detail / handle citation of every question below against the drawing; a citation marked "(sheet no. to confirm)"
 is one the merged evidence names by drawing content but not by sheet number: confirm or correct it from the print.
@@ -25,7 +31,8 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S01 Founding level of the footings and start level of the column necks
 - Discipline: structural.
-- Drawing: ST p.1 general note 1 ("excavation not less than 1.50 m below the existing plot level"); ST p.13 blinding /
+- Drawing: ST p.9 general note 1 (notes box under the bearing-capacity table: "excavation not less than 1.50 m below the
+  existing plot level"; the existing plot level is printed +-0.00 only at the plot corners, outside the boundary); ST p.13 blinding /
   underlay detail; ST p.2 foundation plan; ST p.9 column schedule (necks).
 - Missing information: the note fixes a minimum excavation depth only. No sheet prints the underside level of the
   footings or the level at which the column necks start.
@@ -57,8 +64,8 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S04 Boundary-wall columns and pads: positions
 - Discipline: structural (with the architect for the boundary-wall layout).
-- Drawing: ST p.14 TYPICAL BOUNDARY WALL (pads 130 x 80 x 30, spacing "SEE ARCH PLAN"); architectural GF plan (boundary
-  wall drawn 0.20; no column positions marked) (sheet no. to confirm).
+- Drawing: ST p.14 TYPICAL BOUNDARY WALL (pads 130 x 80 x 30, spacing "SEE ARCH PLAN"); architectural P7757 sheet 03,
+  GROUND FLOOR PLAN 1:100 (boundary wall drawn 0.20; no column positions marked).
 - Missing information: the detail refers to the architectural plan for the spacing, and the architectural plan marks no
   boundary-wall column or pad.
 - Requested: the positions (or the spacing and the start / end points) of the boundary-wall columns and their pads.
@@ -122,7 +129,7 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S12 Beam CB10: width
 - Discipline: structural.
-- Drawing: ST roof slab plan (CB10 drawn 0.30 wide; the CB10 label sits beside the 0.20 outer strip); ST p.11 / p.12
+- Drawing: ST p.5, 1F roof slab plan (CB10 drawn 0.30 wide; the CB10 label sits beside the 0.20 outer strip); ST p.11 / p.12
   continuous-beam schedule (CB10 0.25 x 0.50).
 - Conflict: schedule width 0.25 vs drawn width 0.30, and the label placement leaves it unclear which band is CB10.
 - Requested: which band is CB10, and its width.
@@ -130,7 +137,8 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S13 Beams whose drawn width differs from the schedule (GF B29, GF CB2 two spans, GF B21, 1F B6 one span)
 - Discipline: structural.
-- Drawing: ST GF and 1F roof slab plans (two edge lines per beam) vs ST p.10 / p.11 schedules: GF B29 schedule 25 / drawn
+- Drawing: ST p.4 GF roof slab plan (B29, CB2, B21) and ST p.5 1F roof slab plan (B6) (two edge lines per beam) vs ST
+  p.10 / p.11 schedules: GF B29 schedule 25 / drawn
   0.20 (6.74 m); GF CB2 two spans 20 / 0.25; GF B21 45 / 0.40 (inclined); 1F B6 vertical span at x 26.37, 25 / 0.20.
 - Conflict: schedule width vs drawn width; no section cuts these beams.
 - Requested: the built width of each listed span.
@@ -139,21 +147,22 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S14 GF beam line labelled both CB3 and "B3 (with stair)"
 - Discipline: structural.
-- Drawing: ST GF roof slab plan (two labels on one beam line); ST p.16 TYPICAL DETAIL OF STAIR BEAM.
+- Drawing: ST p.4 GF roof slab plan (labels CB3, B3 and "(With Stair)" on one beam line, the south line); ST p.16 TYPICAL DETAIL OF STAIR BEAM.
 - Conflict: two type labels on one line.
 - Requested: one beam of which type, or two members (and their positions).
 - Affected BOQ line: CONC.BEAM HELD (never counted twice).
 
 ### RFI-S15 Six unlabelled beam spans
 - Discipline: structural.
-- Drawing: ST GF / 1F roof slab plans (six drawn spans without a label) (handles in the T-110 ledger; sheet no. to confirm).
+- Drawing: ST p.4 GF roof slab plan and ST p.5 1F roof slab plan (six drawn spans without a label; DXF handles listed
+  with each span).
 - Missing information: type and section.
 - Requested: the type or section of each span.
 - Affected BOQ line: CONC.BEAM HELD (location, length and candidate volume listed).
 
 ### RFI-S16 Edge strips and boxes without a section (west outer strip, SE box, CB12 outer strip, strips north of B23 / B20)
 - Discipline: structural.
-- Drawing: ST GF / 1F roof slab plans (drawn bands; sections incomplete).
+- Drawing: ST p.4 GF roof slab plan and ST p.5 1F roof slab plan (drawn bands; sections incomplete).
 - Missing information: whether these bands are concrete beams, and their section.
 - Requested: beam or not; the section if a beam.
 - Affected BOQ line: CONC.BEAM HELD.
@@ -168,17 +177,18 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S18 Roof-edge projection bands
 - Discipline: structural (with the architect).
-- Drawing: ST GF and 1F roof slab plans (rounded bands round the roof edges: 0.20 strips north of B20 / B23; 1F outer
+- Drawing: ST p.4 GF roof slab plan and ST p.5 1F roof slab plan (rounded bands round the roof edges: 0.20 strips north of B20 / B23; 1F outer
   west strip 7.50 m; 1F strip 0.30 x 4.51 and SE box 0.30 x 0.90 outside CB12; GF outer west strip 0.20 x 4.10 m; 1F
-  0.10 strip outside CB12 over 5.69 m; 1F rounded box about 0.40 x 1.00 m); slab note 1 (Arabic: the contractor matches
-  parapet and projection details to the architectural drawings); sections A-A / B-B draw the beam outline only.
+  0.10 strip outside CB12 over 5.69 m; 1F rounded box about 0.40 x 1.00 m); a structural note (Arabic: the contractor
+  matches parapet and projection details to the architectural drawings; sheet still to confirm: it is not ST p.1 note 1); sections A-A / B-B draw the beam outline only.
 - Missing information: depth, section and material of each projection; cast with the slab or not.
 - Requested: a section for each projection (or one typical section and where it applies).
 - Affected BOQ lines: CONC.BEAM HELD (plan areas listed, no volume); facade finishes on the projection faces.
 
 ### RFI-S19 Column C8: section
 - Discipline: structural.
-- Drawing: ST storey plans (C8 printed 30X80, dimensioned 70 + 10; five 0.80 outlines); ST p.9 column schedule (30 x 90).
+- Drawing: ST p.1 columns and axes plan (C8 printed 30X80 at two positions, dimensioned 70 + 10); ST storey plans (five
+  0.80 outlines); ST p.9 column schedule (30 x 90).
 - Conflict: plan 30 x 80 vs schedule 30 x 90.
 - Requested: the built section of C8 (neck, GF, 1F).
 - Affected BOQ line: CONC.COLUMN CONFLICT (neck 0.240 .. 0.270 m2 section; GF 0.900 .. 1.0125 m3; 1F 0.180 .. 0.200 m2
@@ -186,8 +196,8 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S20 Thirteen columns whose plan outline differs from the schedule
 - Discipline: structural.
-- Drawing: ST storey plans, outlines GF RS 347, 359, 344; 1F RS 691, 676, 697, 673, 694, 685, 688, 68E, 679, 667 (DXF
-  handles); ST p.9 column schedule bands.
+- Drawing: ST p.4 (GF RS 347, 359, 344) and ST p.5 (1F RS 691, 676, 697, 673, 694, 685, 688, 68E, 679, 667 (DXF
+  handles), all S-COL.BON outlines; ST p.9 column schedule bands.
 - Conflict: each outline is drawn at one size (e.g. 0.20 x 0.40, 0.25 x 0.50, 0.25 x 1.00) and the schedule band gives
   another; no third print settles it.
 - Requested: the built section of each of the 13 columns.
@@ -195,7 +205,7 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S21 Lift columns and necks on the lift raft (C1, C2, C2, C9)
 - Discipline: structural.
-- Drawing: ST p.2 foundation plan (20X50 three times, 25X100); ST p.9 column schedule FOUNDATION row (30 x 50, 30 x 100).
+- Drawing: ST p.1 columns and axes plan (20X50 three times, 25X100); ST p.2 foundation plan (lift raft); ST p.9 column schedule FOUNDATION row (30 x 50, 30 x 100).
 - Conflict: two printed sections.
 - Requested: the governing section for these necks and the columns above.
 - Affected BOQ line: CONC.COLUMN CONFLICT 0.55 vs 0.75 m3 per metre of height (neck depth also needs the lift-pit depth,
@@ -203,15 +213,16 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-S22 Beam B15 (20 x 120) at the water tank: upstand or downstand
 - Discipline: structural.
-- Drawing: ST slab plan and ST p.10 schedule (agree on 20 x 120; no section shows which side of the slab it sits).
+- Drawing: ST p.6 2F roof slab plan (B15 label) and ST p.10 schedule (agree on 20 x 120; no section shows which side of the slab it sits).
 - Missing information: upstand or downstand.
 - Requested: upstand or downstand.
 - Affected BOQ line: CONC.COLUMN, 2F tank-column heights 3.00 .. 3.80 m HELD (+0.160 m3 at the joint).
 
 ### RFI-S23 Structural slab-top level of each roof (annex +4.30, GF terraces +5.50, 1F roofs +9.70, main roof +13.90)
 - Discipline: structural (with the architect).
-- Drawing: architectural section B-B (+4.30 on one undivided band about 0.23 m); section A-A (+13.90 on the roof band);
-  architectural plans (roof terraces printed at finished levels); sanitary sheets (1 % falls).
+- Drawing: architectural P7757 sheet 11, section B-B (+4.30 on one undivided band about 0.23 m on the annex roof);
+  sheet 10, section A-A (+13.90 on the main-roof band, +9.70 on the 1F roof, +5.50 below); sheet 04, 1F plan (ROOF +4.30
+  annex, +5.50 at the terraces, printed at finished levels); sanitary sheets (1 % falls).
 - Missing information: whether each printed level is the structural slab top or the finished roof; whether a roof slab
   steps down from the adjacent floor slab.
 - Requested: the structural slab-top level of each roof.
@@ -266,7 +277,7 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-A01 Window W02 (6.33 m, GF)
 - Discipline: architect.
-- Drawing: architectural GF plan (W02 drawn as one 6.33 m window) (sheet no. to confirm); the client renders show two
+- Drawing: architectural P7757 sheet 03, GF plan (W02 drawn as one 6.33 m window, '633' on the sea-view side); the client renders show two
   windows with a pier.
 - Conflict: one window on the plan, two windows with a pier on the renders (renders are design intent only).
 - Requested: the built arrangement (one window, or two with a pier and the pier width).
@@ -282,7 +293,8 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-A03 Round reception stair ST-02: section, riser count and landing levels
 - Discipline: architect.
-- Drawing: architectural GF / 1F plans (round stair drawn); sections A-A / B-B do not cut it.
+- Drawing: architectural P7757 sheet 03 (GF plan) and sheet 04 (1F plan) (round stair drawn); sections A-A (sheet 10)
+  and B-B (sheet 11) show no curved flight.
 - Missing information: riser count, landing levels, curved geometry.
 - Requested: a section (or riser count and landing levels).
 - Affected BOQ line: CONC.STAIR_DOME, round stair HELD (curved part 2.089 m3 unresolved; straight flights 0.469 m3 to be
@@ -290,7 +302,7 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-A04 Main stair MS1-L: riser count and landing edge
 - Discipline: architect (with the structural designer).
-- Drawing: ST stair linework for MS1-L vs architectural plan and section A-A.
+- Drawing: ST p.4 stair linework for MS1-L vs architectural P7757 sheet 03 (GF plan) and sheet 10 (section A-A).
 - Conflict: the two disciplines' linework differ on the riser count and the landing edge.
 - Requested: the built riser count and landing edge.
 - Affected BOQ line: CONC.STAIR_DOME, MS1-L HELD (staircase system PARTIALLY VERIFIED); ST-03 0.948 m3 is on an
@@ -298,32 +310,35 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 
 ### RFI-A05 Terrace dome drums on the +9.70 roof: material and wall thickness
 - Discipline: architect (structural if concrete).
-- Drawing: architectural section B-B (drum "130"); ST p.5 ring arcs 5FE / 5FF, circle 649; architectural 1F plan
-  ("VOID").
+- Drawing: architectural P7757 sheet 11, section B-B ("130" above the +9.70 roof beside each drum); ST p.5 ring arcs
+  5FE / 5FF, circle 649; sheet 04, 1F plan ("VOID").
 - Missing information: material and wall thickness of the two drums (to the springing +11.00).
 - Requested: material (concrete or blockwork) and thickness.
 - Affected BOQ lines: CONC.STAIR_DOME drums no value (outer face 18.061 m2 each, geometry only); blockwork HELD.
 
 ### RFI-A06 GF garden band (13.986 m2)
 - Discipline: architect.
-- Drawing: architectural GF plan (band labelled garden, drawn enclosed and roofed) (sheet no. to confirm).
+- Drawing: architectural P7757 sheet 03, GF plan (band labelled GARDEN, 150 wide, west of the reception, drawn enclosed
+  and roofed).
 - Missing information: open to the sky or roofed; enclosed or open to outside air; planter (soil) or paved / tiled floor.
 - Requested: the band's built form and floor.
 - Affected BOQ line: floor area (internal) 1.364 m2 HELD; floor finish HELD.
 
 ### RFI-A07 Space under the round stair ST-02 (GF, F1 / F2)
 - Discipline: architect.
-- Drawing: architectural GF plan (space under ST-02; ST-02 underside not drawn).
+- Drawing: architectural P7757 sheet 03, GF plan (space under ST-02; ST-02 underside not drawn).
 - Missing information: whether the space under the stair is a finished floor, closed off, or solid.
 - Requested: finished floor / closed / solid.
 - Affected BOQ line: floor area (internal) 6.124 m2 HELD.
 
-### RFI-A08 1F dressing room: floor finish
+### RFI-A08 1F unlabelled space beside the master bedroom: use and floor finish
 - Discipline: architect.
-- Drawing: architectural 1F plan; no finishes schedule is issued (D-10).
-- Missing information: the floor finish of the dressing room.
-- Requested: the finish material.
-- Affected BOQ line: floor finish of the dressing room HELD (area measured).
+- Drawing: architectural P7757 sheet 04, 1F plan: the unlabelled 1.65 x 1.80 m space (2.970 m2) between the bath
+  (2.00 x 1.80) and the master bed room (4.20 x 4.00) on the upper-neighbour side, a diagonal line drawn across it; no
+  room name is printed and no finishes schedule is issued (D-10).
+- Missing information: the use of the space and its floor finish.
+- Requested: the use of the space and its floor finish material.
+- Affected BOQ line: floor finish of this space HELD (area 2.970 m2 measured).
 
 ### RFI-A09 Document set covering the finishes (if one exists)
 - Not asked here: the general request for a finishes schedule / specification is in B (A12 / D-10). RFI-A08 is the one
