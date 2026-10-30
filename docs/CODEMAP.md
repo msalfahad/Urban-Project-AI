@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3912 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3919 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 31 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1869 | pytest suites, one folder per round. |
+| `tests/` | 1870 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -474,7 +474,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `concrete_overlap_ownership.py` | 474 | MEDIUM | 3 | CONCRETE_OVERLAP_OWNERSHIP_V1 (T-189): concrete at intersecting structural elements is measured EXACTLY ONCE. |
 | `concrete_strip_guard.py` | 506 | MEDIUM | 4 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
 | `conservation.py` | 72 | MEDIUM | 2 | Source conservation (R8.2 §21) — nothing silently disappears. |
-| `continuous_beams.py` | 496 | CRITICAL | 3 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
+| `continuous_beams.py` | 496 | CRITICAL | 4 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
 | `corner_bead.py` | 93 | MEDIUM | 1 | CORNER BEAD GEOMETRY (V3b) - steel plaster angle beads as segments at exposed plaster edges. |
 | `cover_authority.py` | 232 | CRITICAL | 5 | COVER AUTHORITY - what a concrete-cover rule lets a bar length, count or mass claim (generic, stdlib only). |
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
@@ -1280,6 +1280,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t361_fencing_gates/` | 1 |
 | `tests/t362_masonry_white/` | 2 |
 | `tests/t365_joints/` | 2 |
+| `tests/t366_lap_census/` | 1 |
 | `tests/t367_masonry_mortar/` | 2 |
 | `tests/t368_exposed_tile_edges/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
@@ -1651,6 +1652,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t361/` | 11 |
 | `research/agents_t362/` | 10 |
 | `research/agents_t365/` | 9 |
+| `research/agents_t366/` | 7 |
 | `research/agents_t367/` | 6 |
 | `research/agents_t368/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |

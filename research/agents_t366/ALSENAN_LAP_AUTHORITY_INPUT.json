@@ -1,0 +1,748 @@
+{
+ "checked": {
+  "DXF": "all 1,934 DXF TEXT / MTEXT / ATTRIB entities (model space + blocks) searched for lap / splice / overlap / dia / anchor / develop / stock / length and Arabic تشريك / رباط / اشاير / طول / وصل / تراكب: one hit, 1BA9 '* L=LENGTH OF COLUMN.' (p.9 link-band notation, not a lap)",
+  "P10": "p.10 Schedule of Simple Beams (1E47)",
+  "P1112": "p.11 / p.12 continuous-beam schedules (206B, 272B, 2035) and their typical span diagram",
+  "P13": "p.13 typical footing details, ground-beam sections, lintel detail / schedule",
+  "P14": "p.14 lift, TYPICAL BOUNDARY WALL plan / section A-A, parapets",
+  "P15": "p.15 twisted column, beam in casement, TYP. SLAB ON BEAMS DETAIL, notes 1-3, planted-column beam",
+  "P8": "p.8 notes 1-24 (only note 9 concerns bar lengths; note 6 f'c >= 300 kg/cm2, note 8 fy >= 4200 kg/cm2, note 21 side bars, note 22 cover)",
+  "P9": "p.9 schedules of columns (1B3A) and footings (1C32), DETAILS OF COLUMN REINFORCEMENT (1BA5, 1BA9, 1BAA)"
+ },
+ "populations": [
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "51 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "isolated footing bottom short / long bars (F .. F15, FN; F8 / F12-F14 / FF bottom '/m')",
+   "family": "FOOTINGS",
+   "finding": "",
+   "group": "FOOTING_MESH",
+   "id": "FTG-BOTTOM",
+   "need_basis": "largest footing side 4.60 m (FF, p.9) < 12 m stock: one bar spans the footing; p.13 draws each bar whole",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "14 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "footing top mesh and its end legs (F8, F12 - F14, FF 'TOP' rows)",
+   "family": "FOOTINGS",
+   "finding": "",
+   "group": "FOOTING_MESH",
+   "id": "FTG-TOP",
+   "need_basis": "same footings, sides <= 4.60 m",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "20 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "boxed bars (p.9 'BOXED 3+4' .. '3+8'; p.13 'Boxed bars.')",
+   "family": "FOOTINGS",
+   "finding": "the boxed bar is drawn as an open U with end cranks on p.13; whether a closure overlap exists is a shape question (HOOK_BEND, T-371), no lap printed",
+   "group": "FOOTING_BOXED",
+   "id": "FTG-BOXED",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [
+    {
+     "source": "P13D40"
+    },
+    {
+     "source": "N9"
+    }
+   ],
+   "bar_marks": "",
+   "candidate_lines": "no own line in the candidate; plus 28 lines shared with NECK-STARTER-DEEP (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "starter-to-column splice at the footing top, footings whose upper G.B is < 2.5 m above (p.13 right detail)",
+   "family": "COLUMNS",
+   "finding": "F-T366-1: p.13 DIMENSIONS the starter projection 40 ø (typical detail). T-273 r2 and the column ledger take their 40 D starter projection from note 9's compression minimum; the printed basis is this detail. Note 9 (starter bars, >= 70 d in tension zones) also names these bars: the detail's 40 ø equals note 9 only in a compression zone; the zone is not printed -> applicability CONFLICT for the Checker, lap value printed, nothing changed",
+   "group": "STARTER_SHALLOW",
+   "id": "NECK-STARTER-SHALLOW",
+   "need_basis": "",
+   "splice_need": "DRAWN_OVERLAP"
+  },
+  {
+   "authorities": [
+    {
+     "source": "N9"
+    }
+   ],
+   "bar_marks": "",
+   "candidate_lines": "no own line in the candidate; plus 28 lines shared with NECK-STARTER-SHALLOW (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "starter-to-column splice where the upper G.B is more than 2.5 m above the footing (p.13 left detail, with a lower G.B)",
+   "family": "COLUMNS",
+   "finding": "p.13 left detail draws the starter cranks at the footing top and the column-bar cranks above the lower G.B (splice zone drawn), no dimension; only note 9 names these bars, zone not printed -> HELD",
+   "group": "STARTER_DEEP",
+   "id": "NECK-STARTER-DEEP",
+   "need_basis": "",
+   "splice_need": "DRAWN_OVERLAP"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "266 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "column main bars and their storey-joint splices GF / 1F / 2F (p.9 schedule; bar count changes per storey, e.g. C1 8 -> 6 ø16)",
+   "family": "COLUMNS",
+   "finding": "F-T366-2: no note or detail prints a column lap; the candidate's 56 'LAP at storey bottom (reading S/P)' lines carry note 9 (a STARTER_BARS note) as their basis: category outside its named group (owner 2026-10-24 s.6 (1)); they are BOUNDED_EXPOSURE, never released; the census leaves them as they are",
+   "group": "COLUMN_MAIN",
+   "id": "COL-MAIN",
+   "need_basis": "a bar change at each storey joint (p.9) and 8 GF-1F-2F stacks of 12.90 m > 12 m (T-148, MERGED)",
+   "splice_need": "REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "207 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "column links 6 ø8/m (1BAA), closed / overlapping links by L band (p.9)",
+   "family": "COLUMNS",
+   "finding": "",
+   "group": "COLUMN_LINKS",
+   "id": "COL-LINKS",
+   "need_basis": "a link is one closed bar of perimeter < 12 m; its closure is a HOOK_BEND attribute (135-degree hooks drawn, no length: T-148), not a lap splice",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "4 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "twisted-column extra 4 ø16 and spiral 6 ø8/m (p.15)",
+   "family": "COLUMNS",
+   "finding": "p.15 draws the GF and 1F column bars passing the floor with no lap dimension",
+   "group": "COLUMN_TWIST",
+   "id": "COL-TWIST-EXTRA",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "177 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "ground-beam top / bottom / longitudinal bars (p.13 sections; SH08 bands)",
+   "family": "GROUND_BEAMS",
+   "finding": "",
+   "group": "GROUND_BEAM_MAIN",
+   "id": "GB-MAIN",
+   "need_basis": "research/agents_t273/T-273_LAPS_AND_TONNES.md s.3 (MERGED): south band 7D0 / FC 18.570 m, north band 170 / 7C3 13.770 m through interior columns > 12 m",
+   "splice_need": "REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "30 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "ground-beam side bars 2 ø12/30cm (p.13 exterior-wall section)",
+   "family": "GROUND_BEAMS",
+   "finding": "",
+   "group": "GROUND_BEAM_SIDE",
+   "id": "GB-SIDE",
+   "need_basis": "continuity of side bars through the columns not printed (T-273 s.8)",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "62 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "ground-beam stirrups ø8/15cm (p.13)",
+   "family": "GROUND_BEAMS",
+   "finding": "",
+   "group": "GROUND_BEAM_LINKS",
+   "id": "GB-STIRRUP",
+   "need_basis": "closed link < 12 m; closure is HOOK_BEND (T-272: drawn with no hook or overlap)",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "21 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "strap beams SB1 - SB3 top / bottom (p.10 schedule rows)",
+   "family": "GROUND_BEAMS",
+   "finding": "",
+   "group": "STRAP_MAIN",
+   "id": "STRAP-MAIN",
+   "need_basis": "route G strap bar 5.70 m + 2 x 40 d at most 7.14 m < 12 m (T-299 s.3)",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "404 V3.0.16 lines; plus 200 lines shared with CB-BOTTOM / CB-SUPPORT-TOP / CB-TOP-THROUGH (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "simple beams B1 - B29, CA, B.W top / bottom / corner bars (p.10)",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "BEAM_MAIN",
+   "id": "BEAM-SIMPLE-MAIN",
+   "need_basis": "research/agents_t149/T-149_BEAM_STEEL_BY_POPULATION.md (no bar run over 12 m: longest CB1 / CB8 support bars 5.6 m, B22 7.80 m)",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "61 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "beam side bars (p.8 note 21; p.10 REMARKS 2 ø12/30cm, 2 ø14 / 2 ø16/20cm; CB 'MIDDLE REINT.')",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "BEAM_SIDE",
+   "id": "BEAM-SIDE",
+   "need_basis": "run along single beams <= 7.80 m (research/agents_t149/T-149_BEAM_STEEL_BY_POPULATION.md (no bar run over 12 m: longest CB1 / CB8 support bars 5.6 m, B22 7.80 m))",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "243 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "beam stirrups n ø8 / ø10 per m (p.10, p.11 / p.12 (STIR) rows)",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "BEAM_LINKS",
+   "id": "BEAM-LINKS",
+   "need_basis": "closed link < 12 m; closure is HOOK_BEND",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "58 V3.0.16 lines; plus 200 lines shared with BEAM-SIMPLE-MAIN / CB-SUPPORT-TOP / CB-TOP-THROUGH (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "continuous-beam bottom bars of adjacent spans (p.11 / p.12)",
+   "family": "BEAMS",
+   "finding": "F-T366-3: the typical span diagram and every CB row draw the bottom bars of the two spans overlapping across the interior support (e.g. CB1 4 ø18 / 5 ø18), the overlap length is not dimensioned ('0.15 L' is drawn but tied to no bar: T-149); the candidate's 'bottom ends (note 9, 40d..70d)' lines use the starter note outside its group -> lap HELD",
+   "group": "CB_BOTTOM",
+   "id": "CB-BOTTOM",
+   "need_basis": "",
+   "splice_need": "DRAWN_OVERLAP"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "115 V3.0.16 lines; plus 200 lines shared with BEAM-SIMPLE-MAIN / CB-BOTTOM / CB-SUPPORT-TOP (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "continuous-beam top through / corner bars (p.11 / p.12)",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "CB_TOP",
+   "id": "CB-TOP-THROUGH",
+   "need_basis": "longest route G continuous-beam bar run 8.708 m < 12 m (owner rule s.5, instrumented run)",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "46 V3.0.16 lines; plus 200 lines shared with BEAM-SIMPLE-MAIN / CB-BOTTOM / CB-TOP-THROUGH (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "continuous-beam support bars 0.22 Ln each side (p.11 / p.12)",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "CB_SUPPORT",
+   "id": "CB-SUPPORT-TOP",
+   "need_basis": "0.22 Ln1 + support + 0.22 Ln2 <= 5.6 m (research/agents_t149/T-149_BEAM_STEEL_BY_POPULATION.md (no bar run over 12 m: longest CB1 / CB8 support bars 5.6 m, B22 7.80 m))",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "2 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "beam carrying a planted column: 4 ø16 (p.15)",
+   "family": "BEAMS",
+   "finding": "",
+   "group": "BEAM_PLANTED",
+   "id": "PLANTED-COL-BEAM",
+   "need_basis": "inside one beam, drawn whole; beams <= 7.80 m",
+   "splice_need": "NOT_REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "268 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "suspended-slab bottom mesh (p.4 - p.6 plans; p.15 typical slab detail)",
+   "family": "SLABS",
+   "finding": "p.15 prints continuity ('STOP 50% OF BOT. REINF. BALANCE CONTINUOUS') but no lap; whether a continuous bottom bar exceeds 12 m is not established by a merged ledger (T-273: slab transitions HELD); the candidate's 'DEVELOPMENT / ANCHORAGE' lines (note 9) are outside note 9's group (T-307 ENGINE_WRONG in basis)",
+   "group": "SLAB_MAIN",
+   "id": "SLAB-BOTTOM-MAIN",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "98 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "slab top bars over supports (p.15: 0.25 / 0.30 L, 'EXTEND 50% OF TOP REINF. INTO ADJACENT SLAB WHERE POSSIBLE')",
+   "family": "SLABS",
+   "finding": "",
+   "group": "SLAB_TOP",
+   "id": "SLAB-TOP-SUPPORT",
+   "need_basis": "extension into the next slab printed as a fraction, no lap length",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [
+    {
+     "source": "P15N1"
+    }
+   ],
+   "bar_marks": "",
+   "candidate_lines": "3 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "slab temperature bars (p.15 schedule Y10 / Y12 ø200 by slab thickness; note 2)",
+   "family": "SLABS",
+   "finding": "the lap value is printed and names this group; the group itself is blocked (no 160 mm row in the table for the 16 cm slabs of note 18: diameter not established, T-273), so the lap length in mm waits on it",
+   "group": "SLAB_TEMPERATURE",
+   "id": "SLAB-TEMPERATURE",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "15 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "slab corner bars / second-bar zones (candidate BLOCKED lines)",
+   "family": "SLABS",
+   "finding": "",
+   "group": "SLAB_EXTRA",
+   "id": "SLAB-EXTRA",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "24 V3.0.16 lines (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "ground slab on grade mesh D10 (route G SLAB_NOTE_MESH_SCOPE)",
+   "family": "GROUND_SLAB",
+   "finding": "mesh sheet / bar lap not printed",
+   "group": "GROUND_SLAB_MESH",
+   "id": "GROUND-SLAB-MESH",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "no own line in the candidate (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "boundary-wall G.B 2 ø14 (T&B) / 3 ø16 (T&B) (p.14 section A-A)",
+   "family": "BOUNDARY_WALL",
+   "finding": "",
+   "group": "BOUNDARY_GB",
+   "id": "BW-GB",
+   "need_basis": "research/agents_t273/T-273_LAPS_AND_TONNES.md s.3 (MERGED): boundary run 7FE#1 31.370 m continuous through the boundary columns",
+   "splice_need": "REQUIRED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "no own line in the candidate (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "boundary-wall columns 20 x 30, 4 ø14 (p.14)",
+   "family": "BOUNDARY_WALL",
+   "finding": "column height and starters into the G.B not printed (G-T359-6)",
+   "group": "BOUNDARY_COLUMN",
+   "id": "BW-COLUMN",
+   "need_basis": "",
+   "splice_need": "NOT_ESTABLISHED"
+  },
+  {
+   "authorities": [],
+   "bar_marks": "",
+   "candidate_lines": "no own line in the candidate (LINE_BINDING_T366.json)",
+   "checked_not_naming": [
+    "DXF",
+    "P8",
+    "P9",
+    "P10",
+    "P1112",
+    "P13",
+    "P14",
+    "P15"
+   ],
+   "description": "boundary-wall pad 130 x 80 x 30, 7 ø12 and 4 ø12 (B.W) (p.14)",
+   "family": "BOUNDARY_WALL",
+   "finding": "",
+   "group": "BOUNDARY_PAD",
+   "id": "BW-PAD",
+   "need_basis": "pad 1.30 m: bars drawn whole",
+   "splice_need": "NOT_REQUIRED"
+  }
+ ],
+ "project": "development villa (Alsenan sample)",
+ "required_populations": [
+  "FTG-BOTTOM",
+  "FTG-TOP",
+  "FTG-BOXED",
+  "NECK-STARTER-SHALLOW",
+  "NECK-STARTER-DEEP",
+  "COL-MAIN",
+  "COL-LINKS",
+  "COL-TWIST-EXTRA",
+  "GB-MAIN",
+  "GB-SIDE",
+  "GB-STIRRUP",
+  "STRAP-MAIN",
+  "BEAM-SIMPLE-MAIN",
+  "BEAM-SIDE",
+  "BEAM-LINKS",
+  "CB-BOTTOM",
+  "CB-TOP-THROUGH",
+  "CB-SUPPORT-TOP",
+  "PLANTED-COL-BEAM",
+  "SLAB-BOTTOM-MAIN",
+  "SLAB-TOP-SUPPORT",
+  "SLAB-TEMPERATURE",
+  "SLAB-EXTRA",
+  "GROUND-SLAB-MESH",
+  "BW-GB",
+  "BW-COLUMN",
+  "BW-PAD"
+ ],
+ "schema": "LAP_AUTHORITY_CENSUS_INPUT_V1",
+ "sources": {
+  "N9": {
+   "category": "STARTER_BARS",
+   "kind": "NOTE",
+   "names": [
+    "STARTER_SHALLOW",
+    "STARTER_DEEP"
+   ],
+   "position": "right column, note 9 (Arabic; PDF only, no DXF text)",
+   "sheet": "ST p.8 general notes",
+   "typical": false,
+   "value_d": {
+    "COMPRESSION": 40,
+    "TENSION": 70
+   },
+   "value_kind": "MINIMUM",
+   "wording": "tie / development length of the STARTER bars (اشاير) not less than 70 x bar dia in tension zones, 40 x bar dia in compression zones",
+   "zones": {
+    "COMPRESSION": 40,
+    "TENSION": 70
+   }
+  },
+  "P13D40": {
+   "category": "STARTER_BARS",
+   "kind": "DETAIL",
+   "names": [
+    "STARTER_SHALLOW"
+   ],
+   "position": "TYP. DETAIL OF ISOLATED FOOTING (right; level difference upper G.B to footing below 2.5 m): vertical dimension '40 ø' from the footing top up the column, where the drawn starter ends with its crank (PDF only)",
+   "sheet": "ST p.13 DETAILS (1)",
+   "typical": true,
+   "value_d": {
+    "ANY": 40
+   },
+   "value_kind": "EXACT",
+   "wording": "starter projection above the footing top dimensioned 40 ø (typical detail)",
+   "zones": {
+    "ANY": 40
+   }
+  },
+  "P15N1": {
+   "category": "LAP_SPLICE",
+   "kind": "NOTE",
+   "names": [
+    "SLAB_TEMPERATURE"
+   ],
+   "position": "NOTE 1 beside the TEMPERATURE REINFORCEMENT SCHEDULE (PDF only)",
+   "sheet": "ST p.15 DETAILS (3)",
+   "typical": false,
+   "value_d": {
+    "ANY": 40
+   },
+   "value_kind": "EXACT",
+   "wording": "LAP LENGTH FOR ALL TEMPERATURE BARS SHALL BE 40 x DIA",
+   "zones": {
+    "ANY": 40
+   }
+  }
+ },
+ "sources_read": {
+  "ST7757 dxf.dxf": "9f9d1179",
+  "ST7757.pdf": "74da1523"
+ },
+ "stock": {
+  "owner_source": "rules/methods/URBAN_METHOD_REGISTER_V3.json URBAN-REBAR-NET-AND-PROCUREMENT@v1 (owner decision OD-V3-3, research/external_engine_lab/alsenan_v3_owner_decisions.json); same 12 m in OWNER_RULE_REBAR_2026-10-24 s.2",
+  "searched": "no stock / bar length printed on any sheet: all 1,934 DXF TEXT / MTEXT / ATTRIB entities (model space + blocks) searched for lap / splice / overlap / dia / anchor / develop / stock / length and Arabic تشريك / رباط / اشاير / طول / وصل / تراكب: one hit, 1BA9 '* L=LENGTH OF COLUMN.' (p.9 link-band notation, not a lap); p.8 notes 1-24; p.13 - p.16 by eye",
+  "value_m": 12.0
+ },
+ "worked_runs": [
+  {
+   "L": "23.8",
+   "S": "12",
+   "d_mm": 12,
+   "lap_d": 40
+  },
+  {
+   "L": "35",
+   "S": "12",
+   "d_mm": 12,
+   "lap_d": 40
+  },
+  {
+   "L": "23.8",
+   "S": "12",
+   "d_mm": 16,
+   "lap_d": 40
+  },
+  {
+   "L": "35",
+   "S": "12",
+   "d_mm": 16,
+   "lap_d": 40
+  }
+ ]
+}
