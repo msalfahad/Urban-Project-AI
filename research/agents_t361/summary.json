@@ -1,0 +1,74 @@
+{
+ "task": "T-361",
+ "project": "development villa (Alsenan); not an accuracy claim",
+ "gates_pcs_drawing_confirmed": 1,
+ "gate_openings_leaf_held": [
+  "G-01"
+ ],
+ "gate_opening_widths_m": {
+  "G-01": 2.5,
+  "G-02": 1.0
+ },
+ "boundary_lines_m": {
+  "F-STREET": {
+   "drawn": 8.3,
+   "solid": 5.8,
+   "gates": 2.5
+  },
+  "F-NORTH": {
+   "drawn": 31.37,
+   "solid": 31.37,
+   "gates": 0
+  },
+  "F-LOWER-1.20": {
+   "drawn": 1.2,
+   "solid": 1.2,
+   "gates": 0
+  },
+  "F-SEA": {
+   "drawn": 7.1,
+   "solid": 6.1,
+   "gates": 1.0
+  }
+ },
+ "open_edges": 13,
+ "open_edges_none_drawn": [
+  "E-11 ST-03 entrance stair, north (court) side",
+  "E-12 ST-03 top strip at +1.00 (north end)"
+ ],
+ "open_edges_none_drawn_plan_m": 1.4,
+ "open_edges_unknown": [
+  "E-07 ST-02 outer side",
+  "E-10 ST-01b lobby flight D1, second side"
+ ],
+ "posts_drawn": {
+  "PG-01": 6,
+  "PG-02": 4
+ },
+ "glass_panels": "NOT_DRAWN",
+ "fence_infill_lm": null,
+ "fence_infill_status": "HELD (length not printed)",
+ "cross_check_shared_ids": 0,
+ "freelancer": [
+  {
+   "his_row": "blockwork workbook, 'fence' 1 x 37.20 x 2.00 = 74.40 m2",
+   "ours": "north 31.37 + street solid 5.80 = 37.17 (+ lower 1.20 + sea 7.10 HELD)",
+   "verdict": "AGREE on the scope he counts (37.20 vs 37.17, +0.03 m); he has no gate, no infill and no sea element: RULE_DIFFERENCE (scope)"
+  },
+  {
+   "his_row": "aluminium workbook GF 'external door' 4 x 1.00 x 2.40 = 9.60 m2",
+   "ours": "sea gate G-02 1.00 (drawn leaf 0.90 x 2.10, head 2.20)",
+   "verdict": "UNRESOLVED: whether one of his four 1.00 doors is the sea gate is not shown by his sheet (no location column); his 2.40 is not the drawn 2.20 head"
+  },
+  {
+   "his_row": "none",
+   "ours": "street gate opening G-01 2.50, leaf HELD",
+   "verdict": "HAND_FOUND (no row); neither side has a leaf quantity"
+  },
+  {
+   "his_row": "none",
+   "ours": "glass panels NOT DRAWN",
+   "verdict": "AGREE (nothing to count)"
+  }
+ ]
+}
