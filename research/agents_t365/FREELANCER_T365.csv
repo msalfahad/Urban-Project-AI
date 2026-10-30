@@ -1,0 +1,2 @@
+file,row,item,physical_m,payable_m,class,verdict_proposal
+PLS,26,"external plaster: corners, grooves and rounded arrises (m.l)",1297.35,648.675,PLASTER_ACCESSORY_NOT_B13_05,"RULE_DIFFERENCE (scope): a plaster-accessory row (corners, grooves, arrises) of the external plaster trade, not a movement joint; B13-05 double count 0; 1,297.35 m physical = 648.675 m at the doubled rate (ERS s.3), never 648.675 m of joint"

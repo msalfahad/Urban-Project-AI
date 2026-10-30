@@ -1,0 +1,32 @@
+sheet,read,joints_printed,found
+ST p.1,110 dpi + DXF S-NOTE 7D / 7E / B8,0,"column and axis plan; 3 bullet notes (slab thickness, prop striking, neighbour-side ground beams on brick): no joint"
+ST p.2,30 dpi + DXF foundation plan,0,"foundation plan, no note block; no joint line, no twin footing"
+ST p.3,30 dpi + DXF,0,ground-beam / ground-slab plan; slab on grade drawn without a joint line or saw-cut
+ST p.4,110 dpi + DXF D5 .. EC,0,"GF roof slab: one continuous frame 31.37 x 15.00 (annex tied to the house by continuous beams (CB6, CB7)), 2 notes (parapet check, top bars over beams): no joint"
+ST p.5,30 dpi + DXF,0,"1F roof slab, same notes: no joint"
+ST p.6,30 dpi + DXF,0,"2F roof slab, same notes: no joint"
+ST p.7,200 dpi quadrants,0,"DETAIL OF SWIMMING POOL (5 cm screed / 5 cm insulation membrane / 10 cm plain concrete) and DETAIL OF DOME: no construction joint, water stop or movement joint"
+ST p.8,"170 dpi, notes 1-24 read",0,"24 structural notes (guidance status, coordination, dimensions, openings, ready-mix, fc', cubes, steel grade, development length, founding soil, beam widening, founding level, sulphate cement, dewatering, shoring, plain mix, props, slab 16 cm, lift-shaft tie beams, walls with columns, side bars, cover, prop striking, services coordination): none names a joint"
+ST p.9,30 dpi + DXF S-TEXT.SCH,0,"schedules of footings and columns, bearing table, boxed notes 1-4: no joint"
+ST p.10,30 dpi + DXF,0,schedule of simple beams: no joint
+ST p.11,30 dpi + DXF,0,continuous beams (2 span): no joint
+ST p.12,30 dpi + DXF,0,continuous beams (3 span): no joint
+ST p.13,200 dpi quadrants,0,"typical isolated footings (liquid waterproofing two layers, insulation membrane, 5 cm screed), lintel detail and schedule, ground-beam sections: no joint"
+ST p.14,200 dpi quadrants,0,"lift pit (protection board, waterproofing membrane, 'Slab on grade.' abutting the pit wall with no joint drawn), TYPICAL BOUNDARY WALL plan + section A-A (20 x 30 columns, ground beam 20 x 40, brick wall, 15 cm plain concrete at N.G. level drawn against the wall, break line only), parapet details: no joint"
+ST p.15,200 dpi quadrants,0,"twisted columns, beam in casement, slab-on-beams detail, temperature reinforcement schedule + notes 1-3 (lap 40 d for temperature bars): no joint"
+ST p.16,110 dpi,0,"stair beam, stair sections, opening in beam, ribs: no joint"
+ARCH p.1,see found,0,area plans GF / 1F (T-091 whole page; this run: DXF census)
+ARCH p.2,see found,0,2F area plan (T-091; DXF census)
+ARCH p.3,see found,0,"GF plan (T-091 single sheet; DXF census): court, side walk, pool deck drawn without a joint line; kitchen ANGLE hatch and wet-room NET hatches are patterns"
+ARCH p.4,see found,0,1F plan (T-091; DXF census)
+ARCH p.5,see found,0,2F plan (T-091; DXF census): roofs with LINE hatches (patterns)
+ARCH p.6,see found,0,SE elevation (T-091; DXF census)
+ARCH p.7,see found,0,SW elevation (T-091; DXF census)
+ARCH p.8,see found,0,NW elevation (T-091; DXF census)
+ARCH p.9,see found,0,NE elevation (T-091; DXF census)
+ARCH p.10,see found,0,"SECTION A-A, read this run at 60 dpi (Drive single sheet 10): monolithic section, no joint"
+ARCH p.11,see found,0,"SECTION B-B, read this run at 60 dpi: annex and house one structure, no joint"
+ARCH p.12,see found,0,"FENCE PLAN / ELEVATION / SECTION, read this run at 200 dpi: street fence runs 580 / 250 / 81 / 195 / 115 / 195 / 83 cm, no joint mark"
+SAN p.1,70 dpi this run + T-091 150 dpi,0,GF drainage plan; legend has no joint symbol
+SAN p.2,70 dpi this run + T-091 150 dpi,0,drainage plan; legend has no joint symbol; roof slope arrows only
+SAN p.3,70 dpi this run + T-091 150 dpi,0,drainage plan; legend has no joint symbol; roof slope arrows only
