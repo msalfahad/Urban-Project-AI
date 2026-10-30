@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Lead 2026-10-30 12:40: one new owner-package question (ERS s.2.7, section 6 format): Q-78 (cement : sand mix for the black block-joint mortar; mortar m3 measured, only bags / sand held; not urgent).
 Worker 2 2026-10-20 14:45: one new no-assumptions question from the block-type reading (T-107): Q-65 (roof parapets and the street-side fence: white or black block). Open now: 2 (Q-64, Q-65).
 Verifier 2026-10-20 13:25: one new no-assumptions question from the facade verdicts (T-016b / T-014): Q-64 (a 0.08 x 0.05 m notch where the pool glazing frame meets a column: facade run round it or straight across; 0.10 m). Open now: 1.
 Verifier 2026-10-20 11:35: one new no-assumptions question from the blockwork hand table (T-103): Q-63 (a 7.00 m sea-side wall band on the ground-floor plan that the fence drawing does not show: block fence or not). Open now: 13 (Q-50 to Q-63 without Q-60, which the owner answered at 10:45 and the Lead still has to move to Answered).
@@ -318,6 +319,26 @@ on this answer.
 
 OWNER ANSWER (main chat 2026-10-29 21:22, owner's words): "We can calculate it but keep it seperate. add it to blocks section, شرمات + linear meter mesh strip on top of each 3 blocks. So each 3 blocks there will be a linear meter mesh strip for the whole building. calculate it, but this is not always used. There will always be pricing depending on the quality. sharmat او شرمات: Is also attached on every 3 blocks One side on Column, ither side on Block. So calculate how many columns has walls next to it or attached to it, they need each 3 blocks 1 sharma." (with two site photos: expanded-metal mesh strip laid in the bed joint along the wall; a ribbed metal tie fixed to the column face and laid into the block bed joint)
 CLAUDE'S READING (main chat, to be confirmed by the owner only if a worker finds it ambiguous): (1) two SEPARATE, OPTIONAL masonry items in the BLOCKS section, measured and shown apart from the block quantity because they are not always used and are priced by quality: (a) BED-JOINT MESH STRIP, m.l: one strip along the full wall length on every third block course, every block wall of the building; (b) SHARMAT (column-to-wall tie), pcs: one tie per third block course at every junction where a block wall abuts a column (one end fixed to the column, the other in the block bed joint), counted per wall end at each column. (2) The joint mesh over block-to-concrete joints at the plaster stage asked here (B9-03) is kept as a separate calculated item as well ("keep it separate"); its band (B or C) was not chosen, so both quantities stay shown, neither released. LEAD: move to ANSWERED; course height from the block size already answered (Q-75) and the drawn wall heights; nothing invented.
+
+### Q-78 Block-joint mortar of black (cement) block walls: which cement : sand mix does the BOQ count cement bags and sand with? (lead 2026-10-30 12:40, today's owner package; from T-367 MERGED 98ced66c, Checker 09:58; ERS 2.7: a material genuinely unspecified by the drawings and an Urban estimating method)
+
+ISSUE: the mortar volume of the black block walls is measured, but its cement and sand cannot be counted: no mix is set.
+EVIDENCE: no drawing note or specification prints a masonry mortar mix (31 sheets and both DXF text lists searched in
+T-367 / T-365). Your answered rules give a mix only for the tile / marble bed 1:4 (Q-45: about 8 bags of 50 kg and
+1.1 m3 loose sand per m3) and for the stair marble bed 1:3 (Q-53: about 9.6 bags and 1.0 m3 sand per m3); the engine
+refuses to borrow either for masonry.
+INVESTIGATION: mortar volume follows your 40 x 20 module rule (Q-75) and 10 mm joint (29 Oct): 3.870113 m3 installed
+(bed 2.623806 + head 1.246308) on the 24 black walls / pieces now in the candidate, Checker 0.000 %; joints against
+column faces and under beams about 0.2 .. 0.5 m3 more, held by name; about half the black walls are still held, so the
+volume will grow with them.
+ALTERNATIVES the record leaves open: (A) 1:4, priced with your Q-45 figures: on today's 3.87 m3 about 31 bags and
+4.3 m3 sand; (B) 1:3, with your Q-53 figures: about 37 bags and 3.9 m3 sand; (C) another block-laying mix you use, with
+its bags and sand per m3.
+QUANTITY IMPACT: cement bags and sand on the mortar line only; no m2, m3 or other trade moves.
+RECOMMENDATION: (A) if that is what Urban buys for block laying: it is the usual general-purpose masonry mix and keeps
+one procurement basis with your Q-45 figures. This is your estimating convention; the team will not choose it.
+WHAT STAYS HELD: cement / sand / bags of the mortar line (the mortar m3 is not held). NEXT ACTION: your answer is
+written here as 'Answer:'; the mortar integration (T-372, queued last in the integration lane) uses it. Not urgent.
 
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 

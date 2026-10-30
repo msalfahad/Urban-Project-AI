@@ -46,6 +46,26 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-30 12:40 (from T-318 / T-358 / T-362 / T-365 / T-367 / T-360 r2 MERGED; T-359 / T-368 r1 verdicts; new T-369 .. T-372)
+
+- GF-14 OPEN SIDE UNDER A HIDDEN OVERHEAD ELEMENT (Checker D-T368-1, 2026-10-30 12:02; architectural DXF layer 2
+  linetype HIDDEN, pair 2DB / 2DC 0.150 apart across the 1.256 m between lift face 222 and wall end BC; no 1F wall
+  above): kind OPEN (opening under a head), NOT a full-height open side. Element still to identify (bulkhead / head
+  wall or beam) from ST (GF roof beam layout / schedule at that position) or an arch section. Trades touched: WALL TILE
+  (two edges + head arris, T-368 r2), wall-tile faces above the head on the lobby face (T-312 row, carried by T-327),
+  CEILINGS (soffit of the head), BLOCKWORK or CONCRETE (owner trade decided only when the element is identified).
+  Until then every affected quantity HELD by name, never 0.
+- MASONRY JOINT MORTAR (T-367): owner trade BLOCKWORK, one component per MAS.BLOCK part line (bed + head joints
+  3.870113 m3 installed on 24 black walls / pieces); PERIMETER JOINTS at column faces and soffits (F-T367-1) a separate
+  component of the same element, HELD by name per junction; white AAC adhesive a supplier item (HELD). Integration T-372.
+- SLAB BAR ENDS (T-318, V3.0.27): owner trade REINFORCEMENT; per end class: continuous ends NOT_APPLICABLE_WITH_EVIDENCE
+  (bottom bars cross in the mesh line, face to face, T-179: no double count), edge-beam ends a drawn straight part line
+  (w - 0.040), up-turn / hook-down legs BLANK on the parent (undimensioned on ST p.15), owner option B.
+- SHOWER ZONE (T-369, new): owner trade WATERPROOFING for tanking above the 0.20 m upturn; the shower floor membrane
+  stays inside the B8-01 wet-room membrane line unless a separate layer is printed (one face, one line).
+- SANITARY FIXTURE (T-370, new): owner trade SANITARY (count only, no supply type); its room's wet / dry class is read,
+  never changed, by the fixture register.
+
 ### Lead 2026-10-30 04:25 (from T-347 / T-356 / T-355 r2 / T-343 r2 / T-349 / T-357 MERGED; new T-358 .. T-364)
 
 - BURIED STRUCTURE (T-347 MERGED 509f90c2): the 00:25 ruling stands, now Checker-verified (256 components, double count

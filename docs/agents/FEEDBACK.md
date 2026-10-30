@@ -42,6 +42,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-30 12:40 (lead run; covers 08:25 - 12:40)
+
+- T-318 slab bar ends into the candidate (Gate B): WORKED first pass (11:35; Checker re-derived all 196 changed + 138 added lines by his own script from the merged ledgers, 0 mismatches; CANDIDATE OF RECORD V3.0.27). Decision: T-326 TODO first in lane I; F-T318-1 (legs bounded by D less note-22 covers) goes to T-371 as a proposal only.
+- T-358 excavation support / dewatering: WORKED (Gate A 09:00). Decision: T-350 reads it (scope items, quantities None).
+- T-362 white AAC mesh strip / lintel bearings: WORKED (Gate A 09:00; own 4.0786 m.l). Decision: T-363 integrates it (already queued).
+- T-367 masonry mortar: PARTIAL (Gate A 09:58, line 1/2 verified: F-T367-1 perimeter joints +5.5 .. +13.4 % held by name; cement / sand HELD). Decision: new T-372 integration QUEUED last in lane I with F-T367-1 held per junction; the masonry mix goes to the owner package (ERS s.2.7: material genuinely unspecified, Urban method).
+- T-365 movement joints / sealants: WORKED (Gate A 09:58, NO_QUANTITY_BOTH). Decision: none; no line.
+- T-360 facade cladding: FAILED narrow at r1 (09:02, D-T360-1 single outlines read as double), WORKED at r2 (11:40: D-T360-1 did not reproduce on the Checker's own handle check; face 1.5149 m2 HELD). Decision: none.
+- T-359 bar-detail census: FAILED narrow (12:04, D-T359-1: eight exploded bar-shape labels on the p.7 pool detail uncited). Decision: TODO r2 first in lane S with the Checker's four NEEDS.
+- T-368 exposed wall-tile edges: FAILED narrow (12:02, D-T368-1: 7.30 m.l at GF-14 given the full band under a HIDDEN overhead pair). Decision: TODO r2 first in lane A; the T-312 GF-14 open-side finding written into T-327 as an acceptance add.
+- Recurring: (1) two r1 rejections today share one cause: a label / linetype inside the detail's extent not read (shape row; HIDDEN linetype): lessons rows proposed in the Lead report; (2) Drive raw binaries: Worker 1 copied a raw download straight into .work/private after the wrapper mangled it (still private, sha recorded): everyone uses base64-encode-then-decode; wrapper fix is NEEDS FIXING.
+
 ## 2026-10-30 08:25 (lead run; covers 04:25 - 08:25)
 
 - T-279 blockwork walls into the candidate (Gate B): WORKED first pass (07:50; Checker's own run V3.0.25 3064078a / V3.0.26 8959989c, 3,697 lines byte-identical, every DC / OA wall re-measured from the drawings, largest line deviation 0.03 %; MAS.BLOCK 0 -> 579.1011 m2). Decision: T-318 first in lane I; F-T279-1 (GF-W28 open end 0.063 m unnamed) -> T-363 ACCEPTANCE ADDED.
@@ -242,26 +254,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-289 | (READY 07:10, not classified) | basis ledger, residual 0.000 m3 on all four; FOUND 3 exterior runs in interior-typed lines: main-house exterior GB 8.1642 -> 15.9600 m3 (+95.5 %); 2F columns 8 line ids vs the Checker's 14 | Gate A FIRST 08:51 with 5 Lead challenges; T-254 acceptance extended |
 | T-275 r2, T-286, T-170 | (READY / set READY / complete, not classified) | guard on every census read (+4 tests); G4 settled from the drawing (+1.100 m2 WET floor); excavation ledger, every volume HELD blank | Gate A in order T-275 r2, T-286; T-170 next free slot |
 | Worker 1 07:20, Worker 2 07:41 | FAILED (planning, Lead's) | both runs ended 'no claimable TODO row' (0 TODO, READY 5) | Lead fault: the queue held no row outside lane I; four integration-dependency rows added (T-290 .. T-293), each claimable while READY > 3 |
-
-## 2026-10-25 06:15 (lead run; covers 04:15 - 06:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-288 | WORKED | MERGED 643b310b (Verifier 05:35, own GF-W16 re-clip 2.9500 m, register v4 449.6007 - 7.9131 d) | T-279 unblocked on research; waits only on the lane I chain; lessons row CLOSED |
-| T-283 | WORKED | MERGED 6e141df6 (batched with T-281; one owner per piece under the round stair) | T-284 unblocked on research; lane I after T-279 |
-| T-281 | WORKED | MERGED 40518c58 (own MS1-U 3.720 / 4.2555 m2, MS2-LD-W 1.495; formwork = finished soffit on 4 flights) | stair soffit line HELD BLANK in T-284 until verified whole |
-| T-257 | WORKED | MERGED 6a8eea78 (re-pointed T-210 tests judged not weakened: same rules, same 24-module base) | none; 6 undeclarable modules stay red with fix proposals |
-| T-275 | PARTIAL | REJECTED narrow 05:55: census side files outside guard_inputs; sealed-sha probe exit 0 | rework r2 (worker 2 after T-286, or worker 3 06:59 while T-245 is unmerged); lessons row OPEN |
-| T-245 | (READY 06:13, not classified) | V3.0.16, json-hash cause named (local file name in source.documents[].file), export one command; full suite NOT run by the worker | Gate B first in the 06:49 Checker run with 6 Lead challenges |
-| T-287, T-280 | (READY 05:59, not classified) | G1 settled from drawings (1.4300 m3); 26 cores -66.548 kg as a lower bound, 10 HELD | Gate A after T-245; T-280 within 2 Checker runs |
-
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-270 r2 WP foundation into V3.0.15 (Gate B) | WORKED | MERGED 04d34378 (Verifier 03:46): 3,680 lines byte-identical, 19 added (7 VERIFIED, 1 DC, 11 HELD BLANK); BURIED_LIQUID 45.4682 m2 = own sum of the 32 T-276 DC faces, 4 more faces own -0.004 %; T-263 35.404 refused by adverse test; full suite NEW 0 | candidate of record V3.0.15 (not released); lessons row closed; json sha not reproducible run to run -> T-245 acceptance (canonical hash binding), new lessons row OPEN |
-| T-278 floor-area scoring key | WORKED | MERGED 6366b754 (Verifier 01:28): own re-key 380.3641 m2 on 40 lines, -7.13 % vs freelancer 409.58; landing owned once | scoreboard runs on T001C; landing marble line gap -> T-266 acceptance |
-| T-285 blockwork register v3 | WORKED on scope, PARTIAL as T-279 input | MERGED e418c5e0 (Verifier 01:41): established 449.5934 m2; Verifier 02:00: 7.913 m of GF wall under six sunken panels at the normal soffit (overstated 7.913 d m2, D-41) | NEW T-288 (register v4, CLAIMED 03:41); T-279 after T-288 |
-| T-282 r3 formwork end faces | WORKED | r2 REJECTED narrow 01:31 (1AA not a free end); r3 MERGED aa3a7bb4 (Verifier 04:15): own five END contacts (7FE, lift ring 7C2) = 0.000, 10B+7D1#1 A 1.300 m agree, full suite NEW 0; research only, no BOQ line moved | closed; formwork stair soffit faces to be reconciled with T-281 at its check |
-| T-283 ceilings r3 | handed in (READY 02:50) | decor 363.173 -> 361.229 m2 (-10.40 % vs released 403.163); 1.944 m2 hidden flight moved to stair zone HELD; bulkheads 27.935 m2 | batched with T-281 at Gate A; Lead challenge: one owner per piece vs T-281's 1.808 / 0.777 / 0.063 m2 |
-| T-257 K1 boundary declarations | handed in (READY 03:35) | 18 modules declared by_design from T-210 records; 6 undeclarable stay red with fix proposals; 2 real-tree T-210 tests re-pointed | Gate A; Lead challenge: re-pointed tests must assert the same property over the same set, else weakened |
-| T-281 stair soffits | complete, held back (READY limit) | ST-01 17.070 plan / 17.198 .. 17.243 true, MS1-L CONFLICT 3.215 .. 3.935; ST-02 8.479 plan, curved true HELD; GF stair zone 9.854 = 9.014 + 0.777 + 0.063 | hand-in authorised to the Checker when READY < 3; cross-check vs formwork r3 stair soffit faces |

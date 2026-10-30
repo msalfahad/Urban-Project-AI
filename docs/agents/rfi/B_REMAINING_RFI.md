@@ -41,10 +41,12 @@ adds them in its citation run).
   the owner's option B (2026-10-29 21:22); this asks only what is drawn nowhere.
 
 ### RFI-B-S10 Slab top bars over supports, bar-less panels and the tank slab
-- Drawing: ST p.4 / p.5 / p.6 slab plans, note 2 ("one third of the span"); ST p.15 typical slab detail (0.30 max(L1, L2) /
-  0.25 L1); ST p.7 tank detail (top and bottom mesh).
+- Drawing: ST p.4 / p.5 / p.6 slab plans, note 2 ("one third of the span", printed in the notes box of p.4, p.5 AND
+  p.6); ST p.15 TYP. SLAB ON BEAMS DETAIL ('.30 L1 OR .30 L2 WHICHEVER LARGER' / '.25 L1'); the tank-slab reinforcement on
+  ST p.6 (2F roof slab, 'WATER TANK PLACE': '7ø14/m (T&B)' and '6ø12/m (T&B)', slab T18). [Lead 2026-10-30 12:40:
+  corrected per the Checker's citation verdict: there is no p.7 tank detail.]
 - Conflict / missing: two printed rules for the top-bar extent; the GF-126 zone is not delimited; 13 panels print no
-  bars; note 2 vs the tank's top-and-bottom mesh.
+  bars; note 2 vs the tank slab's top-and-bottom mesh, both on ST p.6.
 - Requested: which rule governs the top-bar extent; the bars of each unprinted panel (or confirmation that none are
   required); the tank-slab reinforcement.
 - Internal impact: top over supports 752.73 .. 1,931.52 kg; GF-126 7.89 .. 19.55 kg; 13 panels HELD; tank 28.66 .. 70.61 kg.
@@ -56,10 +58,15 @@ adds them in its citation run).
 - Requested: the floor and wall reinforcement of the pool as built flat at 1.15 m.
 - Internal impact: pool steel R1 888.90 .. 927.54 / R2 615.34 .. 639.45 kg. (Pool access is asked in A, RFI-A02.)
 
-### RFI-B-S12 Three planted columns: bars and links
-- Drawing: ST p.15 planted-column details (no schedule row, no bar count).
-- Requested: the bar count, size and links of each planted column.
-- Internal impact: column steel unquantified (the frozen route's 172.56 kg comes from a duplicated row and is not used).
+### RFI-B-S12 Three planted columns: links and bar ends
+- Drawing: the planted-column tags on the slab plans print the main bars: ST p.4 'P.C 20x70 / 10ø16' (on B27) and
+  'P.C 20x50 / 8ø16' (on B26); ST p.5 'P.C 20x50 / 8ø16' (on B19). ST p.15 BEAM CARRYING PLANTED COL. DETAIL draws the
+  column bars cranked into the beam (a 100 cm dimension) and prints no link size or spacing.
+- Missing information: the links (size, spacing) of the three planted columns and the end / lap of their main bars.
+- Requested: the link size and spacing, and the bar ends / laps, of each of the three planted columns.
+- Internal impact: column main bars printed (merged T-220); column steel HELD on the links and bar lengths only (the
+  frozen route's 172.56 kg comes from a duplicated row and is not used). [Lead 2026-10-30 12:40: rewritten per the
+  Checker's verdict WRONG (stale since T-220): 'no schedule row, no bar count' deleted.]
 
 ### RFI-B-S19 Beam side bars "2ø12/30cm"
 - Drawing: ST p.10 Schedule of Simple Beams remarks: 2ø12/30cm (B7 .. B15, B17, B18, B20 .. B25, B28, B29), 2ø14/20cm
@@ -72,7 +79,8 @@ adds them in its citation run).
 - Internal impact: side bars HELD, at least 0.362 t on released members.
 
 ### RFI-B-S20 Nested links
-- Drawing: ST p.10 link symbol with two nested links on B17, B19 .. B26.
+- Drawing: ST p.10 link symbol with two nested links on B17, B19 .. B26 (B18 none); the SB1 and SB3 rows also print a
+  two-link symbol and the SB2 row a three-link symbol, no size. [Lead 2026-10-30 12:40: addition per the Checker.]
 - Missing information: the inner link's size, legs and position.
 - Requested: the inner-link dimensions and leg arrangement per beam.
 - Internal impact: links HELD 2.035 .. 2.199 t (the active count takes one perimeter link only).
@@ -87,15 +95,20 @@ adds them in its citation run).
   counted meanwhile (owner option B, 2026-10-29).
 
 ### RFI-B-S22 Stair beam crank and planted-column extra bars
-- Drawing: ST p.16 TYPICAL DETAIL OF STAIR BEAM (cranked profile, no dimensions) for B3 "(With Stair)" on ST p.4 / p.5;
-  ST p.15 BEAM CARRYING PLANTED COL. DETAIL (4 ø16 extra, length not dimensioned) for B26 / B27.
-- Requested: the crank dimensions; the length of the extra bars.
+- Drawing: ST p.16 TYPICAL DETAIL OF STAIR BEAM (cranked profile, 'AS PER SCH.', no crank dimension) for B3 "(With
+  Stair)" on ST p.4 (twice) / p.5 (once); ST p.15 BEAM CARRYING PLANTED COL. DETAIL, label '4ø16', with a 'DEPTH'
+  dimension drawn beyond the column face on each side, governing THREE beams: B26 and B27 (ST p.4) and B19 (ST p.5).
+- Requested: the crank dimensions; confirmation that the 4ø16 length is the column width + 2 x the beam depth (as drawn)
+  and the end anchorage of those bars. [Lead 2026-10-30 12:40: corrected per the Checker's verdict: third beam B19; the
+  extent IS drawn symbolically; 'EXTRA' is printed only on the twisted-column details.]
 - Internal impact: stair beams HELD_DEFINED 20.25 kg each (plan-length lower bound); planted-column extra unquantified.
 
 ## Structural designer: blockwork, slabs and restraint
 
 ### RFI-B-S13 Sunken slab panels: depth of the drop
-- Drawing: ST p.5 / p.6 slab plans mark the sunken panels (1F floor 19.3964 m2 in 5 panels; 2F 5.400 m2).
+- Drawing: ST p.4 (GF ROOF SLAB = 1F floor: 5 hatched 'Sunken slab' panels, 19.3964 m2) and ST p.5 (1F ROOF SLAB = 2F
+  floor: 1 panel between the two B2 west of B3 (With Stair), 5.400 m2); ST p.6 draws none. [Lead 2026-10-30 12:40:
+  sheets corrected per the Checker's verdict, 'p.5 / p.6' -> 'p.4 / p.5'.]
 - Missing information: the drop is not printed.
 - Requested: the drop of each panel, and whether the tops of the two shared beams drop with the panels.
 - Internal impact: slab concrete UNAFFECTED (60.2804 m3 for any drop); HELD per metre of drop: beam tops 3.006 .. 3.036 m3,
@@ -134,11 +147,14 @@ adds them in its citation run).
 ## Structural designer: document control
 
 ### RFI-B-S18 Issue and revision of the structural set
-- Drawing: ST p.1 .. p.7 dated May 06, 2025; p.9, p.10, p.13 .. p.16 dated May 06, 2026; p.11 / p.12 without a title
-  block.
-- Missing information: which date is the issue; whether the beam schedules p.11 / p.12 belong to the same issue; the
-  revision of each sheet.
-- Requested: the issue date and revision per sheet (a document-control confirmation, not a design question).
+- Drawing: title-block DATE box: ST p.1 .. p.7 May 06, 2025; p.9, p.10, p.13 .. p.16 May 06, 2026; p.11 / p.12 without a
+  title block (schedule frames 'Ref. S-2' / 'S-3' only); p.8 (RECOMMENDATIONS) has a header block without a date field.
+  Every page carries the plot stamp '... May 06, 2026 - 12:04pm', p.1 .. p.7 from 'ST7757.dwg' and p.8 .. p.16 from
+  'T7757.dwg' (two source drawings). [Lead 2026-10-30 12:40: corrected per the Checker's verdict.]
+- Missing information: which date is the issue; whether p.8 and the beam schedules p.11 / p.12 belong to the same issue;
+  the revision of each sheet; which of the two source drawings is the issue of record.
+- Requested: the issue date and revision per sheet, and which source drawing (ST7757 / T7757) is of record (a
+  document-control confirmation, not a design question).
 - Internal impact: no quantity held; it defines the revision set every BOQ line is bound to (stated UNCONFIRMED in the
   export until answered).
 
@@ -156,8 +172,10 @@ adds them in its citation run).
   tile lines; wet-room ceiling board on 82.51 m2.
 
 ### RFI-B-A02 Door and window schedule
-- Drawing: architectural elevations / sections (sections A-A sheet 10, B-B sheet 11) print sill and head for 9 openings only (W01, W03, W13, W14, W15,
-  W17, W18, W26, D01); one printed door size (main entrance 2.00 x 2.50).
+- Drawing: the architectural elevations (sheets 06 .. 09) print sill and head for 9 openings only (W01, W03, W13, W14,
+  W15, W17, W18, W26, D01); sections A-A (sheet 10) and B-B (sheet 11) draw the openings only, with no sill, head or tag;
+  one printed door size (main entrance 2.00 wide, double leaf, on sheet 03; its 2.50 height per the merged opening
+  census, sheet to be re-confirmed). [Lead 2026-10-30 12:40: corrected per the Checker's verdict.]
 - Missing information: sill, head and arch rise of 20 windows and 3 arches; door heights and types.
 - Requested: a door and window schedule.
 - Internal impact: plaster / paint nets 104.1 m2 of range; window m2 HELD; door heights ASSUMED — OWNER-APPROVED 2.20 m
@@ -170,8 +188,9 @@ adds them in its citation run).
 - Internal impact: main door HELD (5.000 m2 candidate); SX-01 HELD.
 
 ### RFI-B-A04 Window heads above the beam soffit: W03 and W17
-- Drawing: architectural elevations / sections (W03 head +5.30 under beam B8, whose soffit is at most +4.75 on ST p.4;
-  W17 crown +9.20 against CB12 on ST p.5).
+- Drawing: architectural elevations (sheets 06 .. 09: W03 head +5.30, W17 crown +9.20; the exact sheet to be named
+  before sending, Checker verdict PARTIAL) against beam B8 20 x 75 on ST p.4 (GF roof slab top +5.50, so a soffit at most
+  +4.75) and CB12 25 x 75 on ST p.5.
 - Conflict: the opening head is above the beam soffit drawn on the same line.
 - Requested: a lower head, or the beam moved / upturned.
 - Internal impact: W03 and W17 CONFLICT (window and the wall above).
@@ -360,3 +379,10 @@ A09, A10, A11, A12, A13), CORRECTED 5 (S10 tank sheet p.6, S13 sheets p.4 / p.5,
 beam B19 + 'DEPTH' extent, A02 sections print no sill / head), WRONG 1 (S12: bar counts printed, stale since T-220),
 PARTIAL 2 (A03, A04: elevation sheets not reopened); L-1 OK; 0 NOT CHECKED. Lead: apply the five corrections and the S12
 rewrite before the owner's review; nothing sent.
+
+LEAD 2026-10-30 12:40 UTC (run session_01E6cPnbt2rnWMmSnoPa5qft): APPLIED in the question texts above: S10 (tank sheet
+p.6, note 2 on p.4 / p.5 / p.6), S12 (rewritten: links and bar ends only), S13 (p.4 / p.5), S18 (p.8 undated, plot stamps,
+two source drawings), S22 (B19 third beam, 'DEPTH' extent, '4ø16'), A02 (elevations 06 .. 09 as the source, sections
+draw outlines only), plus the S20 addition and the A04 sheet note. Still open before sending: A03 / A04 elevation
+sheet numbers (PARTIAL: elevations not reopened); S11 sent text to describe 'R1 / R2' as the deep floor and the sloped
+/ shallow floor. Nothing sent; the owner reviews.

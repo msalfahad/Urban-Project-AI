@@ -46,7 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-30 08:25; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-30 12:40; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-30 12:40: since 08:25 MERGED T-358, T-362, T-367 (partially verified 1/2), T-365, T-360 r2 (Gate A) and T-318 (Gate B first pass: CANDIDATE OF RECORD V3.0.27, slab bar-end kg re-booked under option B, valued 1,721.189 .. 3,744.324 -> 748.652 .. 1,769.657 kg, mostly a move to HELD blank; released 10,250.168 kg unchanged); T-359 r1 and T-368 r1 REJECTED narrow (TODO r2). READY 0. Lane I: T-326 (reveals) TODO now, expected 30-31 Oct; then T-327 sills (31 Oct), T-199 formwork incl. stair sides (1 Nov), T-328 roof, T-284 ceilings (2 Nov): Week 2 (by 3 Nov) realistic deliveries are T-326, T-327, T-199; T-350 (earthworks) and T-353 (foundation WP) stay the Week-2 risk (9 serial rows ahead of them at about one Gate B per 3-5 h = about 4-5 Nov). Lane I queue now 13 rows (T-372 mortar added last). Two Gate B packages passed first time today (T-279, T-318): the first-pass rate is holding. New research rows T-369 .. T-371 (shower tanking, sanitary fixtures, bar shapes) feed Weeks 3 - 4. Verified SHARE unchanged (CONCRETE 12.50 %; blockwork 297.847 m2 verified inside a line that is not whole): the risk stays that lines enter as owner-approved or held, not whole-line verified.
+
+### Earlier status (Lead, 2026-10-30 08:25)
 
 Lead 2026-10-30 08:25: since 04:25 MERGED T-351, T-354 (Gate A) and T-279 (Gate B first pass: CANDIDATE OF RECORD V3.0.26, blockwork MAS.BLOCK 0 -> 579.1011 m2 / 104.468865 m3, VERIFIED 297.847 m2 on 18 walls; 28 walls + 10 pieces HELD by name); downgrade records DGP-T356-BAND / GB-D34 issued on V3.0.25. READY 3 (T-358, T-360, T-362, all research). Week 2 target (verified coverage up by 2026-11-03): blockwork is the first verified m2 carried into the candidate's masonry family this week (297.847 m2); the next lane I steps are T-318 (slab bar ends, kg split) then T-326 / T-327 (reveals / finishes). Remaining Gate B packages on the chain: 13 rows, one at a time; at the current pace of about one Gate B package per 4 - 6 h, the chain to T-350 (earthworks) does not finish before 2026-11-03: T-350 and T-353 are the Week-2 risk, the finishes / formwork rows (T-326, T-327, T-199) the realistic Week-2 deliveries. New research rows T-365 .. T-368 (joints, lap sources, masonry mortar, tile edges) feed Weeks 3 - 4.
 

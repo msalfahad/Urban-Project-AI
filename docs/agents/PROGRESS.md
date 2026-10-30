@@ -1,9 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 08:25 UTC (Lead). Previous version: 2026-10-30 04:25 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.26 (not released): it adds the blockwork walls.
+Last update: 2026-10-30 12:40 UTC (Lead). Previous version: 2026-10-30 08:25 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
+untouched). Your measure: whole BOQ lines independently verified: 2 in the candidate's export (the concrete slab 60.28
+m3 is the one scoreboard reference line among them); released: 0. The candidate under review is now V3.0.27 (not
+released): it re-books the slab bar ends.
+
+Since 30 Oct 08:25 (newest first; six checked and merged, one of them after one fix; two sent back for a narrow fix):
+- Slab bar ends INTO THE CANDIDATE: CHECKED AND MERGED first time (V3.0.27), under your 29 Oct rule (only drawn bars
+  counted). Where the slab continues over a beam the drawings draw no development length, so none is counted any more;
+  at edge beams only the drawn straight part is counted; the bent-up legs and undrawn ends are blank by name. The
+  valued slab bar-end steel goes from 1,721 .. 3,744 kg to 749 .. 1,770 kg: this is mostly steel moved to "held",
+  not steel found to be absent. The checker re-derived every one of the 196 changed lines himself: no difference.
+  The freelancer's 5,400 kg is one lump sum and cannot be compared line by line.
+- Excavation support and dewatering: CHECKED AND MERGED. Support is required on all four plot sides (pits reach the
+  plot line at 1.50 m or deeper); dewatering only conditional (water printed at -4.50, foundations at -1.50; the lift
+  pit, about 4.80 m deep, is the one to watch). No quantities: no extent is drawn.
+- White-block mesh strip and lintel bearings: CHECKED AND MERGED. Both supplier block families are shown, none chosen
+  (A 310.83 m.l, B 412.42 m.l); 6 lintel bearings cut 4.08 m.l; black-wall mesh 545.31 m.l (+0.34 %, five named walls).
+- Block-joint mortar for the black walls: CHECKED AND MERGED (research), partly verified: 3.87 m3 installed on the
+  walls already in the candidate (your 40 x 20 module and 10 mm joint). The checker found that the joints against
+  columns and under beams add about 5 .. 13 % (0.2 .. 0.5 m3): held by name until measured. Cement and sand stay held:
+  no masonry mix is set (one decision for you below).
+- Movement / expansion joints and sealants: CHECKED AND MERGED. None drawn on 31 sheets; the freelancer's 'joints' row
+  is plaster. No quantity, not 0.
+- Facade cladding: CHECKED AND MERGED after one fix. None drawn; the porch arch stone face 1.51 m2 stays held (material
+  is an architect question, not sent).
+- Sent back for a narrow fix: the bar-detail census (the pool detail's row of drawn bar shapes was not read: eight
+  labels, one of which bears on a "not drawn" bar) and the exposed tile edges (31.65 m.l confirmed by the checker;
+  7.30 m.l at one ground-floor opening rests on a full height, but the plan draws an overhead element there, so they
+  stay held until its height is read).
+- The checker's corrections to the remaining consultant questions are now written into them (one question rewritten:
+  the planted-column bars are printed, only links and bar ends are asked). Nothing sent.
+- Next: the door / window reveals into the candidate; new investigations: shower floor and tanking, sanitary fixtures
+  and floor drains count, which bar shapes the drawings print, where laps are printed, gates and guard panels.
 
 Since 30 Oct 04:25 (newest first; three checked and merged, all first time; three handed in, waiting for the checker):
 - Blockwork walls INTO THE CANDIDATE: CHECKED AND MERGED first time (V3.0.26). The block-wall lines, blank until now,
@@ -1252,7 +1282,11 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision for you today. Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.
+- One decision today (30 Oct 12:40, in the Lead report): which cement : sand mix Urban prices for the block-joint
+  mortar of black block walls, so cement bags and sand can be counted (3.87 m3 of mortar measured; nothing is held up
+  meanwhile). Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.
+- The consultant list: the checker's corrections to the remaining 26 questions are applied (30 Oct 12:40); two elevation
+  sheet numbers still to name; NOT sent.
 - The consultant list (30 Oct 00:25): the priority part is revalidated and complete (36 questions, 9 lines), NOT sent;
   the checker re-checks the sheet citations, the remaining part follows next run. Older note, superseded: NOT ready to
   send yet (your 23:57 instruction). I checked all 30 rows against the
