@@ -1,0 +1,78 @@
+{
+ "authority_counts": {
+  "GENERAL_NOTE": 2,
+  "NOT_PRINTED": 24,
+  "PRINTED_DETAIL": 1
+ },
+ "candidate_lines_changed": 0,
+ "kg_computed": 0,
+ "lap_status_counts": {
+  "CONFLICT_ZONE_NOT_PRINTED": 1,
+  "HELD_NO_AUTHORITY": 12,
+  "HELD_ZONE_NOT_PRINTED": 1,
+  "NOT_REQUIRED": 12,
+  "PRINTED": 1
+ },
+ "populations": 27,
+ "schema": "LAP_AUTHORITY_CENSUS_V1",
+ "stock": {
+  "searched": "no stock / bar length printed on any sheet: all 1,934 DXF TEXT / MTEXT / ATTRIB entities (model space + blocks) searched for lap / splice / overlap / dia / anchor / develop / stock / length and Arabic تشريك / رباط / اشاير / طول / وصل / تراكب: one hit, 1BA9 '* L=LENGTH OF COLUMN.' (p.9 link-band notation, not a lap); p.8 notes 1-24; p.13 - p.16 by eye",
+  "source": "rules/methods/URBAN_METHOD_REGISTER_V3.json URBAN-REBAR-NET-AND-PROCUREMENT@v1 (owner decision OD-V3-3, research/external_engine_lab/alsenan_v3_owner_decisions.json); same 12 m in OWNER_RULE_REBAR_2026-10-24 s.2",
+  "status": "ASSUMED - OWNER-APPROVED",
+  "value_m": 12.0
+ },
+ "worked_runs": [
+  {
+   "L_m": "23.8",
+   "S_m": "12",
+   "bar_length_frozen_m": 24.28,
+   "bar_length_owner_m": 24.76,
+   "check_pieces": "3 stock pieces cover 35.040 m >= L; 2 pieces cover 23.520 m",
+   "differs": true,
+   "frozen_laps": 1,
+   "frozen_right_up_to_lap_m": 0.2,
+   "lap": "40 d x 12 mm = 0.480 m",
+   "owner_laps": 2,
+   "short_by_m": 0.48
+  },
+  {
+   "L_m": "35",
+   "S_m": "12",
+   "bar_length_frozen_m": 35.96,
+   "bar_length_owner_m": 35.96,
+   "check_pieces": "3 stock pieces cover 35.040 m >= L; 3 pieces cover 35.040 m",
+   "differs": false,
+   "frozen_laps": 2,
+   "frozen_right_up_to_lap_m": 0.5,
+   "lap": "40 d x 12 mm = 0.480 m",
+   "owner_laps": 2,
+   "short_by_m": 0.0
+  },
+  {
+   "L_m": "23.8",
+   "S_m": "12",
+   "bar_length_frozen_m": 24.44,
+   "bar_length_owner_m": 25.08,
+   "check_pieces": "3 stock pieces cover 34.720 m >= L; 2 pieces cover 23.360 m",
+   "differs": true,
+   "frozen_laps": 1,
+   "frozen_right_up_to_lap_m": 0.2,
+   "lap": "40 d x 16 mm = 0.640 m",
+   "owner_laps": 2,
+   "short_by_m": 0.64
+  },
+  {
+   "L_m": "35",
+   "S_m": "12",
+   "bar_length_frozen_m": 36.28,
+   "bar_length_owner_m": 36.92,
+   "check_pieces": "4 stock pieces cover 46.080 m >= L; 3 pieces cover 34.720 m",
+   "differs": true,
+   "frozen_laps": 2,
+   "frozen_right_up_to_lap_m": 0.5,
+   "lap": "40 d x 16 mm = 0.640 m",
+   "owner_laps": 3,
+   "short_by_m": 0.64
+  }
+ ]
+}
