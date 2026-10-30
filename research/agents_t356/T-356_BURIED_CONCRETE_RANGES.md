@@ -20,7 +20,8 @@ python3 -I research/agents_t356/t356_alsenan.py --write                         
 
 Files: `t356_rules.py` (R-T356-1 .. 6, pure), `t356_extract.py`, `t356_alsenan.py`, `ALSENAN_T356_INPUT.json`,
 `FINDINGS_T356.csv` (15 lines), **`FILL_T350_T356.csv`** (11 HELD rows for T-350), `DOWNGRADE_PROPOSALS_T356.json`
-(2 proposals for the Checker), `summary_t356.json`. Tests: `tests/t356_buried_ranges/` (22).
+(2 proposals for the Checker), `summary_t356.json`. Tests: `tests/t356_buried_ranges/` (29: rules on the hand villa T356-X, strip geometry normal / rotated /
+mirrored / skewed / past the plot, committed-output checks).
 
 ## 1. F-T347-2 Strap blinding (L-35382b18, STR.CONC.BLINDING, BOUNDED_EXPOSURE 0.377803 .. 0.771877 m3)
 
@@ -41,14 +42,18 @@ beyond 1658):
 | SB3 | F15 1B2A, F3 166B | 1.632420 | 2.284012 | 0.149771 | 2.134241 |
 | **total** | | 7.081826 | **9.101960** | 0.571811 | **8.530149** |
 
-Readings: **none** (what is drawn: no blinding under a strap) 0; **merged** (every strap soffit flush with the footing
-soffits, the footing blinding band owns its 0.10 in front of each face) 0.853015 m3; **own layer** (strap soffit at
-another level) **0.910196 m3**. Every admissible reading lies in **0 .. 0.910196 m3** (R-T356-2). T-233 / T-100 gave
-0 .. 0.913 by (B + 0.20) x axis length: -0.002804 m3 = the skewed SB2 / SB3 ends against the footing faces (SB2
-2.753 rectangle vs 2.722948 polygon, SB3 2.281 vs 2.284012): the polygon is the drawing.
+The strip between two parallel footing faces is a parallelogram, so its area is exactly (B + 0.20) x axis clear length;
+the PRINTED breadth governs over the drawn one (p.10: SB1 0.70, SB2 1.00, SB3 0.50; drawn SB2 is 0.987 .. 0.988 wide,
+SB3 0.500 .. 0.502). Axis clear lengths (own): SB1 4.5500, SB2 2.2927, SB3 3.2580 m. Own strip at printed breadth
+**9.126840 m2**; the drawn polygon 9.101960 m2 is kept as the check (-0.024880 m2 = the drawn SB2 / SB3 widths).
 
-**The line, decomposed** (own reproduction, `candidate_basis_reproduction_m2`): own strip 0.910196 - merge into the
-footing band 0.057181 + strip inside the F10+F outline the route-G frame does not see (1B1B is an open polyline, T-233
+Readings: **none** (what is drawn: no blinding under a strap) 0; **merged** (every strap soffit flush with the footing
+soffits, the footing blinding band owns its 0.10 in front of each face) 0.855277 m3; **own layer** (strap soffit at
+another level) **0.912684 m3**. Every admissible reading lies in **0 .. 0.912684 m3** (R-T356-2). T-233 / T-100 gave
+0 .. 0.913 by the same formula on T-065's rounded lengths (2.294 / 3.259): +0.000316 m3, rounding only.
+
+**The line, decomposed** (own reproduction, `candidate_basis_reproduction_m2`): own strip 0.912684 - drawn vs printed
+breadth 0.002488 - merge into the footing band 0.057181 + strip inside the F10+F outline the route-G frame does not see (1B1B is an open polyline, T-233
 finding 3) 0.121505 - **plan deduction of the ground-beam blinding strips 0.214938** + residual 0.012295 = 0.771877.
 The ground-beam deduction is physically inadmissible: T-230 (merged) puts every strap top at or below -0.33 and every
 ground-beam soffit at or above -0.35 in the annex and +0.35 in the main house (gap >= 0.28 m): two layers at different
@@ -56,7 +61,7 @@ levels share no volume. The low end 0.377803 is the REACH merge window of an out
 the 1B1B outline) and it excludes the drawn reading 'none'. Residual 0.012295 m3: the engine's ground-beam strip
 outlines (route G bands) vs the T-230 pairing used here; not traced further because the deduction itself is refused.
 
-**Proposal: CORRECT RANGE** (= LEDGER_RIGHT, refined): HELD 0 .. 0.910196 m3, open item D-15 (blinding under straps
+**Proposal: CORRECT RANGE** (= LEDGER_RIGHT, T-233 confirmed to 0.0003 m3): HELD 0 .. 0.912684 m3, open item D-15 (blinding under straps
 and strap soffit level). The line is already a held state, so this is a lane I held-range fix in T-350, not a
 downgrade record. Nothing is chosen because it is larger.
 
@@ -119,7 +124,7 @@ moves with D inside the T-347 held range: no earthworks figure changes.
 
 | Line | lo m3 | hi m3 | Held by |
 |---|---|---|---|
-| strap blinding L-35382b18 | 0.000000 (READING_NONE, D-15: a bound from a drawn reading, not a default) | 0.910196 | D-15 |
+| strap blinding L-35382b18 | 0.000000 (READING_NONE, D-15: a bound from a drawn reading, not a default) | 0.912684 | D-15 |
 | boundary lower band L-6290a9f3 | blank (NOT ESTABLISHED: pad split) | 11.032800 | Q-28, M4 |
 | 9 interior ground beams | narrowest printed title | widest printed title | D-34 (+ D-33 on 3) |
 
@@ -130,7 +135,7 @@ Checked on the committed CSV by `test_fill_held_blank_never_zero` (the T-332 les
 | Method | Strap blinding | Lower band | Interior GB < 2.5 m |
 |---|---|---|---|
 | Owner manual method | none answered (D-15 is a designer item) | Q-28 A PROVISIONAL 8.4588, not released; deduct a crossing only where elevations overlap | none (D-34 designer) |
-| Drawing-derived (this task) | 0 .. 0.910196 HELD | 5.6392 .. 11.0328 band solid; line low NOT ESTABLISHED | net plan x [0.30, 0.40] HELD |
+| Drawing-derived (this task) | 0 .. 0.912684 HELD | 5.6392 .. 11.0328 band solid; line low NOT ESTABLISHED | net plan x [0.30, 0.40] HELD |
 | Candidate V3.0.24 | 0.377803 .. 0.771877 (GB deduction, REACH window) | 7.2204 SOURCE_DERIVED (one side lost) | 0.30 single PROVISIONAL |
 | Freelancer | in his whole-plot plate (T-233: RULE_DIFFERENCE) | footing sheet 71.7 m x 0.20 x 0.60 = 8.604 (T-233) | 0.30 x 0.60 on every beam (T-242: FREELANCER_WRONG section) |
 
@@ -142,7 +147,7 @@ range, UNRESOLVED; ground beams RULE_DIFFERENCE inside a held range (D-34), cand
 
 R-T356-1 .. 6 (`t356_rules.py` docstring). Lessons row (ERS s.7): | 2026-10-30 | Three buried-concrete lines carried a
 single reading or a mis-based range of an open designer item: strap blinding deducted ground-beam strips 0.28 m above
-it and excluded 'no blinding' (0.3778 .. 0.7719 vs 0 .. 0.9102 m3); the boundary band showed 60.17 m (a side lost) x
+it and excluded 'no blinding' (0.3778 .. 0.7719 vs 0 .. 0.9127 m3); the boundary band showed 60.17 m (a side lost) x
 one section as a value (7.2204 vs 5.6392 .. 11.0328); 9 ground beams showed one length-class title where two hold
 (1.9439 vs 1.6439 .. 2.2919) | ranges were built only along the dimension a module knew how to vary (length basis,
 merge window), not along every open reading of the element | a held range spans EVERY admissible reading of every

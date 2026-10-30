@@ -1,5 +1,5 @@
 line_id,family,status,value_m3,lo_m3,lo_basis,hi_m3,hi_basis,held_by
-L-35382b18e2e362df3ae6,STR.CONC.BLINDING strap,HELD,,0.000000,READING_NONE (D-15),0.910196,own strip 9.101960 m2 x 0.10 (projection INHERITED from p.13),D-15
+L-35382b18e2e362df3ae6,STR.CONC.BLINDING strap,HELD,,0.000000,READING_NONE (D-15),0.912684,"own strip 9.126840 m2 = printed (B + 0.20) x axis clear, x 0.10 (projection INHERITED from p.13)",D-15
 L-6290a9f3d93f38cd46d6,STR.CONC.BOUNDARY_WALL lower band,HELD,,,NOT ESTABLISHED for the line (band solid >= 5.639200; pad split n x 0.078000),11.032800,91.94 m x 0.20 x 0.60,"Q-28, M4"
 L-81444e222487437e257e,STR.CONC.GROUND_BEAM interior,HELD,,0.130500,narrowest printed title,0.174000,widest printed title holding literally,D-34
 L-e2134034441cb7db7bd7,STR.CONC.GROUND_BEAM interior,HELD,,0.108000,narrowest printed title,0.144000,widest printed title holding literally,D-34

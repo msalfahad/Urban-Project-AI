@@ -65,7 +65,12 @@
  "strap_blinding_plan_overlap_with_gb_blinding_m2": 1.834328,
  "straps": {
   "SB1": {
+   "axis_clear_m": 4.55,
    "clear_concrete_plan_m2": 3.185,
+   "drawn_width_m": [
+    0.7,
+    0.7
+   ],
    "edge_handles": [
     "1689",
     "1B1C"
@@ -81,11 +86,15 @@
    "in_footing_blinding_band_m2": 0.18,
    "merged_strip_m2": 3.915,
    "own_strip_m2": 4.095,
-   "strip_outside_plot_m2": 0.0,
-   "width_at_start_m": 0.7
+   "strip_outside_plot_m2": 0.0
   },
   "SB2": {
+   "axis_clear_m": 2.2927,
    "clear_concrete_plan_m2": 2.264406,
+   "drawn_width_m": [
+    0.9871,
+    0.9884
+   ],
    "edge_handles": [
     "1B08",
     "1B09"
@@ -101,11 +110,15 @@
    "in_footing_blinding_band_m2": 0.24204,
    "merged_strip_m2": 2.480908,
    "own_strip_m2": 2.722948,
-   "strip_outside_plot_m2": 0.0,
-   "width_at_start_m": 0.9871
+   "strip_outside_plot_m2": 0.0
   },
   "SB3": {
+   "axis_clear_m": 3.258,
    "clear_concrete_plan_m2": 1.63242,
+   "drawn_width_m": [
+    0.5022,
+    0.5
+   ],
    "edge_handles": [
     "1B26",
     "1B27"
@@ -121,8 +134,7 @@
    "in_footing_blinding_band_m2": 0.149771,
    "merged_strip_m2": 2.134241,
    "own_strip_m2": 2.284012,
-   "strip_outside_plot_m2": 0.0,
-   "width_at_start_m": 0.5022
+   "strip_outside_plot_m2": 0.0
   }
  },
  "straps_total": {

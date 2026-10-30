@@ -54,7 +54,9 @@ def test_every_t347_over_line_finding_answered():
 
 def test_strap_range_and_decomposition_closes():
     s = json.loads((HERE / "summary_t356.json").read_text(encoding="utf-8"))["strap_blinding"]
-    assert s["ledger"] == [0.0, AP(0.910196, abs=1e-6)]
+    assert s["ledger"] == [0.0, AP(0.912684, abs=1e-6)]                    # printed widths x drawn axis clear
+    assert s["drawn_polygon_high"] == AP(0.910196, abs=1e-6)                # the drawn polygon, kept as the check
+    assert abs(s["t233_minus_ledger"]) < 0.001                              # T-100 / T-233 0.913 (rounded lengths)
     assert sum(s["decomposition_m3"].values()) == AP(s["line"][1], abs=1e-6)
     assert s["decomposition_m3"]["gb_blinding_plan_deduction"] < 0          # the inadmissible deduction is named
 

@@ -31,6 +31,27 @@ def _r(x, n=6):
     return round(x + 0.0, n)
 
 
+def strap_strip(L1, L2, footings, plot, p):
+    """One strap's blinding strip from its two drawn edge lines (shapely LineStrings, drawing units): the strap grown
+    by p on its two SIDES only (not past its drawn ends), minus the footing outlines it joins, inside the plot.
+    Returns (own area, area outside the plot, part inside the footings' blinding band, merged area)."""
+    from shapely.geometry import MultiPoint, Polygon
+    from shapely.ops import unary_union
+    hull = MultiPoint(list(L1.coords) + list(L2.coords)).convex_hull
+    dx, dy = L1.coords[1][0] - L1.coords[0][0], L1.coords[1][1] - L1.coords[0][1]
+    n = math.hypot(dx, dy)
+    ux, uy, nx, ny = dx / n, dy / n, -dy / n, dx / n
+    ts = [c[0] * ux + c[1] * uy for c in hull.exterior.coords]
+    t0, t1, big = min(ts), max(ts), 1e9
+    slab = Polygon([(ux * t0 + nx * big, uy * t0 + ny * big), (ux * t1 + nx * big, uy * t1 + ny * big),
+                    (ux * t1 - nx * big, uy * t1 - ny * big), (ux * t0 - nx * big, uy * t0 - ny * big)])
+    UF = unary_union(footings)
+    UFB = unary_union([f.buffer(p, join_style=2) for f in footings])
+    strip = hull.buffer(p, join_style=2).intersection(slab).difference(UF)
+    own = strip.intersection(plot)
+    return own.area, strip.difference(plot).area, own.intersection(UFB).area, own.difference(UFB).area
+
+
 def main(argv):
     import ezdxf
     from shapely.affinity import translate
@@ -90,26 +111,22 @@ def main(argv):
         L2 = LineString([tuple(e2.dxf.start)[:2], tuple(e2.dxf.end)[:2]])
         hull = MultiPoint(list(L1.coords) + list(L2.coords)).convex_hull
         hulls.append(hull)
-        dx, dy = L1.coords[1][0] - L1.coords[0][0], L1.coords[1][1] - L1.coords[0][1]
-        n = math.hypot(dx, dy)
-        ux, uy, nx, ny = dx / n, dy / n, -dy / n, dx / n
-        ts = [c[0] * ux + c[1] * uy for c in hull.exterior.coords]
-        t0, t1, big = min(ts), max(ts), 1e6
-        slab = Polygon([(ux * t0 + nx * big, uy * t0 + ny * big), (ux * t1 + nx * big, uy * t1 + ny * big),
-                        (ux * t1 - nx * big, uy * t1 - ny * big), (ux * t0 - nx * big, uy * t0 - ny * big)])
-        # the blinding strip: the strap grown 0.10 on its two sides only, between the footing outlines it joins
-        strip = hull.buffer(P, join_style=2).intersection(slab).difference(UF)
-        own = strip.intersection(plot)
+        own, strip, band_part, merged = strap_strip(L1, L2, list(FT.values()), plot, P)
+        mid = LineString([((L1.coords[0][0] + L2.coords[0][0]) / 2, (L1.coords[0][1] + L2.coords[0][1]) / 2),
+                          ((L1.coords[1][0] + L2.coords[1][0]) / 2, (L1.coords[1][1] + L2.coords[1][1]) / 2)])
+        from shapely.geometry import Point
+        widths = [L2.distance(Point(L1.coords[0])), L2.distance(Point(L1.coords[1]))]
         straps[mark] = {
             "edge_handles": [h1, h2],
             "edge_lengths_m": [_r(L1.length / 1000, 4), _r(L2.length / 1000, 4)],
-            "width_at_start_m": _r(L2.distance(L1.interpolate(0)) / 1000, 4),
+            "drawn_width_m": [_r(w / 1000, 4) for w in widths],
+            "axis_clear_m": _r(mid.difference(UF).length / 1000, 4),
             "footings_joined": sorted(k for k, p in FT.items() if hull.intersection(p).area > 1.0),
             "clear_concrete_plan_m2": _r(hull.difference(UF).area / 1e6),
-            "own_strip_m2": _r(own.area / 1e6),
-            "strip_outside_plot_m2": _r(strip.difference(plot).area / 1e6),
-            "in_footing_blinding_band_m2": _r(own.intersection(UFB).area / 1e6),
-            "merged_strip_m2": _r(own.difference(UFB).area / 1e6),
+            "own_strip_m2": _r(own / 1e6),
+            "strip_outside_plot_m2": _r(strip / 1e6),
+            "in_footing_blinding_band_m2": _r(band_part / 1e6),
+            "merged_strip_m2": _r(merged / 1e6),
         }
 
     # ---- ground-beam strips (diagnostic reproduction of the candidate's basis only) --------------------------------

@@ -29,6 +29,7 @@ BAND_LINE = "L-6290a9f3d93f38cd46d6"
 BAND_ENGINE_LENGTH_M = 60.17               # T-037: 30.97 + 14.60 + 14.60, the neighbour side (31.17 m) not in the group
 BAND_WIDTH = 0.20
 BAND_DEPTHS = (0.40, 0.60)                 # p.14 plan 'GROUND BEAM (20x40)'; p.10 schedule row B.W 20 x 60
+STRAP_B = {"SB1": 0.70, "SB2": 1.00, "SB3": 0.50}   # p.10 schedule of simple beams, B (breadth)
 PAD = (1.30, 0.80, 0.30)                   # p.14 '(130x80x30)'; A-A: the 80 includes the 20 G.B, G.B and pad share a soffit
 GB_TITLES = [("GT5M", ">", 5.0, 0.60), ("LT5M", "<", 5.0, 0.40), ("LT2_5M", "<", 2.5, 0.30)]   # p.13 titles
 
@@ -55,11 +56,20 @@ def build():
 
     # ---- F-T347-2 strap blinding --------------------------------------------------------------------------------
     st = inp["straps_total"]
-    sr = R.strap_blinding_range(st["own_strip_m2"], T, False, merged_strip_m2=st["merged_strip_m2"])
+    # printed width (p.10) x drawn axis clear length: a parallelogram strip between two parallel faces is exactly
+    # (B + 2p) x axis length; the drawn polygon is kept as the check (SB2 is drawn 0.987 wide for a printed 1.00)
+    own_p, band_p = 0.0, 0.0
+    for mark, s_ in inp["straps"].items():
+        wd = sum(s_["drawn_width_m"]) / 2
+        o = (STRAP_B[mark] + 2 * 0.10) * s_["axis_clear_m"]
+        own_p += o
+        band_p += s_["in_footing_blinding_band_m2"] * (STRAP_B[mark] + 0.20) / (wd + 0.20)
+    sr = R.strap_blinding_range(own_p, T, False, merged_strip_m2=own_p - band_p)
     L = lines[STRAP_LINE]
     rep = inp["candidate_basis_reproduction_m2"]
     steps = {
-        "own_strip": st["own_strip_m2"] * T,
+        "own_strip_printed_width": own_p * T,
+        "drawn_width_vs_printed": (st["own_strip_m2"] - own_p) * T,
         "merge_into_footing_band": -st["in_footing_blinding_band_m2"] * T,
         "f10f_outline_unseen": (rep["f10_outline_missing|no_gb"] - rep["all_outlines|no_gb"]) * T,
         "gb_blinding_plan_deduction": (rep["f10_outline_missing|gb_blinding_strips"] - rep["f10_outline_missing|no_gb"]) * T,
@@ -82,7 +92,8 @@ def build():
     })
     fill.append({"line_id": STRAP_LINE, "family": "STR.CONC.BLINDING strap", "status": "HELD",
                  "value_m3": R.fill_value("HELD", None), "lo_m3": _f(sr["low"]), "lo_basis": "READING_NONE (D-15)",
-                 "hi_m3": _f(sr["high"]), "hi_basis": "own strip 9.101960 m2 x 0.10 (projection INHERITED from p.13)",
+                 "hi_m3": _f(sr["high"]), "hi_basis": f"own strip {own_p:.6f} m2 = printed (B + 0.20) x axis clear, x 0.10 (projection INHERITED "
+                             "from p.13)",
                  "held_by": "D-15"})
 
     # ---- F-T347-3 boundary lower band -------------------------------------------------------------------------------
@@ -203,7 +214,8 @@ def build():
         "candidate_lines_json_sha256": cand["candidate_lines_json_sha256"],
         "strap_blinding": {"line": [lines[STRAP_LINE]["bounded_low"], lines[STRAP_LINE]["bounded_high"]],
                            "ledger": [sr["low"], round(sr["high"], 6)], "merged_reading": round(sr["merged"], 6),
-                           "t233_high": t233_high, "t233_minus_own_polygon": round(t233_high - sr["high"], 6),
+                           "t233_high": t233_high, "t233_minus_ledger": round(t233_high - sr["high"], 6),
+                           "drawn_polygon_high": round(st["own_strip_m2"] * T, 6),
                            "decomposition_m3": {k: round(v, 6) for k, v in steps.items()}},
         "boundary_band": {"line": lines[BAND_LINE]["measured_net"], "solid_range": [round(br["low"], 6),
                           round(br["high"], 6)], "drawn_m": b["centreline_m"], "crossing_m": b["crossing_total_m"],

@@ -28,22 +28,24 @@
  "schema": "URBAN_T356_SUMMARY_V1",
  "strap_blinding": {
   "decomposition_m3": {
+   "drawn_width_vs_printed": -0.002488,
    "f10f_outline_unseen": 0.121505,
    "gb_blinding_plan_deduction": -0.214938,
    "merge_into_footing_band": -0.057181,
-   "own_strip": 0.910196,
+   "own_strip_printed_width": 0.912684,
    "residual_unexplained": 0.012295
   },
+  "drawn_polygon_high": 0.910196,
   "ledger": [
    0.0,
-   0.910196
+   0.912684
   ],
   "line": [
    0.377803,
    0.771877
   ],
-  "merged_reading": 0.853015,
+  "merged_reading": 0.855277,
   "t233_high": 0.913,
-  "t233_minus_own_polygon": 0.002804
+  "t233_minus_ledger": 0.000316
  }
 }
