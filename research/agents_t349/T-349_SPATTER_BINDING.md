@@ -104,8 +104,8 @@ only if the owner's rates distinguish them (none does today).
 ## 6. FILL table for the lane I row (FILL_T349.csv)
 
 One proposed **NEW B4-05 SPATTER DASH** line per carrier: 54 interior (36 dry + 18 backing), 19 exterior (3 storey,
-4 parapet outer, plinth, slab edge, 4 parapet inner, 4 parapet top, frame, divider), 34 PENDING after T-326 (32 valued
-13.597, 7 blank; 5 PENDING rows are FIN.PLASTER door reveals and 27 window outside reveals, plus held arch / window-in
+4 parapet outer, plinth, slab edge, 4 parapet inner, 4 parapet top, frame, divider), 39 PENDING after T-326 (32 valued
+13.597, 7 blank; 5 valued rows are FIN.PLASTER door reveals and 27 window outside reveals, plus held arch / window-in
 / gate rows). Each row: host line, unit m2, rows, rows blank, quantity OR lo / hi OR blank, status, source. HELD rows
 carry no quantity (test); a bounded row carries its range only; UNKNOWN carries nothing. Lane I wires these as
 `<host>#SPATTER` lines whose figure is DERIVED from the host line in the same run (so a later host change moves its
