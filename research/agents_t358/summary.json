@@ -1,0 +1,287 @@
+{
+ "rule": "TEMPWORKS_SCOPE_V1",
+ "sheets_searched": 31,
+ "sheets_stating": {
+  "ST p.1": [
+   "bullet 2 (DXF B8) EXCAVATION_AT_LINE"
+  ],
+  "ST p.8": [
+   "14 DEWATERING",
+   "15 SUPPORT",
+   "17 FORMWORK_PROPS",
+   "23 FORMWORK_PROPS",
+   "10 SITE_INVESTIGATION",
+   "12 FOUNDING_LEVEL_CHECK",
+   "13 CONCRETE_MATERIAL"
+  ],
+  "ST p.9": [
+   "1 (DXF 1E11) EXCAVATION_LEVEL",
+   "2 + bearing table DESIGN_FOUNDING_DEPTH",
+   "4 (DXF 1E0E) GROUNDWATER"
+  ],
+  "ST p.14": [
+   "TYPICAL BOUNDARY WALL section A-A EXCAVATION_AT_LINE",
+   "DETAIL OF LIFT WITH ISOLATED FOOTING PARAMETRIC_DEPTH"
+  ]
+ },
+ "dewatering": {
+  "status": "CONDITIONAL",
+  "water_level": -4.5,
+  "min_clearance_m": 3.0,
+  "rows": [
+   {
+    "element": "24 footing pits + F10 / F",
+    "kind": "AT_MOST",
+    "status": "CONDITIONAL",
+    "clearance_m": 3.0,
+    "trigger": "only if the formation is lowered 3.000 m or more below its printed limit -1.500 (to -4.500 or deeper)"
+   },
+   {
+    "element": "boundary-wall trenches",
+    "kind": "AT_MOST",
+    "status": "CONDITIONAL",
+    "clearance_m": 3.0,
+    "trigger": "only if the formation is lowered 3.000 m or more below its printed limit -1.500 (to -4.500 or deeper)"
+   },
+   {
+    "element": "pool envelope",
+    "kind": "PRINTED",
+    "status": "NOT_TRIGGERED",
+    "clearance_m": 3.0,
+    "trigger": "formation -1.500 vs water -4.500"
+   },
+   {
+    "element": "lift FF",
+    "kind": "PARAMETRIC",
+    "status": "CONDITIONAL",
+    "clearance_m": null,
+    "threshold": 4.8,
+    "trigger": "only if lift pit depth below the GF FFL +1.00 plus the membrane thickness >= 4.800 m (and never above -1.500)"
+   }
+  ],
+  "site_condition_note_14": true,
+  "sensitivity_ffl_datum": {
+   "water_level": -3.5,
+   "pits_clearance_m": 2.0,
+   "lift_threshold_m": 3.8
+  },
+  "quantity": null
+ },
+ "support": {
+  "S0": {
+   "name": "lower neighbour (31.37)",
+   "status": "TRIGGERED",
+   "on_or_beyond_line": [
+    "F10/F:1B1B",
+    "F11:1B07",
+    "F14:1B1A",
+    "F15:1B2A",
+    "F:INSERT 1669 F layer S-DIM",
+    "F:INSERT 166A F layer S-DIM"
+   ],
+   "within": [
+    "F3:INSERT 166C F layer S-DIM",
+    "F5:INSERT 166D F layer S-DIM"
+   ],
+   "nearest_m": -0.1,
+   "conditional_min_trigger_m": 3.3,
+   "quantity": null,
+   "on_or_beyond_m": 15.15,
+   "on_or_beyond_intervals": [
+    [
+     0.0,
+     1.0
+    ],
+    [
+     5.1,
+     7.1
+    ],
+    [
+     11.65,
+     12.75
+    ],
+    [
+     14.175,
+     17.875
+    ],
+    [
+     20.42,
+     24.42
+    ],
+    [
+     28.02,
+     31.37
+    ]
+   ],
+   "within_only_m": 4.2,
+   "within_intervals": [
+    [
+     9.85,
+     11.45
+    ],
+    [
+     24.47,
+     27.07
+    ]
+   ]
+  },
+  "S1": {
+   "name": "upper neighbour (31.37)",
+   "status": "TRIGGERED",
+   "on_or_beyond_line": [
+    "BW-S1:7FE",
+    "BW-S2:7FE",
+    "BW-S3:7FE"
+   ],
+   "within": [
+    "F2:INSERT 165C F layer S-DIM",
+    "F2:INSERT 1663 F layer S-DIM",
+    "F4:INSERT 1665 F layer S-DIM",
+    "F4:INSERT 1666 F layer S-DIM",
+    "F5:INSERT 1664 F layer S-DIM"
+   ],
+   "nearest_m": 0.0,
+   "conditional_min_trigger_m": 3.6,
+   "quantity": null,
+   "on_or_beyond_m": 31.37,
+   "on_or_beyond_intervals": [
+    [
+     0.0,
+     31.37
+    ]
+   ],
+   "within_only_m": 11.2,
+   "within_intervals": [
+    [
+     14.2,
+     16.1
+    ],
+    [
+     16.9,
+     18.8
+    ],
+    [
+     20.37,
+     22.97
+    ],
+    [
+     24.37,
+     26.77
+    ],
+    [
+     28.42,
+     30.82
+    ]
+   ]
+  },
+  "S2": {
+   "name": "street (15.00)",
+   "status": "TRIGGERED",
+   "on_or_beyond_line": [
+    "BW-S1:7FE",
+    "BW-S2:7FE",
+    "F:INSERT 1668 F layer S-DIM",
+    "F:INSERT 1669 F layer S-DIM"
+   ],
+   "within": [],
+   "nearest_m": -0.1,
+   "conditional_min_trigger_m": 2.3,
+   "quantity": null,
+   "on_or_beyond_m": 10.0,
+   "on_or_beyond_intervals": [
+    [
+     0.0,
+     0.9
+    ],
+    [
+     5.9,
+     15.0
+    ]
+   ],
+   "within_only_m": 0,
+   "within_intervals": []
+  },
+  "S3": {
+   "name": "sea view (15.00)",
+   "status": "TRIGGERED",
+   "on_or_beyond_line": [
+    "BW-S1:7FE",
+    "BW-S3:7FC",
+    "BW-S3:7FE",
+    "F10/F:1B1B",
+    "F8:1B24",
+    "FN:4 LINEs 1100",
+    "POOL:7C6"
+   ],
+   "within": [
+    "F4:INSERT 1666 F layer S-DIM"
+   ],
+   "nearest_m": -0.1,
+   "conditional_min_trigger_m": 3.55,
+   "quantity": null,
+   "on_or_beyond_m": 11.85,
+   "on_or_beyond_intervals": [
+    [
+     0.0,
+     1.5
+    ],
+    [
+     3.4,
+     4.6
+    ],
+    [
+     5.85,
+     15.0
+    ]
+   ],
+   "within_only_m": 2.2,
+   "within_intervals": [
+    [
+     12.275,
+     14.475
+    ]
+   ]
+  }
+ },
+ "beyond_plot_line": [
+  "F10/F:1B1B",
+  "F11:1B07",
+  "F14:1B1A",
+  "F15:1B2A",
+  "F8:1B24",
+  "F:INSERT 1668 F layer S-DIM",
+  "F:INSERT 1669 F layer S-DIM",
+  "F:INSERT 166A F layer S-DIM",
+  "FN:4 LINEs 1100",
+  "POOL:7C6"
+ ],
+ "items": [
+  {
+   "item": "B1-06a DEWATERING",
+   "status": "CONDITIONAL",
+   "trigger": "water -4.50 (ST p.9 note 4, EG datum INTERPRETED); drawn formations -1.50 (pits / boundary trenches AT_MOST, pool PRINTED): clearance 3.00 m; lift FF only if lift pit depth below the GF FFL +1.00 plus the membrane thickness >= 4.800 m (and never above -1.500); ST p.8 note 14 'if groundwater is found'",
+   "source": "ST p.8 note 14; ST p.9 notes 1, 2, 4",
+   "quantity": null,
+   "extent": null
+  },
+  {
+   "item": "B1-06b EXCAVATION SUPPORT / PROTECTION",
+   "status": "TRIGGERED",
+   "trigger": "ST p.8 note 15 requires a specialist study and the protection / shoring needed; faces on or beyond the plot line on all four sides at >= 1.50 m (section 4)",
+   "source": "ST p.8 note 15; ST p.1 bullet 2; ST p.14 boundary wall; ST p.9 note 1",
+   "quantity": null,
+   "extent": null
+  },
+  {
+   "item": "B1-06c OTHER TEMPORARY WORKS",
+   "status": "NOT_IN_DRAWN_SCOPE",
+   "trigger": "no sheet prints hoarding, site office, access road, scaffold or other site temporary works; the formwork props of p.8 notes 17 / 23 are the formwork item (T-163 / T-199)",
+   "source": "31 sheets searched",
+   "quantity": null,
+   "extent": null
+  }
+ ],
+ "freelancer_rows": 0,
+ "engine_lines": 0,
+ "verdict_proposal": "SCOPE_ITEMS_NOT_QUANTITIES: both BOQs omit B1-06; the drawings put support in scope (TRIGGERED, extent by the contractor's specialist study) and dewatering CONDITIONAL; neither carries a drawn extent, so neither BOQ can carry a quantity: RULE_DIFFERENCE none, an item line (no quantity) is the correct representation"
+}
