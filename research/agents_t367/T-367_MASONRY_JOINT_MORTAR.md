@@ -84,6 +84,11 @@ parent element + '#BLOCKWORK:<status> <type>', R-T279-1, T-279, m2); 19 part ids
   column thickness for a row, that row's mortar scales by 0.25 / t (and its product is not a 15 / 20 black unit).
 - Edge tolerance (T-176 s.3, named, not added): (L x b + H x j) x t per wall; not re-evaluated here because the fill
   ledger carries areas, not lengths and heights per piece.
+- Course-geometry screen (consistency only, not proof; merged T-355 r2 MESH_LEVELS on the same register v4 pieces):
+  bed length implied by the area (5 m of bed per m2) against 3 x the net run at every third course level: on the 20
+  WHOLE black walls the ratio is 0.740 .. 0.998 (lower where the top level has no block above it, e.g. a 3.60 m wall
+  has 5 levels for 6 course triples, or where openings stack), never above 1.000: no wall's area exceeds what its
+  courses can hold. The 4 established-part walls read 0.363 .. 0.905 because T-355's levels include their HELD pieces.
 - Change against T-176 (same rate, new area basis): 290.052 m2 / 3.6059 m3 (MASONRY_AREA_V1 r2, 23 walls) -> 312.6661 m2
   / 3.870113 m3 (register v4 in V3.0.26, 24 walls): +22.614 m2, +0.264213 m3, all from the area basis, 0 from the rate.
 
