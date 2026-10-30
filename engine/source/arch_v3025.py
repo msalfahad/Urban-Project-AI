@@ -476,9 +476,10 @@ def piece_line(pid, rev, docs, p, src):
     dv = p.get("derived") or {}
     con = (terms_area(dv["construction"].get("terms"), f"piece {p['piece']}", floor_face=True)[1]
            if dv.get("construction") else None)
-    rec = dict({"face_construction": con, "face_edge_kind": dv.get("face_edge_kind"),
-                "polygon_reading": dv.get("polygon_reading"),
-                "rules_applied": [RULE[0]] + ([RULE_BAND[0]] if dv.get("face_edge_kind") or con else []),"policy": PIECES["OUTDOOR_FLOOR"]["policy"], "piece": p["piece"], "kind": p["kind"],
+    band = ({"face_construction": con, "face_edge_kind": dv.get("face_edge_kind"),
+             "polygon_reading": dv.get("polygon_reading"), "rules_applied": [RULE[0], RULE_BAND[0]]}
+            if (con or dv.get("face_edge_kind")) else {})       # R-T343-1 fields only on a piece it governs
+    rec = dict({**band,"policy": PIECES["OUTDOOR_FLOOR"]["policy"], "piece": p["piece"], "kind": p["kind"],
                 "record_state": "ADD", "area_m2": _r(a), "area_status": p["area_status"],
                 "area_basis": p["area_basis"][:400], "edges": p["edges"][:400], "derived": res,
                 "material": p["material"], "material_status": p["material_status"],
