@@ -3,55 +3,55 @@
   "agent": "0 MAIN – daily update to you",
   "role": "Your single contact: one daily update with results, problems, ideas and decisions; pilot auditor",
   "cadence": "daily 07:31 Kuwait (04:31 UTC)",
-  "last_run": "2026-10-29T04:31:53Z",
+  "last_run": "2026-10-30T04:32:08Z",
   "result": "ok",
-  "working_on": "Daily update due 2026-10-30 04:31 UTC (scheduler next run)",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "Daily update sent 30 Oct 04:32 UTC; next 31 Oct 04:31 UTC",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-10-30T04:13:00Z",
+  "last_run": "2026-10-30T08:17:00Z",
   "result": "running",
-  "working_on": "Since 00:25: six pieces checked and merged (excavation binding, buried-concrete ranges, mesh strip / sharmat, outdoor court floors into candidate V3.0.25, spatter dash, site levels); consultant questions: priority list corrected from the checker's citation check, remaining list written (26 + 2 supplier + 1 client), nothing sent; 7 new tasks",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "Since 04:25: blockwork walls integrated into candidate V3.0.26 (579.1 m2 carried, held walls blank by name), kitchen tile zones and soil treatment checked and merged; 3 pieces waiting for the checker; 4 new tasks (movement joints, lap-length sources, masonry mortar, exposed tile edges)",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T03:21:00Z",
+  "last_run": "2026-10-30T07:29:00Z",
   "result": "ok",
-  "working_on": "03:37 site levels / plot / site clearance handed in, merged 03:53; next: soil treatment check, groundwater / excavation support, bar-detail census",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "07:43 groundwater / excavation support handed in (support triggered on all 4 plot sides, dewatering conditional); next: bar-detail census, movement joints, lap-length sources",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T02:40:04Z",
+  "last_run": "2026-10-30T06:39:49Z",
   "result": "ok",
-  "working_on": "02:45 mesh strip / sharmat reworked, merged 03:03; next: kitchen tile zones, facade cladding, white-wall mesh strip, gates / guards",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "06:59 facade cladding handed in (no cladding drawn; one arch quoin face held); next: gates / guards, masonry mortar, exposed tile edges",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-10-30T03:00:04Z",
+  "last_run": "2026-10-30T07:01:10Z",
   "result": "ok",
-  "working_on": "02:16 outdoor floors fix (merged into V3.0.25 at 03:32); 03:18 spatter dash binding (merged 03:37); next: blockwork walls into the candidate",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "05:57 blockwork walls package passed (candidate V3.0.26, 07:50); 07:17 white-wall mesh strip handed in; next: slab bar-end split into the candidate",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-10-30T03:49:21Z",
+  "last_run": "2026-10-30T07:50:48Z",
   "result": "ok",
-  "working_on": "03:53 merged site levels; 03:32 outdoor floors package passed (candidate V3.0.25); next: citation check of the remaining consultant list, two downgrade records, blockwork package when ready",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "06:53-07:52 run passed the blockwork walls package (candidate V3.0.26); earlier merged kitchen tile zones and soil treatment, issued two downgrade records; next: excavation support, white-wall mesh strip, facade cladding",
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-10-30T04:40:00Z"
+  "as_of": "2026-10-30T08:30:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -68,7 +68,7 @@
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
   "last_run": "2026-10-30T00:54:46Z",
   "result": "ok",
-  "working_on": "Next refresh 2026-10-30 12:54 UTC",
-  "as_of": "2026-10-30T04:40:00Z"
+  "working_on": "Next refresh 30 Oct 12:54 UTC",
+  "as_of": "2026-10-30T08:30:00Z"
  }
 ]

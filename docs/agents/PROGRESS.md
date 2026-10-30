@@ -1,10 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 04:25 UTC (Lead). Previous version: 2026-10-30 00:25 UTC. The released numbers did not change
+Last update: 2026-10-30 08:25 UTC (Lead). Previous version: 2026-10-30 04:25 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.25 (not released): it adds the outdoor court
-floors.
+line among them); released: 0. The candidate under review is now V3.0.26 (not released): it adds the blockwork walls.
+
+Since 30 Oct 04:25 (newest first; three checked and merged, all first time; three handed in, waiting for the checker):
+- Blockwork walls INTO THE CANDIDATE: CHECKED AND MERGED first time (V3.0.26). The block-wall lines, blank until now,
+  carry 579.10 m2 of wall (104.47 m3): 297.85 m2 on 18 walls the checker measured himself, 157.65 m2 confirmed from the
+  drawings, 123.61 m2 under your door rule; 28 walls, 10 pieces and one slab-drop band stay held by name (blank, never 0).
+  Every other candidate line is unchanged. The freelancer's 1,260.69 m2 cannot be compared yet: about half the walls are
+  still held, so a % would mislead. Largest difference on the checker's own re-measure: 0.03 % on one line.
+- Kitchen / laundry / pantry tile zones: CHECKED AND MERGED (research). No new area: the three rooms are wet rooms, so
+  their wall tile is the full-height tile already in the candidate; laundry 52.53 m2 (freelancer 50.55, +3.9 %); pantry
+  is 0.03 m2 larger than the candidate line and will be corrected by name in the next finishes package.
+- Soil treatment / anti-termite: CHECKED AND MERGED. Not in the drawn scope (31 sheets and both drawing text lists
+  searched; no note, no specification); the freelancer has no row either. No quantity, not shown as 0.
+- Handed in, waiting for the checker: excavation support and dewatering (support is triggered on all four plot sides,
+  where pits reach the plot line at 1.50 m or deeper; dewatering only conditional: water printed at -4.50 vs
+  foundations at -1.50, the lift pit about 4.80 m deep is the one to watch; no quantities because no extent is drawn);
+  white-block mesh strip and lintel bearings (both supplier block families shown, none chosen; black-wall mesh
+  +0.34 %); facade cladding (none drawn; one arch stone face at the porch held, its material is a question for the
+  architect, not sent).
+- Next: the slab bar-end split into the candidate; new investigations: movement / expansion joints, where the drawings
+  print lap lengths, block-joint mortar for the black walls (your provisional 40 x 20 module and 10 mm joint), exposed
+  wall-tile edges (45-degree edge or steel profile, one per edge).
 
 THE CONSULTANT QUESTION LIST IS COMPLETE FOR YOUR REVIEW (NOT SENT). The checker re-checked every sheet citation of the
 36 priority questions against the prints: 21 right, 15 needed a sheet number corrected, none wrong; the corrections are

@@ -42,6 +42,15 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-30 08:25 (lead run; covers 04:25 - 08:25)
+
+- T-279 blockwork walls into the candidate (Gate B): WORKED first pass (07:50; Checker's own run V3.0.25 3064078a / V3.0.26 8959989c, 3,697 lines byte-identical, every DC / OA wall re-measured from the drawings, largest line deviation 0.03 %; MAS.BLOCK 0 -> 579.1011 m2). Decision: T-318 first in lane I; F-T279-1 (GF-W28 open end 0.063 m unnamed) -> T-363 ACCEPTANCE ADDED.
+- T-351 kitchen / laundry / pantry tile zones: WORKED (Gate A 06:05; own laundry 52.5290 / pantry 32.3750 m2). Decision: F-T351-1 (+0.0328 m2 pantry) carried as a named correction in T-326's row for the next FIN.WALL.TILE package.
+- T-354 soil treatment: WORKED (Gate A 06:05; own absence search incl. Arabic notes). Decision: none; B1-05 has no line, none to make.
+- Checker light work: RFI B citations (18 OK, 5 CORRECTED, 1 WRONG S12, 2 PARTIAL); downgrade records issued on V3.0.25. Decision: Lead applies the B corrections next run (nothing sent); T-350 reads verdicts/V3.0.25/DOWNGRADES.json.
+- Handed in, no verdict yet: T-358 (S), T-360 (A), T-362 (I worker on a lane A row). READY = 3 = target: new rows T-365 .. T-368 are backlog-permitted research only.
+- Recurring: (1) Drive binaries still arrive raw (every worker base64-wraps before decode; T-351's first decode failed 'AGENT_ENV FAIL: base64 decode failed'): working, not blocking; (2) NEW this run: the Lead session's venv has no pytest ('No module named pytest'), self-check t061 FAIL; other agents' runs PASS; watch whether it recurs in any session.
+
 ## 2026-10-30 04:25 (lead run; covers 00:25 - 04:25)
 
 - T-347 earthworks binding: WORKED (Gate A PASS 01:05; Checker's own pit union 129.234375 m2, AT_LEAST 188.017207 m3, 256 bindings unique). Decision: none beyond T-350 (F-T347-1); note N-T347-1 (F8 in pool beyond plot excluded twice, 0.10 m3 low on the bound) carried in T-350.
@@ -256,16 +265,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-283 ceilings r3 | handed in (READY 02:50) | decor 363.173 -> 361.229 m2 (-10.40 % vs released 403.163); 1.944 m2 hidden flight moved to stair zone HELD; bulkheads 27.935 m2 | batched with T-281 at Gate A; Lead challenge: one owner per piece vs T-281's 1.808 / 0.777 / 0.063 m2 |
 | T-257 K1 boundary declarations | handed in (READY 03:35) | 18 modules declared by_design from T-210 records; 6 undeclarable stay red with fix proposals; 2 real-tree T-210 tests re-pointed | Gate A; Lead challenge: re-pointed tests must assert the same property over the same set, else weakened |
 | T-281 stair soffits | complete, held back (READY limit) | ST-01 17.070 plan / 17.198 .. 17.243 true, MS1-L CONFLICT 3.215 .. 3.935; ST-02 8.479 plan, curved true HELD; GF stair zone 9.854 = 9.014 + 0.777 + 0.063 | hand-in authorised to the Checker when READY < 3; cross-check vs formwork r3 stair soffit faces |
-
-## 2026-10-25 00:15 (lead run; covers 22:15 - 00:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-276 r2 buried faces traced | WORKED | MERGED 4d88681b (Verifier 22:54): own DXF 182+183 band end quadrilateral 0.03175 m2, 7C3#2 1.5585 m (-0.05 %), 17E+17F 0.4243 m; 32 DC faces 45.4682 m2; COL:255 neck face HELD | lessons row closed (prior); T-270 r2 takes LEDGER_T276 |
-| T-277 beam width census | WORKED | MERGED 9446dfcb (Verifier 22:59): own band widths CB2 0.250 vs W20, B21 0.400 vs W45, CB10 0.20 / 0.30 vs W25 CONFLICT; B27, B7 AGREE; both readings carried | RFI S5 search closed; T-285 carries the four walls' crossing strips both ways |
-| T-274 blockwork height pieces | WORKED | MERGED aba9399a (Verifier 00:06): own GF-W28 22.3386 vs 22.3384, 1F-W07 11.4599 = worker; register proposal 449.260 -> 449.565 m2 NOT applied | NEW T-285 (apply as register v3); T-279 after T-285; lessons row closed |
-| T-270 r1 WP foundation into V3.0.15 (Gate B) | PARTIAL | REJECTED narrow r2 22:58 on WP.BURIED_LIQUID only (35.404 from T-263 run faces vs 45.4682 traced, -22.1 %, contains non-earth faces); every other figure own-verified byte-for-byte | r2 first in lane I (owner order 23:49); lessons row (integration takes the newest verified ledger) |
-| T-282 r1 formwork faces at oblique / curved carriers | PARTIAL | REJECTED narrow r2 00:04: END faces booked on convex-hull diagonals joining unequal edge ends (170+7C3#4 0.2318 m = +0.2202 m2 FORMED; 1811+1812#1 0.0972 m); side faces agree | r2 first in lane S; lessons row (end face only on a drawn end or free section); element register row |
-| T-278 floor-area scoring key | handed in (READY 23:50, Gate A) | T001C keys FLOOR.INTERNAL 380.364 m2 on 40 lines (was 372.472 on 38), -7.13 % vs freelancer; T001B outputs byte-identical | Gate A next; Lead challenge: 1F landing 4.9225 m2 not also in a marble / stair finish line |
-| Checker T-180 slots 23:00 / 00:06 | findings | jamb scan: exactly one jamb inside a column (OP-1F-026, 32.7 mm, two routes); blockwork VERIFIED 95.633 -> 105.004 of 449.260 m2 (GF-W33 5.586, 1F-W01 2.832, GF-W12 1.953) | into T-285 (register v3 carries the VERIFIED values) |
-| RFI package (owner 23:57) | Lead verification | 30 rows, 0 removed, 2 search notes closed, 4 missing rows G1-G4, 9 PRIORITY RFIs (6 ready) | NEW T-287 (G1-G3), T-286 (G4 + plaster blockers); not to be sent until both return |

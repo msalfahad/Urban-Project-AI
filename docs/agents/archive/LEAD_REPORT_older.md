@@ -1,3 +1,100 @@
+## LEAD REPORT 2026-10-29 20:30 UTC
+
+Drive readable: nothing created anywhere on Drive since 29 Oct 12:25 (no new drawings, workbooks or images; no photo
+review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared automatically (20:14,
+'setup by auto'). Working branch ce3aaf8f -> dd4c9f8f (five Checker merges via 'engine push'); no owner commit.
+Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since your 28 Oct
+21:44 'Halve runs' (applied).
+
+HEADLINE: the candidate's export now writes cleanly (V3.0.24, Gate B passed first time, not one quantity moved); the
+unexplained 5.89 m2 porcelain step is fully traced; five pieces merged, two handed in. One scheduling fault (a rework
+row read as not claimable) cost 4 h and is fixed. Nothing new needs your decision.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; candidate of
+record now ARCH_TAKEOFF_V3.0.24 (json 19394733), NOT RELEASED; whole verified lines in the candidate export 2,
+released 0; scored verified share unchanged: CONCRETE 12.50 %, other trades 0):
+- EXPORT INTEGRITY (all trades), V3.0.24 Gate B PASS 20:14: 366 lines changed in text / state only; quantity, unit,
+  state and range byte-identical on all 3,710 lines (Checker's own json diff). 350 released STR.REBAR lines
+  (8,311.066 of 9,185.928 kg) now print count x length x d^2/162 = kg (hand: 4 x 2.65 x 256/162 = 16.751 kg, 0.000 %);
+  2 residuals 0.0005 - 0.0008 kg traced to the 4-decimal printed length (rule: allow the printed rounding, never more);
+  NA skirting gross 7.6 lm dropped; 15 finish / space formulas end on their own net or range. T-334 check: 351 REFUSED
+  + 15 FLAG -> 0 / 0; the guarded export writes. L4 full suite NEW 0.
+- FLOOR TILES, 1F porcelain L-b06400d4 (m2), T-345 MERGED 19:02: the 5.890817 m2 between face-minus-list and the line's
+  range low is TRACED to 0.000000: net 33.711036 ENGINE_RIGHT (owner manual 33.713, -0.006 %), deduction LIST
+  ENGINE_WRONG (stale base list: concave winder F5 clipped convex +0.353736, F1 / F4 overlap deducted twice -0.057558,
+  void residue 2.034669, stair footprint 3.559930). Checker's own geometry 0.014 % (0.1 mm snap). Fix goes with the
+  deductions integration (T-246 scope added).
+- EXTERIOR PLASTER (m2), T-346 READY 19:01: the freelancer's rows 65 / 68 / 69 (93.150 m2, 'no face drawn') are NOT
+  missing scope: 79.213 m2 are faces the drawing shows and T-337 already binds once, 9.000 m2 is a return he counts in
+  two rows, 4.937 m2 named band terms (printed wave peak, datum, passage wall), residual 0. Like for like his walls
+  926.365 vs drawing 897.720 .. 938.606 m2 = -3.1 .. +1.3 % (was -4.0 .. +0.3 %), RULE_DIFFERENCE (half vs full
+  holes, Q-73 A). New finding: his rows 70 / 71 / 74 (faces above the pool / round the 1F void, 109.890 m2) keep only
+  32.167 m2 drawn -> NEW investigation T-348.
+- REVEALS / SILLS / THRESHOLDS (m2) and ROOF BUILD-UP (m2), MERGED 16:58 / 17:01: Checker re-measures W02 head
+  0.506526 vs 0.5064 (0.025 %), thresholds 0.000 %, 1F terrace 38.355 / 5.553 / 31.6433 m2 closing on the D band;
+  the 0.797 m door-width proposal NOT adopted (frame 0.800 printed; wall line overruns by 2.961 mm). Tables wait for
+  their integrations (T-326 / T-327 / T-328).
+- BLOCKWORK (m2), T-333 r2 READY 19:05: the three established parts with a door at your 2.20 m (47.3866 m2) now read
+  ASSUMED — OWNER-APPROVED; parts 47.3866 AOA + 109.1831 DC = 156.5697 m2; no m2 or m3 moved. Engine blockwork still
+  BLANK vs freelancer 1,260.69 m2 (walls held by name): no verdict on the total.
+- ROOMS (census tool V2), MERGED 17:10: 41 labels = 28 / 1 / 1 / 11 bound, SILENT_OMISSION 0 on the tool too.
+- CONCRETE, REINFORCEMENT quantities, WP, CEILINGS, INTERIOR PLASTER: no quantity change since 16:30.
+- Learned (lessons register, PROPOSED): (1) a piece that re-nets a line restates its deduction list from the same
+  geometry; a list is traced by recomputing the piece, never by fitting the gap (T-345); (2) a valued line prints its own
+  arithmetic; a check of printed arithmetic allows the printed rounding and never more (T-338); (3) a freelancer row is
+  mapped to drawn faces by position and level before it is called missing scope (T-346, pending Gate A).
+- Missing (unchanged): designer answers (S1 - S23, A1 - A13, Q-65 C, D-39, D-41, D-43, Q-21 C). New on the plan from
+  the coverage registry (18 families NOT_IMPLEMENTED): earthworks (excavation / backfill / disposal), spatter dash,
+  kitchen / laundry / pantry tile zones, stair formwork, foundation waterproofing lines, soil-treatment evidence.
+
+GATES: lowest open gate 1: T-343 outdoor floor lines (TODO, first in lane I, on V3.0.24); gate 2: T-333 r2 / T-346
+READY, T-332 r2 TODO, new T-347 / T-348 / T-349 / T-351 / T-352 TODO; gate 3: T-354 TODO, T-318 BLOCKED-OWNER.
+
+MILESTONES: M2 MET (29 Oct, one day late) unchanged. M3 / M4 started. Week 2 (3 Nov): outdoor floors 30 Oct;
+blockwork Gate A 29-30 Oct then its integration 30-31 Oct (the week's first verified-quantity increase if it passes
+first time); reveals / sills 31 Oct - 1 Nov; formwork by 3 Nov unlikely (rework first, five lane I rows ahead).
+
+CLOSE THE LOOP since 16:30: WORKED x5 (T-340, T-339, T-344, T-345, T-338 Gate B first attempt); PARTIAL / FAILED 0;
+READY 2 (T-333 r2, T-346; CHECKER-RUNS 1.4 - 1.5 h). Decisions: T-343 QUEUED -> TODO on V3.0.24; T-246 scope + the
+T-345 trace rows and the re-netted-list fix; NEW T-347 earthworks binding (S), T-348 faces above the pool / void (A),
+T-349 spatter dash binding (A), T-350 earthworks lines (I, QUEUED), T-351 kitchen tile zones (A), T-352 stair
+formwork (S), T-353 foundation WP lines (I, QUEUED), T-354 soil treatment evidence (S, gate 3); element register +8
+rulings; 3 lessons rows PROPOSED. PROCESS FAULT (mine): T-332's row began 'REJECTED (rework r2 CLAIMABLE ...)'; Worker 1
+at 19:21 read it as not claimable and idled, so the formwork fix waited 4 h. Fixed: a claimable rework row now begins
+with TODO; the queue check showed no flag because it reads the lane order, not the status word.
+
+VERIFIER QUEUE (READY 2): standing slot T-132 (restated 20:15 on V3.0.24); (1) Gate A T-333 r2 (blocks the blockwork
+integration; challenge: the r2 run took 6 minutes, confirm the commit is the fix and its tests ran on the task head);
+(2) Gate A T-346; (3) Gate B T-343 when READY; (4) Gate A T-332 r2 when READY.
+
+LANES (queue check: 49 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-332 r2, T-347, T-352, T-354; A
+worker 2: T-348, T-349, T-351; I worker 3: T-343, T-279, T-326, T-327, T-199, T-328, T-284, T-246, T-310, T-314,
+T-350, T-353, T-318 (only after your approval). TODO 8 (target 8 - 12 met).
+
+TEAM HEALTH (since 16:30): every run closed with a final line (Worker 1 x2 incl. one idle on the status-word fault,
+Worker 2 x1, Worker 3 x2, Checker x2 incl. one correct overlap stand-down; the 18:51 Checker run lasted 84 min, under
+the 110 min rule). All self-checks PASS. Recurring tool issues, unchanged: Drive raw binary vs base64-only `decode`
+(worked round by hand in 4 runs since 16:30) and the automatic prepare leaving the venv without pytest (Worker 1
+19:21, one `setup` repaired it). Dashboard 13:03 SUCCEEDED (next 00:54); Main 04:31 SUCCEEDED. Scout paused.
+
+OWNER PACKAGE (2 items, unchanged; neither blocks the critical path; not pushed)
+1. Slab reinforcement bar-end split into the CANDIDATE (not the release): full ERS s.6 text in archive/LEAD_REPORT_older.md
+   (26 Oct 06:15 entry): A keep note-9 lengths / B split with every undrawn part HELD; impact 0.56 .. 1.03 t plus the
+   T-316 findings (0.12 .. 0.15 t missing across edge beams, 0.08 t past short spans); recommendation B; next action T-318.
+2. Q-77 joint mesh over block-to-concrete joints: full s.6 text in the 29 Oct 00:15 entry (archive/LEAD_REPORT_older.md):
+   A not an item / B your finish band about 281.6 m inside + 230.1 m outside / C full drawn joint about 528.2 + 230.1 m;
+   recommendation B. (The new spatter-dash binding leaves mesh untouched until you answer.)
+
+NEEDS FIXING (only the owner):
+(1) `scripts/agent_env.sh decode` (main) should accept the raw binary the Drive connector now saves, and names with
+    spaces; every code agent works around it by hand every run (raised 28 Oct 21:20; still open).
+(2) The automatic prepare can leave the venv without pytest (Worker 1 19:21 again); a pytest import check in `status`
+    / auto-setup would stop it.
+(3) `board check` pulls with rebase and so refuses while a Lead edit is uncommitted; it also cannot see a status cell
+    whose first word is not TODO (the T-332 idle). Today worked round by committing first; a status-word check in
+    queue_check.py would catch it.
+(4) Designer / consultant RFIs (S1 - S23, A1 - A13) stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-29 16:30 UTC
 
 Drive readable: nothing created in "Urban BOQ private data" or the Alsenan folder since 29 Oct 12:25, no new images
