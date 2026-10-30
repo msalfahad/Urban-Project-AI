@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-30T08:50Z | Verifier | STARTED | run session_01E6cPnbTFqGCwCGK82bbcny | repo-attached routine | task state: T-358, T-360, T-362 READY (Lead 08:27) | self-check pending
 - 2026-10-30T08:41Z | Worker 2 | STARTED | run session_01E6cPnawoY1xgBfW1rf6UuS | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-30 08:27 UTC | Lead | SUCCESS | board | Since 04:25: T-351, T-354 WORKED (Gate A) and T-279 WORKED first pass (Gate B: CANDIDATE OF RECORD V3.0.26, MAS.BLOCK 0 -> 579.1011 m2, VERIFIED 297.847 on 18 walls, 28 walls / 10 pieces HELD by name); downgrade records on V3.0.25 issued; READY 3 (T-358, T-360, T-362) queued with re-measure items; T-318 first in lane I; F-T279-1 -> T-363, F-T351-1 -> T-326; NEW T-365 joints B13-05 (S), T-366 lap sources B11-04 (S), T-367 masonry mortar B9-04 (A), T-368 tile edges B4-10 (A), all backlog-permitted; no new Drive files; owner package none; STARTED stamp 08:25 was ~08:17 (ahead of clock); queue check: 49 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 FAIL, freeze PASS; problem: '/home/claude/urban-project-ai/.work/venv/bin/python: No module named pytest'
 - 2026-10-30 08:25 UTC | Lead | STARTED | run session_01E6cPnb6TSu1hWNfCQ3E4gr | repo-attached routine | task state: board | report pending
