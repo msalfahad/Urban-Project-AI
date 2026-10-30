@@ -1,17 +1,15 @@
 {
  "schema": "LAP_AUTHORITY_LINE_BINDING_V1",
- "candidate": "CANDIDATE_V3016_REBAR_LINES.json",
- "candidate_sha256": "2f28367b81fe362d98d8a97080adb62cfd9a3c0a880fc20d201735e6eba39760",
- "view": "V3.0.27 view: V3.0.16 extract (= V3.0.17, T-297) + the T-318 slab development re-booking by line id",
- "rebar_lines": 2505,
+ "candidate": "V3_0_27_BOQ_LINES.json",
+ "candidate_sha256": "f7972540ee1be08675178f354b3210b6d3146d99e93e02ed0bcbad4f102e7936",
+ "view": "as given",
+ "rebar_lines": 2643,
  "bound_rows": 584,
  "by_class": {
   "NOTE9_OUTSIDE_GROUP -> HELD": 351,
-  "NOT_BOOKED -> KEEP": 54,
+  "NOT_BOOKED -> KEEP": 152,
   "NOTE9_OUTSIDE_GROUP -> LISTED_ONLY": 22,
-  "REBOOKED_T318_BLANK -> KEEP": 90,
-  "PRINTED -> KEEP": 59,
-  "REBOOKED_T318_NA -> KEEP": 8
+  "PRINTED -> KEEP": 59
  },
  "note9_outside_group_held": {
   "GB bar ends": 39,

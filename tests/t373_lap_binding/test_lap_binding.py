@@ -139,3 +139,23 @@ def test_committed_alsenan_binding_consistent():
     assert len({r["line_id"] for r in rows}) == len(rows)
     held = sum(Decimal(r["kg_high_now"]) for r in rows if r["proposed"] == "HELD")
     assert held == sum(Decimal(t["high_now"]) for t in s["totals"] if t["proposed"] == "HELD")
+
+
+def test_projection_from_committed_extract_equals_the_v3027_record():
+    """without private data: the merged V3.0.16 extract + the merged T-318 re-booking gives the same 351 HELD lines,
+    the same kg on each and the same 59 drawn parts as the binding of the reproduced V3.0.27 (committed CSV)."""
+    import csv
+    sys.path.insert(0, str(ROOT / "research" / "agents_t366"))
+    sys.path.insert(0, str(ROOT / "research" / "agents_t318"))
+    import t366_alsenan_input as B
+    import t318_inputs as L27
+    d = json.loads((ROOT / "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json").read_text(encoding="utf-8"))
+    pid = d["project"] if isinstance(d["project"], str) else d["project"]["project_id"]
+    proj = T.rebook_t318(T.bind_candidate(d["lines"], B.bind), L27.build(pid)["lines"])
+    rec = list(csv.DictReader((ROOT / "research/agents_t373/T373_LAP_BINDING.csv").open(encoding="utf-8")))
+    held = lambda rows: {(r["line_id"], r["kg_low_now"], r["kg_high_now"]) for r in rows if r["proposed"] == "HELD"}
+    parts = lambda rows: sorted((r["element_id"], r["kg_low_now"], r["kg_high_now"]) for r in rows
+                                if r["kind"] == "SLAB_DEV_DRAWN_PART")
+    assert held(proj) == held(rec) and len(held(rec)) == 351
+    assert parts(proj) == parts(rec) and len(parts(rec)) == 59
+    assert len(proj) == len(rec) == 584

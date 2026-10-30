@@ -7,18 +7,24 @@ never promotes it, and the candidate's figures stay in the audit trail). Drawing
 
 ## 0. Inputs
 
-- Candidate lines: the merged T-297 extract `research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json` (ARCH_TAKEOFF_V3.0.16
-  = V3.0.17 line by line, 2,505 reinforcement lines, sha256 in `T373_SUMMARY.json`), re-booked to its **V3.0.27 state**
-  with the merged T-318 inputs (`research/agents_t318/t318_inputs.py`, by line id; `rebook_t318` refuses a T-318 'before'
-  figure that differs from the bound line, so the 98 slab development lines are proven unchanged from V3.0.16 to V3.0.26).
+- Candidate of record, reproduced this run: fresh T-167 base run, then `research/agents_t318/v3027_run.py` on the Drive
+  copies: **V3_0_26 json 8959989c / csv 5e8cff67 = the candidate of record** (T-279 Gate B / T-318), V3_0_27_BOQ_LINES
+  json **f7972540** / csv 27329efb (2,643 reinforcement lines; STR.REBAR released 10,250.167987 kg, bounded
+  14,278.249488 .. 19,646.877938 kg, as T-318 reports). `T373_LAP_BINDING.csv` / `T373_SUMMARY.json` are the binding of
+  that file (the run itself stays outside the repository).
+- Independent cross-check without private data: the merged T-297 extract (V3.0.16 = V3.0.17, 2,505 lines) re-booked with
+  the merged T-318 inputs by line id (`--t318`; `rebook_t318` refuses a T-318 'before' figure that differs from the
+  bound line) gives **the same 351 HELD line ids with the same kg, the same 59 drawn parts and the same 584 rows**
+  (test `test_projection_from_committed_extract_equals_the_v3027_record`); only the 59 part line ids differ (engine
+  hashes vs '#PART').
 - Population binding: T-366 `bind()` (merged 51be6eab), unchanged. Authorities: the T-366 census (ST p.8 note 9;
   ST p.13 TYP. DETAIL OF ISOLATED FOOTING '40 ø'; ST p.15 NOTE 1; ST p.15 TYP. SLAB ON BEAMS DETAIL drawn straight
   part, T-307 / T-318). Drive 'Alsenan chalet project': 'ST7757 dxf.dxf' (sha256 9f9d1179..) and
   'P7757_DXF_COMPRESSED.zip' (P7757.dxf ab54dd55..) decoded into the private folder for the reproduction run (s.6).
 - Files: `t373_lap_binding.py` (LAP_AUTHORITY_LINE_BINDING_V1, stdlib), outputs `T373_LAP_BINDING.csv` (one row per
-  line, acceptance (a)) and `T373_SUMMARY.json` (totals, (b)). Tests `tests/t373_lap_binding` (8). Repeat:
-  `python -I research/agents_t373/t373_lap_binding.py research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json --t318
-  --csv research/agents_t373/T373_LAP_BINDING.csv --json research/agents_t373/T373_SUMMARY.json`.
+  line, acceptance (a)) and `T373_SUMMARY.json` (totals, (b)). Tests `tests/t373_lap_binding` (9). Repeat:
+  `python -I research/agents_t373/t373_lap_binding.py <run>/V3_0_27_BOQ_LINES.json --csv .. --json ..` (record), or
+  `... research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json --t318 --csv .. --json ..` (cross-check).
 
 ## 1. Physical element and method (ERS s.2.1, s.2.3)
 
@@ -37,8 +43,9 @@ A line with no figure (BLOCKED_RFI / NA) is NOT_BOOKED: nothing to downgrade.
 
 ## 2. Result per population (acceptance (a), (b); every row in the CSV)
 
-584 rows: 351 NOTE9_OUTSIDE_GROUP -> **HELD**, 54 NOT_BOOKED, 98 + 59 slab development rows re-booked by T-318
-(KEEP, not downgraded twice), 22 pool / stair / tank rows LISTED (T-359 scope).
+584 rows on V3.0.27: 351 NOTE9_OUTSIDE_GROUP -> **HELD**, 152 NOT_BOOKED (no figure: 54 BLOCKED / NA lines + the 98
+slab development lines T-318 re-booked to NA / BLANK), 59 drawn slab parts PRINTED -> KEEP, 22 pool / stair / tank rows
+LISTED (T-359 scope).
 
 | Population (T-366 id) | Component / length used now | Authority | Lines | Valued kg now (low .. high) | Proposed | kg after |
 |---|---|---|---|---|---|---|
@@ -52,16 +59,16 @@ A line with no figure (BLOCKED_RFI / NA) is NOT_BOOKED: nothing to downgrade.
 | Strap beams SB1 - SB3 (STRAP-MAIN) | BAR ENDS development 40 d .. 70 d | NOTE9_OUTSIDE_GROUP | 3 | 153.940 .. 269.395 | HELD | BLANK |
 | Ground-beam main, BAR ENDS lines with no figure | (BLOCKED_RFI) | NOT_BOOKED | 23 | blank | KEEP (already blank) | blank |
 | Ground-beam procurement laps (GB-MAIN, runs 7D0 / FC, 170 / 7C3) | 1 lap per bar, 40 d .. 70 d | NOTE9_OUTSIDE_GROUP | 2 | 18.204 .. 31.858 | HELD | BLANK |
-| Slab development (SLAB-BOTTOM-MAIN), T-318 re-booked | none (note 9 dropped) | REBOOKED_T318 (8 NA, 31 + 59 BLANK) | 98 | blank | KEEP | blank |
+| Slab development (SLAB-BOTTOM-MAIN), T-318 re-booked | none (note 9 dropped) | NOT_BOOKED on V3.0.27 (8 NA, 31 + 59 BLANK; `--t318` labels them REBOOKED_T318) | 98 | blank | KEEP | blank |
 | Slab development drawn straight part (T-318 part lines) | p.15 w - 0.040 m, drawn | PRINTED (p.15 drawn bar part, not a lap) | 59 | 136.573 .. 150.695 | KEEP | 136.573 .. 150.695 |
 | Neck starters ø16 (NECK-STARTER-*) | neck height + lap | PRINTED (note 9 + p.13 40 ø, F-T366-1 CONFLICT) | 28 | blank (BLOCKED_RFI) | KEEP (no figure) | blank |
 | Slab temperature bars | 40 x DIA | PRINTED (p.15 NOTE 1); group blocked (no 160 mm row) | 3 | blank | KEEP | blank |
 | Pool / stair / tank (T-359 scope) | 2 x 40 d .. 2 x 70 d | NOTE9_OUTSIDE_GROUP | 22 | 373.390 .. 718.480 | LISTED only (finding F-T373-2) | unchanged here |
 
 **Totals for the downgrade record (released route): 351 lines, valued (BOUNDED_EXPOSURE) kg 3,001.680 .. 5,359.210 ->
-BLANK by name.** None of them is RELEASED: the released STR.REBAR 10,250.167987 kg (V3.0.27, T-318) is unchanged. The
-candidate's bounded STR.REBAR range 15,250.786488 .. 21,621.544938 kg (V3.0.27) becomes **12,249.106488 ..
-16,262.334938 kg** plus 351 more BLANK lines (-19.7 % .. -24.8 % of the bounded range, all of it unsupported basis, not
+BLANK by name.** None of them is RELEASED: the released STR.REBAR 10,250.167987 kg (V3.0.27) is unchanged. The candidate's bounded
+STR.REBAR range 14,278.249488 .. 19,646.877938 kg (V3.0.27, reproduced) becomes **11,276.569488 .. 14,287.667938 kg**
+plus 351 more BLANK lines (-21.0 % .. -27.3 % of the bounded range, all of it unsupported basis, not
 a measured reduction of steel: the beams, columns and ground beams still need SOME end / lap length, which stays HELD
 until an authority is printed or answered). By floor: GF 166 (136 beam + 30 column), 1F 98, 2F 46, FOUNDATION 41.
 
@@ -101,12 +108,10 @@ freelancer reinforcement is a kg/m3 lump (44.19 t) with no end / lap row: **RULE
 
 ## 6. Findings and what is missing
 
-- **F-T373-1 (V3.0.27 not re-run end to end in this run).** The V3.0.27 view is the V3.0.16 extract (= V3.0.17, T-297)
-  plus the T-318 re-booking by line id. T-318's own validation reports concrete, formwork and every non-rebar line
-  byte-identical and STR.REBAR moved only on the 196 slab bar-end lines; T-338 changed printed formulas of VALUED released
-  lines only (none of the 351). A reproduction run was started on the Drive copies (s.0); if it completed, its result is
-  in the board handoff; otherwise the Checker re-binds on its own V3.0.27 with the same command (the binder reads the
-  engine's line form directly) and the counts must equal s.2.
+- **F-T373-1 (tooling: the Drive connector now saves raw binary).** `agent_env.sh decode` base64-decodes only; the
+  connector's saved zip / dxf were raw bytes ('Invalid base64-encoded string'). This run base64-encoded them in the
+  scratchpad and passed them through `decode` (the files still land only in the private folder). For the Lead /
+  main chat: `decode` should accept raw bytes (main-branch script; no agent edits it).
 - **F-T373-2 (pool / stair / tank: note 9 outside its group, outside the route).** 22 BOUNDED_EXPOSURE lines,
   373.390 .. 718.480 kg ('2 x 40 d .. 2 x 70 d' development on stair waist / step / landing bars and pool families) rest
   on note 9 too. Same rule applies; T-359 owns them. For the Lead: a row (or T-359 acceptance) for the same record.
