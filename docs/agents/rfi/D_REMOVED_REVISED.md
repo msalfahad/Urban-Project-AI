@@ -1,6 +1,6 @@
 # D. Removed and revised RFI rows, with evidence (internal; owner 2026-10-29 22:05)
 
-Lead 2026-10-30 00:15-01:00 UTC. Source package: CLARIFICATIONS_CONSULTANT_2026-10-24.md (30 rows S1-S18, A1-A12 at the
+Lead 2026-10-30 00:15-00:25 UTC. Source package: CLARIFICATIONS_CONSULTANT_2026-10-24.md (30 rows S1-S18, A1-A12 at the
 Lead's 10-25 check, then S19-S23 and A13 added, plus the missing rows G1-G4). Evidence = merged, Checker-verified tasks
 on the engine branch (head b12e10de at this revalidation) and the Checker's CLOSABLE LINES table (SCOREBOARD.md).
 

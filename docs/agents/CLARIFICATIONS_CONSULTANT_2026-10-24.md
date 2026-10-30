@@ -1,6 +1,6 @@
 # Consolidated designer / consultant RFI package, Alsenan (owner 2026-10-24; DRAFT, NOT TO BE SENT YET)
 
-LEAD 2026-10-30 00:50 (owner 2026-10-29 22:05): this file is now the SOURCE register only; the revalidated, consultant-
+LEAD 2026-10-30 00:25 (owner 2026-10-29 22:05): this file is now the SOURCE register only; the revalidated, consultant-
 facing questions are in docs/agents/rfi/ (A_PRIORITY_RFI.md, C_UNLOCK_MATRIX.md, D_REMOVED_REVISED.md; B_REMAINING_RFI.md
 next Lead run). Rows here are not edited further. STILL NOT SENT.
 

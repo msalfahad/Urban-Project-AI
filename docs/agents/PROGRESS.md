@@ -1,6 +1,6 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 00:50 UTC (Lead). Previous version: 2026-10-29 20:30 UTC. The released numbers did not change
+Last update: 2026-10-30 00:25 UTC (Lead). Previous version: 2026-10-29 20:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
 line among them); released: 0. The candidate under review is still V3.0.24 (not released); nothing entered it tonight.
@@ -1180,7 +1180,7 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-30 00:50)
+(Lead 2026-10-30 00:25)
 - Checker: the earthworks binding, then the outdoor floors fix when handed in, and a light check of every sheet citation
   in the priority consultant questions.
 - Structural (worker 1): the four below-ground concrete range findings (after the earthworks check), the soil treatment
@@ -1209,7 +1209,7 @@ Not measured, and paused by your order (Alsenan first).
 
 ## Waiting for the owner
 - No decision for you today. Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.
-- The consultant list (30 Oct 00:50): the priority part is revalidated and complete (36 questions, 9 lines), NOT sent;
+- The consultant list (30 Oct 00:25): the priority part is revalidated and complete (36 questions, 9 lines), NOT sent;
   the checker re-checks the sheet citations, the remaining part follows next run. Older note, superseded: NOT ready to
   send yet (your 23:57 instruction). I checked all 30 rows against the
   merged, checked work: none is answered by the drawings, so none was removed; two "search still open" notes are now

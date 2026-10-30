@@ -1,6 +1,6 @@
 # A. Priority RFIs, Alsenan chalet (DRAFT, NOT TO BE SENT; owner 2026-10-29 22:05)
 
-Prepared by the Lead 2026-10-30 00:15-01:00 UTC (run started 00:13) from CLARIFICATIONS_CONSULTANT_2026-10-24.md,
+Prepared by the Lead 2026-10-30 00:15-00:25 UTC (run started 00:13) from CLARIFICATIONS_CONSULTANT_2026-10-24.md,
 revalidated against the merged, Checker-verified evidence up to engine head b12e10de (T-352) and the board at d04da3be.
 Companion files: D_REMOVED_REVISED.md (what was removed or changed, with evidence), C_UNLOCK_MATRIX.md (internal: which
 questions together close each whole BOQ line), B_REMAINING_RFI.md (next Lead run: the remaining questions).

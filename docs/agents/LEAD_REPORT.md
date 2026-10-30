@@ -1,5 +1,100 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-30 00:27 UTC
+
+Drive readable: nothing created in the Alsenan project folder since 29 Oct 20:00 (no new drawings, workbooks or images;
+no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared automatically
+(00:12, 'setup by auto'). Working branch dd4c9f8f -> b12e10de (five Checker merges via 'engine push'); no owner commit.
+Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: three entries of 29 Oct (21:22,
+22:05, undated four-point answer) applied, none undone.
+
+HEADLINE: the consultant question list is revalidated as you asked (priority part complete: 36 individual questions that
+together close 9 whole BOQ lines; NOT sent); five pieces merged with no candidate quantity moving; the outdoor floors
+package was sent back once for one exact fault (pool deck); the earthworks binding is handed in. Your two 29 Oct
+answers are applied (slab bar ends released to integration; mesh strip / sharmat ties first for worker 2). Nothing new
+needs your decision.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; candidate of
+record ARCH_TAKEOFF_V3.0.24 (json 19394733), NOT RELEASED; whole verified lines in the candidate export 2, released 0;
+scored verified share unchanged: CONCRETE 12.50 %, other trades 0):
+- OUTDOOR FLOORS (m2), Gate B REJECTED 23:05 (narrow): Checker's own hand measures agree on 7 of 8 added lines (court
+  interlock 119.5427 vs 119.5416, -0.001 %; north walk 21.021 vs 21.0142; entrance marble 3.36 / 1.96 / 5.18; porch
+  10.68; pool water-face finish bound 21.308727 on the printed rim 1.15). Pool deck ENGINE_WRONG: 7.105836 vs 6.548911
+  m2 (+8.5 %): the deck face ran to the window frame line and took the 0.561447 m2 recess in front of the frame, which
+  the merged ledgers give to the glazing reveal strip. Rework r2 = deck input, closure text, rule, test. Yard vs
+  freelancer 151.80 m2 (-0.37 % before the fix; he has no pool deck row): comparison only, never proof.
+- STAIR FORMWORK (m2, a category missing from the BOQ), MERGED 00:05: 7 side faces measured 4.105400 m2 (well sides
+  0.831293 / 0.851278 / 0.834478 DRAWING-CONFIRMED; round-stair sides 0.775867 + 2 x 0.314245 and landing edge 0.184
+  ASSUMED — OWNER-APPROVED via Q-50 A / DRAWING-CONFIRMED); Checker's own re-measure within 0.000002 m2; 16 sides
+  against walls / members HELD 0 .. area (sequence not printed), 4 unbounded blank. Family 32.822 -> 36.927 m2
+  CALCULATED, not wired (formwork integration). Freelancer: no row. Stair system stays PARTIALLY VERIFIED.
+- EARTHWORKS (m3, missing from engine AND freelancer), T-347 READY 23:56: 256 buried components each bound to one
+  concrete / WP line (double count 0; footing closures 0.000000 m3 on 24 lines; screed 5.4925 m3, membrane 109.85 m2).
+  Only BOUNDS can be given: footing pits AT_LEAST 188.017 m3 (+129.234 m3 per metre of extra depth), pool AT_LEAST
+  17.777 m3; everything else HELD by name (founding level, working space, side slope, bulking: no drawing value or
+  rule). Four lines below ground carry an old or one-sided range (SB3 in F3 0.1181 vs 0.2683 m3; strap blinding; the
+  boundary lower band 7.2204 vs 5.639 .. 11.033; six interior ground beams at the 0.30 depth class only): one goes into
+  the earthworks integration, three to a new investigation.
+- EXTERIOR PLASTER (m2): faces above the pool MERGED 23:10 after one rework (pier corner arc +0.170 m, NW-3 return
+  1.252688 + 0.427737 m2; freelancer rows 70 / 71 / 74 = 109.890 m2 reconciled, residual 0); rows 65 / 68 / 69 MERGED
+  20:59 (his 9.000 m2 double count confirmed by position: ENGINE_RIGHT).
+- BLOCKWORK (m2), MERGED 20:59: three established parts 47.3866 m2 now ASSUMED — OWNER-APPROVED (Q-55 2.20 m doors);
+  156.5697 m2 unchanged. Engine blockwork still BLANK in the candidate vs freelancer 1,260.69 m2: integration next
+  after the outdoor floors.
+- FORMWORK FILL (m2), MERGED 22:02: 201 held rows now blank (were 0.000000); one understated stair row found and blanked.
+- CONCRETE, REINFORCEMENT quantities, WP, CEILINGS, INTERIOR PLASTER: no quantity change since 20:30.
+- Learned (lessons register, PROPOSED): (1) a floor face meeting a glazed band stops at the band's court face; the recess
+  in front of the frame is the opening's reveal; a reused face is re-tested on every edge (T-343, the Checker corrected
+  its own earlier reuse); (2) a formed face is classified by reading the plan beyond the free edge to the nearest member
+  (T-352); (3) a derived earthworks quantity is built only after every source line is bound once; a printed minimum
+  depth is a bound, never the founding level (T-347, pending its verdict).
+- Missing: designer answers (now the priority list), existing ground level (no sheet prints it), lift data (supplier).
+
+CONSULTANT QUESTIONS (your 22:05 instruction; files docs/agents/rfi/; NOT SENT):
+- G1-G4: G1 (column level where the two ground slabs meet) and G4 (pantry doorway strip, an engine error: +1.100 m2
+  floor) are SETTLED from the drawings and removed; G2 is narrowed (the stair waist is printed 'T 16' on every main
+  and round-stair flight except D1, E1 and the curved part) and written with G3 (tower dome, drums) from the merged
+  sheet search. All four are source-verified by a Checker-passed task; the Checker now re-checks every citation in A.
+- A_PRIORITY_RFI.md: 36 questions (28 structural, 8 architect), each with discipline, sheet / detail / handle, the
+  missing or conflicting information, what we ask, and the BOQ line and its status; our measurement conventions kept
+  out. The nine priority groups all remain valid and are now all complete (windows; pool concrete; footings; blinding
+  (adds the lift-raft blinding projection); ground beams; beams; columns; stairs and domes; floor area (adds the space
+  under the round stair, a designer item never filed before)). C_UNLOCK_MATRIX.md (internal) lists which questions
+  together close each line; D_REMOVED_REVISED.md gives the evidence for every removal and change.
+- Next Lead run: B_REMAINING_RFI.md (reinforcement S9-S12, S19-S22; blockwork S14 tie beam, S16, S17, A4, A7, A10; finishes
+  A1, A2, A5 build-up, A8, A12, A13; S13; A3 main door / SX-01; A9 passage / D-55; A11; the SHARMAT restraint question
+  worded as "does the structure require a wall-to-column restraint, and its specification", never as our design; S18
+  as a document-control item). Lift-pit depth and lift landing door heads go to the lift-supplier list.
+
+GATES: lowest open gate 1: T-343 r2 (TODO, first in lane I); gate 2: T-347 READY, T-355 / T-349 / T-351 / T-356 TODO,
+T-279 next in lane I; gate 3: T-318 TODO (after T-279), T-354 / T-357 TODO.
+
+MILESTONES: M2 MET (29 Oct) unchanged. M3 / M4 started. Week 2 (3 Nov): outdoor floors r2 30 Oct; blockwork
+integration 30-31 Oct (the week's first verified-quantity increase if it passes first time); slab bar-end split 31 Oct;
+reveals / sills 1 Nov; formwork (incl. stair sides) not before 2-3 Nov: 13 integration rows run one at a time.
+
+CLOSE THE LOOP since 20:30: WORKED x5 (T-333 r2, T-346, T-332 r2, T-348 r2 after one narrow rework, T-352); PARTIAL x1
+(T-343 Gate B, exact fault named, r2 TODO first in lane I); READY 1 (T-347, CHECKER-RUNS 0.5 h). Decisions: T-199
+acceptance + the T-352 stair-side addendum and notes; T-350 acceptance + the SB3 held-range fix; NEW T-356 (three
+buried-concrete range findings, S) and T-357 (site clearance and the existing-ground reference, S, gate 3); T-318
+released (TODO after T-279); T-355 first in lane A; element register +5 rulings; 3 lessons rows. Process: T-343's
+rework row now begins with TODO (same status-word lesson as T-332).
+
+VERIFIER QUEUE (READY 1): standing slot T-132; (1) Gate A T-347 (bound arithmetic re-derived by the Checker, bounds
+never quantities, blank on the committed CSV); (2) light run: citation check of every A question; (3) Gate B T-343 r2
+when READY; (4) T-355, then T-356 / T-354 / T-349.
+
+TEAM HEALTH: every run since 20:30 STARTED and closed with a final line (Checker 20:52, 21:53, 22:51, 23:51; Worker 2
+20:41, 22:40; Worker 1 21:20, 23:20; Worker 3 21:01, 23:00): 10 / 10, all SUCCESS; every self-check PASS. All code agents
+ran code. Scout paused (owner). Dashboard last refreshed 29 Oct 13:03, next 00:54. Queue check: 47 actionable rows,
+0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none today (Q-77 and the slab bar-end split are answered and applied).
+
+NEEDS FIXING (only you): (1) the consultant priority list is ready for your review once the Checker's citation check is
+written (it is NOT sent); (2) unchanged: an existing-ground level survey if one exists (every excavation depth stays a
+lower bound without it); the SHA-256 fingerprints of the two sealed reference take-offs.
+
 ## LEAD REPORT 2026-10-29 20:30 UTC
 
 Drive readable: nothing created anywhere on Drive since 29 Oct 12:25 (no new drawings, workbooks or images; no photo
@@ -193,99 +288,4 @@ NEEDS FIXING (only the owner):
     spaces; every code agent works around it by hand every run (raised 28 Oct 21:20; still open).
 (2) The automatic prepare can leave the venv without pytest (Worker 1 16:21, Worker 2 13:44, earlier runs); one `setup`
     repairs it. A pytest import check in `status` / auto-setup would stop it.
-(3) Designer / consultant RFIs (S1 - S23, A1 - A13) stay unsent until you decide to send the package.
-
-## LEAD REPORT 2026-10-29 12:30 UTC
-
-Drive readable: nothing created or modified in "Urban BOQ private data" or the Alsenan folder since 29 Oct 08:00; no
-new images (no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared
-automatically, then `setup` run once by hand (12:26) because this session's venv had no pytest. Working branch
-1c82807b -> c4246877 (five Checker merges via 'engine push'); no owner commit. Self-check: codemap PASS, pytest t061
-FAIL on the first run ('No module named pytest'), PASS after setup; freeze PASS (0). OWNER_SESSION_CHANGES: no new entry
-since your 28 Oct 21:44 'Halve runs' (applied).
-
-HEADLINE: the plaster coat behind wet-wall tile is in the candidate (V3.0.22) and passed the checker first time; four
-more pieces merged; the blockwork and formwork tables that make those integrations plain wiring are handed in. The
-checker's room census shows the 28 Oct milestone is not met on rooms (8 labels no line cites); a task now settles each.
-No run failed; nothing new needs your decision.
-
-ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; candidate of
-record now ARCH_TAKEOFF_V3.0.22 (json 7199c8b6), NOT RELEASED; whole verified lines in the candidate export 2,
-released 0; scored verified share unchanged: CONCRETE 12.50 %, other trades 0):
-- INTERIOR PLASTER (m2), V3.0.22 Gate B PASS 11:38: candidate FIN.PLASTER 234.9481 -> 575.2519 (+340.3038 on 12 blank
-  wet-room / pantry lines = the tile faces, ASSUMED — OWNER-APPROVED UP-FIN-PAINT-001 + Q-48 A heights); 6 rooms HELD
-  blank; drawing band above the tile 0 .. 23.0970 HELD beside every line (Q-52 C). Checker hand-checked all 12 lines
-  (<= 0.0002 m2; 1F-12 8.700 x 3.35 - 1.080 - 1.760 = 26.305, 0.000 %). vs freelancer on the 11 rooms +4.24 %:
-  RULE_DIFFERENCE (he prices no backing coat; height rule), openings ENGINE_RIGHT.
-- WET-AREA WATERPROOFING (m2), binding MERGED 11:58 (not yet in the candidate): floor 85.621 -> 85.576 (pantry column
-  -0.045, ENGINE_WRONG, -0.33 %), up-turn 25.115 -> 25.215 (1F east bath), thresholds 1.930 -> 2.020 (D-GF-14 / D-1F-04
-  0.219 / 0.132 -> 0.120 by jamb read; pantry D120 0.200 new), 15 transitions one per door; pool 29.582 m2 + 1.525 m3.
-  10 window up-turns with no drawn sill: your method (ASSUMED-OA), drawing reading HELD 0 .. 1.380 m2 beside.
-- CEILINGS (m2), binding MERGED 11:41: 36 / 36 candidate ceiling lines unchanged; double count with wall plaster /
-  paint / tile 0.000; decor 362.006 DC vs candidate 403.163 (-10.21 %) vs freelancer 409.58 (-11.62 %), every piece of
-  the difference named; hidden band above the decor 0 .. 53.851 HELD (Q-52 C); ceiling paint has no line yet (named).
-- BLOCKWORK (m2), table READY 12:15: the 21 candidate masonry m2 / m3 lines are all still BLANK; the table fills them:
-  422.5314 determinate (297.847 already VERIFIED on 18 walls) + 156.5697 established parts + drop walls (46.8019 -
-  7.9131) + 28 walls HELD by name; m3 75.80126 determinate. Freelancer 1,260.69 m2: no total verdict while walls are
-  held. Parapet block 0 .. 60.5965 in NO line: exclusive alternative of the parapet RC (material HELD, Q-65 C).
-- FORMWORK (m2), table READY 12:15: 1,189 / 1,189 faces tied to the same concrete lines; pool faces re-measured
-  (water 13.283 + above ground 2.699 CALCULATED, 11.697 formed, back face HELD 0 .. 5.600, Q-28); F8 7.600 -> 5.743 +
-  CONFLICT HELD 0 .. 1.857 (pool envelope); chain 1,078.274 -> 1,061.727 with every step named, residual 0; parapet
-  faces 81.589 .. 202.782 HELD; lift pit HELD (D-43).
-- REINFORCEMENT (kg): no quantity change. Export check found 350 of 388 released rebar lines (8,311.066 of 9,185.928
-  kg, 90.5 %) printing a formula that starts 'held:' on a valued line since V3.0.3; the kg are right (count x length x
-  kg/m, Checker reproduced 16.751 kg). Text fault, fix queued (export integrity, gate 1).
-- CONCRETE / BLINDING: no change; verdict records and the blinding downgrade (FF HELD >= 2.070 m3) carried to V3.0.22.
-- Learned (lessons register, PROPOSED): a line's state, figure and printed formula must agree, checked on every
-  candidate before Gate B (the 'held:' text survived 19 versions unchecked); every room label must be bound to a line,
-  not-applicable with evidence, or missing, checked on every candidate (8 labels fell out silently over 22 versions).
-- Missing (unchanged): designer answers (S1 - S23, A1 - A13, Q-65 C parapet material, D-39, D-41, D-43, Q-21 C);
-  parapet RC line (next in lane I); blockwork, formwork, ceiling, wet-area WP, reveals / sills, roof layers and exterior
-  plaster integrations (queued, tables done or in work).
-
-GATES: lowest open gate 1: T-342 (M2 room-label binding, lane A first), T-341 (deductions fill table, lane S first),
-T-338 (export text fix, lane I after T-319); gate 2: T-319 TODO (lane I next), T-332 / T-333 READY, T-337 / T-339 /
-T-340 TODO; gate 3: T-318 BLOCKED-OWNER.
-
-MILESTONES: M2 (28 Oct) LATE, NOT MET on rooms: census statement written 10:00: openings 0 silent omissions (met);
-rooms 8 named label omissions (GF bathroom AT19 the material one: a wet-room label inside no measured room); T-342
-decides each, estimate 30 Oct, then the Checker restates. Week 2 (3 Nov): parapet RC 29 Oct evening, export text fix
-30 Oct, blockwork into the candidate 30 - 31 Oct (the first verified-quantity increase of the week if it passes first
-time); formwork by 3 Nov at risk (five lane I rows ahead of it at one lane I run every 2 h).
-
-CLOSE THE LOOP since 08:20: WORKED x5 (T-330 export deductions check, T-331 backing fill Gate B first time, T-334
-line-state check, T-335 ceiling binding, T-336 wet-area WP binding); READY 2 (T-332, T-333, both CHECKER-RUNS 0.3 h).
-No PARTIAL, FAILED or REJECTED. Decisions: M2 census -> NEW T-342; T-334 findings -> NEW T-338; T-330 FLAG list on the
-current candidate -> NEW T-341 (fill table for T-246); roof layers -> NEW T-339 (binding for T-328); reveals / sills
-with the T-336 threshold corrections and a wet-room reveal vs backing / tile cross-check -> NEW T-340 (binding for T-326
-/ T-327); T-319 QUEUED -> TODO on V3.0.22 with the T-333 block alternative named exclusive.
-
-VERIFIER QUEUE (READY 2): standing slot T-132; (1) Gate A T-333 (blocks T-279); (2) Gate A T-332 (blocks T-199); (3)
-Gate B T-319 when READY; (4) Gate A T-342 when READY (M2); (5) T-341 / T-339 / T-340 / T-337, then Gate B T-338.
-
-LANES (queue check: 46 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-341, T-339; A worker 2: T-342,
-T-337, T-340; I worker 3: T-319, T-338, T-279, T-326, T-327, T-199, T-328, T-284, T-246, T-310, T-314, T-318 (only after
-your approval). TODO 6 (target 8 - 12: lane I holds one TODO at a time on its shared files; structural quantities wait
-on designer items).
-
-TEAM HEALTH (since 08:20): every run closed with a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x3 incl.
-one overlap guard); all agent self-checks PASS; no idle runs. Worker 3 took the blockwork table (lane S) because no lane I
-row was claimable: allowed by the cross-lane rule. Recurring tool issue, every code agent every run: the Drive connector
-saves raw binary and `agent_env.sh decode` accepts only base64 and no spaces in names; each agent re-encodes in its
-scratch folder (sha256 checked; no private data entered the repository). Dashboard 00:54 SUCCEEDED (next 12:54); Main
-04:31 SUCCEEDED. Scout paused.
-
-OWNER PACKAGE (2 items, unchanged; neither blocks the critical path, not pushed)
-1. Slab reinforcement bar-end split into the CANDIDATE (not the release): full ERS s.6 text in archive/LEAD_REPORT_older.md
-   (26 Oct 06:15 entry): A keep note-9 lengths / B split with every undrawn part HELD; impact 0.56 .. 1.03 t plus the
-   T-316 findings (0.12 .. 0.15 t missing across edge beams, 0.08 t past short spans); recommendation B; next action T-318.
-2. Q-77 joint mesh over block-to-concrete joints: full s.6 text in the 29 Oct 00:15 entry (archive/LEAD_REPORT_older.md):
-   A not an item / B your finish band about 281.6 m inside + 230.1 m outside / C full drawn joint about 528.2 + 230.1 m;
-   recommendation B.
-
-NEEDS FIXING (only the owner):
-(1) `scripts/agent_env.sh decode` (main) should accept the raw binary the Drive connector now saves, and names with
-    spaces; every code agent works around it by hand every run (raised 28 Oct 21:20; still open).
-(2) The automatic prepare can leave the venv without pytest (this run and 28 Oct 20:20); one `setup` repairs it. A
-    check in `status` / auto-setup that pytest imports would stop a self-check FAIL at the start of a run.
 (3) Designer / consultant RFIs (S1 - S23, A1 - A13) stay unsent until you decide to send the package.

@@ -42,7 +42,7 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
-## 2026-10-30 00:50 (lead run; covers 20:30 - 00:50)
+## 2026-10-30 00:25 (lead run; covers 20:30 - 00:25)
 
 - T-333 r2 blockwork status labels: WORKED (Gate A PASS 20:59; 3 parts 47.3866 m2 -> ASSUMED — OWNER-APPROVED (Q-55 2.20 m door deductions), 156.5697 m2 unchanged; own door widths 0.000 %). Decision: T-279 (blockwork into the candidate) unblocked, after T-343 in lane I.
 - T-346 freelancer exterior rows 65/68/69: WORKED (Gate A PASS 20:59; 93.150 = 79.213 bound + 9.000 his double count by position + 4.937 named; ENGINE_RIGHT on the double count). Decision: none.

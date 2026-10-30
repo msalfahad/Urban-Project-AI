@@ -46,7 +46,7 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
-### Lead 2026-10-30 00:50 (from T-332 r2 / T-346 / T-333 r2 / T-348 r2 / T-352 MERGED; T-343 Gate B REJECTED narrow; T-347 READY; new T-356, T-357)
+### Lead 2026-10-30 00:25 (from T-332 r2 / T-346 / T-333 r2 / T-348 r2 / T-352 MERGED; T-343 Gate B REJECTED narrow; T-347 READY; new T-356, T-357)
 
 - BURIED STRUCTURE (T-347, pending its verdict): each buried element's volume is owned ONCE by its concrete / WP line id
   (256 components; footings / necks / ground beams / straps CONC.*, footing-layer blinding CONC.BLINDING, the 0.07
