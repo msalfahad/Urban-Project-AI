@@ -1,0 +1,9 @@
+sheet,ref,layer,class,owner
+ST p.8,note 13,sulphate-resisting cement for plain and reinforced concrete in contact with soil and groundwater,CONCRETE_MATERIAL,"concrete lines (material specification), not a soil surface"
+ST p.8,note 22,7 cm cover for concrete against soil,REBAR_COVER,rebar lines
+ST p.8,notes 10 / 12,no foundation on fill; founding level and soil check by the contractor,FOUNDING_LEVEL,"earthworks (Q-21 C, T-170 / T-347 / T-357)"
+ST p.13,isolated-footing details (both),two layers liquid waterproofing to every surface in contact with earth,FOUNDATION_WATERPROOFING,foundation WP lines (T-219 / T-263 / T-270 / T-353)
+ST p.13 / p.14,under-footing build-up,5 cm screed + membrane + 10 cm plain concrete,UNDERLAY_BLINDING,blinding / underlay lines (T-206 / T-233)
+ST p.13 / p.14,fill labels,well graded clean compacted fill from excavation material; compacted soil under the GF slab,FILL,backfill / Z2 fill (T-320 / T-347)
+ST p.14,lift detail,'Slab on grade.' named; waterproofing membrane + protection board on the pit walls,SLAB_AND_PIT_WP,GF slab and lift-pit WP lines
+ST p.7,pool detail,5 cm screed + 5 cm insulation membrane + 10 cm plain concrete under the pool,POOL_BUILD_UP,pool lines (T-309)

@@ -1,0 +1,32 @@
+sheet,searched,soil_treatment,read,notes_read
+ST p.1,True,absent,110 dpi,"3 bullet notes (slab thickness, neighbour-side ground beams on black brick from founding level, formwork stripping time); DXF S-NOTE 78 / 7D / 7E / B8"
+ST p.2,True,absent,110 dpi,foundation plan; no note block
+ST p.3,True,absent,110 dpi,ground-beam plan; NOTES (work to stated dimensions) + LEGEND
+ST p.4,True,absent,110 dpi,GF roof slab; parapet box notes 1-2 (DXF D5 / D7 / D8 / DA) + NOTES + LEGEND
+ST p.5,True,absent,110 dpi,1F roof slab; parapet box notes 1-2 (DXF DF / E0 / E1 / E3) + NOTES + LEGEND
+ST p.6,True,absent,110 dpi,2F roof slab; parapet box notes 1-2 (DXF E8 / E9 / EA / EC) + NOTES + LEGEND
+ST p.7,True,absent,110 dpi,pool / dome details; NOTES (stated dimensions) + LEGEND; pool build-up labels (DXF 1876)
+ST p.8,True,absent,130 dpi,RECOMMENDATIONS notes 1-24 read in full
+ST p.9,True,absent,110 dpi,"bearing table + boxed notes 1-4 (DXF 1B33, 1E0E, 1E10, 1E11, 1E12); schedules"
+ST p.10,True,absent,110 dpi,simple-beam schedule; no note block
+ST p.11,True,absent,110 dpi,continuous-beam schedule; no note block
+ST p.12,True,absent,110 dpi,continuous-beam schedule; no note block
+ST p.13,True,absent,110 dpi,"typical footing / ground-beam / lintel details: every label read (fill, compacted soil, earth-contact waterproofing, under-footing build-up)"
+ST p.14,True,absent,110 dpi,"lift footing, boundary wall, parapet details: every label read ('Slab on grade' named at the lift pit)"
+ST p.15,True,absent,110 dpi,column / slab details; NOTE 1-3 (temperature bars)
+ST p.16,True,absent,110 dpi,stair / rib / beam-opening details; no note block
+ARCH p.1,True,absent,40 dpi (part 01-02),GF + 1F area plans; no note block
+ARCH p.2,True,absent,40 dpi (part 01-02),2F area plan + total; no note block
+ARCH p.3,True,absent,60 dpi (sheet03) + DXF text census,"GF plan; title block only, no note block"
+ARCH p.4,True,absent,40 dpi (sheet04) + DXF text census,1F plan; no note block
+ARCH p.5,True,absent,40 dpi (part 05-06) + DXF text census,2F plan; no note block
+ARCH p.6,True,absent,40 dpi (part 05-06) + DXF text census,SE elevation; no note block
+ARCH p.7,True,absent,40 dpi (part 07-08),SW elevation; no note block
+ARCH p.8,True,absent,40 dpi (part 07-08) + DXF text census,NW elevation; no note block
+ARCH p.9,True,absent,40 dpi (sheet09),NE elevation; no note block
+ARCH p.10,True,absent,60 dpi + 150 dpi on the ground zone (sheet10),"SECTION A-A: levels and dimensions only, no build-up label under the GF floor"
+ARCH p.11,True,absent,60 dpi (part 11-12),SECTION B-B: levels and dimensions only
+ARCH p.12,True,absent,60 dpi (part 11-12),fence elevation / plan / section; no note block
+SAN p.1,True,absent,200 dpi notes block,NOTES: one note (work to stated dimensions) + LEGEND (drainage symbols)
+SAN p.2,True,absent,50 dpi,same notes block as p.1
+SAN p.3,True,absent,50 dpi,same notes block as p.1

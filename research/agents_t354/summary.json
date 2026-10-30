@@ -1,0 +1,47 @@
+{
+ "rule": "SOIL_TREATMENT_V1",
+ "b1_05_scope": {
+  "rule": "SOIL_TREATMENT_V1",
+  "status": "NOT_IN_DRAWN_SCOPE",
+  "refs": [],
+  "bases": [],
+  "area_m2": null,
+  "unsearched": [],
+  "reason": "all 31 sheets searched; no note, specification line or answered rule requires soil treatment"
+ },
+ "sheets": {
+  "ST": {
+   "sheets": 16,
+   "requires": 0
+  },
+  "ARCH": {
+   "sheets": 12,
+   "requires": 0
+  },
+  "SAN": {
+   "sheets": 3,
+   "requires": 0
+  }
+ },
+ "dxf_records": {
+  "ST": 2253,
+  "P": 276
+ },
+ "dxf_hits_by_class": {
+  "FALSE_POSITIVE": 1,
+  "NOT_SOIL_TREATMENT": 2
+ },
+ "related_layers_not_soil_treatment": 8,
+ "specification_issued": false,
+ "freelancer_row": null,
+ "engine_line": null,
+ "quantity_m2": null,
+ "zones_if_required": [
+  "Z-S",
+  "Z-P",
+  "Z-T",
+  "Z-W",
+  "Z-POOL"
+ ],
+ "verdict_proposal": "NOT_IN_DRAWN_SCOPE: missing from both BOQs is correct for this set; no difference to reconcile (engine 0 lines, freelancer 0 rows, drawings require none)"
+}
