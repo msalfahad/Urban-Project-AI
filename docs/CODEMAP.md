@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 32 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1869 | pytest suites, one folder per round. |
+| `tests/` | 1870 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -426,7 +426,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3025.py` | 915 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.25 (T-343): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.24 (engine.source.arch_v30, |
 | `arch_v3026.py` | 708 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.26 (T-279): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.25 (engine.source.arch_v30, |
 | `arch_v3027.py` | 660 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.27 (T-318): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.26 (engine.source.arch_v30, |
-| `arch_v3028.py` | 644 | MEDIUM | 2 | ARCH_TAKEOFF_V3.0.28 (T-326): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.27 (engine.source.arch_v30, |
+| `arch_v3028.py` | 644 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.28 (T-326): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.27 (engine.source.arch_v30, |
 | `arch_v303.py` | 614 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.3 (T-151): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 / V3.0.2 |
 | `arch_v304.py` | 539 | HIGH | 31 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v305.py` | 515 | HIGH | 25 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
@@ -1248,7 +1248,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t323_slab_hatch/` | 2 |
 | `tests/t324_parapet_components/` | 2 |
 | `tests/t325_sills_thresholds/` | 2 |
-| `tests/t326_reveal_fill/` | 2 |
+| `tests/t326_reveal_fill/` | 3 |
 | `tests/t329_wet_backing/` | 2 |
 | `tests/t330_deductions_check/` | 1 |
 | `tests/t331_wet_backing_integration/` | 3 |
