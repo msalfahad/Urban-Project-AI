@@ -1,0 +1,49 @@
+{
+ "boundary_band": {
+  "crossing_m": 21.45,
+  "drawn_m": 91.94,
+  "free_m": 70.49,
+  "line": 7.2204,
+  "line_low_end": "NOT_ESTABLISHED",
+  "owner_A_provisional": 8.4588,
+  "pad_split_m3_each": 0.078,
+  "solid_range": [
+   5.6392,
+   11.0328
+  ]
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.24",
+ "candidate_lines_json_sha256": "193947338acda73040bb0e88045ad3097cd66b53e1fb7f5ba208d82b683f3b00",
+ "fill_rows": 11,
+ "gb_d34": {
+  "high_minus_line": 0.347967,
+  "line_sum": 1.943901,
+  "lines_single_value": 9,
+  "range": [
+   1.643901,
+   2.291867
+  ]
+ },
+ "rows": 15,
+ "schema": "URBAN_T356_SUMMARY_V1",
+ "strap_blinding": {
+  "decomposition_m3": {
+   "f10f_outline_unseen": 0.121505,
+   "gb_blinding_plan_deduction": -0.214938,
+   "merge_into_footing_band": -0.057181,
+   "own_strip": 0.910196,
+   "residual_unexplained": 0.012295
+  },
+  "ledger": [
+   0.0,
+   0.910196
+  ],
+  "line": [
+   0.377803,
+   0.771877
+  ],
+  "merged_reading": 0.853015,
+  "t233_high": 0.913,
+  "t233_minus_own_polygon": 0.002804
+ }
+}
