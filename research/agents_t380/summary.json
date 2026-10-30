@@ -141,7 +141,8 @@
   },
   "water_tanks": {
    "freelancer": 2,
-   "drawn": "NOT_PRINTED"
+   "drawn": "NOT_PRINTED as a count (one WATER TANK PLACE panel on ST p.6, merged T-221 s.5)",
+   "verdict": "UNRESOLVED"
   }
  }
 }

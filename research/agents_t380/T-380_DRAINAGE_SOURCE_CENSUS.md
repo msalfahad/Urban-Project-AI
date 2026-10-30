@@ -26,8 +26,10 @@ be scaled from them, whatever the printed 1/100.
 | SAN | 'Alsenan chalet project' / sanitary-7757.pdf, p1 GROUND / p2 FIRST / p3 2nd FLOOR DRAINAGE PLAN | drainage only: routes, sizes, slopes, MH, GCO, CO, SS, RWP, FD, RWD; legend (p1-p3) also lists R.E, NRV, AD, B.T.T.S., H/L, SUMP PUMP. Positions below are drawn-circle centres from the vector paths (`p<page>@x,y`, PDF points, rotation applied; the three pages share one frame) |
 | ARCH | 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf ab54dd55) | nothing: layer TOI is empty; no pipe, tank, pump, heater, drain or sewer text or block in modelspace or in the 442 block definitions (only 'mecvent', T-370) |
 
-Not read this run: the architectural PDF sheets (roof plan / elevations): a roof water tank could be drawn there (open
-item, s.6).
+Water tank, from merged evidence (cited, not re-derived; WORKFLOW_CONTROLS s.10.5): T-221 s.5 searched the structural and
+architectural sheets sheet by sheet: the structural plan ST p.6 prints a 'WATER TANK PLACE' slab panel (T18); the
+architect's elevations and sections A-A / B-B draw no tank; the sanitary sheets have no roof-plan tank. So a tank PLACE is
+printed, a tank (count, capacity, type) is not.
 
 ## 3. Census (acceptance a)
 
@@ -42,7 +44,7 @@ item, s.6).
 | Rain-water pipe ø4" | **5** | COUNTABLE | one per RWD: NE @867.9,263.9 (2F T/B -> 1F F/A-T/B -> GF free discharge), SE2 @897.5,564.6 and SW2 @409.7,572.8 (2F T/B -> free discharge on the 1F +5.50 roof), TER @937.4,597.5 (**1F drop drawn with no tag** -> GF F/A free discharge), ANX @120.5,606.1 (annex +4.30 T/B -> GF F/A free discharge) |
 | Floor drains / roof outlets | 19 / 5 | COUNTABLE (B12-01) | not recounted: merged T-370 register (Checker-verified), the connection ends of the branches below |
 | Rodding eye, NRV, area drain, sump pump | HELD | NOT_PRINTED (legend only) | legend p1-p3; symbol on no plan |
-| Water tank, water heater / booster, supply points | HELD | NOT_PRINTED | searched p1-p3 and P7757.dxf: absent |
+| Water tank, water heater / booster, supply points | HELD | NOT_PRINTED | searched p1-p3 and P7757.dxf: absent; for the tank, merged T-221 s.5: ST p.6 prints a 'WATER TANK PLACE' panel only |
 
 The stack chain is position-matched (identical frame on the three pages, tolerance 12 pt): 9 chains = 4 soil stacks + 5
 RWPs, exactly the counted items. Two links are printed on one side only (finding, not a conflict): SS-B (T/B on 1F, the GF
@@ -90,7 +92,7 @@ The freelancer gives **no pipe length** on either workbook: B12-02 m.l is NOT CO
 |---|---|---|---|
 | sanitary materials | 1 item (lump sum) | - | NOT COMPARABLE |
 | 'system' item | 1 item | no heater / booster printed | NOT IN THE DRAWING (UNRESOLVED scope) |
-| water tanks | 2 qty | no tank printed (sanitary + arch DXF) | NOT IN THE DRAWING; arch PDF roof sheet not yet read |
+| water tanks | 2 qty | one 'WATER TANK PLACE' panel printed (ST p.6, T-221 s.5); no tank count, capacity or type on any sheet | UNRESOLVED: NOT IN THE DRAWING as a count; HELD |
 | pit pump | 1 qty | sump pump = legend only | NOT IN THE DRAWING |
 | pit covers | 2 qty | 1 inspection chamber MH-1; no pit (soak-away / septic) printed | UNRESOLVED: +1 cover not explained by the drawings; MH-1 = 1 pcs DRAWING-CONFIRMED |
 | plumber labour | 1 item (lump sum) | - | NOT COMPARABLE |
@@ -118,8 +120,7 @@ a freelancer count is reconciled, never adopted; nothing is blocked).
 
 - Every B12-02 length (8 run groups): HELD until a dimensioned layout / invert levels exist; water supply HELD.
 - MH-1 size unit; branch diameters; SS-B / RWP-TER one-sided links (designer confirmation only if a line needs it).
-- Architectural PDF roof sheet: search for a water tank before the 'water tanks 2' row is closed (next lane A census or
-  the Checker's re-look).
+- Water tanks: number / capacity / type printed nowhere (a tank place is: ST p.6); RFI candidate (4) covers it.
 - Pool drainage / backwash: printed nowhere on the sanitary sheets (the pool is a freelancer lump sum).
 
 ## 7. Rule and lessons-register row (ERS s.4, s.7)

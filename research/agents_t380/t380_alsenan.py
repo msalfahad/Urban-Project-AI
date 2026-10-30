@@ -66,7 +66,9 @@ NOT_PRINTED_ITEMS = [
     I("AD", "AREA_DRAIN", "all", "p1-p3 legend 'AD AREA DRAIN'", R.LEGEND_ONLY,
       note="no area drain in the courts, the garden or the pool deck"),
     I("SUMP", "SUMP_PUMP", "all", "p1-p3 legend 'SUMP PUMP'", R.LEGEND_ONLY, note="symbol on no plan"),
-    I("TANK", "WATER_TANK", "all", "searched: p1-p3; P7757.dxf texts and blocks", R.ABSENT),
+    I("TANK", "WATER_TANK", "roof", "searched: p1-p3; P7757.dxf texts and blocks; ST p.6 / arch sections per merged "
+      "T-221 s.5", R.ABSENT, note="the structural plan prints a 'WATER TANK PLACE' slab panel (T-221 s.5): a place, "
+      "not a tank; no tank, count or capacity is printed and the architect draws none"),
     I("HEATER", "WATER_HEATER", "all", "searched: p1-p3; P7757.dxf texts and blocks", R.ABSENT),
     I("SUPPLY-PT", "SUPPLY_POINT", "all", "searched: p1-p3 (drainage plans only); P7757.dxf", R.ABSENT,
       note="no cold / hot water point, no kitchen sink or washer point (T-370 UNKNOWN)"),
@@ -132,7 +134,7 @@ T370_ENDS = {"FLOOR_DRAIN": 19, "ROOF_DRAIN": 5, "WC": 12, "BASIN": 17, "SHOWER"
 FREELANCER_SANITARY = [
     ("sanitary materials", "1 item (lump sum)", "NOT COMPARABLE: no quantity basis"),
     ("'system' item (unit not defined)", "1 item", "NOT IN THE DRAWING: no water heater / booster printed"),
-    ("water tanks", "2 qty", "NOT IN THE DRAWING: no tank printed (TANK = NOT_PRINTED, HELD)"),
+    ("water tanks", "2 qty", "NOT IN THE DRAWING as a count: one 'WATER TANK PLACE' panel is printed (ST p.6, T-221), the number of tanks is not: UNRESOLVED, HELD"),
     ("pit pump", "1 qty", "NOT IN THE DRAWING: sump pump = legend only"),
     ("pit covers", "2 qty", "MH-1 printed = 1 inspection chamber; a 'pit' (soak-away / septic) is printed nowhere: "
                             "UNRESOLVED, +1 not explained by the drawings"),
