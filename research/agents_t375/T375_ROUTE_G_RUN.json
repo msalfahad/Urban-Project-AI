@@ -1,0 +1,49 @@
+{
+ "schema": "T375_SPLICE_COUNT_V1:ROUTE_G_RUN",
+ "structural_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "profile": "research/urban_engine_m4_correctness/profile_st7757_m4.json",
+ "conventions": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+ "with_laps_calls": 4752,
+ "bar_groups": 1584,
+ "marks": [
+  "CB1",
+  "CB11",
+  "CB12",
+  "CB13",
+  "CB2",
+  "CB3",
+  "CB4",
+  "CB6",
+  "CB7",
+  "CB8",
+  "CB9"
+ ],
+ "stock_m": [
+  12.0
+ ],
+ "lap_d": [
+  40.0,
+  50.0,
+  60.0
+ ],
+ "longest_run_m": 8.483269,
+ "runs_over_stock": 0,
+ "readings_that_differ": 0,
+ "delta_kg_low_base_high": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "longest_by_role": {
+  "BOTTOM": {
+   "run_m": 8.483269,
+   "mark": "CB11",
+   "dia_mm": 18
+  },
+  "SUPPORT_TOP": {
+   "run_m": 3.4905,
+   "mark": "CB12",
+   "dia_mm": 18
+  }
+ }
+}
