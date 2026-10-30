@@ -86,13 +86,36 @@ HATCHES = [
 ]
 
 # Porch-mouth arch surround, own vector reading of the SE frame (layer 1). Bounding handles: 23A8 (left edge line of the
-# porch-mouth pier, 4.550 m), 23FE (band foot), 2416 (annex section cut line), 1CC8 (top of the crown block).
+# porch-mouth pier, 4.550 m), 23FE (band foot), 2416 (annex section cut line), 1CC8 (inner top line of the crown block;
+# the frame reaches 50 mm above it, so the crown's outer top line 2230, 10 mm higher, is inside).
+# r2 (Gate A rejection D-T360-1 re-examined): every one of the 10 blocks is drawn as a DOUBLE outline; each block's
+# face is decided per block by R.block_face (R-T360-6), and all 10 have their second ring drawn 10 mm outside, with the
+# joint and band lines ending on that outer ring. Inner outline -> outer ring, by handle (outer handles found on the
+# offset ring by an own census):
+BLOCK_RINGS = (
+    ("quoin 1", "23FC/23FD/2401/2402", "23F9/23FA/23FB/23FF/2400"),
+    ("quoin 2", "1CC9/1CCA/23AE/23AF", "1CC0/1CC1/1CE6 + band lines"),
+    ("quoin 3", "1CCB/1CCC/23B0/23B1", "1CBD/1CBE/1CBF/1CE5"),
+    ("springer", "1CCD/1CCE/23B2/23B3", "1CA6/1CBB/1CBC/1CE3"),
+    ("voussoir 2", "1CCF/1CD1/23B4/23B5", "1CA7/1CB8/1CBA/1CE1"),
+    ("voussoir 3", "1CD2/1CD4/23B6/23B7", "1CA8/1CB5/1CB7/1CDF"),
+    ("voussoir 4 (large)", "23B8/23B9/23BA/23BB", "23A9/1CDD/23A7/1CB4 (joint lines 1CED / 1CEE end on it)"),
+    ("voussoir 5", "1CD6/1CD8/23BC/23BD", "1CA9/1CB0/1CB2/1CDB"),
+    ("voussoir 6", "1CC4/1CC5/23AA/23AB", "1CAA/1CAD/1CAF/1CDA"),
+    ("crown", "1CC6/1CC7/1CC8/23AC/23AD", "1CC3/2230/222F/1CAB/1CC2 (right side cut by 2416)"),
+)
 SURROUND = dict(
     handles_bound="23A8 / 23FE / 2416 / 1CC8",
-    visible_face_m2=1.5102, pieces=20, large_blocks=10, band_pieces=10, height_m=4.383, width_m=2.251,
+    visible_face_m2=1.5149, pieces=21, large_blocks=10, band_pieces=11, height_m=4.383, width_m=2.251,
+    double_outline_blocks=10,
     jamb_hand_m2=0.535,
     jamb_hand="3 quoins 0.35 x 0.30 = 0.315 + band 0.20 x (0.20 + 3 x 0.30) = 0.220 (jamb 2.000 m to the springing)",
-    arch_m2=round(1.5102 - 0.535, 4),
+    arch_m2=round(1.5149 - 0.535, 4),
+    arch_hand="7 block faces (outer rings) 0.0897 + 0.0931 + 0.0930 + 0.1054 + 0.0932 + 0.0933 + 0.1349 = 0.7026 + "
+              "7 band pieces 0.0476 + 0.0511 + 0.0513 + 0.0448 + 0.0514 + 0.0257 + 0.0046 = 0.2765 -> 0.9791 "
+              "(function 0.9799: +0.0008 = the closed 10 mm pen joints)",
+    crown_side_sliver="IN: band piece right of the crown, drawn by 222F / 2231 / 2233 and truncated by the section line "
+                      "2416, visible strip 0.0046 m2 (R-T360-6: a drawn piece cut by a section line is visible face)",
     block_quads="23FC/23FD/2401/2402 (quoin 1, outer 23FB/23FA); 1CC9/1CCA/23AE/23AF; 1CCB/1CCC/23B0/23B1; "
                 "1CCD/1CCE/23B2/23B3; 1CCF/1CD1/23B4/23B5; 1CD2/1CD4/23B6/23B7; 23B8..23BB; 1CD6/1CD8/23BC/23BD; "
                 "1CC4/1CC5/23AA/23AB; crown block 1CC8/23AC/23AD",
@@ -147,7 +170,8 @@ def candidate_rows():
         ("C-1", "porch-mouth arch surround (voussoir / quoin blocks, SE)", "Pages_05-06 p.6; P7757.dxf SE frame layer 1 ("
          + s["handles_bound"] + ")", "MARKED_FORM_MATERIAL_HELD",
          f"visible part {s['visible_face_m2']} m2 ({s['pieces']} pieces: {s['large_blocks']} blocks + "
-         f"{s['band_pieces']} band pieces; jamb {s['jamb_hand_m2']} by hand + arch {s['arch_m2']}); the other half lies "
+         f"{s['band_pieces']} band pieces; jamb {s['jamb_hand_m2']} by hand + arch {s['arch_m2']}; all "
+         f"{s['double_outline_blocks']} blocks double-outlined, face = outer ring, R-T360-6); the other half lies "
          "behind the annex section line 2416: UNKNOWN", None, R.HELD,
          "none of the 109 T-337 face keys (porch mouth = open side; T-238 F-PORCH-ARCH UNKNOWN)",
          "if stone: replaces plaster / Sigma on the porch-mouth wall piece (no line today: T-238); if plaster-formed "
@@ -183,7 +207,8 @@ def build():
         elevation_frame_hatches_finish=0,
         face_keys=len(fr), face_states=states, cladding_m2_established=0.0, double_count_m2=0.0,
         candidate_porch_arch=dict(state="MARKED_FORM_MATERIAL_HELD", visible_face_m2=SURROUND["visible_face_m2"],
-                                  pieces=SURROUND["pieces"], status="HELD (blank; hidden half UNKNOWN)"),
+                                  pieces=SURROUND["pieces"], double_outline_blocks=SURROUND["double_outline_blocks"],
+                                  status="HELD (blank; hidden half UNKNOWN)"),
         freelancer=freelancer_census(),
         curved_shading_sw_p7=R.is_curved_face_shading([86, 96, 119, 151, 190, 236]),
     )
@@ -223,6 +248,7 @@ def geometry(path):
     y1 = H["1CC8"].dxf.start.y + 50
     B = box(x0, y0, x1, y1)
     segs = [B.boundary]
+    lines = []  # the drawn layer-1 lines only (no frame box): evidence for each block's own outline(s)
     for e in msp.query("LINE ARC LWPOLYLINE"):
         if e.dxf.layer != "1":
             continue
@@ -235,24 +261,34 @@ def geometry(path):
         g = LineString(pts).intersection(B)
         if not g.is_empty:
             segs.append(g)
+            lines.append(g)
 
     def thin(r):
         c = list(r.minimum_rotated_rectangle.exterior.coords)
         return min(math.dist(c[0], c[1]), math.dist(c[1], c[2])) < 20
 
-    # pen lines are 10 mm double outlines: regions between lines, then restored by the half pen width and closed
+    # pen lines are 10 mm double outlines: regions between lines, then restored by the half pen width and closed.
+    # r2: a thin region is kept when it touches the annex section-cut line 2416 (x1): it is a drawn piece truncated by
+    # the cut (the band piece right of the crown, lines 222F / 2231 / 2233 / 2416), visible face up to the cut (R-T360-6)
+    cut = LineString([(x1, y0), (x1, y1)])
     regs = [r for r in B.difference(unary_union(segs).buffer(6, cap_style=2)).geoms if r.area > 1000]
-    sel = [r for r in regs if r.area < 0.2e6 and not thin(r)]
+    sel = [r for r in regs if r.area < 0.2e6 and (not thin(r) or r.distance(cut) < 7)]
     U = unary_union([r.buffer(6, join_style=2) for r in sel]).buffer(8, join_style=2).buffer(-8, join_style=2)
-    # a block is drawn as a double outline 10 mm apart (inner 0.33 x 0.28 / outer 0.35 x 0.30 on the jamb quoins):
-    # its face is the OUTER outline = the inner block face (polygonized exactly at 1 mm) offset by 10 mm
+    # each block's own outline, polygonized exactly at 1 mm; its face is decided per block from the linework (r2,
+    # R-T360-6, block_face): the OUTER ring where a second ring is drawn 10 mm outside, else the single line itself
     import shapely
     from shapely.ops import polygonize
     inner = [f for f in polygonize(shapely.set_precision(unary_union(segs), 1.0))
              if 0.07e6 < f.area < 0.13e6 and len(f.exterior.coords) <= 6 and f.within(U.buffer(15, join_style=2))]
-    print("inner block faces", len(inner))
+    print("inner block outlines", len(inner))
     assert len(inner) == SURROUND["large_blocks"]
-    U = unary_union([U] + [f.buffer(10, join_style=2) for f in inner]).buffer(1, join_style=2).buffer(-1, join_style=2)
+    faces = [R.block_face(f, lines, pen=10.0, tol=3.0, clip=B) for f in inner]
+    kinds = [k for _, k in faces]
+    print("block outlines DOUBLE", kinds.count("DOUBLE"), "SINGLE", kinds.count("SINGLE"))
+    for f, (g, k) in sorted(zip(inner, faces), key=lambda p: (p[0].centroid.y, p[0].centroid.x)):
+        print(f"  block outline {f.area / 1e6:.4f} -> {k} face {g.intersection(B).area / 1e6:.4f}")
+    assert kinds.count("DOUBLE") == SURROUND["double_outline_blocks"]
+    U = unary_union([U] + [g for g, _ in faces]).buffer(1, join_style=2).buffer(-1, join_style=2)
     U = U.intersection(B)  # nothing beyond the annex section line 2416
     jamb = U.intersection(box(x0, y0, x1, min(H["1CBC"].dxf.start.y, H["1CBC"].dxf.end.y)))
     area = round(U.area / 1e6, 4)

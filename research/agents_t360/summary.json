@@ -1,9 +1,10 @@
 {
  "candidate_porch_arch": {
-  "pieces": 20,
+  "double_outline_blocks": 10,
+  "pieces": 21,
   "state": "MARKED_FORM_MATERIAL_HELD",
   "status": "HELD (blank; hidden half UNKNOWN)",
-  "visible_face_m2": 1.5102
+  "visible_face_m2": 1.5149
  },
  "cladding_m2_established": 0.0,
  "curved_shading_sw_p7": true,

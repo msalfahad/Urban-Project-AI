@@ -17,6 +17,9 @@ R-T360-4  ONE FACE ONE FINISH. A face (or a part of a face between two levels) c
           is established on it, the plaster / Sigma / paint / spatter-dash on the same part is named as REPLACED (not
           applied here: integration decides); a part quantified in both is refused.
 R-T360-5  OPENINGS once, by id, inside the cladding band only; HELD = None (blank) or a (lo, hi) range, never 0.
+R-T360-6  DRAWN FACE OF A UNIT BLOCK (r2). A block drawn as a double outline takes its OUTER ring as its face; a block
+          drawn with one outline takes that line; decided per block from the linework (block_face), never by a count
+          and never by a blanket offset. A drawn piece truncated by a section-cut line is visible face up to that line.
 """
 
 from __future__ import annotations
@@ -195,6 +198,38 @@ def is_curved_face_shading(xs, tol=0.15):
             res = max(abs(c + r * v - x) for v, x in zip(s, xs))
             best = min(best, res / (xs[-1] - xs[0]))
     return best < tol / 10
+
+
+def block_face(inner, lines, pen=10.0, tol=3.0, min_cover=0.95, clip=None):
+    """R-T360-6 (T-360 r2) DRAWN FACE OF A UNIT BLOCK. `inner` is the closed polygon of one block's own outline (drawing
+    units), `lines` every drawn LineString around it. A block drawn as a DOUBLE outline (a second ring `pen` outside the
+    first) has the OUTER ring as its face edge; a block drawn with ONE outline has that line as its face edge and is
+    never offset. Decided per block from the linework, never by a count: the pen-offset ring is DRAWN when (1) at least
+    `min_cover` of its length (inside `clip`, if a section cut truncates the view) lies on drawn lines and (2) every
+    one of its corners inside `clip` is a drawn line end or vertex (within `tol`). A neighbour's edge that runs past the
+    block 10 mm away (a joint, not a second ring) fails (2). Returns (face polygon, 'DOUBLE' | 'SINGLE')."""
+    from shapely.geometry import Point
+    from shapely.ops import unary_union
+
+    outer = inner.buffer(pen, join_style=2)
+    ring = outer.exterior
+    zone = ring.buffer(tol)
+    near = [g for g in lines if g.intersects(zone)]
+    if not near:
+        return inner, "SINGLE"
+    ring_in = ring if clip is None else ring.intersection(clip)
+    cover = ring_in.intersection(unary_union(near).buffer(tol)).length / ring_in.length if ring_in.length else 0.0
+    if cover < min_cover:
+        return inner, "SINGLE"
+    ends = []
+    for g in near:
+        cs = list(g.coords)
+        ends.extend(cs)
+    corners = [c for c in list(ring.coords)[:-1] if clip is None or clip.contains(Point(c))]
+    for c in corners:
+        if not any(math.dist(c, e) <= tol for e in ends):
+            return inner, "SINGLE"
+    return outer, "DOUBLE"
 
 
 def hatch_kind(pattern: str, role: str):

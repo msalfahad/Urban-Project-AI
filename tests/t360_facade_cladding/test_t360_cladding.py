@@ -153,10 +153,60 @@ def test_alsenan_porch_arch_held_blank_with_visible_geometry():
     c = {r["id"]: r for r in csv.DictReader(io.StringIO(A.build()["CANDIDATES_T360.csv"]))}
     assert c["C-1"]["state"] == "MARKED_FORM_MATERIAL_HELD" and c["C-1"]["b4_11_status"] == "HELD"
     assert c["C-1"]["cladding_m2"] == ""  # never 0, never the visible part as a quantity
-    assert "1.5102" in c["C-1"]["geometry"] and "UNKNOWN" in c["C-1"]["geometry"]
+    assert "1.5149" in c["C-1"]["geometry"] and "UNKNOWN" in c["C-1"]["geometry"]
+    assert "21 pieces" in c["C-1"]["geometry"] and "face = outer ring" in c["C-1"]["geometry"]
+    # r2: all 10 blocks double-outlined (outer handles named per block); arch by hand within the pen-joint closing
+    assert len(A.BLOCK_RINGS) == A.SURROUND["large_blocks"] == A.SURROUND["double_outline_blocks"] == 10
+    blocks = [0.0897, 0.0931, 0.0930, 0.1054, 0.0932, 0.0933, 0.1349]
+    band = [0.0476, 0.0511, 0.0513, 0.0448, 0.0514, 0.0257, 0.0046]
+    assert sum(blocks) + sum(band) == pytest.approx(0.9791, abs=1e-4)
+    assert A.SURROUND["arch_m2"] == pytest.approx(0.9799, abs=1e-4)
+    assert abs(A.SURROUND["arch_m2"] - (sum(blocks) + sum(band))) / A.SURROUND["arch_m2"] < 0.001
     assert c["C-3"]["state"] == "REFUSED"
     # jamb by hand: 3 quoins 0.35 x 0.30 + band 0.20 x 1.10
     assert A.SURROUND["jamb_hand_m2"] == pytest.approx(3 * 0.35 * 0.30 + 0.20 * (0.20 + 3 * 0.30), abs=1e-9)
+
+
+# --- r2: R-T360-6 drawn face of a unit block (synthetic linework in mm, not Alsenan) ------------------------------
+
+def _rect_lines(x0, y0, x1, y1):
+    from shapely.geometry import LineString
+    return [LineString([(x0, y0), (x1, y0)]), LineString([(x1, y0), (x1, y1)]),
+            LineString([(x1, y1), (x0, y1)]), LineString([(x0, y1), (x0, y0)])]
+
+
+def test_double_outline_block_takes_its_outer_ring():
+    from shapely.geometry import box
+    # hand: inner outline 300 x 280, second ring drawn 10 mm outside -> face 320 x 300 = 96,000 mm2 = 0.096 m2
+    inner = box(0, 0, 300, 280)
+    lines = _rect_lines(0, 0, 300, 280) + _rect_lines(-10, -10, 310, 290)
+    face, kind = R.block_face(inner, lines)
+    assert kind == "DOUBLE" and face.area / 1e6 == pytest.approx(0.096, abs=1e-9)
+
+
+def test_single_outline_block_is_not_offset_even_with_a_neighbour_10mm_away():
+    from shapely.geometry import LineString, box
+    # adverse: one outline only; a band piece's edge runs 10 mm above and a joint 10 mm right, both PAST the block's
+    # corners (a joint, not a second ring) -> the single line is the face: 300 x 280 = 0.084 m2, never 0.096
+    inner = box(0, 0, 300, 280)
+    lines = _rect_lines(0, 0, 300, 280) + [LineString([(-400, 290), (700, 290)]), LineString([(310, -300), (310, 600)])]
+    face, kind = R.block_face(inner, lines)
+    assert kind == "SINGLE" and face.area / 1e6 == pytest.approx(0.084, abs=1e-9)
+    # adverse: the outer ring drawn on three sides only -> SINGLE (never decided by a count of blocks)
+    face, kind = R.block_face(inner, _rect_lines(0, 0, 300, 280) + _rect_lines(-10, -10, 310, 290)[:3])
+    assert kind == "SINGLE" and face.area / 1e6 == pytest.approx(0.084, abs=1e-9)
+
+
+def test_double_outline_block_cut_by_a_section_line():
+    from shapely.geometry import LineString, box
+    # the view stops at a section line x = 305: the outer ring's right side and corners lie beyond it -> still DOUBLE
+    # inside the view; visible face 315 x 300 = 0.0945 m2 (hand), the part beyond the cut is not counted
+    clip = box(-100, -100, 305, 400)
+    inner = box(0, 0, 300, 280)
+    lines = [g.intersection(clip) for g in _rect_lines(0, 0, 300, 280) + _rect_lines(-10, -10, 310, 290)]
+    lines = [g for g in lines if not g.is_empty] + [LineString([(305, -100), (305, 400)])]
+    face, kind = R.block_face(inner, lines, clip=clip)
+    assert kind == "DOUBLE" and face.intersection(clip).area / 1e6 == pytest.approx(0.0945, abs=1e-9)
 
 
 def test_no_coordinates_or_client_text_committed():

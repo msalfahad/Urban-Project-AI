@@ -60,7 +60,7 @@ the candidate.
 
 | Candidate | Evidence | State | Geometry | B4-11 |
 |---|---|---|---|---|
-| **C-1 porch-mouth arch surround (SE)** | p.6; DXF SE frame layer 1, bounded by handles 23A8 / 23FE / 2416 / 1CC8 | MARKED_FORM_MATERIAL_HELD | visible part **1.5102 m2**: 10 blocks (3 jamb quoins 0.35 x 0.30 + 7 arch voussoirs incl. the crown block) and 10 band pieces 0.20 wide; height 4.383 above the band foot; jamb by hand 0.315 + 0.220 = **0.535** (= the polygon, 0.000); arch 0.9752. **The other half lies behind the annex section line 2416: UNKNOWN** | **HELD, blank** (material not printed; whole element not drawn) |
+| **C-1 porch-mouth arch surround (SE)** | p.6; DXF SE frame layer 1, bounded by handles 23A8 / 23FE / 2416 / 1CC8 | MARKED_FORM_MATERIAL_HELD | visible part **1.5149 m2** (r2; was 1.5102): 10 blocks (3 jamb quoins 0.35 x 0.30 + 7 arch voussoirs incl. the crown block), every one drawn as a double outline, face = its outer ring (R-T360-6, section 9), and 11 band pieces 0.20 wide (r2 adds the 0.0046 strip right of the crown, cut by 2416); height 4.383 above the band foot (crown outer top line 2230); jamb by hand 0.315 + 0.220 = **0.535** (= the polygon, 0.000); arch 0.9799 (hand 0.9791). **The other half lies behind the annex section line 2416: UNKNOWN** | **HELD, blank** (material not printed; whole element not drawn) |
 | C-2 plinth band (29 faces) | the elevations draw the band and print no finish | NOT_MARKED | 71.689 .. 72.750 m2 already in NEW FIN.EXT.FINISH PLINTH GF (T-337, HELD) | not B4-11; stays in its own line, finish HELD, never a stone default |
 | C-3 court 'crazy-paving' stone | renders only | REFUSED | outdoor floor, not a face (T-343) | not B4-11 |
 
@@ -97,7 +97,7 @@ HELD blank.
 | Item | Engine | Freelancer | Difference | Verdict proposal |
 |---|---|---|---|---|
 | Facade cladding / stone, all faces | 0 faces, 0.000 m2 (NOT IN DRAWN SCOPE) | 0 rows | 0.000 m2 (0 %) | AGREE (no cladding scope printed or priced) |
-| Porch-mouth arch surround | HELD blank (visible 1.5102 m2, half UNKNOWN) | inside his SE plaster plane, no own item | not comparable (HELD) | UNRESOLVED: material for the designer (proposed RFI line, section 7) |
+| Porch-mouth arch surround | HELD blank (visible 1.5149 m2, half UNKNOWN) | inside his SE plaster plane, no own item | not comparable (HELD) | UNRESOLVED: material for the designer (proposed RFI line, section 7) |
 | Plinth band | own HELD line (T-337) | inside his elevation rows | unchanged by this task | as T-337 |
 
 ## 7. Findings
@@ -106,7 +106,7 @@ HELD blank.
   elevation, porch-mouth arch: the jamb and arch are drawn with block outlines (quoins / voussoirs). Please state the
   material and finish of these blocks (natural stone, precast, or plaster-formed), their thickness / projection from
   the wall face, and the arch's other half, which the elevation hides behind the annex section.' Internal impact: C-1
-  HELD blank; visible face 1.5102 m2 measured. Not sent by this task.
+  HELD blank; visible face 1.5149 m2 measured (r2). Not sent by this task.
 - **F-T360-2 (for the Lead / lane I).** C-1 also leaves the porch-mouth wall piece itself (its face, soffit and
   arrises) in no line (T-238 F-PORCH-ARCH UNKNOWN): whichever finish the designer gives, the piece needs one owner
   line; nothing is applied here.
@@ -139,3 +139,55 @@ unit outlines without a legend mark an element and its geometry, never its mater
 never 0; renders never decide the material (scope: every villa, facade finishes; provenance T-360) |
 tests/t360_facade_cladding (form only -> HELD blank; render refused; default stone refused; face in plaster and
 cladding refused) | PROPOSED |
+
+## 9. r2 (Gate A rejection D-T360-1, 2026-10-30): drawn face of each block, decided per block
+
+**The rejection.** The Checker re-measured C-1 at 1.4871 m2 against 1.5102 (+1.55 %): `geometry()` offset EVERY inner
+block outline by the 10 mm pen distance, while (the Checker's reading) two blocks, voussoir 23B8..23BB and the crown
+1CC8 / 23AC / 23AD, are drawn with ONE outline, so the offset would add face that is not drawn.
+
+**Physical element first.** Each block is a unit of the surround; its visible face is bounded by the line where the
+next piece (a joint, a band piece, the wall) begins. The drafter draws each block as two concentric outlines 10 mm apart;
+the joint and band lines END on the OUTER outline, so the outer outline is the face edge.
+
+**Re-examination by handle (own census, P7757.dxf sha ab54dd55, layer 1, SE frame).** For every block the own inner
+outline polygonizes to one ring (that is true of all ten, so it does not decide single vs double); the decisive evidence
+is whether a SECOND ring is drawn 10 mm outside, closed at its own corners. It is, for all ten (BLOCK_RINGS in
+t360_alsenan.py):
+
+| Block | Inner outline | Outer ring drawn 10 mm outside |
+|---|---|---|
+| voussoir 4 (large) | 23B8 / 23B9 / 23BA / 23BB, 0.0928 m2 | 23A9 / 1CDD / 23A7 / 1CB4, 0.1054 m2; joint lines 1CED and 1CEE end on 1CB4 / 1CDD (the outer ring) |
+| crown | 1CC6 / 1CC7 / 1CC8 / 23AC / 23AD, 0.1199 m2 | 1CC3 / 2230 / 222F / 1CAB / 1CC2, 0.1349 m2 inside the view (the right side is cut by 2416); 2230 is the drawn top, 10 mm above 1CC8 |
+| the other eight | (BLOCK_RINGS) | drawn the same way, with the same joint pattern |
+
+Voussoir 4 is simply a LARGER block (inner outline 0.0928 m2 against 0.081 for its neighbours, as the jamb quoins
+0.0924 are larger than the small voussoirs), which is why its inner outline (0.0928) is close to the neighbours' OUTER faces (0.093).
+D-T360-1 therefore **does not reproduce**: no block is drawn with one outline, and the blanket offset happened to give
+the right face on this drawing. The defect in the METHOD stands, and r2 fixes it: the face is now decided per block.
+
+**Fix (R-T360-6, `t360_cladding_rules.block_face`).** The pen-offset ring is DRAWN when at least 95 % of its length
+(inside the view) lies on drawn lines and every one of its corners inside the view is a drawn line end; then the face is
+the outer ring, else the single outline itself. A neighbour's edge 10 mm away that runs past the block (a joint) fails
+the corner test. On the real linework: all 10 DOUBLE; removing the four outer lines of voussoir 4, or the five of the
+crown, or only one side (23A9), turns exactly that block SINGLE (own adverse run, not committed: it needs the private
+DXF).
+
+**Crown-side sliver (decided: IN).** A 0.0046 m2 strip right of the crown, bounded by 222F / 2231 / 2233 and the
+section line 2416, was dropped by the thin-region filter (minimum width 16.7 mm < 20 mm). It is the visible start of the
+band piece on the hidden side of the crown (2231 / 2233 mirror 1CD9 / 1CF0 on the visible side), truncated by the cut:
+drawn face, so it is now kept (a thin region touching the section-cut line). Pieces 20 -> 21, band pieces 10 -> 11.
+
+**Restated C-1 (geometry only; the element stays HELD blank, material not printed).**
+
+| | r1 | r2 | change |
+|---|---|---|---|
+| visible face | 1.5102 m2 | **1.5149 m2** | +0.0047 m2 (+0.31 %): the crown-side strip |
+| jamb (hand 3 x 0.35 x 0.30 + 0.20 x 1.10) | 0.535 | 0.535 | 0 |
+| arch | 0.9752 | 0.9799 (hand piece sum 0.9791, -0.08 %: the closed 10 mm pen joints) | +0.0047 |
+| height above the band foot | 4.383 m (2230) | 4.383 m | 0 |
+| Checker r1 re-measure 1.4871 + outer rings of the two blocks (+0.0128 + 0.0151) | | 1.5150 | function 1.5149: -0.01 % |
+
+Not changed by r2: B4-11 0.000 m2 on the 109 keys, C-1 HELD blank, F-T360-1 (proposed RFI, not sent), F-T360-2 / -3,
+rules R-T360-1 .. 5. Tests: three added (double outline -> outer ring 0.096 m2; single outline with a neighbour 10 mm
+away and a three-sided ring -> not offset 0.084 m2; a double block cut by a section line -> 0.0945 m2).
