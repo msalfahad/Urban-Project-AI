@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-30T13:51Z | Verifier | STARTED | run session_01E6cPneJruTQka1QNdL9E3s | repo-attached routine | task state: T-368 r2 READY (Worker 2 12:56), T-359 r2 READY (Worker 1 13:43) | self-check pending
 - 2026-10-30 13:43 UTC | Worker 1 | SUCCESS | T-359 r2 READY (agents/task-T-359 @ 5f92b222) | bar-detail census r2: 117 detail texts swept by handle / position, 110 / 110 bar labels cited incl. the p.7 shape row; POOL R2 outer vertical now PRINTED (1929 6ø12/m, L into the floor bottom layer, COUNTABLE_AFTER RFI-B-S11); NEW CONFLICT R1 water-face d12 (1906) vs d14 (18A8 shape), x1.36 kg/m on that population, GAP G-T359-8; dome shell draws no bar (r1 layer corrected); counts 0/21/38/10/10 = 79; 88/88 blank V3.0.16 pool/stair/tank lines bound; no kg | self-check codemap PASS, pytest t061 PASS, freeze PASS; task tests t359 23 + t061 + t318 + t360 = 102 passed, freeze 0, stale none; problem: decode wrapper base64-decodes the connector's raw-binary save (wrong bytes) - re-encoded to base64 first, sha256 verified 9f9d1179 / 74da1523
 - 2026-10-30 13:26 UTC | Worker 1 | STARTED | run session_01E6cPndinJ12mssGjZPY5M9 | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-30T13:00Z | Worker 3 | STARTED | run session_01E6cPncsW8b7NvgFqXLN4LK | repo-attached routine | task state: none yet | self-check pending
