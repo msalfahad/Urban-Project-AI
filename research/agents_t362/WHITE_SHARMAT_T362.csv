@@ -1,0 +1,133 @@
+wall_id,floor,group,family,column_at,face,block_segment_m,top,state,ties,band_held,held,note
+GF-W04,GF,EXTERNAL,A,GF|WB-FL0017-FL0018#1@0.000,column_end,5.850000,,HELD,,,annex datum (Q-54 B),
+GF-W04,GF,EXTERNAL,A,GF|WB-FL0017-FL0018#1@6.250,column_start,5.850000,,HELD,,,annex datum (Q-54 B),
+GF-W04,GF,EXTERNAL,B,GF|WB-FL0017-FL0018#1@0.000,column_end,5.850000,,HELD,,,annex datum (Q-54 B),
+GF-W04,GF,EXTERNAL,B,GF|WB-FL0017-FL0018#1@6.250,column_start,5.850000,,HELD,,,annex datum (Q-54 B),
+GF-W05,GF,EXTERNAL,A,GF|WB-FL0017-FL0018#2@0.000,column_end,1.900000,4.091000,MEASURED,5,0,,
+GF-W05,GF,EXTERNAL,A,GF|WB-FL0017-FL0018#2@3.000,column_start,1.900000,4.091000,MEASURED,5,0,,
+GF-W05,GF,EXTERNAL,B,GF|WB-FL0017-FL0018#2@0.000,column_end,1.900000,4.091000,MEASURED,6,0,,
+GF-W05,GF,EXTERNAL,B,GF|WB-FL0017-FL0018#2@3.000,column_start,1.900000,4.091000,MEASURED,6,0,,
+GF-W06,GF,EXTERNAL,A,GF|WB-FL0020-FL0021@0.000,column_end,2.500000,,HELD,,,annex datum (Q-54 B),
+GF-W06,GF,EXTERNAL,A,GF|WB-FL0020-FL0021@2.600,column_start,2.500000,,HELD,,,annex datum (Q-54 B),
+GF-W06,GF,EXTERNAL,B,GF|WB-FL0020-FL0021@0.000,column_end,2.500000,,HELD,,,annex datum (Q-54 B),
+GF-W06,GF,EXTERNAL,B,GF|WB-FL0020-FL0021@2.600,column_start,2.500000,,HELD,,,annex datum (Q-54 B),
+GF-W07,GF,EXTERNAL,A,GF|WB-FL0023-FL0024@0.000,column_end,1.100000,4.091000,MEASURED,5,0,,
+GF-W07,GF,EXTERNAL,A,GF|WB-FL0023-FL0024@1.900,column_start,1.100000,3.741000,MEASURED,4,0,,
+GF-W07,GF,EXTERNAL,B,GF|WB-FL0023-FL0024@0.000,column_end,1.100000,4.091000,MEASURED,6,0,,
+GF-W07,GF,EXTERNAL,B,GF|WB-FL0023-FL0024@1.900,column_start,1.100000,3.741000,MEASURED,6,0,,
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@6.270,column_end,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@10.220,column_start,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,A,GF|WB-FL0041-FL0042@10.220,column_end,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@6.270,column_end,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@10.220,column_start,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W10,GF,EXTERNAL,B,GF|WB-FL0041-FL0042@10.220,column_end,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W11,GF,EXTERNAL,A,GF|WB-FL0055-FL0056@0.000,column_end,7.000000,3.741000,MEASURED,4,0,,
+GF-W11,GF,EXTERNAL,A,GF|WB-FL0055-FL0056@7.300,column_start,7.000000,3.741000,MEASURED,4,0,,
+GF-W11,GF,EXTERNAL,B,GF|WB-FL0055-FL0056@0.000,column_end,7.000000,3.741000,MEASURED,6,0,,
+GF-W11,GF,EXTERNAL,B,GF|WB-FL0055-FL0056@7.300,column_start,7.000000,3.741000,MEASURED,6,0,,
+GF-W12,GF,EXTERNAL,A,GF|WB-FL0057-FL0058@0.000,column_end,0.450000,,HELD,,,block top beside the column not established,
+GF-W12,GF,EXTERNAL,B,GF|WB-FL0057-FL0058@0.000,column_end,0.450000,,HELD,,,block top beside the column not established,
+GF-W15,GF,EXTERNAL,A,GF|WB-FL0078-FL0079@0.000,column_end,4.400000,3.991000,MEASURED,5,0,,
+GF-W15,GF,EXTERNAL,A,GF|WB-FL0078-FL0079@5.000,column_start,4.400000,4.091000,MEASURED,5,0,,
+GF-W15,GF,EXTERNAL,A,GF|WB-FL0078-FL0079@5.000,column_end,2.700000,4.091000,MEASURED,5,0,,
+GF-W15,GF,EXTERNAL,A,GF|WB-FL0078-FL0079@8.200,column_start,2.700000,4.091000,MEASURED,5,0,,
+GF-W15,GF,EXTERNAL,B,GF|WB-FL0078-FL0079@0.000,column_end,4.400000,3.991000,MEASURED,6,0,,
+GF-W15,GF,EXTERNAL,B,GF|WB-FL0078-FL0079@5.000,column_start,4.400000,4.091000,MEASURED,6,0,,
+GF-W15,GF,EXTERNAL,B,GF|WB-FL0078-FL0079@5.000,column_end,2.700000,4.091000,MEASURED,6,0,,
+GF-W15,GF,EXTERNAL,B,GF|WB-FL0078-FL0079@8.200,column_start,2.700000,4.091000,MEASURED,6,0,,
+GF-W16,GF,EXTERNAL,A,GF|WB-FL0081-FL0082@4.450,column_start,4.450000,,HELD,,,block top beside the column not established,
+GF-W16,GF,EXTERNAL,B,GF|WB-FL0081-FL0082@4.450,column_start,4.450000,,HELD,,,block top beside the column not established,
+GF-W17,GF,EXTERNAL,A,GF|WB-FL0083-FL0084@1.400,column_start,1.400000,,HELD,,,annex datum (Q-54 B),
+GF-W17,GF,EXTERNAL,A,GF|WB-FL0083-FL0084@1.400,column_end,2.300000,,HELD,,,annex datum (Q-54 B),
+GF-W17,GF,EXTERNAL,A,GF|WB-FL0083-FL0084@4.200,column_start,2.300000,,HELD,,,annex datum (Q-54 B),
+GF-W17,GF,EXTERNAL,B,GF|WB-FL0083-FL0084@1.400,column_start,1.400000,,HELD,,,annex datum (Q-54 B),
+GF-W17,GF,EXTERNAL,B,GF|WB-FL0083-FL0084@1.400,column_end,2.300000,,HELD,,,annex datum (Q-54 B),
+GF-W17,GF,EXTERNAL,B,GF|WB-FL0083-FL0084@4.200,column_start,2.300000,,HELD,,,annex datum (Q-54 B),
+GF-W18,GF,EXTERNAL,A,GF|WB-FL0097-FL0098@6.100,column_start,6.100000,,HELD,,,annex datum (Q-54 B),
+GF-W18,GF,EXTERNAL,B,GF|WB-FL0097-FL0098@6.100,column_start,6.100000,,HELD,,,annex datum (Q-54 B),
+1F-W00,1F,EXTERNAL,A,1F|WB-FL0041-FL0042#1@0.000,column_end,5.625000,3.441000,MEASURED,4,0,,
+1F-W00,1F,EXTERNAL,A,1F|WB-FL0041-FL0042#1@5.725,column_start,5.625000,3.441000,MEASURED,4,0,,
+1F-W00,1F,EXTERNAL,A,1F|WB-FL0041-FL0042#1@5.725,column_end,0.945767,3.441000,MEASURED,4,0,,
+1F-W00,1F,EXTERNAL,B,1F|WB-FL0041-FL0042#1@0.000,column_end,5.625000,3.441000,MEASURED,5,0,,
+1F-W00,1F,EXTERNAL,B,1F|WB-FL0041-FL0042#1@5.725,column_start,5.625000,3.441000,MEASURED,5,0,,
+1F-W00,1F,EXTERNAL,B,1F|WB-FL0041-FL0042#1@5.725,column_end,0.945767,3.441000,MEASURED,5,0,,
+1F-W01,1F,EXTERNAL,A,1F|WB-FL0041-FL0042#2@0.821,column_start,0.820767,3.441000,MEASURED,4,0,,
+1F-W01,1F,EXTERNAL,B,1F|WB-FL0041-FL0042#2@0.821,column_start,0.820767,3.441000,MEASURED,5,0,,
+1F-W04,1F,EXTERNAL,A,1F|WB-FL0074-FL0076@0.900,column_start,0.900000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W04,1F,EXTERNAL,A,1F|WB-FL0074-FL0076@0.900,column_end,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W04,1F,EXTERNAL,A,1F|WB-FL0074-FL0076@4.100,column_start,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W04,1F,EXTERNAL,B,1F|WB-FL0074-FL0076@0.900,column_start,0.900000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W04,1F,EXTERNAL,B,1F|WB-FL0074-FL0076@0.900,column_end,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W04,1F,EXTERNAL,B,1F|WB-FL0074-FL0076@4.100,column_start,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W05,1F,EXTERNAL,A,1F|WB-FL0082-FL0083@0.000,column_end,2.300000,,HELD,,,block top beside the column not established,
+1F-W05,1F,EXTERNAL,A,1F|WB-FL0082-FL0083@2.700,column_start,2.300000,,HELD,,,block top beside the column not established,
+1F-W05,1F,EXTERNAL,A,1F|WB-FL0082-FL0083@2.700,column_end,4.000000,,HELD,,,block top beside the column not established,
+1F-W05,1F,EXTERNAL,B,1F|WB-FL0082-FL0083@0.000,column_end,2.300000,,HELD,,,block top beside the column not established,
+1F-W05,1F,EXTERNAL,B,1F|WB-FL0082-FL0083@2.700,column_start,2.300000,,HELD,,,block top beside the column not established,
+1F-W05,1F,EXTERNAL,B,1F|WB-FL0082-FL0083@2.700,column_end,4.000000,,HELD,,,block top beside the column not established,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@0.000,column_end,3.811731,3.691000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@3.912,column_start,3.811731,3.691000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@3.912,column_end,6.708269,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@11.320,column_start,6.708269,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@11.320,column_end,2.650000,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@14.770,column_start,2.650000,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@14.770,column_end,3.300000,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,A,1F|WB-FL0002-FL0003@18.670,column_start,3.300000,3.441000,MEASURED,4,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@0.000,column_end,3.811731,3.691000,MEASURED,6,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@3.912,column_start,3.811731,3.691000,MEASURED,6,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@3.912,column_end,6.708269,3.441000,MEASURED,5,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@11.320,column_start,6.708269,3.441000,MEASURED,5,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@11.320,column_end,2.650000,3.441000,MEASURED,5,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@14.770,column_start,2.650000,3.441000,MEASURED,5,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@14.770,column_end,3.300000,3.441000,MEASURED,5,0,,
+1F-W06,1F,EXTERNAL,B,1F|WB-FL0002-FL0003@18.670,column_start,3.300000,3.441000,MEASURED,5,0,,
+1F-W08,1F,EXTERNAL,A,1F|WB-FL0020-FL0021@2.900,column_start,2.900000,3.441000,MEASURED,4,0,,
+1F-W08,1F,EXTERNAL,A,1F|WB-FL0020-FL0021@2.900,column_end,0.700000,3.441000,MEASURED,4,0,,
+1F-W08,1F,EXTERNAL,B,1F|WB-FL0020-FL0021@2.900,column_start,2.900000,3.441000,MEASURED,5,0,,
+1F-W08,1F,EXTERNAL,B,1F|WB-FL0020-FL0021@2.900,column_end,0.700000,3.441000,MEASURED,5,0,,
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@6.270,column_end,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@10.220,column_start,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@10.220,column_end,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,A,1F|WB-FL0030-FL0031@14.270,column_start,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@6.270,column_end,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@10.220,column_start,3.350000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@10.220,column_end,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+1F-W10,1F,EXTERNAL,B,1F|WB-FL0030-FL0031@14.270,column_start,3.550000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,A,2F|WB-FL0010-FL0011@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,A,2F|WB-FL0010-FL0011@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,A,2F|WB-FL0010-FL0011@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,A,2F|WB-FL0010-FL0011@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,A,2F|WB-FL0010-FL0011@6.270,column_end,1.030000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,B,2F|WB-FL0010-FL0011@0.000,column_end,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,B,2F|WB-FL0010-FL0011@2.600,column_start,2.500000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,B,2F|WB-FL0010-FL0011@2.600,column_end,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,B,2F|WB-FL0010-FL0011@6.270,column_start,3.470000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W02,2F,EXTERNAL,B,2F|WB-FL0010-FL0011@6.270,column_end,1.030000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W04,2F,EXTERNAL,A,2F|WB-FL0020-FL0021@1.707,column_start,1.706732,3.441000,MEASURED,4,0,,
+2F-W04,2F,EXTERNAL,A,2F|WB-FL0020-FL0021@1.707,column_end,4.518268,3.441000,MEASURED,4,0,,
+2F-W04,2F,EXTERNAL,B,2F|WB-FL0020-FL0021@1.707,column_start,1.706732,3.441000,MEASURED,5,0,,
+2F-W04,2F,EXTERNAL,B,2F|WB-FL0020-FL0021@1.707,column_end,4.518268,3.441000,MEASURED,5,0,,
+2F-W07,2F,EXTERNAL,A,2F|WB-FL0035-FL0036@3.025,column_start,3.025000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W07,2F,EXTERNAL,A,2F|WB-FL0035-FL0036@3.025,column_end,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W07,2F,EXTERNAL,A,2F|WB-FL0035-FL0036@6.225,column_start,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W07,2F,EXTERNAL,B,2F|WB-FL0035-FL0036@3.025,column_start,3.025000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W07,2F,EXTERNAL,B,2F|WB-FL0035-FL0036@3.025,column_end,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+2F-W07,2F,EXTERNAL,B,2F|WB-FL0035-FL0036@6.225,column_start,2.700000,,HELD,,,block top beside the column not established,T-261 piece heights not tied to the column stations and not one tie count: HELD
+GF-W36,GF,EXTERNAL,A,GF|WB-FL0094-FL0096@0.000,column_end,0.500000,,HELD,,,block top beside the column not established,
+GF-W36,GF,EXTERNAL,B,GF|WB-FL0094-FL0096@0.000,column_end,0.500000,,HELD,,,block top beside the column not established,

@@ -1,0 +1,25 @@
+wall_id,floor,group,t_m,block_run_m,A_levels,A_state,A_certain_net_m,A_band_held_m,A_other_held_m,B_levels,B_state,B_certain_net_m,B_band_held_m,B_other_held_m,notes
+GF-W04,GF,EXTERNAL,0.2,5.850000,0,HELD: annex datum (Q-54 B),,,,0,HELD: annex datum (Q-54 B),,,,
+GF-W05,GF,EXTERNAL,0.2,1.900000,5,CONDITIONAL (family not established),6.500000,0.000000,0.000000,6,CONDITIONAL (family not established),6.600000,0.000000,0.800000,
+GF-W06,GF,EXTERNAL,0.2,2.500000,0,HELD: annex datum (Q-54 B),,,,0,HELD: annex datum (Q-54 B),,,,
+GF-W07,GF,EXTERNAL,0.2,1.100000,5,CONDITIONAL (family not established),5.350000,0.000000,0.000000,6,CONDITIONAL (family not established),6.600000,0.000000,0.000000,
+GF-W10,GF,EXTERNAL,0.2,12.870000,5,CONDITIONAL (family not established),38.025000,0.000000,22.775000,6,CONDITIONAL (family not established),47.923100,0.000000,29.296900,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+GF-W11,GF,EXTERNAL,0.2,7.000000,4,CONDITIONAL (family not established),28.000000,0.000000,0.000000,6,CONDITIONAL (family not established),42.000000,0.000000,0.000000,
+GF-W12,GF,EXTERNAL,0.2,0.450000,0,HELD: no block top established on the wall,,,,0,HELD: no block top established on the wall,,,,
+GF-W15,GF,EXTERNAL,0.2,7.100000,5,CONDITIONAL (family not established),25.500185,0.000000,0.000000,6,CONDITIONAL (family not established),29.800000,0.000000,0.000000,
+GF-W16,GF,EXTERNAL,0.2,4.450000,5,CONDITIONAL (family not established),4.403402,0.000000,17.746598,7,CONDITIONAL (family not established),5.703402,0.000000,25.145464,
+GF-W17,GF,EXTERNAL,0.2,3.700000,0,HELD: annex datum (Q-54 B),,,,0,HELD: annex datum (Q-54 B),,,,
+GF-W18,GF,EXTERNAL,0.2,6.100000,0,HELD: annex datum (Q-54 B),,,,0,HELD: annex datum (Q-54 B),,,,
+1F-W00,1F,EXTERNAL,0.2,6.570767,4,CONDITIONAL (family not established),12.481168,0.000000,0.000000,5,CONDITIONAL (family not established),15.484635,0.000000,0.000000,"width in masonry 0.4673 (jamb 0.0327 inside a column, T-274 scan)"
+1F-W01,1F,EXTERNAL,0.2,0.820767,4,CONDITIONAL (family not established),3.283068,0.000000,0.000000,5,CONDITIONAL (family not established),4.103835,0.000000,0.000000,
+1F-W04,1F,EXTERNAL,0.2,3.600000,5,CONDITIONAL (family not established),7.600000,2.700000,7.600000,6,CONDITIONAL (family not established),11.900000,0.000000,9.600000,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+1F-W05,1F,EXTERNAL,0.2,6.300000,4,CONDITIONAL (family not established),0.348956,0.000000,24.851044,5,CONDITIONAL (family not established),0.697912,0.000000,30.802088,
+1F-W06,1F,EXTERNAL,0.2,16.470000,4,CONDITIONAL (family not established),61.580000,0.000000,0.000000,6,CONDITIONAL (family not established),79.111731,0.000000,0.000000,
+1F-W08,1F,EXTERNAL,0.2,3.600000,4,CONDITIONAL (family not established),14.400000,0.000000,0.000000,5,CONDITIONAL (family not established),18.000000,0.000000,0.000000,
+1F-W10,1F,EXTERNAL,0.2,12.870000,4,CONDITIONAL (family not established),37.680000,0.000000,13.800000,6,CONDITIONAL (family not established),56.620000,0.000000,20.600000,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+2F-W02,2F,EXTERNAL,0.2,7.000000,4,CONDITIONAL (family not established),8.880000,0.000000,19.120000,5,CONDITIONAL (family not established),10.550000,0.000000,24.450000,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+2F-W03,2F,EXTERNAL,0.15,7.900000,5,CONDITIONAL (family not established),26.600000,7.300000,5.500000,6,CONDITIONAL (family not established),39.500000,0.000000,7.800000,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+2F-W04,2F,EXTERNAL,0.2,6.225000,4,CONDITIONAL (family not established),24.499376,0.000000,0.400624,5,CONDITIONAL (family not established),30.624220,0.000000,0.500780,
+2F-W07,2F,EXTERNAL,0.2,5.725000,3,CONDITIONAL (family not established),5.700000,0.000000,11.475000,4,CONDITIONAL (family not established),7.200000,0.000000,15.700000,T-261 piece heights not tied to the column stations and not all equal in levels: HELD
+GF-W35,GF,EXTERNAL,0.2,0,0,HELD: annex datum (Q-54 B),,,,0,HELD: annex datum (Q-54 B),,,,
+GF-W36,GF,EXTERNAL,0.2,0.500000,0,HELD: no block top established on the wall,,,,0,HELD: no block top established on the wall,,,,
