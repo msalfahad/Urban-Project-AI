@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3800 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3810 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 28 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1833 | pytest suites, one folder per round. |
+| `tests/` | 1835 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -1261,6 +1261,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t346_freelancer_rows/` | 2 |
 | `tests/t347_earthworks_bind/` | 2 |
 | `tests/t348_void_faces/` | 2 |
+| `tests/t349_spatter_binding/` | 2 |
 | `tests/t352_stair_formwork/` | 1 |
 | `tests/t355_masonry_accessories/` | 2 |
 | `tests/t356_buried_ranges/` | 3 |
@@ -1617,6 +1618,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t346/` | 7 |
 | `research/agents_t347/` | 10 |
 | `research/agents_t348/` | 7 |
+| `research/agents_t349/` | 10 |
 | `research/agents_t352/` | 9 |
 | `research/agents_t355/` | 8 |
 | `research/agents_t356/` | 9 |
