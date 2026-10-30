@@ -1,0 +1,15 @@
+sheet,view,read,legend_schedule,hatch_on_exterior_face,text_naming_material,graphic_form,verdict,note
+Pages_01-02 p.1,GF + 1F AREA PLAN 1:200,T-091 (whole page + area tables),none,none,none,none,absent,plan: no exterior face drawn in elevation
+Pages_01-02 p.2,2F AREA PLAN 1:200,T-091,none,none,none,none,absent,plan
+p7757_arch_sheet03.pdf,GROUND FLOOR PLAN 1:100,T-091 (whole page + quarters),none,none,none,none,absent,plan: 0 finish notes (T-091 PRINTED_NOTES.csv)
+p7757_arch_sheet04.pdf,1st.FLOOR PLAN 1:100,T-091,none,none,none,none,absent,plan
+Pages_05-06 p.5,2nd.FLOOR PLAN 1:100,T-091,none,none,none,none,absent,plan
+Pages_05-06 p.6,SOUTH EAST ELEVATION 1:100,own: 120 dpi whole page + 300 dpi crops; DXF SE frame,none,ground (AR-PARQ1) and section-cut bands (LINE) only,none (levels and dimensions only),"PORCH-MOUTH ARCH SURROUND: voussoir / quoin block outlines, layer 1","marks a FORM (unit outlines), no material","the only drawn unit pattern on any exterior face of the set; no legend, hatch or text names it (R-T360-2)"
+Pages_07-08 p.7,SOUTH WEST ELEVATION 1:100,own: 120 dpi whole page + 300 dpi crop,none,ground only,none,"a field of 6 vertical lines at the annex junction, spacing 10 / 23 / 32 / 39 / 46 px (300 dpi) = curved-face shading (R-T360-3)",absent,"plain faces, openings, railings X-pattern"
+Pages_07-08 p.8,NORTH WEST ELEVATION 1:100,own: 120 dpi whole page; DXF NW frame,none,ground and section-cut bands only,none,"W17 curved-glazing lines (a window, T-238); arch frame band 20 / 30 (archivolt, T-238 / T-324)",absent,plain faces
+p7757_arch_sheet09.pdf,NORTH EAST ELEVATION 1:100,own: 120 dpi whole page,none,ground and section-cut bands only,none,curved-face shading fields beside the annex and the GF hall,absent,drawn as a cut through the annex and the GF hall (T-082)
+p7757_arch_sheet10.pdf,SECTION A-A 1:100,own: 120 dpi whole page,none,section-cut bands only,none,none,absent,stair section
+Pages_11-12 p.11,SECTION B-B 1:100,own: 120 dpi whole page,none,section-cut bands only,none,"dome rib lines (domes: owner, no domes in scope)",absent,
+Pages_11-12 p.12,FENCE PLAN / ELEVATION / SECTION 1:100,own: 120 dpi whole page,none,ground; the section's cross-hatch is the cut base,'3700' house number only,none,absent,"boundary element faces: blockwork / plaster owners (Q-63 C, Q-65)"
+sanitary-7757.pdf p.1-3,GF / 1F / 2F DRAINAGE PLAN,T-091,none,none,none (manhole note),none,absent,drainage only
+P7757.dxf (P7757_DXF_COMPRESSED.zip),model space: plans + SE and NW elevation frames,own: every TEXT / MTEXT / ATTRIB in model space and blocks; every HATCH,none,"elevation frames: 8 hatches, all ground or section cut (HATCHES_T360.csv)",0 of 675 texts match a material keyword (Latin); Arabic SHX decoded by T-091: 0 material notes,the porch-mouth arch surround (SE frame),SE frame marks a FORM only; NW frame absent,
