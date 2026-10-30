@@ -1,0 +1,12 @@
+line_id,family,status,value_m3,lo_m3,lo_basis,hi_m3,hi_basis,held_by
+L-35382b18e2e362df3ae6,STR.CONC.BLINDING strap,HELD,,0.000000,READING_NONE (D-15),0.912684,"own strip 9.126840 m2 = printed (B + 0.20) x axis clear, x 0.10 (projection INHERITED from p.13)",D-15
+L-6290a9f3d93f38cd46d6,STR.CONC.BOUNDARY_WALL lower band,HELD,,,NOT ESTABLISHED for the line (band solid >= 5.639200; pad split n x 0.078000),11.032800,91.94 m x 0.20 x 0.60,"Q-28, M4"
+L-81444e222487437e257e,STR.CONC.GROUND_BEAM interior,HELD,,0.130500,narrowest printed title,0.174000,widest printed title holding literally,D-34
+L-e2134034441cb7db7bd7,STR.CONC.GROUND_BEAM interior,HELD,,0.108000,narrowest printed title,0.144000,widest printed title holding literally,D-34
+L-0c5ede7fd2c9e425aa8d,STR.CONC.GROUND_BEAM interior,HELD,,0.112500,narrowest printed title,0.150000,widest printed title holding literally,D-34
+L-d53e5eb08e2c6c668254,STR.CONC.GROUND_BEAM interior,HELD,,0.138300,narrowest printed title,0.184400,widest printed title holding literally,D-34 + D-33 (no loaded section printed)
+L-f0e25ad2cf73bf2a35ea,STR.CONC.GROUND_BEAM interior,HELD,,0.108000,narrowest printed title,0.144000,widest printed title holding literally,D-34
+L-970bac563cbcd69e2a30,STR.CONC.GROUND_BEAM interior,HELD,,0.071008,narrowest printed title,0.094678,widest printed title holding literally,D-34
+L-a8c5c32c7a785c1e3f05,STR.CONC.GROUND_BEAM interior,HELD,,0.189000,narrowest printed title,0.252000,widest printed title holding literally,D-34 + D-33 (no loaded section printed)
+L-f24cf117a9ce1e875785,STR.CONC.GROUND_BEAM interior,HELD,,0.186592,narrowest printed title,0.248789,widest printed title holding literally,D-34
+L-5af89b9f1e5b90daf8f5,STR.CONC.GROUND_BEAM interior,HELD,,0.600000,narrowest printed title,0.900000,widest printed title holding literally,D-34 + D-33 (no loaded section printed)
