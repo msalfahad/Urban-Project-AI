@@ -1,10 +1,53 @@
-# T-368: EXPOSED WALL-TILE EDGES (BOQ family B4-10; UP-CER-006 45-degree edge / UP-CER-007 steel profile), edge by edge (development villa; every villa by R-T368-1 .. 6)
+# T-368: EXPOSED WALL-TILE EDGES (BOQ family B4-10; UP-CER-006 45-degree edge / UP-CER-007 steel profile), edge by edge (development villa; every villa by R-T368-1 .. 7)
 
 Worker 3, claim 2026-10-30 11:03 UTC, run session_01E6cPnf2dNDDd7Uxq92dPtG (lane I had no TODO; READY = 2, so a
 standalone piece is allowed). Research only: no engine module, method, rule / knowledge version, registry file,
 candidate line, released line or V2.9 cell changed; nothing released, nothing VERIFIED by this task. ERS applied: s.2.1
 (physical element first), s.2.2 (owner rule and drawing reading side by side), s.2.3 (own vector reading), s.3 (one edge,
 one face, one finish), s.4 (rules + normal and adverse tests), s.7 (lesson rows, section 9).
+
+## 0. r2 (worker 2, 2026-10-30 12:41 UTC, run session_01E6cPnc7CN49QfNy8pGJ6VX): Checker D-T368-1
+
+**Defect accepted.** r1 gave the GF-14 open side's WALL_END (at BC) and FLAT_STOP (on 222) the full 3.65 m band. The
+plan draws a pair 2DB / 2DC across that open side on layer 2, whose layer linetype is HIDDEN (every other wall layer
+CONTINUOUS), 0.150 apart = the D2 / 20C wall thickness and collinear with those two faces, over the full 1.256 m from
+lift face 222 to wall end BC: an element above the cut, in the plane of the wall. r1 read it as 'open side (layer 2)'.
+
+**Search for the head level (ERS s.2.2 / s.2.3), own reading this run** (Drive 'Alsenan chalet project', cited by title;
+nothing committed): P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha256 `ab54dd55`) and ST7757 dxf.dxf (sha256 `9f9d1179`).
+The GF plan maps into the ST GF roof-slab plan with the T-108 column-fit translation (202.3333, 841.6415) m, re-checked
+here on the nearest column: arch S-COL.BON 2F8A lands on ST S-COL.BON 338 with 0 mm residual on all four corners.
+1. **ST GF roof-slab plan over the opening:** a shapely intersection of every LINE / LWPOLYLINE / POLYLINE / HATCH /
+   block line with the strip under 2DB / 2DC (inset 7 mm from 222 and BC) returns ONE entity: slab bar 4A8 (layer
+   S-REIN-SLAB), beside slab text 4A7 '5 dia 10/m'. No beam band, no drop, no slab edge or opening crosses the opening;
+   the nearest beam band (28E / 291, 0.20 wide) runs along the lift face, not across. So the element is **not a GF roof
+   beam** and no printed beam depth gives its soffit (UP-MAS-HPIECE-001 R4 cannot apply).
+2. **Convention check (not an assumption):** the GF plan has one other HIDDEN wall-width pair across a wall gap, 33C / 33D
+   (0.200 x 0.900, stair side); it DOES lie under ST beam band 292 / 296. A HIDDEN pair alone therefore does not say
+   'beam' or 'header': the slab plan decides, and at GF-14 it shows none. What the drawings support is a non-structural
+   header (0.150 wall over the opening, up to the slab), head level not printed.
+3. **Sections / elevations:** no section cuts GF-14 (merged T-221 SECTION_CUTS: GF A-A nearest wet room 0.58 m away,
+   GF B-B 1.07 m); GF-14 is an internal lobby, on no elevation. No level mark in the room.
+4. **Fallbacks:** Q-55 C (internal door 2.20 m, ASSUMED) is a DOOR-height fallback; this is a doorless opening under a
+   header, so it is not used (no borrowed value). No owner rule gives the head of a passage.
+
+**Result (R-T368-7, HELD by name OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED):** GF-14#WEND HELD head .. 3.65 m.l,
+GF-14#FSTOP HELD head .. 3.65 m.l (never 0, never the full band by default), GF-14#OS1#HEAD (head arris on the GF-14
+face, the head's underside edge) HELD 0 .. 1.256 m.l (0 if the head is at or above the 3.65 tile top, 1.256 if below).
+
+**Totals restated:** determinate exposed **31.65 m.l** (external corners 24.35 + pantry wall end 3.65 + pantry flat
+stop 3.65; was 38.95, -7.30 m.l, -18.7 %), finish HELD between 45-degree 31.65 **or** steel profile 31.65 (never 63.30);
+HELD at GF-14: 2 edges head .. 3.65 each (upper 7.30) + head arris 0 .. 1.256; doors HELD 0 .. 73.10 unchanged; the
+annex / level-HELD rooms unchanged. Freelancer 0 m.l (no edge / profile row): RULE_DIFFERENCE (scope), unchanged.
+
+**Finding to the Lead (lane I, for T-326 / T-327; no exported quantity moves here):** merged T-312 row GF-14|OPEN reads
+the open side as 'no wall, nothing to tile'. If the header exists, its GF-14-side face above the head (1.256 m x
+(3.65 - head)) is a tiled face of this wet room that T-312 omits, and its lobby-side face / soffit belong to their own
+finish lines. T-312's line L-fa408571a8adcfaf1a1f is BLOCKED_RFI (blank), so nothing exported changes now; the head level
+is a designer item (RFI list: 'head level of the 1.256 m passage between the GF wash lobby and the lift lobby'), not an
+owner question (ERS s.2.7 not met: a drawing fact, not a rule).
+
+The r1 sections below stand as checked by the Checker except where this section restates GF-14 and the totals.
 
 ## 1. Identity and run
 
@@ -42,22 +85,22 @@ Evidence per element (ERS s.2.2 order):
 | Niches | none drawn (no recess in any tiled room outline besides the listed corners) | - | 0 |
 | Finish | nothing printed (T-091: 0 finish notes) | UP-CER-006 / 007: alternatives on one edge, never both | both shown on the same m.l, choice HELD |
 
-## 3. Edge by edge (EDGE_LEDGER_T368.csv, 93 rows; CROSSCHECK_T368.csv)
+## 3. Edge by edge (EDGE_LEDGER_T368.csv, 94 rows in r2; CROSSCHECK_T368.csv)
 
 | Room | Line (FIN.WALL.TILE) | Band m | External corners (handles) | Wall ends / flat stops | Exposed m.l | Doors HELD (range m.l) | Windows (under frame) |
 |---|---|---|---|---|---|---|---|
 | 1F-07 laundry | L-b2077eee5a71a975bd74 | 3.35 OA | 3: wall corner ACF / B07, lift corner column 2FF0 (B06 / B14), column 2FED proud 0.05 | - | **10.0500** | D-1F-06, D-1F-05: 0 .. 10.50 | W21 2.80 |
 | 1F-09 bath | L-086e72207311265f81ab | 3.35 OA | 1: column 2FE7 proud 0.05 | - | **3.3500** | D-1F-07: 0 .. 5.20 | W23 2.80 |
 | GF-13 bath | L-a3cb2c8a9b6080769ebc | 3.65 OA | 1: column 2F84 proud 0.05 | - | **3.6500** | D-GF-12: 0 .. 5.20 | W06 2.80 |
-| GF-14 wash lobby | L-fa408571a8adcfaf1a1f | 3.65 OA | 1: obtuse 135-degree corner, walls BE / 318 | open side (layer 2, 2DB / 2DC): east end = free end of wall D2 (end line BC) WALL_END; west end = wall 222 continues FLAT_STOP | **10.9500** | D-GF-11, D-GF-12: 0 .. 10.40 | - |
+| GF-14 wash lobby | L-fa408571a8adcfaf1a1f | 3.65 OA | 1: obtuse 135-degree corner, walls BE / 318 | r2: open side under the HIDDEN header 2DB / 2DC: WALL_END (BC) and FLAT_STOP (222) HELD head .. 3.65 each, head arris HELD 0 .. 1.256 (R-T368-7) | **3.6500** (r1 10.95) | D-GF-11, D-GF-12: 0 .. 10.40 | - |
 | GF-07 open pantry | L-f5c5a1a9c9ee2b644cb5 (T-315 ADD) | 3.65 OA | 1: column 2FAE proud 0.05 below wall 158 | open edge B3 (layer 5): north end = free end of wall 159 (AC) WALL_END; south end = wall A6 continues as 104 FLAT_STOP | **10.9500** | D-GF-06: 0 .. 5.40 | W10 5.00, W09 6.00 |
 | 1F-02, 1F-03, 1F-08, 1F-12, 2F-02, GF-12, GF-16 | own lines (ledger) | 3.35 / 3.65 OA | 0 (rectangles / pentagon) | - | 0.0000 | one door each: 0 .. 5.20 | W20, W19, W22, W18 5.32, W28, -, W07 |
 | GF-06 kitchen (annex) | L-c330b8dc47261d5ada7e | HELD | 4: column 2FB7 both sides, column 2FB1, WC block corner (135 / 14F) | - | HELD (4 edges, never 0) | D-GF-05 HELD | W08 under frame |
 | GF-02 (annex) | L-d0858b30e0ea869bd047 | HELD | 1: column 2FA5 | - | HELD (1 edge) | D-GF-02, arch A-GF-01 HELD | - |
 | GF-03, GF-05 (annex), GF-10, GF-11 (level not drawn) | own lines | HELD | 0 | - | 0 | doors / doorway HELD | W05 under frame |
 
-Hand check (not the code's arithmetic): laundry 3 x 3.35 = 10.05; GF-14 3 x 3.65 = 10.95; pantry 3 x 3.65 = 10.95; GF-13
-3.65; 1F-09 3.35; total 38.95 m.l. Doors: 12 x (2 x 2.20 + 0.80) = 62.40 + (4.40 + 0.90) 5.30 + (4.40 + 1.00) 5.40 =
+Hand check (not the code's arithmetic): laundry 3 x 3.35 = 10.05; GF-14 1 x 3.65 = 3.65 (r2); pantry 3 x 3.65 = 10.95;
+GF-13 3.65; 1F-09 3.35; total 31.65 m.l (r1 38.95). Doors: 12 x (2 x 2.20 + 0.80) = 62.40 + (4.40 + 0.90) 5.30 + (4.40 + 1.00) 5.40 =
 73.10 m.l. Windows (not exposed): W20 2 x (2.50 - 1.70) + 0.60 + 0.60 = 2.80; W18 2 x (3.00 - 0.84) + 0.50 + 0.50 = 5.32;
 W09 2 x 1.50 + 1.50 + 1.50 = 6.00 (= ledger).
 
@@ -66,9 +109,10 @@ W09 2 x 1.50 + 1.50 + 1.50 = 6.00 (= ledger).
 | Quantity | m.l | Status |
 |---|---|---|
 | EXTERNAL_CORNER | 24.35 | ASSUMED — OWNER-APPROVED (band Q-48 A); corner count DRAWING-CONFIRMED |
-| WALL_END | 7.30 | same |
-| FLAT_STOP | 7.30 | same |
-| **Exposed, determinate (12 rooms)** | **38.95** | finish HELD: 45-degree (UP-CER-006) 38.95 **or** steel profile (UP-CER-007) 38.95, never 77.90 |
+| WALL_END | 3.65 (pantry) | same |
+| FLAT_STOP | 3.65 (pantry) | same |
+| **Exposed, determinate (12 rooms)** | **31.65** (r1 38.95) | finish HELD: 45-degree (UP-CER-006) 31.65 **or** steel profile (UP-CER-007) 31.65, never 63.30 |
+| GF-14 open side under the HIDDEN header (r2) | HELD: wall end + flat stop head .. 3.65 each (upper 7.30); head arris 0 .. 1.256 | OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED |
 | Door perimeters in determinate rooms | HELD 0 .. 73.10 | FRAME_DETAIL_NOT_DRAWN |
 | Annex / level-HELD rooms | HELD: 5 corner edges + 8 door / arch / doorway edges, no length (never 0) | band HELD |
 | Not exposed, listed (internal corners, tops, windows under frames) | 376.557 | evidence per row |
@@ -89,16 +133,16 @@ W09 2 x 1.50 + 1.50 + 1.50 = 6.00 (= ledger).
 His finishes workbook ('Alsenan chalet project', the floors / waterproofing / decor / marble workbook, normalised in
 tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json) has **no** edge, 45-degree or profile row: its cover lists floors,
 skirting, walls, stairs and landings, stair nosings (marble), decor, cornices and waterproofing only. His wall tile is
-room boundary x 3.00 m with no edge item. **Engine (this ledger) 38.95 m.l determinate + 0 .. 73.10 m.l HELD vs
+room boundary x 3.00 m with no edge item. **Engine (this ledger, r2) 31.65 m.l determinate + 0 .. 73.10 m.l doors HELD + GF-14 open side HELD (up to 8.556) vs
 freelancer 0 m.l.** Verdict proposal: **RULE_DIFFERENCE** (scope: the owner rules UP-CER-006 / 007 measure the exposed
 edge as its own item; his method has none). No percentage is meaningful against 0.
 
 ## 7. Findings
 
-- **F-T368-1 (FLAT_STOP).** At a flat stop (GF-14 west end, pantry south end) no second tiled face meets the tile, so a
+- **F-T368-1 (FLAT_STOP).** At a flat stop (pantry south end; GF-14 west end, HELD in r2) no second tiled face meets the tile, so a
   45-degree mitre has nothing to meet; physically only a stop profile (UP-CER-007) or a finished-edge tile closes it. The
   owner rules give the two finishes as alternatives without naming where each applies; this ledger does NOT choose: both
-  stay shown on the 7.30 m.l and the choice stays HELD (a rule-scope note for the rule library, not an owner question:
+  stay shown on the flat-stop m.l and the choice stays HELD (a rule-scope note for the rule library, not an owner question:
   ERS s.2.7 is not met while the finish itself is not printed anywhere).
 - **F-T368-2 (counter reflex).** The pantry engine room (GF-RC06FED) closes on counter lines (layer 5): its only reflex
   vertex is the south counter leg's end (AA / B2), not a wall. Counting room-polygon reflexes would have put a tile
@@ -111,11 +155,15 @@ edge as its own item; his method has none). No percentage is meaningful against 
 
 ## 8. Rules, code, tests
 
-- `research/agents_t368/t368_edge_rules.py` (generic, unwired): R-T368-1 .. 6 (docstring), corner classes (reflex =
+- `research/agents_t368/t368_edge_rules.py` (generic, unwired): R-T368-1 .. 7 (docstring; r2 adds `OpenSide`,
+  `open_side_edges`, `check_open_sides`, the HEAD_ARRIS type and held totals by type), corner classes (reflex =
   external, with mirror / clockwise / unit invariance), wall-only corners (R-T368-6), edge builders, opening perimeter
   in the band, finish alternatives, `check_ledger` refusals, `refuse_summed_finishes`.
 - `research/agents_t368/t368_alsenan.py` (development villa), `EDGE_LEDGER_T368.csv`, `CROSSCHECK_T368.csv`, `summary.json`.
-- `tests/t368_exposed_tile_edges` (32): villa E368 hand fixture (bath 2.40 x 1.80 with a column 0.40 x 0.30 proud:
+- `tests/t368_exposed_tile_edges` (40; r2 adds 8 for R-T368-7: HIDDEN header above the decor ceiling = full band
+  (normal), head 2.40 under a 3.10 band = 2 x 2.40 + 1.20 = 6.00 m.l (hand), clear open side, head unknown HELD by name,
+  **full band with head unknown refused (adverse, the r1 defect)**, missing head arris refused, a solid line is no open
+  side, units; Alsenan GF-14 held / pantry determinate): villa E368 hand fixture (bath 2.40 x 1.80 with a column 0.40 x 0.30 proud:
   2 x 3.10 = 6.20 m.l; door 0 .. 5.20 HELD; flush window 2.80 not exposed; open pantry 3 x 3.00 = 9.00 m.l), rotation /
   mirror / mm-m / clockwise invariance, drawn architrave, frameless doorway, head above band, floor-level window;
   adverse: both finishes summed, an internal corner as exposed, an edge under a frame counted, a door exposed without
@@ -131,3 +179,4 @@ edge as its own item; his method has none). No percentage is meaningful against 
 |---|---|---|---|---|---|
 | 2026-10-30 | the pantry room polygon's only reflex vertex is a counter end, not a tile arris | a room polygon closed on furniture / zone lines | corners of a finish are read between two solid faces (wall / column entities) only (every villa, R-T368-6) | test_counter_reflex_is_not_a_wall_corner | PROPOSED |
 | 2026-10-30 | an exposed-edge total could add the 45-degree and the profile m.l on the same edges | two owner rules for one edge read as two items | one edge, one finish; with no printed finish both shown, choice HELD, total never summed (every villa, R-T368-4) | test_both_finishes_summed_refused | PROPOSED |
+| 2026-10-30 | a wall-tile edge at an open side given the full band where the plan draws a HIDDEN overhead pair | layer linetype not read; open side assumed clear to the ceiling | read the linetype of every line closing an open side; HIDDEN = overhead element; the slab plan decides beam vs header; head HELD until established (every villa, R-T368-7) | test_hidden_pair_head_unknown_full_band_refused | PROPOSED |

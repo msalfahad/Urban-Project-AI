@@ -188,9 +188,13 @@ def test_alsenan_rebuild_is_byte_identical():
 
 def test_alsenan_totals_pinned():
     s = json.loads(A.outputs()["summary.json"])
-    assert s["exposed_determinate_m"] == pytest.approx(38.95)
-    assert s["exposed_by_type_m"] == {"EXTERNAL_CORNER": 24.35, "FLAT_STOP": 7.3, "WALL_END": 7.3}
+    assert s["exposed_determinate_m"] == pytest.approx(31.65)      # r2: 24.35 corners + pantry 3.65 + 3.65
+    assert s["exposed_by_type_m"] == {"EXTERNAL_CORNER": 24.35, "FLAT_STOP": 3.65, "WALL_END": 3.65}
     assert s["door_exposure_held_range_m"] == [0.0, pytest.approx(73.1)]
+    held = s["open_side_held"]["GF-14"]
+    assert held["item"] == "OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED"
+    assert held["wall_end_plus_flat_stop_m"] == ["head x 2", pytest.approx(7.3)]
+    assert held["head_arris_m"] == [0.0, pytest.approx(1.256)]
     assert s["finish"]["choice"] == "HELD"
     assert s["freelancer"]["rows"] == 0
 
@@ -246,3 +250,75 @@ def test_wall_corner_classes_on_the_bath(mirror):
 def test_wall_corner_classes_needs_one_class_per_edge():
     with pytest.raises(R.EdgeError):
         R.wall_corner_classes(BATH_MM, ["WALL"] * 3)
+
+
+# ------------------------------------------------------------------------------------------- R-T368-7 (r2, D-T368-1)
+
+def _side(head, crossing="HIDDEN"):
+    return R.OpenSide("OS1", 1.20, wall_ends=1, flat_stops=1, crossing=crossing, head_m=head, evidence="fixture")
+
+
+def test_hidden_pair_above_the_decor_ceiling_gives_the_full_band():
+    # normal: villa E368 lobby, band 3.10; the header soffit is printed at 3.25 (a section) >= 3.10
+    edges = R.open_side_edges("L1", _side(3.25), B310, "L-E368-L1", "fixture plan")
+    assert [(e.etype, e.length_m) for e in edges] == [("WALL_END", 3.10), ("FLAT_STOP", 3.10)]
+    R.check_open_sides(edges, {"L1": _side(3.25)})
+    assert R.check_ledger(edges)["EXPOSED_m"] == pytest.approx(6.20)
+
+
+def test_head_below_the_tile_top_gives_head_high_ends_and_the_head_arris_hand():
+    # head 2.40 < 3.10: 2 x 2.40 + 1.20 head arris = 6.00 m.l
+    edges = R.open_side_edges("L1", _side(2.40), B310, "L-E368-L1", "fixture plan")
+    assert {e.etype: e.length_m for e in edges} == {"WALL_END": 2.40, "FLAT_STOP": 2.40, "HEAD_ARRIS": 1.20}
+    assert R.check_ledger(edges)["EXPOSED_m"] == pytest.approx(6.00)
+
+
+def test_clear_open_side_keeps_the_full_band():
+    edges = R.open_side_edges("L1", _side(None, crossing="NONE"), B310, "L-E368-L1", "fixture plan")
+    assert sorted(e.etype for e in edges) == ["FLAT_STOP", "WALL_END"]
+    assert all(e.length_m == pytest.approx(3.10) for e in edges)
+
+
+def test_hidden_pair_head_unknown_is_held_by_name_never_zero():
+    edges = R.open_side_edges("L1", _side(None), B310, "L-E368-L1", "fixture plan")
+    by = {e.etype: e for e in edges}
+    assert by["WALL_END"].exposed == "HELD" and by["WALL_END"].length_m is None
+    assert by["WALL_END"].range_m == (None, 3.10) and by["FLAT_STOP"].range_m == (None, 3.10)
+    assert by["HEAD_ARRIS"].range_m == (0.0, 1.20)
+    assert all(R.HEAD_HELD in e.note for e in edges)
+    tot = R.check_ledger(edges)
+    assert tot["EXPOSED_m"] == 0.0 and tot["HELD_count"] == 3
+
+
+def test_hidden_pair_head_unknown_full_band_refused():
+    # adverse (the r1 defect): the open side under a HIDDEN element given the full band as if clear
+    full = R.end_edges("L1", 1, 1, B310, "L-E368-L1", "fixture plan")
+    with pytest.raises(R.EdgeError, match="HIDDEN"):
+        R.check_open_sides(full, {"L1": _side(None)})
+
+
+def test_hidden_pair_without_head_arris_refused_and_solid_line_is_not_an_open_side():
+    held = [e for e in R.open_side_edges("L1", _side(None), B310, "L-E368-L1", "x") if e.etype != "HEAD_ARRIS"]
+    with pytest.raises(R.EdgeError, match="head arris"):
+        R.check_open_sides(held, {"L1": _side(None)})
+    with pytest.raises(R.EdgeError, match="not an open side"):
+        R.open_side_edges("L1", _side(None, crossing="CONTINUOUS"), B310, "L-E368-L1", "x")
+
+
+def test_open_side_units_refused_and_band_held_stays_held():
+    with pytest.raises(R.EdgeError, match="mm given"):
+        R.open_side_edges("L1", R.OpenSide("OS1", 1200, 1, 1, "HIDDEN", None), B310, "L", "x")
+    with pytest.raises(R.EdgeError, match="mm given"):
+        R.open_side_edges("L1", R.OpenSide("OS1", 1.2, 1, 1, "HIDDEN", 2400), B310, "L", "x")
+    edges = R.open_side_edges("L1", _side(None), BHELD, "L-E368-L1", "x")
+    assert all(e.exposed == "HELD" and e.length_m is None for e in edges)
+
+
+def test_alsenan_gf14_open_side_is_held_under_the_hidden_head():
+    edges = {e.edge_id: e for e in A.build()}
+    for eid, hi in (("GF-14#WEND", 3.65), ("GF-14#FSTOP", 3.65)):
+        assert edges[eid].exposed == "HELD" and edges[eid].range_m == (None, hi), eid
+    assert edges["GF-14#OS1#HEAD"].range_m == (0.0, 1.256)
+    assert edges["GF-07#WEND"].length_m == pytest.approx(3.65)      # the pantry's open edge has no overhead element
+    assert edges["GF-07#FSTOP"].length_m == pytest.approx(3.65)
+    assert "2DB / 2DC" in A.OPEN_SIDES["GF-14"].evidence and "HIDDEN" in A.OPEN_SIDES["GF-14"].evidence

@@ -56,10 +56,28 @@ CORNERS = {
     "GF-11": ("GF-RD36087", 0, 4, 0, 0, "rectangle"),
     "GF-12": ("GF-RF38DAF", 0, 4, 0, 0, "rectangle"),
     "GF-13": ("GF-RB28769", 1, 5, 0, 0, "reflex: column 2F84 proud 0.05 (0.58 / 0.05)"),
-    "GF-14": ("GF-RDBD4F9", 1, 4, 1, 1, "reflex: obtuse 135-degree corner, walls BE / 318 (1.024 / "
-                                       "1.341); open side 2DB / 2DC (layer 2): east end = free end of wall D2 "
-                                       "(wall end line BC), west end = wall 222 continues past it"),
+    "GF-14": ("GF-RDBD4F9", 1, 4, 0, 0, "reflex: obtuse 135-degree corner, walls BE / 318 (1.024 / "
+                                       "1.341); the open side is OPEN_SIDES['GF-14'] (r2, R-T368-7)"),
     "GF-16": ("GF-RD6F891", 0, 5, 0, 0, "pentagon, no reflex"),
+}
+# r2 (Checker D-T368-1): open sides read with the LINETYPE of every line drawn across them (R-T368-7).
+ST_SHA8 = "9f9d1179"
+OPEN_SIDES = {
+    "GF-14": R.OpenSide(
+        "OS1", 1.256, wall_ends=1, flat_stops=1, crossing="HIDDEN", head_m=None,
+        evidence=("open side 1.256 m between lift face 222 and the free end BC of wall D2 / 20C; drawn across it: "
+                  "the pair 2DB / 2DC on layer 2 (layer linetype HIDDEN), 0.150 apart = the D2 / 20C wall "
+                  "thickness, collinear with the D2 / 20C faces: an element ABOVE the cut in the plane of the wall. "
+                  f"ST7757 dxf.dxf {ST_SHA8}, GF roof-slab plan (T-108 column-fit translation, checked this run on "
+                  "arch column 2F8A = ST column 338, 0 mm): the strip under the pair is crossed only by slab bar line "
+                  "4A8 (layer S-REIN-SLAB) beside slab text 4A7 '5 dia 10/m': no beam band, no drop, no slab edge "
+                  "(the nearest beam band 28E / 291 runs along the lift face, not across the opening), so the "
+                  "element is not a GF roof beam and no printed beam depth gives its soffit; a header wall (non-"
+                  "structural, 0.150) to the slab is the reading the plan supports. Head level printed on no plan, "
+                  "section or elevation (no section cuts GF-14: T-221 SECTION_CUTS, merged); Q-55 C (2.20, doors) "
+                  "is a door-height fallback, not a head for a doorless opening. Comparison: the HIDDEN pair 33C / "
+                  "33D (0.200, stair side) DOES lie under ST beam band 292 / 296, so a HIDDEN pair alone does not say "
+                  "beam or header: the ST plan decides, and here it shows none")),
 }
 GEOMETRY_SOURCE = (f"own reading: engine room polygon (ARCH_ROOMS, ARCH_TAKEOFF_V2.9 run on P7757.dxf {DXF_SHA8}); "
                    "reflex vertex = external corner")
@@ -135,6 +153,8 @@ def build():
         src = GEOMETRY_SOURCE + f"; {eng}: {why}"
         edges += R.corner_edges(room, ext, inn, b, line, src)
         edges += R.end_edges(room, wend, fstop, b, line, src)
+        if room in OPEN_SIDES:
+            edges += R.open_side_edges(room, OPEN_SIDES[room], b, line, src)
         for o in ops:
             if o["room"] == room:
                 edges.append(R.opening_edge(room, _opening(o, depths), b, line))
@@ -142,6 +162,7 @@ def build():
     for e in edges:
         if e.exposed == "EXPOSED":
             e.finish = R.finish_alternatives(e.length_m)
+    R.check_open_sides(edges, OPEN_SIDES)
     return edges
 
 
@@ -154,7 +175,8 @@ def render(edges):
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(COLS)
     for e in edges:
-        rng = "" if not e.range_m else f"{e.range_m[0]:.4f} .. {e.range_m[1]:.4f}"
+        rng = "" if not e.range_m else (("head" if e.range_m[0] is None else f"{e.range_m[0]:.4f}")
+                                        + f" .. {e.range_m[1]:.4f}")
         fin = ""
         if e.exposed == "EXPOSED":
             fin = "HELD: 45-degree (UP-CER-006) OR steel profile (UP-CER-007) on these m.l, never both"
@@ -182,7 +204,15 @@ def summary(edges):
         "exposed_determinate_m": det_exposed,
         "exposed_by_type_m": tot["by_type"],
         "held_edge_count": tot["HELD_count"],
-        "door_exposure_held_range_m": [0.0, tot["HELD_range_hi_m"]],
+        "door_exposure_held_range_m": [0.0, tot["held_by_type"].get("OPENING_DOOR", {}).get("hi_m", 0.0)],
+        "open_side_held": {
+            "GF-14": {
+                "item": R.HEAD_HELD,
+                "wall_end_plus_flat_stop_m": ["head x 2", tot["held_by_type"]["WALL_END"]["hi_m"]
+                                              + tot["held_by_type"]["FLAT_STOP"]["hi_m"]],
+                "head_arris_m": [0.0, tot["held_by_type"]["HEAD_ARRIS"]["hi_m"]],
+                "basis": "R-T368-7: open side under a HIDDEN overhead element, head level not established",
+            }},
         "not_exposed_listed_m": tot["NOT_EXPOSED_m"],
         "finish": R.finish_alternatives(det_exposed),
         "freelancer": {"rows": 0, "basis": "no edge / profile / 45-degree row in his finishes workbook (cover: "

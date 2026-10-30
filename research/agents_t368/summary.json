@@ -5,16 +5,16 @@
  ],
  "double_count_vs_reveal_and_sill_ledgers_m": 0.0,
  "dxf_sha256_8": "ab54dd55",
- "edges": 93,
+ "edges": 94,
  "exposed_by_type_m": {
   "EXTERNAL_CORNER": 24.35,
-  "FLAT_STOP": 7.3,
-  "WALL_END": 7.3
+  "FLAT_STOP": 3.65,
+  "WALL_END": 3.65
  },
- "exposed_determinate_m": 38.95,
+ "exposed_determinate_m": 31.65,
  "finish": {
-  "alternative_MITRED_45_DEGREE_EDGE": 38.95,
-  "alternative_STEEL_EDGE_PROFILE": 38.95,
+  "alternative_MITRED_45_DEGREE_EDGE": 31.65,
+  "alternative_STEEL_EDGE_PROFILE": 31.65,
   "choice": "HELD",
   "status": "EDGE_FINISH_NOT_ESTABLISHED (UP-CER-007: alternatives on the same m.l, never summed)"
  },
@@ -22,8 +22,22 @@
   "basis": "no edge / profile / 45-degree row in his finishes workbook (cover: floors, skirting, walls, stairs, decor, cornices, waterproofing)",
   "rows": 0
  },
- "held_edge_count": 27,
+ "held_edge_count": 30,
  "not_exposed_listed_m": 376.557,
+ "open_side_held": {
+  "GF-14": {
+   "basis": "R-T368-7: open side under a HIDDEN overhead element, head level not established",
+   "head_arris_m": [
+    0.0,
+    1.256
+   ],
+   "item": "OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED",
+   "wall_end_plus_flat_stop_m": [
+    "head x 2",
+    7.3
+   ]
+  }
+ },
  "rooms": {
   "1F-02": {
    "exposed_m": 0.0,
@@ -122,9 +136,9 @@
    "line_id": "L-a3cb2c8a9b6080769ebc"
   },
   "GF-14": {
-   "exposed_m": 10.95,
-   "held_edges": 2,
-   "held_hi_m": 10.4,
+   "exposed_m": 3.65,
+   "held_edges": 5,
+   "held_hi_m": 18.956,
    "line_id": "L-fa408571a8adcfaf1a1f"
   },
   "GF-16": {

@@ -43,6 +43,15 @@ Rules (research, proposed; scope every villa; provenance T-368):
             tiled face it bounds (a door between two tiled rooms has one perimeter on EACH face).
   R-T368-6  A corner is a tile corner only between two solid faces (wall / column): a room polygon that closes on a
             counter, a zone line or an open side is read on the wall and column entities, never on the polygon alone.
+  R-T368-7  (r2, Checker D-T368-1; every villa) An open side crossed in plan by a HIDDEN-linetype element (an
+            overhead head, bulkhead, header wall or beam drawn above the cut) is an OPENING UNDER A HEAD, never a
+            full-height side, until the head level is established from a drawing (structural beam depth on the slab
+            plan / schedule, a section, an elevation, a printed level). Head at or above the tile top: the wall end and
+            flat stop take the full band and there is no head arris. Head below the tile top: they are head-high and
+            the head's underside arris (the opening width) is a third exposed edge on that face. Head not established:
+            wall end and flat stop are HELD in the range head .. band top (never 0, never the full band) and the head
+            arris is HELD in the range 0 .. width, by name OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED. A door-height
+            fallback (Q-55 C, doors) is not a head level for a doorless opening.
 """
 
 from __future__ import annotations
@@ -55,7 +64,8 @@ MITRE = "MITRED_45_DEGREE_EDGE"          # UP-CER-006
 PROFILE = "STEEL_EDGE_PROFILE"           # UP-CER-007
 FINISHES = (MITRE, PROFILE)
 
-EXPOSED_TYPES = ("EXTERNAL_CORNER", "WALL_END", "FLAT_STOP", "OPENING_DOOR", "OPENING_WINDOW")
+EXPOSED_TYPES = ("EXTERNAL_CORNER", "WALL_END", "FLAT_STOP", "OPENING_DOOR", "OPENING_WINDOW", "HEAD_ARRIS")
+HEAD_HELD = "OVERHEAD_ELEMENT_HEAD_NOT_ESTABLISHED"
 NOT_EXPOSED_TYPES = ("INTERNAL_CORNER", "TOP_AT_CEILING", "BOTTOM_AT_FLOOR", "UNDER_FRAME")
 
 OA = "ASSUMED — OWNER-APPROVED"
@@ -182,6 +192,76 @@ def end_edges(room, wall_ends, flat_stops, band, line_id, source):
     return out
 
 
+@dataclass(frozen=True)
+class OpenSide:
+    """An open side of a tiled room (a gap in its wall line with no door leaf) and what the plan draws across it.
+    crossing: "NONE" (nothing drawn across: clear to the ceiling, R-T368-1/2) | "HIDDEN" (an overhead element drawn
+    with a HIDDEN linetype, R-T368-7) | "CONTINUOUS" (a solid line: not an open side, refused here).
+    head_m: soffit of the overhead element above the finished floor, m; None = not established."""
+    side_id: str
+    width_m: float
+    wall_ends: int
+    flat_stops: int
+    crossing: str = "NONE"
+    head_m: float | None = None
+    evidence: str = ""
+
+
+def open_side_edges(room, side: OpenSide, band: Band, line_id, source):
+    """R-T368-7. Edges of one open side: the wall end(s) / flat stop(s) at its two ends and, under a head below the
+    tile top, the head arris on this face."""
+    if side.crossing not in ("NONE", "HIDDEN"):
+        raise EdgeError(f"{room} {side.side_id}: crossing {side.crossing!r} is not an open side")
+    if side.width_m <= 0 or side.width_m > 20:
+        raise EdgeError(f"{room} {side.side_id}: width {side.width_m} m out of range (mm given?)")
+    if side.head_m is not None and (side.head_m <= 0 or side.head_m > 20):
+        raise EdgeError(f"{room} {side.side_id}: head {side.head_m} m out of range (mm given?)")
+    src = source + (f"; {side.evidence}" if side.evidence else "")
+    if side.crossing == "NONE" or band.top_m is None:
+        if side.crossing == "HIDDEN" and band.top_m is None:
+            src += f"; {HEAD_HELD} too"
+        return end_edges(room, side.wall_ends, side.flat_stops, band, line_id, src)
+    top = band.top_m
+    if side.head_m is not None and side.head_m >= top - 1e-9:   # head at or above the tile top: full band
+        return end_edges(room, side.wall_ends, side.flat_stops, band, line_id,
+                         src + f"; head {side.head_m:.2f} m >= tile top {top:.2f} m (R-T368-7)")
+    out = []
+    if side.head_m is not None:     # head inside the band: head-high ends + the head arris
+        h = side.head_m
+        for n, etype, tag, note in ((side.wall_ends, "WALL_END", "WEND", ""),
+                                    (side.flat_stops, "FLAT_STOP", "FSTOP", "F-T368-1: no second tiled face meets it")):
+            if n:
+                out.append(Edge(f"{room}#{tag}", room, etype, n, round(n * h, 4), None, "EXPOSED", band.status,
+                                src + f"; head {h:.2f} m below tile top {top:.2f} m (R-T368-7)", line_id, note))
+        out.append(Edge(f"{room}#{side.side_id}#HEAD", room, "HEAD_ARRIS", 1, round(side.width_m, 4), None,
+                        "EXPOSED", band.status, src, line_id, "underside arris of the head on this face"))
+        return out
+    for n, etype, tag in ((side.wall_ends, "WALL_END", "WEND"), (side.flat_stops, "FLAT_STOP", "FSTOP")):
+        if n:   # range head .. top per edge: the lower bound is the unknown head, never 0
+            out.append(Edge(f"{room}#{tag}", room, etype, n, None, (None, round(n * top, 4)), HELD, HELD, src,
+                            line_id, f"{HEAD_HELD}: {n} edge(s), each head .. {top:.2f} m (never 0, never the full "
+                                     "band by default)"))
+    out.append(Edge(f"{room}#{side.side_id}#HEAD", room, "HEAD_ARRIS", 1, None, (0.0, round(side.width_m, 4)), HELD,
+                    HELD, src, line_id, f"{HEAD_HELD}: 0 when the head is at or above the tile top, "
+                                        f"{side.width_m:.3f} m when below"))
+    return out
+
+
+def check_open_sides(edges, sides):
+    """Refuse a ledger that gives a HIDDEN-crossed open side with no established head a determinate band
+    (R-T368-7). sides = {room: OpenSide}."""
+    for room, side in sides.items():
+        if side.crossing != "HIDDEN" or side.head_m is not None:
+            continue
+        for e in edges:
+            if e.room == room and e.etype in ("WALL_END", "FLAT_STOP", "HEAD_ARRIS") and e.exposed != HELD:
+                raise EdgeError(f"{e.edge_id}: open side {side.side_id} lies under a HIDDEN overhead element with no "
+                                f"established head: {HEAD_HELD} (R-T368-7)")
+        if not any(e.room == room and e.etype == "HEAD_ARRIS" for e in edges):
+            raise EdgeError(f"{room}: head arris of {side.side_id} missing (R-T368-7)")
+    return True
+
+
 def opening_perimeter(op: Opening, band: Band):
     """Perimeter of the opening inside [0, tile top] on one face, m.l; None when a needed level is HELD."""
     if band.top_m is None or op.head_m is None:
@@ -244,7 +324,8 @@ def finish_alternatives(exposed_m, printed=None):
 def check_ledger(edges):
     """Refuse every R-T368 breach. Returns the totals by type and status."""
     seen = set()
-    tot = {"EXPOSED_m": 0.0, "HELD_count": 0, "HELD_range_hi_m": 0.0, "NOT_EXPOSED_m": 0.0, "by_type": {}}
+    tot = {"EXPOSED_m": 0.0, "HELD_count": 0, "HELD_range_hi_m": 0.0, "NOT_EXPOSED_m": 0.0, "by_type": {},
+           "held_by_type": {}}
     for e in edges:
         if e.edge_id in seen:
             raise EdgeError(f"{e.edge_id}: edge counted twice")
@@ -268,6 +349,9 @@ def check_ledger(edges):
             tot["HELD_count"] += e.count
             if e.range_m:
                 tot["HELD_range_hi_m"] += e.range_m[1]
+                hb = tot.setdefault("held_by_type", {}).setdefault(e.etype, {"count": 0, "hi_m": 0.0})
+                hb["count"] += e.count
+                hb["hi_m"] = round(hb["hi_m"] + e.range_m[1], 4)
         elif e.exposed == "NOT_EXPOSED":
             if e.length_m is not None:
                 tot["NOT_EXPOSED_m"] += e.length_m
