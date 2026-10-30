@@ -1280,6 +1280,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t362_masonry_white/` | 2 |
 | `tests/t365_joints/` | 2 |
 | `tests/t367_masonry_mortar/` | 2 |
+| `tests/t368_exposed_tile_edges/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1649,6 +1650,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t362/` | 10 |
 | `research/agents_t365/` | 9 |
 | `research/agents_t367/` | 6 |
+| `research/agents_t368/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

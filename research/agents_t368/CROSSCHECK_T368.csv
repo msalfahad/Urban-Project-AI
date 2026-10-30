@@ -1,0 +1,36 @@
+edge_id,opening,this_ledger,t313_outer_face_edge,t325_internal_sill,double_count_m,why
+1F-02#W20,W20,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-02#D-1F-04,D-1F-04,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+1F-03#D-1F-01,D-1F-01,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+1F-03#W19,W19,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-07#W21,W21,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-07#D-1F-06,D-1F-06,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+1F-07#D-1F-05,D-1F-05,HELD range 0.0000 .. 5.3000,no,,0.0000,interior opening: no outer-face edge
+1F-08#D-1F-06,D-1F-06,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+1F-08#W22,W22,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-09#W23,W23,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-09#D-1F-07,D-1F-07,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+1F-12#W18,W18,NOT_EXPOSED 5.3200,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+1F-12#D-1F-10,D-1F-10,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+2F-02#W28,W28,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+2F-02#D-2F-03,D-2F-03,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+GF-02#D-GF-02,D-GF-02,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-02#A-GF-01,A-GF-01,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-03#D-GF-02,D-GF-02,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-05#D-GF-04,D-GF-04,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-06#W08,W08,NOT_EXPOSED,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-06#D-GF-05,D-GF-05,HELD,yes,,0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris"
+GF-07#D-GF-06,D-GF-06,HELD range 0.0000 .. 5.4000,yes,,0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris"
+GF-07#W10,W10,NOT_EXPOSED 5.0000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-07#W09,W09,NOT_EXPOSED 6.0000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-10#W05,W05,NOT_EXPOSED,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-10#D-GF-10,D-GF-10,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-11#D-GF-10,D-GF-10,HELD,no,,0.0000,interior opening: no outer-face edge
+GF-11#T-128:doorway to the stair hall (no leaf drawn),T-128:doorway to the stair hall (no leaf drawn),HELD,no,,0.0000,interior opening: no outer-face edge
+GF-12#D-GF-11,D-GF-11,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+GF-13#W06,W06,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-13#D-GF-12,D-GF-12,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+GF-14#D-GF-11,D-GF-11,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+GF-14#D-GF-12,D-GF-12,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
+GF-16#W07,W07,NOT_EXPOSED 2.8000,yes,0.0 m2 / 0.0 m.l (NONE),0.0000,"room face of the opening; the T-313 edge is the arris on the OUTER face (exterior corners line): another face, another arris; internal sill 0.0 (frame flush): no sill edge on the room face"
+GF-16#D-GF-14,D-GF-14,HELD range 0.0000 .. 5.2000,no,,0.0000,interior opening: no outer-face edge
