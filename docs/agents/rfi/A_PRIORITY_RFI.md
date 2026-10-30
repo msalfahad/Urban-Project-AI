@@ -419,3 +419,26 @@ status or V2.9 cell changed by these verdicts.
 - RFI-A08: NOT CHECKED this run (1F plan not opened).
 Totals: 36 questions (A09 is a pointer, not counted): CITATION OK 19, CORRECTED 13, PARTIAL 2, NOT CHECKED 2 (S23, A08); 0 WRONG
 beyond the corrections. The Lead applies the corrections in the question text (S01, S19, S21 change a page number).
+
+### Addendum: the 2 NOT CHECKED + 3 PARTIAL items (Verifier 2026-10-30 ~04:30 UTC, run session_01E6cPnbD7nsBT15vQKR9kA7)
+
+Sources read this run (Drive, Alsenan chalet project, read-only, decoded into .work/private; raster prints read as
+images): 'p7757_arch_sheet04.pdf' (= 1st FLOOR PLAN 1:100), 'p7757_arch_sheet10.pdf' (= SECTION A-A 1:100),
+'Alsenan_Architectural_P7757_Pages_11-12.pdf' p.1 (= sheet 11, SECTION B-B 1:100). No quantity, status or V2.9 cell changed.
+
+- RFI-S23: CITATION OK, sheet numbers to add: section B-B = sheet 11 (annex +4.30 on the annex roof; drums '130' above
+  +9.70); section A-A = sheet 10 (+13.90 on the main-roof band, +9.70 on the 1F roof, +5.50 below); 1F plan sheet 04 prints
+  ROOF +4.30 (annex) and +5.50 at the terraces. The 'about 0.23 m undivided band' at +4.30 was not measured this run.
+- RFI-A08: CORRECTED: the 1F plan is sheet 04, and it prints NO room name at this space: the room is the unlabelled
+  1.65 x 1.80 m space (= 2.970 m2, matching the engine's typed 'dressing' ARCH.SPACE) between the bath 2.00 x 1.80 and the
+  master bed room 4.20 x 4.00 on the upper-neighbour side, with a diagonal line drawn across it. 'Dressing room' is our
+  label, not the architect's: the question must identify the space by position and dimensions and ask its USE and floor
+  finish (the internal name is not a drawing fact).
+- RFI-A03: CITATION OK: GF sheet 03 and 1F sheet 04 both draw the round stair; sections A-A (sheet 10) and B-B (sheet 11)
+  show no curved flight, as the question says.
+- RFI-A04: CORRECTED (sheet numbers): architectural GF plan sheet 03, section A-A sheet 10 (the main stair flights are cut
+  there); ST linework p.4 as before. The riser count conflict itself was not recounted this run.
+- RFI-A05: (was OK for ST p.5, B-B now checked) CITATION OK: section B-B = sheet 11, '130' printed above the +9.70 roof beside each drum; 1F plan sheet 04
+  prints 'VOID' (the sea-side round void).
+Updated totals: CITATION OK 21, CORRECTED 15, PARTIAL 0, NOT CHECKED 0 (36 questions + A09 pointer); 0 WRONG. Lead: apply
+A08 (identify the space by position, ask use + finish) and the sheet numbers above in the question text.
