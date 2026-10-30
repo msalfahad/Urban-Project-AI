@@ -44,53 +44,55 @@
  "junctions_total": 117,
  "mesh_alt210_by_floor": {
   "1F": {
-   "held_m": 88.8289,
+   "held_m": 79.2813,
    "levels": 99,
-   "net_m": 269.3324,
+   "net_m": 278.8801,
    "walls": 17
   },
   "2F": {
-   "held_m": 24.5,
+   "held_m": 21.0,
    "levels": 30,
-   "net_m": 49.5997,
+   "net_m": 53.0997,
    "walls": 5
   },
   "GF": {
-   "held_m": 48.4945,
+   "held_m": 42.6945,
    "levels": 72,
-   "net_m": 182.4545,
+   "net_m": 188.2545,
    "walls": 12
   }
  },
- "mesh_alt210_total_net_m": 501.3866,
+ "mesh_alt210_total_net_m": 520.2343,
  "mesh_held_by_cause_m": {
   "BLOCK_TOP_UNKNOWN": 92.1498,
   "LINTEL_BEARING": 6.95,
-  "OPENING_EXTENT_UNKNOWN": 41.12,
-  "POSITION_UNKNOWN": 39.6732
+  "OPENING_EXTENT_UNKNOWN": 41.7148,
+  "POSITION_UNKNOWN": 23.6466
  },
- "mesh_levels_with_partial_course_above": 11,
+ "mesh_levels_with_partial_course_above": 22,
+ "mesh_partial_course_above_block_m": 45.9347,
+ "mesh_partial_course_above_net_m": 70.0325,
  "mesh_primary_by_floor": {
   "1F": {
-   "held_m": 100.1989,
+   "held_m": 93.0513,
    "levels": 102,
-   "net_m": 271.542,
+   "net_m": 278.6896,
    "walls": 17
   },
   "2F": {
-   "held_m": 25.4,
+   "held_m": 22.8,
    "levels": 30,
-   "net_m": 47.8997,
+   "net_m": 50.4997,
    "walls": 5
   },
   "GF": {
-   "held_m": 54.2941,
+   "held_m": 48.61,
    "levels": 80,
-   "net_m": 208.6005,
+   "net_m": 214.2846,
    "walls": 12
   }
  },
- "mesh_primary_total_net_m": 528.0422,
+ "mesh_primary_total_net_m": 543.4739,
  "openings_not_in_register_gross": [
   "D-GF-15",
   "W02",

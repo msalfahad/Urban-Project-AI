@@ -179,3 +179,42 @@ def test_lintel_schedule_bands():
     sch = [(0, 100, 0.20), (101, 200, 0.20), (201, 300, 0.30), (301, 500, 0.40), (501, 750, 0.55)]
     assert X.lintel_depth(1.00, sch) == 0.20 and X.lintel_depth(2.45, sch) == 0.30
     assert X.lintel_depth(1.005, sch) is None and X.lintel_depth(8.0, sch) is None
+
+
+# r2 (Checker D-T355-1, 2026-10-30): a known lintel top below the level never holds the opening width (R-T355-6).
+# Hand fixture: two block pieces of different tops, 3.00 x 3.00 m (under a beam) and 2.40 x 4.40 m (under the slab);
+# door 0.90, head 2.20, lintel 0.25 (top 2.45), bearings 0.40. Levels from the highest top 4.40: 0.6 .. 4.2 (7).
+#   0.60 / 1.20 / 1.80: the door's station is not tied to a piece, but below the lowest top 3.00 both pieces stand:
+#                       5.40 - 0.90 = 4.50 each; 2.40: span cut 0.90, bearings 0.80 held, 3.70 net
+#   3.00 / 3.60 / 4.20: only the 2.40 piece stands (3.01 > 3.00); above the lintel (2.45 < 3.00) the masonry is
+#                       continuous wherever it exists: net 2.40 each, 0 held (r1 held 0.90 each, wrongly)
+TWO_TOP = [X.make_piece("BLOCK", 3.0, 3.00, "R1@b0"), X.make_piece("BLOCK", 2.4, 4.40, "R1@b1")]
+
+
+def test_r2_level_above_known_lintel_is_full_gross_on_a_two_top_wall():
+    p = wall(pieces=TWO_TOP, openings=[X.make_opening("D1", 0.90, 0.0, 2.20, 0.25, 0.40)])
+    n, h, recs, st = net(p)
+    assert [r["level_m"] for r in recs] == [0.6, 1.2, 1.8, 2.4, 3.0, 3.6, 4.2]
+    assert [r["net_m"] for r in recs] == [4.5, 4.5, 4.5, 3.7, 2.4, 2.4, 2.4]
+    assert all(r["held_m"] == 0.0 and r["held"] == [] for r in recs[4:])
+    assert (n, h) == (24.4, 0.8)
+
+
+def test_r2_adverse_lintel_depth_unknown_still_holds_on_a_two_top_wall():
+    p = wall(pieces=TWO_TOP, openings=[X.make_opening("D1", 0.90, 0.0, 2.20, None, 0.40)])
+    recs, st = X.mesh_levels(p)
+    r = {x["level_m"]: x for x in recs}
+    assert r[3.0]["held_m"] == 0.9 and r[3.0]["net_m"] == 1.5 and r[3.0]["held"][0][0] == "POSITION_UNKNOWN"
+    assert r[2.4]["held"][0][0] == "LINTEL_UNKNOWN"
+
+
+def test_r2_partial_course_judged_per_piece():
+    # GF-W01-like: tops 3.75 (beam) and 4.10 (slab); level 3.60: 0.14 above the 3.75 piece (partial), 0.49 -> 0.19
+    # above the 4.10 piece (full). r1 reported 0.19, not partial.
+    p = wall(pieces=[X.make_piece("BLOCK", 1.1, 3.75, "R1@b0"), X.make_piece("BLOCK", 0.5, 4.10, "R1@b1")],
+             openings=[])
+    recs, _ = X.mesh_levels(p)
+    top = recs[-1]
+    assert top["level_m"] == 3.6 and top["partial_above"] and top["course_above_h_m"] == 0.14
+    assert top["partial_above_m"] == 1.1 and top["net_m"] == 1.6           # flag only: the strip is not reduced
+    assert not recs[-2]["partial_above"] and recs[-2]["partial_above_m"] == 0.0

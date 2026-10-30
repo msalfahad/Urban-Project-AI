@@ -61,8 +61,21 @@ def test_headline_figures(built):
     S = built[1]
     assert S["junctions_total"] == 117
     assert S["ties_primary_total"] == 182 and S["ties_alt210_total"] == 170
-    assert S["mesh_primary_total_net_m"] == 528.0422 and S["mesh_alt210_total_net_m"] == 501.3866
+    # r2 (D-T355-1): r1 528.0422 / 501.3866 held the opening width over a known lintel top (R-T355-6)
+    assert S["mesh_primary_total_net_m"] == 543.4739 and S["mesh_alt210_total_net_m"] == 520.2343
     assert S["course_primary"]["module"] == 0.2
+
+
+def test_r2_no_hold_over_a_known_lintel_top(built):
+    led = built[2]
+    for r in led["mesh"]:
+        assert not any("masonry over the lintel" in why for _, _, why in r["held"]), (r["wall_id"], r["level_m"])
+    w28 = {r["level_m"]: r for r in led["mesh"] if r["wall_id"] == "GF-W28"}
+    assert w28[4.2]["net_m"] == 2.731043 and w28[4.2]["held_m"] == 0.0      # Checker re-measure, D-GF-13 below
+    w01 = {r["level_m"]: r for r in led["mesh"] if r["wall_id"] == "GF-W01"}
+    assert w01[3.6]["partial_above"] and w01[3.6]["course_above_h_m"] == 0.14  # 0.14 over the CB8 pieces (R-T355-7)
+    S = built[1]
+    assert S["mesh_levels_with_partial_course_above"] == 22
 
 
 def test_no_block_or_plaster_quantity_written(built):

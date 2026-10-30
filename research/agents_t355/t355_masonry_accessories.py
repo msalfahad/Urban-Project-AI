@@ -23,6 +23,12 @@ RULES (every villa; provenance in the T-355 report)
   layer (span cut: concrete); the lintel BEARINGS (printed minimum, actual length not drawn) are HELD at that level,
   capped to the block present. An opening whose sill / head / lintel depth is not established holds its own width
   (plus its bearings above the sill) at the levels it may reach; nothing else is held. Columns are never in the strip.
+- R-T355-6 (r2, Checker D-T355-1 2026-10-30): at a level ABOVE a known lintel top (head + lintel depth <= level) an
+  opening never cuts and never holds the strip, whatever piece it stands under: the masonry is continuous over the
+  lintel wherever the level exists. An opening whose lintel depth is unknown still holds (R-T355-2).
+- R-T355-7 (r2): the partial top course is judged per block piece, not from the wall's highest top: a level is flagged
+  partial_above when any piece standing over it has less than a full block height above the joint (report only; the
+  joint and the strip exist).
 - R-T355-3 JUNCTIONS ONCE: a junction = one boundary between a block segment and a column piece in a run (consecutive
   block pieces are one segment); keyed (wall, run, station); the same key twice is refused. Ties per junction = the
   levels of R-T355-1 that exist on the block segment beside the column. An unknown block top there -> HELD.
@@ -219,8 +225,9 @@ def mesh_levels(panel: Panel):
                 if bear > TOL:
                     hold.append(("LINTEL_BEARING", bear, f"{o.oid}: lintel bearing (printed minimum, length not drawn)"))
                 continue
-            if ambiguous and z + j < tmax - TOL:
-                hold.append(("POSITION_UNKNOWN", o.width, f"{o.oid}: masonry over the lintel, host block top not tied"))
+            # R-T355-6 (r2, D-T355-1): the level is above a KNOWN lintel top (lt <= z): the opening interrupts nothing
+            # at this joint. Wherever the level exists (decided by the piece tops, already in gross) the masonry runs
+            # continuously over the lintel; the opening's station does not matter: no cut, no hold.
         avail = gross - cut_o - cut_l
         if avail < -1e-6:
             raise AccessoryError(f"{panel.wall_id} level {z}: cuts {cut_o + cut_l} exceed the block {gross}")
@@ -234,8 +241,17 @@ def mesh_levels(panel: Panel):
             held_in += take
             hold_out.append((cause, round(take, 6), why))
         net = avail - held_in
+        # R-T355-7 (r2): the course above the level is judged PER PIECE (a two-top wall can have a full course over
+        # its high pieces and a cut one over its low pieces); course_above_h_m = the smallest course above over the
+        # pieces standing at this level, partial_above_m = their block length under a partial course (report only).
+        bh = panel.course.block_h
+        over = [(round(min(bh, p.top - z - j), 6), p.length) for p in panel.pieces
+                if p.kind == "BLOCK" and p.top is not None and z + j < p.top - TOL]
+        above = min(a for a, _ in over) if over else above
+        part_m = sum(L for a, L in over if a < bh - TOL)
         recs.append({"wall_id": panel.wall_id, "floor": panel.floor, "k": k, "course_below": 3 * k, "level_m": z,
-                     "course_above_h_m": above, "partial_above": above < panel.course.block_h - TOL,
+                     "course_above_h_m": above, "partial_above": above < bh - TOL,
+                     "partial_above_m": round(part_m, 6),
                      "gross_m": round(gross, 6), "cut_opening_m": round(cut_o, 6), "cut_lintel_m": round(cut_l, 6),
                      "held_m": round(held_in + sum(L for c, L, _ in hold_out if c == "BLOCK_TOP_UNKNOWN"), 6),
                      "held": hold_out, "net_m": round(net, 6)})

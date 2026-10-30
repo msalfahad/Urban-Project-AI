@@ -292,6 +292,8 @@ def summarise(led, alt, jc):
         "mesh_alt210_total_net_m": round(sum(r["net_m"] for r in alt["mesh"]), 4),
         "mesh_held_by_cause_m": {k: round(v, 4) for k, v in sorted(held_causes.items())},
         "mesh_levels_with_partial_course_above": partial,
+        "mesh_partial_course_above_block_m": round(sum(r["partial_above_m"] for r in led["mesh"]), 4),
+        "mesh_partial_course_above_net_m": round(sum(r["net_m"] for r in led["mesh"] if r["partial_above"]), 4),
         "walls_by_state": dict(sorted(st.items())),
         "ties_primary_by_floor": tl(led["ties"]),
         "ties_alt210_by_floor": tl(alt["ties"]),
@@ -326,6 +328,7 @@ def outputs():
     altmap = {(r["wall_id"], r["k"]): r for r in alt["mesh"]}
     files = {}
     mc = ["wall_id", "floor", "group", "block_type", "k", "course_below", "level_m", "course_above_h_m", "partial_above",
+          "partial_above_m",
           "gross_m", "cut_opening_m", "cut_lintel_m", "held_m", "net_m", "held"]
     files["MESH_LEVELS_T355.csv"] = (mc, led["mesh"])
     wc = ["wall_id", "floor", "group", "block_type", "t_m", "block_run_m", "levels", "net_m", "held_m", "state", "notes",

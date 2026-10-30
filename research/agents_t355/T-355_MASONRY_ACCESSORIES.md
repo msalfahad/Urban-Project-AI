@@ -29,7 +29,8 @@ Three distinct items: never added into the block m2 (R-T355-5, refused in code),
   specification -> owner point 1 excludes the 10 mm joint: **every white wall's levels HELD by name** (never 0).
 - Course n sits on a starting bed of one joint; its top is at n x 0.200 above the wall base (structural floor); the
   level over course 3k is 0.60 k. A level exists where block stands above it (level + joint < block top); a partial top
-  course counts and is reported (11 levels, 18.42 m.l net, sit under a 0.09 / 0.13 m cut top course).
+  course counts and is reported. r2 (R-T355-7): judged PER PIECE: 22 levels (70.0325 m.l net at those levels; 45.9347 m
+  of block under the cut course) sit under a partial top course (e.g. GF-W01 3.60: 0.14 over the CB8 pieces, top 3.75).
 
 ## 3. Results (development villa)
 
@@ -37,21 +38,27 @@ Three distinct items: never added into the block m2 (R-T355-5, refused in code),
 
 | Floor | Levels | Net installed m.l | HELD m.l (segments) | Module 0.210 net m.l |
 |---|---|---|---|---|
-| GF | 80 | 208.6005 | 54.2941 | 182.4545 (72 levels) |
-| 1F | 102 | 271.5420 | 100.1989 | 269.3324 (99 levels) |
-| 2F | 30 | 47.8997 | 25.4000 | 49.5997 (30 levels) |
-| **Villa** | **212** | **528.0422** | **179.8930** | **501.3866** |
+| GF | 80 | 214.2846 | 48.6100 | 188.2545 (72 levels) |
+| 1F | 102 | 278.6896 | 93.0513 | 278.8801 (99 levels) |
+| 2F | 30 | 50.4997 | 22.8000 | 53.0997 (30 levels) |
+| **Villa** | **212** | **543.4739** | **164.4613** | **520.2343** |
+
+r2 (Checker D-T355-1, 2026-10-30): r1 528.0422 net / 179.8930 HELD held the opening width at every level ABOVE a known
+lintel top on walls with pieces of two tops (16.0265 m.l on 21 levels, 'masonry over the lintel'). Above the lintel the
+opening interrupts nothing (R-T355-6): +15.4317 m.l net (+2.92 %). Residual to the Checker's +16.0265: 0.5948 m.l at
+1F-W07 level 3.60 (gross 0.594815) stays HELD under its OTHER physical cause: lift door L-1F-01 extent not established
+(r1 had the segment under the over-lintel cause first, so the opening-extent hold was capped at 0).
 
 HELD segments by cause (m.l, each only its own segment): block top over the piece not established 92.1498 (T-274
 pieces under a dome ring / conflict beam CB10 / sunken panels D-41 / T-261 HELD pieces); opening sill or head not
-established 41.12 (passage openings A-GF-01 / A-1F-01 and lift doors L-1F-01 / L-2F-01: width + 2 x 0.40 at each level); opening station not
-tied to a piece of known top 39.6732 (doors on walls that also carry pieces of unknown top, e.g. D-GF-11 / D-GF-12 on
+established 41.7148 (passage openings A-GF-01 / A-1F-01 and lift doors L-1F-01 / L-2F-01: width + 2 x 0.40 at each level); opening station not
+tied to a piece of known top 15.5214 and lintel not tied 8.1251 (doors on walls that also carry pieces of unknown top, e.g. D-GF-11 / D-GF-12 on
 GF-W32, D-1F-08 / 09 on 1F-W13); lintel bearings 6.95 (the printed MIN.40cm each end: actual bearing length not
 drawn). Lintel spans are cut as concrete (ST7757.pdf p.13 LINTEL SCHEDULE depth by width band: L1 / L2 0.20, L3 0.30,
 L4 0.40, L5 0.55; arched heads W15 / W16 / W17 / W26: lintel not the schedule's -> span HELD above the head).
 Openings: T-237 merged sizes (doors 2.20 ASSUMED — OWNER-APPROVED Q-55; windows PRINTED / DRAWING-CONFIRMED), above FFL +
 0.10 (Q-43); a door's hole runs from the structural floor; W18 cut at its 0.4673 m in masonry (T-274 scan: jamb 0.0327
-inside a column). Module 0.210 vs 0.200: -26.6556 m.l (-5.05 %), mostly GF (block tops 3.75 / 4.34: one level fewer).
+inside a column). Module 0.210 vs 0.200: -23.2396 m.l (-4.28 %), mostly GF (block tops 3.75 / 4.34: one level fewer).
 
 **Sharmat:** 117 physical junctions (one per block-segment / column boundary; equals T-317's V joints counted on one
 side of each wall, an independent path), of which **31 measured on black walls = 182 ties (module 0.210: 170)**: GF 11
@@ -91,8 +98,11 @@ not a freelancer omission; NOT COMPARED in %.
   sourced course spec, no fractional course; net strip with openings / lintel spans cut and only the uncertain segment
   HELD; junctions once (key wall, column station, face), duplicate refused; joint mesh by face class with MIXED held;
   items never folded into the block m2.
+- r2: R-T355-6 a level above a KNOWN lintel top never cuts or holds the opening (masonry continuous over the lintel
+  wherever the level exists); an unknown lintel depth still holds. R-T355-7 the partial top course is judged per piece
+  (course_above_h_m = the smallest course above over the pieces at the level; partial_above_m = their block length).
 - Application: t355_alsenan.py (`--write`, `--check` reproduces every output byte for byte).
-- Tests (26): tests/t355_masonry_accessories/test_t355_masonry_accessories.py, NON-Alsenan hand fixture (6.00 m run, two
+- Tests (30; r2 added 3 rule tests + 1 pin): tests/t355_masonry_accessories/test_t355_masonry_accessories.py, NON-Alsenan hand fixture (6.00 m run, two
   0.30 columns, block top 3.00, door 0.90 x 2.20, lintel 0.25, bearing 0.40): levels 0.60 / 1.20 / 1.80 / 2.40, strip
   4.50 / 4.50 / 4.50 / 3.70 = 17.20 m.l + 0.80 held, 2 junctions x 4 = 8 ties; adverse: mirror and mm identical, mm read
   as m refused, wall below 3 courses = no level, wall through a column = 2 junctions, duplicate junction refused, unknown
@@ -100,7 +110,10 @@ not a freelancer omission; NOT COMPARED in %.
   opening extent holds only its segment, unknown lintel holds span + bearings, opening beside an unknown piece held not
   cut, cut wider than the block refused, partial top course reported, module 0.200 vs 0.210 level count, face classes,
   lintel bands. test_t355_alsenan_pins.py: outputs reproduce; 117 junctions = T-317 V joints; class totals close to
-  T-317; white walls HELD never 0; headline figures.
+  T-317; white walls HELD never 0; headline figures. r2: two-top wall + door with known lintel, levels above the lintel
+  over the high piece = full gross (24.40 net + 0.80 held, hand); adverse: lintel depth unknown still holds 0.90 at 3.00;
+  per-piece partial course (tops 3.75 / 4.10, level 3.60: 0.14 partial over 1.10 m); pins GF-W28 4.20 = 2.731043, no
+  over-lintel hold anywhere, 22 partial levels.
 
 ## 5. For the Checker (re-measure)
 
@@ -109,7 +122,7 @@ not a freelancer omission; NOT COMPARED in %.
 2. Two walls by hand: GF-W01 (T-274 run GF|WB-FL0001-FL0002#2: run 19.27 - columns 0.40 + 1.10 + 0.50 + 0.70 + 0.10 =
    16.47 m block; tops CB8 0.75 -> 3.75, B1 0.40 -> 4.10; 6 levels; 16.4674 x 6 = 98.8044 net, 0.0026 m sliver HELD) and
    GF-W28 (door D-GF-13 1.00, head 2.30 above the structural floor, L1 lintel 0.20: levels 0.6 / 1.2 / 1.8 cut 1.00,
-   2.4 span cut + 0.80 bearings HELD, 4.2 only over the 4.34 pieces).
+   2.4 span cut + 0.80 bearings HELD, 4.2 only over the 4.34 pieces: 2.731043 net, 0 held after r2).
 3. Junction census: SHARMAT_T355.csv vs T-274 COLUMN pieces; ties at top 3.75 = 6 (0.200) / 5 (0.210).
 4. Face classes: T-250 side rooms x T-312 tiled rooms (GF-02 / 03 / 05 / 06 / 10 .. 14 / 16, 1F-02 / 03 / 07 / 08 / 09 /
    12, 2F-02); pantry GF-07 MIXED.
@@ -120,3 +133,8 @@ a tie at one block end) was not defined before the arithmetic. *Rule*: integer c
 spec; per level the block physically present, openings and lintel spans cut, uncertain segments HELD; junctions once
 per physical block end at a column; thin-bed blocks without a specification HELD (every villa). *Test*:
 tests/t355_masonry_accessories. *Status*: PROPOSED.
+
+r2 lessons row (ERS s.7): *Problem*: the strip was held over a known lintel because the opening's station was not tied
+to a piece. *Root cause*: an uncertainty (which piece hosts the opening) was carried to a level where it has no physical
+effect. *Rule*: hold a segment only where the unknown can change the installed quantity at that level (R-T355-6).
+*Test*: test_r2_level_above_known_lintel_is_full_gross_on_a_two_top_wall + adverse. *Status*: PROPOSED.
