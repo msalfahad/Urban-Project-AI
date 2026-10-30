@@ -69,7 +69,7 @@ class PinError(ValueError):
 def _rows(p):
     h = hashlib.sha256(p.read_bytes()).hexdigest()
     if h != PINS[p]:
-        raise PinError(f"{p.relative_to(ROOT)}: sha256 {h[:12]} is not the merged file {PINS[p][:12]} (edited ledger)")
+        raise PinError(f"{p.name}: sha256 {h[:12]} is not the merged file {PINS[p][:12]} (edited ledger)")
     with p.open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
 
