@@ -1,0 +1,22 @@
+{
+ "b8_04_extra_floor_m2": 0.0,
+ "b8_04_extra_floor_status": "ASSUMED - OWNER-APPROVED",
+ "b8_04_extra_tanking_m2": 0.0,
+ "b8_04_extra_tanking_status": "ASSUMED - OWNER-APPROVED",
+ "by_kind": {
+  "SHOWER_BY_TEXT": 0,
+  "TRAY": 3,
+  "WALK_IN_SCREENED": 3
+ },
+ "differs_from_t010": [
+  "1F-BATH-E",
+  "1F-BATH-N",
+  "GF-BATH-MASTER",
+  "GF-WC-CORE-245"
+ ],
+ "freelancer": "FIN workbook sheet 'العازل' rows 14-36: floors 72.01 m2 + upturn 144.61 m.l (height column 1); no shower or tanking row; summary sheet rows 27-30 the same",
+ "shower_extent_held": 6,
+ "shower_room_membrane_m2_already_in_b8_01": 27.615183,
+ "showers": 6,
+ "unknown_mixer_only": 1
+}
