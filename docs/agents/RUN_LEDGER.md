@@ -614,3 +614,76 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 10-29 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:21; none / No claimable TODO: lane S T-224 / T-322 MERGED, T-323 CLAIMED by worker 3; lane A T-325 CLAIMED by work |
 | 10-29 03:51 | Verifier | SUCCESS | STARTED 03:51, final 03:54; none / No READY task (T-315 Gate B REJECTED and T-323 MERGED by the 03:48 run; T-325 CLAIMED by Worker 2, T-22 |
 | 10-29 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:21; board / Since 00:21: T-321, T-224 r2, T-313 r2, T-324, T-322, T-323 WORKED and MERGED (research, no candidate  |
+
+## 2026-10-29 04:31 to 2026-10-30 04:31 UTC (daily audit 2026-10-30, compact)
+
+66 runs: 65 SUCCESS, 1 INCOMPLETE (Worker 1 07:21, no final line, cause NOT KNOWN) = 98.5 % with a final line; no usage-limit failure at the reduced cadence (planned about 69 a day).
+
+| Slot start (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 10-29 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 04:54; T-329 READY (agents/task-T-329 @ 02673f76) / Wet-room plaster backing under wall tile = 20 mm 1:4 cement-sand  |
+| 10-29 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:50; T-325 Gate A PASS MERGED 98f50f0f (engine push); Checker downgrade DG-3521554d2fd011b9 bound / T-325: own P775 |
+| 10-29 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 06:46; T-315 r2 READY (integration package, Gate B; agents/task-T-315 @ 40f1e65b) / pantry wall base now carried once |
+| 10-29 05:21 | Worker 1 | SUCCESS | STARTED 05:21, final 06:35; T-330 READY (agents/task-T-330 @ 18eb0f6b) / New canonical-deductions check + guarded export (tooling, no quan |
+| 10-29 05:51 | Verifier | SUCCESS | final 05:51 (single line); none (overlap guard: run session_01E6cPnb344B7qTAh6nteP1g active since 2026-10-29T04:51Z) / no check, no merge |
+| 10-29 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 06:41; none / No claimable task: the board has no TODO row (lane A: my T-329 wet-room plaster backing is READY 04:53, |
+| 10-29 06:52 | Verifier | SUCCESS | STARTED 06:52, final 07:50; T-315 r2 Gate B PASS MERGED b0041dd2; T-329 Gate A PASS MERGED 1c82807b / T-315 r2: candidate of record now V3 |
+| 10-29 07:01 | Worker 3 | SUCCESS | STARTED 07:01, final 07:01; none / No claimable TODO on the board: every lane I row (T-319, T-279, T-326, T-327, T-199, T-328, T-284, T-24 |
+| 10-29 07:21 | Worker 1 | INCOMPLETE | STARTED 07:21, no final line |
+| 10-29 07:51 | Verifier | SUCCESS | final 07:51 (single line); none (overlap guard: run session_01E6cPnds1PvWtrJmAZ3H1MA active since 2026-10-29T06:52Z) / no check, no merge |
+| 10-29 08:18 | Lead | SUCCESS | STARTED 08:18, final 08:26; board / Since 04:21: T-325, T-315 r2 (Gate B: candidate of record V3.0.21, wall tile 340.3038 m2 on 12 lines + |
+| 10-29 08:41 | Worker 2 | SUCCESS | STARTED 08:41, final 09:56; T-335 READY (agents/task-T-335 @ 28283816) / ceiling ledgers bound to V3.0.21 (reproduced be22a4e4 / 3548e39c) |
+| 10-29 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:51; none (overlap guard: run session_01E6cPnakcLmoWBkAfyJy9GB active since 2026-10-29T08:51Z) / no check, no merge |
+| 10-29 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 10:20; T-331 READY (integration package, Gate B; agents/task-T-331 @ 78877e1f) / ARCH_TAKEOFF_V3.0.22: 12 blank wet-r |
+| 10-29 09:20 | Worker 1 | SUCCESS | STARTED 09:20, final 10:18; T-334 READY (agents/task-T-334 @ 3d3883b3) / line-state check on V3.0.21 be22a4e4 (own run): 3,706 lines, 351  |
+| 10-29 09:52 | Verifier | SUCCESS | final 09:52 (single line); T-330 Gate A PASS MERGED 16fa5f72; verdict rebind V3.0.21; M2 census statement / T-330: own Drive run reproduc |
+| 10-29 10:41 | Worker 2 | SUCCESS | STARTED 10:41, final 11:33; T-336 READY @ c00eb983 / wet-area + pool WP bound to V3.0.21 (reproduced be22a4e4; 150 WP lines SAME as V3.0.1 |
+| 10-29 10:53 | Verifier | SUCCESS | STARTED 10:53, final 11:44; T-331 Gate B PASS MERGED 15ac21f7; T-335 + T-334 Gate A PASS MERGED 39092d8d; verdict rebind V3.0.22 / T-331:  |
+| 10-29 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 12:16; T-333 READY (Gate A research ledger; agents/task-T-333 @ c4ece42f) / Blockwork FILL table for T-279: own V3.0. |
+| 10-29 11:30 | Worker 1 | SUCCESS | STARTED 11:30, final 12:14; T-332 READY (agents/task-T-332 @ ee8c0a87) / formwork r5 (T-308) bound to own V3.0.21 be22a4e4: 1,189 / 1,189  |
+| 10-29 11:57 | Verifier | SUCCESS | STARTED 11:57, final 11:59; T-336 Gate A PASS MERGED c4246877 / T-336 (WP binding to V3.0.21, research, unwired): own read of P7757.dxf ab |
+| 10-29 12:25 | Lead | SUCCESS | STARTED 12:25, final 12:32; board / Since 08:26: T-330, T-331 (Gate B first time: candidate of record V3.0.22, FIN.PLASTER 234.9481 -> 575 |
+| 10-29 12:50 | Worker 2 | SUCCESS | STARTED 12:50, final 13:44; T-342 READY agents/task-T-342 @ 2f6bbfff / census 41/28/1/1/11/47 reproduced on V3.0.22 7199c8b6; AT19 is the  |
+| 10-29 13:10 | Verifier | SUCCESS | STARTED 13:10, final 13:20; T-333 REJECTED narrow r2; T-332 REJECTED narrow r2 (no merge) / T-332: FILL table writes all 201 HELD rows as  |
+| 10-29 13:14 | Worker 3 | SUCCESS | STARTED 13:14, final 14:36; T-319 READY (integration package, agents/task-T-319 @ 3be5ac15; integrates T-311, T-324) / Parapet RC, a concr |
+| 10-29 13:43 | Worker 1 | SUCCESS | STARTED 13:43, final 14:45; T-341 READY (agents/task-T-341 @ 206cb90e) / V3.0.22 (7199c8b6, own run) T-330 check 41 FLAG / 0 REFUSED; fill |
+| 10-29 14:10 | Verifier | SUCCESS | STARTED 14:10, final 14:46; T-342 Gate A PASS MERGED 4dd9cff8 / T-342 (label census binding, research): own census 41/28/1/1/11/47 reprodu |
+| 10-29 14:48 | Worker 2 | SUCCESS | STARTED 14:48, final 15:23; T-337 READY (agents/task-T-337 @ 32e617d4) / Exterior plaster / Sigma bound face by face to V3.0.22 (own run 7 |
+| 10-29 15:06 | Verifier | SUCCESS | STARTED 15:06, final 15:47; T-319 Gate B PASS MERGED 06e46b11; T-341 Gate A PASS MERGED 5fbf8677 (engine push 5fbf8677) / candidate of rec |
+| 10-29 15:17 | Worker 3 | SUCCESS | STARTED 15:17, final 16:01; T-340 READY (head 9c93c411) / Reveals / sills / thresholds bound to V3.0.22 (own run reproduced 7199c8b6; 92 c |
+| 10-29 15:40 | Worker 1 | SUCCESS | STARTED 15:40, final 16:21; T-339 READY (agents/task-T-339 @ 04212456) / Roof build-up bound to V3.0.22: 24 rows (4 roofs x 6 layers once) |
+| 10-29 15:58 | Verifier | SUCCESS | STARTED 15:58, final 16:07; T-337 Gate A PASS MERGED ce3aaf8f (engine push onto 5fbf8677) / exterior plaster / Sigma binding (research, un |
+| 10-29 16:25 | Lead | SUCCESS | STARTED 16:25, final 16:32; board / Since 12:32: T-342 (M2 MET on rooms + openings for P7757, Checker census), T-319 (Gate B first time: c |
+| 10-29 16:42 | Worker 2 | SUCCESS | STARTED 16:42, final 17:00; T-344 READY (agents/task-T-344 @ dead5a5e) / Label census V2 (new tools/label_census_v2.py, V1 tool untouched) |
+| 10-29 16:52 | Verifier | SUCCESS | STARTED 16:52, final 17:11; T-340 Gate A PASS MERGED 25c1f52c; T-339 Gate A PASS MERGED 04f371ba; T-344 Gate A PASS MERGED 6bd0385c (engin |
+| 10-29 17:02 | Worker 3 | SUCCESS | STARTED 17:02, final 18:22; T-338 READY (agents/task-T-338 @ 82d01359; integration package, Gate B) / Candidate V3.0.24 = V3.0.23 + line-s |
+| 10-29 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 18:34; T-345 READY (agents/task-T-345 @ cc49e6a6) / 1F porcelain L-b06400d4: the 5.890817 m2 step TRACED to 0.000000  |
+| 10-29 17:52 | Verifier | SUCCESS | STARTED 17:52, final 17:53; none (no READY task: T-338 and T-345 CLAIMED, T-332 / T-333 narrow r2 CLAIMABLE, T-343 QUEUED, T-346 TODO) / n |
+| 10-29 18:41 | Worker 2 | SUCCESS | STARTED 18:41, final 19:03; T-346 READY (agents/task-T-346 @ d8b5b127) / Freelancer exterior plaster rows 65/68/69 (93.150 m2, 'no face dr |
+| 10-29 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:51; none (overlap guard: run session_01E6cPndQ8P3psQLivrqh7iu active since 2026-10-29T18:51Z) / no check, no merge |
+| 10-29 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:05; T-333 r2 READY (agents/task-T-333 @ 7ab8b5ae) / Blockwork fill rework D-T333-1: established parts of 1F-W13 16 |
+| 10-29 19:21 | Worker 1 | SUCCESS | STARTED 19:21, final 19:23; none / No claimable TODO on BOARD.md @ 952fd952 (lane S or any lane): active rows are READY (T-333, T-338, T-3 |
+| 10-29 20:15 | Lead | SUCCESS | STARTED 20:15, final 20:22; board / Since 16:30: T-340, T-339, T-344, T-345 (1F porcelain 5.890817 m2 traced to 0.000000) and T-338 (Gate  |
+| 10-29 20:15 | Verifier | SUCCESS | final 20:15 (single line); T-345 Gate A PASS MERGED f2225238; T-338 Gate B PASS MERGED dd4c9f8f (engine push each) / CANDIDATE OF RECORD  |
+| 10-29 20:41 | Worker 2 | SUCCESS | STARTED 20:41, final 21:08; T-348 READY agents/task-T-348 @ 7bdc8a9c / Freelancer rows 70/71/74 'faces above the pool' 109.890 m2 = row 70 |
+| 10-29 20:52 | Verifier | SUCCESS | STARTED 20:52, final 20:59; T-333 r2 Gate A PASS MERGED bb54c5d6; T-346 Gate A PASS MERGED d395aebb (engine push each) / T-333 r2: D-T333- |
+| 10-29 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 22:13; T-343 READY (integration package, agents/task-T-343 @ 2609e152) / Candidate V3.0.25 (not released) closes the  |
+| 10-29 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 21:26; T-332 r2 READY (agents/task-T-332 @ a5eed510) / Formwork FILL table for T-199 no longer prints held faces as 0 |
+| 10-29 21:53 | Verifier | SUCCESS | STARTED 21:53, final 22:02; T-332 r2 Gate A PASS MERGED 61d5597e (engine push); T-348 Gate A REJECTED (narrow r2) / T-332 r2: own re-aggre |
+| 10-29 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 22:54; T-348 r2 READY (agents/task-T-348 @ cbdddffc) / Exterior plaster faces above the pool: D-T348-1 fixed, 4 NEW D |
+| 10-29 22:51 | Verifier | SUCCESS | STARTED 22:51, final 23:11; T-343 Gate B REJECTED (narrow r2); T-348 r2 Gate A PASS MERGED 623885fd (engine push) / T-343: 7 of 8 added ou |
+| 10-29 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:55; T-347 READY (agents/task-T-347 @ 80b607b8) / Earthworks (B1-02/03/04, missing from both engine and freelancer) |
+| 10-29 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 23:41; T-352 READY (agents/task-T-352 @ 9b52d5f3) / Stair formwork side forms measured from ST p.4 / p.5 by handle: 7 |
+| 10-29 23:51 | Verifier | SUCCESS | STARTED 23:51, final 00:09; T-352 Gate A PASS MERGED b12e10de (engine push) / T-352 stair formwork side faces: own re-measure 7 / 7 valued |
+| 10-30 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:26; board / Since 20:30: T-333 r2, T-346, T-332 r2, T-348 r2, T-352 WORKED and MERGED; T-343 Gate B PARTIAL (deck  |
+| 10-30 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 00:55; T-355 READY (agents/task-T-355 beb077fb) / Masonry accessories, optional, never in block m2: mesh strip black  |
+| 10-30 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:00; T-347 Gate A PASS MERGED 509f90c2 (engine push); RFI A citation light run / T-347 earthworks binding: own re-m |
+| 10-30 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:16; T-343 r2 READY (integration package, agents/task-T-343 @ f29fbeb9) / Pool deck HELD 7.105836 -> 6.548912 m2 (- |
+| 10-30 01:21 | Worker 1 | SUCCESS | STARTED 01:21, final 01:40; T-356 READY (agents/task-T-356 @ 89a02f28) / Strap blinding L-35382b18 0.3778..0.7719 -> CORRECT RANGE 0..0.91 |
+| 10-30 01:52 | Verifier | SUCCESS | STARTED 01:52, final 02:02; T-356 Gate A PASS MERGED 15fc9ad4 (engine push); T-355 Gate A REJECTED narrow (r2 TODO) / T-356: own re-measur |
+| 10-30 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 02:45; T-355 r2 READY (agents/task-T-355 @ 3509eb2c) / D-T355-1 fixed: no mesh-strip hold above a known lintel top (R |
+| 10-30 02:52 | Verifier | SUCCESS | STARTED 02:52, final 03:38; T-355 r2 Gate A PASS MERGED 21f7b58a; T-343 r2 Gate B PASS MERGED bb772f51 (CANDIDATE OF RECORD NOW ARCH_TAKEO |
+| 10-30 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:18; T-349 READY (agents/task-T-349 @ 84d45d39; research only, lane A row) / Spatter dash B4-05 bound face by face, |
+| 10-30 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:37; T-357 READY @ db32aebb / Existing ground DERIVED +-0.00 (printed at all 4 plot corners in 3 sets + elevation / |
+| 10-30 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-357 Gate A PASS MERGED 90135e91 (engine push); light run: RFI citation addendum / T-357 (research, unwired): |
+| 10-30 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:23; board / Since 00:25: T-347, T-356, T-355 r2 (r1 rejected once), T-343 r2 (Gate B: candidate of record V3.0.25, |
