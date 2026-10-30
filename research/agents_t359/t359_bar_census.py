@@ -12,7 +12,9 @@ Attribute states:
   PRINTED_TYPICAL  printed only on a typical / N.T.S. detail that no project print ties to this element
   NOT_PRINTED      the set does not print it
   NOT_APPLICABLE   the attribute does not exist for this population (e.g. a single nosing bar has no spacing)
-  RULE             not printed, but an answered owner rule settles it (rule id given)
+  RULE             not printed, but an answered owner rule settles it (rule id given); a drawn but undimensioned
+                   bar shape is RULE option B with the shape's handle as ref (drawn legs held, never invented)
+  CONFLICT         two prints of the same population disagree (both refs given); blocking, never resolved by choice
 
 Population status:
   COUNTABLE_NOW       every attribute it needs is PRINTED / RULE / NOT_APPLICABLE
@@ -20,6 +22,10 @@ Population status:
   GAP                 at least one blocking attribute is asked nowhere: a NEW gap id for the Lead
   OWNED_ELSEWHERE     the population belongs to a line of another ledger (beam / slab / footing); never counted here
   NOT_DRAWN           the element exists but no bar of it is printed anywhere
+
+Label census (r2): every bar label inside a cited detail's extent (section, exploded bar-shape row, schedule notes)
+is listed by handle / position under data["details"]; each must be cited by a population (pop["labels"]) or the census
+refuses to run. Candidate binding (r2): each population names the blank candidate lines it would fill (never add).
 
 Repeat: python -I t359_bar_census.py ALSENAN_BAR_DETAIL_INPUT.json --csv T359_MATRIX.csv --json T359_SUMMARY.json
 """
@@ -31,7 +37,7 @@ import re
 import sys
 
 ATTRS = ("mark", "diameter", "spacing_or_count", "layer", "direction", "extent", "end_shape")
-STATES = ("PRINTED", "PRINTED_TYPICAL", "NOT_PRINTED", "NOT_APPLICABLE", "RULE")
+STATES = ("PRINTED", "PRINTED_TYPICAL", "NOT_PRINTED", "NOT_APPLICABLE", "RULE", "CONFLICT")
 STATUSES = ("COUNTABLE_NOW", "COUNTABLE_AFTER", "GAP", "OWNED_ELSEWHERE", "NOT_DRAWN")
 # notation kinds
 RATE = "RATE"                      # "n ø d/m": n bars per metre of distribution width (a density, not a count)
@@ -130,6 +136,10 @@ def classify(pop: dict, known_rfis: set[str], answered_rules: set[str]) -> dict:
             if given:
                 if given["state"] == "NOT_APPLICABLE":
                     st = dict(given)
+                elif given["state"] == "CONFLICT":
+                    if len(given.get("refs", [])) < 2:
+                        raise ValueError(f"{pop['pop_id']}: {a} CONFLICT needs the two disagreeing references")
+                    st = dict(given)
                 elif given["state"] == "PRINTED" and st["state"] == "NOT_PRINTED":
                     # another print of the same population supplies it (e.g. the DXF text where the PDF is clipped)
                     if not given.get("ref"):
@@ -151,7 +161,7 @@ def classify(pop: dict, known_rfis: set[str], answered_rules: set[str]) -> dict:
         for a in ATTRS:
             if attrs[a]["state"] == "PRINTED":
                 attrs[a] = {**attrs[a], "state": "PRINTED_TYPICAL"}
-    blocking = [a for a in ATTRS if attrs[a]["state"] in ("NOT_PRINTED", "PRINTED_TYPICAL")]
+    blocking = [a for a in ATTRS if attrs[a]["state"] in ("NOT_PRINTED", "PRINTED_TYPICAL", "CONFLICT")]
     rfi = pop.get("rfi", {})
     if not blocking:
         return {"status": "COUNTABLE_NOW", "blocking": [], "after": [], "gap": "", "attrs": attrs}
@@ -182,6 +192,66 @@ def double_count(pops: list[dict], results: dict, released: list[dict]) -> list[
     return hits
 
 
+def is_bar_label(text: str) -> bool:
+    """A printed text that names reinforcement (a bar notation, or a pointer to a schedule for the bars)."""
+    if not text:
+        return False
+    if parse_notation(text)["kind"] != UNPARSED:
+        return True
+    t = _norm(text).upper()
+    return "ø" in t or "SCH" in t
+
+
+def label_census(data: dict) -> dict:
+    """Every bar label inside every cited detail must be cited by at least one population (no silent label)."""
+    cited: dict[str, list[str]] = {}
+    for p in data["populations"]:
+        for ref in p.get("labels", []):
+            cited.setdefault(ref, []).append(p["pop_id"])
+    listed = {}
+    for d in data.get("details", []):
+        for lab in d["labels"]:
+            if lab["ref"] in listed:
+                raise ValueError(f"label {lab['ref']!r} listed twice")
+            listed[lab["ref"]] = d["detail"]
+            if is_bar_label(lab["text"]) and lab["ref"] not in cited:
+                raise ValueError(f"{d['detail']}: bar label {lab['ref']} {lab['text']!r} inside the detail is cited "
+                                 f"by no population")
+    stray = sorted(r for r in cited if r not in listed)
+    if stray:
+        raise ValueError(f"populations cite labels that no detail lists: {stray}")
+    for s in data.get("unlabelled_shapes", []):
+        if s.get("tied_to") not in {p["pop_id"] for p in data["populations"]}:
+            raise ValueError(f"unlabelled shape {s['ref']} tied to no population")
+    return {"labels_listed": len(listed), "labels_cited": sum(1 for r in listed if r in cited),
+            "by_detail": {d["detail"]: len(d["labels"]) for d in data.get("details", [])},
+            "unlabelled_shapes": len(data.get("unlabelled_shapes", []))}
+
+
+def bind_candidates(data: dict, candidate_lines: list[dict], prefix: str = "") -> dict:
+    """Each population names the blank candidate lines it would fill. Refuses an unknown line, a valued line, and a
+    candidate line in scope that no population binds (an integration must fill, never add)."""
+    by_id = {l["element_id"]: l for l in candidate_lines}
+    scope = set(data.get("candidate_scope", []))
+    bound: dict[str, list[str]] = {}
+    for p in data["populations"]:
+        for short in p.get("candidate_lines", []):
+            eid = prefix + short
+            if eid not in by_id:
+                raise ValueError(f"{p['pop_id']}: candidate line {eid!r} does not exist")
+            if by_id[eid].get("measured_net") is not None:
+                raise ValueError(f"{p['pop_id']}: candidate line {eid!r} already carries a value")
+            bound.setdefault(eid, []).append(p["pop_id"])
+        if not p.get("candidate_lines") and not p.get("no_line_reason") and not p.get("owned_by"):
+            raise ValueError(f"{p['pop_id']}: no candidate line and no reason")
+    in_scope = [l["element_id"] for l in candidate_lines if any(l["element_id"].startswith(prefix + s) for s in scope)]
+    unbound = sorted(e for e in in_scope if e not in bound)
+    if unbound:
+        raise ValueError(f"candidate lines in scope bound by no population: {unbound}")
+    return {"lines_in_scope": len(in_scope), "lines_bound": len(bound),
+            "line_ids": {e: by_id[e]["line_id"] for e in sorted(bound)}, "bound_by": bound}
+
+
 def run(data: dict) -> dict:
     known = set(data["rfi_register"])
     rules = set(data["answered_rules"])
@@ -204,8 +274,9 @@ def run(data: dict) -> dict:
         raise ValueError(f"elements with no census row: {missing_el}")
     totals = {s: sum(1 for r in results.values() if r["status"] == s) for s in STATUSES}
     gaps = sorted({r["gap"] for r in results.values() if r["gap"]})
+    lc = label_census(data) if "details" in data else None
     return {"results": results, "double_count": dc, "by_element": by_el, "totals": totals, "gaps": gaps,
-            "kg_computed": 0}
+            "kg_computed": 0, "label_census": lc}
 
 
 def matrix_rows(data: dict, out: dict) -> list[dict]:
@@ -221,11 +292,15 @@ def matrix_rows(data: dict, out: dict) -> list[dict]:
                     "NOT_PRINTED (not drawn)" if r["status"] == "NOT_DRAWN" else "")
             else:
                 ref = st.get("ref") or st.get("rule") or ""
+                if st.get("refs"):
+                    ref = " vs ".join(st["refs"])
                 row[a] = st["state"] + (f" [{ref}]" if ref else "") + (f" {st['note']}" if st.get("note") else "")
         row["status"] = r["status"]
         row["after"] = "; ".join(r["after"])
         row["gap"] = r["gap"]
         row["owned_by"] = p.get("owned_by", "")
+        row["labels"] = "; ".join(p.get("labels", []))
+        row["candidate_lines"] = "; ".join(p.get("candidate_lines", [])) or p.get("no_line_reason", "")
         row["note"] = p.get("note", "")
         rows.append(row)
     return rows
@@ -241,9 +316,12 @@ def main(argv: list[str]) -> int:
             w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
             w.writeheader()
             w.writerows(rows)
-    summary = {"schema": "T359_SUMMARY_V1", "totals": out["totals"], "by_element": out["by_element"],
+    summary = {"schema": "T359_SUMMARY_V2", "totals": out["totals"], "by_element": out["by_element"],
                "gaps": out["gaps"], "double_count": out["double_count"], "kg_computed": 0,
-               "populations": len(rows)}
+               "populations": len(rows), "label_census": out["label_census"]}
+    if "--candidate" in argv:
+        cand = json.load(open(argv[argv.index("--candidate") + 1], encoding="utf-8"))
+        summary["candidate_binding"] = bind_candidates(data, cand["lines"], data.get("candidate_prefix", ""))
     if "--json" in argv:
         json.dump(summary, open(argv[argv.index("--json") + 1], "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps(summary, indent=1, ensure_ascii=False))

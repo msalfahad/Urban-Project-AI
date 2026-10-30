@@ -136,21 +136,121 @@ def test_duplicate_population_refused():
         t359.run(villa([pop("A", "8ø14/m"), pop("A", "8ø14/m")]))
 
 
+# ---- r2: label census (every bar label inside a cited detail is tied to a population) ----------------------------
+def detail(*labels):
+    return [{"detail": "S-7 TANK SECTION", "labels": [{"ref": r, "text": t} for r, t in labels]}]
+
+
+def test_label_census_normal_every_label_cited():
+    d = villa([pop("A", "8ø14/m", labels=["h1", "h2"])])
+    d["details"] = detail(("h1", "8ø14/m"), ("h2", "8ø14/m"), ("h3", "10cm PLAIN CONCRETE"), ("h4", "SECTION A"))
+    out = t359.run(d)
+    assert out["label_census"]["labels_listed"] == 4 and out["label_census"]["labels_cited"] == 2
+
+
+def test_adverse_uncited_bar_label_inside_the_detail_refused():
+    # an exploded bar-shape label (h2) left out of the census: the census refuses to run
+    d = villa([pop("A", "8ø14/m", labels=["h1"])])
+    d["details"] = detail(("h1", "8ø14/m"), ("h2", "6%%c12/m"))
+    with pytest.raises(ValueError, match="cited by no population"):
+        t359.run(d)
+    # a schedule pointer is a bar label too
+    d["details"] = detail(("h1", "8ø14/m"), ("h2", "AS PER SCH."))
+    with pytest.raises(ValueError):
+        t359.run(d)
+
+
+def test_adverse_cited_label_missing_from_its_detail_and_orphan_shape_refused():
+    d = villa([pop("A", "8ø14/m", labels=["h1", "h9"])])
+    d["details"] = detail(("h1", "8ø14/m"))
+    with pytest.raises(ValueError, match="no detail lists"):
+        t359.run(d)
+    d = villa([pop("A", "8ø14/m", labels=["h1"])])
+    d["details"] = detail(("h1", "8ø14/m"))
+    d["unlabelled_shapes"] = [{"ref": "h7", "tied_to": "NOPE"}]
+    with pytest.raises(ValueError):
+        t359.run(d)
+
+
+def test_conflict_between_two_prints_blocks_and_needs_both_refs():
+    two = {"state": "CONFLICT", "refs": ["section 7ø12/m", "shape row 7ø14/m"], "note": "d 12 vs d 14"}
+    out = t359.run(villa([pop("A", "7ø12/m", dict(FULL, diameter=two), gap="G-9")]))
+    assert out["results"]["A"]["status"] == "GAP" and "diameter" in out["results"]["A"]["blocking"]
+    with pytest.raises(ValueError):
+        t359.run(villa([pop("A", "7ø12/m", dict(FULL, diameter={"state": "CONFLICT", "refs": ["one"]}), gap="G-9")]))
+
+
+# ---- r2: candidate binding (an integration fills blank lines, never adds) -----------------------------------------
+CAND = [{"element_id": "X:POOL:WALL_V", "line_id": "L-1", "measured_net": None},
+        {"element_id": "X:POOL:FLOOR", "line_id": "L-2", "measured_net": None},
+        {"element_id": "X:BEAM:B1", "line_id": "L-3", "measured_net": 12.5}]
+
+
+def test_candidate_binding_normal_and_adverse():
+    d = villa([pop("A", "8ø14/m", candidate_lines=["POOL:WALL_V"]), pop("B", "6ø12/m", candidate_lines=["POOL:FLOOR"])])
+    d["candidate_scope"] = ["POOL:"]
+    b = t359.bind_candidates(d, CAND, "X:")
+    assert b["lines_in_scope"] == b["lines_bound"] == 2 and b["line_ids"]["X:POOL:WALL_V"] == "L-1"
+    d["populations"][1]["candidate_lines"] = []
+    d["populations"][1]["no_line_reason"] = "test"
+    with pytest.raises(ValueError, match="bound by no population"):     # a blank line left unbound
+        t359.bind_candidates(d, CAND, "X:")
+    d = villa([pop("A", "8ø14/m", candidate_lines=["POOL:NOPE"])])
+    with pytest.raises(ValueError, match="does not exist"):
+        t359.bind_candidates(d, CAND, "X:")
+    d = villa([pop("A", "8ø14/m", candidate_lines=["BEAM:B1"])])
+    with pytest.raises(ValueError, match="already carries a value"):   # never fill a valued line twice
+        t359.bind_candidates(d, CAND, "X:")
+    with pytest.raises(ValueError, match="no reason"):
+        t359.bind_candidates(villa([pop("A", "8ø14/m")]), CAND, "X:")
+
+
 # ---- regression on the committed development-villa input -------------------------------------------------------
-def test_development_villa_census_regression():
+def _dev():
     data = json.loads((ROOT / "research/agents_t359/ALSENAN_BAR_DETAIL_INPUT.json").read_text(encoding="utf-8"))
-    out = t359.run(data)
+    return data, t359.run(data)
+
+
+def test_development_villa_census_regression():
+    data, out = _dev()
     assert out["double_count"] == [] and out["kg_computed"] == 0
-    assert sum(out["totals"].values()) == len(data["populations"]) == 74
-    assert out["totals"]["COUNTABLE_NOW"] == 0
+    assert sum(out["totals"].values()) == len(data["populations"]) == 79
+    assert out["totals"] == {"COUNTABLE_NOW": 0, "COUNTABLE_AFTER": 21, "GAP": 38, "OWNED_ELSEWHERE": 10,
+                             "NOT_DRAWN": 10}
     # the dome-A ring is the released beam BM-1F-028: never counted again from the dome detail
     assert all(out["results"][f"DOME-A-RING-{c}"]["status"] == "OWNED_ELSEWHERE" for c in "TBSL")
     # E1, D1, tower dome, tank structure: nothing drawn, never 0
     for pid in ("E1-ALL", "D1-ALL", "DOME-T-ALL", "TANK-STRUCT"):
         assert out["results"][pid]["status"] == "NOT_DRAWN"
-    # every pool population waits on the flat-floor population (RFI-B-S11) or is not drawn
+    # every pool population waits on the flat-floor population (RFI-B-S11), except the deep-end water-face vertical
+    # whose diameter the section (1906 7ø12/m) and the shape row (18A8 7ø14/m) print differently
     pool = [p["pop_id"] for p in data["populations"] if p["element"] == "POOL"]
-    assert all(out["results"][p]["status"] in ("COUNTABLE_AFTER", "NOT_DRAWN") for p in pool)
+    assert all(out["results"][p]["status"] == "COUNTABLE_AFTER" for p in pool if p != "POOL-R1-WV-IN")
+    r1in = out["results"]["POOL-R1-WV-IN"]
+    assert r1in["status"] == "GAP" and r1in["attrs"]["diameter"]["state"] == "CONFLICT" and r1in["gap"] == "G-T359-8"
     # p.16 prints the top bars at a foot on a ground beam as 6ø16/m (not 6ø14/m)
     topg = next(p for p in data["populations"] if p["pop_id"] == "ST-01-T-TOPG")
     assert t359.parse_notation(topg["label"])["d"] == 16
+
+
+def test_development_villa_r2_outer_vertical_and_shape_row():
+    data, out = _dev()
+    pops = {p["pop_id"]: p for p in data["populations"]}
+    # r2: the shallow-end outer vertical is printed by the shape-row label 1929 (6ø12/m), an L into the floor bottom
+    r2o = out["results"]["POOL-R2-WV-OUT"]
+    assert r2o["status"] == "COUNTABLE_AFTER" and r2o["after"] == ["RFI-B-S11"]
+    assert pops["POOL-R2-WV-OUT"]["labels"] == ["dxf 1929"] and "BOTTOM" in r2o["attrs"]["end_shape"]["note"]
+    # the eight shape-row labels the r1 census missed are each tied to a population
+    cited = {r: [p["pop_id"] for p in data["populations"] if r in p.get("labels", [])]
+             for r in ("dxf 187C", "dxf 18A8", "dxf 1860", "dxf 1869", "dxf 18DB", "dxf 18D7", "dxf 1929", "dxf 18DD")}
+    assert all(len(v) == 1 for v in cited.values()), cited
+    # every bar label in every cited detail is cited (7 listed texts are notes / titles)
+    lc = out["label_census"]
+    assert lc["labels_listed"] - lc["labels_cited"] == 7 and lc["unlabelled_shapes"] == 2
+
+
+def test_development_villa_candidate_binding_fills_never_adds():
+    data, _ = _dev()
+    cand = json.loads((ROOT / "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json").read_text(encoding="utf-8"))
+    b = t359.bind_candidates(data, cand["lines"], data["candidate_prefix"])
+    assert b["lines_in_scope"] == b["lines_bound"] == 88      # 20 pool + 67 stair + 1 tank blank lines

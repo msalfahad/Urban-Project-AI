@@ -5,6 +5,81 @@ no bar count is computed** (owner 2026-10-25 10:33). Nothing is wired; no candid
 changes. Families B11-03 (stairs / pool / domes / tank / pit / boundary wall) and B7-14 (stair reinforcement) stay
 BLOCKED_BY_SOURCE / HELD_IN_CANDIDATE; this census says, attribute by attribute, why.
 
+## r2 (Worker 1, 2026-10-30, run session_01E6cPndinJ12mssGjZPY5M9): Checker r2 NEEDS (a) - (d)
+
+The r1 counts in sections 2 - 5 below are superseded by this section (79 populations, not 74). Sources re-read this run:
+'ST7757 dxf.dxf' sha256 9f9d1179.. and 'ST7757.pdf' sha256 74da1523.. (Drive 'Alsenan chalet project', private copies only).
+
+**(a) Label census by handle, full detail extent.** Every TEXT entity inside the p.7 pool extent (x -77000 .. -56500,
+y 40000 .. 56500 drawing units) and dome extent was swept by coordinates, not searched near the section: pool 31 texts
+(26 bar labels + 3 build-up notes + title + N.I.S), dome 12 (10 bar labels + title + N.I.S); PDF-only p.16 stair
+section 41 labels (two sections + two exploded rows), p.16 stair beam 5, p.14 lift 8, p.14 boundary wall 10; plus the 10
+stair-panel callouts cited from p.4 / p.5. 117 listed, 110 bar labels, **110 / 110 cited** by a population
+(`details` in ALSENAN_BAR_DETAIL_INPUT.json; the census now refuses to run on an uncited bar label). The p.7 shape row
+(drawn under the section, not to scale, each bar a single polyline) ties as follows; legs are drawn, never dimensioned,
+so every end_shape below is RULE option B with the shape's handle (shape drawn, legs held):
+
+| Label (handle, text) | Shape (polyline / lines) | Population | What the shape prints |
+|---|---|---|---|
+| 187C 7ø14/m | 185B | POOL-R1-WV-OUT (with 1893) | L: outer-face vertical, foot into the floor BOTTOM layer (section 1879 + bend 1886 + 1870) |
+| 18A8 7ø14/m | 185C | POOL-R1-WV-IN (with 1906) | top cap toward the outer face, U at the foot, leg into the floor TOP layer (section 18A2 + 1904 + 186C) |
+| 1860 7ø14/m | 1867 + 1862 + hook 18AB | POOL-F-MAIN-T (with 18B0) | deep floor top, crank up into the slope, end hook (section 1872 + 189E) |
+| 1869 7ø14/m | 1866 + 1861 | POOL-F-MAIN-B (with 18AA / 19B0) | deep floor bottom, crank up along the slope (section 19A9 + 19A7) |
+| 18DB 6ø12/m | 185E + 18DA | POOL-F-SLOPE (with 1907 / 18D3) | slope, then horizontal into the shallow floor |
+| 18D7 6ø12/m | hook 186B + 185F + 18D9 | POOL-F-SHALLOW (with 18F0 / 18F8) | hook, slope, horizontal along the shallow floor |
+| 1929 6ø12/m | 184C | **POOL-R2-WV-OUT (new)** | L: outer-face vertical, foot into the floor BOTTOM layer |
+| 18DD 6ø12/m | 18DC | POOL-R2-WV-IN (with 192F) | top cap toward the outer face, U at the foot, leg into the floor TOP layer (section 189F + 1922 / 1924 + 1925) |
+| (none) | 1868 + 1865 + 1863 | POOL-F-SLOPE | hook + deep-floor horizontal + long slope: drawn, no label on the shape |
+| (none) | 185D + 18D8 + 18DE | POOL-F-SHALLOW | slope + shallow horizontal + hook: drawn, no label on the shape |
+
+The slope and shallow 6ø12/m are one cranked bar per mat on the shape row; which shape is which mat is not printed.
+Dome: no shape row; the r2 sweep found **no bar line in the shell at all** (only the concrete arcs 182B / 182E on
+S-EXTL.D; the leaders 1A0E / 1A15 end inside the 10 cm shell, with identical text): r1's "layer PRINTED, one mat drawn"
+and "direction PRINTED" are corrected to NOT_PRINTED (status unchanged, GAP G-T359-3). p.16: each exploded shape tied to
+its family (head top bar slope + horizontal + hook; foot-on-landing top bar horizontal + slope + hook; main bar
+horizontal into the head + hook / into the landing bottom / vertical leg into a G.B; foot-on-G.B 6ø16/m slope + vertical
+leg to the T.O.B; step bar L; nosing dot); the typical's landing edge beam (2ø12 / 4ø16) and its G.B (3ø14, 2ø14/30cm,
+ø8/15cm, 4ø16) are now their own NOT_DRAWN populations (no such member on the Alsenan plans; never added). p.14 lift:
+the vertical bars are drawn closed over the wall top and down to the raft bottom bars, so LIFT-WV moves GAP ->
+COUNTABLE_AFTER L-1 (only the pit depth is open); the 4ø12 (B.W) leader reaches four dots (bars along the 1.30 m pad),
+but '(B.W)' stays undefined (G-T359-7). r1 misnamed 192B 4ø16 'bars at the floor step': its leader reaches the dots at
+the shallow-end wall foot (POOL-R2-CORNER); the shallow wall top carries two unlabelled dots 1842 / 1923 (POOL-R2-RIM,
+new, COUNTABLE_AFTER RFI-B-S11; 2 dots drawn is not a printed count).
+
+**(b) POOL R2 outer vertical re-decided: PRINTED, COUNTABLE_AFTER RFI-B-S11 (r1 NOT_DRAWN reversed).** 1929 '6ø12/m'
+sits on polyline 184C, whose vertical is at x -59086, the x of the section's outer-face bar 1928 (-59080; the water-face
+bar 189F is at -59910). Its return runs toward the pool along the lower line, and the section itself turns 1928 at its
+foot (bend arc 1849) into the floor bottom bar 18E0: the return serves the **outer (soil) face of the floor, bottom
+layer**, an L corner bar lapping the floor bottom mat, the mirror of the deep end's 187C. The water face is the separate
+shape 18DD (cap over the top toward the outer face, U at the foot, leg into the floor top). T-166 read the shallow end as
+"one U bar over the top, both faces"; the shape row draws two bars. Its 6ø12/m value equals the existing blank candidate
+line POOL:R2:WALL_VERTICAL_OUTER_FACE (12 mm): no line changes. **New finding F-T359-5 (CONFLICT, G-T359-8):** the
+deep-end water-face vertical prints d 12 in the section (1906 '7ø12/m') and d 14 on its own shape (18A8 '7ø14/m' on the
+single polyline 185C: vertical + U + floor-top leg, i.e. the floor-top value 18B0); one bar cannot be both, so
+POOL-R1-WV-IN moves to GAP on diameter (blank line POOL:R1:WALL_VERTICAL_INNER_FACE carries 12 mm; at 7 bars/m the
+two readings differ by 1.208 / 0.888 = x1.36 per metre of that population; no kg computed). Verdict proposal UNRESOLVED
+(designer item, to be added to RFI-B-S11's text by the Lead).
+
+Counts restated: **0 COUNTABLE_NOW, 21 COUNTABLE_AFTER, 38 GAP, 10 OWNED_ELSEWHERE, 10 NOT_DRAWN (79)**. Moves from r1
+(19 / 38 / 10 / 7, 74): +R2-WV-OUT (NOT_DRAWN -> AFTER), +R2-RIM (new, AFTER), LIFT-WV (GAP -> AFTER), R1-WV-IN (AFTER
+-> GAP), +4 NOT_DRAWN typical members (ST-01 / ST-02 landing edge beam and G.B).
+
+**(c) Test.** tests/t359_bar_census: a detail with an uncited bar label inside its extent (an exploded shape label, a
+schedule pointer) is refused, a fully cited detail passes; a cited label missing from its detail and an orphan unlabelled
+shape are refused; a CONFLICT needs both references and blocks.
+
+**(d) Candidate binding (lane I).** Every population names the blank V3.0.16 lines it would fill
+(`candidate_lines`, prefix HL:STAIR_POOL_TANK_STEEL:): **88 / 88** in-scope lines bound (20 pool, 67 stair, 1 tank), each
+existing and blank (measured_net null); the binding refuses an unknown line, a valued line and an unbound in-scope line.
+Populations with no line carry `no_line_reason` (dome shells / east ring, lift walls, boundary wall: not in the
+candidate; the foot-on-G.B 6ø16/m: no line in T-166 (F-T359-1), an integration must not add one before G-T359-1 is
+answered). Matrix columns `labels` and `candidate_lines` added (T359_MATRIX.csv).
+
+Proposed lessons row (ERS s.7): '2026-10-30 | a bar-detail census missed the detail's own exploded bar-shape row | labels
+searched near the section only | census every bar label inside the detail's extent by coordinates and tie each to one
+population or name it; tie each drawn shape to its population (every villa, T-359 r2) | t359 adverse: uncited label
+refused | PROPOSED'.
+
 ## Sources (re-read this run)
 
 Drive "Alsenan chalet project" (read-only; private copies in the git-excluded folder, never committed):
