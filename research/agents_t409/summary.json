@@ -1,0 +1,71 @@
+{
+ "boundaries": 40,
+ "by_class": {
+  "INTERFACE_HELD": {
+   "bound_hi_ml": 5.49,
+   "n": 2,
+   "width_ml": 5.49
+  },
+  "NO_FINISH_CHANGE": {
+   "bound_hi_ml": 0.0,
+   "n": 7,
+   "width_ml": 6.7
+  },
+  "OTHER_ELEMENT": {
+   "bound_hi_ml": 0.0,
+   "n": 5,
+   "width_ml": 6.1
+  },
+  "RULE_INTERFACE": {
+   "bound_hi_ml": 0.0,
+   "n": 17,
+   "width_ml": 14.645
+  },
+  "SILL_HELD": {
+   "bound_hi_ml": 13.6,
+   "n": 6,
+   "width_ml": 6.8
+  },
+  "UNRESOLVED": {
+   "bound_hi_ml": 0.0,
+   "n": 3,
+   "width_ml": 1.2
+  }
+ },
+ "freelancer_profile_rows": 0,
+ "hidden_profile_us08": {
+  "bound_ml": [
+   0.0,
+   205.149668
+  ],
+  "candidate_skirting_net_lm": 185.516658,
+  "freelancer_rows": 0,
+  "item": "HIDDEN_PROFILE",
+  "path_ml": [
+   179.186752,
+   205.149668
+  ],
+  "qty_ml": null,
+  "skirting_basis": "T-296 ledger on V3.0.17 (MERGED); re-read on the candidate of record by lane I",
+  "status": "HELD",
+  "why": "skirting system (hidden / normal) neither printed nor answered: HELD; if HIDDEN it equals the skirting path"
+ },
+ "inputs": {
+  "t296_summary": "f1d34633",
+  "t303_inventory": "9d8ceb61",
+  "t312_faces": "71ca2ef5",
+  "t325_ledger": "ef6f2cb0",
+  "t325_lines": "b85feb1a"
+ },
+ "marble_edges_geometry_ml": 29.29,
+ "policy": "T409_TRANSITION_PROFILE_CENSUS_V1",
+ "transition_profile": {
+  "held_bound_ml": [
+   0.0,
+   19.09
+  ],
+  "held_rows": 8,
+  "released_ml": 0.0,
+  "unknown_rows": 3
+ }
+}
