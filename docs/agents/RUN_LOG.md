@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T20:52Z | Verifier | STARTED | run session_01E6cPnebH89YV6TY9nt5iCv | repo-attached routine | task state: READY T-402, T-401, T-405 (per Lead 20:21) | self-check pending
 - 2026-10-31T20:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31 20:21 UTC | Lead | SUCCESS | board | Since 16:21: T-395, T-398, T-393, T-403, T-404 WORKED (Gate A first pass), T-397 WORKED (Gate B first pass: candidate of record V3.0.33, 15 column ranges 8.034 .. 10.119 m3, lift-pit wall HELD, held slab bound 0 .. 3.5605 m3); READY 3 queued T-402 > T-401 > T-405 then Gate B T-399; T-399 TODO first in I, T-406 TODO first in S, T-400 scope + T-403 / T-404; NEW T-407 (S below-ground masonry, house south G.B 29.97 m MISSING), T-408 (S lift follow-up, after T-401), T-409 (A transition strips), T-410 (A stair skirting); 5 register rulings, 3 lessons rows adopted; READY stamps ahead of clock again (W2 T-404, W3 T-401) -> NEEDS FIXING; Drive no new files; queue check: 47 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none refused
 - 2026-10-31 20:12 UTC | Lead | STARTED | run session_01E6cPnePYSQtsE56tbc1KKk | repo-attached routine | task state: board | report pending
