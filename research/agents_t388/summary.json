@@ -1,0 +1,37 @@
+{
+ "block_deductions": 60,
+ "by_class": {
+  "DRY": 63,
+  "SHAFT": 11,
+  "WET": 121
+ },
+ "deductions": 168,
+ "faces": 195,
+ "findings": {
+  "BLOCK_PART_EXPLAINED": {
+   "m2": 0.0706,
+   "n": 1
+  },
+  "FACE_LENGTH_RESIDUAL": {
+   "m2": -2.2264,
+   "n": 6
+  },
+  "OPENING_OFF_ITS_FACE": {
+   "m2": 3.52,
+   "n": 10
+  },
+  "PAINT_LINE_ON_FULL_TILE": {
+   "m2": 0.0,
+   "n": 1
+  }
+ },
+ "jamb_excess_rooms": {},
+ "max_threshold_floor_overlap_m2": 0.000394,
+ "reveal_carriers": 22,
+ "thresholds": 138,
+ "tile_over_block_top": {
+  "faces": 0,
+  "m2": 0
+ },
+ "window_room_side_reveal_m2": 0.0
+}
