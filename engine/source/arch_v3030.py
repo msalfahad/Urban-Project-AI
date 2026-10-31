@@ -111,7 +111,7 @@ PIECES = {
                                "below the existing ground) is open, so both readings are carried, never chosen",
         "drawing_method": "per member, the drawn faces cast against a form (method G: slab soffits, beam soffits and "
                           "sides below the slab, column shafts, slab edges, stair soffits / risers / sides, pool "
-                          "faces above EG) on 'ST7757 dxf.dxf' by handle (T-163 r3 .. T-308 r5, T-332 r2, T-352); the "
+                          "faces above EG) on the structural DXF by handle (T-163 r3 .. T-308 r5, T-332 r2, T-352); the "
                           "element method E (struct_n10 formwork()) carried beside as the comparison"},
     MW_PIECE: {
         "module": "engine/source/arch_v3030.py (railings by run in lm on the installed path, shutters by leaf in "
