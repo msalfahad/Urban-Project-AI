@@ -29,8 +29,8 @@ HELD by name (count kept, length never 0; physical length shown where it is meas
 | Window sill edges | 23 | SITE_METHOD_NOT_RECORDED (OD-V3B-8 'where the site method requires'; sill material A13) | 29.53 m.l |
 | W02 outer jambs, W03 (curved floor glazing), W17 (archivolt) | 3 + 2 room sides | heights / developed outlines HELD (T-313, T-238, D-53) | W02 head 6.33 |
 | Arches A-GF-01 (GF-01 face), A-1F-01 | 2 | springing not printed (D-45) / arch drawn on no view; Q-55 C is a door height, not a springing (R-T405-7) | A-GF-01 head on the arc 1.223795 |
-| Lift entrances GF / 1F / 2F (hall faces) | 3 | LIFT_ENTRANCE_HEAD_NOT_ESTABLISHED (landing frame by supplier; T-401 owns the shaft) | - |
-| Stair hall -> GF-11 doorless 0.90 opening; GF-08 11.22 m zone edge | 2 | OPEN_SIDE_HEAD_NOT_READ (R-T368-7 reading pending) / ZONE_EDGE_NOT_READ | - |
+| Lift entrances GF / 1F / 2F (hall faces) | 3 | LIFT_ENTRANCE_HEAD_NOT_ESTABLISHED (landing frame by supplier; T-401 owns the shaft; GF read on both plans this run: no beam / header drawn) | - |
+| Stair hall -> GF-11 doorless 0.90 opening; GF-08 11.22 m zone edge | 2 | OPEN_SIDE_HEAD_NOT_ESTABLISHED (read this run: nothing crosses it on the plan, the ST GF roof-slab plan shows only column 341 within 0.8 m; a stair flight may pass over GF-11, T-088) / ZONE_EDGE_NOT_READ | - |
 | D-1F-07 far face (unlabelled lobby by 1F-10); gate D-GF-15 | 2 | FACE_NOT_IN_FACE_LEDGER / gate width UNRESOLVED | D-1F-07 5.20 |
 | Stair edges, void V01 slab edge, ceiling / beam edges | 3 | stair soffit BLANK (T-284); CEILING_FINISH_AT_VOID; CEILING_TYPE_PER_ROOM (O-P8-02) | - |
 | Exterior slab edge, arch frames, drip, boundary fence | 4 | Q-68; D-45; A13 (a drip is not an angle bead); T-396 / T-404 | - |
@@ -146,7 +146,9 @@ the physical m.l (OWNER_NOTES_SIGMA correction).
 ## 8. What is missing / uncertain
 
 - Shaft heights (Q-72), annex rooms have no arris anyway; the drawing-method corner length stays HELD on the roof datum.
-- Lift entrances, the GF stair-hall -> GF-11 opening and the GF-08 zone edge: heads not read (R-T368-7 slab-plan reading).
+- Lift entrances, the GF stair-hall -> GF-11 opening: read on the plan and the ST7757 GF roof-slab plan this run (T-108
+  translation re-checked on column 2F8A = ST 338, 0 mm): no overhead element drawn on either; heads stay HELD (a lift
+  landing and a cell under a flight both have a head that no drawing prints). GF-08 zone edge not read.
 - Parapet tops / sills / drips: a specification fact (RFI A13), not an owner rule question.
 - Door frame / architrave detail is not drawn: OD-V3B-8 still places beads on door jambs (owner decision), so the door
   rings are ASSUMED — OWNER-APPROVED; a drawn architrave detail would not remove the bead (it is fixed under the plaster).

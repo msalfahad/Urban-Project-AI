@@ -361,7 +361,10 @@ def other_interior():
         B.held_edge("LIFT#GF-08", "INTERIOR", "GF-08", "OPENING_UNDER_HEAD", 3,
                     "lift entrance (engine passage OP-011 into the 1.80 x 1.80 shaft GF-R89E756, masonry jambs, 1.00): "
                     "landing frame by the lift supplier, entrance height not printed: LIFT_ENTRANCE_HEAD_NOT_ESTABLISHED"
-                    " (T-401 owns the shaft)", "L-8cecb1d010d5aafbf25d", "OP-011", "ARCH_OPENINGS (V2.9 run)"),
+                    " (T-401 owns the shaft). Read this run: nothing crosses the opening on P7757.dxf (any linetype) and "
+                    "the ST7757 GF roof-slab plan (9f9d1179, T-108 translation checked on column 2F8A = 338, 0 mm) has "
+                    "no entity within 0.8 m of it but columns: no beam / header depth to give a head; a lift landing "
+                    "always has a header and frame, so the R-T368-7 'NONE' full-height reading is not applied", "L-8cecb1d010d5aafbf25d", "OP-011", "ARCH_OPENINGS (V2.9 run)"),
         B.held_edge("LIFT#1F-13", "INTERIOR", "1F-13", "OPENING_UNDER_HEAD", 3,
                     "lift entrance (engine passage OP-007 into shaft 1F-RCCB686, 1.00): LIFT_ENTRANCE_HEAD_NOT_ESTABLISHED",
                     "L-9b4a7bab033d677e2017", "OP-007", "ARCH_OPENINGS (V2.9 run)"),
@@ -370,8 +373,11 @@ def other_interior():
                     "L-ae0cdd794cc5fdbe0c29 | L-418121a4b223cb4e8646", "OP-002", "ARCH_OPENINGS (V2.9 run)"),
         B.held_edge("OPEN#ST-GF-OP020", "INTERIOR", "ST-GF", "OPENING_UNDER_HEAD", 3,
                     "doorless 0.90 opening stair hall -> GF-11 (engine passage OP-020, column + masonry jamb): head not "
-                    "read on the slab plan this run (R-T368-7 reading pending): OPEN_SIDE_HEAD_NOT_READ; the GF-11 face "
-                    "is tiled (no bead)", "L-95f2c45c2eccaaeccb08", "OP-020", "ARCH_OPENINGS (V2.9 run)"),
+                    "drawn on either plan: read this run, nothing crosses it on P7757.dxf (any linetype) and the ST7757 "
+                    "GF roof-slab plan shows only column 341 within 0.8 m (no beam, no slab edge); GF-11 is the small "
+                    "cell beside the stair whose level is not drawn (T-088), so the stair flight's soffit may be its "
+                    "head and no section shows it: OPEN_SIDE_HEAD_NOT_ESTABLISHED (R-T368-7 'NONE' full height not "
+                    "applied while a flight may pass over it); the GF-11 face is tiled (no bead)", "L-95f2c45c2eccaaeccb08", "OP-020", "ARCH_OPENINGS (V2.9 run)"),
         B.held_edge("OPEN#GF-08-OP003", "INTERIOR", "GF-08", "OPENING_UNDER_HEAD", 2,
                     "11.22 m open side of the living zone toward the court / pantry zones (engine passage OP-003, "
                     "column jambs both ends): an engine zone edge, not a drawn opening; whether its end columns stand "
