@@ -1,9 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 00:45 UTC (Lead). Previous version: 2026-10-30 20:20 UTC. The released numbers did not change
+Last update: 2026-10-31 04:30 UTC (Lead). Previous version: 2026-10-31 00:45 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
-untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate;
-your 31 Oct review keeps the count at 1); released: 0. The candidate under review is now V3.0.29 (not released).
+untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
+released: 0. The candidate under review stays V3.0.29 (not released).
+
+Since 31 Oct 00:45 (newest first; three checked and merged, no integration; one package sent back twice):
+- Formwork, railings and shutters INTO THE CANDIDATE: SENT BACK TWICE, both times for bookkeeping, not for any
+  quantity. The checker accepted the measured figures (formwork 1,065.83 m2 calculated, the rest held blank; railings
+  38.92 m.l, of which 12.89 verified; 6 shutter leaves). What failed: new item codes were written that the trade
+  register did not own, and the last one (roof / floor-edge guard rails, 21.55 m.l) also slipped past the check because
+  the check only looked at some code prefixes. Third pass is first for the integration worker.
+- Concrete compared with the freelancer family by family on the current candidate: HANDED IN, not yet checked. The
+  worker reports every family's difference split into named causes with nothing left unexplained; 11 parts are still
+  unresolved (ground slab, ground-beam lumps, column height basis, beams, stairs, domes, lift / pump scope) and 11 held.
+  No figure counts until the checker re-measures it.
+- Straight-bar cutting list: CHECKED AND MERGED after one fix: the 38 footing-mesh lines with no printed bar-end basis
+  stay held; exact schedule about 4,249 kg. 10 more footing lines on the same doubtful basis go to the checker for a
+  'held' record.
+- Privacy fix: CHECKED AND MERGED (the freelancer rate removed going forward, a guard test now refuses unlisted money
+  figures); two small wording follow-ups are first in the architectural lane.
+- Architectural consultant questions for the holds no drawing settles (shower zone extents, kitchen / pantry / laundry
+  fixtures, the arches, an overhead element): CHECKED AND MERGED; nothing sent.
+- Next: formwork third pass; checking the concrete comparison; two new consistency checks on the candidate as a whole
+  (every structural line on one element with no overlap counted twice; every wall face with one height and each
+  opening deducted once across blockwork, plaster, paint, tile and reveals).
 
 Since 30 Oct 20:20 (newest first; eight checked and merged, one of them an integration into the candidate; one sent
 back):

@@ -45,6 +45,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 04:30 (lead run; covers 00:45 - 04:30)
+
+- WORKED: T-384 (privacy fix + currency guard), T-374 r2 (exact r1 fault fixed: 38 lines HELD_DOWNGRADE, net 4,249.455 kg),
+  T-381 (7 lane A designer rows bound to merged ledgers).
+- PARTIAL: T-199 (formwork / railings / shutters, Gate B): r1 and r2 each failed ONE registry-ownership gate while every
+  quantity was accepted. Decision: r3 with the exact fault (MET.RAILING.GUARD owned or listed; guard scans every prefix
+  written, adverse MET.* case; L4 to the end), first in lane I.
+- READY, not judged: T-385 (concrete per family, 9 / 9 close, 11 UNRESOLVED components named).
+- Cause seen: a guard that scans a fixed prefix list lets a new prefix through. Every hand-in that writes a new item
+  code now has it owned by the family registry first. Follow-ups: O-T384-C1 / -C2 -> T-386; candidate-wide checks the
+  integration chain never had -> T-387 (structural ownership / overlap), T-388 (finish face consistency).
+
 ## 2026-10-31 00:45 (lead run; covers 20:20 - 00:45)
 
 - WORKED: T-379 (gate fix, t212 green), T-370 (sanitary count, two sources), T-369 (shower tanking 0.000 m2 extra,
@@ -247,21 +259,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-299 PART F footing reinforcement: READY 15:57, first in the Checker queue (owner-session item); Lead challenges: the downgrade conflict with the Checker's 15:35 note and the audit band 2.718 vs the owner's 2.769 t lower bound.
 - Team: every run since 14:15 closed with a final line except the open Worker 3 15:00 (T-266) and Verifier 15:51 runs; Worker 2 15:40 IDLE on the run lock is correct (the 14:41 run worked 61 min). Recurring cause: a Lead challenge written into the queue note is not always read by the worker before hand-in (T-297 (a)); from now on challenges that change acceptance go into the ROW, not only the queue note.
 
-## 2026-10-25 14:15 (lead run; covers 12:15 - 14:15)
-
-- T-254 exterior ground-beam basis correction (integration package, V3.0.17): WORKED (Gate B PASS, MERGED 7c49e890, Verifier 13:35; own DXF re-measure of all 16 rebased lines agrees, main-house exterior GB 8.1642 -> 15.9575 m3 DRAWING-CONFIRMED, +95.5 %; 2F / annex columns and annex GB HELD blank, 5 members NOT_PRESENT, boundary G.B line added HELD). Open: F-T254-01 ring end rule, F-T254-02 PC-1F-B watch. Decision: both in ELEMENT_REGISTER; T-266 now TODO on V3.0.17.
-- T-298 export completion (tonnes + slab join by panel id): WORKED (MERGED 274885e6, Verifier 13:54; own independent join 62 / 62). First WHOLE verified line in the real export (CONC.SLAB 60.280155 m3); reinforcement in t. Decision: WP part of the completeness gap stays with T-301.
-- T-299 r1 read-only reinforcement reconciliation: WORKED (MERGED 05ad6d02, Verifier 14:00; 0 double counts, SB1 4.550 m own re-measure). Minor F-T299-01 (stale 'Q-71 open' hold wording). Decision: PART F (owner 13:16 / 13:25 footing requirements) TODO for worker 1 after T-297, carrying F-T299-01.
-- T-293 formwork ledger part 1: WORKED (MERGED 294da634, 12:19). Decision: part 2 (slabs / stairs / domes / tank + boundary G.B tie) TODO after T-299 PART F.
-- T-292 plaster / paint face-to-line ledger: PARTIAL (REJECTED narrow 12:48: test module name collides with T-293's on the merged head; 1F-11 W17 under Q-76 A). Decision: r2 with the exact fault (CLAIMED 13:44); new lessons row (task-prefixed module names, joint merged-head test run).
-- T-295 ceiling face-to-line ledger: READY 14:12, classified at its verdict (first in the Checker queue).
-- Team: every run since 12:15 has a final line except the open Worker 1 13:21 (T-297) and Worker 2 13:40 (T-292 r2) runs; no IDLE run since 11:40 (the 35-minute sizing is holding; lessons row stays OPEN for 24 h).
-
-## 2026-10-25 12:15 (lead run; covers 10:15 - 12:15)
-
-- T-290 stairs / domes basis ledger: WORKED (MERGED 891dbd4d, Verifier 11:05; D1 wedge 0.025714 and MS2-LD 0.4696 m3 agreed; E1 waist: section B-B draws it on ground, so soffit formwork NOT_APPLICABLE and concrete HELD both stand, not a conflict). Decision: T-266 consumes it unchanged.
-- T-291 blockwork wall-to-line ledger: WORKED (MERGED 0c6b2ba5, Verifier 11:30; bindings / totals from register v4 agree, 422.5314 m2 determinate). Decision: T-279 consumes it after T-255 in the owner's lane I order.
-- T-170 excavation / backfill ledger: WORKED (MERGED 2991be3d, Verifier 11:31, minor F-T170-01). Every volume stays HELD BLANK (formation bound only). Decision: no new row; the finding rides the next excavation row.
-- V3.0.16 Checker records (8 V2 verdicts, 7 downgrades over 43 lines, 21.953969 m3 to HELD / CONFLICT): WORKED as records, PARTIAL in effect: 0 whole lines countable in the export (F-REC-01 slab completeness join on the V3.0.8 grain; F-REC-02 no waterproofing inventory). Decision: T-298 (owner row) FIRST for worker 2 cross-lane; NEW T-301 (WP inventory).
-- T-292 (plaster / paint face-to-line) and T-293 (formwork face-to-member part 1): READY, classified at their verdicts; both hand-ins left the full suite unfinished (lock window). Decision: the Checker runs the suite to the end; new rows sized about 35 min + suite.
-- Team: Worker 1 11:20 / Worker 2 11:40 IDLE on their own run locks (previous runs about 80 min). Recurring cause 'package + full suite longer than the cadence': lessons row OPEN, monitored 24 h.
