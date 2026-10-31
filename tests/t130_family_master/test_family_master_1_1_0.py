@@ -216,11 +216,75 @@ def _owners(new):
     return own
 
 
+def _unowned_written(doc, written=None):
+    """{code: file} of every written item code that doc neither assigns to a family nor lists apart"""
+    own, apart = _owners(doc), doc["item_codes_without_family"]
+    written = _written_codes() if written is None else written
+    return {c: p for c, p in written.items() if c not in own and c not in apart}
+
+
+def _not_implemented_hits(doc, written=None):
+    """[(family, code or term, ...)] where a NOT_IMPLEMENTED family owns a written code or a function name term"""
+    written = _written_codes() if written is None else written
+    defs = {(m.group(1).lower(), p.relative_to(ROOT).as_posix())
+            for p in sorted((ROOT / "engine/source").rglob("*.py")) for m in DEF.finditer(p.read_text(encoding="utf-8"))}
+    bad = []
+    for f in doc["families"]:
+        if f["capability"] != "NOT_IMPLEMENTED":
+            assert "name_terms" not in f, f["code"]
+            continue
+        assert f["name_terms"], f["code"]
+        bad += [(f["code"], c, written[c]) for c in f["item_codes"] if c in written]
+        bad += [(f["code"], t, d, p) for t in f["name_terms"] for d, p in defs if t in d]
+    return bad
+
+
+# ------------------------------------------------------------------ r4 (T-199 r2, Checker 2026-10-31 02:58, gate f)
+# These two checks run on the LIVE code against the 1.1.0 snapshot. A later registry version that owns a new code or
+# moves a family off NOT_IMPLEMENTED (with file:line evidence) is the registry of record; the 1.1.0 snapshot cannot
+# learn it (an existing rule version is never edited). So the 1.1.0 era exempts ONLY what the governing registry (the
+# newest BOQ_FAMILY_MASTER on the tree) owns or moved, and ONLY while that governing registry passes the same two
+# guards at full strength; any code no registry owns, and any NOT_IMPLEMENTED family the governing registry did not
+# move, still fails here. The exemption is empty whenever the governing registry is 1.1.0's own content.
+def _semver(v):
+    return tuple(int(x) for x in v.split("."))
+
+
+def _governing():
+    files = sorted((ROOT / "rules/coverage").glob("BOQ_FAMILY_MASTER_*.json"),
+                   key=lambda p: _semver(p.stem.rsplit("_", 1)[1]))
+    return json.loads(files[-1].read_text(encoding="utf-8"))
+
+
+def _era_exemptions(new, gov, written=None):
+    """-> (codes, families) the 1.1.0 era may exempt: codes 1.1.0 never mapped that gov owns in a family that is not
+    NOT_IMPLEMENTED; 1.1.0 NOT_IMPLEMENTED families gov moved off NOT_IMPLEMENTED with a resolving file:line. Refuses
+    (AssertionError) a governing registry that fails either guard itself."""
+    if gov["version"] == new["version"]:
+        return set(), set()
+    written = _written_codes() if written is None else written
+    assert _unowned_written(gov, written) == {}, ("governing registry", gov["version"], "leaves a written code unowned")
+    assert _not_implemented_hits(gov, written) == [], ("governing registry", gov["version"], "NOT_IMPLEMENTED hit")
+    known = set(_owners(new)) | set(new["item_codes_without_family"])
+    gfam = {f["code"]: f for f in gov["families"]}
+    gown = _owners(gov)
+    codes = {c for c, fc in gown.items() if c not in known and gfam[fc]["capability"] != "NOT_IMPLEMENTED"}
+    fams = set()
+    for f in new["families"]:
+        g = gfam.get(f["code"])
+        if f["capability"] == "NOT_IMPLEMENTED" and g and g["capability"] != "NOT_IMPLEMENTED":
+            cites = [c for e in g["evidence"] for c in _citations(e)]
+            if cites and all(_resolves(*c) for c in cites):
+                fams.add(f["code"])
+    return codes, fams
+
+
 def test_every_written_item_code_belongs_to_one_family(new):
     own, apart = _owners(new), new["item_codes_without_family"]
     written = _written_codes()
     assert not set(own) & set(apart)
-    assert not {c: p for c, p in written.items() if c not in own and c not in apart}
+    codes, _fams = _era_exemptions(new, _governing(), written)
+    assert not {c: p for c, p in _unowned_written(new, written).items() if c not in codes}
     from engine.source import boq_line as BL
     assert set(own) | set(apart) <= set(written) | set(BL.ITEMS)               # no invented code in the map
 
@@ -228,18 +292,37 @@ def test_every_written_item_code_belongs_to_one_family(new):
 def test_no_not_implemented_family_has_a_module_in_engine_source(new):
     """NOT_IMPLEMENTED = no code measures the family: no module writes one of its item codes and no function in
     engine/source carries one of its name terms (r1 missed struct_n10.excavation() / formwork(): no item code)"""
-    written = _written_codes()
-    defs = {(m.group(1).lower(), p.relative_to(ROOT).as_posix())
-            for p in sorted((ROOT / "engine/source").rglob("*.py")) for m in DEF.finditer(p.read_text(encoding="utf-8"))}
-    bad = []
-    for f in new["families"]:
-        if f["capability"] != "NOT_IMPLEMENTED":
-            assert "name_terms" not in f, f["code"]
-            continue
-        assert f["name_terms"], f["code"]
-        bad += [(f["code"], c, written[c]) for c in f["item_codes"] if c in written]
-        bad += [(f["code"], t, d, p) for t in f["name_terms"] for d, p in defs if t in d]
-    assert not bad
+    _codes, fams = _era_exemptions(new, _governing())
+    assert not [b for b in _not_implemented_hits(new) if b[0] not in fams]
+
+
+def test_the_era_exemption_never_covers_an_unowned_code_or_an_unmoved_family(new):
+    """adverse (r4): a code no registry owns and a family the governing registry left NOT_IMPLEMENTED are never
+    exempt; a governing registry that fails the guards exempts nothing (it is refused)"""
+    gov = _governing()
+    written = dict(_written_codes(), **{"FIN.NO_FAMILY_X": "engine/source/synthetic.py"})
+    try:
+        codes, fams = _era_exemptions(new, gov, written)
+    except AssertionError:
+        codes, fams = None, None                                                # refused: nothing exempt
+    assert codes is None or "FIN.NO_FAMILY_X" not in codes
+    if gov["version"] != new["version"]:
+        assert codes is None                                                    # the unowned code fails gov itself
+        codes, fams = _era_exemptions(new, gov)
+        gfam = {f["code"]: f for f in gov["families"]}
+        assert all(gfam[c]["capability"] != "NOT_IMPLEMENTED" for c in fams)
+        assert not set(codes) & (set(_owners(new)) | set(new["item_codes_without_family"]))
+        import copy
+        bad = copy.deepcopy(gov)
+        for f in bad["families"]:
+            if f["code"] in fams:
+                f["capability"] = "NOT_IMPLEMENTED"                             # moved back: no exemption left
+                f["name_terms"] = ["zz_never_a_def_name"]
+        try:
+            c2, f2 = _era_exemptions(new, bad)
+        except AssertionError:
+            c2, f2 = set(), set()
+        assert not (f2 & fams)
 
 
 def test_the_name_scan_finds_the_r1_misses():

@@ -393,3 +393,40 @@ def test_per_flight_railing_with_figure_beside_runs_detected():
     fl.update(evidence_state="MEASURED", measured_net=3.0, rfi=None)
     with pytest.raises(ValueError, match="same guard twice"):
         A.check_formwork_metalwork(out2)
+
+
+# ------------------------------------------------------------------ r2 (Checker 2026-10-31 02:58: B7-10 by evidence)
+def _handrail(run, status, lm, segs, note=""):
+    return {"run": run, "kind": "WALL_HANDRAIL", "status": status, "verified": False, "lm": lm,
+            "measured_part_lm": None, "unmeasured_segments": 0, "height_printed_m": 0.9, "segments": segs,
+            "source": "stair section", "note": note, "source_task": "T-164"}
+
+
+def test_wall_handrail_drawn_and_not_drawn():
+    """V199 + two wall-side handrails: H1 drawn on the flight wall, pitch line sqrt(2.70^2 + 1.50^2) = 3.089 lm plus a
+    landing return 1.000 lm = 4.089 lm MEASURED (FIN.HANDRAIL, family B7-10); H2 not drawn: EXCLUDED_WITH_REASON
+    (UP-STAIR-013), blank, never 0. Every other line as in the base hand case."""
+    lines = lines_3029()
+    d = doc(lines)
+    d["railings"] += [_handrail("H1", "DRAWING-CONFIRMED", 4.089,
+                                [{"segment": "flight wall pitch line", "lm": 3.089, "status": "DRAWING-CONFIRMED"},
+                                 {"segment": "landing return", "lm": 1.0, "status": "DRAWING-CONFIRMED"}]),
+                      _handrail("H2", "EXCLUDED", None, [{"segment": "second flight wall", "lm": None,
+                                                          "status": "EXCLUDED"}], note="none drawn")]
+    _l, ch, log, out, ident = run(d, lines)
+    h = {ln["location"]["element_id"]: ln for ln in _by(out, A.HANDRAIL)}
+    assert set(h) == {"RAIL:H1", "RAIL:H2"} and all(ln["unit"] == "lm" for ln in h.values())
+    assert h["RAIL:H1"]["evidence_state"] == "MEASURED" and abs(h["RAIL:H1"]["measured_net"] - 4.089) < 1e-9
+    assert h["RAIL:H2"]["evidence_state"] == "EXCLUDED_WITH_REASON" and h["RAIL:H2"]["measured_net"] in (None, "")
+    assert "UP-STAIR-013" in h["RAIL:H2"]["calculation"]["formula"]
+    base = run()[4]["formwork_metalwork"]["valued"]
+    assert ident["formwork_metalwork"]["valued"] == dict(base, **{"FIN.HANDRAIL|lm": 4.089})
+    assert out[:len(lines)] == lines
+
+
+def test_wall_handrail_with_a_held_segment_refused():
+    def m(d, l):
+        d["railings"].append(_handrail("H1", "DRAWING-CONFIRMED", 3.089,
+                                       [{"segment": "flight", "lm": 3.089, "status": "DRAWING-CONFIRMED"},
+                                        {"segment": "turn", "lm": None, "status": "HELD"}]))
+    _bad(m, "sum of its measured segments|HELD segment")

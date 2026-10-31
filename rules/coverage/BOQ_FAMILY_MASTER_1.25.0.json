@@ -1,8 +1,8 @@
 {
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.25.0",
- "supersedes": "1.24.0 (kept unchanged on disk; every family, count, released-configuration field and the pending entries up to T-327 copied unchanged)",
- "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no family state changes",
+ "supersedes": "1.24.0 (kept unchanged on disk; every family except B10-13 / B7-13 / B6-05 / B7-10 (r2), every released-configuration field and the pending entries up to T-327 copied unchanged)",
+ "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no candidate state changes | r2 (Checker 2026-10-31 02:58): the item codes V3.0.30 writes are owned (STR.FORMWORK B10-13, STR.FORMWORK.STAIR B7-13, ARCH.SHUTTER B6-05, FIN.HANDRAIL B7-10) and B7-13 / B6-05 / B7-10 move NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in only), PROPOSED; candidate states unchanged",
  "loaded_by": "nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads 1.1.0, so no run, census or quantity changes with this file",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -124,7 +124,7 @@
    ]
   }
  },
- "item_code_scan": "every quoted item code in engine/source/*.py and tools/urban_boq_m9.py, except the item master engine/source/boq_line.py and the census map engine/source/coverage_census.py, is owned by exactly one family ('item_codes') or listed in 'item_codes_without_family'; a NOT_IMPLEMENTED family owns no written code and no engine/source function name carries one of its 'name_terms' (tests/t130_family_master)",
+ "item_code_scan": "every quoted item code in engine/source/*.py and tools/urban_boq_m9.py, except the item master engine/source/boq_line.py and the census map engine/source/coverage_census.py, is owned by exactly one family ('item_codes') or listed in 'item_codes_without_family'; a NOT_IMPLEMENTED family owns no written code and no engine/source function name carries one of its 'name_terms' (tests/t130_family_master) | from 1.25.0 the same two guards run at full strength against this registry in tests/t199_formwork_metalwork/test_family_master_1_25_0.py; the 1.1.0 checks exempt only what the governing (newest) registry owns or moved, and only while it passes them",
  "item_codes_without_family": {
   "ARCH.EXTERIOR": "the area of an exterior space (garden, court, roof) as a register line; its waterproofing is FIN.WP.* (B8-06 / B8-07) and it carries no finish of its own",
   "STR.CONC.OTHER": "declared in the item master (engine/source/boq_line.py) for a route G family outside the map; no module writes it",
@@ -144,15 +144,15 @@
  "capability_counts": {
   "INTEGRATED_AND_TESTED": 0,
   "PARTIAL": 47,
-  "IMPLEMENTED_NOT_INTEGRATED": 13,
+  "IMPLEMENTED_NOT_INTEGRATED": 16,
   "EXPERIMENTAL": 4,
   "BLOCKED_BY_SOURCE": 17,
-  "NOT_IMPLEMENTED": 18
+  "NOT_IMPLEMENTED": 15
  },
  "capability_change_counts": {
-  "RAISED": 33,
+  "RAISED": 36,
   "LOWERED": 8,
-  "UNCHANGED": 58
+  "UNCHANGED": 55
  },
  "in_v3_0_candidate_counts": {
   "yes": 50,
@@ -2241,18 +2241,19 @@
    "item_en": "Shutters",
    "item_ar": "شتر",
    "unit": "pcs / m2",
-   "capability": "NOT_IMPLEMENTED",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
    "capability_1_0_0": "NOT_IMPLEMENTED",
-   "capability_change": "UNCHANGED",
-   "implementation": "none",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V3.0.30 (opt-in): ARCH.SHUTTER",
    "source_needed": "schedule",
    "next_slice": "S4",
    "evidence": [
-    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 ITEMS and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+    "engine/source/arch_v3030.py:464 shutter_lines(): ARCH.SHUTTER pcs by drawn leaf count (MEASURED, from the merged T-164 census) and the m2 line BLANK (BLOCKED_RFI: no owner rule sets the area basis)",
+    "tests/t199_formwork_metalwork/test_arch_v3030.py:198 test_railing_and_shutter_lines() / :337 test_shutter_area_given_refused()"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "none",
-   "missing": "shutters not measured",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0.30 (engine/source/arch_v3030.py, opt-in candidate; pending Gate B, T-199)",
+   "missing": "not in the released method; shutter area and material HELD (no owner rule sets the basis)",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [
     "T-199"
@@ -2261,9 +2262,8 @@
     "released_run": [],
     "candidate_run_v2_13": []
    },
-   "item_codes": [],
-   "name_terms": [
-    "shutter"
+   "item_codes": [
+    "ARCH.SHUTTER"
    ],
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
@@ -2274,7 +2274,8 @@
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none"
-   }
+   },
+   "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (no item code, no module); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
   {
    "code": "B6-06",
@@ -2845,18 +2846,20 @@
    "item_en": "Wall-mounted handrail",
    "item_ar": "مسكة الدرج",
    "unit": "lm",
-   "capability": "NOT_IMPLEMENTED",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
    "capability_1_0_0": "NOT_IMPLEMENTED",
-   "capability_change": "UNCHANGED",
-   "implementation": "none",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V3.0.30 (opt-in): FIN.HANDRAIL",
    "source_needed": "drawn / specified only",
    "next_slice": "S3",
    "evidence": [
-    "FIN.HANDRAIL is defined (engine/source/boq_line.py:91 FIN.HANDRAIL) but no module emits it (grep of engine/ and tools/)"
+    "FIN.HANDRAIL is defined in the item master (engine/source/boq_line.py:91 FIN.HANDRAIL)",
+    "engine/source/arch_v3030.py:95 RAIL_KIND: a WALL_HANDRAIL run of the merged T-164 census writes FIN.HANDRAIL; engine/source/arch_v3030.py:431 rail_line(): a drawn run MEASURED in lm on its installed path, a run not drawn EXCLUDED_WITH_REASON (UP-STAIR-013), blank",
+    "tests/t199_formwork_metalwork/test_arch_v3030.py:405 test_wall_handrail_drawn_and_not_drawn() (V199 by hand: 3.089 + 1.000 = 4.089 lm)"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "none",
-   "missing": "not measured",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0.30 (engine/source/arch_v3030.py, opt-in candidate; pending Gate B, T-199)",
+   "missing": "not in the released method; on the development villa no wall handrail is drawn (one EXCLUDED_WITH_REASON line in the opt-in candidate)",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -2865,9 +2868,6 @@
    },
    "item_codes": [
     "FIN.HANDRAIL"
-   ],
-   "name_terms": [
-    "handrail"
    ],
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
@@ -2878,7 +2878,8 @@
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none"
-   }
+   },
+   "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (defined, no module emitted it); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
   {
    "code": "B7-11",
@@ -2978,27 +2979,27 @@
    "item_en": "Stair formwork",
    "item_ar": "شدة الدرج",
    "unit": "m2",
-   "capability": "NOT_IMPLEMENTED",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
    "capability_1_0_0": "NOT_IMPLEMENTED",
-   "capability_change": "UNCHANGED",
-   "implementation": "stair_geometry INCLINED_WAIST_SURFACE_AREA (structural, not a trade)",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V3.0.30 (opt-in): STR.FORMWORK.STAIR",
    "source_needed": "sections",
    "next_slice": "S5",
    "evidence": [
-    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 ITEMS and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen); engine/source/stair_geometry.py INCLINED_WAIST_SURFACE_AREA is structural geometry, not a trade"
+    "engine/source/arch_v3030.py:80 FW_STAIR_CODE = STR.FORMWORK.STAIR: stair waist / landing soffits from the merged T-332 r2 FILL table and the T-352 stair side faces; engine/source/arch_v3030.py:335 _fw_code() routes a STR.CONC.STAIR member to it",
+    "tests/t199_formwork_metalwork/test_arch_v3030.py:147 test_hand_totals_and_states() (V199 by hand: STR.FORMWORK.STAIR 3.300 + 0.850 = 4.150 m2) / :302 test_stair_side_on_non_stair_line_refused()"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "none",
-   "missing": "no formwork trade",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0.30 (engine/source/arch_v3030.py, opt-in candidate; pending Gate B, T-199)",
+   "missing": "not in the released method; in the opt-in V3.0.30 the held stair wall / member sides stay blank (never 0)",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [],
    "development_villa": {
     "released_run": [],
     "candidate_run_v2_13": []
    },
-   "item_codes": [],
-   "name_terms": [
-    "stair_formwork"
+   "item_codes": [
+    "STR.FORMWORK.STAIR"
    ],
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
@@ -3009,7 +3010,8 @@
     "changed": "",
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none"
-   }
+   },
+   "note": "1.0.0 .. 1.24.0 said NOT_IMPLEMENTED (no item code, no module); 1.25.0 (T-199 r2): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms"
   },
   {
    "code": "B7-14",
@@ -4529,11 +4531,13 @@
     "engine/source/struct_n10.py:184 formwork(): contact faces per route G register row (slab soffit MEASURED, beam soffit MEASURED, beam sides CONDITIONAL on the schedule depth basis FW-D2, column sides UPPER_BOUND, footing / ground-beam sides CONDITIONAL FORMED / EARTH_CAST FW-D1, stairs / necks / lintels HELD); alternatives never summed",
     "tools/struct_n10.py:40 build(): standalone tool, writes FORMWORK.json / FORMWORK_FACES.csv; no method imports it",
     "commit 40f3184 (Structural N10); tests/m9_n10/test_n10_structural.py:45 test_hand_truth_faces() / :58 test_alternatives_are_never_summed_and_held_is_never_zero() / :158 test_formwork_matches_the_design() (hand truth faces, held never zero, synthetic villas)",
-    "development villa (tool run on the released route G registers, head 0dec24c): slab soffit 379.041 m2, beam soffit 99.123 m2, beam sides 337.405 (TOTAL) or 458.025 m2 (BELOW_SLAB), footing sides 93.260 m2 if FORMED or 0 if EARTH_CAST, ground-beam sides 10.581 m2 FORMED (3 rows only); 311 faces HELD (columns 118, slabs 76 edges, ground beams 59, ground slab 25, beams 24, others 9)"
+    "development villa (tool run on the released route G registers, head 0dec24c): slab soffit 379.041 m2, beam soffit 99.123 m2, beam sides 337.405 (TOTAL) or 458.025 m2 (BELOW_SLAB), footing sides 93.260 m2 if FORMED or 0 if EARTH_CAST, ground-beam sides 10.581 m2 FORMED (3 rows only); 311 faces HELD (columns 118, slabs 76 edges, ground beams 59, ground slab 25, beams 24, others 9)",
+    "engine/source/arch_v3030.py:80 FW_CODE = STR.FORMWORK: one formwork line per formed face group beside its bound concrete line (face by face from the merged T-332 r2 FILL table; CALCULATED / HELD blank / OQ-10 alternatives beside, never summed); engine/source/arch_v3030.py:352 fw_line()",
+    "tests/t199_formwork_metalwork/test_arch_v3030.py:147 test_hand_totals_and_states() (V199 by hand: STR.FORMWORK 18.300 m2) / :160 test_valued_line_beside_its_concrete_line_with_its_state()"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "none (standalone tool tools/struct_n10.py)",
-   "missing": "not in any method or BOQ line; owner conventions FW-D1 .. FW-D4 open; slab edges and column-beam framing not in the register; stair formwork held (B7-13); no hand check",
+   "opt_in_readers": "none (standalone tool tools/struct_n10.py); ARCH_TAKEOFF_V3.0.30 (engine/source/arch_v3030.py, opt-in candidate; pending Gate B, T-199)",
+   "missing": "not in the released method; in the opt-in V3.0.30 the held faces, the OQ-10 FORMED / EARTH_CAST pairs and the parapet faces stay blank (never 0); owner conventions FW-D1 .. FW-D4 open",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [
     "T-199"
@@ -4542,7 +4546,9 @@
     "released_run": [],
     "candidate_run_v2_13": []
    },
-   "item_codes": [],
+   "item_codes": [
+    "STR.FORMWORK"
+   ],
    "note": "1.0.0 and r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding",
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
