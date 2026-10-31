@@ -63,7 +63,13 @@ def test_level_bands_closed_or_named(summary):
     assert set(lb) == {"2F", "1F", "GF", "GROUND"}
     for fl, v in lb.items():
         assert v["double_m3"] == 0
-    assert lb["GF"]["gap_m3"] == pytest.approx(0.001356, abs=1e-6)
+    # T-392: the GF gap is no longer an unexplained 0.001356 on B8 but named on the drawing (never netted): the T-146
+    # ring-overlap deduction 0.002566 (R-T392-1) + the CB8 end short of S-BEAM 326 0.003406 = GAP 0.005972; CB8's band
+    # beyond 326 inside B27 = DOUBLE 0.002767 (R-T392-2); the level band stays FAIL until lane I settles them
+    assert lb["GF"]["gap_m3"] == 0
+    assert lb["GF"]["t392_named_gap_m3"] == pytest.approx(0.005972, abs=1e-6)
+    assert lb["GF"]["t392_named_double_m3"] == pytest.approx(0.002767, abs=1e-6)
+    assert lb["GF"]["status"].startswith("FAIL")
     m = rows("MEMBERS_T387.csv")
     assert not [r for r in m if r["verdict"] == "NO_LINE"]           # every unlined member names its successor
     for r in m:

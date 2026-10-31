@@ -24,7 +24,7 @@
    "sheet": "SH12"
   }
  ],
- "downgrades_sha256": "53a3f5e7cd15e12ec482f56625d08899b6b29c885b9ba4c11b244291a91039e2",
+ "downgrades_sha256": "4ed94bf466f33393115b67c43b5a986997cd63e9ea4ee092f5212542d19549a4",
  "families": {
   "BEAM": {
    "held_lines": 27,
@@ -125,6 +125,8 @@
    "recheck_bounded_m3": 0,
    "sheet": "SH04",
    "status": "PASS_HELD",
+   "t392_named_double_m3": 0.0,
+   "t392_named_gap_m3": 0.0,
    "unlined_members": [
     [
      "BAND0033",
@@ -162,6 +164,8 @@
    "recheck_bounded_m3": 0,
    "sheet": "SH02",
    "status": "PASS_HELD",
+   "t392_named_double_m3": 0.0,
+   "t392_named_gap_m3": 0.0,
    "unlined_members": []
   },
   "GF": {
@@ -169,18 +173,20 @@
    "column_boxes": 28,
    "double_m2": 0,
    "double_m3": 0,
-   "gap_m2": 0.001808,
-   "gap_m3": 0.001356,
+   "gap_m2": 0,
+   "gap_m3": 0,
    "held_members": 36,
-   "ledger_adjusted_m3": 0.178262,
+   "ledger_adjusted_m3": 0.199193,
    "not_members_na": 6,
    "pairs": {
     "OWNED": 8,
     "UNDETERMINED": 2
    },
-   "recheck_bounded_m3": 0.801008,
+   "recheck_bounded_m3": 0.559303,
    "sheet": "SH06",
    "status": "FAIL_HELD",
+   "t392_named_double_m3": 0.002767,
+   "t392_named_gap_m3": 0.005972,
    "unlined_members": []
   },
   "GROUND": {
@@ -200,6 +206,8 @@
    "recheck_bounded_m3": 0,
    "sheet": "SH08",
    "status": "PASS_HELD",
+   "t392_named_double_m3": 0.0,
+   "t392_named_gap_m3": 0.0,
    "unlined_members": [
     [
      "SITE-4df8fcd99d130701",
@@ -211,10 +219,12 @@
  "lines_json_sha256": "6b5dc44f7a5f271c21731c7fae2e5f2a8db32c0da86ac11c404ea3a1acf3b31e",
  "pair_register": {
   "CARRIED_OK": 2,
-  "GAP": 2,
+  "DOUBLE_AND_GAP_NAMED": 2,
+  "GAP_NAMED": 3,
+  "LOCATED_EXTENSION": 1,
   "OK": 5,
   "PASS_HELD": 3,
-  "RECHECK": 6,
+  "RECHECK": 2,
   "UNDETERMINED": 6
  },
  "schema": "T387_SUMMARY_V1",
