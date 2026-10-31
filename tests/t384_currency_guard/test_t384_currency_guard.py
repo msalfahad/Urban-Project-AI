@@ -4,7 +4,8 @@ Normal: quantity lines (m2, m.l, pcs, kg), identifiers such as kd3, an f-string 
 are not figures. Adverse: a figure before / after an English or Arabic dinar / fils token and a figure on a currency-named
 key are found; a NEW research / tests / docs file carrying one is refused because the classified baseline does not list
 it. Then the repository itself: no unlisted file, no FREELANCER class, the two T-380 lines are clean. The adverse
-strings are assembled at run time so this file does not itself carry a currency figure.
+strings are assembled at run time so this file does not itself carry a currency figure, and they are SYNTHETIC
+(T-386, Checker O-T384-C2): no quantity / rate pair of a real row is rebuilt here.
 """
 
 import importlib.util
@@ -30,7 +31,7 @@ AR_ABBR, AR_DINAR = "د" + ".ك", "دي" + "نار"
 
 def test_normal_quantity_lines_are_not_figures():
     text = "\n".join([
-        "FREELANCER_SHOWER = 11      # tiling labour, qty",
+        "DRAWN_SHOWERS = 6      # synthetic villa, drawn positions, qty",
         "internal plaster 1,151.14 m2 net; corners 385.375 m.l; 44.19 t; 6 pcs",
         "k1, kd = S.kink_rows(F1, l1); k3, kd3 = S.kink_rows(f3, l3, 1.20, 2.30)",
         'f"Concrete is priced at {rate} ' + KWD + '/m3"',
@@ -42,7 +43,7 @@ def test_normal_quantity_lines_are_not_figures():
 
 def test_adverse_currency_figures_are_found_on_their_lines():
     lines = [
-        "tiling labour 11 qty x 15 " + KD,
+        "labour item 7 qty x 4.25 " + KD,
         "rate 2.50 " + KWD + "/m2",
         KWD + " 2,042.50 total",
         "4,200.000 " + AR_ABBR,
@@ -61,7 +62,7 @@ def test_new_file_with_a_rate_is_refused_and_a_quantity_file_passes(tmp_path):
     (tmp_path / "research" / "agents_t999").mkdir(parents=True)
     (tmp_path / "tests" / "t999_x").mkdir(parents=True)
     (tmp_path / "docs").mkdir()
-    (tmp_path / "research" / "agents_t999" / "report.md").write_text("shower 11 qty at 15 " + KD + " each\n", "utf-8")
+    (tmp_path / "research" / "agents_t999" / "report.md").write_text("item 7 qty at 4.25 " + KD + " each\n", "utf-8")
     (tmp_path / "tests" / "t999_x" / "test_q.py").write_text("QTY_M2 = 72.01  # wet floors\n", "utf-8")
     (tmp_path / "docs" / "note.md").write_text("no figures here\n", "utf-8")
     found = G.scan_tree(str(tmp_path))
@@ -87,9 +88,19 @@ def test_repository_has_no_unlisted_currency_figure_and_no_freelancer_class():
 
 
 def test_the_t380_rate_is_gone():
-    for rel, line in (("research/agents_t380/T-380_DRAINAGE_SOURCE_CENSUS.md", 100),
-                      ("research/agents_t380/t380_alsenan.py", 143)):
+    # located by content, not by line number (T-386 rewrote the T-380 section): no currency figure in either file,
+    # and the cost-record quantity stays as a quantity
+    for rel, marker in (("research/agents_t380/T-380_DRAINAGE_SOURCE_CENSUS.md", "**Cost-record shower count 11 vs 6"),
+                        ("research/agents_t380/t380_alsenan.py", "COST_RECORD_SHOWER = 11")):
         path = os.path.join(ROOT, rel)
         assert G.scan_file(path) == []
         with open(path, encoding="utf-8") as fh:
-            assert "11" in fh.read().splitlines()[line - 1]   # the quantity stays
+            assert sum(marker in ln for ln in fh.read().splitlines()) == 1
+
+
+def test_adverse_strings_are_synthetic():
+    # O-T384-C2: the adverse cases must not pair the T-380 quantity with any figure in a currency context
+    src = open(os.path.abspath(__file__), encoding="utf-8").read()
+    q = "1" + "1 qty"                      # assembled so this line does not match itself
+    assert q + " x" not in src and q + " at" not in src
+    assert G.scan_text("labour item 7 qty x 4.25 " + KD) != []

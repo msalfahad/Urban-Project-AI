@@ -10,8 +10,11 @@ SAN = Drive 'Alsenan chalet project' / sanitary-7757.pdf: p1 GROUND, p2 FIRST, p
 ARCH = Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55..): layers 0-6, ARNOTE, CC, D,
   DEFPOINTS, LEVEL, S-COL.BON, ST, TE, TEXT, TOI (empty), W, stamp; no pipe, tank, pump, heater or drainage text or
   block in modelspace or any of the 442 block definitions (only 'mecvent' = mechanical ventilation, T-370).
-FREELANCER = Drive 'Alsenan chalet project' / 'Alsenan Chalet_by_category.xlsx' (a cost record) and
-  'الارضيات+العازل+الديكور+الرخام (1).xlsx' (the measured finishes workbook), read through the Drive connector.
+COST RECORD = Drive 'Alsenan chalet project' / 'Alsenan Chalet_by_category.xlsx': Urban Projects' own 'Cost By
+  Category' record (OWNER COST RECORD, T-225 S4; register rows tests/alsenan/registers_b1/WEB_APP_ROWS.json), NOT the
+  freelancer's (correction T-386, Checker O-T384-C1).
+FREELANCER = Drive 'Alsenan chalet project' / 'الارضيات+العازل+الديكور+الرخام (1).xlsx' (his measured finishes workbook);
+  both read through the Drive connector.
 """
 
 from __future__ import annotations
@@ -129,9 +132,11 @@ RWP_LEVEL_INDICATORS = {
 # RWD 5 (separate population). Listed so B12-02 shows every connection end it would need.
 T370_ENDS = {"FLOOR_DRAIN": 19, "ROOF_DRAIN": 5, "WC": 12, "BASIN": 17, "SHOWER": 6, "UNKNOWN_VALVE": 1}
 
-# ---- freelancer side --------------------------------------------------------------------------------------------
-# 'Alsenan Chalet_by_category.xlsx', category 'بند صحي' (sanitary), in workbook order; and the tiling labour rows.
-FREELANCER_SANITARY = [
+# ---- benchmark side -----------------------------------------------------------------------------------------------
+# URBAN COST RECORD (not the freelancer: T-386): 'Alsenan Chalet_by_category.xlsx', category 'بند صحي' (sanitary), in
+# record order = register rows WEB-055 .. WEB-060, each NO_FREELANCER_ITEM or LUMP_SUM with no freelancer source cell.
+# The freelancer's workbooks carry no sanitary / drainage / tank / shower row: no freelancer comparison exists here.
+COST_RECORD_SANITARY = [
     ("sanitary materials", "1 item (lump sum)", "NOT COMPARABLE: no quantity basis"),
     ("'system' item (unit not defined)", "1 item", "NOT IN THE DRAWING: no water heater / booster printed"),
     ("water tanks", "2 qty", "NOT IN THE DRAWING as a count: one 'WATER TANK PLACE' panel is printed (ST p.6, T-221), the number of tanks is not: UNRESOLVED, HELD"),
@@ -140,8 +145,13 @@ FREELANCER_SANITARY = [
                             "UNRESOLVED, +1 not explained by the drawings"),
     ("plumber labour", "1 item (lump sum)", "NOT COMPARABLE"),
 ]
-FREELANCER_SHOWER = 11      # tiling labour 'شاور', qty (his rate is not copied: private workbook)
-# His own measured wet-room table (finishes workbook, waterproofing sheet, wet floors 72.01 m2): rows by label
+# Cost-record tiling-labour row 'شاور' (WEB-018, NO_FREELANCER_ITEM): a labour count of undefined unit, compared with
+# the 6 drawn showers as UNRESOLVED scope, never as an engine residual (ERS s.2.4). Quantity only, no rate.
+COST_RECORD_SHOWER = 11
+COST_RECORD_SHOWER_SOURCE = {"register_id": "WEB-018", "source_class": "URBAN_COST_RECORD",
+                             "mapping_class": "NO_FREELANCER_ITEM", "comparison": "UNRESOLVED_SCOPE"}
+FREELANCER_SHOWER = COST_RECORD_SHOWER   # old name kept only so the merged t380 test runs unchanged; NOT his figure
+# The freelancer's own measured wet-room table (finishes workbook, waterproofing sheet, wet floors 72.01 m2): rows by label
 FREELANCER_WET_ROWS = {"GF": {"bath (حمامات / حمام)": 6, "wash (مغسله)": 3, "kitchen": 1},
                        "1F": {"bath (حمام)": 5, "laundry": 1}, "2F": {"bath (حمام)": 1}}
 

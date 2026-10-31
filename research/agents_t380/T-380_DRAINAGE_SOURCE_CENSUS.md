@@ -1,4 +1,4 @@
-# T-380 B12-02 drainage / water-supply source census, and the freelancer's shower residual
+# T-380 B12-02 drainage / water-supply source census, and the cost-record shower count (UNRESOLVED scope)
 
 Worker 2, 2026-10-30. Lane A, research files only (`research/agents_t380/`, `tests/t380_drainage_census/`). No engine
 file, rule version, candidate line or family-master file changes. Statuses per WORKFLOW_CONTROLS s.5: every count below
@@ -83,45 +83,62 @@ every length is HELD (missing, never 0).
   (4) water-supply layout, tank(s), heater; (5) is the GF untagged circle at SS-B the foot of the 1F 'SSø4"T/B' (T/B
   printed above), and the 1F terrace RWD pipe the top of the GF 'RWPø4F/A' (F/A printed below)?
 
-## 5. Freelancer comparison and the shower residual (acceptance c)
+## 5. Benchmark comparison and the cost-record shower count (acceptance c)
 
-The freelancer gives **no pipe length** on either workbook: B12-02 m.l is NOT COMPARABLE (his sanitary is a lump sum).
-'Alsenan Chalet_by_category.xlsx', category sanitary, in workbook order:
+Provenance correction (T-386, 2026-10-31; Checker O-T384-C1). Every figure in this section was first written as "the
+freelancer's". It is not: 'Alsenan Chalet_by_category.xlsx' is Urban Projects' own 'Cost By Category' record (OWNER
+COST RECORD, T-225 S4; the same record as the web-app report hashed WEB, kind WEB_APP_COMMERCIAL_REPORT, in
+tests/alsenan/registers_b1/BENCHMARK_SOURCE_MANIFEST.json). The six sanitary rows below are register rows WEB-055 ..
+WEB-060 and the shower row is WEB-018 of tests/alsenan/registers_b1/WEB_APP_ROWS.json, in the same order; every one is
+mapped NO_FREELANCER_ITEM or LUMP_SUM with no freelancer source cell. The freelancer's six manual-QS workbooks
+(FREELANCER_RAW_ROWS.json, 885 rows) carry no sanitary, drainage, tank or shower row (T-386 search; T-369 found no
+shower, tray or tanking row in his finishes workbook). So B12-01 / B12-02 have **no freelancer comparison on Alsenan**;
+the rows below compare the drawings with the owner's own cost record, which is evidence to reconcile, never proof and
+never a residual of the engine (ERS s.2.4). Quantities only; no rate of any source is quoted here.
 
-| Freelancer row | Freelancer | Drawing reading | Verdict proposal |
+Pipe length: neither the freelancer workbooks nor the cost record gives one: B12-02 m.l is NOT COMPARABLE. Cost record,
+category sanitary, in record order:
+
+| Cost-record row (register id) | Cost record | Drawing reading | Verdict proposal |
 |---|---|---|---|
-| sanitary materials | 1 item (lump sum) | - | NOT COMPARABLE |
-| 'system' item | 1 item | no heater / booster printed | NOT IN THE DRAWING (UNRESOLVED scope) |
-| water tanks | 2 qty | one 'WATER TANK PLACE' panel printed (ST p.6, T-221 s.5); no tank count, capacity or type on any sheet | UNRESOLVED: NOT IN THE DRAWING as a count; HELD |
-| pit pump | 1 qty | sump pump = legend only | NOT IN THE DRAWING |
-| pit covers | 2 qty | 1 inspection chamber MH-1; no pit (soak-away / septic) printed | UNRESOLVED: +1 cover not explained by the drawings; MH-1 = 1 pcs DRAWING-CONFIRMED |
-| plumber labour | 1 item (lump sum) | - | NOT COMPARABLE |
+| sanitary materials (WEB-055) | 1 item (lump sum) | - | NOT COMPARABLE |
+| 'system' item (WEB-056) | 1 item | no heater / booster printed | NOT IN THE DRAWING (UNRESOLVED scope) |
+| water tanks (WEB-057) | 2 qty | one 'WATER TANK PLACE' panel printed (ST p.6, T-221 s.5); no tank count, capacity or type on any sheet | UNRESOLVED: NOT IN THE DRAWING as a count; HELD |
+| pit pump (WEB-058) | 1 qty | sump pump = legend only | NOT IN THE DRAWING |
+| pit covers (WEB-059) | 2 qty | 1 inspection chamber MH-1; no pit (soak-away / septic) printed | UNRESOLVED: +1 cover not explained by the drawings; MH-1 = 1 pcs DRAWING-CONFIRMED |
+| plumber labour (WEB-060) | 1 item (lump sum) | - | NOT COMPARABLE |
 
-**Shower 11 vs 6.** The 11 is the tiling-labour row 'شاور' (11 qty; his rate is private workbook content and is not copied here), unit undefined. Each population the
-drawings or his own workbooks print, tested in units:
+**Cost-record shower count 11 vs 6 drawn: UNRESOLVED scope, not a residual.** The 11 is the cost record's tiling-labour
+row 'شاور' (WEB-018, 11 qty, unit undefined, NO_FREELANCER_ITEM); the drawings show 6 shower positions (3 tray + 3
+screened walk-in; T-369 / T-370 MERGED, DRAWING-CONFIRMED). It is not an engine-vs-freelancer difference: the freelancer
+has no shower row. It is a figure of undefined basis (a labour count, not a measured quantity), so it is compared as
+scope, and its "difference" is not an error of either side. Each population the drawings or the freelancer's own
+workbook print, tested in units for a physical reading of the 11:
 
 | Population | pcs | = 11? |
 |---|---|---|
 | drawn shower positions (3 tray + 3 screened walk-in; T-369 / T-370) | 6 | no (-5) |
 | + the UNKNOWN valve in GF W.C 1C8 | 7 | no (-4) |
 | WC rooms on the drawings (GF 6 / 1F 5 / 2F 1) | 12 | no (+1) |
-| bath rows in his own wet-room table ('الارضيات+العازل+الديكور+الرخام (1).xlsx', waterproofing sheet: GF 4 + 2, 1F 5, 2F 1; plus 3 wash, 1 kitchen, 1 laundry rows) | 12 | no (+1) |
+| bath rows in the freelancer's wet-room table ('الارضيات+العازل+الديكور+الرخام (1).xlsx', waterproofing sheet: GF 4 + 2, 1F 5, 2F 1; plus 3 wash, 1 kitchen, 1 laundry rows) | 12 | no (+1) |
 | 4in floor drains / all floor drains (T-370) | 14 / 19 | no |
 | GF + 1F WC rooms | 11 | yes, the only match: excludes the 2F W.C 12B6, which HAS a screened shower: physically inconsistent with "a shower per bathroom" |
 
-Verdict proposal: **UNRESOLVED**. No drawn population equals 11 by a physical cause; the nearest physical reading
-("a shower floor per bathroom") gives 12, and the one arithmetic match drops a room that the drawings show with a shower.
-What is missing: the freelancer's definition of the 'شاور' labour item (per shower floor zone, per mixer point, per
-bathroom) and his room list for it; his wet-room table carries no shower row. No quantity depends on it: B12-01 showers =
-6 DRAWING-CONFIRMED (T-370 / T-369 MERGED), B8-04 shower floor extra 0.000 m2 (Q-40 A). Not an owner question (ERS s.2.7:
-a freelancer count is reconciled, never adopted; nothing is blocked).
+Verdict proposal: **UNRESOLVED scope** (not ENGINE_RIGHT / FREELANCER_RIGHT: there is no freelancer figure). No drawn
+population equals 11 by a physical cause; the nearest physical reading ("a shower floor per bathroom") gives 12, and the
+one arithmetic match drops a room that the drawings show with a shower. What is missing: what the cost record's 'شاور'
+labour item counts (per shower floor zone, per mixer point, per bathroom) and its room list; only the owner's own record
+can say, and nothing waits on it. No quantity depends on it: B12-01 showers = 6 DRAWING-CONFIRMED (T-370 / T-369
+MERGED), B8-04 shower floor extra 0.000 m2 (Q-40 A). Not an owner question (ERS s.2.7: a benchmark count is reconciled,
+never adopted; nothing is blocked).
 
 ## 6. Open / HELD
 
 - Every B12-02 length (8 run groups): HELD until a dimensioned layout / invert levels exist; water supply HELD.
 - MH-1 size unit; branch diameters; SS-B / RWP-TER one-sided links (designer confirmation only if a line needs it).
 - Water tanks: number / capacity / type printed nowhere (a tank place is: ST p.6); RFI candidate (4) covers it.
-- Pool drainage / backwash: printed nowhere on the sanitary sheets (the pool is a freelancer lump sum).
+- Pool drainage / backwash: printed nowhere on the sanitary sheets (the cost record carries the pool as one
+  subcontract lump sum, WEB-072; the freelancer's pool sheet is concrete only).
 
 ## 7. Rule and lessons-register row (ERS s.4, s.7)
 
