@@ -204,3 +204,42 @@ and shutters 6 pcs: no row (**HAND_FOUND**, an omission on his side and in V2.9)
   face.
 
 | 2026-10-31 | the candidate had no formwork and no guard / shutter line for nine days after both ledgers were Checker-merged (missing category on both sides, freelancer included) | the derived trade (formwork) was built against ledger revisions (r3 .. r5) and re-bound by research tasks, but no package wired a line family for it, and the railing census had no line home except the per-flight blank lines | book a derived trade as its own line family beside the member line it derives from, consuming the Checker-merged binding table unchanged and re-checking every bound member line on the candidate (a moved member stops the build); a census with no line home gets its own item code, never a relabelled one (PROJECT-INDEPENDENT) | tests/t199_formwork_metalwork (normal: villa V199 formwork 18.300 / 4.150 m2, railings 5.500 / 3.089, 2 pcs; adverse: stale binding, E as a line, OQ-10 valued, held as 0, S1, face twice, plan length relabelled, per-flight figure beside the runs) | PROPOSED |
+
+## 10. r2 (Checker REJECTED r1 2026-10-31 02:58, gate f + Gate B regression): registry and guards only
+
+NEEDS (a) / (b) / (c) of the r1 verdict, nothing else. No engine, tool or input file changed since r1 (`git diff --stat
+ef92923c HEAD`: registry 1.25.0 and its builder, RULES_MANIFEST sha by the tool, tests, maps by the tool); no run reads
+1.25.0 (rule_store reads 1.0.0, coverage_census_v2 1.1.0), so the 3,962 V3.0.29 + 661 added lines are byte-identical to
+r1 (V3_0_30 json f90e8a66 / csv c8fd70f2) by construction.
+
+(a) BOQ_FAMILY_MASTER_1.25.0 (builder FAMILY_MOVES, PROPOSED, the Checker confirms with the merge):
+
+| Family | Item code now owned | Capability 1.24.0 -> 1.25.0 | Evidence (file:line, resolves) |
+|---|---|---|---|
+| B10-13 Formwork (all elements) | STR.FORMWORK | IMPLEMENTED_NOT_INTEGRATED (unchanged) | arch_v3030.py:80 FW_CODE, :352 fw_line(); test_arch_v3030.py:147 / :160 |
+| B7-13 Stair formwork | STR.FORMWORK.STAIR | NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED | arch_v3030.py:80 FW_STAIR_CODE, :335 _fw_code(); test :147 / :302 |
+| B6-05 Shutters | ARCH.SHUTTER | NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED | arch_v3030.py:464 shutter_lines(); test :198 / :337 |
+| B7-10 Wall-mounted handrail | FIN.HANDRAIL (already) | NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED | arch_v3030.py:95 RAIL_KIND, :431 rail_line(); test :405 (new, V199 4.089 lm) |
+
+IMPLEMENTED_NOT_INTEGRATED is the registry's definition of this case (tested code, read only by an opt-in method;
+released_method_reads stays "none"). Name terms dropped on the moved families. Candidate blocks, in_v3_0_candidate,
+development-villa figures unchanged (a pending package raises no candidate state; FMC check clean). Counts: NOT_IMPLEMENTED
+18 -> 15, IMPLEMENTED_NOT_INTEGRATED 13 -> 16; RAISED 33 -> 36. B7-13 is moved too because STR.FORMWORK.STAIR is the stair
+formwork family's own code (module docstring line 8); leaving it NOT_IMPLEMENTED while it owns a written code fails the guard.
+
+(b) Guards: tests/t199_formwork_metalwork/test_family_master_1_25_0.py runs both t130 live-code guards at FULL strength on
+1.25.0 (same helper functions, no exemption) + 8 of the 1.1.0 file checks (test_v3_0_field not carried: it already fails
+on 1.24.0 for B7-14), adverse: ARCH.SHUTTER unowned refused, B7-10 back to NOT_IMPLEMENTED refused, a 'shutter' name term
+hits shutter_lines(). The two 1.1.0 live-code checks are pinned to the 1.1.0 era: they exempt only codes 1.1.0 never mapped
+that the governing (newest) registry owns in an implemented family, and only 1.1.0 NOT_IMPLEMENTED families the governing
+registry moved with resolving file:line evidence, and only while the governing registry passes both guards itself (else
+AssertionError); new adverse test: an unowned code is never exempt, a governor moved back exempts nothing. Not deleted, the
+1.1.0 file-only checks untouched.
+
+(c) L4 and maps: see the READY handoff (full suite on the r2 head vs research/agents_t202/known_failures.json); freeze 0;
+codemap built by the tool, stale none.
+
+Finding F-T199-4 (Lead, register owner; not changed here): the guard's code scan covers only STR / FIN / ARCH / MAS / DOOR
+prefixes, so MET.RAILING.GUARD (roof / floor-edge guards, written by arch_v3030.py:82) is owned by no family and unscanned;
+no family of the 99 fits it exactly (B7-09 is the stair guardrail). A registry change that names its family and widens the
+scan to MET. is proposed for the Lead.
