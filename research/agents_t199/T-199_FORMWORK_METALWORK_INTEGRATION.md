@@ -243,3 +243,35 @@ Finding F-T199-4 (Lead, register owner; not changed here): the guard's code scan
 prefixes, so MET.RAILING.GUARD (roof / floor-edge guards, written by arch_v3030.py:82) is owned by no family and unscanned;
 no family of the 99 fits it exactly (B7-09 is the stair guardrail). A registry change that names its family and widens the
 scan to MET. is proposed for the Lead.
+
+## 11. r3 (Checker REJECTED r2 2026-10-31 04:02, gate f: MET.RAILING.GUARD owned by nothing, outside the scan)
+
+NEEDS (1) - (3) of the r2 verdict, nothing else. Registry, its builder, RULES_MANIFEST sha (by the tool) and the 1.25.0
+test only: no file under engine/, tools/ or the inputs changed, no code renamed, so the 3,962 V3.0.29 + 661 added lines stay
+byte-identical to r1 / r2 (V3_0_30 json f90e8a66 / csv c8fd70f2) by construction. The 1.1.0 test file is not edited.
+
+(1) Physical element first (ERS s.2.1). MET.RAILING.GUARD is written for the T-164 run kinds ROOF_GUARD, BALCONY_GUARD,
+FLOOR_EDGE_GUARD and FENCE_RAILING (arch_v3030.py:95 RAIL_KIND): a guard rail on an open edge OUTSIDE a stair, measured in lm
+on its installed path (21.550 lm on the development villa, RL-01 / RL-06 Checker-verified). Family fit, checked against all 99:
+B7-09 "Open-edge guardrail" is group B7 Stairs, Arabic name "stair balustrade", owner of FIN.RAILING per flight side: putting
+roof / fence guards there would count them as stair rails in the coverage census (scope mix, a double home for RL-05 / RL-07 /
+RL-08 already flagged in F-T199-1). B7-10 is the wall handrail, B13-07 canopies / pergolas (kg / m2, BLOCKED_BY_SOURCE). No
+family fits. A 100th family changes the fixed 99-family list every registry version carries (the t130 count check asserts 99,
+and capability_1_0_0 has no 1.0.0 history for it): that is a register-owner decision. So 1.25.0 lists MET.RAILING.GUARD under
+item_codes_without_family with that reason (citations resolve: arch_v3030.py:82 RAIL_GUARD, :95 RAIL_KIND); it is owned by no
+family and therefore never counted as a stair railing. F-T199-4 stays open for the Lead: a guard-railing family (B13-08 or
+B7-xx by the register owner) would take the code over from the list in a later version.
+
+(2) Guard: test_family_master_1_25_0.py scans STR / FIN / ARCH / MAS / DOOR / MET (same files and helper functions as
+t130; its scan is a superset of the 1.1.0 scan, asserted). New: every UPPER.UPPER literal of arch_v3030.py must fall in a
+scanned prefix (a package cannot open an unscanned prefix again). Adverse: a MET.* code no family owns is refused (and the
+1.1.0 scan is shown to miss it), removing MET.RAILING.GUARD from the list is refused, an XYZ.* literal in the module is
+refused. A wider "any UPPER.UPPER" global scan was tried and NOT adopted: on the working head it hits strings that are not
+item codes (unit labels CU.M, level labels G.F / F.F, header keys, completeness keys CONCRETE.OTHER / MASONRY.*) and item
+codes of already-merged packages outside this task (EXT.* by arch_v3025.py, WP.FOUNDATION.* by arch_v3015.py, FLOOR.* by
+arch_v3014.py): finding F-T199-5 for the Lead (registry ownership of those codes), not widened here.
+
+(3) Validation: see the READY handoff (L4 on the r3 head vs research/agents_t202/known_failures.json, freeze, maps).
+
+Lesson (proposed, ERS s.7): a guard that scans a fixed prefix list is only as strong as the prefixes; a package that adds a
+new item-code prefix must extend the scan in the same version and prove its own module has no literal outside it.

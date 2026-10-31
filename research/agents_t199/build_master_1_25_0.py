@@ -116,6 +116,27 @@ FAMILY_MOVES = {
 }
 
 
+# r3 (Checker 2026-10-31 04:02, T-199 REJECTED r2, gate f): the guard scan saw STR / FIN / ARCH / MAS / DOOR only, so
+# MET.RAILING.GUARD (written by arch_v3030.py) was owned by nothing and unscanned. Physical element: a guard rail on an
+# open edge OUTSIDE a stair (roof / floor edge on the drawn parapet band, balcony, fence; RAIL_KIND ROOF_GUARD /
+# BALCONY_GUARD / FLOOR_EDGE_GUARD / FENCE_RAILING). No family of the 99 is that element: B7-09 is the STAIR open-edge
+# guardrail (group B7 Stairs, item_ar 'stair balustrade', FIN.RAILING per flight side), B7-10 the wall handrail, B13-07
+# canopies / pergolas (kg / m2). Putting the guards in B7-09 would count roof / fence rails as stair rails in the
+# census (a scope mix), and a 100th family changes the fixed 99-family list every version carries (sum == 99, 1.0.0
+# history), which is the register owner's (Lead's) call. So 1.25.0 lists the code under item_codes_without_family
+# WITH its reason (the registry's own mechanism) and the 1.25.0 guard scans MET. too; the new-family proposal stays a
+# finding (F-T199-4). No line, code or quantity changes (no rename: the 661 added lines stay byte-identical).
+APART_ADD = {
+    "MET.RAILING.GUARD": (
+        f"{V3030}:82 RAIL_GUARD: the guard rail on an open edge outside a stair (roof / floor edge on the drawn parapet "
+        f"band, balcony, fence; {V3030}:95 RAIL_KIND ROOF_GUARD / BALCONY_GUARD / FLOOR_EDGE_GUARD / FENCE_RAILING), lm "
+        "on its installed path, written only by the opt-in ARCH_TAKEOFF_V3.0.30 (pending Gate B, T-199); no family of "
+        "the 99 is this element: B7-09 is the stair open-edge guardrail (FIN.RAILING per flight side, group B7 Stairs), "
+        "B7-10 the wall handrail, B13-07 canopies / pergolas; a new guard-railing family is proposed to the register "
+        "owner (T-199 finding F-T199-4), until then the code is listed here and never counted as a stair railing"),
+}
+
+
 def _move(fam, mv, states):
     for k in ("item_codes", "implementation", "opt_in_readers", "missing", "note"):
         if k in mv:
@@ -158,6 +179,14 @@ def build(task_commit):
     new["item_code_scan"] += (" | from 1.25.0 the same two guards run at full strength against this registry in "
                               "tests/t199_formwork_metalwork/test_family_master_1_25_0.py; the 1.1.0 checks exempt only "
                               "what the governing (newest) registry owns or moved, and only while it passes them")
+    assert not set(APART_ADD) & set(new["item_codes_without_family"])
+    new["item_codes_without_family"] = dict(new["item_codes_without_family"], **APART_ADD)
+    new["source"] += (" | r3 (Checker 2026-10-31 04:02): MET.RAILING.GUARD (non-stair guard rails, written by V3.0.30) "
+                      "is listed under item_codes_without_family with its reason (no family of the 99 is that element; "
+                      "a new family is proposed to the register owner, F-T199-4); no family, line or quantity changes")
+    new["item_code_scan"] += (" | r3: the 1.25.0 guard scans the MET. prefix too, and every UPPER.UPPER code literal "
+                              "of the V3.0.30 module must fall in a scanned prefix (a package cannot open an unscanned "
+                              "prefix again)")
     return new
 
 

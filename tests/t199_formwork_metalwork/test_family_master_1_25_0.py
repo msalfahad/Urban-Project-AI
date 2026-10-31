@@ -41,9 +41,14 @@ def test_1_25_0_equals_its_builder_and_copies_1_24_0(docs):
     assert new["version"] == "1.25.0" and old["version"] == "1.24.0"
     for k in old:
         if k not in ("version", "supersedes", "source", "pending_packages", "families", "capability_counts",
-                     "capability_change_counts", "item_code_scan"):
+                     "capability_change_counts", "item_code_scan", "item_codes_without_family"):
             assert new[k] == old[k], k
     assert new["item_code_scan"].startswith(old["item_code_scan"])
+    # r3: exactly one code added apart (MET.RAILING.GUARD, with its reason); every 1.24.0 entry kept as it was
+    assert {k: v for k, v in new["item_codes_without_family"].items() if k in old["item_codes_without_family"]} \
+        == old["item_codes_without_family"]
+    assert set(new["item_codes_without_family"]) - set(old["item_codes_without_family"]) == set(B.APART_ADD) \
+        == {"MET.RAILING.GUARD"}
     assert new["pending_packages"][:-1] == old["pending_packages"]      # T-231 .. T-327 kept as they were
     assert set(new) == set(old)
     # r2: only the four families the guard needs move, and only in the fields a capability move touches
@@ -116,13 +121,46 @@ FILE_CHECKS = ("test_status_vocabulary_and_change_direction", "test_every_file_l
                "test_the_counts_in_the_file_equal_the_families")
 
 
+# r3 (Checker 2026-10-31 04:02, gate f): the 1.1.0-era scan (T130.CODE) sees STR / FIN / ARCH / MAS / DOOR only, so a
+# package that opens a new prefix (MET.RAILING.GUARD) escapes it. The 1.25.0 guard scans MET. too (same files, same
+# helpers), and every UPPER.UPPER code literal of the V3.0.30 module must fall inside the scanned prefixes.
+import re  # noqa: E402
+
+SCAN_1_25 = ("STR", "FIN", "ARCH", "MAS", "DOOR", "MET")
+CODE_1_25 = re.compile(r"\"((?:" + "|".join(SCAN_1_25) + r")\.[A-Z0-9_.]*[A-Z0-9_])\"")
+ANY_CODE = re.compile(r"\"([A-Z][A-Z0-9]*\.[A-Z0-9_.]*[A-Z0-9_])\"")       # any UPPER.UPPER literal
+V3030 = ROOT / "engine/source/arch_v3030.py"
+
+
+def _written_1_25(extra=None):
+    """T130._written_codes() with the 1.25.0 prefixes: {code: first file that writes it}; extra = {path: text} adds
+    synthetic module texts (adverse cases)"""
+    files = [p for p in sorted((ROOT / "engine/source").rglob("*.py"))
+             if p.relative_to(ROOT).as_posix() not in T130.DECLARED_ONLY] + [ROOT / "tools/urban_boq_m9.py"]
+    texts = [(p.relative_to(ROOT).as_posix(), p.read_text(encoding="utf-8")) for p in files] + list((extra or {}).items())
+    out = {}
+    for path, text in texts:
+        for c in CODE_1_25.findall(text):
+            out.setdefault(c, path)
+    return out
+
+
+def _unscanned_prefix_codes(text):
+    """the UPPER.UPPER literals of a module text that the 1.25.0 scan does not see"""
+    return sorted(set(ANY_CODE.findall(text)) - set(CODE_1_25.findall(text)))
+
+
 def test_1_25_0_every_written_item_code_belongs_to_one_family_full_strength(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert not set(own) & set(apart)
+    written = _written_1_25()
+    assert written["MET.RAILING.GUARD"] == "engine/source/arch_v3030.py"           # the r2 gap is now scanned
+    assert set(T130._written_codes()) <= set(written)                              # 1.25.0 scan >= the 1.1.0 scan
+    assert T130._unowned_written(new, written) == {}
     assert T130._unowned_written(new) == {}
     from engine.source import boq_line as BL
-    assert set(own) | set(apart) <= set(T130._written_codes()) | set(BL.ITEMS)
+    assert set(own) | set(apart) <= set(written) | set(BL.ITEMS)
     assert {c: own[c] for c in ("STR.FORMWORK", "STR.FORMWORK.STAIR", "ARCH.SHUTTER", "FIN.HANDRAIL", "FIN.RAILING")} \
         == {"STR.FORMWORK": "B10-13", "STR.FORMWORK.STAIR": "B7-13", "ARCH.SHUTTER": "B6-05", "FIN.HANDRAIL": "B7-10",
             "FIN.RAILING": "B7-09"}
@@ -131,6 +169,7 @@ def test_1_25_0_every_written_item_code_belongs_to_one_family_full_strength(docs
 def test_1_25_0_no_not_implemented_family_has_a_module_full_strength(docs):
     _, new = docs
     assert T130._not_implemented_hits(new) == []
+    assert T130._not_implemented_hits(new, _written_1_25()) == []
     fam = {f["code"]: f for f in new["families"]}
     for c in ("B7-13", "B6-05", "B7-10"):
         assert fam[c]["capability"] == "IMPLEMENTED_NOT_INTEGRATED" and fam[c]["capability_change"] == "RAISED", c
@@ -183,3 +222,46 @@ def test_adverse_a_not_implemented_name_term_is_refused(docs):
             f["capability"], f["item_codes"], f["name_terms"] = "NOT_IMPLEMENTED", [], ["shutter"]
     hits = T130._not_implemented_hits(bad)
     assert ("B6-05", "shutter", "shutter_lines", "engine/source/arch_v3030.py") in hits
+
+
+# ------------------------------------------------------------------ r3: MET.RAILING.GUARD and the prefix gap
+def test_1_25_0_the_v3030_module_writes_no_code_outside_the_scanned_prefixes():
+    """normal: every UPPER.UPPER literal arch_v3030.py carries is seen by the 1.25.0 scan (MET. included)"""
+    text = V3030.read_text(encoding="utf-8")
+    assert "MET.RAILING.GUARD" in CODE_1_25.findall(text)
+    assert _unscanned_prefix_codes(text) == []
+
+
+def test_1_25_0_lists_the_guard_rail_code_apart_with_its_reason_and_no_family_owns_it(docs):
+    _, new = docs
+    reason = new["item_codes_without_family"]["MET.RAILING.GUARD"]
+    assert "engine/source/arch_v3030.py:82 RAIL_GUARD" in reason and "B7-09" in reason and "F-T199-4" in reason
+    assert "MET.RAILING.GUARD" not in T130._owners(new)                           # never counted as a stair railing
+    assert T130._owners(new)["FIN.RAILING"] == "B7-09"
+    from engine.source import arch_v3030 as A
+    guard_kinds = sorted(k for k, c in A.RAIL_KIND.items() if c == "MET.RAILING.GUARD")
+    assert guard_kinds == ["BALCONY_GUARD", "FENCE_RAILING", "FLOOR_EDGE_GUARD", "ROOF_GUARD"]
+    assert all(not k.startswith("STAIR") for k in guard_kinds)                    # the element is a non-stair guard
+
+
+def test_adverse_a_met_code_no_family_owns_is_refused(docs):
+    """adverse: a MET.* code in no family and not listed apart is refused by the 1.25.0 scan (the 1.1.0 scan misses
+    it: that is the gap r2 had)"""
+    _, new = docs
+    syn = {"engine/source/synthetic_met.py": 'L = {"item_code": "MET.NO_FAMILY_X", "unit": "lm"}\n'}
+    written = _written_1_25(syn)
+    assert T130._unowned_written(new, written) == {"MET.NO_FAMILY_X": "engine/source/synthetic_met.py"}
+    assert "MET.NO_FAMILY_X" not in T130.CODE.findall(syn["engine/source/synthetic_met.py"])
+
+
+def test_adverse_dropping_the_guard_rail_code_from_the_list_is_refused(docs):
+    _, new = docs
+    bad = copy.deepcopy(new)
+    del bad["item_codes_without_family"]["MET.RAILING.GUARD"]
+    assert T130._unowned_written(bad, _written_1_25()) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
+    assert T130._unowned_written(bad) == {}                                       # the narrow scan would let it pass
+
+
+def test_adverse_a_new_unscanned_prefix_in_the_module_is_refused():
+    text = V3030.read_text(encoding="utf-8") + '\nX = "XYZ.NEW_PREFIX_CODE"\n'
+    assert _unscanned_prefix_codes(text) == ["XYZ.NEW_PREFIX_CODE"]
