@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T09:50Z | Verifier | STARTED | run session_01E6cPnd8Cv3SqexS1D3CvSY | repo-attached routine | task state: READY none (T-328, T-385 r2 CLAIMED) | self-check pending
 - 2026-10-31T09:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31T09:01Z | Worker 3 | STARTED | run session_01E6cPnc1vcUJogfo64xkX62 | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31T09:01Z | Verifier | SUCCESS | T-389 Gate A PASS MERGED ca1d4278 (engine push) | T-389 (gate 0, T-370 provenance relabel): cost-record rows WEB-018 / -019 / -055 / -060 confirmed on the register (no freelancer source cell); own scan of the 885 freelancer rows finds no fixture / drain count (8 wash-room area rows only): B12-01 freelancer NOT COMPARABLE; guard 0 hits, baseline empty; removed agreement-as-proof test replaced by stronger drawn pins + adverse case. Own visual re-measure of sanitary-7757.pdf: FD 19 (GF 11, 1F 7, 2F 1), RWD 5 = T-370, no quantity change. Scoreboard restated (no cell move); owner session (1) floor-area row already restated; RFI evidence register stays parked; T-180 slot unused (no CLOSABLE NOW line); no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
