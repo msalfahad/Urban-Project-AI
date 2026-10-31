@@ -1,0 +1,112 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.32 (the V3.0.21 concrete lines of research/agents_t332 carried byte-identical through V3.0.32; checked by the module against the reproduced V3.0.32: a stale binding stops)",
+ "lines": {
+  "L-1dc713c83bf62e525ff2": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-291ba2ddf4bbe4f14cf7": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-41cfb82ed733f4d6e3a5": {
+   "element_id": "U-C:GROUND_SLAB:GROUND:SITE-c1089bdb4cfcdc4a",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.GROUND_SLAB"
+  },
+  "L-43dae3d6dfec957b26a8": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-4aed92c117a7ab1c90ee": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-4c4496579e5bfa20ae9f": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-755eb56b55e86301b488": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-7c1a1da8004c4272ccba": {
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-040#BAND0039",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM"
+  },
+  "L-831f6fe3de133294bb8f": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-85809d3db52bb93dfe96": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-8de64040a1c3ae6cf137": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-8f8ad257d9b2cb9e027f": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-9270e8b8860414386adb": {
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-042#BAND0041.2",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM"
+  },
+  "L-9a55aadc9f0880ae37a7": {
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-003#BAND0003",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM"
+  },
+  "L-9cb26d86575a92694880": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-a87ea657a42a311cb851": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-c677b628a776d3b87b02": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-cbf53752cfd897c35c2c": {
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-006#BAND0006",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM"
+  },
+  "L-cc702b8541c15fdfd98c": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  },
+  "L-e112e2add2f8979a6c39": {
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN"
+  }
+ },
+ "note": "column element ids are omitted (they carry drawing positions); the line id is a hash over the element",
+ "schema": "T397_BINDING_V1"
+}
