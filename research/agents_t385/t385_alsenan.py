@@ -203,9 +203,10 @@ COMPONENTS = [
      "DIMENSION", "drawn D outline 3.50 x 1.75 + pi 1.75^2 / 2 = 10.935564 m2 x 0.40 = 4.374226 ; freelancer a rounded "
      "area x 0.40", "ENGINE_RIGHT", "ST p.7; Q-26 A"),
     ("PL-WALLS", "CONC.POOL", "pool walls", lambda ln: code(ln) == "POOL" and eid(ln).endswith(":WALLS") and not is_na(ln), (7, [12]),
-     "DEPTH", "engine wall band 2.356726 m2 x 1.20 (rim to the base top, the wall foot measured once in the base) = "
-     "2.828071; freelancer a length x 0.20 x a height taken from the base bottom: height (the "
-     "base counted again in the wall) and plan length; split in the private table", "ENGINE_RIGHT", "ST p.7; R-POOL-4 r2; Q-26 A"),
+     "DEPTH", "engine wall band 2.356726 m2 x 1.20 (rim +0.30 to the base top -0.90, the wall foot measured once in the "
+     "base) = 2.828071; freelancer one run length x 0.20 x one height: split in m3 by SPLITS (base thickness 0.40 "
+     "counted again in his height; his run length over the drawn band's mean length) and the rest of his height, "
+     "which no drawn level traces, printed as untraced", "ENGINE_RIGHT", "ST p.7; R-POOL-4 r2; Q-26 A; T-385 r2"),
     ("PL-STEPS", "CONC.POOL", "pool steps", lambda ln: code(ln) == "POOL" and eid(ln).endswith(":STEPS"), (7, [14]),
      "HELD_ITEM", "not drawn: consultant item (owner 2026-10-22 16:45); freelancer one row", "HELD", "T-183"),
     ("PL-PUMP", "CONC.POOL", "pump room walls and floor", lambda ln: code(ln) == "POOL" and is_na(ln), (7, [13, 15]),
@@ -217,6 +218,30 @@ COMPONENTS = [
      "engine 4 HELD blank lines (bounds in their formulas, at least 8.050943 m3 together); no freelancer RC row",
      "HELD", "T-311, T-319"),
 ]
+
+
+# ---- r2 cause splits (R-T385-6). Drawn figures (Checker-confirmed in the T-385 r1 verdict, architectural DXF
+#      handles 200 / 202 / 203 .. 206; ST p.7 pool detail): wall thickness 0.20, engine wall height 1.20 (rim +0.30 to
+#      the base top -0.90), base 0.40. His row prints one run length, one height and the 0.20 thickness (read on the row:
+#      B = run length, C = height, D = thickness; the header words do not match his columns, so the meaning is read
+#      from the magnitudes against the drawn wall, never from the header). Signs: engine - freelancer.
+POOL_WALL_T, POOL_WALL_H, POOL_BASE_T = 0.20, 1.20, 0.40
+
+
+def pool_walls_split(engine_m3, fl_rows):
+    if len(fl_rows) != 1 or not fl_rows[0].get("dims") or None in fl_rows[0]["dims"]:
+        raise SystemExit("PL-WALLS split needs his one wall row with its three printed dimensions (re-run t385_extract.py)")
+    run, h, t = fl_rows[0]["dims"]
+    if abs(t - POOL_WALL_T) > 1e-9:
+        raise SystemExit(f"PL-WALLS: his wall thickness {t} is not the drawn {POOL_WALL_T}: the split does not apply")
+    mean = engine_m3 / (POOL_WALL_T * POOL_WALL_H)      # drawn band's mean length (band area / thickness)
+    return [{"cause_class": "DEPTH", "cause": "base thickness 0.40 counted again in his wall height (wall foot is in the "
+             "base line)", "m3": R.r6(-mean * POOL_WALL_T * POOL_BASE_T)},
+            {"cause_class": "DIMENSION", "cause": "his run length over the drawn band's mean length, at his height",
+             "m3": R.r6(-(run - mean) * POOL_WALL_T * h)}]
+
+
+SPLITS = {"PL-WALLS": pool_walls_split}
 
 
 def load(path=None):
@@ -242,6 +267,10 @@ def build(doc=None):
         refs = [sheet_ref[(flr[0], r)] for r in flr[1] if (flr[0], r) in sheet_ref] if flr else []
         c = {"id": cid, "family": fam, "element": elem, "engine_lines": ids, "freelancer_rows": refs,
              "cause_class": cc, "cause": cause, "verdict": verdict, "evidence": ev}
+        if cid in SPLITS:                      # r2: cause split in m3 from the drawn engine figures + his row
+            c["cause_split"] = SPLITS[cid](sum(by_id[i]["measured_net"] for i in ids
+                                               if R.line_class(by_id[i], dg)[0] == "VALUED"),
+                                           [r for r in doc["freelancer_rows"] if r["ref"] in refs])
         if cid in ARITH:                       # his printed sub-total minus the sum of his own rows (from the input)
             sh, total_row, rows = ARITH[cid]
             c["freelancer_arithmetic_m3"] = R.r6(fl_rows[sheet_ref[(sh, total_row)]]
@@ -274,13 +303,20 @@ def main(argv=None):
     rows, fams, doc = build(load(inp))
     out = {"RECON_T385.csv": _csv(rows, list(rows[0])), "FAMILIES_T385.csv": _csv(fams, list(fams[0]))}
     keyed = [f for f in fams if f["freelancer_row"] != "none"]
-    summ = {"schema": "T385_SUMMARY_V1", "candidate": doc["candidate"],
+    summ = {"schema": "T385_SUMMARY_V2", "candidate": doc["candidate"],
             "candidate_lines_json_sha256": doc["candidate_lines_json_sha256"],
             "concrete_lines": len(doc["concrete_lines"]), "components": len(rows),
             "engine_valued_m3": R.r6(sum(f["engine_valued_m3"] for f in keyed)),
             "freelancer_m3": R.r6(sum(f["freelancer_m3"] for f in keyed)),
             "residual_m3": R.r6(sum(f["residual_m3"] for f in keyed)),
-            "families_closing": sum(1 for f in fams if f["closes"]), "families": len(fams),
+            "named_causes_m3": R.r6(sum(f["named_causes_m3"] for f in fams)),
+            "held_named_m3": R.r6(sum(f["held_named_m3"] for f in fams)),
+            "unexplained_m3": R.r6(sum(f["unexplained_m3"] for f in fams)),
+            "unresolved_m3": R.r6(sum(f["unresolved_m3"] for f in fams)),
+            "untraced_remainder_m3": R.r6(sum(f["untraced_remainder_m3"] for f in fams)),
+            "bookkeeping_remainder_m3": R.r6(sum(f["bookkeeping_remainder_m3"] for f in fams)),
+            "families_bookkeeping_closing": sum(1 for f in fams if f["bookkeeping_closes"]),
+            "families_cause_closing": sum(1 for f in fams if f["cause_closes"]), "families": len(fams),
             "verdicts": {v: sum(1 for r in rows if r["verdict"] == v) for v in R.VERDICTS},
             "contribution_by_verdict_m3": {v: R.r6(sum(r["contribution_m3"] for r in rows if r["verdict"] == v))
                                            for v in R.VERDICTS}}

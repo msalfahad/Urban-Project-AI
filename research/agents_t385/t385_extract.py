@@ -1,7 +1,7 @@
 """T-385 extract (run once on private inputs, outside the repository): writes ALSENAN_T385_INPUT.json, the only input of
 t385_alsenan.py. It keeps VALUES ONLY: candidate concrete line ids, item codes, element ids, floor, state, net, bounds and
 the line's own formula text; the freelancer's sheet rows as (sheet title, row number, element mark when it is an ASCII
-drawing mark, m3). No coordinates, no client name, no rate, no amount, no free text of the workbook.
+drawing mark, m3, his three printed dimensions B / C / D). No coordinates, no client name, no rate, no amount, no free text of the workbook.
 
     python3 -I research/agents_t385/t385_extract.py --lines <run>/V3_0_29_BOQ_LINES.json \
         --downgrades <board>/docs/agents/verdicts/V3.0.29/DOWNGRADES.json --freelancer <private>/<concrete workbook>.xlsx \
@@ -52,7 +52,10 @@ def freelancer_rows(path):
             dims = [ws.cell(r, c).value for c in (2, 3, 4)]
             kind = "ELEMENT" if any(_num(x) for x in dims) else "TOTAL"
             rows.append({"ref": f"{ws.title}:{r}", "sheet": si, "row": r, "mark": mark, "kind": kind,
-                         "m3": round(float(net), 6)})
+                         "m3": round(float(net), 6),
+                         # r2: his three printed dimensions (columns B, C, D as printed; their meaning is read per
+                         # row in t385_alsenan.SPLITS, never assumed from the header)
+                         "dims": [round(float(x), 6) if _num(x) else None for x in dims]})
     return totals, rows
 
 

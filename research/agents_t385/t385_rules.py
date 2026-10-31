@@ -18,6 +18,15 @@ R-T385-5  Verdict proposals per component: ENGINE_RIGHT (hand figure from the dr
           RULE_DIFFERENCE (both follow a rule; the rules differ: named), HELD (engine side open: named item),
           ENGINE_ONLY / FREELANCER_ONLY scope with their class, UNRESOLVED (named). AGREE only when both sides are valued
           and the contribution is within 0.001 m3.
+R-T385-6  (r2, cause closure; Checker F-T385-1 / F-T385-2) Bookkeeping closure (every line and row bound once, the
+          contributions sum to the residual) is NOT cause closure. A family's residual is split three ways:
+          named_causes_m3 = only TRACED contributions (verdict AGREE / ENGINE_RIGHT / FREELANCER_RIGHT /
+          RULE_DIFFERENCE, the FREELANCER_ARITHMETIC cause included); held_named_m3 = HELD components (own column);
+          unexplained_m3 = residual - named - held, i.e. every UNRESOLVED contribution + the part of a traced component
+          its cause split does not cover + any bookkeeping remainder. A traced component with several causes carries a
+          cause_split (each cause physical, in m3); split short of the contribution prints the remainder as untraced.
+          An UNRESOLVED or HELD component given a cause split (an untraced contribution counted as a named cause), or a
+          typed traced / unexplained figure, is refused.
 """
 
 from __future__ import annotations
@@ -28,6 +37,9 @@ VERDICTS = ("AGREE", "ENGINE_RIGHT", "FREELANCER_RIGHT", "RULE_DIFFERENCE", "HEL
 CAUSE_CLASSES = ("DIMENSION", "DEPTH", "COUNT", "SCOPE", "LEVEL_BAND", "WRONG_BASIS", "HELD_ITEM",
                  "FREELANCER_ARITHMETIC", "CLASSIFICATION", "AGREE")
 RATIO_WORDS = ("%", "percent", "ratio", "factor", "scaled", "pro rata", "proportion")
+TRACED_VERDICTS = ("AGREE", "ENGINE_RIGHT", "FREELANCER_RIGHT", "RULE_DIFFERENCE")
+SPLIT_CLASSES = tuple(c for c in CAUSE_CLASSES if c not in ("HELD_ITEM", "AGREE"))
+TYPED_CLOSURE_KEYS = ("traced_m3", "named_causes_m3", "unexplained_m3", "untraced_m3", "held_named_m3")
 
 
 class Refused(ValueError):
@@ -115,13 +127,43 @@ def component(comp, lines_by_id, fl_rows, downgraded_ids=()):
             raise Refused(f"{cid}: AGREE with a contribution of {contrib:.6f} m3")
     if verdict == "HELD" and not held_n:
         raise Refused(f"{cid}: verdict HELD with no held engine line")
+    # R-T385-6 cause closure
+    for k in TYPED_CLOSURE_KEYS:
+        if k in comp:
+            raise Refused(f"{cid}: {k} is computed from the contribution and the cause split, never typed in")
+    split = comp.get("cause_split")
+    if split is not None and verdict not in TRACED_VERDICTS:
+        raise Refused(f"{cid}: a {verdict} contribution is untraced: it cannot carry named causes (cause_split)")
+    traced = held_named = unexplained = 0.0
+    split_txt = ""
+    if verdict in TRACED_VERDICTS:
+        if split:
+            for s in split:
+                check_cause_text(s.get("cause"))
+                if s.get("cause_class") not in SPLIT_CLASSES:
+                    raise Refused(f"{cid}: unknown split cause class {s.get('cause_class')!r}")
+                if not isinstance(s.get("m3"), (int, float)) or isinstance(s.get("m3"), bool):
+                    raise Refused(f"{cid}: every split cause needs its m3")
+            traced = sum(float(s["m3"]) for s in split)
+            split_txt = "; ".join(f"{s['cause_class']} {r6(s['m3']):.6f}: {s['cause']}" for s in split)
+        elif split is not None:
+            raise Refused(f"{cid}: an empty cause split names no cause")
+        else:
+            traced = contrib                  # one stated cause covers the whole contribution
+        unexplained = contrib - traced
+    elif verdict == "HELD":
+        held_named = contrib
+    else:                                     # UNRESOLVED: named and bound, not traced
+        unexplained = contrib
     return {"id": cid, "family": comp["family"], "element": comp.get("element", ""),
             "engine_lines": len(comp.get("engine_lines", [])), "engine_valued_m3": r6(valued),
             "held_lines": held_n, "held_low_m3": r6(held_lo) if held_n > held_unbounded else None,
             "held_high_m3": r6(held_hi) if held_n and not held_unbounded else None,
             "held_unbounded_lines": held_unbounded, "held_audit_engine_m3": r6(audit) if held_n else None,
             "freelancer_rows": ";".join(comp.get("freelancer_rows", [])), "freelancer_m3": r6(fl),
-            "contribution_m3": r6(contrib), "cause_class": comp["cause_class"], "cause": comp["cause"],
+            "contribution_m3": r6(contrib), "traced_m3": r6(traced), "held_named_m3": r6(held_named),
+            "unexplained_m3": r6(unexplained), "cause_split": split_txt,
+            "cause_class": comp["cause_class"], "cause": comp["cause"],
             "verdict": verdict, "evidence": comp.get("evidence", "")}
 
 
@@ -147,8 +189,11 @@ def family(fam, comps, family_lines, lines_by_id, fl_rows, fl_family_total, down
         raise Refused(f"{fam}: line(s) of another family bound here, e.g. {extra[:3]}")
     valued = sum(r["engine_valued_m3"] for r in rows)
     residual = valued - float(fl_family_total)
-    explained = sum(r["contribution_m3"] for r in rows)
-    remainder = residual - explained
+    bound_sum = sum(r["contribution_m3"] for r in rows)
+    bookkeeping = residual - bound_sum                       # a missing line / row or a sub-total slip
+    named = sum(r["traced_m3"] for r in rows)
+    held_named = sum(r["held_named_m3"] for r in rows)
+    unexplained = residual - named - held_named              # UNRESOLVED + untraced remainders + bookkeeping
     held_lo = sum(r["held_low_m3"] or 0.0 for r in rows)      # bounded held lines only; unbounded ones counted apart
     held_hi_ok = all(r["held_high_m3"] is not None for r in rows if r["held_lines"])
     held_hi = sum(r["held_high_m3"] or 0.0 for r in rows) if held_hi_ok else None
@@ -157,5 +202,8 @@ def family(fam, comps, family_lines, lines_by_id, fl_rows, fl_family_total, down
                   "held_low_m3": r6(held_lo), "held_high_m3": r6(held_hi),
                   "held_unbounded_lines": sum(r["held_unbounded_lines"] for r in rows),
                   "freelancer_m3": r6(fl_family_total), "residual_m3": r6(residual),
-                  "named_causes_m3": r6(explained), "unexplained_m3": r6(remainder),
-                  "closes": abs(remainder) <= TOL}
+                  "named_causes_m3": r6(named), "held_named_m3": r6(held_named), "unexplained_m3": r6(unexplained),
+                  "unresolved_m3": r6(sum(r["unexplained_m3"] for r in rows if r["verdict"] == "UNRESOLVED")),
+                  "untraced_remainder_m3": r6(sum(r["unexplained_m3"] for r in rows if r["verdict"] in TRACED_VERDICTS)),
+                  "bookkeeping_remainder_m3": r6(bookkeeping),
+                  "bookkeeping_closes": abs(bookkeeping) <= TOL, "cause_closes": abs(unexplained) <= TOL}

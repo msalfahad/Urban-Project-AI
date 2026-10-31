@@ -32,9 +32,29 @@ freelancer figure. The contributions sum to the family residual within 0.001 m3 
 UNEXPLAINED. A freelancer sub-total that differs from his own rows is its own cause (FREELANCER_ARITHMETIC). A cause
 stated as a ratio, percentage or scaling is refused.
 
-## Result (engine side)
+## r2: cause closure (R-T385-6; Checker NEEDS r2 (1) - (4))
 
-All 9 families close (unexplained 0.000 m3 in each). 47 components: AGREE 15, ENGINE_RIGHT 10, HELD 11, UNRESOLVED 11,
+r1 printed "unexplained 0.000 m3" in every family because every contribution, the 11 UNRESOLVED ones included, was added
+to named_causes_m3: that is bookkeeping closure (every line and row bound once), not cause closure (F-T385-1). r2 splits
+each family residual three ways: named_causes_m3 = traced contributions only (AGREE / ENGINE_RIGHT / FREELANCER_RIGHT /
+RULE_DIFFERENCE, FREELANCER_ARITHMETIC included); held_named_m3 = HELD components in their own column; unexplained_m3 =
+residual - named - held = every UNRESOLVED contribution + the part of a traced component its cause split does not cover
++ any bookkeeping remainder (each printed apart: unresolved_m3, untraced_remainder_m3, bookkeeping_remainder_m3). An
+UNRESOLVED or HELD component given a cause split, or a typed traced / unexplained figure, is refused.
+
+PL-WALLS (F-T385-2) now carries its cause split in m3 (signs engine - freelancer), computed from the drawn figures and
+his one wall row (his columns read on the row: run length, height, 0.20 thickness; the header words do not match):
+base thickness 0.40 counted again in his height = 2.356726 m2 band x 0.40 = -0.942690; his run length over the drawn
+band's mean length (2.356726 / 0.20 = 11.783630 m) at his height = -0.077893; the rest of his height above the drawn
+rim +0.30 to base bottom -1.30 span, which no drawn level traces = -0.471346 (the m3 the Checker named), printed as
+untraced (unexplained), not named. Headline (the board line carries the m3; the per-family table is in the private output): 9 / 9 families close
+by bookkeeping; cause closure only where no UNRESOLVED component or untraced remainder sits. GS-SLAB and GB-MAIN stay
+UNRESOLVED here; their re-measure is T-391. O-T385-1 (Checker r1: the fourth pool side B7 / 8D runs about 5.17 m against
+the 3.50 m pool side; its out-of-pool part is not pool concrete) is carried by T-392 (c), not by this package.
+
+## Result (engine side, r1 table carried unchanged)
+
+All 9 families close by BOOKKEEPING (r1 wrote "unexplained 0.000 m3": withdrawn, see r2 above). 47 components: AGREE 15, ENGINE_RIGHT 10, HELD 11, UNRESOLVED 11,
 FREELANCER_RIGHT 0, RULE_DIFFERENCE 0. Engine valued (contractual) per family, m3: blinding 0.000 (4 held), footings
 67.6945 (4 held), ground 44.8661 (22 held), columns + necks 28.2155 (55 held), beams 66.3179 (27 held), slabs 60.2802
 (0 held), stairs + domes 10.4502 (6 held), pool 7.2023 (1 held); parapet RC 4 held lines, no key, no freelancer row.
@@ -120,3 +140,4 @@ held runs). Those 11 components are the next work, not agreements.
 | Date | Problem | Root cause | General rule (scope) | Regression test | Status |
 |---|---|---|---|---|---|
 | 2026-10-31 | No per-family concrete statement existed after the V3.0.x candidate moved concrete; a family comparison of two totals hid held parts as apparent shortfalls and his own sub-total slip as an engine gap (T-385) | families were compared total vs total; held lines and the freelancer's row arithmetic were never separated from the physical differences | a family residual is split component by component, each bound to line ids and freelancer rows exactly once; a held part is a named item, never agreement; a freelancer sub-total that differs from his rows is its own cause; a ratio never closes a residual; the freelancer's values stay in the private table (scope: every villa, every trade comparison; provenance T-385) | tests/t385_concrete_recon (held as AGREE refused, ratio refused, line twice refused, downgraded line held, unexplained remainder printed) | PROPOSED |
+| 2026-10-31 | r1 closed every family at 0.000 m3 unexplained while 11 components were UNRESOLVED (T-385 r1, Checker F-T385-1 / F-T385-2) | the closure added every contribution, untraced ones included, to the named causes | a closure that adds every contribution is bookkeeping; cause closure counts only traced causes, keeps HELD apart and prints the rest (UNRESOLVED + untraced remainder of a traced component + bookkeeping) as unexplained; a traced component with several causes carries its split in m3 (scope: every reconciliation; provenance T-385 r2) | tests/t385_concrete_recon test_r2_* (UNRESOLVED / HELD counted as a named cause refused; typed traced / unexplained refused; split short of its contribution prints the remainder; ratio split refused) | PROPOSED |
