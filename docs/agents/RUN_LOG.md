@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T03:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-199 r2 (Gate B integration package V3.0.30), T-381 | self-check pending
 - 2026-10-31T03:47Z | Worker 3 | SUCCESS | T-199 r2 READY integration package ARCH_TAKEOFF_V3.0.30 (agents/task-T-199 @ 7c1da203) | Registry fix only, no quantity moved (3,962 + 661 lines byte-identical to r1 by construction): BOQ_FAMILY_MASTER 1.25.0 owns STR.FORMWORK (B10-13), STR.FORMWORK.STAIR (B7-13), ARCH.SHUTTER (B6-05), FIN.HANDRAIL (B7-10); B7-13 / B6-05 / B7-10 NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED proposed with file:line evidence; t130 guards full strength on 1.25.0 + adverse, 1.1.0 checks pinned to their era (exempt only what a passing governing registry owns / moved); new wall-handrail test 4.089 lm. L4 NEW 0 (395 known), freeze 0, stale none. Finding F-T199-4: MET.RAILING.GUARD 21.550 lm owned by no family, scan misses MET. (Lead) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: wrapper refused 'pytest ... tests' (needs tests/), rerun with tests/ agents/
 - 2026-10-31T03:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31T03:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
