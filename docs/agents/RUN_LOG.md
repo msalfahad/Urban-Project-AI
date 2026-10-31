@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T01:52Z | Verifier | STARTED | run session_01E6cPncRGJXLacyHqaCGaMh | repo-attached routine | task state: READY T-374 (r2) | self-check pending
 - 2026-10-31T01:27Z | Worker 1 | SUCCESS | T-374 r2 READY @ 168b36c8 | Footing mesh: 38 lines of DG-a97ec2ea66e02194 now HELD_DOWNGRADE (874.862227 kg audit only, UNSUPPORTED BASIS) + 10 '/m' lines same basis HELD_SAME_BASIS (1,606.069..1,655.560 kg audit, extension DGP-T374-FTGM proposed); schedule restated 157 lines / 131 marks, net 4,249.454940 kg (= Checker figure), FFD 221 bars / 4,245.926 kg; all 20 downgrade records read; T371_ERRATUM (NOW = 5 pops / 389 lines); F-T374-2 fixed (Q-74 A = concrete only) | self-check codemap PASS, pytest t061 PASS, freeze PASS; tests t374+t371+t366+t061 78 passed; problem: none
 - 2026-10-31T01:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31 01:00 UTC | Worker 3 | STARTED | run session_01E6cPneTpAJJ4RXpwYWC8M1 | repo-attached routine | task state: none yet | self-check pending
