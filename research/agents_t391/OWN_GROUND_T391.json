@@ -1,0 +1,2627 @@
+{
+ "engine_binding": [
+  {
+   "engine_cell": "SITE-01e75a66f002baa9",
+   "gross_m2": 6.0001,
+   "member_overlap_m2": 0.0001,
+   "net_m2": 6.0,
+   "own_faces": [
+    "OWN-015"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-0caa2bd2c0478041",
+   "gross_m2": 2.0502,
+   "member_overlap_m2": 0.0,
+   "net_m2": 2.0502,
+   "own_faces": [],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-2870ca7b6a82bfa0",
+   "gross_m2": 1.14,
+   "member_overlap_m2": 0.0,
+   "net_m2": 1.14,
+   "own_faces": [
+    "OWN-048"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-2d53359453ef2573",
+   "gross_m2": 14.5258,
+   "member_overlap_m2": 0.0,
+   "net_m2": 14.5258,
+   "own_faces": [
+    "OWN-005"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-3f7728a83b30ec14",
+   "gross_m2": 2.6156,
+   "member_overlap_m2": 0.0,
+   "net_m2": 2.6156,
+   "own_faces": [
+    "OWN-022"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-49a7dae5c139aebb",
+   "gross_m2": 3.8344,
+   "member_overlap_m2": 0.2367,
+   "net_m2": 3.5977,
+   "own_faces": [
+    "OWN-018"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-4bb22fd85925adb0",
+   "gross_m2": 2.0625,
+   "member_overlap_m2": 0.0,
+   "net_m2": 2.0625,
+   "own_faces": [
+    "OWN-026"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-4df8fcd99d130701",
+   "gross_m2": 8.3723,
+   "member_overlap_m2": 0.0,
+   "net_m2": 8.3723,
+   "own_faces": [
+    "OWN-011"
+   ],
+   "region": "STAIR_ZONE"
+  },
+  {
+   "engine_cell": "SITE-5922f7d38ef95d0f",
+   "gross_m2": 2.6825,
+   "member_overlap_m2": 0.0,
+   "net_m2": 2.6825,
+   "own_faces": [
+    "OWN-023"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-659735106ca717bc",
+   "gross_m2": 6.88,
+   "member_overlap_m2": 0.0,
+   "net_m2": 6.88,
+   "own_faces": [
+    "OWN-013"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-67b20a045d91a15c",
+   "gross_m2": 4.18,
+   "member_overlap_m2": 0.0,
+   "net_m2": 4.18,
+   "own_faces": [
+    "OWN-017"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-720fbae909da79f9",
+   "gross_m2": 6.86,
+   "member_overlap_m2": 0.0,
+   "net_m2": 6.86,
+   "own_faces": [
+    "OWN-014"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-77b8830f567fb93d",
+   "gross_m2": 14.8931,
+   "member_overlap_m2": 0.0,
+   "net_m2": 14.8931,
+   "own_faces": [
+    "OWN-003"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-7fae2795d77272cb",
+   "gross_m2": 1.44,
+   "member_overlap_m2": 0.0,
+   "net_m2": 1.44,
+   "own_faces": [
+    "OWN-036"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-997c65af642cbd7e",
+   "gross_m2": 0.1556,
+   "member_overlap_m2": 0.0,
+   "net_m2": 0.1556,
+   "own_faces": [
+    "OWN-090"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-b1e0844b87508d13",
+   "gross_m2": 1.704,
+   "member_overlap_m2": 0.0,
+   "net_m2": 1.704,
+   "own_faces": [
+    "OWN-032"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-b8f67954c29b4613",
+   "gross_m2": 14.8931,
+   "member_overlap_m2": 0.0,
+   "net_m2": 14.8931,
+   "own_faces": [
+    "OWN-004"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-c1089bdb4cfcdc4a",
+   "gross_m2": 41.0762,
+   "member_overlap_m2": 1.7783,
+   "net_m2": 39.2979,
+   "own_faces": [
+    "OWN-007",
+    "OWN-009",
+    "OWN-010",
+    "OWN-020",
+    "OWN-047",
+    "OWN-060",
+    "OWN-065",
+    "OWN-082",
+    "OWN-083",
+    "OWN-086",
+    "OWN-099",
+    "OWN-114",
+    "OWN-151",
+    "OWN-174"
+   ],
+   "region": "UNRESOLVED"
+  },
+  {
+   "engine_cell": "SITE-c1b4b440fb6ecf4c",
+   "gross_m2": 2.2447,
+   "member_overlap_m2": 0.0,
+   "net_m2": 2.2447,
+   "own_faces": [
+    "OWN-025"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-c26e93b649f5066b",
+   "gross_m2": 8.124,
+   "member_overlap_m2": 0.0,
+   "net_m2": 8.124,
+   "own_faces": [
+    "OWN-012"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-cd1f57cc06b2f5af",
+   "gross_m2": 24.505,
+   "member_overlap_m2": 0.0,
+   "net_m2": 24.505,
+   "own_faces": [
+    "OWN-001"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-d74f3fe29b88467a",
+   "gross_m2": 10.9051,
+   "member_overlap_m2": 0.0,
+   "net_m2": 10.9051,
+   "own_faces": [
+    "OWN-006"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-dddf2004a2525169",
+   "gross_m2": 3.255,
+   "member_overlap_m2": 0.0,
+   "net_m2": 3.255,
+   "own_faces": [
+    "OWN-019"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-e4c2bd9d98ce6a72",
+   "gross_m2": 22.9654,
+   "member_overlap_m2": 0.0,
+   "net_m2": 22.9654,
+   "own_faces": [
+    "OWN-002"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-f22fd4467ee5a144",
+   "gross_m2": 3.1175,
+   "member_overlap_m2": 0.0,
+   "net_m2": 3.1175,
+   "own_faces": [
+    "OWN-021"
+   ],
+   "region": "GROUND_SLAB"
+  },
+  {
+   "engine_cell": "SITE-f98829c44e7af78b",
+   "gross_m2": 11.61,
+   "member_overlap_m2": 0.0,
+   "net_m2": 11.61,
+   "own_faces": [
+    "OWN-008"
+   ],
+   "region": "GROUND_SLAB"
+  }
+ ],
+ "faces": [
+  {
+   "area_m2": 24.505,
+   "edge_handles": [
+    "114",
+    "1FC",
+    "238",
+    "7CF",
+    "7E0",
+    "7E8",
+    "7ED",
+    "809"
+   ],
+   "eq_width_m": 4.225,
+   "face": "OWN-001",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 22.9653,
+   "edge_handles": [
+    "138",
+    "13A",
+    "204",
+    "207",
+    "214",
+    "7D4",
+    "7D5",
+    "7D6"
+   ],
+   "eq_width_m": 4.145,
+   "face": "OWN-002",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 14.8931,
+   "edge_handles": [
+    "177",
+    "245",
+    "7DD",
+    "7E7",
+    "7E9"
+   ],
+   "eq_width_m": 3.525,
+   "face": "OWN-003",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 14.8931,
+   "edge_handles": [
+    "23C",
+    "24D",
+    "7CF",
+    "7DD",
+    "7E7",
+    "7EA"
+   ],
+   "eq_width_m": 3.525,
+   "face": "OWN-004",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 14.5258,
+   "edge_handles": [
+    "249",
+    "7CB",
+    "7D0",
+    "7E1",
+    "7E4"
+   ],
+   "eq_width_m": 3.4,
+   "face": "OWN-005",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 13.4514,
+   "edge_handles": [
+    "158",
+    "177",
+    "17BA",
+    "17BD",
+    "241",
+    "245",
+    "7C3",
+    "7CD",
+    "7CE",
+    "7DE",
+    "7DF",
+    "7E8"
+   ],
+   "eq_width_m": 1.481,
+   "face": "OWN-006",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 11.9237,
+   "edge_handles": [
+    "177",
+    "17C",
+    "1EC",
+    "7C2",
+    "7DC",
+    "7E2",
+    "7F5"
+   ],
+   "eq_width_m": 2.419,
+   "face": "OWN-007",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 11.61,
+   "edge_handles": [
+    "109",
+    "218",
+    "220",
+    "7C9",
+    "7CA",
+    "7D0"
+   ],
+   "eq_width_m": 2.7,
+   "face": "OWN-008",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 11.52,
+   "edge_handles": [
+    "15F",
+    "1DC",
+    "1E0",
+    "1F2",
+    "1F5",
+    "234",
+    "7C2",
+    "7C3",
+    "7CB",
+    "7CC"
+   ],
+   "eq_width_m": 2.4,
+   "face": "OWN-009",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 10.9742,
+   "edge_handles": [
+    "15C",
+    "1F2",
+    "228",
+    "7C2",
+    "7CB",
+    "7E2",
+    "7E3"
+   ],
+   "eq_width_m": 3.228,
+   "face": "OWN-010",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 8.3723,
+   "edge_handles": [
+    "17D",
+    "7CF",
+    "7DC",
+    "7E1"
+   ],
+   "eq_width_m": 2.772,
+   "face": "OWN-011",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 8.124,
+   "edge_handles": [
+    "17D",
+    "184",
+    "23C",
+    "24D",
+    "251",
+    "7D0",
+    "7E5"
+   ],
+   "eq_width_m": 1.2,
+   "face": "OWN-012",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 6.88,
+   "edge_handles": [
+    "140",
+    "20B",
+    "7D2",
+    "7D3",
+    "7D4"
+   ],
+   "eq_width_m": 1.6,
+   "face": "OWN-013",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 6.86,
+   "edge_handles": [
+    "223",
+    "22C",
+    "7D1",
+    "7D2",
+    "7D7",
+    "7D8"
+   ],
+   "eq_width_m": 2.45,
+   "face": "OWN-014",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 6.0,
+   "edge_handles": [
+    "17B",
+    "184",
+    "200",
+    "255",
+    "7D0",
+    "7E0"
+   ],
+   "eq_width_m": 1.2,
+   "face": "OWN-015",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 4.805,
+   "edge_handles": [
+    "7C5",
+    "7C6"
+   ],
+   "eq_width_m": 1.55,
+   "face": "OWN-016",
+   "host": "7C6",
+   "kind": "LIFT"
+  },
+  {
+   "area_m2": 4.18,
+   "edge_handles": [
+    "109",
+    "145",
+    "228",
+    "230",
+    "7C7",
+    "7DB"
+   ],
+   "eq_width_m": 1.1,
+   "face": "OWN-017",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 3.8344,
+   "edge_handles": [
+    "175",
+    "176",
+    "180",
+    "180D",
+    "7C3"
+   ],
+   "eq_width_m": 1.958,
+   "face": "OWN-018",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 3.255,
+   "edge_handles": [
+    "175",
+    "176",
+    "180E",
+    "7CD"
+   ],
+   "eq_width_m": 1.55,
+   "face": "OWN-019",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 3.24,
+   "edge_handles": [
+    "1EC",
+    "1EF",
+    "1F2",
+    "1F5",
+    "7BE"
+   ],
+   "eq_width_m": 1.8,
+   "face": "OWN-020",
+   "host": "7BE",
+   "kind": "LIFT"
+  },
+  {
+   "area_m2": 3.1175,
+   "edge_handles": [
+    "13C",
+    "13E",
+    "13F",
+    "7D4"
+   ],
+   "eq_width_m": 1.45,
+   "face": "OWN-021",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 2.7212,
+   "edge_handles": [
+    "17F",
+    "1EF",
+    "7C2",
+    "7CD",
+    "7E6"
+   ],
+   "eq_width_m": 0.997,
+   "face": "OWN-022",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 2.6825,
+   "edge_handles": [
+    "13E",
+    "13F",
+    "211",
+    "7D2",
+    "7D9"
+   ],
+   "eq_width_m": 1.45,
+   "face": "OWN-023",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 2.265,
+   "edge_handles": [
+    "200",
+    "251",
+    "255",
+    "7D0",
+    "7E0",
+    "FC"
+   ],
+   "eq_width_m": 0.264,
+   "face": "OWN-024",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 2.2534,
+   "edge_handles": [
+    "17E",
+    "182",
+    "1EF",
+    "7C2",
+    "7C8"
+   ],
+   "eq_width_m": 0.875,
+   "face": "OWN-025",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 2.0625,
+   "edge_handles": [
+    "15D",
+    "15E",
+    "16F",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 1.25,
+   "face": "OWN-026",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 2.016,
+   "edge_handles": [
+    "228",
+    "7CB",
+    "7DC",
+    "7E1",
+    "7E2"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-027",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.8395,
+   "edge_handles": [
+    "157",
+    "158",
+    "17BA",
+    "17BD",
+    "17C0",
+    "7C3"
+   ],
+   "eq_width_m": 0.253,
+   "face": "OWN-028",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.8,
+   "edge_handles": [
+    "136",
+    "204",
+    "207",
+    "7D5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-029",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.74,
+   "edge_handles": [
+    "13D",
+    "211",
+    "223",
+    "7D2"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-030",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.7235,
+   "edge_handles": [
+    "249",
+    "251",
+    "7D0",
+    "FC"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-031",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.704,
+   "edge_handles": [
+    "17E",
+    "183",
+    "1E4",
+    "7C3",
+    "7E6"
+   ],
+   "eq_width_m": 0.838,
+   "face": "OWN-032",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 1.635,
+   "edge_handles": [
+    "207",
+    "20B",
+    "7D4",
+    "F8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-033",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.506,
+   "edge_handles": [
+    "177",
+    "245",
+    "7C2",
+    "7CD"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-034",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.5,
+   "edge_handles": [
+    "184",
+    "23C",
+    "7CF",
+    "7E0"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-035",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.44,
+   "edge_handles": [
+    "142",
+    "7D4",
+    "7D7",
+    "7DA"
+   ],
+   "eq_width_m": 1.2,
+   "face": "OWN-036",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 1.32,
+   "edge_handles": [
+    "109",
+    "228",
+    "7CB",
+    "7D0"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-037",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.32,
+   "edge_handles": [
+    "109",
+    "228",
+    "234",
+    "7CB"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-038",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.32,
+   "edge_handles": [
+    "7C5",
+    "7C6"
+   ],
+   "eq_width_m": 0.2,
+   "face": "OWN-039",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.29,
+   "edge_handles": [
+    "13E",
+    "211",
+    "7D2",
+    "7D4",
+    "7D6"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-040",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.29,
+   "edge_handles": [
+    "13F",
+    "20B",
+    "7D2",
+    "7D3",
+    "7D4"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-041",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.29,
+   "edge_handles": [
+    "140",
+    "7D2",
+    "7D4",
+    "7D7"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-042",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.29,
+   "edge_handles": [
+    "10A",
+    "218",
+    "220",
+    "7C9",
+    "7CA"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-043",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.2817,
+   "edge_handles": [
+    "17D",
+    "7D0",
+    "7E1",
+    "7E4"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-044",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.275,
+   "edge_handles": [
+    "20B",
+    "7D1",
+    "7D4",
+    "F8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-045",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.2675,
+   "edge_handles": [
+    "7DD",
+    "7E7",
+    "7E9",
+    "7EA",
+    "7ED",
+    "7F5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-046",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.1875,
+   "edge_handles": [
+    "15D",
+    "15E",
+    "7C2",
+    "7FF"
+   ],
+   "eq_width_m": 0.95,
+   "face": "OWN-047",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 1.14,
+   "edge_handles": [
+    "141",
+    "142",
+    "7D1",
+    "7D4"
+   ],
+   "eq_width_m": 0.95,
+   "face": "OWN-048",
+   "host": "",
+   "kind": "PANEL"
+  },
+  {
+   "area_m2": 1.14,
+   "edge_handles": [
+    "145",
+    "178",
+    "230",
+    "7C7",
+    "7DB"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-049",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.125,
+   "edge_handles": [
+    "176",
+    "1E4",
+    "7C3",
+    "7CD",
+    "7E6"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-050",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.125,
+   "edge_handles": [
+    "175",
+    "7C3",
+    "7CD",
+    "7DE"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-051",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.0575,
+   "edge_handles": [
+    "177",
+    "7DC",
+    "7DD",
+    "7F5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-052",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.0575,
+   "edge_handles": [
+    "24D",
+    "7CF",
+    "7DC",
+    "7DD",
+    "7F5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-053",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.0575,
+   "edge_handles": [
+    "177",
+    "7E7",
+    "7E8",
+    "7ED"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-054",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.0575,
+   "edge_handles": [
+    "7CF",
+    "7E7",
+    "7E8",
+    "7ED"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-055",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.011,
+   "edge_handles": [
+    "15E",
+    "170",
+    "1E0",
+    "1E4",
+    "7C3"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-056",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.005,
+   "edge_handles": [
+    "170",
+    "1E4",
+    "241",
+    "7C3"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-057",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 1.005,
+   "edge_handles": [
+    "200",
+    "7E0",
+    "809",
+    "FD"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-058",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.975,
+   "edge_handles": [
+    "1FC",
+    "7E0",
+    "809",
+    "FD"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-059",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.9683,
+   "edge_handles": [
+    "17C",
+    "7C2",
+    "7E2",
+    "7E3"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-060",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.906,
+   "edge_handles": [
+    "17D",
+    "184",
+    "24D",
+    "7CF"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-061",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.8925,
+   "edge_handles": [
+    "218",
+    "249",
+    "7D0",
+    "FC"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-062",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.87,
+   "edge_handles": [
+    "15D",
+    "7C2",
+    "7C3",
+    "7C8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-063",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.81,
+   "edge_handles": [
+    "109",
+    "1DC",
+    "234",
+    "7CB"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-064",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.81,
+   "edge_handles": [
+    "15E",
+    "15F",
+    "1E0",
+    "1F5",
+    "7C2"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-065",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.8077,
+   "edge_handles": [
+    "17E",
+    "17F",
+    "1EF",
+    "7C2",
+    "7E6"
+   ],
+   "eq_width_m": 0.281,
+   "face": "OWN-066",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.795,
+   "edge_handles": [
+    "184",
+    "23C",
+    "24D",
+    "7CF"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-067",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.735,
+   "edge_handles": [
+    "142",
+    "22C",
+    "7D1",
+    "7D7",
+    "7D8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-068",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.72,
+   "edge_handles": [
+    "137",
+    "138",
+    "204",
+    "214",
+    "7D5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-069",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.72,
+   "edge_handles": [
+    "15F",
+    "170",
+    "1DC",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-070",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.72,
+   "edge_handles": [
+    "15C",
+    "1F2",
+    "7C2",
+    "7CB",
+    "7CC"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-071",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.6975,
+   "edge_handles": [
+    "114",
+    "238",
+    "7DF",
+    "7E8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-072",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.6918,
+   "edge_handles": [
+    "139",
+    "13A",
+    "13D",
+    "13E",
+    "211",
+    "214",
+    "7D6"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-073",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.69,
+   "edge_handles": [
+    "10B",
+    "223",
+    "22C",
+    "7D1"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-074",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.6537,
+   "edge_handles": [
+    "17E",
+    "182",
+    "183",
+    "7C3",
+    "7C8"
+   ],
+   "eq_width_m": 0.301,
+   "face": "OWN-075",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.63,
+   "edge_handles": [
+    "175",
+    "176",
+    "180D",
+    "180E"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-076",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.57,
+   "edge_handles": [
+    "109",
+    "145",
+    "220",
+    "228",
+    "7CA"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-077",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.45,
+   "edge_handles": [
+    "10B",
+    "22C",
+    "7D1",
+    "F8"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-078",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.435,
+   "edge_handles": [
+    "13C",
+    "13E",
+    "13F",
+    "7D9"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-079",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.375,
+   "edge_handles": [
+    "15D",
+    "15E",
+    "16F",
+    "7FF"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-080",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.36,
+   "edge_handles": [
+    "141",
+    "142",
+    "7D4",
+    "7DA"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-081",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.36,
+   "edge_handles": [
+    "1EC",
+    "1F2",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.2,
+   "face": "OWN-082",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.36,
+   "edge_handles": [
+    "1EF",
+    "1F5",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.2,
+   "face": "OWN-083",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.36,
+   "edge_handles": [
+    "17B",
+    "184",
+    "23C",
+    "7D0",
+    "7E5"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-084",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.3,
+   "edge_handles": [
+    "114",
+    "115",
+    "1FC",
+    "238",
+    "7E0"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-085",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.24,
+   "edge_handles": [
+    "1F2",
+    "1F5",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.2,
+   "face": "OWN-086",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.18,
+   "edge_handles": [
+    "109",
+    "185",
+    "230",
+    "7C7"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-087",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.165,
+   "edge_handles": [
+    "247",
+    "249",
+    "FC"
+   ],
+   "eq_width_m": 0.147,
+   "face": "OWN-088",
+   "host": "249",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.165,
+   "edge_handles": [
+    "247",
+    "249",
+    "7D0"
+   ],
+   "eq_width_m": 0.147,
+   "face": "OWN-089",
+   "host": "249",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.1556,
+   "edge_handles": [
+    "176",
+    "180",
+    "180D"
+   ],
+   "eq_width_m": 0.209,
+   "face": "OWN-090",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.1527,
+   "edge_handles": [
+    "145",
+    "21E",
+    "220",
+    "7C9"
+   ],
+   "eq_width_m": 0.186,
+   "face": "OWN-091",
+   "host": "220",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.15,
+   "edge_handles": [
+    "177",
+    "243",
+    "245"
+   ],
+   "eq_width_m": 0.146,
+   "face": "OWN-092",
+   "host": "245",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.15,
+   "edge_handles": [
+    "243",
+    "245",
+    "7CD"
+   ],
+   "eq_width_m": 0.146,
+   "face": "OWN-093",
+   "host": "245",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.14,
+   "edge_handles": [
+    "1EC",
+    "1EF",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.2,
+   "face": "OWN-094",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.135,
+   "edge_handles": [
+    "114",
+    "236",
+    "238"
+   ],
+   "eq_width_m": 0.145,
+   "face": "OWN-095",
+   "host": "238",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.135,
+   "edge_handles": [
+    "236",
+    "238",
+    "7DF"
+   ],
+   "eq_width_m": 0.145,
+   "face": "OWN-096",
+   "host": "238",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.12,
+   "edge_handles": [
+    "22E",
+    "230",
+    "7C7"
+   ],
+   "eq_width_m": 0.144,
+   "face": "OWN-097",
+   "host": "230",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.12,
+   "edge_handles": [
+    "185",
+    "22E",
+    "230"
+   ],
+   "eq_width_m": 0.144,
+   "face": "OWN-098",
+   "host": "230",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.12,
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.121,
+   "face": "OWN-099",
+   "host": "1EC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.12,
+   "edge_handles": [
+    "184",
+    "24B",
+    "24D"
+   ],
+   "eq_width_m": 0.144,
+   "face": "OWN-100",
+   "host": "24D",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.12,
+   "edge_handles": [
+    "24B",
+    "24D",
+    "7CF"
+   ],
+   "eq_width_m": 0.144,
+   "face": "OWN-101",
+   "host": "24D",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.1092,
+   "edge_handles": [
+    "107",
+    "17BD",
+    "238",
+    "7CE",
+    "7DF"
+   ],
+   "eq_width_m": 0.3,
+   "face": "OWN-102",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.105,
+   "edge_handles": [
+    "109",
+    "226",
+    "228"
+   ],
+   "eq_width_m": 0.142,
+   "face": "OWN-103",
+   "host": "228",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.105,
+   "edge_handles": [
+    "226",
+    "228",
+    "7CB"
+   ],
+   "eq_width_m": 0.142,
+   "face": "OWN-104",
+   "host": "228",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.105,
+   "edge_handles": [
+    "253",
+    "255",
+    "7D0"
+   ],
+   "eq_width_m": 0.142,
+   "face": "OWN-105",
+   "host": "255",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.105,
+   "edge_handles": [
+    "253",
+    "255",
+    "FC"
+   ],
+   "eq_width_m": 0.142,
+   "face": "OWN-106",
+   "host": "255",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "13D",
+    "221",
+    "223",
+    "7D1"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-107",
+   "host": "223",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "10B",
+    "221",
+    "223"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-108",
+   "host": "223",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "1E2",
+    "1E4",
+    "7C3"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-109",
+   "host": "1E4",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "170",
+    "1E2",
+    "1E4"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-110",
+   "host": "1E4",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "184",
+    "23A",
+    "23C"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-111",
+   "host": "23C",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.09,
+   "edge_handles": [
+    "23A",
+    "23C",
+    "7CF"
+   ],
+   "eq_width_m": 0.139,
+   "face": "OWN-112",
+   "host": "23C",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0873,
+   "edge_handles": [
+    "21E",
+    "220",
+    "7C9",
+    "7CA"
+   ],
+   "eq_width_m": 0.107,
+   "face": "OWN-113",
+   "host": "220",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.08,
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "eq_width_m": 0.098,
+   "face": "OWN-114",
+   "host": "1EC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0777,
+   "edge_handles": [
+    "10A",
+    "21E",
+    "220",
+    "7C9",
+    "7CA"
+   ],
+   "eq_width_m": 0.238,
+   "face": "OWN-115",
+   "host": "220",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "22A",
+    "22C",
+    "7D1"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-116",
+   "host": "22C",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "10B",
+    "22A",
+    "22C"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-117",
+   "host": "22C",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "10A",
+    "216",
+    "218"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-118",
+   "host": "218",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "216",
+    "218",
+    "7D0"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-119",
+   "host": "218",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "109",
+    "170",
+    "1D4",
+    "1DC"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-120",
+   "host": "1DC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "109",
+    "232",
+    "234"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-121",
+   "host": "234",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "232",
+    "234",
+    "7CB"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-122",
+   "host": "234",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "1D4",
+    "1DC",
+    "7CB"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-123",
+   "host": "1DC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "24F",
+    "251",
+    "FC"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-124",
+   "host": "251",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "24F",
+    "251",
+    "7D0"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-125",
+   "host": "251",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "23F",
+    "241",
+    "7C3"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-126",
+   "host": "241",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "170",
+    "23F",
+    "241"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-127",
+   "host": "241",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "1FA",
+    "1FC",
+    "7E0"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-128",
+   "host": "1FC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.075,
+   "edge_handles": [
+    "1FA",
+    "1FC",
+    "FD"
+   ],
+   "eq_width_m": 0.135,
+   "face": "OWN-129",
+   "host": "1FC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.063,
+   "edge_handles": [
+    "13D",
+    "13E",
+    "20F",
+    "211"
+   ],
+   "eq_width_m": 0.175,
+   "face": "OWN-130",
+   "host": "211",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.063,
+   "edge_handles": [
+    "15F",
+    "170",
+    "1DE",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 0.175,
+   "face": "OWN-131",
+   "host": "1E0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.063,
+   "edge_handles": [
+    "1FE",
+    "200",
+    "7D0",
+    "FC",
+    "FD"
+   ],
+   "eq_width_m": 0.175,
+   "face": "OWN-132",
+   "host": "200",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0625,
+   "edge_handles": [
+    "108",
+    "172",
+    "17C0",
+    "1E6",
+    "1E8"
+   ],
+   "eq_width_m": 0.116,
+   "face": "OWN-133",
+   "host": "1E8",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0625,
+   "edge_handles": [
+    "1E6",
+    "1E8"
+   ],
+   "eq_width_m": 0.116,
+   "face": "OWN-134",
+   "host": "1E8",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "136",
+    "205",
+    "207"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-135",
+   "host": "207",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "205",
+    "207",
+    "7D4"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-136",
+   "host": "207",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "138",
+    "212",
+    "214"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-137",
+   "host": "214",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "137",
+    "212",
+    "214"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-138",
+   "host": "214",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "209",
+    "20B",
+    "F8"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-139",
+   "host": "20B",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.06,
+   "edge_handles": [
+    "209",
+    "20B",
+    "7D4"
+   ],
+   "eq_width_m": 0.127,
+   "face": "OWN-140",
+   "host": "20B",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0563,
+   "edge_handles": [
+    "136",
+    "137",
+    "138",
+    "202",
+    "204"
+   ],
+   "eq_width_m": 0.15,
+   "face": "OWN-141",
+   "host": "204",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1F0",
+    "1F2",
+    "7C2"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-142",
+   "host": "1F2",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1F3",
+    "1F5",
+    "7C2"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-143",
+   "host": "1F5",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1F0",
+    "1F2",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-144",
+   "host": "1F2",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1F3",
+    "1F5",
+    "7BE",
+    "7C2"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-145",
+   "host": "1F5",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1ED",
+    "1EF",
+    "7BE"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-146",
+   "host": "1EF",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.05,
+   "edge_handles": [
+    "1ED",
+    "1EF",
+    "7C2"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-147",
+   "host": "1EF",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.048,
+   "edge_handles": [
+    "13E",
+    "20F",
+    "211",
+    "7D2"
+   ],
+   "eq_width_m": 0.164,
+   "face": "OWN-148",
+   "host": "211",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.048,
+   "edge_handles": [
+    "15E",
+    "1DE",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 0.164,
+   "face": "OWN-149",
+   "host": "1E0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.048,
+   "edge_handles": [
+    "1FE",
+    "200",
+    "7D0",
+    "7E0"
+   ],
+   "eq_width_m": 0.164,
+   "face": "OWN-150",
+   "host": "200",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "eq_width_m": 0.046,
+   "face": "OWN-151",
+   "host": "1EC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "7DC",
+    "7F5",
+    "7F6"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-152",
+   "host": "7F5",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "7DD",
+    "7F5",
+    "7F6"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-153",
+   "host": "7F5",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "7E7",
+    "7ED",
+    "7EE"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-154",
+   "host": "7ED",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "7E8",
+    "7ED",
+    "7EE"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-155",
+   "host": "7ED",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "17C0",
+    "17C1"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-156",
+   "host": "17C0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "108",
+    "17C0",
+    "17C1",
+    "1E8"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-157",
+   "host": "17C0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "107",
+    "17BD",
+    "17BE"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-158",
+   "host": "17BD",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "7E0",
+    "809",
+    "80A"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-159",
+   "host": "809",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "809",
+    "80A",
+    "FD"
+   ],
+   "eq_width_m": 0.113,
+   "face": "OWN-160",
+   "host": "809",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.045,
+   "edge_handles": [
+    "157",
+    "17BA",
+    "17BB"
+   ],
+   "eq_width_m": 0.114,
+   "face": "OWN-161",
+   "host": "17BA",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0444,
+   "edge_handles": [
+    "158",
+    "17BA",
+    "17BB"
+   ],
+   "eq_width_m": 0.114,
+   "face": "OWN-162",
+   "host": "17BA",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0441,
+   "edge_handles": [
+    "17BD",
+    "17BE"
+   ],
+   "eq_width_m": 0.123,
+   "face": "OWN-163",
+   "host": "17BD",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0338,
+   "edge_handles": [
+    "138",
+    "202",
+    "204",
+    "7D5"
+   ],
+   "eq_width_m": 0.095,
+   "face": "OWN-164",
+   "host": "204",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.03,
+   "edge_handles": [
+    "13D",
+    "211",
+    "7D2",
+    "7D6"
+   ],
+   "eq_width_m": 0.1,
+   "face": "OWN-165",
+   "host": "",
+   "kind": "BEAM"
+  },
+  {
+   "area_m2": 0.027,
+   "edge_handles": [
+    "13E",
+    "20F",
+    "211",
+    "7D2"
+   ],
+   "eq_width_m": 0.081,
+   "face": "OWN-166",
+   "host": "211",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.027,
+   "edge_handles": [
+    "15E",
+    "1DE",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 0.081,
+   "face": "OWN-167",
+   "host": "1E0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.027,
+   "edge_handles": [
+    "1FE",
+    "200",
+    "7D0",
+    "7E0"
+   ],
+   "eq_width_m": 0.081,
+   "face": "OWN-168",
+   "host": "200",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0263,
+   "edge_handles": [
+    "138",
+    "202",
+    "204",
+    "7D5"
+   ],
+   "eq_width_m": 0.093,
+   "face": "OWN-169",
+   "host": "204",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0123,
+   "edge_handles": [
+    "145",
+    "21E",
+    "220",
+    "7C9"
+   ],
+   "eq_width_m": 0.04,
+   "face": "OWN-170",
+   "host": "220",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.012,
+   "edge_handles": [
+    "13D",
+    "13E",
+    "20F",
+    "211"
+   ],
+   "eq_width_m": 0.054,
+   "face": "OWN-171",
+   "host": "211",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.012,
+   "edge_handles": [
+    "15F",
+    "1DE",
+    "1E0",
+    "7C3"
+   ],
+   "eq_width_m": 0.054,
+   "face": "OWN-172",
+   "host": "1E0",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.012,
+   "edge_handles": [
+    "1FE",
+    "200",
+    "7D0",
+    "FD"
+   ],
+   "eq_width_m": 0.054,
+   "face": "OWN-173",
+   "host": "200",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.005,
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "eq_width_m": 0.025,
+   "face": "OWN-174",
+   "host": "1EC",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0038,
+   "edge_handles": [
+    "136",
+    "138",
+    "202",
+    "204"
+   ],
+   "eq_width_m": 0.032,
+   "face": "OWN-175",
+   "host": "204",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0009,
+   "edge_handles": [
+    "17BD",
+    "17BE"
+   ],
+   "eq_width_m": 0.017,
+   "face": "OWN-176",
+   "host": "17BD",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0006,
+   "edge_handles": [
+    "158",
+    "17BA"
+   ],
+   "eq_width_m": 0.002,
+   "face": "OWN-177",
+   "host": "17BA",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0,
+   "edge_handles": [
+    "255",
+    "FC"
+   ],
+   "eq_width_m": 0.0,
+   "face": "OWN-178",
+   "host": "255",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0,
+   "edge_handles": [],
+   "eq_width_m": 0.002,
+   "face": "OWN-179",
+   "host": "17BA",
+   "kind": "COLUMN"
+  },
+  {
+   "area_m2": 0.0,
+   "edge_handles": [],
+   "eq_width_m": 0.0,
+   "face": "OWN-180",
+   "host": "255",
+   "kind": "COLUMN"
+  }
+ ],
+ "frame": "T-141 GROUND BEAMS PLAN",
+ "gb_bounds_m": [
+  193.7583,
+  231.9083
+ ],
+ "schema": "T391_OWN_GROUND_V1",
+ "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+}
