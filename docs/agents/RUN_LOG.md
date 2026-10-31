@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T12:51Z | Verifier | STARTED | run session_01E6cPnbviNB76qpeDiEEvMxV | repo-attached routine | task state: READY T-391, T-392, T-390 | self-check pending
 - 2026-10-31T12:39Z | Worker 2 | STARTED | run session_01E6cPnb6vTzXk6DkwhSN2Aa | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31 12:23 UTC | Lead | SUCCESS | board | Since 08:19: T-389, T-385 r2, T-328 WORKED (Gate B PASS, candidate of record V3.0.31: roof finish 202.220 m2 MEASURED, screed HELD, insulation / protection UNKNOWN); READY 3 queued T-391 > T-392 > T-390 (no Gate B READY); T-284 ceilings TODO next in I; NEW T-394 (S columns), T-395 (S beams), T-398 (S stairs/domes/pump + T-391 F2), T-396 (A boundary fence blockwork, missing category, Q-65 C), T-397 (I structural corrections after T-391/T-392); register: pool fourth side = 3.50 m pool wall + 1.668 m plot boundary wall; Drive no new files; Worker 3 stamp ahead of clock noted; queue check: 47 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: first board check refused to pull with unstaged edits (ran after commit), none refused
 - 2026-10-31 12:17 UTC | Lead | STARTED | run session_01E6cPncqf1ppakY722nEUso | repo-attached routine | task state: board | report pending
