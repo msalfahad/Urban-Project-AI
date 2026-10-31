@@ -1,0 +1,358 @@
+{
+ "diff_vs_released_v2_9": {
+  "NOT_IN_RELEASED": 3100,
+  "QUANTITY_DIFFERS": 955,
+  "SAME_QUANTITY": 635
+ },
+ "diff_vs_v3_0_33": {
+  "CHANGED": 1,
+  "SAME": 4689
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.33",
+ "identity": {
+  "added": 0,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3100,
+    "QUANTITY_DIFFERS": 955,
+    "SAME_QUANTITY": 635
+   },
+   "vs_v3_0_33": {
+    "CHANGED": 1,
+    "SAME": 4689
+   }
+  },
+  "outside_rows_sha256": "fd8d1608e85c988763943ba05d3eadb17bf5c71fc5cdb7fdddd6e758454146cc",
+  "replaced": 1,
+  "tile_zones": {
+   "ZONE_PAINT_NA": 1
+  },
+  "zones_covered": 3
+ },
+ "lines": {
+  "v3_0_33": 4690,
+  "v3_0_34": 4690
+ },
+ "method": "ARCH_TAKEOFF_V3.0.34",
+ "outside_rows": 4689,
+ "outside_rows_identical": 4689,
+ "piece_log": {
+  "b4_02_lines_added": 0,
+  "by_action": {
+   "ZONE_COVERED": 3,
+   "ZONE_PAINT_NA": 1
+  },
+  "lines_restated": 1,
+  "piece": "TILE_ZONES",
+  "state": "RUN",
+  "zone_m2_on_carriers": 84.8712,
+  "zones": 3,
+  "zones_valued": 2
+ },
+ "rows": [
+  {
+   "action": "ZONE_PAINT_NA",
+   "after_v3_0_34": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "engine_room": "GF-RC06FED",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-c3f7e68ce91a436802e2",
+   "unit": "m2",
+   "verification": "T-351+T-388"
+  }
+ ],
+ "schema": "T399_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "FIN.PAINT|m2": {
+   "v3_0_33": {
+    "blocked_lines": 4,
+    "bounded_lines": 7,
+    "held_high": 542.8606,
+    "held_low": 487.121,
+    "lines": 15,
+    "released": 217.2081
+   },
+   "v3_0_34": {
+    "blocked_lines": 3,
+    "bounded_lines": 7,
+    "held_high": 542.8606,
+    "held_low": 487.121,
+    "lines": 14,
+    "released": 217.2081
+   }
+  }
+ },
+ "v3_0_33_lines_json_sha256": "a545c5b33b1d419b89e13854de281a96cbd413000c07cf21e08e24bf54f52ece",
+ "v3_0_34_diff_sha256": "3b6caeee5b6db105c59b8356389ceda32239960733cab00cabf973c446cbbd97",
+ "v3_0_34_lines_csv_sha256": "4ba5bbe1cd27b5cc0ca47c09b52cfbab3d8a74ff1b8e664ff8da69a34ddf300a",
+ "v3_0_34_lines_json_sha256": "4c7f581cf13b28c166cf93532cbce2a79d1ad711bb0f6e9f3915fc8f279f5402",
+ "zone_room_wall_finish_lines": [
+  {
+   "byte_identical": true,
+   "element": "GF-RA3AD49:plaster",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "room": "GF-RA3AD49",
+   "v3_0_33": [
+    "BLOCKED_RFI",
+    null
+   ],
+   "v3_0_34": [
+    "BLOCKED_RFI",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "GF-RA3AD49:wall_tile",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-c330b8dc47261d5ada7e",
+   "room": "GF-RA3AD49",
+   "v3_0_33": [
+    "BLOCKED_RFI",
+    null
+   ],
+   "v3_0_34": [
+    "BLOCKED_RFI",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "GF-RC06FED:plaster",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-6470c6f20f86e542a5ce",
+   "room": "GF-RC06FED",
+   "v3_0_33": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ],
+   "v3_0_34": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "GF-RC06FED:paint",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-d2134defaa68a3aeccc5",
+   "room": "GF-RC06FED",
+   "v3_0_33": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ],
+   "v3_0_34": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "GF-RA3AD49:paint above wall tile",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-5587711f87b2fd35c076",
+   "room": "GF-RA3AD49",
+   "v3_0_33": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ],
+   "v3_0_34": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "1F-R26FA0D:plaster",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2948639faa08fa1cff81",
+   "room": "1F-R26FA0D",
+   "v3_0_33": [
+    "PROVISIONAL",
+    52.529
+   ],
+   "v3_0_34": [
+    "PROVISIONAL",
+    52.529
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "1F-R26FA0D:wall_tile",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-b2077eee5a71a975bd74",
+   "room": "1F-R26FA0D",
+   "v3_0_33": [
+    "PROVISIONAL",
+    52.529
+   ],
+   "v3_0_34": [
+    "PROVISIONAL",
+    52.529
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "1F-R26FA0D:paint above wall tile",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-7878bf61681466dee87e",
+   "room": "1F-R26FA0D",
+   "v3_0_33": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ],
+   "v3_0_34": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "HL:WALL_FINISH:GF_07:PLASTER",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-721a0f1441436193978c",
+   "room": "GF-RC06FED",
+   "v3_0_33": [
+    "PROVISIONAL",
+    32.3422
+   ],
+   "v3_0_34": [
+    "PROVISIONAL",
+    32.3422
+   ]
+  },
+  {
+   "byte_identical": false,
+   "element": "HL:WALL_FINISH:GF_07:PAINT",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-c3f7e68ce91a436802e2",
+   "room": "GF-RC06FED",
+   "v3_0_33": [
+    "BLOCKED_RFI",
+    null
+   ],
+   "v3_0_34": [
+    "NOT_APPLICABLE_WITH_EVIDENCE",
+    null
+   ]
+  },
+  {
+   "byte_identical": true,
+   "element": "GF-RC06FED#WALL_TILE:GF-07",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-f5c5a1a9c9ee2b644cb5",
+   "room": "GF-RC06FED",
+   "v3_0_33": [
+    "PROVISIONAL",
+    32.3422
+   ],
+   "v3_0_34": [
+    "PROVISIONAL",
+    32.3422
+   ]
+  }
+ ],
+ "zones": [
+  {
+   "b4_02_lines_added": 0,
+   "backing_line": "L-2948639faa08fa1cff81",
+   "backing_m2": 52.529,
+   "carrier_line": "L-b2077eee5a71a975bd74",
+   "carrier_state": "PROVISIONAL",
+   "code": "LAUNDRY",
+   "double_count_m2": 0.0,
+   "engine_room": "1F-R26FA0D",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "faces": 9,
+   "floor": "1F",
+   "held_item": null,
+   "paint_lines": [
+    [
+     "L-7878bf61681466dee87e",
+     "NOT_APPLICABLE_WITH_EVIDENCE"
+    ]
+   ],
+   "residual": null,
+   "room": "1F-07",
+   "table_net_m2": 52.529,
+   "zone": "FULL_HEIGHT",
+   "zone_m2_on_carrier": 52.529
+  },
+  {
+   "b4_02_lines_added": 0,
+   "backing_line": "L-595181aa140e7efb2ac7",
+   "backing_m2": null,
+   "carrier_line": "L-c330b8dc47261d5ada7e",
+   "carrier_state": "BLOCKED_RFI",
+   "code": "KITCHEN",
+   "double_count_m2": 0.0,
+   "engine_room": "GF-RA3AD49",
+   "evidence_status": "HELD",
+   "faces": 9,
+   "floor": "GF",
+   "held_item": "annex owner height not established (G2; Q-54 B HOLD, D-39): owner 3.15 information only",
+   "paint_lines": [
+    [
+     "L-5587711f87b2fd35c076",
+     "NOT_APPLICABLE_WITH_EVIDENCE"
+    ]
+   ],
+   "residual": null,
+   "room": "GF-06",
+   "table_net_m2": null,
+   "zone": "FULL_HEIGHT",
+   "zone_m2_on_carrier": null
+  },
+  {
+   "b4_02_lines_added": 0,
+   "backing_line": "L-721a0f1441436193978c",
+   "backing_m2": 32.3422,
+   "carrier_line": "L-f5c5a1a9c9ee2b644cb5",
+   "carrier_state": "PROVISIONAL",
+   "code": "PANTRY",
+   "double_count_m2": 0.0,
+   "engine_room": "GF-RC06FED",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "faces": 5,
+   "floor": "GF",
+   "held_item": null,
+   "paint_lines": [
+    [
+     "L-c3f7e68ce91a436802e2",
+     "NOT_APPLICABLE_WITH_EVIDENCE"
+    ],
+    [
+     "L-d2134defaa68a3aeccc5",
+     "NOT_APPLICABLE_WITH_EVIDENCE"
+    ]
+   ],
+   "residual": {
+    "cause": "F-T351-1 (T-351, Checker CONFIRMED): own vector reading of the pantry's tiled faces 10.500 m (drawn 3.000 x 4.500 rectangle) vs the per-face T-250 raster walk 10.491 m that composes the tile and backing lines (six walk pieces, 5 mm pixels): +0.009 m x 3.65 = +0.0328 m2 (+0.10 %); not applied: the walk pieces do not map one to one onto the drawn faces, so the line moves only with a face-by-face re-walk",
+    "m2": 0.0328
+   },
+   "room": "GF-07",
+   "table_net_m2": 32.375,
+   "zone": "HOST_FULL_WALL",
+   "zone_m2_on_carrier": 32.3422
+  }
+ ]
+}
