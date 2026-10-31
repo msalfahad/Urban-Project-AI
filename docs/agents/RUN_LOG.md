@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T15:50Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPncbGKSbofBRfMWrtGX active since 2026-10-31T14:50Z) | no check, no merge, no quantity change | self-check not run
 - 2026-10-31T15:36Z | Worker 1 | SUCCESS | T-398 READY (head c4cdf239) | stair/dome/pump concrete per piece: STAIR_DOME residual -11.383 m3 = traced -0.328 + HELD -5.788 + unexplained -5.266 (ST-02 UNRESOLVED -3.974; untraced his flight length -2.016 (2.00 m beyond the drawn 3.30 run), dome area +0.561, landing area +0.162); ownership -0.231 ENGINE_RIGHT; pump room drawn nowhere -3.480 HELD; F2 = foot of ST-02 curved flight, draft RFI-B-S35 / A14 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-31T15:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31 15:14 UTC | Worker 3 | SUCCESS | T-395 READY (agents/task-T-395 @ de042f71) | Beam concrete BM-GF -3.554 / BM-1F +5.535 / BM-2F -1.758 m3 traced: depth basis NOT a cause (both full depth, slab net, 0.000); omitted labelled marks +9.882 + upstands +0.240 + runs beyond his rows +2.119 (ENGINE_RIGHT), through-support lengths -5.029 (RULE_DIFFERENCE), dome ring +0.755 (T-398), HELD -7.376, untraced -0.367 (UNRESOLVED); no quantity change, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
