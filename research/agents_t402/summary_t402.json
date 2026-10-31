@@ -1,0 +1,54 @@
+{
+ "lines": 27,
+ "by_floor": {
+  "1F": 12,
+  "2F": 5,
+  "GF": 10
+ },
+ "by_result": {
+  "BOUNDED": 8,
+  "HELD": 19
+ },
+ "by_class": {
+  "WIDTH": {
+   "lines": 7,
+   "low_m3": 5.145035,
+   "high_m3": 6.111856,
+   "cand_low": 5.144829,
+   "cand_high": 6.11101,
+   "plan_area_m2": 0.0
+  },
+  "PROJECTION": {
+   "lines": 11,
+   "low_m3": 0.0,
+   "high_m3": 0.0,
+   "cand_low": 1.975,
+   "cand_high": 4.7095,
+   "plan_area_m2": 6.9471
+  },
+  "UNLABELLED": {
+   "lines": 7,
+   "low_m3": 0.966076,
+   "high_m3": 2.898228,
+   "cand_low": 1.041,
+   "cand_high": 2.5615,
+   "plan_area_m2": 0.0
+  },
+  "TWO_MARKS": {
+   "lines": 1,
+   "low_m3": 0.21196,
+   "high_m3": 0.397425,
+   "cand_low": 0.212,
+   "cand_high": 0.3975,
+   "plan_area_m2": 0.0
+  },
+  "RING": {
+   "lines": 1,
+   "low_m3": 0.0,
+   "high_m3": 0.0,
+   "cand_low": 0.0,
+   "cand_high": 0.0,
+   "plan_area_m2": 1.7993
+  }
+ }
+}
