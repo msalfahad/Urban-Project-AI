@@ -1,0 +1,539 @@
+{
+ "exterior_runs_inside_plot": [
+  {
+   "ff_m": 0.3639,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-ff727b2a52e39509a659",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "107+7CE#1"
+  },
+  {
+   "ff_m": 4.4,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-27d104ca6fc3556d16e6",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "109+7CB#2"
+  },
+  {
+   "ff_m": 2.7,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-46f25f72b44e8bc3e2e0",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "109+7CB#3"
+  },
+  {
+   "ff_m": 4.3,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-62f712462a36d4ad1b32",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "10A+7C9#1"
+  },
+  {
+   "ff_m": 1.2,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-6bf14711798e5af93594",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "10B+7D1#1"
+  },
+  {
+   "ff_m": 2.3,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-3284f44000c02179ace7",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "10B+7D1#2"
+  },
+  {
+   "ff_m": 1.0,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-d08e7a9d809a56733ff9",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "114+115+7DF#2"
+  },
+  {
+   "ff_m": 2.4,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-00465df980165c529476",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "137+138#1"
+  },
+  {
+   "ff_m": 5.8,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-d8b98b143e293d30833b",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "13D+7D2#1"
+  },
+  {
+   "ff_m": 0.5,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-b4a13a43967ee4765662",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "13E+7D6#2"
+  },
+  {
+   "ff_m": 1.9,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-26fcfbbb143269e7bb58",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "145+7CA#1"
+  },
+  {
+   "ff_m": 2.4,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-bde0257c24588948167f",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "170+7C3#1"
+  },
+  {
+   "ff_m": 3.37,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-efbed17455bb224e126e",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "170+7C3#2"
+  },
+  {
+   "ff_m": 3.35,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-1146bdecd41491ce9382",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "170+7C3#3"
+  },
+  {
+   "ff_m": 3.25,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-dac43ee18f55433b57e7",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "170+7C3#4"
+  },
+  {
+   "ff_m": 3.8,
+   "kind": "COURT",
+   "line_id": "L-21795b350fbd09150c43",
+   "line_status_v3015": "HELD",
+   "masonry": "UNKNOWN_EXISTENCE",
+   "plot_line_face": null,
+   "reason": "court run: no section printed (T-253 s.4) and no band below; nothing printed to build on; HELD with its section",
+   "run": "178+7DB#1"
+  },
+  {
+   "ff_m": 1.3,
+   "kind": "COURT",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "line_status_v3015": "HELD",
+   "masonry": "UNKNOWN_EXISTENCE",
+   "plot_line_face": null,
+   "reason": "court run: no section printed (T-253 s.4) and no band below; nothing printed to build on; HELD with its section",
+   "run": "1811+1812#1"
+  },
+  {
+   "ff_m": 0.6,
+   "kind": "COURT",
+   "line_id": "L-62243c74c430d383be86",
+   "line_status_v3015": "HELD",
+   "masonry": "UNKNOWN_EXISTENCE",
+   "plot_line_face": null,
+   "reason": "court run: no section printed (T-253 s.4) and no band below; nothing printed to build on; HELD with its section",
+   "run": "185+7C7#1"
+  },
+  {
+   "ff_m": 1.8063,
+   "kind": "EXTERIOR_ANNEX",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "line_status_v3015": "CONFLICT",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "ARC:139+13A"
+  },
+  {
+   "ff_m": 6.0873,
+   "kind": "EXTERIOR_MAIN",
+   "line_id": "L-7076482d75ca42691468",
+   "line_status_v3015": "DRAWING-CONFIRMED",
+   "masonry": "NOT_APPLICABLE",
+   "plot_line_face": null,
+   "reason": "ST p.13 exterior section: soffit on 10 cm blinding at the outer normal ground; no band drawn below (foundation plan S-BOUN only on the plot line)",
+   "run": "ARC:157+158"
+  }
+ ],
+ "freelancer": {
+  "below_ground_block_rows": 0,
+  "note": "blockwork workbook: GF exterior rows at 4.0 / 3.5 m (above the slab), 'السور' 37.2 x 2 above N.G.; no row below N.G. or under the ground beams (quantities only)"
+ },
+ "input_sha_note": "ALSENAN_T407_INPUT.json from ST7757 dxf.dxf 9f9d1179",
+ "one_layer": {
+  "band_axis_total_m": 91.94,
+  "fence_axis_m_T403": 44.07,
+  "house_axis_equals_T403_house_split_m": -0.0,
+  "house_axis_m": 44.37,
+  "house_axis_mm_inside_fence_band": 0.0,
+  "partition_residual_m": 0.0,
+  "pool_axis_m_T403": 3.5
+ },
+ "runs": [
+  {
+   "axis_m": 19.271,
+   "class": "MASONRY_PRINTED",
+   "columns": [
+    [
+     "200",
+     0.201,
+     0.15
+    ],
+    [
+     "218",
+     0.5,
+     0.15
+    ],
+    [
+     "249",
+     1.1,
+     0.33
+    ],
+    [
+     "251",
+     0.5,
+     0.15
+    ],
+    [
+     "255",
+     0.7,
+     0.21
+    ]
+   ],
+   "columns_m": 3.001,
+   "conditional_net_m2": {
+    "N.G.": 11.389
+   },
+   "evidence": "ST p.1 note 2: neighbour-side exterior ground beams cast with black block above and below, built from the foundation level",
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     3.151
+    ],
+    [
+     "F11:1B07",
+     3.5
+    ],
+    [
+     "F14:1B1A",
+     3.8
+    ],
+    [
+     "F:166A",
+     0.65
+    ]
+   ],
+   "gb_ff_sum_m": 16.27,
+   "gb_runs_over": [
+    {
+     "ff_m": 2.975,
+     "line_id": "L-cc6aaa99e1892f34b92f",
+     "run": "7D0+FC#1"
+    },
+    {
+     "ff_m": 5.745,
+     "line_id": "L-e8536bc4f2699a24e2ab",
+     "run": "7D0+FC#2"
+    },
+    {
+     "ff_m": 6.35,
+     "line_id": "L-e9a885323ad6ec3ea32b",
+     "run": "7D0+FC#3"
+    },
+    {
+     "ff_m": 1.2,
+     "line_id": "L-c9bb2eca50a2a2c8b569",
+     "run": "7D0+FC#4"
+    }
+   ],
+   "gross_at_least_m2": 13.4897,
+   "h": {
+    "basis": "AT_LEAST (formation printed as a minimum)",
+    "conditional": {
+     "N.G.": 0.7
+    },
+    "h_at_least": 0.7
+   },
+   "house_gb_faces": [
+    [
+     "FC",
+     18.87
+    ],
+    [
+     "FD",
+     0.101
+    ]
+   ],
+   "id": "MAIN_S",
+   "net_at_least_m2": 11.389,
+   "net_axis_m": 16.27,
+   "owner": "MAIN",
+   "side": "S (neighbour)",
+   "status": "MISSING_HELD_AT_LEAST",
+   "value_m2": null
+  },
+  {
+   "axis_m": 10.701,
+   "class": "MASONRY_PRINTED",
+   "columns": [
+    [
+     "207",
+     0.301,
+     0.12
+    ],
+    [
+     "20B",
+     0.4,
+     0.12
+    ]
+   ],
+   "columns_m": 0.701,
+   "conditional_net_m2": {
+    "L (levels, D 0.25)": 7.0
+   },
+   "evidence": "ST p.1 note 2 (as MAIN_S); annex beam depth D-35 CONFLICT",
+   "footing_crossings_m": [
+    [
+     "F15:1B2A",
+     1.8
+    ],
+    [
+     "F:1669",
+     0.801
+    ]
+   ],
+   "gb_ff_sum_m": 9.7,
+   "gb_runs_over": [
+    {
+     "ff_m": 5.45,
+     "line_id": "L-402dbe61d1c924144a3c",
+     "run": "7D4+F8#1"
+    },
+    {
+     "ff_m": 4.25,
+     "line_id": "L-402dbe61d1c924144a3c",
+     "run": "7D4+F8#2"
+    }
+   ],
+   "gross_at_least_m2": null,
+   "h": {
+    "basis": "CONFLICT: reading(s) S (section, D unprinted) print no soffit; no bound adopted",
+    "conditional": {
+     "L (levels, D 0.25)": 0.7
+    },
+    "h_at_least": null
+   },
+   "house_gb_faces": [
+    [
+     "136",
+     0.101
+    ],
+    [
+     "F8",
+     10.43
+    ]
+   ],
+   "id": "ANNEX_S",
+   "net_at_least_m2": null,
+   "net_axis_m": 10.0,
+   "owner": "ANNEX",
+   "side": "S (neighbour)",
+   "status": "MISSING_HELD_UNBOUNDED",
+   "value_m2": null
+  },
+  {
+   "axis_m": 7.799,
+   "class": "UNKNOWN_EXISTENCE",
+   "columns": [
+    [
+     "1FC",
+     0.5,
+     0.15
+    ],
+    [
+     "200",
+     0.399,
+     0.15
+    ],
+    [
+     "809",
+     0.3,
+     0.09
+    ]
+   ],
+   "columns_m": 1.199,
+   "conditional_net_m2": {
+    "N.G.": 4.62
+   },
+   "evidence": "lower band drawn (S-BOUN 1658/1659); nothing printed between it and the beam; p.1 note 2 names the neighbour side only",
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     1.299
+    ],
+    [
+     "F8:1B24",
+     1.95
+    ],
+    [
+     "FN:1100",
+     1.0
+    ]
+   ],
+   "gb_ff_sum_m": 6.6,
+   "gb_runs_over": [
+    {
+     "ff_m": 3.35,
+     "line_id": "L-9e28c7012784a8dc33c8",
+     "run": "7E0+FD#1"
+    },
+    {
+     "ff_m": 3.25,
+     "line_id": "L-9e28c7012784a8dc33c8",
+     "run": "7E0+FD#2"
+    }
+   ],
+   "gross_at_least_m2": null,
+   "h": {
+    "basis": "AT_LEAST (formation printed as a minimum)",
+    "conditional": {
+     "N.G.": 0.7
+    },
+    "h_at_least": 0.7
+   },
+   "house_gb_faces": [
+    [
+     "FD",
+     7.799
+    ]
+   ],
+   "id": "MAIN_E_SEA",
+   "net_at_least_m2": null,
+   "net_axis_m": 6.6,
+   "owner": "MAIN",
+   "side": "E (sea)",
+   "status": "HELD_EXISTENCE_UNKNOWN",
+   "value_m2": null
+  },
+  {
+   "axis_m": 6.599,
+   "class": "UNKNOWN_EXISTENCE",
+   "columns": [
+    [
+     "204",
+     0.4,
+     0.12
+    ],
+    [
+     "207",
+     0.199,
+     0.12
+    ]
+   ],
+   "columns_m": 0.599,
+   "conditional_net_m2": {
+    "L (levels, D 0.25)": 4.2
+   },
+   "evidence": "as MAIN_E_SEA; annex beam depth D-35 CONFLICT",
+   "footing_crossings_m": [
+    [
+     "F:1668",
+     0.7
+    ],
+    [
+     "F:1669",
+     0.699
+    ]
+   ],
+   "gb_ff_sum_m": 6.0,
+   "gb_runs_over": [
+    {
+     "ff_m": 6.0,
+     "line_id": "L-4783c6e18002c3a8a37e",
+     "run": "136+7D5#1"
+    }
+   ],
+   "gross_at_least_m2": null,
+   "h": {
+    "basis": "CONFLICT: reading(s) S (section, D unprinted) print no soffit; no bound adopted",
+    "conditional": {
+     "L (levels, D 0.25)": 0.7
+    },
+    "h_at_least": null
+   },
+   "house_gb_faces": [
+    [
+     "136",
+     6.599
+    ]
+   ],
+   "id": "ANNEX_W_STREET",
+   "net_at_least_m2": null,
+   "net_axis_m": 6.0,
+   "owner": "ANNEX",
+   "side": "W (street)",
+   "status": "HELD_EXISTENCE_UNKNOWN",
+   "value_m2": null
+  }
+ ],
+ "schema": "URBAN_T407_SUMMARY_V1",
+ "totals": {
+  "at_least_gross_m2_bounded_runs": 13.4897,
+  "at_least_net_m2_bounded_runs": 11.389,
+  "existence_unknown_runs": [
+   "MAIN_E_SEA",
+   "ANNEX_W_STREET"
+  ],
+  "printed_runs_axis_m": 29.972,
+  "printed_runs_net_axis_m": 26.27,
+  "unbounded_printed_runs": [
+   "ANNEX_S"
+  ]
+ }
+}
