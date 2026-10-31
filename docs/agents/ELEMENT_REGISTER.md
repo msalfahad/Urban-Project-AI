@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- BELOW-GROUND MASONRY UNDER THE HOUSE GROUND BEAMS (Lead 2026-10-31 20:20; T-403 MERGED a72a7282): owner trade
+  BLOCKWORK BELOW N.G., its own line per run, never inside the boundary-wall masonry (T-403 / T-400) and never inside the
+  ground-beam concrete (T-391); the south run 29.97 m is MISSING in every state; height / type HELD until printed -> T-407.
+- LIFT GF TIE BEAM (Lead 2026-10-31 20:20; T-401 READY, unverified): owner trade STRUCTURE, one beam line between the
+  lift column faces (the columns own the joints, T-394 ruling), never inside the column or pit-wall lines; section HELD
+  D-43 -> T-408 after T-401 MERGED.
+- BEAM WIDTH CONFLICT AND THE SLAB EDGE (Lead 2026-10-31 20:20; T-402 READY, unverified, R-T402-5): the slab is net of
+  the drawn beam faces, so a width alternative moves the slab by the same strip (OVERLAP 0.149 / GAP 0.102 m3); the beam
+  and slab bounds of one conflict are carried as ONE bound pair, never bounded independently (never both full, never
+  neither) -> a lane I row after T-402 MERGED.
+- FLOOR FINISH BOUNDARY (Lead 2026-10-31 20:20): one boundary between two floor finishes is ONE item: a marble threshold
+  (B3-04) OR a transition profile (B3-07), never both; counted once per opening id, never from both rooms -> T-409.
+- STAIR SIDE (Lead 2026-10-31 20:20): each side of a flight is a WALL side (skirting B7-07 / B7-08) or an OPEN side
+  (guard B7-09 / railing), never both; landing skirting is not also in the room skirting line B3-06 -> T-410.
 - LIFT PIT AND SHAFT (Lead 2026-10-31 16:20; T-394 MERGED e27c5d78, T-391 MERGED c3fe8ec8): pit walls = owner trade
   STRUCTURE (new line CONC.LIFT_PIT_WALL, plan ring 2.20^2 - 1.80^2 = 1.600 m2 less the four column bonds 0.500 = 1.100 m2
   DRAWING-CONFIRMED by the Checker, depth HELD D-43) -> T-397; the four lift columns stay COLUMN lines (never also in the
