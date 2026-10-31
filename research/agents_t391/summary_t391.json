@@ -1,0 +1,348 @@
+{
+ "beams": {
+  "cause_terms_m3": {
+   "held_runs": -9.690354,
+   "length_basis_untraced": -3.00798,
+   "plan_end_adjustments": 1.3e-05,
+   "section_on_valued_runs": 2.343707
+  },
+  "drawn_bounds_m": [
+   193.7583,
+   231.9083
+  ],
+  "engine_length_m": 194.289,
+  "groups": {
+   "exterior main house, D printed by two levels (top +0.95 to N.G. +-0.00)": {
+    "L_m": 56.5168,
+    "plan_m3": 9e-06,
+    "runs": 16,
+    "section_m3": 5.796522
+   },
+   "interior p.13 class D 0.30": {
+    "L_m": 0.1,
+    "plan_m3": 0.0,
+    "runs": 1,
+    "section_m3": -0.009
+   },
+   "interior p.13 class D 0.40": {
+    "L_m": 57.3969,
+    "plan_m3": 4e-06,
+    "runs": 17,
+    "section_m3": -3.443815
+   },
+   "interior p.13 class D 0.60": {
+    "L_m": 26.44,
+    "plan_m3": 0.0,
+    "runs": 4,
+    "section_m3": -0.0
+   }
+  },
+  "held_length_m": 53.8353,
+  "held_lines": 20,
+  "length_inside_drawn_bounds": true,
+  "lines": 58,
+  "remainder_m3": -0.0,
+  "residual_m3": -10.354614,
+  "valued_m3": 27.625386
+ },
+ "schema": "T391_SUMMARY_V1",
+ "slab": {
+  "cause_terms_m3": {
+   "engine_vs_own_on_valued_faces": -0.0847,
+   "held_cell_panels": -3.56054,
+   "other_beyond_drawn_network": -0.63864,
+   "panels_routed_to_other_family": -0.83723,
+   "strips_under_other_plate": -7.18821
+  },
+  "engine_held_bound_m3": 3.929788,
+  "engine_held_line": "L-41cfb82ed733f4d6e3a5",
+  "engine_valued_m2": 172.4068,
+  "engine_valued_m3": 17.240684,
+  "held_cell_own": {
+   "high_m3": 3.56054,
+   "not_slab_m2": 6.2283,
+   "slab_m2": 35.6054
+  },
+  "other_family_cells": [
+   "SITE-4df8fcd99d130701"
+  ],
+  "own_network_m2": 289.1136,
+  "own_other_family_m2": 8.3723,
+  "own_panels_m2": 217.2315,
+  "own_strips_m2": 71.8821,
+  "own_totals_m2": {
+   "BEAM": 57.9719,
+   "COLUMN": 5.8652,
+   "LIFT": 8.045,
+   "PANEL": 217.2315
+  },
+  "own_valued_panels_m2": 173.2538,
+  "per_face": [
+   {
+    "engine_cell": "SITE-01e75a66f002baa9",
+    "engine_m2": 6.0,
+    "gross_m2": 6.0001,
+    "line_id": "L-f8a170a867d268254e07",
+    "member_overlap_m2": 0.0001,
+    "own_faces": [
+     "OWN-015"
+    ],
+    "own_m2": 6.0
+   },
+   {
+    "engine_cell": "SITE-0caa2bd2c0478041",
+    "engine_m2": 2.0502,
+    "gross_m2": 2.0502,
+    "line_id": "L-5e881fd31885949d4e66",
+    "member_overlap_m2": 0.0,
+    "own_faces": [],
+    "own_m2": 0,
+    "shares_own_face_with": "SITE-d74f3fe29b88467a"
+   },
+   {
+    "engine_cell": "SITE-2870ca7b6a82bfa0",
+    "engine_m2": 1.14,
+    "gross_m2": 1.14,
+    "line_id": "L-a7ab57d873e26a587fd9",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-048"
+    ],
+    "own_m2": 1.14
+   },
+   {
+    "engine_cell": "SITE-2d53359453ef2573",
+    "engine_m2": 14.5258,
+    "gross_m2": 14.5258,
+    "line_id": "L-22f26ff4a88e16eccff1",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-005"
+    ],
+    "own_m2": 14.5258
+   },
+   {
+    "engine_cell": "SITE-3f7728a83b30ec14",
+    "engine_m2": 2.6156,
+    "gross_m2": 2.6156,
+    "line_id": "L-8b681fdaa3b3910b2b7b",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-022"
+    ],
+    "own_m2": 2.7212
+   },
+   {
+    "engine_cell": "SITE-49a7dae5c139aebb",
+    "engine_m2": 3.5977,
+    "gross_m2": 3.8344,
+    "line_id": "L-69527cb9affdad474268",
+    "member_overlap_m2": 0.2367,
+    "own_faces": [
+     "OWN-018"
+    ],
+    "own_m2": 3.8344
+   },
+   {
+    "engine_cell": "SITE-4bb22fd85925adb0",
+    "engine_m2": 2.0625,
+    "gross_m2": 2.0625,
+    "line_id": "L-318b26bd7fe7b9c0a026",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-026"
+    ],
+    "own_m2": 2.0625
+   },
+   {
+    "engine_cell": "SITE-5922f7d38ef95d0f",
+    "engine_m2": 2.6825,
+    "gross_m2": 2.6825,
+    "line_id": "L-ecc50c39d9be087ead23",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-023"
+    ],
+    "own_m2": 2.6825
+   },
+   {
+    "engine_cell": "SITE-659735106ca717bc",
+    "engine_m2": 6.88,
+    "gross_m2": 6.88,
+    "line_id": "L-e2c5b39a34b082f7048c",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-013"
+    ],
+    "own_m2": 6.88
+   },
+   {
+    "engine_cell": "SITE-67b20a045d91a15c",
+    "engine_m2": 4.18,
+    "gross_m2": 4.18,
+    "line_id": "L-90b863dddb0d2d66006d",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-017"
+    ],
+    "own_m2": 4.18
+   },
+   {
+    "engine_cell": "SITE-720fbae909da79f9",
+    "engine_m2": 6.86,
+    "gross_m2": 6.86,
+    "line_id": "L-01ab48550ede182f95f8",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-014"
+    ],
+    "own_m2": 6.86
+   },
+   {
+    "engine_cell": "SITE-77b8830f567fb93d",
+    "engine_m2": 14.8931,
+    "gross_m2": 14.8931,
+    "line_id": "L-bb5f541401f358993181",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-003"
+    ],
+    "own_m2": 14.8931
+   },
+   {
+    "engine_cell": "SITE-7fae2795d77272cb",
+    "engine_m2": 1.44,
+    "gross_m2": 1.44,
+    "line_id": "L-3e491437888384514498",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-036"
+    ],
+    "own_m2": 1.44
+   },
+   {
+    "engine_cell": "SITE-997c65af642cbd7e",
+    "engine_m2": 0.1556,
+    "gross_m2": 0.1556,
+    "line_id": "L-ac92bcb7d88ef65bc82f",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-090"
+    ],
+    "own_m2": 0.1556
+   },
+   {
+    "engine_cell": "SITE-b1e0844b87508d13",
+    "engine_m2": 1.704,
+    "gross_m2": 1.704,
+    "line_id": "L-8134577db97df050ff28",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-032"
+    ],
+    "own_m2": 1.704
+   },
+   {
+    "engine_cell": "SITE-b8f67954c29b4613",
+    "engine_m2": 14.8931,
+    "gross_m2": 14.8931,
+    "line_id": "L-9ee6ac27fb8cd893eb93",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-004"
+    ],
+    "own_m2": 14.8931
+   },
+   {
+    "engine_cell": "SITE-c1b4b440fb6ecf4c",
+    "engine_m2": 2.2447,
+    "gross_m2": 2.2447,
+    "line_id": "L-f192ff5f4962efa8d08f",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-025"
+    ],
+    "own_m2": 2.2534
+   },
+   {
+    "engine_cell": "SITE-c26e93b649f5066b",
+    "engine_m2": 8.124,
+    "gross_m2": 8.124,
+    "line_id": "L-12a2c3c89221d4e4470b",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-012"
+    ],
+    "own_m2": 8.124
+   },
+   {
+    "engine_cell": "SITE-cd1f57cc06b2f5af",
+    "engine_m2": 24.505,
+    "gross_m2": 24.505,
+    "line_id": "L-a36f703f0b42eed2195c",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-001"
+    ],
+    "own_m2": 24.505
+   },
+   {
+    "engine_cell": "SITE-d74f3fe29b88467a",
+    "engine_m2": 10.9051,
+    "gross_m2": 10.9051,
+    "line_id": "L-1031c9be9aaae364fef4",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-006"
+    ],
+    "own_m2": 13.4514
+   },
+   {
+    "engine_cell": "SITE-dddf2004a2525169",
+    "engine_m2": 3.255,
+    "gross_m2": 3.255,
+    "line_id": "L-5e79c7fa289cf65458d4",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-019"
+    ],
+    "own_m2": 3.255
+   },
+   {
+    "engine_cell": "SITE-e4c2bd9d98ce6a72",
+    "engine_m2": 22.9654,
+    "gross_m2": 22.9654,
+    "line_id": "L-e99390a3f7025b2195a5",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-002"
+    ],
+    "own_m2": 22.9653
+   },
+   {
+    "engine_cell": "SITE-f22fd4467ee5a144",
+    "engine_m2": 3.1175,
+    "gross_m2": 3.1175,
+    "line_id": "L-16dd2274da8100309927",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-021"
+    ],
+    "own_m2": 3.1175
+   },
+   {
+    "engine_cell": "SITE-f98829c44e7af78b",
+    "engine_m2": 11.61,
+    "gross_m2": 11.61,
+    "line_id": "L-b27103a640f67f285132",
+    "member_overlap_m2": 0.0,
+    "own_faces": [
+     "OWN-008"
+    ],
+    "own_m2": 11.61
+   }
+  ],
+  "remainder_m3": 4e-06,
+  "residual_m3": -12.309316
+ }
+}
