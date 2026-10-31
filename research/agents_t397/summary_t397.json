@@ -1,0 +1,1503 @@
+{
+ "diff_vs_released_v2_9": {
+  "NOT_IN_RELEASED": 3100,
+  "QUANTITY_DIFFERS": 955,
+  "SAME_QUANTITY": 635
+ },
+ "diff_vs_v3_0_32": {
+  "ADDED": 1,
+  "CHANGED": 30,
+  "SAME": 4659
+ },
+ "downstream_naming_touched_elements": [
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-ae0d688f7f2127696684",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-6e80307d3649bddb80b6",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-b8482107f372617e0808",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-40973acdc3c3797fa441",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-d56d13bbfa402c600e98",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-093b1a8701615f5fed8c",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-5db3bf6439ebfa2a7d61",
+   "names_touched_elements": 1,
+   "qty": 5.31274,
+   "range": null,
+   "state": "SOURCE_DERIVED",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-b0c5e97b91d9fd034670",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-3af6c436cd3960b58d04",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-f4de98be566024394324",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-b7c3669d6e193e35e457",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-82b8e8bf610932c84e9d",
+   "names_touched_elements": 1,
+   "qty": 6.992909,
+   "range": null,
+   "state": "SOURCE_DERIVED",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-9b68c460329caf2c6d29",
+   "names_touched_elements": 1,
+   "qty": 3.724102,
+   "range": null,
+   "state": "SOURCE_DERIVED",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-61689f48198a11cbeb90",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-bba03bb82e17edf0c3dd",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-84438f3b8c366e8d7ceb",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-da4abbc0be2d97a8081d",
+   "names_touched_elements": 1,
+   "qty": 1.755197,
+   "range": null,
+   "state": "SOURCE_DERIVED",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-aa26277740773f7d0c59",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  },
+  {
+   "byte_identical_to_v3_0_32": true,
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-afcc824345dfaed5ab2c",
+   "names_touched_elements": 1,
+   "qty": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "unit": "m2"
+  }
+ ],
+ "extends": "ARCH_TAKEOFF_V3.0.32",
+ "families": {
+  "BM-GF": {
+   "v3_0_32": {
+    "blank": 1,
+    "range_high": 6.59128,
+    "range_lines": 9,
+    "range_low": 4.867479,
+    "valued": 39.329077,
+    "valued_lines": 59
+   },
+   "v3_0_33": {
+    "blank": 1,
+    "range_high": 6.59128,
+    "range_lines": 9,
+    "range_low": 4.867479,
+    "valued": 39.332251,
+    "valued_lines": 59
+   }
+  },
+  "CL-1F": {
+   "v3_0_32": {
+    "blank": 0,
+    "range_high": 0.0,
+    "range_lines": 0,
+    "range_low": 0.0,
+    "valued": 10.248,
+    "valued_lines": 20
+   },
+   "v3_0_33": {
+    "blank": 0,
+    "range_high": 7.644,
+    "range_lines": 11,
+    "range_low": 5.964,
+    "valued": 4.284,
+    "valued_lines": 9
+   }
+  },
+  "CL-GF": {
+   "v3_0_32": {
+    "blank": 5,
+    "range_high": 0.0,
+    "range_lines": 0,
+    "range_low": 0.0,
+    "valued": 17.9675,
+    "valued_lines": 25
+   },
+   "v3_0_33": {
+    "blank": 5,
+    "range_high": 2.475,
+    "range_lines": 4,
+    "range_low": 2.07,
+    "valued": 15.4925,
+    "valued_lines": 21
+   }
+  },
+  "GS": {
+   "v3_0_32": {
+    "blank": 0,
+    "range_high": 3.929788,
+    "range_lines": 1,
+    "range_low": 3.929788,
+    "valued": 17.240684,
+    "valued_lines": 24
+   },
+   "v3_0_33": {
+    "blank": 0,
+    "range_high": 3.56054,
+    "range_lines": 1,
+    "range_low": 0.0,
+    "valued": 17.240684,
+    "valued_lines": 24
+   }
+  },
+  "LIFT": {
+   "v3_0_32": {
+    "blank": 0,
+    "range_high": 0.0,
+    "range_lines": 0,
+    "range_low": 0.0,
+    "valued": 0.0,
+    "valued_lines": 0
+   },
+   "v3_0_33": {
+    "blank": 1,
+    "range_high": 0.0,
+    "range_lines": 0,
+    "range_low": 0.0,
+    "valued": 0.0,
+    "valued_lines": 0
+   }
+  }
+ },
+ "identity": {
+  "added": 1,
+  "corrections": {
+   "blank": 11,
+   "by_action": {
+    "CONFLICT_RANGE": 15,
+    "DEPENDENT_HELD": 10,
+    "GAP_RESTORE": 4,
+    "HELD_BOUND": 1,
+    "MISSING_HELD": 1
+   },
+   "range_high_m3": 10.119,
+   "range_low_m3": 8.034,
+   "valued_m3": 2.838708
+  },
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3100,
+    "QUANTITY_DIFFERS": 955,
+    "SAME_QUANTITY": 635
+   },
+   "vs_v3_0_32": {
+    "ADDED": 1,
+    "CHANGED": 30,
+    "SAME": 4659
+   }
+  },
+  "outside_rows_sha256": "e4a5ddb60c15b1c6a048bc475803e1a0c88517b59c808d82f4da4b319e47d6f7",
+  "replaced": 30
+ },
+ "lines": {
+  "v3_0_32": 4689,
+  "v3_0_33": 4690
+ },
+ "method": "ARCH_TAKEOFF_V3.0.33",
+ "outside_rows": 4659,
+ "outside_rows_identical": 4659,
+ "piece_log": {
+  "by_action": {
+   "CONFLICT_RANGE": 15,
+   "DEPENDENT_HELD": 10,
+   "GAP_RESTORE": 4,
+   "HELD_BOUND": 1,
+   "MISSING_HELD": 1
+  },
+  "lines_added": 1,
+  "lines_restated": 30,
+  "m3_moved": {
+   "formwork_m2_to_held": 0.928054,
+   "held_high": -0.369248,
+   "range_high": 10.119,
+   "range_low": 8.034,
+   "valued": 0.003174,
+   "valued_to_range": -8.439
+  },
+  "piece": "STRUCTURAL_CORRECTIONS",
+  "state": "RUN"
+ },
+ "rows": [
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "held bound 0 .. 3.56054 m3 = 0 .. the element's own pieces (R-T391-5: the held cell's gross holds the 1.80 x 1.80 lift shaft (a pit, T-063) and beam / column strips round it (not slab, 6.2283 m2); its own slab panels are 35.6054 m2 x the printed T=10cm; the cell stays HELD (the shaft-corner columns ",
+    "high": 3.56054,
+    "low": 0.0
+   },
+   "after_v3_0_33": {
+    "high": 3.56054,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's exposure range",
+    "high": 3.9297875744003754,
+    "low": 3.9297875744003754
+   },
+   "before_released_v2_9": {
+    "high": 3.929788,
+    "low": 3.929788,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": 3.929788,
+    "low": 3.929788,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-41cfb82ed733f4d6e3a5",
+   "record_action": "HELD_BOUND",
+   "unit": "m3",
+   "verification": "T-391"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.255
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.254647
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-cbf53752cfd897c35c2c",
+   "record_action": "GAP_RESTORE",
+   "unit": "m3",
+   "verification": "T-392"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.528021
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.526665
+   },
+   "evidence_status": "VERIFIED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9a55aadc9f0880ae37a7",
+   "record_action": "GAP_RESTORE",
+   "unit": "m3",
+   "verification": "T-392"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 1.33875
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 1.337922
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9270e8b8860414386adb",
+   "record_action": "GAP_RESTORE",
+   "unit": "m3",
+   "verification": "T-392"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.716937
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.7163
+   },
+   "evidence_status": "VERIFIED",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "record_action": "GAP_RESTORE",
+   "unit": "m3",
+   "verification": "T-392"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.756 | drawn 0.84 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.84,
+    "low": 0.756
+   },
+   "after_v3_0_33": {
+    "high": 0.84,
+    "low": 0.756,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.7560000000000001,
+    "low": 0.7560000000000001
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.63 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.63,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.63,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c677b628a776d3b87b02",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.525 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.525,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.525,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.756 | drawn 1.05 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 1.05,
+    "low": 0.756
+   },
+   "after_v3_0_33": {
+    "high": 1.05,
+    "low": 0.756,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.7560000000000001,
+    "low": 0.7560000000000001
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-755eb56b55e86301b488",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.504 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.504,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.504,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.504 | drawn 0.735 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.735,
+    "low": 0.504
+   },
+   "after_v3_0_33": {
+    "high": 0.735,
+    "low": 0.504,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.504,
+    "low": 0.504
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.504
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.504
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-a87ea657a42a311cb851",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.672 | drawn 0.84 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.84,
+    "low": 0.672
+   },
+   "after_v3_0_33": {
+    "high": 0.84,
+    "low": 0.672,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.6720000000000002,
+    "low": 0.6720000000000002
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.672
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.672
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-85809d3db52bb93dfe96",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.525 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.525,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.525,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.63 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.63,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.63,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-831f6fe3de133294bb8f",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.42 | drawn 0.525 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.525,
+    "low": 0.42
+   },
+   "after_v3_0_33": {
+    "high": 0.525,
+    "low": 0.42,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.42000000000000004,
+    "low": 0.42000000000000004
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.42
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-e112e2add2f8979a6c39",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.756 | drawn 0.84 m3 (D-16 (column C8 section, designer list))",
+    "high": 0.84,
+    "low": 0.756
+   },
+   "after_v3_0_33": {
+    "high": 0.84,
+    "low": 0.756,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.7560000000000001,
+    "low": 0.7560000000000001
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.756
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.5625 | drawn 0.45 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.5625,
+    "low": 0.45
+   },
+   "after_v3_0_33": {
+    "high": 0.5625,
+    "low": 0.45,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.5625,
+    "low": 0.5625
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.5625
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.5625
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.45 | drawn 0.36 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.45,
+    "low": 0.36
+   },
+   "after_v3_0_33": {
+    "high": 0.45,
+    "low": 0.36,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.45,
+    "low": 0.45
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.45
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.45
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 0.45 | drawn 0.36 m3 (column-band item (printed schedule vs drawn outline, T-256 designer list; D-63))",
+    "high": 0.45,
+    "low": 0.36
+   },
+   "after_v3_0_33": {
+    "high": 0.45,
+    "low": 0.36,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 0.45,
+    "low": 0.45
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.45
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.45
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-9cb26d86575a92694880",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": {
+    "basis": "CONFLICT printed-vs-drawn section: schedule 1.0125 | drawn 0.9 m3 (D-16 (column C8 section, designer list))",
+    "high": 1.0125,
+    "low": 0.9
+   },
+   "after_v3_0_33": {
+    "high": 1.0125,
+    "low": 0.9,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_held_range_v3_0_32": {
+    "basis": "the item's own convention range",
+    "high": 1.0125,
+    "low": 1.0125
+   },
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.0125
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.0125
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "record_action": "CONFLICT_RANGE",
+   "unit": "m3",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "ADD",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_V3_0_32",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "floor": "FOUNDATION",
+   "item_code": "STR.CONC.LIFT",
+   "line_id": "L-684fcad323adc0c8a267",
+   "record_action": "MISSING_HELD",
+   "unit": "m3",
+   "verification": "T-394"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.128
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-b9eab157c42424b4ce77",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.096
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-fbf94b0bb2323bfe65d8",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.128007
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-10c6bca8239b3d25ebf8",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.096
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-bf1eecb7350e8d43826e",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.08
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-754bc0ccda4ecb226d39",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.080019
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-b4c47b2ad35deb6f8abc",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.064
+   },
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-c00cf98ba8a408aa2f55",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.096014
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-45b8299ccc0c49c0c2c1",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.08
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-7b3aad24af34a0e58121",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  },
+  {
+   "action": "REPLACE",
+   "after_held_range_v3_0_33": null,
+   "after_v3_0_33": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_held_range_v3_0_32": null,
+   "before_released_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before_v3_0_32": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.080014
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-73757377a50522f001c8",
+   "record_action": "DEPENDENT_HELD",
+   "unit": "m2",
+   "verification": "T-394+T-256"
+  }
+ ],
+ "schema": "T397_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "STR.CONC.BEAM|m3": {
+   "v3_0_32": {
+    "blocked_lines": 5,
+    "bounded_lines": 22,
+    "held_high": 13.77951,
+    "held_low": 8.372829,
+    "lines": 137,
+    "released": 66.31788
+   },
+   "v3_0_33": {
+    "blocked_lines": 5,
+    "bounded_lines": 22,
+    "held_high": 13.77951,
+    "held_low": 8.372829,
+    "lines": 137,
+    "released": 66.321054
+   }
+  },
+  "STR.CONC.COLUMN|m3": {
+   "v3_0_32": {
+    "blocked_lines": 16,
+    "bounded_lines": 3,
+    "held_high": 3.483,
+    "held_low": 1.134,
+    "lines": 64,
+    "released": 28.2155
+   },
+   "v3_0_33": {
+    "blocked_lines": 16,
+    "bounded_lines": 18,
+    "held_high": 13.602,
+    "held_low": 9.168,
+    "lines": 64,
+    "released": 19.7765
+   }
+  },
+  "STR.CONC.GROUND_SLAB|m3": {
+   "v3_0_32": {
+    "blocked_lines": 0,
+    "bounded_lines": 1,
+    "held_high": 3.929788,
+    "held_low": 3.929788,
+    "lines": 25,
+    "released": 17.240685
+   },
+   "v3_0_33": {
+    "blocked_lines": 0,
+    "bounded_lines": 1,
+    "held_high": 3.56054,
+    "held_low": 0.0,
+    "lines": 25,
+    "released": 17.240685
+   }
+  },
+  "STR.CONC.LIFT|m3": {
+   "v3_0_32": null,
+   "v3_0_33": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "STR.FORMWORK|m2": {
+   "v3_0_32": {
+    "blocked_lines": 358,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 612,
+    "released": 1028.905457
+   },
+   "v3_0_33": {
+    "blocked_lines": 368,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 612,
+    "released": 1027.977403
+   }
+  }
+ },
+ "v3_0_32_lines_json_sha256": "0c8bfbe67444ebdcad77d671f1d89d1ba89fb39ef5f66aff4fb4a9631941b799",
+ "v3_0_33_lines_json_sha256": "a545c5b33b1d419b89e13854de281a96cbd413000c07cf21e08e24bf54f52ece"
+}

@@ -1,0 +1,169 @@
+{
+ "all_owner_method": {
+  "by_class_m": {
+   "DOOR_JAMB_HEAD": 179.1,
+   "EXTERNAL_CORNER": 254.05,
+   "MOUTH_WALL_END": 43.1,
+   "WALL_END": 6.7,
+   "WINDOW_JAMB_HEAD": 103.6831
+  },
+  "held_edges_by_class": {
+   "CEILING_EDGE": 1,
+   "DOOR_JAMB_HEAD": 5,
+   "EXTERNAL_CORNER": 6,
+   "FENCE_EDGE": 1,
+   "OPENING_UNDER_HEAD": 20,
+   "PARAPET_TOP": 8,
+   "SLAB_EDGE": 2,
+   "STAIR_EDGE": 1,
+   "STOP_END": 14,
+   "VOID_EDGE": 1,
+   "WINDOW_JAMB_HEAD": 16,
+   "WINDOW_SILL_EDGE": 23
+  },
+  "measured_by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 301.15,
+   "DRAWING-CONFIRMED": 285.4831
+  },
+  "measured_m": 586.6331
+ },
+ "dxf_sha8": "ab54dd55",
+ "engine_vs_freelancer": {
+  "exterior_diff_m": -986.6669,
+  "exterior_diff_pct": -76.05,
+  "exterior_freelancer_m": 1297.35,
+  "exterior_measured_m": 310.6831,
+  "interior_diff_m": -494.8,
+  "interior_diff_pct": -64.2,
+  "interior_freelancer_m": 770.75,
+  "interior_measured_m": 275.95,
+  "note": "measured only; every HELD class is outside these figures (never 0) and listed by count"
+ },
+ "exterior": {
+  "by_class_m": {
+   "DOOR_JAMB_HEAD": 39.2,
+   "EXTERNAL_CORNER": 124.7,
+   "MOUTH_WALL_END": 43.1,
+   "WINDOW_JAMB_HEAD": 103.6831
+  },
+  "held_edges_by_class": {
+   "DOOR_JAMB_HEAD": 2,
+   "FENCE_EDGE": 1,
+   "PARAPET_TOP": 8,
+   "SLAB_EDGE": 2,
+   "WINDOW_JAMB_HEAD": 10,
+   "WINDOW_SILL_EDGE": 23
+  },
+  "measured_by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 32.2,
+   "DRAWING-CONFIRMED": 278.4831
+  },
+  "measured_m": 310.6831
+ },
+ "family": "B4-09 plaster corner beads / profiles (m.l)",
+ "freelancer": {
+  "exterior_A_arrises_stop_ends_ml": 547.47,
+  "exterior_B_boundary_wall_ml": 91.44,
+  "exterior_B_corners_ml": 749.88,
+  "exterior_B_drip_ml": 181.7,
+  "exterior_B_parapet_tops_ml": 280.59,
+  "exterior_B_vertical_corners_ml": 148.0,
+  "exterior_ml": 1297.35,
+  "exterior_payable_half_ml": 648.675,
+  "interior_corners_ml": 770.75,
+  "interior_payable_half_ml": 385.375
+ },
+ "freelancer_interior_by_class": [
+  {
+   "engine_class": "STOP_END",
+   "his_ml": 282.85,
+   "his_rows": "A: room-perimeter 'ends' (rows 4-24, per room = its perimeter less its door widths)",
+   "verdict_proposal": "RULE_DIFFERENCE (scope): not an arris; engine HELD with the physical face length beside it"
+  },
+  {
+   "engine_class": "EXTERNAL_CORNER + WALL_END",
+   "his_ml": 100.0,
+   "his_rows": "B: room corners at 3.6 / 3.8 / 3.4 m (rows 4, 6, 7, 8, 9, 13, 14, 15)",
+   "verdict_proposal": "count ENGINE_RIGHT (every arris drawn at a column / wall entity, 0.05 m column projections included); height RULE_DIFFERENCE (his storey heights vs the owner plaster height G1)"
+  },
+  {
+   "engine_class": "DOOR_JAMB_HEAD",
+   "his_ml": 159.6,
+   "his_rows": "B: door rings, 14 doors x 2 faces x (2 x 2.35 + 1.00) (row 26)",
+   "verdict_proposal": "UNRESOLVED count (his 14 doors vs 27 census doors, 26 plastered interior faces); height RULE_DIFFERENCE (2.35 vs Q-55 C 2.20)"
+  },
+  {
+   "engine_class": "FLUSH_FRAME / exterior rings",
+   "his_ml": 155.3,
+   "his_rows": "B: window / door perimeters 'external spaces' (rows 29-41)",
+   "verdict_proposal": "ENGINE_RIGHT for the room side (frame flush with the room face on every straight window, T-313 MERGED: no room-side arris); the outer-face arrises are in the exterior ledger (T-313 rings), not interior"
+  },
+  {
+   "engine_class": "TILED_FACE",
+   "his_ml": 26.4,
+   "his_rows": "B: bathroom windows (row 42)",
+   "verdict_proposal": "ENGINE_RIGHT: tiled face, no plaster bead (Q-37 A)"
+  },
+  {
+   "engine_class": "OPENING_UNDER_HEAD (lift)",
+   "his_ml": 17.4,
+   "his_rows": "B: lift doors (row 10)",
+   "verdict_proposal": "UNRESOLVED: lift entrance head / frame HELD"
+  },
+  {
+   "engine_class": "STAIR_EDGE",
+   "his_ml": 29.2,
+   "his_rows": "B: stair stringers (row 17)",
+   "verdict_proposal": "UNRESOLVED: stair soffit finish BLANK (T-284)"
+  }
+ ],
+ "freelancer_interior_check_ml": 770.75,
+ "interior_corner_vertices": 45,
+ "interior_corner_vertices_not_beads": 1,
+ "interior_drawing_method": {
+  "by_class_m": {
+   "DOOR_JAMB_HEAD": 139.9
+  },
+  "held_edges_by_class": {
+   "CEILING_EDGE": 1,
+   "DOOR_JAMB_HEAD": 3,
+   "EXTERNAL_CORNER": 43,
+   "OPENING_UNDER_HEAD": 20,
+   "STAIR_EDGE": 1,
+   "STOP_END": 14,
+   "VOID_EDGE": 1,
+   "WALL_END": 2,
+   "WINDOW_JAMB_HEAD": 6
+  },
+  "measured_by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 132.9,
+   "DRAWING-CONFIRMED": 7.0
+  },
+  "measured_m": 139.9
+ },
+ "interior_owner_method": {
+  "by_class_m": {
+   "DOOR_JAMB_HEAD": 139.9,
+   "EXTERNAL_CORNER": 129.35,
+   "WALL_END": 6.7
+  },
+  "held_edges_by_class": {
+   "CEILING_EDGE": 1,
+   "DOOR_JAMB_HEAD": 3,
+   "EXTERNAL_CORNER": 6,
+   "OPENING_UNDER_HEAD": 20,
+   "STAIR_EDGE": 1,
+   "STOP_END": 14,
+   "VOID_EDGE": 1,
+   "WINDOW_JAMB_HEAD": 6
+  },
+  "measured_by_status_m": {
+   "ASSUMED — OWNER-APPROVED": 268.95,
+   "DRAWING-CONFIRMED": 7.0
+  },
+  "measured_m": 275.95
+ },
+ "owner_basis": "OD-V3B-8 STEEL_PLASTER_ANGLE_BEADS (owner 2026-10-04) + URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1",
+ "rows": 185,
+ "task": "T-405"
+}

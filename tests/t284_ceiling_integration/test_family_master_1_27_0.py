@@ -167,7 +167,12 @@ def test_the_new_families_and_the_moves(docs):
 
 def test_1_27_0_governs(docs):
     _, new = docs
-    assert T130._governing()["version"] == "1.27.0"
+    gov = T130._governing()
+    # T-397 (1.28.0): 1.27.0 governs its own head; a newer governing registry must carry every 1.27.0 pending entry
+    # unchanged (the pattern the 1.26.0 test took for T-284)
+    assert gov["version"] == "1.27.0" or (
+        T130._semver(gov["version"]) > T130._semver("1.27.0")
+        and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
     codes, fams = T130._era_exemptions(old110, new)
     assert {"FIN.CEILING.BULKHEAD", "FIN.STAIR.SOFFIT", "FIN.DOME.SOFFIT"} <= codes

@@ -1,0 +1,27 @@
+component_id,component,owner_trade,unit,value,status,candidate_line,line_code,line_value,line_state,missing,note
+RAFT,lift base raft,STRUCTURE,m3,11.385,DRAWING-CONFIRMED,L-1590b76b2fe8f131dc07,STR.CONC.FOOTING,11.385000000000003,SOURCE_DERIVED,,footing line
+PIT_FLOOR,pit floor = raft top,STRUCTURE,m3,,LISTED,,,,,,no volume of its own
+PIT_WALL:PLAN,pit wall ring net plan,STRUCTURE,m2,1.1,DRAWING-CONFIRMED,,,,,,gross 1.600000 less columns 0.500000
+PIT_WALL,pit wall concrete,STRUCTURE,m3,,MISSING,MISSING,,,,pit depth (lift supplier / designer); no candidate line,1.100000 m2 x wall height
+SHAFT_VOID:GROUND,shaft void at ground level (not slab),NONE,m2,3.24,DRAWING-CONFIRMED,,,,,,out of every slab line
+COLUMN:1,lift column / neck,STRUCTURE,m2,0.1,LISTED,,,,,,column lines; never in the ring
+COLUMN:2,lift column / neck,STRUCTURE,m2,0.1,LISTED,,,,,,column lines; never in the ring
+COLUMN:3,lift column / neck,STRUCTURE,m2,0.1,LISTED,,,,,,column lines; never in the ring
+COLUMN:4,lift column / neck,STRUCTURE,m2,0.25,LISTED,,,,,,column lines; never in the ring
+TIE_BEAM:GF,lift tie beam at +3.00 (GF),STRUCTURE,m3,,MISSING,MISSING,,,,tie-beam section (b x d),length 5.500 m DRAWING-CONFIRMED
+RING_BEAM:GF:B14:1,beam on the ring band (GF),STRUCTURE,m,1.8,LISTED,L-9c4ad8b13b08f7063722,STR.CONC.BEAM,0.27,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+RING_BEAM:GF:B1:2,beam on the ring band (GF),STRUCTURE,m,0.7,LISTED,L-300800076840dab01c49,STR.CONC.BEAM,0.05600000000000001,PROVISIONAL,,beam line; never re-added; drawn length 0.700 m
+RING_BEAM:GF:B7:3,beam on the ring band (GF),STRUCTURE,m,1.2,LISTED,L-4f30f08b15e9ab008e7a,STR.CONC.BEAM,0.17999999999999675,PROVISIONAL,,beam line; never re-added; drawn length 1.200 m
+RING_BEAM:GF:B1:4,beam on the ring band (GF),STRUCTURE,m,1.8,LISTED,L-c82e9ff1d51c005f29d8,STR.CONC.BEAM,0.1439999999999814,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+SHAFT_SLAB:GF,shaft opening (GF),NONE,m2,3.24,DRAWING-CONFIRMED,,,,,,out of the floor slab
+RING_BEAM:1F:B7:1,beam on the ring band (1F),STRUCTURE,m,1.8,LISTED,L-b3c87fd2cd7cc45c329a,STR.CONC.BEAM,0.27,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+RING_BEAM:1F:B1:2,beam on the ring band (1F),STRUCTURE,m,0.7,LISTED,L-dadbee5aad44a7afbb0d,STR.CONC.BEAM,0.05600000000000001,PROVISIONAL,,beam line; never re-added; drawn length 0.700 m
+RING_BEAM:1F:B7:3,beam on the ring band (1F),STRUCTURE,m,1.2,LISTED,L-4299f559bf9509418385,STR.CONC.BEAM,0.17999999999999564,PROVISIONAL,,beam line; never re-added; drawn length 1.200 m
+RING_BEAM:1F:B1:4,beam on the ring band (1F),STRUCTURE,m,1.8,LISTED,L-34ccc6d35e46cb3763d7,STR.CONC.BEAM,0.1439999999999814,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+SHAFT_SLAB:1F,shaft opening (1F),NONE,m2,3.24,DRAWING-CONFIRMED,,,,,,out of the floor slab
+RING_BEAM:2F:B2:1,beam on the ring band (2F),STRUCTURE,m,1.8,LISTED,L-13031ccc9cc57a0f3465,STR.CONC.BEAM,0.1439999999924435,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+RING_BEAM:2F:B1:2,beam on the ring band (2F),STRUCTURE,m,1.0,LISTED,L-1caceb74f8c279933a14,STR.CONC.BEAM,0.08000000000000002,PROVISIONAL,,beam line; never re-added; drawn length 1.000 m
+RING_BEAM:2F:B1:3,beam on the ring band (2F),STRUCTURE,m,1.2,LISTED,L-ae4fced6f2202c9543af,STR.CONC.BEAM,0.09599999999999768,PROVISIONAL,,beam line; never re-added; drawn length 1.200 m
+RING_BEAM:2F:B1:4,beam on the ring band (2F),STRUCTURE,m,1.8,LISTED,L-23275eb03f41ddcace97,STR.CONC.BEAM,0.14399999999998198,PROVISIONAL,,beam line; never re-added; drawn length 1.800 m
+SHAFT_SLAB:2F,"slab over the shaft (2F, top of shaft)",STRUCTURE,m2,3.24,LISTED,L-a615e1aa2e180544ecbb,STR.CONC.SLAB,0.5183999999996163,PROVISIONAL,,shaft plan 3.2400 m2
+SHAFT_WALLS,shaft walls above the wall top,BLOCKWORK,-,,LISTED,,,,,,

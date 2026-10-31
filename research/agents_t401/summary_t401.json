@@ -1,0 +1,227 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.32",
+ "dependent_lift_lines": [
+  {
+   "element": "WPF:LIFT_PIT_MEMBRANE_FIXED",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_id": "L-d3ec19448415e0a0f083",
+   "state": "SOURCE_DERIVED",
+   "unit": "m2",
+   "value": 47.43
+  },
+  {
+   "element": "WPF:LIFT_PIT_MEMBRANE_WALLS",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_id": "L-302b401eff698289c54e",
+   "state": "BLOCKED_RFI",
+   "unit": "m2",
+   "value": null
+  },
+  {
+   "element": "WPF:LIFT_PIT_BOARD_FIXED",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_id": "L-1f3aaafcc460173462d9",
+   "state": "SOURCE_DERIVED",
+   "unit": "m2",
+   "value": 26.73
+  },
+  {
+   "element": "WPF:LIFT_PIT_BOARD_WALLS",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_id": "L-f0aadf70513eb21d5671",
+   "state": "BLOCKED_RFI",
+   "unit": "m2",
+   "value": null
+  },
+  {
+   "element": "WPF:LIFT_PIT_BASE_SCREED",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_id": "L-e11f17bb076058bf172d",
+   "state": "SOURCE_DERIVED",
+   "unit": "m2",
+   "value": 20.7
+  },
+  {
+   "element": "WPF:LIFT_PIT_BASE_SCREED",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_id": "L-e4789d76efedbc351bd4",
+   "state": "SOURCE_DERIVED",
+   "unit": "m3",
+   "value": 1.035
+  },
+  {
+   "element": "FW:FACE:T332-LIFT-PIT-INNER",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-e3eb00574a3c1c605077",
+   "state": "BLOCKED_RFI",
+   "unit": "m2",
+   "value": null
+  },
+  {
+   "element": "FW:FACE:T332-LIFT-PIT-OUTER",
+   "item_code": "STR.FORMWORK",
+   "line_id": "L-6d72f51dfe7ec1097f00",
+   "state": "BLOCKED_RFI",
+   "unit": "m2",
+   "value": null
+  }
+ ],
+ "freelancer_lift_rows": [
+  {
+   "numbers": [
+    8,
+    0.2,
+    1.5,
+    2.4000000000000004,
+    1,
+    2.4000000000000004
+   ],
+   "row": 11,
+   "sheet_index": 3
+  }
+ ],
+ "freelancer_reconciliation": {
+  "closure_m3": 0.0,
+  "columns_in_his_ring_m3": -0.75,
+  "drawn_gross_ring_m2": 1.6,
+  "engine_V3_0_32_m3": null,
+  "freelancer_m3": 2.4,
+  "freelancer_plan_m2": 1.6,
+  "net_ring_at_his_height_m3": -1.65,
+  "plan_difference_m2": 0.0,
+  "residual_m3": -2.4
+ },
+ "ground": {
+  "cell_gross_m2": 41.0762,
+  "cell_line_ids": [
+   "L-41cfb82ed733f4d6e3a5"
+  ],
+  "cell_net_m2": 39.2979,
+  "cell_values": [
+   null
+  ],
+  "ring_net_from_pieces_m2": 1.1,
+  "ring_pieces_in_cell": [
+   "OWN-082",
+   "OWN-083",
+   "OWN-086"
+  ],
+  "ring_pieces_in_cell_m2": 0.96,
+  "ring_pieces_m2": {
+   "OWN-082": 0.36,
+   "OWN-083": 0.36,
+   "OWN-086": 0.24,
+   "OWN-094": 0.14
+  },
+  "shaft_face_m2": 3.24
+ },
+ "lift_lines_in_candidate": [],
+ "method": "LIFT_STRUCTURE_V1",
+ "overlaps": {
+  "DOUBLE": [],
+  "HELD_OVERLAP": [
+   {
+    "a": "BEAM:P-C:GROUND_BEAMS:GROUND:BAND0028",
+    "a_lines": "L-c5902fd02c58b85a5df1",
+    "b": "SLAB:U-C:GROUND_SLAB:GROUND:SITE-c1089bdb4cfcdc4a",
+    "b_lines": "L-41cfb82ed733f4d6e3a5",
+    "kind": "HELD_OVERLAP",
+    "level": "GROUND",
+    "shared_m2": 0.09
+   },
+   {
+    "a": "BEAM:P-C:GROUND_BEAMS:GROUND:BAND0036.1",
+    "a_lines": "L-361f5e913c566c4fe2b5",
+    "b": "SLAB:U-C:GROUND_SLAB:GROUND:SITE-c1089bdb4cfcdc4a",
+    "b_lines": "L-41cfb82ed733f4d6e3a5",
+    "kind": "HELD_OVERLAP",
+    "level": "GROUND",
+    "shared_m2": 0.09
+   },
+   {
+    "a": "COLUMN:COLUMN_BOX",
+    "a_lines": "COLUMN_LINES",
+    "b": "SLAB:U-C:GROUND_SLAB:GROUND:SITE-c1089bdb4cfcdc4a",
+    "b_lines": "L-41cfb82ed733f4d6e3a5",
+    "kind": "HELD_OVERLAP",
+    "level": "GROUND",
+    "shared_m2": 0.25
+   }
+  ],
+  "NOT_BILLED": [
+   {
+    "a": "BEAM:P-C:GROUND_BEAMS:GROUND:BAND0003",
+    "a_lines": "L-43d1d1031b3d3ddd1cc4",
+    "b": "JUNCTION_GAP:U-C:GROUND_SLAB:GROUND:SITE-47d689fe2121d8c6",
+    "b_lines": "NO_LINE",
+    "kind": "NOT_BILLED",
+    "level": "GROUND",
+    "shared_m2": 0.0085
+   },
+   {
+    "a": "BEAM:P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+    "a_lines": "L-e24946df436cbc25fca6",
+    "b": "JUNCTION_GAP:U-C:GROUND_SLAB:GROUND:SITE-47d689fe2121d8c6",
+    "b_lines": "NO_LINE",
+    "kind": "NOT_BILLED",
+    "level": "GROUND",
+    "shared_m2": 0.0552
+   },
+   {
+    "a": "BEAM:P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+    "a_lines": "L-0bb78accf8c0a0fbdbaf",
+    "b": "JUNCTION_GAP:U-C:GROUND_SLAB:GROUND:SITE-5a8e5ad394423bcb",
+    "b_lines": "NO_LINE",
+    "kind": "NOT_BILLED",
+    "level": "GROUND",
+    "shared_m2": 0.0225
+   }
+  ]
+ },
+ "raft_line": [
+  {
+   "line_id": "L-1590b76b2fe8f131dc07",
+   "state": "SOURCE_DERIVED",
+   "value": 11.385000000000003
+  }
+ ],
+ "ring": {
+  "columns_in_band_m2": 0.5,
+  "gross_m2": 1.6,
+  "net_m2": 1.1,
+  "run_total_m": 5.5,
+  "runs_m": {
+   "E": 0.7,
+   "N": 1.8,
+   "S": 1.8,
+   "W": 1.2
+  },
+  "thickness_m": {
+   "E": 0.20000000000000018,
+   "N": 0.20000000000000018,
+   "S": 0.2,
+   "W": 0.2
+  }
+ },
+ "ring_beams_hand_m3": {
+  "1F": 0.65,
+  "2F": 0.464,
+  "GF": 0.65
+ },
+ "ring_beams_line_m3": {
+  "1F": 0.65,
+  "2F": 0.464,
+  "GF": 0.65
+ },
+ "rings_found_on_sheets": [
+  "SH02",
+  "SH04",
+  "SH06",
+  "SH08"
+ ],
+ "task": "T-401",
+ "wall_height_m": null,
+ "wall_missing": [
+  "pit depth (lift supplier / designer)"
+ ]
+}
