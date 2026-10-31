@@ -126,23 +126,33 @@
   "capability": "BLOCKED_BY_SOURCE (lm, unchanged)",
   "new_count_scope": "NOT_IMPLEMENTED (pcs: MH 1, GCO 2, CO 1, SS 4, RWP 5)"
  },
- "freelancer": {
-  "pipe_length": "none (lump sum): NOT COMPARABLE",
-  "shower": {
-   "freelancer": 11,
-   "drawn": 6,
-   "diff": -5,
-   "verdict": "UNRESOLVED"
+ "benchmark": {
+  "provenance_correction": "T-386 (Checker O-T384-C1): the figures first filed here as 'freelancer' are rows of Urban Projects' own 'Cost By Category' record (register WEB_APP_ROWS WEB-018, WEB-055..WEB-060; NO_FREELANCER_ITEM / LUMP_SUM, no freelancer source cell); the freelancer workbooks carry no sanitary, drainage, tank or shower row",
+  "freelancer": {
+   "rows": 0,
+   "pipe_length": "none: NOT COMPARABLE"
   },
-  "pit_covers": {
-   "freelancer": 2,
-   "drawn_MH": 1,
-   "verdict": "UNRESOLVED"
-  },
-  "water_tanks": {
-   "freelancer": 2,
-   "drawn": "NOT_PRINTED as a count (one WATER TANK PLACE panel on ST p.6, merged T-221 s.5)",
-   "verdict": "UNRESOLVED"
+  "urban_cost_record": {
+   "pipe_length": "none (lump sum): NOT COMPARABLE",
+   "shower": {
+    "register_id": "WEB-018",
+    "cost_record": 11,
+    "drawn": 6,
+    "comparison": "UNRESOLVED_SCOPE (labour count of undefined unit; not an engine residual, not a freelancer figure)",
+    "verdict": "UNRESOLVED"
+   },
+   "pit_covers": {
+    "register_id": "WEB-059",
+    "cost_record": 2,
+    "drawn_MH": 1,
+    "verdict": "UNRESOLVED"
+   },
+   "water_tanks": {
+    "register_id": "WEB-057",
+    "cost_record": 2,
+    "drawn": "NOT_PRINTED as a count (one WATER TANK PLACE panel on ST p.6, merged T-221 s.5)",
+    "verdict": "UNRESOLVED"
+   }
   }
  }
 }
