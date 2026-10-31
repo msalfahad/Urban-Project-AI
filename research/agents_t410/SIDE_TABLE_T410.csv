@@ -1,0 +1,34 @@
+sid,element,side,class,plan_lm,risers_in,zigzag_lm,sloped_lm,level_rise_m,qty_lm,status,form,railing_run,cause,evidence,binds
+MS1-L.W1,MS1-L,west (shaft wall),WALL,1.650000,6,2.650002,1.939042,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF wall face 298 (layer 1) beside riser lines DC .. ; 1F plan same face AF1,ST01-MS1-L-W-a
+MS1-L.W2,MS1-L,west (shaft wall),HELD,1.050000,4,1.716668,1.233936,0.000000,,HELD,,,GF window 354-356 (layer W) in the west face over this stretch; its sill / head against the flight (treads +2.00 .. +2.67) not printed,GF plan 354 / 353 / 352,ST01-MS1-L-W-b
+MS1-L.E,MS1-L,east (well),OPEN,2.700000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-07 MS1-L,,well band 157 / 151 (layer 5),
+MS1-U.E1,MS1-U,east (lift wall),WALL,0.950000,4,1.616668,1.110855,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF face 21B (layer 1); 1F face B16 continuous,ST01-MS1-U-E-a
+MS1-U.E2,MS1-U,east (lift wall),HELD,0.900000,3,1.400001,1.052389,0.000000,,HELD,,,"GF plan draws an opening ABOVE the cut in this face (hidden 33C / 33D, 0.90 m); its height against the flight (+4.0 .. +4.5) not printed",GF plan 33C / 33D (layer 2),ST01-MS1-U-E-b
+MS1-U.E3,MS1-U,east (lift wall),WALL,1.450000,5,2.283335,1.695515,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF face 21C (layer 1); 1F face B16,ST01-MS1-U-E-c
+MS1-U.W,MS1-U,west (well),OPEN,3.300000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-07 MS1-U,,well band A8F / A90 (1F),
+MS2-L.W1,MS2-L,west (shaft wall),WALL,2.250000,8,3.594000,2.636641,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,1F face AF1 (layer 1); 2F face 12B7,ST01-MS2-L-W-a
+MS2-L.W2,MS2-L,west (shaft wall),HELD,1.050000,4,1.722000,1.230432,0.000000,,HELD,,,1F window C5A-C5C and 2F window 12CF-12D1 in the west face over this stretch; flight here +7.18 .. +7.52 against a 1F window whose sill / head are not printed (stacked shaft windows),"1F C5A / C5B / C5C, 2F 12CF / 12D0 / 12D1 (layer W)",ST01-MS2-L-W-b
+MS2-L.E,MS2-L,east (well),OPEN,3.300000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-07 MS2-L,,well band A8D / A8E,
+MS2-U.E,MS2-U,east (lift wall),WALL,3.300000,12,5.316000,3.867073,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,"1F face B16 and 2F face 129A (layer 1), continuous, no opening",ST01-MS2-U-E
+MS2-U.W,MS2-U,west (well),OPEN,3.300000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-07 MS2-U,,well band 1358 / 1359 (2F),
+D1.E,D1,east (lift wall),WALL,0.900000,4,1.600000,1.140175,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF face 21B (layer 1) over the whole run,ST01b-D1-E
+D1.W,D1,west (well band),OPEN,0.900000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-08,,well band 47F / 4A4 (layer 5),
+E1.S,E1,south (wall),WALL,1.200000,5,2.050000,1.470544,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF wall face 15A (layer 1) along the whole run; riser lines end on it,ST03-E1-S
+E1.N,E1,north (edge),OPEN,1.200000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-11 (held),,edge 368 (layer 5); no guard drawn (T-164 RL-11),
+RS-S.S1,RS-S,south (outer),UNKNOWN,1.000000,4,1.642857,1.160714,0.000000,,UNKNOWN,,,"no wall face on this stretch: only the 50 mm outer band A7 / A9 (layer 5), the continuation of the curved flight's outer band RL-09 whose role (guard or string) is not established",GF A7 / A9,ST02-RS-S-S-a
+RS-S.S2,RS-S,south (outer),WALL,2.000000,7,3.125000,2.321429,0.000000,,HELD-FORM,FORM HELD (ORR-007): zigzag UP-STAIR-010 or sloped UP-STAIR-011,,,GF wall face 336 (layer 1) from its west end to beyond the last riser,ST02-RS-S-S-b
+RS-S.N,RS-S,north (void),OPEN,3.000000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-05,,"inner band 22C / 22E (GF), B76 (1F)",
+RS-LD.S1,RS-LD,south,WALL,0.650000,0,0.650000,0.650000,0.000000,0.650000,DRAWING-CONFIRMED,HORIZONTAL (form-independent),,,GF wall face 336 to its east end,ST02-RS-LD-S-a
+RS-LD.S2,RS-LD,south,UNKNOWN,0.550000,0,0.550000,0.550000,0.000000,,UNKNOWN,,,the stair-side face 336 stops here (the far face 337 continues): no wall face drawn on the landing side,GF 336 / 337 ends,ST02-RS-LD-S-b
+RS-LD.E,RS-LD,east,OPEN,1.150000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-06,,1F floor-edge band AF5 / AF6 (D-23),
+RS-A.E,RS-A,east,OPEN,1.200000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-06,,AF5 / AF6 beside the short flight,
+RS-A.W,RS-A,west (void),OPEN,1.200000,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-05,,void band B75 / B77,
+RS-C.OUT,RS-C,outer,UNKNOWN,4.515532,,,,0.000000,,UNKNOWN,,,"outer 50 mm band 23D / 23E (RL-09): guard or string not established, no wall face drawn; the curved flight itself is UNRESOLVED (T-398, RFI-S27)","GF arcs 23D / 23E, radial tread lines 240 .. 256",ST02-RS-C-OUT
+RS-C.IN,RS-C,inner (void),OPEN,2.531054,,,,0.000000,0.000000,NOT_SKIRTED (open side),,RL-05,,inner arcs 23F / 239,
+MS1-LD.E,MS1-LD,east (lift wall),WALL,1.150000,0,1.150000,1.150000,0.000000,1.150000,DRAWING-CONFIRMED,HORIZONTAL (form-independent),,,GF face 21B and 1F face B16 over the whole landing side (+3.50),ST01-MS1-LD-E
+MS1-LD.N,MS1-LD,north,HELD,1.150000,0,1.150000,1.150000,0.000000,,HELD,,,the north face is broken over 1.247 m (GF opening 3FD / 3FE; 1F window CE2-CE5 above it); its head against the landing level +3.50 not printed,"GF 2AB / 2AD / 3FD / 3FE, 1F CE2",ST01-MS1-LD-N
+MS1-T.W,MS1-T,west,HELD,1.200000,0,,,0.833333,,HELD,,,"winder corner: 5 risers on section A-A, 4 wedges on the plans (T-184 MS1-T); winders never generated (owner S-9)",GF 49E / 4A0 / 4A2,ST01-MS1-T-W
+MS1-T.N,MS1-T,north,HELD,1.150000,0,,,0.833333,,HELD,,,winder corner (as MS1-T.W),GF 26E,ST01-MS1-T-N
+MS2-LD.W,MS2-LD,west,HELD,1.200000,0,,,0.168000,,HELD,,,closing riser MS2-TR (+7.516 -> +7.684) on this landing: position not drawn (T-184 / T-393); 0.150 m of the side is also in the 1F window C5C stretch,1F AF0 / C5C,ST01-MS2-LD-W
+MS2-LD.N,MS2-LD,north,HELD,2.500000,0,,,0.168000,,HELD,,,closing riser MS2-TR position not drawn; 1.000 m of the face is the 1F window CE2 opening (with jambs) whose head / sill against +7.516 is not printed,1F ADE / CE2 / ADD,ST01-MS2-LD-N
+MS2-LD.E,MS2-LD,east (lift wall),HELD,1.200000,0,,,0.168000,,HELD,,,closing riser MS2-TR position not drawn,"1F B16, 2F 129A",ST01-MS2-LD-E
