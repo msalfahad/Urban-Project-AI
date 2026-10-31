@@ -1,0 +1,9 @@
+other_line,overlaps,evidence
+layer-1 wall lines on the fence bands (DXF guard),0,"0 = no house wall band lies on any fence face (8 faces checked, 0.25 m, parallel)"
+"pool wall (POOL line, R-POOL)",0,pool back 3.50 m excluded from F-SEA by name (T-392 / Lead ruling); above the rim nothing is drawn in front of the pool drum (T-361): no fence counted there
+house facade faces (T-159 / T-337),0,"boundary / fence faces are NOT facade (register 2026-10-30, Q-65 C); fence runs are layer-5 plot-line bands"
+"T-279 / register v4 house blockwork (28 masonry lines, 76 walls)",0,"register v4 holds storey walls GF/1F/2F only; GF-W15 7.100 is the entrance front (T-175), not the sea line"
+boundary G.B concrete L-fb7a6431 (upper) / L-6290a9f3 (lower),0,the wall stands ON the upper G.B (top at N.G.); runs conserve the band: 44.07 m = T-253
+"fence railing RL-10 (MET guard, V3.0.30, HELD)",0,"the X railing fills the street dip: it is the profile cut of F-STREET, carried by the railing line, never block"
+gates G-01 2.50 / G-02 1.00 (T-361),0,"inside their runs, never wall"
+"boundary columns 20 x 30 (ST p.14 'SEE ARCH PLAN', M4)",0,"no S-COL.BON column inside any fence band on the arch GF plan; layer-D rectangles only at the sea wall ends (39D, 39E: nature not printed, part of the HELD sea element): the column count stays NOT PRINTED, block net HELD"

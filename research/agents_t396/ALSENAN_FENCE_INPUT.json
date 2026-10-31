@@ -1,0 +1,97 @@
+{
+ "columns_drawn_in_fence_bands": {
+  "lower": {
+   "D_rectangles": [],
+   "S-COL.BON": []
+  },
+  "north": {
+   "D_rectangles": [],
+   "S-COL.BON": []
+  },
+  "sea": {
+   "D_rectangles": [
+    [
+     "39D",
+     0.2,
+     0.6316
+    ],
+    [
+     "39E",
+     0.2,
+     0.447
+    ]
+   ],
+   "S-COL.BON": []
+  },
+  "street": {
+   "D_rectangles": [],
+   "S-COL.BON": []
+  }
+ },
+ "elevation_fence_end_nw": {
+  "court_above_pm000_m": 0.15,
+  "handles": [
+   "27EA",
+   "27EB",
+   "27F3",
+   "2A43",
+   "27F1"
+  ],
+  "lines_below_pm000_m": [
+   -0.1,
+   0.05
+  ],
+  "top_above_court_m": 2.5,
+  "top_above_pm000_m": 2.65,
+  "width_m": 0.2
+ },
+ "elevation_fence_end_se": {
+  "court_above_pm000_m": 0.15,
+  "handles": [
+   "23DD",
+   "23DF",
+   "23E6",
+   "2439",
+   "23E5"
+  ],
+  "lines_below_pm000_m": [
+   -0.1,
+   0.05
+  ],
+  "top_above_court_m": 2.5,
+  "top_above_pm000_m": 2.65,
+  "width_m": 0.2
+ },
+ "layer1_wall_lines_on_fence_bands": {
+  "lower_106": [],
+  "lower_86": [],
+  "north_inner_13A": [],
+  "north_outer_99_98": [],
+  "sea_8D": [],
+  "sea_8E": [],
+  "street_inner_13A": [],
+  "street_outer_10F": []
+ },
+ "lower_passage_closure": {
+  "inner_106": 1.2,
+  "outer_86": 1.2,
+  "thickness": 0.2
+ },
+ "north": {
+  "inner_13A_leg": 30.97,
+  "outer_99_98": 31.37
+ },
+ "sea": {
+  "col_face_2F96_to_8D": 0.2316,
+  "solid_8D": 5.1684,
+  "zone_8E": 1.7
+ },
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd554c31fe4a...",
+ "street": {
+  "end_cap_10B": 0.2,
+  "gate_gap_110": 2.5,
+  "inner_13A_leg": 5.6,
+  "outer_10F": 8.3
+ },
+ "unit": "m"
+}
