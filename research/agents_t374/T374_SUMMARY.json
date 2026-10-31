@@ -1,0 +1,454 @@
+{
+ "policy": "STRAIGHT_BAR_SCHEDULE_V1",
+ "shape_code": "00",
+ "exact_rows_nested_by_diameter_ffd": {
+  "14": {
+   "stock_bars": 25,
+   "lower_bound_bars": 25,
+   "offcut_m": "6.8007",
+   "offcuts_over_1m": 1,
+   "pieces": 123,
+   "net_kg": "354.734956",
+   "procurement_kg": "362.962963",
+   "offcut_kg": "8.228007",
+   "offcut_share": "0.0227"
+  },
+  "16": {
+   "stock_bars": 163,
+   "lower_bound_bars": 143,
+   "offcut_m": "247.5216",
+   "offcuts_over_1m": 63,
+   "pieces": 431,
+   "net_kg": "2699.817719",
+   "procurement_kg": "3090.962963",
+   "offcut_kg": "391.145244",
+   "offcut_share": "0.1265"
+  },
+  "18": {
+   "stock_bars": 33,
+   "lower_bound_bars": 31,
+   "offcut_m": "28.5222",
+   "offcuts_over_1m": 12,
+   "pieces": 86,
+   "net_kg": "734.955600",
+   "procurement_kg": "792.000000",
+   "offcut_kg": "57.044400",
+   "offcut_share": "0.0720"
+  }
+ },
+ "stock_m": "12",
+ "stock_status": "ASSUMED - OWNER-APPROVED (OD-V3-3; 12 m stock printed nowhere in the set, T-366)",
+ "lines_bound": 442,
+ "populations": {
+  "FTG-BOT-MESH": {
+   "lines": 51,
+   "row_status": {
+    "HELD": 3,
+    "HELD_DOWNGRADE": 38,
+    "HELD_SAME_BASIS": 10
+   },
+   "scheduled_net_kg": "0.000000",
+   "candidate_released_basis_kg": "0.000000",
+   "net_minus_candidate_kg": "0.000000",
+   "difference_causes": {},
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "held_by_downgrade_audit_kg": {
+    "HELD_DOWNGRADE": {
+     "lines": 38,
+     "records": [
+      "DG-a97ec2ea66e02194"
+     ],
+     "audit_kg": [
+      "874.862227",
+      "874.862227"
+     ]
+    },
+    "HELD_SAME_BASIS": {
+     "lines": 10,
+     "records": [
+      "DG-a97ec2ea66e02194"
+     ],
+     "audit_kg": [
+      "1606.069136",
+      "1655.560494"
+     ]
+    }
+   },
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bar_marks": 0
+  },
+  "COL-MAIN-BODY": {
+   "lines": 120,
+   "row_status": {
+    "HELD": 3,
+    "HELD_DEFINED": 25,
+    "NA_SUPERSEDED": 61,
+    "SCHEDULED": 31
+   },
+   "scheduled_net_kg": "1874.488889",
+   "candidate_released_basis_kg": "1874.486000",
+   "net_minus_candidate_kg": "0.002889",
+   "difference_causes": {
+    "KG_STORAGE_ROUNDING": 31
+   },
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "2578.962963",
+    "2578.962963"
+   ],
+   "bar_marks": 31
+  },
+  "COL-TWIST-EXTRA": {
+   "lines": 2,
+   "row_status": {
+    "HELD": 1,
+    "SHAPE_NOT_00": 1
+   },
+   "scheduled_net_kg": "0.000000",
+   "candidate_released_basis_kg": "0.000000",
+   "net_minus_candidate_kg": "0.000000",
+   "difference_causes": {},
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "12.642000",
+    "12.642000"
+   ],
+   "procurement_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bar_marks": 0
+  },
+  "CB-BOTTOM": {
+   "lines": 58,
+   "row_status": {
+    "HELD_DEFINED": 6,
+    "NA_SUPERSEDED": 27,
+    "SCHEDULED": 25
+   },
+   "scheduled_net_kg": "731.755785",
+   "candidate_released_basis_kg": "731.755000",
+   "net_minus_candidate_kg": "0.000785",
+   "difference_causes": {
+    "KG_STORAGE_ROUNDING": 19,
+    "NONE": 6
+   },
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "1065.777778",
+    "1065.777778"
+   ],
+   "bar_marks": 25
+  },
+  "CB-SUPPORT-TOP": {
+   "lines": 77,
+   "row_status": {
+    "BOUNDED_NO_ROW": 3,
+    "HELD": 32,
+    "HELD_DEFINED": 2,
+    "NA_SUPERSEDED": 27,
+    "SCHEDULED": 13
+   },
+   "scheduled_net_kg": "390.302044",
+   "candidate_released_basis_kg": "390.303000",
+   "net_minus_candidate_kg": "-0.000956",
+   "difference_causes": {
+    "KG_STORAGE_ROUNDING": 6,
+    "LENGTH_STORAGE_0.1MM+KG_ROUNDING": 1,
+    "NONE": 6
+   },
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "27.156000"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "507.851852",
+    "507.851852"
+   ],
+   "bar_marks": 13
+  },
+  "GB-MAIN": {
+   "lines": 131,
+   "row_status": {
+    "BOUNDED_NO_ROW": 14,
+    "HELD": 23,
+    "NA_SUPERSEDED": 6,
+    "RUN_PART": 32,
+    "SCHEDULED": 56
+   },
+   "scheduled_net_kg": "1252.908222",
+   "candidate_released_basis_kg": "1252.907000",
+   "net_minus_candidate_kg": "0.001222",
+   "difference_causes": {
+    "KG_STORAGE_ROUNDING": 87,
+    "NONE": 1
+   },
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "549.901359",
+    "911.595555"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "1135.111111",
+    "1135.111111"
+   ],
+   "bar_marks": 62
+  },
+  "SLAB-TEMP": {
+   "lines": 3,
+   "row_status": {
+    "HELD": 3
+   },
+   "scheduled_net_kg": "0.000000",
+   "candidate_released_basis_kg": "0.000000",
+   "net_minus_candidate_kg": "0.000000",
+   "difference_causes": {},
+   "scheduled_bounded_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "candidate_bounded_kg_of_scheduled": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bounded_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "held_by_downgrade_audit_kg": {},
+   "shape_not_00_carried_by_name_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "procurement_kg": [
+    "0.000000",
+    "0.000000"
+   ],
+   "bar_marks": 0
+  }
+ },
+ "runs": [
+  {
+   "run_id": "RUN-170-7C3-BOTTOM",
+   "band": "170-7C3",
+   "position": "BOTTOM",
+   "d_mm": 16,
+   "n": 6,
+   "run_length_m": "13.77",
+   "member_lines": 6,
+   "net_kg": "130.560000",
+   "cut_length_m": "HELD (splice position and lap length not printed)",
+   "splices_per_bar": 1,
+   "splice_valid_for_lap_up_to_m": "10.2300",
+   "procurement": null,
+   "procurement_kg": "",
+   "note": "run 13.77 m > stock 12 m: 1 splice(s) per bar for any lap up to 10.2300 m; lap HELD (T-366 GB-MAIN): cut lengths and procurement HELD",
+   "bar_mark": "GB033"
+  },
+  {
+   "run_id": "RUN-170-7C3-TOP",
+   "band": "170-7C3",
+   "position": "TOP",
+   "d_mm": 16,
+   "n": 3,
+   "run_length_m": "13.77",
+   "member_lines": 6,
+   "net_kg": "65.280000",
+   "cut_length_m": "HELD (splice position and lap length not printed)",
+   "splices_per_bar": 1,
+   "splice_valid_for_lap_up_to_m": "10.2300",
+   "procurement": null,
+   "procurement_kg": "",
+   "note": "run 13.77 m > stock 12 m: 1 splice(s) per bar for any lap up to 10.2300 m; lap HELD (T-366 GB-MAIN): cut lengths and procurement HELD",
+   "bar_mark": "GB034"
+  },
+  {
+   "run_id": "RUN-7D0-FC-BOTTOM",
+   "band": "7D0-FC",
+   "position": "BOTTOM",
+   "d_mm": 16,
+   "n": 6,
+   "run_length_m": "18.57",
+   "member_lines": 7,
+   "net_kg": "176.071111",
+   "cut_length_m": "HELD (splice position and lap length not printed)",
+   "splices_per_bar": 1,
+   "splice_valid_for_lap_up_to_m": "5.4300",
+   "procurement": null,
+   "procurement_kg": "",
+   "note": "run 18.57 m > stock 12 m: 1 splice(s) per bar for any lap up to 5.4300 m; lap HELD (T-366 GB-MAIN): cut lengths and procurement HELD",
+   "bar_mark": "GB046"
+  },
+  {
+   "run_id": "RUN-7D0-FC-TOP",
+   "band": "7D0-FC",
+   "position": "TOP",
+   "d_mm": 16,
+   "n": 3,
+   "run_length_m": "18.57",
+   "member_lines": 7,
+   "net_kg": "88.035556",
+   "cut_length_m": "HELD (splice position and lap length not printed)",
+   "splices_per_bar": 1,
+   "splice_valid_for_lap_up_to_m": "5.4300",
+   "procurement": null,
+   "procurement_kg": "",
+   "note": "run 18.57 m > stock 12 m: 1 splice(s) per bar for any lap up to 5.4300 m; lap HELD (T-366 GB-MAIN): cut lengths and procurement HELD",
+   "bar_mark": "GB047"
+  },
+  {
+   "run_id": "RUN-7D4-F8-BOTTOM",
+   "band": "7D4-F8",
+   "position": "BOTTOM",
+   "d_mm": 16,
+   "n": 6,
+   "run_length_m": "10.1",
+   "member_lines": 3,
+   "net_kg": "95.762963",
+   "cut_length_m": "10.1",
+   "splices_per_bar": 0,
+   "procurement": {
+    "bars_per_stock": 1,
+    "stock_bars": 6,
+    "offcuts": "6 x 1.9 m"
+   },
+   "procurement_kg": "113.777778",
+   "note": "one straight bar per run",
+   "bar_mark": "GB048"
+  },
+  {
+   "run_id": "RUN-7D4-F8-TOP",
+   "band": "7D4-F8",
+   "position": "TOP",
+   "d_mm": 16,
+   "n": 3,
+   "run_length_m": "10.1",
+   "member_lines": 3,
+   "net_kg": "47.881481",
+   "cut_length_m": "10.1",
+   "splices_per_bar": 0,
+   "procurement": {
+    "bars_per_stock": 1,
+    "stock_bars": 3,
+    "offcuts": "3 x 1.9 m"
+   },
+   "procurement_kg": "56.888889",
+   "note": "one straight bar per run",
+   "bar_mark": "GB049"
+  }
+ ],
+ "exact_rows_procurement_by_diameter": {
+  "14": {
+   "net_kg": "354.734956",
+   "procurement_kg": "638.814815",
+   "offcut_kg": "284.079859",
+   "stock_bars": 44
+  },
+  "16": {
+   "net_kg": "2699.817719",
+   "procurement_kg": "3811.555556",
+   "offcut_kg": "1111.737837",
+   "stock_bars": 201
+  },
+  "18": {
+   "net_kg": "734.955600",
+   "procurement_kg": "1008.000000",
+   "offcut_kg": "273.044400",
+   "stock_bars": 42
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.27 by projection: V3.0.16 extract (sha256 2f28367b) + the T-318 re-booked line ids (none of these lines); downgrade records of every verdict set up to V3.0.29 (ARCH_TAKEOFF_V3.0.29)",
+ "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json",
+ "downgrade_snapshot": {
+  "file": "T374_BOUND_DOWNGRADES.json",
+  "sha256": "8d3eaab2ca63ccac457ad7a0f81a67e1488e829438c265f18d4782193e88264f",
+  "unresolved_records": 20
+ }
+}
