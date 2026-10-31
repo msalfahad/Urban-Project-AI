@@ -65,6 +65,14 @@ restored); ranges +8.034 .. +10.119 m3; nothing becomes 0.
 - Per line before / after (V3.0.32, released V2.9) and evidence status: `summary_t397.json` rows and V3_0_33_INTEGRATION_
   LEDGER.json / .csv of the run (private run dir); line-by-line diff vs V3.0.32 and vs V2.9: V3_0_33_DIFF.csv (counts in
   summary_t397.json: diff_vs_v3_0_32, diff_vs_released_v2_9).
+- Own run of record (Py 3.11.18, task head): V3_0_32_BOQ_LINES json `0c8bfbe6` / csv `acd217ee` = the T-284 Gate B
+  reproduction (candidate of record REPRODUCED); V3_0_33 json `a545c5b3` / csv `ba95c03d`, DIFF `73fab7c8`, LEDGER json
+  `3e8744c6`. Lines 4,689 -> 4,690: SAME 4,659 (byte-identical), CHANGED 30, ADDED 1, REMOVED 0. Totals moved only in
+  STR.CONC.BEAM (66.31788 -> 66.321054), STR.CONC.COLUMN (valued 28.2155 -> 19.7765; ranges 1.134 .. 3.483 -> 9.168 ..
+  13.602), STR.CONC.GROUND_SLAB (held 3.929788 .. 3.929788 -> 0 .. 3.56054; valued 17.240685 unchanged),
+  STR.CONC.LIFT (new, 1 blank) and STR.FORMWORK (valued 1028.905457 -> 1027.977403 m2, blank 358 -> 368).
+- Released V2.9 (unchanged, owner only): carries the 15 column lines at the same schedule-end figures (8.439 m3) and the
+  ground-slab cell as BOUNDED 3.929788; the 4 beam lines, the 10 formwork lines and the lift-pit line are not in V2.9.
 - Always-hand-check set (s.1 rule 2): the 15 column lines (structural, every one moves >= 5 %, a new state), the
   held slab bound, the CB8 line (oblique face), the new lift-pit line (new scope), the 10 formwork lines (dependency).
   The three GAP lines move < 0.3 % each (B8 +0.26 %, B7 +0.14 %, CB1 +0.06 %) but are structural: hand-check too.
