@@ -1,0 +1,180 @@
+{
+ "candidate_lines_changed": 0,
+ "coping": "NOT_DRAWN",
+ "court_level_m": 0.15,
+ "faces": {
+  "F-LOWER/OUTSIDE": {
+   "at_most_m2": null,
+   "net_m2": null,
+   "status": "HELD"
+  },
+  "F-LOWER/PLOT": {
+   "at_most_m2": null,
+   "net_m2": null,
+   "status": "HELD"
+  },
+  "F-NORTH/OUTSIDE": {
+   "at_most_m2": null,
+   "net_m2": 83.1305,
+   "status": "DRAWING-CONFIRMED"
+  },
+  "F-NORTH/PLOT": {
+   "at_most_m2": null,
+   "net_m2": 82.0705,
+   "status": "DRAWING-CONFIRMED"
+  },
+  "F-SEA/OUTSIDE": {
+   "at_most_m2": null,
+   "net_m2": null,
+   "status": "HELD"
+  },
+  "F-SEA/PLOT": {
+   "at_most_m2": null,
+   "net_m2": null,
+   "status": "HELD"
+  },
+  "F-STREET/OUTSIDE": {
+   "at_most_m2": 15.37,
+   "net_m2": null,
+   "status": "HELD"
+  },
+  "F-STREET/PLOT": {
+   "at_most_m2": 14.84,
+   "net_m2": null,
+   "status": "HELD"
+  }
+ },
+ "freelancer": {
+  "corners_ml": {
+   "A87": 73.65,
+   "B87": 75.34,
+   "B88": 16.1
+  },
+  "his_total_m2": 107.24,
+  "mapping_A": {
+   "causes": [
+    [
+     "F-STREET/END-G-01",
+     "our face, no row of his",
+     -0.53
+    ],
+    [
+     "r87 'سور'",
+     "height 2.4 vs 2.65",
+     -9.4125
+    ],
+    [
+     "r87 'سور'",
+     "length 37.65 vs 36.57",
+     2.862
+    ],
+    [
+     "r88 'تابع'",
+     "height 2.4 vs 2.65",
+     -1.45
+    ],
+    [
+     "r89 'تابع'",
+     "his row, no counterpart in the face census",
+     1.2
+    ],
+    [
+     "r90 'كتف'",
+     "his row, no counterpart in the face census",
+     1.76
+    ]
+   ],
+   "diff_m2": -5.5705,
+   "his_m2": 107.24,
+   "own_m2": 112.8105,
+   "residual_m2": 0.0
+  },
+  "mapping_B": {
+   "causes": [
+    [
+     "F-STREET/END-G-01",
+     "our face, no row of his",
+     -0.53
+    ],
+    [
+     "r87 'سور'",
+     "height 2.4 vs 2.65",
+     -9.4125
+    ],
+    [
+     "r87 'سور'",
+     "length 37.65 vs 37.17",
+     1.272
+    ],
+    [
+     "r88 'تابع'",
+     "height 2.4 vs 2.65",
+     -1.45
+    ],
+    [
+     "r88 'تابع'",
+     "length 5.8 vs 5.6",
+     0.53
+    ],
+    [
+     "r89 'تابع'",
+     "his row, no counterpart in the face census",
+     1.2
+    ],
+    [
+     "r90 'كتف'",
+     "his row, no counterpart in the face census",
+     1.76
+    ]
+   ],
+   "diff_m2": -6.6305,
+   "his_m2": 107.24,
+   "own_m2": 113.8705,
+   "residual_m2": 0.0
+  },
+  "mapping_note": "A: r87 = the PLOT faces (north + street), r88 = the street OUTSIDE face (5.80 exact); B: r87 = the OUTSIDE faces (31.37 + 5.80, his blockwork basis), r88 = the street PLOT face at 5.80; neither is proven (UNRESOLVED); in both, ONE north face is outside his take",
+  "not_in_his_scope": {
+   "A": "F-NORTH/OUTSIDE (neighbour face) 83.1305",
+   "B": "F-NORTH/PLOT 82.0705"
+  },
+  "rows_m2": {
+   "r87 'سور'": 90.36,
+   "r88 'تابع'": 13.92,
+   "r89 'تابع'": 1.2,
+   "r90 'كتف'": 1.76
+  }
+ },
+ "height_m": 2.65,
+ "house_band_overlap_m2": 0.0,
+ "layers": "PLASTER and SIGMA_PAINT HELD on every face (R-T404-5; OWNER_NOTES_SIGMA item 3 unanswered; Q-65 C)",
+ "method": "FENCE_FINISH_V1 (research, not wired)",
+ "physical_faces_dc_m2": 165.201,
+ "physical_faces_held": [
+  "F-STREET/OUTSIDE",
+  "F-STREET/PLOT",
+  "F-SEA/OUTSIDE",
+  "F-SEA/PLOT",
+  "F-LOWER/OUTSIDE",
+  "F-LOWER/PLOT"
+ ],
+ "physical_faces_held_at_most_m2_known_part": 30.21,
+ "shared_faces_with_house": 0,
+ "stop_end_at_most_m2": 0.53,
+ "thickness_m": 0.2,
+ "tops": {
+  "F-NORTH/TOP": {
+   "at_least_m2": null,
+   "at_least_ml": null,
+   "m2": 6.274,
+   "ml": 31.37,
+   "status": "DRAWING-CONFIRMED"
+  },
+  "F-STREET/TOP": {
+   "at_least_m2": 1.12,
+   "at_least_ml": 5.6,
+   "m2": null,
+   "ml": null,
+   "status": "HELD"
+  }
+ }
+}

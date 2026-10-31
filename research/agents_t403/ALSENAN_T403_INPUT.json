@@ -1,0 +1,146 @@
+{
+ "guards": {
+  "boundary_column_lines_inside_upper_gb": 0,
+  "house_gb_face_mm_inside_upper_gb": 0.0
+ },
+ "lower_band": {
+  "axis_m": 91.94,
+  "band_area_m2": 18.388,
+  "inner_handle": "1659",
+  "outer_handle": "1658",
+  "width_m": 0.2
+ },
+ "runs": {
+  "FENCE_7FC": {
+   "axis_by_side_m": {
+    "E_SEA": 1.15
+   },
+   "class": "FENCE",
+   "footing_crossings_m": [
+    [
+     "F8:1B24",
+     1.15
+    ]
+   ],
+   "lower_band_axis_m": 1.15,
+   "upper_gb_area_m2": 0.23,
+   "upper_gb_handle": "7FC",
+   "upper_gb_len_by_area_m": 1.15
+  },
+  "FENCE_7FE": {
+   "axis_by_side_m": {
+    "E_SEA": 2.349,
+    "N": 31.172,
+    "W_STREET": 8.199
+   },
+   "class": "FENCE",
+   "footing_crossings_m": [
+    [
+     "F:1668",
+     0.2
+    ]
+   ],
+   "lower_band_axis_m": 41.72,
+   "upper_gb_area_m2": 8.344,
+   "upper_gb_handle": "7FE",
+   "upper_gb_len_by_area_m": 41.72
+  },
+  "FENCE_810": {
+   "axis_by_side_m": {
+    "S": 1.2
+   },
+   "class": "FENCE",
+   "footing_crossings_m": [
+    [
+     "F:166A",
+     0.25
+    ]
+   ],
+   "lower_band_axis_m": 1.2,
+   "upper_gb_area_m2": 0.24,
+   "upper_gb_handle": "810",
+   "upper_gb_len_by_area_m": 1.2
+  },
+  "HOUSE_E_SEA": {
+   "class": "HOUSE",
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     1.299
+    ],
+    [
+     "F8:1B24",
+     1.95
+    ],
+    [
+     "FN:1100",
+     1.0
+    ]
+   ],
+   "lower_band_axis_m": 7.799
+  },
+  "HOUSE_S": {
+   "class": "HOUSE",
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     3.151
+    ],
+    [
+     "F11:1B07",
+     3.5
+    ],
+    [
+     "F14:1B1A",
+     3.8
+    ],
+    [
+     "F15:1B2A",
+     1.8
+    ],
+    [
+     "F:1669",
+     0.801
+    ],
+    [
+     "F:166A",
+     0.65
+    ]
+   ],
+   "lower_band_axis_m": 29.972
+  },
+  "HOUSE_W_STREET": {
+   "class": "HOUSE",
+   "footing_crossings_m": [
+    [
+     "F:1668",
+     0.7
+    ],
+    [
+     "F:1669",
+     0.699
+    ]
+   ],
+   "lower_band_axis_m": 6.599
+  },
+  "POOL_BACK": {
+   "class": "POOL",
+   "footing_crossings_m": [
+    [
+     "F8:1B24",
+     0.5
+    ]
+   ],
+   "lower_band_axis_m": 3.5
+  }
+ },
+ "runs_axis_sum_m": 91.94,
+ "schema": "URBAN_T403_INPUT_V1",
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "frames": "GROUND BEAMS PLAN (S-BOUN 7FE / 7FC / 810) -> FOUNDATION PLAN (S-BOUN 1658 / 1659)",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "translation_check_east_mm": 0.0
+ },
+ "upper_gb_total_len_by_area_m": 44.07
+}
