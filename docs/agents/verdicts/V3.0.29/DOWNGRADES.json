@@ -722,6 +722,53 @@
    "state": "HELD",
    "time": "2026-10-30T21:58:41Z",
    "unit": "kg"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "binding": "LINE_CONTENT_V1",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.29",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261031T065043-374-2479",
+    "verdict_commit": "776c991c"
+   },
+   "downgrade_id": "DG-df07eb3d6ccec0e9",
+   "engine_qty": 0.0,
+   "evidence": [
+    {
+     "printed_value": "not less than 7 cm in concrete in contact with soil (a minimum; source reference verified in DG-a97ec2ea66e02194)",
+     "sheet": "ST7757.pdf p.8 general note 22"
+    },
+    {
+     "printed_value": "Boxed bars enclose the bottom short / long bars; boxed-bar diameter not printed (verified in DG-a97ec2ea66e02194)",
+     "sheet": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING"
+    },
+    {
+     "printed_value": "F12 440x320 9|16/m, F13 430x240 8|16/m, F14 380x330 9|14/m, F8 400x360 9|14/m, FF 460x450 9|14/m bottom both ways; BOXED-B BOT (Checker own read 2026-10-31)",
+     "sheet": "ST7757 dxf.dxf FOUNDATION footing schedule FTB 0x2A5E / 0x2A98 / 0x2AD5 / 0x2AF6 / 0x2B1E"
+    }
+   ],
+   "line_content_sha256": "8803dc6e80ea7601b7bb9215ed6ff77da828a4dfce32d0b8cd4f177cd352b677",
+   "line_ids": [
+    "L-07225364bf44991b4a0d",
+    "L-55a024d5cf6a30603ca6",
+    "L-6d2ebc1dec38cb0b95c0",
+    "L-74ae176a1705ba030c4f",
+    "L-91e7c49c6cbcbe632286",
+    "L-975f0ab35bd28f84d21e",
+    "L-9b7c59f231d7eb52805b",
+    "L-ab39f3628f11bf5d54fc",
+    "L-fdd86d183bdcb7647858",
+    "L-fedaa3ad72d10ce9973f"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS (issues proposal DGP-T374-FTGM, T-374 r2 HELD_SAME_BASIS): 10 footing bottom-mesh lines of the five '/m' footings F8, F12, F13, F14, FF (BOTTOM_LONG + BOTTOM_SHORT, FOOTING_REBAR_POPULATION_V1) carry straight runs side - 2 x 70 mm, i.e. the note-22 MINIMUM cover used as the bar-end position (a maximum run) with a drawn boxed bottom bar of unprinted diameter between bar end and face (p.13), and count readings (A, A + 1) from a bars-per-metre rate (owner Q-71: no universal count rule): BOUNDED 1,606.069136 .. 1,655.560494 kg are UPPER-basis values with no printed lower bound, the same basis as DG-a97ec2ea66e02194. Diameter and rate stand as printed (Checker own read of the FTB schedule: F12 9 x 16/m, F13 8 x 16/m, F14 / F8 / FF 9 x 14/m, BOXED-B BOT on all five); audit trail kept; released V2.9 unchanged; owner 2026-10-25 13:16: F8 / F12 / F13 / F14 / FF footing reinforcement stays HELD",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-31T07:47:30Z",
+   "unit": "kg"
   }
  ],
  "schema": "URBAN_CHECKER_DOWNGRADE_V1_SET"
