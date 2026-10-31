@@ -1,0 +1,223 @@
+{
+ "RL-07": {
+  "segments": [
+   {
+    "run": "RL-07",
+    "seg_id": "MS1-L",
+    "what": "MS1-L inner balustrade, pitch line (10 risers 0.166667, going 0.300)",
+    "length_m": 3.088690499226007,
+    "status": "DRAWING-CONFIRMED",
+    "source": "plan band drawn (GF 157/151 + 47F/4A4, 1F A8D-A90, 2F 1356-1359); section A-A sheet10 draws the rail; riser counts T-184 (MERGED, Q-46 A)",
+    "missing": "",
+    "plan_m": null,
+    "rise_m": null,
+    "binds": [
+     "ST01-MS1-L"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "MS1-U",
+    "what": "MS1-U inner balustrade, pitch line (12 risers 0.166667, going 0.300)",
+    "length_m": 3.775066165720675,
+    "status": "DRAWING-CONFIRMED",
+    "source": "plan band drawn (GF 157/151 + 47F/4A4, 1F A8D-A90, 2F 1356-1359); section A-A sheet10 draws the rail; riser counts T-184 (MERGED, Q-46 A)",
+    "missing": "",
+    "plan_m": null,
+    "rise_m": null,
+    "binds": [
+     "ST01-MS1-U"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "MS2-L",
+    "what": "MS2-L inner balustrade, pitch line (12 risers 0.168000, going 0.300)",
+    "length_m": 3.782208878420122,
+    "status": "DRAWING-CONFIRMED",
+    "source": "plan band drawn (GF 157/151 + 47F/4A4, 1F A8D-A90, 2F 1356-1359); section A-A sheet10 draws the rail; riser counts T-184 (MERGED, Q-46 A)",
+    "missing": "",
+    "plan_m": null,
+    "rise_m": null,
+    "binds": [
+     "ST01-MS2-L"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "MS2-U",
+    "what": "MS2-U inner balustrade, pitch line (12 risers 0.168000, going 0.300)",
+    "length_m": 3.782208878420122,
+    "status": "DRAWING-CONFIRMED",
+    "source": "plan band drawn (GF 157/151 + 47F/4A4, 1F A8D-A90, 2F 1356-1359); section A-A sheet10 draws the rail; riser counts T-184 (MERGED, Q-46 A)",
+    "missing": "",
+    "plan_m": null,
+    "rise_m": null,
+    "binds": [
+     "ST01-MS2-U"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "T-1F-S",
+    "what": "1F floor-level turn at the south well end (AC3): MS1-U arrives and MS2-L starts at +5.50",
+    "length_m": 0.20000000000046567,
+    "status": "DRAWING-CONFIRMED",
+    "source": "1F plan AC3 / AC4 + DXF dimension 200",
+    "missing": "",
+    "plan_m": 0.20000000000046567,
+    "rise_m": 0.0,
+    "binds": [
+     "ST01-TURN-1F-S"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "T-MS2-LD",
+    "what": "half landing MS2-LD turn at the north well end (A9B)",
+    "length_m": null,
+    "status": "HELD",
+    "source": "1F plan A9B / A9C (plan); section A-A (landing)",
+    "missing": "closing riser MS2-TR +7.516 -> +7.684 on the landing: its position relative to the rail turn and the rail profile over it are not drawn (T-184 HELD MS2-TR: landing levels scaled, not printed)",
+    "plan_m": 0.2,
+    "rise_m": 0.168,
+    "binds": [
+     "ST01-TURN-MS2-LD"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "T-MS1-N",
+    "what": "GF -> 1F north turn: the 5 winders MS1-T and the corner MS1-LD are ONE physical turn (Q-50 text: 5 winder steps in the 1.20 x 1.20 corner)",
+    "length_m": null,
+    "status": "HELD",
+    "source": "GF plan 154 / 150 dashed closure (plan); section A-A 5 winder risers",
+    "missing": "rail profile over the 5 winders converging at the 0.10 m well (ramp, newel posts or wreath) and the rail heights at both ends not drawn",
+    "plan_m": 0.2,
+    "rise_m": 0.8333,
+    "binds": [
+     "ST01-TURN-MS1-N"
+    ]
+   },
+   {
+    "run": "RL-07",
+    "seg_id": "G-2F",
+    "what": "2F floor-edge guard over the MS2-L opening (138A / 138B centreline, +9.70)",
+    "length_m": 1.324999999999942,
+    "status": "DRAWING-CONFIRMED",
+    "source": "2F plan 138A / 138B layer 5",
+    "missing": "",
+    "plan_m": null,
+    "rise_m": null,
+    "binds": [
+     "ST01-GUARD-2F"
+    ]
+   }
+  ],
+  "totals": {
+   "confirmed_lm": 15.953174,
+   "held": [
+    "T-MS2-LD",
+    "T-MS1-N"
+   ],
+   "unknown": [],
+   "excluded": []
+  },
+  "geometry": {
+   "south_turn_plan_m": 0.20000000000046567,
+   "north_turn_plan_m": 0.2,
+   "g2f_m": 1.324999999999942,
+   "band_outer_x_mm": [
+    -188742.5105913993,
+    -188542.5105913993
+   ],
+   "closing_y_mm": [
+    -796543.5400744048,
+    -793143.5400744047
+   ]
+  }
+ },
+ "RL-04": {
+  "segment": {
+   "run": "RL-04",
+   "seg_id": "RL-04",
+   "what": "GF roof strip sea edge (+5.50) in front of W15 / W16",
+   "length_m": null,
+   "status": "HELD",
+   "source": "1F plan C85 / C86 (layer 5 band, closed C81 / C84) vs NW elevation DXF",
+   "missing": "what stands on the edge: the plan draws a 50 mm railing band 6.127 m; the NW elevation draws two 0.20 m piers 0.50 m high (printed '50') with 7.500 m open between them and a single 1.000 m layer-5 line at pier-top level from the left pier only; type, height and extent (6.127 plan vs 7.500 elevation) not established",
+   "plan_m": 6.127356462473166,
+   "rise_m": null,
+   "binds": [
+    "RL-04"
+   ]
+  },
+  "facts": {
+   "plan_band_m": 6.127356462473166,
+   "slab_edge_27E5_m": 7.5,
+   "clear_between_piers_m": 7.5,
+   "pier_left_27D7_height_m": 0.55,
+   "pier_right_27DD_height_m": 0.5,
+   "pier_width_27E3_m": 0.2,
+   "layer5_line_27E7_m": 1.0,
+   "layer5_line_27E7_layer": "5"
+  }
+ },
+ "GF_band_extension": {
+  "2C8": {
+   "layer": "5",
+   "length_m": 1.05
+  },
+  "2C9": {
+   "layer": "2",
+   "length_m": 1.05
+  },
+  "2F1D": {
+   "layer": "5",
+   "length_m": 1.557
+  },
+  "2F1E": {
+   "layer": "2",
+   "length_m": 1.557
+  },
+  "155": {
+   "layer": "5",
+   "length_m": 0.2
+  },
+  "156": {
+   "layer": "5",
+   "length_m": 0.1
+  }
+ },
+ "internal": {
+  "ours_lm": 19.766,
+  "theirs_lm": 18.95,
+  "RL-05": 16.323999999999998,
+  "RL-06": 2.4,
+  "RL-08": 1.042,
+  "decomposition_A_his_scope_ST02_plus_D23": {
+   "diff": 0.816,
+   "causes": [
+    [
+     "RL-08 ST-01b lobby flight D1 rail (second staircase shaft)",
+     1.042
+    ]
+   ],
+   "unexplained": -0.226
+  },
+  "decomposition_B_his_scope_ST02_only": {
+   "diff": 0.816,
+   "causes": [
+    [
+     "RL-06 1F floor-edge guard D-23 (not a stair)",
+     2.4
+    ],
+    [
+     "RL-08 D1 lobby rail",
+     1.042
+    ]
+   ],
+   "unexplained": -2.626
+  }
+ }
+}
