@@ -6,8 +6,10 @@ unknown added to the drawn count, order / mirror independence. Then the committe
 """
 
 import importlib.util
+import json
 import os
 import sys
+import unicodedata
 
 import pytest
 
@@ -171,10 +173,66 @@ def test_alsenan_totals():
         assert k not in t                                                  # printed nowhere: never inferred
 
 
-def test_alsenan_freelancer_gratings_reconcile():
-    # floor drains + roof rain-water outlets = the freelancer's 'floor gratings fixed' count
+def _guard():
+    spec = importlib.util.spec_from_file_location(
+        "provenance_guard", os.path.join(ROOT, "research", "agents_t386", "provenance_guard.py"))
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["provenance_guard"] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_alsenan_benchmarks_are_the_cost_record_not_the_freelancer():
+    # T-389 (R-T386-1, ERS s.2.4): the four benchmark rows are Urban's own cost record, keyed by register id; none has
+    # a freelancer source cell; the counted ones are UNRESOLVED scope, never a residual of the drawn count.
+    G = _guard()
+    rows = G.register_rows()
+    assert not hasattr(A, "FREELANCER")
+    assert A.COST_RECORD_SOURCE["source_class"] == "URBAN_COST_RECORD"
+    with open(os.path.join(ROOT, G.MANIFEST), encoding="utf-8") as fh:
+        kinds = {f["key"]: f["kind"] for f in json.load(fh)["files"]}
+    assert G.source_class(kinds[A.COST_RECORD_SOURCE["manifest_key"]]) == "URBAN_COST_RECORD"
+    assert set(A.COST_RECORD) == {"WEB-018", "WEB-019", "WEB-055", "WEB-060"}
+    for rid, rec in A.COST_RECORD.items():
+        r = rows[rid]
+        assert r["source_freelancer_items"] == [] and r["freelancer_qty"] is None
+        assert rec["kind"] == r["mapping_class"] and rec["qty"] == r["qty"] and rec["unit"] == r["unit"]
+        assert set(rec) == {"what", "kind", "qty", "unit", "comparison"}            # quantities only: no rate
+        with pytest.raises(ValueError):
+            G.comparison_class("FREELANCER", r, basis_known=True)                   # offered as his: refused
+    for rid in ("WEB-018", "WEB-019"):
+        assert G.comparison_class("URBAN_COST_RECORD", rows[rid], basis_known=False) == "UNRESOLVED_SCOPE"
+        assert A.COST_RECORD[rid]["comparison"].startswith("UNRESOLVED_SCOPE")
+    assert A.B12_01_FREELANCER.startswith("NOT_COMPARABLE")
+    # the freelancer's own rows hold no fixture / drain count (B12-01 NOT COMPARABLE)
+    with open(os.path.join(ROOT, "tests", "alsenan", "registers_b1", "FREELANCER_RAW_ROWS.json"), encoding="utf-8") as fh:
+        raw = unicodedata.normalize("NFKC", fh.read())
+    for word in ("صفاي", "شاور", "drain", "shower", "sanitary"):
+        assert word not in raw.lower()
+
+
+def test_alsenan_drawn_counts_do_not_rest_on_the_cost_record():
+    # normal: the drawn counts are what the drawings print, whatever the cost record says
     _, t, _ = A.run()
-    assert t[R.FLOOR_DRAIN]["drawn"] + t[R.ROOF_DRAIN]["drawn"] == A.FREELANCER["floor gratings fixed (tiling labour, qty)"]
+    assert t[R.FLOOR_DRAIN]["drawn"] == 19 and t[R.ROOF_DRAIN]["drawn"] == 5
+    assert t[R.SHOWER_TRAY]["drawn"] + t[R.SHOWER_WALKIN]["drawn"] == 6
+    # adverse: a cost-record figure is never adopted as a drawn count (24 is not the B12-01 floor-drain count)
+    assert t[R.FLOOR_DRAIN]["drawn"] != A.COST_RECORD["WEB-019"]["qty"]
+
+
+def test_t370_files_carry_no_provenance_hit_and_the_old_label_is_refused():
+    G = _guard()
+    for rel in ("research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md", "research/agents_t370/t370_alsenan.py",
+                "research/agents_t370/t370_fixture_rules.py"):
+        assert G.scan_file(os.path.join(ROOT, rel)) == []
+    assert G.load_baseline()["files"] == {}
+    # adverse: re-adding the old labels (assembled here so this file does not match itself) is found and refused
+    fl, bycat, grat = "free" + "lancer", "Chalet_by" + "_category.xlsx", "تركيب " + "صفايات"
+    old = "\n".join(["The only " + fl + " file with sanitary content is '" + bycat + "'",
+                     "| floor gratings fixed ('" + grat + "') | 24 qty | the " + fl + " counts every grating |"])
+    assert [k for _, k in G.scan_text(old)] == ["COST_RECORD_FILE_AS_FREELANCER", "COST_RECORD_ROW_AS_FREELANCER"]
+    found = {"research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md": G.scan_text(old)}
+    assert G.unlisted(found, G.load_baseline()) == ["research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md"]
 
 
 def test_alsenan_wet_rooms():

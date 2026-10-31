@@ -78,16 +78,28 @@ alone. That is not a conflict: each W.C / BATH room tag on the architectural pla
   diagonal wall of the GF core W.C pair, p1@639.6,294.0) and **2 more showers** (the screened walk-in zones of 1F
   BATH C2F / C2C, p2@427.2,559.2 and p2@484.8,514.8). The wet / dry class of no space changes (each already WET).
 
-## 5. Freelancer comparison and verdict proposals (acceptance d)
+## 5. Benchmarks: freelancer NOT COMPARABLE; Urban cost record = UNRESOLVED scope (acceptance d; relabelled by T-389)
 
-The only freelancer file with sanitary content is 'Alsenan Chalet_by_category.xlsx' (a cost record by category, not a
-measured BOQ). Sanitary: 'sanitary materials' 1 item and the plumber's labour 1 item, both lump sums: **no fixture
-count to compare** (not comparable; no verdict). Two counted items sit in the tiling labour:
+Correction (T-389, rule R-T386-1, ERS s.2.4): an earlier version of this section called the cost-record workbook a
+freelancer file. It is not. Source classes, named before any comparison:
 
-| Freelancer row | Freelancer | Engine reading | Difference | Verdict proposal |
+- **Freelancer (FREELANCER_MANUAL_QS, manifest keys FIN / BLK / PNT / RC / ALU / PLS)**: the six measured workbooks
+  hold no fixture, floor-drain or grating row (0 of the 885 rows of `tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json`;
+  the 'wash' room names there are room-area rows of the waterproofing / tile / paint / plaster sheets, not counts).
+  B12-01 has **no freelancer item: NOT COMPARABLE, no verdict.**
+- **Urban cost record (URBAN_COST_RECORD, manifest key WEB, kind WEB_APP_COMMERCIAL_REPORT)**: Urban Projects' own
+  'Cost By Category' record (Drive 'Alsenan chalet project', the by-category workbook), register
+  `tests/alsenan/registers_b1/WEB_APP_ROWS.json`. It is a payable record (contract / payable quantity), not a measured
+  physical quantity. Quantities only below; no rate.
+
+| Register row | Cost record | Drawn reading (this register) | Comparison class | Note |
 |---|---|---|---|---|
-| floor gratings fixed ('تركيب صفايات') | 24 qty | FD 19 + RWD 5 = 24 pcs | 0 (0.0 %) on the combined count; FD alone 19 vs 24 = -5 (-20.8 %) | RULE_DIFFERENCE: the freelancer counts every grating the tiler sets, floor drains and roof outlets together; B12-01 floor drains = 19 pcs, the 5 roof outlets belong to the roof-drainage line (B13 family), not to the wet-room drains. Both numbers are drawing-printed. |
-| shower ('شاور') | 11 qty | 6 shower positions (3 tray + 3 walk-in) | -5 (-45 %) | UNRESOLVED: a tiling labour item of undefined unit; 11 matches no physical population read here (it equals the WC-room count of GF + 1F, 6 + 5, which is a coincidence until shown otherwise). No quantity is changed on it. |
+| WEB-055 sanitary materials | 1 item (LUMP_SUM) | - | NOT COMPARABLE | no count |
+| WEB-060 sanitary labour | 1 item (LUMP_SUM) | - | NOT COMPARABLE | no count |
+| WEB-019 floor drains installation (tiling labour, NO_FREELANCER_ITEM) | 24 qty | FD 19 pcs (B12-01); RWD 5 pcs (roof drainage, B13 family) | UNRESOLVED_SCOPE | the record does not print which gratings the payable count covers. FD 19 + RWD 5 = 24 is an arithmetic observation, not proof (agreement is never proof, ERS s.2.4) and not a residual of the drawn count. B12-01 floor drains stay 19 pcs DRAWING-CONFIRMED from the sanitary sheets alone. |
+| WEB-018 showers (tiling labour, NO_FREELANCER_ITEM) | 11 qty | 6 shower positions (3 tray + 3 walk-in) | UNRESOLVED_SCOPE | unit and covered population not printed; 11 is not compared with 6 as a residual. No quantity rests on it. |
+
+No drawn count in sections 2-3 rests on any benchmark row: each is read from the drawings (tests/t370 pins them).
 
 ## 6. What is missing / HELD
 
@@ -108,5 +120,6 @@ draw a fixture is silent, not in conflict.* Tests: `tests/t370_sanitary_fixture_
 adverse: double count, guessed type, drain from a fall, cross-room link, unknown / conflict never counted).
 
 Lessons row proposal: "A circle with a leader in a W.C is not a floor drain: on P7757 the three such circles are
-mechanical-ventilation marks (x-arab 'ji,dm wkhudm'). Read the leader before typing a symbol. Also: the freelancer's
-grating count (24) = floor drains (19) + roof outlets (5): compare populations, not totals."
+mechanical-ventilation marks (x-arab 'ji,dm wkhudm'). Read the leader before typing a symbol. Also: floor drains (19)
+and roof outlets (5) are separate populations; name a benchmark's source class before comparing (the 24-gratings row
+is Urban's own cost record, WEB-019, not a freelancer figure, and its covered population is not printed)."

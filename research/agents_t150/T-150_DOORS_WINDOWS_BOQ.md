@@ -153,6 +153,8 @@ of section 0.
   has a truly uncertain width.
 - Door and window counts already agree with the freelancer (29 windows, 5 aluminium doors); the money difference is
   heights: he uses flat 2.00 / 0.80 / 2.40 where 8 windows print other values and no door prints any.
+  (Superseded by T-198, T-389 note: agreement with the freelancer is not proof (ERS s.2.4); merged T-198 settles the
+  windows from the drawing, W02 HELD, freelancer shown beside the range only: tests/t198_census_r3/test_alsenan_ledger.py:56.)
 - The 28th engine door element is a gate in the site frontage, not a house door: a site-works item no Urban class names.
 - (r2) A geometric twin is not evidence: only a printed chain, an answered owner decision or the rule library gives a
   height, and a status outside WORKFLOW_CONTROLS s.5 must be impossible in the tool, not only avoided in the table. A

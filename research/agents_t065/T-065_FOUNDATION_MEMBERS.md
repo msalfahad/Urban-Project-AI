@@ -120,7 +120,7 @@ insert (negative X scale) inverts the footing box unless it is normalised; the g
 | Isolated footings, F3 count | 2 (1.344) | 1 (0.672) | 2 tagged outlines (1.344) | **ENGINE_RIGHT** (+0.672 m3 vs freelancer) |
 | Isolated footings, F10 (+ corner F) | held | 1.960 (+ F at 0.216 inside his 4) | drawn outline 3.25 x 1.40 vs schedule 2.80 x 1.40 (C5) | **UNRESOLVED** (RFI below); engine holding it is right |
 | Isolated footings, other types | 63.002 (register) / 62.960 (current, FN-F9 overlap counted once) | 63.002 | 63.002 at full size, 62.960 with the overlap once | agree; overlap 0.042 m3: ENGINE_RIGHT |
-| Strap beams | 3.392 (register) / 3.781 (current) | 3.3925 | 3.391 | register and freelancer agree; current +0.390 m3 not traced |
+| Strap beams | 3.392 (register) / 3.781 (current) | 3.3925 | 3.391 | register and freelancer agree; current +0.390 m3 not traced (superseded by T-073, T-389 note: agreement is not proof; the strap is re-derived by hand from the drawn F10 + F outline, research/agents_t073/T-073_RESULT.md:85) |
 | M1 band length | 60.17 m (frozen) | 71.7 m | 91.94 m drawn, 70.49 m free of footings | frozen engine **wrong** (side 1 lost); freelancer **UNRESOLVED**: his 71.7 m lies between the free length on the inner face (91.14 - 21.05 = 70.09) and on the outer face (92.74 - 20.15 = 72.59), consistent with "band less footings" but not reproducible |
 | M1 band section | 0.20 x 0.60 | 0.20 x 0.60 | C1 conflict | **UNRESOLVED** (owner Q-28) |
 | M1 band where it runs through a footing | (guard: held) | apparently deducted | no Urban rule on concrete overlap | **UNRESOLVED** (owner Q-28) |

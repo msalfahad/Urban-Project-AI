@@ -1,0 +1,12 @@
+{
+ "SCHEMA": "URBAN_T386_PROVENANCE_BASELINE_V1",
+ "rule": "R-T386-1: a cost-record row with no freelancer source cell is never labelled the freelancer's; a figure of undefined basis is UNRESOLVED scope, never an engine residual; agreement is never proof (ERS s.2.4)",
+ "classes": {
+  "PROVENANCE_MISLABEL": "an Urban cost-record figure (WEB_APP_ROWS, NO_FREELANCER_ITEM / LUMP_SUM) attributed to the freelancer; listed here only until a row allowed to edit the file corrects it"
+ },
+ "cleared": {
+  "research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md": "T-389: section 5 relabelled to the Urban cost record (WEB-018 / WEB-019 / WEB-055 / WEB-060); freelancer B12-01 NOT COMPARABLE",
+  "research/agents_t370/t370_alsenan.py": "T-389: dict FREELANCER replaced by COST_RECORD keyed by register id (no alias)"
+ },
+ "files": {}
+}
