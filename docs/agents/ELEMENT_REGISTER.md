@@ -46,6 +46,29 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-31 08:30 (from T-199 r3 / T-386 / T-387 / T-388 MERGED; T-385 r1 REJECTED; new T-389 .. T-393)
+
+- NON-STAIR GUARD RAILS (T-199 r3, F-T199-4): roof / floor-edge / gallery guard rails (MET.RAILING.GUARD, 21.550 lm in
+  V3.0.30) are their OWN element, owner trade METALWORK, separate from the stair handrail / balustrade (FIN.RAILING,
+  B7-09) and from the wall handrail (FIN.HANDRAIL, B7-10). One physical run is carried by exactly one of the three;
+  a gallery guard that continues a stair balustrade is split at the landing nosing. Lead ruling; registry family
+  proposed in T-328 (h); scope checks in T-393.
+- PLANTED COLUMN P.C 20 x 70 ON GF B27 (T-229, Checker T-387 re-measure 4.1927 vs 4.1918 m3): the BEAM owns the plan
+  area under the planted column; the column starts on the beam top. Never deducted from the beam, never added to the
+  column below the beam top. DRAWING-CONFIRMED.
+- T-146 RING-OVERLAP DEDUCTIONS (BAND0003 / 0006 / 0041.2, 0.002566 m3 in all): owner trade STRUCTURE, ring B7 vs the
+  adjoining beams; whether RING-B7 carries the slivers (counted once) or not (a gap) is UNRESOLVED, immaterial; settled
+  in T-392. Never called rounding.
+- POOL FOURTH SIDE B7 / 8D (T-385 Checker O-T385-1): the part inside the pool outline is POOL WALL (R-POOL, VERIFIED
+  2.828071 m3 with the other walls); the part beyond the pool (about 1.67 m of about 5.17 m) is NOT pool concrete: owner
+  trade to be named once (beam or wall) in T-392; until then that part is UNKNOWN, never 0, never added to the pool.
+- SHOWERS (T-386): the shower population is 6 drawn (3 trays + 3 walk-in zones, DRAWING-CONFIRMED); the 11 in Urban's
+  cost record (WEB-018) is a cost-record figure with no physical definition: UNRESOLVED scope, not a freelancer
+  comparison. Same for floor gratings 24 (WEB-019) vs drawn FD 19 + RWD 5.
+- WALL FACES (T-388): an opening is deducted on the face piece its contour segment lies on (a doorway's OFF:DOORWAY
+  piece), never on a neighbouring straight face of the same room; room totals are unchanged by the attribution. The
+  pantry wall face is owned by WALL TILE full height (Q-30 / Q-37 A + Q-48 A): its paint line is NOT_APPLICABLE.
+
 ### Lead 2026-10-30 20:20 (from T-326 r2 / T-377 / T-373 MERGED; T-369 / T-370 / T-374 READY; new T-378 .. T-381)
 
 - LAP / DEVELOPMENT COMPONENTS ON NOTE 9 (T-373, Checker 19:58): 351 component lines of beams (254 ends), columns (56

@@ -847,3 +847,14 @@ Every hand check must come from printed dimensions or a separate reading (checke
 | T-276 buried faces r2 | in work (CLAIMED 19:47) | worker 2 | Gate A when READY; feeds T-270 as a later delta |
 | Row stamps | process fault | T-272 READY stamp 20:05 written by 19:35-19:59; worker 3 run-log 19:40 committed 19:36 | lessons row (stamp = `date -u` at writing); watch |
 
+
+## 2026-10-25 16:15 (lead run; covers 14:15 - 16:15)
+
+- T-292 r2 plaster / paint face-to-line ledger: WORKED (Gate A PASS, MERGED a9754a67, Verifier 15:32; own W17 re-measure; the Checker withdrew its own 12:48 ask: the window area is not the hole). Finding F-T292-02: hole bounded below by the elevation projection (8.1239 m2), 1F-11 HELD 60.6011 .. 62.3352 m2, released 59.4511 at least 1.15 m2 low. Decision: T-244 acceptance holds the line; NEW T-302 measures the developed hole.
+- T-295 ceiling face-to-line ledger: WORKED (MERGED 964c5ebe, Verifier 15:33; 1F dressing 2.970 m2 omission confirmed). Decision: T-284 adds the dressing line; exterior soffits / P-2 bands stay HELD both.
+- T-297 rebar line-to-member basis ledger: PARTIAL (MERGED 5408da97, then gate (f) defect F-T297-04: 4 2F main-bar lines 0.159288 t labelled DRAWING_CONFIRMED on the held D-39 datum; the Lead's 14:15 challenge (a) named this and it was not met). Decision: r2 NARROW, worker 1 next; lessons row (one member, one datum status across trades).
+- T-296 skirting opening-to-line ledger: WORKED (MERGED 57c31ae4, Verifier 16:08; own 1F-01 15.900 lm agrees 0.000). ENGINE_WRONG proposals (+5.802 lm sill windows, W15 / W16 range, wet pantry NOT_APPLICABLE) -> T-246 acceptance; module not task-prefixed again (unique today) -> rename in T-246.
+- F-T254-01 ring ground beam end rule: closed by the Checker from the drawing (16:00): +0.012043 m3 (ENGINE_WRONG -0.69 %). Decision: correction + regression pair ride the T-255 package; lessons row.
+- T-299 PART F footing reinforcement: READY 15:57, first in the Checker queue (owner-session item); Lead challenges: the downgrade conflict with the Checker's 15:35 note and the audit band 2.718 vs the owner's 2.769 t lower bound.
+- Team: every run since 14:15 closed with a final line except the open Worker 3 15:00 (T-266) and Verifier 15:51 runs; Worker 2 15:40 IDLE on the run lock is correct (the 14:41 run worked 61 min). Recurring cause: a Lead challenge written into the queue note is not always read by the worker before hand-in (T-297 (a)); from now on challenges that change acceptance go into the ROW, not only the queue note.
+

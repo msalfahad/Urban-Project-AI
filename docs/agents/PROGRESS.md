@@ -1,9 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 04:30 UTC (Lead). Previous version: 2026-10-31 00:45 UTC. The released numbers did not change
+Last update: 2026-10-31 08:30 UTC (Lead). Previous version: 2026-10-31 04:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review stays V3.0.29 (not released).
+released: 0. The candidate under review is now V3.0.30 (not released): it adds formwork, railings and shutters.
+
+Since 31 Oct 04:30 (newest first; four checked and merged, one of them an integration into the candidate; one sent
+back):
+- Formwork, railings and shutters INTO THE CANDIDATE: CHECKED AND MERGED on the third pass (V3.0.30). Formwork
+  1,065.83 m2 calculated from the checked face ledgers (the freelancer has no formwork row: not comparable); 378
+  formwork lines held blank where the face or its forming is not settled. Railings 38.92 m.l, of which 12.89 verified by
+  the checker's own drawing measure (0.0 %); internal railing 19.77 m.l against the freelancer's 18.95 m.l is a scope
+  question, not an error %; 6 shutter leaves, their areas held. Every other line identical.
+- Concrete compared with the freelancer family by family: SENT BACK. The checker found the "nothing unexplained"
+  claim was true only by construction: 11 unresolved parts worth about 36.7 m3 together had been counted as explained.
+  The checker confirmed the second F3 footing (engine right, +0.672 m3) and the pool base and walls from the drawing.
+  Fix is first in the structural lane; the two largest unresolved parts (ground slab about 12.3 m3 and ground beams
+  about 10.4 m3) are a new measuring task.
+- Structural check on the candidate as a whole: CHECKED AND MERGED. Every structural concrete line rests on one element;
+  no overlap counted twice found; the checker re-measured the largest open beam (GF B27) at 4.193 vs 4.192 m3 (agree).
+  Three tiny ring-beam residuals (about 0.24 m3 together) and the owner trade of the pool's fourth side wall beyond the
+  pool remain open (new task).
+- Wall-face check across blockwork, plaster, paint, backing, tile, reveals and thresholds: CHECKED AND MERGED. Each
+  opening is deducted once per trade on each face; no reveal or threshold counted twice. Found: 10 door holes booked on
+  the wrong face piece (room totals unchanged), a few face lengths 0.05 - 0.14 m off the drawing (checker confirmed one
+  by its own measure: 3.000 m drawn vs 3.015 m used), and the pantry paint line should be "not applicable" (tile owns
+  the wall). Fixes queued.
+- Shower count wording: CHECKED AND MERGED. The "11 showers" was Urban's own cost record, not the freelancer's, so the
+  showers have no freelancer comparison (it had been reported as -45 %).
+- Footing mesh: the checker issued the "held" record for the last 10 footing lines on the same doubtful basis.
+- Next: roof build-up into the candidate; the concrete comparison fix; the ground slab and ground-beam measure; face
+  length causes; railing scope.
 
 Since 31 Oct 00:45 (newest first; three checked and merged, no integration; one package sent back twice):
 - Formwork, railings and shutters INTO THE CANDIDATE: SENT BACK TWICE, both times for bookkeeping, not for any

@@ -45,6 +45,19 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 08:30 (lead run; covers 04:30 - 08:30)
+
+- WORKED: T-199 r3 (Gate B PASS, V3.0.30: formwork / railings / shutters in), T-386 (provenance: shower 11 = Urban cost
+  record, not freelancer), T-387 (ownership / overlap census; Checker corrected one cause: documented T-146 deductions
+  are not rounding), T-388 (face consistency; F1 / F3 -> T-246, F2 -> T-390); DGP-T374-FTGM issued.
+- PARTIAL: T-385 (concrete per family): closure counted UNRESOLVED contributions as named causes (-36.652 m3 stated as
+  0.000 unexplained). Decision: r2 with the exact fault, first in S; the two largest UNRESOLVED parts -> T-391.
+- LEAD FAULT: two worker slots (Worker 1 07:21, Worker 3 07:01) idled on an empty board: S had one row, I one serial
+  row, and T-328's status still read 'after T-319' though T-319 merged on 29 Oct. Fix: S 3 / A 3 / I 1 TODO; whenever a
+  lane I row merges, the next lane I row is set TODO in the same Lead run, and each lane keeps at least 2 claimable rows.
+- Cause seen: 'closes to 0.000' and 'rounding' were both claimed where a cause was not traced. Hand-in rule added: a
+  cause closure counts only traced causes; a documented sub-tolerance deduction is named.
+
 ## 2026-10-31 04:30 (lead run; covers 00:45 - 04:30)
 
 - WORKED: T-384 (privacy fix + currency guard), T-374 r2 (exact r1 fault fixed: 38 lines HELD_DOWNGRADE, net 4,249.455 kg),
@@ -248,14 +261,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-300 (beam rebar completeness safeguard): WORKED (196a7a0b; unwired, 0 kg invented). Non-blocking findings kept here for later rows: F-T300-01 B27 0.90 m wide single-link reading (designer RFI S20); F-T300-02 the route G sha depends on the input FILE NAME (reproducibility: two runs of one drawing under two names give two shas; candidate for the T-294 binding work or a tooling row once lane I frees); F-T300-03 CB filled TOP marks read on all spans.
 - F-SCORE-01 (Verifier 22:49): the key map refuses unit 'item', so no candidate cell is tool-scored since V3.0.14 -> T-304.
 - Recurring cause (Lead's own): a QUEUED "after T-xxx" row was not flipped to TODO when T-xxx merged between Lead runs, so worker 3 found no lane I TODO and took lane A T-303 (worker 2 then idle twice). Decision: every Lead run re-reads each "after T-xxx" row against the merges since its last run before writing the lane order.
-
-## 2026-10-25 16:15 (lead run; covers 14:15 - 16:15)
-
-- T-292 r2 plaster / paint face-to-line ledger: WORKED (Gate A PASS, MERGED a9754a67, Verifier 15:32; own W17 re-measure; the Checker withdrew its own 12:48 ask: the window area is not the hole). Finding F-T292-02: hole bounded below by the elevation projection (8.1239 m2), 1F-11 HELD 60.6011 .. 62.3352 m2, released 59.4511 at least 1.15 m2 low. Decision: T-244 acceptance holds the line; NEW T-302 measures the developed hole.
-- T-295 ceiling face-to-line ledger: WORKED (MERGED 964c5ebe, Verifier 15:33; 1F dressing 2.970 m2 omission confirmed). Decision: T-284 adds the dressing line; exterior soffits / P-2 bands stay HELD both.
-- T-297 rebar line-to-member basis ledger: PARTIAL (MERGED 5408da97, then gate (f) defect F-T297-04: 4 2F main-bar lines 0.159288 t labelled DRAWING_CONFIRMED on the held D-39 datum; the Lead's 14:15 challenge (a) named this and it was not met). Decision: r2 NARROW, worker 1 next; lessons row (one member, one datum status across trades).
-- T-296 skirting opening-to-line ledger: WORKED (MERGED 57c31ae4, Verifier 16:08; own 1F-01 15.900 lm agrees 0.000). ENGINE_WRONG proposals (+5.802 lm sill windows, W15 / W16 range, wet pantry NOT_APPLICABLE) -> T-246 acceptance; module not task-prefixed again (unique today) -> rename in T-246.
-- F-T254-01 ring ground beam end rule: closed by the Checker from the drawing (16:00): +0.012043 m3 (ENGINE_WRONG -0.69 %). Decision: correction + regression pair ride the T-255 package; lessons row.
-- T-299 PART F footing reinforcement: READY 15:57, first in the Checker queue (owner-session item); Lead challenges: the downgrade conflict with the Checker's 15:35 note and the audit band 2.718 vs the owner's 2.769 t lower bound.
-- Team: every run since 14:15 closed with a final line except the open Worker 3 15:00 (T-266) and Verifier 15:51 runs; Worker 2 15:40 IDLE on the run lock is correct (the 14:41 run worked 61 min). Recurring cause: a Lead challenge written into the queue note is not always read by the worker before hand-in (T-297 (a)); from now on challenges that change acceptance go into the ROW, not only the queue note.
-
