@@ -325,6 +325,8 @@ def layer_line(rf, ly, src, tmpl):
            + (f"; basis plan {_fmt(lo)}" + (f" .. {_fmt(hi)}" if hi is not None and abs(hi - lo) > TOL else "")
               + f" m2 beside{' (' + ly['range_cause'] + ')' if ly.get('range_cause') else ''}" if lo is not None else "")
            + (f"; {ly['bounds_beside']}" if ly.get("bounds_beside") else ""))
+    # a blank line never concludes on a figure (V3.0.24 line-state rule): a figure beside reads '->', never '='
+    why = why.replace(" = ", " -> ")
     return _new(tmpl, item_code=code, unit=unit, evidence_state="BLOCKED_RFI", element_id=eid, floor=rf["floor"],
                 phys=phys, formula=why, rec=rec, rfi={"question": why[:900], "unlocks": eid},
                 notes=f"{METHOD}: roof layer {ev} by name ({src['task']} MERGED {src['merge_commit'][:8]})")

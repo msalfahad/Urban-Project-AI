@@ -1,0 +1,33 @@
+{
+ "from": "V3_0_30_BOQ_LINES.json of the T-328 run (candidate of record V3.0.30)",
+ "lines": [
+  {
+   "line_id": "L-030538dda6a32c601c4c",
+   "item_code": "STR.CONC.PARAPET",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "element_id": "2F_ROOF#PARAPET_RC"
+  },
+  {
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "item_code": "STR.CONC.PARAPET",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "element_id": "ANNEX_ROOF#PARAPET_RC"
+  },
+  {
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "item_code": "STR.CONC.PARAPET",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "element_id": "1F_ROOF#PARAPET_RC"
+  },
+  {
+   "line_id": "L-b5ffc172a354375ca107",
+   "item_code": "STR.CONC.PARAPET",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "element_id": "GF_TERRACE#PARAPET_RC"
+  }
+ ]
+}

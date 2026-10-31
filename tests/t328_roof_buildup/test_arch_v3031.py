@@ -292,3 +292,28 @@ def test_adverse_integrate_refuses_a_foreign_change():
     c["after"] = copy.deepcopy(lines[0])
     with pytest.raises(ValueError):
         A.integrate(lines, [c])
+
+
+# ------------------------------------------------------------------ runner registration (tools/urban_boq_m9.py)
+def test_runner_registers_v3031_opt_in(capsys):
+    from tools import urban_boq_m9 as M
+    assert M.V3031 == A.METHOD and M.CANDIDATE_EXTENSIONS_V3031 == (A.METHOD,)
+    with pytest.raises(SystemExit) as e:
+        M.main(["arch", "--help"])
+    assert e.value.code == 0
+    out = capsys.readouterr().out
+    assert "--v3031-inputs" in out and "ARCH_TAKEOFF_V3.0.31" in out
+    assert A.policy_record()["released_default"] is False
+
+
+def test_a_blank_line_never_concludes_on_a_figure():
+    """the V3.0.24 line-state rule on the added lines: a held text with 'a x b = c m2' beside is written '->'"""
+    from engine.source import arch_v3024 as A3024
+    d = doc()
+    for ly in next(r for r in d["roofs"] if r["roof"] == "R3")["layers"]:
+        ly["bounds_beside"] = "drawing-derived beside: 7.00 x 6.00 = 42.000 m2 (held roof)"
+    lines = lines_3030()
+    ch, _ = A.changes_for(A.load_inputs(d, PID), lines)
+    out, _ = A.integrate(lines, ch)
+    assert A3024.scan([c["after"] for c in ch]) == {}
+    assert all("= 42" not in c["after"]["calculation"]["formula"] for c in ch)
