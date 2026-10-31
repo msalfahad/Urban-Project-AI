@@ -1,3 +1,89 @@
+## LEAD REPORT 2026-10-31 08:30 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+31 Oct 04:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch b25b77b2 -> df170b8d (Checker merges via 'engine push'); no owner
+commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since my last
+run; nothing undone.
+
+HEADLINE: formwork, railings and shutters are now in the candidate (V3.0.30, third Gate B pass); two candidate-wide
+consistency checks merged; the per-family concrete comparison was sent back because 11 unresolved parts (about 36.7 m3)
+had been booked as explained. My fault this cycle: two worker slots idled on an empty board; refilled.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.29 -> V3.0.30):
+- FORMWORK (m2; Gate B PASS r3 05:54): 1,065.833 m2 CALCULATED (= checker-verified face ledgers, 0 mismatches); 378 lines
+  HELD blank (60 formed / earth-cast pairs never summed, OQ-10; 24 parapet faces). Freelancer: no formwork row (not
+  comparable). Change: 0 -> 1,065.833 m2 in the candidate; released unchanged.
+- RAILINGS (m.l): 38.916 lm in the candidate, 12.888 VERIFIED (checker's own DXF, 0.0 %); internal railing 19.766 lm vs
+  freelancer 18.95 m.l = UNRESOLVED scope (+0.816 m.l, +4.3 %, not an error % until his runs are matched); ST-01
+  balustrade 16.153 m and the GF sea strip 6.127 m HELD, never 0 -> new railing-scope task. Shutters 6 leaves, m2 HELD.
+- CONCRETE (m3): per-family comparison REJECTED r1. Checker-confirmed: second F3 footing ENGINE_RIGHT (+0.672 m3; two
+  C3/F3 labels each with its own 1.40 x 1.60 block); pool base 4.374226 and walls 2.828071 m3 from the drawing. Not
+  closed: 11 UNRESOLVED components, -36.652 m3 together (ground slab -12.309, ground beams -10.355, column height basis,
+  beams, stairs, domes, lift / pump scope); pool walls carry a further 0.471346 m3 on the wall-height basis named by no
+  cause. Ownership census (merged): 525 lines, 0 unbound, 317 valued 285.0266 m3, no double count found; GF B27 own
+  re-measure 4.1927 vs line 4.1918 m3 (-0.02 %, agree). Open: ring B7 0.2182 + 0.0235 m3, T-146 slivers 0.0026 m3
+  (immaterial), the out-of-pool part of the pool's fourth side (owner trade not named).
+- REINFORCEMENT (kg): record DG-df07eb3d issued: 10 footing '/m' lines HELD (1,606.069 .. 1,655.560 kg leave the bounded
+  figure); released 10,250.168 kg unchanged. Bounded candidate range after it: per the checker's V3.0.29 restatement.
+- FINISHES (m2): face-consistency check merged: every opening deducted once per trade per face (65 / 65); no reveal or
+  threshold double count. Found: 10 door holes on the wrong face piece (room totals 0.000 m2; D-1F-04 1.760 m2),
+  face-length residuals pantry -0.120 m (tile and backing -0.438 m2 each, 1.35 %), GF-14 -0.045 m (-0.164 m2), GF-08
+  -0.140 m (plaster / paint -0.511 m2, inside its HELD bound); checker's own read GF-W01 3.000 m drawn vs 3.015 m used.
+  Pantry paint line should be NOT_APPLICABLE (tile owns the wall).
+- SANITARY: the shower 11 and gratings 24 are Urban's own cost record (WEB-018 / WEB-019), not the freelancer: B12-01
+  has NO freelancer comparison (it had been reported -5 pcs / -45 %); drawn 6 showers stand.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: a missing category (formwork) and the metalwork family entered the candidate with every quantity
+traceable; the candidate now has a structural ownership proof and a wall-face proof. WHAT GOT WORSE: nothing measured
+moved the wrong way; the concrete reconciliation turned out less closed than claimed (honest restatement, not a loss).
+WHAT WAS LEARNED: 'closes to 0.000' must count only traced causes; a documented deduction below tolerance is named,
+never 'rounding'; a benchmark's source (freelancer vs Urban cost record) is named before comparing. WHAT IS MISSING:
+roof build-up (next), ceilings, skirting + face fixes, WP fixes, exterior plaster, earthworks, foundation WP, spatter,
+masonry accessories, mortar (lane I, serial). GATES: lowest open gate 0 (cost-record relabel, no quantity); quantity work
+gate 2 - 3. Milestones: Week 2 (3 Nov) formwork delivered, roof expected 1 Nov, ceilings at risk; M3 11 Nov; M4 25 Nov at
+risk on the unresolved concrete parts.
+
+DECISIONS THIS RUN: T-328 roof build-up TODO (first lane I; adds: registry owns every V3.0.x code incl. EXT.* /
+WP.FOUNDATION.* / FLOOR.*, guard rails their own metalwork family by my register ruling); T-385 -> TODO r2 (exact fault);
+NEW T-389 (gate 0 A, cost-record relabel, guard baseline to 0), T-390 (A, face-length causes), T-391 (S, ground slab +
+ground beams re-measure, about 22.7 m3), T-392 (S, ring / slivers / pool fourth side owner trade), T-393 (A, railing
+scope); T-246 gains the T-388 face fixes. Board text corrected for the shower / gratings provenance. Element register:
+6 rulings (guard rails, planted column on B27, T-146 slivers, pool fourth side, showers, wall-face attribution). Queue
+check: 45 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 3, A 3, I 1 (serial) + T-383 owner-held; READY 0.
+
+LESSONS REGISTER PROPOSALS (standard s.7):
+'2026-10-31 | a reconciliation reported 0.000 unexplained while 11 untraced parts (-36.652 m3) were summed as named causes
+| closure by construction | cause closure counts only traced causes; untraced parts print as unexplained | T-385 r2
+adverse tests | PROPOSED';
+'2026-10-31 | a census called documented sub-tolerance deductions "rounding" | one ledger read, not every ledger that
+wrote the line | reconcile to every merged ledger (formula field first); name a deduction below tolerance | T-392 adverse
+case | PROPOSED';
+'2026-10-31 | an Urban cost-record count was reported as a freelancer residual (-45 %) | source class not named | name the
+benchmark source and register id before comparing; undefined basis = UNRESOLVED scope | t386 guard + T-389 | PROPOSED'.
+
+TEAM HEALTH (04:30 - 08:30): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
+incl. one overlap-guard exit at 07:51, Lead x1 open = this run); all self-checks PASS; scheduler last runs SUCCEEDED
+(Main 04:31, Worker 2 06:40, Worker 3 06:59, Dashboard 00:54). Idle: Worker 1 07:21 and Worker 3 07:01 found no TODO
+(Lead cause, fixed). Worker 2's final-line stamps run ahead of the clock (07:58 written at about 07:50; also 01:22 vs
+00:54 merge): cosmetic, the Checker already corrects them; no refusal this window except the known private-data ones.
+Scout paused (your 28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new decision):
+- T-383 waterproofing completeness join: own row (A, recommended) vs inside T-310 (B); full ERS s.6 text in my 00:45
+  report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat):
+(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence into the public repository is refused by
+the platform (23:39, 01:55). Needs your decision on where it may be kept (e.g. only in the private workspace, cited by
+Drive title and page). The checker will not retry until then.
+(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let his finish rows
+be reconciled (the shower count is no longer one of them: it was Urban's cost record).
+(3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
+
 ## LEAD REPORT 2026-10-31 04:30 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

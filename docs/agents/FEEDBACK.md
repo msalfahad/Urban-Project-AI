@@ -45,6 +45,25 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 20:20 (lead run; covers 16:20 - 20:20)
+
+- T-395 (S, beams): WORKED (Gate A PASS 8cf46e7d; checker re-measured 1F B25 2.8498 vs 2.8500 m3, CB1 joint 0.135 m3 carried
+  by the column once, depth basis 0.000). Decision: held part -> T-402 (READY); traces -> T-406 roll-up (TODO now).
+- T-398 (S, stairs / domes / pump): WORKED (fe6a238d; domes +0.561 ENGINE_RIGHT, ST-02 UNRESOLVED stands, pump room HELD).
+  Decision: traces -> T-406; stair side finishes -> T-410.
+- T-393 (A, railings): WORKED (1a1925c4; 2F guard 1.325, MS1-U 3.7751 AGREE, RL-04 HELD). Decision: stair wall / open side
+  ruling in the register; T-410 skirting uses the railing runs as the open sides.
+- T-403 (S, boundary wall below N.G.): WORKED (a72a7282; 3.5256 m3 AGREE, masonry AT_LEAST 17.628 m2). Decision: into
+  T-400 scope; NEW T-407 for its finding (block under the house south G.B 29.97 m MISSING); observation 'B.W' label
+  row not proven to be the lower G.B stays with T-406 (HELD, never valued).
+- T-404 (A, fence finishes): WORKED (698282e4; faces 165.201 m2 DC, layers HELD). Decision: into T-400 scope.
+- T-397 (I, structural corrections, Gate B): WORKED first pass (4492fd59, candidate V3.0.33; 30 changed + 1 added lines
+  re-measured, 15 / 15 column ranges AGREE). Decision: T-399 now first in lane I, bind to V3.0.33.
+- T-401 / T-402 / T-405: READY, queued T-402 > T-401 > T-405. Pre-decided: T-408 lift follow-up after T-401; the T-402 slab /
+  beam width coupling is one bound pair (register ruling 20:20).
+- Process: READY stamps ahead of the clock AGAIN (Worker 2 T-404 17:25 for a run closed 16:52; Worker 3 T-401 20:05 for a
+  run closed 19:50; fifth and sixth case today). Now in NEEDS FIXING for the main chat (prompt wording).
+
 ## 2026-10-31 16:20 (lead run; covers 12:30 - 16:20)
 
 - T-391 (S, ground slab / ground beams): WORKED (Gate A PASS c3fe8ec8; checker re-measured OWN-001, held-cell panels,
@@ -266,19 +285,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-312 (wall tile face-to-line): READY, Gate A pending (pantry 32.3422 m2 NO_LINE). Decision: NEW T-315 (lane I wall tile integration with a per-face tile / paint / plaster cross-trade check), after T-312 MERGED and T-244.
 - PARTIAL / FAILED: none. Team: Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock (correct); Worker 3 05:00 run open on T-244 (scheduler PENDING); every closed run self-check PASS.
 
-## 2026-10-26 04:15 (lead run; covers 02:15 - 04:15)
-
-- T-255 (Gate B, V3.0.19: ring BAND0043 end closure + W03 / W18 trace): WORKED (MERGED 01358449; ring ENGINE_WRONG chord -0.012043 m3 -> drawn faces, Checker -0.0015 %; 3,704 lines byte-identical). MISSING named: 27 reveal lines blank, no FIN.WALL.TILE row. Decisions: T-313 (reveal ledger), T-312 (wall tile ledger).
-- T-304 (key map unit exclusion): WORKED (MERGED 01358449; scoreboard tool-scored again on V3.0.19, F-SCORE-01 closed).
-- T-306 (slab steel spread by cause): WORKED (MERGED 01358449; F-T306-01 CONFIRMED on the Checker's own p.15 read; O-T306-01 'extend 50 % top reinf. where possible'). Decision: acceptance added to T-307 (now unblocked, worker 1 next).
-- T-294 (records bound to their own lines): WORKED (MERGED 1157b8f8). Decision: the next package (T-244) carries the V3.0.19 whole-file records by one verdict-rebind run (Checker queue item 3).
-- T-305 (exterior plaster face-to-line), T-308 (formwork r5 rows): READY, Gate A pending. T-305's finding (parapet / plinth / annex faces in no line) -> T-311 (lane S element definition) and T-314 (lane I face rows), both after T-305 merges.
-- PARTIAL / FAILED: none. Team: Verifier 03:51 stood down on the overlap guard (correct), Worker 1 03:20 IDLE on the run lock (correct); every closed run self-check PASS.
-
-## 2026-10-26 02:15 (lead run; covers 00:15 - 02:15)
-
-- T-303 (WP wet-area / roof / pool-tank inventories): WORKED (MERGED 1d3f69b0; Checker own: 1F east bath upturn 1.580 vs engine 1.48 ENGINE_WRONG, 2 doors with two transition lines and 3 with none, pool membrane + screed printed and in no line = MISSING, tank NA with evidence). Decisions: T-310 (lane I fix), T-309 (pool membrane / screed ledger); O-T303-01 pantry 0.045 m2 carried in T-310.
-- T-293 part 3 (stair / dome / tank formwork faces): WORKED (MERGED 02f3e47e; stair rows over-measure 3.624964 m2, 1.639289 double booking Checker own-checked; F-05 R-FW-P3-1 accepted). Decision: T-308 formwork r5 rows before T-199.
-- V3.0.18 record set (Checker 01:25): WORKED (8 records + DG re-issued, ST-03 downgrade moot; whole verified lines 1).
-- T-304 (key map 'item'), T-306 (slab steel spread by cause): READY, Gate A pending. T-306's F-T306-01 (no development drawn at continuous supports, 556.205 .. 1,027.310 kg on the dev lines) -> T-307 after T-306 merges.
-- PARTIAL / FAILED: none. Team: Worker 2 01:39 IDLE on the run lock (correct); Dashboard 00:54 recovered after the 20:54 usage-limit failure.

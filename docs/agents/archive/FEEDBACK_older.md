@@ -11,6 +11,22 @@
 - Recurring cause (Lead's own): a QUEUED "after T-xxx" row was not flipped to TODO when T-xxx merged between Lead runs, so worker 3 found no lane I TODO and took lane A T-303 (worker 2 then idle twice). Decision: every Lead run re-reads each "after T-xxx" row against the merges since its last run before writing the lane order.
 
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
+## 2026-10-26 04:15 (lead run; covers 02:15 - 04:15)
+
+- T-255 (Gate B, V3.0.19: ring BAND0043 end closure + W03 / W18 trace): WORKED (MERGED 01358449; ring ENGINE_WRONG chord -0.012043 m3 -> drawn faces, Checker -0.0015 %; 3,704 lines byte-identical). MISSING named: 27 reveal lines blank, no FIN.WALL.TILE row. Decisions: T-313 (reveal ledger), T-312 (wall tile ledger).
+- T-304 (key map unit exclusion): WORKED (MERGED 01358449; scoreboard tool-scored again on V3.0.19, F-SCORE-01 closed).
+- T-306 (slab steel spread by cause): WORKED (MERGED 01358449; F-T306-01 CONFIRMED on the Checker's own p.15 read; O-T306-01 'extend 50 % top reinf. where possible'). Decision: acceptance added to T-307 (now unblocked, worker 1 next).
+- T-294 (records bound to their own lines): WORKED (MERGED 1157b8f8). Decision: the next package (T-244) carries the V3.0.19 whole-file records by one verdict-rebind run (Checker queue item 3).
+- T-305 (exterior plaster face-to-line), T-308 (formwork r5 rows): READY, Gate A pending. T-305's finding (parapet / plinth / annex faces in no line) -> T-311 (lane S element definition) and T-314 (lane I face rows), both after T-305 merges.
+- PARTIAL / FAILED: none. Team: Verifier 03:51 stood down on the overlap guard (correct), Worker 1 03:20 IDLE on the run lock (correct); every closed run self-check PASS.
+
+## 2026-10-26 02:15 (lead run; covers 00:15 - 02:15)
+
+- T-303 (WP wet-area / roof / pool-tank inventories): WORKED (MERGED 1d3f69b0; Checker own: 1F east bath upturn 1.580 vs engine 1.48 ENGINE_WRONG, 2 doors with two transition lines and 3 with none, pool membrane + screed printed and in no line = MISSING, tank NA with evidence). Decisions: T-310 (lane I fix), T-309 (pool membrane / screed ledger); O-T303-01 pantry 0.045 m2 carried in T-310.
+- T-293 part 3 (stair / dome / tank formwork faces): WORKED (MERGED 02f3e47e; stair rows over-measure 3.624964 m2, 1.639289 double booking Checker own-checked; F-05 R-FW-P3-1 accepted). Decision: T-308 formwork r5 rows before T-199.
+- V3.0.18 record set (Checker 01:25): WORKED (8 records + DG re-issued, ST-03 downgrade moot; whole verified lines 1).
+- T-304 (key map 'item'), T-306 (slab steel spread by cause): READY, Gate A pending. T-306's F-T306-01 (no development drawn at continuous supports, 556.205 .. 1,027.310 kg on the dev lines) -> T-307 after T-306 merges.
+- PARTIAL / FAILED: none. Team: Worker 2 01:39 IDLE on the run lock (correct); Dashboard 00:54 recovered after the 20:54 usage-limit failure.
 ## 2026-10-25 10:15 (lead run; covers 08:15 - 10:15)
 
 | Task | Result | Evidence | Decision |

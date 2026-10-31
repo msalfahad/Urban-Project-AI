@@ -1,9 +1,41 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 16:20 UTC (Lead). Previous version: 2026-10-31 12:30 UTC. The released numbers did not change
+Last update: 2026-10-31 20:20 UTC (Lead). Previous version: 2026-10-31 16:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.32 (not released): it adds the ceilings.
+released: 0. The candidate under review is now V3.0.33 (not released): it adds the structural corrections.
+
+Since 31 Oct 16:20 (newest first; six checked and merged, one of them an integration into the candidate; three handed
+in and waiting for the checker):
+- Structural corrections INTO THE CANDIDATE: CHECKED AND MERGED on the first pass (V3.0.33). Fifteen columns whose two
+  sheets disagree are now ranges, never a middle value (ground floor 2.07 .. 2.48 m3, first floor 5.96 .. 7.64 m3;
+  against the freelancer ground floor +0.13 .. +0.53, first floor +2.52 .. +4.20 m3); the lift-pit wall is a new held
+  line (plan 1.10 m2, depth not printed); the held ground-slab cell no longer includes the lift shaft (upper bound
+  3.93 -> 3.56 m3); ground-floor beams +0.003 m3. The checker re-measured every changed line himself; every other
+  line identical.
+- Boundary wall below ground: CHECKED AND MERGED. Upper ground beam 3.53 m3 from the printed section (the freelancer
+  has 7.56 m3 with a wider and deeper beam than drawn: engine right); masonry below ground at least 17.63 m2 (only a
+  minimum is printed); the footing pads in no line yet. Also found: block under the house's south ground beam
+  (29.97 m) is in no line (new task).
+- Boundary fence finishes: CHECKED AND MERGED. Fence faces 165.20 m2 measured; every finish layer held (the sheet
+  prints no finish or coping). The freelancer's 107.24 m2 used 2.40 m height where 2.65 m is printed.
+- Beams, stairs / domes / pump room, railings compared with the freelancer: CHECKED AND MERGED as reported at 16:20
+  (beams: six labelled beams he omits +9.88 m3 engine right; through-support lengths -5.03 m3 a rule difference;
+  stairs: -5.27 m3 still unexplained, mostly the curved flight).
+- Held beams read one by one: HANDED IN, not yet checked. Of 27 held beam lines none can be valued from the drawings;
+  8 now have a range (seven width conflicts between two sheets), 19 stay held (unlabelled pieces, projections). New:
+  when a beam's width changes, the slab beside it changes by the same strip (about 0.15 / 0.10 m3), so both must move
+  together.
+- Lift pit and shaft from foundation to roof: HANDED IN, not yet checked. The pit wall height needs two facts not on
+  the drawings (pit depth from the lift supplier, and the ground-floor build-up); a ground-floor lift tie beam (5.50 m)
+  is required by a printed note and is in no line; the freelancer's lift walls are fully explained.
+- Plaster corner beads: HANDED IN, not yet checked. Interior 275.95 m.l, exterior 310.68 m.l measured; parapet tops,
+  sill edges, arches and stop-ends held by name. Like for like (corners and doors) the freelancer has 259.60 m.l
+  interior (-5.9 % against ours); his larger totals include items that are not beads on our rules.
+- Next: kitchen / laundry / pantry wall tiles into the candidate, then the boundary fence (now with its foundation and
+  finishes); concrete roll-up of every traced cause; block below the house ground beams; floor transition strips;
+  stair skirting.
+
 
 Since 31 Oct 12:30 (newest first; six checked and merged, one of them an integration into the candidate; three handed
 in and waiting for the checker):
