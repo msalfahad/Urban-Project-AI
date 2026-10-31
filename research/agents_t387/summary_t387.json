@@ -1,0 +1,259 @@
+{
+ "binding": {
+  "BOUND": 525
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.29",
+ "column_lines_by_floor_status": {
+  "1F|NOT_APPLICABLE": 3,
+  "1F|VALUED": 20,
+  "2F|HELD": 9,
+  "2F|NOT_APPLICABLE": 5,
+  "GF|HELD": 5,
+  "GF|VALUED": 25,
+  "UNKNOWN|HELD": 5
+ },
+ "column_outlines": [
+  {
+   "outlines": 34,
+   "overlapping_pairs": 0,
+   "sheet": "SH10"
+  },
+  {
+   "outlines": 23,
+   "overlapping_pairs": 0,
+   "sheet": "SH12"
+  }
+ ],
+ "downgrades_sha256": "53a3f5e7cd15e12ec482f56625d08899b6b29c885b9ba4c11b244291a91039e2",
+ "families": {
+  "BEAM": {
+   "held_lines": 27,
+   "lines": 191,
+   "unbound": 0,
+   "valued_m3": 66.31787863210648
+  },
+  "BLINDING": {
+   "held_lines": 4,
+   "lines": 4,
+   "unbound": 0,
+   "valued_m3": 0.0
+  },
+  "COLUMN": {
+   "held_lines": 19,
+   "lines": 72,
+   "unbound": 0,
+   "valued_m3": 28.21550000000001
+  },
+  "DOME": {
+   "held_lines": 1,
+   "lines": 5,
+   "unbound": 0,
+   "valued_m3": 5.081362
+  },
+  "FOOTING": {
+   "held_lines": 1,
+   "lines": 26,
+   "unbound": 0,
+   "valued_m3": 64.30399999999943
+  },
+  "GROUND_BEAM": {
+   "held_lines": 22,
+   "lines": 60,
+   "unbound": 0,
+   "valued_m3": 27.62538594587454
+  },
+  "GROUND_SLAB": {
+   "held_lines": 1,
+   "lines": 25,
+   "unbound": 0,
+   "valued_m3": 17.240684145758312
+  },
+  "NECK": {
+   "held_lines": 36,
+   "lines": 36,
+   "unbound": 0,
+   "valued_m3": 0.0
+  },
+  "PARAPET": {
+   "held_lines": 4,
+   "lines": 4,
+   "unbound": 0,
+   "valued_m3": 0.0
+  },
+  "POOL": {
+   "held_lines": 1,
+   "lines": 5,
+   "unbound": 0,
+   "valued_m3": 7.202297
+  },
+  "SLAB": {
+   "held_lines": 0,
+   "lines": 75,
+   "unbound": 0,
+   "valued_m3": 60.28015754312247
+  },
+  "STAIR": {
+   "held_lines": 5,
+   "lines": 12,
+   "unbound": 0,
+   "valued_m3": 5.368881
+  },
+  "STRAP": {
+   "held_lines": 2,
+   "lines": 10,
+   "unbound": 0,
+   "valued_m3": 3.3905000000000003
+  }
+ },
+ "geometry": "T387_ROUTE_G_GEOMETRY_V1",
+ "geometry_source": {
+  "LEDGER_ONLY": 95,
+  "ROUTE_G_PLAN": 430
+ },
+ "level_bands": {
+  "1F": {
+   "arc_chord_faces_resolved": 0,
+   "column_boxes": 19,
+   "double_m2": 0,
+   "double_m3": 0,
+   "gap_m2": 0,
+   "gap_m3": 0,
+   "held_members": 28,
+   "ledger_adjusted_m3": 0.252551,
+   "not_members_na": 4,
+   "pairs": {},
+   "recheck_bounded_m3": 0,
+   "sheet": "SH04",
+   "status": "PASS_HELD",
+   "unlined_members": [
+    [
+     "BAND0033",
+     "BEAM"
+    ],
+    [
+     "BAND0034",
+     "BEAM"
+    ],
+    [
+     "BAND0035",
+     "BEAM"
+    ],
+    [
+     "BAND0036",
+     "BEAM"
+    ],
+    [
+     "SITE-b845e1e78b1f74a8",
+     "SLAB"
+    ]
+   ]
+  },
+  "2F": {
+   "arc_chord_faces_resolved": 0,
+   "column_boxes": 8,
+   "double_m2": 0,
+   "double_m3": 0,
+   "gap_m2": 0,
+   "gap_m3": 0,
+   "held_members": 12,
+   "ledger_adjusted_m3": 0,
+   "not_members_na": 2,
+   "pairs": {},
+   "recheck_bounded_m3": 0,
+   "sheet": "SH02",
+   "status": "PASS_HELD",
+   "unlined_members": []
+  },
+  "GF": {
+   "arc_chord_faces_resolved": 4,
+   "column_boxes": 28,
+   "double_m2": 0,
+   "double_m3": 0,
+   "gap_m2": 0.001808,
+   "gap_m3": 0.001356,
+   "held_members": 36,
+   "ledger_adjusted_m3": 0.178262,
+   "not_members_na": 6,
+   "pairs": {
+    "OWNED": 8,
+    "UNDETERMINED": 2
+   },
+   "recheck_bounded_m3": 0.801008,
+   "sheet": "SH06",
+   "status": "FAIL_HELD",
+   "unlined_members": []
+  },
+  "GROUND": {
+   "arc_chord_faces_resolved": 2,
+   "column_boxes": 26,
+   "double_m2": 0,
+   "double_m3": 0,
+   "gap_m2": 0,
+   "gap_m3": 0,
+   "held_members": 47,
+   "ledger_adjusted_m3": 0,
+   "not_members_na": 0,
+   "pairs": {
+    "OWNED": 2,
+    "UNDETERMINED": 5
+   },
+   "recheck_bounded_m3": 0,
+   "sheet": "SH08",
+   "status": "PASS_HELD",
+   "unlined_members": [
+    [
+     "SITE-4df8fcd99d130701",
+     "SLAB"
+    ]
+   ]
+  }
+ },
+ "lines_json_sha256": "6b5dc44f7a5f271c21731c7fae2e5f2a8db32c0da86ac11c404ea3a1acf3b31e",
+ "pair_register": {
+  "CARRIED_OK": 2,
+  "GAP": 2,
+  "OK": 5,
+  "PASS_HELD": 3,
+  "RECHECK": 6,
+  "UNDETERMINED": 6
+ },
+ "schema": "T387_SUMMARY_V1",
+ "stacked": [
+  {
+   "basis": "neck = section x (NECK_TOP_LEVEL_M + FOUNDING_DEPTH_M - footing depth); GF column = B x H x STOREY_HEIGHT_GF from GF_FLOOR_LEVEL_M",
+   "lower_top_m": 1.0,
+   "m3_per_m2_section": 0.0,
+   "pair": "NECK / COLUMN GF",
+   "status": "OK",
+   "upper_bottom_m": 1.0
+  },
+  {
+   "basis": "column GF = storey height floor to floor; column 1F from that floor level",
+   "lower_top_m": 5.5,
+   "m3_per_m2_section": 0.0,
+   "pair": "COLUMN GF / COLUMN 1F",
+   "status": "OK",
+   "upper_bottom_m": 5.5
+  },
+  {
+   "basis": "column 1F = storey height floor to floor; column 2F from that floor level",
+   "lower_top_m": 9.7,
+   "m3_per_m2_section": 0.0,
+   "pair": "COLUMN 1F / COLUMN 2F",
+   "status": "OK",
+   "upper_bottom_m": 9.7
+  }
+ ],
+ "status": {
+  "HELD": 123,
+  "NOT_APPLICABLE": 85,
+  "VALUED": 317
+ },
+ "structural_concrete_lines": 525,
+ "t347_carried": {
+  "lines": 71,
+  "moved": [],
+  "status": "CARRIED_OK"
+ },
+ "unbound": []
+}
