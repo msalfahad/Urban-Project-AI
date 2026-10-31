@@ -62,6 +62,21 @@ quantity.
 - POOL FOURTH SIDE B7 / 8D (T-385 Checker O-T385-1): the part inside the pool outline is POOL WALL (R-POOL, VERIFIED
   2.828071 m3 with the other walls); the part beyond the pool (about 1.67 m of about 5.17 m) is NOT pool concrete: owner
   trade to be named once (beam or wall) in T-392; until then that part is UNKNOWN, never 0, never added to the pool.
+- POOL FOURTH SIDE, RULING (Lead 2026-10-31 12:30, from T-392 READY; binds when the Checker confirms the geometry): of the
+  5.1684 m (arch layer 5, 0.20 apart; 8D on ST S-BOUN), the pool back 3.50 m is POOL WALL (pool wall band carries the back
+  only); the out-of-pool 0.9184 m S + 0.7500 m N = 1.6684 m is PLOT BOUNDARY WALL: below N.G. its concrete is the
+  boundary G.B lines (upper G.B in L-fb7a6431 HELD BLOCKED_RFI, lower band in L-6290a9f3 HELD downgrade), owner trade
+  STRUCTURE / CONC.GROUND; above N.G. its blockwork is owner trade BOUNDARY WORKS (block type HELD, Q-65 C), carried in
+  NO line yet: MISSING category -> T-396. Never in the pool, never in both.
+- T-146 RING-OVERLAP, PROPOSED SETTLEMENT (T-392 READY): a named GAP (drawn cells B8 / B7 / CB1 hold 0 m2 of the ring;
+  the 0.00342 m2 came from a fitted band set): proposals B8 0.528021 / B7 0.255000 / CB1 1.338750 m3 -> T-397 after the
+  Checker. CB8 end: DOUBLE 0.002767 m3 inside B27 + GAP 0.003406 m3, owner B27 / CB8 at S-BEAM 326, never netted.
+- GROUND-SLAB HELD CELL L-41cfb82e (T-391 F1, READY): the 1.80 x 1.80 lift shaft 7BE / 7C2 and its shaft strips are NOT
+  slab: held range 0 .. 3.560540 m3 proposed (was 3.929788) -> T-397. The slab under the GF flight on grade (OWN-011) is
+  printed nowhere: designer fact (T-398), stays HELD with the stair-ownership work.
+- PLOT BOUNDARY / FENCE WALL ABOVE N.G. (all runs): kind EXT (site wall), owner trade BOUNDARY WORKS; geometry from arch
+  layer 5 + ST S-BOUN; height only where printed (ST p.14 TYPICAL BOUNDARY WALL), block type HELD (Q-65 C); measured in
+  T-396; never a house facade, never pool wall, never a T-279 house blockwork line.
 - SHOWERS (T-386): the shower population is 6 drawn (3 trays + 3 walk-in zones, DRAWING-CONFIRMED); the 11 in Urban's
   cost record (WEB-018) is a cost-record figure with no physical definition: UNRESOLVED scope, not a freelancer
   comparison. Same for floor gratings 24 (WEB-019) vs drawn FD 19 + RWD 5.

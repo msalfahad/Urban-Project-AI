@@ -45,6 +45,22 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 12:30 (lead run; covers 08:30 - 12:30)
+
+- T-389 (A, gate 0, cost-record relabel of the T-370 benchmark rows): WORKED (Gate A PASS, merged ca1d4278; checker's own
+  visual re-count FD 19 / RWD 5; no quantity change). Decision: none needed.
+- T-385 r2 (S, concrete reconciliation by cause): WORKED (Gate A narrow PASS, merged 5f99bfc3): exactly the r1 fault fixed
+  (traced +0.252 / HELD -77.593 / unexplained -37.124 m3); lesson adopted. Decision: remaining UNRESOLVED families become
+  T-394 (columns), T-395 (beams), T-398 (stairs / domes / pump); GS-SLAB / GB-MAIN are T-391.
+- T-328 (I, roof build-up, Gate B): WORKED first pass (merged 94d85fc7, candidate V3.0.31; roof finish 202.220 m2
+  MEASURED; registry 1.26.0 settles F-T199-5 and the guard-rail family). Decision: T-284 ceilings next in lane I.
+- T-390 / T-391 / T-392: READY, in the VERIFIER QUEUE (T-391, T-392, T-390). Pre-decided follow-ups: T-397 integrates the
+  verified T-391 F1 / T-392 corrections; T-396 boundary fence blockwork (missing category found by T-392); T-391 F2 goes
+  to T-398 as a designer fact.
+- Process: Worker 3 final-line stamp 12:48 written at about 11:19 (ahead of the clock, second worker this day): every
+  agent stamps its board lines from `date -u` at the moment of writing.
+
+
 ## 2026-10-31 08:30 (lead run; covers 04:30 - 08:30)
 
 - WORKED: T-199 r3 (Gate B PASS, V3.0.30: formwork / railings / shutters in), T-386 (provenance: shower 11 = Urban cost
@@ -249,15 +265,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - V3.0.18 record set (Checker 01:25): WORKED (8 records + DG re-issued, ST-03 downgrade moot; whole verified lines 1).
 - T-304 (key map 'item'), T-306 (slab steel spread by cause): READY, Gate A pending. T-306's F-T306-01 (no development drawn at continuous supports, 556.205 .. 1,027.310 kg on the dev lines) -> T-307 after T-306 merges.
 - PARTIAL / FAILED: none. Team: Worker 2 01:39 IDLE on the run lock (correct); Dashboard 00:54 recovered after the 20:54 usage-limit failure.
-
-## 2026-10-26 00:15 (lead run; covers 16:15 - 00:15; the 22:15 run recorded its loop in LEAD_REPORT only)
-
-- T-299 PART F: WORKED (MERGED 5cb1e7e8 + downgrade DG-1b0eacce2d68f2a5); the audit-band challenge closed 23:02 (0.051 t = density vs max-spacing reading in 11 populations; a report wording defect, no number wrong).
-- T-266 (V3.0.18, stairs / 1F landing marble / pantry piece): WORKED (Gate B PASS ceeb5135; 3,695 lines byte-identical; own re-measures agree).
-- T-297 r2 (rebar basis, LB-10 datum join): WORKED (1647711d; 2F main bars 0.159288 t HELD on D-39, CB5 links HELD).
-- T-301 (WP.FOUNDATION inventory): WORKED (ac811414; 416 faces, residual 0.000; lift-pit screed whole-countable once the export reads the inventory).
-- T-293 part 2 (formwork slab-level ledger): WORKED (a1e0c43a; CB5 span 2 double count CONFIRMED -> T-199; BAND0049 UNRESOLVED). Part 3 now TODO.
-- T-302 (W17 developed hole): WORKED (5c00a0f8; 1F-11 released 59.4511 low by 2.01 .. 2.27 m2 -> T-244).
-- T-300 (beam rebar completeness safeguard): WORKED (196a7a0b; unwired, 0 kg invented). Non-blocking findings kept here for later rows: F-T300-01 B27 0.90 m wide single-link reading (designer RFI S20); F-T300-02 the route G sha depends on the input FILE NAME (reproducibility: two runs of one drawing under two names give two shas; candidate for the T-294 binding work or a tooling row once lane I frees); F-T300-03 CB filled TOP marks read on all spans.
-- F-SCORE-01 (Verifier 22:49): the key map refuses unit 'item', so no candidate cell is tool-scored since V3.0.14 -> T-304.
-- Recurring cause (Lead's own): a QUEUED "after T-xxx" row was not flipped to TODO when T-xxx merged between Lead runs, so worker 3 found no lane I TODO and took lane A T-303 (worker 2 then idle twice). Decision: every Lead run re-reads each "after T-xxx" row against the merges since its last run before writing the lane order.

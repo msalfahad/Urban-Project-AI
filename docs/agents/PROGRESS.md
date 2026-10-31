@@ -1,9 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 08:30 UTC (Lead). Previous version: 2026-10-31 04:30 UTC. The released numbers did not change
+Last update: 2026-10-31 12:30 UTC (Lead). Previous version: 2026-10-31 08:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.30 (not released): it adds formwork, railings and shutters.
+released: 0. The candidate under review is now V3.0.31 (not released): it adds the roof build-up.
+
+Since 31 Oct 08:30 (newest first; three checked and merged, one of them an integration into the candidate; three
+handed in and waiting for the checker):
+- Roof build-up INTO THE CANDIDATE: CHECKED AND MERGED on the first pass (V3.0.31). Roof finish 202.22 m2 measured on
+  the three roofs (the checker's own measure of the largest roof agrees to 0.004 %); roof screed held (thickness not
+  printed), insulation and protection blank (not specified), top roof held. The freelancer has one roof line of 285 m2
+  that mixes layers: not comparable layer by layer. Every other line identical.
+- Concrete compared with the freelancer, second pass: CHECKED AND MERGED. Of the -114.46 m3 difference: +0.25 traced to
+  a drawn cause, -77.59 is items the engine still holds (no value yet, not errors), -37.12 unexplained (11 unresolved
+  parts -36.65 and 0.47 of pool-wall height that matches no drawn level).
+- Ground slab and ground beams measured from the drawing: HANDED IN, not yet checked. The freelancer's ground slab runs
+  over the beam and column strips (7.19 m3 that belongs to beams and columns, not slab); his ground beams use one 0.60 m
+  depth where the drawing prints 0.95 m outside and 0.40 m inside. Of the 22.66 m3 unresolved: 4.84 traced, 13.25 held
+  (consultant items), 4.57 still unexplained. Also found: a held slab cell includes the lift shaft (its upper bound
+  should fall from 3.93 to 3.56 m3).
+- Ring beam and pool fourth side: HANDED IN, not yet checked. The ring beam part (0.22 m3) is on the drawing and billed
+  once; three tiny gaps / overlaps (below 0.01 m3) named; the pool's fourth side is 3.50 m of pool wall plus 1.67 m of
+  plot boundary wall, whose blockwork above ground is in no BOQ line yet (new task).
+- Wall-face length residuals: HANDED IN, not yet checked: they come from the face-walk tolerance, not from the
+  drawing; the candidate's faces were right (0.00 m2 change).
+- Cost-record relabel of the sanitary benchmark rows: CHECKED AND MERGED (no quantity change).
+- Next: ceilings into the candidate; columns, beams and stairs / domes compared cause by cause; boundary fence blockwork
+  (a missing item); railing scope.
+
 
 Since 31 Oct 04:30 (newest first; four checked and merged, one of them an integration into the candidate; one sent
 back):

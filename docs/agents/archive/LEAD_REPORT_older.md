@@ -1,3 +1,96 @@
+## LEAD REPORT 2026-10-31 00:45 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+30 Oct 20:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch db5a8dff -> 801d3226 (Checker merges via 'engine push'); no owner
+commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: your 31 Oct entry (ChatGPT
+audit follow-up) read and applied as written; nothing undone.
+
+HEADLINE: the sills / thresholds package passed the integration gate first time (candidate of record now
+ARCH_TAKEOFF_V3.0.29, not released), both lap "held" records are issued, and eight pieces merged in four hours. Your
+31 Oct wording points and recipient splits are applied in the consultant drafts (nothing sent). Two items for you: a
+privacy slip (a freelancer unit rate in two public research files; fix task first in the architectural lane) and the
+owner of the waterproofing completeness join (OWNER PACKAGE).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate; your count), released 0; scored verified share CONCRETE
+12.50 % unchanged):
+- THRESHOLDS / SILLS (m2; Gate B PASS 23:35, V3.0.29): 5 closure strips with no sound basis (polygons 0.132 .. 0.219
+  m2, excess traced to wall-end nib + cross wall) retired; one threshold per doorway at clear width x wall t:
+  FIN.MARBLE.THRESHOLD 1.340 -> 1.820 m2 (+35.8 %, all 14 wet doorways, ENGINE_RIGHT by your marble rule),
+  FIN.FLOOR.PORCELAIN +0.150 m2; 3,951 lines byte-identical; Checker re-measured the 5 strips from the DXF. Freelancer
+  has no threshold rows: RULE_DIFFERENCE. Gate D-GF-15 blank by name.
+- REINFORCEMENT (kg): DGP-T373-LAP (351 lines) and DGP-T378-STAIR (22 stair lines, read bar by bar on p.16: 0
+  starters) issued; 9 records bound on V3.0.29. Candidate bounded STR.REBAR 14,278.249 .. 19,646.878 -> 10,903.179 ..
+  13,569.188 kg (basis withdrawn, HELD blank, not steel removed); released unchanged. Straight-bar cutting list
+  REJECTED: 38 footing-mesh lines under the unresolved record DG-a97ec2ea (bar end on the minimum cover, boxed-bar leg
+  of unprinted diameter) were scheduled with cut lengths (874.862 kg); r2 holds them: exact schedule 4,249.455 kg.
+  Splice count: the frozen continuous-beam method undercounts laps for runs over 2S - lap (first window 23.16 .. 24.00
+  m): 0.000 kg here (longest run 8.483 m, Checker's own instrumented run), latent for other villas. Freelancer rebar is one
+  kg/m3 lump with no shape, hook or lap row: RULE_DIFFERENCE, no %.
+- SANITARY / DRAINAGE (pcs; research, verified): WC 12, basin 17, shower 6 (3 + 3), FD 19, roof outlets 5; MH 1, cleanouts
+  3, 4 soil + 5 rain stacks; every pipe length HELD (sheet 'not to scale', no dimension, 1 % slopes only); supply,
+  tanks, heater NOT PRINTED. Freelancer 11 showers vs 6 drawn UNRESOLVED (his finishes workbook is 23.6 MB, over the
+  connector limit: see NEEDS FIXING); 24 gratings = 19 + 5 RULE_DIFFERENCE; kitchen sink printed nowhere: UNKNOWN.
+- SHOWER TANKING (m2): extra 0.000 (ASSUMED - OWNER-APPROVED: UP-WP-004, Q-40 A, Q-48 A); zone extents HELD.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: one more integration first time; the lap downgrade cost no extra Gate B cycle (the Checker bound
+the records on V3.0.29 directly). WHAT GOT WORSE: no measured quantity. WHAT WAS LEARNED: (1) the cutting list
+ignored the downgrade register: every quantity task now joins verdicts/V3.0.x/DOWNGRADES.json; (2) a freelancer rate
+reached a public file through a residual explanation: hand-ins quote freelancer quantities only. WHAT IS MISSING:
+formwork in the candidate (next), roof, ceilings, skirting, waterproofing fixes, exterior plaster, earthworks,
+foundation waterproofing, spatter, masonry accessories, mortar; real lap / bend lengths (designer). GATES: lowest open
+gate 0 (privacy fix, no quantity); quantity work at gate 2 (M3 11 Nov, M4 25 Nov). Week 2 (3 Nov): formwork realistic,
+roof / ceilings at risk.
+
+DECISIONS THIS RUN: T-374 r2 (exact fault, first in S); T-199 formwork TODO first in I; NEW T-384 privacy fix (gate 0,
+first in A), T-385 concrete per-family reconciliation on V3.0.29 (S, M4 input), T-382 splice-count wiring for long CB
+runs (I, last), T-383 WP completeness join (A, waits for you); O-T327-1 / -2 (threshold state mix, m.l / pcs only in
+formula text) added to T-246. RFI: 8 wording flags + S09 / S23 splits applied (architect items 21 / 22 new); T-376
+rows applied to B (B-S29 .. S34 confirmed free) and mirrored as structural items 42 - 47; several external items still
+have an empty "missing or conflicting" line: queued for the Checker's evidence pass. Queue check: 44 actionable rows,
+0 flagged, 0 stall checks (one UNCLEAR_STATUS fixed: T-373 status word). TODO claimable 5 (S 2, A 2, I 1) + lane I
+queue by design + T-383 owner-held; READY 0.
+
+LESSONS REGISTER PROPOSALS (standard s.7): (1) '2026-10-30 | a cutting schedule booked 38 lines under an unresolved
+downgrade record as SCHEDULED (874.862 kg) | the task read the candidate lines, not the downgrade register | every
+quantity task joins every DOWNGRADES.json bound to the candidate; a line under an unresolved record is never
+SCHEDULED / VERIFIED | T-374 r2 adverse test | PROPOSED'. (2) '2026-10-30 | a stock-split count must cover the run with
+the laps it adds; ceil(L/S) - 1 is exact only below 2S - lap | frozen _with_laps | R-T375-1 (every villa; T-366 -> T-375)
+| tests/t375_splice_count (normal 23.52 m, adverse 35 m at 0.64) | PROPOSED (Checker) '. (3) '2026-10-30 | designer
+items sat in task reports for days without an RFI row | prose findings | R-RFI-BIND-1 (row bound to its ledger citation
+and unlocked lines, deduplicated by fact) | tests/t376_rfi_rows | PROPOSED'.
+
+TEAM HEALTH (20:20 - 00:45): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
+incl. one overlap stand-down 21:50, Lead x1); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 22:39,
+Worker 3 22:59, Checker 23:50; Dashboard 12:55, next 00:54). Worker 1 21:22 found the venv without pytest after an
+interrupted setup again (re-ran setup, PASS). Scout paused (your 28 Oct choice).
+
+OWNER PACKAGE (one decision, ERS s.6 format):
+- ISSUE: who carries the export-side completeness join that reads the merged waterproofing inventory (your 31 Oct
+  item 5). EVIDENCE: the WP scope inventory (T-301) is merged; the export's completeness function (T-298, in the export
+  tool + the T-236 join files) reads only the slab panel inventory. INVESTIGATION: T-310 (the named candidate) changes
+  the candidate's integration module (wet-area WP lines: upturn 1.48 -> 1.580 m2, terminations, one transition per
+  door, pantry column); the join changes a different file set; no other row names it. ALTERNATIVES: (A) its own row
+  T-383 (written, QUEUED), lane A, parallel to the integration queue, about one package; (B) inside T-310, which
+  then touches two file sets in one Gate B package and waits behind 4 integration rows. QUANTITY IMPACT: none; it
+  decides only when a WP line can read WHOLE (today 0 WP lines can: T-310 has not wired the wet-area fixes, so the
+  count stays 1 either way). RECOMMENDATION: A: smaller review, no file shared with the serial integration queue, can
+  start now. HELD MEANWHILE: nothing new. NEXT: on 'A' the row becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat):
+(1) PRIVACY: the freelancer's unit rate for the shower tiling-labour row sits in two public files on the working
+branch (T-380 report section 5 and its research script), merged 30 Oct 23:58. T-384 removes it going forward; it stays
+in git history, which agents may not rewrite. Whether to rewrite history is your decision. A sweep also found KD
+figures in three older files (wall-treatment research and a wall-treatment estimate doc): T-384 classifies them
+without repeating any figure.
+(2) The freelancer finishes workbook (23.6 MB) is over the Drive connector's ~6.2 MB limit: the shower 11 vs 6
+question cannot be traced to its rows. A zipped or split copy in the Alsenan folder would unblock it.
+(3) 'agent_env.sh decode' still refuses raw bytes; (4) setup can leave a venv without pytest after an interrupted run
+(Worker 1 again 21:22); (5) 'run' allows only the two scoring tools. None blocks work.
+
 ## LEAD REPORT 2026-10-30 16:30 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

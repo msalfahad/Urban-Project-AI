@@ -1,3 +1,15 @@
+## 2026-10-26 00:15 (lead run; covers 16:15 - 00:15; the 22:15 run recorded its loop in LEAD_REPORT only)
+
+- T-299 PART F: WORKED (MERGED 5cb1e7e8 + downgrade DG-1b0eacce2d68f2a5); the audit-band challenge closed 23:02 (0.051 t = density vs max-spacing reading in 11 populations; a report wording defect, no number wrong).
+- T-266 (V3.0.18, stairs / 1F landing marble / pantry piece): WORKED (Gate B PASS ceeb5135; 3,695 lines byte-identical; own re-measures agree).
+- T-297 r2 (rebar basis, LB-10 datum join): WORKED (1647711d; 2F main bars 0.159288 t HELD on D-39, CB5 links HELD).
+- T-301 (WP.FOUNDATION inventory): WORKED (ac811414; 416 faces, residual 0.000; lift-pit screed whole-countable once the export reads the inventory).
+- T-293 part 2 (formwork slab-level ledger): WORKED (a1e0c43a; CB5 span 2 double count CONFIRMED -> T-199; BAND0049 UNRESOLVED). Part 3 now TODO.
+- T-302 (W17 developed hole): WORKED (5c00a0f8; 1F-11 released 59.4511 low by 2.01 .. 2.27 m2 -> T-244).
+- T-300 (beam rebar completeness safeguard): WORKED (196a7a0b; unwired, 0 kg invented). Non-blocking findings kept here for later rows: F-T300-01 B27 0.90 m wide single-link reading (designer RFI S20); F-T300-02 the route G sha depends on the input FILE NAME (reproducibility: two runs of one drawing under two names give two shas; candidate for the T-294 binding work or a tooling row once lane I frees); F-T300-03 CB filled TOP marks read on all spans.
+- F-SCORE-01 (Verifier 22:49): the key map refuses unit 'item', so no candidate cell is tool-scored since V3.0.14 -> T-304.
+- Recurring cause (Lead's own): a QUEUED "after T-xxx" row was not flipped to TODO when T-xxx merged between Lead runs, so worker 3 found no lane I TODO and took lane A T-303 (worker 2 then idle twice). Decision: every Lead run re-reads each "after T-xxx" row against the merges since its last run before writing the lane order.
+
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 ## 2026-10-25 10:15 (lead run; covers 08:15 - 10:15)
 
