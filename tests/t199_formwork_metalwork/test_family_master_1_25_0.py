@@ -145,6 +145,26 @@ def _written_1_25(extra=None):
     return out
 
 
+# T-328 (1.26.0): a module NEWER than this registry (declared, pending or merged, by a newer registry version on the
+# tree) is judged by that newer registry, which runs the same guards at full strength on it
+# (tests/t328_roof_buildup/test_family_master_1_26_0.py); 1.25.0 is judged on the code of its own head. Without a newer
+# registry nothing is set aside.
+def _newer_modules():
+    me = json.loads(NEW.read_text(encoding="utf-8"))
+    mine = {p.get("module") for p in list(me.get("candidate_packages") or []) + list(me.get("pending_packages") or [])}
+    return {m: v for m, v in FMC.newer_registry_modules(me, ROOT).items() if m not in mine}
+
+
+def _own_head(written):
+    newer = _newer_modules()
+    return {c: p for c, p in written.items() if p not in newer}
+
+
+def _own_head_hits(hits):
+    newer = _newer_modules()
+    return [b for b in hits if b[-1] not in newer]
+
+
 def _unscanned_prefix_codes(text):
     """the UPPER.UPPER literals of a module text that the 1.25.0 scan does not see"""
     return sorted(set(ANY_CODE.findall(text)) - set(CODE_1_25.findall(text)))
@@ -154,11 +174,11 @@ def test_1_25_0_every_written_item_code_belongs_to_one_family_full_strength(docs
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert not set(own) & set(apart)
-    written = _written_1_25()
+    written = _own_head(_written_1_25())
     assert written["MET.RAILING.GUARD"] == "engine/source/arch_v3030.py"           # the r2 gap is now scanned
-    assert set(T130._written_codes()) <= set(written)                              # 1.25.0 scan >= the 1.1.0 scan
+    assert set(_own_head(T130._written_codes())) <= set(written)                   # 1.25.0 scan >= the 1.1.0 scan
     assert T130._unowned_written(new, written) == {}
-    assert T130._unowned_written(new) == {}
+    assert T130._unowned_written(new, _own_head(T130._written_codes())) == {}
     from engine.source import boq_line as BL
     assert set(own) | set(apart) <= set(written) | set(BL.ITEMS)
     assert {c: own[c] for c in ("STR.FORMWORK", "STR.FORMWORK.STAIR", "ARCH.SHUTTER", "FIN.HANDRAIL", "FIN.RAILING")} \
@@ -168,8 +188,8 @@ def test_1_25_0_every_written_item_code_belongs_to_one_family_full_strength(docs
 
 def test_1_25_0_no_not_implemented_family_has_a_module_full_strength(docs):
     _, new = docs
-    assert T130._not_implemented_hits(new) == []
-    assert T130._not_implemented_hits(new, _written_1_25()) == []
+    assert _own_head_hits(T130._not_implemented_hits(new)) == []
+    assert _own_head_hits(T130._not_implemented_hits(new, _written_1_25())) == []
     fam = {f["code"]: f for f in new["families"]}
     for c in ("B7-13", "B6-05", "B7-10"):
         assert fam[c]["capability"] == "IMPLEMENTED_NOT_INTEGRATED" and fam[c]["capability_change"] == "RAISED", c
@@ -186,9 +206,13 @@ def test_1_25_0_passes_the_1_1_0_file_checks(docs, name):
 
 def test_1_25_0_is_the_governing_registry_and_the_1_1_0_era_exempts_only_its_moves(docs):
     _, new = docs
-    assert T130._governing()["version"] == "1.25.0"
+    gov = T130._governing()
+    # 1.25.0 governs its own head; a newer governing registry must carry every 1.25.0 pending entry unchanged
+    assert gov["version"] == "1.25.0" or (
+        T130._semver(gov["version"]) > T130._semver("1.25.0")
+        and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
-    codes, fams = T130._era_exemptions(old110, new)
+    codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert codes == {"STR.FORMWORK", "STR.FORMWORK.STAIR", "ARCH.SHUTTER"}       # FIN.HANDRAIL is known to 1.1.0
     assert fams == {"B6-05", "B7-10", "B7-13"}
 
@@ -199,10 +223,10 @@ def test_adverse_a_written_code_in_no_family_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B6-05":
             f["item_codes"] = []
-    assert T130._unowned_written(bad) == {"ARCH.SHUTTER": "engine/source/arch_v3030.py"}
+    assert T130._unowned_written(bad, _own_head(T130._written_codes())) == {"ARCH.SHUTTER": "engine/source/arch_v3030.py"}
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
     with pytest.raises(AssertionError):
-        T130._era_exemptions(old110, bad)                                       # a failing governor exempts nothing
+        T130._era_exemptions(old110, bad, _own_head(T130._written_codes()))                                       # a failing governor exempts nothing
 
 
 def test_adverse_a_moved_family_back_to_not_implemented_is_refused(docs):
@@ -249,7 +273,7 @@ def test_adverse_a_met_code_no_family_owns_is_refused(docs):
     it: that is the gap r2 had)"""
     _, new = docs
     syn = {"engine/source/synthetic_met.py": 'L = {"item_code": "MET.NO_FAMILY_X", "unit": "lm"}\n'}
-    written = _written_1_25(syn)
+    written = _own_head(_written_1_25(syn))
     assert T130._unowned_written(new, written) == {"MET.NO_FAMILY_X": "engine/source/synthetic_met.py"}
     assert "MET.NO_FAMILY_X" not in T130.CODE.findall(syn["engine/source/synthetic_met.py"])
 
@@ -258,8 +282,8 @@ def test_adverse_dropping_the_guard_rail_code_from_the_list_is_refused(docs):
     _, new = docs
     bad = copy.deepcopy(new)
     del bad["item_codes_without_family"]["MET.RAILING.GUARD"]
-    assert T130._unowned_written(bad, _written_1_25()) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
-    assert T130._unowned_written(bad) == {}                                       # the narrow scan would let it pass
+    assert T130._unowned_written(bad, _own_head(_written_1_25())) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
+    assert T130._unowned_written(bad, _own_head(T130._written_codes())) == {}                                       # the narrow scan would let it pass
 
 
 def test_adverse_a_new_unscanned_prefix_in_the_module_is_refused():

@@ -271,19 +271,19 @@ def test_adverse_finished_lines_guard():
     x = next(ln for ln in bad if ln["location"]["element_id"] == "ROOF:R1:INSULATION")
     x["measured_net"] = 0.0
     with pytest.raises(ValueError, match="carries a figure"):
-        A.check_roof_buildup(bad)
+        A.check_roof_layers(bad)
     bad = copy.deepcopy(out)
     dup = copy.deepcopy(next(ln for ln in bad if ln["location"]["element_id"] == "ROOF:R2:FALLS_SCREED"))
     dup["line_id"] = "L-dup"
     bad.append(dup)
     with pytest.raises(ValueError, match="one line per roof and layer"):
-        A.check_roof_buildup(bad)
+        A.check_roof_layers(bad)
     bad = copy.deepcopy(out)
     p = next(ln for ln in bad if ln["item_code"] == "STR.CONC.PARAPET")
     x = next(ln for ln in bad if ln["location"]["element_id"] == "ROOF:R1:FINISH")
     x["location"]["element_id"] = p["location"]["element_id"]
     with pytest.raises(ValueError, match="parapet element"):
-        A.check_roof_buildup(bad)
+        A.check_roof_layers(bad)
 
 
 def test_adverse_integrate_refuses_a_foreign_change():

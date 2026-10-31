@@ -387,7 +387,7 @@ def changes_for(doc, l3030):
 
 
 # ================================================================================================ integrate / write
-def check_roof_buildup(lines):
+def check_roof_layers(lines):
     """on finished lines: one line per (roof, layer); one screed volume per roof; every roof layer line carries its
     record; held / unknown BLANK; no roof layer on a parapet element; the bound membrane line of each roof present.
     -> summary."""
@@ -451,7 +451,7 @@ def integrate(l3030, changes, for_lead=()):
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
     guards = _family_guards(out, for_lead)       # every family guard up to V3.0.30, on the V3.0.31 lines
-    roof = check_roof_buildup(out)
+    roof = check_roof_layers(out)
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines (one project, one revision set)")
@@ -614,4 +614,4 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "layer_line",
-           "changes_for", "check_roof_buildup", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
+           "changes_for", "check_roof_layers", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
