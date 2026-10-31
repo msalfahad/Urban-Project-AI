@@ -1,5 +1,92 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-31 16:30 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+31 Oct 12:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch 94d85fc7 -> 6c219179 (four Checker 'engine push' merges: T-391,
+T-392, T-390 at 13:01; T-396, T-394 at 14:05; T-284 at 15:57); no owner commit. Self-check: codemap PASS, pytest t061
+PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since my last run; nothing undone.
+
+HEADLINE: the ceilings are in the candidate (V3.0.32, fifth Gate B first pass in a row): interior ceiling falls from
+403.16 to 362.01 m2 measured from the drawings. Six pieces passed the Checker first time this window; columns now trace
+to 0.000 m3 unexplained. Three structural / safety pieces wait for the Checker (at the target of 3).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.31 -> V3.0.32):
+- CEILINGS (m2; Gate B PASS 15:57): interior FIN.CEILING 403.163 -> 362.006 m2 DRAWING-CONFIRMED (-41.157, -10.21 %;
+  8 lines moved, the 1F living group carried once, dressing 2.970 added; Checker own re-measures AGREE incl. 1F bedroom
+  19.050 / 7.4692 with 0.1449 m2 beam strips named); bulkheads 27.9345 m2 and ceiling paint 389.941 m2 ASSUMED -
+  OWNER-APPROVED (Q-48 A / Q-57 A mod); stair soffits x2 and dome intrados x2 BLANK (not drawn). Freelancer ceiling
+  rows: in the finishes workbook over the connector limit: not compared (NEEDS FIXING 2).
+- CONCRETE (m3), by family against the freelancer (research; no candidate quantity moved yet):
+  columns (MERGED): CL-GF +0.530, CL-1F +2.520, CL-LIFT -2.400, all traced, unexplained 0.000 (joint and head owned by
+  the column to the slab top +2.694 / +1.080; five annex columns HELD -2.063; his lift ring through the lift columns
+  -0.750; one 1F section CONFLICT -0.138). Proposals verified: 15 CONFLICT lines become ranges (GF 2.070 .. 2.475,
+  1F 5.964 .. 7.644), a new HELD lift-pit wall line (1.100 m2 x depth D-43).
+  ground slab / ground beams and ring / pool fourth side (MERGED): as reported at 12:30 (22.664 m3 -> traced -4.844 /
+  HELD -13.251 / unexplained -4.569).
+  beams (READY): BM-GF -3.554, BM-1F +5.535, BM-2F -1.758 = six labelled marks he omits +9.882 (engine right) +
+  upstands +0.240 + drawn runs beyond his rows +2.119 + through-support lengths -5.029 (rule difference: the column owns
+  the joint) + dome ring +0.755 (to stairs / domes) + HELD -7.376 + untraced -0.367. Depth basis 0.000 (both full depth
+  on a net slab).
+  stairs / domes / pump (READY): -11.383 = traced -0.328, HELD -5.788 (pump room drawn nowhere -3.480), unexplained
+  -5.266 (curved flight ST-02 -3.974, his flight 2.00 m beyond the drawn 3.30 run -2.016, dome area +0.561, landing
+  +0.162).
+- BOUNDARY FENCE (m2, MERGED, research): plane 97.9705 m2 DRAWING-CONFIRMED (36.97 m x 2.65 printed) vs freelancer
+  74.40 m2 (-24.2 %): his height 2.00 vs 2.65 printed -24.031, a corner twice +0.40, typing +0.06: residual 0. Block
+  net / type HELD (Q-65 C), below-ground masonry MISSING (HELD), sea / passage HELD. Not yet in the candidate.
+- RAILINGS (m.l, READY): main stair balustrade 15.953 drawable per segment (was 16.153 all HELD); two turns HELD; one
+  corner listed twice found; internal 19.766 vs freelancer 18.95 (+4.3 %): 1.042 named, -0.226 unexplained.
+- FINISH FACE LENGTHS (MERGED): 0.000 m2 change (walk-tolerance artefacts).
+- REINFORCEMENT (kg), FORMWORK, ROOF, SANITARY: no change since 12:30.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: ceilings now from the drawings room by room (the old line carried rooms at the wrong size or
+twice); columns fully explained; a missing category (boundary fence) measured with a printed height. WHAT GOT WORSE:
+nothing measured moved the wrong way. WHAT WAS LEARNED: at every slab / beam / column junction one element owns the
+intersection and a family takes each member's printed section; a site wall is three trades on one element. WHAT IS
+MISSING: lift pit / shaft structure, held beams, boundary wall below ground and its finishes, kitchen / laundry / pantry
+wall tiles (verified, not yet integrated), corner beads, skirting, WP fixes, exterior plaster, earthworks, foundation WP,
+masonry accessories. GATES: lowest open gate 2 (integration); reconciliation gate 3. Milestones: week 2 (3 Nov) roof,
+formwork and ceilings delivered; M3 11 Nov on track; M4 25 Nov at risk on consultant items (D-16, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: T-397 TODO first in integration, scope extended with the verified column ranges and the held
+lift-pit wall line; NEW T-399 (integration: kitchen / laundry / pantry wall-tile zones, verified, missing category),
+T-400 (integration: boundary fence + gates), T-401 (lift pit and shaft structure), T-402 (held beam items one by one),
+T-403 (boundary wall below ground), T-404 (fence finishes), T-405 (plaster corner beads, a separate item by the Urban
+finish-extras rule), T-406 (concrete roll-up after beams / stairs merge). Element register: three rulings (lift pit and
+shaft; plot boundary wall = three trades on one element; tile zones). VERIFIER QUEUE: T-395 > T-398 > T-393, then Gate B
+T-397. Queue check: 49 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 3, A 2, I 1 (serial); READY 3.
+
+LESSONS REGISTER: two rows adopted in the standard s.7 (junction ownership / section per member, from T-391 / T-394; a
+site wall enumerated by component and trade, from T-396). Proposed from READY work, adopted after the Checker: 'beam
+length face to face only where the column line carries the joint (never both, never neither)' (T-395); 'one physical
+corner listed once even when two runs meet in it' (T-393).
+
+TEAM HEALTH (12:23 - 16:30): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
+incl. one overlap-guard exit at 15:50); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 14:39, Worker 3
+14:59, Checker 15:49, Main 04:31, Dashboard 12:54; Worker 1 from RUN_LOG 15:20 - 15:36). No idle slot. Fault repeated:
+two READY stamps ahead of the clock (Worker 2 15:35 for a run closed 14:55; Worker 3 16:20 for 15:14); rows annotated,
+FEEDBACK again; if it recurs it needs prompt wording by the main chat. Refusals: Checker's first full-suite launch
+('pytest path must be under tests/ or agents/: tests', re-run correctly) and a decode name with a space (re-run);
+Worker 1's 13:20 write of drawing-derived outline sizes into the repo refused (kept in .work/private: privacy guard
+working). Scout paused (your 28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new decision):
+- T-383 waterproofing completeness join (your 31 Oct item 5): own row (A, recommended) vs inside T-310 (B); full ERS s.6
+  text in my 00:45 report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat):
+(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence into the public repository is refused by
+the platform (23:39, 01:55). Needs your decision on where it may be kept. The checker will not retry until then.
+(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let his finish rows
+(ceilings, railings, tiles) be reconciled.
+(3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
+(4) Workers keep stamping board lines ahead of the clock (4 cases today): a one-line prompt wording fix ("stamp from
+`date -u` at the moment of writing") is a main-chat change; I do not edit prompts.
+
 ## LEAD REPORT 2026-10-31 12:30 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
@@ -173,75 +260,3 @@ Drive title and page). The checker will not retry until then.
 be reconciled (the shower count is no longer one of them: it was Urban's cost record).
 (3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
 
-## LEAD REPORT 2026-10-31 04:30 UTC
-
-Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
-31 Oct 00:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
-`.work` prepared by `status` (auto). Working branch 801d3226 -> b25b77b2 (Checker merges via 'engine push'); no owner
-commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since my last
-run; nothing undone.
-
-HEADLINE: three pieces merged (privacy fix, cutting list, architectural consultant rows); the formwork / railings /
-shutters integration was sent back twice, both times only because new item codes were not owned by the trade
-register; its measured quantities were accepted. No owner decision is new today.
-
-ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
-10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.29):
-- FORMWORK (m2; Gate B REJECTED r1 02:53, r2 04:02, narrow): formwork 1,065.833 m2 CALCULATED (= the checker-verified
-  face ledgers, 0 mismatches), 378 lines HELD blank incl. 60 formed / earth-cast pairs never summed (OQ-10) and 24
-  parapet faces; freelancer has no formwork row (not comparable, no %). The fault: STR.FORMWORK / STR.FORMWORK.STAIR /
-  ARCH.SHUTTER (r1) and MET.RAILING.GUARD (r2) written with no owning family; the r2 code also escaped the guard because
-  its regex scans fixed prefixes. Change since last report: none in quantity.
-- RAILINGS (m.l): 38.916 lm in the package, 12.888 VERIFIED (checker's own DXF re-measure of 5 runs = 0.0 %), vs
-  freelancer 18.95 lm internal only: UNRESOLVED scope (he has no roof / floor-edge guard row), not an error %.
-- REINFORCEMENT (kg): cutting list merged: 157 lines / 131 marks = 4,249.455 kg exact (checker's own re-sum), 38 footing-
-  mesh lines HELD_DOWNGRADE (874.862 kg audit only), 10 footing '/m' lines HELD on the same doubtful basis (1,606.069 ..
-  1,655.560 kg audit only) -> checker record DGP-T374-FTGM queued. Candidate bounded STR.REBAR unchanged at 10,903.179 ..
-  13,569.188 kg.
-- CONCRETE (m3): per-family reconciliation on V3.0.29 handed in (not yet checked): 9 / 9 families close with 0.000 m3
-  unexplained; components AGREE 15, ENGINE_RIGHT 10, HELD 11, UNRESOLVED 11 (ground slab, ground-beam lumps, column
-  height basis, beams, stairs, domes, lift / pump scope). Not counted until the checker re-measures it.
-- ARCHITECTURAL: no quantity moved; 7 consultant rows merged (shower zone extents, kitchen / pantry / laundry fixtures
-  HELD, arches, W17 soffit, an overhead element 0 .. 8.556 m.l); nothing sent.
-Development project 2: paused, not measured.
-
-WHAT IMPROVED / WHY: the cutting list now respects the downgrade register; a money-figure guard protects the public
-repository. WHAT GOT WORSE: nothing measured; integration throughput lost two Gate B cycles on bookkeeping. WHAT WAS
-LEARNED: a new item-code prefix needs the family registry first, and a guard that lists prefixes misses new ones.
-WHAT IS MISSING: formwork in the candidate (r3 next), roof, ceilings, skirting, WP fixes, exterior plaster, earthworks,
-foundation WP, spatter, masonry accessories, mortar (lane I queue, serial); candidate-wide consistency checks (new
-T-387 / T-388). GATES: lowest open gate 0 (privacy wording follow-up, no quantity); quantity work gate 2 - 3 (M3 11 Nov,
-M4 25 Nov). Week 2 (3 Nov): formwork realistic, roof at risk, ceilings likely after.
-
-DECISIONS THIS RUN: T-199 -> TODO r3 (exact fault, first in lane I); NEW T-386 (gate 0, lane A: T-380 text frames the
-freelancer shower count as a residual; t384 adverse strings rebuild the removed figure; sweep), T-387 (lane S:
-structural element ownership + overlap census on V3.0.29), T-388 (lane A: wall-face height / opening consistency across
-the integrated finish families). Verifier queue: T-199 r3 (Gate B) whenever READY, T-385 now, then T-386 / T-387 /
-T-388; DGP-T374-FTGM for the checker; the RFI evidence register stays parked (see NEEDS FIXING). Queue check: 44
-actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 1, A 2, I 1 + lane I queue by design + T-383 owner-held;
-READY 1.
-
-LESSONS REGISTER PROPOSAL (standard s.7): '2026-10-31 | an integration wrote item codes no family owned and a guard
-scanning fixed prefixes passed one of them | prefix list in the guard regex; codes chosen before the registry | every
-written item code is owned or listed in the governing family registry before hand-in; the ownership guard scans every
-UPPER.UPPER code | T-199 r3 adverse test (a MET.* code no family owns is refused) | PROPOSED'.
-
-TEAM HEALTH (00:45 - 04:30): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4,
-Lead x1 open = this run); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 02:39, Worker 3 03:00, Checker
-03:49, Dashboard 00:54). Refusals: Worker 3 03:47 the wrapper refused a bare 'pytest ... tests' (needs tests/<folder>;
-re-run fine); Worker 1 04:16 copying a private-derived input into the tree refused ('Sensitive-Source Provenance', kept
-in .work/private: correct); Checker 01:55 a verdict draft quoting footing-schedule figures refused, rewritten. Scout
-paused (your 28 Oct choice).
-
-OWNER PACKAGE (unchanged, no new decision):
-- T-383 waterproofing completeness join: own row (A, recommended) vs inside T-310 (B); full ERS s.6 text in my 00:45
-  report below; no quantity impact either way; on 'A' it becomes TODO for worker 2.
-- Q-78 (mix for the black block-joint mortar) still open, not urgent.
-
-NEEDS FIXING (only you or the main chat):
-(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence (page crops, schedule figures) into the
-public repository is refused by the platform (23:39, 01:55). It needs your decision on where it may be kept (for example
-only in the private workspace, cited by Drive title and page). The checker will not retry until then.
-(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let the shower
-count 11 vs 6 and other finish rows be reconciled.
-(3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).

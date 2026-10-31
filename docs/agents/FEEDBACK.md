@@ -45,6 +45,23 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 16:30 (lead run; covers 12:30 - 16:30)
+
+- T-391 (S, ground slab / ground beams): WORKED (Gate A PASS c3fe8ec8; checker re-measured OWN-001, held-cell panels,
+  shaft 3.24 m2, one D 0.95 run). Decision: F1 held-cell range goes into the candidate by T-397 (TODO now).
+- T-392 (S, ring / pool fourth side): WORKED (cc3c7f08). Decision: proposals into T-397; boundary-wall below ground T-403.
+- T-390 (A, face-length residuals): WORKED (0de2c671; 0.000 m2). Decision: none needed.
+- T-396 (A, boundary fence above N.G.): WORKED (e129577d; plane 97.9705 m2 AGREE). Decision: carrier into the candidate
+  T-400; finishes T-404; below ground T-403; register ruling: three trades on one element.
+- T-394 (S, columns): WORKED (e27c5d78; 0.000 m3 unexplained). Decision: P1 / P2 added to T-397; P3 waits for T-395.
+- T-284 (I, ceilings, Gate B): WORKED first pass (6c219179, candidate V3.0.32). Decision: T-397 next in lane I; then
+  T-399 tile zones (verified missing category), T-400 fence.
+- T-393 / T-395 / T-398: READY, queued T-395 > T-398 > T-393. Pre-decided: T-406 rolls the verified traces into one table.
+- Process: READY stamps ahead of the clock AGAIN (Worker 2 T-393 15:35 for a run closed 14:55; Worker 3 T-395 16:20 for a
+  run closed 15:14; third and fourth case today). Rows annotated with the true times. Every agent stamps board lines
+  from `date -u` at the moment of writing, never a planned or estimated time; if it recurs tomorrow it goes to NEEDS
+  FIXING for the main chat (prompt wording), the Lead does not change prompts.
+
 ## 2026-10-31 12:30 (lead run; covers 08:30 - 12:30)
 
 - T-389 (A, gate 0, cost-record relabel of the T-370 benchmark rows): WORKED (Gate A PASS, merged ca1d4278; checker's own

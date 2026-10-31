@@ -1,9 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 12:30 UTC (Lead). Previous version: 2026-10-31 08:30 UTC. The released numbers did not change
+Last update: 2026-10-31 16:30 UTC (Lead). Previous version: 2026-10-31 12:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.31 (not released): it adds the roof build-up.
+released: 0. The candidate under review is now V3.0.32 (not released): it adds the ceilings.
+
+Since 31 Oct 12:30 (newest first; six checked and merged, one of them an integration into the candidate; three handed
+in and waiting for the checker):
+- Ceilings INTO THE CANDIDATE: CHECKED AND MERGED on the first pass (V3.0.32). Interior ceiling 403.16 -> 362.01 m2
+  measured from the drawings (-10.2 %: rooms were carried at the wrong size or twice; the living group now once, the
+  dressing room 2.97 m2 added); bulkheads 27.93 m2 and ceiling paint 389.94 m2 by your answered rules; the two stair
+  soffits and two dome undersides blank (not drawn). The checker's own room measures agree. Every other line identical.
+- Columns compared with the freelancer: CHECKED AND MERGED. Every m3 of the difference is traced (ground floor +0.53,
+  first floor +2.52, lift -2.40 m3): his columns stop at the beam soffit where ours own the joint to the slab top, five
+  annex columns held, his lift ring runs through the lift columns. Fifteen columns whose two sheets disagree become
+  ranges (never a middle value), and the lift-pit wall (in no line today) becomes a held line. Next into the candidate.
+- Boundary fence above ground: CHECKED AND MERGED. 36.97 m x 2.65 m printed = 97.97 m2 of wall (the freelancer has
+  74.40 m2: he used 2.00 m height and counted one corner twice); block type, the sea and passage runs and the part
+  below ground held. Next: into the candidate, its finishes, and its foundation.
+- Ground slab and ground beams, ring beam / pool fourth side, wall-face lengths: CHECKED AND MERGED as reported at
+  12:30 (ground slab and beams: of 22.66 m3 unresolved, 4.84 traced, 13.25 held consultant items, 4.57 unexplained).
+- Beams compared with the freelancer: HANDED IN, not yet checked. Depth basis is not a cause (both full depth); he
+  omits six labelled beams (+9.88 m3, engine right), measures through the supports where we stop at the column face
+  (-5.03 m3, a rule difference: the column owns the joint), held beams -7.38 m3, untraced -0.37 m3.
+- Stairs, domes and pump room compared: HANDED IN, not yet checked. Of -11.38 m3: -0.33 traced, -5.79 held, -5.27 still
+  unexplained (mostly the curved stair flight; the pump room is drawn nowhere and stays held).
+- Railing scope: HANDED IN, not yet checked. The main stair balustrade 15.95 m.l now drawn per segment (was all held);
+  two turns held; one corner had been listed twice.
+- Next: the structural corrections into the candidate; kitchen / laundry / pantry wall tiles (a missing item, already
+  checked) and the boundary fence into the candidate; lift pit, held beams, the fence foundation and finishes, plaster
+  corner beads.
+
 
 Since 31 Oct 08:30 (newest first; three checked and merged, one of them an integration into the candidate; three
 handed in and waiting for the checker):
