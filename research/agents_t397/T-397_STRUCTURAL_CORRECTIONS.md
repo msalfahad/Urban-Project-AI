@@ -80,7 +80,11 @@ restored); ranges +8.034 .. +10.119 m3; nothing becomes 0.
   sheet S-COL.BON outlines); 1F 667 0.20 x 1.00 x 4.20 = 0.840 vs schedule 1ST 20x90 0.756; lift ring 10EB / 10EA and
   S-COL.BON 1090 / 1093 / 1096 / 1099; held cell panels OWN-007 / -009 / -010 / -047 = 35.6054 m2; CB8 cell to S-BEAM
   326 with columns 359 / 37D.
-- Regression: L4 on the task head (section 6).
+- Regression: L4 FULL SUITE to the end (tests/ + agents/, two halves in parallel) on 1881bf60 (code = the head; the
+  later merge added only T-403 / T-404 research + tests and the maps): 396 FAILED / ERROR vs research/agents_t202/
+  known_failures.json 396: NEW 1 = t374 snapshot-vs-board (pre-existing, F-T328-3, also NEW on the T-284 Gate B run),
+  ABSENT 1 (christiannp builder passes). On the merged head db26be38: selfcheck PASS (codemap, t061, freeze 0), t397 +
+  t403 + t404 + t284 + t328 pass, family master 1.28.0 --check clean, rules manifest drift none.
 
 ## 5. Downstream impacts and double count
 
