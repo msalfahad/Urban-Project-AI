@@ -1,0 +1,9 @@
+key,run,side,length_m,height_m,gross_m2,deductions,net_m2,at_most_m2,comparison_only_m2,face_status,face_held,of_which_lower_050_band_m2,finishable_m2,finishable_lo_m2,finishable_hi_m2,finishable_status,finishable_basis,plaster_status,plaster_at_most_m2,sigma_paint_status,sigma_paint_at_most_m2
+F-NORTH/OUTSIDE,F-NORTH,OUTSIDE,31.37,2.65,83.1305,,83.1305,,,DRAWING-CONFIRMED,,15.685,,,83.1305,HELD,finished ground of this side not printed: at most the physical face,HELD,83.1305,HELD,83.1305
+F-NORTH/PLOT,F-NORTH,PLOT,30.97,2.65,82.0705,,82.0705,,,DRAWING-CONFIRMED,,15.485,,77.425,82.0705,HELD,printed level +0.15 drawn at the run ends only,HELD,82.0705,HELD,82.0705
+F-STREET/OUTSIDE,F-STREET,OUTSIDE,8.3,2.65,21.995,G-01:6.625,,15.37,,HELD,"top profile drawn, not dimensioned (R-T404-4)",2.9,,,15.37,HELD,finished ground of this side not printed: at most the physical face,HELD,15.37,HELD,15.37
+F-STREET/PLOT,F-STREET,PLOT,8.1,2.65,21.465,G-01:6.625,,14.84,,HELD,"top profile drawn, not dimensioned (R-T404-4)",2.8,,,14.84,HELD,finished ground of this side not printed: at most the physical face,HELD,14.84,HELD,14.84
+F-SEA/OUTSIDE,F-SEA,OUTSIDE,2.4,2.65,,,,,6.36,HELD,face height not printed / element HELD,,,,,HELD,face HELD,HELD,,HELD,
+F-SEA/PLOT,F-SEA,PLOT,2.4,2.65,,,,,6.36,HELD,face height not printed / element HELD,,,,,HELD,face HELD,HELD,,HELD,
+F-LOWER/OUTSIDE,F-LOWER,OUTSIDE,1.2,,,,,,,HELD,face height not printed / element HELD,,,,,HELD,face HELD,HELD,,HELD,
+F-LOWER/PLOT,F-LOWER,PLOT,1.2,,,,,,,HELD,face height not printed / element HELD,,,,,HELD,face HELD,HELD,,HELD,
