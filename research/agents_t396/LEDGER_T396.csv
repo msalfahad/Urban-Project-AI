@@ -1,0 +1,5 @@
+run,run_m,corner_owned_elsewhere_m,gates_m,excluded_m,solid_m,thickness_m,height_m,height_basis,height_status,plane_m2,plane_status,plane_comparison_only_m2,block_net_m2,block_status,block_at_most_m2,block_held_terms,block_type,block_count
+F-NORTH (upper neighbour),31.37,0.0,[],[],31.37,0.2,2.65,PRINTED,DRAWING-CONFIRMED,83.1305,DRAWING-CONFIRMED,,,HELD,83.1305,"[""columns: count not printed (0.3 x 2.65 = 0.795 m2 each)"", ""lower 0.5 m band material unresolved (15.685 m2)""]",HELD (Q-65 C),HELD (Q-65 C)
+F-STREET,8.3,0.2,[2.5],[],5.6,0.2,2.65,PRINTED,DRAWING-CONFIRMED,14.84,DRAWING-CONFIRMED,,,HELD,14.84,"[""columns: count not printed (0.3 x 2.65 = 0.795 m2 each)"", ""lower 0.5 m band material unresolved (2.8 m2)"", ""profile cut drawn, not dimensioned""]",HELD (Q-65 C),HELD (Q-65 C)
+F-SEA (Q-63 C element),7.1,0.2,[1.0],[3.5],2.4,0.2,2.65,DRAWN,HELD,,HELD,6.36,,HELD,6.36,"[""plane HELD""]",HELD (Q-65 C),HELD (Q-65 C)
+F-LOWER passage closure,1.2,0.0,[],[],1.2,0.2,,NONE,HELD,,HELD,,,HELD,,"[""plane HELD""]",HELD (Q-65 C),HELD (Q-65 C)
