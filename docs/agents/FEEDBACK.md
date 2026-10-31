@@ -45,6 +45,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-31 00:45 (lead run; covers 20:20 - 00:45)
+
+- WORKED: T-379 (gate fix, t212 green), T-370 (sanitary count, two sources), T-369 (shower tanking 0.000 m2 extra,
+  owner rules), T-378 (22 stair lines not starters -> DGP-T378-STAIR), T-327 (Gate B first pass, V3.0.29 thresholds),
+  T-375 (splice-count defect, 0.000 kg here), T-376 (16 designer rows, applied by the Lead), T-380 (drainage census).
+- FAILED: T-374 (38 lines under an unresolved downgrade record scheduled with cut lengths). Decision: r2 with the exact
+  fault, first in lane S; adverse test 'a line under an unresolved record is never SCHEDULED'.
+- Cause seen again: a worker reads one source (here: the downgrade register was not consulted before scheduling).
+  Every quantity task now names verdicts/V3.0.x/DOWNGRADES.json as an input it must join.
+- Privacy observation O-T380-1 (a freelancer rate in a public file) -> T-384 gate 0; the hand-in rule now says
+  freelancer QUANTITIES only.
+
 ## 2026-10-30 20:20 (lead run; covers 16:30 - 20:20)
 
 - T-326 r2 reveals into the candidate (Gate B): WORKED (18:26, PASS on the exact r1 fault; CANDIDATE OF RECORD V3.0.28; ARCH.WINDOW_REVEAL 12.6364 -> 12.4389 m2, -1.56 %; 3,953 lines byte-identical; one Gate B round lost at r1). Decision: none; T-327 next in lane I.

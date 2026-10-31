@@ -1,10 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-30 20:20 UTC (Lead). Previous version: 2026-10-30 16:30 UTC. The released numbers did not change
+Last update: 2026-10-31 00:45 UTC (Lead). Previous version: 2026-10-30 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
-untouched). Your measure: whole BOQ lines independently verified: 2 in the candidate's export (the concrete slab 60.28
-m3 is the one scoreboard reference line among them); released: 0. The candidate under review is now V3.0.28 (not
-released).
+untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate;
+your 31 Oct review keeps the count at 1); released: 0. The candidate under review is now V3.0.29 (not released).
+
+Since 30 Oct 20:20 (newest first; eight checked and merged, one of them an integration into the candidate; one sent
+back):
+- Sills and thresholds INTO THE CANDIDATE: CHECKED AND MERGED (V3.0.29). Five small door-closure strips that had no
+  sound basis were replaced by one threshold per doorway at clear width x wall thickness: marble thresholds 1.34 ->
+  1.82 m2 (all 14 wet-room doorways, your marble rule), porcelain floor +0.15 m2; every other line identical. The
+  freelancer has no threshold rows.
+- Rebar on the starter-bar note: the checker issued both "held" records. 351 lines (beam ends, column laps, ground-
+  beam ends) and 22 stair lines (read bar by bar: none is a starter) are now held blank in the candidate's contract
+  view. Candidate rebar range 10,903 .. 13,569 kg (was 14,278 .. 19,647); released 10,250 kg unchanged. This is steel
+  whose length the drawings do not print, not steel that is absent.
+- Straight-bar cutting list: SENT BACK. 38 footing-mesh lines whose bar-end position has no printed basis were
+  scheduled with definite cut lengths (875 kg); they must stay held; the remaining exact schedule is about 4,249 kg.
+- Checked and merged, research: sanitary fixtures (WC 12, basins 17, showers 6 = 3 trays + 3 walk-in, floor drains 19,
+  roof outlets 5; kitchen sink not drawn anywhere: unknown, never 0); shower floor / tanking (no extra membrane beyond
+  the wet-room lines, your rules); drainage pipework (manhole 1, cleanouts 3, 4 soil and 5 rain stacks; the sheet is
+  "not to scale" and prints no dimension, so every pipe length stays held); a beam-splice counting fault in an old
+  frozen method (wrong only for runs longer than about 23 m: 0 kg on this villa, fix queued for other villas); 16
+  structural consultant questions on bar shapes and laps (added to the draft package, nothing sent).
+- The guard test that was failing since 29 Oct is green again.
+- Your 31 Oct review: the 8 internal-wording points and the two recipient splits are applied in the consultant
+  drafts; nothing is sent. One privacy slip found by the checker: a freelancer unit rate was written into two public
+  research files; a fix is first in the architectural lane (see the Lead report).
+- Next: formwork into the candidate; the cutting-list fix; a per-family concrete reconciliation against the
+  freelancer; the privacy fix.
 
 Since 30 Oct 16:30 (newest first; three checked and merged, one of them an integration into the candidate):
 - Rebar lap lengths taken from the starter-bar note: CHECKED AND MERGED. The checker's own count over all 2,643
