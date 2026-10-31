@@ -1,0 +1,29 @@
+{
+ "artefact_m_by_cause": {
+  "CROSSING": 0.23,
+  "END_REACH": 0.025,
+  "ON_FACE_PARALLEL": 0.0,
+  "T_JUNCTION": 0.16
+ },
+ "band_sides_with_virtual": 19,
+ "corner_virtual_on_faces_m": 0.09,
+ "family_rows": 64,
+ "guards": "PASS",
+ "r_t390_explained": 2,
+ "r_t390_open": 0,
+ "rooms": 32,
+ "rooms_where_t388_face_differs": [
+  "1F-13",
+  "2F-01",
+  "GF-07",
+  "GF-08",
+  "GF-14",
+  "GF-15",
+  "GF-16",
+  "ST-1F",
+  "ST-2F"
+ ],
+ "t388_faces_artefact_m": 0.415,
+ "t388_faces_changed": 12,
+ "t388_residuals_over_tol": 8
+}
