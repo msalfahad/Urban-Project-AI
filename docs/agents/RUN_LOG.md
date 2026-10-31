@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T16:51Z | Verifier | STARTED | run session_01E6cPnbpLMWvazgu9EUkibt | repo-attached routine | task state: READY T-395, T-398, T-393 | self-check pending
 - 2026-10-31T16:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31T16:21Z | Lead | SUCCESS | board | Since 12:23: T-391, T-392, T-390, T-396, T-394 WORKED (Gate A first pass), T-284 WORKED (Gate B first pass: candidate of record V3.0.32, interior ceiling 403.163 -> 362.006 m2); READY 3 queued T-395 > T-398 > T-393 then Gate B T-397; T-397 TODO first in I (+T-394 P1 ranges / P2 held lift-pit wall); NEW T-399 (I tile zones), T-400 (I fence + gates), T-401 (S lift pit), T-402 (S held beams), T-403 (S boundary wall below N.G.), T-404 (A fence finishes), T-405 (A corner beads), T-406 (S roll-up, queued); 3 register rulings, 2 lessons rows; READY stamps ahead of clock again (W2, W3; and my own notes first stamped 16:30, corrected to 16:20); Drive no new files; queue check: 49 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none refused
 - 2026-10-31T16:13Z | Lead | STARTED | run session_01E6cPncb6eo3KCEf4q6cDBD | repo-attached routine | task state: board | report pending
