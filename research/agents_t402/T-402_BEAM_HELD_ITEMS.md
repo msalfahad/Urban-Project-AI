@@ -4,6 +4,84 @@ Worker 1, 2026-10-31 19:24 .. UTC, branch `agents/task-T-402`. Development villa
 engine module, candidate line, released quantity, rule or method version changed; nothing released. ERS s.2.1 - 2.6,
 s.3, s.4, s.7 applied.
 
+## r2 (Worker 1, 2026-10-31 21:24 .. UTC; Checker Gate A 20:58 REJECTED NARROW on e / h): what changed
+
+Own Drive copy re-decoded this run ('Alsenan chalet project' / 'ST7757 dxf.dxf', sha256 `9f9d1179`); READ re-run
+bit-identical to r1. New readers `t402_sections.py` (every section cut, the bands it reaches, every DIMENSION of its view
+with DIMLFAC, axis from the rotated dimension's angle and the text the sheet SHOWS) and `t402_sides.py` (what each face
+of a width-conflict beam sees, station by station every 0.05 m). Rules R-T402-5 (r2) and R-T402-6 (new) in
+`t402_rules.py`.
+
+**(i) BM-GF-059 (L-8ea71184fff91b4357b7, GF piece past column 335): HELD -> VALUE 0.549284 m3.** Section D-D (title 17A2,
+outline 1775) prints its depth: vertical chain 1785 shown '55' + 1777 shown '20' (DIMLFAC 0.025 on the model units, 1 m
+= 4000 units) = 0.75 m, closing the outline height 2999.9 units = 0.750 m (R-T402-6 chain check). Its rounded top corner
+is printed by two dimensions, 1777 '20' (V) and 17A3 '20' (H, measurement 19.96), on a drawn arc (radius 800 units), and
+the stirrup outline 1776 follows the arc at cover: the round is part of the concrete. 'AS PER SCH.' 179F / 17A1 stand on
+the leaders 179E / 17A0, which start at the bottom bar 1795 and the top bar 179A: bar notes, not size notes. The width is
+NOT dimensioned (outline 1391.3 units = 0.348 scaled: INDICATION only, inadmissible, and it disagrees with the drawn
+0.4996 = edges 274 / 277 on the plan cut 181D). Value = (0.4996 x 0.75 - 0.20^2 x (1 - pi/4)) x 1.5003 = (0.374700 -
+0.008584) x 1.5003 = **0.549284 m3** (without the round 0.562162; Checker 0.549282 / 0.562162: agree within 0.000002).
+The r1 row ('D-D prints no dimension') was wrong; **P2 is withdrawn** (it would have widened 0.375 .. 0.5625 to the
+envelope 0.2998 .. 0.8995 where the drawing narrows it to one value). Candidate 0.375 .. 0.5625 -> proposal VALUE
+0.549284 (inside the candidate's bound, +0.174 above its low end, -0.013 below its high end).
+
+**(ii) Every other held line re-checked for DIMENSION entities in any section a cut reaches.** The set has 14
+S-SEC.LINE entities = 4 sections: A (55A + arrows 553 / 55C), B (76E + 76D / 76F), C (1738 + 1737), D (176E, 1772, 181D +
+arrows). Cuts reaching a band: 55A -> GF strip BM-GF-058 (BAND0031.1) + B20; 76E -> 1F strip BM-1F-033 (BAND0013.1) + B23
++ a B6 span that is NOT the held one (BAND0019, drawn 0.25 = schedule); 1738 / 176E / 1772 -> CB1 only (not held); 181D
+-> BM-GF-059. Within 0.50 m but not crossing: 553 (arrow) by BM-GF-058, 1772 by BM-GF-059. **No cut reaches B29, CB2,
+B21, the held B6 span, CB10, CB3 / B3, or the 6 other unlabelled pieces** (BAND0030.2, not in the band file, lies
+beside its B4 band, about 8 m from the nearest cut), and **no plan DIMENSION** has an extension point within 0.06 m of any held band (377
+dimensions searched; within 1.0 m of BAND0030.2). What the reached sections print (all shown values = measurement x
+DIMLFAC 0.025): A-A 59A '40' (H), 5A8 '75' (V), upstand 58C / 561 '20' (H) + 572 '20' (V): B20 0.40 x 0.75 + 0.20 x 0.20;
+B-B 16EA '45', 16F8 '75', 16C0 '25' + 16DC '20' (H), 16CE '20' (V): B23 0.45 x 0.75 + 0.20 x 0.20. Both outlines END at
+the beam's outer face (A-A outline 560 1600 units wide = 0.40, B-B 16BF 1800 = 0.45), so neither prints anything for the
+0.20 strip beyond it; neither draws the slab either, so the absence of the strip in the section is not evidence that it
+is not concrete: the two projection lines stay HELD BLANK (R-T402-4). The upstands are the plan layer-2 lines 55F / 7BC
+inside the beams and are already carried (T-395 'upstand lines B20 / B23 0.20 x 0.20 x 3.00', +0.120 each): not touched.
+C-C (CB1, not held) prints the depth chain 1741 '20' + 174F '55' and only ONE extent of its round (V): its round is not
+admissible under R-T402-6 without the H extent; noted for the Lead (CB1 lines are valued b x D; D-D's two-extent round
+would remove 0.008584 m3 per metre where D-D governs CB1: NOT checked, no line changed).
+
+**(iii) Slab pairing and net shift as BOUNDS (R-T402-5 r2).** Each face of the 7 width-conflict members, own read
+(probe 0.10 m beyond the face every 0.05 m; SLAB = a slab bar or slab text up to the next structural line; OPEN = inside
+an S-OPENING cross hull; HELD_NEIGH = another held band; UNDETERMINED / NO_EVIDENCE_4M counted as possibly slab in the
+upper bound only):
+
+| Line | Mark | face w- | face w+ | Slab strip m3 | Net shift schedule - drawn, m3 |
+|---|---|---|---|---|---|
+| L-9e4895663f76d7f03ac9 | GF B29 | SLAB 5.45, undet. 1.29 | OPEN 5.75 (2CF cross), SLAB 0.60, undet. 0.39 | OVERLAP 0.0048 .. 0.0539 | +0.1988 .. +0.2480 |
+| L-2c7b0b1e1a439d9ffd1e | GF CB2 s1 | SLAB 3.35, undet. 0.10 | undet. 3.45 (no bar / text up to S-BOUN 2A6 at 1.50 m) | GAP 0 .. 0.0277 | -0.0871 .. -0.0594 |
+| L-60f09eece6568b15f6ce | GF CB2 s2 | SLAB 3.35 | undet. 3.35 (same) | GAP 0 .. 0.0269 | -0.0841 .. -0.0572 |
+| L-1fd49f3e7c5a7dd19d4d | GF B21 | SLAB 6.90, undet. 0.58 | SLAB 2.80, no-evid. 1.65, B29 band 0.20, undet. 2.83 (lines 289 / 2CD 0.15 - 0.32 m away) | OVERLAP 0.0224 .. 0.0599 | +0.2207 .. +0.2582 |
+| L-39ca5340879eafc35355 | 1F B6 | SLAB 4.20, undet. 0.20 | SLAB 4.35, undet. 0.05 | OVERLAP 0.0336 .. 0.0352 | +0.0752 .. +0.0768 |
+| L-50667f69855b6d588011 | 1F CB10 s1 | SLAB 1.00, no-evid. 1.30 | held strip BAND0014 2.30 | GAP 0 .. 0.0184 | -0.0575 .. -0.0391 |
+| L-43e804ba4a4c07529fd5 | 1F CB10 s2 | held strip BAND0014 3.65 | SLAB 1.00, OPEN 1.25 (dome opening 604 ..), no-evid. 1.40 | GAP 0 .. 0.0192 | -0.0913 .. -0.0721 |
+
+Sum of the net shift over the 7 lines: **+0.175 .. +0.355 m3** (r1 stated the single figure +0.277, which assumed slab
+on both faces everywhere). B29: Checker's 0 .. 0.0541 / +0.1993 .. +0.2534 on the full-opening reading; my face read
+finds 0.60 m of slab on the opening face near its east end (bar 53D), hence the low end 0.0048, and the trapezoid mean
+length 6.757 vs my 6.7403 + oblique addition explains the last 0.0002 / 0.005. Bounds of the beams themselves are
+unchanged (5.145 .. 6.112 m3 over the 7).
+
+**(iv) Tests** (`tests/t402_beam_held`, now 37): R-T402-6 normal (a printed chain closing the outline is a
+DIMENSIONED_SECTION; the two-extent round deducted; the scaled width stays inadmissible) and adverse ('AS PER SCH.' on a
+bar leader read as 'no dimension' refused; an empty or non-closing chain refused; a round with one extent, no arc,
+unequal extents or 0 refused); R-T402-5 r2 normal (bound when the faces differ, point when both see slab) and adverse
+(one face only, lo > hi, Ls > L, missing face refused); the face reader on a rotated / mirrored synthetic beam (slab one
+side, opening + undetermined on the other); committed Alsenan rows (BM-GF-059 re-derived by hand, every width row carries
+both bounds). The r1 scaled-section test is kept (a section with no dimension entity), relabelled X-X: it no longer
+stands for D-D.
+
+**Result after r2: 1 VALUE, 8 BOUNDED, 18 HELD** (27 lines). RFI fact D-04 now covers 6 pieces (0.666 .. 1.999 m3 on the
+envelope); BM-GF-059 leaves it, with one designer fact kept: section D-D is drawn at CB1's proportions (scaled 0.348 =
+CB1's printed 35) while the plan draws this piece 0.50: the width rests on the plan (the only admissible reading).
+
+**Lesson (ERS s.7, Checker-proposed, adopted in R-T402-6)**: 'Before calling a section undimensioned, list its DIMENSION
+entities and their DIMLFAC; a note on a bar leader is not a size note' (scope every villa; provenance T-402 Checker
+2026-10-31). Second lesson proposed: 'a slab pairing is a bound over the two faces unless both faces are shown to see
+the same thing' (R-T402-5 r2; provenance T-402 r2).
+
 ## 0. Sources and runs
 
 Own Drive copies this run (folder "Alsenan chalet project", decoded into `.work/private` only): 'ST7757 dxf.dxf'
@@ -18,7 +96,9 @@ file (`research/agents_t332`, asserted equal to V3.0.29 by T-395); V3.0.30 .. V3
 python3 -I research/agents_t110/scripts/census.py <private>/ST7757_dxf.dxf <private>/t402/texts.json
 python3 -I research/agents_t110/scripts/bands.py research/urban_engine_m4_correctness/st7757_route_g <private>/t402/bands.json
 python3 -I research/agents_t402/t402_read.py <private>/ST7757_dxf.dxf <private>/t402/bands.json <private>/t402/texts.json <private>/t402/READ_T402.json
-python3 -I research/agents_t402/t402_alsenan.py --read <private>/t402/READ_T402.json --write
+python3 -I research/agents_t402/t402_sections.py <private>/ST7757_dxf.dxf <private>/t402/bands.json <private>/t402/SECTIONS_T402.json
+python3 -I research/agents_t402/t402_sides.py <private>/ST7757_dxf.dxf <private>/t402/bands.json <private>/t402/SIDES_T402.json
+python3 -I research/agents_t402/t402_alsenan.py --read <private>/t402/READ_T402.json --sides <private>/t402/SIDES_T402.json --sections <private>/t402/SECTIONS_T402.json --write
 ```
 
 Outputs (tracked): `HELD_LINES_T402.csv` (one row per held line: line id, mark, designer item, why held, sheets searched,
@@ -52,7 +132,7 @@ Per line, the width conflicts (b x D x L face to face; T-229 oblique-end additio
 | L-43e804ba4a4c07529fd5 | 1F CB10 s2 | 0.25 x 0.50 | 0.300 (5E7 / 5E8) | 3.6506 | 0.547590 | 0.456325 | GAP 0.029205 |
 
 Own bounds agree with the candidate's within 0.0006 m3 per line (the candidate is right on these bounds; no change).
-**New finding (R-T402-5)**: the slab lines are net of the DRAWN faces, so the schedule reading of a width is not a
+**New finding (R-T402-5) [r2: the single +0.277 is replaced by the bound +0.175 .. +0.355, see r2 (iii)]**: the slab lines are net of the DRAWN faces, so the schedule reading of a width is not a
 beam-only change: B29 / B21 / B6 wider by 0.05 would overlap the slab by 0.149 m3 (the slab must give it up); CB2 / CB10
 narrower by 0.05 leave a 0.102 m3 gap the slab must take. The total concrete moves only by db x L x (D - t) =
 **+0.277 m3** net over the 7 lines (+0.495 on B29 / B21 / B6, -0.218 on CB2 / CB10), not by the beam bound's 0.967 m3
@@ -70,7 +150,7 @@ width. A beam bound must not be published without its slab pairing.
     nothing lies north of the beam, so the strip is not excluded (Q-61 C(5)). The plan line inside B20 (layer 2, 0.20 in
     from the outer face) is the upstand's inner face, so the 0.20 strip OUTSIDE B20 is not the upstand.
   - B (76E) cuts the 1F strip north of B23: section B-B the same (beam + upstand only).
-  - D (181D) cuts the GF unlabelled piece past column 335 (B24 band continued to the east edge). D-D prints no dimension
+  - [r1, SUPERSEDED by r2 (i): D-D PRINTS its depth by dimensions 1785 / 1777] D (181D) cuts the GF unlabelled piece past column 335 (B24 band continued to the east edge). D-D prints no dimension
     ('AS PER SCH.'); drawn 1.391 x 3.000, which is 0.35 x 0.75 at the 1:25 implied by the three other D cuts on CB1
     (printed 35 x 75). An INDICATION only (a scaled reading, never a quantity), and its width disagrees with the drawn
     0.4996 of the piece. The piece stays HELD.
@@ -112,7 +192,7 @@ HELD term stays a held term, not a residual.
   (GF BM-GF-058 x2; 1F BM-1F-033 x2, BAND0014, BAND0023, BM-1F-036: 1.975 .. 4.710 m3) take it from the beam-schedule
   depth envelope; a projection's depth is not a beam property (R-T402-4): restate them HELD BLANK with their plan area
   (6.947 m2 over the 11 projection lines), as the 4 no-band items already are. No figure changes (all blank today).
-- **P2**: GF BM-GF-059 (unlabelled, past column 335) carries 0.375 .. 0.5625 (depth 0.50 .. 0.75) where the 6 other
+- **P2 [WITHDRAWN in r2: section D-D prints the depth; proposal now VALUE 0.549284 m3, see r2 (i)]**: GF BM-GF-059 (unlabelled, past column 335) carries 0.375 .. 0.5625 (depth 0.50 .. 0.75) where the 6 other
   unlabelled pieces carry the set envelope 0.40 .. 1.20; no drawing basis is stated for the narrower pair (section D-D
   is a scaled indication). Restate on the envelope: 0.2998 .. 0.8995, D-D cited as INDICATION 0.75.
 - **P3**: carry the slab pairing (OVERLAP / GAP, m3) beside each width-conflict bound in the export so a reader never

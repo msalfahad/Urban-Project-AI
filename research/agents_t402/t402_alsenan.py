@@ -8,7 +8,8 @@ Inputs
 Output (tracked): HELD_LINES_T402.csv (one row per held line) and summary_t402.json: engine ids, marks, DXF handles,
 lengths, widths, m3; no coordinates, no client data, no freelancer row.
 
-    python3 -I research/agents_t402/t402_alsenan.py --read <private>/t402/READ_T402.json --write
+    python3 -I research/agents_t402/t402_alsenan.py --read <private>/t402/READ_T402.json \
+        --sides <private>/t402/SIDES_T402.json --sections <private>/t402/SECTIONS_T402.json --write
 """
 from __future__ import annotations
 
@@ -25,6 +26,7 @@ import t402_rules as R  # noqa: E402
 
 ENVELOPE = (0.40, 1.20)   # printed depths of the set: simple beams B1 .. B29, CA, B.W and CB1 .. CB13 (ST p.10 / p.11)
 SLAB_T = 0.16             # printed S.S 16 CM over the beams (slab pairing of a width alternative, R-T402-5)
+UNITS_PER_M = 4000.0      # section views: DIMLFAC 0.025 on model units gives cm, i.e. 1 m = 4000 units (1:25)
 
 SHEETS = "ST7757 DXF roof-slab plans GF / 1F / 2F; ST p.10 simple-beam schedule; ST p.11 continuous-beam schedule"
 
@@ -51,8 +53,8 @@ SPEC = {
     # unlabelled spans across a support, D-04
     "L-efd3f7806bf10b6a8e98": dict(mark=None, item="D-04", cls="UNLABELLED", b=0.20, L=0.50,
                                    why="no mark on the 0.50 m piece past the support; route G band only (not in the band fit file); edges continue the neighbour's"),
-    "L-8ea71184fff91b4357b7": dict(mark=None, item="D-04", cls="UNLABELLED",
-                                   why="no mark on the 1.50 m piece past column 335 (B24 band continued to the east edge); section cut D (181D) crosses it: D-D prints no dimension ('AS PER SCH.'), drawn 1.391 x 3.000 = 0.35 x 0.75 at the 1:25 implied by the three other D cuts on CB1 (0.35 x 0.75): an INDICATION whose width disagrees with the drawn 0.50"),
+    "L-8ea71184fff91b4357b7": dict(mark=None, item="D-04", cls="UNLABELLED_SECTIONED",
+                                   why="no mark on the 1.50 m piece past column 335 (B24 band continued to the east edge); cut D (181D) crosses it and section D-D PRINTS the depth: vertical chain 1785 '55' + 1777 '20' (DIMLFAC 0.025) = 0.75, closing the outline 1775 height (2999.9 units = 0.750 m at 1:25); rounded top corner printed 1777 '20' (V) + 17A3 '20' (H) on the drawn arc, stirrup 1776 follows it; width NOT dimensioned (outline 1391.3 units = 0.348 scaled, INDICATION, disagrees with the drawn 0.4996; 'AS PER SCH.' 179F / 17A1 sit on the bar leaders 179E / 17A0); r1 'no dimension' was wrong (Checker 20:58)"),
     "L-f83c4a469845c7e14dfa": dict(mark=None, item="D-04", cls="UNLABELLED",
                                    why="no mark on the 0.80 m piece past column 691 (B2 band continued); edges 5C6 / 5E3 continue through several marks"),
     "L-8d031491396379f0cbb1": dict(mark=None, item="D-04", cls="UNLABELLED",
@@ -101,7 +103,7 @@ def _faces(run, only=None):
     return w, round(sum(Ls) / len(Ls), 4), [f["handle"] for f in main]
 
 
-def build(read):
+def build(read, sides, sections):
     cand, held = load()
     rows = []
     for r in held:
@@ -132,9 +134,17 @@ def build(read):
                              depths=[R.Reading(s["sched"][1], "SCHEDULE_ROW", s["mark"])],
                              length=R.Reading(L, "FACE_TO_FACE"))
             res = R.resolve(pc)
-            sp = R.slab_pairing(w_drawn, s["sched"][0], L, SLAB_T)
-            res["slab_pairing"] = f'{sp["kind"]} {sp["slab_m3"]:.6f} m3 (slab net of the drawn faces; t {SLAB_T})'
-            res["total_shift_m3"] = round((s["sched"][0] - w_drawn) * L * (s["sched"][1] - SLAB_T), 6)
+            sd = sides[lid]
+            faces = []
+            for f in ("w-", "w+"):
+                m = sd[f]["length_m"]
+                faces.append((min(m["SLAB"], L), min(m["SLAB"] + m["UNDETERMINED"] + m["NO_EVIDENCE_4M"], L)))
+            sp = R.slab_pairing_bound(w_drawn, s["sched"][0], L, s["sched"][1], SLAB_T, faces)
+            res["slab_pairing"] = (f'{sp["kind"]} {sp["slab_m3_low"]:.6f} .. {sp["slab_m3_high"]:.6f} m3 (slab net of the drawn '
+                                   f'faces; t {SLAB_T}; faces slab-seeing ' + " / ".join(f"{a:.2f}..{b:.2f}" for a, b in faces)
+                                   + ' m; ' + "; ".join(f + " " + ", ".join(f"{k} {v:.2f}" for k, v in sd[f]["length_m"].items() if v)
+                                                         for f in ("w-", "w+")) + ")")
+            res["total_shift_m3"] = f'{sp["total_shift_low"]:.6f} .. {sp["total_shift_high"]:.6f}' if not sp["point"] else f'{sp["total_shift_low"]:.6f}'
             k = s.get("add_m3_per_m_w", 0.0)   # merged T-229 oblique-end additions, per metre of width
             if k:
                 lo_w, hi_w = sorted((s["sched"][0], w_drawn))
@@ -146,17 +156,30 @@ def build(read):
                              depths=[R.Reading(d, "SCHEDULE_ROW", m) for d, m in zip(s["depths"], ("B3", "CB3"))],
                              length=R.Reading(L, "FACE_TO_FACE"))
             res = R.resolve(pc)
+        elif s["cls"] == "UNLABELLED_SECTIONED":   # r2: section D-D prints depth and round (R-T402-6)
+            sec = sections["views"]["D"]
+            vch = [d["printed"] / 100 for d in sec["dims"] if d["axis"] == "V" and d["handle"] in ("1785", "1777")]
+            D = R.depth_from_chain(vch, sec["outline_h_units"] / UNITS_PER_M)
+            rh = [float(d["shown"]) / 100 for d in sec["dims"] if d["handle"] == "17A3"][0]
+            rv = [float(d["shown"]) / 100 for d in sec["dims"] if d["handle"] == "1777"][0]
+            ded = R.corner_round_m2(rh, rv, arc_drawn=True)
+            pc = R.HeldPiece(lid, None, widths=[R.Reading(w_drawn, "DRAWN_EDGES", row["edge_handles"])],
+                             depths=[R.Reading(D, "DIMENSIONED_SECTION", "D-D 1785 + 1777")],
+                             length=R.Reading(L, "FACE_TO_FACE"), section_deduct_m2=ded)
+            res = R.resolve(pc)
+            res["indication"] = [(round(sec["outline_w_units"] / UNITS_PER_M, 4), "D-D width scaled at 1:25, inadmissible")]
+            res["no_round_m3"] = round(w_drawn * D * L, 6)
         else:  # UNLABELLED
             pc = R.HeldPiece(lid, None, widths=[R.Reading(w_drawn, "DRAWN_EDGES", row["edge_handles"])],
-                             depths=[R.Reading(ENVELOPE[0], "SCHEDULE_ENVELOPE", "set"), R.Reading(ENVELOPE[1], "SCHEDULE_ENVELOPE", "set")]
-                             + ([R.Reading(0.75, "SCALED_SECTION", "D-D at 1:25 implied")] if lid == "L-8ea71184fff91b4357b7" else []),
+                             depths=[R.Reading(ENVELOPE[0], "SCHEDULE_ENVELOPE", "set"), R.Reading(ENVELOPE[1], "SCHEDULE_ENVELOPE", "set")],
                              length=R.Reading(L, "FACE_TO_FACE"))
             res = R.resolve(pc)
         row.update(result=res["result"], value_m3=res["m3"], low_m3=res["low"], high_m3=res["high"],
                    plan_area_m2=res.get("plan_area_m2"), missing_fact=res["missing"], basis=res["basis"],
                    slab_pairing=res.get("slab_pairing", "slab net of the drawn band; piece inside its band (T-387: held member, pair UNDETERMINED)"),
                    total_shift_schedule_minus_drawn_m3=res.get("total_shift_m3"),
-                   indication="; ".join(f"{v} ({r})" for v, r in res.get("indication", [])))
+                   indication="; ".join(f"{v} ({r})" for v, r in res.get("indication", [])),
+                   value_without_round_m3=res.get("no_round_m3"))
         rows.append(row)
     return rows
 
@@ -167,10 +190,10 @@ def summarise(rows):
         out["by_floor"][r["floor"]] = out["by_floor"].get(r["floor"], 0) + 1
         out["by_result"][r["result"]] = out["by_result"].get(r["result"], 0) + 1
         k = out["by_class"].setdefault(r["cls"], {"lines": 0, "low_m3": 0.0, "high_m3": 0.0, "cand_low": 0.0,
-                                                   "cand_high": 0.0, "plan_area_m2": 0.0})
+                                                   "cand_high": 0.0, "plan_area_m2": 0.0, "value_m3": 0.0})
         k["lines"] += 1
         for a, b in (("low_m3", "low_m3"), ("high_m3", "high_m3"), ("cand_low", "cand_low"), ("cand_high", "cand_high"),
-                     ("plan_area_m2", "plan_area_m2")):
+                     ("plan_area_m2", "plan_area_m2"), ("value_m3", "value_m3")):
             if r[b] is not None:
                 k[a] = round(k[a] + float(r[b]), 6)
     return out
@@ -179,10 +202,12 @@ def summarise(rows):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--read", required=True)
+    ap.add_argument("--sides", required=True, help="<private>/t402/SIDES_T402.json (t402_sides.py)")
+    ap.add_argument("--sections", required=True, help="<private>/t402/SECTIONS_T402.json (t402_sections.py)")
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args(argv)
     read = json.load(open(a.read, encoding="utf-8"))["runs"]
-    rows = build(read)
+    rows = build(read, json.load(open(a.sides, encoding="utf-8")), json.load(open(a.sections, encoding="utf-8")))
     for r in rows:
         R.refuse_zero(r["value_m3"])
     summ = summarise(rows)
