@@ -687,3 +687,72 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 10-30 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:37; T-357 READY @ db32aebb / Existing ground DERIVED +-0.00 (printed at all 4 plot corners in 3 sets + elevation / |
 | 10-30 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-357 Gate A PASS MERGED 90135e91 (engine push); light run: RFI citation addendum / T-357 (research, unwired): |
 | 10-30 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:23; board / Since 00:25: T-347, T-356, T-355 r2 (r1 rejected once), T-343 r2 (Gate B: candidate of record V3.0.25, |
+
+## 2026-10-30 04:31 -> 2026-10-31 04:31 UTC (66 runs, 66 SUCCESS, 100 %)
+
+| 10-30 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 04:57; T-351 READY @ cb695ffa (kitchen / laundry / pantry tiled zones, B4-02) / B4-02 adds 0 faces / 0.0000 m2 on Als |
+| 10-30 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:51; none (overlap guard: run session_01E6cPnazw4bAh9U4qdKdMqL active since 2026-10-30T04:51Z) / no check, no merge |
+| 10-30 05:00 | Worker 3 | SUCCESS | STARTED 05:00, final 05:57; T-279 READY (Gate B integration package ARCH_TAKEOFF_V3.0.26 on V3.0.25, agents/task-T-279 @ ba7866d9) / 21 he |
+| 10-30 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 05:30; T-354 READY (agents/task-T-354 @ 227923bb) / B1-05 soil treatment / anti-termite NOT_IN_DRAWN_SCOPE: 31/31 she |
+| 10-30 06:06 | Verifier | SUCCESS | final 06:06 (single line); RFI B citation run; T-351 Gate A PASS MERGED f0bd9f3c; T-354 Gate A PASS MERGED e157c2d1; downgrade records DG |
+| 10-30 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:59; T-360 READY (agents/task-T-360 @ 23bf8c38) / B4-11 facade cladding / stone: 14 sheets/views + DXF searched, 0  |
+| 10-30 06:53 | Verifier | SUCCESS | STARTED 06:53, final 07:52; T-279 Gate B PASS MERGED 88ef8cb8 (engine push): CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.26, not released /  |
+| 10-30 07:02 | Worker 3 | SUCCESS | STARTED 07:02, final 07:17; T-362 READY (agents/task-T-362 @ bc260214) / White AAC mesh strip both supplier families, none chosen (HELD):  |
+| 10-30 07:29 | Worker 1 | SUCCESS | STARTED 07:29, final 07:43; T-358 READY (agents/task-T-358 @ 38f8d3b1) / B1-06 from the printed notes, 31 sheets: excavation SUPPORT TRIGG |
+| 10-30 07:52 | Verifier | SUCCESS | final 07:52 (single line); none (overlap guard: run session_01E6cPnavFGjS8UBcsU2a8gC active since 2026-10-30T06:53Z) / no check, no merge |
+| 10-30 08:25 | Lead | SUCCESS | STARTED 08:25, final 08:27; board / Since 04:25: T-351, T-354 WORKED (Gate A) and T-279 WORKED first pass (Gate B: CANDIDATE OF RECORD V3. |
+| 10-30 08:41 | Worker 2 | SUCCESS | STARTED 08:41, final 08:50; T-367 READY ab9a81d9 / B9-04 masonry joint mortar: 24 black walls / pieces on 11 V3.0.26 MAS.BLOCK part lines, |
+| 10-30 08:50 | Verifier | SUCCESS | STARTED 08:50, final 09:02; T-358 Gate A PASS MERGED 048fdd70; T-362 Gate A PASS MERGED 8bd595ac (engine push @ 8bd595ac); T-360 Gate A RE |
+| 10-30 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 10:33; T-318 READY (integration package, Gate B; agents/task-T-318 @ 19c5ef1f, ARCH_TAKEOFF_V3.0.27) / slab bar ends  |
+| 10-30 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 09:35; T-365 READY (agents/task-T-365 @ 3c337085) / B13-05 joints: 31 sheets + both DXF censuses print 0 movement / e |
+| 10-30 09:52 | Verifier | SUCCESS | STARTED 09:52, final 09:58; T-367 Gate A PASS MERGED 98ced66c; T-365 Gate A PASS MERGED 42d77b1c (engine push @ 42d77b1c) / T-367: own mod |
+| 10-30 10:42 | Worker 2 | SUCCESS | STARTED 10:42, final 10:52; T-360 r2 READY (agents/task-T-360 @ 0c7b6b3b) / Rejection D-T360-1 does not reproduce: all 10 porch-arch block |
+| 10-30 10:51 | Verifier | SUCCESS | STARTED 10:51, final 11:40; T-318 Gate B PASS MERGED 93ab4fff (candidate of record ARCH_TAKEOFF_V3.0.27, NOT RELEASED); T-360 r2 Gate A PA |
+| 10-30 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:20; T-368 READY (agents/task-T-368 @ e5a8cd84) / exposed wall-tile edges (B4-10): 38.95 m.l determinate on 12 tile |
+| 10-30 11:23 | Worker 1 | SUCCESS | STARTED 11:23, final 11:41; T-359 READY (agents/task-T-359 @ 6f27d5fa) / Bar-detail source census, 74 populations, no kg: 0 countable now, |
+| 10-30 11:54 | Verifier | SUCCESS | STARTED 11:54, final 12:04; T-368 REJECTED r1, T-359 REJECTED r1 (no merge) / T-368: own P7757.dxf re-measure agrees 31.65 m.l (1F-07 3, 1 |
+| 10-30 12:29 | Lead | SUCCESS | STARTED 12:29, final 12:38; board / Since 08:25: T-358, T-362, T-365, T-360 r2 WORKED, T-367 PARTIAL (F-T367-1 held -> new T-372 lane I),  |
+| 10-30 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:56; T-368 r2 READY (agents/task-T-368 @ c7a50df4) / Exposed wall-tile edges (B4-10): determinate 31.65 m.l (was 38 |
+| 10-30 12:51 | Verifier | SUCCESS | STARTED 12:51, final 12:52; none (READY 0: Lead 12:40 queue empty; T-368 r2 in progress by Worker 2 on agents/task-T-368 @ 40ad97b6, not h |
+| 10-30 13:00 | Worker 3 | SUCCESS | STARTED 13:00, final 14:19; T-326 READY (integration package, Gate B; agents/task-T-326 @ ff04ac6c) / ARCH_TAKEOFF_V3.0.28 = V3.0.27 + ope |
+| 10-30 13:26 | Worker 1 | SUCCESS | STARTED 13:26, final 13:43; T-359 r2 READY (agents/task-T-359 @ 5f92b222) / bar-detail census r2: 117 detail texts swept by handle / posit |
+| 10-30 13:51 | Verifier | SUCCESS | STARTED 13:51, final 14:01; T-359 r2 Gate A PASS MERGED, T-368 r2 Gate A PASS MERGED (engine push @ 69b60c37, CODEMAP rebuilt by the tool) |
+| 10-30 14:41 | Worker 2 | SUCCESS | STARTED 14:41, final 14:58; T-361 READY (agents/task-T-361 @ 12959ac0) / Fencing / gates B13-04: 1 gate pcs DRAWING-CONFIRMED (sea gate =  |
+| 10-30 14:51 | Verifier | SUCCESS | STARTED 14:51, final 15:38; T-326 Gate B REJECTED r1 (narrow), T-361 Gate A PASS MERGED (engine push @ e8d0bb06) / T-326: own Drive run re |
+| 10-30 15:01 | Worker 3 | SUCCESS | STARTED 15:01, final 15:15; T-366 READY (agents/task-T-366 @ c68d80dc) / Lap-authority census of 27 released-route rebar populations: only |
+| 10-30 15:22 | Worker 1 | SUCCESS | STARTED 15:22, final 15:36; T-371 READY (agents/task-T-371 @ 0ba48e55) / Bar-shape census B11-02: 38 populations x 7 shape attributes, all |
+| 10-30 15:50 | Verifier | SUCCESS | STARTED 15:50, final 15:57; T-366 Gate A PASS MERGED, T-371 Gate A PASS MERGED (engine push @ 8f2b0354, CODEMAP rebuilt by the tool) / Bat |
+| 10-30 16:27 | Lead | SUCCESS | STARTED 16:27, final 16:34; board / Since 12:38: T-359 r2, T-368 r2, T-361, T-366, T-371 WORKED (Gate A, research; no candidate line moved |
+| 10-30 16:40 | Worker 2 | SUCCESS | STARTED 16:40, final 17:41; T-377 READY agents/task-T-377 @ a91f2b63 / Arched-opening audit (W15/W16/W26; W17, A-GF-01, A-1F-01 held): the |
+| 10-30 16:51 | Verifier | SUCCESS | STARTED 16:51, final 16:51; none (READY 0: T-326 r2 / T-373 not handed in, T-377 CLAIMED by worker 2 16:44) / No Gate A / Gate B to check, |
+| 10-30 17:01 | Worker 3 | SUCCESS | STARTED 17:01, final 17:46; T-326 r2 READY (integration package, Gate B; agents/task-T-326 @ 54bddbe1) / Arched windows W15 / W16 / W26 ou |
+| 10-30 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 18:17; T-373 READY (agents/task-T-373 @ 1d36aebf) / on the reproduced V3.0.27 (json f7972540; V3.0.26 = record 895998 |
+| 10-30 17:52 | Verifier | SUCCESS | STARTED 17:52, final 18:26; T-326 r2 Gate B PASS MERGED (ca171c67), T-377 Gate A PASS MERGED (30e7ab2a; engine push @ 30e7ab2a, CODEMAP co |
+| 10-30 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 19:32; T-369 READY (agents/task-T-369 11a74397) / B8-04 shower floor and tanking: 6 showers on Alsenan (3 trays GF-16 |
+| 10-30 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:51; none (overlap guard: run session_01E6cPncCkETjVF3M7iAkmSo active since 18:51Z) / no check, no merge, no quanti |
+| 10-30 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 20:08; T-370 READY (agents/task-T-370 @ fd4c4652) / Alsenan sanitary count, two sources reconciled: WC 12, basin 17 ( |
+| 10-30 19:22 | Worker 1 | SUCCESS | STARTED 19:22, final 19:35; T-374 READY (agents/task-T-374 @ b7540d48) / straight-bar BBS: 442 lines bound, 205 scheduled on 179 marks; ne |
+| 10-30 19:58 | Verifier | SUCCESS | final 19:58 (single line); T-373 Gate A PASS MERGED (engine push @ db5a8dff, CODEMAP conflict rebuilt by the tool) / Own Drive run reprod |
+| 10-30 20:13 | Lead | SUCCESS | STARTED 20:13, final 20:22; board / Since 16:30: T-326 r2 WORKED (Gate B PASS, candidate of record V3.0.28, ARCH.WINDOW_REVEAL 12.6364 ->  |
+| 10-30 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:45; T-379 READY agents/task-T-379 @ 58f5c471 / Gate fix: tools/label_census_v2.py declared CHECK_ONLY (read-only l |
+| 10-30 20:51 | Verifier | SUCCESS | STARTED 20:51, final 21:50; none (overlap guard: run session_01E6cPnb8xVz3Ede8xjLt3pu active since 20:51Z) / no check, no merge, no quanti |
+| 10-30 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 22:10; T-327 READY (integration package, Gate B, ARCH_TAKEOFF_V3.0.29 on V3.0.28, branch agents/task-T-327 760a848e)  |
+| 10-30 21:22 | Worker 1 | SUCCESS | STARTED 21:22, final 21:32; T-378 READY (agents/task-T-378 f07ad5a5) / 22 note-9 stair DEVELOPMENT lines read bar by bar on ST p.16: none  |
+| 10-30 22:01 | Verifier | SUCCESS | final 22:01 (single line); T-379 MERGED 55da4715; DGP-T373-LAP ISSUED; T-370 MERGED d7619aca; T-369 MERGED 6b9ce820; T-374 REJECTED / T-3 |
+| 10-30 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 22:54; T-380 READY (agents/task-T-380 @ e444cbfe) / B12-02 drainage source census, Alsenan: COUNTABLE MH 1, GCO 2, CO |
+| 10-30 22:51 | Verifier | SUCCESS | STARTED 22:51, final 23:39; T-327 Gate B PASS MERGED 3f8c7d03 (candidate of record ARCH_TAKEOFF_V3.0.29, NOT RELEASED); T-378 Gate A PASS  |
+| 10-30 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:13; T-375 READY (Gate A, agents/task-T-375 @ 11415fec) / Frozen continuous_beams._with_laps splice count ceil(L/S) |
+| 10-30 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 23:34; T-376 READY (agents/task-T-376 @ 4c1895f0) / 16 designer RFI rows, one per fact, for the T-366 / T-371 rebar s |
+| 10-30 23:52 | Verifier | SUCCESS | STARTED 23:52, final 00:00; T-375 Gate A PASS MERGED 7405e3a6; T-376 Gate A PASS MERGED 748e0875; T-380 Gate A PASS MERGED 801d3226 (engin |
+| 10-31 00:20 | Lead | SUCCESS | STARTED 00:20, final 00:25; board / Since 20:20: T-327 WORKED (Gate B PASS, candidate of record V3.0.29, FIN.MARBLE.THRESHOLD 1.340 -> 1.8 |
+| 10-31 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 01:22; T-384 READY (agents/task-T-384 @ d8802773) / Privacy fix: the T-380 shower-row rate removed from 2 files (qty  |
+| 10-31 00:50 | Verifier | SUCCESS | STARTED 00:50, final 01:10; T-384 Gate A PASS MERGED 0e8a1424 (engine push @ 0e8a1424) / T-384: freelancer-attributed shower rate gone fro |
+| 10-31 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:16; T-199 READY integration package ARCH_TAKEOFF_V3.0.30 (agents/task-T-199 ef92923c) / formwork + railings / shut |
+| 10-31 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:27; T-374 r2 READY @ 168b36c8 / Footing mesh: 38 lines of DG-a97ec2ea66e02194 now HELD_DOWNGRADE (874.862227 kg au |
+| 10-31 01:52 | Verifier | SUCCESS | STARTED 01:52, final 01:55; T-374 r2 Gate A PASS MERGED 5a66d8d0 (engine push @ 5a66d8d0) / T-374 r2: own join to all 20 downgrade records |
+| 10-31 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 02:49; T-381 READY (agents/task-T-381 @ cf6887f5) / 7 lane A designer RFI rows bound to merged ledgers: NEW B-A14 (ki |
+| 10-31 02:50 | Verifier | SUCCESS | STARTED 02:50, final 03:00; T-199 Gate B REJECTED r1 (narrow; not merged, candidate of record stays V3.0.29) / T-199: own run on ef92923c: |
+| 10-31 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:47; T-199 r2 READY integration package ARCH_TAKEOFF_V3.0.30 (agents/task-T-199 @ 7c1da203) / Registry fix only, no |
+| 10-31 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 04:16; T-385 READY (agents/task-T-385 @ f3e26422) / concrete V3.0.29 vs freelancer reconciled family by family: 525 S |
+| 10-31 03:50 | Verifier | SUCCESS | STARTED 03:50, final 04:05; T-381 Gate A PASS MERGED b25b77b2 (engine push); T-199 r2 Gate B REJECTED (narrow, not merged; candidate of re |
+| 10-31 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:35; board / Since 00:25: T-384, T-374 r2, T-381 WORKED (merged); T-199 PARTIAL (Gate B REJECTED r1 + r2 on item-co |
