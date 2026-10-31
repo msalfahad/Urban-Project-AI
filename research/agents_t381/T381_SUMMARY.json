@@ -1,0 +1,24 @@
+{
+  "added_to": [
+    "RFI-B-A02",
+    "RFI-B-A04",
+    "RFI-B-A10",
+    "RFI-B-A12"
+  ],
+  "candidate_lines_changed": 0,
+  "method": "DESIGNER_RFI_ROWS_LANE_A_V1",
+  "new": [
+    "RFI-B-A14"
+  ],
+  "not_filed": [
+    "UNK-GF-01 waterproofing",
+    "W17 head above the beam soffit",
+    "W17 window m2",
+    "shower tanking height",
+    "A-GF-01 / A-1F-01 as new questions",
+    "P-GF-01 / P-1F-01 heads"
+  ],
+  "quantities_computed": 0,
+  "rows": 7,
+  "sent": false
+}
