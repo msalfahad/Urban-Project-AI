@@ -32,6 +32,12 @@ distributed over every face they cross (R-CEIL-R3-1), dome discs from the drawn 
 geometry measured from the drawing); the bulkhead drawing-derived candidate (ceiling 0.15 under the soffit, D-40) stays
 HELD in each line's record, never a total.
 
+Cross-trade check on the V3.0.31 lines (Lead 12:30: no surface twice): the only ceiling / soffit / dome lines are the
+36 FIN.CEILING lines, 28 STR.FORMWORK soffit-form faces (all BLOCKED blank; forms are a structure layer, never a
+finish), the dome / beam concrete lines and the 4 x 4 FIN.ROOF.* lines (roof TOP surfaces); no FIN.PLASTER / FIN.PAINT
+line has a ceiling element (T-335: wall lines stop at the decor underside). So no finish layer of a soffit, a dome or a
+stair underside existed before V3.0.32, and V3.0.32 adds each once (guard check_ceilings).
+
 ## 2. Result in engineering terms (development villa, own run)
 
 | Quantity (m2) | V2.9 released | V3.0.31 | **V3.0.32** | Freelancer (workbook, quantity only) |
