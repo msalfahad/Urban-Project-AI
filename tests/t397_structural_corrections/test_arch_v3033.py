@@ -13,6 +13,8 @@ Villa V397, by hand (every value an own hand figure; nothing from the developmen
   C2  column schedule 20 x 60 x 3.00 = 0.360 (line), drawn 250 x 600 mm x 3.00 = 0.450 -> range 0.360 .. 0.450
   LP  lift pit walls: outer 2.00 x 2.00 - inner 1.60 x 1.60 = 1.44 m2 gross - 4 column pieces 0.40 = 1.04 m2 net;
       depth not printed -> NEW line HELD BLANK, 1.04 m2 beside
+  F   formwork (V3.0.30 records): C1 sides 0.096 m2 PROVISIONAL beside C1 -> HELD BLANK with C1 (0.096 beside);
+      B1 soffit 1.20 m2 PROVISIONAL beside B1 -> unchanged (B1 stays valued)
   S   suspended slab 10.000 m3 SOURCE_DERIVED and a FIN.PAINT line 30.000 m2: unchanged
   valued concrete 0.7182 + 0.299 + 0.375 + 0.360 + 10.000 = 11.7522 -> 0.720 + 0.300 + 10.000 = 11.020 m3;
   ranges 0.660 .. 0.825 (C1 + C2); GS held 0 .. 2.10; lift pit BLANK.
@@ -47,13 +49,28 @@ SRC = [{"task": "T-391", "file": "research/v397/gs.json", "sha256": "1" * 64, "m
 
 def _line(code, eid, ev, net=None, floor="GF", unit="m3", br=None):
     kw = {"rfi": {"question": "held"}} if ev == "BLOCKED_RFI" else {}
+    if code not in BL.ITEMS:
+        kw.update(item_en="Formwork", item_ar="شدة", trade="CONCRETE", subtrade="FORMWORK")
     return BL.make_line(project_id=PID, revision_set_sha256=REV, item_code=code, unit=unit, evidence_state=ev,
                         measured_net=net, element_id=eid, floor=floor, physical_element=eid, gross=net,
                         bounded_range=br, formula=f"{eid} {net}", documents=DOCS, rule_id="R", rule_version="1",
                         notes="v397", **kw)
 
 
+def _fw(code_line, eid, m2, face):
+    ln = _line("STR.FORMWORK", eid, "PROVISIONAL", m2, unit="m2")
+    ln["calculation"]["inputs"]["formwork_metalwork_v3030"] = {
+        "policy": "FORMWORK_FILL_V1", "concrete_line": code_line, "m2": m2, "face_ids": [face], "status": "CALCULATED"}
+    return BL.validate(ln)
+
+
 def lines_3032():
+    base = _base()
+    return base + [_fw(base[3]["line_id"], "FW:C1", 0.096, "F-1.C1.EDGE_BAND"),
+                   _fw(base[1]["line_id"], "FW:B1", 1.2, "F-2.B1.BEAM_SOFFIT")]
+
+
+def _base():
     return [_line("STR.CONC.GROUND_SLAB", "GS:CELL-A", "BOUNDED_EXPOSURE", floor="GROUND",
                   br={"low": 2.4, "high": 2.4, "basis": "unresolved cell"}),
             _line("STR.CONC.BEAM", "B1", "PROVISIONAL", 0.7182),
@@ -125,8 +142,9 @@ def test_hand_totals():
     assert _valued(out) == 11.02
     c = ident["corrections"]
     assert (c["range_low_m3"], c["range_high_m3"]) == (0.66, 0.825)
-    assert c["by_action"] == {"CONFLICT_RANGE": 2, "GAP_RESTORE": 2, "HELD_BOUND": 1, "MISSING_HELD": 1}
-    assert ident["replaced"] == 5 and ident["added"] == 1 and ident["outside_rows"] == 2
+    assert c["by_action"] == {"CONFLICT_RANGE": 2, "DEPENDENT_HELD": 1, "GAP_RESTORE": 2, "HELD_BOUND": 1,
+                              "MISSING_HELD": 1}
+    assert ident["replaced"] == 6 and ident["added"] == 1 and ident["outside_rows"] == 3
 
 
 def test_held_bound_is_a_range_never_a_value():
@@ -176,9 +194,9 @@ def test_outside_lines_byte_identical_and_totals_move_only_in_named_codes(tmp_pa
             assert A30.line_sha(x) == A30.line_sha(old[x["line_id"]])
     t0, t1 = A304.code_totals(lines), A304.code_totals(out)
     moved = {k.split("|")[0] for k in set(t0) | set(t1) if t0.get(k) != t1.get(k)}
-    assert moved <= {"STR.CONC.GROUND_SLAB", "STR.CONC.BEAM", "STR.CONC.COLUMN", "STR.CONC.LIFT"}
+    assert moved <= {"STR.CONC.GROUND_SLAB", "STR.CONC.BEAM", "STR.CONC.COLUMN", "STR.CONC.LIFT", "STR.FORMWORK"}
     d = (tmp_path / "V3_0_33_DIFF.csv").read_text(encoding="utf-8")
-    assert d.count("ADDED") == 1 and d.count(",SAME,") == 2 and d.count(",CHANGED,") == 5
+    assert d.count("ADDED") == 1 and d.count(",SAME,") == 3 and d.count(",CHANGED,") == 6
     assert led["integration_package"] is True and "V3_0_33_INTEGRATION_LEDGER.csv" in names
 
 
@@ -291,6 +309,24 @@ def test_valued_conflict_line_refused_by_guard():
     c1 = next(x for x in bad if x["location"]["element_id"] == "C1")
     c1.update(evidence_state="PROVISIONAL", measured_net=0.3375, bounded_range=None)
     with pytest.raises(ValueError, match="carries a value"):
+        A.check_corrections(bad)
+
+
+def test_dependent_formwork_held_with_its_conflict_column():
+    lines, ch, log, out, ident = run()
+    fw, fb = _by(out)["FW:C1"], _by(out)["FW:B1"]
+    assert fw["evidence_state"] == "BLOCKED_RFI" and fw["measured_net"] is None and "0.096" in fw["rfi"]["question"]
+    assert fb["evidence_state"] == "PROVISIONAL" and fb["measured_net"] == 1.2
+    assert log["m3_moved"]["formwork_m2_to_held"] == 0.096
+
+
+def test_dependent_beside_valued_concrete_refused_by_guard():
+    lines, ch, log, out, ident = run()
+    bad = copy.deepcopy(out)
+    c1 = next(x for x in bad if x["location"]["element_id"] == "C1")
+    c1.update(evidence_state="PROVISIONAL", measured_net=0.375, bounded_range=None)
+    c1["calculation"]["inputs"].pop(A.REC_KEY)
+    with pytest.raises(ValueError, match="beside a valued concrete line"):
         A.check_corrections(bad)
 
 

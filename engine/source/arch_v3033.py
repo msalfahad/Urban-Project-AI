@@ -13,6 +13,10 @@ verified reconciliations proposed for lane I, applied line id by line id:
                   value, never one end), with the designer item named.
   MISSING_HELD    an element the drawings show that no candidate line carried (T-394 P2: the lift pit walls): a NEW
                   line, HELD BLANK (never 0), its drawing-confirmed plan figure beside, what holds it named.
+  DEPENDENT_HELD  derived, never an input: a valued formwork line (V3.0.30) whose own concrete line a row above takes
+                  from a value to a range or a hold becomes HELD BLANK, its figure beside (WORKFLOW_CONTROLS s.1: a
+                  quantity depending on a held line is held; the V3.0.30 guard keeps valued formwork only beside a
+                  live concrete line of its own state).
 
 Every value comes from the inputs (each a Checker-merged ledger pinned by sha256); this module types none. Every line
 outside the rows is byte-identical to V3.0.32; inside a row only quantity, state, range, rfi, calculation and notes
@@ -24,7 +28,8 @@ R-T397-1 (every villa): a lane I correction moves only the line id it binds, and
 the candidate exactly as the verified ledger read it (item, element, state, figure: a stale binding stops); a held
 bound is a range [0, the element's own pieces], never a value; a printed-vs-drawn conflict is the range of the two
 readings with the candidate's figure at one end (else stop); a GAP restore never moves a line by more than the named
-cause (else stop); a missing element is a HELD BLANK line with its plan beside, never 0 and never a guessed depth.
+cause (else stop); a missing element is a HELD BLANK line with its plan beside, never 0 and never a guessed depth;
+a valued formwork line whose concrete line leaves the valued states is held with it (blank, figure beside).
 """
 
 from __future__ import annotations
@@ -57,7 +62,9 @@ RULE_ID, RULE_VERSION = "R-T397-1", "T-397"
 PIECE = "STRUCTURAL_CORRECTIONS"
 REC_KEY = "structural_corrections_v3033"
 ACTIONS = ("HELD_BOUND", "GAP_RESTORE", "CONFLICT_RANGE", "MISSING_HELD")
+DEPENDENT = "DEPENDENT_HELD"
 CONCRETE = ("STR.CONC.GROUND_SLAB", "STR.CONC.BEAM", "STR.CONC.COLUMN", "STR.CONC.LIFT")
+FORMWORK = (A3030.FW_CODE, A3030.FW_STAIR_CODE)
 HELD_STATES = ("BLOCKED_RFI", "BOUNDED_EXPOSURE")
 VALUED_STATES = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")
 TOL = 1e-6
@@ -378,8 +385,44 @@ def changes_for(doc, l3032):
                                     evidence_status=r["evidence_status"], codes=[PIECE, act],
                                     group=after["item_code"]))
         log["lines_restated"] += 1
+    changes += _dependent(l3032, changes, log)
     log["by_action"] = dict(sorted(log["by_action"].items()))
     return changes, log
+
+
+def _dependent(l3032, changes, log):
+    """DEPENDENT_HELD: every valued V3.0.30 formwork line beside a concrete line that a row takes out of the valued
+    states is held BLANK with it (its figure beside, never 0)."""
+    gone = {c["after"]["line_id"]: c for c in changes if c["action"] == "REPLACE" and
+            c["before"]["evidence_state"] in VALUED_STATES and c["after"]["evidence_state"] not in VALUED_STATES}
+    out = []
+    for b in l3032:
+        fr = ((b.get("calculation") or {}).get("inputs") or {}).get(A3030.REC_KEY) or {}
+        cl = fr.get("concrete_line")
+        if b["item_code"] not in FORMWORK or cl not in gone or b["evidence_state"] not in VALUED_STATES:
+            continue
+        c = gone[cl]
+        crec = c["after"]["calculation"]["inputs"][REC_KEY]
+        q = (f"HELD (blank in the BOQ, never 0): {b['item_code']} beside {cl}: its concrete line is now "
+             f"{c['after']['evidence_state']} ({crec['action']}: {crec.get('designer_item') or crec.get('cause')}); "
+             f"the formed faces' {_fmt(b['measured_net'])} {b['unit']} beside, released with the concrete line")
+        rec = dict(_rec([], action=DEPENDENT, evidence_status="HELD", before=A3018._before_rec(b), concrete_line=cl,
+                        beside=b["measured_net"], beside_unit=b["unit"], cause=f"concrete line {crec['action']}"),
+                   tasks=crec["tasks"], ledgers=crec["ledgers"], ledger_sha256=crec["ledger_sha256"],
+                   merge_commits=crec["merge_commits"], checker_runs=crec["checker_runs"])
+        after = _restate(b, evidence_state="BLOCKED_RFI", measured_net=None, gross=None, bounded_range=None,
+                         rfi={"question": q[:900], "unlocks": (b.get("location") or {}).get("element_id")},
+                         formula=q, rec=rec, note=f"{METHOD}: held with its concrete line {cl}; blank, never 0")
+        out.append(A305._change(PIECE, "REPLACE", b, after, drawing_reference=c.get("drawing_reference"),
+                                held=[{"what": f"{b['item_code']} {b['line_id']}", "why": q[:300], "range": None,
+                                       "scenario": None}],
+                                downstream=[], verification=c.get("verification"), evidence_status="HELD",
+                                codes=[PIECE, DEPENDENT], group=b["item_code"]))
+        log["by_action"][DEPENDENT] = log["by_action"].get(DEPENDENT, 0) + 1
+        log["lines_restated"] += 1
+        log["m3_moved"].setdefault("formwork_m2_to_held", 0.0)
+        log["m3_moved"]["formwork_m2_to_held"] = _r(log["m3_moved"]["formwork_m2_to_held"] + b["measured_net"])
+    return out
 
 
 def _new_held(tmpl, r, q, rec):
@@ -406,11 +449,22 @@ def check_corrections(lines):
     MISSING_HELD lines carry no value (held is BLANK, a range is a range); a CONFLICT range has the two readings as
     its ends; a GAP restore is valued. -> summary."""
     out = {"by_action": {}, "valued_m3": 0.0, "range_low_m3": 0.0, "range_high_m3": 0.0, "blank": 0}
+    by = {ln["line_id"]: ln for ln in lines}
     for ln in lines:
         rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY)
         if not rec:
             continue
         act = rec["action"]
+        if act == DEPENDENT:
+            if ln["item_code"] not in FORMWORK or ln["evidence_state"] != "BLOCKED_RFI" or \
+                    ln.get("measured_net") is not None or ln.get("bounded_range"):
+                raise ValueError(f"{METHOD}: dependent line {ln['line_id']} is not a HELD BLANK formwork line")
+            c = by.get(rec["concrete_line"])
+            if c is None or c["evidence_state"] in VALUED_STATES:
+                raise ValueError(f"{METHOD}: dependent line {ln['line_id']} held beside a valued concrete line")
+            out["by_action"][act] = out["by_action"].get(act, 0) + 1
+            out["blank"] += 1
+            continue
         if ln["item_code"] not in CONCRETE or ln["unit"] != "m3":
             raise ValueError(f"{METHOD}: {ln['line_id']} {ln['item_code']} {ln['unit']} is not structural concrete")
         out["by_action"][act] = out["by_action"].get(act, 0) + 1
@@ -449,8 +503,10 @@ def integrate(l3032, changes, for_lead=()):
             raise ValueError(f"{METHOD}: piece {c['piece']} (this version only carries the structural corrections)")
         if c["action"] == "REPLACE":
             lid = c["before"]["line_id"]
+            dep = (c.get("codes") or [None, None])[-1] == DEPENDENT
             if lid in rep or lid not in sid or c["after"]["line_id"] != lid or \
-                    c["after"]["item_code"] != c["before"]["item_code"] or c["after"]["item_code"] not in CONCRETE:
+                    c["after"]["item_code"] != c["before"]["item_code"] or \
+                    c["after"]["item_code"] not in (FORMWORK if dep else CONCRETE):
                 raise ValueError(f"{METHOD}: line {lid}: changed twice, not in V3.0.32, its id / item changed or not "
                                  f"structural concrete")
             rep[lid] = c["after"]
@@ -585,6 +641,7 @@ def write(out, l3032, changes, log, doc, released_lines=None, for_lead=()):
     moved = {k: {"v3_0_32": t32.get(k), "v3_0_33": t33.get(k)} for k in sorted(set(t32) | set(t33))
              if t32.get(k) != t33.get(k)}
     named = {r.get("item_code") or (r.get("expect") or {}).get("item_code") for r in (doc or {}).get("_rows") or ()}
+    named |= {c["after"]["item_code"] for c in changes if (c.get("codes") or [None])[-1] == DEPENDENT}
     if any(k.split("|")[0] not in named for k in moved):
         raise ValueError(f"{METHOD}: totals moved outside the structural codes the rows name: {sorted(moved)[:5]}")
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
