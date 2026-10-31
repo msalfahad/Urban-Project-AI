@@ -46,19 +46,19 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
-- LIFT PIT AND SHAFT (Lead 2026-10-31 16:30; T-394 MERGED e27c5d78, T-391 MERGED c3fe8ec8): pit walls = owner trade
+- LIFT PIT AND SHAFT (Lead 2026-10-31 16:20; T-394 MERGED e27c5d78, T-391 MERGED c3fe8ec8): pit walls = owner trade
   STRUCTURE (new line CONC.LIFT_PIT_WALL, plan ring 2.20^2 - 1.80^2 = 1.600 m2 less the four column bonds 0.500 = 1.100 m2
   DRAWING-CONFIRMED by the Checker, depth HELD D-43) -> T-397; the four lift columns stay COLUMN lines (never also in the
   ring); the shaft 1.80 x 1.80 is NOT ground slab (T-391 F1 -> T-397); pit membrane / board / screed = owner trade
   WATERPROOFING (T-353), never a concrete line; pit base, shaft walls above the pit and the overrun slab -> T-401.
-- PLOT BOUNDARY WALL, THREE TRADES ON ONE ELEMENT (Lead 2026-10-31 16:30; T-396 MERGED e129577d, T-361 MERGED): above
+- PLOT BOUNDARY WALL, THREE TRADES ON ONE ELEMENT (Lead 2026-10-31 16:20; T-396 MERGED e129577d, T-361 MERGED): above
   N.G. blockwork = BOUNDARY WORKS (plane 36.970 m x 2.65 = 97.9705 m2 DRAWING-CONFIRMED; block net / type HELD Q-65 C)
   -> T-400; below N.G. (footing / G.B / masonry to the founding level, ST p.14 TYPICAL BOUNDARY WALL) = owner trade
   STRUCTURE for concrete, BOUNDARY WORKS for masonry, both measured in T-403 from the one section; face finishes
   (plaster / paint / coping / below-N.G. coating) = FINISHES, T-404, carried on the T-396 faces, never on the house
   facade ledger (T-305 / T-314). Sea gate G-02 = door D-GF-15, counted once in the opening census (T-361); street gate
   G-01 leaf HELD. The pool back 3.50 m stays POOL WALL (ruling below).
-- KITCHEN / LAUNDRY / PANTRY TILE ZONES (Lead 2026-10-31 16:30; T-351 MERGED f0bd9f3c): owner trade WALL TILE (B4-02)
+- KITCHEN / LAUNDRY / PANTRY TILE ZONES (Lead 2026-10-31 16:20; T-351 MERGED f0bd9f3c): owner trade WALL TILE (B4-02)
   for the zone faces; the same face's plaster / paint is reduced by exactly the zone (no face in both); faces already in
   the wet-room wall-tile lines (T-315 r2 / T-331) are never also B4-02 -> T-399.
 

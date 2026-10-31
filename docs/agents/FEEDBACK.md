@@ -45,7 +45,7 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
-## 2026-10-31 16:30 (lead run; covers 12:30 - 16:30)
+## 2026-10-31 16:20 (lead run; covers 12:30 - 16:20)
 
 - T-391 (S, ground slab / ground beams): WORKED (Gate A PASS c3fe8ec8; checker re-measured OWN-001, held-cell panels,
   shaft 3.24 m2, one D 0.95 run). Decision: F1 held-cell range goes into the candidate by T-397 (TODO now).
@@ -189,7 +189,7 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - Missing categories (BOQ_FAMILY_MASTER 1.19.0: 18 NOT_IMPLEMENTED): NEW T-347 earthworks binding + T-350 lines, T-349 spatter dash binding, T-351 kitchen / laundry / pantry tile zones, T-352 stair formwork, T-353 foundation WP lines, T-354 soil treatment evidence.
 - Recurring (unchanged, every code agent): Drive raw binary vs base64-only decode (4 runs since 16:30 worked round by hand); the auto prepare left the venv without pytest once more (Worker 1 19:21, repaired by setup).
 
-## 2026-10-29 16:30 (lead run; covers 12:30 - 16:30)
+## 2026-10-29 16:30 (lead run; covers 12:30 - 16:20)
 
 - T-342 M2 label binding: WORKED (Gate A PASS 14:39; Checker own census 41 labels reproduced; AT19 = pool by position inside the water D; pool is a D not a circle, deck 7.9392 -> 7.1058 m2; M2 MET on rooms and openings for P7757 on this ledger). Decisions: NEW T-343 outdoor floor lines (lane I, after T-338), NEW T-344 census tool v2 (lane A) so the tool stops printing SILENT_OMISSION for bound labels; lessons row ADOPTED (research scope).
 - T-319 parapet RC line family: WORKED (Gate B PASS FIRST TIME 15:45; candidate of record V3.0.23; 4 lines HELD BLANK with bound >= 8.050943 m3; 2F ring 5.415 m2 -> 1.6245 m3 0.000 %; 3,706 lines byte-identical; L4 NEW 0). Decision: T-338 TODO on V3.0.23; F-T311-C2 band and divider CEC / CED placed in the element register.

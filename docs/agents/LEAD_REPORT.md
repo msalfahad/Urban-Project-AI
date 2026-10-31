@@ -1,6 +1,6 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
-## LEAD REPORT 2026-10-31 16:30 UTC
+## LEAD REPORT 2026-10-31 16:20 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
 31 Oct 12:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
@@ -64,7 +64,7 @@ site wall enumerated by component and trade, from T-396). Proposed from READY wo
 length face to face only where the column line carries the joint (never both, never neither)' (T-395); 'one physical
 corner listed once even when two runs meet in it' (T-393).
 
-TEAM HEALTH (12:23 - 16:30): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
+TEAM HEALTH (12:23 - 16:20): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
 incl. one overlap-guard exit at 15:50); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 14:39, Worker 3
 14:59, Checker 15:49, Main 04:31, Dashboard 12:54; Worker 1 from RUN_LOG 15:20 - 15:36). No idle slot. Fault repeated:
 two READY stamps ahead of the clock (Worker 2 15:35 for a run closed 14:55; Worker 3 16:20 for 15:14); rows annotated,
