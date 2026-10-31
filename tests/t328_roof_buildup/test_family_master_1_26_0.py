@@ -62,6 +62,21 @@ def _v30x_literals(extra=None):
     return out
 
 
+# T-284 (1.27.0): a module NEWER than this registry (declared, pending or merged, by a newer registry version on the
+# tree) is judged by that newer registry, which runs the same guards at full strength on it
+# (tests/t284_ceiling_integration/test_family_master_1_27_0.py); 1.26.0 is judged on the code of its own head (the
+# set-aside the 1.25.0 test took for T-328). Without a newer registry nothing is set aside.
+def _newer_modules():
+    me = json.loads(NEW.read_text(encoding="utf-8"))
+    mine = {p.get("module") for p in list(me.get("candidate_packages") or []) + list(me.get("pending_packages") or [])}
+    return {m: v for m, v in FMC.newer_registry_modules(me, ROOT).items() if m not in mine}
+
+
+def _own_head(written):
+    newer = _newer_modules()
+    return {c: p for c, p in written.items() if p not in newer}
+
+
 def test_1_26_0_equals_its_builder_and_copies_1_25_0(docs):
     import build_master_1_26_0 as B
     old, new = docs
@@ -137,10 +152,10 @@ def test_every_written_code_belongs_to_one_family_with_every_v30x_prefix(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert not set(own) & set(apart)
-    written = _written_1_26()
-    assert set(T130._written_codes()) <= set(written)                      # >= the 1.1.0 and the 1.25.0 scans
+    written = _own_head(_written_1_26())
+    assert set(_own_head(T130._written_codes())) <= set(written)           # >= the 1.1.0 and the 1.25.0 scans
     assert T130._unowned_written(new, written) == {}
-    assert T130._not_implemented_hits(new, written) == []
+    assert [b for b in T130._not_implemented_hits(new, written) if b[-1] not in _newer_modules()] == []
     assert {c: own[c] for c in ("FIN.ROOF.SCREED", "FIN.ROOF.INSULATION", "FIN.ROOF.PROTECTION", "FIN.ROOF.FINISH",
                                 "EXT.PAVING.INTERLOCK", "EXT.FLOOR.PORCELAIN", "EXT.FLOOR.OUTDOOR",
                                 "WP.FOUNDATION.FOOTING_MEMBRANE", "MET.RAILING.GUARD", "FIN.RAILING")} == {
@@ -153,7 +168,7 @@ def test_every_written_code_belongs_to_one_family_with_every_v30x_prefix(docs):
 def test_every_literal_of_every_v30x_module_is_owned_or_listed_apart(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
-    lits = _v30x_literals()
+    lits = _own_head(_v30x_literals())
     assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {}
     assert {c.split(".")[0] for c in lits} <= set(SCAN_1_26)               # the scan covers every prefix found
     for c in ("FLOOR.INTERNAL", "FLOOR.OUTDOOR", "WATERPROOFING.FOUNDATION", "EXT.POOL.WATER_FACE"):
@@ -173,9 +188,13 @@ def test_the_moved_families_and_the_new_family(docs):
 
 def test_1_26_0_governs_and_the_1_1_0_era_exempts_its_moves(docs):
     _, new = docs
-    assert T130._governing()["version"] == "1.26.0"
+    gov = T130._governing()
+    # 1.26.0 governs its own head; a newer governing registry must carry every 1.26.0 pending entry unchanged
+    assert gov["version"] == "1.26.0" or (
+        T130._semver(gov["version"]) > T130._semver("1.26.0")
+        and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
-    codes, fams = T130._era_exemptions(old110, new)
+    codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert {"FIN.ROOF.SCREED", "FIN.ROOF.FINISH", "STR.FORMWORK"} <= codes
     assert {"B13-01", "B13-02", "B8-08"} <= fams
 
@@ -183,7 +202,7 @@ def test_1_26_0_governs_and_the_1_1_0_era_exempts_its_moves(docs):
 def test_adverse_a_code_under_an_unscanned_prefix_is_refused(docs):
     _, new = docs
     syn = {"engine/source/arch_v30_synthetic.py": 'X = {"item_code": "XYZ.NEW_PREFIX_CODE"}\n'}
-    lits = _v30x_literals(syn)
+    lits = _own_head(_v30x_literals(syn))
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {
         "XYZ.NEW_PREFIX_CODE": "engine/source/arch_v30_synthetic.py"}
@@ -193,7 +212,7 @@ def test_adverse_a_code_under_an_unscanned_prefix_is_refused(docs):
 def test_adverse_an_ext_or_wp_code_no_family_owns_is_refused(docs):
     _, new = docs
     syn = {"engine/source/synthetic_ext.py": 'A = "EXT.NO_FAMILY_X"\nB = "WP.FOUNDATION.NO_FAMILY_Y"\n'}
-    assert T130._unowned_written(new, _written_1_26(syn)) == {"EXT.NO_FAMILY_X": "engine/source/synthetic_ext.py",
+    assert T130._unowned_written(new, _own_head(_written_1_26(syn))) == {"EXT.NO_FAMILY_X": "engine/source/synthetic_ext.py",
                                                               "WP.FOUNDATION.NO_FAMILY_Y": "engine/source/synthetic_ext.py"}
     assert "EXT.NO_FAMILY_X" not in T130.CODE.findall(syn["engine/source/synthetic_ext.py"])   # 1.1.0 scan misses it
 
@@ -204,7 +223,7 @@ def test_adverse_b13_01_back_to_not_implemented_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B13-01":
             f["capability"], f["name_terms"] = "NOT_IMPLEMENTED", ["roof_build"]
-    hits = T130._not_implemented_hits(bad, _written_1_26())
+    hits = T130._not_implemented_hits(bad, _own_head(_written_1_26()))
     assert ("B13-01", "FIN.ROOF.SCREED", "engine/source/arch_v3031.py") in hits
 
 
@@ -214,4 +233,4 @@ def test_adverse_dropping_the_guard_code_from_b13_08_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B13-08":
             f["item_codes"] = []
-    assert T130._unowned_written(bad, _written_1_26()) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
+    assert T130._unowned_written(bad, _own_head(_written_1_26())) == {"MET.RAILING.GUARD": "engine/source/arch_v3030.py"}
