@@ -16,7 +16,7 @@ through a task and a Checker verdict; nothing is released by an answer alone.
 | P-8 | CONC.STAIR_DOME (m3) | RFI-S24 .. S28, A03, A04, A05 | stair system re-verification by the Checker | ST-03 0.948 unsupported; round stair 2.089 unresolved; dome / drums no value |
 | P-9 | Floor area, internal (m2) | RFI-A06, A07 | the G4 +1.100 m2 is already settled (T-286), integration pending | under-stair 6.124; garden band 1.364; (A08 moved: area 2.970 m2 is in the floor scope with its area VERIFIED since V3.0.14; only the finish is open) |
 
-Lines with NO priority group (no RFI set closes them alone): reinforcement (laps, T-273), blockwork (T-279 integration and
+Lines with NO priority group (no RFI set closes them alone): reinforcement (laps T-273 / T-366; bar shapes T-371; designer items B-S09 (e), B-S10 (e) - (i), B-S21 (d) - (f), B-S29 .. B-S34, Lead 2026-10-31 from T-376), blockwork (T-279 integration and
 held walls), plaster / paint (T-313 / T-314 / T-326, roof datum, supplier door heads), ceilings, soffits, external sills.
 Their designer questions go in B_REMAINING_RFI.md (next Lead run).
 | P-9b | Floor finishes (m2, by finish) | RFI-A08 (use and floor finish of the unlabelled 1F space) | none named | finish material of 2.970 m2 HELD; area not held |

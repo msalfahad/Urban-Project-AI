@@ -18,9 +18,9 @@
 - Missing or conflicting information: riser count, landing levels, curved geometry.
 - Requested: a section (or riser count and landing levels).
 
-## 4. Main stair MS1-L: riser count and landing edge [WORDING CHECK before issue: replace internal ids MS1-L by position / drawing labels]
+## 4. Main stair, GF lower flight (straight part): riser count and landing edge
 
-- Drawing reference: ST p.4 stair linework for MS1-L vs architectural P7757 sheet 03 (GF plan) and sheet 10 (section A-A).
+- Drawing reference: ST p.4 stair linework for the main stair's GF lower flight vs architectural P7757 sheet 03 (GF plan) and sheet 10 (section A-A).
 - Missing or conflicting information: the two disciplines' linework differ on the riser count and the landing edge.
 - Requested: the built riser count and landing edge.
 
@@ -36,9 +36,9 @@
 - Missing or conflicting information: open to the sky or roofed; enclosed or open to outside air; planter (soil) or paved / tiled floor.
 - Requested: the band's built form and floor.
 
-## 7. Space under the round stair ST-02 (GF, F1 / F2) [WORDING CHECK before issue: replace internal ids ST-02 by position / drawing labels]
+## 7. Space under the round reception stair (GF)
 
-- Drawing reference: architectural P7757 sheet 03, GF plan (space under ST-02; ST-02 underside not drawn).
+- Drawing reference: architectural P7757 sheet 03, GF plan (the two floor areas under the round reception stair; the stair underside not drawn).
 - Missing or conflicting information: whether the space under the stair is a finished floor, closed off, or solid.
 - Requested: finished floor / closed / solid.
 
@@ -60,47 +60,47 @@
 - Missing or conflicting information: sill, head and arch rise of 20 windows and 3 arches; door heights and types.
 - Requested: a door and window schedule.
 
-## 11. Main entrance door and the pool-court opening SX-01 [WORDING CHECK before issue: replace internal ids SX-01 by position / drawing labels]
+## 11. Main entrance door and the 4.52 m opening to the pool court
 
-- Drawing reference: P7757 sheet 03 (main door 2.00 x 2.50 double leaf; SX-01 4.521 m with a straight head); the client renders show a single leaf and a round arch over a low wall. (W02 is asked in A, RFI-A01.)
+- Drawing reference: P7757 sheet 03 (main door 2.00 x 2.50 double leaf; the 4.521 m opening to the pool court drawn with a straight head); the client renders show a single leaf and a round arch over a low wall. (Window W02 is asked in item 1.)
 - Missing or conflicting information: 
-- Requested: the built arrangement of the main door and of SX-01.
+- Requested: the built arrangement of the main door and of the pool-court opening.
 
-## 12. Window heads above the beam soffit: W03 and W17 [WORDING CHECK before issue: replace internal ids Checker by position / drawing labels]
+## 12. Window heads above the beam soffit: W03 and W17
 
-- Drawing reference: architectural elevations (sheets 06 .. 09: W03 head +5.30, W17 crown +9.20; the exact sheet to be named before sending, Checker verdict PARTIAL) against beam B8 20 x 75 on ST p.4 (GF roof slab top +5.50, so a soffit at most +4.75) and CB12 25 x 75 on ST p.5.
+- Drawing reference: architectural elevations (sheets 06 .. 09: W03 head +5.30, W17 crown +9.20) [internal, remove before issue: name the exact elevation sheet] against beam B8 20 x 75 on ST p.4 (GF roof slab top +5.50, so a soffit at most +4.75) and CB12 25 x 75 on ST p.5.
 - Missing or conflicting information: the opening head is above the beam soffit drawn on the same line.
 - Requested: a lower head, or the beam moved / upturned.
 
 ## 13. Roof build-up
 
-- Drawing reference: P7757 sheets 10 / 11 (roof levels), the sanitary sheets (1 % falls); no roof section or build-up detail. (The structural slab-top levels are asked in A, RFI-S23.)
+- Drawing reference: P7757 sheets 10 / 11 (roof levels), the sanitary sheets (1 % falls); no roof section or build-up detail. (The structural slab-top levels are asked of the structural engineer.)
 - Missing or conflicting information: the roof build-up (falls screed, insulation, waterproofing, protection) per roof.
 - Requested: the build-up per roof.
 
 ## 14. Under the 1F roof dome openings: ceiling, glazing and partition tops
 
-- Drawing reference: architectural plans / sections vs ST p.5 1F roof slab (dome rings). (The 2F maid-room dome is asked in A, RFI-S28.)
+- Drawing reference: architectural plans / sections vs ST p.5 1F roof slab (dome rings). (The 2F maid-room dome is asked of the structural engineer.)
 - Missing or conflicting information: what closes each opening below (ceiling, glazing or open); the top of the 1F partitions under the openings (10.67 m of wall).
 - Requested: the ceiling / glazing under each opening and the top level of those partitions.
 
 ## 15. Soffits over outside air and the projection bands
 
-- Drawing reference: no plan, section, elevation or detail draws a soffit finish or insulation (porch 19.181, side passage 5.640, pool court 12.834, roof edges 6.791 m2); two wet floors over outside air. (The structural section of the projection bands is asked in A, RFI-S18.)
+- Drawing reference: no plan, section, elevation or detail draws a soffit finish or insulation (porch 19.181, side passage 5.640, pool court 12.834, roof edges 6.791 m2); two wet floors over outside air. (The structural section of the projection bands is asked of the structural engineer.)
 - Missing or conflicting information: 
 - Requested: the soffit finish and build-up per place; insulation / waterproofing under the two wet floors over air.
 
 ## 16. Side passage and six outdoor level changes
 
-- Drawing reference: P7757 sheet 03 (side passage 5.64 m2 without door or glazing; six outdoor openings with a 0.15 m level change, 7.30 m of width, no step, sloped sill or ramp drawn). (The garden band is asked in A, RFI-A06.)
+- Drawing reference: P7757 sheet 03 (side passage 5.64 m2 without door or glazing; six outdoor openings with a 0.15 m level change, 7.30 m of width, no step, sloped sill or ramp drawn). (The garden band is asked in item 6.)
 - Missing or conflicting information: 
 - Requested: the passage's built form and floor; step, sloped sill or ramp at each level change.
 
-## 17. Door D-GF-06 head and opening P-1F-01 head level [WORDING CHECK before issue: replace internal ids D-GF-06, P-1F-01 by position / drawing labels]
+## 17. Head of the GF door to the +1.00 landing and of the 1.30 m opening in the 1F bay
 
-- Drawing reference: P7757 sheet 03 (D-GF-06 drawn rectangular, height not printed; the renders show a round arch); sheet 04 (P-1F-01: no head level on any sheet).
+- Drawing reference: P7757 sheet 03 (the GF door to the +1.00 landing drawn rectangular, height not printed; the renders show a round arch); sheet 04 (the 1.30 m opening in the 1F bay: no head level on any sheet).
 - Missing or conflicting information: 
-- Requested: the head form and levels of D-GF-06; the head level of P-1F-01.
+- Requested: the head form and levels of the GF door to the +1.00 landing; the head level of the 1.30 m opening in the 1F bay.
 
 ## 18. Sea-side boundary element (7.00 m: 6.00 solid + 1.00 gate)
 
@@ -114,9 +114,20 @@
 - Missing or conflicting information: 
 - Requested: issue those sheets or confirm they do not exist; the railing / balustrade / shutter drawings; what the nine squares are.
 
-## 20. External sills and parapet coping [WORDING CHECK before issue: replace internal ids owner by position / drawing labels]
+## 20. External sills and parapet coping
 
-- Drawing reference: architectural plans / elevations / sections draw the sill and coping outlines only; no finishes schedule, specification or owner rule names the material.
+- Drawing reference: architectural plans / elevations / sections draw the sill and coping outlines only; no finishes schedule or specification names the material.
 - Missing or conflicting information: 
-- Requested: material and profile of the external window sills , the external door sills , the 2 floor-level sills over air (0.160 m2) and the parapet top / coping / drip.
+- Requested: material and profile of the external window sills, the external door sills, the 2 floor-level sills over air (0.160 m2) and the parapet top / coping / drip.
 
+## 21. Exterior ground beams: floor build-up and outer ground level (main house and annex)
+
+- Drawing reference: ST p.13 ground-beam sections for exterior walls ("FOLLOW ARCH." from GF slab level to the outer normal ground level); architectural GF plan (sheet 03) and sections A-A / B-B (sheets 10 / 11).
+- Missing or conflicting information: the structural sections take the exterior beam depth from the architectural drawings, which print no GF floor build-up and no outer ground level along the exterior walls of the main house and the annex.
+- Requested: the GF finished floor level and floor build-up, and the outer finished ground level along the exterior walls (main house and annex). (The beam depth itself is asked of the structural engineer.)
+
+## 22. Roof levels: finished or structural (annex +4.30, GF terraces +5.50, 1F roofs +9.70, main roof +13.90)
+
+- Drawing reference: architectural sheet 04, 1F plan (ROOF +4.30 annex, +5.50 at the terraces); sheet 10, section A-A (+13.90 main roof, +9.70 1F roof, +5.50 below); sheet 11, section B-B (+4.30 on the annex roof).
+- Missing or conflicting information: whether each printed roof level is the finished roof level or the structural slab top; the roof build-up thickness that separates the two is not drawn (see item 13).
+- Requested: for each roof, whether the printed level is finished or structural, and the finished roof level. (The structural slab-top levels are asked of the structural engineer.)

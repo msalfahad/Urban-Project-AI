@@ -52,7 +52,7 @@
 
 - Drawing reference: ST p.13 ground-beam sections ("FOLLOW ARCH." from GF slab level to outer ground).
 - Missing or conflicting information: the exterior beam depth refers to the architectural drawings, which print no floor build-up and no outer ground level at the beams.
-- Requested: the depth of the exterior ground beams (main house and annex), or the levels that fix it.
+- Requested: the depth of the exterior ground beams (main house and annex), or the levels that fix it. (The floor build-up and outer ground level are asked of the architect.)
 
 ## 10. Ground beams carrying a concentrated load
 
@@ -136,7 +136,7 @@
 
 - Drawing reference: architectural P7757 sheet 11, section B-B (+4.30 on one undivided band about 0.23 m on the annex roof); sheet 10, section A-A (+13.90 on the main-roof band, +9.70 on the 1F roof, +5.50 below); sheet 04, 1F plan (ROOF +4.30 annex, +5.50 at the terraces, printed at finished levels); sanitary sheets (1 % falls).
 - Missing or conflicting information: whether each printed level is the structural slab top or the finished roof; whether a roof slab steps down from the adjacent floor slab.
-- Requested: the structural slab-top level of each roof.
+- Requested: the structural slab-top level of each roof. (Whether the printed levels are finished levels is asked of the architect.)
 
 ## 24. Main stair ST-01, winder turn MS1-T (GF, top of the west flight)
 
@@ -150,10 +150,10 @@
 - Missing or conflicting information: the level of each half-landing plate and of the turn riser.
 - Requested: the two landing levels (or the riser height at the turn).
 
-## 26. Entrance flight E1 and stair-hall flight D1: waist slab or steps on fill [WORDING CHECK before issue: replace internal ids D1, E1 by position / drawing labels]
+## 26. GF entrance flight and stair-hall flight: waist slab or steps on fill
 
-- Drawing reference: ST p.3 (D1 riser lines 1C4 .. 1C7; E1 riser lines 18A .. 179; no thickness printed); GF slab-on-grade "T=10cm"; ST p.16 typical stair section ("THICK." without a value).
-- Missing or conflicting information: how D1 (+0.30 to +1.00) and E1 (+0.15 to +1.00) are built.
+- Drawing reference: ST p.3 (stair-hall flight riser lines 1C4 .. 1C7; entrance flight riser lines 18A .. 179 (DXF handles); no thickness printed); GF slab-on-grade "T=10cm"; ST p.16 typical stair section ("THICK." without a value).
+- Missing or conflicting information: how the stair-hall flight (+0.30 to +1.00) and the entrance flight (+0.15 to +1.00) are built.
 - Requested: steps cast on fill over the slab-on-grade, or a self-supporting waist slab (and its thickness).
 
 ## 27. Round stair ST-02, curved part RS-C: soffit and thickness
@@ -172,17 +172,17 @@
 
 - Drawing reference: ST p.8 recommendation note 9 (development 70 d tension / 40 d compression; the zone is not stated); ST p.9 footing schedule; ST p.10 SB2 row (the DXF also carries an SB2 insert outside the sheet frames).
 - Missing or conflicting information: the end zone and end shape (hook / leg) of ground-beam and strap bars; the top-bar ends of F8 / F12 / F13 / F14 / FF; which SB2 row governs.
-- Requested: the bar-end detail (or a stated length per end) for these members, and the governing SB2 row.
+- Requested: the bar-end detail (or a stated length per end) for these members, and the governing SB2 row; and in the four ST p.13 ground-beam sections, what the unlabelled X between the side bars of the exterior-wall ground beam and the short verticals from the second bottom layer to the bottom bars are (bars or not; diameter, spacing).
 
 ## 30. Slab top bars over supports, bar-less panels and the tank slab
 
 - Drawing reference: ST p.4 / p.5 / p.6 slab plans, note 2 ("one third of the span", printed in the notes box of p.4, p.5 AND p.6); ST p.15 TYP. SLAB ON BEAMS DETAIL ('.30 L1 OR .30 L2 WHICHEVER LARGER' / '.25 L1'); the tank-slab reinforcement on ST p.6 (2F roof slab, 'WATER TANK PLACE': '7ø14/m (T&B)' and '6ø12/m (T&B)', slab T18).
 - Missing or conflicting information: two printed rules for the top-bar extent; the GF-126 zone is not delimited; 13 panels print no bars; note 2 vs the tank slab's top-and-bottom mesh, both on ST p.6.
-- Requested: which rule governs the top-bar extent; the bars of each unprinted panel (or confirmation that none are required); the tank-slab reinforcement.
+- Requested: which rule governs the top-bar extent; the bars of each unprinted panel (or confirmation that none are required); the tank-slab reinforcement. Also, on ST p.15 TYP. SLAB ON BEAMS DETAIL: the length of the up-turned bottom-bar leg at a non-continuous support ('40 CL.' from the outer face); the length / end level of the top anchor bar's hook-down leg into the edge beam; the shape, length and layer of the corner bars ('Corner Reinforcement') and of the second-bar zone bars; how the ground-slab mesh '5ø10/m E.W. T=10cm' (ST p.3) ends at the ground beams; and the temperature bars of the 16 cm slabs (the p.15 schedule has no 160 mm row).
 
-## 31. Pool floor bar population [WORDING CHECK before issue: replace internal ids Q-26, owner by position / drawing labels]
+## 31. Pool floor bar population
 
-- Drawing reference: ST p.7 pool detail (two zones R1 / R2 with a slope and a step); the owner's flat-floor decision Q-26 A (1.15 m) governs the concrete.
+- Drawing reference: ST p.7 pool detail (two zones R1 / R2 with a slope and a step); the client has instructed that the pool floor is built flat at 1.15 m depth.
 - Missing or conflicting information: which bar population belongs to the flat floor that is built.
 - Requested: the floor and wall reinforcement of the pool as built flat at 1.15 m.
 
@@ -207,8 +207,8 @@
 ## 35. Superstructure beam bar ends, anchorage and link closure
 
 - Drawing reference: ST p.8 note 9 (written for starter bars); ST p.11 / p.12 typical details (0.22 Ln support bars; first link 7.5 cm from the face); no hook or end detail for beam bars or links.
-- Missing or conflicting information: whether note 9 governs beam bar anchorage into supports and laps; the end shape of top / bottom bars at end supports; the link hook type and length.
-- Requested: the anchorage / end detail of beam bars and the link closure detail.
+- Missing or conflicting information: whether note 9 governs beam bar anchorage into supports and laps; the end shape of top / bottom bars at end supports; no bend diameter, hook extension or bar-bending legend is printed (ST p.8 notes 1 - 24); every section draws a closed link with an undimensioned corner tick; the bottom-bar overlap of adjacent continuous-beam spans (ST p.11 / p.12) is drawn, not dimensioned.
+- Requested: the anchorage / end detail of beam bars; the bend (mandrel) diameter and hook / bend extension of every bent bar (links, legs, cranks, spirals, starter feet), or the standard and edition that governs them; the closure (hook angle and extension, or overlap) of each link class (column links incl. necks and joints, ground-beam stirrups, strap links, beam links); the bottom-bar overlap length across interior supports of the continuous beams.
 
 ## 36. Stair beam crank and planted-column extra bars
 
@@ -246,3 +246,38 @@
 - Missing or conflicting information: whether the structure requires a restraint between block walls and the columns they abut, and if so its specification (type, size, spacing).
 - Requested: is a wall-to-column restraint required; if yes, its specification.
 
+## 42. Column head and section change
+
+- Drawing reference: ST p.9 column schedule (size and bars per storey); ST p.15 (no column-head detail).
+- Missing or conflicting information: how the main bars end at the top of each column (roof) and what happens at a section reduction between storeys.
+- Requested: the column-head bar detail and the section-change detail (crank offset, or new bars lapped), or the typical detail governing both.
+
+## 43. Footing boxed bars
+
+- Drawing reference: ST p.9 footing schedule (BOXED column); ST p.13 both TYP. DETAIL OF ISOLATED FOOTING ('Boxed bars': inverted U, legs towards the mesh, marks at the upper corners).
+- Missing or conflicting information: diameter, leg end level and the meaning of the corner marks are not printed.
+- Requested: the three, or a dimensioned boxed-bar detail.
+
+## 44. Starter bars
+
+- Drawing reference: ST p.13 both TYP. DETAIL OF ISOLATED FOOTING; ST p.8 note 9 (starter bars: not less than 70 x dia in tension zones, 40 x dia in compression zones).
+- Missing or conflicting information: the foot is printed 'Min. 30cm' only; the crank offsets in the deeper detail are not dimensioned; the shallower detail (less than 2.5 m) dimensions the projection above the footing top as '40 ø' while note 9 asks at least 70 x dia in tension zones.
+- Requested: the foot length and whether its end is bent up; the crank offsets of the deeper detail; which of '40 ø' and note 9 governs the projection, and which of the two details applies to each footing.
+
+## 45. Lap length and splice zones (columns, ground beams, boundary ground beam, slabs)
+
+- Drawing reference: no sheet prints a lap for these bars (ST p.8 note 9 names starter bars; ST p.15 NOTE 1 names temperature bars only).
+- Missing or conflicting information: lap length and splice zone not stated.
+- Requested: lap length and permitted splice zone for column main bars at storey joints (ST p.9), ground-beam main bars where a run exceeds the stock length (runs up to 18.57 m), the boundary-wall ground beam (ST p.14, run 31.37 m), and slab bottom / top bars and the ground-slab mesh where spliced.
+
+## 46. Twisted-column spiral
+
+- Drawing reference: ST p.15 TYP. DETAIL OF TWISTED COLUMN ('Spiral Stirrups 6ø8/m', circle in plan).
+- Missing or conflicting information: spiral diameter (or cover) and end turns not printed.
+- Requested: the spiral diameter (or its cover) and the end turns / anchorage.
+
+## 47. Bars of the projection bands and the B20 / B23 upstands
+
+- Drawing reference: ST p.4 / p.5 roof slab plans; ST p.10 schedule (no row for these bands).
+- Missing or conflicting information: no reinforcement is printed for the sections asked in item 18.
+- Requested: the bars of each section asked in item 18 (to be answered together with it).

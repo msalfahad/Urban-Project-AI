@@ -22,7 +22,7 @@ Q-77 mesh / sharmat), the question asks only for the designer's drawing informat
 Quantity figures are the held ranges recorded when each item was raised (CLARIFICATIONS 2026-10-24 / 25) unless a newer
 merged task is named; they are for the owner's review of impact and are NOT part of the text sent to a designer.
 
-Count: 26 questions (structural 13 incl. the wall-to-column restraint, document control 1, architect 12) + 2 lift-supplier
+Count: 32 questions (structural 19 incl. the wall-to-column restraint and B-S29 .. S34 added 2026-10-31 from T-376, document control 1, architect 12) + 2 lift-supplier
 items + 1 client item. Sheet numbers not yet confirmed by a merged task are written as drawing names only (the Checker
 adds them in its citation run).
 
@@ -36,6 +36,9 @@ adds them in its citation run).
 - Missing information: the end zone and end shape (hook / leg) of ground-beam and strap bars; the top-bar ends of
   F8 / F12 / F13 / F14 / FF; which SB2 row governs.
 - Requested: the bar-end detail (or a stated length per end) for these members, and the governing SB2 row.
+- (e) In the four ST p.13 ground-beam sections: what are the unlabelled X between the side bars of the exterior-wall
+  ground beam, and the short verticals from the second bottom layer to the bottom bars (bars or not; diameter, spacing)?
+  [Lead 2026-10-31 00:40: T-376 rows applied (Checker Gate A PASS 2026-10-30 23:58, merged 748e0875); ids confirmed.] Internal: 30 lines BLANK, HELD unquantified (T-376 R11).
 - Internal impact (not sent): ground-beam ends 383.00 .. 670.26 kg; straps 76.11 .. 133.20 kg; SB2 127.96 kg; footing top
   layers 2,742.51 .. 2,836.40 kg (footing steel HELD, owner 2026-10-25 13:16). Our counting of drawn bar parts follows
   the owner's option B (2026-10-29 21:22); this asks only what is drawn nowhere.
@@ -50,6 +53,14 @@ adds them in its citation run).
 - Requested: which rule governs the top-bar extent; the bars of each unprinted panel (or confirmation that none are
   required); the tank-slab reinforcement.
 - Internal impact: top over supports 752.73 .. 1,931.52 kg; GF-126 7.89 .. 19.55 kg; 13 panels HELD; tank 28.66 .. 70.61 kg.
+- Added (e) - (i), ST p.15 TYP. SLAB ON BEAMS DETAIL: (e) the length of the up-turned bottom-bar leg at a non-continuous
+  support ('40 CL.' from the outer face); (f) the length / end level of the top anchor bar's hook-down leg, drawn passing
+  below the slab soffit into the edge beam; (g) shape, length and layer of the corner bars ('Corner Reinforcement', e.g.
+  12 ø14 on 1F) and of the second-bar zone bars (the GF-126 zone extent stays as asked above); (h) ST p.3: how the
+  ground-slab mesh '5ø10/m E.W. T=10cm' ends at the ground beams; (i) the temperature bars of the 16 cm slabs (the p.15
+  TEMPERATURE REINFORCEMENT SCHEDULE has no 160 mm row; NOTE 1 already prints their lap, 40 x dia). [Lead 2026-10-31 00:40: T-376 rows applied (Checker Gate A PASS 2026-10-30 23:58, merged 748e0875); ids confirmed.]
+  Internal: (e) 118 lines, drawn straight parts 136.573 .. 150.695 kg, legs HELD; (f) 115 lines, valued top parts
+  429.268 .. 1,089.754 kg, leg HELD; (g) 2 lines BLANK; (h) 24 lines 1,064.240 kg, edge legs HELD; (i) 3 lines BLANK.
 
 ### RFI-B-S11 Pool floor bar population
 - Drawing: ST p.7 pool detail (two zones R1 / R2 with a slope and a step); the owner's flat-floor decision Q-26 A (1.15 m)
@@ -89,9 +100,23 @@ adds them in its citation run).
 ### RFI-B-S21 Superstructure beam bar ends, anchorage and link closure
 - Drawing: ST p.8 note 9 (written for starter bars); ST p.11 / p.12 typical details (0.22 Ln support bars; first link
   7.5 cm from the face); no hook or end detail for beam bars or links.
-- Missing information: whether note 9 governs beam bar anchorage into supports and laps; the end shape of top / bottom
-  bars at end supports; the link hook type and length.
-- Requested: the anchorage / end detail of beam bars and the link closure detail.
+- Missing information: (a) whether note 9 governs beam bar anchorage into supports and laps; (b) the end shape of top /
+  bottom bars at end supports. (The beam-only link hook formerly asked here is now inside (e), widened to every link
+  class, so it is asked once.)
+- Requested: the anchorage / end detail of beam bars, and (d) - (f) below.
+- (d) Which bend (mandrel) diameter and which hook / bend extension apply to the bent bar marks (links, legs, cranks,
+  spirals, starter feet), or which standard and edition governs them? No bend diameter, hook extension or bar-bending
+  legend is printed (ST p.8 notes 1 - 24; DXF texts, only hit 1BA9 '* L=LENGTH OF COLUMN.').
+- (e) How is each link closed (hook angle and extension, or overlap) for column links including the necks and the
+  beam-column joints (ST p.9 DETAILS OF COLUMN REINFORCEMENT, 1BAA '6ø8/m'), ground-beam stirrups and strap links (ST
+  p.13 G.B sections, p.10 SB rows), as for the beam links (ST p.15 slab-on-beams section)? Every section draws a closed
+  link with an undimensioned corner tick.
+- (f) On the continuous beams (ST p.11 / p.12 schedules 206B / 272B / 2035 and their typical span diagram), what is the
+  overlap length of the bottom bars of two adjacent spans across an interior support? The overlap is drawn, not
+  dimensioned.
+- [Lead 2026-10-31 00:40: T-376 rows applied (Checker Gate A PASS 2026-10-30 23:58, merged 748e0875); ids confirmed.] Internal: (d) 1,972 lines, 14,374.406 .. 18,331.921 kg now, the bend governs every bent cutting length
+  (HELD unquantified); (e) 515 lines 3,105.815 .. 3,990.402 kg (perimeter only, hooks HELD); (f) 29 lines
+  239.868 .. 419.769 kg (DG-30f59008.., HELD BLANK in the contractual view). Ranges per question, never added.
 - Internal impact: beam bar ends HELD 1.61 .. 2.82 t (40 d .. 70 d); link hooks unquantified. Only drawn bar parts are
   counted meanwhile (owner option B, 2026-10-29).
 
@@ -103,6 +128,50 @@ adds them in its citation run).
   and the end anchorage of those bars. [Lead 2026-10-30 12:40: corrected per the Checker's verdict: third beam B19; the
   extent IS drawn symbolically; 'EXTRA' is printed only on the twisted-column details.]
 - Internal impact: stair beams HELD_DEFINED 20.25 kg each (plan-length lower bound); planted-column extra unquantified.
+
+### RFI-B-S29 Column head and section change (NEW, T-376 R03)
+- Drawing: ST p.9 column schedule (1B3A; size and bars per storey); ST p.15 (no column-head detail).
+- Missing information: how the main bars end at the top of each column (roof) and what happens at a section reduction
+  between storeys.
+- Requested: the column-head bar detail and the section-change detail (crank offset, or new bars lapped), or the typical
+  detail governing both.
+- Internal impact: 90 lines BLANK, HELD unquantified.
+
+### RFI-B-S30 Footing boxed bars (NEW, T-376 R04; carries the T-171 / T-299 item F-T371-4)
+- Drawing: ST p.9 footing schedule (1C32, BOXED column); ST p.13 both TYP. DETAIL OF ISOLATED FOOTING ('Boxed bars':
+  inverted U, legs towards the mesh, marks at the upper corners).
+- Missing information: diameter, leg end level, the corner marks.
+- Requested: the three, or a dimensioned boxed-bar detail.
+- Internal impact: 20 lines BLANK, HELD unquantified.
+
+### RFI-B-S31 Starter bars (NEW, T-376 R05 / R06)
+- Drawing: ST p.13 both TYP. DETAIL OF ISOLATED FOOTING; ST p.8 note 9 (Arabic, starter bars: not less than 70 x dia in
+  tension zones, 40 x dia in compression zones).
+- Requested: (a) the foot is printed 'Min. 30cm': what is its length, and is its end bent up? (b) What are the crank
+  offsets drawn in the deeper detail (upper G.B more than 2.5 m above)? (c) The shallower detail (less than 2.5 m)
+  dimensions the projection above the footing top as '40 ø', note 9 asks at least 70 x dia in tension zones: which
+  governs, and which of the two details applies to each footing? (Joint dependency: A RFI-S01 founding level.)
+- Internal impact: 28 lines BLANK; (c) CONFLICT F-T366-1 between two printed documents, governs 278.836 .. 487.963 kg
+  (scenario, not in the candidate).
+
+### RFI-B-S32 Lap length and splice zones, members other than beams and planted columns (NEW, T-376 R07)
+- Drawing: none prints a lap for these bars (ST p.8 note 9 names starter bars; ST p.15 NOTE 1 names temperature bars
+  only).
+- Requested: lap length and permitted splice zone for (a) column main bars at storey joints (bar count changes per
+  storey, ST p.9), (b) ground-beam main bars where a run exceeds the stock length (runs to 18.57 m), (c) the
+  boundary-wall ground beam (ST p.14, run 31.37 m), (d) slab bottom / top bars and the ground-slab mesh where spliced.
+- Internal impact: 58 lines 517.818 .. 906.178 kg (note-9 audit range, HELD BLANK under DG-8afa33d5.. / DG-aaabf79a..).
+  Stock length is not asked (owner-approved 12 m, OD-V3-3).
+
+### RFI-B-S33 Twisted-column spiral (NEW, T-376 R09)
+- Drawing: ST p.15 TYP. DETAIL OF TWISTED COLUMN ('Spiral Stirrups 6ø8/m', circle in plan).
+- Requested: spiral diameter (or its cover) and the end turns / anchorage. ('6ø8/m' is read as a rate.)
+- Internal impact: 2 lines BLANK.
+
+### RFI-B-S34 Bars of the projection bands and the B20 / B23 upstands (NEW, T-376 R10; send with A RFI-S18)
+- Drawing: ST p.4 / p.5 roof slab plans; ST p.10 schedule (1E47: no row).
+- Requested: the bars of each section asked in A RFI-S18.
+- Internal impact: 12 lines BLANK.
 
 ## Structural designer: blockwork, slabs and restraint
 
