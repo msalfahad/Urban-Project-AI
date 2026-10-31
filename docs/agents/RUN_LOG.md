@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T13:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-31T12:58Z | Worker 2 | SUCCESS | T-396 READY (agents/task-T-396 @ 7bb3ea8f) | Boundary fence above N.G. (a MISSING category): runs 31.37 / 5.60 (+2.50 gate) / 2.40 (+1.00 gate, pool back 3.50 excluded) / 1.20 m = band 44.07 m (T-253); height 2.65 m PRINTED (p.12 section 265 = 50 + 215, both elevations draw +2.65); wall plane 97.9705 m2 DRAWING-CONFIRMED (north 83.1305 + street 14.840), sea / passage HELD; block net HELD at most the plane (columns M4 0.795 m2 each, lower 0.50 band material 18.485 m2, street dip), type HELD Q-65 C; masonry below N.G. 44.07 m named MISSING, HELD. Freelancer 74.40 vs 97.9705 m2: corner twice +0.40, typed +0.06, height 2.00 vs 2.65 -24.0305, residual 0. Lesson: a boundary wall is enumerated component by component; a held material holds type / count, never geometry. ERS: read, s.2.1 / s.2.4 / s.3 applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-31T12:51Z | Verifier | STARTED | run session_01E6cPnbviNB76qpeDiEEvMxV | repo-attached routine | task state: READY T-391, T-392, T-390 | self-check pending
 - 2026-10-31T12:39Z | Worker 2 | STARTED | run session_01E6cPnb6vTzXk6DkwhSN2Aa | repo-attached routine | task state: none yet | self-check pending
