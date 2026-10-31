@@ -136,8 +136,13 @@ outside the rows, a B4-02-like line present) | PROPOSED |
 - tests/t399_tile_zones: 25 (module) + 9 (registry 1.29.0) pass; t397 (incl. the 1.28.0 stale-drop test, now accepting
   a newer registry that carries the dropped entry unchanged, the 1.26.0 / 1.27.0 pattern), t284, t328, t130, t203, t315,
   t351, t388 pass on the task head.
-- L4 full suite: (result added below).
-- selfcheck PASS (codemap, t061, freeze 0) at run start; freeze and codemap check on the final head: (below).
+- L4 FULL SUITE to the end (tests/ dirs + agents/ in two halves + tests/test_*.py, in parallel) on 23f65569 (code = the
+  final head; later commits add only the report and the maps): 397 FAILED / ERROR vs research/agents_t202/
+  known_failures.json 396: NEW 2 = t374 snapshot-vs-board (pre-existing F-T328-3, also NEW on the T-284 and T-397 Gate B
+  runs) and tests/codemap test_repository_maps_are_current (transient: the report was committed while the suite ran;
+  re-run on the final head: pass); ABSENT 1 (christiannp builder passes), as on T-397.
+- selfcheck PASS (codemap, t061, freeze 0) at run start; final head: freeze 0 differing, codemap stale none, registry
+  1.29.0 --check clean, rules manifest rebuilt by the tool.
 
 ## 9. Not done / uncertain
 
