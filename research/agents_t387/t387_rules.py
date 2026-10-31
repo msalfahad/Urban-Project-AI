@@ -30,6 +30,11 @@ R-T387-4 (stacked members) members stacked in z (neck under column, column under
 R-T387-5 (pairs carried from a merged ledger) a pair proven on a Checker-merged ledger (stair / beam T-192, buried
          components T-347) is carried only while every line the ledger bound is present in the candidate with the
          same figure; a changed or missing line re-opens the pair (RECHECK, never silently OK).
+R-T387-7 (documented sub-tolerance deduction; T-392, Checker T-387 lesson 2026-10-31) a member residual is reconciled
+         to EVERY merged ledger that wrote the line (formula / adjustment field first), not to one ledger; a residual
+         that equals a documented, named deduction or addition (within 1e-6 m3) is reported BY THAT NAME
+         (DOCUMENTED_ADJUSTMENT) even when it is below TOL_M3; labelling such a residual 'rounding' is refused. Only a
+         residual within TOL_M3 that no documented item explains may be called rounding.
 """
 
 from __future__ import annotations
@@ -302,6 +307,34 @@ def stacked_check(lower_top_m, upper_bottom_m, section_m2):
 
 
 # ---------------------------------------------------------------- R-T387-5: carried pairs
+
+DOC_EPS_M3 = 1e-6
+
+
+def classify_residual(residual_m3, documented, label=None):
+    """R-T387-7. documented: [(name, signed m3), ...] from every merged ledger that wrote the line. Returns
+    {'verdict': DOCUMENTED_ADJUSTMENT | OK_ROUNDING | UNEXPLAINED, 'named': [...], 'unexplained_m3': x}.
+    label: a verdict the caller proposes; 'OK_ROUNDING' for a residual a documented item explains is Refused."""
+    if residual_m3 is None:
+        raise Refused("RESIDUAL_MISSING: a HELD member has no residual (never 0)")
+    items = [(str(n), float(v)) for n, v in documented]
+    if any(not n.strip() for n, _ in items):
+        raise Refused("UNNAMED_ADJUSTMENT: a documented adjustment needs its ledger name")
+    total = sum(v for _, v in items)
+    if items and abs(residual_m3 - total) <= DOC_EPS_M3:
+        verdict = "DOCUMENTED_ADJUSTMENT"
+        out = {"verdict": verdict, "named": [n for n, _ in items], "unexplained_m3": residual_m3 - total}
+    elif abs(residual_m3 - total) <= TOL_M3 and not items:
+        out = {"verdict": "OK_ROUNDING", "named": [], "unexplained_m3": residual_m3}
+    else:
+        out = {"verdict": "UNEXPLAINED", "named": [n for n, _ in items], "unexplained_m3": residual_m3 - total}
+    if label is not None and label != out["verdict"]:
+        if label == "OK_ROUNDING" and out["verdict"] == "DOCUMENTED_ADJUSTMENT":
+            raise Refused("DOCUMENTED_NOT_ROUNDING: %s explains %.6f m3; a documented deduction is named, never "
+                          "called rounding" % ("; ".join(out["named"]), residual_m3))
+        raise Refused(f"LABEL_MISMATCH: proposed {label}, the rule gives {out['verdict']}")
+    return out
+
 
 def carried_pair(ledger_lines, candidate_by_id, tol=1e-6):
     """ledger_lines: {line_id: figure the merged ledger bound (None = held there)}. OK only when every line is present

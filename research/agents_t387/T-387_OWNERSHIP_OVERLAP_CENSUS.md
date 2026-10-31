@@ -66,7 +66,7 @@ code (split parts carry their suffix).
 |---|---|---|---|
 | Column / beam / slab / beam-beam, 2F (SH02) | R-T387-3 on the route G plan, billed plan from the line | PASS_HELD (14 held members) | 0.000 |
 | same, 1F (SH04) | " | PASS_HELD; 8 beam groups' residuals = their T-229 adjustments (support cut beside, square ends) 0.2526 m3, unexplained 0.000 | 0.000 |
-| same, GF (SH06) | " | 14 groups = T-229 adjustments 0.1783 m3 net (+0.3322 end / support cuts, -0.1539 column owns); **GAP 0.0014** (BAND0003); **RECHECK 0.8010** (6 groups, below) | see below |
+| same, GF (SH06) | " | as merged: 14 groups = T-229 adjustments 0.1783 m3 net; GAP 0.0014 (BAND0003); RECHECK 0.8010 (6 groups). T-392 re-run: 16 groups ledger-adjusted 0.1992; named GAP 0.005972 + DOUBLE 0.002767 (T-392); ring LOCATED; RECHECK 0.5593 (B26 / B27, T-229 rows; B27 closed by the Checker's own measure) | see below |
 | same, ground (SH08: ground beams, ground slab, necks) | " | PASS_HELD (47 held, necks all HELD) | 0.000 |
 | Arc-edge slab faces vs curved bands (1F 4, GF 4, ground 2) | R-T387-3a | polygon 'overlap' = the chord excess (to 0.001 m2): true overlap 0 | 0.000 |
 | Neck / GF column; GF / 1F / 2F columns | R-T387-4 (line formulas: neck top = GF level +1.00; storey floor to floor) | OK | 0.000 |
@@ -86,12 +86,18 @@ code (split parts carry their suffix).
 |---|---|---|---|---|---|
 | B27 (BAND0048.1 + .2) | 2 | 0.8457 | +0.4046 (vs T-110) | T-229 table row 'GF B27': +0.8487 on the route G pieces (cut at the carried P.C 0.4418, oblique ends square-cut 0.1787 + 0.2282); the drawn edges run on to the C11 / D.C faces | 0.0030 (route G pieces' released figure vs the polygon) |
 | B26 (BAND0047.1 + .2) | 2 | 0.2980 | +0.1798 (vs T-110) | T-229 'GF B26': +0.2975 on the pieces (cut at the P.C 0.1163, T.C end 0.1812) | 0.0005 |
-| B7 ring (BAND0050 .. 0053) | 1 | 0.2182 | none | T-252 r2 RING-B7 0.499805 m3 is the drawn ring between its arcs; route G's arc bands cover 0.3755 of its 0.6664 m2 | 0.2182 open: where the 0.2909 m2 lies is not in route G; the adjoining arc-edge faces lose nothing to it (R-T387-3a) |
-| BAND0021.1, BAND0018, BAND0039 | 3 | 0.0135, 0.0074, 0.0026 | none / none / -0.0600 | probably T-229 oblique ends (B21 x2 listed) / column 359 share | 0.0235 open |
+| B7 ring (BAND0050 .. 0053) | 1 | 0.2182 | none | T-252 r2 RING-B7 0.499805 m3 is the drawn ring between its arcs; route G's arc bands cover 0.3747 of its 0.6664 m2 (0.00075 of their 0.3755 lies outside it) | T-392 LOCATED: west crescent 0.1736, east-north 0.0590, east-south 0.0592 m2 outside the arc bands, no other line in the ring |
+| BAND0021.1, BAND0018, BAND0039 | 3 | 0.0135, 0.0074, 0.0026 | T-252 r2 +0.0136 / +0.0074 (read since T-392) / -0.0600 | T-392: the two T-252 r2 R-BEAM-END-OBLIQUE-2 corrections; CB8: the census gave B27's band overlap 0.00345 m2 to B27 while the line bills its rectangle (own drawing: DOUBLE 0.002767 / GAP 0.003406) | 0.000 open (named) |
 
-GAP 0.001356 m3 (BAND0003, run BM-GF-003): the T-252 r2 run bills 0.526665 m3 = 0.0018 m2 of plan less than its own
-b x L x d 0.2 x 3.5201 x 0.75 = 0.528021 (= its released route G figure and the drawn band), with no documented deduction.
-Proposed UNRESOLVED (0.26 % of the line); a GAP, never netted.
+BAND0003 (run BM-GF-003): the line bills 0.526665 m3 = the T-252 ledger's 0.528 less the **T-146 ring-overlap
+deduction** 0.001335 m3 (its formula field; Checker F-CHK-T387-1: the original text here said 'no documented
+deduction', which was wrong); BAND0006 (0.000353) and BAND0041.2 (0.000878) carry the same T-146 deduction and are not
+rounding. Updated by T-392 (outputs re-run 2026-10-31 on the reproduced candidate 6b5dc44f): R-T387-7 names every merged
+ledger item (formula, T-229 ledger_adds / deducts, T-252 r2 runs), and T-392's own drawing measure turns the three
+T-146 deductions into a named **GAP 0.002566 m3** (the drawn cells hold 0 m2 of the ring: the overlap came from a
+fitted band set), the CB8 end into DOUBLE 0.002767 + GAP 0.003406 (R-T392-2), and locates the ring B7 0.2182 m3
+(LOCATED_EXTENSION, R-T392-4); BAND0018 / BAND0021.1 are the T-252 r2 oblique-end corrections (LEDGER_ADJUSTED).
+See research/agents_t392/T-392_RING_POOL_OWNERSHIP.md.
 
 ## 4. Findings
 

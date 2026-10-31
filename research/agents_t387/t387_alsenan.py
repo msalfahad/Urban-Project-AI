@@ -167,8 +167,10 @@ def level_bands(geom, lines_by_cid, status_by_line, rows_out, col_status, live_b
             src = next(x for x in M if x["id"] == m["id"])
             if m["kind"] != "BEAM" or m["residual_m3"] is None:
                 continue
-            adj, items = _documented_adjustment(src["line_ids"], lines_by_id)
-            m["documented_m3"], m["documented"] = adj, items
+            band_m3 = m["owned_m2"] * m["depth_m"] if m.get("owned_m2") is not None and m.get("depth_m") else None
+            adj, items = _documented_adjustment(src["line_ids"], lines_by_id, band_m3)
+            m["documented_m3"], m["documented"] = adj, [t for t, _ in items]
+            m["documented_items"] = items
             m["unexplained_m3"] = m["residual_m3"] - adj
             if abs(m["unexplained_m3"]) > R.TOL_M3 and m["unexplained_m3"] > 0:
                 g = R._poly(src["polygon"])
@@ -176,7 +178,14 @@ def level_bands(geom, lines_by_cid, status_by_line, rows_out, col_status, live_b
                 m["free_beside_m2"] = free
         for m in res["members"]:
             m["within_tol"] = m["residual_m3"] is not None and abs(m["residual_m3"]) <= R.TOL_M3
-            if m["verdict"] is None and m["within_tol"] and abs(m["residual_m2"]) > R.TOL_M2:
+            if m["verdict"] is None and m.get("documented") and m["residual_m3"] is not None and \
+                    abs(m["unexplained_m3"]) <= R.DOC_EPS_M3 + 1e-6:
+                # R-T387-7 (T-392): a documented item explains it, below TOL_M3 or not: named, never rounding
+                cls = R.classify_residual(round(m["residual_m3"], 6), [(t, v) for t, v in m["documented_items"]])
+                m["verdict"] = "LEDGER_ADJUSTED"
+                m["verdict_note"] = "residual = merged ledger adjustments (R-T387-7 %s): " % cls["verdict"] + \
+                    "; ".join(m["documented"])
+            elif m["verdict"] is None and m["within_tol"] and abs(m["residual_m2"]) > R.TOL_M2:
                 m["verdict"] = "OK_ROUNDING"
             elif m["verdict"] is None and m.get("documented_m3") is not None and m["documented"] and \
                     abs(m["unexplained_m3"]) <= R.TOL_M3:
@@ -190,6 +199,20 @@ def level_bands(geom, lines_by_cid, status_by_line, rows_out, col_status, live_b
                                          f"adjustments {m['documented_m3']:.4f}; unbilled plan beside the band "
                                          f"{m['free_beside_m2']:.4f} m2 can hold it: a drawn extension (no double) or "
                                          f"a double count of at most {m['unexplained_m3']:.4f} m3")
+        # T-392 (MERGED-pending research, committed summary): residuals traced on the drawing to a physical cause
+        # replace the census's own verdict by the named finding (never netted): a documented deduction of an overlap
+        # the drawn cells do not have is a GAP (R-T392-1); a band end across an oblique face is a DOUBLE and a GAP
+        # (R-T392-2); a re-measured member's extension beyond its band set is LOCATED (R-T392-4)
+        named = _t392_findings()
+        res["named_double_m3"], res["named_gap_m3"] = 0.0, 0.0
+        for m in res["members"]:
+            hit = [named[x] for x in (m.get("line_ids") or []) if x in named]
+            if not hit:
+                continue
+            f = hit[0]
+            m["verdict"], m["verdict_note"] = f["verdict"], (m.get("verdict_note") or "") + "; T-392: " + f["note"]
+            res["named_double_m3"] += f.get("double_m3", 0.0)
+            res["named_gap_m3"] += f.get("gap_m3", 0.0)
         live = [m for m in res["members"] if m["verdict"] is None]
         res["recheck_bound_m3"] = sum(m["unexplained_m3"] for m in res["members"] if m["verdict"] == "RECHECK_BOUNDED")
         res["ledger_adjusted_m3"] = sum(m["residual_m3"] for m in res["members"] if m["verdict"] == "LEDGER_ADJUSTED")
@@ -197,7 +220,8 @@ def level_bands(geom, lines_by_cid, status_by_line, rows_out, col_status, live_b
         res["gap_m2"] = -sum(m["residual_m2"] for m in live if m["residual_m2"] < -R.TOL_M2)
         res["double_m3"] = sum(m["residual_m3"] or 0 for m in live if m["residual_m2"] > R.TOL_M2)
         res["gap_m3"] = -sum(m["residual_m3"] or 0 for m in live if m["residual_m2"] < -R.TOL_M2)
-        res["status"] = ("PASS" if res["double_m2"] <= R.TOL_M2 and res["gap_m2"] <= R.TOL_M2 else "FAIL") + \
+        res["status"] = ("PASS" if res["double_m2"] <= R.TOL_M2 and res["gap_m2"] <= R.TOL_M2 and
+                         res["named_double_m3"] <= R.TOL_M3 and res["named_gap_m3"] <= R.TOL_M3 else "FAIL") + \
             ("_HELD" if res["held_members"] or chord or res["recheck_bound_m3"] else "")
         res["unlined_members"] = [(i, k) for i, k, _ in unlined]
         res["not_members"] = not_members
@@ -213,20 +237,81 @@ def _note(ln):
     return n[:160]
 
 
-def _documented_adjustment(line_ids, lines_by_id):
-    """sum of the signed m3 a beam line's merged ledger documents (inputs.info ledger_adds / ledger_deducts; the last
-    signed figure of each ';' item), with the items."""
+T252_LEDGER = Path(__file__).resolve().parents[1] / "agents_t252" / "LEDGER_T252.csv"
+
+
+def _t252_runs():
+    import csv as _csv
+    if not T252_LEDGER.exists():
+        return {}
+    with T252_LEDGER.open(encoding="utf-8") as f:
+        return {r["run"]: r for r in _csv.DictReader(f)}
+
+
+def _documented_adjustment(line_ids, lines_by_id, band_m3=None):
+    """sum of the signed m3 EVERY merged ledger that wrote a beam line documents, with the named items (R-T387-7,
+    T-392 / Checker T-387 lesson): (1) the line's formula field ('<base> m3 measured - 0.001335 (overlap with ...)'),
+    and the ledger base's own rounding against the band figure when below 1e-4 m3 (a 4-dp ledger figure); (2)
+    inputs.info ledger_adds / ledger_deducts (the last signed figure of each ';' item: T-229); (3) a T-252 r2 run
+    ('.r2' in the element id) whose ledger row names its rule in 'basis': run m3 - the released route G figure."""
     import re
     adj, items = 0.0, []
+    runs = None
     for lid in line_ids:
-        info = ((lines_by_id.get(lid) or {}).get("inputs") or {}).get("info") or {}
+        ln = lines_by_id.get(lid) or {}
+        f = str(ln.get("formula") or "")
+        mb = re.match(r"\s*(\d+\.\d+) m3 measured", f)
+        for sign, num, why in re.findall(r"([+-])\s*(\d+\.\d+)\s*\(([^)]*)\)", f[mb.end():] if mb else ""):
+            v = float(num) * (1 if sign == "+" else -1)
+            adj += v
+            items.append((f"formula: {why.strip()[:70]}", v))
+        if mb and band_m3 is not None and len(line_ids) == 1 and 5e-7 < abs(float(mb.group(1)) - band_m3) < 1e-4:
+            v = round(float(mb.group(1)) - band_m3, 6)
+            adj += v
+            items.append(("ledger figure to 4 dp", v))
+        info = (ln.get("inputs") or {}).get("info") or {}
         for k in ("ledger_adds", "ledger_deducts"):
             for it in [i.strip() for i in str(info.get(k) or "").split(";") if i.strip()]:
                 nums = re.findall(r"[+-]\d+\.\d+", it)
                 if nums:
                     adj += float(nums[-1])
-                    items.append(it[:90])
+                    items.append((it[:90], float(nums[-1])))
+        eid = str(ln.get("element_id") or "")
+        if ".r2" in eid and "#" in eid:
+            runs = _t252_runs() if runs is None else runs
+            r = runs.get(eid.split(":")[-1])
+            if r and r.get("basis") and r.get("released_m3") and r.get("m3") and band_m3 is not None and \
+                    abs(float(r["released_m3"]) - band_m3) < 1e-4:   # the r2 run replaced exactly this band's figure
+                v = round(float(r["m3"]) - float(r["released_m3"]), 6)
+                adj += v
+                items.append((f"T-252 r2 {r['basis'].split(':')[0][:40]}", v))
     return adj, items
+
+
+T392_SUMMARY = Path(__file__).resolve().parents[1] / "agents_t392" / "summary_t392.json"
+
+
+def _t392_findings():
+    """line id -> T-392 finding (verdict, note, double / gap m3) from the committed T-392 summary, if present."""
+    if not T392_SUMMARY.exists():
+        return {}
+    s = json.loads(T392_SUMMARY.read_text(encoding="utf-8"))
+    L, out = s["lines"], {}
+    for mem, v in s["B_t146_ring_overlap"]["members"].items():
+        r = v["rule_R_T392_1"]
+        out[L[mem]] = {"verdict": "GAP_NAMED", "gap_m3": r["m3"],
+                       "note": f"R-T392-1 {r['status']} {r['m3']:.6f} m3: {r['name']} removes an overlap the drawn "
+                               f"cells do not have (band in ring {v['band_in_ring_m2']} m2)"}
+    cb8 = s["C_small_residuals"]["members"]["CB8 BAND0039"]
+    e = cb8["rule_R_T392_2"]
+    out[L["CB8 BAND0039"]] = {"verdict": "DOUBLE_AND_GAP_NAMED", "double_m3": e["double_m3"], "gap_m3": e["gap_m3"],
+                              "note": f"R-T392-2 band end across S-BEAM 326: DOUBLE {e['double_m3']:.6f} with B27, GAP "
+                                      f"{e['gap_m3']:.6f} short of the face (never netted)"}
+    a = s["A_ring_B7"]
+    out[L["RING-B7"]] = {"verdict": "LOCATED_EXTENSION",
+                         "note": f"R-T392-4 LOCATED {a['located']['located_m3']:.6f} m3 densified: drawn ring outside "
+                                 f"route G's arc bands, billed once by RING-B7, no other line in the ring"}
+    return out
 
 
 def _pieces(ln, st, bfam):
@@ -406,12 +491,17 @@ def pair_register(L, rows, lb, stk, colov, t347, n347):
         rec = [m for m in res["members"] if m.get("verdict") == "RECHECK_BOUNDED"]
         dbl = [m for m in res["members"] if m.get("verdict") is None and m["residual_m2"] > R.TOL_M2 and not m["within_tol"]]
         gap = [m for m in res["members"] if m.get("verdict") is None and m["residual_m2"] < -R.TOL_M2 and not m["within_tol"]]
+        nmd = [m for m in res["members"] if str(m.get("verdict") or "").endswith("_NAMED")]
+        nd, ng = res.get("named_double_m3", 0.0), res.get("named_gap_m3", 0.0)
         add(f"COLUMN / BEAM / SLAB / BEAM-BEAM ({fl} level band, {sid})", f"{len(M)} members, plan pairs {dict(kinds)}",
             "R-T387-3 on route G plan records; billed plan from the candidate line",
-            "DOUBLE" if dbl else ("GAP" if gap else ("RECHECK" if rec else ("PASS_HELD" if res["held_members"] else "PASS"))),
-            res["double_m3"] if dbl else (res["gap_m3"] if gap else 0.0),
-            [i for m in dbl + gap for i in m["line_ids"]],
-            f"double {res['double_m3']:.6f} m3, gap {res['gap_m3']:.6f} m3; merged-ledger adjustments "
+            "DOUBLE" if dbl else ("GAP" if gap else ("DOUBLE_AND_GAP_NAMED" if nd > R.TOL_M3 and ng > R.TOL_M3 else
+                                                     ("GAP_NAMED" if ng > R.TOL_M3 else ("RECHECK" if rec else (
+                                                         "PASS_HELD" if res["held_members"] else "PASS"))))),
+            res["double_m3"] if dbl else (res["gap_m3"] if gap else (ng if ng > R.TOL_M3 else 0.0)),
+            [i for m in dbl + gap + nmd for i in m["line_ids"]],
+            f"double {res['double_m3']:.6f} m3, gap {res['gap_m3']:.6f} m3; T-392 named double {nd:.6f} / gap "
+            f"{ng:.6f} m3 on {len(nmd)} members (never netted); merged-ledger adjustments "
             f"{res['ledger_adjusted_m3']:.6f} m3 on {len(led)} beam groups (reconciled to 0.001); RECHECK bound "
             f"{res['recheck_bound_m3']:.6f} m3 on {len(rec)} groups; {len(res['held_members'])} held members, "
             f"{len(und)} pairs UNDETERMINED (a held member)")
@@ -421,6 +511,11 @@ def pair_register(L, rows, lb, stk, colov, t347, n347):
         for m in gap:
             add(f"BEAM run / band ({fl})", m["id"], "R-T387-3", "GAP", -m["residual_m3"], m["line_ids"],
                 "the line bills less than its drawn band and documents no deduction")
+        for m in nmd + [m for m in res["members"] if m.get("verdict") == "LOCATED_EXTENSION"]:
+            add(f"BEAM run / drawn cells ({fl})", m["id"], "T-392 R-T392-1 / -2 / -4", m["verdict"],
+                abs(m["residual_m3"]) if m["verdict"] == "GAP_NAMED" else (
+                    m["unexplained_m3"] if m["verdict"] == "LOCATED_EXTENSION" else None),
+                m["line_ids"], m.get("verdict_note", "").split("T-392: ")[-1])
     for x in stk:
         add(x["pair"], "every column chain", "R-T387-4 levels of the line formulas", x["status"],
             0.0 if x["status"] == "OK" else None, [], x["basis"])
@@ -590,6 +685,8 @@ def main(argv=None):
                                  "arc_chord_faces_resolved": res["chord_resolved"],
                                  "ledger_adjusted_m3": round(res["ledger_adjusted_m3"], 6),
                                  "recheck_bounded_m3": round(res["recheck_bound_m3"], 6),
+                                 "t392_named_double_m3": round(res.get("named_double_m3", 0.0), 6),
+                                 "t392_named_gap_m3": round(res.get("named_gap_m3", 0.0), 6),
                                  "held_members": len(res["held_members"]),
                                  "unlined_members": res["unlined_members"],
                                  "not_members_na": len(res["not_members"]),

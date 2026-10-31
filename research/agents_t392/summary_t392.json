@@ -1,0 +1,269 @@
+{
+ "A_ring_B7": {
+  "arc_bands_in_ring_m2": 0.374743,
+  "arc_bands_outside_ring_m2": 0.00075,
+  "census_residual_explained": "census = (0.666407 - 0.375492) x 0.75: its band figure includes the bands' 0.000750 m2 outside the drawn ring; own uncovered plan x 0.75 = located m3",
+  "census_residual_m3": 0.218186,
+  "drawn_m2_densified": 0.666531,
+  "drawn_m2_exact_T252": 0.666406,
+  "line_m3": 0.499805,
+  "line_status": "VALUED",
+  "located": {
+   "located_m3": 0.21884,
+   "per_piece_m3": [
+    0.044401,
+    0.044236,
+    0.130203
+   ],
+   "status": "LOCATED"
+  },
+  "not_covered_m2": 0.291788,
+  "other_lines_in_ring_m2": 0.0,
+  "own_m3_densified": 0.499898,
+  "own_minus_line_m3": 9.3e-05,
+  "pieces_m2": [
+   0.128753,
+   0.14635,
+   0.391427
+  ],
+  "route_g_arc_bands_m2": 0.375492,
+  "status": "LOCATED: drawn ring extension billed once by RING-B7; no other line's cell or band in the ring"
+ },
+ "B_t146_ring_overlap": {
+  "members": {
+   "B7 BAND0006": {
+    "band_in_ring_m2": 0.0,
+    "band_m2": 0.34,
+    "census_label_was": "OK_ROUNDING",
+    "drawn_band_m3": 0.255,
+    "drawn_cell_in_ring_m2": 0.0,
+    "line_m3": 0.254647,
+    "proposed_m3": 0.255,
+    "proposed_minus_line_m3": 0.000353,
+    "rule_R_T387_7": {
+     "named": [
+      "T-146 ring-overlap deduction (0.00047 m2 x 0.75)"
+     ],
+     "unexplained_m3": 0.0,
+     "verdict": "DOCUMENTED_ADJUSTMENT"
+    },
+    "rule_R_T392_1": {
+     "m3": 0.000353,
+     "name": "T-146 ring-overlap deduction (0.00047 m2 x 0.75)",
+     "status": "GAP"
+    },
+    "t146_deduction_m3": -0.000353
+   },
+   "B8 BAND0003": {
+    "band_in_ring_m2": 0.0,
+    "band_m2": 0.704028,
+    "census_label_was": "GAP",
+    "drawn_band_m3": 0.528021,
+    "drawn_cell_in_ring_m2": 0.0,
+    "line_m3": 0.526665,
+    "proposed_m3": 0.528021,
+    "proposed_minus_line_m3": 0.001356,
+    "rule_R_T387_7": {
+     "named": [
+      "T-146 ring-overlap deduction (0.00178 m2 x 0.75)",
+      "T-252 ledger m3 to 4 dp (0.528021 -> 0.5280)"
+     ],
+     "unexplained_m3": 0.0,
+     "verdict": "DOCUMENTED_ADJUSTMENT"
+    },
+    "rule_R_T392_1": {
+     "m3": 0.001335,
+     "name": "T-146 ring-overlap deduction (0.00178 m2 x 0.75)",
+     "status": "GAP"
+    },
+    "t146_deduction_m3": -0.001335
+   },
+   "CB1 BAND0041.2": {
+    "band_in_ring_m2": 0.0,
+    "band_m2": 1.785,
+    "census_label_was": "OK_ROUNDING",
+    "drawn_band_m3": 1.33875,
+    "drawn_cell_in_ring_m2": null,
+    "line_m3": 1.337922,
+    "proposed_m3": 1.33875,
+    "proposed_minus_line_m3": 0.000828,
+    "rule_R_T387_7": {
+     "named": [
+      "T-146 ring-overlap deduction (0.00117 m2 x 0.75)",
+      "T-252 ledger m3 to 4 dp (1.33875 -> 1.3388)"
+     ],
+     "unexplained_m3": 0.0,
+     "verdict": "DOCUMENTED_ADJUSTMENT"
+    },
+    "rule_R_T392_1": {
+     "m3": 0.000878,
+     "name": "T-146 ring-overlap deduction (0.00117 m2 x 0.75)",
+     "status": "GAP"
+    },
+    "t146_deduction_m3": -0.000878
+   }
+  },
+  "status": "GAP (named): the 0.00342 m2 came from the T-110 band set fitted to the route G overlay (fit error 0.6 mm); on the candidate's own bands and on the drawn cells B8 / B7 / CB1 hold 0 m2 of the drawn ring, and RING-B7 is closed by the B8 face 46D, so no line carries it",
+  "total_deducted_m3": 0.002566,
+  "total_gap_m3": 0.002566
+ },
+ "C_small_residuals": {
+  "census_artefact_m3": 0.002589,
+  "census_group_m3": 0.0235,
+  "documented_m3": 0.020931,
+  "members": {
+   "B4 BAND0018": {
+    "line_m3": 0.296447,
+    "own_minus_line_m3": -1e-06,
+    "own_trapezoid_m3": 0.296446,
+    "residual_vs_band_m3": 0.007381,
+    "route_g_band_m3": 0.289066,
+    "rule_R_T387_7": {
+     "named": [
+      "T-252 r2 R-BEAM-END-OBLIQUE-2 both edges 27D / 282 to S-BEAM 325"
+     ],
+     "unexplained_m3": 0.0,
+     "verdict": "DOCUMENTED_ADJUSTMENT"
+    }
+   },
+   "CB4 BAND0021.1": {
+    "line_m3": 0.250988,
+    "own_minus_line_m3": 0.0,
+    "own_trapezoid_m3": 0.250988,
+    "residual_vs_band_m3": 0.013549,
+    "route_g_band_m3": 0.237438,
+    "rule_R_T387_7": {
+     "named": [
+      "T-252 r2 R-BEAM-END-OBLIQUE-2 both edges 288 / 285 to S-BEAM 325"
+     ],
+     "unexplained_m3": -9.999999999992654e-07,
+     "verdict": "DOCUMENTED_ADJUSTMENT"
+    }
+   },
+   "CB8 BAND0039": {
+    "b27_host_face_m2": [
+     1.400797
+    ],
+    "band_m2": 1.035065,
+    "census_cause": "census deducted the route G B27 band overlap 0.00345 m2 from CB8's owned plan (B27 group owns the junction) while the line bills its band rectangle: 0.00345 x 0.75 = 0.002588",
+    "census_residual_m3": 0.002589,
+    "column_359_m2": 0.08,
+    "column_37D_in_cell_m2": 0.01022,
+    "drawn_cell_to_face_326_m2": 1.046136,
+    "edge_2AC_past_326_mm": 59.38,
+    "line_m3": 0.7163,
+    "own_drawn_net_m3": 0.716937,
+    "proposed_m3": 0.716937,
+    "proposed_minus_line_m3": 0.000637,
+    "rule_R_T392_2": {
+     "double_m3": 0.002767,
+     "gap_m3": 0.003406,
+     "net_m3_never_used": 0.000638,
+     "status": "BOTH"
+    }
+   }
+  }
+ },
+ "D_pool_fourth_side": {
+  "geometry": {
+   "arch_dxf_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "foundation_plan_lower_band": {
+    "1658": {
+     "east_leg_m": 15.0,
+     "over_north_part_m": 0.75,
+     "over_pool_back_m": 3.5,
+     "over_south_part_m": 0.9184
+    },
+    "band_1658_minus_1659_width_mm": 200.0
+   },
+   "gb_sheet_shift_check_mm": 0.0,
+   "ground_beam_plan_upper_GB": {
+    "7FC": {
+     "east_leg_m": 1.15,
+     "over_north_part_m": 0.0,
+     "over_pool_back_m": 0.0,
+     "over_south_part_m": 0.9184
+    },
+    "7FE": {
+     "east_leg_m": 2.45,
+     "over_north_part_m": 0.75,
+     "over_pool_back_m": 0.0,
+     "over_south_part_m": 0.0
+    }
+   },
+   "inner_face_minus_pool_centre_m": 1.55,
+   "out_of_pool_north_m": 0.75,
+   "out_of_pool_south_m": 0.9184,
+   "out_of_pool_total_m": 1.6684,
+   "outer_face_minus_pool_centre_m": 1.75,
+   "pair_layer": [
+    "5",
+    "5"
+   ],
+   "pair_length_m": 5.1684,
+   "pair_spacing_m": 0.2,
+   "pool_radii_m": [
+    1.55,
+    1.75
+   ],
+   "pool_side_m": 3.5,
+   "pool_wall_band_back_length_m": 3.5,
+   "pool_wall_band_m2": 2.356726,
+   "st_gf_boundary_2A7_minus_outer_face_mm": 0.0,
+   "st_ring_radii_m": [
+    1.55,
+    1.75
+   ]
+  },
+  "lower_band_over_pool_back_m": 3.5,
+  "pool_lines_carry_outside_part": false,
+  "split": {
+   "element": "plot boundary wall (upper G.B 20 x 40 top at N.G. + lower boundary band below; masonry above N.G.)",
+   "inside_m": 3.5,
+   "lines": [
+    {
+     "line_id": "L-fb7a6431fede62e93fd5",
+     "sheet": "ST ground-beam plan S-BOUN 7FC / 7FE (upper G.B 20 x 40)",
+     "state": "HELD (blank (BLOCKED_RFI))",
+     "status": "HELD (blank (BLOCKED_RFI))"
+    },
+    {
+     "line_id": "L-6290a9f3d93f38cd46d6",
+     "sheet": "ST foundation plan S-BOUN 1658 / 1659 (lower boundary band)",
+     "state": "HELD (downgrade DG-6dd9f1caba1ca77d (figure audit only))",
+     "status": "HELD (downgrade DG-6dd9f1caba1ca77d (figure audit only))"
+    },
+    {
+     "line_id": null,
+     "sheet": "architectural GF plan B7 / 8D above N.G. (boundary wall masonry, lane A)",
+     "state": "MISSING",
+     "status": "MISSING (T-279: the boundary fence is in no masonry line)"
+    }
+   ],
+   "outside_m": 1.6684,
+   "outside_parts_m": [
+    0.9184,
+    0.75
+   ]
+  },
+  "status": "OWNER NAMED (boundary wall); concrete below N.G. in two HELD boundary lines (never 0), masonry above N.G. MISSING; not pool concrete",
+  "upper_GB_m3_over_outside_parts": 0.133472,
+  "upper_GB_over_pool_back_m": 0.0,
+  "upper_GB_plan_m2_over_outside_parts": 0.33368
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.29 (T-387 binding, lines 6b5dc44f)",
+ "dxf_sha256": "9f9d1179a5d2a663",
+ "lines": {
+  "B27 BAND0048": "L-3dddf99008ab922da814",
+  "B4 BAND0018": "L-a38b4013f5e3a30830b4",
+  "B7 BAND0006": "L-cbf53752cfd897c35c2c",
+  "B8 BAND0003": "L-9a55aadc9f0880ae37a7",
+  "BOUNDARY lower band": "L-6290a9f3d93f38cd46d6",
+  "BOUNDARY upper G.B": "L-fb7a6431fede62e93fd5",
+  "CB1 BAND0041.2": "L-9270e8b8860414386adb",
+  "CB4 BAND0021.1": "L-0e110d2c29b2cd318139",
+  "CB8 BAND0039": "L-7c1a1da8004c4272ccba",
+  "RING-B7": "L-e72c162de78a4bf302c0"
+ },
+ "schema": "T392_SUMMARY_V1"
+}

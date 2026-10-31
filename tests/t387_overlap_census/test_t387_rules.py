@@ -223,3 +223,35 @@ def test_not_applicable_line_is_not_held_and_bills_nothing():
     rows = R.bind([line("L1", "STR.CONC.BEAM", "BEAMS:GF:BAND0009", None, "NOT_APPLICABLE_WITH_EVIDENCE")],
                   [{"downgrade_id": "DG-y", "line_ids": ["L1"]}])
     assert rows[0]["status"] == "HELD"            # a downgrade record still holds it
+
+
+# R-T387-7 (T-392): a documented deduction below the 0.001 m3 tolerance is named, never called rounding.
+# Hand: villa T387-K beam B1 owned 0.9250 m2 x 0.60 = 0.555000 m3; its merged ledger deducts a named sliver
+# 0.000667 m2 x 0.60 = 0.000400 m3 ('ledger X: sliver against ring R'); the line bills 0.554600 m3: residual -0.000400.
+def test_documented_sub_tolerance_deduction_is_reported_by_name():
+    res = R.classify_residual(0.554600 - 0.555000, [("ledger X: sliver against ring R", -0.000400)])
+    assert res["verdict"] == "DOCUMENTED_ADJUSTMENT"
+    assert res["named"] == ["ledger X: sliver against ring R"]
+    assert abs(res["unexplained_m3"]) < 1e-9
+
+
+def test_documented_sub_tolerance_deduction_called_rounding_is_refused():
+    with pytest.raises(R.Refused, match="DOCUMENTED_NOT_ROUNDING"):
+        R.classify_residual(-0.000400, [("ledger X: sliver against ring R", -0.000400)], label="OK_ROUNDING")
+
+
+def test_rounding_only_when_no_document_explains_it():
+    assert R.classify_residual(-0.000400, [])["verdict"] == "OK_ROUNDING"
+    # a documented item that does NOT explain the residual leaves it UNEXPLAINED (never rounding)
+    res = R.classify_residual(-0.000400, [("ledger Y: end cut", -0.000100)])
+    assert res["verdict"] == "UNEXPLAINED" and res["unexplained_m3"] == pytest.approx(-0.000300)
+
+
+def test_every_ledger_counts_and_unnamed_or_missing_refused():
+    # two ledgers wrote the line: T-229-like end cut +0.002000 and T-146-like sliver -0.000400 -> residual +0.001600
+    res = R.classify_residual(0.001600, [("ledger A: end cut", 0.002000), ("ledger B: sliver", -0.000400)])
+    assert res["verdict"] == "DOCUMENTED_ADJUSTMENT" and len(res["named"]) == 2
+    with pytest.raises(R.Refused, match="UNNAMED"):
+        R.classify_residual(-0.0004, [("", -0.0004)])
+    with pytest.raises(R.Refused, match="RESIDUAL_MISSING"):
+        R.classify_residual(None, [])
