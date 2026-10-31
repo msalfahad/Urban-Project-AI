@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3982 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3988 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 33 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1892 | pytest suites, one folder per round. |
+| `tests/` | 1893 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -1291,6 +1291,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t370_sanitary_fixture_count/` | 1 |
 | `tests/t371_shape_census/` | 1 |
 | `tests/t373_lap_binding/` | 1 |
+| `tests/t374_straight_bbs/` | 1 |
 | `tests/t375_splice_count/` | 1 |
 | `tests/t376_rfi_rows/` | 1 |
 | `tests/t377_arched_audit/` | 1 |
@@ -1676,6 +1677,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t370/` | 3 |
 | `research/agents_t371/` | 7 |
 | `research/agents_t373/` | 4 |
+| `research/agents_t374/` | 6 |
 | `research/agents_t375/` | 7 |
 | `research/agents_t376/` | 5 |
 | `research/agents_t377/` | 7 |
