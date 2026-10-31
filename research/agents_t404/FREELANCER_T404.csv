@@ -1,0 +1,18 @@
+mapping,row_or_face,cause,m2
+mapping_A,F-STREET/END-G-01,"our face, no row of his",-0.53
+mapping_A,r87 'سور',height 2.4 vs 2.65,-9.4125
+mapping_A,r87 'سور',length 37.65 vs 36.57,2.862
+mapping_A,r88 'تابع',height 2.4 vs 2.65,-1.45
+mapping_A,r89 'تابع',"his row, no counterpart in the face census",1.2
+mapping_A,r90 'كتف',"his row, no counterpart in the face census",1.76
+mapping_A,TOTAL,his 107.24 - ours 112.8105,-5.5705
+mapping_A,RESIDUAL,unexplained,0.0
+mapping_B,F-STREET/END-G-01,"our face, no row of his",-0.53
+mapping_B,r87 'سور',height 2.4 vs 2.65,-9.4125
+mapping_B,r87 'سور',length 37.65 vs 37.17,1.272
+mapping_B,r88 'تابع',height 2.4 vs 2.65,-1.45
+mapping_B,r88 'تابع',length 5.8 vs 5.6,0.53
+mapping_B,r89 'تابع',"his row, no counterpart in the face census",1.2
+mapping_B,r90 'كتف',"his row, no counterpart in the face census",1.76
+mapping_B,TOTAL,his 107.24 - ours 113.8705,-6.6305
+mapping_B,RESIDUAL,unexplained,0.0

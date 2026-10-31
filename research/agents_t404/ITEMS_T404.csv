@@ -1,0 +1,9 @@
+item,unit,value,value2,at_least,at_least2,at_most,geometry_status,layer_status,evidence
+F-NORTH/TOP wall top (m.l / m2),m.l | m2,31.37,6.274,,,,DRAWING-CONFIRMED,HELD,"p.12 section: plain 0.20 top, no coping / no note; layer R-T404-5"
+F-STREET/TOP wall top (m.l / m2),m.l | m2,,,5.6,1.12,,HELD,HELD,"p.12 section: plain 0.20 top, no coping / no note; layer R-T404-5"
+F-STREET/END-G-01 stop-end face at the gate jamb,m2,,,,,0.53,HELD,HELD,t 0.20 x 2.65 = 0.53 at most; end top drawn rounded and lower (p.12 elevation)
+G-01 far jamb (house wall),m2,,,,,,OTHER_OWNER,OTHER_OWNER,p.12 elevation: the gate runs to the house wall; house facade ledger (T-305 / T-337)
+coping on the fence top,m.l,,,,,,NOT_DRAWN,NOT_DRAWN,"no coping drawn in the p.12 section / elevation or ST p.14; named, no quantity"
+coating below N.G.: boundary G.B faces,m2,,,,,,OTHER_OWNER,HELD,"owned by T-263 (HELD, gross 35.256 m2: ST p.14 A-A prints no coating); not counted here"
+"coating below N.G.: boundary masonry faces (44.07 m band, both faces)",m2,,,,,,HELD,HELD,"masonry height below N.G. not printed (T-396 s.4, 'AS PER EXCAVATION DEPTH'); no coating note on ST p.14; HELD blank, never 0"
+faces shared with the house facade ledger,m2,0.0,0.0,,,,CHECK,CHECK,0 keys shared; 1 house face(s) on the boundary line (GF/NE-6x/EDGE/parapet): level-band overlap with the fence 0..2.65 = 0.0 m2
