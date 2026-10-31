@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4072 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4077 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 36 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1918 | pytest suites, one folder per round. |
+| `tests/` | 1920 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -1313,6 +1313,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t390_face_length/` | 1 |
 | `tests/t391_ground_recon/` | 1 |
 | `tests/t392_ring_pool_ownership/` | 2 |
+| `tests/t393_railing_runs/` | 1 |
 | `tests/t394_column_recon/` | 1 |
 | `tests/t395_beam_recon/` | 1 |
 | `tests/t396_boundary_fence/` | 1 |
@@ -1713,6 +1714,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t390/` | 7 |
 | `research/agents_t391/` | 6 |
 | `research/agents_t392/` | 5 |
+| `research/agents_t393/` | 5 |
 | `research/agents_t394/` | 5 |
 | `research/agents_t395/` | 5 |
 | `research/agents_t396/` | 8 |
