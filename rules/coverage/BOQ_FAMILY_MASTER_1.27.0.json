@@ -1406,7 +1406,7 @@
    "evidence": [
     "engine/source/arch_measure.py:639-681 FIN.PAINT per room face",
     "engine/source/surface_ledger.py:155 WALLS_ABOVE_TILE: in wet rooms paint only above the tile",
-    "engine/source/arch_v3032.py:65 PAINT = FIN.PAINT.CEILING (paint on the gypsum ceiling = decor + bulkhead faces, Q-57 A mod (6)); :488 check_ceilings(): paint of a room = its decor + bulkhead lines",
+    "engine/source/arch_v3032.py:65 PAINT = FIN.PAINT.CEILING (paint on the gypsum ceiling = decor + bulkhead faces, Q-57 A mod (6)); :489 check_ceilings(): paint of a room = its decor + bulkhead lines",
     "tests/t284_ceiling_integration/test_arch_v3032.py:206 test_paint_not_decor_plus_bulkhead_refused()"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PAINT",
@@ -5249,7 +5249,7 @@
    "source_needed": "stair sections, a verified soffit ledger, the owner's method O / D",
    "next_slice": "S5",
    "evidence": [
-    "engine/source/arch_v3032.py:66 STAIR_SOFFIT = FIN.STAIR.SOFFIT, DOME_SOFFIT = FIN.DOME.SOFFIT; :488 check_ceilings(): a valued stair soffit / dome intrados line is refused (they stay HELD)",
+    "engine/source/arch_v3032.py:66 STAIR_SOFFIT = FIN.STAIR.SOFFIT, DOME_SOFFIT = FIN.DOME.SOFFIT; :489 check_ceilings(): a valued stair soffit / dome intrados line is refused (they stay HELD)",
     "tests/t284_ceiling_integration/test_arch_v3032.py:146 test_held_lines_blank_never_zero() / :251 test_valued_stair_soffit_refused()"
    ],
    "released_method_reads": "none",
@@ -5289,7 +5289,7 @@
    "source_needed": "designer: what closes the dome opening (DCR-4); dome section",
    "next_slice": "S5",
    "evidence": [
-    "engine/source/arch_v3032.py:66 STAIR_SOFFIT = FIN.STAIR.SOFFIT, DOME_SOFFIT = FIN.DOME.SOFFIT; :488 check_ceilings(): a valued stair soffit / dome intrados line is refused (they stay HELD)",
+    "engine/source/arch_v3032.py:66 STAIR_SOFFIT = FIN.STAIR.SOFFIT, DOME_SOFFIT = FIN.DOME.SOFFIT; :489 check_ceilings(): a valued stair soffit / dome intrados line is refused (they stay HELD)",
     "tests/t284_ceiling_integration/test_arch_v3032.py:146 test_held_lines_blank_never_zero() / :251 test_valued_stair_soffit_refused()"
    ],
    "released_method_reads": "none",

@@ -371,7 +371,8 @@ def changes_for(doc, l3031):
         decor_line = None
         if r["role"] == "CEILING" and len(bl) == 1:
             b = bl[0]
-            rec = _rec(src, action="RESTATE", decor_m2=r["decor_m2"], evidence_status="DRAWING-CONFIRMED", **base)
+            rec = _rec(src, action="RESTATE", decor_m2=r["decor_m2"], evidence_status="DRAWING-CONFIRMED",
+                       decor_confirms_line=bool(r.get("decor_confirms_line")), **base)
             formula = (f"{room} horizontal gypsum decor ceiling {_fmt(r['decor_m2'])} m2 (DRAWING-CONFIRMED, ceilings "
                        f"r3 {hsrc['task']} bound by {src['task']}): plan area {_fmt(b.get('measured_net'))} less what "
                        f"is not decor (named in calculation.inputs.{REC_KEY}.still_held); bulkhead faces and paint "

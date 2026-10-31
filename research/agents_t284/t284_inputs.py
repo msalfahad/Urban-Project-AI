@@ -51,6 +51,9 @@ OA_PAINT = "Q-57 A modified (6): actual paintable surface = horizontal gypsum + 
 # the physical cause of the 1F living group (T-335 s.3 f): one decor figure for two lines whose split is not drawn
 GROUP_CAUSE = ("the decor ceiling of the room is one surface over the normal-level part and the double-height part "
                "over the light-well void; the split between the two lines is not established (never pro rata)")
+# T-283 prints its pieces to 4 decimals (m2); a decor figure within half a unit of that place of the line's own figure is
+# the same piece (the floor piece, nothing deducted): the line's unrounded figure is carried, never a rounding move
+LEDGER_HALF_UNIT = 0.5e-4 + 1e-9
 STAIR_ELEMENT = {"ST-01": ("GF", "STAIR:ST-01:soffit"), "ST-02": ("GF", "STAIR:ST-02:soffit")}
 STAIR_CAUSE = ("true soffit area by method O (plane through the nosings) vs D (waist with kinks): RULE_DIFFERENCE, "
                "no owner rule; curved / winder / junction rows HELD (T-281)")
@@ -120,11 +123,17 @@ def build(project_id=None):
         for r in rr:
             held += _held_of_record(r)
         decor, bulk = _f(f["decor_dc_m2"]), _f(f["bulkhead_aoa_m2"]) or 0.0
+        before = _f(f["before_m2"])
+        same_piece = (decor is not None and before is not None and len(keys) == 1
+                      and abs(decor - before) <= LEDGER_HALF_UNIT)
+        if same_piece:    # the ledger confirms the line's own piece to its printed precision: carry the line's figure
+            decor = before
         row = {"role": role, "line_ids": keys if keys[0] != "NEW LINE NEEDED" else [], "elements": els,
                "room_id": room, "floor": room.split("-")[0], "before_m2": _f(f["before_m2"]),
                "bound": [{"line_id": b["line_id"], "element_id": b["element_id"], "evidence_state": b["evidence_state"],
                           "measured_net": b["measured_net"]} for b in bl],
                "decor_m2": decor, "decor_status": "DRAWING-CONFIRMED",
+               "decor_confirms_line": same_piece,
                "bulkhead_m2": bulk if bulk > 0 else None, "bulkhead_source": OA_BULKHEAD if bulk > 0 else None,
                "paint_m2": (round(decor + bulk, 6) if decor else None),
                "paint_source": OA_PAINT,
