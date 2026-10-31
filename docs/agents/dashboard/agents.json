@@ -6,52 +6,52 @@
   "last_run": "2026-10-30T04:32:08Z",
   "result": "ok",
   "working_on": "Daily update sent 30 Oct 04:32 UTC; next 31 Oct 04:31 UTC",
-  "as_of": "2026-10-31T00:50:00Z"
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-10-31T00:13:04Z",
+  "last_run": "2026-10-31T04:12:00Z",
   "result": "running",
-  "working_on": "Since 20:20: sills / thresholds into the candidate (V3.0.29) and 7 research pieces merged, 1 sent back; consultant drafts reworded per your 31 Oct review (nothing sent); 4 new tasks incl. a privacy fix first",
-  "as_of": "2026-10-31T00:50:00Z"
+  "working_on": "Since 00:25: privacy fix, footing-mesh cutting list and consultant rows merged; formwork package sent back twice (one unowned railing code), third pass first for integration; 3 new tasks",
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T23:20:00Z",
-  "result": "ok",
-  "working_on": "23:34 designer questions on bar shapes / laps handed in, merged 23:58; 21:32 stair lines merged; next: cutting-list fix (sent back), then a per-family concrete reconciliation",
-  "as_of": "2026-10-31T00:50:00Z"
+  "last_run": "2026-10-31T03:20:00Z",
+  "result": "running",
+  "working_on": "03:24 claimed the per-family concrete reconciliation (run open); 01:27 cutting-list fix handed in, merged 01:53",
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-30T22:39:25Z",
+  "last_run": "2026-10-31T02:39:32Z",
   "result": "ok",
-  "working_on": "22:54 drainage source census handed in, merged 23:58; 20:45 guard-test fix merged; next: privacy fix (a freelancer rate in two public files), consultant rows for the architectural holds",
-  "as_of": "2026-10-31T00:50:00Z"
+  "working_on": "02:49 consultant rows for the architectural holds handed in, merged 04:03; 01:22 privacy fix merged 00:54; next: privacy text follow-up",
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-10-30T22:59:29Z",
+  "last_run": "2026-10-31T03:00:33Z",
   "result": "ok",
-  "working_on": "23:13 splice-count defect handed in, merged 23:58; 22:10 sills / thresholds into the candidate merged 23:35 (V3.0.29); next: formwork into the candidate",
-  "as_of": "2026-10-31T00:50:00Z"
+  "working_on": "03:47 formwork / railings package handed in again, sent back 04:02 (railing-guard code owned by no family); next: that fix",
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-10-30T23:50:06Z",
+  "last_run": "2026-10-31T03:49:11Z",
   "result": "ok",
-  "working_on": "20:51-00:00: 8 merged (incl. V3.0.29), 1 sent back, both lap 'held' records issued; READY 0; next: your 31 Oct evidence pass on the consultant questions",
-  "as_of": "2026-10-31T00:50:00Z"
+  "working_on": "00:50-04:05: 3 merged (privacy fix, cutting list, consultant rows), formwork package sent back twice; READY 0",
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-10-31T00:50:00Z"
+  "as_of": "2026-10-31T04:40:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
   "role": "Rewrites the dashboard data from the board",
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
-  "last_run": "2026-10-30T12:55:14Z",
+  "last_run": "2026-10-31T00:54:58Z",
   "result": "ok",
-  "working_on": "Next refresh 31 Oct 00:54 UTC",
-  "as_of": "2026-10-31T00:50:00Z"
+  "working_on": "Next refresh 31 Oct 12:54 UTC",
+  "as_of": "2026-10-31T04:40:00Z"
  }
 ]
