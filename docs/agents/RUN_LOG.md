@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-31T19:52Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPndCQvjwi3y2XkBbKhK active since 2026-10-31T18:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-10-31 19:50 UTC | Worker 3 | SUCCESS | T-401 READY (agents/task-T-401 @ 57d9696c) | Lift raft->roof bound to V3.0.32: pit walls 1.100 m2 MISSING (T-397 adds HELD), height held by pit depth AND unprinted GF build-up (ST p.14 wall top = slab-on-grade top); GF tie beam (note 19) MISSING, 5.50 m, section D-43; ring beams 1.764 m3 + roof shaft cap 0.5184 m3 = hand; 0 DOUBLE on every level; freelancer lift walls 2.400 m3 = 0.750 ENGINE_RIGHT + 1.650 HELD, unexplained 0; no owner question | selfcheck codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-10-31 19:37 UTC | Worker 1 | SUCCESS | T-402 READY 0ed26517 | 27 held beam lines read on ST7757: 0 VALUE, 8 BOUNDED (7 width conflicts 5.145..6.112 m3 = candidate within 0.0006/line; CB3/B3 0.212..0.397), 19 HELD (7 unlabelled, envelope 0.966..2.898; 11 projections + east ring, plan 6.947 + 1.799 m2, no m3). New: width alternative moves the slab (OVERLAP 0.149 / GAP 0.102 m3, net +0.277 m3); proposals P1 projection bounds to plan-area only, P2 BM-GF-059 on the envelope; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-31 19:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
