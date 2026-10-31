@@ -1,0 +1,292 @@
+{
+ "fence_band": {
+  "axis_m": 44.07,
+  "crossing_m": 1.6,
+  "free_m": 42.47,
+  "upper_gb_len_by_area_m": 44.07
+ },
+ "freelancer": {
+  "lower_band_whole": {
+   "his_m3": 8.604,
+   "length_cause_m": -1.21,
+   "ours_range_m3": [
+    5.6392,
+    11.0328
+   ],
+   "owner_A_m3": 8.4588,
+   "owner_A_minus_his_m3": -0.1452
+  },
+  "masonry_below_ng": {
+   "his_m2": null,
+   "ours_plane_at_least_m2": 17.628
+  },
+  "upper_gb": {
+   "causes": {
+    "depth (printed 0.40 vs his 0.60)": -1.7628,
+    "length (44.07 vs 42.0) at his section": 0.3726,
+    "residual": 0.0,
+    "width (printed 0.20 vs his 0.30)": -2.6442
+   },
+   "diff_m3": -4.0344,
+   "diff_pct_of_his": -53.37,
+   "his_m3": 7.56,
+   "ours_gross_m3": 3.5256
+  }
+ },
+ "guards": {
+  "boundary_column_lines_inside_upper_gb": 0,
+  "house_gb_face_mm_inside_upper_gb": 0.0
+ },
+ "input_sha_note": "9f9d1179",
+ "lower_band_split_L6290a9f3": {
+  "by_class": {
+   "FENCE": {
+    "axis_m": 44.07,
+    "crossing_m": 1.6,
+    "free_m": 42.47,
+    "owner_method_A_m3": 5.0964,
+    "solid_high_m3": 5.2884,
+    "solid_low_m3": 3.3976
+   },
+   "HOUSE_E_SEA": {
+    "axis_m": 7.799,
+    "crossing_m": 4.249,
+    "free_m": 3.55,
+    "owner_method_A_m3": 0.426,
+    "solid_high_m3": 0.93588,
+    "solid_low_m3": 0.284
+   },
+   "HOUSE_S": {
+    "axis_m": 29.972,
+    "crossing_m": 13.702,
+    "free_m": 16.27,
+    "owner_method_A_m3": 1.9524,
+    "solid_high_m3": 3.59664,
+    "solid_low_m3": 1.3016
+   },
+   "HOUSE_W_STREET": {
+    "axis_m": 6.599,
+    "crossing_m": 1.399,
+    "free_m": 5.2,
+    "owner_method_A_m3": 0.624,
+    "solid_high_m3": 0.79188,
+    "solid_low_m3": 0.416
+   },
+   "POOL_BACK": {
+    "axis_m": 3.5,
+    "crossing_m": 0.5,
+    "free_m": 3.0,
+    "owner_method_A_m3": 0.36,
+    "solid_high_m3": 0.42,
+    "solid_low_m3": 0.24
+   }
+  },
+  "total": {
+   "axis_m": 91.94,
+   "crossing_m": 21.45,
+   "free_m": 70.49,
+   "owner_method_A_m3": 8.4588,
+   "solid_high_m3": 11.0328,
+   "solid_low_m3": 5.6392
+  }
+ },
+ "schema": "URBAN_T403_SUMMARY_V1",
+ "takeoff": {
+  "runs": [
+   {
+    "COLUMNS_BELOW_NG_m3": {
+     "value": null
+    },
+    "LOWER_GB_m3": {
+     "free_m": 31.37,
+     "high": 3.7644,
+     "low": null,
+     "low_note": "NOT_ESTABLISHED: pad count not printed (pad / beam share open)",
+     "solid_high": 3.7644,
+     "solid_low": 2.5096,
+     "value": null
+    },
+    "MASONRY_m2": {
+     "formation": "AT_LEAST",
+     "h_high": null,
+     "h_low": 0.4,
+     "net": null,
+     "plane": null,
+     "plane_at_least": 12.548
+    },
+    "PADS_m3": {
+     "unit_beam_share": 0.078,
+     "unit_gross": 0.312,
+     "value": null
+    },
+    "UPPER_GB_m3": {
+     "at_most": 2.5096,
+     "gross": 2.5096,
+     "net": null
+    },
+    "axis_m": 31.37,
+    "columns": null,
+    "crossing_m": 0.0,
+    "run": "F-NORTH",
+    "section": "TYP"
+   },
+   {
+    "COLUMNS_BELOW_NG_m3": {
+     "value": null
+    },
+    "LOWER_GB_m3": {
+     "free_m": 0.95,
+     "high": 0.144,
+     "low": null,
+     "low_note": "NOT_ESTABLISHED: pad count not printed (pad / beam share open)",
+     "solid_high": 0.144,
+     "solid_low": 0.076,
+     "value": null
+    },
+    "MASONRY_m2": {
+     "formation": "AT_LEAST",
+     "h_high": null,
+     "h_low": 0.4,
+     "net": null,
+     "plane": null,
+     "plane_at_least": 0.48
+    },
+    "PADS_m3": {
+     "unit_beam_share": 0.078,
+     "unit_gross": 0.312,
+     "value": null
+    },
+    "UPPER_GB_m3": {
+     "at_most": 0.096,
+     "gross": 0.096,
+     "net": null
+    },
+    "axis_m": 1.2,
+    "columns": null,
+    "crossing_m": 0.25,
+    "run": "F-PASSAGE",
+    "section": "TYP"
+   },
+   {
+    "COLUMNS_BELOW_NG_m3": {
+     "value": null
+    },
+    "LOWER_GB_m3": {
+     "free_m": 2.25,
+     "high": 0.27,
+     "low": null,
+     "low_note": "NOT_ESTABLISHED: pad count not printed (pad / beam share open)",
+     "solid_high": 0.27,
+     "solid_low": 0.18,
+     "value": null
+    },
+    "MASONRY_m2": {
+     "formation": "AT_LEAST",
+     "h_high": null,
+     "h_low": 0.4,
+     "net": null,
+     "plane": null,
+     "plane_at_least": 0.9
+    },
+    "PADS_m3": {
+     "unit_beam_share": 0.078,
+     "unit_gross": 0.312,
+     "value": null
+    },
+    "UPPER_GB_m3": {
+     "at_most": 0.18,
+     "gross": 0.18,
+     "net": null
+    },
+    "axis_m": 2.25,
+    "columns": null,
+    "crossing_m": 0.0,
+    "run": "F-SEA-N",
+    "section": "TYP"
+   },
+   {
+    "COLUMNS_BELOW_NG_m3": {
+     "value": null
+    },
+    "LOWER_GB_m3": {
+     "free_m": 0.0,
+     "high": 0.138,
+     "low": null,
+     "low_note": "NOT_ESTABLISHED: pad count not printed (pad / beam share open)",
+     "solid_high": 0.138,
+     "solid_low": 0.0,
+     "value": null
+    },
+    "MASONRY_m2": {
+     "formation": "AT_LEAST",
+     "h_high": null,
+     "h_low": 0.4,
+     "net": null,
+     "plane": null,
+     "plane_at_least": 0.46
+    },
+    "PADS_m3": {
+     "unit_beam_share": 0.078,
+     "unit_gross": 0.312,
+     "value": null
+    },
+    "UPPER_GB_m3": {
+     "at_most": 0.092,
+     "gross": 0.092,
+     "net": null
+    },
+    "axis_m": 1.15,
+    "columns": null,
+    "crossing_m": 1.15,
+    "run": "F-SEA-S",
+    "section": "TYP"
+   },
+   {
+    "COLUMNS_BELOW_NG_m3": {
+     "value": null
+    },
+    "LOWER_GB_m3": {
+     "free_m": 7.9,
+     "high": 0.972,
+     "low": null,
+     "low_note": "NOT_ESTABLISHED: pad count not printed (pad / beam share open)",
+     "solid_high": 0.972,
+     "solid_low": 0.632,
+     "value": null
+    },
+    "MASONRY_m2": {
+     "formation": "AT_LEAST",
+     "h_high": null,
+     "h_low": 0.4,
+     "net": null,
+     "plane": null,
+     "plane_at_least": 3.24
+    },
+    "PADS_m3": {
+     "unit_beam_share": 0.078,
+     "unit_gross": 0.312,
+     "value": null
+    },
+    "UPPER_GB_m3": {
+     "at_most": 0.648,
+     "gross": 0.648,
+     "net": null
+    },
+    "axis_m": 8.1,
+    "columns": null,
+    "crossing_m": 0.2,
+    "run": "F-STREET",
+    "section": "TYP"
+   }
+  ],
+  "totals": {
+   "LOWER_GB_high_m3": 5.2884,
+   "LOWER_GB_low_m3": null,
+   "MASONRY_net_m2": null,
+   "MASONRY_plane_at_least_m2": 17.628,
+   "MASONRY_plane_m2": null,
+   "UPPER_GB_at_most_m3": 3.5256,
+   "UPPER_GB_net_m3": null
+  }
+ }
+}
