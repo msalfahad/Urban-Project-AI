@@ -1,0 +1,91 @@
+{
+ "band_conservation_m": {
+  "runs": {
+   "F-LOWER passage closure": 1.2,
+   "F-NORTH (upper neighbour)": 31.37,
+   "F-SEA (Q-63 C element)": 3.4,
+   "F-STREET": 8.1
+  },
+  "t253_total": 44.07,
+  "total": 44.07
+ },
+ "below_ng": {
+  "component": "boundary masonry BELOW N.G. (between the upper G.B soffit at N.G. - 0.40 and the lower G.B)",
+  "height": null,
+  "in_any_line": "NO (no masonry line; the concrete lines carry only the two beams): MISSING category",
+  "length_m": 44.07,
+  "material": "black block on the neighbour sides (ST p.1 note 2: north 31.37 + lower 1.20 = 32.57 m); street 8.10 and sea 3.40 m not printed",
+  "missing_fact": "lower G.B top / excavation depth not printed (ST p.14 'AS PER EXCAVATION DEPTH'; T-356 / T-357: existing ground printed at the plot corners only)",
+  "status": "HELD",
+  "thickness_m": 0.2
+ },
+ "candidate_lines_changed": 0,
+ "column_face_per_unit_m2": 0.795,
+ "freelancer": {
+  "corner_twice_m": 0.2,
+  "corner_twice_m2": 0.4,
+  "diff_m2": -23.5705,
+  "height_diff_m": -0.65,
+  "height_m2": -24.0305,
+  "his": [
+   1,
+   37.2,
+   2.0
+  ],
+  "his_m2": 74.4,
+  "length_unexplained_m": 0.03,
+  "length_unexplained_m2": 0.06,
+  "own_plane_m2": 97.9705,
+  "residual_m2": 0.0,
+  "row": "blockwork workbook sheet 'الكميات' row 150 (his 15 cm section)"
+ },
+ "lower_band_m2_north_street": 18.485,
+ "method": "BOUNDARY_FENCE_V1 (research, not wired)",
+ "runs": {
+  "F-LOWER passage closure": {
+   "block_at_most_m2": null,
+   "block_status": "HELD",
+   "plane_m2": null,
+   "plane_status": "HELD",
+   "solid_m": 1.2
+  },
+  "F-NORTH (upper neighbour)": {
+   "block_at_most_m2": 83.1305,
+   "block_status": "HELD",
+   "plane_m2": 83.1305,
+   "plane_status": "DRAWING-CONFIRMED",
+   "solid_m": 31.37
+  },
+  "F-SEA (Q-63 C element)": {
+   "block_at_most_m2": 6.36,
+   "block_status": "HELD",
+   "plane_m2": null,
+   "plane_status": "HELD",
+   "solid_m": 2.4
+  },
+  "F-STREET": {
+   "block_at_most_m2": 14.84,
+   "block_status": "HELD",
+   "plane_m2": 14.84,
+   "plane_status": "DRAWING-CONFIRMED",
+   "solid_m": 5.6
+  }
+ },
+ "task": "T-396",
+ "totals": {
+  "block_dc_m2": 0.0,
+  "block_held_runs": [
+   "F-NORTH (upper neighbour)",
+   "F-STREET",
+   "F-SEA (Q-63 C element)",
+   "F-LOWER passage closure"
+  ],
+  "plane_dc_m2": 97.9705,
+  "plane_held_runs": [
+   "F-SEA (Q-63 C element)",
+   "F-LOWER passage closure"
+  ],
+  "solid_m": 40.57
+ },
+ "unit": "m / m2"
+}
