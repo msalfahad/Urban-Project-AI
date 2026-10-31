@@ -4,20 +4,9 @@
  "classes": {
   "PROVENANCE_MISLABEL": "an Urban cost-record figure (WEB_APP_ROWS, NO_FREELANCER_ITEM / LUMP_SUM) attributed to the freelancer; listed here only until a row allowed to edit the file corrects it"
  },
- "files": {
-  "research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md": {
-   "class": "PROVENANCE_MISLABEL",
-   "lines": [83, 89],
-   "register_rows": ["WEB-018", "WEB-019", "WEB-055", "WEB-060"],
-   "quantity_effect": "none: drawn counts FD / RWD / showers pinned independently (tests/t370 line 168)",
-   "fix": "outside T-386 files: follow-up row proposed to the Lead (relabel section 5 as the Urban cost record; gratings row RULE_DIFFERENCE -> reconciliation with the cost record, not the freelancer)"
-  },
-  "research/agents_t370/t370_alsenan.py": {
-   "class": "PROVENANCE_MISLABEL",
-   "lines": [155],
-   "register_rows": ["WEB-018", "WEB-019", "WEB-055"],
-   "quantity_effect": "none (comment and the dict name FREELANCER)",
-   "fix": "outside T-386 files: same follow-up row (rename to COST_RECORD, keep the old name as an alias for tests/t370 or update that test in the same row)"
-  }
- }
+ "cleared": {
+  "research/agents_t370/T-370_SANITARY_FIXTURE_REGISTER.md": "T-389: section 5 relabelled to the Urban cost record (WEB-018 / WEB-019 / WEB-055 / WEB-060); freelancer B12-01 NOT COMPARABLE",
+  "research/agents_t370/t370_alsenan.py": "T-389: dict FREELANCER replaced by COST_RECORD keyed by register id (no alias)"
+ },
+ "files": {}
 }

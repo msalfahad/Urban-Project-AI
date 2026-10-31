@@ -152,13 +152,26 @@ ROOM_CLASS = {(r.split("/")[0], r): "WET" for r in (
     GF_WC_CORE_A, GF_ANNEX_A, GF_WC_CORE_B1, GF_WC_CORE_B2, GF_BATH, GF_WASH_CORE, GF_WASH_WEST, GF_WC_WEST,
     GF_WC_KIT, GF_KITCHEN, FF_WC, FF_BATH_TOP, FF_BATH_RIGHT, FF_BATH_BL, FF_BATH_BR, SF_WC)}
 
-# Freelancer side: Drive 'Alsenan chalet project' / 'Alsenan Chalet_by_category.xlsx' (a cost record by category, not a
-# measured BOQ): sanitary = lump sums only; the tiling labour lists two counted items.
-FREELANCER = {
-    "sanitary materials (lump sum, 1 item)": None,
-    "floor gratings fixed (tiling labour, qty)": 24,
-    "shower (tiling labour, qty)": 11,
+# Benchmark side (T-389 relabel, R-T386-1). These four rows are Urban Projects' own cost record (benchmark manifest
+# key WEB, kind WEB_APP_COMMERCIAL_REPORT -> source class URBAN_COST_RECORD; register
+# tests/alsenan/registers_b1/WEB_APP_ROWS.json): payable labour / material entries, not a measured BOQ. None has a
+# source cell in any of the six freelancer workbooks (source_freelancer_items == []), and FREELANCER_RAW_ROWS.json
+# holds no fixture or drain row: B12-01 has NO freelancer item, so the freelancer comparison is NOT COMPARABLE.
+# Quantities only (no rate, no total). The counted rows are payable labour counts whose basis (which physical items
+# the count covers) the record does not print: compared as UNRESOLVED scope, never as a residual of the drawn count.
+COST_RECORD_SOURCE = {"source_class": "URBAN_COST_RECORD", "manifest_key": "WEB",
+                      "register": "tests/alsenan/registers_b1/WEB_APP_ROWS.json"}
+COST_RECORD = {
+    "WEB-055": {"what": "sanitary materials", "kind": "LUMP_SUM", "qty": 1, "unit": "item",
+                "comparison": "NOT_COMPARABLE (lump sum, no count)"},
+    "WEB-060": {"what": "sanitary labour", "kind": "LUMP_SUM", "qty": 1, "unit": "item",
+                "comparison": "NOT_COMPARABLE (lump sum, no count)"},
+    "WEB-019": {"what": "floor drains installation (tiling labour)", "kind": "NO_FREELANCER_ITEM", "qty": 24,
+                "unit": "qty", "comparison": "UNRESOLVED_SCOPE (payable count; covered population not printed)"},
+    "WEB-018": {"what": "showers (tiling labour)", "kind": "NO_FREELANCER_ITEM", "qty": 11, "unit": "qty",
+                "comparison": "UNRESOLVED_SCOPE (payable count; unit and covered population not printed)"},
 }
+B12_01_FREELANCER = "NOT_COMPARABLE: no freelancer item (0 fixture / drain rows in the six freelancer workbooks)"
 
 
 def run():
