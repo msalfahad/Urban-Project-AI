@@ -178,7 +178,8 @@ def test_run_with_a_count_change_is_refused():
 
 def test_development_villa_schedule_reproduces_the_committed_record(tmp_path):
     lines, pop_of = B.load_candidate()
-    rows, runs = B.build(lines, pop_of, B.shape_status(), B.lap_status(), B.t318_line_ids())
+    rows, runs = B.build(lines, pop_of, B.shape_status(), B.lap_status(), B.t318_line_ids(),
+                         downgrades=B.load_snapshot())
     assert len(rows) == 442
     out = tmp_path / "s.csv"
     B.write_csv(rows, out)
@@ -189,7 +190,23 @@ def test_development_villa_schedule_reproduces_the_committed_record(tmp_path):
     st = {p: v["row_status"] for p, v in s["populations"].items()}
     assert st["COL-TWIST-EXTRA"] == {"HELD": 1, "SHAPE_NOT_00": 1}           # F-T374-1: drawn top bend
     assert st["SLAB-TEMP"] == {"HELD": 3}
-    assert sum(r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED", "RUN_PART") for r in rows) == 205
+    assert st["FTG-BOT-MESH"] == {"HELD": 3, "HELD_DOWNGRADE": 38, "HELD_SAME_BASIS": 10}   # r2: DG-a97ec2ea66e02194
+    assert sum(r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED", "RUN_PART") for r in rows) == 157
+    exact = sum((r["net_kg_low"] for r in rows if r["row_status"] in ("SCHEDULED", "RUN_PART")), Decimal(0))
+    # the Checker's 5,124.317162 - 874.862222 = 4,249.454940 is the sum of the per-population 6 dp figures; the
+    # unrounded sum of n x L x d^2/162 (repeating thirds) is 4,249.4549405.. and rounds to ..941 (display only)
+    pops = B.summarise(rows, runs)["populations"]
+    assert sum(Decimal(v["scheduled_net_kg"]) for v in pops.values()) == Decimal("4249.454940")
+    assert abs(exact - Decimal("4249.454940")) < Decimal("0.000001")
+    dg = [r for r in rows if r["row_status"] == "HELD_DOWNGRADE"]
+    assert {r["downgrade_id"] for r in dg} == {"DG-a97ec2ea66e02194"}
+    assert B.fmt_kg(sum((r["audit_kg_low"] for r in dg), Decimal(0))) == "874.862227"   # = the record's engine_qty
+    sb = [r for r in rows if r["row_status"] == "HELD_SAME_BASIS"]
+    assert B.fmt_kg(sum((r["audit_kg_low"] for r in sb), Decimal(0))) == "1606.069136"
+    assert B.fmt_kg(sum((r["audit_kg_high"] for r in sb), Decimal(0))) == "1655.560494"
+    for r in dg + sb:
+        assert r["cut_length_m"] == r["n"] == r["stock_bars"] == r["procurement"] == "" and r["net_kg_low"] is None
+        assert r["audit_basis"].startswith("UNSUPPORTED BASIS (DG-a97ec2ea66e02194)")
     # every scheduled exact row: net within the candidate's storage precision, cause named
     for r in rows:
         if r["row_status"] in ("SCHEDULED", "RUN_PART") and r["evidence_state"] == "SOURCE_DERIVED":
@@ -206,3 +223,73 @@ def test_no_line_of_the_schedule_is_rebooked_by_v3027():
     lines, pop_of = B.load_candidate()
     ids = {k for k, v in pop_of.items() if v in B.POPULATIONS}
     assert len(ids) == 442 and not ids & B.t318_line_ids()
+
+
+# ---------------------------------------------------------------- r2: Checker downgrade records (R-T374-6 / -6b)
+
+def _snap(records):
+    return {"records": [dict({"state": "HELD", "resolved": False, "basis_label": "UNSUPPORTED BASIS",
+                              "verdict_sets": ["V3.0.9"]}, **r) for r in records]}
+
+
+def test_line_under_an_unresolved_downgrade_record_is_never_scheduled():
+    lines, pop_of = villa()
+    snap = _snap([{"downgrade_id": "DG-X1", "line_ids": ["V-C1"]},
+                  {"downgrade_id": "DG-X0", "line_ids": ["V-C1"], "verdict_sets": ["V3.0.8"]},   # its re-issue
+                  {"downgrade_id": "DG-R", "line_ids": ["V-F1"], "resolved": True}])          # resolved: no hold
+    rows, _ = B.build(lines, pop_of, NOW, LAPS, ledgers={}, downgrades=snap)
+    r = by_id(rows)
+    c = r["V-C1"]
+    assert c["row_status"] == "HELD_DOWNGRADE" and c["downgrade_id"] == "DG-X1" and "re-issue of DG-X0" in c["reason"]
+    assert c["cut_length_m"] == c["n"] == c["stock_bars"] == c["bar_mark"] == "" and c["net_kg_low"] is None
+    assert B.fmt_kg(c["audit_kg_low"]) == "34.133000" and c["audit_basis"].startswith("UNSUPPORTED BASIS (DG-X1)")
+    assert r["V-F1"]["row_status"] == "SCHEDULED"                                     # a resolved record holds nothing
+    s = B.summarise(rows, _)
+    assert s["populations"]["COL-MAIN-BODY"]["scheduled_net_kg"] == "0.000000"
+    assert s["populations"]["COL-MAIN-BODY"]["procurement_kg"] == ["0.000000", "0.000000"]
+
+
+def test_run_member_under_a_downgrade_refuses_the_run():
+    lines, pop_of = villa()
+    with pytest.raises(B.ScheduleRefused, match="run not schedulable whole"):
+        B.build(lines, pop_of, NOW, LAPS, ledgers={}, downgrades=_snap([{"downgrade_id": "DG-G", "line_ids": ["V-G1"]}]))
+
+
+def test_same_basis_footing_line_is_held_and_the_signature_is_checked_against_the_record():
+    lines, pop_of = villa()
+    rec = B.FTG_MESH_BASIS_RECORD
+    for l in lines[:3]:     # the villa footing lines state the minimum cover as the bar-end position
+        l["inputs"]["cover"] = "MINIMUM 70 mm (note: not less than 7 cm)"
+        l["formula"] = "n x (side 2000 - 2 x 70 mm) x kg/m"
+    rows, _ = B.build(lines, pop_of, NOW, LAPS, ledgers={}, downgrades=_snap([{"downgrade_id": rec, "line_ids": ["V-F1"]}]))
+    r = by_id(rows)
+    assert r["V-F1"]["row_status"] == "HELD_DOWNGRADE"
+    assert r["V-F2"]["row_status"] == r["V-F3"]["row_status"] == "HELD_SAME_BASIS"       # not in the list, same basis
+    assert r["V-F3"]["n"] == "" and B.fmt_kg(r["V-F3"]["audit_kg_high"]) == "12.088889"
+    # a footing line with a PRINTED (not minimum) bar-end position keeps its row
+    lines2, _ = villa()
+    for l in lines2[:3]:
+        l["inputs"]["cover"] = "MINIMUM 70 mm"
+        l["formula"] = "n x (side 2000 - 2 x 70 mm) x kg/m"
+    lines2[1]["inputs"]["cover"] = "PRINTED bar length 1.85 m"
+    rows2, _ = B.build(lines2, pop_of, NOW, LAPS, ledgers={}, downgrades=_snap([{"downgrade_id": rec, "line_ids": ["V-F1"]}]))
+    assert by_id(rows2)["V-F2"]["row_status"] == "SCHEDULED"
+    # adverse: the record holds a line WITHOUT its stated basis -> the signature is wrong, the build stops
+    with pytest.raises(B.ScheduleRefused, match="without the stated basis"):
+        B.build(lines2, pop_of, NOW, LAPS, ledgers={}, downgrades=_snap([{"downgrade_id": rec, "line_ids": ["V-F2"]}]))
+
+
+def test_committed_schedule_has_no_scheduled_line_under_any_unresolved_record():
+    snap = B.load_snapshot()
+    held = {lid for r in snap["records"] if not r["resolved"] for lid in r["line_ids"]}
+    rows = list(csv.DictReader(open(HERE / "T374_STRAIGHT_BBS.csv", encoding="utf-8")))
+    leak = [r["line_id"] for r in rows if r["line_id"] in held and r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED",
+                                                                                         "RUN_PART")]
+    assert not leak and sum(r["line_id"] in held for r in rows) == 38
+    assert "V3.0.29" in snap["source_sha256"] and "V3.0.25" in snap["source_sha256"]
+
+
+def test_snapshot_equals_the_board_verdict_files_when_the_board_is_present():
+    if not B.BOARD_VERDICTS.is_dir():
+        pytest.skip("agents/control board worktree not beside this tree")
+    assert B.snapshot_downgrades(B.BOARD_VERDICTS) == B.load_snapshot()

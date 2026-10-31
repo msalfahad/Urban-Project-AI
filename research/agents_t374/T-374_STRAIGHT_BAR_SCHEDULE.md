@@ -4,6 +4,74 @@ Worker 1 (structural lane S), 2026-10-30, run session_01E6cPndAZoV3Hdbj7bmdmfg, 
 schedule built on the candidate's own figures: **no candidate line, rule, method or released quantity changes**; B11-02
 stays PARTIAL. Drawings are named by Drive folder and title only; nothing private is in the repository.
 
+## R2 (2026-10-31, worker 1): rework of the Verifier 2026-10-30 21:08 REJECTED at (f) / (h)
+
+**Fault fixed.** The 38 line ids of the unresolved Checker downgrade record **DG-a97ec2ea66e02194** (verdicts/V3.0.20 ..
+V3.0.29 DOWNGRADES.json, state HELD, resolved false, UNSUPPORTED BASIS: footing mesh BOTTOM_LONG / BOTTOM_SHORT run
+side - 2 x 70 mm = the p.8 note-22 MINIMUM cover as bar-end position, with the p.13 boxed-bar leg of unprinted diameter
+between bar end and face) were SCHEDULED with cut lengths and procurement in r1. A cutting length is exactly what the
+record says has no supported basis. In r2 they are **HELD_DOWNGRADE by the record id**: cut length, count, bar mark and
+procurement BLANK; the candidate value 874.862227 kg (= the record's engine_qty) only in the audit columns
+`audit_kg_low/high` labelled `UNSUPPORTED BASIS (DG-a97ec2ea66e02194): candidate upper value, audit only`. The record is
+a re-issue of DG-eba2b0b8c7397b9a / DG-d0012905259e345c / DG-1b0eacce2d68f2a5 (V3.0.19 / .18 / .17, same 38 ids); the
+row names the record of the latest verdict set and lists the re-issues.
+
+**All records read** (R-T374-6): every verdicts/V3.0.x/DOWNGRADES.json (V3.0.16 .. V3.0.29, 20 records, all unresolved)
+is snapshotted with its file sha256 in `T374_BOUND_DOWNGRADES.json` (record ids, states, line ids only; regenerate with
+`--snapshot-from <board>/docs/agents/verdicts`; a test compares it with the board when the board worktree is present).
+Join of the 442 schedule lines to all 20 records: only DG-a97ec2ea66e02194 (and its three re-issues) touches them, 38
+lines; the five lap / bar-end records (DG-30f5.., DG-8afa.., DG-a941.., DG-aaab.., DG-64e1..: 373 line ids) and the
+concrete records touch none of the 442 (the lap / development lines were never in the schedule: R-T374-2).
+
+**The 10 FTG '/m' lines (r1 SCHEDULED_BOUNDED).** Answer: **yes, the same basis.** All 10 (F8, F12, F13, F14, FF, long +
+short) carry in their own formula `n x (side - 2 x 70 mm)` and cover text `MINIMUM 70 mm (... note 22 ...)`, exactly the
+record's stated basis; they are not in its line list (they were BOUNDED for the Q-71 count). Booked **HELD_SAME_BASIS**
+(R-T374-6b) naming DG-a97ec2ea66e02194 as the basis, cut length / count / procurement blank, candidate range
+1,606.069136 .. 1,655.560494 kg in the audit columns. The signature is checked against the record: every one of its 38
+lines carries it, else the build stops (test). Proposed to the Checker: extend the record to these 10 ids
+(**DGP-T374-FTGM**); never edited here. FF (lift-pit raft) additionally sits under the DG-3521554d2fd011b9 blinding
+question, which does not change its bar basis.
+
+**Restated result (acceptance (a), (b)).** 442 lines bound: 125 SCHEDULED + 32 RUN_PART = **157 lines on 131 bar
+marks**; 38 HELD_DOWNGRADE + 10 HELD_SAME_BASIS (FTG-BOT-MESH has no schedulable line now); 1 SHAPE_NOT_00; 65 HELD + 33
+HELD_DEFINED; 17 BOUNDED_NO_ROW; 121 NA_SUPERSEDED.
+
+| Population | Scheduled net kg (r2) | Candidate kg | Diff (named) | Held by downgrade (audit only) |
+|---|---|---|---|---|
+| FTG-BOT-MESH | **0** (was 874.862222 + 1,606.069 .. 1,655.560) | - | - | 874.862227 (DG-a97.., 38) + 1,606.069136 .. 1,655.560494 (same basis, 10) |
+| COL-MAIN-BODY | 1,874.488889 | 1,874.486000 | +0.002889 (3 dp storage) | - |
+| CB-BOTTOM | 731.755785 | 731.755000 | +0.000785 | - |
+| CB-SUPPORT-TOP | 390.302044 | 390.303000 | -0.000956 | - |
+| GB-MAIN | 1,252.908222 | 1,252.907000 | +0.001222 | - |
+| **All** | **4,249.454940** | **4,249.451000** | **+0.003940** (storage rounding, 125 + 32 lines) | 874.862227 + 1,606.069 .. 1,655.560 |
+
+4,249.454940 = 5,124.317162 - 874.862222 (the Checker's figure; this join reproduces it as the sum of the population
+figures; the unrounded n x L x d^2/162 sum is 4,249.4549405.., display rounding only). The r1 "-0.000005 kg footing"
+cause disappears with the footing rows.
+
+**Procurement re-nested** (12 m stock ASSUMED - OWNER-APPROVED OD-V3-3; 459.947 kg on the two runs over 12 m stays
+without procurement, lap HELD): on **3,789.508275 kg** of exact net with a procurement view (was 4,664.370), per mark
+(no reuse) 287 stock bars = 5,458.370 kg; nested per diameter (FFD) **221 stock bars = 4,245.926 kg** (offcut 456.418
+kg = 10.75 %; ø14 2.3 %, ø16 12.7 %, ø18 7.2 %; ø12 no longer present: all ø12 bars were footing mesh), lower bound
+199 bars. No procurement figure enters any BOQ line.
+
+**F-T374-2 text fixed.** r1 said "under A: SB1 top 118.300 kg ...". Wrong use of the answer: Q-74 is ANSWERED A (owner
+2026-10-22) for the strap CONCRETE length only ("bars, formwork and excavation derived separately"); it sets no strap
+bar length. The r1 'under A' kg figures are withdrawn as a re-booking proposal; the SB1 - SB3 bar lines stay
+BOUNDED_NO_ROW on their own bar-end / section basis. The candidate text "owner Q-74 open" is quoted unchanged in the
+CSV with an appended note naming the answer (9 lines).
+
+**T-371 erratum**: `T371_ERRATUM.md` (E-1 FTG-BOT-MESH under DG-a97ec2ea66e02194, E-2 COL-TWIST-EXTRA); SCHEDULABLE_NOW
+becomes 5 populations / 389 lines; merged T-371 files untouched.
+
+**Tests** (`tests/t374_straight_bbs`, 16): r1's 11 kept (regression updated to r2 figures) + adverse: a line under an
+unresolved record is never SCHEDULED (resolved record holds nothing; re-issue named); a run member under a record
+refuses the run; a same-basis footing line HELD, a printed-length footing line kept, a record line without the stated
+basis stops the build; the committed CSV has no scheduled line under any unresolved record; snapshot = board files.
+
+Sections 1 - 8 below are r1; where they give FTG-BOT-MESH schedule rows, the 205 / 179 / 5,124.317162 totals, the
+r1 procurement figures or F-T374-2's 'under A' figures, **this R2 section supersedes them**.
+
 ## 0. Inputs and binding
 
 - Candidate lines: the merged T-297 extract `research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json` (ARCH_TAKEOFF_V3.0.16
@@ -146,7 +214,8 @@ ledger -> SHAPE_NOT_00; hooked bar as 00 refused) | PROPOSED |
 
 ## 8. Verdicts, self-gate, not done
 
-Verdicts: 205 scheduled lines ENGINE_RIGHT in net basis (n x L x d^2/162 = candidate to storage precision); COL-TWIST-EXTRA
+Verdicts (r2): 157 scheduled lines ENGINE_RIGHT in net basis; the 38 DG-a97ec2ea66e02194 lines and the 10 same-basis
+lines UNRESOLVED (HELD, cut length unsupported); r1 text: 205 scheduled lines ENGINE_RIGHT in net basis (n x L x d^2/162 = candidate to storage precision); COL-TWIST-EXTRA
 shape ENGINE_WRONG in the T-371 census (bent, not 00), the 12.642 kg net unchanged; freelancer RULE_DIFFERENCE, no %.
 Checker re-measure: (1) the 442 line ids against your own V3.0.27; (2) p.15 twisted-column top ends; (3) five rows by
 hand: footing F5 BOTTOM_LONG 20 x 2.26 m ø12 = 40.177778 kg; column COL-GF-11 14 x 4.50 m ø16 = 99.555556 kg; CB8 span 2

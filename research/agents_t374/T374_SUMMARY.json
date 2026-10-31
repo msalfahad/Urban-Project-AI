@@ -2,27 +2,16 @@
  "policy": "STRAIGHT_BAR_SCHEDULE_V1",
  "shape_code": "00",
  "exact_rows_nested_by_diameter_ffd": {
-  "12": {
-   "stock_bars": 56,
-   "lower_bound_bars": 55,
-   "offcut_m": "15.1",
-   "offcuts_over_1m": 1,
-   "pieces": 415,
-   "net_kg": "583.911111",
-   "procurement_kg": "597.333333",
-   "offcut_kg": "13.422222",
-   "offcut_share": "0.0225"
-  },
   "14": {
-   "stock_bars": 46,
-   "lower_bound_bars": 45,
-   "offcut_m": "18.3207",
-   "offcuts_over_1m": 3,
-   "pieces": 221,
-   "net_kg": "645.686067",
-   "procurement_kg": "667.851852",
-   "offcut_kg": "22.165785",
-   "offcut_share": "0.0332"
+   "stock_bars": 25,
+   "lower_bound_bars": 25,
+   "offcut_m": "6.8007",
+   "offcuts_over_1m": 1,
+   "pieces": 123,
+   "net_kg": "354.734956",
+   "procurement_kg": "362.962963",
+   "offcut_kg": "8.228007",
+   "offcut_share": "0.0227"
   },
   "16": {
    "stock_bars": 163,
@@ -55,37 +44,56 @@
    "lines": 51,
    "row_status": {
     "HELD": 3,
-    "SCHEDULED": 38,
-    "SCHEDULED_BOUNDED": 10
+    "HELD_DOWNGRADE": 38,
+    "HELD_SAME_BASIS": 10
    },
-   "scheduled_net_kg": "874.862222",
-   "candidate_released_basis_kg": "874.862227",
-   "net_minus_candidate_kg": "-0.000005",
-   "difference_causes": {
-    "KG_STORAGE_ROUNDING": 44,
-    "NONE": 4
-   },
+   "scheduled_net_kg": "0.000000",
+   "candidate_released_basis_kg": "0.000000",
+   "net_minus_candidate_kg": "0.000000",
+   "difference_causes": {},
    "scheduled_bounded_kg": [
-    "1606.069136",
-    "1655.560494"
+    "0.000000",
+    "0.000000"
    ],
    "candidate_bounded_kg_of_scheduled": [
-    "1606.069136",
-    "1655.560494"
+    "0.000000",
+    "0.000000"
    ],
    "bounded_carried_by_name_kg": [
     "0.000000",
     "0.000000"
    ],
+   "held_by_downgrade_audit_kg": {
+    "HELD_DOWNGRADE": {
+     "lines": 38,
+     "records": [
+      "DG-a97ec2ea66e02194"
+     ],
+     "audit_kg": [
+      "874.862227",
+      "874.862227"
+     ]
+    },
+    "HELD_SAME_BASIS": {
+     "lines": 10,
+     "records": [
+      "DG-a97ec2ea66e02194"
+     ],
+     "audit_kg": [
+      "1606.069136",
+      "1655.560494"
+     ]
+    }
+   },
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
    ],
    "procurement_kg": [
-    "3195.555556",
-    "3262.518519"
+    "0.000000",
+    "0.000000"
    ],
-   "bar_marks": 48
+   "bar_marks": 0
   },
   "COL-MAIN-BODY": {
    "lines": 120,
@@ -113,6 +121,7 @@
     "0.000000",
     "0.000000"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
@@ -145,6 +154,7 @@
     "0.000000",
     "0.000000"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "12.642000",
     "12.642000"
@@ -181,6 +191,7 @@
     "0.000000",
     "0.000000"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
@@ -220,6 +231,7 @@
     "0.000000",
     "27.156000"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
@@ -258,6 +270,7 @@
     "549.901359",
     "911.595555"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
@@ -289,6 +302,7 @@
     "0.000000",
     "0.000000"
    ],
+   "held_by_downgrade_audit_kg": {},
    "shape_not_00_carried_by_name_kg": [
     "0.000000",
     "0.000000"
@@ -411,17 +425,11 @@
   }
  ],
  "exact_rows_procurement_by_diameter": {
-  "12": {
-   "net_kg": "583.911111",
-   "procurement_kg": "778.666667",
-   "offcut_kg": "194.755556",
-   "stock_bars": 73
-  },
   "14": {
-   "net_kg": "645.686067",
-   "procurement_kg": "987.259259",
-   "offcut_kg": "341.573193",
-   "stock_bars": 68
+   "net_kg": "354.734956",
+   "procurement_kg": "638.814815",
+   "offcut_kg": "284.079859",
+   "stock_bars": 44
   },
   "16": {
    "net_kg": "2699.817719",
@@ -436,6 +444,11 @@
    "stock_bars": 42
   }
  },
- "candidate": "ARCH_TAKEOFF_V3.0.27 by projection: V3.0.16 extract (sha256 2f28367b) + the T-318 re-booked line ids (none of these lines)",
- "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json"
+ "candidate": "ARCH_TAKEOFF_V3.0.27 by projection: V3.0.16 extract (sha256 2f28367b) + the T-318 re-booked line ids (none of these lines); downgrade records of every verdict set up to V3.0.29 (ARCH_TAKEOFF_V3.0.29)",
+ "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json",
+ "downgrade_snapshot": {
+  "file": "T374_BOUND_DOWNGRADES.json",
+  "sha256": "8d3eaab2ca63ccac457ad7a0f81a67e1488e829438c265f18d4782193e88264f",
+  "unresolved_records": 20
+ }
 }

@@ -22,6 +22,16 @@ OWNER_RULE_REBAR_2026-10-24, owner option B 2026-10-29):
             lines.
   HELD / BLOCKED / NA lines get no schedule kg (never 0); a bounded line is scheduled only where the bound is a count
   range on one fixed straight geometry (footing Q-71 readings), otherwise it is carried by name.
+  R-T374-6  (r2, Verifier 2026-10-30 21:08) a line under ANY unresolved Checker downgrade record (every
+            verdicts/V3.0.x/DOWNGRADES.json, snapshot T374_BOUND_DOWNGRADES.json) is never SCHEDULED: it is booked
+            HELD_DOWNGRADE (state of the record, HELD / CONFLICT) by the record id, cut length, count, procurement BLANK;
+            the candidate value is carried only in the audit columns labelled with the record's basis label
+            (UNSUPPORTED BASIS). The record of the latest verdict set names the line; earlier re-issues are listed.
+  R-T374-6b a line NOT in a record's line list whose own content carries the record's stated basis (footing mesh,
+            FOOTING_REBAR_POPULATION_V1, run = side - 2 x printed MINIMUM cover, DG-a97ec2ea66e02194) gets the same
+            treatment, booked HELD_SAME_BASIS with the record id named as the basis and the extension proposed to the
+            Checker (the record itself is never edited here). Every line of that record must carry the basis too, or the
+            build stops (the signature is checked against the record, not assumed).
 
 All lengths are handled in integer 0.1 mm units, so boundary cases read from decimal text are exact.
 
@@ -55,6 +65,17 @@ T371_BINDING = ROOT / "research/agents_t371/LINE_BINDING_T371.json"
 T371_MATRIX = ROOT / "research/agents_t371/T371_MATRIX.csv"
 T366_MATRIX = ROOT / "research/agents_t366/T366_MATRIX.csv"
 T318_INPUTS = ROOT / "research/agents_t318/t318_inputs.py"
+DOWNGRADE_SNAPSHOT = Path(__file__).resolve().parent / "T374_BOUND_DOWNGRADES.json"
+BOARD_VERDICTS = ROOT.parent / "board/docs/agents/verdicts"      # the agents/control worktree beside this tree
+CANDIDATE_OF_RECORD = "ARCH_TAKEOFF_V3.0.29"
+FTG_MESH_BASIS_RECORD = "DG-a97ec2ea66e02194"
+HELD_ROW_STATES = ("HELD_DOWNGRADE", "HELD_SAME_BASIS")
+# candidate text that an owner answer has overtaken: the candidate quote is kept, the schedule appends the status (F-T374-2)
+STALE_TEXT = {
+    "Q-74 open": "[T-374 note F-T374-2: Q-74 is ANSWERED A (owner 2026-10-22) for the strap CONCRETE length only: "
+                 "'bars, formwork and excavation derived separately'; it sets no strap bar length, so these bars stay "
+                 "unscheduled on their own bar-end / section basis, not on Q-74]",
+}
 
 # T-371 population -> (bar-mark prefix, T-366 lap population id)
 POPULATIONS = {
@@ -361,7 +382,122 @@ def assemble_run(band, pos, members, stock_u) -> dict:
     return out
 
 
+# ---------------------------------------------------------------- Checker downgrade records (R-T374-6)
+
+def _ids(v):
+    import ast
+    return list(ast.literal_eval(v)) if isinstance(v, str) else list(v)
+
+
+def snapshot_downgrades(verdicts_dir=BOARD_VERDICTS) -> dict:
+    """read EVERY verdicts/V3.0.x/DOWNGRADES.json (board branch agents/control): per record its id, state, resolved,
+    basis label, unit, the verdict sets carrying it, its line ids; plus each source file's sha256. Record ids only, no
+    drawing content. A record id carried with different line ids or resolution in two sets stops the build."""
+    verdicts_dir = Path(verdicts_dir)
+    files = sorted(verdicts_dir.glob("V3.0.*/DOWNGRADES.json"),
+                   key=lambda f: tuple(int(x) for x in f.parent.name[1:].split(".")))
+    if not files:
+        raise ScheduleRefused(f"no DOWNGRADES.json under {verdicts_dir}")
+    recs, srcs = {}, {}
+    for f in files:
+        srcs[f.parent.name] = sha256(f)
+        for r in json.load(open(f, encoding="utf-8"))["downgrades"]:
+            k = r["downgrade_id"]
+            ids = sorted(_ids(r["line_ids"]))
+            cur = recs.setdefault(k, {"downgrade_id": k, "state": r["state"], "resolved": r["resolved"],
+                                      "basis_label": r.get("basis_label"), "unit": r.get("unit"),
+                                      "candidate_version": r.get("candidate_version"),
+                                      "line_content_sha256": r.get("line_content_sha256"),
+                                      "engine_qty": r.get("engine_qty"), "verdict_sets": [], "line_ids": ids})
+            if cur["line_ids"] != ids or cur["resolved"] != r["resolved"] or cur["state"] != r["state"]:
+                raise ScheduleRefused(f"{k}: carried with different content in {f.parent.name}")
+            cur["verdict_sets"].append(f.parent.name)
+    return {"schema": "T374_BOUND_DOWNGRADES_V1", "candidate_of_record": CANDIDATE_OF_RECORD,
+            "source": "docs/agents/verdicts/V3.0.x/DOWNGRADES.json on branch agents/control",
+            "source_sha256": srcs, "records": [recs[k] for k in sorted(recs)]}
+
+
+def downgrades_by_line(snapshot) -> dict:
+    """line id -> the unresolved records holding it, the one carried by the LATEST verdict set first (it names the
+    line; earlier sets carrying the same line ids are its re-issues)."""
+    order = lambda r: max(tuple(int(x) for x in v[1:].split(".")) for v in r["verdict_sets"])
+    out = defaultdict(list)
+    for r in sorted(snapshot["records"], key=order, reverse=True):
+        if r["resolved"]:
+            continue
+        for lid in r["line_ids"]:
+            out[lid].append(r)
+    return dict(out)
+
+
+def ftg_mesh_basis(line) -> bool:
+    """R-T374-6b signature of DG-a97ec2ea66e02194's stated basis, read from the line's own content: a footing bottom
+    mesh bar whose run is the side less 2 x the printed MINIMUM cover (the cover used as the bar-end position)."""
+    inp = line.get("inputs") or {}
+    return (inp.get("policy") == "FOOTING_REBAR_POPULATION_V1"
+            and inp.get("component") in ("BOTTOM_LONG", "BOTTOM_SHORT")
+            and str(inp.get("cover") or "").startswith("MINIMUM 70 mm")
+            and re.search(r"side \d+ - 2 x 70 mm", line.get("formula") or "") is not None)
+
+
+def apply_downgrades(row, line, by_line, basis_ids=frozenset()) -> dict:
+    """R-T374-6 / -6b on one row already valued by schedule_line: a scheduled (or bounded-scheduled) row under an
+    unresolved record, or carrying its basis, loses every schedule and procurement value; the candidate figure moves
+    to the audit columns labelled UNSUPPORTED BASIS. Rows that are not scheduled keep their own status."""
+    recs = by_line.get(line["line_id"], [])
+    same = (not recs and ftg_mesh_basis(line) and FTG_MESH_BASIS_RECORD in basis_ids)
+    if not recs and not same:
+        return row
+    if row["row_status"] not in ("SCHEDULED", "SCHEDULED_BOUNDED"):
+        if recs:
+            row["downgrade_id"] = recs[0]["downgrade_id"]
+        return row
+    inp = line.get("inputs") or {}
+    printed = f"count {row['n']} x d {row['d_mm']} mm as printed; run {row['cut_length_m']} m = UNSUPPORTED BASIS"
+    lo, hi = row["candidate_kg_low"], row["candidate_kg_high"]
+    if recs:
+        r0 = recs[0]
+        rid, label = r0["downgrade_id"], r0.get("basis_label") or "UNSUPPORTED BASIS"
+        status = "HELD_DOWNGRADE"
+        reis = [r["downgrade_id"] for r in recs[1:]]
+        why = (f"{r0['state']} by Checker downgrade {rid} (resolved false; verdict sets {', '.join(r0['verdict_sets'])}"
+               + (f"; re-issue of {', '.join(reis)}" if reis else "") + f"): {label}; no cut length, no procurement")
+    else:
+        rid, label = FTG_MESH_BASIS_RECORD, "UNSUPPORTED BASIS"
+        status = "HELD_SAME_BASIS"
+        why = (f"HELD on the basis of {rid} (R-T374-6b): its own formula '{line.get('formula')}' and cover "
+               f"'{inp.get('cover')}' are the record's unsupported basis (minimum cover as bar-end position, boxed-bar "
+               "leg of unprinted diameter); NOT in the record's line list: extension proposed to the Checker "
+               "(DGP-T374-FTGM); count also open (Q-71 readings); no cut length, no procurement")
+    for k in ("shape_code", "d_mm", "n", "cut_length_m", "kg_per_m", "bar_mark", "bars_per_stock", "stock_bars",
+              "offcuts", "procurement"):
+        row[k] = ""
+    for k in ("net_kg_low", "net_kg_high", "candidate_kg_low", "candidate_kg_high", "diff_kg", "procurement_kg_low",
+              "procurement_kg_high", "offcut_kg_low", "offcut_kg_high"):
+        row[k] = None
+    for k in ("_n", "_lu"):
+        row.pop(k, None)
+    row.update(row_status=status, downgrade_id=rid, diff_cause="", held_geometry=printed, reason=why,
+               audit_kg_low=lo, audit_kg_high=hi,
+               audit_basis=f"{label} ({rid}): candidate upper value, audit only, never scheduled or procured")
+    return row
+
+
+def check_basis_signature(lines, by_line):
+    """every line of the footing-mesh record must carry the basis the record states, or the 6b signature is wrong."""
+    held = {lid for lid, rs in by_line.items() if any(r["downgrade_id"] == FTG_MESH_BASIS_RECORD for r in rs)}
+    present = [l for l in lines if l["line_id"] in held]
+    bad = [l["line_id"] for l in present if not ftg_mesh_basis(l)]
+    if bad:
+        raise ScheduleRefused(f"{FTG_MESH_BASIS_RECORD}: lines without the stated basis: {bad[:3]}")
+    return len(present)
+
+
 # ---------------------------------------------------------------- build
+
+def load_snapshot(path=DOWNGRADE_SNAPSHOT) -> dict:
+    return json.load(open(path, encoding="utf-8"))
+
 
 def load_candidate(extract=EXTRACT, binding=T371_BINDING):
     if sha256(Path(extract)) != EXTRACT_SHA:
@@ -434,9 +570,13 @@ def shape_from_ledger(row, line, ledgers):
     return row
 
 
-def build(lines, pop_of, shapes, laps, rebooked_ids=frozenset(), stock_m=STOCK_M, ledgers=None):
+def build(lines, pop_of, shapes, laps, rebooked_ids=frozenset(), stock_m=STOCK_M, ledgers=None, downgrades=None):
     stock_u = to_u(stock_m)
     ledgers = load_ledgers() if ledgers is None else ledgers
+    by_line = downgrades_by_line(downgrades) if downgrades else {}
+    basis_ids = {r["downgrade_id"] for rs in by_line.values() for r in rs}
+    if FTG_MESH_BASIS_RECORD in basis_ids:
+        check_basis_signature(lines, by_line)
     rows = []
     for line in sorted(lines, key=lambda x: (x["floor"], x["element_id"], x["line_id"])):
         pop = pop_of.get(line["line_id"])
@@ -444,7 +584,12 @@ def build(lines, pop_of, shapes, laps, rebooked_ids=frozenset(), stock_m=STOCK_M
             continue
         if line["line_id"] in rebooked_ids:
             raise ScheduleRefused(f"{line['line_id']} is re-booked by V3.0.27 (T-318): bind the re-booked line")
-        rows.append(shape_from_ledger(schedule_line(line, pop, shapes, laps), line, ledgers))
+        rows.append(apply_downgrades(shape_from_ledger(schedule_line(line, pop, shapes, laps), line, ledgers),
+                                     line, by_line, basis_ids))
+    leak = [r["line_id"] for r in rows if r["line_id"] in by_line
+            and r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED", "RUN_PART")]
+    if leak:
+        raise ScheduleRefused(f"lines under an unresolved downgrade record scheduled: {leak[:3]}")
     runs = find_runs(rows)
     run_rows, in_run = [], {}
     for band in sorted(runs):
@@ -489,7 +634,7 @@ def build(lines, pop_of, shapes, laps, rebooked_ids=frozenset(), stock_m=STOCK_M
         r["offcut_kg_high"] = r["procurement_kg_high"] - r["net_kg_high"]
     for rr in run_rows:
         rr["bar_mark"] = run_mark[rr["run_id"]]
-    return rows, run_rows
+    return annotate_stale(rows), run_rows
 
 
 def _count(xs):
@@ -511,6 +656,7 @@ def summarise(rows, run_rows, stock_m=STOCK_M):
         bnd = [r for r in sched if r["evidence_state"] == "BOUNDED_EXPOSURE"]
         carried = [r for r in rs if r["row_status"] == "BOUNDED_NO_ROW"]
         not00 = [r for r in rs if r["row_status"] == "SHAPE_NOT_00"]
+        dg = [r for r in rs if r["row_status"] in HELD_ROW_STATES]
         s = lambda xs, k: sum((x[k] for x in xs), Decimal(0))
         pops[pop] = {
             "lines": len(rs), "row_status": dict(sorted(cnt.items())),
@@ -521,6 +667,11 @@ def summarise(rows, run_rows, stock_m=STOCK_M):
             "scheduled_bounded_kg": [fmt_kg(s(bnd, "net_kg_low")), fmt_kg(s(bnd, "net_kg_high"))],
             "candidate_bounded_kg_of_scheduled": [fmt_kg(s(bnd, "candidate_kg_low")), fmt_kg(s(bnd, "candidate_kg_high"))],
             "bounded_carried_by_name_kg": [fmt_kg(s(carried, "candidate_kg_low")), fmt_kg(s(carried, "candidate_kg_high"))],
+            "held_by_downgrade_audit_kg": {st: {"lines": sum(r["row_status"] == st for r in dg),
+                                                "records": sorted({r["downgrade_id"] for r in dg if r["row_status"] == st}),
+                                                "audit_kg": [fmt_kg(s([r for r in dg if r["row_status"] == st], "audit_kg_low")),
+                                                             fmt_kg(s([r for r in dg if r["row_status"] == st], "audit_kg_high"))]}
+                                           for st in HELD_ROW_STATES if any(r["row_status"] == st for r in dg)},
             "shape_not_00_carried_by_name_kg": [fmt_kg(s(not00, "candidate_kg_low")), fmt_kg(s(not00, "candidate_kg_high"))],
             "procurement_kg": [fmt_kg(sum((r.get("procurement_kg_low") or 0 for r in sched), Decimal(0))),
                                fmt_kg(sum((r.get("procurement_kg_high") or 0 for r in sched), Decimal(0)))],
@@ -573,9 +724,17 @@ COLUMNS = ["line_id", "population", "floor", "element_id", "element_mark", "comp
            "bar_mark", "shape_code", "d_mm", "n", "cut_length_m", "kg_per_m", "net_kg_low", "net_kg_high",
            "candidate_kg_low", "candidate_kg_high", "diff_kg", "lap", "run_id", "bars_per_stock", "stock_bars",
            "offcuts", "procurement_kg_low", "procurement_kg_high", "offcut_kg_low", "offcut_kg_high", "procurement",
-           "held_geometry", "diff_cause", "reason"]
+           "held_geometry", "diff_cause", "reason", "downgrade_id", "audit_kg_low", "audit_kg_high", "audit_basis"]
 KG_COLS = {"net_kg_low", "net_kg_high", "candidate_kg_low", "candidate_kg_high", "diff_kg", "procurement_kg_low",
-           "procurement_kg_high", "offcut_kg_low", "offcut_kg_high"}
+           "procurement_kg_high", "offcut_kg_low", "offcut_kg_high", "audit_kg_low", "audit_kg_high"}
+
+
+def annotate_stale(rows):
+    for r in rows:
+        for k, note in STALE_TEXT.items():
+            if k in (r.get("reason") or "") and note not in r["reason"]:
+                r["reason"] = r["reason"] + " " + note
+    return rows
 
 
 def write_csv(rows, path):
@@ -590,12 +749,21 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", required=True)
     ap.add_argument("--json", required=True)
+    ap.add_argument("--snapshot-from", help="verdicts dir: rewrite T374_BOUND_DOWNGRADES.json from the board first")
     a = ap.parse_args(argv)
+    if a.snapshot_from:
+        json.dump(snapshot_downgrades(a.snapshot_from), open(DOWNGRADE_SNAPSHOT, "w", encoding="utf-8"), indent=1)
+    dg = load_snapshot()
     lines, pop_of = load_candidate()
-    rows, run_rows = build(lines, pop_of, shape_status(), lap_status(), t318_line_ids())
+    rows, run_rows = build(lines, pop_of, shape_status(), lap_status(), t318_line_ids(), downgrades=dg)
     summary = summarise(rows, run_rows)
     summary.update(candidate="ARCH_TAKEOFF_V3.0.27 by projection: V3.0.16 extract (sha256 " + EXTRACT_SHA[:8] +
-                   ") + the T-318 re-booked line ids (none of these lines)", extract=str(EXTRACT.relative_to(ROOT)))
+                   ") + the T-318 re-booked line ids (none of these lines); downgrade records of every verdict set "
+                   "up to " + max(dg["source_sha256"], key=lambda v: tuple(int(x) for x in v[1:].split("."))) +
+                   " (" + CANDIDATE_OF_RECORD + ")", extract=str(EXTRACT.relative_to(ROOT)),
+                   downgrade_snapshot={"file": DOWNGRADE_SNAPSHOT.name,
+                                       "sha256": sha256(DOWNGRADE_SNAPSHOT),
+                                       "unresolved_records": sum(not r["resolved"] for r in dg["records"])})
     write_csv(rows, a.csv)
     json.dump(summary, open(a.json, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps({p: (v["lines"], v["row_status"], v["scheduled_net_kg"], v["net_minus_candidate_kg"])
