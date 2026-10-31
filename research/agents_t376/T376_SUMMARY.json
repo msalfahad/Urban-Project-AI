@@ -1,0 +1,310 @@
+{
+ "bend_not_printed_populations": [
+  "BEAM-LINKS",
+  "BEAM-SIDE-BARS",
+  "BM-UNSCHEDULED",
+  "CB-TOP-CORNER",
+  "CB-TOP-ENDS",
+  "COL-LINKS",
+  "COL-SECTION-TRANSITION",
+  "COL-TOP-END",
+  "COL-TWIST-SPIRAL",
+  "FTG-BOXED",
+  "FTG-TOP-END-LEGS",
+  "FTG-TOP-MESH",
+  "GB-BAR-ENDS",
+  "GB-BOTTOM-TIES",
+  "GB-STIRRUPS",
+  "PLANTED-COL-EXTRA",
+  "SB-BOTTOM",
+  "SB-BOTTOM-ENDS",
+  "SB-TOP",
+  "SB-TOP-ENDS",
+  "SLAB-BOTTOM",
+  "SLAB-DEVELOPMENT",
+  "SLAB-EXTRA",
+  "SLAB-TOP",
+  "SLAB-UNPRINTED-PANELS",
+  "STARTER"
+ ],
+ "by_row": {
+  "R01": {
+   "blank_held": 1050,
+   "dgp_lines": 264,
+   "kg_high_governed": "",
+   "kg_high_now": "18331.920889",
+   "kg_low_governed": "",
+   "kg_low_now": "14374.405993",
+   "lines": 1972,
+   "rfi": "RFI-B-S21 (d)",
+   "valued": 922
+  },
+  "R02": {
+   "blank_held": 322,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "3990.402383",
+   "kg_low_governed": "",
+   "kg_low_now": "3105.814955",
+   "lines": 515,
+   "rfi": "RFI-B-S21 (e)",
+   "valued": 193
+  },
+  "R03": {
+   "blank_held": 90,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 90,
+   "rfi": "RFI-B-S29",
+   "valued": 0
+  },
+  "R04": {
+   "blank_held": 20,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 20,
+   "rfi": "RFI-B-S30",
+   "valued": 0
+  },
+  "R05": {
+   "blank_held": 28,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 28,
+   "rfi": "RFI-B-S31 (a) (b)",
+   "valued": 0
+  },
+  "R06": {
+   "blank_held": 28,
+   "dgp_lines": 0,
+   "kg_high_governed": "487.963",
+   "kg_high_now": "",
+   "kg_low_governed": "278.836",
+   "kg_low_now": "",
+   "lines": 28,
+   "rfi": "RFI-B-S31 (c)",
+   "valued": 0
+  },
+  "R07": {
+   "blank_held": 0,
+   "dgp_lines": 58,
+   "kg_high_governed": "906.178000",
+   "kg_high_now": "906.178000",
+   "kg_low_governed": "517.818000",
+   "kg_low_now": "517.818000",
+   "lines": 58,
+   "rfi": "RFI-B-S32",
+   "valued": 58
+  },
+  "R08": {
+   "blank_held": 0,
+   "dgp_lines": 29,
+   "kg_high_governed": "419.769000",
+   "kg_high_now": "419.769000",
+   "kg_low_governed": "239.868000",
+   "kg_low_now": "239.868000",
+   "lines": 29,
+   "rfi": "RFI-B-S21 (f)",
+   "valued": 29
+  },
+  "R09": {
+   "blank_held": 2,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 2,
+   "rfi": "RFI-B-S33",
+   "valued": 0
+  },
+  "R10": {
+   "blank_held": 12,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 12,
+   "rfi": "RFI-B-S34",
+   "valued": 0
+  },
+  "R11": {
+   "blank_held": 30,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 30,
+   "rfi": "RFI-B-S09 (e)",
+   "valued": 0
+  },
+  "R12": {
+   "blank_held": 59,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "150.695000",
+   "kg_low_governed": "",
+   "kg_low_now": "136.573000",
+   "lines": 118,
+   "rfi": "RFI-B-S10 (e)",
+   "valued": 59
+  },
+  "R13": {
+   "blank_held": 59,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "1089.754000",
+   "kg_low_governed": "",
+   "kg_low_now": "429.268000",
+   "lines": 115,
+   "rfi": "RFI-B-S10 (f)",
+   "valued": 56
+  },
+  "R14": {
+   "blank_held": 2,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 2,
+   "rfi": "RFI-B-S10 (g)",
+   "valued": 0
+  },
+  "R15": {
+   "blank_held": 0,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "1064.239762",
+   "kg_low_governed": "",
+   "kg_low_now": "1064.239762",
+   "lines": 24,
+   "rfi": "RFI-B-S10 (h)",
+   "valued": 24
+  },
+  "R16": {
+   "blank_held": 3,
+   "dgp_lines": 0,
+   "kg_high_governed": "",
+   "kg_high_now": "",
+   "kg_low_governed": "",
+   "kg_low_now": "",
+   "lines": 3,
+   "rfi": "RFI-B-S10 (i)",
+   "valued": 0
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.27 (projection: T-297 extract V3.0.16 + merged T-318 inputs; equal to the reproduced file per tests/t373_lap_binding)",
+ "candidate_lines_changed": 0,
+ "extended": [
+  "RFI-B-S09",
+  "RFI-B-S10",
+  "RFI-B-S21"
+ ],
+ "extract_sha256": "2f28367b81fe362d98d8a97080adb62cfd9a3c0a880fc20d201735e6eba39760",
+ "id_note": "new ids proposed as the next free B structural numbers after RFI-B-S22 that do not collide with A's RFI-S01 .. S28 (S29 onward); the Lead confirms the final id when applying the row",
+ "kg_computed": 0,
+ "lines_unlocked_distinct": 2116,
+ "new_ids": [
+  "RFI-B-S29",
+  "RFI-B-S30",
+  "RFI-B-S31",
+  "RFI-B-S32",
+  "RFI-B-S33",
+  "RFI-B-S34"
+ ],
+ "not_asked": [
+  {
+   "cite": {
+    "t366_checked": "DXF"
+   },
+   "item": "T-366 item (4) stock length",
+   "reason": "owner-approved fallback 12 m (OD-V3-3, URBAN-REBAR-NET-AND-PROCUREMENT@v1): ASSUMED - OWNER-APPROVED, a procurement fact, not a designer one"
+  },
+  {
+   "cite": {
+    "field": "finding",
+    "t366": "COL-MAIN"
+   },
+   "item": "F-T366-2 beam ends on note 9",
+   "reason": "already RFI-B-S21 (a) / (b) (note-9 scope, end shape at end supports); 254 lines HELD under DG-30f59008802b7c52"
+  },
+  {
+   "cite": {
+    "attr": "body",
+    "t371": "FTG-TOP-END-LEGS"
+   },
+   "item": "FTG-TOP-END-LEGS / FTG-TOP-MESH",
+   "reason": "already RFI-B-S09 (top-bar ends of F8 / F12 - F14 / FF)"
+  },
+  {
+   "cite": {
+    "attr": "end_1",
+    "t371": "GB-BAR-ENDS"
+   },
+   "item": "GB-BAR-ENDS",
+   "reason": "already RFI-B-S09 (ground-beam / strap bar ends)"
+  },
+  {
+   "cite": {
+    "attr": "leg_length",
+    "t371": "CB-TOP-CORNER"
+   },
+   "item": "SB / CB top and bottom ends, CB top corner leg length",
+   "reason": "already RFI-B-S21 (end shape at end supports); the bend diameter is R01"
+  },
+  {
+   "cite": {
+    "attr": "crank",
+    "t371": "BEAM-LINKS"
+   },
+   "item": "nested links",
+   "reason": "already RFI-B-S20"
+  },
+  {
+   "cite": {
+    "attr": "body",
+    "t371": "BEAM-SIDE-BARS"
+   },
+   "item": "beam side bars 2ø12/30cm",
+   "reason": "already RFI-B-S19"
+  },
+  {
+   "cite": {
+    "attr": "end_1",
+    "t371": "PLANTED-COL-EXTRA"
+   },
+   "item": "planted-column 4ø16 ends",
+   "reason": "already RFI-B-S22"
+  },
+  {
+   "cite": {
+    "attr": "body",
+    "t371": "SLAB-UNPRINTED-PANELS"
+   },
+   "item": "slab top-bar extent, bar-less panels",
+   "reason": "already RFI-B-S10 (a) - (c)"
+  },
+  {
+   "cite": {
+    "t371_gap": "G-T371-0"
+   },
+   "item": "pool / stair / tank bars (88 lines)",
+   "reason": "T-359 census, not this task"
+  }
+ ],
+ "rebar_lines_v3027": 2643,
+ "rows": 16,
+ "schema": "DESIGNER_RFI_ROWS_V1"
+}

@@ -1,0 +1,1022 @@
+{
+ "schema": "T375_SPLICE_COUNT_V1:CANDIDATE_BINDING",
+ "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json",
+ "extract_candidate": "ARCH_TAKEOFF_V3.0.16",
+ "cb_lines": 105,
+ "cb_states": [
+  "NOT_APPLICABLE_WITH_EVIDENCE"
+ ],
+ "cb_lines_with_quantity": 0,
+ "later_steps_cb_tokens": {
+  "engine/source/arch_v3017.py": [],
+  "engine/source/arch_v3018.py": [],
+  "engine/source/arch_v3019.py": [],
+  "engine/source/arch_v3020.py": [],
+  "engine/source/arch_v3021.py": [],
+  "engine/source/arch_v3022.py": [],
+  "engine/source/arch_v3023.py": [],
+  "engine/source/arch_v3024.py": [],
+  "engine/source/arch_v3025.py": [],
+  "engine/source/arch_v3026.py": [],
+  "engine/source/arch_v3027.py": [],
+  "engine/source/arch_v3028.py": []
+ },
+ "later_steps_touching_cb": [],
+ "t373_v3027_cb_lines": [],
+ "route_g_run": {
+  "schema": "T375_SPLICE_COUNT_V1:ROUTE_G_RUN",
+  "structural_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "profile": "research/urban_engine_m4_correctness/profile_st7757_m4.json",
+  "conventions": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+  "with_laps_calls": 4752,
+  "bar_groups": 1584,
+  "marks": [
+   "CB1",
+   "CB11",
+   "CB12",
+   "CB13",
+   "CB2",
+   "CB3",
+   "CB4",
+   "CB6",
+   "CB7",
+   "CB8",
+   "CB9"
+  ],
+  "stock_m": [
+   12.0
+  ],
+  "lap_d": [
+   40.0,
+   50.0,
+   60.0
+  ],
+  "longest_run_m": 8.483269,
+  "runs_over_stock": 0,
+  "readings_that_differ": 0,
+  "delta_kg_low_base_high": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "longest_by_role": {
+   "BOTTOM": {
+    "run_m": 8.483269,
+    "mark": "CB11",
+    "dia_mm": 18
+   },
+   "SUPPORT_TOP": {
+    "run_m": 3.4905,
+    "mark": "CB12",
+    "dia_mm": 18
+   }
+  }
+ },
+ "lines": [
+  {
+   "line_id": "L-00fab4f5f55a28cc7717",
+   "element_id": "P-S:BEAMS:1F:BAND0001.3:CB_BOTTOM:D14",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-02078479eaddcef656a6",
+   "element_id": "P-S:BEAMS:1F:BAND0027.2:CB_SUPPORT_TOP:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-0259311763c1acb56b0c",
+   "element_id": "P-S:BEAMS:GF:BAND0029.2:CB_BOTTOM:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-038795d71b133377b67c",
+   "element_id": "P-S:BEAMS:GF:BAND0041.1:CB_BOTTOM:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-0e4c9382ff869389dac5",
+   "element_id": "P-S:BEAMS:1F:BAND0001.2:CB_BOTTOM:D14",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-108b914562886132113f",
+   "element_id": "P-S:BEAMS:1F:BAND0018.2:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-129d623399481ac94692",
+   "element_id": "P-S:BEAMS:GF:BAND0019.3:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-16d05a140da87640de8d",
+   "element_id": "P-S:BEAMS:1F:BAND0018.2:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-1720ec49bf467f86b114",
+   "element_id": "U-S:BEAMS:1F:BAND0001.3:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-1831e8a7ab4c212cbe7b",
+   "element_id": "P-S:BEAMS:GF:BAND0021.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-1d0e8958dd84e8baa81a",
+   "element_id": "P-S:BEAMS:GF:BAND0019.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-1d35e92dad0ab49ed306",
+   "element_id": "P-S:BEAMS:1F:BAND0024.1:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2123ead4a75ede67be17",
+   "element_id": "P-S:BEAMS:1F:BAND0018.2:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-21dd009f4413144236d9",
+   "element_id": "P-S:BEAMS:1F:BAND0027.1:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-283792b4eb33bce2a175",
+   "element_id": "P-S:BEAMS:GF:BAND0039:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2a6b59efbdc8b5370c52",
+   "element_id": "P-S:BEAMS:GF:BAND0019.3:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2bd7a0c63fe4d0dc620c",
+   "element_id": "U-S:BEAMS:GF:BAND0021.2:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2cbd975d61d2dfffc1a9",
+   "element_id": "P-S:BEAMS:GF:BAND0029.1:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2ce57e7b8203f57c60b1",
+   "element_id": "P-S:BEAMS:1F:BAND0027.1:CB_BOTTOM:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2e68d673f2689ac6234f",
+   "element_id": "P-S:BEAMS:GF:BAND0040.2:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-2f11a428c9122c21e5af",
+   "element_id": "P-S:BEAMS:GF:BAND0036.2:CB_SUPPORT_TOP:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-329e8b09febec7d16aac",
+   "element_id": "P-S:BEAMS:GF:BAND0021.2:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-3730e30a23b0ed9c62be",
+   "element_id": "U-S:BEAMS:GF:BAND0039:CB_SUPPORT_TOP1",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-3ee5453ff6f72f3c684f",
+   "element_id": "U-S:BEAMS:GF:BAND0019.1:CB_SUPPORT_TOP1",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-417e7f4dea5e1aa96e59",
+   "element_id": "U-S:BEAMS:1F:BAND0027.1:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4340b99e0383642da76e",
+   "element_id": "P-S:BEAMS:GF:BAND0021.2:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-43c97141d363837bacab",
+   "element_id": "U-S:BEAMS:GF:BAND0014:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4608356230bde730328e",
+   "element_id": "P-S:BEAMS:GF:BAND0029.2:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-47e66e62e0022bde3ce0",
+   "element_id": "P-S:BEAMS:1F:BAND0027.2:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4b556d7f40295208d318",
+   "element_id": "P-S:BEAMS:1F:BAND0027.2:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4bc87b12aacb6b247613",
+   "element_id": "P-S:BEAMS:GF:BAND0029.2:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4f0bfaf1afe9b342e547",
+   "element_id": "P-S:BEAMS:1F:BAND0027.2:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-4fc658538916aa64f5ee",
+   "element_id": "P-S:BEAMS:GF:BAND0014:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-51662167853975e3ef66",
+   "element_id": "U-S:BEAMS:1F:BAND0001.2:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-52a459ba14b733d28933",
+   "element_id": "P-S:BEAMS:1F:BAND0024.2:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-52d5e777010939021278",
+   "element_id": "U-S:BEAMS:GF:BAND0021.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-54ed7fe996e17b33e620",
+   "element_id": "P-S:BEAMS:GF:BAND0036.1:CB_SUPPORT_TOP:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-55b03482f812899ad5c6",
+   "element_id": "P-S:BEAMS:1F:BAND0001.3:CB_SUPPORT_TOP:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-582f2ffbe99adf2a848e",
+   "element_id": "P-S:BEAMS:GF:BAND0036.2:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-59a639fa4651b04a0ea5",
+   "element_id": "P-S:BEAMS:1F:BAND0024.1:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-5a5e699e4fe793cd2387",
+   "element_id": "P-S:BEAMS:GF:BAND0021.1:CB_BOTTOM:D14",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-5b69a038183688170970",
+   "element_id": "P-S:BEAMS:1F:BAND0001.3:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-5f08823fd97e4d1ded36",
+   "element_id": "U-S:BEAMS:GF:BAND0036.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-5faa41c2aa52d0167107",
+   "element_id": "P-S:BEAMS:GF:BAND0040.2:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-607b37ed4882c3d32663",
+   "element_id": "P-S:BEAMS:1F:BAND0001.2:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-6632e0e6a6e9ababe06c",
+   "element_id": "P-S:BEAMS:1F:BAND0024.2:CB_STIRRUP:D10",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-709547e0b15a52289881",
+   "element_id": "P-S:BEAMS:GF:BAND0040.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-70cb465560e0a33829dc",
+   "element_id": "P-S:BEAMS:GF:BAND0041.2:CB_STIRRUP:D10",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7160f7b68d1ee8aef8ce",
+   "element_id": "P-S:BEAMS:GF:BAND0040.1:CB_BOTTOM:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-73ec03ee2f51907b4274",
+   "element_id": "P-S:BEAMS:GF:BAND0021.2:CB_SUPPORT_TOP:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7553350537f97c3f8eed",
+   "element_id": "U-S:BEAMS:1F:BAND0001.4:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-771fbd71789f9c348293",
+   "element_id": "U-S:BEAMS:GF:BAND0019.2:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-79e10484ef2f43290709",
+   "element_id": "P-S:BEAMS:1F:BAND0024.1:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7bbec3ff1be4b5f43a8a",
+   "element_id": "P-S:BEAMS:GF:BAND0040.2:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7c8a8205c9ee2da73fc6",
+   "element_id": "P-S:BEAMS:1F:BAND0018.1:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7d4c1946fb7ef9f547a8",
+   "element_id": "P-S:BEAMS:GF:BAND0041.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7ebd00a7311a044650d8",
+   "element_id": "P-S:BEAMS:1F:BAND0024.1:CB_BOTTOM:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-7ef22fda8d3a28d9bca6",
+   "element_id": "P-S:BEAMS:GF:BAND0029.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-81a6015b874bdce1d68b",
+   "element_id": "P-S:BEAMS:1F:BAND0027.3:CB_SUPPORT_TOP:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-8440e44b740939d6c69a",
+   "element_id": "U-S:BEAMS:GF:BAND0039:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-8799ce7be53fe71340ae",
+   "element_id": "U-S:BEAMS:GF:BAND0029.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-8c046e2ed8348df217f1",
+   "element_id": "P-S:BEAMS:GF:BAND0036.1:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-930b993e0fd42818ad75",
+   "element_id": "U-S:BEAMS:GF:BAND0040.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-9511d4d65e9bf9d00ab7",
+   "element_id": "P-S:BEAMS:1F:BAND0001.3:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-96d6dbab086a96a1243e",
+   "element_id": "P-S:BEAMS:1F:BAND0018.1:CB_BOTTOM:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-971955e5167a9fed8700",
+   "element_id": "U-S:BEAMS:1F:BAND0018.1:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-986c8648936cba1f44ac",
+   "element_id": "P-S:BEAMS:1F:BAND0001.2:CB_SUPPORT_TOP:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-9d517758ceefcc44fa2d",
+   "element_id": "U-S:BEAMS:GF:BAND0019.3:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-9de5c775ba555749d987",
+   "element_id": "P-S:BEAMS:1F:BAND0024.1:CB_STIRRUP:D10",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-9e81374bdd0b7a8f29b5",
+   "element_id": "P-S:BEAMS:1F:BAND0024.2:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-9e9aa8b03b4603201c33",
+   "element_id": "P-S:BEAMS:GF:BAND0021.1:CB_SUPPORT_TOP:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-a1fa0e084845bd00f941",
+   "element_id": "P-S:BEAMS:1F:BAND0027.3:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-a2c1aa89a2449225f715",
+   "element_id": "P-S:BEAMS:1F:BAND0001.4:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-a5ef8a406a69f43159f0",
+   "element_id": "U-S:BEAMS:1F:BAND0027.2:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-a9086d458d17f4244c13",
+   "element_id": "P-S:BEAMS:GF:BAND0036.1:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-af455f63795284fd514f",
+   "element_id": "U-S:BEAMS:GF:BAND0041.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-affeda84487ccd849444",
+   "element_id": "P-S:BEAMS:GF:BAND0041.2:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-b1bddaa791914cbcd962",
+   "element_id": "P-S:BEAMS:1F:BAND0024.2:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-b8324fa4b6fc33d356c2",
+   "element_id": "P-S:BEAMS:GF:BAND0040.1:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-b85822b40d4c72f24177",
+   "element_id": "U-S:BEAMS:1F:BAND0027.3:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-b9307fdd5ab4dad8970b",
+   "element_id": "P-S:BEAMS:1F:BAND0027.3:CB_BOTTOM:D16",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-badcd9bd92008847f119",
+   "element_id": "P-S:BEAMS:GF:BAND0041.1:CB_SUPPORT_TOP:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-bb423712140862aa1991",
+   "element_id": "P-S:BEAMS:GF:BAND0029.1:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-bfa162d87eee5eeeb3ba",
+   "element_id": "U-S:BEAMS:1F:BAND0024.1:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-c2c3da7669e47b15e582",
+   "element_id": "U-S:BEAMS:GF:BAND0019.3:CB_SUPPORT_TOP2",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-c355844bd464ae44a4fb",
+   "element_id": "P-S:BEAMS:1F:BAND0024.2:CB_BOTTOM:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-c4a1c953b7669f5e0811",
+   "element_id": "P-S:BEAMS:GF:BAND0039:CB_BOTTOM:D14",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-cb7a95da6a0876d03a78",
+   "element_id": "U-S:BEAMS:GF:BAND0029.2:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-d080643e95a4a53ec28a",
+   "element_id": "P-S:BEAMS:GF:BAND0019.1:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-d1437e2c9868f360f830",
+   "element_id": "P-S:BEAMS:GF:BAND0014:CB_STIRRUP:D8",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-d150a0e476d91c96294c",
+   "element_id": "U-S:BEAMS:1F:BAND0018.2:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-d7eae17b653f407b37cb",
+   "element_id": "P-S:BEAMS:1F:BAND0001.4:CB_STIRRUP:D8",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-d8de59bd3fc41daad0fd",
+   "element_id": "U-S:BEAMS:GF:BAND0036.2:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-dc84f9a89f5da7ff89ab",
+   "element_id": "U-S:BEAMS:1F:BAND0024.2:CB_TOP_THROUGH",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-df9e9b62889c9b8a302e",
+   "element_id": "U-S:BEAMS:GF:BAND0019.2:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-dff04b6570f054e76e21",
+   "element_id": "P-S:BEAMS:GF:BAND0014:CB_BOTTOM:D16",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-dffe03706d03ff63b7e0",
+   "element_id": "P-S:BEAMS:1F:BAND0027.1:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-e0bcb3536345367e71d3",
+   "element_id": "P-S:BEAMS:1F:BAND0018.1:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-e5280c270d3347cb0d71",
+   "element_id": "U-S:BEAMS:GF:BAND0040.1:CB_SUPPORT_TOP1",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-e88fa06b16a4622aba85",
+   "element_id": "U-S:BEAMS:GF:BAND0040.2:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-e96d7f0d29646991bb84",
+   "element_id": "U-S:BEAMS:GF:BAND0041.2:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-e97c50436e006742eb3b",
+   "element_id": "U-S:BEAMS:GF:BAND0019.1:CB_TOP_THROUGH",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-ea4c46b1abbfbe0360e6",
+   "element_id": "P-S:BEAMS:1F:BAND0001.4:CB_SUPPORT_TOP:D18",
+   "floor": "1F",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-ed2518f37231c4d5249f",
+   "element_id": "P-S:BEAMS:GF:BAND0036.2:CB_BOTTOM:D14",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  },
+  {
+   "line_id": "L-f5d23d6fb80c5c19d142",
+   "element_id": "P-S:BEAMS:GF:BAND0041.2:CB_BOTTOM:D18",
+   "floor": "GF",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_range": null,
+   "scenario_delta_kg": "NO QUANTITY ON THE LINE (superseded); the route G steel behind it moves [0.0, 0.0, 0.0] kg (40 / 50 / 60 d)"
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "schema": "LAP_AUTHORITY_LINE_BINDING_V1",
+ "candidate": "V3_0_27_BOQ_LINES.json",
+ "candidate_sha256": "f7972540ee1be08675178f354b3210b6d3146d99e93e02ed0bcbad4f102e7936",
+ "view": "as given",
+ "rebar_lines": 2643,
+ "bound_rows": 584,
+ "by_class": {
+  "NOTE9_OUTSIDE_GROUP -> HELD": 351,
+  "NOT_BOOKED -> KEEP": 152,
+  "NOTE9_OUTSIDE_GROUP -> LISTED_ONLY": 22,
+  "PRINTED -> KEEP": 59
+ },
+ "note9_outside_group_held": {
+  "GB bar ends": 39,
+  "GB procurement laps": 2,
+  "beam ends": 254,
+  "column storey laps": 56
+ },
+ "t366_counts_v3016": {
+  "beam ends": 254,
+  "column storey laps": 56,
+  "GB bar ends": 62,
+  "slab development": 98
+ },
+ "totals": [
+  {
+   "group": "GB bar ends",
+   "proposed": "HELD",
+   "lines": 39,
+   "low_now": "646.528",
+   "high_now": "1194.517",
+   "low_after": "BLANK",
+   "high_after": "BLANK",
+   "held_blank": 39
+  },
+  {
+   "group": "GB bar ends",
+   "proposed": "KEEP",
+   "lines": 23,
+   "low_now": "0",
+   "high_now": "0",
+   "low_after": "0",
+   "high_after": "0",
+   "held_blank": 0
+  },
+  {
+   "group": "GB procurement laps",
+   "proposed": "HELD",
+   "lines": 2,
+   "low_now": "18.204",
+   "high_now": "31.858",
+   "low_after": "BLANK",
+   "high_after": "BLANK",
+   "held_blank": 2
+  },
+  {
+   "group": "OUT_OF_ROUTE(T-359)",
+   "proposed": "LISTED_ONLY",
+   "lines": 22,
+   "low_now": "373.39",
+   "high_now": "718.48",
+   "low_after": "373.39",
+   "high_after": "718.48",
+   "held_blank": 0
+  },
+  {
+   "group": "beam ends",
+   "proposed": "HELD",
+   "lines": 254,
+   "low_now": "1837.334",
+   "high_now": "3258.515",
+   "low_after": "BLANK",
+   "high_after": "BLANK",
+   "held_blank": 254
+  },
+  {
+   "group": "column storey laps",
+   "proposed": "HELD",
+   "lines": 56,
+   "low_now": "499.614",
+   "high_now": "874.320",
+   "low_after": "BLANK",
+   "high_after": "BLANK",
+   "held_blank": 56
+  },
+  {
+   "group": "slab development",
+   "proposed": "KEEP",
+   "lines": 157,
+   "low_now": "136.573",
+   "high_now": "150.695",
+   "low_after": "136.573",
+   "high_after": "150.695",
+   "held_blank": 0
+  },
+  {
+   "group": "slab temperature laps",
+   "proposed": "KEEP",
+   "lines": 3,
+   "low_now": "0",
+   "high_now": "0",
+   "low_after": "0",
+   "high_after": "0",
+   "held_blank": 0
+  },
+  {
+   "group": "starters",
+   "proposed": "KEEP",
+   "lines": 28,
+   "low_now": "0",
+   "high_now": "0",
+   "low_after": "0",
+   "high_after": "0",
+   "held_blank": 0
+  }
+ ]
+}

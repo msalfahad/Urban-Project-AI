@@ -1,0 +1,85 @@
+{
+ "schema": "STAIR_NOTE9_ROLE_BINDING_V1",
+ "candidate": "V3_0_27_BOQ_LINES.json f7972540 (figures via the T-373 binding)",
+ "inputs_sha256": {
+  "t373_csv": "7008b266681640b0",
+  "extract": "2f28367b81fe362d",
+  "roles": "8dd808a7feb5a928"
+ },
+ "lines": 22,
+ "line_class": {
+  "NOT_STARTER": 22
+ },
+ "end_class": {
+  "NOT_STARTER": 43,
+  "UNKNOWN": 1
+ },
+ "valued_now_kg": [
+  "373.39",
+  "718.48"
+ ],
+ "downgrade_set": {
+  "lines": 22,
+  "kg_now": [
+   "373.39",
+   "718.48"
+  ],
+  "kg_after": "BLANK",
+  "line_ids": [
+   "L-038e6aa9380a0106ffb1",
+   "L-0b58e3830427468a61b7",
+   "L-16490d4b6b27cd8347b2",
+   "L-21d54ef460ee845da5a5",
+   "L-2ac75d78183f5a5aa84b",
+   "L-60b0d39880f0a78d2a6a",
+   "L-69f3bb328dce879db4a1",
+   "L-6b04e30aba355d1e2a42",
+   "L-711ed4c00b9f8364f08e",
+   "L-73e550108cdebacc1f96",
+   "L-7525cc1db25b03a4aca9",
+   "L-81f10f796b685906fa09",
+   "L-9baaccad98844a589773",
+   "L-a062a19bb77d267c6d7c",
+   "L-b64f6ff42eb0bdc943c9",
+   "L-c7e98c8a66e6c2cdc922",
+   "L-d5678a8e251b01a57f9c",
+   "L-d5dc3409c91176b8bf99",
+   "L-dac64b1d7ab3ecd490f7",
+   "L-f016700fbb7e57141593",
+   "L-f235ee2fae63085617ed",
+   "L-f6940a333cbd70e2666f"
+  ]
+ },
+ "kept_bound": {
+  "lines": 0,
+  "kg": [
+   "0",
+   "0"
+  ]
+ },
+ "by_floor": {
+  "1F": {
+   "lines": 8,
+   "kg_now": [
+    "144.44",
+    "277.60"
+   ]
+  },
+  "GF": {
+   "lines": 14,
+   "kg_now": [
+    "228.95",
+    "440.88"
+   ]
+  }
+ },
+ "str_rebar_bounded_after_t373": [
+  "11276.569488",
+  "14287.667938"
+ ],
+ "str_rebar_bounded_after_t378": [
+  "10903.179488",
+  "13569.187938"
+ ],
+ "str_rebar_released": "10250.167987 (unchanged)"
+}
