@@ -140,7 +140,7 @@ FREELANCER_SANITARY = [
                             "UNRESOLVED, +1 not explained by the drawings"),
     ("plumber labour", "1 item (lump sum)", "NOT COMPARABLE"),
 ]
-FREELANCER_SHOWER = 11      # tiling labour 'شاور', qty, 15 KD each
+FREELANCER_SHOWER = 11      # tiling labour 'شاور', qty (his rate is not copied: private workbook)
 # His own measured wet-room table (finishes workbook, waterproofing sheet, wet floors 72.01 m2): rows by label
 FREELANCER_WET_ROWS = {"GF": {"bath (حمامات / حمام)": 6, "wash (مغسله)": 3, "kitchen": 1},
                        "1F": {"bath (حمام)": 5, "laundry": 1}, "2F": {"bath (حمام)": 1}}
