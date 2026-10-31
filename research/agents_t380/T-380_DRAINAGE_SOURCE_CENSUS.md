@@ -97,7 +97,7 @@ The freelancer gives **no pipe length** on either workbook: B12-02 m.l is NOT CO
 | pit covers | 2 qty | 1 inspection chamber MH-1; no pit (soak-away / septic) printed | UNRESOLVED: +1 cover not explained by the drawings; MH-1 = 1 pcs DRAWING-CONFIRMED |
 | plumber labour | 1 item (lump sum) | - | NOT COMPARABLE |
 
-**Shower 11 vs 6.** The 11 is the tiling-labour row 'شاور' (11 qty x 15 KD), unit undefined. Each population the
+**Shower 11 vs 6.** The 11 is the tiling-labour row 'شاور' (11 qty; his rate is private workbook content and is not copied here), unit undefined. Each population the
 drawings or his own workbooks print, tested in units:
 
 | Population | pcs | = 11? |

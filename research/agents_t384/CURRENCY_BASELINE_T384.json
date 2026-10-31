@@ -1,0 +1,514 @@
+{
+ "SCHEMA": "URBAN_T384_CURRENCY_BASELINE_V1",
+ "rule": "a research / tests / docs file that carries a currency figure must be listed here with its source class; a freelancer rate or amount is never listed, it is removed",
+ "classes": {
+  "FREELANCER": "from a freelancer workbook: never allowed",
+  "OWNER": "owner's own or owner-supplied commercial figure: kept, classified",
+  "PUBLIC": "synthetic / public: kept"
+ },
+ "removed_in_T384": [
+  {
+   "file": "research/agents_t380/T-380_DRAINAGE_SOURCE_CENSUS.md",
+   "line": 100,
+   "was": "shower row unit rate (private commercial document, WEB-018)"
+  },
+  {
+   "file": "research/agents_t380/t380_alsenan.py",
+   "line": 143,
+   "was": "same rate in the FREELANCER_SHOWER comment"
+  }
+ ],
+ "files": {
+  "docs/ARCHITECTURE.md": {
+   "class": "OWNER",
+   "origin": "owner budget / audit totals from the Urban web-app cost export",
+   "lines": [
+    12,
+    75
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "docs/ENGINEERING_INVARIANTS.md": {
+   "class": "OWNER",
+   "origin": "owner's commercial rate on one quotation (development project 2)",
+   "lines": [
+    2660
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "docs/ONBOARDING.md": {
+   "class": "OWNER",
+   "origin": "audit total on the owner's budget",
+   "lines": [
+    47
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "docs/P7757_WALL_TREATMENT_ESTIMATE_01.md": {
+   "class": "OWNER",
+   "origin": "owner-supplied historical workbook of another project (not a freelancer workbook): a material total it omits",
+   "lines": [
+    1272
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "docs/PROJECT_2_ROUND6E_LINEAGE_STAIRS_AND_EXPORT.md": {
+   "class": "OWNER",
+   "origin": "owner's commercial rate (development project 2)",
+   "lines": [
+    294
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t162/CORNERS_R2_T162.csv": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (OWNER_NOTES_SIGMA_2026-10-21)",
+   "lines": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t162/T-162_SIGMA_RECONCILIATION.md": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (owner notes)",
+   "lines": [
+    155,
+    200,
+    214
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t162/check_t162.py": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (owner notes)",
+   "lines": [
+    16,
+    170,
+    171
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t162/t162_corners.py": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (owner notes)",
+   "lines": [
+    5,
+    136,
+    137,
+    144,
+    151
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t162/t162_r2.py": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (owner notes)",
+   "lines": [
+    188
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/agents_t172/T-172_CORNERS_PARAPETS.md": {
+   "class": "OWNER",
+   "origin": "Urban cost PDF rate basis (owner notes)",
+   "lines": [
+    103
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/external_engine_lab/alsenan_phase_b1_recommendation.json": {
+   "class": "OWNER",
+   "origin": "Urban Projects' own web-app 'cost by category' export (owner's commercial document; quantities derived from the freelancer BOQ per tests/alsenan/registers_b1/BENCHMARK_DEPENDENCY.json, rates are Urban's own: the freelancer workbooks' unit-price columns are empty in FREELANCER_RAW_ROWS.json)",
+   "lines": [
+    15
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/qs_wall_treatment_01/pa09/alrashed/historical_audit.py": {
+   "class": "OWNER",
+   "origin": "same owner-supplied historical workbook (other project): defect L-05 amount",
+   "lines": [
+    457
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/qs_wall_treatment_01/pa09/alrashed/validation_amendment.py": {
+   "class": "OWNER",
+   "origin": "same owner-supplied historical workbook (other project): defect L-05 amount",
+   "lines": [
+    165
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m5_concrete_reconciliation/01_EXECUTIVE_CONCRETE_RECONCILIATION.md": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    3,
+    27,
+    29,
+    122,
+    124,
+    126,
+    128,
+    130,
+    214
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m5_concrete_reconciliation/06_SUSPENDED_SLAB_AUDIT.md": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    31
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m5_concrete_reconciliation/14_VISUAL_CONCRETE_QA.html": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    19
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m5_concrete_reconciliation/visual/08_TOP20_DISCREPANCIES.svg": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    1
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m7_reliability/00_README.md": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    33,
+    49
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m7_reliability/01_EXECUTIVE_REPORT.md": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    90,
+    91
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "research/urban_engine_m7_reliability/11_QUOTATION_RISK.md": {
+   "class": "OWNER",
+   "origin": "concrete m3 x the owner brief's planning rate (reporting input, not a freelancer rate)",
+   "lines": [
+    1,
+    9,
+    48,
+    49
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/alsenan/registers_b1/WEB_APP_ROWS.json": {
+   "class": "OWNER",
+   "origin": "Urban Projects' own web-app 'cost by category' export (owner's commercial document; quantities derived from the freelancer BOQ per tests/alsenan/registers_b1/BENCHMARK_DEPENDENCY.json, rates are Urban's own: the freelancer workbooks' unit-price columns are empty in FREELANCER_RAW_ROWS.json)",
+   "lines": [
+    15,
+    16,
+    34,
+    35,
+    53,
+    54,
+    72,
+    73,
+    91,
+    92,
+    110,
+    111,
+    129,
+    130,
+    148,
+    149,
+    167,
+    168,
+    186,
+    187,
+    207,
+    208,
+    228,
+    229,
+    249,
+    250,
+    268,
+    269,
+    290,
+    291,
+    311,
+    312,
+    332,
+    333,
+    353,
+    354,
+    372,
+    373,
+    391,
+    392,
+    410,
+    411,
+    431,
+    432,
+    452,
+    453,
+    471,
+    472,
+    492,
+    493,
+    513,
+    514,
+    534,
+    535,
+    555,
+    556,
+    574,
+    575,
+    595,
+    596,
+    616,
+    617,
+    637,
+    638,
+    656,
+    657,
+    675,
+    676,
+    694,
+    695,
+    713,
+    714,
+    732,
+    733,
+    751,
+    752,
+    770,
+    771,
+    789,
+    790,
+    808,
+    809,
+    827,
+    828,
+    846,
+    847,
+    865,
+    866,
+    884,
+    885,
+    903,
+    904,
+    922,
+    923,
+    941,
+    942,
+    960,
+    961,
+    979,
+    980,
+    998,
+    999,
+    1019,
+    1020,
+    1040,
+    1041,
+    1059,
+    1060,
+    1080,
+    1081,
+    1099,
+    1100,
+    1118,
+    1119,
+    1137,
+    1138,
+    1156,
+    1157,
+    1175,
+    1176,
+    1194,
+    1195,
+    1213,
+    1214,
+    1232,
+    1233,
+    1253,
+    1254,
+    1272,
+    1273,
+    1291,
+    1292,
+    1310,
+    1311,
+    1329,
+    1330,
+    1348,
+    1349,
+    1367,
+    1368,
+    1386,
+    1387,
+    1405,
+    1406,
+    1424,
+    1425,
+    1446,
+    1447,
+    1467,
+    1468,
+    1488,
+    1489,
+    1507,
+    1508,
+    1529,
+    1530,
+    1548,
+    1549,
+    1567,
+    1568,
+    1586,
+    1587,
+    1605,
+    1606,
+    1626,
+    1627,
+    1647,
+    1648,
+    1668,
+    1669,
+    1687,
+    1688,
+    1706,
+    1707,
+    1725,
+    1726,
+    1739,
+    1741,
+    1747,
+    1749,
+    1755,
+    1757,
+    1763,
+    1765,
+    1771,
+    1773,
+    1779,
+    1781,
+    1787,
+    1789,
+    1795,
+    1797,
+    1803,
+    1805,
+    1811,
+    1813,
+    1819,
+    1821,
+    1827,
+    1829,
+    1835,
+    1837,
+    1843,
+    1845,
+    1851,
+    1853,
+    1859,
+    1861,
+    1867,
+    1869,
+    1875,
+    1877,
+    1883,
+    1885,
+    1890
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/alsenan/test_alsenan_b1_comparison.py": {
+   "class": "OWNER",
+   "origin": "parser fixture string of one Urban web-app row",
+   "lines": [
+    112
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_campaign.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic test fixture (campaign budget engine)",
+   "lines": [
+    102,
+    108,
+    121,
+    129
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_campaign_cli.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic test fixture (campaign budget engine)",
+   "lines": [
+    85,
+    86,
+    87,
+    150
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_documents_cli.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic test fixture (contract document engine)",
+   "lines": [
+    60,
+    78,
+    95
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_documents_engine.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic test fixture (dinar formatter)",
+   "lines": [
+    26,
+    27
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_documents_render.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic test fixture (contract document renderer)",
+   "lines": [
+    21,
+    89,
+    97,
+    147
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  },
+  "tests/test_rate_library.py": {
+   "class": "PUBLIC",
+   "origin": "synthetic parser input",
+   "lines": [
+    54
+   ],
+   "action": "kept (not a freelancer rate; history unchanged)"
+  }
+ }
+}
