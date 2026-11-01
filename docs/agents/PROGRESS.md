@@ -1,9 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-10-31 20:20 UTC (Lead). Previous version: 2026-10-31 16:20 UTC. The released numbers did not change
+Last update: 2026-11-01 00:20 UTC (Lead). Previous version: 2026-10-31 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.33 (not released): it adds the structural corrections.
+released: 0. The candidate under review is now V3.0.34 (not released): it adds the kitchen / laundry / pantry wall-tile
+zones.
+
+Since 31 Oct 20:20 (newest first; five checked and merged, one of them an integration into the candidate; two sent
+back for a small correction; one handed in and waiting for the checker):
+- Kitchen / laundry / pantry wall tiles INTO THE CANDIDATE: CHECKED AND MERGED on the first pass (V3.0.34). The tiled
+  zone is the wall-tile line already in each room, never a second quantity: laundry 52.53 m2 (checker's own measure
+  agrees exactly; the freelancer has 50.55 m2 because he tiles to 3.00 m where your rule gives 3.35 m), pantry
+  32.34 m2 (the checker measures 32.38 m2: +0.10 %, named for the next package), kitchen held (the tile extent is a
+  designer item). The pantry paint line is now "not applicable" (no paintable face under a full-height tile). No
+  other line moved.
+- Held beams read one by one: CHECKED AND MERGED on the second pass. One held beam now has a value from its printed
+  section (0.55 m3), 8 have ranges, 18 stay held with the missing fact named.
+- Lift pit and shaft, plaster corner beads, floor transition strips: CHECKED AND MERGED. Lift: pit wall height needs
+  two facts not on the drawings; the ground-floor lift tie beam (5.50 m) is in no line. Beads: interior 275.95 m.l,
+  exterior 310.68 m.l. Transition strips: 40 floor-finish boundaries counted once; 17 are marble thresholds; 8 held
+  (0 .. 19.09 m.l, no system specified); the freelancer has no row for them.
+- Concrete roll-up of every traced cause: SENT BACK (small correction). The 0.56 m3 dome difference is explained
+  (the freelancer read the dome area from a hemisphere formula), so it moves from "unexplained" to "traced": against
+  the freelancer, traced +4.13 m3, held -107.02 m3 (each held item named), unexplained -11.57 m3.
+- Stair skirting: SENT BACK (small correction). Two stretches called "no wall" are column faces: the landings rise from
+  1.80 to about 2.35 .. 2.40 m.l once confirmed.
+- Block below the house ground beams: HANDED IN, not yet checked. Only the neighbour side prints block below the beam:
+  at least 11.39 m2 (16.27 m long, at least 0.70 m high); the annex side held; street and sea sides unknown; the
+  freelancer has no row for it.
+- Next: the boundary fence into the candidate (with its foundation and finishes); a standing red test in the bar
+  schedule check fixed; lift tie beam and shaft into lines; floor screed / cement bed per room (a whole item in no
+  line today); stair nosing and tread / riser counts; lift door marble.
 
 Since 31 Oct 16:20 (newest first; six checked and merged, one of them an integration into the candidate; three handed
 in and waiting for the checker):
@@ -1457,16 +1484,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-30 16:30)
-- Checker: the reveals fix first when handed in, then the lap binding and the arched-opening check, then the research
-  pieces in hand-in order.
-- Structural (worker 1): the 470 lines valued on the starter-bar lap note, then a straight-bar cutting list for the 7
-  bar groups the drawings fully dimension, the splice-count formula, and the consultant questions for the bar shapes
-  and laps the drawings leave open.
-- Architecture and finishes (worker 2): every trade line on the arched openings checked against the arch, then shower
-  floors and tanking, then the sanitary fixture and floor-drain count.
-- Integration (worker 3): the reveals fix, then sills, formwork, roof build-up, ceilings, skirting, waterproofing,
-  outside plaster, earthworks, foundation waterproofing, spatter dash, masonry accessories and mortar, one at a time.
+(Lead 2026-11-01 00:20)
+- Checker: the block below the house ground beams first, then each piece in hand-in order (the bar-schedule test fix
+  and the fence integration before the two small corrections).
+- Structural (worker 1): fix the standing red test of the bar-schedule check (its snapshot of the checker's downgrade
+  records is one record behind), then the concrete roll-up correction, then the lift tie beam and shaft into lines.
+- Architecture and finishes (worker 2): the stair skirting correction (column faces), then floor screed / cement bed
+  per room, stair nosing and tread / riser counts, and the lift door marble.
+- Integration (worker 3): the boundary fence with its foundation and finishes into the candidate, then skirting,
+  waterproofing, outside plaster, earthworks, foundation waterproofing, spatter dash, masonry accessories and mortar,
+  and the splice count, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

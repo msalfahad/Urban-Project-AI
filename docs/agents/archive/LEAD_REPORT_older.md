@@ -1,3 +1,89 @@
+## LEAD REPORT 2026-10-31 12:30 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+31 Oct 08:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch df170b8d -> 94d85fc7 (three Checker merges via 'engine push'); no
+owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since my
+last run; nothing undone.
+
+HEADLINE: the roof build-up is in the candidate (V3.0.31, fourth Gate B pass in a row); the concrete comparison is now
+honestly closed by cause, and the two largest unresolved parts (ground slab and ground beams, 22.7 m3) have been measured
+from the drawing: only 4.6 m3 of them is still unexplained. Three pieces wait for the Checker (at the target of 3).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.30 -> V3.0.31):
+- ROOF BUILD-UP (m2 / m3; Gate B PASS 11:52): 16 lines (4 roofs x 4 layers). Roof finish 202.220 m2 MEASURED (54.920 +
+  31.643 + 115.656; Checker re-measured 115.651, -0.004 %); screed one line per roof HELD (thickness not printed, D-39),
+  insulation / protection 8 lines UNKNOWN blank, top roof HELD (Q-34). Freelancer: one roof line 285.00 m2: NOT
+  COMPARABLE per layer (his line mixes layers; no % stated). Change: 0 -> 202.220 m2 in the candidate; released unchanged.
+- CONCRETE (m3): comparison of the candidate (V3.0.29 structure) vs the freelancer, residual -114.464 m3, now split by
+  cause (merged 11:00): traced causes +0.252, HELD named items -77.593 (they are not errors: the engine has no value yet),
+  unexplained -37.124 (11 unresolved parts -36.652 + pool-wall height 0.471 not on any drawn level). Change since last
+  report: the earlier '0.000 unexplained' was withdrawn; same numbers, honest split.
+  Ground slab and ground beams (waiting for the Checker): ground slab -12.309 m3 = his slab plate runs over beam / column
+  strips -7.188 (engine right: those strips are beam / column concrete) + panels inside an engine HELD cell -3.561 +
+  stair-zone panel -0.837 (unresolved) + his area beyond the drawn network -0.639 (unexplained) + small reads -0.085.
+  Ground beams -10.355 m3 = held runs -9.690 (53.8 m: consultant items D-34 / D-35, court) + section: exterior beams
+  0.95 m deep vs his 0.60 (+5.797, engine right) and interior 0.40 vs 0.60 (-3.444, engine right) + his longer run
+  length -3.008 (unexplained). Net: of 22.664 m3 unresolved -> traced -4.844, held -13.251, unexplained -4.569.
+  Found: the held ground-slab cell includes the 1.80 x 1.80 lift shaft; its range should be 0 .. 3.561 (was 3.930):
+  correction proposed for integration after the check. The slab under the ground-floor flight is printed nowhere:
+  designer fact (rfi), not your question.
+  Ring / pool fourth side (waiting for the Checker): ring B7 0.218 m3 located on the drawing, billed once, agrees; the
+  0.0026 m3 'slivers' are a real small gap, not rounding; CB8 beam end 59 mm into B27 (double 0.0028 m3) and short at the
+  other end (gap 0.0034 m3): proposals, immaterial; the pool's fourth side is 3.50 m of pool wall plus 1.668 m of PLOT
+  BOUNDARY WALL whose above-ground blockwork is in no BOQ line -> new missing-category task.
+- FINISHES (m2): the three wall-face length residuals (pantry -0.120, GF-08 -0.140, GF-14 -0.045 m) are artefacts of the
+  face-walk tolerance, not drawn walls: the candidate's faces were right; 0.000 m2 change (waiting for the Checker).
+- REINFORCEMENT (kg), RAILINGS, FORMWORK, SANITARY: no change since 08:30.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: one more missing category (roof layers) in the candidate with every blank named; the concrete gap
+is now explained by physical cause: the freelancer's ground slab runs through beam strips and his ground beams use one
+0.60 m depth where the drawing prints 0.95 / 0.40. WHAT GOT WORSE: nothing measured moved the wrong way. WHAT WAS
+LEARNED: a reconciliation must stop at traced causes; a held range must exclude voids drawn inside it (the lift shaft).
+WHAT IS MISSING: column height basis, beams, stairs / domes (new tasks), boundary fence blockwork (new), ceilings (next
+in integration), skirting, WP fixes, exterior plaster, earthworks, foundation WP, masonry accessories. GATES: lowest open
+gate 2 (integration); reconciliation gate 3. Milestones: Week 2 (3 Nov) formwork + roof delivered, ceilings next; M3 11
+Nov on track; M4 25 Nov (structural ledger) at risk but better: 18.1 of the 36.7 m3 unresolved now traced or held.
+
+DECISIONS THIS RUN: T-284 ceiling line TODO (next in integration, bind to V3.0.31, no surface counted twice with the dome
+soffit formwork or roof finish); NEW T-394 (columns: height basis and section), T-395 (beams: depth and length basis),
+T-398 (stairs / domes / pool-pump scope + the flight-on-grade designer fact), T-396 (BOUNDARY FENCE BLOCKWORK, missing
+category, block type HELD under your Q-65 C), T-397 (integration of the verified structural corrections from the ground
+slab and ring checks). Element register: pool fourth side = 3.50 m pool wall + 1.668 m plot boundary wall, never both.
+Queue check: 47 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 3, A 2 (+T-383 owner-held), I 1 (serial);
+READY 3.
+
+LESSONS REGISTER PROPOSALS (standard s.7):
+'2026-10-31 | a held cell's bound included a lift shaft and its strips (not slab) | the bound took the cell outline,
+not the drawn panels | a held range is the sum of drawn panels inside the cell, voids out | T-391 R-T391-5 tests |
+PROPOSED';
+'2026-10-31 | a neighbour-overlap deduction came from a fitted band set, not the drawn cells | fitted geometry used as
+evidence | deductions from drawn cells only; report beyond / short of a carrier face apart | T-392 R-T392-1..4 tests |
+PROPOSED';
+'2026-10-31 | a face-length residual was a walk tolerance artefact counted as wall | geometric face taken from a
+tolerance-booked walk | face length = contour less every open-side run incl. tolerance-booked samples | T-390 R-T390-1
+tests | PROPOSED'.
+
+TEAM HEALTH (08:19 - 12:30): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4
+incl. one overlap-guard exit at 11:50); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 10:39, Worker 3
+11:00, Checker 11:50, Main 04:31, Dashboard 00:54). No idle slot this window. Worker 3's last final line is stamped 12:48
+though written at about 11:19 (clock stamp ahead; asked to stamp from date -u). No refusal this window. Scout paused
+(your 28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new decision):
+- T-383 waterproofing completeness join: own row (A, recommended) vs inside T-310 (B); full ERS s.6 text in my 00:45
+  report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat):
+(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence into the public repository is refused by
+the platform (23:39, 01:55). Needs your decision on where it may be kept. The checker will not retry until then.
+(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let his finish rows
+be reconciled.
+(3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
+
 ## LEAD REPORT 2026-10-31 08:30 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

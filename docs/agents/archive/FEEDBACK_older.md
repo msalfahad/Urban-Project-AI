@@ -1,3 +1,12 @@
+## 2026-10-26 06:15 (lead run; covers 04:15 - 06:15)
+
+- T-305 (exterior plaster face-to-line): WORKED (MERGED 9d71ef09; Checker own parapet outer faces 48.237 of 66.428 m2 agree 0.000, GF two-F.F.L. +3.430 m2 confirmed). Decision: T-311 PROMOTED TODO (worker 1 next); T-314 stays in lane I after T-199.
+- T-308 (formwork r5 rows): WORKED (MERGED efb38618; BAND0049 = curved B7 corner beam, Checker 2.927965 vs 2.927816 m2 ENGINE_RIGHT). Decision: T-199 consumes it (no change to its row).
+- T-309 (pool membrane / screed): WORKED (MERGED 834ada3e; 29.582355 m2 / 1.524503 m3 = Checker; upstand 1.350 m2 HELD; function S8.2 open). Decision: T-310 consumes it after T-246.
+- T-307 (slab bar-end census): WORKED (MERGED c48f7062; continuous 0 m and edge-beam straight 0.160 m = Checker on GF-135 x; Checker revised his own T-306 p.15 reading at 400 dpi). Decision: NEW T-316 (top-bar extent, 1,113.683 kg cause) and NEW T-318 (candidate split, BLOCKED-OWNER on the reinforcement implementation stage; OWNER PACKAGE item 1).
+- T-312 (wall tile face-to-line): READY, Gate A pending (pantry 32.3422 m2 NO_LINE). Decision: NEW T-315 (lane I wall tile integration with a per-face tile / paint / plaster cross-trade check), after T-312 MERGED and T-244.
+- PARTIAL / FAILED: none. Team: Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock (correct); Worker 3 05:00 run open on T-244 (scheduler PENDING); every closed run self-check PASS.
+
 ## 2026-10-26 00:15 (lead run; covers 16:15 - 00:15; the 22:15 run recorded its loop in LEAD_REPORT only)
 
 - T-299 PART F: WORKED (MERGED 5cb1e7e8 + downgrade DG-1b0eacce2d68f2a5); the audit-band challenge closed 23:02 (0.051 t = density vs max-spacing reading in 11 populations; a report wording defect, no number wrong).
