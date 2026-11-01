@@ -25,6 +25,12 @@ R-T406-6  A CANDIDATE MOVE (a later candidate version changed the engine side) i
 R-T406-7  Per family and in total, BOOKKEEPING closure (every component bound once, the parts re-add to the residual)
           and CAUSE closure (unexplained 0.000 m3) are printed apart; held is its own column, never counted as
           agreement and never as 0; unexplained is never closed by its sign.
+R-T406-8  (r3, Checker addendum to the T-406 lesson) The class of a part is read from the Checker VERDICT on the board,
+          not from the package's own summary, when the two differ. A BOARD VERDICT names its merged task, the
+          component member and term it rules on, the verdict, the m3 it rules on and its reference (the merged verdict
+          with the Checker's own calculation). It may only re-class a part of that member: the m3 is the package's own
+          figure, unchanged (within 0.000001 m3); a board verdict of an unmerged task, of an unknown member, with
+          another m3, with no reference, or one that would class a HELD part as traced, is refused.
 """
 
 from __future__ import annotations
@@ -101,6 +107,26 @@ def check_trace(comp, trace, merged):
         raise Refused(f"trace of {comp['id']} re-adds to {total:.6f}, not its contribution "
                       f"{comp['contribution_m3']:.6f}: a trace restates the residual, it never moves it")
     return s
+
+
+def board_reclass(member, package_part, board, merged):
+    """R-T406-8: re-class one part of a merged package by the Checker's board verdict; the m3 never moves."""
+    src = board.get("task")
+    if src not in merged or not merged[src]:
+        raise Refused(f"board verdict on {member} from {src!r}: not in the merged register (unverified verdict refused)")
+    if board.get("member") != member:
+        raise Refused(f"board verdict names {board.get('member')!r}, not the member {member!r}")
+    if not str(board.get("ref") or "").strip():
+        raise Refused(f"board verdict on {member}: no reference to the merged verdict")
+    if not isinstance(board.get("m3"), (int, float)) or abs(float(board["m3"]) - float(package_part["m3"])) > 0.0000005:
+        raise Refused(f"board verdict on {member} rules on {board.get('m3')!r} m3, the package part is "
+                      f"{package_part['m3']!r}: a re-class never moves a figure")
+    if part_class(package_part) == "HELD":
+        raise Refused(f"board verdict on {member}: a HELD part is never re-classed as traced by a roll-up")
+    new = {"cause": f"{package_part['cause']} (class from the board verdict: {board['ref']})",
+           "m3": package_part["m3"], "verdict": board["verdict"], "package_verdict": package_part["verdict"]}
+    part_class(new)
+    return new
 
 
 def check_move(comp, move, merged):

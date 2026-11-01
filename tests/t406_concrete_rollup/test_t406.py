@@ -1,4 +1,4 @@
-"""T-406: reconciliation roll-up rules (R-T406-1 .. 7) and the Alsenan roll-up of T-385 r2.
+"""T-406: reconciliation roll-up rules (R-T406-1 .. 8) and the Alsenan roll-up of T-385 r2.
 
 Villa R406 (hand fixture, NOT Alsenan). Earlier closure (engine - other side, m3):
   FOOTING   A  AGREE         0.000  (traced 0)
@@ -134,6 +134,53 @@ def test_unknown_component_and_bad_before_refused():
         run(before=BEFORE + [BEFORE[0]])
 
 
+# ---------------- R-T406-8 (r3): class from the board verdict, never a moved figure
+# Villa R406 shallow dome (hand, NOT Alsenan): spherical cap, base radius 1.50, rise 1.00, shell 0.10 (inner rise 0.90).
+#   R_o = (1.50^2 + 1.00^2) / 2.00 = 1.625; R_i = 1.525; V = pi h^2 (3R - h) / 3
+#   outer pi x 1.00 x 3.875 / 3 = 4.057890; inner pi x 0.81 x 3.675 / 3 = 3.117245; shell 0.940645 m3.
+#   Other side: a hemisphere reading of the area (2 pi h^2 = 6.283185 m2) x 0.10 = 0.628319 -> term +0.312327.
+#   The package printed that term UNTRACED; the merged Checker verdict rules it ENGINE_RIGHT (own cap calculation).
+
+import math  # noqa: E402
+
+DOME_TERM = round((math.pi * 1.0 * (3 * 1.625 - 1.0) / 3 - math.pi * 0.81 * (3 * 1.525 - 0.9) / 3)
+                  - 2 * math.pi * 1.0 ** 2 * 0.10, 6)
+BOARD = {"task": "T-900", "member": "DOME", "m3": DOME_TERM, "verdict": "ENGINE_RIGHT",
+         "ref": "T-900 MERGED aaaa1111, Checker own cap calculation"}
+PKG = {"cause": "DOME: shell area term untraced", "m3": DOME_TERM, "verdict": "UNTRACED"}
+
+
+def test_board_verdict_reclasses_by_hand_and_keeps_the_figure():
+    assert DOME_TERM == 0.312327
+    p = R.board_reclass("DOME", PKG, BOARD, MERGED)
+    assert p["m3"] == PKG["m3"] and p["verdict"] == "ENGINE_RIGHT" and p["package_verdict"] == "UNTRACED"
+    before = [comp("E", "DOME", "UNRESOLVED", DOME_TERM - 1.0, u=DOME_TERM - 1.0)]
+    held = {"cause": "second dome held named item", "m3": -1.0, "verdict": "HELD"}
+    _, _, fa, _, tot = R.rollup(before, {"E": {"source": "T-900", "parts": [p, held]}}, MERGED, {}, {})
+    assert (tot["after_traces"]["TRACED"], tot["after_traces"]["HELD"], tot["after_traces"]["UNEXPLAINED"]) == \
+        (0.312327, -1.0, 0.0)
+    _, _, _, _, tot0 = R.rollup(before, {"E": {"source": "T-900", "parts": [PKG, held]}}, MERGED, {}, {})
+    assert tot0["after_traces"]["UNEXPLAINED"] == 0.312327          # without the board verdict it stays unexplained
+
+
+@pytest.mark.parametrize("change, match", [
+    ({"task": "T-950"}, "not in the merged register"),
+    ({"member": "OTHER"}, "not the member"),
+    ({"ref": " "}, "no reference"),
+    ({"m3": DOME_TERM + 0.01}, "never moves a figure"),
+    ({"verdict": "CLOSER_TO_FREELANCER"}, "unknown verdict"),
+])
+def test_board_verdict_adverse_refused(change, match):
+    with pytest.raises(R.Refused, match=match):
+        R.board_reclass("DOME", PKG, {**BOARD, **change}, MERGED)
+
+
+def test_board_verdict_never_classes_a_held_part_as_traced():
+    held = {"cause": "second dome held named item", "m3": -1.0, "verdict": "HELD"}
+    with pytest.raises(R.Refused, match="HELD part"):
+        R.board_reclass("DOME", held, {**BOARD, "m3": -1.0}, MERGED)
+
+
 def test_unknown_verdict_refused():
     bad = {"source": "T-900", "parts": [{"cause": "lump", "m3": -1.5, "verdict": "CLOSER_TO_FREELANCER"}]}
     with pytest.raises(R.Refused, match="unknown verdict"):
@@ -178,7 +225,11 @@ def test_summary_after_restates_the_same_residual_and_closes_by_family():
         for k in ("TRACED", "HELD", "UNEXPLAINED", "residual_m3"):
             assert abs(sum(f[k] for f in fams.values()) - t[tk][k]) <= R.TOL
         assert all(f["bookkeeping_closes"] for f in fams.values())
-    assert t["after_traces"]["UNEXPLAINED"] == -11.006907
+    # r3 (R-T406-8): SD-DOME domes A + B +0.561362 traced by the T-398 board verdict
+    assert (t["after_traces"]["TRACED"], t["after_traces"]["HELD"], t["after_traces"]["UNEXPLAINED"]) == \
+        (4.125049, -107.021212, -11.568269)
+    assert (t["current"]["TRACED"], t["current"]["HELD"], t["current"]["UNEXPLAINED"]) == \
+        (4.128223, -115.460212, -11.568269)
     assert abs(t["current"]["residual_m3"] - t["after_traces"]["residual_m3"] - (-8.439 + 0.003174)) <= R.TOL
 
 
@@ -194,7 +245,7 @@ def test_boundary_family_row_and_held_never_zero():
 
 def test_no_unmerged_task_in_the_summary():
     text = json.dumps(SUMMARY)
-    for unmerged in ("T-399", "T-400", "T-405", "T-407", "T-408", "T-410"):
+    for unmerged in ("T-400", "T-408", "T-411", "T-412", "T-413", "T-414"):     # not merged at r3 (2026-11-01)
         assert f'"{unmerged}"' not in text
 
 
@@ -202,3 +253,25 @@ def test_no_unmerged_task_in_the_summary():
 def test_private_rebuild_equals_committed_summary():
     pub = A.public_summary(*A.build(A.before_from_recon(PRIVATE_RECON)))
     assert json.loads(json.dumps(pub, sort_keys=True)) == SUMMARY
+
+
+def test_sd_dome_class_from_the_board_verdict():
+    c = next(c for c in SUMMARY["retraced_components"] if c["id"] == "SD-DOME")
+    assert c["after"] == {"HELD": -2.26, "TRACED": 0.561362, "UNEXPLAINED": 0.0}
+    p = next(p for p in c["parts"] if p.get("package_verdict"))
+    assert p["package_verdict"] == "UNTRACED" and p["verdict"] == "ENGINE_RIGHT" and p["m3"] == 0.561362
+    s398 = json.loads((ROOT / "research" / "agents_t398" / "summary_t398.json").read_text(encoding="utf-8"))
+    pkg = next(x for x in s398["components"] if x["id"] == "SD-DOMES-AB")
+    assert pkg["untraced_term_m3"] == p["m3"]                   # the package's own figure, never moved
+    # the Checker's cap arithmetic (T-398 verdict) reproduces the engine's two shells
+    ro = (2.21 ** 2 + 1.90 ** 2) / 3.80
+    cap = lambda r, h: math.pi * h * h * (3 * r - h) / 3
+    assert abs(2 * (cap(ro, 1.90) - cap(ro - 0.10, 1.80)) - pkg["engine_valued_m3"]) <= 0.001
+    f = SUMMARY["families_after_traces"]["CONC.STAIR_DOME"]
+    assert (f["TRACED"], f["HELD"], f["UNEXPLAINED"]) == (0.233217, -5.788, -5.827775)
+
+
+def test_v3034_moved_no_concrete_line():
+    note = SUMMARY["candidate_notes"]["V3.0.33 -> V3.0.34"]
+    assert "none concrete" in note and A.MERGED["T-399"] in note
+    assert A.v3034_note() == note

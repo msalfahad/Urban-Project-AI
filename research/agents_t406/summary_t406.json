@@ -3,7 +3,8 @@
  "candidate_notes": {
   "CL-LIFT": "one HELD blank line CONC.LIFT_PIT_WALL added (pit depth D-43): the engine side stays 0, no residual move",
   "GS-SLAB": "held bound of L-41cfb82e 3.929788 .. 3.929788 -> 0 .. 3.560540 m3 (T-391 F1): held engine side only, no residual move",
-  "V3.0.29 = V3.0.32": "the concrete families are identical in V3.0.29 .. V3.0.32 (T-391 / T-394 / T-395 / T-397 asserted)"
+  "V3.0.29 = V3.0.32": "the concrete families are identical in V3.0.29 .. V3.0.32 (T-391 / T-394 / T-395 / T-397 asserted)",
+  "V3.0.33 -> V3.0.34": "V3.0.34 (T-399 Gate B, abf3de76) changed 1 line(s), none concrete (FIN.PAINT); 4689 lines identical: the current table holds on V3.0.34 unchanged"
  },
  "confirmations": [
   {
@@ -102,8 +103,8 @@
   },
   "CONC.STAIR_DOME": {
    "HELD": -5.788,
-   "TRACED": -0.328145,
-   "UNEXPLAINED": -5.266413,
+   "TRACED": 0.233217,
+   "UNEXPLAINED": -5.827775,
    "bookkeeping_closes": true,
    "cause_closes": false,
    "components": 2,
@@ -277,8 +278,8 @@
   },
   "CONC.STAIR_DOME": {
    "HELD": -5.788,
-   "TRACED": -0.328145,
-   "UNEXPLAINED": -5.266413,
+   "TRACED": 0.233217,
+   "UNEXPLAINED": -5.827775,
    "bookkeeping_closes": true,
    "cause_closes": false,
    "components": 2,
@@ -306,6 +307,7 @@
   "T-395": "8cf46e7d",
   "T-397": "4492fd59",
   "T-398": "fe6a238d",
+  "T-399": "abf3de76",
   "T-401": "23f948bb",
   "T-402": "1b4c18fc",
   "T-403": "a72a7282"
@@ -880,8 +882,8 @@
   {
    "after": {
     "HELD": -2.26,
-    "TRACED": 0.0,
-    "UNEXPLAINED": 0.561362
+    "TRACED": 0.561362,
+    "UNEXPLAINED": 0.0
    },
    "before": {
     "HELD": 0.0,
@@ -891,8 +893,8 @@
    "contribution_m3": -1.698638,
    "current": {
     "HELD": -2.26,
-    "TRACED": 0.0,
-    "UNEXPLAINED": 0.561362
+    "TRACED": 0.561362,
+    "UNEXPLAINED": 0.0
    },
    "family_after": "CONC.STAIR_DOME",
    "family_before": "CONC.STAIR_DOME",
@@ -906,9 +908,10 @@
    "move_source": null,
    "parts": [
     {
-     "cause": "SD-DOMES-AB: dome shells DOME-A (west) and DOME-B (east), 442 / 190 / 10 above the springing untraced term",
+     "cause": "SD-DOMES-AB: dome shells DOME-A (west) and DOME-B (east), 442 / 190 / 10 above the springing untraced term (class from the board verdict: T-398 MERGED fe6a238d, Checker own re-measure: cap 442 / 190 / 10 (ST p.7), R_o = (2.21^2 + 1.90^2) / 3.80 = 2.235289, outer cap 18.1679 - inner cap (R_i 2.135289, rise 1.80) 15.6273 = 2.5406 m3 per dome (engine 2 domes 5.081362 m3); his shell area is a hemisphere reading on the 1.90 rise, not a drawn area: area term ENGINE_RIGHT)",
      "m3": 0.561362,
-     "verdict": "UNTRACED"
+     "package_verdict": "UNTRACED",
+     "verdict": "ENGINE_RIGHT"
     },
     {
      "cause": "SD-DOME-3: tower dome over the 2F maid room held named item",
@@ -1041,8 +1044,8 @@
  "totals": {
   "after_traces": {
    "HELD": -107.021212,
-   "TRACED": 3.563687,
-   "UNEXPLAINED": -11.006907,
+   "TRACED": 4.125049,
+   "UNEXPLAINED": -11.568269,
    "families": 10,
    "families_cause_closing": 4,
    "residual_m3": -114.464432
@@ -1057,8 +1060,8 @@
   },
   "current": {
    "HELD": -115.460212,
-   "TRACED": 3.566861,
-   "UNEXPLAINED": -11.006907,
+   "TRACED": 4.128223,
+   "UNEXPLAINED": -11.568269,
    "families": 10,
    "families_cause_closing": 4,
    "residual_m3": -122.900258

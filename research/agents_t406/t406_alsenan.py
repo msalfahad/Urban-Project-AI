@@ -34,8 +34,22 @@ PRIVATE = HERE.parents[2] / "private" / "t406"
 # merged register: task -> merge commit on the working branch (every one checked as an ancestor by the tests)
 MERGED = {
     "T-385": "5f99bfc3", "T-391": "c3fe8ec8", "T-392": "cc3c7f08", "T-394": "e27c5d78", "T-395": "8cf46e7d",
-    "T-397": "4492fd59", "T-398": "fe6a238d", "T-401": "23f948bb", "T-402": "1b4c18fc", "T-403": "a72a7282",
+    "T-397": "4492fd59", "T-398": "fe6a238d", "T-399": "abf3de76", "T-401": "23f948bb", "T-402": "1b4c18fc",
+    "T-403": "a72a7282",
 }
+# R-T406-8 (r3): a part's class from the Checker VERDICT on the board where the package summary differs. T-398's
+# summary carries the domes A + B area term as UNTRACED; its merged verdict (Verifier 2026-10-31T17:00Z, Gate A PASS)
+# rules it ENGINE_RIGHT on the Checker's own cap calculation; the m3 is the package's own figure, never moved.
+BOARD_VERDICTS = {
+    "SD-DOMES-AB": {"task": "T-398", "member": "SD-DOMES-AB", "m3": 0.561362, "verdict": "ENGINE_RIGHT",
+                    "ref": "T-398 MERGED fe6a238d, Checker own re-measure: cap 442 / 190 / 10 (ST p.7), R_o = "
+                           "(2.21^2 + 1.90^2) / 3.80 = 2.235289, outer cap 18.1679 - inner cap (R_i 2.135289, rise "
+                           "1.80) 15.6273 = 2.5406 m3 per dome (engine 2 domes 5.081362 m3); his shell area is a "
+                           "hemisphere reading on the 1.90 rise, not a drawn area: area term ENGINE_RIGHT"},
+}
+# V3.0.33 -> V3.0.34 (T-399 Gate B PASS, merge abf3de76): summary_t399.json diff_vs_v3_0_33 CHANGED 1 (FIN.PAINT
+# L-c3f7e68ce91a436802e2 BLOCKED_RFI -> NOT_APPLICABLE_WITH_EVIDENCE), SAME 4689: no concrete line moved (asserted).
+V3034_SOURCE = "agents_t399/summary_t399.json"
 NEW_FAMILY = "CONC.BOUNDARY_BELOW_NG"
 FAMILY_MOVES = {"BW-BAND": NEW_FAMILY, "GB-BOUNDARY": NEW_FAMILY}
 # the Checker's split of the upper G.B length term (T-403 verdict 2026-10-31T17:55Z): 2.35 m ENGINE_RIGHT, 0.28 m UNRESOLVED
@@ -138,7 +152,10 @@ def traces():
             if abs(c["held_named_m3"]) > 0.0000005:
                 parts.append(P(f"{m}: {c['element']} held named item", c["held_named_m3"], "HELD"))
             if abs(c["untraced_term_m3"]) > 0.0000005:
-                parts.append(P(f"{m}: {c['element']} untraced term", c["untraced_term_m3"], "UNTRACED"))
+                part = P(f"{m}: {c['element']} untraced term", c["untraced_term_m3"], "UNTRACED")
+                if m in BOARD_VERDICTS:
+                    part = R.board_reclass(m, part, BOARD_VERDICTS[m], MERGED)
+                parts.append(part)
         out[cid] = {"source": "T-398", "residual_in_source": round(sum(comp[m]["contribution_m3"] for m in members), 6),
                     "parts": parts}
     pp = s398["pump_part"]
@@ -186,8 +203,21 @@ def candidate_moves():
         "CL-LIFT": "one HELD blank line CONC.LIFT_PIT_WALL added (pit depth D-43): the engine side stays 0, no "
                    "residual move",
         "V3.0.29 = V3.0.32": "the concrete families are identical in V3.0.29 .. V3.0.32 (T-391 / T-394 / T-395 / "
-                             "T-397 asserted)"}
+                             "T-397 asserted)",
+        "V3.0.33 -> V3.0.34": v3034_note()}
     return out, notes
+
+
+def v3034_note():
+    """T-399 (V3.0.34) moved no concrete line: read and asserted from its merged summary."""
+    s = _j(V3034_SOURCE)
+    changed = [r for r in s["rows"] if r["before_v3_0_33"] != r["after_v3_0_34"]]
+    if s["diff_vs_v3_0_33"]["CHANGED"] != len(changed) or any(
+            str(r["item_code"]).startswith("STR.CONC.") for r in changed):
+        raise R.Refused("V3.0.34 changed a concrete line: a candidate move must be stated (R-T406-6)")
+    return (f"V3.0.34 (T-399 Gate B, {MERGED['T-399']}) changed {len(changed)} line(s), none concrete "
+            f"({', '.join(sorted({r['item_code'] for r in changed}))}); {s['diff_vs_v3_0_33']['SAME']} lines identical: "
+            "the current table holds on V3.0.34 unchanged")
 
 
 def before_from_recon(path):
