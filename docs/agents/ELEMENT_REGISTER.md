@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- GF LIFT TIE BEAM (Lead 2026-11-01 04:15; T-408 READY, unverified until MERGED): one physical beam on the GF shaft
+  sides, 5.500 m DRAWING-CONFIRMED on the GF storey's own columns; OWNER TRADE STRUCTURE (concrete, formwork sides +
+  soffit, bars, all HELD blank on the missing section D-43); the masonry lines that already hold GF-W08 / W09 / W13 /
+  W14 on 'lift tie beam size' (MAS.BLOCK / ARCH.WALL_VOLUME / ARCH.WALL_PANEL) take the block net once the section
+  arrives, never a second concrete quantity; never part of a column line (columns stop at the beam faces). Every pit
+  wall height line names BOTH unprinted facts (pit depth AND GF build-up to slab-on-grade top).
+- FENCE GATE G-02 = DOOR D-GF-15 (Lead 2026-11-01 04:15; T-400 Gate B verdict): one opening, one item: the B13-04 gate
+  line owns it (counted once in V3.0.35); the door schedule lists it without a quantity. The fence wall plane, its two
+  faces and its top are FENCE (B13-04); the masonry below N.G. under the fence is FENCE, under the house ground beams
+  is MASONRY (T-407), 0.000 overlap at the 91.94 m band partition (fence 44.07 / pool 3.50 / house 44.37).
+- ROOM WITH NO FLOOR-FINISH LINE (Lead 2026-11-01 04:15; T-414 finding, T-418): a floored space (GF entrance / stair
+  hall, 2F stair lobby) that carries no B3-01 line is a silent omission of FLOOR FINISHES (owner trade), not a bed or
+  stair item; the stair footprint below the cut and the treads stay STAIRS (B7); the B3-05 bed follows the finish line
+  once it exists, never ahead of it.
 - STAIR SIDE AGAINST A COLUMN (Lead 2026-11-01 00:18; T-410 r1 verdict, Checker own read of S-COL.BON): a column face
   standing proud of the wall line on a stair side is a WALL side for skirting (B7-07 / B7-08, owner trade FINISHES),
   measured on the column face with its return; the same projection narrows the tread there: B7-02 tread marble (owner
@@ -883,7 +897,7 @@ used the PROFILED run.
 | Soffits over outside air 44.446 m2 (porch 19.181, passage 5.640, pool court 12.834, 1F edges 4.374 + 2.417) | ceiling, slab, external plaster | CEILING (area lines); finish HELD; SX-01..03 (1.665 m2) listed, never added | VERIFIED pool court (checker 12.8343); others DRAWING-CONFIRMED | Q-68 C; T-127 / T-142 | T-142 Gate B |
 | Exterior faces per side and storey (T-159: 1,022.534 m2 measured + 6.822 .. 13.261 HELD + 13.079 m slab edge) | facade plaster / paint (freelancer "Sigma"), parapets, blockwork, openings | FACADE finish per face; parapet faces and roof faces are FACADE lines of their own; a face standing on a lower roof starts at that roof; boundary / street fence NOT facade (Q-65 HELD); domes EXCLUDED (owner Sigma item 3, client change Q-29); openings listed apart (T-150 owns count and size) | DRAWING-CONFIRMED (printed levels), wavy-parapet heights from the CAD top line flagged for the checker | Q-07 B, Q-64 B, owner Sigma notes | T-162 reconciles his 1,502.84 / 1,469.97 m2 term by term; corners m.l FLAGGED (R-11 c) |
 | Railings / balustrades and shutters | stairs, facade, openings, metal works | none yet: a missing BOQ category; T-164 builds the census of what is DRAWN | NOT IN THE DRAWING for the rendered ones (no quantity); UNKNOWN for the category | T-161 READY | D-54, T-164 |
-| Main entrance door 2.00 x 2.50 (double, printed) [CORRECTED by the Lead 04:20: HELD, see the 04:20 table] | openings, facade, block deduction | OPENINGS: printed size governs (5.000 m2); render single leaf is a DIFFERS note only | DRAWING-CONFIRMED | Q-55 C (2.50 printed governs) | D-53 |
+| Main entrance door 2.00 x 2.50 (double, printed) [CORRECTED by the Lead 04:15: HELD, see the 04:20 table] | openings, facade, block deduction | OPENINGS: printed size governs (5.000 m2); render single leaf is a DIFFERS note only | DRAWING-CONFIRMED | Q-55 C (2.50 printed governs) | D-53 |
 
 ### Lead 2026-10-21 20:20 (from T-119 r2, T-133 MERGED, T-149, T-150, T-153 MERGED, T-159, T-160)
 
