@@ -1,0 +1,1411 @@
+{
+ "basis": "T-428 r4 MERGED ea8f5ae5, Checker-restated basis traced -1.300165 / HELD -116.428339 / unexplained -5.171754 (O-T428-1 ruled); candidate V3.0.37 = V3.0.38 for valued concrete",
+ "beside_no_comparison_term": [
+  {
+   "blocker": "blank (BLOCKED_RFI): parapet RC (T-319)",
+   "floor": "2F",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-030538dda6a32c601c4c"
+  },
+  {
+   "blocker": "unresolved: TYPE_NOT_IN_SCHEDULE",
+   "floor": "UNKNOWN",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-0d4cd54cb397f210d1fd"
+  },
+  {
+   "blocker": "held: designer item D-26 (as the GF / 1F projection strips); 0.10 strip west of the B15 band: no tag, no bars, depth not printed; HELD, no m",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-17c4238c0ef76656d06e"
+  },
+  {
+   "blocker": "unresolved: TYPE_NOT_IN_SCHEDULE",
+   "floor": "UNKNOWN",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-1850e27801a200419510"
+  },
+  {
+   "blocker": "blank (BLOCKED_RFI): parapet RC (T-319)",
+   "floor": "GF",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-1d419b64e8ca1af30fb4"
+  },
+  {
+   "blocker": "held: designer item D-05",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-331d4bbef719a7f0bbca"
+  },
+  {
+   "blocker": "held: designer item D-26",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-377cb988b2271c2e2e4d"
+  },
+  {
+   "blocker": "held: designer item D-27; schedule width 0.25 vs drawn 0.2: same kind as CB10 (owner Q-61 C(1): never pick the schedule only because it is p",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-39ca5340879eafc35355"
+  },
+  {
+   "blocker": "unresolved: TYPE_NOT_IN_SCHEDULE",
+   "floor": "UNKNOWN",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-53a35abf19b1d8807f38"
+  },
+  {
+   "blocker": "held: designer item D-05",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-54e397fe7b1485b2e8fe"
+  },
+  {
+   "blocker": "held: designer item D-05",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-56d278bedc8dda2837a9"
+  },
+  {
+   "blocker": "held: designer item D-05",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-634cefe5e8a7fb458e16"
+  },
+  {
+   "blocker": "held: designer item D-05",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-67f3d325019e618328eb"
+  },
+  {
+   "blocker": "HELD remainder (blank in the BOQ, never 0): ST01b-D1-WAIST: HELD: no thickness or support printed (waist thickness not printed: the flight i",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-821032bc04a0b0d02133"
+  },
+  {
+   "blocker": "blank (BLOCKED_RFI): parapet RC (T-319)",
+   "floor": "1F",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-9a2c81164ec6499cc28c"
+  },
+  {
+   "blocker": "unresolved: UNBOUND",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a9d5e7dc22013e24d691"
+  },
+  {
+   "blocker": "held: RING_SECTION_NOT_PRINTED: no B4 (or other) mark on or near this ring and the dome detail says depth 'as per architect' (owner Q-61 C(3",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ab37afa17f2ac5b0efd1"
+  },
+  {
+   "blocker": "held: designer item D-26",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-aba59a2157a48a69e2fb"
+  },
+  {
+   "blocker": "held: SB1 inside the open F10 + F outline (one outline drawn round two schedule footings, F10 H 0.50 / F H 0.30): A_in 0.770 m2 (column C10 ",
+   "floor": "FOUNDATION",
+   "item_code": "STR.CONC.STRAP",
+   "line_id": "L-abd65e1b745315dd17c2"
+  },
+  {
+   "blocker": "blank (BLOCKED_RFI): parapet RC (T-319)",
+   "floor": "GF",
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": "L-b5ffc172a354375ca107"
+  },
+  {
+   "blocker": "unresolved: UNBOUND",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bb49e831f053bd30a6ce"
+  },
+  {
+   "blocker": "held: SB3 (0.40 deep) enters F3 (0.30 thick): inside the outline A_in 0.2953 m2 (0.3416 gross - column C3 0.0463; Checker own overlap 0.2954",
+   "floor": "FOUNDATION",
+   "item_code": "STR.CONC.STRAP",
+   "line_id": "L-c823e0dbd81e30c66aa5"
+  },
+  {
+   "blocker": "unresolved: TYPE_NOT_IN_SCHEDULE",
+   "floor": "UNKNOWN",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-d33f749864d96dd236f0"
+  },
+  {
+   "blocker": "unresolved: TYPE_NOT_IN_SCHEDULE",
+   "floor": "UNKNOWN",
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-de9383f76f000503e1d7"
+  },
+  {
+   "blocker": "unresolved: UNLABELLED_SPAN_ACROSS_SUPPORT",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-efd3f7806bf10b6a8e98"
+  },
+  {
+   "blocker": "held: designer item D-26",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-fbb65dfd2a66a16714ac"
+  },
+  {
+   "blocker": "pad count not printed (T-403; V3.0.35 T-400: 0.312 m3 per pad beside, no residual move)",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.BOUNDARY_PAD",
+   "line_id": "L-cda8f41522dc6f42b3d6"
+  }
+ ],
+ "by_route": {
+  "DESIGNER": -111.217799,
+  "DRAWING": 0,
+  "ENGINE": -3.56054,
+  "SUPPLIER": -1.65
+ },
+ "engine_side_register_beside": [
+  {
+   "correction_owner": "T-430",
+   "id": "E-1",
+   "kind": "VERIFIED_WRONG",
+   "line_ids": [
+    "L-fe78ae283abfb6256358",
+    "L-0e30aadba2eebc6c3ede"
+   ],
+   "m3": 0.423,
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "unloaded 3.525 m halves at 0.60 where p.13 prints 30 x 40 (2 x 0.2115); the other side is at 0.60 too, so the comparison shows 0.000 AGREE"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-2",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "L-fe78ae283abfb6256358",
+    "L-0e30aadba2eebc6c3ede"
+   ],
+   "range_m3": [
+    0.846,
+    1.269
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "loaded halves (a beam lands on them; D-33 concentrated load): 30 x 40 .. 30 x 60 over 2 x 3.525 m, valued today at the 0.60 end"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-3",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "4 short-run lines (T-426 census)"
+   ],
+   "range_m3": [
+    0.864171,
+    1.152231
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "runs under 2.5 m valued at the 0.40 end of the unanswered D-34 pair (F-T426-1: downgrade-only extension of DG-a31a0d7e); the comparison term on them sits in GB-SEC-40 and would grow by up to -0.288057 if D-34 gives 30 x 30"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-4",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "177+7CD#1 line (T-426 census)"
+   ],
+   "range_m3": [
+    0.5964,
+    0.9036
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "span 5.020 (band end) or 4.970 (column 1EC face): 30 x 60 .. 30 x 40, valued at the 0.60 end; in GB-SEC-60 (0.000 AGREE)"
+  }
+ ],
+ "held_total_m3": -116.428339,
+ "investigation_ranked": [
+  "I-07"
+ ],
+ "items": [
+  {
+   "beside": "engine 4 lines: footing layer 15.179437 (Checker 12.734438 VERIFIED + FF HELD >= 2.070), F10/F 0.552 .. 0.590, ground beams 4.949374 .. 9.422514, straps 0.377803 .. 0.771877",
+   "blockers": [
+    "DG-3521554d2fd011b9 footing layer (FF raft projection not printed on p.14, T-322; 8 plot-line footings D-14)",
+    "F10 + F outline Q-31 C",
+    "ground-beam blinding: footing detail choice open (D-34 / D-35 sections)",
+    "strap blinding not printed D-15"
+   ],
+   "drawings_searched": [
+    "ST p.13 (typical footing / ground-beam blinding)",
+    "ST p.14 (lift raft)",
+    "ST p.2",
+    "ST p.10 (straps)"
+   ],
+   "id": "I-01",
+   "joint": true,
+   "lines": [
+    "L-080c97f5f6a92452cd04",
+    "L-35382b18e2e362df3ae6",
+    "L-7a5214a334ea3559fa2d",
+    "L-98eb2d58075c9eddf1b4"
+   ],
+   "m3": -47.055,
+   "parts": [
+    "BL-1"
+   ],
+   "rfi": [
+    "RFI-S06",
+    "RFI-S07",
+    "RFI-S08",
+    "RFI-S02",
+    "RFI-S09",
+    "RFI-S11"
+   ],
+   "route": "DESIGNER",
+   "s27": "drawings print blinding under footings and the 4 ground-beam sections only (p.13), no projection under the lift raft (p.14), none under straps: drawings cannot resolve; his one plain layer over a rectangle is a scope no sheet prints, so even with every RFI answered a RULE_DIFFERENCE remains (not separable from his one row)",
+   "sources": [
+    "T-322 MERGED d3bcd9d4",
+    "T-385 r2 (BL-1)"
+   ]
+  },
+  {
+   "beside": "engine 36 necks 3.075 .. 15.375 (+1 unbounded)",
+   "blockers": [
+    "Q-21 C founding / neck start level"
+   ],
+   "drawings_searched": [
+    "ST p.13",
+    "ST p.2",
+    "ST p.9 notes 1 / 4"
+   ],
+   "id": "I-02",
+   "lines": [
+    "L-05a99150a85e9185ae48",
+    "L-12f3d8b9375cac407bca",
+    "L-132cf60588a44f6af9d6",
+    "L-15b8ad39d6b2250c9546",
+    "L-15d9da9b17fd373553f0",
+    "L-1a9e469651c32cce9b97",
+    "L-314946394d849141dda2",
+    "L-34346cb438bffee6acec",
+    "L-3f7b9501a902579e7406",
+    "L-46f2b70254f074885dfc",
+    "L-486cd9a0bf52e4b32abb",
+    "L-48f2e06e5c946eb1e5a7",
+    "L-4ec473f7c0c712919823",
+    "L-4ef35980fbb54366703d",
+    "L-516989b817e0ccc7cb80",
+    "L-53d0b6af1a801c3db58e",
+    "L-5aec8a0055215ee5a711",
+    "L-5efd9ac69d4cfd9b9a6e",
+    "L-6a2040e0fe0bf7391b9c",
+    "L-734ff1a78bbe6b7eb4c3",
+    "L-85df35f17a205f919aa6",
+    "L-8eb74a02fcf5ae4465f8",
+    "L-953e87a3e9d0425d404e",
+    "L-995eca94ba8dc09a028f",
+    "L-ae1bd9cb228d57594e46",
+    "L-b21cbf6560f613b39bf0",
+    "L-b4c234c8a3873239f67f",
+    "L-bbad8cdb4d26986776a6",
+    "L-bd741a3faf2318dd8409",
+    "L-c1e802184591eac927cf",
+    "L-c8c07db4ac0d54d89bbf",
+    "L-dd3c32e4340e7a823a6e",
+    "L-dd6d11415961b554e906",
+    "L-efe50185c0da4244e158",
+    "L-f54b7b2acf11ebd2a585",
+    "L-fc622ff340ac65a544e3"
+   ],
+   "m3": -8.805,
+   "parts": [
+    "CL-NECK"
+   ],
+   "rfi": [
+    "RFI-S01"
+   ],
+   "route": "DESIGNER",
+   "s27": "p.9 note 1 fixes a minimum excavation only; no sheet prints the footing underside or the neck start level",
+   "sources": [
+    "T-385 r2",
+    "T-357"
+   ]
+  },
+  {
+   "beside": "engine range 5.6392 .. 11.0328 (DG-6dd9f1caba1ca77d)",
+   "blockers": [
+    "DG-6dd9f1caba1ca77d lower band depth (Q-28)"
+   ],
+   "drawings_searched": [
+    "ST p.1",
+    "ST p.10",
+    "ST p.14",
+    "ST p.2"
+   ],
+   "id": "I-03",
+   "lines": [
+    "L-6290a9f3d93f38cd46d6"
+   ],
+   "m3": -8.4588,
+   "parts": [
+    "BW-BAND"
+   ],
+   "rfi": [
+    "RFI-S03"
+   ],
+   "route": "DESIGNER",
+   "s27": "the band's section and level are printed on no sheet (owner method A carried as the comparison basis)",
+   "sources": [
+    "T-403",
+    "T-356"
+   ]
+  },
+  {
+   "beside": "engine CONFLICT ranges per line (T-397 rows)",
+   "blockers": [
+    "13 column outlines vs schedule bands (designer list D-66; the V3.0.33 line basis text says D-63)"
+   ],
+   "drawings_searched": [
+    "ST p.4",
+    "ST p.5",
+    "ST p.9 (column schedule)"
+   ],
+   "id": "I-04",
+   "lines": [
+    "L-8de64040a1c3ae6cf137",
+    "L-43dae3d6dfec957b26a8",
+    "L-9cb26d86575a92694880",
+    "L-4aed92c117a7ab1c90ee",
+    "L-c677b628a776d3b87b02",
+    "L-8f8ad257d9b2cb9e027f",
+    "L-755eb56b55e86301b488",
+    "L-291ba2ddf4bbe4f14cf7",
+    "L-a87ea657a42a311cb851",
+    "L-85809d3db52bb93dfe96",
+    "L-cc702b8541c15fdfd98c",
+    "L-831f6fe3de133294bb8f",
+    "L-e112e2add2f8979a6c39"
+   ],
+   "m3": -6.6705,
+   "parts": [
+    "CL-GF-MOVE-BAND",
+    "CL-1F-MOVE-BAND"
+   ],
+   "rfi": [
+    "RFI-S20"
+   ],
+   "route": "DESIGNER",
+   "s27": "the plan outline and the schedule band of each column differ on the same issued set: two authoritative documents conflict (ERS s.2.7)",
+   "sources": [
+    "T-397 Gate B 4492fd59"
+   ]
+  },
+  {
+   "beside": "8 blank lines",
+   "blockers": [
+    "D-35 exterior / annex ground-beam depth 'FOLLOW ARCH.' with no printed build-up"
+   ],
+   "drawings_searched": [
+    "ST p.13 (ground-beam sections)",
+    "ST ground-beam plan",
+    "arch sections A-A / B-B"
+   ],
+   "id": "I-05",
+   "lines": [
+    "L-00465df980165c529476",
+    "L-3284f44000c02179ace7",
+    "L-402dbe61d1c924144a3c",
+    "L-4783c6e18002c3a8a37e",
+    "L-6bf14711798e5af93594",
+    "L-b4a13a43967ee4765662",
+    "L-d8b98b143e293d30833b",
+    "L-e16c98075f69532a3dc7"
+   ],
+   "m3": -5.400612,
+   "parts": [
+    "GB-HELD-D35",
+    "GB-HELD-D35-NECKFIELDS"
+   ],
+   "rfi": [
+    "RFI-S09"
+   ],
+   "route": "DESIGNER",
+   "s27": "p.13 ties the depth to the architecture; no sheet prints the annex floor build-up",
+   "sources": [
+    "T-391 c3fe8ec8",
+    "T-416 (length fields)",
+    "T-426 1f298735"
+   ]
+  },
+  {
+   "beside": "engine ranges GF B21 2.262872 .. 2.545691, B29 1.013607 .. 1.266989, CB2 0.347 .. 0.4338 + 0.335 .. 0.4188",
+   "blockers": [
+    "D-27 schedule width differs from the drawn width"
+   ],
+   "drawings_searched": [
+    "ST p.10 / p.11 (beam schedules)",
+    "ST p.4",
+    "ST p.5"
+   ],
+   "id": "I-06",
+   "lines": [
+    "L-1fd49f3e7c5a7dd19d4d",
+    "L-9e4895663f76d7f03ac9",
+    "L-2c7b0b1e1a439d9ffd1e",
+    "L-60f09eece6568b15f6ce"
+   ],
+   "m3": -4.470543,
+   "parts": [
+    "BM-GF-B21",
+    "BM-GF-B29",
+    "BM-GF-CB2"
+   ],
+   "rfi": [
+    "RFI-S13"
+   ],
+   "route": "DESIGNER",
+   "s27": "schedule and plan of the same set disagree (Q-61 C(1): never pick the schedule only because it is printed)",
+   "sources": [
+    "T-395"
+   ]
+  },
+  {
+   "beside": "engine bound 0 .. 3.56054",
+   "blockers": [
+    "engine reads the lift-shaft corner columns as free columns (T-042 ENGINE_MISSED_PRINTED_VALUE)"
+   ],
+   "drawings_searched": [
+    "ST ground-beam plan (slab-on-grade cells)",
+    "ST p.14 (lift shaft)"
+   ],
+   "id": "I-07",
+   "lines": [
+    "L-41cfb82ed733f4d6e3a5"
+   ],
+   "m3": -3.56054,
+   "parts": [
+    "GS-CELL"
+   ],
+   "route": "ENGINE",
+   "s27": "NOT met: the drawing settles the panels; the hold is an engine reading defect, not a designer item",
+   "settle_drawing": "ST ground-beam / slab-on-grade plan: own panels OWN-007 / 009 / 010 / 047 = 35.6054 m2 x printed T = 0.10 (T-391 MERGED own read)",
+   "sources": [
+    "T-391 c3fe8ec8 F1",
+    "T-397 (bound 0 .. 3.56054)"
+   ]
+  },
+  {
+   "beside": "engine 0 .. 3.5256 (V3.0.35)",
+   "blockers": [
+    "M4 boundary-wall columns 20 x 30 'SEE ARCH PLAN', none drawn (count and positions)"
+   ],
+   "drawings_searched": [
+    "ST p.14",
+    "arch sheet 03 (GF plan)"
+   ],
+   "id": "I-08",
+   "lines": [
+    "L-fb7a6431fede62e93fd5"
+   ],
+   "m3": -3.5256,
+   "parts": [
+    "GB-BOUNDARY"
+   ],
+   "rfi": [
+    "RFI-S04"
+   ],
+   "route": "DESIGNER",
+   "s27": "the structural note refers to an architectural plan that draws no such columns",
+   "sources": [
+    "T-403",
+    "T-400 (V3.0.35 range)"
+   ]
+  },
+  {
+   "beside": "no candidate line",
+   "blockers": [
+    "pool pump / plant room drawn on no sheet"
+   ],
+   "drawings_searched": [
+    "ST p.7 (pool detail)",
+    "ST DXF texts / layers",
+    "arch DXF texts (EN / AR)",
+    "sanitary sheets"
+   ],
+   "id": "I-09",
+   "lines": [],
+   "m3": -3.48,
+   "parts": [
+    "PL-PUMP"
+   ],
+   "rfi": [
+    "RFI-B-A14 (T-398 draft; not in the 2026-10-31 RFI register: RFI_MISSING there)"
+   ],
+   "route": "DESIGNER",
+   "s27": "absent from every sheet; not a verified absence",
+   "sources": [
+    "T-398 fe6a238d"
+   ]
+  },
+  {
+   "beside": "9 blank lines",
+   "blockers": [
+    "D-39 roof datum (9 lines)",
+    "D-44 B15 upstand / downstand (2 lines)",
+    "section conflict (2 lines)",
+    "planted column PC-2F section text vs outline (1 line)"
+   ],
+   "drawings_searched": [
+    "arch sheets 04 / 10 / 11 (roof levels)",
+    "ST p.6",
+    "ST p.10",
+    "ST p.15 (planted columns)"
+   ],
+   "id": "I-10",
+   "joint": true,
+   "lines": [
+    "L-0ede77cfd0badc4c7d62",
+    "L-26f6b6f2365c72e42291",
+    "L-33a9b7728781fcba12e2",
+    "L-53f223b06db14ac41d47",
+    "L-541c7e565bb93ecdb78b",
+    "L-919a5749ef79759e01ca",
+    "L-bc01297b1c4a4c45a15f",
+    "L-c10e2945d582b5a03126",
+    "L-d79d17d14f39d5148cb8"
+   ],
+   "m3": -3.381,
+   "parts": [
+    "CL-2F"
+   ],
+   "rfi": [
+    "RFI-S23",
+    "RFI-S22",
+    "RFI_MISSING (PC-2F section)"
+   ],
+   "route": "DESIGNER",
+   "s27": "roof slab-top level printed on no sheet (finished levels only)",
+   "sources": [
+    "T-385 r2 (CL-2F)"
+   ]
+  },
+  {
+   "beside": "9 downgraded lines",
+   "blockers": [
+    "D-34 length basis / title precedence of the p.13 sections"
+   ],
+   "drawings_searched": [
+    "ST p.13"
+   ],
+   "id": "I-11",
+   "lines": [
+    "L-0c5ede7fd2c9e425aa8d",
+    "L-5af89b9f1e5b90daf8f5",
+    "L-81444e222487437e257e",
+    "L-970bac563cbcd69e2a30",
+    "L-a8c5c32c7a785c1e3f05",
+    "L-d53e5eb08e2c6c668254",
+    "L-e2134034441cb7db7bd7",
+    "L-f0e25ad2cf73bf2a35ea",
+    "L-f24cf117a9ce1e875785"
+   ],
+   "m3": -2.987802,
+   "parts": [
+    "GB-HELD-D34"
+   ],
+   "rfi": [
+    "RFI-S11"
+   ],
+   "route": "DESIGNER",
+   "s27": "'more / less than 5 m / 2.5 m' without a basis; two titles hold below 2.5 m",
+   "sources": [
+    "T-391",
+    "T-426",
+    "verdicts/V3.0.29 DG-a31a0d7e9dd564ad"
+   ]
+  },
+  {
+   "beside": "1 blank line",
+   "blockers": [
+    "D-21 tower dome over the 2F maid room (Q-27 A)"
+   ],
+   "drawings_searched": [
+    "ST p.6",
+    "ST p.7",
+    "arch 2F plan"
+   ],
+   "id": "I-12",
+   "lines": [
+    "L-d5401fa8986900c66c37"
+   ],
+   "m3": -2.26,
+   "parts": [
+    "SD-DOME-3"
+   ],
+   "rfi": [
+    "RFI-S28"
+   ],
+   "route": "DESIGNER",
+   "s27": "architecture draws a dome; the structural slab is flat with no opening or ring",
+   "sources": [
+    "T-398"
+   ]
+  },
+  {
+   "beside": "5 blank lines",
+   "blockers": [
+    "annex roof datum Q-54 B / D-17",
+    "D-39 roof datum",
+    "section conflict (4 of 5 lines)"
+   ],
+   "drawings_searched": [
+    "arch section B-B (+4.30)",
+    "ST p.4",
+    "ST p.9"
+   ],
+   "id": "I-13",
+   "joint": true,
+   "lines": [
+    "L-694a75c84dd6e4bb4491",
+    "L-9f5a647014bbf83359f9",
+    "L-c0b3340a906c2c7650f8",
+    "L-e6c1c9a7feec10f64975",
+    "L-fad18af6e7139a5e99d1"
+   ],
+   "m3": -2.0625,
+   "parts": [
+    "CL-GF-MEMBERS"
+   ],
+   "rfi": [
+    "RFI-S23",
+    "RFI-S20"
+   ],
+   "route": "DESIGNER",
+   "s27": "annex slab-top level not printed; outline vs schedule conflict",
+   "sources": [
+    "T-394"
+   ]
+  },
+  {
+   "beside": "engine 2.176 .. 2.275",
+   "blockers": [
+    "Q-31 C F10 + F one outline, two tags"
+   ],
+   "drawings_searched": [
+    "ST p.2",
+    "ST p.9"
+   ],
+   "id": "I-14",
+   "lines": [
+    "L-164ae9d338976be9e582"
+   ],
+   "m3": -1.96,
+   "parts": [
+    "FT-F10"
+   ],
+   "rfi": [
+    "RFI-S02"
+   ],
+   "route": "DESIGNER",
+   "s27": "one outline carries two schedule tags whose sizes do not match it",
+   "sources": [
+    "T-385 r2"
+   ]
+  },
+  {
+   "beside": "engine bounds per line",
+   "blockers": [
+    "D-04 unlabelled beam spans (line formulas: designer item D-04 / UNLABELLED_SPAN_ACROSS_SUPPORT)"
+   ],
+   "drawings_searched": [
+    "ST p.4",
+    "ST p.5",
+    "ST p.6"
+   ],
+   "id": "I-15",
+   "lines": [
+    "L-8ea71184fff91b4357b7",
+    "L-f83c4a469845c7e14dfa",
+    "L-7c3edce23ec8faa3d674",
+    "L-dc8cbfc119d006ff3927",
+    "L-d62d2fcf3d0023ad1ad1",
+    "L-8d031491396379f0cbb1"
+   ],
+   "m3": -1.764375,
+   "parts": [
+    "BM-GF-B24",
+    "BM-1F-B2",
+    "BM-2F-B1",
+    "BM-2F-B15",
+    "BM-2F-B8"
+   ],
+   "rfi": [
+    "RFI-S15"
+   ],
+   "route": "DESIGNER",
+   "s27": "spans drawn with no mark: type and section unknown",
+   "sources": [
+    "T-395"
+   ]
+  },
+  {
+   "beside": "engine GF 0.9 .. 1.0125, 1F 0.756 .. 0.84",
+   "blockers": [
+    "D-16 column C8 plan 30X80 vs schedule 30 x 90"
+   ],
+   "drawings_searched": [
+    "ST p.1",
+    "ST p.9"
+   ],
+   "id": "I-16",
+   "lines": [
+    "L-4c4496579e5bfa20ae9f",
+    "L-1dc713c83bf62e525ff2"
+   ],
+   "m3": -1.7685,
+   "parts": [
+    "CL-GF-MOVE-D16",
+    "CL-1F-MOVE-D16"
+   ],
+   "rfi": [
+    "RFI-S19"
+   ],
+   "route": "DESIGNER",
+   "s27": "plan and schedule conflict",
+   "sources": [
+    "T-397"
+   ]
+  },
+  {
+   "beside": "1 blank line",
+   "blockers": [
+    "C-ST-4 MS1-L riser count (structural GF roof slab plan vs architecture)",
+    "MS1-T winder subdivision not drawn (S-9)"
+   ],
+   "drawings_searched": [
+    "ST p.4",
+    "ST p.16",
+    "arch sheet 03",
+    "arch sheet 10 (section A-A)"
+   ],
+   "id": "I-17",
+   "joint": true,
+   "lines": [
+    "L-7863355dfcb68a681d2d"
+   ],
+   "m3": -1.7808,
+   "parts": [
+    "SD-ST01-MS1L"
+   ],
+   "rfi": [
+    "RFI-A04",
+    "RFI-S24"
+   ],
+   "route": "DESIGNER",
+   "s27": "two issued sheets print different riser counts; winders never generated (owner S-9)",
+   "sources": [
+    "T-398",
+    "T-434",
+    "OWNER_RULE_STAIRS_2026-10-24 s.4"
+   ]
+  },
+  {
+   "beside": "pit wall plan 1.100 m2 DRAWING-CONFIRMED (Checker T-394); the T-406 / T-428 cause text cites D-43 (the lift tie-beam size), which does not hold this part (F-T433-1)",
+   "blockers": [
+    "lift pit depth below the lowest landing (lift supplier)",
+    "GF floor build-up F.F.L. +1.00 -> slab-on-grade top (D-22 / D-40)"
+   ],
+   "drawings_searched": [
+    "ST p.14",
+    "ST p.8 note 19",
+    "arch GF plan"
+   ],
+   "id": "I-18",
+   "joint": true,
+   "lines": [
+    "L-684fcad323adc0c8a267"
+   ],
+   "m3": -1.65,
+   "parts": [
+    "CL-LIFT"
+   ],
+   "rfi": [
+    "RFI L-1 (lift supplier, T-401)",
+    "RFI-B-A01 (D-40 floor build-up; mapped by title)"
+   ],
+   "route": "SUPPLIER",
+   "s27": "neither the pit depth nor the build-up is printed; both are needed (R-T401-2)",
+   "sources": [
+    "T-401",
+    "T-394"
+   ]
+  },
+  {
+   "beside": "1 blank line",
+   "blockers": [
+    "E1 waist thickness not printed (S-9 / G2-w)"
+   ],
+   "drawings_searched": [
+    "ST p.16",
+    "ST p.3",
+    "arch sheet 03"
+   ],
+   "id": "I-19",
+   "lines": [
+    "L-061e18cf35a4b6b33d68"
+   ],
+   "m3": -1.4112,
+   "parts": [
+    "SD-ST03-E1"
+   ],
+   "rfi": [
+    "RFI-S26"
+   ],
+   "route": "DESIGNER",
+   "s27": "waist slab or steps on fill: not printed",
+   "sources": [
+    "T-398"
+   ]
+  },
+  {
+   "beside": "drawn plan 4.443096 m2",
+   "blockers": [
+    "ST-02 RS-C soffit and waist (Q-50, RFI-S27)"
+   ],
+   "drawings_searched": [
+    "ST p.16",
+    "ST p.4",
+    "arch GF / 1F frames"
+   ],
+   "id": "I-20",
+   "lines": [
+    "L-b6b0354b7842f0ed6e41"
+   ],
+   "m3": -1.244067,
+   "parts": [
+    "SD-ST02-RSC"
+   ],
+   "rfi": [
+    "RFI-S27"
+   ],
+   "route": "DESIGNER",
+   "s27": "no section cuts the curved part",
+   "sources": [
+    "T-415",
+    "T-438 63f77c1d"
+   ]
+  },
+  {
+   "beside": "3 blank lines",
+   "blockers": [
+    "court ground-beam section not printed (GS-16 architect item)"
+   ],
+   "drawings_searched": [
+    "ST p.13",
+    "ST ground-beam plan"
+   ],
+   "id": "I-21",
+   "lines": [
+    "L-21795b350fbd09150c43",
+    "L-62243c74c430d383be86",
+    "L-a55bfa01b726ef11650c"
+   ],
+   "m3": -1.026,
+   "parts": [
+    "GB-HELD-COURT"
+   ],
+   "rfi": [
+    "RFI_MISSING (no RFI in the 2026-10-31 register names the court ground-beam section)"
+   ],
+   "route": "DESIGNER",
+   "s27": "p.13 prints no section for the court runs",
+   "sources": [
+    "T-242",
+    "T-253 s.4",
+    "T-391"
+   ]
+  },
+  {
+   "beside": "engine 0.2875 .. 0.345 + 0.4563 .. 0.5475",
+   "blockers": [
+    "D-02 CB10 schedule 0.25 vs drawn 0.30"
+   ],
+   "drawings_searched": [
+    "ST p.11",
+    "ST p.5",
+    "ST p.12"
+   ],
+   "id": "I-22",
+   "lines": [
+    "L-43e804ba4a4c07529fd5",
+    "L-50667f69855b6d588011"
+   ],
+   "m3": -0.744,
+   "parts": [
+    "BM-1F-CB10"
+   ],
+   "rfi": [
+    "RFI-S12"
+   ],
+   "route": "DESIGNER",
+   "s27": "schedule and plan conflict",
+   "sources": [
+    "T-395"
+   ]
+  },
+  {
+   "beside": "engine 0.212 .. 0.3975",
+   "blockers": [
+    "D-03 CB3 and 'B3 (with stair)' on one line"
+   ],
+   "drawings_searched": [
+    "ST p.16",
+    "ST p.4"
+   ],
+   "id": "I-23",
+   "lines": [
+    "L-88ccf8d4505411deb9e5"
+   ],
+   "m3": -0.3975,
+   "parts": [
+    "BM-GF-CB3"
+   ],
+   "rfi": [
+    "RFI-S14"
+   ],
+   "route": "DESIGNER",
+   "s27": "two labels on one line",
+   "sources": [
+    "T-395"
+   ]
+  },
+  {
+   "beside": "1 blank line (MS2-TR); MS1-T slab: named item",
+   "blockers": [
+    "MS1-T slab under the winder turn",
+    "MS2-TR turn riser: landing levels scaled, not printed"
+   ],
+   "drawings_searched": [
+    "ST p.4",
+    "ST p.5",
+    "ST p.16"
+   ],
+   "id": "I-24",
+   "joint": true,
+   "lines": [
+    "L-659243ed9fc2831c3ae8"
+   ],
+   "m3": -0.336,
+   "parts": [
+    "SD-ST01-TURNS"
+   ],
+   "rfi": [
+    "RFI-S24",
+    "RFI-S25"
+   ],
+   "route": "DESIGNER",
+   "s27": "landing levels and the turn slab are not printed",
+   "sources": [
+    "T-398"
+   ]
+  },
+  {
+   "beside": "1 blank line",
+   "blockers": [
+    "pool steps not drawn (consultant item)"
+   ],
+   "drawings_searched": [
+    "arch GF plan",
+    "ST p.7",
+    "sections"
+   ],
+   "id": "I-25",
+   "lines": [
+    "L-b62a7065645589011141"
+   ],
+   "m3": -0.228,
+   "parts": [
+    "PL-STEPS"
+   ],
+   "rfi": [
+    "RFI-A02"
+   ],
+   "route": "DESIGNER",
+   "s27": "not drawn: an absence of evidence, not a verified zero",
+   "sources": [
+    "T-183"
+   ]
+  }
+ ],
+ "part_lines": {
+  "BL-1": [
+   "L-080c97f5f6a92452cd04",
+   "L-35382b18e2e362df3ae6",
+   "L-7a5214a334ea3559fa2d",
+   "L-98eb2d58075c9eddf1b4"
+  ],
+  "BM-1F-B2": [
+   "L-f83c4a469845c7e14dfa"
+  ],
+  "BM-1F-CB10": [
+   "L-43e804ba4a4c07529fd5",
+   "L-50667f69855b6d588011"
+  ],
+  "BM-2F-B1": [
+   "L-7c3edce23ec8faa3d674",
+   "L-dc8cbfc119d006ff3927"
+  ],
+  "BM-2F-B15": [
+   "L-d62d2fcf3d0023ad1ad1"
+  ],
+  "BM-2F-B8": [
+   "L-8d031491396379f0cbb1"
+  ],
+  "BM-GF-B21": [
+   "L-1fd49f3e7c5a7dd19d4d"
+  ],
+  "BM-GF-B24": [
+   "L-8ea71184fff91b4357b7"
+  ],
+  "BM-GF-B29": [
+   "L-9e4895663f76d7f03ac9"
+  ],
+  "BM-GF-CB2": [
+   "L-2c7b0b1e1a439d9ffd1e",
+   "L-60f09eece6568b15f6ce"
+  ],
+  "BM-GF-CB3": [
+   "L-88ccf8d4505411deb9e5"
+  ],
+  "BW-BAND": [
+   "L-6290a9f3d93f38cd46d6"
+  ],
+  "CL-1F-MOVE-BAND": [
+   "L-4aed92c117a7ab1c90ee",
+   "L-c677b628a776d3b87b02",
+   "L-8f8ad257d9b2cb9e027f",
+   "L-755eb56b55e86301b488",
+   "L-291ba2ddf4bbe4f14cf7",
+   "L-a87ea657a42a311cb851",
+   "L-85809d3db52bb93dfe96",
+   "L-cc702b8541c15fdfd98c",
+   "L-831f6fe3de133294bb8f",
+   "L-e112e2add2f8979a6c39"
+  ],
+  "CL-1F-MOVE-D16": [
+   "L-1dc713c83bf62e525ff2"
+  ],
+  "CL-2F": [
+   "L-0ede77cfd0badc4c7d62",
+   "L-26f6b6f2365c72e42291",
+   "L-33a9b7728781fcba12e2",
+   "L-53f223b06db14ac41d47",
+   "L-541c7e565bb93ecdb78b",
+   "L-919a5749ef79759e01ca",
+   "L-bc01297b1c4a4c45a15f",
+   "L-c10e2945d582b5a03126",
+   "L-d79d17d14f39d5148cb8"
+  ],
+  "CL-GF-MEMBERS": [
+   "L-694a75c84dd6e4bb4491",
+   "L-9f5a647014bbf83359f9",
+   "L-c0b3340a906c2c7650f8",
+   "L-e6c1c9a7feec10f64975",
+   "L-fad18af6e7139a5e99d1"
+  ],
+  "CL-GF-MOVE-BAND": [
+   "L-8de64040a1c3ae6cf137",
+   "L-43dae3d6dfec957b26a8",
+   "L-9cb26d86575a92694880"
+  ],
+  "CL-GF-MOVE-D16": [
+   "L-4c4496579e5bfa20ae9f"
+  ],
+  "CL-LIFT": [
+   "L-684fcad323adc0c8a267"
+  ],
+  "CL-NECK": [
+   "L-05a99150a85e9185ae48",
+   "L-12f3d8b9375cac407bca",
+   "L-132cf60588a44f6af9d6",
+   "L-15b8ad39d6b2250c9546",
+   "L-15d9da9b17fd373553f0",
+   "L-1a9e469651c32cce9b97",
+   "L-314946394d849141dda2",
+   "L-34346cb438bffee6acec",
+   "L-3f7b9501a902579e7406",
+   "L-46f2b70254f074885dfc",
+   "L-486cd9a0bf52e4b32abb",
+   "L-48f2e06e5c946eb1e5a7",
+   "L-4ec473f7c0c712919823",
+   "L-4ef35980fbb54366703d",
+   "L-516989b817e0ccc7cb80",
+   "L-53d0b6af1a801c3db58e",
+   "L-5aec8a0055215ee5a711",
+   "L-5efd9ac69d4cfd9b9a6e",
+   "L-6a2040e0fe0bf7391b9c",
+   "L-734ff1a78bbe6b7eb4c3",
+   "L-85df35f17a205f919aa6",
+   "L-8eb74a02fcf5ae4465f8",
+   "L-953e87a3e9d0425d404e",
+   "L-995eca94ba8dc09a028f",
+   "L-ae1bd9cb228d57594e46",
+   "L-b21cbf6560f613b39bf0",
+   "L-b4c234c8a3873239f67f",
+   "L-bbad8cdb4d26986776a6",
+   "L-bd741a3faf2318dd8409",
+   "L-c1e802184591eac927cf",
+   "L-c8c07db4ac0d54d89bbf",
+   "L-dd3c32e4340e7a823a6e",
+   "L-dd6d11415961b554e906",
+   "L-efe50185c0da4244e158",
+   "L-f54b7b2acf11ebd2a585",
+   "L-fc622ff340ac65a544e3"
+  ],
+  "FT-F10": [
+   "L-164ae9d338976be9e582"
+  ],
+  "GB-BOUNDARY": [
+   "L-fb7a6431fede62e93fd5"
+  ],
+  "GB-HELD-COURT": [
+   "L-21795b350fbd09150c43",
+   "L-62243c74c430d383be86",
+   "L-a55bfa01b726ef11650c"
+  ],
+  "GB-HELD-D34": [
+   "L-0c5ede7fd2c9e425aa8d",
+   "L-5af89b9f1e5b90daf8f5",
+   "L-81444e222487437e257e",
+   "L-970bac563cbcd69e2a30",
+   "L-a8c5c32c7a785c1e3f05",
+   "L-d53e5eb08e2c6c668254",
+   "L-e2134034441cb7db7bd7",
+   "L-f0e25ad2cf73bf2a35ea",
+   "L-f24cf117a9ce1e875785"
+  ],
+  "GB-HELD-D35": [
+   "L-00465df980165c529476",
+   "L-3284f44000c02179ace7",
+   "L-402dbe61d1c924144a3c",
+   "L-4783c6e18002c3a8a37e",
+   "L-6bf14711798e5af93594",
+   "L-b4a13a43967ee4765662",
+   "L-d8b98b143e293d30833b",
+   "L-e16c98075f69532a3dc7"
+  ],
+  "GB-HELD-D35-NECKFIELDS": [],
+  "GS-CELL": [
+   "L-41cfb82ed733f4d6e3a5"
+  ],
+  "PL-PUMP": [],
+  "PL-STEPS": [
+   "L-b62a7065645589011141"
+  ],
+  "SD-DOME-3": [
+   "L-d5401fa8986900c66c37"
+  ],
+  "SD-ST01-MS1L": [
+   "L-7863355dfcb68a681d2d"
+  ],
+  "SD-ST01-TURNS": [
+   "L-659243ed9fc2831c3ae8"
+  ],
+  "SD-ST02-RSC": [
+   "L-b6b0354b7842f0ed6e41"
+  ],
+  "SD-ST03-E1": [
+   "L-061e18cf35a4b6b33d68"
+  ]
+ },
+ "parts": {
+  "BL-1": -47.055,
+  "BM-1F-B2": -0.064,
+  "BM-1F-CB10": -0.744,
+  "BM-2F-B1": -0.224,
+  "BM-2F-B15": -0.744,
+  "BM-2F-B8": -0.1695,
+  "BM-GF-B21": -2.524568,
+  "BM-GF-B24": -0.562875,
+  "BM-GF-B29": -1.263975,
+  "BM-GF-CB2": -0.682,
+  "BM-GF-CB3": -0.3975,
+  "BW-BAND": -8.4588,
+  "CL-1F-MOVE-BAND": -5.208,
+  "CL-1F-MOVE-D16": -0.756,
+  "CL-2F": -3.381,
+  "CL-GF-MEMBERS": -2.0625,
+  "CL-GF-MOVE-BAND": -1.4625,
+  "CL-GF-MOVE-D16": -1.0125,
+  "CL-LIFT": -1.65,
+  "CL-NECK": -8.805,
+  "FT-F10": -1.96,
+  "GB-BOUNDARY": -3.5256,
+  "GB-HELD-COURT": -1.026,
+  "GB-HELD-D34": -2.987802,
+  "GB-HELD-D35": -5.676552,
+  "GB-HELD-D35-NECKFIELDS": 0.27594,
+  "GS-CELL": -3.56054,
+  "PL-PUMP": -3.48,
+  "PL-STEPS": -0.228,
+  "SD-DOME-3": -2.26,
+  "SD-ST01-MS1L": -1.7808,
+  "SD-ST01-TURNS": -0.336,
+  "SD-ST02-RSC": -1.244067,
+  "SD-ST03-E1": -1.4112
+ },
+ "rfi_items_ranked": [
+  "I-01",
+  "I-02",
+  "I-03",
+  "I-04",
+  "I-05",
+  "I-06",
+  "I-08",
+  "I-09",
+  "I-10",
+  "I-11",
+  "I-12",
+  "I-13",
+  "I-14",
+  "I-17",
+  "I-16",
+  "I-15",
+  "I-18",
+  "I-19",
+  "I-20",
+  "I-21",
+  "I-22",
+  "I-23",
+  "I-24",
+  "I-25"
+ ],
+ "rfi_ranked": [
+  [
+   "RFI-S09",
+   -52.455612
+  ],
+  [
+   "RFI-S11",
+   -50.042802
+  ],
+  [
+   "RFI-S02",
+   -49.015
+  ],
+  [
+   "RFI-S06",
+   -47.055
+  ],
+  [
+   "RFI-S07",
+   -47.055
+  ],
+  [
+   "RFI-S08",
+   -47.055
+  ],
+  [
+   "RFI-S01",
+   -8.805
+  ],
+  [
+   "RFI-S20",
+   -8.733
+  ],
+  [
+   "RFI-S03",
+   -8.4588
+  ],
+  [
+   "RFI-S23",
+   -5.4435
+  ],
+  [
+   "RFI-S13",
+   -4.470543
+  ],
+  [
+   "RFI-S04",
+   -3.5256
+  ],
+  [
+   "RFI-B-A14 (T-398 draft; not in the 2026-10-31 RFI register: RFI_MISSING there)",
+   -3.48
+  ],
+  [
+   "RFI-S22",
+   -3.381
+  ],
+  [
+   "RFI_MISSING (PC-2F section)",
+   -3.381
+  ],
+  [
+   "RFI-S28",
+   -2.26
+  ],
+  [
+   "RFI-S24",
+   -2.1168
+  ],
+  [
+   "RFI-A04",
+   -1.7808
+  ],
+  [
+   "RFI-S19",
+   -1.7685
+  ],
+  [
+   "RFI-S15",
+   -1.764375
+  ],
+  [
+   "RFI L-1 (lift supplier, T-401)",
+   -1.65
+  ],
+  [
+   "RFI-B-A01 (D-40 floor build-up; mapped by title)",
+   -1.65
+  ],
+  [
+   "RFI-S26",
+   -1.4112
+  ],
+  [
+   "RFI-S27",
+   -1.244067
+  ],
+  [
+   "RFI_MISSING (no RFI in the 2026-10-31 register names the court ground-beam section)",
+   -1.026
+  ],
+  [
+   "RFI-S12",
+   -0.744
+  ],
+  [
+   "RFI-S14",
+   -0.3975
+  ],
+  [
+   "RFI-S25",
+   -0.336
+  ],
+  [
+   "RFI-A02",
+   -0.228
+  ]
+ ],
+ "schema": "T433_V1"
+}
