@@ -27,7 +27,7 @@ V3_0_38_DIFF.csv, V3_0_38_RUN.json. Nothing here names a project, a sheet, a lay
 
 R-T421-1 (every villa; integrates R-T418-1, R-T413-1 .. 7, R-T420-1): ONE physical floor area, ONE quantity:
 (a) a floor part added from a stair room leaves the landing bound that held it in the same version (bound high reduced
-by exactly the parts inside it, never below 0); (b) a lift threshold is ONE element of B6-07: the wall-band line and
+by exactly the floor parts inside it, never below 0; a HELD unread part stays inside the bound, it may be landing); (b) a lift threshold is ONE element of B6-07: the wall-band line and
 the landing floor line list it, the band without a quantity, the floor line with its floor part deducted (certain part
 from the net, the position-dependent rest HELD beside), so B6-07 + band + floor never exceed the drawn footprint; (c) a
 bed pair always equals its finish net: moving a finish net restates its bed in the same version; (d) a material not
@@ -245,8 +245,10 @@ def load_inputs(doc, project_id=None):
         _need(r, ("line_id",), where)
         tasks(r, where)
         _num(r.get("high_before"), f"{where} high_before", True)
-        if not r.get("parts") or any(p not in pids for p in r["parts"]):
-            raise InputsError(f"{where}: the floor parts inside it are not named by this package")
+        fp = {x["part"] for x in parts}
+        if not r.get("parts") or any(p not in fp for p in r["parts"]):
+            raise InputsError(f"{where}: the floor parts inside it are not floor parts of this package (a HELD part "
+                              f"may be landing or tread: it stays inside the bound)")
         bounds.append(dict(r))
     stations, sids = [], set()
     for r in doc.get("stations") or ():
@@ -403,6 +405,21 @@ def _reduce_bound(ln, high_after, parts, srcs):
     return _fin(new)
 
 
+SCOPE_KEY = "floor_scope_v3014"
+
+
+def _supersede_scope(new, why):
+    """an older floor-scope record (V3.0.14) on a line this version changes by a Checker-verified ruling is kept whole,
+    wrapped as superseded (its own guard then skips it); this version's check_lift() carries its invariant forward
+    (the band area / the settled figure before the deduction). -> the old record or None."""
+    inp = new["calculation"]["inputs"]
+    old = inp.get(SCOPE_KEY)
+    if isinstance(old, dict) and "kind" in old:
+        inp[SCOPE_KEY] = {"superseded_by": METHOD, "rule": RULE_ID, "why": why, "record": old}
+        return old
+    return None
+
+
 def _band_listed(ln, thr_line, station, srcs):
     new = copy.deepcopy(ln)
     q = A302._q(A30._qty(ln))
@@ -411,12 +428,19 @@ def _band_listed(ln, thr_line, station, srcs):
     new["bounded_range"] = None
     new["gross"] = None
     new["calculation"] = copy.deepcopy(new["calculation"])
-    new["calculation"]["formula"] = (f"{new['calculation']['formula']} | {METHOD}: the wall band lies inside the B6-07 "
-                                     f"lift threshold {station} footprint (line {thr_line}): listed, no quantity "
-                                     f"(was {q}; register LIFT LANDING THRESHOLD)")
+    before_formula = new["calculation"]["formula"]
+    new["calculation"]["formula"] = (f"{METHOD}: the lift-door wall band at {station} lies inside the B6-07 lift "
+                                     f"threshold footprint (line {thr_line}): listed here, no quantity; its area is "
+                                     f"the threshold's (register LIFT LANDING THRESHOLD; the former reading is kept in "
+                                     f"calculation.inputs.{REC_KEY}.formula_before)")
     new["calculation"]["inputs"] = dict(new["calculation"]["inputs"] or {})
+    old = _supersede_scope(new, "register LIFT LANDING THRESHOLD (Lead 2026-11-01 08:15): the band lies inside the "
+                                "B6-07 threshold footprint; listed without a quantity, the area is the threshold's")
     new["calculation"]["inputs"][REC_KEY] = _rec(P_LIFT, srcs, action="LIST_BAND", station=station,
-                                                 owned_by=thr_line, was=q, evidence_status="NOT_APPLICABLE")
+                                                 owned_by=thr_line, was=q, evidence_status="NOT_APPLICABLE",
+                                                 formula_before=before_formula,
+                                                 scope_superseded=(old or {}).get("kind"),
+                                                 band_area_before=(old or {}).get("area_m2"))
     new["notes"] = (f"{new.get('notes') or ''} | {METHOD}: ONE element: the lift threshold {station} (B6-07, line "
                     f"{thr_line}) owns this band; listed without a quantity (R-T421-1 b)")
     return _fin(new)
@@ -436,9 +460,15 @@ def _deduct_floor(ln, st, thr_line, srcs):
     new["calculation"]["formula"] = (f"{new['calculation']['formula']} | {METHOD}: - B6-07 lift threshold "
                                      f"{st['station']} floor part {_fmt(st['_certain'])} m2 certain ({_fmt(st['_w'])} x "
                                      f"({_fmt(st['_d'])} - band {_fmt(st['_band'])})) + 0 .. {_fmt(st['_rest'])} HELD by "
-                                     f"position: {_fmt(before)} -> {_fmt(net)} m2")
+                                     f"position: net {_fmt(before)} - {_fmt(st['_certain'])} = {_fmt(net)} m2")
     new["calculation"]["inputs"] = dict(new["calculation"]["inputs"] or {})
+    old = _supersede_scope(new, f"B6-07 lift threshold {st['station']}: the certain floor part leaves this finish net "
+                                f"(register LIFT LANDING THRESHOLD); the settled figure before it is net_before")
+    if old and old.get("kind") == "SETTLE_RANGE" and old.get("kept_m2") is not None \
+            and abs(float(old["kept_m2"]) - before) > 1e-6:
+        raise InputsError(f"floor line {ln['line_id']}: its settled figure {old['kept_m2']} is not its net {before}")
     new["calculation"]["inputs"][REC_KEY] = _rec(P_LIFT, srcs, action="DEDUCT_FLOOR", station=st["station"],
+                                                 scope_superseded=(old or {}).get("kind"),
                                                  threshold_line=thr_line, net_before=before, net_after=net,
                                                  certain=st["_certain"], held_more=[0.0, st["_rest"]],
                                                  evidence_status=OWNER_STATUS)
@@ -606,7 +636,6 @@ def changes_for(doc, l3037):
 
     # ---- landing bounds, reduced in the same step
     area_of = {p["part"]: new_floor[p["part"]][1]["_area"] for p in doc["_parts"]}
-    area_of.update({h["part"]: h["_hi"] for h in doc["_held"]})
     for r in doc["_bounds"]:
         srcs = [S[t] for t in r["source_tasks"]]
         ln = by.get(r["line_id"])
@@ -765,6 +794,17 @@ def check_lift(lines):
         ded = [d for d in ((fl or {}).get("deductions") or ()) if d.get("id") == ln["line_id"]]
         if fl is None or len(ded) != 1 or abs(ded[0]["qty"] - rec["floor_part_certain"]) > 1e-9:
             raise ValueError(f"{METHOD}: floor line of threshold {ln['line_id']} does not deduct its floor part once")
+        frec = fl["calculation"]["inputs"].get(REC_KEY) or {}
+        if frec.get("action") == "DEDUCT_FLOOR":
+            if abs(fl["measured_net"] - (frec["net_before"] - rec["floor_part_certain"])) > 1e-6:
+                raise ValueError(f"{METHOD}: floor line {fl['line_id']} net is not its net before less the floor part")
+            sup = (fl["calculation"]["inputs"].get(SCOPE_KEY) or {}).get("record") or {}
+            if sup.get("kind") == "SETTLE_RANGE" and abs(float(sup.get("kept_m2")) - frec["net_before"]) > 1e-6:
+                raise ValueError(f"{METHOD}: floor line {fl['line_id']}: the superseded settled figure is not the net "
+                                 f"before the deduction")
+        bsup = (band["calculation"]["inputs"].get(SCOPE_KEY) or {}).get("record") or {}
+        if bsup.get("kind") == "TO_THRESHOLD" and abs(float(bsup["area_m2"]) - rec["width"] * rec["band"]) > 1e-6:
+            raise ValueError(f"{METHOD}: band {band['line_id']}: its superseded area is not the threshold's band part")
         fp = rec["width"] * rec["depth"]
         covered = rec["width"] * rec["band"] + rec["floor_part_certain"]
         if abs(covered - fp) > 1e-9:
@@ -780,7 +820,7 @@ def check_landing(lines):
     parts = {}
     for ln in lines:
         rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) or {}
-        if rec.get("action") in ("ADD_FLOOR", "ADD_HELD_PART"):
+        if rec.get("action") == "ADD_FLOOR":
             parts[rec["part"]] = ln
     moved = set()
     out = {"bounds": 0, "parts_moved": 0}

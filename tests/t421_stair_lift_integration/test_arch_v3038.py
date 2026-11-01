@@ -10,7 +10,7 @@ Villa K421, by hand (own figures; nothing from the development villa):
   Band line   ARCH.THRESHOLD 0.90 x 0.25 = 0.225 m2 BOUNDED_EXPOSURE -> listed, no quantity (owned by B6-07).
   Stair room  STAIR face with a FIN.MARBLE.LANDING bound 0 .. 7.30 m2; floor parts: foot hall 3.60 m2 (finish HELD,
               FIN.FLOOR.FINISH_HELD, zone GF-DRY b 0.05), back lobby 1.10 m2 (finish HELD, sub-level, no b),
-              unread strip 0 .. 0.20 HELD -> bound 7.30 - 3.60 - 1.10 - 0.20 = 2.40.
+              unread strip 0 .. 0.20 HELD (may be landing: stays inside the bound) -> bound 7.30 - 3.60 - 1.10 = 2.60.
               Beds: 3.60 -> 0.108 .. 0.144 m3 (bound 0.18); 1.10 -> 0.033 .. 0.044 (no bound).
   Surround    HELD 0.95 .. 4.40 m2 (door height not printed).
 Lines: 2 changed floor / band, 1 changed landing bound, 2 restated beds; added: threshold m2 + m.l + surround, 2 floor
@@ -89,7 +89,7 @@ def inputs(lines, **over):
                 "zone": "GF-SUBLEVEL", "b": None, "template_line": land, "source_tasks": ["T-418", "T-414"]}],
            "held_parts": [{"part": "ST-STRIP", "room": "GF-STAIR", "floor": "GF", "low": 0.0, "high": 0.2,
                            "why": "unread lines", "template_line": land, "source_tasks": ["T-418"]}],
-           "landing_bounds": [{"line_id": land, "high_before": 7.3, "parts": ["ST-FOOT", "ST-LOBBY", "ST-STRIP"],
+           "landing_bounds": [{"line_id": land, "high_before": 7.3, "parts": ["ST-FOOT", "ST-LOBBY"],
                                "source_tasks": ["T-418"]}],
            "stations": [{"station": "L1-GF", "floor": "GF", "opening": "OP-L1", "width": 0.9, "width_status": DC,
                          "depth": 0.5, "depth_status": OWN, "depth_source": "UP-ELEV-005", "band": 0.25,
@@ -137,7 +137,7 @@ def test_hand_figures():
     assert (b3["bounded_range"]["low"], b3["bounded_range"]["high"]) == pytest.approx((1.19325, 1.591))
     assert b3["calculation"]["inputs"][A37.REC_KEY]["drawing_bound"]["high"] == pytest.approx(1.98875)
     land = _get(out, "GF-STAIR:landings")
-    assert land["bounded_range"]["high"] == pytest.approx(2.4)
+    assert land["bounded_range"]["high"] == pytest.approx(2.6)
     foot = _get(out, "GF-STAIR:ST-FOOT")
     assert foot["item_code"] == A.FIN_HELD and foot["measured_net"] == 3.6
     f3 = _get(out, "GF-STAIR:ST-FOOT:bed", "m3")
@@ -169,7 +169,15 @@ def test_each_threshold_counted_once():
 
 def test_landing_bound_reduced_in_the_same_step():
     out = run()[3]
-    assert A.check_landing(out) == {"bounds": 1, "parts_moved": 3}
+    assert A.check_landing(out) == {"bounds": 1, "parts_moved": 2}
+
+
+def test_held_part_in_a_bound_refused():
+    lines = lines_3037()
+    doc = inputs(lines)
+    doc["landing_bounds"][0]["parts"] = ["ST-FOOT", "ST-LOBBY", "ST-STRIP"]
+    with pytest.raises(A.InputsError, match="stays inside the bound"):
+        run(lines, doc)
 
 
 def test_only_named_lines_change_and_totals_move_in_own_codes():
@@ -203,7 +211,7 @@ def test_two_f_station_on_a_new_floor_part():
     assert foot["measured_net"] == pytest.approx(3.375) and foot["gross"] == 3.6
     assert _get(out, "GF-STAIR:ST-FOOT:bed")["measured_net"] == pytest.approx(3.375)
     assert _get(out, "GF-HALL:floor")["measured_net"] == 40.0
-    assert _get(out, "GF-STAIR:landings")["bounded_range"]["high"] == pytest.approx(2.4)   # gross part leaves the bound
+    assert _get(out, "GF-STAIR:landings")["bounded_range"]["high"] == pytest.approx(2.6)   # gross part leaves the bound
     assert A.check_lift(out)["stations"] == 1
 
 
@@ -311,3 +319,43 @@ def test_floor_line_twice_for_a_station_refused():
     doc["stations"][0]["floor_part"] = "ST-FOOT"
     with pytest.raises(A.InputsError, match="ONE floor line"):
         run(lines, doc)
+
+
+# ------------------------------------------------------------------------------------------------ older floor-scope records
+def _with_scope(kept=40.0, band_area=0.225):
+    """K421 with the V3.0.14 floor-scope records a real candidate carries: the band a TO_THRESHOLD record (area kept),
+    the hall a SETTLE_RANGE record (its settled figure)."""
+    lines = lines_3037()
+    for ln in lines:
+        e = ln["location"]["element_id"]
+        if e == "HL:THRESHOLD:GF:OP-L1":
+            ln["calculation"]["inputs"]["floor_scope_v3014"] = {"kind": "TO_THRESHOLD", "area_m2": band_area}
+        if e == "GF-HALL:floor":
+            ln["calculation"]["inputs"]["floor_scope_v3014"] = {"kind": "SETTLE_RANGE", "kept_m2": kept,
+                                                                "floor_key": "FLOOR.INTERNAL"}
+    return lines
+
+
+def test_older_scope_record_superseded_whole_and_carried():
+    lines = _with_scope()
+    out = run(lines)[3]
+    band = _get(out, "HL:THRESHOLD:GF:OP-L1")
+    sup = band["calculation"]["inputs"]["floor_scope_v3014"]
+    assert "kind" not in sup and sup["superseded_by"] == A.METHOD
+    assert sup["record"] == {"kind": "TO_THRESHOLD", "area_m2": 0.225}
+    hall = _get(out, "GF-HALL:floor")
+    assert hall["calculation"]["inputs"]["floor_scope_v3014"]["record"]["kept_m2"] == 40.0
+    assert hall["calculation"]["inputs"][A.REC_KEY]["net_before"] == 40.0
+    assert A.check_lift(out)["stations"] == 1
+
+
+def test_settled_figure_not_the_net_refused():
+    lines = _with_scope(kept=39.0)
+    with pytest.raises(A.InputsError, match="settled figure"):
+        run(lines)
+
+
+def test_superseded_band_area_not_the_band_part_refused():
+    lines = _with_scope(band_area=0.30)
+    with pytest.raises(ValueError, match="band part"):
+        run(lines)
