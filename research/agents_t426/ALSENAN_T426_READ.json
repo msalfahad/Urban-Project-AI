@@ -1,0 +1,483 @@
+{
+ "bands": {
+  "177+7CD": {
+   "columns_near": [
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.05,
+     "cut_by_centreline": false,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.05,
+     "handle": "82E"
+    },
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.35,
+     "handle": "831"
+    },
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.05,
+     "cut_by_centreline": false,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.05,
+     "handle": "1090"
+    },
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.35,
+     "handle": "1093"
+    },
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.05,
+     "cut_by_centreline": false,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.05,
+     "handle": "1EC"
+    },
+    {
+     "along_from_m": -0.2,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.35,
+     "handle": "1EF"
+    },
+    {
+     "along_from_m": 5.02,
+     "along_to_m": 6.02,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "880"
+    },
+    {
+     "along_from_m": 5.02,
+     "along_to_m": 6.02,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10DA"
+    },
+    {
+     "along_from_m": 5.02,
+     "along_to_m": 6.02,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "245"
+    }
+   ],
+   "drawn_m": 7.5567,
+   "faces": [
+    "177",
+    "7CD"
+   ],
+   "perpendicular_face_lines_touching": [
+    {
+     "along_m": 1.9,
+     "handle": "7E6"
+    },
+    {
+     "along_m": 2.12,
+     "handle": "7DC"
+    },
+    {
+     "along_m": 2.2,
+     "handle": "176"
+    },
+    {
+     "along_m": 2.42,
+     "handle": "7DD"
+    },
+    {
+     "along_m": 4.3,
+     "handle": "175"
+    },
+    {
+     "along_m": 4.6,
+     "handle": "7DE"
+    },
+    {
+     "along_m": 6.645,
+     "handle": "7E7"
+    },
+    {
+     "along_m": 6.945,
+     "handle": "7E8"
+    }
+   ],
+   "width_m": 0.3
+  },
+  "184+7CF": {
+   "columns_near": [
+    {
+     "along_from_m": 3.02,
+     "along_to_m": 3.82,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "886"
+    },
+    {
+     "along_from_m": 3.02,
+     "along_to_m": 3.82,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10E0"
+    },
+    {
+     "along_from_m": 3.02,
+     "along_to_m": 3.82,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "24D"
+    },
+    {
+     "along_from_m": 6.47,
+     "along_to_m": 7.07,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "878"
+    },
+    {
+     "along_from_m": 6.47,
+     "along_to_m": 7.07,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10D3"
+    },
+    {
+     "along_from_m": 6.47,
+     "along_to_m": 7.07,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "23C"
+    }
+   ],
+   "drawn_m": 12.07,
+   "faces": [
+    "184",
+    "7CF"
+   ],
+   "perpendicular_face_lines_touching": [
+    {
+     "along_m": 0.0,
+     "handle": "17D"
+    },
+    {
+     "along_m": 3.02,
+     "handle": "7DC"
+    },
+    {
+     "along_m": 3.32,
+     "handle": "7DD"
+    },
+    {
+     "along_m": 6.77,
+     "handle": "7E5"
+    },
+    {
+     "along_m": 7.07,
+     "handle": "17B"
+    },
+    {
+     "along_m": 7.545,
+     "handle": "7E7"
+    },
+    {
+     "along_m": 7.845,
+     "handle": "7E8"
+    },
+    {
+     "along_m": 12.07,
+     "handle": "7E0"
+    }
+   ],
+   "width_m": 0.3
+  },
+  "7DC+7DD": {
+   "columns_near": [
+    {
+     "along_from_m": -0.35,
+     "along_to_m": -0.05,
+     "cut_by_centreline": false,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "886"
+    },
+    {
+     "along_from_m": -0.35,
+     "along_to_m": -0.05,
+     "cut_by_centreline": false,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10E0"
+    },
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "24D"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "892"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10F6"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "7F5"
+    }
+   ],
+   "drawn_m": 7.35,
+   "faces": [
+    "7DC",
+    "7DD"
+   ],
+   "perpendicular_face_lines_touching": [
+    {
+     "along_m": 0.0,
+     "handle": "7CF"
+    },
+    {
+     "along_m": 2.7723,
+     "handle": "7E1"
+    },
+    {
+     "along_m": 3.0723,
+     "handle": "7E2"
+    },
+    {
+     "along_m": 3.525,
+     "handle": "7EA"
+    },
+    {
+     "along_m": 3.825,
+     "handle": "7E9"
+    },
+    {
+     "along_m": 7.35,
+     "handle": "177"
+    }
+   ],
+   "width_m": 0.3
+  },
+  "7E1+7E2": {
+   "columns_near": [
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "865"
+    },
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10C2"
+    },
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "228"
+    },
+    {
+     "along_from_m": 6.72,
+     "along_to_m": 7.02,
+     "cut_by_centreline": false,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.4527,
+     "handle": "892"
+    },
+    {
+     "along_from_m": 6.72,
+     "along_to_m": 7.02,
+     "cut_by_centreline": false,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.4527,
+     "handle": "10F6"
+    },
+    {
+     "along_from_m": 6.72,
+     "along_to_m": 7.02,
+     "cut_by_centreline": false,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.4527,
+     "handle": "7F5"
+    }
+   ],
+   "drawn_m": 6.72,
+   "faces": [
+    "7E1",
+    "7E2"
+   ],
+   "perpendicular_face_lines_touching": [
+    {
+     "along_m": 0.0,
+     "handle": "7CB"
+    },
+    {
+     "along_m": 3.4,
+     "handle": "7E3"
+    },
+    {
+     "along_m": 3.4,
+     "handle": "7E4"
+    },
+    {
+     "along_m": 3.7,
+     "handle": "17C"
+    },
+    {
+     "along_m": 3.7,
+     "handle": "17D"
+    },
+    {
+     "along_m": 6.72,
+     "handle": "7DC"
+    }
+   ],
+   "width_m": 0.3
+  },
+  "7E7+7E8": {
+   "columns_near": [
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.475,
+     "handle": "878"
+    },
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.475,
+     "handle": "10D3"
+    },
+    {
+     "along_from_m": -0.3,
+     "along_to_m": 0.0,
+     "cut_by_centreline": false,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.475,
+     "handle": "23C"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "CAP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "88F"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "FP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "10EE"
+    },
+    {
+     "along_from_m": 3.525,
+     "along_to_m": 3.825,
+     "cut_by_centreline": true,
+     "frame": "GBP",
+     "gap_to_band_face_m": 0.0,
+     "handle": "7ED"
+    }
+   ],
+   "drawn_m": 7.35,
+   "faces": [
+    "7E7",
+    "7E8"
+   ],
+   "perpendicular_face_lines_touching": [
+    {
+     "along_m": 0.0,
+     "handle": "7CF"
+    },
+    {
+     "along_m": 3.525,
+     "handle": "7EA"
+    },
+    {
+     "along_m": 3.825,
+     "handle": "7E9"
+    },
+    {
+     "along_m": 5.8,
+     "handle": "114"
+    },
+    {
+     "along_m": 6.1,
+     "handle": "7DF"
+    },
+    {
+     "along_m": 7.35,
+     "handle": "177"
+    }
+   ],
+   "width_m": 0.3
+  }
+ },
+ "frame": "T-141 GROUND BEAMS PLAN (p.3); FP / CAP one / two sheet pitches east (T-416)",
+ "gbp_text_census": {
+  "by_class": {
+   "column_or_neck_mark": 35,
+   "in_block:column_or_neck_mark": 1,
+   "in_block:level": 6,
+   "in_block:load_tag": 1,
+   "in_block:other": 19,
+   "in_block:slab_tag_or_bar_callout": 4,
+   "in_block:title_or_scale": 2,
+   "level": 14,
+   "load_tag": 1,
+   "other": 2
+  },
+  "section_marks": 0,
+  "texts_read": 85
+ },
+ "schema": "T426_GB_READ_V1",
+ "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+}
