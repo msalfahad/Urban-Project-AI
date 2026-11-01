@@ -1,0 +1,162 @@
+{
+ "task": "T-447",
+ "method": "STAIR_ROOM_HELD_FACES_V1",
+ "rules": [
+  "R-T447-1",
+  "R-T447-2",
+  "R-T447-3",
+  "R-T447-4",
+  "R-T447-5"
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.40",
+ "candidate_json_sha256_8": "aa6aa927",
+ "drawing_sha256_8": "ab54dd55",
+ "candidate_lines": {
+  "L-47fa825d": {
+   "line_id": "L-47fa825d197d32754240",
+   "item_code": "FIN.SKIRTING",
+   "unit": "lm",
+   "measured_net": null,
+   "bounded": null,
+   "evidence_state": "BLOCKED_RFI"
+  },
+  "L-b8d4a7f0": {
+   "line_id": "L-b8d4a7f04277deb1b0b0",
+   "item_code": "FIN.SKIRTING",
+   "unit": "lm",
+   "measured_net": null,
+   "bounded": null,
+   "evidence_state": "BLOCKED_RFI"
+  },
+  "L-ae0cdd79": {
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "item_code": "FIN.PLASTER",
+   "unit": "m2",
+   "measured_net": null,
+   "bounded": [
+    22.6502,
+    26.0002
+   ],
+   "evidence_state": "BOUNDED_EXPOSURE"
+  },
+  "L-c74cfb4e": {
+   "line_id": "L-c74cfb4e07bcc47bc5d6",
+   "item_code": "FIN.PAINT",
+   "unit": "m2",
+   "measured_net": null,
+   "bounded": [
+    22.6502,
+    26.0002
+   ],
+   "evidence_state": "BOUNDED_EXPOSURE"
+  },
+  "L-f53d4986": {
+   "line_id": "L-f53d498668da3dc7c228",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "unit": "m2",
+   "measured_net": 4.805,
+   "bounded": null,
+   "evidence_state": "SOURCE_DERIVED"
+  },
+  "L-b4441a1b": {
+   "line_id": "L-b4441a1b55eda53d98ea",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "unit": "m2",
+   "measured_net": 1.3225,
+   "bounded": null,
+   "evidence_state": "SOURCE_DERIVED"
+  }
+ },
+ "skirting_lm": {
+  "t441_confirmed": {
+   "GF hall": 4.65,
+   "GF lobby": 1.4,
+   "2F lobby": 3.35
+  },
+  "t447_confirmed": {
+   "GF hall": 4.65,
+   "GF lobby": 1.6,
+   "2F lobby": 3.35
+  },
+  "gf_task_total_before": 6.05,
+  "gf_task_total_after": 6.25
+ },
+ "settled": {
+  "confirmed_lm": 0.2,
+  "not_applicable": 4,
+  "held": [
+   "UNDER-WINDERS"
+  ]
+ },
+ "finding_a_strip": {
+  "id": "DIV-ZONE-045-105",
+  "class": "FLOOR",
+  "level": 1.0,
+  "m2": 0.12,
+  "cause": "no closed outline or wall drawn at the cut (only single lines and hidden overhead outlines), no step line, and a section shows the floor flat: floor at the adjacent level"
+ },
+ "item3_strip": {
+  "id": "GF-ST-CN",
+  "class": "FLOOR",
+  "level": 0.3,
+  "m2": 0.23,
+  "cause": "level mark point inside the strip, no wall / guard / step drawn (R-T447-3)"
+ },
+ "finding_b_trace": [
+  {
+   "construction": "T-441 outline (arrival + lobby)",
+   "perimeter_m": 12.9,
+   "area_m2": 7.375,
+   "matches": false
+  },
+  {
+   "construction": "outline over the MS2-U top going (1386 at y 2.30)",
+   "perimeter_m": 13.6,
+   "area_m2": 7.7775,
+   "matches": true
+  }
+ ],
+ "finding_b_added": {
+  "ROOM_FACE": 0.0,
+  "STAIR_SIDE": 0.35,
+  "GUARD": 0.35
+ },
+ "finding_c": {
+  "t250": {
+   "face_m": 1.831,
+   "past_run_end_m": 0.031,
+   "offline_column_m": 0.175,
+   "handles": "128A:0.43 1289:0.40"
+  },
+  "drawn_128A_m": 0.6,
+  "drawn_1289_m": 0.4,
+  "gap_OP002_m": 1.0,
+  "wall_run_m": 1.8,
+  "column_2F72_face_m": 0.2,
+  "split_128A_m": {
+   "on_column_2F72": 0.2,
+   "on_wall_run": 0.4
+  },
+  "north_side_t250_m": 2.006,
+  "drawn_face_m": 2.0,
+  "diff_m": 0.006,
+  "height_m": 3.35,
+  "line_effect_m2_each_bound": 0.0201,
+  "skirting_effect_lm": 0.0,
+  "verdict": "ATTRIBUTION, not a wrong drawn length: 0.43 is the part of 128A on the wall run (+0.031 past its end); the column part sits in the off-line COLUMN row; net +0.006 m sampling"
+ },
+ "floor_m2": {
+  "GF hall": {
+   "t418": 4.805,
+   "t447": 4.925
+  },
+  "GF lobby": {
+   "t418": 1.3225,
+   "t447": 1.5525
+  },
+  "T-418 divider SOLID": {
+   "t418": 0.68,
+   "t447": 0.56
+  }
+ }
+}
