@@ -12,8 +12,21 @@
   "V3.0.22": "66bb83b4e495e44f174595603171622e233c1c2edaedd705e9f56f38b1e21828",
   "V3.0.25": "2ad32fb21552d2ad344f5ec120aaaf91e7cc3e55a7b41ad438fc7a380d0d948c",
   "V3.0.28": "30f60705bfe94c01d383c9086df814068ecdb4710728aff7ab6ff68fe7b37c4a",
-  "V3.0.29": "53a3f5e7cd15e12ec482f56625d08899b6b29c885b9ba4c11b244291a91039e2"
+  "V3.0.29": "4ed94bf466f33393115b67c43b5a986997cd63e9ea4ee092f5212542d19549a4"
  },
+ "source_record_count": {
+  "V3.0.16": 7,
+  "V3.0.17": 2,
+  "V3.0.18": 1,
+  "V3.0.19": 1,
+  "V3.0.20": 2,
+  "V3.0.21": 2,
+  "V3.0.22": 2,
+  "V3.0.25": 4,
+  "V3.0.28": 8,
+  "V3.0.29": 10
+ },
+ "record_count": 21,
  "records": [
   {
    "downgrade_id": "DG-1033b87f21613d24",
@@ -858,6 +871,31 @@
     "L-f8117e2a6d3b3f3bc1c7",
     "L-f81cd4eb42d5f41bbd2a",
     "L-fd1555721223e52523d5"
+   ]
+  },
+  {
+   "downgrade_id": "DG-df07eb3d6ccec0e9",
+   "state": "HELD",
+   "resolved": false,
+   "basis_label": "UNSUPPORTED BASIS",
+   "unit": "kg",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.29",
+   "line_content_sha256": "8803dc6e80ea7601b7bb9215ed6ff77da828a4dfce32d0b8cd4f177cd352b677",
+   "engine_qty": 0.0,
+   "verdict_sets": [
+    "V3.0.29"
+   ],
+   "line_ids": [
+    "L-07225364bf44991b4a0d",
+    "L-55a024d5cf6a30603ca6",
+    "L-6d2ebc1dec38cb0b95c0",
+    "L-74ae176a1705ba030c4f",
+    "L-91e7c49c6cbcbe632286",
+    "L-975f0ab35bd28f84d21e",
+    "L-9b7c59f231d7eb52805b",
+    "L-ab39f3628f11bf5d54fc",
+    "L-fdd86d183bdcb7647858",
+    "L-fedaa3ad72d10ce9973f"
    ]
   },
   {
