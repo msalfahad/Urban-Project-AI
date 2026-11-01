@@ -179,9 +179,13 @@ def bind_v3033(path, table, inside):
         txt = json.dumps(ln, ensure_ascii=False).upper()
         if code.startswith(("MAS", "ARCH.BLOCK", "MASONRY")) or "BLOCK" in code:
             if any(k in txt for k in ("BELOW N.G", "BELOW NG", "BELOW GROUND", "UNDER THE GROUND BEAM", "FOUNDATION",
-                                      "SUBSTRUCTURE", "BOUNDARY")):
+                                      "SUBSTRUCTURE", "BOUNDARY", "NEIGHBOUR", "GROUND BEAM", "G.B")):
                 cand.append({"line_id": ln.get("line_id"), "item_code": code, "state": ln.get("evidence_state")})
+    mas = [ln for ln in lines if "BLOCK" in str(ln.get("item_code", "")) or str(ln.get("item_code", "")).startswith("MAS")]
     return {"file_sha256_prefix": hashlib.sha256(raw).hexdigest()[:8], "lines_total": len(lines),
+            "masonry_lines_total": len(mas),
+            "masonry_lines_by_state": {k: sum(1 for ln in mas if ln.get("evidence_state") == k)
+                                       for k in sorted({ln.get("evidence_state") for ln in mas})},
             "ground_beam_lines": gb, "masonry_lines_below_ng_or_boundary": cand,
             "masonry_below_house_gb": "MISSING" if not cand else "SEE_CANDIDATES"}
 

@@ -103,7 +103,20 @@ none; E / W HELD (existence) vs none.
 
 ## 6. Binding to the candidate V3.0.33 (acceptance a)
 
-See `summary_t407.json` key `v3033_binding` (own chain run: v304_run.py -> v3033_run.py on the two private DXFs).
+Own chain run this session on the task base f721167e: `v304_run.py` -> `v3033_run.py` on the two private DXFs;
+V3_0_33_BOQ_LINES.json sha256 `a545c5b3`, **4690 lines** (T-397: 4689 + the one MISSING_HELD lift-pit line). Key
+`v3033_binding` in `summary_t407.json`:
+
+- All 23 exterior / court ground-beam line ids of s.2 stand in V3.0.33 (STR.CONC.GROUND_BEAM). Over the band runs:
+  MAIN_S 0.8479 + 1.6373 + 1.8097 + 0.3420 = **4.6369 m3** SOURCE_DERIVED = 16.27 x 0.30 x 0.95 (4.6370; the beam's
+  printed soffit +-0.00 that this task's height starts from is the same datum the lines use); MAIN_E_SEA L-9e28c701
+  1.881 = 6.60 x 0.30 x 0.95; ANNEX_S L-402dbe61 and ANNEX_W_STREET L-4783c6e1 BLOCKED_RFI blank (D-35), consistent
+  with the annex height held here.
+- MAS.BLOCK: **26 lines** (7 BLOCKED_RFI remainders, 5 PROVISIONAL, 14 SOURCE_DERIVED), every one a GF / 1F / 2F storey
+  wall set; a text search of all 26 (below N.G., foundation, neighbour, ground beam, G.B, boundary) finds **0**.
+  Masonry below the house ground beams: **MISSING** in V3.0.33 on every run (MAIN_S, ANNEX_S printed; E / W unknown).
+- V3.0.34 (merged abf3de76 during this run, B4-02 tiled zones) changes no structural or masonry line by its row scope;
+  not re-run here.
 
 ## 7. Designer facts for the RFI register (consultant items; no owner question: ERS s.2.7 not met)
 

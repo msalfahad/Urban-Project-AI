@@ -535,5 +535,154 @@
   "unbounded_printed_runs": [
    "ANNEX_S"
   ]
+ },
+ "v3033_binding": {
+  "file_sha256_prefix": "a545c5b3",
+  "ground_beam_lines": {
+   "L-00465df980165c529476": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-1146bdecd41491ce9382": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.9547,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-21795b350fbd09150c43": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-26fcfbbb143269e7bb58": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.5415,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-27d104ca6fc3556d16e6": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.254,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-3284f44000c02179ace7": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-402dbe61d1c924144a3c": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-46f25f72b44e8bc3e2e0": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.7695,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-4783c6e18002c3a8a37e": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-62243c74c430d383be86": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-62f712462a36d4ad1b32": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.2255,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-6bf14711798e5af93594": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-7076482d75ca42691468": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.746943,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-9e28c7012784a8dc33c8": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.881,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-a55bfa01b726ef11650c": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-b4a13a43967ee4765662": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-bde0257c24588948167f": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.684,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-c9bb2eca50a2a2c8b569": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.342,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-cc6aaa99e1892f34b92f": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.8479,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-d08e7a9d809a56733ff9": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.285,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-d8b98b143e293d30833b": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-dac43ee18f55433b57e7": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.9263,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-e16c98075f69532a3dc7": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": null,
+    "state": "BLOCKED_RFI"
+   },
+   "L-e8536bc4f2699a24e2ab": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.6373,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-e9a885323ad6ec3ea32b": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 1.8097,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-efbed17455bb224e126e": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.9605,
+    "state": "SOURCE_DERIVED"
+   },
+   "L-ff727b2a52e39509a659": {
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "measured_net": 0.103712,
+    "state": "SOURCE_DERIVED"
+   }
+  },
+  "lines_total": 4690,
+  "masonry_below_house_gb": "MISSING",
+  "masonry_lines_below_ng_or_boundary": [],
+  "masonry_lines_by_state": {
+   "BLOCKED_RFI": 7,
+   "PROVISIONAL": 5,
+   "SOURCE_DERIVED": 14
+  },
+  "masonry_lines_total": 26
  }
 }
