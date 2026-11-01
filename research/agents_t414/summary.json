@@ -1,0 +1,82 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.34",
+ "candidate_json_sha256": "4c7f581cf13b28c166cf93532cbce2a79d1ad711bb0f6e9f3915fc8f279f5402",
+ "candidate_lines": 4690,
+ "double_counted": [],
+ "family": "B3-05",
+ "freelancer": {
+  "basis": "Drive 'Alsenan chalet project' floors / waterproofing / decor / marble workbook, quantities only",
+  "screed_or_bed_rows": 0,
+  "tiled_floor_rows_m2": {
+   "dry_rooms_and_halls": 337.57,
+   "total": 409.58,
+   "wet_areas": 72.01
+  }
+ },
+ "gf_annex_note": "GF main +1.00 and annex +0.30 both draw b 0.05 (T-214): the bed bound does not depend on which",
+ "method": "FLOOR_BED_V1",
+ "other_layer_lines_on_b3_05_rooms": [
+  [
+   "B8-01",
+   "MEMBRANE"
+  ],
+  [
+   "B8-02",
+   "MEMBRANE"
+  ],
+  [
+   "B8-03",
+   "MEMBRANE_UPTURN"
+  ]
+ ],
+ "owned_elsewhere_lines": {
+  "OUTDOOR_GROUND": 4,
+  "ROOF": 16,
+  "STAIR": 62
+ },
+ "rows": 53,
+ "table_sha256": "7bc3752cd32e7e4a0858fbdbf849c704fd7701ab9abf305192ff30807ddc7baf",
+ "task": "T-414",
+ "totals": {
+  "DRY": {
+   "m2": 288.1458,
+   "m3_drawing_bound_high": 14.3001,
+   "m3_drawing_bound_rooms": 19,
+   "m3_drawing_range_rooms": 0,
+   "m3_owner_high": 11.5258,
+   "m3_owner_low": 8.6443,
+   "m3_owner_rooms": 19,
+   "rooms": 19,
+   "rooms_area_held": [],
+   "rooms_area_valued": 19,
+   "rows_not_applicable": [
+    "GF-RC06FED:floor",
+    "GF-STRIP-OP-001:doorway strip",
+    "GF-STRIP-OP-003:doorway strip",
+    "GF-STRIP-OP-005:doorway strip",
+    "GF-STRIP-OP-007:doorway strip",
+    "GF-STRIP-OP-008:doorway strip",
+    "GF-STRIP-OP-009:doorway strip",
+    "GF-STRIP-OP-011:doorway strip",
+    "GF-STRIP-OP-013:doorway strip",
+    "GF-STRIP-OP-021:doorway strip",
+    "1F-STRIP-OP-007:doorway strip",
+    "2F-STRIP-OP-001:doorway strip",
+    "2F-STRIP-OP-002:doorway strip"
+   ]
+  },
+  "WET": {
+   "m2": 85.5756,
+   "m3_drawing_bound_high": null,
+   "m3_drawing_bound_rooms": 0,
+   "m3_drawing_range_rooms": 0,
+   "m3_owner_high": 5.1347,
+   "m3_owner_low": 3.4229,
+   "m3_owner_rooms": 21,
+   "rooms": 21,
+   "rooms_area_held": [],
+   "rooms_area_valued": 21,
+   "rows_not_applicable": []
+  }
+ }
+}
