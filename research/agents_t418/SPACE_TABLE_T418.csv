@@ -1,0 +1,12 @@
+room,part,kind,family,area_m2,level,status,held_low,held_high,finish,finish_status,candidate_line,census,level_src,note
+GF-R31F8AE,GF-ST-HALL,FLOOR,B3-01,4.8050,+1.00,DRAWING-CONFIRMED,,,"HELD: porcelain (URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1 if a DRY_ROOM_FLOOR) or marble (UP-STAIR-005 if a landing); no printed landing depth, no finish schedule",HELD,,SILENT_OMISSION,LEVEL '+1.00' inside (east lane),"hall at the foot of MS1-L and the top of D1, from the south door (open room) to the D1 top riser; the storey floor at +1.00; landing or floor is not settled (no printed landing depth)"
+GF-R31F8AE,GF-ST-LOBBY030,FLOOR,B3-01,1.3225,+0.30,DRAWING-CONFIRMED,,,"HELD: porcelain (URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1 if a DRY_ROOM_FLOOR) or marble (UP-STAIR-005 if a landing); no printed landing depth, no finish schedule",HELD,,SILENT_OMISSION,"LEVEL '+0.30' inside (NE quarter, under the +3.50 half landing)","back-door lobby at the foot of D1, inside the north wall (door to the north court +0.15)"
+GF-R31F8AE,GF-ST-MS1L,B7,B7,3.0800,,OWNED_ELSEWHERE,,,,,,,,"MS1-L treads below the cut (T-111), less the column"
+GF-R31F8AE,GF-ST-WIND,B7,B7,1.3225,,OWNED_ELSEWHERE,,,,,,,,MS1-T winders NW quarter (T-111)
+GF-R31F8AE,GF-ST-D1,B7,B7,1.0350,,OWNED_ELSEWHERE,,,,,,,,D1 3 treads 0.300 x 1.150 (T-111)
+GF-R31F8AE,GF-ST-DIV,SOLID,,0.6800,,NO_FLOOR,,,,,,,,central divider 0.200
+GF-R31F8AE,GF-ST-CN,UNREAD,,0.2300,,HELD,0.0000,0.2300,,,,,,"0.200 strip north of the divider end: two layer-2 lines (0.10 / 0.15 from the west edge) not read as wall, balustrade or open floor; on the +0.30 lobby side or under the winders"
+2F-R4D1B62,2F-ST-LOBBY,FLOOR,B3-01,2.5000,+9.70,DRAWING-CONFIRMED,,,PORCELAIN,ASSUMED — OWNER-APPROVED,,SILENT_OMISSION,LEVEL '+9.70' in the lobby; printed 450 - 250 = 200 by 125 (T-129 LB-2F),"floor beyond the stair width, between the arrival, the lift box and the maid-room door"
+2F-R4D1B62,2F-ST-ARRIVAL,B7,B7,4.8750,,OWNED_ELSEWHERE,,,,,,,,"arrival 250 x 195 = 4.875 marble (owner Q-70 A, condition met: T-129 AL-2F)"
+2F-R4D1B62,2F-ST-FOOT,B7,B7,0.4025,,OWNED_ELSEWHERE,,,,,,,,"east-lane foot strip 1.15 x 0.35 inside flight row ST-MS2-U (T-129 H-FS-2F, 0 m2 added)"
+2F-R4D1B62,2F-ST-OPEN,VOID,,10.8225,,NO_FLOOR,,,,,,,,slab opening over the 1F-2F flights (T-129 O-2F)
