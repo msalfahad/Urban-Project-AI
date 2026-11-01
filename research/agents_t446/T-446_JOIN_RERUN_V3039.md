@@ -15,6 +15,13 @@ table sha `f9d5087c` (baseline reproduces). `python3 -I research/agents_t446/t44
 `JOIN_T446.csv` (152 rows, sha `71cb463f`), `DELTA_T446.csv` (sha `50157b2e`), `summary.json`. Only line ids, item
 codes, face ids, states and quantities are committed.
 
+**Candidate moved during the run:** the working branch merged T-430 (ARCH_TAKEOFF_V3.0.40, ground-beam run sections,
+3fe8f974) after the row was written. Own run of `research/agents_t430/v3040_run.py` on the same drawings and T-167 run:
+V3_0_39 `8d1bbe5d` again and **V3_0_40_BOQ_LINES.json `aa6aa927`**; of the 360 lines the join reads (floor, bed, ceiling,
+skirting, wall tile, stair and threshold families) **0 differ** between V3.0.39 and V3.0.40, and the join built on
+V3.0.40 gives the same table sha `71cb463f`. Every figure below therefore holds on both; the driver stays pinned to the
+row's V3.0.39.
+
 ## 1. The physical question and what changed in the census (ERS s.2.1)
 
 Every walked floor surface has, physically, something above it and something (or nothing) along its wall faces at floor
