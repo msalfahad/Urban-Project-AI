@@ -107,7 +107,7 @@ Own chain run this session on the task base f721167e: `v304_run.py` -> `v3033_ru
 V3_0_33_BOQ_LINES.json sha256 `a545c5b3`, **4690 lines** (T-397: 4689 + the one MISSING_HELD lift-pit line). Key
 `v3033_binding` in `summary_t407.json`:
 
-- All 23 exterior / court ground-beam line ids of s.2 stand in V3.0.33 (STR.CONC.GROUND_BEAM). Over the band runs:
+- All 27 exterior / court ground-beam line ids of s.2 (the T-289 set: 24 + 3) stand in V3.0.33 (STR.CONC.GROUND_BEAM). Over the band runs:
   MAIN_S 0.8479 + 1.6373 + 1.8097 + 0.3420 = **4.6369 m3** SOURCE_DERIVED = 16.27 x 0.30 x 0.95 (4.6370; the beam's
   printed soffit +-0.00 that this task's height starts from is the same datum the lines use); MAIN_E_SEA L-9e28c701
   1.881 = 6.60 x 0.30 x 0.95; ANNEX_S L-402dbe61 and ANNEX_W_STREET L-4783c6e1 BLOCKED_RFI blank (D-35), consistent

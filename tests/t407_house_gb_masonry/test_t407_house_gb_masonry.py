@@ -212,7 +212,7 @@ def test_alsenan_v3033_binding_pinned():
     assert b["lines_total"] == 4690 and b["masonry_lines_total"] == 26
     assert b["masonry_below_house_gb"] == "MISSING" and b["masonry_lines_below_ng_or_boundary"] == []
     gb = b["ground_beam_lines"]
-    assert len(gb) == 23 and all(v is not None for v in gb.values())
+    assert len(gb) == 27 and all(v is not None for v in gb.values())
     main_s = ("L-cc6aaa99e1892f34b92f", "L-e8536bc4f2699a24e2ab", "L-e9a885323ad6ec3ea32b", "L-c9bb2eca50a2a2c8b569")
     assert sum(gb[i]["measured_net"] for i in main_s) == pytest.approx(16.27 * 0.30 * 0.95, abs=2e-4)
     assert gb["L-402dbe61d1c924144a3c"]["measured_net"] is None  # annex south beam: D-35 held, so is its masonry
