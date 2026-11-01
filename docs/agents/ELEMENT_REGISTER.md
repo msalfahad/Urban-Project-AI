@@ -46,6 +46,22 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- GB RUN BETWEEN FOUNDED SUPPORTS (Lead 2026-11-01 12:20; T-426 MERGED 1f298735, T-416 MERGED b7bb914a): a ground-beam
+  element is the run between two founded supports (columns AND founded necks, read on every plan frame); its section
+  class comes from the ST p.13 title for THAT run's span, never from the band it is drawn in nor borrowed from a
+  neighbour; a band through a founded neck is two elements (L-fe78ae28 / L-0e30aadb -> 3.525 + 3.525 m each). OWNER
+  TRADE STRUCTURE (concrete). The neck owns the junction volume (0.054 m3 per beam); a beam landing on a run is a
+  concentrated load the title does not exclude, so that run stays HELD on D-33 (range 0.40 .. 0.60), never 0. Lane I:
+  T-430.
+- GF DINING PIECE vs GARDEN BAND (Lead 2026-11-01 12:20; T-427 MERGED 65ce8f6d): the GF south-facade strip west of band
+  end line 310 (3.80 m; 4.885 + 0.760 = 5.645 m2) has no drawn edge separating it from the dining room, so it is FLOOR
+  FINISHES (B3-01, owner trade FLOOR FINISHES, one line), not the garden band; the band (EXTERNAL, D-48 use HELD) is
+  9.101 m2 + curb 0.604 m2 between 310 and 30F; its skirting (+3.90 lm on L-71e2e002) is SKIRTING and its ceiling the
+  dining class. A zone edge is never prolonged past its own drawn end (R-T427-1). Lane I: T-431.
+- STAIR TREAD SEEN ON TWO PLANS (Lead 2026-11-01 12:20; T-425 MERGED 6f159091): a flight drawn on two storey plans at
+  the same registered coordinates is ONE element (STAIRS FINISHES) unless a level difference proves a second flight;
+  the second reading is SUPERSEDED (not valued, kept with its reason). MS2-L belongs to 1F (11 treads 3.795 m2 /
+  12.650 lm). Lane I: T-429.
 - LIFT LANDING THRESHOLD (Lead 2026-11-01 08:15; T-413 MERGED ae87deb1, Checker: the 1.000 x 0.200 band in the
   ARCH.THRESHOLD LIFT_LANDING lines needs an owner before wiring): at each lift door (GF / 1F / 2F) the threshold piece
   across the 1.000 m clear opening is ONE physical element; OWNER TRADE B6 (B6-07 lift threshold marble, 1.000 wide,
