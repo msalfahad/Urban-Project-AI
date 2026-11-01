@@ -109,6 +109,32 @@ quantities; freeze BOQ output and engine version hashes; reconcile the reference
 completeness and exceptions; publish the first pass unchanged. Later improvements are labelled POST-BLIND; the first
 result is never silently rerun and replaced.
 
+
+## Owner decisions 2026-11-02 (execution gate; binds every agent)
+
+- ACCURACY: the official +-3 % quantity target is against the RECONCILED reference; the original freelancer variance
+  is always reported beside it; no quantity is forced to an incorrect freelancer value. Cost-variance acceptance waits
+  for approved, dated rates. Line-level engineering verification stays for every significant component.
+- MATERIALITY: 1 % of trade value is the PRIORITISATION threshold for unresolved items. Safety-critical, structural
+  and waterproofing items are material regardless of value. Materiality never turns an assumed quantity into VERIFIED;
+  provisional allowances stay disclosed and never count as independently verified.
+- VERIFICATION: the Checker keeps its own drawing-based reference calculations across candidate versions (a stored
+  reference per line, re-used when the candidate moves) and never uses the engine output as its reference. VERIFIED,
+  PARTIAL, HELD and UNMEASURED stay distinct. Acceptance is a SEPARATE acceptance record per task / line (T-468),
+  added beside the existing MERGED workflow, not replacing it.
+- COMPLETENESS OWNERSHIP: T-471 the overall matrix; T-383 the waterproofing check inside it; T-310 the export
+  integration; no duplicate implementation.
+- SCOREBOARD (next restatement, T-469): per trade, quantities and coverage for (1) expected BOQ lines, (2) measured,
+  (3) independently verified whole lines, (4) held, (5) unmeasured, (6) provisional material quantities, (7) fully
+  verified procurement quantities, (8) priced / unpriced. No overall accuracy from only the lines that were scored.
+- GATES: Gate 0 = T-467, T-462 .. T-466, T-470, T-456 / T-458 (reproduce, then correct). Gate 1 = T-450, T-449,
+  T-452, T-180, T-469, T-471. Gate 2 = T-448, T-453 .. T-455. Gate 3 = T-451, T-468, T-472.
+- BLIND TEST: the exposed benchmark is regression-only. The owner provides a genuinely unseen villa when the engine
+  passes the readiness gate; no agent accesses, searches for or prepares that villa or its reference workbook before.
+- PR #3: merged by the owner after its diff, base branch, lock tests and absence of unrelated changes are confirmed.
+- RFIs: B-S18 (document control) is the first proposed for issue; nothing is sent without the owner; the other RFIs
+  keep their evidence and approval states.
+
 ## How accuracy is scored (never "95 % of categories pass")
 
 Per category and unit (never mix m2, m3, lm, t, nr):
