@@ -1,0 +1,750 @@
+{
+ "geometry": {
+  "schema": "T415_ALSENAN_RS_C",
+  "drawing": "'ST7757 dxf.dxf' sha256 9f9d1179 (Drive 'Alsenan chalet project'), ST p.4 GF roof slab plan",
+  "lane": {
+   "r_in": 1.530511,
+   "r_out": 2.780511,
+   "width": 1.25,
+   "src": "S-OPENING arcs 2DE (inner) / 2DD (outer), concentric with the layer-5 pair 2DB / 2DC; R-STAIR-LANE-1 (structural lane = opening edge to opening edge)",
+   "straight_lane_outer_r": 2.730442,
+   "straight_lane_inner_r": 1.530442,
+   "outer_arc_end_deg": 259.11,
+   "inner_arc_end_deg": 269.457,
+   "transition_straight_part": 0.084571
+  },
+  "risers": [
+   {
+    "id": "2EA",
+    "ang": 177.7852,
+    "phi": 175.9736,
+    "drawn_len": 1.1497,
+    "radial_offset": 0.05,
+    "r_from": 1.5816,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E9",
+    "ang": 185.5746,
+    "phi": 183.7646,
+    "drawn_len": 1.1483,
+    "radial_offset": 0.05,
+    "r_from": 1.583,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E8",
+    "ang": 193.3675,
+    "phi": 191.5555,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E7",
+    "ang": 201.1585,
+    "phi": 199.3465,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E6",
+    "ang": 208.9495,
+    "phi": 207.1375,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E5",
+    "ang": 216.7405,
+    "phi": 214.9285,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E4",
+    "ang": 224.5315,
+    "phi": 222.7195,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E3",
+    "ang": 232.3225,
+    "phi": 230.5105,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E2",
+    "ang": 240.1135,
+    "phi": 238.3015,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E1",
+    "ang": 247.9045,
+    "phi": 246.0925,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2E0",
+    "ang": 255.6955,
+    "phi": 253.8835,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   },
+   {
+    "id": "2DF",
+    "ang": 263.4865,
+    "phi": 261.6745,
+    "drawn_len": 1.15,
+    "radial_offset": 0.05,
+    "r_from": 1.5813,
+    "r_to": 2.731
+   }
+  ],
+  "dtheta_deg": {
+   "min": 7.790996,
+   "max": 7.790996
+  },
+  "rise": 0.16071428571428573,
+  "rise_status": "ASSUMED — OWNER-APPROVED (Q-50 A cond, plan count 28, no section)",
+  "treads": [
+   {
+    "k": 0,
+    "lower": "lane start",
+    "upper": "2EA",
+    "area": 0.059974,
+    "piece": "FOOT (floor +1.00)"
+   },
+   {
+    "k": 1,
+    "lower": "2EA",
+    "upper": "2E9",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 2,
+    "lower": "2E9",
+    "upper": "2E8",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 3,
+    "lower": "2E8",
+    "upper": "2E7",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 4,
+    "lower": "2E7",
+    "upper": "2E6",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 5,
+    "lower": "2E6",
+    "upper": "2E5",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 6,
+    "lower": "2E5",
+    "upper": "2E4",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 7,
+    "lower": "2E4",
+    "upper": "2E3",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 8,
+    "lower": "2E3",
+    "upper": "2E2",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 9,
+    "lower": "2E2",
+    "upper": "2E1",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 10,
+    "lower": "2E1",
+    "upper": "2E0",
+    "dtheta_deg": 7.790996,
+    "area": 0.366379,
+    "k_waist": 0.418911,
+    "k_method": "closed form",
+    "clipped_by_B3": false,
+    "piece": "RS-C"
+   },
+   {
+    "k": 11,
+    "lower": "2E0",
+    "upper": "2DF",
+    "dtheta_deg": 7.790996,
+    "area": 0.363791,
+    "k_waist": 0.416076,
+    "k_method": "numeric 1.5 mm grid",
+    "clipped_by_B3": true,
+    "piece": "RS-C"
+   },
+   {
+    "k": 12,
+    "lower": "2DF",
+    "upper": "2BA",
+    "dtheta_deg": null,
+    "area": 0.415515,
+    "k_waist": 0.459079,
+    "k_method": "numeric 1.5 mm grid",
+    "clipped_by_B3": false,
+    "piece": "RS-C transition (2DF -> 2BA)"
+   }
+  ],
+  "curtail": {
+   "2EB": {
+    "radius": 0.338268,
+    "ends": [
+     [
+      "2E7",
+      0.0026
+     ],
+     [
+      "2EA",
+      0.0
+     ]
+    ],
+    "area_beyond_lane_m2": 0.090129,
+    "min_r": 1.318286
+   },
+   "2EC": {
+    "radius": 0.226778,
+    "ends": [
+     [
+      "2E7",
+      0.0008
+     ],
+     [
+      "2E9",
+      0.0
+     ]
+    ],
+    "area_beyond_lane_m2": 0.031306,
+    "min_r": 1.413746
+   }
+  },
+  "columns_touching_lane": [],
+  "b3_clip_m2": 0.017565,
+  "lane_area": 4.50307,
+  "k_numeric_check_err_m2": 5e-06,
+  "inset_mm": 0.0
+ },
+ "derived": {
+  "steps_m3": 0.357035,
+  "area_m2": 4.443096,
+  "k_waist_m2": 5.064265,
+  "waist": null,
+  "waist_status": "HELD",
+  "bound": {
+   "kind": "AT_LEAST",
+   "low": 0.357035,
+   "high": null
+  },
+  "scenario": {
+   "label": "ILLUSTRATIVE SCENARIO, not a quantity: waist t = 0.16 (RS-S panel value, NOT printed for RS-C)",
+   "waist": 0.810282,
+   "total": 1.167317
+  },
+  "lane_w": 1.25,
+  "reconciliation": {
+   "his_m3": 5.5104,
+   "his_area": 19.68,
+   "drawn_area": 10.835596,
+   "engine_valued": 1.536225,
+   "residual": -3.974175,
+   "terms": [
+    {
+     "id": "ST02-RS-S",
+     "kind": "THICKNESS_BASIS",
+     "m3": -0.065268
+    },
+    {
+     "id": "ST02-RS-LD",
+     "kind": "THICKNESS_BASIS",
+     "m3": -0.1623
+    },
+    {
+     "id": "ST02-RS-A",
+     "kind": "THICKNESS_BASIS",
+     "m3": -0.026107
+    },
+    {
+     "id": "ST02-RS-C (12 treads incl. transition)",
+     "kind": "HELD_BINDING",
+     "m3": -1.244067
+    },
+    {
+     "id": "his area beyond the drawn plan",
+     "kind": "AREA_BEYOND_DRAWN",
+     "m3": -2.476433,
+     "area": 8.844404
+    }
+   ]
+  },
+  "lengths": {
+   "curve_centreline_risers_1_12": 3.224135,
+   "whole_stair_plan_area": 10.835596,
+   "his_area_over_drawn": 1.816236,
+   "his_length_candidates": {
+    "whole drawn plan on his width": 9.0297,
+    "whole drawn plan counted on two plans (GF + 1F)": 18.0593,
+    "whole plan + the 9 lower treads again (also drawn on ST p.3)": 11.7775
+   },
+   "his_length_traced": false
+  }
+ },
+ "retired_tread_line_lane": {
+  "geometry": {
+   "schema": "T415_ALSENAN_RS_C",
+   "drawing": "'ST7757 dxf.dxf' sha256 9f9d1179 (Drive 'Alsenan chalet project'), ST p.4 GF roof slab plan",
+   "lane": {
+    "r_in": 1.580511,
+    "r_out": 2.730511,
+    "width": 1.15,
+    "src": "S-OPENING arcs 2DE (inner) / 2DD (outer), concentric with the layer-5 pair 2DB / 2DC; R-STAIR-LANE-1 (structural lane = opening edge to opening edge)",
+    "straight_lane_outer_r": 2.730442,
+    "straight_lane_inner_r": 1.580442,
+    "outer_arc_end_deg": 259.11,
+    "inner_arc_end_deg": 269.457,
+    "transition_straight_part": 0.084571
+   },
+   "risers": [
+    {
+     "id": "2EA",
+     "ang": 177.7852,
+     "phi": 175.9736,
+     "drawn_len": 1.1497,
+     "radial_offset": 0.05,
+     "r_from": 1.5816,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E9",
+     "ang": 185.5746,
+     "phi": 183.7646,
+     "drawn_len": 1.1483,
+     "radial_offset": 0.05,
+     "r_from": 1.583,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E8",
+     "ang": 193.3675,
+     "phi": 191.5555,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E7",
+     "ang": 201.1585,
+     "phi": 199.3465,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E6",
+     "ang": 208.9495,
+     "phi": 207.1375,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E5",
+     "ang": 216.7405,
+     "phi": 214.9285,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E4",
+     "ang": 224.5315,
+     "phi": 222.7195,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E3",
+     "ang": 232.3225,
+     "phi": 230.5105,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E2",
+     "ang": 240.1135,
+     "phi": 238.3015,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E1",
+     "ang": 247.9045,
+     "phi": 246.0925,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2E0",
+     "ang": 255.6955,
+     "phi": 253.8835,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    },
+    {
+     "id": "2DF",
+     "ang": 263.4865,
+     "phi": 261.6745,
+     "drawn_len": 1.15,
+     "radial_offset": 0.05,
+     "r_from": 1.5813,
+     "r_to": 2.731
+    }
+   ],
+   "dtheta_deg": {
+    "min": 7.790996,
+    "max": 7.790996
+   },
+   "rise": 0.16071428571428573,
+   "rise_status": "ASSUMED — OWNER-APPROVED (Q-50 A cond, plan count 28, no section)",
+   "treads": [
+    {
+     "k": 0,
+     "lower": "lane start",
+     "upper": "2EA",
+     "area": 0.055176,
+     "piece": "FOOT (floor +1.00)"
+    },
+    {
+     "k": 1,
+     "lower": "2EA",
+     "upper": "2E9",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 2,
+     "lower": "2E9",
+     "upper": "2E8",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 3,
+     "lower": "2E8",
+     "upper": "2E7",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 4,
+     "lower": "2E7",
+     "upper": "2E6",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 5,
+     "lower": "2E6",
+     "upper": "2E5",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 6,
+     "lower": "2E5",
+     "upper": "2E4",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 7,
+     "lower": "2E4",
+     "upper": "2E3",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 8,
+     "lower": "2E3",
+     "upper": "2E2",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 9,
+     "lower": "2E2",
+     "upper": "2E1",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 10,
+     "lower": "2E1",
+     "upper": "2E0",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 11,
+     "lower": "2E0",
+     "upper": "2DF",
+     "dtheta_deg": 7.790996,
+     "area": 0.337069,
+     "k_waist": 0.385244,
+     "k_method": "closed form",
+     "clipped_by_B3": false,
+     "piece": "RS-C"
+    },
+    {
+     "k": 12,
+     "lower": "2DF",
+     "upper": "2BA",
+     "dtheta_deg": null,
+     "area": 0.399943,
+     "k_waist": 0.441426,
+     "k_method": "numeric 1.5 mm grid",
+     "clipped_by_B3": false,
+     "piece": "RS-C transition (2DF -> 2BA)"
+    }
+   ],
+   "curtail": {
+    "2EB": {
+     "radius": 0.338268,
+     "ends": [
+      [
+       "2E7",
+       0.0026
+      ],
+      [
+       "2EA",
+       0.0
+      ]
+     ],
+     "area_beyond_lane_m2": 0.107152,
+     "min_r": 1.318286
+    },
+    "2EC": {
+     "radius": 0.226778,
+     "ends": [
+      [
+       "2E7",
+       0.0008
+      ],
+      [
+       "2E9",
+       0.0
+      ]
+     ],
+     "area_beyond_lane_m2": 0.048069,
+     "min_r": 1.413746
+    }
+   },
+   "columns_touching_lane": [],
+   "b3_clip_m2": 1e-06,
+   "lane_area": 4.162874,
+   "k_numeric_check_err_m2": 9e-06,
+   "inset_mm": 50.0
+  },
+  "derived": {
+   "steps_m3": 0.330083,
+   "area_m2": 4.107702,
+   "k_waist_m2": 4.67911,
+   "waist": null,
+   "waist_status": "HELD",
+   "bound": {
+    "kind": "AT_LEAST",
+    "low": 0.330083,
+    "high": null
+   },
+   "scenario": {
+    "label": "ILLUSTRATIVE SCENARIO, not a quantity: waist t = 0.16 (RS-S panel value, NOT printed for RS-C)",
+    "waist": 0.748658,
+    "total": 1.078741
+   },
+   "lane_w": 1.15,
+   "reconciliation": {
+    "his_m3": 5.5104,
+    "his_area": 19.68,
+    "drawn_area": 10.500202,
+    "engine_valued": 1.536225,
+    "residual": -3.974175,
+    "terms": [
+     {
+      "id": "ST02-RS-S",
+      "kind": "THICKNESS_BASIS",
+      "m3": -0.065268
+     },
+     {
+      "id": "ST02-RS-LD",
+      "kind": "THICKNESS_BASIS",
+      "m3": -0.1623
+     },
+     {
+      "id": "ST02-RS-A",
+      "kind": "THICKNESS_BASIS",
+      "m3": -0.026107
+     },
+     {
+      "id": "ST02-RS-C (12 treads incl. transition)",
+      "kind": "HELD_BINDING",
+      "m3": -1.150157
+     },
+     {
+      "id": "his area beyond the drawn plan",
+      "kind": "AREA_BEYOND_DRAWN",
+      "m3": -2.570343,
+      "area": 9.179798
+     }
+    ]
+   },
+   "lengths": {
+    "curve_centreline_risers_1_12": 3.224135,
+    "whole_stair_plan_area": 10.500202,
+    "his_area_over_drawn": 1.87425,
+    "his_length_candidates": {
+     "whole drawn plan on his width": 8.7502,
+     "whole drawn plan counted on two plans (GF + 1F)": 17.5003,
+     "whole plan + the 9 lower treads again (also drawn on ST p.3)": 11.2782
+    },
+    "his_length_traced": false
+   }
+  }
+ }
+}
