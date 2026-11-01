@@ -45,6 +45,24 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-11-01 12:20 (lead run; covers 08:15 - 12:20)
+
+- T-425 (A, tread binding, gate 2): WORKED (Gate A PASS 6f159091; DOUBLE COUNT CONFIRMED MS2-L 3.450 m2 / 11.500 lm by
+  the Checker's own registration; MS1-L 9 vs 7 treads -0.690 m2). Decision: lane I correction T-429 (gate 2, after
+  T-421, ahead of T-419); T-424 nosing binds to it.
+- T-417 (S, ST-01 flight): WORKED (Gate A PASS 6b6ff9bd; -2.016 m3 = developed-profile length, ENGINE_RIGHT, unexplained
+  0). Decision: the same construction test on ST-02 -> T-432; restated in T-428.
+- T-420 (I, Gate B, V3.0.37): WORKED (first pass; 80 bed lines added, 4,730 byte-identical, 0 defects). Decision:
+  candidate of record V3.0.37; T-421 TODO first in lane I.
+- T-426 (S, GB section class, cross-lane by worker 3): WORKED (Gate A PASS 1f298735; 0.423 m3 ENGINE_WRONG, F-1 30x40,
+  F-T426-1 accepted). Decision: lane I correction + downgrade extension T-430; restated in T-428; held split by blocker
+  T-433.
+- T-427 (A, dry floor residual): WORKED (Gate A PASS 65ce8f6d; 5.645 m2 FREELANCER_RIGHT, unexplained 0.3023 m2 = 0.20 %).
+  Decision: lane I T-431 (floor + skirting +3.90 lm + ceiling class); completeness of ceiling / skirting per floored
+  space T-435.
+- Process: Worker 1 11:21 had no claimable row (lane S thin after worker 3 took T-426 cross-lane). Decision: keep at least
+  2 claimable TODO in S and A at every Lead run (now S 2 + 1 queued, A 2).
+
 ## 2026-11-01 08:15 (lead run; covers 04:15 - 08:15)
 
 - T-408 (S, lift tie beam): WORKED (Gate A PASS e3d9a092; 5.500 m own read, closure 1.600 m2, no STR line, section HELD

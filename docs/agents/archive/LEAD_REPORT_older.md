@@ -1,3 +1,86 @@
+## LEAD REPORT 2026-11-01 00:22 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+31 Oct 20:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch 4492fd59 -> abf3de76 (Checker 'engine push' merges: T-401, T-405 at
+21:05; T-402 r2, T-409 at 22:02; T-399 at 23:28); no owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze
+PASS (0). OWNER_SESSION_CHANGES: no new entry since my last run; nothing undone.
+
+HEADLINE: the kitchen / laundry / pantry wall-tile zones are in the candidate (V3.0.34, seventh Gate B first pass in a
+row, on the 1 Nov estimate) without adding a second quantity. Five pieces merged; two sent back for a one-run
+correction; one waits. A red test that every full-suite run has shown since 29 Oct had no task: it is now first in
+the structural lane.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.33 -> V3.0.34):
+- WALL TILES (m2; Gate B PASS 23:30): B4-02 zones = binding on the one FIN.WALL.TILE line per room, 0 lines added, 1
+  changed (pantry paint BLOCKED_RFI -> NOT_APPLICABLE, no paintable face under a full-height zone). Laundry 52.529 m2
+  (Checker 0.000 %) vs freelancer 50.55 (+3.91 %: his 3.00 m height vs Q-48 A 3.35 m, RULE_DIFFERENCE); pantry 32.3422
+  on the line, Checker 32.375 (+0.0328, +0.10 %, F-T351-1, named for the next FIN.WALL.TILE package), freelancer none
+  (ENGINE_RIGHT); kitchen HELD blank (zone extent a designer item). No scored cell moves.
+- CONCRETE (m3; research, no candidate line moved): held beams (MERGED r2): BM-GF-059 HELD -> VALUE 0.549284 (section
+  D-D prints 0.75 depth; Checker 0.549624, -0.06 %); 1 VALUE / 8 BOUNDED / 18 HELD; a width alternative and the slab edge
+  beside it bounded as one pair (+0.175 .. +0.355 m3). Lift (MERGED): pit wall height held by two unprinted facts; GF tie
+  beam 5.50 m MISSING; rings 1.764 + roof cap 0.5184 m3 by hand; freelancer lift walls 2.400 = 0.750 ENGINE_RIGHT + 1.650
+  HELD. Roll-up against the freelancer (REJECTED narrow r2, the Checker's own re-addition): on V3.0.29 traced +4.125 /
+  HELD -107.021 / unexplained -11.568 m3 once the domes +0.561 are TRACED (his dome area is a hemisphere formula 2 pi h^2,
+  not a drawn area); current V3.0.33/34 +4.128 / -115.460 / -11.568. Largest unexplained: ST-02 curved flight -3.974,
+  G.B length -3.008, ST-01 flight -2.016.
+- MASONRY BELOW N.G. (m2; READY, not checked): only the neighbour side prints block below the exterior ground beam:
+  main house AT_LEAST 11.389 m2 (16.270 m net x h >= 0.70 m; gross 13.4897), annex south HELD (D-35), street / sea sides
+  UNKNOWN; 17 inside-plot runs NOT_APPLICABLE; 0.000 overlap with the fence masonry; freelancer has no row (existence
+  ENGINE_RIGHT, quantity UNRESOLVED).
+- FINISH ACCESSORIES (m.l; MERGED, research): corner beads interior 275.95 / exterior 310.6831; transition strips 40
+  boundaries once, 17 marble-owned, 8 HELD 0 .. 19.090, hidden profile HELD (no skirting system specified); freelancer
+  has no profile row. Stair skirting (REJECTED narrow r1): landings 1.800 -> 2.350 .. 2.400 lm once two column faces
+  are counted (+31 .. +33 %), sloping stretches zigzag 22.235 / sloped 16.181 lm (form HELD, ORR-007).
+- CEILINGS, ROOF, FORMWORK, REINFORCEMENT, SANITARY, RAILINGS, FENCE: no candidate change since 20:20.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: a printed section settled one held beam; the tile zones closed a missing family with no new
+quantity (and so no double count). WHAT GOT WORSE: nothing measured moved the wrong way. WHAT WAS LEARNED: a family
+naming a zone of an existing layer is a binding, not a line; a part's class is read from the Checker's verdict; a side
+table must read the column layer too. WHAT IS MISSING: floor screed / cement bed (a whole family in no line: new task),
+lift tie beam / shaft lines, block below the house beams (checking), fence into the candidate (next), stair nosing and
+piece counts, lift marble, skirting, WP fixes, exterior plaster, earthworks, foundation WP, masonry accessories.
+GATES: lowest open gate 1 (the bar-schedule test fix); integration gate 2; reconciliation gate 3. Milestones: week 2
+(3 Nov) roof, formwork, ceilings, structural corrections and tile zones delivered, fence expected 1-2 Nov; M3 11 Nov on
+track; M4 25 Nov at risk on consultant items (D-16, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: T-400 (fence) TODO first in lane I on V3.0.34; T-408 (lift follow-up) TODO; T-406 r3 and T-410 r2
+narrow rework rows; NEW T-411 (gate 1: refresh the T-374 downgrade snapshot from the board through its own function,
+BBS before / after, L4 NEW 0), T-412 (stair nosing + tread / riser piece census; settles ST-01 63 vs 56), T-413 (lift
+surround / threshold marble), T-414 (B3-05 floor screed / cement bed per room on Q-41). Element register: four rulings
+(stair side against a column; stair edge items; lift entrance; floor build-up layer). VERIFIER QUEUE: T-407 now, then
+T-411 > T-400 (Gate B) > T-406 r3 / T-410 r2 > T-408 > T-414 > T-412 > T-413. Queue check: 46 actionable rows, 0
+flagged, 0 stall checks. TODO claimable: S 3, A 4, I 1 (serial); READY 1.
+
+LESSONS REGISTER: adopted in the standard s.7: tile zone = coverage binding (T-399); beam width and slab edge one bound
+pair, printed section read before holding (T-402); every unprinted fact named (T-401); bead only on a plastered arris,
+arcs developed (T-405). Proposed: class from the verdict (T-406, Checker-accepted, adopted on merge); wall AND column
+layers in every side table (T-410, adopted on merge).
+
+TEAM HEALTH (20:21 - 00:22): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4); all
+self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 22:39, Worker 3 22:59, Checker 23:50, Main 31 Oct 04:31,
+Dashboard 31 Oct 12:54; Worker 1 from RUN_LOG 23:21 - 00:10). No READY stamp ahead of the clock this window (the Checker
+corrected its own T-399 stamp). Supervision gap I closed: the t374 snapshot failure (F-T328-3) was reported as NEW 1 in
+every L4 verdict since 29 Oct with "Lead row to refresh it", but no row existed: T-411. No refusal. Scout paused (your
+28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new decision):
+- T-383 waterproofing completeness join (your 31 Oct item 5): own row (A, recommended) vs inside T-310 (B); full ERS s.6
+  text in my 31 Oct 00:45 report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat; unchanged):
+(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence into the public repository is refused by
+the platform (23:39, 01:55). Needs your decision on where it may be kept. The checker will not retry until then.
+(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let his finish rows
+(ceilings, railings, tiles) be reconciled; T-414's comparison of his screed / bed rows may need it too.
+(3) From my 31 Oct 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
+(4) READY stamps ahead of the clock: none this window, but the prompt wording fix ("stamp from `date -u` at the moment
+of writing") is still a main-chat change; I do not edit prompts.
+
 ## LEAD REPORT 2026-10-31 20:20 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

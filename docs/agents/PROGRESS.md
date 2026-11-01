@@ -1,10 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-01 08:15 UTC (Lead). Previous version: 2026-11-01 04:15 UTC. The released numbers did not change
+Last update: 2026-11-01 12:20 UTC (Lead). Previous version: 2026-11-01 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.36 (not released): same quantities as V3.0.35, but every skirting /
-plaster / paint / tile / porcelain deduction is now listed with the opening it belongs to.
+released: 0. The candidate under review is now V3.0.37 (not released): V3.0.36 plus the floor bed / screed under every
+floor finish (a whole family that was missing; the freelancer has no row for it).
+
+Since 1 Nov 08:15 (newest first; five checked and merged, all on the first pass, one of them an integration into the
+candidate; nothing waiting for the checker):
+- Dry floor against the freelancer: CHECKED AND MERGED. The 40.80 m2 gap is now explained except 0.30 m2 (0.2 %). Real
+  engine error found: a 5.65 m2 strip of the ground-floor dining room along the south facade was taken as garden band,
+  because the engine carried the band's edge 3.80 m past where it is drawn; the freelancer is right there. Once
+  corrected in the candidate the dry floor is -10.4 % against him (from -12.1 %), and the rest is rule differences you
+  set (pantry measured as wet, stair treads in the stair trade) or held items.
+- Ground-beam sections: CHECKED AND MERGED. Two interior beams are each two short runs split by a founded column neck;
+  the drawing prints 30 x 40 for short runs, the engine (and the freelancer) used 30 x 60: 0.42 m3 too much, a real engine
+  error. Where another beam lands on these runs the section stays held (consultant item). 1.15 m3 on four short beams is
+  priced at the deeper of two possible sections and should be held too.
+- Floor bed / screed INTO THE CANDIDATE (V3.0.37): CHECKED AND MERGED on the first pass. Dry rooms 288.15 m2, wet rooms
+  85.58 m2; volume as the range from your bed answer with the drawing limit beside it, never one number.
+- Main stair (straight flights) concrete: CHECKED AND MERGED. The -2.02 m3 against the freelancer is fully explained: he
+  laid the stair's rise as extra plan length (his 5.30 m = 3.30 m run + 2.00 m rise). Engine right; nothing unexplained.
+- Stair tread lines: CHECKED AND MERGED. Confirmed a double count in the candidate: one first-floor flight is read again
+  on the second-floor plan (3.45 m2 / 11.50 m.l counted twice); another flight has 9 treads drawn but 7 counted. Not yet
+  corrected in the candidate (next in the integration queue after the stair-room floors).
+- Next into the candidate, in this order: stair-room floors with lift marble, the stair tread correction, the ground-beam
+  section correction, the dining floor strip, then the lift tie beam and block below the house beams, skirting release,
+  nosing. New investigations: the curved stair's remaining -2.48 m3, the held concrete split by what holds it, the
+  winder turn the drawings disagree on, and a ceiling / skirting check for every floored space.
 
 Since 1 Nov 04:15 (newest first; nine checked and merged, all on the first pass, one of them an integration into the
 candidate; nothing waiting for the checker):
@@ -1534,16 +1557,17 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-01 00:20)
-- Checker: the block below the house ground beams first, then each piece in hand-in order (the bar-schedule test fix
-  and the fence integration before the two small corrections).
-- Structural (worker 1): fix the standing red test of the bar-schedule check (its snapshot of the checker's downgrade
-  records is one record behind), then the concrete roll-up correction, then the lift tie beam and shaft into lines.
-- Architecture and finishes (worker 2): the stair skirting correction (column faces), then floor screed / cement bed
-  per room, stair nosing and tread / riser counts, and the lift door marble.
-- Integration (worker 3): the boundary fence with its foundation and finishes into the candidate, then skirting,
-  waterproofing, outside plaster, earthworks, foundation waterproofing, spatter dash, masonry accessories and mortar,
-  and the splice count, one at a time.
+(Lead 2026-11-01 12:20)
+- Checker: each piece as it is handed in: the stair-room floors with lift marble (into the candidate) first, then the
+  structural concrete roll-up, the winder turn, the curved stair length and the ceiling / skirting check.
+- Structural (worker 1): the concrete roll-up against the freelancer with today's explained parts, then the curved
+  stair's remaining -2.48 m3 (does he measure it as a developed profile too?), then the held concrete split by the
+  item that holds it.
+- Architecture and finishes (worker 2): the ground-floor winder turn the three drawings disagree on (10+5, 10+4, 12+3)
+  and the freelancer's 63 vs 56 stair pieces; then a ceiling and skirting owner for every floored space.
+- Integration (worker 3): stair-room floors + lift marble, the stair tread double-count fix, the ground-beam section
+  fix, the dining floor strip, then lift tie beam / block below the house beams, skirting release, nosing,
+  waterproofing, outside plaster, earthworks, foundation waterproofing and the masonry accessories, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
