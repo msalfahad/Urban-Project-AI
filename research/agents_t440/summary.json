@@ -1,0 +1,280 @@
+{
+ "candidate": {
+  "file": "V3_0_38_BOQ_LINES.json",
+  "lines": {
+   "L-71e2e002a3af624097f0": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "id": "OP-008",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-010",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-012",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-021",
+      "qty": 2.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-003",
+      "qty": 11.22,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-011",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-019#glazing-half",
+      "qty": 3.165789,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "OP-024#glazing-half",
+      "qty": 0.75,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "GLAZING_ONLY_EDGE:GF-RC99C2A:skirting",
+      "qty": 1.627277,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "OTHER_BOUNDARY:GF-RC99C2A:skirting",
+      "qty": 2.555652,
+      "source": "LEDGER boundary that is not a wall / column face"
+     },
+     {
+      "face": "GF-07|GF-W05",
+      "id": "GF-07|GF-W05#158",
+      "qty": 0.7591,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W05",
+      "id": "GF-07|GF-W05#159",
+      "qty": 0.3409,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|OFF:COLUMN",
+      "id": "GF-07|OFF:COLUMN#2FAE",
+      "qty": 0.9,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|OFF:WALL",
+      "id": "GF-07|OFF:WALL#2FAE",
+      "qty": 0.05,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "GF-07|GF-W16#AE",
+      "qty": 0.8,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "GF-07|GF-W16#AF",
+      "qty": 0.65,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "id": "OP-019#threshold-half",
+      "qty": 3.165789,
+      "source": "UNLISTED (T-296 ledger)"
+     },
+     {
+      "id": "OP-024#threshold-half",
+      "qty": 0.75,
+      "source": "UNLISTED (T-296 ledger)"
+     }
+    ],
+    "evidence_state": "SOURCE_DERIVED",
+    "gross": 56.006096,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": 24.671589,
+    "room_id": "GF-RC99C2A",
+    "unit": "lm"
+   },
+   "L-73ff85e30e3a8c639e20": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [],
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC06FED",
+    "unit": "lm"
+   },
+   "L-af6fb2d3474c5fbdb80a": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "lm": 2.5,
+      "what": "door / passage openings"
+     },
+     {
+      "lm": 0.5,
+      "what": "glazing edge (floor-level window line)"
+     },
+     {
+      "lm": 2.2,
+      "what": "boundary that is not a wall / column face"
+     }
+    ],
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC06FED",
+    "unit": "lm"
+   },
+   "L-e7dcdc69e1a2b24f8616": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": {
+     "basis": "F-17: 7.83 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 7.83 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirting, sill window -> skirting; give the window type (schedule / elevation)",
+     "high": 6.331578,
+     "low": 0.0
+    },
+    "deductions": [
+     {
+      "lm": 1.5,
+      "what": "ARCH_TAKEOFF_V3.0.21: FIN.SKIRTING on the full-height wall tile of GF-07 (one owner per base, one owner per wall base: the wet pantry's full-height wall porcelain owns every base, no skirting under it (Q-37 A / Q-4)"
+     }
+    ],
+    "evidence_state": "BOUNDED_EXPOSURE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC99C2A",
+    "unit": "lm"
+   },
+   "L-f5c5a1a9c9ee2b644cb5": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "face": "GF-07|GF-W05",
+      "id": "D-GF-06",
+      "qty": 2.2,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "W10",
+      "qty": 1.5,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "W09",
+      "qty": 2.25,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     }
+    ],
+    "evidence_state": "PROVISIONAL",
+    "gross": 38.29215,
+    "item_code": "FIN.WALL.TILE",
+    "measured_net": 32.3422,
+    "room_id": "GF-RC06FED",
+    "unit": "m2"
+   }
+  },
+  "sha256_8": "57cca61c"
+ },
+ "candidate_host_gross_lm": 56.006096,
+ "candidate_host_net_lm": 24.671589,
+ "census_partial_tiled_engine_rooms": [
+  {
+   "engine_room": "GF-RC99C2A",
+   "t128": "GF-07=0.665/0.070 GF-08=0.884/0.930",
+   "tiled_in_part": [
+    "GF-07"
+   ]
+  }
+ ],
+ "closure_gf07_base": {
+  "base_lm": 7.0,
+  "closes": true,
+  "parts": {
+   "GF-RC06FED (T-315 r2)": 1.9,
+   "GF-RC99C2A in box (this walk)": 3.5,
+   "no engine room (T-315 r2)": 1.6
+  },
+  "residual_lm": 0.0
+ },
+ "drawing": {
+  "P7757.dxf_sha256_8": "ab54dd55"
+ },
+ "faces_csv_sha256_8": "3cc40686",
+ "host_line": "L-71e2e002a3af624097f0",
+ "host_tiled_face_deductions_lm": {
+  "158": 0.7591,
+  "159": 0.3409,
+  "2FAE": 0.95,
+  "AE": 0.8,
+  "AF": 0.65
+ },
+ "host_tiled_face_deductions_sum_lm": 3.5,
+ "method": "WET_BASE_OWNER_V1",
+ "over_count_lm": 0.0,
+ "pantry_base_in_host_lm": 3.5,
+ "pantry_part_off_in_candidate": true,
+ "rc06fed_lines": {
+  "L-73ff85e30e3a8c639e20": "NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-af6fb2d3474c5fbdb80a": "NOT_APPLICABLE_WITH_EVIDENCE"
+ },
+ "rule": "R-T440-1",
+ "t431_addition": {
+  "base_lm": 3.9,
+  "edges_inside_pantry_box": 0,
+  "flags": [],
+  "room": "GF-RFD4E1D",
+  "v29_runs_lm": {
+   "boundary": 10.3,
+   "column": 1.2,
+   "door": 0.0,
+   "glazing_edge": 0.0,
+   "other": 2.6,
+   "passage": 3.8,
+   "perimeter": 10.3,
+   "wall": 2.7,
+   "window_threshold": 0.0
+  }
+ },
+ "task": "T-440",
+ "tile_line": {
+  "evidence_state": "PROVISIONAL",
+  "item_code": "FIN.WALL.TILE",
+  "line_id": "L-f5c5a1a9c9ee2b644cb5",
+  "measured_net": 32.3422,
+  "unit": "m2"
+ },
+ "unknown_faces": [],
+ "v29_host_net_wall_plus_column_lm": 28.171589,
+ "v29_net_minus_pantry_base_lm": 24.671589,
+ "window_W09_on_range_line": {
+  "bounded_range": {
+   "basis": "F-17: 7.83 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 7.83 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirting, sill window -> skirting; give the window type (schedule / elevation)",
+   "high": 6.331578,
+   "low": 0.0
+  },
+  "evidence_state": "BOUNDED_EXPOSURE"
+ }
+}
