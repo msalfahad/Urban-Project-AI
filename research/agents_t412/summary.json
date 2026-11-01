@@ -1,0 +1,103 @@
+{
+ "task": "T-412",
+ "edges": 89,
+ "flights": 11,
+ "per_stair": {
+  "ST-01": {
+   "risers": 56,
+   "treads": 50,
+   "treads_confirmed": 46,
+   "landing_edges": 3,
+   "floor_edges": 3,
+   "nosings_confirmed": 48,
+   "nosings_held": 8,
+   "nosing_lm_confirmed": 55.1,
+   "nosing_lm_confirmed_in_step_basis": 52.8,
+   "nosing_lm_confirmed_landing_floor": 2.3,
+   "held_beside_lm": 7.59365
+  },
+  "ST-03": {
+   "risers": 5,
+   "treads": 4,
+   "treads_confirmed": 4,
+   "landing_edges": 1,
+   "floor_edges": 0,
+   "nosings_confirmed": 5,
+   "nosings_held": 0,
+   "nosing_lm_confirmed": 14.0,
+   "nosing_lm_confirmed_in_step_basis": 11.2,
+   "nosing_lm_confirmed_landing_floor": 2.8,
+   "held_beside_lm": 0.0
+  },
+  "ST-02": {
+   "risers": 28,
+   "treads": 26,
+   "treads_confirmed": 14,
+   "landing_edges": 1,
+   "floor_edges": 1,
+   "nosings_confirmed": 16,
+   "nosings_held": 12,
+   "nosing_lm_confirmed": 18.25,
+   "nosing_lm_confirmed_in_step_basis": 15.95,
+   "nosing_lm_confirmed_landing_floor": 2.3,
+   "held_beside_lm": 13.85
+  }
+ },
+ "totals": {
+  "risers": 89,
+  "treads": 80,
+  "treads_confirmed": 64,
+  "landing_edges": 5,
+  "floor_edges": 4,
+  "nosings_confirmed": 69,
+  "nosings_held": 20,
+  "nosing_lm_confirmed": 87.35,
+  "nosing_lm_confirmed_in_step_basis": 79.95,
+  "nosing_lm_confirmed_landing_floor": 7.4,
+  "held_beside_lm": 21.44365
+ },
+ "notched_edges": [
+  "ST01-MS1L-N03",
+  "ST01-MS2L-N05",
+  "ST02-RSS-N02",
+  "ST02-RSS-N03",
+  "ST02-RSS-N04"
+ ],
+ "drawn_nosing_projection_m": 0.05,
+ "freelancer_pieces_vs_risers": [
+  {
+   "stair": "ST-01",
+   "ours": 56,
+   "his": 63,
+   "his_minus_ours": 7,
+   "pct_of_ours": 12.5
+  },
+  {
+   "stair": "ST-02",
+   "ours": 28,
+   "his": 28,
+   "his_minus_ours": 0,
+   "pct_of_ours": 0.0
+  },
+  {
+   "stair": "ST-03",
+   "ours": 5,
+   "his": 5,
+   "his_minus_ours": 0,
+   "pct_of_ours": 0.0
+  }
+ ],
+ "freelancer_width_per_piece_m": {
+  "ST-03": 2.8,
+  "ST-01": 1.2,
+  "ST-02": 1.2
+ },
+ "b7_05_line": {
+  "confirmed_lm": 87.35,
+  "of_which_inside_b7_06_step_basis_lm": 79.95,
+  "landing_and_floor_edges_lm": 7.4,
+  "held_edges": 20,
+  "held_beside_lm": 21.44365,
+  "specification": "HELD: NOSING_FORM_NOT_PRINTED (no Urban rule, no printed note on the profile; the plans draw only a 0.050 projection)"
+ }
+}
