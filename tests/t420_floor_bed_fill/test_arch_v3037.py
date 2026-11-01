@@ -118,6 +118,10 @@ def test_upper_bound_takes_the_upper_end_of_the_drawn_range():
     m2 = _bed(out, "1F-BED:floor", "m2")
     assert m2["evidence_state"] == "PROVISIONAL"
     assert m2["calculation"]["inputs"][A.REC_KEY]["evidence_status"] == "ASSUMED — OWNER-APPROVED"
+    assert m2["calculation"]["inputs"]["evidence_status"] == "ASSUMED — OWNER-APPROVED"   # the export's stated status
+    m3 = _bed(out, "1F-BED:floor", "m3")
+    assert m3["calculation"]["inputs"]["evidence_status"] == "ASSUMED — OWNER-APPROVED"
+    assert _bed(out, "GF-LIV:floor", "m2")["calculation"]["inputs"]["evidence_status"] == "DRAWING-CONFIRMED"
 
 
 def test_one_bed_per_finish_line_none_on_na_or_roof():

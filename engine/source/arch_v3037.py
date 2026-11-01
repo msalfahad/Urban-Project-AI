@@ -303,7 +303,7 @@ def _beds(fin, r, owner, srcs):
     m2 = BL.make_line(unit="m2", evidence_state=fin["evidence_state"], measured_net=area, gross=area,
                       formula=(f"bed area = the floor-finish line {fin['line_id']} ({fin['item_code']}, "
                                f"{loc['element_id']}) net {_fmt(area)} m2 ({r['area_status']}; {S})"),
-                      inputs={REC_KEY: rec2},
+                      inputs={REC_KEY: rec2, "evidence_status": r["area_status"]},
                       notes=(f"{METHOD}: {FAMILY} bed m2, bound to {fin['line_id']}; measure pair with the m3 line: "
                              f"price ONE basis; NOT RELEASED"), **common)
     rec3 = _rec(srcs, action="BED", unit="m3", finish_line=fin["line_id"], kind=r["kind"], layer=r.get("layer"),
@@ -318,7 +318,7 @@ def _beds(fin, r, owner, srcs):
                       formula=(f"installed bed volume, a range (never one chosen value): {_fmt(area)} m2 (finish line "
                                f"{fin['line_id']}) x {_fmt(o['lo'])} .. {_fmt(o['hi'])} m (owner Q-45, ASSUMED — "
                                f"OWNER-APPROVED) -> {_fmt(lo)} .. {_fmt(hi)} m3; {dtext} ({S})")[:700],
-                      inputs={REC_KEY: rec3},
+                      inputs={REC_KEY: rec3, "evidence_status": OWNER_STATUS},
                       notes=(f"{METHOD}: {FAMILY} installed bed m3 as the owner range; procurement (bags, sand, waste) "
                              f"is not in this line; measure pair with the m2 line: price ONE basis; NOT RELEASED"),
                       **common)
