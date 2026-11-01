@@ -1,0 +1,171 @@
+{
+ "task": "T-435",
+ "candidate": "ARCH_TAKEOFF_V3.0.37",
+ "candidate_json_sha256_8": "733f2efb",
+ "spaces": 43,
+ "status_counts": {
+  "CEILING": {
+   "OWNED": 23,
+   "PARTIAL": 6,
+   "REASON": 10,
+   "SILENT_OMISSION": 3,
+   "OWNED_HELD": 1
+  },
+  "SKIRTING": {
+   "OWNED": 10,
+   "OWNED_NOT_APPLICABLE": 18,
+   "REASON": 10,
+   "OWNED_HELD": 2,
+   "SILENT_OMISSION": 3
+  }
+ },
+ "silent_omissions": [
+  {
+   "space_id": "GF-OP-003-NO-OPENING",
+   "layer": "CEILING",
+   "floor_m2": 0.6,
+   "omission": {
+    "unit": "m2",
+    "value": 0.6,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "candidate"
+  },
+  {
+   "space_id": "GF-OP-003-NO-OPENING",
+   "layer": "SKIRTING",
+   "floor_m2": 0.6,
+   "omission": {
+    "unit": "lm",
+    "value": null,
+    "status": "UNKNOWN"
+   },
+   "source": "candidate"
+  },
+  {
+   "space_id": "GF-RFD4E1D",
+   "layer": "CEILING",
+   "floor_m2": 5.645,
+   "omission": {
+    "unit": "m2",
+    "value": 5.645,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "T-431 QUEUED (T-427 MERGED 65ce8f6d: GF dining floor along the south facade 4.885 + 0.760 = 5.645)"
+  },
+  {
+   "space_id": "GF-RFD4E1D",
+   "layer": "SKIRTING",
+   "floor_m2": 5.645,
+   "omission": {
+    "unit": "lm",
+    "value": 3.9,
+    "status": "DRAWING-CONFIRMED (T-427 Checker: wall 2.70 + column 2FCF faces 1.20; T-431 plans it on L-71e2e002)"
+   },
+   "source": "T-431 QUEUED (T-427 MERGED 65ce8f6d: GF dining floor along the south facade 4.885 + 0.760 = 5.645)"
+  },
+  {
+   "space_id": "GF-SITE-0a31aaa10796d33a",
+   "layer": "CEILING",
+   "floor_m2": 1.1,
+   "omission": {
+    "unit": "m2",
+    "value": 1.1,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "candidate"
+  },
+  {
+   "space_id": "GF-SITE-0a31aaa10796d33a",
+   "layer": "SKIRTING",
+   "floor_m2": 1.1,
+   "omission": {
+    "unit": "lm",
+    "value": null,
+    "status": "UNKNOWN"
+   },
+   "source": "candidate"
+  }
+ ],
+ "ceiling_silent_m2": 7.345,
+ "skirting_silent_spaces": 3,
+ "ceiling_partial": [
+  {
+   "space_id": "1F-R3CFCFD",
+   "floor_m2": 19.016545,
+   "ceiling_m2": 18.6747,
+   "shortfall_m2": 0.341845
+  },
+  {
+   "space_id": "1F-R48AA46",
+   "floor_m2": 5.0225,
+   "ceiling_m2": 3.7815,
+   "shortfall_m2": 1.241
+  },
+  {
+   "space_id": "1F-R48CDA5",
+   "floor_m2": 4.725,
+   "ceiling_m2": 4.2778,
+   "shortfall_m2": 0.4472
+  },
+  {
+   "space_id": "1F-R8BDA49",
+   "floor_m2": 5.0225,
+   "ceiling_m2": 3.5998,
+   "shortfall_m2": 1.4227
+  },
+  {
+   "space_id": "1F-RB72F22",
+   "floor_m2": 19.05,
+   "ceiling_m2": 7.4692,
+   "shortfall_m2": 11.5808
+  },
+  {
+   "space_id": "GF-RC99C2A",
+   "floor_m2": 109.778417,
+   "ceiling_m2": 101.137092,
+   "shortfall_m2": 8.641325
+  }
+ ],
+ "double_owned": [],
+ "overlap_line_ids": [],
+ "reverse_no_floor_line": [
+  {
+   "room_id": "1F-RFFE7AF",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-d0a131bb",
+   "qty": 2.97
+  },
+  {
+   "room_id": "PL-01",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-c041069e",
+   "qty": 19.181
+  },
+  {
+   "room_id": "PL-02",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-10404364",
+   "qty": 5.64
+  },
+  {
+   "room_id": "PL-03",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-23072352",
+   "qty": 12.834
+  },
+  {
+   "room_id": "PL-04",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-80bc9376",
+   "qty": 4.374
+  },
+  {
+   "room_id": "PL-05",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-7cd2cd75",
+   "qty": 2.417
+  }
+ ],
+ "table_sha256": "f9d5087c887aa477f205ca4195886f5a5faa0d6f195ac2bc036e90529709e53e"
+}
