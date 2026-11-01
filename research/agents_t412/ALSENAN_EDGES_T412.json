@@ -1,0 +1,2023 @@
+{
+ "schema": "T412_EDGES_V1",
+ "units": "m",
+ "dxf_sha8": "ab54dd55",
+ "flights": [
+  {
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "risers": 10,
+   "risers_source": "section A-A 10 (T-184, Q-46 A); plan 10 lines"
+  },
+  {
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "risers": 5,
+   "risers_source": "section A-A 5; plans 4 wedges (CONFLICT)"
+  },
+  {
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "risers": 12,
+   "risers_source": "section A-A 12 (Q-46 A); plans 11 lines"
+  },
+  {
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "risers": 12,
+   "risers_source": "section A-A 12; plan 12 lines"
+  },
+  {
+   "flight": "MS2-TR",
+   "stair": "ST-01",
+   "risers": 1,
+   "risers_source": "section A-A closing riser; not on plans"
+  },
+  {
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "risers": 12,
+   "risers_source": "section A-A 12; plans 11 lines"
+  },
+  {
+   "flight": "D1",
+   "stair": "ST-01",
+   "risers": 4,
+   "risers_source": "GF plan 4 lines, +0.30 -> +1.00 (T-184 ST-01b)"
+  },
+  {
+   "flight": "E1",
+   "stair": "ST-03",
+   "risers": 5,
+   "risers_source": "GF plan 5 lines, +0.15 -> +1.00 (T-184 ST-03)"
+  },
+  {
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "risers": 12,
+   "risers_source": "GF plan 12 radial lines (Q-50 A cond, no section)"
+  },
+  {
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "risers": 11,
+   "risers_source": "1F plan 11 lines (Q-50 A cond, no section)"
+  },
+  {
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "risers": 5,
+   "risers_source": "1F plan 5 lines (Q-50 A cond, no section)"
+  }
+ ],
+ "edges": [
+  {
+   "eid": "ST01-MS1L-N01",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "DC",
+    "DE"
+   ],
+   "evidence": "GF DC (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N01"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N02",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "DD",
+    "DF"
+   ],
+   "evidence": "GF DD (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N02"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N03",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.05,
+   "handles": [
+    "CE",
+    "D0"
+   ],
+   "evidence": "GF CE (layer 5); column 2FBD 0.050 proud of 298 over s 0.40 .. 0.90 (T-410 R-T410-4)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N03"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N04",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "CF",
+    "D1"
+   ],
+   "evidence": "GF CF (layer 5)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N04"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N05",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "C6",
+    "CA"
+   ],
+   "evidence": "GF C6 (layer 5)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N05"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N06",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "C7",
+    "CB"
+   ],
+   "evidence": "GF C7 (layer 5)",
+   "s": 1.5,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N06"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N07",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "C9",
+    "CC"
+   ],
+   "evidence": "GF C9 (layer 5)",
+   "s": 1.8,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N07"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N08",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "C8",
+    "CD"
+   ],
+   "evidence": "GF C8 (layer 5); drawn 0.575 to the cut break, edge = lane 298 .. 157 (1.150)",
+   "s": 2.1,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N08"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N09",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "C5"
+   ],
+   "evidence": "GF C5 (layer 2, above the cut)",
+   "s": 2.4,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N09"
+   ]
+  },
+  {
+   "eid": "ST01-MS1L-N10",
+   "flight": "MS1-L",
+   "stair": "ST-01",
+   "riser_no": 10,
+   "kind": "WINDER",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "485",
+    "486"
+   ],
+   "evidence": "GF 485 (layer 2, above the cut) (also drawn as C4: one edge, counted once); front of the first winder of the turn",
+   "s": 2.7,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1L-N10"
+   ]
+  },
+  {
+   "eid": "ST01-MS1T-N01",
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "WINDER",
+   "status": "HELD",
+   "beside_lm": 1.258652,
+   "handles": [
+    "4A2",
+    "4A3"
+   ],
+   "cause": "winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)",
+   "evidence": "GF 4A2 radial front edge from the inner corner, 1.259 (never the lane width)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS1T-N02",
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "WINDER",
+   "status": "HELD",
+   "beside_lm": 1.626346,
+   "handles": [
+    "49E",
+    "49F"
+   ],
+   "cause": "winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)",
+   "evidence": "GF 49E radial front edge from the inner corner, 1.626 (never the lane width)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS1T-N03",
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "WINDER",
+   "status": "HELD",
+   "beside_lm": 1.258652,
+   "handles": [
+    "4A0",
+    "4A1"
+   ],
+   "cause": "winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)",
+   "evidence": "GF 4A0 radial front edge from the inner corner, 1.259 (never the lane width)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS1T-N04",
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "WINDER",
+   "status": "HELD",
+   "handles": [],
+   "cause": "winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)",
+   "evidence": "the fifth section riser has no front edge on the plans",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS1T-N05",
+   "flight": "MS1-T",
+   "stair": "ST-01",
+   "riser_no": 5,
+   "kind": "LANDING_EDGE",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "2C6"
+   ],
+   "cause": "winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9); the MS1-LD edge at the well head (band 2C6 / 49C / 49D) is not established as the riser",
+   "evidence": "GF 2C6 (layer 2) band line 1.150 between the turn and MS1-LD",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS1U-N01",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "A92",
+    "A93"
+   ],
+   "evidence": "1F A92 (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N01"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N02",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "A95",
+    "A94"
+   ],
+   "evidence": "1F A95 (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N02"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N03",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AA5",
+    "A9E"
+   ],
+   "evidence": "1F AA5 (layer 5)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N03"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N04",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AA6",
+    "AA0"
+   ],
+   "evidence": "1F AA6 (layer 5)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N04"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N05",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AA7",
+    "A9F"
+   ],
+   "evidence": "1F AA7 (layer 5)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N05"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N06",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AA8",
+    "A9D"
+   ],
+   "evidence": "1F AA8 (layer 5)",
+   "s": 1.5,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N06"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N07",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AA9",
+    "AA4"
+   ],
+   "evidence": "1F AA9 (layer 5)",
+   "s": 1.8,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N07"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N08",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AAA",
+    "AA3"
+   ],
+   "evidence": "1F AAA (layer 5)",
+   "s": 2.1,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N08"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N09",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AAB",
+    "AA2"
+   ],
+   "evidence": "1F AAB (layer 5)",
+   "s": 2.4,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N09"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N10",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 10,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "AAC",
+    "AA1"
+   ],
+   "evidence": "1F AAC (layer 5)",
+   "s": 2.7,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N10"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N11",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 11,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "ABE",
+    "ABD"
+   ],
+   "evidence": "1F ABE (layer 5)",
+   "s": 3.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS1U-N11"
+   ]
+  },
+  {
+   "eid": "ST01-MS1U-N12",
+   "flight": "MS1-U",
+   "stair": "ST-01",
+   "riser_no": 12,
+   "kind": "FLOOR_EDGE",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [],
+   "s": 3.3,
+   "cause": "12th riser (section A-A, Q-46 A) arrives on the 1F floor: no edge line on the architectural plans (11 lines); the structural GF roof slab plan draws it (459 at s 3.30, 1.150); its position lies in the B20 head clash (HEAD-CLASH, Q-46 RFI)",
+   "evidence": "1F east lane: nothing drawn at s 3.30 (lane 1.150 beside); ST p.4 459",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS2L-N01",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AC0",
+    "AC2"
+   ],
+   "evidence": "1F AC0 (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N01"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N02",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "ABF",
+    "AC1"
+   ],
+   "evidence": "1F ABF (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N02"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N03",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AB5",
+    "AB9"
+   ],
+   "evidence": "1F AB5 (layer 5)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N03"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N04",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AB6",
+    "ABA"
+   ],
+   "evidence": "1F AB6 (layer 5)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N04"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N05",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.05,
+   "handles": [
+    "AB7",
+    "ABB"
+   ],
+   "evidence": "1F AB7 (layer 5); column 3005 0.050 proud of AF1 over s 1.00 .. 1.50",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N05"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N06",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AB8",
+    "ABC"
+   ],
+   "evidence": "1F AB8 (layer 5)",
+   "s": 1.5,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N06"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N07",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AAD",
+    "AB1"
+   ],
+   "evidence": "1F AAD (layer 5)",
+   "s": 1.8,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N07"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N08",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AAE",
+    "AB2"
+   ],
+   "evidence": "1F AAE (layer 5)",
+   "s": 2.1,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N08"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N09",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AB0",
+    "AB3"
+   ],
+   "evidence": "1F AB0 (layer 5)",
+   "s": 2.4,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N09"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N10",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 10,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "AAF",
+    "AB4"
+   ],
+   "evidence": "1F AAF (layer 5)",
+   "s": 2.7,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N10"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N11",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 11,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "A98",
+    "A99"
+   ],
+   "evidence": "1F A98 (layer 5)",
+   "s": 3.0,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N11"
+   ]
+  },
+  {
+   "eid": "ST01-MS2L-N12",
+   "flight": "MS2-L",
+   "stair": "ST-01",
+   "riser_no": 12,
+   "kind": "LANDING_EDGE",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "A97",
+    "A9A"
+   ],
+   "evidence": "1F A97 (layer 5) = MS2-LD landing edge (+7.516)",
+   "s": 3.3,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2L-N12"
+   ]
+  },
+  {
+   "eid": "ST01-MS2TR-N01",
+   "flight": "MS2-TR",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "LANDING_EDGE",
+   "status": "HELD",
+   "handles": [],
+   "cause": "closing riser MS2-TR (section A-A, +7.516 -> +7.684): its position on MS2-LD is not drawn (T-184 / T-393 / T-410); the upper landing surface's edge is unknown",
+   "evidence": "1F / 2F: no line on MS2-LD",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-MS2U-N01",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "135B",
+    "135C"
+   ],
+   "evidence": "2F 135B (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N01"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N02",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "135E",
+    "135D"
+   ],
+   "evidence": "2F 135E (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N02"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N03",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "136D",
+    "1366"
+   ],
+   "evidence": "2F 136D (layer 5)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N03"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N04",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "136E",
+    "1368"
+   ],
+   "evidence": "2F 136E (layer 5)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N04"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N05",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "136F",
+    "1367"
+   ],
+   "evidence": "2F 136F (layer 5)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N05"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N06",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1370",
+    "1365"
+   ],
+   "evidence": "2F 1370 (layer 5)",
+   "s": 1.5,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N06"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N07",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1371",
+    "136C"
+   ],
+   "evidence": "2F 1371 (layer 5)",
+   "s": 1.8,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N07"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N08",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1372",
+    "136B"
+   ],
+   "evidence": "2F 1372 (layer 5)",
+   "s": 2.1,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N08"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N09",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1373",
+    "136A"
+   ],
+   "evidence": "2F 1373 (layer 5)",
+   "s": 2.4,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N09"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N10",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 10,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1374",
+    "1369"
+   ],
+   "evidence": "2F 1374 (layer 5)",
+   "s": 2.7,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N10"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N11",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 11,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "1386",
+    "1385"
+   ],
+   "evidence": "2F 1386 (layer 5)",
+   "s": 3.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-MS2U-N11"
+   ]
+  },
+  {
+   "eid": "ST01-MS2U-N12",
+   "flight": "MS2-U",
+   "stair": "ST-01",
+   "riser_no": 12,
+   "kind": "FLOOR_EDGE",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [],
+   "s": 3.3,
+   "cause": "12th riser (section A-A) arrives on the 2F floor: no edge line on the architectural plans (11 lines) nor on the structural 1F roof slab plan (62F .. 644, 11 lines); its position lies in the B23 head clash (HEAD-CLASH, Q-46 RFI)",
+   "evidence": "2F east lane: nothing drawn at s 3.30 (lane 1.150 beside)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST01-D1-N01",
+   "flight": "D1",
+   "stair": "ST-01",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "481",
+    "482"
+   ],
+   "evidence": "GF 481 (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-D1-N01"
+   ]
+  },
+  {
+   "eid": "ST01-D1-N02",
+   "flight": "D1",
+   "stair": "ST-01",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "484",
+    "483"
+   ],
+   "evidence": "GF 484 (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-D1-N02"
+   ]
+  },
+  {
+   "eid": "ST01-D1-N03",
+   "flight": "D1",
+   "stair": "ST-01",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "48F",
+    "488"
+   ],
+   "evidence": "GF 48F (layer 5)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-D1-N03"
+   ]
+  },
+  {
+   "eid": "ST01-D1-N04",
+   "flight": "D1",
+   "stair": "ST-01",
+   "riser_no": 4,
+   "kind": "FLOOR_EDGE",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "490",
+    "48A"
+   ],
+   "evidence": "GF 490 (layer 5) = GF stair-room floor edge (+1.00)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST01-D1-N04"
+   ]
+  },
+  {
+   "eid": "ST03-E1-N01",
+   "flight": "E1",
+   "stair": "ST-03",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 2.8,
+   "handles": [
+    "36E",
+    "36F"
+   ],
+   "evidence": "GF 36E (layer 5)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST03-E1-N01"
+   ]
+  },
+  {
+   "eid": "ST03-E1-N02",
+   "flight": "E1",
+   "stair": "ST-03",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 2.8,
+   "handles": [
+    "36C",
+    "36D"
+   ],
+   "evidence": "GF 36C (layer 5)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST03-E1-N02"
+   ]
+  },
+  {
+   "eid": "ST03-E1-N03",
+   "flight": "E1",
+   "stair": "ST-03",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 2.8,
+   "handles": [
+    "36A",
+    "36B"
+   ],
+   "evidence": "GF 36A (layer 5)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST03-E1-N03"
+   ]
+  },
+  {
+   "eid": "ST03-E1-N04",
+   "flight": "E1",
+   "stair": "ST-03",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 2.8,
+   "handles": [
+    "30B",
+    "30E"
+   ],
+   "evidence": "GF 30B (layer 5)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST03-E1-N04"
+   ]
+  },
+  {
+   "eid": "ST03-E1-N05",
+   "flight": "E1",
+   "stair": "ST-03",
+   "riser_no": 5,
+   "kind": "LANDING_EDGE",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 2.8,
+   "handles": [
+    "30A",
+    "30D"
+   ],
+   "evidence": "GF 30A (layer 5) = entrance platform edge (+1.00)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST03-E1-N05"
+   ]
+  },
+  {
+   "eid": "ST02-RSC-N01",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.2,
+   "handles": [
+    "256",
+    "257"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27); this first edge runs over the outer 50 mm band (RL-09 role open)",
+   "evidence": "GF 256 radial straight front edge r 1.581 .. 2.781 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N02",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "254",
+    "255"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 254 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N03",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "252",
+    "253"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 252 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N04",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "250",
+    "251"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 250 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N05",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "24E",
+    "24F"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 24E radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N06",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "24C",
+    "24D"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 24C radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N07",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "24A",
+    "24B"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 24A radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N08",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "248",
+    "249"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 248 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N09",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "246",
+    "247"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 246 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N10",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 10,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "244",
+    "245"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 244 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N11",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 11,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "242",
+    "243"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 242 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSC-N12",
+   "flight": "RS-C",
+   "stair": "ST-02",
+   "riser_no": 12,
+   "kind": "TREAD",
+   "status": "HELD",
+   "beside_lm": 1.15,
+   "handles": [
+    "240",
+    "241"
+   ],
+   "cause": "curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27)",
+   "evidence": "GF 240 radial straight front edge r 1.581 .. 2.731 (not an arc)",
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "binds": []
+  },
+  {
+   "eid": "ST02-RSS-N01",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B43",
+    "B4E"
+   ],
+   "evidence": "1F B43 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N01"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N02",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.05,
+   "handles": [
+    "B4A",
+    "B55"
+   ],
+   "evidence": "1F B4A (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N02"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N03",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.05,
+   "handles": [
+    "B49",
+    "B54"
+   ],
+   "evidence": "1F B49 (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N03"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N04",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.05,
+   "handles": [
+    "B48",
+    "B53"
+   ],
+   "evidence": "1F B48 (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N04"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N05",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 5,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B47",
+    "B52"
+   ],
+   "evidence": "1F B47 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N05"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N06",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 6,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B46",
+    "B51"
+   ],
+   "evidence": "1F B46 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 1.5,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N06"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N07",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 7,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B45",
+    "B50"
+   ],
+   "evidence": "1F B45 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 1.8,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N07"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N08",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 8,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B44",
+    "B4F"
+   ],
+   "evidence": "1F B44 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 2.1,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N08"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N09",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 9,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B4B",
+    "B56"
+   ],
+   "evidence": "1F B4B (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 2.4,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N09"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N10",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 10,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B4C",
+    "B57"
+   ],
+   "evidence": "1F B4C (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 2.7,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N10"
+   ]
+  },
+  {
+   "eid": "ST02-RSS-N11",
+   "flight": "RS-S",
+   "stair": "ST-02",
+   "riser_no": 11,
+   "kind": "LANDING_EDGE",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "notch_m": 0.0,
+   "handles": [
+    "B4D",
+    "B58"
+   ],
+   "evidence": "1F B4D (layer 5) = RS-LD landing edge (+4.696); reconstructed, no section (Q-50 A cond)",
+   "s": 3.0,
+   "shape": "STRAIGHT",
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSS-N11"
+   ]
+  },
+  {
+   "eid": "ST02-RSA-N01",
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "riser_no": 1,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "B59",
+    "B6E"
+   ],
+   "evidence": "1F B59 (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 0.0,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSA-N01"
+   ]
+  },
+  {
+   "eid": "ST02-RSA-N02",
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "riser_no": 2,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "B5A",
+    "B6F"
+   ],
+   "evidence": "1F B5A (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 0.3,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSA-N02"
+   ]
+  },
+  {
+   "eid": "ST02-RSA-N03",
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "riser_no": 3,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "B5B",
+    "B70"
+   ],
+   "evidence": "1F B5B (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 0.6,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSA-N03"
+   ]
+  },
+  {
+   "eid": "ST02-RSA-N04",
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "riser_no": 4,
+   "kind": "TREAD",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "B5C",
+    "B71"
+   ],
+   "evidence": "1F B5C (layer 5); reconstructed, no section (Q-50 A cond)",
+   "s": 0.9,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSA-N04"
+   ]
+  },
+  {
+   "eid": "ST02-RSA-N05",
+   "flight": "RS-A",
+   "stair": "ST-02",
+   "riser_no": 5,
+   "kind": "FLOOR_EDGE",
+   "status": "DRAWING-CONFIRMED",
+   "length_m": 1.15,
+   "handles": [
+    "D22",
+    "D24"
+   ],
+   "evidence": "1F D22 (layer 5) = 1F floor edge (+5.50); reconstructed, no section (Q-50 A cond)",
+   "s": 1.2,
+   "shape": "STRAIGHT",
+   "notch_m": 0.0,
+   "source": "drawn",
+   "cause": "",
+   "binds": [
+    "B7-05:ST02-RSA-N05"
+   ]
+  }
+ ],
+ "drawn_nosing_projection_m": 0.05,
+ "st_cross_read": {
+  "p4_west_MS1-L": {
+   "lines": 12,
+   "span_m": 3.3,
+   "width_m": 1.15,
+   "first_last": [
+    "45A",
+    "25E"
+   ]
+  },
+  "p4_east_MS1-U": {
+   "lines": 12,
+   "span_m": 3.3,
+   "width_m": 1.15,
+   "first_last": [
+    "459",
+    "25B"
+   ]
+  },
+  "p5_west_MS2-L": {
+   "lines": 12,
+   "span_m": 3.3,
+   "width_m": 1.15,
+   "first_last": [
+    "646",
+    "632"
+   ]
+  },
+  "p5_east_MS2-U": {
+   "lines": 11,
+   "span_m": 3.0,
+   "width_m": 1.15,
+   "first_last": [
+    "644",
+    "62F"
+   ]
+  },
+  "D1": {
+   "lines": 4,
+   "span_m": 0.9,
+   "width_m": 1.15,
+   "first_last": [
+    "1C7",
+    "1C4"
+   ]
+  },
+  "p4_RS-C_radial": {
+   "lines": 12,
+   "width_m": 1.15,
+   "first_last": [
+    "2DF",
+    "2EA"
+   ]
+  },
+  "p4_turn_radial": {
+   "lines": 3,
+   "handles": [
+    "2F6",
+    "2F4",
+    "2F5"
+   ]
+  }
+ }
+}

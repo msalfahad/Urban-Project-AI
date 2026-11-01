@@ -1,0 +1,90 @@
+eid,flight,stair,riser_no,kind,status,shape,length_m,radius_m,angle_deg,notch_m,qty_lm,beside_lm,in_step_basis,handles,cause,evidence,binds
+ST01-MS1L-N01,MS1-L,ST-01,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,DC DE,,GF DC (layer 5),B7-05:ST01-MS1L-N01
+ST01-MS1L-N02,MS1-L,ST-01,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,DD DF,,GF DD (layer 5),B7-05:ST01-MS1L-N02
+ST01-MS1L-N03,MS1-L,ST-01,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.050000,1.100000,,yes,CE D0,,GF CE (layer 5); column 2FBD 0.050 proud of 298 over s 0.40 .. 0.90 (T-410 R-T410-4),B7-05:ST01-MS1L-N03
+ST01-MS1L-N04,MS1-L,ST-01,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,CF D1,,GF CF (layer 5),B7-05:ST01-MS1L-N04
+ST01-MS1L-N05,MS1-L,ST-01,5,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,C6 CA,,GF C6 (layer 5),B7-05:ST01-MS1L-N05
+ST01-MS1L-N06,MS1-L,ST-01,6,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,C7 CB,,GF C7 (layer 5),B7-05:ST01-MS1L-N06
+ST01-MS1L-N07,MS1-L,ST-01,7,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,C9 CC,,GF C9 (layer 5),B7-05:ST01-MS1L-N07
+ST01-MS1L-N08,MS1-L,ST-01,8,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,C8 CD,,"GF C8 (layer 5); drawn 0.575 to the cut break, edge = lane 298 .. 157 (1.150)",B7-05:ST01-MS1L-N08
+ST01-MS1L-N09,MS1-L,ST-01,9,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,C5,,"GF C5 (layer 2, above the cut)",B7-05:ST01-MS1L-N09
+ST01-MS1L-N10,MS1-L,ST-01,10,WINDER,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,485 486,,"GF 485 (layer 2, above the cut) (also drawn as C4: one edge, counted once); front of the first winder of the turn",B7-05:ST01-MS1L-N10
+ST01-MS1T-N01,MS1-T,ST-01,1,WINDER,HELD,STRAIGHT,,,,0.000000,,1.258652,yes,4A2 4A3,"winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)","GF 4A2 radial front edge from the inner corner, 1.259 (never the lane width)",
+ST01-MS1T-N02,MS1-T,ST-01,2,WINDER,HELD,STRAIGHT,,,,0.000000,,1.626346,yes,49E 49F,"winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)","GF 49E radial front edge from the inner corner, 1.626 (never the lane width)",
+ST01-MS1T-N03,MS1-T,ST-01,3,WINDER,HELD,STRAIGHT,,,,0.000000,,1.258652,yes,4A0 4A1,"winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)","GF 4A0 radial front edge from the inner corner, 1.259 (never the lane width)",
+ST01-MS1T-N04,MS1-T,ST-01,4,WINDER,HELD,STRAIGHT,,,,0.000000,,,yes,,"winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9)",the fifth section riser has no front edge on the plans,
+ST01-MS1T-N05,MS1-T,ST-01,5,LANDING_EDGE,HELD,STRAIGHT,,,,0.000000,,1.150000,no,2C6,"winder turn: section A-A draws 5 risers (+2.667 -> +3.50), the architectural plans 4 wedges (fronts 485 / 4A2 / 49E / 4A0), and the structural GF roof slab plan (ST p.4) 12 straight lines in this lane (45A .. 25E, 3.30) + 3 radial (2F6 / 2F4 / 2F5): split 10 + 5 (A-A) vs 12 + 3 (ST p.4) of the same 15 risers to +3.50; count conflict (T-184 MS1-T, Q-51 A cond, C-ST-3); winders never generated (owner S-9); the MS1-LD edge at the well head (band 2C6 / 49C / 49D) is not established as the riser",GF 2C6 (layer 2) band line 1.150 between the turn and MS1-LD,
+ST01-MS1U-N01,MS1-U,ST-01,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,A92 A93,,1F A92 (layer 5),B7-05:ST01-MS1U-N01
+ST01-MS1U-N02,MS1-U,ST-01,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,A95 A94,,1F A95 (layer 5),B7-05:ST01-MS1U-N02
+ST01-MS1U-N03,MS1-U,ST-01,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AA5 A9E,,1F AA5 (layer 5),B7-05:ST01-MS1U-N03
+ST01-MS1U-N04,MS1-U,ST-01,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AA6 AA0,,1F AA6 (layer 5),B7-05:ST01-MS1U-N04
+ST01-MS1U-N05,MS1-U,ST-01,5,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AA7 A9F,,1F AA7 (layer 5),B7-05:ST01-MS1U-N05
+ST01-MS1U-N06,MS1-U,ST-01,6,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AA8 A9D,,1F AA8 (layer 5),B7-05:ST01-MS1U-N06
+ST01-MS1U-N07,MS1-U,ST-01,7,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AA9 AA4,,1F AA9 (layer 5),B7-05:ST01-MS1U-N07
+ST01-MS1U-N08,MS1-U,ST-01,8,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAA AA3,,1F AAA (layer 5),B7-05:ST01-MS1U-N08
+ST01-MS1U-N09,MS1-U,ST-01,9,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAB AA2,,1F AAB (layer 5),B7-05:ST01-MS1U-N09
+ST01-MS1U-N10,MS1-U,ST-01,10,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAC AA1,,1F AAC (layer 5),B7-05:ST01-MS1U-N10
+ST01-MS1U-N11,MS1-U,ST-01,11,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,ABE ABD,,1F ABE (layer 5),B7-05:ST01-MS1U-N11
+ST01-MS1U-N12,MS1-U,ST-01,12,FLOOR_EDGE,HELD,STRAIGHT,,,,0.000000,,1.150000,no,,"12th riser (section A-A, Q-46 A) arrives on the 1F floor: no edge line on the architectural plans (11 lines); the structural GF roof slab plan draws it (459 at s 3.30, 1.150); its position lies in the B20 head clash (HEAD-CLASH, Q-46 RFI)",1F east lane: nothing drawn at s 3.30 (lane 1.150 beside); ST p.4 459,
+ST01-MS2L-N01,MS2-L,ST-01,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AC0 AC2,,1F AC0 (layer 5),B7-05:ST01-MS2L-N01
+ST01-MS2L-N02,MS2-L,ST-01,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,ABF AC1,,1F ABF (layer 5),B7-05:ST01-MS2L-N02
+ST01-MS2L-N03,MS2-L,ST-01,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AB5 AB9,,1F AB5 (layer 5),B7-05:ST01-MS2L-N03
+ST01-MS2L-N04,MS2-L,ST-01,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AB6 ABA,,1F AB6 (layer 5),B7-05:ST01-MS2L-N04
+ST01-MS2L-N05,MS2-L,ST-01,5,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.050000,1.100000,,yes,AB7 ABB,,1F AB7 (layer 5); column 3005 0.050 proud of AF1 over s 1.00 .. 1.50,B7-05:ST01-MS2L-N05
+ST01-MS2L-N06,MS2-L,ST-01,6,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AB8 ABC,,1F AB8 (layer 5),B7-05:ST01-MS2L-N06
+ST01-MS2L-N07,MS2-L,ST-01,7,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAD AB1,,1F AAD (layer 5),B7-05:ST01-MS2L-N07
+ST01-MS2L-N08,MS2-L,ST-01,8,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAE AB2,,1F AAE (layer 5),B7-05:ST01-MS2L-N08
+ST01-MS2L-N09,MS2-L,ST-01,9,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AB0 AB3,,1F AB0 (layer 5),B7-05:ST01-MS2L-N09
+ST01-MS2L-N10,MS2-L,ST-01,10,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,AAF AB4,,1F AAF (layer 5),B7-05:ST01-MS2L-N10
+ST01-MS2L-N11,MS2-L,ST-01,11,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,A98 A99,,1F A98 (layer 5),B7-05:ST01-MS2L-N11
+ST01-MS2L-N12,MS2-L,ST-01,12,LANDING_EDGE,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,no,A97 A9A,,1F A97 (layer 5) = MS2-LD landing edge (+7.516),B7-05:ST01-MS2L-N12
+ST01-MS2TR-N01,MS2-TR,ST-01,1,LANDING_EDGE,HELD,STRAIGHT,,,,0.000000,,,no,,"closing riser MS2-TR (section A-A, +7.516 -> +7.684): its position on MS2-LD is not drawn (T-184 / T-393 / T-410); the upper landing surface's edge is unknown",1F / 2F: no line on MS2-LD,
+ST01-MS2U-N01,MS2-U,ST-01,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,135B 135C,,2F 135B (layer 5),B7-05:ST01-MS2U-N01
+ST01-MS2U-N02,MS2-U,ST-01,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,135E 135D,,2F 135E (layer 5),B7-05:ST01-MS2U-N02
+ST01-MS2U-N03,MS2-U,ST-01,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,136D 1366,,2F 136D (layer 5),B7-05:ST01-MS2U-N03
+ST01-MS2U-N04,MS2-U,ST-01,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,136E 1368,,2F 136E (layer 5),B7-05:ST01-MS2U-N04
+ST01-MS2U-N05,MS2-U,ST-01,5,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,136F 1367,,2F 136F (layer 5),B7-05:ST01-MS2U-N05
+ST01-MS2U-N06,MS2-U,ST-01,6,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1370 1365,,2F 1370 (layer 5),B7-05:ST01-MS2U-N06
+ST01-MS2U-N07,MS2-U,ST-01,7,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1371 136C,,2F 1371 (layer 5),B7-05:ST01-MS2U-N07
+ST01-MS2U-N08,MS2-U,ST-01,8,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1372 136B,,2F 1372 (layer 5),B7-05:ST01-MS2U-N08
+ST01-MS2U-N09,MS2-U,ST-01,9,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1373 136A,,2F 1373 (layer 5),B7-05:ST01-MS2U-N09
+ST01-MS2U-N10,MS2-U,ST-01,10,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1374 1369,,2F 1374 (layer 5),B7-05:ST01-MS2U-N10
+ST01-MS2U-N11,MS2-U,ST-01,11,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,1386 1385,,2F 1386 (layer 5),B7-05:ST01-MS2U-N11
+ST01-MS2U-N12,MS2-U,ST-01,12,FLOOR_EDGE,HELD,STRAIGHT,,,,0.000000,,1.150000,no,,"12th riser (section A-A) arrives on the 2F floor: no edge line on the architectural plans (11 lines) nor on the structural 1F roof slab plan (62F .. 644, 11 lines); its position lies in the B23 head clash (HEAD-CLASH, Q-46 RFI)",2F east lane: nothing drawn at s 3.30 (lane 1.150 beside),
+ST01-D1-N01,D1,ST-01,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,481 482,,GF 481 (layer 5),B7-05:ST01-D1-N01
+ST01-D1-N02,D1,ST-01,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,484 483,,GF 484 (layer 5),B7-05:ST01-D1-N02
+ST01-D1-N03,D1,ST-01,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,48F 488,,GF 48F (layer 5),B7-05:ST01-D1-N03
+ST01-D1-N04,D1,ST-01,4,FLOOR_EDGE,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,no,490 48A,,GF 490 (layer 5) = GF stair-room floor edge (+1.00),B7-05:ST01-D1-N04
+ST03-E1-N01,E1,ST-03,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,2.800000,,,0.000000,2.800000,,yes,36E 36F,,GF 36E (layer 5),B7-05:ST03-E1-N01
+ST03-E1-N02,E1,ST-03,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,2.800000,,,0.000000,2.800000,,yes,36C 36D,,GF 36C (layer 5),B7-05:ST03-E1-N02
+ST03-E1-N03,E1,ST-03,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,2.800000,,,0.000000,2.800000,,yes,36A 36B,,GF 36A (layer 5),B7-05:ST03-E1-N03
+ST03-E1-N04,E1,ST-03,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,2.800000,,,0.000000,2.800000,,yes,30B 30E,,GF 30B (layer 5),B7-05:ST03-E1-N04
+ST03-E1-N05,E1,ST-03,5,LANDING_EDGE,DRAWING-CONFIRMED,STRAIGHT,2.800000,,,0.000000,2.800000,,no,30A 30D,,GF 30A (layer 5) = entrance platform edge (+1.00),B7-05:ST03-E1-N05
+ST02-RSC-N01,RS-C,ST-02,1,TREAD,HELD,STRAIGHT,,,,0.000000,,1.200000,yes,256 257,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27); this first edge runs over the outer 50 mm band (RL-09 role open),GF 256 radial straight front edge r 1.581 .. 2.781 (not an arc),
+ST02-RSC-N02,RS-C,ST-02,2,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,254 255,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 254 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N03,RS-C,ST-02,3,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,252 253,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 252 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N04,RS-C,ST-02,4,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,250 251,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 250 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N05,RS-C,ST-02,5,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,24E 24F,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 24E radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N06,RS-C,ST-02,6,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,24C 24D,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 24C radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N07,RS-C,ST-02,7,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,24A 24B,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 24A radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N08,RS-C,ST-02,8,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,248 249,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 248 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N09,RS-C,ST-02,9,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,246 247,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 246 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N10,RS-C,ST-02,10,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,244 245,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 244 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N11,RS-C,ST-02,11,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,242 243,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 242 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSC-N12,RS-C,ST-02,12,TREAD,HELD,STRAIGHT,,,,0.000000,,1.150000,yes,240 241,curved part of the round stair HELD (owner Q-50 A cond: curved parts held; no section; T-398 RFI-S27),GF 240 radial straight front edge r 1.581 .. 2.731 (not an arc),
+ST02-RSS-N01,RS-S,ST-02,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B43 B4E,,"1F B43 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N01
+ST02-RSS-N02,RS-S,ST-02,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.050000,1.100000,,yes,B4A B55,,"1F B4A (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N02
+ST02-RSS-N03,RS-S,ST-02,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.050000,1.100000,,yes,B49 B54,,"1F B49 (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N03
+ST02-RSS-N04,RS-S,ST-02,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.050000,1.100000,,yes,B48 B53,,"1F B48 (layer 5); column 2FD2 0.050 proud of A7 over s 0.20 .. 1.00; reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N04
+ST02-RSS-N05,RS-S,ST-02,5,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B47 B52,,"1F B47 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N05
+ST02-RSS-N06,RS-S,ST-02,6,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B46 B51,,"1F B46 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N06
+ST02-RSS-N07,RS-S,ST-02,7,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B45 B50,,"1F B45 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N07
+ST02-RSS-N08,RS-S,ST-02,8,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B44 B4F,,"1F B44 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N08
+ST02-RSS-N09,RS-S,ST-02,9,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B4B B56,,"1F B4B (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N09
+ST02-RSS-N10,RS-S,ST-02,10,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B4C B57,,"1F B4C (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N10
+ST02-RSS-N11,RS-S,ST-02,11,LANDING_EDGE,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,no,B4D B58,,"1F B4D (layer 5) = RS-LD landing edge (+4.696); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSS-N11
+ST02-RSA-N01,RS-A,ST-02,1,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B59 B6E,,"1F B59 (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSA-N01
+ST02-RSA-N02,RS-A,ST-02,2,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B5A B6F,,"1F B5A (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSA-N02
+ST02-RSA-N03,RS-A,ST-02,3,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B5B B70,,"1F B5B (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSA-N03
+ST02-RSA-N04,RS-A,ST-02,4,TREAD,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,yes,B5C B71,,"1F B5C (layer 5); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSA-N04
+ST02-RSA-N05,RS-A,ST-02,5,FLOOR_EDGE,DRAWING-CONFIRMED,STRAIGHT,1.150000,,,0.000000,1.150000,,no,D22 D24,,"1F D22 (layer 5) = 1F floor edge (+5.50); reconstructed, no section (Q-50 A cond)",B7-05:ST02-RSA-N05
