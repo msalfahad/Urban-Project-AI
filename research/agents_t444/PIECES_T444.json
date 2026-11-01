@@ -1,0 +1,569 @@
+{
+ "cell": "SITE-c1089bdb4cfcdc4a",
+ "engine": {
+  "area_gross_m2": 41.0762,
+  "beams_in_cell_m2": {
+   "BAND0028": 0.9683,
+   "BAND0036.1": 0.81
+  },
+  "free_columns": 1,
+  "holes_m2": 0.25,
+  "member_overlap_m2": 1.7783,
+  "net_m2": 39.2979,
+  "outline_without_holes_m2": 41.3262,
+  "region_reason": "1 free-standing column(s) inside a ground-slab cell",
+  "registered_gross_m2": 41.0762,
+  "t_m": 0.1
+ },
+ "foundation_plan_outlines_under_cell": [
+  {
+   "handle": "1090",
+   "layer": "S-COL.BON",
+   "size_m": [
+    0.25,
+    1.0
+   ],
+   "under_cell_m2": 0.25
+  },
+  {
+   "handle": "10EA",
+   "layer": "S-BW",
+   "size_m": [
+    1.8,
+    1.8
+   ],
+   "under_cell_m2": 3.24
+  },
+  {
+   "handle": "10EB",
+   "layer": "S-BW",
+   "size_m": [
+    2.2,
+    2.2
+   ],
+   "under_cell_m2": 4.4
+  },
+  {
+   "handle": "1ABF",
+   "layer": "S-FOOTINGS",
+   "size_m": [
+    4.4,
+    3.2
+   ],
+   "under_cell_m2": 2.61
+  },
+  {
+   "handle": "1B19",
+   "layer": "S-FOOTINGS",
+   "size_m": [
+    2.2,
+    2.6
+   ],
+   "under_cell_m2": 1.4038
+  },
+  {
+   "handle": "1B2B",
+   "layer": "S-FOOTINGS",
+   "size_m": [
+    4.6,
+    4.5
+   ],
+   "under_cell_m2": 16.0524
+  }
+ ],
+ "frame": "T-141 GROUND BEAMS PLAN + FOUNDATION PLAN",
+ "line": "L-41cfb82ed733f4d6e3a5",
+ "panel_contents": {
+  "OWN-007": {
+   "hidden_layer2_lines": [],
+   "layer5_lines": [],
+   "level_marks": []
+  },
+  "OWN-009": {
+   "hidden_layer2_lines": [
+    "10D",
+    "10E",
+    "10F",
+    "110",
+    "111",
+    "112",
+    "113",
+    "171",
+    "1C4",
+    "1C5",
+    "1C6",
+    "1C7",
+    "1D3"
+   ],
+   "layer5_lines": [
+    "143",
+    "144",
+    "1C3"
+   ],
+   "level_marks": [
+    {
+     "handle": "1C2",
+     "text": "+1.00"
+    },
+    {
+     "handle": "1C9",
+     "text": "+0.30"
+    }
+   ]
+  },
+  "OWN-010": {
+   "hidden_layer2_lines": [],
+   "layer5_lines": [],
+   "level_marks": [
+    {
+     "handle": "1BE",
+     "text": "+1.00"
+    }
+   ]
+  },
+  "OWN-047": {
+   "hidden_layer2_lines": [],
+   "layer5_lines": [],
+   "level_marks": []
+  }
+ },
+ "pieces": [
+  {
+   "area_m2": 11.9237,
+   "bbox_m": [
+    3.02,
+    4.278
+   ],
+   "edge_handles": [
+    "177",
+    "17C",
+    "1EC",
+    "7C2",
+    "7DC",
+    "7E2",
+    "7F5"
+   ],
+   "face": "OWN-007",
+   "foundation_plan_below_m2": {
+    "1B2B": 4.6442
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 11.9237,
+   "in_engine_outline_m2": 11.9237,
+   "kind": "PANEL",
+   "m3": 1.19237,
+   "own_kind_T391": "PANEL",
+   "owner": "GROUND_SLAB",
+   "owner_line": "L-41cfb82ed733f4d6e3a5",
+   "rectangle": false,
+   "t_m": 0.1
+  },
+  {
+   "area_m2": 11.52,
+   "bbox_m": [
+    2.4,
+    4.8
+   ],
+   "edge_handles": [
+    "15F",
+    "1DC",
+    "1E0",
+    "1F2",
+    "1F5",
+    "234",
+    "7C2",
+    "7C3",
+    "7CB",
+    "7CC"
+   ],
+   "face": "OWN-009",
+   "foundation_plan_below_m2": {
+    "1ABF": 1.845,
+    "1B2B": 2.6107
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 11.52,
+   "in_engine_outline_m2": 11.52,
+   "kind": "PANEL",
+   "m3": 1.152,
+   "own_kind_T391": "PANEL",
+   "owner": "GROUND_SLAB",
+   "owner_line": "L-41cfb82ed733f4d6e3a5",
+   "rectangle": true,
+   "t_m": 0.1
+  },
+  {
+   "area_m2": 10.9742,
+   "bbox_m": [
+    3.4,
+    3.228
+   ],
+   "edge_handles": [
+    "15C",
+    "1F2",
+    "228",
+    "7C2",
+    "7CB",
+    "7E2",
+    "7E3"
+   ],
+   "face": "OWN-010",
+   "foundation_plan_below_m2": {
+    "1ABF": 0.765,
+    "1B08+1B09": 0.1664,
+    "1B19": 1.4038,
+    "1B2B": 2.47
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 10.9742,
+   "in_engine_outline_m2": 10.9742,
+   "kind": "PANEL",
+   "m3": 1.09742,
+   "own_kind_T391": "PANEL",
+   "owner": "GROUND_SLAB",
+   "owner_line": "L-41cfb82ed733f4d6e3a5",
+   "rectangle": true,
+   "t_m": 0.1
+  },
+  {
+   "area_m2": 3.24,
+   "bbox_m": [
+    1.8,
+    1.8
+   ],
+   "edge_handles": [
+    "1EC",
+    "1EF",
+    "1F2",
+    "1F5",
+    "7BE"
+   ],
+   "face": "OWN-020",
+   "foundation_plan_below_m2": {
+    "1B2B": 3.24
+   },
+   "host": "7BE",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 2.8125,
+   "in_engine_outline_m2": 2.8125,
+   "kind": "SHAFT",
+   "m3": null,
+   "own_kind_T391": "LIFT",
+   "owner": "LIFT_PIT_FLOOR=RAFT_TOP",
+   "owner_line": "L-1590b76b2fe8f131dc07 (raft FF; pit floor = raft top, no volume)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 1.1875,
+   "bbox_m": [
+    1.25,
+    0.95
+   ],
+   "edge_handles": [
+    "15D",
+    "15E",
+    "7C2",
+    "7FF"
+   ],
+   "face": "OWN-047",
+   "foundation_plan_below_m2": {
+    "1B2B": 1.1875
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 1.1875,
+   "in_engine_outline_m2": 1.1875,
+   "kind": "PANEL",
+   "m3": 0.11875,
+   "own_kind_T391": "PANEL",
+   "owner": "GROUND_SLAB",
+   "owner_line": "L-41cfb82ed733f4d6e3a5",
+   "rectangle": true,
+   "t_m": 0.1
+  },
+  {
+   "area_m2": 0.9683,
+   "bbox_m": [
+    0.3,
+    3.228
+   ],
+   "edge_handles": [
+    "17C",
+    "7C2",
+    "7E2",
+    "7E3"
+   ],
+   "face": "OWN-060",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.39
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.9683,
+   "in_engine_outline_m2": 0.9683,
+   "kind": "BEAM",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "GROUND_BEAM",
+   "owner_line": "L-c5902fd02c58b85a5df1 (BAND0028)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.81,
+   "bbox_m": [
+    0.3,
+    2.7
+   ],
+   "edge_handles": [
+    "15E",
+    "15F",
+    "1E0",
+    "1F5",
+    "7C2"
+   ],
+   "face": "OWN-065",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.3
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.81,
+   "in_engine_outline_m2": 0.81,
+   "kind": "BEAM",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "GROUND_BEAM",
+   "owner_line": "L-361f5e913c566c4fe2b5 (BAND0036.1)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.36,
+   "bbox_m": [
+    1.8,
+    0.2
+   ],
+   "edge_handles": [
+    "1EC",
+    "1F2",
+    "7BE",
+    "7C2"
+   ],
+   "face": "OWN-082",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.36
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.36,
+   "in_engine_outline_m2": 0.36,
+   "kind": "RING",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "LIFT_PIT_WALLS",
+   "owner_line": "LIFT_PIT:WALLS (T-397 HELD blank; height: pit depth RFI L-1 + GF build-up)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.36,
+   "bbox_m": [
+    1.8,
+    0.2
+   ],
+   "edge_handles": [
+    "1EF",
+    "1F5",
+    "7BE",
+    "7C2"
+   ],
+   "face": "OWN-083",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.36
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.27,
+   "in_engine_outline_m2": 0.27,
+   "kind": "RING",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "LIFT_PIT_WALLS",
+   "owner_line": "LIFT_PIT:WALLS (T-397 HELD blank; height: pit depth RFI L-1 + GF build-up)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.24,
+   "bbox_m": [
+    0.2,
+    1.2
+   ],
+   "edge_handles": [
+    "1F2",
+    "1F5",
+    "7BE",
+    "7C2"
+   ],
+   "face": "OWN-086",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.24
+   },
+   "host": "",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.24,
+   "in_engine_outline_m2": 0.24,
+   "kind": "RING",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "LIFT_PIT_WALLS",
+   "owner_line": "LIFT_PIT:WALLS (T-397 HELD blank; height: pit depth RFI L-1 + GF build-up)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.14,
+   "bbox_m": [
+    0.2,
+    0.7
+   ],
+   "edge_handles": [
+    "1EC",
+    "1EF",
+    "7BE",
+    "7C2"
+   ],
+   "face": "OWN-094",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.14
+   },
+   "host": "",
+   "in_T391_binding": false,
+   "in_engine_gross_m2": 0.01,
+   "in_engine_outline_m2": 0.01,
+   "kind": "RING",
+   "m3": null,
+   "own_kind_T391": "BEAM",
+   "owner": "LIFT_PIT_WALLS",
+   "owner_line": "LIFT_PIT:WALLS (T-397 HELD blank; height: pit depth RFI L-1 + GF build-up)",
+   "rectangle": true,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.12,
+   "bbox_m": [
+    0.2,
+    1.0
+   ],
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7BE",
+    "7C2"
+   ],
+   "face": "OWN-099",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.12
+   },
+   "host": "1EC",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.0,
+   "in_engine_outline_m2": 0.12,
+   "kind": "COLUMN",
+   "m3": null,
+   "own_kind_T391": "COLUMN",
+   "owner": "COLUMN/NECK",
+   "owner_line": "C9 (S-COL.BON 1EC = FP 1090): neck L-953e87a3, GF column L-7b41af57 (T-401)",
+   "rectangle": false,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.08,
+   "bbox_m": [
+    0.2,
+    0.8
+   ],
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "face": "OWN-114",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.08
+   },
+   "host": "1EC",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.0,
+   "in_engine_outline_m2": 0.08,
+   "kind": "COLUMN",
+   "m3": null,
+   "own_kind_T391": "COLUMN",
+   "owner": "COLUMN/NECK",
+   "owner_line": "C9 (S-COL.BON 1EC = FP 1090): neck L-953e87a3, GF column L-7b41af57 (T-401)",
+   "rectangle": false,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.045,
+   "bbox_m": [
+    0.05,
+    1.0
+   ],
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "face": "OWN-151",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.045
+   },
+   "host": "1EC",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.0,
+   "in_engine_outline_m2": 0.045,
+   "kind": "COLUMN",
+   "m3": null,
+   "own_kind_T391": "COLUMN",
+   "owner": "COLUMN/NECK",
+   "owner_line": "C9 (S-COL.BON 1EC = FP 1090): neck L-953e87a3, GF column L-7b41af57 (T-401)",
+   "rectangle": false,
+   "t_m": null
+  },
+  {
+   "area_m2": 0.005,
+   "bbox_m": [
+    0.05,
+    0.2
+   ],
+   "edge_handles": [
+    "1EA",
+    "1EC",
+    "7C2"
+   ],
+   "face": "OWN-174",
+   "foundation_plan_below_m2": {
+    "1B2B": 0.005
+   },
+   "host": "1EC",
+   "in_T391_binding": true,
+   "in_engine_gross_m2": 0.0,
+   "in_engine_outline_m2": 0.005,
+   "kind": "COLUMN",
+   "m3": null,
+   "own_kind_T391": "COLUMN",
+   "owner": "COLUMN/NECK",
+   "owner_line": "C9 (S-COL.BON 1EC = FP 1090): neck L-953e87a3, GF column L-7b41af57 (T-401)",
+   "rectangle": false,
+   "t_m": null
+  }
+ ],
+ "schema": "T444_PIECES_V1",
+ "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+}
