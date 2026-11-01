@@ -342,6 +342,65 @@ def st_cross_read(st_path):
     return out
 
 
+# engine flight (candidate calculation input 'flight_id') -> drawn flight, with the basis of the binding: the engine's
+# own cross-plan repeat record (ARCH_PLAN run/cross_plan_stairs, overlap 1.0) plus its kind / lines / run / layer
+ENGINE_TO_DRAWN = {
+    "SITE-3759f2457b22cb4a:F1": ("MS1-L", "stacked under 1F F2 (= MS2-L, west lane); 8 hidden lines run 2.1 = the riser "
+                                          "faces DE .. CD of MS1-L"),
+    "SITE-3759f2457b22cb4a:F2": ("D1", "4 solid lines run 0.9 (481 .. 490); stacked under 1F F3 (east lane)"),
+    "SITE-735e111dcf9b22c8:F1": ("RS-C", "RADIAL 13 lines, 12 treads, width 1.150"),
+    "SITE-735e111dcf9b22c8:F2": ("RS-S", "seen through the void as 1F F4 (= RS-S B43 .. B4D); GF reading 7 lines"),
+    "SITE-735e111dcf9b22c8:F3": ("RS-S", "BY ELIMINATION (no repeat recorded): the rest of the GF reading of RS-S"),
+    "SITE-735e111dcf9b22c8:F4": ("RS-A", "seen through the void as 1F F6 (= RS-A B59 .. D22)"),
+    "SITE-a95bf979baf4cfae:F1": ("RS-C", "seen through the void (exposure; measured on GF F1)"),
+    "SITE-a95bf979baf4cfae:F2": ("MS2-L", "12 solid lines run 3.3 (AC0 .. A97), west lane"),
+    "SITE-a95bf979baf4cfae:F3": ("MS1-U", "11 solid lines run 3.0 (A92 .. ABE), east lane"),
+    "SITE-a95bf979baf4cfae:F4": ("RS-S", "11 lines run 3.0 (B43 .. B4D), exposure (measured on GF F2)"),
+    "SITE-a95bf979baf4cfae:F5": (None, "UNBOUND: a 4-tread RADIAL reading of width 1.247 (layer 2) matches no drawn "
+                                       "flight on the 1F plan (no radial line at RS-LD): B7-02 owner row"),
+    "SITE-a95bf979baf4cfae:F6": ("RS-A", "5 lines run 1.2 (B59 .. D22), exposure (measured on GF F4)"),
+    "SITE-d7254c68fd33723d:F1": ("MS2-L", "stacked over 1F F2: the west lane seen from 2F, no flight of 2F (T-184 "
+                                          "R-STAIR-CONT-1, T-129)"),
+    "SITE-d7254c68fd33723d:F2": ("MS2-U", "stacked over 1F F3 (east lane); 11 lines 135B .. 1386, engine 11 lines"),
+}
+STAIR_CODES = ("FIN.MARBLE.TREAD", "FIN.STAIR.STEP_LM", "FIN.MARBLE.RISER", "FIN.STAIR.FLIGHT", "FIN.RAILING")
+
+
+def candidate_binding(lines_json, data):
+    """bind every drawn flight to the candidate's stair lines (V3_0_35_BOQ_LINES.json of a run of record). Writes ids,
+    states, engine treads and the drawn treads only (no coordinates)."""
+    import hashlib
+    raw = Path(lines_json).read_bytes()
+    lines = json.loads(raw)
+    lines = lines["lines"] if isinstance(lines, dict) else lines
+    by_el = {}
+    for x in lines:
+        if x["item_code"] in STAIR_CODES:
+            by_el.setdefault(x["location"]["element_id"], []).append(x)
+    drawn_treads = {}
+    for f in data["flights"]:
+        drawn_treads[f["flight"]] = sum(1 for e in data["edges"] if e["flight"] == f["flight"]
+                                        and e["kind"] in (N.TREAD, N.WINDER))
+    rows = []
+    for el, xs in sorted(by_el.items()):
+        tread = next((x for x in xs if x["item_code"] == "FIN.MARBLE.TREAD"), None)
+        if tread is None or "flight_id" not in (tread["calculation"].get("inputs") or {}):
+            continue
+        inp = tread["calculation"]["inputs"]
+        fid = inp["flight_id"]
+        drawn, basis = ENGINE_TO_DRAWN[fid]
+        rows.append({"engine_flight": fid, "element_id": el, "drawn_flight": drawn, "basis": basis,
+                     "engine_treads": inp["treads"], "engine_lines": inp["tread_lines"], "engine_kind": inp["kind"],
+                     "engine_width_m": inp["width_m"],
+                     "drawn_treads": drawn_treads.get(drawn) if drawn else None,
+                     "lines": {x["item_code"]: {"line_id": x["line_id"], "state": x["evidence_state"],
+                                                "net": x["measured_net"]} for x in xs}})
+    assert {r["engine_flight"] for r in rows} == set(ENGINE_TO_DRAWN), "a candidate flight is unbound or unknown"
+    return {"candidate": "ARCH_TAKEOFF_V3.0.35", "file": "V3_0_35_BOQ_LINES.json",
+            "sha256": hashlib.sha256(raw).hexdigest(), "lines": len(lines), "flights": rows,
+            "nosing_lines_in_candidate": sum(1 for x in lines if "NOSING" in x["item_code"])}
+
+
 # ------------------------------------------------------------------ table (no private input)
 
 def _edge(x):
@@ -439,6 +498,10 @@ def main(argv):
         data["st_cross_read"] = st_cross_read(argv[argv.index("--st") + 1])
     elif "--write" in argv:
         raise SystemExit("--write needs --st <ST7757 dxf.dxf> (the second drawing is part of the evidence)")
+    if "--candidate" in argv:
+        b = candidate_binding(argv[argv.index("--candidate") + 1], data)
+        if "--write" in argv:
+            (HERE / "CANDIDATE_BINDING_T412.json").write_text(json.dumps(b, indent=1, ensure_ascii=False) + "\n")
     fl = census(data)
     s = summary(fl, data)
     print(json.dumps(s, indent=1))

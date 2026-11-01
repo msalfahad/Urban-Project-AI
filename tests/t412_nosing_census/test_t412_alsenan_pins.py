@@ -84,3 +84,15 @@ def test_second_drawing_cross_read():
     held = [r for r in edges() if r["flight"] == "MS1-T"]
     assert len(held) == 5 and all(r["status"] == "HELD" and r["qty_lm"] == "" for r in held)
     assert all(abs(v["width_m"] - 1.150) < 1e-9 for v in st.values() if "width_m" in v)
+
+
+def test_candidate_binding_pinned():
+    b = json.loads((D / "CANDIDATE_BINDING_T412.json").read_text())
+    assert b["candidate"] == "ARCH_TAKEOFF_V3.0.35" and b["sha256"].startswith("b011bace")
+    assert b["nosing_lines_in_candidate"] == 0 and len(b["flights"]) == 14
+    by = {r["engine_flight"]: r for r in b["flights"]}
+    assert by["SITE-3759f2457b22cb4a:F1"]["drawn_flight"] == "MS1-L" and by["SITE-3759f2457b22cb4a:F1"]["engine_treads"] == 7
+    assert by["SITE-a95bf979baf4cfae:F2"]["drawn_treads"] == by["SITE-a95bf979baf4cfae:F2"]["engine_treads"] == 11
+    assert by["SITE-a95bf979baf4cfae:F5"]["drawn_flight"] is None
+    for r in b["flights"]:
+        assert r["lines"]["FIN.MARBLE.TREAD"]["line_id"].startswith("L-")

@@ -18,7 +18,7 @@ client name, title text or workbook row text is copied here.
 | Drive "Alsenan chalet project" ST7757 dxf.dxf (structural DXF, sha 9f9d1179), decoded into `.work/private` only: SECOND DRAWING, own count by handle | the same lanes on the slab plans: p.4 west 45A .. 25E 12 lines + radial 2F6 / 2F4 / 2F5, p.4 east 459 .. 25B 12, p.5 west 646 .. 632 12, p.5 east 644 .. 62F 11, D1 1C7 .. 1C4 4, RS-C 2DF .. 2EA 12 radial; every line 1.150 (`st_cross_read` in ALSENAN_EDGES_T412.json) |
 | research/agents_t184 (MERGED; riser counts by section A-A, Q-46 A; ST-02 / ST-03 / D1 reconstruction) | riser counts per flight (cited, not re-derived) |
 | research/agents_t410 (MERGED 2fb91300; side table, column census) | side ids (overlap check), the proud columns 2FBD / 3005 / 2FD2 (re-read here on the front edges) |
-| research/agents_t398 (MERGED), T-135 FLIGHTS_ONCE, T-418 candidate binding (MERGED) | RS-C status (RFI-S27), engine flight readings, V3.0.35 stair line ids |
+| research/agents_t415 (MERGED 8c8372a4: RS-C 12 risers, tread lines 1.150 inset 0.050 from the opening edges), research/agents_t398 (MERGED), T-135 FLIGHTS_ONCE, T-418 candidate binding (MERGED) | RS-C status (RFI-S27), engine flight readings, V3.0.35 stair line ids |
 | Freelancer FIN workbook (23.6 MB, over the connector limit): his stair rows read from the Drive search content (read-only) | his piece counts and width per piece (section 5) |
 
 ## 1. Physical element and the engineering question (ERS s.2.1)
@@ -71,7 +71,8 @@ Hand checks (independent of the code, every term a drawn length): 11.45 + 12.65 
 the inner corner to the outer corner hypot(1.150, 1.150) = 1.626; 4A2 / 4A0 hypot(1.150, 0.512) = 1.259.
 
 Second drawing (structural DXF, own count): every stair line on the slab plans is 1.150 too; MS2-L 12, D1 4, RS-C 12
-radial lines agree with the architectural plans (handles 2DF .. 2EA are 12 lines; T-398 wrote 13); MS1-U shows its 12th
+radial lines agree with the architectural plans (handles 2DF .. 2EA are 12 lines, as T-415 MERGED 8c8372a4 counts them;
+T-398's '13' is superseded there); MS1-U shows its 12th
 (floor) edge on ST p.4 where the architectural plans stop at 11; MS2-U has 11 on both. MS1-L is the one disagreement:
 ST p.4 draws 12 straight lines over 3.30 m ending at the same inner winder corner as the architectural 485, i.e. two
 more straight steps at the foot and only three radial fronts, where the architectural plan draws 10 over 2.70 (wall
@@ -93,21 +94,29 @@ The 0.050 is the band, not tread. This touches B7-02 / B7-06 too (cross-trade no
 - A landing is never also a tread: a LANDING / FLOOR edge in the middle of a flight is refused in code; every landing /
   floor edge here is the top nosing of its flight.
 
-## 4. Who is right per flight against the engine reading (T-135 FLIGHTS_ONCE, the candidate's tread / step lines)
+## 4. Binding to the candidate V3.0.35 and who is right per flight (CANDIDATE_BINDING_T412.json)
 
-The candidate's stair lines come from the engine's tread polygons (FLIGHTS_ONCE, kept by V3.0.35). Against the drawn
-front edges:
+Candidate of record reproduced this run (research/agents_t400/v3035_run.py on the Drive copies; V3_0_35_BOQ_LINES.json
+sha256 b011bace.., 4730 lines, the same file T-418 bound): **no nosing line exists** (0 lines; B7-05 NOT_IN_CANDIDATE).
+Its stair lines come from the engine's tread polygons, whose own note reads "the n drawn tread lines bound n - 1 treads;
+if the top line is a nosing ... one more tread is not drawn". Each engine flight is bound to a drawn flight by the
+engine's cross-plan repeat record (overlap 1.0) and its kind / lines / run / layer:
 
-| Engine flight (candidate line) | Engine treads | Drawn (this table) | Verdict proposal |
-|---|---|---|---|
-| GF stair room F1 (FIN.MARBLE.TREAD L-151d92470a81dd1c450b 2.415 m2, FIN.STAIR.STEP_LM L-d4d764ae7bb07b474b6f 8.050 lm) | 7 | MS1-L 9 straight treads + the first winder (fronts DC .. 485, 2 of them above the cut on layer 2, C8 half-solid) | ENGINE_WRONG by 2 treads: it reads the solid lines below the cut only (7 x 1.150); the hidden C5 / 485 and the half C8 are treads (A-A counts 10 risers) |
-| GF stair room F2 (L-a4aeb32035d11684f1a2 1.035 m2, L-f20f8544a42807c0cfcf 3.450 lm) | 3 | D1 3 treads + floor edge 490 | AGREE on treads (3 x 1.150) |
-| 1F F2 (T-135: 11 treads, 3.795 m2 / 12.650 lm) | 11 | MS2-L 12 front edges AC0 .. A97 = 11 treads + the MS2-LD landing edge | AGREE (11 x 1.150 = 12.650 lm of treads) |
-| 1F F3 / 2F F2 (T-135: 10 treads, the east lane; 2F F2 SEEN_ABOVE) and 2F stair hall lines L-79beb9688604887c59c5 / L-07f00d5b0c4e1924aaf5 (3.450 m2 each), step L-1e88ac0d4ba0b4e8a950 / L-60fc97c4306696c74c38 (11.500 lm each) | 10 | east lanes MS1-U (1F) and MS2-U (2F): 11 drawn front edges each = 11 treads; the 12th riser's floor edge is not drawn | ENGINE_WRONG by 1 tread per east lane (hand count: 11 lines A92 .. ABE and 135B .. 1386; section A-A 12 risers): the engine counts the closed polygons BETWEEN drawn lines, so the last tread, bounded by the undrawn floor edge, is lost. One of the two 2F lines is the west lane (MS2-L seen from 2F, T-135 2F F1 HELD as stacked): the known T-129 double count, B7-02 owner row |
+| Drawn flight | Candidate TREAD line (state) / STEP_LM line | Engine treads | Drawn treads | Verdict proposal (B7-02 / B7-06 owner row; B7-05 binds here) |
+|---|---|---|---|---|
+| MS1-L | L-151d92470a81dd1c450b (PROVISIONAL 2.415) / L-d4d764ae7bb07b474b6f 8.050 | 7 | 9 straight + first winder | ENGINE_WRONG -2 straight treads: it reads the 8 hidden riser-face lines DE .. CD; C5 and 485 (hidden, above the cut) front two more treads (A-A 10 risers) |
+| D1 | L-a4aeb32035d11684f1a2 (PROVISIONAL 1.035) / L-f20f8544a42807c0cfcf | 3 | 3 | AGREE |
+| MS1-U | L-e1eb8b9a7cb92508ccc9 (PROVISIONAL 3.450) / L-0aa47300a16de572c967 11.500 | 10 | 11 | ENGINE_WRONG -1: 11 front edges A92 .. ABE; the 11th tread ends on the undrawn floor edge (A-A 12 risers, ST p.4 459) |
+| MS2-L | L-65806b4d02d476603bc5 (PROVISIONAL 3.795) / L-23651ecfef77992ec8d4 12.650 | 11 | 11 | AGREE |
+| MS2-L seen from 2F | L-79beb9688604887c59c5 (PROVISIONAL 3.450) / L-1e88ac0d4ba0b4e8a950 11.500 | 10 | 0 (no flight of 2F) | ENGINE_WRONG: the same flight valued twice (T-129, R-STAIR-CONT-1) |
+| MS2-U | L-07f00d5b0c4e1924aaf5 (PROVISIONAL 3.450) / L-60fc97c4306696c74c38 11.500 | 10 | 11 | ENGINE_WRONG -1 (11 lines 135B .. 1386) |
+| RS-C | L-fa534ec5f9dc14947899 (PROVISIONAL 4.094) / L-95b9555dd144951b071e 13.796; 1F exposure L-6cf11c2d30387d0942b9 | 12 | 12 (HELD, Q-50 A cond) | count AGREE; valued where the owner holds the curved part (B7-02 row) |
+| RS-S | GF L-89c84fdd4964dec8a323 (6) + L-0ec429f1783f1f15e700 (3, bound by elimination) PROVISIONAL; 1F exposure L-ea55ed317bc4de89aec1 (10) | 9 valued | 10 | ENGINE_WRONG -1 on the valued GF reading; the 1F reading (10) agrees |
+| RS-A | GF L-1dac5d9b574d7608d80d (PROVISIONAL 1.035, 3); 1F exposure L-5d338389185d72a6fb16 (4) | 3 valued | 4 | ENGINE_WRONG -1 on the valued GF reading; the 1F reading (4) agrees |
+| (none) | 1F flight 5 L-b4660de0ddd98ad0ffc2 (PROVISIONAL 1.495, RADIAL 4, width 1.247) | 4 | - | UNBOUND: matches no drawn flight on 1F (no radial line at RS-LD); B7-02 owner row |
+| E1 | L-314c3ac6d45431b687c5 (SOURCE_DERIVED 3.3594 = 4 x 0.30 x 2.80) | 4 | 4 | AGREE |
 
-The remaining candidate flights (GF round stair F1 12 radial and F2 .. F4; 1F F5 / F6, 4 treads each) bind by flight in
-the lane I proposal (section 7) from the candidate run of record; the drawn RS-A is 4 straight treads of 1.150 + the
-floor edge D22, the drawn RS-C 12 radial front edges (HELD).
+The risers (FIN.MARBLE.RISER) and flight lines of each element are in the binding file beside the tread lines.
 
 ## 5. Freelancer comparison (b), quantities only
 
@@ -150,7 +159,8 @@ binding where it exists), never valued twice:
   two fields: `in_step_basis_lm` (tread nosings: NOT priced where B7-06 FIN.STAIR.STEP_LM is priced, UP-STAIR-008) and
   `landing_floor_edge_lm` (7.400 lm, outside any step); specification HELD NOSING_FORM_NOT_PRINTED;
 - HELD lines blank with their cause and the beside figure: MS1-T (5 edges), MS1-U / MS2-U floor edges, MS2-TR, RS-C (12);
-- the tread count corrections for B7-02 / B7-06 (MS1-L +2, MS1-U +1, MS2-U +1) go to the B7-02 owner row, not into B7-05.
+- the tread count findings for B7-02 / B7-06 (section 4: MS1-L +2, MS1-U +1, MS2-U +1, RS-S +1 and RS-A +1 on the valued
+  GF readings, MS2-L valued twice, 1F flight 5 unbound) go to the B7-02 owner row, not into B7-05.
 
 ## 8. Rule, test, lesson
 
@@ -176,7 +186,7 @@ binding where it exists), never valued twice:
 ## 9. Self-gate and what is missing
 
 self-gate: a (research + tests only; no engine / rule / candidate file) c (non-Alsenan K412 hand fixture, adverse cases)
-d (reproducible: `python3 -I research/agents_t412/t412_alsenan.py --dxf <P7757.dxf> --write`; `--check` without private
-input) f (nothing wired, no item code created) h (handles, run positions and lengths only; no coordinates, no drawing
+d (reproducible: `python3 -I research/agents_t412/t412_alsenan.py --dxf <P7757.dxf> --st <ST7757 dxf.dxf>
+--candidate <run>/v3035/V3_0_35_BOQ_LINES.json --write`; `--check` without private input) f (nothing wired, no item code created) h (handles, run positions and lengths only; no coordinates, no drawing
 text, no client data) PASS.
 Missing: the nosing form (not printed); the winder count conflict; the two arrival edges in the head clash; MS2-TR; RS-C.
