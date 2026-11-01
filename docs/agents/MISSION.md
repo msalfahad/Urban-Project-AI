@@ -6,6 +6,32 @@ North star (owner's master study, 17 Oct 2026, `URBAN_PROJECT_AI_MASTER_95PLUS`)
 items** (concrete, rebar, waterproofing, openings, blockwork). Trades in scope now: concrete, rebar, blockwork, plaster,
 paint, floor area, wet vs dry areas, waterproofing, tiles, doors and windows.
 
+
+## Owner directive 2026-11-02: Goal B, priority order, blind test (binds every agent; read first)
+
+**Goal B:** the engine produces a complete, priced BOQ for ANY villa from its PDF and AutoCAD plans, without a
+freelancer doing a manual takeoff. Alsenan is the training sample, not the target. "Done" means:
+1. V3.x is within +-3 % of the freelancer on every trade for Alsenan, AND
+2. it passes a BLIND test on a new villa that no agent has seen.
+
+**Priority order (the Lead ranks every task in this order):**
+1. GENERALISE: turn per-project fixes into general rules that work on any villa.
+2. MATERIALS: convert net quantities into purchase quantities (blocks, glue, mortar cement and sand, lintels, plaster
+   cement and sand, tile boxes, adhesive bags, pallets).
+3. VERIFY: move HELD or PARTIAL lines to VERIFIED.
+4. RESEARCH: only when it unblocks 1-3.
+Every new task names the BOQ line(s) it moves toward VERIFIED and states "every villa" or explains why it cannot.
+Research-only merges with no line target are refused.
+
+**Blind-test protocol:**
+- Each project lives in its own Drive folder (PDF + AutoCAD + freelancer workbook).
+- After Alsenan passes, the owner gives a NEW villa folder. Agents may read ONLY its drawings.
+- The engine output is frozen (hash recorded on the board) BEFORE anyone opens that project's freelancer workbook.
+- It is then scored once. No tuning on the blind villa before scoring. Afterwards any fix is a general rule
+  (priority 1), never a per-project patch.
+
+**Time stamps:** take every time written to the board, run log or reports from `date -u`; never type it by hand.
+
 ## How accuracy is scored (never "95 % of categories pass")
 
 Per category and unit (never mix m2, m3, lm, t, nr):
