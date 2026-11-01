@@ -1,0 +1,315 @@
+{
+ "handles": {
+  "arch_1f": {
+   "arcs": [
+    "BA1",
+    "BA2"
+   ],
+   "dim_landing_rsa": "1257",
+   "dim_lane": "1265",
+   "level": "D16",
+   "rsa_face": [
+    "B6E",
+    "B6F",
+    "B70",
+    "B71",
+    "D24"
+   ],
+   "rsa_nosing": [
+    "B59",
+    "B5A",
+    "B5B",
+    "B5C",
+    "D22"
+   ],
+   "rss_face": [
+    "B4E",
+    "B55",
+    "B54",
+    "B53",
+    "B52",
+    "B51",
+    "B50",
+    "B4F",
+    "B56",
+    "B57",
+    "B58"
+   ],
+   "rss_nosing": [
+    "B43",
+    "B4A",
+    "B49",
+    "B48",
+    "B47",
+    "B46",
+    "B45",
+    "B44",
+    "B4B",
+    "B4C",
+    "B4D"
+   ],
+   "void_edge": "B76"
+  },
+  "arch_gf": {
+   "arcs": [
+    "23E",
+    "23F"
+   ],
+   "cut_block": "147",
+   "nosing7_far_half": "13D",
+   "rsa_overhead": [
+    "144",
+    "145",
+    "146",
+    "4B5"
+   ],
+   "rss_face_hid": [
+    "234",
+    "238",
+    "237",
+    "235",
+    "236",
+    "143",
+    "142"
+   ],
+   "rss_nosing_vis": [
+    "22F",
+    "233",
+    "232",
+    "230",
+    "231",
+    "13E",
+    "13C"
+   ],
+   "rss_overhead": [
+    "13B",
+    "13F",
+    "140",
+    "141"
+   ],
+   "rss_void_edge_vis": "22E"
+  },
+  "st_p4": {
+   "arcs": [
+    "2DE",
+    "2DD"
+   ],
+   "column": "374",
+   "east": "289",
+   "rsa_face": [
+    "2C8",
+    "2C9",
+    "2CA",
+    "2CB",
+    "315"
+   ],
+   "rsa_void": "2CF",
+   "rss_face": [
+    "2BA",
+    "2C1",
+    "2C0",
+    "2BF",
+    "2BE",
+    "2BD",
+    "2BC",
+    "2BB",
+    "2C2",
+    "2C3",
+    "2C4"
+   ],
+   "rss_void": "2D0",
+   "wall": "283"
+  }
+ },
+ "sources": {
+  "arch": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+  "st": "Drive 'Alsenan chalet project' / ST7757 dxf.dxf (ST p.4)"
+ },
+ "summary": {
+  "checks": {
+   "27 (ARCH_GF overhead)": {
+    "going_check": "PASS",
+    "going_m": 0.3,
+    "landing_level": 4.8333,
+    "landing_m": [
+     1.15,
+     1.5
+    ],
+    "printed_run_m": 2.4,
+    "riser_check": "PASS",
+    "riser_m": 0.166667,
+    "risers": 27,
+    "rsa_risers": 4,
+    "rsa_run_m": 0.9,
+    "rss_risers": 11,
+    "run_check": "PASS",
+    "run_m": 2.4
+   },
+   "28 (ARCH_1F + ST_P4)": {
+    "going_check": "PASS",
+    "going_m": 0.3,
+    "landing_level": 4.6964,
+    "landing_m": [
+     1.15,
+     1.2
+    ],
+    "printed_run_m": 2.4,
+    "riser_check": "PASS",
+    "riser_m": 0.160714,
+    "risers": 28,
+    "rsa_risers": 5,
+    "rsa_run_m": 1.2,
+    "rss_risers": 11,
+    "run_check": "PASS",
+    "run_m": 2.4
+   }
+  },
+  "delta_27_minus_28": {
+   "ST02-RS-A": -0.089417,
+   "ST02-RS-C steps (AT_LEAST)": 0.013224,
+   "ST02-RS-LD": 0.0576,
+   "ST02-RS-S": 0.016188,
+   "straight_total": -0.015629
+  },
+  "effects": {
+   "27": {
+    "b7": {
+     "RS-A nosing lm": 4.6,
+     "RS-A risers": 4,
+     "RS-A step lm": 3.45,
+     "RS-A tread m2": 1.035,
+     "RS-A treads": 3,
+     "RS-S tread m2": 3.45,
+     "RS-S treads": 10,
+     "ST-02 risers": 27
+    },
+    "m3": {
+     "ST02-RS-A": 0.287676,
+     "ST02-RS-C steps (AT_LEAST)": 0.370258,
+     "ST02-RS-LD": 0.274,
+     "ST02-RS-S": 0.95892
+    },
+    "m3_straight_total": 1.520596,
+    "plan_m2": {
+     "RS-A": 1.08,
+     "RS-LD": 1.7125,
+     "RS-S": 3.6
+    },
+    "riser_m": 0.166667
+   },
+   "28": {
+    "b7": {
+     "RS-A nosing lm": 5.75,
+     "RS-A risers": 5,
+     "RS-A step lm": 4.6,
+     "RS-A tread m2": 1.38,
+     "RS-A treads": 4,
+     "RS-S tread m2": 3.45,
+     "RS-S treads": 10,
+     "ST-02 risers": 28
+    },
+    "m3": {
+     "ST02-RS-A": 0.377093,
+     "ST02-RS-C steps (AT_LEAST)": 0.357034,
+     "ST02-RS-LD": 0.2164,
+     "ST02-RS-S": 0.942732
+    },
+    "m3_straight_total": 1.536225,
+    "plan_m2": {
+     "RS-A": 1.44,
+     "RS-LD": 1.3525,
+     "RS-S": 3.6
+    },
+    "riser_m": 0.160714
+   }
+  },
+  "engine_minus_28": {
+   "ST02-RS-A": 0.0,
+   "ST02-RS-LD": 0.0,
+   "ST02-RS-S": 0.0
+  },
+  "going_m": 0.3,
+  "projection_m": 0.05,
+  "rsa": {
+   "agreeing": [
+    "ST_P4"
+   ],
+   "classes": {
+    "ARCH_1F": {
+     "class": "GOVERNING",
+     "edges": 5,
+     "missing_edges": 0
+    },
+    "ARCH_GF": {
+     "class": "PARTIAL_PROJECTION",
+     "edges": 4,
+     "missing_edges": 1
+    },
+    "ST_P4": {
+     "class": "AGREES",
+     "edges": 5,
+     "missing_edges": 0
+    }
+   },
+   "f1_lane_lines": 10,
+   "gf_lane_lines": 4,
+   "gf_lines_on_first_edge": 0,
+   "gf_missing_edge": "first RS-A edge (index 0 of the governing 5)",
+   "governing": "ARCH_1F",
+   "risers": 5
+  },
+  "rss": {
+   "agreeing": [
+    "ST_P4"
+   ],
+   "classes": {
+    "ARCH_1F": {
+     "class": "GOVERNING",
+     "edges": 11,
+     "missing_edges": 0
+    },
+    "ARCH_GF": {
+     "class": "AGREES",
+     "edges": 11,
+     "missing_edges": 0
+    },
+    "ST_P4": {
+     "class": "AGREES",
+     "edges": 11,
+     "missing_edges": 0
+    }
+   },
+   "gf_overhead_family": "NOSING",
+   "gf_same_family_goings": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3
+   ],
+   "governing": "ARCH_1F",
+   "risers": 11,
+   "run_faces_m": 3.0,
+   "worker_mixed_goings": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.25,
+    0.3,
+    0.3,
+    0.3
+   ],
+   "worker_mixed_run_m": 2.95
+  }
+ },
+ "task": "T-438",
+ "units": "metres; counts, lengths, areas and m3 only (no positions)"
+}
