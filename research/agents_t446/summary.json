@@ -1,0 +1,240 @@
+{
+ "task": "T-446",
+ "rule": "R-T446-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.39",
+ "candidate_json_sha256_8": "8d1bbe5d",
+ "baseline": "T-435 JOIN_T435.csv on ARCH_TAKEOFF_V3.0.37 (733f2efb), table sha f9d5087c",
+ "t441_faces_sha256_8": "084fdf8f",
+ "t441_part_skirting": {
+  "GF-ST-HALL": {
+   "drawn_lm": 4.65,
+   "held_lm": [
+    1.9,
+    0.6,
+    0.2,
+    0.6,
+    0.1
+   ],
+   "status": "DRAWING-CONFIRMED + HELD stretches"
+  },
+  "GF-ST-LOBBY030": {
+   "drawn_lm": 1.4,
+   "held_lm": [
+    1.15
+   ],
+   "status": "DRAWING-CONFIRMED + HELD stretches"
+  },
+  "2F-ST-LOBBY": {
+   "drawn_lm": 3.35,
+   "held_lm": [],
+   "status": "DRAWING-CONFIRMED"
+  },
+  "2F-ST-ARRIVAL": {
+   "drawn_lm": 4.15,
+   "held_lm": [],
+   "status": "DRAWING-CONFIRMED"
+  }
+ },
+ "spaces": 76,
+ "spaces_by_class": {
+  "B3-01": 45,
+  "DOOR_THRESHOLD": 14,
+  "LIFT_THRESHOLD": 3,
+  "THRESHOLD_STRIP": 14
+ },
+ "status_counts": {
+  "CEILING": {
+   "OWNED": 22,
+   "PARTIAL": 6,
+   "REASON": 39,
+   "UNKNOWN_FLOOR_NOT_ESTABLISHED": 5,
+   "SILENT_OMISSION": 3,
+   "UNKNOWN_HEAD_NOT_ESTABLISHED": 1
+  },
+  "SKIRTING": {
+   "OWNED": 10,
+   "OWNED_NOT_APPLICABLE": 18,
+   "REASON": 39,
+   "UNKNOWN_FLOOR_NOT_ESTABLISHED": 5,
+   "SILENT_OMISSION": 3,
+   "UNKNOWN_HEAD_NOT_ESTABLISHED": 1
+  }
+ },
+ "census_total": {
+  "candidate_m2": 381.44905,
+  "candidate_held_lines": 1,
+  "census_m2": 381.44905,
+  "census_held_lines": 1,
+  "residual_m2": 0.0
+ },
+ "silent_omissions": [
+  {
+   "space_id": "GF-OP-003-NO-OPENING",
+   "layer": "CEILING",
+   "floor_m2": 0.6,
+   "omission": {
+    "unit": "m2",
+    "value": 0.6,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "candidate"
+  },
+  {
+   "space_id": "GF-RFD4E1D",
+   "layer": "CEILING",
+   "floor_m2": 5.645,
+   "omission": {
+    "unit": "m2",
+    "value": 5.645,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "T-431 QUEUED (T-427 MERGED 65ce8f6d: GF dining floor 4.885 + 0.760 = 5.645); not in V3.0.39"
+  },
+  {
+   "space_id": "GF-RFD4E1D",
+   "layer": "SKIRTING",
+   "floor_m2": 5.645,
+   "omission": {
+    "unit": "lm",
+    "value": 3.9,
+    "status": "DRAWING-CONFIRMED (T-427 Checker: wall 2.70 + column 2FCF faces 1.20; T-431 plans it on L-71e2e002)"
+   },
+   "source": "T-431 QUEUED (T-427 MERGED 65ce8f6d: GF dining floor 4.885 + 0.760 = 5.645); not in V3.0.39"
+  },
+  {
+   "space_id": "GF-SITE-0a31aaa10796d33a",
+   "layer": "CEILING",
+   "floor_m2": 1.1,
+   "omission": {
+    "unit": "m2",
+    "value": 1.1,
+    "status": "FLOOR-AREA (the ceiling's plan area before any eligible-surface deduction)"
+   },
+   "source": "candidate"
+  },
+  {
+   "space_id": "GF-STRIP-OP-020",
+   "layer": "SKIRTING",
+   "floor_m2": null,
+   "omission": {
+    "unit": "lm",
+    "value": 0.4,
+    "status": "HELD: the two jamb returns 2 x wall thickness (URBAN-SKIRTING-OPENING-METHOD doorless jambs, PROVISIONAL); no skirting line names them; T-441 / T-447 hold the OP-020 reveal 0.400 lm"
+   },
+   "source": "THRESHOLD_STRIP line L-9bcc79e76f84667b244a (BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-OP-027",
+   "layer": "SKIRTING",
+   "floor_m2": null,
+   "omission": {
+    "unit": "lm",
+    "value": 0.3,
+    "status": "HELD: the two jamb returns 2 x wall thickness (URBAN-SKIRTING-OPENING-METHOD doorless jambs, PROVISIONAL); no skirting line names them"
+   },
+   "source": "THRESHOLD_STRIP line L-868aee125705bb8d17f6 (BLOCKED_RFI)"
+  }
+ ],
+ "unknown": [
+  {
+   "space_id": "1F-STRIP-SITE-29faecd848edfdc3",
+   "layer": "CEILING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "1F-STRIP-SITE-29faecd848edfdc3",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "1F-STRIP-SITE-fd160ff889cc7481",
+   "layer": "CEILING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "1F-STRIP-SITE-fd160ff889cc7481",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-19643bcc262b322f",
+   "layer": "CEILING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-19643bcc262b322f",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-e3b5d3227c61bc6c",
+   "layer": "CEILING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-e3b5d3227c61bc6c",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-f829b5b7d673a747",
+   "layer": "CEILING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "GF-STRIP-SITE-f829b5b7d673a747",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_FLOOR_NOT_ESTABLISHED",
+   "cause": "unattributed strip: whether a floor exists is not established (floor_status NOT_ESTABLISHED, BLOCKED_RFI)"
+  },
+  {
+   "space_id": "~GF-THRESHOLD-D-GF-15:threshold strip:HELD",
+   "layer": "CEILING",
+   "status": "UNKNOWN_HEAD_NOT_ESTABLISHED",
+   "cause": "gate: clear width and host wall not established (T-325 UNRESOLVED; T-326 holds its jambs and head)"
+  },
+  {
+   "space_id": "~GF-THRESHOLD-D-GF-15:threshold strip:HELD",
+   "layer": "SKIRTING",
+   "status": "UNKNOWN_HEAD_NOT_ESTABLISHED",
+   "cause": "as the ceiling: host wall not established"
+  }
+ ],
+ "double_owned": [],
+ "overlap_line_ids": [],
+ "delta_counts": {
+  "NEW": 62,
+  "GONE": 0,
+  "SPLIT": 4,
+  "SPLIT_FROM": 8,
+  "OWNER_CHANGED": 2,
+  "FLOOR_M2_CHANGED": 4
+ },
+ "silent_before": {
+  "ceiling_spaces": 3,
+  "ceiling_m2": 7.345,
+  "ceiling_m2_held_spaces": 0,
+  "skirting_spaces": 3,
+  "skirting_lm_measured": 3.9,
+  "skirting_lm_unknown_spaces": 2
+ },
+ "silent_after": {
+  "ceiling_spaces": 3,
+  "ceiling_m2": 7.345,
+  "ceiling_m2_held_spaces": 0,
+  "skirting_spaces": 3,
+  "skirting_lm_measured": 4.6,
+  "skirting_lm_unknown_spaces": 0
+ },
+ "table_sha256": "71cb463f2021d897589013e79ebbada390ebc5ba09fda674afeb649ded30498b",
+ "delta_sha256": "50157b2e0bdec6cfaf32440243b28c82daeaf53f7af3908a7ac19bc72b4da2ed"
+}
