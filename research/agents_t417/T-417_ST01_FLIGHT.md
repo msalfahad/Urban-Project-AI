@@ -115,7 +115,20 @@ close to T-398's -2.310031, length -2.016 all traced, MS1-U profile 5.300, landi
 
 ## 6. V3.0.36 binding and proposals (acceptance e; no candidate line moves)
 
-The ST-01 concrete lines and their pieces on the V3.0.36 candidate (json `d462203f`) are listed in s.6a (own run).
+s.6a Line binding. The V3.0.36 chain (v304_run -> v3036_run) was started on the private copies this run but had only
+reached V3.0.1 after 45 min and was stopped before the run lock ran out: **V3.0.36 (`d462203f`) NOT reproduced this
+run.** The binding below is the V3.0.29 binding of record (research/agents_t387/BINDING_T387.csv, = the V3.0.21 file by
+the T-398 assertion); the T-416 / T-415 verdicts record no structural stair line moved since V3.0.29. Lane I confirms
+the six ids and values on `d462203f` before restating the roll-up.
+
+| Line id | Element | State | m3 | Pieces (T-258 r2) | This task |
+|---|---|---|---|---|---|
+| L-e37d81a8be8e0aa0010c | ST-01 MS1-LD + MS1-U | VALUED | 1.227952 | MS1-LD 0.230400 + MS1-U 0.997552 | reproduced; RISE -0.672, B3 OWNERSHIP -0.0384 |
+| L-67e4b0485135f84acc46 | ST-01 MS2-L | VALUED | 1.033445 | MS2-L | reproduced; RISE -0.677376, ONE_LENGTH +0.005376; column 691 HELD 0 .. 0.006684 inside |
+| L-bb0e57b1948175a3d5b8 | ST-01 MS2-U | VALUED | 1.001373 | MS2-U | reproduced; RISE -0.677376, ONE_LENGTH +0.005376 |
+| L-2416e65f053a14199cfc | ST-01 MS2-LD | VALUED | 0.469600 | MS2-LD-W 0.239200 + MS2-LD-E 0.230400 | reproduced; COUNT +0.2392, B3 OWNERSHIP -0.0384 |
+| L-7863355dfcb68a681d2d | ST-01 MS1-L / MS1-T / MS1-T-SLAB | HELD (blank) | - | C-ST-4 / C-ST-3 | untouched (column 36B plan 0.025 m2 named) |
+| L-659243ed9fc2831c3ae8 | ST-01 MS2-TR | HELD (blank) | - | C-ST-3 | untouched |
 - Lane I (Worker 3, after the Checker): no ST-01 value changes. The T-406 roll-up restates SD-STAIR: 'ST-01 flight
   length -2.016' -> TRACED (RISE_IN_LENGTH -2.026752 + ONE_LENGTH +0.010752, ENGINE_RIGHT) and 'landing area +0.1624'
   -> TRACED (OWNERSHIP B3 -0.076800 + COUNT +0.239200, ENGINE_RIGHT); SD-STAIR unexplained -5.827775 -> -3.974175
