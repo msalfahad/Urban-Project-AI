@@ -25,10 +25,29 @@ def test_reproduces_from_committed_sides():
 
 def test_totals_hand_checked():
     s = json.loads((D / "summary.json").read_text())["totals_lm"]
-    # hand: zigzag 2.650 + 3.900 + 3.594 + 5.316 + 1.600 + 2.050 + 3.125; sloped likewise; landings 1.15 + 0.65
-    assert s["form_held_zigzag_lm"] == pytest.approx(22.235, abs=2e-5)
-    assert s["form_held_sloped_lm"] == pytest.approx(16.181275, abs=2e-5)
-    assert s["confirmed_horizontal_lm"] == pytest.approx(1.80, abs=1e-9)
+    # hand r1: zigzag 2.650 + 3.900 + 3.594 + 5.316 + 1.600 + 2.050 + 3.125 = 22.235; sloped 16.181275;
+    # r2 (R-T410-4, column layer read): + MS1-L 2FBD and MS2-L 3005 returns 2 x 0.050 each (0.200 both forms)
+    # + RS-S column 2FD2 stretch: zigzag 0.800 + 3 x 4.5 / 28 + 0.050 = 1.332143, sloped 0.800 x hypot(3.0, 11 x 4.5 /
+    # 28) / 3.0 + 0.050 = 0.978573; landings 1.150 (MS1-LD) + 0.650 (336) + 0.550 + 0.050 (column 2FC6) = 2.400
+    assert s["form_held_zigzag_lm"] == pytest.approx(22.235005 + 0.200 + 1.332143, abs=2e-5)
+    assert s["form_held_sloped_lm"] == pytest.approx(16.181275 + 0.200 + 0.978573, abs=2e-5)
+    assert s["confirmed_horizontal_lm"] == pytest.approx(2.40, abs=1e-9)
+    assert s["unknown_plan_lm"] == pytest.approx(6.065532 - 0.800 - 0.550, abs=1e-6)
+
+
+def test_column_layer_read_on_every_side():
+    with open(D / "COLUMN_CENSUS_T410.csv", newline="", encoding="utf-8") as f:
+        cen = list(csv.DictReader(f))
+    sides = {(r["element"], r["side"]) for r in rows()}
+    assert sides <= {(c["element"], c["side"]) for c in cen} | {("RS-C", "inner (void)")}
+    proud = {c["column"]: c for c in cen if c["relation"] == "PROUD"}
+    assert set(proud) == {"2FBD", "3005", "2F78", "2FD2", "2FC6"}
+    assert all(c["st_plan"] for c in proud.values())
+    r = {x["sid"]: x for x in rows()}
+    assert r["RS-LD.S2"]["class"] == "WALL" and r["RS-LD.S2"]["qty_lm"] == "0.600000"
+    assert r["RS-S.S1"]["status"] == "HELD-FORM" and r["RS-S.S1"]["risers_in"] == "3"
+    assert r["RS-S.S0"]["class"] == "UNKNOWN" and r["RS-S.S0"]["risers_in"] == "1"
+    assert "no wall face drawn" not in r["RS-LD.S2"]["cause"]
 
 
 def test_no_side_both_guarded_and_skirted_and_held_blank():

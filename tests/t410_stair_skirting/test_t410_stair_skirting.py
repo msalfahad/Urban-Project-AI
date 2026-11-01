@@ -126,3 +126,86 @@ def test_gap_overlap_and_double_binding_refused():
 def test_stretch_outside_run_refused():
     with pytest.raises(K.SkirtingInputError, match="outside the run"):
         K.measure({"F1": F1}, [K.Stretch("F1.W", "F1", "W", K.WALL, 0.0, 2.50)])
+
+
+# ---------------------------------------------------------------- r2: rule R-T410-4 (a column face is a face)
+# Villa K410, second stair (hand calculation):
+#   F2 straight flight: 6 risers x 0.170, 5 goings x 0.300 -> run 1.500, rise 1.020; risers at s = 0, 0.3 .. 1.5.
+#      wall side: wall face 0 .. 0.60, a column 0.050 PROUD of the wall line over 0.60 .. 1.20, wall 1.20 .. 1.50.
+#      column stretch: plan 0.600, risers 0.6 / 0.9 = 2, returns 2 x 0.050 = 0.100 (both ends on the wall face)
+#        zigzag 0.600 + 2 x 0.170 + 0.100 = 1.040; sloped 0.600 x hypot(1.5, 1.02) / 1.5 + 0.100
+#        = 0.600 x 1.813946 / 1.5 + 0.100 = 0.725578 + 0.100 = 0.825578.
+#   L2 landing, one level, 1.200 long: wall 0 .. 0.700, a column 0.050 proud from 0.700 running PAST the landing edge
+#      to 1.300: column face 0.500 + 1 return 0.050 (at the wall end; the far end is beyond the landing) = 0.550;
+#      landing side 0.700 + 0.550 = 1.250 DRAWING-CONFIRMED in either form.
+#   F3 flight 4 risers x 0.170, 3 goings x 0.300 (run 0.900): band of unknown role 0 .. 0.300 ('no face'), column
+#      0.050 proud 0.300 .. 0.900: its west return meets the UNKNOWN stretch -> 0.050 HELD, not counted.
+
+F2 = K.Flight("F2", 6, 0.17, 5, 0.30)
+F3 = K.Flight("F3", 4, 0.17, 3, 0.30)
+
+
+def villa_cols(l2_s2=None, f2_returns=0.100, f2_face="column"):
+    st = [
+        K.Stretch("F2.Wa", "F2", "W", K.WALL, 0.0, 0.60, binds=("K-F2-W-a",)),
+        K.Stretch("F2.Wc", "F2", "W", K.WALL, 0.60, 1.20, face=f2_face, returns_lm=f2_returns, binds=("K-F2-W-c",)),
+        K.Stretch("F2.Wb", "F2", "W", K.WALL, 1.20, 1.50, binds=("K-F2-W-b",)),
+        K.Stretch("L2.S1", "L2", "S", K.WALL, 0.0, 0.70, binds=("K-L2-S-a",)),
+        l2_s2 or K.Stretch("L2.S2", "L2", "S", K.WALL, 0.70, 1.20, face="column", returns_lm=0.050,
+                           binds=("K-L2-S-b",)),
+        K.Stretch("F3.S0", "F3", "S", K.UNKNOWN, 0.0, 0.30, no_face=True, cause="band of unknown role, no face",
+                  binds=("K-F3-S-a",)),
+        K.Stretch("F3.S1", "F3", "S", K.WALL, 0.30, 0.90, face="column", binds=("K-F3-S-b",)),
+    ]
+    faces = [K.Face("F2", "W", "column", 0.60, 1.20, 0.05, "KC1"), K.Face("L2", "S", "column", 0.70, 1.30, 0.05, "KC2"),
+             K.Face("F3", "S", "column", 0.30, 0.90, 0.05, "KC3")]
+    return {"F2": F2, "F3": F3}, st, faces
+
+
+def test_column_face_proud_of_the_wall_returns_counted_once():
+    flights, st, faces = villa_cols()
+    r = by_id(K.measure(flights, st))
+    c = r["F2.Wc"]
+    assert c["face"] == "column" and c["risers_in"] == 2 and c["returns_lm"] == pytest.approx(0.100)
+    assert c["zigzag_lm"] == pytest.approx(1.040, abs=1e-6) and c["sloped_lm"] == pytest.approx(0.825578, abs=1e-6)
+    assert c["qty_lm"] is None and c["status"] == K.FORM_HELD
+    assert r["L2.S2"]["qty_lm"] == pytest.approx(0.550) and r["L2.S2"]["status"] == K.CONFIRMED
+    assert r["L2.S1"]["qty_lm"] + r["L2.S2"]["qty_lm"] == pytest.approx(1.250)
+    chk = {f["ref"]: f for f in K.check_faces(st, faces)}
+    assert chk["KC1"]["returns_confirmed_lm"] == pytest.approx(0.100) and chk["KC1"]["carrier"] == "F2.Wc"
+    assert chk["KC2"]["returns_confirmed_lm"] == pytest.approx(0.050)       # far end beyond the landing: no return
+    assert chk["KC3"]["returns_confirmed_lm"] == 0.0 and chk["KC3"]["returns_held_lm"] == pytest.approx(0.050)
+    # the whole flight side still closes: zigzag = run + rise + returns
+    tot = sum(r[s]["zigzag_lm"] for s in ("F2.Wa", "F2.Wc", "F2.Wb"))
+    assert tot == pytest.approx(F2.run + F2.rise + 0.100, abs=1e-6)
+
+
+def test_column_face_read_as_no_face_refused():
+    bad = K.Stretch("L2.S2", "L2", "S", K.UNKNOWN, 0.70, 1.20, no_face=True,
+                    cause="the wall face stops here: no wall face drawn", binds=("K-L2-S-b",))
+    flights, st, faces = villa_cols(l2_s2=bad)
+    K.measure(flights, st)                                  # the table alone cannot see the column layer ...
+    with pytest.raises(K.SkirtingInputError, match="a column face is a face"):
+        K.check_faces(st, faces)                            # ... the face check refuses the 'no face' cause
+
+
+def test_proud_column_in_a_wall_face_stretch_refused():
+    flights, st, faces = villa_cols(f2_face="wall", f2_returns=0.0)
+    with pytest.raises(K.SkirtingInputError, match="face 'column'"):
+        K.check_faces(st, faces)
+
+
+def test_returns_missing_or_double_counted_refused():
+    for wrong in (0.0, 0.200):
+        flights, st, faces = villa_cols(f2_returns=wrong)
+        with pytest.raises(K.SkirtingInputError, match="returns"):
+            K.check_faces(st, faces)
+
+
+def test_no_face_flag_only_on_unknown_and_returns_only_on_wall():
+    with pytest.raises(K.SkirtingInputError, match="UNKNOWN"):
+        K.Stretch("X", "F2", "W", K.WALL, 0.0, 0.6, no_face=True)
+    with pytest.raises(K.SkirtingInputError, match="returns"):
+        K.Stretch("X", "F2", "W", K.HELD, 0.0, 0.6, returns_lm=0.05, cause="window")
+    with pytest.raises(K.SkirtingInputError, match="metres"):
+        K.Face("F2", "W", "column", 0.6, 1.2, 50.0, "mm")

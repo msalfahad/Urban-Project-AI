@@ -7,6 +7,11 @@ run positions (metres along each flight, no coordinates) and writes ALSENAN_SIDE
 summary.json beside this file. Check (no private input):
     python3 -I research/agents_t410/t410_alsenan.py --check
 recomputes the table from the committed ALSENAN_SIDES_T410.json and prints REPRODUCED when it matches the CSV.
+r2 (Checker gate e on r1): every side is also read on the COLUMN layer S-COL.BON (rule R-T410-4 in
+stair_skirting_sides.py): column_census() scans every closed S-COL.BON outline beside every side line (by the side's
+own handles), classes it PROUD / FLUSH / CROSSES / BEHIND, writes COLUMN_CENSUS_T410.csv (run positions and
+projections only) and the faces into ALSENAN_SIDES_T410.json, so --check re-runs check_faces without private input.
+The proud columns were cross-read on the structural plan (ST7757 dxf.dxf, T-108 translations): same outline, same size.
 Riser counts / sizes are the merged T-184 inventory (Q-46 A) and the ST-02 / ST-03 / D1 drawn lines; railing run ids
 are T-164 / T-393 (merged). No drawing content, client name or freelancer row text is written.
 """
@@ -28,8 +33,15 @@ SIDES_JSON = HERE / "ALSENAN_SIDES_T410.json"
 TABLE_CSV = HERE / "SIDE_TABLE_T410.csv"
 SUMMARY = HERE / "summary.json"
 STAIR_INPUT = HERE.parent / "agents_t184" / "ALSENAN_STAIR_INPUT.json"
-COLS = ["sid", "element", "side", "class", "plan_lm", "risers_in", "zigzag_lm", "sloped_lm", "level_rise_m", "qty_lm",
-        "status", "form", "railing_run", "cause", "evidence", "binds"]
+COLUMN_CSV = HERE / "COLUMN_CENSUS_T410.csv"
+COLS = ["sid", "element", "side", "class", "face", "plan_lm", "risers_in", "returns_lm", "zigzag_lm", "sloped_lm",
+        "level_rise_m", "qty_lm", "status", "form", "railing_run", "cause", "evidence", "binds"]
+CCOLS = ["element", "side", "plan", "column", "relation", "s0", "s1", "proud_m", "carrier", "returns_confirmed_lm",
+         "returns_held_lm", "st_plan"]
+# proud columns cross-read on ST7757 dxf.dxf (sha 9f9d1179) through the T-108 translations (GF 202.33 / 841.64 m,
+# 1F 208.46 / 841.64 m): the ST outline handle, same size, within 3 mm
+ST_CROSS = {"2FBD": "ST 36B 0.250 x 0.500 (GF)", "3005": "ST 691 0.250 x 0.500 (1F)", "2F78": "stacked on 3005 (2F)",
+            "2FD2": "ST 380 0.800 x 0.250 (GF)", "2FC6": "ST 374 0.600 x 0.250 (GF)"}
 
 
 # ------------------------------------------------------------------ DXF reading (private input, build mode only)
@@ -65,6 +77,17 @@ class Dxf:
         a, b = self.line(h, layer)
         assert abs(a[1] - b[1]) < 1, h
         return min(a[0], b[0]), max(a[0], b[0])
+
+    def box(self, h, layer="S-COL.BON"):  # a closed outline's extent
+        e = self.db[h]
+        assert e.dxftype() == "LWPOLYLINE" and e.closed and e.dxf.layer == layer, (h, e.dxftype())
+        xs, ys = zip(*[(p[0], p[1]) for p in e.get_points()])
+        return min(xs), min(ys), max(xs), max(ys)
+
+    def outlines(self, layer):
+        for e in self.db.values():
+            if e.dxftype() == "LWPOLYLINE" and e.closed and e.dxf.get("layer") == layer:
+                yield e.dxf.handle
 
     def arc(self, h):
         e = self.db[h]
@@ -105,8 +128,16 @@ def build(dxf_path):
     assert abs(xw - d.x("354", "W")) < 1 and abs(hi - wlo) < 1 and lo <= y0 and whi >= y_last
     s_split = (hi - y0) * MM
     run = (y_last - y0) * MM
-    add(sid="MS1-L.W1", element="MS1-L", side="west (shaft wall)", cls=K.WALL, s0=0.0, s1=s_split,
+    cx0, cy0, cx1, cy1 = d.box("2FBD")     # GF column in the west face, 0.050 proud (R-T410-4)
+    assert abs(cx1 - xw - 50) < 1 and y0 < cy0 < cy1 < hi
+    c0, c1 = (cy0 - y0) * MM, (cy1 - y0) * MM
+    add(sid="MS1-L.W1", element="MS1-L", side="west (shaft wall)", cls=K.WALL, s0=0.0, s1=c0,
         evidence="GF wall face 298 (layer 1) beside riser lines DC .. ; 1F plan same face AF1", binds=("ST01-MS1-L-W-a",))
+    add(sid="MS1-L.W1C", element="MS1-L", side="west (shaft wall)", cls=K.WALL, s0=c0, s1=c1, face="column",
+        returns_lm=0.100, evidence="GF column 2FBD (S-COL.BON) 0.050 proud of 298, both ends on the wall face: 2 "
+        "returns x 0.050; ST plan 36B", binds=("ST01-MS1-L-W-col",))
+    add(sid="MS1-L.W1B", element="MS1-L", side="west (shaft wall)", cls=K.WALL, s0=c1, s1=s_split,
+        evidence="GF wall face 298 (layer 1)", binds=("ST01-MS1-L-W-a2",))
     add(sid="MS1-L.W2", element="MS1-L", side="west (shaft wall)", cls=K.HELD, s0=s_split, s1=run,
         cause="GF window 354-356 (layer W) in the west face over this stretch; its sill / head against the flight "
               "(treads +2.00 .. +2.67) not printed", evidence="GF plan 354 / 353 / 352", binds=("ST01-MS1-L-W-b",))
@@ -147,8 +178,18 @@ def build(dxf_path):
     wlo2, _ = d.yspan("12D1", "W")
     assert abs(hi - wlo) < 1 and lo <= y0 and abs(hi2 - hi) < 1 and abs(wlo2 - wlo) < 1 and whi >= y_last
     s_split = (hi - y0) * MM
-    add(sid="MS2-L.W1", element="MS2-L", side="west (shaft wall)", cls=K.WALL, s0=0.0, s1=s_split,
+    cx0, cy0, cx1, cy1 = d.box("3005")     # 1F column in the west face, 0.050 proud; 2F 2F78 stacked on it
+    bx0, by0, bx1, by1 = d.box("2F78")
+    assert abs(cx1 - d.x("AF1", "1") - 50) < 1 and abs(by0 - cy0) < 1 and abs(by1 - cy1) < 1 and y0 < cy0 < cy1 < hi
+    assert abs(bx1 - d.x("12B7", "1") - 50) < 1
+    c0, c1 = (cy0 - y0) * MM, (cy1 - y0) * MM
+    add(sid="MS2-L.W1", element="MS2-L", side="west (shaft wall)", cls=K.WALL, s0=0.0, s1=c0,
         evidence="1F face AF1 (layer 1); 2F face 12B7", binds=("ST01-MS2-L-W-a",))
+    add(sid="MS2-L.W1C", element="MS2-L", side="west (shaft wall)", cls=K.WALL, s0=c0, s1=c1, face="column",
+        returns_lm=0.100, evidence="1F column 3005 / 2F column 2F78 (S-COL.BON) 0.050 proud of AF1 / 12B7, both ends "
+        "on the wall face: 2 returns x 0.050; ST plan 691", binds=("ST01-MS2-L-W-col",))
+    add(sid="MS2-L.W1B", element="MS2-L", side="west (shaft wall)", cls=K.WALL, s0=c1, s1=s_split,
+        evidence="1F face AF1 (layer 1); 2F face 12B7", binds=("ST01-MS2-L-W-a2",))
     add(sid="MS2-L.W2", element="MS2-L", side="west (shaft wall)", cls=K.HELD, s0=s_split, s1=run,
         cause="1F window C5A-C5C and 2F window 12CF-12D1 in the west face over this stretch; flight here +7.18 .. "
               "+7.52 against a 1F window whose sill / head are not printed (stacked shaft windows)",
@@ -202,10 +243,19 @@ def build(dxf_path):
     w_lo, w_hi = d.xspan("336", "1")
     assert abs(d.y("336", "1") - d.y("A7", "5")) < 1 and abs(d.yspan("B43", "5")[0] - d.y("336", "1")) < 1
     s_w = (w_lo + off - x0_1f) * MM
-    add(sid="RS-S.S1", element="RS-S", side="south (outer)", cls=K.UNKNOWN, s0=0.0, s1=s_w,
-        cause="no wall face on this stretch: only the 50 mm outer band A7 / A9 (layer 5), the continuation of the "
-              "curved flight's outer band RL-09 whose role (guard or string) is not established",
-        evidence="GF A7 / A9", binds=("ST02-RS-S-S-a",))
+    x0g = d.x("22F", "5")
+    cx0, cy0, cx1, cy1 = d.box("2FD2")     # GF column on the outer side, 0.050 proud of the flight edge A7
+    assert abs(cx1 - w_lo) < 1 and abs(cy1 - d.y("336", "1") - 50) < 1 and cx0 > x0g
+    c0 = (cx0 - x0g) * MM
+    add(sid="RS-S.S0", element="RS-S", side="south (outer)", cls=K.UNKNOWN, s0=0.0, s1=c0, no_face=True,
+        cause="no wall or column face on this stretch (wall layer 1 and column layer S-COL.BON both read): only the "
+              "50 mm outer band A7 / A9 (layer 5), the continuation of the curved flight's outer band RL-09 whose "
+              "role (guard or string) is not established; the 0.050 west return of column 2FD2 waits on it",
+        evidence="GF A7 / A9; S-COL.BON: nothing before 2FD2", binds=("ST02-RS-S-S-a",))
+    add(sid="RS-S.S1", element="RS-S", side="south (outer)", cls=K.WALL, s0=c0, s1=s_w, face="column",
+        returns_lm=0.050, evidence="GF column 2FD2 (S-COL.BON, 0.800 x 0.250) 0.050 proud of the flight edge A7, "
+        "ends on 336: 1 return x 0.050 confirmed (the west return HELD with RS-S.S0); ST plan 380",
+        binds=("ST02-RS-S-S-col",))
     add(sid="RS-S.S2", element="RS-S", side="south (outer)", cls=K.WALL, s0=s_w, s1=run,
         evidence="GF wall face 336 (layer 1) from its west end to beyond the last riser", binds=("ST02-RS-S-S-b",))
     add(sid="RS-S.N", element="RS-S", side="north (void)", cls=K.OPEN, s0=0.0, s1=run, railing_run="RL-05",
@@ -215,11 +265,15 @@ def build(dxf_path):
     land_end = d.x("AF5", "5")
     wall_end_1f = w_hi + off
     assert x1_1f < wall_end_1f < land_end
-    add(sid="RS-LD.S1", element="RS-LD", side="south", cls=K.WALL, plan=(wall_end_1f - x1_1f) * MM,
+    kx0, ky0, kx1, ky1 = d.box("2FC6")     # GF column where 336 stops, 0.050 proud, runs past the landing edge
+    assert abs(kx0 - w_hi) < 1 and abs(ky1 - d.y("336", "1") - 50) < 1 and kx1 > land_end - off
+    add(sid="RS-LD.S1", element="RS-LD", side="south", cls=K.WALL, s0=0.0, s1=(wall_end_1f - x1_1f) * MM,
         evidence="GF wall face 336 to its east end", binds=("ST02-RS-LD-S-a",))
-    add(sid="RS-LD.S2", element="RS-LD", side="south", cls=K.UNKNOWN, plan=(land_end - wall_end_1f) * MM,
-        cause="the stair-side face 336 stops here (the far face 337 continues): no wall face drawn on the landing side",
-        evidence="GF 336 / 337 ends", binds=("ST02-RS-LD-S-b",))
+    add(sid="RS-LD.S2", element="RS-LD", side="south", cls=K.WALL, s0=(wall_end_1f - x1_1f) * MM,
+        s1=(land_end - x1_1f) * MM, face="column", returns_lm=0.050,
+        evidence="GF column 2FC6 (S-COL.BON, 0.600 x 0.250) where 336 stops, 0.050 proud: its face to the landing "
+        "edge AF5 + 1 return x 0.050 at the 336 end (the east end runs past the edge); ST plan 374",
+        binds=("ST02-RS-LD-S-b",))
     add(sid="RS-LD.E", element="RS-LD", side="east", cls=K.OPEN, plan=(d.y("B59", "5") - d.yspan("B43", "5")[0]) * MM, railing_run="RL-06",
         evidence="1F floor-edge band AF5 / AF6 (D-23)")
     ra = (d.y("D22", "5") - d.y("B59", "5")) * MM
@@ -246,11 +300,16 @@ def build(dxf_path):
     y_n = d.y("26E", "1")                # north wall face
     add(sid="MS1-LD.E", element="MS1-LD", side="east (lift wall)", cls=K.WALL, plan=(y_n - y_ld) * MM,
         evidence="GF face 21B and 1F face B16 over the whole landing side (+3.50)", binds=("ST01-MS1-LD-E",))
-    n_end, n_start = d.xspan("2AB", "1")[1], d.xspan("2AD", "1")[0]
-    add(sid="MS1-LD.N", element="MS1-LD", side="north", cls=K.HELD, plan=(d.x("21B", "1") - d.x("4A4", "5")) * MM,
-        cause=f"the north face is broken over {round((n_start - n_end) * MM, 3)} m (GF opening 3FD / 3FE; 1F window "
-              "CE2-CE5 above it); its head against the landing level +3.50 not printed",
-        evidence="GF 2AB / 2AD / 3FD / 3FE, 1F CE2", binds=("ST01-MS1-LD-N",))
+    xl0, xl1 = d.x("4A4", "5"), d.x("21B", "1")
+    w_a = (d.xspan("2AB", "1")[1] - xl0) * MM
+    o_lo, o_hi = d.xspan("3FD", "5")
+    w_b = (xl1 - d.xspan("26F", "1")[0]) * MM
+    assert abs(d.xspan("26F", "1")[1] - xl1) < 1 and abs((o_hi - o_lo) * MM - 0.900) < 1e-6
+    add(sid="MS1-LD.N", element="MS1-LD", side="north", cls=K.HELD, plan=(xl1 - xl0) * MM,
+        cause=f"the north side holds {w_a:.3f} wall (2AB) + {(o_hi - o_lo) * MM:.3f} opening (3FD / 3FE; a D120 door "
+              f"block 3FF sits in it, inserted on layer S-COL.BON, contents on layer D: not a column) + {w_b:.3f} wall "
+              "(26F / 2AC); 1F window CE2-CE5 above it; the opening's head / sill against the landing level +3.50 not "
+              "printed", evidence="GF 2AB / 3FD / 3FE / 3FF / 26F, 1F CE2", binds=("ST01-MS1-LD-N",))
     add(sid="MS1-T.W", element="MS1-T", side="west", cls=K.HELD, plan=(y_n - d.y("485", "2")) * MM, level_rise=0.833333,
         cause="winder corner: 5 risers on section A-A, 4 wedges on the plans (T-184 MS1-T); winders never generated "
               "(owner S-9)", evidence="GF 49E / 4A0 / 4A2", binds=("ST01-MS1-T-W",))
@@ -269,9 +328,101 @@ def build(dxf_path):
         binds=("ST01-MS2-LD-E",))
 
     flights = {k: v for k, v in fl.items()}
-    return {"schema": "T410_SIDES_V1", "units": "m", "dxf_sha8": "ab54dd55",
+    census, faces = column_census(d)
+    return {"schema": "T410_SIDES_V2", "units": "m", "dxf_sha8": "ab54dd55",
             "flights": flights, "stretches": [{k: (list(v) if isinstance(v, tuple) else v) for k, v in s.items()}
-                                              for s in S]}
+                                              for s in S],
+            "faces": faces, "column_census": census}
+
+
+def _probes(d):
+    """Every side line by its own handles: (element, side, plan, axis, line coord, origin, direction, stair-side sign,
+    length). axis 'x' = a line at constant x; positions s = (coordinate - origin) x direction, in metres."""
+    off = d.x("B43", "5") - d.x("22F", "5")
+    ld_e = d.x("AF5", "5") - off
+    return [
+        ("MS1-L", "west (shaft wall)", "GF", "x", d.x("298", "1"), d.y("DC", "5"), 1, 1, 2.70),
+        ("MS1-L", "east (well)", "GF", "x", d.x("157", "5"), d.y("DC", "5"), 1, -1, 2.70),
+        ("MS1-U", "east (lift wall)", "GF", "x", d.x("21B", "1"), d.y("A92", "5"), -1, -1, 3.30),
+        ("MS1-U", "east (lift wall)", "1F", "x", d.x("B16", "1"), d.y("A92", "5"), -1, -1, 3.30),
+        ("MS1-U", "west (well)", "1F", "x", d.x("A8F", "5"), d.y("A92", "5"), -1, 1, 3.30),
+        ("MS2-L", "west (shaft wall)", "1F", "x", d.x("AF1", "1"), d.y("AC0", "5"), 1, 1, 3.30),
+        ("MS2-L", "west (shaft wall)", "2F", "x", d.x("12B7", "1"), d.y("AC0", "5"), 1, 1, 3.30),
+        ("MS2-L", "east (well)", "1F", "x", d.xspan("AC0", "5")[1], d.y("AC0", "5"), 1, -1, 3.30),
+        ("MS2-U", "east (lift wall)", "2F", "x", d.x("129A", "1"), d.y("135B", "5"), -1, -1, 3.30),
+        ("MS2-U", "east (lift wall)", "1F", "x", d.x("B16", "1"), d.y("135B", "5"), -1, -1, 3.30),
+        ("MS2-U", "west (well)", "2F", "x", d.xspan("135B", "5")[0], d.y("135B", "5"), -1, 1, 3.30),
+        ("D1", "east (lift wall)", "GF", "x", d.x("21B", "1"), d.y("481", "5"), -1, -1, 0.90),
+        ("D1", "west (well band)", "GF", "x", d.x("4A4", "5"), d.y("481", "5"), -1, 1, 0.90),
+        ("E1", "south (wall)", "GF", "y", d.y("15A", "1"), d.x("30A", "5"), -1, 1, 1.20),
+        ("E1", "north (edge)", "GF", "y", d.y("368", "5"), d.x("30A", "5"), -1, -1, 1.20),
+        ("RS-S", "south (outer)", "GF", "y", d.y("336", "1"), d.x("22F", "5"), 1, 1, 3.00),
+        ("RS-S", "north (void)", "GF", "y", d.yspan("22F", "5")[1], d.x("22F", "5"), 1, -1, 3.00),
+        ("RS-LD", "south", "GF", "y", d.y("336", "1"), d.x("22F", "5") + 3000, 1, 1, 1.20),
+        ("RS-LD", "east", "GF", "x", ld_e, d.y("336", "1"), 1, -1, 1.15),
+        ("RS-A", "east", "GF", "x", ld_e, d.y("336", "1") + 1150, 1, -1, 1.20),
+        ("RS-A", "west (void)", "GF", "x", d.xspan("B76", "5")[1] - off, d.y("336", "1") + 1150, 1, 1, 1.20),
+        ("MS1-LD", "east (lift wall)", "GF", "x", d.x("21B", "1"), d.y("481", "5"), 1, -1, 1.15),
+        ("MS1-LD", "north", "GF", "y", d.y("26E", "1"), d.x("4A4", "5"), 1, -1, 1.15),
+        ("MS1-T", "west", "GF", "x", d.x("298", "1"), d.y("485", "2"), 1, 1, 1.20),
+        ("MS1-T", "north", "GF", "y", d.y("26E", "1"), d.x("298", "1"), 1, -1, 1.15),
+        ("MS2-LD", "west", "1F", "x", d.x("AF0", "1"), d.y("A97", "5"), 1, 1, 1.20),
+        ("MS2-LD", "north", "1F", "y", d.y("ADE", "1"), d.x("AF0", "1"), 1, -1, 2.50),
+        ("MS2-LD", "east (lift wall)", "1F", "x", d.x("B16", "1"), d.y("A97", "5"), 1, -1, 1.20),
+    ]
+
+
+def column_census(d):
+    """R-T410-4: every closed S-COL.BON outline within 0.30 m of a side line and overlapping its extent."""
+    TOL = 300
+    boxes = {h: d.box(h) for h in d.outlines("S-COL.BON")}
+    rows, faces = [], []
+    for el, side, plan, ax, c, org, dr, n, length in _probes(d):
+        hits = 0
+        for h, (x0, y0, x1, y1) in sorted(boxes.items()):
+            p0, p1, a0, a1 = (x0, x1, y0, y1) if ax == "x" else (y0, y1, x0, x1)
+            t = sorted(((p0 - c) * n * MM, (p1 - c) * n * MM))
+            s = sorted(((a0 - org) * dr * MM, (a1 - org) * dr * MM))
+            if t[1] < -TOL * MM or t[0] > TOL * MM or min(s[1], length) - max(s[0], 0.0) <= 1e-6:
+                continue
+            hits += 1
+            if t[0] < 1e-3 and 1e-3 < t[1] <= 0.15:
+                rel, proud = "PROUD", round(t[1], 6)
+            elif abs(t[1]) <= 5e-3:
+                rel, proud = "FLUSH", 0.0
+            elif t[0] < 0 < t[1]:
+                rel, proud = "CROSSES (body across the side line at its end; its faces belong to the other side)", None
+            elif t[0] > 0:
+                rel, proud = "IN THE STAIR (freestanding)", None
+            else:
+                rel, proud = "BEHIND (not a face)", None
+            row = {"element": el, "side": side, "plan": plan, "column": h, "relation": rel.split(" (")[0],
+                   "s0": round(s[0], 6), "s1": round(s[1], 6), "proud_m": proud, "st_plan": ST_CROSS.get(h, "")}
+            rows.append(row)
+            if rel in ("PROUD", "FLUSH"):
+                # the same column read on two plans (stacked storeys) is one physical face on this side
+                same = next((f for f in faces if (f["element"], f["side"], f["s0"], f["s1"], f["proud"])
+                             == (el, side, row["s0"], row["s1"], proud)), None)
+                if same:
+                    same["ref"] += "+" + h
+                else:
+                    faces.append({"element": el, "side": side, "kind": "column", "s0": row["s0"], "s1": row["s1"],
+                                  "proud": proud, "ref": h})
+        if not hits:
+            rows.append({"element": el, "side": side, "plan": plan, "column": "", "relation": "NONE", "s0": None,
+                         "s1": None, "proud_m": None, "st_plan": ""})
+    (cx, cy), r_out = d.arc("23D")
+    a0, a1 = d.db["23D"].dxf.start_angle, d.db["23D"].dxf.end_angle
+    for h, (x0, y0, x1, y1) in sorted(boxes.items()):
+        ang = [math.degrees(math.atan2(py - cy, px - cx)) % 360 for px in (x0, x1) for py in (y0, y1)]
+        dmin = math.hypot(max(x0 - cx, 0, cx - x1), max(y0 - cy, 0, cy - y1))
+        if dmin < r_out + TOL and all(not (a0 <= a <= a1) for a in ang) is False:
+            rows.append({"element": "RS-C", "side": "outer", "plan": "GF", "column": h, "relation": "ON ARC",
+                         "s0": None, "s1": None, "proud_m": None, "st_plan": ""})
+    if not any(r["element"] == "RS-C" for r in rows):
+        rows.append({"element": "RS-C", "side": "outer", "plan": "GF", "column": "", "relation": "NONE", "s0": None,
+                     "s1": None, "proud_m": None, "st_plan": ""})
+    return rows, faces
 
 
 def _ang(d, h, cx, cy):
@@ -292,7 +443,9 @@ def table(sides):
             if isinstance(kw.get(k), float):
                 kw[k] = round(kw[k], 9)
         sts.append(K.Stretch(**kw))
-    return K.measure(flights, sts)
+    rows = K.measure(flights, sts)
+    faces = [K.Face(**f) for f in sides.get("faces", [])]
+    return rows, K.check_faces(sts, faces)
 
 
 def _fmt(v):
@@ -309,6 +462,23 @@ def write_csv(rows, path):
         w.writeheader()
         for r in rows:
             w.writerow({k: _fmt(r[k]) for k in COLS})
+
+
+def census_csv(census, fchk):
+    import io
+    by = {}
+    for f in fchk:
+        for ref in f["ref"].split("+"):
+            by[(f["element"], f["side"], ref)] = f
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=CCOLS, lineterminator="\n")
+    w.writeheader()
+    for r in census:
+        fc = by.get((r["element"], r["side"], r["column"]), {})
+        w.writerow({**{k: _fmt(r.get(k)) for k in CCOLS}, "carrier": fc.get("carrier", ""),
+                    "returns_confirmed_lm": _fmt(fc.get("returns_confirmed_lm")),
+                    "returns_held_lm": _fmt(fc.get("returns_held_lm"))})
+    return buf.getvalue()
 
 
 def summary(rows):
@@ -332,20 +502,22 @@ def summary(rows):
 def main(argv):
     if "--check" in argv:
         sides = json.loads(SIDES_JSON.read_text())
-        rows = table(sides)
+        rows, fchk = table(sides)
         with open(TABLE_CSV, newline="", encoding="utf-8") as f:
             committed = list(csv.DictReader(f))
         same = committed == [{k: _fmt(r[k]) for k in COLS} for r in rows]
+        same = same and census_csv(sides["column_census"], fchk) == COLUMN_CSV.read_text(encoding="utf-8")
         same = same and json.loads(SUMMARY.read_text()) == json.loads(json.dumps(summary(rows)))
         print("REPRODUCED" if same else "DIFFERS")
         return 0 if same else 1
     dxf = argv[argv.index("--dxf") + 1]
     sides = build(dxf)
-    rows = table(sides)
+    rows, fchk = table(sides)
     print(json.dumps(summary(rows), indent=1))
     if "--write" in argv:
         SIDES_JSON.write_text(json.dumps(sides, indent=1, ensure_ascii=False) + "\n")
         write_csv(rows, TABLE_CSV)
+        COLUMN_CSV.write_text(census_csv(sides["column_census"], fchk), encoding="utf-8")
         SUMMARY.write_text(json.dumps(summary(rows), indent=1) + "\n")
     return 0
 

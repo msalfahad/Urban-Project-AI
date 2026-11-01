@@ -1,13 +1,13 @@
 {
  "task": "T-410",
- "stretches": 33,
+ "stretches": 38,
  "totals_lm": {
-  "confirmed_horizontal_lm": 1.8,
-  "form_held_zigzag_lm": 22.235005,
-  "form_held_sloped_lm": 16.181274,
+  "confirmed_horizontal_lm": 2.4,
+  "form_held_zigzag_lm": 23.767148,
+  "form_held_sloped_lm": 17.359845,
   "held_plan_lm": 11.4,
   "held_risers": 11,
-  "unknown_plan_lm": 6.065532,
+  "unknown_plan_lm": 4.715532,
   "open_plan_lm": 23.781054
  },
  "per_stair": {
@@ -20,16 +20,16 @@
    "held_risers": 0
   },
   "ST-02": {
-   "wall_side_risers_form_held": 7,
+   "wall_side_risers_form_held": 10,
    "held_risers": 0
   }
  },
  "line_quantity_lm": {
-  "confirmed_horizontal": 1.8,
+  "confirmed_horizontal": 2.4,
   "sloping_wall_sides": "HELD (form, ORR-007)",
   "form_conditional_beside_blank": {
-   "zigzag": 22.235005,
-   "sloped": 16.181274
+   "zigzag": 23.767148,
+   "sloped": 17.359845
   }
  }
 }
