@@ -1,10 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-01 16:15 UTC (Lead). Previous version: 2026-11-01 12:20 UTC. The released numbers did not change
+Last update: 2026-11-01 20:17 UTC (Lead). Previous version: 2026-11-01 16:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.38 (not released): V3.0.37 plus the stair-room floors and the lift
-door threshold marble.
+released: 0. The candidate under review is now V3.0.39 (not released): V3.0.38 plus the stair tread correction.
+
+Since 1 Nov 16:15 (newest first; seven checked and merged, all on the first pass, one of them an integration into the
+candidate; nothing waiting for the checker):
+- Stair-room skirting lengths: CHECKED AND MERGED. The stair hall, back lobby and second-floor lobby now have a drawn
+  skirting length (9.40 m.l in all; the checker measured the second-floor lobby himself: 3.35 m.l, same). Three short
+  faces (a divider band and an opening reveal) stay held until their construction is read. The second-floor lift door
+  must be deducted whole as a lift opening, not skirted like a passage (to be fixed in the candidate).
+- Ground slab under the curved stair: CHECKED AND MERGED. An 8.37 m2 slab panel under the foot of the curved stair
+  (0.84 m3) is missing from the engine: the stair is drawn above it but no void or stair base is drawn, so it is slab.
+  The freelancer is right there. It goes into the candidate next after the dining strip.
+- Held concrete split by what holds it: CHECKED AND MERGED. The 116.43 m3 held is split exactly into 25 items: 111.22 m3
+  waits on the designer, 1.65 m3 on the lift supplier, and 3.56 m3 is the engine's own (a slab panel around the lift
+  shaft that the drawings already settle; now being bound). Blinding alone is 47.06 m3 (40 % of the held); the 12.73 m3
+  of footing blinding already checked is in no candidate line yet (now being traced).
+- Stair tread correction INTO THE CANDIDATE (V3.0.39): CHECKED AND MERGED on the first pass. One flight drawn on two
+  floor plans had been counted twice: stair tread marble 27.32 -> 20.01 m2 (-26.8 %) and step edges 91.03 -> 67.85 m.l,
+  with the winder turn and round-stair curve held (not drawn in detail). The freelancer's 63 pieces against 56 drawn
+  stays a rule difference.
+- Wet pantry walls inside the ground-floor skirting: CHECKED AND MERGED. Already deducted (over-count 0.00 m.l).
+- Curved stair straight part: CHECKED AND MERGED. No drawing conflict after all: the ground-floor plan shows part of the
+  stair from above, mixed with the cut line; 28 risers govern. One tread and its edge (0.35 m2 / 1.15 m.l) are missing
+  from the candidate (planned with the nosing lines). The designer question drafted for it is withdrawn.
+- Ceiling and skirting for every floored space: CHECKED AND MERGED. The dining strip has no ceiling line at all (5.65 m2,
+  to be created with the strip); two small pantry strips have no ceiling or skirting reason (being read now).
+- Next into the candidate, in this order: the ground-beam section correction, the dining floor strip with its ceiling
+  line, the slab panel under the curved stair, then the lift tie beam / block below the house beams, skirting release,
+  the stair-room skirting split, nosing.
 
 Since 1 Nov 12:20 (newest first; four checked and merged, all on the first pass, one of them an integration into the
 candidate; one piece waiting for the checker):
@@ -1582,17 +1608,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-01 12:20)
-- Checker: each piece as it is handed in: the stair-room floors with lift marble (into the candidate) first, then the
-  structural concrete roll-up, the winder turn, the curved stair length and the ceiling / skirting check.
-- Structural (worker 1): the concrete roll-up against the freelancer with today's explained parts, then the curved
-  stair's remaining -2.48 m3 (does he measure it as a developed profile too?), then the held concrete split by the
-  item that holds it.
-- Architecture and finishes (worker 2): the ground-floor winder turn the three drawings disagree on (10+5, 10+4, 12+3)
-  and the freelancer's 63 vs 56 stair pieces; then a ceiling and skirting owner for every floored space.
-- Integration (worker 3): stair-room floors + lift marble, the stair tread double-count fix, the ground-beam section
-  fix, the dining floor strip, then lift tie beam / block below the house beams, skirting release, nosing,
-  waterproofing, outside plaster, earthworks, foundation waterproofing and the masonry accessories, one at a time.
+(Lead 2026-11-01 20:17)
+- Checker: each piece as it is handed in: the ground-beam section correction (into the candidate) first; structural
+  pieces never wait more than two of its runs.
+- Structural (worker 1): pool walls, beam lengths and boundary (1.03 m3 unexplained); the slab panel around the lift
+  shaft (3.56 m3 held by an engine reading); footing blinding (the checked 12.73 m3 that no line carries yet).
+- Architecture and finishes (worker 2): the two pantry strips (ceiling and skirting reason); the ceiling / skirting check
+  re-run on today's candidate; the held stair-room faces (divider, reveal) and three small findings.
+- Integration (worker 3): ground-beam section fix, dining floor strip + ceiling, slab under the curved stair, then lift
+  tie beam / block below the house beams, skirting release, stair-room skirting split, nosing, waterproofing, one at a
+  time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

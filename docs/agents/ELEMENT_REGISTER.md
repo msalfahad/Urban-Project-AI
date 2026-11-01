@@ -46,6 +46,25 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- GROUND SLAB UNDER A STAIR ON GRADE (Lead 2026-11-01 20:17; T-436 MERGED c943cabb, Checker own read): the GS panel
+  OWN-011 (cell SITE-4df8fcd99d130701, 8.372 m2) under / beside the foot of the GF curved flight ST-02 RS-C is SLAB ON
+  GRADE: the flight is drawn hidden over it, no void / pit / stair base is drawn, the foundation plan shows only footing
+  1B1A under it. OWNER TRADE CONCRETE GS (one new GS line, lane I T-442); STAIRS CONCRETE lists the flight above it with
+  no slab quantity. Designer item F2 withdrawn (the drawings settle it). Every villa: a stair on grade drops a slab panel
+  only where a void, pit or stair base is drawn.
+- LIFT PIT vs GROUND SLAB (Lead 2026-11-01 20:17; T-433 I-07, T-401 MERGED, T-391 MERGED): the lift-shaft floor inside
+  the four shaft corner columns belongs to the LIFT PIT ledger (raft / pit floor, T-401) and never to the GS cell
+  L-41cfb82e; the GS cell is bound to its own panels (OWN-007 / 009 / 010 / 047) net of the shaft and strips. PROVISIONAL
+  until T-444 is Checker-verified; no line moves before lane I integrates it.
+- LIFT DOOR GAP IN SKIRTING (Lead 2026-11-01 20:17; T-441 MERGED ece154fe, Checker confirmed OP-002 is a lift: car
+  symbol + sills): a lift door opening is deducted WHOLE from the skirting run with no jamb skirting; the 0.400 lm of
+  passage-jamb skirting the engine roles would give it belongs to nobody (the surround is B6-06, HELD). V3.0.38 /
+  V3.0.39 still count OP-002 as ARCH.PASSAGE L-c91732d6: lane I T-443 deducts it as a lift opening. Every villa.
+- CURVED STAIR ST-02 STRAIGHT PART: CONFLICT CLOSED (Lead 2026-11-01 20:17; T-438 MERGED 63f77c1d, Checker read by arc
+  pairs on arch 1F + GF frames and ST p.4): 28 risers govern (RS-S 11 at 0.300, RS-A 5, landing 1.150); the GF frame's 27
+  / 2.950 / '0.250 tread' is an overhead-projection and line-family mix, not a second design. ST p.4 and arch 1F look like
+  one drafted layout (not fully independent; recorded). D-68 draft WITHDRAWN. Lane I: the RS-A 4th tread / nosing in
+  T-424. The freelancer's 16.4 m length stays UNRESOLVED (T-432).
 - MAIN STAIR GF WINDER TURN (Lead 2026-11-01 16:15; T-434 MERGED a6b325b3): the turn between the GF landing front
   (2C6 / face 49D) and the straight 1F-bound flight is ONE element of 5 risers (section A-A governs by Q-46 A; the plans'
   4-riser fans and the ST p.4 12+4 reading are checks that failed, recorded with their reason). OWNER TRADE STAIRS
