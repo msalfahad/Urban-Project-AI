@@ -1,0 +1,30 @@
+element,side,plan,column,relation,s0,s1,proud_m,carrier,returns_confirmed_lm,returns_held_lm,st_plan
+MS1-L,west (shaft wall),GF,2FBD,PROUD,0.400000,0.900000,0.050000,MS1-L.W1C,0.100000,0.000000,ST 36B 0.250 x 0.500 (GF)
+MS1-L,east (well),GF,,NONE,,,,,,,
+MS1-U,east (lift wall),GF,2F93,FLUSH,1.850000,2.350000,0.000000,,0.000000,0.000000,
+MS1-U,east (lift wall),1F,2FF6,FLUSH,1.850000,2.350000,0.000000,,0.000000,0.000000,
+MS1-U,west (well),1F,,NONE,,,,,,,
+MS2-L,west (shaft wall),1F,3005,PROUD,1.000000,1.500000,0.050000,MS2-L.W1C,0.100000,0.000000,ST 691 0.250 x 0.500 (1F)
+MS2-L,west (shaft wall),2F,2F78,PROUD,1.000000,1.500000,0.050000,MS2-L.W1C,0.100000,0.000000,stacked on 3005 (2F)
+MS2-L,east (well),1F,,NONE,,,,,,,
+MS2-U,east (lift wall),2F,2F75,FLUSH,1.850000,2.350000,0.000000,,0.000000,0.000000,
+MS2-U,east (lift wall),1F,2FF6,FLUSH,1.850000,2.350000,0.000000,,0.000000,0.000000,
+MS2-U,west (well),2F,,NONE,,,,,,,
+D1,east (lift wall),GF,,NONE,,,,,,,
+D1,west (well band),GF,,NONE,,,,,,,
+E1,south (wall),GF,2FAE,FLUSH,0.500000,1.600000,0.000000,,0.000000,0.000000,
+E1,north (edge),GF,,NONE,,,,,,,
+RS-S,south (outer),GF,2FD2,PROUD,0.200000,1.000000,0.050000,RS-S.S1,0.050000,0.050000,ST 380 0.800 x 0.250 (GF)
+RS-S,north (void),GF,,NONE,,,,,,,
+RS-LD,south,GF,2FC6,PROUD,0.650000,1.250000,0.050000,RS-LD.S2,0.050000,0.000000,ST 374 0.600 x 0.250 (GF)
+RS-LD,east,GF,2FC6,CROSSES,-0.200000,0.050000,,,,,ST 374 0.600 x 0.250 (GF)
+RS-A,east,GF,,NONE,,,,,,,
+RS-A,west (void),GF,,NONE,,,,,,,
+MS1-LD,east (lift wall),GF,2F81,FLUSH,0.850000,1.350000,0.000000,,0.000000,0.000000,
+MS1-LD,north,GF,,NONE,,,,,,,
+MS1-T,west,GF,2F7E,FLUSH,0.900000,1.400000,0.000000,,0.000000,0.000000,
+MS1-T,north,GF,,NONE,,,,,,,
+MS2-LD,west,1F,2FE1,FLUSH,0.900000,1.400000,0.000000,,0.000000,0.000000,
+MS2-LD,north,1F,,NONE,,,,,,,
+MS2-LD,east (lift wall),1F,2FE4,FLUSH,0.900000,1.400000,0.000000,,0.000000,0.000000,
+RS-C,outer,GF,,NONE,,,,,,,

@@ -1,0 +1,188 @@
+{
+ "guards": {
+  "band_axis_total_m": 91.94,
+  "house_axis_mm_inside_fence_band": 0.0,
+  "other_s_boun_entities_in_the_two_plan_frames": [],
+  "plot_line_house_face_mm_inside_fence_band": 0.0,
+  "plot_line_house_faces": [
+   "136",
+   "F8",
+   "FC",
+   "FD"
+  ]
+ },
+ "house_axis_sum_m": 44.37,
+ "runs": {
+  "ANNEX_S": {
+   "band_axis_m": 10.701,
+   "column_pieces_m": [
+    [
+     "207",
+     0.301,
+     0.12
+    ],
+    [
+     "20B",
+     0.4,
+     0.12
+    ]
+   ],
+   "footing_crossings_m": [
+    [
+     "F15:1B2A",
+     1.8
+    ],
+    [
+     "F:1669",
+     0.801
+    ]
+   ],
+   "house_gb_faces_on_plot_line_m": [
+    [
+     "136",
+     0.101
+    ],
+    [
+     "F8",
+     10.43
+    ]
+   ]
+  },
+  "ANNEX_W_STREET": {
+   "band_axis_m": 6.599,
+   "column_pieces_m": [
+    [
+     "204",
+     0.4,
+     0.12
+    ],
+    [
+     "207",
+     0.199,
+     0.12
+    ]
+   ],
+   "footing_crossings_m": [
+    [
+     "F:1668",
+     0.7
+    ],
+    [
+     "F:1669",
+     0.699
+    ]
+   ],
+   "house_gb_faces_on_plot_line_m": [
+    [
+     "136",
+     6.599
+    ]
+   ]
+  },
+  "MAIN_E_SEA": {
+   "band_axis_m": 7.799,
+   "column_pieces_m": [
+    [
+     "1FC",
+     0.5,
+     0.15
+    ],
+    [
+     "200",
+     0.399,
+     0.15
+    ],
+    [
+     "809",
+     0.3,
+     0.09
+    ]
+   ],
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     1.299
+    ],
+    [
+     "F8:1B24",
+     1.95
+    ],
+    [
+     "FN:1100",
+     1.0
+    ]
+   ],
+   "house_gb_faces_on_plot_line_m": [
+    [
+     "FD",
+     7.799
+    ]
+   ]
+  },
+  "MAIN_S": {
+   "band_axis_m": 19.271,
+   "column_pieces_m": [
+    [
+     "200",
+     0.201,
+     0.15
+    ],
+    [
+     "218",
+     0.5,
+     0.15
+    ],
+    [
+     "249",
+     1.1,
+     0.33
+    ],
+    [
+     "251",
+     0.5,
+     0.15
+    ],
+    [
+     "255",
+     0.7,
+     0.21
+    ]
+   ],
+   "footing_crossings_m": [
+    [
+     "F10/F:1B1B",
+     3.151
+    ],
+    [
+     "F11:1B07",
+     3.5
+    ],
+    [
+     "F14:1B1A",
+     3.8
+    ],
+    [
+     "F:166A",
+     0.65
+    ]
+   ],
+   "house_gb_faces_on_plot_line_m": [
+    [
+     "FC",
+     18.87
+    ],
+    [
+     "FD",
+     0.101
+    ]
+   ]
+  }
+ },
+ "schema": "URBAN_T407_INPUT_V1",
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "frames": "GROUND BEAMS PLAN (layer 1, S-COL.BON, S-BOUN 7FE / 7FC / 810) -> FOUNDATION PLAN (S-BOUN 1658 / 1659)",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "translation_check_east_mm": 0.0
+ }
+}

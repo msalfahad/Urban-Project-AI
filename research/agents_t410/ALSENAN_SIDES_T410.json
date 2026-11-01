@@ -1,0 +1,940 @@
+{
+ "schema": "T410_SIDES_V2",
+ "units": "m",
+ "dxf_sha8": "ab54dd55",
+ "flights": {
+  "MS1-L": {
+   "risers": 10,
+   "riser": 0.166667,
+   "goings": 9,
+   "going": 0.3,
+   "src": "T-184 ALSENAN_STAIR_INPUT (ARCH_GF 10 riser lines, 2.70 m to the turn; SEC_AA; ST_P4 T 16)"
+  },
+  "MS1-U": {
+   "risers": 12,
+   "riser": 0.166667,
+   "goings": 11,
+   "going": 0.3,
+   "src": "T-184 ALSENAN_STAIR_INPUT (SEC_AA 12 risers (Q-46 A); plans 11 lines; ST_P4 T 16)"
+  },
+  "MS2-L": {
+   "risers": 12,
+   "riser": 0.168,
+   "goings": 11,
+   "going": 0.3,
+   "src": "T-184 ALSENAN_STAIR_INPUT (ARCH_1F 12 riser lines, DXF dimension 3300; SEC_AA; ST_P5 T 16)"
+  },
+  "MS2-U": {
+   "risers": 12,
+   "riser": 0.168,
+   "goings": 11,
+   "going": 0.3,
+   "src": "T-184 ALSENAN_STAIR_INPUT (SEC_AA 12 risers; plans 11 lines; ST_P5 T 16)"
+  },
+  "D1": {
+   "risers": 4,
+   "riser": 0.175,
+   "goings": 3,
+   "going": 0.3,
+   "src": "GF plan 4 solid riser lines 481 / 484 / 48F / 490 (0.90 m); levels +0.30 -> +1.00 (T-184 ST-01b)"
+  },
+  "E1": {
+   "risers": 5,
+   "riser": 0.17,
+   "goings": 4,
+   "going": 0.3,
+   "src": "GF plan 5 riser lines 30A / 30B / 36A / 36C / 36E (1.20 m); +0.15 -> +1.00 (T-184 ST-03)"
+  },
+  "RS-S": {
+   "risers": 11,
+   "riser": 0.16071428571428573,
+   "goings": 10,
+   "going": 0.3,
+   "src": "1F plan 11 riser lines B43 .. B4D (3.00 m); 28 risers over 4.50 m (T-184 ST-02)"
+  }
+ },
+ "stretches": [
+  {
+   "sid": "MS1-L.W1",
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 0.40000000000034924,
+   "evidence": "GF wall face 298 (layer 1) beside riser lines DC .. ; 1F plan same face AF1",
+   "binds": [
+    "ST01-MS1-L-W-a"
+   ]
+  },
+  {
+   "sid": "MS1-L.W1C",
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 0.40000000000034924,
+   "s1": 0.9000000000004656,
+   "face": "column",
+   "returns_lm": 0.1,
+   "evidence": "GF column 2FBD (S-COL.BON) 0.050 proud of 298, both ends on the wall face: 2 returns x 0.050; ST plan 36B",
+   "binds": [
+    "ST01-MS1-L-W-col"
+   ]
+  },
+  {
+   "sid": "MS1-L.W1B",
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 0.9000000000004656,
+   "s1": 1.6500000000010477,
+   "evidence": "GF wall face 298 (layer 1)",
+   "binds": [
+    "ST01-MS1-L-W-a2"
+   ]
+  },
+  {
+   "sid": "MS1-L.W2",
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "cls": "HELD",
+   "s0": 1.6500000000010477,
+   "s1": 2.7000000000003492,
+   "cause": "GF window 354-356 (layer W) in the west face over this stretch; its sill / head against the flight (treads +2.00 .. +2.67) not printed",
+   "evidence": "GF plan 354 / 353 / 352",
+   "binds": [
+    "ST01-MS1-L-W-b"
+   ]
+  },
+  {
+   "sid": "MS1-L.E",
+   "element": "MS1-L",
+   "side": "east (well)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 2.7000000000003492,
+   "railing_run": "RL-07 MS1-L",
+   "evidence": "well band 157 / 151 (layer 5)",
+   "binds": []
+  },
+  {
+   "sid": "MS1-U.E1",
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 0.9499999999997671,
+   "evidence": "GF face 21B (layer 1); 1F face B16 continuous",
+   "binds": [
+    "ST01-MS1-U-E-a"
+   ]
+  },
+  {
+   "sid": "MS1-U.E2",
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "cls": "HELD",
+   "s0": 0.9499999999997671,
+   "s1": 1.8500000000002328,
+   "cause": "GF plan draws an opening ABOVE the cut in this face (hidden 33C / 33D, 0.90 m); its height against the flight (+4.0 .. +4.5) not printed",
+   "evidence": "GF plan 33C / 33D (layer 2)",
+   "binds": [
+    "ST01-MS1-U-E-b"
+   ]
+  },
+  {
+   "sid": "MS1-U.E3",
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "cls": "WALL",
+   "s0": 1.8500000000002328,
+   "s1": 3.3,
+   "evidence": "GF face 21C (layer 1); 1F face B16",
+   "binds": [
+    "ST01-MS1-U-E-c"
+   ]
+  },
+  {
+   "sid": "MS1-U.W",
+   "element": "MS1-U",
+   "side": "west (well)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 3.3,
+   "railing_run": "RL-07 MS1-U",
+   "evidence": "well band A8F / A90 (1F)",
+   "binds": []
+  },
+  {
+   "sid": "MS2-L.W1",
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 1.0000000000001164,
+   "evidence": "1F face AF1 (layer 1); 2F face 12B7",
+   "binds": [
+    "ST01-MS2-L-W-a"
+   ]
+  },
+  {
+   "sid": "MS2-L.W1C",
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 1.0000000000001164,
+   "s1": 1.500000000000233,
+   "face": "column",
+   "returns_lm": 0.1,
+   "evidence": "1F column 3005 / 2F column 2F78 (S-COL.BON) 0.050 proud of AF1 / 12B7, both ends on the wall face: 2 returns x 0.050; ST plan 691",
+   "binds": [
+    "ST01-MS2-L-W-col"
+   ]
+  },
+  {
+   "sid": "MS2-L.W1B",
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "cls": "WALL",
+   "s0": 1.500000000000233,
+   "s1": 2.250000000000815,
+   "evidence": "1F face AF1 (layer 1); 2F face 12B7",
+   "binds": [
+    "ST01-MS2-L-W-a2"
+   ]
+  },
+  {
+   "sid": "MS2-L.W2",
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "cls": "HELD",
+   "s0": 2.250000000000815,
+   "s1": 3.2999999999998835,
+   "cause": "1F window C5A-C5C and 2F window 12CF-12D1 in the west face over this stretch; flight here +7.18 .. +7.52 against a 1F window whose sill / head are not printed (stacked shaft windows)",
+   "evidence": "1F C5A / C5B / C5C, 2F 12CF / 12D0 / 12D1 (layer W)",
+   "binds": [
+    "ST01-MS2-L-W-b"
+   ]
+  },
+  {
+   "sid": "MS2-L.E",
+   "element": "MS2-L",
+   "side": "east (well)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 3.2999999999998835,
+   "railing_run": "RL-07 MS2-L",
+   "evidence": "well band A8D / A8E",
+   "binds": []
+  },
+  {
+   "sid": "MS2-U.E",
+   "element": "MS2-U",
+   "side": "east (lift wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 3.3,
+   "evidence": "1F face B16 and 2F face 129A (layer 1), continuous, no opening",
+   "binds": [
+    "ST01-MS2-U-E"
+   ]
+  },
+  {
+   "sid": "MS2-U.W",
+   "element": "MS2-U",
+   "side": "west (well)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 3.3,
+   "railing_run": "RL-07 MS2-U",
+   "evidence": "well band 1358 / 1359 (2F)",
+   "binds": []
+  },
+  {
+   "sid": "D1.E",
+   "element": "D1",
+   "side": "east (lift wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 0.9,
+   "evidence": "GF face 21B (layer 1) over the whole run",
+   "binds": [
+    "ST01b-D1-E"
+   ]
+  },
+  {
+   "sid": "D1.W",
+   "element": "D1",
+   "side": "west (well band)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 0.9,
+   "railing_run": "RL-08",
+   "evidence": "well band 47F / 4A4 (layer 5)",
+   "binds": []
+  },
+  {
+   "sid": "E1.S",
+   "element": "E1",
+   "side": "south (wall)",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 1.2,
+   "evidence": "GF wall face 15A (layer 1) along the whole run; riser lines end on it",
+   "binds": [
+    "ST03-E1-S"
+   ]
+  },
+  {
+   "sid": "E1.N",
+   "element": "E1",
+   "side": "north (edge)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 1.2,
+   "railing_run": "RL-11 (held)",
+   "evidence": "edge 368 (layer 5); no guard drawn (T-164 RL-11)",
+   "binds": []
+  },
+  {
+   "sid": "RS-S.S0",
+   "element": "RS-S",
+   "side": "south (outer)",
+   "cls": "UNKNOWN",
+   "s0": 0.0,
+   "s1": 0.20000000000029106,
+   "no_face": true,
+   "cause": "no wall or column face on this stretch (wall layer 1 and column layer S-COL.BON both read): only the 50 mm outer band A7 / A9 (layer 5), the continuation of the curved flight's outer band RL-09 whose role (guard or string) is not established; the 0.050 west return of column 2FD2 waits on it",
+   "evidence": "GF A7 / A9; S-COL.BON: nothing before 2FD2",
+   "binds": [
+    "ST02-RS-S-S-a"
+   ]
+  },
+  {
+   "sid": "RS-S.S1",
+   "element": "RS-S",
+   "side": "south (outer)",
+   "cls": "WALL",
+   "s0": 0.20000000000029106,
+   "s1": 1.000000000000291,
+   "face": "column",
+   "returns_lm": 0.05,
+   "evidence": "GF column 2FD2 (S-COL.BON, 0.800 x 0.250) 0.050 proud of the flight edge A7, ends on 336: 1 return x 0.050 confirmed (the west return HELD with RS-S.S0); ST plan 380",
+   "binds": [
+    "ST02-RS-S-S-col"
+   ]
+  },
+  {
+   "sid": "RS-S.S2",
+   "element": "RS-S",
+   "side": "south (outer)",
+   "cls": "WALL",
+   "s0": 1.000000000000291,
+   "s1": 3.0000000000001164,
+   "evidence": "GF wall face 336 (layer 1) from its west end to beyond the last riser",
+   "binds": [
+    "ST02-RS-S-S-b"
+   ]
+  },
+  {
+   "sid": "RS-S.N",
+   "element": "RS-S",
+   "side": "north (void)",
+   "cls": "OPEN",
+   "s0": 0.0,
+   "s1": 3.0000000000001164,
+   "railing_run": "RL-05",
+   "evidence": "inner band 22C / 22E (GF), B76 (1F)",
+   "binds": []
+  },
+  {
+   "sid": "RS-LD.S1",
+   "element": "RS-LD",
+   "side": "south",
+   "cls": "WALL",
+   "s0": 0.0,
+   "s1": 0.6499999999997672,
+   "evidence": "GF wall face 336 to its east end",
+   "binds": [
+    "ST02-RS-LD-S-a"
+   ]
+  },
+  {
+   "sid": "RS-LD.S2",
+   "element": "RS-LD",
+   "side": "south",
+   "cls": "WALL",
+   "s0": 0.6499999999997672,
+   "s1": 1.1999999999998836,
+   "face": "column",
+   "returns_lm": 0.05,
+   "evidence": "GF column 2FC6 (S-COL.BON, 0.600 x 0.250) where 336 stops, 0.050 proud: its face to the landing edge AF5 + 1 return x 0.050 at the 336 end (the east end runs past the edge); ST plan 374",
+   "binds": [
+    "ST02-RS-LD-S-b"
+   ]
+  },
+  {
+   "sid": "RS-LD.E",
+   "element": "RS-LD",
+   "side": "east",
+   "cls": "OPEN",
+   "plan": 1.1499999999998836,
+   "railing_run": "RL-06",
+   "evidence": "1F floor-edge band AF5 / AF6 (D-23)",
+   "binds": []
+  },
+  {
+   "sid": "RS-A.E",
+   "element": "RS-A",
+   "side": "east",
+   "cls": "OPEN",
+   "plan": 1.2000000000001165,
+   "railing_run": "RL-06",
+   "evidence": "AF5 / AF6 beside the short flight",
+   "binds": []
+  },
+  {
+   "sid": "RS-A.W",
+   "element": "RS-A",
+   "side": "west (void)",
+   "cls": "OPEN",
+   "plan": 1.2000000000001165,
+   "railing_run": "RL-05",
+   "evidence": "void band B75 / B77",
+   "binds": []
+  },
+  {
+   "sid": "RS-C.OUT",
+   "element": "RS-C",
+   "side": "outer",
+   "cls": "UNKNOWN",
+   "curved_radius": 2.730510985902472,
+   "curved_angle_deg": 94.75183636962967,
+   "cause": "outer 50 mm band 23D / 23E (RL-09): guard or string not established, no wall face drawn; the curved flight itself is UNRESOLVED (T-398, RFI-S27)",
+   "evidence": "GF arcs 23D / 23E, radial tread lines 240 .. 256",
+   "binds": [
+    "ST02-RS-C-OUT"
+   ]
+  },
+  {
+   "sid": "RS-C.IN",
+   "element": "RS-C",
+   "side": "inner (void)",
+   "cls": "OPEN",
+   "curved_radius": 1.530510985902472,
+   "curved_angle_deg": 94.75183636962967,
+   "railing_run": "RL-05",
+   "evidence": "inner arcs 23F / 239",
+   "binds": []
+  },
+  {
+   "sid": "MS1-LD.E",
+   "element": "MS1-LD",
+   "side": "east (lift wall)",
+   "cls": "WALL",
+   "plan": 1.1499999999996509,
+   "evidence": "GF face 21B and 1F face B16 over the whole landing side (+3.50)",
+   "binds": [
+    "ST01-MS1-LD-E"
+   ]
+  },
+  {
+   "sid": "MS1-LD.N",
+   "element": "MS1-LD",
+   "side": "north",
+   "cls": "HELD",
+   "plan": 1.1500000000000001,
+   "cause": "the north side holds 0.103 wall (2AB) + 0.900 opening (3FD / 3FE; a D120 door block 3FF sits in it, inserted on layer S-COL.BON, contents on layer D: not a column) + 0.147 wall (26F / 2AC); 1F window CE2-CE5 above it; the opening's head / sill against the landing level +3.50 not printed",
+   "evidence": "GF 2AB / 3FD / 3FE / 3FF / 26F, 1F CE2",
+   "binds": [
+    "ST01-MS1-LD-N"
+   ]
+  },
+  {
+   "sid": "MS1-T.W",
+   "element": "MS1-T",
+   "side": "west",
+   "cls": "HELD",
+   "plan": 1.1999999999996507,
+   "level_rise": 0.833333,
+   "cause": "winder corner: 5 risers on section A-A, 4 wedges on the plans (T-184 MS1-T); winders never generated (owner S-9)",
+   "evidence": "GF 49E / 4A0 / 4A2",
+   "binds": [
+    "ST01-MS1-T-W"
+   ]
+  },
+  {
+   "sid": "MS1-T.N",
+   "element": "MS1-T",
+   "side": "north",
+   "cls": "HELD",
+   "plan": 1.1499999999997963,
+   "level_rise": 0.833333,
+   "cause": "winder corner (as MS1-T.W)",
+   "evidence": "GF 26E",
+   "binds": [
+    "ST01-MS1-T-N"
+   ]
+  },
+  {
+   "sid": "MS2-LD.W",
+   "element": "MS2-LD",
+   "side": "west",
+   "cls": "HELD",
+   "plan": 1.1999999999998836,
+   "level_rise": 0.168,
+   "cause": "closing riser MS2-TR (+7.516 -> +7.684) on this landing: position not drawn (T-184 / T-393); 0.150 m of the side is also in the 1F window C5C stretch",
+   "evidence": "1F AF0 / C5C",
+   "binds": [
+    "ST01-MS2-LD-W"
+   ]
+  },
+  {
+   "sid": "MS2-LD.N",
+   "element": "MS2-LD",
+   "side": "north",
+   "cls": "HELD",
+   "plan": 2.5,
+   "level_rise": 0.168,
+   "cause": "closing riser MS2-TR position not drawn; 1.000 m of the face is the 1F window CE2 opening (with jambs) whose head / sill against +7.516 is not printed",
+   "evidence": "1F ADE / CE2 / ADD",
+   "binds": [
+    "ST01-MS2-LD-N"
+   ]
+  },
+  {
+   "sid": "MS2-LD.E",
+   "element": "MS2-LD",
+   "side": "east (lift wall)",
+   "cls": "HELD",
+   "plan": 1.1999999999998836,
+   "level_rise": 0.168,
+   "cause": "closing riser MS2-TR position not drawn",
+   "evidence": "1F B16, 2F 129A",
+   "binds": [
+    "ST01-MS2-LD-E"
+   ]
+  }
+ ],
+ "faces": [
+  {
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "kind": "column",
+   "s0": 0.4,
+   "s1": 0.9,
+   "proud": 0.05,
+   "ref": "2FBD"
+  },
+  {
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "kind": "column",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud": 0.0,
+   "ref": "2F93+2FF6"
+  },
+  {
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "kind": "column",
+   "s0": 1.0,
+   "s1": 1.5,
+   "proud": 0.05,
+   "ref": "3005+2F78"
+  },
+  {
+   "element": "MS2-U",
+   "side": "east (lift wall)",
+   "kind": "column",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud": 0.0,
+   "ref": "2F75+2FF6"
+  },
+  {
+   "element": "E1",
+   "side": "south (wall)",
+   "kind": "column",
+   "s0": 0.5,
+   "s1": 1.6,
+   "proud": 0.0,
+   "ref": "2FAE"
+  },
+  {
+   "element": "RS-S",
+   "side": "south (outer)",
+   "kind": "column",
+   "s0": 0.2,
+   "s1": 1.0,
+   "proud": 0.05,
+   "ref": "2FD2"
+  },
+  {
+   "element": "RS-LD",
+   "side": "south",
+   "kind": "column",
+   "s0": 0.65,
+   "s1": 1.25,
+   "proud": 0.05,
+   "ref": "2FC6"
+  },
+  {
+   "element": "MS1-LD",
+   "side": "east (lift wall)",
+   "kind": "column",
+   "s0": 0.85,
+   "s1": 1.35,
+   "proud": 0.0,
+   "ref": "2F81"
+  },
+  {
+   "element": "MS1-T",
+   "side": "west",
+   "kind": "column",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud": 0.0,
+   "ref": "2F7E"
+  },
+  {
+   "element": "MS2-LD",
+   "side": "west",
+   "kind": "column",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud": 0.0,
+   "ref": "2FE1"
+  },
+  {
+   "element": "MS2-LD",
+   "side": "east (lift wall)",
+   "kind": "column",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud": 0.0,
+   "ref": "2FE4"
+  }
+ ],
+ "column_census": [
+  {
+   "element": "MS1-L",
+   "side": "west (shaft wall)",
+   "plan": "GF",
+   "column": "2FBD",
+   "relation": "PROUD",
+   "s0": 0.4,
+   "s1": 0.9,
+   "proud_m": 0.05,
+   "st_plan": "ST 36B 0.250 x 0.500 (GF)"
+  },
+  {
+   "element": "MS1-L",
+   "side": "east (well)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "plan": "GF",
+   "column": "2F93",
+   "relation": "FLUSH",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-U",
+   "side": "east (lift wall)",
+   "plan": "1F",
+   "column": "2FF6",
+   "relation": "FLUSH",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-U",
+   "side": "west (well)",
+   "plan": "1F",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "plan": "1F",
+   "column": "3005",
+   "relation": "PROUD",
+   "s0": 1.0,
+   "s1": 1.5,
+   "proud_m": 0.05,
+   "st_plan": "ST 691 0.250 x 0.500 (1F)"
+  },
+  {
+   "element": "MS2-L",
+   "side": "west (shaft wall)",
+   "plan": "2F",
+   "column": "2F78",
+   "relation": "PROUD",
+   "s0": 1.0,
+   "s1": 1.5,
+   "proud_m": 0.05,
+   "st_plan": "stacked on 3005 (2F)"
+  },
+  {
+   "element": "MS2-L",
+   "side": "east (well)",
+   "plan": "1F",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-U",
+   "side": "east (lift wall)",
+   "plan": "2F",
+   "column": "2F75",
+   "relation": "FLUSH",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-U",
+   "side": "east (lift wall)",
+   "plan": "1F",
+   "column": "2FF6",
+   "relation": "FLUSH",
+   "s0": 1.85,
+   "s1": 2.35,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-U",
+   "side": "west (well)",
+   "plan": "2F",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "D1",
+   "side": "east (lift wall)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "D1",
+   "side": "west (well band)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "E1",
+   "side": "south (wall)",
+   "plan": "GF",
+   "column": "2FAE",
+   "relation": "FLUSH",
+   "s0": 0.5,
+   "s1": 1.6,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "E1",
+   "side": "north (edge)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "RS-S",
+   "side": "south (outer)",
+   "plan": "GF",
+   "column": "2FD2",
+   "relation": "PROUD",
+   "s0": 0.2,
+   "s1": 1.0,
+   "proud_m": 0.05,
+   "st_plan": "ST 380 0.800 x 0.250 (GF)"
+  },
+  {
+   "element": "RS-S",
+   "side": "north (void)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "RS-LD",
+   "side": "south",
+   "plan": "GF",
+   "column": "2FC6",
+   "relation": "PROUD",
+   "s0": 0.65,
+   "s1": 1.25,
+   "proud_m": 0.05,
+   "st_plan": "ST 374 0.600 x 0.250 (GF)"
+  },
+  {
+   "element": "RS-LD",
+   "side": "east",
+   "plan": "GF",
+   "column": "2FC6",
+   "relation": "CROSSES",
+   "s0": -0.2,
+   "s1": 0.05,
+   "proud_m": null,
+   "st_plan": "ST 374 0.600 x 0.250 (GF)"
+  },
+  {
+   "element": "RS-A",
+   "side": "east",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "RS-A",
+   "side": "west (void)",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-LD",
+   "side": "east (lift wall)",
+   "plan": "GF",
+   "column": "2F81",
+   "relation": "FLUSH",
+   "s0": 0.85,
+   "s1": 1.35,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-LD",
+   "side": "north",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-T",
+   "side": "west",
+   "plan": "GF",
+   "column": "2F7E",
+   "relation": "FLUSH",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS1-T",
+   "side": "north",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-LD",
+   "side": "west",
+   "plan": "1F",
+   "column": "2FE1",
+   "relation": "FLUSH",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-LD",
+   "side": "north",
+   "plan": "1F",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  },
+  {
+   "element": "MS2-LD",
+   "side": "east (lift wall)",
+   "plan": "1F",
+   "column": "2FE4",
+   "relation": "FLUSH",
+   "s0": 0.9,
+   "s1": 1.4,
+   "proud_m": 0.0,
+   "st_plan": ""
+  },
+  {
+   "element": "RS-C",
+   "side": "outer",
+   "plan": "GF",
+   "column": "",
+   "relation": "NONE",
+   "s0": null,
+   "s1": null,
+   "proud_m": null,
+   "st_plan": ""
+  }
+ ]
+}
