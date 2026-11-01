@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-01T07:34Z | Worker 2 | SUCCESS | T-412 READY (agents/task-T-412 @ fcb6f01a) | B7-05 nosing: 89 risers = 89 nosings (ST-01 56, ST-02 28, ST-03 5); 87.350 lm DRAWING-CONFIRMED (79.950 on treads inside the B7-06 step basis, 7.400 landing/floor edges), 20 HELD blank (winder turn: A-A 10+5 vs arch 10+4 vs ST p.4 12+3, two floor edges, MS2-TR, RS-C), nosing form HELD (not printed); every marble front edge 1.150 not 1.20; freelancer pieces ST-03 5=5, ST-02 28=28, ST-01 63 vs 56 UNRESOLVED; candidate V3.0.35 has 0 nosing lines, tread binding per flight shows MS1-L 7 vs 9+winder, east lanes 10 vs 11, MS2-L valued twice | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-01T07:20Z | Worker 1 | STARTED | run session_01E6cPneuSWphv5A9iAjx1dC | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-01T07:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-01T06:50Z | Verifier | STARTED | run session_01E6cPndGYU6vQy9vXowbaKk | repo-attached routine | task state: READY T-246 (Gate B integration package) per RUN_LOG; board to confirm | self-check pending
