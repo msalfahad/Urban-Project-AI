@@ -1,0 +1,338 @@
+{
+ "derived": {
+  "columns": {
+   "341": {
+    "flight": "ST01-MS1-U",
+    "m3": 0.0,
+    "state": "FLUSH"
+   },
+   "36B": {
+    "flight": "ST01-MS1-L",
+    "m3": null,
+    "plan_m2": 0.025,
+    "state": "HELD_WITH_FLIGHT"
+   },
+   "682": {
+    "flight": "ST01-MS2-U",
+    "m3": 0.0,
+    "state": "FLUSH"
+   },
+   "691": {
+    "flight": "ST01-MS2-L",
+    "high": 0.006684,
+    "in_flight_value": true,
+    "low": 0.0,
+    "plan_m2": 0.025,
+    "state": "HELD"
+   }
+  },
+  "flight_untraced_m3": 0.0,
+  "flights": {
+   "ST01-MS1-U": {
+    "contribution_m3": -0.783249,
+    "his_unit_m3": 1.7808,
+    "inclined_m": 3.775064,
+    "ledger_m3": 0.997552,
+    "net_m3": 0.997551,
+    "owned_elsewhere_m3": 0.087261,
+    "plate_equivalent_t": 0.273942,
+    "profile_m": 5.3,
+    "rise_m": 2.0,
+    "sec": 1.143959,
+    "steps_m3": 0.36,
+    "terms": [
+     {
+      "m3": 0.0,
+      "term": "WIDTH",
+      "traced": true
+     },
+     {
+      "m3": -0.023988,
+      "term": "THICKNESS_BASIS",
+      "traced": true
+     },
+     {
+      "m3": -0.087261,
+      "term": "OWNERSHIP",
+      "traced": true
+     },
+     {
+      "basis": "own run + rise",
+      "m3": -0.672,
+      "term": "RISE_IN_LENGTH",
+      "traced": true
+     },
+     {
+      "basis": "rounding to own",
+      "m3": 0.0,
+      "term": "ONE_LENGTH",
+      "traced": true
+     }
+    ],
+    "waist_m3": 0.724812
+   },
+   "ST01-MS2-L": {
+    "contribution_m3": -0.747355,
+    "his_unit_m3": 1.7808,
+    "inclined_m": 3.782209,
+    "ledger_m3": 1.033444,
+    "net_m3": 1.033445,
+    "owned_elsewhere_m3": 0.055619,
+    "plate_equivalent_t": 0.275016,
+    "profile_m": 5.316,
+    "rise_m": 2.016,
+    "sec": 1.146124,
+    "steps_m3": 0.36288,
+    "terms": [
+     {
+      "m3": 0.0,
+      "term": "WIDTH",
+      "traced": true
+     },
+     {
+      "m3": -0.019736,
+      "term": "THICKNESS_BASIS",
+      "traced": true
+     },
+     {
+      "m3": -0.055619,
+      "term": "OWNERSHIP",
+      "traced": true
+     },
+     {
+      "basis": "own run + rise",
+      "m3": -0.677376,
+      "term": "RISE_IN_LENGTH",
+      "traced": true
+     },
+     {
+      "basis": "his one length = run + rise of ST01-MS1-U",
+      "m3": 0.005376,
+      "term": "ONE_LENGTH",
+      "traced": true
+     }
+    ],
+    "waist_m3": 0.726184
+   },
+   "ST01-MS2-U": {
+    "contribution_m3": -0.779427,
+    "his_unit_m3": 1.7808,
+    "inclined_m": 3.782209,
+    "ledger_m3": 1.001373,
+    "net_m3": 1.001373,
+    "owned_elsewhere_m3": 0.087691,
+    "plate_equivalent_t": 0.275016,
+    "profile_m": 5.316,
+    "rise_m": 2.016,
+    "sec": 1.146124,
+    "steps_m3": 0.36288,
+    "terms": [
+     {
+      "m3": 0.0,
+      "term": "WIDTH",
+      "traced": true
+     },
+     {
+      "m3": -0.019736,
+      "term": "THICKNESS_BASIS",
+      "traced": true
+     },
+     {
+      "m3": -0.087691,
+      "term": "OWNERSHIP",
+      "traced": true
+     },
+     {
+      "basis": "own run + rise",
+      "m3": -0.677376,
+      "term": "RISE_IN_LENGTH",
+      "traced": true
+     },
+     {
+      "basis": "his one length = run + rise of ST01-MS1-U",
+      "m3": 0.005376,
+      "term": "ONE_LENGTH",
+      "traced": true
+     }
+    ],
+    "waist_m3": 0.726184
+   }
+  },
+  "flights_contribution_m3": -2.310031,
+  "landing_area_term_m3": 0.1624,
+  "landing_closure": {
+   "contribution_m3": 0.1624,
+   "traced_m3": 0.1624,
+   "untraced_m3": 0.0
+  },
+  "landing_contribution_m3": 0.028,
+  "landing_terms": [
+   {
+    "basis": "his depth = plate 1.200 + band B3 (With Stair) 279 -> 274 0.200 (BEAM)",
+    "m3": -0.0384,
+    "piece": "ST01-MS1-LD",
+    "term": "OWNERSHIP",
+    "traced": true
+   },
+   {
+    "basis": "his depth = plate 1.200 + band B3 (With Stair) 5C0 -> 5BE 0.200 (BEAM)",
+    "m3": -0.0384,
+    "piece": "ST01-MS2-LD-E",
+    "term": "OWNERSHIP",
+    "traced": true
+   },
+   {
+    "basis": "ST01-MS2-LD-W: drawn plate, no unit of his bound",
+    "m3": 0.2392,
+    "piece": "ST01-MS2-LD-W",
+    "term": "COUNT",
+    "traced": true
+   }
+  ],
+  "landing_thickness_term_m3": -0.1344,
+  "landings": {
+   "ST01-MS1-LD": {
+    "area_m2": 1.44,
+    "m3": 0.2304
+   },
+   "ST01-MS2-LD-E": {
+    "area_m2": 1.44,
+    "m3": 0.2304
+   },
+   "ST01-MS2-LD-W": {
+    "area_m2": 1.495,
+    "m3": 0.2392
+   }
+  },
+  "length_term_m3": -2.016,
+  "one_length_m3": 0.010752,
+  "rise_in_length_m3": -2.026752
+ },
+ "geometry": {
+  "columns": {
+   "341": {
+    "flight": "ST01-MS1-U",
+    "proud": 0.0,
+    "s0": 1.8,
+    "s1": 2.3,
+    "side": "east",
+    "size": [
+     0.2,
+     0.5
+    ]
+   },
+   "36B": {
+    "flight": "ST01-MS1-L",
+    "proud": 0.05,
+    "s0": 0.95,
+    "s1": 1.45,
+    "side": "west",
+    "size": [
+     0.25,
+     0.5
+    ]
+   },
+   "682": {
+    "flight": "ST01-MS2-U",
+    "proud": 0.0,
+    "s0": 1.8,
+    "s1": 2.3,
+    "side": "east",
+    "size": [
+     0.2,
+     0.5
+    ]
+   },
+   "691": {
+    "flight": "ST01-MS2-L",
+    "proud": 0.05,
+    "s0": 0.95,
+    "s1": 1.45,
+    "side": "west",
+    "size": [
+     0.25,
+     0.5
+    ]
+   }
+  },
+  "drawing": "'ST7757 dxf.dxf' sha256 9f9d1179 (Drive 'Alsenan chalet project'), ST p.4 GF roof slab plan and p.5 1F roof slab plan",
+  "flights": {
+   "ST01-MS1-U": {
+    "first": "25B",
+    "going": 0.3,
+    "lane": 1.2,
+    "lane_edges": [
+     "2F3",
+     "296"
+    ],
+    "last": "459",
+    "risers": 12,
+    "risers_drawn": 12,
+    "run": 3.3,
+    "storey": "MS1"
+   },
+   "ST01-MS2-L": {
+    "first": "646",
+    "going": 0.3,
+    "lane": 1.2,
+    "lane_edges": [
+     "5E3",
+     "62D"
+    ],
+    "last": "632",
+    "risers": 12,
+    "risers_drawn": 12,
+    "run": 3.3,
+    "storey": "MS2"
+   },
+   "ST01-MS2-U": {
+    "first": "62F",
+    "going": 0.3,
+    "lane": 1.2,
+    "lane_edges": [
+     "62E",
+     "5D4"
+    ],
+    "last": "644",
+    "risers": 12,
+    "risers_drawn": 11,
+    "run": 3.3,
+    "storey": "MS2"
+   }
+  },
+  "freelancer_asserted": true,
+  "landings": {
+   "ST01-MS1-LD": {
+    "band": {
+     "id": "B3 (With Stair) 279 -> 274",
+     "owner": "BEAM",
+     "width": 0.2
+    },
+    "depth": 1.2,
+    "edges": "25B -> 279, 2F3 -> 296",
+    "width": 1.2
+   },
+   "ST01-MS2-LD-E": {
+    "band": {
+     "id": "B3 (With Stair) 5C0 -> 5BE",
+     "owner": "BEAM",
+     "width": 0.2
+    },
+    "depth": 1.2,
+    "edges": "62F -> 5C0, 5E2 -> 5D4",
+    "width": 1.2
+   },
+   "ST01-MS2-LD-W": {
+    "band": {
+     "id": "B3 (With Stair) 5C0 -> 5BE",
+     "owner": "BEAM",
+     "width": 0.2
+    },
+    "depth": 1.15,
+    "edges": "632 -> 5C0, 5E3 -> 5E2",
+    "width": 1.3
+   }
+  },
+  "schema": "T417_ALSENAN_ST01"
+ }
+}
