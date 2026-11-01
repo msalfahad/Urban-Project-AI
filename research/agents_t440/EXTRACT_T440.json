@@ -1,0 +1,397 @@
+{
+ "addition_edges_inside_box": 0,
+ "addition_faces": [
+  {
+   "edge": 0,
+   "engine_roles": [
+    "ZONE_LINE"
+   ],
+   "handles": "",
+   "length_m": 1.3,
+   "role": "ZONE"
+  },
+  {
+   "edge": 1,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "104",
+   "length_m": 0.275,
+   "role": "WALL"
+  },
+  {
+   "edge": 2,
+   "engine_roles": [
+    "COLUMN"
+   ],
+   "handles": "2FCF",
+   "length_m": 0.05,
+   "role": "COLUMN"
+  },
+  {
+   "edge": 3,
+   "engine_roles": [
+    "COLUMN"
+   ],
+   "handles": "2FCF",
+   "length_m": 1.1,
+   "role": "COLUMN"
+  },
+  {
+   "edge": 4,
+   "engine_roles": [
+    "COLUMN"
+   ],
+   "handles": "2FCF",
+   "length_m": 0.05,
+   "role": "COLUMN"
+  },
+  {
+   "edge": 5,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "104",
+   "length_m": 2.425,
+   "role": "WALL"
+  },
+  {
+   "edge": 6,
+   "engine_roles": [
+    "ZONE_LINE"
+   ],
+   "handles": "",
+   "length_m": 1.3,
+   "role": "ZONE"
+  }
+ ],
+ "candidate": {
+  "file": "V3_0_38_BOQ_LINES.json",
+  "lines": {
+   "L-71e2e002a3af624097f0": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "id": "OP-008",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-010",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-012",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-021",
+      "qty": 2.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-003",
+      "qty": 11.22,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-011",
+      "qty": 1.0,
+      "source": "LEDGER door / passage openings"
+     },
+     {
+      "id": "OP-019#glazing-half",
+      "qty": 3.165789,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "OP-024#glazing-half",
+      "qty": 0.75,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "GLAZING_ONLY_EDGE:GF-RC99C2A:skirting",
+      "qty": 1.627277,
+      "source": "LEDGER glazing edge (floor-level window line)"
+     },
+     {
+      "id": "OTHER_BOUNDARY:GF-RC99C2A:skirting",
+      "qty": 2.555652,
+      "source": "LEDGER boundary that is not a wall / column face"
+     },
+     {
+      "face": "GF-07|GF-W05",
+      "id": "GF-07|GF-W05#158",
+      "qty": 0.7591,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W05",
+      "id": "GF-07|GF-W05#159",
+      "qty": 0.3409,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|OFF:COLUMN",
+      "id": "GF-07|OFF:COLUMN#2FAE",
+      "qty": 0.9,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|OFF:WALL",
+      "id": "GF-07|OFF:WALL#2FAE",
+      "qty": 0.05,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "GF-07|GF-W16#AE",
+      "qty": 0.8,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "GF-07|GF-W16#AF",
+      "qty": 0.65,
+      "source": "CANONICAL split by calculation.inputs.base_ownership_v3021.on_tiled_faces"
+     },
+     {
+      "id": "OP-019#threshold-half",
+      "qty": 3.165789,
+      "source": "UNLISTED (T-296 ledger)"
+     },
+     {
+      "id": "OP-024#threshold-half",
+      "qty": 0.75,
+      "source": "UNLISTED (T-296 ledger)"
+     }
+    ],
+    "evidence_state": "SOURCE_DERIVED",
+    "gross": 56.006096,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": 24.671589,
+    "room_id": "GF-RC99C2A",
+    "unit": "lm"
+   },
+   "L-73ff85e30e3a8c639e20": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [],
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC06FED",
+    "unit": "lm"
+   },
+   "L-af6fb2d3474c5fbdb80a": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "lm": 2.5,
+      "what": "door / passage openings"
+     },
+     {
+      "lm": 0.5,
+      "what": "glazing edge (floor-level window line)"
+     },
+     {
+      "lm": 2.2,
+      "what": "boundary that is not a wall / column face"
+     }
+    ],
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC06FED",
+    "unit": "lm"
+   },
+   "L-e7dcdc69e1a2b24f8616": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": {
+     "basis": "F-17: 7.83 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 7.83 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirting, sill window -> skirting; give the window type (schedule / elevation)",
+     "high": 6.331578,
+     "low": 0.0
+    },
+    "deductions": [
+     {
+      "lm": 1.5,
+      "what": "ARCH_TAKEOFF_V3.0.21: FIN.SKIRTING on the full-height wall tile of GF-07 (one owner per base, one owner per wall base: the wet pantry's full-height wall porcelain owns every base, no skirting under it (Q-37 A / Q-4)"
+     }
+    ],
+    "evidence_state": "BOUNDED_EXPOSURE",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-RC99C2A",
+    "unit": "lm"
+   },
+   "L-f5c5a1a9c9ee2b644cb5": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "deductions": [
+     {
+      "face": "GF-07|GF-W05",
+      "id": "D-GF-06",
+      "qty": 2.2,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "W10",
+      "qty": 1.5,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     },
+     {
+      "face": "GF-07|GF-W16",
+      "id": "W09",
+      "qty": 2.25,
+      "source": "SHADOW calculation.inputs.owner_manual_method.deductions"
+     }
+    ],
+    "evidence_state": "PROVISIONAL",
+    "gross": 38.29215,
+    "item_code": "FIN.WALL.TILE",
+    "measured_net": 32.3422,
+    "room_id": "GF-RC06FED",
+    "unit": "m2"
+   }
+  },
+  "sha256_8": "57cca61c"
+ },
+ "drawing": {
+  "P7757.dxf_sha256_8": "ab54dd55"
+ },
+ "pantry_faces": [
+  {
+   "edge": 43,
+   "engine_roles": [
+    "COLUMN",
+    "WALL"
+   ],
+   "handles": "159 2FB4",
+   "length_m": 0.2,
+   "role": "COLUMN+WALL"
+  },
+  {
+   "edge": 44,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "159",
+   "length_m": 0.14089,
+   "role": "WALL"
+  },
+  {
+   "edge": 45,
+   "engine_roles": [
+    "DOOR_THRESHOLD"
+   ],
+   "handles": "",
+   "length_m": 1.0,
+   "role": "DOOR"
+  },
+  {
+   "edge": 46,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "158",
+   "length_m": 0.75911,
+   "role": "WALL"
+  },
+  {
+   "edge": 47,
+   "engine_roles": [
+    "COLUMN"
+   ],
+   "handles": "2FAE",
+   "length_m": 0.05,
+   "role": "COLUMN"
+  },
+  {
+   "edge": 48,
+   "engine_roles": [
+    "COLUMN"
+   ],
+   "handles": "2FAE",
+   "length_m": 0.9,
+   "role": "COLUMN"
+  },
+  {
+   "edge": 49,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "AE",
+   "length_m": 0.8,
+   "role": "WALL"
+  },
+  {
+   "edge": 50,
+   "engine_roles": [
+    "WINDOW",
+    "WINDOW_THRESHOLD"
+   ],
+   "handles": "3BC",
+   "length_m": 0.05,
+   "role": "WINDOW"
+  },
+  {
+   "edge": 51,
+   "engine_roles": [
+    "WINDOW",
+    "WINDOW_THRESHOLD"
+   ],
+   "handles": "3BF",
+   "length_m": 1.4,
+   "role": "WINDOW"
+  },
+  {
+   "edge": 52,
+   "engine_roles": [
+    "WINDOW",
+    "WINDOW_THRESHOLD"
+   ],
+   "handles": "3C6",
+   "length_m": 0.05,
+   "role": "WINDOW"
+  },
+  {
+   "edge": 53,
+   "engine_roles": [
+    "WALL"
+   ],
+   "handles": "AF",
+   "length_m": 0.65,
+   "role": "WALL"
+  }
+ ],
+ "v29_add_runs_lm": {
+  "boundary": 10.3,
+  "column": 1.2,
+  "door": 0.0,
+  "glazing_edge": 0.0,
+  "other": 2.6,
+  "passage": 3.8,
+  "perimeter": 10.3,
+  "wall": 2.7,
+  "window_threshold": 0.0
+ },
+ "v29_host_runs_lm": {
+  "boundary": 56.006096,
+  "column": 7.624896,
+  "door": 5.0,
+  "glazing_edge": 5.543066,
+  "other": 2.555652,
+  "passage": 10.82,
+  "perimeter": 56.006096,
+  "wall": 20.546693,
+  "window_threshold": 3.915789
+ }
+}
