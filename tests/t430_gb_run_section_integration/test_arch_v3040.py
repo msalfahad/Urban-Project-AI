@@ -332,3 +332,35 @@ def test_wrong_schema_and_project_refused():
         A.load_inputs(dict(inputs(lines), schema="X"), PID)
     with pytest.raises(A.InputsError, match="are for"):
         A.load_inputs(inputs(lines), "other-villa")
+
+
+# ------------------------------------------------------------------------------------------------ development villa pins
+def test_committed_inputs_build_from_the_merged_census():
+    sys.path.insert(0, str(ROOT / "research" / "agents_t430"))
+    import t430_inputs as TI
+    d = A.load_inputs(TI.build())
+    s = {x["line_id"]: x for x in d["_splits"]}
+    assert sorted(s) == ["L-0e30aadba2eebc6c3ede", "L-fe78ae283abfb6256358"]
+    for x in s.values():
+        assert x["_c"] == {"D": 0.6, "L": 7.35, "value": 1.323}
+        (v,) = [r for r in x["_runs"] if r["_valued"]]
+        assert round(x["_b"] * v["_pd"][0] * v["_lo"], 6) == 0.423
+        (h,) = [r for r in x["_runs"] if not r["_valued"]]
+        assert h["loaded"] and h["_hd"] == (0.4, 0.6)
+    h = {x["line_id"]: x for x in d["_holds"]}
+    assert h["L-e24946df436cbc25fca6"]["_range"]["_lo"] == 0.5964
+    assert h["L-e24946df436cbc25fca6"]["_range"]["_hi"] == 0.9036
+    assert h["L-be6708e07b40efa02779"]["_range"] is None
+
+
+def test_committed_summary_and_proposal_have_no_coordinates():
+    import json
+    for name in ("summary_t430.json", "DOWNGRADE_PROPOSAL_T430.json"):
+        doc = json.loads((ROOT / "research" / "agents_t430" / name).read_text(encoding="utf-8"))
+        txt = json.dumps(doc)
+        assert '"x"' not in txt and '"y"' not in txt and "insert" not in txt.lower()
+    p = json.loads((ROOT / "research/agents_t430/DOWNGRADE_PROPOSAL_T430.json").read_text(encoding="utf-8"))
+    assert p["proposed_state"] == "HELD" and p["audit_range_m3"] == [0.864171, 1.152231] and len(p["line_ids"]) == 4
+    s = json.loads((ROOT / "research/agents_t430/summary_t430.json").read_text(encoding="utf-8"))
+    assert s["ground_beam"]["v3_0_39"]["valued_m3"] - s["ground_beam"]["v3_0_40"]["valued_m3"] == pytest.approx(2.7126)
+    assert s["identity"]["diff"]["vs_v3_0_39"] == {"ADDED": 2, "CHANGED": 4, "SAME": 4825}
