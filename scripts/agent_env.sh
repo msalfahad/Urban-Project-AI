@@ -194,12 +194,15 @@ cmd_freeze() {
   in_tree "$PY" -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl
 }
 
+# a path under tests/ or agents/, optionally followed by pytest node ids (::Class::test[param]); no options
+PYTEST_PATH_RE='^(tests|agents)/[A-Za-z0-9_./-]*(::[A-Za-z0-9_.-]+(\[[A-Za-z0-9_.,=-]*\])?)*$'
+
 cmd_pytest() {
   parse_tree "$@"; need_venv
   (( ${#ARGS[@]} > 0 )) || die "pytest needs at least one path"
   local p
   for p in "${ARGS[@]}"; do
-    [[ "$p" =~ ^(tests|agents)/[A-Za-z0-9_./-]*$ && "$p" != *..* ]] || die "pytest path must be under tests/ or agents/: $p"
+    [[ "$p" =~ $PYTEST_PATH_RE && "${p%%::*}" != *..* ]] || die "pytest path must be under tests/ or agents/: $p"
     [[ -e "$TREE_DIR/${p%%::*}" ]] || die "no such test path in tree: $p"
   done
   in_tree "$PY" -m pytest -p no:cacheprovider -q "${ARGS[@]}"
@@ -256,11 +259,21 @@ raw=open(sys.argv[1],"rb").read()
 if raw.lstrip()[:1]==b"{": raw=json.loads(raw)["content"].encode()
 open(sys.argv[2],"wb").write(base64.b64decode(raw))' "$src" "$PRIVATE/$name" || die "base64 decode failed"
   if [[ "$name" == *.zip ]]; then
-    local entries dest="$PRIVATE/${name%.zip}"
-    entries="$(unzip -Z1 "$PRIVATE/$name")" || die "not a zip archive"
-    if grep -qE '(^/|(^|/)\.\.(/|$))' <<<"$entries"; then die "zip entry path escapes the private folder"; fi
-    mkdir -p "$dest" && unzip -q -o "$PRIVATE/$name" -d "$dest"
-    say "decoded and unzipped into $dest ($(wc -l <<<"$entries") entries)"
+    local dest="$PRIVATE/${name%.zip}" out
+    mkdir -p "$dest"
+    # extract in Python: refuse absolute paths, ".." parts and symlink entries, so nothing lands outside $dest
+    out="$(python3 -I -c 'import os,stat,sys,zipfile
+src,dest=sys.argv[1],os.path.realpath(sys.argv[2])
+try: z=zipfile.ZipFile(src)
+except zipfile.BadZipFile: sys.exit("not a zip archive")
+for i in z.infolist():
+    n=i.filename
+    if n.startswith(("/","\\")) or ".." in n.replace("\\","/").split("/"): sys.exit("zip entry path escapes the private folder: "+n)
+    if stat.S_ISLNK(i.external_attr>>16): sys.exit("zip entry is a symlink (refused): "+n)
+    t=os.path.realpath(os.path.join(dest,n))
+    if not (t==dest or t.startswith(dest+os.sep)): sys.exit("zip entry path escapes the private folder: "+n)
+z.extractall(dest); print(len(z.infolist()))' "$PRIVATE/$name" "$dest")" || die "unzip refused"
+    say "decoded and unzipped into $dest ($out entries)"
   else
     say "decoded into $PRIVATE/$name ($(stat -c %s "$PRIVATE/$name") bytes)"
   fi
@@ -432,7 +445,7 @@ cmd_board() {
       word="$(cut -d'|' -f3 <<<"$line" | awk '{print toupper($1)}')"
       read -r slug ttl <<<"$(lock_slug "$agent")"
       local attempt lf="$b/$LOCK_DIR/${slug:-none}.lock" held="$WORK/agent_lock"
-      if [[ -n "$slug" && "$word" == "SUCCESS" && -f "$held" ]] && is_cloud; then   # a SUCCESS claim needs a valid lock
+      if [[ -n "$slug" && "$word" == "SUCCESS" ]] && is_cloud; then   # a SUCCESS claim needs a valid lock (NOLOCK refused too)
         local fst; fst="$(lock_state 0)"
         [[ "$fst" == OK* ]] || die "run lock $fst: a SUCCESS final line is refused; write the final line INCOMPLETE (lock $fst) and end"
       fi
