@@ -190,7 +190,9 @@ def test_development_villa_schedule_reproduces_the_committed_record(tmp_path):
     st = {p: v["row_status"] for p, v in s["populations"].items()}
     assert st["COL-TWIST-EXTRA"] == {"HELD": 1, "SHAPE_NOT_00": 1}           # F-T374-1: drawn top bend
     assert st["SLAB-TEMP"] == {"HELD": 3}
-    assert st["FTG-BOT-MESH"] == {"HELD": 3, "HELD_DOWNGRADE": 38, "HELD_SAME_BASIS": 10}   # r2: DG-a97ec2ea66e02194
+    # r2: DG-a97ec2ea66e02194 (38 lines) + 10 HELD_SAME_BASIS; T-411: the Checker's DG-df07eb3d6ccec0e9 (V3.0.29, issued
+    # on the T-374 proposal DGP-T374-FTGM) names exactly those 10 lines, so they are HELD_DOWNGRADE by their own record
+    assert st["FTG-BOT-MESH"] == {"HELD": 3, "HELD_DOWNGRADE": 48}
     assert sum(r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED", "RUN_PART") for r in rows) == 157
     exact = sum((r["net_kg_low"] for r in rows if r["row_status"] in ("SCHEDULED", "RUN_PART")), Decimal(0))
     # the Checker's 5,124.317162 - 874.862222 = 4,249.454940 is the sum of the per-population 6 dp figures; the
@@ -199,14 +201,20 @@ def test_development_villa_schedule_reproduces_the_committed_record(tmp_path):
     assert sum(Decimal(v["scheduled_net_kg"]) for v in pops.values()) == Decimal("4249.454940")
     assert abs(exact - Decimal("4249.454940")) < Decimal("0.000001")
     dg = [r for r in rows if r["row_status"] == "HELD_DOWNGRADE"]
-    assert {r["downgrade_id"] for r in dg} == {"DG-a97ec2ea66e02194"}
-    assert B.fmt_kg(sum((r["audit_kg_low"] for r in dg), Decimal(0))) == "874.862227"   # = the record's engine_qty
+    assert {r["downgrade_id"] for r in dg} == {"DG-a97ec2ea66e02194", "DG-df07eb3d6ccec0e9"}
+    a97 = [r for r in dg if r["downgrade_id"] == "DG-a97ec2ea66e02194"]
+    df0 = [r for r in dg if r["downgrade_id"] == "DG-df07eb3d6ccec0e9"]
+    assert (len(a97), len(df0)) == (38, 10)
+    assert B.fmt_kg(sum((r["audit_kg_low"] for r in a97), Decimal(0))) == "874.862227"   # = the record's engine_qty
+    # T-411: the same audit figures the r2 HELD_SAME_BASIS rows carried, now under their own record (0.000 kg moved)
+    assert B.fmt_kg(sum((r["audit_kg_low"] for r in df0), Decimal(0))) == "1606.069136"
+    assert B.fmt_kg(sum((r["audit_kg_high"] for r in df0), Decimal(0))) == "1655.560494"
     sb = [r for r in rows if r["row_status"] == "HELD_SAME_BASIS"]
-    assert B.fmt_kg(sum((r["audit_kg_low"] for r in sb), Decimal(0))) == "1606.069136"
-    assert B.fmt_kg(sum((r["audit_kg_high"] for r in sb), Decimal(0))) == "1655.560494"
-    for r in dg + sb:
+    assert sb == []
+    for r in dg:
         assert r["cut_length_m"] == r["n"] == r["stock_bars"] == r["procurement"] == "" and r["net_kg_low"] is None
-        assert r["audit_basis"].startswith("UNSUPPORTED BASIS (DG-a97ec2ea66e02194)")
+        assert r["audit_basis"].startswith(f"UNSUPPORTED BASIS ({r['downgrade_id']})")
+        assert B.ftg_mesh_basis(next(l for l in lines if l["line_id"] == r["line_id"]))   # both records: same basis
     # every scheduled exact row: net within the candidate's storage precision, cause named
     for r in rows:
         if r["row_status"] in ("SCHEDULED", "RUN_PART") and r["evidence_state"] == "SOURCE_DERIVED":
@@ -285,11 +293,73 @@ def test_committed_schedule_has_no_scheduled_line_under_any_unresolved_record():
     rows = list(csv.DictReader(open(HERE / "T374_STRAIGHT_BBS.csv", encoding="utf-8")))
     leak = [r["line_id"] for r in rows if r["line_id"] in held and r["row_status"] in ("SCHEDULED", "SCHEDULED_BOUNDED",
                                                                                          "RUN_PART")]
-    assert not leak and sum(r["line_id"] in held for r in rows) == 38
+    assert not leak and sum(r["line_id"] in held for r in rows) == 48         # T-411: 38 + DG-df07eb3d6ccec0e9's 10
     assert "V3.0.29" in snap["source_sha256"] and "V3.0.25" in snap["source_sha256"]
 
 
 def test_snapshot_equals_the_board_verdict_files_when_the_board_is_present():
     if not B.BOARD_VERDICTS.is_dir():
         pytest.skip("agents/control board worktree not beside this tree")
-    assert B.snapshot_downgrades(B.BOARD_VERDICTS) == B.load_snapshot()
+    board = B.snapshot_downgrades(B.BOARD_VERDICTS)
+    B.check_snapshot(board, B.load_snapshot())          # T-411: a drift fails with the record id / verdict set named
+    assert board == B.load_snapshot()
+
+
+# ---------------------------------------------------------------- T-411: snapshot refresh, drift naming, promotion refused
+
+def test_snapshot_carries_its_source_shas_and_record_counts():
+    snap = B.load_snapshot()
+    assert snap["record_count"] == len(snap["records"]) == 21
+    assert set(snap["source_record_count"]) == set(snap["source_sha256"])
+    assert snap["source_record_count"]["V3.0.29"] == 10
+    assert "DG-df07eb3d6ccec0e9" in {r["downgrade_id"] for r in snap["records"]}
+    assert B.snapshot_drift(snap, snap) == []
+
+
+def test_snapshot_missing_one_board_record_fails_with_the_record_id_named():
+    snap = B.load_snapshot()
+    stale = dict(snap, records=[r for r in snap["records"] if r["downgrade_id"] != "DG-df07eb3d6ccec0e9"])
+    drift = B.snapshot_drift(snap, stale)
+    assert drift == ["record DG-df07eb3d6ccec0e9 on the board, missing from the snapshot",
+                     "snapshot record_count 21 != its 20 records"]
+    with pytest.raises(B.ScheduleRefused, match="DG-df07eb3d6ccec0e9 on the board, missing"):
+        B.check_snapshot(snap, stale)
+    # a changed line list and a changed source file are named too
+    rec0 = dict(snap["records"][0], line_ids=snap["records"][0]["line_ids"][1:])
+    moved = dict(snap, records=[rec0] + snap["records"][1:], source_sha256=dict(snap["source_sha256"], **{"V3.0.29": "0" * 64}))
+    d2 = B.snapshot_drift(snap, moved)
+    assert f"record {rec0['downgrade_id']} differs (line_ids)" in d2 and any(x.startswith("verdict set V3.0.29") for x in d2)
+
+
+def _verdicts(tmp_path, records):
+    d = tmp_path / "verdicts" / "V3.0.40"
+    d.mkdir(parents=True)
+    (d / "DOWNGRADES.json").write_text(json.dumps({"schema": "URBAN_CHECKER_DOWNGRADE_SET", "downgrades": records}),
+                                       encoding="utf-8")
+    return tmp_path / "verdicts"
+
+
+def test_a_record_that_would_promote_a_line_is_refused(tmp_path):
+    rec = {"downgrade_id": "DG-PROMOTE", "state": "VERIFIED", "resolved": False, "line_ids": ["V-C1"]}
+    with pytest.raises(B.ScheduleRefused, match="DG-PROMOTE in V3.0.40: state VERIFIED is not a downgrade"):
+        B.snapshot_downgrades(_verdicts(tmp_path, [rec]))
+    bad = tmp_path / "snap.json"
+    bad.write_text(json.dumps({"records": [rec]}), encoding="utf-8")
+    with pytest.raises(B.ScheduleRefused, match="never promote"):
+        B.load_snapshot(bad)
+
+
+def test_snapshot_from_hand_built_verdict_files_normal_case(tmp_path):
+    recs = [{"downgrade_id": "DG-B", "state": "CONFLICT", "resolved": False, "line_ids": "['V-G1', 'V-G0']"},
+            {"downgrade_id": "DG-A", "state": "HELD", "resolved": True, "line_ids": ["V-F1"]}]
+    snap = B.snapshot_downgrades(_verdicts(tmp_path, recs))
+    assert snap["record_count"] == 2 and snap["source_record_count"] == {"V3.0.40": 2}
+    assert [r["downgrade_id"] for r in snap["records"]] == ["DG-A", "DG-B"]
+    assert snap["records"][1]["line_ids"] == ["V-G0", "V-G1"] and snap["records"][1]["verdict_sets"] == ["V3.0.40"]
+    assert set(B.downgrades_by_line(snap)) == {"V-G0", "V-G1"}            # the resolved record holds nothing
+
+
+def test_board_comparison_skips_cleanly_without_the_board(monkeypatch, tmp_path):
+    monkeypatch.setattr(B, "BOARD_VERDICTS", tmp_path / "no-board")
+    with pytest.raises(pytest.skip.Exception):
+        test_snapshot_equals_the_board_verdict_files_when_the_board_is_present()

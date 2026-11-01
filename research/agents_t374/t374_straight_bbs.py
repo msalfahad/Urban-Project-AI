@@ -32,6 +32,10 @@ OWNER_RULE_REBAR_2026-10-24, owner option B 2026-10-29):
             treatment, booked HELD_SAME_BASIS with the record id named as the basis and the extension proposed to the
             Checker (the record itself is never edited here). Every line of that record must carry the basis too, or the
             build stops (the signature is checked against the record, not assumed).
+  T-411     the snapshot is refreshed only through snapshot_downgrades() (--snapshot-from); it carries each source file's
+            sha256 and record count; snapshot_drift() names every record / set that differs; a record whose state is
+            not HELD / CONFLICT (a promotion) is refused. The Checker's DG-df07eb3d6ccec0e9 (V3.0.29, issued on the
+            T-374 proposal DGP-T374-FTGM) now names the 10 R-T374-6b lines: they move HELD_SAME_BASIS -> HELD_DOWNGRADE.
 
 All lengths are handled in integer 0.1 mm units, so boundary cases read from decimal text are exact.
 
@@ -389,20 +393,30 @@ def _ids(v):
     return list(ast.literal_eval(v)) if isinstance(v, str) else list(v)
 
 
+DOWNGRADE_STATES = ("HELD", "CONFLICT")   # owner 2026-10-24 23:57 (1): a downgrade-only record moves a line DOWN only
+
+
 def snapshot_downgrades(verdicts_dir=BOARD_VERDICTS) -> dict:
     """read EVERY verdicts/V3.0.x/DOWNGRADES.json (board branch agents/control): per record its id, state, resolved,
-    basis label, unit, the verdict sets carrying it, its line ids; plus each source file's sha256. Record ids only, no
-    drawing content. A record id carried with different line ids or resolution in two sets stops the build."""
+    basis label, unit, the verdict sets carrying it, its line ids; plus each source file's sha256 and record count
+    (T-411: so the next drift names itself). Record ids only, no drawing content. A record id carried with different
+    line ids or resolution in two sets stops the build; a record whose state is not a downgrade (HELD / CONFLICT), i.e.
+    one that would PROMOTE a line, is refused by its id (T-411)."""
     verdicts_dir = Path(verdicts_dir)
     files = sorted(verdicts_dir.glob("V3.0.*/DOWNGRADES.json"),
                    key=lambda f: tuple(int(x) for x in f.parent.name[1:].split(".")))
     if not files:
         raise ScheduleRefused(f"no DOWNGRADES.json under {verdicts_dir}")
-    recs, srcs = {}, {}
+    recs, srcs, counts = {}, {}, {}
     for f in files:
         srcs[f.parent.name] = sha256(f)
-        for r in json.load(open(f, encoding="utf-8"))["downgrades"]:
+        body = json.load(open(f, encoding="utf-8"))["downgrades"]
+        counts[f.parent.name] = len(body)
+        for r in body:
             k = r["downgrade_id"]
+            if r["state"] not in DOWNGRADE_STATES:
+                raise ScheduleRefused(f"{k} in {f.parent.name}: state {r['state']} is not a downgrade "
+                                      f"({' / '.join(DOWNGRADE_STATES)}): a record may never promote a line")
             ids = sorted(_ids(r["line_ids"]))
             cur = recs.setdefault(k, {"downgrade_id": k, "state": r["state"], "resolved": r["resolved"],
                                       "basis_label": r.get("basis_label"), "unit": r.get("unit"),
@@ -414,7 +428,32 @@ def snapshot_downgrades(verdicts_dir=BOARD_VERDICTS) -> dict:
             cur["verdict_sets"].append(f.parent.name)
     return {"schema": "T374_BOUND_DOWNGRADES_V1", "candidate_of_record": CANDIDATE_OF_RECORD,
             "source": "docs/agents/verdicts/V3.0.x/DOWNGRADES.json on branch agents/control",
-            "source_sha256": srcs, "records": [recs[k] for k in sorted(recs)]}
+            "source_sha256": srcs, "source_record_count": counts, "record_count": len(recs),
+            "records": [recs[k] for k in sorted(recs)]}
+
+
+def snapshot_drift(board: dict, committed: dict) -> list:
+    """T-411: every difference between the board's downgrade records and the committed snapshot, each NAMED (record id
+    or verdict set); [] when they agree. A record on the board missing from the snapshot is the F-T328-3 case."""
+    out = []
+    b = {r["downgrade_id"]: r for r in board["records"]}
+    c = {r["downgrade_id"]: r for r in committed["records"]}
+    out += [f"record {k} on the board, missing from the snapshot" for k in sorted(set(b) - set(c))]
+    out += [f"record {k} in the snapshot, not on the board" for k in sorted(set(c) - set(b))]
+    out += [f"record {k} differs ({', '.join(f for f in sorted(set(b[k]) | set(c[k])) if b[k].get(f) != c[k].get(f))})"
+            for k in sorted(set(b) & set(c)) if b[k] != c[k]]
+    bs, cs = board.get("source_sha256", {}), committed.get("source_sha256", {})
+    out += [f"verdict set {v}: DOWNGRADES.json sha256 {str(cs.get(v))[:12]} in the snapshot, {str(bs.get(v))[:12]} on "
+            f"the board" for v in sorted(set(bs) | set(cs)) if bs.get(v) != cs.get(v)]
+    if committed.get("record_count") not in (None, len(c)):
+        out.append(f"snapshot record_count {committed['record_count']} != its {len(c)} records")
+    return out
+
+
+def check_snapshot(board: dict, committed: dict):
+    drift = snapshot_drift(board, committed)
+    if drift:
+        raise ScheduleRefused("downgrade snapshot is stale against the board: " + "; ".join(drift))
 
 
 def downgrades_by_line(snapshot) -> dict:
@@ -496,7 +535,11 @@ def check_basis_signature(lines, by_line):
 # ---------------------------------------------------------------- build
 
 def load_snapshot(path=DOWNGRADE_SNAPSHOT) -> dict:
-    return json.load(open(path, encoding="utf-8"))
+    snap = json.load(open(path, encoding="utf-8"))
+    bad = [r["downgrade_id"] for r in snap["records"] if r["state"] not in DOWNGRADE_STATES]
+    if bad:
+        raise ScheduleRefused(f"snapshot records {bad} are not downgrades: a record may never promote a line")
+    return snap
 
 
 def load_candidate(extract=EXTRACT, binding=T371_BINDING):

@@ -44,8 +44,7 @@
    "lines": 51,
    "row_status": {
     "HELD": 3,
-    "HELD_DOWNGRADE": 38,
-    "HELD_SAME_BASIS": 10
+    "HELD_DOWNGRADE": 48
    },
    "scheduled_net_kg": "0.000000",
    "candidate_released_basis_kg": "0.000000",
@@ -65,23 +64,14 @@
    ],
    "held_by_downgrade_audit_kg": {
     "HELD_DOWNGRADE": {
-     "lines": 38,
+     "lines": 48,
      "records": [
-      "DG-a97ec2ea66e02194"
+      "DG-a97ec2ea66e02194",
+      "DG-df07eb3d6ccec0e9"
      ],
      "audit_kg": [
-      "874.862227",
-      "874.862227"
-     ]
-    },
-    "HELD_SAME_BASIS": {
-     "lines": 10,
-     "records": [
-      "DG-a97ec2ea66e02194"
-     ],
-     "audit_kg": [
-      "1606.069136",
-      "1655.560494"
+      "2480.931363",
+      "2530.422721"
      ]
     }
    },
@@ -448,7 +438,7 @@
  "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json",
  "downgrade_snapshot": {
   "file": "T374_BOUND_DOWNGRADES.json",
-  "sha256": "8d3eaab2ca63ccac457ad7a0f81a67e1488e829438c265f18d4782193e88264f",
-  "unresolved_records": 20
+  "sha256": "a3596f5f8c5247cc645f1d3ee1df04eb10a6a7bf0313b46b31dcff7a8c6839c8",
+  "unresolved_records": 21
  }
 }
