@@ -1,0 +1,487 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.36",
+ "dxf_reread": {
+  "1F_winder_radials": {
+   "BE6": 1.626,
+   "BE7": 1.626,
+   "BE8": 1.259,
+   "BE9": 1.259,
+   "BEA": 1.259,
+   "BEB": 1.259
+  },
+  "2F_west_lane_equals_1F_MS2L_positions": true,
+  "2F_west_lane_lines": 11,
+  "edges_rechecked": 68
+ },
+ "file": "V3_0_36_BOQ_LINES.json",
+ "lines": 4730,
+ "other_stair_lines": {
+  "FIN.MARBLE.LANDING": [
+   {
+    "element": "GF-R31F8AE:landings",
+    "flight_id": null,
+    "line_id": "L-1983e89d8b619eade1db",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   {
+    "element": "2F-R4D1B62:landings",
+    "flight_id": null,
+    "line_id": "L-5d2be30dd8d2ffeacc42",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   {
+    "element": "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing#MATERIAL:FIN_MARBLE_LANDING",
+    "flight_id": null,
+    "line_id": "L-8011889d84788553a6b1",
+    "net": 4.9225,
+    "state": "PROVISIONAL"
+   },
+   {
+    "element": "GF-COURT#E1-LANDING",
+    "flight_id": null,
+    "line_id": "L-3dd82a576dce1beb4250",
+    "net": 5.1794,
+    "state": "SOURCE_DERIVED"
+   }
+  ],
+  "FIN.MARBLE.RISER": [
+   {
+    "element": "GF-RC99C2A:flight 1",
+    "flight_id": "SITE-735e111dcf9b22c8:F1",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 2",
+    "flight_id": "SITE-735e111dcf9b22c8:F2",
+    "line_id": "L-099fe9fcfa5667fb8b99",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 3",
+    "flight_id": "SITE-735e111dcf9b22c8:F3",
+    "line_id": "L-2efa4a4f4cc2aad9a2f2",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 4",
+    "flight_id": "SITE-735e111dcf9b22c8:F4",
+    "line_id": "L-16e0c6682725260f28e7",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-R31F8AE:flight 1",
+    "flight_id": "SITE-3759f2457b22cb4a:F1",
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-R31F8AE:flight 2",
+    "flight_id": "SITE-3759f2457b22cb4a:F2",
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 1",
+    "flight_id": "SITE-a95bf979baf4cfae:F1",
+    "line_id": "L-1e36bc3c0893eeeb9c58",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 2",
+    "flight_id": "SITE-a95bf979baf4cfae:F2",
+    "line_id": "L-0f060e9951c28c4cf074",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 3",
+    "flight_id": "SITE-a95bf979baf4cfae:F3",
+    "line_id": "L-07e0855f961a839c1277",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 4",
+    "flight_id": "SITE-a95bf979baf4cfae:F4",
+    "line_id": "L-24792292e996c57c52d9",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 5",
+    "flight_id": "SITE-a95bf979baf4cfae:F5",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 6",
+    "flight_id": "SITE-a95bf979baf4cfae:F6",
+    "line_id": "L-f24a09f1b4117814e4c8",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "2F-R4D1B62:flight 1",
+    "flight_id": "SITE-d7254c68fd33723d:F1",
+    "line_id": "L-7adf1ccd0c407b61221a",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "2F-R4D1B62:flight 2",
+    "flight_id": "SITE-d7254c68fd33723d:F2",
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-COURT#E1-RISERS",
+    "flight_id": null,
+    "line_id": "L-0afa7bd369ec489ebfc2",
+    "net": 1.96,
+    "state": "SOURCE_DERIVED"
+   }
+  ],
+  "FIN.STAIR.FLIGHT": [
+   {
+    "element": "GF-RC99C2A:flight 1",
+    "flight_id": "SITE-735e111dcf9b22c8:F1",
+    "line_id": "L-30009d8eb01996ec6399",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 2",
+    "flight_id": "SITE-735e111dcf9b22c8:F2",
+    "line_id": "L-509c6af3d162ae145108",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 3",
+    "flight_id": "SITE-735e111dcf9b22c8:F3",
+    "line_id": "L-d827589991777fe63819",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-RC99C2A:flight 4",
+    "flight_id": "SITE-735e111dcf9b22c8:F4",
+    "line_id": "L-406aae9a9854e015c45e",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-R31F8AE:flight 1",
+    "flight_id": "SITE-3759f2457b22cb4a:F1",
+    "line_id": "L-a1a0ab49818d4b9621b5",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "GF-R31F8AE:flight 2",
+    "flight_id": "SITE-3759f2457b22cb4a:F2",
+    "line_id": "L-cccf54f717124cd750b3",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 1",
+    "flight_id": "SITE-a95bf979baf4cfae:F1",
+    "line_id": "L-256e8ae3e15334092b5d",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 2",
+    "flight_id": "SITE-a95bf979baf4cfae:F2",
+    "line_id": "L-a08d67ca292ab16ef9c3",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 3",
+    "flight_id": "SITE-a95bf979baf4cfae:F3",
+    "line_id": "L-54eb280b9f7bf5eda65f",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 4",
+    "flight_id": "SITE-a95bf979baf4cfae:F4",
+    "line_id": "L-23e0ff3c4f454647b2b5",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 5",
+    "flight_id": "SITE-a95bf979baf4cfae:F5",
+    "line_id": "L-c6724654ee4ccdb0c508",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "1F-R78C367:flight 6",
+    "flight_id": "SITE-a95bf979baf4cfae:F6",
+    "line_id": "L-437643d5f8553a89a0cd",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "2F-R4D1B62:flight 1",
+    "flight_id": "SITE-d7254c68fd33723d:F1",
+    "line_id": "L-0c2df36a42803126d3b9",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   },
+   {
+    "element": "2F-R4D1B62:flight 2",
+    "flight_id": "SITE-d7254c68fd33723d:F2",
+    "line_id": "L-48bb13e2f1c94d852a03",
+    "net": null,
+    "state": "BLOCKED_RFI"
+   }
+  ]
+ },
+ "readings": [
+  {
+   "basis": "GF plan, west lane; 8 hidden riser-face lines DE .. CD (+0.050), 7 treads; C5 and 485 above the cut not read",
+   "engine_flight": "SITE-3759f2457b22cb4a:F1",
+   "flight": "MS1-L",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-d4d764ae7bb07b474b6f",
+   "step_lm": 8.05,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-151d92470a81dd1c450b",
+   "tread_m2": 2.415,
+   "treads": 7,
+   "width_m": 1.15
+  },
+  {
+   "basis": "GF plan, 4 solid lines 481 .. 490",
+   "engine_flight": "SITE-3759f2457b22cb4a:F2",
+   "flight": "D1",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-f20f8544a42807c0cfcf",
+   "step_lm": 3.45,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-a4aeb32035d11684f1a2",
+   "tread_m2": 1.035,
+   "treads": 3,
+   "width_m": 1.15
+  },
+  {
+   "basis": "GF plan, RADIAL 13 lines",
+   "engine_flight": "SITE-735e111dcf9b22c8:F1",
+   "flight": "RS-C",
+   "kind": "RADIAL",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-95b9555dd144951b071e",
+   "step_lm": 13.7964,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-fa534ec5f9dc14947899",
+   "tread_m2": 4.094413,
+   "treads": 12,
+   "width_m": 1.15
+  },
+  {
+   "basis": "GF plan above the cut (RS-S +2.929 -> +4.696); 7 lines",
+   "engine_flight": "SITE-735e111dcf9b22c8:F2",
+   "flight": "RS-S",
+   "kind": "STRAIGHT",
+   "role": "PARTIAL",
+   "state": "PROVISIONAL",
+   "step_line": "L-59354cfe423b026db61a",
+   "step_lm": 6.9,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-89c84fdd4964dec8a323",
+   "tread_m2": 2.07,
+   "treads": 6,
+   "width_m": 1.15
+  },
+  {
+   "basis": "GF plan, the rest of RS-S (4 lines), bound by elimination (T-412)",
+   "engine_flight": "SITE-735e111dcf9b22c8:F3",
+   "flight": "RS-S",
+   "kind": "STRAIGHT",
+   "role": "PARTIAL",
+   "state": "PROVISIONAL",
+   "step_line": "L-fef9ec154deaec502498",
+   "step_lm": 3.45,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-0ec429f1783f1f15e700",
+   "tread_m2": 1.035,
+   "treads": 3,
+   "width_m": 1.15
+  },
+  {
+   "basis": "GF plan above the cut (RS-A +4.696 -> +5.50)",
+   "engine_flight": "SITE-735e111dcf9b22c8:F4",
+   "flight": "RS-A",
+   "kind": "STRAIGHT",
+   "role": "PARTIAL",
+   "state": "PROVISIONAL",
+   "step_line": "L-f145a2d130cba9450a24",
+   "step_lm": 3.45,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-1dac5d9b574d7608d80d",
+   "tread_m2": 1.035,
+   "treads": 3,
+   "width_m": 1.15
+  },
+  {
+   "basis": "1F plan through the reception void",
+   "engine_flight": "SITE-a95bf979baf4cfae:F1",
+   "flight": "RS-C",
+   "kind": "RADIAL",
+   "role": "SEEN_THROUGH",
+   "state": "BOUNDED_EXPOSURE",
+   "step_line": "L-3a3aabb15b187e33e3da",
+   "step_lm": null,
+   "step_state": "BOUNDED_EXPOSURE",
+   "tread_line": "L-6cf11c2d30387d0942b9",
+   "tread_m2": null,
+   "treads": 12,
+   "width_m": 1.15
+  },
+  {
+   "basis": "1F plan, west lane, 12 solid lines AC0 .. A97",
+   "engine_flight": "SITE-a95bf979baf4cfae:F2",
+   "flight": "MS2-L",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-23651ecfef77992ec8d4",
+   "step_lm": 12.65,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-65806b4d02d476603bc5",
+   "tread_m2": 3.795,
+   "treads": 11,
+   "width_m": 1.15
+  },
+  {
+   "basis": "1F plan, east lane, 11 solid lines A92 .. ABE",
+   "engine_flight": "SITE-a95bf979baf4cfae:F3",
+   "flight": "MS1-U",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-0aa47300a16de572c967",
+   "step_lm": 11.5,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-e1eb8b9a7cb92508ccc9",
+   "tread_m2": 3.45,
+   "treads": 10,
+   "width_m": 1.15
+  },
+  {
+   "basis": "1F plan, 11 lines B43 .. B4D (below the 1F cut)",
+   "engine_flight": "SITE-a95bf979baf4cfae:F4",
+   "flight": "RS-S",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "BOUNDED_EXPOSURE",
+   "step_line": "L-c955f6b3a3abca48d562",
+   "step_lm": null,
+   "step_state": "BOUNDED_EXPOSURE",
+   "tread_line": "L-ea55ed317bc4de89aec1",
+   "tread_m2": null,
+   "treads": 10,
+   "width_m": 1.15
+  },
+  {
+   "basis": "1F plan, ST-01 shaft north end: the winder turn seen down through the opening (radials BE6 / BE8 / BEA solid with companions BE7 / BE9 / BEB, layer 2)",
+   "engine_flight": "SITE-a95bf979baf4cfae:F5",
+   "flight": "MS1-T",
+   "kind": "RADIAL",
+   "role": "SEEN_THROUGH",
+   "state": "PROVISIONAL",
+   "step_line": "L-e085c168dee5fb19a7fb",
+   "step_lm": 4.7815,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-b4660de0ddd98ad0ffc2",
+   "tread_m2": 1.495,
+   "treads": 4,
+   "width_m": 1.2471
+  },
+  {
+   "basis": "1F plan, 5 lines B59 .. D22 (below the 1F cut)",
+   "engine_flight": "SITE-a95bf979baf4cfae:F6",
+   "flight": "RS-A",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "BOUNDED_EXPOSURE",
+   "step_line": "L-57202d2823270429cd80",
+   "step_lm": null,
+   "step_state": "BOUNDED_EXPOSURE",
+   "tread_line": "L-5d338389185d72a6fb16",
+   "tread_m2": null,
+   "treads": 4,
+   "width_m": 1.15
+  },
+  {
+   "basis": "2F plan, west lane: 11 solid lines at the same run positions -0.30 .. 2.70 as 1F AC0 .. A97 (137D .. 135F with hidden companions +0.050); no flight leaves 2F (T-184 R-STAIR-CONT-1)",
+   "engine_flight": "SITE-d7254c68fd33723d:F1",
+   "flight": "MS2-L",
+   "kind": "STRAIGHT",
+   "role": "SEEN_THROUGH",
+   "state": "PROVISIONAL",
+   "step_line": "L-1e88ac0d4ba0b4e8a950",
+   "step_lm": 11.5,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-79beb9688604887c59c5",
+   "tread_m2": 3.45,
+   "treads": 10,
+   "width_m": 1.15
+  },
+  {
+   "basis": "2F plan, east lane, 11 solid lines 135B .. 1386",
+   "engine_flight": "SITE-d7254c68fd33723d:F2",
+   "flight": "MS2-U",
+   "kind": "STRAIGHT",
+   "role": "OWN",
+   "state": "PROVISIONAL",
+   "step_line": "L-60fc97c4306696c74c38",
+   "step_lm": 11.5,
+   "step_state": "PROVISIONAL",
+   "tread_line": "L-07f00d5b0c4e1924aaf5",
+   "tread_m2": 3.45,
+   "treads": 10,
+   "width_m": 1.15
+  }
+ ],
+ "schema": "T425_BINDING_1",
+ "sha256": "d462203f10eb52aed0c630901ff7298397ec71483c3aa6b661fe04807ee400f2",
+ "totals": {
+  "B7-02": {
+   "double_count_removed": 3.45,
+   "folded": 1.035,
+   "held_by_name": 5.589413,
+   "valued_after": 20.01,
+   "valued_before": 27.324413
+  },
+  "B7-06": {
+   "double_count_removed": 11.5,
+   "folded": 3.45,
+   "held_by_name": 18.5779,
+   "valued_after": 67.85,
+   "valued_before": 91.0279
+  }
+ }
+}

@@ -1,0 +1,29 @@
+line_id,code,engine_flight,flight,role,engine_treads,action,before,after,delta,status,beside,cause,notes
+L-a4aeb32035d11684f1a2,B7-02,SITE-3759f2457b22cb4a:F2,D1,OWN,3,KEEP,1.035,1.035,0,DRAWING-CONFIRMED,,drawn 3 treads (R-T425-2),
+L-f20f8544a42807c0cfcf,B7-06,SITE-3759f2457b22cb4a:F2,D1,OWN,3,KEEP,3.45,3.45,0,DRAWING-CONFIRMED,,drawn 3 treads (R-T425-2),
+L-151d92470a81dd1c450b,B7-02,SITE-3759f2457b22cb4a:F1,MS1-L,OWN,7,CORRECT,2.415,3.105,0.69,DRAWING-CONFIRMED,,drawn 9 treads (R-T425-2),"engine reads 7 treads, drawn 9"
+L-d4d764ae7bb07b474b6f,B7-06,SITE-3759f2457b22cb4a:F1,MS1-L,OWN,7,CORRECT,8.05,10.35,2.3,DRAWING-CONFIRMED,,drawn 9 treads (R-T425-2),"engine reads 7 treads, drawn 9"
+L-b4660de0ddd98ad0ffc2,B7-02,SITE-a95bf979baf4cfae:F5,MS1-T,SEEN_THROUGH,4,HELD,1.495,,-1.495,HELD,1.495,"owner S-9 / C-ST-3: winder turn counts conflict (A-A 5, arch plans 4 wedges, ST p.4 3 radial + 2 straight); winders never generated, HELD",
+L-e085c168dee5fb19a7fb,B7-06,SITE-a95bf979baf4cfae:F5,MS1-T,SEEN_THROUGH,4,HELD,4.7815,,-4.7815,HELD,4.7815,"owner S-9 / C-ST-3: winder turn counts conflict (A-A 5, arch plans 4 wedges, ST p.4 3 radial + 2 straight); winders never generated, HELD",
+L-e1eb8b9a7cb92508ccc9,B7-02,SITE-a95bf979baf4cfae:F3,MS1-U,OWN,10,CORRECT,3.45,3.795,0.345,DRAWING-CONFIRMED,,drawn 11 treads (R-T425-2),"engine reads 10 treads, drawn 11"
+L-0aa47300a16de572c967,B7-06,SITE-a95bf979baf4cfae:F3,MS1-U,OWN,10,CORRECT,11.5,12.65,1.15,DRAWING-CONFIRMED,,drawn 11 treads (R-T425-2),"engine reads 10 treads, drawn 11"
+L-65806b4d02d476603bc5,B7-02,SITE-a95bf979baf4cfae:F2,MS2-L,OWN,11,KEEP,3.795,3.795,0,DRAWING-CONFIRMED,,drawn 11 treads (R-T425-2),"SITE-d7254c68fd33723d:F1 (SEEN_THROUGH, 10 treads) not valued beside this line"
+L-23651ecfef77992ec8d4,B7-06,SITE-a95bf979baf4cfae:F2,MS2-L,OWN,11,KEEP,12.65,12.65,0,DRAWING-CONFIRMED,,drawn 11 treads (R-T425-2),"SITE-d7254c68fd33723d:F1 (SEEN_THROUGH, 10 treads) not valued beside this line"
+L-79beb9688604887c59c5,B7-02,SITE-d7254c68fd33723d:F1,MS2-L,SEEN_THROUGH,10,DOUBLE_COUNT,3.45,,-3.45,SUPERSEDED,,"DOUBLE_COUNT: SEEN_THROUGH reading of MS2-L, the same physical treads valued on SITE-a95bf979baf4cfae:F2 (R-T425-1)",
+L-1e88ac0d4ba0b4e8a950,B7-06,SITE-d7254c68fd33723d:F1,MS2-L,SEEN_THROUGH,10,DOUBLE_COUNT,11.5,,-11.5,SUPERSEDED,,"DOUBLE_COUNT: SEEN_THROUGH reading of MS2-L, the same physical treads valued on SITE-a95bf979baf4cfae:F2 (R-T425-1)",
+L-07f00d5b0c4e1924aaf5,B7-02,SITE-d7254c68fd33723d:F2,MS2-U,OWN,10,CORRECT,3.45,3.45,0,DRAWING-CONFIRMED,0.345,"drawn 11 treads; 1 tread(s) 1386: going not drawn on any sheet, m2 HELD by name (beside 0.345), the other 10 valued (R-T425-2)","engine reads 10 treads, drawn 11"
+L-60fc97c4306696c74c38,B7-06,SITE-d7254c68fd33723d:F2,MS2-U,OWN,10,CORRECT,11.5,12.65,1.15,DRAWING-CONFIRMED,,drawn 11 treads (R-T425-2),"engine reads 10 treads, drawn 11"
+L-1dac5d9b574d7608d80d,B7-02,SITE-735e111dcf9b22c8:F4,RS-A,PARTIAL,3,CORRECT,1.035,1.38,0.345,DRAWING-CONFIRMED,,drawn 4 treads (R-T425-2),"engine reads 3 treads, drawn 4"
+L-f145a2d130cba9450a24,B7-06,SITE-735e111dcf9b22c8:F4,RS-A,PARTIAL,3,CORRECT,3.45,4.6,1.15,DRAWING-CONFIRMED,,drawn 4 treads (R-T425-2),"engine reads 3 treads, drawn 4"
+L-5d338389185d72a6fb16,B7-02,SITE-a95bf979baf4cfae:F6,RS-A,OWN,4,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
+L-57202d2823270429cd80,B7-06,SITE-a95bf979baf4cfae:F6,RS-A,OWN,4,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
+L-fa534ec5f9dc14947899,B7-02,SITE-735e111dcf9b22c8:F1,RS-C,OWN,12,HELD,4.094413,,-4.094413,HELD,4.094413,"Q-50 A cond: curved flight reconstructed from the plans, curved part HELD (RFI-S27)",
+L-95b9555dd144951b071e,B7-06,SITE-735e111dcf9b22c8:F1,RS-C,OWN,12,HELD,13.7964,,-13.7964,HELD,13.7964,"Q-50 A cond: curved flight reconstructed from the plans, curved part HELD (RFI-S27)",
+L-6cf11c2d30387d0942b9,B7-02,SITE-a95bf979baf4cfae:F1,RS-C,SEEN_THROUGH,12,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
+L-3a3aabb15b187e33e3da,B7-06,SITE-a95bf979baf4cfae:F1,RS-C,SEEN_THROUGH,12,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
+L-89c84fdd4964dec8a323,B7-02,SITE-735e111dcf9b22c8:F2,RS-S,PARTIAL,6,CORRECT,2.07,3.45,1.38,DRAWING-CONFIRMED,,drawn 10 treads (R-T425-2),"SITE-735e111dcf9b22c8:F3 (PARTIAL, 3 treads) not valued beside this line | engine reads 9 treads, drawn 10"
+L-59354cfe423b026db61a,B7-06,SITE-735e111dcf9b22c8:F2,RS-S,PARTIAL,6,CORRECT,6.9,11.5,4.6,DRAWING-CONFIRMED,,drawn 10 treads (R-T425-2),"SITE-735e111dcf9b22c8:F3 (PARTIAL, 3 treads) not valued beside this line | engine reads 9 treads, drawn 10"
+L-0ec429f1783f1f15e700,B7-02,SITE-735e111dcf9b22c8:F3,RS-S,PARTIAL,3,FOLDED,1.035,,-1.035,SUPERSEDED,,FOLDED: a partial reading of RS-S (3 treads); the whole drawn flight is valued once on SITE-735e111dcf9b22c8:F2 (R-T425-1),
+L-fef9ec154deaec502498,B7-06,SITE-735e111dcf9b22c8:F3,RS-S,PARTIAL,3,FOLDED,3.45,,-3.45,SUPERSEDED,,FOLDED: a partial reading of RS-S (3 treads); the whole drawn flight is valued once on SITE-735e111dcf9b22c8:F2 (R-T425-1),
+L-ea55ed317bc4de89aec1,B7-02,SITE-a95bf979baf4cfae:F4,RS-S,OWN,10,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
+L-c955f6b3a3abca48d562,B7-06,SITE-a95bf979baf4cfae:F4,RS-S,OWN,10,KEEP,,,0,BOUNDED_EXPOSURE,,not valued in the candidate (exposure / blocked); unchanged,
