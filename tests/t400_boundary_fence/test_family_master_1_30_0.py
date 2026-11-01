@@ -160,9 +160,19 @@ def test_full_census_every_written_code_and_literal_owned(docs):
     assert not set(own) & set(apart)
     written = M127._written_1_26()                      # every module on the head, nothing set aside
     assert set(T130._written_codes()) <= set(written)
-    assert T130._unowned_written(new, written) == {}
+    # T-420 (1.32.0): a code written by a module a NEWER registry version on the head accounts for (rule r3) is owned
+    # there, not here (the pattern T-246 took for the pending entry); every other written code must be owned here.
+    acc = FMC.newer_registry_modules(new, ROOT)
+
+    def _later(code, mod):
+        v = acc.get(mod)
+        if v is None:
+            return False
+        gov = json.loads((ROOT / f"rules/coverage/BOQ_FAMILY_MASTER_{v}.json").read_text(encoding="utf-8"))
+        return code in T130._owners(gov)
+    assert {c: m for c, m in T130._unowned_written(new, written).items() if not _later(c, m)} == {}
     assert T130._not_implemented_hits(new, written) == []
     lits = M127._v30x_literals()
-    assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {}
+    assert {c: p for c, p in lits.items() if c not in own and c not in apart and not _later(c, p)} == {}
     assert {c.split(".")[0] for c in lits} <= set(M127.SCAN_1_26)
     assert {c: own[c] for c in A.NEW_ITEMS} == {c: ("B10-11" if c == A.PAD else "B13-04") for c in A.NEW_ITEMS}

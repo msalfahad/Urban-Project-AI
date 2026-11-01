@@ -1,0 +1,934 @@
+{
+ "added": 80,
+ "beds": {
+  "1F-R0E919A:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-c044aeccd28ff9700c1d",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 16.34,
+   "m2_line": "L-1b28c5171d5e9df5fff8",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.83334
+   ],
+   "m3_line": "L-1a37b9a20284b5d43c6d",
+   "m3_owner": [
+    0.4902,
+    0.6536
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-R26FA0D:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-dcf7faf4848419e15fb2",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 10.151,
+   "m2_line": "L-dd1fac7bd6b527e3c091",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-2537d8e9bbcc02a38181",
+   "m3_owner": [
+    0.40604,
+    0.60906
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-R3CFCFD:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-5f19de4863fe78185308",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 19.016545,
+   "m2_line": "L-6e584f2db7b8c890fd76",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": [
+    0.0,
+    0.969844
+   ],
+   "m3_line": "L-2bd727ad5af18963fcee",
+   "m3_owner": [
+    0.570496,
+    0.760662
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-R48AA46:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-10d9448c8a1ab7d655f5",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 5.0225,
+   "m2_line": "L-59df4343b43b948f11f1",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-d052fc204af327475d0b",
+   "m3_owner": [
+    0.2009,
+    0.30135
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-R48CDA5:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-18b01c5462ec79d5efee",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 4.725,
+   "m2_line": "L-3998a6ed899cd38d9aa1",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-4ad2142aa1c80602446e",
+   "m3_owner": [
+    0.189,
+    0.2835
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-R52AC05:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-599c445f1ef8f9242ffe",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 2.646,
+   "m2_line": "L-7109dd69215af80cbcce",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-21b716533078b7c0f111",
+   "m3_owner": [
+    0.10584,
+    0.15876
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-R78C367:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-b06400d46d252f242018",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 33.711036,
+   "m2_line": "L-ebce765b8341024e776f",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    1.719263
+   ],
+   "m3_line": "L-eaa8f30545cb37cac799",
+   "m3_owner": [
+    1.011331,
+    1.348441
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-R8BDA49:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-bbca6f15c1c85094f4b9",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 5.0225,
+   "m2_line": "L-f0fc0bd0d53cd16b1499",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-8067c0be0645790208f8",
+   "m3_owner": [
+    0.2009,
+    0.30135
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-RB72F22:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-d32b451c37e87c191a4b",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 19.05,
+   "m2_line": "L-3d8b2de963f582606978",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.97155
+   ],
+   "m3_line": "L-df07af4dda9e862fcc9d",
+   "m3_owner": [
+    0.5715,
+    0.762
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-RED0D19:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-5161f80a62f58377d3c5",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 18.215001,
+   "m2_line": "L-5a68ff6f2edb57e0c770",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.928965
+   ],
+   "m3_line": "L-2a22528954348cfe8f5d",
+   "m3_owner": [
+    0.54645,
+    0.7286
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-RED23B8:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-482ab1f2a63c88c7515e",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 3.5775,
+   "m2_line": "L-46c7966580fc25a8b0c0",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-84e82fbdf76caf361086",
+   "m3_owner": [
+    0.1431,
+    0.21465
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "1F-STRIP-OP-005:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-fcf9fbf8a5145fbd7bca",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.135,
+   "m2_line": "L-5f34df19c6b246e6c9a2",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.006885
+   ],
+   "m3_line": "L-73acb02d16a6e7283a16",
+   "m3_owner": [
+    0.00405,
+    0.0054
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-STRIP-OP-006:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-05443e1e907e1a21c4a3",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.135,
+   "m2_line": "L-921488d64a1650eb4f79",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.006885
+   ],
+   "m3_line": "L-2cfe31faa23d63b519a3",
+   "m3_owner": [
+    0.00405,
+    0.0054
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-STRIP-OP-011:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-e2eb7cee560d74ae91e4",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.15,
+   "m2_line": "L-1d7b81d2558e78feecc9",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.00765
+   ],
+   "m3_line": "L-bb85c5a6ef369ddb3c52",
+   "m3_owner": [
+    0.0045,
+    0.006
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-STRIP-OP-020:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-47d54293f7a3856044e1",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.15,
+   "m2_line": "L-af0a35a8000a8b933fce",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.00765
+   ],
+   "m3_line": "L-de23b2f2e950f1271444",
+   "m3_owner": [
+    0.0045,
+    0.006
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "1F-THRESHOLD-D-1F-03:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.049,
+   "b_upper": 0.051,
+   "finish_line": "L-fcf3a49c67ae9e730028",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.15,
+   "m2_line": "L-749bb041f539d0818778",
+   "m2_state": "MEASURED",
+   "m3_drawing_bound": [
+    0.0,
+    0.00765
+   ],
+   "m3_line": "L-86fe1fd55ffd5f019980",
+   "m3_owner": [
+    0.0045,
+    0.006
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "2F-R1DB2D2:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-90c68468f3972623bd54",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 19.350001,
+   "m2_line": "L-6db952f6c20152d6ef61",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.9675
+   ],
+   "m3_line": "L-e64c279d4f59c053e0e2",
+   "m3_owner": [
+    0.5805,
+    0.774
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "2F-RE83BED:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-fcbfc323971bb21b71ec",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 5.55,
+   "m2_line": "L-86f82dc99ffb3c777418",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-93e7f9a075077c9ed7ca",
+   "m3_owner": [
+    0.222,
+    0.333
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "2F-STRIP-OP-007:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-dc5434957e2f76cc794b",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.18,
+   "m2_line": "L-22a767a2478d617ed8b8",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.009
+   ],
+   "m3_line": "L-dcd2057b1af45b1506bc",
+   "m3_owner": [
+    0.0054,
+    0.0072
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-R51E127:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-53e9fd815b28f4305ac8",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 7.875,
+   "m2_line": "L-6875a277222b29921417",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.39375
+   ],
+   "m3_line": "L-1d6187b5cbe130c765e1",
+   "m3_owner": [
+    0.23625,
+    0.315
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-R7512EA:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-195fd34c0f12929af15d",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 24.940332,
+   "m2_line": "L-bd0391517fe7634a1614",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    1.247017
+   ],
+   "m3_line": "L-aca5059199408fa8fd16",
+   "m3_owner": [
+    0.74821,
+    0.997613
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-R75FBAE:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-902e5372c7aadf158006",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 16.54964,
+   "m2_line": "L-54553a64519d5b80c4ba",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.827482
+   ],
+   "m3_line": "L-d94637fde6d101142bd8",
+   "m3_owner": [
+    0.496489,
+    0.661986
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-R8496F0:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-de8fe0958c2d8e70f42d",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 3.1325,
+   "m2_line": "L-4392f896f38ae36b94e2",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-309e534c9e69a0e9eea0",
+   "m3_owner": [
+    0.1253,
+    0.18795
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RA3AD49:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-83609efc5fdb5d38f059",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 9.630001,
+   "m2_line": "L-4dbd4c820b77d0fd8d9f",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-2b9341453af532f440a9",
+   "m3_owner": [
+    0.3852,
+    0.5778
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RB28769:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-5dda85232556c6dfc29e",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 2.36761,
+   "m2_line": "L-e1418f597e1053d9553b",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-87ef5acbbd0f2d210025",
+   "m3_owner": [
+    0.094704,
+    0.142057
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RB62B55:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-f8aa6f236cc39f08a167",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 3.375,
+   "m2_line": "L-3f489112e8d69da4a4de",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-a9d9a66ef39bd297b3cb",
+   "m3_owner": [
+    0.135,
+    0.2025
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RC99C2A:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-7625f35c503d9f8e6196",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 109.778417,
+   "m2_line": "L-20a8e714e66725ec03cc",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": [
+    0.0,
+    5.488921
+   ],
+   "m3_line": "L-77a1828643912803397f",
+   "m3_owner": [
+    3.293353,
+    4.391137
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-RD36087:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-6c40affb7d5820cb95b8",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 1.485,
+   "m2_line": "L-15771c3a0edd137fd7cd",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-ef1a214a1415b15aae85",
+   "m3_owner": [
+    0.0594,
+    0.0891
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RD6F891:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-77d9d0fe44b3460655fb",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 3.717683,
+   "m2_line": "L-602ea032e2a020b61be1",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-f0f2b9606bb5c88b8133",
+   "m3_owner": [
+    0.148707,
+    0.223061
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RDBD4F9:floor:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-ccfa789d75994a5750a5",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 4.730695,
+   "m2_line": "L-f6e4889952aad1697f0d",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-4b441d934e11e0dc0bba",
+   "m3_owner": [
+    0.189228,
+    0.283842
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RDF7D28:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-a2a7cd7bb5ac79a5ed6e",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 2.3625,
+   "m2_line": "L-2e52c175a4bc97ffeba2",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-410b5ba3307fa9d754a2",
+   "m3_owner": [
+    0.0945,
+    0.14175
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RF38DAF:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-842590c19740caf0c540",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 2.675221,
+   "m2_line": "L-67835657a7ce2ce27789",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-91e5d65e221e06e01409",
+   "m3_owner": [
+    0.107009,
+    0.160513
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-RFAD3C4:floor:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-8ae13c6843dc54f40a37",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 1.95,
+   "m2_line": "L-c5d6fcd77aa4e7b8a30b",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-6cef63554b61bc313f9e",
+   "m3_owner": [
+    0.078,
+    0.117
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "GF-STRIP-OP-010:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-a3bbe40ac52ff6f2764b",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.2,
+   "m2_line": "L-35d1cb9ab1ada042552a",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.01
+   ],
+   "m3_line": "L-e04bc22980376ee3dc6c",
+   "m3_owner": [
+    0.006,
+    0.008
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "GF-STRIP-OP-012:doorway strip:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-25915d704e8aa6e868af",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 0.15,
+   "m2_line": "L-e7bfdb0558178b422bbe",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.0075
+   ],
+   "m3_line": "L-14ee83afeb3d8d89b667",
+   "m3_owner": [
+    0.0045,
+    0.006
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "HL:FLOOR_SCOPE:TO_WET:GF:GF-OP-003-NO-OPENING:pantry:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-50307dd94f499430bd43",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 0.6,
+   "m2_line": "L-342e9c8e06ae990376c5",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": null,
+   "m3_line": "L-db4ddcc9c0dad26f3400",
+   "m3_owner": [
+    0.024,
+    0.036
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "HL:FLOOR_SCOPE:UNDER_STAIR:GF:GF-RC99C2A-UNDER-STAIR:bed": {
+   "area_status": "DRAWING-CONFIRMED",
+   "b": 0.05,
+   "b_upper": 0.05,
+   "finish_line": "L-224e2fa47fb86db548b6",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "kind": "DRY",
+   "m2": 2.07,
+   "m2_line": "L-ed23815a99ded17681f4",
+   "m2_state": "SOURCE_DERIVED",
+   "m3_drawing_bound": [
+    0.0,
+    0.1035
+   ],
+   "m3_line": "L-a691179a929d6be0fada",
+   "m3_owner": [
+    0.0621,
+    0.0828
+   ],
+   "owner_check": "CONSISTENT"
+  },
+  "HL:FLOOR_SCOPE:WET:GF:GF-PANTRY-RC06FED:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-771d52d71dc386b53d29",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 2.800001,
+   "m2_line": "L-0c31ec778a4b1ef93dc6",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-de27c912fcc3487b4410",
+   "m3_owner": [
+    0.112,
+    0.168
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "HL:FLOOR_SCOPE:WET:GF:GF-PANTRY-RC99C2A-PART:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-83b9e52902ffa5681c28",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 8.954867,
+   "m2_line": "L-1f5a2ab5c5e8131eef88",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-e42d43677f585b1be06e",
+   "m3_owner": [
+    0.358195,
+    0.537292
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  },
+  "HL:FLOOR_SCOPE:WET:GF:SITE-0a31aaa10796d33a:bed": {
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "b": null,
+   "b_upper": null,
+   "finish_line": "L-6c83b9fcaa8684a4b85b",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.WET",
+   "kind": "WET",
+   "m2": 1.1,
+   "m2_line": "L-185645a683c1080ae392",
+   "m2_state": "PROVISIONAL",
+   "m3_drawing_bound": null,
+   "m3_line": "L-e3f1ecf81479cf6bc108",
+   "m3_owner": [
+    0.044,
+    0.066
+   ],
+   "owner_check": "NOT_CHECKED (drawn build-up HELD)"
+  }
+ },
+ "beds_check": {
+  "beds": 40,
+  "by_code": {
+   "FIN.FLOOR.BED.DRY|m2": 19,
+   "FIN.FLOOR.BED.DRY|m3": 19,
+   "FIN.FLOOR.BED.WET|m2": 21,
+   "FIN.FLOOR.BED.WET|m3": 21
+  },
+  "lines": 80
+ },
+ "diff": {
+  "vs_released_v2_9": {
+   "NOT_IN_RELEASED": 3220,
+   "QUANTITY_DIFFERS": 955,
+   "SAME_QUANTITY": 635
+  },
+  "vs_v3_0_36": {
+   "ADDED": 80,
+   "SAME": 4730
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.36",
+ "method": "ARCH_TAKEOFF_V3.0.37",
+ "not_applicable_finish_lines": [
+  "L-bb09715ec8ccdd5d11a8",
+  "L-3f8fc80a79a098d4d81d",
+  "L-17a56dfafc5504f41a28",
+  "L-fee41ab88a4419e68a5c",
+  "L-a16274386ece316167c4",
+  "L-be3ae55b5aec3eca8875",
+  "L-86977fa4d8a72a6ae2dc",
+  "L-d4f6d6a2f6ef61468f55",
+  "L-ed66b38026446c4cb230",
+  "L-d624b862024252463c55",
+  "L-2621372661b2eb15b748",
+  "L-f475680e53ad96aabdaa",
+  "L-e6e75fa6443bb0c9fd6a"
+ ],
+ "outside_rows_identical_to_v3_0_36": 4730,
+ "outside_rows_sha256": "37b8f0c25e3f342c8baa5be5e29362dd5f03bd34f317827ee48b70a33e758dd7",
+ "released_default": false,
+ "task": "T-420",
+ "totals_by_kind": {
+  "DRY": {
+   "area_owner_approved": 2,
+   "beds": 19,
+   "beds_with_bound": 19,
+   "m2": 288.146,
+   "m3_drawing_bound_high": 14.5144,
+   "m3_owner_high": 11.5258,
+   "m3_owner_low": 8.6444
+  },
+  "WET": {
+   "area_owner_approved": 7,
+   "beds": 21,
+   "beds_with_bound": 0,
+   "m2": 85.5756,
+   "m3_drawing_bound_high": 0.0,
+   "m3_owner_high": 5.1345,
+   "m3_owner_low": 3.423
+  }
+ },
+ "totals_moved_by_code": {
+  "FIN.FLOOR.BED.DRY|m2": {
+   "v3_0_36": null,
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 19,
+    "released": 288.145972
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m3": {
+   "v3_0_36": null,
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 19,
+    "held_high": 11.525839,
+    "held_low": 8.644379,
+    "lines": 19,
+    "released": 0.0
+   }
+  },
+  "FIN.FLOOR.BED.WET|m2": {
+   "v3_0_36": null,
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 21,
+    "released": 85.575578
+   }
+  },
+  "FIN.FLOOR.BED.WET|m3": {
+   "v3_0_36": null,
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 21,
+    "held_high": 5.134535,
+    "held_low": 3.423023,
+    "lines": 21,
+    "released": 0.0
+   }
+  }
+ },
+ "v3_0_36_boq_lines_sha256": "d462203f10eb52aed0c630901ff7298397ec71483c3aa6b661fe04807ee400f2",
+ "v3_0_36_lines": 4730,
+ "v3_0_37_boq_lines_sha256": "733f2efbda151a5f83a71c1ac8a8b0ca6eac9b98557904b7b58caa146b5f6616",
+ "v3_0_37_lines": 4810
+}
