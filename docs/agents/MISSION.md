@@ -14,7 +14,7 @@ freelancer doing a manual takeoff. Alsenan is the training sample, not the targe
 1. V3.x is within +-3 % of the freelancer on every trade for Alsenan, AND
 2. it passes a BLIND test on a new villa that no agent has seen.
 
-**Priority order (the Lead ranks every task in this order):**
+**Priority order: SUPERSEDED by the owner follow-up directive below (same day); kept for the record.**
 1. GENERALISE: turn per-project fixes into general rules that work on any villa.
 2. MATERIALS: convert net quantities into purchase quantities (blocks, glue, mortar cement and sand, lintels, plaster
    cement and sand, tile boxes, adhesive bags, pallets).
@@ -31,6 +31,83 @@ Research-only merges with no line target are refused.
   (priority 1), never a per-project patch.
 
 **Time stamps:** take every time written to the board, run log or reports from `date -u`; never type it by hand.
+
+
+## Owner follow-up directive 2026-11-02 (supersedes the priority order and acceptance criteria above; binds every agent)
+
+**Goal B** stays: a complete, priced BOQ for any supported Kuwait villa from its drawings and approved project inputs,
+without a freelancer doing the takeoff. The training villa is the development benchmark, not the target.
+
+**Priorities (the Lead ranks every task by these; research only when it unblocks one of them):**
+- P0 SECURITY AND REGRESSION PROTECTION, before any major refactor: repository privacy and access check (owner
+  actions; nothing destructive without the owner), E1 hash protection of released V2.9 (T-467), D1-D5 meaningful
+  tests (T-462 .. T-466), the .gitignore gap (T-470), and confirmed unit / calculation defects that contaminate
+  downstream quantities (C1 T-456, C3 T-458; a C-row is P0 only once its first step has reproduced the defect).
+- P1 GENERALISATION AND VERIFICATION, two parallel streams. Generalisation: A2 config schema (T-450 part 1), A1 by
+  trade (T-449), A4 project-independent scoring (T-452). Verification: independent re-measure of concrete, then
+  reinforcement, then blockwork, then waterproofing, plaster, paint, tiles, ceilings, doors, windows, stairs and the
+  rest (T-180 as the Checker's stream, T-469 scoring), plus the BOQ completeness matrix (T-471). The aim is more
+  independently VERIFIED WHOLE LINES, not more measured lines. Remaining C-rows (T-457, T-459, T-460, T-461) here.
+- P2 MATERIALS from verified or clearly labelled provisional net quantities (T-448, T-453, T-454, T-455). A material
+  quantity is never VERIFIED just because its geometric area is.
+- P3 CONTROLLED REFACTORING AND PRICING: A3 split into small regression-tested steps (T-451); the pricing framework
+  (T-472); one status vocabulary (T-468).
+- P4 RECONCILIATION AND BLIND ACCEPTANCE: full trade-level reconciliation and acceptance before the blind villa.
+
+**A1: three classes for every project-specific correction.** (A) DRAWING-DERIVED RULE: reusable logic with tests.
+(B) DECLARED PROJECT FACT in per-project config, each with value and unit, source, drawing / document reference,
+approval status, date, affected BOQ lines, CONFIRMED or PROVISIONAL. (C) UNEXPLAINED PATCH (made only to match the
+freelancer or an earlier engine result): removed. A1 passes when the training villa runs on generic logic plus
+declared facts only. The +-0.5 % comparison is a diagnostic, not proof; a difference caused by correcting a genuine
+error is documented and Checker-approved, never forced back to a known wrong number.
+
+**Goal B acceptance (all four, per trade):**
+- A QUANTITY: (engine - reconciled reference) / reconciled reference x 100, |variance| <= 3 %, same measurement
+  boundaries and units.
+- B COST: the same formula on cost, both sides on ONE approved pricing basis, |variance| <= 3 %; a low rate never hides
+  an excessive quantity.
+- C COMPLETENESS: every expected component is VERIFIED, HELD with a reason, EXCLUDED with evidence, or reported
+  MISSING / UNMEASURED; nothing disappears silently.
+- D LINE LEVEL: line-by-line reconciliation for high-value and safety-critical items (footings, columns, ground
+  beams, suspended slabs, reinforcement, stairs, waterproofing, major openings); a right total from offsetting errors
+  fails.
+Report variance against BOTH the original freelancer workbook and the independently reconciled reference; the
+freelancer is not ground truth and every material difference carries an explanation. Zero-reference quantities,
+missing items and unmatched scope get an exception class (ZERO_REFERENCE, ENGINE_ONLY, REFERENCE_ONLY,
+SCOPE_MISMATCH), never a division by zero or a silent drop. Goal B is not complete while material HELD or UNMEASURED
+scope remains.
+
+**Completeness matrix states (per project, from its own drawings and specifications; never invented scope):**
+1 NOT_APPLICABLE (evidence), 2 APPLICABLE_VERIFIED, 3 APPLICABLE_HELD (reason), 4 APPLICABLE_UNMEASURED,
+5 POSSIBLY_APPLICABLE (clarification needed). Task T-471.
+
+**Verification record (the Checker reproduces; passing tests alone never promotes a line).** Every VERIFIED line
+carries: drawing source and revision, sheet or CAD entity reference, dimensions and units, formula, rule and rule
+version, deductions, net quantity, assumptions, independent calculation, difference from the engine, Checker decision.
+VERIFIED COMPONENT is not a VERIFIED line; VERIFIED ZERO counts only with evidence of absence.
+**Weekly metrics (headline = independently closed whole lines):** whole lines newly VERIFIED; verified quantity and
+value by trade; % of expected scope verified; HELD by reason; UNMEASURED components; high-value open conflicts;
+failed independent checks; reopened or downgraded lines.
+
+**Three layers, never merged:** (1) net engineering quantities, (2) procurement quantities from documented
+consumption rules (blocks, glue, cement / sand, adhesive, tile boxes rounded at project / material level with
+room-by-room layout and waste evidence kept, lintels, mesh and ties, membrane rolls; rebar traced through geometry,
+lengths, laps, hooks, anchorage, wastage), (3) cost from approved rates. Owner site rates are applied as owner rates
+and flagged where product or supplier confirmation is still needed; they are not universal standards.
+
+**Pricing:** a missing approved price is UNPRICED, never zero and never an invented market price. Material-only,
+labour-only, installed and subcontract rates stay separate so an installed rate is never added to its own materials.
+Owner overrides keep an audit trail. Rates and quotations live in access-controlled storage, not this repository.
+
+**Blind-test readiness, before the blind villa is spent:** project-independent intake and scoring, meaningful
+regression tests, protected frozen versions, independent verification, completeness checks, working materials,
+controlled pricing, no hidden training-villa patches, explicit exception reporting. The villa must be genuinely
+unseen. FINDING 2026-11-02 (main chat): the earlier "sealed" benchmark villa has development material in this
+repository (128 tracked paths, including BOQ and pricing folders under research/qs_wall_treatment_01), so it is
+REGRESSION ONLY, not a blind test. Protocol: admit drawings; freeze input hashes; run without viewing reference
+quantities; freeze BOQ output and engine version hashes; reconcile the reference independently; score quantity, cost,
+completeness and exceptions; publish the first pass unchanged. Later improvements are labelled POST-BLIND; the first
+result is never silently rerun and replaced.
 
 ## How accuracy is scored (never "95 % of categories pass")
 
