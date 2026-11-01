@@ -114,7 +114,13 @@ both gate leaves, street top / stop-end.
 - Registry census set-aside (tests/t284_ceiling_integration/test_family_master_1_27_0.py, test_family_master_1_29_0.py):
   the 1.26.0 pattern (a module newer than the registry is judged by the newer registry, which runs the same guards at
   full strength: test_full_census_every_written_code_and_literal_owned). No assertion was removed.
-- L4: see the handoff line (full suite on the final commit, compared with research/agents_t202/known_failures.json).
+- L4 FULL SUITE to the end (tests/ dirs in two halves + tests/test_*.py + every agents/ folder, in parallel) on
+  1237acaa (code = the final head; later commits add only summary_t400.json, the report and the maps): vs
+  research/agents_t202/known_failures.json: KNOWN 395, NEW 2 = t374 snapshot-vs-board (pre-existing F-T328-3, carried
+  by T-411, NEW on every L4 since T-328) and tests/codemap test_repository_maps_are_current (transient: the maps were
+  rebuilt while the suite ran; re-run on the final head 6a3d2e55: pass, with t400 / t399 / t284), ABSENT 1 (christiannp
+  builder passes), as on T-399. Final head: freeze 0 differing, codemap stale none, registry 1.30.0 --check clean, rules
+  manifest drift none.
 
 ## 6. Held / missing (WAITING in V3_0_35_RUN.json) and downstream
 
