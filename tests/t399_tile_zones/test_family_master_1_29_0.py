@@ -86,7 +86,17 @@ def test_written_codes_owned(docs):
 def test_pending_dropped_is_stale(docs):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = bad["pending_packages"][:-1]
-    assert any("arch_v3034" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+    probs = FMC.check(bad, root=ROOT, is_ancestor=None)
+    # T-400 (1.30.0): a NEWER registry version on the head that declares arch_v3034 accounts for it (rule r3: a
+    # superseded version is not the registry of record); then that registry must carry the dropped entry unchanged
+    # (the pattern the 1.28.0 test took for T-399). Without a newer registry the drop is stale.
+    acc = FMC.newer_registry_modules(docs[1], ROOT).get("engine/source/arch_v3034.py")
+    if acc is None:
+        assert any("arch_v3034" in p for p in probs)
+    else:
+        assert FMC._semver(acc) > FMC._semver("1.29.0")
+        gov = json.loads((ROOT / f"rules/coverage/BOQ_FAMILY_MASTER_{acc}.json").read_text(encoding="utf-8"))
+        assert docs[1]["pending_packages"][-1] in gov["pending_packages"]
 
 
 def test_pending_with_merge_commit_refused(docs):

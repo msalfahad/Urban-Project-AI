@@ -132,3 +132,28 @@ def test_adverse_an_unowned_fence_code_is_seen(docs):
     f["item_codes"] = [c for c in f["item_codes"] if c != A.WALL]
     own = _owners(bad)
     assert A.WALL not in own and A.WALL not in bad["item_codes_without_family"]
+
+
+# ------------------------------------------------------------------ the ownership census at full strength on 1.30.0
+_s127 = importlib.util.spec_from_file_location("t284_master", ROOT / "tests/t284_ceiling_integration/"
+                                               "test_family_master_1_27_0.py")
+_sys_path = list(sys.path)
+sys.path.insert(0, str(ROOT / "research" / "agents_t284"))
+M127 = importlib.util.module_from_spec(_s127)
+_s127.loader.exec_module(M127)
+sys.path[:] = _sys_path
+
+
+def test_full_census_every_written_code_and_literal_owned(docs):
+    new = docs[1]
+    T130 = M127.T130
+    own, apart = T130._owners(new), new["item_codes_without_family"]
+    assert not set(own) & set(apart)
+    written = M127._written_1_26()                      # every module on the head, nothing set aside
+    assert set(T130._written_codes()) <= set(written)
+    assert T130._unowned_written(new, written) == {}
+    assert T130._not_implemented_hits(new, written) == []
+    lits = M127._v30x_literals()
+    assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {}
+    assert {c.split(".")[0] for c in lits} <= set(M127.SCAN_1_26)
+    assert {c: own[c] for c in A.NEW_ITEMS} == {c: ("B10-11" if c == A.PAD else "B13-04") for c in A.NEW_ITEMS}

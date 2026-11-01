@@ -72,7 +72,7 @@ def moves():
                 f"{_at(V3035, r'^NEW_ITEMS = ')} NEW_ITEMS: the nine boundary codes; {_at(V3035, r'^VALUE_CODES = ')} "
                 "VALUE_CODES: only the wall plane, the physical face and the top may carry a figure; "
                 f"{_at(V3035, r'^def load_inputs')} load_inputs(): a valued component equals its terms, a held one is "
-                f"blank with its bound beside; {_at(V3035, r'^def check_fence')} check_fence(): one line per component, "
+                f"blank with its bound beside; {_at(V3035, r'^def check_boundary')} check_boundary(): one line per component, "
                 "no fence element outside the family, a gate counted once",
                 f"{_at(T400T, r'^def test_lines_added_values_and_blanks')} test_lines_added_values_and_blanks() (V400 "
                 "by hand: plane 43.200 + 13.920 = 57.120 m2, faces 85.920 m2, top 18.00 m) / "

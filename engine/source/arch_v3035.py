@@ -503,7 +503,7 @@ def changes_for(doc, l3034):
 
 
 # ================================================================================================ integrate / write
-def check_fence(lines, doc=None):
+def check_boundary(lines, doc=None):
     """on finished lines: every B13-04 line is of this piece; valued only on the value codes, MEASURED with its terms
     reproduced; every other one BLANK BLOCKED_RFI; one line per (code, element); no line outside the piece names a
     fence element; the gates appear once (G-02 by its opening line, G-01 as one held leaf line). -> summary."""
@@ -576,7 +576,7 @@ def integrate(l3034, changes, for_lead=(), doc=None):
     ceil = A3032.check_ceilings(out)
     corr = A3033.check_corrections(out)
     zones = A3034.check_zones(out)
-    fence = check_fence(out, doc)
+    fence = check_boundary(out, doc)
     brows = bind_check(doc, out) if doc else []
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
@@ -745,5 +745,5 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "NEW_ITEMS", "load_inputs",
-           "term_value", "bind_check", "changes_for", "check_fence", "integrate", "ledger_rows", "diff_rows", "write",
+           "term_value", "bind_check", "changes_for", "check_boundary", "integrate", "ledger_rows", "diff_rows", "write",
            "InputsError"]

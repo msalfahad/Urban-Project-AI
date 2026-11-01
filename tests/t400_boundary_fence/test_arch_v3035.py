@@ -257,7 +257,7 @@ def test_adverse_other_line_names_a_fence_element():
     x = next(x for x in bad if x["item_code"] == "STR.CONC.FOOTING")
     x["location"]["element_id"] = "FENCE:REAR:WALL_PLANE"
     with pytest.raises(ValueError, match="outside B13-04"):
-        A.check_fence(bad, d)
+        A.check_boundary(bad, d)
 
 
 def test_adverse_gate_counted_twice():
@@ -265,4 +265,4 @@ def test_adverse_gate_counted_twice():
     bad = copy.deepcopy(d)
     bad["checks"]["gate_ids"] = {"G-1": "FENCE_GATE_LINE", "G-2": "FENCE_GATE_LINE"}
     with pytest.raises(ValueError, match="counted once"):
-        A.check_fence(out, bad)
+        A.check_boundary(out, bad)
