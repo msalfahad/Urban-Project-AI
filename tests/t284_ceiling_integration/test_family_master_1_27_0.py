@@ -61,6 +61,21 @@ def _v30x_literals(extra=None):
     return out
 
 
+# T-400 (1.30.0): a module NEWER than this registry (declared, pending or merged, by a newer registry version on the
+# tree) is judged by that newer registry, which runs the same guards at full strength on it
+# (tests/t400_boundary_fence/test_family_master_1_30_0.py); 1.27.0 is judged on the code of its own head (the
+# set-aside the 1.26.0 test took for T-328). Without a newer registry nothing is set aside.
+def _newer_modules():
+    me = json.loads(NEW.read_text(encoding="utf-8"))
+    mine = {p.get("module") for p in list(me.get("candidate_packages") or []) + list(me.get("pending_packages") or [])}
+    return {m: v for m, v in FMC.newer_registry_modules(me, ROOT).items() if m not in mine}
+
+
+def _own_head(written):
+    newer = _newer_modules()
+    return {c: p for c, p in written.items() if p not in newer}
+
+
 NEW_CODES = {"FIN.CEILING.BULKHEAD": "B5-04", "FIN.PAINT.CEILING": "B4-06", "FIN.STAIR.SOFFIT": "B7-15",
              "FIN.DOME.SOFFIT": "B5-06"}
 
@@ -138,10 +153,10 @@ def test_every_written_code_belongs_to_one_family_with_every_v30x_prefix(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
     assert not set(own) & set(apart)
-    written = _written_1_26()
-    assert set(T130._written_codes()) <= set(written)
+    written = _own_head(_written_1_26())
+    assert set(_own_head(T130._written_codes())) <= set(written)
     assert T130._unowned_written(new, written) == {}
-    assert T130._not_implemented_hits(new, written) == []
+    assert [b for b in T130._not_implemented_hits(new, written) if b[-1] not in _newer_modules()] == []
     assert {c: own[c] for c in NEW_CODES} == NEW_CODES
     assert own["FIN.PAINT"] == "B4-06" and own["FIN.CEILING"] == "B5-01"
 
@@ -149,7 +164,7 @@ def test_every_written_code_belongs_to_one_family_with_every_v30x_prefix(docs):
 def test_every_literal_of_every_v30x_module_is_owned_or_listed_apart(docs):
     _, new = docs
     own, apart = T130._owners(new), new["item_codes_without_family"]
-    lits = _v30x_literals()
+    lits = _own_head(_v30x_literals())
     assert {c: p for c, p in lits.items() if c not in own and c not in apart} == {}
     assert {c.split(".")[0] for c in lits} <= set(SCAN_1_26)
     assert set(NEW_CODES) <= set(lits)
@@ -174,7 +189,7 @@ def test_1_27_0_governs(docs):
         T130._semver(gov["version"]) > T130._semver("1.27.0")
         and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
-    codes, fams = T130._era_exemptions(old110, new)
+    codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert {"FIN.CEILING.BULKHEAD", "FIN.STAIR.SOFFIT", "FIN.DOME.SOFFIT"} <= codes
 
 
@@ -184,7 +199,7 @@ def test_adverse_ceiling_paint_dropped_from_b4_06_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B4-06":
             f["item_codes"] = ["FIN.PAINT"]
-    assert T130._unowned_written(bad, _written_1_26()) == {"FIN.PAINT.CEILING": "engine/source/arch_v3032.py"}
+    assert T130._unowned_written(bad, _own_head(_written_1_26())) == {"FIN.PAINT.CEILING": "engine/source/arch_v3032.py"}
 
 
 def test_adverse_b5_04_back_to_not_implemented_is_refused(docs):
@@ -193,11 +208,11 @@ def test_adverse_b5_04_back_to_not_implemented_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B5-04":
             f["capability"], f["name_terms"] = "NOT_IMPLEMENTED", ["bulkhead"]
-    hits = T130._not_implemented_hits(bad, _written_1_26())
+    hits = T130._not_implemented_hits(bad, _own_head(_written_1_26()))
     assert ("B5-04", "FIN.CEILING.BULKHEAD", "engine/source/arch_v3032.py") in hits
 
 
 def test_adverse_a_stair_soffit_code_no_family_owns_is_refused(docs):
     _, new = docs
     syn = {"engine/source/synthetic_soffit.py": 'A = "FIN.STAIR.SOFFIT_X"\n'}
-    assert T130._unowned_written(new, _written_1_26(syn)) == {"FIN.STAIR.SOFFIT_X": "engine/source/synthetic_soffit.py"}
+    assert T130._unowned_written(new, _own_head(_written_1_26(syn))) == {"FIN.STAIR.SOFFIT_X": "engine/source/synthetic_soffit.py"}
