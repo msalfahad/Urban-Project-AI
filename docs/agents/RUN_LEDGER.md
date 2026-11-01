@@ -756,3 +756,72 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 10-31 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 04:16; T-385 READY (agents/task-T-385 @ f3e26422) / concrete V3.0.29 vs freelancer reconciled family by family: 525 S |
 | 10-31 03:50 | Verifier | SUCCESS | STARTED 03:50, final 04:05; T-381 Gate A PASS MERGED b25b77b2 (engine push); T-199 r2 Gate B REJECTED (narrow, not merged; candidate of re |
 | 10-31 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:35; board / Since 00:25: T-384, T-374 r2, T-381 WORKED (merged); T-199 PARTIAL (Gate B REJECTED r1 + r2 on item-co |
+
+## 2026-10-31 04:31 -> 2026-11-01 04:31 UTC (66 runs, 66 SUCCESS, 100 %)
+
+| 10-31 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 04:51; T-386 READY @ 8c5c38da / Provenance: the Alsenan 'shower 11' (and T-380's six sanitary rows) are Urban's own c |
+| 10-31 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:48; T-385 Gate A REJECTED r1 (narrow, not merged) / T-385: closure is bookkeeping: family() counts all 11 UNRESOLV |
+| 10-31 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:22; T-199 r3 READY (integration package, V3.0.30, agents/task-T-199 @ 7113660b) / Rework of the r2 registry gap on |
+| 10-31 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 06:15; T-387 READY (agents/task-T-387 @ fa26cc65) / structural ownership census on V3.0.29: 525 STR.CONC lines bound  |
+| 10-31 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:43; T-386 Gate A PASS MERGED 84283b73; T-199 r3 Gate B PASS MERGED e29f3724 (candidate of record now ARCH_TAKEOFF_ |
+| 10-31 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 07:58; T-388 READY (agents/task-T-388 @ 26228cdc) / Finishes face consistency on the candidate (V3.0.29 finish lines  |
+| 10-31 06:51 | Verifier | SUCCESS | STARTED 06:51, final 07:51; T-387 Gate A PASS MERGED 776c991c; T-388 Gate A PASS MERGED df170b8d; DGP-T374-FTGM ISSUED DG-df07eb3d6ccec0e9 |
+| 10-31 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:01; none / No claimable TODO row on the board (0 TODO; lane I rows T-246/T-284/T-310/T-314/T-328/T-350/T-353/T-363 |
+| 10-31 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:21; none / No claimable TODO row on the board (0 TODO, 0 CLAIMED; 38 QUEUED behind dependencies; READY 1 = T-388;  |
+| 10-31 07:51 | Verifier | SUCCESS | final 07:51 (single line); none (overlap guard: run session_01E6cPne5feo7nbNuvUxtcd3 active since 2026-10-31T06:51Z) / no check, no merge |
+| 10-31 08:12 | Lead | SUCCESS | STARTED 08:12, final 08:19; board / Since 04:35: T-199 r3 WORKED (Gate B PASS, candidate of record V3.0.30: formwork 1,065.833 m2 CALCULAT |
+| 10-31 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:45; T-389 READY 2d18fe52 / T-370 benchmark rows relabelled to Urban's cost record (WEB-018/019/055/060, quantities |
+| 10-31 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:01; T-389 Gate A PASS MERGED ca1d4278 (engine push) / T-389 (gate 0, T-370 provenance relabel): cost-record rows W |
+| 10-31 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 10:09; T-328 READY c8bc8af1 (integration package V3.0.31, Gate B) / Roof build-up B13-01 added to the candidate: 16 l |
+| 10-31 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 10:07; T-385 r2 READY (head 9d30a901) / Concrete reconciliation V3.0.29 vs freelancer, cause closure: residual -114.4 |
+| 10-31 09:50 | Verifier | SUCCESS | STARTED 09:50, final 09:51; none (READY 0: T-328 and T-385 r2 CLAIMED, not handed in) / light run: no Gate A / Gate B package READY, nothi |
+| 10-31 10:39 | Worker 2 | SUCCESS | STARTED 10:39, final 10:54; T-390 READY e70f1a3b / T-388 F2 face-length residuals (GF-07 -0.120, GF-08 -0.140, GF-14 -0.045 m) traced on P |
+| 10-31 10:50 | Verifier | SUCCESS | STARTED 10:50, final 11:50; none (overlap guard: run session_01E6cPnf9CkpjQpqNfyuZ2Qf active since 2026-10-31T10:50Z) / no check, no merge |
+| 10-31 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 12:48; T-391 READY 2f0dbf57 / Ground slab / ground beams vs freelancer split into named causes on an own 180-face par |
+| 10-31 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 12:11; T-392 READY (agents/task-T-392 @ fa61828f) / Drive read OK. RING-B7 0.2182 m3 LOCATED (0.2918 m2 of drawn ring |
+| 10-31 11:56 | Verifier | SUCCESS | final 11:56 (single line); T-385 r2 Gate A PASS MERGED 5f99bfc3; T-328 Gate B PASS MERGED 94d85fc7 / T-385 r2: cause closure correct (nam |
+| 10-31 12:17 | Lead | SUCCESS | STARTED 12:17, final 12:23; board / Since 08:19: T-389, T-385 r2, T-328 WORKED (Gate B PASS, candidate of record V3.0.31: roof finish 202. |
+| 10-31 12:39 | Worker 2 | SUCCESS | STARTED 12:39, final 12:58; T-396 READY (agents/task-T-396 @ 7bb3ea8f) / Boundary fence above N.G. (a MISSING category): runs 31.37 / 5.60 |
+| 10-31 12:51 | Verifier | SUCCESS | STARTED 12:51, final 13:02; T-391 Gate A PASS MERGED c3fe8ec8; T-392 Gate A PASS MERGED cc3c7f08; T-390 Gate A PASS MERGED 0de2c671 (engin |
+| 10-31 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 14:18; T-284 READY (integration package, Gate B: ARCH_TAKEOFF_V3.0.32; agents/task-T-284 @ 6c708018) / ceiling family |
+| 10-31 13:20 | Worker 1 | SUCCESS | STARTED 13:20, final 13:37; T-394 READY (agents/task-T-394 @ 490542e9) / Column reconciliation, residuals engine - freelancer traced with  |
+| 10-31 13:52 | Verifier | SUCCESS | STARTED 13:52, final 14:10; T-396 Gate A PASS MERGED e129577d; T-394 Gate A PASS MERGED e27c5d78 (engine push x2) / Drive read OK. Researc |
+| 10-31 14:42 | Worker 2 | SUCCESS | STARTED 14:42, final 14:55; T-393 READY c11cb508 / ST-01 railing split per segment: 15.953 lm drawable (4 flights + 1F turn + 2F guard; wa |
+| 10-31 14:50 | Verifier | SUCCESS | STARTED 14:50, final 15:50; none (overlap guard: run session_01E6cPncbGKSbofBRfMWrtGX active since 2026-10-31T14:50Z) / no check, no merge |
+| 10-31 15:01 | Worker 3 | SUCCESS | STARTED 15:01, final 15:14; T-395 READY (agents/task-T-395 @ de042f71) / Beam concrete BM-GF -3.554 / BM-1F +5.535 / BM-2F -1.758 m3 trace |
+| 10-31 15:20 | Worker 1 | SUCCESS | STARTED 15:20, final 15:36; T-398 READY (head c4cdf239) / stair/dome/pump concrete per piece: STAIR_DOME residual -11.383 m3 = traced -0.3 |
+| 10-31 15:58 | Verifier | SUCCESS | final 15:58 (single line); T-284 Gate B PASS MERGED 6c219179 (engine push) / Drive read OK. CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.32  |
+| 10-31 16:13 | Lead | SUCCESS | STARTED 16:13, final 16:21; board / Since 12:23: T-391, T-392, T-390, T-396, T-394 WORKED (Gate A first pass), T-284 WORKED (Gate B first  |
+| 10-31 16:40 | Worker 2 | SUCCESS | STARTED 16:40, final 16:52; T-404 READY (agents/task-T-404 @ 6a073014) / Boundary fence finishes face by face: physical faces north outsid |
+| 10-31 16:51 | Verifier | SUCCESS | STARTED 16:51, final 17:00; T-395 Gate A PASS MERGED 8cf46e7d; T-398 Gate A PASS MERGED fe6a238d; T-393 Gate A PASS MERGED 1a1925c4 (engin |
+| 10-31 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 18:29; T-397 READY (integration package, Gate B; head 36e70b2c) / ARCH_TAKEOFF_V3.0.33: 15 printed-vs-drawn column CO |
+| 10-31 17:21 | Worker 1 | SUCCESS | STARTED 17:21, final 17:37; T-403 READY (agents/task-T-403 @ 9dd5ea49) / Boundary wall below N.G., 44.07 m fence band (typical A-A on all  |
+| 10-31 17:52 | Verifier | SUCCESS | STARTED 17:52, final 17:58; T-403 Gate A PASS MERGED a72a7282; T-404 Gate A PASS MERGED 698282e4 (engine push x2) / Drive read OK. Researc |
+| 10-31 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 19:06; T-405 READY (head 6369a3e4) / Plaster corner beads (B4-09), arris by arris: interior 275.95 m.l measured on th |
+| 10-31 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:52; none (overlap guard: run session_01E6cPndCQvjwi3y2XkBbKhK active since 2026-10-31T18:51Z) / no check, no merge |
+| 10-31 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:50; T-401 READY (agents/task-T-401 @ 57d9696c) / Lift raft->roof bound to V3.0.32: pit walls 1.100 m2 MISSING (T-3 |
+| 10-31 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:37; T-402 READY 0ed26517 / 27 held beam lines read on ST7757: 0 VALUE, 8 BOUNDED (7 width conflicts 5.145..6.112 m |
+| 10-31 19:58 | Verifier | SUCCESS | final 19:58 (single line); T-397 Gate B PASS MERGED 4492fd59 (engine push) / Drive read OK. CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.33  |
+| 10-31 20:12 | Lead | SUCCESS | STARTED 20:12, final 20:21; board / Since 16:21: T-395, T-398, T-393, T-403, T-404 WORKED (Gate A first pass), T-397 WORKED (Gate B first  |
+| 10-31 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:51; T-409 READY (596d6e99) / B3-07 split into US-08 hidden profile (HELD: Alsenan skirting system not specified; p |
+| 10-31 20:52 | Verifier | SUCCESS | STARTED 20:52, final 21:05; T-402 REJECTED narrow r2; T-401 Gate A PASS MERGED 23f948bb; T-405 Gate A PASS MERGED cd1aadaf / Drive read OK |
+| 10-31 20:59 | Worker 3 | SUCCESS | STARTED 20:59, final 22:41; T-399 READY (integration package, Gate B; agents/task-T-399 @ 9668ea06) / ARCH_TAKEOFF_V3.0.34: B4-02 kitchen  |
+| 10-31 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 21:37; T-402 r2 READY (head 8f64f6e5) / GF BM-GF-059 HELD -> VALUE 0.549284 m3 (section D-D prints depth 55 + 20 = 0. |
+| 10-31 21:52 | Verifier | SUCCESS | STARTED 21:52, final 22:02; T-402 r2 Gate A PASS MERGED 1b4c18fc; T-409 Gate A PASS MERGED f721167e (CODEMAP-only conflict rebuilt) / Driv |
+| 10-31 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 22:56; T-410 READY (agents/task-T-410 @ 63d8dc37, research only) / Stair skirting B7-07/B7-08 side table, 33 stretche |
+| 10-31 22:51 | Verifier | SUCCESS | STARTED 22:51, final 23:34; T-399 GATE B PASS MERGED abf3de76; T-406 Gate A REJECTED narrow r2 / Drive read OK. CANDIDATE OF RECORD NOW AR |
+| 10-31 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:13; T-406 READY (agents/task-T-406 @ badc57a0, research only) / Concrete roll-up r3: T-385 r2 (V3.0.29 vs freelanc |
+| 10-31 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 00:10; T-407 READY (agents/task-T-407 @ 9667ad1b) / Masonry below the house exterior ground beams, run by run: neighb |
+| 10-31 23:50 | Verifier | SUCCESS | STARTED 23:50, final 23:56; T-410 Gate A REJECTED narrow r1 / Drive read OK. Research only, no quantity change (candidate V3.0.34 NOT RELE |
+| 11-01 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:23; board / Since 20:21: T-401, T-405, T-409 WORKED (Gate A first pass), T-402 WORKED r2, T-399 WORKED (Gate B fir |
+| 11-01 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 00:53; T-410 r2 READY (head 3f2b0670) / Stair skirting side table now reads the column layer S-COL.BON on every side  |
+| 11-01 00:51 | Verifier | SUCCESS | STARTED 00:51, final 00:57; T-407 Gate A PASS MERGED 8c0e8349 / Drive read OK. Research only, no quantity change (candidate V3.0.34 NOT RE |
+| 11-01 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:17; T-400 READY (integration package, Gate B; agents/task-T-400 @ 48d0b690) / ARCH_TAKEOFF_V3.0.35 on V3.0.34 (4c7 |
+| 11-01 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 02:00; T-411 READY @ a6d0f0ac / gate fix F-T328-3: t374 snapshot was missing 1 board record, DG-df07eb3d6ccec0e9 (Che |
+| 11-01 01:50 | Verifier | SUCCESS | STARTED 01:50, final 01:55; T-410 r2 Gate A PASS (narrow) MERGED 2fb91300 / Drive read OK. Research only, no quantity change (candidate V3 |
+| 11-01 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 03:35; T-414 READY @ 3439b2b4 / B3-05 floor bed per room on V3.0.34 (4c7f581c): dry 288.1458 m2 / 19 rows, bed 8.6443 |
+| 11-01 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:50; none (overlap guard: run session_01E6cPndXQB7US7RNewjLRYM active since 2026-11-01T02:51Z) / no check, no merge |
+| 11-01 03:00 | Worker 3 | SUCCESS | STARTED 03:00, final 03:45; T-406 r3 READY @ 7557c664 (narrow rework, research only) / concrete roll-up V3.0.29 vs freelancer (residual -1 |
+| 11-01 03:19 | Worker 1 | SUCCESS | STARTED 03:19, final 04:07; T-408 READY (head f5e4022a) / GF lift tie beam: 5.500 m DRAWING-CONFIRMED on the GF columns (3 sheets, unchang |
+| 11-01 04:11 | Verifier | SUCCESS | final 04:11 (single line); T-411 Gate A PASS MERGED 49026f81; T-400 GATE B PASS MERGED 0c5d526c / Drive read OK. CANDIDATE OF RECORD NOW  |
+| 11-01 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:18; board / Since 00:23: T-407, T-411 WORKED (Gate A first pass; gate 1 closed, L4 NEW 0), T-410 WORKED r2, T-400  |
