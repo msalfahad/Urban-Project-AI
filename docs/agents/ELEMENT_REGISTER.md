@@ -46,6 +46,22 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- STAIR SIDE AGAINST A COLUMN (Lead 2026-11-01 00:18; T-410 r1 verdict, Checker own read of S-COL.BON): a column face
+  standing proud of the wall line on a stair side is a WALL side for skirting (B7-07 / B7-08, owner trade FINISHES),
+  measured on the column face with its return; the same projection narrows the tread there: B7-02 tread marble (owner
+  trade FINISHES) takes the net tread width, never the flight width through the column. Every side table reads the
+  wall AND column layers.
+- STAIR EDGE ITEMS (Lead 2026-11-01 00:18; T-412): one stair edge, one item: the nosing (B7-05) on the tread front,
+  the skirting (B7-07 / B7-08) on the wall side, the guard (B7-09 / B13-08) on the open side; a landing edge is a
+  nosing position, never a tread; a winder is a tread only when drawn and dimensioned (OWNER_RULE_STAIRS_2026-10-24).
+- LIFT ENTRANCE (Lead 2026-11-01 00:18; T-413): the lift threshold is its own item (B6-07), never also a door
+  threshold (B3-04) or a transition profile (B3-07); the surround (B6-06) owns the entrance arrises, so no corner bead
+  (B4-09) is counted on them; the shaft structure stays STRUCTURE (T-401 / T-408).
+- FLOOR BUILD-UP LAYER (Lead 2026-11-01 00:18; T-414): the layer between the slab top and the floor finish is ONE item
+  per room (B3-05, owner trade FINISHES): wet rooms a cement bed (Q-41), terraces / balconies a screed (Q-41); roofs
+  belong to the roof build-up (B13-01, T-321 / T-328), the pool to T-309, foundations to T-219 / T-353, and the
+  wet-room membrane and its protection screed to B8-01 .. B8-03: never counted twice.
+
 - BELOW-GROUND MASONRY UNDER THE HOUSE GROUND BEAMS (Lead 2026-10-31 20:20; T-403 MERGED a72a7282): owner trade
   BLOCKWORK BELOW N.G., its own line per run, never inside the boundary-wall masonry (T-403 / T-400) and never inside the
   ground-beam concrete (T-391); the south run 29.97 m is MISSING in every state; height / type HELD until printed -> T-407.
