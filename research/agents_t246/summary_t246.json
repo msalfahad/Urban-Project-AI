@@ -1,0 +1,75 @@
+{
+ "by_family": {
+  "ARCH.WALL_RUN|lm": {
+   "gross": 337.848728,
+   "lines": 7,
+   "listed": 120.917667,
+   "net": 216.931061
+  },
+  "FIN.FLOOR.PORCELAIN|m2": {
+   "gross": 202.910698,
+   "lines": 2,
+   "listed": 59.421245,
+   "net": 143.489453
+  },
+  "FIN.PAINT|m2": {
+   "gross": 259.51005,
+   "lines": 4,
+   "listed": 42.3019,
+   "net": 217.2081
+  },
+  "FIN.PLASTER|m2": {
+   "gross": 259.51005,
+   "lines": 4,
+   "listed": 42.3019,
+   "net": 217.2081
+  },
+  "FIN.SKIRTING|lm": {
+   "gross": 254.959095,
+   "lines": 10,
+   "listed": 74.842439,
+   "net": 180.116658
+  },
+  "FIN.WALL.TILE|m2": {
+   "gross": 374.27355,
+   "lines": 12,
+   "listed": 33.97,
+   "net": 340.3038
+  }
+ },
+ "candidate_v3_0_35_sha256": "b011bace (reproduced)",
+ "lines": 4730,
+ "quantity_moved": 0,
+ "rows_relisted": 39,
+ "set_aside": [
+  "L-eb3be58fc760b39f0e38",
+  "L-fc116bb666b184740090"
+ ],
+ "t330_v3_0_35": {
+  "flagged": 45,
+  "ok": 74,
+  "refused": 0
+ },
+ "t330_v3_0_36": {
+  "flagged": 6,
+  "ok": 113,
+  "refused": 0
+ },
+ "totals_moved_by_code": {},
+ "v3_0_36_boq_lines_sha256": "d462203f10eb52aed0c630901ff7298397ec71483c3aa6b661fe04807ee400f2",
+ "window_rows": {
+  "CONSISTENT|W09": 2,
+  "CONSISTENT|W15": 2,
+  "CONSISTENT|W16": 2,
+  "UNRESOLVED|W02": 2,
+  "UNRESOLVED|W04": 2,
+  "UNRESOLVED|W11": 2,
+  "UNRESOLVED|W12": 2,
+  "UNRESOLVED|W13": 2,
+  "UNRESOLVED|W14": 2,
+  "UNRESOLVED|W17": 2,
+  "UNRESOLVED|W24": 2,
+  "UNRESOLVED|W25": 2,
+  "UNRESOLVED|W29": 2
+ }
+}
