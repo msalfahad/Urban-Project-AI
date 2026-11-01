@@ -721,7 +721,7 @@
     "engine/source/arch_measure.py:381 FIN.FLOOR.PORCELAIN per dry room",
     "commit c1f0467 (T-113, verifier run 40): first-floor living +16.3 % HAND_RIGHT (stair void residue)",
     "commit 4ae3a68 (T-122, verifier run 45): first-floor porcelain 33.594 .. 33.711 m2 under owner Q-66 B (research)",
-    "engine/source/arch_v3038.py:79 NEW_ITEMS: FIN.FLOOR.FINISH_HELD (a floor-finish area, material HELD by name); engine/source/arch_v3038.py:818 check_landing(): a stair-room floor part leaves its landing bound in the same version; tests/t421_stair_lift_integration/test_arch_v3038.py:219 (R-T418-1 adverse)"
+    "engine/source/arch_v3038.py:79 NEW_ITEMS: FIN.FLOOR.FINISH_HELD (a floor-finish area, material HELD by name); engine/source/arch_v3038.py:823 check_landing(): a stair-room floor part leaves its landing bound in the same version; tests/t421_stair_lift_integration/test_arch_v3038.py:219 (R-T418-1 adverse)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.FLOOR.PORCELAIN",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0 stair-residue piece (merged b1a6d6d)",
@@ -2366,7 +2366,7 @@
    "source_needed": "plans",
    "next_slice": "S3",
    "evidence": [
-    "engine/source/arch_v3038.py:480 _station_lines(): threshold m2 + front edge m.l per landing door; engine/source/arch_v3038.py:763 check_lift(): one threshold quantity per station (band listed without a quantity, floor deducts the certain part)",
+    "engine/source/arch_v3038.py:480 _station_lines(): threshold m2 + front edge m.l per landing door; engine/source/arch_v3038.py:768 check_lift(): one threshold quantity per station (band listed without a quantity, floor deducts the certain part)",
     "tests/t421_stair_lift_integration/test_arch_v3038.py:154 test_each_threshold_counted_once() (K421 by hand: 0.90 x 0.50 = 0.450 m2, floor part 0.225 certain)"
    ],
    "released_method_reads": "none",

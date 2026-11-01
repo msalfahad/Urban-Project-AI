@@ -664,6 +664,11 @@ def changes_for(doc, l3037):
             u = doc["_b_upper"].get(p["zone"])
             bh = u["b"] if u else b
         m2, m3, dbound = _bed_pair(ln, "DRY", p["zone"], b, bh, owner, srcs, p["area_status"])
+        for x in (m2, m3):
+            x["calculation"]["inputs"][REC_KEY] = _rec(P_BED, srcs, action="ADD_BED", finish_line=ln["line_id"],
+                                                       part=part, evidence_status=x["calculation"]["inputs"][
+                                                           "evidence_status"])
+            _fin(x)
         held = [{"what": f"{m3['item_code']} {m3['location']['element_id']} drawn layer", "why": dbound["missing"][:300],
                  "range": ([dbound["low"], dbound["high"]] if dbound["high"] is not None else None),
                  "scenario": "drawing bound beside the owner range"}]
@@ -896,7 +901,7 @@ def ledger_rows(changes, released_lines=None):
     rows = []
     for c in changes:
         ref = c["after"]
-        rec = ref["calculation"]["inputs"][REC_KEY]
+        rec = ref["calculation"]["inputs"].get(REC_KEY) or {}
         b29 = None
         if released_lines is not None:
             b29 = A30._qty(rel[A30._key(ref)]) if A30._key(ref) in rel else dict(A30._qty(None),

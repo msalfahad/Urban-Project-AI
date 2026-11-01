@@ -437,7 +437,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3035.py` | 760 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.35 (T-400): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.34 (engine.source.arch_v30, |
 | `arch_v3036.py` | 474 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.36 (T-246): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.35 (engine.source.arch_v30, |
 | `arch_v3037.py` | 613 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.37 (T-420): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.36 (engine.source.arch_v30, |
-| `arch_v3038.py` | 1011 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.38 (T-421): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.37 (engine.source.arch_v30, |
+| `arch_v3038.py` | 1016 | MEDIUM | 3 | ARCH_TAKEOFF_V3.0.38 (T-421): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.37 (engine.source.arch_v30, |
 | `arch_v304.py` | 539 | HIGH | 50 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v305.py` | 515 | HIGH | 35 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
 | `arch_v306.py` | 700 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.6 (T-187): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.5 (engine.source.arch_v30, |
