@@ -1,0 +1,344 @@
+{
+ "bare_area_constructions_tried": 66,
+ "bare_area_misfits_m2": [
+  {
+   "construction": "ARCH p.1 area-table pieces 1+2+3+5",
+   "misfit_m2": 0.27,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+2+3+5+6",
+   "misfit_m2": 0.73,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+3+4",
+   "misfit_m2": 1.08,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+3+4+6",
+   "misfit_m2": 1.54,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+2+3+6",
+   "misfit_m2": -4.14,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+2+3",
+   "misfit_m2": -4.6,
+   "reproduces": false
+  },
+  {
+   "construction": "drawn network outline offset by the printed projection 0.10",
+   "misfit_m2": 5.172102,
+   "reproduces": false
+  },
+  {
+   "construction": "ARCH p.1 area-table pieces 1+3+4+5",
+   "misfit_m2": 5.95,
+   "reproduces": false
+  }
+ ],
+ "faces": {
+  "band0038": {
+   "length_m": 0.789,
+   "line": "L-970bac563cbcd69e2a30",
+   "net_plan_m2": 0.23669,
+   "value_m3": 0.071008
+  },
+  "court": {
+   "band_faces_end_on_arc158_mm": {
+    "177": 0.0,
+    "7CD": 0.0
+   },
+   "band_width_m": 0.3,
+   "face": "OWN-006",
+   "own_48chord_m2": 13.4514,
+   "own_true_arc_m2": 13.447443,
+   "pieces_true_arc_m2": [
+    10.905052,
+    2.050202,
+    0.492189
+   ]
+  },
+  "engine_m2": {
+   "0caa2bd2": 2.050202,
+   "3f7728a8": 2.615573,
+   "49a7dae5": 3.597683,
+   "c1b4b440": 2.244696,
+   "d74f3fe2": 10.905052
+  },
+  "f18": {
+   "band_width_m": 0.3,
+   "face": "OWN-018",
+   "face_181_gap_to_band_face_m": 0.0781,
+   "face_181_length_m": 1.2786,
+   "own_m2": 3.834377,
+   "panel_closed_m2": 3.507683,
+   "parallel_face": [
+    {
+     "handle": "180",
+     "length_m": 0.789
+    }
+   ],
+   "strip_closed_to_face_m2": 0.326694,
+   "strip_square_end_m2": 0.3206
+  },
+  "lift": {
+   "OWN-022": {
+    "edge_handles": [
+     "17F",
+     "1EF",
+     "7C2",
+     "7CD",
+     "7E6"
+    ],
+    "own_m2": 2.72116
+   },
+   "OWN-025": {
+    "edge_handles": [
+     "17E",
+     "182",
+     "1EF",
+     "7C2",
+     "7C8"
+    ],
+    "own_m2": 2.25338
+   }
+  }
+ },
+ "network": {
+  "chord_segments_m2": {
+   "139": 0.000237,
+   "13A": 0.00014,
+   "157": 0.004552,
+   "158": 0.004227
+  },
+  "faces_along_arc": {
+   "139": [
+    "OWN-002",
+    "OWN-040",
+    "OWN-069",
+    "OWN-073",
+    "OWN-137",
+    "OWN-138",
+    "OWN-148",
+    "OWN-165",
+    "OWN-171"
+   ],
+   "13A": [
+    "OWN-002",
+    "OWN-073",
+    "OWN-137"
+   ],
+   "157": [
+    "OWN-028",
+    "OWN-039",
+    "OWN-157",
+    "OWN-161",
+    "OWN-163"
+   ],
+   "158": [
+    "OWN-006",
+    "OWN-028",
+    "OWN-102",
+    "OWN-133",
+    "OWN-134",
+    "OWN-156",
+    "OWN-158",
+    "OWN-162"
+   ]
+  },
+  "offset_0p10_m2": 300.672102,
+  "own_48chord_m2": 289.113406,
+  "own_true_arc_m2": 289.113643
+ },
+ "schema": "T436_SUMMARY_V1",
+ "stair_zone": {
+  "area_m2": 8.372326,
+  "class": {
+   "area_m2": 8.372326,
+   "class": "SLAB",
+   "status": "DRAWING-CONFIRMED",
+   "why": "flight drawn hidden (above the plan), no void / pit / stair base, floored space"
+  },
+  "edge_handles": [
+   "17D",
+   "7CF",
+   "7DC",
+   "7E1"
+  ],
+  "face": "OWN-011",
+  "foundation_plan_below": [
+   {
+    "column_outlines_inside": [
+     "10E0",
+     "10E4"
+    ],
+    "handle": "1B1A",
+    "layer": "S-FOOTINGS",
+    "under_panel_m2": 2.25
+   }
+  ],
+  "layer2_inside": [
+   {
+    "handle": "160",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "161",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "162",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "163",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "164",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "165",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "166",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "167",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "168",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "LINE"
+   },
+   {
+    "handle": "169",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "ARC"
+   },
+   {
+    "handle": "16A",
+    "layer": "2",
+    "linetype": "HIDDEN",
+    "type": "ARC"
+   }
+  ],
+  "other_inside": [
+   {
+    "handle": "B3",
+    "layer": "DEFPOINTS",
+    "linetype": "CONTINUOUS",
+    "type": "LWPOLYLINE"
+   },
+   {
+    "handle": "24E",
+    "layer": "S-TEXT",
+    "linetype": "CONTINUOUS",
+    "type": "TEXT"
+   },
+   {
+    "handle": "165A",
+    "layer": "S-TEXT",
+    "linetype": "CONTINUOUS",
+    "type": "TEXT"
+   }
+  ]
+ },
+ "subparts": {
+  "GS-BEYOND-NETWORK": [
+   {
+    "cause": "his bare plate area beyond the drawn network (true arcs): no construction tried reproduces it",
+    "id": "B-HIS",
+    "m3": -0.6386163,
+    "verdict": "UNRESOLVED"
+   },
+   {
+    "cause": "own-read chord segments of the network boundary arc 139 left out of the T-391 network",
+    "id": "B-CHORD",
+    "m3": -2.37e-05,
+    "verdict": "ENGINE_RIGHT"
+   }
+  ],
+  "GS-FACES": [
+   {
+    "cause": "drawn 0.30 diagonal band stub (faces 181 + the panel's diagonal face) the T-391 partition merged into OWN-018 because face 181 stops short of the band face; the beam owns it, his plate covers it",
+    "id": "F-018-STRIP",
+    "m3": -0.0326694,
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "cause": "engine deducts the stub as short face x 0.30, leaving the two 45 degree end triangles in the slab face",
+    "correction_owner": "lane I (Worker 3): stub BAND0038 net plan to the drawn faces, slab face 49a7dae5 to the closed panel",
+    "id": "F-018-ENDS",
+    "m3": 0.009,
+    "verdict": "ENGINE_WRONG"
+   },
+   {
+    "cause": "drawn band 177 / 7CD (C9 to the ring) whose faces end on arc 158; the T-391 48-chord arc did not node them, so the strip was read as panel; the engine stops the panels at the band faces",
+    "id": "F-006-STRIP",
+    "m3": -0.0492189,
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "cause": "own-read chord segments of arc 158 counted in OWN-006; the engine panels equal the true-arc panels",
+    "id": "F-006-CHORD",
+    "m3": -0.0003957,
+    "verdict": "ENGINE_RIGHT"
+   },
+   {
+    "cause": "two panels against the lift ring 7C2 and the oblique band 17E / 17F: both own faces are closed by drawn lines; the engine cell outlines are not in any committed output",
+    "id": "F-LIFT",
+    "m3": -0.0114272,
+    "verdict": "UNRESOLVED"
+   },
+   {
+    "cause": "T-391 own areas carried to 0.0001 m2 (exact figures above)",
+    "id": "F-ROUND",
+    "m3": 1.12e-05,
+    "verdict": "AGREE"
+   }
+  ],
+  "GS-STAIR-ZONE": [
+   {
+    "cause": "slab on grade under the GF curved flight foot dropped whole as a stair zone; the flight is drawn above it (hidden), founded on a ground beam, with no void, pit or stair base",
+    "correction_owner": "lane I (Worker 3): a GS line for cell 4df8fcd9 at the drawn panel x T",
+    "id": "S-PANEL",
+    "m3": -0.83723,
+    "verdict": "ENGINE_WRONG"
+   }
+  ]
+ },
+ "t428_parts_m3": {
+  "GS-BEYOND-NETWORK": -0.63864,
+  "GS-FACES": -0.0847,
+  "GS-STAIR-ZONE": -0.83723
+ }
+}
