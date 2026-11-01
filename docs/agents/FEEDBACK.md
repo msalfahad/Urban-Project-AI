@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-01 16:15 (since 12:20)
+
+- T-428 concrete roll-up r4: WORKED (first pass; Checker reproduced r3 -> r4 by family delta, O-T428-1 ruled). Decision: T-433 TODO on the r4 HELD -116.428339 m3; the 9 no-owner unexplained parts (-2.594514 m3) become T-436 (ground slab -1.560570) and T-437 (other -1.033946).
+- T-434 winder turn: WORKED (first pass; Checker own section raster 0.1667 m / riser). Decision: lane I items into T-429 (same family); subdivision to the designer list D-67.
+- T-421 stair-room floors + lift marble (Gate B): WORKED (first pass, V3.0.38). Decision: T-429 TODO first in lane I.
+- T-432 ST-02 length basis: WORKED (first pass; result UNRESOLVED by evidence, which met the acceptance). Decision: the worker's second-drawing conflict (27 vs 28 risers) becomes T-438 and D-68 (draft, not for sending).
+- T-435 ceiling / skirting join: READY (not classified until the verdict). Provisional: T-431 acceptance creates the dining ceiling line; T-439 / T-440 / T-441 opened from its findings.
+- Recurring cause (new): a dependent row stays QUEUED for up to 4 h after its dependency merges (Worker 1 idle 15:21). Decision: keep 3-4 independent TODO in lanes S and A; the claim-on-dependency rule is a main-chat item.
+
 ## Recurring causes (lead 2026-10-20 10:20)
 
 1. **Merged pieces not wired into the released run** (still the main reason released numbers do not move): beam fix,

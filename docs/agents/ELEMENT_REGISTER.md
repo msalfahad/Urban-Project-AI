@@ -46,6 +46,25 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- MAIN STAIR GF WINDER TURN (Lead 2026-11-01 16:15; T-434 MERGED a6b325b3): the turn between the GF landing front
+  (2C6 / face 49D) and the straight 1F-bound flight is ONE element of 5 risers (section A-A governs by Q-46 A; the plans'
+  4-riser fans and the ST p.4 12+4 reading are checks that failed, recorded with their reason). OWNER TRADE STAIRS
+  FINISHES (B7) for the 5 treads / 5 nosings / turn marble; STAIRS CONCRETE for the waist under it (lane S lines list it
+  without a finish quantity). Subdivision not drawn: 4 winder fronts and the turn marble HELD (D-67), 4.144 lm / 1.495 m2
+  beside; landing nosing 1.150 lm DRAWING-CONFIRMED. The 1F F5 reading of the same turn (L-b4660de0ddd98ad0ffc2, 4
+  treads) is the turn seen from 1F: ENGINE_WRONG -1 piece, HELD. Lane I: T-429.
+- CURVED STAIR ST-02 STRAIGHT PART (Lead 2026-11-01 16:15; T-432 MERGED 8a0164b2, worker finding not yet
+  Checker-verified): CONFLICT between the architectural GF frame (27 risers, RS-S 2.950 + one 0.250 tread, landing 1.250
+  x 1.450, RS-A 4) and ST p.4 / architectural 1F (28 risers, RS-S 3.000, landing 1.150 x 1.200, RS-A 1.200). Owner
+  trades unchanged (STAIRS CONCRETE waist; STAIRS FINISHES treads); no line moves until T-438 names a governing drawing
+  or holds the parts (D-68 draft). The freelancer's ST-02 length 16.4 m stays UNRESOLVED (typed constant; no stated
+  construction within 0.05 m).
+- FLOORED SPACE DERIVED LAYERS (Lead 2026-11-01 16:15; T-435 READY ab99f50b, PROVISIONAL until its Checker verdict):
+  every floored space owns exactly one ceiling owner and one skirting owner, or a drawing reason citing an existing line
+  of another family; a space with neither is a SILENT OMISSION in m2 / lm (never 0). GF dining piece GF-RFD4E1D: ceiling
+  OWNER TRADE CEILINGS (dining class; T-431 creates the line); GF pantry strips (1.100 / 0.600 m2): owner open, T-439;
+  wet pantry faces inside skirting L-71e2e002: owner WALL TILE if Q-37 A puts them wet, T-440; stair-room floor parts:
+  skirting owner SKIRTING on the blocked parents, wall-face lm T-441.
 - GB RUN BETWEEN FOUNDED SUPPORTS (Lead 2026-11-01 12:20; T-426 MERGED 1f298735, T-416 MERGED b7bb914a): a ground-beam
   element is the run between two founded supports (columns AND founded necks, read on every plan frame); its section
   class comes from the ST p.13 title for THAT run's span, never from the band it is drawn in nor borrowed from a
