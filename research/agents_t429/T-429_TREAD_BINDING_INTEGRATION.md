@@ -149,7 +149,10 @@ code; held = blank with its reason; per flight and code at most one valued line)
   (L-2efa4a4f4cc2aad9a2f2), are readings of the same SEEN_THROUGH / PARTIAL flights; they carry no figure today, so no
   quantity is at stake, but by R-T425-1 they should take the same disposition before any of them is valued. Not in the
   Checker's verdicts: left unchanged.
-- ST-02 straight-part drawing conflict (T-432 / T-438): not settled here; no RS-S / RS-A line moved on it.
+- ST-02 straight-part drawing conflict (T-432 / T-438): not settled here; no RS-S / RS-A line moved on it. Cross-check:
+  T-438 (merged into the working branch 63f77c1d during this run, research only) reads the straight part as one stair
+  governed by the 1F plan + ST p.4 and CONFIRMS the T-425 carriers wired here: RS-S 10 treads 3.450 m2, RS-A 4 treads
+  1.380 m2 / 4.600 lm (its s.5). No figure here changes on it.
 
 ## 8. Engine vs freelancer (quantities only; T-425 s.4, T-434; workbooks not re-opened)
 
