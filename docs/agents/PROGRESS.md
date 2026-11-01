@@ -1,10 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-01 00:20 UTC (Lead). Previous version: 2026-10-31 20:20 UTC. The released numbers did not change
+Last update: 2026-11-01 04:15 UTC (Lead). Previous version: 2026-11-01 00:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.34 (not released): it adds the kitchen / laundry / pantry wall-tile
-zones.
+released: 0. The candidate under review is now V3.0.35 (not released): it adds the boundary fence and its gates.
+
+Since 1 Nov 00:20 (newest first; four checked and merged, one of them an integration into the candidate; three handed
+in and waiting for the checker):
+- Boundary fence and gates INTO THE CANDIDATE: CHECKED AND MERGED on the first pass (V3.0.35). 40 lines added, 1 changed,
+  every other line identical. Fence wall 97.97 m2 (31.37 m x 2.65 m printed height + 5.60 m x 2.65 m), its two faces
+  83.13 + 82.07 m2, top 31.37 m; the checker measured each himself and agrees. The freelancer has 74.40 m2 because he
+  used a lower height than the printed 2.65 m (engine right). Block layers, finishes, footing pads, the masonry below
+  ground (at least 17.63 m2) and the two gates stay held, each with its missing fact named. One gate is the same
+  opening as a ground-floor door that no line counted: it is now counted once.
+- A red test that every full test run showed since 29 Oct: FIXED and merged (it concerned a stored copy of the
+  checker's records, not a quantity: 0.000 kg of reinforcement moved).
+- Stair skirting: CHECKED AND MERGED on the second pass. Landings 2.40 m.l measured (column faces now counted); the
+  sloping stretches are 23.77 m.l stepped or 17.36 m.l straight, the form held until it is specified.
+- Block below the house ground beams: CHECKED AND MERGED. Neighbour side at least 11.39 m2; the annex side held; street
+  and sea sides unknown, never 0; the freelancer has no row for it.
+- Handed in, not yet checked: floor bed / screed per room (dry rooms 288.15 m2, wet rooms 85.58 m2; installed volume
+  12.07 .. 16.66 m3 on your bed-thickness answer, the drawing allows up to 14.30 m3 in the dry rooms; the freelancer has
+  no row); the lift tie beam (5.50 m, in no line, its section not printed); the concrete roll-up correction.
+- Found: the ground-floor entrance / stair hall and the second-floor stair lobby have no floor-finish line (about 16.5 m2
+  and 7.7 m2 by the freelancer's figures): a new task measures them. The three largest unexplained concrete differences
+  against the freelancer each have a task now: the curved stair (-3.97 m3), ground-beam lengths (-3.01 m3) and the main
+  stair flight (-2.02 m3).
+- Next: skirting deductions listed with their openings into the candidate; then floor bed lines, lift tie beam and the
+  block below the house beams into the candidate; stair nosing and tread / riser counts; lift door marble.
 
 Since 31 Oct 20:20 (newest first; five checked and merged, one of them an integration into the candidate; two sent
 back for a small correction; one handed in and waiting for the checker):

@@ -45,6 +45,23 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-11-01 04:15 (lead run; covers 00:20 - 04:15)
+
+- T-407 (S, masonry below the house ground beams): WORKED (Gate A PASS 8c0e8349; neighbour side AT_LEAST 11.389 m2, annex
+  HELD D-35, street / sea UNKNOWN). Decision: lane I row T-419 (with the lift tie beam); O-T407-1 frame ranges -> T-416;
+  O-T407-2 (personal data in a frozen tracked test file) -> owner, NEEDS FIXING.
+- T-410 (A, stair skirting): PARTIAL r1 -> WORKED r2 (2fb91300; landings 2.400 lm DRAWING-CONFIRMED, form HELD ORR-007).
+  Decision: lessons row ADOPTED; lane I row with T-246 skirting later; piece census in T-412.
+- T-411 (S, gate 1 fix t374 snapshot): WORKED (49026f81; L4 single-process NEW 0, 0.000 kg moved). Decision: lessons row
+  adopted (snapshot carries shas + counts); never run L4 halves concurrently.
+- T-400 (I, boundary fence into V3.0.35): WORKED (Gate B first pass 0c5d526c; 40 added, 1 changed; fence plane 97.9705 m2
+  vs freelancer 74.40 ENGINE_RIGHT on height). Decision: T-246 next in lane I on V3.0.35.
+- T-406 r3, T-408, T-414: READY, not yet judged (READY 3 = target). T-414 found the GF entrance / stair hall and 2F stair
+  lobby with no floor-finish line: new T-418 (gate 2 silent omission); its bed lines -> T-420 after merge. T-406's three
+  largest unexplained parts -> T-415 (ST-02 -3.974), T-416 (G.B length -3.008), T-417 (ST-01 -2.016 m3).
+- Process: Worker 3 wrote T-406 r3 READY 03:40 / final line 03:45 at 03:06 (stamp ahead of the clock again): corrected on
+  the board; the prompt wording stays a main-chat item.
+
 ## 2026-11-01 00:20 (lead run; covers 20:20 - 00:20)
 
 - T-401 (S, lift raft -> roof): WORKED (Gate A PASS 23f948bb). Decision: T-408 TODO (tie beam / rings / cap into lines).
@@ -285,11 +302,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-224 r1 PARTIAL (REJECTED narrow: free-edge web width a convention labelled DRAWING-CONFIRMED). Rework r2 CLAIMED by worker 1; F-T224-C1 (hatches cut by slab-tag circles) -> NEW T-323.
 - T-321 (roof build-up) READY: no roof layer printed anywhere; falls-layer trade CONFLICT Q-41 vs Q-45 ruled by the Lead (one SCREED volume; Q-45 = mix); F-T321-02 (1.400 m boundary parapet) -> T-319.
 - Recurring cause (new): a ledger searched one line family and called a component NO_LINE (T-313 r1). Decision: every ledger task row now asks for a search over every family by physical element before NO_LINE (lessons register 2026-10-28).
-
-## 2026-10-28 20:20 (lead run; covers 2026-10-26 06:15 - 2026-10-28 20:15, of which about 60.5 h had no agent run)
-
-- T-311 (parapets / plinth as physical elements): READY 20:09, Gate A pending (classification next run). Handoff reviewed: element defined run by run, 46 components each to one trade, DOUBLE 0, parapet RC 8.040 .. 20.081 m3 MISSING from every line, material HELD (Q-65 C), heights as printed; nothing assumed, so nothing sent back; one gap: the worker's full suite was NOT completed (lock window) -> the Checker runs it to the end before any PASS. Decision: NEW T-319 (lane I parapet RC line), T-199 acceptance (parapet formwork 81.589 .. 202.782 m2), register rows.
-- T-244 (Gate B, V3.0.20) and T-312 (Gate A): still READY, 62 h, delay cause CHECKER-RUNS (outage). Decision: first and second in the VERIFIER QUEUE; Checker run 19:51 in progress.
-- T-313: re-claimed by worker 2 at 19:44 after the stale 26 Oct claim (no branch had been pushed). Decision: none needed.
-- New missing-category pieces: T-320 (backfill / disposal displacement ledger, NET of the T-170 overlaps), T-321 (roof build-up layer ledger incl. the unmeasured main roof outline).
-- PARTIAL / FAILED: none classified (nothing reached a verdict). UNCLOSED runs: Worker 1 2026-10-26 06:24 and Worker 2 06:40 = INCOMPLETE. Tool issue (Worker 1 20:09): the decode wrapper expects base64 but the Drive connector now saves raw binary; worked around via scratch base64 (deleted) -> NEEDS FIXING (agent_env.sh lives on main, owner-only).
