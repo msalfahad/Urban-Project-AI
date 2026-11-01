@@ -1,0 +1,2382 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.36",
+ "candidate_json_sha256": "d462203f10eb52aed0c630901ff7298397ec71483c3aa6b661fe04807ee400f2",
+ "gbp_section_marks": 0,
+ "gbp_texts_read": 85,
+ "inputs_sha256": {
+  "ALSENAN_T416_INPUT.json": "302f20e39f7a8e1f2f225fcf52bf9dec122110580cd6bfe973506d7375feaffb",
+  "ALSENAN_T426_READ.json": "4d8d86757fe0a4a3aad1ba7429c6d9a4913efdc3db0af7ac8075170882fa3cd0",
+  "BAND_PAIRING_T289.json": "34412f1a32fe3a67c0dfcae074a6cbd9246f81d307a2eecb590700d7bdde5678",
+  "CANDIDATE_V3036_GB_LINES.json": "e981fee13189b96bb0080ee30f9b4c6e997183ae1ce1201fff33df54427793c6",
+  "LEDGER_T242.csv": "c21991ca5f9ab5d133ffb4059f545421c0418de919868952af1cc161ade1dc94",
+  "summary_t416.json": "37934957428456ab1f9b76f4747d928b08719fd43173cafa1f2e456042137575"
+ },
+ "lines": [
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 0.39,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.103712,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "107+7CE",
+   "engine_band": "BAND0009",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-ff727b2a52e39509a659",
+   "runs": [
+    {
+     "L_m": 0.3639,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "107+7CE#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 4.4,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.528,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "109+7CB",
+   "engine_band": "BAND0006.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-fadb548a6843001d45b0",
+   "runs": [
+    {
+     "L_m": 4.4,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "109+7CB#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.4,
+      "FP": 4.4,
+      "GBP": 4.4
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 4.4,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.254,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "109+7CB",
+   "engine_band": "BAND0006.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-27d104ca6fc3556d16e6",
+   "runs": [
+    {
+     "L_m": 4.4,
+     "d33_held": false,
+     "d33_tees": "15C+7CC; 185+7C7",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "109+7CB#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 2.7,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.7695,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "109+7CB",
+   "engine_band": "BAND0006.3",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-46f25f72b44e8bc3e2e0",
+   "runs": [
+    {
+     "L_m": 2.7,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "109+7CB#3",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 4.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.2255,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "10A+7C9",
+   "engine_band": "BAND0004.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-62f712462a36d4ad1b32",
+   "runs": [
+    {
+     "L_m": 4.3,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "10A+7C9#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 1.5,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "10B+7D1",
+   "engine_band": "BAND0012.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-6bf14711798e5af93594",
+   "runs": [
+    {
+     "L_m": 1.2,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "10B+7D1#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 2.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "10B+7D1",
+   "engine_band": "BAND0012.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-3284f44000c02179ace7",
+   "runs": [
+    {
+     "L_m": 2.3,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "10B+7D1#2",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 1.0,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.285,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "114+115",
+   "engine_band": "BAND0025.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-d08e7a9d809a56733ff9",
+   "runs": [
+    {
+     "L_m": 1.0,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "114+115+7DF#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.325,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.279,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "114+7DF",
+   "engine_band": "BAND0025.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-c0b7102a36344a0349f5",
+   "runs": [
+    {
+     "L_m": 2.325,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "114+115+7DF#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.325,
+      "FP": 2.325,
+      "GBP": 2.325
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.06975
+   ],
+   "state": "VALUED",
+   "verdict": "INSIDE_RANGE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 6.4,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "136+7D5",
+   "engine_band": "BAND0016",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "runs": [
+    {
+     "L_m": 6.0,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "136+7D5#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 3.1,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "137+138",
+   "engine_band": "BAND0035",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-00465df980165c529476",
+   "runs": [
+    {
+     "L_m": 2.4,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "137+138#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 1.45,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "13C+7D9",
+   "engine_band": "BAND0020",
+   "engine_value_m3_held": 0.1305,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-81444e222487437e257e",
+   "runs": [
+    {
+     "L_m": 1.45,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "13C+7D9#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 1.45,
+      "FP": 1.45,
+      "GBP": 1.45
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 5.8,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "13D+7D2",
+   "engine_band": "BAND0013.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-d8b98b143e293d30833b",
+   "runs": [
+    {
+     "L_m": 5.8,
+     "d33_held": false,
+     "d33_tees": "13F+7D3; 140+7D7",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "13D+7D2#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 4.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.516,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "13E+7D6",
+   "engine_band": "BAND0017.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-fb53ac7edf5914afd6f5",
+   "runs": [
+    {
+     "L_m": 4.3,
+     "d33_held": true,
+     "d33_tees": "13C+7D9",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "13E+7D6#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.3,
+      "FP": 4.3,
+      "GBP": 4.3
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 0.5,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "13E+7D6",
+   "engine_band": "BAND0017.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-b4a13a43967ee4765662",
+   "runs": [
+    {
+     "L_m": 0.5,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "13E+7D6#2",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 4.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.516,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "13F+7D3",
+   "engine_band": "BAND0014",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-760f6c369aa655adc84d",
+   "runs": [
+    {
+     "L_m": 4.3,
+     "d33_held": true,
+     "d33_tees": "13C+7D9",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "13F+7D3#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.3,
+      "FP": 4.3,
+      "GBP": 4.3
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 4.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.516,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "140+7D7",
+   "engine_band": "BAND0018",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-3e7ea87496653eb75704",
+   "runs": [
+    {
+     "L_m": 4.3,
+     "d33_held": true,
+     "d33_tees": "142+7D8",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "140+7D7#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.3,
+      "FP": 4.3,
+      "GBP": 4.3
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 1.2,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "141+7DA",
+   "engine_band": "BAND0021",
+   "engine_value_m3_held": 0.108,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-e2134034441cb7db7bd7",
+   "runs": [
+    {
+     "L_m": 1.2,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "141+7DA#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 1.2,
+      "FP": 1.2,
+      "GBP": 1.2
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.45,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.294,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "142+7D8",
+   "engine_band": "BAND0019",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-1487bdda099006e0c4ba",
+   "runs": [
+    {
+     "L_m": 2.45,
+     "d33_held": true,
+     "d33_tees": "141+7DA",
+     "frames_differ": false,
+     "position": "INTERIOR/ANNEX",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "142+7D8#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.45,
+      "FP": 2.45,
+      "GBP": 2.45
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0735
+   ],
+   "state": "VALUED",
+   "verdict": "INSIDE_RANGE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 1.9,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.5415,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "145+7CA",
+   "engine_band": "BAND0005.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-26fcfbbb143269e7bb58",
+   "runs": [
+    {
+     "L_m": 1.9,
+     "d33_held": false,
+     "d33_tees": "178+7DB",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "145+7CA#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.4,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.288,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "15C+7CC",
+   "engine_band": "BAND0007",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-0e852cca42fb8b765c58",
+   "runs": [
+    {
+     "L_m": 2.4,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "15C+7CC#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.4,
+      "FP": 2.4,
+      "GBP": 2.4
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.072
+   ],
+   "state": "VALUED",
+   "verdict": "INSIDE_RANGE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.9,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.348,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "15D+7C8",
+   "engine_band": "BAND0003",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-43d1d1031b3d3ddd1cc4",
+   "runs": [
+    {
+     "L_m": 2.9,
+     "d33_held": true,
+     "d33_tees": "16F+7FF",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "15D+7C8#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 2.9,
+      "FP": 2.9,
+      "GBP": 2.9
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.7,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.324,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "15E+15F",
+   "engine_band": "BAND0036.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-361f5e913c566c4fe2b5",
+   "runs": [
+    {
+     "L_m": 2.7,
+     "d33_held": true,
+     "d33_tees": "16F+7FF",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "15E+15F#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 2.7,
+      "FP": 2.7,
+      "GBP": 2.7
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 1.25,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "16F+7FF",
+   "engine_band": "BAND0034",
+   "engine_value_m3_held": 0.1125,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-0c5ede7fd2c9e425aa8d",
+   "runs": [
+    {
+     "L_m": 1.25,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "16F+7FF#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 1.25,
+      "FP": 1.25,
+      "GBP": 1.25
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 2.4,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.684,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "170+7C3",
+   "engine_band": "BAND0001.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-bde0257c24588948167f",
+   "runs": [
+    {
+     "L_m": 2.4,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "170+7C3#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 3.37,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.9605,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "170+7C3",
+   "engine_band": "BAND0001.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-efbed17455bb224e126e",
+   "runs": [
+    {
+     "L_m": 3.37,
+     "d33_held": false,
+     "d33_tees": "15D+7C8; 182+183",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "170+7C3#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 3.35,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.9547,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "170+7C3",
+   "engine_band": "BAND0001.3",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-1146bdecd41491ce9382",
+   "runs": [
+    {
+     "L_m": 3.35,
+     "d33_held": false,
+     "d33_tees": "175+7DE",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "170+7C3#3",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 3.25,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.9263,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "170+7C3",
+   "engine_band": "BAND0001.4",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-dac43ee18f55433b57e7",
+   "runs": [
+    {
+     "L_m": 3.25,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "170+7C3#4",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 3.75,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.45,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "175+7DE",
+   "engine_band": "BAND0024",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-4129e781d6133b963bf7",
+   "runs": [
+    {
+     "L_m": 3.75,
+     "d33_held": true,
+     "d33_tees": "180D+180E",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "175+7DE#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.75,
+      "FP": 3.75,
+      "GBP": 3.75
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 3.75,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.45,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "176+7E6",
+   "engine_band": "BAND0031",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-151a282bcf2d5324a618",
+   "runs": [
+    {
+     "L_m": 3.75,
+     "d33_held": true,
+     "d33_tees": "17E+17F; 180+181; 180D+180E",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "176+7E6#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.75,
+      "FP": 3.75,
+      "GBP": 3.75
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.6,
+   "candidate_L_m": 5.02,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.9036,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "177+7CD",
+   "engine_band": "BAND0008.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-e24946df436cbc25fca6",
+   "runs": [
+    {
+     "L_m": 5.02,
+     "d33_held": true,
+     "d33_tees": "175+7DE; 176+7E6; 7DC+7DD",
+     "frames_differ": true,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4,
+      0.6
+     ],
+     "printed_b_m": 0.3,
+     "run": "177+7CD#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 5.02,
+      "COLUMN_FACE_1EC": 4.97,
+      "FP": 5.02,
+      "GBP": 5.02
+     },
+     "titles": [
+      "GT5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.3012
+   ],
+   "state": "VALUED",
+   "verdict": "INSIDE_RANGE"
+  },
+  {
+   "candidate_D_m": 0.300001,
+   "candidate_L_m": 1.5367,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": true,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "177+7CD",
+   "engine_band": "BAND0008.2",
+   "engine_value_m3_held": 0.1383,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-d53e5eb08e2c6c668254",
+   "runs": [
+    {
+     "L_m": 1.5367,
+     "d33_held": true,
+     "d33_tees": "7E7+7E8",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "177+7CD#2",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 1.5367,
+      "FP": 1.5367,
+      "GBP": 1.5367
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 3.8,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "178+7DB",
+   "engine_band": "BAND0022",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-21795b350fbd09150c43",
+   "runs": [
+    {
+     "L_m": 3.8,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "COURT/MAIN",
+     "printed_D_m": null,
+     "printed_b_m": null,
+     "run": "178+7DB#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": []
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 1.2,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "17B+7E5",
+   "engine_band": "BAND0030",
+   "engine_value_m3_held": 0.108,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-f0e25ad2cf73bf2a35ea",
+   "runs": [
+    {
+     "L_m": 1.2,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "17B+7E5#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 1.2,
+      "FP": 1.2,
+      "GBP": 1.2
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.400001,
+   "candidate_L_m": 3.2277,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.387325,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "17C+7E3",
+   "engine_band": "BAND0028",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-c5902fd02c58b85a5df1",
+   "runs": [
+    {
+     "L_m": 3.228,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "17C+7E3#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.2277,
+      "FP": 3.2277,
+      "GBP": 3.2277
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.399999,
+   "candidate_L_m": 4.2723,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.512675,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "17D+7E4",
+   "engine_band": "BAND0029",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-bf5eb56348883cb2776d",
+   "runs": [
+    {
+     "L_m": 4.2723,
+     "d33_held": true,
+     "d33_tees": "184+7CF",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "17D+7E4#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.2723,
+      "FP": 4.2723,
+      "GBP": 4.2723
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.399999,
+   "candidate_L_m": 2.4269,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.291231,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "17E+17F",
+   "engine_band": "BAND0037.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-0bb78accf8c0a0fbdbaf",
+   "runs": [
+    {
+     "L_m": 2.4269,
+     "d33_held": true,
+     "d33_tees": "182+183",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "17E+17F#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.4668,
+      "FP": 2.4668,
+      "GBP": 2.4668
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.072807
+   ],
+   "state": "VALUED",
+   "verdict": "INSIDE_RANGE"
+  },
+  {
+   "candidate_D_m": 0.300005,
+   "candidate_L_m": 0.789,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "180+181",
+   "engine_band": "BAND0038",
+   "engine_value_m3_held": 0.071008,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-970bac563cbcd69e2a30",
+   "runs": [
+    {
+     "L_m": 0.789,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "180+181#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 0.789,
+      "FP": 0.789,
+      "GBP": 0.789
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 2.1,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": true,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "180D+180E",
+   "engine_band": "BAND0040",
+   "engine_value_m3_held": 0.189,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-a8c5c32c7a785c1e3f05",
+   "runs": [
+    {
+     "L_m": 2.1,
+     "d33_held": true,
+     "d33_tees": "180+181",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "180D+180E#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.1,
+      "FP": 2.1,
+      "GBP": 2.1
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 1.3,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "1811+1812",
+   "engine_band": "BAND0041",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "runs": [
+    {
+     "L_m": 1.3,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "COURT/MAIN",
+     "printed_D_m": null,
+     "printed_b_m": null,
+     "run": "1811+1812#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": []
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.300002,
+   "candidate_L_m": 2.0732,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "182+183",
+   "engine_band": "BAND0039",
+   "engine_value_m3_held": 0.186592,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-f24cf117a9ce1e875785",
+   "runs": [
+    {
+     "L_m": 2.0732,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.3,
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "182+183#1",
+     "section_status": "RANGE",
+     "spans_by_frame_m": {
+      "CAP": 2.0732,
+      "FP": 2.0732,
+      "GBP": 2.0732
+     },
+     "titles": [
+      "LT2_5M",
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 3.02,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.3624,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "184+7CF",
+   "engine_band": "BAND0010.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-9f49f5fafcb9322c90b5",
+   "runs": [
+    {
+     "L_m": 3.02,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "184+7CF#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.02,
+      "FP": 3.02,
+      "GBP": 3.02
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 2.65,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.318,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "184+7CF",
+   "engine_band": "BAND0010.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-131df76e442a8b7cc2e9",
+   "runs": [
+    {
+     "L_m": 2.65,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "184+7CF#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 2.65,
+      "FP": 2.65,
+      "GBP": 2.65
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.6,
+   "candidate_L_m": 5.0,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": true,
+   "downgrade": "DG-a31a0d7e9dd564ad",
+   "drawn_band": "184+7CF",
+   "engine_band": "BAND0010.3",
+   "engine_value_m3_held": 0.9,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-5af89b9f1e5b90daf8f5",
+   "runs": [
+    {
+     "L_m": 5.0,
+     "d33_held": true,
+     "d33_tees": "7E7+7E8",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4,
+      0.6
+     ],
+     "printed_b_m": 0.3,
+     "run": "184+7CF#3",
+     "section_status": "ON_LIMIT",
+     "spans_by_frame_m": {
+      "CAP": 5.0,
+      "FP": 5.0,
+      "GBP": 5.0
+     },
+     "titles": [
+      "ON_LIMIT"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 0.6,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "185+7C7",
+   "engine_band": "BAND0002.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-62243c74c430d383be86",
+   "runs": [
+    {
+     "L_m": 0.6,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "COURT/MAIN",
+     "printed_D_m": null,
+     "printed_b_m": null,
+     "run": "185+7C7#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": []
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.6,
+   "candidate_L_m": 7.35,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.323,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "7DC+7DD",
+   "engine_band": "BAND0023",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-fe78ae283abfb6256358",
+   "runs": [
+    {
+     "L_m": 3.525,
+     "d33_held": true,
+     "d33_tees": "7E1+7E2",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "7DC+7DD#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.575,
+      "FP": 3.575,
+      "GBP": 3.525
+     },
+     "titles": [
+      "LT5M"
+     ]
+    },
+    {
+     "L_m": 3.525,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "7DC+7DD#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.525,
+      "FP": 3.525,
+      "GBP": 3.525
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.423,
+    0.423
+   ],
+   "state": "VALUED",
+   "verdict": "DIFFERS"
+  },
+  {
+   "candidate_D_m": 0.6,
+   "candidate_L_m": 6.72,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.2096,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "7E1+7E2",
+   "engine_band": "BAND0027",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-7afad512258c1bad8519",
+   "runs": [
+    {
+     "L_m": 6.72,
+     "d33_held": true,
+     "d33_tees": "17C+7E3; 17D+7E4",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.6
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E1+7E2#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 6.72,
+      "FP": 6.72,
+      "GBP": 6.72
+     },
+     "titles": [
+      "GT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.6,
+   "candidate_L_m": 7.35,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.323,
+   "d33_held": true,
+   "downgrade": null,
+   "drawn_band": "7E7+7E8",
+   "engine_band": "BAND0032",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-0e30aadba2eebc6c3ede",
+   "runs": [
+    {
+     "L_m": 3.525,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E7+7E8#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.525,
+      "FP": 3.525,
+      "GBP": 3.525
+     },
+     "titles": [
+      "LT5M"
+     ]
+    },
+    {
+     "L_m": 3.525,
+     "d33_held": true,
+     "d33_tees": "114+115+7DF",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E7+7E8#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 3.525,
+      "FP": 3.525,
+      "GBP": 3.525
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.423,
+    0.423
+   ],
+   "state": "VALUED",
+   "verdict": "DIFFERS"
+  },
+  {
+   "candidate_D_m": 0.4,
+   "candidate_L_m": 4.225,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.507,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "7E9+7EA",
+   "engine_band": "BAND0033",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-56ebab0b7b448d0abeb1",
+   "runs": [
+    {
+     "L_m": 4.225,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "INTERIOR/MAIN",
+     "printed_D_m": [
+      0.4
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E9+7EA#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {
+      "CAP": 4.225,
+      "FP": 4.225,
+      "GBP": 4.225
+     },
+     "titles": [
+      "LT5M"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.3,
+   "candidate_L_m": 0.1,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.009,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "ARC:139+13A",
+   "engine_band": "BAND0013.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "PROVISIONAL",
+   "line_id": "L-be6708e07b40efa02779",
+   "runs": [
+    {
+     "L_m": 1.8063,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR (curved)/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "ARC:139+13A",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "VALUED",
+   "verdict": "NO_PRINTED_SECTION"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 1.8064,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "ARC:139+13A",
+   "engine_band": "BAND0042",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "runs": [
+    {
+     "L_m": 1.8063,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR (curved)/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "ARC:139+13A",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 6.2868,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.746943,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "ARC:157+158",
+   "engine_band": "BAND0043",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-7076482d75ca42691468",
+   "runs": [
+    {
+     "L_m": 6.0873,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR (curved)/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "ARC:157+158",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": null,
+   "candidate_L_m": 10.13,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": null,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "F8+7D4",
+   "engine_band": "BAND0015",
+   "engine_value_m3_held": null,
+   "evidence_state": "BLOCKED_RFI",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "runs": [
+    {
+     "L_m": 5.45,
+     "d33_held": false,
+     "d33_tees": "13E+7D6",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "7D4+F8#1",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    },
+    {
+     "L_m": 4.25,
+     "d33_held": false,
+     "d33_tees": "140+7D7; 141+7DA",
+     "frames_differ": false,
+     "position": "EXTERIOR/ANNEX",
+     "printed_D_m": null,
+     "printed_b_m": 0.3,
+     "run": "7D4+F8#2",
+     "section_status": "NOT_PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": null,
+   "state": "HELD",
+   "verdict": "HELD_LINE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 2.975,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.8479,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "FC+7D0",
+   "engine_band": "BAND0011.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-cc6aaa99e1892f34b92f",
+   "runs": [
+    {
+     "L_m": 2.975,
+     "d33_held": false,
+     "d33_tees": "109+7CB",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7D0+FC#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 5.745,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.6373,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "FC+7D0",
+   "engine_band": "BAND0011.2",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-e8536bc4f2699a24e2ab",
+   "runs": [
+    {
+     "L_m": 5.745,
+     "d33_held": false,
+     "d33_tees": "17D+7E4",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7D0+FC#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 6.35,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.8097,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "FC+7D0",
+   "engine_band": "BAND0011.3",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-e9a885323ad6ec3ea32b",
+   "runs": [
+    {
+     "L_m": 6.35,
+     "d33_held": false,
+     "d33_tees": "17B+7E5",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7D0+FC#3",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 1.2,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 0.342,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "FC+7D0",
+   "engine_band": "BAND0011.4",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-c9bb2eca50a2a2c8b569",
+   "runs": [
+    {
+     "L_m": 1.2,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7D0+FC#4",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  },
+  {
+   "candidate_D_m": 0.95,
+   "candidate_L_m": 6.9,
+   "candidate_b_m": 0.3,
+   "candidate_value_m3": 1.881,
+   "d33_held": false,
+   "downgrade": null,
+   "drawn_band": "FD+7E0",
+   "engine_band": "BAND0026.1",
+   "engine_value_m3_held": null,
+   "evidence_state": "SOURCE_DERIVED",
+   "line_id": "L-9e28c7012784a8dc33c8",
+   "runs": [
+    {
+     "L_m": 3.35,
+     "d33_held": false,
+     "d33_tees": "184+7CF",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E0+FD#1",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    },
+    {
+     "L_m": 3.25,
+     "d33_held": false,
+     "d33_tees": "",
+     "frames_differ": false,
+     "position": "EXTERIOR/MAIN",
+     "printed_D_m": [
+      0.95
+     ],
+     "printed_b_m": 0.3,
+     "run": "7E0+FD#2",
+     "section_status": "PRINTED",
+     "spans_by_frame_m": {},
+     "titles": [
+      "EXTERIOR"
+     ]
+    }
+   ],
+   "stake_m3": [
+    0.0,
+    0.0
+   ],
+   "state": "VALUED",
+   "verdict": "AGREE"
+  }
+ ],
+ "schema": "T426_GB_SECTION_CENSUS_V1",
+ "totals_by_verdict": {
+  "AGREE": {
+   "hi_m3": 0.0,
+   "lines": 30,
+   "lo_m3": 0.0,
+   "value_m3": 22.914555
+  },
+  "DIFFERS": {
+   "hi_m3": 0.846,
+   "lines": 2,
+   "lo_m3": 0.846,
+   "value_m3": 2.646
+  },
+  "HELD_LINE": {
+   "hi_m3": 0.0,
+   "lines": 20,
+   "lo_m3": 0.0,
+   "value_m3": 0.0
+  },
+  "INSIDE_RANGE": {
+   "hi_m3": 0.589257,
+   "lines": 5,
+   "lo_m3": 0.0,
+   "value_m3": 2.055831
+  },
+  "NO_PRINTED_SECTION": {
+   "hi_m3": 0.0,
+   "lines": 1,
+   "lo_m3": 0.0,
+   "value_m3": 0.009
+  }
+ }
+}
