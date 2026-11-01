@@ -1,0 +1,393 @@
+{
+ "method": "ZONE_EXTENT_V1",
+ "rule": "R-T427-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.36 (candidate of record, NOT RELEASED); floor lines unchanged since V3.0.34 (T-414 / T-418)",
+ "zone_extent": {
+  "method": "ZONE_EXTENT_V1",
+  "rule": "R-T427-1",
+  "rows": [
+   {
+    "id": "ROOM-DINING (open room floor north of the band, V2.9 GF-RC99C2A)",
+    "area_m2": 9.5,
+    "engine_class": "ROOM_FLOOR",
+    "physical_class": "ROOM_FLOOR",
+    "changed": false,
+    "joined_via": null,
+    "open_edge_m": null,
+    "zone": null,
+    "status": "ASSUMED — OWNER-APPROVED (finish; open-room line L-7625f35c)"
+   },
+   {
+    "id": "GF-RFD4E1D band west face",
+    "area_m2": 4.885,
+    "engine_class": "ZONE",
+    "physical_class": "ROOM_FLOOR",
+    "changed": true,
+    "joined_via": "OP-003 band strip, west 3.80 (x 3.00 .. 6.80)",
+    "open_edge_m": 3.78,
+    "zone": "GARDEN (D-48)",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "OP-003 band strip, west 3.80 (x 3.00 .. 6.80)",
+    "area_m2": 0.76,
+    "engine_class": "STRIP",
+    "physical_class": "ROOM_FLOOR",
+    "changed": true,
+    "joined_via": "ROOM-DINING (open room floor north of the band, V2.9 GF-RC99C2A)",
+    "open_edge_m": 3.78,
+    "zone": "GARDEN (D-48)",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "OP-003 band strip, curb 3.02 (x 6.80 .. 9.82)",
+    "area_m2": 0.604,
+    "engine_class": "STRIP",
+    "physical_class": "STRIP",
+    "changed": false,
+    "joined_via": null,
+    "open_edge_m": null,
+    "zone": "GARDEN (D-48)",
+    "status": "HELD"
+   },
+   {
+    "id": "GF-R9A05AA garden band",
+    "area_m2": 9.101,
+    "engine_class": "ZONE",
+    "physical_class": "ZONE",
+    "changed": false,
+    "joined_via": null,
+    "open_edge_m": null,
+    "zone": "GARDEN (D-48)",
+    "status": "HELD"
+   },
+   {
+    "id": "columns 2FD2 + 2FC6 and wall 336 / 337 between them",
+    "area_m2": 0.88,
+    "engine_class": "SOLID",
+    "physical_class": "SOLID",
+    "changed": false,
+    "joined_via": null,
+    "open_edge_m": null,
+    "zone": null,
+    "status": "NOT_FLOOR"
+   }
+  ],
+  "moved_to_floor_m2": 5.645,
+  "held_m2": 9.705,
+  "closure_m2": 0.0
+ },
+ "dry": {
+  "freelancer_m2": 337.57,
+  "candidate_with_t418_m2": 296.7733,
+  "diff_m2": -40.7967,
+  "diff_pct": -12.09,
+  "components_sum_m2": -40.7967,
+  "by_class": {
+   "TRACED": -30.4644,
+   "HELD": -9.705,
+   "UNEXPLAINED": -0.6273
+  },
+  "gf_open_room": {
+   "freelancer_rows_m2": 147.96,
+   "drawn_outline_m2": 151.6802,
+   "comparable_m2": 147.6577,
+   "freelancer_above_outline_m2": 0.3023,
+   "outline_check_m2": 147.658
+  },
+  "correction": {
+   "moved_to_dry_floor_m2": 5.645,
+   "corrected_candidate_dry_m2": 302.4183,
+   "corrected_diff_m2": -35.1517,
+   "corrected_diff_pct": -10.41,
+   "held_band_before_m2": 15.35,
+   "held_band_after_m2": 9.705
+  },
+  "components": [
+   {
+    "component": "GF pantry floored WET",
+    "m2": -13.4549,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE",
+    "evidence": "UP-WET-001 (pantry on the wet list) + owner Q-37 A (printed 4.50 x 3.00 box wet) + URBAN-WET-FLOOR-TILED@v1; he keeps the pantry inside his dry reception + dining row; the wet side carries +13.4549 (2.800 + 8.9549 + 0.600 + 1.100, T-240 / T-286)"
+   },
+   {
+    "component": "GF round-stair treads below the cut (B7)",
+    "m2": -6.1244,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE",
+    "evidence": "UP-CER-001 (a stair footprint is deducted from the floor tile) + UP-STAIR-005 (treads are stair marble, B7): 8.194412 drawn treads - 2.07 under-stair floor kept in the floor line (L-224e2fa4)"
+   },
+   {
+    "component": "GF garden band proper, x 6.80 .. 13.82 (planter or floor)",
+    "m2": -9.101,
+    "class": "HELD",
+    "verdict": "UNRESOLVED (designer D-48)",
+    "evidence": "own outline: layer-5 ends 310 / 30F, edge lines 4B4 / A9 / A8, wall 337 / 336 between columns; GARDEN label inside; finish class open (planter soil or floor)"
+   },
+   {
+    "component": "GF band curb strip x 6.80 .. 9.82 (0.20, three drawn edge lines)",
+    "m2": -0.604,
+    "class": "HELD",
+    "verdict": "UNRESOLVED (with D-48)",
+    "evidence": "candidate line L-554a525e ARCH.SPACE HELD carries 1.364 = this 0.604 + the 0.760 below"
+   },
+   {
+    "component": "GF band west part x 3.00 .. 6.80: DINING FLOOR (R-T427-1)",
+    "m2": -5.645,
+    "class": "TRACED",
+    "verdict": "ENGINE_WRONG / FREELANCER_RIGHT (corrected: -> 0)",
+    "evidence": "no drawn line between it and the dining floor (searched, DXF + sheet 03); the band ends at 310; the engine prolonged the band edge 3.80 m west (T-240 OP-003). GF-RFD4E1D 4.885 (L-6b6412e8) + strip 0.76 (part of L-554a525e) move from HELD to dry floor; his row floors them too, so the correction closes this part"
+   },
+   {
+    "component": "GF wall + two columns inside his gross outline (2FD2, 2FC6, 336 / 337)",
+    "m2": -0.88,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (net floor) / FREELANCER gross",
+    "evidence": "his rows have no dimensions; his figure re-adds to the drawn GROSS outline (T-147: 147.90; this run 147.6577), which holds 0.88 m2 of wall and columns no floor tile covers"
+   },
+   {
+    "component": "GF open room: his rows above the drawn gross outline",
+    "m2": -0.3023,
+    "class": "UNEXPLAINED",
+    "verdict": "UNRESOLVED",
+    "evidence": "147.96 - 147.6577 (candidate parts of the open room; the drawn outline 151.6802 - wash lobby part 3.8321 (his wet row) - lobby mouth 0.1901 (held threshold) = 147.658) = 0.3023 m2 (+0.20 %); if his row also holds the lobby mouth, 0.1122; no breakdown, no match by figure"
+   },
+   {
+    "component": "GF stair-room floor parts (T-418; area DC, finish HELD)",
+    "m2": 6.1275,
+    "class": "TRACED",
+    "verdict": "UNRESOLVED (no floor row of his: his reception + dining + entrance re-add to the open-room outline, so the stair-room hall is in none of his floor rows; his main-stair landing row 6.20 has no breakdown)",
+    "evidence": "T-418 MERGED 361f6e47"
+   },
+   {
+    "component": "GF master / dewaneya / driver",
+    "m2": -0.0051,
+    "class": "TRACED",
+    "verdict": "T-086 verdicts",
+    "evidence": "T-086"
+   },
+   {
+    "component": "GF doorway strips valued in the candidate (OP-010 0.20, OP-012 0.15)",
+    "m2": 0.35,
+    "class": "TRACED",
+    "verdict": "engine-only strips",
+    "evidence": "T-240 WP2 (Checker 01:12)"
+   },
+   {
+    "component": "1F living: arrival landing marble (Q-66 B) + T-345 trace",
+    "m2": -5.249,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE",
+    "evidence": "T-345 / T-122"
+   },
+   {
+    "component": "1F bed rooms (380 x 430 passage, curved east room)",
+    "m2": -1.3785,
+    "class": "TRACED",
+    "verdict": "T-086 verdicts",
+    "evidence": "T-086 / T-153"
+   },
+   {
+    "component": "1F doorway strips valued in the candidate",
+    "m2": 0.72,
+    "class": "TRACED",
+    "verdict": "engine-only strips",
+    "evidence": "T-240"
+   },
+   {
+    "component": "2F maid room",
+    "m2": -0.23,
+    "class": "TRACED",
+    "verdict": "T-086 verdict",
+    "evidence": "T-086"
+   },
+   {
+    "component": "2F arrival 4.875 marble (Q-70 A, B7)",
+    "m2": -4.875,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE",
+    "evidence": "T-129 / T-418"
+   },
+   {
+    "component": "2F corridor residual against his 7.70 (his row has no dimensions)",
+    "m2": -0.325,
+    "class": "UNEXPLAINED",
+    "verdict": "UNRESOLVED",
+    "evidence": "T-418"
+   },
+   {
+    "component": "2F doorway strip valued in the candidate",
+    "m2": 0.18,
+    "class": "TRACED",
+    "verdict": "engine-only strip",
+    "evidence": "T-240"
+   }
+  ]
+ },
+ "cross_trade": [
+  {
+   "line": "L-71e2e002a3af624097f0 FIN.SKIRTING GF-RC99C2A (open room)",
+   "unit": "lm",
+   "before": 24.6716,
+   "after": 28.5716,
+   "delta": 3.9,
+   "status": "DRAWING-CONFIRMED geometry (V2.9 runs of GF-RFD4E1D: wall 2.70 = 3.80 - 1.10 column + column 2FCF faces 1.20 = 0.05 + 1.10 + 0.05)",
+   "why": "the dining's south wall face x 3.00 .. 6.80 lies on the cut-off band face, which carries no finish line; the open room's run along the prolonged edge (y 1.50) is already deducted as OP-003 (T-296 PASSAGE_RUN_RESIDUAL)"
+  },
+  {
+   "line": "ceiling ledger GF-RFD4E1D (T-283 r3 / T-295)",
+   "unit": "m2",
+   "before": "4.885 HELD_CLASS (P-2) + 6.5428 m bulkhead edges HELD",
+   "after": "the dining ceiling's class (decidable; type as the open room)",
+   "delta": null,
+   "status": "for the ceiling owner",
+   "why": "R-T427-1: the piece is dining, not band"
+  },
+  {
+   "line": "designer list D-48",
+   "unit": "m2",
+   "before": 13.986,
+   "after": 9.705,
+   "delta": null,
+   "status": "HELD (planter or floor)",
+   "why": "band proper 9.101 + curb 0.604; the west 5.645 is floor"
+  }
+ ],
+ "wet": {
+  "freelancer_m2": 72.01,
+  "candidate_m2": 85.5756,
+  "diff_m2": 13.5656,
+  "diff_pct": 18.84,
+  "components_sum_m2": 13.5656,
+  "line_vs_hand_rounding_m2": 0.0,
+  "components": [
+   {
+    "component": "GF pantry (Q-37 A)",
+    "m2": 13.4549,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE",
+    "evidence": "mirror of the dry pantry component"
+   },
+   {
+    "component": "GF wash by the dewaneya 3.1325 vs 3.15",
+    "m2": -0.0175,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE (T-074: column corner)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF W.C. by the dewaneya 3.375 vs 3.37",
+    "m2": 0.005,
+    "class": "TRACED",
+    "verdict": "AGREE (rounding)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF driver W.C. 1.95 vs 1.95",
+    "m2": 0.0,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF kitchen 9.63 vs 9.55",
+    "m2": 0.08,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (two piers, entrance 1.05 x 1.50)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF W.C. 175 x 135 2.3625 vs 2.36",
+    "m2": 0.0025,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF basin space 110 x 135 1.485 vs 1.70",
+    "m2": -0.215,
+    "class": "TRACED",
+    "verdict": "RULE_DIFFERENCE (his 0.20 reveal, UP-THR-001)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF W.C. wedge A 2.6752 vs 2.67",
+    "m2": 0.0052,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF W.C. wedge B 2.3676 vs 2.30",
+    "m2": 0.0676,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (shoelace on wall faces)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "GF wash lobby 4.7307 vs 4.73 (T-074 hand 4.7321)",
+    "m2": 0.0007,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074 / V2.9 face"
+   },
+   {
+    "component": "GF master bath 3.7177 vs 3.70 (T-074 hand 3.7173)",
+    "m2": 0.0177,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F west bath upper 5.0225 vs 5.00",
+    "m2": 0.0225,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F west bath lower 5.0225 vs 5.00",
+    "m2": 0.0225,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F laundry 10.151 vs 10.00",
+    "m2": 0.151,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (W.C. corner cut, printed parts)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F W.C. by the laundry 2.646 vs 2.59",
+    "m2": 0.056,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (his 1.44 for printed 1.47)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F bath by the laundry 3.5775 vs 3.60",
+    "m2": -0.0225,
+    "class": "TRACED",
+    "verdict": "AGREE (jamb)",
+    "evidence": "T-074"
+   },
+   {
+    "component": "1F east bath 4.725 vs 4.72",
+    "m2": 0.005,
+    "class": "TRACED",
+    "verdict": "AGREE",
+    "evidence": "T-074"
+   },
+   {
+    "component": "2F W.C. 5.55 vs 5.62",
+    "m2": -0.07,
+    "class": "TRACED",
+    "verdict": "ENGINE_RIGHT (printed 300 x 185)",
+    "evidence": "T-074"
+   }
+  ]
+ }
+}
