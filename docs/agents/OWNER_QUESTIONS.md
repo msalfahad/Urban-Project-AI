@@ -156,66 +156,6 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-### Q-71 Footing bars printed "per metre" (for example "9 ø 14/m"): how many bars does the BOQ count across a footing? (worker 1 2026-10-21 00:38; T-136; no-assumptions question: the Urban rebar rule says kg = count x length x kg/m but gives no count for bars printed per metre or at a spacing)
-
-THE PROBLEM: five footings print their bars per metre, not as a count. "9 bars per metre" over a footing side gives a
-fractional number (34.74 bars), and the three usual ways to turn it into whole bars give different steel. Today the
-engine holds all five footings' bar steel, 2,742.51 .. 2,836.40 kg (bottom layer 1,606.07 .. 1,655.56 kg), because no
-Urban rule picks one. The 19 footings printed with a count ("8 ø 12") are released, 874.86 kg.
-WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf page 9, "Schedule of Footings", rows F8, F12, F13, F14 and FF
-(top and bottom rows, "6 ø 14/m", "9 ø 14/m", "9 ø 16/m" ...); page 8 note 22 (cover 7 cm against soil). Real example,
-F8 bottom short bars "9 ø 14/m", footing 400 x 360 cm: each bar 3.60 - 0.07 - 0.07 = 3.46 m; they are spread along
-4.00 - 0.07 - 0.07 = 3.86 m; 9 x 3.86 = 34.74 bars.
-THE OPTIONS:
-(A) Round up inside the covers: 35 bars (146.52 kg for this row); all five footings 2,742.51 kg.
-(B) As (A) plus one, so a bar sits at both edges (spacing count + 1): 36 bars (150.70 kg); all five 2,836.40 kg.
-(C) Rate x the full footing side, kept fractional: 9 x 4.00 = 36.0 bars (150.70 kg); all five 2,797.81 kg (what the
-route's provisional line does today, but with its 5 cm cover).
-RECOMMENDATION: B. Practice, not a code clause: a bar is placed at each edge of the mesh, so the number of bars is the
-spaces plus one, rounded up; it is how a steel fixer cuts and counts, and the same rule then serves every villa for
-"/m" and "@ spacing" notation in footings, slabs and ground beams. Difference A to B: 93.89 kg (3.4 %) on Alsenan.
-WAITS ON: footing steel of F8, F12, F13, F14, FF (2.74 .. 2.84 t, the largest held footing steel); every bar printed per
-metre or at a spacing on any villa (T-136, then T-009). The top layer of these footings also waits on a designer
-detail for its bar ends (not drawn); that is a drawing request, not this question.
-NEW EVIDENCE (lead 2026-10-21 12:20, from worker 1's column-steel hand ledger): the frozen structural route (S3.1) cites three
-PROJECT-ONLY statements recorded as owner claims on 2026-10-06 and never entered in the Urban rule registers: "6 ø 8/m = 6 tie
-sets per metre", "a column with L = 80 uses 3 links", and "note 22B: rate per metre, rounded up (ceil)". They point towards
-rounding up rate x length (close to A), but they do not say which length (inside the covers or the full side) and they were
-never confirmed as your Urban rule, so the team has NOT used them. Please say whether they are your rule; if yes, which length.
-ALSO WAITS ON (this answer now decides): column links 781.37 .. 829.41 kg (A 793.96 / B 829.41 / C 781.37), and the link and
-slab-bar counts of the new beam-steel and slab-steel hand ledgers.
-RECOMMENDATION STATUS (lead 2026-10-21 16:20): the option-B recommendation above is WITHDRAWN, as the main chat's was
-(owner workflow controls 2026-10-21); the team gives drawing facts only and you choose.
-DRAWING FACTS (lead 2026-10-21 16:20, from worker 3's independent recount from the footing schedule, notes and details; not yet
-checked by the checker): (1) "/m" means bars per metre run: the same drawing set writes a count as "n ø d", a spacing as
-"ø d/s cm" (ground-beam links ø8/15 cm, p.13) and a rate as "n ø d/m" (these five footings, column ties p.9, lintel
-stirrups p.13, lift walls p.14); reading "9 ø 14/m" as 9 bars in all is contradicted by the footings printed with a count,
-which carry 5 to 10 bars per metre. (2) How a rate becomes whole bars is printed nowhere. (3) With a bar at each edge,
-option A spaces the bars WIDER than the printed rate in 20 of the 20 rows (F8 bottom short bars 11.35 cm against 11.11 cm
-printed); option B is at or closer than the printed rate in 20 of 20; option C leaves a fraction in 15 of 20. (4) The recount
-reproduces A 2,742.51 / B 2,836.40 / C 2,797.81 kg to 0.01 kg. (5) The lift footing FF is the only two-layer footing drawn
-(p.14): top and bottom bars joined by legs at both edges, legs not dimensioned (HELD whatever you answer).
-NEW EVIDENCE (lead 2026-10-22 00:20, from worker 1's suspended-slab steel by bar population, waiting for the checker): (1) the
-same three options decide the slab bottom mesh: A 2,915.09 / B 3,068.05 / C 2,853.00 kg on the 49 slab panels that print
-their bars (B - A = 152.96 kg, +5.2 %); together with the footings and the column links this answer now decides about
-6.38 .. 6.73 t of held steel (footings 2,742.51 .. 2,836.40, column links 781.37 .. 829.41, slab bottom 2,853.00 .. 3,068.05 kg;
-ranges, not added as one verified figure). (2) A second frozen engine file (the PRE-S7.1 slab route, "AD2" set) labels two
-statements URBAN_OWNER_DECISION: AD2-D02 = reading C (rate x the full side, fractional) and AD2-D06 = the sheet-note-2
-top-bar reading "one third of the span each side". Neither is in your answered decisions or the Urban rule registers, so the
-team has NOT used them. Please say whether either was your decision; the earlier S3.1 statements (12:20 above) pointed to
-rounding up, so the two frozen sources do not agree with each other.
-UPDATE (lead 2026-10-22 04:20): the slab steel is now CHECKED and merged (the checker re-counted three panels at 0.0 %), and
-worker 1's stair steel (waiting for the checker) prints its main bars the same way ("8 ø 16/m" along each flight): C 367.88 /
-A 382.31 / B 420.54 kg. With it, this answer decides about 6.74 .. 7.15 t of held steel (footings, column links, slab bottom
-mesh, stair main bars; ranges, never added as one verified figure). Nothing else changed in the question.
-
-STATUS (main chat 2026-10-22, owner ENGINEERING_REASONING_STANDARD directive): reopened as INVESTIGATION T-171 (footings only: notation meaning first, then N = ceil(L_eff / s) + 1 only if it is shown to be a maximum spacing, Checker 10-point verification). No owner answer recorded; it returns to the owner only under the standard's section 2.7, in its section 6 format.
-
-OWNER ANSWER (main chat 2026-10-25 11:51, owner's words, 'Decision 3: Q-71 - drawing-based stirrup counting'): "Use the drawing's spacing, first-link offset, support-face reference and zone boundaries. For Alsenan, include the 7.5 cm first-link offset where the governing detail applies. Do not universally use N = n x L + 1. For a simple zone, N = 1 + floor((L - a)/s) may apply if the end conditions support it. Check clear span and support faces, first and last link positions, multiple zones, shared boundaries, beam junctions, and whether an extra terminal link is explicitly required. Genuine ambiguity -> PROVISIONAL or HELD, with the precise designer clarification named. Do not turn this owner instruction into a new structural design standard."
-SCOPE NOTE (main chat, not an owner answer): the answer is written for links / stirrups. Whether it also settles the footing bars printed per metre that this question first asked about (F8, F12, F13, F14, FF; T-171) is asked back to the owner; until then T-171 and the footing rows are unchanged. LEAD: record it in OWNER_QUESTIONS_ANSWERED.md for links / stirrups; leave the footing part open.
-
-OWNER ANSWER, FOOTINGS (main chat 2026-10-25 12:36, owner's words): "Yes, my Q-71 decision also governs footing reinforcement, including F8, F12, F13, F14 and FF. However, apply the drawing-based counting principle separately to footing mesh and beam stirrups. For footing reinforcement such as 9Ø14/m: 1. Interpret the notation using the governing footing schedule, section and reinforcement direction. 2. Distinguish a distribution rate (bars per metre) from an explicit total number of bars. 3. Establish the actual distribution width, bar direction, concrete cover and first/last bar positions. 4. Calculate both orthogonal directions separately where the footing has two-way reinforcement. 5. Include applicable top and bottom reinforcement layers only where detailed. 6. Use the actual bar developed lengths, including approved bends, hooks and anchorage where required. 7. Do not apply the beam's 7.5 cm first-stirrup offset to footing reinforcement. 8. Do not universally apply N = n x L + 1. 9. If the drawing does not establish the boundary bar positions or counting convention, present the defensible interpretations and keep the affected quantity PROVISIONAL or HELD. 10. Do not silently substitute a spacing convention or invent a designer requirement." The 11:51 SCOPE NOTE above is closed by this answer. LEAD: move Q-71 (links / stirrups and footings) to OWNER_QUESTIONS_ANSWERED.md; no quantity changes solely because of it.
-
 ### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
 
 THE PROBLEM: the main dog-leg stair shaft (2.46 m wide inside, same rectangle on the three plans) has wall faces GF
@@ -244,6 +184,11 @@ STATUS (main chat 2026-10-22, owner directive): reopened as INVESTIGATION T-173 
 
 ### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
 
+PLAIN QUESTION (owner 2026-11-02: the question above was not clear; this version replaces it for the answer):
+What is the face size of the black block you buy, including the 1 cm joint? 40x20 -> 12.5 per m2; 40x25 -> 10 per m2;
+another size -> tell us. Until you answer, the provisional 12.5 per m2 stays in force.
+
+
 THE PROBLEM: about 563 m2 of the 955.63 m2 measured gross block area is black block (the white walls are 392.5 m2,
 2,512 white blocks at 6.4 per m2). Without a black block size the black count, mortar and pallets are HELD.
 WHERE TO LOOK: your own supplier records: the black solid blocks you buy for inner walls (15 and 20 cm). Your stored
@@ -267,83 +212,22 @@ STATUS (main chat 2026-10-22, owner directive section 8): reopened as INVESTIGAT
 OWNER DECISION 2026-10-23 14:15 (owner's words in the main chat): "Keep the 12.5 blocks/m² nominal-module calculation as a provisional rule for standard 40 × 20 cm face modules, subject to supplier confirmation of actual dimensions and joint thickness. Full door/window opening deduction is already an Urban Projects owner rule. Do not reopen it without a documented conflict. Separate net BOQ blockwork area from procurement block counts, cutting waste, mortar, cement and sand. Independently verify the mortar calculation against actual joint geometry before promoting its quantities to VERIFIED. Do not hardcode 5% waste. Keep procurement waste configurable and evidence-based. Please check whether the 563 m² gross wall area includes openings or duplicated wall segments, and distinguish 100, 150 and 200 mm blockwork by type." -> the 40 x 20 module (12.5 / m2) is a PROVISIONAL owner rule (ASSUMED — OWNER-APPROVED, provisional) for standard 40 x 20 face modules; it becomes final only with the supplier's actual block dimensions and joint thickness (a data item for the team, not an owner decision). Opening deduction (Q-73) is settled and not reopened. Waste is a configurable, evidence-based parameter, never a hardcoded 5 %.
 MAIN-CHAT CHECK 2026-10-23 14:20 (owner's request): the 563 m2 was the T-143 hand GROSS (black 0.15 350.71 + 0.20 212.58) BEFORE openings, and it carried the T-stem double count (stems to the through-wall centreline, 2.70 m3 in all types); 146.22 m2 of it PROVISIONAL (annex datum Q-54 B, lift tie beam). Superseded by MASONRY_AREA_V1 r2 (T-108 r2, checker MERGED 01eeafd0 09:11; stems stop on the face): black gross 554.49 m2 = 0.15: 342.91 (DRAWING-CONFIRMED 215.72, HELD 127.19) + 0.20: 211.58 (DC 125.88, HELD 85.70); established opening deductions on black 36.08 m2 (0.15: 29.92, 0.20: 6.16); black net established 290.05 m2 (0.15: 103.33 DC + 79.00 ASSUMED - OWNER-APPROVED; 0.20: 107.72 DC), the rest of the black walls net HELD. 100 mm: no 0.10 m run in the census (thicknesses found 0.15, 0.20 and one 0.40 band HELD); D-12 (walls containing columns at column thickness) still open on 19 rows.
 
-### Q-76 Curved window over the pool: does its window area stop at the top of the opening (3.00 m) or include the 0.45 m decorative band above it? (lead 2026-10-24 00:10, today's owner package; from worker 2's arched-opening census and the checker's own reading 2026-10-23 22:50; T-238, T-232; ERS 2.7: the application of an answered owner rule rests on a height our own question supplied)
+### T-383 Waterproofing completeness check: its own task, or part of T-310? (owner 2026-11-02 asked for a plain rewrite; STILL OPEN)
 
-THE PROBLEM (Issue): your Q-39 answer C fixed the WIDTH of the curved first-floor window over the pool on the outer
-arc, 3.29 m, and repeated our question's height: 3.29 x 3.50 = 11.51 m2. The 3.50 came from our own question text,
-which read the elevation's '305 + 45' as the height to the top of the arch. Read on the drawing, that is not so: the
-'305' runs from the +5.50 floor to the top of the window's own arch, and the '45' runs from there to the top of a
-second, separate arch that stands 0.40 m clear of the window on the wall face: a decorative band (archivolt), not
-glass, not frame. Your width rule is not in question; only the height our question put into your example.
-WHERE TO LOOK (Evidence): Drive "Alsenan chalet project", P7757_DXF_COMPRESSED.zip (P7757.dxf), the NORTH WEST elevation,
-the arched window on the first floor over the pool (the elevation prints it 269 wide on the chord, '305' and '45' high).
-Follow the '305' dimension: it ends on the outer line of the window's own arch (+8.55; the inner line, where the glass
-stops, is at +8.50, i.e. 3.00 m above the +5.50 floor). Follow the '45': it ends on the outer line of a second arch
-(+9.005) drawn 0.40 m outside the first, with nothing between them but wall.
-INVESTIGATION: worker 2 read both arch pairs on the drawing; the checker re-read them himself (22:50) and CONFIRMED the
-reading. The same reading already settled the two first-floor arched windows W15 / W16 under your Q-32 A (window area =
-width x height to the opening crown, 1.55 x 3.00 = 4.650 m2; the freelancer is right there), and their wall deduction
-(the true arched hole, 4.363 m2) is separate.
-THE OPTIONS (Alternatives; width 3.29 m outer arc in both, your Q-39 C):
-(A) Height to the window's own arch, as Q-32 A for every other arched window: 3.29 x 3.00 = 9.87 m2 (the outer line of
-    the same arch, 3.05, would give 10.03 m2; the checker reads the glass stopping at 3.00).
-(B) Keep the 3.50 of your Q-39 example, the band included: 3.29 x 3.50 = 11.51 m2.
-QUANTITY IMPACT: A is 1.64 m2 less window area than B (about 1.4 % of the freelancer's 116.9 m2 of windows). The freelancer
-has 3.15 x 3.00 = 9.45 m2 for this window (his width differs; his height agrees with A). Blockwork, plaster and paint
-deduct the true arched hole whichever you choose; only the window line changes.
-RECOMMENDATION: A. The 0.45 m band is wall with a moulding on it, not part of the window that is made and installed; A
-applies your own Q-32 A rule exactly as on the other arched windows, and B would price 1.64 m2 of aluminium and glass
-that the drawing does not show. Practice, not a code clause.
-STATUS: the window stays HELD 9.870 .. 11.515 m2 (never the larger end) until you answer.
-NEXT ACTION (continues without you): doors and windows go into the candidate in pieces and m2 with this window shown as
-held; every other window line continues. Waits on: the windows line of Alsenan becoming closable (T-232, T-238).
-Answer: A (owner, main chat 2026-10-24 23:53 UTC), his words (essentials): "Approve Option A, subject to the drawing evidence you described. Use the confirmed opening dimensions 3.29 m x 3.00 m = 9.870 m2 for the applicable window/opening measurement. Exclude the separate 0.45 m decorative wall band from the window quantity. The 3.50 m in Q-39 was an example, not a universal window-height rule. Preserve the distinction between opening area, aluminium assembly area and net glass area. Follow the approved BOQ measurement basis. Do not use this decision to resolve D-53 automatically. W02's one-window-versus-two-window classification remains subject to the actual drawing or designer evidence." LEAD: move this entry to OWNER_QUESTIONS_ANSWERED.md and add the index line.
-
-### Q-77 Mesh strips over block-to-concrete joints: is it a BOQ item, and over which band? (lead 2026-10-29 00:15, today's owner package item 2; from T-317 MERGED 328a7095, Checker 23:22; ERS 2.7: a contractual measurement decision that no drawing note, specification, answered rule or freelancer line covers)
-
-ISSUE: the missing-category list names "mesh at block-to-concrete joints" (B9-03, m.l), but nothing defines whether it is
-measured or where. EVIDENCE: text census of 675 architectural and 2,339 structural texts (no mesh / spatter note); no
-answered question or owner rule mentions it; the freelancer has no line. INVESTIGATION: every joint between blockwork
-and a column, beam or slab was listed per finished side from the verified wall register (1,440 rows), cut at column
-outlines, beam bands and slab faces. Interior, YOUR band (finished floor to 3.75 m GF / 3.45 m 1F-2F, your height rule):
-horizontal joints inside the band 2.70 m (almost all sit at or above the plaster stop / decor ceiling), vertical joints
-at columns 278.85 m. Interior, DRAWING band (floor to soffit): horizontal 215.17 m + vertical 294.44 m + level-change
-steps 18.59 m. Exterior (Sigma side, whole storey): 106.11 + 121.80 + 2.23 = 230.14 m. Held (walls not resolved): inside
-134.33 m + 76 vertical joints, outside 50.86 m + 44 vertical joints.
-ALTERNATIVES: (A) not a BOQ item (in the plaster rate): nothing added. (B) a BOQ item in m.l on the band your finish
-heights define: about 281.6 m inside + 230.1 m outside. (C) a BOQ item on every drawn joint floor to soffit: about
-528.2 m inside + 230.1 m outside. The strip width is a product property, never part of the quantity.
-RECOMMENDATION: B: your answered finish heights already decide which faces are plastered, and a joint behind the decor
-ceiling is never plastered over. WHAT STAYS HELD: B9-03 blank by name (never 0). WHAT CONTINUES: everything; nothing waits
-on this answer.
-
-OWNER ANSWER (main chat 2026-10-29 21:22, owner's words): "We can calculate it but keep it seperate. add it to blocks section, شرمات + linear meter mesh strip on top of each 3 blocks. So each 3 blocks there will be a linear meter mesh strip for the whole building. calculate it, but this is not always used. There will always be pricing depending on the quality. sharmat او شرمات: Is also attached on every 3 blocks One side on Column, ither side on Block. So calculate how many columns has walls next to it or attached to it, they need each 3 blocks 1 sharma." (with two site photos: expanded-metal mesh strip laid in the bed joint along the wall; a ribbed metal tie fixed to the column face and laid into the block bed joint)
-CLAUDE'S READING (main chat, to be confirmed by the owner only if a worker finds it ambiguous): (1) two SEPARATE, OPTIONAL masonry items in the BLOCKS section, measured and shown apart from the block quantity because they are not always used and are priced by quality: (a) BED-JOINT MESH STRIP, m.l: one strip along the full wall length on every third block course, every block wall of the building; (b) SHARMAT (column-to-wall tie), pcs: one tie per third block course at every junction where a block wall abuts a column (one end fixed to the column, the other in the block bed joint), counted per wall end at each column. (2) The joint mesh over block-to-concrete joints at the plaster stage asked here (B9-03) is kept as a separate calculated item as well ("keep it separate"); its band (B or C) was not chosen, so both quantities stay shown, neither released. LEAD: move to ANSWERED; course height from the block size already answered (Q-75) and the drawn wall heights; nothing invented.
-
-### Q-78 Block-joint mortar of black (cement) block walls: which cement : sand mix does the BOQ count cement bags and sand with? (lead 2026-10-30 12:40, today's owner package; from T-367 MERGED 98ced66c, Checker 09:58; ERS 2.7: a material genuinely unspecified by the drawings and an Urban estimating method)
-
-ISSUE: the mortar volume of the black block walls is measured, but its cement and sand cannot be counted: no mix is set.
-EVIDENCE: no drawing note or specification prints a masonry mortar mix (31 sheets and both DXF text lists searched in
-T-367 / T-365). Your answered rules give a mix only for the tile / marble bed 1:4 (Q-45: about 8 bags of 50 kg and
-1.1 m3 loose sand per m3) and for the stair marble bed 1:3 (Q-53: about 9.6 bags and 1.0 m3 sand per m3); the engine
-refuses to borrow either for masonry.
-INVESTIGATION: mortar volume follows your 40 x 20 module rule (Q-75) and 10 mm joint (29 Oct): 3.870113 m3 installed
-(bed 2.623806 + head 1.246308) on the 24 black walls / pieces now in the candidate, Checker 0.000 %; joints against
-column faces and under beams about 0.2 .. 0.5 m3 more, held by name; about half the black walls are still held, so the
-volume will grow with them.
-ALTERNATIVES the record leaves open: (A) 1:4, priced with your Q-45 figures: on today's 3.87 m3 about 31 bags and
-4.3 m3 sand; (B) 1:3, with your Q-53 figures: about 37 bags and 3.9 m3 sand; (C) another block-laying mix you use, with
-its bags and sand per m3.
-QUANTITY IMPACT: cement bags and sand on the mortar line only; no m2, m3 or other trade moves.
-RECOMMENDATION: (A) if that is what Urban buys for block laying: it is the usual general-purpose masonry mix and keeps
-one procurement basis with your Q-45 figures. This is your estimating convention; the team will not choose it.
-WHAT STAYS HELD: cement / sand / bags of the mortar line (the mortar m3 is not held). NEXT ACTION: your answer is
-written here as 'Answer:'; the mortar integration (T-372, queued last in the integration lane) uses it. Not urgent.
+Before a waterproofing line is called complete, the engine checks that every place needing waterproofing (wet floors and
+upturns, roofs, buried walls, pool, tank) is either in that line or marked "not needed" with drawing evidence.
+Example: a wet bathroom floor of 4.2 m2 with a 0.20 m upturn must appear in the waterproofing line, or carry a drawing
+reference saying it needs none; if it is in neither, the line is not complete.
+Should this check be its own task (recommended: it touches different files from T-310), or be folded into T-310?
 
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.
 
+- **Q-78** Black-block joint mortar mix — Answer: A, 1:4 (owner 2026-11-02), with the Q-45 figures (about 8 bags of 50 kg and 1.1 m3 loose sand per m3); unblocks T-372.
+- **Q-77** Mesh strips over block-to-concrete joints — Answer (owner, main chat 2026-10-29 21:22, with the 30 Oct additions): a separate optional blocks item: mesh strip in linear metres on top of every 3 courses + sharmat (شرمات) ties per wall-column junction; plaster joint mesh kept separate; full words in OWNER_QUESTIONS_ANSWERED.md. Moved from Open 2026-11-02.
+- **Q-76** Curved window over the pool — Answer: A (owner, main chat 2026-10-24 23:53): window area stops at the confirmed opening 3.29 x 3.00 m = 9.870 m2, subject to the drawing evidence; full words in OWNER_QUESTIONS_ANSWERED.md. Moved from Open 2026-11-02.
+- **Q-71** Bars printed per metre / at a spacing — Answer (owner, main chat 2026-10-25 11:51 and 12:36): drawing-based counting from the printed spacing, first-link offset, support face and zone boundaries; also governs footing reinforcement (F8 / F12 / F13 / F14 / FF), applied separately to footing mesh and stirrups; full words in OWNER_QUESTIONS_ANSWERED.md. Moved from Open 2026-11-02.
 - **Q-74** Oblique strap beams: which length does the BOQ measure? — Answer: A, CONFIRMED (owner, main chat 2026-10-22): the actual angled beam-axis length between the appropriate footing faces (verify SB2 2.29 m and SB3 3.26 m against the drawings); reinforcement, formwork and excavation keep their own measurement geometries. Implementation T-174.
 - **Q-73** Block walls: are openings deducted from the block area? — Answer: A, CONFIRMED (owner, main chat 2026-10-22): deduct the full area of every actual opening from the relevant blockwork, only for masonry that physically exists; reveals measured separately where applicable; no double counting. Implementation T-175.
 - **OQ-04** Outside areas: does the BOQ include finishes for the courts, porch and side passage? — Answer: A with the owner rule docs/agents/OWNER_RULE_OUTDOOR_FLOORS_2026-10-21.md (owner, main chat 2026-10-21 20:25, additions 20:45 and 23:20): outside finishes ARE in the BOQ; chalet open court = INTERLOCK (owner choice over the renders); house side / front areas and every side strip = porcelain / ceramic (never interlock); outside stairs = MARBLE; porch measured as its own line at court level, material HELD; pool deck HELD.
