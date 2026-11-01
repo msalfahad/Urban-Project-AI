@@ -46,7 +46,25 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
-- GF LIFT TIE BEAM (Lead 2026-11-01 04:15; T-408 READY, unverified until MERGED): one physical beam on the GF shaft
+- LIFT LANDING THRESHOLD (Lead 2026-11-01 08:15; T-413 MERGED ae87deb1, Checker: the 1.000 x 0.200 band in the
+  ARCH.THRESHOLD LIFT_LANDING lines needs an owner before wiring): at each lift door (GF / 1F / 2F) the threshold piece
+  across the 1.000 m clear opening is ONE physical element; OWNER TRADE B6 (B6-07 lift threshold marble, 1.000 wide,
+  depth ASSUMED — OWNER-APPROVED UP-ELEV-005). The ARCH.THRESHOLD LIFT_LANDING 0.200 m2 band and the 0.300 .. 0.500 m2
+  threshold part inside the GF / 1F porcelain lines lie inside that footprint: they list the element without a quantity
+  (the porcelain lines deduct the footprint, range following the depth), unless a drawing or the finish schedule prints
+  two separate items, which nothing found so far does. The surround (B6-06, jambs + head) is B6, HELD 2.750 .. 13.980 m2
+  (door height not printed); never part of wall tile, plaster or paint quantities beyond their listed deduction. T-421
+  proves 0 overlap with a test.
+- STAIR-ROOM FLOOR PART vs LANDING BOUND (Lead 2026-11-01 08:15; T-418 MERGED 361f6e47, Checker condition): the floored
+  parts of the GF stair hall (+1.00 4.805 m2, lobby +0.30 1.3225 m2) and the 2F lobby (2.500 m2) are FLOOR FINISHES
+  (B3-01); the FIN.MARBLE.LANDING bounds that contain them today (L-1983e89d 0 .. 9.050, L-5d2be30d 0 .. 11.725) shrink to
+  0 .. 2.9225 and 0 .. 9.225 in the SAME package that adds the floor lines (T-421); a STAIR-labelled face is partitioned,
+  never dropped whole (R-T418-1).
+- NOSING EDGE (Lead 2026-11-01 08:15; T-412 MERGED f9c80501): each tread or landing front edge is one B7-05 nosing item
+  (m.l on the developed edge, curved flights on the arc, never the chord), OWNER TRADE STAIRS FINISHES; the tread line
+  (B7-02 / B7-03) keeps its area and lists the edge without a length; railing, skirting and riser lines never reuse a
+  nosing id; a winder count the drawings disagree on stays HELD (S-9), never generated.
+- GF LIFT TIE BEAM (Lead 2026-11-01 04:15; T-408 MERGED e3d9a092): one physical beam on the GF shaft
   sides, 5.500 m DRAWING-CONFIRMED on the GF storey's own columns; OWNER TRADE STRUCTURE (concrete, formwork sides +
   soffit, bars, all HELD blank on the missing section D-43); the masonry lines that already hold GF-W08 / W09 / W13 /
   W14 on 'lift tie beam size' (MAS.BLOCK / ARCH.WALL_VOLUME / ARCH.WALL_PANEL) take the block net once the section
