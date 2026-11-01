@@ -1,0 +1,763 @@
+{
+ "candidate": {
+  "file": "V3_0_38_BOQ_LINES.json",
+  "lines": {
+   "L-10e79bd48a8fbfbf14aa": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "evidence_state": "PROVISIONAL",
+    "gross": null,
+    "item_code": "FIN.CEILING",
+    "measured_net": 5.6258,
+    "room_id": "2F-R4D1B62",
+    "unit": "m2"
+   },
+   "L-2175a965bb7c48a50e6c": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "evidence_state": "BLOCKED_RFI",
+    "gross": null,
+    "item_code": "FIN.CEILING",
+    "measured_net": null,
+    "room_id": "GF-R31F8AE",
+    "unit": "m2"
+   },
+   "L-47fa825d197d32754240": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "evidence_state": "BLOCKED_RFI",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "GF-R31F8AE",
+    "unit": "lm"
+   },
+   "L-b8d4a7f04277deb1b0b0": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "evidence_state": "BLOCKED_RFI",
+    "gross": null,
+    "item_code": "FIN.SKIRTING",
+    "measured_net": null,
+    "room_id": "2F-R4D1B62",
+    "unit": "lm"
+   },
+   "L-dd6930fd19ca1b908c56": {
+    "approval_state": "MACHINE_ONLY",
+    "bounded_range": null,
+    "evidence_state": "BLOCKED_RFI",
+    "gross": null,
+    "item_code": "FIN.CEILING",
+    "measured_net": null,
+    "room_id": "2F-R4D1B62",
+    "unit": "m2"
+   }
+  },
+  "lines_on_stair_rooms": [
+   {
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-07f00d5b0c4e1924aaf5",
+    "net": 3.45,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.STAIR.FLIGHT",
+    "line_id": "L-0c2df36a42803126d3b9",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.CEILING",
+    "line_id": "L-10e79bd48a8fbfbf14aa",
+    "net": 5.6258,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.RISER",
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+    "line_id": "L-13a9b6f838e8fc4e0c13",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.PAINT",
+    "line_id": "L-145bd2394f2907558243",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-151d92470a81dd1c450b",
+    "net": 2.415,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.LANDING",
+    "line_id": "L-1983e89d8b619eade1db",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.STAIR.STEP_LM",
+    "line_id": "L-1e88ac0d4ba0b4e8a950",
+    "net": 11.5,
+    "state": "PROVISIONAL",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.CEILING",
+    "line_id": "L-2175a965bb7c48a50e6c",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "ARCH.SPACE",
+    "line_id": "L-348dec17c75ab8b7ba8c",
+    "net": 18.60000052958679,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-35520a1ac94f8780dd66",
+    "net": 2.2,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PAINT.CEILING",
+    "line_id": "L-38c09aa706dd6aed8f35",
+    "net": 5.6258,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-3e451bfc3e11473a2cec",
+    "net": 4.805,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-418121a4b223cb4e8646",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.SKIRTING",
+    "line_id": "L-47fa825d197d32754240",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "DOOR.INTERNAL.PVC",
+    "line_id": "L-48607261d2c129ffc8b6",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.STAIR.FLIGHT",
+    "line_id": "L-48bb13e2f1c94d852a03",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.RAILING",
+    "line_id": "L-4b108517c2338cde23d4",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "ARCH.SPACE",
+    "line_id": "L-4c2c172c3e1fd3507938",
+    "net": 12.474999999877928,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "ARCH.WINDOW",
+    "line_id": "L-564fc95719802ea1d84e",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.PAINT",
+    "line_id": "L-5a7a5c6f070ec7142ca5",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.LANDING",
+    "line_id": "L-5d2be30dd8d2ffeacc42",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.STAIR.STEP_LM",
+    "line_id": "L-60fc97c4306696c74c38",
+    "net": 11.5,
+    "state": "PROVISIONAL",
+    "unit": "lm"
+   },
+   {
+    "item_code": "DOOR.INTERNAL.PVC",
+    "line_id": "L-670576b22cfdb91523ad",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-6ad86fb8cffae1db8883",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m3"
+   },
+   {
+    "item_code": "FIN.RAILING",
+    "line_id": "L-78f1ea3512eacbc9ba12",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-79beb9688604887c59c5",
+    "net": 3.45,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.RISER",
+    "line_id": "L-7adf1ccd0c407b61221a",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-7afc2b10a88c0d2c0462",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "ARCH.WINDOW",
+    "line_id": "L-82367b94ec3d8a42cba7",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.PAINT",
+    "line_id": "L-83f2ef175321e6b61f54",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.RISER",
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-95f2c45c2eccaaeccb08",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "line_id": "L-9bd25c0cec9da3a8f4d2",
+    "net": 2.2,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.STAIR.FLIGHT",
+    "line_id": "L-a1a0ab49818d4b9621b5",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.MARBLE.TREAD",
+    "line_id": "L-a4aeb32035d11684f1a2",
+    "net": 1.035,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.FINISH_HELD",
+    "line_id": "L-a788de4672b1f0d2e6c1",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-acc2563d9293de219c3a",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.PLASTER",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.FINISH_HELD",
+    "line_id": "L-b4441a1b55eda53d98ea",
+    "net": 1.3225,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-b87fd07d7fc055529b3d",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m3"
+   },
+   {
+    "item_code": "FIN.SKIRTING",
+    "line_id": "L-b8d4a7f04277deb1b0b0",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.PAINT",
+    "line_id": "L-bacbf7fdc3454348b101",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-bff6fe38b9392a8fcad6",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m3"
+   },
+   {
+    "item_code": "FIN.RAILING",
+    "line_id": "L-c5805775b30be8ce5eb3",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.PAINT",
+    "line_id": "L-c74cfb4e07bcc47bc5d6",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   },
+   {
+    "item_code": "ARCH.PASSAGE",
+    "line_id": "L-c91732d6f75d440d677e",
+    "net": 1,
+    "state": "PROVISIONAL",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.STAIR.FLIGHT",
+    "line_id": "L-cccf54f717124cd750b3",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "ARCH.WINDOW",
+    "line_id": "L-d0d89b89aad0de8e121d",
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.STAIR.STEP_LM",
+    "line_id": "L-d4d764ae7bb07b474b6f",
+    "net": 8.05,
+    "state": "PROVISIONAL",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.RAILING",
+    "line_id": "L-d6c9ad28f3e335e6ce58",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "lm"
+   },
+   {
+    "item_code": "ARCH.PASSAGE",
+    "line_id": "L-dab17ccf4836eb632a97",
+    "net": 1,
+    "state": "SOURCE_DERIVED",
+    "unit": "pcs"
+   },
+   {
+    "item_code": "FIN.CEILING",
+    "line_id": "L-dd6930fd19ca1b908c56",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+    "line_id": "L-e29e57482abbca2266b0",
+    "net": 1.0,
+    "state": "SOURCE_DERIVED",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+    "line_id": "L-eba7ac43f3fce9bbd0b5",
+    "net": 0.5,
+    "state": "PROVISIONAL",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.RISER",
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "net": null,
+    "state": "BLOCKED_RFI",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.STAIR.STEP_LM",
+    "line_id": "L-f20f8544a42807c0cfcf",
+    "net": 3.45,
+    "state": "PROVISIONAL",
+    "unit": "lm"
+   },
+   {
+    "item_code": "FIN.FLOOR.FINISH_HELD",
+    "line_id": "L-f53d498668da3dc7c228",
+    "net": 4.805,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "L-faa974d23d90547f0b5b",
+    "net": 1.3225,
+    "state": "SOURCE_DERIVED",
+    "unit": "m2"
+   },
+   {
+    "item_code": "FIN.MARBLE.LIFT_SURROUND",
+    "line_id": "L-fdbd9636828f045aae5a",
+    "net": null,
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "m2"
+   }
+  ],
+  "run": "ARCH_TAKEOFF_V3.0.38",
+  "sha256_8": "57cca61c"
+ },
+ "drawing": {
+  "P7757.dxf_sha256_8": "ab54dd55"
+ },
+ "handle_checks": [
+  {
+   "agree": true,
+   "drawn_cover_m": 1.4,
+   "handles": "220",
+   "kind": "WALL",
+   "part": "GF-ST-HALL",
+   "s0": 0.0,
+   "side": "S",
+   "stretch_m": 1.4
+  },
+  {
+   "agree": true,
+   "gap_m": 1.0,
+   "kind": "DOOR",
+   "opening_id": "OP-010",
+   "part": "GF-ST-HALL",
+   "s0": 1.4,
+   "side": "S",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.1,
+   "handles": "21F",
+   "kind": "WALL",
+   "part": "GF-ST-HALL",
+   "s0": 2.4,
+   "side": "S",
+   "stretch_m": 0.1
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 2.0,
+   "handles": "21C",
+   "kind": "WALL",
+   "part": "GF-ST-HALL",
+   "s0": 0.0,
+   "side": "E",
+   "stretch_m": 2.0
+  },
+  {
+   "agree": true,
+   "gap_m": 0.9,
+   "kind": "PASSAGE",
+   "opening_id": "OP-020",
+   "part": "GF-ST-HALL",
+   "s0": 2.0,
+   "side": "E",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.05,
+   "handles": "21B",
+   "kind": "WALL",
+   "part": "GF-ST-HALL",
+   "s0": 2.9,
+   "side": "E",
+   "stretch_m": 0.05
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 1.1,
+   "handles": "298",
+   "kind": "WALL",
+   "part": "GF-ST-HALL",
+   "s0": 0.05,
+   "side": "W",
+   "stretch_m": 1.1
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 1.15,
+   "handles": "21B",
+   "kind": "WALL",
+   "part": "GF-ST-LOBBY030",
+   "s0": 0.0,
+   "side": "E",
+   "stretch_m": 1.15
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.1469,
+   "handles": "26F 2AC",
+   "kind": "WALL",
+   "part": "GF-ST-LOBBY030",
+   "s0": 0.0,
+   "side": "N",
+   "stretch_m": 0.1469
+  },
+  {
+   "agree": true,
+   "gap_m": 0.9,
+   "kind": "DOOR",
+   "opening_id": "OP-013",
+   "part": "GF-ST-LOBBY030",
+   "s0": 0.1469,
+   "side": "N",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.1031,
+   "handles": "2AB",
+   "kind": "WALL",
+   "part": "GF-ST-LOBBY030",
+   "s0": 1.0469,
+   "side": "N",
+   "stretch_m": 0.1031
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 2.0,
+   "handles": "1283",
+   "kind": "WALL",
+   "part": "2F-ST-LOBBY",
+   "s0": 0.0,
+   "side": "S",
+   "stretch_m": 2.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.1016,
+   "handles": "1295",
+   "kind": "WALL",
+   "part": "2F-ST-LOBBY",
+   "s0": 0.0,
+   "side": "E",
+   "stretch_m": 0.1016
+  },
+  {
+   "agree": true,
+   "gap_m": 0.9,
+   "kind": "DOOR",
+   "opening_id": "OP-007",
+   "part": "2F-ST-LOBBY",
+   "s0": 0.1016,
+   "side": "E",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.2484,
+   "handles": "1294",
+   "kind": "WALL",
+   "part": "2F-ST-LOBBY",
+   "s0": 1.0016,
+   "side": "E",
+   "stretch_m": 0.2484
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.4,
+   "handles": "1289",
+   "kind": "WALL",
+   "part": "2F-ST-LOBBY",
+   "s0": 0.0,
+   "side": "N",
+   "stretch_m": 0.4
+  },
+  {
+   "agree": true,
+   "gap_m": 1.0,
+   "kind": "LIFT_OPENING",
+   "opening_id": "OP-002",
+   "part": "2F-ST-LOBBY",
+   "s0": 0.4,
+   "side": "N",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.6,
+   "handles": "128A",
+   "kind": "WALL",
+   "part": "2F-ST-LOBBY",
+   "s0": 1.4,
+   "side": "N",
+   "stretch_m": 0.6
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.4158,
+   "handles": "1282",
+   "kind": "WALL",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 0.0,
+   "side": "S",
+   "stretch_m": 0.4158
+  },
+  {
+   "agree": true,
+   "gap_m": 1.0,
+   "kind": "DOOR",
+   "opening_id": "OP-001",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 0.4158,
+   "side": "S",
+   "wall_line_inside_m": 0.0
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 1.0842,
+   "handles": "1283",
+   "kind": "WALL",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 1.4158,
+   "side": "S",
+   "stretch_m": 1.0842
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.5,
+   "handles": "2F72 129A",
+   "kind": "COLUMN",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 1.25,
+   "side": "E",
+   "stretch_m": 0.5
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 0.2,
+   "handles": "129A",
+   "kind": "WALL",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 1.75,
+   "side": "E",
+   "stretch_m": 0.2
+  },
+  {
+   "agree": true,
+   "drawn_cover_m": 1.95,
+   "handles": "12B7",
+   "kind": "WALL",
+   "part": "2F-ST-ARRIVAL",
+   "s0": 0.0,
+   "side": "W",
+   "stretch_m": 1.95
+  }
+ ],
+ "lift_band_2F": [
+  {
+   "handle": "12AE",
+   "layer": "1",
+   "length_m": 0.2,
+   "y1_m": 1.45,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12AF",
+   "layer": "1",
+   "length_m": 0.2,
+   "y1_m": 1.45,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12B3",
+   "layer": "5",
+   "length_m": 1.0,
+   "y1_m": 1.25,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12B0",
+   "layer": "5",
+   "length_m": 1.0,
+   "y1_m": 1.45,
+   "y_m": 1.45
+  }
+ ]
+}

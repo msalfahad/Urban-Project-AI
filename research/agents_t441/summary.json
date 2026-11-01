@@ -1,0 +1,331 @@
+{
+ "task": "T-441",
+ "method": "STAIR_ROOM_SKIRTING_V1",
+ "rules": [
+  "R-T441-1",
+  "R-T441-2",
+  "R-T441-3",
+  "R-T441-4"
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.38",
+ "candidate_json_sha256_8": "57cca61c",
+ "drawing_sha256_8": "ab54dd55",
+ "parts": [
+  {
+   "part": "GF-ST-HALL",
+   "room": "GF-R31F8AE",
+   "level": 1.0,
+   "boundary_m": 12.3,
+   "gross_face_side_m": 6.55,
+   "deducted_m": 1.9,
+   "net_confirmed_lm": 4.65,
+   "held_count": 5,
+   "jambs_lm": 0.4,
+   "status": "DRAWING-CONFIRMED part + HELD remainder",
+   "deductions": [
+    {
+     "opening_id": "OP-010",
+     "kind": "DOOR",
+     "width_m": 1.0
+    },
+    {
+     "opening_id": "OP-020",
+     "kind": "PASSAGE",
+     "width_m": 0.9
+    }
+   ],
+   "held_face_length_lm": [
+    2.2,
+    3.4
+   ],
+   "held": [
+    {
+     "side": "DIV-E",
+     "kind": "GUARD_HELD",
+     "candidate_lm": 1.9,
+     "cause": "solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed"
+    },
+    {
+     "side": "DIV-E",
+     "kind": "HELD",
+     "candidate_lm": 0.6,
+     "cause": "divider band at the cut starts at y 1.05 (layer 5 155 / 4A4 / 157); between y 0.45 and 1.05 only the hidden layer-2 outline 47C / 47E / 499 is drawn (the 1F band above), with single lines 2C8 (layer 5, x 1.20) / 2C9 (layer 2, x 1.15) and the diagonal pair 2F1D / 2F1E in the south-west box; T-418 classed 0.45 .. 1.05 SOLID: whether a face stands here is not established"
+    },
+    {
+     "side": "DIV-END",
+     "kind": "GUARD_HELD",
+     "candidate_lm": 0.2,
+     "cause": "solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed; the band end, at y 0.45 (T-418) or 1.05 (cut outline 155)"
+    },
+    {
+     "side": "DIV-W",
+     "kind": "HELD",
+     "candidate_lm": 0.6,
+     "cause": "divider band at the cut starts at y 1.05 (layer 5 155 / 4A4 / 157); between y 0.45 and 1.05 only the hidden layer-2 outline 47C / 47E / 499 is drawn (the 1F band above), with single lines 2C8 (layer 5, x 1.20) / 2C9 (layer 2, x 1.15) and the diagonal pair 2F1D / 2F1E in the south-west box; T-418 classed 0.45 .. 1.05 SOLID: whether a face stands here is not established"
+    },
+    {
+     "side": "DIV-W",
+     "kind": "GUARD_HELD",
+     "candidate_lm": 0.1,
+     "cause": "solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed"
+    }
+   ],
+   "jambs": [
+    {
+     "id": "OP-020.J-S",
+     "opening_id": "OP-020",
+     "depth_m": 0.2,
+     "status": "HELD",
+     "cause": "passage jamb return (column 2F93 north face), URBAN-SKIRTING-OPENING-METHOD would add it PROVISIONAL; the reveal opens onto the WET full-height-tiled GF-RD36087 (T-296 GF-11): wall tile or skirting owner of the reveal not printed"
+    },
+    {
+     "id": "OP-020.J-N",
+     "opening_id": "OP-020",
+     "depth_m": 0.2,
+     "status": "HELD",
+     "cause": "passage jamb return (wall end 4AA), same as J-S"
+    }
+   ],
+   "in_task": true
+  },
+  {
+   "part": "GF-ST-LOBBY030",
+   "room": "GF-R31F8AE",
+   "level": 0.3,
+   "boundary_m": 4.6,
+   "gross_face_side_m": 2.3,
+   "deducted_m": 0.9,
+   "net_confirmed_lm": 1.4,
+   "held_count": 1,
+   "jambs_lm": 0.0,
+   "status": "DRAWING-CONFIRMED part + HELD remainder",
+   "deductions": [
+    {
+     "opening_id": "OP-013",
+     "kind": "DOOR",
+     "width_m": 0.9
+    }
+   ],
+   "held_face_length_lm": [
+    0,
+    1.15
+   ],
+   "held": [
+    {
+     "side": "W",
+     "kind": "UNKNOWN",
+     "candidate_lm": 1.15,
+     "cause": "no face drawn on layer 1 / 5 / S-COL.BON on x 1.35 (only hidden layer-2 lines 49C / 2C6 x 1.25, 49D x 1.30, the band above); west of it the T-418 strip GF-ST-CN (UNREAD, 0 .. 0.230 m2) and the space under the MS1-T winders at +0.30: open or enclosed is not drawn, so the face may stand at x 1.35, at x 1.15 or further west"
+    }
+   ],
+   "jambs": [],
+   "in_task": true
+  },
+  {
+   "part": "2F-ST-LOBBY",
+   "room": "2F-R4D1B62",
+   "level": 9.7,
+   "boundary_m": 6.5,
+   "gross_face_side_m": 5.25,
+   "deducted_m": 1.9,
+   "net_confirmed_lm": 3.35,
+   "held_count": 0,
+   "jambs_lm": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "deductions": [
+    {
+     "opening_id": "OP-007",
+     "kind": "DOOR",
+     "width_m": 0.9
+    },
+    {
+     "opening_id": "OP-002",
+     "kind": "LIFT_OPENING",
+     "width_m": 1.0
+    }
+   ],
+   "held_face_length_lm": [
+    0,
+    0
+   ],
+   "held": [],
+   "jambs": [],
+   "in_task": true
+  },
+  {
+   "part": "2F-ST-ARRIVAL",
+   "room": "2F-R4D1B62",
+   "level": 9.7,
+   "boundary_m": 8.9,
+   "gross_face_side_m": 5.15,
+   "deducted_m": 1.0,
+   "net_confirmed_lm": 4.15,
+   "held_count": 0,
+   "jambs_lm": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "deductions": [
+    {
+     "opening_id": "OP-001",
+     "kind": "DOOR",
+     "width_m": 1.0
+    }
+   ],
+   "held_face_length_lm": [
+    0,
+    0
+   ],
+   "held": [],
+   "jambs": [],
+   "in_task": false
+  }
+ ],
+ "task_confirmed_lm": 9.4,
+ "task_confirmed_by_room": {
+  "GF-R31F8AE": 6.05,
+  "2F-R4D1B62": 3.35
+ },
+ "closure": {
+  "GF-R31F8AE": {
+   "engine_wall_column_lm": 11.1,
+   "GF-ST-HALL confirmed": 4.65,
+   "GF-ST-LOBBY030 confirmed": 1.4,
+   "T-410 west face y 1.10 .. 5.00, wall + column only (wall 0.40 + column 2FBD 0.60 + wall 0.75 + wall 3.95 .. 5.00 1.05; window OP-022 not a face)": 2.8,
+   "T-410 MS1-T north 0 .. 1.15": 1.15,
+   "GF-ST-CN strip north face x 1.15 .. 1.35 (UNREAD, T-418)": 0.2,
+   "T-410 D1 east 2.95 .. 3.85": 0.9,
+   "sum": 11.1,
+   "residual": 0.0
+  },
+  "2F-R4D1B62": {
+   "engine_wall_column_lm": 16.9,
+   "2F-ST-LOBBY confirmed": 3.35,
+   "2F-ST-ARRIVAL confirmed (outside the task's parts)": 4.15,
+   "faces beside the slab opening, no floor at +9.70 (T-418 O-2F): north y 6.45 wall 0.10 + 1.40 (window OP-003 not a face)": 1.5,
+   "same, west x 0 from y 1.95: wall 1.00 + column 0.60 + wall 0.75 + wall 0.75 + column-wall 0.30 (window OP-008 not a face)": 3.4,
+   "same, east x 2.5 from y 1.95: wall 1.00 + column-wall 0.50 + wall 2.70 + 0.30 (the MS2-U lift wall; its flight skirting is T-410's, below +9.70)": 4.5,
+   "sum": 16.9,
+   "residual": 0.0
+  }
+ },
+ "overlap_with_stair_side_table": [],
+ "lift_band_2F": [
+  {
+   "handle": "12AE",
+   "layer": "1",
+   "length_m": 0.2,
+   "y1_m": 1.45,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12AF",
+   "layer": "1",
+   "length_m": 0.2,
+   "y1_m": 1.45,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12B3",
+   "layer": "5",
+   "length_m": 1.0,
+   "y1_m": 1.25,
+   "y_m": 1.25
+  },
+  {
+   "handle": "12B0",
+   "layer": "5",
+   "length_m": 1.0,
+   "y1_m": 1.45,
+   "y_m": 1.45
+  }
+ ],
+ "freelancer": {
+  "2F corridor": {
+   "freelancer_lm": 13.6,
+   "engine_t441_confirmed_lm": 7.5,
+   "diff_lm": -6.1,
+   "diff_pct": -44.85,
+   "components": [
+    {
+     "component": "door / lift openings he does not deduct (OP-001 1.000, OP-007 0.900, OP-002 1.000)",
+     "lm": 2.9,
+     "class": "TRACED",
+     "verdict": "RULE_DIFFERENCE (UP-CER-003 / UP-SKIRT-001: not across openings; lift jambs B6-06)"
+    },
+    {
+     "component": "arrival north edge: slab-opening edge + top of MS2-U (no wall face)",
+     "lm": 2.5,
+     "class": "TRACED",
+     "verdict": "RULE_DIFFERENCE (no skirting on a guarded / open edge, R-T410-1; defect B12)"
+    },
+    {
+     "component": "residual: his outline 13.60 vs our drawn outline 12.90 (his 7.70 m2 vs 7.375 m2, no dimensions in his row)",
+     "lm": 0.7,
+     "class": "UNEXPLAINED",
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "closes": true
+  },
+  "GF stair room": {
+   "freelancer_lm": null,
+   "engine_t441_confirmed_lm": 6.05,
+   "verdict": "his skirting list has no GF stair-hall row (T-106): ENGINE_RIGHT on the existence of the faces (drawn walls at floor level beside T-418 floor parts); material HELD with the floor finish"
+  }
+ },
+ "parents": {
+  "L-10e79bd48a8fbfbf14aa": {
+   "approval_state": "MACHINE_ONLY",
+   "bounded_range": null,
+   "evidence_state": "PROVISIONAL",
+   "gross": null,
+   "item_code": "FIN.CEILING",
+   "measured_net": 5.6258,
+   "room_id": "2F-R4D1B62",
+   "unit": "m2"
+  },
+  "L-2175a965bb7c48a50e6c": {
+   "approval_state": "MACHINE_ONLY",
+   "bounded_range": null,
+   "evidence_state": "BLOCKED_RFI",
+   "gross": null,
+   "item_code": "FIN.CEILING",
+   "measured_net": null,
+   "room_id": "GF-R31F8AE",
+   "unit": "m2"
+  },
+  "L-47fa825d197d32754240": {
+   "approval_state": "MACHINE_ONLY",
+   "bounded_range": null,
+   "evidence_state": "BLOCKED_RFI",
+   "gross": null,
+   "item_code": "FIN.SKIRTING",
+   "measured_net": null,
+   "room_id": "GF-R31F8AE",
+   "unit": "lm"
+  },
+  "L-b8d4a7f04277deb1b0b0": {
+   "approval_state": "MACHINE_ONLY",
+   "bounded_range": null,
+   "evidence_state": "BLOCKED_RFI",
+   "gross": null,
+   "item_code": "FIN.SKIRTING",
+   "measured_net": null,
+   "room_id": "2F-R4D1B62",
+   "unit": "lm"
+  },
+  "L-dd6930fd19ca1b908c56": {
+   "approval_state": "MACHINE_ONLY",
+   "bounded_range": null,
+   "evidence_state": "BLOCKED_RFI",
+   "gross": null,
+   "item_code": "FIN.CEILING",
+   "measured_net": null,
+   "room_id": "2F-R4D1B62",
+   "unit": "m2"
+  }
+ },
+ "handle_checks": {
+  "stretches": 24,
+  "agree": 24
+ }
+}
