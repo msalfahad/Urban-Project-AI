@@ -1,0 +1,347 @@
+{
+ "beam_reconciliation": {
+  "B27": {
+   "box_free_edge_m": 9.7164,
+   "carried_m": 7.2493,
+   "in_strips_m": 1.2905,
+   "measured_in_carried_pieces_m": {
+    "GF-RC06FED": 0.3524,
+    "GF-RC99C2A part": 6.8969
+   },
+   "on_zone_lines_m": 1.1766,
+   "residual_m": 0.0
+  },
+  "CB8": {
+   "box_free_edge_m": 3.0,
+   "carried_m": 1.6,
+   "in_strips_m": 1.4,
+   "measured_in_carried_pieces_m": {
+    "GF-RC06FED": 1.6
+   },
+   "on_zone_lines_m": 0,
+   "residual_m": 0.0
+  }
+ },
+ "box": {
+  "ceiling_m2_carried_plus_strips": 13.455,
+  "closure_m2": -1e-06,
+  "net_m2": 13.455,
+  "pieces_m2": {
+   "GF-RC06FED": 2.800001,
+   "GF-RC99C2A part": 8.955,
+   "OP-003 strip part": 0.6,
+   "SITE-0a31aaa10796d33a": 1.1
+  }
+ },
+ "inputs": {
+  "P7757.dxf": "ab54dd55",
+  "ST7757.dxf": "9f9d1179",
+  "align_GF_m": [
+   202.3333,
+   841.6415
+  ],
+  "v29_method": "ARCH_TAKEOFF_V2.9"
+ },
+ "jamb_search": [
+  {
+   "block": "PAN",
+   "dist_to_box_m": 0.0,
+   "dist_to_strip1_m": 1.31,
+   "dist_to_strip2_m": 0.991,
+   "handle": "178",
+   "layer": "4"
+  },
+  {
+   "block": "D120",
+   "dist_to_box_m": 0.2,
+   "dist_to_strip1_m": 3.4,
+   "dist_to_strip2_m": 3.2,
+   "handle": "33E",
+   "layer": "S-COL.BON"
+  },
+  {
+   "block": "LE",
+   "dist_to_box_m": 0.0,
+   "dist_to_strip1_m": 2.528,
+   "dist_to_strip2_m": 1.862,
+   "handle": "410",
+   "layer": "LEVEL"
+  },
+  {
+   "block": "A$C662819C0",
+   "dist_to_box_m": 0.393,
+   "dist_to_strip1_m": 0.393,
+   "dist_to_strip2_m": 1.538,
+   "handle": "E4",
+   "layer": "4"
+  }
+ ],
+ "room": {
+  "class": "WET",
+  "class_source": "owner Q-37 A (pantry wet within its printed box; T-286 MERGED, T-427)",
+  "full_height_tile": true,
+  "id": "GF-07 open pantry (printed 450 x 300; engine faces GF-RC06FED + GF-RC99C2A part)",
+  "skirting_line": null,
+  "tile_source": "Q-48 A / UP-PANTRY-003; T-312 / T-315 r2 MERGED: L-f5c5a1a9 FIN.WALL.TILE 32.3422 m2, all pantry walls but the open edge (10.491 m x 3.65), faces GF-07|GF-W01 (A6) and GF-07|GF-W16 (AF) included",
+  "wall_tile_line": "L-f5c5a1a9"
+ },
+ "rule": "R-T439-1 (strip_owner_v1.py)",
+ "strips": [
+  {
+   "above_m2": {
+    "BEAM": 0.311088,
+    "BEAM_OR_COLUMN": 0.139944,
+    "SLAB": 0.648948
+   },
+   "ceiling": {
+    "board_type": "HELD",
+    "bulkhead_faces": [
+     {
+      "beam": "B27",
+      "height_m": 0.25,
+      "m": 0.842,
+      "m2": 0.2105
+     },
+     {
+      "beam": "CB8",
+      "height_m": 0.15,
+      "m": 1.4,
+      "m2": 0.21
+     }
+    ],
+    "bulkhead_m2": 0.4205,
+    "bulkhead_status": "ASSUMED - OWNER-APPROVED",
+    "code": "CEILING_CONTINUES_FROM_ROOM",
+    "decor_m2": 1.1,
+    "decor_status": "DRAWING-CONFIRMED",
+    "held_edge_m": null,
+    "held_edges": [],
+    "no_face": [],
+    "paintable_owner_m2": 1.5205,
+    "room": "GF-07 open pantry (printed 450 x 300; engine faces GF-RC06FED + GF-RC99C2A part)",
+    "room_class": "WET",
+    "status": "PROPOSAL"
+   },
+   "counter_m2": {
+    "east": 1.099906,
+    "west": 0.0
+   },
+   "engine_v29": {
+    "area_m2": 1.1,
+    "bounded_by_lm": {
+     "PASSAGE_THRESHOLD": 0.5,
+     "WALL": 1.4,
+     "ZONE_LINE": 3.5
+    },
+    "class": "UNATTRIBUTED",
+    "disposition": "BLOCKED_RFI",
+    "opening_ids": [
+     "OP-003"
+    ]
+   },
+   "floor_line": "L-6c83b9fc (FIN.FLOOR.WET_TILE 1.1000, T-414 table)",
+   "floor_m2": 1.1,
+   "id": "GF-SITE-0a31aaa10796d33a",
+   "kind": "ROOM_PIECE",
+   "skirting": {
+    "held_lm": null,
+    "rows": [
+     {
+      "line": "L-f5c5a1a9",
+      "m": 1.4,
+      "owner": "TILE_OWNS",
+      "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     {
+      "line": null,
+      "m": 1.3,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 0.5,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 0.8,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 0.9,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 0.5,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     }
+    ],
+    "skirting_lm": null,
+    "status": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "tile_owned_lm": 1.4
+   }
+  },
+  {
+   "above_m2": {
+    "BEAM": 0.038984,
+    "BEAM_OR_COLUMN": 0.56093
+   },
+   "ceiling": {
+    "board_type": "HELD",
+    "bulkhead_faces": [
+     {
+      "beam": "B27",
+      "height_m": 0.25,
+      "m": 0.2485,
+      "m2": 0.062125
+     }
+    ],
+    "bulkhead_m2": 0.062125,
+    "bulkhead_status": "ASSUMED - OWNER-APPROVED",
+    "code": "CEILING_CONTINUES_FROM_ROOM",
+    "decor_m2": 0.6,
+    "decor_status": "DRAWING-CONFIRMED",
+    "held_edge_m": 0.8118,
+    "held_edges": [
+     {
+      "beam": "B27",
+      "m": 0.1,
+      "neighbour": "UNREGISTERED",
+      "why": "neighbour or beam not CALCULATED (Q-61 C: HELD edge, never 0)"
+     },
+     {
+      "beam": "unregistered GF-151",
+      "m": 0.1,
+      "neighbour": "BEAM",
+      "why": "neighbour or beam not CALCULATED (Q-61 C: HELD edge, never 0)"
+     },
+     {
+      "beam": "unregistered GF-151",
+      "m": 0.3059,
+      "neighbour": "UNREGISTERED",
+      "why": "neighbour or beam not CALCULATED (Q-61 C: HELD edge, never 0)"
+     },
+     {
+      "beam": "unregistered GF-152",
+      "m": 0.3059,
+      "neighbour": "UNREGISTERED",
+      "why": "neighbour or beam not CALCULATED (Q-61 C: HELD edge, never 0)"
+     }
+    ],
+    "no_face": [
+     {
+      "beam": "B5",
+      "m": 0.2485,
+      "why": "beam no deeper than the 0.60 m owner allowance or than its neighbour: hidden above the decor ceiling, no face"
+     }
+    ],
+    "paintable_owner_m2": 0.662125,
+    "room": "GF-07 open pantry (printed 450 x 300; engine faces GF-RC06FED + GF-RC99C2A part)",
+    "room_class": "WET",
+    "status": "PROPOSAL"
+   },
+   "counter_m2": {
+    "east": 0.1,
+    "west": 0.05811
+   },
+   "engine_v29": {
+    "bounded_by_lm": {
+     "COLUMN": 0.2,
+     "PASSAGE_THRESHOLD": 19.64,
+     "WALL": 0.2
+    },
+    "class": "THRESHOLD",
+    "disposition": "BLOCKED_RFI",
+    "opening_ids": [
+     "OP-003"
+    ],
+    "route_box_less_pieces_m2": 0.600094,
+    "routes_agree_m2": 0.000334,
+    "strip": "SITE-baa7db7fb0d465b6",
+    "strip_m2": 1.964
+   },
+   "floor_line": "L-50307dd9 (FIN.FLOOR.WET_TILE 0.6000, T-414 table)",
+   "floor_m2": 0.6,
+   "id": "GF-OP-003-NO-OPENING",
+   "kind": "ROOM_PIECE",
+   "skirting": {
+    "held_lm": null,
+    "rows": [
+     {
+      "line": null,
+      "m": 0.2,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 0.5,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": null,
+      "m": 2.5,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     },
+     {
+      "line": "L-f5c5a1a9",
+      "m": 0.2,
+      "owner": "TILE_OWNS",
+      "status": "NOT_APPLICABLE_WITH_EVIDENCE"
+     },
+     {
+      "line": null,
+      "m": 3.0,
+      "owner": "NO_BASE",
+      "status": "REASON"
+     }
+    ],
+    "skirting_lm": null,
+    "status": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "tile_owned_lm": 0.2
+   }
+  }
+ ],
+ "table_sha256_8": "603c1fa2",
+ "task": "T-439",
+ "totals": {
+  "ceiling_bulkhead_new_m2": 0.482625,
+  "ceiling_decor_new_m2": 1.7,
+  "ceiling_held_edges_m": 1.9886,
+  "paintable_owner_new_m2": 2.182625,
+  "skirting_lm": null,
+  "skirting_tile_owned_lm": 1.6
+ },
+ "v29_ceiling_lines_on_strips": [],
+ "zone_line_held_edges": [
+  {
+   "beam": "B27",
+   "between": "GF-OP-003-NO-OPENING/GF-RC99C2A part",
+   "m": 0.2942
+  },
+  {
+   "beam": "B27",
+   "between": "GF-OP-003-NO-OPENING/GF-SITE-0a31aaa10796d33a",
+   "m": 0.2942
+  },
+  {
+   "beam": "unregistered GF-151",
+   "between": "GF-OP-003-NO-OPENING/GF-SITE-0a31aaa10796d33a",
+   "m": 0.2942
+  },
+  {
+   "beam": "unregistered GF-152",
+   "between": "GF-OP-003-NO-OPENING/GF-RC99C2A part",
+   "m": 0.2942
+  }
+ ]
+}
