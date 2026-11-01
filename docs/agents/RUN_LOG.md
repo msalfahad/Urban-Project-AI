@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-01T00:51Z | Verifier | STARTED | run session_01E6cPnciDn1w3SeCM1LycNS | repo-attached routine | task state: READY T-407 (per RUN_LOG; board to confirm) | self-check pending
 - 2026-11-01T00:40Z | Worker 2 | STARTED | run session_01E6cPnc1oAyL14BTqMHUwWr | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-01 00:23 UTC | Lead | SUCCESS | board | Since 20:21: T-401, T-405, T-409 WORKED (Gate A first pass), T-402 WORKED r2, T-399 WORKED (Gate B first pass: candidate of record V3.0.34, B4-02 zones as coverage binding, 1 line changed, 0 added); T-406 r2 / T-410 r1 PARTIAL -> narrow rework rows TODO r3 / r2; T-400 TODO first in I, T-408 TODO; NEW T-411 (S gate 1: t374 snapshot-vs-board red in every L4 since T-328, no row existed), T-412 (A nosing + tread/riser census), T-413 (A lift marble), T-414 (A B3-05 floor screed / cement bed, Q-41); VERIFIER QUEUE T-407 first; 4 register rulings, 4 lessons adopted + 2 proposed; Drive: no new files; queue check: 46 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS (0); problem: none
 - 2026-11-01 00:13 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
