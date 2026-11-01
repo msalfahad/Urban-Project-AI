@@ -1,0 +1,501 @@
+{
+ "basis": "T-428 r4 unexplained-left parts (MERGED ea8f5ae5) re-read construction by construction; drawing 'ST7757 dxf.dxf' 9f9d1179 (own read), pool levels T-183 r2; his rows from the committed raw-rows file",
+ "by_proposal_m3": {
+  "ENGINE_RIGHT": -0.595825,
+  "UNRESOLVED": -0.438119
+ },
+ "c9_restated_m3": -0.138,
+ "findings": {
+  "F-T437-1": "2F B2: T-395's THROUGH_SUPPORT -0.112760 m3 on the mark is the same left-over 2.500 m row as the untraced -0.087240 (mark -0.200000 = 2.5 x 0.20 x 0.40); his four other rows are the drawn face-to-face runs exactly, so no length on this mark runs through a support. Proposal: re-class the -0.112760 to COUNT (ENGINE_RIGHT) in the next roll-up; no figure moved here.",
+  "F-T437-2": "1F CB12: T-395's through allowance 1.359397 m passes the drawn room between the valued length 10.782147 m and the outer faces of the end carriers 12.000 m (1.217853 m) by 0.141544 m (0.026539 m3): the valued length already holds 0.132147 m of beside-support plan (R-T437-2). The untraced part is at least 0.187500 m3, not 0.160962; no figure moved here.",
+  "O-T437-1": "GF: B4 edges 2B2 / 2B3 run 0.500 m past column 353 to line 484, where the B7 arc 47D begins; that 0.20 x 0.50 m plan is in no beam line (B4 BAND0030.1 stops at 353, the arc band BAND0049 starts at 484): 0.050 m3 at B4's 0.50 depth .. 0.075 m3 at B7's 0.75; slab coverage not checked. For the Checker / lane I (candidate GAP); no figure moved."
+ },
+ "parts": {
+  "BM-1F": {
+   "m3": -0.153516,
+   "subparts": [
+    {
+     "floor": "1F",
+     "id": "BM1F-B11-STEP",
+     "m3": 0.007173,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "STEP: his row 0.047817 m short of the drawn face-to-face length, inside one 0.05 m step of his printing"
+    },
+    {
+     "floor": "1F",
+     "id": "BM1F-B6-STEP",
+     "m3": 0.000273,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "STEP: his row 0.002183 m short of the drawn face-to-face length, inside one 0.01 m step of his printing"
+    },
+    {
+     "floor": "1F",
+     "id": "BM1F-CB12",
+     "m3": -0.160962,
+     "proposal": "UNRESOLVED",
+     "verdict": "UNRESOLVED",
+     "why": "his length passes the outermost drawn extent of CB12 (outer faces of the end carriers 5C1 / 5BE, 12.000 m) by 1.000 m: no drawn construction reaches it; the untraced part is at least 0.1875 m3 (T-395's -0.160962 is a lower figure because its allowance passes the drawn room by 0.141544 m, F-T437-2)"
+    }
+   ]
+  },
+  "BM-2F": {
+   "m3": -0.08724,
+   "subparts": [
+    {
+     "floor": "2F",
+     "id": "BM2F-B2",
+     "m3": -0.08724,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "COUNT: four labelled B2 runs drawn (2.5 / 3.0 / 1.8 / 3.0), each equal to one of his rows exactly; one 2.500 m row is left over, longer than the whole through-support room of the mark (1.3995 m); the whole mark -0.200 m3 is that row (F-T437-1)"
+    }
+   ]
+  },
+  "BM-GF": {
+   "m3": -0.126242,
+   "subparts": [
+    {
+     "floor": "GF",
+     "id": "BMGF-B11-STEP",
+     "m3": 0.00405,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "STEP: his row 0.027 m short of the drawn face-to-face length, inside one 0.05 m step of his printing"
+    },
+    {
+     "floor": "GF",
+     "id": "BMGF-B8-STEP",
+     "m3": 0.001665,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "STEP: his row 0.0111 m short of the drawn face-to-face length, inside one 0.05 m step of his printing"
+    },
+    {
+     "floor": "GF",
+     "id": "BMGF-B2",
+     "m3": -0.011152,
+     "proposal": "UNRESOLVED",
+     "verdict": "UNRESOLVED",
+     "why": "two of his three rows are drawn readings exactly (column 341 face to line 278; edge 29E: through-support, inside the T-395 traced term); the third passes the longest drawn reading of the x 57.2 run (edge 286, 4.500 m, which already runs through B1's own 0.80 m run and column 36B) by 0.100 m: untraced 0.008 .. 0.072 m3"
+    },
+    {
+     "floor": "GF",
+     "id": "BMGF-B7",
+     "m3": -0.120805,
+     "proposal": "UNRESOLVED",
+     "verdict": "UNRESOLVED",
+     "why": "each of his two B7 rows alone is reproduced by several drawn sums within his precision (3 / 3), but 0 pair of them uses disjoint drawn pieces: no consistent construction of both rows (his row with no location, T-252); never the nearest"
+    }
+   ]
+  },
+  "BW-BAND": {
+   "m3": -0.1452,
+   "subparts": [
+    {
+     "id": "BWB-LEN",
+     "m3": -0.1452,
+     "proposal": "UNRESOLVED",
+     "verdict": "UNRESOLVED",
+     "why": "no construction within 0.05 m on one face (axis free 70.49, inner free 70.09, outer free 72.59); the only near figures mix the outer face with inner-face crossings (71.69) or the axis with outer-face crossings (71.79): refused as physical constructions"
+    }
+   ]
+  },
+  "CL-1F": {
+   "m3": -0.138,
+   "subparts": [
+    {
+     "id": "C9-SECTION",
+     "m3": -0.138,
+     "proposal": "UNRESOLVED",
+     "restated": true,
+     "verdict": "UNRESOLVED",
+     "why": "2 x (0.18 - 0.20) m2 x 3.45 m (T-394, merged): three readings of one member (schedule 1ST 20 x 90 = engine, drawn outline 679 0.25 x 1.00, his 0.20 x 1.00); designer item; not re-measured"
+    }
+   ]
+  },
+  "GB-BOUNDARY": {
+   "m3": -0.0504,
+   "subparts": [
+    {
+     "id": "GBB-LEN",
+     "m3": -0.0504,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "his length printed to whole metres: within half a metre the 7FE axis (41.72) and the 7FE outer run (42.12) both reproduce it; the band solid is its area 8.344 m2 / 0.20 = 41.72 m either way (the outer run is not the solid's length): not boundary concrete (cause ambiguous)"
+    }
+   ]
+  },
+  "PL-WALLS": {
+   "m3": -0.471346,
+   "subparts": [
+    {
+     "id": "PLW-H020",
+     "m3": -0.471346,
+     "proposal": "ENGINE_RIGHT",
+     "verdict": "UNRESOLVED",
+     "why": "0.20 m x wall band 2.356726 m2: two exact constructions (rim to formation; rim to base underside + upstand again), both put the 0.20 m outside the RC wall above the base top: NOT RC wall concrete either way (cause ambiguous)"
+    }
+   ]
+  }
+ },
+ "row_total_m3": -1.033944,
+ "schema": "URBAN_T437_SUMMARY_V1",
+ "tests": {
+  "beams": {
+   "1F:B11": {
+    "diff_m": 0.047817,
+    "is_step": true,
+    "step_m": 0.05
+   },
+   "1F:B6": {
+    "diff_m": 0.002183,
+    "is_step": true,
+    "step_m": 0.01
+   },
+   "1F:CB12": {
+    "construction": {
+     "nearest": [
+      {
+       "cls": "outer faces of the end carriers 5C1 / 5BE (outermost drawn extent)",
+       "misfit": 1.0,
+       "name": "outer faces of the end carriers 5C1 / 5BE (outermost drawn extent)",
+       "value": 12.0
+      },
+      {
+       "cls": "east face 5DE as drawn",
+       "misfit": 1.25,
+       "name": "east face 5DE as drawn",
+       "value": 11.75
+      },
+      {
+       "cls": "carrier centre lines (south 0.30, north 0.20)",
+       "misfit": 1.25,
+       "name": "carrier centre lines (south 0.30, north 0.20)",
+       "value": 11.75
+      }
+     ],
+     "refused_mixed": [],
+     "status": "UNRESOLVED",
+     "tol": 0.5,
+     "why": "no construction within tolerance"
+    },
+    "mark_residual_m3": -0.415847,
+    "t395_allowance_over_room_m3": 0.02654,
+    "through_bound": {
+     "allowance_over_room_m": 0.141544,
+     "excess_m": 2.217853,
+     "room_m": 1.217853,
+     "untraced_lower_bound_m": 1.0
+    },
+    "untraced_lower_bound_m3": 0.1875
+   },
+   "2F:B2": {
+    "binding": {
+     "bound": [
+      [
+       3.0,
+       3.0
+      ],
+      [
+       3.0,
+       3.0
+      ],
+      [
+       2.5,
+       2.5
+      ],
+      [
+       1.8,
+       1.8
+      ]
+     ],
+     "class": "COUNT",
+     "drawn_left_over": [],
+     "his_left_over": [
+      2.5
+     ],
+     "left_over_m": 2.5,
+     "through_room_m": 1.3995
+    },
+    "drawn_runs": 4,
+    "labels": 4,
+    "mark_residual_m3": -0.2
+   },
+   "GF:B11": {
+    "diff_m": 0.027,
+    "is_step": true,
+    "step_m": 0.05
+   },
+   "GF:B2": {
+    "34": {
+     "cause_ambiguous": false,
+     "cls": "BAND0024.1 (x 59.9 pair, columns 341 / 32F): to line 278 (inside 32F)",
+     "hits": [
+      {
+       "cls": "BAND0024.1 (x 59.9 pair, columns 341 / 32F): to line 278 (inside 32F)",
+       "misfit": 0.0,
+       "name": "BAND0024.1 (x 59.9 pair, columns 341 / 32F): to line 278 (inside 32F)",
+       "value": 2.95
+      }
+     ],
+     "refused_mixed": [],
+     "status": "TRACED",
+     "tol": 0.005
+    },
+    "35": {
+     "nearest": [
+      {
+       "cls": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): edge 286 (32C outer face to B20 face, through B1 0.80)",
+       "misfit": 0.1,
+       "name": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): edge 286 (32C outer face to B20 face, through B1 0.80)",
+       "value": 4.5
+      },
+      {
+       "cls": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): to the B20 centre line",
+       "misfit": -0.1,
+       "name": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): to the B20 centre line",
+       "value": 4.7
+      },
+      {
+       "cls": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): to the B20 far face 458",
+       "misfit": -0.3,
+       "name": "BAND0020.2 (x 57.2 pair, columns 36B / 32C): to the B20 far face 458",
+       "value": 4.9
+      }
+     ],
+     "refused_mixed": [],
+     "status": "UNRESOLVED",
+     "tol": 0.05,
+     "why": "no construction within tolerance"
+    },
+    "36": {
+     "cause_ambiguous": false,
+     "cls": "BAND0027 (columns 34A / 356): edge 29E",
+     "hits": [
+      {
+       "cls": "BAND0027 (columns 34A / 356): edge 29E",
+       "misfit": 0.0,
+       "name": "BAND0027 (columns 34A / 356): edge 29E",
+       "value": 3.1
+      }
+     ],
+     "refused_mixed": [],
+     "status": "TRACED",
+     "tol": 0.05
+    }
+   },
+   "GF:B7": {
+    "disjoint_pairs": 0,
+    "first_hits": {
+     "25": [
+      [
+       0.000354,
+       [
+        [
+         "A1 quarter arc (block b7 47D; R 1.30 / 1.10)",
+         "centre line"
+        ],
+        [
+         "RG ring at the pool void (labels 46E / 46F / 470 / 471)",
+         "west outer arcs 2EE + 2EF"
+        ]
+       ]
+      ],
+      [
+       0.015044,
+       [
+        [
+         "S1 straight (labels 4B6; columns 33E / 341)",
+         "f2f"
+        ],
+        [
+         "A1 quarter arc (block b7 47D; R 1.30 / 1.10)",
+         "centre line"
+        ]
+       ]
+      ],
+      [
+       0.016166,
+       [
+        [
+         "V1 void straight (label 4D2; faces 46D / 2A9)",
+         "outer faces of B8 / CB1"
+        ],
+        [
+         "RG ring at the pool void (labels 46E / 46F / 470 / 471)",
+         "east outer arcs 312 + 313"
+        ]
+       ]
+      ]
+     ],
+     "40": [
+      [
+       -0.001739,
+       [
+        [
+         "S1 straight (labels 4B6; columns 33E / 341)",
+         "f2f"
+        ],
+        [
+         "A1 quarter arc (block b7 47D; R 1.30 / 1.10)",
+         "centre + 0.50 strip beyond column 353"
+        ],
+        [
+         "V1 void straight (label 4D2; faces 46D / 2A9)",
+         "outer faces of B8 / CB1"
+        ],
+        [
+         "RG ring at the pool void (labels 46E / 46F / 470 / 471)",
+         "east inner arcs 310 + 311"
+        ]
+       ]
+      ],
+      [
+       -0.00203,
+       [
+        [
+         "S1 straight (labels 4B6; columns 33E / 341)",
+         "edge 293"
+        ],
+        [
+         "V1 void straight (label 4D2; faces 46D / 2A9)",
+         "outer faces of B8 / CB1"
+        ],
+        [
+         "RG ring at the pool void (labels 46E / 46F / 470 / 471)",
+         "plan / 0.20"
+        ]
+       ]
+      ],
+      [
+       0.004275,
+       [
+        [
+         "S1 straight (labels 4B6; columns 33E / 341)",
+         "f2f"
+        ],
+        [
+         "V1 void straight (label 4D2; faces 46D / 2A9)",
+         "edge 437"
+        ],
+        [
+         "RG ring at the pool void (labels 46E / 46F / 470 / 471)",
+         "centre arcs R 1.835 / 1.65"
+        ]
+       ]
+      ]
+     ]
+    },
+    "hits_per_row": {
+     "25": 3,
+     "40": 3
+    }
+   },
+   "GF:B8": {
+    "diff_m": 0.0111,
+    "is_step": true,
+    "step_m": 0.05
+   }
+  },
+  "boundary": {
+   "lower_band": {
+    "nearest": [
+     {
+      "cls": "outer 1658 92.74 less outer crossings 20.15",
+      "misfit": -0.89,
+      "name": "outer 1658 92.74 less outer crossings 20.15",
+      "value": 72.59
+     },
+     {
+      "cls": "axis 91.94 less axis crossings 21.45 (owner method A free length)",
+      "misfit": 1.21,
+      "name": "axis 91.94 less axis crossings 21.45 (owner method A free length)",
+      "value": 70.49
+     },
+     {
+      "cls": "inner 1659 91.14 less inner crossings 21.05",
+      "misfit": 1.61,
+      "name": "inner 1659 91.14 less inner crossings 21.05",
+      "value": 70.09
+     }
+    ],
+    "refused_mixed": [
+     {
+      "cls": "outer 92.74 less inner crossings 21.05",
+      "misfit": 0.01,
+      "name": "outer 92.74 less inner crossings 21.05",
+      "value": 71.69
+     },
+     {
+      "cls": "axis 91.94 less outer crossings 20.15",
+      "misfit": -0.09,
+      "name": "axis 91.94 less outer crossings 20.15",
+      "value": 71.79
+     }
+    ],
+    "status": "UNRESOLVED",
+    "tol": 0.05,
+    "why": "no construction within tolerance"
+   },
+   "upper_gb": {
+    "cause_ambiguous": true,
+    "cls": "BAND_SOLID",
+    "hits": [
+     {
+      "cls": "BAND_SOLID",
+      "misfit": 0.28,
+      "name": "7FE axis (band area 8.344 / 0.20)",
+      "value": 41.72
+     },
+     {
+      "cls": "BAND_SOLID",
+      "misfit": -0.12,
+      "name": "7FE outer run 2.45 + 31.37 + 8.30",
+      "value": 42.12
+     }
+    ],
+    "refused_mixed": [
+     {
+      "cls": "outer 31.37 + 8.30 + inner 2.25",
+      "misfit": 0.08,
+      "name": "outer 31.37 + 8.30 + inner 2.25",
+      "value": 41.92
+     },
+     {
+      "cls": "inner 30.97 + outer 8.30 + 2.45",
+      "misfit": 0.28,
+      "name": "inner 30.97 + outer 8.30 + 2.45",
+      "value": 41.72
+     }
+    ],
+    "status": "TRACED",
+    "tol": 0.5
+   }
+  },
+  "pool": {
+   "cause_ambiguous": true,
+   "cls": "NOT_RC_WALL",
+   "hits": [
+    {
+     "cls": "NOT_RC_WALL",
+     "misfit": 0.0,
+     "name": "rim to formation (base + screed 0.05 + membrane 0.05 + blinding 0.10 = the dig depth below the rim)",
+     "value": 1.8
+    },
+    {
+     "cls": "NOT_RC_WALL",
+     "misfit": 0.0,
+     "name": "rim to base underside + the upstand above the deck structure counted again",
+     "value": 1.8
+    }
+   ],
+   "refused_mixed": [],
+   "status": "TRACED",
+   "tol": 0.05
+  },
+  "pool_pump_walls_same_height": true,
+  "pool_rest_height_m": 0.2
+ }
+}
