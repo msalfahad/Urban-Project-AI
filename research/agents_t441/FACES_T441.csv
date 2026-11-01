@@ -1,0 +1,39 @@
+part,room,level,side,s0,s1,kind,length_m,skirting_lm,status,handles,opening_id,note,cause
+GF-ST-HALL,GF-R31F8AE,+1.00,S,0.0000,1.4000,WALL,1.4000,1.4000,DRAWING-CONFIRMED,220,,,
+GF-ST-HALL,GF-R31F8AE,+1.00,S,1.4000,2.4000,DOOR,1.0000,0.0000,DEDUCTED,,OP-010,"door to the open room, wall gap 1.000 (door block D120, insert 2C7)",
+GF-ST-HALL,GF-R31F8AE,+1.00,S,2.4000,2.5000,WALL,0.1000,0.1000,DRAWING-CONFIRMED,21F,,,
+GF-ST-HALL,GF-R31F8AE,+1.00,E,0.0000,2.0000,WALL,2.0000,2.0000,DRAWING-CONFIRMED,21C,,columns 2F90 (y -0.2 .. 0.3) and 2F93 (1.5 .. 2.0) flush with the wall face (engine COLUMN+WALL),
+GF-ST-HALL,GF-R31F8AE,+1.00,E,2.0000,2.9000,PASSAGE,0.9000,0.0000,DEDUCTED,,OP-020,"doorless opening to the wet wash space GF-RD36087 (wall ends 218 / 4AA, head 33C / 33D hidden)",
+GF-ST-HALL,GF-R31F8AE,+1.00,E,2.9000,2.9500,WALL,0.0500,0.0500,DRAWING-CONFIRMED,21B,,,
+GF-ST-HALL,GF-R31F8AE,+1.00,D1-TOP,0.0000,1.1500,OPEN,1.1500,0.0000,NO FACE,,,D1 top nosing 490: the flight (B7),
+GF-ST-HALL,GF-R31F8AE,+1.00,DIV-E,0.0000,1.9000,GUARD_HELD,1.9000,,HELD,,,,"solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed"
+GF-ST-HALL,GF-R31F8AE,+1.00,DIV-E,1.9000,2.5000,HELD,0.6000,,HELD,,,,"divider band at the cut starts at y 1.05 (layer 5 155 / 4A4 / 157); between y 0.45 and 1.05 only the hidden layer-2 outline 47C / 47E / 499 is drawn (the 1F band above), with single lines 2C8 (layer 5, x 1.20) / 2C9 (layer 2, x 1.15) and the diagonal pair 2F1D / 2F1E in the south-west box; T-418 classed 0.45 .. 1.05 SOLID: whether a face stands here is not established"
+GF-ST-HALL,GF-R31F8AE,+1.00,DIV-END,0.0000,0.2000,GUARD_HELD,0.2000,,HELD,,,,"solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed; the band end, at y 0.45 (T-418) or 1.05 (cut outline 155)"
+GF-ST-HALL,GF-R31F8AE,+1.00,DIV-W,0.0000,0.6000,HELD,0.6000,,HELD,,,,"divider band at the cut starts at y 1.05 (layer 5 155 / 4A4 / 157); between y 0.45 and 1.05 only the hidden layer-2 outline 47C / 47E / 499 is drawn (the 1F band above), with single lines 2C8 (layer 5, x 1.20) / 2C9 (layer 2, x 1.15) and the diagonal pair 2F1D / 2F1E in the south-west box; T-418 classed 0.45 .. 1.05 SOLID: whether a face stands here is not established"
+GF-ST-HALL,GF-R31F8AE,+1.00,DIV-W,0.6000,0.7000,GUARD_HELD,0.1000,,HELD,,,,"solid stair band between MS1-L and D1 (layer 5 4A4 / 157, rail band 151 / 47F; T-393 'GF band 157 / 151 solid to the cut', railings RL-07 MS1-L / RL-08): a guard upstand or a wall face, finish not printed; skirting along a railing / void edge is defect B12 (L-18) territory, so held, never assumed"
+GF-ST-HALL,GF-R31F8AE,+1.00,MS1L-FOOT,0.0000,1.1500,OPEN,1.1500,0.0000,NO FACE,,,MS1-L first riser DE (layer 2) / nosing DC (layer 5): the flight (B7),
+GF-ST-HALL,GF-R31F8AE,+1.00,W,0.0000,0.0500,STAIR_SIDE,0.0500,0.0000,OWNED BY STAIR SIDE T-410 MS1-L.W1,,,wall 298 under the first nosing (y 1.10 .. 1.15): T-410 starts MS1-L.W1 at the nosing DC,
+GF-ST-HALL,GF-R31F8AE,+1.00,W,0.0500,1.1500,WALL,1.1000,1.1000,DRAWING-CONFIRMED,298,,,
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,S,0.0000,1.1500,OPEN,1.1500,0.0000,NO FACE,,,D1 bottom nosing 481: the flight (B7),
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,E,0.0000,1.1500,WALL,1.1500,1.1500,DRAWING-CONFIRMED,21B,,column 2F81 (y 4.7 .. 5.2) flush (engine COLUMN+WALL),
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,N,0.0000,0.1469,WALL,0.1469,0.1469,DRAWING-CONFIRMED,26F 2AC,,,
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,N,0.1469,1.0469,DOOR,0.9000,0.0000,DEDUCTED,,OP-013,"door to the north court, wall gap 0.900 (layer 5 3FD / layer 2 3FE; door block D120 3FF on layer S-COL.BON, a layer slip)",
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,N,1.0469,1.1500,WALL,0.1031,0.1031,DRAWING-CONFIRMED,2AB,,,
+GF-ST-LOBBY030,GF-R31F8AE,+0.30,W,0.0000,1.1500,UNKNOWN,1.1500,,HELD,,,,"no face drawn on layer 1 / 5 / S-COL.BON on x 1.35 (only hidden layer-2 lines 49C / 2C6 x 1.25, 49D x 1.30, the band above); west of it the T-418 strip GF-ST-CN (UNREAD, 0 .. 0.230 m2) and the space under the MS1-T winders at +0.30: open or enclosed is not drawn, so the face may stand at x 1.35, at x 1.15 or further west"
+2F-ST-LOBBY,2F-R4D1B62,+9.70,S,0.0000,2.0000,WALL,2.0000,2.0000,DRAWING-CONFIRMED,1283,,,
+2F-ST-LOBBY,2F-R4D1B62,+9.70,E,0.0000,0.1016,WALL,0.1016,0.1016,DRAWING-CONFIRMED,1295,,,
+2F-ST-LOBBY,2F-R4D1B62,+9.70,E,0.1016,1.0016,DOOR,0.9000,0.0000,DEDUCTED,,OP-007,"maid-room door, wall gap 0.900 (door block d220, insert 12C2)",
+2F-ST-LOBBY,2F-R4D1B62,+9.70,E,1.0016,1.2500,WALL,0.2484,0.2484,DRAWING-CONFIRMED,1294,,,
+2F-ST-LOBBY,2F-R4D1B62,+9.70,N,0.0000,0.4000,WALL,0.4000,0.4000,DRAWING-CONFIRMED,1289,,,
+2F-ST-LOBBY,2F-R4D1B62,+9.70,N,0.4000,1.4000,LIFT_OPENING,1.0000,0.0000,DEDUCTED,,OP-002,"lift landing ELV-01-2F, 1.000 clear between jambs 12AE / 12AF (T-413); the engine classes it PASSAGE (V2.9 kind PASSAGE to 2F-R2BDCEE)",
+2F-ST-LOBBY,2F-R4D1B62,+9.70,N,1.4000,2.0000,WALL,0.6000,0.6000,DRAWING-CONFIRMED,128A,,column 2F72 (x 2.5 .. 2.7) flush with the face (engine COLUMN+WALL),
+2F-ST-LOBBY,2F-R4D1B62,+9.70,W,0.0000,1.2500,OPEN,1.2500,0.0000,NO FACE,,,"continues into the arrival 2F-ST-ARRIVAL (B7, Q-70 A)",
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,S,0.0000,0.4158,WALL,0.4158,0.4158,DRAWING-CONFIRMED,1282,,,
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,S,0.4158,1.4158,DOOR,1.0000,0.0000,DEDUCTED,,OP-001,"door, wall gap 1.000 (door block D115, insert 12BA)",
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,S,1.4158,2.5000,WALL,1.0842,1.0842,DRAWING-CONFIRMED,1283,,,
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,E,0.0000,1.2500,OPEN,1.2500,0.0000,NO FACE,,,continues into the lobby 2F-ST-LOBBY,
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,E,1.2500,1.7500,COLUMN,0.5000,0.5000,DRAWING-CONFIRMED,2F72 129A,,,
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,E,1.7500,1.9500,WALL,0.2000,0.2000,DRAWING-CONFIRMED,129A,,,
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,N,0.0000,1.1500,OPEN,1.1500,0.0000,NO FACE,,,"top of flight MS2-U (T-418 east-lane foot strip, B7)",
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,N,1.1500,2.5000,OPEN,1.3500,0.0000,NO FACE,,,slab-opening edge over the 1F-2F flights (T-129 O-2F; guard RL-07 G-2F 1.325),
+2F-ST-ARRIVAL,2F-R4D1B62,+9.70,W,0.0000,1.9500,WALL,1.9500,1.9500,DRAWING-CONFIRMED,12B7,,,
