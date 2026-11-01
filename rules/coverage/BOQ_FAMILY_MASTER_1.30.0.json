@@ -5079,7 +5079,7 @@
    "source_needed": "site plan",
    "next_slice": "S4",
    "evidence": [
-    "engine/source/arch_v3035.py:99 NEW_ITEMS: the nine boundary codes; engine/source/arch_v3035.py:119 VALUE_CODES: only the wall plane, the physical face and the top may carry a figure; engine/source/arch_v3035.py:210 load_inputs(): a valued component equals its terms, a held one is blank with its bound beside; engine/source/arch_v3035.py:506 check_fence(): one line per component, no fence element outside the family, a gate counted once",
+    "engine/source/arch_v3035.py:99 NEW_ITEMS: the nine boundary codes; engine/source/arch_v3035.py:119 VALUE_CODES: only the wall plane, the physical face and the top may carry a figure; engine/source/arch_v3035.py:210 load_inputs(): a valued component equals its terms, a held one is blank with its bound beside; engine/source/arch_v3035.py:506 check_boundary(): one line per component, no fence element outside the family, a gate counted once",
     "tests/t400_boundary_fence/test_arch_v3035.py:126 test_lines_added_values_and_blanks() (V400 by hand: plane 43.200 + 13.920 = 57.120 m2, faces 85.920 m2, top 18.00 m) / :200 test_adverse_block_net_valued()"
    ],
    "released_method_reads": "none",
@@ -6044,7 +6044,7 @@
    ],
    "changes_families_by_item_code": [],
    "note": "T-400 (research/agents_t400/T-400_BOUNDARY_FENCE_INTEGRATION.md): the MISSING category B13-04 boundary fence and gates, component by component: wall plane north 83.1305 + street 14.840 = 97.9705 m2, faces north outside 83.1305 + plot 82.0705 = 165.201 m2 and the north top 31.37 m.l DRAWING-CONFIRMED; block net / type / count, every plaster / paint layer, the sea / passage runs, the street faces / top / stop-end, the masonry below N.G. (AT_LEAST 17.628 m2), the pads and the G-01 leaf HELD blank by name; the upper boundary G.B held range 0 .. 3.5256 m3 (drawn gross); the lower band (line-content downgrade) and G-02 = D-GF-15 bound by id, never a second line; every other V3.0.34 line byte-identical; the Gate B integration package",
-   "task_commit": "015b23532b8dd6b6102c9f83c1ff848cf5312d5e"
+   "task_commit": "dfb5427aa0764d838dfd05ffe648fa4ef62380d1"
   }
  ]
 }

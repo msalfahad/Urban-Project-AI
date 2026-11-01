@@ -73,8 +73,6 @@ SOURCES = {
 # the line binding (engine ids; the module checks each against the candidate: a stale binding stops)
 UPPER_GB_LINE = "L-fb7a6431fede62e93fd5"
 LOWER_BAND_LINE = "L-6290a9f3d93f38cd46d6"
-RAILING_RL10_LINE = None     # filled below from the candidate check (see BINDINGS)
-GATE_G02_LINE = None
 
 RUN_IDS = {"F-NORTH (upper neighbour)": "F-NORTH", "F-STREET": "F-STREET", "F-SEA (Q-63 C element)": "F-SEA",
            "F-LOWER passage closure": "F-LOWER"}
@@ -218,6 +216,13 @@ def build(project_id=None):
                       f"opening census", ["T-361"], run="F-STREET",
                       held=f"no leaf drawn: {g1['held_text']}",
                       beside={"kind": "OPENING_WIDTH", "value": _f(g1["opening_width_m"]), "unit": "m"}))
+    g2 = gates["G-02"]
+    rows.append(_line("FENCE_HELD", A.GATE, "FENCE:G-02:LEAF", "sea-side gate G-02 (= opening D-GF-15, counted once)",
+                      f"{g2['gates_pcs']} gate, {g2['leaves_pcs']} leaf, {g2['opening_width_m']} m jamb to jamb "
+                      f"DRAWING-CONFIRMED (D120 block; elevations draw leaf {g2['leaf_size_m']} m, not printed); in no "
+                      f"door count line of the opening census ({g2['census'][:120]})", ["T-361"], run="F-SEA",
+                      held=f"Q-63 C sea-side element: {g2['held_text']}",
+                      beside={"kind": "OPENING_WIDTH", "value": _f(g2["opening_width_m"]), "unit": "m"}))
     ub = s403["takeoff"]["totals"]["UPPER_GB_at_most_m3"]
     restates = [{"action": "HELD_BOUND", "line_id": UPPER_GB_LINE,
                  "expect": {"item_code": "STR.CONC.GROUND_BEAM", "evidence_state": "BLOCKED_RFI",
@@ -230,7 +235,7 @@ def build(project_id=None):
                  "source_tasks": ["T-403"]}]
     sp = s403["lower_band_split_L6290a9f3"]["by_class"]
     bindings = [{"action": "BIND", "line_id": LOWER_BAND_LINE,
-                 "expect": {"item_code": "STR.CONC.BOUNDARY_WALL", "evidence_state": LOWER_BAND_STATE},
+                 "expect": dict(LOWER_BAND_EXPECT),
                  "what": "lower boundary band (whole 91.94 m): the fence share is inside this one line",
                  "share": {k: [v["solid_low_m3"], v["solid_high_m3"]] for k, v in sorted(sp.items())},
                  "cause": "one physical band, one line; the line carries the Checker line-content downgrade of the "
@@ -252,12 +257,26 @@ def build(project_id=None):
             "lines": rows, "restates": restates, "bindings": bindings, "records": records,
             "checks": {"plane_total_m2": round(plane_total, 6), "faces_dc_total_m2": round(faces_total, 6),
                        "facade_shared_m2": _f(x["value"]),
-                       "gate_ids": {"G-01": "FENCE_GATE_LINE", "G-02": GATE_G02_HOW}}}
+                       "gate_ids": {"G-01": "FENCE_GATE_LINE", "G-02": "FENCE_GATE_LINE"},
+                       "gate_alias": {"G-02": "D-GF-15"}}}
 
 
-LOWER_BAND_STATE = "MEASURED"
-EXTRA_BINDINGS = []
-GATE_G02_HOW = "OPENING_CENSUS D-GF-15"
+LOWER_BAND_EXPECT = {"item_code": "STR.CONC.BOUNDARY_WALL", "evidence_state": "SOURCE_DERIVED", "measured_net": 7.2204,
+                     "element_id": "P-C:SCOPE:BOUNDARY_WALL:FOUNDATION:CC-9fd936ab60:BEAM"}
+EXTRA_BINDINGS = [
+    {"action": "BIND", "line_id": "L-78babf2c6da600cb800e",
+     "expect": {"item_code": "MET.RAILING.GUARD", "evidence_state": "BLOCKED_RFI", "measured_net": None,
+                "element_id": "RAIL:RL-10"},
+     "what": "street fence dip X railing RL-10 (the profile cut of F-STREET): its own held railing line, never block",
+     "cause": "T-396 CROSS_TRADE: the X railing fills the street dip, carried by the railing line (V3.0.30 HELD)",
+     "evidence_status": "HELD", "source_tasks": ["T-396"]},
+    {"action": "BIND", "line_id": "L-56acf34557c315f65bb1",
+     "expect": {"item_code": "ARCH.THRESHOLD", "evidence_state": "BLOCKED_RFI", "measured_net": None,
+                "element_id": "GF-THRESHOLD-D-GF-15:threshold strip:HELD"},
+     "what": "the threshold strip of D-GF-15 = G-02: its own held strip line (V3.0.29), not a gate count",
+     "cause": "T-361: G-02 = D-GF-15, the same element; the strip is a floor item of the doorway, the leaf is the gate",
+     "evidence_status": "HELD", "source_tasks": ["T-361"]},
+]
 
 if __name__ == "__main__":
     d = build(sys.argv[1] if len(sys.argv) > 1 else None)

@@ -52,6 +52,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import re
 
 from engine.source import arch_v30 as A30
 from engine.source import arch_v302 as A302
@@ -215,7 +216,7 @@ def load_inputs(doc, project_id=None):
     "HELD_BOUND", "line_id", "expect", "gross_terms": {"length_m", "width_m", "depth_m"}, "cause", "source_tasks"}],
     "bindings": [{"action": "BIND", "line_id", "expect", "what", "share", "cause", "source_tasks"}], "records":
     [{"item", "status", "cause", "source_tasks"}], "checks": {"plane_total_m2", "faces_dc_total_m2",
-    "facade_shared_m2", "gate_ids"}}"""
+    "facade_shared_m2", "gate_ids", "gate_alias"}}"""
     if not doc:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
@@ -359,7 +360,7 @@ def _new(tmpl, r, srcs):
         bt = (f"; {b['kind'].lower().replace('_', ' ')} {_fmt(b['value'])} {b['unit']} beside, never the line figure"
               if b else "")
         formula = (f"HELD (blank in the BOQ, never 0): {r['physical_element']} ({r['element_id']}): {r['held_reason']}"
-                   f"{bt} ({S})")
+                   f"{bt} ({S})").replace(" = ", " -> ")   # a blank line concludes on no figure (T-334 FORMULA_END)
         ev, net = "BLOCKED_RFI", None
         rfi = {"question": formula[:900], "unlocks": r["element_id"]}
         note = f"{METHOD}: {FAMILY} component HELD BLANK by name ({S}); never 0; NOT RELEASED"
@@ -543,6 +544,15 @@ def check_boundary(lines, doc=None):
         want = sorted(f"FENCE:{g}:LEAF" for g, how in gid.items() if how == "FENCE_GATE_LINE")
         if held_ids != want:
             raise ValueError(f"{METHOD}: gate lines {held_ids} are not {want} (a gate counted once)")
+        for g, alias in (doc["checks"].get("gate_alias") or {}).items():   # the same gate under its opening id
+            if gid.get(g) != "FENCE_GATE_LINE":
+                continue
+            twice = [ln["line_id"] for ln in lines if ln["item_code"].startswith("DOOR.") and
+                     (alias in str(ln["location"].get("element_id")) or
+                      re.search(rf"\b{re.escape(alias)}\b", str(ln["calculation"].get("formula"))))]
+            if twice:
+                raise ValueError(f"{METHOD}: gate {g} = opening {alias} is also counted by door line(s) {twice} "
+                                 f"(a gate counted once)")
     out["by_code"] = dict(sorted(out["by_code"].items()))
     return out
 

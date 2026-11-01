@@ -266,3 +266,24 @@ def test_adverse_gate_counted_twice():
     bad["checks"]["gate_ids"] = {"G-1": "FENCE_GATE_LINE", "G-2": "FENCE_GATE_LINE"}
     with pytest.raises(ValueError, match="counted once"):
         A.check_boundary(out, bad)
+
+
+def test_adverse_fence_gate_also_a_door_count():
+    lines, d, ch, log, out, ident = _run()
+    bad = copy.deepcopy(d)
+    bad["checks"]["gate_ids"] = {"G-1": "FENCE_GATE_LINE"}
+    bad["checks"]["gate_alias"] = {"G-1": "D-X-09"}
+    door = BL.make_line(project_id=PID, revision_set_sha256=REV, item_code="DOOR.EXTERNAL.ALUMINIUM", unit="pcs",
+                        evidence_state="SOURCE_DERIVED", measured_net=1.0, element_id="OPENINGS:DOOR:GF",
+                        floor="GF", physical_element="door", formula="count of the openings D-X-09", documents=DOCS,
+                        rule_id="R", rule_version="1", notes="v400", item_en="d", item_ar="d", trade="OPENINGS")
+    A.check_boundary(out, bad)                       # no door line names the gate: counted once
+    with pytest.raises(ValueError, match="counted once"):
+        A.check_boundary(out + [door], bad)
+
+
+def test_held_formula_concludes_on_no_figure():
+    lines, d, ch, log, out, ident = _run()
+    for x in out:
+        if x["item_code"] in A.NEW_ITEMS and x["evidence_state"] == "BLOCKED_RFI":
+            assert " = " not in x["calculation"]["formula"]

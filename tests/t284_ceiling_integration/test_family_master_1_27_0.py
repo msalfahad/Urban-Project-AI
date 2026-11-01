@@ -189,7 +189,7 @@ def test_1_27_0_governs(docs):
         T130._semver(gov["version"]) > T130._semver("1.27.0")
         and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
-    codes, fams = T130._era_exemptions(old110, new)
+    codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert {"FIN.CEILING.BULKHEAD", "FIN.STAIR.SOFFIT", "FIN.DOME.SOFFIT"} <= codes
 
 
@@ -199,7 +199,7 @@ def test_adverse_ceiling_paint_dropped_from_b4_06_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B4-06":
             f["item_codes"] = ["FIN.PAINT"]
-    assert T130._unowned_written(bad, _written_1_26()) == {"FIN.PAINT.CEILING": "engine/source/arch_v3032.py"}
+    assert T130._unowned_written(bad, _own_head(_written_1_26())) == {"FIN.PAINT.CEILING": "engine/source/arch_v3032.py"}
 
 
 def test_adverse_b5_04_back_to_not_implemented_is_refused(docs):
@@ -208,11 +208,11 @@ def test_adverse_b5_04_back_to_not_implemented_is_refused(docs):
     for f in bad["families"]:
         if f["code"] == "B5-04":
             f["capability"], f["name_terms"] = "NOT_IMPLEMENTED", ["bulkhead"]
-    hits = T130._not_implemented_hits(bad, _written_1_26())
+    hits = T130._not_implemented_hits(bad, _own_head(_written_1_26()))
     assert ("B5-04", "FIN.CEILING.BULKHEAD", "engine/source/arch_v3032.py") in hits
 
 
 def test_adverse_a_stair_soffit_code_no_family_owns_is_refused(docs):
     _, new = docs
     syn = {"engine/source/synthetic_soffit.py": 'A = "FIN.STAIR.SOFFIT_X"\n'}
-    assert T130._unowned_written(new, _written_1_26(syn)) == {"FIN.STAIR.SOFFIT_X": "engine/source/synthetic_soffit.py"}
+    assert T130._unowned_written(new, _own_head(_written_1_26(syn))) == {"FIN.STAIR.SOFFIT_X": "engine/source/synthetic_soffit.py"}
