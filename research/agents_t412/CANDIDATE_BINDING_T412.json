@@ -1,0 +1,541 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.35",
+ "file": "V3_0_35_BOQ_LINES.json",
+ "sha256": "b011bace2958f3da42afa00587eb2511afed754a46aba78e8d08346aa2903e10",
+ "lines": 4730,
+ "flights": [
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F1",
+   "element_id": "1F-R78C367:flight 1",
+   "drawn_flight": "RS-C",
+   "basis": "seen through the void (exposure; measured on GF F1)",
+   "engine_treads": 12,
+   "engine_lines": 13,
+   "engine_kind": "RADIAL",
+   "engine_width_m": 1.15,
+   "drawn_treads": 12,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-6cf11c2d30387d0942b9",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-3a3aabb15b187e33e3da",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-1e36bc3c0893eeeb9c58",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-256e8ae3e15334092b5d",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-a341100df682c726ff92",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F2",
+   "element_id": "1F-R78C367:flight 2",
+   "drawn_flight": "MS2-L",
+   "basis": "12 solid lines run 3.3 (AC0 .. A97), west lane",
+   "engine_treads": 11,
+   "engine_lines": 12,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 11,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-65806b4d02d476603bc5",
+     "state": "PROVISIONAL",
+     "net": 3.795
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-23651ecfef77992ec8d4",
+     "state": "PROVISIONAL",
+     "net": 12.65
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-0f060e9951c28c4cf074",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-a08d67ca292ab16ef9c3",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-3ce252f3e7c905f40c03",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F3",
+   "element_id": "1F-R78C367:flight 3",
+   "drawn_flight": "MS1-U",
+   "basis": "11 solid lines run 3.0 (A92 .. ABE), east lane",
+   "engine_treads": 10,
+   "engine_lines": 11,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 11,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-e1eb8b9a7cb92508ccc9",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-0aa47300a16de572c967",
+     "state": "PROVISIONAL",
+     "net": 11.5
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-07e0855f961a839c1277",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-54eb280b9f7bf5eda65f",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-c1f1513c5e9b4e546503",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F4",
+   "element_id": "1F-R78C367:flight 4",
+   "drawn_flight": "RS-S",
+   "basis": "11 lines run 3.0 (B43 .. B4D), exposure (measured on GF F2)",
+   "engine_treads": 10,
+   "engine_lines": 11,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 10,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-ea55ed317bc4de89aec1",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-c955f6b3a3abca48d562",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-24792292e996c57c52d9",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-23e0ff3c4f454647b2b5",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-6874084b012c8cd8970a",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F5",
+   "element_id": "1F-R78C367:flight 5",
+   "drawn_flight": null,
+   "basis": "UNBOUND: a 4-tread RADIAL reading of width 1.247 (layer 2) matches no drawn flight on the 1F plan (no radial line at RS-LD): B7-02 owner row",
+   "engine_treads": 4,
+   "engine_lines": 5,
+   "engine_kind": "RADIAL",
+   "engine_width_m": 1.2471,
+   "drawn_treads": null,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-b4660de0ddd98ad0ffc2",
+     "state": "PROVISIONAL",
+     "net": 1.495
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-e085c168dee5fb19a7fb",
+     "state": "PROVISIONAL",
+     "net": 4.7815
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-820baecf7f726b4d8f1e",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-c6724654ee4ccdb0c508",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-cca0e19047947cd5feb1",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-a95bf979baf4cfae:F6",
+   "element_id": "1F-R78C367:flight 6",
+   "drawn_flight": "RS-A",
+   "basis": "5 lines run 1.2 (B59 .. D22), exposure (measured on GF F4)",
+   "engine_treads": 4,
+   "engine_lines": 5,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 4,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-5d338389185d72a6fb16",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-57202d2823270429cd80",
+     "state": "BOUNDED_EXPOSURE",
+     "net": null
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-f24a09f1b4117814e4c8",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-437643d5f8553a89a0cd",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-e5da6e150c9c3c87a9cc",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-d7254c68fd33723d:F1",
+   "element_id": "2F-R4D1B62:flight 1",
+   "drawn_flight": "MS2-L",
+   "basis": "stacked over 1F F2: the west lane seen from 2F, no flight of 2F (T-184 R-STAIR-CONT-1, T-129)",
+   "engine_treads": 10,
+   "engine_lines": 11,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 11,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-79beb9688604887c59c5",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-1e88ac0d4ba0b4e8a950",
+     "state": "PROVISIONAL",
+     "net": 11.5
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-7adf1ccd0c407b61221a",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-0c2df36a42803126d3b9",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-c5805775b30be8ce5eb3",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-d7254c68fd33723d:F2",
+   "element_id": "2F-R4D1B62:flight 2",
+   "drawn_flight": "MS2-U",
+   "basis": "stacked over 1F F3 (east lane); 11 lines 135B .. 1386, engine 11 lines",
+   "engine_treads": 10,
+   "engine_lines": 11,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 11,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-07f00d5b0c4e1924aaf5",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-60fc97c4306696c74c38",
+     "state": "PROVISIONAL",
+     "net": 11.5
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-12f56cbfe750f8b30c41",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-48bb13e2f1c94d852a03",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-78f1ea3512eacbc9ba12",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-3759f2457b22cb4a:F1",
+   "element_id": "GF-R31F8AE:flight 1",
+   "drawn_flight": "MS1-L",
+   "basis": "stacked under 1F F2 (= MS2-L, west lane); 8 hidden lines run 2.1 = the riser faces DE .. CD of MS1-L",
+   "engine_treads": 7,
+   "engine_lines": 8,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 10,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-151d92470a81dd1c450b",
+     "state": "PROVISIONAL",
+     "net": 2.415
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-d4d764ae7bb07b474b6f",
+     "state": "PROVISIONAL",
+     "net": 8.05
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-ecc450d6cc865617f8f6",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-a1a0ab49818d4b9621b5",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-4b108517c2338cde23d4",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-3759f2457b22cb4a:F2",
+   "element_id": "GF-R31F8AE:flight 2",
+   "drawn_flight": "D1",
+   "basis": "4 solid lines run 0.9 (481 .. 490); stacked under 1F F3 (east lane)",
+   "engine_treads": 3,
+   "engine_lines": 4,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 3,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-a4aeb32035d11684f1a2",
+     "state": "PROVISIONAL",
+     "net": 1.035
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-f20f8544a42807c0cfcf",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-8938aa3b25bf605e4b9d",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-cccf54f717124cd750b3",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-d6c9ad28f3e335e6ce58",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-735e111dcf9b22c8:F1",
+   "element_id": "GF-RC99C2A:flight 1",
+   "drawn_flight": "RS-C",
+   "basis": "RADIAL 13 lines, 12 treads, width 1.150",
+   "engine_treads": 12,
+   "engine_lines": 13,
+   "engine_kind": "RADIAL",
+   "engine_width_m": 1.15,
+   "drawn_treads": 12,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-fa534ec5f9dc14947899",
+     "state": "PROVISIONAL",
+     "net": 4.094413
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-95b9555dd144951b071e",
+     "state": "PROVISIONAL",
+     "net": 13.7964
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-913cda8eb6d73f6e28cc",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-30009d8eb01996ec6399",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-203f9074f39f54604c3f",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-735e111dcf9b22c8:F2",
+   "element_id": "GF-RC99C2A:flight 2",
+   "drawn_flight": "RS-S",
+   "basis": "seen through the void as 1F F4 (= RS-S B43 .. B4D); GF reading 7 lines",
+   "engine_treads": 6,
+   "engine_lines": 7,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 10,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-89c84fdd4964dec8a323",
+     "state": "PROVISIONAL",
+     "net": 2.07
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-59354cfe423b026db61a",
+     "state": "PROVISIONAL",
+     "net": 6.9
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-099fe9fcfa5667fb8b99",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-509c6af3d162ae145108",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-850e43560679238f3573",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-735e111dcf9b22c8:F3",
+   "element_id": "GF-RC99C2A:flight 3",
+   "drawn_flight": "RS-S",
+   "basis": "BY ELIMINATION (no repeat recorded): the rest of the GF reading of RS-S",
+   "engine_treads": 3,
+   "engine_lines": 4,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 10,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-0ec429f1783f1f15e700",
+     "state": "PROVISIONAL",
+     "net": 1.035
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-fef9ec154deaec502498",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-2efa4a4f4cc2aad9a2f2",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-d827589991777fe63819",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-c43f0d2785bc13bbd2dd",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  },
+  {
+   "engine_flight": "SITE-735e111dcf9b22c8:F4",
+   "element_id": "GF-RC99C2A:flight 4",
+   "drawn_flight": "RS-A",
+   "basis": "seen through the void as 1F F6 (= RS-A B59 .. D22)",
+   "engine_treads": 3,
+   "engine_lines": 4,
+   "engine_kind": "STRAIGHT",
+   "engine_width_m": 1.15,
+   "drawn_treads": 4,
+   "lines": {
+    "FIN.MARBLE.TREAD": {
+     "line_id": "L-1dac5d9b574d7608d80d",
+     "state": "PROVISIONAL",
+     "net": 1.035
+    },
+    "FIN.STAIR.STEP_LM": {
+     "line_id": "L-f145a2d130cba9450a24",
+     "state": "PROVISIONAL",
+     "net": 3.45
+    },
+    "FIN.MARBLE.RISER": {
+     "line_id": "L-16e0c6682725260f28e7",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.STAIR.FLIGHT": {
+     "line_id": "L-406aae9a9854e015c45e",
+     "state": "BLOCKED_RFI",
+     "net": null
+    },
+    "FIN.RAILING": {
+     "line_id": "L-7f5c537417d60d60f7fc",
+     "state": "BLOCKED_RFI",
+     "net": null
+    }
+   }
+  }
+ ],
+ "nosing_lines_in_candidate": 0
+}

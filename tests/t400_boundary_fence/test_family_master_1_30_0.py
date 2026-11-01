@@ -110,7 +110,16 @@ def test_checks_clean_on_head(docs):
 def test_pending_dropped_is_stale(docs):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = bad["pending_packages"][:-1]
-    assert any("arch_v3035" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+    probs = FMC.check(bad, root=ROOT, is_ancestor=None)
+    # T-246 (1.31.0): a NEWER registry version on the head that declares arch_v3035 accounts for it (rule r3); then
+    # that registry must carry the dropped entry unchanged (the pattern T-400 took in the 1.29.0 test).
+    acc = FMC.newer_registry_modules(docs[1], ROOT).get("engine/source/arch_v3035.py")
+    if acc is None:
+        assert any("arch_v3035" in p for p in probs)
+    else:
+        assert FMC._semver(acc) > FMC._semver("1.30.0")
+        gov = json.loads((ROOT / f"rules/coverage/BOQ_FAMILY_MASTER_{acc}.json").read_text(encoding="utf-8"))
+        assert docs[1]["pending_packages"][-1] in gov["pending_packages"]
 
 
 def test_pending_with_merge_commit_refused(docs):

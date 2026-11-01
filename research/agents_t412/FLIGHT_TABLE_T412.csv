@@ -1,0 +1,12 @@
+flight,stair,risers,risers_source,visible_risers,treads,treads_confirmed,landing_edges,floor_edges,nosings_confirmed,nosings_held,nosings_unknown,nosing_lm_confirmed,nosing_lm_confirmed_in_step_basis,nosing_lm_confirmed_landing_floor,held_beside_lm
+MS1-L,ST-01,10,"section A-A 10 (T-184, Q-46 A); plan 10 lines",10,10,10,0,0,10,0,0,11.450000,11.450000,0,0
+MS1-T,ST-01,5,section A-A 5; plans 4 wedges (CONFLICT),5,4,0,1,0,0,5,0,0,0,0,5.293650
+MS1-U,ST-01,12,section A-A 12 (Q-46 A); plans 11 lines,12,11,11,0,1,11,1,0,12.650000,12.650000,0,1.150000
+MS2-L,ST-01,12,section A-A 12; plan 12 lines,12,11,11,1,0,12,0,0,13.750000,12.600000,1.150000,0
+MS2-TR,ST-01,1,section A-A closing riser; not on plans,1,0,0,1,0,0,1,0,0,0,0,0
+MS2-U,ST-01,12,section A-A 12; plans 11 lines,12,11,11,0,1,11,1,0,12.650000,12.650000,0,1.150000
+D1,ST-01,4,"GF plan 4 lines, +0.30 -> +1.00 (T-184 ST-01b)",4,3,3,0,1,4,0,0,4.600000,3.450000,1.150000,0
+E1,ST-03,5,"GF plan 5 lines, +0.15 -> +1.00 (T-184 ST-03)",5,4,4,1,0,5,0,0,14.000000,11.200000,2.800000,0
+RS-C,ST-02,12,"GF plan 12 radial lines (Q-50 A cond, no section)",12,12,0,0,0,0,12,0,0,0,0,13.850000
+RS-S,ST-02,11,"1F plan 11 lines (Q-50 A cond, no section)",11,10,10,1,0,11,0,0,12.500000,11.350000,1.150000,0
+RS-A,ST-02,5,"1F plan 5 lines (Q-50 A cond, no section)",5,4,4,0,1,5,0,0,5.750000,4.600000,1.150000,0
