@@ -1,0 +1,1276 @@
+{
+ "basis": "T-385 r2 (V3.0.29, merge 5f99bfc3) restated with merged traces; current = + V3.0.33 candidate moves (T-397 Gate B, 4492fd59)",
+ "candidate_notes": {
+  "CL-LIFT": "one HELD blank line CONC.LIFT_PIT_WALL added (pit depth D-43): the engine side stays 0, no residual move",
+  "GS-SLAB": "held bound of L-41cfb82e 3.929788 .. 3.929788 -> 0 .. 3.560540 m3 (T-391 F1): held engine side only, no residual move",
+  "V3.0.29 = V3.0.32": "the concrete families are identical in V3.0.29 .. V3.0.32 (T-391 / T-394 / T-395 / T-397 asserted)",
+  "V3.0.33 -> V3.0.34": "V3.0.34 (T-399 Gate B, abf3de76) changed 1 line(s), none concrete (FIN.PAINT); 4689 lines identical: the current table holds on V3.0.34 unchanged"
+ },
+ "confirmations": [
+  {
+   "commit": "cc3c7f08",
+   "components": [
+    "PL-BASE",
+    "PL-WALLS",
+    "BM-GF"
+   ],
+   "effect": "no figure moves: the pool lines carry no part of the fourth side B7 / 8D outside the pool (pool_lines_carry_outside_part false; out-of-pool 1.6684 m = plot boundary wall, T-396 / T-403); the drawn ring B7 0.666406 m2 x 0.75 billed once by RING-B7 (own minus line 0.000093 m3); O-T385-1 closed",
+   "task": "T-392"
+  },
+  {
+   "commit": "1b4c18fc",
+   "components": [
+    "BM-GF",
+    "BM-1F",
+    "BM-2F"
+   ],
+   "effect": "no figure moves in the contractual view (research only): of the 27 held beam lines 8 BOUNDED (width conflicts 5.145035 .. 6.111856 m3 + two marks 0.21196 .. 0.397425), 18 HELD, 1 VALUE proposal (BM-GF-059 0.549284 m3, a lane I proposal, not in the candidate); the beam HELD parts stay HELD",
+   "task": "T-402"
+  }
+ ],
+ "families_after_traces": {
+  "CONC.BEAM": {
+   "HELD": -7.376418,
+   "TRACED": 8.095421,
+   "UNEXPLAINED": -0.366998,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": 0.352005
+  },
+  "CONC.BLINDING": {
+   "HELD": -47.055,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": -47.055
+  },
+  "CONC.BOUNDARY_BELOW_NG": {
+   "HELD": -11.9844,
+   "TRACED": -3.984,
+   "UNEXPLAINED": -0.1956,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -16.164
+  },
+  "CONC.COLUMN": {
+   "HELD": -15.8985,
+   "TRACED": 4.5005,
+   "UNEXPLAINED": -0.138,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 6,
+   "residual_m3": -11.536
+  },
+  "CONC.FOOTING": {
+   "HELD": -1.96,
+   "TRACED": 0.628,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 22,
+   "residual_m3": -1.332
+  },
+  "CONC.GROUND": {
+   "HELD": -13.250894,
+   "TRACED": -4.84449,
+   "UNEXPLAINED": -4.56855,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -22.663934
+  },
+  "CONC.POOL": {
+   "HELD": -3.708,
+   "TRACED": -0.966357,
+   "UNEXPLAINED": -0.471346,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": -5.145703
+  },
+  "CONC.SLAB": {
+   "HELD": 0.0,
+   "TRACED": 0.462758,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 3,
+   "residual_m3": 0.462758
+  },
+  "CONC.STAIR_DOME": {
+   "HELD": -5.788,
+   "TRACED": 0.233217,
+   "UNEXPLAINED": -5.827775,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -11.382558
+  },
+  "UNKEYED.PARAPET": {
+   "HELD": 0.0,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": 0.0
+  }
+ },
+ "families_before": {
+  "CONC.BEAM": {
+   "HELD": 0.0,
+   "TRACED": 0.128,
+   "UNEXPLAINED": 0.224004,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": 0.352004
+  },
+  "CONC.BLINDING": {
+   "HELD": -47.055,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": -47.055
+  },
+  "CONC.COLUMN": {
+   "HELD": -12.186,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.65,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 6,
+   "residual_m3": -11.536
+  },
+  "CONC.FOOTING": {
+   "HELD": -10.564,
+   "TRACED": 0.628,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 23,
+   "residual_m3": -9.936
+  },
+  "CONC.GROUND": {
+   "HELD": -7.56,
+   "TRACED": 0.0,
+   "UNEXPLAINED": -22.66393,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 3,
+   "residual_m3": -30.22393
+  },
+  "CONC.POOL": {
+   "HELD": -0.228,
+   "TRACED": -0.966357,
+   "UNEXPLAINED": -3.951346,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": -5.145703
+  },
+  "CONC.SLAB": {
+   "HELD": 0.0,
+   "TRACED": 0.462758,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 3,
+   "residual_m3": 0.462758
+  },
+  "CONC.STAIR_DOME": {
+   "HELD": 0.0,
+   "TRACED": 0.0,
+   "UNEXPLAINED": -11.382557,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -11.382557
+  },
+  "UNKEYED.PARAPET": {
+   "HELD": 0.0,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": 0.0
+  }
+ },
+ "families_current_v3_0_33": {
+  "CONC.BEAM": {
+   "HELD": -7.376418,
+   "TRACED": 8.098595,
+   "UNEXPLAINED": -0.366998,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": 0.355179
+  },
+  "CONC.BLINDING": {
+   "HELD": -47.055,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": -47.055
+  },
+  "CONC.BOUNDARY_BELOW_NG": {
+   "HELD": -11.9844,
+   "TRACED": -3.984,
+   "UNEXPLAINED": -0.1956,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -16.164
+  },
+  "CONC.COLUMN": {
+   "HELD": -24.3375,
+   "TRACED": 4.5005,
+   "UNEXPLAINED": -0.138,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 6,
+   "residual_m3": -19.975
+  },
+  "CONC.FOOTING": {
+   "HELD": -1.96,
+   "TRACED": 0.628,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 22,
+   "residual_m3": -1.332
+  },
+  "CONC.GROUND": {
+   "HELD": -13.250894,
+   "TRACED": -4.84449,
+   "UNEXPLAINED": -4.56855,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -22.663934
+  },
+  "CONC.POOL": {
+   "HELD": -3.708,
+   "TRACED": -0.966357,
+   "UNEXPLAINED": -0.471346,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": -5.145703
+  },
+  "CONC.SLAB": {
+   "HELD": 0.0,
+   "TRACED": 0.462758,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 3,
+   "residual_m3": 0.462758
+  },
+  "CONC.STAIR_DOME": {
+   "HELD": -5.788,
+   "TRACED": 0.233217,
+   "UNEXPLAINED": -5.827775,
+   "bookkeeping_closes": true,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -11.382558
+  },
+  "UNKEYED.PARAPET": {
+   "HELD": 0.0,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "bookkeeping_closes": true,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": 0.0
+  }
+ },
+ "family_moves": {
+  "BW-BAND": "CONC.BOUNDARY_BELOW_NG",
+  "GB-BOUNDARY": "CONC.BOUNDARY_BELOW_NG"
+ },
+ "merged_register": {
+  "T-385": "5f99bfc3",
+  "T-391": "c3fe8ec8",
+  "T-392": "cc3c7f08",
+  "T-394": "e27c5d78",
+  "T-395": "8cf46e7d",
+  "T-397": "4492fd59",
+  "T-398": "fe6a238d",
+  "T-399": "abf3de76",
+  "T-401": "23f948bb",
+  "T-402": "1b4c18fc",
+  "T-403": "a72a7282"
+ },
+ "note": "engine-side figures, residual splits in m3 and verdicts only; the per-component table of the unchanged components is in .work/private/t406",
+ "retraced_components": [
+  {
+   "after": {
+    "HELD": -8.4588,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -0.1452
+   },
+   "before": {
+    "HELD": -8.604,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "contribution_m3": -8.604,
+   "current": {
+    "HELD": -8.4588,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -0.1452
+   },
+   "family_after": "CONC.BOUNDARY_BELOW_NG",
+   "family_before": "CONC.FOOTING",
+   "id": "BW-BAND",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "lower boundary band held (DG-6dd9f1caba1ca77d): owner method A 70.49 m free x 0.20 x 0.60, engine range 5.6392 .. 11.0328, depth pending RFI-S03 / Q-28",
+     "m3": -8.4588,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "length: his run 1.21 m longer than the free drawn run (not traced)",
+     "m3": -0.1452,
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "trace_commit": "a72a7282",
+   "trace_source": "T-403",
+   "verdict_before": "HELD"
+  },
+  {
+   "after": {
+    "HELD": -3.56054,
+    "TRACED": -7.18821,
+    "UNEXPLAINED": -1.56057
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -12.309316
+   },
+   "contribution_m3": -12.309316,
+   "current": {
+    "HELD": -3.56054,
+    "TRACED": -7.18821,
+    "UNEXPLAINED": -1.56057
+   },
+   "family_after": "CONC.GROUND",
+   "family_before": "CONC.GROUND",
+   "id": "GS-SLAB",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "his plate covers the beam / column / lift strips the members already own (71.8821 m2 x 0.10)",
+     "m3": -7.18821,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "own slab panels inside the engine's HELD cell L-41cfb82e (35.6054 m2 x 0.10)",
+     "m3": -3.56054,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "stair-zone panel the engine routes out of the slab family (8.3723 m2, F2)",
+     "m3": -0.83723,
+     "verdict": "UNRESOLVED"
+    },
+    {
+     "cause": "his area beyond the whole drawn network (no drawn element)",
+     "m3": -0.63864,
+     "verdict": "UNTRACED"
+    },
+    {
+     "cause": "engine vs own on the valued faces (member overlap, court-side and lift-side panels)",
+     "m3": -0.0847,
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "trace_commit": "c3fe8ec8",
+   "trace_source": "T-391",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -3.5256,
+    "TRACED": -3.984,
+    "UNEXPLAINED": -0.0504
+   },
+   "before": {
+    "HELD": -7.56,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "contribution_m3": -7.56,
+   "current": {
+    "HELD": -3.5256,
+    "TRACED": -3.984,
+    "UNEXPLAINED": -0.0504
+   },
+   "family_after": "CONC.BOUNDARY_BELOW_NG",
+   "family_before": "CONC.GROUND",
+   "id": "GB-BOUNDARY",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "upper G.B held in the candidate: engine gross 44.07 x 0.20 x 0.40 at most (net at the columns HELD)",
+     "m3": -3.5256,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "width: printed 20 (p.14 A-A) vs his 0.30",
+     "m3": -2.6442,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "depth: printed 40 (p.14 A-A) vs his 0.60",
+     "m3": -1.7628,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "length: 2.35 m of drawn run beyond his length (Checker own allocation)",
+     "m3": 0.423,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "length: 0.28 m not traced to a drawn run",
+     "m3": -0.0504,
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "trace_commit": "a72a7282",
+   "trace_source": "T-403",
+   "verdict_before": "HELD"
+  },
+  {
+   "after": {
+    "HELD": -9.690354,
+    "TRACED": 2.34372,
+    "UNEXPLAINED": -3.00798
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -10.354614
+   },
+   "contribution_m3": -10.354614,
+   "current": {
+    "HELD": -9.690354,
+    "TRACED": 2.34372,
+    "UNEXPLAINED": -3.00798
+   },
+   "family_after": "CONC.GROUND",
+   "family_before": "CONC.GROUND",
+   "id": "GB-MAIN",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "held runs: his section over the 53.8353 m the engine holds (D-34, D-35 annex, court)",
+     "m3": -9.690354,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "section on the valued runs: printed D 0.95 exterior / class 0.40 and 0.30 interior vs his one section",
+     "m3": 2.343707,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "plan / end adjustments of the valued runs (net plan vs width x length)",
+     "m3": 1.3e-05,
+     "verdict": "AGREE"
+    },
+    {
+     "cause": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "m3": -3.00798,
+     "verdict": "UNTRACED"
+    }
+   ],
+   "trace_commit": "c3fe8ec8",
+   "trace_source": "T-391",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -1.65,
+    "TRACED": -0.75,
+    "UNEXPLAINED": 0.0
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -2.4
+   },
+   "contribution_m3": -2.4,
+   "current": {
+    "HELD": -1.65,
+    "TRACED": -0.75,
+    "UNEXPLAINED": 0.0
+   },
+   "family_after": "CONC.COLUMN",
+   "family_before": "CONC.COLUMN",
+   "id": "CL-LIFT",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "his ring runs through the four column pieces (0.500 m2 x his depth), columns owned once (R-CONC-OWN-1)",
+     "m3": -0.75,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "net ring 1.100 m2 x his uniform depth: pit depth and GF build-up not printed (D-43)",
+     "m3": -1.65,
+     "verdict": "HELD"
+    }
+   ],
+   "trace_commit": "23f948bb",
+   "trace_source": "T-401",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -2.0625,
+    "TRACED": 2.5925,
+    "UNEXPLAINED": 0.0
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.53
+   },
+   "contribution_m3": 0.53,
+   "current": {
+    "HELD": -4.5375,
+    "TRACED": 2.5925,
+    "UNEXPLAINED": 0.0
+   },
+   "family_after": "CONC.COLUMN",
+   "family_before": "CONC.COLUMN",
+   "id": "CL-GF",
+   "move": {
+    "HELD": -2.475,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [
+    {
+     "cause": "4 CONFLICT column lines withdrawn from valued into ranges 2.07 .. 2.475 m3 (schedule vs drawn section, designer item)",
+     "m3": -2.475,
+     "verdict": "HELD"
+    }
+   ],
+   "move_source": "T-397",
+   "parts": [
+    {
+     "cause": "count by mark against the drawn outlines",
+     "m3": -0.5625,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "base datum of the CB5-line columns (+0.25) vs his one storey height",
+     "m3": 0.1925,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "height: uniform depth against the member's own D_ctrl",
+     "m3": 0.11875,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "height: joint + head A x D_ctrl owned by the column line (beam counterpart once)",
+     "m3": 2.69375,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "height on members whose owner split D_ctrl is open (traced as height, its joint / depth split open)",
+     "m3": 0.15,
+     "split_open": true,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "held members (blank lines): his section x his height",
+     "m3": -2.0625,
+     "verdict": "HELD"
+    }
+   ],
+   "trace_commit": "e27c5d78",
+   "trace_source": "T-394",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": 0.0,
+    "TRACED": 2.658,
+    "UNEXPLAINED": -0.138
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 2.52
+   },
+   "contribution_m3": 2.52,
+   "current": {
+    "HELD": -5.964,
+    "TRACED": 2.658,
+    "UNEXPLAINED": -0.138
+   },
+   "family_after": "CONC.COLUMN",
+   "family_before": "CONC.COLUMN",
+   "id": "CL-1F",
+   "move": {
+    "HELD": -5.964,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [
+    {
+     "cause": "11 CONFLICT column lines withdrawn from valued into ranges 5.964 .. 7.644 m3 (schedule vs drawn section, designer item)",
+     "m3": -5.964,
+     "verdict": "HELD"
+    }
+   ],
+   "move_source": "T-397",
+   "parts": [
+    {
+     "cause": "count by mark against the drawn outlines",
+     "m3": 0.918,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "height: uniform depth against the member's own D_ctrl",
+     "m3": 0.18,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "height: joint + head A x D_ctrl owned by the column line (beam counterpart once)",
+     "m3": 1.08,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "height on members whose owner split D_ctrl is open (traced as height, its joint / depth split open)",
+     "m3": 0.48,
+     "split_open": true,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "C9 section: schedule vs drawn (designer item)",
+     "m3": -0.138,
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "trace_commit": "e27c5d78",
+   "trace_source": "T-394",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -5.430918,
+    "TRACED": 2.003362,
+    "UNEXPLAINED": -0.126242
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -3.553798
+   },
+   "contribution_m3": -3.553798,
+   "current": {
+    "HELD": -5.430918,
+    "TRACED": 2.006536,
+    "UNEXPLAINED": -0.126242
+   },
+   "family_after": "CONC.BEAM",
+   "family_before": "CONC.BEAM",
+   "id": "BM-GF",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.003174,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [
+    {
+     "cause": "GF beams B8 / B7 / CB1 span 2 / CB8 re-measured (T-146 GAP 0.002566 + CB8 GAP 0.003406 - DOUBLE 0.002767, 4-dp prints)",
+     "m3": 0.003174,
+     "verdict": "ENGINE_RIGHT"
+    }
+   ],
+   "move_source": "T-397",
+   "parts": [
+    {
+     "cause": "his length runs through the supports; engine runs end at the support face, the joint counted once in the column line",
+     "m3": -2.903179,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "drawn runs of a mark beyond his rows",
+     "m3": 0.210119,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "labelled drawn marks with no row of his (B25 own hand)",
+     "m3": 4.696422,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "held beam runs: his rows on the runs the engine holds",
+     "m3": -5.430918,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "length beyond the drawn support allowance, not traced",
+     "m3": -0.126242,
+     "verdict": "UNTRACED"
+    }
+   ],
+   "trace_commit": "8cf46e7d",
+   "trace_source": "T-395",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -0.808,
+    "TRACED": 6.496819,
+    "UNEXPLAINED": -0.153516
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 5.535302
+   },
+   "contribution_m3": 5.535302,
+   "current": {
+    "HELD": -0.808,
+    "TRACED": 6.496819,
+    "UNEXPLAINED": -0.153516
+   },
+   "family_after": "CONC.BEAM",
+   "family_before": "CONC.BEAM",
+   "id": "BM-1F",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "his length runs through the supports; engine runs end at the support face, the joint counted once in the column line",
+     "m3": -1.593362,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "drawn runs of a mark beyond his rows",
+     "m3": 1.908946,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "labelled drawn marks with no row of his (B25 own hand)",
+     "m3": 5.426035,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "dome ring in-bay line valued in the beams; his dome rows are in the stair / dome sheet (counterpart: T-398 SD-DOME)",
+     "m3": 0.7552,
+     "verdict": "SCOPE"
+    },
+    {
+     "cause": "held beam runs: his rows on the runs the engine holds",
+     "m3": -0.808,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "length beyond the drawn support allowance, not traced",
+     "m3": -0.153516,
+     "verdict": "UNTRACED"
+    }
+   ],
+   "trace_commit": "8cf46e7d",
+   "trace_source": "T-395",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -1.1375,
+    "TRACED": -0.53276,
+    "UNEXPLAINED": -0.08724
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -1.7575
+   },
+   "contribution_m3": -1.7575,
+   "current": {
+    "HELD": -1.1375,
+    "TRACED": -0.53276,
+    "UNEXPLAINED": -0.08724
+   },
+   "family_after": "CONC.BEAM",
+   "family_before": "CONC.BEAM",
+   "id": "BM-2F",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "his length runs through the supports; engine runs end at the support face, the joint counted once in the column line",
+     "m3": -0.53276,
+     "verdict": "RULE_DIFFERENCE"
+    },
+    {
+     "cause": "held beam runs: his rows on the runs the engine holds",
+     "m3": -1.1375,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "length beyond the drawn support allowance, not traced",
+     "m3": -0.08724,
+     "verdict": "UNTRACED"
+    }
+   ],
+   "trace_commit": "8cf46e7d",
+   "trace_source": "T-395",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -2.26,
+    "TRACED": 0.561362,
+    "UNEXPLAINED": 0.0
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -1.698638
+   },
+   "contribution_m3": -1.698638,
+   "current": {
+    "HELD": -2.26,
+    "TRACED": 0.561362,
+    "UNEXPLAINED": 0.0
+   },
+   "family_after": "CONC.STAIR_DOME",
+   "family_before": "CONC.STAIR_DOME",
+   "id": "SD-DOME",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "SD-DOMES-AB: dome shells DOME-A (west) and DOME-B (east), 442 / 190 / 10 above the springing untraced term (class from the board verdict: T-398 MERGED fe6a238d, Checker own re-measure: cap 442 / 190 / 10 (ST p.7), R_o = (2.21^2 + 1.90^2) / 3.80 = 2.235289, outer cap 18.1679 - inner cap (R_i 2.135289, rise 1.80) 15.6273 = 2.5406 m3 per dome (engine 2 domes 5.081362 m3); his shell area is a hemisphere reading on the 1.90 rise, not a drawn area: area term ENGINE_RIGHT)",
+     "m3": 0.561362,
+     "package_verdict": "UNTRACED",
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-DOME-3: tower dome over the 2F maid room held named item",
+     "m3": -2.26,
+     "verdict": "HELD"
+    }
+   ],
+   "trace_commit": "fe6a238d",
+   "trace_source": "T-398",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -3.528,
+    "TRACED": -0.328145,
+    "UNEXPLAINED": -5.827775
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -9.683919
+   },
+   "contribution_m3": -9.683919,
+   "current": {
+    "HELD": -3.528,
+    "TRACED": -0.328145,
+    "UNEXPLAINED": -5.827775
+   },
+   "family_after": "CONC.STAIR_DOME",
+   "family_before": "CONC.STAIR_DOME",
+   "id": "SD-STAIR",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "SD-ST01-FLIGHTS: ST-01 straight flights MS1-U, MS2-L, MS2-U (waist T 16 + steps, net) traced terms (WIDTH +0.000000; LENGTH -2.016000 UNTRACED; THICKNESS_BASIS -0.063460; OWNERSHIP -0.230571)",
+     "m3": -0.294031,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST01-FLIGHTS: ST-01 straight flights MS1-U, MS2-L, MS2-U (waist T 16 + steps, net) untraced term",
+     "m3": -2.016,
+     "verdict": "UNTRACED"
+    },
+    {
+     "cause": "SD-ST01-MS1L: ST-01 MS1-L straight + winder treads MS1-T (GF -> +3.50) held named item",
+     "m3": -1.7808,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "SD-ST01-LANDINGS: ST-01 half landings MS1-LD (+3.50) and MS2-LD (+7.516 / +7.684, two plates) traced terms (AREA +0.162400 UNTRACED; THICKNESS_BASIS -0.134400)",
+     "m3": -0.1344,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST01-LANDINGS: ST-01 half landings MS1-LD (+3.50) and MS2-LD (+7.516 / +7.684, two plates) untraced term",
+     "m3": 0.1624,
+     "verdict": "UNTRACED"
+    },
+    {
+     "cause": "SD-ST01-TURNS: ST-01 slab under the winder turn MS1-T-SLAB + turn riser MS2-TR held named item",
+     "m3": -0.336,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "SD-D1-STEPS: stair-hall flight D1 steps (+0.30 -> +1.00, 4 risers) traced terms (whole)",
+     "m3": 0.100286,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST03-E1: entrance flight ST-03 E1 (+0.15 -> +1.00, 5 risers x 2.80) held named item",
+     "m3": -1.4112,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "m3": -3.974175,
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "trace_commit": "fe6a238d",
+   "trace_source": "T-398",
+   "verdict_before": "UNRESOLVED"
+  },
+  {
+   "after": {
+    "HELD": -3.48,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "before": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": -3.48
+   },
+   "contribution_m3": -3.48,
+   "current": {
+    "HELD": -3.48,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "family_after": "CONC.POOL",
+   "family_before": "CONC.POOL",
+   "id": "PL-PUMP",
+   "move": {
+    "HELD": 0.0,
+    "TRACED": 0.0,
+    "UNEXPLAINED": 0.0
+   },
+   "move_parts": [],
+   "move_source": null,
+   "parts": [
+    {
+     "cause": "pool pump / plant room: drawn on no sheet (ST, architectural, sanitary searched)",
+     "m3": -3.48,
+     "verdict": "HELD"
+    }
+   ],
+   "trace_commit": "fe6a238d",
+   "trace_source": "T-398",
+   "verdict_before": "UNRESOLVED"
+  }
+ ],
+ "schema": "T406_SUMMARY_V1",
+ "totals": {
+  "after_traces": {
+   "HELD": -107.021212,
+   "TRACED": 4.125049,
+   "UNEXPLAINED": -11.568269,
+   "families": 10,
+   "families_cause_closing": 4,
+   "residual_m3": -114.464432
+  },
+  "before": {
+   "HELD": -77.593,
+   "TRACED": 0.252401,
+   "UNEXPLAINED": -37.123829,
+   "families": 9,
+   "families_cause_closing": 4,
+   "residual_m3": -114.464428
+  },
+  "current": {
+   "HELD": -115.460212,
+   "TRACED": 4.128223,
+   "UNEXPLAINED": -11.568269,
+   "families": 10,
+   "families_cause_closing": 4,
+   "residual_m3": -122.900258
+  }
+ },
+ "unchanged_components": [
+  {
+   "class": "HELD",
+   "family": "CONC.BLINDING",
+   "id": "BL-1",
+   "verdict": "HELD"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F2",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.FOOTING",
+   "id": "FT-F3",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F4",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F5",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F6",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F8",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F9",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "HELD",
+   "family": "CONC.FOOTING",
+   "id": "FT-F10",
+   "verdict": "HELD"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F11",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F12",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F13",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F14",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-F15",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "FT-FF",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.FOOTING",
+   "id": "FT-FN",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "ST-SB1",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "ST-SB1-IN",
+   "verdict": "HELD"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.FOOTING",
+   "id": "ST-SB2",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.FOOTING",
+   "id": "ST-SB3",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "ST-SB3-IN",
+   "verdict": "HELD"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.FOOTING",
+   "id": "ST-NA",
+   "verdict": "AGREE"
+  },
+  {
+   "class": "HELD",
+   "family": "CONC.COLUMN",
+   "id": "CL-NECK",
+   "verdict": "HELD"
+  },
+  {
+   "class": "HELD",
+   "family": "CONC.COLUMN",
+   "id": "CL-2F",
+   "verdict": "HELD"
+  },
+  {
+   "class": "ZERO",
+   "family": "CONC.COLUMN",
+   "id": "CL-UNDRAWN",
+   "verdict": "HELD"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.BEAM",
+   "id": "BM-ARITH",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.SLAB",
+   "id": "SL-GF",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.SLAB",
+   "id": "SL-1F",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.SLAB",
+   "id": "SL-2F",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.POOL",
+   "id": "PL-BASE",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TRACED",
+   "family": "CONC.POOL",
+   "id": "PL-WALLS",
+   "verdict": "ENGINE_RIGHT"
+  },
+  {
+   "class": "HELD",
+   "family": "CONC.POOL",
+   "id": "PL-STEPS",
+   "verdict": "HELD"
+  },
+  {
+   "class": "ZERO",
+   "family": "UNKEYED.PARAPET",
+   "id": "PA-RC",
+   "verdict": "HELD"
+  }
+ ]
+}
