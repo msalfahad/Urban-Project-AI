@@ -11,10 +11,12 @@ OWNER_RULE_STAIRS_2026-10-24 (S-9: no undrawn winders); R-T415-1 / -6, R-T417-1,
   this run BY HANDLE (`t432_alsenan.py` asserts type and layer): arcs 2DE / 2DD (S-OPENING), riser lines 2EA .. 2DF
   (RS-C), 2BA .. 2C4 (RS-S), 2C8 .. 315 (RS-A), edges 2D0 / 2CF (S-OPENING), 283 / 289 (layer 1). Private copy in
   `.work/private` only.
-- Second drawing: not re-read this run. The architectural DXF agreement on count, angles, lane and level is the merged
-  T-415 verdict's (8c8372a4), reused per WORKFLOW_CONTROLS s.10.5 (geometry, not a quantity).
-- Freelancer: his ST-02 row W 1.2 x L 16.4 x T 0.28 = 5.5104 m3, his own printed figures as recorded by the merged
-  T-415 (no workbook read this run, no header cells, no row text).
+- Second drawing (own read this run): the architectural DXF P7757.dxf (P7757_DXF_COMPRESSED.zip), both ST-02 frames
+  (concentric S-OPENING-radius arcs 2780.5 / 1530.5 on layer 5). See s.3a: the 1F frame ('+5.50') agrees with ST p.4
+  piece by piece; the GF frame ('+1.00') prints a different straight part.
+- Freelancer: his ST-02 row W 1.2 x L 16.4 x T 0.28 = 5.5104 m3, count 1, read this run for its numeric cells only
+  (concrete + rebar workbook, stairs sheet; no row text, no header cells): L 16.4 is a TYPED constant (no formula),
+  E = T x L x W, total = count x E. So 16.4 carries no construction of its own; its printed precision is one decimal.
 - Engine side: drawn plan 10.835596 m2 and the term AREA_BEYOND_DRAWN -2.476433 m3 (T-415 MERGED 8c8372a4).
 
 ```
@@ -83,6 +85,22 @@ reading with no evidence beyond the figure, and is not chosen for being nearest 
 profile, exact on ST-01, leaves 2.978 m of 16.4 on ST-02: the convention is not carried by his sheet to the round stair
 (as T-417 already found for his entrance row E1). Consistent with T-417 s.8 (developed plan 8.636 .. 9.385 + 4.50).
 
+### 3a. Second drawing (architectural DXF) and sensitivity
+
+| Piece | ST p.4 (this task) | Arch 1F frame '+5.50' | Arch GF frame '+1.00' |
+|---|---|---|---|
+| RS-C | 12 risers, step 7.791 deg | same (T-415) | same (T-415) |
+| RS-S | 11 risers at 0.300, run 3.000 | 11 at 0.300, run 3.000 | 11 risers, run 2.950: 0.300 x 9 + one 0.250 tread (between the 7th and 8th riser line from the foot, 1.800 .. 2.050 from the first) |
+| RS-LD | 1.150 x 1.200 | last RS-S riser and first RS-A riser at the ST p.4 places (1.150 x 1.200) | 1.250 x 1.450 (RS-A first riser 0.250 further up) |
+| RS-A | 5 risers, run 1.200 | first two riser lines at the ST p.4 places, 0.300 apart (the rest not re-listed) | 4 risers at 0.300, run 0.900 |
+| risers | 28 | 28 on RS-C + RS-S + the first RS-A lines (not fully re-counted) | 27 |
+
+The architectural GF frame is a different drawn layout of the straight part (27 risers, one 0.250 tread, a deeper
+landing): a DRAWING CONFLICT for the Lead's register (ST-02 riser count / landing depth; the structural plan, the
+architectural 1F frame and the owner's Q-50 A cond count all say 28). It does not change this task's answer: on the GF
+frame (riser 4.50 / 27), the 46 constructions give the nearest 16.716 (+0.316 m), none within 0.05: UNRESOLVED either way.
+It may matter to the RS-S / RS-LD / RS-A quantities (not in this task's scope: no line moved).
+
 ## 4. The -2.476433 m3 restated (acceptance)
 
 | Term | m3 | Cause | Verdict proposal |
@@ -126,7 +144,8 @@ no coordinates in the summary.
   not excluded, only not found.
 - The riser 4.50 / 28 is the owner's conditional plan count: every PROFILE / INCLINED figure inherits ASSUMED —
   OWNER-APPROVED (a different count changes the rise only if the total level difference changes: it does not, 4.50).
-- The architectural DXF was not re-read this run (T-415's merged cross-read cited).
+- The architectural GF-frame difference (s.3a) is recorded, not resolved: which layout governs the straight part is a
+  designer / Lead item (the structural plan governs concrete by Q-50 A cond), not an owner question under ERS 2.7.
 
 self-gate: a c d f h PASS (research + tests only; no frozen file, rule or knowledge version; freeze 0; read by handle,
 hand figures independent of the module; freelancer quantities only; nothing missing became 0).
