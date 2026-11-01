@@ -47,3 +47,11 @@ def test_committed_outputs_reproduce():
     s = A.summarize()
     assert json.loads((HERE / "summary.json").read_text(encoding="utf-8")) == json.loads(json.dumps(s))
     assert (HERE / "RESIDUAL_T427.csv").read_text(encoding="utf-8") == A.table_csv(s)
+
+
+def test_cross_trade_skirting_finding():
+    ct = A.summarize()["cross_trade"]
+    sk = [c for c in ct if c["line"].startswith("L-71e2e002")][0]
+    assert sk["delta"] == pytest.approx((3.80 - 1.10) + (0.05 + 1.10 + 0.05))   # wall + column faces of the west part
+    d48 = [c for c in ct if c["line"] == "designer list D-48"][0]
+    assert d48["after"] == pytest.approx(9.705)

@@ -121,8 +121,12 @@ no figure, unknown residual class). Alsenan pins: hand areas, dry / wet closures
 - Ceilings (T-283 r3 / T-295 ledger): GF-RFD4E1D 4.885 m2 and its 6.5428 m bulkhead edges are HELD_CLASS "P-2"; under
   R-T427-1 they are the dining room's ceiling (the class becomes decidable; the type is the open room's). Not re-measured
   here: the ceiling owner's row.
-- Not examined: the skirting / wall finish of the south wall x 3.00 .. 6.80 (whether the open room's runs follow the
-  prolonged edge or the wall face).
+- Skirting L-71e2e002 (GF open room, 24.6716 lm): its run along the prolonged edge y 1.50 is already deducted (OP-003,
+  T-296 PASSAGE_RUN_RESIDUAL), but the dining's real south wall face x 3.00 .. 6.80 sits on the cut-off face GF-RFD4E1D,
+  which carries no finish line: **+3.90 lm missing** (V2.9 runs of that face: wall 2.70 = 3.80 - 1.10 column + column
+  2FCF faces 1.20) -> 28.5716 lm, DRAWING-CONFIRMED geometry (for the skirting owner / lane I). The band's own wall faces
+  (x 6.80 .. 13.82) stay HELD with D-48. Plaster / paint: T-128 walks the T-147 open-room region (134.40 m2, which
+  holds the whole band), so its south wall faces are already in that ledger; not re-measured here.
 
 ## 6. For the Checker (re-measure, not from this file)
 

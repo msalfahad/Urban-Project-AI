@@ -181,6 +181,20 @@ def wet_components():
     ]
 
 
+# what the same reclassification means for other lines (findings for their owners; nothing changed here)
+CROSS_TRADE = [
+    {"line": "L-71e2e002a3af624097f0 FIN.SKIRTING GF-RC99C2A (open room)", "unit": "lm", "before": 24.6716,
+     "after": round(24.6716 + 2.7 + 1.2, 4), "delta": 3.9, "status": "DRAWING-CONFIRMED geometry (V2.9 runs of "
+     "GF-RFD4E1D: wall 2.70 = 3.80 - 1.10 column + column 2FCF faces 1.20 = 0.05 + 1.10 + 0.05)",
+     "why": "the dining's south wall face x 3.00 .. 6.80 lies on the cut-off band face, which carries no finish line; the "
+            "open room's run along the prolonged edge (y 1.50) is already deducted as OP-003 (T-296 PASSAGE_RUN_RESIDUAL)"},
+    {"line": "ceiling ledger GF-RFD4E1D (T-283 r3 / T-295)", "unit": "m2", "before": "4.885 HELD_CLASS (P-2) + 6.5428 m "
+     "bulkhead edges HELD", "after": "the dining ceiling's class (decidable; type as the open room)", "delta": None,
+     "status": "for the ceiling owner", "why": "R-T427-1: the piece is dining, not band"},
+    {"line": "designer list D-48", "unit": "m2", "before": 13.986, "after": round(9.101 + 0.604, 4), "delta": None,
+     "status": "HELD (planter or floor)", "why": "band proper 9.101 + curb 0.604; the west 5.645 is floor"},
+]
+
 CANDIDATE_WET = 85.5756          # T-414 room table, 21 wet lines (V3.0.34 = V3.0.35 = V3.0.36 on floor lines)
 
 
@@ -213,6 +227,7 @@ def summarize():
                                "held_band_before_m2": 15.35, "held_band_after_m2": round(zone["held_m2"], 4)},
                 "components": [{"component": c[0], "m2": c[1], "class": c[2], "verdict": c[3], "evidence": c[4]}
                                for c in C]},
+        "cross_trade": CROSS_TRADE,
         "wet": {"freelancer_m2": FREELANCER_WET, "candidate_m2": CANDIDATE_WET, "diff_m2": wdiff,
                 "diff_pct": round(100 * wdiff / FREELANCER_WET, 2), "components_sum_m2": wtot,
                 "line_vs_hand_rounding_m2": wet_rounding,
