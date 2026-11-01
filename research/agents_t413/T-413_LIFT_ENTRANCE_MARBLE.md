@@ -106,6 +106,12 @@ T-219). Double-count checks, each 0:
   part lies inside the landing floor lines L-7625f35c (GF) and L-b06400d4 (1F) and must come out of them when B6-07 is
   wired (0.300 .. 0.500 m2 each, HELD by position); 2F has no floor line to deduct from.
 
+V3.0.36 (T-246, merged into the working branch during this run, merged into this branch before the push): 4,691 lines
+byte-identical to V3.0.35, 39 CHANGED_TEXT_ONLY, 0 quantity moved (its summary); the two landing floor lines L-7625f35c
+/ L-b06400d4 are among the 39 (deduction lists now itemised: gross 126.927696 / 75.983002, nets unchanged), so the
+threshold's floor part becomes one more NAMED deduction entry in those lists; every other cited line is unchanged. Not
+re-run on V3.0.36 here (binding pinned to V3.0.35 `b011bace` as the row says).
+
 ## 5. (d) Freelancer (quantities only)
 
 His rows (committed census of 885 rows, T-325 basis; the finishes workbook itself is 23.65 MB, over the connector's
