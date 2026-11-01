@@ -4,6 +4,18 @@ The binding Answer line of each question is also in the index at the end of OWNE
 
 ## Answered
 
+### T-383 Waterproofing completeness check: its own task, or part of T-310? (owner 2026-11-02 asked for a plain rewrite; STILL OPEN)
+
+Before a waterproofing line is called complete, the engine checks that every place needing waterproofing (wet floors and
+upturns, roofs, buried walls, pool, tank) is either in that line or marked "not needed" with drawing evidence.
+Example: a wet bathroom floor of 4.2 m2 with a 0.20 m upturn must appear in the waterproofing line, or carry a drawing
+reference saying it needs none; if it is in neither, the line is not complete.
+Should this check be its own task (recommended: it touches different files from T-310), or be folded into T-310?
+
+Answer (owner 2026-11-02, decisions and next execution gate, owner's words): "T-471 owns the overall BOQ completeness matrix. T-383 owns the dedicated waterproofing completeness check within that framework. T-310 owns the export integration. Coordinate these tasks without duplicate implementation."
+
+
+
 ### Q-78 Block-joint mortar of black (cement) block walls: which cement : sand mix does the BOQ count cement bags and sand with? (lead 2026-10-30 12:40, today's owner package; from T-367 MERGED 98ced66c, Checker 09:58; ERS 2.7: a material genuinely unspecified by the drawings and an Urban estimating method)
 
 ISSUE: the mortar volume of the black block walls is measured, but its cement and sand cannot be counted: no mix is set.
