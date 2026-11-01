@@ -109,7 +109,7 @@ every assignment. A per-run or per-support split from a lump is refused (R-T416-
 **Verdict proposals.** The engine's face-to-face basis is right in kind (Q-61 C; the joint is the neck's): ENGINE_RIGHT on
 the -3.525102 m3 (class BOUNDED_THROUGH_SUPPORTS: mechanism traced and bounded by the drawn allowance, the per-support
 split not recoverable; never closed by its sign: it is closed by the drawn readings and stays a bound, not a point).
-Whether his necks (1.5 m each, uniform) stop under his beam or run through it decides RULE_DIFFERENCE (no double on his
+Whether his necks (one uniform height on every mark) stop under his beam or run through it decides RULE_DIFFERENCE (no double on his
 side) vs a double on his side: not readable from his rows, the engine is right either way. ENGINE_WRONG +0.108360 m3 on
 L-fe78ae28 / L-0e30aadb (through neck; at the FP face of 24D +0.099360). UNRESOLVED +0.018 sliver, -0.0048 oblique end.
 
