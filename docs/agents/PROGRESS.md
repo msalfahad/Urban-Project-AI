@@ -1,9 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-01 04:15 UTC (Lead). Previous version: 2026-11-01 00:20 UTC. The released numbers did not change
+Last update: 2026-11-01 08:15 UTC (Lead). Previous version: 2026-11-01 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.35 (not released): it adds the boundary fence and its gates.
+released: 0. The candidate under review is now V3.0.36 (not released): same quantities as V3.0.35, but every skirting /
+plaster / paint / tile / porcelain deduction is now listed with the opening it belongs to.
+
+Since 1 Nov 04:15 (newest first; nine checked and merged, all on the first pass, one of them an integration into the
+candidate; nothing waiting for the checker):
+- Skirting and finish deductions listed by opening INTO THE CANDIDATE (V3.0.36): CHECKED AND MERGED on the first pass.
+  39 lines now show which door or window each deduction belongs to; no quantity moved; the checker re-measured seven
+  lines by hand across all the families and found 0 defects. The release of the window-sill skirting (+5.80 m.l, the
+  skirting runs under sills printed 1.4 m above the floor) is the next skirting step, not yet applied.
+- Ground-beam lengths: CHECKED AND MERGED. Of the -3.01 m3 against the freelancer, the engine is 0.52 m3 longer than the
+  drawn runs (0.11 m3 of it is a real engine error: two beams ran through column necks), and 3.53 m3 comes from the
+  freelancer measuring through the supports. Nothing unexplained is left in this part.
+- Curved stair concrete: CHECKED AND MERGED. Of the -3.97 m3: the engine is right on 0.25 m3, 1.24 m3 is held (the waist
+  thickness is not printed for the curved flight) and 2.48 m3 is the freelancer's area beyond the drawn stair, not traced.
+- Stair rooms' floors: CHECKED AND MERGED. The ground-floor stair hall (4.81 m2 + 1.32 m2) and the second-floor lobby
+  (2.50 m2) were in no floor-finish line; measured now; the hall's finish is held (stair room, nothing printed). The dry
+  floor against the freelancer moves from -14.6 % to -12.1 %; the rest has a task.
+- Floor bed / screed per room: CHECKED AND MERGED (dry 288.15 m2, wet 85.58 m2; volume on your bed answer beside the
+  drawing bound, never merged). Next into the candidate.
+- Lift: tie beam 5.50 m (CHECKED AND MERGED; section not printed, held) and lift door marble (threshold 1.50 m2 / 3.00 m.l
+  on your approved depth, surround held 2.75 .. 13.98 m2 because the door height is not printed): neither the engine nor
+  the freelancer had a line.
+- Stair nosing and pieces: CHECKED AND MERGED. 89 risers = 89 nosings; 69 measured (87.35 m.l), 20 held (the drawings
+  disagree on one winder turn). Found: the candidate's stair tread lines look wrong on three flights (one flight
+  possibly valued twice): a task checks it first in the finishes lane.
+- Concrete roll-up correction: CHECKED AND MERGED (domes traced).
+- Next: floor bed lines into the candidate, then the stair-room floors with lift marble, the lift tie beam with the
+  block below the house beams, the skirting release, the stair nosing lines.
 
 Since 1 Nov 00:20 (newest first; four checked and merged, one of them an integration into the candidate; three handed
 in and waiting for the checker):

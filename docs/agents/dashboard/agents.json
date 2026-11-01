@@ -3,55 +3,55 @@
   "agent": "0 MAIN – daily update to you",
   "role": "Your single contact: one daily update with results, problems, ideas and decisions; pilot auditor",
   "cadence": "daily 07:31 Kuwait (04:31 UTC)",
-  "last_run": "2026-10-31T04:31:22Z",
+  "last_run": "2026-11-01T04:31:31Z",
   "result": "ok",
-  "working_on": "Daily update 31 Oct 04:31 UTC (scheduler SUCCEEDED); next 1 Nov 04:31 UTC",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "Daily update 1 Nov 04:31 UTC (scheduler SUCCEEDED); next 2 Nov 04:31 UTC",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-01T04:12:00Z",
+  "last_run": "2026-11-01T08:12:00Z",
   "result": "running",
-  "working_on": "Checker queue: lift tie beam, concrete roll-up correction, floor bed; skirting deduction lists next into the candidate (V3.0.35 now carries the fence); opened the curved stair, ground-beam length and main stair concrete differences and the missing entrance / stair hall floor finish",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "Nine checked and merged since 04:15 (candidate V3.0.36); queued floor bed into the candidate first, then stair-room floors + lift marble; opened the stair tread double-count check, ground-beam section check and dry-floor residual",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-01T03:19:00Z",
+  "last_run": "2026-11-01T07:20:00Z",
   "result": "ok",
-  "working_on": "03:19-04:07 lift tie beam handed in (waiting for checker); 01:20 bar-schedule red test fix merged; next: curved stair concrete difference",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "07:20-07:47 ground-beam length split handed in, merged 07:54; 05:20 curved stair split merged; next: main stair (ST-01) concrete difference",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-01T02:39:29Z",
+  "last_run": "2026-11-01T06:39:37Z",
   "result": "ok",
-  "working_on": "02:40-03:35 floor bed / screed per room handed in (waiting for checker); 00:40 stair skirting merged; next: missing floor finish in the entrance / stair hall and 2F lobby",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "06:40-07:34 stair nosing census merged 07:43; 04:40 stair-room floors merged; next: stair tread lines check (possible double count)",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-01T02:59:18Z",
+  "last_run": "2026-11-01T06:59:50Z",
   "result": "ok",
-  "working_on": "03:00-03:06 concrete roll-up correction handed in (waiting for checker); 01:00 boundary fence into the candidate V3.0.35, merged 04:11; next: skirting deduction lists into the candidate",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "07:00-07:49 lift door marble merged 07:57; 05:01 deduction lists into the candidate V3.0.36, merged 07:45; next: floor bed lines into the candidate (V3.0.37)",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-01T03:49:51Z",
+  "last_run": "2026-11-01T07:49:34Z",
   "result": "ok",
-  "working_on": "02:51-04:11 bar-schedule fix and boundary fence (candidate V3.0.35) checked and merged; 03:50 overlap guard (no check); next: lift tie beam, concrete roll-up, floor bed",
-  "as_of": "2026-11-01T04:15:00Z"
+  "working_on": "07:50-07:58 ground-beam length and lift marble merged; 06:50 candidate V3.0.36 and nosing census merged; nothing waiting now",
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-01T04:15:00Z"
+  "as_of": "2026-11-01T08:15:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-01T00:54:48Z",
   "result": "ok",
   "working_on": "Refreshed 1 Nov 00:54 UTC (scheduler SUCCEEDED); next 12:54 UTC",
-  "as_of": "2026-11-01T04:15:00Z"
+  "as_of": "2026-11-01T08:15:00Z"
  }
 ]

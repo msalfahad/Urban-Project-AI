@@ -1,3 +1,85 @@
+## LEAD REPORT 2026-10-31 20:20 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+31 Oct 16:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch 6c219179 -> 4492fd59 (Checker 'engine push' merges: T-395, T-398,
+T-393 at 16:58; T-403, T-404 at 17:57; T-397 at 19:54); no owner commit. Self-check: codemap PASS, pytest t061 PASS,
+freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since my last run; nothing undone.
+
+HEADLINE: the structural corrections are in the candidate (V3.0.33, sixth Gate B first pass in a row, about a day ahead
+of plan): 15 columns whose sheets disagree are now ranges, the lift-pit wall is a held line, and the lift shaft is out
+of the held ground-slab cell. Six pieces passed the Checker first time this window. Three wait (at the target of 3).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.32 -> V3.0.33):
+- CONCRETE (m3; Gate B PASS 19:58): columns, 15 CONFLICT lines -> BOUNDED ranges 8.034 .. 10.119 m3 in all (GF 2.070 ..
+  2.475, 1F 5.964 .. 7.644; vs freelancer GF +0.125 .. +0.530, 1F +2.520 .. +4.200; the 1F section part UNRESOLVED,
+  designer); lift-pit wall NEW line HELD BLANK (1.100 m2 plan DRAWING-CONFIRMED, depth D-43); held ground-slab bound
+  3.929788 -> 0 .. 3.560540 (shaft 1.80 x 1.80 out); GF beams +0.003174 (CB8 / B7 / CB1 ring arcs end on the band faces);
+  10 column formwork faces 0.928 m2 held with their columns. Checker re-measured all 30 changed + 1 added lines: AGREE.
+  By family against the freelancer (research, MERGED): beams GF -3.554 / 1F +5.535 / 2F -1.758 = six labelled beams he
+  omits +9.882 (ENGINE_RIGHT) + through-support -5.029 (RULE_DIFFERENCE: the column owns the joint) + HELD -7.376 +
+  untraced -0.367; stairs / domes / pump -11.383 = traced -0.328, HELD -5.788, unexplained -5.266 (curved flight ST-02
+  -3.974 UNRESOLVED, his flight 2.00 m beyond the drawn run -2.016).
+  Held beams (READY, not checked): of 27 held lines 0 VALUE, 8 BOUNDED (width conflicts 5.145 .. 6.112 m3, CB3 / B3
+  0.212 .. 0.397), 19 HELD; the T-395 held 7.376 lies inside the summed bounds 5.84 .. 8.73. Lift raft -> roof (READY):
+  pit wall height held by two unprinted facts; GF lift tie beam 5.50 m (printed note) MISSING; freelancer lift walls
+  2.400 = 0.750 ENGINE_RIGHT + 1.650 HELD, unexplained 0.
+- BOUNDARY WALL BELOW N.G. (MERGED, research): upper G.B 3.5256 m3 gross vs freelancer 7.560 m3 (-53.4 %: his
+  0.30 x 0.60 vs printed 0.20 x 0.40, ENGINE_RIGHT, residual 0); lower band share 3.3976 .. 5.2884 m3; masonry AT_LEAST
+  17.628 m2; pads MISSING. New: block under the house south G.B 29.97 m MISSING in every state.
+- BOUNDARY FENCE FINISHES (m2, MERGED, research): faces 165.201 m2 DRAWING-CONFIRMED, every layer HELD (no finish
+  printed); freelancer 107.24 m2 vs ours 112.81 .. 113.87 on his scope (-4.9 / -5.8 %), residual 0 (his 2.40 m height).
+- CORNER BEADS (m.l, READY): interior 275.95 / exterior 310.6831 measured; like for like (corners + doors) freelancer
+  259.60 vs 275.95 (-5.9 % against ours); his 770.75 / 1,297.35 totals include stop-ends, window perimeters on the room
+  face, parapet tops and fence: scope, not error.
+- CEILINGS, ROOF, FORMWORK, REINFORCEMENT, SANITARY, RAILINGS: no candidate change since 16:20.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: column disagreements between sheets are now shown as honest ranges instead of one figure; the
+held slab no longer contains the lift shaft. WHAT GOT WORSE: nothing measured moved the wrong way. WHAT WAS LEARNED: a
+printed minimum is an AT_LEAST quantity; a beam's width and the slab edge beside it move together (one bound pair); a
+corner shared by two runs is listed once. WHAT IS MISSING: lift tie beam / shaft (after the lift check), block under the
+house ground beams, transition strips, stair skirting, kitchen / laundry / pantry tiles (verified, not yet in the
+candidate), fence into the candidate, skirting, WP fixes, exterior plaster, earthworks, foundation WP, masonry
+accessories. GATES: lowest open gate 2 (integration); reconciliation gate 3. Milestones: week 2 (3 Nov) roof,
+formwork, ceilings and structural corrections delivered; M3 11 Nov on track; M4 25 Nov at risk on consultant items
+(D-16, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: T-399 (tile zones, bind V3.0.33) TODO first in integration; T-406 (concrete roll-up) TODO first in
+structural (+ boundary-wall family); T-400 scope extended with the merged fence foundation and finishes; NEW T-407
+(block below the house ground beams), T-408 (lift follow-up, after the lift check), T-409 (transition strips), T-410
+(stair skirting). Element register: five rulings (below-ground masonry; lift tie beam; beam width and slab edge one
+bound pair; floor-finish boundary one item; stair side wall or open). VERIFIER QUEUE: T-402 > T-401 > T-405, then Gate B
+T-399. Queue check: 47 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 2, A 2, I 1 (serial); READY 3.
+
+LESSONS REGISTER: three rows ADOPTED in the standard s.7 (beam face to face only where the column carries the joint,
+T-395; one shared corner listed once, T-393; a printed minimum is AT_LEAST and a section only from its own print, T-403).
+Proposed from READY work, adopted after the Checker: 'a beam width alternative and its slab edge are one bound pair'
+(T-402); 'a wall height held by every unprinted fact it depends on, each named' (T-401); 'a bead only on a plastered
+face, arcs on the developed length' (T-405).
+
+TEAM HEALTH (16:21 - 20:20): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x3 + one
+correct overlap-guard exit at 19:52); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2 18:39, Worker 3
+18:59, Checker 19:50, Main 04:31, Dashboard 12:54; Worker 1 from RUN_LOG 19:20 - 19:37). No idle slot: Worker 3 took the
+lift structure from the structural lane while its integration package waited (throughput rule, correct). Fault
+repeated: READY stamps ahead of the clock (Worker 2 17:25 for 16:52; Worker 3 20:05 for 19:50: six cases today). No
+refusal. Scout paused (your 28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new decision):
+- T-383 waterproofing completeness join (your 31 Oct item 5): own row (A, recommended) vs inside T-310 (B); full ERS s.6
+  text in my 00:45 report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you or the main chat):
+(1) RFI EVIDENCE REGISTER (your 31 Oct item 4): writing drawing-derived evidence into the public repository is refused by
+the platform (23:39, 01:55). Needs your decision on where it may be kept. The checker will not retry until then.
+(2) The freelancer finishes workbook (23.6 MB) is over the connector limit: a .zip copy on Drive would let his finish rows
+(ceilings, railings, tiles) be reconciled.
+(3) From my 00:45 report: whether to rewrite git history for the freelancer rate already pushed (agents may not).
+(4) READY stamps ahead of the clock, six cases today in Workers 2 and 3: a one-line prompt wording fix ("stamp from
+`date -u` at the moment of writing, never a planned time") is a main-chat change; I do not edit prompts.
+
 ## LEAD REPORT 2026-10-31 16:20 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
