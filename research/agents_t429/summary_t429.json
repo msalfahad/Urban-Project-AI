@@ -1,0 +1,808 @@
+{
+ "added": 0,
+ "b7_after": {
+  "FIN.MARBLE.RISER": {
+   "blocked_lines": 13,
+   "bounded_high": 0,
+   "bounded_lines": 0,
+   "lines": 15,
+   "not_applicable_lines": 1,
+   "valued": 1.96,
+   "valued_lines": 1
+  },
+  "FIN.MARBLE.TREAD": {
+   "blocked_lines": 2,
+   "bounded_high": 8.924413,
+   "bounded_lines": 3,
+   "lines": 15,
+   "not_applicable_lines": 2,
+   "valued": 23.3694,
+   "valued_lines": 8
+  },
+  "FIN.STAIR.STEP_LM": {
+   "blocked_lines": 2,
+   "bounded_high": 29.8964,
+   "bounded_lines": 3,
+   "lines": 14,
+   "not_applicable_lines": 2,
+   "valued": 67.85,
+   "valued_lines": 7
+  }
+ },
+ "b7_before": {
+  "FIN.MARBLE.RISER": {
+   "blocked_lines": 14,
+   "bounded_high": 0,
+   "bounded_lines": 0,
+   "lines": 15,
+   "not_applicable_lines": 0,
+   "valued": 1.96,
+   "valued_lines": 1
+  },
+  "FIN.MARBLE.TREAD": {
+   "blocked_lines": 0,
+   "bounded_high": 8.924413,
+   "bounded_lines": 3,
+   "lines": 15,
+   "not_applicable_lines": 0,
+   "valued": 30.683813,
+   "valued_lines": 12
+  },
+  "FIN.STAIR.STEP_LM": {
+   "blocked_lines": 0,
+   "bounded_high": 29.8964,
+   "bounded_lines": 3,
+   "lines": 14,
+   "not_applicable_lines": 0,
+   "valued": 91.0279,
+   "valued_lines": 11
+  }
+ },
+ "by_action": {
+  "CORRECT": 10,
+  "HOLD": 5,
+  "KEEP": 11,
+  "SUPERSEDE": 5
+ },
+ "changed_line_ids": [
+  "L-07f00d5b0c4e1924aaf5",
+  "L-0aa47300a16de572c967",
+  "L-0ec429f1783f1f15e700",
+  "L-151d92470a81dd1c450b",
+  "L-1dac5d9b574d7608d80d",
+  "L-1e88ac0d4ba0b4e8a950",
+  "L-59354cfe423b026db61a",
+  "L-60fc97c4306696c74c38",
+  "L-79beb9688604887c59c5",
+  "L-7adf1ccd0c407b61221a",
+  "L-820baecf7f726b4d8f1e",
+  "L-89c84fdd4964dec8a323",
+  "L-95b9555dd144951b071e",
+  "L-b4660de0ddd98ad0ffc2",
+  "L-d4d764ae7bb07b474b6f",
+  "L-e085c168dee5fb19a7fb",
+  "L-e1eb8b9a7cb92508ccc9",
+  "L-f145a2d130cba9450a24",
+  "L-fa534ec5f9dc14947899",
+  "L-fef9ec154deaec502498"
+ ],
+ "diff": {
+  "vs_released_v2_9": {
+   "NOT_IN_RELEASED": 3239,
+   "QUANTITY_DIFFERS": 976,
+   "SAME_QUANTITY": 614
+  },
+  "vs_v3_0_38": {
+   "CHANGED": 20,
+   "SAME": 4809
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.38",
+ "flights_check": {
+  "corrected": 10,
+  "held": 5,
+  "superseded": 5,
+  "valued_by_flight": {
+   "D1|FIN.MARBLE.TREAD": 1.035,
+   "D1|FIN.STAIR.STEP_LM": 3.45,
+   "MS1-L|FIN.MARBLE.TREAD": 3.105,
+   "MS1-L|FIN.STAIR.STEP_LM": 10.35,
+   "MS1-U|FIN.MARBLE.TREAD": 3.795,
+   "MS1-U|FIN.STAIR.STEP_LM": 12.65,
+   "MS2-L|FIN.MARBLE.TREAD": 3.795,
+   "MS2-L|FIN.STAIR.STEP_LM": 12.65,
+   "MS2-U|FIN.MARBLE.TREAD": 3.45,
+   "MS2-U|FIN.STAIR.STEP_LM": 12.65,
+   "RS-A|FIN.MARBLE.TREAD": 1.38,
+   "RS-A|FIN.STAIR.STEP_LM": 4.6,
+   "RS-S|FIN.MARBLE.TREAD": 3.45,
+   "RS-S|FIN.STAIR.STEP_LM": 11.5
+  }
+ },
+ "lines_kept": 11,
+ "method": "ARCH_TAKEOFF_V3.0.39",
+ "outside_rows_identical_to_v3_0_38": 4809,
+ "outside_rows_sha256": "951db386876cbc1de223a75f7d0d899ca6368b0db1bf9fa9234434bb0563fe91",
+ "released_default": false,
+ "replaced": 20,
+ "rows": [
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-R31F8AE:flight 1",
+   "evidence_status": "VERIFIED",
+   "flight": "MS1-L",
+   "flight_id": "SITE-3759f2457b22cb4a:F1",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-151d92470a81dd1c450b",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 2.415
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 2.415
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 3.105
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-R31F8AE:flight 1",
+   "evidence_status": "VERIFIED",
+   "flight": "MS1-L",
+   "flight_id": "SITE-3759f2457b22cb4a:F1",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-d4d764ae7bb07b474b6f",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 8.05
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 8.05
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 10.35
+   }
+  },
+  {
+   "action": "HOLD",
+   "beside": [
+    1.495
+   ],
+   "element_id": "1F-R78C367:flight 5",
+   "evidence_status": "HELD",
+   "flight": "MS1-T",
+   "flight_id": "SITE-a95bf979baf4cfae:F5",
+   "floor": "1F",
+   "held_beside": null,
+   "held_count": 5,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-b4660de0ddd98ad0ffc2",
+   "owned_by": null,
+   "role": "SEEN_THROUGH",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.495
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 1.495
+   },
+   "v3_0_39": {
+    "state": "BLOCKED_RFI"
+   }
+  },
+  {
+   "action": "HOLD",
+   "beside": [
+    4.7815,
+    4.14365
+   ],
+   "element_id": "1F-R78C367:flight 5",
+   "evidence_status": "HELD",
+   "flight": "MS1-T",
+   "flight_id": "SITE-a95bf979baf4cfae:F5",
+   "floor": "1F",
+   "held_beside": null,
+   "held_count": 5,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-e085c168dee5fb19a7fb",
+   "owned_by": null,
+   "role": "SEEN_THROUGH",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 4.7815
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 4.7815
+   },
+   "v3_0_39": {
+    "state": "BLOCKED_RFI"
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "1F-R78C367:flight 3",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "MS1-U",
+   "flight_id": "SITE-a95bf979baf4cfae:F3",
+   "floor": "1F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-e1eb8b9a7cb92508ccc9",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 3.795
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "1F-R78C367:flight 3",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "MS1-U",
+   "flight_id": "SITE-a95bf979baf4cfae:F3",
+   "floor": "1F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-0aa47300a16de572c967",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 12.65
+   }
+  },
+  {
+   "action": "SUPERSEDE",
+   "beside": null,
+   "element_id": "2F-R4D1B62:flight 1",
+   "evidence_status": "NOT_APPLICABLE",
+   "flight": "MS2-L",
+   "flight_id": "SITE-d7254c68fd33723d:F1",
+   "floor": "2F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": "DOUBLE_COUNT",
+   "line_id": "L-79beb9688604887c59c5",
+   "owned_by": "L-65806b4d02d476603bc5",
+   "role": "SEEN_THROUGH",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_39": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "SUPERSEDE",
+   "beside": null,
+   "element_id": "2F-R4D1B62:flight 1",
+   "evidence_status": "NOT_APPLICABLE",
+   "flight": "MS2-L",
+   "flight_id": "SITE-d7254c68fd33723d:F1",
+   "floor": "2F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": "DOUBLE_COUNT",
+   "line_id": "L-1e88ac0d4ba0b4e8a950",
+   "owned_by": "L-23651ecfef77992ec8d4",
+   "role": "SEEN_THROUGH",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_39": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "2F-R4D1B62:flight 2",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "MS2-U",
+   "flight_id": "SITE-d7254c68fd33723d:F2",
+   "floor": "2F",
+   "held_beside": 0.345,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-07f00d5b0c4e1924aaf5",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 3.45
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "2F-R4D1B62:flight 2",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "MS2-U",
+   "flight_id": "SITE-d7254c68fd33723d:F2",
+   "floor": "2F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-60fc97c4306696c74c38",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 11.5
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 12.65
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 4",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "RS-A",
+   "flight_id": "SITE-735e111dcf9b22c8:F4",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-1dac5d9b574d7608d80d",
+   "owned_by": null,
+   "role": "PARTIAL",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.035
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 1.035
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.38
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 4",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "RS-A",
+   "flight_id": "SITE-735e111dcf9b22c8:F4",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-f145a2d130cba9450a24",
+   "owned_by": null,
+   "role": "PARTIAL",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 4.6
+   }
+  },
+  {
+   "action": "HOLD",
+   "beside": [
+    4.094413
+   ],
+   "element_id": "GF-RC99C2A:flight 1",
+   "evidence_status": "HELD",
+   "flight": "RS-C",
+   "flight_id": "SITE-735e111dcf9b22c8:F1",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": 12,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-fa534ec5f9dc14947899",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 4.094413
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 4.094413
+   },
+   "v3_0_39": {
+    "state": "BLOCKED_RFI"
+   }
+  },
+  {
+   "action": "HOLD",
+   "beside": [
+    13.7964
+   ],
+   "element_id": "GF-RC99C2A:flight 1",
+   "evidence_status": "HELD",
+   "flight": "RS-C",
+   "flight_id": "SITE-735e111dcf9b22c8:F1",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": 12,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-95b9555dd144951b071e",
+   "owned_by": null,
+   "role": "OWN",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 13.7964
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 13.7964
+   },
+   "v3_0_39": {
+    "state": "BLOCKED_RFI"
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 2",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "RS-S",
+   "flight_id": "SITE-735e111dcf9b22c8:F2",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": null,
+   "line_id": "L-89c84fdd4964dec8a323",
+   "owned_by": null,
+   "role": "PARTIAL",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 2.07
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 2.07
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 3.45
+   }
+  },
+  {
+   "action": "CORRECT",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 2",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "flight": "RS-S",
+   "flight_id": "SITE-735e111dcf9b22c8:F2",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": null,
+   "line_id": "L-59354cfe423b026db61a",
+   "owned_by": null,
+   "role": "PARTIAL",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 6.9
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 6.9
+   },
+   "v3_0_39": {
+    "state": "SOURCE_DERIVED",
+    "value": 11.5
+   }
+  },
+  {
+   "action": "SUPERSEDE",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 3",
+   "evidence_status": "NOT_APPLICABLE",
+   "flight": "RS-S",
+   "flight_id": "SITE-735e111dcf9b22c8:F3",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.TREAD",
+   "kind": "FOLDED",
+   "line_id": "L-0ec429f1783f1f15e700",
+   "owned_by": "L-89c84fdd4964dec8a323",
+   "role": "PARTIAL",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.035
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 1.035
+   },
+   "v3_0_39": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "SUPERSEDE",
+   "beside": null,
+   "element_id": "GF-RC99C2A:flight 3",
+   "evidence_status": "NOT_APPLICABLE",
+   "flight": "RS-S",
+   "flight_id": "SITE-735e111dcf9b22c8:F3",
+   "floor": "GF",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.STAIR.STEP_LM",
+   "kind": "FOLDED",
+   "line_id": "L-fef9ec154deaec502498",
+   "owned_by": "L-59354cfe423b026db61a",
+   "role": "PARTIAL",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 3.45
+   },
+   "v3_0_39": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "SUPERSEDE",
+   "beside": null,
+   "element_id": "2F-R4D1B62:flight 1",
+   "evidence_status": "NOT_APPLICABLE",
+   "flight": "MS2-L",
+   "flight_id": "SITE-d7254c68fd33723d:F1",
+   "floor": "2F",
+   "held_beside": null,
+   "held_count": null,
+   "item_code": "FIN.MARBLE.RISER",
+   "kind": "DOUBLE_COUNT",
+   "line_id": "L-7adf1ccd0c407b61221a",
+   "owned_by": "L-0f060e9951c28c4cf074",
+   "role": "SEEN_THROUGH",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "v3_0_38": {
+    "state": "BLOCKED_RFI"
+   },
+   "v3_0_39": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "HOLD",
+   "beside": null,
+   "element_id": "1F-R78C367:flight 5",
+   "evidence_status": "HELD",
+   "flight": "MS1-T",
+   "flight_id": "SITE-a95bf979baf4cfae:F5",
+   "floor": "1F",
+   "held_beside": null,
+   "held_count": 5,
+   "item_code": "FIN.MARBLE.RISER",
+   "kind": null,
+   "line_id": "L-820baecf7f726b4d8f1e",
+   "owned_by": null,
+   "role": "SEEN_THROUGH",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "v3_0_38": {
+    "state": "BLOCKED_RFI"
+   },
+   "v3_0_39": {
+    "state": "BLOCKED_RFI"
+   }
+  }
+ ],
+ "task": "T-429",
+ "totals_moved_by_code": {
+  "FIN.MARBLE.RISER|m2": {
+   "v3_0_38": {
+    "blocked_lines": 14,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 1.96
+   },
+   "v3_0_39": {
+    "blocked_lines": 13,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 1.96
+   }
+  },
+  "FIN.MARBLE.TREAD|m2": {
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 8.924413,
+    "held_low": 0.0,
+    "lines": 15,
+    "released": 30.683813
+   },
+   "v3_0_39": {
+    "blocked_lines": 2,
+    "bounded_lines": 3,
+    "held_high": 8.924413,
+    "held_low": 0.0,
+    "lines": 13,
+    "released": 23.3694
+   }
+  },
+  "FIN.STAIR.STEP_LM|lm": {
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 29.8964,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 91.0279
+   },
+   "v3_0_39": {
+    "blocked_lines": 2,
+    "bounded_lines": 3,
+    "held_high": 29.8964,
+    "held_low": 0.0,
+    "lines": 12,
+    "released": 67.85
+   }
+  }
+ },
+ "v3_0_38_boq_lines_sha256": "57cca61c9fbfc96807af52ee232bc182126b3621170db7db264192bba55cfc31",
+ "v3_0_38_lines": 4829,
+ "v3_0_39_boq_lines_sha256": "8d1bbe5dfc9a10854ca8aed885fe61e79298ada87d470c69ec17588b80d88a15",
+ "v3_0_39_lines": 4829
+}
