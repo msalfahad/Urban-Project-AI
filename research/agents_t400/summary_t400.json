@@ -1,0 +1,1001 @@
+{
+ "added": [
+  {
+   "beside": null,
+   "element_id": "FENCE:F-NORTH:WALL_PLANE",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "EXT.FENCE.WALL",
+   "line_id": "L-c67c20465860c34dd052",
+   "quantity": 83.1305,
+   "range": null,
+   "state": "MEASURED",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": {
+    "height_m": 2.65,
+    "length_m": 31.37
+   },
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 83.1305
+   },
+   "element_id": "FENCE:F-NORTH:BLOCK_NET",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.BLOCK",
+   "line_id": "L-479236085c3a79878c90",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-STREET:WALL_PLANE",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "EXT.FENCE.WALL",
+   "line_id": "L-68135cb06855cb135a04",
+   "quantity": 14.84,
+   "range": null,
+   "state": "MEASURED",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": {
+    "height_m": 2.65,
+    "length_m": 5.6
+   },
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 14.84
+   },
+   "element_id": "FENCE:F-STREET:BLOCK_NET",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.BLOCK",
+   "line_id": "L-4eb92fd041dee3234b34",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "COMPARISON_ONLY",
+    "unit": "m2",
+    "value": 6.36
+   },
+   "element_id": "FENCE:F-SEA:WALL_PLANE",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.WALL",
+   "line_id": "L-aad105421b72b47c6f5c",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-SEA:BLOCK_NET",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.BLOCK",
+   "line_id": "L-9b4ba80e8886e850cc67",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:WALL_PLANE",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.WALL",
+   "line_id": "L-cb47254352092a9d9662",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:BLOCK_NET",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.BLOCK",
+   "line_id": "L-22c53d141c69511bb328",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:ALL:BLOCKS",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.BLOCK_COUNT",
+   "line_id": "L-59991e8fddedbe977fbb",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-396"
+   ],
+   "terms": null,
+   "unit": "pcs"
+  },
+  {
+   "beside": {
+    "kind": "AT_LEAST",
+    "unit": "m2",
+    "value": 17.628
+   },
+   "element_id": "FENCE:BAND:MASONRY_BELOW_NG",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.MASONRY_BELOW_NG",
+   "line_id": "L-c632bb4647031c37de19",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-403"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "PER_UNIT",
+    "unit": "m3 per pad",
+    "value": 0.312
+   },
+   "element_id": "FENCE:BAND:PADS",
+   "evidence_status": "HELD",
+   "item_code": "STR.CONC.BOUNDARY_PAD",
+   "line_id": "L-cda8f41522dc6f42b3d6",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-403"
+   ],
+   "terms": null,
+   "unit": "m3"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-c21c5a88b12bf69e0df1",
+   "quantity": 83.1305,
+   "range": null,
+   "state": "MEASURED",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": {
+    "height_m": 2.65,
+    "length_m": 31.37
+   },
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 83.1305
+   },
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-b1c2e0b93312e521d699",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 83.1305
+   },
+   "element_id": "FENCE:F-NORTH:FACE:OUTSIDE:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-1e9a80dbea82741116cf",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-NORTH:FACE:PLOT",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-2987b2641ee6a599d651",
+   "quantity": 82.0705,
+   "range": null,
+   "state": "MEASURED",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": {
+    "height_m": 2.65,
+    "length_m": 30.97
+   },
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 82.0705
+   },
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-36726588eba347a4c783",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 82.0705
+   },
+   "element_id": "FENCE:F-NORTH:FACE:PLOT:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-bac8095037312e3e90f4",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 15.37
+   },
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-138c597bc2aa55cb2a99",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 15.37
+   },
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-eb19e5f5365e81dcedeb",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 15.37
+   },
+   "element_id": "FENCE:F-STREET:FACE:OUTSIDE:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-8502adc8f55776e67a28",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 14.84
+   },
+   "element_id": "FENCE:F-STREET:FACE:PLOT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-778a67b2fbd8b61f88ad",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 14.84
+   },
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-e46d3f1324eb8625cbdc",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 14.84
+   },
+   "element_id": "FENCE:F-STREET:FACE:PLOT:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-4465d1e72082b5678e4a",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "COMPARISON_ONLY",
+    "unit": "m2",
+    "value": 6.36
+   },
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-020e561643e5903e5c21",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-639e70724813476c31d3",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-SEA:FACE:OUTSIDE:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-0a2fbaa46f6a6b23323e",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "COMPARISON_ONLY",
+    "unit": "m2",
+    "value": 6.36
+   },
+   "element_id": "FENCE:F-SEA:FACE:PLOT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-1874145bb43c31a0cd03",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-b7cf09f5c8966460da56",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-SEA:FACE:PLOT:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-2246f2ea8b345ac80584",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-e22ea03658c74421b9d9",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-52d8589716c7724358ca",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:OUTSIDE:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-1c6a9f23a2f8320764a0",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:PLOT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-71cfc2e9c70fbab1b3f1",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PLASTER",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PLASTER",
+   "line_id": "L-e802015729d4df311c0c",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-LOWER:FACE:PLOT:PAINT",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.PAINT",
+   "line_id": "L-8c90675aafd8738b1e26",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": null,
+   "element_id": "FENCE:F-NORTH:TOP",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "EXT.FENCE.TOP",
+   "line_id": "L-480833d5a8a07203d2b6",
+   "quantity": 31.37,
+   "range": null,
+   "state": "MEASURED",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": {
+    "length_m": 31.37
+   },
+   "unit": "lm"
+  },
+  {
+   "beside": {
+    "kind": "AT_LEAST",
+    "unit": "m",
+    "value": 5.6
+   },
+   "element_id": "FENCE:F-STREET:TOP",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.TOP",
+   "line_id": "L-07ab81e68a2ad5d4b15c",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404"
+   ],
+   "terms": null,
+   "unit": "lm"
+  },
+  {
+   "beside": {
+    "kind": "AT_MOST",
+    "unit": "m2",
+    "value": 0.53
+   },
+   "element_id": "FENCE:F-STREET:FACE:END-G-01",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.FACE",
+   "line_id": "L-7aaa47641fd87354fb5d",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-404",
+    "T-361"
+   ],
+   "terms": null,
+   "unit": "m2"
+  },
+  {
+   "beside": {
+    "kind": "OPENING_WIDTH",
+    "unit": "m",
+    "value": 2.5
+   },
+   "element_id": "FENCE:G-01:LEAF",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.GATE",
+   "line_id": "L-124e0c1ce0b8015699c9",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-361"
+   ],
+   "terms": null,
+   "unit": "pcs"
+  },
+  {
+   "beside": {
+    "kind": "OPENING_WIDTH",
+    "unit": "m",
+    "value": 1.0
+   },
+   "element_id": "FENCE:G-02:LEAF",
+   "evidence_status": "HELD",
+   "item_code": "EXT.FENCE.GATE",
+   "line_id": "L-b353801f6c9677de4f5d",
+   "quantity": null,
+   "range": null,
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-361"
+   ],
+   "terms": null,
+   "unit": "pcs"
+  }
+ ],
+ "extends": "ARCH_TAKEOFF_V3.0.34",
+ "files_sha256": {
+  "V3_0_34_BOQ_LINES.csv": "4ba5bbe1cd27b5cc0ca47c09b52cfbab3d8a74ff1b8e664ff8da69a34ddf300a",
+  "V3_0_34_BOQ_LINES.json": "4c7f581cf13b28c166cf93532cbce2a79d1ad711bb0f6e9f3915fc8f279f5402",
+  "V3_0_35_BOQ_LINES.csv": "59436bf4cafa87c06754a60f5c21b3e80927716346aeb40cbc97390e1ed0d0bb",
+  "V3_0_35_BOQ_LINES.json": "b011bace2958f3da42afa00587eb2511afed754a46aba78e8d08346aa2903e10",
+  "V3_0_35_DIFF.csv": "5f79857ea9f2d09c0bbd95a5e8979cf19ff66979e459e21ebdcf4fbb1f351708",
+  "V3_0_35_INTEGRATION_LEDGER.csv": "4379bec9a7f1c252d602b82247ba9263b94286488ed65b495f51f38c1dc0561e"
+ },
+ "identity": {
+  "added": 40,
+  "bound": 7,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3140,
+    "QUANTITY_DIFFERS": 955,
+    "SAME_QUANTITY": 635
+   },
+   "vs_v3_0_34": {
+    "ADDED": 40,
+    "CHANGED": 1,
+    "SAME": 4689
+   }
+  },
+  "fence": {
+   "blank": 35,
+   "by_code": {
+    "EXT.FENCE.BLOCK": 4,
+    "EXT.FENCE.BLOCK_COUNT": 1,
+    "EXT.FENCE.FACE": 9,
+    "EXT.FENCE.GATE": 2,
+    "EXT.FENCE.MASONRY_BELOW_NG": 1,
+    "EXT.FENCE.PAINT": 8,
+    "EXT.FENCE.PLASTER": 8,
+    "EXT.FENCE.TOP": 2,
+    "EXT.FENCE.WALL": 4,
+    "STR.CONC.BOUNDARY_PAD": 1
+   },
+   "lines": 40,
+   "valued": {
+    "EXT.FENCE.FACE|m2": 165.201,
+    "EXT.FENCE.TOP|lm": 31.37,
+    "EXT.FENCE.WALL|m2": 97.9705
+   }
+  },
+  "outside_rows": 4689,
+  "outside_rows_identical_to_v3_0_34": 4689,
+  "outside_rows_sha256": "2353642c1058da6ff7353353d2f51af0cdd61e15b2ca0cdf04376f4524dee450",
+  "replaced": 1,
+  "v3_0_34_lines": 4690,
+  "v3_0_35_lines": 4730
+ },
+ "method": "ARCH_TAKEOFF_V3.0.35",
+ "restated": [
+  {
+   "beside": null,
+   "element_id": "T254:GROUND_BEAMS:GROUND:BOUNDARY_GB_NG",
+   "evidence_status": "HELD",
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-fb7a6431fede62e93fd5",
+   "quantity": null,
+   "range": [
+    0.0,
+    3.5256
+   ],
+   "state": "BLOCKED_RFI",
+   "tasks": [
+    "T-403"
+   ],
+   "terms": null,
+   "unit": "m3"
+  }
+ ],
+ "schema": "URBAN_T400_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "EXT.FENCE.BLOCK_COUNT|pcs": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.BLOCK|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 4,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.FACE|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 7,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 9,
+    "released": 165.201
+   }
+  },
+  "EXT.FENCE.GATE|pcs": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 2,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.MASONRY_BELOW_NG|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.PAINT|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 8,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 8,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.PLASTER|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 8,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 8,
+    "released": 0.0
+   }
+  },
+  "EXT.FENCE.TOP|lm": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 2,
+    "released": 31.37
+   }
+  },
+  "EXT.FENCE.WALL|m2": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 2,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 97.9705
+   }
+  },
+  "STR.CONC.BOUNDARY_PAD|m3": {
+   "v3_0_34": null,
+   "v3_0_35": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  }
+ },
+ "waiting": [
+  "ANNEX_EXTERIOR_DEPTH",
+  "ARCHED_SET_THRESHOLDS",
+  "ARCHED_WINDOW_W17_OWNER_ITEM",
+  "B4_02_PRINTED_BAND",
+  "BASE_OUTSIDE_ANY_ENGINE_ROOM",
+  "BEAMS_AT_PLANTED_COLUMNS",
+  "BEAM_FORMWORK_AND_STEEL_OF_CHANGED_RUNS",
+  "BEAM_HELD_DESIGNER_ITEMS",
+  "BEAM_JOINT_HEAD_T395",
+  "BELOW_NG_COATING",
+  "BLINDING_PLOT_LINE_CLIP",
+  "BLOCKWORK_DROP_D",
+  "BLOCKWORK_HELD_WALLS",
+  "BLOCKWORK_PROCUREMENT",
+  "BOUNDARY_BLINDING",
+  "BOUNDARY_COLUMNS",
+  "CEILING_BOARD_TYPE",
+  "CEILING_COVES_EDGES",
+  "COLUMN_SECTION_D16_D63",
+  "CORNERS_AND_EXTERNAL_FACES",
+  "COURT_SECTION",
+  "DOME_DRUMS",
+  "DOME_INTRADOS_DCR4",
+  "DOME_RING_DRUM_TOWER",
+  "DOOR_HEADS_PRINTED",
+  "DOWNGRADE_DGP_T373_LAP",
+  "EXTERNAL_THRESHOLD_MATERIAL",
+  "FACE_CROSSWALK",
+  "FENCE_COLUMNS_M4",
+  "FENCE_FINISH_LAYERS",
+  "FENCE_LOWER_050_BAND",
+  "FENCE_STREET_PROFILE",
+  "FLOOR_LANDING_MARBLE_LINE",
+  "FLOOR_LINE_WHOLE_VERIFICATION",
+  "FLOOR_MATERIAL_UNTYPED_FACES",
+  "FLOOR_PANTRY_DOORWAY_ZONE",
+  "FLOOR_PANTRY_PART_RECHECK",
+  "FLOOR_UNDER_STAIR_BELOW_CUT",
+  "FORMWORK_HELD_FACES",
+  "FORMWORK_OQ10",
+  "GS_HELD_CELL_T042",
+  "HIDDEN_BAND_Q52C",
+  "HOUSE_SOUTH_GB_BLOCK",
+  "KITCHEN_ANNEX_HEIGHT_G2",
+  "LIFT_PIT_DEPTH_D43",
+  "LINE_STATE_FOR_LEAD",
+  "LOWER_BAND_SPLIT_DG",
+  "MAIN_ENTRANCE_D53",
+  "MASONRY_ACCESSORIES",
+  "MISSING_CATEGORIES",
+  "MULTI_TAG_OUTLINE_DESIGNER_ANSWER",
+  "NECK_STEEL",
+  "OPENING_DEDUCTIONS_IN_FINISH_LINES",
+  "OPENING_INVENTORY_ENGINE_FREE",
+  "OPENING_LEDGER_FIX",
+  "OUTDOOR_FLOOR_MATERIAL",
+  "OUTDOOR_SKIRTING",
+  "OUTDOOR_THRESHOLDS",
+  "PANTRY_FACE_REWALK_F_T351_1",
+  "PARAPET_BLOCK_ALTERNATIVE",
+  "PARAPET_FORMWORK",
+  "PARAPET_RC_B_EDGE",
+  "PARAPET_RC_MATERIAL",
+  "PARAPET_REBAR",
+  "POOL_BAR_POPULATIONS",
+  "POOL_STEEL_GEOMETRY",
+  "POOL_WATER_FACE_FINISH",
+  "PVC_WIDTH_REVIEW",
+  "Q-71",
+  "Q-74",
+  "RAILINGS_HELD",
+  "REVEAL_FINISH",
+  "REVEAL_HELD_FACES",
+  "ROOF_DATUM",
+  "ROOF_FINISH_MATERIAL",
+  "ROOF_INSULATION_PROTECTION",
+  "ROOF_SCREED_T0",
+  "ROOF_TOP_Q34",
+  "SEARCH_RECORD",
+  "SHUTTER_AREA",
+  "SILL_MATERIAL",
+  "SLAB_END_LEGS",
+  "SLAB_END_UNDRAWN_CLASSES",
+  "SLAB_FACES",
+  "SLAB_NO_PROFILE_TAG_SPREAD",
+  "SLAB_TB_PANELS",
+  "SLAB_TOP_EXTENSION_50PCT",
+  "SLAB_TOP_EXTENT_DOCUMENTS",
+  "SOFFIT_READER",
+  "ST03_STEPS",
+  "STAIR_GF_1F_LEDGER",
+  "STAIR_HELD_PIECES",
+  "STAIR_SOFFIT_T281",
+  "STRAP_FOOTING_OWNERSHIP",
+  "STRAP_STEEL_FORMWORK_EXCAVATION",
+  "T-102",
+  "T-105",
+  "T-111",
+  "T-122",
+  "T-129",
+  "T-135",
+  "T-146",
+  "V6_CONVENTIONS",
+  "WALL_FINISH_HELD_HEADS",
+  "WALL_TILE_HELD_HEIGHTS",
+  "WET_BACKING_BAND_SPECIFICATION",
+  "WET_BACKING_HELD_ROOMS",
+  "WET_OPENING_REVEALS",
+  "WET_WALL_SPATTER_DASH",
+  "WET_WALL_TILE_AND_KITCHEN_FLOOR"
+ ]
+}

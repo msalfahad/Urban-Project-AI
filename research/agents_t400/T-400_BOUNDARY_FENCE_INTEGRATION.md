@@ -84,6 +84,8 @@ both gate leaves, street top / stop-end.
 ## 3. Diff and identity (the run on the drawings)
 
 - V3_0_34 json `4c7f581c` = the T-399 Gate B candidate of record, REPRODUCED.
+- V3_0_35 json `b011bace` / csv `59436bf4`, diff csv `5f79857e`, ledger csv `4379bec9`; outside-rows sha `2353642c`
+  (the 4,689 unchanged lines); the stage re-run from V3_0_34 alone gives `b011bace` again.
 - Lines 4,690 -> 4,730: **SAME 4,689 (byte-identical), CHANGED 1 (the upper G.B range), ADDED 40, REMOVED 0**.
 - Against released V2.9: the 40 added lines are NOT_IN_RELEASED; every other line keeps its V3.0.34 relation.
 - Totals moved only in the ten new codes; STR.CONC.GROUND_BEAM code totals unchanged (a BLOCKED range is not summed).
@@ -103,7 +105,7 @@ both gate leaves, street top / stop-end.
 
 ## 5. Regression and checks
 
-- tests/t400_boundary_fence (35): Villa V400 hand fixture (plane 43.200 + 13.920 = 57.120 m2, faces 85.920 m2, top
+- tests/t400_boundary_fence (41 = 24 module + 12 registry 1.30.0 + 5 inputs): Villa V400 hand fixture (plane 43.200 + 13.920 = 57.120 m2, faces 85.920 m2, top
   18.00 m, upper G.B 0 .. 2.544 m3), order invariance; adverse: typed figure not its terms, held with a value, block net
   valued, held as 0, mm as m, gate wider than the face, a component twice, drawn-only height valued, stale binding,
   bound not the drawn gross, low end not 0, facade face shared, total not the verified total, applied twice, a non-fence
