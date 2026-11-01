@@ -189,4 +189,10 @@ mk_merge "$TMP/c" 13 2>/dev/null || true
 c_fresh="$TMP/c"; [[ -f "$c_fresh/.work/agent_lock" ]] && rm -f "$c_fresh/.work/agent_lock"
 raw_push "$c_fresh" "$ENG" && fail "raw engine push without any lock"
 ok "no lock record: raw engine push refused"
+
+# 14. a run that never took its lock (no STARTED line) cannot write a SUCCESS final line (owner 2026-11-02)
+rm -f "$c_fresh/.work/agent_lock"
+E "$c_fresh" board log "- $(now) | Worker 2 | SUCCESS | none | never started | none" >"$TMP/out" 2>&1 && fail "SUCCESS without any lock"
+grep -q "SUCCESS final line is refused" "$TMP/out" || fail "SUCCESS without a lock: wrong refusal: $(cat "$TMP/out")"
+ok "no lock record: SUCCESS final line refused"
 echo "ALL RUN-LOCK TESTS PASSED"
