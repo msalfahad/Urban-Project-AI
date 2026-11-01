@@ -1,0 +1,210 @@
+{
+ "cad": {
+  "arch_ms1l_front_s_m": [
+   -2.7,
+   -2.4,
+   -2.1,
+   -1.8,
+   -1.5,
+   -1.2,
+   -0.9,
+   -0.6,
+   -0.3,
+   0.0
+  ],
+  "landing_edge": {
+   "handles": [
+    "2C6",
+    "49C (same line)",
+    "49D (riser face)"
+   ],
+   "len_m": 1.15,
+   "offset_from_corner_m": 0.1,
+   "riser_face_offset_m": 0.05
+  },
+  "lane_m": 1.15,
+  "radial_end_rel_corner_m": {
+   "49E": [
+    -1.15,
+    1.15
+   ],
+   "4A0": [
+    -0.511572,
+    1.15
+   ],
+   "4A2": [
+    -1.15,
+    0.511572
+   ]
+  },
+  "radial_fronts_m": {
+   "49E": 1.626346,
+   "4A0": 1.258652,
+   "4A2": 1.258652
+  },
+  "region_polygon_rel_corner_m": [
+   [
+    -1.15,
+    -0.05
+   ],
+   [
+    0.0,
+    -0.05
+   ],
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.1,
+    0.0
+   ],
+   [
+    0.1,
+    1.15
+   ],
+   [
+    -1.15,
+    1.15
+   ]
+  ],
+  "st_p4": {
+   "closing_face_equals_arch_49D": true,
+   "face_foot_rel_486_m": -3.3,
+   "face_lines": 12,
+   "radials_equal_arch_riser_faces": true,
+   "radials_m": {
+    "2F4": 1.626346,
+    "2F5": 1.258652,
+    "2F6": 1.258652
+   }
+  }
+ },
+ "flight": "ST-01 MS1-T (GF winder turn +2.667 -> +3.50)",
+ "result": {
+  "freelancer": {
+   "drawn_risers": 56,
+   "freelancer_pieces": 63,
+   "reach_of_drawn_readings": [
+    53,
+    59
+   ],
+   "verdict": "NOT_A_DRAWN_READING"
+  },
+  "governing": {
+   "governing": "SECTION_A_A",
+   "reason": "owner rule names 'section' and it is consistent with the drawn evidence",
+   "status": "DRAWING-CONFIRMED",
+   "table": [
+    {
+     "foot_agrees_with": 1,
+     "foot_check": "PASS",
+     "going_check": "PASS",
+     "level_check": "PASS",
+     "level_miss_m": 0.0019,
+     "predicted_tread_levels": [
+      2.6667,
+      2.8333,
+      3.0,
+      3.1667,
+      3.3333
+     ],
+     "reading": "SECTION_A_A",
+     "riser_check": "PASS",
+     "riser_m": 0.166667,
+     "risers_to_landing": 15,
+     "source": "section",
+     "straight_run_m": 2.7,
+     "verdict": "GOVERNING"
+    },
+    {
+     "foot_agrees_with": 1,
+     "foot_check": "PASS",
+     "going_check": "PASS",
+     "level_check": "FAIL",
+     "level_miss_m": 0.1549,
+     "predicted_tread_levels": [
+      2.7857,
+      2.9643,
+      3.1429,
+      3.3214
+     ],
+     "reading": "ARCH_GF_PLAN",
+     "rejected_because": [
+      "riser_check",
+      "level_check"
+     ],
+     "riser_check": "FAIL",
+     "riser_m": 0.178571,
+     "risers_to_landing": 14,
+     "source": "arch_plan",
+     "straight_run_m": 2.7,
+     "verdict": "REJECTED"
+    },
+    {
+     "foot_agrees_with": 0,
+     "foot_check": "FAIL",
+     "going_check": "PASS",
+     "level_check": "FAIL",
+     "level_miss_m": 0.2087,
+     "predicted_tread_levels": [
+      2.875,
+      3.0312,
+      3.1875,
+      3.3438
+     ],
+     "reading": "ST_P4",
+     "rejected_because": [
+      "level_check",
+      "foot_check"
+     ],
+     "riser_check": "PASS",
+     "riser_m": 0.15625,
+     "risers_to_landing": 16,
+     "source": "structural_plan",
+     "straight_run_m": 3.3,
+     "verdict": "REJECTED"
+    }
+   ],
+   "turn_risers": 5
+  },
+  "turn": {
+   "cause": "WINDER_SUBDIVISION_NOT_DRAWN: the plans draw 3 winder fronts (a 4-riser turn); the governing count is 5; winders are never generated (S-9); winder fronts and turn marble HELD (A8)",
+   "landing_edge": {
+    "drawings": [
+     "ARCH_GF 2C6 / 49D",
+     "ST_P4 2F3"
+    ],
+    "lm": 1.15,
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nosing_pieces": 5,
+   "tread_marble": {
+    "beside_m2": 1.495,
+    "m2": null,
+    "status": "HELD"
+   },
+   "turn_risers": 5,
+   "winder_fronts": {
+    "beside_lm": 4.14365,
+    "drawn_count": 3,
+    "lm": null,
+    "status": "HELD"
+   },
+   "winder_tread_pieces": 5
+  }
+ },
+ "schema": "t434.turn.v1",
+ "section": {
+  "dashed_tread_levels_m": [
+   2.6663,
+   2.8314,
+   3.0013,
+   3.1665
+  ],
+  "note": "scaled (indicative); the fifth winder at +3.333 would lie on the cut landing slab's soffit line",
+  "px_per_m": 314.84
+ },
+ "section_foot_s_m": -2.733856,
+ "units": "m"
+}

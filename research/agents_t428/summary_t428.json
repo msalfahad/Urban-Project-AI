@@ -1,0 +1,724 @@
+{
+ "basis": "T-406 r3 (MERGED 35c9212e; T-385 r2 on V3.0.29 + V3.0.33 moves) restated part by part with the merged T-415 / T-416 / T-417 / T-426 traces; holds on V3.0.37 (no valued concrete moved since V3.0.34)",
+ "candidate_notes": {
+  "V3.0.34 -> V3.0.35 (T-400, 0c5d526c)": "CHANGED 1 = L-fb7a6431fede62e93fd5 upper boundary G.B blank -> blank with range [0.0, 3.5256] m3 (already HELD in GB-BOUNDARY, no residual move); ADDED 1 concrete line STR.CONC.BOUNDARY_PAD BLANK (pad count not printed, 0.312 m3 per pad beside): new HELD scope on the engine side, no residual move (whether the other side bills pads is not readable from public data)",
+  "V3.0.35 -> V3.0.36 (T-246, 61b78fe8)": "quantity_moved 0",
+  "V3.0.36 -> V3.0.37 (T-420, 4c01fe06)": "ADDED 80 FIN.FLOOR.BED lines, SAME 4730, no concrete code moved: the r4 table holds on V3.0.37 (= V3.0.34 for valued concrete)"
+ },
+ "checker_figures": {
+  "T-415": {
+   "BEYOND": -2.476433,
+   "RS-A": -0.026107,
+   "RS-C": -1.244067,
+   "RS-LD": -0.1623,
+   "RS-S": -0.065268,
+   "ref": "T-415 MERGED 8c8372a4, Verifier 2026-11-01T05:54Z, own read of ST7757 dxf.dxf by handle (treads 4.443096 m2, lane 1.250) and own arithmetic (h)"
+  },
+  "T-416": {
+   "BOUNDED": -3.525102,
+   "THROUGH_NECK_EXACT": 0.108,
+   "ref": "T-416 MERGED b7bb914a, Verifier 2026-11-01T07:54Z, own read by handle (7DC+7DD / 7E7+7E8 7.350 less neck 0.300 exactly, F-C-T416-1): (h) through-neck ENGINE_WRONG exact 0.108000; -3.525 BOUNDED_THROUGH_SUPPORTS accepted as a bound; (f) HELD annex lines stay HELD"
+  },
+  "T-417": {
+   "COUNT": 0.2392,
+   "ONE_LENGTH": 0.010752,
+   "OWNERSHIP": -0.0768,
+   "RISE": -2.026752,
+   "ref": "T-417 MERGED 6b6ff9bd, Verifier 2026-11-01T11:10Z, own re-measure by handle (runs 3.300, lane 1.200, landings) and own arithmetic: WHO IS RIGHT ENGINE_RIGHT"
+  },
+  "T-426": {
+   "D34": [
+    0.864171,
+    1.152231
+   ],
+   "R177": [
+    0.5964,
+    0.9036
+   ],
+   "R177_STAKE": 0.3012,
+   "SLIVER_VALUE": 0.009,
+   "UNLOADED": 0.423,
+   "ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named"
+  }
+ },
+ "engine_side_register": [
+  {
+   "correction_owner": "T-430",
+   "id": "E-1",
+   "kind": "VERIFIED_WRONG",
+   "line_ids": [
+    "L-fe78ae283abfb6256358",
+    "L-0e30aadba2eebc6c3ede"
+   ],
+   "m3": 0.423,
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "unloaded 3.525 m halves at 0.60 where p.13 prints 30 x 40 (2 x 0.2115); the other side is at 0.60 too, so the comparison shows 0.000 AGREE"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-2",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "L-fe78ae283abfb6256358",
+    "L-0e30aadba2eebc6c3ede"
+   ],
+   "range_m3": [
+    0.846,
+    1.269
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "loaded halves (a beam lands on them; D-33 concentrated load): 30 x 40 .. 30 x 60 over 2 x 3.525 m, valued today at the 0.60 end"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-3",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "4 short-run lines (T-426 census)"
+   ],
+   "range_m3": [
+    0.864171,
+    1.152231
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "runs under 2.5 m valued at the 0.40 end of the unanswered D-34 pair (F-T426-1: downgrade-only extension of DG-a31a0d7e); the comparison term on them sits in GB-SEC-40 and would grow by up to -0.288057 if D-34 gives 30 x 30"
+  },
+  {
+   "correction_owner": "T-430",
+   "id": "E-4",
+   "kind": "HELD_RANGE",
+   "line_ids": [
+    "177+7CD#1 line (T-426 census)"
+   ],
+   "range_m3": [
+    0.5964,
+    0.9036
+   ],
+   "residual_effect_m3": 0.0,
+   "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named",
+   "what": "span 5.020 (band end) or 4.970 (column 1EC face): 30 x 60 .. 30 x 40, valued at the 0.60 end; in GB-SEC-60 (0.000 AGREE)"
+  }
+ ],
+ "families_r4_current": {
+  "CONC.BEAM": {
+   "HELD": -7.376418,
+   "TRACED": 8.098595,
+   "UNEXPLAINED": -0.366998,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": 0.355179
+  },
+  "CONC.BLINDING": {
+   "HELD": -47.055,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": -47.055
+  },
+  "CONC.BOUNDARY_BELOW_NG": {
+   "HELD": -11.9844,
+   "TRACED": -3.984,
+   "UNEXPLAINED": -0.1956,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -16.164
+  },
+  "CONC.COLUMN": {
+   "HELD": -24.3375,
+   "TRACED": 4.5005,
+   "UNEXPLAINED": -0.138,
+   "cause_closes": false,
+   "components": 6,
+   "residual_m3": -19.975
+  },
+  "CONC.FOOTING": {
+   "HELD": -1.96,
+   "TRACED": 0.628,
+   "UNEXPLAINED": 0.0,
+   "cause_closes": true,
+   "components": 22,
+   "residual_m3": -1.332
+  },
+  "CONC.GROUND": {
+   "HELD": -12.974954,
+   "TRACED": -8.252592,
+   "UNEXPLAINED": -1.436388,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -22.663934
+  },
+  "CONC.POOL": {
+   "HELD": -3.708,
+   "TRACED": -0.966357,
+   "UNEXPLAINED": -0.471346,
+   "cause_closes": false,
+   "components": 4,
+   "residual_m3": -5.145703
+  },
+  "CONC.SLAB": {
+   "HELD": 0.0,
+   "TRACED": 0.462758,
+   "UNEXPLAINED": 0.0,
+   "cause_closes": true,
+   "components": 3,
+   "residual_m3": 0.462758
+  },
+  "CONC.STAIR_DOME": {
+   "HELD": -7.032067,
+   "TRACED": -1.874058,
+   "UNEXPLAINED": -2.476433,
+   "cause_closes": false,
+   "components": 2,
+   "residual_m3": -11.382558
+  },
+  "UNKEYED.PARAPET": {
+   "HELD": 0.0,
+   "TRACED": 0.0,
+   "UNEXPLAINED": 0.0,
+   "cause_closes": true,
+   "components": 1,
+   "residual_m3": 0.0
+  }
+ },
+ "merged_register": {
+  "T-246": "61b78fe8",
+  "T-391": "c3fe8ec8",
+  "T-400": "0c5d526c",
+  "T-406": "35c9212e",
+  "T-415": "8c8372a4",
+  "T-416": "b7bb914a",
+  "T-417": "6b6ff9bd",
+  "T-420": "4c01fe06",
+  "T-426": "1f298735"
+ },
+ "note": "engine-side figures, residual splits in m3 and Checker figures only; no freelancer row, cell or dimension beyond the W x L x T quantities already in the merged records",
+ "observations": [
+  {
+   "id": "O-T428-1",
+   "pair_m3": 0.086989,
+   "proposal": "Checker to rule: +0.086989 m3 of GB-LEN-FIELD and -0.086989 m3 inside GB-SEC-EXT are one bookkeeping pair (AGREE, net 0: his section counted on length-field metres the engine value does not carry); the remaining +0.049775 m3 is the value length beyond the GB-plan net, the ring's share a point inside its frame range (R-T407: a range, never a chosen frame). If ruled, GB-MAIN unexplained +0.124182 -> 0.037193 and traced -1.064382 -> -0.977393 (ENGINE_RIGHT exterior section +5.796522 -> 5.883511); no residual moves",
+   "re_adds_to_GB_LEN_FIELD": 0.136764,
+   "rows": [
+    {
+     "band": "FD+7E0",
+     "field_minus_value_m": 0.3,
+     "length_field_m": 6.9,
+     "line_id": "L-9e28c7012784a8dc33c8",
+     "net_frame_range_m": [
+      6.598,
+      6.598
+     ],
+     "net_gbp_m": 6.598,
+     "value_length_m": 6.6,
+     "value_minus_net_m": 0.002
+    },
+    {
+     "band": "107+7CE",
+     "field_minus_value_m": 0.026098,
+     "length_field_m": 0.39,
+     "line_id": "L-ff727b2a52e39509a659",
+     "net_frame_range_m": [
+      0.3634,
+      0.3634
+     ],
+     "net_gbp_m": 0.3634,
+     "value_length_m": 0.363902,
+     "value_minus_net_m": 0.000502
+    },
+    {
+     "band": "ARC:157+158",
+     "field_minus_value_m": 0.157175,
+     "length_field_m": 6.2868,
+     "line_id": "L-7076482d75ca42691468",
+     "net_frame_range_m": [
+      5.8556,
+      6.259
+     ],
+     "net_gbp_m": 5.8556,
+     "value_length_m": 6.129625,
+     "value_minus_net_m": 0.274025
+    }
+   ],
+   "value_beyond_gbp_net_m3": 0.049775
+  }
+ ],
+ "queued": {
+  "T-430": "QUEUED",
+  "T-432": "TODO",
+  "T-433": "QUEUED"
+ },
+ "restated_components": {
+  "GB-MAIN": {
+   "family": "CONC.GROUND",
+   "parts": [
+    {
+     "cause": "held runs: his section over the 53.8353 m the engine holds (D-34, D-35 annex, court)",
+     "m3": -9.690354,
+     "verdict": "HELD"
+    },
+    {
+     "_sub": true,
+     "cause": "GB exterior main runs: printed D 0.95 (two levels) vs his 0.60 (16 runs, 56.5168 m)",
+     "id": "GB-SEC-EXT",
+     "m3": 5.796522,
+     "replaces": "section on the valued runs: printed D 0.95 exterior / class 0.40 and 0.30 interior vs his one section",
+     "source": "T-426",
+     "source_commit": "1f298735",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named; T-391 c3fe8ec8"
+    },
+    {
+     "_sub": true,
+     "cause": "GB interior runs printed class 30 x 40 vs his 0.60 (17 runs, 57.3969 m; 4 short runs at the 0.40 end of the unanswered D-34 pair, engine-side register E-3)",
+     "id": "GB-SEC-40",
+     "m3": -3.443815,
+     "replaces": "section on the valued runs: printed D 0.95 exterior / class 0.40 and 0.30 interior vs his one section",
+     "source": "T-426",
+     "source_commit": "1f298735",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named; T-391 c3fe8ec8"
+    },
+    {
+     "_sub": true,
+     "cause": "GB annex-arc sliver L-be6708e0 (0.10 m) valued at 0.30: no printed section (T-426 NO_PRINTED_SECTION)",
+     "id": "GB-SEC-SLIVER",
+     "m3": -0.009,
+     "owner": "T-430",
+     "replaces": "section on the valued runs: printed D 0.95 exterior / class 0.40 and 0.30 interior vs his one section",
+     "source": "T-426",
+     "source_commit": "1f298735",
+     "verdict": "UNRESOLVED"
+    },
+    {
+     "_sub": true,
+     "cause": "GB interior runs at 0.60 where engine and other side agree (4 runs, 26.44 m): 0.000 in the comparison, but two runs are wrong on both sides (engine-side register E-1 / E-2 / E-4)",
+     "id": "GB-SEC-60",
+     "m3": 0.0,
+     "replaces": "section on the valued runs: printed D 0.95 exterior / class 0.40 and 0.30 interior vs his one section",
+     "source": "T-426",
+     "source_commit": "1f298735",
+     "verdict": "AGREE",
+     "verdict_ref": "T-426 MERGED 1f298735, Verifier 2026-11-01 11:59 UTC, own read of ST p.13 titles and of 7DC+7DD, 7E7+7E8, 177+7CD#1: unloaded halves ENGINE_WRONG 0.423 (2 x 0.2115, VERIFIED, freelancer also at 0.60), loaded halves HELD D-33, D-34 lines and 177+7CD#1 HELD ranges, L-be6708e0 blank named"
+    },
+    {
+     "cause": "plan / end adjustments of the valued runs (net plan vs width x length)",
+     "m3": 1.3e-05,
+     "verdict": "AGREE"
+    },
+    {
+     "_sub": true,
+     "allowance_m": 34.5256,
+     "cause": "GB his lumps run through the necks / crossing squares the engine bills in the neck lines (19.584 m beyond the drawn net, inside the 34.526 m drawn allowance)",
+     "id": "GB-LEN-BOUNDED",
+     "m3": -3.525102,
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "used_m": 19.5839,
+     "verdict": "BOUNDED_THROUGH_SUPPORTS",
+     "verdict_ref": "T-416 MERGED b7bb914a, Verifier 2026-11-01T07:54Z, own read by handle (7DC+7DD / 7E7+7E8 7.350 less neck 0.300 exactly, F-C-T416-1): (h) through-neck ENGINE_WRONG exact 0.108000; -3.525 BOUNDED_THROUGH_SUPPORTS accepted as a bound; (f) HELD annex lines stay HELD"
+    },
+    {
+     "_sub": true,
+     "cause": "GB valued lines L-fe78ae28 / L-0e30aadb run through the founded necks 7F5 / 7ED (2 x 0.300 m x 0.30 x 0.60, exact cut)",
+     "correction_owner": "T-430",
+     "id": "GB-LEN-NECK",
+     "m3": 0.108,
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "ENGINE_WRONG",
+     "verdict_ref": "T-416 MERGED b7bb914a, Verifier 2026-11-01T07:54Z, own read by handle (7DC+7DD / 7E7+7E8 7.350 less neck 0.300 exactly, F-C-T416-1): (h) through-neck ENGINE_WRONG exact 0.108000; -3.525 BOUNDED_THROUGH_SUPPORTS accepted as a bound; (f) HELD annex lines stay HELD"
+    },
+    {
+     "_sub": true,
+     "cause": "GB HELD annex lines F8+7D4 / 137+138 / 136+7D5: length fields run through their necks (1.533 m at his section; the held part is that much smaller)",
+     "id": "GB-LEN-HELDFIELD",
+     "m3": 0.27594,
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "HELD",
+     "verdict_ref": "T-416 MERGED b7bb914a, Verifier 2026-11-01T07:54Z, own read by handle (7DC+7DD / 7E7+7E8 7.350 less neck 0.300 exactly, F-C-T416-1): (h) through-neck ENGINE_WRONG exact 0.108000; -3.525 BOUNDED_THROUGH_SUPPORTS accepted as a bound; (f) HELD annex lines stay HELD"
+    },
+    {
+     "_sub": true,
+     "cause": "GB valued lines FD+7E0 / 107+7CE / ring L-7076482d: length field beyond the net while the value is the net or inside the frame range (0.760 m; the length term is on length fields)",
+     "id": "GB-LEN-FIELD",
+     "m3": 0.136764,
+     "owner": "T-430",
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "UNRESOLVED"
+    },
+    {
+     "_sub": true,
+     "cause": "GB annex-arc sliver L-be6708e0 0.10 m beside neck 211, no drawn band",
+     "id": "GB-LEN-SLIVER",
+     "m3": 0.018,
+     "owner": "T-430",
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "UNRESOLVED"
+    },
+    {
+     "_sub": true,
+     "cause": "GB junction kept in the other band (13D+7D2) and oblique end (17E+17F)",
+     "id": "GB-LEN-SMALL",
+     "m3": -0.025002,
+     "owner": "T-430",
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "UNRESOLVED"
+    },
+    {
+     "_sub": true,
+     "cause": "GB support cuts read 1 mm long by the T-416 extractor buffer (F-C-T416-1) and rounding: the split between the engine-beyond-net and the bounded term, sum unchanged",
+     "id": "GB-LEN-BUFFER",
+     "m3": 0.00342,
+     "owner": "T-430",
+     "replaces": "length basis: his lump length over the engine's 194.289 m (inside the drawn envelope 193.758 .. 231.908 m)",
+     "source": "T-416",
+     "source_commit": "b7bb914a",
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "split": {
+    "HELD": -9.414414,
+    "TRACED": -1.064382,
+    "TRACED_of_which_BOUNDED": -3.525102,
+    "TRACED_of_which_ENGINE_WRONG": 0.108,
+    "UNEXPLAINED": 0.124182,
+    "residual_m3": -10.354614
+   }
+  },
+  "SD-STAIR": {
+   "family": "CONC.STAIR_DOME",
+   "parts": [
+    {
+     "cause": "SD-ST01-FLIGHTS: ST-01 straight flights MS1-U, MS2-L, MS2-U (waist T 16 + steps, net) traced terms (WIDTH +0.000000; LENGTH -2.016000 UNTRACED; THICKNESS_BASIS -0.063460; OWNERSHIP -0.230571)",
+     "m3": -0.294031,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-01 his flight length 5.300 = developed profile run 3.300 + rise: the rise laid as plan length under a 'slab + steps' 0.28 (MS1-U 2.000, MS2-L / MS2-U 2.016 each)",
+     "id": "ST01-RISE-IN-LENGTH",
+     "m3": -2.026752,
+     "replaces": "SD-ST01-FLIGHTS: ST-01 straight flights MS1-U, MS2-L, MS2-U (waist T 16 + steps, net) untraced term",
+     "source": "T-417",
+     "source_commit": "6b6ff9bd",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-417 MERGED 6b6ff9bd, Verifier 2026-11-01T11:10Z, own re-measure by handle (runs 3.300, lane 1.200, landings) and own arithmetic: WHO IS RIGHT ENGINE_RIGHT"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-01 his one length 5.300 on MS2-L / MS2-U whose own profile is 5.316",
+     "id": "ST01-ONE-LENGTH",
+     "m3": 0.010752,
+     "replaces": "SD-ST01-FLIGHTS: ST-01 straight flights MS1-U, MS2-L, MS2-U (waist T 16 + steps, net) untraced term",
+     "source": "T-417",
+     "source_commit": "6b6ff9bd",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-417 MERGED 6b6ff9bd, Verifier 2026-11-01T11:10Z, own re-measure by handle (runs 3.300, lane 1.200, landings) and own arithmetic: WHO IS RIGHT ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST01-MS1L: ST-01 MS1-L straight + winder treads MS1-T (GF -> +3.50) held named item",
+     "m3": -1.7808,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "SD-ST01-LANDINGS: ST-01 half landings MS1-LD (+3.50) and MS2-LD (+7.516 / +7.684, two plates) traced terms (AREA +0.162400 UNTRACED; THICKNESS_BASIS -0.134400)",
+     "m3": -0.1344,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-01 landings: his depth 1.400 = plate 1.200 + B3 'With Stair' band 0.200 owned by the beam line (2 x 1.2 x 0.2 x 0.16)",
+     "id": "ST01-LD-OWNERSHIP",
+     "m3": -0.0768,
+     "replaces": "SD-ST01-LANDINGS: ST-01 half landings MS1-LD (+3.50) and MS2-LD (+7.516 / +7.684, two plates) untraced term",
+     "source": "T-417",
+     "source_commit": "6b6ff9bd",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-417 MERGED 6b6ff9bd, Verifier 2026-11-01T11:10Z, own re-measure by handle (runs 3.300, lane 1.200, landings) and own arithmetic: WHO IS RIGHT ENGINE_RIGHT"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-01 landing MS2-LD-W drawn plate 1.15 x 1.30 x 0.16 with no unit of his",
+     "id": "ST01-LD-COUNT",
+     "m3": 0.2392,
+     "replaces": "SD-ST01-LANDINGS: ST-01 half landings MS1-LD (+3.50) and MS2-LD (+7.516 / +7.684, two plates) untraced term",
+     "source": "T-417",
+     "source_commit": "6b6ff9bd",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-417 MERGED 6b6ff9bd, Verifier 2026-11-01T11:10Z, own re-measure by handle (runs 3.300, lane 1.200, landings) and own arithmetic: WHO IS RIGHT ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST01-TURNS: ST-01 slab under the winder turn MS1-T-SLAB + turn riser MS2-TR held named item",
+     "m3": -0.336,
+     "verdict": "HELD"
+    },
+    {
+     "cause": "SD-D1-STEPS: stair-hall flight D1 steps (+0.30 -> +1.00, 4 risers) traced terms (whole)",
+     "m3": 0.100286,
+     "verdict": "ENGINE_RIGHT"
+    },
+    {
+     "cause": "SD-ST03-E1: entrance flight ST-03 E1 (+0.15 -> +1.00, 5 risers x 2.80) held named item",
+     "m3": -1.4112,
+     "verdict": "HELD"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-02 RS-LD flat landing plate T 16 vs his 'slab + steps' 0.28 (1.3525 m2 x -0.12)",
+     "id": "ST02-RS-LD-THK",
+     "m3": -0.1623,
+     "replaces": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "source": "T-415",
+     "source_commit": "8c8372a4",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-415 MERGED 8c8372a4, Verifier 2026-11-01T05:54Z, own read of ST7757 dxf.dxf by handle (treads 4.443096 m2, lane 1.250) and own arithmetic (h)"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-02 RS-S drawn 0.26187 m3 per m2 (T 16 waist x sec + R/2) vs his 0.28",
+     "id": "ST02-RS-S-THK",
+     "m3": -0.065268,
+     "replaces": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "source": "T-415",
+     "source_commit": "8c8372a4",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-415 MERGED 8c8372a4, Verifier 2026-11-01T05:54Z, own read of ST7757 dxf.dxf by handle (treads 4.443096 m2, lane 1.250) and own arithmetic (h)"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-02 RS-A drawn 0.26187 m3 per m2 vs his 0.28",
+     "id": "ST02-RS-A-THK",
+     "m3": -0.026107,
+     "replaces": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "source": "T-415",
+     "source_commit": "8c8372a4",
+     "verdict": "ENGINE_RIGHT",
+     "verdict_ref": "T-415 MERGED 8c8372a4, Verifier 2026-11-01T05:54Z, own read of ST7757 dxf.dxf by handle (treads 4.443096 m2, lane 1.250) and own arithmetic (h)"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-02 RS-C curved flight at his 0.28 over the drawn plan 4.443096 m2: engine HELD (waist t not printed, RFI-S27; AT_LEAST 0.357035)",
+     "id": "ST02-RS-C-HELD",
+     "m3": -1.244067,
+     "replaces": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "source": "T-415",
+     "source_commit": "8c8372a4",
+     "verdict": "HELD",
+     "verdict_ref": "T-415 MERGED 8c8372a4, Verifier 2026-11-01T05:54Z, own read of ST7757 dxf.dxf by handle (treads 4.443096 m2, lane 1.250) and own arithmetic (h)"
+    },
+    {
+     "_sub": true,
+     "cause": "ST-02 his 8.844404 m2 beyond the drawn 10.835596 m2 (his 16.4 m traces to no drawn length)",
+     "id": "ST02-BEYOND",
+     "m3": -2.476433,
+     "owner": "T-432",
+     "replaces": "SD-ST02: round stair ST-02: straight RS-S + corner landing RS-LD + RS-A (valued) and the curved part RS-C, its soffit, CA junction, 2CC pair (held) (whole contribution unresolved)",
+     "source": "T-415",
+     "source_commit": "8c8372a4",
+     "verdict": "UNRESOLVED"
+    }
+   ],
+   "split": {
+    "HELD": -4.772067,
+    "TRACED": -2.43542,
+    "TRACED_of_which_BOUNDED": 0.0,
+    "TRACED_of_which_ENGINE_WRONG": 0.0,
+    "UNEXPLAINED": -2.476433,
+    "residual_m3": -9.68392
+   }
+  }
+ },
+ "scenarios_gb_main_t430": {
+  "A": {
+   "after": {
+    "HELD": -10.683414,
+    "TRACED": -1.595382,
+    "TRACED_of_which_BOUNDED": -3.525102,
+    "TRACED_of_which_ENGINE_WRONG": 0.0,
+    "UNEXPLAINED": 0.124182,
+    "residual_m3": -12.154614
+   },
+   "as_is": {
+    "HELD": -9.414414,
+    "TRACED": -1.064382,
+    "TRACED_of_which_BOUNDED": -3.525102,
+    "TRACED_of_which_ENGINE_WRONG": 0.108,
+    "UNEXPLAINED": 0.124182,
+    "residual_m3": -10.354614
+   },
+   "scope": "T-426 s.6 (1) as T-426 states it (two neck lines split; -1.800 m3 on the valued side)",
+   "status": "QUEUED",
+   "t391_basis_held_term_after": -10.959354,
+   "task": "T-430"
+  },
+  "B": {
+   "after": {
+    "HELD": -12.748245,
+    "TRACED": -1.595382,
+    "TRACED_of_which_BOUNDED": -3.525102,
+    "TRACED_of_which_ENGINE_WRONG": 0.0,
+    "UNEXPLAINED": 0.124182,
+    "residual_m3": -14.219445
+   },
+   "as_is": {
+    "HELD": -9.414414,
+    "TRACED": -1.064382,
+    "TRACED_of_which_BOUNDED": -3.525102,
+    "TRACED_of_which_ENGINE_WRONG": 0.108,
+    "UNEXPLAINED": 0.124182,
+    "residual_m3": -10.354614
+   },
+   "scope": "the whole T-430 row (s.6 (1) + 177+7CD#1 range + L-be6708e0 blank + F-T426-1 downgrade); the classes of the terms already on the withdrawn lines (GB-SEC-40 share of the 4 D-34 runs, GB-SEC-60 share of 177+7CD#1, GB-SEC-SLIVER, GB-LEN-SLIVER) are not re-bound here (the other side's per-run section is not separable from his two lumps)",
+   "status": "QUEUED",
+   "task": "T-430"
+  }
+ },
+ "schema": "T428_SUMMARY_V1",
+ "totals_r3_current": {
+  "HELD": -115.460212,
+  "TRACED": 4.128223,
+  "UNEXPLAINED": -11.568269,
+  "residual_m3": -122.900258
+ },
+ "totals_r4_current": {
+  "HELD": -116.428339,
+  "TRACED": -1.387154,
+  "UNEXPLAINED": -5.084765,
+  "families": 10,
+  "families_cause_closing": 4,
+  "residual_m3": -122.900258
+ },
+ "unexplained_by_sign": {
+  "negative_m3": -5.242949,
+  "parts": 16,
+  "positive_m3": 0.158184
+ },
+ "unexplained_left": [
+  {
+   "cause": "ST-02 his 8.844404 m2 beyond the drawn 10.835596 m2 (his 16.4 m traces to no drawn length)",
+   "component": "SD-STAIR",
+   "family": "CONC.STAIR_DOME",
+   "m3": -2.476433,
+   "owner": "T-432"
+  },
+  {
+   "cause": "stair-zone panel the engine routes out of the slab family (8.3723 m2, F2)",
+   "component": "GS-SLAB",
+   "family": "CONC.GROUND",
+   "m3": -0.83723,
+   "owner": "none: designer item F2 (whether a slab runs under the curved flight foot; RFI draft)"
+  },
+  {
+   "cause": "his area beyond the whole drawn network (no drawn element)",
+   "component": "GS-SLAB",
+   "family": "CONC.GROUND",
+   "m3": -0.63864,
+   "owner": "none: a bare number with no drawn element"
+  },
+  {
+   "cause": "0.20 m of his wall height above the drawn rim + base, traced to no drawn level (T-385 r2, unchanged)",
+   "component": "PL-WALLS",
+   "family": "CONC.POOL",
+   "m3": -0.471346,
+   "owner": "none"
+  },
+  {
+   "cause": "length beyond the drawn support allowance, not traced",
+   "component": "BM-1F",
+   "family": "CONC.BEAM",
+   "m3": -0.153516,
+   "owner": "none"
+  },
+  {
+   "cause": "length: his run 1.21 m longer than the free drawn run (not traced)",
+   "component": "BW-BAND",
+   "family": "CONC.BOUNDARY_BELOW_NG",
+   "m3": -0.1452,
+   "owner": "none"
+  },
+  {
+   "cause": "C9 section: schedule vs drawn (designer item)",
+   "component": "CL-1F",
+   "family": "CONC.COLUMN",
+   "m3": -0.138,
+   "owner": "designer item (C9 schedule vs drawn section)"
+  },
+  {
+   "cause": "length beyond the drawn support allowance, not traced",
+   "component": "BM-GF",
+   "family": "CONC.BEAM",
+   "m3": -0.126242,
+   "owner": "none"
+  },
+  {
+   "cause": "length beyond the drawn support allowance, not traced",
+   "component": "BM-2F",
+   "family": "CONC.BEAM",
+   "m3": -0.08724,
+   "owner": "none"
+  },
+  {
+   "cause": "engine vs own on the valued faces (member overlap, court-side and lift-side panels)",
+   "component": "GS-SLAB",
+   "family": "CONC.GROUND",
+   "m3": -0.0847,
+   "owner": "none"
+  },
+  {
+   "cause": "length: 0.28 m not traced to a drawn run",
+   "component": "GB-BOUNDARY",
+   "family": "CONC.BOUNDARY_BELOW_NG",
+   "m3": -0.0504,
+   "owner": "none"
+  },
+  {
+   "cause": "GB junction kept in the other band (13D+7D2) and oblique end (17E+17F)",
+   "component": "GB-MAIN",
+   "family": "CONC.GROUND",
+   "m3": -0.025002,
+   "owner": "T-430"
+  },
+  {
+   "cause": "GB annex-arc sliver L-be6708e0 (0.10 m) valued at 0.30: no printed section (T-426 NO_PRINTED_SECTION)",
+   "component": "GB-MAIN",
+   "family": "CONC.GROUND",
+   "m3": -0.009,
+   "owner": "T-430"
+  },
+  {
+   "cause": "GB support cuts read 1 mm long by the T-416 extractor buffer (F-C-T416-1) and rounding: the split between the engine-beyond-net and the bounded term, sum unchanged",
+   "component": "GB-MAIN",
+   "family": "CONC.GROUND",
+   "m3": 0.00342,
+   "owner": "T-430"
+  },
+  {
+   "cause": "GB annex-arc sliver L-be6708e0 0.10 m beside neck 211, no drawn band",
+   "component": "GB-MAIN",
+   "family": "CONC.GROUND",
+   "m3": 0.018,
+   "owner": "T-430"
+  },
+  {
+   "cause": "GB valued lines FD+7E0 / 107+7CE / ring L-7076482d: length field beyond the net while the value is the net or inside the frame range (0.760 m; the length term is on length fields)",
+   "component": "GB-MAIN",
+   "family": "CONC.GROUND",
+   "m3": 0.136764,
+   "owner": "T-430"
+  }
+ ]
+}
