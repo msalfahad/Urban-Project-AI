@@ -1,0 +1,3936 @@
+{
+ "bands": [
+  {
+   "dir": "C",
+   "drawn_m": 1.8064,
+   "end_columns": [],
+   "end_support_m": null,
+   "faces": [
+    "139",
+    "13A"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.8064,
+     "net_with_end_faces_m": 1.8064
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.8064,
+     "net_with_end_faces_m": 1.8064
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.8064,
+     "net_with_end_faces_m": 1.8064
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.8064,
+     "net_with_end_faces_m": 1.8064
+    }
+   },
+   "id": "ARC:139+13A",
+   "junctions_and_rings_m": 0.0,
+   "r_centre_m": 1.15,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "sweep_deg": 90.0,
+   "width_m": 0.3
+  },
+  {
+   "dir": "C",
+   "drawn_m": 6.2866,
+   "end_columns": [],
+   "end_support_m": null,
+   "faces": [
+    "157",
+    "158"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 6.259,
+       "at_end": true,
+       "b_m": 6.2866,
+       "handle": "17CC",
+       "m": 0.028
+      }
+     ],
+     "columns_only_m": 0.0276,
+     "net_m": 6.259,
+     "net_with_end_faces_m": 6.259
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 6.259,
+       "at_end": true,
+       "b_m": 6.2866,
+       "handle": "17C5",
+       "m": 0.028
+      },
+      {
+       "a_m": 2.7919,
+       "at_end": false,
+       "b_m": 3.0931,
+       "handle": "180A",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.3288,
+     "net_m": 5.9578,
+     "net_with_end_faces_m": 5.9578
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 2.7919,
+       "at_end": false,
+       "b_m": 3.0931,
+       "handle": "17BA",
+       "m": 0.301
+      },
+      {
+       "a_m": 6.1568,
+       "at_end": true,
+       "b_m": 6.2866,
+       "handle": "17BD",
+       "m": 0.13
+      }
+     ],
+     "columns_only_m": 0.431,
+     "net_m": 5.8556,
+     "net_with_end_faces_m": 5.8556
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 6.2866,
+     "net_with_end_faces_m": 6.2866
+    }
+   },
+   "id": "ARC:157+158",
+   "junctions_and_rings_m": 0.0,
+   "r_centre_m": 2.4,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "sweep_deg": 150.086,
+   "width_m": 0.3
+  },
+  {
+   "dir": "O",
+   "drawn_m": 2.4668,
+   "end_columns": [],
+   "end_support_m": null,
+   "faces": [
+    "17E",
+    "17F"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4668,
+     "net_with_end_faces_m": 2.4668
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4668,
+     "net_with_end_faces_m": 2.4668
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4668,
+     "net_with_end_faces_m": 2.4668
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4668,
+     "net_with_end_faces_m": 2.4668
+    }
+   },
+   "id": "17E+17F",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "O",
+   "drawn_m": 0.789,
+   "end_columns": [],
+   "end_support_m": null,
+   "faces": [
+    "180",
+    "181"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 0.789,
+     "net_with_end_faces_m": 0.789
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 0.789,
+     "net_with_end_faces_m": 0.789
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 0.789,
+     "net_with_end_faces_m": 0.789
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 0.789,
+     "net_with_end_faces_m": 0.789
+    }
+   },
+   "id": "180+181",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "O",
+   "drawn_m": 2.0732,
+   "end_columns": [],
+   "end_support_m": null,
+   "faces": [
+    "182",
+    "183"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.0732,
+     "net_with_end_faces_m": 2.0732
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.0732,
+     "net_with_end_faces_m": 2.0732
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.0732,
+     "net_with_end_faces_m": 2.0732
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.0732,
+     "net_with_end_faces_m": 2.0732
+    }
+   },
+   "id": "182+183",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 1.0,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "238",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": null
+     }
+    },
+    {
+     "end": 1,
+     "handle": "1FC",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "THROUGH"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "114",
+    "115"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.0,
+     "net_with_end_faces_m": 1.0
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.0,
+     "net_with_end_faces_m": 1.0
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.0,
+     "net_with_end_faces_m": 1.0
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.0,
+     "net_with_end_faces_m": 1.1
+    }
+   },
+   "id": "114+115",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 3.225,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "THROUGH"
+    }
+   ],
+   "faces": [
+    "114",
+    "7DF"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 2.3245,
+       "at_end": true,
+       "b_m": 3.225,
+       "handle": "873",
+       "m": 0.901
+      }
+     ],
+     "columns_only_m": 0.9005,
+     "net_m": 2.3245,
+     "net_with_end_faces_m": 2.3245
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 2.3245,
+       "at_end": true,
+       "b_m": 3.225,
+       "handle": "10D0",
+       "m": 0.901
+      }
+     ],
+     "columns_only_m": 0.9005,
+     "net_m": 2.3245,
+     "net_with_end_faces_m": 2.3245
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 2.3245,
+       "at_end": true,
+       "b_m": 3.225,
+       "handle": "238",
+       "m": 0.9
+      }
+     ],
+     "columns_only_m": 0.9005,
+     "net_m": 2.3245,
+     "net_with_end_faces_m": 2.3245
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 2.8245,
+       "at_end": false,
+       "b_m": 3.0255,
+       "handle": "31B",
+       "m": 0.201
+      },
+      {
+       "a_m": 2.3245,
+       "at_end": true,
+       "b_m": 3.225,
+       "handle": "36E",
+       "m": 0.901
+      }
+     ],
+     "columns_only_m": 0.9005,
+     "net_m": 2.3245,
+     "net_with_end_faces_m": 2.3245
+    }
+   },
+   "id": "114+7DF",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 3.1,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.608,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "137",
+    "138"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.3005,
+       "handle": "844",
+       "m": 0.3
+      },
+      {
+       "a_m": 2.5995,
+       "at_end": true,
+       "b_m": 3.1,
+       "handle": "856",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.801,
+     "net_m": 2.299,
+     "net_with_end_faces_m": 2.299
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.3005,
+       "handle": "10A8",
+       "m": 0.3
+      },
+      {
+       "a_m": 2.5995,
+       "at_end": true,
+       "b_m": 3.1,
+       "handle": "10B4",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.801,
+     "net_m": 2.299,
+     "net_with_end_faces_m": 2.299
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.3005,
+       "handle": "204",
+       "m": 0.301
+      },
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.1,
+       "handle": "214",
+       "m": 0.401
+      }
+     ],
+     "columns_only_m": 0.701,
+     "net_m": 2.399,
+     "net_with_end_faces_m": 2.399
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.2005,
+       "handle": "34A",
+       "m": 0.201
+      },
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.1,
+       "handle": "356",
+       "m": 0.4
+      }
+     ],
+     "columns_only_m": 0.601,
+     "net_m": 2.499,
+     "net_with_end_faces_m": 2.499
+    }
+   },
+   "id": "137+138",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 0.0,
+      "at_end": true,
+      "b_m": 0.3005,
+      "band": "136+7D5",
+      "m": 0.301,
+      "owned_here": true
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 1.45,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "13C",
+    "7D9"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.45,
+     "net_with_end_faces_m": 1.45
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.45,
+     "net_with_end_faces_m": 1.45
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.45,
+     "net_with_end_faces_m": 1.45
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.45,
+     "net_with_end_faces_m": 1.45
+    }
+   },
+   "id": "13C+7D9",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 6.4,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "223",
+     "net_shift_m": {
+      "CAP": -0.0,
+      "FP": -0.0,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "13D",
+    "7D2"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.0995,
+       "at_end": false,
+       "b_m": 0.6005,
+       "handle": "853",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.501,
+     "net_m": 5.899,
+     "net_with_end_faces_m": 5.899
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.0995,
+       "at_end": false,
+       "b_m": 0.6005,
+       "handle": "10B1",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.501,
+     "net_m": 5.899,
+     "net_with_end_faces_m": 5.899
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.0995,
+       "at_end": false,
+       "b_m": 0.6005,
+       "handle": "211",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.501,
+     "net_m": 5.899,
+     "net_with_end_faces_m": 5.899
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 0.0995,
+       "at_end": false,
+       "b_m": 0.6005,
+       "handle": "353",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.501,
+     "net_m": 5.899,
+     "net_with_end_faces_m": 5.949
+    }
+   },
+   "id": "13D+7D2",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 0.0,
+      "at_end": true,
+      "b_m": 0.3005,
+      "band": "13E+7D6",
+      "m": 0.3,
+      "owned_here": true
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 2.45,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "22C",
+     "net_shift_m": {
+      "CAP": -0.0,
+      "FP": -0.0,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "142",
+    "7D8"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.45,
+     "net_with_end_faces_m": 2.45
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.45,
+     "net_with_end_faces_m": 2.45
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.45,
+     "net_with_end_faces_m": 2.45
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.45,
+     "net_with_end_faces_m": 2.5
+    }
+   },
+   "id": "142+7D8",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 3.0,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "228",
+     "net_shift_m": {
+      "CAP": -0.0,
+      "FP": -0.0,
+      "GFRS": 0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.001,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.299,
+     "ring": false,
+     "stop": "THROUGH"
+    }
+   ],
+   "faces": [
+    "145",
+    "7CA"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 1.1005,
+       "handle": "85E",
+       "m": 1.1
+      }
+     ],
+     "columns_only_m": 1.1005,
+     "net_m": 1.8995,
+     "net_with_end_faces_m": 1.8995
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 1.1005,
+       "handle": "10BA",
+       "m": 1.1
+      }
+     ],
+     "columns_only_m": 1.1005,
+     "net_m": 1.8995,
+     "net_with_end_faces_m": 1.8995
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 1.1005,
+       "handle": "220",
+       "m": 1.1
+      }
+     ],
+     "columns_only_m": 1.1005,
+     "net_m": 1.8995,
+     "net_with_end_faces_m": 1.8995
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 1.1005,
+       "handle": "35C",
+       "m": 1.101
+      }
+     ],
+     "columns_only_m": 1.1005,
+     "net_m": 1.8995,
+     "net_with_end_faces_m": 1.8995
+    }
+   },
+   "id": "145+7CA",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 0.0,
+      "at_end": true,
+      "b_m": 0.3005,
+      "band": "10A+7C9",
+      "m": 0.3,
+      "owned_here": true
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 2.4,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "1F2",
+     "net_shift_m": {
+      "CAP": -0.0,
+      "FP": -0.0,
+      "GFRS": 0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 2.25,
+     "ring": true,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "15C",
+    "7CC"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4,
+     "net_with_end_faces_m": 2.4
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4,
+     "net_with_end_faces_m": 2.4
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4,
+     "net_with_end_faces_m": 2.4
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.4,
+     "net_with_end_faces_m": 2.4
+    }
+   },
+   "id": "15C+7CC",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 1.25,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "16F",
+    "7FF"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.25,
+     "net_with_end_faces_m": 1.25
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.25,
+     "net_with_end_faces_m": 1.25
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.25,
+     "net_with_end_faces_m": 1.25
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.25,
+     "net_with_end_faces_m": 1.25
+    }
+   },
+   "id": "16F+7FF",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 13.77,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "1DC",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "170",
+    "7C3"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 2.3995,
+       "at_end": false,
+       "b_m": 2.7005,
+       "handle": "821",
+       "m": 0.301
+      },
+      {
+       "a_m": 6.0695,
+       "at_end": false,
+       "b_m": 6.6705,
+       "handle": "826",
+       "m": 0.601
+      },
+      {
+       "a_m": 10.0195,
+       "at_end": false,
+       "b_m": 10.5205,
+       "handle": "87C",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.403,
+     "net_m": 12.367,
+     "net_with_end_faces_m": 12.367
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 2.3995,
+       "at_end": false,
+       "b_m": 2.7005,
+       "handle": "1087",
+       "m": 0.301
+      },
+      {
+       "a_m": 6.0695,
+       "at_end": false,
+       "b_m": 6.6705,
+       "handle": "108A",
+       "m": 0.601
+      },
+      {
+       "a_m": 10.0195,
+       "at_end": false,
+       "b_m": 10.5205,
+       "handle": "10D7",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.403,
+     "net_m": 12.367,
+     "net_with_end_faces_m": 12.367
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 2.3995,
+       "at_end": false,
+       "b_m": 2.7005,
+       "handle": "1E0",
+       "m": 0.301
+      },
+      {
+       "a_m": 6.0695,
+       "at_end": false,
+       "b_m": 6.6705,
+       "handle": "1E4",
+       "m": 0.601
+      },
+      {
+       "a_m": 10.0195,
+       "at_end": false,
+       "b_m": 10.5205,
+       "handle": "241",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.403,
+     "net_m": 12.367,
+     "net_with_end_faces_m": 12.367
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 2.3995,
+       "at_end": false,
+       "b_m": 2.6005,
+       "handle": "32F",
+       "m": 0.201
+      },
+      {
+       "a_m": 6.0695,
+       "at_end": false,
+       "b_m": 6.6705,
+       "handle": "332",
+       "m": 0.601
+      },
+      {
+       "a_m": 10.0195,
+       "at_end": false,
+       "b_m": 10.5205,
+       "handle": "377",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.303,
+     "net_m": 12.467,
+     "net_with_end_faces_m": 12.567
+    }
+   },
+   "id": "170+7C3",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 7.5567,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 2.2,
+     "ring": true,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "177",
+    "7CD"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 5.0195,
+       "at_end": false,
+       "b_m": 6.0205,
+       "handle": "880",
+       "m": 1.001
+      }
+     ],
+     "columns_only_m": 1.001,
+     "net_m": 6.5557,
+     "net_with_end_faces_m": 6.5557
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 5.0195,
+       "at_end": false,
+       "b_m": 6.0205,
+       "handle": "10DA",
+       "m": 1.001
+      }
+     ],
+     "columns_only_m": 1.001,
+     "net_m": 6.5557,
+     "net_with_end_faces_m": 6.5557
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 5.0195,
+       "at_end": false,
+       "b_m": 6.0205,
+       "handle": "245",
+       "m": 1.001
+      }
+     ],
+     "columns_only_m": 1.001,
+     "net_m": 6.5557,
+     "net_with_end_faces_m": 6.5557
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 5.4195,
+       "at_end": false,
+       "b_m": 5.6205,
+       "handle": "322",
+       "m": 0.201
+      },
+      {
+       "a_m": 5.0195,
+       "at_end": false,
+       "b_m": 6.0205,
+       "handle": "37A",
+       "m": 1.001
+      }
+     ],
+     "columns_only_m": 1.001,
+     "net_m": 6.5557,
+     "net_with_end_faces_m": 6.5557
+    }
+   },
+   "id": "177+7CD",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 2.1,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "180D",
+    "180E"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.1,
+     "net_with_end_faces_m": 2.1
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.1,
+     "net_with_end_faces_m": 2.1
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.1,
+     "net_with_end_faces_m": 2.1
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.1,
+     "net_with_end_faces_m": 2.1
+    }
+   },
+   "id": "180D+180E",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 1.3,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "1E8",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.5,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "1811",
+    "1812"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.3,
+     "net_with_end_faces_m": 1.3
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.3,
+     "net_with_end_faces_m": 1.3
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.3,
+     "net_with_end_faces_m": 1.3
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.3,
+     "net_with_end_faces_m": 1.3
+    }
+   },
+   "id": "1811+1812",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 12.07,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "184",
+    "7CF"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 6.4695,
+       "at_end": false,
+       "b_m": 7.0705,
+       "handle": "878",
+       "m": 0.601
+      },
+      {
+       "a_m": 3.0195,
+       "at_end": false,
+       "b_m": 3.8205,
+       "handle": "886",
+       "m": 0.801
+      }
+     ],
+     "columns_only_m": 1.402,
+     "net_m": 10.668,
+     "net_with_end_faces_m": 10.668
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 6.4695,
+       "at_end": false,
+       "b_m": 7.0705,
+       "handle": "10D3",
+       "m": 0.601
+      },
+      {
+       "a_m": 3.0195,
+       "at_end": false,
+       "b_m": 3.8205,
+       "handle": "10E0",
+       "m": 0.801
+      }
+     ],
+     "columns_only_m": 1.402,
+     "net_m": 10.668,
+     "net_with_end_faces_m": 10.668
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 6.4695,
+       "at_end": false,
+       "b_m": 7.0705,
+       "handle": "23C",
+       "m": 0.601
+      },
+      {
+       "a_m": 3.0195,
+       "at_end": false,
+       "b_m": 3.8205,
+       "handle": "24D",
+       "m": 0.801
+      }
+     ],
+     "columns_only_m": 1.402,
+     "net_m": 10.668,
+     "net_with_end_faces_m": 10.668
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 6.4695,
+       "at_end": false,
+       "b_m": 7.0705,
+       "handle": "374",
+       "m": 0.601
+      },
+      {
+       "a_m": 3.0195,
+       "at_end": false,
+       "b_m": 3.8205,
+       "handle": "380",
+       "m": 0.801
+      },
+      {
+       "a_m": 10.3695,
+       "at_end": false,
+       "b_m": 10.8705,
+       "handle": "386",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.903,
+     "net_m": 10.167,
+     "net_with_end_faces_m": 10.167
+    }
+   },
+   "id": "184+7CF",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 1.4,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "185",
+    "7C7"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.8005,
+       "handle": "86C",
+       "m": 0.8
+      }
+     ],
+     "columns_only_m": 0.8005,
+     "net_m": 0.5995,
+     "net_with_end_faces_m": 0.5995
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.8005,
+       "handle": "10C8",
+       "m": 0.8
+      }
+     ],
+     "columns_only_m": 0.8005,
+     "net_m": 0.5995,
+     "net_with_end_faces_m": 0.5995
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.8005,
+       "handle": "230",
+       "m": 0.801
+      }
+     ],
+     "columns_only_m": 0.8005,
+     "net_m": 0.5995,
+     "net_with_end_faces_m": 0.5995
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.8005,
+       "handle": "368",
+       "m": 0.801
+      }
+     ],
+     "columns_only_m": 0.8005,
+     "net_m": 0.5995,
+     "net_with_end_faces_m": 0.5995
+    }
+   },
+   "id": "185+7C7",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 6.72,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "228",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.299,
+     "ring": false,
+     "stop": "THROUGH"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7E1",
+    "7E2"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 6.72,
+     "net_with_end_faces_m": 6.72
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 6.72,
+     "net_with_end_faces_m": 6.72
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 6.72,
+     "net_with_end_faces_m": 6.72
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 6.72,
+     "net_with_end_faces_m": 6.77
+    }
+   },
+   "id": "7E1+7E2",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 4.225,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "7F5",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": -0.0,
+      "GFRS": null
+     }
+    },
+    {
+     "end": 1,
+     "handle": "7ED",
+     "net_shift_m": {
+      "CAP": -0.0,
+      "FP": 0.0,
+      "GFRS": null
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7E9",
+    "7EA"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.225,
+     "net_with_end_faces_m": 4.225
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.225,
+     "net_with_end_faces_m": 4.225
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.225,
+     "net_with_end_faces_m": 4.225
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.225,
+     "net_with_end_faces_m": 4.225
+    }
+   },
+   "id": "7E9+7EA",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 10.13,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "207",
+     "net_shift_m": {
+      "CAP": -0.1,
+      "FP": -0.1,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.371,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7D4",
+    "F8"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.1305,
+       "handle": "849",
+       "m": 0.13
+      },
+      {
+       "a_m": 5.4795,
+       "at_end": false,
+       "b_m": 5.9805,
+       "handle": "84C",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.6315,
+     "net_m": 9.4985,
+     "net_with_end_faces_m": 9.3985
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.1305,
+       "handle": "10AB",
+       "m": 0.13
+      },
+      {
+       "a_m": 5.4795,
+       "at_end": false,
+       "b_m": 5.9805,
+       "handle": "10AE",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.6315,
+     "net_m": 9.4985,
+     "net_with_end_faces_m": 9.3985
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.0305,
+       "handle": "207",
+       "m": 0.031
+      },
+      {
+       "a_m": 5.4795,
+       "at_end": false,
+       "b_m": 5.8805,
+       "handle": "20B",
+       "m": 0.401
+      }
+     ],
+     "columns_only_m": 0.4315,
+     "net_m": 9.6985,
+     "net_with_end_faces_m": 9.6985
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.0305,
+       "handle": "34D",
+       "m": 0.031
+      },
+      {
+       "a_m": 5.4795,
+       "at_end": false,
+       "b_m": 5.8805,
+       "handle": "350",
+       "m": 0.401
+      }
+     ],
+     "columns_only_m": 0.4315,
+     "net_m": 9.6985,
+     "net_with_end_faces_m": 9.6985
+    }
+   },
+   "id": "F8+7D4",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "X",
+   "drawn_m": 18.87,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "218",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.1,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.5,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7D0",
+    "FC"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 18.5695,
+       "at_end": true,
+       "b_m": 18.87,
+       "handle": "840",
+       "m": 0.301
+      },
+      {
+       "a_m": 2.9745,
+       "at_end": false,
+       "b_m": 4.0755,
+       "handle": "883",
+       "m": 1.101
+      },
+      {
+       "a_m": 9.8195,
+       "at_end": false,
+       "b_m": 10.3205,
+       "handle": "88A",
+       "m": 0.501
+      },
+      {
+       "a_m": 16.6695,
+       "at_end": false,
+       "b_m": 17.3705,
+       "handle": "88D",
+       "m": 0.701
+      }
+     ],
+     "columns_only_m": 2.6035,
+     "net_m": 16.2665,
+     "net_with_end_faces_m": 16.2665
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 18.5695,
+       "at_end": true,
+       "b_m": 18.87,
+       "handle": "10A4",
+       "m": 0.301
+      },
+      {
+       "a_m": 2.9745,
+       "at_end": false,
+       "b_m": 4.0755,
+       "handle": "10DD",
+       "m": 1.101
+      },
+      {
+       "a_m": 9.8195,
+       "at_end": false,
+       "b_m": 10.3205,
+       "handle": "10E4",
+       "m": 0.501
+      },
+      {
+       "a_m": 16.6695,
+       "at_end": false,
+       "b_m": 17.3705,
+       "handle": "10E8",
+       "m": 0.701
+      }
+     ],
+     "columns_only_m": 2.6035,
+     "net_m": 16.2665,
+     "net_with_end_faces_m": 16.3665
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 18.5695,
+       "at_end": true,
+       "b_m": 18.87,
+       "handle": "200",
+       "m": 0.301
+      },
+      {
+       "a_m": 2.9745,
+       "at_end": false,
+       "b_m": 4.0755,
+       "handle": "249",
+       "m": 1.101
+      },
+      {
+       "a_m": 9.8195,
+       "at_end": false,
+       "b_m": 10.3205,
+       "handle": "251",
+       "m": 0.501
+      },
+      {
+       "a_m": 16.6695,
+       "at_end": false,
+       "b_m": 17.3705,
+       "handle": "255",
+       "m": 0.701
+      }
+     ],
+     "columns_only_m": 2.6035,
+     "net_m": 16.2665,
+     "net_with_end_faces_m": 16.2665
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 18.6695,
+       "at_end": true,
+       "b_m": 18.87,
+       "handle": "347",
+       "m": 0.201
+      },
+      {
+       "a_m": 16.6695,
+       "at_end": false,
+       "b_m": 17.3705,
+       "handle": "371",
+       "m": 0.701
+      },
+      {
+       "a_m": 2.9745,
+       "at_end": false,
+       "b_m": 4.0755,
+       "handle": "37D",
+       "m": 1.101
+      },
+      {
+       "a_m": 9.8195,
+       "at_end": false,
+       "b_m": 10.3205,
+       "handle": "383",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 2.5035,
+     "net_m": 16.3665,
+     "net_with_end_faces_m": 16.4665
+    }
+   },
+   "id": "FC+7D0",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 18.5695,
+      "at_end": true,
+      "b_m": 18.87,
+      "band": "FD+7E0",
+      "m": 0.3,
+      "owned_here": true
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 0.39,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "238",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": -0.0,
+      "GFRS": null
+     }
+    },
+    {
+     "end": 1,
+     "handle": "17BD",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": null
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.296,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "107",
+    "7CE"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 0.3634,
+       "at_end": true,
+       "b_m": 0.39,
+       "handle": "17CC",
+       "m": 0.027
+      }
+     ],
+     "columns_only_m": 0.0266,
+     "net_m": 0.3634,
+     "net_with_end_faces_m": 0.3634
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 0.3634,
+       "at_end": true,
+       "b_m": 0.39,
+       "handle": "17C5",
+       "m": 0.027
+      }
+     ],
+     "columns_only_m": 0.0266,
+     "net_m": 0.3634,
+     "net_with_end_faces_m": 0.3634
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 0.3634,
+       "at_end": true,
+       "b_m": 0.39,
+       "handle": "17BD",
+       "m": 0.027
+      }
+     ],
+     "columns_only_m": 0.0266,
+     "net_m": 0.3634,
+     "net_with_end_faces_m": 0.3634
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 0.39,
+     "net_with_end_faces_m": 0.39
+    }
+   },
+   "id": "107+7CE",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 12.9,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "1DC",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "109",
+    "7CB"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 12.6995,
+       "at_end": true,
+       "b_m": 12.9,
+       "handle": "817",
+       "m": 0.2
+      },
+      {
+       "a_m": 4.3995,
+       "at_end": false,
+       "b_m": 5.1005,
+       "handle": "865",
+       "m": 0.701
+      },
+      {
+       "a_m": 9.4995,
+       "at_end": false,
+       "b_m": 10.0005,
+       "handle": "870",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.4025,
+     "net_m": 11.4975,
+     "net_with_end_faces_m": 11.4975
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 12.6995,
+       "at_end": true,
+       "b_m": 12.9,
+       "handle": "1084",
+       "m": 0.2
+      },
+      {
+       "a_m": 4.3995,
+       "at_end": false,
+       "b_m": 5.1005,
+       "handle": "10C2",
+       "m": 0.701
+      },
+      {
+       "a_m": 9.4995,
+       "at_end": false,
+       "b_m": 10.0005,
+       "handle": "10CC",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.4025,
+     "net_m": 11.4975,
+     "net_with_end_faces_m": 11.4975
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 12.6995,
+       "at_end": true,
+       "b_m": 12.9,
+       "handle": "1DC",
+       "m": 0.2
+      },
+      {
+       "a_m": 4.3995,
+       "at_end": false,
+       "b_m": 5.1005,
+       "handle": "228",
+       "m": 0.701
+      },
+      {
+       "a_m": 9.4995,
+       "at_end": false,
+       "b_m": 10.0005,
+       "handle": "234",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.4025,
+     "net_m": 11.4975,
+     "net_with_end_faces_m": 11.4975
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 1.1995,
+       "at_end": false,
+       "b_m": 1.4005,
+       "handle": "329",
+       "m": 0.201
+      },
+      {
+       "a_m": 12.6995,
+       "at_end": true,
+       "b_m": 12.9,
+       "handle": "32C",
+       "m": 0.201
+      },
+      {
+       "a_m": 4.3995,
+       "at_end": false,
+       "b_m": 5.1005,
+       "handle": "362",
+       "m": 0.701
+      },
+      {
+       "a_m": 9.4995,
+       "at_end": false,
+       "b_m": 10.0005,
+       "handle": "36B",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 1.6035,
+     "net_m": 11.2965,
+     "net_with_end_faces_m": 11.2965
+    }
+   },
+   "id": "109+7CB",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 4.6,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "218",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "10A",
+    "7C9"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "85E",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 4.2995,
+     "net_with_end_faces_m": 4.2995
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "10BA",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 4.2995,
+     "net_with_end_faces_m": 4.2995
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "220",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 4.2995,
+     "net_with_end_faces_m": 4.2995
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 4.3495,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "35C",
+       "m": 0.251
+      }
+     ],
+     "columns_only_m": 0.2505,
+     "net_m": 4.2995,
+     "net_with_end_faces_m": 4.3995
+    }
+   },
+   "id": "10A+7C9",
+   "junctions_and_rings_m": 0.3005,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 4.2995,
+      "at_end": true,
+      "b_m": 4.6,
+      "band": "145+7CA",
+      "m": 0.3,
+      "owned_here": false
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 4.6,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "223",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "10B",
+    "7D1"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "862",
+       "m": 0.3
+      },
+      {
+       "a_m": 1.4995,
+       "at_end": false,
+       "b_m": 2.0005,
+       "handle": "868",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.8015,
+     "net_m": 3.7985,
+     "net_with_end_faces_m": 3.7985
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "10BD",
+       "m": 0.3
+      },
+      {
+       "a_m": 1.4995,
+       "at_end": false,
+       "b_m": 2.0005,
+       "handle": "10C5",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.8015,
+     "net_m": 3.7985,
+     "net_with_end_faces_m": 3.7985
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "223",
+       "m": 0.3
+      },
+      {
+       "a_m": 1.4995,
+       "at_end": false,
+       "b_m": 2.0005,
+       "handle": "22C",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.8015,
+     "net_m": 3.7985,
+     "net_with_end_faces_m": 3.7985
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": true,
+       "b_m": 4.6,
+       "handle": "35F",
+       "m": 0.301
+      },
+      {
+       "a_m": 1.4995,
+       "at_end": false,
+       "b_m": 2.0005,
+       "handle": "365",
+       "m": 0.501
+      }
+     ],
+     "columns_only_m": 0.8015,
+     "net_m": 3.7985,
+     "net_with_end_faces_m": 3.7985
+    }
+   },
+   "id": "10B+7D1",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 6.4,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "207",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.001,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "136",
+    "7D5"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 5.8995,
+       "at_end": true,
+       "b_m": 6.4,
+       "handle": "844",
+       "m": 0.5
+      }
+     ],
+     "columns_only_m": 0.5005,
+     "net_m": 5.8995,
+     "net_with_end_faces_m": 5.8995
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 5.8995,
+       "at_end": true,
+       "b_m": 6.4,
+       "handle": "10A8",
+       "m": 0.5
+      }
+     ],
+     "columns_only_m": 0.5005,
+     "net_m": 5.8995,
+     "net_with_end_faces_m": 5.8995
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 5.9995,
+       "at_end": true,
+       "b_m": 6.4,
+       "handle": "204",
+       "m": 0.401
+      }
+     ],
+     "columns_only_m": 0.4005,
+     "net_m": 5.9995,
+     "net_with_end_faces_m": 5.9995
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 5.9995,
+       "at_end": true,
+       "b_m": 6.4,
+       "handle": "34A",
+       "m": 0.401
+      }
+     ],
+     "columns_only_m": 0.4005,
+     "net_m": 5.9995,
+     "net_with_end_faces_m": 6.0995
+    }
+   },
+   "id": "136+7D5",
+   "junctions_and_rings_m": 0.3005,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 6.0995,
+      "at_end": true,
+      "b_m": 6.4,
+      "band": "137+138",
+      "m": 0.3,
+      "owned_here": false
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 5.1,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.608,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "13E",
+    "7D6"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": false,
+       "b_m": 4.6005,
+       "handle": "853",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 4.799,
+     "net_with_end_faces_m": 4.799
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": false,
+       "b_m": 4.6005,
+       "handle": "10B1",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 4.799,
+     "net_with_end_faces_m": 4.799
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 4.2995,
+       "at_end": false,
+       "b_m": 4.6005,
+       "handle": "211",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 4.799,
+     "net_with_end_faces_m": 4.799
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 4.3495,
+       "at_end": false,
+       "b_m": 4.6005,
+       "handle": "353",
+       "m": 0.251
+      }
+     ],
+     "columns_only_m": 0.251,
+     "net_m": 4.799,
+     "net_with_end_faces_m": 4.799
+    }
+   },
+   "id": "13E+7D6",
+   "junctions_and_rings_m": 0.301,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 4.2995,
+      "at_end": false,
+      "b_m": 4.6005,
+      "band": "13D+7D2",
+      "m": 0.301,
+      "owned_here": false
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 4.3,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "20B",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.1
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "13F",
+    "7D3"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.4
+    }
+   },
+   "id": "13F+7D3",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 4.3,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "140",
+    "7D7"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.3,
+     "net_with_end_faces_m": 4.3
+    }
+   },
+   "id": "140+7D7",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 1.2,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "141",
+    "7DA"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    }
+   },
+   "id": "141+7DA",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 2.9,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 2.2,
+     "ring": true,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "15D",
+    "7C8"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.9,
+     "net_with_end_faces_m": 2.9
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.9,
+     "net_with_end_faces_m": 2.9
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.9,
+     "net_with_end_faces_m": 2.9
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 2.9,
+     "net_with_end_faces_m": 2.9
+    }
+   },
+   "id": "15D+7C8",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 3.0,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "1F5",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.0
+     }
+    },
+    {
+     "end": 1,
+     "handle": "1E0",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 2.201,
+     "ring": true,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.201,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "15E",
+    "15F"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.0,
+       "handle": "821",
+       "m": 0.3
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 2.6995,
+     "net_with_end_faces_m": 2.6995
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.0,
+       "handle": "1087",
+       "m": 0.3
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 2.6995,
+     "net_with_end_faces_m": 2.6995
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.0,
+       "handle": "1E0",
+       "m": 0.3
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 2.6995,
+     "net_with_end_faces_m": 2.6995
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 2.6995,
+       "at_end": true,
+       "b_m": 3.0,
+       "handle": "32F",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.3005,
+     "net_m": 2.6995,
+     "net_with_end_faces_m": 2.6995
+    }
+   },
+   "id": "15E+15F",
+   "junctions_and_rings_m": 0.1005,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 2.8995,
+      "at_end": true,
+      "b_m": 3.0,
+      "band": "170+7C3",
+      "m": 0.1,
+      "owned_here": false
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 3.75,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "175",
+    "7DE"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    }
+   },
+   "id": "175+7DE",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 3.75,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "1E4",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "176",
+    "7E6"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.75
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.75,
+     "net_with_end_faces_m": 3.8
+    }
+   },
+   "id": "176+7E6",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 3.8,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "230",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "178",
+    "7DB"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.8,
+     "net_with_end_faces_m": 3.8
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.8,
+     "net_with_end_faces_m": 3.8
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.8,
+     "net_with_end_faces_m": 3.8
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.8,
+     "net_with_end_faces_m": 3.85
+    }
+   },
+   "id": "178+7DB",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 1.2,
+   "end_columns": [
+    {
+     "end": 1,
+     "handle": "23C",
+     "net_shift_m": {
+      "CAP": 0.0,
+      "FP": 0.0,
+      "GFRS": -0.0
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "17B",
+    "7E5"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 1.2,
+     "net_with_end_faces_m": 1.2
+    }
+   },
+   "id": "17B+7E5",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 3.2277,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "THROUGH"
+    },
+    {
+     "m": 2.201,
+     "ring": true,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "17C",
+    "7E3"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.2277,
+     "net_with_end_faces_m": 3.2277
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.2277,
+     "net_with_end_faces_m": 3.2277
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.2277,
+     "net_with_end_faces_m": 3.2277
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 3.2277,
+     "net_with_end_faces_m": 3.2277
+    }
+   },
+   "id": "17C+7E3",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 4.2723,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "THROUGH"
+    }
+   ],
+   "faces": [
+    "17D",
+    "7E4"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.2723,
+     "net_with_end_faces_m": 4.2723
+    },
+    "FP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.2723,
+     "net_with_end_faces_m": 4.2723
+    },
+    "GBP": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.2723,
+     "net_with_end_faces_m": 4.2723
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 4.2723,
+     "net_with_end_faces_m": 4.2723
+    }
+   },
+   "id": "17D+7E4",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 7.35,
+   "end_columns": [
+    {
+     "end": 0,
+     "handle": "24D",
+     "net_shift_m": {
+      "CAP": 0.05,
+      "FP": 0.05,
+      "GFRS": 0.05
+     }
+    }
+   ],
+   "end_support_m": [
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7DC",
+    "7DD"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "892",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.099
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "10F6",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.099
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "7F5",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.049
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 7.35,
+     "net_with_end_faces_m": 7.4
+    }
+   },
+   "id": "7DC+7DD",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 7.35,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.3,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.301,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7E7",
+    "7E8"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "88F",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.049
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "10EE",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.049
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 3.5245,
+       "at_end": false,
+       "b_m": 3.8255,
+       "handle": "7ED",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 0.301,
+     "net_m": 7.049,
+     "net_with_end_faces_m": 7.049
+    },
+    "GFRS": {
+     "columns": [],
+     "columns_only_m": 0.0,
+     "net_m": 7.35,
+     "net_with_end_faces_m": 7.35
+    }
+   },
+   "id": "7E7+7E8",
+   "junctions_and_rings_m": 0.0,
+   "supports": {
+    "junctions": [],
+    "rings": []
+   },
+   "width_m": 0.3
+  },
+  {
+   "dir": "Y",
+   "drawn_m": 7.9,
+   "end_columns": [],
+   "end_support_m": [
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    },
+    {
+     "m": 0.0,
+     "ring": false,
+     "stop": "LINE_END"
+    }
+   ],
+   "faces": [
+    "7E0",
+    "FD"
+   ],
+   "frames": {
+    "CAP": {
+     "columns": [
+      {
+       "a_m": 7.3995,
+       "at_end": true,
+       "b_m": 7.9,
+       "handle": "83C",
+       "m": 0.5
+      },
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.5005,
+       "handle": "840",
+       "m": 0.5
+      },
+      {
+       "a_m": 3.8495,
+       "at_end": false,
+       "b_m": 4.1505,
+       "handle": "895",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 1.302,
+     "net_m": 6.598,
+     "net_with_end_faces_m": 6.598
+    },
+    "FP": {
+     "columns": [
+      {
+       "a_m": 7.3995,
+       "at_end": true,
+       "b_m": 7.9,
+       "handle": "10A0",
+       "m": 0.5
+      },
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.5005,
+       "handle": "10A4",
+       "m": 0.5
+      },
+      {
+       "a_m": 3.8495,
+       "at_end": false,
+       "b_m": 4.1505,
+       "handle": "10FE",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 1.302,
+     "net_m": 6.598,
+     "net_with_end_faces_m": 6.598
+    },
+    "GBP": {
+     "columns": [
+      {
+       "a_m": 7.3995,
+       "at_end": true,
+       "b_m": 7.9,
+       "handle": "1FC",
+       "m": 0.5
+      },
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.5005,
+       "handle": "200",
+       "m": 0.5
+      },
+      {
+       "a_m": 3.8495,
+       "at_end": false,
+       "b_m": 4.1505,
+       "handle": "809",
+       "m": 0.301
+      }
+     ],
+     "columns_only_m": 1.302,
+     "net_m": 6.598,
+     "net_with_end_faces_m": 6.598
+    },
+    "GFRS": {
+     "columns": [
+      {
+       "a_m": 7.3995,
+       "at_end": true,
+       "b_m": 7.9,
+       "handle": "344",
+       "m": 0.501
+      },
+      {
+       "a_m": 0.0,
+       "at_end": true,
+       "b_m": 0.4005,
+       "handle": "347",
+       "m": 0.4
+      }
+     ],
+     "columns_only_m": 0.901,
+     "net_m": 6.999,
+     "net_with_end_faces_m": 6.999
+    }
+   },
+   "id": "FD+7E0",
+   "junctions_and_rings_m": 0.3005,
+   "supports": {
+    "junctions": [
+     {
+      "a_m": 0.0,
+      "at_end": true,
+      "b_m": 0.3005,
+      "band": "FC+7D0",
+      "m": 0.301,
+      "owned_here": false
+     }
+    ],
+    "rings": []
+   },
+   "width_m": 0.3
+  }
+ ],
+ "column_frames": [
+  {
+   "CAP": "817",
+   "FP": "1084",
+   "GBP": "1DC",
+   "GFRS": "32C"
+  },
+  {
+   "CAP": "821",
+   "FP": "1087",
+   "GBP": "1E0",
+   "GFRS": "32F"
+  },
+  {
+   "CAP": "826",
+   "FP": "108A",
+   "GBP": "1E4",
+   "GFRS": "332"
+  },
+  {
+   "CAP": "82A",
+   "FP": "108D",
+   "GBP": "1E8",
+   "GFRS": "335"
+  },
+  {
+   "CAP": "82E",
+   "FP": "1090",
+   "GBP": "1EC",
+   "GFRS": "338"
+  },
+  {
+   "CAP": "831",
+   "FP": "1093",
+   "GBP": "1EF",
+   "GFRS": "33B"
+  },
+  {
+   "CAP": "834",
+   "FP": "1096",
+   "GBP": "1F2",
+   "GFRS": "33E"
+  },
+  {
+   "CAP": "837",
+   "FP": "1099",
+   "GBP": "1F5",
+   "GFRS": "341"
+  },
+  {
+   "CAP": "83C",
+   "FP": "10A0",
+   "GBP": "1FC",
+   "GFRS": "344"
+  },
+  {
+   "CAP": "840",
+   "FP": "10A4",
+   "GBP": "200",
+   "GFRS": "347"
+  },
+  {
+   "CAP": "844",
+   "FP": "10A8",
+   "GBP": "204",
+   "GFRS": "34A"
+  },
+  {
+   "CAP": "849",
+   "FP": "10AB",
+   "GBP": "207",
+   "GFRS": "34D"
+  },
+  {
+   "CAP": "84C",
+   "FP": "10AE",
+   "GBP": "20B",
+   "GFRS": "350"
+  },
+  {
+   "CAP": "853",
+   "FP": "10B1",
+   "GBP": "211",
+   "GFRS": "353"
+  },
+  {
+   "CAP": "856",
+   "FP": "10B4",
+   "GBP": "214",
+   "GFRS": "356"
+  },
+  {
+   "CAP": "85B",
+   "FP": "10B7",
+   "GBP": "218",
+   "GFRS": "359"
+  },
+  {
+   "CAP": "85E",
+   "FP": "10BA",
+   "GBP": "220",
+   "GFRS": "35C"
+  },
+  {
+   "CAP": "862",
+   "FP": "10BD",
+   "GBP": "223",
+   "GFRS": "35F"
+  },
+  {
+   "CAP": "865",
+   "FP": "10C2",
+   "GBP": "228",
+   "GFRS": "362"
+  },
+  {
+   "CAP": "868",
+   "FP": "10C5",
+   "GBP": "22C",
+   "GFRS": "365"
+  },
+  {
+   "CAP": "86C",
+   "FP": "10C8",
+   "GBP": "230",
+   "GFRS": "368"
+  },
+  {
+   "CAP": "870",
+   "FP": "10CC",
+   "GBP": "234",
+   "GFRS": "36B"
+  },
+  {
+   "CAP": "873",
+   "FP": "10D0",
+   "GBP": "238",
+   "GFRS": null
+  },
+  {
+   "CAP": "878",
+   "FP": "10D3",
+   "GBP": "23C",
+   "GFRS": "374"
+  },
+  {
+   "CAP": "87C",
+   "FP": "10D7",
+   "GBP": "241",
+   "GFRS": "377"
+  },
+  {
+   "CAP": "880",
+   "FP": "10DA",
+   "GBP": "245",
+   "GFRS": null
+  },
+  {
+   "CAP": "883",
+   "FP": "10DD",
+   "GBP": "249",
+   "GFRS": "37D"
+  },
+  {
+   "CAP": "886",
+   "FP": "10E0",
+   "GBP": "24D",
+   "GFRS": "380"
+  },
+  {
+   "CAP": "88A",
+   "FP": "10E4",
+   "GBP": "251",
+   "GFRS": "383"
+  },
+  {
+   "CAP": "88D",
+   "FP": "10E8",
+   "GBP": "255",
+   "GFRS": "371"
+  },
+  {
+   "CAP": "88F",
+   "FP": "10EE",
+   "GBP": "7ED",
+   "GFRS": null
+  },
+  {
+   "CAP": "892",
+   "FP": "10F6",
+   "GBP": "7F5",
+   "GFRS": null
+  },
+  {
+   "CAP": "895",
+   "FP": "10FE",
+   "GBP": "809",
+   "GFRS": null
+  },
+  {
+   "CAP": null,
+   "FP": "180A",
+   "GBP": "17BA",
+   "GFRS": null
+  },
+  {
+   "CAP": "17CC",
+   "FP": "17C5",
+   "GBP": "17BD",
+   "GFRS": null
+  },
+  {
+   "CAP": "17CF",
+   "FP": "17C8",
+   "GBP": "17C0",
+   "GFRS": null
+  }
+ ],
+ "frame": "T-141 GROUND BEAMS PLAN",
+ "frames": {
+  "CAP": "p.1 COLUMN & AXIS PLAN",
+  "FP": "p.2 FOUNDATION PLAN",
+  "GBP": "p.3 GROUND BEAMS PLAN (primary)",
+  "GFRS": "p.4 GROUND FLOOR ROOF SLAB (columns above the slab: shown only)"
+ },
+ "guards": {
+  "fence_handles_found": 3,
+  "house_centreline_inside_fence_band_m": 0.0
+ },
+ "schema": "T416_GB_BANDS_INPUT_V1",
+ "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+}
