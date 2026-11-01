@@ -1,0 +1,373 @@
+{
+ "geometry": {
+  "schema": "T432_ALSENAN_ST02_LENGTHS",
+  "drawing": "'ST7757 dxf.dxf' sha256 9f9d1179 (Drive 'Alsenan chalet project'), ST p.4 GF roof slab plan",
+  "total_rise": 4.5,
+  "drawn_risers": 28,
+  "riser_status": "ASSUMED — OWNER-APPROVED (Q-50 A cond, plan count 28, no section)",
+  "lane": {
+   "r_in": 1.530511,
+   "r_out": 2.780511,
+   "r_centre": 2.155511,
+   "straight_inner": 1.530442,
+   "straight_outer": 2.730442,
+   "straight_width": 1.2,
+   "rsa_width": 1.2,
+   "centre_jump_at_270": 0.025069,
+   "inner_arc_end_deg": 269.456843,
+   "outer_arc_end_deg": 259.110382
+  },
+  "rsc_dtheta_centre_deg": {
+   "min": 7.790996,
+   "max": 7.790996
+  },
+  "pieces": [
+   {
+    "id": "ST02-RS-C",
+    "kind": "curved",
+    "n_risers": 12,
+    "handles": "2EA .. 2DF -> 2BA",
+    "plan": {
+     "INNER": 2.546239,
+     "CENTRE": 3.571913,
+     "RISERS": 3.570199,
+     "OUTER": 4.594408
+    },
+    "chord": {
+     "CENTRE": 3.160467
+    }
+   },
+   {
+    "id": "ST02-RS-S",
+    "kind": "straight",
+    "n_risers": 11,
+    "handles": "2BA .. 2C4",
+    "plan": {
+     "INNER": 3.0,
+     "CENTRE": 3.0,
+     "RISERS": 3.0,
+     "OUTER": 3.0
+    }
+   },
+   {
+    "id": "ST02-RS-LD",
+    "kind": "landing",
+    "n_risers": 0,
+    "handles": "2C4 -> 2C8 (283 / 289 / 2CF / 2D0)",
+    "plan": {
+     "INNER": 0.0,
+     "CENTRE": 1.15,
+     "OUTER": 2.35,
+     "RISERS": 0.849264
+    }
+   },
+   {
+    "id": "ST02-RS-A",
+    "kind": "straight",
+    "n_risers": 5,
+    "handles": "2C8 .. 315",
+    "plan": {
+     "INNER": 1.2,
+     "CENTRE": 1.2,
+     "RISERS": 1.2,
+     "OUTER": 1.2
+    }
+   }
+  ],
+  "n_treads": {
+   "RS_C": 12,
+   "RS_S": 10,
+   "RS_A": 4
+  }
+ },
+ "derived": {
+  "rise": 4.5,
+  "drawn_risers": 28,
+  "n_treads": 26,
+  "plan_by_path": {
+   "INNER": 6.746239,
+   "CENTRE": 8.921913,
+   "RISERS": 8.619463,
+   "OUTER": 11.144408
+  },
+  "drawn_plan_length_on_his_width": 9.029663,
+  "his_beyond_drawn_m": 7.370337,
+  "classification": {
+   "state": "UNRESOLVED",
+   "exact": [],
+   "nearest": [
+    "ONE_LENGTH 3 x ST02-RS-C / RISERS profile",
+    16.496311,
+    0.096311
+   ],
+   "table": [
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / RISERS profile",
+     16.496311,
+     0.096311
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / CENTRE profile",
+     16.501453,
+     0.101453
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / OUTER profile + landing",
+     16.653571,
+     0.253571
+    ],
+    [
+     "CENTRE / PROFILE + RS-C treads 1-9 again (ST p.3)",
+     16.059842,
+     -0.340158
+    ],
+    [
+     "OUTER / PROFILE",
+     15.644408,
+     -0.755592
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / RISERS profile + landing",
+     17.345575,
+     0.945575
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / CENTRE profile + landing",
+     15.453571,
+     -0.946429
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / RISERS profile + landing",
+     15.152835,
+     -1.247165
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / CENTRE profile + landing",
+     17.651453,
+     1.251453
+    ],
+    [
+     "OUTER / PROFILE_LANDING_IN_BOTH",
+     17.994408,
+     1.594408
+    ],
+    [
+     "COUNT 26 x 0.3 + landing OUTER + rise",
+     14.65,
+     -1.75
+    ],
+    [
+     "CENTRE / PROFILE_LANDING_IN_BOTH",
+     14.571913,
+     -1.828087
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / CENTRE profile",
+     14.303571,
+     -2.096429
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / INNER profile",
+     14.303571,
+     -2.096429
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / INNER profile + landing",
+     14.303571,
+     -2.096429
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / OUTER profile",
+     14.303571,
+     -2.096429
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-S / RISERS profile",
+     14.303571,
+     -2.096429
+    ],
+    [
+     "RISERS / PROFILE_LANDING_IN_BOTH",
+     13.968727,
+     -2.431273
+    ],
+    [
+     "OUTER / PROFILE + RS-C treads 1-9 again (ST p.3)",
+     19.047216,
+     2.647216
+    ],
+    [
+     "COUNT 26 x 0.3 + landing CENTRE + rise",
+     13.45,
+     -2.95
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / INNER profile",
+     13.424431,
+     -2.975569
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / INNER profile + landing",
+     13.424431,
+     -2.975569
+    ],
+    [
+     "CENTRE / PROFILE",
+     13.421913,
+     -2.978087
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / OUTER profile",
+     19.568938,
+     3.168938
+    ],
+    [
+     "RISERS / PROFILE",
+     13.119463,
+     -3.280537
+    ],
+    [
+     "INNER / PROFILE + RS-C treads 1-9 again (ST p.3)",
+     13.119289,
+     -3.280711
+    ],
+    [
+     "COUNT 26 x 0.3 + no landing + rise",
+     12.3,
+     -4.1
+    ],
+    [
+     "OUTER / INCLINED",
+     12.259115,
+     -4.140885
+    ],
+    [
+     "INNER / PROFILE",
+     11.246239,
+     -5.153761
+    ],
+    [
+     "INNER / PROFILE_LANDING_IN_BOTH",
+     11.246239,
+     -5.153761
+    ],
+    [
+     "OUTER / PLAN",
+     11.144408,
+     -5.255592
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-C / OUTER profile + landing",
+     21.918938,
+     5.518938
+    ],
+    [
+     "COUNT 26 x 0.3 + landing OUTER",
+     10.15,
+     -6.25
+    ],
+    [
+     "CENTRE / INCLINED",
+     10.135652,
+     -6.264348
+    ],
+    [
+     "RISERS / INCLINED",
+     9.833408,
+     -6.566592
+    ],
+    [
+     "COUNT 26 x 0.3 + landing CENTRE",
+     8.95,
+     -7.45
+    ],
+    [
+     "CENTRE / PLAN",
+     8.921913,
+     -7.478087
+    ],
+    [
+     "RISERS / PLAN",
+     8.619463,
+     -7.780537
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / OUTER profile + landing",
+     8.360714,
+     -8.039286
+    ],
+    [
+     "INNER / INCLINED",
+     8.120517,
+     -8.279483
+    ],
+    [
+     "COUNT 26 x 0.3 + no landing",
+     7.8,
+     -8.6
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / CENTRE profile + landing",
+     7.160714,
+     -9.239286
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / RISERS profile + landing",
+     6.859978,
+     -9.540022
+    ],
+    [
+     "INNER / PLAN",
+     6.746239,
+     -9.653761
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / CENTRE profile",
+     6.010714,
+     -10.389286
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / INNER profile",
+     6.010714,
+     -10.389286
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / INNER profile + landing",
+     6.010714,
+     -10.389286
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / OUTER profile",
+     6.010714,
+     -10.389286
+    ],
+    [
+     "ONE_LENGTH 3 x ST02-RS-A / RISERS profile",
+     6.010714,
+     -10.389286
+    ]
+   ],
+   "tol": 0.0005
+  },
+  "n_constructions": 49,
+  "within_his_rounding_band": [],
+  "rsc_centre_profile_m": 5.500484,
+  "restated": {
+   "state": "UNRESOLVED",
+   "terms": [
+    {
+     "kind": "UNRESOLVED",
+     "m3": -2.476433
+    }
+   ],
+   "unexplained_m3": -2.476433
+  },
+  "illustrative": {
+   "label": "ILLUSTRATIVE, not a term: T-417 convention (CENTRE / PROFILE) assumed for ST-02",
+   "profile_m": 13.421913,
+   "remainder_m": 2.978087,
+   "rise_in_length_m3": -1.512,
+   "remainder_m3": -0.964433
+  }
+ }
+}
