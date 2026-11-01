@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4172 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4177 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 39 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1955 | pytest suites, one folder per round. |
+| `tests/` | 1958 | pytest suites, one folder per round. |
 | `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -103,7 +103,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `e1_release.py` | 603 | HIGH | 4 | E1.1 §F §G §J §K — what has to be true before a region is released. |
 | `e31a_gate.py` | 206 | MEDIUM | 2 | E31A gate — measurable conditions for starting planar face extraction. |
 | `edge_relation.py` | 149 | MEDIUM | 7 | E1.3 §2 — an edge relation, not a Boolean called "open". |
-| `elevator_marble.py` | 419 | MEDIUM | 3 | §H–§L. The elevator marble objects, declared and measured correctly. |
+| `elevator_marble.py` | 419 | MEDIUM | 4 | §H–§L. The elevator marble objects, declared and measured correctly. |
 | `enclosure_fixtures.py` | 388 | MEDIUM | 2 | E97 — ten known-answer rooms, each with ink that is not its boundary. |
 | `enclosure_role.py` | 341 | CRITICAL | 9 | A closed polygon is not a room. What it IS, decided structurally. |
 | `enclosure_selftest.py` | 183 | MEDIUM | 2 | E98 — prove the enclosure ignores the ink it should ignore. |
@@ -1334,6 +1334,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t408_lift_tie_bind/` | 2 |
 | `tests/t409_transition_profiles/` | 2 |
 | `tests/t410_stair_skirting/` | 2 |
+| `tests/t413_lift_marble/` | 2 |
 | `tests/t414_floor_bed/` | 2 |
 | `tests/t415_curved_flight/` | 2 |
 | `tests/t418_stair_room_floor/` | 2 |
@@ -1752,6 +1753,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t409/` | 5 |
 | `research/agents_t410/` | 7 |
 | `research/agents_t411/` | 1 |
+| `research/agents_t413/` | 5 |
 | `research/agents_t414/` | 5 |
 | `research/agents_t415/` | 4 |
 | `research/agents_t418/` | 5 |

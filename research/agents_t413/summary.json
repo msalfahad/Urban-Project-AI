@@ -1,0 +1,154 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.35",
+ "candidate_binding": {
+  "floor_finish_lines_on_landing_faces": {
+   "1F-R78C367": [
+    {
+     "evidence_state": "SOURCE_DERIVED",
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-b06400d46d252f242018",
+     "measured_net": 33.711036
+    }
+   ],
+   "2F-R4D1B62": [],
+   "GF-RC99C2A": [
+    {
+     "evidence_state": "PROVISIONAL",
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-7625f35c503d9f8e6196",
+     "measured_net": 109.778417
+    }
+   ]
+  },
+  "lift_landing_threshold_lines": [
+   "L-084df97d3d41525a65c2",
+   "L-3c5a3be22e861d9d4cfb",
+   "L-6f5806adbacba9118497"
+  ],
+  "lift_marble_lines": [],
+  "lift_opening_lines": [
+   {
+    "bound_m2": [
+     0.2,
+     0.2
+    ],
+    "element_id": "HL:FLOOR_SCOPE:THRESHOLD:1F:OP-007",
+    "evidence_state": "BOUNDED_EXPOSURE",
+    "floor": "1F",
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-084df97d3d41525a65c2",
+    "measured_net": null
+   },
+   {
+    "bound_m2": null,
+    "element_id": "1F-STRIP-OP-007:doorway strip",
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "floor": "1F",
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "line_id": "L-bb09715ec8ccdd5d11a8",
+    "measured_net": null
+   },
+   {
+    "bound_m2": [
+     0.2,
+     0.2
+    ],
+    "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-002",
+    "evidence_state": "BOUNDED_EXPOSURE",
+    "floor": "2F",
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-3c5a3be22e861d9d4cfb",
+    "measured_net": null
+   },
+   {
+    "bound_m2": null,
+    "element_id": "2F-STRIP-OP-002:doorway strip",
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "floor": "2F",
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "line_id": "L-17a56dfafc5504f41a28",
+    "measured_net": null
+   },
+   {
+    "bound_m2": [
+     0.2,
+     0.2
+    ],
+    "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-011",
+    "evidence_state": "BOUNDED_EXPOSURE",
+    "floor": "GF",
+    "item_code": "ARCH.THRESHOLD",
+    "line_id": "L-6f5806adbacba9118497",
+    "measured_net": null
+   },
+   {
+    "bound_m2": null,
+    "element_id": "GF-STRIP-OP-011:doorway strip",
+    "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "floor": "GF",
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "line_id": "L-2621372661b2eb15b748",
+    "measured_net": null
+   }
+  ],
+  "lines_total": 4730,
+  "opening_lines": {
+   "1F": "L-32d90a7a3cff7e9feb2a",
+   "2F": "L-c91732d6f75d440d677e",
+   "GF": "L-77a427c89787ef3480a7"
+  }
+ },
+ "candidate_json_sha256": "b011bace2958f3da42afa00587eb2511afed754a46aba78e8d08346aa2903e10",
+ "dxf_sha8": "ab54dd55",
+ "freelancer": {
+  "lift_marble_rows": 0,
+  "lift_term_row": "RC 'walls + columns' row 11: lift walls 20 cm (concrete, T-401)",
+  "lift_term_rows": 1,
+  "marble_sheet_rows": 31,
+  "plaster_lift_doors": "PLS row 10 column 'corners m.l' 17.4 'for lift doors' (corner beads, T-405 B4-09)",
+  "rows_total": 885
+ },
+ "model": "LIFT_ENTRANCE_MARBLE_V1",
+ "station_count": 3,
+ "stations": [
+  "ELV-01-GF",
+  "ELV-01-1F",
+  "ELV-01-2F"
+ ],
+ "surround_B6_06": {
+  "bound_m2": [
+   2.75,
+   13.98
+  ],
+  "missing": [
+   "RIGHT band width: INFEASIBLE_DEFAULT: 0.5 m > 0.4 m of landing face beside the jamb",
+   "door clear height (head level): not printed"
+  ],
+  "per_station_bound_m2": {
+   "ELV-01-1F": [
+    1.0,
+    4.7
+   ],
+   "ELV-01-2F": [
+    0.75,
+    4.28
+   ],
+   "ELV-01-GF": [
+    1.0,
+    5.0
+   ]
+  },
+  "status": "HELD",
+  "value_m2": null
+ },
+ "task": "T-413",
+ "threshold_B6_07": {
+  "floor_overlap_bound_m2": [
+   0.9,
+   1.5
+  ],
+  "front_edge_lm": 3.0,
+  "status": "width DRAWING-CONFIRMED x depth ASSUMED — OWNER-APPROVED (UP-ELEV-005)",
+  "value_m2": 1.5
+ }
+}
