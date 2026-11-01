@@ -231,3 +231,10 @@ def test_merged_register_is_ancestry():
         if r.returncode == 128:
             pytest.skip("git history not available")
         assert r.returncode == 0, f"{task} {sha} is not an ancestor of HEAD"
+
+
+def test_alsenan_observation_length_field_pair(pub):
+    o = pub["observations"][0]
+    assert (o["pair_m3"], o["value_beyond_gbp_net_m3"], o["re_adds_to_GB_LEN_FIELD"]) == (0.086989, 0.049775, 0.136764)
+    gb = {p.get("id"): p["m3"] for p in pub["restated_components"]["GB-MAIN"]["parts"]}
+    assert gb["GB-LEN-FIELD"] == o["re_adds_to_GB_LEN_FIELD"]          # a proposal: the table is not moved by it

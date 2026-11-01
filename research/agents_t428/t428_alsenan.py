@@ -288,6 +288,51 @@ def scenarios(newparts):
     return {"A": a, "B": b}
 
 
+def observation_length_fields():
+    """O-T428-1 (a proposal for the Checker; no figure of the table moves): the GB-LEN-FIELD part is mostly a
+    decomposition pair. T-391's section term is (valued m3) - his 0.18 x the LENGTH FIELDS of the valued lines, its
+    length term 0.18 x (all length fields - his length); on three valued exterior lines the value rests on a shorter
+    VALUE length (value / (b x D)), so those metres appear +0.18 x m in the length term and -0.18 x m in the section
+    term: no physical difference. The rest is the value length beyond the GB-plan net."""
+    cen = {}
+    for l in _j("agents_t426/CENSUS_T426.json")["lines"]:
+        if l["state"] == "VALUED" and l["drawn_band"] in ("FD+7E0", "107+7CE", "ARC:157+158"):
+            if l["drawn_band"] in cen:
+                raise R.Refused(f"O-T428-1: band {l['drawn_band']} carries two valued lines")
+            cen[l["drawn_band"]] = l
+    bands = {b["band"]: b for b in _j("agents_t416/summary_t416.json")["bands"]}
+    rows = []
+    for b in ("FD+7E0", "107+7CE", "ARC:157+158"):
+        l = cen[b]
+        vlen = l["candidate_value_m3"] / (l["candidate_b_m"] * l["candidate_D_m"])
+        net = bands[b]["net_by_frame_m"]
+        rows.append({"band": b, "line_id": l["line_id"], "length_field_m": l["candidate_L_m"],
+                     "value_length_m": round(vlen, 6), "net_gbp_m": net["GBP"],
+                     "net_frame_range_m": [min(net[k] for k in ("GBP", "FP", "CAP")),
+                                           max(net[k] for k in ("GBP", "FP", "CAP"))],
+                     "field_minus_value_m": round(l["candidate_L_m"] - vlen, 6),
+                     "value_minus_net_m": round(vlen - net["GBP"], 6)})
+    # the identity the pair rests on, asserted on merged figures: exterior section + plan (T-391 group) = the valued
+    # exterior m3 - 0.18 x their length fields (T-426 census V3.0.36)
+    ext = [l for l in _j("agents_t426/CENSUS_T426.json")["lines"] if l["state"] == "VALUED" and l["candidate_D_m"] == 0.95]
+    grp = _j("agents_t391/summary_t391.json")["beams"]["groups"][
+        "exterior main house, D printed by two levels (top +0.95 to N.G. +-0.00)"]
+    close(sum(l["candidate_value_m3"] for l in ext) - SECTION_M2 * sum(l["candidate_L_m"] for l in ext),
+          grp["section_m3"] + grp["plan_m3"], "O-T428-1 exterior identity", tol=0.000002)
+    close(sum(l["candidate_L_m"] for l in ext), grp["L_m"], "O-T428-1 exterior length fields", tol=0.00005)
+    pair = round(SECTION_M2 * sum(r["field_minus_value_m"] for r in rows), 6)
+    rest = round(SECTION_M2 * sum(r["value_minus_net_m"] for r in rows), 6)
+    return {"id": "O-T428-1", "rows": rows, "pair_m3": pair, "value_beyond_gbp_net_m3": rest,
+            "re_adds_to_GB_LEN_FIELD": round(pair + rest, 6),
+            "proposal": f"Checker to rule: +{pair} m3 of GB-LEN-FIELD and -{pair} m3 inside GB-SEC-EXT are one "
+                        "bookkeeping pair (AGREE, net 0: his section counted on length-field metres the engine value "
+                        f"does not carry); the remaining +{rest} m3 is the value length beyond the GB-plan net, the "
+                        "ring's share a point inside its frame range (R-T407: a range, never a chosen frame). If "
+                        f"ruled, GB-MAIN unexplained +0.124182 -> {round(0.124182 - pair, 6)} and traced -1.064382 "
+                        f"-> {round(-1.064382 + pair, 6)} (ENGINE_RIGHT exterior section +5.796522 -> "
+                        f"{round(5.796522 + pair, 6)}); no residual moves"}
+
+
 def build():
     s, rows = base()
     st = subtraces(rows)
@@ -341,6 +386,7 @@ def public_summary():
             "totals_r3_current": {k: r3[k] for k in ("residual_m3", "TRACED", "HELD", "UNEXPLAINED")},
             "totals_r4_current": tot, "families_r4_current": fams, "restated_components": comps,
             "engine_side_register": engine_side(), "scenarios_gb_main_t430": sc,
+            "observations": [observation_length_fields()],
             "candidate_notes": candidate_notes(), "unexplained_left": ul,
             "unexplained_by_sign": {"negative_m3": round(sum(u["m3"] for u in ul if u["m3"] < 0), 6),
                                     "positive_m3": round(sum(u["m3"] for u in ul if u["m3"] > 0), 6),

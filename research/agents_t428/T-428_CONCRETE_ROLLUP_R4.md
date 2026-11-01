@@ -92,6 +92,16 @@ FINDING F-T428-1 (for the Lead): the row's "-10.959354" is T-426's HELD TERM aft
 whole-row scenario does not re-bind the classes of the terms already on the withdrawn lines (his per-run section is not
 separable from his two lumps), the same convention as the r3 column moves.
 
+**Observation O-T428-1 (proposal for the Checker; the table does not move by it).** Of GB-LEN-FIELD +0.136764,
+**+0.086989** is one half of a bookkeeping pair: T-391's section term is the valued m3 less his 0.18 on the LENGTH
+FIELDS (asserted: exterior valued 15.969555 - 0.18 x 56.5168 = 5.796531 = section + plan), its length term 0.18 x (all
+length fields - his length); on FD+7E0 (field 6.900, value length 6.600), 107+7CE (0.390 / 0.363902) and the ring
+L-7076482d (6.2868 / 6.129625) those 0.483273 m appear +0.086989 in the length term and -0.086989 inside the exterior
+section term: no physical difference (AGREE, net 0). The other **+0.049775** is the value length beyond the GB-plan net
+(FD+7E0 0.002, 107+7CE 0.000502, ring 0.274025 m inside its frame range 5.8556 .. 6.259: a range, never a chosen
+frame). If ruled: GB-MAIN unexplained +0.124182 -> +0.037193, traced -1.064382 -> -0.977393 (exterior section
++5.796522 -> +5.883511).
+
 ## What remains unexplained (-5.084765 m3) and who owns it
 
 | Part | m3 | Owner |
@@ -118,7 +128,7 @@ in m, use <= allowance) are TRACED with their own sub-totals. Engine-side items 
 share an id with a residual part. A queued correction is a scenario printed beside the as-is figure, never alone; a
 merged one is a candidate move (R-T406-6).
 
-Tests `tests/t428_rollup_r4` (34): Villa R428 hand fixture (not Alsenan) normal, order invariance, scenario beside
+Tests `tests/t428_rollup_r4` (35): Villa R428 hand fixture (not Alsenan) normal, order invariance, scenario beside
 as-is, engine-side register leaves the table unchanged; adverse: unmerged source, part not found / found twice /
 sub-traced twice, sub-parts not re-adding, TRACED / HELD without a Checker verdict, ENGINE_WRONG without an owner,
 bounded beyond its allowance or without one, HELD 0, ratio cause, verdict counted as another class, unknown verdict,
