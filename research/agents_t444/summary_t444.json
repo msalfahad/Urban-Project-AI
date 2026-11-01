@@ -1,0 +1,71 @@
+{
+ "foundation_solids_named": {
+  "1ABF": "footing outline (founding level)",
+  "1B08+1B09": "strap SB2 (founding level, T-141)",
+  "1B19": "footing F6 (founding level)",
+  "1B2B": "raft FF (lift base, 4.60 x 4.50 x 0.55, founding level)"
+ },
+ "t436_faces_disjoint": [
+  "OWN-011",
+  "OWN-018",
+  "OWN-006",
+  "OWN-022",
+  "OWN-025"
+ ],
+ "tables": {
+  "engine_gross_by_kind_m2": {
+   "BEAM": 1.7783,
+   "COLUMN": 0.0,
+   "PANEL": 35.6054,
+   "RING": 0.88,
+   "SHAFT": 2.8125
+  },
+  "engine_net_by_kind_m2": {
+   "BEAM": 0.0,
+   "COLUMN": 0.0,
+   "PANEL": 35.6054,
+   "RING": 0.88,
+   "SHAFT": 2.8125
+  },
+  "engine_outline_by_kind_m2": {
+   "BEAM": 1.7783,
+   "COLUMN": 0.25,
+   "PANEL": 35.6054,
+   "RING": 0.88,
+   "SHAFT": 2.8125
+  },
+  "own_bound_by_kind_m2": {
+   "BEAM": 1.7783,
+   "COLUMN": 0.25,
+   "PANEL": 35.6054,
+   "RING": 0.96,
+   "SHAFT": 3.24
+  },
+  "own_bound_total_m2": 41.8337,
+  "proposal": {
+   "from": {
+    "bound_m2": 39.2979,
+    "state": "HELD"
+   },
+   "held_part_m3": null,
+   "line_id": "L-41cfb82ed733f4d6e3a5",
+   "never_zero": true,
+   "out_of_line_m2": {
+    "RING": 0.88,
+    "SHAFT": 2.8125
+   },
+   "out_of_line_owner": {
+    "RING": "LIFT_PIT_WALLS",
+    "SHAFT": "LIFT_PIT_FLOOR=RAFT_TOP"
+   },
+   "to": {
+    "area_m2": 35.6054,
+    "evidence": "DRAWING-CONFIRMED (VERIFIED only after the Checker re-measure)",
+    "m3": 3.56054,
+    "state": "VALUED",
+    "t_m": 0.1
+   }
+  }
+ },
+ "task": "T-444"
+}
