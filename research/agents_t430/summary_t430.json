@@ -1,0 +1,288 @@
+{
+ "code_totals_other_than_gb_identical": true,
+ "downgrade_proposal": {
+  "audit_range_m3": [
+   0.864171,
+   1.152231
+  ],
+  "engine_qty": 1.152231,
+  "line_content_sha256": "dc3aa9327c116fc44a712be84d3d594ac1ff5fad7565c0e6eabc46a6e99ea39d",
+  "line_ids": [
+   "L-0bb78accf8c0a0fbdbaf",
+   "L-0e852cca42fb8b765c58",
+   "L-1487bdda099006e0c4ba",
+   "L-c0b7102a36344a0349f5"
+  ],
+  "proposal_id": "DGP-T430-GB-D34-SHORT"
+ },
+ "files_sha256": {
+  "V3_0_39_BOQ_LINES.json": "8d1bbe5dfc9a10854ca8aed885fe61e79298ada87d470c69ec17588b80d88a15",
+  "V3_0_40_BOQ_LINES.json": "aa6aa9272354301ccb084222e7d9122818ebf900788a2b3fb62dc340688a2a88",
+  "V3_0_40_DIFF.csv": "8486b8365edcd2ce37c3c175ff18a26465f648ee9261d5fb929308c6b9d25a8a",
+  "V3_0_40_INTEGRATION_LEDGER.json": "ceeb2614cbabaa8a6460afd9de01679c187cf9f31788a4713a580cb9116ff524",
+  "V3_0_40_RUN.json": "2757a051f6b523e148f4a5451f7c1a5dbdcdd5dd9222e58fe22607be1bf5f18d"
+ },
+ "ground_beam": {
+  "v3_0_39": {
+   "held_lines": 12,
+   "lines": 59,
+   "valued_lines": 47,
+   "valued_m3": 29.569286
+  },
+  "v3_0_40": {
+   "held_lines": 16,
+   "lines": 61,
+   "valued_lines": 45,
+   "valued_m3": 26.856686
+  }
+ },
+ "identity": {
+  "added": 2,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3241,
+    "QUANTITY_DIFFERS": 980,
+    "SAME_QUANTITY": 610
+   },
+   "vs_v3_0_39": {
+    "ADDED": 2,
+    "CHANGED": 4,
+    "SAME": 4825
+   }
+  },
+  "gb_runs": {
+   "bands": {
+    "7DC+7DD": [
+     "7DC+7DD#1",
+     "7DC+7DD#2"
+    ],
+    "7E7+7E8": [
+     "7E7+7E8#1",
+     "7E7+7E8#2"
+    ]
+   },
+   "held_beside_m3": [
+    1.4424,
+    2.1816
+   ],
+   "held_lines": 2,
+   "held_runs": 2,
+   "valued_m3": 0.846,
+   "valued_runs": 2
+  },
+  "outside_rows": 4825,
+  "outside_rows_identical_to_v3_0_39": 4825,
+  "outside_rows_sha256": "b385d886aca2df14a0258540b68b3fb5fe5cda5d487dddebaab58e8cfd917600",
+  "replaced": 4
+ },
+ "lines": {
+  "v3_0_39": 4829,
+  "v3_0_40": 4831
+ },
+ "piece_log": {
+  "by_action": {
+   "HOLD_BLANK": 1,
+   "HOLD_RANGE": 1,
+   "SPLIT_HELD": 2,
+   "SPLIT_VALUED": 2
+  },
+  "lines_added": 2,
+  "lines_changed": 4,
+  "piece": "GB_RUN_SECTION+GB_HOLD",
+  "state": "RUN"
+ },
+ "rows": [
+  {
+   "action": "SPLIT_HELD",
+   "beside": [
+    0.423,
+    0.6435
+   ],
+   "change": "ADD",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023:7DC+7DD#1",
+   "evidence_status": "HELD",
+   "line_id": "L-95a1f198cfe7f398d6ae",
+   "run": "7DC+7DD#1",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "SPLIT_VALUED",
+   "beside": null,
+   "change": "CHANGE",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023",
+   "evidence_status": "VERIFIED",
+   "line_id": "L-fe78ae283abfb6256358",
+   "run": "7DC+7DD#2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.323
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.323
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.423
+   }
+  },
+  {
+   "action": "SPLIT_VALUED",
+   "beside": null,
+   "change": "CHANGE",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032",
+   "evidence_status": "VERIFIED",
+   "line_id": "L-0e30aadba2eebc6c3ede",
+   "run": "7E7+7E8#1",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.323
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.323
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.423
+   }
+  },
+  {
+   "action": "SPLIT_HELD",
+   "beside": [
+    0.423,
+    0.6345
+   ],
+   "change": "ADD",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032:7E7+7E8#2",
+   "evidence_status": "HELD",
+   "line_id": "L-cfb4555cb26b39934bff",
+   "run": "7E7+7E8#2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "HOLD_RANGE",
+   "beside": [
+    0.5964,
+    0.9036
+   ],
+   "change": "CHANGE",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+   "evidence_status": "HELD",
+   "line_id": "L-e24946df436cbc25fca6",
+   "run": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.9036
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.9036
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "HOLD_BLANK",
+   "beside": null,
+   "change": "CHANGE",
+   "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+   "evidence_status": "HELD",
+   "line_id": "L-be6708e07b40efa02779",
+   "run": null,
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.009
+   },
+   "v3_0_39": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.009
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  }
+ ],
+ "schema": "URBAN_T430_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "STR.CONC.GROUND_BEAM|m3": {
+   "v3_0_39": {
+    "blocked_lines": 12,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 59,
+    "released": 29.569286
+   },
+   "v3_0_40": {
+    "blocked_lines": 16,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 61,
+    "released": 26.856686
+   }
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "audit_range_m3": [
+  0.864171,
+  1.152231
+ ],
+ "basis_label": "UNSUPPORTED BASIS",
+ "binding": "LINE_CONTENT_V1",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.40",
+ "engine_qty": 1.152231,
+ "evidence": [
+  {
+   "printed_value": "ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less than 2.5m length' 30 x 30; no precedence printed",
+   "sheet": "ST7757.pdf p.13"
+  },
+  {
+   "printed_value": "spans 2.325 / 2.400 / 2.450 / 2.4668 (2.4269) m on every frame: both titles hold literally (INSIDE_RANGE)",
+   "sheet": "research/agents_t426/CENSUS_T426.json"
+  }
+ ],
+ "extends": "DG-a31a0d7e9dd564ad (V3.0.29 DOWNGRADES.json; the same D-34 reason with the titles swapped)",
+ "issued_by": "PROPOSAL (Worker 3, T-430, from finding F-T426-1 accepted at the T-426 Gate A): the Checker issues or refuses; never a promotion",
+ "line_content_sha256": "dc3aa9327c116fc44a712be84d3d594ac1ff5fad7565c0e6eabc46a6e99ea39d",
+ "line_ids": [
+  "L-0bb78accf8c0a0fbdbaf",
+  "L-0e852cca42fb8b765c58",
+  "L-1487bdda099006e0c4ba",
+  "L-c0b7102a36344a0349f5"
+ ],
+ "proposal_id": "DGP-T430-GB-D34-SHORT",
+ "proposed_state": "HELD",
+ "reason": "UNSUPPORTED BASIS: each of the 4 ground-beam lines shows the depth of the ST p.13 section titled 'less than 5m length' (0.40) as its value although the 'less than 2.5m length' title (0.30) also holds literally on its span; the sheet prints no precedence (D-34, designer item RFI S08-S11 group). DG-a31a0d7e holds the 9 lines that show the other end of the same pair; these 4 were left out (F-T426-1). The lines would be HELD with the audit range beside; candidate and released V2.9 unchanged.",
+ "resolved": false,
+ "schema": "URBAN_T430_DOWNGRADE_PROPOSAL_V1",
+ "unit": "m3"
+}
