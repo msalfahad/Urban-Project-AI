@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-01T13:51Z | Verifier | STARTED | run session_01E6cPncyHeHtzGhoGMh5nuk | repo-attached routine | task state: T-428 READY per RUN_LOG 13:39 (board to confirm) | self-check pending
 - 2026-11-01 13:39 UTC | Worker 1 | SUCCESS | T-428 READY 3f4dfe4a | concrete roll-up r4 on V3.0.37: residual -122.900 m3 unchanged, traced / HELD / unexplained +4.128 / -115.460 / -11.568 -> -1.387 / -116.428 / -5.085 m3 (T-415 ST-02, T-417 ST-01, T-416 GB length, T-426 GB section, each class from its Checker verdict); SD-STAIR unexplained -2.476 (ST-02 only, T-432); GB-MAIN -10.355 as is, -12.155 after T-430 s.6(1), -14.219 after the whole T-430 row; F-T428-1: the row's -10.959354 is a held term, not the headline; engine-side register E-1 0.423 m3 VERIFIED_WRONG hidden by an AGREE; O-T428-1 bookkeeping pair 0.087 m3 for the Checker; 9 unexplained parts (-2.595 m3) have no owner task | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-01 13:23 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-01T13:01Z | Worker 3 | STARTED | run session_01E6cPnbWgUMCKakKqrVHDDb | repo-attached routine | task state: none yet | self-check pending
