@@ -1,0 +1,790 @@
+{
+ "box": {
+  "A6_to_158_m": 4.5,
+  "above": {
+   "above": {
+    "BEAM": 3.640637,
+    "BEAM_OR_COLUMN": 1.363021,
+    "SLAB": 8.451342
+   },
+   "area_m2": 13.455,
+   "beams": [
+    {
+     "cls": "BEAM_OR_COLUMN",
+     "free_edge_m": 2.7112,
+     "l": 2.6454,
+     "mark": "CB4",
+     "member": "BM-GF-021",
+     "piece_m2": 0.501975,
+     "r2_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "slab_face": "GF-129",
+     "t110_depth": "0.5",
+     "t110_status": "CALCULATED",
+     "w": 0.2
+    },
+    {
+     "cls": "BEAM",
+     "free_edge_m": 9.7164,
+     "l": 5.0891,
+     "mark": "B27",
+     "member": "BM-GF-048",
+     "piece_m2": 3.640637,
+     "r2_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "slab_face": "GF-142",
+     "t110_depth": "0.85",
+     "t110_status": "CALCULATED",
+     "w": 0.9
+    },
+    {
+     "cls": "BEAM_OR_COLUMN",
+     "free_edge_m": 4.6825,
+     "l": 2.2908,
+     "mark": "B5",
+     "member": "BM-GF-016",
+     "piece_m2": 0.443392,
+     "r2_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "slab_face": "GF-150",
+     "t110_depth": "0.5",
+     "t110_status": "CALCULATED",
+     "w": 0.2
+    },
+    {
+     "cls": "BEAM_OR_COLUMN",
+     "free_edge_m": 1.4001,
+     "l": 0.5883,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.068217,
+     "r2_depth": "",
+     "r2_status": "NO_REGISTER_ROW",
+     "slab_face": "GF-151",
+     "w": 0.2
+    },
+    {
+     "cls": "BEAM_OR_COLUMN",
+     "free_edge_m": 1.2001,
+     "l": 0.5883,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.049437,
+     "r2_depth": "",
+     "r2_status": "NO_REGISTER_ROW",
+     "slab_face": "GF-152",
+     "w": 0.1681
+    },
+    {
+     "cls": "BEAM_OR_COLUMN",
+     "free_edge_m": 3.0,
+     "l": 3.0,
+     "mark": "CB8",
+     "member": "BM-GF-040",
+     "piece_m2": 0.3,
+     "r2_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "slab_face": "GF-170",
+     "t110_depth": "0.75",
+     "t110_status": "CALCULATED",
+     "w": 0.1
+    }
+   ],
+   "covered_m2": 13.455,
+   "openings": [],
+   "perimeter_m": 15.0
+  },
+  "beam_faces": [
+   {
+    "cls": "BEAM_OR_COLUMN",
+    "free_edge_on_box_m": 2.7112,
+    "mark": "CB4",
+    "member": "BM-GF-021",
+    "piece_in_box_m2": 0.501975,
+    "r2_depth": "0.5",
+    "r2_status": "CALCULATED",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 2.3744,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 2.3744,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": -0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.3368,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.3368,
+      "neighbour_cls": "BEAM",
+      "neighbour_member": "BM-GF-048",
+      "neighbour_r2_depth": 0.85,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     }
+    ],
+    "slab_face": "GF-129",
+    "t110_depth": "0.5",
+    "t110_status": "CALCULATED"
+   },
+   {
+    "cls": "BEAM",
+    "free_edge_on_box_m": 9.7164,
+    "mark": "B27",
+    "member": "BM-GF-048",
+    "piece_in_box_m2": 3.640637,
+    "r2_depth": "0.85",
+    "r2_status": "CALCULATED",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.3368,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.3368,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": "BM-GF-021",
+      "neighbour_r2_depth": 0.5,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.5883,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-RC99C2A part"
+      ],
+      "on_zone_line_m": 0.5883
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.2,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.2,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.5883,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-SITE-0a31aaa10796d33a"
+      ],
+      "on_zone_line_m": 0.5883
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.3524,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.842
+      },
+      "m": 1.1944,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": -0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.2485,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.2486,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": "BM-GF-016",
+      "neighbour_r2_depth": 0.5,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0001
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 3.6091,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 3.6091,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": -0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 2.951,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 2.951,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     }
+    ],
+    "slab_face": "GF-142",
+    "t110_depth": "0.85",
+    "t110_status": "CALCULATED"
+   },
+   {
+    "cls": "BEAM_OR_COLUMN",
+    "free_edge_on_box_m": 4.6825,
+    "mark": "B5",
+    "member": "BM-GF-016",
+    "piece_in_box_m2": 0.443392,
+    "r2_depth": "0.5",
+    "r2_status": "CALCULATED",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 2.1432,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-RC99C2A part"
+      ],
+      "on_zone_line_m": 2.1432
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.2485,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.2486,
+      "neighbour_cls": "BEAM",
+      "neighbour_member": "BM-GF-048",
+      "neighbour_r2_depth": 0.85,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0001
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 2.2908,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-RC06FED"
+      ],
+      "on_zone_line_m": 2.2908
+     }
+    ],
+    "slab_face": "GF-150",
+    "t110_depth": "0.5",
+    "t110_status": "CALCULATED"
+   },
+   {
+    "cls": "BEAM_OR_COLUMN",
+    "free_edge_on_box_m": 1.4001,
+    "mark": null,
+    "member": null,
+    "piece_in_box_m2": 0.068217,
+    "r2_depth": "",
+    "r2_status": "NO_REGISTER_ROW",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.5883,
+      "neighbour_cls": "BEAM",
+      "neighbour_member": "BM-GF-048",
+      "neighbour_r2_depth": 0.85,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-SITE-0a31aaa10796d33a"
+      ],
+      "on_zone_line_m": 0.5883
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.2,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.2,
+      "neighbour_cls": "BEAM",
+      "neighbour_member": "BM-GF-048",
+      "neighbour_r2_depth": 0.85,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.6118,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.6118,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     }
+    ],
+    "slab_face": "GF-151"
+   },
+   {
+    "cls": "BEAM_OR_COLUMN",
+    "free_edge_on_box_m": 1.2001,
+    "mark": null,
+    "member": null,
+    "piece_in_box_m2": 0.049437,
+    "r2_depth": "",
+    "r2_status": "NO_REGISTER_ROW",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.5883,
+      "neighbour_cls": "BEAM",
+      "neighbour_member": "BM-GF-048",
+      "neighbour_r2_depth": 0.85,
+      "on_zone_line_between": [
+       "GF-OP-003-NO-OPENING",
+       "GF-RC99C2A part"
+      ],
+      "on_zone_line_m": 0.5883
+     },
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.6118,
+       "GF-RC06FED": 0.0,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 0.0
+      },
+      "m": 0.6118,
+      "neighbour_cls": "BEAM_OR_COLUMN",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     }
+    ],
+    "slab_face": "GF-152"
+   },
+   {
+    "cls": "BEAM_OR_COLUMN",
+    "free_edge_on_box_m": 3.0,
+    "mark": "CB8",
+    "member": "BM-GF-040",
+    "piece_in_box_m2": 0.3,
+    "r2_depth": "0.75",
+    "r2_status": "CALCULATED",
+    "segments": [
+     {
+      "by_piece_m": {
+       "GF-OP-003-NO-OPENING": 0.0,
+       "GF-RC06FED": 1.6,
+       "GF-RC99C2A part": 0.0,
+       "GF-SITE-0a31aaa10796d33a": 1.4
+      },
+      "m": 3.0,
+      "neighbour_cls": "SLAB",
+      "neighbour_member": null,
+      "neighbour_r2_depth": null,
+      "on_zone_line_between": [],
+      "on_zone_line_m": 0.0
+     }
+    ],
+    "slab_face": "GF-170",
+    "t110_depth": "0.75",
+    "t110_status": "CALCULATED"
+   }
+  ],
+  "closure_m2": -1e-06,
+  "m2": 13.5,
+  "net_of_column_m2": 13.455,
+  "pieces_m2": {
+   "GF-RC06FED": 2.800001,
+   "GF-RC99C2A part": 8.955,
+   "OP-003 strip part": 0.6,
+   "SITE-0a31aaa10796d33a": 1.1
+  },
+  "west_to_B3_m": 3.0
+ },
+ "ceiling_lines_on_pieces_v29": [],
+ "inputs": {
+  "P7757.dxf": "ab54dd55",
+  "ST7757.dxf": "9f9d1179",
+  "align_GF_m": [
+   202.3333,
+   841.6415
+  ],
+  "v29_method": "ARCH_TAKEOFF_V2.9"
+ },
+ "inserts_near_box": [
+  {
+   "block": "PAN",
+   "dist_to_box_m": 0.0,
+   "dist_to_strip1_m": 1.31,
+   "dist_to_strip2_m": 0.991,
+   "handle": "178",
+   "layer": "4"
+  },
+  {
+   "block": "D120",
+   "dist_to_box_m": 0.2,
+   "dist_to_strip1_m": 3.4,
+   "dist_to_strip2_m": 3.2,
+   "handle": "33E",
+   "layer": "S-COL.BON"
+  },
+  {
+   "block": "LE",
+   "dist_to_box_m": 0.0,
+   "dist_to_strip1_m": 2.528,
+   "dist_to_strip2_m": 1.862,
+   "handle": "410",
+   "layer": "LEVEL"
+  },
+  {
+   "block": "A$C662819C0",
+   "dist_to_box_m": 0.393,
+   "dist_to_strip1_m": 0.393,
+   "dist_to_strip2_m": 1.538,
+   "handle": "E4",
+   "layer": "4"
+  }
+ ],
+ "strips": [
+  {
+   "above": {
+    "above": {
+     "BEAM": 0.311088,
+     "BEAM_OR_COLUMN": 0.139944,
+     "SLAB": 0.648948
+    },
+    "area_m2": 1.1,
+    "beams": [
+     {
+      "cls": "BEAM",
+      "free_edge_m": 0.842,
+      "l": 0.9609,
+      "mark": "B27",
+      "member": "BM-GF-048",
+      "piece_m2": 0.311088,
+      "r2_depth": "0.85",
+      "r2_status": "CALCULATED",
+      "slab_face": "GF-142",
+      "t110_depth": "0.85",
+      "t110_status": "CALCULATED",
+      "w": 0.5
+     },
+     {
+      "cls": "BEAM_OR_COLUMN",
+      "free_edge_m": 1.4,
+      "l": 1.4,
+      "mark": "CB8",
+      "member": "BM-GF-040",
+      "piece_m2": 0.139944,
+      "r2_depth": "0.75",
+      "r2_status": "CALCULATED",
+      "slab_face": "GF-170",
+      "t110_depth": "0.75",
+      "t110_status": "CALCULATED",
+      "w": 0.1
+     }
+    ],
+    "covered_m2": 1.09998,
+    "openings": [],
+    "perimeter_m": 5.4
+   },
+   "area_m2": 1.1,
+   "edges": [
+    {
+     "drawn": [
+      {
+       "covers_m": 1.4,
+       "handle": "A6",
+       "layer": "1",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 1.4,
+     "role": "WALL_FACE"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 1.3,
+       "handle": "B3",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 1.3,
+     "role": "ROOM_EDGE_OPEN"
+    },
+    {
+     "drawn": [],
+     "length_m": 0.5,
+     "role": "ZONE_LINE_UNDRAWN"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 0.8,
+       "handle": "B4",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.8,
+     "role": "FIXTURE_OUTLINE"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 0.9,
+       "handle": "AA",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.9,
+     "role": "FIXTURE_OUTLINE"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 0.5,
+       "handle": "B2",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.5,
+     "role": "FIXTURE_OUTLINE"
+    }
+   ],
+   "engine": {
+    "area_m2": 1.1,
+    "bounded_by_lm": {
+     "PASSAGE_THRESHOLD": 0.5,
+     "WALL": 1.4,
+     "ZONE_LINE": 3.5
+    },
+    "class": "UNATTRIBUTED",
+    "disposition": "BLOCKED_RFI",
+    "opening_ids": [
+     "OP-003"
+    ]
+   },
+   "id": "GF-SITE-0a31aaa10796d33a",
+   "in_box_m2": 1.1,
+   "in_column_m2": 0.0,
+   "in_east_counter_m2": 1.099906,
+   "in_west_counter_m2": 0.0
+  },
+  {
+   "above": {
+    "above": {
+     "BEAM": 0.038984,
+     "BEAM_OR_COLUMN": 0.56093
+    },
+    "area_m2": 0.6,
+    "beams": [
+     {
+      "cls": "BEAM",
+      "free_edge_m": 0.4485,
+      "l": 0.8569,
+      "mark": "B27",
+      "member": "BM-GF-048",
+      "piece_m2": 0.038984,
+      "r2_depth": "0.85",
+      "r2_status": "CALCULATED",
+      "slab_face": "GF-142",
+      "t110_depth": "0.85",
+      "t110_status": "CALCULATED",
+      "w": 0.2
+     },
+     {
+      "cls": "BEAM_OR_COLUMN",
+      "free_edge_m": 0.2485,
+      "l": 2.2907,
+      "mark": "B5",
+      "member": "BM-GF-016",
+      "piece_m2": 0.4433,
+      "r2_depth": "0.5",
+      "r2_status": "CALCULATED",
+      "slab_face": "GF-150",
+      "t110_depth": "0.5",
+      "t110_status": "CALCULATED",
+      "w": 0.2
+     },
+     {
+      "cls": "BEAM_OR_COLUMN",
+      "free_edge_m": 0.8118,
+      "l": 0.5883,
+      "mark": null,
+      "member": null,
+      "piece_m2": 0.068193,
+      "r2_depth": "",
+      "r2_status": "NO_REGISTER_ROW",
+      "slab_face": "GF-151",
+      "w": 0.2
+     },
+     {
+      "cls": "BEAM_OR_COLUMN",
+      "free_edge_m": 0.6118,
+      "l": 0.5883,
+      "mark": null,
+      "member": null,
+      "piece_m2": 0.049437,
+      "r2_depth": "",
+      "r2_status": "NO_REGISTER_ROW",
+      "slab_face": "GF-152",
+      "w": 0.1681
+     }
+    ],
+    "covered_m2": 0.599914,
+    "openings": [],
+    "perimeter_m": 6.4
+   },
+   "area_m2": 0.6,
+   "edges": [
+    {
+     "drawn": [
+      {
+       "covers_m": 0.2,
+       "handle": "B3",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.2,
+     "role": "ROOM_EDGE_OPEN"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 0.0,
+       "handle": "B3",
+       "layer": "5",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.0,
+     "role": "ROOM_EDGE_OPEN"
+    },
+    {
+     "drawn": [],
+     "length_m": 0.5,
+     "role": "ZONE_LINE_UNDRAWN"
+    },
+    {
+     "drawn": [],
+     "length_m": 2.5,
+     "role": "ZONE_LINE_UNDRAWN"
+    },
+    {
+     "drawn": [
+      {
+       "covers_m": 0.2,
+       "handle": "AF",
+       "layer": "1",
+       "type": "LINE"
+      }
+     ],
+     "length_m": 0.2,
+     "role": "WALL_FACE"
+    },
+    {
+     "drawn": [],
+     "length_m": 3.0,
+     "role": "ZONE_LINE_UNDRAWN"
+    }
+   ],
+   "engine": {
+    "bounded_by_lm": {
+     "COLUMN": 0.2,
+     "PASSAGE_THRESHOLD": 19.64,
+     "WALL": 0.2
+    },
+    "class": "THRESHOLD",
+    "disposition": "BLOCKED_RFI",
+    "opening_ids": [
+     "OP-003"
+    ],
+    "route_box_less_pieces_m2": 0.600094,
+    "routes_agree_m2": 0.000334,
+    "strip": "SITE-baa7db7fb0d465b6",
+    "strip_m2": 1.964
+   },
+   "id": "GF-OP-003-NO-OPENING",
+   "in_box_m2": 0.6,
+   "in_column_m2": 0.0,
+   "in_east_counter_m2": 0.1,
+   "in_west_counter_m2": 0.05811
+  }
+ ]
+}
