@@ -1,0 +1,145 @@
+{
+  "schema": "URBAN_T437_INPUT_V1",
+  "note": "Drawing-derived figures only (metres, by DXF handle or by merged task); no coordinate, no workbook text. His figures are read at run time from tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json (committed) by sheet / row. Drawing: Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179 (own read this run, T-437); pool levels: T-183 r2 (MERGED, NW elevation cut of P7757 dxf + ST p.7).",
+  "parts_t428": {
+    "PL-WALLS": -0.471346,
+    "BM-GF": -0.126242,
+    "BM-1F": -0.153516,
+    "BM-2F": -0.08724,
+    "BW-BAND": -0.1452,
+    "GB-BOUNDARY": -0.0504,
+    "CL-1F": -0.138
+  },
+  "row_total_m3": -1.033946,
+  "pool": {
+    "source": "T-183 r2 s.0 / s.1 / s.2 (MERGED; Checker re-read the cut)",
+    "rim_level": 0.30,
+    "base_top_level": -0.90,
+    "base_thickness": 0.40,
+    "screed": 0.05,
+    "membrane": 0.05,
+    "blinding": 0.10,
+    "deck_finish_level": 0.15,
+    "deck_structure_top_level": 0.10,
+    "finished_floor_level": -0.85,
+    "wall_band_m2": 2.356726,
+    "wall_centreline_m": 11.78363,
+    "engine_wall_m3": 2.828071,
+    "his_rows": {"sheet": "حمام السباحة", "walls_row": 12, "pump_walls_row": 13, "floor_row": 11},
+    "t385_split_m3": {"BASE_AGAIN": -0.94269, "LENGTH": -0.077893, "REST": -0.471346}
+  },
+  "beams": {
+    "source": "T-395 (MERGED) summary marks; runs from the committed V3.0.21 candidate lines through t395_alsenan; edges and outlines own read (T-437)",
+    "sheet": "كمرات",
+    "t395_untraced_m3": {
+      "GF": {"B7": -0.120805, "B2": -0.011152, "B11": 0.00405, "B8": 0.001665},
+      "1F": {"CB12": -0.160962, "B11": 0.007173, "B6": 0.000273},
+      "2F": {"B2": -0.08724}
+    },
+    "t395_through_m3": {"GF:B7": -0.234, "GF:B2": -0.208648, "1F:CB12": -0.254887, "2F:B2": -0.11276},
+    "rounding_rows": {
+      "GF:B11": {"rows": [33], "engine_L_eff_m": 4.577, "section": [0.2, 0.75]},
+      "GF:B8": {"rows": [31], "engine_L_eff_m": 3.5111, "section": [0.2, 0.75]},
+      "1F:B11": {"rows": [71], "engine_L_eff_m": 4.747817, "section": [0.2, 0.75]},
+      "1F:B6": {"rows": [69], "engine_L_eff_m_matched": 4.3722, "section": [0.25, 0.5]}
+    },
+    "CB12_1F": {
+      "his_row": 76,
+      "section": [0.25, 0.75],
+      "engine_valued_m3": 2.021651,
+      "engine_L_eff_m": 10.782147,
+      "engine_L_eff_beyond_bands_m": 0.132147,
+      "edges": {"5DE": 11.75, "5DF": 11.6},
+      "supports_along_axis": {"69D": 0.20, "664": 0.90, "676": 0.25},
+      "carriers": {"south 5C1 / 5C5 width": 0.30, "north 5BE / 5C0 width": 0.20},
+      "constructions_m": {
+        "engine valued length (face to face, columns 69D / 664 / 676 deducted)": 10.782147,
+        "through the interior column 664 (inner faces of 69D and 676)": 11.55,
+        "inner faces of the end carriers 5C5 / 5C0, through 664": 11.5,
+        "east face 5DE as drawn": 11.75,
+        "carrier centre lines (south 0.30, north 0.20)": 11.75,
+        "outer faces of the end carriers 5C1 / 5BE (outermost drawn extent)": 12.0
+      },
+      "t395_allowance_m": 1.3494
+    },
+    "B2_2F": {
+      "his_rows": [86, 87, 88],
+      "section": [0.2, 0.4],
+      "labels_on_runs": {"790": "BAND0003 2.500", "78E": "BAND0005 3.000", "78A": "BAND0007.1 1.800", "775": "BAND0007.2 3.000"},
+      "drawn_runs_m": [2.5, 3.0, 1.8, 3.0],
+      "through_room_items_m": {"gap 418": 0.1995, "column 41E": 0.20, "carrier BAND0006.1": 0.20, "carrier BAND0011.1": 0.20, "carrier BAND0008.1": 0.20, "carrier BAND0009 (x2 ends)": 0.40},
+      "held_2F_runs_no_2_5m": {"BM-2F-019": 4.35, "BAND0011.1": 1.4, "BAND0006.1": 3.1, "BAND0008.1": 1.4}
+    },
+    "B2_GF": {
+      "his_rows": [34, 35, 36],
+      "section": [0.2, 0.4],
+      "runs": {
+        "BAND0024.1 (x 59.9 pair, columns 341 / 32F)": {"f2f": 2.7, "to line 278 (inside 32F)": 2.95, "outer faces 341 + 32F": 3.7, "edge 292": 3.0},
+        "BAND0027 (columns 34A / 356)": {"f2f valued": 2.5025, "edge 2B9": 2.9, "edge 29E": 3.1},
+        "BAND0020.2 (x 57.2 pair, columns 36B / 32C)": {"f2f": 2.7, "to 32C outer face": 3.2, "36B + 32C outer faces": 3.7, "edge 284 (to B20 face, through 36B + B1 0.80)": 4.0, "edge 286 (32C outer face to B20 face, through B1 0.80)": 4.5, "to the B20 centre line": 4.7, "to the B20 far face 458": 4.9}
+      }
+    },
+    "B7_GF": {
+      "his_rows": [25, 40],
+      "section": [0.2, 0.75],
+      "elements_m": {
+        "S1 straight (labels 4B6; columns 33E / 341)": {"f2f": 1.2, "outer faces of 33E / 341": 2.2, "edge 293": 1.8},
+        "A1 quarter arc (block b7 47D; R 1.30 / 1.10)": {"centre line": 1.884956, "outer arc 29F": 2.042035, "inner arc 2A0": 1.727876, "centre + 0.50 strip beyond column 353": 2.384956, "centre + strip + column 356": 2.784956, "outer + strip + column 356": 2.942035},
+        "V1 void straight (label 4D2; faces 46D / 2A9)": {"edge 437": 1.7, "outer faces of B8 / CB1": 2.25},
+        "RG ring at the pool void (labels 46E / 46F / 470 / 471)": {"plan / 0.20": 3.33203, "west inner arc 2F0": 2.674973, "west outer arcs 2EE + 2EF": 1.21469, "east inner arcs 310 + 311": 1.546783, "east outer arcs 312 + 313": 0.833834, "west + east inner arcs": 4.221756, "centre arcs R 1.835 / 1.65": 4.475725}
+      }
+    }
+  },
+  "boundary": {
+    "source": "T-403 (MERGED) and T-065; S-BOUN polylines own read (T-437)",
+    "upper_gb": {
+      "his_row": {"sheet": "الشناجات", "row": 15, "length_cell": "C15"},
+      "his_section": [0.30, 0.60],
+      "7FE_segments_m": [2.45, 31.37, 8.3, 0.2, 8.1, 30.97, 2.25, 0.2],
+      "7FC_axis_m": 1.15,
+      "810_axis_m": 1.2,
+      "constructions_m": {
+        "7FE axis (band area 8.344 / 0.20)": 41.72,
+        "7FE outer run 2.45 + 31.37 + 8.30": 42.12,
+        "7FE inner run 2.25 + 30.97 + 8.10": 41.32,
+        "7FE axis + 7FC": 42.87,
+        "7FE axis + 810": 42.92,
+        "fence band whole (7FE + 7FC + 810)": 44.07
+      },
+      "mixed_m": {
+        "outer 31.37 + 8.30 + inner 2.25": 41.92,
+        "inner 30.97 + outer 8.30 + 2.45": 41.72
+      }
+    },
+    "lower_band": {
+      "his_row": {"sheet": "القواعد", "row": 32, "length_cell": "D32"},
+      "his_section": [0.20, 0.60],
+      "constructions_m": {
+        "axis 91.94 less axis crossings 21.45 (owner method A free length)": 70.49,
+        "inner 1659 91.14 less inner crossings 21.05": 70.09,
+        "outer 1658 92.74 less outer crossings 20.15": 72.59,
+        "axis whole band": 91.94,
+        "frozen basis (side 1 dropped)": 60.17
+      },
+      "mixed_m": {
+        "outer 92.74 less inner crossings 21.05": 71.69,
+        "axis 91.94 less outer crossings 20.15": 71.79
+      }
+    }
+  },
+  "c9": {
+    "source": "T-394 s.2 (MERGED) restated, not re-measured",
+    "members": "1F C9 outlines 667 / 679",
+    "engine_section_m2": 0.18,
+    "his_section_m2": 0.20,
+    "drawn_outline_679_m2": 0.25,
+    "his_height_m": 3.45,
+    "count": 2
+  },
+  "other_rows_part_ids": {
+    "T-430": ["GB-MAIN"],
+    "T-436": ["GS-SLAB", "S-PANEL", "B-CHORD", "B-HIS", "F-006-CHORD", "F-006-STRIP", "F-018-ENDS", "F-018-STRIP", "F-LIFT", "F-ROUND"],
+    "T-444": ["GS-SLAB", "I-07"],
+    "T-445": ["FOOTING", "FT-BLINDING"]
+  }
+}
