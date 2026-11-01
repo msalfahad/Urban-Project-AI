@@ -3,6 +3,43 @@
   {
    "basis_label": "UNSUPPORTED BASIS",
    "binding": "LINE_CONTENT_V1",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.40",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261101T215002-379-30515",
+    "verdict_commit": "3fe8f974"
+   },
+   "downgrade_id": "DG-2ddc451c17d2b589",
+   "engine_qty": 1.152231,
+   "evidence": [
+    {
+     "printed_value": "ground-beam sections titled 'Less than 5m length' 30 x 40 and 'Less then 2.5m length' 30 x 30; no precedence printed (source reference verified in DG-a31a0d7e9dd564ad)",
+     "sheet": "ST7757.pdf p.13"
+    },
+    {
+     "printed_value": "spans 2.325 / 2.400 / 2.450 / 2.4269 m on every frame: both titles hold literally (INSIDE_RANGE); Checker T-426 Gate A",
+     "sheet": "research/agents_t426/CENSUS_T426.json"
+    }
+   ],
+   "line_content_sha256": "dc3aa9327c116fc44a712be84d3d594ac1ff5fad7565c0e6eabc46a6e99ea39d",
+   "line_ids": [
+    "L-0bb78accf8c0a0fbdbaf",
+    "L-0e852cca42fb8b765c58",
+    "L-1487bdda099006e0c4ba",
+    "L-c0b7102a36344a0349f5"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS (issues proposal DGP-T430-GB-D34-SHORT, finding F-T426-1; validated at the Checker's T-430 Gate B): each of the 4 ground-beam lines (spans 2.4269 / 2.400 / 2.450 / 2.325 m, width 0.30, Checker re-read of the line dimensions on the own V3.0.40 reproduction aa6aa927) shows the depth of the ST p.13 section titled 'less than 5m length' (0.40) as its value although the 'less than 2.5m length' title (0.30) also holds literally on its span; the sheet prints no precedence (D-34, designer item RFI S08-S11 group); DG-a31a0d7e9dd564ad holds the 9 lines showing the other end of the same pair. Sum 1.152231 m3, audit range 0.864173 .. 1.152231 m3 (0.75 x; the proposal's 0.864171 corrected by 2e-6). The lines are HELD; their m3 are kept in the audit only; candidate and released V2.9 unchanged.",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-11-01T22:29:23Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "binding": "LINE_CONTENT_V1",
    "candidate_version": "ARCH_TAKEOFF_V3.0.28",
    "checker": {
     "routine": "Verifier",
