@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-01T04:07Z | Worker 1 | SUCCESS | T-408 READY (head f5e4022a) | GF lift tie beam: 5.500 m DRAWING-CONFIRMED on the GF columns (3 sheets, unchanged by D-63), section HELD, MISSING in V3.0.34 (concrete, forms, bars; block hold paired); 12 ring beams 1.764 m3 + cap 0.5184 m3 BOUND, only drift L-755eb56b = T-397 range; F-T408-1/2: pit-wall line L-684fcad3 + 2 WP + 2 formwork lines name 1 or 0 of the 2 height facts (0 m3 effect); proposals P1-P4 for one lane I row, no owner question | selfcheck codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-01T03:50Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPndXQB7US7RNewjLRYM active since 2026-11-01T02:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-01 03:35 UTC | Worker 2 | SUCCESS | T-414 READY @ 3439b2b4 | B3-05 floor bed per room on V3.0.34 (4c7f581c): dry 288.1458 m2 / 19 rows, bed 8.6443 .. 11.5258 m3 (Q-45) CONSISTENT with drawn b 0.05 (bound <= 14.3001 m3, tile thickness HELD); wet 85.5756 m2 / 21 rows, 3.4229 .. 5.1347 m3, drawing HELD; 0 double count; freelancer has no bed row (wet +13.5656 m2 traced: pantry + T-074; dry -49.4242 m2 inherited from B3-01, 16.53 m2 UNRESOLVED entrance / stair hall) | self-check codemap PASS / pytest t061 PASS / freeze PASS; Drive read OK; problem: none
 - 2026-11-01T03:19Z | Worker 1 | STARTED | run session_01E6cPneJpR7QRQx6JBVencP | repo-attached routine | task state: none yet | self-check pending
