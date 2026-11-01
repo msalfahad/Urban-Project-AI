@@ -11,7 +11,8 @@ an accuracy claim; the method (R-T421-1) is for every villa. Drawings are cited 
 Drive "Alsenan chalet project": P7757.dxf from P7757_DXF_COMPRESSED.zip (`ab54dd55`), 'ST7757 dxf.dxf' (`9f9d1179`),
 decoded by the wrapper into `.work/private`. Own fresh `research/agents_t167/v304_run.py`, then
 `research/agents_t421/v3038_run.py` (Python 3.11.18): **V3_0_36 `d462203f` and V3_0_37 `733f2efb` reproduced** (the
-T-246 / T-420 Gate B figures), V3_0_38 written beside them (sha in `summary_t421.json`). Inputs:
+T-246 / T-420 Gate B figures), **V3_0_38_BOQ_LINES.json `57cca61c`** written beside them (4,829 lines;
+`summary_t421.json`, built by `t421_summary.py` from that run). Inputs:
 `research/agents_t421/t421_inputs.py` reads ONLY the merged tables, each pinned by sha256 (SPACE_TABLE_T418.csv,
 T-418 summary.json, STATION_TABLE_T413.csv, T-413 summary.json, ROOM_TABLE_T414.csv, floor_bed_v1.py).
 
@@ -78,18 +79,26 @@ quantities, evidence status, still-held items, merged source and commit).
 | L-20a8e714 / L-77a18286 | bed (restated) | GF-RC99C2A:floor:bed | 109.778417 / 3.293353 .. 4.391137 | 109.478417 / 3.284353 .. 4.379137 (bound 5.473921) | as before | R-T420-1 |
 | L-ebce765b / L-eaa8f305 | bed (restated) | 1F-R78C367:floor:bed | 33.711036 / 1.011331 .. 1.348441 | 33.411036 / 1.002331 .. 1.336441 (bound 1.703963) | as before | R-T420-1 |
 
-Totals moved (only in the codes this package owns): FIN.MARBLE.LIFT_THRESHOLD +1.500 m2 / +3.000 m.l;
-FIN.MARBLE.LIFT_SURROUND HELD 2.750 .. 13.980 m2; FIN.FLOOR.FINISH_HELD +6.1275 m2 valued + 0 .. 0.230 HELD;
-FIN.FLOOR.PORCELAIN +2.200 - 0.300 - 0.300 = **+1.600 m2**; ARCH.THRESHOLD held -0.600 m2 (3 x 0.200 now inside B6-07);
-FIN.MARBLE.LANDING held high -8.6275 m2; FIN.FLOOR.BED.DRY m2 +8.3275 - 0.600 = **+7.7275**, m3 +0.250 .. +0.333 owner
-range net of the restatements (exact figures in `summary_t421.json` totals_moved_by_code).
+Totals moved (only in the codes this package owns; `totals_moved_by_code`, own run):
+
+| Code / unit | V3.0.37 | V3.0.38 | Move |
+|---|---|---|---|
+| FIN.FLOOR.PORCELAIN m2 (valued) | 297.775973 (20 lines) | 299.375973 (21) | +1.600 (+2.200 2F lobby, -0.300 GF, -0.300 1F) |
+| FIN.FLOOR.FINISH_HELD m2 | - | 6.1275 valued + HELD 0 .. 0.230 | new (material HELD) |
+| FIN.MARBLE.LIFT_THRESHOLD | - | 1.500 m2 / 3.000 m.l (3 + 3 lines) | new |
+| FIN.MARBLE.LIFT_SURROUND m2 | - | HELD 2.750 .. 13.980 (3 lines) | new, HELD |
+| ARCH.THRESHOLD m2 (held) | 1.910 .. 1.910 (9 bounded) | 1.310 .. 1.310 (6 bounded) | -0.600 held: the 3 bands now listed inside B6-07 |
+| FIN.MARBLE.LANDING m2 (held high) | 0 .. 20.775001 | 0 .. 12.147501 | -8.6275 (the floor parts left the bounds; valued 10.1019 unchanged) |
+| FIN.FLOOR.BED.DRY m2 | 288.145972 (19) | 295.873472 (22) | +7.7275 |
+| FIN.FLOOR.BED.DRY m3 (owner range) | 8.644379 .. 11.525839 | 8.876204 .. 11.834939 | +0.231825 .. +0.309100 |
 
 ## 5. Diffs and regression
 
-- vs V3.0.37: **4,810 -> 4,826 lines; 16 ADDED, 9 CHANGED (all named above), every other line byte-identical**
+- vs V3.0.37: **4,810 -> 4,829 lines; 19 ADDED, 11 CHANGED (all named above: 3 bands, 2 landing floors, 2 landing
+  bounds, 4 restated bed lines), 4,799 byte-identical**
   (asserted in `integrate()` and `write()`; outside-rows sha256 in the summary). Totals moved only in this package's
   codes (asserted).
-- vs released V2.9 + route G: the 16 added lines are NOT_IN_RELEASED; the changed lines: the GF / 1F porcelain and the
+- vs released V2.9 + route G: the 19 added lines are NOT_IN_RELEASED; the changed lines: the GF / 1F porcelain and the
   bands differ from V2.9 as they already did in V3.0.37 (diff counts in the summary).
 - Older chain guards: the V3.0.14 floor-scope records on the three band lines (TO_THRESHOLD: 'area kept') and on the 1F
   porcelain line (SETTLE_RANGE: 'settled figure') would refuse the ruling the register made after them. They are NOT
@@ -98,6 +107,11 @@ range net of the restatements (exact figures in `summary_t421.json` totals_moved
   1.000 x 0.200; the settled figure = the net before the deduction; the net = that figure - 0.300). Every other V3.0.14
   / V3.0.24 / V3.0.29 / V3.0.36 guard runs unchanged on the V3.0.38 lines and passes (V3.0.24 line-state: the changed
   formulas conclude on their own figure).
+- T-330 deductions check (`tools/t330_deductions_check.py`, unchanged): V3.0.37 4,810 lines 6 FLAG (5 EMPTY, 1
+  NOT_SUMMING) / 0 REFUSED -> V3.0.38 4,829 lines the same 6 FLAG ids / 0 REFUSED: no new finding (the deducted floor
+  lines and the 2F lobby close gross - deductions = net).
+- Export (`tools/boq_export_v1.py`, unchanged) on V3.0.38: 4,829 rows; B6-07 MEASURED UNVERIFIED; B6-06 and the GF
+  strip HELD with their bounds; the three bands EXCLUDED (listed, no quantity); nothing shown as 0.
 - Tests: `tests/t421_stair_lift_integration` (hand villa K421, not Alsenan: 22 + 6 registry tests); L3 folders (s.7 of
   the handoff); L4 full suite on the final commit compared id by id with the working branch.
 

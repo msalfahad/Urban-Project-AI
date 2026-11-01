@@ -1,0 +1,1114 @@
+{
+ "added": 19,
+ "beds_check": {
+  "beds": 43,
+  "by_code": {
+   "FIN.FLOOR.BED.DRY|m2": 22,
+   "FIN.FLOOR.BED.DRY|m3": 22,
+   "FIN.FLOOR.BED.WET|m2": 21,
+   "FIN.FLOOR.BED.WET|m3": 21
+  },
+  "lines": 86
+ },
+ "by_action": {
+  "ADD_BED": 6,
+  "ADD_FLOOR": 3,
+  "ADD_HELD_PART": 1,
+  "ADD_SURROUND": 3,
+  "ADD_THRESHOLD": 6,
+  "DEDUCT_FLOOR": 2,
+  "LIST_BAND": 3,
+  "REDUCE_BOUND": 2,
+  "RESTATE_BED": 4
+ },
+ "changed_line_ids": [
+  "L-084df97d3d41525a65c2",
+  "L-1983e89d8b619eade1db",
+  "L-20a8e714e66725ec03cc",
+  "L-3c5a3be22e861d9d4cfb",
+  "L-5d2be30dd8d2ffeacc42",
+  "L-6f5806adbacba9118497",
+  "L-7625f35c503d9f8e6196",
+  "L-77a1828643912803397f",
+  "L-b06400d46d252f242018",
+  "L-eaa8f30545cb37cac799",
+  "L-ebce765b8341024e776f"
+ ],
+ "diff": {
+  "vs_released_v2_9": {
+   "NOT_IN_RELEASED": 3239,
+   "QUANTITY_DIFFERS": 957,
+   "SAME_QUANTITY": 633
+  },
+  "vs_v3_0_37": {
+   "ADDED": 19,
+   "CHANGED": 11,
+   "SAME": 4799
+  }
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.37",
+ "landing_check": {
+  "bounds": 2,
+  "parts_moved": 3
+ },
+ "lift_check": {
+  "edge_lm": 3.0,
+  "floor_deducted_certain_m2": 0.9,
+  "floor_held_more_m2": 0.6,
+  "overlap_m2": 0.0,
+  "stations": 3,
+  "surround_high": 13.98,
+  "surround_low": 2.75,
+  "threshold_m2": 1.5
+ },
+ "method": "ARCH_TAKEOFF_V3.0.38",
+ "outside_rows_identical_to_v3_0_37": 4799,
+ "outside_rows_sha256": "83947e434f5668e9b50f71a7a9f96b67390fcea5fee644350ec23fb043123e88",
+ "released_default": false,
+ "replaced": 11,
+ "rows": [
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-GF",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-c32effca1d7eae7f36f8",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 0.5
+   }
+  },
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-GF:edge",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-f2b76041971aa9e86acb",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.0
+   }
+  },
+  {
+   "action": "ADD_SURROUND",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-GF:surround",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "line_id": "L-b66b8e76425d81ff9f19",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [
+    {
+     "range": [
+      1.0,
+      5.0
+     ],
+     "what": "FIN.MARBLE.LIFT_SURROUND ELV-01-GF"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 5.0,
+    "low": 1.0,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "LIST_BAND",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-011",
+   "evidence_status": "NOT_APPLICABLE",
+   "floor": "GF",
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-6f5806adbacba9118497",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 0.2,
+    "low": 0.2,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "DEDUCT_FLOOR",
+   "change": "CHANGE",
+   "deductions": [
+    {
+     "id": "L-c32effca1d7eae7f36f8",
+     "qty": 0.3
+    }
+   ],
+   "element_id": "GF-RC99C2A:floor",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.2
+     ],
+     "what": "FIN.FLOOR.PORCELAIN GF-RC99C2A:floor threshold floor part beyond the certain 0.3 m2"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 118.733284
+   },
+   "v3_0_37": {
+    "state": "PROVISIONAL",
+    "value": 109.778417
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 109.478417
+   }
+  },
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-1F",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "1F",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-9840d1da235dd7583427",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 0.5
+   }
+  },
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-1F:edge",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-64dd750f95ead1a38c9a",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.0
+   }
+  },
+  {
+   "action": "ADD_SURROUND",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-1F:surround",
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "line_id": "L-d788f643b290e8f92558",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [
+    {
+     "range": [
+      1.0,
+      4.7
+     ],
+     "what": "FIN.MARBLE.LIFT_SURROUND ELV-01-1F"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 4.7,
+    "low": 1.0,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "LIST_BAND",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:1F:OP-007",
+   "evidence_status": "NOT_APPLICABLE",
+   "floor": "1F",
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-084df97d3d41525a65c2",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 0.2,
+    "low": 0.2,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "DEDUCT_FLOOR",
+   "change": "CHANGE",
+   "deductions": [
+    {
+     "id": "L-9840d1da235dd7583427",
+     "qty": 0.3
+    }
+   ],
+   "element_id": "1F-R78C367:floor",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-b06400d46d252f242018",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.2
+     ],
+     "what": "FIN.FLOOR.PORCELAIN 1F-R78C367:floor threshold floor part beyond the certain 0.3 m2"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 44.869353
+   },
+   "v3_0_37": {
+    "state": "SOURCE_DERIVED",
+    "value": 33.711036
+   },
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 33.411036
+   }
+  },
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-2F",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "2F",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-eba7ac43f3fce9bbd0b5",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 0.5
+   }
+  },
+  {
+   "action": "ADD_THRESHOLD",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-2F:edge",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "line_id": "L-e29e57482abbca2266b0",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.0
+   }
+  },
+  {
+   "action": "ADD_SURROUND",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "LIFT:ELV-01-2F:surround",
+   "evidence_status": "HELD",
+   "floor": "2F",
+   "item_code": "FIN.MARBLE.LIFT_SURROUND",
+   "line_id": "L-fdbd9636828f045aae5a",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [
+    {
+     "range": [
+      0.75,
+      4.28
+     ],
+     "what": "FIN.MARBLE.LIFT_SURROUND ELV-01-2F"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 4.28,
+    "low": 0.75,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "LIST_BAND",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-002",
+   "evidence_status": "NOT_APPLICABLE",
+   "floor": "2F",
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-3c5a3be22e861d9d4cfb",
+   "piece": "LIFT_ENTRANCE",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 0.2,
+    "low": 0.2,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "ADD_FLOOR",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-HALL",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "line_id": "L-f53d498668da3dc7c228",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": null,
+     "what": "FIN.FLOOR.FINISH_HELD GF-R31F8AE:GF-ST-HALL material"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 4.805
+   }
+  },
+  {
+   "action": "ADD_FLOOR",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-LOBBY030",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "line_id": "L-b4441a1b55eda53d98ea",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": null,
+     "what": "FIN.FLOOR.FINISH_HELD GF-R31F8AE:GF-ST-LOBBY030 material"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.3225
+   }
+  },
+  {
+   "action": "ADD_FLOOR",
+   "change": "ADD",
+   "deductions": [
+    {
+     "id": "L-eba7ac43f3fce9bbd0b5",
+     "qty": 0.3
+    }
+   ],
+   "element_id": "2F-R4D1B62:2F-ST-LOBBY",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-9bd25c0cec9da3a8f4d2",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.2
+     ],
+     "what": "FIN.FLOOR.PORCELAIN 2F-R4D1B62:2F-ST-LOBBY threshold floor part beyond the certain"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 2.2
+   }
+  },
+  {
+   "action": "ADD_HELD_PART",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-CN",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.FINISH_HELD",
+   "line_id": "L-a788de4672b1f0d2e6c1",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.23
+     ],
+     "what": "FIN.FLOOR.FINISH_HELD GF-R31F8AE:GF-ST-CN"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 0.23,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "REDUCE_BOUND",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:landings",
+   "evidence_status": "HELD",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.LANDING",
+   "line_id": "L-1983e89d8b619eade1db",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      2.9225
+     ],
+     "what": "FIN.MARBLE.LANDING GF-R31F8AE:landings"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": 9.05,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 9.05,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "high": 2.9225,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "REDUCE_BOUND",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "2F-R4D1B62:landings",
+   "evidence_status": "HELD",
+   "floor": "2F",
+   "item_code": "FIN.MARBLE.LANDING",
+   "line_id": "L-5d2be30dd8d2ffeacc42",
+   "piece": "STAIR_ROOM_FLOOR",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      9.225001
+     ],
+     "what": "FIN.MARBLE.LANDING 2F-R4D1B62:landings"
+    }
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": 11.725001,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 11.725001,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "high": 9.225001,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-HALL:bed",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-3e451bfc3e11473a2cec",
+   "piece": "FLOOR_BED",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 4.805
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-HALL:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-bff6fe38b9392a8fcad6",
+   "piece": "FLOOR_BED",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.24025
+     ],
+     "what": "FIN.FLOOR.BED.DRY GF-R31F8AE:GF-ST-HALL:bed drawn layer"
+    }
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 0.1922,
+    "low": 0.14415,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-LOBBY030:bed",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-faa974d23d90547f0b5b",
+   "piece": "FLOOR_BED",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 1.3225
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "GF-R31F8AE:GF-ST-LOBBY030:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-b87fd07d7fc055529b3d",
+   "piece": "FLOOR_BED",
+   "still_held": [
+    {
+     "range": null,
+     "what": "FIN.FLOOR.BED.DRY GF-R31F8AE:GF-ST-LOBBY030:bed drawn layer"
+    }
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 0.0529,
+    "low": 0.039675,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "2F-R4D1B62:2F-ST-LOBBY:bed",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-35520a1ac94f8780dd66",
+   "piece": "FLOOR_BED",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 2.2
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "change": "ADD",
+   "deductions": [],
+   "element_id": "2F-R4D1B62:2F-ST-LOBBY:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-6ad86fb8cffae1db8883",
+   "piece": "FLOOR_BED",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      0.11
+     ],
+     "what": "FIN.FLOOR.BED.DRY 2F-R4D1B62:2F-ST-LOBBY:bed drawn layer"
+    }
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": null,
+   "v3_0_38": {
+    "high": 0.088,
+    "low": 0.066,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "RESTATE_BED",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "GF-RC99C2A:floor:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-20a8e714e66725ec03cc",
+   "piece": "FLOOR_BED",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "state": "PROVISIONAL",
+    "value": 109.778417
+   },
+   "v3_0_38": {
+    "state": "PROVISIONAL",
+    "value": 109.478417
+   }
+  },
+  {
+   "action": "RESTATE_BED",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "GF-RC99C2A:floor:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-77a1828643912803397f",
+   "piece": "FLOOR_BED",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      5.473921
+     ],
+     "what": "FIN.FLOOR.BED.DRY GF-RC99C2A:floor:bed drawn layer"
+    }
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 4.391137,
+    "low": 3.293353,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "high": 4.379137,
+    "low": 3.284353,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "RESTATE_BED",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "1F-R78C367:floor:bed",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-ebce765b8341024e776f",
+   "piece": "FLOOR_BED",
+   "still_held": [],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "state": "SOURCE_DERIVED",
+    "value": 33.711036
+   },
+   "v3_0_38": {
+    "state": "SOURCE_DERIVED",
+    "value": 33.411036
+   }
+  },
+  {
+   "action": "RESTATE_BED",
+   "change": "CHANGE",
+   "deductions": [],
+   "element_id": "1F-R78C367:floor:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-eaa8f30545cb37cac799",
+   "piece": "FLOOR_BED",
+   "still_held": [
+    {
+     "range": [
+      0.0,
+      1.703963
+     ],
+     "what": "FIN.FLOOR.BED.DRY 1F-R78C367:floor:bed drawn layer"
+    }
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_37": {
+    "high": 1.348441,
+    "low": 1.011331,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_38": {
+    "high": 1.336441,
+    "low": 1.002331,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  }
+ ],
+ "task": "T-421",
+ "totals_moved_by_code": {
+  "ARCH.THRESHOLD|m2": {
+   "v3_0_37": {
+    "blocked_lines": 8,
+    "bounded_lines": 9,
+    "held_high": 1.91,
+    "held_low": 1.91,
+    "lines": 17,
+    "released": 0.0
+   },
+   "v3_0_38": {
+    "blocked_lines": 8,
+    "bounded_lines": 6,
+    "held_high": 1.31,
+    "held_low": 1.31,
+    "lines": 14,
+    "released": 0.0
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m2": {
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 19,
+    "released": 288.145972
+   },
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 295.873472
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m3": {
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 19,
+    "held_high": 11.525839,
+    "held_low": 8.644379,
+    "lines": 19,
+    "released": 0.0
+   },
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 22,
+    "held_high": 11.834939,
+    "held_low": 8.876204,
+    "lines": 22,
+    "released": 0.0
+   }
+  },
+  "FIN.FLOOR.FINISH_HELD|m2": {
+   "v3_0_37": null,
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 1,
+    "held_high": 0.23,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 6.1275
+   }
+  },
+  "FIN.FLOOR.PORCELAIN|m2": {
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 297.775973
+   },
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 21,
+    "released": 299.375973
+   }
+  },
+  "FIN.MARBLE.LANDING|m2": {
+   "v3_0_37": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 20.775001,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 10.1019
+   },
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 12.147501,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 10.1019
+   }
+  },
+  "FIN.MARBLE.LIFT_SURROUND|m2": {
+   "v3_0_37": null,
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 13.98,
+    "held_low": 2.75,
+    "lines": 3,
+    "released": 0.0
+   }
+  },
+  "FIN.MARBLE.LIFT_THRESHOLD|lm": {
+   "v3_0_37": null,
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 3.0
+   }
+  },
+  "FIN.MARBLE.LIFT_THRESHOLD|m2": {
+   "v3_0_37": null,
+   "v3_0_38": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 3,
+    "released": 1.5
+   }
+  }
+ },
+ "v3_0_37_boq_lines_sha256": "733f2efbda151a5f83a71c1ac8a8b0ca6eac9b98557904b7b58caa146b5f6616",
+ "v3_0_37_lines": 4810,
+ "v3_0_38_boq_lines_sha256": "57cca61c9fbfc96807af52ee232bc182126b3621170db7db264192bba55cfc31",
+ "v3_0_38_lines": 4829
+}
