@@ -91,3 +91,45 @@ RESULT: the 0.15 m upturn and the upturn door deduction are reachable from NO re
 | Date | What went wrong | Cause | Rule | Scope | Test | Task |
 |---|---|---|---|---|---|---|
 | 2026-11-02 | three engine modules and the base rule library still state a 0.15 m wet upturn with door deduction after the owner set 0.20 m / no deduction | superseded values left as module constants instead of reading the rule store; one policy id reused by two modules with opposite rules | a quantity parameter that an owner rule governs is read from rule_store LATEST_APPROVED at call time, never a module constant; a superseding module gets a NEW unique POLICY_ID and lists the sites it supersedes; reachability is shown at run time, not only by static imports | every villa, waterproofing (and any rule-governed parameter) | tests/t458_wet_upturn (normal 2.000 m2, adverse 1.380 m2 not reproduced, two doors same upturn, mm/mirror/rotation, HELD never 0, id uniqueness, candidate closure guard) | T-458 |
+
+## 7. r2 (worker 1, 2026-11-02, after the Verifier's r1 REJECT 04:57Z, gates d / f / h)
+
+Cause of the reject: r1 implemented UP-WP-002 2.0.0 but not the LATEST record of UP-WP-003 (1.1.0, rule store 1.5.0,
+MANDATORY): "doorway floor piece = door width x wall depth, part of the floor waterproofing area; the doorway segment of
+the upturn (UP-WP-002 v2.0.0) is its own row; where the project detail puts the 0.20 m coverage inside the doorway
+piece, only one is billed"; unknown -> DOORWAY_CONTINUATION_NOT_ESTABLISHED. r1 folded the segment into the upturn and
+always billed a separate FIN.WP.DOORWAY piece beside it (+0.160 m2, +8.0 % on the fixture), and a test pinned it.
+
+Physical element: at a wet-room door the membrane leaves the floor face, crosses the wall depth (the doorway floor
+piece, w x t) and, along the door line, the 0.20 m upturn coverage (the doorway segment, w x 0.20) is built either inside
+that piece (the same membrane: one quantity) or as a separate return (two pieces). Which one is a project detail, not a
+default.
+
+r2 wet() rows (engine/source/waterproofing_policy_v2.py): FIN.WP.FLOOR = ROOM_FACE + one DOORWAY_PIECE row per door
+(part_of_floor_area True); FIN.WP.UPTURN = BOUNDARY_RUN_EXCL_DOORWAYS ((boundary incl. crossings - door widths) x 0.20)
++ one DOORWAY_SEGMENT row per door (w x 0.20); doorway_detail per door: COVERAGE_INSIDE_PIECE -> the piece is billed (it
+contains the segment; the larger of the two when the wall is deeper than 0.20 m) and the segment row is NOT_BILLED with
+covered_by; SEPARATE_RETURN -> both billed; None or an unrecognised value -> the segment row HELD
+DOORWAY_CONTINUATION_NOT_ESTABLISHED (if_billed_m2 shown; never 0, never both by default). The run + all segments always
+equal the whole boundary x 0.20 (no door deduction, UP-WP-002 never-list); splitting needs every door width, so an
+unknown width HELDs the run (whole_boundary_m2 kept for the record) and that door's rows.
+
+Fixture 3.00 x 2.00 m, one 0.80 m door, 0.20 m wall (hand): face 6.000; piece 0.160; run 9.200 x 0.20 = 1.840;
+segment 0.160. SEPARATE_RETURN 6.160 + 2.000 = 8.160 m2; COVERAGE_INSIDE_PIECE 6.160 + 1.840 = 8.000 m2 (r1 8.160:
+-0.160 m2 = the double-billed doorway); not established 6.160 + 1.840 MEASURED + 0.160 HELD. Wall 0.25 m, coverage
+inside: piece 0.200 billed once, total 6.000 + 0.200 + 1.840 = 8.040 m2.
+
+F-C-T458-1 (urban_methods reached but unread): SUPERSEDED now records reached_by_candidate True / read False for the
+urban_methods site; tests assert (i) urban_methods is in the AST closure of arch_v3040 and arch_v3041, (ii) the only
+"wet_upturn_m" in engine / tools is its definition at urban_methods.py:43, nothing resolves the roof method, and the
+only UM*.resolve() caller is footing_rebar_population_v1 (its own stock-length rule).
+
+Not covered (stated, not assumed): a door between TWO wet rooms (Q-35 addendum; Lead reading "one doorway line per door,
+not per room side", not owner-confirmed) - wet() is per wet area, so a caller passing the same door to both rooms would
+bill its piece / segment twice; the integration that wires this producer must pass a shared door to ONE room only, or
+the Lead raises it under ERS s.2.7. Candidate quantities unchanged (the module is still an UNWIRED_PRODUCER).
+
+Proposed lessons-register row (ERS s.7, from the Verifier): "a NEW version of a rule-implementing module implements the
+LATEST rule-store record of EVERY rule it cites (here UP-WP-003 1.1.0), not only the one the task names; a test pinning
+a double count as expected is a gate failure" - scope every villa / every rule-implementing module; test
+tests/t458_wet_upturn::test_adverse_coverage_inside_the_piece_is_billed_once.
