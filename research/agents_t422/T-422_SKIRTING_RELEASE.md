@@ -16,6 +16,12 @@ python3 -I research/agents_t167/v304_run.py <P7757.dxf> <ST7757 dxf.dxf> --out <
 python3 -I research/agents_t422/v3044_run.py <P7757.dxf> <ST7757 dxf.dxf> --out <private>/t422 --t167 <private>/t167
 ```
 
+V3_0_43_BOQ_LINES.json of this run = the candidate of record **`6f534d5e`** (byte for byte); V3_0_44_BOQ_LINES.json
+**`8b2fe2b6`** (summary_t422.json: identity, every row before / after, totals moved). Diff vs V3.0.43: 4,848 SAME
+(outside rows sha256 `b277f656..`), 9 CHANGED, 1 ADDED; totals moved only in FIN.SKIRTING|lm. T-330 check
+(tools/t330_deductions_check.py, unchanged): V3.0.43 6 FLAG / 0 REFUSED -> V3.0.44 6 FLAG / 0 REFUSED (the same 6
+V3.0.32 ceiling lines; no new FLAG).
+
 `t422_inputs.py` builds URBAN_V3044_INPUTS_V1 ONLY from the merged T-296 files, pinned by sha256 (an edited file stops):
 WINDOW_CAUSES_T296.csv (`4ed39b96`), LINE_LEDGER_T296.csv (`cd76f184`), ROOMS_T296.csv (`2fc2ca2c`); T-296 MERGED
 57c31ae4, Verifier 2026-10-25 16:08 UTC Gate A PASS (own re-measure 1F-01 15.900 lm, W14 sill 1.40 AGREE). The ledger
