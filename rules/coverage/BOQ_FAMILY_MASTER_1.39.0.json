@@ -1003,11 +1003,11 @@
     "engine/source/arch_measure.py:506-557 FIN.SKIRTING per room (released, bounded or held)",
     "commit a51bdca (T-106 skirting deduction audit, verifier run 40): all released nets right; 20 of 28 lines do not list 17.035 m of deductions; engine/source/skirting_deduction_audit.py:196 audit() read by no method",
     "engine/source/arch_v3041.py:533 changes_for(): a piece cut off by a prolonged zone edge becomes one room floor line, the zone lines give the parts up by id (RETIRE / SHRINK), its bed pair, skirting rows and ceiling lines in the same step; engine/source/arch_v3041.py:643 check_pieces(): floor = parts, each part given up once, bed m2 = net, skirting rows close, decor + unread = floor, paint = decor; tests/t431_zone_extent_integration/test_arch_v3041.py:113 test_hand_figures_k431() (K431 by hand)",
-    "engine/source/arch_v3044.py:458 changes_for(): T-296 window readings by line id: a sill above the floor releases the listed halves into the room's line and carries its range line there, floor glazing / a wet base leaves the held range, a missing dry-room line is HELD BLANK; engine/source/arch_v3044.py:537 check_skirting(): released lines close and rose by the edges only, absorbed lines carry no figure, narrowed lines stay held, missing lines blank; tests/t422_skirting_release/test_arch_v3044.py:121 (K422 by hand)"
+    "engine/source/arch_v3044.py:463 changes_for(): T-296 window readings by line id: a sill above the floor releases the listed halves into the room's line and carries its range line there, floor glazing / a wet base leaves the held range, a missing dry-room line is HELD BLANK; engine/source/arch_v3044.py:542 check_skirting(): released lines close and rose by the edges only, absorbed lines carry no figure, narrowed lines stay held, missing lines blank; tests/t422_skirting_release/test_arch_v3044.py:121 (K422 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.SKIRTING",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.41 (engine/source/arch_v3041.py, opt-in candidate; pending Gate B, T-431) | ARCH_TAKEOFF_V3.0.44 (engine/source/arch_v3044.py, opt-in candidate; pending Gate B, T-422)",
-   "missing": "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id | in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 3 out of the ranges); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK",
+   "missing": "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id | in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 2 out of a range); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -6273,7 +6273,7 @@
    "changes_families_by_item_code": [
     "FIN.SKIRTING"
    ],
-   "note": "T-422 (research/agents_t422/T-422_SKIRTING_RELEASE.md): the Checker-verified T-296 skirting readings: W04 / W14 / W24 / W29 (sill above the floor, printed or drawing-confirmed) released into their rooms' determinate lines, +5.802094 lm, the four range lines that held them carried there (NOT_APPLICABLE); W15 / W16 floor glazing (-3.10464 lm) and the wet-pantry W09 (-1.5 lm) out of the held ranges; the 1F dressing a named HELD BLANK line (never 0); every other V3.0.43 line byte-identical; the Gate B integration package",
+   "note": "T-422 (research/agents_t422/T-422_SKIRTING_RELEASE.md): the Checker-verified T-296 skirting readings: W04 / W14 / W24 / W29 (sill above the floor, printed or drawing-confirmed) released into their rooms' determinate lines, +5.802094 lm, the four range lines that held them carried there (NOT_APPLICABLE); W15 / W16 floor glazing out of the 1F living held range (-3.10464 lm; W09 already out since V3.0.21); the 1F dressing a named HELD BLANK line (never 0); every other V3.0.43 line byte-identical; the Gate B integration package",
    "task_commit": "a4d928bd5c1b2c173249d643a6923f2bf272e542"
   }
  ]
