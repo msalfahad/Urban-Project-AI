@@ -62,7 +62,7 @@ _fmt = A3030._fmt
 RULE_ID, RULE_VERSION = "R-T350-1", "T-350"
 REC_KEY = "earthworks_v3043"
 P_ZONE, P_RANGE = "EW_ZONE", "RANGE_FIX"
-EXC, BKF, DSP = "EARTH.EXCAVATION", "EARTH.BACKFILL", "EARTH.DISPOSAL"
+EXC, BKF, DSP = "STR.EARTH.EXCAVATION", "STR.EARTH.BACKFILL", "STR.EARTH.DISPOSAL"
 FAMILY_CODE = {"B1-02": EXC, "B1-03": BKF, "B1-04": DSP}
 ITEM_TEXT = {EXC: ("Excavation (by zone)", "حفريات", "excavation"),
              BKF: ("Backfill and compaction (by zone)", "ردم ودك", "backfill"),

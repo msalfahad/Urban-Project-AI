@@ -14,8 +14,10 @@ integrates: T-347, T-356, T-357, T-320, T-170
 Drive "Alsenan chalet project": P7757.dxf from P7757_DXF_COMPRESSED.zip (`ab54dd55`) and 'ST7757 dxf.dxf' (`9f9d1179`),
 decoded by the wrapper into `.work/private`. Own fresh `research/agents_t167/v304_run.py`, then
 `research/agents_t350/v3043_run.py` (Python 3.11.18): **V3_0_42_BOQ_LINES.json `1793266d` reproduced** (= the T-442
-Gate B candidate, 4,839 lines); **V3_0_43_BOQ_LINES.json `aec251a3`** (4,857 lines; `summary_t350.json` by
-`t350_summary.py`). Inputs: `t350_inputs.py` reads ONLY the merged FILL / coefficient files, pinned by sha256.
+Gate B candidate, 4,839 lines); **V3_0_43_BOQ_LINES.json `6f534d5e`** (4,857 lines; `summary_t350.json` by
+`t350_summary.py`). The full hub run on 54770249 reproduced the direct module calls byte for byte (then `aec251a3`); the
+only later change renames the three codes to STR.EARTH.* (the code-literal census scans the STR prefix; L4 finding), so
+the lines were rebuilt by the same module calls on the same V3.0.42 file (`6f534d5e`); the hub wiring is unchanged. Inputs: `t350_inputs.py` reads ONLY the merged FILL / coefficient files, pinned by sha256.
 
 ```
 .work/venv/bin/python -I research/agents_t167/v304_run.py <P7757.dxf> <ST7757.dxf> --out <private>/t167
@@ -101,10 +103,10 @@ identity `lines_in_two_zones`.
 
 - vs V3.0.42: 18 ADDED, 2 CHANGED, 4,837 SAME (byte-identical, asserted; outside-rows sha in RUN.json).
 - vs released V2.9: the 18 earthworks lines NOT_IN_RELEASED; released V2.9 untouched.
-- Totals moved: EARTH.EXCAVATION 12 / EARTH.BACKFILL 5 / EARTH.DISPOSAL 1 lines, all blocked, 0 released, 0 held range;
+- Totals moved: STR.EARTH.EXCAVATION 12 / STR.EARTH.BACKFILL 5 / STR.EARTH.DISPOSAL 1 lines, all blocked, 0 released, 0 held range;
   STR.CONC.BLINDING held 5.879177 .. 10.784391 -> 5.501374 .. 10.925198 m3 (released 15.179437 unchanged);
   STR.CONC.STRAP held 0.0295 .. 0.5031 -> 0.0295 .. 0.6533 m3 (released 3.3905 unchanged). Asserted: no other code.
-- Downstream: coverage B1-02 / 03 / 04 now own EARTH.* (BOQ_FAMILY_MASTER_1.38.0, pending); the trade scoreboard /
+- Downstream: coverage B1-02 / 03 / 04 now own STR.EARTH.* (BOQ_FAMILY_MASTER_1.38.0, pending); the trade scoreboard /
   export see a new trade EARTHWORKS with held lines only (no released figure); T-445 (footing blinding) unaffected.
 - Engine vs freelancer: earthworks missing from BOTH; verdict UNRESOLVED (formation, working space: RFI S1 / OQ-13).
 
@@ -115,7 +117,12 @@ identity `lines_in_two_zones`.
   condition, minimum read as the founding level, unknown family / bound / source, zone twice, line twice, stale bound
   line, stale / valued range line, low > high, EG assumed, applied twice, tampered valued earthworks line, project
   mismatch, formula ending on a figure; zone order mirrored; committed FILL builds 18 held zones; master 1.38.0.
-- L3 / L4 results: in the board handoff (commit named there).
+- L3 on 7ac09daf: 1887 passed, 22 skipped, 2 xfailed, 0 failed. L4 full suite on 7ac09daf: 7 failed; 5 are the known
+  T-465 import-rule failures (r8_0 / r8_1 / r8_2), failing identically on the base 08d47b84; 2 were this package's and are
+  fixed: the census guard of master 1.30.0 (a new code prefix EARTH outside the scanned prefixes -> codes renamed
+  STR.EARTH.*) and the T-459 candidate binding (its committed census of later arch_v30* modules rebuilt by its own tool
+  `t459_census.py candidate --write`: one new key arch_v3043.py with no lap token; later_steps_touching stays []). After
+  the fix: every test folder that scans code literals or masters (37 folders) 1375 passed, 0 failed.
 
 ## 8. Rule and proposed lessons row (ERS s.7)
 

@@ -135,9 +135,9 @@ def test_every_other_line_byte_identical_and_totals(tmp_path):
     assert ident["outside_rows_identical_to_v3_0_42"] == len(l42) - 1
     run_ = json.loads((tmp_path / "V3_0_43_RUN.json").read_text(encoding="utf-8"))
     moved = run_["totals_moved_by_code"]
-    assert set(moved) == {"EARTH.EXCAVATION|m3", "EARTH.BACKFILL|m3", "EARTH.DISPOSAL|m3", "STR.CONC.BLINDING|m3"}
-    assert moved["EARTH.EXCAVATION|m3"]["v3_0_43"]["released"] == 0 and \
-        moved["EARTH.EXCAVATION|m3"]["v3_0_43"]["blocked_lines"] == 3
+    assert set(moved) == {"STR.EARTH.EXCAVATION|m3", "STR.EARTH.BACKFILL|m3", "STR.EARTH.DISPOSAL|m3", "STR.CONC.BLINDING|m3"}
+    assert moved["STR.EARTH.EXCAVATION|m3"]["v3_0_43"]["released"] == 0 and \
+        moved["STR.EARTH.EXCAVATION|m3"]["v3_0_43"]["blocked_lines"] == 3
     b = moved["STR.CONC.BLINDING|m3"]
     assert b["v3_0_42"]["released"] == b["v3_0_43"]["released"] == 0.656
     assert b["v3_0_43"]["held_high"] == pytest.approx(0.30)

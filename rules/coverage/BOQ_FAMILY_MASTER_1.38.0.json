@@ -124,7 +124,7 @@
    ]
   }
  },
- "item_code_scan": "every quoted item code in engine/source/*.py and tools/urban_boq_m9.py, except the item master engine/source/boq_line.py and the census map engine/source/coverage_census.py, is owned by exactly one family ('item_codes') or listed in 'item_codes_without_family'; a NOT_IMPLEMENTED family owns no written code and no engine/source function name carries one of its 'name_terms' (tests/t130_family_master) | from 1.25.0 the same two guards run at full strength against this registry in tests/t199_formwork_metalwork/test_family_master_1_25_0.py; the 1.1.0 checks exempt only what the governing (newest) registry owns or moved, and only while it passes them | r3: the 1.25.0 guard scans the MET. prefix too, and every UPPER.UPPER code literal of the V3.0.30 module must fall in a scanned prefix (a package cannot open an unscanned prefix again) | 1.26.0 (T-328): the guard scans every prefix found in the V3.0.x modules (STR / FIN / ARCH / MAS / DOOR / MET / EXT / WP / FLOOR / WATERPROOFING), and every UPPER.UPPER literal of every engine/source/arch_v30*.py module must be owned by one family or listed apart (tests/t328_roof_buildup/test_family_master_1_26_0.py); the family list is 100 (B13-08 appended) | 1.27.0 (T-284): same scan; FIN.CEILING.BULKHEAD -> B5-04, FIN.PAINT.CEILING -> B4-06, FIN.STAIR.SOFFIT -> new B7-15, FIN.DOME.SOFFIT -> new B5-06 (blank held lines only); 102 families | 1.28.0 (T-397): same scan; V3.0.33 writes no new code (STR.CONC.LIFT for the lift-pit wall line is B10-10's) | 1.29.0 (T-399): same scan; V3.0.34 writes no new code (it restates one FIN.PAINT line, B4-06's) | 1.30.0 (T-400): same scan; V3.0.35 writes EXT.FENCE.* (B13-04) and STR.CONC.BOUNDARY_PAD (B10-11) and restates one STR.CONC.GROUND_BEAM line (B10-04's) | 1.31.0 (T-246): same scan; V3.0.36 writes no new item code (lists only) | 1.32.0 (T-420): same scan; V3.0.37 writes FIN.FLOOR.BED.DRY / .WET (B3-05) | 1.33.0 (T-421): same scan; V3.0.38 writes FIN.FLOOR.FINISH_HELD (B3-01), FIN.MARBLE.LIFT_THRESHOLD (B6-07), FIN.MARBLE.LIFT_SURROUND (B6-06) | 1.34.0 (T-429): same scan; V3.0.39 writes no new code | 1.35.0 (T-430): same scan; V3.0.40 writes no new code (it adds two STR.CONC.GROUND_BEAM lines, B10-04's) | 1.36.0 (T-431): same scan; V3.0.41 writes no new code (its added lines are FIN.FLOOR.PORCELAIN, FIN.FLOOR.BED.DRY, FIN.CEILING, FIN.PAINT.CEILING and FIN.CEILING.BULKHEAD, each already owned) | 1.37.0 (T-442): same scan; V3.0.42 writes no new code (its added line is STR.CONC.GROUND_SLAB, already owned) | 1.38.0 (T-350): V3.0.43 writes three new codes EARTH.EXCAVATION / EARTH.BACKFILL / EARTH.DISPOSAL (trade EARTHWORKS), owned by B1-02 / B1-03 / B1-04",
+ "item_code_scan": "every quoted item code in engine/source/*.py and tools/urban_boq_m9.py, except the item master engine/source/boq_line.py and the census map engine/source/coverage_census.py, is owned by exactly one family ('item_codes') or listed in 'item_codes_without_family'; a NOT_IMPLEMENTED family owns no written code and no engine/source function name carries one of its 'name_terms' (tests/t130_family_master) | from 1.25.0 the same two guards run at full strength against this registry in tests/t199_formwork_metalwork/test_family_master_1_25_0.py; the 1.1.0 checks exempt only what the governing (newest) registry owns or moved, and only while it passes them | r3: the 1.25.0 guard scans the MET. prefix too, and every UPPER.UPPER code literal of the V3.0.30 module must fall in a scanned prefix (a package cannot open an unscanned prefix again) | 1.26.0 (T-328): the guard scans every prefix found in the V3.0.x modules (STR / FIN / ARCH / MAS / DOOR / MET / EXT / WP / FLOOR / WATERPROOFING), and every UPPER.UPPER literal of every engine/source/arch_v30*.py module must be owned by one family or listed apart (tests/t328_roof_buildup/test_family_master_1_26_0.py); the family list is 100 (B13-08 appended) | 1.27.0 (T-284): same scan; FIN.CEILING.BULKHEAD -> B5-04, FIN.PAINT.CEILING -> B4-06, FIN.STAIR.SOFFIT -> new B7-15, FIN.DOME.SOFFIT -> new B5-06 (blank held lines only); 102 families | 1.28.0 (T-397): same scan; V3.0.33 writes no new code (STR.CONC.LIFT for the lift-pit wall line is B10-10's) | 1.29.0 (T-399): same scan; V3.0.34 writes no new code (it restates one FIN.PAINT line, B4-06's) | 1.30.0 (T-400): same scan; V3.0.35 writes EXT.FENCE.* (B13-04) and STR.CONC.BOUNDARY_PAD (B10-11) and restates one STR.CONC.GROUND_BEAM line (B10-04's) | 1.31.0 (T-246): same scan; V3.0.36 writes no new item code (lists only) | 1.32.0 (T-420): same scan; V3.0.37 writes FIN.FLOOR.BED.DRY / .WET (B3-05) | 1.33.0 (T-421): same scan; V3.0.38 writes FIN.FLOOR.FINISH_HELD (B3-01), FIN.MARBLE.LIFT_THRESHOLD (B6-07), FIN.MARBLE.LIFT_SURROUND (B6-06) | 1.34.0 (T-429): same scan; V3.0.39 writes no new code | 1.35.0 (T-430): same scan; V3.0.40 writes no new code (it adds two STR.CONC.GROUND_BEAM lines, B10-04's) | 1.36.0 (T-431): same scan; V3.0.41 writes no new code (its added lines are FIN.FLOOR.PORCELAIN, FIN.FLOOR.BED.DRY, FIN.CEILING, FIN.PAINT.CEILING and FIN.CEILING.BULKHEAD, each already owned) | 1.37.0 (T-442): same scan; V3.0.42 writes no new code (its added line is STR.CONC.GROUND_SLAB, already owned) | 1.38.0 (T-350): V3.0.43 writes three new codes STR.EARTH.EXCAVATION / STR.EARTH.BACKFILL / STR.EARTH.DISPOSAL (trade EARTHWORKS), owned by B1-02 / B1-03 / B1-04",
  "item_codes_without_family": {
   "ARCH.EXTERIOR": "the area of an exterior space (garden, court, roof) as a register line; its waterproofing is FIN.WP.* (B8-06 / B8-07) and it carries no finish of its own",
   "STR.CONC.OTHER": "declared in the item master (engine/source/boq_line.py) for a route G family outside the map; no module writes it",
@@ -232,7 +232,7 @@
     "candidate_run_v2_13": []
    },
    "item_codes": [
-    "EARTH.EXCAVATION"
+    "STR.EARTH.EXCAVATION"
    ],
    "note": "1.0.0 and 1.0.0-derived r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding (merged, tested code measures the footprints) | 1.38.0 (T-350): moved by the pending ARCH_TAKEOFF_V3.0.43 package (Gate B); the released capability of V2.9 + route G is unchanged",
    "in_v3_0_candidate_1_1_0": "no",
@@ -272,7 +272,7 @@
     "candidate_run_v2_13": []
    },
    "item_codes": [
-    "EARTH.BACKFILL"
+    "STR.EARTH.BACKFILL"
    ],
    "name_terms": [
     "backfill",
@@ -316,7 +316,7 @@
     "candidate_run_v2_13": []
    },
    "item_codes": [
-    "EARTH.DISPOSAL"
+    "STR.EARTH.DISPOSAL"
    ],
    "name_terms": [
     "disposal",
@@ -6256,9 +6256,9 @@
     "tests/t350_earthworks_integration"
    ],
    "changes_families_by_item_code": [
-    "EARTH.EXCAVATION",
-    "EARTH.BACKFILL",
-    "EARTH.DISPOSAL",
+    "STR.EARTH.EXCAVATION",
+    "STR.EARTH.BACKFILL",
+    "STR.EARTH.DISPOSAL",
     "STR.CONC.BLINDING",
     "STR.CONC.STRAP"
    ],

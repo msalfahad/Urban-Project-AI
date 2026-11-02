@@ -7,8 +7,8 @@ Why a new version: the V3.0.43 module (engine/source/arch_v3043.py) is newer tha
 package cannot name its merge commit or checker verdict before the Checker merges it, so V3.0.43 is declared PENDING
 (READY_FOR_GATE_B, its task commit), raises no candidate state and names no family in a candidate block.
 
-Families V3.0.43 touches: B1-02 excavation, B1-03 backfill, B1-04 disposal (item codes EARTH.EXCAVATION /
-EARTH.BACKFILL / EARTH.DISPOSAL now owned; evidence, opt-in reader, missing / note text: every line HELD BLANK with the
+Families V3.0.43 touches: B1-02 excavation, B1-03 backfill, B1-04 disposal (item codes STR.EARTH.EXCAVATION /
+STR.EARTH.BACKFILL / STR.EARTH.DISPOSAL now owned; evidence, opt-in reader, missing / note text: every line HELD BLANK with the
 proved bound beside), B1-01 site clearance (note only: NOT IN DRAWN SCOPE on the development villa, T-357, no line),
 B10-01 blinding (the strap blinding held range 0 .. 0.912684, text only), B10-03 straps (the SB3-in-F3 held range,
 text only). No capability, owner or candidate state changes; no quantity changes with this file.
@@ -36,7 +36,7 @@ PENDING = {
     "task": "T-350", "method_version": "ARCH_TAKEOFF_V3.0.43", "module": V3043,
     "status": FMC.PENDING_STATUS, "integrates": ["T-347", "T-356", "T-357", "T-320", "T-170"],
     "tests": ["tests/t350_earthworks_integration"],
-    "changes_families_by_item_code": ["EARTH.EXCAVATION", "EARTH.BACKFILL", "EARTH.DISPOSAL", "STR.CONC.BLINDING",
+    "changes_families_by_item_code": ["STR.EARTH.EXCAVATION", "STR.EARTH.BACKFILL", "STR.EARTH.DISPOSAL", "STR.CONC.BLINDING",
                                       "STR.CONC.STRAP"],
     "note": "T-350 (research/agents_t350/T-350_EARTHWORKS_INTEGRATION.md): the MISSING earthworks categories from the "
             "Checker-verified T-347 FILL table: 18 zone lines (B1-02 x 12, B1-03 x 5, B1-04 x 1), every one HELD "
@@ -50,7 +50,7 @@ PENDING = {
 PROPOSED = ("1.38.0 (T-350): moved by the pending ARCH_TAKEOFF_V3.0.43 package (Gate B); the released capability of "
             "V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.43 (engine/source/arch_v3043.py, opt-in candidate; pending Gate B, T-350)"
-EW_CODES = {"B1-02": "EARTH.EXCAVATION", "B1-03": "EARTH.BACKFILL", "B1-04": "EARTH.DISPOSAL"}
+EW_CODES = {"B1-02": "STR.EARTH.EXCAVATION", "B1-03": "STR.EARTH.BACKFILL", "B1-04": "STR.EARTH.DISPOSAL"}
 TOUCH = {
     "B1-01": None,
     "B1-02": "in the opt-in candidate V3.0.43: 12 zone lines, all HELD BLANK (formation only a minimum, Q-21 C; "
@@ -138,8 +138,8 @@ def build(task_commit):
     for code, mv in moves({f["code"]: f for f in old["families"]}).items():
         _move(by[code], mv, new["capability_states"])
     _recount(new)
-    new["item_code_scan"] += (" | 1.38.0 (T-350): V3.0.43 writes three new codes EARTH.EXCAVATION / EARTH.BACKFILL / "
-                              "EARTH.DISPOSAL (trade EARTHWORKS), owned by B1-02 / B1-03 / B1-04")
+    new["item_code_scan"] += (" | 1.38.0 (T-350): V3.0.43 writes three new codes STR.EARTH.EXCAVATION / STR.EARTH.BACKFILL / "
+                              "STR.EARTH.DISPOSAL (trade EARTHWORKS), owned by B1-02 / B1-03 / B1-04")
     return new
 
 
