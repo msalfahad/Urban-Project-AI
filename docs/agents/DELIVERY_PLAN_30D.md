@@ -46,7 +46,22 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-11-02 08:35; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-11-02 12:30; recovery plan in force: milestones 10 / 12-13 / 19-20 / 25 Nov replace the 19 Nov target)
+
+- Since 08:35: 5 merged (T-442 Gate B -> candidate V3.0.42: ground slab valued 17.241 -> 21.638 m3; T-449 r2 and T-459
+  unwired; T-456, T-463 r2), 1 rejected (T-465 r2). Whole lines VERIFIED: 1 (slab 60.280 m3) candidate, 0 released.
+- Step 1 (EIMP): part 1 scope list done (EIMP_SCOPE_2026-11-02.md); part 2 = T-471, worker 2, target Checker-validated
+  by 8 Nov.
+- Step 2 (integration): stream S (worker 3) T-350 -> T-353 -> T-419 -> T-382 -> T-474 p2; stream F (worker 1) T-422 ->
+  T-443 -> T-423 -> T-424 -> T-310 -> T-314 -> T-364 -> T-363 -> T-372; new scope rows T-474 / T-475 / T-476. 15
+  packages in 8 days at most one Gate B per Checker run: 10 Nov is AT RISK. Order inside each stream follows the owner
+  priority: verified quantities first, then missing categories (stream S starts with a missing category, earthworks;
+  stream F's missing categories (external plaster, spatter dash, accessories, mortar) sit at its end: the Lead
+  re-checks on 4 Nov whether to pull them forward).
+- Step 3 (T-469): merged; restate after each quantity merge. Step 4 (T-180): continuing. Step 5 (materials): queued
+  behind T-448. Step 6 (T-452 / T-449): worker 1 after stream F.
+
+### Earlier status (Lead, 2026-11-02 08:35; re-estimated each run from what merged and was verified)
 
 - Gate 0 (protection): MERGED T-467, T-470, T-462, T-473, T-458 r2. Open: T-463 r2 and T-465 r2 (both rejected once
   today, narrow rework), T-456 reproduction, then T-464 and T-466. At one worker 2 run per 2 h, T-463 r2 lands about

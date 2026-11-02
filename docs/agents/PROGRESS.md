@@ -1,12 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 08:35 UTC (Lead). Previous version: 2026-11-02 04:15 UTC. The released numbers did not change
+Last update: 2026-11-02 12:30 UTC (Lead). Previous version: 2026-11-02 08:35 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. Footing line: 25 of 26 footings verified (64.30 m3), the last waits on the designer. The candidate of
-record is now V3.0.41 (not released).
+released: 0. The candidate of record is now V3.0.42 (not released).
 
-Since 2 Nov 04:15 (newest first; seven checked and merged, two sent back for a narrow fix, nothing waiting for the
+Since 2 Nov 08:35 (newest first; five checked and merged, one sent back, nothing waiting for the checker):
+- The scope list for the 10 Nov full BOQ is written (first step of your recovery plan): every trade of your scope
+  freeze, which BOQ family carries it, its state in the candidate and the task that moves it. Three items had no task
+  and now have one: formwork (all of it is held today, none valued), lift marble, and handrails along the stair slope.
+  The architectural worker turns the list into the full measurement plan next.
+- Two integration streams now run side by side as you approved: structural (earthworks first) and finishes (skirting
+  release first), one package each at a time, the other stream's lines checked unchanged at every merge.
+- Ground slab: the panel around the lift shaft (3.56 m3) and the strip under the curved stair (0.84 m3) are now IN THE
+  CANDIDATE: CHECKED AND MERGED (checker re-measured both). Ground slab valued 17.24 -> 21.64 m3 against the
+  freelancer's 29.55 (-41.7 % -> -26.8 %); the rest stays held with its reason.
+- Reinforcement corrections turned into general rules: CHECKED AND MERGED (2,110 of 2,325 reproduced by general rules,
+  12 named but not yet coded; released steel unchanged to 0.003 kg). Not yet wired into the candidate.
+- Lap length by element class (your 40 d columns / 60 d beams, slabs, footings) and the exact lap count: CHECKED AND
+  MERGED, not yet wired. On this villa no bar run exceeds a 12 m stock bar in the engine's records, so the count fix
+  moves 0 kg here; the checker asked for the count to be re-done on physical continuous runs before wiring.
+- Two small fixes merged (a finish-material unit error that squared m2 twice, unreachable from both BOQs; a history
+  helper that now says 'unknown' instead of 'yes').
+- Sent back: the replacement PDF reader for the licence issue is not identical to the old one on your real drawings
+  (text boxes of vertical text differ by up to 9 pt); it must either match exactly or prove the window heights do not
+  move.
+- A test that guards the accurate / rough split of reinforcement figures now fails because three new modules were not
+  declared; a fix task is first in line.
+
+Earlier, since 2 Nov 04:15 (newest first; seven checked and merged, two sent back for a narrow fix, nothing waiting for the
 checker):
 - Project corrections for concrete turned into general rules: CHECKED AND MERGED. Of 83 per-project concrete
   corrections, 66 are now reproduced by general rules plus declared project facts (19 valued lines agree to the 4th
@@ -1672,16 +1694,15 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-01 20:17)
-- Checker: each piece as it is handed in: the ground-beam section correction (into the candidate) first; structural
-  pieces never wait more than two of its runs.
-- Structural (worker 1): pool walls, beam lengths and boundary (1.03 m3 unexplained); the slab panel around the lift
-  shaft (3.56 m3 held by an engine reading); footing blinding (the checked 12.73 m3 that no line carries yet).
-- Architecture and finishes (worker 2): the two pantry strips (ceiling and skirting reason); the ceiling / skirting check
-  re-run on today's candidate; the held stair-room faces (divider, reveal) and three small findings.
-- Integration (worker 3): ground-beam section fix, dining floor strip + ceiling, slab under the curved stair, then lift
-  tie beam / block below the house beams, skirting release, stair-room skirting split, nosing, waterproofing, one at a
-  time.
+(Lead 2026-11-02 12:30)
+- Checker: each piece as it is handed in (the reinforcement test fix first), then the earthworks package, then the
+  skirting release; the rest of every run on independent line closures (concrete, then reinforcement, then blockwork).
+- Structural stream (worker 3): earthworks lines (excavation, backfill, disposal, held where the existing ground level
+  is unknown), then foundation waterproofing, lift tie beam, lap rule wiring; formwork scope census alongside.
+- Finishes stream (worker 1): skirting release, then stair-room skirting, ceilings and thresholds, nosing, wet-room
+  waterproofing, external plaster, spatter dash, block accessories, joint mortar; lift marble census alongside.
+- Architectural worker (worker 2): the reinforcement test fix, the full measurement plan on the new scope list, the PDF
+  reader rework.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

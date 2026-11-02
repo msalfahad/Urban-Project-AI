@@ -1,34 +1,40 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Seeded by the main chat 2026-11-02 ~11:10 UTC (token plan Stage 1). From the next Lead run on: read this file, then
-only what changed since the commits below (`git -C .work/engine log 6a13827f..`, `git -C .work/board log 93849af5..`,
-RUN_LOG lines after 11:10 UTC, rows changed since then), then rewrite this file.
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 4aaa9be0..`,
+`git -C .work/board log <board commit of this run>..`, RUN_LOG lines after 12:24Z, rows changed since), then rewrite.
 
 ## Last seen
-- engine: 6a13827f (candidate ARCH_TAKEOFF_V3.0.40; released V2.9 + route G unchanged)
-- board: 93849af5
-- last Lead run: 2026-11-02 08:30 UTC (before the recovery plan was committed)
+- engine: 4aaa9be0 (candidate of record ARCH_TAKEOFF_V3.0.42 json 1793266d; released V2.9 + route G unchanged)
+- board: this run's final commit (Lead 2026-11-02 12:35, after b138050a)
+- last Lead run: 2026-11-02 12:24-12:40 UTC (session_01E6cPndAGwkDktsTpnqxF4W)
 
-## Live rows (34 open: 26 QUEUED, 3 TODO, 2 CLAIMED, 2 PAUSED, 1 IN PROGRESS)
-- CLAIMED: T-449 round 2 (Worker 3, 11:01); T-465 r2 (Worker 2, 10:41)
-- TODO: T-445, T-459, T-471
+## Live rows (READY 0, CLAIMED 0 at 12:35)
+- TODO 9: worker 1 (stream F) T-422, T-475, T-445; worker 2 T-477 (gate fix), T-471 (EIMP part 2), T-465 r3, T-464;
+  worker 3 (stream S) T-350, T-474 (part 1)
 - IN PROGRESS: T-180 (Checker standing slot)
-- PAUSED: T-451, T-472 (recovery plan)
+- PAUSED: T-450 part 2, T-451, T-472 (recovery plan)
+- MERGED rows kept open for acceptance: T-449 (wiring, round 3), T-459 (wiring in T-382)
+- Lane order (board note 12:30): W1 T-422, T-475, T-445, T-443, T-476, T-423, T-424, T-310, T-314, T-364, T-363,
+  T-372, T-452, T-449, T-457 | W2 T-477, T-471, T-465, T-464, T-466, T-383, T-461, T-460, T-448, T-453..T-455 |
+  W3 T-350, T-474, T-353, T-419, T-382, T-468
 
-## Top 5 priorities (recovery plan, MISSION top section)
-1. T-471 part 1: EIMP + component register (scope list for the 10 Nov BOQ).
-2. Integration stream S (structural: T-350, T-353, T-419, T-442, formwork) and stream F (finishes: V3.0.41 package,
-   T-363, T-364, T-314, T-372, T-424, T-443, T-310). NOTE: Worker 3 is on T-449 round 2 (generalisation); the
-   recovery plan puts Worker 3 on stream S. Decide the stream assignment this run.
-3. T-469: released-concrete statement by structural family + all-trade aggregation.
-4. T-180: independent closures (concrete -> rebar -> blockwork), each with an independent sum, under the
-   Checker conditions of the 'RFI RE-REVIEW 2026-11-02' board note.
-5. Open ONE row for each scope item with none: formwork integration, lift marble, handrails.
+## Top 5 priorities
+1. T-471 EIMP part 2 on EIMP_SCOPE_2026-11-02.md (worker 2; Checker-validated by 8 Nov).
+2. Stream S T-350 earthworks Gate B, then T-353 / T-419 / T-382 (+T-459 lap rule) / T-474 part 2.
+3. Stream F T-422 skirting release (rebases after T-350 merges), then T-443 ...; re-check on 4 Nov whether to pull the
+   missing categories (T-314, T-364, T-363, T-372) ahead of T-423 / T-424.
+4. T-477 gate fix (firewall declarations) so the working head is green.
+5. T-180 closures (concrete -> rebar -> blockwork) with independent sums; restate T-132 after the next quantity merge.
+
+## Rules decided this run (keep)
+- Shared files (tools/urban_boq_m9.py, BOQ_FAMILY_MASTER next version, BOQ export) are held by T-350 until it merges;
+  stream F builds without them and adds its registration in the rebase commit. Version number allotted at merge.
+- Queue check reads 'after T-nnn' anywhere in the status cell (history too): write history as 'behind T-nnn'.
+- Write stamps from `date -u` at the moment of writing (two slips this run, corrected before commit).
 
 ## Blockers
-- No genuine RFI open (8 resolved internally or estimated; Checker conditions pending).
-- Repository still PUBLIC (owner action).
+- None from the owner. Designer items keep lines HELD, never block integration.
 
 ## Open owner items
-- Make the repository private; merge PR #3; delete merged branches (owner actions).
-- Stage 2 of the token plan after 10 Nov (cards, board split, prompt rewrite, Worker 3 role).
+- Repository privacy switch; released-path PyMuPDF decision (after T-465 r3); PR #3 / merged-branch clean-up.
+- Stage 2 of the token plan after 10 Nov.
