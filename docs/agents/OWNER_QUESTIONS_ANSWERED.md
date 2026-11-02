@@ -867,6 +867,8 @@ show more steps on the lower floor height (practice, not a code clause). Keep th
 upper flights the last step runs 0.20 m into beams B20 / B23 at the head.
 WAITS ON: main-stair concrete steps, marble treads / risers and riser height on every villa where section and plans differ (T-084, T-056).
 
+ANSWER (owner 2026-10-19 22:40, recorded in OWNER_SESSION_CHANGES.md; copied here 2026-11-02 by the main chat so this register holds every answer): A: section A-A step counts govern (27 ground to first, 25 first to second); the plans are a check, and their disagreement goes to an RFI.
+
 ### Q-47 Stairs: is the "T 16" written inside the stair panels the thickness of the sloping slab and the landings? (worker 3 2026-10-19 21:25; T-084, T-056; no-assumptions question)
 
 THE PROBLEM: your Q-20 answer asks for the sloping slab (waist) and landings from the stair detail. The structural stair

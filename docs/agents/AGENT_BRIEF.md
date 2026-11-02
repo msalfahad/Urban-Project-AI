@@ -49,8 +49,9 @@ text is in MISSION.md, OWNER_QUESTIONS.md (answered index) and OWNER_SESSION_CHA
 | Tile bed | 3-4 cm floors, 4-6 cm bathrooms, 1:4 | Q-45 |
 | Bars per metre / spacing | drawing-based counting (spacing, first-link offset, support face, zones); also for footings | Q-71 |
 
-Every other answered rule: grep its Q-id in the "Answered" index of OWNER_QUESTIONS.md, then
-OWNER_QUESTIONS_ANSWERED.md.
+This table is a summary, not a source of truth. The authoritative register of every answered owner decision (78,
+checked complete 2026-11-02) is OWNER_QUESTIONS_ANSWERED.md: grep your task's topic or Q-id there. Read only the Open
+section of OWNER_QUESTIONS.md.
 
 ## Checker gates (full text in the Checker prompt)
 - Gate A (piece): no frozen or version-file edit, no weakened test, no client data; targeted tests pass; freeze 0;
@@ -68,7 +69,8 @@ OWNER_QUESTIONS_ANSWERED.md.
   since those commits.
 
 ## Report limits (owner 2026-11-02, from today)
-- Worker handoff: at most 5 lines.
+- Worker handoff: at most 600 characters; full calculations, tests and evidence stay in the task's artifacts. The
+  Checker flags a longer handoff; length alone never invalidates verified engineering work.
 - Lead report: at most 20 lines.
 - Owner package: at most 5 items of at most 10 lines.
 - Owner question (only when the resolution order cannot settle it), at most 10 lines: issue, options, recommendation,
