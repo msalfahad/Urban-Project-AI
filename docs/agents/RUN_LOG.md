@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02 12:51 UTC | Worker 2 | SUCCESS | T-477 READY (agents/task-T-477 @ f580191d) | gate fix: firewall id engine_is_declared reproduced FAILING on 4aaa9be0 (3 undeclared modules), green on head: rebar_lap_rule_v2 + rebar_basis_rules_v1 declared ACCURATE, waterproofing_policy_v2 OTHER_REBAR_AWARE; adverse undeclared-module test added; no BOQ quantity moved | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-02 12:48 UTC | Worker 2 | STARTED | run session_01E6cPncSPH4YqXYeHUZbW1V | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T12:36Z | Lead | SUCCESS | board | Since 08:38: 5 MERGED (T-442 Gate B -> candidate V3.0.42, GS 17.241 -> 21.638 m3; T-449 r2, T-459 unwired; T-456, T-463 r2), 1 REJECTED (T-465 r2 -> TODO r3 with exact fault). EIMP part 1 scope list done (EIMP_SCOPE_2026-11-02.md); streams S = worker 3 (T-350 first), F = worker 1 (T-422 first), shared files held by T-350; NEW T-474 formwork, T-475 lift marble, T-476 handrails, T-477 gate fix (firewall id fails on 4aaa9be0); T-464 released, T-450 p2 PAUSED; T-471 ahead of T-465; owner package none; queue check: 34 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-02T12:24Z | Lead | STARTED | run session_01E6cPndAGwkDktsTpnqxF4W | repo-attached routine | task state: board | report pending
