@@ -169,18 +169,68 @@ procurement quantity).
 | Wall plaster height | to the underside of the structural slab | owner 2026-11-02 |
 | Wall paint height | stops at the finished ceiling level; plaster and paint measured separately, also in stairwells where the exposed ceiling geometry differs | owner 2026-11-02 |
 | Stair shaft | full exposed wall heights continuously through the stairwell, reconciled wall by wall | owner 2026-11-02 (Q-72) |
-| Tile adhesive | 20 kg bag (Q-45 photo, BSCO Nite 20 kg +-5 %); 120 x 60 porcelain: 3 m2 per bag (Urban site coverage, used instead of the manufacturer's nominal 5 m2); normal tiles: 5 m2 per bag (Q-45); bags = ceil(area / coverage) per tile type; any extra waste shown separately | owner 2026-10-19 (Q-45) and 2026-11-02 |
+| Tile adhesive | BSCO NITE, 20 kg bag: normal tiles incl. 60 x 60 = 5 m2 per bag; 120 x 60 = 3 m2 per bag; 160 x 80 = 3 m2 per bag (Urban practical consumption, not the manufacturer's nominal 5 m2); net area, consumption, extra waste and procurement kept separate; bags rounded UP per product at the PURCHASING GROUP (project / product), room quantities preserved, never per-room rounding summed | owner 2026-10-19 (Q-45) and consolidated 2026-11-02 |
 | Black block | physical 40 x 19 x 19, sold as 40 x 20 x 20; installed module incl. joints; 12.5 per m2 for the 40 x 20 installed module; waste separate | owner 2026-11-02 (Q-75) |
 | Black-block mortar | 1:4 with the Q-45 figures (about 8 x 50 kg cement and 1.1 m3 loose sand per m3) | owner 2026-11-02 (Q-78) |
 | Floor tile bed | 3-4 cm regular floors, 4-6 cm bathrooms (Q-45); 1:4 with the Q-45 figures | owner 2026-10-19 (Q-45) |
 | White AAC glue | 15 cm block 3.5 kg/m2 (about 7.1 m2 per 25 kg bag); 20 cm block 4.5 kg/m2 (about 5.6 m2 per bag) | owner 2026-11-02 |
 | Lintels | lengths 1.20 / 1.50 / 2.50 / 3.00 / 4.00 m; length = masonry opening + both bearings (e.g. 1.10 + 0.20 + 0.20 = 1.50 m); one per opening, priced in pieces; long spans: bearing and capacity from supplier load / span tables or the drawings, else FLAGGED | owner 2026-11-02 |
 
-NOT GIVEN BY THE OWNER (missing inputs; use drawing / specification values where printed, otherwise escalate, never
-invent and never attribute to the owner): thickness and mix (or yield) of spatter dash, of the levelling render and of
-wall plaster; water quantities (an engineering assumption unless specified); the 15 cm black block face; the adhesive
-coverage of tile sizes other than 120 x 60 that are not 'normal' (160 x 80 and 60 x 60 are classed by the earlier owner
-instruction of 2026-11-02: 160 x 80 at 3 m2, 60 x 60 as normal at 5 m2 unless the owner says otherwise).
+NOT GIVEN BY THE OWNER (superseded by the consolidated directive below): thickness / mix / yield of spatter dash, levelling render and wall plaster, and water: search the project specification and the company rulebook first; if silent, use a DOCUMENTED ENGINEERING ESTIMATING METHOD shown with its assumption, calculation and sensitivity, labelled ENGINEERING ESTIMATE (never owner-attributed, never VERIFIED procurement); the earlier 2 cm 1:4 wet-wall render was an ENGINE ASSUMPTION, and the 1:4 black-block mortar rule applies to black-block mortar only. The 15 cm black block face comes from the block schedule, project evidence or supplier data; if the installed module is 40 x 20, 12.5 per m2 applies.
+
+
+## Consolidated owner directive 2026-11-02: understand before calculating (supersedes the separate 2 Nov messages on these topics; binds every agent)
+
+**Governing principle.** Engineering interpretation comes BEFORE quantity takeoff. For every new project (and for
+future candidate validation), the responsible agent reads the complete drawing package (architectural, structural,
+elevations, sections, schedules, reinforcement details, sanitary drawings, specifications), cross-references sheets,
+and writes a **PROJECT ENGINEERING INTERPRETATION & MEASUREMENT PLAN (EIMP)**: expected components, construction
+methods, applicable rules (with the hierarchy level used), measurement formulas, material calculations, drawing
+evidence, genuine unresolved exceptions. The EIMP is validated by the Checker before downstream quantity generation.
+Owner questions are asked only for what the documents and rules cannot settle. Owner: T-471 (EIMP + completeness).
+
+**Rule hierarchy (per project):** 1 approved project drawings / specifications / schedules / details; 2 explicit
+owner-approved project decisions; 3 OWNER CONFIRMED Urban Projects company rules; 4 documented engineering measurement
+and estimating methods where 1-3 are silent; 5 explicit unresolved exceptions. Conflicting project documents: apply
+revision and precedence, cross-check, escalate a genuine contradiction; never pick a convenient value. Project rules
+override company defaults FOR THAT PROJECT ONLY (A1 class B declared facts) and never change the company rulebook.
+Owner confirmation of a practice is not structural design or engineering approval. Every quantity carries its source:
+PROJECT DOCUMENT / OWNER PROJECT DECISION / OWNER CONFIRMED COMPANY RULE / ENGINEERING ESTIMATE / ASSUMPTION-UNRESOLVED.
+The **Urban Projects Company Rulebook** is the version-controlled rule set built by T-448 on the engine branch (new
+versions only); the register above is its index on the board.
+
+**Wet-area walls** (bathrooms, kitchens, pantries, laundry, ironing rooms and other designated wet areas): spatter dash
+(plasterer), levelling render (tiler), adhesive + porcelain (tiler) are distinct BOQ operations; no second mortar
+fixing bed where render + adhesive are the specified method; porcelain to the project finish height under the
+established wet-area rules unless the drawings say otherwise; no paint and no skirting on fully tiled faces.
+**Heights:** plaster to the structural slab / roof underside (above suspended ceilings too); paint to the finished
+ceiling line only; stair shafts from sections, levels, landings and roof geometry with no room-height deductions;
+every wall face reconciled to the totals.
+**Cement-based materials:** cement bags, sand m3, water (where defensible), mortar / render volume, waste and
+procurement for each activity, from thickness, mix, density, yield and conversion factors (sources per the hierarchy);
+estimates shown with assumption, calculation and sensitivity; structural or safety-critical data never guessed; a
+missing non-critical procurement parameter never blocks the rest of the BOQ.
+**Black blocks:** nominal 20 cm block about 40 x 19 x 19, installed module about 40 x 20, 12.5 per m2 for a confirmed
+40 x 20 module; 15 cm face from schedule / evidence / supplier, same 12.5 if the module is 40 x 20; gross area,
+openings, net, theoretical count, breakage / waste and procurement count traceable separately; black-block mortar rule
+where applicable.
+**Lintels (عتب):** white AAC walls usually white precast lintels; black block walls black precast or cast-in-situ RC
+lintels as the drawings require (company convention, not structural design). Precast: opening, wall type, masonry
+opening, approved bearing each side, lintel type, approved stock length; measured by count, type, length; no 20 cm
+bearing assumed universally; never forced into an unsuitable stock length. Cast-in-situ: concrete m3 (length x width x
+depth, actual geometry), reinforcement kg from approved details (diameters, counts, lengths, anchorage, bends, laps,
+stirrups; never invented), formwork m2. Beside RC columns: no assumed bearing on a 10 cm masonry strip; a designed
+connection (dowels / anchorage; post-installed only with an approved detail; monolithic only per the approved
+arrangement) or FLAGGED. Before adding a lintel, check whether a structural beam already serves the opening; every
+opening reconciled against masonry, architectural and structural schedules; no concrete / rebar counted under both
+beams and lintels.
+**Completeness and aggregation:** as 'Owner instruction 2026-11-02: BOQ completeness and aggregation' above, plus:
+components map exactly once except legitimate separate trade measurements; different units are never summed; the
++-3 % trade accuracy against the reconciled reference continues alongside.
+**Uncertainty process:** search drawings and specifications -> cross-reference -> project decisions -> company rulebook
+-> documented estimating method -> flag only genuine unresolved issues; estimated quantities are shown with
+assumptions and a confidence class instead of being omitted; never manufactured structural details, never VERIFIED to
+clear a question.
 
 ## How accuracy is scored (never "95 % of categories pass")
 
