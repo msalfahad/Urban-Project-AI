@@ -19,6 +19,9 @@ import pytest
 from engine.source import cover_authority as CA
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "d1_2_footing_cover_audit"
 R = ROOT / "research"
@@ -112,6 +115,7 @@ def test_frozen_s4_s4_1_and_other_stages_are_immutable(summary):
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF)  # the builder reads these private drawings
     man = J(PKG / "D1_2_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in man["outputs"]}
     before["D1_2_FREEZE_MANIFEST.json"] = (PKG / "D1_2_FREEZE_MANIFEST.json").read_bytes()

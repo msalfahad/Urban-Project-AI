@@ -21,6 +21,9 @@ from engine.source import cover_authority as CA
 from engine.source import slab_rebar_readiness as SR
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_slab_rebar_pre_s7"
 R = ROOT / "research"
@@ -129,6 +132,7 @@ def test_frozen_stages_are_immutable(summary):
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF)  # the builder reads these private drawings
     man = J(PKG / "PRE_S7_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in man["outputs"]}
     before["PRE_S7_FREEZE_MANIFEST.json"] = (PKG / "PRE_S7_FREEZE_MANIFEST.json").read_bytes()

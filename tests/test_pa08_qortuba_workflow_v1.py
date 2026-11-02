@@ -15,6 +15,9 @@ from research.qs_wall_treatment_01 import protocol as PR
 from research.qs_wall_treatment_01.pa08.qortuba.boq import (approved_quantities as AQ, opening_source_search as OS,
                                                             owner_questions as OQ)
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR,)  # experiment outputs, git-ignored
+
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 CERAMIC_ROWS = ("Q-05", "Q-06", "Q-10")
 DRY_GAPS = ("OS-77f8fed2eb15", "OS-85cb2192ebc0")

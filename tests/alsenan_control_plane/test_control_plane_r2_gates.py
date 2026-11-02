@@ -40,6 +40,11 @@ from engine.source import release_model_v2 as R  # noqa: E402
 from engine.source import schedule_grammar as SG  # noqa: E402
 from engine.source import trade_dependency as TD  # noqa: E402
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests import _private_inputs as PI  # noqa: E402
+
+PRIVATE_INPUTS = (PI.BY_SHA,)  # hash-addressed client drawings
+
 VERIFIED_STATES = (R.VERIFIED_COMPLETE, R.LOWER_BOUND)
 
 

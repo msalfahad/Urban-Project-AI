@@ -17,6 +17,9 @@ from pathlib import Path
 import pytest
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_superstructure_beam_rebar_s6_1"
 S6 = ROOT / "research" / "alsenan_superstructure_beam_rebar_s6"
@@ -100,6 +103,7 @@ def test_frozen_s6_baseline_is_immutable_and_s4_1_preceded(summary):
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF)  # the builder reads these private drawings
     before = {k: (PKG / k).read_bytes() for k in J(PKG / "S6_1_FREEZE_MANIFEST.json")["outputs"]}
     with rebuilt_package(ROOT, PKG / "build_superstructure_beam_rebar_s6_1.py") as out:
         for k, v in before.items():
