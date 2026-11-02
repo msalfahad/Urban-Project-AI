@@ -19,6 +19,9 @@ from research.qs_wall_treatment_01 import protocol as PR
 from research.qs_wall_treatment_01.pa09.alrashed import (detailed_takeoff as DT, validation_amendment as VA,
                                                           window_standard as WS, workbook_calc as WC)
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR,)  # experiment outputs, git-ignored
+
 OUT = Path(PR.OUT_DIR) / "pa09_alrashed"
 XL = OUT / "ALRASHED_DETAILED_QUANTITY_TAKEOFF.xlsx"
 FROZEN = OUT / "FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF.json"

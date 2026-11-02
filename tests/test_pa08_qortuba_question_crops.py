@@ -14,6 +14,9 @@ from pathlib import Path
 
 from research.qs_wall_treatment_01 import protocol as PR
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR,)  # experiment outputs, git-ignored
+
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 CHOICES = "Door  /  Open passage  /  Window  /  Sliding door  /  Not an opening  /  Other?"
 PASSAGE_CHOICES = "Open to the ceiling  /  Wall above it - what is the opening height?"

@@ -28,6 +28,9 @@ import pytest
 from engine.source import delta_release as DR
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_ground_slab_s8_1"
 S1 = ROOT / "research" / "alsenan_structural_census_s1"
@@ -274,6 +277,7 @@ def test_registry_declares_the_engine_and_the_builder():
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF)  # the builder reads these private drawings
     before = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in OUTPUTS}
     with rebuilt_package(ROOT, PKG / "build_s8_1.py") as out:
         after = {o: hashlib.sha256((out / o).read_bytes()).hexdigest() for o in OUTPUTS}

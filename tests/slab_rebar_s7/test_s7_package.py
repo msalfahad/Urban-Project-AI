@@ -21,6 +21,9 @@ from engine.source import slab_qto_authority as Q
 from engine.source import slab_rebar_qto as S7
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_slab_rebar_s7"
 P71 = ROOT / "research" / "alsenan_slab_rebar_pre_s7_1"
@@ -157,6 +160,7 @@ def test_firewall_registry_lists_s7():
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF)  # the builder reads these private drawings
     m = J(PKG / "12_S7_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in list(m["outputs"]) + ["12_S7_FREEZE_MANIFEST.json"]}
     with rebuilt_package(ROOT, PKG / "build_s7.py") as out:
