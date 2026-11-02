@@ -47,6 +47,7 @@ text is in MISSION.md, OWNER_QUESTIONS.md (answered index) and OWNER_SESSION_CHA
 | Heights | plaster to the structural slab / roof underside; paint to the finished ceiling; stair shafts at full exposed height | Q-72, owner 2026-11-02 |
 | Openings | full deduction of every actual opening from blockwork | Q-73 |
 | Tile bed | 3-4 cm floors, 4-6 cm bathrooms, 1:4 | Q-45 |
+| Backfill lift | maximum 150 mm finished compacted lift, foundation-adjacent backfill, OWNER-PROVISIONAL; project drawings, geotechnical spec or an approved method govern where they differ; 95 % Modified Proctor is NOT adopted (proposed only) | owner 2026-11-02 18:00 |
 | Bars per metre / spacing | drawing-based counting (spacing, first-link offset, support face, zones); also for footings | Q-71 |
 
 This table is a summary, not a source of truth. The authoritative register of every answered owner decision (78,
