@@ -32,6 +32,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FACTS_REL = "research/agents_t463/GIT_FACTS.json"
 SCHEMA = "URBAN_GIT_FACTS_V1"
+DEFAULT_GUARD_CLASS = "TOOLING"        # T-212: test / history tooling; it produces no quantity, so no guard to run
 
 
 class HistoryUnavailable(RuntimeError):
