@@ -1,0 +1,3135 @@
+{
+ "candidate_version": "ARCH_TAKEOFF_V3.0.42",
+ "complete_map": true,
+ "components": 106,
+ "gates": {
+  "HELD": 50,
+  "MEASURED": 5,
+  "MISSING": 25,
+  "NOT_APPLICABLE": 5,
+  "POSSIBLY_APPLICABLE": 20,
+  "VERIFIED": 1
+ },
+ "granularity": "item_code (T-469 scoreboard counts)",
+ "inputs": {
+  "lines": "0c9c9be01dc35cd7",
+  "master": "517b953f99850742",
+  "override": "b2c8521a8628da77",
+  "register": "964f0f996ad3251a"
+ },
+ "issue_counts": {
+  "REGISTRY_GAP": 2
+ },
+ "issues": [
+  {
+   "component_id": "C-GAP-POOL-FINISH",
+   "kind": "REGISTRY_GAP",
+   "name": "Pool internal finish on the water faces (tile / mosaic)"
+  },
+  {
+   "component_id": "C-GAP-EXTERIOR-AREA",
+   "kind": "REGISTRY_GAP",
+   "name": "Exterior space register area (garden band)"
+  }
+ ],
+ "lines": 4839,
+ "master_version": "1.37.0",
+ "owner_gate": [
+  {
+   "components": [
+    {
+     "component_id": "C-B1-02",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B1-03",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B1-04",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    }
+   ],
+   "item": "earthworks"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B8-08",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "foundation waterproofing"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B4-04",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B4-07",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "external plaster"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B4-05",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    }
+   ],
+   "item": "spatter dash"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B9-02",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B9-03",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B9-04",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    }
+   ],
+   "item": "masonry accessories"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B10-13",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-13",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "formwork"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B7-02",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-03",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-04",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-05",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    },
+    {
+     "component_id": "C-B7-06",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "stair marble / nosing / piece counts"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B6-06",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B6-07",
+     "gate": "MEASURED",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "lift marble"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B3-03",
+     "gate": "POSSIBLY_APPLICABLE",
+     "state": "POSSIBLY_APPLICABLE"
+    },
+    {
+     "component_id": "C-B3-01",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-02",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-04",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "entrance and stair-hall finishes"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B4-01",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B4-02",
+     "gate": "NOT_APPLICABLE",
+     "state": "NOT_APPLICABLE"
+    }
+   ],
+   "item": "wet-area wall porcelain"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B5-01",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B2-05",
+     "gate": "MISSING",
+     "state": "APPLICABLE_UNMEASURED"
+    }
+   ],
+   "item": "ceiling areas and double-height exclusions"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B6-01",
+     "gate": "MEASURED",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B6-02",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B6-03",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B6-04",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "doors / windows / glazing"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B7-09",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    },
+    {
+     "component_id": "C-B7-10",
+     "gate": "NOT_APPLICABLE",
+     "state": "NOT_APPLICABLE"
+    }
+   ],
+   "item": "handrails along the slope"
+  },
+  {
+   "components": [
+    {
+     "component_id": "C-B13-02",
+     "gate": "HELD",
+     "state": "APPLICABLE_HELD"
+    }
+   ],
+   "item": "external paving"
+  }
+ ],
+ "project": "development villa (training benchmark)",
+ "register_version": "1.0.0",
+ "rows": [
+  {
+   "applicability": "NOT_APPLICABLE",
+   "component_id": "C-B1-01",
+   "family": "B1-01",
+   "gate": "NOT_APPLICABLE",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Site clearance",
+   "quantities": {},
+   "reason": "evidence: see component",
+   "row": null,
+   "state": "NOT_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B1-02",
+   "family": "B1-02",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Excavation by type and depth",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-350",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B1-03",
+   "family": "B1-03",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Backfill and compaction",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-350",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B1-04",
+   "family": "B1-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Disposal of surplus",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-350",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "NOT_APPLICABLE",
+   "component_id": "C-B1-05",
+   "family": "B1-05",
+   "gate": "NOT_APPLICABLE",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Soil treatment / anti-termite",
+   "quantities": {},
+   "reason": "evidence: see component",
+   "row": null,
+   "state": "NOT_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B1-06",
+   "family": "B1-06",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Dewatering / shoring / temporary works",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B1-07",
+   "family": "B1-07",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Preliminaries",
+   "quantities": {},
+   "reason": "needs the contract documents",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B2-01",
+   "family": "B2-01",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Room register (stable id, AR/EN name, role)",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B2-02",
+   "family": "B2-02",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.SPACE"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 3,
+    "HELD": 2,
+    "RELEASED": 11,
+    "VERIFIED": 0
+   },
+   "name": "Room clear internal floor area",
+   "quantities": {
+    "m2": {
+     "held_high": 6.7284,
+     "held_low": 6.7284,
+     "held_unknown_lines": 0,
+     "lines": 16,
+     "released": 63.6757,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 13 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B2-03",
+   "family": "B2-03",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Gross / covered floor area per floor",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B2-04",
+   "family": "B2-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Open pantry functional zone",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B2-05",
+   "family": "B2-05",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Voids / double height / shafts",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B3-01",
+   "family": "B3-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.FLOOR.FINISH_HELD",
+    "FIN.FLOOR.PORCELAIN"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 13,
+    "HELD": 1,
+    "RELEASED": 24,
+    "VERIFIED": 0
+   },
+   "name": "Dry floor porcelain / ceramic",
+   "quantities": {
+    "m2": {
+     "held_high": 0.23,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 38,
+     "released": 311.1485,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 25 lines held",
+   "row": "T-455",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B3-02",
+   "family": "B3-02",
+   "gate": "MEASURED",
+   "item_codes": [
+    "FIN.FLOOR.WET_TILE"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 20,
+    "VERIFIED": 0
+   },
+   "name": "Wet-room floor tile",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 20,
+     "released": 75.9456,
+     "verified": 0.0
+    }
+   },
+   "reason": "20 of 20 released lines not independently verified",
+   "row": "T-455",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B3-03",
+   "family": "B3-03",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Marble floor / entrance",
+   "quantities": {},
+   "reason": "owner gate item 'entrance and stair-hall finishes'; finishes schedule RFI-B-A12",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B3-04",
+   "family": "B3-04",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.THRESHOLD",
+    "FIN.MARBLE.THRESHOLD"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 10,
+    "HELD": 14,
+    "RELEASED": 14,
+    "VERIFIED": 0
+   },
+   "name": "Door threshold marble",
+   "quantities": {
+    "m2": {
+     "held_high": 1.31,
+     "held_low": 1.31,
+     "held_unknown_lines": 8,
+     "lines": 38,
+     "released": 1.82,
+     "verified": 0.0
+    }
+   },
+   "reason": "14 of 28 lines held",
+   "row": "T-423",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B3-05",
+   "family": "B3-05",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.FLOOR.BED.DRY",
+    "FIN.FLOOR.BED.WET"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 44,
+    "RELEASED": 44,
+    "VERIFIED": 0
+   },
+   "name": "Screed / build-up",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 44,
+     "released": 387.0941,
+     "verified": 0.0
+    },
+    "m3": {
+     "held_high": 17.1952,
+     "held_low": 12.4686,
+     "held_unknown_lines": 0,
+     "lines": 44,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "44 of 88 lines held",
+   "row": "T-455",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B3-06",
+   "family": "B3-06",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.SKIRTING"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 19,
+    "HELD": 10,
+    "RELEASED": 10,
+    "VERIFIED": 0
+   },
+   "name": "Ordinary skirting",
+   "quantities": {
+    "lm": {
+     "held_high": 24.6376,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 39,
+     "released": 184.0167,
+     "verified": 0.0
+    }
+   },
+   "reason": "10 of 20 lines held",
+   "row": "T-422",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B3-07",
+   "family": "B3-07",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Hidden profile / transition strips",
+   "quantities": {},
+   "reason": "skirting system not specified",
+   "row": "T-460",
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-01",
+   "family": "B4-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WALL.TILE"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 6,
+    "RELEASED": 12,
+    "VERIFIED": 0
+   },
+   "name": "Wet-room wall porcelain / ceramic",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 6,
+     "lines": 18,
+     "released": 340.3038,
+     "verified": 0.0
+    }
+   },
+   "reason": "6 of 18 lines held",
+   "row": "T-457",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "NOT_APPLICABLE",
+   "component_id": "C-B4-02",
+   "family": "B4-02",
+   "gate": "NOT_APPLICABLE",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Kitchen / laundry / pantry tiled zones",
+   "quantities": {},
+   "reason": "evidence: see component",
+   "row": null,
+   "state": "NOT_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-03",
+   "family": "B4-03",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.PLASTER"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 13,
+    "HELD": 20,
+    "RELEASED": 42,
+    "VERIFIED": 0
+   },
+   "name": "Internal plaster",
+   "quantities": {
+    "m2": {
+     "held_high": 544.0606,
+     "held_low": 488.201,
+     "held_unknown_lines": 12,
+     "lines": 75,
+     "released": 580.5819,
+     "verified": 0.0
+    }
+   },
+   "reason": "20 of 62 lines held",
+   "row": "T-454",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-04",
+   "family": "B4-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "External plaster",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-314",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-05",
+   "family": "B4-05",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Spatter dash",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-364",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-06",
+   "family": "B4-06",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.PAINT",
+    "FIN.PAINT.CEILING"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 31,
+    "HELD": 10,
+    "RELEASED": 35,
+    "VERIFIED": 0
+   },
+   "name": "Internal paint",
+   "quantities": {
+    "m2": {
+     "held_high": 542.8606,
+     "held_low": 487.121,
+     "held_unknown_lines": 3,
+     "lines": 76,
+     "released": 612.0338,
+     "verified": 0.0
+    }
+   },
+   "reason": "10 of 45 lines held",
+   "row": "T-423",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-07",
+   "family": "B4-07",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.FACADE",
+    "ARCH.FACADE_RUN",
+    "FIN.EXT.FINISH"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 10,
+    "RELEASED": 3,
+    "VERIFIED": 0
+   },
+   "name": "External paint / coatings",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 3,
+     "lines": 6,
+     "released": 198.8556,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 7,
+     "lines": 7,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "10 of 13 lines held",
+   "row": "T-314",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-08",
+   "family": "B4-08",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.WINDOW_REVEAL"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 8,
+    "RELEASED": 54,
+    "VERIFIED": 0
+   },
+   "name": "Reveals and returns",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 8,
+     "lines": 62,
+     "released": 12.4389,
+     "verified": 0.0
+    }
+   },
+   "reason": "8 of 62 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-09",
+   "family": "B4-09",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Corner beads / profiles",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B4-10",
+   "family": "B4-10",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "45-degree ceramic edge / steel profile",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "NOT_APPLICABLE",
+   "component_id": "C-B4-11",
+   "family": "B4-11",
+   "gate": "NOT_APPLICABLE",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Facade cladding / stone",
+   "quantities": {},
+   "reason": "evidence: see component",
+   "row": null,
+   "state": "NOT_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B5-01",
+   "family": "B5-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.CEILING"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 5,
+    "RELEASED": 36,
+    "VERIFIED": 0
+   },
+   "name": "Physical ceiling area per room",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 5,
+     "lines": 41,
+     "released": 411.3372,
+     "verified": 0.0
+    }
+   },
+   "reason": "5 of 41 lines held",
+   "row": "T-423",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B5-02",
+   "family": "B5-02",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Gypsum / moisture-resistant / decorative ceiling",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B5-03",
+   "family": "B5-03",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Cornice / cove / light channel",
+   "quantities": {},
+   "reason": "no detail; freelancer cornice rows = RULE_DIFFERENCE / UNRESOLVED",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B5-04",
+   "family": "B5-04",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.CEILING.BULKHEAD"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 1,
+    "RELEASED": 13,
+    "VERIFIED": 0
+   },
+   "name": "Bulkheads / dropped ceilings",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 14,
+     "released": 27.9345,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 14 lines held",
+   "row": "T-423",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B5-05",
+   "family": "B5-05",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Access panels",
+   "quantities": {},
+   "reason": "MEP-driven; no source",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B5-06",
+   "family": "B5-06",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [
+    "FIN.DOME.SOFFIT"
+   ],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Dome intrados finish",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 2,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "designer DCR-4; owner note 'no domes'; 2 BLANK lines",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-01",
+   "family": "B6-01",
+   "gate": "MEASURED",
+   "item_codes": [
+    "ARCH.PASSAGE"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 2,
+    "HELD": 0,
+    "RELEASED": 9,
+    "VERIFIED": 0
+   },
+   "name": "Opening census (doors, windows, type, size, host wall)",
+   "quantities": {
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 11,
+     "released": 9.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "9 of 9 released lines not independently verified",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-02",
+   "family": "B6-02",
+   "gate": "HELD",
+   "item_codes": [
+    "DOOR.INTERNAL.PVC"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 15,
+    "HELD": 4,
+    "RELEASED": 6,
+    "VERIFIED": 0
+   },
+   "name": "Internal doors (PVC / wood)",
+   "quantities": {
+    "m2": {
+     "held_high": 9.24,
+     "held_low": 8.03,
+     "held_unknown_lines": 0,
+     "lines": 5,
+     "released": 28.6,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 5.0,
+     "held_low": 5.0,
+     "held_unknown_lines": 0,
+     "lines": 20,
+     "released": 15.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "4 of 10 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-03",
+   "family": "B6-03",
+   "gate": "HELD",
+   "item_codes": [
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.MAIN_ENTRANCE"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 4,
+    "HELD": 2,
+    "RELEASED": 4,
+    "VERIFIED": 0
+   },
+   "name": "Main / external / steel doors",
+   "quantities": {
+    "m2": {
+     "held_high": 5.0,
+     "held_low": 5.0,
+     "held_unknown_lines": 0,
+     "lines": 4,
+     "released": 12.76,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 1.0,
+     "held_low": 1.0,
+     "held_unknown_lines": 0,
+     "lines": 6,
+     "released": 6.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 6 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-04",
+   "family": "B6-04",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.WINDOW"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 27,
+    "HELD": 3,
+    "RELEASED": 6,
+    "VERIFIED": 0
+   },
+   "name": "Windows / aluminium / glazing / skylights",
+   "quantities": {
+    "m2": {
+     "held_high": 11.515,
+     "held_low": 9.87,
+     "held_unknown_lines": 1,
+     "lines": 5,
+     "released": 76.256,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 2.0,
+     "held_low": 1.0,
+     "held_unknown_lines": 0,
+     "lines": 31,
+     "released": 28.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "3 of 9 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-05",
+   "family": "B6-05",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.SHUTTER"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 3,
+    "RELEASED": 3,
+    "VERIFIED": 0
+   },
+   "name": "Shutters",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 3,
+     "lines": 3,
+     "released": 0.0,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 3,
+     "released": 6.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "3 of 6 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-06",
+   "family": "B6-06",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.MARBLE.LIFT_SURROUND"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 3,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Elevator outer surround marble",
+   "quantities": {
+    "m2": {
+     "held_high": 13.98,
+     "held_low": 2.75,
+     "held_unknown_lines": 0,
+     "lines": 3,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "3 of 3 lines held",
+   "row": "T-475",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B6-07",
+   "family": "B6-07",
+   "gate": "MEASURED",
+   "item_codes": [
+    "FIN.MARBLE.LIFT_THRESHOLD"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 6,
+    "VERIFIED": 0
+   },
+   "name": "Elevator threshold marble",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 3,
+     "released": 3.0,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 3,
+     "released": 1.5,
+     "verified": 0.0
+    }
+   },
+   "reason": "6 of 6 released lines not independently verified",
+   "row": "T-475",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-01",
+   "family": "B7-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.STAIR.FLIGHT"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 14,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Stair assembly reconstruction (all stairs, occurrence once)",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 14,
+     "lines": 14,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "14 of 14 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-02",
+   "family": "B7-02",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.MARBLE.TREAD"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 2,
+    "HELD": 5,
+    "RELEASED": 8,
+    "VERIFIED": 0
+   },
+   "name": "Tread marble",
+   "quantities": {
+    "m2": {
+     "held_high": 8.9244,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 15,
+     "released": 23.3694,
+     "verified": 0.0
+    }
+   },
+   "reason": "5 of 13 lines held",
+   "row": "T-424",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-03",
+   "family": "B7-03",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.MARBLE.RISER"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 1,
+    "HELD": 13,
+    "RELEASED": 1,
+    "VERIFIED": 0
+   },
+   "name": "Visible riser marble",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 13,
+     "lines": 15,
+     "released": 1.96,
+     "verified": 0.0
+    }
+   },
+   "reason": "13 of 14 lines held",
+   "row": "T-424",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-04",
+   "family": "B7-04",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.MARBLE.LANDING"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 2,
+    "VERIFIED": 0
+   },
+   "name": "Landing marble",
+   "quantities": {
+    "m2": {
+     "held_high": 12.1475,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 4,
+     "released": 10.1019,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 4 lines held",
+   "row": "T-424",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-05",
+   "family": "B7-05",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Nosing / edge finishing",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-424",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-06",
+   "family": "B7-06",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.STAIR.STEP_LM"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 2,
+    "HELD": 5,
+    "RELEASED": 7,
+    "VERIFIED": 0
+   },
+   "name": "Commercial step basis",
+   "quantities": {
+    "lm": {
+     "held_high": 29.8964,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 14,
+     "released": 67.85,
+     "verified": 0.0
+    }
+   },
+   "reason": "5 of 12 lines held",
+   "row": "T-424",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-07",
+   "family": "B7-07",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Stair skirting zigzag",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-443",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B7-08",
+   "family": "B7-08",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Stair skirting sloped",
+   "quantities": {},
+   "reason": "exclusive with B7-07",
+   "row": "T-443",
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-09",
+   "family": "B7-09",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.RAILING"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 17,
+    "RELEASED": 2,
+    "VERIFIED": 0
+   },
+   "name": "Open-edge guardrail (3D installed path)",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 17,
+     "lines": 19,
+     "released": 17.366,
+     "verified": 0.0
+    }
+   },
+   "reason": "17 of 19 lines held",
+   "row": "T-476",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "NOT_APPLICABLE",
+   "component_id": "C-B7-10",
+   "family": "B7-10",
+   "gate": "NOT_APPLICABLE",
+   "item_codes": [
+    "FIN.HANDRAIL"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 1,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Wall-mounted handrail",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 1,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "evidence: see component",
+   "row": "T-476",
+   "state": "NOT_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B7-11",
+   "family": "B7-11",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Posts / glass panels",
+   "quantities": {},
+   "reason": "specification RFI-B-A12",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-12",
+   "family": "B7-12",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.STAIR"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 1,
+    "HELD": 5,
+    "RELEASED": 6,
+    "VERIFIED": 0
+   },
+   "name": "Stair concrete",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 5,
+     "lines": 12,
+     "released": 5.3689,
+     "verified": 0.0
+    }
+   },
+   "reason": "5 of 11 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-13",
+   "family": "B7-13",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.FORMWORK.STAIR"
+   ],
+   "level": 4,
+   "line_classes": {
+    "EXCLUDED": 1,
+    "HELD": 20,
+    "RELEASED": 10,
+    "VERIFIED": 0
+   },
+   "name": "Stair formwork",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 20,
+     "lines": 31,
+     "released": 36.9274,
+     "verified": 0.0
+    }
+   },
+   "reason": "20 of 30 lines held",
+   "row": "T-474",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-14",
+   "family": "B7-14",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Stair reinforcement",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B7-15",
+   "family": "B7-15",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.STAIR.SOFFIT"
+   ],
+   "level": 4,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Stair soffit finish (flight / landing undersides)",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 2,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 2 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-01",
+   "family": "B8-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WP.FLOOR",
+    "FIN.WP.PENETRATION"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 17,
+    "RELEASED": 18,
+    "VERIFIED": 0
+   },
+   "name": "Wet-room floor membrane",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 18,
+     "released": 85.6207,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 17,
+     "lines": 17,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "17 of 35 lines held",
+   "row": "T-310",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-02",
+   "family": "B8-02",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WP.DOORWAY",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "FIN.WP.DOORWAY_TRANSITION_NR"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 13,
+    "RELEASED": 28,
+    "VERIFIED": 0
+   },
+   "name": "Doorway floor continuation",
+   "quantities": {
+    "m2": {
+     "held_high": 2.1388,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 27,
+     "released": 1.9304,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 14,
+     "released": 14.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "13 of 41 lines held",
+   "row": "T-310",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-03",
+   "family": "B8-03",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WP.TERMINATION",
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 8,
+    "RELEASED": 17,
+    "VERIFIED": 0
+   },
+   "name": "Wet-room upturn (0.20 m incl. doorway)",
+   "quantities": {
+    "lm": {
+     "held_high": 3.6604,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 7,
+     "released": 0.0,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 18,
+     "released": 25.1146,
+     "verified": 0.0
+    }
+   },
+   "reason": "8 of 25 lines held",
+   "row": "T-310",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-04",
+   "family": "B8-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Shower floor and tanking",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-05",
+   "family": "B8-05",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WP.MEMBRANE_ROLLS"
+   ],
+   "level": 4,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 1,
+    "RELEASED": 21,
+    "VERIFIED": 0
+   },
+   "name": "Membrane overlap / rolls / procurement",
+   "quantities": {
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 22,
+     "released": 52.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 22 lines held",
+   "row": "T-310",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-06",
+   "family": "B8-06",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.WP.ROOF",
+    "FIN.WP.ROOF_UPTURN"
+   ],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 6,
+    "VERIFIED": 0
+   },
+   "name": "Roof waterproofing + 0.20 upturn",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 4,
+     "released": 181.589,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 4,
+     "released": 204.112,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 8 lines held",
+   "row": "T-383",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B8-07",
+   "family": "B8-07",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Terraces / balconies / planters",
+   "quantities": {},
+   "reason": "carried by B8-06 on this villa; RL-04 edge open",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-08",
+   "family": "B8-08",
+   "gate": "HELD",
+   "item_codes": [
+    "WP.FOUNDATION.BURIED_LIQUID",
+    "WP.FOUNDATION.FOOTING_MEMBRANE",
+    "WP.FOUNDATION.FOOTING_SCREED",
+    "WP.FOUNDATION.FOOTING_SIDES",
+    "WP.FOUNDATION.LIFT_PIT_BOARD",
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+    "WP.FOUNDATION.LIFT_PIT_SCREED",
+    "WP.FOUNDATION.PROCUREMENT"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 11,
+    "RELEASED": 6,
+    "VERIFIED": 2
+   },
+   "name": "Foundations / basement / below-grade walls",
+   "quantities": {
+    "item": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 1,
+     "released": 0.0,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 9,
+     "lines": 15,
+     "released": 360.0282,
+     "verified": 20.7
+    },
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 3,
+     "released": 6.5275,
+     "verified": 1.035
+    }
+   },
+   "reason": "11 of 19 lines held",
+   "row": "T-353",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B8-09",
+   "family": "B8-09",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Pool / tank internal waterproofing",
+   "quantities": {},
+   "reason": "S8.2 designer; tank G-T359-4",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B9-01",
+   "family": "B9-01",
+   "gate": "HELD",
+   "item_codes": [
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_RUN",
+    "ARCH.WALL_VOLUME",
+    "MAS.BLOCK"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 21,
+    "RELEASED": 64,
+    "VERIFIED": 0
+   },
+   "name": "Block walls by type and thickness",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 7,
+     "released": 216.9311,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 14,
+     "lines": 52,
+     "released": 1158.2022,
+     "verified": 0.0
+    },
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 7,
+     "lines": 26,
+     "released": 104.4689,
+     "verified": 0.0
+    }
+   },
+   "reason": "21 of 85 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B9-02",
+   "family": "B9-02",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Lintels",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-453",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B9-03",
+   "family": "B9-03",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Mesh at block-to-concrete joints",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-363",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B9-04",
+   "family": "B9-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Mortar / glue",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-372",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B9-05",
+   "family": "B9-05",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Parapet walls (block)",
+   "quantities": {},
+   "reason": "designer RFI on parapet material; NO_LINE",
+   "row": "T-314",
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-01",
+   "family": "B10-01",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.BLINDING"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 4,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Blinding",
+   "quantities": {
+    "m3": {
+     "held_high": 25.9638,
+     "held_low": 21.0586,
+     "held_unknown_lines": 0,
+     "lines": 4,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "4 of 4 lines held",
+   "row": "T-445",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-02",
+   "family": "B10-02",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.FOOTING"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 1,
+    "RELEASED": 25,
+    "VERIFIED": 0
+   },
+   "name": "Isolated / combined footings",
+   "quantities": {
+    "m3": {
+     "held_high": 2.275,
+     "held_low": 2.176,
+     "held_unknown_lines": 0,
+     "lines": 26,
+     "released": 64.304,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 26 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-03",
+   "family": "B10-03",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.NECK"
+   ],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 36,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Necks",
+   "quantities": {
+    "m3": {
+     "held_high": 15.375,
+     "held_low": 3.075,
+     "held_unknown_lines": 1,
+     "lines": 36,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "36 of 36 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-04",
+   "family": "B10-04",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.GROUND_BEAM",
+    "STR.CONC.STRAP"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 5,
+    "HELD": 31,
+    "RELEASED": 35,
+    "VERIFIED": 0
+   },
+   "name": "Strap / ground beams",
+   "quantities": {
+    "m3": {
+     "held_high": 7.1248,
+     "held_low": 2.8376,
+     "held_unknown_lines": 15,
+     "lines": 71,
+     "released": 27.1511,
+     "verified": 0.0
+    }
+   },
+   "reason": "31 of 66 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-05",
+   "family": "B10-05",
+   "gate": "MEASURED",
+   "item_codes": [
+    "STR.CONC.GROUND_SLAB"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 26,
+    "VERIFIED": 0
+   },
+   "name": "Ground slab",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 26,
+     "released": 21.638458,
+     "verified": 0.0
+    }
+   },
+   "reason": "26 of 26 released lines not independently verified",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-06",
+   "family": "B10-06",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.COLUMN"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 8,
+    "HELD": 34,
+    "RELEASED": 30,
+    "VERIFIED": 0
+   },
+   "name": "Columns",
+   "quantities": {
+    "m3": {
+     "held_high": 13.602,
+     "held_low": 9.168,
+     "held_unknown_lines": 16,
+     "lines": 72,
+     "released": 19.7765,
+     "verified": 0.0
+    }
+   },
+   "reason": "34 of 64 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-07",
+   "family": "B10-07",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.BEAM"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 54,
+    "HELD": 27,
+    "RELEASED": 110,
+    "VERIFIED": 0
+   },
+   "name": "Beams",
+   "quantities": {
+    "m3": {
+     "held_high": 13.7795,
+     "held_low": 8.3728,
+     "held_unknown_lines": 5,
+     "lines": 191,
+     "released": 66.3211,
+     "verified": 0.0
+    }
+   },
+   "reason": "27 of 137 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-08",
+   "family": "B10-08",
+   "gate": "VERIFIED",
+   "item_codes": [
+    "STR.CONC.SLAB"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 13,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 62
+   },
+   "name": "Suspended slabs",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 75,
+     "released": 60.2802,
+     "verified": 60.2802
+    }
+   },
+   "reason": "every line under a binding WHOLE Checker verdict",
+   "row": null,
+   "state": "APPLICABLE_VERIFIED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-09",
+   "family": "B10-09",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.DOME"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 2,
+    "HELD": 1,
+    "RELEASED": 2,
+    "VERIFIED": 0
+   },
+   "name": "Domes / rings",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 5,
+     "released": 5.0814,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 3 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-10-POOL",
+   "family": "B10-10",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.POOL"
+   ],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 2,
+    "HELD": 1,
+    "RELEASED": 2,
+    "VERIFIED": 0
+   },
+   "name": "Pool / tank / lift pit / pump room",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 5,
+     "released": 7.2023,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 3 lines held",
+   "row": "T-180",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-10-LIFT",
+   "family": "B10-10",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.LIFT"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 1,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Pool / tank / lift pit / pump room",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 1,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 1 lines held",
+   "row": "T-419",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B10-10-TANK",
+   "family": "B10-10",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Pool / tank / lift pit / pump room",
+   "quantities": {},
+   "reason": "tank G-T359-4; pump room B-A14",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-11",
+   "family": "B10-11",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.BOUNDARY_PAD",
+    "STR.CONC.BOUNDARY_WALL"
+   ],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Boundary wall concrete",
+   "quantities": {
+    "m3": {
+     "held_high": 7.2204,
+     "held_low": 7.2204,
+     "held_unknown_lines": 1,
+     "lines": 2,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 2 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-12",
+   "family": "B10-12",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.CONC.PARAPET"
+   ],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 4,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "RC parapets",
+   "quantities": {
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 4,
+     "lines": 4,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "4 of 4 lines held",
+   "row": "T-314",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B10-13",
+   "family": "B10-13",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.FORMWORK"
+   ],
+   "level": 4,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 368,
+    "RELEASED": 244,
+    "VERIFIED": 0
+   },
+   "name": "Formwork (all elements)",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 368,
+     "lines": 612,
+     "released": 1027.9774,
+     "verified": 0.0
+    }
+   },
+   "reason": "368 of 612 lines held",
+   "row": "T-474",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B11-01",
+   "family": "B11-01",
+   "gate": "HELD",
+   "item_codes": [
+    "STR.REBAR"
+   ],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 577,
+    "HELD": 1692,
+    "RELEASED": 374,
+    "VERIFIED": 0
+   },
+   "name": "Footing / column / beam / slab / GB bars",
+   "quantities": {
+    "kg": {
+     "held_high": 19646.8779,
+     "held_low": 14278.2495,
+     "held_unknown_lines": 798,
+     "lines": 2643,
+     "released": 9375.3058,
+     "verified": 0.0
+    }
+   },
+   "reason": "1692 of 2066 lines held",
+   "row": "T-449",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B11-02",
+   "family": "B11-02",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Bar bending schedule (bar marks, shapes)",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B11-03",
+   "family": "B11-03",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Rebar of stairs / pool / domes / tank / pit / boundary wall",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B11-04",
+   "family": "B11-04",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 3,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Net vs procurement (laps, stock length)",
+   "quantities": {},
+   "reason": "applicable, no BOQ line in the candidate",
+   "row": "T-382",
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B12-01",
+   "family": "B12-01",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Sanitary fixtures and floor drains",
+   "quantities": {},
+   "reason": "applicable on the drawings; outside the scope freeze (owner recovery plan 2026-11-02): stated, not dropped, no line by that decision",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B12-02",
+   "family": "B12-02",
+   "gate": "MISSING",
+   "item_codes": [],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Pipes / drainage / water supply",
+   "quantities": {},
+   "reason": "applicable on the drawings; outside the scope freeze (owner recovery plan 2026-11-02): stated, not dropped, no line by that decision",
+   "row": null,
+   "state": "APPLICABLE_UNMEASURED"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B12-03",
+   "family": "B12-03",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Electrical points / DB / cables",
+   "quantities": {},
+   "reason": "BLOCKED_BY_SOURCE",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B12-04",
+   "family": "B12-04",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "HVAC / ducts / grilles",
+   "quantities": {},
+   "reason": "BLOCKED_BY_SOURCE",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B12-05",
+   "family": "B12-05",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Low voltage / smart home",
+   "quantities": {},
+   "reason": "BLOCKED_BY_SOURCE",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B13-01",
+   "family": "B13-01",
+   "gate": "HELD",
+   "item_codes": [
+    "FIN.ROOF.FINISH",
+    "FIN.ROOF.INSULATION",
+    "FIN.ROOF.PROTECTION",
+    "FIN.ROOF.SCREED"
+   ],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 13,
+    "RELEASED": 3,
+    "VERIFIED": 0
+   },
+   "name": "Roofing build-up / insulation / screed to falls",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 9,
+     "lines": 12,
+     "released": 202.2198,
+     "verified": 0.0
+    },
+    "m3": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 4,
+     "lines": 4,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "13 of 16 lines held",
+   "row": "T-383",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B13-02",
+   "family": "B13-02",
+   "gate": "HELD",
+   "item_codes": [
+    "EXT.FLOOR.OUTDOOR",
+    "EXT.FLOOR.PORCELAIN",
+    "EXT.PAVING.INTERLOCK"
+   ],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 2,
+    "VERIFIED": 0
+   },
+   "name": "Interlock / external paving",
+   "quantities": {
+    "m2": {
+     "held_high": 17.2274,
+     "held_low": 17.2274,
+     "held_unknown_lines": 0,
+     "lines": 4,
+     "released": 140.5558,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 4 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B13-03",
+   "family": "B13-03",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Landscaping / irrigation",
+   "quantities": {},
+   "reason": "garden band use D-48",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B13-04",
+   "family": "B13-04",
+   "gate": "HELD",
+   "item_codes": [
+    "EXT.FENCE.BLOCK",
+    "EXT.FENCE.BLOCK_COUNT",
+    "EXT.FENCE.FACE",
+    "EXT.FENCE.GATE",
+    "EXT.FENCE.MASONRY_BELOW_NG",
+    "EXT.FENCE.PAINT",
+    "EXT.FENCE.PLASTER",
+    "EXT.FENCE.TOP",
+    "EXT.FENCE.WALL"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 34,
+    "RELEASED": 5,
+    "VERIFIED": 0
+   },
+   "name": "Fencing / gates",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 2,
+     "released": 31.37,
+     "verified": 0.0
+    },
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 30,
+     "lines": 34,
+     "released": 263.1715,
+     "verified": 0.0
+    },
+    "pcs": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 3,
+     "lines": 3,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "34 of 39 lines held",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B13-05",
+   "family": "B13-05",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 2,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Expansion joints / sealants",
+   "quantities": {},
+   "reason": "spacing and own line not answered",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B13-06",
+   "family": "B13-06",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Joinery / kitchen cabinets / wardrobes",
+   "quantities": {},
+   "reason": "BLOCKED_BY_SOURCE",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-B13-07",
+   "family": "B13-07",
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Special metalwork (canopies, pergolas)",
+   "quantities": {},
+   "reason": "BLOCKED_BY_SOURCE",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B13-08",
+   "family": "B13-08",
+   "gate": "HELD",
+   "item_codes": [
+    "MET.RAILING.GUARD"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 2,
+    "RELEASED": 4,
+    "VERIFIED": 0
+   },
+   "name": "Guard railings outside stairs (roof / floor edge / balcony / fence), installed length",
+   "quantities": {
+    "lm": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 2,
+     "lines": 6,
+     "released": 21.55,
+     "verified": 0.0
+    }
+   },
+   "reason": "2 of 6 lines held",
+   "row": "T-476",
+   "state": "APPLICABLE_HELD"
+  },
+  {
+   "applicability": "POSSIBLY_APPLICABLE",
+   "component_id": "C-GAP-POOL-FINISH",
+   "family": null,
+   "gate": "POSSIBLY_APPLICABLE",
+   "item_codes": [
+    "EXT.POOL.WATER_FACE"
+   ],
+   "level": 5,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 1,
+    "RELEASED": 0,
+    "VERIFIED": 0
+   },
+   "name": "Pool internal finish on the water faces (tile / mosaic)",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 1,
+     "lines": 1,
+     "released": 0.0,
+     "verified": 0.0
+    }
+   },
+   "reason": "registry gap: no family for pool finishes (F-T328-2); finish not printed",
+   "row": null,
+   "state": "POSSIBLY_APPLICABLE"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-GAP-EXTERIOR-AREA",
+   "family": null,
+   "gate": "MEASURED",
+   "item_codes": [
+    "ARCH.EXTERIOR"
+   ],
+   "level": 1,
+   "line_classes": {
+    "EXCLUDED": 0,
+    "HELD": 0,
+    "RELEASED": 1,
+    "VERIFIED": 0
+   },
+   "name": "Exterior space register area (garden band)",
+   "quantities": {
+    "m2": {
+     "held_high": 0.0,
+     "held_low": 0.0,
+     "held_unknown_lines": 0,
+     "lines": 1,
+     "released": 9.101,
+     "verified": 0.0
+    }
+   },
+   "reason": "1 of 1 released lines not independently verified",
+   "row": null,
+   "state": "APPLICABLE_HELD"
+  }
+ ],
+ "schema": "URBAN_T471_COMPLETENESS_V1",
+ "states": {
+  "APPLICABLE_HELD": 55,
+  "APPLICABLE_UNMEASURED": 25,
+  "APPLICABLE_VERIFIED": 1,
+  "NOT_APPLICABLE": 5,
+  "POSSIBLY_APPLICABLE": 20
+ }
+}
