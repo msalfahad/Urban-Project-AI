@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02 04:13 UTC | Lead | STARTED | run session_01E6cPnaP5nub5wqvjM7N3Tm | repo-attached routine | task state: board | report pending
 - 2026-11-02T03:51Z | Verifier | STARTED | run session_01E6cPncbmptLsaoUB7KRaMf | repo-attached routine | task state: T-431 (Gate B), T-462, T-450 part 1 READY per RUN_LOG | self-check pending
 - 2026-11-02T03:21Z | Worker 2 | SUCCESS | T-462 READY (agents/task-T-462 @ 870056d0) | Tests needing private project data now SKIP ('private data not available: <file>') instead of failing: the 38 affected files went from 358 F + 32 E to 390 skipped, passes unchanged (346), and strict mode (URBAN_PRIVATE_INPUTS=require) reproduces the 390 baseline failure ids exactly; full public suite 17,055 passed / 6 failed / 0 errors (5 import-rule = T-465; 1 new board-state failure t374 snapshot vs board DG-2ddc451c17d2b589, needs a Lead row); no BOQ quantity moves; full private run not measured | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: wrapper refuses research/agents_t202/known_failures.py ('run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py'), ledger compared by hand
 - 2026-11-02T03:20Z | Worker 1 | STARTED | run session_01E6cPnb8HKcHtG6h7XbZEpV | repo-attached routine | task state: none yet | self-check pending
