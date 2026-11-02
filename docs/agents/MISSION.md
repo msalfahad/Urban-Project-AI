@@ -154,6 +154,34 @@ be verified.
 Owners: T-471 (coverage: component -> line), T-180 (measurement + independent sum), T-469 (line -> trade -> project
 reconciliation), T-468 (acceptance record carries both proofs).
 
+
+## OWNER CONFIRMED rules register (owner correction 2026-11-02; binds every agent)
+
+When the owner explicitly confirms a site practice or a quantity rate, it is recorded as OWNER CONFIRMED, never as
+provisional, and it is not reopened unless actual drawing evidence creates a conflict (then: report the conflict with the
+drawing reference; do not change the rule). Every quantity states its basis as OWNER CONFIRMED, DRAWING / SPECIFICATION,
+or ENGINEERING ASSUMPTION (the last never attributed to the owner, and escalated as a missing input when it moves a
+procurement quantity).
+
+| Item | OWNER CONFIRMED rule | Source |
+|---|---|---|
+| Wet-area walls | Three separate activities, none omitted, none double-counted: (1) spatter dash (طرطشة) by the plasterer (معلم المساح); (2) levelling render (مساح ناعم) by the tiler (معلم السيراميك); (3) tile adhesive + porcelain by the tiler. Cement bags, sand m3 and water of cement-based layers come from the applicable mix, thickness and material yield | owner 2026-11-02 |
+| Wall plaster height | to the underside of the structural slab | owner 2026-11-02 |
+| Wall paint height | stops at the finished ceiling level; plaster and paint measured separately, also in stairwells where the exposed ceiling geometry differs | owner 2026-11-02 |
+| Stair shaft | full exposed wall heights continuously through the stairwell, reconciled wall by wall | owner 2026-11-02 (Q-72) |
+| Tile adhesive | 20 kg bag (Q-45 photo, BSCO Nite 20 kg +-5 %); 120 x 60 porcelain: 3 m2 per bag (Urban site coverage, used instead of the manufacturer's nominal 5 m2); normal tiles: 5 m2 per bag (Q-45); bags = ceil(area / coverage) per tile type; any extra waste shown separately | owner 2026-10-19 (Q-45) and 2026-11-02 |
+| Black block | physical 40 x 19 x 19, sold as 40 x 20 x 20; installed module incl. joints; 12.5 per m2 for the 40 x 20 installed module; waste separate | owner 2026-11-02 (Q-75) |
+| Black-block mortar | 1:4 with the Q-45 figures (about 8 x 50 kg cement and 1.1 m3 loose sand per m3) | owner 2026-11-02 (Q-78) |
+| Floor tile bed | 3-4 cm regular floors, 4-6 cm bathrooms (Q-45); 1:4 with the Q-45 figures | owner 2026-10-19 (Q-45) |
+| White AAC glue | 15 cm block 3.5 kg/m2 (about 7.1 m2 per 25 kg bag); 20 cm block 4.5 kg/m2 (about 5.6 m2 per bag) | owner 2026-11-02 |
+| Lintels | lengths 1.20 / 1.50 / 2.50 / 3.00 / 4.00 m; length = masonry opening + both bearings (e.g. 1.10 + 0.20 + 0.20 = 1.50 m); one per opening, priced in pieces; long spans: bearing and capacity from supplier load / span tables or the drawings, else FLAGGED | owner 2026-11-02 |
+
+NOT GIVEN BY THE OWNER (missing inputs; use drawing / specification values where printed, otherwise escalate, never
+invent and never attribute to the owner): thickness and mix (or yield) of spatter dash, of the levelling render and of
+wall plaster; water quantities (an engineering assumption unless specified); the 15 cm black block face; the adhesive
+coverage of tile sizes other than 120 x 60 that are not 'normal' (160 x 80 and 60 x 60 are classed by the earlier owner
+instruction of 2026-11-02: 160 x 80 at 3 m2, 60 x 60 as normal at 5 m2 unless the owner says otherwise).
+
 ## How accuracy is scored (never "95 % of categories pass")
 
 Per category and unit (never mix m2, m3, lm, t, nr):
