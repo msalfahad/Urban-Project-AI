@@ -1,0 +1,86 @@
+{
+  "schema": "URBAN_PROJECT_CONFIG_V1",
+  "project_id": "VILLA-SYNTH-01",
+  "config_version": "1.2.0",
+  "note": "SYNTHETIC test project: every value below was chosen by hand for the tests; it is no real villa",
+  "facts": [
+    {
+      "fact_id": "STR.SLAB.ROOF.THICKNESS",
+      "version": 1,
+      "quantity_kind": "LENGTH",
+      "value": 200,
+      "unit": "mm",
+      "source": {"kind": "DRAWING", "reference": "synthetic structural sheet S-03, slab schedule"},
+      "approval": {"status": "APPROVED", "by": "CONSULTANT", "date": "2026-10-01"},
+      "affected_lines": ["CONC.SLAB", "FORM.SLAB.SOFFIT"],
+      "confidence": "CONFIRMED"
+    },
+    {
+      "fact_id": "ARC.CEILING.HEIGHT.GF",
+      "version": 1,
+      "quantity_kind": "LENGTH",
+      "value": 3.10,
+      "unit": "m",
+      "source": {"kind": "OWNER_DECISION", "reference": "synthetic owner answer Q-S1"},
+      "approval": {"status": "SUPERSEDED", "by": "PROJECT_OWNER", "date": "2026-10-02"},
+      "affected_lines": ["FIN.PLASTER.INT", "FIN.PAINT.INT"],
+      "confidence": "PROVISIONAL"
+    },
+    {
+      "fact_id": "ARC.CEILING.HEIGHT.GF",
+      "version": 2,
+      "quantity_kind": "LENGTH",
+      "value": 3.20,
+      "unit": "m",
+      "source": {"kind": "OWNER_DECISION", "reference": "synthetic owner answer Q-S4 (replaces Q-S1)"},
+      "approval": {"status": "APPROVED", "by": "PROJECT_OWNER", "date": "2026-10-05"},
+      "affected_lines": ["FIN.PLASTER.INT", "FIN.PAINT.INT"],
+      "confidence": "PROVISIONAL",
+      "supersedes": 1
+    },
+    {
+      "fact_id": "ARC.WALL.TILE.HEIGHT.WET",
+      "version": 1,
+      "quantity_kind": "LENGTH",
+      "value": 2400,
+      "unit": "mm",
+      "source": {"kind": "SPECIFICATION", "reference": "synthetic finishes schedule A-20, row 4"},
+      "approval": {"status": "APPROVED", "by": "DESIGNER", "date": "2026-10-03"},
+      "affected_lines": ["FIN.WALL.TILE"],
+      "confidence": "CONFIRMED"
+    },
+    {
+      "fact_id": "ARC.BLOCK.TYPE.EXTERNAL",
+      "version": 1,
+      "quantity_kind": "CATEGORY",
+      "value": "AAC_200",
+      "unit": "none",
+      "source": {"kind": "SPECIFICATION", "reference": "synthetic general notes A-00, note 7"},
+      "approval": {"status": "APPROVED", "by": "DESIGNER", "date": "2026-10-03"},
+      "affected_lines": ["BLK.EXT", "MAT.BLK.GLUE"],
+      "confidence": "CONFIRMED"
+    },
+    {
+      "fact_id": "SITE.POOL.PRESENT",
+      "version": 1,
+      "quantity_kind": "BOOLEAN",
+      "value": true,
+      "unit": "none",
+      "source": {"kind": "DRAWING", "reference": "synthetic site plan A-01"},
+      "approval": {"status": "APPROVED", "by": "PROJECT_OWNER", "date": "2026-10-01"},
+      "affected_lines": ["WP.POOL"],
+      "confidence": "CONFIRMED"
+    },
+    {
+      "fact_id": "MAT.BLOCK.WASTE",
+      "version": 1,
+      "quantity_kind": "RATIO",
+      "value": 5,
+      "unit": "%",
+      "source": {"kind": "SUPPLIER_DATA", "reference": "synthetic supplier sheet 12"},
+      "approval": {"status": "PENDING", "date": "2026-10-06"},
+      "affected_lines": ["MAT.BLK.UNITS"],
+      "confidence": "PROVISIONAL"
+    }
+  ]
+}
