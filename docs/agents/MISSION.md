@@ -7,6 +7,64 @@ items** (concrete, rebar, waterproofing, openings, blockwork). Trades in scope n
 paint, floor area, wet vs dry areas, waterproofing, tiles, doors and windows.
 
 
+
+## Owner-approved RECOVERY PLAN 2026-11-02 (delivery first; binds every agent; overrides the gate order where they differ)
+
+The 2 Nov completion target was missed. Work shifts from broad development to INTEGRATION, VERIFICATION and DELIVERY.
+Board updates, merges and passing tests are not completed BOQ functionality.
+
+**Scope freeze:** the complete villa BOQ with every previously approved trade: structure (earthworks, blinding,
+footings / rafts, necks, columns, ground beams / straps, beams, slabs, stairs, pool, tank, lift, reinforcement,
+formwork), masonry (blocks, mortar, lintels, accessories), plaster (spatter dash, internal, external), paint, floors and
+tiles, wet-wall layers, waterproofing (wet areas, roofs / balconies, upturns, buried, pool / tank), ceilings, doors,
+windows, glazing, stairs finishes (marble, nosing, pieces), lift marble, handrails along the slope, external paving,
+fence, and the materials layer. No difficult component is dropped. Frozen: NEW NON-ESSENTIAL FEATURES only; defect
+fixes and completeness work continue.
+
+**Consultant dependencies never block software:** integration and testing proceed; the engine identifies and reports
+each unresolved drawing item (component, reason, affected line, range); affected quantities are never VERIFIED.
+
+**Critical path (owners):**
+1. Scope list = EIMP + component register (T-471 part 1): Lead today, then Worker 2.
+2. Integration of every measured family into the candidate, in TWO CONTROLLED STREAMS (below): Worker 3 (stream S) and
+   the worker the Lead assigns to stream F.
+3. Released-concrete statement by structural family with drawing evidence (92.77 vs 111.81 m3, neither assumed right)
+   + aggregation reconciliation across all trades (T-469): Worker 1.
+4. Independent line closures with independent sums, concrete -> reinforcement -> blockwork first (T-180): Checker.
+5. Materials layer (T-448 -> T-453 .. T-455): after 1, with T-456 reproduced.
+6. Generic scoring and remaining A1 trades for the blind test (T-452, T-449): Worker 1 after 3.
+PAUSED until delivery: T-451 (refactor), T-472 (pricing), T-450 part 2, T-468 beyond the minimal acceptance record,
+research-only rows without a line target, non-blocking test items (T-473 and T-465 continue). For a scope item with
+NO open row (e.g. formwork integration after the item-code refusal, lift marble, handrails), the Lead opens ONE row;
+that is a gap, not a duplicate.
+
+**Two integration streams (owner-approved with controls):**
+- STREAM S (structural): STR.* / CONC.* / REBAR / earthworks / foundation waterproofing / formwork / lift structure
+  (e.g. T-350, T-353, T-419, T-442, formwork). STREAM F (finishes): ARCH.* / MAS.* / plaster / paint / floors / tiles /
+  wet walls / ceilings / skirting / stairs finishes / railings (e.g. the V3.0.41 package, T-363, T-364, T-314, T-372,
+  T-424, T-443, T-310).
+- Ownership: a stream edits only its own families' modules, inputs and tests; a shared file (CLI version table, BOQ
+  export, rule / family registry) is edited by ONE stream at a time, declared in the row before claiming.
+- Merge control: the Checker merges Gate B packages ONE AT A TIME; each package is rebased on the latest candidate
+  before Gate B; the other stream's lines must be byte-identical (diff evidence in the verdict); a candidate version
+  number is allotted at merge, not at claim.
+- Any regression in the other stream's lines = REJECTED, no override.
+
+**Milestones (owner-approved):**
+- 10 Nov: first end-to-end training-villa BOQ: every required trade represented, explicit HELD / estimated quantities,
+  working aggregation reconciliation.
+- 12-13 Nov: independently reconciled quantities + trade-by-trade scorecard (measured, verified, estimated, HELD,
+  missing, duplicated, mis-aggregated) + the concrete statement by family and drawing evidence.
+- 19-20 Nov: unseen-villa blind test, ONLY when EIMP, integration, completeness checks, aggregation proof and generic
+  scoring meet readiness; first-pass output frozen before any reference comparison; training-villa regression kept
+  separate.
+- 25 Nov: EARLIEST production decision, not an automatic release; +-3 % per trade against the reconciled reference,
+  completeness, independent verification and no silent omissions unchanged.
+
+**Reporting:** one concise daily delivery scorecard from the main chat (integrated trades, independently verified
+trades, high-impact unresolved quantities, aggregation status, critical-path blockers, milestone confidence). Lead
+reports stay short; no lengthy reports.
+
 ## Owner directive 2026-11-02: Goal B, priority order, blind test (binds every agent; read first)
 
 **Goal B:** the engine produces a complete, priced BOQ for ANY villa from its PDF and AutoCAD plans, without a
