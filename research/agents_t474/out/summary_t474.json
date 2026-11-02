@@ -1,0 +1,287 @@
+{
+ "binding_drift": {
+  "dependent_held": [
+   [
+    "L-10c6bca8239b3d25ebf8",
+    "L-755eb56b55e86301b488",
+    "0.128007",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-45b8299ccc0c49c0c2c1",
+    "L-c677b628a776d3b87b02",
+    "0.096014",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-73757377a50522f001c8",
+    "L-e112e2add2f8979a6c39",
+    "0.080014",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-754bc0ccda4ecb226d39",
+    "L-8de64040a1c3ae6cf137",
+    "0.080000",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-7b3aad24af34a0e58121",
+    "L-cc702b8541c15fdfd98c",
+    "0.080000",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-b4c47b2ad35deb6f8abc",
+    "L-8f8ad257d9b2cb9e027f",
+    "0.080019",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-b9eab157c42424b4ce77",
+    "L-1dc713c83bf62e525ff2",
+    "0.128000",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-bf1eecb7350e8d43826e",
+    "L-831f6fe3de133294bb8f",
+    "0.096000",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-c00cf98ba8a408aa2f55",
+    "L-9cb26d86575a92694880",
+    "0.064000",
+    "BOUNDED_EXPOSURE"
+   ],
+   [
+    "L-fbf94b0bb2323bfe65d8",
+    "L-43dae3d6dfec957b26a8",
+    "0.096000",
+    "BOUNDED_EXPOSURE"
+   ]
+  ],
+  "dependent_held_m2": 0.928054,
+  "formwork_lines": 37,
+  "valued_on_restated_concrete": [
+   [
+    "L-5db3bf6439ebfa2a7d61",
+    "L-7c1a1da8004c4272ccba",
+    "5.312740",
+    "SOURCE_DERIVED 0.7163 -> SOURCE_DERIVED 0.716937"
+   ],
+   [
+    "L-82b8e8bf610932c84e9d",
+    "L-9270e8b8860414386adb",
+    "6.992909",
+    "SOURCE_DERIVED 1.337922 -> SOURCE_DERIVED 1.33875"
+   ],
+   [
+    "L-9b68c460329caf2c6d29",
+    "L-9a55aadc9f0880ae37a7",
+    "3.724102",
+    "SOURCE_DERIVED 0.526665 -> SOURCE_DERIVED 0.528021"
+   ],
+   [
+    "L-da4abbc0be2d97a8081d",
+    "L-cbf53752cfd897c35c2c",
+    "1.755197",
+    "SOURCE_DERIVED 0.254647 -> SOURCE_DERIVED 0.255"
+   ]
+  ]
+ },
+ "by_basis": {
+  "CALCULATED": {
+   "lines": 192,
+   "m2": 689.856739
+  },
+  "HELD": {
+   "lines": 388,
+   "m2": 0.0
+  },
+  "NOT_APPLICABLE": {
+   "lines": 1,
+   "m2": 0.0
+  },
+  "VERIFIED_GEOMETRY": {
+   "lines": 62,
+   "m2": 375.0481
+  }
+ },
+ "by_class_valued_m2": {
+  "BEAM/BEAM": 390.251472,
+  "COLUMN/SOFFIT": 117.461,
+  "DOME/SOFFIT": 48.3,
+  "GROUND_BEAM/ARC_FACE": 6.239008,
+  "GROUND_BEAM/END": 0.0,
+  "GROUND_BEAM/SIDE": 41.708705,
+  "JOINT/JOINT": 8.712728,
+  "POOL/SIDE": 15.982699,
+  "SLAB/SLAB": 375.0481,
+  "SLAB_EDGE/SLAB_EDGE": 24.273691,
+  "STAIR/FLIGHT_SIDE": 3.9214,
+  "STAIR/LANDING_EDGE": 0.184,
+  "STAIR/RISER": 11.163286,
+  "STAIR/SOFFIT": 21.65875
+ },
+ "by_code": {
+  "STR.FORMWORK": {
+   "blank": 368,
+   "lines": 612,
+   "valued": 244,
+   "valued_m2": 1027.977403
+  },
+  "STR.FORMWORK.STAIR": {
+   "blank": 21,
+   "lines": 31,
+   "valued": 10,
+   "valued_m2": 36.927436
+  }
+ },
+ "class_census": {
+  "BEAM/BEAM": {
+   "CALCULATED": 450,
+   "HELD": 142,
+   "calc_m2_G": 390.251472
+  },
+  "BOUNDARY/EDGE_BAND": {
+   "HELD": 1
+  },
+  "BOUNDARY/END": {
+   "HELD": 1
+  },
+  "BOUNDARY/SIDE": {
+   "HELD": 11,
+   "INFO": 1
+  },
+  "COLUMN/SIDE": {
+   "INFO": 3
+  },
+  "COLUMN/SOFFIT": {
+   "CALCULATED": 18,
+   "HELD": 41,
+   "calc_m2_G": 117.461
+  },
+  "DOME/SIDE": {
+   "HELD": 6,
+   "S1_NOT_RELEASED": 4
+  },
+  "DOME/SOFFIT": {
+   "CALCULATED": 2,
+   "HELD": 3,
+   "S1_NOT_RELEASED": 3,
+   "calc_m2_G": 48.3
+  },
+  "FOOTING/COVER": {
+   "ALTERNATIVE": 5,
+   "HELD": 1
+  },
+  "FOOTING/NOTCH": {
+   "ALTERNATIVE": 2
+  },
+  "FOOTING/SIDE": {
+   "ALTERNATIVE": 50,
+   "HELD": 2,
+   "NOT_APPLICABLE": 1
+  },
+  "GROUND_BEAM/ARC_FACE": {
+   "ALTERNATIVE": 1,
+   "CALCULATED": 1,
+   "calc_m2_G": 6.239008
+  },
+  "GROUND_BEAM/COVER": {
+   "ALTERNATIVE": 1,
+   "HELD": 32
+  },
+  "GROUND_BEAM/END": {
+   "ALTERNATIVE": 1,
+   "CALCULATED": 1,
+   "HELD": 7,
+   "calc_m2_G": 0.0
+  },
+  "GROUND_BEAM/SIDE": {
+   "ALTERNATIVE": 43,
+   "CALCULATED": 15,
+   "HELD": 54,
+   "calc_m2_G": 41.708705
+  },
+  "JOINT/JOINT": {
+   "CALCULATED": 18,
+   "HELD": 73,
+   "INFO": 3,
+   "calc_m2_G": 8.712728
+  },
+  "LIFT/SIDE": {
+   "HELD": 2,
+   "REMOVED": 1
+  },
+  "NECK/SIDE": {
+   "HELD": 1
+  },
+  "PARAPET/SIDE": {
+   "HELD": 24
+  },
+  "POOL/SIDE": {
+   "ALTERNATIVE": 4,
+   "CALCULATED": 2,
+   "HELD": 2,
+   "calc_m2_G": 15.982699
+  },
+  "POOL/SOFFIT": {
+   "REMOVED": 2
+  },
+  "SLAB/SLAB": {
+   "CALCULATED": 62,
+   "HELD": 1,
+   "calc_m2_G": 375.0481
+  },
+  "SLAB/SOFFIT": {
+   "HELD": 1
+  },
+  "SLAB_EDGE/SLAB_EDGE": {
+   "CALCULATED": 133,
+   "HELD": 43,
+   "OWNED_BY_OTHER_LINE": 1,
+   "calc_m2_G": 25.201745
+  },
+  "STAIR/FLIGHT_SIDE": {
+   "CALCULATED": 6,
+   "CONFLICT": 1,
+   "HELD": 9,
+   "calc_m2_G": 3.9214
+  },
+  "STAIR/JUNCTION_STRIP": {
+   "HELD": 3
+  },
+  "STAIR/LANDING_EDGE": {
+   "CALCULATED": 1,
+   "HELD": 7,
+   "calc_m2_G": 0.184
+  },
+  "STAIR/RISER": {
+   "CALCULATED": 6,
+   "HELD": 3,
+   "calc_m2_G": 11.163286
+  },
+  "STAIR/SIDE": {
+   "HELD": 3
+  },
+  "STAIR/SOFFIT": {
+   "CALCULATED": 9,
+   "HELD": 8,
+   "NOT_APPLICABLE": 1,
+   "calc_m2_G": 21.65875
+  },
+  "STRAP/SIDE": {
+   "ALTERNATIVE": 6
+  },
+  "STRAP/SOFFIT": {
+   "HELD": 3
+  }
+ },
+ "lines": 643,
+ "live_state": "V3.0.43 run",
+ "project": "development-villa-t131",
+ "schema": "T474_FORMWORK_LINE_MAP_V1"
+}

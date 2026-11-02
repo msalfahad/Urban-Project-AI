@@ -1,0 +1,5967 @@
+{
+"boq_lines_json_sha256": "6f534d5e099cd3a1d3fb45a7c9082c6358e40920c20e2fba57adef21673dce3c",
+"candidate": "ARCH_TAKEOFF_V3.0.43",
+"candidate_lines": 4857,
+"lines": [
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-00465df980165c529476",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-007ee1494e960a6985a7",
+"measured_net": 1.426197
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-01347a407f5f4c82d250",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-017d95e5711dfc94964c",
+"measured_net": 24.15
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-017e60572952164e5b5e",
+"measured_net": 9.789418
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-01830823b3fe396ad418",
+"measured_net": 2.016
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0222d171d88420dea3b7",
+"measured_net": 2.808334
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-022719d71ec28263513c",
+"measured_net": 0.0488
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-027f7530c84fdc5f49a1",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-029fae1c30e59965be6c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-02a5b135e66bd748a879",
+"measured_net": null
+},
+{
+"evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-02cebd391ce08423c92d",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-02ee97d409df4b3a501b",
+"measured_net": 0.38117312481318955
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-030e2ec62b20bcc5267d",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-038456ade3eb09b43bb8",
+"measured_net": 0.07477202043014389
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-03f1399ed0091428743e",
+"measured_net": 0.240000000034874
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-045d303ab24b9417a265",
+"measured_net": 2.949633
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-04a9c8fccc23c60664e4",
+"measured_net": 2.28
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-056402f98a6dbbcde0a0",
+"measured_net": 1.536225
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-05655d2390280aac1bec",
+"measured_net": 12.188391
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-057ca0aa9960e83c2ce3",
+"measured_net": 0.21600000000000003
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-061e18cf35a4b6b33d68",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-064d24cf6b1737f4b1bd",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-0682b72a63f720f54c8d",
+"measured_net": 6.270000000000001
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0696b363117bffb5307e",
+"measured_net": 4.2878
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-06b355151bcb0d3bf52d",
+"measured_net": 3.182445
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-06fc0372ccf1017c16f6",
+"measured_net": 0.36166
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-076a6d9e6df46aef97d1",
+"measured_net": 1.079463
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-07d17625871345406c97",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-07e302ec4efdfa48ed22",
+"measured_net": 1.3286751816485143
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-07fc3250b0fb4c0c549c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-07ff3908f84c340be31d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0870024fbe57cd812ce7",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-08f5357536a3d9319ec0",
+"measured_net": 4.268
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-093b1a8701615f5fed8c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-096d21f9d351011c57b2",
+"measured_net": 6.435987
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-09ed861144daa7783301",
+"measured_net": 15.1084
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0a1bc7ed6d080857d3eb",
+"measured_net": 1.512
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-0a3620f1b2a632c613e1",
+"measured_net": 2.1528000000494636
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0b071abf33fd464e2b7c",
+"measured_net": 0.3517
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0b1c9bf79818b58365c9",
+"measured_net": 0.816
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0b6b01d1f9c2056faa53",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-0b7c92233a525c8b42f2",
+"measured_net": 1.0125
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-0bb78accf8c0a0fbdbaf",
+"measured_net": 0.2912309462399071
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0bbf01242ef68c4d7323",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0bd5d8e049555f535371",
+"measured_net": 2.579588
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0be63c4068da4890f26b",
+"measured_net": 7.603558
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0c4a0ed911385ececa80",
+"measured_net": 6.15
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0c4ddbaa09eece8bb246",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-0c5ede7fd2c9e425aa8d",
+"measured_net": 0.1124999999999869
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0c7d8d156ea3df8bba39",
+"measured_net": 2.385833
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-0cbe4442d020b25140ee",
+"measured_net": 0.14
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0cf48e59ec25da8e3114",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0d02f87e029c408e8bb6",
+"measured_net": 6.3e-05
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-0e110d2c29b2cd318139",
+"measured_net": 0.250988
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-0e30aadba2eebc6c3ede",
+"measured_net": 0.423
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-0e36c1f66b2f8e455147",
+"measured_net": 2.4173424638835526
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-0e852cca42fb8b765c58",
+"measured_net": 0.28800000000002446
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-0edbf58e586347a3073d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-0ede77cfd0badc4c7d62",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1049f97c2c57406a8424",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-10667ae035e57e29d02c",
+"measured_net": 2.1576000000947473
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-10c6bca8239b3d25ebf8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-10e7860e28bea5750c9e",
+"measured_net": 0.345599999890208
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-10f3cd1eb0f81a3892f2",
+"measured_net": 7.2
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-1146bdecd41491ce9382",
+"measured_net": 0.9547
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-11c12069bf067c21c799",
+"measured_net": 0.4499999999999898
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-11cc81a8bf8a0132ca25",
+"measured_net": 0.000124
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-11d14114a0f6146e930e",
+"measured_net": 7.409512
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-128bbb3f98713383935f",
+"measured_net": 1.6801
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-12a43a865f2d2f54f201",
+"measured_net": 0.11760000000001165
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-13031ccc9cc57a0f3465",
+"measured_net": 0.1439999999924435
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-131df76e442a8b7cc2e9",
+"measured_net": 0.3179999999999965
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-1487bdda099006e0c4ba",
+"measured_net": 0.2940000000000035
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-14abc421dac0a251cc38",
+"measured_net": 0.16
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-14be8e3baf5847132cc7",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-14d84c948d9c8e8c1434",
+"measured_net": 1.2993
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-151a282bcf2d5324a618",
+"measured_net": 0.45000000000080675
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-154189764660999e4896",
+"measured_net": 1.2568771771334506
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-156dfe40dd9ba9c6797a",
+"measured_net": 1.19
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1572a9a9796d43c604d4",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-1590b76b2fe8f131dc07",
+"measured_net": 11.385000000000003
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.POOL",
+"line_id": "L-15a128c38982af899894",
+"measured_net": 2.828071
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-164ae9d338976be9e582",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1671ea81b1b420e81eeb",
+"measured_net": 0.032014
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-16dade3e7416d986e44f",
+"measured_net": 0.212122
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-16e428b50357188a94d2",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-173531a454ee3e9d3317",
+"measured_net": 0.7875000000000001
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-18a6faa46b46d2c35db8",
+"measured_net": 0.12
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-18c2541c0288b5873087",
+"measured_net": 0.5823
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-18f43a07fe8f218f954e",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-193eabb70dbbd7b9b798",
+"measured_net": 1.0327999999325364
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1994fd9628a22a5f3351",
+"measured_net": 1.14
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-1a37f7e858c8c96bd5f6",
+"measured_net": 0.34700000000000003
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1a866144074ab56808a6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1a995cf3f6682f078b40",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1aa72ea4c7741399d038",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-1b5c40deb5c9a27da420",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1b5dad327838fc814568",
+"measured_net": 6.455
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-1b7eaa73e9a5e911054d",
+"measured_net": 0.7200000000000001
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1bc5eab0f500ff7320d9",
+"measured_net": 2.565
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1c2489f103ea0b756308",
+"measured_net": 2.52
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-1caceb74f8c279933a14",
+"measured_net": 0.08000000000000002
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1cb99599c8fa353f2f3b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1d0a470cc8262784ac32",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1d19c2e412388f9bd7bc",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1d52e97f3b90b8c45d4a",
+"measured_net": 2.766941
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1dbd564cee8cc465d44c",
+"measured_net": 2.7619
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-1dc713c83bf62e525ff2",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-1ec3dfd936e83b658b2c",
+"measured_net": 0.7560000000000001
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1ec53dc06ebdad85a19d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1ed9ec6e957d611cbf18",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1eff7d1d82bbeae0f141",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-1f0b37d3309ac5bb4c07",
+"measured_net": 1.7600000000000002
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1f0eb7ea33c30b738a62",
+"measured_net": 4.503358
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1f3e0dd72d49d048eadd",
+"measured_net": 5.614893
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-1f5115950eb4d71fe32a",
+"measured_net": 1.242239999707935
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1f867d7ff0be2c5b03c5",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1f8db5bb9fdce329d414",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-1fab93fe239ad5a86c79",
+"measured_net": 12.036346
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-1fd49f3e7c5a7dd19d4d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-212e954e647dd2ca214e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-214814fa0c97c6e4d598",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-21795b350fbd09150c43",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2191877a7925b3841bef",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-21cb4ac895e1c99f214f",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-21d3f3c2393bb9caf047",
+"measured_net": 6.239008
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2221529b63234c195eaf",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-222e42d97ea28ca69931",
+"measured_net": 0.21600000000000003
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-22694b1e5286c4eeb82d",
+"measured_net": 8.095527
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-229672ce01a2edf0bef0",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-22fc0a35dba85e0fa947",
+"measured_net": 7e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-23275eb03f41ddcace97",
+"measured_net": 0.14399999999998198
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-236a39c38ef9dfb7aecf",
+"measured_net": 0.46199999999639507
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-23c3dcdd49db708a28a5",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-24168a75e6718c86323f",
+"measured_net": 3.916
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-2416e65f053a14199cfc",
+"measured_net": 0.4696
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2447b5ab383fd8966f66",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-24d224c5b3b47f92cf30",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-24da5c2af3a315778442",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-250ac0418b0109702a20",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-257c62341c67b0995e5e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-261043f6ba027907f445",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-263b1a04a36fc0e8eee1",
+"measured_net": 0.5465228808839456
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-26491bc55abff7518911",
+"measured_net": 0.5625
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-269320c32bb42315e529",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-26f6b6f2365c72e42291",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-26fcfbbb143269e7bb58",
+"measured_net": 0.5415
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-276e1da76e74e462c053",
+"measured_net": 0.010633583900263553
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-27d104ca6fc3556d16e6",
+"measured_net": 1.254
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-28396d852c7ae317a153",
+"measured_net": 0.12
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-28458292be2e750a481f",
+"measured_net": 0.41
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-291ba2ddf4bbe4f14cf7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2982b6e28466bc21149a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2999807a87e55d057be3",
+"measured_net": 0.2400000000000181
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2a796cbc07fa8401f885",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2a9ef6e9aa6cf57c106e",
+"measured_net": 7e-05
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-2ac3c9b3b4c2221a0299",
+"measured_net": 0.588
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-2bae08911f281f31553f",
+"measured_net": 1.1305
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2bb620e800b62f6dea23",
+"measured_net": 1.2
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2c168be99c6485403152",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2c47797386f0a91ea176",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2c497d334c0cd3be1f9e",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2c7b0b1e1a439d9ffd1e",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2ce4fce108d2a9392153",
+"measured_net": 9.5034
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2cf19b552884b0f3dd5f",
+"measured_net": 0.096
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-2cf7e7b25d96f5febbdf",
+"measured_net": 0.834477
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2d19014893ff89d7f05e",
+"measured_net": 4.0794
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2d1ec1a7a076fcbe97b0",
+"measured_net": 6.27
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2d2532c0a78976110e49",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2dbe72f13bc3dc4e6b1f",
+"measured_net": 0.95
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2e2fc5195697247a6a0b",
+"measured_net": 1.940009
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2e4055edfd34ee19d802",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2e824ab573ae559d4094",
+"measured_net": 3.784
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2f0e206d244dc7246f80",
+"measured_net": 8.429326
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2f85d9047ea71f6b0b14",
+"measured_net": 0.091584284939121
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-2f97020ab26bff341fe4",
+"measured_net": 0.20000000001060658
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-2ff017c253ab31f3febd",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-300800076840dab01c49",
+"measured_net": 0.05600000000000001
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-3027c28d061657ae2100",
+"measured_net": 1.8719941501299189
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3092c45fbbf2ccc2ab07",
+"measured_net": 0.000133
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-30a5a22c0c95e6bd2566",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-30cfc20e965cd0ba8c9b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3123abfcbd78a3bf4c28",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3133cbf339369513b5f2",
+"measured_net": 1.616943
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3192af499a474dab6ef6",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-31a0424bd0efcc93efba",
+"measured_net": 0.42
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-31bb941ced04f7314eab",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-31d5b3e47f9d9bcec0f4",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3216ec33cfa6a8f20c88",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-322d1a1a7d9504e9cbc6",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-326b2c83d8ec682ba992",
+"measured_net": 0.7061612088526534
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3280c42cb578a211045e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-3284f44000c02179ace7",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-32c0257b1232c1adb6c6",
+"measured_net": 10.36507
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-32ce4e9c774ad49f601c",
+"measured_net": 0.000236
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-32fe23d1618c4a21b715",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-336fd302a6c60a4cabd4",
+"measured_net": 0.16854959391733648
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-33a9b7728781fcba12e2",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-33e91c0e8c7e20bc763b",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-3403073af4f952e49df1",
+"measured_net": 0.672
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3458aacf51c733335497",
+"measured_net": 0.816334
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-345af6af2d4a946eac13",
+"measured_net": 0.3525
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-34c229e50232cf854044",
+"measured_net": 6.722695
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-34ccc6d35e46cb3763d7",
+"measured_net": 0.1439999999999814
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3506cc114a3e6b2cf7ed",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3549e551c3c8d13dee45",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-356bd4c1362c3e2be37d",
+"measured_net": 0.0078097896579512665
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3587c9ce59183e5a40ae",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-35c71ddcb0a2db4def0b",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-35da88665bf36b89a8fc",
+"measured_net": 5.049
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-35f3af51cccc12a36a08",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-361f5e913c566c4fe2b5",
+"measured_net": 0.32399999994771267
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-367e3d5c1c88b973fef4",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.POOL",
+"line_id": "L-36efa902da4263479e0b",
+"measured_net": 4.374226
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-376516f6bfc0cb948e87",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-377066453d77ebffd190",
+"measured_net": 4.5573
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-37c1aa7785249563f512",
+"measured_net": 0.345705
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-385a767a43cbc2844364",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3887095846944c0e9ce8",
+"measured_net": 0.884158
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-38e8dcbc5558ede507aa",
+"measured_net": 4.5e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-395a96045ed49db0cb3f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-39779d6e8cbcc6ac2bae",
+"measured_net": 0.1513905504940567
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-39ca5340879eafc35355",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-39d830b14a64c52bc7ec",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3a2023c23c4378ffcbdd",
+"measured_net": 2.0804
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3ac238f421d365f06ba4",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3af6c436cd3960b58d04",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3b595ec99fd0383ca9e6",
+"measured_net": 15.54
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3b67d5601aea008e178d",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-3b73c9e2ed0cbe3eb446",
+"measured_net": 0.05632391654696252
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3c4e8f4d84fbd472c354",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3c5185558add024e0c22",
+"measured_net": 5.51827
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-3c5c1927b90b042ab1c8",
+"measured_net": 1.4822999999718076
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-3d01af6227b13bc7c1f4",
+"measured_net": 2.8800000002695207
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-3dddf99008ab922da814",
+"measured_net": 4.1918
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3e1c9c572e000aa8a00b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3e64c5b2ad93e7b7e542",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-3e7ea87496653eb75704",
+"measured_net": 0.5160000000000106
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-3e9076546ea34d8cbcc7",
+"measured_net": 0.296
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3e9fc3cbaeb1442c8946",
+"measured_net": 4.8e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3ec80c0a4168a5c6ab38",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-3fd22f68c1330e29bd57",
+"measured_net": 3.409263
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-402dbe61d1c924144a3c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-40973acdc3c3797fa441",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-40a1126c765c79b91b86",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-40e52df7991fc77c2533",
+"measured_net": 4.4135
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-40f817e1a25906ad5340",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-410567f376d8209cad47",
+"measured_net": 18.0
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4126537802fa52fc0f4f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-4129e781d6133b963bf7",
+"measured_net": 0.45000000000054485
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4141d57a5b3910a09aa2",
+"measured_net": 4.159694
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-415cfcdd1d775ee6251c",
+"measured_net": 0.7121725429392654
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-419db30d16a77844a58d",
+"measured_net": 0.129688
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4240bf84b3fb055de232",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-424ca585bca8249cc8a3",
+"measured_net": 5.45775
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4250fb8ee25dd2585e45",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-427f3499df72e84f700d",
+"measured_net": 0.7493741007500464
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-4299f559bf9509418385",
+"measured_net": 0.17999999999999564
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-42e60d1f5f7b910917f5",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4369396216bb8a515aa7",
+"measured_net": 3.560392
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-436a0800996c98beb9dd",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-438fbcd95aa1f59f2752",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-43d1d1031b3d3ddd1cc4",
+"measured_net": 0.3480000000012853
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-43dae3d6dfec957b26a8",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-43e804ba4a4c07529fd5",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-445463e318098f16a786",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4479b77e8c2fa521f535",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-448b1ba80cbfb56e27b3",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-454019ba9b506c1d0d3d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-45b8299ccc0c49c0c2c1",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-45e0d887d33192039e05",
+"measured_net": 1.62356
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-46b8405b4f37cf5590c4",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-46f25f72b44e8bc3e2e0",
+"measured_net": 0.7695
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-46f3fb2ab0f763994f26",
+"measured_net": 0.19600000000000992
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-470ddf241409df9d54fc",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4731493b038840efd5e3",
+"measured_net": 0.699264
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-4783c6e18002c3a8a37e",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-47b844d6376198e4d108",
+"measured_net": 7.088928
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4879d46731388f94c967",
+"measured_net": 2.244
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-48b7d139bff681199543",
+"measured_net": 0.7552
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-48c60a6980d614f85788",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-48edec45778938034842",
+"measured_net": 6.3e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-490d0916fbd4f1d22b0e",
+"measured_net": 0.8128490439857461
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-495d4b80f284640bbd0b",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4a2c9c013a6d274d9a77",
+"measured_net": 2.808334
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4a70e3a422f01f616525",
+"measured_net": 1.747129
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-4a9628ac51fddc7945cd",
+"measured_net": 0.205544
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-4aed92c117a7ab1c90ee",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4b4563e806e20f7eb1b4",
+"measured_net": 0.112002
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4b7f6aadb3268d75f768",
+"measured_net": 0.587999
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-4baffcb95570ca418d0c",
+"measured_net": 0.8640000000671018
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4bb13de43c56e6e2eee7",
+"measured_net": 1.188009
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4bcd1e67269ba05f81e5",
+"measured_net": 2.16
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-4c0e72c44c32c35b1f37",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-4c4496579e5bfa20ae9f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4cb19965bee2ab52bc8c",
+"measured_net": 5.4
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4cc79249620592854850",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4d394d794e3e52e117f7",
+"measured_net": 1.742277
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-4d689805e55dca54f7cf",
+"measured_net": 2.016
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4dd863c8135ddd3d6486",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4ddf54ff73eb432d262f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4ed196e0aa0c644834e6",
+"measured_net": 0.4674
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-4ed1b164e5f54d3725b4",
+"measured_net": 0.4699845003820139
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4ee17a01ce682fd60a26",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4ee8718ab90364bf1a2f",
+"measured_net": 17.064132
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-4f30f08b15e9ab008e7a",
+"measured_net": 0.17999999999999675
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4f513174e47b0b21850c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4f782e5fef70ea41044e",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4f9d71a51d0ec345b19d",
+"measured_net": 2.049908
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-4fb97d6d6781eaa4ba54",
+"measured_net": 9.123243
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-503ff3edfcc7c56e94c1",
+"measured_net": 1.6e-05
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-50667f69855b6d588011",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-509b17c4ea6344588fcb",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-50e0b511784fdff8f48b",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-5146145453fda384253d",
+"measured_net": 0.21600000000000003
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5160d33fbf182f6f7093",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-51b7ecb70aaa9e9b5dd5",
+"measured_net": 5.980256
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-51c1f7b607e1b008606e",
+"measured_net": 3.325
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-5225bc5777a370ad9f04",
+"measured_net": 0.5124999999999073
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-52d53054c6dfb63e49aa",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-53f223b06db14ac41d47",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-541c7e565bb93ecdb78b",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-550058556e3cbf9db755",
+"measured_net": 3.69199
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-555ca76e166e43dd0e6a",
+"measured_net": 8.826316
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5564409fb6c9144c4baa",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-56927418a41f2fea61bd",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-56c180d1e4792d3febbb",
+"measured_net": 7.8555
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-56e79e32ee84c39da26f",
+"measured_net": 13.485
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-56ebab0b7b448d0abeb1",
+"measured_net": 0.5069999999999791
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-571f92c443ba62a26151",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-576b66cfc24d20856dae",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-578c83bef18e44a88cb8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-578ddf276a2e214a3945",
+"measured_net": 1.7645529777362128
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-5793c62a6b332f624288",
+"measured_net": 0.972000000112463
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-57a29f4bf615dbafd17b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-57fc16524398c58c45cd",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-587a44328b782cb8a1cb",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5906788df4301f1ca50a",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-59892488d47a6b1da90a",
+"measured_net": 20.855
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-59a4e3d1efd780c03226",
+"measured_net": 6.870502
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-59b1735c7d992f36ceda",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-59f0c115e7db8fa87f58",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5ab9772abafd3c5f5a41",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-5af89b9f1e5b90daf8f5",
+"measured_net": 0.9000000000744888
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-5afc5b2e3ad6efb3f96f",
+"measured_net": 0.8871027333413959
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-5bc1baae70fcc325abea",
+"measured_net": 0.2827433388230814
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5c1b491cdb77768bbc9c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5c555f96b85e393a9ea1",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5c55c1d533cee47e3393",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-5ca0573b64ee1cb22e0e",
+"measured_net": 1.1137499999552438
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5ce0754b2817d5f5d07a",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-5d3e72daa69dc769ca5e",
+"measured_net": 2.625
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-5d6f86944074e7c8a2b6",
+"measured_net": 0.21599999996514355
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5d8fd91bc34614772330",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5db3bf6439ebfa2a7d61",
+"measured_net": 5.31274
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5dfb93a579fa29760577",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5e7beb2d55b81c888ce1",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5f065d238612109e173f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-5f15221db7e0251cffe1",
+"measured_net": 0.32000000004354445
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-5f2ae83209636eca802d",
+"measured_net": 6.3e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6025d4d0a890c6cb4261",
+"measured_net": 0.5223
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-603881c7515e641204b9",
+"measured_net": 1.020158
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-605f1cb31b3741c856fc",
+"measured_net": 4.734956
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-60e491cb9ecfb81d545b",
+"measured_net": 0.5759999999157001
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-60f09eece6568b15f6ce",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6125d393fb6c79684c52",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-61689f48198a11cbeb90",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-616a12281372088e618d",
+"measured_net": 1.76542
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-618ceb9845d7715a17f0",
+"measured_net": 0.814691
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-62243c74c430d383be86",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-623633e86e2cee53fe63",
+"measured_net": 9.27627
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BOUNDARY_WALL",
+"line_id": "L-6290a9f3d93f38cd46d6",
+"measured_net": 7.2204
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-62f712462a36d4ad1b32",
+"measured_net": 1.2255
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-63056244c05c761419e7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-63356d6145d75795a166",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-637f6edec1eb8aea750b",
+"measured_net": 2.9374
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-638986ad6a9311686a7f",
+"measured_net": 1.188316
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-63cd0cc4db0c1fb0ad7e",
+"measured_net": 0.0
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-6443f3deecafb609f072",
+"measured_net": 6.682581
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-6499eb01de0a455a6341",
+"measured_net": 0.21599999996515404
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-64b6936c8020c159b1e2",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-651a3d191bc4cb07cc1d",
+"measured_net": 0.5527728808839456
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-657e6e2cba5a0d0d9d95",
+"measured_net": 2.832799999942095
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-658e6426ea82f35d3f61",
+"measured_net": 0.000128
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-659243ed9fc2831c3ae8",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-65b352666800d4d4138a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-66648948e9fa24efa10b",
+"measured_net": 9.453009
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-667abf3c706dba90b424",
+"measured_net": 2.713057
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-66886a431003aa6e54ed",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-66adf3a81cf94492d42a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-67ca55c589bd108cf248",
+"measured_net": 1.5
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-67d999ba180df8384c41",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-67e4b0485135f84acc46",
+"measured_net": 1.033445
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6837b481aad3abc4321e",
+"measured_net": 3.608018
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-683900f927474df70227",
+"measured_net": 0.09307529347830766
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-6873e8f788bfcd4f9031",
+"measured_net": 0.07600000000000001
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-689abc61dfc445f60224",
+"measured_net": 1.2375
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-69089a50ceff59b06464",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-694a75c84dd6e4bb4491",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6b5b5c987d6a9f7330b1",
+"measured_net": 5.259595
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-6bdfcf21ebb29773436e",
+"measured_net": 0.8775000000000002
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-6bf14711798e5af93594",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6cba8c04e5f32a060b06",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6d72f51dfe7ec1097f00",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-6d79eaf1b0f24483b0e0",
+"measured_net": 0.3429
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-6e1034e07c44c4644c22",
+"measured_net": 0.990006
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6e80307d3649bddb80b6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6f1bc604f42bf176730c",
+"measured_net": 3.930244
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6f25ffa39bf0f6400ef9",
+"measured_net": 4.2148
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6f2ee487219a83a86e15",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-6f56016cd0282ebad28a",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6f83fc39933954d0e3e6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-6fc0d97f90f0a14ffa5f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-703b51d606ecb028731f",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-7076482d75ca42691468",
+"measured_net": 1.746943
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-707f9d025528823d205e",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-70830345ffdabc4cf7d5",
+"measured_net": 0.6588174496773768
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-70e210d5acce999fcdf6",
+"measured_net": 0.5818
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-71144bbcfce0b1dbbdef",
+"measured_net": 0.2
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-7117723666e439340d84",
+"measured_net": 0.411599999999435
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-713bc64aaa210610e7fe",
+"measured_net": 0.6480000001076394
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7159590ded40dccbc79e",
+"measured_net": 1.980167
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-71a283d2bc3d4e5771a9",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-732f42e0e05c4bcf73c7",
+"measured_net": 8e-06
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-732fbf29fedf23d591a6",
+"measured_net": 0.080014
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-734dc85d1a4ffbde5655",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-73757377a50522f001c8",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-7380736269ecfe6ce8a6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-739ee9feb2a4c3aa6fa7",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-73df271257d6265258b1",
+"measured_net": 5.31
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-74001fc2519aa4a8a017",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-746d75394974ba009ef7",
+"measured_net": 13.455
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-74bde45d27edaeb8dc32",
+"measured_net": 2.849975
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-74cd501167246b342c97",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-754bc0ccda4ecb226d39",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-755eb56b55e86301b488",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-75a0d6b933218568f685",
+"measured_net": 0.6000000000538996
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-75e67130f0ccc8ba07d8",
+"measured_net": 2.039754
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-760f6c369aa655adc84d",
+"measured_net": 0.515999999999972
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-761cdfb3b9736561f473",
+"measured_net": 3.96
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-7687818e1bd5d4a520e3",
+"measured_net": 0.43
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-769e433804ffcb496c85",
+"measured_net": 0.680334
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-76d0bad3c40bd8cedca2",
+"measured_net": 0.9421875000817768
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-76d2c46db03736e520d8",
+"measured_net": 3.2205
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-76e1da272b126693ccb1",
+"measured_net": 1.4e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-773e61946c076353c74c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-778be286070fc191ef81",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-77ecb282cecee46e23f3",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-780b8142b030c0108b6b",
+"measured_net": 0.7424999999999999
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-785ce1a08953de7d421e",
+"measured_net": 0.4849999999999942
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-7863355dfcb68a681d2d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-793e16c45e3733cdaf55",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-79582bc7ada9e8b3da4e",
+"measured_net": 10.4215
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-799395f7585c624f39b6",
+"measured_net": 1.241382
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-79d9de220cf53a693370",
+"measured_net": 0.096014
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-7a4d5364c39aa3fe5850",
+"measured_net": 0.35500000000000004
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7a685de65300badfa1a4",
+"measured_net": 1.6e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-7a83b8f273dea348e19e",
+"measured_net": 0.08351824970650433
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7aa867fc3b7d4a47e5a0",
+"measured_net": 0.0315
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-7afad512258c1bad8519",
+"measured_net": 1.2096000000000733
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7b33c9aecd3ef67e3b3b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7b3aad24af34a0e58121",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-7b41af5790ea7ad5156e",
+"measured_net": 1.125
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7b7aab7ac0fe962a91b9",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7ba8826b29bb0d24d83f",
+"measured_net": 7.7e-05
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-7c1a1da8004c4272ccba",
+"measured_net": 0.716937
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7c3552712f473f04f86c",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-7c3edce23ec8faa3d674",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7c8b7e4bacd3e27a92a6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-7ca10403edee7eb03ce5",
+"measured_net": 2.924999999999962
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7d22f8e2992f75c3c50d",
+"measured_net": 1.958158
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-7d70692d03102a2dc306",
+"measured_net": 0.65
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7d8724151cefe85f892f",
+"measured_net": 3.1825
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-7d8bf3e464a8406bfcb4",
+"measured_net": 0.3
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-7db84872f4e871c558b8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-7e132c398bac4f1ae67b",
+"measured_net": 0.09307529347830708
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7e854ad0624174309650",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7ee4b5543c27e8869e11",
+"measured_net": 10.8553
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7f589a835130330362e9",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7f66e25ee6b6125f9e3e",
+"measured_net": 2.274546
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7f76e6db296d84785185",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7f7fa7a824ff3d8969ce",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7fcd6c53df082ecd6f59",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7fce9c893b0befb7f335",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7fe93376cb482ad01860",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-7ffa6354ca6f94635444",
+"measured_net": 2.088972
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8029c283cbbe702cd468",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-802e04387d93d74b7240",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-80f4f24adcb0483cd0b4",
+"measured_net": 5.4
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-812bdedead08caaa543f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-81311a39cbdcccc30d9b",
+"measured_net": 0.032
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8133fdb1d0b1ef34816f",
+"measured_net": 10.66137
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-81444e222487437e257e",
+"measured_net": 0.13050000000000261
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-819bf866fe2818332e0c",
+"measured_net": 9e-06
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-81cbf0708a793ffd6a74",
+"measured_net": 6.3e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-81facd0ae5a789414e9f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-821032bc04a0b0d02133",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-825bc0a640dbd64d52c6",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-82b8e8bf610932c84e9d",
+"measured_net": 6.992909
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-82eb061e74939886e166",
+"measured_net": 10.8364
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-831f6fe3de133294bb8f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-839bf7ea072a728b42e7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-84438f3b8c366e8d7ceb",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-84768dadb07330d74cbd",
+"measured_net": 0.5205000000000001
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-84bf7fb482a98fdbe482",
+"measured_net": 0.78
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-84ca57fea5c1db2a0076",
+"measured_net": 0.3328678972798914
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-84d165a110d688b96400",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-85809d3db52bb93dfe96",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-8586e34ce4717efb4e36",
+"measured_net": 0.674368940694027
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-85891a0d3b24ae2dbe89",
+"measured_net": 5.194995
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-85eeff7117c47f1838ef",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-85f64587588af8537b4b",
+"measured_net": 0.100286
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8605b860a698f87d336b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-86173b9f66d41239b9b9",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-8661fc82d8f1289926c4",
+"measured_net": 0.3475000000000102
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-867e155d6f8f0a452eba",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-872b7e3157891f022e79",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-872d0a931f2f374e5178",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8764c597f88367e0cfe5",
+"measured_net": 4.085
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-876f07064d8f8bdc9bfe",
+"measured_net": 2.922408
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8774707ed1c05924d207",
+"measured_net": 0.4563
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-888002f64f3975fefabd",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-88920ea164bc30614a33",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8894cda96fa1c15cd099",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-88b867797a3645bd5727",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-88c5feea922f65eb0eaa",
+"measured_net": 9.856000000000002
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-88ccf8d4505411deb9e5",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-89718e85f0f24c9cc08c",
+"measured_net": 0.8662500000000262
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-897203c75bf4fc48f79c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-899eee94cb8b56abb71b",
+"measured_net": 7e-06
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-89efcbf909d56c794e92",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-8a51458e17f147aaf7ed",
+"measured_net": 0.44499999995639156
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8a6bdf08abb3f33017d6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-8a88f805c490b970d754",
+"measured_net": 0.45
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8af1b35e74a873fe4748",
+"measured_net": 3.0875
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8af3d266b46859dcf329",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8b2e98724d0dc822a4fc",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-8b751f06280405a6b658",
+"measured_net": 0.45
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8bd0a95913b234c1d374",
+"measured_net": 4.6836
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8c96ce0b710b93d43d60",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-8d031491396379f0cbb1",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-8d583451399826560679",
+"measured_net": 1.1599999998558748
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-8daf7c8a48425a2594d9",
+"measured_net": 7.546233
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-8dda39b48c1c1bca4ffe",
+"measured_net": 0.851277
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-8de64040a1c3ae6cf137",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-8df3988123e987fa87f9",
+"measured_net": 0.6749999999999999
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-8e5c2f484172e9259455",
+"measured_net": 0.0563239165469646
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.DOME",
+"line_id": "L-8ea34765d16b54898140",
+"measured_net": 2.540681
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-8ea71184fff91b4357b7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8f0bfd8c267c8be7f469",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8f3aeef7cf24c8e25621",
+"measured_net": 6.001
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-8f8ad257d9b2cb9e027f",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8fb86a62a6cdb4c19d17",
+"measured_net": 0.0875
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-8fbb23ed22b0b41d4da5",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9063a9c22e339c4cdbce",
+"measured_net": 3.6
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-907dc7fc0dfaf3914443",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-90ed3048543112eb4be1",
+"measured_net": 0.7875000000000001
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-913f078324ba33362f6d",
+"measured_net": 0.4674
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-916edf54f8b99fb2558e",
+"measured_net": 1.511842
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9171e7fec04b1387714e",
+"measured_net": 0.285
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-918966514872e7effa55",
+"measured_net": 7.812183
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-919a5749ef79759e01ca",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-91d531604bfe28a9fec1",
+"measured_net": 0.005045091986983333
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-91e9075e174adee81e90",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-91fbcacb3aef5c6e00d5",
+"measured_net": 1.588353
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-92617ae61830c3cdce52",
+"measured_net": 0.21600000000000003
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9261e6b8dba4e21c93d4",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9270e8b8860414386adb",
+"measured_net": 1.33875
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-927da655e0acfe56a502",
+"measured_net": 1.417498
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-92cd80b46d8b8e3a1d0b",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-935e72dff296573fff64",
+"measured_net": 0.619159
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-93ee21192591ffb80ef2",
+"measured_net": 6.0325
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9449845c55fc31907aaa",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-94832e9d8739d0931c8c",
+"measured_net": 6.3e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-94e2c25ec9a419458e6c",
+"measured_net": 6.1402
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-94fee3359d55d5120fd6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-952aa9ebcc13f7d47272",
+"measured_net": 1.22357
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9696bbb45246c6dce183",
+"measured_net": 1.539652
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-96a9079f54bc9bae6482",
+"measured_net": 0.5625
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-96e032e6896f698f2281",
+"measured_net": 2.3e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-96f797ca9c3e2d981ee2",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-96fe7f55b6ddb98254b8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-970bac563cbcd69e2a30",
+"measured_net": 0.07100828936235978
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9738c8895481978485b0",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-977b688b91923b98146b",
+"measured_net": 1.2
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-97c46e8e38a317821a07",
+"measured_net": 0.831293
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9900f4e347a78254ae65",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-99451ab1afb179bfb75c",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-994673baf2d2a44c9aa3",
+"measured_net": 16.2536
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-99539ffe7a368fa2a00e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-997777b321ab95220878",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-99c08bf33b245b6a3b58",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-9a33d59e28a53df74b18",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9a433c81f58b741005e0",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9a55aadc9f0880ae37a7",
+"measured_net": 0.528021
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9b68c460329caf2c6d29",
+"measured_net": 3.724102
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-9b80d99c11772f4b3024",
+"measured_net": 2.3999999998847428
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9b816594be281b939c8a",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9b870c3179988a6cee2c",
+"measured_net": 15.982699
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9bf64b4c7a1bea136b40",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-9c3643da524267bf47f6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9c4ad8b13b08f7063722",
+"measured_net": 0.27
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9c86d057f36b82d5b135",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-9cb26d86575a92694880",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9d4f3289050a31f13951",
+"measured_net": 0.21599999996515404
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9d514e92fe16233cf46f",
+"measured_net": 0.588147
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9d715ded13bf2959453c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9dbd0ec91ff62126cced",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-9e28c7012784a8dc33c8",
+"measured_net": 1.881
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9e2bc194c66861e6f5a3",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9e44cb3f74c1918748ed",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-9e4895663f76d7f03ac9",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9f1d2c5d37e218107a4c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-9f49f5fafcb9322c90b5",
+"measured_net": 0.3623999999503268
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-9f5a647014bbf83359f9",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9f76e5c2aa84d837c967",
+"measured_net": 2.040005
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-9fb663a5a923a70b4408",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a089d78bb03636b41dac",
+"measured_net": 4.022973
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a0cb51a041250db78f82",
+"measured_net": 7.764
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a0de451c155ff1616ec5",
+"measured_net": 7e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a14c2f6466226f89d3a7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a1f5a414ee8504a6fba6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a209879765e3aeb36aba",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-a244493709ce2e0d23da",
+"measured_net": 1.1305
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a293b530b1cd268326e4",
+"measured_net": 2.927816
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-a2bc431068c8113f71eb",
+"measured_net": 0.21600000003588915
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-a2c6fa502bd864cf5da2",
+"measured_net": 0.42000000000000004
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-a2cb6d533860e6f37b3e",
+"measured_net": 0.9
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a2d766d3e99c0cae2c72",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a2dba15c8f1cd2ee76d4",
+"measured_net": 1.564305
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a34612736de0373a2ba2",
+"measured_net": 3.252
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a3589b33d7fc771f51f0",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-a38b4013f5e3a30830b4",
+"measured_net": 0.296447
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a3bf9c43f0abcf3a1e79",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a4252585fab9078066aa",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a49e9721f7a94085555b",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-a4a61b29934bbed25f3b",
+"measured_net": 0.24000000003486469
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a501b111660ad3de8a91",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a518717aecafe678da2f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a533bfe657c968a81c15",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-a55bfa01b726ef11650c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-a615e1aa2e180544ecbb",
+"measured_net": 0.5183999999996163
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a62238abef1e5c5647e3",
+"measured_net": 3.385522
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a694905f8ace303534b2",
+"measured_net": 14.99646
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a6b73e0d63eeac5bc4f5",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a6db395df047e935a4a3",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-a753af083197621c2ea4",
+"measured_net": 0.672
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a7787e7e1a5e487fb255",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-a87ea657a42a311cb851",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a890cf97674e08716af6",
+"measured_net": 5.5444
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-a8abdc061090a72e84a4",
+"measured_net": 0.45
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-a8c5c32c7a785c1e3f05",
+"measured_net": 0.18899999999999215
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-a90fa92da4bf33be57f0",
+"measured_net": 1.9712783990029095
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a9544981adbbf8ea0691",
+"measured_net": 2.82625
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a95d7999231d555fc470",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-a98862b6b311e41a224f",
+"measured_net": 3.2015
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-a9a5b156266859be6bd7",
+"measured_net": 0.9824530843792093
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-aa26277740773f7d0c59",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-aa7aa07b0afa14135651",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-aafb3eae38bad35618f6",
+"measured_net": 2.8165
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ab24dd136c291eb50cba",
+"measured_net": 11.0285
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ab37afa17f2ac5b0efd1",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ab62c5990fe1114d6171",
+"measured_net": 1.132104
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ab7d59c043b04b396128",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-aba59a2157a48a69e2fb",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-abae5a9f4b3ead466a50",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-abb2a65c35825e04c6bf",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-abe0c36f94dba208300f",
+"measured_net": 1.1681454578957662
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-abedb68e0e86451af4fc",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ac63a60a21f5618611a1",
+"measured_net": 0.2002
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ac650f63b8175a091050",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ac8aef3be3c1dc0af5ff",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-accdcecf07e2306f75b2",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ae0d688f7f2127696684",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-ae22b2cd730370bcc8b0",
+"measured_net": 2.935
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ae4fced6f2202c9543af",
+"measured_net": 0.09599999999999768
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-ae51e56262137366926b",
+"measured_net": 0.6749999999999999
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-aeec27f622761d74deba",
+"measured_net": 3.24
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-af14ee40320c73ff2c95",
+"measured_net": 5.600007
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-af3802991a31d1c946a3",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-af3c20c9d4f1100e9f33",
+"measured_net": 8.3043
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-af41a42f8504dd178716",
+"measured_net": 0.5152738205136467
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-af75c7dd084e76a8781c",
+"measured_net": 1.1879
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-afcc824345dfaed5ab2c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-afcd1d5abea806226e06",
+"measured_net": 0.6860491329954216
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-afe1c2c3ed84e8312fe1",
+"measured_net": 11.0285
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b0093b51de95621bb382",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b050ccc7cc6d3ade0d45",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b0c5e97b91d9fd034670",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b0db89707510fa0b064b",
+"measured_net": 1.140017
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b12cb2ed0a2aeb4dd353",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b195f82c0b79c9a1b10d",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b1ac6d7ca2c5120bdd7e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b1d15c7c0bbdeb52f9c6",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-b274a04546a58e0ecfdd",
+"measured_net": 0.68655
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b2786e45b6262334fd5c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b2d7b418564bf65505be",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-b2efc69ac20dee663880",
+"measured_net": 0.240000000007542
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b31fd59190fd232f0a6f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b35c1688058336adc729",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STRAP",
+"line_id": "L-b3a779187950eef0fcb6",
+"measured_net": 0.6516
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-b3c87fd2cd7cc45c329a",
+"measured_net": 0.27
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-b41477e3593134b8c4b0",
+"measured_net": 0.4419045672736001
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b41efe17a656414b5283",
+"measured_net": 4.1176
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b496828905921760d1ee",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-b4a13a43967ee4765662",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b4c47b2ad35deb6f8abc",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b5a042a8c4f93287648f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b631a4538e1eac9d3291",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-b6b0354b7842f0ed6e41",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-b6b4eb28a8001c2af2dd",
+"measured_net": 1.42875
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b796838c9ac646591f2b",
+"measured_net": 1.140592
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b7c3669d6e193e35e457",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b7db43e0b414083bf155",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b8149b77f77127aabb77",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-b835f51602e05704c045",
+"measured_net": 0.14400000000003318
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b8482107f372617e0808",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b9be639b2f313de7b467",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b9dc34ec5615b81321de",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-b9eab157c42424b4ce77",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ba44830fd52a36e71a2d",
+"measured_net": 13.8041
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-bae601274440c03cf9a2",
+"measured_net": 5.159999999999999
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-baee6107bcb8f1b0a6c0",
+"measured_net": 0.26400000000001633
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-bb0e57b1948175a3d5b8",
+"measured_net": 1.001373
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bb21ca664fb0619a903d",
+"measured_net": 7e-06
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-bb486e98db90bc7604ad",
+"measured_net": 0.10399999996512373
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bb515ddf9649a10c29c2",
+"measured_net": 1.580005
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bba03bb82e17edf0c3dd",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-bc01297b1c4a4c45a15f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bc51350af5ede3e60e5a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-bcefe951cf96fb351bf8",
+"measured_net": 0.45
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-bcfa6dddf762d6cf0fb3",
+"measured_net": 0.20000000000000062
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-bd16e6923af088014236",
+"measured_net": 1.310964
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bd8ca535d2c237e9d7b0",
+"measured_net": 1.511995
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-bd8e800cb07a297b25d7",
+"measured_net": 2.8600000000000003
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bdb23205bcc4b788dc04",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-bde0257c24588948167f",
+"measured_net": 0.684
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-bde4aa4648e5b6f0b67d",
+"measured_net": 0.08351824970650502
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-be7d0aad6c5823b40c72",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-beb71869dd65d993d323",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bedbd230071bd9b319af",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bf1eecb7350e8d43826e",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-bf5eb56348883cb2776d",
+"measured_net": 0.5126752197023472
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-bf95dc0bebcf22d0a6ae",
+"measured_net": 2.215036
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c00cf98ba8a408aa2f55",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-c0b3340a906c2c7650f8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-c0b7102a36344a0349f5",
+"measured_net": 0.27899999995029184
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c0e7c4eb585037cef07b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-c10e2945d582b5a03126",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-c18e5714727c841ee613",
+"measured_net": 0.07300490317897976
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c254e0d17c22fcae49fe",
+"measured_net": 0.0639999999651633
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c29bb95434f82bae307a",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c323d39e712ceb56b115",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c3579242fe4820422793",
+"measured_net": 0.315
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c3600847adb829d98a4f",
+"measured_net": 0.080014
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c366b1a22d1fe2e0a2d1",
+"measured_net": 0.0665
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-c38321cc0db7733d0623",
+"measured_net": 2.6005745864678
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c39042da6ed3f0c6dd4b",
+"measured_net": 1.019533
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c3fb9bb0d4a93ba004ae",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-c41f79b9171044490619",
+"measured_net": 1.125
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c42aa4d2b8d8aa456a2c",
+"measured_net": 0.4783135279373004
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c43fc4559780b73eefa7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c47fd8fdf9bd6d7d9cf2",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c484802154b46ed37908",
+"measured_net": 0.19999999999246737
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c4b059033138304562c9",
+"measured_net": 5.139429
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c4e40640429c8d51f571",
+"measured_net": 2.5725
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c4f5de20a0b4b0d401b3",
+"measured_net": 7.25
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-c544aa98e09609150e4d",
+"measured_net": 0.53199999993371
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c58cd81b67339f6a5fd5",
+"measured_net": 5.820014
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-c5902fd02c58b85a5df1",
+"measured_net": 0.38732478029765105
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c5f4a58d3193bb70dd4e",
+"measured_net": 0.5221
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c66c00f337c2d2e0975e",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-c677b628a776d3b87b02",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c6fa4992eb3ed2aa01e6",
+"measured_net": 4.0846
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c6fafccf544826d69a6d",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-c7239507b7c0210f8875",
+"measured_net": 0.6526964003948593
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c73eba7ed76c3a44d296",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-c7b17d201affddad4ed5",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c81877dbd88272eb9716",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c82e9ff1d51c005f29d8",
+"measured_net": 0.1439999999999814
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c86beab2e9ceeb2afaee",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c8b5f1bfd587dc02a921",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c8ce3cb46a6494f759d4",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c9044bed39bc76ca6b2f",
+"measured_net": 0.45300000005386687
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c914cb3a65e76883a827",
+"measured_net": 0.1724999999999476
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c9161e616ac601ab1278",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c91dc651430e68d60417",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c927f50828c4da453f8f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-c952153d347f092941af",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-c9aa7efd6862439d6079",
+"measured_net": 1.653749999999721
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-c9bb2eca50a2a2c8b569",
+"measured_net": 0.342
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ca163e55e38f8968a766",
+"measured_net": 0.467672
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-ca3b500d27b26dc43c8d",
+"measured_net": 2.4864000001996542
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-caa721ed972e7905d5e6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cae38105da7148c318cb",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STRAP",
+"line_id": "L-cb4d0756fba483b7787b",
+"measured_net": 1.5925
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cbce70b000d48e821313",
+"measured_net": 10.794378
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-cbe374f3bdee6eebdd61",
+"measured_net": 0.84
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-cbf53752cfd897c35c2c",
+"measured_net": 0.255
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-cc381dfe7b49cb758166",
+"measured_net": 1.7600000000000002
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cc4145dc19dba7e5c728",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-cc6aaa99e1892f34b92f",
+"measured_net": 0.8479
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-cc702b8541c15fdfd98c",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ccb61f0a865dbb44ce79",
+"measured_net": 0.000133
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-cd188fe35575602f2ac7",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cd48e505840a9cf6935c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cda1da6b75a6422e0787",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cdd6d457e8a66b7a7abb",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ce4b33ed073b70662f94",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cef8b6ee9cf6b358e27c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-cf06e7fa27a540eedd0f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cf0cfd9ab1b79dc9f3d8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cf1037059beaadcffed9",
+"measured_net": 0.9996
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-cfaf762e44fb7f22fa29",
+"measured_net": 15.0
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d018e58a6ce2a3592bc6",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d01f2c570963cbcdda77",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d0244b4f02d6a51fb85d",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-d06033aa8d5f29aef490",
+"measured_net": 0.9899999998921791
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d0710cd28cb8024e65d0",
+"measured_net": 1.4e-05
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-d08e7a9d809a56733ff9",
+"measured_net": 0.285
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d091c6a54de8a93bcbcf",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d097cd0152e32701ba38",
+"measured_net": 2.608227
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d0a76835d4a25ee1ee6f",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d0d99312304a2ea295fc",
+"measured_net": 7.3009
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-d2c75eb10451e4dd1db5",
+"measured_net": 0.2579999999994278
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-d2e900a1b15cef2a913f",
+"measured_net": 0.5625
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d303f23e3d4e8f7b8a1f",
+"measured_net": 6.197365
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-d340a7f437e25aa46a4e",
+"measured_net": 0.45064237530253176
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STRAP",
+"line_id": "L-d43bea72f2c8e939b663",
+"measured_net": 1.1464
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-d44c5050e83961c571db",
+"measured_net": 2.2086497739529087
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d4821849905f62fd5a83",
+"measured_net": 5.559993
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d4b47210d1d9088bd5bd",
+"measured_net": 5.0803
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d4c18555f830d3448c97",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-d53e5eb08e2c6c668254",
+"measured_net": 0.13830023116220166
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.DOME",
+"line_id": "L-d5401fa8986900c66c37",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d56d13bbfa402c600e98",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-d624ff4e772d75ebb20f",
+"measured_net": 1.7645529777362083
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-d62d2fcf3d0023ad1ad1",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-d70e4b8d2e812cd863f4",
+"measured_net": 0.3749999999999738
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d7252c8ee11fc2985759",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d730841317eace13665c",
+"measured_net": 7e-06
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d74bcfbe84668502a710",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-d79d17d14f39d5148cb8",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d7a1abc1a2d88bac65d1",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d7da17c61b71cd7ac594",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d801038618909c3275a0",
+"measured_net": 2.1
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-d8b98b143e293d30833b",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d8f8bc2347f0131d643f",
+"measured_net": 5.375
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d947c66adbf18fc27765",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-d9530ea806606b886fc9",
+"measured_net": 0.5625
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-d9790e457fd530487553",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-d9a5f51197b428c6cb9d",
+"measured_net": 1.628158
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-da4abbc0be2d97a8081d",
+"measured_net": 1.755197
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-dac43ee18f55433b57e7",
+"measured_net": 0.9263
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-daca46a09caaa7139045",
+"measured_net": 0.19798600017806312
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-dadbee5aad44a7afbb0d",
+"measured_net": 0.05600000000000001
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-db44466cc89e4968448f",
+"measured_net": 1.5205493215100716
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-db4a65064daa50a417f4",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-db55cbe711ea18bf79ae",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-db759eb6300a0147c463",
+"measured_net": 0.9153
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-db974b66b3dfa71251e9",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-dc4074a6f728f13d8c66",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-dc8cbfc119d006ff3927",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-dca4f6d72ce57085312c",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-dccb42b50f6ecd3b9eef",
+"measured_net": 6.197688
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-dcd2f7ed4e246f1bd097",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-dd1a819d9ef59fd9b78a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ddb7a367bca565e4fd20",
+"measured_net": 9.602627
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ddec0b3f3436cdbdbf8b",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-dec7d97d6a15bedee772",
+"measured_net": 0.3
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-df7ef6ffd5da8e1e9418",
+"measured_net": 0.7291672026101318
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-e01bb929444556887537",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e0669f63be01bce6cfb2",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-e112e2add2f8979a6c39",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e159f0a96f1d78277e47",
+"measured_net": 4.812739
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e165eddc3ca2d7f07fd8",
+"measured_net": 17.705
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e1a2aafb8ecd8076971c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e1bde63d9e42dd9b9558",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-e2134034441cb7db7bd7",
+"measured_net": 0.1079999999999987
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-e24946df436cbc25fca6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e27ef877a4031d397404",
+"measured_net": 1.728334
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e3000839e8386bd2291c",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.STAIR",
+"line_id": "L-e37d81a8be8e0aa0010c",
+"measured_net": 1.227952
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e3ce4211953dac163522",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e3cfe6eefc7358e8d945",
+"measured_net": 1.14258
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e3eb00574a3c1c605077",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e3ff72d6e8d9625de2a0",
+"measured_net": 2.100018
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e42d4100a60b118404f1",
+"measured_net": 24.15
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e4aea54f1641fb0f2865",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e5655bbaeb7cd51398d1",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e5837e0dd6eb5b32bb70",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e5838c5e63ee64a95406",
+"measured_net": 5.438509
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e5b588d3dc230ce7eb00",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-e5c487323cb2095c291b",
+"measured_net": 0.20789424032323836
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e6456c9af8c9c810f960",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-e6c1c9a7feec10f64975",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e722b0e0a5d1d976d617",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-e72c162de78a4bf302c0",
+"measured_net": 0.499805
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-e798f0822848fd82b022",
+"measured_net": 0.8496000000368524
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-e79f12c2c021010426db",
+"measured_net": 3.3367999999998905
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e7ab4297d6abe12f0c47",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e8279740a39a9dbf25a5",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-e8536bc4f2699a24e2ab",
+"measured_net": 1.6373
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e86ee69846d492cfb17a",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e8b3d472679c4f7a6152",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-e8ebdf94fa205ad47dbe",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-e910cc0865d6434c55f9",
+"measured_net": 0.47250000006535375
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-e9a885323ad6ec3ea32b",
+"measured_net": 1.8097
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ea38c66d657406418d4a",
+"measured_net": 3.058012
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-eb7b7329145b529cc89d",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ec3c91138f097a87a191",
+"measured_net": 8.235
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-ecb42e3e295fb67fbc38",
+"measured_net": 0.8599999999272716
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ecc7c8bcf31c5997e00a",
+"measured_net": 5.888007
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ecd0edb74e04b9181092",
+"measured_net": 11.7
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ece5c960157e68d19e0e",
+"measured_net": 2.3e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ecfdb29e020098089329",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ed3cf93a185c88b4ab5a",
+"measured_net": 0.18400000000000005
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ed99e4c1b14ce3ad75cb",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-ee0d081dc810d310a4ab",
+"measured_net": 0.09600000000000351
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ee50691a8cc801e7e924",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-eea6914ea3946b1bed2b",
+"measured_net": 3.41592
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ef4e9dadb1870bb0f713",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-efbed17455bb224e126e",
+"measured_net": 0.9605
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-efd3f7806bf10b6a8e98",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-efe2d5ed64d38d4431c3",
+"measured_net": 8.062
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-f075f5f26155b3e6d2ed",
+"measured_net": 0.013996454517009427
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-f0e25ad2cf73bf2a35ea",
+"measured_net": 0.10800000000005239
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f14782c0158421f3767a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-f169ec8deb0f70fe2681",
+"measured_net": 1.2375
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-f19a44ba871f6020d965",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f1d8724ac3739306f26c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f24699a29b7dfac496b1",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-f24cf117a9ce1e875785",
+"measured_net": 0.1865919889758626
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f27d843c1d662568b1ae",
+"measured_net": 5.422014
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f27f1cfd1cbb11a393bb",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-f2d545c87e8586cde8af",
+"measured_net": 0.5124999999998873
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f2f2781ade657190d7e6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f31de44c09ffc2dea750",
+"measured_net": 3.268702
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f328c6e0b4438193fc18",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f3efeec5395878166b41",
+"measured_net": 5.410529
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f4432a2d23fb994a6e92",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f47b5be1d73d77e22eca",
+"measured_net": 7e-05
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-f4a95b8019ae333d81ae",
+"measured_net": 0.9899999999999979
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f4de98be566024394324",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f50866a4b9e62fe438d6",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f5436e09691f221ce726",
+"measured_net": 12.3205
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f5a62d38838a90e660af",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f5e8ee041b0c20224bd1",
+"measured_net": 7e-06
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f600eb2858eeee5e3910",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f651996be5a5ae0a1543",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.FOOTING",
+"line_id": "L-f6af8a29e2c1b5fdcfd0",
+"measured_net": 0.3
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f6d75095bce737a0623a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f74b2146e674dfa39968",
+"measured_net": 2.8875
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f7d0075fe9d801ee09ca",
+"measured_net": 1.0534
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f80033b3950365672b5b",
+"measured_net": null
+},
+{
+"evidence_state": "BOUNDED_EXPOSURE",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-f83c4a469845c7e14dfa",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f8572ed3502009a1b19c",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f8d34bc20d6914841670",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f8eb713c80e19e7db492",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f912614ba0443305943a",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f9140b129cc4805e6d78",
+"measured_net": 2.47677
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f91ce111a09e5dcfb15e",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-f93c7248b948b757aefb",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f9836bd6176bc3f9cc84",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f9a5da9a7d3e5b4c0610",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-f9d859abf9e295f84b77",
+"measured_net": 9.3894
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fa037ca1982c83c29750",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-fa1c346855c5040632a5",
+"measured_net": 0.45
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fa605d02e7af21c07379",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-fab1bc66232c8d568797",
+"measured_net": 0.952313
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-faca9a558c84f1e9b27e",
+"measured_net": 5.9e-05
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.COLUMN",
+"line_id": "L-fad18af6e7139a5e99d1",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-fadb548a6843001d45b0",
+"measured_net": 0.5279999999477171
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fb0989b9500ed0f90133",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fb4d79c927184b5057f7",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-fb53ac7edf5914afd6f5",
+"measured_net": 0.515999999947717
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-fb7a6431fede62e93fd5",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.SLAB",
+"line_id": "L-fb9a2ac1d861b37db720",
+"measured_net": 0.07477202043016065
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fbf94b0bb2323bfe65d8",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fbfcaef2963dd9acf4ac",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fc0f5cf21aa09cf5d95b",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fcb1852ca2be8ce69eb8",
+"measured_net": null
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-fce03d2bd6dae64f2641",
+"measured_net": 0.335
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.CONC.BEAM",
+"line_id": "L-fd0852ad2cbea736b300",
+"measured_net": 0.23600000003485536
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fd22ca8049915f61f15f",
+"measured_net": 7.704922
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-fe78ae283abfb6256358",
+"measured_net": 0.423
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.GROUND_BEAM",
+"line_id": "L-ff727b2a52e39509a659",
+"measured_net": 0.103712
+},
+{
+"evidence_state": "PROVISIONAL",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ffba95b417b49d671772",
+"measured_net": 0.005241
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-ffc0d7e98099a534d24f",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK.STAIR",
+"line_id": "L-ffd491ad529ee2251982",
+"measured_net": null
+},
+{
+"evidence_state": "BLOCKED_RFI",
+"item_code": "STR.FORMWORK",
+"line_id": "L-fff854696aade843f4e4",
+"measured_net": null
+},
+{
+"evidence_state": "SOURCE_DERIVED",
+"item_code": "STR.CONC.DOME",
+"line_id": "L-fffa895ed96b9d6a682c",
+"measured_net": 2.540681
+}
+],
+"note": "state and m2 of the 643 formwork lines and the concrete lines they are bound to, from an own reproduction of the candidate of record (T-350 run on the Drive copies; ST dxf 9f9d1179, P7757.dxf ab54dd55); no other field",
+"schema": "T474_LIVE_STATES_V1"
+}
