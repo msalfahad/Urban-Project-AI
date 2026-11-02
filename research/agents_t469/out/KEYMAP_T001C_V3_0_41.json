@@ -1,0 +1,3247 @@
+{
+ "SCHEMA": "URBAN_SCOREBOARD_V2",
+ "columns": [
+  "Trade",
+  "Unit",
+  "Baseline",
+  "Ref lines",
+  "Coverage %",
+  "Compared",
+  "WAPE %",
+  "Signed %",
+  "Verified share %",
+  "Held or UNKNOWN",
+  "Rule difference share %"
+ ],
+ "release_report_present": true,
+ "sides": [
+  {
+   "label": "A (released V29_ROUTEG_NO_PROFILE)",
+   "provenance": "manifest 48db934e, BOQ_LINES.csv b96185d4",
+   "rows": [
+    {
+     "trade": "CONCRETE",
+     "unit": "m3",
+     "ref_lines": 8,
+     "held_ref_lines": 5,
+     "bounded_lines": 122,
+     "bounded_low": 44.10797257718796,
+     "bounded_high": 113.53972246125281,
+     "unknown_lines": 83,
+     "conditional_sets": 0,
+     "excluded_lines": 0,
+     "released_part_lines": 210,
+     "released_part_qty": 143.49766317097715,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 1,
+     "rule_assessed": 1,
+     "partial_remeasures": 5,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "CONCRETE",
+      "m3",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "8",
+      "100.00",
+      "3",
+      "17.03",
+      "-17.03",
+      "0.00 (0 / 8); 5 partial re-measures not counted",
+      "5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound)",
+      "12.50 (1 / 8)"
+     ]
+    },
+    {
+     "trade": "DOORS",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 0,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 0,
+     "conditional_sets": 0,
+     "excluded_lines": 0,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [
+      "unit refused: the engine answers DOORS.ALUMINIUM in pcs, the reference in m2"
+     ],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "DOORS",
+      "m2",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "1",
+      "0.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "NOT YET MEASURED (unit refused: the engine answers DOORS.ALUMINIUM in pcs, the reference in m2)",
+      "NOT YET MEASURED"
+     ]
+    },
+    {
+     "trade": "FLOOR_AREA",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 0,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 0,
+     "conditional_sets": 0,
+     "excluded_lines": 0,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "FLOOR_AREA",
+      "m2",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "1",
+      "100.00",
+      "1",
+      "5.85",
+      "-5.85",
+      "0.00 (0 / 1)",
+      "0 ref lines HELD",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "PAINT",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 1,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 13,
+     "conditional_sets": 0,
+     "excluded_lines": 14,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "PAINT",
+      "m2",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "1",
+      "100.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "1 ref line HELD; 13 engine lines: 13 UNKNOWN (no bound); 14 more excluded with reason",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "PLASTER",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 1,
+     "bounded_lines": 2,
+     "bounded_low": 2.3600000000000003,
+     "bounded_high": 2.5999999999999996,
+     "unknown_lines": 27,
+     "conditional_sets": 0,
+     "excluded_lines": 0,
+     "released_part_lines": 20,
+     "released_part_qty": 17.74,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "PLASTER",
+      "m2",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "1",
+      "100.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "1 ref line HELD; 29 engine lines: 2 bounded 2.360 .. 2.600 m2 + 27 UNKNOWN (no bound)",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "WINDOWS",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 0,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 0,
+     "conditional_sets": 0,
+     "excluded_lines": 0,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [
+      "unit refused: the engine answers WINDOWS.ALUMINIUM in pcs, the reference in m2"
+     ],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "WINDOWS",
+      "m2",
+      "A (released V29_ROUTEG_NO_PROFILE), manifest 48db934e, BOQ_LINES.csv b96185d4",
+      "1",
+      "0.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "NOT YET MEASURED (unit refused: the engine answers WINDOWS.ALUMINIUM in pcs, the reference in m2)",
+      "NOT YET MEASURED"
+     ]
+    }
+   ],
+   "verdict_audit": [
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "RULE_DIFFERENCE",
+     "counted": true,
+     "reason": "COUNTED",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': blinding engine 22.155 vs freelancer 47.055 m3 RULE_DIFFERENCE (freelancer plate not drawn)",
+     "commit": "b435bed6"
+    },
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': released blinding 15.179 vs hand 15.213 m3 (-0.2 %); a part of the blinding reference line"
+    },
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing blinding = union of the 25 outlines grown 0.10 (ST p.13, T-206 verdict) 151.794 m2 = candidate V3.0.7 / V3.0.8 footing blinding 15.179437 m3 0.0 %; of it 1.890 m2 beyond plot polyline 1658 HELD 0 .. 0.189 m3 (D-14); F10 + F, ground-beam and strap blinding are not in this component"
+    },
+    {
+     "ref_id": "RC:ورقة1:17",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing component of CONC.FOOTING, 25 of 26 outlines re-measured from 'ST7757 dxf.dxf' (12 F inserts, 11 S-FOOTINGS polylines, 3 four-LINE FN squares; FT / FTB schedule attributes; FN 180C clipped 0.86 m2 where F9 180F owns 0.40 x 0.35) = released A 25 SOURCE_DERIVED lines 0.0 %; F10 + F outline 1B1B HELD 2.176 .. 2.275 m3 (Q-31 C); straps and boundary band are not in this component"
+    },
+    {
+     "ref_id": "RC:ورقة1:19",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': columns above necks 34.446 m3 (5 undrawn pieces 2.268 m3, by hand); necks not included"
+    },
+    {
+     "ref_id": "RC:ورقة1:21",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "LINE_NOT_COMPARED (HELD)",
+     "source": "BOARD.md T-234 verdict 'Verifier 2026-10-23 23:01 UTC': own polygonisation of the ST7757 dxf.dxf slab sheets (layers 1, 5, S-COL.BON, S-BOUN, S-BEAM, S-OPENING; arcs at 0.2 mm), own slab / non-slab classification (slab bars S-REIN-SLAB / bar labels; bands by the beam schedule widths, stair zones, voids X, section details excluded; ring and dome-square corners included), thickness by tag (T 16 handle 769 in 1F-084; T 18 handles 7B4 / 1A7E only in the two tank panels) else ST p.8 note 18 '16 cm unless stated' (own read): 62 panels 375.0484 m2 = 60.2804 m3 (convention C1: panel between beam faces, beam at full depth); worker ledger 0.0000 m3; released A 61.5514 and candidate V3.0.8 60.9192 ENGINE_WRONG (+1.2710 / +0.6388, named causes)",
+     "commit": "352925c3"
+    },
+    {
+     "ref_id": "RC:ورقة1:22",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (04:05)': main stair concrete 4.920 vs freelancer 8.131 m3 ENGINE_RIGHT; the stairs + domes line has more than the main stair"
+    },
+    {
+     "ref_id": "PLS:الفاتورة:16",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE"
+    },
+    {
+     "ref_id": "PNT:الفاتورة:16",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE"
+    },
+    {
+     "ref_id": "FIN:الغلاف:15",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (44th run, 18:40)': candidate V2.13 wet floor 85.62 vs freelancer 72.01 m2 RULE_DIFFERENCE Q-37 A; the wet floor is a part of the total-floors reference line"
+    }
+   ],
+   "adapter": {
+    "excluded_lines_by_key": {
+     "PAINT.INTERNAL_WALL": 14
+    },
+    "conditional_sets_by_key": {
+     "FLOOR.INTERNAL": 3
+    },
+    "unmapped_by_item": [
+     {
+      "item_code": "ARCH.EXTERIOR",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "ARCH.FACADE",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "unit": "lm",
+      "lines": 6
+     },
+     {
+      "item_code": "ARCH.PASSAGE",
+      "unit": "pcs",
+      "lines": 11
+     },
+     {
+      "item_code": "ARCH.SPACE",
+      "unit": "m2",
+      "lines": 12
+     },
+     {
+      "item_code": "ARCH.THRESHOLD",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "ARCH.WALL_PANEL",
+      "unit": "m2",
+      "lines": 7
+     },
+     {
+      "item_code": "ARCH.WALL_RUN",
+      "unit": "lm",
+      "lines": 7
+     },
+     {
+      "item_code": "ARCH.WALL_VOLUME",
+      "unit": "m3",
+      "lines": 7
+     },
+     {
+      "item_code": "ARCH.WINDOW_REVEAL",
+      "unit": "m2",
+      "lines": 27
+     },
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 15
+     },
+     {
+      "item_code": "FIN.CEILING",
+      "unit": "m2",
+      "lines": 31
+     },
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.MARBLE.LANDING",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "FIN.MARBLE.RISER",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.MARBLE.THRESHOLD",
+      "unit": "m2",
+      "lines": 10
+     },
+     {
+      "item_code": "FIN.MARBLE.TREAD",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.RAILING",
+      "unit": "lm",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.SKIRTING",
+      "unit": "lm",
+      "lines": 22
+     },
+     {
+      "item_code": "FIN.STAIR.FLIGHT",
+      "unit": "lm",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.STAIR.STEP_LM",
+      "unit": "lm",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WALL.TILE",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION",
+      "unit": "m2",
+      "lines": 13
+     },
+     {
+      "item_code": "FIN.WP.FLOOR",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.PENETRATION",
+      "unit": "pcs",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.TERMINATION",
+      "unit": "lm",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.WP.WALL_UPTURN",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "MAS.BLOCK",
+      "unit": "m2",
+      "lines": 7
+     },
+     {
+      "item_code": "STR.REBAR",
+      "unit": "kg",
+      "lines": 497
+     }
+    ],
+    "set_bindings": {
+     "schema": "URBAN_SCORER_SET_BINDINGS_V1",
+     "task": "T-216",
+     "keys": {
+      "FLOOR.INTERNAL": {
+       "released_lines": 44,
+       "released_m2": 376.285672,
+       "held_lines": [],
+       "assumed_owner_approved_m2": 9.348195,
+       "bound_sets": [
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-RDBD4F9",
+         "qty": 4.730695,
+         "rule_id": "Q-06 A",
+         "verdict_commit": "54cb4c42",
+         "scenario": "WET_SCOPE",
+         "geometry_status": "DRAWING-CONFIRMED (worker reading; not re-measured by the checker)",
+         "closure_strip_not_in_key_m2": null
+        },
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-R8496F0",
+         "qty": 3.1325,
+         "rule_id": "Q-06 A",
+         "verdict_commit": "54cb4c42",
+         "scenario": "WET_SCOPE",
+         "geometry_status": "VERIFIED (checker re-measure, T-208 verdict)",
+         "closure_strip_not_in_key_m2": 0.15
+        },
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-RD36087",
+         "qty": 1.485,
+         "rule_id": "Q-06 A",
+         "verdict_commit": "54cb4c42",
+         "scenario": "WET_SCOPE",
+         "geometry_status": "VERIFIED (checker re-measure, T-208 verdict)",
+         "closure_strip_not_in_key_m2": 0.18
+        }
+       ],
+       "held_sets": [],
+       "decided_by_own_line": [],
+       "line_total": 385.633867
+      }
+     },
+     "unused_bindings": []
+    },
+    "coverage": {
+     "schema": "URBAN_ALSENAN_KEY_MAP_V2",
+     "typed_records": [
+      "floor_scope_v3014"
+     ],
+     "selectors": [
+      {
+       "item_code": "ARCH.SPACE",
+       "field": "floor_key",
+       "equals": "FLOOR.INTERNAL",
+       "key": "FLOOR.INTERNAL"
+      }
+     ],
+     "families": [
+      {
+       "item_code": "ARCH.EXTERIOR",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.FACADE",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.FACADE_RUN",
+       "unit": "lm",
+       "lines": 6,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 6,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.PASSAGE",
+       "unit": "pcs",
+       "lines": 11,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 11,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.SPACE",
+       "unit": "m2",
+       "lines": 12,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 12,
+       "unkeyed_by_typed_value": {
+        "untyped": 12
+       },
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.THRESHOLD",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_PANEL",
+       "unit": "m2",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_RUN",
+       "unit": "lm",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_VOLUME",
+       "unit": "m3",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WINDOW",
+       "unit": "pcs",
+       "lines": 27,
+       "excluded": 0,
+       "keyed": {
+        "WINDOWS.ALUMINIUM (item_code)": 27
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WINDOW_REVEAL",
+       "unit": "m2",
+       "lines": 27,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 27,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+       "unit": "pcs",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {
+        "DOORS.ALUMINIUM (item_code)": 2
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.INTERNAL.PVC",
+       "unit": "pcs",
+       "lines": 15,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 15,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.CEILING",
+       "unit": "m2",
+       "lines": 31,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 31,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.EXT.FINISH",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.PORCELAIN",
+       "unit": "m2",
+       "lines": 31,
+       "excluded": 0,
+       "keyed": {
+        "FLOOR.INTERNAL (item_code)": 31
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.WET_TILE",
+       "unit": "m2",
+       "lines": 13,
+       "excluded": 0,
+       "keyed": {
+        "FLOOR.INTERNAL (item_code)": 13
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.LANDING",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.RISER",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.THRESHOLD",
+       "unit": "m2",
+       "lines": 10,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 10,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.TREAD",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.PAINT",
+       "unit": "m2",
+       "lines": 27,
+       "excluded": 14,
+       "keyed": {
+        "PAINT.INTERNAL_WALL (item_code)": 27
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.PLASTER",
+       "unit": "m2",
+       "lines": 49,
+       "excluded": 0,
+       "keyed": {
+        "PLASTER.INTERNAL (item_code)": 49
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.RAILING",
+       "unit": "lm",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.SKIRTING",
+       "unit": "lm",
+       "lines": 36,
+       "excluded": 14,
+       "keyed": {},
+       "unkeyed": 36,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.STAIR.FLIGHT",
+       "unit": "lm",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.STAIR.STEP_LM",
+       "unit": "lm",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WALL.TILE",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.DOORWAY",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.DOORWAY_TRANSITION",
+       "unit": "m2",
+       "lines": 13,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 13,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.FLOOR",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.PENETRATION",
+       "unit": "pcs",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.TERMINATION",
+       "unit": "lm",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.WALL_UPTURN",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "MAS.BLOCK",
+       "unit": "m2",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BEAM",
+       "unit": "m3",
+       "lines": 136,
+       "excluded": 0,
+       "keyed": {
+        "CONC.BEAM (item_code)": 136
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BLINDING",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {
+        "CONC.BLINDING (item_code)": 1
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BOUNDARY_WALL",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 1
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.COLUMN",
+       "unit": "m3",
+       "lines": 82,
+       "excluded": 0,
+       "keyed": {
+        "CONC.COLUMN (item_code)": 82
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.DOME",
+       "unit": "m3",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {
+        "CONC.STAIR_DOME (item_code)": 2
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.FOOTING",
+       "unit": "m3",
+       "lines": 26,
+       "excluded": 0,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 26
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.GROUND_BEAM",
+       "unit": "m3",
+       "lines": 59,
+       "excluded": 0,
+       "keyed": {
+        "CONC.GROUND (item_code)": 59
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.GROUND_SLAB",
+       "unit": "m3",
+       "lines": 25,
+       "excluded": 0,
+       "keyed": {
+        "CONC.GROUND (item_code)": 25
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.NECK",
+       "unit": "m3",
+       "lines": 36,
+       "excluded": 0,
+       "keyed": {
+        "CONC.COLUMN (item_code)": 36
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.POOL",
+       "unit": "m3",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {
+        "CONC.POOL (item_code)": 2
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.SLAB",
+       "unit": "m3",
+       "lines": 76,
+       "excluded": 0,
+       "keyed": {
+        "CONC.SLAB (item_code)": 76
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.STAIR",
+       "unit": "m3",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {
+        "CONC.STAIR_DOME (item_code)": 3
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.STRAP",
+       "unit": "m3",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 3
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.REBAR",
+       "unit": "kg",
+       "lines": 497,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 497,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      }
+     ],
+     "double_keyed_lines": 0
+    }
+   },
+   "buckets_v1": [
+    {
+     "trade": "CONCRETE",
+     "unit": "m3",
+     "reference_lines": 8,
+     "covered": 8,
+     "released": 3,
+     "held": 5,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 3,
+     "sum_reference": 111.8113,
+     "sum_abs_error": 19.044159686115062,
+     "sum_signed_error": -19.044159686115062,
+     "sum_abs_error_counted": 19.044159686115062,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": 0.17032410575778173,
+     "signed_error_ratio": -0.17032410575778173,
+     "wape_adjudicated": 0.17032410575778173
+    },
+    {
+     "trade": "DOORS",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 0,
+     "released": 0,
+     "held": 0,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 1,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 0.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    },
+    {
+     "trade": "FLOOR_AREA",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 1,
+     "held": 0,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 1,
+     "sum_reference": 409.58,
+     "sum_abs_error": 23.94613300000003,
+     "sum_signed_error": -23.94613300000003,
+     "sum_abs_error_counted": 23.94613300000003,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": 0.05846509351042539,
+     "signed_error_ratio": -0.05846509351042539,
+     "wape_adjudicated": 0.05846509351042539
+    },
+    {
+     "trade": "PAINT",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 0,
+     "held": 1,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    },
+    {
+     "trade": "PLASTER",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 0,
+     "held": 1,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    },
+    {
+     "trade": "WINDOWS",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 0,
+     "released": 0,
+     "held": 0,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 1,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 0.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    }
+   ]
+  },
+  {
+   "label": "ARCH_TAKEOFF_V3.0.41",
+   "provenance": "V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+   "rows": [
+    {
+     "trade": "CONCRETE",
+     "unit": "m3",
+     "ref_lines": 8,
+     "held_ref_lines": 7,
+     "bounded_lines": 83,
+     "bounded_low": 28.700505999895356,
+     "bounded_high": 63.405140999686154,
+     "unknown_lines": 44,
+     "conditional_sets": 0,
+     "excluded_lines": 85,
+     "released_part_lines": 249,
+     "released_part_qty": 237.94180023342545,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 1,
+     "rule_assessed": 1,
+     "partial_remeasures": 5,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "CONCRETE",
+      "m3",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "8",
+      "100.00",
+      "1",
+      "0.77",
+      "0.77",
+      "0.00 (0 / 8); 5 partial re-measures not counted",
+      "7 ref lines HELD; 127 engine lines: 83 bounded 28.701 .. 63.405 m3 + 44 UNKNOWN (no bound); 85 more excluded with reason",
+      "12.50 (1 / 8)"
+     ]
+    },
+    {
+     "trade": "DOORS",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 0,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 0,
+     "conditional_sets": 0,
+     "excluded_lines": 4,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "DOORS",
+      "m2",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "1",
+      "100.00",
+      "1",
+      "6.33",
+      "6.33",
+      "0.00 (0 / 1)",
+      "0 ref lines HELD",
+      "NOT YET MEASURED"
+     ]
+    },
+    {
+     "trade": "FLOOR_AREA",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 0,
+     "bounded_lines": 0,
+     "bounded_low": 0.0,
+     "bounded_high": 0.0,
+     "unknown_lines": 0,
+     "conditional_sets": 0,
+     "excluded_lines": 13,
+     "released_part_lines": 0,
+     "released_part_qty": 0.0,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "FLOOR_AREA",
+      "m2",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "1",
+      "100.00",
+      "1",
+      "5.06",
+      "-5.06",
+      "0.00 (0 / 1)",
+      "0 ref lines HELD",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "PAINT",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 1,
+     "bounded_lines": 7,
+     "bounded_low": 487.121,
+     "bounded_high": 542.8606,
+     "unknown_lines": 3,
+     "conditional_sets": 0,
+     "excluded_lines": 31,
+     "released_part_lines": 4,
+     "released_part_qty": 217.2081,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "PAINT",
+      "m2",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "1",
+      "100.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "1 ref line HELD; 10 engine lines: 7 bounded 487.121 .. 542.861 m2 + 3 UNKNOWN (no bound); 31 more excluded with reason",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "PLASTER",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 1,
+     "bounded_lines": 8,
+     "bounded_low": 488.20099999999996,
+     "bounded_high": 544.0606,
+     "unknown_lines": 12,
+     "conditional_sets": 0,
+     "excluded_lines": 13,
+     "released_part_lines": 42,
+     "released_part_qty": 580.5818999999998,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 1,
+     "cells": [
+      "PLASTER",
+      "m2",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "1",
+      "100.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "1 ref line HELD; 20 engine lines: 8 bounded 488.201 .. 544.061 m2 + 12 UNKNOWN (no bound); 13 more excluded with reason",
+      "NOT YET MEASURED (1 partial rule verdict not counted)"
+     ]
+    },
+    {
+     "trade": "WINDOWS",
+     "unit": "m2",
+     "ref_lines": 1,
+     "held_ref_lines": 1,
+     "bounded_lines": 1,
+     "bounded_low": 9.87,
+     "bounded_high": 11.515,
+     "unknown_lines": 1,
+     "conditional_sets": 0,
+     "excluded_lines": 27,
+     "released_part_lines": 3,
+     "released_part_qty": 76.256,
+     "not_measured": [],
+     "verified": 0,
+     "rule_difference": 0,
+     "rule_assessed": 0,
+     "partial_remeasures": 0,
+     "partial_rule_verdicts": 0,
+     "cells": [
+      "WINDOWS",
+      "m2",
+      "ARCH_TAKEOFF_V3.0.41, V3_0_41_BOQ_LINES.json 5176c7c4, V3_0_41_BOQ_LINES.csv 145eb34d",
+      "1",
+      "100.00",
+      "0",
+      "NOT YET MEASURED",
+      "NOT YET MEASURED",
+      "0.00 (0 / 1)",
+      "1 ref line HELD; 2 engine lines: 1 bounded 9.870 .. 11.515 m2 + 1 UNKNOWN (no bound); 27 more excluded with reason",
+      "NOT YET MEASURED"
+     ]
+    }
+   ],
+   "verdict_audit": [
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "RULE_DIFFERENCE",
+     "counted": true,
+     "reason": "COUNTED",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': blinding engine 22.155 vs freelancer 47.055 m3 RULE_DIFFERENCE (freelancer plate not drawn)",
+     "commit": "b435bed6"
+    },
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': released blinding 15.179 vs hand 15.213 m3 (-0.2 %); a part of the blinding reference line"
+    },
+    {
+     "ref_id": "RC:ورقة1:15",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing blinding = union of the 25 outlines grown 0.10 (ST p.13, T-206 verdict) 151.794 m2 = candidate V3.0.7 / V3.0.8 footing blinding 15.179437 m3 0.0 %; of it 1.890 m2 beyond plot polyline 1658 HELD 0 .. 0.189 m3 (D-14); F10 + F, ground-beam and strap blinding are not in this component"
+    },
+    {
+     "ref_id": "RC:ورقة1:17",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing component of CONC.FOOTING, 25 of 26 outlines re-measured from 'ST7757 dxf.dxf' (12 F inserts, 11 S-FOOTINGS polylines, 3 four-LINE FN squares; FT / FTB schedule attributes; FN 180C clipped 0.86 m2 where F9 180F owns 0.40 x 0.35) = released A 25 SOURCE_DERIVED lines 0.0 %; F10 + F outline 1B1B HELD 2.176 .. 2.275 m3 (Q-31 C); straps and boundary band are not in this component"
+    },
+    {
+     "ref_id": "RC:ورقة1:19",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': columns above necks 34.446 m3 (5 undrawn pieces 2.268 m3, by hand); necks not included"
+    },
+    {
+     "ref_id": "RC:ورقة1:21",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "STALE (verdict engine_qty 60.9192 != this run 60.280)",
+     "source": "BOARD.md T-234 verdict 'Verifier 2026-10-23 23:01 UTC': own polygonisation of the ST7757 dxf.dxf slab sheets (layers 1, 5, S-COL.BON, S-BOUN, S-BEAM, S-OPENING; arcs at 0.2 mm), own slab / non-slab classification (slab bars S-REIN-SLAB / bar labels; bands by the beam schedule widths, stair zones, voids X, section details excluded; ring and dome-square corners included), thickness by tag (T 16 handle 769 in 1F-084; T 18 handles 7B4 / 1A7E only in the two tank panels) else ST p.8 note 18 '16 cm unless stated' (own read): 62 panels 375.0484 m2 = 60.2804 m3 (convention C1: panel between beam faces, beam at full depth); worker ledger 0.0000 m3; released A 61.5514 and candidate V3.0.8 60.9192 ENGINE_WRONG (+1.2710 / +0.6388, named causes)",
+     "commit": "352925c3"
+    },
+    {
+     "ref_id": "RC:ورقة1:22",
+     "kind": "REMEASURE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (04:05)': main stair concrete 4.920 vs freelancer 8.131 m3 ENGINE_RIGHT; the stairs + domes line has more than the main stair"
+    },
+    {
+     "ref_id": "PLS:الفاتورة:16",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE"
+    },
+    {
+     "ref_id": "PNT:الفاتورة:16",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE"
+    },
+    {
+     "ref_id": "FIN:الغلاف:15",
+     "kind": "RULE_DIFFERENCE",
+     "counted": false,
+     "reason": "PARTIAL_SCOPE",
+     "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (44th run, 18:40)': candidate V2.13 wet floor 85.62 vs freelancer 72.01 m2 RULE_DIFFERENCE Q-37 A; the wet floor is a part of the total-floors reference line"
+    }
+   ],
+   "adapter": {
+    "excluded_lines_by_key": {
+     "CONC.COLUMN": 8,
+     "CONC.FOOTING": 5,
+     "CONC.BEAM": 54,
+     "CONC.SLAB": 13,
+     "CONC.STAIR_DOME": 3,
+     "CONC.POOL": 2,
+     "PLASTER.INTERNAL": 13,
+     "PAINT.INTERNAL_WALL": 31,
+     "FLOOR.INTERNAL": 13,
+     "WINDOWS.ALUMINIUM": 27,
+     "DOORS.ALUMINIUM": 4
+    },
+    "conditional_sets_by_key": {},
+    "unmapped_by_item": [
+     {
+      "item_code": "ARCH.EXTERIOR",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "ARCH.FACADE",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "unit": "lm",
+      "lines": 6
+     },
+     {
+      "item_code": "ARCH.PASSAGE",
+      "unit": "pcs",
+      "lines": 9
+     },
+     {
+      "item_code": "ARCH.SHUTTER",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "ARCH.SHUTTER",
+      "unit": "pcs",
+      "lines": 3
+     },
+     {
+      "item_code": "ARCH.SPACE",
+      "unit": "m2",
+      "lines": 11
+     },
+     {
+      "item_code": "ARCH.THRESHOLD",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "ARCH.WALL_PANEL",
+      "unit": "m2",
+      "lines": 26
+     },
+     {
+      "item_code": "ARCH.WALL_RUN",
+      "unit": "lm",
+      "lines": 7
+     },
+     {
+      "item_code": "ARCH.WALL_VOLUME",
+      "unit": "m3",
+      "lines": 26
+     },
+     {
+      "item_code": "ARCH.WINDOW_REVEAL",
+      "unit": "m2",
+      "lines": 62
+     },
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "m2",
+      "lines": 5
+     },
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 5
+     },
+     {
+      "item_code": "DOOR.MAIN_ENTRANCE",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "DOOR.MAIN_ENTRANCE",
+      "unit": "pcs",
+      "lines": 1
+     },
+     {
+      "item_code": "EXT.FENCE.BLOCK",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "EXT.FENCE.BLOCK_COUNT",
+      "unit": "pcs",
+      "lines": 1
+     },
+     {
+      "item_code": "EXT.FENCE.FACE",
+      "unit": "m2",
+      "lines": 9
+     },
+     {
+      "item_code": "EXT.FENCE.GATE",
+      "unit": "pcs",
+      "lines": 2
+     },
+     {
+      "item_code": "EXT.FENCE.MASONRY_BELOW_NG",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "EXT.FENCE.PAINT",
+      "unit": "m2",
+      "lines": 8
+     },
+     {
+      "item_code": "EXT.FENCE.PLASTER",
+      "unit": "m2",
+      "lines": 8
+     },
+     {
+      "item_code": "EXT.FENCE.TOP",
+      "unit": "lm",
+      "lines": 2
+     },
+     {
+      "item_code": "EXT.FENCE.WALL",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "EXT.FLOOR.OUTDOOR",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "EXT.FLOOR.PORCELAIN",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "EXT.PAVING.INTERLOCK",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "EXT.POOL.WATER_FACE",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "FIN.CEILING",
+      "unit": "m2",
+      "lines": 41
+     },
+     {
+      "item_code": "FIN.CEILING.BULKHEAD",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.DOME.SOFFIT",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.FLOOR.BED.DRY",
+      "unit": "m2",
+      "lines": 23
+     },
+     {
+      "item_code": "FIN.FLOOR.BED.DRY",
+      "unit": "m3",
+      "lines": 23
+     },
+     {
+      "item_code": "FIN.FLOOR.BED.WET",
+      "unit": "m2",
+      "lines": 21
+     },
+     {
+      "item_code": "FIN.FLOOR.BED.WET",
+      "unit": "m3",
+      "lines": 21
+     },
+     {
+      "item_code": "FIN.FLOOR.FINISH_HELD",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.MARBLE.LANDING",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.MARBLE.LIFT_SURROUND",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+      "unit": "lm",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+      "unit": "m2",
+      "lines": 3
+     },
+     {
+      "item_code": "FIN.MARBLE.RISER",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.MARBLE.THRESHOLD",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.MARBLE.TREAD",
+      "unit": "m2",
+      "lines": 13
+     },
+     {
+      "item_code": "FIN.PAINT.CEILING",
+      "unit": "m2",
+      "lines": 31
+     },
+     {
+      "item_code": "FIN.RAILING",
+      "unit": "lm",
+      "lines": 19
+     },
+     {
+      "item_code": "FIN.ROOF.FINISH",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.ROOF.INSULATION",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.ROOF.PROTECTION",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.ROOF.SCREED",
+      "unit": "m3",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.SKIRTING",
+      "unit": "lm",
+      "lines": 20
+     },
+     {
+      "item_code": "FIN.STAIR.FLIGHT",
+      "unit": "lm",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.STAIR.SOFFIT",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "FIN.STAIR.STEP_LM",
+      "unit": "lm",
+      "lines": 12
+     },
+     {
+      "item_code": "FIN.WALL.TILE",
+      "unit": "m2",
+      "lines": 18
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY",
+      "unit": "m2",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION",
+      "unit": "m2",
+      "lines": 13
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+      "unit": "pcs",
+      "lines": 14
+     },
+     {
+      "item_code": "FIN.WP.FLOOR",
+      "unit": "m2",
+      "lines": 18
+     },
+     {
+      "item_code": "FIN.WP.MEMBRANE_ROLLS",
+      "unit": "pcs",
+      "lines": 22
+     },
+     {
+      "item_code": "FIN.WP.PENETRATION",
+      "unit": "pcs",
+      "lines": 17
+     },
+     {
+      "item_code": "FIN.WP.ROOF",
+      "unit": "m2",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.WP.ROOF_UPTURN",
+      "unit": "lm",
+      "lines": 4
+     },
+     {
+      "item_code": "FIN.WP.TERMINATION",
+      "unit": "lm",
+      "lines": 7
+     },
+     {
+      "item_code": "FIN.WP.WALL_UPTURN",
+      "unit": "m2",
+      "lines": 18
+     },
+     {
+      "item_code": "MAS.BLOCK",
+      "unit": "m2",
+      "lines": 26
+     },
+     {
+      "item_code": "MET.RAILING.GUARD",
+      "unit": "lm",
+      "lines": 6
+     },
+     {
+      "item_code": "STR.CONC.BOUNDARY_PAD",
+      "unit": "m3",
+      "lines": 1
+     },
+     {
+      "item_code": "STR.CONC.LIFT",
+      "unit": "m3",
+      "lines": 1
+     },
+     {
+      "item_code": "STR.CONC.PARAPET",
+      "unit": "m3",
+      "lines": 4
+     },
+     {
+      "item_code": "STR.FORMWORK",
+      "unit": "m2",
+      "lines": 612
+     },
+     {
+      "item_code": "STR.FORMWORK.STAIR",
+      "unit": "m2",
+      "lines": 30
+     },
+     {
+      "item_code": "STR.REBAR",
+      "unit": "kg",
+      "lines": 2066
+     },
+     {
+      "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+      "unit": "m2",
+      "lines": 5
+     },
+     {
+      "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+      "unit": "m3",
+      "lines": 2
+     },
+     {
+      "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+      "unit": "m2",
+      "lines": 2
+     },
+     {
+      "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+      "unit": "m2",
+      "lines": 1
+     },
+     {
+      "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+      "unit": "m3",
+      "lines": 1
+     }
+    ],
+    "excluded_unit_not_in_reference": [
+     {
+      "line_id": "L-d2488bbb7103c8cd2980",
+      "item_code": "WP.FOUNDATION.PROCUREMENT",
+      "unit": "item",
+      "measured_net": null,
+      "evidence_state": "BLOCKED_RFI",
+      "scorer_class": "HELD",
+      "key": null,
+      "reason": "UNIT_NOT_IN_REFERENCE"
+     }
+    ],
+    "set_bindings": {
+     "schema": "URBAN_SCORER_SET_BINDINGS_V1",
+     "task": "T-216",
+     "keys": {
+      "FLOOR.INTERNAL": {
+       "released_lines": 44,
+       "released_m2": 388.85905,
+       "held_lines": [],
+       "assumed_owner_approved_m2": 0,
+       "bound_sets": [],
+       "held_sets": [],
+       "decided_by_own_line": [
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-RDBD4F9",
+         "key": "FLOOR.INTERNAL",
+         "line_ids": [
+          "L-ccfa789d75994a5750a5"
+         ],
+         "qty": 4.730695
+        },
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-R8496F0",
+         "key": "FLOOR.INTERNAL",
+         "line_ids": [
+          "L-de8fe0958c2d8e70f42d"
+         ],
+         "qty": 3.1325
+        },
+        {
+         "set": "COND:REVIEW_CLASSIFICATION:GF:GF-RD36087",
+         "key": "FLOOR.INTERNAL",
+         "line_ids": [
+          "L-6c40affb7d5820cb95b8"
+         ],
+         "qty": 1.485
+        }
+       ],
+       "line_total": 388.85905
+      }
+     },
+     "unused_bindings": []
+    },
+    "coverage": {
+     "schema": "URBAN_ALSENAN_KEY_MAP_V2",
+     "typed_records": [
+      "floor_scope_v3014"
+     ],
+     "selectors": [
+      {
+       "item_code": "ARCH.SPACE",
+       "field": "floor_key",
+       "equals": "FLOOR.INTERNAL",
+       "key": "FLOOR.INTERNAL"
+      }
+     ],
+     "families": [
+      {
+       "item_code": "ARCH.EXTERIOR",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.FACADE",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.FACADE_RUN",
+       "unit": "lm",
+       "lines": 6,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 6,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.PASSAGE",
+       "unit": "pcs",
+       "lines": 11,
+       "excluded": 2,
+       "keyed": {},
+       "unkeyed": 11,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.SHUTTER",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.SHUTTER",
+       "unit": "pcs",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.SPACE",
+       "unit": "m2",
+       "lines": 16,
+       "excluded": 3,
+       "keyed": {
+        "FLOOR.INTERNAL (typed)": 2
+       },
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {
+        "untyped": 13,
+        "FLOOR.OUTDOOR": 1
+       },
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.THRESHOLD",
+       "unit": "m2",
+       "lines": 24,
+       "excluded": 10,
+       "keyed": {},
+       "unkeyed": 24,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_PANEL",
+       "unit": "m2",
+       "lines": 26,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 26,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_RUN",
+       "unit": "lm",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WALL_VOLUME",
+       "unit": "m3",
+       "lines": 26,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 26,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WINDOW",
+       "unit": "m2",
+       "lines": 5,
+       "excluded": 0,
+       "keyed": {
+        "WINDOWS.ALUMINIUM (item_code)": 5
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WINDOW",
+       "unit": "pcs",
+       "lines": 31,
+       "excluded": 27,
+       "keyed": {
+        "WINDOWS.ALUMINIUM (item_code)": 31
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "ARCH.WINDOW_REVEAL",
+       "unit": "m2",
+       "lines": 62,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 62,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 1,
+       "keyed": {
+        "DOORS.ALUMINIUM (item_code)": 3
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+       "unit": "pcs",
+       "lines": 5,
+       "excluded": 3,
+       "keyed": {
+        "DOORS.ALUMINIUM (item_code)": 5
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.INTERNAL.PVC",
+       "unit": "m2",
+       "lines": 5,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 5,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.INTERNAL.PVC",
+       "unit": "pcs",
+       "lines": 20,
+       "excluded": 15,
+       "keyed": {},
+       "unkeyed": 20,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.MAIN_ENTRANCE",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "DOOR.MAIN_ENTRANCE",
+       "unit": "pcs",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.BLOCK",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.BLOCK_COUNT",
+       "unit": "pcs",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.FACE",
+       "unit": "m2",
+       "lines": 9,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 9,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.GATE",
+       "unit": "pcs",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.MASONRY_BELOW_NG",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.PAINT",
+       "unit": "m2",
+       "lines": 8,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 8,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.PLASTER",
+       "unit": "m2",
+       "lines": 8,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 8,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.TOP",
+       "unit": "lm",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FENCE.WALL",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FLOOR.OUTDOOR",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.FLOOR.PORCELAIN",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.PAVING.INTERLOCK",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "EXT.POOL.WATER_FACE",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.CEILING",
+       "unit": "m2",
+       "lines": 41,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 41,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.CEILING.BULKHEAD",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.DOME.SOFFIT",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.EXT.FINISH",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.BED.DRY",
+       "unit": "m2",
+       "lines": 23,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 23,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.BED.DRY",
+       "unit": "m3",
+       "lines": 23,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 23,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.BED.WET",
+       "unit": "m2",
+       "lines": 21,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 21,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.BED.WET",
+       "unit": "m3",
+       "lines": 21,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 21,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.FINISH_HELD",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.PORCELAIN",
+       "unit": "m2",
+       "lines": 35,
+       "excluded": 13,
+       "keyed": {
+        "FLOOR.INTERNAL (item_code)": 35
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.FLOOR.WET_TILE",
+       "unit": "m2",
+       "lines": 20,
+       "excluded": 0,
+       "keyed": {
+        "FLOOR.INTERNAL (item_code)": 20
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.HANDRAIL",
+       "unit": "lm",
+       "lines": 1,
+       "excluded": 1,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.LANDING",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.LIFT_SURROUND",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+       "unit": "lm",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+       "unit": "m2",
+       "lines": 3,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 3,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.RISER",
+       "unit": "m2",
+       "lines": 15,
+       "excluded": 1,
+       "keyed": {},
+       "unkeyed": 15,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.THRESHOLD",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.MARBLE.TREAD",
+       "unit": "m2",
+       "lines": 15,
+       "excluded": 2,
+       "keyed": {},
+       "unkeyed": 15,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.PAINT",
+       "unit": "m2",
+       "lines": 45,
+       "excluded": 31,
+       "keyed": {
+        "PAINT.INTERNAL_WALL (item_code)": 45
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.PAINT.CEILING",
+       "unit": "m2",
+       "lines": 31,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 31,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.PLASTER",
+       "unit": "m2",
+       "lines": 75,
+       "excluded": 13,
+       "keyed": {
+        "PLASTER.INTERNAL (item_code)": 75
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.RAILING",
+       "unit": "lm",
+       "lines": 19,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 19,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.ROOF.FINISH",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.ROOF.INSULATION",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.ROOF.PROTECTION",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.ROOF.SCREED",
+       "unit": "m3",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.SKIRTING",
+       "unit": "lm",
+       "lines": 39,
+       "excluded": 19,
+       "keyed": {},
+       "unkeyed": 39,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.STAIR.FLIGHT",
+       "unit": "lm",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.STAIR.SOFFIT",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.STAIR.STEP_LM",
+       "unit": "lm",
+       "lines": 14,
+       "excluded": 2,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WALL.TILE",
+       "unit": "m2",
+       "lines": 18,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 18,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.DOORWAY",
+       "unit": "m2",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.DOORWAY_TRANSITION",
+       "unit": "m2",
+       "lines": 13,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 13,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+       "unit": "pcs",
+       "lines": 14,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 14,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.FLOOR",
+       "unit": "m2",
+       "lines": 18,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 18,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.MEMBRANE_ROLLS",
+       "unit": "pcs",
+       "lines": 22,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 22,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.PENETRATION",
+       "unit": "pcs",
+       "lines": 17,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 17,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.ROOF",
+       "unit": "m2",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.ROOF_UPTURN",
+       "unit": "lm",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.TERMINATION",
+       "unit": "lm",
+       "lines": 7,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 7,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "FIN.WP.WALL_UPTURN",
+       "unit": "m2",
+       "lines": 18,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 18,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "MAS.BLOCK",
+       "unit": "m2",
+       "lines": 26,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 26,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "MET.RAILING.GUARD",
+       "unit": "lm",
+       "lines": 6,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 6,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BEAM",
+       "unit": "m3",
+       "lines": 191,
+       "excluded": 54,
+       "keyed": {
+        "CONC.BEAM (item_code)": 191
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BLINDING",
+       "unit": "m3",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {
+        "CONC.BLINDING (item_code)": 4
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BOUNDARY_PAD",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.BOUNDARY_WALL",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 1
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.COLUMN",
+       "unit": "m3",
+       "lines": 72,
+       "excluded": 8,
+       "keyed": {
+        "CONC.COLUMN (item_code)": 72
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.DOME",
+       "unit": "m3",
+       "lines": 5,
+       "excluded": 2,
+       "keyed": {
+        "CONC.STAIR_DOME (item_code)": 5
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.FOOTING",
+       "unit": "m3",
+       "lines": 26,
+       "excluded": 0,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 26
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.GROUND_BEAM",
+       "unit": "m3",
+       "lines": 61,
+       "excluded": 0,
+       "keyed": {
+        "CONC.GROUND (item_code)": 61
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.GROUND_SLAB",
+       "unit": "m3",
+       "lines": 25,
+       "excluded": 0,
+       "keyed": {
+        "CONC.GROUND (item_code)": 25
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.LIFT",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.NECK",
+       "unit": "m3",
+       "lines": 36,
+       "excluded": 0,
+       "keyed": {
+        "CONC.COLUMN (item_code)": 36
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.PARAPET",
+       "unit": "m3",
+       "lines": 4,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 4,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.POOL",
+       "unit": "m3",
+       "lines": 5,
+       "excluded": 2,
+       "keyed": {
+        "CONC.POOL (item_code)": 5
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.SLAB",
+       "unit": "m3",
+       "lines": 75,
+       "excluded": 13,
+       "keyed": {
+        "CONC.SLAB (item_code)": 75
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.STAIR",
+       "unit": "m3",
+       "lines": 12,
+       "excluded": 1,
+       "keyed": {
+        "CONC.STAIR_DOME (item_code)": 12
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.CONC.STRAP",
+       "unit": "m3",
+       "lines": 10,
+       "excluded": 5,
+       "keyed": {
+        "CONC.FOOTING (item_code)": 10
+       },
+       "unkeyed": 0,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.FORMWORK",
+       "unit": "m2",
+       "lines": 612,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 612,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.FORMWORK.STAIR",
+       "unit": "m2",
+       "lines": 31,
+       "excluded": 1,
+       "keyed": {},
+       "unkeyed": 31,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "STR.REBAR",
+       "unit": "kg",
+       "lines": 2643,
+       "excluded": 577,
+       "keyed": {},
+       "unkeyed": 2643,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+       "unit": "m2",
+       "lines": 5,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 5,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+       "unit": "m3",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+       "unit": "m2",
+       "lines": 2,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 2,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+       "unit": "m2",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+       "unit": "m3",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      },
+      {
+       "item_code": "WP.FOUNDATION.PROCUREMENT",
+       "unit": "item",
+       "lines": 1,
+       "excluded": 0,
+       "keyed": {},
+       "unkeyed": 1,
+       "unkeyed_by_typed_value": {},
+       "double_keyed": 0
+      }
+     ],
+     "double_keyed_lines": 0
+    }
+   },
+   "buckets_v1": [
+    {
+     "trade": "CONCRETE",
+     "unit": "m3",
+     "reference_lines": 8,
+     "covered": 8,
+     "released": 1,
+     "held": 7,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 1,
+     "sum_reference": 59.81739999999999,
+     "sum_abs_error": 0.4627575431224784,
+     "sum_signed_error": 0.4627575431224784,
+     "sum_abs_error_counted": 0.4627575431224784,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": 0.007736169461101259,
+     "signed_error_ratio": 0.007736169461101259,
+     "wape_adjudicated": 0.007736169461101259
+    },
+    {
+     "trade": "DOORS",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 1,
+     "held": 0,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 1,
+     "sum_reference": 12.0,
+     "sum_abs_error": 0.7600000000000016,
+     "sum_signed_error": 0.7600000000000016,
+     "sum_abs_error_counted": 0.7600000000000016,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": 0.06333333333333346,
+     "signed_error_ratio": 0.06333333333333346,
+     "wape_adjudicated": 0.06333333333333346
+    },
+    {
+     "trade": "FLOOR_AREA",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 1,
+     "held": 0,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 1,
+     "sum_reference": 409.58,
+     "sum_abs_error": 20.720950000000016,
+     "sum_signed_error": -20.720950000000016,
+     "sum_abs_error_counted": 20.720950000000016,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": 0.05059072708628355,
+     "signed_error_ratio": -0.05059072708628355,
+     "wape_adjudicated": 0.05059072708628355
+    },
+    {
+     "trade": "PAINT",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 0,
+     "held": 1,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    },
+    {
+     "trade": "PLASTER",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 0,
+     "held": 1,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    },
+    {
+     "trade": "WINDOWS",
+     "unit": "m2",
+     "reference_lines": 1,
+     "covered": 1,
+     "released": 0,
+     "held": 1,
+     "unsupported": 0,
+     "silent_omissions": 0,
+     "unit_mismatch": 0,
+     "reference_qty_missing": 0,
+     "compared": 0,
+     "sum_reference": 0.0,
+     "sum_abs_error": 0.0,
+     "sum_signed_error": 0.0,
+     "sum_abs_error_counted": 0.0,
+     "false_positives": 0,
+     "false_positive_qty": 0.0,
+     "false_positive_qty_missing": 0,
+     "duplicates": 0,
+     "coverage": 1.0,
+     "wape": null,
+     "signed_error_ratio": null,
+     "wape_adjudicated": null
+    }
+   ]
+  }
+ ],
+ "rule": "per trade and unit, never mixed; HELD / UNKNOWN never 0 and never counted correct; verified share only from whole-scope checker re-measures of this run's quantity; development reference only, no product accuracy claim"
+}
