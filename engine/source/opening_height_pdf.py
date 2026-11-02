@@ -62,6 +62,7 @@ from collections import Counter
 from engine.source import opening_area as OA
 
 POLICY_ID = "OPENING_HEIGHT_PDF_V1"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: opening heights / m2; imported by no method or CLI
 PT_M = 0.0254 / 72.0                 # one PDF point on paper, in metres
 TEXT_NEAR = 1.5                      # a number lies within this many text heights of its dimension line
 AMBIG_PT = 0.25                      # two candidate lines nearer than this to each other's distance: ambiguous

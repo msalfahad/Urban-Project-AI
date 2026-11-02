@@ -66,6 +66,7 @@ from collections import Counter, defaultdict
 from engine.source import dimension_evidence as DE
 
 POLICY_ID = "OPENING_AREA_V1"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: opening m2; read only by opening_height_pdf, by no method
 TOL_M = 0.03                 # UP-OPEN-SCHED-001: a width agrees within 0.03 m; used for every place / level match
 AXIS_DEG = 1.0               # two wall axes are one axis within this
 MEASURED, HELD, EXCLUDED, UNSUPPORTED = "MEASURED", "HELD", "EXCLUDED", "UNSUPPORTED"

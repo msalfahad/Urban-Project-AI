@@ -56,6 +56,7 @@ import re
 from contextlib import contextmanager
 
 METHOD = "ARCH_TAKEOFF_V3.0"
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-212 / T-465: its strap / passage / stair lines are inherited by V3.0.6
 BASE_METHOD = "ARCH_TAKEOFF_V2.13"
 RELEASED_METHOD = "ARCH_TAKEOFF_V2.9"
 POLICY_ID = "URBAN_BOQ_T131_ARCH_V3_0"

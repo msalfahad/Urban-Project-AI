@@ -52,6 +52,7 @@ import math
 from engine.source import concrete_strip_guard as SG
 
 METHOD = "PLOT_EDGE_MEMBERS_V1"
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-212 / T-465: strap pieces read by arch_v30, inherited by V3.0.6
 RULES = ("UP-QTY-STATUS-001", "UP-KB-PREC-001", "OWNER-Q-12", "OWNER-Q-16", "OWNER-Q-19", "OWNER-Q-25",
          "OWNER-Q-28", "OWNER-Q-31")
 GAP_TOL_M = 1e-6               # owner direction via the scout (R-05a): loops close at this gap only

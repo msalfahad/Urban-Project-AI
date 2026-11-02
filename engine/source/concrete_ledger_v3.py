@@ -52,6 +52,7 @@ from engine.source import member_detection as MD
 from engine.source import provisional_estimate as PE
 
 METHOD = "CONCRETE_LEDGER_V3"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: concrete items; imported by no method or CLI
 RULES = V2.RULES + ("OWNER-Q-16", "OWNER-Q-21", "OWNER-Q-44")
 BEAM_ITEM_FAMILIES = ("BEAMS", "GROUND_BEAMS")
 PLAN_ROLES = ("SLAB_PLAN", "GROUND_BEAM_PLAN")
