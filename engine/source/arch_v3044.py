@@ -291,6 +291,11 @@ def _inputs(ln):
     return c["inputs"]
 
 
+def _low(br):
+    lo = br.get("low")
+    return 0.0 if lo is None else float(lo)
+
+
 def _is_skirting(ln):
     return ln["item_code"] == CODE and ln["unit"] == UNIT
 
@@ -383,7 +388,7 @@ def _absorbed(rg, r, det, srcs):
                         f"established; carried once)")
         action = "ABSORB_RANGE"
     else:
-        new["bounded_range"] = dict(br, high=hi, low=min(br.get("low") or 0, hi),
+        new["bounded_range"] = dict(br, high=hi, low=min(_low(br), hi),
                                     basis=f"{br.get('basis') or ''} ({METHOD}: - {_fmt(r['_released'])} released)"[:300])
         A305._note(new, f"{METHOD}: range {_fmt(was['low'])} .. {_fmt(was['high'])} -> "
                         f"{_fmt(new['bounded_range']['low'])} .. {_fmt(hi)} lm ({_fmt(r['_released'])} released into "
@@ -410,7 +415,7 @@ def _narrowed(ln, r, srcs):
     new = copy.deepcopy(ln)
     was = {"low": br.get("low"), "high": br.get("high"), "basis": br.get("basis")}
     wtxt = ", ".join(f"{x['census_id']} {_fmt(x['_edge'])} ({x['reason']})" for x in r["_windows"])
-    new["bounded_range"] = dict(br, high=hi, low=min(br.get("low") or 0, hi),
+    new["bounded_range"] = dict(br, high=hi, low=min(_low(br), hi),
                                 basis=f"{br.get('basis') or ''} ({METHOD}: - {wtxt})"[:300])
     _inputs(new)[REC_KEY] = _rec(P_NARROW, srcs, action="NARROW_RANGE", was=was, low=new["bounded_range"]["low"],
                                  high=hi, windows=[{"census_id": x["census_id"], "edge_lm": x["_edge"],

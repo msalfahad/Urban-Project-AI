@@ -31,15 +31,15 @@ PENDING = {
     "note": "T-422 (research/agents_t422/T-422_SKIRTING_RELEASE.md): the Checker-verified T-296 skirting readings: "
             "W04 / W14 / W24 / W29 (sill above the floor, printed or drawing-confirmed) released into their rooms' "
             "determinate lines, +5.802094 lm, the four range lines that held them carried there (NOT_APPLICABLE); "
-            "W15 / W16 floor glazing (-3.10464 lm) and the wet-pantry W09 (-1.5 lm) out of the held ranges; the 1F "
+            "W15 / W16 floor glazing out of the 1F living held range (-3.10464 lm; W09 already out since V3.0.21); the 1F "
             "dressing a named HELD BLANK line (never 0); every other V3.0.43 line byte-identical; the Gate B "
             "integration package",
 }
 PROPOSED = ("1.39.0 (T-422): moved by the pending ARCH_TAKEOFF_V3.0.44 package (Gate B); the released capability of "
             "V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.44 (engine/source/arch_v3044.py, opt-in candidate; pending Gate B, T-422)"
-MISSING = ("in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 3 out of the "
-           "ranges); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK")
+MISSING = ("in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 2 out of a "
+           "range); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK")
 FAMS = ("B3-06",)
 
 

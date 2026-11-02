@@ -45,6 +45,12 @@ REASON = (("floor-level glazing", "FLOOR_GLAZING"), ("window of a wet room", "WE
 # the missing room: a 1F skirting line whose project / documents the new line carries (bound by the module)
 MISSING_TEMPLATE = {"1F": "L-c021ae79a3740089c3fe"}
 FLOORS = ("GF", "1F", "2F")
+# range lines whose NOT_SKIRTED window a later merged package already took out (the ledger read V3.0.17): named, never
+# applied twice. V3.0.21 (T-315, base ownership SPLIT on the T-296 reading, ASSUMED - OWNER-APPROVED Q-37 A / Q-48 A)
+# took W09 1.500 (GF-07 wet-pantry frame, entities on face GF-07|GF-W16) out of the GF open-plan range: 7.831578 ->
+# 6.331578 (= W02 alone, sill not established, stays held).
+ALREADY_OUT = {("L-e7dcdc69e1a2b24f8616", "W09"): "out since ARCH_TAKEOFF_V3.0.21 (T-315 base-ownership SPLIT 1.500 lm "
+                                                  "on the wet-pantry wall tile GF-07; range 7.831578 -> 6.331578)"}
 
 
 def _rel(p):
@@ -72,7 +78,7 @@ def _reason(why):
 
 def build(project_id=None):
     wc, ll = _read(WC), {r["line_id"]: r for r in _read(LL)}
-    releases, narrows = {}, {}
+    releases, narrows, set_aside = {}, {}, []
     for r in wc:
         L = ll.get(r["line_id"])
         if L is None:
@@ -95,6 +101,10 @@ def build(project_id=None):
                 continue            # the pantry-part line: NOT_APPLICABLE since V3.0.21 (with its range line); no range left
             if not L["range_line"]:
                 raise SystemExit(f"{r['line_id']}: a NOT_SKIRTED window with no range line to narrow")
+            if (L["range_line"], r["census_id"]) in ALREADY_OUT:
+                set_aside.append({"line_id": L["range_line"], "census_id": r["census_id"],
+                                  "why": ALREADY_OUT[(L["range_line"], r["census_id"])]})
+                continue
             row = narrows.setdefault(L["range_line"], {
                 "line_id": L["range_line"], "of_line": r["line_id"], "floor": L["floor"],
                 "engine_room": L["engine_room"], "expect": {"low": 0.0, "high": float(L["cand_range_hi"])},
@@ -121,24 +131,7 @@ def build(project_id=None):
                             "why": reason, "source_tasks": ["T-296"]})
     return {"schema": "URBAN_V3044_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
             "releases": sorted(releases.values(), key=lambda x: x["line_id"]),
-            "narrows": sorted(narrows.values(), key=lambda x: x["line_id"]), "missing": missing}
-
-
-def bind_low(doc, candidate_lines):
-    """the runner's step: the ledger prints only the range HIGH of each range line; the LOW is read from the candidate
-    (and stays as it is: a release or a narrowing never moves a low upwards)."""
-    by = {ln["line_id"]: ln for ln in candidate_lines}
-
-    def low(lid):
-        br = (by.get(lid) or {}).get("bounded_range") or {}
-        return br.get("low")
-    for r in doc["releases"]:
-        if r.get("range_line") and low(r["range_line"]["line_id"]) is not None:
-            r["range_line"]["expect"]["low"] = low(r["range_line"]["line_id"])
-    for r in doc["narrows"]:
-        if low(r["line_id"]) is not None:
-            r["expect"]["low"] = low(r["line_id"])
-    return doc
+            "narrows": sorted(narrows.values(), key=lambda x: x["line_id"]), "missing": missing, "set_aside": set_aside}
 
 
 if __name__ == "__main__":
@@ -147,4 +140,4 @@ if __name__ == "__main__":
                                     round(sum(w["edge_lm"] for w in r["windows"]), 6)) for r in d["releases"]],
                       "narrows": [(r["line_id"], [w["census_id"] for w in r["windows"]],
                                    round(sum(w["edge_lm"] for w in r["windows"]), 6)) for r in d["narrows"]],
-                      "missing": [m["engine_room"] for m in d["missing"]]}, indent=1))
+                      "missing": [m["engine_room"] for m in d["missing"]], "set_aside": d["set_aside"]}, indent=1))
