@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02T21:13Z | Verifier | SUCCESS | T-465 r3 REJECTED; T-448 MERGED f1bf61d7; T-474 part 1 MERGED 86335fa8 | Drive read OK. T-465: real set ST7757.pdf 16 pp words 36/36 + segs 499,517 exactly equal, but own adverse page refutes identity: embedded TrueType with fractional /Widths, MuPDF rounds widths to integers (<=0.5/1000 em), V2 does not; no qty. T-448: L4 to end 17,433 pass, 5 known r8 fails, NEW 0; own lintel/adhesive/AAC/block hand cases AGREE; unwired. T-474: own DXF beam 1F-087 4.268 m2 and slab GF-126 15.108272 m2 AGREE; id membership in V3.0.43 not reproduced (T-167 run timed out), carried to part 2 Gate B. No quantity change, candidate V3.0.43 not released; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-02T21:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T20:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPndRE72pRcJMvvKTxvG active since 2026-11-02T19:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-02T20:41Z | Worker 2 | STARTED | run session_01E6cPncAxqgu2etpLajNU7Z | repo-attached routine | task state: none yet | self-check pending
