@@ -1,0 +1,3359 @@
+{
+ "builders": {
+  "ARCH_TAKEOFF_V3.0.17": {
+   "file": "research/agents_t254/t254_inputs.py",
+   "task": "T-254"
+  },
+  "ARCH_TAKEOFF_V3.0.18": {
+   "file": "research/agents_t266/t266_inputs.py",
+   "task": "T-266"
+  },
+  "ARCH_TAKEOFF_V3.0.23": {
+   "file": "research/agents_t319/t319_inputs.py",
+   "task": "T-319"
+  },
+  "ARCH_TAKEOFF_V3.0.33": {
+   "file": "research/agents_t397/t397_inputs.py",
+   "task": "T-397"
+  },
+  "ARCH_TAKEOFF_V3.0.40": {
+   "file": "research/agents_t430/t430_inputs.py",
+   "task": "T-430"
+  }
+ },
+ "by_rule": {
+  "R-COL-ABSENCE-1 | A-SPECIFIED": 5,
+  "R-COL-LEVEL-HEIGHT-1 | A-REPRODUCED": 16,
+  "R-COL-SECTION-CONFLICT-1 | A-REPRODUCED": 15,
+  "R-COMPLETENESS-DRAWN-ELEMENT-1 | A-SPECIFIED": 1,
+  "R-GB-BOUNDARY-SHARE-1 | A-SPECIFIED": 1,
+  "R-GB-EXT-DEPTH-1 | A-REPRODUCED": 27,
+  "R-GB-NECK-CUT-1 | A-REPRODUCED": 4,
+  "R-HELD-BOUND-PIECES-1 | A-SPECIFIED": 1,
+  "R-PARAPET-RC-FLOOR-1 | A-REPRODUCED": 4,
+  "R-STAIR-PIECES-1 | A-SPECIFIED": 5,
+  "R-T392-1 / R-T392-2 | A-SPECIFIED": 4
+ },
+ "counts": {
+  "A-REPRODUCED": 66,
+  "A-SPECIFIED": 17
+ },
+ "entries": [
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.3360000000007664
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 2.4,
+      "b_m": 0.3,
+      "run": "137+138#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-00465df980165c529476",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "reading_findings": [
+    "shown reading literal_two_levels_m3: rule 0.18 vs merged ledger 0.1725 (diff 0.0075)"
+   ],
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.18
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.40199999999996855
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 3.35,
+      "b_m": 0.3,
+      "run": "170+7C3#3"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-1146bdecd41491ce9382",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.9547
+   },
+   "residual": "+0.000050 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(170+7C3#3 3.3500 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.954750 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.95475
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.4559999999999703
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 3.8,
+      "b_m": 0.3,
+      "run": "178+7DB#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-21795b350fbd09150c43",
+   "patch": {
+    "held_item": "court section not printed (T-242 / T-253 s.4; GS-16 architect item)",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.COURT",
+     "LEVEL.STRUCTURAL_TOP.GF.COURT",
+     "LEVEL.GROUND.COURT"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project",
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "HELD",
+    "value": null
+   },
+   "rule_text": "court zone: no printed section -> its depth basis is not declared -> HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.276
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 2.3,
+      "b_m": 0.3,
+      "run": "10B+7D1#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-3284f44000c02179ace7",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.1725
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.8234
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 5.45,
+      "b_m": 0.3,
+      "run": "7D4+F8#1"
+     },
+     {
+      "L_m": 4.25,
+      "b_m": 0.3,
+      "run": "7D4+F8#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-402dbe61d1c924144a3c",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "reading_findings": [
+    "shown reading literal_two_levels_m3: rule 0.7275 vs merged ledger 0.4012 (diff 0.3263)"
+   ],
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.7275
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.32400000000000007
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 2.7,
+      "b_m": 0.3,
+      "run": "109+7CB#3"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-46f25f72b44e8bc3e2e0",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.7695
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(109+7CB#3 2.7000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.769500 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.7695
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.1519999999999972
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 6.0,
+      "b_m": 0.3,
+      "run": "136+7D5#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "reading_findings": [
+    "shown reading literal_two_levels_m3: rule 0.45 vs merged ledger 0.4425 (diff 0.0075)"
+   ],
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.45
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.05400000003724185
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 0.6,
+      "b_m": 0.3,
+      "run": "185+7C7#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-62243c74c430d383be86",
+   "patch": {
+    "held_item": "court section not printed (T-242 / T-253 s.4; GS-16 architect item)",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.COURT",
+     "LEVEL.STRUCTURAL_TOP.GF.COURT",
+     "LEVEL.GROUND.COURT"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project",
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "HELD",
+    "value": null
+   },
+   "rule_text": "court zone: no printed section -> its depth basis is not declared -> HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.515999999947717
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 4.3,
+      "b_m": 0.3,
+      "run": "10A+7C9#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-62f712462a36d4ad1b32",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.2255
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(10A+7C9#1 4.3000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.225500 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.2255
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.13499999996079037
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.2,
+      "b_m": 0.3,
+      "run": "10B+7D1#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-6bf14711798e5af93594",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.09
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.2419999999999998
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 3.35,
+      "b_m": 0.3,
+      "run": "7E0+FD#1"
+     },
+     {
+      "L_m": 3.25,
+      "b_m": 0.3,
+      "run": "7E0+FD#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-9e28c7012784a8dc33c8",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.881
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(7E0+FD#1 3.3500 x 0.30 + 7E0+FD#2 3.2500 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.881000 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.881
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.11699999999997117
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.3,
+      "b_m": 0.3,
+      "run": "1811+1812#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-a55bfa01b726ef11650c",
+   "patch": {
+    "held_item": "court section not printed (T-242 / T-253 s.4; GS-16 architect item)",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.COURT",
+     "LEVEL.STRUCTURAL_TOP.GF.COURT",
+     "LEVEL.GROUND.COURT"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.COURT HELD: not declared for this project",
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "HELD",
+    "value": null
+   },
+   "rule_text": "court zone: no printed section -> its depth basis is not declared -> HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.04500000003921093
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 0.5,
+      "b_m": 0.3,
+      "run": "13E+7D6#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-b4a13a43967ee4765662",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.0375
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.28799999995031283
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 2.4,
+      "b_m": 0.3,
+      "run": "170+7C3#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-bde0257c24588948167f",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.684
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(170+7C3#1 2.4000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.684000 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.684
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.108
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.2,
+      "b_m": 0.3,
+      "run": "7D0+FC#4"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-c9bb2eca50a2a2c8b569",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.342
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(7D0+FC#4 1.2000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.342000 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.342
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.3569999999503337
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 2.975,
+      "b_m": 0.3,
+      "run": "7D0+FC#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-cc6aaa99e1892f34b92f",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.8479
+   },
+   "residual": "-0.000025 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": -2.5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(7D0+FC#1 2.9750 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.847875 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.847875
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.09000000003724708
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.0,
+      "b_m": 0.3,
+      "run": "114+115+7DF#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d08e7a9d809a56733ff9",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.285
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(114+115+7DF#2 1.0000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.285000 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.285
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.0440000000745047
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 5.8,
+      "b_m": 0.3,
+      "run": "13D+7D2#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-d8b98b143e293d30833b",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "reading_findings": [
+    "shown reading literal_two_levels_m3: rule 0.435 vs merged ledger 0.4425 (diff -0.0075)"
+   ],
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.435
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.3900000000148045
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 3.25,
+      "b_m": 0.3,
+      "run": "170+7C3#4"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-dac43ee18f55433b57e7",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.9263
+   },
+   "residual": "-0.000050 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": -5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(170+7C3#4 3.2500 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.926250 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.92625
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "CONFLICT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.16257741982327176
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.8063,
+      "b_m": 0.3,
+      "run": "ARC:139+13A"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e16c98075f69532a3dc7",
+   "patch": {
+    "held_item": "D-35 annex (literal 0.25 vs the printed exterior section)",
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "depth basis not approved for this zone",
+    "held_reason": "GB.EXTERIOR.DEPTH_BASIS.ANNEX HELD: version 1 is PENDING approval",
+    "high": null,
+    "low": null,
+    "readings": {
+     "literal_two_levels_m3": 0.135472
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "annex zone: depth basis an open designer item (D-35) -> CONFLICT, literal reading beside",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.0341
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 5.745,
+      "b_m": 0.3,
+      "run": "7D0+FC#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e8536bc4f2699a24e2ab",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.6373
+   },
+   "residual": "+0.000025 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 2.5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(7D0+FC#2 5.7450 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.637325 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.637325
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.143
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 6.35,
+      "b_m": 0.3,
+      "run": "7D0+FC#3"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e9a885323ad6ec3ea32b",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.8097
+   },
+   "residual": "+0.000050 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(7D0+FC#3 6.3500 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.809750 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.80975
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.40439999999994414
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 3.37,
+      "b_m": 0.3,
+      "run": "170+7C3#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-efbed17455bb224e126e",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.9605
+   },
+   "residual": "-0.000050 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": -5e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(170+7C3#2 3.3700 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.960450 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.96045
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.03510179283579389
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 0.3639,
+      "b_m": 0.3,
+      "run": "107+7CE#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-ff727b2a52e39509a659",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.103712
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": -1e-06,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(107+7CE#1 0.3639 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.103711 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.103711
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.1710000000372497
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 1.9,
+      "b_m": 0.3,
+      "run": "145+7CA#1"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-26fcfbbb143269e7bb58",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.5415
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(145+7CA#1 1.9000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 0.541500 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.5415
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.528
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 4.4,
+      "b_m": 0.3,
+      "run": "109+7CB#2"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-27d104ca6fc3556d16e6",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.254
+   },
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(109+7CB#2 4.4000 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.254000 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.254
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 1.1316231928086378
+    },
+    "physical_element": "GROUND_BEAM (exterior / perimeter band)",
+    "runs": [
+     {
+      "L_m": 6.0873,
+      "b_m": 0.3,
+      "run": "ARC:157+158"
+     }
+    ],
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-7076482d75ca42691468",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 1.7349
+   },
+   "residual": "-0.000020 m3 = the merged ledger's 4-decimal print (rule unrounded)",
+   "rule": "R-GB-EXT-DEPTH-1",
+   "rule_minus_patch_m3": -2e-05,
+   "rule_result": {
+    "facts_used": [
+     "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.NATURAL_GROUND.OUTER"
+    ],
+    "formula": "(ARC:157+158 6.0873 x 0.30) x D 0.9500 (top +0.95 - ground +0.00) = 1.734880 m3",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 1.73488
+   },
+   "rule_text": "exterior ground beam: depth = structural top - outer natural ground; L x b x D per run",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-26f6b6f2365c72e42291",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-33a9b7728781fcba12e2",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.5880000000000001
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-53f223b06db14ac41d47",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-919a5749ef79759e01ca",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c10e2945d582b5a03126",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.42000000000000004
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "patch": {
+    "held_item": "D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.5625
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "patch": {
+    "held_item": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project; LEVEL.STRUCTURAL_TOP.ROOF.ANNEX: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.5625
+    },
+    "physical_element": "COLUMN",
+    "section_basis": "schedule B x H read back from the candidate line 0.5625 m3 / main GF storey 4.50 m = 0.125000 m2",
+    "source_task": "T-287"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-7d70692d03102a2dc306",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.65
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "formula": "0.125000 m2 x (5.45 - 0.25 = 5.20) m",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.65
+   },
+   "rule_text": "column = section x (top level - base level)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.6749999999999999
+    },
+    "physical_element": "COLUMN",
+    "section_basis": "schedule B x H read back from the candidate line 0.6749999999999999 m3 / main GF storey 4.50 m = 0.150000 m2",
+    "source_task": "T-287"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-84bf7fb482a98fdbe482",
+   "patch": {
+    "held_item": null,
+    "state": "DRAWING-CONFIRMED",
+    "value": 0.78
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "formula": "0.150000 m2 x (5.45 - 0.25 = 5.20) m",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.78
+   },
+   "rule_text": "column = section x (top level - base level)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.45
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-9f5a647014bbf83359f9",
+   "patch": {
+    "held_item": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project; LEVEL.STRUCTURAL_TOP.ROOF.ANNEX: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.45
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "patch": {
+    "held_item": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project; LEVEL.STRUCTURAL_TOP.ROOF.ANNEX: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.45
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "patch": {
+    "held_item": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project; LEVEL.STRUCTURAL_TOP.ROOF.ANNEX: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.5625
+    },
+    "physical_element": "COLUMN",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "patch": {
+    "held_item": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM",
+    "state": "HOLD",
+    "value": null
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.ROOF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX"
+    ],
+    "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project; LEVEL.STRUCTURAL_TOP.ROOF.ANNEX: not declared for this project",
+    "state": "HELD"
+   },
+   "rule_text": "a column whose top level is not declared stays HELD",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "NOT_PRESENT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "absence": "ST dxf SFRS (column layers + texts, 0.6 m): ABSENT; ST pdf p.6 (filled outlines, 0.6 m): ABSENT; architectural dxf 2F plan (S-COL.BON, 0.6 m): ABSENT; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN C5 2F on neck 10BD (type-table band only)",
+    "source_task": "T-256"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-7d98b1c0ac80787d0b51",
+   "patch": {
+    "state": "NOT_PRESENT"
+   },
+   "rule": "R-COL-ABSENCE-1",
+   "rule_text": "a type-table column band with no outline, text or start / stop symbol on any searched sheet is NOT_PRESENT with its absence evidence (T-256 s.4)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "NOT_PRESENT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "absence": "ST dxf SFRS (column layers + texts, 0.6 m): ABSENT; ST pdf p.6 (filled outlines, 0.6 m): ABSENT; architectural dxf 2F plan (S-COL.BON, 0.6 m): ABSENT; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN C3 2F on neck 10C5 (type-table band only)",
+    "source_task": "T-256"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-eb3bd5ba496a207f04f7",
+   "patch": {
+    "state": "NOT_PRESENT"
+   },
+   "rule": "R-COL-ABSENCE-1",
+   "rule_text": "a type-table column band with no outline, text or start / stop symbol on any searched sheet is NOT_PRESENT with its absence evidence (T-256 s.4)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "NOT_PRESENT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "absence": "ST dxf SFRS (column layers + texts, 0.6 m): ABSENT; ST pdf p.6 (filled outlines, 0.6 m): ABSENT; architectural dxf 2F plan (S-COL.BON, 0.6 m): ABSENT; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN C8 2F on neck 10E0 (type-table band only)",
+    "source_task": "T-256"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-73e82692ffb24059d95b",
+   "patch": {
+    "state": "NOT_PRESENT"
+   },
+   "rule": "R-COL-ABSENCE-1",
+   "rule_text": "a type-table column band with no outline, text or start / stop symbol on any searched sheet is NOT_PRESENT with its absence evidence (T-256 s.4)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "NOT_PRESENT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "absence": "ST dxf FFRS (column layers + texts, 0.6 m): ABSENT; ST pdf p.5 (filled outlines, 0.6 m): ABSENT; architectural dxf 1F plan (S-COL.BON, 0.6 m): ABSENT; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN C3 1F on neck 10E4 (type-table band only)",
+    "source_task": "T-256"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-99e7e45631f6ddf3c7e2",
+   "patch": {
+    "state": "NOT_PRESENT"
+   },
+   "rule": "R-COL-ABSENCE-1",
+   "rule_text": "a type-table column band with no outline, text or start / stop symbol on any searched sheet is NOT_PRESENT with its absence evidence (T-256 s.4)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "NOT_PRESENT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "absence": "ST dxf SFRS (column layers + texts, 0.6 m): ABSENT; ST pdf p.6 (filled outlines, 0.6 m): ABSENT; architectural dxf 2F plan (S-COL.BON, 0.6 m): ABSENT; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN C3 2F on neck 10E4 (type-table band only)",
+    "source_task": "T-256"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-2bf336912a62859834b3",
+   "patch": {
+    "state": "NOT_PRESENT"
+   },
+   "rule": "R-COL-ABSENCE-1",
+   "rule_text": "a type-table column band with no outline, text or start / stop symbol on any searched sheet is NOT_PRESENT with its absence evidence (T-256 s.4)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "physical_element": "COLUMN planted 1F PC-1F-B (P.C 20x50 on B26)",
+    "section_basis": "printed P.C 0.20 x 0.50 (T-248)",
+    "source_task": "T-248"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-31a0424bd0efcc93efba",
+   "patch": {
+    "held_item": null,
+    "state": "VERIFIED",
+    "value": 0.42
+   },
+   "rule": "R-COL-LEVEL-HEIGHT-1",
+   "rule_minus_patch_m3": 0.0,
+   "rule_result": {
+    "facts_used": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "formula": "0.100000 m2 x (9.65 - 5.45 = 4.20) m",
+    "held_reason": null,
+    "high": null,
+    "low": null,
+    "readings": {},
+    "state": "VALUED",
+    "value": 0.42
+   },
+   "rule_text": "column = section x (top level - base level)",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "ADD_HELD",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "held_item": "M4: boundary-wall columns 20 x 30 ('SEE ARCH PLAN', none drawn): count and positions"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "T253-BOUNDARY-GB",
+   "patch": {
+    "state": "HELD",
+    "upper_bound": 3.5256
+   },
+   "rule": "R-GB-BOUNDARY-SHARE-1",
+   "rule_text": "boundary ground beam = drawn band less the boundary-column share; the column count is not printed -> HELD with the band as upper bound",
+   "schema": "URBAN_V3017_INPUTS_V1",
+   "task": "T-254",
+   "version": "ARCH_TAKEOFF_V3.0.17"
+  },
+  {
+   "action": "SPLIT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "physical_element": "ST-01 GF -> 1F main stair (MS1)",
+    "source_task": "T-290"
+   },
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "patch": {
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "group": "STAIR_SPLIT"
+   },
+   "rule": "R-STAIR-PIECES-1",
+   "rule_text": "a stair line = the sum of its drawn pieces by status (T-258 r2 ledger); held pieces blank by name, never summed into a closable part",
+   "schema": "URBAN_V3018_INPUTS_V1",
+   "task": "T-266",
+   "version": "ARCH_TAKEOFF_V3.0.18"
+  },
+  {
+   "action": "SPLIT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "physical_element": "ST-02 round stair",
+    "source_task": "T-290"
+   },
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "patch": {
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "group": "STAIR_SPLIT"
+   },
+   "rule": "R-STAIR-PIECES-1",
+   "rule_text": "a stair line = the sum of its drawn pieces by status (T-258 r2 ledger); held pieces blank by name, never summed into a closable part",
+   "schema": "URBAN_V3018_INPUTS_V1",
+   "task": "T-266",
+   "version": "ARCH_TAKEOFF_V3.0.18"
+  },
+  {
+   "action": "SPLIT",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "physical_element": "ST-01b lobby flight D1",
+    "source_task": "T-290"
+   },
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-821032bc04a0b0d02133",
+   "patch": {
+    "before": {
+     "evidence_state": "BLOCKED_RFI",
+     "measured_net": null
+    },
+    "group": "STAIR_SPLIT"
+   },
+   "rule": "R-STAIR-PIECES-1",
+   "rule_text": "a stair line = the sum of its drawn pieces by status (T-258 r2 ledger); held pieces blank by name, never summed into a closable part",
+   "schema": "URBAN_V3018_INPUTS_V1",
+   "task": "T-266",
+   "version": "ARCH_TAKEOFF_V3.0.18"
+  },
+  {
+   "action": "REBASE",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "physical_element": "ST-01 MS2 half landing (two plates)",
+    "source_task": "T-290"
+   },
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-2416e65f053a14199cfc",
+   "patch": {
+    "before": {
+     "evidence_state": "BOUNDED_EXPOSURE",
+     "measured_net": null
+    },
+    "group": "STAIR_REBASE"
+   },
+   "rule": "R-STAIR-PIECES-1",
+   "rule_text": "the landing line rebased to its drawn plates (T-258 / T-290)",
+   "schema": "URBAN_V3018_INPUTS_V1",
+   "task": "T-266",
+   "version": "ARCH_TAKEOFF_V3.0.18"
+  },
+  {
+   "action": "HOLD",
+   "class": "A-SPECIFIED",
+   "evidence": {
+    "physical_element": "ST-03 entrance flight E1",
+    "source_task": "T-289"
+   },
+   "item_code": "STR.CONC.STAIR",
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "patch": {
+    "before": {
+     "evidence_state": "PROVISIONAL",
+     "measured_net": 0.948267
+    },
+    "group": "STAIR_HOLD"
+   },
+   "rule": "R-STAIR-PIECES-1",
+   "rule_text": "a flight with no printed basis stays HELD by name",
+   "schema": "URBAN_V3018_INPUTS_V1",
+   "task": "T-266",
+   "version": "ARCH_TAKEOFF_V3.0.18"
+  },
+  {
+   "action": "ADD_HELD_RANGE",
+   "class": "A-REPRODUCED",
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "evidence": {
+    "chain": "ANNEX",
+    "runs": 7,
+    "source_task": "T-324"
+   },
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": null,
+   "patch": {
+    "high": 3.018505,
+    "low": 1.799103,
+    "state": "HELD"
+   },
+   "rule": "R-PARAPET-RC-FLOOR-1",
+   "rule_result": {
+    "facts_used": [
+     "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB"
+    ],
+    "formula": "low 5.997010 m2 x upstand 0.30; high sum(top x printed h)",
+    "high": 3.018505,
+    "low": 1.799103,
+    "state": "HELD"
+   },
+   "rule_text": "parapet RC: low = top x printed upstand minimum, high = top x printed height; HELD on material",
+   "schema": "URBAN_V3023_INPUTS_V1",
+   "task": "T-319",
+   "version": "ARCH_TAKEOFF_V3.0.23"
+  },
+  {
+   "action": "ADD_HELD_RANGE",
+   "class": "A-REPRODUCED",
+   "element_id": "GF_TERRACE#PARAPET_RC",
+   "evidence": {
+    "chain": "GF",
+    "runs": 3,
+    "source_task": "T-324"
+   },
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": null,
+   "patch": {
+    "high": 2.83699,
+    "low": 1.677887,
+    "state": "HELD"
+   },
+   "rule": "R-PARAPET-RC-FLOOR-1",
+   "rule_result": {
+    "facts_used": [
+     "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB"
+    ],
+    "formula": "low 5.592956 m2 x upstand 0.30; high sum(top x printed h)",
+    "high": 2.83699,
+    "low": 1.677887,
+    "state": "HELD"
+   },
+   "rule_text": "parapet RC: low = top x printed upstand minimum, high = top x printed height; HELD on material",
+   "schema": "URBAN_V3023_INPUTS_V1",
+   "task": "T-319",
+   "version": "ARCH_TAKEOFF_V3.0.23"
+  },
+  {
+   "action": "ADD_HELD_RANGE",
+   "class": "A-REPRODUCED",
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "evidence": {
+    "chain": "1F",
+    "runs": 11,
+    "source_task": "T-324"
+   },
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": null,
+   "patch": {
+    "high": 11.53235,
+    "low": 2.949453,
+    "state": "HELD"
+   },
+   "rule": "R-PARAPET-RC-FLOOR-1",
+   "rule_result": {
+    "facts_used": [
+     "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB"
+    ],
+    "formula": "low 9.831510 m2 x upstand 0.30; high sum(top x printed h)",
+    "high": 11.53235,
+    "low": 2.949453,
+    "state": "HELD"
+   },
+   "rule_text": "parapet RC: low = top x printed upstand minimum, high = top x printed height; HELD on material",
+   "schema": "URBAN_V3023_INPUTS_V1",
+   "task": "T-319",
+   "version": "ARCH_TAKEOFF_V3.0.23"
+  },
+  {
+   "action": "ADD_HELD_RANGE",
+   "class": "A-REPRODUCED",
+   "element_id": "2F_ROOF#PARAPET_RC",
+   "evidence": {
+    "chain": "2F",
+    "runs": 4,
+    "source_task": "T-324"
+   },
+   "item_code": "STR.CONC.PARAPET",
+   "line_id": null,
+   "patch": {
+    "high": 2.7075,
+    "low": 1.6245,
+    "state": "HELD"
+   },
+   "rule": "R-PARAPET-RC-FLOOR-1",
+   "rule_result": {
+    "facts_used": [
+     "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB"
+    ],
+    "formula": "low 5.415000 m2 x upstand 0.30; high sum(top x printed h)",
+    "high": 2.7075,
+    "low": 1.6245,
+    "state": "HELD"
+   },
+   "rule_text": "parapet RC: low = top x printed upstand minimum, high = top x printed height; HELD on material",
+   "schema": "URBAN_V3023_INPUTS_V1",
+   "task": "T-319",
+   "version": "ARCH_TAKEOFF_V3.0.23"
+  },
+  {
+   "action": "HELD_BOUND",
+   "class": "A-SPECIFIED",
+   "element_id": null,
+   "evidence": {
+    "source_tasks": [
+     "T-391"
+    ],
+    "status": "HELD"
+   },
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "line_id": "L-41cfb82ed733f4d6e3a5",
+   "patch": {
+    "high": 3.56054,
+    "low": 0.0
+   },
+   "rule": "R-HELD-BOUND-PIECES-1",
+   "rule_text": "a held cell's bound is its own slab panels x printed thickness, the shaft and strips that are not slab removed (R-T391-5)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "GAP_RESTORE",
+   "class": "A-SPECIFIED",
+   "element_id": null,
+   "evidence": {
+    "source_tasks": [
+     "T-392"
+    ],
+    "status": "DRAWING-CONFIRMED"
+   },
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-cbf53752cfd897c35c2c",
+   "patch": {
+    "value": 0.255
+   },
+   "rule": "R-T392-1 / R-T392-2",
+   "rule_text": "a deduction is only the drawn-cell overlap: the ring-overlap GAP from an overlay-fitted band set restored, DOUBLE and GAP reported apart (a defect of the band-subtraction code, to be fixed there)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "GAP_RESTORE",
+   "class": "A-SPECIFIED",
+   "element_id": null,
+   "evidence": {
+    "source_tasks": [
+     "T-392"
+    ],
+    "status": "VERIFIED"
+   },
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9a55aadc9f0880ae37a7",
+   "patch": {
+    "value": 0.528021
+   },
+   "rule": "R-T392-1 / R-T392-2",
+   "rule_text": "a deduction is only the drawn-cell overlap: the ring-overlap GAP from an overlay-fitted band set restored, DOUBLE and GAP reported apart (a defect of the band-subtraction code, to be fixed there)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "GAP_RESTORE",
+   "class": "A-SPECIFIED",
+   "element_id": null,
+   "evidence": {
+    "source_tasks": [
+     "T-392"
+    ],
+    "status": "DRAWING-CONFIRMED"
+   },
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9270e8b8860414386adb",
+   "patch": {
+    "value": 1.33875
+   },
+   "rule": "R-T392-1 / R-T392-2",
+   "rule_text": "a deduction is only the drawn-cell overlap: the ring-overlap GAP from an overlay-fitted band set restored, DOUBLE and GAP reported apart (a defect of the band-subtraction code, to be fixed there)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "GAP_RESTORE",
+   "class": "A-SPECIFIED",
+   "element_id": null,
+   "evidence": {
+    "source_tasks": [
+     "T-392"
+    ],
+    "status": "VERIFIED"
+   },
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "patch": {
+    "value": 0.716937
+   },
+   "rule": "R-T392-1 / R-T392-2",
+   "rule_text": "a deduction is only the drawn-cell overlap: the ring-overlap GAP from an overlay-fitted band set restored, DOUBLE and GAP reported apart (a defect of the band-subtraction code, to be fixed there)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:667",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.756
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.180000 x 4.2 = 0.756; drawn 0.200000 x 4.2 = 0.84",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.84,
+    "low": 0.756,
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.756
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:673",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-c677b628a776d3b87b02",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.63,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.150000 x 4.2 = 0.63",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.63,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.63,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:676",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.125000 x 4.2 = 0.525",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.525,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:679",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-755eb56b55e86301b488",
+   "patch": {
+    "readings": {
+     "DRAWN": 1.05,
+     "SCHEDULE": 0.756
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.180000 x 4.2 = 0.756; drawn 0.250000 x 4.2 = 1.05",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 1.05,
+    "low": 0.756,
+    "readings": {
+     "DRAWN": 1.05,
+     "SCHEDULE": 0.756
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:685",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.504,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.120000 x 4.2 = 0.504",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.504,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.504,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:688",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-a87ea657a42a311cb851",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.735,
+     "SCHEDULE": 0.504
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.120000 x 4.2 = 0.504; drawn 0.175000 x 4.2 = 0.735",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.735,
+    "low": 0.504,
+    "readings": {
+     "DRAWN": 0.735,
+     "SCHEDULE": 0.504
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:68E",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-85809d3db52bb93dfe96",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.672
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.160000 x 4.2 = 0.672; drawn 0.200000 x 4.2 = 0.84",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.84,
+    "low": 0.672,
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.672
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:691",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.125000 x 4.2 = 0.525",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.525,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:694",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-831f6fe3de133294bb8f",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.63,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.150000 x 4.2 = 0.63",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.63,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.63,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:697",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-e112e2add2f8979a6c39",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.2 = 0.42; drawn 0.125000 x 4.2 = 0.525",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.525,
+    "low": 0.42,
+    "readings": {
+     "DRAWN": 0.525,
+     "SCHEDULE": 0.42
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.2,
+    "ledger_h": 4.2,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+     "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+    ],
+    "member": "FFRS:69A",
+    "storey": "1F"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.756
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.180000 x 4.2 = 0.756; drawn 0.200000 x 4.2 = 0.84",
+    "held_reason": "D-16 (column C8 section, designer list)",
+    "high": 0.84,
+    "low": 0.756,
+    "readings": {
+     "DRAWN": 0.84,
+     "SCHEDULE": 0.756
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.5,
+    "ledger_h": 4.5,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "member": "GFRS:344",
+    "storey": "GF"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.45,
+     "SCHEDULE": 0.5625
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.125000 x 4.5 = 0.5625; drawn 0.100000 x 4.5 = 0.45",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.5625,
+    "low": 0.45,
+    "readings": {
+     "DRAWN": 0.45,
+     "SCHEDULE": 0.5625
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.5,
+    "ledger_h": 4.5,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "member": "GFRS:347",
+    "storey": "GF"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.36,
+     "SCHEDULE": 0.45
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.5 = 0.45; drawn 0.080000 x 4.5 = 0.36",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.45,
+    "low": 0.36,
+    "readings": {
+     "DRAWN": 0.36,
+     "SCHEDULE": 0.45
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.5,
+    "ledger_h": 4.5,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "member": "GFRS:359",
+    "storey": "GF"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-9cb26d86575a92694880",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.36,
+     "SCHEDULE": 0.45
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.100000 x 4.5 = 0.45; drawn 0.080000 x 4.5 = 0.36",
+    "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+    "high": 0.45,
+    "low": 0.36,
+    "readings": {
+     "DRAWN": 0.36,
+     "SCHEDULE": 0.45
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "CONFLICT_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "facts_h": 4.5,
+    "ledger_h": 4.5,
+    "levels": [
+     "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+     "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+    ],
+    "member": "GFRS:380",
+    "storey": "GF"
+   },
+   "item_code": "STR.CONC.COLUMN",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "patch": {
+    "readings": {
+     "DRAWN": 0.9,
+     "SCHEDULE": 1.0125
+    },
+    "state": "HELD"
+   },
+   "rule": "R-COL-SECTION-CONFLICT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "schedule 0.225000 x 4.5 = 1.0125; drawn 0.200000 x 4.5 = 0.9",
+    "held_reason": "D-16 (column C8 section, designer list)",
+    "high": 1.0125,
+    "low": 0.9,
+    "readings": {
+     "DRAWN": 0.9,
+     "SCHEDULE": 1.0125
+    },
+    "state": "CONFLICT",
+    "value": null
+   },
+   "rule_text": "schedule vs drawn section -> CONFLICT range x storey height (declared levels)",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "MISSING_HELD",
+   "class": "A-SPECIFIED",
+   "element_id": "LIFT_PIT:WALLS",
+   "evidence": {
+    "source_tasks": [
+     "T-394"
+    ],
+    "status": "HELD"
+   },
+   "item_code": "STR.CONC.LIFT",
+   "line_id": null,
+   "patch": {
+    "beside": 1.1
+   },
+   "rule": "R-COMPLETENESS-DRAWN-ELEMENT-1",
+   "rule_text": "a drawn element with no line gets one HELD line with its plan figure beside (lift pit walls: depth 'as per manufacturer')",
+   "schema": "URBAN_V3033_INPUTS_V1",
+   "task": "T-397",
+   "version": "ARCH_TAKEOFF_V3.0.33"
+  },
+  {
+   "action": "NECK_SPLIT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "method": "engine/source/arch_v3040.py GB_RUN_SECTION",
+    "source_tasks": [
+     "T-426",
+     "T-416"
+    ],
+    "status": "VERIFIED"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-fe78ae283abfb6256358",
+   "patch": {
+    "candidate": {
+     "D": 0.6,
+     "L": 7.35,
+     "value": 1.323
+    },
+    "dispositions": {
+     "7DC+7DD#1": "HELD",
+     "7DC+7DD#2": "VALUED"
+    },
+    "runs": [
+     "7DC+7DD#1",
+     "7DC+7DD#2"
+    ]
+   },
+   "rule": "R-GB-NECK-CUT-1",
+   "rule_result": {
+    "band_conserved": true,
+    "facts_used": [],
+    "runs": [
+     {
+      "formula": "0.3 x 0.4 .. 0.6 x 3.525 .. 3.575",
+      "high": 0.6435,
+      "loaded": true,
+      "low": 0.423,
+      "ok": true,
+      "run": "7DC+7DD#1",
+      "state": "HELD",
+      "value": null
+     },
+     {
+      "candidate_minus_rule_m3": 0.2115,
+      "formula": "0.3 x 0.4 x 3.525 = 0.423000 m3 (unloaded run)",
+      "high": null,
+      "loaded": false,
+      "low": null,
+      "ok": true,
+      "run": "7DC+7DD#2",
+      "state": "VALUED",
+      "value": 0.423
+     }
+    ]
+   },
+   "rule_text": "a band crossed by a founded neck is split into runs; the unloaded run takes its printed section, a run under a concentrated load (D-33) is HELD with its range",
+   "schema": "URBAN_V3040_INPUTS_V1",
+   "task": "T-430",
+   "version": "ARCH_TAKEOFF_V3.0.40"
+  },
+  {
+   "action": "NECK_SPLIT",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "method": "engine/source/arch_v3040.py GB_RUN_SECTION",
+    "source_tasks": [
+     "T-426",
+     "T-416"
+    ],
+    "status": "VERIFIED"
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-0e30aadba2eebc6c3ede",
+   "patch": {
+    "candidate": {
+     "D": 0.6,
+     "L": 7.35,
+     "value": 1.323
+    },
+    "dispositions": {
+     "7E7+7E8#1": "VALUED",
+     "7E7+7E8#2": "HELD"
+    },
+    "runs": [
+     "7E7+7E8#1",
+     "7E7+7E8#2"
+    ]
+   },
+   "rule": "R-GB-NECK-CUT-1",
+   "rule_result": {
+    "band_conserved": true,
+    "facts_used": [],
+    "runs": [
+     {
+      "candidate_minus_rule_m3": 0.2115,
+      "formula": "0.3 x 0.4 x 3.525 = 0.423000 m3 (unloaded run)",
+      "high": null,
+      "loaded": false,
+      "low": null,
+      "ok": true,
+      "run": "7E7+7E8#1",
+      "state": "VALUED",
+      "value": 0.423
+     },
+     {
+      "formula": "0.3 x 0.4 .. 0.6 x 3.525 .. 3.525",
+      "high": 0.6345,
+      "loaded": true,
+      "low": 0.423,
+      "ok": true,
+      "run": "7E7+7E8#2",
+      "state": "HELD",
+      "value": null
+     }
+    ]
+   },
+   "rule_text": "a band crossed by a founded neck is split into runs; the unloaded run takes its printed section, a run under a concentrated load (D-33) is HELD with its range",
+   "schema": "URBAN_V3040_INPUTS_V1",
+   "task": "T-430",
+   "version": "ARCH_TAKEOFF_V3.0.40"
+  },
+  {
+   "action": "HOLD_RANGE",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "items": [
+     "D-33",
+     "T-141 GAP_TO_COLUMN reading"
+    ],
+    "source_tasks": [
+     "T-426"
+    ]
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-e24946df436cbc25fca6",
+   "patch": {
+    "candidate": {
+     "D": 0.6,
+     "L": 5.02,
+     "value": 0.9036
+    },
+    "range": {
+     "high": 0.9036,
+     "high_basis": "0.3 x 0.6 x 5.02 (band end reading, 'more than 5 m')",
+     "low": 0.5964,
+     "low_basis": "0.3 x 0.4 x 4.97 (column 1EC face reading, 'less than 5 m')"
+    }
+   },
+   "rule": "R-GB-NECK-CUT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "0.3 x 0.4 .. 0.6 x 4.97 .. 5.02",
+    "held_reason": "the printed section or the span is a range of readings: a picked end is not a value",
+    "high": 0.9036,
+    "low": 0.5964,
+    "state": "HELD",
+    "value": null
+   },
+   "rule_text": "a picked end of a printed range, or a run with no printed section, is HELD",
+   "schema": "URBAN_V3040_INPUTS_V1",
+   "task": "T-430",
+   "version": "ARCH_TAKEOFF_V3.0.40"
+  },
+  {
+   "action": "HOLD_BLANK",
+   "class": "A-REPRODUCED",
+   "evidence": {
+    "items": [
+     "D-35"
+    ],
+    "source_tasks": [
+     "T-426",
+     "T-416"
+    ]
+   },
+   "item_code": "STR.CONC.GROUND_BEAM",
+   "line_id": "L-be6708e07b40efa02779",
+   "patch": {
+    "candidate": {
+     "D": 0.3,
+     "L": 0.1,
+     "value": 0.009
+    },
+    "range": null
+   },
+   "rule": "R-GB-NECK-CUT-1",
+   "rule_result": {
+    "facts_used": [],
+    "formula": "no printed section for the run",
+    "held_reason": "section not printed: blank, never 0",
+    "high": null,
+    "low": null,
+    "state": "HELD",
+    "value": null
+   },
+   "rule_text": "a picked end of a printed range, or a run with no printed section, is HELD",
+   "schema": "URBAN_V3040_INPUTS_V1",
+   "task": "T-430",
+   "version": "ARCH_TAKEOFF_V3.0.40"
+  }
+ ],
+ "fact_usage": {
+  "GB.EXTERIOR.DEPTH_BASIS.ANNEX": [
+   "L-00465df980165c529476",
+   "L-3284f44000c02179ace7",
+   "L-402dbe61d1c924144a3c",
+   "L-4783c6e18002c3a8a37e",
+   "L-6bf14711798e5af93594",
+   "L-b4a13a43967ee4765662",
+   "L-d8b98b143e293d30833b",
+   "L-e16c98075f69532a3dc7"
+  ],
+  "GB.EXTERIOR.DEPTH_BASIS.MAIN": [
+   "L-1146bdecd41491ce9382",
+   "L-26fcfbbb143269e7bb58",
+   "L-27d104ca6fc3556d16e6",
+   "L-46f25f72b44e8bc3e2e0",
+   "L-62f712462a36d4ad1b32",
+   "L-7076482d75ca42691468",
+   "L-9e28c7012784a8dc33c8",
+   "L-bde0257c24588948167f",
+   "L-c9bb2eca50a2a2c8b569",
+   "L-cc6aaa99e1892f34b92f",
+   "L-d08e7a9d809a56733ff9",
+   "L-dac43ee18f55433b57e7",
+   "L-e8536bc4f2699a24e2ab",
+   "L-e9a885323ad6ec3ea32b",
+   "L-efbed17455bb224e126e",
+   "L-ff727b2a52e39509a659"
+  ],
+  "LEVEL.NATURAL_GROUND.OUTER": [
+   "L-00465df980165c529476",
+   "L-1146bdecd41491ce9382",
+   "L-26fcfbbb143269e7bb58",
+   "L-27d104ca6fc3556d16e6",
+   "L-3284f44000c02179ace7",
+   "L-402dbe61d1c924144a3c",
+   "L-46f25f72b44e8bc3e2e0",
+   "L-4783c6e18002c3a8a37e",
+   "L-62f712462a36d4ad1b32",
+   "L-6bf14711798e5af93594",
+   "L-7076482d75ca42691468",
+   "L-9e28c7012784a8dc33c8",
+   "L-b4a13a43967ee4765662",
+   "L-bde0257c24588948167f",
+   "L-c9bb2eca50a2a2c8b569",
+   "L-cc6aaa99e1892f34b92f",
+   "L-d08e7a9d809a56733ff9",
+   "L-d8b98b143e293d30833b",
+   "L-dac43ee18f55433b57e7",
+   "L-e16c98075f69532a3dc7",
+   "L-e8536bc4f2699a24e2ab",
+   "L-e9a885323ad6ec3ea32b",
+   "L-efbed17455bb224e126e",
+   "L-ff727b2a52e39509a659"
+  ],
+  "LEVEL.STRUCTURAL_TOP.1F.MAIN": [
+   "L-1dc713c83bf62e525ff2",
+   "L-291ba2ddf4bbe4f14cf7",
+   "L-31a0424bd0efcc93efba",
+   "L-43dae3d6dfec957b26a8",
+   "L-4aed92c117a7ab1c90ee",
+   "L-4c4496579e5bfa20ae9f",
+   "L-755eb56b55e86301b488",
+   "L-7d70692d03102a2dc306",
+   "L-831f6fe3de133294bb8f",
+   "L-84bf7fb482a98fdbe482",
+   "L-85809d3db52bb93dfe96",
+   "L-8de64040a1c3ae6cf137",
+   "L-8f8ad257d9b2cb9e027f",
+   "L-9cb26d86575a92694880",
+   "L-a87ea657a42a311cb851",
+   "L-c677b628a776d3b87b02",
+   "L-cc702b8541c15fdfd98c",
+   "L-e112e2add2f8979a6c39"
+  ],
+  "LEVEL.STRUCTURAL_TOP.2F.MAIN": [
+   "L-1dc713c83bf62e525ff2",
+   "L-291ba2ddf4bbe4f14cf7",
+   "L-31a0424bd0efcc93efba",
+   "L-4aed92c117a7ab1c90ee",
+   "L-755eb56b55e86301b488",
+   "L-831f6fe3de133294bb8f",
+   "L-85809d3db52bb93dfe96",
+   "L-8f8ad257d9b2cb9e027f",
+   "L-a87ea657a42a311cb851",
+   "L-c677b628a776d3b87b02",
+   "L-cc702b8541c15fdfd98c",
+   "L-e112e2add2f8979a6c39"
+  ],
+  "LEVEL.STRUCTURAL_TOP.GF.ANNEX": [
+   "L-00465df980165c529476",
+   "L-3284f44000c02179ace7",
+   "L-402dbe61d1c924144a3c",
+   "L-4783c6e18002c3a8a37e",
+   "L-6bf14711798e5af93594",
+   "L-7d70692d03102a2dc306",
+   "L-84bf7fb482a98fdbe482",
+   "L-b4a13a43967ee4765662",
+   "L-d8b98b143e293d30833b",
+   "L-e16c98075f69532a3dc7"
+  ],
+  "LEVEL.STRUCTURAL_TOP.GF.MAIN": [
+   "L-1146bdecd41491ce9382",
+   "L-26fcfbbb143269e7bb58",
+   "L-27d104ca6fc3556d16e6",
+   "L-43dae3d6dfec957b26a8",
+   "L-46f25f72b44e8bc3e2e0",
+   "L-4c4496579e5bfa20ae9f",
+   "L-62f712462a36d4ad1b32",
+   "L-7076482d75ca42691468",
+   "L-8de64040a1c3ae6cf137",
+   "L-9cb26d86575a92694880",
+   "L-9e28c7012784a8dc33c8",
+   "L-bde0257c24588948167f",
+   "L-c9bb2eca50a2a2c8b569",
+   "L-cc6aaa99e1892f34b92f",
+   "L-d08e7a9d809a56733ff9",
+   "L-dac43ee18f55433b57e7",
+   "L-e8536bc4f2699a24e2ab",
+   "L-e9a885323ad6ec3ea32b",
+   "L-efbed17455bb224e126e",
+   "L-ff727b2a52e39509a659"
+  ],
+  "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB": [
+   "STR.CONC.PARAPET"
+  ]
+ },
+ "held_by_undeclared_fact": {
+  "GB.EXTERIOR.DEPTH_BASIS.COURT": [
+   "L-21795b350fbd09150c43",
+   "L-62243c74c430d383be86",
+   "L-a55bfa01b726ef11650c"
+  ],
+  "LEVEL.GROUND.COURT": [
+   "L-21795b350fbd09150c43",
+   "L-62243c74c430d383be86",
+   "L-a55bfa01b726ef11650c"
+  ],
+  "LEVEL.STRUCTURAL_TOP.GF.COURT": [
+   "L-21795b350fbd09150c43",
+   "L-62243c74c430d383be86",
+   "L-a55bfa01b726ef11650c"
+  ],
+  "LEVEL.STRUCTURAL_TOP.ROOF.ANNEX": [
+   "L-694a75c84dd6e4bb4491",
+   "L-9f5a647014bbf83359f9",
+   "L-c0b3340a906c2c7650f8",
+   "L-e6c1c9a7feec10f64975",
+   "L-fad18af6e7139a5e99d1"
+  ],
+  "LEVEL.STRUCTURAL_TOP.ROOF.MAIN": [
+   "L-0ede77cfd0badc4c7d62",
+   "L-26f6b6f2365c72e42291",
+   "L-33a9b7728781fcba12e2",
+   "L-53f223b06db14ac41d47",
+   "L-694a75c84dd6e4bb4491",
+   "L-919a5749ef79759e01ca",
+   "L-9f5a647014bbf83359f9",
+   "L-bc01297b1c4a4c45a15f",
+   "L-c0b3340a906c2c7650f8",
+   "L-c10e2945d582b5a03126",
+   "L-d79d17d14f39d5148cb8",
+   "L-e6c1c9a7feec10f64975",
+   "L-fad18af6e7139a5e99d1"
+  ]
+ },
+ "out_of_scope": [
+  {
+   "item_code": "FIN.MARBLE.LANDING",
+   "line_id": "L-428b44ee2f5f1c1c118f",
+   "version": "ARCH_TAKEOFF_V3.0.18",
+   "why": "not a concrete line: its trade's round"
+  },
+  {
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-83b9e52902ffa5681c28",
+   "version": "ARCH_TAKEOFF_V3.0.18",
+   "why": "not a concrete line: its trade's round"
+  },
+  {
+   "version": "ARCH_TAKEOFF_V3.0.16",
+   "why": "project identity + revision set: class B identity, T-450 part 2"
+  },
+  {
+   "version": "ARCH_TAKEOFF_V3.0.30",
+   "why": "formwork faces beside the concrete members: a later round"
+  }
+ ],
+ "project_config": {
+  "config_version": "1.0.0",
+  "content_sha256": "99499f93c8e8f869487e43ae224d20cb72bbf125f3cd38afc4b3fa73a4622cfd",
+  "file": "research/agents_t449/DEVELOPMENT-VILLA-T131.concrete_facts.json",
+  "project_id": "DEVELOPMENT-VILLA-T131"
+ },
+ "round": "1 CONCRETE",
+ "rules_module": {
+  "file": "engine/source/concrete_basis_rules_v1.py",
+  "version": "CONCRETE_BASIS_RULES_V1"
+ },
+ "schema": "T449_CORRECTION_REGISTER_V1",
+ "valued_reproduced": {
+  "lines": 19,
+  "patch_m3": 17.807512,
+  "rule_m3": 17.807491
+ }
+}
