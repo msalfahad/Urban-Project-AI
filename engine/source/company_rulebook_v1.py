@@ -36,6 +36,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 REL = "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json"
 METHOD = "COMPANY_RULEBOOK_V1"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"   # T-212: rule calculators; no candidate or released path imports it
 VERSION = "1.0.0"
 BASIS = {1: "PROJECT DOCUMENT", 2: "OWNER PROJECT DECISION", 3: "OWNER CONFIRMED COMPANY RULE",
          4: "ENGINEERING ESTIMATE", 5: "ASSUMPTION-UNRESOLVED"}
