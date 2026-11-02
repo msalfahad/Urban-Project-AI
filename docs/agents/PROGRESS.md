@@ -1,10 +1,32 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 04:15 UTC (Lead). Previous version: 2026-11-02 00:20 UTC. The released numbers did not change
+Last update: 2026-11-02 08:35 UTC (Lead). Previous version: 2026-11-02 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The footing line is now checked footing by footing: 25 of 26 agree exactly (64.30 m3); the last one waits
-on the designer, so the line is partially verified, not verified. The candidate under review is still V3.0.40.
+released: 0. Footing line: 25 of 26 footings verified (64.30 m3), the last waits on the designer. The candidate of
+record is now V3.0.41 (not released).
+
+Since 2 Nov 04:15 (newest first; seven checked and merged, two sent back for a narrow fix, nothing waiting for the
+checker):
+- Project corrections for concrete turned into general rules: CHECKED AND MERGED. Of 83 per-project concrete
+  corrections, 66 are now reproduced by general rules plus declared project facts (19 valued lines agree to the 4th
+  decimal; the checker re-measured one beam band himself: 4.637 m3, 0.0 %), 17 have their rule named but not yet coded,
+  0 are project-only. Nothing is wired into the candidate yet; reinforcement is next.
+- Wet-room waterproofing method (new version): CHECKED AND MERGED on the second try. The first try billed the doorway
+  strip twice (+0.16 m2 on a 3 x 2 m test room, +8 %); now the doorway is billed once, as your rule says, and an unknown
+  detail stays held. Not yet used by the candidate; that comes with the waterproofing integration.
+- Reinforcement test that read the live board: FIXED, CHECKED AND MERGED. The ground-beam hold moves no straight bar
+  (checker read the drawing himself); 52.81 kg stays valued.
+- Eight-category score on every trade: CHECKED AND MERGED. Released vs candidate: whole lines verified 0 vs 1 of 102;
+  slab +0.77 %, doors +6.33 %, floor area -5.06 % against the freelancer.
+- Dining floor strip along the south facade with its ceiling INTO THE CANDIDATE (V3.0.41): CHECKED AND MERGED on the
+  first pass (+5.65 m2 dry floor, +3.90 m.l skirting, +4.89 m2 ceiling; checker re-measured by hand, 0.0 %). Dry floor
+  vs the freelancer: -12.35 % -> -10.68 %.
+- Sent back: a shallow-copy history helper said 'yes' when it could not know (must say 'unknown'); an import clean-up
+  shifted line numbers that older evidence files cite (must keep them in place). Both are small fixes, next for the
+  architectural worker.
+- Found: the released version still uses a PDF library with a restrictive (AGPL) licence when it reads PDF drawings.
+  Removing it from the released path needs your release decision (see the Lead report).
 
 Your 2 Nov directive is in force. Overnight the protection work landed: the released version is now locked by file
 hashes (the checker tried one-byte changes himself and each one was caught), drawing files can no longer slip into the

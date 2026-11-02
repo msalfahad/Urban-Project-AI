@@ -3,6 +3,17 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-02 08:35 (since 04:15)
+
+- T-431 dining strip + ceiling (Gate B): WORKED (first pass; V3.0.41 is the candidate of record). Decision: T-442 TODO, first in lane I, bound to V3.0.41.
+- T-469 eight-category re-score: WORKED (first pass; Checker's own counter agrees). Decision: its tool is the T-132 restatement source from now on.
+- T-473 t374 gate fix: WORKED (first pass). Decision: lessons row (live board read) ADOPTED.
+- T-458 wet-room WP policy V2: PARTIAL (r1 FAILED: doorway strip billed twice, +0.160 m2 / +8 % on the fixture; r2 WORKED). Decision: F-C-T458-2 (all-HELD item prints 0.0) and the wiring go into T-310; element register row 'Wet-room DOORWAY'.
+- T-449 round 1 concrete: WORKED for round 1 (row open). Decision: round 2 reinforcement TODO; T-450 part 2 after it (same config file).
+- T-465 import boundary: FAILED r1 (validated on an earlier head; 4 family-master citations broke). Decision: TODO r2 with the exact fault; released-path PyMuPDF clause BLOCKED-OWNER (release decision).
+- T-463 shallow-clone history: FAILED r1 (fallback answered True without proof). Decision: TODO r2, first in lane A (small).
+- Recurring cause (new, 2 of 3 rejections today): the hand-in's adverse test or full suite did not cover the final state (T-463 evidence present, T-465 earlier head). Decision: every hand-in runs its level's suites to the end on the FINAL head; two lessons rows proposed.
+
 ## Lead 2026-11-01 16:15 (since 12:20)
 
 - T-428 concrete roll-up r4: WORKED (first pass; Checker reproduced r3 -> r4 by family delta, O-T428-1 ruled). Decision: T-433 TODO on the r4 HELD -116.428339 m3; the 9 no-owner unexplained parts (-2.594514 m3) become T-436 (ground slab -1.560570) and T-437 (other -1.033946).

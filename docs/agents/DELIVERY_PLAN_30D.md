@@ -46,7 +46,23 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-11-02 04:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-11-02 08:35; re-estimated each run from what merged and was verified)
+
+- Gate 0 (protection): MERGED T-467, T-470, T-462, T-473, T-458 r2. Open: T-463 r2 and T-465 r2 (both rejected once
+  today, narrow rework), T-456 reproduction, then T-464 and T-466. At one worker 2 run per 2 h, T-463 r2 lands about
+  10:40 and T-465 r2 about 12:40 if each passes first time; Gate 0 closes about 3 Nov. The released-path PyMuPDF
+  import is an owner release decision and does not hold the rest of Gate 0.
+- Gate 1: MERGED T-450 part 1, T-469 (eight-category statement), T-449 round 1 (concrete, unwired). Next: T-449 round 2
+  (reinforcement), then T-450 part 2, T-452, T-471 (EIMP + completeness matrix, owner consolidated directive).
+  T-180 Checker stream: CONC.SLAB VERIFIED, CONC.FOOTING PARTIALLY VERIFIED 25 / 26.
+- Candidate of record V3.0.41 5176c7c4 (NOT RELEASED). Next integration: T-442 ground-slab panels (+4.389 m3 valued)
+  as V3.0.42, expected 2 Nov afternoon.
+- Week 2 target (3 Nov, measurable increase in verified coverage): whole verified lines still 1; NOT MET on whole lines
+  unless the Checker closes a second line by 3 Nov (verified components grew: 25 footings, dining strip re-measured).
+- Weeks 3-4 (19 Nov full-villa candidate for the principal trades): at risk on the consultant items (D-16, D-33, D-34,
+  D-35, D-43) and on Gate 0 / Gate 1 rework taking worker slots before architectural pieces.
+
+### Earlier status (Lead, 2026-11-02 04:15)
 
 - Owner 2 Nov gates govern the order (MISSION 'Owner decisions 2026-11-02'). Gate 0 (protection): T-467 hash lock,
   T-470 ignore rules and T-462 private-input skips MERGED overnight; open: T-458 (CLAIMED), T-473 (gate fix, new),
