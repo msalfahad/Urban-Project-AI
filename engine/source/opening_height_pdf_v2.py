@@ -16,8 +16,14 @@ TEST ORACLE only, never by the engine):
   rectangle and a closed run of four lines give the 4 sides (+ the closing repeat) as V1 does; a closepath adds its
   closing line; a Bezier ('c', 'v', 'y') gives 8 chords; a path filled and stroked with the same items is listed once.
   Form XObjects are followed with their /Matrix; q / Q / cm as the PDF says. Ids "pdf<n>.<i>" count path items as V1.
-- Words: one word per run of shown text in one font, size, colour and direction whose glyphs follow on from each
-  other (the next show starts where the previous one ended); text = the font's ToUnicode / encoding; box = union of the
+- Words: one word per span as PyMuPDF lists it (r4: MuPDF's text-device rules, measured and pinned in
+  test_pdf_reader_v2_r4_widths): a glyph continues the LINE when its direction agrees and it is less than 0.8 em off
+  the baseline and -0.8 < spacing < 0.8 em from the pen (end of the previous glyph); 0.15 .. 0.8 em forward adds a
+  synthesized space, above 0.3 em a LARGE one that is a span of its own (so V1 lists the two sides as two words); the
+  same character printed again within 0.1 em of the previous one is dropped (fake bold); a new SPAN starts on a font,
+  size, colour or superscript change; a line with no glyph extent is skipped and its empty LAST span dropped. Glyph
+  widths are read as MuPDF stores them: integers (r4, _pdf_int; /MissingWidth truncated); the word space Tw is its own
+  translation step. Text = the font's ToUnicode / encoding (Unicode spaces as U+0020); box = union of the
   glyph boxes from the advance width and the font's ascender / descender as MuPDF reads them (r3): a FontDescriptor
   governs, embedded program or not (Ascent <= 0 -> 0.8 / -0.2; otherwise Ascent / 1000 and -|Descent| / 1000);
   without a descriptor, MuPDF's built-in font by exact /BaseFont name (BUILTIN_NAMES), Times-Roman otherwise; flagged
@@ -26,7 +32,10 @@ TEST ORACLE only, never by the engine):
   outside the page is not read (V1 default). dir = the writing direction normalised in single precision, y UP.
 - state: VECTOR when it has words or segments, RASTER_ONLY when it has only images, EMPTY otherwise (V1's test).
 What it does NOT do (and says so in "reader"): optional-content visibility, Type3 glyph boxes, vertical writing mode,
-encrypted files it cannot open; such a page is read with the listed limitation or raises, never silently as empty.
+right-to-left text, encrypted files it cannot open; such a page is read with the listed limitation or raises, never
+silently as empty. NAMED DIFFERENCE (r4, flagged "GLYPH_ACROSS_PAGE_EDGE" in "reader"): a glyph whose box crosses the
+page edge is kept when any part of its advance x ascender..descender box is on the page, whereas MuPDF tests the
+glyph OUTLINE's bounds; only such glyphs (and the word they belong to) can differ from V1.
 
 Rules: those of V1 (UP-OPEN-SCHED-001, UP-DOOR-AREA-001, UP-DOOR-HGT-001, UP-QTY-STATUS-001, OWNER-Q32-A, OWNER-Q33-A,
 OWNER-Q17-A, L-P9-02). Project-agnostic: no layer, title, sheet or project name is coded.
@@ -79,6 +88,25 @@ FLT_EPSILON = 1.1920928955078125e-07
 def _f(x):
     """x rounded to IEEE single precision (an exact product / sum of two singles rounded once = the single result)."""
     return struct.unpack("f", struct.pack("f", float(x)))[0]
+
+
+def _pdf_int(v):
+    """a PDF number read as MuPDF's pdf_to_int reads it (r4, T-465 Checker 19:57): an integer as is; a real is held in
+    single precision and rounded as floorf(f + 0.5f) (x.5 up, -x.5 toward zero: 500.5 -> 501, -0.5 -> 0, -2.5 -> -2);
+    anything else 0. MuPDF stores every glyph width (/Widths, /W, /DW, /MissingWidth) and FirstChar / LastChar so."""
+    if hasattr(v, "get_object"):
+        v = v.get_object()
+    if isinstance(v, bool):
+        return 0
+    if isinstance(v, int):
+        return int(v)
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return 0
+    if x != x or x in (float("inf"), float("-inf")):
+        return 0
+    return int(math.floor(_f(_f(x) + 0.5)))
 
 
 def _concat(one, two):
@@ -275,25 +303,33 @@ class _Font:
         desc = None
         if self.cid:
             d = fd["/DescendantFonts"][0].get_object()
-            self.default_w = float(d.get("/DW", 1000))
+            self.default_w = float(_pdf_int(d["/DW"]) if "/DW" in d else 1000)       # r4: integer, as MuPDF
             w = list(d.get("/W", []))
             i = 0
             while i < len(w):
-                a = int(w[i])
+                a = _pdf_int(w[i])
                 b = w[i + 1]
                 if isinstance(b, (list, tuple)) or hasattr(b, "__iter__"):
                     for k, v in enumerate(b.get_object() if hasattr(b, "get_object") else b):
-                        self.widths[a + k] = float(v)
+                        self.widths[a + k] = float(_pdf_int(v))
                     i += 2
                 else:
-                    for k in range(a, int(b) + 1):
-                        self.widths[k] = float(w[i + 2])
+                    for k in range(a, _pdf_int(b) + 1):
+                        self.widths[k] = float(_pdf_int(w[i + 2]))
                     i += 3
             desc = d.get("/FontDescriptor")
         else:
-            first = int(fd.get("/FirstChar", 0))
-            for k, v in enumerate(fd.get("/Widths", []) or []):
-                self.widths[first + k] = float(v)
+            wl = fd.get("/Widths")
+            if wl is not None:
+                # r4: MuPDF's simple-font table: FirstChar / LastChar and every width read as integers (_pdf_int);
+                # codes FirstChar .. LastChar only (a missing entry = 0); FirstChar < 0, LastChar > 255 or
+                # FirstChar > LastChar -> FirstChar = LastChar = 0; every other code takes the MissingWidth
+                wl = list(wl.get_object() if hasattr(wl, "get_object") else wl)
+                first, last = _pdf_int(fd.get("/FirstChar", 0)), _pdf_int(fd.get("/LastChar", 0))
+                if first < 0 or last > 255 or first > last:
+                    first = last = 0
+                for k in range(last - first + 1):
+                    self.widths[first + k] = float(_pdf_int(wl[k]) if k < len(wl) else 0)
             desc = fd.get("/FontDescriptor")
             base = BASE14_ALIAS.get(self.name, self.name.split("+")[-1])
             if not self.widths and base in BASE14_ASC_DSC:
@@ -306,7 +342,13 @@ class _Font:
                 self.default_w = float(cw.get("default", 0))
         desc = desc.get_object() if desc is not None else None
         if desc is not None and "/MissingWidth" in desc and not self.cid:
-            self.default_w = float(desc["/MissingWidth"])
+            mw = desc["/MissingWidth"]                                  # r4: MuPDF reads it as a real held in an
+            mw = mw.get_object() if hasattr(mw, "get_object") else mw   # int field: truncated toward zero
+            try:                                                        # (433.7 -> 433, -433.7 -> -433)
+                mw = float(mw)
+                self.default_w = float(int(_f(mw))) if math.isfinite(mw) else 0.0
+            except (TypeError, ValueError):
+                self.default_w = 0.0
         # r3: MuPDF's font ascender / descender (measured against PyMuPDF 1.28.2, tests/t465_pdf_reader_v2):
         # - a FontDescriptor, embedded program or not, governs: Ascent <= 0 -> (0.8, -0.2); otherwise
         #   (Ascent / 1000, -|Descent| / 1000): a POSITIVE Descent is read as below the baseline. The program's own
@@ -368,17 +410,14 @@ def page_primitives(path, page_no=1):
     page = reader.pages[page_no - 1]
     ctm0, W, H, (UW, UH) = _page_ctm(page)
     out = {"segs": [], "n": 0, "words": [], "run": None, "metrics": set(), "limits": set(), "img": False,
-           "drawn": []}
+           "drawn": [], "runs": [],
+           "dev": {"line": None, "pen": None, "lag": None, "lastchar": None}}
 
     def flush():
         r = out["run"]
-        if r is not None:
-            t = r["text"].strip()
-            if t and r["box"] is not None:
-                x0, y0, x1, y1 = r["box"]
-                out["words"].append({"value": t, "x0": x0, "y0": H - y1, "x1": x1, "y1": H - y0,
-                                     "dir": (round(r["fdir"][0], 6), round(-r["fdir"][1], 6))})
-            out["run"] = None
+        if r is not None and r["box"] is not None:
+            out["runs"].append(r)
+        out["run"] = None
 
     def draw(p, ctm, fill_only, kind):
         items = p.items(ctm, fill_only)
@@ -407,45 +446,69 @@ def page_primitives(path, page_no=1):
             pts = [(_f(ox + dx), _f(oy + dy)), (_f(ox + ax), _f(oy + ay)), (_f(qx + dx), _f(qy + dy)),
                    (_f(qx + ax), _f(qy + ay))]
             box = (min(p[0] for p in pts), min(p[1] for p in pts), max(p[0] for p in pts), max(p[1] for p in pts))
-            L = math.hypot(trm[0], trm[1])
-            d = (trm[0] / L, trm[1] / L) if L else (1.0, 0.0)
             visible = box[2] >= 0 and box[0] <= UW and box[3] >= 0 and box[1] <= UH
+            if visible and (box[0] < 0 or box[2] > UW or box[1] < 0 or box[3] > UH):
+                # NAMED DIFFERENCE (r4): MuPDF drops a glyph only when its OUTLINE bounds lie wholly outside the page;
+                # this reader tests the advance x ascender..descender box, so a glyph across the page edge may be
+                # kept here and dropped by V1 (or the reverse). Flagged on the page record; no other glyph is affected.
+                out["limits"].add("GLYPH_ACROSS_PAGE_EDGE")
             fdir = _normalize(trm[0], trm[1])
             ch = font.text(code)
             size_e = math.sqrt(abs(trm[0] * trm[3] - trm[1] * trm[2])) or 1e-9
             key = (id(font), round(size_e, 4), st["fill"])
             r = out["run"]
-            if visible:
-                join, space = False, False
-                if r is not None and abs(d[0] * r["dir"][0] + d[1] * r["dir"][1]) > 0.999 and r["key"] == key:
-                    dx_, dy_ = ox - r["pen"][0], oy - r["pen"][1]
-                    along = (d[0] * dx_ + d[1] * dy_) / size_e
-                    across = (-d[1] * dx_ + d[0] * dy_) / size_e
+            dev = out["dev"]
+            if visible and len(ch) == 1 and ord(ch) in _WHITESPACE:
+                ch = " "                                            # MuPDF maps the Unicode spaces to U+0020
+            if visible and not _fake_bold(dev, ch, ox, oy, fdir, _expansion(trm) or 1e-9):
+                # r4: MuPDF's text device (1.28.2), left-to-right writing, measured from the pen = the end of the
+                # previous glyph: the same line when the direction agrees (dot >= 0.999) and the glyph is less
+                # than 0.8 em off the baseline and -0.8 < spacing < 0.8 em; a synthesized space when the spacing is
+                # 0.15 .. 0.8 em after a character that may take one; that space is LARGE above 0.3 em.
+                ln, sz = dev["line"], (_expansion(trm) or 1e-9)
+                new_line, add_space = True, 0
+                if ln is not None and fdir[0] * ln["fdir"][0] + fdir[1] * ln["fdir"][1] >= 0.999:
+                    dx_, dy_ = ox - dev["pen"][0], oy - dev["pen"][1]
+                    along = (fdir[0] * dx_ + fdir[1] * dy_) / sz
+                    across = (-fdir[1] * dx_ + fdir[0] * dy_) / sz
                     if abs(across) < 0.8:
-                        if abs(along) < 0.15:
-                            join = True
+                        if abs(along) < 0.15 or -0.8 < along < 0:
+                            new_line = False
                         elif 0 < along < 0.8:
-                            join = space = True
-                if not join:
+                            new_line = False
+                            if _may_add_space(dev["lastchar"]):
+                                add_space = 2 if along > 0.3 else 1
+                if new_line:
+                    ln = dev["line"] = {"id": (ln["id"] + 1) if ln else 1, "fdir": fdir, "oy": oy}
+                # PyMuPDF's span: a new one when font / size / colour, its superscript flag (a line whose direction
+                # is exactly (1, 0): origin more than 0.1 x size above the line's first glyph) or MuPDF's
+                # SYNTHETIC_LARGE flag change; a large synthesized space is a span of its own (V1 strips it)
+                sup = ln["fdir"] == (1.0, 0.0) and oy < _f(ln["oy"] - _f(sz * _f(0.1)))
+                synth = add_space and ch != " "
+                if (new_line or r is None or r["line"] != ln["id"] or r["key"] != key or r["sup"] != sup
+                        or (synth and add_space == 2)):
                     flush()
-                    r = out["run"] = {"key": key, "text": "", "box": None, "dir": d, "pen": (ox, oy), "fdir": fdir}
-                elif space and not r["text"].endswith(" ") and ch != " ":
+                    r = out["run"] = {"key": key, "text": "", "box": None, "raw": None, "fdir": fdir,
+                                      "line": ln["id"], "sup": sup}
+                elif synth:
                     r["text"] += " "
+                rawbox = box
                 # r3: the glyph box the V1 reader reports (PyMuPDF's quad correction of a font whose
                 # ascender - descender is below 1 em: the box height becomes the font size)
-                fixed = _quad_correction(font, pts, (ox, oy), _expansion(trm), r["fdir"], out["limits"])
+                fixed = _quad_correction(font, pts, (ox, oy), sz, r["fdir"], out["limits"])
                 if fixed is not None:
                     box = fixed
                 r["text"] += ch
-                b = r["box"]
-                r["box"] = box if b is None else (min(b[0], box[0]), min(b[1], box[1]), max(b[2], box[2]),
-                                                  max(b[3], box[3]))
-            # pen advance in text space: w0 x size + Tc (+ Tw for a single-byte code 32), x Th
-            sp = ts["tc"] + (ts["tw"] if (not font.cid and code == 32) else 0.0)
-            tx = _f(_f(_f(adv * size) + _f(sp)) * th)
-            ts["tm"] = _concat((1.0, 0.0, 0.0, 1.0, _f(tx), 0.0), ts["tm"])
-            if r is not None and visible:
-                r["pen"] = (qx, qy)
+                r["box"] = _union(r["box"], box)
+                if not _empty(rawbox):
+                    r["raw"] = _union(r["raw"], rawbox)
+                dev["lastchar"], dev["lag"], dev["pen"] = ch, (ox, oy), (qx, qy)
+            # pen advance in text space: (w0 x size + Tc) x Th; then, for a single-byte code 32, a SEPARATE
+            # translation by Tw x Th (r4: MuPDF applies the word space as its own step, rounded on its own)
+            tx = _f(_f(_f(adv * size) + ts["tc"]) * th)
+            ts["tm"] = _concat((1.0, 0.0, 0.0, 1.0, tx, 0.0), ts["tm"])
+            if not font.cid and code == 32:
+                ts["tm"] = _concat((1.0, 0.0, 0.0, 1.0, _f(ts["tw"] * th), 0.0), ts["tm"])
             out["metrics"].add(font.metrics)
 
     def run(content, resources, ctm, depth=0, tstate=None):
@@ -582,13 +645,61 @@ def page_primitives(path, page_no=1):
             for i, (a, b) in enumerate(zip(pts, pts[1:])):
                 if a != b:
                     out["segs"].append((a[0], H - a[1], b[0], H - b[1], f"pdf{n}.{i}"))
-    words, segs = out["words"], out["segs"]
+    # r4: words from the spans as PyMuPDF lists them: a LINE none of whose glyphs has a non-empty box is skipped; in a
+    # kept line the LAST span is dropped when its box is empty (zero advance), earlier spans stay (PyMuPDF 1.28.2
+    # JM_make_text_block / JM_make_spanlist); V1 then keeps each span whose stripped text is not empty
+    words, i, runs = [], 0, out["runs"]
+    while i < len(runs):
+        j = i
+        while j < len(runs) and runs[j]["line"] == runs[i]["line"]:
+            j += 1
+        line = runs[i:j]
+        if any(r["raw"] is not None for r in line):
+            for k, r in enumerate(line):
+                t = r["text"].strip()
+                if not t or (k == len(line) - 1 and _empty(r["box"])):
+                    continue
+                x0, y0, x1, y1 = r["box"]
+                words.append({"value": t, "x0": x0, "y0": H - y1, "x1": x1, "y1": H - y0,
+                              "dir": (round(r["fdir"][0], 6), round(-r["fdir"][1], 6))})
+        i = j
+    segs = out["segs"]
     has_img = bool(out["img"])
     state = "VECTOR" if (words or segs) else ("RASTER_ONLY" if has_img else "EMPTY")
     return {"page": page_no, "width_pt": W, "height_pt": H, "state": state, "words": words, "segments": segs,
             "has_image": has_img,
             "reader": {"policy": POLICY_ID, "library": "pypdf", "font_metrics": sorted(out["metrics"]),
                        "limits": sorted(out["limits"] | {"OPTIONAL_CONTENT_NOT_EVALUATED"})}}
+
+
+_WHITESPACE = {0x09, 0x20, 0xA0, 0x1680, 0x180E, *range(0x2000, 0x200B), 0x202F, 0x205F, 0x3000}
+
+
+def _may_add_space(last):
+    """MuPDF: a synthesized space only after a character that is not a space, in Basic Latin .. Hebrew / Arabic
+    (below U+0700) or in General Punctuation .. Currency Symbols (U+2000 .. U+20CF)."""
+    if not last or last == " ":
+        return False
+    c = ord(last[-1])
+    return c < 0x700 or 0x2000 <= c <= 0x20CF
+
+
+def _fake_bold(dev, ch, ox, oy, fdir, size):
+    """MuPDF drops a glyph printed again on the previous one (fake bold): same character, the current line in the same
+    direction, origin less than 0.1 em from the previous glyph's origin. The dropped glyph leaves the device state."""
+    ln, lag = dev["line"], dev["lag"]
+    if ln is None or lag is None or ch != dev["lastchar"] or fdir[0] * ln["fdir"][0] + fdir[1] * ln["fdir"][1] < 0.999:
+        return False
+    return _f(math.hypot(_f(ox - lag[0]), _f(oy - lag[1]))) / size < 0.1
+
+
+def _empty(b):
+    """MuPDF fz_is_empty_rect."""
+    return b[0] >= b[2] or b[1] >= b[3]
+
+
+def _union(a, b):
+    return b if a is None else (min(a[0], b[0]), min(a[1], b[1]), max(a[2], b[2]), max(a[3], b[3]))
 
 
 def _normalize(x, y):
@@ -678,4 +789,8 @@ def policy_record():
                      "fill + stroke, TJ kerning, scan); r3 test_pdf_reader_v2_r3_metrics: simple TrueType embedded "
                      "(descriptor differs from hhea / OS/2) and non-embedded (ArialMT), positive Descent, Ascent <= 0, "
                      "below-1-em quad correction, built-in names, any angle / mirror; and the real drawing set "
-                     "(36 of 36 words, 660,238 segments equal to V1)"}
+                     "(36 of 36 words, 660,238 segments equal to V1); r4 test_pdf_reader_v2_r4_widths: fractional / "
+                     "half / zero / negative glyph widths (simple /Widths, FirstChar / LastChar / MissingWidth; "
+                     "composite /W + /DW), zero-advance lines and spans, pen motion back and forward, fake bold, "
+                     "superscript and large-space span splits, a seeded corpus; named difference "
+                     "GLYPH_ACROSS_PAGE_EDGE"}
