@@ -1,0 +1,29 @@
+STAIR,FLIGHT,SIDE,KIND,FAMILY,STATUS,LENGTH_LM,PLAN_M,RISE_M,RUN,SOURCE,MISSING
+ST-01,MS1-L,inner (well),INCLINED,B7-09,DRAWING-CONFIRMED,3.088690,2.700000,1.500003,RL-07,well band (T-164 / T-393 handles) + section A-A rail; riser counts T-184,
+ST-01,MS1-L,outer (shaft wall),INCLINED,,NOT_APPLICABLE,,2.700000,1.500003,,no layer-5 band along the shaft walls on GF / 1F / 2F (scan of the shaft boxes),
+ST-01,MS1-U,inner (well),INCLINED,B7-09,DRAWING-CONFIRMED,3.775066,3.300000,1.833337,RL-07,well band (T-164 / T-393 handles) + section A-A rail; riser counts T-184,
+ST-01,MS1-U,outer (shaft wall),INCLINED,,NOT_APPLICABLE,,3.300000,1.833337,,no layer-5 band along the shaft walls on GF / 1F / 2F (scan of the shaft boxes),
+ST-01,MS2-L,inner (well),INCLINED,B7-09,DRAWING-CONFIRMED,3.782209,3.300000,1.848000,RL-07,well band (T-164 / T-393 handles) + section A-A rail; riser counts T-184,
+ST-01,MS2-L,outer (shaft wall),INCLINED,,NOT_APPLICABLE,,3.300000,1.848000,,no layer-5 band along the shaft walls on GF / 1F / 2F (scan of the shaft boxes),
+ST-01,MS2-U,inner (well),INCLINED,B7-09,DRAWING-CONFIRMED,3.782209,3.300000,1.848000,RL-07,well band (T-164 / T-393 handles) + section A-A rail; riser counts T-184,
+ST-01,MS2-U,outer (shaft wall),INCLINED,,NOT_APPLICABLE,,3.300000,1.848000,,no layer-5 band along the shaft walls on GF / 1F / 2F (scan of the shaft boxes),
+ST-01,T-1F-S,well-end turn,HORIZONTAL,B7-09,DRAWING-CONFIRMED,0.200000,0.200000,0.000000,RL-07,AC3 / AC4 (T-393 R-T393-1),
+ST-01,T-MS1-N,well-end turn (5 winders),TURN,B7-09,HELD,,0.200000,0.833335,RL-07,T-393,rail profile over the 5 winders at the 0.10 m well not drawn
+ST-01,T-MS2-LD,well-end turn (half landing),TURN,B7-09,HELD,,0.200000,0.168000,RL-07,T-393,closing riser MS2-TR position against the turn not drawn
+ST-01,G-2F,2F floor edge over MS2-L,HORIZONTAL,B7-09,DRAWING-CONFIRMED,1.325000,1.325000,0.000000,RL-07,"138A / 138B, one band with 1358 (R-T476-3)",
+ST-01b,D1,well side,INCLINED,B7-09,DRAWING-CONFIRMED,1.041933,0.900000,0.525000,RL-08,section A-A one rail; T-184 D1,
+ST-01b,D1,lift-shaft wall,INCLINED,,NOT_APPLICABLE,,0.900000,0.525000,,wall side; no wall rail drawn,
+ST-02,RS-C,inner (void),INCLINED,B7-09,DRAWING-CONFIRMED,3.228281,2.587274,1.928568,RL-05,"band B9C / BA2 r 1.5555; 12 riser lines BB9..BA3, per going",
+ST-02,RS-C,outer (corner),INCLINED,B7-09,UNKNOWN,,4.245022,1.928568,RL-09,band BA0 / BA1 r 2.7305 / 2.7805 (layer 5),"guard or string: what closes the corner between the outer band and the two walls (open to the floor below or filled) is not drawn; band end 259.1 deg (BA1, 1F) vs 270.4 deg (GF copy 23E)"
+ST-02,RS-S,north (void),INCLINED,B7-09,DRAWING-CONFIRMED,3.403366,3.000000,1.607140,RL-05,band B76; 11 riser lines B43..B4D,
+ST-02,RS-S,south (outer wall),INCLINED,,NOT_APPLICABLE,,3.000000,1.607140,,outer wall; no wall rail drawn,
+ST-02,RS-A,west (void),INCLINED,B7-09,DRAWING-CONFIRMED,1.361346,1.200000,0.642856,RL-05,band B75; 5 riser lines B59..D22,
+ST-02,RS-A,east (living floor edge D-23),HORIZONTAL,B13-08,DRAWING-CONFIRMED,2.400000,2.400000,0.000000,RL-06,"AF5 / AF6 separate band at the +5.50 floor edge (horizontal, not on the slope)",
+ST-02,volute,level,HORIZONTAL,B7-09,DRAWING-CONFIRMED,0.810720,0.810720,0.000000,RL-05,T-164 (one continuous band with the flights),
+ST-02,corner landing RS-LD,level,HORIZONTAL,B7-09,DRAWING-CONFIRMED,0.050000,0.050000,0.000000,RL-05,T-164 (one continuous band with the flights),
+ST-02,1F void edge beside RS-A,level,HORIZONTAL,B7-09,DRAWING-CONFIRMED,1.625000,1.625000,0.000000,RL-05,T-164 (one continuous band with the flights),
+ST-02,1F gallery void edge,level,HORIZONTAL,B7-09,DRAWING-CONFIRMED,5.845000,5.845000,0.000000,RL-05,T-164 (one continuous band with the flights),
+ST-03,E1,side 1,INCLINED,B7-09,HELD,,1.200000,0.680000,RL-11,GF plan: no rail drawn,open edge (0.85 m rise) with no guard drawn: designer item (RL-11)
+ST-03,E1,side 2,INCLINED,B7-09,HELD,,1.200000,0.680000,RL-11,GF plan: no rail drawn,open edge (0.85 m rise) with no guard drawn: designer item (RL-11)
+ST-01b,GF east-lane band beyond D1,well side,HORIZONTAL,B7-09,UNKNOWN,,1.875000,,none,47F / 4A4 solid layer-5 band 2.750 / 2.800 m vs D1 run 0.900 m (finding F-T476-1),"whether D1's rail continues along the east lane beside the well south of D1, at what level, or the band is a drafting edge (no level change printed across it)"
+ST-01,MS1-T,outer (shaft wall corner),TURN,,NOT_APPLICABLE,,,,,winder corner against the shaft walls; no wall rail drawn,

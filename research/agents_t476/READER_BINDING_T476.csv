@@ -1,0 +1,15 @@
+LINE_ID,FLOOR,READER_FLIGHT,PHYSICAL_FLIGHT,READING,ACTION,HOMES,SIDE_CHECK,NOTE
+L-7248a8eb8255e2b1002d,GF,F1,ST02-RS-C,PRIMARY,RETIRE,RL-05 RS-C inner | RL-09 RS-C outer (UNKNOWN),AGREE,"radial 12 treads, r 1.589 / 2.739 = the RS-C band radii; also drawn on layer 5"
+L-da416ad0fac1f96f1f4a,GF,F2,ST02-RS-S,PARTIAL_PRIMARY,RETIRE,RL-05 RS-S north,AGREE,6 of the 10 RS-S goings (1.80 m) on the GF plan; the other 3 are F3 beside it (0.25 m apart)
+L-4e2dd6e9d0aadaed1e71,GF,F3,ST02-RS-S,SPLIT_PART,RETIRE,RL-05 RS-S north,AGREE,"3 more RS-S goings, same line of risers as F2: one physical flight split in two readings"
+L-6c67a5111c6ac79a5ad3,GF,F4,ST02-RS-A,SEEN_THROUGH_VOID,RETIRE,RL-05 RS-A west | RL-06 D-23 east (B13-08),AGREE,"3 of the 4 RS-A goings, layer 2 (overhead) on the GF plan; 1F F6 is its primary"
+L-5a12ecf5ba4cd2c0c596,GF,F1,ST01-MS1-L,PARTIAL_PRIMARY,RETIRE,RL-07 MS1-L,AGREE,"7 of the 9 MS1-L goings (2.10 vs 2.70 m), layer 2 part; a figure here would undercount"
+L-820a4035813bddf434a2,GF,F2,ST01b-D1,PRIMARY,RETIRE,RL-08 D1,AGREE,"3 goings 0.90 m, 4 solid riser lines in the east lane = D1 (T-184)"
+L-6a0af8d265d64b2a29b4,1F,F1,ST02-RS-C,SEEN_THROUGH_VOID,RETIRE,RL-05 RS-C inner | RL-09 RS-C outer (UNKNOWN),AGREE,the reader itself marks it SEEN_THROUGH_VOID of GF F1
+L-ff7765e42da7f24a85b4,1F,F2,ST01-MS2-L,PRIMARY,RETIRE,RL-07 MS2-L,AGREE,"west lane, 12 lines 3.30 m = MS2-L (DXF dimension 3300)"
+L-ffe82ff407834e14c9d6,1F,F3,ST01-MS1-U,PRIMARY,RETIRE,RL-07 MS1-U,AGREE,"east lane, 11 lines 3.00 m = MS1-U arriving at +5.50 (12 risers on A-A)"
+L-f2b90e48ddb8006d6bd6,1F,F4,ST02-RS-S,SEEN_THROUGH_VOID,RETIRE,RL-05 RS-S north,AGREE,the reader itself marks it SEEN_THROUGH_VOID of GF F2
+L-1b41f6db9634081084e0,1F,F5,ST01-MS1-T,PRIMARY,RETIRE,RL-07 T-MS1-N (HELD),AGREE,"radial, inner r 0.099 = the 0.10 m well: the GF -> 1F winder corner"
+L-6c636d1ceccb1eaab7bd,1F,F6,ST02-RS-A,PRIMARY,RETIRE,RL-05 RS-A west | RL-06 D-23 east (B13-08),AGREE,"5 lines 1.20 m = RS-A (B59..D22); the reader's east OPEN side is the D-23 floor edge: a horizontal B13-08 guard, not a rail on the slope"
+L-01db55b3b76ea3a736ea,2F,F1,ST01-MS2-L,SEEN_THROUGH_OPENING,RETIRE,RL-07 MS2-L,AGREE,west lane on 2F = MS2-L seen through the 2F opening (T-111: no flight leaves +9.70); the reader did NOT flag it as seen from below
+L-67f25abf5bb9d13eb39b,2F,F2,ST01-MS2-U,PRIMARY,RETIRE,RL-07 MS2-U,AGREE,"east lane, 11 lines 3.00 m = MS2-U arriving at +9.70"
