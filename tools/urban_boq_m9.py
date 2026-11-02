@@ -3157,13 +3157,6 @@ CANDIDATE_EXTENSIONS_V3039 = (V3039,)  # its own tuple: the V3.0 .. V3.0.38 meth
 # other V3.0.39 line byte-identical, in V3_0_40_* files. Opt-in, not the released default; rollback = run V2.9.
 V3040 = "ARCH_TAKEOFF_V3.0.40"
 CANDIDATE_EXTENSIONS_V3040 = (V3040,)  # its own tuple: the V3.0 .. V3.0.39 method lists stay as they were
-# T-431: ARCH_TAKEOFF_V3.0.41 = the SAME candidate (engine.source.arch_v3041): a V3.0.40 run (its V3_0_* .. V3_0_40_*
-# files unchanged) + the Checker-merged T-427 zone extent (a piece cut off by a zone edge prolonged past its own drawn
-# end becomes room floor: one floor line, the zone lines give the parts up by id, its bed pair, its skirting on the room's
-# line, its ceiling in the room's class with the bulkhead and the unread part HELD) (URBAN_V3041_INPUTS_V1); every other
-# V3.0.40 line byte-identical, in V3_0_41_* files. Opt-in, not the released default; rollback = run V2.9.
-V3041 = "ARCH_TAKEOFF_V3.0.41"
-CANDIDATE_EXTENSIONS_V3041 = (V3041,)  # its own tuple: the V3.0 .. V3.0.40 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -3198,6 +3191,11 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
+    # T-431: ARCH_TAKEOFF_V3.0.41 = the SAME candidate (engine.source.arch_v3041): a V3.0.40 run (its V3_0_* .. V3_0_40_*
+    # files unchanged) + the Checker-merged T-427 zone extent (URBAN_V3041_INPUTS_V1); every other V3.0.40 line
+    # byte-identical, in V3_0_41_* files. Opt-in, not the released default; rollback = run V2.9. Named here, not at module
+    # level: the released-path freeze index V2 (T-467) hashes this file's top-level statements; cmd_arch / main are hubs.
+    V3041 = "ARCH_TAKEOFF_V3.0.41"
     v3041 = a.method == V3041                 # T-431: the V3.0.40 run, then its V3.0.41 zone-extent floor piece
     v3040 = a.method in (V3040, V3041)                 # T-430: the V3.0.39 run, then its V3.0.40 ground-beam run sections
     v3039 = a.method in (V3039, V3040, V3041)                 # T-429: the V3.0.38 run, then its V3.0.39 tread / step binding
@@ -4275,7 +4273,7 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V3034 + CANDIDATE_EXTENSIONS_V3035 +
                    CANDIDATE_EXTENSIONS_V3036 + CANDIDATE_EXTENSIONS_V3037 + CANDIDATE_EXTENSIONS_V3038 +
                    CANDIDATE_EXTENSIONS_V3039 + CANDIDATE_EXTENSIONS_V3040 +
-                   CANDIDATE_EXTENSIONS_V3041,
+                   ("ARCH_TAKEOFF_V3.0.41",),   # T-431 (the V3.0.41 candidate; named in the hub, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
