@@ -825,3 +825,72 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-01 03:19 | Worker 1 | SUCCESS | STARTED 03:19, final 04:07; T-408 READY (head f5e4022a) / GF lift tie beam: 5.500 m DRAWING-CONFIRMED on the GF columns (3 sheets, unchang |
 | 11-01 04:11 | Verifier | SUCCESS | final 04:11 (single line); T-411 Gate A PASS MERGED 49026f81; T-400 GATE B PASS MERGED 0c5d526c / Drive read OK. CANDIDATE OF RECORD NOW  |
 | 11-01 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:18; board / Since 00:23: T-407, T-411 WORKED (Gate A first pass; gate 1 closed, L4 NEW 0), T-410 WORKED r2, T-400  |
+
+## 2026-11-01 04:31 -> 2026-11-02 04:31 UTC (66 runs: 64 SUCCESS, 2 still running at the window end, 0 BLOCKED / FAILED / INCOMPLETE)
+
+| 11-01 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 05:28; T-418 READY (agents/task-T-418 @ e5116bbc) / Stair-room floors: V3.0.35 (own run, b011bace) has no floor-finis |
+| 11-01 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:42; T-408 Gate A PASS MERGED e3d9a092; T-406 r3 Gate A NARROW PASS MERGED 35c9212e; T-414 Gate A PASS MERGED 4f81e |
+| 11-01 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 06:00; T-246 READY (integration package, Gate B) / ARCH_TAKEOFF_V3.0.36 (json d462203f on reproduced V3.0.35 b011bace |
+| 11-01 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 06:22; T-415 READY (agents/task-T-415 @ 95c25cbe) / ST-02 curved flight RS-C on the structural lane 1.250: 12 drawn t |
+| 11-01 05:51 | Verifier | SUCCESS | STARTED 05:51, final 05:55; T-415 Gate A PASS MERGED 8c8372a4 / Drive read OK (ST7757 dxf.dxf 9f9d1179); research only, NO QUANTITY CHANGE |
+| 11-01 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 07:34; T-412 READY (agents/task-T-412 @ fcb6f01a) / B7-05 nosing: 89 risers = 89 nosings (ST-01 56, ST-02 28, ST-03 5 |
+| 11-01 06:50 | Verifier | SUCCESS | STARTED 06:50, final 07:45; T-246 GATE B PASS MERGED 61b78fe8; T-412 Gate A PASS MERGED f9c80501 / Drive read OK (P7757.dxf ab54dd55, ST77 |
+| 11-01 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:49; T-413 READY (lift-entrance marble B6-06 / B6-07, cross-lane: lane I had no claimable row; branch agents/task-T |
+| 11-01 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:47; T-416 READY b0fe163d / GB-MAIN length -3.008 m3 split on 44 drawn bands (all 58 GB lines bound): engine 194.28 |
+| 11-01 07:50 | Verifier | SUCCESS | STARTED 07:50, final 07:58; T-416 Gate A PASS MERGED b7bb914a; T-413 Gate A PASS MERGED ae87deb1 / Drive read OK (ST7757 dxf 9f9d1179, P77 |
+| 11-01 08:12 | Lead | SUCCESS | STARTED 08:12, final 08:19; board / Since 04:18: 9 WORKED, all first pass (T-408, T-406 r3, T-414, T-418, T-415, T-412, T-416, T-413; T-24 |
+| 11-01 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 09:27; T-425 READY (agents/task-T-425 @ 552aed5d) / candidate V3.0.36 stair treads: MS2-L double count on 2F CONFIRME |
+| 11-01 08:51 | Verifier | SUCCESS | STARTED 08:51, final 08:52; none (board confirmed READY 0: T-425 CLAIMED by Worker 2 08:43, T-417 / T-420 / T-426 / T-427 TODO) / No Gate  |
+| 11-01 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:59; T-420 READY 4a8a8acd (integration package, integrates T-414) / ARCH_TAKEOFF_V3.0.37 (json 733f2efb on reproduc |
+| 11-01 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 10:10; T-417 READY e7bf5a2e / ST-01 flights: freelancer 1.2 x 5.3 x 0.28 length 5.300 = MS1-U run 3.300 + rise 2.000  |
+| 11-01 09:51 | Verifier | SUCCESS | STARTED 09:51, final 09:56; T-425 Gate A PASS MERGED 6f159091 / Drive read OK (P7757.dxf). Own re-measure by handle on my own plan registr |
+| 11-01 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 11:00; T-427 READY (agents/task-T-427 @ 5d738616) / Dry floor -40.7967 m2 (-12.09 %) vs freelancer closed on 17 named |
+| 11-01 10:51 | Verifier | SUCCESS | STARTED 10:51, final 11:43; T-420 GATE B PASS MERGED 4c01fe06; T-417 Gate A PASS MERGED 6b6ff9bd / Drive read OK. CANDIDATE OF RECORD NOW  |
+| 11-01 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:41; T-426 READY 37ca8f28 (cross-lane S: lane I had no claimable row; T-420 READY) / GB section census on V3.0.36 d |
+| 11-01 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 11:21; none / No claimable TODO on the board: lane S T-426 (ground-beam section class) CLAIMED by worker 3 at 11:01;  |
+| 11-01 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:01; T-426 Gate A PASS MERGED 1f298735; T-427 Gate A PASS MERGED 65ce8f6d (published 65ce8f6d) / Drive read OK. Bot |
+| 11-01 12:15 | Lead | SUCCESS | STARTED 12:15, final 12:23; board / Since 08:19: 5 WORKED, all first pass (T-425 double count confirmed, T-417 ST-01 explained, T-420 Gate |
+| 11-01 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:56; T-434 READY (agents/task-T-434 @ 78d45c25) / ST-01 GF winder turn: section A-A governs (Q-46 A + own scaled tr |
+| 11-01 12:50 | Verifier | SUCCESS | STARTED 12:50, final 12:51; none (board READY 0 after pull 8cad41ed: T-434 CLAIMED worker 2 12:40, T-421 / T-428 / T-432 / T-435 TODO) / N |
+| 11-01 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 14:20; T-421 READY 62daaaa6 (integration package) / ARCH_TAKEOFF_V3.0.38 json 57cca61c on reproduced V3.0.37 733f2efb |
+| 11-01 13:23 | Worker 1 | SUCCESS | STARTED 13:23, final 13:39; T-428 READY 3f4dfe4a / concrete roll-up r4 on V3.0.37: residual -122.900 m3 unchanged, traced / HELD / unexpla |
+| 11-01 13:51 | Verifier | SUCCESS | STARTED 13:51, final 14:01; T-428 Gate A PASS MERGED ea8f5ae5; T-434 Gate A PASS MERGED a6b325b3 (published a6b325b3) / Drive read OK. Bot |
+| 11-01 14:40 | Worker 2 | SUCCESS | STARTED 14:40, final 15:44; T-435 READY ab99f50b / ceiling / skirting join over 43 floored spaces of V3.0.37 (733f2efb) + T-421 / T-431 pa |
+| 11-01 14:51 | Verifier | SUCCESS | STARTED 14:51, final 15:48; T-421 GATE B PASS MERGED bc9f293c; T-432 Gate A PASS MERGED 8a0164b2 (published 8a0164b2); T-435 left READY (G |
+| 11-01 15:00 | Worker 3 | SUCCESS | STARTED 15:00, final 15:16; T-432 READY 24e30f98 (cross-lane, lane S row; Gate A) / ST-02 freelancer length 16.4 m (typed constant, count  |
+| 11-01 15:20 | Worker 1 | SUCCESS | STARTED 15:20, final 15:21; none / No claimable TODO on the board (0 TODO): lane S T-432 READY (worker 3), T-433 (held concrete -115.460 m |
+| 11-01 15:52 | Verifier | SUCCESS | STARTED 15:52, final 16:51; none (overlap guard: run session_01E6cPnbSgUMCKakKqrVHDDb active since 2026-11-01T15:52Z) / no check, no merge |
+| 11-01 16:13 | Lead | SUCCESS | STARTED 16:13, final 16:19; board / Since 12:23: 4 WORKED, all first pass (T-428 roll-up r4 unexplained -11.568 -> -5.172 m3; T-434 winder |
+| 11-01 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 17:34; T-440 READY (agents/task-T-440 @ e4983c21) / GF open-room skirting L-71e2e002: wet-pantry base inside it = 3.5 |
+| 11-01 16:52 | Verifier | SUCCESS | final 16:52 (single line); T-435 Gate A PASS MERGED c7f85e7a (published c7f85e7a; CODEMAP-only conflict rebuilt) / Drive read OK. Researc |
+| 11-01 17:01 | Worker 3 | SUCCESS | STARTED 17:01, final 18:29; T-429 READY (integration package, Gate B; agents/task-T-429 @ c9a4795c) / ARCH_TAKEOFF_V3.0.39 = V3.0.38 (57cc |
+| 11-01 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:35; T-438 READY 130deec9 / ST-02 straight part: no drawing conflict. GF-frame '27 / 2.950 / 0.250 tread' = nosing/ |
+| 11-01 17:51 | Verifier | SUCCESS | STARTED 17:51, final 18:35; T-438 Gate A PASS MERGED 63f77c1d; T-440 Gate A PASS MERGED 3c65489c (published 3c65489c; CODEMAP-only conflic |
+| 11-01 18:41 | Worker 2 | SUCCESS | STARTED 18:41, final 19:43; T-441 READY (agents/task-T-441 @ 40973485) / Stair-room floor parts' skirting wall faces measured stretch by s |
+| 11-01 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:49; T-429 GATE B PASS MERGED a2a2e080; T-433 Gate A PASS MERGED 304b9af2 (both published by engine push; CODEMAP-o |
+| 11-01 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:15; T-433 READY (agents/task-T-433 @ fdf7fd6e; research only) / Drive read OK. Concrete r4 HELD -116.428339 m3 spl |
+| 11-01 19:21 | Worker 1 | SUCCESS | STARTED 19:21, final 19:43; T-436 READY (agents/task-T-436 @ 6b43c5ee) / GS unexplained -1.560570 m3 split: stair-zone panel 8.372 m2 = -0 |
+| 11-01 19:50 | Verifier | SUCCESS | STARTED 19:50, final 19:57; T-436 Gate A PASS MERGED c943cabb; T-441 Gate A PASS MERGED ece154fe (published ece154fe by engine push; CODEM |
+| 11-01 20:13 | Lead | SUCCESS | STARTED 20:13, final 20:20; board / Since 16:19: 7 WORKED, all first pass, 0 REJECTED (T-435 join; T-438 ST-02 28 governs, D-68 withdrawn; |
+| 11-01 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:56; T-439 READY 3f58ad2a / GF pantry strips 1.100 + 0.600 m2 are room pieces of the wet pantry: ceiling continues  |
+| 11-01 20:52 | Verifier | SUCCESS | STARTED 20:52, final 20:52; none (READY 0 per BOARD Lead note 20:17 and RUN_LOG; Worker 2 run 20:40 still open, no hand-in yet) / no check |
+| 11-01 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 21:44; T-430 READY 4957a0ce (integration package, Gate B) / ARCH_TAKEOFF_V3.0.40 json aa6aa927 (V3.0.36..V3.0.39 repr |
+| 11-01 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 21:39; T-437 READY 6c19f4c7 / other unexplained concrete parts -1.033944 m3 tested construction by construction: ENGI |
+| 11-01 21:50 | Verifier | SUCCESS | STARTED 21:50, final 22:33; T-430 GATE B PASS MERGED 3fe8f974; T-437 Gate A PASS MERGED 7695e177; T-439 Gate A PASS MERGED 2f63773e (publi |
+| 11-01 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 23:47; T-446 READY (agents/task-T-446 @ b4a30e40) / Ceiling/skirting join re-run on V3.0.39 8d1bbe5d (own repro; V3.0 |
+| 11-01 22:52 | Verifier | SUCCESS | STARTED 22:52, final 22:52; none (READY 0 after board pull: T-446 CLAIMED worker 2 22:40, no hand-in; T-444 / T-445 / T-447 TODO; T-448..T |
+| 11-01 23:01 | Worker 3 | SUCCESS | STARTED 23:01, final 23:59; T-447 READY f017c241 / Stair-room HELD skirting settled from section A-A, level marks and the owner jamb metho |
+| 11-01 23:22 | Worker 1 | SUCCESS | STARTED 23:22, final 00:22; T-444 READY (agents/task-T-444 @ 28fe1fe0) / lift-shaft GS cell L-41cfb82e: engine net 39.2979 m2 = own panels |
+| 11-01 23:50 | Verifier | SUCCESS | STARTED 23:50, final 00:38; T-444 Gate A PASS MERGED 1fb9dec6; T-446 Gate A PASS MERGED 6eb62232 (published 6eb62232 by engine push; CODEM |
+| 11-02 00:16 | Lead | SUCCESS | STARTED 00:16, final 00:23; board / Owner 2 Nov directive applied: all open rows ranked P0-P3 by the owner gates; 10 TODO (S T-467 first,  |
+| 11-02 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 00:45; T-470 READY (agents/task-T-470 @ ce8d424e) / .gitignore now ignores DWG/DXF/DWF/DWL/DWL2/BAK/SV$ in any case a |
+| 11-02 00:52 | Verifier | SUCCESS | STARTED 00:52, final 01:42; T-470 Gate A PASS MERGED 39eff724; T-447 Gate A PASS MERGED 17537309 (CODEMAP-only conflict rebuilt); T-180 CO |
+| 11-02 01:01 | Worker 3 | SUCCESS | STARTED 01:01, final 02:26; T-431 READY (integration package, Gate B) / ARCH_TAKEOFF_V3.0.41 json 5176c7c4 (V3.0.40 aa6aa927 reproduced):  |
+| 11-02 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:37; T-467 READY (agents/task-T-467 @ 4b72cbad) / Released V2.9 + route G now hash-protected by NEW index FREEZE_BA |
+| 11-02 01:51 | Verifier | SUCCESS | STARTED 01:51, final 02:51; none (overlap guard: run session_01E6cPnebn8gRMjFDXugKGFJ active since 2026-11-02T01:51Z) / no check, no merge |
+| 11-02 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 03:21; T-462 READY (agents/task-T-462 @ 870056d0) / Tests needing private project data now SKIP ('private data not av |
+| 11-02 02:59 | Verifier | SUCCESS | final 02:59 (single line); T-467 Gate A PASS MERGED d4f11fe2 (engine push); T-180 CONC.FOOTING PARTIALLY VERIFIED 25/26 on V3.0.40 / Driv |
+| 11-02 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:15; T-450 part 1 READY (agents/task-T-450 @ efab7643) / Per-project config schema URBAN_PROJECT_CONFIG_V1 + loader |
+| 11-02 03:20 | Worker 1 | OPEN | STARTED 03:20, still running at the window end |
+| 11-02 03:51 | Verifier | OPEN | STARTED 03:51, still running at the window end |
+| 11-02 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:18; board / Since 00:23: 6 WORKED first pass, 0 REJECTED (T-446, T-470 ignore rules, T-447, T-467 V2.9 hash lock,  |
