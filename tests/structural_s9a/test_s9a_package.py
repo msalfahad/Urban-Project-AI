@@ -22,6 +22,12 @@ import pytest
 
 from engine.source import delta_release as DR
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests import _private_inputs as PI  # noqa: E402
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF  # noqa: E402
+
+PRIVATE_INPUTS = (PI.BY_SHA,)  # hash-addressed client drawings
+
 ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "research"
 PKG = R / "alsenan_structural_s9a"
@@ -437,6 +443,7 @@ def test_hygiene():
 
 
 def test_rebuild_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF)  # the builder reads these private drawings
     m = J(MANIFEST)
     before = {k: (PKG / k).read_bytes() for k in m["outputs"]}
     before[MANIFEST.name] = MANIFEST.read_bytes()

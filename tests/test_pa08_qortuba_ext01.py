@@ -14,6 +14,9 @@ from pathlib import Path
 from research.qs_wall_treatment_01 import protocol as PR
 from research.qs_wall_treatment_01.pa08.qortuba.ext01 import reconcile as RC, transcribe as TR
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR,)  # experiment outputs, git-ignored
+
 EXT = Path(PR.OUT_DIR) / "pa08_qortuba_ext01"
 R3 = Path(PR.OUT_DIR) / "pa08_qortuba_r3"
 SRC = Path("research/qs_wall_treatment_01/pa08/qortuba/ext01")

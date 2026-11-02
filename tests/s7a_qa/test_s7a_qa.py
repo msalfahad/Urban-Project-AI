@@ -21,6 +21,9 @@ import pytest
 from engine.source import delta_release as DR
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_slab_rebar_s7a_qa"
 S7P = ROOT / "research" / "alsenan_slab_rebar_s7"
@@ -284,6 +287,7 @@ def test_registry_lists_the_builder():
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF)  # the builder reads these private drawings
     m = J(PKG / "11_S7A_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in list(m["outputs"]) + ["11_S7A_FREEZE_MANIFEST.json"]}
     with rebuilt_package(ROOT, PKG / "build_s7a_qa.py") as out:

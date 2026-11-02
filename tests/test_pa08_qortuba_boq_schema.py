@@ -13,6 +13,9 @@ from pathlib import Path
 from research.qs_wall_treatment_01 import protocol as PR
 from research.qs_wall_treatment_01.pa08.qortuba.boq import compare_schema as CS, schema_library as SL
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR, SL.UP)  # experiment outputs; the session-upload originals
+
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 PRC = Path(PR.OUT_DIR) / "pa08_qortuba_pricing"
 QS = Path(PR.OUT_DIR) / "pa08_qortuba_qs01"

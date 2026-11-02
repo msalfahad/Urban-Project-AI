@@ -19,6 +19,9 @@ from pathlib import Path
 import pytest
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF, ARCH_DXF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "source_recovery_delta"
 TERMINAL = {"SOURCE_FOUND_EXPLICIT", "SOURCE_FOUND_DERIVED", "SOURCE_CONFLICT", "SOURCE_EXPECTED_NOT_LOCATED",
@@ -262,6 +265,7 @@ def test_builder_is_registered_on_the_accurate_side():
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF, ARCH_DXF)  # the builder reads these private drawings
     before = {k: (PKG / k).read_bytes() for k in BUILT}
     with rebuilt_package(ROOT, PKG / "build_source_recovery_delta.py") as out:
         for k, v in before.items():

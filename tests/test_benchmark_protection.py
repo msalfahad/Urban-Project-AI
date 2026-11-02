@@ -12,6 +12,9 @@ import pytest
 
 from engine import benchmark_protection as bp
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = ("data/runs",)  # per-project run records
+
 
 def test_a_blind_pass_is_refused_the_answer_under_any_name():
     for payload in (

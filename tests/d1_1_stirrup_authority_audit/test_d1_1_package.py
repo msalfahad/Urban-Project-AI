@@ -18,6 +18,9 @@ import pytest
 from engine.source import delta_correction as DC
 from tests.rebuild_sandbox import rebuilt_package
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+from tests._private_inputs import require_private, STRUCT_DXF, STRUCT_PDF  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "d1_1_stirrup_authority_audit"
 R = ROOT / "research"
@@ -114,6 +117,7 @@ def test_frozen_s4_s5_s6_s4_1_s6_1_s5_1_and_ad1_are_immutable(summary):
 
 
 def test_rebuild_is_byte_identical():
+    require_private(STRUCT_DXF, STRUCT_PDF)  # the builder reads these private drawings
     before = {k: (PKG / k).read_bytes() for k in J(PKG / "D1_1_FREEZE_MANIFEST.json")["outputs"]}
     before["D1_1_FREEZE_MANIFEST.json"] = (PKG / "D1_1_FREEZE_MANIFEST.json").read_bytes()
     with rebuilt_package(ROOT, PKG / "build_d1_1_stirrup_audit.py") as out:

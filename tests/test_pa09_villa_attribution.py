@@ -14,6 +14,9 @@ from research.qs_wall_treatment_01 import protocol as PR
 from research.qs_wall_treatment_01.pa08.qortuba.boq import benchmark_seal as BS
 from research.qs_wall_treatment_01.pa09 import villa_attribution as VA
 
+# Private project data (T-462, owner D1 2026-11-02): a missing file under these roots SKIPS; tests/conftest.py.
+PRIVATE_INPUTS = (PR.OUT_DIR,)  # experiment outputs, git-ignored
+
 VILLA = Path(PR.OUT_DIR) / "pa09_villa_blind"
 
 
