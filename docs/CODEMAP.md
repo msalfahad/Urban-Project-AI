@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 688 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 690 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4340 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4347 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 45 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2025 | pytest suites, one folder per round. |
+| `tests/` | 2029 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -173,7 +173,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `portal_match.py` | 314 | CRITICAL | 5 | Which wall does this door belong to — asked locally, or not answered. |
 | `portal_topology_fixtures.py` | 283 | HIGH | 1 | E102 — eleven doorways, three answers each, and no real drawing involved. |
 | `preliminaries.py` | 74 | MEDIUM | 2 | E17 — Preliminaries. |
-| `project_config.py` | 415 | MEDIUM | 1 | Per-project configuration: the DECLARED PROJECT FACTS of one villa (A1 class B). |
+| `project_config.py` | 415 | MEDIUM | 3 | Per-project configuration: the DECLARED PROJECT FACTS of one villa (A1 class B). |
 | `qa_workbook.py` | 1709 | MEDIUM | 4 | E40 — the read-only QA workbook. A window, never a valve. |
 | `qa_writer.py` | 97 | MEDIUM | 2 | E40 writer — puts the QA workbook on disk as .xlsx and adds no values. |
 | `qs_measurement_region.py` | 287 | MEDIUM | 9 | QS_MEASUREMENT_REGION_BUILDER - deterministic, geometry only. |
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (335 modules)
+## `engine/source/` (337 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -481,6 +481,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `column_schedule_text_rows.py` | 485 | MEDIUM | 2 | SCHEDULE TEXT ROWS (V1) - schedule rows drawn as plain TEXT / MTEXT inside a block-attribute table, and struck-out |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
+| `concrete_basis_rules_v1.py` | 220 | MEDIUM | 1 | CONCRETE_BASIS_RULES_V1: drawing-derived concrete basis rules (A1 class A, T-449 round 1 = concrete). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
 | `concrete_curved_strips.py` | 254 | MEDIUM | 2 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
 | `concrete_ledger_v2.py` | 505 | MEDIUM | 2 | CONCRETE LEDGER V2 - the frozen route-G concrete ledger with its strip measurement replaced by the strip guard and |
@@ -644,7 +645,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rough_rebar_sanity.py` | 227 | MEDIUM | 6 | ROUGH_REBAR_SUMMARY - the Urban estimating / sanity product (generic). |
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
-| `rule_store.py` | 124 | HIGH | 17 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
+| `rule_store.py` | 124 | HIGH | 19 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
@@ -723,6 +724,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `waste_procurement.py` | 64 | MEDIUM | 1 | WASTE / PROCUREMENT (V3b) - net quantity stays the BOQ; waste and procurement are a separate, rule-driven layer. |
 | `waterproofing.py` | 52 | MEDIUM | 5 | WET-ROOM WATERPROOFING (R8.18) - its own path, never the skirting path. |
 | `waterproofing_policy.py` | 44 | MEDIUM | 2 | WATERPROOFING POLICY (V1) - physical QTO is the net surface; laps are a separate procurement factor that exists |
+| `waterproofing_policy_v2.py` | 163 | MEDIUM | 1 | WATERPROOFING POLICY V2 (T-458, owner directive 2026-11-02 C3) - the NEW version of waterproofing_policy.py (V1). |
 | `waterproofing_system.py` | 998 | HIGH | 10 | WATERPROOFING SYSTEM (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the owner's membrane standards (knowledge registry |
 | `wet_room_evidence.py` | 464 | MEDIUM | 4 | WET ROOM EVIDENCE V1 (T-010) - is a space wet, dry or held? The architectural room label first, the sanitary |
 | `wp_geometry.py` | 317 | MEDIUM | 8 | WATERPROOFING BOUNDARY GEOMETRY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the boundary of a waterproofed area, |
@@ -792,11 +794,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `export_round6c.py` | 422 | MEDIUM | 2 | Freeze round 6C's P7757 register for independent audit. |
 | `export_round6d.py` | 331 | MEDIUM | 1 | Export round 6D: the register, the pantry, the stairs, hashed. |
 | `export_round6e.py` | 726 | MEDIUM | 0 | Export round 6E-A: the bundle an auditor can reproduce. |
-| `family_master_candidate.py` | 345 | HIGH | 35 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
+| `family_master_candidate.py` | 345 | HIGH | 36 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
 | `firestore_sandbox.py` | 68 | MEDIUM | 1 | A guarded Firestore writer for Phase 0 — sandbox only. |
 | `freeze_new_source.py` | 136 | MEDIUM | 1 | Freeze and source-audit a NEW project's drawing. No measurement. |
 | `freeze_verify.py` | 676 | MEDIUM | 3 | Freeze integrity verifier (P2-00 Stage 1). Stdlib only. It never writes into the repository: every rebuild runs in a |
-| `git_history.py` | 456 | HIGH | 14 | Git history facts for shallow clones (T-463; owner directive 2026-11-02 D2). |
+| `git_history.py` | 464 | HIGH | 14 | Git history facts for shallow clones (T-463; owner directive 2026-11-02 D2). |
 | `graph_diagnostic.py` | 187 | MEDIUM | 1 | The first authoritative full-sheet wall-graph run on the real drawing. |
 | `grid.py` | 132 | MEDIUM | 0 | Design and render an Instagram grid (A16 grid mode + social/render). |
 | `indep_reader.py` | 719 | MEDIUM | 0 | INDEPENDENT DRAWING READER (Phase 2B-8) - a second reading of a DXF plan with ezdxf, shapely and arithmetic only: |
@@ -1372,7 +1374,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t444_lift_gs_cell/` | 1 |
 | `tests/t446_join_rerun/` | 1 |
 | `tests/t447_stair_room_held_faces/` | 1 |
+| `tests/t449_correction_register/` | 2 |
 | `tests/t450_project_config/` | 1 |
+| `tests/t458_wet_upturn/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
 | `tests/t463_git_history/` | 1 |
 | `tests/t467_released_freeze/` | 1 |
@@ -1823,6 +1827,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t444/` | 5 |
 | `research/agents_t446/` | 6 |
 | `research/agents_t447/` | 6 |
+| `research/agents_t449/` | 5 |
+| `research/agents_t458/` | 2 |
 | `research/agents_t463/` | 3 |
 | `research/agents_t469/` | 11 |
 | `research/alsenan_arch_truth_05/` | 28 |

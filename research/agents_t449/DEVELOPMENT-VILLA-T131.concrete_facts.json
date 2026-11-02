@@ -1,0 +1,276 @@
+{
+ "schema": "URBAN_PROJECT_CONFIG_V1",
+ "project_id": "DEVELOPMENT-VILLA-T131",
+ "config_version": "1.0.0",
+ "facts": [
+  {
+   "fact_id": "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 0.95,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "ST p.13 'Ground Beams for exterior walls' top = 'Ground Floor slab level'; ST p.3 / p.14 A-A; T-214 datums (main +0.95); T-253 s.2, T-289 (Verifier 2026-10-25 09:33 UTC)"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-25",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-1146bdecd41491ce9382",
+    "L-26fcfbbb143269e7bb58",
+    "L-27d104ca6fc3556d16e6",
+    "L-43dae3d6dfec957b26a8",
+    "L-46f25f72b44e8bc3e2e0",
+    "L-4c4496579e5bfa20ae9f",
+    "L-62f712462a36d4ad1b32",
+    "L-7076482d75ca42691468",
+    "L-8de64040a1c3ae6cf137",
+    "L-9cb26d86575a92694880",
+    "L-9e28c7012784a8dc33c8",
+    "L-bde0257c24588948167f",
+    "L-c9bb2eca50a2a2c8b569",
+    "L-cc6aaa99e1892f34b92f",
+    "L-d08e7a9d809a56733ff9",
+    "L-dac43ee18f55433b57e7",
+    "L-e8536bc4f2699a24e2ab",
+    "L-e9a885323ad6ec3ea32b",
+    "L-efbed17455bb224e126e",
+    "L-ff727b2a52e39509a659"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's; also the base of the GF column storey (T-256 h 4.50 = 5.45 - 0.95)"
+  },
+  {
+   "fact_id": "LEVEL.STRUCTURAL_TOP.GF.ANNEX",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 0.25,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "T-214 datums (annex +0.25); T-253 s.3; T-287 G1 (CB5 columns C5 / C3 base +0.25)"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-25",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-00465df980165c529476",
+    "L-3284f44000c02179ace7",
+    "L-402dbe61d1c924144a3c",
+    "L-4783c6e18002c3a8a37e",
+    "L-6bf14711798e5af93594",
+    "L-7d70692d03102a2dc306",
+    "L-84bf7fb482a98fdbe482",
+    "L-b4a13a43967ee4765662",
+    "L-d8b98b143e293d30833b",
+    "L-e16c98075f69532a3dc7"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's"
+  },
+  {
+   "fact_id": "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 5.45,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "T-214 datums (1F structure +5.45); T-248 / T-256 column tops; T-287 G1 h 5.20 from +0.25"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-25",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-1dc713c83bf62e525ff2",
+    "L-291ba2ddf4bbe4f14cf7",
+    "L-31a0424bd0efcc93efba",
+    "L-43dae3d6dfec957b26a8",
+    "L-4aed92c117a7ab1c90ee",
+    "L-4c4496579e5bfa20ae9f",
+    "L-755eb56b55e86301b488",
+    "L-7d70692d03102a2dc306",
+    "L-831f6fe3de133294bb8f",
+    "L-84bf7fb482a98fdbe482",
+    "L-85809d3db52bb93dfe96",
+    "L-8de64040a1c3ae6cf137",
+    "L-8f8ad257d9b2cb9e027f",
+    "L-9cb26d86575a92694880",
+    "L-a87ea657a42a311cb851",
+    "L-c677b628a776d3b87b02",
+    "L-cc702b8541c15fdfd98c",
+    "L-e112e2add2f8979a6c39"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's"
+  },
+  {
+   "fact_id": "LEVEL.STRUCTURAL_TOP.2F.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 9.65,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "T-248 PC-1F-B: carrying beam top +5.45 to slab top +9.65 (ST p.4 GFRS / p.5 FFRS); T-256 1F storey h 4.20"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-24",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-1dc713c83bf62e525ff2",
+    "L-291ba2ddf4bbe4f14cf7",
+    "L-31a0424bd0efcc93efba",
+    "L-4aed92c117a7ab1c90ee",
+    "L-755eb56b55e86301b488",
+    "L-831f6fe3de133294bb8f",
+    "L-85809d3db52bb93dfe96",
+    "L-8f8ad257d9b2cb9e027f",
+    "L-a87ea657a42a311cb851",
+    "L-c677b628a776d3b87b02",
+    "L-cc702b8541c15fdfd98c",
+    "L-e112e2add2f8979a6c39"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's"
+  },
+  {
+   "fact_id": "LEVEL.NATURAL_GROUND.OUTER",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 0.0,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "ST p.13 underside 'Outer Normal ground level'; outer N.G. +-0.00 (T-253 s.2 readings 1-5, Verifier 2026-10-24 07:20 UTC)"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-24",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-00465df980165c529476",
+    "L-1146bdecd41491ce9382",
+    "L-26fcfbbb143269e7bb58",
+    "L-27d104ca6fc3556d16e6",
+    "L-3284f44000c02179ace7",
+    "L-402dbe61d1c924144a3c",
+    "L-46f25f72b44e8bc3e2e0",
+    "L-4783c6e18002c3a8a37e",
+    "L-62f712462a36d4ad1b32",
+    "L-6bf14711798e5af93594",
+    "L-7076482d75ca42691468",
+    "L-9e28c7012784a8dc33c8",
+    "L-b4a13a43967ee4765662",
+    "L-bde0257c24588948167f",
+    "L-c9bb2eca50a2a2c8b569",
+    "L-cc6aaa99e1892f34b92f",
+    "L-d08e7a9d809a56733ff9",
+    "L-d8b98b143e293d30833b",
+    "L-dac43ee18f55433b57e7",
+    "L-e16c98075f69532a3dc7",
+    "L-e8536bc4f2699a24e2ab",
+    "L-e9a885323ad6ec3ea32b",
+    "L-efbed17455bb224e126e",
+    "L-ff727b2a52e39509a659"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's; a declared 0.00 m level, never 'missing'"
+  },
+  {
+   "fact_id": "GB.EXTERIOR.DEPTH_BASIS.MAIN",
+   "version": 1,
+   "quantity_kind": "CATEGORY",
+   "value": "TWO_PRINTED_LEVELS",
+   "unit": "none",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "ST p.13 'Ground Beams for exterior walls': depth 'FOLLOW ARCH.' between the GF slab level and the outer normal ground level (T-289 support TWO_PRINTED_LEVELS, Gate A PASS 2026-10-25)"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-25",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "L-1146bdecd41491ce9382",
+    "L-26fcfbbb143269e7bb58",
+    "L-27d104ca6fc3556d16e6",
+    "L-46f25f72b44e8bc3e2e0",
+    "L-62f712462a36d4ad1b32",
+    "L-7076482d75ca42691468",
+    "L-9e28c7012784a8dc33c8",
+    "L-bde0257c24588948167f",
+    "L-c9bb2eca50a2a2c8b569",
+    "L-cc6aaa99e1892f34b92f",
+    "L-d08e7a9d809a56733ff9",
+    "L-dac43ee18f55433b57e7",
+    "L-e8536bc4f2699a24e2ab",
+    "L-e9a885323ad6ec3ea32b",
+    "L-efbed17455bb224e126e",
+    "L-ff727b2a52e39509a659"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's"
+  },
+  {
+   "fact_id": "GB.EXTERIOR.DEPTH_BASIS.ANNEX",
+   "version": 1,
+   "quantity_kind": "CATEGORY",
+   "value": "CONFLICT",
+   "unit": "none",
+   "source": {
+    "kind": "CONSULTANT_RFI",
+    "reference": "designer item D-35: the literal annex reading +0.25 to N.G. = 0.25 m cannot hold the printed three-zone exterior section (T-253 s.3 CONFLICT, T-289)"
+   },
+   "approval": {
+    "status": "PENDING",
+    "date": "2026-10-25"
+   },
+   "affected_lines": [
+    "L-00465df980165c529476",
+    "L-3284f44000c02179ace7",
+    "L-402dbe61d1c924144a3c",
+    "L-4783c6e18002c3a8a37e",
+    "L-6bf14711798e5af93594",
+    "L-b4a13a43967ee4765662",
+    "L-d8b98b143e293d30833b",
+    "L-e16c98075f69532a3dc7"
+   ],
+   "confidence": "PROVISIONAL",
+   "note": "open designer item: every annex exterior ground-beam line stays CONFLICT / HELD, the literal reading shown beside, never adopted"
+  },
+  {
+   "fact_id": "PARAPET.RC_UPSTAND.MIN_ABOVE_SLAB",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 0.3,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "ST p.14 P1 'TYPICAL DETAIL OF PARAPET SECTION': RC upstand '30' above the structural slab top (T-311 Checker own read 2026-10-28 22:09 UTC)"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "date": "2026-10-28",
+    "by": "DESIGNER"
+   },
+   "affected_lines": [
+    "STR.CONC.PARAPET"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "structural set revision UNCONFIRMED (D-61); the reading is Checker-verified, the print is the designer's; affected = the four STR.CONC.PARAPET lines of V3.0.23 (one per roof chain, element <chain>_ROOF#PARAPET_RC); the line stays HELD on Q-65 C / D-39"
+  }
+ ],
+ "note": "T-449 round 1 (concrete): the declared project facts (A1 class B) behind the V3.0.17 / V3.0.23 / V3.0.33 concrete corrections; drawing references by sheet only, no drawing content, no client data. Generic rules: engine/source/concrete_basis_rules_v1.py; register: research/agents_t449/."
+}
