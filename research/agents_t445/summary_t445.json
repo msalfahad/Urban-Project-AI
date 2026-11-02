@@ -1,0 +1,1844 @@
+{
+ "NOW (V3.0.41: no blinding valued)": {
+  "lines": {
+   "L-080c97f5f6a92452cd04": {
+    "held": [
+     {
+      "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+      "high": 0.59,
+      "id": "1B1B:F10+F",
+      "low": 0.552,
+      "status": "CONFLICT"
+     }
+    ],
+    "line_high": 0.59,
+    "line_low": 0.552,
+    "pieces": [
+     "1B1B:F10+F"
+    ],
+    "pieces_high": 0.59,
+    "pieces_low": 0.552,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-35382b18e2e362df3ae6": {
+    "held": [
+     {
+      "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+      "high": 0.771877,
+      "id": "STRAP",
+      "low": 0.377803,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 0.771877,
+    "line_low": 0.377803,
+    "pieces": [
+     "STRAP"
+    ],
+    "pieces_high": 0.771877,
+    "pieces_low": 0.377803,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-7a5214a334ea3559fa2d": {
+    "held": [
+     {
+      "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+      "high": 9.422514,
+      "id": "GB",
+      "low": 4.949374,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 9.422514,
+    "line_low": 4.949374,
+    "pieces": [
+     "GB"
+    ],
+    "pieces_high": 9.422514,
+    "pieces_low": 4.949374,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-98eb2d58075c9eddf1b4": {
+    "held": [
+     {
+      "blocker": "RFI-S06 (blinding beyond the plot line at the 8 footings on it, D-14)",
+      "high": 0.189,
+      "id": "BEYOND_BOUNDARY",
+      "low": 0.0,
+      "status": "HELD"
+     },
+     {
+      "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+      "high": 2.352,
+      "id": "1B2B:FF",
+      "low": 2.256,
+      "status": "HELD (AT_LEAST bound)"
+     }
+    ],
+    "line_high": 15.179437,
+    "line_low": 15.179437,
+    "pieces": [
+     "165C:IN",
+     "1663:IN",
+     "1664:IN",
+     "1665:IN",
+     "1666:IN",
+     "1667:IN",
+     "1668:IN",
+     "1669:IN",
+     "166A:IN",
+     "166B:IN",
+     "166C:IN",
+     "166D:IN",
+     "180C:IN",
+     "180F:IN",
+     "1ABF:IN",
+     "1ADB:IN",
+     "1B07:IN",
+     "1B19:IN",
+     "1B1A:IN",
+     "1B24:IN",
+     "1B2A:IN",
+     "10F0:IN",
+     "10F8:IN",
+     "1100:IN",
+     "BEYOND_BOUNDARY",
+     "1B2B:FF"
+    ],
+    "pieces_high": 15.1794375,
+    "pieces_low": 15.1794375,
+    "proposal": "SPLIT",
+    "residual_high": 5e-07,
+    "residual_low": 5e-07,
+    "value_m3": 12.7344375
+   }
+  },
+  "pieces": [
+   {
+    "high": 0.399,
+    "id": "165C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.399,
+    "id": "1663:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.598,
+    "id": "1664:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.528,
+    "id": "1665:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.528,
+    "id": "1666:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.11,
+    "id": "1667:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.11,
+    "status": "VERIFIED",
+    "value": 0.11
+   },
+   {
+    "high": 0.099,
+    "id": "1668:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.09,
+    "id": "1669:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.09,
+    "status": "VERIFIED",
+    "value": 0.09
+   },
+   {
+    "high": 0.099,
+    "id": "166A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.288,
+    "id": "166B:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.288,
+    "id": "166C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.598,
+    "id": "166D:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.111,
+    "id": "180C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.111,
+    "status": "VERIFIED",
+    "value": 0.111
+   },
+   {
+    "high": 1.044,
+    "id": "180F:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.044,
+    "status": "VERIFIED",
+    "value": 1.044
+   },
+   {
+    "high": 1.564,
+    "id": "1ABF:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.564,
+    "status": "VERIFIED",
+    "value": 1.564
+   },
+   {
+    "high": 1.17,
+    "id": "1ADB:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.17,
+    "status": "VERIFIED",
+    "value": 1.17
+   },
+   {
+    "high": 0.592,
+    "id": "1B07:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.592,
+    "status": "VERIFIED",
+    "value": 0.592
+   },
+   {
+    "high": 0.672,
+    "id": "1B19:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.672,
+    "status": "VERIFIED",
+    "value": 0.672
+   },
+   {
+    "high": 1.36,
+    "id": "1B1A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.36,
+    "status": "VERIFIED",
+    "value": 1.36
+   },
+   {
+    "high": 1.558,
+    "id": "1B24:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.558,
+    "status": "VERIFIED",
+    "value": 1.558
+   },
+   {
+    "high": 0.22,
+    "id": "1B2A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.22,
+    "status": "VERIFIED",
+    "value": 0.22
+   },
+   {
+    "high": 0.1434375,
+    "id": "10F0:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.1434375,
+    "status": "VERIFIED",
+    "value": 0.1434375
+   },
+   {
+    "high": 0.144,
+    "id": "10F8:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.144,
+    "status": "VERIFIED",
+    "value": 0.144
+   },
+   {
+    "high": 0.132,
+    "id": "1100:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.132,
+    "status": "VERIFIED",
+    "value": 0.132
+   },
+   {
+    "high": 0.189,
+    "id": "BEYOND_BOUNDARY",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.0,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 2.352,
+    "id": "1B2B:FF",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 2.256,
+    "status": "HELD (AT_LEAST bound)",
+    "value": null
+   },
+   {
+    "high": 0.59,
+    "id": "1B1B:F10+F",
+    "line": "L-080c97f5f6a92452cd04",
+    "low": 0.48,
+    "status": "CONFLICT",
+    "value": null
+   },
+   {
+    "high": 9.422514,
+    "id": "GB",
+    "line": "L-7a5214a334ea3559fa2d",
+    "low": 4.949374,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 0.771877,
+    "id": "STRAP",
+    "line": "L-35382b18e2e362df3ae6",
+    "low": 0.377803,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": null,
+    "id": "BW_BASE",
+    "line": "MISSING",
+    "low": null,
+    "status": "HELD (UNMEASURED: no figure)",
+    "value": null
+   }
+  ],
+  "reference": {
+   "beside": [
+    {
+     "high": 0.189,
+     "low": 0.0,
+     "note": "beyond the reference plan",
+     "piece": "BEYOND_BOUNDARY"
+    }
+   ],
+   "closes": true,
+   "engine_valued_m3": 0.0,
+   "reference_m3": 47.055,
+   "residual_m3": -47.055,
+   "rule_difference": {
+    "cause": "RULE_DIFFERENCE: one plain layer over the plot rectangle 31.37 x 15.00 (= plot line 1658, own read) x 0.10; no sheet draws it (ST p.13 'COMPACTED SOIL' under the slab)",
+    "contains_unmeasured_pieces": [
+     "BW_BASE"
+    ],
+    "term_high": -21.1841715,
+    "term_low": -26.2573855
+   },
+   "terms": [
+    {
+     "blocker": "",
+     "piece": "165C:IN",
+     "status": "VERIFIED",
+     "term_high": -0.399,
+     "term_low": -0.399,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1663:IN",
+     "status": "VERIFIED",
+     "term_high": -0.399,
+     "term_low": -0.399,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1664:IN",
+     "status": "VERIFIED",
+     "term_high": -0.598,
+     "term_low": -0.598,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1665:IN",
+     "status": "VERIFIED",
+     "term_high": -0.528,
+     "term_low": -0.528,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1666:IN",
+     "status": "VERIFIED",
+     "term_high": -0.528,
+     "term_low": -0.528,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1667:IN",
+     "status": "VERIFIED",
+     "term_high": -0.11,
+     "term_low": -0.11,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1668:IN",
+     "status": "VERIFIED",
+     "term_high": -0.099,
+     "term_low": -0.099,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1669:IN",
+     "status": "VERIFIED",
+     "term_high": -0.09,
+     "term_low": -0.09,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "166A:IN",
+     "status": "VERIFIED",
+     "term_high": -0.099,
+     "term_low": -0.099,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "166B:IN",
+     "status": "VERIFIED",
+     "term_high": -0.288,
+     "term_low": -0.288,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "166C:IN",
+     "status": "VERIFIED",
+     "term_high": -0.288,
+     "term_low": -0.288,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "166D:IN",
+     "status": "VERIFIED",
+     "term_high": -0.598,
+     "term_low": -0.598,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "180C:IN",
+     "status": "VERIFIED",
+     "term_high": -0.111,
+     "term_low": -0.111,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "180F:IN",
+     "status": "VERIFIED",
+     "term_high": -1.044,
+     "term_low": -1.044,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1ABF:IN",
+     "status": "VERIFIED",
+     "term_high": -1.564,
+     "term_low": -1.564,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1ADB:IN",
+     "status": "VERIFIED",
+     "term_high": -1.17,
+     "term_low": -1.17,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1B07:IN",
+     "status": "VERIFIED",
+     "term_high": -0.592,
+     "term_low": -0.592,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1B19:IN",
+     "status": "VERIFIED",
+     "term_high": -0.672,
+     "term_low": -0.672,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1B1A:IN",
+     "status": "VERIFIED",
+     "term_high": -1.36,
+     "term_low": -1.36,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1B24:IN",
+     "status": "VERIFIED",
+     "term_high": -1.558,
+     "term_low": -1.558,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1B2A:IN",
+     "status": "VERIFIED",
+     "term_high": -0.22,
+     "term_low": -0.22,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "10F0:IN",
+     "status": "VERIFIED",
+     "term_high": -0.1434375,
+     "term_low": -0.1434375,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "10F8:IN",
+     "status": "VERIFIED",
+     "term_high": -0.144,
+     "term_low": -0.144,
+     "valued": false
+    },
+    {
+     "blocker": "",
+     "piece": "1100:IN",
+     "status": "VERIFIED",
+     "term_high": -0.132,
+     "term_low": -0.132,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+     "piece": "1B2B:FF",
+     "status": "HELD (AT_LEAST bound)",
+     "term_high": -2.256,
+     "term_low": -2.352,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+     "piece": "1B1B:F10+F",
+     "status": "CONFLICT",
+     "term_high": -0.48,
+     "term_low": -0.59,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+     "piece": "GB",
+     "status": "HELD",
+     "term_high": -4.949374,
+     "term_low": -9.422514,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+     "piece": "STRAP",
+     "status": "HELD",
+     "term_high": -0.377803,
+     "term_low": -0.771877,
+     "valued": false
+    }
+   ]
+  }
+ },
+ "PROPOSAL A (value the 24 VERIFIED pits only)": {
+  "lines": {
+   "L-080c97f5f6a92452cd04": {
+    "held": [
+     {
+      "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+      "high": 0.59,
+      "id": "1B1B:F10+F",
+      "low": 0.552,
+      "status": "CONFLICT"
+     }
+    ],
+    "line_high": 0.59,
+    "line_low": 0.552,
+    "pieces": [
+     "1B1B:F10+F"
+    ],
+    "pieces_high": 0.59,
+    "pieces_low": 0.552,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-35382b18e2e362df3ae6": {
+    "held": [
+     {
+      "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+      "high": 0.771877,
+      "id": "STRAP",
+      "low": 0.377803,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 0.771877,
+    "line_low": 0.377803,
+    "pieces": [
+     "STRAP"
+    ],
+    "pieces_high": 0.771877,
+    "pieces_low": 0.377803,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-7a5214a334ea3559fa2d": {
+    "held": [
+     {
+      "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+      "high": 9.422514,
+      "id": "GB",
+      "low": 4.949374,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 9.422514,
+    "line_low": 4.949374,
+    "pieces": [
+     "GB"
+    ],
+    "pieces_high": 9.422514,
+    "pieces_low": 4.949374,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-98eb2d58075c9eddf1b4": {
+    "held": [
+     {
+      "blocker": "RFI-S06 (blinding beyond the plot line at the 8 footings on it, D-14)",
+      "high": 0.189,
+      "id": "BEYOND_BOUNDARY",
+      "low": 0.0,
+      "status": "HELD"
+     },
+     {
+      "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+      "high": 2.352,
+      "id": "1B2B:FF",
+      "low": 2.256,
+      "status": "HELD (AT_LEAST bound)"
+     }
+    ],
+    "line_high": 15.179437,
+    "line_low": 15.179437,
+    "pieces": [
+     "165C:IN",
+     "1663:IN",
+     "1664:IN",
+     "1665:IN",
+     "1666:IN",
+     "1667:IN",
+     "1668:IN",
+     "1669:IN",
+     "166A:IN",
+     "166B:IN",
+     "166C:IN",
+     "166D:IN",
+     "180C:IN",
+     "180F:IN",
+     "1ABF:IN",
+     "1ADB:IN",
+     "1B07:IN",
+     "1B19:IN",
+     "1B1A:IN",
+     "1B24:IN",
+     "1B2A:IN",
+     "10F0:IN",
+     "10F8:IN",
+     "1100:IN",
+     "BEYOND_BOUNDARY",
+     "1B2B:FF"
+    ],
+    "pieces_high": 15.1794375,
+    "pieces_low": 15.1794375,
+    "proposal": "SPLIT",
+    "residual_high": 5e-07,
+    "residual_low": 5e-07,
+    "value_m3": 12.7344375
+   }
+  },
+  "pieces": [
+   {
+    "high": 0.399,
+    "id": "165C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.399,
+    "id": "1663:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.598,
+    "id": "1664:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.528,
+    "id": "1665:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.528,
+    "id": "1666:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.11,
+    "id": "1667:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.11,
+    "status": "VERIFIED",
+    "value": 0.11
+   },
+   {
+    "high": 0.099,
+    "id": "1668:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.09,
+    "id": "1669:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.09,
+    "status": "VERIFIED",
+    "value": 0.09
+   },
+   {
+    "high": 0.099,
+    "id": "166A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.288,
+    "id": "166B:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.288,
+    "id": "166C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.598,
+    "id": "166D:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.111,
+    "id": "180C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.111,
+    "status": "VERIFIED",
+    "value": 0.111
+   },
+   {
+    "high": 1.044,
+    "id": "180F:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.044,
+    "status": "VERIFIED",
+    "value": 1.044
+   },
+   {
+    "high": 1.564,
+    "id": "1ABF:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.564,
+    "status": "VERIFIED",
+    "value": 1.564
+   },
+   {
+    "high": 1.17,
+    "id": "1ADB:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.17,
+    "status": "VERIFIED",
+    "value": 1.17
+   },
+   {
+    "high": 0.592,
+    "id": "1B07:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.592,
+    "status": "VERIFIED",
+    "value": 0.592
+   },
+   {
+    "high": 0.672,
+    "id": "1B19:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.672,
+    "status": "VERIFIED",
+    "value": 0.672
+   },
+   {
+    "high": 1.36,
+    "id": "1B1A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.36,
+    "status": "VERIFIED",
+    "value": 1.36
+   },
+   {
+    "high": 1.558,
+    "id": "1B24:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.558,
+    "status": "VERIFIED",
+    "value": 1.558
+   },
+   {
+    "high": 0.22,
+    "id": "1B2A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.22,
+    "status": "VERIFIED",
+    "value": 0.22
+   },
+   {
+    "high": 0.1434375,
+    "id": "10F0:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.1434375,
+    "status": "VERIFIED",
+    "value": 0.1434375
+   },
+   {
+    "high": 0.144,
+    "id": "10F8:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.144,
+    "status": "VERIFIED",
+    "value": 0.144
+   },
+   {
+    "high": 0.132,
+    "id": "1100:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.132,
+    "status": "VERIFIED",
+    "value": 0.132
+   },
+   {
+    "high": 0.189,
+    "id": "BEYOND_BOUNDARY",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.0,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 2.352,
+    "id": "1B2B:FF",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 2.256,
+    "status": "HELD (AT_LEAST bound)",
+    "value": null
+   },
+   {
+    "high": 0.59,
+    "id": "1B1B:F10+F",
+    "line": "L-080c97f5f6a92452cd04",
+    "low": 0.48,
+    "status": "CONFLICT",
+    "value": null
+   },
+   {
+    "high": 9.422514,
+    "id": "GB",
+    "line": "L-7a5214a334ea3559fa2d",
+    "low": 4.949374,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 0.771877,
+    "id": "STRAP",
+    "line": "L-35382b18e2e362df3ae6",
+    "low": 0.377803,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": null,
+    "id": "BW_BASE",
+    "line": "MISSING",
+    "low": null,
+    "status": "HELD (UNMEASURED: no figure)",
+    "value": null
+   }
+  ],
+  "reference": {
+   "beside": [
+    {
+     "high": 0.189,
+     "low": 0.0,
+     "note": "beyond the reference plan",
+     "piece": "BEYOND_BOUNDARY"
+    }
+   ],
+   "closes": true,
+   "engine_valued_m3": 12.7344375,
+   "reference_m3": 47.055,
+   "residual_m3": -34.3205625,
+   "rule_difference": {
+    "cause": "RULE_DIFFERENCE: one plain layer over the plot rectangle 31.37 x 15.00 (= plot line 1658, own read) x 0.10; no sheet draws it (ST p.13 'COMPACTED SOIL' under the slab)",
+    "contains_unmeasured_pieces": [
+     "BW_BASE"
+    ],
+    "term_high": -21.1841715,
+    "term_low": -26.2573855
+   },
+   "terms": [
+    {
+     "blocker": "",
+     "piece": "165C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1663:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1664:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1665:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1666:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1667:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1668:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1669:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166B:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166D:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "180C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "180F:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1ABF:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1ADB:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B07:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B19:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B1A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B24:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B2A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "10F0:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "10F8:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1100:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+     "piece": "1B2B:FF",
+     "status": "HELD (AT_LEAST bound)",
+     "term_high": -2.256,
+     "term_low": -2.352,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+     "piece": "1B1B:F10+F",
+     "status": "CONFLICT",
+     "term_high": -0.48,
+     "term_low": -0.59,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+     "piece": "GB",
+     "status": "HELD",
+     "term_high": -4.949374,
+     "term_low": -9.422514,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+     "piece": "STRAP",
+     "status": "HELD",
+     "term_high": -0.377803,
+     "term_low": -0.771877,
+     "valued": false
+    }
+   ]
+  }
+ },
+ "PROPOSAL B (A + FF ESTIMATED 2.352 under the RFI-S08 label, never VERIFIED)": {
+  "lines": {
+   "L-080c97f5f6a92452cd04": {
+    "held": [
+     {
+      "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+      "high": 0.59,
+      "id": "1B1B:F10+F",
+      "low": 0.552,
+      "status": "CONFLICT"
+     }
+    ],
+    "line_high": 0.59,
+    "line_low": 0.552,
+    "pieces": [
+     "1B1B:F10+F"
+    ],
+    "pieces_high": 0.59,
+    "pieces_low": 0.552,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-35382b18e2e362df3ae6": {
+    "held": [
+     {
+      "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+      "high": 0.771877,
+      "id": "STRAP",
+      "low": 0.377803,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 0.771877,
+    "line_low": 0.377803,
+    "pieces": [
+     "STRAP"
+    ],
+    "pieces_high": 0.771877,
+    "pieces_low": 0.377803,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-7a5214a334ea3559fa2d": {
+    "held": [
+     {
+      "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+      "high": 9.422514,
+      "id": "GB",
+      "low": 4.949374,
+      "status": "HELD"
+     }
+    ],
+    "line_high": 9.422514,
+    "line_low": 4.949374,
+    "pieces": [
+     "GB"
+    ],
+    "pieces_high": 9.422514,
+    "pieces_low": 4.949374,
+    "proposal": "HELD",
+    "residual_high": 0.0,
+    "residual_low": 0.0,
+    "value_m3": 0.0
+   },
+   "L-98eb2d58075c9eddf1b4": {
+    "held": [
+     {
+      "blocker": "RFI-S06 (blinding beyond the plot line at the 8 footings on it, D-14)",
+      "high": 0.189,
+      "id": "BEYOND_BOUNDARY",
+      "low": 0.0,
+      "status": "HELD"
+     },
+     {
+      "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+      "high": 2.352,
+      "id": "1B2B:FF",
+      "low": 2.256,
+      "status": "ESTIMATED"
+     }
+    ],
+    "line_high": 15.179437,
+    "line_low": 15.179437,
+    "pieces": [
+     "165C:IN",
+     "1663:IN",
+     "1664:IN",
+     "1665:IN",
+     "1666:IN",
+     "1667:IN",
+     "1668:IN",
+     "1669:IN",
+     "166A:IN",
+     "166B:IN",
+     "166C:IN",
+     "166D:IN",
+     "180C:IN",
+     "180F:IN",
+     "1ABF:IN",
+     "1ADB:IN",
+     "1B07:IN",
+     "1B19:IN",
+     "1B1A:IN",
+     "1B24:IN",
+     "1B2A:IN",
+     "10F0:IN",
+     "10F8:IN",
+     "1100:IN",
+     "BEYOND_BOUNDARY",
+     "1B2B:FF"
+    ],
+    "pieces_high": 15.1794375,
+    "pieces_low": 15.1794375,
+    "proposal": "SPLIT",
+    "residual_high": 5e-07,
+    "residual_low": 5e-07,
+    "value_m3": 12.7344375
+   }
+  },
+  "pieces": [
+   {
+    "high": 0.399,
+    "id": "165C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.399,
+    "id": "1663:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.399,
+    "status": "VERIFIED",
+    "value": 0.399
+   },
+   {
+    "high": 0.598,
+    "id": "1664:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.528,
+    "id": "1665:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.528,
+    "id": "1666:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.528,
+    "status": "VERIFIED",
+    "value": 0.528
+   },
+   {
+    "high": 0.11,
+    "id": "1667:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.11,
+    "status": "VERIFIED",
+    "value": 0.11
+   },
+   {
+    "high": 0.099,
+    "id": "1668:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.09,
+    "id": "1669:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.09,
+    "status": "VERIFIED",
+    "value": 0.09
+   },
+   {
+    "high": 0.099,
+    "id": "166A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.099,
+    "status": "VERIFIED",
+    "value": 0.099
+   },
+   {
+    "high": 0.288,
+    "id": "166B:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.288,
+    "id": "166C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.288,
+    "status": "VERIFIED",
+    "value": 0.288
+   },
+   {
+    "high": 0.598,
+    "id": "166D:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.598,
+    "status": "VERIFIED",
+    "value": 0.598
+   },
+   {
+    "high": 0.111,
+    "id": "180C:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.111,
+    "status": "VERIFIED",
+    "value": 0.111
+   },
+   {
+    "high": 1.044,
+    "id": "180F:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.044,
+    "status": "VERIFIED",
+    "value": 1.044
+   },
+   {
+    "high": 1.564,
+    "id": "1ABF:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.564,
+    "status": "VERIFIED",
+    "value": 1.564
+   },
+   {
+    "high": 1.17,
+    "id": "1ADB:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.17,
+    "status": "VERIFIED",
+    "value": 1.17
+   },
+   {
+    "high": 0.592,
+    "id": "1B07:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.592,
+    "status": "VERIFIED",
+    "value": 0.592
+   },
+   {
+    "high": 0.672,
+    "id": "1B19:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.672,
+    "status": "VERIFIED",
+    "value": 0.672
+   },
+   {
+    "high": 1.36,
+    "id": "1B1A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.36,
+    "status": "VERIFIED",
+    "value": 1.36
+   },
+   {
+    "high": 1.558,
+    "id": "1B24:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 1.558,
+    "status": "VERIFIED",
+    "value": 1.558
+   },
+   {
+    "high": 0.22,
+    "id": "1B2A:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.22,
+    "status": "VERIFIED",
+    "value": 0.22
+   },
+   {
+    "high": 0.1434375,
+    "id": "10F0:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.1434375,
+    "status": "VERIFIED",
+    "value": 0.1434375
+   },
+   {
+    "high": 0.144,
+    "id": "10F8:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.144,
+    "status": "VERIFIED",
+    "value": 0.144
+   },
+   {
+    "high": 0.132,
+    "id": "1100:IN",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.132,
+    "status": "VERIFIED",
+    "value": 0.132
+   },
+   {
+    "high": 0.189,
+    "id": "BEYOND_BOUNDARY",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 0.0,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 2.352,
+    "id": "1B2B:FF",
+    "line": "L-98eb2d58075c9eddf1b4",
+    "low": 2.256,
+    "status": "ESTIMATED",
+    "value": 2.352
+   },
+   {
+    "high": 0.59,
+    "id": "1B1B:F10+F",
+    "line": "L-080c97f5f6a92452cd04",
+    "low": 0.48,
+    "status": "CONFLICT",
+    "value": null
+   },
+   {
+    "high": 9.422514,
+    "id": "GB",
+    "line": "L-7a5214a334ea3559fa2d",
+    "low": 4.949374,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": 0.771877,
+    "id": "STRAP",
+    "line": "L-35382b18e2e362df3ae6",
+    "low": 0.377803,
+    "status": "HELD",
+    "value": null
+   },
+   {
+    "high": null,
+    "id": "BW_BASE",
+    "line": "MISSING",
+    "low": null,
+    "status": "HELD (UNMEASURED: no figure)",
+    "value": null
+   }
+  ],
+  "reference": {
+   "beside": [
+    {
+     "high": 0.189,
+     "low": 0.0,
+     "note": "beyond the reference plan",
+     "piece": "BEYOND_BOUNDARY"
+    }
+   ],
+   "closes": true,
+   "engine_valued_m3": 15.0864375,
+   "reference_m3": 47.055,
+   "residual_m3": -31.9685625,
+   "rule_difference": {
+    "cause": "RULE_DIFFERENCE: one plain layer over the plot rectangle 31.37 x 15.00 (= plot line 1658, own read) x 0.10; no sheet draws it (ST p.13 'COMPACTED SOIL' under the slab)",
+    "contains_unmeasured_pieces": [
+     "BW_BASE"
+    ],
+    "term_high": -21.1841715,
+    "term_low": -26.1613855
+   },
+   "terms": [
+    {
+     "blocker": "",
+     "piece": "165C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1663:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1664:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1665:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1666:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1667:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1668:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1669:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166B:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "166D:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "180C:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "180F:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1ABF:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1ADB:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B07:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B19:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B1A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B24:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1B2A:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "10F0:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "10F8:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "",
+     "piece": "1100:IN",
+     "status": "VERIFIED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "RFI-S08 (projection under the lift raft not printed on its governing detail ST p.14)",
+     "piece": "1B2B:FF",
+     "status": "ESTIMATED",
+     "term_high": 0.0,
+     "term_low": 0.0,
+     "valued": true
+    },
+    {
+     "blocker": "RFI-S02 (one outline, two tags; owner 2026-11-02: three scenarios F10 alone / F10 + F / drawn outline, each consistent across trades)",
+     "piece": "1B1B:F10+F",
+     "status": "CONFLICT",
+     "term_high": -0.48,
+     "term_low": -0.59,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S09 (D-35 exterior depth 'FOLLOW ARCH.') + RFI-S11 (D-34 length basis / title)",
+     "piece": "GB",
+     "status": "HELD",
+     "term_high": -4.949374,
+     "term_low": -9.422514,
+     "valued": false
+    },
+    {
+     "blocker": "RFI-S07 (D-15: whether the straps sit on blinding); ledger 0 .. 0.913 (F-T347-2)",
+     "piece": "STRAP",
+     "status": "HELD",
+     "term_high": -0.377803,
+     "term_low": -0.771877,
+     "valued": false
+    }
+   ]
+  }
+ }
+}
