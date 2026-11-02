@@ -1,0 +1,219 @@
+{
+ "cases": [
+  {
+   "hand_adhesive_bags": 4.0,
+   "hand_cement_bags": [
+    5.04,
+    6.72
+   ],
+   "hand_m2": 20.0,
+   "hand_mortar_m3": [
+    0.63,
+    0.84
+   ],
+   "hand_sand_m3": [
+    0.693,
+    0.924
+   ],
+   "id": "A-m",
+   "input": "area_m2 20",
+   "unit": "m",
+   "v1": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   },
+   "v2": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   }
+  },
+  {
+   "hand_adhesive_bags": 4.0,
+   "hand_cement_bags": [
+    5.04,
+    6.72
+   ],
+   "hand_m2": 20.0,
+   "hand_mortar_m3": [
+    0.63,
+    0.84
+   ],
+   "hand_sand_m3": [
+    0.693,
+    0.924
+   ],
+   "id": "P-m",
+   "input": "polygon 4 x 5",
+   "unit": "m",
+   "v1": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   },
+   "v2": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   }
+  },
+  {
+   "hand_adhesive_bags": 4.0,
+   "hand_cement_bags": [
+    5.04,
+    6.72
+   ],
+   "hand_m2": 20.0,
+   "hand_mortar_m3": [
+    0.63,
+    0.84
+   ],
+   "hand_sand_m3": [
+    0.693,
+    0.924
+   ],
+   "id": "A-mm",
+   "input": "area_m2 20",
+   "unit": "mm",
+   "v1": {
+    "adhesive_bags": 4e-06,
+    "area_m2": 2e-05,
+    "cement_bags_high": 8e-06,
+    "cement_bags_low": 8e-06,
+    "mortar_m3_high": 1e-06,
+    "mortar_m3_low": 1e-06,
+    "sand_m3_high": 1e-06,
+    "sand_m3_low": 1e-06
+   },
+   "v2": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   }
+  },
+  {
+   "hand_adhesive_bags": 4.0,
+   "hand_cement_bags": [
+    5.04,
+    6.72
+   ],
+   "hand_m2": 20.0,
+   "hand_mortar_m3": [
+    0.63,
+    0.84
+   ],
+   "hand_sand_m3": [
+    0.693,
+    0.924
+   ],
+   "id": "P-mm",
+   "input": "polygon 4 x 5",
+   "unit": "mm",
+   "v1": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   },
+   "v2": {
+    "adhesive_bags": 4.0,
+    "area_m2": 20.0,
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63,
+    "sand_m3_high": 0.924,
+    "sand_m3_low": 0.693
+   }
+  }
+ ],
+ "defect": "finish_materials_table.py:112 area_m2 * unit_m * unit_m",
+ "reachability": {
+  "candidate_closure_modules": 184,
+  "candidate_entries": [
+   "engine/source/arch_v3041.py",
+   "tools/urban_boq_m9.py"
+  ],
+  "closure_method_check": {
+   "missed_by_static_closure": [],
+   "pass": true,
+   "runtime_traced_modules": 118
+  },
+  "files_naming_the_module": [
+   "engine/source/arch_v3037.py",
+   "engine/source/finish_materials_table_v2.py",
+   "research/agents_t086/alsenan_finish_table.py",
+   "research/agents_t130/build_master.py",
+   "research/agents_t329/t329_backing_rules.py",
+   "research/agents_t367/masonry_mortar_v1.py",
+   "research/agents_t414/floor_bed_v1.py",
+   "research/agents_t420/build_master_1_32_0.py",
+   "research/agents_t456/out/T456_REPRODUCTION.json",
+   "research/agents_t456/t456_reproduce.py",
+   "tests/t086_finish_materials/test_finish_materials.py",
+   "tests/t367_masonry_mortar/test_fixture.py",
+   "tests/t456_finish_area_units/test_area_units.py"
+  ],
+  "released_path_file": "research/freeze_integrity/RELEASED_PATH_V2_9_ROUTE_G.json",
+  "released_path_modules": 121,
+  "runtime_loaded_closure_modules": 9,
+  "runtime_loaded_files": [
+   "tools/m9_rules_manifest.py",
+   "research/alsenan_m1_usable_boq/alsenan_adapter.py"
+  ],
+  "runtime_loaders_in_candidate_closure": [
+   {
+    "file": "engine/source/rule_store.py",
+    "names_target": []
+   },
+   {
+    "file": "tools/urban_structural_boq.py",
+    "names_target": []
+   }
+  ],
+  "runtime_loaders_in_released_path": [
+   {
+    "file": "engine/source/rule_store.py",
+    "names_target": []
+   },
+   {
+    "file": "tools/urban_structural_boq.py",
+    "names_target": []
+   }
+  ],
+  "target_in_candidate_closure": false,
+  "target_in_released_path": false,
+  "target_in_runtime_loaded_closure": false
+ },
+ "task": "T-456"
+}
