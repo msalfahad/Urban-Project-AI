@@ -163,9 +163,14 @@ registry 1.36.0 (6).
 
 - L1 / L2: `tests/t431_zone_extent_integration` 23 pass; t430 / t429 / t421 / t420 pass with the new registry.
 - L3: the 73 test folders that import `tools/urban_boq_m9.py` or any `arch_v30*` module (impact HIGH on urban_boq_m9:
-  V3041 constant, own tuple, `--v3041-inputs`, the v30 .. v3040 method tuples extended by V3041; nothing else): see the
-  board handoff for the result on the hand-in commit.
-- freeze 0; codemap check stale none; BOQ_FAMILY_MASTER_1.36.0 equals its builder.
+  V3041 named inside the cmd_arch / main hubs, `--v3041-inputs`, the v30 .. v3040 method tuples in cmd_arch extended by
+  V3041; no new top-level statement, so the T-467 released-path freeze index V2 holds): **74 folders + t061 on 280208f3
+  (after merging the working head d4f11fe2): 2,912 collected, 0 failed, 0 errors, 22 skipped (private inputs), 2
+  xfailed; exit 0** (tests/t467_released_freeze included).
+- freeze V1 0 and freeze V2 (`research/freeze_integrity/freeze_verify_v2.py check --index FREEZE_BASELINE_INDEX_V2.jsonl`)
+  0; codemap check stale none; BOQ_FAMILY_MASTER_1.36.0 equals its builder, FMC.check problems [].
+- The official run used the CLI before the V3041 name moved into the hub (identical behaviour: the same method string;
+  `arch --help` lists ARCH_TAKEOFF_V3.0.41).
 
 ## 9. For the Checker (Gate B)
 
