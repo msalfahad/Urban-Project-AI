@@ -166,12 +166,15 @@ def test_normal_added_file_is_a_change_unless_the_filter_excludes_additions(synt
     s, f, c1 = synth["shallow"], synth["fact"], synth["c1"]
     extra = s / "e" / "new.txt"
     extra.write_text("new\n", encoding="utf-8")
+    assert GH.changed_since(c1, "e", root=s, facts_path=f) == []           # untracked: invisible, as in git diff
+    _g(s, "add", "e/new.txt")
     try:
         assert GH.changed_since(c1, "e", root=s, facts_path=f) == ["e/new.txt"]
         assert GH.changed_since(c1, "e", root=s, diff_filter="MDRTC", facts_path=f) == []
         (s / "e" / "x.txt").write_text("edited\n", encoding="utf-8")
         assert GH.changed_since(c1, "e", root=s, diff_filter="MDRTC", facts_path=f) == ["e/x.txt"]
     finally:
+        _g(s, "rm", "-q", "--cached", "e/new.txt")
         extra.unlink()
         _g(s, "checkout", "-q", "--", "e/x.txt")
 

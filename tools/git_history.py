@@ -200,8 +200,8 @@ def _worktree_blob(root, rel):
 
 def changed_since(commit, path, root=ROOT, diff_filter=None, facts_path=None) -> list:
     """Paths under `path` that differ between `commit` and the working tree (git diff --name-only [--diff-filter]
-    commit -- path). Empty = unchanged. Shallow fallback: recorded blob ids vs the working-tree files; additions are
-    reported unless the filter excludes 'A'."""
+    commit -- path; untracked files are not seen, as in git). Empty = unchanged. Shallow fallback: recorded blob ids
+    vs the working-tree files; tracked additions are reported unless the filter excludes 'A'."""
     args = ["diff", "--name-only", "--no-renames"] + ([f"--diff-filter={diff_filter}"] if diff_filter else [])
     p = _run(root, *args, str(commit), "--", str(path))
     if p.returncode == 0:
@@ -218,7 +218,7 @@ def changed_since(commit, path, root=ROOT, diff_filter=None, facts_path=None) ->
         elif now is not None and now != blob and "M" in flt:
             out.append(rel)
     if "A" in flt:
-        cur = set(_out(root, "ls-files", "-co", "--exclude-standard", "--", str(path)).split())
+        cur = set(_out(root, "ls-files", "--", str(path)).split())      # tracked files, as git diff sees them
         out += sorted(cur - set(files))
     return sorted(set(out))
 
