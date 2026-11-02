@@ -1,0 +1,125 @@
+{
+ "candidate_agreement": [
+  {
+   "station": "ELV-01-GF",
+   "surround_bound_m2": [
+    [
+     1.0,
+     5.0
+    ],
+    [
+     1.0,
+     5.0
+    ],
+    true
+   ],
+   "threshold_m2": [
+    0.5,
+    0.5,
+    true
+   ]
+  },
+  {
+   "station": "ELV-01-1F",
+   "surround_bound_m2": [
+    [
+     1.0,
+     4.7
+    ],
+    [
+     1.0,
+     4.7
+    ],
+    true
+   ],
+   "threshold_m2": [
+    0.5,
+    0.5,
+    true
+   ]
+  },
+  {
+   "station": "ELV-01-2F",
+   "surround_bound_m2": [
+    [
+     0.75,
+     4.28
+    ],
+    [
+     0.75,
+     4.28
+    ],
+    true
+   ],
+   "threshold_m2": [
+    0.5,
+    0.5,
+    true
+   ]
+  }
+ ],
+ "census": {
+  "floors": [
+   {
+    "evidence": "jamb lines 226 / 227 1.000 apart in the 0.200 south shaft wall; layer-5 lines 228 / 229 / 22A / 22B across the gap; N / E / W inner faces 219 / 212 / 216 unbroken",
+    "floor": "GF",
+    "openings": 1,
+    "state": "LANDING"
+   },
+   {
+    "evidence": "jamb lines B96 / B97 1.000 apart; layer-5 car / sill lines as GF; N / E / W inner faces B15 / B11 / B13 unbroken",
+    "floor": "1F",
+    "openings": 1,
+    "state": "LANDING"
+   },
+   {
+    "evidence": "jamb lines 12AE / 12AF 1.000 apart; layer-5 lines 12B0 .. 12B3; N / E / W inner faces 1299 / 1293 / 1297 unbroken",
+    "floor": "2F",
+    "openings": 1,
+    "state": "LANDING"
+   },
+   {
+    "evidence": "shaft closed by the +13.90 roof slab (T-401, ST 2F roof plan); SECTION B-B shows nothing above the roof but the domes / parapet (own look, this run); no overrun door drawn",
+    "floor": "ROOF",
+    "openings": 0,
+    "state": "NO_LANDING"
+   }
+  ],
+  "station_count": 3,
+  "stations": [
+   "ELV-01-GF",
+   "ELV-01-1F",
+   "ELV-01-2F"
+  ],
+  "status": "DRAWING-CONFIRMED",
+  "unknown_floors": []
+ },
+ "equivalent_stations": false,
+ "freelancer": {
+  "B6-06": "no row",
+  "B6-07": "no row"
+ },
+ "model": "LIFT_LANDING_CENSUS_V1",
+ "skirting": {
+  "ELV-01-1F": "L-ba3599ec (OP-007 PASSAGE 1.000 deducted, no jamb; T-296)",
+  "ELV-01-2F": "2F lobby lines of T-443 (OP-002 as LIFT, no jamb; queued)",
+  "ELV-01-GF": "L-71e2e002 (OP-011 PASSAGE 1.000 deducted, no jamb; T-296)"
+ },
+ "totals": {
+  "front_edge_lm": 3.0,
+  "stations": 3,
+  "surround": {
+   "bound": [
+    2.75,
+    13.98
+   ],
+   "value": null
+  },
+  "surround_valued_part_m2": 0.0,
+  "threshold": {
+   "bound": null,
+   "value": 1.5
+  },
+  "threshold_valued_part_m2": 1.5
+ }
+}
