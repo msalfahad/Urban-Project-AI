@@ -124,6 +124,10 @@
    "kind": "AUTHORED",
    "sha256": "13deae1b4d134f1c6fd6b470415afd22dda900445be687b1a598dd4c3da2b825"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.37.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "517b953f9985074258b3916e7149f0f3948d0b9ab3182fc424cb9cdcaac7b3f7"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.4.0.json": {
    "kind": "AUTHORED",
    "sha256": "c31c62c4b266b2cbefaf0a1c0724e1cd8f307c3c4a7419b85189a359e338a535"

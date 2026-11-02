@@ -66,7 +66,7 @@ HELD_STATES = ("BLOCKED_RFI", "BOUNDED_EXPOSURE")
 VALUED = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")
 TOL = 0.0000015                          # the merged tables print 6 decimals (m3) / 4 decimals (m2 x 0.10)
 OWN_CODES = (GS,)                        # the only code whose totals may move
-TEXT_CODES = ("STR.CONC.COLUMN", "STR.CONC.LIFT", "STR.CONC.WALL", "STR.CONC.GROUND_BEAM", GS)
+TEXT_CODES = ("STR.CONC.COLUMN", "STR.CONC.LIFT", GS)
 
 PIECES = {
     P_CELL: {"module": "engine/source/arch_v3042.py (a held slab cell valued at its re-measured panels x the printed T; "
