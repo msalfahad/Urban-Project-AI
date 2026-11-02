@@ -61,6 +61,17 @@ A quantity whose key carries its unit (`*_m2`, `*_m3`, `*_m`) is never multiplie
 drawing coordinates are. Every unit-bearing method is tested with a mm fixture whose answer differs from the metre
 fixture's raw numbers, because a metre-only test multiplies by 1.0 and hides a double conversion (provenance T-456).
 
+## Same-class sweep (engine/ and tools/, head 775a8ffe)
+
+`git grep` for a product times the unit squared (`* u * u`, `* unit_m ** 2`, `* scale * scale`, ...) outside V1: 58
+hits in 17 files. Every operand is raw drawing geometry measured in the same function (shoelace / `poly_area` /
+`overlap_area` / shapely `.area` / union area / arrangement face `area` / bounding-box product); the dict-key operands
+were traced (e.g. concrete_completeness.py:1192 `e["area"]` is set at :542 from `_signed_area(ring)` of the hatch
+ring, drawing units). The metre extras added beside them (generic_route.py:1620 free footings `(L + 2p) x (W + 2p)`,
+route_g_scope_v1.py:331 / 365 `free_rel`, `fb`) are added AFTER the scaling, not scaled. tools/pdf_evidence.py:114 is
+a Bezier parameter, not a unit. No second instance of a caller-given m2 being scaled was found; this is a text sweep,
+not a proof for code that renames the unit (a caller-given area under another key would need its own test).
+
 ## Not done / out of scope
 
 - V1 also uses 5 m2 per 20 kg adhesive bag for every porcelain size; the OWNER CONFIRMED register (MISSION, 2026-11-02)
