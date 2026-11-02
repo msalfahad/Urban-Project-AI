@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02T01:20Z | Worker 1 | STARTED | run session_01E6cPncuPz2XTU75pE9i4sb | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T01:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T00:52Z | Verifier | STARTED | run session_01E6cPndhQhT48iNRRPT9xm8 | repo-attached routine | task state: T-447 READY, T-470 READY per RUN_LOG | self-check pending
 - 2026-11-02T00:45Z | Worker 2 | SUCCESS | T-470 READY (agents/task-T-470 @ ce8d424e) | .gitignore now ignores DWG/DXF/DWF/DWL/DWL2/BAK/SV$ in any case and bare DXF/DWG at any depth (dirs re-included); new tests/t470_drawing_guard (55 cases) scans all 7,438 tracked files by content: 2 known drawings (root DXF, MINSERT oracle) sha256-pinned pending owner move, any new one fails; mutation proofs fail as intended; no quantity change; phone/name text scan not added (needs private values) | self-check PASS codemap / PASS pytest t061 / PASS freeze; problem: none
