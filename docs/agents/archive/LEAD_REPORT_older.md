@@ -1,3 +1,80 @@
+## LEAD REPORT 2026-11-02 04:17 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+2 Nov 00:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch 1fb9dec6 -> 1ec4eb1d (Checker 'engine push' merges of T-446, T-470,
+T-447, T-467, T-450 part 1, T-462); no owner commit on the engine branch. Self-check: codemap PASS, pytest t061 PASS,
+freeze PASS (0). OWNER_SESSION_CHANGES: no new row since 31 Oct (the 2 Nov owner session still has none).
+
+HEADLINE: Gate 0 protection largely landed overnight, all on the first pass: the released V2.9 + route G path is
+hash-locked (the Checker's own one-byte mutations were each caught), drawing files can no longer enter under upper-case
+or extension-less names, and 390 private-input tests now skip with a reason instead of failing on a clean copy. Gate 1
+started: the per-project facts file format is merged. One gate broke: a reinforcement test reads the live board and
+has failed since the Checker's ground-beam downgrade record; fix task T-473 is first for Worker 1 after his current run.
+Independently closed whole lines: still 1 (CONC.SLAB, candidate); CONC.FOOTING now PARTIALLY VERIFIED 25 / 26.
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; candidate of record V3.0.40 json aa6aa927, NOT RELEASED; no candidate line moved since 00:23):
+- CONCRETE, FOOTINGS (m3; Checker T-180 stream 02:59): own schedule + outline census: 25 footings 64.304 m3 = engine line
+  by line (0.0 %); F10 + F HELD 2.176 .. 2.275 m3 (Q-31 C / consultant S3); three FN squares in an adjacent frame proven
+  a translated repeat, not missing scope. Line PARTIALLY VERIFIED 25 / 26 (never counted as verified).
+- CONCRETE, SLAB (m3): CONC.SLAB re-bound on V3.0.40, 60.280158 vs own 60.2804 (-0.0004 %), stays VERIFIED.
+- FLOORS DRY / SKIRTING / CEILINGS (m2, m.l): V3.0.41 package READY (Gate B, not checked): dining strip +5.645 m2
+  (dry floor vs freelancer -12.35 % -> -10.68 %), skirting L-71e2e002 24.672 -> 28.572 m.l, NEW dining ceiling 4.885 m2
+  (ceiling silent 7.345 -> 1.700 m2), 0.760 m2 west strip and the bulkhead HELD; 4,828 lines byte-identical.
+- STAIR-ROOM SKIRTING (m.l; MERGED 00:57): divider band and OP-020 jambs NOT_APPLICABLE (balustrade; marble threshold);
+  back lobby 1.400 -> 1.600 m.l; under-winder face UNKNOWN 2.200 .. 3.450 m.l (never 0); freelancer 2F corridor
+  -6.100 m.l (-44.85 %) fully traced, residual 0.000.
+- REINFORCEMENT, GROUND BEAMS (t): whether DG-2ddc451c (4 D-34 short runs, 1.152 m3 HELD) must also hold their bars in
+  the straight-bar BBS is unanswered: T-473 names the rows by id or proves none.
+- STAIRS, ROOF, FORMWORK, TILES, SANITARY, RAILINGS, FENCE, FLOOR BED, LIFT, WATERPROOFING: no candidate change.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: red now means wrong on a clean copy (private-input skips; the remaining known failures are the 5
+import-rule ones of T-465 and t374 of T-473); the released path cannot change silently. WHAT GOT WORSE: t374 red in
+every full run since 1 Nov 22:33 (5.5 h, found by Worker 2's suite, not by a gate). WHAT WAS LEARNED: the T-411 lesson
+recurred because its fix kept a live board read (PROPOSED lessons row 2026-11-02, adopted when T-473 merges); Checker
+finding F-C-T467-1: a globals().update rebind of a hub name is caught only by the golden runs, not by the hash index.
+WHAT IS MISSING in the candidate: dining strip (Gate B), the two ground-slab panels (T-442), stair-room skirting split /
+lift door, nosing + RS-A tread, lift tie beam, block below the house beams, skirting release, WP fixes, exterior
+plaster, earthworks, foundation WP, masonry accessories; T-471 will state each per line.
+
+GATES: Gate 0 open: T-458 (CLAIMED, reproduce), T-473 (new), T-465, T-463 -> T-464, T-456 (reproduce), then T-466.
+Gate 1: T-469 (eight-category score, released per-family concrete statement beside the candidate), T-449 round 1
+(concrete class register into the facts file), T-180, T-452, T-471; T-450 part 2 after T-449 round 1. Milestones: the
+3 Nov week-2 target (more verified coverage) is NOT MET on whole lines unless a second line closes today (components
+grew: 25 footings); M3 11 Nov watched; M4 25 Nov at risk on consultant items (D-16, D-33, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: NEW T-473 (P0 gate fix, lane S). T-450 split: part 2 QUEUED after T-449 round 1. Released to TODO:
+T-449 round 1, T-463, T-459, T-471. TODO 9 (S T-473, T-456, T-445, T-459; A T-465, T-463, T-471; I T-469, T-449), READY 1
+(T-431). VERIFIER QUEUE: T-132 slot (restate after T-431); T-431 Gate B (CHECKER-RUNS, since 02:26); Gate 0 rows as
+they come (T-458, T-473, T-465, T-463, T-456); T-180 with the rest of each run. Element register: no element changed
+this run. Queue check: 41 actionable rows, 0 flagged, 0 stall checks.
+
+TEAM HEALTH (00:23 - 04:17): Worker 1 01:20 closed (T-467), 03:20 open on T-458 (normal, inside its slot); Worker 2
+00:41 and 02:40 closed (its 02:40 STARTED says 'run unknown'); Worker 3 01:01 and 03:01 closed (01:01 'run unknown');
+Checker 00:52, 01:51, 02:51 (correct overlap idle), all closed; 03:51 open (two merges published). Every self-check
+PASS. Throughput: 6 merges, 0 rejections, READY never above 3. CLOCK: the Checker again wrote verdict stamps ahead of
+the clock (T-450 04:12 for 03:57, T-462 04:19 for 04:13) and corrected them itself; its 00:52 STARTED line was ahead of
+its push. REFUSALS: Worker 2 'run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py' (known-failure
+script compared by hand); Checker decode 'NAME must be a plain file name' for a Drive title with a space (re-run with
+an underscore name: OK). Scheduler: Worker 3 02:59 SUCCEEDED, Worker 2 02:39 SUCCEEDED, Dashboard 2 Nov 00:54
+SUCCEEDED, Main 1 Nov 04:31 SUCCEEDED, Checker 03:49 PENDING (running). Scout paused.
+
+OWNER PACKAGE: no new engineering decision under ERS s.2.7 today.
+
+NEEDS FIXING (only you / the main chat can do it):
+1. PRIVACY (PRIVACY_MOVE_PLAN_2026-11-02): repository still PUBLIC; step 0 (switch to private and confirm the Claude
+   app keeps access) and the decisions on steps 1-4 are yours. T-470 pinned the two tracked drawings for your move.
+2. FREEZE WRAPPER: T-467 merged (d4f11fe2); `agent_env.sh freeze` / `selfcheck` still run the V1 index. Pointing them
+   at FREEZE_BASELINE_INDEX_V2.jsonl (research/freeze_integrity/freeze_verify_v2.py) is a change on main (main chat).
+3. WRAPPER SCOPE: `agent_env.sh run` refuses research scripts (Worker 1 01:37, Worker 2 03:21); workers then run them
+   outside the wrapper or by hand. Either allow `run research/agents_t*/...py` or state that workers must not.
+4. CLOCK / RUN ID: stamps ahead of the clock (Checker tonight, Worker 1 earlier) and 'run unknown' (Workers 2 and 3);
+   a prompt line 'stamp from `date -u` at the moment of writing; run id from get_session' (main chat).
+5. OWNER_SESSION_CHANGES.md has no rows for the 2 Nov owner session (directive, follow-up, decisions, privacy plan).
+6. Still open: PR #3 merge (yours); RFI register gaps (court GB section, pool plant room, PC-2F section); nothing sent.
+
 ## LEAD REPORT 2026-11-02 00:23 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

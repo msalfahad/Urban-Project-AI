@@ -1,9 +1,24 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 12:30 UTC (Lead). Previous version: 2026-11-02 08:35 UTC. The released numbers did not change
+Last update: 2026-11-02 16:16 UTC (Lead). Previous version: 2026-11-02 12:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
 released: 0. The candidate of record is now V3.0.42 (not released).
+
+Since 2 Nov 12:30 (newest first; two checked and merged, none sent back, three waiting for the checker):
+- Footing blinding measured as pieces: CHECKED AND MERGED (not yet in the candidate). The 24 footing pits carry
+  12.73 m3 of blinding, re-added exactly by the checker. The freelancer's 47.06 m3 is one 10 cm plate over the whole
+  plot rectangle, which the drawings print nowhere: that difference is a method difference, not an engine error. The
+  raft under the lift and the parts beyond the plot line stay held. A new task puts the verified pits into the
+  candidate as their own line.
+- Earthworks (excavation, backfill, disposal) handed in as the first structural integration package: 18 lines,
+  each held blank because formation level and working space are designer items, with the known lower bounds
+  beside them (footing pits at least 188.0 m3, pool at least 17.8 m3); waiting for the checker.
+- The full measurement plan (step 1 of your recovery plan) handed in: 106 components, every one mapped to exactly
+  one BOQ family; 1 verified, 5 measured, 50 held, 25 missing, 20 still to confirm; waiting for the checker.
+- Lift landing marble re-counted: 3 landings, the candidate's figures confirmed exactly; waiting for the checker.
+- The reinforcement test that failed after three new modules is fixed and merged.
+- Materials rulebook (your adhesive, glue, mortar, block and lintel rules) released to the architectural worker.
 
 Since 2 Nov 08:35 (newest first; five checked and merged, one sent back, nothing waiting for the checker):
 - The scope list for the 10 Nov full BOQ is written (first step of your recovery plan): every trade of your scope

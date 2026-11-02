@@ -46,6 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-02 16:16; recovery plan in force)
+
+- Since 12:30: 2 merged (T-477 gate fix; T-445 blinding pieces, research), 0 rejected; READY 3: T-350 (first stream S
+  Gate B package), T-471 (EIMP part 2, step 1, ahead of its 8 Nov target), T-475. No quantity moved since V3.0.42.
+- Step 2: stream S T-350 (READY) -> T-353 (building) -> T-478 blinding (new) -> T-419 -> T-382 -> T-474 p2; stream F
+  T-422 building, READY after T-350 merges. 16 packages, 8 days: 10 Nov still AT RISK; the Checker's first Gate B of
+  stream S is the next signal.
+- Step 5 (materials): T-448 released to worker 2 (first in its order). Step 6: T-452 released (backlog-permitted).
+
 ## Status (Lead, 2026-11-02 12:30; recovery plan in force: milestones 10 / 12-13 / 19-20 / 25 Nov replace the 19 Nov target)
 
 - Since 08:35: 5 merged (T-442 Gate B -> candidate V3.0.42: ground slab valued 17.241 -> 21.638 m3; T-449 r2 and T-459

@@ -3,6 +3,12 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-02 16:16 (since 12:30)
+
+- T-477 rebar firewall declarations: WORKED (Checker reproduced the failure on 4aaa9be0 and green on the merge). Decision: gate green; no follow-up.
+- T-445 footing blinding as pieces: WORKED (research; 24 pits 12.734438 m3 re-added exactly by the Checker; -47.055 m3 item reconciled). Decision: NEW T-478 integrates the pits and the split, with the Checker's F-C-T445-1 / -2 and the boundary-wall blinding as held lines.
+- T-350 earthworks, T-471 EIMP part 2, T-475 lift marble: READY, classified after the Checker's verdict (queue 1-3).
+
 ## Lead 2026-11-02 12:30 (since 08:35)
 
 - T-442 ground-slab panels (Gate B, V3.0.42): WORKED (first pass; GS valued 17.241 -> 21.638 m3). Decision: next quantity merge restates T-132 from the T-469 tool.

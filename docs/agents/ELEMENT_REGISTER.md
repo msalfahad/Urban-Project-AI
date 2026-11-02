@@ -46,6 +46,13 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- FOOTING-PIT BLINDING vs GROUND-BEAM / STRAP BLINDING (Lead 2026-11-02 16:16; T-445 MERGED ab6bd617, Checker's own DXF
+  re-add of all 24 pits 12.7344375 m3): one blinding layer, OWNER TRADE CONC.BLINDING; where a ground-beam or strap run
+  crosses a pit, the plan overlap belongs to the PIT piece and the beam / strap piece is netted by it (Checker
+  F-C-T445-2); a pit outline crossing the plot line is clipped at the plot line (S06, F-C-T445-1); the FF raft piece
+  stays HELD on S08; boundary-wall base blinding (structural p.14 section A-A) is its own HELD piece, never inside the
+  house footing layer. Integration: lane S T-478. Every villa: blinding is measured as pieces under the members the
+  drawings print it under, each plan area once.
 - LIFT PIT vs GROUND SLAB: CONFIRMED (Lead 2026-11-02 00:20; T-444 MERGED 1fb9dec6, Checker's own handle re-measure of
   ALL FOUR panels on the structural DXF): GS cell L-41cfb82e = OWN-009 11.520000 + OWN-010 10.974202 + OWN-007 11.923674
   (net of the ring corner and lift column C9 outside the ring) + OWN-047 1.187500 = 35.605376 m2 x printed T=10 cm =
