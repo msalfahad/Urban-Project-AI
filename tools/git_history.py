@@ -12,7 +12,8 @@ failed although nothing was wrong. This module answers the same questions:
 
 What the fact file holds (nothing is a copy of a file's content; file bytes are always read from git objects):
 - ``ancestors``: every commit reachable from the recorded head (``git rev-list``); a commit is an ancestor of HEAD
-  when it is listed AND the recorded head is itself an ancestor of HEAD (or lies beyond the shallow boundary);
+  when it is listed AND the recorded head is present in the clone and is itself an ancestor of HEAD (a recorded head
+  beyond the shallow boundary proves nothing: HistoryUnavailable);
 - ``trees``: per requested ``commit:dir``, the blob id of every file under it at that commit. ``show C:path`` then
   reads the blob by its id (present in a shallow clone whenever the file is unchanged since, which is what a freeze
   asserts); ``ls-tree`` and ``diff C -- dir`` compare the recorded blob ids with the files of the working tree.
@@ -111,7 +112,8 @@ def rev_parse(commit, root=ROOT, facts_path=None) -> str:
 
 def is_ancestor(commit, head="HEAD", root=ROOT, facts_path=None) -> bool:
     """git merge-base --is-ancestor commit head; in a shallow clone a commit beyond the boundary is answered by the
-    recorded ancestry (the recorded head must itself be an ancestor of head, or beyond the boundary)."""
+    recorded ancestry, only while the recorded head is present in the clone and is itself an ancestor of head
+    (recorded head absent: HistoryUnavailable, never True)."""
     p = _run(root, "merge-base", "--is-ancestor", str(commit), str(head))
     if p.returncode == 0:
         return True
@@ -124,9 +126,15 @@ def is_ancestor(commit, head="HEAD", root=ROOT, facts_path=None) -> bool:
     if not full:
         return False                                   # never recorded: not proved, refused as before
     rec = facts["recorded_head"]
-    if has_commit(rec, root):
-        if _run(root, "merge-base", "--is-ancestor", rec, str(head)).returncode != 0:
-            return False                               # head does not descend from the recorded history
+    if not has_commit(rec, root):
+        # T-463 r2 (Checker 2026-11-02T08:02Z): without the recorded head in this clone nothing proves that head
+        # descends from the recorded history (an orphan head, or a clone whose boundary passed the recorded head):
+        # unanswerable, so refused loudly, never an unproved True (same contract as last_commit).
+        raise HistoryUnavailable(f"{commit}: beyond this shallow clone, and the recorded head {rec[:8]} is not in it "
+                                 f"either, so descent of {head} from the recorded history cannot be proved "
+                                 f"(rewrite the facts in a full clone)")
+    if _run(root, "merge-base", "--is-ancestor", rec, str(head)).returncode != 0:
+        return False                                   # head does not descend from the recorded history
     return True
 
 

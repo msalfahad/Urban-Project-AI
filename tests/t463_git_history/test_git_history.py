@@ -9,7 +9,9 @@ Checks:
   normal cases (recorded old commit is an ancestor, short id resolves, a changed file's old sha256 comes from the
   facts, an unchanged file's old bytes come from its blob, ls-tree, diff) and adverse cases (an unrecorded commit is
   refused, a head that does not descend from the recorded history is refused, a missing blob raises, no fact file
-  raises, tampered facts are reported by check, a full clone never falls back, writing from a shallow clone refused).
+  raises, tampered facts are reported by check, a full clone never falls back, writing from a shallow clone refused;
+  r2: a recorded head absent from the clone (depth-1 + orphan head; boundary past the recorded head) raises
+  HistoryUnavailable, never True).
 """
 
 from __future__ import annotations
@@ -300,3 +302,66 @@ def test_adverse_last_commit_untrusted_when_the_recorded_head_left_the_clone(ins
     GH._FACTS.clear()
     with pytest.raises(GH.HistoryUnavailable):
         GH.last_commit("e/x.txt", root=s)
+
+
+# ------------------------------------------------------------------ r2 (Checker 2026-11-02T08:02Z): recorded head absent
+def _clone_with_facts(synth, tmp_path, depth, rec_head):
+    """A --depth `depth` clone of the synthetic history with facts written from the full clone at `rec_head`."""
+    clone = tmp_path / f"d{depth}"
+    _g(tmp_path, "clone", "-q", "--depth", str(depth), "--branch", "main", f"file://{synth['full']}", str(clone))
+    doc = GH.build({"trees": [f"{synth['c1'][:7]}:d"]}, root=synth["full"], head=rec_head)
+    assert doc["recorded_head"] == rec_head and synth["c1"] in doc["ancestors"]
+    fact = clone / GH.FACTS_REL
+    fact.parent.mkdir(parents=True, exist_ok=True)
+    fact.write_text(json.dumps(doc), encoding="utf-8")
+    GH._FACTS.clear()
+    return clone, fact
+
+
+def test_adverse_r2_depth1_clone_orphan_head_recorded_head_absent_raises(synth, tmp_path):
+    """The Checker's probe: depth-1 clone (c4 only), facts recorded at c3 (not in the clone), then an ORPHAN commit
+    that shares no history with anything: c1 is recorded as an ancestor of c3, but nothing proves HEAD descends from
+    c3, so the answer is refused, never True (r1 returned True here)."""
+    clone, fact = _clone_with_facts(synth, tmp_path, 1, synth["c3"])
+    assert GH.is_shallow(clone) and not GH.has_commit(synth["c3"], clone)
+    _g(clone, "checkout", "-q", "--orphan", "lone")
+    _g(clone, "commit", "-q", "--allow-empty", "-m", "orphan")
+    try:
+        with pytest.raises(GH.HistoryUnavailable, match="cannot be proved"):
+            GH.is_ancestor(synth["c1"], root=clone, facts_path=fact)
+        with pytest.raises(GH.HistoryUnavailable):
+            GH.is_ancestor(synth["c2"][:8], "HEAD", root=clone, facts_path=fact)
+        # the shared call site (tools/family_master_candidate.py git_is_ancestor) refuses the same way
+        from tools import family_master_candidate as FMC
+        with pytest.raises(GH.HistoryUnavailable):
+            FMC.git_is_ancestor(synth["c1"], "HEAD", root=clone)
+    finally:
+        GH._FACTS.clear()
+
+
+def test_adverse_r2_boundary_after_the_recorded_head_raises_even_on_a_true_descendant(synth, tmp_path):
+    """A legitimate clone whose boundary has passed the recorded head (depth 2 = c3, c4; facts recorded at c2): c1 IS
+    an ancestor in truth, but the facts can no longer prove it, so HistoryUnavailable (rewrite the facts), not True."""
+    clone, fact = _clone_with_facts(synth, tmp_path, 2, synth["c2"])
+    assert not GH.has_commit(synth["c2"], clone) and GH.has_commit(synth["c3"], clone)
+    try:
+        with pytest.raises(GH.HistoryUnavailable, match="rewrite the facts"):
+            GH.is_ancestor(synth["c1"], root=clone, facts_path=fact)
+        assert GH.is_ancestor(synth["c3"], root=clone, facts_path=fact) is True     # present: real git, no facts
+    finally:
+        GH._FACTS.clear()
+
+
+def test_normal_r2_recorded_head_inside_the_clone_still_answers(synth, tmp_path):
+    """Same facts recorded at c3, clone deep enough to hold c3 (depth 2): c1 / c2 are proved ancestors of HEAD; an
+    orphan HEAD with c3 present is answered False (does not descend), as in r1."""
+    clone, fact = _clone_with_facts(synth, tmp_path, 2, synth["c3"])
+    assert GH.has_commit(synth["c3"], clone) and not GH.has_commit(synth["c2"], clone)
+    try:
+        assert GH.is_ancestor(synth["c1"], root=clone, facts_path=fact) is True
+        assert GH.is_ancestor(synth["c2"][:8], root=clone, facts_path=fact) is True
+        _g(clone, "checkout", "-q", "--orphan", "lone")
+        _g(clone, "commit", "-q", "--allow-empty", "-m", "orphan")
+        assert GH.is_ancestor(synth["c1"], root=clone, facts_path=fact) is False
+    finally:
+        GH._FACTS.clear()
