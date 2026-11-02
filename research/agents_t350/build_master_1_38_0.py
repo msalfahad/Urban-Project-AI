@@ -68,6 +68,13 @@ B1_01_NOTE = ("development villa: NOT IN DRAWN SCOPE (T-357 MERGED 90135e91: no 
               "the 31 sheets); V3.0.43 writes no line")
 
 
+def _at(path, pattern):
+    for i, ln in enumerate((ROOT / path).read_text(encoding="utf-8").splitlines(), 1):
+        if re.search(pattern, ln):
+            return f"{path}:{i}"
+    raise SystemExit(f"{path}: no line matches {pattern!r}")
+
+
 def moves(old_by):
     ev = (f"{_at(V3043, r'^def changes_for')} changes_for(): one HELD BLANK earthworks line per Checker-verified FILL "
           f"zone (bound, held items, bound buried lines beside), held-range fixes of named buried concrete lines; "
