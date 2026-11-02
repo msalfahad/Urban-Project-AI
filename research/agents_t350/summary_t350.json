@@ -1,0 +1,698 @@
+{
+ "extends": "ARCH_TAKEOFF_V3.0.42",
+ "files_sha256": {
+  "V3_0_42_BOQ_LINES.json": "1793266d185f9e6873bbd482219e59eb0fdae188a3ac2d676eec982ed66e7b77",
+  "V3_0_43_BOQ_LINES.json": "6f534d5e099cd3a1d3fb45a7c9082c6358e40920c20e2fba57adef21673dce3c"
+ },
+ "identity": {
+  "added": 18,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3267,
+    "QUANTITY_DIFFERS": 981,
+    "SAME_QUANTITY": 609
+   },
+   "vs_v3_0_42": {
+    "ADDED": 18,
+    "CHANGED": 2,
+    "SAME": 4837
+   }
+  },
+  "earthworks": {
+   "at_least_m3": 205.793783,
+   "bound_line_pairs": 213,
+   "by_family": {
+    "B1-02": 12,
+    "B1-03": 5,
+    "B1-04": 1
+   },
+   "lines": 18,
+   "lines_in_two_zones": [
+    "B1-02:L-0e30aadba2eebc6c3ede",
+    "B1-02:L-7a5214a334ea3559fa2d",
+    "B1-02:L-98eb2d58075c9eddf1b4",
+    "B1-02:L-fe78ae283abfb6256358"
+   ],
+   "ranges_fixed": 2
+  },
+  "outside_rows_identical_to_v3_0_42": 4837,
+  "outside_rows_sha256": "ed66ad6a23ed5006a38c1b73595a8749f2ef00358e1e6aa028d93a72a591a07e",
+  "replaced": 2,
+  "v3_0_42_lines": 4839,
+  "v3_0_43_lines": 4857
+ },
+ "method": "ARCH_TAKEOFF_V3.0.43",
+ "released_default": false,
+ "rows": [
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": 188.017207,
+   "bound": "AT_LEAST",
+   "bound_lines": 57,
+   "coef_m3_per_m_depth": 129.234375,
+   "element_id": "EW-T350:B1-02:Z1-PITS-24",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "range_was": null,
+   "tasks": [
+    "T-347",
+    "T-357"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 8,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-PIT-FF",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-b4ebff00041d90e03eca",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 6,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-PIT-F10F",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-ce0132c7212e42e306a5",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": 17.776576,
+   "bound": "AT_LEAST",
+   "bound_lines": 2,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-POOL",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-0a49a302b7926f86a37f",
+   "range_was": null,
+   "tasks": [
+    "T-347",
+    "T-357"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 17,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-EXT-GB-MAIN",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "ZERO_BY_BOUND",
+   "bound_lines": 14,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-INT-GB-MAIN-ZERO",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-952a18b10db99c4eb1d3",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": 0.0,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 13,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-INT-GB-MAIN-D33",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-b97f95d2784d456e0743",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 13,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-ANNEX",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-54baa058d6ccd9a38314",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 3,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-COURT",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-d9185fb243fd3b7130e9",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 6,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-STRAPS",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-a5844c9318406eccedde",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 2,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-BOUNDARY",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-313384fed48301ae02d2",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-02:Z1-LOWER-GB-ROW",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "line_id": "L-4445d5e20d1805f12402",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 57,
+   "coef_m3_per_m_depth": 124.374375,
+   "element_id": "EW-T350:B1-03:Z1-PITS-24",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.BACKFILL",
+   "line_id": "L-a6af7c610a8adce59df3",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 2,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-03:Z1-POOL",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.BACKFILL",
+   "line_id": "L-91abe286a34e874e8ab2",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 17,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-03:Z1-TRENCH-EXT-GB-MAIN",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.BACKFILL",
+   "line_id": "L-6471367d85bdf361f9e7",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-03:Z1-OTHER-TRENCHES",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.BACKFILL",
+   "line_id": "L-89b8e6beaea55fc0e4c9",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-03:Z2",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.BACKFILL",
+   "line_id": "L-eac006402d3035da007b",
+   "range_was": null,
+   "tasks": [
+    "T-347",
+    "T-357"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_ZONE",
+   "at_least_m3": null,
+   "bound": "HELD",
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "EW-T350:B1-04:ALL",
+   "evidence_status": "HELD",
+   "item_code": "STR.EARTH.DISPOSAL",
+   "line_id": "L-78d7c8a989ab34527a1c",
+   "range_was": null,
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "RANGE_FIX",
+   "at_least_m3": null,
+   "bound": null,
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_STRAP",
+   "evidence_status": "HELD",
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-35382b18e2e362df3ae6",
+   "range_was": {
+    "basis": "the item's exposure range",
+    "high": 0.771877,
+    "low": 0.377803
+   },
+   "tasks": [
+    "T-356"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": 0.771877,
+    "low": 0.377803,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_43": {
+    "high": 0.912684,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "RANGE_FIX",
+   "at_least_m3": null,
+   "bound": null,
+   "bound_lines": 0,
+   "coef_m3_per_m_depth": null,
+   "element_id": "HL:STRAP_CONCRETE:SB3:IN_FOOTING:F3",
+   "evidence_status": "HELD",
+   "item_code": "STR.CONC.STRAP",
+   "line_id": "L-c823e0dbd81e30c66aa5",
+   "range_was": {
+    "basis": "A_in 0.2953 m2 x [0.10 (strap spans the full footing thickness) .. 0.40 (no vertical overlap)]",
+    "high": 0.1181,
+    "low": 0.0295
+   },
+   "tasks": [
+    "T-347"
+   ],
+   "upper_m3": null,
+   "v3_0_42": {
+    "high": 0.1181,
+    "low": 0.0295,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_43": {
+    "high": 0.2683,
+    "low": 0.0295,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  }
+ ],
+ "totals_moved_by_code": {
+  "STR.CONC.BLINDING|m3": {
+   "v3_0_42": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 10.784391,
+    "held_low": 5.879177,
+    "lines": 4,
+    "released": 15.179437
+   },
+   "v3_0_43": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 10.925198,
+    "held_low": 5.501374,
+    "lines": 4,
+    "released": 15.179437
+   }
+  },
+  "STR.CONC.STRAP|m3": {
+   "v3_0_42": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 0.5031,
+    "held_low": 0.0295,
+    "lines": 5,
+    "released": 3.3905
+   },
+   "v3_0_43": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 0.6533,
+    "held_low": 0.0295,
+    "lines": 5,
+    "released": 3.3905
+   }
+  },
+  "STR.EARTH.BACKFILL|m3": {
+   "v3_0_42": null,
+   "v3_0_43": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 0.0
+   }
+  },
+  "STR.EARTH.DISPOSAL|m3": {
+   "v3_0_42": null,
+   "v3_0_43": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 0.0
+   }
+  },
+  "STR.EARTH.EXCAVATION|m3": {
+   "v3_0_42": null,
+   "v3_0_43": {
+    "blocked_lines": 12,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 12,
+    "released": 0.0
+   }
+  }
+ },
+ "waiting_pieces": [
+  "T350_B1_01_SITE_CLEARANCE",
+  "T350_DOWNGRADE_RECORDS",
+  "T350_NECK_END_RANGE",
+  "T350_PITS_BOUND_N_T347_1",
+  "T350_S01_ESTIMATED",
+  "T350_S05_SB3"
+ ]
+}
