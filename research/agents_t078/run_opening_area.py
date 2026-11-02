@@ -85,7 +85,12 @@ def main(argv=None):
         if p.get("xy") is None:
             p["axis"] = None
     doc = ezdxf.readfile(a.dxf)
-    views = [OA.read_view(doc, f["box"], unit_m, f["sheet_id"]) for f in plan.get("other_frames") or ()
+    from ezdxf import path as ezpath                  # T-465: read_view takes the flattening from its caller
+
+    def flatten(e, distance):
+        return ezpath.make_path(e).flattening(distance)
+
+    views = [OA.read_view(doc, f["box"], unit_m, f["sheet_id"], flatten) for f in plan.get("other_frames") or ()
              if any("ELEVATION" in str(t).upper() for t in f.get("titles_seen") or ())]
     res = OA.measure([p for p in pos if p.get("xy") is not None] + [p for p in pos if p.get("xy") is None],
                      views, floors=floors, curved_width_basis=a.curved_basis)

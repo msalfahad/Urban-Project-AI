@@ -66,6 +66,7 @@ from collections import Counter, defaultdict
 from engine.source import dimension_evidence as DE
 
 POLICY_ID = "OPENING_AREA_V1"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: opening m2; read only by opening_height_pdf, by no method
 TOL_M = 0.03                 # UP-OPEN-SCHED-001: a width agrees within 0.03 m; used for every place / level match
 AXIS_DEG = 1.0               # two wall axes are one axis within this
 MEASURED, HELD, EXCLUDED, UNSUPPORTED = "MEASURED", "HELD", "EXCLUDED", "UNSUPPORTED"
@@ -454,11 +455,18 @@ def policy_record():
 
 
 # ------------------------------------------------------------------------------------------ DXF view reader
-def read_view(doc, box, unit_m, view_id):
+class FlattenNotGiven(ValueError):
+    """T-465: read_view met a polyline or arc but its caller gave no flatten function (never skipped, never 0)."""
+
+
+def read_view(doc, box, unit_m, view_id, flatten=None):
     """One elevation frame of a DXF (ezdxf document) -> a view for measure(). box = (x0, y0, x1, y1) drawing units.
     Lines, polylines (bulges flattened), arcs and block contents (exploded) whose points all lie in the box; the
-    DIMENSION records of model space whose witness origins lie in the box."""
-    from ezdxf import path as ezpath                                    # lazy: the core above stays stdlib-only
+    DIMENSION records of model space whose witness origins lie in the box.
+    flatten(entity, distance) -> points with .x / .y: the curve flattening, given by the caller (T-465: this K1
+    module imports no ezdxf; the call it replaces is ezdxf.path.make_path(entity).flattening(distance), which a
+    caller allowed to import ezdxf passes, e.g. research/agents_t078/run_opening_area.py). A polyline or arc met without
+    it raises FlattenNotGiven (a view is never read with its curves silently dropped)."""
 
     def inb(x, y):
         return box[0] <= x <= box[2] and box[1] <= y <= box[3]
@@ -471,14 +479,18 @@ def read_view(doc, box, unit_m, view_id):
             try:
                 for v in e.virtual_entities():
                     take(v, depth + 1)
+            except FlattenNotGiven:
+                raise
             except Exception:                                           # noqa: BLE001 - unreadable block counted
                 segs.append(None)
             return
         if kind == "LINE":
             pts = [(e.dxf.start.x, e.dxf.start.y), (e.dxf.end.x, e.dxf.end.y)]
         elif kind in ("LWPOLYLINE", "POLYLINE", "ARC"):
+            if flatten is None:
+                raise FlattenNotGiven(f"read_view {view_id}: {kind} {e.dxf.handle} needs the caller's flatten function")
             try:
-                pts = [(q.x, q.y) for q in ezpath.make_path(e).flattening(0.005 / unit_m)]
+                pts = [(q.x, q.y) for q in flatten(e, 0.005 / unit_m)]
             except Exception:                                           # noqa: BLE001
                 segs.append(None)
                 return
