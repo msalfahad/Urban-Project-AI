@@ -81,6 +81,8 @@ PIECE_STATUS = ("VERIFIED", "HELD", "CONFLICT", "AT_LEAST", "UNMEASURED")
 TOL = 0.0000015
 LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 FORMULA_END_RE = A3043.FORMULA_END_RE
+SUPERSEDED_KEY = "superseded_v3045"
+SUPERSEDES_ON_RANGE = ("multi_tag_outline_v3011",)     # T-233 / V3.0.11 two-reading record of a two-tag outline
 
 PIECES = {
     P_SPLIT: {"module": "engine/source/arch_v3045.py (a mixed blinding line split: the verified layer valued on its "
@@ -497,6 +499,12 @@ def _ranged(ln, x, srcs):
     br.update({"low": x["_lo"], "high": x["_hi"],
                "basis": f"{x['basis']} (was {_fmt(was['low'])} .. {_fmt(was['high'])}; {RULE_ID})"[:300]})
     new["bounded_range"] = br
+    inp = new["calculation"]["inputs"]
+    old = {k: inp.pop(k) for k in SUPERSEDES_ON_RANGE if k in inp}
+    if old:     # the older record pinned the range to its two readings; the scenarios with the clip replace it by name
+        inp[SUPERSEDED_KEY] = {"superseded_by": METHOD, "rule": RULE_ID, "records": old,
+                               "why": "the readings record is replaced by the scenario range with the plot-line clip "
+                                      "(R-T478-1 e); kept whole here"}
     new["calculation"]["inputs"][REC_KEY] = _rec(
         P_RANGE, srcs, action="RANGE_FIX", was=was, low=x["_lo"], high=x["_hi"], why=x["why"],
         scenarios=x["scenarios"], evidence_status=new["calculation"]["inputs"].get("evidence_status") or "HELD")

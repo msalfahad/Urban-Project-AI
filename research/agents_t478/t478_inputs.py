@@ -25,6 +25,13 @@ L_FOOT, L_F10F, L_GB, L_STRAP = ("L-98eb2d58075c9eddf1b4", "L-080c97f5f6a92452cd
 # unclipped) m3 at t = p = 0.10
 F10_SCEN = {"F10_alone": (0.435, 0.45, 0.48), "F10_plus_F_rows": (0.525, 0.56, 0.59),
             "drawn_outline": (0.5025, 0.5025, 0.552)}
+# own route G check (t478_gb_overlap.py, 2026-11-02; DXF sha 9f9d1179): strips (b + 2 x 0.10, 56 drawn + 4.046606 m2
+# free) over the pit layer; the merged low end nets all of it, the own-layer high end is a second layer at beam level
+GB_OV = {"strips_union_m2": 90.827865, "strips_over_pit_layer_m2": 45.38073, "strips_over_placed_footings_m2": 37.636791,
+         "strips_over_reach_windows_only_m2": 7.743939, "column_footprints_in_strips_m2": 0.649326,
+         "free_strip_m2": 4.046606}
+# in PLAN (one layer, as a plate counts it): the own-layer high end less its part over the outlined footings' blinding
+GB_PLAN = (4.949374, round(9.422514 - GB_OV["strips_over_placed_footings_m2"] * 0.10, 6))
 PLATE_M3 = 47.055               # T-433 I-01 / BL-1: the reference figure = plot line 31.37 x 15.00 x 0.10 (T-445 s.4)
 
 
@@ -107,7 +114,12 @@ def build(project_id):
                                    "strip over a pit's blinding is netted (counted once, in the pit layer)",
                         "high_end": "own layer at beam level: union(strips) - column footprints; a separate layer "
                                     "above the pit layer, no plan overlap inside it",
-                        "overlap_m2": None},
+                        "overlap_m2": GB_OV["strips_over_pit_layer_m2"],
+                        "overlap_with_outlined_footings_m2": GB_OV["strips_over_placed_footings_m2"],
+                        "overlap_with_reach_windows_only_m2": GB_OV["strips_over_reach_windows_only_m2"],
+                        "own_check": "research/agents_t478/t478_gb_overlap.py on the decoded structural DXF: both "
+                                     "ends recomputed exactly (4.949374 / 9.422514)",
+                        "plan_distinct_m3": [GB_PLAN[0], GB_PLAN[1]]},
             "basis": "F-C-T445-2: netting by plan overlap, not by id",
             "why": "the held range already nets the strips against the pit layer geometrically at its low end; the "
                    "high end is the other detail reading (own layer), not a double count; no value until S09 / S11"}],
@@ -130,7 +142,9 @@ def build(project_id):
                 {"term": "F10 + F (inside the plot)", "line_id": L_F10F,
                  "inside_low": min(v[0] for v in F10_SCEN.values()),
                  "inside_high": max(v[1] for v in F10_SCEN.values()), "cause": "RFI S02 (scenarios), S06 clip"},
-                {"term": "ground beams", "line_id": L_GB, "cause": "RFI S09 + S11"},
+                {"term": "ground beams (plan-distinct of the pit layer)", "line_id": L_GB, "inside_low": GB_PLAN[0],
+                 "inside_high": GB_PLAN[1], "cause": "RFI S09 + S11; F-C-T445-2: 3.763679 m3 of the own-layer "
+                                                      "reading lies in plan over the footing blinding (netted here)"},
                 {"term": "straps", "line_id": L_STRAP, "cause": "RFI S07 / D-15"}]},
     }
 
