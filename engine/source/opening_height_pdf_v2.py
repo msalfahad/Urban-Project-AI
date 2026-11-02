@@ -18,9 +18,12 @@ TEST ORACLE only, never by the engine):
   Form XObjects are followed with their /Matrix; q / Q / cm as the PDF says. Ids "pdf<n>.<i>" count path items as V1.
 - Words: one word per run of shown text in one font, size, colour and direction whose glyphs follow on from each
   other (the next show starts where the previous one ended); text = the font's ToUnicode / encoding; box = union of the
-  glyph boxes from the advance width and the font's ascender / descender (MuPDF's built-in values for the 14 standard
-  fonts; the FontDescriptor Ascent / Descent otherwise, flagged "font_metrics: DESCRIPTOR" in "reader"). A glyph wholly
-  outside the page is not read (V1 default). dir = the writing direction, y UP.
+  glyph boxes from the advance width and the font's ascender / descender as MuPDF reads them (r3): a FontDescriptor
+  governs, embedded program or not (Ascent <= 0 -> 0.8 / -0.2; otherwise Ascent / 1000 and -|Descent| / 1000);
+  without a descriptor, MuPDF's built-in font by exact /BaseFont name (BUILTIN_NAMES), Times-Roman otherwise; flagged
+  "font_metrics" DESCRIPTOR / DESCRIPTOR_DEFAULT / BUILTIN in "reader". When ascender - descender is below 1 em the
+  glyph box across the line is rescaled to the font size (PyMuPDF's quad correction, _quad_correction). A glyph wholly
+  outside the page is not read (V1 default). dir = the writing direction normalised in single precision, y UP.
 - state: VECTOR when it has words or segments, RASTER_ONLY when it has only images, EMPTY otherwise (V1's test).
 What it does NOT do (and says so in "reader"): optional-content visibility, Type3 glyph boxes, vertical writing mode,
 encrypted files it cannot open; such a page is read with the listed limitation or raises, never silently as empty.
@@ -52,7 +55,25 @@ BASE14_ASC_DSC = {
     "Times-Roman": (1.053, -0.281), "ZapfDingbats": (0.819, -0.144)}
 BASE14_ALIAS = {"Arial": "Helvetica", "Arial,Bold": "Helvetica-Bold", "Arial,Italic": "Helvetica-Oblique",
                 "Arial,BoldItalic": "Helvetica-BoldOblique", "CourierNew": "Courier", "TimesNewRoman": "Times-Roman"}
-
+# r3: the /BaseFont names MuPDF loads as one of its 14 built-in fonts when a simple font has NO FontDescriptor (each
+# pinned against PyMuPDF 1.28.2 in tests/t465_pdf_reader_v2); any other name gets Times-Roman.
+BUILTIN_NAMES = {n: n for n in BASE14_ASC_DSC}
+for _base, _names in (
+        ("Courier", "CourierNew CourierNewPSMT"),
+        ("Courier-Oblique", "CourierNew,Italic CourierNew-Italic CourierNewPS-ItalicMT"),
+        ("Courier-Bold", "CourierNew,Bold CourierNew-Bold CourierNewPS-BoldMT"),
+        ("Courier-BoldOblique", "CourierNew,BoldItalic CourierNew-BoldItalic CourierNewPS-BoldItalicMT"),
+        ("Helvetica", "ArialMT Arial"),
+        ("Helvetica-Oblique", "Arial-ItalicMT Arial,Italic Arial-Italic"),
+        ("Helvetica-Bold", "Arial-BoldMT Arial,Bold Arial-Bold"),
+        ("Helvetica-BoldOblique", "Arial-BoldItalicMT Arial,BoldItalic Arial-BoldItalic"),
+        ("Times-Roman", "TimesNewRomanPSMT TimesNewRoman"),
+        ("Times-Italic", "TimesNewRomanPS-ItalicMT TimesNewRoman,Italic TimesNewRoman-Italic"),
+        ("Times-Bold", "TimesNewRomanPS-BoldMT TimesNewRoman,Bold TimesNewRoman-Bold"),
+        ("Times-BoldItalic", "TimesNewRomanPS-BoldItalicMT TimesNewRoman,BoldItalic TimesNewRoman-BoldItalic")):
+    for _n in _names.split():
+        BUILTIN_NAMES[_n] = _base
+FLT_EPSILON = 1.1920928955078125e-07
 
 # ------------------------------------------------------------------------------------------- single precision
 def _f(x):
@@ -286,17 +307,24 @@ class _Font:
         desc = desc.get_object() if desc is not None else None
         if desc is not None and "/MissingWidth" in desc and not self.cid:
             self.default_w = float(desc["/MissingWidth"])
-        base = BASE14_ALIAS.get(self.name, self.name)
-        embedded = desc is not None and any(k in desc for k in ("/FontFile", "/FontFile2", "/FontFile3"))
-        if not embedded and base in BASE14_ASC_DSC:
-            self.asc, self.dsc = BASE14_ASC_DSC[base]
-            self.metrics = "BASE14"
-        elif desc is not None and float(desc.get("/Ascent", 0) or 0) > 0:
-            self.asc, self.dsc = float(desc["/Ascent"]) / 1000.0, float(desc.get("/Descent", 0) or 0) / 1000.0
-            self.metrics = "DESCRIPTOR"
+        # r3: MuPDF's font ascender / descender (measured against PyMuPDF 1.28.2, tests/t465_pdf_reader_v2):
+        # - a FontDescriptor, embedded program or not, governs: Ascent <= 0 -> (0.8, -0.2); otherwise
+        #   (Ascent / 1000, -|Descent| / 1000): a POSITIVE Descent is read as below the baseline. The program's own
+        #   hhea / OS/2 values are not used, nor the 14 standard fonts' built-in values.
+        # - no FontDescriptor: MuPDF's built-in substitute named by BUILTIN_NAMES (exact /BaseFont, subset prefix
+        #   kept), Times-Roman for any other name.
+        if desc is not None:
+            a = _f(float(desc.get("/Ascent", 0) or 0))
+            d = _f(float(desc.get("/Descent", 0) or 0))
+            if a <= 0:
+                self.asc, self.dsc = 0.8, -0.2
+                self.metrics = "DESCRIPTOR_DEFAULT"
+            else:
+                self.asc, self.dsc = a / 1000.0, -abs(d) / 1000.0
+                self.metrics = "DESCRIPTOR"
         else:
-            self.asc, self.dsc = 0.8, -0.2
-            self.metrics = "DEFAULT"
+            self.asc, self.dsc = BASE14_ASC_DSC[BUILTIN_NAMES.get(self.name, "Times-Roman")]
+            self.metrics = "BUILTIN"
         self.asc, self.dsc = _f(self.asc), _f(self.dsc)
 
     def _enc(self, code):
@@ -349,7 +377,7 @@ def page_primitives(path, page_no=1):
             if t and r["box"] is not None:
                 x0, y0, x1, y1 = r["box"]
                 out["words"].append({"value": t, "x0": x0, "y0": H - y1, "x1": x1, "y1": H - y0,
-                                     "dir": (round(r["dir"][0], 6), round(-r["dir"][1], 6))})
+                                     "dir": (round(r["fdir"][0], 6), round(-r["fdir"][1], 6))})
             out["run"] = None
 
     def draw(p, ctm, fill_only, kind):
@@ -382,6 +410,7 @@ def page_primitives(path, page_no=1):
             L = math.hypot(trm[0], trm[1])
             d = (trm[0] / L, trm[1] / L) if L else (1.0, 0.0)
             visible = box[2] >= 0 and box[0] <= UW and box[3] >= 0 and box[1] <= UH
+            fdir = _normalize(trm[0], trm[1])
             ch = font.text(code)
             size_e = math.sqrt(abs(trm[0] * trm[3] - trm[1] * trm[2])) or 1e-9
             key = (id(font), round(size_e, 4), st["fill"])
@@ -399,9 +428,14 @@ def page_primitives(path, page_no=1):
                             join = space = True
                 if not join:
                     flush()
-                    r = out["run"] = {"key": key, "text": "", "box": None, "dir": d, "pen": (ox, oy)}
+                    r = out["run"] = {"key": key, "text": "", "box": None, "dir": d, "pen": (ox, oy), "fdir": fdir}
                 elif space and not r["text"].endswith(" ") and ch != " ":
                     r["text"] += " "
+                # r3: the glyph box the V1 reader reports (PyMuPDF's quad correction of a font whose
+                # ascender - descender is below 1 em: the box height becomes the font size)
+                fixed = _quad_correction(font, pts, (ox, oy), _expansion(trm), r["fdir"], out["limits"])
+                if fixed is not None:
+                    box = fixed
                 r["text"] += ch
                 b = r["box"]
                 r["box"] = box if b is None else (min(b[0], box[0]), min(b[1], box[1]), max(b[2], box[2]),
@@ -557,6 +591,58 @@ def page_primitives(path, page_no=1):
                        "limits": sorted(out["limits"] | {"OPTIONAL_CONTENT_NOT_EVALUATED"})}}
 
 
+def _normalize(x, y):
+    """MuPDF fz_normalize_vector in single precision (the text line direction)."""
+    n = _f(_f(x * x) + _f(y * y))
+    if n != 0:
+        n = _f(math.sqrt(n))
+        return _f(x / n), _f(y / n)
+    return x, y
+
+
+def _expansion(m):
+    """MuPDF fz_matrix_expansion in single precision (a glyph's size in page space)."""
+    return _f(math.sqrt(abs(_f(_f(m[0] * m[3]) - _f(m[1] * m[2])))))
+
+
+def _quad_correction(font, pts, origin, size, direction, limits):
+    """PyMuPDF 1.28.2 JM_char_quad (horizontal writing, default flags), single precision: when the font's ascender -
+    descender is below 1 em, the glyph's box across the writing direction is rescaled so that its height is the font
+    size (ascender and descender in proportion); along the writing direction the box is the glyph quad's, its start
+    clamped to the origin. Returns the corrected (x0, y0, x1, y1) or None when the quad stands as it is.
+    pts = the glyph quad as (ll, ul, lr, ur) in page space."""
+    asc, dsc = font.asc, font.dsc
+    ad = _f(_f(asc - dsc) + FLT_EPSILON)
+    if ad >= 1:
+        return None
+    if asc < 1e-3:
+        dsc, asc, ad = _f(-0.1), _f(0.9), 1.0
+    if ad < 1:
+        dsc, asc = _f(dsc / ad), _f(asc / ad)
+    ad = _f(asc - dsc)
+    asc, dsc = _f(_f(asc * size) / ad), _f(_f(dsc * size) / ad)
+    c, s = direction
+    d1 = d2 = c
+    if c == -1:
+        d1 = d2 = 1.0
+    trm1, trm2 = (c, _f(-s), s, d1, 0.0, 0.0), (c, s, _f(-s), d2, 0.0, 0.0)
+    ox, oy = origin
+    xl1, xl2 = (1.0, 0.0, 0.0, 1.0, _f(-ox), _f(-oy)), (1.0, 0.0, 0.0, 1.0, ox, oy)
+    ll, ul, lr, ur = ([*_tp(*_tp(p[0], p[1], xl1), trm1)] for p in pts)
+    if c == 1 and ul[1] > 0:
+        ul[1] = ur[1] = asc
+        ll[1] = lr[1] = dsc
+    else:
+        ul[1] = ur[1] = _f(-asc)
+        ll[1] = lr[1] = _f(-dsc)
+    if ll[0] < 0:
+        ll[0] = ul[0] = 0.0
+    if _f(lr[0] - ll[0]) < FLT_EPSILON:
+        limits.add("ZERO_WIDTH_GLYPH_BOX_NOT_WIDENED")          # PyMuPDF widens it from the font program's advance
+    q = [_tp(*_tp(p[0], p[1], trm2), xl2) for p in (ul, ur, ll, lr)]
+    return (min(p[0] for p in q), min(p[1] for p in q), max(p[0] for p in q), max(p[1] for p in q))
+
+
 def _raw(s):
     if isinstance(s, bytes):
         return s
@@ -589,4 +675,7 @@ def policy_record():
                       "(AGPL); view_from_page / measure_pdf are V1's, called unchanged",
             "proof": "tests/t465_pdf_reader_v2: words and segments equal to the V1 reader on the T-082 sheets and the "
                      "adverse pages (rotation, crop box, forms, rectangles, quads, closepath, curves, clip / n paths, "
-                     "fill + stroke, TJ kerning, scan)"}
+                     "fill + stroke, TJ kerning, scan); r3 test_pdf_reader_v2_r3_metrics: simple TrueType embedded "
+                     "(descriptor differs from hhea / OS/2) and non-embedded (ArialMT), positive Descent, Ascent <= 0, "
+                     "below-1-em quad correction, built-in names, any angle / mirror; and the real drawing set "
+                     "(36 of 36 words, 660,238 segments equal to V1)"}
