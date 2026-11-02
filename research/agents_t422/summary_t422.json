@@ -1,0 +1,309 @@
+{
+ "extends": "ARCH_TAKEOFF_V3.0.43",
+ "identity": {
+  "added": 1,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3268,
+    "QUANTITY_DIFFERS": 990,
+    "SAME_QUANTITY": 600
+   },
+   "vs_v3_0_43": {
+    "ADDED": 1,
+    "CHANGED": 9,
+    "SAME": 4848
+   }
+  },
+  "outside_rows": 4848,
+  "outside_rows_identical_to_v3_0_43": 4848,
+  "outside_rows_sha256": "b277f656b4f5d10f05b4b14988237efdb9c4d9f7c43efcb9b4976e8cbe6d7cf8",
+  "replaced": 9,
+  "skirting": {
+   "absorbed": 4,
+   "missing": 1,
+   "narrowed": 1,
+   "released_lines": 4,
+   "released_lm": 5.802094
+  },
+  "v3_0_43_lines": 4857,
+  "v3_0_44_lines": 4858,
+  "v3_0_44_rows": 10
+ },
+ "method": "ARCH_TAKEOFF_V3.0.44",
+ "piece_logs": [
+  {
+   "by_action": {
+    "ABSORB_RANGE": 4,
+    "ADD_MISSING": 1,
+    "NARROW_RANGE": 1,
+    "RELEASE": 4
+   },
+   "lines_added": 1,
+   "lines_changed": 9,
+   "missing_rooms": [
+    "1F-RFFE7AF"
+   ],
+   "piece": "THRESHOLD_RELEASE+RANGE_NARROW+MISSING_LINE",
+   "range_absorbed_lm": 5.802094,
+   "range_out_lm": 3.10464,
+   "released_lm": 5.802094,
+   "state": "RUN"
+  }
+ ],
+ "released_default": false,
+ "rows": [
+  {
+   "action": "RELEASE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 15.6
+   },
+   "before_v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 14.04768
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-2f58111e59f0f5213c58",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "1F-RED0D19",
+   "unit": "lm"
+  },
+  {
+   "action": "ABSORB_RANGE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": 1.55232,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-5438f973929f2a38004d",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "1F-RED0D19",
+   "unit": "lm"
+  },
+  {
+   "action": "RELEASE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 10.8
+   },
+   "before_v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 10.2
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-bb0ea96508a0dc69603c",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "GF-R51E127",
+   "unit": "lm"
+  },
+  {
+   "action": "ABSORB_RANGE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": 0.6,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "GF",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-9b43782b7324e9de5a72",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "GF-R51E127",
+   "unit": "lm"
+  },
+  {
+   "action": "RELEASE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 15.9
+   },
+   "before_v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 13.450226
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-c021ae79a3740089c3fe",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "1F-RB72F22",
+   "unit": "lm"
+  },
+  {
+   "action": "ABSORB_RANGE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": 2.449774,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-049dd2e6697b0fa9dba1",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "1F-RB72F22",
+   "unit": "lm"
+  },
+  {
+   "action": "RELEASE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 17.2
+   },
+   "before_v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 16.0
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-d057b5b05b9eaf131b59",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "2F-R1DB2D2",
+   "unit": "lm"
+  },
+  {
+   "action": "ABSORB_RANGE",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": 1.2,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "floor": "2F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-b557f2847c62d90e1aa4",
+   "piece": "THRESHOLD_RELEASE",
+   "room_id": "2F-R1DB2D2",
+   "unit": "lm"
+  },
+  {
+   "action": "NARROW_RANGE",
+   "after_v3_0_44": {
+    "high": 2.2,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": 5.30464,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-079bc7669b2c68d5d11b",
+   "piece": "RANGE_NARROW",
+   "room_id": "1F-R78C367",
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_MISSING",
+   "after_v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before_v3_0_43": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-4a85470b3a822d6fb7bb",
+   "piece": "MISSING_LINE",
+   "room_id": "1F-RFFE7AF",
+   "unit": "lm"
+  }
+ ],
+ "t330_check": {
+  "v3_0_43": {
+   "flagged": 6,
+   "refused": 0
+  },
+  "v3_0_44": {
+   "flagged": 6,
+   "refused": 0
+  }
+ },
+ "task": "T-422",
+ "totals_moved_by_code": {
+  "FIN.SKIRTING|lm": {
+   "v3_0_43": {
+    "blocked_lines": 2,
+    "bounded_lines": 8,
+    "held_high": 24.637649,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 184.016658
+   },
+   "v3_0_44": {
+    "blocked_lines": 3,
+    "bounded_lines": 4,
+    "held_high": 15.730915,
+    "held_low": 0.0,
+    "lines": 17,
+    "released": 189.818752
+   }
+  }
+ },
+ "v3_0_43_lines_sha256": "6f534d5e099cd3a1d3fb45a7c9082c6358e40920c20e2fba57adef21673dce3c",
+ "v3_0_44_lines_sha256": "8b2fe2b6cfcfcb848b98bf63ce8fd053f203291fc391d10f2fce506073ab7f81"
+}
