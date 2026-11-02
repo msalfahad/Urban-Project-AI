@@ -65,6 +65,20 @@ that is a gap, not a duplicate.
 trades, high-impact unresolved quantities, aggregation status, critical-path blockers, milestone confidence). Lead
 reports stay short; no lengthy reports.
 
+
+## Owner directive 2026-11-02: minimise RFIs, engineering independence (binds every agent)
+
+Mandatory resolution order before any RFI: (1) read every applicable drawing, section, schedule, note, specification and
+detail; (2) cross-reference the package and identify the governing revision; (3) apply explicit project requirements;
+(4) where silent, apply OWNER CONFIRMED company rules; (5) where neither answers, use a documented standard measurement
+or estimating method when technically appropriate; (6) escalate ONLY genuine unresolved contradictions, missing
+safety-critical structural design information, or material uncertainties that cannot responsibly be resolved. No RFI
+merely because a drawing does not describe a standard construction method (block counts, mortar, adhesive, plaster,
+finishing methods, lintel type from details + company conventions). Structural reinforcement and load-bearing
+connections are never invented. Minor missing finish information may be estimated from established project patterns,
+labelled ESTIMATED (never VERIFIED). Every candidate RFI is classified RESOLVED INTERNALLY / ESTIMATED / GENUINE RFI
+REQUIRED with its evidence and remaining quantity exposure. A missing detail never blocks unrelated trades.
+
 ## Owner directive 2026-11-02: Goal B, priority order, blind test (binds every agent; read first)
 
 **Goal B:** the engine produces a complete, priced BOQ for ANY villa from its PDF and AutoCAD plans, without a
