@@ -2,33 +2,36 @@
 
 Worker 3 (lane I, stream S), 2026-11-02, branch `agents/task-T-478`. **Integration package for Checker Gate B.**
 Integrates T-445 (MERGED ab6bd617, Gate A PASS with own re-measure of all 24 pits), T-322 (MERGED d3bcd9d4, pits
-VERIFIED 2026-10-29 01:55, FF HELD >= 2.070), T-233 (MERGED 2ecb5bf0, outlines). Base: the candidate of record
-ARCH_TAKEOFF_V3.0.43 (`6f534d5e`, T-350). **NOT RELEASED**; released default V2.9 + route G unchanged; rollback =
-V3.0.43 / V2.9. Development villa, not an accuracy claim; the method R-T478-1 is for every villa. Drawings cited by
-Drive folder and title only.
+VERIFIED 2026-10-29 01:55, FF HELD >= 2.070), T-233 (MERGED 2ecb5bf0, outlines). Base (rebased 2026-11-02 23:50):
+the candidate of record ARCH_TAKEOFF_V3.0.44 (`8b2fe2b6`, T-422, merge b4e22291). **NOT RELEASED**; released default
+V2.9 + route G unchanged; rollback = V3.0.44 / V2.9. Development villa, not an accuracy claim; the method R-T478-1 is
+for every villa. Drawings cited by Drive folder and title only.
 
 integrates: T-445, T-322, T-233
 
 ## 0. Run identity and version
 
 Drive "Alsenan chalet project": P7757.dxf (P7757_DXF_COMPRESSED.zip, `ab54dd55`) and 'ST7757 dxf.dxf' (`9f9d1179`),
-decoded by the wrapper into `.work/private`. Own fresh `research/agents_t167/v304_run.py`, then
-`research/agents_t350/v3043_run.py`: **V3_0_43_BOQ_LINES.json `6f534d5e` reproduced** (4,857 lines), then
-`research/agents_t478/v3045_run.py`: **V3_0_45_BOQ_LINES.json `e1f4310a`** (4,860 lines; `summary_t478.json`).
+decoded by the wrapper into `.work/private`. **Rebase run (2026-11-02 23:30-23:49 UTC):** own fresh
+`research/agents_t167/v304_run.py`, then `research/agents_t478/v3045_run.py` through the hub (`--method
+ARCH_TAKEOFF_V3.0.45`): **V3_0_43 `6f534d5e` and V3_0_44 `8b2fe2b6` reproduced** (the Checker's T-422 hashes), then
+**V3_0_45_BOQ_LINES.json `5972888b`** (4,861 lines = 4,858 + 3; 3 changed, 3 added, 4,855 byte-identical to V3.0.44).
+`t478_rebase_check.py`: the 6 blinding lines are byte-identical on both bases (the V3.0.43-based READY result `e1f4310a`
+reproduced by the same module); V3.0.45 vs V3.0.43 = 10 FIN.SKIRTING (V3.0.44, carried byte-identical) + 6
+STR.CONC.BLINDING; check_skirting re-run on V3.0.45 (4 released lines 5.802094 lm, 4 absorbed, 1 narrowed, 1 missing).
 
 ```
 .work/venv/bin/python -I research/agents_t167/v304_run.py <P7757.dxf> <ST7757.dxf> --out <private>/t167
-.work/venv/bin/python -I research/agents_t350/v3043_run.py <P7757.dxf> <ST7757.dxf> --out <private>/t350 --t167 <private>/t167
-.work/venv/bin/python -I research/agents_t478/v3045_run.py --v3043 <private>/t350 --released <private>/t167/v29/BOQ_LINES.json --out <private>/t478
-.work/venv/bin/python -I research/agents_t478/t478_summary.py <private>/t478 --write
+.work/venv/bin/python -I research/agents_t478/v3045_run.py <P7757.dxf> <ST7757.dxf> --out <private>/t478 --t167 <private>/t167
+.work/venv/bin/python -I research/agents_t478/t478_rebase_check.py <private>/t478/v3045
+.work/venv/bin/python -I research/agents_t478/t478_summary.py <private>/t478/v3045 --write
 ```
 
-Version: Lead rule 2026-11-02 20:17 (T-422 and T-478 build without each other; whichever is READY second rebases on
-the first merged candidate; version allotted at merge). T-422 (READY first) holds V3.0.44 / registry 1.39.0, so this
-package is **V3.0.45 / registry 1.40.0, built on V3.0.43**. The hub (`tools/urban_boq_m9.py`) is NOT wired: the run
-script applies the module to the V3.0.43 lines. At the rebase on the first merged candidate: EXTENDS -> that version,
-the hub branch `if v3045:` after it, registry OLD -> 1.39.0. Only STR.CONC.BLINDING lines move, so the quantities below
-are base-independent (T-422 moves skirting only).
+Version: Lead rule 2026-11-02 20:17 (T-422 and T-478 built without each other; the one READY second rebases on the
+first merged candidate). T-422 merged first (V3.0.44 / registry 1.39.0), so this package is **V3.0.45 / registry
+1.40.0 on V3.0.44 / 1.39.0**: EXTENDS = V3.0.44, the hub branch `if v3045:` after `if v3044:` with `--v3045-inputs`
+(tools/urban_boq_m9.py; guards tested in tests/t478_blinding_integration/test_hub_wiring.py), registry OLD = 1.39.0.
+Only STR.CONC.BLINDING lines move, so every quantity below is unchanged by the rebase.
 
 ## 1. The physical element (ERS s.2.1)
 
@@ -47,7 +50,7 @@ footing), the ground beams (p.13 sections 10 / 30 / 10), the boundary-wall pads 
 | ground beams | strip (b + 2p) x length x t, not again over a footing | route G REACH: merged low = strips minus the pit layer; own-layer high = strips minus column footprints (`t478_gb_overlap.py`: both ends recomputed exactly) |
 | boundary-wall base | pad count x (pad + p) x t | pad count not printed: HELD BLANK, >= 0.117 m3 per pad beside |
 
-## 3. Per line: V2.9 / V3.0.43 / V3.0.45 (V3_0_45_INTEGRATION_LEDGER.csv, 6 rows; every other line byte-identical)
+## 3. Per line: V2.9 / V3.0.43 (= V3.0.44 for these lines) / V3.0.45 (V3_0_45_INTEGRATION_LEDGER.csv, 6 rows; every other line byte-identical)
 
 | Line | Action | V2.9 (released) | V3.0.43 | V3.0.45 | Evidence status (WFC s.5) |
 |---|---|---|---|---|---|
@@ -69,7 +72,7 @@ pit layer by 45.380730 m2 (37.636791 over outlined footings + 7.743939 over the 
 F10 tag); the low end nets all of it (merged), the high end is a second layer at beam level; in PLAN the own-layer
 reading has 3.763679 m3 over the footing blinding, so the plan-distinct GB range is 4.949374 .. 5.658835 m3.
 
-Totals STR.CONC.BLINDING (only code moved, asserted): V3.0.43 valued 15.179437 (all held by the downgrade) + held
+Totals STR.CONC.BLINDING (only code moved, asserted): V3.0.44 (= V3.0.43) valued 15.179437 (all held by the downgrade) + held
 5.501374 .. 10.925198 (3 lines) -> V3.0.45 **valued 12.734438 (VERIFIED)** + held 7.640374 .. 13.466198 (5 lines) +
 1 blocked. Released V2.9: 15.659437 + 6.495645 m3, unchanged.
 

@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.45 (T-478, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.43
-(engine.source.arch_v30, arch_v301 .. arch_v3043), extended with the CONC.BLINDING package of the Checker-verified
+"""ARCH_TAKEOFF_V3.0.45 (T-478, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.44
+(engine.source.arch_v30, arch_v301 .. arch_v3044), extended with the CONC.BLINDING package of the Checker-verified
 T-445 pieces (merged ab6bd617) in ONE step:
 
   SPLIT      a valued blinding line that mixes a VERIFIED layer with held pieces is SPLIT, never held whole: the line
@@ -14,9 +14,10 @@ T-445 pieces (merged ab6bd617) in ONE step:
   ADD_HELD   a printed blinding element carried by no line becomes a HELD BLANK line by name (BLOCKED_RFI, no value,
              never 0), with any per-unit bound beside, never in the quantity.
 
-Version: the Lead's merge-order rule (2026-11-02 20:17) lets this package and T-422 build without each other; the
-number 3.0.45 is the one free after the READY V3.0.44; whichever merges second rebases on the first merged candidate
-(EXTENDS below then names it). The changes touch ONLY STR.CONC.BLINDING lines, so they apply to either base.
+Version: the Lead's merge-order rule (2026-11-02 20:17) let this package and T-422 build without each other;
+T-422 merged first (V3.0.44, merge b4e22291), so this package is rebased on it: EXTENDS is V3.0.44 and the base
+candidate is the V3.0.44 run (8b2fe2b6 on the development villa). The changes touch ONLY STR.CONC.BLINDING lines;
+the V3.0.44 skirting lines pass through byte-identical (asserted) and its check is re-run on the result.
 
 R-T478-1 (every villa; integrates R-BLIND-PIECE-1 (T-445) and its Checker findings F-C-T445-1 / F-C-S06-1 /
 F-C-T445-2): (a) blinding = printed thickness x the grown plan (outline + the printed projection on the governing
@@ -29,7 +30,7 @@ its range runs from the smallest scenario with the plot-line clip applied to the
 VERIFIED and held pieces is SPLIT; (g) a printed element with no line is added HELD BLANK; (h) a reference plate (one
 rectangle x t) is never a piece: it is restated term by term (piece terms + the scope RULE_DIFFERENCE remainder).
 
-Nothing else moves: every V3.0.43 line not named by the inputs is byte-identical (asserted); totals move only in
+Nothing else moves: every V3.0.44 line not named by the inputs is byte-identical (asserted); totals move only in
 STR.CONC.BLINDING (asserted). Files: V3_0_45_BOQ_LINES.json / .csv, V3_0_45_INTEGRATION_LEDGER.json / .csv,
 V3_0_45_DIFF.csv, V3_0_45_PLATE.json, V3_0_45_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -58,10 +59,11 @@ from engine.source import arch_v3040 as A3040
 from engine.source import arch_v3041 as A3041
 from engine.source import arch_v3042 as A3042
 from engine.source import arch_v3043 as A3043
+from engine.source import arch_v3044 as A3044
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books checker-merged ledgers; adds no default value
 METHOD = "ARCH_TAKEOFF_V3.0.45"
-EXTENDS = A3043.METHOD
+EXTENDS = A3044.METHOD
 CANDIDATE = A30.METHOD
 POLICY_ID = "URBAN_BOQ_T478_ARCH_V3_0_45"
 INPUTS_SCHEMA = "URBAN_V3045_INPUTS_V1"
@@ -282,7 +284,7 @@ def _tasks(r, srcs, where):
 def _expect(x, where):
     e = x.get("expect") or {}
     if not e:
-        raise InputsError(f"{where}: expect (the V3.0.43 quantity it replaces) missing")
+        raise InputsError(f"{where}: expect (the base candidate quantity it replaces) missing")
     return e
 
 
@@ -736,7 +738,8 @@ def integrate(prev, changes, for_lead=()):
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3043.check_earthworks(out), "blinding": check_blinding(out, prev)}
+             "earthworks": A3043.check_earthworks(out), "skirting": A3044.check_skirting(out),
+             "blinding": check_blinding(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")

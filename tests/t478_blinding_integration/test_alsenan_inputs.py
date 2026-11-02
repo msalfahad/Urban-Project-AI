@@ -24,8 +24,11 @@ def test_inputs_load_and_split_re_adds():
 
 def test_summary_pins():
     s = json.loads((ROOT / "research/agents_t478/summary_t478.json").read_text(encoding="utf-8"))
-    assert s["identity"]["v3_0_45_lines"] == s["identity"]["base_lines"] + 3 == 4860
-    assert s["identity"]["outside_rows_identical_to_base"] == 4854
+    assert s["extends"] == "ARCH_TAKEOFF_V3.0.44"              # rebased on the merged V3.0.44 (T-422)
+    assert s["base_v3_0_44_lines_sha256"].startswith("8b2fe2b6")   # the candidate of record before this version
+    assert s["identity"]["v3_0_45_lines"] == s["identity"]["base_lines"] + 3 == 4861
+    assert s["identity"]["outside_rows_identical_to_base"] == 4855
+    assert s["identity"]["skirting"]["released_lines"] == 4          # V3.0.44 skirting passes through unchanged
     t = s["totals_moved_by_code"]
     assert list(t) == ["STR.CONC.BLINDING|m3"]
     assert t["STR.CONC.BLINDING|m3"]["v3_0_45"]["released"] == 12.734438

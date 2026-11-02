@@ -1,10 +1,10 @@
-"""T-478: build rules/coverage/BOQ_FAMILY_MASTER_1.40.0.json = 1.38.0 (never edited) + the pending ARCH_TAKEOFF_V3.0.45
+"""T-478: build rules/coverage/BOQ_FAMILY_MASTER_1.40.0.json = 1.39.0 (never edited) + the pending ARCH_TAKEOFF_V3.0.45
 package (tools/family_master_candidate.py rule r3) + the family whose lines V3.0.45 splits, re-ranges or adds.
 
     python3 -I research/agents_t478/build_master_1_40_0.py --task-commit <sha> | --check
 
-Why 1.40.0: 1.39.0 is the READY T-422 package (not merged); the Lead's merge-order rule lets both build without each
-other; whichever merges second rebuilds its registry on the first merged one (OLD below then names it).
+Why 1.40.0: 1.39.0 is the merged T-422 package (V3.0.44, merge b4e22291); under the Lead's merge-order rule the
+package READY second rebuilds its registry on the first merged one, so OLD is 1.39.0.
 Family V3.0.45 touches: B10-01 blinding only (evidence, opt-in reader, missing / note text). No capability, owner or
 candidate state changes; no quantity changes with this file.
 """
@@ -22,7 +22,7 @@ sys.path.insert(0, str(ROOT))
 
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.38.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.39.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.40.0.json"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
 MOD = "engine/source/arch_v3045.py"
@@ -36,8 +36,8 @@ PENDING = {
             "15.179437 m3 SPLIT: valued at the 24 Checker-VERIFIED pits 12.734438 m3, FF raft held 2.256 .. 2.352 "
             "(at least 2.070, S08) and beyond the plot line held 0 .. 0.189 (S06) on their own lines; F10 + F range "
             "0.552 .. 0.590 -> 0.435 .. 0.590 (owner F10-alone scenario + S06 clip); ground-beam blinding netting "
-            "record (range unchanged); boundary-wall base blinding added HELD BLANK; every other V3.0.43 line "
-            "byte-identical; the Gate B integration package",
+            "record (range unchanged); boundary-wall base blinding added HELD BLANK; every other V3.0.44 line "
+            "byte-identical (rebased on the merged V3.0.44); the Gate B integration package",
 }
 PROPOSED = ("1.40.0 (T-478): moved by the pending ARCH_TAKEOFF_V3.0.45 package (Gate B); the released capability of "
             "V2.9 + route G is unchanged")
@@ -58,9 +58,9 @@ def build(task_commit):
     old = json.loads(OLD.read_text(encoding="utf-8"))
     new = copy.deepcopy(old)
     new["version"] = "1.40.0"
-    new["supersedes"] = ("1.38.0 (kept unchanged on disk; every family except B10-01, every released-configuration "
-                         "field and the pending entries up to T-350 copied unchanged)")
-    new["source"] = (str(old.get("source", "")) + " | 1.40.0 (T-478): 1.38.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 "
+    new["supersedes"] = ("1.39.0 (kept unchanged on disk; every family except B10-01, every released-configuration "
+                         "field and the pending entries up to T-422 copied unchanged)")
+    new["source"] = (str(old.get("source", "")) + " | 1.40.0 (T-478): 1.39.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 "
                      "of tools/family_master_candidate.py) + the family whose lines it splits, re-ranges or adds; no "
                      "candidate state changes")
     new["pending_packages"] = list(old.get("pending_packages") or []) + [dict(PENDING, task_commit=task_commit)]

@@ -17,14 +17,17 @@ def main(argv):
     run = json.loads((src / "V3_0_45_RUN.json").read_text(encoding="utf-8"))
     led = json.loads((src / "V3_0_45_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))
     rows = [{"line_id": r["line_id"], "action": r["action"], "element_id": r["element_id"],
-             "v2_9": r["before_released_v2_9"], "v3_0_43": r["before_base"], "v3_0_45": r["after_v3_0_45"],
+             "v2_9": r["before_released_v2_9"], "v3_0_44": r["before_base"], "v3_0_45": r["after_v3_0_45"],
              "evidence_status": r["evidence_status"], "still_held": r["still_held"]} for r in led["rows"]]
     lines = (src / "V3_0_45_BOQ_LINES.json").read_bytes()
+    base = (src / "V3_0_44_BOQ_LINES.json").read_bytes()
     out = {"method": run["method"], "extends": run["extends"], "released_default": run["released_default"],
+           "base_v3_0_44_lines_sha256": hashlib.sha256(base).hexdigest(),
            "v3_0_45_lines_sha256": hashlib.sha256(lines).hexdigest(),
            "identity": {k: run["identity"][k] for k in ("base_lines", "v3_0_45_lines", "replaced", "added",
                                                         "outside_rows", "outside_rows_identical_to_base",
-                                                        "outside_rows_sha256", "blinding", "earthworks", "diff")},
+                                                        "outside_rows_sha256", "blinding", "earthworks", "skirting",
+                                                        "diff")},
            "totals_moved_by_code": run["totals_moved_by_code"], "rows": rows, "plate": run["plate"],
            "waiting": {k: v for k, v in run["waiting_pieces"].items() if k.startswith("T478_")}}
     text = json.dumps(out, ensure_ascii=False, indent=1, sort_keys=True) + "\n"

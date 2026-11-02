@@ -1,8 +1,9 @@
 {
- "extends": "ARCH_TAKEOFF_V3.0.43",
+ "base_v3_0_44_lines_sha256": "8b2fe2b6cfcfcb848b98bf63ce8fd053f203291fc391d10f2fce506073ab7f81",
+ "extends": "ARCH_TAKEOFF_V3.0.44",
  "identity": {
   "added": 3,
-  "base_lines": 4857,
+  "base_lines": 4858,
   "blinding": {
    "added_held": 1,
    "netted": 1,
@@ -15,12 +16,12 @@
    "vs_base": {
     "ADDED": 3,
     "CHANGED": 3,
-    "SAME": 4854
+    "SAME": 4855
    },
    "vs_released_v2_9": {
-    "NOT_IN_RELEASED": 3270,
-    "QUANTITY_DIFFERS": 981,
-    "SAME_QUANTITY": 609
+    "NOT_IN_RELEASED": 3271,
+    "QUANTITY_DIFFERS": 990,
+    "SAME_QUANTITY": 600
    }
   },
   "earthworks": {
@@ -40,11 +41,18 @@
    ],
    "ranges_fixed": 2
   },
-  "outside_rows": 4854,
-  "outside_rows_identical_to_base": 4854,
-  "outside_rows_sha256": "1402fd42c6b2d44fdc46c1eb1a828c5b033df884a6cb63ee03253cc8f159a935",
+  "outside_rows": 4855,
+  "outside_rows_identical_to_base": 4855,
+  "outside_rows_sha256": "8d6fcc6ff2740cc9d4dcfd14767889e09326c9d142fda504eb211e93f9628f78",
   "replaced": 3,
-  "v3_0_45_lines": 4860
+  "skirting": {
+   "absorbed": 4,
+   "missing": 1,
+   "narrowed": 1,
+   "released_lines": 4,
+   "released_lm": 5.802094
+  },
+  "v3_0_45_lines": 4861
  },
  "method": "ARCH_TAKEOFF_V3.0.45",
  "plate": {
@@ -134,7 +142,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": null,
     "low": null,
     "state": "PROVISIONAL",
@@ -166,7 +174,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": null,
     "low": null,
     "state": null,
@@ -198,7 +206,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": null,
     "low": null,
     "state": null,
@@ -230,7 +238,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": 0.59,
     "low": 0.552,
     "state": "BOUNDED_EXPOSURE",
@@ -262,7 +270,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": 9.422514,
     "low": 4.949374,
     "state": "BOUNDED_EXPOSURE",
@@ -294,7 +302,7 @@
     "state": "NOT_IN_RELEASED",
     "value": null
    },
-   "v3_0_43": {
+   "v3_0_44": {
     "high": null,
     "low": null,
     "state": null,
@@ -328,7 +336,7 @@
    }
   }
  },
- "v3_0_45_lines_sha256": "e1f4310a7eef408c7de9e50c7f9913c1a6d18e83c25994767caa1d05bc7c54c2",
+ "v3_0_45_lines_sha256": "5972888b659e249bed995992f57f0042571d042b50e761cabcc4221d653451d8",
  "waiting": {
   "T478_BW_PAD_COUNT": "boundary-wall base blinding: pad count and spacing not printed (M2, RFI S04): the new line is HELD BLANK; per pad at least 1.30 x 0.90 x 0.10 = 0.117 m3 beside; the band between pads is not drawn on blinding",
   "T478_DOWNGRADE_RECORD": "DG-3521554d2fd011b9 (Checker, LINE_CONTENT_V1 binding on L-98eb2d58) held the whole footing-blinding line for its FF piece; after the SPLIT its content no longer exists (the line carries the 24 VERIFIED pits only, FF is its own held line): the Checker's downgrade check records it resolved by this split; the record file is not edited here (T-479 registry / verdict binding refresh)",
