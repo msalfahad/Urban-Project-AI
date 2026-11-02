@@ -42,6 +42,8 @@ ACCURATE_MODULES = (
     "engine/source/ground_system_spans_v2.py",  # T-141 ground-beam span splitter V2 + strap axis lengths (geometry only, no kg; opt-in, not wired)
     "engine/source/strap_beam_takeoff_v1.py",  # T-174 strap beams at the axis length (Q-74): concrete / bar runs / formwork / excavation; kg only through a passed-in unit mass; opt-in, not wired
     "engine/source/rebar_laps_v1.py",  # T-273 lap splices per bar group from the lap authority (owner count = split_run); kg only through rebar_unit_mass; opt-in, not wired
+    "engine/source/rebar_lap_rule_v2.py",  # T-459 lap length by element class + exact lap count per bar group (rebar_laps_v1 only; no kg; unwired producer)
+    "engine/source/rebar_basis_rules_v1.py",  # T-449 r2 drawing-derived bar populations count x length x unit mass, HELD ranges (stdlib only; unwired producer)
     "engine/source/beam_rebar_completeness.py",  # T-300 beam side bars / nested links / corner bars DETECTED / NOT_REQUIRED / UNRESOLVED; kg only from printed inputs through rebar_unit_mass; opt-in, not wired
     "engine/source/slab_rebar_readiness.py",    # PRE-S7 slab readiness (no kg)
     "engine/source/slab_qto_authority.py",      # AD2 / PRE-S7.1 slab QTO authority lanes (no kg)
@@ -255,4 +257,8 @@ OTHER_REBAR_AWARE = (
     # mapping (an element-count check); it imports only the standard library, reads no bar, writes no reinforcement
     # quantity, computes no kg and applies no ratio
     "engine/source/trade_completeness_v1.py",
+    # T-458: waterproofing policy V2 names 'rebar' only inside a SUPERSEDED evidence string (the import chain
+    # arch_v302 -> footing_rebar_population_v1 -> urban_methods_v3 -> urban_methods); it computes waterproofing areas
+    # only, writes no reinforcement quantity, computes no kg and applies no ratio
+    "engine/source/waterproofing_policy_v2.py",
 )
