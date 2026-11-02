@@ -3196,48 +3196,52 @@ def cmd_arch(a):
     # byte-identical, in V3_0_41_* files. Opt-in, not the released default; rollback = run V2.9. Named here, not at module
     # level: the released-path freeze index V2 (T-467) hashes this file's top-level statements; cmd_arch / main are hubs.
     V3041 = "ARCH_TAKEOFF_V3.0.41"
-    v3041 = a.method == V3041                 # T-431: the V3.0.40 run, then its V3.0.41 zone-extent floor piece
-    v3040 = a.method in (V3040, V3041)                 # T-430: the V3.0.39 run, then its V3.0.40 ground-beam run sections
-    v3039 = a.method in (V3039, V3040, V3041)                 # T-429: the V3.0.38 run, then its V3.0.39 tread / step binding
-    v3038 = a.method in (V3038, V3039, V3040, V3041)                 # T-421: the V3.0.37 run, then its V3.0.38 stair-room floors / lift marble
-    v3037 = a.method in (V3037, V3038, V3039, V3040, V3041)                 # T-420: the V3.0.36 run, then its V3.0.37 floor bed
-    v3036 = a.method in (V3036, V3037, V3038, V3039, V3040, V3041)                 # T-246: the V3.0.35 run, then its V3.0.36 deduction lists
-    v3035 = a.method in (V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-400: the V3.0.34 run, then its V3.0.35 boundary fence
-    v3034 = a.method in (V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-399: the V3.0.33 run, then its V3.0.34 tile zones
-    v3033 = a.method in (V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-397: the V3.0.32 run, then its V3.0.33 structural corrections
-    v3032 = a.method in (V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-284: the V3.0.31 run, then its V3.0.32 ceiling fill
-    v3031 = a.method in (V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                # T-328: the V3.0.30 run, then its V3.0.31 roof build-up
-    v3030 = a.method in (V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-199: the V3.0.29 run, then its V3.0.30 formwork / metalwork
-    v3029 = a.method in (V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-327: the V3.0.28 run, then its V3.0.29 sills / thresholds
-    v3028 = a.method in (V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-326: the V3.0.27 run, then its V3.0.28 opening reveal fill
-    v3027 = a.method in (V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-318: the V3.0.26 run, then its V3.0.27 slab bar-end split
-    v3026 = a.method in (V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-279: the V3.0.25 run, then its V3.0.26 blockwork fill
-    v3025 = a.method in (V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-343: the V3.0.24 run, then its V3.0.25 outdoor floor lines
-    v3024 = a.method in (V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-338: the V3.0.23 run, then its V3.0.24 line-state text
-    v3023 = a.method in (V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-319: the V3.0.22 run, then its V3.0.23 parapet RC family
-    v3022 = a.method in (V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-331: the V3.0.21 run, then its V3.0.22 wet-room plaster backing
-    v3021 = a.method in (V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-315: the V3.0.20 run, then its V3.0.21 wall-tile family
-    v3020 = a.method in (V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-244: the V3.0.19 run, then its V3.0.20 finish revision
-    v3019 = a.method in (V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
-    v3018 = a.method in (V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
-    v3017 = a.method in (V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
-    v3016 = a.method in (V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
-    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-270: the V3.0.14 run, then its V3.0.15 extension
-    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
-    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)          # T-268: the V3.0.12 run, then its V3.0.13 extension
-    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
-    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-239: the V3.0.10 run, then its V3.0.11 extension
-    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)        # T-232: the V3.0.9 run, then its V3.0.10 extension
-    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)          # T-211: the V3.0.8 run, then its V3.0.9 extension
-    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)    # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-167: the V3.0.3 run, then V3.0.4
-    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-151: the V3.0.2 run, then V3.0.3
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041)  # T-131: runs V2.13
+    # T-442: ARCH_TAKEOFF_V3.0.42 = the SAME candidate (engine.source.arch_v3042): a V3.0.41 run (its files unchanged) +
+    # the Checker-verified ground-slab panels (URBAN_V3042_INPUTS_V1); named here for the same reason as V3.0.41.
+    V3042 = "ARCH_TAKEOFF_V3.0.42"
+    v3042 = a.method == V3042                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
+    v3041 = a.method in (V3041, V3042)                 # T-431: the V3.0.40 run, then its V3.0.41 zone-extent floor piece
+    v3040 = a.method in (V3040, V3041, V3042)                 # T-430: the V3.0.39 run, then its V3.0.40 ground-beam run sections
+    v3039 = a.method in (V3039, V3040, V3041, V3042)                 # T-429: the V3.0.38 run, then its V3.0.39 tread / step binding
+    v3038 = a.method in (V3038, V3039, V3040, V3041, V3042)                 # T-421: the V3.0.37 run, then its V3.0.38 stair-room floors / lift marble
+    v3037 = a.method in (V3037, V3038, V3039, V3040, V3041, V3042)                 # T-420: the V3.0.36 run, then its V3.0.37 floor bed
+    v3036 = a.method in (V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-246: the V3.0.35 run, then its V3.0.36 deduction lists
+    v3035 = a.method in (V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-400: the V3.0.34 run, then its V3.0.35 boundary fence
+    v3034 = a.method in (V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-399: the V3.0.33 run, then its V3.0.34 tile zones
+    v3033 = a.method in (V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-397: the V3.0.32 run, then its V3.0.33 structural corrections
+    v3032 = a.method in (V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-284: the V3.0.31 run, then its V3.0.32 ceiling fill
+    v3031 = a.method in (V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                # T-328: the V3.0.30 run, then its V3.0.31 roof build-up
+    v3030 = a.method in (V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-199: the V3.0.29 run, then its V3.0.30 formwork / metalwork
+    v3029 = a.method in (V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-327: the V3.0.28 run, then its V3.0.29 sills / thresholds
+    v3028 = a.method in (V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-326: the V3.0.27 run, then its V3.0.28 opening reveal fill
+    v3027 = a.method in (V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-318: the V3.0.26 run, then its V3.0.27 slab bar-end split
+    v3026 = a.method in (V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-279: the V3.0.25 run, then its V3.0.26 blockwork fill
+    v3025 = a.method in (V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-343: the V3.0.24 run, then its V3.0.25 outdoor floor lines
+    v3024 = a.method in (V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-338: the V3.0.23 run, then its V3.0.24 line-state text
+    v3023 = a.method in (V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-319: the V3.0.22 run, then its V3.0.23 parapet RC family
+    v3022 = a.method in (V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-331: the V3.0.21 run, then its V3.0.22 wet-room plaster backing
+    v3021 = a.method in (V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-315: the V3.0.20 run, then its V3.0.21 wall-tile family
+    v3020 = a.method in (V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-244: the V3.0.19 run, then its V3.0.20 finish revision
+    v3019 = a.method in (V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
+    v3018 = a.method in (V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
+    v3017 = a.method in (V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
+    v3016 = a.method in (V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
+    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-270: the V3.0.14 run, then its V3.0.15 extension
+    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
+    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)          # T-268: the V3.0.12 run, then its V3.0.13 extension
+    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
+    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-239: the V3.0.10 run, then its V3.0.11 extension
+    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)        # T-232: the V3.0.9 run, then its V3.0.10 extension
+    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)          # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)    # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-167: the V3.0.3 run, then V3.0.4
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-151: the V3.0.2 run, then V3.0.3
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-142: V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042)  # T-131: runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3274,8 +3278,12 @@ def cmd_arch(a):
         raise SystemExit("--v3017-inputs needs --method ARCH_TAKEOFF_V3.0.17 or later")
     if getattr(a, "v3018_inputs", None) and not v3018:
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
+    if getattr(a, "v3042_inputs", None) and not v3042:
+        raise SystemExit("--v3042-inputs needs --method ARCH_TAKEOFF_V3.0.42")
+    if v3042 and not getattr(a, "v3042_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.42 needs --v3042-inputs (the ground-slab panel table, Checker-verified)")
     if getattr(a, "v3041_inputs", None) and not v3041:
-        raise SystemExit("--v3041-inputs needs --method ARCH_TAKEOFF_V3.0.41")
+        raise SystemExit("--v3041-inputs needs --method ARCH_TAKEOFF_V3.0.41 or later")
     if v3041 and not getattr(a, "v3041_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.41 needs --v3041-inputs (the zone-extent floor piece table, Checker-verified)")
     if getattr(a, "v3040_inputs", None) and not v3040:
@@ -4124,6 +4132,18 @@ def cmd_arch(a):
                                                                                                                                                             svgs += names41
                                                                                                                                                             v30rec = dict(v30rec, method=V3041, extends=V3040,
                                                                                                                                                                           identity=ident41, v3_0_40_identity=ident40)
+                                                                                                                                                        if v3042:
+                                                                                                                                                            # T-442: ARCH_TAKEOFF_V3.0.42 beside the V3_0_41_*
+                                                                                                                                                            from engine.source import arch_v3042 as A3042
+                                                                                                                                                            inp42 = A3042.load_inputs(json.loads(Path(
+                                                                                                                                                                a.v3042_inputs).read_text(encoding="utf-8")))
+                                                                                                                                                            l3041 = A3041.integrate(l3040, ch_v41, fl24)[0]
+                                                                                                                                                            ch_v42, log_v42 = A3042.changes_for(inp42, l3041)
+                                                                                                                                                            names42, ident42, _led42 = A3042.write(
+                                                                                                                                                                out, l3041, ch_v42, log_v42, released, fl24)
+                                                                                                                                                            svgs += names42
+                                                                                                                                                            v30rec = dict(v30rec, method=V3042, extends=V3041,
+                                                                                                                                                                          identity=ident42, v3_0_41_identity=ident41)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4273,7 +4293,8 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V3034 + CANDIDATE_EXTENSIONS_V3035 +
                    CANDIDATE_EXTENSIONS_V3036 + CANDIDATE_EXTENSIONS_V3037 + CANDIDATE_EXTENSIONS_V3038 +
                    CANDIDATE_EXTENSIONS_V3039 + CANDIDATE_EXTENSIONS_V3040 +
-                   ("ARCH_TAKEOFF_V3.0.41",),   # T-431 (the V3.0.41 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.41",) +   # T-431 (the V3.0.41 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.42",),   # T-442 (the V3.0.42 candidate; named in the hub, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4334,6 +4355,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
+    p.add_argument("--v3042-inputs", help="ARCH_TAKEOFF_V3.0.42 (URBAN_V3042_INPUTS_V1): Checker-verified ground-slab "
+                   "panels: a held slab cell valued at its re-measured panels x the printed T (shaft / ring named "
+                   "beside with their owners), a panel dropped as a stair zone added as one ground-slab line, cause "
+                   "texts naming the right designer item (no figure moves); every other V3.0.41 line byte-identical")
     p.add_argument("--v3041-inputs", help="ARCH_TAKEOFF_V3.0.41 (URBAN_V3041_INPUTS_V1): Checker-merged T-427 zone extent: "
                    "a piece cut off by a zone edge prolonged past its own drawn end becomes room "
                    "floor (one floor line, zone lines give the parts up by id, bed pair, skirting "
