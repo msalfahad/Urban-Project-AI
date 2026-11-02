@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02 20:14 UTC | Lead | STARTED | run session_01E6cPndQBbdi5ERUqjekRPB | repo-attached routine | task state: board | report pending
 - 2026-11-02T20:00Z | Worker 3 | SUCCESS | T-474 part 1 READY (agents/task-T-474 @ be354f35) | formwork census: 643 candidate lines mapped by id on own V3.0.43 repro 6f534d5e; B10-13 244 valued 1,027.977 m2 (V3.0.30 1,028.905; -0.928 = 10 DEPENDENT_HELD), B7-13 36.927 m2; 62 slab soffits 375.048 m2 on verified slab geometry V2-0c71eb8f (still CALCULATED); 388 held blank; findings: 4 beam lines 17.785 m2 on T-392-restated beams, registry B10-13/B7-13 candidate blocks stale; no quantity changed, freelancer has no formwork row | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-02T19:51Z | Verifier | STARTED | run session_01E6cPndRE72pRcJMvvKTxvG | repo-attached routine | task state: READY T-465 r3 per RUN_LOG | self-check pending
 - 2026-11-02T19:25Z | Worker 2 | SUCCESS | T-465 r3 READY (agents/task-T-465 @ baa3441d) | OPENING_HEIGHT_PDF_V2 now reads glyph boxes as V1/PyMuPDF: descriptor rule (positive Descent = below baseline, Ascent<=0 default, built-in by exact name), below-1-em quad correction, f32 line dir; real set words 36/36 equal (was 0/36, max 9.27 pt), segments 660,238 equal; 54 new oracle tests (44 fail on r2); L4: 5 import-rule ids green, no new failure; no BOQ quantity moves; F-T465-1 stays owner item | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
