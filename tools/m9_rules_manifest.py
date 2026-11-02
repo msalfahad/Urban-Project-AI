@@ -63,6 +63,7 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.33.0.json",   # T-421: 1.32.0 + the pending V3.0.38 package + owners of its codes (B3-01, B6-06, B6-07); read by no method
             "coverage/BOQ_FAMILY_MASTER_1.34.0.json",   # T-429: 1.33.0 + the pending V3.0.39 package (B7-02 / B7-03 / B7-06 rebound; no family owner change); read by no method
             "coverage/BOQ_FAMILY_MASTER_1.35.0.json",   # T-430: 1.34.0 + the pending V3.0.40 package (B10-04 ground beams split per run / held; no family owner change); read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.36.0.json",   # T-431: 1.35.0 + the pending V3.0.41 package (B3-01 / B2-02 / B3-05 / B3-06 / B5-01 / B4-06 / B5-04 evidence and text; no owner change); read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json")   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
