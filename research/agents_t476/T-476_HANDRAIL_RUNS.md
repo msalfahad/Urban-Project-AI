@@ -77,7 +77,9 @@ horizontal 2.400 already in B13-08); RS-C 'outer OPEN' would bill the UNKNOWN RL
 - **RL-11 E1 entrance stair**, both sides: 0.85 m rise, no guard drawn (render shows one): designer item.
 - **F-T476-1 (new)**: GF east-lane well band 47F / 4A4 (solid, layer 5) is 2.750 / 2.800 m long, D1's pitch line covers
   0.900 m of it; 1.875 m (centreline plan) beyond D1 along the well is in no run. Whether D1's rail continues along the
-  east lane at +1.00 or the band is a drafting edge is not printed. UNKNOWN, no figure, no line (same class as T-393
+  east lane at +1.00 or the band is a drafting edge is not printed. Section A-A (sheet10, rendered 200 dpi) was read for
+  it: beside the +0.30 lobby it draws a short element with vertical lines at the D1 position and no rail continuing at
+  +1.00; that does not settle what the 1.875 m of plan band is. UNKNOWN, no figure, no line (same class as T-393
   GF-EXT); RFI below.
 - B13-08: RL-04 (balcony edge) and RL-10 (fence railing) HELD as before.
 
