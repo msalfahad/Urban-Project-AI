@@ -1,16 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 00:20 UTC (Lead). Previous version: 2026-11-01 20:17 UTC. The released numbers did not change
+Last update: 2026-11-02 04:15 UTC (Lead). Previous version: 2026-11-02 00:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.40 (not released): V3.0.39 plus the ground-beam section correction.
+released: 0. The footing line is now checked footing by footing: 25 of 26 agree exactly (64.30 m3); the last one waits
+on the designer, so the line is partially verified, not verified. The candidate under review is still V3.0.40.
 
-Your 2 Nov directive is in force: the team now works in your order. First, protection: the released version locked by
-file hashes, tests that mean something on a clean copy, the drawing-file gap in the ignore list, and two suspected
-calculation defects reproduced before anyone fixes them. In parallel: the per-project facts file (so the engine stops
-carrying training-villa values), a fresh full score in your eight categories, and the checker's line-by-line
-verification of concrete, then reinforcement, then blockwork. Materials and pricing come after. Lines already verified
-keep flowing into the candidate one at a time.
+Your 2 Nov directive is in force. Overnight the protection work landed: the released version is now locked by file
+hashes (the checker tried one-byte changes himself and each one was caught), drawing files can no longer slip into the
+repository under an upper-case name, and tests that need your private files now say 'skipped, private data not
+available' instead of failing, so a red test on a clean copy means something is wrong. The per-project facts file
+exists (format and loader, nothing wired yet). One test broke because it reads the live board instead of a fixed copy;
+fixing it is now the first job for the structural worker after his current one.
+
+Since 2 Nov 00:20 (newest first; six checked and merged, all on the first pass; one integration waiting for the
+checker):
+- Tests that need private files: CHECKED AND MERGED. 390 tests now skip with a reason on a clean copy instead of
+  failing; on a machine that holds the files nothing changes.
+- Per-project facts file (format and loader): CHECKED AND MERGED. A value must carry its unit, source, drawing
+  reference and approval; a missing or pending value is held, never 0; freelancer figures are refused as a source.
+  Moving the training-villa values into it comes next, trade by trade (concrete first).
+- Released version hash lock: CHECKED AND MERGED. Every file of the released path is now fingerprinted.
+- Drawing files in the repository: CHECKED AND MERGED. Upper-case and extension-less drawing names are ignored; the two
+  drawings already in the repository are pinned until you decide the move.
+- Stair-room skirting faces and the ceiling / skirting completeness check: CHECKED AND MERGED (no new gap).
+- Footings, checked line by line by the checker: 25 footings 64.30 m3 equal the engine to 0.0 %; footing F10 stays held
+  (2.18 .. 2.28 m3) until the designer answers.
+- Waiting for the checker: the dining floor strip along the south facade with its ceiling into the candidate (+5.65 m2
+  dry floor, +3.90 m.l skirting).
 
 Since 1 Nov 20:17 (newest first; four checked and merged, all on the first pass, one of them an integration into the
 candidate; two pieces waiting for the checker):

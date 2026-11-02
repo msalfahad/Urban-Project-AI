@@ -46,7 +46,20 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-30 12:40; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-11-02 04:15; re-estimated each run from what merged and was verified)
+
+- Owner 2 Nov gates govern the order (MISSION 'Owner decisions 2026-11-02'). Gate 0 (protection): T-467 hash lock,
+  T-470 ignore rules and T-462 private-input skips MERGED overnight; open: T-458 (CLAIMED), T-473 (gate fix, new),
+  T-465, T-463 -> T-464, T-456 reproduction, then T-466. Gate 1: T-450 part 1 MERGED; T-469 eight-category score and
+  T-449 round 1 (concrete) released; T-180 Checker stream: CONC.SLAB VERIFIED (candidate), CONC.FOOTING PARTIALLY
+  VERIFIED 25 / 26 (F10 on S3).
+- Week 2 target (3 Nov, measurable increase in verified coverage): whole verified lines 1 -> 1 (footing line partial);
+  NOT MET on whole lines unless a second line closes today; verified components grew (25 footings).
+- Candidate of record V3.0.40 aa6aa927 (NOT RELEASED); V3.0.41 (T-431 dining strip) waits for Gate B.
+- Weeks 3-4 (19 Nov full-villa candidate for the principal trades): at risk on the consultant items (D-16, D-33, D-34,
+  D-35, D-43) and on the Gate 0 / Gate 1 work taking worker slots before architectural pieces.
+
+### Earlier status (Lead, 2026-10-30 12:40; re-estimated each run from what merged and was verified)
 
 Lead 2026-11-02 00:20: since 20:17 MERGED four rows, all first pass: T-437 (other unexplained concrete: ENGINE_RIGHT -0.596 / UNRESOLVED -0.438 m3), T-439 (pantry strips), T-430 GATE B (CANDIDATE OF RECORD V3.0.40 aa6aa927: ground beams 29.569 -> 26.857 m3), T-444 (lift-shaft slab cell 3.561 m3, checker re-measured all four panels); READY 2 (T-446, T-447). PLAN CHANGE (owner directive, follow-up and decisions 2026-11-02): the remaining days of this plan run by the owner's gates, not by the week tables above: Gate 0 (T-467 V2.9 hash lock, T-462 .. T-466 tests, T-470 ignore list, T-456 / T-458 reproduce) first; Gate 1 in two streams (generalisation T-450 part 1 -> T-449 by trade + T-452; verification T-180 concrete -> rebar -> blockwork + T-469 eight-category score + T-471 completeness matrix); Gate 2 materials (T-448, T-453 .. T-455); Gate 3 (T-451, T-468, T-472). Verified-line integration continues one lane I row at a time (T-431, then T-442 slab panels +4.389 m3). Estimate: Gate 0 rows need about 8 - 10 worker runs + Checker Gate A each, so Gate 0 closes about 3 - 4 Nov if each passes first time; M3 (11 Nov) on track but watched, M4 (25 Nov) at risk on consultant items. Headline measure from now: independently closed whole lines (1 today, the concrete slab).
 

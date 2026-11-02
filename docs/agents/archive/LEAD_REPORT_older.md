@@ -1,3 +1,89 @@
+## LEAD REPORT 2026-11-01 16:20 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+1 Nov 12:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch 65ce8f6d -> 8a0164b2 (Checker 'engine push' merges of four rows); no
+owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since
+31 Oct; nothing undone.
+
+HEADLINE: four pieces checked and merged in four hours, all first pass; the candidate moved to V3.0.38 (stair-room
+floors and lift door marble; eleventh Gate B first pass in a row). The unexplained structural concrete against the
+freelancer halved (-11.57 -> -5.17 m3) and every remaining unexplained part now has a task. No new owner decision; the
+privacy item is still open (NEEDS FIXING 1).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.38, NOT RELEASED):
+- FLOORS, DRY (m2; Gate B PASS 15:43): stair-room floors GF 4.805 + 1.3225 m2 (material HELD) and 2F lobby 2.200 m2 net
+  porcelain added; landing bounds 9.050 -> 2.9225 and 11.725 -> 9.225 m2 in the same step (0 overlap, Checker's own
+  polygon test). Dry floor vs freelancer -41.70 m2 (-12.35 %), was -49.42 (-14.64 %). Still to come: the dining strip
+  +5.645 m2 (T-431), then the rest is RULE_DIFFERENCE (pantry wet by Q-37 A, treads in B7) and HELD.
+- LIFT FINISHES (m2 / m.l): threshold marble B6-07 1.500 m2 / 3.000 m.l (depth ASSUMED — OWNER-APPROVED UP-ELEV-005);
+  surround B6-06 HELD 2.750 .. 13.980 m2 (door height not printed); GF / 1F porcelain -0.300 m2 each, 0 .. 0.200 HELD.
+- CONCRETE ROLL-UP (m3; MERGED 13:55): residual -122.900 unchanged = traced -1.300 / HELD -116.428 / unexplained -5.172
+  (was +4.128 / -115.460 / -11.568). Unexplained by owner: ST-02 curved stair -2.476 (T-432: UNRESOLVED), ground slab
+  -1.561 (T-436 new), pool walls / beam lengths / boundary -1.034 (T-437 new), C9 -0.138 (designer). Engine-side
+  register beside it: 0.423 m3 GB section VERIFIED WRONG (the freelancer made the same error, so the residual hid it);
+  GB-MAIN as is -10.355, after the T-430 correction -12.155 (scope s.6 (1)) / -14.219 (whole row).
+- STAIRS, CONCRETE (m3; MERGED 15:47): the freelancer's ST-02 length 16.4 m is a typed constant; 49 constructions of the
+  drawn stair tested, none within his 0.05 m band (developed profile 13.422, nearest 16.496 not taken): -2.476 m3 stays
+  UNRESOLVED, engine line unchanged (rests on the drawing). New conflict found: the architectural GF frame draws the
+  straight part with 27 risers, ST p.4 and the 1F frame 28 (T-438; D-68 draft, not for sending).
+- STAIRS, FINISHES (pcs / m.l; MERGED 14:00): GF winder turn = 5 risers (section A-A, Q-46 A; Checker read 0.1667 m per
+  riser on the section). Landing nosing 1.150 m.l DRAWING-CONFIRMED (nosing 87.350 -> 88.500 m.l, +1.32 %); 4 winder
+  fronts and the turn marble HELD (subdivision not drawn, D-67), 4.144 m.l / 1.495 m2 beside. 1F F5 candidate line 4 vs
+  5 treads ENGINE_WRONG -1 piece (held). Freelancer 63 vs drawn 56 pieces: ENGINE_RIGHT 56, +7 cause not proven.
+- CEILINGS / SKIRTING (m2 / m.l; READY, not yet checked): of 43 floored spaces, 3 SILENT ceilings 7.345 m2 (dining strip
+  5.645 m2 has no FIN.CEILING line at all; pantry strips 1.100 + 0.600), 3 SILENT skirting (dining 3.90 m.l planned in
+  T-431; 2 strips UNKNOWN); 0 double owned. Possible skirting over-count on wet pantry walls (T-440).
+- ROOF, FORMWORK, TILES, SANITARY, RAILINGS, FENCE, FLOOR BED: no candidate change since 12:20.
+Development project 2: paused, not measured.
+
+WHAT IMPROVED / WHY: stair-room floors and lift marble are lines in the candidate; dry floor gap -14.64 -> -12.35 %;
+unexplained concrete -11.57 -> -5.17 m3 by tracing ST-01 and the GB terms; winder count settled by an answered rule.
+WHAT GOT WORSE: nothing measured moved the wrong way; two more valued-line defects are known (dining ceiling missing
+-5.645 m2 surface; 1F F5 -1 piece, held), each with its lane I row. WHAT WAS LEARNED (lessons register, 3 rows adopted):
+a governing drawing is named by an answered rule and confirmed on every check, never by best fit; a convention exact on
+one row is re-tested per row; a roll-up keeps an engine-side register beside the residual (an error both sides share
+shows as AGREE). WHAT IS MISSING in the candidate: tread double-count correction (next), GB section correction, dining
+strip + ceiling, lift tie beam, block below the house beams, skirting release, nosing, WP fixes, exterior plaster,
+earthworks, foundation WP, masonry accessories (lane I order). GATES: gate 1 no open item; gate 2: three corrections
+queued (T-429 now, T-430, T-431); reconciliation gate 3. Milestones: M3 11 Nov on track; M4 25 Nov at risk on consultant
+items (D-16, D-33, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: T-429 TODO first in lane I (T-421 merged), acceptance extended with the T-434 lane I items; T-433
+TODO first in lane S on the r4 HELD -116.428339 m3; T-431 acceptance now CREATES the dining ceiling line (binding once the
+T-435 verdict confirms it). NEW: T-436 (S: ground-slab unexplained -1.561 m3), T-437 (S: other unexplained -1.034 m3),
+T-438 (S: ST-02 straight-part conflict), T-439 (A: pantry strips, after T-435), T-440 (A: wet pantry faces in skirting
+L-71e2e002), T-441 (A: stair-room skirting wall faces). Designer list: D-67 (winder subdivision), D-68 (draft). Element
+register: MAIN STAIR GF WINDER TURN; CURVED STAIR ST-02 STRAIGHT PART (conflict); FLOORED SPACE DERIVED LAYERS
+(provisional). VERIFIER QUEUE: scoreboard restate on V3.0.38, then Gate A T-435 (in the open 15:52 run), Gate B T-429
+when READY, then T-433 and the new pieces. Queue check: 51 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 4,
+A 2 (+1 queued), I 1 (serial, 14 queued behind it); READY 1.
+
+LESSONS ROWS ADOPTED (ERS s.7): T-434 governing drawing; T-432 convention re-tested per row; T-428 engine-side register.
+
+TEAM HEALTH (12:20 - 16:20): every STARTED line has a final line except the Checker's 15:52 run, still inside its hour
+(Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x3 closed); all self-checks PASS; scheduler last runs SUCCEEDED (Worker 2
+14:39, Worker 3 14:59, Dashboard 12:55, Main 04:31). No refusal. Throughput: 4 merges, 0 rejections, READY never above
+2. One idle slot: Worker 1 at 15:21 had nothing to claim: T-433's dependency had merged at 13:55 but the row waits for a
+Lead run to become TODO (4 h cadence). Fixed for now by giving lanes S and A independent rows (4 and 2). One stamp ahead
+of the clock (Worker 2 T-435 READY cell 16:00 vs its 15:44 RUN_LOG line). Scout paused (your 28 Oct choice).
+
+OWNER PACKAGE (unchanged, no new engineering decision under ERS s.2.7):
+- T-383 waterproofing completeness join (your 31 Oct item 5): own row (A, recommended) vs inside T-310 (B); full ERS s.6
+  text in my 31 Oct 00:45 report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
+- Q-78 (mix for the black block-joint mortar) still open, not urgent.
+
+NEEDS FIXING (only you / the main chat can do it):
+1. PRIVACY (Checker O-T407-2, open since 1 Nov 04:15): the frozen tracked file tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json
+   in this PUBLIC repository carries personal data from the freelancer workbook header (since 3 Oct). Agents may not edit
+   a frozen file or rewrite history; every hand-in forbids copying from it. Needs your decision (remove / replace the
+   file in a new commit, and whether history must be purged).
+2. Dependent rows wait for a Lead run: a one-line worker-prompt addition ('a QUEUED row whose only blocker is "after
+   T-xxx MERGED" may be claimed once the board shows T-xxx MERGED') would remove the idle slots; worker prompts are the
+   main chat's. Stamps ahead of the clock (1 this window): the 'stamp from `date -u` at the moment of writing' line too.
+3. RFI evidence register stays PARKED (public-repo refusal), unchanged.
+
 ## LEAD REPORT 2026-11-01 12:20 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
