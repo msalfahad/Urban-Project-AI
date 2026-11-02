@@ -1,0 +1,49 @@
+{
+ "schema": "T459_LAP_CENSUS_V1:CANDIDATE_BINDING",
+ "extract": "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json",
+ "extract_candidate": "ARCH_TAKEOFF_V3.0.16",
+ "extract_sha256": "2f28367b81fe362d98d8a97080adb62cfd9a3c0a880fc20d201735e6eba39760",
+ "lap_convention_lines": {
+  "COLUMN_LAP_D|BLOCKED_RFI|COLUMNS": {
+   "lines": 28,
+   "with_quantity": 0,
+   "notes_superseded": 0
+  },
+  "COLUMN_LAP_D|NOT_APPLICABLE_WITH_EVIDENCE|COLUMNS": {
+   "lines": 61,
+   "with_quantity": 0,
+   "notes_superseded": 56
+  }
+ },
+ "lap_convention_lines_with_quantity": 0,
+ "later_steps_tokens": {
+  "engine/source/arch_v3017.py": [],
+  "engine/source/arch_v3018.py": [],
+  "engine/source/arch_v3019.py": [],
+  "engine/source/arch_v3020.py": [],
+  "engine/source/arch_v3021.py": [],
+  "engine/source/arch_v3022.py": [],
+  "engine/source/arch_v3023.py": [],
+  "engine/source/arch_v3024.py": [],
+  "engine/source/arch_v3025.py": [],
+  "engine/source/arch_v3026.py": [],
+  "engine/source/arch_v3027.py": [],
+  "engine/source/arch_v3028.py": [],
+  "engine/source/arch_v3029.py": [],
+  "engine/source/arch_v3030.py": [],
+  "engine/source/arch_v3031.py": [],
+  "engine/source/arch_v3032.py": [],
+  "engine/source/arch_v3033.py": [],
+  "engine/source/arch_v3034.py": [],
+  "engine/source/arch_v3035.py": [],
+  "engine/source/arch_v3036.py": [],
+  "engine/source/arch_v3037.py": [],
+  "engine/source/arch_v3038.py": [],
+  "engine/source/arch_v3039.py": [],
+  "engine/source/arch_v3040.py": [],
+  "engine/source/arch_v3041.py": [],
+  "engine/source/arch_v3042.py": [],
+  "engine/source/arch_v3043.py": []
+ },
+ "later_steps_touching": []
+}

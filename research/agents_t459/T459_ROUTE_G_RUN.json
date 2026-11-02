@@ -1,0 +1,211 @@
+{
+ "schema": "T459_LAP_CENSUS_V1:ROUTE_G_RUN",
+ "structural_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "profile": "research/urban_engine_m4_correctness/profile_st7757_m4.json",
+ "conventions": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+ "scenario": "V6 with BEAM_LAP_D = 60 / 60 / 60 and COLUMN_LAP_D = 40 / 40 / 40 (REBAR_LAP_RULE_V2 owner classes) + the continuous-beam count replaced by ceil((L - S) / (S - lap)); in memory only",
+ "reinforcement_items": 676,
+ "items_changed": 89,
+ "families_changed": [
+  "COLUMNS"
+ ],
+ "bar_length_census": {
+  "mass_kg_calls": 82057,
+  "longest_bar_m": 9.6,
+  "bars_over_stock_12m": 0,
+  "over_stock_callers": [],
+  "by_caller": {
+   "<genexpr>": {
+    "calls": 28578,
+    "max_length_m": 9.6
+   },
+   "<listcomp>": {
+    "calls": 15660,
+    "max_length_m": 5.46
+   },
+   "_beam_bars": {
+    "calls": 16255,
+    "max_length_m": 9.6
+   },
+   "_footing_bars": {
+    "calls": 12960,
+    "max_length_m": 4.877938
+   },
+   "_neck_items": {
+    "calls": 2016,
+    "max_length_m": 3.5
+   },
+   "items_from": {
+    "calls": 6588,
+    "max_length_m": 2.629912
+   }
+  },
+  "cb_with_laps_calls": 4752,
+  "cb_longest_run_m": 8.483269,
+  "cb_runs_over_stock": 0,
+  "cb_lengths_that_change_by_count_or_lap": 0
+ },
+ "totals_kg": {
+  "before_low": 20925.180774,
+  "before_base": 23032.514239,
+  "before_high": 24939.804245,
+  "after_low": 20925.180774,
+  "after_base": 22831.253993,
+  "after_high": 24537.283751,
+  "delta_base": -201.260246
+ },
+ "by_family_storey": {
+  "BEAMS|1F": {
+   "items": 124,
+   "changed": 0,
+   "before_base_kg": 2919.661359,
+   "after_base_kg": 2919.661359,
+   "before_low_kg": 2328.072961,
+   "after_low_kg": 2328.072961,
+   "before_high_kg": 3152.254378,
+   "after_high_kg": 3152.254378,
+   "delta_base_kg": 0.0
+  },
+  "BEAMS|2F": {
+   "items": 45,
+   "changed": 0,
+   "before_base_kg": 581.553733,
+   "after_base_kg": 581.553733,
+   "before_low_kg": 438.189624,
+   "after_low_kg": 438.189624,
+   "before_high_kg": 618.433456,
+   "after_high_kg": 618.433456,
+   "delta_base_kg": 0.0
+  },
+  "BEAMS|GF": {
+   "items": 197,
+   "changed": 0,
+   "before_base_kg": 4859.128505,
+   "after_base_kg": 4859.128505,
+   "before_low_kg": 3971.32973,
+   "after_low_kg": 3971.32973,
+   "before_high_kg": 5087.122665,
+   "after_high_kg": 5087.122665,
+   "delta_base_kg": 0.0
+  },
+  "COLUMNS|1F": {
+   "items": 38,
+   "changed": 19,
+   "before_base_kg": 1548.683743,
+   "after_base_kg": 1507.723743,
+   "before_low_kg": 1492.591299,
+   "after_low_kg": 1492.591299,
+   "before_high_kg": 1612.34241,
+   "after_high_kg": 1530.42241,
+   "delta_base_kg": -40.96
+  },
+  "COLUMNS|2F": {
+   "items": 24,
+   "changed": 12,
+   "before_base_kg": 784.607328,
+   "after_base_kg": 764.380168,
+   "before_low_kg": 754.822835,
+   "after_low_kg": 754.822835,
+   "before_high_kg": 819.170489,
+   "after_high_kg": 778.716168,
+   "delta_base_kg": -20.22716
+  },
+  "COLUMNS|FOUNDATION": {
+   "items": 56,
+   "changed": 28,
+   "before_base_kg": 1428.571108,
+   "after_base_kg": 1360.810121,
+   "before_low_kg": 1349.934861,
+   "after_low_kg": 1349.934861,
+   "before_high_kg": 1784.175882,
+   "after_high_kg": 1648.653907,
+   "delta_base_kg": -67.760987
+  },
+  "COLUMNS|GF": {
+   "items": 60,
+   "changed": 30,
+   "before_base_kg": 2889.176684,
+   "after_base_kg": 2816.864585,
+   "before_low_kg": 2791.264585,
+   "after_low_kg": 2791.264585,
+   "before_high_kg": 2999.888783,
+   "after_high_kg": 2855.264585,
+   "delta_base_kg": -72.312099
+  },
+  "FOOTINGS|FOUNDATION": {
+   "items": 27,
+   "changed": 0,
+   "before_base_kg": 3735.907407,
+   "after_base_kg": 3735.907407,
+   "before_low_kg": 3672.152963,
+   "after_low_kg": 3672.152963,
+   "before_high_kg": 4207.536141,
+   "after_high_kg": 4207.536141,
+   "delta_base_kg": 0.0
+  },
+  "GROUND_BEAMS|FOUNDATION": {
+   "items": 9,
+   "changed": 0,
+   "before_base_kg": 636.634161,
+   "after_base_kg": 636.634161,
+   "before_low_kg": 478.231705,
+   "after_low_kg": 478.231705,
+   "before_high_kg": 676.606666,
+   "after_high_kg": 676.606666,
+   "delta_base_kg": 0.0
+  },
+  "GROUND_SLAB|GROUND": {
+   "items": 24,
+   "changed": 0,
+   "before_base_kg": 1064.239762,
+   "after_base_kg": 1064.239762,
+   "before_low_kg": 1064.239762,
+   "after_low_kg": 1064.239762,
+   "before_high_kg": 1064.239762,
+   "after_high_kg": 1064.239762,
+   "delta_base_kg": 0.0
+  },
+  "SLABS|1F": {
+   "items": 21,
+   "changed": 0,
+   "before_base_kg": 794.363828,
+   "after_base_kg": 794.363828,
+   "before_low_kg": 794.363828,
+   "after_low_kg": 794.363828,
+   "before_high_kg": 884.646426,
+   "after_high_kg": 884.646426,
+   "delta_base_kg": 0.0
+  },
+  "SLABS|2F": {
+   "items": 10,
+   "changed": 0,
+   "before_base_kg": 355.699877,
+   "after_base_kg": 355.699877,
+   "before_low_kg": 355.699877,
+   "after_low_kg": 355.699877,
+   "before_high_kg": 412.277654,
+   "after_high_kg": 412.277654,
+   "delta_base_kg": 0.0
+  },
+  "SLABS|GF": {
+   "items": 41,
+   "changed": 0,
+   "before_base_kg": 1434.286744,
+   "after_base_kg": 1434.286744,
+   "before_low_kg": 1434.286744,
+   "after_low_kg": 1434.286744,
+   "before_high_kg": 1621.109533,
+   "after_high_kg": 1621.109533,
+   "delta_base_kg": 0.0
+  }
+ },
+ "totals_t": {
+  "before_low": 20.925181,
+  "before_base": 23.032514,
+  "before_high": 24.939804,
+  "after_low": 20.925181,
+  "after_base": 22.831254,
+  "after_high": 24.537284,
+  "delta_base": -0.20126
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "version": "ARCH_TAKEOFF_V3.0.42",
+ "source": "research/agents_t442/summary_t442.json totals_moved_by_code (T-442 Gate B MERGED; the only code whose totals moved vs V3.0.41: code_totals_check)",
+ "rows": [
+  {
+   "item_code": "STR.CONC.GROUND_SLAB",
+   "unit": "m3",
+   "released_lines": 26,
+   "verified_whole_lines": 0,
+   "released_qty": 21.638458,
+   "held_lines": 0,
+   "held_unknown_lines": 0,
+   "held_low": 0.0,
+   "held_high": 0.0,
+   "excluded_lines": 0
+  }
+ ]
+}
