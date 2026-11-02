@@ -481,7 +481,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_concrete_geometry.py` | 82 | MEDIUM | 1 | COLUMN_CONCRETE_GEOMETRY - column concrete independent of column reinforcement (generic). |
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `column_schedule_text_rows.py` | 485 | MEDIUM | 2 | SCHEDULE TEXT ROWS (V1) - schedule rows drawn as plain TEXT / MTEXT inside a block-attribute table, and struck-out |
-| `company_rulebook_v1.py` | 351 | MEDIUM | 1 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
+| `company_rulebook_v1.py` | 356 | MEDIUM | 1 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
 | `concrete_basis_rules_v1.py` | 220 | MEDIUM | 1 | CONCRETE_BASIS_RULES_V1: drawing-derived concrete basis rules (A1 class A, T-449 round 1 = concrete). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |

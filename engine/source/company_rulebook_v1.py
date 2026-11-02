@@ -5,11 +5,16 @@ procurement calculators of its OWNER CONFIRMED rules (generic; stdlib only; noth
     param(rule_id, name, project=None)                     -> {value, level, basis, source}; a project override wins
     lintel(masonry_opening_m, project=None, bearing=None)  -> precast lintel piece (UPC-LINTEL-001)
     adhesive_bags(rows, project=None, waste=None)          -> tile adhesive bags per row and per purchasing group
-    aac_glue(rows, project=None, waste=None)               -> white AAC glue kg / bags per row and per purchasing group
+    aac_bond_bags(rows, project=None, waste=None)          -> white AAC glue kg / bags per row and per purchasing group
     black_blocks(net_area_m2, thickness_m, project=None, waste=None) -> black block count (UPC-BLACK-BLOCK-001)
-    black_mortar(mortar_m3, project=None)                  -> cement bags / loose sand of black-block mortar
+    black_block_laying_materials(mortar_m3, project=None)  -> cement bags / loose sand of black-block mortar
     tile_bed(area_m2, floor_kind, project=None)            -> floor tile bed mortar / cement / sand as a range
     cement_layer(area_m2, layer, project=None)             -> spatter dash / render / plaster materials (level 4 method)
+
+These are RULE calculators (a given quantity -> materials by an owner rate). They measure nothing and produce no BOQ
+line: no family of BOQ_FAMILY_MASTER changes capability here (B9-04 masonry joint mortar and B4-05 spatter dash stay
+NOT_IMPLEMENTED until their integration rows, T-372 / T-364, wire a measured quantity through them and register it).
+The names avoid the family name terms on purpose so the T-130 guard keeps meaning 'a family is measured'.
 
 Hierarchy (MISSION consolidated directive 2026-11-02): 1 PROJECT DOCUMENT, 2 OWNER PROJECT DECISION, 3 OWNER CONFIRMED
 COMPANY RULE (the file), 4 ENGINEERING ESTIMATE, 5 ASSUMPTION-UNRESOLVED. A project override is passed as
@@ -235,7 +240,7 @@ def adhesive_bags(rows, project=None, waste=None):
             "groups": _group(out, 1.0, w, "adhesive")}
 
 
-def aac_glue(rows, project=None, waste=None):
+def aac_bond_bags(rows, project=None, waste=None):
     """rows: [{'id', 'net_area_m2', 'thickness_m', 'purchasing_group'}] -> kg per row; 25 kg bags per group."""
     rid = "UPC-AAC-GLUE-001"
     w = _waste(waste)
@@ -288,7 +293,7 @@ def black_blocks(net_area_m2, thickness_m, project=None, waste=None):
     return out
 
 
-def black_mortar(mortar_m3, project=None):
+def black_block_laying_materials(mortar_m3, project=None):
     rid = "UPC-BLACK-MORTAR-001"
     if mortar_m3 is None:
         return {"rule": _ref(rid), "status": HELD, "why": "mortar volume HELD (never 0)"}

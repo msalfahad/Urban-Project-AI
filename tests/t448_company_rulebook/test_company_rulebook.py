@@ -166,19 +166,19 @@ def test_waste_kept_separate_and_only_with_a_source():
 
 # ---------------------------------------------------------------- AAC glue, black block, mortar, bed
 
-def test_aac_glue_20_m2_of_20_cm_is_90_kg_and_4_bags():
-    g = C.aac_glue([{"id": "w1", "net_area_m2": 20.0, "thickness_m": 0.20}])["groups"]["PROJECT"]
+def test_aac_bond_bags_20_m2_of_20_cm_is_90_kg_and_4_bags():
+    g = C.aac_bond_bags([{"id": "w1", "net_area_m2": 20.0, "thickness_m": 0.20}])["groups"]["PROJECT"]
     assert (g["consumption_known"], g["bags_net"], g["bags_to_buy"]) == (90.0, 3.6, 4)
-    g15 = C.aac_glue([{"id": "w2", "net_area_m2": 50.0, "thickness_m": 0.15}])["groups"]["PROJECT"]
+    g15 = C.aac_bond_bags([{"id": "w2", "net_area_m2": 50.0, "thickness_m": 0.15}])["groups"]["PROJECT"]
     assert (g15["consumption_known"], g15["bags_to_buy"]) == (175.0, 7)                # 7.0 bags exactly
 
 
-def test_aac_glue_adverse_other_thickness_and_missing_area_held():
-    res = C.aac_glue([{"id": "a", "net_area_m2": 10.0, "thickness_m": 0.10},
+def test_aac_bond_bags_adverse_other_thickness_and_missing_area_held():
+    res = C.aac_bond_bags([{"id": "a", "net_area_m2": 10.0, "thickness_m": 0.10},
                       {"id": "b", "net_area_m2": 10.0, "thickness_m": 0.20}])
     assert res["rows"][0]["status"] == "HELD" and res["groups"]["PROJECT"]["status"] == "HELD"
     assert res["groups"]["PROJECT"]["consumption_known"] == 45.0
-    assert C.aac_glue([{"id": "c", "net_area_m2": None, "thickness_m": 0.20}])["groups"]["PROJECT"]["bags_to_buy"] is None
+    assert C.aac_bond_bags([{"id": "c", "net_area_m2": None, "thickness_m": 0.20}])["groups"]["PROJECT"]["bags_to_buy"] is None
 
 
 def test_black_blocks_12_5_only_for_the_confirmed_40x20_module():
@@ -196,14 +196,14 @@ def test_black_blocks_12_5_only_for_the_confirmed_40x20_module():
     assert C.black_blocks(None, 0.20)["status"] == "HELD"
 
 
-def test_black_mortar_and_tile_bed_ranges():
-    m = C.black_mortar(2.0)
+def test_black_block_laying_materials_and_tile_bed_ranges():
+    m = C.black_block_laying_materials(2.0)
     assert (m["mix"], m["cement_bags"], m["sand_m3_loose"]) == ("1:4", 16.0, 2.2)
     b = C.tile_bed(10.0, "WET")
     assert b["mortar_m3"] == (0.4, 0.6) and b["cement_bags"] == (3.2, 4.8) and b["sand_m3_loose"] == (0.44, 0.66)
     assert C.tile_bed(10.0, "REGULAR")["mortar_m3"] == (0.3, 0.4)
     assert C.tile_bed(10.0, "ROOF")["status"] == "HELD" and C.tile_bed(None, "WET")["status"] == "HELD"
-    assert C.black_mortar(None)["status"] == "HELD"
+    assert C.black_block_laying_materials(None)["status"] == "HELD"
 
 
 def test_wet_wall_three_operations_and_heights_are_records():
