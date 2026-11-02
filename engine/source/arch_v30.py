@@ -273,8 +273,10 @@ def strap_changes(R, structural_path, base_lines):
     if not by_elem:
         log["state"] = "NO_STRAP_LINE"
         return [], log
-    import ezdxf
-    doc = ezdxf.readfile(str(structural_path))
+    from engine.source.cad import kernel_ezdxf as K2        # T-465: the K2 route reads the DXF (K1 never imports ezdxf)
+    doc, bad = K2.load(structural_path)
+    if doc is None:                                         # a failed read stays a visible failure, never 0 straps
+        raise OSError(f"strap_changes: {structural_path}: " + "; ".join(f.detail for f in bad))
     msp = doc.modelspace()
     changes = []
     log["state"] = "RUN"

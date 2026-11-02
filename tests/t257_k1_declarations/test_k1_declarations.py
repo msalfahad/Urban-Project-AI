@@ -18,12 +18,12 @@ from research.agents_t257 import k1_declarations as D
 
 ROOT = Path(__file__).resolve().parents[2]
 
-# hand list (research/agents_t210/K1_DECISIONS.md rows 2, 3, 5, 18, 19, 20): what the K1 test may still meet
-NOT_DECLARABLE = {"engine/source/arch_v30.py": "OUTSIDE_K2_GATE", "engine/source/arch_v302.py": "OUTSIDE_K2_GATE",
-                  "engine/source/concrete_ledger_v3.py": "OUTSIDE_K2_GATE",
-                  "engine/source/opening_area.py": "OUTSIDE_K2_GATE",
-                  "engine/source/opening_height_pdf.py": "NOT_REGISTERED_HOLD",
-                  "engine/source/plot_edge_members.py": "OUTSIDE_K2_GATE"}
+# hand list (research/agents_t210/K1_DECISIONS.md rows 2, 3, 5, 18, 19, 20): what the K1 test may still meet.
+# T-465: the five OUTSIDE_K2_GATE modules (rows 2, 3, 5, 18, 20) no longer import ezdxf; their records moved to the
+# record's "closed" list (each with closed_by / closed_how / proof). Only the pymupdf module (row 19) remains.
+NOT_DECLARABLE = {"engine/source/opening_height_pdf.py": "NOT_REGISTERED_HOLD"}
+CLOSED_BY_T465 = {"engine/source/arch_v30.py", "engine/source/arch_v302.py", "engine/source/concrete_ledger_v3.py",
+                  "engine/source/opening_area.py", "engine/source/plot_edge_members.py"}
 
 
 # ------------------------------------------------------------------------------------------------ real tree
@@ -33,10 +33,11 @@ def test_every_declaration_is_backed_by_an_allowed_record_and_nothing_else_is_de
     assert problems == [], problems
     assert len(f["declarations"]) == 18
     assert f["r8_era"] == D.R8_ERA
-    assert len(f["offenders"]) == 24          # the record still covers all 24 (no STALE through a declaration)
+    assert len(f["offenders"]) == 24 - len(CLOSED_BY_T465)    # 19: the 24 of the sweep less the 5 closed by T-465
+    assert {r["module"] for r in V1.load_record()["closed"]} == CLOSED_BY_T465
 
 
-def test_the_k1_test_still_meets_exactly_the_six_undeclarable_modules():
+def test_the_k1_test_still_meets_exactly_the_undeclarable_module():
     _, f = D.check(ROOT, V1.load_record())
     recs = {r["module"]: r["decision"] for r in V1.load_record()["records"]}
     assert {m: recs[m] for m in f["remaining"]} == NOT_DECLARABLE
@@ -50,7 +51,7 @@ def test_the_k1_test_itself_fails_on_an_undeclarable_module_not_on_a_declared_on
     except AssertionError as err:
         first = str(err).splitlines()[0]          # pytest rewrites the message: "('<path>', '<import>')\nassert ..."
     else:
-        raise AssertionError("K1 test passed although six modules are not declarable: re-check the record")
+        raise AssertionError("K1 test passed although a module is not declarable: re-check the record")
     rel, name = ast.literal_eval(first)
     assert rel in NOT_DECLARABLE, rel
     assert name.split(".")[0] in ("ezdxf", "pymupdf"), name

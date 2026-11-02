@@ -201,8 +201,10 @@ def rings_of(D, intake, rp, ring_rule=None):
 def read_section_drawing(dxf_path):
     """every linear DIMENSION {axis, lo, hi, shown, p1, p2} (shown = the printed text, or the measurement x DIMLFAC:
     entity override > style > header) and every LWPOLYLINE outline of >= 4 vertices, in drawing units."""
-    import ezdxf
-    doc = ezdxf.readfile(dxf_path)
+    from engine.source.cad import kernel_ezdxf as K2        # T-465: the K2 route reads the DXF (K1 never imports ezdxf)
+    doc, bad = K2.load(dxf_path)
+    if doc is None:                                         # a failed read stays a visible failure, never 0 dims
+        raise OSError(f"read_section_drawing: {dxf_path}: " + "; ".join(f.detail for f in bad))
     hdr = doc.header.get("$DIMLFAC", 1.0) or 1.0
     dims, outl = [], []
     for e in doc.modelspace():

@@ -25,7 +25,12 @@ def test_record_covers_every_offender_on_the_tree():
     from research.agents_t257 import k1_declarations as K2
     problems, f = K2.check(ROOT, K.load_record())
     assert problems == [], problems
-    assert len(f["offenders"]) >= 24          # never fewer records than the 24 of the T-202 sweep without a STALE
+    # never fewer records than the 24 of the T-202 sweep without a STALE; T-465: a module fixed at its source leaves
+    # "records" only by an explicit entry in the record's "closed" list (closed_by / closed_how / proof), never silently
+    closed = K.load_record().get("closed") or []
+    assert all(c.get("closed_by") and c.get("closed_how") and c.get("proof") for c in closed)
+    assert not {c["module"] for c in closed} & set(f["offenders"])
+    assert len(f["offenders"]) + len(closed) >= 24
 
 
 def test_k1_core_reaches_no_offender_and_released_v29_neither():

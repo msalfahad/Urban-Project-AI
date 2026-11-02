@@ -153,10 +153,30 @@ def _xclipped(ins):
     try:
         if not ins.has_extension_dict:
             return False
-        from ezdxf.xclip import XClip
-        return bool(XClip(ins).has_clipping_path)
+        return _has_spatial_filter(ins)
     except Exception:                       # noqa: BLE001  (an unreadable filter is treated as a clip: HELD)
         return True
+
+
+_DICTIONARY_TYPES = ("DICTIONARY", "ACDBDICTIONARYWDFLT")   # ezdxf Dictionary and its DictionaryWithDefault subclass
+
+
+def _has_spatial_filter(ins):
+    """T-465: ezdxf.xclip.XClip(ins).has_clipping_path (ezdxf 1.4.4 xclip.get_spatial_filter) read from the entity's
+    own extension dictionary, so this K1 module imports no ezdxf: extension dict -> ACAD_FILTER (a DICTIONARY) ->
+    SPATIAL (a SPATIAL_FILTER). Same answer as XClip on every case (tests/t465_k1_boundary); errors still raise to
+    _xclipped, which treats an unreadable filter as clipped (HELD)."""
+    if ins.dxftype() != "INSERT":                      # XClip refuses a non-INSERT (DXFTypeError -> _xclipped: HELD)
+        raise TypeError(f"INSERT entity required, got {ins.dxftype()}")
+    try:
+        xdict = ins.get_extension_dict()
+    except AttributeError:
+        return False
+    acad_filter = xdict.get("ACAD_FILTER")
+    if acad_filter is None or not hasattr(acad_filter, "dxftype") or acad_filter.dxftype() not in _DICTIONARY_TYPES:
+        return False
+    sf = acad_filter.get("SPATIAL")
+    return sf is not None and hasattr(sf, "dxftype") and sf.dxftype() == "SPATIAL_FILTER"
 
 
 def _poly_points(e):
