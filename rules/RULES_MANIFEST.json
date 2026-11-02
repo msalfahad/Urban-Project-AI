@@ -185,6 +185,10 @@
    "sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee",
    "source": "data/trade_rules/URBAN_PROJECTS_RULE_LIBRARY.json",
    "source_sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee"
+  },
+  "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055"
   }
  },
  "latest_owner_approved": "1.5.0",
