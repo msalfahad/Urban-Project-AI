@@ -24,6 +24,23 @@ serviceAccountKey.json
 !/data/registry/
 *.dwg
 *.dxf
+# T-470 (owner 2026-11-02, PRIVACY_MOVE_PLAN step 3): AutoCAD drawings and their side files in any letter case
+# (git matches case-sensitively, so *.dxf missed DRAWING.DXF), plus extensionless files named DXF / DWG at any depth
+# (the tracked root file `DXF` stays tracked: ignore rules never untrack; its move waits for the owner).
+# A drawing with any other extensionless name cannot be caught by a name rule: tests/t470_drawing_guard checks every
+# tracked file's content (DWG 'AC10' header, ASCII / binary DXF signature) instead.
+*.[dD][wW][gG]
+*.[dD][xX][fF]
+*.[dD][wW][fF]
+*.[dD][wW][lL]
+*.[dD][wW][lL]2
+*.[bB][aA][kK]
+*.[sS][vV]$
+[dD][xX][fF]
+[dD][wW][gG]
+# ...a DIRECTORY named dxf / dwg (code packages) is not a drawing: re-include it
+![dD][xX][fF]/
+![dD][wW][gG]/
 *.xlsx
 !tests/**/*.xlsx
 
