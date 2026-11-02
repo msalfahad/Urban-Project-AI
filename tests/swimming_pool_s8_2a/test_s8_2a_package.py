@@ -29,6 +29,10 @@ from engine.source import source_identity as SI
 from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 PKG = ROOT / "research" / "alsenan_swimming_pool_s8_2a"
 S82 = ROOT / "research" / "alsenan_swimming_pool_s8_2"
 MANIFEST = PKG / "12_S8_2A_FREEZE_MANIFEST.json"
@@ -129,12 +133,10 @@ def test_the_re_freeze_names_the_first_freeze_and_changes_no_finding():
     m = J(MANIFEST)
     a = m["amends_s8_2a_freeze"]
     assert a["freeze_commit"] == "1900650" and re.fullmatch(r"[0-9a-f]{64}", a["manifest_sha256"])
-    first = subprocess.run(["git", "show", f"{a['freeze_commit']}:{MANIFEST.relative_to(ROOT)}"], cwd=ROOT,
-                           capture_output=True)
-    if first.returncode != 0:
-        pytest.skip("first S8.2A freeze commit not in this clone's history")
-    assert hashlib.sha256(first.stdout).hexdigest() == a["manifest_sha256"]
-    old = json.loads(first.stdout)["outputs"]
+    # T-463: read from git, or in a shallow clone from the recorded blob (verified against its own git id)
+    first = GH.show_bytes(a["freeze_commit"], MANIFEST.relative_to(ROOT).as_posix(), root=ROOT)
+    assert hashlib.sha256(first).hexdigest() == a["manifest_sha256"]
+    old = json.loads(first)["outputs"]
     for o in ("02_ELEVATION_TO_PLAN_BINDING_AUDIT.csv", "04_POOL_DEPTH_AND_ZONE_INTERPRETATION.csv",
               "05_QUANTITY_READINESS_DELTA.csv", "06_BLOCKED_REGISTER_DELTA.csv",
               "07_CONFLICT_AND_QUESTION_REGISTER_DELTA.csv", "08_SENSITIVITY_CASES.csv"):

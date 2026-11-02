@@ -18,12 +18,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4347 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4350 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 45 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2030 | pytest suites, one folder per round. |
-| `tools/` | 117 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 2031 | pytest suites, one folder per round. |
+| `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
 
@@ -750,7 +750,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (110 modules)
+## `tools/` (111 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -795,10 +795,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `export_round6c.py` | 422 | MEDIUM | 2 | Freeze round 6C's P7757 register for independent audit. |
 | `export_round6d.py` | 331 | MEDIUM | 1 | Export round 6D: the register, the pantry, the stairs, hashed. |
 | `export_round6e.py` | 726 | MEDIUM | 0 | Export round 6E-A: the bundle an auditor can reproduce. |
-| `family_master_candidate.py` | 339 | HIGH | 35 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
+| `family_master_candidate.py` | 345 | HIGH | 36 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
 | `firestore_sandbox.py` | 68 | MEDIUM | 1 | A guarded Firestore writer for Phase 0 — sandbox only. |
 | `freeze_new_source.py` | 136 | MEDIUM | 1 | Freeze and source-audit a NEW project's drawing. No measurement. |
 | `freeze_verify.py` | 676 | MEDIUM | 3 | Freeze integrity verifier (P2-00 Stage 1). Stdlib only. It never writes into the repository: every rebuild runs in a |
+| `git_history.py` | 464 | HIGH | 14 | Git history facts for shallow clones (T-463; owner directive 2026-11-02 D2). |
 | `graph_diagnostic.py` | 187 | MEDIUM | 1 | The first authoritative full-sheet wall-graph run on the real drawing. |
 | `grid.py` | 132 | MEDIUM | 0 | Design and render an Instagram grid (A16 grid mode + social/render). |
 | `indep_reader.py` | 719 | MEDIUM | 0 | INDEPENDENT DRAWING READER (Phase 2B-8) - a second reading of a DXF plan with ezdxf, shapely and arithmetic only: |
@@ -1379,6 +1380,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t456_finish_area_units/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
+| `tests/t463_git_history/` | 1 |
 | `tests/t467_released_freeze/` | 1 |
 | `tests/t469_trade_scoreboard/` | 1 |
 | `tests/t470_drawing_guard/` | 1 |
@@ -1830,6 +1832,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t449/` | 5 |
 | `research/agents_t456/` | 3 |
 | `research/agents_t458/` | 2 |
+| `research/agents_t463/` | 3 |
 | `research/agents_t469/` | 11 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |

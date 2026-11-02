@@ -85,8 +85,37 @@ GUARD = {
 }
 
 
+def _git_history():
+    """tools/git_history.py, loaded by path (T-463: answers this fixed window in a shallow clone from recorded facts)."""
+    import importlib.util
+    if "_t463_git_history" not in sys.modules:
+        spec = importlib.util.spec_from_file_location("_t463_git_history", ROOT / "tools" / "git_history.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        sys.modules["_t463_git_history"] = mod
+    return sys.modules["_t463_git_history"]
+
+
 def git(*args):
-    return subprocess.run(["git", "-C", str(ROOT), *args], check=True, capture_output=True, text=True).stdout
+    p = subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True)
+    if p.returncode == 0:
+        return p.stdout
+    return _git_history().git_text(ROOT, *args)     # full clone: raises CalledProcessError exactly as before
+
+
+IMPORTS_AT_HEAD = ROOT / "research" / "agents_t463" / "GUARD_IMPORTS_T202_HEAD.json"
+
+
+def recorded_import_index(rev):
+    """T-463: {file: set of names} at `rev` from the recorded facts, used ONLY in a shallow clone that lacks `rev`
+    (tests/t463_git_history proves the file equals import_index(rev=HEAD) read from git in a full clone)."""
+    gh = _git_history()
+    if not gh.is_shallow(ROOT) or gh.has_commit(rev, ROOT):
+        return None
+    doc = __import__("json").loads(IMPORTS_AT_HEAD.read_text(encoding="utf-8"))
+    if doc.get("rev") != rev:
+        raise gh.HistoryUnavailable(f"{rev}: shallow clone and no recorded import index for it")
+    return {f: set(names) for f, names in doc["import_index"].items()}
 
 
 def window(base=BASE, head=HEAD):
@@ -165,6 +194,10 @@ def import_index(scopes=("engine", "tools"), rev=None):
     'a' and 'a.b' (absolute imports only). rev=None reads the live tree, a commit reads the tree at that commit.
     Parsed once per process and rev."""
     key = (tuple(scopes), rev)
+    if key not in _INDEX and rev is not None and tuple(scopes) == ("engine", "tools"):
+        rec = recorded_import_index(rev)
+        if rec is not None:
+            _INDEX[key] = rec
     if key not in _INDEX:
         idx = {}
         for f, src in _sources(scopes, rev):

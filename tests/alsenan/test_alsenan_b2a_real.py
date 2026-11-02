@@ -4,11 +4,16 @@ benchmark evaluation. These tests read the frozen files only."""
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 REG = ROOT / "tests/alsenan/registers_b2a"
 EVAL = ROOT / "tests/alsenan/registers_b2a_eval/BENCHMARK_EVALUATION.json"
 pytestmark = pytest.mark.skipif(not REG.exists(), reason="B2A registers not frozen yet")
@@ -123,8 +128,8 @@ def test_a3_preserved_and_qortuba_regression():
 
 def test_frozen_a3_and_b1_registers_untouched():
     for d, c in (("tests/alsenan/registers_a3", "9aa2741"), ("tests/alsenan/registers_b1", "f820263")):
-        out = subprocess.run(["git", "-C", str(ROOT), "diff", "--stat", c, "--", d], capture_output=True, text=True)
-        assert out.returncode == 0 and out.stdout.strip() == "", out.stdout
+        changed = GH.changed_since(c, d, root=ROOT)
+        assert changed == [], changed
 
 
 def test_benchmark_evaluation_ran_after_the_freeze():
