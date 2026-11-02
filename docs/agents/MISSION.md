@@ -135,6 +135,25 @@ result is never silently rerun and replaced.
 - RFIs: B-S18 (document control) is the first proposed for issue; nothing is sent without the owner; the other RFIs
   keep their evidence and approval states.
 
+
+## Owner instruction 2026-11-02: BOQ completeness and aggregation (binds every agent)
+
+Correct individual calculations do not guarantee a correct BOQ: measurement, coverage, transfer and summation must all
+be verified.
+1. NO SILENT OMISSIONS: every component identified in the drawings is accounted for; MISSING, HELD, PARTIAL and
+   unresolved quantities stay visible and are never excluded or treated as zero.
+2. COMPLETE AGGREGATION: every calculated component appears exactly once in its BOQ line, trade subtotal and project
+   total; missing transfers, duplicates and wrong sums are detected.
+3. INDEPENDENT RECONCILIATION: component sums equal BOQ totals; the Checker validates the measurements AND the
+   aggregation independently.
+4. TRACEABILITY: every final BOQ quantity traces to its components, calculations and drawing evidence.
+5. UNRESOLVED: each undetermined quantity names the missing component, reason, affected BOQ line and required action;
+   an incomplete total is never presented as complete (show determinate part + HELD range).
+6. FINAL GATE: no BOQ line, trade or BOQ is fully VERIFIED until measurement accuracy AND complete aggregation are
+   demonstrated (recorded in the acceptance record).
+Owners: T-471 (coverage: component -> line), T-180 (measurement + independent sum), T-469 (line -> trade -> project
+reconciliation), T-468 (acceptance record carries both proofs).
+
 ## How accuracy is scored (never "95 % of categories pass")
 
 Per category and unit (never mix m2, m3, lm, t, nr):
