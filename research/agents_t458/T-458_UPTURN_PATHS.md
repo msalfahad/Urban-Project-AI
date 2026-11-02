@@ -80,10 +80,11 @@ RESULT: the 0.15 m upturn and the upturn door deduction are reachable from NO re
   one doorway line per door (UP-WP-003); every missing input HELD (never 0). `SUPERSEDED` lists each legacy site above;
   the V1 modules stay unchanged as history (no edit in place; tests/m9_foundation/test_conflict_pins.py keeps pinning
   the documented conflict CF-09).
-- Not done (needs its own row or owner scope): a new rule-library version marking UP-WP-002 1.0.0 superseded in
-  data/trade_rules (repointing engine/rule_library.LIBRARY_PATH would change the library hash the lift-marble lines
-  cite, so it is a candidate-output change for lane I, not a P0 bug fix); renaming the id inside the frozen-history V1
-  modules (edit in place, refused by rule).
+- Not done (needs its own row): a new rule-library version marking UP-WP-002 1.0.0 superseded in data/trade_rules and
+  repointing engine/rule_library.LIBRARY_PATH. rule_library is imported by none of the three traced runs; its users are
+  engine/elevator_marble.py (T-413 ledger route) and tools/run_round6e.py / export_round6e.py, whose cited library
+  version / hash would change, so it is a rule-version task with its own regression check, not part of this P0 bug fix.
+  Renaming the id inside the V1 modules would be an edit in place (refused by rule).
 
 ## 6. General rule (proposed lessons-register row)
 
