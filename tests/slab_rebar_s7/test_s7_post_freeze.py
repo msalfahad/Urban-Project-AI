@@ -8,11 +8,16 @@ import json
 import math
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 PKG = ROOT / "research" / "alsenan_slab_rebar_s7"
 PF = PKG / "post_freeze"
 CLASSES = {"SCOPE", "TEMPERATURE_EXCLUDED", "SPECIAL_STRUCTURE_EXCLUDED", "ANCHORAGE_EXCLUDED", "COVER_BASIS",
@@ -41,14 +46,14 @@ def _git(*a):
 def test_freeze_before_reference_guarantee(s):
     if not shutil.which("git") or not (ROOT / ".git").exists():
         pytest.skip("no git checkout")
-    full = _git("rev-parse", "16741ec").stdout.decode().strip()
+    full = GH.rev_parse("16741ec", root=ROOT)
     assert s["freeze_commit"] == full
-    at_freeze = _git("show", f"{full}:research/alsenan_slab_rebar_s7/12_S7_FREEZE_MANIFEST.json").stdout
-    assert hashlib.sha256(at_freeze).hexdigest() == hashlib.sha256(
+    at_freeze_sha = GH.sha256_at(full, f"research/alsenan_slab_rebar_s7/12_S7_FREEZE_MANIFEST.json", root=ROOT)
+    assert at_freeze_sha == hashlib.sha256(
         (PKG / "12_S7_FREEZE_MANIFEST.json").read_bytes()).hexdigest() == s["freeze_manifest_sha256"]
-    tree = _git("ls-tree", "-r", "--name-only", full, "research/alsenan_slab_rebar_s7/").stdout.decode().split()
+    tree = GH.ls_tree_names(full, "research/alsenan_slab_rebar_s7/", root=ROOT)
     assert tree and not any("post_freeze" in t for t in tree)             # no comparison existed at the freeze
-    assert _git("merge-base", "--is-ancestor", full, "HEAD").returncode == 0
+    assert GH.is_ancestor(full, "HEAD", root=ROOT)
     m = J(PKG / "12_S7_FREEZE_MANIFEST.json")
     assert m["references_read_before_freeze"] == [] and m["state"] == "FROZEN_BEFORE_REFERENCE_COMPARISON"
 

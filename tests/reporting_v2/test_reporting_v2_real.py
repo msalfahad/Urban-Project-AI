@@ -9,6 +9,10 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 sys.path.insert(0, str(ROOT / "research/external_engine_lab"))
 
 import reporting_v2_alsenan as AL                                                                   # noqa: E402
@@ -222,6 +226,5 @@ def test_frozen_report_records_are_reproduced(alsenan, qortuba):
 def test_engine_and_frozen_registers_untouched_since_b2a1():
     # V3 adds NEW engine modules beside the frozen ones; no file that existed at 02feef8 may be modified, renamed or deleted
     for d in ("engine/source", "tests/alsenan/registers_b2a1", "tests/alsenan/registers_a3", "tests/rc1/registers"):
-        out = subprocess.run(["git", "-C", str(ROOT), "diff", "--stat", "--diff-filter=MDRTC", "02feef8", "--", d],
-                             capture_output=True, text=True)
-        assert out.returncode == 0 and out.stdout.strip() == "", (d, out.stdout)
+        changed = GH.changed_since("02feef8", d, root=ROOT, diff_filter="MDRTC")
+        assert changed == [], (d, changed)

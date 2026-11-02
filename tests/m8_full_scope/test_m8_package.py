@@ -11,11 +11,16 @@ import importlib.util
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 PKG = ROOT / "research" / "urban_engine_m8_full_scope"
 POST_FREEZE = {"engine/source/scope_quantities.py", "tools/m7_metamorphic.py"}
 DELIVERABLES = ("00_M8_BRIEF.md", "00_ENGINE_FREEZE.json", "00_README.md", "01_EXECUTIVE_REPORT.md",
@@ -48,9 +53,7 @@ def test_the_freeze_holds_the_files_as_committed():
     fz = json.loads((PKG / "00_ENGINE_FREEZE.json").read_text(encoding="utf-8"))
     assert fz["commit"] == "9d7aceb" and all(fz["git_blob_matches_commit"].values())
     for f, h in fz["files_sha256"].items():
-        blob = subprocess.run(["git", "-C", str(ROOT), "show", f"{fz['commit']}:{f}"], capture_output=True,
-                              check=True).stdout
-        assert hashlib.sha256(blob).hexdigest() == h, f
+        assert GH.sha256_at(fz["commit"], f, root=ROOT) == h, f
     changed = {f for f, h in fz["files_sha256"].items() if hashlib.sha256((ROOT / f).read_bytes()).hexdigest() != h}
     assert changed == POST_FREEZE, changed            # exactly the post-freeze fixes P1-P4, nothing else
 

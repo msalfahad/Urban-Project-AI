@@ -93,7 +93,13 @@ def git_is_ancestor(commit, head="HEAD", root=ROOT):
     """True when commit is an ancestor of head in the repository at root (git merge-base --is-ancestor)."""
     r = subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", commit, head],
                        capture_output=True, text=True)
-    return r.returncode == 0
+    if r.returncode == 0:
+        return True
+    try:                            # T-463: a shallow clone answers a commit beyond its boundary from recorded facts
+        from tools import git_history
+    except ImportError:             # run as a script (tools/ is sys.path[0])
+        import git_history
+    return git_history.is_ancestor(commit, head, root=root)
 
 
 def _semver(v):

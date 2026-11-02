@@ -5,12 +5,18 @@ patterns never match, Arabic appears only as the controlled construction vocabul
 from __future__ import annotations
 
 import csv
+import hashlib
 import importlib.util
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 PKG = ROOT / "research" / "urban_m9_s1"
 BASE = "8177ccf"
 FROZEN = ("tools/urban_boq_m2.py", "tools/urban_project_run.py", "tools/urban_structural_boq.py",
@@ -55,8 +61,7 @@ def test_examples_rebuild_byte_for_byte():
 
 def test_frozen_route_files_are_unchanged_since_the_s1_base():
     for f in FROZEN:
-        old = subprocess.run(["git", "-C", str(ROOT), "show", f"{BASE}:{f}"], capture_output=True, check=True).stdout
-        assert (ROOT / f).read_bytes() == old, f
+        assert hashlib.sha256((ROOT / f).read_bytes()).hexdigest() == GH.sha256_at(BASE, f, root=ROOT), f
 
 
 def test_no_external_figure_or_forbidden_number():

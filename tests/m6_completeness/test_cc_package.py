@@ -22,6 +22,10 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 PKG = ROOT / "research/urban_engine_m6_completeness"
 DXF = ROOT / "data/inputs/by_sha256/9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf"
 ARCH = ROOT / "data/inputs/by_sha256/ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4.dxf"
@@ -61,7 +65,7 @@ def test_package_files_are_clean():
 def test_engine_freezes_hold_the_committed_files(manifest, commit):
     man = json.loads((PKG / manifest).read_text(encoding="utf-8"))
     for path, sha in man["files_sha256"].items():
-        assert hashlib.sha256(_git_bytes(commit, path)).hexdigest() == sha, path
+        assert GH.sha256_at(commit, path, root=ROOT) == sha, path
     assert man["policy"] == ("CONCRETE_COMPLETENESS_V1" if commit == "090a470" else "CONCRETE_COMPLETENESS_V2")
 
 
