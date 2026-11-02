@@ -13,6 +13,10 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 LAB = ROOT / "research/external_engine_lab"
 sys.path.insert(0, str(LAB))
 import alsenan_b1_benchmark as BB                                                 # noqa: E402
@@ -203,13 +207,14 @@ def test_freeze_boundary():
 
 def test_a3_registers_unchanged_since_9aa2741():
     try:
-        names = subprocess.run(["git", "ls-tree", "--name-only", "9aa2741", "tests/alsenan/registers_a3/"],
-                               capture_output=True, text=True, cwd=ROOT, check=True).stdout.split()
-    except Exception:
+        names = GH.ls_tree_names("9aa2741", "tests/alsenan/registers_a3/", root=ROOT)   # T-463: shallow clone too
+    except (OSError, RuntimeError) as e:
+        if isinstance(e, GH.HistoryUnavailable):
+            raise
         pytest.skip("git history not available")
+    assert names
     for n in names:
-        blob = subprocess.run(["git", "show", f"9aa2741:{n}"], capture_output=True, cwd=ROOT, check=True).stdout
-        assert hashlib.sha256(blob).hexdigest() == hashlib.sha256((ROOT / n).read_bytes()).hexdigest(), n
+        assert GH.sha256_at("9aa2741", n, root=ROOT) == hashlib.sha256((ROOT / n).read_bytes()).hexdigest(), n
 
 
 def test_comparability_gate_and_vocabulary_in_the_frozen_rows():

@@ -156,9 +156,14 @@ def show_bytes(commit, path, root=ROOT, facts_path=None) -> bytes:
     if not blob:
         raise HistoryUnavailable(f"{commit}:{path}: recorded directory has no such file")
     q = _run(root, "cat-file", "blob", blob)
-    if q.returncode != 0:
-        raise HistoryUnavailable(f"{commit}:{path}: blob {blob} is not in this shallow clone")
-    return q.stdout
+    if q.returncode == 0:
+        return q.stdout
+    stored = load_facts(root, facts_path).get("blobs", {}).get(blob)
+    if stored is not None:
+        data = _stored_bytes(stored)
+        if blob_id(data) == blob:
+            return data
+    raise HistoryUnavailable(f"{commit}:{path}: blob {blob} is not in this shallow clone nor stored")
 
 
 def sha256_at(commit, path, root=ROOT, facts_path=None) -> str:
@@ -302,7 +307,7 @@ def git_bytes(root, *args) -> bytes:
         data = facts.get("blobs", {}).get(a[2])
         if data is None:
             raise err
-        data = base64.b64decode(data)
+        data = _stored_bytes(data)
         if blob_id(data) != a[2]:
             raise HistoryUnavailable(f"stored blob {a[2]} does not hash to its id")
         return data
@@ -335,7 +340,7 @@ def build(requests, root=ROOT, head="HEAD") -> dict:
             "outputs": {_key(a): _out(root, *a) for a in requests.get("outputs", [])},
             "last_touch": {f: _out(root, "log", "-1", "--format=%H", rec, "--", f).strip()
                            for f in sorted(set(requests.get("last_touch", [])))},
-            "blobs": {b: base64.b64encode(_blob_from_git(root, b)).decode("ascii")
+            "blobs": {b: _store(_blob_from_git(root, b))
                       for b in sorted(set(requests.get("blobs", [])))}}
 
 
@@ -344,6 +349,22 @@ def _blob_from_git(root, blob):
     if p.returncode != 0:
         raise RuntimeError(f"git cat-file blob {blob}: not in this repository")
     return p.stdout
+
+
+def _store(data: bytes):
+    """A stored blob: its UTF-8 text when it is text (readable and visible to the hygiene scans), else base64."""
+    try:
+        return {"text": data.decode("utf-8")}
+    except UnicodeDecodeError:
+        return {"base64": base64.b64encode(data).decode("ascii")}
+
+
+def _stored_bytes(stored) -> bytes:
+    if isinstance(stored, dict) and "text" in stored:
+        return stored["text"].encode("utf-8")
+    if isinstance(stored, dict) and "base64" in stored:
+        return base64.b64decode(stored["base64"])
+    raise HistoryUnavailable("stored blob has neither 'text' nor 'base64'")
 
 
 def blob_id(data: bytes) -> str:
@@ -403,7 +424,7 @@ def check(doc, root=ROOT) -> list:
     if set(blobs) != set(doc.get("requests", {}).get("blobs", [])):
         bad.append("blobs keys differ from the requests")
     for b, data in blobs.items():
-        if blob_id(base64.b64decode(data)) != b:
+        if blob_id(_stored_bytes(data)) != b:
             bad.append(f"blob {b}: stored bytes do not hash to their id")
     nsha = sum(len(v) for v in doc.get("trees", {}).values())
     if len(doc.get("sha256", {})) != nsha:

@@ -7,7 +7,8 @@ What is requested, and which test family needs it (nothing here is a copy of a f
 - ancestry of the recorded head: every BOQ_FAMILY_MASTER registry test (merge commits of candidate packages), the
   post-freeze tests (freeze commit is an ancestor of HEAD);
 - blob ids + sha256 at a freeze commit: the engine freezes of m6 / m7 / m8, the m9 S1 base, the S7 / S8.1 / S8.2
-  freeze-before-comparison packages, the frozen register folders of B2A / B2A.1 / reporting V2;
+  freeze-before-comparison packages, the frozen register folders of B1 / B2A / B2A.1 / reporting V2, the first S8.2A
+  freeze manifest (also stored as its git blob: its content is compared);
 - recorded outputs of fixed, immutable history commands + the trees at the T-202 head: the T-202 guard sweep window
   and the T-212 guard property (diff against the T-202 head);
 - the import index at the T-202 head (derived by guard_sweep's own parser from the git objects);
@@ -103,7 +104,11 @@ def requests() -> dict:
                "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json",
                "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json",
                "research/alsenan_arch_truth_05/registers/OPENING_EVIDENCE_REGISTER_V3.json"]
-    return {"trees": sorted(trees), "outputs": calls + listing, "blobs": sorted(drifted), "last_touch": stamped}
+    # S8.2A re-freeze: the first freeze manifest's bytes (its 'outputs' are compared), stored as its git blob
+    s82a = "research/alsenan_swimming_pool_s8_2a/12_S8_2A_FREEZE_MANIFEST.json"
+    trees.add(f"1900650:{s82a}")
+    drifted.append(GH._out(ROOT, "rev-parse", f"1900650:{s82a}").strip())
+    return {"trees": sorted(trees), "outputs": calls + listing, "blobs": sorted(set(drifted)), "last_touch": stamped}
 
 
 def guard_imports() -> dict:

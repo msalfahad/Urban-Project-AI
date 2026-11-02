@@ -201,10 +201,16 @@ def test_adverse_head_not_descending_from_the_recorded_history_is_refused(synth,
         GH._FACTS.clear()
 
 
-def test_adverse_missing_blob_or_unrecorded_path_raises(synth):
+def test_adverse_missing_blob_or_unrecorded_path_raises(synth, tmp_path):
     s, f, c1 = synth["shallow"], synth["fact"], synth["c1"]
+    assert GH.show_bytes(c1, "d/a.txt", root=s, facts_path=f) == b"slab 0.20 m\n"   # stored blob, id-verified
+    doc = dict(synth["doc"], blobs={})
+    nostore = tmp_path / "facts_no_blobs.json"
+    nostore.write_text(json.dumps(doc), encoding="utf-8")
+    GH._FACTS.clear()
     with pytest.raises(GH.HistoryUnavailable):
-        GH.show_bytes(c1, "d/a.txt", root=s, facts_path=f)        # the 0.20 m blob left with c1
+        GH.show_bytes(c1, "d/a.txt", root=s, facts_path=nostore)  # the 0.20 m blob left with c1 and is not stored
+    GH._FACTS.clear()
     with pytest.raises(GH.HistoryUnavailable):
         GH.sha256_at(c1, "f/y.txt", root=s, facts_path=f)         # never requested
 
@@ -274,7 +280,8 @@ def test_adverse_tampered_stored_blob_is_refused(installed, tmp_path):
     s = installed["shallow"]
     doc = json.loads((s / GH.FACTS_REL).read_text(encoding="utf-8"))
     import base64
-    doc["blobs"][installed["a_blob"]] = base64.b64encode(b"slab 0.30 m\n").decode("ascii")
+    assert doc["blobs"][installed["a_blob"]] == {"text": "slab 0.20 m\n"}     # stored as readable text
+    doc["blobs"][installed["a_blob"]] = {"base64": base64.b64encode(b"slab 0.30 m\n").decode("ascii")}
     (s / GH.FACTS_REL).write_text(json.dumps(doc), encoding="utf-8")
     GH._FACTS.clear()
     with pytest.raises(GH.HistoryUnavailable):
