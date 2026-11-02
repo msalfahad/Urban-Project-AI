@@ -105,6 +105,17 @@ def r3(x):
 def git_commit(p):
     out = subprocess.run(["git", "log", "-1", "--format=%h", "--", str(p.relative_to(ROOT))], cwd=ROOT,
                          capture_output=True, text=True).stdout.strip()
+    if out:
+        # T-463: in a shallow clone `git log -1` names the grafted boundary commit for a file older than the clone's
+        # depth; tools/git_history.py then gives the recorded (git-proved) last commit. A full clone: unchanged.
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_t463_git_history_cp", ROOT / "tools" / "git_history.py")
+        gh = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gh)
+        if gh.is_shallow(ROOT):
+            full = gh.last_commit(str(p.relative_to(ROOT)), root=ROOT)
+            out = subprocess.run(["git", "rev-parse", "--short=7", full], cwd=ROOT, capture_output=True,
+                                 text=True).stdout.strip() or full[:7]
     return out or "UNCOMMITTED"
 
 

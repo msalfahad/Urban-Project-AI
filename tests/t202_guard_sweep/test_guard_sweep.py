@@ -26,7 +26,8 @@ import known_failures as KF     # noqa: E402
 
 
 def _git(*a):
-    return subprocess.run(["git", "-C", str(ROOT), *a], check=True, capture_output=True, text=True).stdout
+    # T-463: GS.git = real git; in a shallow clone the fixed window's outputs come from the recorded, git-proved facts
+    return GS.git(*a)
 
 
 @pytest.fixture(scope="module")

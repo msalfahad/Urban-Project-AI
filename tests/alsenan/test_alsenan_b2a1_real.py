@@ -5,11 +5,16 @@ byte-identical)."""
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
+
+if str(ROOT) not in sys.path:                    # T-463: tools.git_history answers old commits in a shallow clone
+    sys.path.insert(0, str(ROOT))
+from tools import git_history as GH  # noqa: E402
 REG = ROOT / "tests/alsenan/registers_b2a1"
 PARENT = ROOT / "tests/alsenan/registers_b2a"
 FREEZE = "ALSENAN_PHASE_B2A1_REGISTER_FREEZE"
@@ -93,5 +98,5 @@ def test_qortuba_regression():
 def test_frozen_parent_registers_untouched():
     for d, c in (("tests/alsenan/registers_b2a", "e2afb69"), ("tests/alsenan/registers_b2a_eval", "e2afb69"),
                  ("tests/alsenan/registers_a3", "9aa2741"), ("tests/alsenan/registers_b1", "f820263")):
-        out = subprocess.run(["git", "-C", str(ROOT), "diff", "--stat", c, "--", d], capture_output=True, text=True)
-        assert out.returncode == 0 and out.stdout.strip() == "", out.stdout
+        changed = GH.changed_since(c, d, root=ROOT)
+        assert changed == [], changed

@@ -277,7 +277,18 @@ class InputUnavailable(RuntimeError):
 
 
 def _git(*args, cwd=ROOT) -> bytes:
-    return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True).stdout
+    p = subprocess.run(["git", *args], cwd=cwd, capture_output=True)
+    if p.returncode == 0:
+        return p.stdout
+    # T-463: in a shallow clone, the pin's tree listing and a drifted input's pinned blob come from the recorded,
+    # git-proved facts (tools/git_history.py); a full clone raises CalledProcessError exactly as before
+    import importlib.util
+    if "_t463_git_history" not in sys.modules:
+        spec = importlib.util.spec_from_file_location("_t463_git_history", ROOT / "tools" / "git_history.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        sys.modules["_t463_git_history"] = mod
+    return sys.modules["_t463_git_history"].git_bytes(cwd, *args)
 
 
 def write_inputs(commit=PIN_COMMIT, folders=PINNED_FOLDERS):
