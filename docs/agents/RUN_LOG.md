@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02T19:02Z | Worker 3 | STARTED | run session_01E6cPnasdmAaAhLoXHgky2j | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T18:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPnbMXo9W57mVzHxdcHr active since 2026-11-02T18:12Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-02T18:40Z | Worker 2 | STARTED | run session_01E6cPnb3QPLNVaRZ3dxZfk4 | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T18:15Z | Worker 2 | SUCCESS | T-448 READY @8179877f | Company Rulebook 1.0.0 (9 OWNER CONFIRMED rules + L4 method, values HELD) + COMPANY_RULEBOOK_V1 calculators, unwired: lintel 1.10->1.50 m, >3.70 m FLAGGED; AAC 20 m2 x 4.5 = 90 kg = 4 bags; adhesive 12 m2 120x60 = 4 bags; unknown tile / 15 cm black module HELD, never 0. No BOQ line moves. Missing: 15 cm black module, render/plaster mixes, marble adhesive; RULES_INDEX does not list the rulebook (codemap.py). | self-check codemap PASS, pytest t061 PASS, freeze PASS; L4: 5 baseline r8 import-boundary fails only; problem: none
