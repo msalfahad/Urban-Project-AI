@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02T01:37Z | Worker 1 | SUCCESS | T-467 READY (agents/task-T-467 @ 4b72cbad) | Released V2.9 + route G now hash-protected by NEW index FREEZE_BASELINE_INDEX_V2.jsonl (V1 42 lines unchanged + 131: 120 released .py whole-file incl. arch_v27/28/29, 10 versioned data files, tools/urban_boq_m9.py per top-level statement with cmd_arch/main declared hubs guarded by golden runs); new tool research/freeze_integrity/freeze_verify_v2.py; 0 differing on HEAD, one-byte mutations fail (28 tests), L2 133 passed; no quantity change. Main chat: point the freeze wrapper at the V2 check. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-02T01:20Z | Worker 1 | STARTED | run session_01E6cPncuPz2XTU75pE9i4sb | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T01:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T00:52Z | Verifier | STARTED | run session_01E6cPndhQhT48iNRRPT9xm8 | repo-attached routine | task state: T-447 READY, T-470 READY per RUN_LOG | self-check pending
