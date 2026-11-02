@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02T19:06Z | Verifier | SUCCESS | T-350 MERGED 3077469a (Gate B); T-476 MERGED 88e70ffe; T-353 MERGED f3fb62de | Drive read OK. T-350: L4 complete on merged tree (659 test entries, 17,440 pass, 5 fail = known r8 import ids also failing on 0f0ac54c, NEW 0); candidate of record V3.0.43 6f534d5e NOT RELEASED: +18 HELD blank earthworks lines, no released qty change. T-476 own MS2-L 3.782209 lm AGREE (B7-09 1/14 pieces verified); T-353 own FF lift base 20.700 m2 AGREE, B8-08 already carried since V3.0.15. Scoreboard v2 restated; no owner question | self-check codemap PASS, pytest t061 PASS (first attempt FAIL: venv missing pytest, setup re-run), freeze PASS; problem: V3.0.43 chain re-run stopped for lock time (17:24 reproduction reused)
 - 2026-11-02T19:02Z | Worker 3 | STARTED | run session_01E6cPnasdmAaAhLoXHgky2j | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-02T18:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPnbMXo9W57mVzHxdcHr active since 2026-11-02T18:12Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-02T18:40Z | Worker 2 | STARTED | run session_01E6cPnb3QPLNVaRZ3dxZfk4 | repo-attached routine | task state: none yet | self-check pending
