@@ -156,66 +156,12 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
-
-THE PROBLEM: the main dog-leg stair shaft (2.46 m wide inside, same rectangle on the three plans) has wall faces GF
-11.94 m, 1F 13.38 m, 2F 14.25 m. The drawing-derived method gives 163.93 .. 165.35 m2 gross paint (plaster to the roof
-soffit 167.49 m2). Your manual method has no stair-shaft case, so the owner-manual column for the shaft is HELD; the
-other 28 rooms have both columns.
-WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (GF / 1F plans: the stair
-rectangle with W01 and W13), the 2F plan, and section A-A on p7757_arch_sheet10.pdf (the storey level marks and
-the roof). Example: GF shaft wall 11.94 m x 4.50 m storey interval = 53.73 m2, against 11.94 x 3.65 = 43.58 m2 with your
-room height.
-THE OPTIONS (gross m2, whole shaft):
-(A) Your room heights per storey on the shaft faces (3.65 / 3.35 / 3.35 m): 43.58 + 44.82 + 47.74 = 136.14 m2.
-(B) The full storey interval where no ceiling exists (GF 4.50, 1F 4.20) and the drawing-derived height under the roof
-at the top (3.79 .. 3.89 m, PROVISIONAL until the roof datum D-39 is answered): 163.93 .. 165.35 m2.
-(C) The full storey interval for GF and 1F, and your 3.35 m room height at the top storey only: 53.73 + 56.20 + 47.74
-= 157.66 m2.
-RECOMMENDATION: B. Engineering reason: inside a stair shaft there is no slab band, beam allowance or decor ceiling
-between the storeys, so the deductions your formula makes for a room (0.60 beam, 0.15 decor ceiling, 0.10 floor
-finish) do not physically occur except under the roof; the wall is plastered and painted from the bottom landing to
-the top. The landing-slab edge bands where the landings meet the shaft walls are deducted separately (landing lengths
-from the stair ledger), not by lowering the height.
-WAITS ON: the owner-manual column of the shaft (A 136.14 / C 157.66 m2; B uses the drawing-derived value); work
-continues with the drawing-derived value shown as such. Nothing released changes.
-
-STATUS (main chat 2026-10-22, owner directive): reopened as INVESTIGATION T-173 (actual exposed wall geometry from the sections; the owner manual height kept as its own column). No owner answer recorded.
-
-### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
-
-PLAIN QUESTION (owner 2026-11-02: the question above was not clear; this version replaces it for the answer):
-What is the face size of the black block you buy, including the 1 cm joint? 40x20 -> 12.5 per m2; 40x25 -> 10 per m2;
-another size -> tell us. Until you answer, the provisional 12.5 per m2 stays in force.
-
-
-THE PROBLEM: about 563 m2 of the 955.63 m2 measured gross block area is black block (the white walls are 392.5 m2,
-2,512 white blocks at 6.4 per m2). Without a black block size the black count, mortar and pallets are HELD.
-WHERE TO LOOK: your own supplier records: the black solid blocks you buy for inner walls (15 and 20 cm). Your stored
-takeoff notes (Claude skill "quantity-takeoff-rules", from your 2025 sales order) give black solid blocks 15 cm and
-20 cm with a 39 x 19 cm face and a 1 cm joint, i.e. a 40 x 20 module.
-THE OPTIONS:
-(A) The 40 x 20 module of your 2025 sales order: 12.5 blocks per m2 of wall, for 15 and 20 cm: about 563 x 12.5 = 7,040
-black blocks on the gross area (fewer after the openings of Q-73, before waste).
-(B) A different size you now buy (tell us the face size): count = area / face area.
-(C) Keep the black count HELD and report m2 and m3 only.
-RECOMMENDATION: A, if the 2025 sales order is still your supplier's size: it is your own purchase record, the same
-kind of evidence as the white-block pallet list you gave in Q-60, and it serves both 15 and 20 cm walls.
-WAITS ON: black-block counts, mortar and procurement for every inner wall (T-143, then T-108). Area and m3 stay reported.
-
-No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
-
-Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
-
-STATUS (main chat 2026-10-22, owner directive section 8): reopened as INVESTIGATION T-176: 40 x 20 (12.5 / m2) is a starting calculation, not the procurement quantity; net area first, units by a documented procurement method. Not answered.
-
-OWNER DECISION 2026-10-23 14:15 (owner's words in the main chat): "Keep the 12.5 blocks/m² nominal-module calculation as a provisional rule for standard 40 × 20 cm face modules, subject to supplier confirmation of actual dimensions and joint thickness. Full door/window opening deduction is already an Urban Projects owner rule. Do not reopen it without a documented conflict. Separate net BOQ blockwork area from procurement block counts, cutting waste, mortar, cement and sand. Independently verify the mortar calculation against actual joint geometry before promoting its quantities to VERIFIED. Do not hardcode 5% waste. Keep procurement waste configurable and evidence-based. Please check whether the 563 m² gross wall area includes openings or duplicated wall segments, and distinguish 100, 150 and 200 mm blockwork by type." -> the 40 x 20 module (12.5 / m2) is a PROVISIONAL owner rule (ASSUMED — OWNER-APPROVED, provisional) for standard 40 x 20 face modules; it becomes final only with the supplier's actual block dimensions and joint thickness (a data item for the team, not an owner decision). Opening deduction (Q-73) is settled and not reopened. Waste is a configurable, evidence-based parameter, never a hardcoded 5 %.
-MAIN-CHAT CHECK 2026-10-23 14:20 (owner's request): the 563 m2 was the T-143 hand GROSS (black 0.15 350.71 + 0.20 212.58) BEFORE openings, and it carried the T-stem double count (stems to the through-wall centreline, 2.70 m3 in all types); 146.22 m2 of it PROVISIONAL (annex datum Q-54 B, lift tie beam). Superseded by MASONRY_AREA_V1 r2 (T-108 r2, checker MERGED 01eeafd0 09:11; stems stop on the face): black gross 554.49 m2 = 0.15: 342.91 (DRAWING-CONFIRMED 215.72, HELD 127.19) + 0.20: 211.58 (DC 125.88, HELD 85.70); established opening deductions on black 36.08 m2 (0.15: 29.92, 0.20: 6.16); black net established 290.05 m2 (0.15: 103.33 DC + 79.00 ASSUMED - OWNER-APPROVED; 0.20: 107.72 DC), the rest of the black walls net HELD. 100 mm: no 0.10 m run in the census (thicknesses found 0.15, 0.20 and one 0.40 band HELD); D-12 (walls containing columns at column thickness) still open on 19 rows.
-
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.
 
+- **Q-75** Black block size — Answer (owner 2026-11-02): physical 40 x 19 x 19 cm, sold as 40 x 20 x 20; count on the installed module incl. joints; 12.5 / m2 only where the installed module is confirmed 40 x 20; waste tracked separately.
+- **Q-72** Stair shaft wall height — Answer (owner 2026-11-02): full exposed wall height continuously through the stairwell, not room finish heights; reconcile wall by wall before verifying the total.
 - **T-383** Waterproofing completeness check: own task or part of T-310? — Answer (owner 2026-11-02): T-471 owns the overall completeness matrix; T-383 owns the waterproofing completeness check within it; T-310 owns the export integration; no duplicate implementation.
 - **Q-78** Black-block joint mortar mix — Answer: A, 1:4 (owner 2026-11-02), with the Q-45 figures (about 8 bags of 50 kg and 1.1 m3 loose sand per m3); unblocks T-372.
 - **Q-77** Mesh strips over block-to-concrete joints — Answer (owner, main chat 2026-10-29 21:22, with the 30 Oct additions): a separate optional blocks item: mesh strip in linear metres on top of every 3 courses + sharmat (شرمات) ties per wall-column junction; plaster joint mesh kept separate; full words in OWNER_QUESTIONS_ANSWERED.md. Moved from Open 2026-11-02.
