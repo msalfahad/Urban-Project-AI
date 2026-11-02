@@ -1,0 +1,247 @@
+{
+ "registry": "URBAN_COMPANY_RULEBOOK",
+ "version": "1.0.0",
+ "supersedes": null,
+ "rule": "the Urban Projects Company Rulebook: OWNER CONFIRMED company rules (hierarchy level 3). Project documents (level 1) and owner project decisions (level 2) override a company value FOR THAT PROJECT ONLY, through the per-project configuration passed to engine/source/company_rulebook_v1.py; they never change this file. Where levels 1-3 are silent, a value may come only from a documented engineering estimate (level 4) carrying its source and sensitivity, labelled ENGINEERING ESTIMATE; otherwise the value is an explicit unresolved exception (level 5) and the quantity is HELD, never 0. A behaviour change is a new version of this file; this file is never edited in place. Owner confirmation of a site practice is not structural design or engineering approval. Rates feed procurement (layer 2) only: net installed quantities, consumption, waste and procurement are kept separate.",
+ "hierarchy": {
+  "1": "PROJECT DOCUMENT (approved drawings, specifications, schedules, details; revision and precedence applied)",
+  "2": "OWNER PROJECT DECISION (explicit, for that project only)",
+  "3": "OWNER CONFIRMED COMPANY RULE (this file)",
+  "4": "ENGINEERING ESTIMATE (documented method, assumption, calculation and sensitivity; never owner-attributed, never VERIFIED procurement)",
+  "5": "ASSUMPTION-UNRESOLVED (explicit exception: the quantity stays HELD, never 0)"
+ },
+ "basis_labels": ["PROJECT DOCUMENT", "OWNER PROJECT DECISION", "OWNER CONFIRMED COMPANY RULE", "ENGINEERING ESTIMATE",
+                  "ASSUMPTION-UNRESOLVED"],
+ "provenance": "owner directives 2026-11-02 (main chat), recorded on agents/control in docs/agents/MISSION.md ('OWNER CONFIRMED rules register' and 'Consolidated owner directive 2026-11-02: understand before calculating'), docs/agents/AGENT_BRIEF.md (OWNER CONFIRMED rules table) and docs/agents/OWNER_QUESTIONS_ANSWERED.md (Q-45, Q-60, Q-72, Q-73, Q-75, Q-78); task T-448",
+ "records": [
+  {
+   "rule_id": "UPC-LINTEL-001",
+   "version": "1.0.0",
+   "title": "Precast lintel (atab, عتب) stock length and count",
+   "trade": "BLOCKWORK",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; precast lintels over masonry openings. White AAC walls usually take white precast lintels (atab only for white blocks, Q-60); black block walls take black precast or cast-in-situ RC lintels as the drawings require (company convention, not structural design). A printed structural lintel schedule or a structural beam that already serves the opening governs instead (never both).",
+   "params": {
+    "stock_lengths_m": {"value": [1.20, 1.50, 2.50, 3.00, 4.00], "unit": "m",
+                        "note": "1.00 m is NOT a company stock length; it is used only on a supplier record given as a project override (level 1 / 2)"},
+    "min_bearing_each_side_m": {"value": 0.15, "unit": "m",
+                                "note": "minimum; an approved bearing from the drawings or the supplier load / span table replaces it when larger; the owner's 0.20 m in his example is illustrative, not universal"},
+    "count_per_opening": {"value": 1, "unit": "nr"}
+   },
+   "method": [
+    "masonry opening width W (the opening in the block, e.g. a 1.00 m clear door may need 1.10 m per the approved door / frame detail), from the drawings; unknown -> HELD",
+    "bearing b each side = the approved project bearing (level 1 / 2) when given, else the company minimum 0.15 m; a project bearing below 0.15 m is a CONFLICT, FLAGGED, never silently used",
+    "required length = W + 2 b; piece = the shortest stock length >= required; one piece per opening; measured in pieces (nr) by length",
+    "required length above the longest stock (4.00 m) -> FLAGGED (cast-in-situ or design), never forced into a stock piece",
+    "no capacity check is implied: long spans need the supplier load / span table or the drawing specification; beside an RC column no bearing is assumed on a 10 cm masonry strip (designed connection or FLAGGED)"
+   ],
+   "worked_examples": [
+    {"masonry_opening_m": 1.10, "bearing_m": 0.20, "required_m": 1.50, "piece_m": 1.50, "source": "owner example 2026-11-02"},
+    {"masonry_opening_m": 1.10, "bearing_m": 0.15, "required_m": 1.40, "piece_m": 1.50, "source": "company minimum bearing"},
+    {"masonry_opening_m": 4.00, "bearing_m": 0.20, "required_m": 4.40, "piece_m": null, "result": "FLAGGED", "source": "owner example 2026-11-02"}
+   ],
+   "source": "owner 2026-11-02 (AGENT_BRIEF 'Lintels'; MISSION OWNER CONFIRMED register 'Lintels' and consolidated directive 'Lintels'); Q-60 (atab only for white blocks)",
+   "not_given": ["lintel section / type per wall type (drawings or supplier)", "load / span capacity (supplier tables or drawings)"]
+  },
+  {
+   "rule_id": "UPC-ADHESIVE-001",
+   "version": "1.0.0",
+   "title": "Tile adhesive (لاصق) bags by tile size",
+   "trade": "TILING",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; porcelain / ceramic tiles fixed with cementitious tile adhesive (BSCO NITE C2 / NITE Plus C2TE named by the owner; the cheaper green packaging is not assumed equivalent). Urban practical consumption, not the manufacturer's nominal figure.",
+   "params": {
+    "bag_kg": {"value": 20.0, "unit": "kg"},
+    "coverage_m2_per_bag_by_size_cm": {"value": {"60x60": 5.0, "120x60": 3.0, "160x80": 3.0}, "unit": "m2 / bag",
+                                       "note": "size keys are long x short side in cm; 60 x 120 is the same tile as 120 x 60"},
+    "coverage_m2_per_bag_normal_class": {"value": 5.0, "unit": "m2 / bag",
+                                         "note": "'normal tiles' at 5 m2 per bag; a size not in the table takes this rate ONLY when the project or the owner classifies it NORMAL (level 1 / 2); otherwise the size is HELD, never the 60 x 60 rate"},
+    "rounding": {"value": "CEIL_PER_PRODUCT_PER_PURCHASING_GROUP", "unit": "-",
+                 "note": "room quantities kept as fractional bags; bags rounded up once per product at the purchasing group (project / product), never per-room rounding summed"},
+    "waste": {"value": null, "unit": "fraction",
+              "note": "separate; configurable and evidence-based, never hardcoded; no waste is applied unless a sourced value is given"}
+   },
+   "method": ["bags_net = net tiled area / coverage of that tile size", "bags_to_buy = ceil(sum of bags_net over the purchasing group x (1 + sourced waste, when given))"],
+   "worked_examples": [
+    {"area_m2": 12.0, "tile": "120x60", "bags_net": 4.0, "bags_to_buy": 4, "source": "T-448 acceptance fixture"},
+    {"area_m2": 72.12, "tile": "60x60", "bags_net": 14.424, "bags_to_buy": 15, "source": "Q-45 example (before waste)"}
+   ],
+   "source": "Q-45 (owner 2026-10-19: 20 kg bag, 5 m2); owner 2026-11-02 (120 x 60 and 160 x 80 at 3 m2 per bag; normal incl. 60 x 60 at 5 m2; ceil rounding; waste separate)",
+   "not_given": ["marble / natural stone coverage (Q-45: HELD)", "any tile size not in the table and not classified NORMAL"]
+  },
+  {
+   "rule_id": "UPC-AAC-GLUE-001",
+   "version": "1.0.0",
+   "title": "White AAC block glue (مونة طابوق أبيض) consumption",
+   "trade": "BLOCKWORK",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; thin-bed glue of white AAC block walls on the net block area (openings deducted, Q-73). Owner site rates; replaces the earlier 'about 10 m2 per bag'. Provenance: a 2025 invoice implied a leaner rate; the owner chose his site rates.",
+   "params": {
+    "bag_kg": {"value": 25.0, "unit": "kg"},
+    "kg_per_m2_by_thickness_m": {"value": {"0.15": 3.5, "0.20": 4.5}, "unit": "kg / m2",
+                                 "note": "15 cm block about 7.1 m2 per bag; 20 cm block about 5.6 m2 per bag; any other thickness HELD"},
+    "rounding": {"value": "CEIL_PER_PRODUCT_PER_PURCHASING_GROUP", "unit": "-"},
+    "waste": {"value": null, "unit": "fraction", "note": "separate; sourced value only"}
+   },
+   "method": ["kg = net AAC wall area x kg/m2 of its thickness", "bags_to_buy = ceil(sum kg over the purchasing group x (1 + sourced waste, when given) / 25)"],
+   "worked_examples": [
+    {"area_m2": 20.0, "thickness_m": 0.20, "kg": 90.0, "bags_net": 3.6, "bags_to_buy": 4, "source": "T-448 acceptance fixture"}
+   ],
+   "source": "owner 2026-11-02 (AGENT_BRIEF 'White AAC glue'; MISSION OWNER CONFIRMED register)",
+   "not_given": ["glue rate for 10 / 25 / 30 cm AAC blocks"]
+  },
+  {
+   "rule_id": "UPC-BLACK-BLOCK-001",
+   "version": "1.0.0",
+   "title": "Black (cement) block count per m2 of wall",
+   "trade": "BLOCKWORK",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; black solid blocks, physical 40 x 19 x 19 cm, sold as 40 x 20 x 20 cm; counted on the INSTALLED module including joints. 12.5 per m2 applies only where the installed module is confirmed 40 x 20 cm (the 20 cm block; the 15 cm block's face comes from the block schedule, project evidence or supplier data and takes 12.5 only when its module is 40 x 20).",
+   "params": {
+    "blocks_per_m2_40x20_module": {"value": 12.5, "unit": "nr / m2"},
+    "confirmed_modules_m": {"value": {"0.20": [0.40, 0.20]}, "unit": "m",
+                            "note": "thickness -> installed face module confirmed by the owner; the 0.15 m module is NOT stated (data item, flagged)"},
+    "waste": {"value": null, "unit": "fraction", "note": "separate; configurable and evidence-based, never a hardcoded 5 %"}
+   },
+   "method": ["theoretical count = net wall area (openings deducted, Q-73) x 12.5 for a confirmed 40 x 20 module", "procurement count = ceil(theoretical x (1 + sourced waste)) kept apart; gross, openings, net, theoretical, waste and procurement traceable separately"],
+   "worked_examples": [
+    {"net_area_m2": 10.0, "thickness_m": 0.20, "blocks": 125.0, "source": "hand fixture"}
+   ],
+   "source": "Q-75 (owner 2026-11-02 answer: 40 x 19 x 19 sold as 40 x 20 x 20, installed module, 12.5 per m2 only for a confirmed 40 x 20 module, waste separate); owner decision 2026-10-23 14:15 (waste configurable)",
+   "not_given": ["the 15 cm black block installed module (block schedule / supplier)"]
+  },
+  {
+   "rule_id": "UPC-BLACK-MORTAR-001",
+   "version": "1.0.0",
+   "title": "Black-block laying mortar mix and materials per m3",
+   "trade": "BLOCKWORK",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; joint mortar of black (cement) block walls only (never borrowed for render or plaster); the mortar volume comes from the joint geometry of the installed module.",
+   "params": {
+    "mix_cement_sand": {"value": "1:4", "unit": "by volume"},
+    "cement_bags_per_m3": {"value": 8.0, "unit": "bags of 50 kg / m3 mortar", "note": "'about 8' (Q-45 figures)"},
+    "cement_bag_kg": {"value": 50.0, "unit": "kg"},
+    "loose_sand_m3_per_m3": {"value": 1.1, "unit": "m3 / m3 mortar", "note": "'about 1.1 m3 loose sand' (Q-45 figures)"}
+   },
+   "method": ["cement bags = mortar m3 x 8 (rounded up at the purchasing group)", "sand m3 = mortar m3 x 1.1 (loose)"],
+   "worked_examples": [
+    {"mortar_m3": 2.0, "cement_bags": 16.0, "sand_m3": 2.2, "source": "hand fixture"}
+   ],
+   "source": "Q-78 (owner 2026-11-02: A, 1:4 with the Q-45 figures); Q-45",
+   "not_given": ["mortar waste (sourced value only)"]
+  },
+  {
+   "rule_id": "UPC-TILE-BED-001",
+   "version": "1.0.0",
+   "title": "Cement-sand bed under floor tiles",
+   "trade": "TILING",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; the cement-sand bed under floor tiles (regular floors and wet-area floors, bartash); reported as a RANGE (low = thin, high = thick), never one invented number. Not the wet-wall levelling render (UPC-WETWALL-001).",
+   "params": {
+    "thickness_m_regular_floor": {"value": [0.03, 0.04], "unit": "m"},
+    "thickness_m_wet_floor": {"value": [0.04, 0.06], "unit": "m"},
+    "mix_cement_sand": {"value": "1:4", "unit": "by volume"},
+    "cement_bags_per_m3": {"value": 8.0, "unit": "bags of 50 kg / m3"},
+    "loose_sand_m3_per_m3": {"value": 1.1, "unit": "m3 / m3"},
+    "wet_floor_fall": {"value": 0.01, "unit": "per m", "note": "bathrooms 1 % per metre (Q-45)"}
+   },
+   "method": ["mortar m3 (low, high) = net floor area x (thickness low, high)", "cement and sand from the 1:4 figures per bound"],
+   "worked_examples": [
+    {"area_m2": 10.0, "floor": "WET", "mortar_m3": [0.4, 0.6], "cement_bags": [3.2, 4.8], "sand_m3": [0.44, 0.66], "source": "hand fixture"}
+   ],
+   "source": "Q-45 (owner 2026-10-19 answer: regular floors 3-4 cm, bathrooms 4-6 cm, 1:4, about 8 bags and 1.1 m3 loose sand per m3)",
+   "not_given": ["roof screed thickness (from the falls on the drawings)", "stair marble bed (Q-53, its own rule)"]
+  },
+  {
+   "rule_id": "UPC-WETWALL-001",
+   "version": "1.0.0",
+   "title": "Wet-area wall build-up: three separate operations",
+   "trade": "TILING",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; bathrooms, kitchens, pantries, laundry, ironing rooms and other designated wet areas",
+   "params": {
+    "operations": {"value": [
+      {"op": "SPATTER_DASH", "ar": "طرطشة", "by": "plasterer (معلم المساح)"},
+      {"op": "LEVELLING_RENDER", "ar": "مساح ناعم", "by": "tiler (معلم السيراميك)"},
+      {"op": "ADHESIVE_AND_PORCELAIN", "ar": "لاصق + بورسلان", "by": "tiler"}], "unit": "-"},
+    "second_fixing_bed": {"value": false, "unit": "-", "note": "no second mortar fixing bed where render + adhesive is the method"},
+    "paint_on_tiled_faces": {"value": false, "unit": "-"},
+    "skirting_on_tiled_faces": {"value": false, "unit": "-"}
+   },
+   "method": ["each operation is its own BOQ line on the same wet-wall area; none omitted, none double-counted", "porcelain to the project finish height under the wet-area rules unless the drawings say otherwise"],
+   "source": "owner 2026-11-02 (MISSION OWNER CONFIRMED register 'Wet-area walls'; consolidated directive)",
+   "not_given": ["spatter dash and levelling render thickness / mix / water (see UPC-CEMENT-LAYERS-METHOD-001)"]
+  },
+  {
+   "rule_id": "UPC-HEIGHT-001",
+   "version": "1.0.0",
+   "title": "Plaster and paint heights",
+   "trade": "FINISHES",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; interior wall plaster and paint",
+   "params": {
+    "plaster_top": {"value": "UNDERSIDE_OF_STRUCTURAL_SLAB_OR_ROOF", "unit": "-", "note": "full height above suspended ceilings too, from drawings and sections; not a 10-20 cm band; beam faces, openings and overlapping walls not double counted"},
+    "paint_top": {"value": "FINISHED_CEILING", "unit": "-", "note": "plaster and paint measured separately"},
+    "stair_shaft": {"value": "FULL_EXPOSED_HEIGHT", "unit": "-", "note": "continuously through the stairwell from sections, levels, landings and roof geometry; no room-height deductions; reconciled wall by wall"}
+   },
+   "source": "owner 2026-11-02 (MISSION register 'Wall plaster height', 'Wall paint height', 'Stair shaft'); Q-72",
+   "not_given": []
+  },
+  {
+   "rule_id": "UPC-BLOCK-OPENINGS-001",
+   "version": "1.0.0",
+   "title": "Opening deduction from blockwork",
+   "trade": "BLOCKWORK",
+   "level": 3,
+   "basis": "OWNER CONFIRMED COMPANY RULE",
+   "status": "OWNER_CONFIRMED",
+   "scope": "every villa; every actual opening (doors, windows, passages, glass lines) deducted at full size from the block area; no minimum size",
+   "params": {"deduct_all_openings": {"value": true, "unit": "-"}, "minimum_deducted_m2": {"value": 0.0, "unit": "m2"}},
+   "source": "Q-73 (owner, CONFIRMED 2026-10-22; not reopened, owner 2026-10-23 14:15)",
+   "not_given": []
+  },
+  {
+   "rule_id": "UPC-CEMENT-LAYERS-METHOD-001",
+   "version": "1.0.0",
+   "title": "Spatter dash, levelling render, wall plaster and water: documented estimating method (values NOT owner-given)",
+   "trade": "FINISHES",
+   "level": 4,
+   "basis": "ENGINEERING ESTIMATE",
+   "status": "METHOD_ONLY_VALUES_HELD",
+   "scope": "every villa; used only where the project documents (level 1), an owner project decision (level 2) and the company rules (level 3) are silent; the earlier 2 cm 1:4 wet-wall render was an engine assumption and is NOT a company rule; the 1:4 black-block mortar rule applies to black-block mortar only",
+   "params": {
+    "spatter_dash_thickness_m": {"value": null, "unit": "m"},
+    "spatter_dash_mix": {"value": null, "unit": "by volume"},
+    "levelling_render_thickness_m": {"value": null, "unit": "m"},
+    "levelling_render_mix": {"value": null, "unit": "by volume"},
+    "wall_plaster_thickness_m": {"value": null, "unit": "m"},
+    "wall_plaster_mix": {"value": null, "unit": "by volume"},
+    "water_l_per_m3": {"value": null, "unit": "l / m3"}
+   },
+   "method": [
+    "search order: project specification -> drawings -> owner project decision -> company rulebook -> this method",
+    "mortar m3 = area x thickness; cement bags and sand m3 = mortar m3 x the per-m3 figures of the applicable mix",
+    "a value used here must carry its source (reference book / specification clause) and the label ENGINEERING ESTIMATE; the result shows its sensitivity (mortar m3 per mm of thickness = area / 1000) and is never VERIFIED procurement",
+    "with no sourced value the layer's material line is HELD with this method named; the area lines are unaffected (a missing non-critical procurement parameter never blocks the rest of the BOQ)"
+   ],
+   "source": "owner 2026-11-02 (MISSION 'NOT GIVEN BY THE OWNER' and consolidated directive 'Cement-based materials')",
+   "not_given": ["every parameter above"]
+  }
+ ]
+}
