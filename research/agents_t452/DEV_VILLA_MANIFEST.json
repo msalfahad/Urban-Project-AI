@@ -1,0 +1,20 @@
+{
+ "SCHEMA": "URBAN_PROJECT_SCORE_MANIFEST_V1",
+ "task": "T-452",
+ "project_id": "development-villa-t131",
+ "label": "development villa (training sample; regression only, never a product accuracy figure)",
+ "source_folder": "Drive 'Urban BOQ private data' / 'Alsenan chalet project' (P7757_DXF_COMPRESSED.zip, 'ST7757 dxf.dxf')",
+ "run": null,
+ "run_note": "give --run <dir of tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json> (private, outside the repository) and optionally --candidate-lines <V3_0_x_BOQ_LINES.json>",
+ "run_label": "Released V2.9 + route G",
+ "candidate_label": "Candidate ARCH_TAKEOFF_V3.0.42",
+ "reference": "../../tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json",
+ "key_map": "../../tests/alsenan/T001C_KEY_MAP.json",
+ "set_bindings": "../agents_t216/ALSENAN_SET_BINDINGS_T216.json",
+ "reconciled_reference": "../agents_t469/CHECKER_REFERENCES_V1_SNAPSHOT.json",
+ "pricing_basis": null,
+ "pricing_note": "no approved pricing basis exists (T-472 PAUSED): every cost is NO_APPROVED_PRICING_BASIS, never assumed",
+ "high_value_keys": ["CONC.FOOTING", "CONC.GROUND", "CONC.COLUMN", "CONC.BEAM", "CONC.SLAB", "CONC.STAIR_DOME",
+                     "CONC.POOL", "DOORS.ALUMINIUM", "WINDOWS.ALUMINIUM"],
+ "tolerance_pct": 3.0
+}
