@@ -1,0 +1,91 @@
+{
+ "schema": "URBAN_T469_FREELANCER_PAIRS_V1",
+ "purpose": "T-469 DIAGNOSTIC 1:1 pairs between one registry family (in one engine unit) and freelancer COVER_TOTAL rows of tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json that measure the same physical element in the same unit. Freelancer QUANTITIES only (never rates, never header cells). Not a score: the boundaries are not Checker-reconciled; the keyed, scored lines stay those of tests/alsenan/T001C_KEY_MAP.json (concrete, plaster, paint, floor area, doors, windows). Scoring keys for every trade belong to T-452 (A4).",
+ "pairs": [
+  {
+   "pair": "Blockwork (all walls)",
+   "family": "B9-01",
+   "item_codes": [
+    "MAS.BLOCK"
+   ],
+   "unit": "m2",
+   "reference_ids": [
+    "BLK:الغلاف:19"
+   ],
+   "boundary": "freelancer 'total blockwork' m2 (external + 15 cm + 20 cm) vs engine MAS.BLOCK net wall face m2"
+  },
+  {
+   "pair": "Wet-room wall tiles",
+   "family": "B4-01",
+   "item_codes": [
+    "FIN.WALL.TILE"
+   ],
+   "unit": "m2",
+   "reference_ids": [
+    "FIN:الغلاف:17"
+   ],
+   "boundary": "freelancer 'total walls' (wet rooms) m2 vs engine FIN.WALL.TILE m2"
+  },
+  {
+   "pair": "Internal skirting",
+   "family": "B3-06",
+   "item_codes": [
+    "FIN.SKIRTING"
+   ],
+   "unit": "lm",
+   "reference_ids": [
+    "FIN:الغلاف:16"
+   ],
+   "boundary": "freelancer 'total skirting' lm (internal; yard and stair skirting are separate cover rows) vs engine FIN.SKIRTING lm"
+  },
+  {
+   "pair": "Wet-room floor waterproofing",
+   "family": "B8-01",
+   "item_codes": [
+    "FIN.WP.FLOOR",
+    "FIN.WP.PENETRATION"
+   ],
+   "unit": "m2",
+   "reference_ids": [
+    "FIN:الغلاف:27"
+   ],
+   "boundary": "freelancer wet-room floor waterproofing m2 vs engine B8-01 m2 lines (FIN.WP.PENETRATION is pcs, outside this unit)"
+  },
+  {
+   "pair": "Wet-room upturns",
+   "family": "B8-03",
+   "item_codes": [
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "unit": "m2",
+   "reference_ids": [
+    "FIN:الغلاف:28"
+   ],
+   "boundary": "freelancer upturns in lm vs engine upturn m2: expected UNIT_MISMATCH, refused (shown so the gap is visible)"
+  },
+  {
+   "pair": "Internal railing",
+   "family": "B7-09",
+   "item_codes": [
+    "FIN.RAILING"
+   ],
+   "unit": "lm",
+   "reference_ids": [
+    "FIN:الغلاف:39"
+   ],
+   "boundary": "freelancer internal railing lm vs engine FIN.RAILING lm"
+  },
+  {
+   "pair": "Rebar tonnage",
+   "family": "B11-01",
+   "item_codes": [
+    "STR.REBAR"
+   ],
+   "unit": "kg",
+   "reference_ids": [
+    "RC:ورقة1:25"
+   ],
+   "boundary": "freelancer total rebar in t (a kg/m3 lump, RULE_DIFFERENCE T-272) vs engine kg: UNIT_MISMATCH, refused, never converted"
+  }
+ ]
+}

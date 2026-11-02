@@ -1,0 +1,98 @@
+#### Eight owner categories per trade: Released V2.9 + route G (V29_ROUTEG_NO_PROFILE) (BOQ lines sha256 1eff0920, 1,455 canonical lines)
+
+| Trade (registry group) | (1) expected BOQ lines | (2) measured (families fully released; released qty of all families) | (3) independently verified whole lines | (4) held (families with a held line) | (5) unmeasured (family without a line) | (6) provisional material qty | (7) verified procurement qty | (8) priced / unpriced |
+|---|---|---|---|---|---|---|---|---|
+| B1 Site | 7 families, 0 lines | 0: released - | 0 / 7 families; 0 / 0 item lines; verified qty - | 0: none | 7 | n/a (no material family) | n/a | 0 priced / 0 lines UNPRICED |
+| B2 Spaces | 5 families, 12 lines | 1: released 63.158 m2 | 0 / 5 families; 0 / 1 item lines; verified qty - | 0: none | 4 | n/a (no material family) | n/a | 0 priced / 12 lines UNPRICED |
+| B3 Floors | 7 families, 104 lines | 2: released 185.517 lm; 377.626 m2 | 0 / 7 families; 0 / 5 item lines; verified qty - | 2: 11 lines lm: 9 bounded 0.000 .. 27.138, 2 UNKNOWN; 14 lines m2: 14 UNKNOWN | 3 | n/a (no material family) | n/a | 0 priced / 104 lines UNPRICED |
+| B4 Walls | 11 families, 130 lines | 0: released 191.856 lm; 17.740 m2 | 0 / 11 families; 0 / 7 item lines; verified qty - | 5: 3 lines lm: 3 UNKNOWN; 90 lines m2: 2 bounded 2.360 .. 2.600, 88 UNKNOWN | 6 | n/a (no material family) | n/a | 0 priced / 130 lines UNPRICED |
+| B5 Ceilings | 6 families, 31 lines | 0: released 403.163 m2 | 0 / 6 families; 0 / 1 item lines; verified qty - | 1: 2 lines m2: 2 UNKNOWN | 5 | n/a (no material family) | n/a | 0 priced / 31 lines UNPRICED |
+| B6 Openings | 7 families, 55 lines | 4: released 55.000 pcs | 0 / 7 families; 0 / 4 item lines; verified qty - | 0: none | 3 | n/a (no material family) | n/a | 0 priced / 55 lines UNPRICED |
+| B7 Stairs | 15 families, 75 lines | 1: released 91.028 lm; 27.324 m2; 4.635 m3 | 0 / 15 families; 0 / 7 item lines; verified qty - | 6: 31 lines lm: 3 bounded 0.000 .. 29.896, 28 UNKNOWN; 19 lines m2: 5 bounded 0.000 .. 29.699, 14 UNKNOWN | 8 | n/a (no material family) | n/a | 0 priced / 75 lines UNPRICED |
+| B8 Waterproofing | 9 families, 73 lines | 0: released 86.768 m2 | 0 / 9 families; 0 / 6 item lines; verified qty - | 3: 4 lines lm: 4 bounded 0.000 .. 0.505; 13 lines m2: 13 bounded 0.000 .. 2.139; 14 lines pcs: 14 UNKNOWN | 6 | 0 (2 material families, no released material line) | 0 | 0 priced / 73 lines UNPRICED |
+| B9 Masonry | 5 families, 28 lines | 0: released 216.931 lm | 0 / 5 families; 0 / 4 item lines; verified qty - | 1: 14 lines m2: 14 UNKNOWN; 7 lines m3: 7 UNKNOWN | 4 | 0 (1 material families, no released material line) | 0 | 0 priced / 28 lines UNPRICED |
+| B10 Concrete | 13 families, 449 lines | 4: released 231.630 m3 | 0 / 13 families; 0 / 12 item lines; verified qty - | 7: 205 lines m3: 122 bounded 44.108 .. 113.540, 83 UNKNOWN | 2 | n/a (no material family) | n/a | 0 priced / 449 lines UNPRICED |
+| B11 Rebar | 4 families, 497 lines | 0: released 16,392.647 kg | 0 / 4 families; 0 / 1 item lines; verified qty - | 1: 30 lines kg: 2 bounded 29.537 .. 32.571, 28 UNKNOWN | 3 | 0 (1 material families, no released material line) | 0 | 0 priced / 497 lines UNPRICED |
+| B12 MEP | 5 families, 0 lines | 0: released - | 0 / 5 families; 0 / 0 item lines; verified qty - | 0: none | 5 | n/a (no material family) | n/a | 0 priced / 0 lines UNPRICED |
+| B13 Other | 8 families, 0 lines | 0: released - | 0 / 8 families; 0 / 0 item lines; verified qty - | 0: none | 8 | 0 (1 material families, no released material line) | 0 | 0 priced / 0 lines UNPRICED |
+
+#### Eight owner categories per trade: ARCH_TAKEOFF_V3.0.20 (candidate, NOT RELEASED) (BOQ lines sha256 097a80b6, 3,705 canonical lines)
+
+| Trade (registry group) | (1) expected BOQ lines | (2) measured (families fully released; released qty of all families) | (3) independently verified whole lines | (4) held (families with a held line) | (5) unmeasured (family without a line) | (6) provisional material qty | (7) verified procurement qty | (8) priced / unpriced |
+|---|---|---|---|---|---|---|---|---|
+| B1 Site | 7 families, 0 lines | 0: released - | 0 / 7 families; 0 / 0 item lines; verified qty - | 0: none | 7 | n/a (no material family) | n/a | 0 priced / 0 lines UNPRICED |
+| B2 Spaces | 5 families, 16 lines | 0: released 68.561 m2 | 0 / 5 families; 0 / 1 item lines; verified qty - | 1: 2 lines m2: 2 bounded 7.488 .. 7.488 | 4 | n/a (no material family) | n/a | 0 priced / 16 lines UNPRICED |
+| B3 Floors | 7 families, 124 lines | 2: released 185.517 lm; 374.912 m2 | 0 / 7 families; 0 / 5 item lines; verified qty - | 2: 11 lines lm: 9 bounded 0.000 .. 27.138, 2 UNKNOWN; 21 lines m2: 9 bounded 1.910 .. 1.910, 12 UNKNOWN | 3 | n/a (no material family) | n/a | 0 priced / 124 lines UNPRICED |
+| B4 Walls | 11 families, 169 lines | 0: released 198.856 lm; 452.156 m2 | 0 / 11 families; 0 / 7 item lines; verified qty - | 5: 3 lines lm: 3 UNKNOWN; 92 lines m2: 16 bounded 976.602 .. 1,088.321, 76 UNKNOWN | 6 | n/a (no material family) | n/a | 0 priced / 169 lines UNPRICED |
+| B5 Ceilings | 6 families, 36 lines | 0: released 447.609 m2 | 0 / 6 families; 0 / 1 item lines; verified qty - | 1: 2 lines m2: 2 UNKNOWN | 5 | n/a (no material family) | n/a | 0 priced / 36 lines UNPRICED |
+| B6 Openings | 7 families, 82 lines | 1: released 117.616 m2; 58.000 pcs | 0 / 7 families; 0 / 9 item lines; verified qty - | 3: 5 lines m2: 4 bounded 22.900 .. 25.755, 1 UNKNOWN; 4 lines pcs: 4 bounded 7.000 .. 8.000 | 3 | n/a (no material family) | n/a | 0 priced / 82 lines UNPRICED |
+| B7 Stairs | 15 families, 85 lines | 0: released 91.028 lm; 32.247 m2; 5.369 m3 | 0 / 15 families; 0 / 7 item lines; verified qty - | 7: 31 lines lm: 3 bounded 0.000 .. 29.896, 28 UNKNOWN; 19 lines m2: 5 bounded 0.000 .. 29.699, 14 UNKNOWN; 5 lines m3: 5 UNKNOWN | 8 | n/a (no material family) | n/a | 0 priced / 85 lines UNPRICED |
+| B8 Waterproofing | 9 families, 150 lines | 0: released 181.589 lm; 676.806 m2; 6.527 m3; 66.000 pcs | 0 / 9 families; 2 / 20 item lines (WP.FOUNDATION.LIFT_PIT_SCREED (m2), WP.FOUNDATION.LIFT_PIT_SCREED (m3)); verified qty 20.700 m2; 1.035 m3 | 6: 1 lines item: 1 UNKNOWN; 8 lines lm: 7 bounded 0.000 .. 3.660, 1 UNKNOWN; 24 lines m2: 13 bounded 0.000 .. 2.139, 11 UNKNOWN; 1 lines m3: 1 UNKNOWN; 18 lines pcs: 18 UNKNOWN | 3 | 52.000 pcs (+2 held material lines, no qty) | 0 | 0 priced / 150 lines UNPRICED |
+| B9 Masonry | 5 families, 28 lines | 0: released 216.931 lm | 0 / 5 families; 0 / 4 item lines; verified qty - | 1: 14 lines m2: 14 UNKNOWN; 7 lines m3: 7 UNKNOWN | 4 | 0 (1 material families, no released material line) | 0 | 0 priced / 28 lines UNPRICED |
+| B10 Concrete | 13 families, 509 lines | 1: released 278.506 m3 | 1 / 13 families; 1 / 12 item lines (STR.CONC.SLAB (m3)); verified qty 60.280 m3 | 10: 118 lines m3: 82 bounded 49.804 .. 75.626, 36 UNKNOWN | 2 | n/a (no material family) | n/a | 0 priced / 509 lines UNPRICED |
+| B11 Rebar | 4 families, 2,505 lines | 0: released 9,375.306 kg | 0 / 4 families; 0 / 1 item lines; verified qty - | 1: 1562 lines kg: 945 bounded 15,250.787 .. 21,621.545, 617 UNKNOWN | 3 | 0 (1 material families, no released material line) | 0 | 0 priced / 2,505 lines UNPRICED |
+| B12 MEP | 5 families, 0 lines | 0: released - | 0 / 5 families; 0 / 0 item lines; verified qty - | 0: none | 5 | n/a (no material family) | n/a | 0 priced / 0 lines UNPRICED |
+| B13 Other | 8 families, 0 lines | 0: released - | 0 / 8 families; 0 / 0 item lines; verified qty - | 0: none | 8 | 0 (1 material families, no released material line) | 0 | 0 priced / 0 lines UNPRICED |
+
+#### Per-family concrete statement (m3; released, held range and UNKNOWN never summed into one figure)
+
+| Family | Released V2.9 + route G (V29_ROUTEG_NO_PROFILE) | ARCH_TAKEOFF_V3.0.20 (candidate, NOT RELEASED) |
+|---|---|---|
+| B7-12 Stair concrete | MEASURED: released 4.635 on 3 | HELD: released 5.369 on 6; held 5, 5 UNKNOWN |
+| B9-02 Lintels | NO_LINE | NO_LINE |
+| B10-01 Blinding | HELD; held 1 (bounded 7.276 .. 16.887) | HELD; held 4 (bounded 21.059 .. 25.964), 1 by downgrade |
+| B10-02 Isolated / combined footings | MEASURED: released 66.264 on 26 | HELD: released 64.304 on 25; held 1 (bounded 2.176 .. 2.275) |
+| B10-03 Necks | HELD; held 36 (bounded 3.075 .. 15.375), 1 UNKNOWN | HELD; held 36 (bounded 3.075 .. 15.375), 1 UNKNOWN |
+| B10-04 Strap / ground beams | HELD: released 3.781 on 3; held 59 (bounded 17.801 .. 59.337) | HELD: released 29.864 on 37; held 27 (bounded 2.838 .. 3.599), 12 UNKNOWN, 13 by downgrade |
+| B10-05 Ground slab | HELD: released 17.127 on 23; held 2 (bounded 4.767 .. 4.767) | HELD: released 17.241 on 24; held 1 (bounded 3.930 .. 3.930) |
+| B10-06 Columns | HELD; held 82, 82 UNKNOWN | HELD: released 28.215 on 45; held 19 (bounded 1.134 .. 3.483), 16 UNKNOWN |
+| B10-07 Beams | HELD: released 64.820 on 112; held 24 (bounded 8.449 .. 14.434) | HELD: released 66.318 on 110; held 27 (bounded 8.373 .. 13.780), 5 UNKNOWN |
+| B10-08 Suspended slabs | HELD: released 61.551 on 75; held 1 (bounded 2.740 .. 2.740) | MEASURED: released 60.280 on 62 — WHOLE LINE VERIFIED |
+| B10-09 Domes / rings | MEASURED: released 7.372 on 2 | HELD: released 5.081 on 2; held 1, 1 UNKNOWN |
+| B10-10 Pool / tank / lift pit / pump room | MEASURED: released 3.495 on 2 | HELD: released 7.202 on 2; held 1, 1 UNKNOWN |
+| B10-11 Boundary wall concrete | MEASURED: released 7.220 on 1 | HELD; held 1 (bounded 7.220 .. 7.220), 1 by downgrade |
+| B10-12 RC parapets | NO_LINE | NO_LINE |
+| B10-13 Formwork (all elements) | NO_LINE | NO_LINE |
+
+#### Keyed reference lines as RANGES (key map T001C item codes; released + held low .. high; UNKNOWN keeps the range open: no single %)
+
+| Key | Freelancer | Released V2.9 + route G (V29_ROUTEG_NO_PROFILE) | ARCH_TAKEOFF_V3.0.20 (candidate, NOT RELEASED) |
+|---|---|---|---|
+| CONC.BLINDING | 47.055 m3 | released 0.000 on 0 + held 7.276 .. 16.887 (1) = -84.54 .. -64.11 % | released 0.000 on 0 + held 21.059 .. 25.964 (4) = -55.25 .. -44.82 % |
+| CONC.FOOTING | 77.631 m3 | released 77.265 on 30 = -0.47 % | released 67.695 on 28 + held 9.426 .. 9.998 (4) = -0.66 .. +0.08 % |
+| CONC.GROUND | 75.090 m3 | released 17.127 on 23 + held 22.568 .. 64.104 (61) = -47.14 .. +8.18 % | released 43.714 on 58 + held 6.738 .. 7.026 (14) + 12 UNKNOWN = at least -32.81 %, upper end open |
+| CONC.COLUMN | 39.752 m3 | released 0.000 on 0 + held 3.075 .. 15.375 (35) + 83 UNKNOWN = at least -92.26 %, upper end open | released 28.215 on 45 + held 4.209 .. 18.858 (38) + 17 UNKNOWN = at least -18.43 %, upper end open |
+| CONC.BEAM | 65.966 m3 | released 64.820 on 112 + held 8.449 .. 14.434 (24) = +11.07 .. +20.14 % | released 66.318 on 110 + held 8.373 .. 13.780 (22) + 5 UNKNOWN = at least +13.23 %, upper end open |
+| CONC.SLAB | 59.817 m3 | released 61.551 on 75 + held 2.740 .. 2.740 (1) = +7.48 .. +7.48 % | released 60.280 on 62 = +0.77 % |
+| CONC.STAIR_DOME | 21.833 m3 | released 12.007 on 5 = -45.01 % | released 10.450 on 8 + 6 UNKNOWN = at least -52.13 %, upper end open |
+| CONC.POOL | 12.348 m3 | released 3.495 on 2 = -71.69 % | released 7.202 on 2 + 1 UNKNOWN = at least -41.67 %, upper end open |
+| PLASTER.INTERNAL | 1,151.138 m2 | released 17.740 on 20 + held 2.360 .. 2.600 (2) + 27 UNKNOWN = at least -98.25 %, upper end open | released 234.948 on 24 + held 489.481 .. 545.461 (9) + 21 UNKNOWN = at least -37.07 %, upper end open |
+| PAINT.INTERNAL_WALL | 1,191.128 m2 | released 0.000 on 0 + 13 UNKNOWN = at least -100.00 %, upper end open | released 217.208 on 4 + held 487.121 .. 542.861 (7) + 4 UNKNOWN = at least -40.87 %, upper end open |
+| FLOOR.INTERNAL | 409.580 m2 | TYPED_KEY (scored by tools/alsenan_keymap.py only) | TYPED_KEY (scored by tools/alsenan_keymap.py only) |
+| DOORS.ALUMINIUM | 12.000 m2 | NO_SAME_UNIT_LINE (engine units ['pcs']) | released 12.760 on 2 = +6.33 % |
+| WINDOWS.ALUMINIUM | 116.900 m2 | NO_SAME_UNIT_LINE (engine units ['pcs']) | released 76.256 on 3 + held 9.870 .. 11.515 (1) + 1 UNKNOWN = at least -26.33 %, upper end open |
+
+#### Freelancer DIAGNOSTIC pairs, Released V2.9 + route G (V29_ROUTEG_NO_PROFILE) (declared 1:1, same unit and element; not a score: boundary not Checker-reconciled)
+
+| Pair | Unit | Freelancer | Engine | Outcome | Variance |
+|---|---|---|---|---|---|
+| Blockwork (all walls) | m2 | 1,260.689 | released 0.000 + 7 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Wet-room wall tiles | m2 | 433.830 | released 0.000 + 14 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Internal skirting | lm | 282.850 | released 185.517 + bounded 0.000 .. 27.138 + 2 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Wet-room floor waterproofing | m2 | 72.010 | 62.773 | ALL_RELEASED | -12.83 % |
+| Wet-room upturns | m2 | 144.610 | - | UNIT_MISMATCH (refused, never converted) | no % (range open or refused) |
+| Internal railing | lm | 18.950 | released 0.000 + 14 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Rebar tonnage | kg | 44.190 | - | UNIT_MISMATCH (refused, never converted) | no % (range open or refused) |
+
+#### Freelancer DIAGNOSTIC pairs, ARCH_TAKEOFF_V3.0.20 (candidate, NOT RELEASED) (declared 1:1, same unit and element; not a score: boundary not Checker-reconciled)
+
+| Pair | Unit | Freelancer | Engine | Outcome | Variance |
+|---|---|---|---|---|---|
+| Blockwork (all walls) | m2 | 1,260.689 | released 0.000 + 7 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Wet-room wall tiles | m2 | 433.830 | released 0.000 + 17 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Internal skirting | lm | 282.850 | released 185.517 + bounded 0.000 .. 27.138 + 2 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Wet-room floor waterproofing | m2 | 72.010 | 85.621 | ALL_RELEASED | +18.90 % |
+| Wet-room upturns | m2 | 144.610 | - | UNIT_MISMATCH (refused, never converted) | no % (range open or refused) |
+| Internal railing | lm | 18.950 | released 0.000 + 14 UNKNOWN | RANGE_OPEN (released + UNKNOWN held: no %) | no % (range open or refused) |
+| Rebar tonnage | kg | 44.190 | - | UNIT_MISMATCH (refused, never converted) | no % (range open or refused) |
+

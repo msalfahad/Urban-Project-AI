@@ -1,0 +1,518 @@
+{
+ "code_totals_check": [
+  "ARCH.SPACE|m2",
+  "FIN.CEILING.BULKHEAD|m2",
+  "FIN.CEILING|m2",
+  "FIN.FLOOR.BED.DRY|m2",
+  "FIN.FLOOR.BED.DRY|m3",
+  "FIN.FLOOR.PORCELAIN|m2",
+  "FIN.PAINT.CEILING|m2",
+  "FIN.SKIRTING|lm"
+ ],
+ "dry_floor_lines_m2": {
+  "v3_0_40": 299.375973,
+  "v3_0_41": 305.020973
+ },
+ "identity": {
+  "added": 7,
+  "diff": {
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3248,
+    "QUANTITY_DIFFERS": 981,
+    "SAME_QUANTITY": 609
+   },
+   "vs_v3_0_40": {
+    "ADDED": 7,
+    "CHANGED": 3,
+    "SAME": 4828
+   }
+  },
+  "outside_rows_identical_to_v3_0_40": 4828,
+  "pieces": {
+   "ceiling_decor_m2": 4.885,
+   "ceiling_held_lines": 2,
+   "floor_m2": 5.645,
+   "overlap_m2": 0.0,
+   "pieces": 1,
+   "retired": 1,
+   "shrunk": 1,
+   "skirting_added_lm": 3.9,
+   "zone_given_m2": 5.645
+  },
+  "replaced": 3,
+  "v3_0_40_lines": 4831,
+  "v3_0_41_lines": 4838
+ },
+ "join_v3_0_40": {
+  "dining": [
+   {
+    "layer": "CEILING",
+    "line_ids": [],
+    "line_qty": null,
+    "reasons": [],
+    "space_id": "GF-RFD4E1D",
+    "status": "SILENT_OMISSION"
+   },
+   {
+    "layer": "SKIRTING",
+    "line_ids": [],
+    "line_qty": null,
+    "reasons": [],
+    "space_id": "GF-RFD4E1D",
+    "status": "SILENT_OMISSION"
+   }
+  ],
+  "silent": [
+   {
+    "layer": "CEILING",
+    "omission": 0.6,
+    "space_id": "GF-OP-003-NO-OPENING"
+   },
+   {
+    "layer": "CEILING",
+    "omission": 5.645,
+    "space_id": "GF-RFD4E1D"
+   },
+   {
+    "layer": "SKIRTING",
+    "omission": 3.9,
+    "space_id": "GF-RFD4E1D"
+   },
+   {
+    "layer": "CEILING",
+    "omission": 1.1,
+    "space_id": "GF-SITE-0a31aaa10796d33a"
+   },
+   {
+    "layer": "SKIRTING",
+    "omission": 0.4,
+    "space_id": "GF-STRIP-OP-020"
+   },
+   {
+    "layer": "SKIRTING",
+    "omission": 0.3,
+    "space_id": "GF-STRIP-OP-027"
+   }
+  ]
+ },
+ "join_v3_0_41": {
+  "dining": [
+   {
+    "layer": "CEILING",
+    "line_ids": [
+     "L-ba5ea9bd",
+     "L-4b41debf"
+    ],
+    "line_qty": 4.885,
+    "reasons": [],
+    "space_id": "GF-RFD4E1D",
+    "status": "PARTIAL"
+   },
+   {
+    "layer": "SKIRTING",
+    "line_ids": [],
+    "line_qty": null,
+    "reasons": [
+     "SKIRTING_ON_HOST_FACE"
+    ],
+    "space_id": "GF-RFD4E1D",
+    "status": "REASON"
+   }
+  ],
+  "silent": [
+   {
+    "layer": "CEILING",
+    "omission": 0.6,
+    "space_id": "GF-OP-003-NO-OPENING"
+   },
+   {
+    "layer": "CEILING",
+    "omission": 1.1,
+    "space_id": "GF-SITE-0a31aaa10796d33a"
+   },
+   {
+    "layer": "SKIRTING",
+    "omission": 0.4,
+    "space_id": "GF-STRIP-OP-020"
+   },
+   {
+    "layer": "SKIRTING",
+    "omission": 0.3,
+    "space_id": "GF-STRIP-OP-027"
+   }
+  ]
+ },
+ "lines_json_sha256_8": {
+  "V3_0_36": "d462203f",
+  "V3_0_37": "733f2efb",
+  "V3_0_38": "57cca61c",
+  "V3_0_39": "8d1bbe5d",
+  "V3_0_40": "aa6aa927",
+  "V3_0_41": "5176c7c4"
+ },
+ "method": "ARCH_TAKEOFF_V3.0.41",
+ "rows": [
+  {
+   "action": "ADD_FLOOR",
+   "element_id": "GF-RFD4E1D:SOUTH-FACADE-DINING",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-b5f3c3c3298063cbf921",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": 5.645,
+    "state": "SOURCE_DERIVED"
+   }
+  },
+  {
+   "action": "RETIRE_ZONE",
+   "element_id": "GF-RFD4E1D:space",
+   "evidence_status": "NOT_APPLICABLE",
+   "item_code": "ARCH.SPACE",
+   "line_id": "L-6b6412e885390b434819",
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "net": 4.885,
+    "state": "PROVISIONAL"
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "net": 4.885,
+    "state": "PROVISIONAL"
+   },
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+   }
+  },
+  {
+   "action": "SHRINK_ZONE",
+   "element_id": "HL:FLOOR_SCOPE:HELD_WITH:GF:GF-OP-003-NO-OPENING:band",
+   "evidence_status": "HELD",
+   "item_code": "ARCH.SPACE",
+   "line_id": "L-554a525edce9a9235bee",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": {
+    "high": 1.364,
+    "low": 1.364,
+    "net": null,
+    "state": "BOUNDED_EXPOSURE"
+   },
+   "v3_0_41": {
+    "high": 0.604,
+    "low": 0.604,
+    "net": null,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "element_id": "GF-RFD4E1D:SOUTH-FACADE-DINING:bed",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-69085dcb63727e343150",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": 5.645,
+    "state": "SOURCE_DERIVED"
+   }
+  },
+  {
+   "action": "ADD_BED",
+   "element_id": "GF-RFD4E1D:SOUTH-FACADE-DINING:bed",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "item_code": "FIN.FLOOR.BED.DRY",
+   "line_id": "L-93a91d33816d3f613fb2",
+   "unit": "m3",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": 0.2258,
+    "low": 0.16935,
+    "net": null,
+    "state": "BOUNDED_EXPOSURE"
+   }
+  },
+  {
+   "action": "ADD_SKIRTING",
+   "element_id": "GF-RC99C2A:skirting",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "FIN.SKIRTING",
+   "line_id": "L-71e2e002a3af624097f0",
+   "unit": "lm",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "net": 28.171589,
+    "state": "SOURCE_DERIVED"
+   },
+   "v3_0_40": {
+    "high": null,
+    "low": null,
+    "net": 24.671589,
+    "state": "SOURCE_DERIVED"
+   },
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": 28.571589,
+    "state": "SOURCE_DERIVED"
+   }
+  },
+  {
+   "action": "ADD_CEILING",
+   "element_id": "GF-RFD4E1D:decor",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-ba5ea9bd4bbd2f713ea0",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": 4.885,
+    "state": "PROVISIONAL"
+   }
+  },
+  {
+   "action": "ADD_PAINT",
+   "element_id": "GF-RFD4E1D:paint",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "item_code": "FIN.PAINT.CEILING",
+   "line_id": "L-2a50551d7aab2e65f3f6",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": 4.885,
+    "state": "PROVISIONAL"
+   }
+  },
+  {
+   "action": "ADD_BULKHEAD_HELD",
+   "element_id": "GF-RFD4E1D:bulkhead",
+   "evidence_status": "HELD",
+   "item_code": "FIN.CEILING.BULKHEAD",
+   "line_id": "L-31f9b7008ea883f1b78d",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": null,
+    "state": "BLOCKED_RFI"
+   }
+  },
+  {
+   "action": "ADD_CEILING_HELD",
+   "element_id": "GF-RFD4E1D:west-strip:ceiling",
+   "evidence_status": "HELD",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-4b41debf41fff9e3faae",
+   "unit": "m2",
+   "v2_9": null,
+   "v3_0_40": null,
+   "v3_0_41": {
+    "high": null,
+    "low": null,
+    "net": null,
+    "state": "BLOCKED_RFI"
+   }
+  }
+ ],
+ "task": "T-431",
+ "totals_moved_by_code": {
+  "ARCH.SPACE|m2": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 7.488412,
+    "held_low": 7.488412,
+    "lines": 14,
+    "released": 68.560696
+   },
+   "v3_0_41": {
+    "blocked_lines": 0,
+    "bounded_lines": 2,
+    "held_high": 6.728412,
+    "held_low": 6.728412,
+    "lines": 13,
+    "released": 63.675696
+   }
+  },
+  "FIN.CEILING.BULKHEAD|m2": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 13,
+    "released": 27.9345
+   },
+   "v3_0_41": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 27.9345
+   }
+  },
+  "FIN.CEILING|m2": {
+   "v3_0_40": {
+    "blocked_lines": 4,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 39,
+    "released": 406.452177
+   },
+   "v3_0_41": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 41,
+    "released": 411.337177
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m2": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 295.873472
+   },
+   "v3_0_41": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 23,
+    "released": 301.518472
+   }
+  },
+  "FIN.FLOOR.BED.DRY|m3": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 22,
+    "held_high": 11.834939,
+    "held_low": 8.876204,
+    "lines": 22,
+    "released": 0.0
+   },
+   "v3_0_41": {
+    "blocked_lines": 0,
+    "bounded_lines": 23,
+    "held_high": 12.060739,
+    "held_low": 9.045554,
+    "lines": 23,
+    "released": 0.0
+   }
+  },
+  "FIN.FLOOR.PORCELAIN|m2": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 21,
+    "released": 299.375973
+   },
+   "v3_0_41": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 305.020973
+   }
+  },
+  "FIN.PAINT.CEILING|m2": {
+   "v3_0_40": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 30,
+    "released": 389.940677
+   },
+   "v3_0_41": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 31,
+    "released": 394.825677
+   }
+  },
+  "FIN.SKIRTING|lm": {
+   "v3_0_40": {
+    "blocked_lines": 2,
+    "bounded_lines": 8,
+    "held_high": 24.637649,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 180.116658
+   },
+   "v3_0_41": {
+    "blocked_lines": 2,
+    "bounded_lines": 8,
+    "held_high": 24.637649,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 184.016658
+   }
+  }
+ },
+ "valued_sums": {
+  "ARCH.SPACE": {
+   "v3_0_40": 68.560695,
+   "v3_0_41": 63.675695
+  },
+  "FIN.CEILING": {
+   "v3_0_40": 406.452177,
+   "v3_0_41": 411.337177
+  },
+  "FIN.CEILING.BULKHEAD": {
+   "v3_0_40": 27.9345,
+   "v3_0_41": 27.9345
+  },
+  "FIN.FLOOR.BED.DRY": {
+   "v3_0_40": 295.873472,
+   "v3_0_41": 301.518472
+  },
+  "FIN.FLOOR.PORCELAIN": {
+   "v3_0_40": 299.375973,
+   "v3_0_41": 305.020973
+  },
+  "FIN.PAINT.CEILING": {
+   "v3_0_40": 389.940677,
+   "v3_0_41": 394.825677
+  },
+  "FIN.SKIRTING": {
+   "v3_0_40": 180.116658,
+   "v3_0_41": 184.016658
+  }
+ }
+}
