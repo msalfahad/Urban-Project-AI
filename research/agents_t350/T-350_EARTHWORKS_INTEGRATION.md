@@ -106,7 +106,7 @@ identity `lines_in_two_zones`.
 - Totals moved: STR.EARTH.EXCAVATION 12 / STR.EARTH.BACKFILL 5 / STR.EARTH.DISPOSAL 1 lines, all blocked, 0 released, 0 held range;
   STR.CONC.BLINDING held 5.879177 .. 10.784391 -> 5.501374 .. 10.925198 m3 (released 15.179437 unchanged);
   STR.CONC.STRAP held 0.0295 .. 0.5031 -> 0.0295 .. 0.6533 m3 (released 3.3905 unchanged). Asserted: no other code.
-- Downstream: coverage B1-02 / 03 / 04 now own STR.EARTH.* (BOQ_FAMILY_MASTER_1.38.0, pending); the trade scoreboard /
+- Downstream: coverage B1-02 / 03 / 04 now own STR.EARTH.* (B1-03 / B1-04 capability -> IMPLEMENTED_NOT_INTEGRATED) (BOQ_FAMILY_MASTER_1.38.0, pending); the trade scoreboard /
   export see a new trade EARTHWORKS with held lines only (no released figure); T-445 (footing blinding) unaffected.
 - Engine vs freelancer: earthworks missing from BOTH; verdict UNRESOLVED (formation, working space: RFI S1 / OQ-13).
 
@@ -123,6 +123,9 @@ identity `lines_in_two_zones`.
   STR.EARTH.*) and the T-459 candidate binding (its committed census of later arch_v30* modules rebuilt by its own tool
   `t459_census.py candidate --write`: one new key arch_v3043.py with no lap token; later_steps_touching stays []). After
   the fix: every test folder that scans code literals or masters (37 folders) 1375 passed, 0 failed.
+- With the STR.EARTH codes the t130 guard (a NOT_IMPLEMENTED family has no module writing its code) asked B1-03 /
+  B1-04 to move: 1.38.0 raises them NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (as B1-02); final L3 set (36
+  folders incl. t130 / t140 / t400 / t459 / t469 / m9_*) re-run on the final head: see the board handoff.
 
 ## 8. Rule and proposed lessons row (ERS s.7)
 

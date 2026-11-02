@@ -93,6 +93,12 @@ def moves(old_by):
         mv["opt_in_readers"] = str(f.get("opt_in_readers") or "") + " | " + OPT_IN
         if code in EW_CODES:
             mv["item_codes"] = list(f["item_codes"]) + [EW_CODES[code]]
+            if f["capability"] == "NOT_IMPLEMENTED":
+                # a module now writes the family's code (held lines of the opt-in candidate): NOT_IMPLEMENTED would be
+                # false (t130 guard); no released method reads it, so IMPLEMENTED_NOT_INTEGRATED, as B1-02 since 1.1.0
+                mv["capability"] = "IMPLEMENTED_NOT_INTEGRATED"
+                mv["implementation"] = (f"{_at(V3043, r'^def _zone_line')} _zone_line(): one HELD BLANK line per "
+                                        f"Checker-verified zone (opt-in candidate only)")
         if miss:
             mv["missing"] = str(f.get("missing") or "") + " | " + miss
         out[code] = mv

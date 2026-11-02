@@ -1,6 +1,7 @@
 """T-350: rules/coverage/BOQ_FAMILY_MASTER_1.38.0.json = 1.37.0 + the pending ARCH_TAKEOFF_V3.0.43 package + the
 families whose lines it adds or re-ranges (B1-02 / B1-03 / B1-04 own the three new earthworks codes; B1-01 note only;
-B10-01 / B10-04 text); no owner, capability or candidate state changes."""
+B10-01 / B10-04 text); no owner or candidate state changes; B1-03 / B1-04 capability
+NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (a module now writes their codes)."""
 from __future__ import annotations
 
 import copy
@@ -33,8 +34,13 @@ def test_only_the_touched_families_and_the_pending_entry_change(docs):
     nb = {f["code"]: f for f in new["families"]}
     assert sorted(c for c in nb if nb[c] != ob[c]) == sorted(FAMS)
     for c in FAMS:
-        for k in ("capability", "candidate", "in_v3_0_candidate"):
+        for k in ("candidate", "in_v3_0_candidate"):
             assert nb[c][k] == ob[c][k]
+        if c not in ("B1-03", "B1-04"):
+            assert nb[c]["capability"] == ob[c]["capability"]
+    for c in ("B1-03", "B1-04"):        # a module now writes their code: NOT_IMPLEMENTED would be false (t130)
+        assert (ob[c]["capability"], nb[c]["capability"], nb[c]["capability_change"]) == (
+            "NOT_IMPLEMENTED", "IMPLEMENTED_NOT_INTEGRATED", "RAISED")
     for c, code in (("B1-02", A.EXC), ("B1-03", A.BKF), ("B1-04", A.DSP)):
         assert nb[c]["item_codes"] == ob[c]["item_codes"] + [code]
         assert "ARCH_TAKEOFF_V3.0.43" in nb[c]["opt_in_readers"] and "HELD BLANK" in nb[c]["missing"]
@@ -45,8 +51,9 @@ def test_only_the_touched_families_and_the_pending_entry_change(docs):
     p = new["pending_packages"][-1]
     assert (p["task"], p["method_version"], p["module"]) == ("T-350", A.METHOD, "engine/source/arch_v3043.py")
     assert p["integrates"][:3] == ["T-347", "T-356", "T-357"] and "merge_commit" not in p
-    for k in ("candidate_state_counts", "in_v3_0_candidate_counts", "capability_counts"):
+    for k in ("candidate_state_counts", "in_v3_0_candidate_counts"):
         assert new[k] == old[k]
+    assert new["capability_counts"]["NOT_IMPLEMENTED"] == old["capability_counts"]["NOT_IMPLEMENTED"] - 2
 
 
 def test_checks_clean_on_head(docs):

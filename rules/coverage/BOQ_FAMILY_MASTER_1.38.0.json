@@ -148,15 +148,15 @@
  "capability_counts": {
   "INTEGRATED_AND_TESTED": 0,
   "PARTIAL": 47,
-  "IMPLEMENTED_NOT_INTEGRATED": 24,
+  "IMPLEMENTED_NOT_INTEGRATED": 26,
   "EXPERIMENTAL": 2,
   "BLOCKED_BY_SOURCE": 18,
-  "NOT_IMPLEMENTED": 11
+  "NOT_IMPLEMENTED": 9
  },
  "capability_change_counts": {
-  "RAISED": 46,
+  "RAISED": 48,
   "LOWERED": 8,
-  "UNCHANGED": 48
+  "UNCHANGED": 46
  },
  "in_v3_0_candidate_counts": {
   "yes": 50,
@@ -252,10 +252,10 @@
    "item_en": "Backfill and compaction",
    "item_ar": "ردم ودك",
    "unit": "m3",
-   "capability": "NOT_IMPLEMENTED",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
    "capability_1_0_0": "NOT_IMPLEMENTED",
-   "capability_change": "UNCHANGED",
-   "implementation": "none",
+   "capability_change": "RAISED",
+   "implementation": "engine/source/arch_v3043.py:296 _zone_line(): one HELD BLANK line per Checker-verified zone (opt-in candidate only)",
    "source_needed": "excavation - structure - blinding volumes",
    "next_slice": "S5",
    "evidence": [
@@ -273,10 +273,6 @@
    },
    "item_codes": [
     "STR.EARTH.BACKFILL"
-   ],
-   "name_terms": [
-    "backfill",
-    "compaction"
    ],
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
@@ -296,10 +292,10 @@
    "item_en": "Disposal of surplus",
    "item_ar": "نقل الفائض",
    "unit": "m3",
-   "capability": "NOT_IMPLEMENTED",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
    "capability_1_0_0": "NOT_IMPLEMENTED",
-   "capability_change": "UNCHANGED",
-   "implementation": "none",
+   "capability_change": "RAISED",
+   "implementation": "engine/source/arch_v3043.py:296 _zone_line(): one HELD BLANK line per Checker-verified zone (opt-in candidate only)",
    "source_needed": "excavation, backfill",
    "next_slice": "S5",
    "evidence": [
@@ -317,10 +313,6 @@
    },
    "item_codes": [
     "STR.EARTH.DISPOSAL"
-   ],
-   "name_terms": [
-    "disposal",
-    "surplus_soil"
    ],
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
