@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4410 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4414 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 49 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2067 | pytest suites, one folder per round. |
+| `tests/` | 2070 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -465,7 +465,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 142 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 143 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -716,7 +716,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
 | `topology_policy.py` | 159 | HIGH | 9 | TOPOLOGY_TOLERANCE_POLICY (R8.8) - frozen BEFORE any room total of any project was looked at. |
 | `traceability.py` | 124 | MEDIUM | 2 | BOQ TRACEABILITY (M9 Phase 2B-3, ARCH_TAKEOFF_V2.5 only) - one chain per BOQ line: |
-| `trade_completeness_v1.py` | 544 | MEDIUM | 9 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
+| `trade_completeness_v1.py` | 544 | HIGH | 10 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
 | `trade_dependency.py` | 132 | MEDIUM | 2 | TRADE_DEPENDENCY_MATRIX - which evidence a trade quantity needs, and how a physical space that holds several |
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
@@ -784,7 +784,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
-| `boq_export_v1.py` | 1914 | HIGH | 16 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
+| `boq_export_v1.py` | 1954 | HIGH | 17 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
 | `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
@@ -873,7 +873,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `v30_gate_b_v2.py` | 1050 | MEDIUM | 5 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
-`tools/boq_export_v1.py` symbols: class ExportError (L237-238), def sha256_bytes (L243-244), def sort_key (L316-318), def group_key (L321-322), def identity (L327-344), def check_zero (L347-354), def v1_verdict_refs (L359-377), def schema_document (L380-429), def validate_v2 (L436-496), def line_bound (L514-516), def validate_v2_set (L530-538), def lines_sha256 (L541-543), def line_content_sha256 (L546-553), def own_content_status (L556-564), def verdict_add (L567-611), def validate_downgrade (L614-647), def downgrade_add (L650-679), def apply_downgrades (L682-745), def verdict_set_append (L752-770), def verdict_rebind (L773-836), def copy_json (L839-840), def bind_verdict (L843-893), def na_has_evidence (L899-902), def scope_split (L905-921), def completeness_passes (L924-936), def report_check (L950-959), def report_unmeasured_rows (L962-1009), def completeness_from_report (L1012-1078), def completeness_text (L1081-1091), def build (L1135-1302), def contract_view (L1360-1425), def contractual_rows (L1428-1436), def contract_summary (L1439-1463), def csv_bytes (L1478-1484), def xlsx_write (L1487-1512), def project_identity (L1525-1551), def export (L1554-1667), def semantic_sha256 (L1670-1673), def read_csv (L1676-1679), def main_verdict_add (L1699-1739), def main_downgrade_add (L1742-1782), def main_verdict_rebind (L1785-1827), def main_verdict_validate (L1830-1839), def main (L1842-1909)
+`tools/boq_export_v1.py` symbols: class ExportError (L238-239), def sha256_bytes (L244-245), def sort_key (L317-319), def group_key (L322-323), def identity (L328-345), def check_zero (L348-355), def v1_verdict_refs (L360-378), def schema_document (L381-430), def validate_v2 (L437-497), def line_bound (L515-517), def validate_v2_set (L531-539), def lines_sha256 (L542-544), def line_content_sha256 (L547-554), def own_content_status (L557-565), def verdict_add (L568-612), def validate_downgrade (L615-648), def downgrade_add (L651-680), def apply_downgrades (L683-746), def verdict_set_append (L753-771), def verdict_rebind (L774-837), def copy_json (L840-841), def bind_verdict (L844-894), def na_has_evidence (L900-903), def scope_split (L906-922), def completeness_passes (L925-937), def report_check (L951-960), def report_unmeasured_rows (L963-1010), def completeness_from_report (L1013-1079), def wp_overlay (L1082-1112), def completeness_text (L1115-1125), def build (L1169-1340), def contract_view (L1398-1463), def contractual_rows (L1466-1474), def contract_summary (L1477-1501), def csv_bytes (L1516-1522), def xlsx_write (L1525-1550), def project_identity (L1563-1589), def export (L1592-1705), def semantic_sha256 (L1708-1711), def read_csv (L1714-1717), def main_verdict_add (L1737-1777), def main_downgrade_add (L1780-1820), def main_verdict_rebind (L1823-1865), def main_verdict_validate (L1868-1877), def main (L1880-1949)
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)
 
@@ -1329,6 +1329,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t379_census_guard_class/` | 1 |
 | `tests/t380_drainage_census/` | 1 |
 | `tests/t381_rfi_rows/` | 1 |
+| `tests/t383_wp_completeness_join/` | 2 |
 | `tests/t384_currency_guard/` | 1 |
 | `tests/t385_concrete_recon/` | 2 |
 | `tests/t386_provenance_guard/` | 1 |
@@ -1663,7 +1664,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t233/` | 7 |
 | `research/agents_t234/` | 5 |
 | `research/agents_t235/` | 2 |
-| `research/agents_t236/` | 7 |
+| `research/agents_t236/` | 11 |
 | `research/agents_t237/` | 9 |
 | `research/agents_t238/` | 6 |
 | `research/agents_t239/` | 4 |
