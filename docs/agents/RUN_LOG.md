@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-02 20:18 UTC | Lead | SUCCESS | board | Since 16:16: 5 MERGED (T-471 EIMP step 1 DONE; T-350 Gate B -> candidate V3.0.43, +18 held-blank earthworks lines; T-353, T-475, T-476), 1 REJECTED (T-465 r3 -> TODO r4 with exact fault); READY 2 queued T-474 p1, T-448; released T-478, T-383; NEW T-479 registry/verdict binding, T-480 handrail integration; 3 lessons rows; owner package none; queue check: 30 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap, pytest t061, freeze); problem: none
 - 2026-11-02 20:14 UTC | Lead | STARTED | run session_01E6cPndQBbdi5ERUqjekRPB | repo-attached routine | task state: board | report pending
 - 2026-11-02T20:00Z | Worker 3 | SUCCESS | T-474 part 1 READY (agents/task-T-474 @ be354f35) | formwork census: 643 candidate lines mapped by id on own V3.0.43 repro 6f534d5e; B10-13 244 valued 1,027.977 m2 (V3.0.30 1,028.905; -0.928 = 10 DEPENDENT_HELD), B7-13 36.927 m2; 62 slab soffits 375.048 m2 on verified slab geometry V2-0c71eb8f (still CALCULATED); 388 held blank; findings: 4 beam lines 17.785 m2 on T-392-restated beams, registry B10-13/B7-13 candidate blocks stale; no quantity changed, freelancer has no formwork row | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-02T19:51Z | Verifier | STARTED | run session_01E6cPndRE72pRcJMvvKTxvG | repo-attached routine | task state: READY T-465 r3 per RUN_LOG | self-check pending
