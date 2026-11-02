@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-02 20:17; recovery plan in force)
+
+- Since 16:16: 5 merged (T-471 EIMP part 2 = step 1 DONE, 6 days ahead of its 8 Nov target; T-350 first stream S
+  Gate B -> candidate of record V3.0.43, +18 held-blank earthworks lines; T-353 B8-08 already carried; T-475; T-476),
+  1 rejected narrowly (T-465 r3, test-only reader). READY 2: T-474 part 1 (formwork census), T-448 (materials).
+- Step 2: stream S T-478 blinding (released) -> T-419 -> T-479 registry refresh -> T-382 -> T-474 p2; stream F T-422
+  (CLAIMED, first finishes package) -> T-443 -> T-480 handrails -> T-423 / T-424 -> T-310 .. Stream S delivered its
+  first package in about 7 h of Checker time; at one package per stream per ~6-8 h, about 14 packages remain for
+  7.5 days: 10 Nov still AT RISK (decide on 4 Nov whether to pull T-314 / T-364 / T-363 / T-372 forward).
+- Step 5: T-448 READY. Step 6: T-452 TODO (worker 1, behind T-422).
+
 ## Status (Lead, 2026-11-02 16:16; recovery plan in force)
 
 - Since 12:30: 2 merged (T-477 gate fix; T-445 blinding pieces, research), 0 rejected; READY 3: T-350 (first stream S

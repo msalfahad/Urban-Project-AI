@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 16:16 UTC (Lead). Previous version: 2026-11-02 12:30 UTC. The released numbers did not change
+Last update: 2026-11-02 20:17 UTC (Lead). Previous version: 2026-11-02 16:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate of record is now V3.0.42 (not released).
+released: 0. The candidate of record is now V3.0.43 (not released).
+
+Since 2 Nov 16:16 (newest first; five checked and merged, one sent back, two waiting for the checker):
+- Step 1 of your recovery plan is DONE: the full measurement plan (106 components, each mapped to exactly one BOQ
+  family) was checked and merged. It found two candidate lines that belong to no family and a ground slab shown as
+  measured, not held; a new task fixes the family register and the verified-share reporting (no quantity moves).
+- Earthworks are IN THE CANDIDATE (first structural package, checked line by line): excavation, backfill and
+  disposal as 18 held lines, because formation level and working space are designer items; the known lower bounds
+  sit beside them (footing pits at least 188.0 m3, pool at least 17.8 m3). Nothing is shown as 0.
+- Foundation waterproofing: checked; already in the candidate since an earlier version (360.03 m2 / 6.53 m3), so no
+  new package was needed. The checker found that only 2 of its 7 verified lines are counted in the verified share;
+  the same new task fixes that.
+- Handrails along the stairs re-measured flight by flight along the slope: 33.32 lm proposed against 17.37 lm before
+  and the freelancer's 18.95 lm (+75.8 %; he measured fewer flights). The checker re-measured one flight exactly
+  (3.78 lm); the rest is calculated, not yet verified. A new task puts it into the candidate after the skirting.
+- Lift landing marble: checked; the candidate's figures confirmed exactly.
+- The PDF reader rewrite (a test-tool item, no BOQ quantity) was sent back once more: identical on your drawing set,
+  but not on fonts with fractional widths; narrow fix asked.
+- Waiting for the checker: formwork census (643 candidate lines mapped one by one: 244 carry a calculated 1,027.98 m2,
+  388 stay held; not yet verified, nothing released) and your materials rulebook (adhesive, glue, mortar, blocks, lintels).
+- The footing-blinding pits (12.73 m3, verified) go into the candidate next; the skirting release is being built.
 
 Since 2 Nov 12:30 (newest first; two checked and merged, none sent back, three waiting for the checker):
 - Footing blinding measured as pieces: CHECKED AND MERGED (not yet in the candidate). The 24 footing pits carry
