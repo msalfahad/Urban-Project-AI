@@ -20,7 +20,11 @@ def _load():
 
 
 B = _load()
-NOW = {p: "SCHEDULABLE_NOW" for p in B.POPULATIONS}
+# T-473 (R-T473-1): no test reads live board state. The T-411 board comparison below keeps its assertions but never
+# resolves ../board: the live comparison runs only against the V2 committed copy, opt-in through T374_BOARD_VERDICTS
+# (tests/t374_straight_bbs/test_t473_drift_v2.py, DOWNGRADE_DRIFT_CHECK_V2).
+B.BOARD_VERDICTS = HERE / "__no_live_board_in_the_public_run__"
+NOW ={p: "SCHEDULABLE_NOW" for p in B.POPULATIONS}
 LAPS = {
     "FTG-BOTTOM": {"lap_status": "NOT_REQUIRED", "splice_need": "NOT_REQUIRED", "authority": "NOT_PRINTED", "sources": ""},
     "COL-MAIN": {"lap_status": "HELD_NO_AUTHORITY", "splice_need": "REQUIRED", "authority": "NOT_PRINTED", "sources": ""},
