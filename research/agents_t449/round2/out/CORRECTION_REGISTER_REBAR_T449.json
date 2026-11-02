@@ -12,8 +12,8 @@
    "A-SPECIFIED": 3
   },
   "ARCH_TAKEOFF_V3.0.3": {
-   "A-REPRODUCED": 1288,
-   "A-SPECIFIED": 83
+   "A-REPRODUCED": 1362,
+   "A-SPECIFIED": 9
   },
   "ARCH_TAKEOFF_V3.0.5": {
    "A-REPRODUCED": 204,
@@ -387,8 +387,8 @@
   }
  ],
  "counts": {
-  "A-REPRODUCED": 2036,
-  "A-SPECIFIED": 86,
+  "A-REPRODUCED": 2110,
+  "A-SPECIFIED": 12,
   "B": 7,
   "SUPERSEDED": 196
  },
@@ -9859,13 +9859,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -10113,13 +10111,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -10259,13 +10255,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -10357,7 +10351,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -10365,26 +10359,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -10522,13 +10509,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -10620,7 +10605,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -10628,26 +10613,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -10785,13 +10763,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -10883,7 +10859,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -10891,26 +10867,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 18.204 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 18.204
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 18.204444444444444,
     "state": "HELD",
     "value": null
    },
@@ -11048,13 +11017,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -11184,7 +11151,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -11192,26 +11159,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -11349,13 +11309,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -11728,7 +11686,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -11736,26 +11694,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -11883,7 +11834,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -11891,26 +11842,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12000,7 +11944,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12008,26 +11952,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12117,7 +12054,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12125,26 +12062,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12272,7 +12202,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12280,26 +12210,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12427,7 +12350,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12435,26 +12358,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12663,7 +12579,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12671,26 +12587,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -12814,7 +12723,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -12822,26 +12731,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -13108,7 +13010,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -13116,26 +13018,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -13549,7 +13444,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -13557,26 +13452,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -13704,7 +13592,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -13712,26 +13600,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -13859,7 +13740,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -13867,26 +13748,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -14219,7 +14093,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -14227,26 +14101,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.196 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT / LT2_5M / LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -14645,7 +14512,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -14653,26 +14520,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -14891,13 +14751,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -15023,7 +14881,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -15031,26 +14889,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -15460,7 +15311,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -15468,26 +15319,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -15611,7 +15455,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -15619,26 +15463,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -15762,7 +15599,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -15770,26 +15607,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 9.102 .. 15.929 (range needs the count and the diameter)",
    "patch": {
     "high": 15.929,
     "low": 9.102
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.928888888888888,
+    "low": 9.102222222222222,
     "state": "HELD",
     "value": null
    },
@@ -15999,7 +15829,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -16007,26 +15837,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -16116,7 +15939,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -16124,26 +15947,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 18.204 .. 31.858 (range needs the count and the diameter)",
    "patch": {
     "high": 31.858,
     "low": 18.204
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
-    "high": null,
-    "low": null,
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 31.857777777777777,
+    "low": 18.204444444444444,
     "state": "HELD",
     "value": null
    },
@@ -16281,13 +16097,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -16499,7 +16313,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -16507,26 +16321,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -16736,7 +16543,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "BAR ENDS (development 40d..70d, note 9)",
    "count": null,
    "dia_mm": null,
@@ -16744,26 +16551,19 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule 4.065185185185185 .. 7.114074074074074 vs ledger 12.196 .. 21.342 (zone (tension / compression) not printed: a note range, never released)",
    "patch": {
     "high": 21.342,
     "low": 12.196
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "6 x 40 d .. 70 d x 1.209877 kg/m (d14)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
-    "high": 7.114074074074074,
-    "low": 4.065185185185185,
+    "facts_used": [],
+    "formula": "min .. max over candidates LT5M",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 21.342222222222222,
+    "low": 12.195555555555554,
     "state": "HELD",
     "value": null
    },
@@ -16901,13 +16701,11 @@
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "18 x 40 d .. 70 d x 1.580247 kg/m (d16)",
-    "held_reason": "zone (tension / compression) not printed: a note range, never released",
+    "facts_used": [],
+    "formula": "min .. max over candidates EXT",
+    "held_reason": "the governing candidate is a designer item",
     "high": 31.857777777777777,
     "low": 18.204444444444444,
     "state": "HELD",
@@ -17476,8 +17274,8 @@
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
    "rule": "R-REBAR-DEV-RANGE-1",
    "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
+    "rule": "R-REBAR-LAP-COUNT (T-459)",
+    "why": "procurement laps of a continuous ground-beam run over the 12 m stock (runs 13.77 m and 18.57 m: 1 lap each by the frozen ceil(L / 12) - 1 and by the owner formula ceil((L - 12) / (12 - lap)) alike), held 40 d .. 70 d; lap counting is T-459's rule, not this version's"
    },
    "rule_result": {
     "facts_used": [
@@ -17511,8 +17309,8 @@
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
    "rule": "R-REBAR-DEV-RANGE-1",
    "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
+    "rule": "R-REBAR-LAP-COUNT (T-459)",
+    "why": "procurement laps of a continuous ground-beam run over the 12 m stock (runs 13.77 m and 18.57 m: 1 lap each by the frozen ceil(L / 12) - 1 and by the owner formula ceil((L - 12) / (12 - lap)) alike), held 40 d .. 70 d; lap counting is T-459's rule, not this version's"
    },
    "rule_result": {
     "facts_used": [
@@ -17620,24 +17418,22 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 51.599 .. 90.298 (range needs the count and the diameter)",
+   "not_reproduced": "rule None .. None vs ledger 51.599 .. 90.298 (a candidate has no defined figure (no project detail))",
    "patch": {
     "high": 90.298,
     "low": 51.599
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
+    "rule": "R-REBAR-DEV-RANGE-1 x Q-74 / D-38",
+    "why": "strap bar ends over the owner Q-74 strap-length readings and the SB2 schedule-row conflict (designer D-38): the strap's bar groups per reading are not on the record"
    },
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
+    "facts_used": [],
+    "formula": "",
+    "held_reason": "a candidate has no defined figure (no project detail)",
     "high": null,
     "low": null,
     "state": "HELD",
@@ -17766,24 +17562,22 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 77.827 .. 136.198 (range needs the count and the diameter)",
+   "not_reproduced": "rule None .. None vs ledger 77.827 .. 136.198 (a candidate has no defined figure (no project detail))",
    "patch": {
     "high": 136.198,
     "low": 77.827
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
+    "rule": "R-REBAR-DEV-RANGE-1 x Q-74 / D-38",
+    "why": "strap bar ends over the owner Q-74 strap-length readings and the SB2 schedule-row conflict (designer D-38): the strap's bar groups per reading are not on the record"
    },
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
+    "facts_used": [],
+    "formula": "",
+    "held_reason": "a candidate has no defined figure (no project detail)",
     "high": null,
     "low": null,
     "state": "HELD",
@@ -17912,24 +17706,22 @@
    "floor": "FOUNDATION",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 24.514 .. 42.899 (range needs the count and the diameter)",
+   "not_reproduced": "rule None .. None vs ledger 24.514 .. 42.899 (a candidate has no defined figure (no project detail))",
    "patch": {
     "high": 42.899,
     "low": 24.514
    },
    "piece": "GROUND_SYSTEM_STEEL",
    "range_basis": "40 d .. 70 d (p.8 note 9, zone not printed)",
-   "rule": "R-REBAR-DEV-RANGE-1",
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_pending": {
-    "rule": "R-REBAR-DEV-RANGE-1 (multi-section span)",
-    "why": "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one record, so n ends x bars x 40 d .. 70 d is not established from the record"
+    "rule": "R-REBAR-DEV-RANGE-1 x Q-74 / D-38",
+    "why": "strap bar ends over the owner Q-74 strap-length readings and the SB2 schedule-row conflict (designer D-38): the strap's bar groups per reading are not on the record"
    },
    "rule_result": {
-    "facts_used": [
-     "REBAR.UNIT_MASS.METHOD"
-    ],
-    "formula": "bar-end count or diameter not on the record",
-    "held_reason": "range needs the count and the diameter",
+    "facts_used": [],
+    "formula": "",
+    "held_reason": "a candidate has no defined figure (no project detail)",
     "high": null,
     "low": null,
     "state": "HELD",
@@ -38195,7 +37987,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38203,24 +37995,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 3.797 .. 3.797 (no defensible reading)",
    "patch": {
     "high": 3.797,
     "low": 3.797
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B2",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 3.797,
+    "low": 3.797,
     "state": "HELD",
     "value": null
    },
@@ -38228,7 +38015,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38236,24 +38023,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 6.068 .. 10.619 (no defensible reading)",
    "patch": {
     "high": 10.619,
     "low": 6.068
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B2",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 10.619,
+    "low": 6.068,
     "state": "HELD",
     "value": null
    },
@@ -38261,7 +38043,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38269,24 +38051,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.899 .. 2.37 (no defensible reading)",
    "patch": {
     "high": 2.37,
     "low": 1.899
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B2",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.37,
+    "low": 1.899,
     "state": "HELD",
     "value": null
    },
@@ -38294,7 +38071,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38302,24 +38079,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.424 .. 1.424 (no defensible reading)",
    "patch": {
     "high": 1.424,
     "low": 1.424
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B2",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 1.424,
+    "low": 1.424,
     "state": "HELD",
     "value": null
    },
@@ -38327,7 +38099,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38335,24 +38107,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B2",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -38360,7 +38127,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38368,24 +38135,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 56.87 .. 56.87 (no defensible reading)",
    "patch": {
     "high": 56.87,
     "low": 56.87
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B4",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 56.87,
+    "low": 56.87,
     "state": "HELD",
     "value": null
    },
@@ -38393,7 +38155,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38401,24 +38163,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 8.091 .. 14.159 (no defensible reading)",
    "patch": {
     "high": 14.159,
     "low": 8.091
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B4",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 14.159,
+    "low": 8.091,
     "state": "HELD",
     "value": null
    },
@@ -38426,7 +38183,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38434,24 +38191,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 25.591 .. 26.074 (no defensible reading)",
    "patch": {
     "high": 26.074,
     "low": 25.591
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B4",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 26.074,
+    "low": 25.591,
     "state": "HELD",
     "value": null
    },
@@ -38459,7 +38211,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38467,24 +38219,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 15.995 .. 15.995 (no defensible reading)",
    "patch": {
     "high": 15.995,
     "low": 15.995
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B4",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 15.995,
+    "low": 15.995,
     "state": "HELD",
     "value": null
    },
@@ -38492,7 +38239,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38500,24 +38247,19 @@
    "floor": "1F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B4",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -38525,7 +38267,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38533,24 +38275,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 7.143 .. 7.143 (no defensible reading)",
    "patch": {
     "high": 7.143,
     "low": 7.143
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / B8",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 7.143,
+    "low": 7.143,
     "state": "HELD",
     "value": null
    },
@@ -38558,7 +38295,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38566,24 +38303,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 8.091 .. 14.159 (no defensible reading)",
    "patch": {
     "high": 14.159,
     "low": 8.091
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / B8",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 14.159,
+    "low": 8.091,
     "state": "HELD",
     "value": null
    },
@@ -38591,7 +38323,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38599,24 +38331,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.679 .. 5.373 (no defensible reading)",
    "patch": {
     "high": 5.373,
     "low": 2.679
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / B8",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 5.373,
+    "low": 2.679,
     "state": "HELD",
     "value": null
    },
@@ -38653,7 +38380,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38661,24 +38388,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.009 .. 2.009 (no defensible reading)",
    "patch": {
     "high": 2.009,
     "low": 2.009
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / B8",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.009,
+    "low": 2.009,
     "state": "HELD",
     "value": null
    },
@@ -38686,7 +38408,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38694,24 +38416,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / B8",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -38719,7 +38436,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38727,24 +38444,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 7.501 .. 19.595 (no defensible reading)",
    "patch": {
     "high": 19.595,
     "low": 7.501
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 19.595,
+    "low": 7.501,
     "state": "HELD",
     "value": null
    },
@@ -38752,7 +38464,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38760,24 +38472,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.71 .. 14.159 (no defensible reading)",
    "patch": {
     "high": 14.159,
     "low": 2.71
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 14.159,
+    "low": 2.71,
     "state": "HELD",
     "value": null
    },
@@ -38785,7 +38492,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 10 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38793,24 +38500,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 32.869 (no defensible reading)",
    "patch": {
     "high": 32.869,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 32.869,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -38818,7 +38520,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38826,24 +38528,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 7.901 (no defensible reading)",
    "patch": {
     "high": 7.901,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 7.901,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -38880,7 +38577,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38888,24 +38585,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 5.511 .. 37.2 (no defensible reading)",
    "patch": {
     "high": 37.2,
     "low": 5.511
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 37.2,
+    "low": 5.511,
     "state": "HELD",
     "value": null
    },
@@ -38913,7 +38605,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38921,24 +38613,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 30.24 (no defensible reading)",
    "patch": {
     "high": 30.24,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1 / B15 / B2 / B3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 30.24,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -38946,7 +38633,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38954,24 +38641,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 3.385 .. 3.385 (no defensible reading)",
    "patch": {
     "high": 3.385,
     "low": 3.385
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 3.385,
+    "low": 3.385,
     "state": "HELD",
     "value": null
    },
@@ -38979,7 +38661,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -38987,24 +38669,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.71 .. 4.743 (no defensible reading)",
    "patch": {
     "high": 4.743,
     "low": 2.71
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 4.743,
+    "low": 2.71,
     "state": "HELD",
     "value": null
    },
@@ -39012,7 +38689,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39020,24 +38697,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 3.316 .. 3.951 (no defensible reading)",
    "patch": {
     "high": 3.951,
     "low": 3.316
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 3.951,
+    "low": 3.316,
     "state": "HELD",
     "value": null
    },
@@ -39045,7 +38717,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39053,24 +38725,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.487 .. 2.487 (no defensible reading)",
    "patch": {
     "high": 2.487,
     "low": 2.487
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.487,
+    "low": 2.487,
     "state": "HELD",
     "value": null
    },
@@ -39078,7 +38745,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39086,24 +38753,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -39111,7 +38773,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39119,24 +38781,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 3.385 .. 3.385 (no defensible reading)",
    "patch": {
     "high": 3.385,
     "low": 3.385
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 3.385,
+    "low": 3.385,
     "state": "HELD",
     "value": null
    },
@@ -39144,7 +38801,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39152,24 +38809,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.71 .. 4.743 (no defensible reading)",
    "patch": {
     "high": 4.743,
     "low": 2.71
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 4.743,
+    "low": 2.71,
     "state": "HELD",
     "value": null
    },
@@ -39177,7 +38829,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39185,24 +38837,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 3.316 .. 3.951 (no defensible reading)",
    "patch": {
     "high": 3.951,
     "low": 3.316
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 3.951,
+    "low": 3.316,
     "state": "HELD",
     "value": null
    },
@@ -39210,7 +38857,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39218,24 +38865,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 2.487 .. 2.487 (no defensible reading)",
    "patch": {
     "high": 2.487,
     "low": 2.487
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.487,
+    "low": 2.487,
     "state": "HELD",
     "value": null
    },
@@ -39243,7 +38885,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39251,24 +38893,19 @@
    "floor": "2F",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B1",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },
@@ -39276,7 +38913,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39284,24 +38921,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 12.563 .. 16.751 (no defensible reading)",
    "patch": {
     "high": 16.751,
     "low": 12.563
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 16.751,
+    "low": 12.563,
     "state": "HELD",
     "value": null
    },
@@ -39309,7 +38941,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39317,24 +38949,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 6.068 .. 14.159 (no defensible reading)",
    "patch": {
     "high": 14.159,
     "low": 6.068
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 14.159,
+    "low": 6.068,
     "state": "HELD",
     "value": null
    },
@@ -39342,7 +38969,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 5 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39350,24 +38977,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 9.402 (no defensible reading)",
    "patch": {
     "high": 9.402,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 9.402,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -39375,7 +38997,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39383,24 +39005,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 6.716 (no defensible reading)",
    "patch": {
     "high": 6.716,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 6.716,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -39437,7 +39054,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39445,24 +39062,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 4.711 (no defensible reading)",
    "patch": {
     "high": 4.711,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 4.711,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -39470,7 +39082,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39478,24 +39090,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -39503,7 +39110,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top over support (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39511,24 +39118,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.0 .. 26.664 (no defensible reading)",
    "patch": {
     "high": 26.664,
     "low": 0.0
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B3 / CB3",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 26.664,
+    "low": 0.0,
     "state": "HELD",
     "value": null
    },
@@ -39536,7 +39138,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39544,24 +39146,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 11.86 .. 11.86 (no defensible reading)",
    "patch": {
     "high": 11.86,
     "low": 11.86
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B24",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 11.86,
+    "low": 11.86,
     "state": "HELD",
     "value": null
    },
@@ -39569,7 +39166,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39577,24 +39174,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 10.114 .. 17.699 (no defensible reading)",
    "patch": {
     "high": 17.699,
     "low": 10.114
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B24",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 17.699,
+    "low": 10.114,
     "state": "HELD",
     "value": null
    },
@@ -39602,7 +39194,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 5 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39610,24 +39202,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 10.97 .. 16.356 (no defensible reading)",
    "patch": {
     "high": 16.356,
     "low": 10.97
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B24",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 16.356,
+    "low": 10.97,
     "state": "HELD",
     "value": null
    },
@@ -39664,7 +39251,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39672,24 +39259,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 30.02 .. 30.02 (no defensible reading)",
    "patch": {
     "high": 30.02,
     "low": 30.02
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B24",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 30.02,
+    "low": 30.02,
     "state": "HELD",
     "value": null
    },
@@ -39697,7 +39279,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39705,24 +39287,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 28.8 .. 50.4 (no defensible reading)",
    "patch": {
     "high": 50.4,
     "low": 28.8
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B24",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 50.4,
+    "low": 28.8,
     "state": "HELD",
     "value": null
    },
@@ -39730,7 +39307,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39738,24 +39315,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.106 .. 1.106 (no defensible reading)",
    "patch": {
     "high": 1.106,
     "low": 1.106
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B7",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 1.106,
+    "low": 1.106,
     "state": "HELD",
     "value": null
    },
@@ -39763,7 +39335,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "bottom ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39771,24 +39343,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 6.068 .. 10.619 (no defensible reading)",
    "patch": {
     "high": 10.619,
     "low": 6.068
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B7",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 10.619,
+    "low": 6.068,
     "state": "HELD",
     "value": null
    },
@@ -39796,7 +39363,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "links 6 ø8/m (Q-71) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39804,24 +39371,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.94 .. 2.015 (no defensible reading)",
    "patch": {
     "high": 2.015,
     "low": 0.94
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B7",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.015,
+    "low": 0.94,
     "state": "HELD",
     "value": null
    },
@@ -39858,7 +39420,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39866,24 +39428,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 0.415 .. 0.415 (no defensible reading)",
    "patch": {
     "high": 0.415,
     "low": 0.415
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B7",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 0.415,
+    "low": 0.415,
     "state": "HELD",
     "value": null
    },
@@ -39891,7 +39448,7 @@
   },
   {
    "action": "HELD_RANGE",
-   "class": "A-SPECIFIED",
+   "class": "A-REPRODUCED",
    "component": "top ends (note 9, 40d..70d) (candidate marks)",
    "count": null,
    "dia_mm": null,
@@ -39899,24 +39456,19 @@
    "floor": "GF",
    "length_m": null,
    "line_id": null,
-   "not_reproduced": "rule None .. None vs ledger 1.707 .. 2.987 (no defensible reading)",
    "patch": {
     "high": 2.987,
     "low": 1.707
    },
    "piece": "BEAM_STEEL",
    "range_basis": "min .. max over the candidate marks",
-   "rule": "R-REBAR-READINGS-RANGE-1",
-   "rule_pending": {
-    "rule": "R-REBAR-CANDIDATE-MARKS-1",
-    "why": "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the candidates' own populations are not on the record (the input carries the summed range only)"
-   },
+   "rule": "R-REBAR-CANDIDATE-RANGE-1",
    "rule_result": {
     "facts_used": [],
-    "formula": "no reading printed",
-    "held_reason": "no defensible reading",
-    "high": null,
-    "low": null,
+    "formula": "min .. max over candidates B7",
+    "held_reason": "the governing candidate is a designer item",
+    "high": 2.987,
+    "low": 1.707,
     "state": "HELD",
     "value": null
    },

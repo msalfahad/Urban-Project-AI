@@ -617,7 +617,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `question_helper.py` | 163 | MEDIUM | 1 | CONSULTANT QUESTION GENERATOR + USER HELP MODE (generic). |
 | `raster_evidence.py` | 118 | MEDIUM | 1 | RASTER EVIDENCE (V3b) - scale calibration, measurement grades and cross-sheet checks for raster drawings. |
 | `realised.py` | 130 | HIGH | 5 | Neutral REALISED geometry records — the physical output schema shared by K1 and K2. |
-| `rebar_basis_rules_v1.py` | 383 | MEDIUM | 1 | REBAR_BASIS_RULES_V1: drawing-derived reinforcement basis rules (A1 class A, T-449 round 2 = reinforcement). |
+| `rebar_basis_rules_v1.py` | 419 | MEDIUM | 1 | REBAR_BASIS_RULES_V1: drawing-derived reinforcement basis rules (A1 class A, T-449 round 2 = reinforcement). |
 | `rebar_boq_sections.py` | 67 | MEDIUM | 1 | Structural BOQ reinforcement presentation: two visibly separate sections (generic, report layer). |
 | `rebar_laps_v1.py` | 404 | MEDIUM | 4 | REBAR LAPS V1 (task T-273) - lap splices of reinforcement bar groups as their own rows, from the lap authority that |
 | `rebar_model.py` | 479 | CRITICAL | 7 | REBAR_MODEL_V1 - a generic, typed reinforcement model: source definition -> occurrence -> bar geometry -> count -> |

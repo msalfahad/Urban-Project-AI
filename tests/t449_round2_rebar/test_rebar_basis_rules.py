@@ -271,3 +271,26 @@ def test_module_imports_no_engine_or_research_module():
         a.name for n in ast.walk(tree) if isinstance(n, ast.Import) for a in n.names}
     assert not any(m and (m.startswith("engine") or m.startswith("research")) for m in mods), mods
     assert R.DEFAULT_GUARD_CLASS == "UNWIRED_PRODUCER"
+
+
+# ---------------------------------------------------------------- candidates and bar groups
+
+def test_development_range_over_printed_bar_groups_hand_value():
+    r = R.development_range_groups(cfg(), [(3, 16), (6, 16)], ends=2, k_low=40, k_high=70)
+    # 2 ends x 9 bars d16: 18 x 0.64 m x 1.580247 = 18.204444 kg .. 18 x 1.12 m x 1.580247 = 31.857778 kg
+    assert r.state == R.HELD and r.value is None
+    assert r.low == pytest.approx(18 * 0.64 * U16, abs=1e-9) and r.high == pytest.approx(18 * 1.12 * U16, abs=1e-9)
+
+
+def test_development_range_groups_without_ends_is_held():
+    assert R.development_range_groups(cfg(), [(3, 16)], ends=0, k_low=40, k_high=70).low is None
+
+
+def test_candidates_range_min_low_max_high():
+    r = R.candidates_range({"LT5M": (12.196, 21.342), "EXT": (18.204, 31.858)})
+    assert r.state == R.HELD and (r.low, r.high) == (12.196, 31.858) and r.value is None
+
+
+def test_candidate_without_detail_holds_with_no_range():
+    r = R.candidates_range({"LT5M": (12.196, 21.342), "CONC": None})
+    assert r.state == R.HELD and r.low is None and "no defined figure" in r.held_reason

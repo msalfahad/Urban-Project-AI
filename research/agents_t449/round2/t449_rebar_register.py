@@ -35,6 +35,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import importlib
+import importlib.util
 import io
 import json
 import math
@@ -170,16 +171,34 @@ def _print_tol(x):
     return max(0.5 * 10 ** -dec, NET_TOL) + 1e-9
 
 
-def _sibling_ends(records, r):
-    """a ground-beam span's bar ends: the printed 'n ends' x the span's longitudinal bars (its TOP / BOTTOM records,
-    one diameter). -> (count, d) or (None, None) when the printed text or the siblings do not establish it."""
-    m = re.match(r"\s*(\d+) ends?:", r.get("printed") or "")
-    sib = [x for x in records if x["element"] == r["element"] and x["component"] in ("TOP", "BOTTOM")
-           and _num(x.get("count")) and _num(x.get("dia_mm"))]
-    ds = {x["dia_mm"] for x in sib}
-    if not m or not sib or len(ds) != 1:
-        return None, None
-    return int(m.group(1)) * sum(x["count"] for x in sib), ds.pop()
+T138_CSV = ROOT / "research/agents_t138/T138_MEMBERS.csv"
+_T138_SECTIONS = None
+
+
+def _sections():
+    """the p.13 ground-beam section table as the merged T-138 ledger reads it (detail -> printed bar groups)."""
+    global _T138_SECTIONS
+    if _T138_SECTIONS is None:
+        spec = importlib.util.spec_from_file_location("t138_hand_ledger_t449", ROOT / "research/agents_t138/"
+                                                      "t138_hand_ledger.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        _T138_SECTIONS = {k: (None if v is None else [(n, d) for _, n, d in v["bars"]]) for k, v in m.DETAILS.items()}
+    return _T138_SECTIONS
+
+
+def _section_candidates(r):
+    """a ground-beam span's bar-end record held over p.13 section candidates -> (ends, {detail: bar groups or None}):
+    the printed bar ends of its BAR ENDS row and the candidate details of its longitudinal rows (T-138 ledger);
+    None when the merged ledger does not name them."""
+    rows = [x for x in _rows(T138_CSV) if x["member"] == r["element"]]
+    be = next((x for x in rows if x["component"].startswith("BAR ENDS")), None)
+    lon = next((x for x in rows if x["component"] in ("TOP", "BOTTOM", "BOTTOM_ROW_1") and x["detail"]), None)
+    m = re.match(r"\s*(\d+) ends?", (be or {}).get("count") or "")
+    if not m or lon is None or int(m.group(1)) == 0:
+        return None
+    secs = _sections()
+    return int(m.group(1)), {c: secs.get(c) for c in lon["detail"].split("/")}
 
 
 def ledger_entries(cfg, ver, doc, t334, superseded=None):
@@ -225,7 +244,9 @@ def ledger_entries(cfg, ver, doc, t334, superseded=None):
                 rd = r.get("readings") or {}
                 txt = (r["component"] + " " + (r.get("range_basis") or "")).lower().replace(" ", "")
                 info = dict(r.get("info") or {}, **{k: v for k, v in rd.items() if k in ("count_A", "count_B")})
-                if rd and not ("counta" in txt and "countb" in txt):
+                if rd and "candidate marks" in (r.get("range_basis") or ""):
+                    res = R.candidates_range({k: tuple(v) for k, v in rd.items()})
+                elif rd and not ("counta" in txt and "countb" in txt):
                     res = R.readings_range(rd if ver.endswith("V3.0.3") else
                                            {k: v for k, v in rd.items() if k.endswith("_kg")})
                 elif "counta" in txt and "countb" in txt and _num(info.get("count_A")) and _num(info.get("count_B")):
@@ -240,9 +261,13 @@ def ledger_entries(cfg, ver, doc, t334, superseded=None):
                                        held_reason=lo_r.held_reason)
                 elif "40d..70d" in txt:
                     n, d = r.get("count"), r.get("dia_mm")
-                    if n is None and piece == "GROUND_SYSTEM_STEEL":
-                        n, d = _sibling_ends(lg["records"], r)
-                    res = R.development_range(cfg, count=n, d_mm=d, k_low=40, k_high=70)
+                    if n is None and piece == "GROUND_SYSTEM_STEEL" and _section_candidates(r):
+                        ends, cands = _section_candidates(r)
+                        res = R.candidates_range({c: (None if g is None else (lambda x: (x.low, x.high))(
+                            R.development_range_groups(cfg, g, ends=ends, k_low=40, k_high=70)))
+                            for c, g in cands.items()})
+                    else:
+                        res = R.development_range(cfg, count=n, d_mm=d, k_low=40, k_high=70)
                 else:
                     res = R.readings_range(None)
                 ok = (res.state == R.HELD and _close(res.low, r["low"], _print_tol(r["low"]))
@@ -463,9 +488,15 @@ PENDING = (   # (test on the entry, rule named, why its generic code is not in R
     (lambda e: "candidate marks" in (e.get("range_basis") or ""), "R-REBAR-CANDIDATE-MARKS-1",
      "a span held over several schedule marks (T-149): min .. max over each candidate mark's populations; the "
      "candidates' own populations are not on the record (the input carries the summed range only)"),
-    (lambda e: e.get("piece") == "GROUND_SYSTEM_STEEL", "R-REBAR-DEV-RANGE-1 (multi-section span)",
-     "a ground-beam span held over several p.13 section candidates (T-138): the span's longitudinal bars are not one "
-     "record, so n ends x bars x 40 d .. 70 d is not established from the record"),
+    (lambda e: e.get("piece") == "GROUND_SYSTEM_STEEL" and "LAPS" in (e.get("component") or ""),
+     "R-REBAR-LAP-COUNT (T-459)",
+     "procurement laps of a continuous ground-beam run over the 12 m stock (runs 13.77 m and 18.57 m: 1 lap each by "
+     "the frozen ceil(L / 12) - 1 and by the owner formula ceil((L - 12) / (12 - lap)) alike), held 40 d .. 70 d; "
+     "lap counting is T-459's rule, not this version's"),
+    (lambda e: e.get("piece") == "GROUND_SYSTEM_STEEL" and str(e.get("element_id", "")).split(":")[2].startswith(
+        "SB"), "R-REBAR-DEV-RANGE-1 x Q-74 / D-38",
+     "strap bar ends over the owner Q-74 strap-length readings and the SB2 schedule-row conflict (designer D-38): "
+     "the strap's bar groups per reading are not on the record"),
     (lambda e: "Ln range" in (e.get("component") or ""), "R-BEAM-TOP-LN-RANGE-1",
      "a beam top bar printed as a fraction of the clear span Ln with Ln itself a range (T-149): the span readings are "
      "not on the record"),

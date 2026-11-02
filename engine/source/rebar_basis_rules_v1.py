@@ -20,6 +20,9 @@ its drawing readings plus its declared facts and no per-line value:
                            40 d compression .. 70 d tension, zone not printed) is a HELD range n x k d x unit mass;
                            never a released quantity (owner 2026-10-24 s.4 / s.6: the note governs only the bar groups
                            it names; 'at least 70 d' is a minimum).
+  R-REBAR-CANDIDATE-RANGE-1 a member held over several printed candidates (schedule marks, p.13-type section details)
+                           is a HELD range: min of the candidates' lows .. max of their highs; a candidate with no
+                           defined figure keeps it HELD with no range.
   R-SLAB-BAR-END-1         suspended-slab BOTTOM bar ends by support class (typical slab-on-beams detail): CONTINUOUS
                            -> no development (0 m with evidence, NOT_APPLICABLE); EDGE_BEAM -> straight part = drawn
                            support width - the printed end clear cover (DECLARED REBAR.SLAB.BAR_END.CLEAR_COVER), the
@@ -187,6 +190,39 @@ def development_range(cfg, *, count, d_mm, k_low: float, k_high: float) -> RuleR
     return RuleResult(rule, HELD, None, low=lo, high=hi, facts_used=(F_UNIT_MASS,),
                       formula=f"{count:g} x {k_low:g} d .. {k_high:g} d x {u:.6f} kg/m (d{d_mm:g})",
                       held_reason="zone (tension / compression) not printed: a note range, never released")
+
+
+def development_range_groups(cfg, groups: Sequence[tuple[float, float]], *, ends: int, k_low: float, k_high: float
+                             ) -> RuleResult:
+    """R-REBAR-DEV-RANGE-1 for a member whose bars are several printed groups (n, d): ends x sum(n x k d x unit
+    mass(d)), k_low .. k_high; HELD range only."""
+    if not groups or not _num(ends) or ends <= 0:
+        return RuleResult("R-REBAR-DEV-RANGE-1", HELD, None, facts_used=(F_UNIT_MASS,),
+                          held_reason="bar groups or the number of bar ends not printed")
+    lo = hi = 0.0
+    for n, d in groups:
+        r = development_range(cfg, count=ends * n, d_mm=d, k_low=k_low, k_high=k_high)
+        if r.low is None:
+            return r
+        lo, hi = lo + r.low, hi + r.high
+    return RuleResult("R-REBAR-DEV-RANGE-1", HELD, None, low=lo, high=hi, facts_used=(F_UNIT_MASS,),
+                      formula=f"{ends} ends x " + " + ".join(f"{n:g} d{d:g}" for n, d in groups)
+                              + f" x {k_low:g} d .. {k_high:g} d", held_reason="zone not printed: a note range")
+
+
+def candidates_range(ranges: Mapping[str, tuple[float | None, float | None] | None]) -> RuleResult:
+    """R-REBAR-CANDIDATE-RANGE-1: a member held over several printed candidates (schedule marks, section details):
+    min of the candidates' lows .. max of their highs; a candidate with no figure keeps the member HELD with no
+    range (never treated as 0 unless the candidate itself prints no such component)."""
+    rule = "R-REBAR-CANDIDATE-RANGE-1"
+    if not ranges:
+        return RuleResult(rule, HELD, None, held_reason="no candidate")
+    if any(v is None or v[0] is None or v[1] is None for v in ranges.values()):
+        return RuleResult(rule, HELD, None, held_reason="a candidate has no defined figure (no project detail)")
+    lo = min(v[0] for v in ranges.values())
+    hi = max(v[1] for v in ranges.values())
+    return RuleResult(rule, HELD, None, low=lo, high=hi, formula="min .. max over candidates " + " / ".join(
+        sorted(ranges)), held_reason="the governing candidate is a designer item")
 
 
 # ------------------------------------------------------------------------------------------------ slabs

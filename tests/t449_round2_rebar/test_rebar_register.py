@@ -115,3 +115,14 @@ def test_adverse_undeclared_cover_holds_the_slab_lines(M):
     dev = [e for e in bad["entries"] if e["version"] == "ARCH_TAKEOFF_V3.0.27"
            and e["patch"].get("valued") is not None]
     assert dev and all(e["rule_result"]["state"] == "HELD" and e["rule_result"]["low"] is None for e in dev)
+
+
+def test_held_ranges_reproduced_from_candidates_and_section_table(reg):
+    held = [e for e in reg["entries"] if e["version"] == "ARCH_TAKEOFF_V3.0.3" and e["action"] == "HELD_RANGE"]
+    cm = [e for e in held if "candidate marks" in (e.get("range_basis") or "")]
+    gb = [e for e in held if e.get("piece") == "GROUND_SYSTEM_STEEL" and "BAR_ENDS" in e["element_id"]
+          and not e["element_id"].split(":")[2].startswith("SB")]
+    assert cm and all(e["class"] == "A-REPRODUCED" for e in cm)
+    assert gb and all(e["class"] == "A-REPRODUCED" for e in gb)
+    sp = [e for e in reg["entries"] if e["class"] == "A-SPECIFIED"]
+    assert len(sp) == 12          # 4 Ln ranges, 3 straps (Q-74 / D-38), 3 bare slab labels, 2 laps (T-459)
