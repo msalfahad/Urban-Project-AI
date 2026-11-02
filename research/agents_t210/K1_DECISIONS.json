@@ -165,15 +165,15 @@
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
   },
   {
-   "module": "engine/source/opening_height_pdf.py",
+   "module": "engine/source/opening_height_pdf_v2.py",
    "packages": [
-    "pymupdf"
+    "pypdf"
    ],
    "import_style": "nested",
-   "role": "OPENING_HEIGHT_PDF method piece (T-082): reads words and vectors of a PDF page (lazy pymupdf); not wired into a released method",
-   "decision": "NOT_REGISTERED_HOLD",
-   "why": "PyMuPDF is AGPL-3.0 / commercial (requirements.txt licence note by the Lead; PLAN_READER.md: never PyMuPDF); registering it would make the engine/source dependency register accept an AGPL library, which is a licence decision, not a test fix. Not registered: the two B-5 / B-6 ids (r8_0, r8_1) stay in the known-failures ledger",
-   "fix_proposal": "OPENING_HEIGHT_PDF_V2 (a new version; V1 never edited) reading the page through a reader under a permissive licence registered in B-5 first (pypdf 6.19.0 BSD is already pinned; pypdfium2 / pdfplumber per PLAN_READER.md), proven to give the same words and segments as V1 on its tests and on the vector elevation sheets it was built for; registering PyMuPDF instead needs the owner's licence decision"
+   "role": "OPENING_HEIGHT_PDF_V2 method piece (T-465 r2): reads words and vectors of a PDF page with pypdf (lazy); V1 reads its pages through it; not wired into a released method",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "pypdf is in the B-5 register (T-465 r2, BSD-3-Clause) and requirements.txt (pypdf==6.19.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "none needed: declared in tests/r8_1/test_r8_1_boundaries.py by_design with {'pypdf'}, citing this record (T-257 rule: one declaration per ALLOWED record)"
   },
   {
    "module": "engine/source/room_census_guard.py",
@@ -290,6 +290,20 @@
    "closed_by": "T-465 (owner directive 2026-11-02 D4)",
    "closed_how": "_xclipped reads ACAD_FILTER / SPATIAL from the insert's own extension dictionary (same answer as ezdxf.xclip.XClip.has_clipping_path on every case); an unreadable filter stays clipped (HELD)",
    "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/opening_height_pdf.py",
+   "packages": [
+    "pymupdf"
+   ],
+   "import_style": "nested",
+   "role": "OPENING_HEIGHT_PDF method piece (T-082): reads words and vectors of a PDF page (lazy pymupdf); not wired into a released method",
+   "decision": "NOT_REGISTERED_HOLD",
+   "why": "PyMuPDF is AGPL-3.0 / commercial (requirements.txt licence note by the Lead; PLAN_READER.md: never PyMuPDF); registering it would make the engine/source dependency register accept an AGPL library, which is a licence decision, not a test fix. Not registered: the two B-5 / B-6 ids (r8_0, r8_1) stay in the known-failures ledger",
+   "fix_proposal": "OPENING_HEIGHT_PDF_V2 (a new version; V1 never edited) reading the page through a reader under a permissive licence registered in B-5 first (pypdf 6.19.0 BSD is already pinned; pypdfium2 / pdfplumber per PLAN_READER.md), proven to give the same words and segments as V1 on its tests and on the vector elevation sheets it was built for; registering PyMuPDF instead needs the owner's licence decision",
+   "closed_by": "T-465 r2 (owner directive 2026-11-02 D4)",
+   "closed_how": "page_primitives reads the page through engine/source/opening_height_pdf_v2.py (OPENING_HEIGHT_PDF_V2, pypdf 6.19.0 BSD-3-Clause, registered in B-5); the module no longer imports pymupdf and PyMuPDF stays unregistered",
+   "proof": "tests/t465_pdf_reader_v2 (words and segments equal to the former PyMuPDF reading, value for value and id for id, on the T-082 sheets and the adverse pages)"
   }
  ]
 }

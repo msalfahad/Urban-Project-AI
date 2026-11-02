@@ -84,6 +84,7 @@ def test_k1_is_stdlib_only_in_r8_1():
                  "membrane_fold_v2.py": {"shapely"},                # record: engine/source/membrane_fold_v2.py
                  "membrane_fold_v3.py": {"shapely"},                # record: engine/source/membrane_fold_v3.py
                  "membrane_fold_v4.py": {"shapely"},                # record: engine/source/membrane_fold_v4.py
+                 "opening_height_pdf_v2.py": {"pypdf"},             # record: engine/source/opening_height_pdf_v2.py (T-465 r2)
                  "membrane_fold_v5.py": {"shapely"},                # record: engine/source/membrane_fold_v5.py
                  "room_census_guard.py": {"shapely"},               # record: engine/source/room_census_guard.py
                  "room_label_guard.py": {"shapely"},                # record: engine/source/room_label_guard.py

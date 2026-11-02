@@ -8,7 +8,7 @@ heights printed there never reach the window / door areas. A vector PDF carries 
 only without dimension entities: a printed number, the dimension line it sits on, the extension lines and the drawn
 openings. This piece rebuilds that evidence and hands opening_area.measure an ordinary view:
 
-    page_primitives(path, page_no)          -> {"state", "words", "segments", ...}  (pymupdf, lazy; one PDF page)
+    page_primitives(path, page_no)          -> {"state", "words", "segments", ...}  (pypdf via V2, lazy; one page)
     view_from_page(prims, box, view_id, *, scale_den=None)
                                             -> a view for opening_area.measure (+ "pdf" diagnostics)
     measure_pdf(plan_openings, *, floors, elevation_views=(), section_views=(), raster_sheets=(),
@@ -50,7 +50,7 @@ A, T-064). Status names, hold reasons and the never-list are opening_area's (UP-
 
 Rules: UP-OPEN-SCHED-001, UP-DOOR-AREA-001, UP-DOOR-HGT-001, UP-QTY-STATUS-001, OWNER-Q32-A, OWNER-Q33-A,
 OWNER-Q17-A (typed values only through the project data file), L-P9-02. Project-agnostic: no layer, title, sheet or
-project name is coded. Stdlib only, except page_primitives (pymupdf, lazy).
+project name is coded. Stdlib only, except page_primitives (pypdf through opening_height_pdf_v2, lazy; T-465 r2).
 """
 
 from __future__ import annotations
@@ -81,53 +81,15 @@ SCALE = re.compile(r"(?:^|[^\d.])1\s*[:/]\s*(\d+(?:\.\d+)?)\s*$")
 def page_primitives(path, page_no=1):
     """One PDF page -> words (span text, box and direction, y UP) and segments (lines, rectangle sides and Bezier
     curves flattened into 8 chords; y UP). state VECTOR when it has words or vectors, RASTER_ONLY otherwise (the same
-    test as tools/urban_intake.read_pdf)."""
-    import pymupdf                                                    # lazy: the reading core is stdlib only
+    test as tools/urban_intake.read_pdf).
 
-    doc = pymupdf.open(str(path))
-    pg = doc[page_no - 1]
-    H = pg.rect.height
-    words = []
-    for blk in pg.get_text("dict").get("blocks", ()):
-        for line in blk.get("lines", ()):
-            d = line.get("dir", (1.0, 0.0))
-            for sp in line.get("spans", ()):
-                t = (sp.get("text") or "").strip()
-                if not t:
-                    continue
-                x0, y0, x1, y1 = sp["bbox"]
-                words.append({"value": t, "x0": x0, "y0": H - y1, "x1": x1, "y1": H - y0,
-                              "dir": (round(d[0], 6), round(-d[1], 6))})
-    segs = []
-    n = 0
-    for dr in pg.get_drawings():
-        for it in dr.get("items", ()):
-            n += 1
-            if it[0] == "l":
-                pts = [it[1], it[2]]
-            elif it[0] == "re":
-                r = it[1]
-                pts = [r.tl, r.tr, r.br, r.bl, r.tl]
-            elif it[0] == "qu":
-                q = it[1]
-                pts = [q.ul, q.ur, q.lr, q.ll, q.ul]
-            elif it[0] == "c":
-                p0, c1, c2, p3 = it[1], it[2], it[3], it[4]
-                pts = []
-                for k in range(9):
-                    t = k / 8.0
-                    a, b, c, e = (1 - t) ** 3, 3 * (1 - t) ** 2 * t, 3 * (1 - t) * t * t, t ** 3
-                    pts.append(pymupdf.Point(a * p0.x + b * c1.x + c * c2.x + e * p3.x,
-                                             a * p0.y + b * c1.y + c * c2.y + e * p3.y))
-            else:
-                continue
-            for i, (p, q) in enumerate(zip(pts, pts[1:])):
-                if (p.x, p.y) != (q.x, q.y):
-                    segs.append((p.x, H - p.y, q.x, H - q.y, f"pdf{n}.{i}"))
-    has_img = bool(pg.get_images())
-    state = "VECTOR" if (words or segs) else ("RASTER_ONLY" if has_img else "EMPTY")
-    return {"page": page_no, "width_pt": pg.rect.width, "height_pt": H, "state": state, "words": words,
-            "segments": segs, "has_image": has_img}
+    T-465 r2 (owner directive 2026-11-02 D4; T-210 (b)): the page is read by OPENING_HEIGHT_PDF_V2's pypdf reader
+    (BSD-3-Clause, B-5 registered), no longer by PyMuPDF (AGPL). Same record: words and segments equal value for value
+    and id for id to the former PyMuPDF reading on the T-082 sheets, the adverse pages of tests/t465_pdf_reader_v2 and a
+    real 3-page vector sheet (160,721 segments); "reader" names the reader and its limits."""
+    from engine.source import opening_height_pdf_v2 as V2              # lazy: the reading core is stdlib only
+
+    return V2.page_primitives(path, page_no)
 
 
 # ------------------------------------------------------------------------------------------- reading one view

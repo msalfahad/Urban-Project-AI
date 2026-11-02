@@ -52,7 +52,6 @@ from engine.source import member_detection as MD
 from engine.source import provisional_estimate as PE
 
 METHOD = "CONCRETE_LEDGER_V3"
-DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: concrete items; imported by no method or CLI
 RULES = V2.RULES + ("OWNER-Q-16", "OWNER-Q-21", "OWNER-Q-44")
 BEAM_ITEM_FAMILIES = ("BEAMS", "GROUND_BEAMS")
 PLAN_ROLES = ("SLAB_PLAN", "GROUND_BEAM_PLAN")
@@ -202,10 +201,8 @@ def rings_of(D, intake, rp, ring_rule=None):
 def read_section_drawing(dxf_path):
     """every linear DIMENSION {axis, lo, hi, shown, p1, p2} (shown = the printed text, or the measurement x DIMLFAC:
     entity override > style > header) and every LWPOLYLINE outline of >= 4 vertices, in drawing units."""
-    from engine.source.cad import kernel_ezdxf as K2        # T-465: the K2 route reads the DXF (K1 never imports ezdxf)
-    doc, bad = K2.load(dxf_path)
-    if doc is None:                                         # a failed read stays a visible failure, never 0 dims
-        raise OSError(f"read_section_drawing: {dxf_path}: " + "; ".join(f.detail for f in bad))
+    # T-465: read on the K2 route (K1 never imports ezdxf); a failed read raises, never 0 dims (_k2_readfile, below)
+    doc = _k2_readfile(dxf_path)
     hdr = doc.header.get("$DIMLFAC", 1.0) or 1.0
     dims, outl = [], []
     for e in doc.modelspace():
@@ -533,3 +530,18 @@ def policy_record():
                     "beam items rebuilt by the route's own items_from; rings only from a printed mark or a passed "
                     "owner rule; upstands only from a printed section bound to its cut line; neck-only column types "
                     "NOT_PRESENT on the column plan, their necks held on the founding datum; missing never 0"}
+
+
+# T-465 r2: declared BELOW apply() so that no line above measure() (:418) / apply() (:501) moves: the B10-07 file:line
+# evidence in the existing BOQ_FAMILY_MASTER version files keeps resolving (Checker verdict of T-465 r1).
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-465: concrete items; imported by no method or CLI
+
+
+def _k2_readfile(dxf_path):
+    """the DXF document by the K2 route (= ezdxf.readfile(str(path)) on success); a failed read RAISES OSError with the
+    route's ROUTE_DECODE_FAILED detail, so a missing or truncated section drawing never becomes 0 dimensions."""
+    from engine.source.cad import kernel_ezdxf as K2
+    doc, bad = K2.load(dxf_path)
+    if doc is None:
+        raise OSError(f"read_section_drawing: {dxf_path}: " + "; ".join(f.detail for f in bad))
+    return doc

@@ -45,7 +45,7 @@ def test_by_design_is_read_from_the_k1_test_itself():
               "ground_slab_recovery.py": {"shapely"}, "region_recovery.py": {"shapely"}}
     declared = {r["module"].rsplit("/", 1)[1]: set(r["packages"]) for r in K.load_record()["records"]
                 if r["decision"] == "ALLOWED_OUTSIDE_K1"}               # T-257: one entry per ALLOWED record, exactly
-    assert len(declared) == 18
+    assert len(declared) == 19                                          # T-465 r2: + opening_height_pdf_v2 (pypdf)
     assert by_design == {**r8_era, **declared}
     assert "engine/source/cad/kernel.py" in core and "engine/source/cad/kernel_ocs.py" in core
 
@@ -53,8 +53,15 @@ def test_by_design_is_read_from_the_k1_test_itself():
 def test_pymupdf_is_recorded_as_not_registered_and_every_allowed_package_is_registered():
     rec = {r["module"]: r for r in K.load_record()["records"]}
     reg = set(K.facts(ROOT)["registered"])
-    assert rec["engine/source/opening_height_pdf.py"]["decision"] == "NOT_REGISTERED_HOLD"
-    assert "pymupdf" not in reg and "fitz" not in reg
+    # T-465 r2: the former pymupdf module is CLOSED (it reads through V2 / pypdf); PyMuPDF itself stays unregistered and
+    # no open record or offender imports it any more
+    closed = {c["module"]: c for c in K.load_record()["closed"]}
+    assert closed["engine/source/opening_height_pdf.py"]["decision"] == "NOT_REGISTERED_HOLD"
+    assert "engine/source/opening_height_pdf.py" not in rec
+    assert rec["engine/source/opening_height_pdf_v2.py"]["decision"] == "ALLOWED_OUTSIDE_K1"
+    assert not any({"pymupdf", "fitz"} & set(r["packages"]) for r in rec.values())
+    assert not any({"pymupdf", "fitz"} & set(o["packages"]) for o in K.facts(ROOT)["offenders"].values())
+    assert "pymupdf" not in reg and "fitz" not in reg and "pypdf" in reg
     for r in rec.values():
         if r["decision"] != "NOT_REGISTERED_HOLD":
             assert set(r["packages"]) <= reg, r["module"]
