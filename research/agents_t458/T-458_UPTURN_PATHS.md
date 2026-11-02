@@ -53,7 +53,21 @@ Run-time (research/agents_t458/t458_trace.py: an import hook wraps every functio
 rule-store / rule-library readers as they load; an audit hook records the rule JSON files opened; run in-process on the
 Drive copies P7757.dxf + "ST7757 dxf.dxf" 9f9d1179 decoded into .work/private; trace JSON kept there):
 
-RUNTIME_RESULTS_PLACEHOLDER
+| Run (own, 2026-11-02) | Engine modules loaded | Suspect modules imported | Suspect calls | UP-WP reads (rule_store) |
+|---|---|---|---|---|
+| research/agents_t167/v304_run.py (chain incl. RELEASED V2.9, V2.10 - V2.12, V3.0.2 - V3.0.4) | 142 | none of the six (waterproofing_policy, room_slice, finishes_rules, arch_quantity_truth, waterproofing, rule_library) | 0 | UP-WP-002 @1.5.0 -> 0.2 (2,316 reads); UP-WP-001 / -003 / -005 @1.5.0 only; no read @1.4.0 |
+| research/agents_t430/v3040_run.py (CANDIDATE OF RECORD ARCH_TAKEOFF_V3.0.40; V3_0_40_BOQ_LINES.json reproduced sha256 **aa6aa927**, 4,831 lines = board pin, so the probes changed nothing) | 179 | none of the six | 0 | UP-WP-002 @1.5.0 -> 0.2 (234 reads); no read @1.4.0 |
+| tools/urban_structural_boq.py run (route G: A_FROZEN_STAGE_REPLAY on the structural DXF) | - | none of the six | 0 | none (structural only) |
+
+Rule files: data/trade_rules/URBAN_PROJECTS_RULE_LIBRARY.json, rules/owner_library 1.4.0 and URBAN_METHOD_REGISTER_V1
+ARE opened at run time (rule store base load under the 1.5.0 overlay, manifest digests), but every UP-WP value served
+came from rule_store LATEST_APPROVED 1.5.0 (0.20); engine/rule_library.py (the only reader without the overlay) is not
+imported by any of the three runs. Released V2.9 output: all 297 `upturn_h_m` and 39 `upturn_m` values are 0.2; its 14
+FIN.WP.WALL_UPTURN lines cite the KB rule UP-WP-003 (URBAN_KB_1.5.0, 0.20). The candidate carries 18 FIN.WP.WALL_UPTURN
+(m2) and 4 FIN.WP.ROOF_UPTURN (lm) lines on the same 0.20 basis.
+
+RESULT: the 0.15 m upturn and the upturn door deduction are reachable from NO released (V2.9 + route G) or candidate
+(V3.0.40 aa6aa927) path, statically or at run time. The legacy code is live only in tests.
 
 ## 5. Verdict and correction
 
