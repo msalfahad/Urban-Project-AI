@@ -1,9 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-01 20:17 UTC (Lead). Previous version: 2026-11-01 16:15 UTC. The released numbers did not change
+Last update: 2026-11-02 00:20 UTC (Lead). Previous version: 2026-11-01 20:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate under review is now V3.0.39 (not released): V3.0.38 plus the stair tread correction.
+released: 0. The candidate under review is now V3.0.40 (not released): V3.0.39 plus the ground-beam section correction.
+
+Your 2 Nov directive is in force: the team now works in your order. First, protection: the released version locked by
+file hashes, tests that mean something on a clean copy, the drawing-file gap in the ignore list, and two suspected
+calculation defects reproduced before anyone fixes them. In parallel: the per-project facts file (so the engine stops
+carrying training-villa values), a fresh full score in your eight categories, and the checker's line-by-line
+verification of concrete, then reinforcement, then blockwork. Materials and pricing come after. Lines already verified
+keep flowing into the candidate one at a time.
+
+Since 1 Nov 20:17 (newest first; four checked and merged, all on the first pass, one of them an integration into the
+candidate; two pieces waiting for the checker):
+- Ceiling / skirting completeness on the new candidate and the held stair-room faces: HANDED IN, not yet checked. Nothing
+  new is missing; three short stair-room faces turn out not to need skirting (a balustrade, a marble threshold), the
+  back-lobby skirting grows 1.40 -> 1.60 m.l, one face under the winders stays unknown (2.20 .. 3.45 m.l), and the
+  freelancer's 2F corridor difference is now fully explained.
+- Slab panel around the lift shaft: CHECKED AND MERGED. The checker measured all four pieces himself: 35.61 m2 x 0.10 m
+  = 3.56 m3, the same as the worker; the pit floor and its walls are not counted again. It goes into the candidate with
+  the slab panel under the curved stair.
+- Ground-beam section INTO THE CANDIDATE (V3.0.40): CHECKED AND MERGED on the first pass. Two beam runs were valued with
+  the wrong section and through a neck: valued ground beams 29.57 -> 26.86 m3; four short runs (1.15 m3) wait on the
+  designer's section and stay held, never 0.
+- Other unexplained concrete (pool walls, beam lengths, boundary): CHECKED AND MERGED. 0.60 m3 is the engine being right
+  (the pool walls were counted to the wrong height by the freelancer); 0.44 m3 stays unexplained, with each part named.
+- Pantry strips: CHECKED AND MERGED. Their ceiling continues (+1.70 m2); their base is wall tile, not skirting.
+- Next into the candidate: the dining floor strip with its ceiling, then the two ground-slab panels (lift shaft and
+  under the curved stair, +4.39 m3 together).
 
 Since 1 Nov 16:15 (newest first; seven checked and merged, all on the first pass, one of them an integration into the
 candidate; nothing waiting for the checker):

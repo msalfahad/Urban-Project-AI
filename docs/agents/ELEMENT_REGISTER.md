@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- LIFT PIT vs GROUND SLAB: CONFIRMED (Lead 2026-11-02 00:20; T-444 MERGED 1fb9dec6, Checker's own handle re-measure of
+  ALL FOUR panels on the structural DXF): GS cell L-41cfb82e = OWN-009 11.520000 + OWN-010 10.974202 + OWN-007 11.923674
+  (net of the ring corner and lift column C9 outside the ring) + OWN-047 1.187500 = 35.605376 m2 x printed T=10 cm =
+  3.560538 m3; the shaft floor (pit floor = raft top, 2.8125 m2) stays LIFT PIT, the ring 0.880 m2 stays pit wall; the
+  'free column' is lift column C9 on the ring. OWNER TRADE CONCRETE GS for the four panels (lane I T-442, same package as
+  the stair-zone panel); LIFT PIT keeps floor and walls with no slab quantity. Every villa: a lift shaft inside a slab
+  cell is netted by the shaft outline and its ring, and the columns on the ring are pit members, not free columns.
+- STAIR-ROOM FACES WITH NO SKIRTING (Lead 2026-11-02 00:20; T-447 READY, PROVISIONAL until the Checker's verdict): a
+  balustrade-topped divider band (flight visible below the rail) and a marble-threshold opening into a full-tile wet niche
+  take NO skirting (NOT_APPLICABLE with the section / owner jamb rule as evidence, Q-06 a); the face under the winders
+  stays UNKNOWN 2.200 .. 3.450 lm (never 0). Owner trade FINISHES SKIRTING; STAIRS lists the flight string only.
 - GROUND SLAB UNDER A STAIR ON GRADE (Lead 2026-11-01 20:17; T-436 MERGED c943cabb, Checker own read): the GS panel
   OWN-011 (cell SITE-4df8fcd99d130701, 8.372 m2) under / beside the foot of the GF curved flight ST-02 RS-C is SLAB ON
   GRADE: the flight is drawn hidden over it, no void / pit / stair base is drawn, the foundation plan shows only footing

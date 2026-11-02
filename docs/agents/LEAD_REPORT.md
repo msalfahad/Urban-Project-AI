@@ -1,5 +1,100 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-02 00:23 UTC
+
+Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
+1 Nov 20:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
+`.work` prepared by `status` (auto). Working branch ece154fe -> 1fb9dec6 (Checker 'engine push' merges of T-437, T-439,
+T-430, T-444); no owner commit on the engine branch. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: no new row since 31 Oct, but the main chat wrote your 2 Nov directive, follow-up, decisions,
+gate notes and the privacy plan straight onto the board and MISSION.md (22:29 - 23:02); all applied, nothing undone.
+
+HEADLINE: your 2 Nov directive is now the board's order. Every open task is ranked P0 -> P3 and the workers' next runs
+start on Gate 0 protection (hash lock of released V2.9, meaningful tests on a clean copy, the drawing-file ignore gap,
+two suspected defects reproduced before any fix). Lines already verified keep flowing into the candidate one at a time.
+Since 20:17 four pieces checked and merged on the first pass; the candidate is now V3.0.40 (ground-beam section
+corrected; thirteenth Gate B first pass in a row). Independently closed whole lines: still 1 (CONC.SLAB, candidate).
+
+ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
+10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.40 json aa6aa927,
+NOT RELEASED):
+- CONCRETE, GROUND BEAMS (m3; Gate B PASS 22:30): two interior runs re-sectioned 30x60 -> 30x40 between founded necks
+  (unloaded runs 0.423 m3 each, VERIFIED by the Checker's own hand) and 0.108 m3 neck overlap removed: valued GB
+  29.569 -> 26.857 m3 (-2.713: section -0.423, neck -0.108, moved to HELD -2.182). Four D-34 short runs 1.152 m3 HELD
+  (downgrade DG-2ddc451c), never 0. Exported GB 25.704 m3.
+- CONCRETE, GROUND SLAB (m3; MERGED 23:58): the lift-shaft cell L-41cfb82e is four slab panels 35.605 m2 x printed 10 cm
+  = 3.561 m3; the Checker measured all four himself (AGREE to vertex rounding); pit floor and ring stay with the lift pit
+  (no double count); the 'free column' is lift column C9 on the ring. With the stair-zone panel (0.828 m3) it goes into
+  the candidate as ONE ground-slab package (T-442): +4.389 m3 valued; GS residual -12.309 -> about -7.92 m3 after both.
+- CONCRETE, OTHER UNEXPLAINED (m3; MERGED 22:00): of -1.034 m3, ENGINE_RIGHT -0.596 (the freelancer's pool walls run
+  0.20 m too high -0.471; one extra 2F B2 row -0.087; step rows +0.013; whole-metre GB lengths -0.050) and UNRESOLVED
+  -0.438 (GF B7 -0.121, GF B2 -0.011, 1F CB12 -0.161 with >= 0.1875 untraced, lower band -0.145). No line moved.
+- CEILINGS (m2; MERGED 22:00): the GF pantry strips 1.100 + 0.600 m2 are part of the wet pantry: ceiling continues
+  (+1.700 m2 DRAWING-CONFIRMED), their 1.600 m.l base is wall tile, not skirting; one bulkhead 0.483 m2 not re-measured
+  (PARTIALLY VERIFIED 2 / 3).
+- SKIRTING / CEILING JOIN, STAIR-ROOM FACES (READY, not checked): join re-run on V3.0.39 / V3.0.40 finds nothing new
+  silent (7.345 m2 ceiling, dining 3.900 m.l skirting, OP-020 / OP-027 jambs 0.700 m.l HELD); stair-room faces: divider
+  band 2.200 / 3.400 and OP-020 jambs 0.400 NOT_APPLICABLE (balustrade, marble threshold into a full-tile niche), back
+  lobby 1.400 -> 1.600 m.l, the face under the winders UNKNOWN 2.200 .. 3.450 m.l (never 0); the freelancer's 2F corridor
+  -6.100 m.l (-44.85 %) now fully traced (residual 0.000).
+- FLOORS, DRY (m2): unchanged at -41.70 m2 (-12.35 %); +5.645 m2 dining strip comes with T-431 (next in lane I).
+- STAIRS, ROOF, FORMWORK, TILES, SANITARY, RAILINGS, FENCE, FLOOR BED, LIFT, REINFORCEMENT: no candidate change.
+Development project 2: paused, not measured. The earlier 'sealed' benchmark villa is regression-only (your finding).
+
+WHAT IMPROVED / WHY: ground beams now carry the printed section between founded supports (-2.713 m3 valued, the held
+part named); the lift-shaft slab cell is settled from the drawings without a designer question. WHAT GOT WORSE: nothing
+measured moved the wrong way. WHAT WAS LEARNED (1 lessons row adopted): a lift shaft inside a slab cell is netted by the
+shaft and its ring, and columns on the ring are pit members (T-444). WHAT IS MISSING in the candidate: dining strip +
+ceiling, the two ground-slab panels, stair-room skirting split / lift door, nosing + RS-A tread, lift tie beam, block
+below the house beams, skirting release, WP fixes, exterior plaster, earthworks, foundation WP, masonry accessories;
+the completeness matrix (T-471) will state each as measured / verified / held / missing / not applicable.
+
+GATES (your 2 Nov decisions): Gate 0 open: T-467 (first, worker 1), T-470 (worker 2), T-462 -> T-463 -> T-464 (one
+worker in turn), T-465, then T-466; T-458 and T-456 reproduce first (your static trace says neither is on the V3.0.40
+path; the run-time loaders are checked too); T-459 (laps, on the candidate path) starts with a bar-length census proving
+training-villa steel does not move. Gate 1: T-450 part 1 (config schema, worker 3, no dependency), T-469 (eight-category
+score incl. a current released V2.9 per-family concrete statement), T-180 (Checker stream: CONC.SLAB re-bind first, then
+your first ten lines), T-449 after T-450 part 1 (concrete round first), T-452, T-471. Gate 2 / 3 queued behind them.
+Milestones: M3 11 Nov on track but watched (Gate 0 slows architectural pieces about a day); M4 25 Nov at risk on
+consultant items (D-16, D-33, D-34, D-35, D-43).
+
+DECISIONS THIS RUN: 10 TODO (S T-467, T-458, T-456, T-445; A T-470, T-462, T-465; I T-431, T-450, T-469), every other
+open row QUEUED with its dependency and in a lane order. T-180 RESOLVED (your item 4): it is now the Checker's P1
+verification stream with its own stored reference per line. T-026 CLOSED (no line target; Track B paused). The 26
+archived rows checked one by one: none needs a new row (each mapped to the row that now covers it, board note 00:20).
+T-444 -> T-442 acceptance (same ground-slab package). Element register: LIFT PIT vs GROUND SLAB confirmed; STAIR-ROOM
+FACES WITH NO SKIRTING provisional. VERIFIER QUEUE: T-132 slot; T-446, T-447 (READY, cause CHECKER-RUNS); Gate 0 rows
+as they come (never delayed more than 2 Checker runs, T-467 first); T-431 Gate B; T-180 with the rest of every run.
+Queue check: 45 actionable rows, 0 flagged, 0 stall checks.
+
+LESSONS ROW ADOPTED (ERS s.7): T-444 lift shaft inside a slab cell.
+
+TEAM HEALTH (20:17 - 00:23): Worker 1 x2, Worker 2 x2, Worker 3 x2 closed with final lines, all self-checks PASS;
+Checker 20:52 and 22:52 correct idle runs (READY 0), 21:50 -> 22:33 closed; the Checker run STARTED 23:50 (merged T-444
+at 23:53-23:58) has NO final line at 00:23: open now, INCOMPLETE if none appears. Throughput: 4 merges, 0 rejections,
+READY never above 2. CLOCK: Worker 1's final line is stamped 2026-11-02T00:22Z but was pushed at 23:37 (about 45 min
+ahead of the clock), the exact fault of your item (5); Worker 1 also still writes 'run unknown'. Worker 3's first
+pytest attempt failed after an interrupted setup and passed after one re-run (no action). Worker 1 noted that
+`agent_env.sh run` refuses research scripts, so it ran two with the venv python directly (outside the wrapper).
+Scheduler: Worker 3 22:59 SUCCEEDED, Dashboard 1 Nov 12:55 SUCCEEDED, Main 1 Nov 04:31 SUCCEEDED. Scout paused.
+
+OWNER PACKAGE: no new engineering decision under ERS s.2.7. Q-78 (1:4) and T-383 ownership are answered (thank you);
+nothing else is open for you from the engineering side.
+
+NEEDS FIXING (only you / the main chat can do it):
+1. PRIVACY (your plan, PRIVACY_MOVE_PLAN_2026-11-02): repository still PUBLIC; Step 0 (switch to private, confirm the
+   Claude app keeps access) and the decisions on steps 1-4 are yours. T-470 adds only ignore rules and a header test;
+   no agent moves or deletes client material before your word.
+2. T-467 will deliver a NEW freeze index covering the released path; pointing `agent_env.sh freeze` / `selfcheck` at it
+   is a change on main (main chat), to schedule once the Checker merges T-467.
+3. Clock and run id: Worker 1 still stamps ahead of the clock and writes 'run unknown'; a worker-prompt line 'stamp
+   from `date -u` at the moment of writing' would close it (prompt change = main chat). The wrapper refusing research
+   scripts pushed Worker 1 outside it: either allow `run research/agents_t*/...py` in agent_env.sh or say workers must not.
+4. OWNER_SESSION_CHANGES.md has no rows for the 2 Nov owner session (directive, follow-up, decisions, privacy plan,
+   archive moves); the 19 Oct rule asks the main chat to log each change there.
+5. Still open from earlier: PR #3 merge (yours), B-S18 document-control RFI first for issue (nothing sent), RFI register
+   gaps (court GB section -1.026, pool plant room -3.480 m3, PC-2F section).
+
 ## LEAD REPORT 2026-11-01 20:17 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
@@ -184,83 +279,4 @@ NEEDS FIXING (only you / the main chat can do it):
 2. Dependent rows wait for a Lead run: a one-line worker-prompt addition ('a QUEUED row whose only blocker is "after
    T-xxx MERGED" may be claimed once the board shows T-xxx MERGED') would remove the idle slots; worker prompts are the
    main chat's. Stamps ahead of the clock (1 this window): the 'stamp from `date -u` at the moment of writing' line too.
-3. RFI evidence register stays PARKED (public-repo refusal), unchanged.
-
-## LEAD REPORT 2026-11-01 12:20 UTC
-
-Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since
-1 Nov 08:00 (search empty; no photo review task). Repositories: attached Urban-Project-AI checkout (main eafbb0f6);
-`.work` prepared by `status` (auto). Working branch ae87deb1 -> 65ce8f6d (Checker 'engine push' merges of five rows); no
-owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no new entry since
-31 Oct; nothing undone.
-
-HEADLINE: five pieces checked and merged in four hours, all first pass. The floor bed / screed family (missing before)
-is in the candidate (V3.0.37, tenth Gate B first pass in a row). Three real engine errors were confirmed by the Checker's
-own re-measure and are queued as corrections into the candidate: a stair flight valued twice, two ground beams at the
-wrong section, and a dining-floor strip taken as garden band. No new owner decision; the privacy item is still open
-(NEEDS FIXING 1).
-
-ALSENAN, per trade (released V2.9 + route G unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %; reinforcement
-10,250.168 kg; whole verified lines 1 (CONC.SLAB, candidate), released 0; candidate of record V3.0.37):
-- FLOOR BED / SCREED (m2 / m3; Gate B PASS 11:43): 80 lines added (40 beds), 4,730 byte-identical. Dry 288.146 m2,
-  installed 8.644 .. 11.526 m3 (ASSUMED — OWNER-APPROVED Q-45) with the drawing bound 0 .. 14.514 m3 HELD beside; wet
-  85.576 m2, 3.423 .. 5.135 m3 (D-41 HELD). Freelancer has no bed row (engine-only family). Checker re-measured 4 rooms.
-- FLOORS, DRY (m2; MERGED 12:01): -40.797 m2 (-12.09 %) closed on 17 causes; unexplained -0.627 -> of the old 2.546 only
-  0.302 m2 (0.20 %) left. ENGINE_WRONG / FREELANCER_RIGHT 5.645 m2: the GF strip west of band line 310 has no drawn edge
-  (engine prolonged the band 3.80 m). After the correction (T-431) dry is -35.152 m2 (-10.41 %); the rest is RULE_DIFFERENCE
-  (pantry 13.455 wet by Q-37 A; treads 6.124 in B7) and HELD (band 9.705, GF stair-room 6.128). Wet +13.566 m2 all traced.
-- GROUND BEAMS, SECTION (m3; MERGED 11:59): ST p.13 prints 30x40 for runs under 5 m; L-fe78ae28 / L-0e30aadb run 7.35 m
-  at 30x60 but each is two 3.525 m runs split by founded necks: unloaded halves -0.423 m3 ENGINE_WRONG (the freelancer
-  made the same error), loaded halves HELD D-33. 1.152 m3 on four D-34 lines valued at the deeper end should be held
-  (downgrade extension, Checker finding). GB-MAIN valued side -1.800 m3 once T-430 applies; headline as is -10.355 m3.
-- STAIRS, CONCRETE (m3; MERGED 11:10): ST-01 -2.016 = his length 5.300 = run 3.300 + rise 2.000 (developed profile):
-  ENGINE_RIGHT, unexplained 0; landing +0.162 ENGINE_RIGHT. SD-STAIR unexplained -5.828 -> -3.974 (ST-02 only; T-432).
-- STAIRS, FINISHES (m2 / lm; MERGED 09:56): DOUBLE COUNT CONFIRMED (Checker's own plan registration): MS2-L read again on
-  the 2F plan, 3.450 m2 / 11.500 lm; MS1-L 9 treads drawn vs 7 bound (-0.690 m2). B7-02 valued 27.324 -> 20.010 m2
-  (-26.8 %), B7-06 91.028 -> 67.850 lm once T-429 applies. Freelancer ST-01 63 vs drawn 56 pieces RULE_DIFFERENCE,
-  cause not proven (T-434).
-- ROOF, CEILINGS, FORMWORK, TILES, SANITARY, RAILINGS, FENCE, LIFT: no candidate change since 08:15.
-Development project 2: paused, not measured.
-
-WHAT IMPROVED / WHY: a whole missing family (floor bed) is in the candidate; the dry floor gap is explained to 0.2 %;
-the main stair concrete gap is explained to 0. WHAT GOT WORSE: nothing measured moved the wrong way; valued candidate
-lines are now known to be wrong (stair treads B7-02 27.324 m2 valued vs 20.010 once corrected; GB +0.423 m3; dry floor
-5.645 m2 short), each with a lane I row. WHAT WAS LEARNED (lessons register, 4 rows adopted): a repeated
-flight is one element without a level difference; section class is read on the run between founded supports; a zone
-stops at its own drawn edge; test standard measurement constructions exactly before classing a freelancer difference.
-WHAT IS MISSING: in the candidate: stair-room floors, the three corrections, lift tie beam, block below the house beams,
-skirting release, nosing, WP fixes, exterior plaster, earthworks, foundation WP, masonry accessories (lane I order).
-GATES: gate 1 no open item; gate 2: three corrections queued (T-429 / T-430 / T-431); integration gate 2; reconciliation
-gate 3. Milestones: M3 11 Nov on track; M4 25 Nov at risk on consultant items (D-16, D-33, D-34, D-35, D-43).
-
-DECISIONS THIS RUN: T-421 TODO first in lane I; NEW T-429 / T-430 / T-431 (lane I, gate 2, ahead of T-419: valued lines
-first); T-428 TODO first in lane S (acceptance extended with the T-417 / T-426 terms); NEW T-432 (S: ST-02 length basis),
-T-433 (S: held concrete -115.46 m3 split by blocker, after T-428), T-434 (A: winder turn conflict + 63 vs 56 pieces), T-435
-(A: ceiling / skirting owner for every floored space). Element register: GB RUN BETWEEN FOUNDED SUPPORTS; GF DINING PIECE
-vs GARDEN BAND; STAIR TREAD SEEN ON TWO PLANS. VERIFIER QUEUE: Gate B T-421 first when READY, then T-428 > T-434 > T-432 >
-T-435, then T-429 > T-430 > T-431. Queue check: 49 actionable rows, 0 flagged, 0 stall checks. TODO claimable: S 2 (+1
-queued), A 2, I 1 (serial, 15 queued behind it); READY 0.
-
-LESSONS ROWS ADOPTED (ERS s.7): T-425 repeated flight; T-426 section class per run; T-427 zone extent; T-417 developed
-profile.
-
-TEAM HEALTH (08:15 - 12:20): every STARTED line has a final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Checker x4);
-all self-checks PASS; scheduler last runs SUCCEEDED (Main 04:31, Worker 3 10:59, Dashboard 00:54; others from RUN_LOG:
-Worker 1 11:21, Worker 2 10:40, Checker 11:51). No refusal. Throughput: 5 merges, 0 rejections, READY never above 3. One
-idle slot: Worker 1 at 11:21 had nothing to claim (lane S thin after a cross-lane claim); fixed this run (S and A now 2
-claimable each). Stamps ahead of the clock: down to 1 (Worker 2 T-425 READY 09:31 vs commit 09:27). Scout paused (your
-28 Oct choice).
-
-OWNER PACKAGE (unchanged, no new engineering decision under ERS s.2.7):
-- T-383 waterproofing completeness join (your 31 Oct item 5): own row (A, recommended) vs inside T-310 (B); full ERS s.6
-  text in my 31 Oct 00:45 report (archive); no quantity impact either way; on 'A' it becomes TODO for worker 2.
-- Q-78 (mix for the black block-joint mortar) still open, not urgent.
-
-NEEDS FIXING (only you / the main chat can do it):
-1. PRIVACY (Checker O-T407-2, open since 1 Nov 04:15): the frozen tracked file tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json
-   in this PUBLIC repository carries personal data from the freelancer workbook header (since 3 Oct). Agents may not edit
-   a frozen file or rewrite history; every hand-in forbids copying from it. Needs your decision (remove / replace the
-   file in a new commit, and whether history must be purged).
-2. Stamps ahead of the clock: improving (1 this window) but the one-line prompt change ('take every stamp from `date -u`
-   at the moment of writing') remains a main-chat item.
 3. RFI evidence register stays PARKED (public-repo refusal), unchanged.

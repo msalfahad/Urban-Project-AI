@@ -5,53 +5,53 @@
   "cadence": "daily 07:31 Kuwait (04:31 UTC)",
   "last_run": "2026-11-01T04:31:31Z",
   "result": "ok",
-  "working_on": "Daily update 1 Nov 04:31 UTC (scheduler SUCCEEDED); next 2 Nov 04:31 UTC",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "Daily update 1 Nov 04:31 UTC (scheduler SUCCEEDED); owner session 1-2 Nov wrote the 2 Nov directive, follow-up, decisions and privacy plan; next daily update 2 Nov 04:31 UTC",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-01T20:13:00Z",
+  "last_run": "2026-11-02T00:16:00Z",
   "result": "running",
-  "working_on": "Seven checked and merged since 16:15 (candidate V3.0.39: stair tread double count corrected); ground-beam correction next into the candidate; opened lift-shaft slab cell, footing blinding binding, ceiling/skirting re-run, stair-room held faces; three new candidate rows planned (slab under curved stair, stair-room skirting split, stair tread/nosing follow-ups)",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "Applied the owner's 2 Nov directive: every task ranked P0-P3, 10 claimable tasks (Gate 0 protection first: V2.9 hash lock, tests, ignore list, two defect reproductions), checker verification stream re-scoped (concrete line by line)",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-01T19:21:00Z",
+  "last_run": "2026-11-01T23:22:00Z",
   "result": "ok",
-  "working_on": "19:21-19:43 ground-slab unexplained parts (merged 19:55: slab panel under the curved stair missing, 0.84 m3); 17:20-17:35 curved stair straight part (merged 17:56); next: pool walls / beam lengths / boundary unexplained concrete",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "23:22-00:22 lift-shaft slab cell 3.561 m3 (merged 23:58, checker re-measured all four panels); 21:21-21:39 other unexplained concrete (merged 22:00); next: V2.9 hash lock (Gate 0)",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-01T18:41:00Z",
+  "last_run": "2026-11-01T22:40:00Z",
   "result": "ok",
-  "working_on": "18:41-19:43 stair-room skirting faces 9.40 m.l (merged 19:55); 16:41-17:34 wet pantry skirting, 0.00 over-count (merged 18:34); next: pantry strips ceiling / skirting",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "22:40-23:47 ceiling / skirting join on the candidate (READY, waiting for the checker); 20:40-20:56 pantry strips (merged 22:00); next: drawing-file ignore list (Gate 0)",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-01T18:59:34Z",
+  "last_run": "2026-11-01T22:59:42Z",
   "result": "ok",
-  "working_on": "19:00-19:15 held concrete split by blocker (merged 19:48); 17:01-18:29 stair tread correction into the candidate (merged 19:44, V3.0.39); next: ground-beam section correction",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "23:01-23:59 held stair-room skirting faces (READY, waiting for the checker); 21:01-21:44 ground-beam section package (merged 22:30, candidate V3.0.40); next: dining strip + ceiling into the candidate",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-01T19:49:25Z",
+  "last_run": "2026-11-01T23:50:00Z",
   "result": "ok",
-  "working_on": "19:50-19:57 merged slab-under-stair and stair-room skirting; 18:51-19:49 merged the tread correction package (V3.0.39) and the held-concrete split; 17:51-18:35 merged ST-02 straight part and wet pantry skirting; nothing waiting",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "23:50-23:58 merged the lift-shaft slab cell; 21:50-22:33 merged the ground-beam package (V3.0.40) and two research rows; next: the two READY pieces, then Gate 0 rows, then the concrete verification stream",
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-01T20:17:00Z"
+  "as_of": "2026-11-02T00:20:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -68,7 +68,7 @@
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
   "last_run": "2026-11-01T12:55:19Z",
   "result": "ok",
-  "working_on": "Refreshed 1 Nov 12:55 (scheduler SUCCEEDED); next 2 Nov 00:54 UTC",
-  "as_of": "2026-11-01T20:17:00Z"
+  "working_on": "Refreshed 1 Nov 12:55 UTC (scheduler SUCCEEDED); next 2 Nov 00:54 UTC",
+  "as_of": "2026-11-02T00:20:00Z"
  }
 ]
