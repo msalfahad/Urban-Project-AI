@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 692 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 693 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4356 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4359 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 46 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2034 | pytest suites, one folder per round. |
+| `tests/` | 2036 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (339 modules)
+## `engine/source/` (340 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -491,7 +491,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `concrete_overlap_ownership.py` | 474 | MEDIUM | 3 | CONCRETE_OVERLAP_OWNERSHIP_V1 (T-189): concrete at intersecting structural elements is measured EXACTLY ONCE. |
 | `concrete_strip_guard.py` | 506 | MEDIUM | 4 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
 | `conservation.py` | 72 | MEDIUM | 2 | Source conservation (R8.2 §21) — nothing silently disappears. |
-| `continuous_beams.py` | 496 | CRITICAL | 5 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
+| `continuous_beams.py` | 496 | CRITICAL | 6 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
 | `corner_bead.py` | 93 | MEDIUM | 1 | CORNER BEAD GEOMETRY (V3b) - steel plaster angle beads as segments at exposed plaster edges. |
 | `cover_authority.py` | 232 | CRITICAL | 5 | COVER AUTHORITY - what a concrete-cover rule lets a bar length, count or mass claim (generic, stdlib only). |
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
@@ -618,7 +618,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `raster_evidence.py` | 118 | MEDIUM | 1 | RASTER EVIDENCE (V3b) - scale calibration, measurement grades and cross-sheet checks for raster drawings. |
 | `realised.py` | 130 | HIGH | 5 | Neutral REALISED geometry records — the physical output schema shared by K1 and K2. |
 | `rebar_boq_sections.py` | 67 | MEDIUM | 1 | Structural BOQ reinforcement presentation: two visibly separate sections (generic, report layer). |
-| `rebar_laps_v1.py` | 404 | MEDIUM | 4 | REBAR LAPS V1 (task T-273) - lap splices of reinforcement bar groups as their own rows, from the lap authority that |
+| `rebar_lap_rule_v2.py` | 166 | MEDIUM | 1 | REBAR LAP RULE V2 (task T-459, owner directive 2026-11-02 C4) - the lap LENGTH of a bar group by element class and |
+| `rebar_laps_v1.py` | 404 | MEDIUM | 6 | REBAR LAPS V1 (task T-273) - lap splices of reinforcement bar groups as their own rows, from the lap authority that |
 | `rebar_model.py` | 479 | CRITICAL | 7 | REBAR_MODEL_V1 - a generic, typed reinforcement model: source definition -> occurrence -> bar geometry -> count -> |
 | `rebar_provenance.py` | 143 | CRITICAL | 4 | Generic accurate-rebar provenance contract: one contract for every element family (no second system). |
 | `rebar_sanity_qa.py` | 34 | MEDIUM | 2 | kg/m3 QA helpers - sanity layer, not the accurate reinforcement implementation (generic). |
@@ -1381,6 +1382,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t450_project_config/` | 1 |
 | `tests/t456_finish_area_units/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
+| `tests/t459_lap_rule/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
 | `tests/t463_git_history/` | 1 |
 | `tests/t467_released_freeze/` | 1 |
@@ -1835,6 +1837,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t449/` | 5 |
 | `research/agents_t456/` | 3 |
 | `research/agents_t458/` | 2 |
+| `research/agents_t459/` | 3 |
 | `research/agents_t463/` | 3 |
 | `research/agents_t469/` | 11 |
 | `research/alsenan_arch_truth_05/` | 28 |
