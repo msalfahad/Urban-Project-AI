@@ -1,0 +1,33 @@
+{
+ "schema": "URBAN_CHECKER_REFERENCES_V1",
+ "purpose": "owner decision 2026-11-02 (MISSION 'Owner decisions 2026-11-02', VERIFICATION): the Checker's own drawing-based reference per BOQ line, re-used when the candidate moves; never the engine output",
+ "references": [
+  {
+   "line": "CONC.SLAB",
+   "item_code": "STR.CONC.SLAB",
+   "unit": "m3",
+   "project_id": "development-villa-t131",
+   "value": 60.2804,
+   "components": {
+    "GF": 33.0695,
+    "1F": 19.7566,
+    "2F": 7.4543
+   },
+   "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179 (structural revision UNCONFIRMED, D-61)",
+   "entity_refs": "roof-slab plans GF / 1F / 2F: 62 panels between beam faces with their printed slab tags; 13 non-panel faces NOT_APPLICABLE_WITH_EVIDENCE (T-234 / T-247); element ids = the 75 line ids of verdict V2-0c71eb8f0ae7dae0",
+   "formula": "sum over panels of (net panel area between beam faces x printed slab thickness); beam / slab intersection counted once in the beam line",
+   "measured": "Checker own re-measure, Gate B T-146 + T-247, 2026-10-24 09:38 UTC; carried unchanged through V2 verdicts V2-696f64b8e4a69952 .. V2-789aa29fd4c2b026",
+   "status": "VERIFIED (WHOLE line)",
+   "regression": [
+    {
+     "candidate": "ARCH_TAKEOFF_V3.0.40",
+     "boq_lines_sha256_8": "aa6aa927",
+     "engine_qty": 60.280158,
+     "diff_pct": -0.0004,
+     "check": "own reproduction 2026-11-02 01:39 UTC from the Drive copies; the 75 own lines byte-identical (line_content_sha256 4c5e3f6b); STR.CONC.SLAB group = 75 lines, none outside the verdict; re-bound as V2-0c71eb8f0ae7dae0",
+     "run": "Verifier session_01E6cPndhQhT48iNRRPT9xm8"
+    }
+   ]
+  }
+ ]
+}
