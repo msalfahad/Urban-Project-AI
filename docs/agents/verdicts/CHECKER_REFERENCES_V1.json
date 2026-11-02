@@ -28,6 +28,48 @@
      "run": "Verifier session_01E6cPndhQhT48iNRRPT9xm8"
     }
    ]
+  },
+  {
+   "line": "CONC.FOOTING",
+   "item_code": "STR.CONC.FOOTING",
+   "unit": "m3",
+   "project_id": "development-villa-t131",
+   "value": 64.304,
+   "value_scope": "25 valued outlines; the 26th (outline 1B1B, tags F10 + F) HELD 2.176 .. 2.275, never 0",
+   "components": {
+    "F2 x2": 2.261,
+    "F3 x2": 1.344,
+    "F4 x2": 3.52,
+    "F5 x2": 4.032,
+    "F x4": 0.864,
+    "F6": 2.86,
+    "F8": 7.2,
+    "F9": 5.049,
+    "F11": 2.625,
+    "F12": 9.856,
+    "F13": 5.16,
+    "F14": 6.27,
+    "F15": 0.72,
+    "FF": 11.385,
+    "FN x3 full": 0.9,
+    "FN notched (0.86 m2)": 0.258,
+    "F10+F (HELD)": "2.176 .. 2.275"
+   },
+   "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179 (structural revision UNCONFIRMED, D-61)",
+   "entity_refs": "foundation-plan frame: S-FOOTINGS polylines / lines and 12 'F' inserts on S-DIM; schedule of footings (17 rows, F7 unused); tags on S-TEXT (C#/F#, CN/FN); element ids = the 26 STR.CONC.FOOTING line ids of V3.0.40",
+   "formula": "per outline: schedule L x W x H of its bound tag (the drawing prints 'not to scale, work with stated dimensions'); drawn outline only where the drawing itself cuts the footing (FN notched by F9: drawn 0.86 m2 x 0.30, overlap 0.140 m2 owned once by F9, D-32 ruling)",
+   "measured": "Checker own re-measure 2026-11-02 02:55 UTC (Verifier session_01E6cPnebn8gRMjFDXugKGFJ): schedule rows read from the drawing text, outlines polygonised from S-FOOTINGS + F inserts with own script (not the engine), tag-in-outline binding, every drawn size = its schedule size; F6 / F11 outlines open where the inclined strap enters, completed as rectangles 2.2 x 2.6 / 3.5 x 1.5, disjoint; 3 further FN squares in the adjacent frame are an exact 38.724 m x-translation of the 3 full FN squares (same y) = the same bases drawn again on the neighbouring plan, excluded (as T-233); F10 + F range arithmetic re-done (rows 1.960 + 0.216 = 2.176; outline 4.55 m2 x 0.50 = 2.275), the 3.25 x 1.40 outline reused as a source reference from merged verdict T-233 2ecb5bf0, not re-measured",
+   "status": "PARTIALLY VERIFIED (25 / 26 components; blocker: outline 1B1B F10 + F, Q-31 C, consultant item S3 / P-3)",
+   "regression": [
+    {
+     "candidate": "ARCH_TAKEOFF_V3.0.40",
+     "boq_lines_sha256_8": "aa6aa927",
+     "engine_qty": 64.304,
+     "diff_pct": 0.0,
+     "check": "own reproduction 2026-11-02 02:54 UTC from the Drive copies (P7757.dxf ab54dd55, 'ST7757 dxf.dxf' 9f9d1179); STR.CONC.FOOTING group = 26 lines (line_content sha256 of the sorted group 9541d8ab), 25 valued 64.304 = own 64.304 line by line (0.0 %), 1 BOUNDED_EXPOSURE 2.176 .. 2.275 = own",
+     "run": "Verifier session_01E6cPnebn8gRMjFDXugKGFJ"
+    }
+   ]
   }
  ]
 }
