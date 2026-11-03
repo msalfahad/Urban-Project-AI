@@ -1,0 +1,257 @@
+{
+ "task": "T-443",
+ "method": "ARCH_TAKEOFF_V3.0.47",
+ "extends": "ARCH_TAKEOFF_V3.0.46",
+ "base_sha256": "35d70129d8bf59b4c0f874a11edeacca26f45a51001b03a4d6ca57e3942546a4",
+ "candidate_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
+ "lines": {
+  "base": 4867,
+  "v3_0_47": 4874,
+  "added": 7,
+  "replaced": 2,
+  "outside_identical": 4865
+ },
+ "stair_rooms": {
+  "held_children": 3,
+  "parents_held": 1,
+  "parents_na": 1,
+  "parts": 4,
+  "parts_lm": 13.55
+ },
+ "totals_moved_by_code": {
+  "FIN.SKIRTING|lm": {
+   "base": {
+    "blocked_lines": 3,
+    "bounded_lines": 4,
+    "held_high": 15.730915,
+    "held_low": 0.0,
+    "lines": 17,
+    "released": 189.818752
+   },
+   "v3_0_47": {
+    "blocked_lines": 5,
+    "bounded_lines": 4,
+    "held_high": 15.730915,
+    "held_low": 0.0,
+    "lines": 23,
+    "released": 203.368752
+   }
+  }
+ },
+ "parents": {
+  "L-47fa825d197d32754240": {
+   "action": "PARENT_HELD",
+   "children": [
+    "L-af8221bd2d33bde80c67",
+    "L-ca1bee789deafaf045c1",
+    "L-4e7d3bef5e6ac89252ff",
+    "L-6ff876aefb5a3631565c",
+    "L-d589222eace010fefa69"
+   ],
+   "faces_lm": 6.05,
+   "residual_lm": 0.0,
+   "run_lm": 11.1
+  },
+  "L-b8d4a7f04277deb1b0b0": {
+   "action": "PARENT_NA",
+   "children": [
+    "L-9ff582c99c4d8e36c9a7",
+    "L-dff4f49f47f341682fb3"
+   ],
+   "faces_lm": 7.5,
+   "residual_lm": 0.0,
+   "run_lm": 16.9
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-af8221bd2d33bde80c67",
+   "element_id": "SKIRT-T443:GF-ST-HALL",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "SPLIT_PART",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 4.65
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-ca1bee789deafaf045c1",
+   "element_id": "SKIRT-T443:GF-ST-LOBBY030",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "SPLIT_PART",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 1.4
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-4e7d3bef5e6ac89252ff",
+   "element_id": "SKIRT-T443:GF-ST-HALL:DIVIDER-BAND",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "SPLIT_HELD",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD"
+  },
+  {
+   "line_id": "L-6ff876aefb5a3631565c",
+   "element_id": "SKIRT-T443:GF-ST-HALL:OP-020-JAMBS",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "SPLIT_HELD",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD"
+  },
+  {
+   "line_id": "L-d589222eace010fefa69",
+   "element_id": "SKIRT-T443:GF-ST-LOBBY030:WEST-FACE",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "SPLIT_HELD",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD"
+  },
+  {
+   "line_id": "L-47fa825d197d32754240",
+   "element_id": "GF-R31F8AE:stair hall skirting",
+   "floor": "GF",
+   "room_id": "GF-R31F8AE",
+   "action": "PARENT_HELD",
+   "change": "CHANGE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD"
+  },
+  {
+   "line_id": "L-9ff582c99c4d8e36c9a7",
+   "element_id": "SKIRT-T443:2F-ST-LOBBY",
+   "floor": "2F",
+   "room_id": "2F-R4D1B62",
+   "action": "SPLIT_PART",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 3.35
+   },
+   "evidence_status": "VERIFIED"
+  },
+  {
+   "line_id": "L-dff4f49f47f341682fb3",
+   "element_id": "SKIRT-T443:2F-ST-ARRIVAL",
+   "floor": "2F",
+   "room_id": "2F-R4D1B62",
+   "action": "SPLIT_PART",
+   "change": "ADD",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 4.15
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-b8d4a7f04277deb1b0b0",
+   "element_id": "2F-R4D1B62:stair hall skirting",
+   "floor": "2F",
+   "room_id": "2F-R4D1B62",
+   "action": "PARENT_NA",
+   "change": "CHANGE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "evidence_status": "NOT_APPLICABLE"
+  }
+ ]
+}
