@@ -33,8 +33,7 @@ PARENT_2F = "L-b8d4a7f04277deb1b0b0"       # FIN.SKIRTING 2F-R4D1B62, BLOCKED_RF
 FLOOR = {"GF-ST-HALL": "L-f53d498668da3dc7c228",      # FIN.FLOOR.FINISH_HELD 4.805 m2 (T-421, V3.0.38)
          "GF-ST-LOBBY030": "L-b4441a1b55eda53d98ea",  # FIN.FLOOR.FINISH_HELD 1.3225 m2
          "2F-ST-LOBBY": "L-9bd25c0cec9da3a8f4d2",     # FIN.FLOOR.PORCELAIN 2.200 m2 (Q-70 A)
-         "2F-ST-ARRIVAL": None}                       # the 2F landings line (FIN.MARBLE.LANDING), bound by build()
-LANDINGS_2F = "L-5d2be30d"                            # T-421 s.4: FIN.MARBLE.LANDING 2F-R4D1B62:landings (prefix)
+         "2F-ST-ARRIVAL": "L-5d2be30dd8d2ffeacc42"}   # FIN.MARBLE.LANDING 2F-R4D1B62:landings, HELD 0 .. 9.225 (T-421)
 
 # the row's word, per part (T-443 row; T-441 s.7 lane I proposal)
 PART_STATUS = {
@@ -95,11 +94,10 @@ def _part(p):
     return q
 
 
-def build(project_id, landings_2f=None, owner_lines=None):
-    """-> the URBAN_V3046_INPUTS_V1 doc. landings_2f: the full id of the 2F FIN.MARBLE.LANDING line (prefix
-    L-5d2be30d); owner_lines: {'B7-07': id, 'B7-08': id} stair skirting lines named beside the flight faces."""
+def build(project_id, owner_lines=None):
+    """-> the URBAN_V3046_INPUTS_V1 doc. owner_lines: {'GF': id} the stair skirting line named beside the GF flight
+    faces (optional; the owner is named by its T-410 stretches either way)."""
     parts = {p["id"]: p for p in T441.parts()}
-    FLOOR["2F-ST-ARRIVAL"] = landings_2f
     ol = owner_lines or {}
     gf = {"parent": PARENT_GF, "room": "GF-R31F8AE", "floor": "GF", "expect": {"evidence_state": "BLOCKED_RFI"},
           "engine_run_lm": 11.1, "source_tasks": TASKS,
