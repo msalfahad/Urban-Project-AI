@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 700 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 701 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4436 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4439 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 50 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2083 | pytest suites, one folder per round. |
+| `tests/` | 2085 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (347 modules)
+## `engine/source/` (348 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -485,7 +485,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_concrete_geometry.py` | 82 | MEDIUM | 1 | COLUMN_CONCRETE_GEOMETRY - column concrete independent of column reinforcement (generic). |
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `column_schedule_text_rows.py` | 485 | MEDIUM | 2 | SCHEDULE TEXT ROWS (V1) - schedule rows drawn as plain TEXT / MTEXT inside a block-attribute table, and struck-out |
-| `company_rulebook_v1.py` | 357 | MEDIUM | 1 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
+| `company_rulebook_v1.py` | 357 | MEDIUM | 3 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
 | `concrete_basis_rules_v1.py` | 220 | MEDIUM | 1 | CONCRETE_BASIS_RULES_V1: drawing-derived concrete basis rules (A1 class A, T-449 round 1 = concrete). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
@@ -536,8 +536,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_height.py` | 100 | MEDIUM | 4 | ARCHITECTURAL FINISH HEIGHT ENGINE (V1) - blockwork, plaster, paint and wall-tile heights are four separate |
 | `finish_height_v2.py` | 316 | MEDIUM | 2 | ARCHITECTURAL FINISH HEIGHT V2 (T-081) - plaster, paint and wall-tile heights of ONE room from printed values and |
 | `finish_height_v3.py` | 65 | MEDIUM | 1 | FINISH HEIGHT V3 - wall-face termination split by beam coverage (generic fix for blocker #16). |
-| `finish_materials_table.py` | 292 | MEDIUM | 3 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
-| `finish_materials_table_v2.py` | 105 | MEDIUM | 1 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
+| `finish_materials_table.py` | 292 | MEDIUM | 5 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
+| `finish_materials_table_v2.py` | 105 | MEDIUM | 3 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
+| `finish_materials_table_v3.py` | 194 | MEDIUM | 1 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
@@ -1396,6 +1397,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t449_round3_blockwork/` | 2 |
 | `tests/t450_project_config/` | 1 |
 | `tests/t456_finish_area_units/` | 1 |
+| `tests/t457_wet_wall_fixing/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
 | `tests/t459_lap_rule/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
@@ -1866,6 +1868,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t447/` | 6 |
 | `research/agents_t449/` | 14 |
 | `research/agents_t456/` | 3 |
+| `research/agents_t457/` | 3 |
 | `research/agents_t458/` | 2 |
 | `research/agents_t459/` | 3 |
 | `research/agents_t463/` | 3 |
