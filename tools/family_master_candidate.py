@@ -30,6 +30,8 @@ Rules checked (every one refuses, none repairs):
     package; the two package-backed states name at least one package of their own; IN_CANDIDATE_BASE_LINES and
     NOT_IN_CANDIDATE name none; a named package must be at or below the candidate version (no future package);
   - 'in_v3_0_candidate' agrees with the state (yes for the first three, no for NOT_IN_CANDIDATE);
+  - (r4, T-350 r4 / F-C-T485-1) from registry version 1.45.0 a family that owns no item code says 'N/A' (no line
+    census can attribute a line to it, so it never says yes); earlier versions are checked as they were written;
   - HELD_IN_CANDIDATE says released_in_candidate "none"; INTEGRATED_IN_CANDIDATE_AND_TESTED names what changed and
     what stays open;
   - (r2, from the T-203 r1 rejection) a package may say which families it took to "no quantity released" ('holds')
@@ -70,6 +72,14 @@ TASK = re.compile(r"^T-\d{3}[a-z]?$")
 VERDICT = re.compile(r"^MERGED\b.*\b(?:verifier|Verifier|checker|Checker)\b.*\b20\d\d-\d\d-\d\d \d\d:\d\d UTC\b")
 VERSION = re.compile(r"^ARCH_TAKEOFF_V3\.0(?:\.(\d+))?$")
 MODULE = re.compile(r"^arch_v30(\d*)\.py$")
+
+
+NA_FROM = (1, 45, 0)                         # r4 (T-350 r4, Checker F-C-T485-1): first registry with the N/A rule
+
+
+def _registry_key(v):
+    m = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", str(v or ""))
+    return tuple(int(x) for x in m.groups()) if m else (0, 0, 0)
 
 
 def version_key(v):
@@ -278,6 +288,9 @@ def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
 
     counts = {s: 0 for s in STATES}
     yes_no = {"yes": 0, "no": 0}
+    na_rule = _registry_key(doc.get("version")) >= NA_FROM
+    if na_rule:
+        yes_no["N/A"] = 0
     for f in doc.get("families", []):
         code = f.get("code", "?")
         c = f.get("candidate")
@@ -308,6 +321,8 @@ def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
         if s not in PACKAGE_BACKED and named:
             bad.append(f"{code}: state {s} must name no package of its own")
         want = "no" if s == "NOT_IN_CANDIDATE" else "yes"
+        if na_rule and not f.get("item_codes"):
+            want = "N/A"                    # r4: no item code, no census: never 'yes'
         if f.get("in_v3_0_candidate") != want:
             bad.append(f"{code}: in_v3_0_candidate {f.get('in_v3_0_candidate')!r} disagrees with state {s}")
         else:

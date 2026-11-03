@@ -3207,12 +3207,12 @@ def cmd_arch(a):
     V3044 = "ARCH_TAKEOFF_V3.0.44"
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
-    V3045, V3047 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47"  # T-443: V3.0.47 named on this line so the hub stays line-stable
-    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46") or a.method == V3047  # T-478 / T-419 / T-443 (see below)
-    v3044 = a.method in (V3044, V3045, V3046, V3047)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
-    v3043 = a.method in (V3043, V3044, V3045, V3046, V3047)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
-    v3042 = a.method in (V3042, V3043, V3044, V3045, V3046, V3047)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
-    v3041 = a.method in (V3041, V3042, V3043, V3044, V3045, V3046, V3047)                 # T-431: the V3.0.40 run, then its V3.0.41 zone-extent floor piece
+    V3045, V3047, V3048 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47", "ARCH_TAKEOFF_V3.0.48"  # T-443 / T-350 r4: named on this line so the hub stays line-stable
+    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46") or a.method in (V3047, V3048)  # T-478 / T-419 / T-443 / T-350 r4 (see below)
+    v3044 = a.method in (V3044, V3045, V3046, V3047, V3048)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
+    v3043 = a.method in (V3043, V3044, V3045, V3046, V3047, V3048)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
+    v3042 = a.method in (V3042, V3043, V3044, V3045, V3046, V3047, V3048)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
+    v3041 = a.method in (V3041, V3042, V3043, V3044, V3045, V3046, V3047, V3048)                 # T-431: the V3.0.40 run, then its V3.0.41 zone-extent floor piece
     v3040 = a.method in (V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)                 # T-430: the V3.0.39 run, then its V3.0.40 ground-beam run sections
     v3039 = a.method in (V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)                 # T-429: the V3.0.38 run, then its V3.0.39 tread / step binding
     v3038 = a.method in (V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)                 # T-421: the V3.0.37 run, then its V3.0.38 stair-room floors / lift marble
@@ -3252,15 +3252,15 @@ def cmd_arch(a):
     v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)  # T-167: the V3.0.3 run, then V3.0.4
     v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)  # T-151: the V3.0.2 run, then V3.0.3
     v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047)  # T-131: runs V2.13
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047, V3048)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046, V3047, V3048)  # T-131: runs V2.13
     # T-419: ARCH_TAKEOFF_V3.0.46 = the SAME candidate (engine.source.arch_v3046): a V3.0.45 run (its files unchanged) +
     # the Checker-verified lift tie beam / house below-ground masonry pieces (URBAN_V3046_INPUTS_V1); named here for the
     # same reason as V3.0.41. Its name shares the V3.0.45 line above so the hub's earlier line numbers stay put.
     v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     # T-443: ARCH_TAKEOFF_V3.0.47 = the SAME candidate (engine.source.arch_v3047): a V3.0.46 run (its files unchanged) +
     # the Checker-verified stair-room skirting split (URBAN_V3047_INPUTS_V1); named on the V3.0.45 line above (line-stable hub).
-    v3047 = a.method == V3047                 # T-443: the V3.0.46 run, then its V3.0.47 stair-room skirting split
+    v3047 = a.method in (V3047, V3048)        # T-443: the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first)
     v3046 = v3046 or v3047                    # T-443: a V3.0.47 run is a V3.0.46 run first
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
@@ -3299,7 +3299,7 @@ def cmd_arch(a):
     if getattr(a, "v3018_inputs", None) and not v3018:
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
     if getattr(a, "v3047_inputs", None) and not v3047:
-        raise SystemExit("--v3047-inputs needs --method ARCH_TAKEOFF_V3.0.47")
+        raise SystemExit("--v3047-inputs needs --method ARCH_TAKEOFF_V3.0.47 or later")
     if v3047 and not getattr(a, "v3047_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3046_inputs", None) and not v3046:
@@ -4244,6 +4244,20 @@ def cmd_arch(a):
                                                                                                                                                                             svgs += names47
                                                                                                                                                                             v30rec = dict(v30rec, method=V3047, extends=V3046,
                                                                                                                                                                                           identity=ident47, v3_0_46_identity=ident46)
+                                                                                                                                                                            if a.method == V3048:
+                                                                                                                                                                                # T-350 r4: ARCH_TAKEOFF_V3.0.48 (calculated earthworks) beside the V3_0_47_*
+                                                                                                                                                                                from engine.source import arch_v3048 as A3048
+                                                                                                                                                                                if not getattr(a, "v3048_inputs", None):
+                                                                                                                                                                                    raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the Checker-merged earthworks quantities)")
+                                                                                                                                                                                l3047 = A3047.integrate(l3046, ch_v47, fl24)[0]
+                                                                                                                                                                                inp48 = A3048.load_inputs(json.loads(Path(
+                                                                                                                                                                                    a.v3048_inputs).read_text(encoding="utf-8")), l3047[0]["project"]["project_id"])
+                                                                                                                                                                                ch_v48, log_v48 = A3048.changes_for(inp48, l3047)
+                                                                                                                                                                                names48, ident48, _led48 = A3048.write(
+                                                                                                                                                                                    out, l3047, ch_v48, log_v48, released, fl24)
+                                                                                                                                                                                svgs += names48
+                                                                                                                                                                                v30rec = dict(v30rec, method=V3048, extends=V3047,
+                                                                                                                                                                                              identity=ident48, v3_0_47_identity=ident47)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4399,7 +4413,8 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.44",) +   # T-422 (the V3.0.44 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.45",) +   # T-478 (the V3.0.45 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.46",) +   # T-419 (the V3.0.46 candidate; named in the hub, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.47",),   # T-443 (the V3.0.47 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.47",) +   # T-443 (the V3.0.47 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.48",),   # T-350 r4 (the V3.0.48 candidate; named in the hub, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4460,6 +4475,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
+    p.add_argument("--v3048-inputs", help="ARCH_TAKEOFF_V3.0.48 (URBAN_V3048_INPUTS_V1): the Checker-merged T-350 r2 "
+                   "/ T-484 earthworks quantities: HELD BLANK zone lines valued or ranged with their evidence status, "
+                   "held parts by name beside, backfill gap zones added HELD BLANK; every other V3.0.47 line "
+                   "byte-identical")
     p.add_argument("--v3047-inputs", help="ARCH_TAKEOFF_V3.0.47 (URBAN_V3047_INPUTS_V1): the Checker-verified T-441 "
                    "stair-room face tables: a BLOCKED stair-room skirting line split into one child per floor part "
                    "(openings by id, a lift opening whole with no jambs), held faces their own HELD BLANK lines, the "
