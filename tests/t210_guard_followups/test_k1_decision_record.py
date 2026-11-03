@@ -45,7 +45,7 @@ def test_by_design_is_read_from_the_k1_test_itself():
               "ground_slab_recovery.py": {"shapely"}, "region_recovery.py": {"shapely"}}
     declared = {r["module"].rsplit("/", 1)[1]: set(r["packages"]) for r in K.load_record()["records"]
                 if r["decision"] == "ALLOWED_OUTSIDE_K1"}               # T-257: one entry per ALLOWED record, exactly
-    assert len(declared) == 19                                          # T-465 r2: + opening_height_pdf_v2 (pypdf)
+    assert len(declared) == 20                                          # T-465 r2: + opening_height_pdf_v2 (pypdf); T-478 r3: + arch_v3045 (shapely)
     assert by_design == {**r8_era, **declared}
     assert "engine/source/cad/kernel.py" in core and "engine/source/cad/kernel_ocs.py" in core
 
