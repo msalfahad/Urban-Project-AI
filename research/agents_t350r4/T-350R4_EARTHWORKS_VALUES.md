@@ -67,3 +67,13 @@ No freelancer earthworks line and no released line: no comparison (UNRESOLVED fo
 2026-11-03 | two merged readings of one cut differed only by the plot-line clip | carry the envelope of the merged
 readings with the clip named, and state the closure arithmetic in the module (excavation - displacement at both ends) |
 T-350 r4.
+
+## 8. Development-villa run (stage 2, 2026-11-03 22:19 UTC)
+
+`research/agents_t350r4/v3048_run.py` on the Drive copies (architectural DXF from P7757_DXF_COMPRESSED.zip; structural
+'ST7757 dxf.dxf' sha 9f9d1179), T-167 base run fresh on the same drawings: V3_0_47_BOQ_LINES.json = **e86a53a8** (the
+candidate of record, asserted) -> V3_0_48_BOQ_LINES.json **33a81c53**; 4,874 -> 4,876 lines; 5 CHANGED, 2 ADDED,
+4,869 byte-identical (outside rows sha 669b0a0b). Totals moved only in STR.EARTH.EXCAVATION (valued 0 -> 225.941333 =
+208.164757 + 17.776576; held 8.467769 .. 9.824584 = trench + F10F; blocked 12 -> 8) and STR.EARTH.BACKFILL (held
+119.963335 .. 128.643547; blocked 5 -> 6, lines 5 -> 7); disposal unchanged. Against released V2.9: every earthworks
+line NOT_IN_RELEASED (no released line moves). Summary: summary_t350r4.json (ids, codes, states, quantities only).

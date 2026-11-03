@@ -1,0 +1,350 @@
+{
+ "task": "T-350 r4",
+ "method": "ARCH_TAKEOFF_V3.0.48",
+ "extends": "ARCH_TAKEOFF_V3.0.47",
+ "base_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
+ "candidate_sha256": "33a81c5387dc5c306086867da32415892e164a60a6a42893dc040e2d64f963ce",
+ "lines": {
+  "base": 4874,
+  "v3_0_48": 4876,
+  "added": 2,
+  "replaced": 5,
+  "outside_identical": 4869,
+  "outside_rows_sha256": "669b0a0baf31a7afbdf9a172df62be51dd4a607047486cc9ea9729c5c4a1ab7f"
+ },
+ "diff": {
+  "vs_base": {
+   "ADDED": 2,
+   "CHANGED": 5,
+   "SAME": 4869
+  },
+  "vs_released_v2_9": {
+   "NOT_IN_RELEASED": 3286,
+   "QUANTITY_DIFFERS": 991,
+   "SAME_QUANTITY": 599
+  }
+ },
+ "earthworks": {
+  "added_held": 2,
+  "by_family": {
+   "B1-02": 12,
+   "B1-03": 7,
+   "B1-04": 1
+  },
+  "held_blank": 13,
+  "lines": 20,
+  "range_high_m3": 138.468131,
+  "range_low_m3": 128.431104,
+  "ranged": 3,
+  "valued": 2,
+  "valued_m3": 225.941333
+ },
+ "totals_moved_by_code": {
+  "STR.EARTH.BACKFILL|m3": {
+   "base": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 5,
+    "released": 0.0
+   },
+   "v3_0_48": {
+    "blocked_lines": 6,
+    "bounded_lines": 1,
+    "held_high": 128.643547,
+    "held_low": 119.963335,
+    "lines": 7,
+    "released": 0.0
+   }
+  },
+  "STR.EARTH.EXCAVATION|m3": {
+   "base": {
+    "blocked_lines": 12,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 12,
+    "released": 0.0
+   },
+   "v3_0_48": {
+    "blocked_lines": 8,
+    "bounded_lines": 2,
+    "held_high": 9.824584,
+    "held_low": 8.467769,
+    "lines": 12,
+    "released": 225.941333
+   }
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-PITS-24",
+   "action": "VALUE",
+   "change": "CHANGE",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 208.164757
+   },
+   "evidence_status": "ESTIMATED",
+   "still_held": [
+    "STR.EARTH.EXCAVATION Z1-PITS-24 (24 neat footing pits): working space HELD (not printed, no documented method; pits vs bulk dig OQ-13); beyond the plot line 3.1563 HELD (S06 / D-14); pit chains under the pool formati"
+   ]
+  },
+  {
+   "line_id": "L-0a49a302b7926f86a37f",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-POOL",
+   "action": "VALUE",
+   "change": "CHANGE",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 17.776576
+   },
+   "evidence_status": "DRAWING-CONFIRMED",
+   "still_held": [
+    "STR.EARTH.EXCAVATION Z1-POOL (pool envelope to the printed -1.50): blinding projection beyond the membrane line, working space, envelope beyond the plot line 0.5486 HELD"
+   ]
+  },
+  {
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-EXT-GB-MAIN",
+   "action": "RANGE",
+   "change": "CHANGE",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": 1.432834,
+    "low": 1.203269,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "still_held": [
+    "STR.EARTH.EXCAVATION Z1-TRENCH-EXT-GB-MAIN (17 runs, cut for the blinding only): plot-line clip S06 / D-14 (0.229565 m3); working space HELD"
+   ]
+  },
+  {
+   "line_id": "L-ce0132c7212e42e306a5",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-PIT-F10F",
+   "action": "RANGE",
+   "change": "CHANGE",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": 8.39175,
+    "low": 7.2645,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "ESTIMATED",
+   "still_held": [
+    "STR.EARTH.EXCAVATION Z1-PIT-F10F (open outline 1B1B): beyond the plot line per scenario HELD; working space"
+   ]
+  },
+  {
+   "line_id": "L-a6af7c610a8adce59df3",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PITS-24",
+   "action": "RANGE",
+   "change": "CHANGE",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": 128.643547,
+    "low": 119.963335,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "evidence_status": "PARTIALLY VERIFIED 6 / 8",
+   "still_held": [
+    "STR.EARTH.BACKFILL Z1-PITS-24: C8 mark conflict (drawing conflict, stays): 0.03 m3; D-33 / D-35 beam sections (designer items, stay): 8.650212 m3; working space HELD; pits beyond the plot lin"
+   ]
+  },
+  {
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PIT-F10F",
+   "action": "ADD_HELD",
+   "change": "ADD",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "still_held": [
+    "STR.EARTH.BACKFILL Z1-PIT-F10F (open outline 1B1B): S02 outline reading (three scenarios); necks C10 / C (Q-31 C); SB1 in F10 + F; the F10 + F backfill not restated on the T-484 union"
+   ]
+  },
+  {
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PIT-FF",
+   "action": "ADD_HELD",
+   "change": "ADD",
+   "before_v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "evidence_status": "HELD",
+   "still_held": [
+    "STR.EARTH.BACKFILL Z1-PIT-FF (lift raft and pit): lift pit depth"
+   ]
+  }
+ ],
+ "line_diff_vs_v3_0_47": [
+  {
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-PITS-24",
+   "vs_base": "CHANGED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "BLOCKED_RFI",
+   "v3_0_48": "208.165"
+  },
+  {
+   "line_id": "L-ce0132c7212e42e306a5",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-PIT-F10F",
+   "vs_base": "CHANGED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "BLOCKED_RFI",
+   "v3_0_48": "7.2645..8.39175"
+  },
+  {
+   "line_id": "L-0a49a302b7926f86a37f",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-POOL",
+   "vs_base": "CHANGED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "BLOCKED_RFI",
+   "v3_0_48": "17.7766"
+  },
+  {
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "item_code": "STR.EARTH.EXCAVATION",
+   "element_id": "EW-T350:B1-02:Z1-TRENCH-EXT-GB-MAIN",
+   "vs_base": "CHANGED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "BLOCKED_RFI",
+   "v3_0_48": "1.20327..1.43283"
+  },
+  {
+   "line_id": "L-a6af7c610a8adce59df3",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PITS-24",
+   "vs_base": "CHANGED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "BLOCKED_RFI",
+   "v3_0_48": "119.963..128.644"
+  },
+  {
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PIT-F10F",
+   "vs_base": "ADDED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "",
+   "v3_0_48": "BLOCKED_RFI"
+  },
+  {
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "item_code": "STR.EARTH.BACKFILL",
+   "element_id": "EW-T350:B1-03:Z1-PIT-FF",
+   "vs_base": "ADDED",
+   "vs_released_v2_9": "NOT_IN_RELEASED",
+   "base": "",
+   "v3_0_48": "BLOCKED_RFI"
+  }
+ ]
+}
