@@ -1,0 +1,917 @@
+{
+ "computed_zones": {
+  "backfill_compacted_m3": [
+   115.55392,
+   128.622353
+  ],
+  "displacement_below_EG_m3": [
+   98.710702,
+   111.805415
+  ],
+  "excavation_insitu_m3": [
+   227.333055,
+   227.359335
+  ],
+  "note": "pits (S01) + pool (printed) + main exterior GB trench outside the pit plan (its run ends over the pits are inside the pit excavation); every other zone HELD by name"
+ },
+ "eg_m": 0.0,
+ "f10f": {
+  "F10 + F rows": {
+   "backfill_before_necks_m3": [
+    5.7417,
+    6.2912
+   ],
+   "beyond_plot_excavation_m3": [
+    0.501,
+    1.0855
+   ],
+   "excavation_in_plot_m3": [
+    8.7675,
+    9.352
+   ],
+   "footing_m3": 2.176,
+   "in_plot_plan_m2": [
+    5.25,
+    5.6
+   ],
+   "underlay_m3": 0.3248
+  },
+  "F10 alone": {
+   "backfill_before_necks_m3": [
+    4.5951,
+    4.8306
+   ],
+   "beyond_plot_excavation_m3": [
+    0.501,
+    0.7515
+   ],
+   "excavation_in_plot_m3": [
+    7.2645,
+    7.515
+   ],
+   "footing_m3": 1.96,
+   "in_plot_plan_m2": [
+    4.35,
+    4.5
+   ],
+   "underlay_m3": 0.2744
+  },
+  "drawn outline": {
+   "backfill_before_necks_m3": [
+    5.29575,
+    5.29575
+   ],
+   "beyond_plot_excavation_m3": [
+    0.82665,
+    0.82665
+   ],
+   "excavation_in_plot_m3": [
+    8.39175,
+    8.39175
+   ],
+   "footing_m3": 2.275,
+   "in_plot_plan_m2": [
+    5.025,
+    5.025
+   ],
+   "underlay_m3": 0.3185
+  }
+ },
+ "gb_ext_main": {
+  "backfill_compacted_m3": 0.0,
+  "excavation_insitu_m3": 2.79956,
+  "excavation_outside_pits_m3": [
+   1.391722,
+   1.418002
+  ],
+  "formation_m": -0.1,
+  "held": "the run ends over the pits (Vo): counted in both the trench and the pit plan until the run-end positions are netted (HELD by name, at most the trench itself)",
+  "inside_pits_m3": [
+   1.381558,
+   1.407838
+  ],
+  "plan_m2": 27.9956,
+  "status": "DRAWING-CONFIRMED"
+ },
+ "level_basis": "RFI RE-REVIEW 2026-11-02 S01 ESTIMATED (owner-accepted): footing underside at the p.9 note 1 minimum -1.50, underlay 0.07 + blinding 0.10 under it (T-206)",
+ "lower_gb_row": {
+  "gb_top_minus_footing_underside_m": {
+   "S01": 2.45,
+   "S01 +0.10": 2.55,
+   "S01 -0.10": 2.35
+  },
+  "required": {
+   "S01": false,
+   "S01 +0.10": true,
+   "S01 -0.10": false
+  },
+  "rule": "p.13 two-beam detail exists iff GB top - footing underside > 2.50 m (T-205 / T-042 B3)"
+ },
+ "method": "EARTHWORKS_QTY_V1",
+ "pits24": {
+  "backfill_before_beam_solids_m3": [
+   130.63623,
+   130.66623
+  ],
+  "backfill_compacted_m3": [
+   115.55392,
+   128.622353
+  ],
+  "backfill_zone_depth_m": 1.57,
+  "beam_solids_in_zone": {
+   "by_category_m3": {
+    "ANNEX_EXT_D35": [
+     0.422531,
+     5.346018
+    ],
+    "ANNEX_INT_D": [
+     0.0,
+     0.0
+    ],
+    "ANNEX_INT_D33": [
+     0.10378,
+     1.019116
+    ],
+    "MAIN_EXT": [
+     1.381558,
+     1.407838
+    ],
+    "MAIN_INT_D": [
+     0.0,
+     0.0
+    ],
+    "MAIN_INT_D33": [
+     0.0,
+     7.17333
+    ],
+    "UPPER_BOUNDARY_GB": [
+     0.136008,
+     0.136008
+    ],
+    "total": [
+     2.043877,
+     15.08231
+    ]
+   },
+   "printed_class_reading_m3_information": 2.118511,
+   "runs": [
+    {
+     "L_ledger": 0.3639,
+     "L_routeG": 0.39,
+     "beam_over_zone_m2": 0.117006,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.018196,
+      0.019501
+     ],
+     "runs": [
+      "107+7CE#1"
+     ],
+     "strip_over_zone_m2": 0.19501
+    },
+    {
+     "L_ledger": 4.4,
+     "L_routeG": 4.4,
+     "beam_over_zone_m2": 0.705,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "109+7CB#1"
+     ],
+     "strip_over_zone_m2": 1.175
+    },
+    {
+     "L_ledger": 4.4,
+     "L_routeG": 4.4,
+     "beam_over_zone_m2": 1.11,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.185,
+      0.185
+     ],
+     "runs": [
+      "109+7CB#2"
+     ],
+     "strip_over_zone_m2": 1.85
+    },
+    {
+     "L_ledger": 2.7,
+     "L_routeG": 2.7,
+     "beam_over_zone_m2": 0.315,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.0525,
+      0.0525
+     ],
+     "runs": [
+      "109+7CB#3"
+     ],
+     "strip_over_zone_m2": 0.525
+    },
+    {
+     "L_ledger": 4.3,
+     "L_routeG": 4.3,
+     "beam_over_zone_m2": 0.57,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.095,
+      0.095
+     ],
+     "runs": [
+      "10A+7C9#1"
+     ],
+     "strip_over_zone_m2": 0.95
+    },
+    {
+     "L_ledger": 2.325,
+     "L_routeG": 2.325,
+     "beam_over_zone_m2": 0.582648,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "114+115+7DF#1"
+     ],
+     "strip_over_zone_m2": 0.997708
+    },
+    {
+     "L_ledger": 1.0,
+     "L_routeG": 1.0,
+     "beam_over_zone_m2": 0.3,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.05,
+      0.05
+     ],
+     "runs": [
+      "114+115+7DF#2"
+     ],
+     "strip_over_zone_m2": 0.5
+    },
+    {
+     "L_ledger": 1.9,
+     "L_routeG": 1.9,
+     "beam_over_zone_m2": 0.494944,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.082491,
+      0.082491
+     ],
+     "runs": [
+      "145+7CA#1"
+     ],
+     "strip_over_zone_m2": 0.824907
+    },
+    {
+     "L_ledger": 2.4,
+     "L_routeG": 2.4,
+     "beam_over_zone_m2": 0.48,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.08,
+      0.08
+     ],
+     "runs": [
+      "170+7C3#1"
+     ],
+     "strip_over_zone_m2": 0.8
+    },
+    {
+     "L_ledger": 3.37,
+     "L_routeG": 3.37,
+     "beam_over_zone_m2": 0.54,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.09,
+      0.09
+     ],
+     "runs": [
+      "170+7C3#2"
+     ],
+     "strip_over_zone_m2": 0.9
+    },
+    {
+     "L_ledger": 3.35,
+     "L_routeG": 3.35,
+     "beam_over_zone_m2": 0.585,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.0975,
+      0.0975
+     ],
+     "runs": [
+      "170+7C3#3"
+     ],
+     "strip_over_zone_m2": 0.975
+    },
+    {
+     "L_ledger": 3.25,
+     "L_routeG": 3.25,
+     "beam_over_zone_m2": 0.48,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.08,
+      0.08
+     ],
+     "runs": [
+      "170+7C3#4"
+     ],
+     "strip_over_zone_m2": 0.8
+    },
+    {
+     "L_ledger": 2.975,
+     "L_routeG": 2.975,
+     "beam_over_zone_m2": 0.465,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.062007,
+      0.062007
+     ],
+     "runs": [
+      "7D0+FC#1"
+     ],
+     "strip_over_zone_m2": 0.620068
+    },
+    {
+     "L_ledger": 5.745,
+     "L_routeG": 5.745,
+     "beam_over_zone_m2": 0.96,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.128014,
+      0.128014
+     ],
+     "runs": [
+      "7D0+FC#2"
+     ],
+     "strip_over_zone_m2": 1.280141
+    },
+    {
+     "L_ledger": 6.35,
+     "L_routeG": 6.35,
+     "beam_over_zone_m2": 0.487322,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.064983,
+      0.064983
+     ],
+     "runs": [
+      "7D0+FC#3"
+     ],
+     "strip_over_zone_m2": 0.649834
+    },
+    {
+     "L_ledger": 6.6,
+     "L_routeG": 6.9,
+     "beam_over_zone_m2": 0.825,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.101714,
+      0.116714
+     ],
+     "runs": [
+      "7E0+FD#1",
+      "7E0+FD#2"
+     ],
+     "strip_over_zone_m2": 1.167136
+    },
+    {
+     "L_ledger": 6.0873,
+     "L_routeG": 6.2868,
+     "beam_over_zone_m2": 1.145178,
+     "cat": "MAIN_EXT",
+     "m3": [
+      0.194154,
+      0.204129
+     ],
+     "runs": [
+      "ARC:157+158"
+     ],
+     "strip_over_zone_m2": 2.041286
+    },
+    {
+     "L_ledger": 1.2,
+     "L_routeG": 1.5,
+     "beam_over_zone_m2": 0.195,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.0175,
+      0.31915
+     ],
+     "runs": [
+      "10B+7D1#1"
+     ],
+     "strip_over_zone_m2": 0.325
+    },
+    {
+     "L_ledger": 2.3,
+     "L_routeG": 2.3,
+     "beam_over_zone_m2": 0.495,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.0825,
+      0.81015
+     ],
+     "runs": [
+      "10B+7D1#2"
+     ],
+     "strip_over_zone_m2": 0.825
+    },
+    {
+     "L_ledger": 6.0,
+     "L_routeG": 6.4,
+     "beam_over_zone_m2": 0.385822,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.032582,
+      0.619741
+     ],
+     "runs": [
+      "136+7D5#1"
+     ],
+     "strip_over_zone_m2": 0.525822
+    },
+    {
+     "L_ledger": 2.4,
+     "L_routeG": 3.1,
+     "beam_over_zone_m2": 0.502676,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.048779,
+      0.822713
+     ],
+     "runs": [
+      "137+138#1"
+     ],
+     "strip_over_zone_m2": 0.837793
+    },
+    {
+     "L_ledger": 5.8,
+     "L_routeG": 5.9,
+     "beam_over_zone_m2": 0.615056,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.097509,
+      1.006642
+     ],
+     "runs": [
+      "13D+7D2#1"
+     ],
+     "strip_over_zone_m2": 1.025093
+    },
+    {
+     "L_ledger": 4.3,
+     "L_routeG": 4.3,
+     "beam_over_zone_m2": 0.195,
+     "cat": "ANNEX_INT_D33",
+     "m3": [
+      0.0325,
+      0.31915
+     ],
+     "runs": [
+      "13E+7D6#1"
+     ],
+     "strip_over_zone_m2": 0.325
+    },
+    {
+     "L_ledger": 0.5,
+     "L_routeG": 0.5,
+     "beam_over_zone_m2": 0.15,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.025,
+      0.2455
+     ],
+     "runs": [
+      "13E+7D6#2"
+     ],
+     "strip_over_zone_m2": 0.25
+    },
+    {
+     "L_ledger": 9.7,
+     "L_routeG": 10.13,
+     "beam_over_zone_m2": 0.796322,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.084688,
+      1.276781
+     ],
+     "runs": [
+      "7D4+F8#1",
+      "7D4+F8#2"
+     ],
+     "strip_over_zone_m2": 1.06188
+    },
+    {
+     "L_ledger": 1.8063,
+     "L_routeG": 1.8064,
+     "beam_over_zone_m2": 0.143785,
+     "cat": "ANNEX_EXT_D35",
+     "m3": [
+      0.033973,
+      0.245341
+     ],
+     "runs": [
+      "ARC:139+13A"
+     ],
+     "strip_over_zone_m2": 0.339775
+    },
+    {
+     "L_ledger": 4.3,
+     "L_routeG": 4.3,
+     "beam_over_zone_m2": 0.24,
+     "cat": "ANNEX_INT_D33",
+     "m3": [
+      0.04,
+      0.3928
+     ],
+     "runs": [
+      "13F+7D3#1"
+     ],
+     "strip_over_zone_m2": 0.4
+    },
+    {
+     "L_ledger": 2.45,
+     "L_routeG": 2.45,
+     "beam_over_zone_m2": 0.187678,
+     "cat": "ANNEX_INT_D33",
+     "m3": [
+      0.03128,
+      0.307166
+     ],
+     "runs": [
+      "142+7D8#1"
+     ],
+     "strip_over_zone_m2": 0.312797
+    },
+    {
+     "L_ledger": 2.4,
+     "L_routeG": 2.4,
+     "beam_over_zone_m2": 0.307322,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "15C+7CC#1"
+     ],
+     "strip_over_zone_m2": 0.512203
+    },
+    {
+     "L_ledger": 2.7,
+     "L_routeG": 2.7,
+     "beam_over_zone_m2": 0.24,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.3928
+     ],
+     "runs": [
+      "15E+15F#1"
+     ],
+     "strip_over_zone_m2": 0.4
+    },
+    {
+     "L_ledger": 3.75,
+     "L_routeG": 3.75,
+     "beam_over_zone_m2": 0.490314,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.805293
+     ],
+     "runs": [
+      "175+7DE#1"
+     ],
+     "strip_over_zone_m2": 0.845314
+    },
+    {
+     "L_ledger": 3.75,
+     "L_routeG": 3.75,
+     "beam_over_zone_m2": 0.3,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.491
+     ],
+     "runs": [
+      "176+7E6#1"
+     ],
+     "strip_over_zone_m2": 0.5
+    },
+    {
+     "L_ledger": 5.02,
+     "L_routeG": 5.02,
+     "beam_over_zone_m2": 0.382678,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.626316
+     ],
+     "runs": [
+      "177+7CD#1"
+     ],
+     "strip_over_zone_m2": 0.637797
+    },
+    {
+     "L_ledger": 1.5367,
+     "L_routeG": 1.5367,
+     "beam_over_zone_m2": 0.446001,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.729955
+     ],
+     "runs": [
+      "177+7CD#2"
+     ],
+     "strip_over_zone_m2": 0.743335
+    },
+    {
+     "L_ledger": 1.2,
+     "L_routeG": 1.2,
+     "beam_over_zone_m2": 0.3,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "17B+7E5#1"
+     ],
+     "strip_over_zone_m2": 0.5
+    },
+    {
+     "L_ledger": 2.0732,
+     "L_routeG": 2.0732,
+     "beam_over_zone_m2": 0.086999,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "182+183#1"
+     ],
+     "strip_over_zone_m2": 0.15599
+    },
+    {
+     "L_ledger": 3.02,
+     "L_routeG": 3.02,
+     "beam_over_zone_m2": 0.472678,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "184+7CF#1"
+     ],
+     "strip_over_zone_m2": 0.787797
+    },
+    {
+     "L_ledger": 2.65,
+     "L_routeG": 2.65,
+     "beam_over_zone_m2": 0.78,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "184+7CF#2"
+     ],
+     "strip_over_zone_m2": 1.3
+    },
+    {
+     "L_ledger": 5.0,
+     "L_routeG": 5.0,
+     "beam_over_zone_m2": 0.307322,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.502984
+     ],
+     "runs": [
+      "184+7CF#3"
+     ],
+     "strip_over_zone_m2": 0.512203
+    },
+    {
+     "L_ledger": 7.05,
+     "L_routeG": 7.35,
+     "beam_over_zone_m2": 0.84,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      1.3748
+     ],
+     "runs": [
+      "7DC+7DD#1",
+      "7DC+7DD#2"
+     ],
+     "strip_over_zone_m2": 1.4
+    },
+    {
+     "L_ledger": 6.72,
+     "L_routeG": 6.72,
+     "beam_over_zone_m2": 0.322322,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      0.531682
+     ],
+     "runs": [
+      "7E1+7E2#1"
+     ],
+     "strip_over_zone_m2": 0.578691
+    },
+    {
+     "L_ledger": 7.05,
+     "L_routeG": 7.35,
+     "beam_over_zone_m2": 1.05,
+     "cat": "MAIN_INT_D33",
+     "m3": [
+      0.0,
+      1.7185
+     ],
+     "runs": [
+      "7E7+7E8#1",
+      "7E7+7E8#2"
+     ],
+     "strip_over_zone_m2": 1.75
+    },
+    {
+     "L_ledger": 4.225,
+     "L_routeG": 4.225,
+     "beam_over_zone_m2": 0.27,
+     "cat": "MAIN_INT_D",
+     "m3": [
+      0.0,
+      0.0
+     ],
+     "runs": [
+      "7E9+7EA#1"
+     ],
+     "strip_over_zone_m2": 0.45
+    }
+   ],
+   "upper_boundary_plan_over_zone_m2": 0.340019
+  },
+  "beyond_plot_held": {
+   "blinding_m3": 0.189,
+   "excavation_m3": 3.1563
+  },
+  "d_below_limit_m": 0.17,
+  "depth_m": 1.67,
+  "displacement": {
+   "blinding": 12.464956,
+   "blinding_check_from_ledger": 12.464902,
+   "footings": 51.91774,
+   "neck_C8_conflict": [
+    0.24,
+    0.27
+   ],
+   "necks_29": 5.153642,
+   "necks_coef_m3_per_m": 4.86,
+   "strap_ends_in_projection_strip": 0.17963,
+   "total": [
+    77.498527,
+    77.528527
+   ],
+   "underlay": 7.542559
+  },
+  "excavation_insitu_m3": 208.164757,
+  "fill_plan_above_footings_m2": [
+   119.519555,
+   119.549555
+  ],
+  "fill_plan_beside_footings_m2": 16.898712,
+  "formation_compaction_m2": 124.649555,
+  "formation_m": -1.67,
+  "layers": 11,
+  "plan": {
+   "beyond_plot_m2": 1.89,
+   "correction_m2": -0.69525,
+   "f8_in_pool_envelope_m2": 1.99957,
+   "neat_sum_m2": 129.57,
+   "overlaps_once_m2": 0.335625,
+   "union_m2": 129.234375,
+   "v3043_bound_plan_m2": 125.344805,
+   "zone_plan_m2": 124.649555,
+   "zone_plan_route_g_m2": 124.649469
+  },
+  "pool_interfaces": {
+   "beyond_plot_m2": 1.88946,
+   "env_m2": 12.216727,
+   "necks_on_those_pits": {
+    "NECK:SH10:C3@150039,43577": {
+     "clearance_to_env_m": 1.471,
+     "in_env_m2": 0.0,
+     "in_outer_m2": 0.0,
+     "pit": "F8",
+     "plan_m2": 0.15
+    },
+    "NECK:SH10:C4@148342,50109": {
+     "clearance_to_env_m": 0.9427,
+     "in_env_m2": 0.0,
+     "in_outer_m2": 0.0,
+     "pit": "F4",
+     "plan_m2": 0.15
+    },
+    "NECK:SH10:C8@148730,43412": {
+     "clearance_to_env_m": 1.4481,
+     "in_env_m2": 0.0,
+     "in_outer_m2": 0.0,
+     "pit": "F8",
+     "plan_m2": 0.27
+    },
+    "NECK:SH10:CN@146847,47309": {
+     "clearance_to_env_m": 0.3154,
+     "in_env_m2": 0.0,
+     "in_outer_m2": 0.0,
+     "pit": "FN",
+     "plan_m2": 0.09
+    },
+    "NECK:SH10:CN@148005,44815": {
+     "clearance_to_env_m": 0.5542,
+     "in_env_m2": 0.0,
+     "in_outer_m2": 0.0,
+     "pit": "F8",
+     "plan_m2": 0.09
+    },
+    "NECK:SH10:CN@148243,48963": {
+     "clearance_to_env_m": -0.0003,
+     "in_env_m2": 0.000325,
+     "in_outer_m2": 0.0,
+     "pit": "F4",
+     "plan_m2": 0.09
+    }
+   },
+   "pits_in_env": {
+    "FTG:SH10:F4@148062,48723:ab0b66": {
+     "H": 0.4,
+     "footprint_in_env_m2": 0.48319,
+     "footprint_in_outer_shell_plan_m2": 0.282385,
+     "neat_in_env_beyond_plot_m2": 0.0,
+     "neat_in_env_m2": 0.735276,
+     "type": "F4"
+    },
+    "FTG:SH10:F8@146912,42298:624706": {
+     "H": 0.5,
+     "footprint_in_env_m2": 1.615967,
+     "footprint_in_outer_shell_plan_m2": 1.296442,
+     "neat_in_env_beyond_plot_m2": 0.067868,
+     "neat_in_env_m2": 1.99957,
+     "type": "F8"
+    },
+    "FTG:SH10:FN@146262,46648:0e0098": {
+     "H": 0.3,
+     "footprint_in_env_m2": 0.0,
+     "footprint_in_outer_shell_plan_m2": 0.0,
+     "neat_in_env_beyond_plot_m2": 0.0,
+     "neat_in_env_m2": 0.028383,
+     "type": "FN"
+    }
+   }
+  },
+  "under_pool_band": {
+   "excavation_m3": 0.458211,
+   "why": "the pit chains below the pool formation -1.50 under S01 inside the envelope plan; footing vs pool CONFLICT (F8: T-183 interface 1 / T-320; F4 / FN: this run): HELD"
+  }
+ },
+ "pits24_printed_minimum_bound_m3": 186.974333,
+ "pits24_sensitivity": {
+  "+0.10": {
+   "backfill": [
+    126.67741,
+    140.577341
+   ],
+   "excavation_insitu_m3": 220.629712,
+   "layers": 12
+  },
+  "-0.10": {
+   "backfill": [
+    104.430428,
+    116.667365
+   ],
+   "excavation_insitu_m3": 195.699801,
+   "layers": 10
+  }
+ },
+ "pool": {
+  "backfill_compacted_m3": 0.0,
+  "excavation_insitu_m3": 17.776576,
+  "formation_m": -1.5,
+  "plan_m2": 11.851051,
+  "status": "DRAWING-CONFIRMED",
+  "why_zero": "inside the neat envelope everything is shell, p.7 layers or water space (T-320 decomposition closes); backfill only in the blinding projection beyond the membrane (not printed) and the working space: HELD by name"
+ },
+ "rule": "R-T350-2"
+}
