@@ -1,9 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-03 00:16 UTC (Lead). Previous version: 2026-11-02 20:17 UTC. The released numbers did not change
+Last update: 2026-11-03 08:17 UTC (Lead). Previous version: 2026-11-03 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
-untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate of record is now V3.0.44 (not released).
+untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is V3.0.45 (not released).
+
+Since 3 Nov 00:16 (newest first; nine checked and merged, two sent back: one reworked and merged, one waiting for its rework):
+- Blockwork materials (blocks, glue, mortar, lintels) SENT BACK: the checker found the concrete lintel faces over
+  openings counted twice, once as lintel concrete and again as glued block area (about 7.7 kg of glue on one wall line
+  that cannot carry a verified label; the black-block count is unaffected). The exact fix is written; it is next.
+- Earthworks quantities measured (not yet in the candidate): footing-pit excavation 208.16 m3 (on the formation
+  level you accepted; the checker re-measured it to 0.0004 %), pool 17.78 m3 as printed; backfill 115.55 .. 128.62 m3,
+  4 of its 8 parts re-measured by the checker; disposal stays held. The earlier lower bound 188.0 was 1.04 m3 too high
+  (one footing counted twice) and is corrected to 186.97. Wiring into the candidate is queued; the other 4 backfill
+  parts are a new task.
+- Footing blinding is IN THE CANDIDATE (V3.0.45): the 24 pits 12.73 m3 verified as their own line; the raft,
+  beyond-plot and ground-beam parts held 7.64 .. 13.47 m3; the freelancer's 47.06 m3 is a whole-plot plate no drawing
+  prints (a method difference).
+- Family register refreshed and checked: every candidate line belongs to exactly one family (0 outside, 0 twice). It
+  found 38 merged packages never recorded as promoted, and two categories (balcony waterproofing, lintels) with no
+  candidate line: three new tasks.
+- Skirting under the remaining window sills and in the 1F dressing room measured and checked (certain 189.82 ->
+  198.83 m.l proposed, held 15.73 -> 0); it goes into the candidate after the stair-room skirting package.
+- Wet-area walls: checked that no second fixing bed exists; the one 2 cm layer is the levelling render.
+- Tests: known-failure list 396 -> 0; the general project scorer (any villa scored the same way) merged; heights and
+  the 1:3 stair-bed mix recorded as new rule versions (no quantity moves).
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: about 12 integration packages left, two run at a time.
 
 Since 2 Nov 20:17 (newest first; six checked and merged, none sent back, two waiting for the checker):
 - Skirting is IN THE CANDIDATE (first finishes package, checked line by line): the skirting now runs under four

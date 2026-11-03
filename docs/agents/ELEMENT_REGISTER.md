@@ -46,14 +46,14 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
-- RC LINTEL over an opening vs the host masonry wall (Lead 2026-11-03 08:20; Checker F-C-T453-1 on T-453 r1, owner
+- RC LINTEL over an opening vs the host masonry wall (Lead 2026-11-03 08:17; Checker F-C-T453-1 on T-453 r1, owner
   Q-73 'only masonry that physically exists'): OWNER TRADE B9-02 LINTELS for the lintel piece (concrete m3 / pieces by
   the printed RC lintel schedule where one is printed, the owner precast lengths only where none is); the host wall's
   MATERIAL base (blocks, glue, mortar) is the fill net minus each REQUIRED lintel face (w + 0.80 per printed bearing) x D;
   a HELD / FLAGGED lintel face is a named range on the host line, never 0 and never silently deducted. The MAS.BLOCK
   contract area is untouched until the T-449 wiring settles R-MAS-ABOVE-LINTEL-1 (T-482). Rows: T-453 r2 (material),
   T-487 (B9-02 lines), T-482 (contract basis).
-- FOUNDATION BACKFILL displacement (Lead 2026-11-03 08:20; T-350 r2 MERGED 42a99508): EARTHWORKS (B1-03) owns the
+- FOUNDATION BACKFILL displacement (Lead 2026-11-03 08:17; T-350 r2 MERGED 42a99508): EARTHWORKS (B1-03) owns the
   backfill volume; every buried element (blinding, underlay, footings net of overlaps, necks, ground beams / straps over
   the pits, C8, the external GB trench, F10 + F) enters only as DISPLACEMENT read from its own verified piece, never
   re-measured as a quantity of B1-03; the pool shell envelope and footing F4 / FN inside it are CONFLICT pieces

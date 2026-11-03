@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-03 08:17 (since 04:15; the 20:17, 00:16 and 04:15 runs recorded theirs on BOARD.md only)
+
+- T-481 skirting remainder census: WORKED (Checker re-measure AGREE). Decision: NEW T-483 integrates it (stream F, after T-443).
+- T-457 wet-wall fixing: WORKED (no second bed; table V3 unwired). Decision: wiring folded into T-455.
+- T-479 registry refresh (Gate B): WORKED / PARTIAL findings: F-T479-1 -> NEW T-485; F-T479-2 -> NEW T-486 (balcony WP), T-487 (lintel lines).
+- T-350 r2 calculated earthworks: PARTIAL (backfill 4 / 8 verified; unwired). Decision: T-350 r3 wiring QUEUED stream S after T-419; NEW T-484 for the other 4 components.
+- T-452 r2 scorer: WORKED. T-461 housekeeping: WORKED (UP-STAIR-017 wiring folded into T-455).
+- T-453 part 1 blockwork materials: FAILED r1 (F-C-T453-1 lintel faces double counted in the material base). Decision: TODO r2 with the exact fix R-T453-5, first in worker 2's order; register ruling 'RC LINTEL vs host masonry' added.
+- Recurring cause: none new; cross-trade double counts are still caught at Gate A, not before hand-in -> the element register rulings now name the owner trade before T-487 / T-483 start.
+
 ## Lead 2026-11-02 16:16 (since 12:30)
 
 - T-477 rebar firewall declarations: WORKED (Checker reproduced the failure on 4aaa9be0 and green on the merge). Decision: gate green; no follow-up.

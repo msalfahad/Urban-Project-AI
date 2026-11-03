@@ -1,3 +1,21 @@
+## LEAD REPORT 2026-11-02 20:17 UTC
+
+Drive read OK (nothing new since 16:00). Training villa: candidate of record V3.0.43 6f534d5e (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, steel 10,250.17 kg).
+- Earthworks (missing category, now in the candidate): T-350 Gate B PASS: +18 HELD-blank lines, bounds beside: pits >= 188.017 m3, pool >= 17.777 m3; 4,837 lines byte-identical; L4 NEW 0.
+- Scope: EIMP part 2 MERGED (recovery step 1 DONE): 106 components, 0 unmapped / 0 doubly mapped. Gaps -> NEW T-479: 2 candidate lines in no family; master blocks B8-08 / B10-13 / B7-13 stale; verdict set binds 2 / 7 verified B8-08 lines (293.86 m2 + 5.49 m3 under-reported in the Verified share).
+- Waterproofing: B8-08 foundation WP 360.028 m2 / 6.528 m3 already carried since V3.0.15 (T-353 re-check, Checker FF lift base 20.700 m2 AGREE); no double count.
+- Handrails B7-09: 17.366 -> 33.319 lm proposed (per flight along the pitch); freelancer 18.95 (+75.8 %); PARTIALLY VERIFIED 1 / 14 (MS2-L 3.782209 lm, 0.000 %); 4 pieces HELD, 1 UNKNOWN. Integration NEW T-480 (stream F).
+- Lift marble: census = candidate (0.000). Formwork: census READY (244 lines 1,027.977 m2 CALCULATED, 388 HELD); materials rulebook READY.
+- Rejected: T-465 r3 (test reader, no BOQ effect): identity fails on fractional font widths (<= 0.0073 pt) -> r4 TODO.
+- Learned (lessons rows): rails along the pitch, never plan length (ADOPTED); a printed minimum is a bound, never the quantity (ADOPTED); an oracle-identity claim needs an adverse input corpus (PROPOSED).
+- Gates: Gate 0 none; Gate 1 T-465 r4, T-479; Gate 2 streams S (T-478 next) and F (T-422 CLAIMED).
+Team health: since 16:14 every closed run wrote STARTED + final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Verifier x3 incl. 1 overlap-guard), self-checks PASS, no refusal; Checker 5 merged / 1 rejected. Open now: Worker 1 (19:21) and Verifier (19:51), both within their locks. Last report's watch (Checker 15:49 slot) resolved: it ran 16:34. READY 2, TODO 5 (serialised integration). 10 Nov AT RISK (about 14 packages, 7.5 days).
+Queue check: 30 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none today (no genuine decision under standard 2.7).
+
+NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r4); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-02 16:18 UTC
 
 Drive read OK (nothing new since 12:00). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged; no quantity moved since 12:35.

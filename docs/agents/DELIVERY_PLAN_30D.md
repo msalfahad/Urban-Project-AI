@@ -46,6 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-03 08:17; recovery plan in force)
+
+- Since 04:15: 6 merged, 1 rejected: T-479 stream S Gate B (registry 1.41.0, census 0 outside / 0 double, no quantity
+  change); T-481, T-457, T-350 r2, T-452 r2, T-461 (Gate A pieces, unwired). T-453 part 1 REJECTED r1 (lintel faces
+  double counted in the material base) -> TODO r2. Candidate of record still V3.0.45 5972888b. READY 0.
+- Step 2: CLAIMED stream S T-419 (07:00), stream F T-443 (07:21). Remaining packages: stream S 4 after T-419 (T-350 r3
+  earthworks wiring, T-487 lintel lines, T-382, T-474 p2); stream F 9 after T-443 (T-483, T-480, T-423, T-424, T-310,
+  T-314, T-364, T-363, T-372). At one package per stream per about 4 h (build run + Gate B) that is about 2.5 days
+  of stream F work if worker 1 keeps to it: 10 Nov AT RISK, not yet lost; the 4 Nov review decides whether a stream F
+  package moves to worker 2 under the merge-order rule.
+- Step 1 follow-ups: T-485 registry promotion (38 packages), T-486 balcony WP applicability. Step 5: T-453 r2, T-454,
+  T-455 released (materials, unwired). Step 6: T-452 MERGED.
+
 ## Status (Lead, 2026-11-03 04:15; recovery plan in force)
 
 - Since 00:16: 3 merged, 1 rejected: T-478 r3 stream S Gate B -> candidate of record V3.0.45 5972888b (CONC.BLINDING

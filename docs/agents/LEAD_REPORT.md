@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-03 08:18 UTC
+
+Drive read OK (nothing created or modified since 04:00, no photo task). Training villa: candidate of record V3.0.45 5972888b unchanged (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3).
+- Earthworks (missing category, piece merged, not wired): pits excavation 208.165 m3 ESTIMATED on the owner-accepted formation (Checker own DXF re-measure 208.164, 0.0004 %); pool 17.777 m3 DRAWING-CONFIRMED; pits backfill 115.554 .. 128.622 m3 PARTIALLY VERIFIED 4 / 8; disposal HELD. Lower bound corrected 188.017 -> 186.974 m3 (F8 counted twice). No freelancer earthworks to compare. Wiring queued (stream S, after the lift tie beam); 4 backfill components -> new task.
+- Blockwork materials REJECTED r1: REQUIRED RC lintel faces (w + 0.80) x D sat in the host material base as well as in lintel concrete; glue line L-2fdc 458.892 kg -> 444.470 .. 451.220 kg (not VERIFIED-NET); black 0.20 blocks 1,346.55 nr unaffected. Exact fix written; rework next.
+- Registry (Gate B PASS, no quantity change): 0 lines outside families, 0 doubly mapped; found 38 merged packages unpromoted and B8-07 balcony WP / B9-02 lintels with no candidate line -> 3 new tasks.
+- Skirting remainder (checked, unwired): certain 189.82 -> 198.83 lm proposed, held 15.73 -> 0; freelancer 282.85 lm RULE_DIFFERENCE. Wet walls: one fixing material only (checked).
+- Learned (lessons rows): a material base must exclude every face another trade owns (lintel faces, PROPOSED, from F-C-T453-1); a printed lower bound must be re-derived when an overlap is found (188.017 -> 186.974, PROPOSED).
+- Gates: Gate 0 none; Gate 1 T-485; Gate 2 stream S T-419 (CLAIMED), stream F T-443 (CLAIMED).
+Team health: since 04:18 every closed run wrote STARTED + final line (Worker 1 x1, Worker 2 x2, Worker 3 x2, Verifier x4), self-checks PASS, no refusals; Checker 6 merged / 1 rejected. Open: Worker 3 07:01, Worker 1 07:20 (both in lock). Worker 1 now on stream F as ordered. 10 Nov AT RISK: 13 packages after the two claimed (S 4, F 9). Self-check PASS; queue check 24 actionable, 0 flagged.
+
+OWNER PACKAGE: none today (no item meets standard section 2.7).
+
+NEEDS FIXING (only you): repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-03 04:15 UTC
 
 Drive read OK (nothing created since 00:00, no photo task). Training villa: candidate of record V3.0.45 5972888b (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3).
@@ -33,22 +48,3 @@ Queue check: 25 actionable rows, 0 flagged, 0 stall checks.
 OWNER PACKAGE: none today (no genuine decision under standard 2.7).
 
 NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (F-T465-1, now unblocked: the pypdf reader is merged and proven identical); PR #3 / merged-branch clean-up.
-
-## LEAD REPORT 2026-11-02 20:17 UTC
-
-Drive read OK (nothing new since 16:00). Training villa: candidate of record V3.0.43 6f534d5e (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, steel 10,250.17 kg).
-- Earthworks (missing category, now in the candidate): T-350 Gate B PASS: +18 HELD-blank lines, bounds beside: pits >= 188.017 m3, pool >= 17.777 m3; 4,837 lines byte-identical; L4 NEW 0.
-- Scope: EIMP part 2 MERGED (recovery step 1 DONE): 106 components, 0 unmapped / 0 doubly mapped. Gaps -> NEW T-479: 2 candidate lines in no family; master blocks B8-08 / B10-13 / B7-13 stale; verdict set binds 2 / 7 verified B8-08 lines (293.86 m2 + 5.49 m3 under-reported in the Verified share).
-- Waterproofing: B8-08 foundation WP 360.028 m2 / 6.528 m3 already carried since V3.0.15 (T-353 re-check, Checker FF lift base 20.700 m2 AGREE); no double count.
-- Handrails B7-09: 17.366 -> 33.319 lm proposed (per flight along the pitch); freelancer 18.95 (+75.8 %); PARTIALLY VERIFIED 1 / 14 (MS2-L 3.782209 lm, 0.000 %); 4 pieces HELD, 1 UNKNOWN. Integration NEW T-480 (stream F).
-- Lift marble: census = candidate (0.000). Formwork: census READY (244 lines 1,027.977 m2 CALCULATED, 388 HELD); materials rulebook READY.
-- Rejected: T-465 r3 (test reader, no BOQ effect): identity fails on fractional font widths (<= 0.0073 pt) -> r4 TODO.
-- Learned (lessons rows): rails along the pitch, never plan length (ADOPTED); a printed minimum is a bound, never the quantity (ADOPTED); an oracle-identity claim needs an adverse input corpus (PROPOSED).
-- Gates: Gate 0 none; Gate 1 T-465 r4, T-479; Gate 2 streams S (T-478 next) and F (T-422 CLAIMED).
-Team health: since 16:14 every closed run wrote STARTED + final line (Worker 1 x2, Worker 2 x2, Worker 3 x2, Verifier x3 incl. 1 overlap-guard), self-checks PASS, no refusal; Checker 5 merged / 1 rejected. Open now: Worker 1 (19:21) and Verifier (19:51), both within their locks. Last report's watch (Checker 15:49 slot) resolved: it ran 16:34. READY 2, TODO 5 (serialised integration). 10 Nov AT RISK (about 14 packages, 7.5 days).
-Queue check: 30 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none today (no genuine decision under standard 2.7).
-
-NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r4); PR #3 / merged-branch clean-up.
-
