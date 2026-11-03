@@ -46,6 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-03 00:16; recovery plan in force)
+
+- Since 20:17: 6 merged, 0 rejected: T-422 first stream F Gate B -> candidate of record V3.0.44 (FIN.SKIRTING certain
+  184.017 -> 189.819 lm); T-448 materials rulebook (step 5 base, unwired); T-474 part 1 formwork census; T-465 r4;
+  T-464; T-383 WP completeness join. READY 2: T-478 r2 (stream S blinding, Gate B), T-452 (generic scorer, step 6).
+- Step 2: stream S T-478 -> T-479 (building on its head) -> T-419 -> T-382 -> T-474 p2; stream F T-443 (released)
+  -> T-480 -> T-423 -> T-424 -> T-310 -> T-314 -> T-364 -> T-363 -> T-372. Packages delivered: S 1, F 1 in about 26 h;
+  about 13 remain for 7 days at roughly 2 per stream per day: 10 Nov AT RISK (the 4 Nov decision on pulling the
+  missing-category rows T-314 / T-364 / T-363 / T-372 ahead of T-423 / T-424 stands).
+- Step 5: T-453 part 1 (blockwork material ledger) released. Step 6: T-452 READY.
+- Lead fault fixed: the board had 0 TODO after 20:17 (two worker runs found nothing in their lane); now 9.
+
 ## Status (Lead, 2026-11-02 20:17; recovery plan in force)
 
 - Since 16:16: 5 merged (T-471 EIMP part 2 = step 1 DONE, 6 days ahead of its 8 Nov target; T-350 first stream S

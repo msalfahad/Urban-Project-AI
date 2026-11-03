@@ -1,9 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-02 20:17 UTC (Lead). Previous version: 2026-11-02 16:16 UTC. The released numbers did not change
+Last update: 2026-11-03 00:16 UTC (Lead). Previous version: 2026-11-02 20:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified: 1 (the concrete slab, 60.28 m3, in the candidate);
-released: 0. The candidate of record is now V3.0.43 (not released).
+released: 0. The candidate of record is now V3.0.44 (not released).
+
+Since 2 Nov 20:17 (newest first; six checked and merged, none sent back, two waiting for the checker):
+- Skirting is IN THE CANDIDATE (first finishes package, checked line by line): the skirting now runs under four
+  windows whose sills are printed above the floor (+5.80 m.l), and two floor-level glass walls leave the range
+  (-3.10 m.l). Skirting certain 184.02 -> 189.82 m.l, still held 24.64 -> 15.73 m.l; freelancer 282.85 m.l gross with
+  no door deductions (a method difference). The checker re-measured two of the sills himself. Four more sills and the
+  1F dressing room are not measured yet: a new task reads them from the elevations.
+- Footing-blinding pits (12.73 m3, verified) handed in as the next structural package, rebased on the skirting
+  version; nothing else moves (4,855 lines identical). Waiting for the checker.
+- Formwork census: CHECKED AND MERGED (no quantity moves): the checker re-measured one beam (4.268 m2) and one slab
+  soffit (15.108 m2) himself and agreed. 244 lines carry a calculated 1,027.98 m2, 388 stay held; not verified yet.
+- Your materials rulebook: CHECKED AND MERGED (not yet applied to any BOQ line). The checker hand-checked lintel,
+  adhesive, glue, block and mortar cases against your confirmed rules: all agree; an opening needing more than 4.00 m
+  is flagged, unknown blocks or tiles stay held. The material quantities for blockwork are released to work next.
+- Waterproofing: each waterproofing line can now be shown complete only when every element of its family is
+  accounted for (merged); the lift-pit screed lines should count complete at the checker's next export (1 -> 3
+  whole lines), 18 lines stay held by name, none shown as 0.
+- The PDF reader rewrite is merged and proven identical; your release decision on the old licensed library is
+  now the only open item there.
+- Waiting for the checker: blinding package and the general project scorer (any villa scored the same way).
+
 
 Since 2 Nov 16:16 (newest first; five checked and merged, one sent back, two waiting for the checker):
 - Step 1 of your recovery plan is DONE: the full measurement plan (106 components, each mapped to exactly one BOQ

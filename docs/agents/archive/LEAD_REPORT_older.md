@@ -1,3 +1,17 @@
+## LEAD REPORT 2026-11-02 12:35 UTC
+
+Drive read OK (nothing new since 08:30). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged.
+- Concrete: whole lines VERIFIED 1 / 8 keyed (slab 60.280 m3, +0.77 % vs freelancer 59.817). Ground slab valued 17.241 -> 21.638 m3 vs 29.550 (-41.7 % -> -26.8 %), rest HELD with reasons (T-442 Gate B). Footing 25 / 26 pieces verified (F10 on S3). Columns, beams, ground beams HELD (ranges unchanged).
+- Reinforcement: released 9,375.306 kg unchanged; 2,110 / 2,325 register entries now reproduced by general rules (+0.003 kg print), lap rule by element class merged; both unwired. Lap-count fix moves 0.000 kg here (no engine run > 12 m), to be re-proved on physical continuous runs.
+- Finishes / other trades: no quantity change since 08:35 (floor area -5.06 %, doors +6.33 %; plaster, paint, windows HELD).
+- Scope (recovery step 1): EIMP part 1 written (EIMP_SCOPE_2026-11-02.md). 46 / 102 families have no candidate line; formwork 0 m2 valued (643 held lines); lift marble and handrails had no row -> T-474 / T-475 / T-476.
+- Learned: a merge can break a test that no task owns (3 new modules undeclared in the reinforcement firewall) -> T-477; 'identity' claims need real-drawing font classes, not synthetic pages (T-465 r2).
+- Gates: Gate 0 one open fix (T-477); Gate 1 T-471 EIMP part 2 critical; Gate 2 two streams.
+Team health: 10 agent runs since 08:38, all STARTED + final line, no refusal, self-checks PASS; Checker 5 merged / 1 rejected; READY 0, CLAIMED 0. Streams decided: S = worker 3 (earthworks first), F = worker 1 (skirting release first); shared files held by T-350 until it merges. Queue check: 34 actionable rows, 0 flagged, 0 stall checks. 10 Nov milestone AT RISK (15 packages, one Gate B per Checker run).
+Lessons register (ERS s.7) PROPOSED: 'a new module that a registry-driven test enumerates must be declared in the same task' (T-459 / T-449 r2, F-C-0211-1); 'equivalence of a replacement reader is proved on each font / data class the real inputs contain' (T-465 r2).
+OWNER PACKAGE: none today (no genuine decision; every hold is a drawing / designer item or an investigation row).
+NEEDS FIXING (owner only): (1) make the repository private (PRIVACY_MOVE_PLAN step 0); (2) released-path PyMuPDF (AGPL) needs your release decision once T-465 r3 passes; (3) PR #3 merge / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-02 04:17 UTC
 
 Drive readable: nothing created or modified in the Urban BOQ private data folder or the Alsenan project folder since

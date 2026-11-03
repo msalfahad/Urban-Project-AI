@@ -1,5 +1,23 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-03 00:16 UTC
+
+Drive read OK (nothing created since 20:00). Training villa: candidate of record V3.0.44 8b2fe2b6 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, steel 10,250.17 kg).
+- Skirting (first finishes Gate B, PASS): FIN.SKIRTING certain 184.017 -> 189.819 lm (+5.802: skirting runs under the W04 / W14 / W24 / W29 sills printed 1.00-1.70 m above the floor), held high 24.638 -> 15.731 (floor-level W15 / W16 out); 4,848 lines byte-identical; L4 NEW 0. Freelancer 282.85 lm gross, no door deduction: RULE_DIFFERENCE. Status: 1F-01 VERIFIED, 3 lines PARTIALLY VERIFIED (gross perimeters not re-walked). Missing: W02 / W11 / W12 / W17 sills, 1F dressing faces -> NEW T-481.
+- Concrete blinding: package READY r2 on V3.0.44 (V3.0.45 5972888b): 24 pits 12.734 m3 VERIFIED as its own line, FF raft 2.256..2.352 and beyond-plot 0..0.189 m3 HELD; vs freelancer 47.055 m3 plate -72.9 % = RULE_DIFFERENCE; no other line moves.
+- Formwork: census merged (Checker own beam 4.268 m2 and slab soffit 15.108 m2 AGREE); 244 lines 1,027.98 m2 CALCULATED, 388 held blank; not verified, part 2 integrates.
+- Materials: rulebook 1.0.0 merged, unwired; Checker hand cases all AGREE with your confirmed rules (lintel 3.70 m opening -> 4.00 piece, 3.71 FLAGGED). Blockwork material ledger (T-453 part 1) released.
+- Waterproofing: per-line completeness join merged; LIFT_PIT_SCREED 20.700 m2 / 1.035 m3 whole lines 1 -> 3 at the next export; 18 lines held by name, never 0.
+- Tests: PDF reader r4 merged (identity proved on the Checker's adverse page); L4 0 failures on 1d892eb4.
+- Learned (lessons rows ADOPTED): skirting continues under any sill above the floor, only doors / floor glazing deduct; an identity proof needs a checker-built adverse input that fails the previous head.
+- Gates: Gate 0 none; Gate 1 T-466, T-479; Gate 2 streams S (T-478 at the Checker) and F (T-443 next).
+Team health: since 20:14 every closed run wrote STARTED + final line (Worker 1 x3, Worker 2 x2, Worker 3 x2, Verifier x3 incl. 1 overlap-guard), self-checks PASS, no refusal; Checker 6 merged / 0 rejected. Open: Verifier 23:51 (in its lock). LEAD FAULT: my 20:17 board left no claimable TODO for workers 1 and 3 (both runs said so; they used them for a rebase and a lane A row); fixed: TODO 0 -> 9, a non-candidate row behind each stream. 10 Nov AT RISK (about 13 packages, 7 days).
+Queue check: 25 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none today (no genuine decision under standard 2.7).
+
+NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (F-T465-1, now unblocked: the pypdf reader is merged and proven identical); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-02 20:17 UTC
 
 Drive read OK (nothing new since 16:00). Training villa: candidate of record V3.0.43 6f534d5e (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, steel 10,250.17 kg).
@@ -35,18 +53,3 @@ Board: released T-353, T-448, T-476, T-452; new T-478; TODO 8. Queue check: 33 a
 OWNER PACKAGE: none today (no genuine decision under standard 2.7).
 
 NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r3); PR #3 / merged-branch clean-up.
-
-## LEAD REPORT 2026-11-02 12:35 UTC
-
-Drive read OK (nothing new since 08:30). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged.
-- Concrete: whole lines VERIFIED 1 / 8 keyed (slab 60.280 m3, +0.77 % vs freelancer 59.817). Ground slab valued 17.241 -> 21.638 m3 vs 29.550 (-41.7 % -> -26.8 %), rest HELD with reasons (T-442 Gate B). Footing 25 / 26 pieces verified (F10 on S3). Columns, beams, ground beams HELD (ranges unchanged).
-- Reinforcement: released 9,375.306 kg unchanged; 2,110 / 2,325 register entries now reproduced by general rules (+0.003 kg print), lap rule by element class merged; both unwired. Lap-count fix moves 0.000 kg here (no engine run > 12 m), to be re-proved on physical continuous runs.
-- Finishes / other trades: no quantity change since 08:35 (floor area -5.06 %, doors +6.33 %; plaster, paint, windows HELD).
-- Scope (recovery step 1): EIMP part 1 written (EIMP_SCOPE_2026-11-02.md). 46 / 102 families have no candidate line; formwork 0 m2 valued (643 held lines); lift marble and handrails had no row -> T-474 / T-475 / T-476.
-- Learned: a merge can break a test that no task owns (3 new modules undeclared in the reinforcement firewall) -> T-477; 'identity' claims need real-drawing font classes, not synthetic pages (T-465 r2).
-- Gates: Gate 0 one open fix (T-477); Gate 1 T-471 EIMP part 2 critical; Gate 2 two streams.
-Team health: 10 agent runs since 08:38, all STARTED + final line, no refusal, self-checks PASS; Checker 5 merged / 1 rejected; READY 0, CLAIMED 0. Streams decided: S = worker 3 (earthworks first), F = worker 1 (skirting release first); shared files held by T-350 until it merges. Queue check: 34 actionable rows, 0 flagged, 0 stall checks. 10 Nov milestone AT RISK (15 packages, one Gate B per Checker run).
-Lessons register (ERS s.7) PROPOSED: 'a new module that a registry-driven test enumerates must be declared in the same task' (T-459 / T-449 r2, F-C-0211-1); 'equivalence of a replacement reader is proved on each font / data class the real inputs contain' (T-465 r2).
-OWNER PACKAGE: none today (no genuine decision; every hold is a drawing / designer item or an investigation row).
-NEEDS FIXING (owner only): (1) make the repository private (PRIVACY_MOVE_PLAN step 0); (2) released-path PyMuPDF (AGPL) needs your release decision once T-465 r3 passes; (3) PR #3 merge / merged-branch clean-up.
-
