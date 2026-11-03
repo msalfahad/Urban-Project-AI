@@ -1,5 +1,5 @@
 """T-479: rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json = 1.40.0 + family B13-09 (pool water-face finish) +
-not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.44 run, from the committed
+not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.45 run, from the committed
 line index) + the reader text of B8-08 / B10-13 / B7-13. No quantity, existing capability, owner or candidate state
 changes; the candidate machinery (candidate_packages, pending_packages, candidate) is copied unchanged."""
 from __future__ import annotations
@@ -22,7 +22,7 @@ import build_master_1_41_0 as B  # noqa: E402
 
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.40.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json"
-INDEX = ROOT / "research/agents_t479/out/LINE_INDEX_V3_0_44.json"
+INDEX = ROOT / "research/agents_t479/out/LINE_INDEX_V3_0_45.json"
 REFRESHED = ("B8-08", "B10-13", "B7-13")
 
 
@@ -47,7 +47,7 @@ def test_only_reader_text_of_three_families_changes_and_b13_09_is_added(docs):
         assert changed <= {"opt_in_readers", "note", "v3_0_planned_tasks"}, (c, changed)
         for k in ("candidate", "in_v3_0_candidate", "capability", "item_codes", "development_villa"):
             assert nb[c][k] == ob[c][k]
-        assert "V3.0.44" in nb[c]["opt_in_readers"] and "pending Gate B" not in nb[c]["opt_in_readers"]
+        assert "V3.0.45" in nb[c]["opt_in_readers"] and "pending Gate B" not in nb[c]["opt_in_readers"]
     for k in ("candidate_packages", "pending_packages", "candidate", "released_configuration", "candidate_states",
               "candidate_state_definitions", "capability_states"):
         assert new[k] == old[k]
@@ -89,7 +89,7 @@ def test_census_block_equals_a_fresh_census_of_the_candidate(docs):
     _old, new, index = docs
     fresh = C.census(index, new)
     cc = new["candidate_census"]
-    assert cc["method_version"] == index["candidate_version"] == "ARCH_TAKEOFF_V3.0.44"
+    assert cc["method_version"] == index["candidate_version"] == "ARCH_TAKEOFF_V3.0.45"
     assert cc["families"] == fresh["families"] and cc["lines"] == fresh["lines"] == len(index["lines"])
     for c in REFRESHED:
         assert cc["families"][c]["in_candidate"] == "yes" and cc["families"][c]["lines"] > 0

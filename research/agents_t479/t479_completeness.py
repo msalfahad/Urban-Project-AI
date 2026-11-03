@@ -12,7 +12,7 @@ REGISTRY_GAP components resolved by registry 1.41.0, nothing else:
 A line whose code is NOT_A_BOQ_LINE and that a component also selects is a DOUBLY_MAPPED_LINE (reported). A NOT_A_BOQ
 code no family owns that the registry does not declare stays an UNMAPPED_LINE (T-471 rule, unchanged).
 
-    python3 -I research/agents_t479/t479_completeness.py --index research/agents_t479/out/LINE_INDEX_V3_0_44.json
+    python3 -I research/agents_t479/t479_completeness.py --index research/agents_t479/out/LINE_INDEX_V3_0_45.json
         --master rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json --out OUT.json [--register-out REG.json]
 """
 

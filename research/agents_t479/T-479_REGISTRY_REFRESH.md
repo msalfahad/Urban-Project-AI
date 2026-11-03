@@ -7,12 +7,12 @@ hub, method, frozen or existing rule / knowledge version file is touched; every 
 
 | Input | Pin |
 |---|---|
-| Candidate of record | ARCH_TAKEOFF_V3.0.44 (T-422 merge b4e22291), reproduced in this run from the Drive copies ("Alsenan chalet project" / P7757_DXF_COMPRESSED.zip and "ST7757 dxf.dxf", structural sha256 9f9d1179...) with research/agents_t167/v304_run.py then research/agents_t422/v3044_run.py, outputs in .work/private only |
-| V3_0_43 / V3_0_44 BOQ_LINES.json | 6f534d5e / **8b2fe2b6** (= the Checker's T-422 hashes and the boq_lines_sha256 of every record of verdicts/V3.0.44/URBAN_CHECKER_VERDICT_V2_SET.json) |
-| Verdict set | board verdicts/V3.0.44/URBAN_CHECKER_VERDICT_V2_SET.json, sha256 b3b08dd7...; 9 records, all 9 BIND (none stale) |
+| Candidate of record | ARCH_TAKEOFF_V3.0.45 (T-478 merge 8ccf69b3, merged during this run; V3.0.44 = T-422 merge b4e22291), reproduced in this run from the Drive copies ("Alsenan chalet project" / P7757_DXF_COMPRESSED.zip and "ST7757 dxf.dxf", structural sha256 9f9d1179...) with research/agents_t167/v304_run.py then research/agents_t422/v3044_run.py and research/agents_t478/v3045_run.py, outputs in .work/private only |
+| V3_0_43 / V3_0_44 / V3_0_45 BOQ_LINES.json | 6f534d5e / **8b2fe2b6** (= the boq_lines_sha256 of every record of verdicts/V3.0.44/URBAN_CHECKER_VERDICT_V2_SET.json) / **5972888b** (= T-478's own run); V3.0.45 vs V3.0.44 by line index: 3 lines added and 2 changed, all STR.CONC.BLINDING (B10-01), none verified; the census of B8-08 / B10-13 / B7-13 is identical on both |
+| Verdict set | board verdicts/V3.0.44/URBAN_CHECKER_VERDICT_V2_SET.json, sha256 b3b08dd7...; 9 records, all 9 bind on V3.0.44 and carry by content on V3.0.45 (none unbound) |
 | Downgrades | research/agents_t469/DOWNGRADES_SNAPSHOT.json (the T-469 / T-471 snapshot), sha256 81732639... |
 | Registry | 1.40.0 (T-478, pending) -> 1.41.0 (this task; version allotted at merge) |
-| Branch base | agents/task-T-478 r3 87676954 (Lead: build on the T-478 head), merged into the working head 2266198f |
+| Branch base | agents/task-T-478 r3 87676954 (Lead: build on the T-478 head); the working branch with the T-478 merge 8ccf69b3 merged in (CODEMAP rebuilt by the tool) |
 
 ## What changed (files)
 
@@ -22,11 +22,11 @@ hub, method, frozen or existing rule / knowledge version file is touched; every 
   VERIFIED_WHOLE vs VERIFIED_COMPONENT; UNBOUND_VERIFIED_LINE for a record that names a line it no longer binds;
   `compare_blocks` = STALE_IN_CANDIDATE (registry `in_v3_0_candidate` vs census). Families that own no item code are
   `n/a` (a register / run file / content under another family's code), never `no`.
-- `research/agents_t479/out/LINE_INDEX_V3_0_44.json`: per line only id, item code, unit, class, engine element id,
+- `research/agents_t479/out/LINE_INDEX_V3_0_45.json`: per line only id, item code, unit, class, engine element id,
   net, held bounds, binding (no drawing content, no names); reproduces the census without the private drawings.
 - `research/agents_t479/build_master_1_41_0.py` -> `rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json` (1.40.0 never edited).
 - `research/agents_t479/t479_completeness.py` (T-471 tool unchanged, re-run on 1.41.0 + register 1.1.0, line level) ->
-  `out/T479_MATRIX_V3_0_44.json`, `out/EIMP_REGISTER_DEV_VILLA_1_1_0.json` (register 1.0.0 never edited).
+  `out/T479_MATRIX_V3_0_45.json`, `out/EIMP_REGISTER_DEV_VILLA_1_1_0.json` (register 1.0.0 never edited).
 - `tests/t479_registry_refresh/` (23 tests: synthetic villa K479 by hand + the committed registry / index).
 - `tests/t478_blinding_integration/test_family_master_1_40_0.py::test_pending_dropped_is_stale`: judged as the newest
   registry (monkeypatched `newer_registry_modules`); without it any later registry that carries the pending entry
@@ -47,7 +47,7 @@ answered A (owner 2026-10-21 20:25): outside finishes ARE in the BOQ, each as it
 band's floor / landscape classification is with the designer (D-48). So the register line stays information; if D-48
 makes the band a floor, its finish is a NEW B13-02 line, never this line re-labelled (rule recorded in the registry).
 
-Census V3.0.44 on 1.41.0: 4,858 lines, **0 outside every family, 0 doubly mapped**, 1 NOT_A_BOQ_LINE, issues {}.
+Census V3.0.45 on 1.41.0: 4,861 lines, **0 outside every family, 0 doubly mapped**, 1 NOT_A_BOQ_LINE, issues {}.
 T-471 completeness on 1.41.0 / register 1.1.0, LINE level: 105 components, **complete_map True, issues {}** (0
 UNMAPPED, 0 DOUBLY_MAPPED, 0 REGISTRY_GAP). Register 1.1.0 also hands the STR.EARTH.* codes that B1-02 .. B1-04 gained
 in 1.38.0 (T-350) to their single components (18 earthworks lines were UNMAPPED at line level on register 1.0.0, which
@@ -59,10 +59,10 @@ Root cause (not only three families): no registry version since 1.3.0 has moved 
 candidate_packages; **38 merged packages (V3.0.8 .. V3.0.45) sit in pending_packages** and every family's `candidate`
 block is dated ARCH_TAKEOFF_V3.0.7 / T-193. tools/family_master_candidate.py refuses a family block dated after the
 registry's candidate, so the three blocks cannot be rewritten alone. 1.41.0 therefore adds `candidate_census` (a fresh
-census of the merged V3.0.44 run for every family, dated by its own version and lines sha256) and corrects the stale
+census of the merged V3.0.45 run for every family, dated by its own version and lines sha256) and corrects the stale
 reader text (opt_in_readers / note / v3_0_planned_tasks) with file:line evidence; the `candidate` blocks stay as of V3.0.7.
 
-| Family | Registry 1.40.0 | Census V3.0.44 (= candidate_census 1.41.0) |
+| Family | Registry 1.40.0 | Census V3.0.45 (= candidate_census 1.41.0; identical on V3.0.44) |
 |---|---|---|
 | B8-08 foundation WP | in_v3_0_candidate no; readers "V3.0.15 .. V3.0.31" | yes: 19 lines, 8 WP.FOUNDATION codes; m2 released 360.0282 (6 lines), held 9 UNKNOWN; m3 released 6.5275 (2), held 1; item held 1 |
 | B10-13 formwork | no; "pending Gate B, T-199"; planned T-199 | yes: 612 lines; released 1,027.977403 m2 (244), held 368 UNKNOWN (= T-474's own figures) |
@@ -71,7 +71,7 @@ reader text (opt_in_readers / note / v3_0_planned_tasks) with file:line evidence
 Registry-wide (`stale_in_candidate_vs_registry`, 21 families): 19 say `no` but the candidate carries lines (B1-02,
 B1-03, B1-04, B3-05, B5-04, B6-05, B6-06, B6-07, B7-10, B7-13, B7-15, B5-06, B8-08, B10-13, B13-01, B13-02, B13-04,
 B13-08, B13-09) and 2 say `yes` with **no line in the candidate at any version 3.0.7 .. 3.0.44**: B8-07 (FIN.WP.BALCONY)
-and B9-02 (STR.CONC.LINTEL) (checked on the reproduced V3_0_7, _8, _20, _30, _44 files). 41 families own no item code
+and B9-02 (STR.CONC.LINTEL) (checked on the reproduced V3_0_7, _8, _20, _30, _44 files and the census of V3.0.45). 41 families own no item code
 and are `n/a`.
 
 ## Finding 3: B8-08 verified share, 7 of 7 lines bound
@@ -102,9 +102,10 @@ from `candidate_census.families[*].units[*].verified_component*`; registry-wide 
   problems; builder --check reproduces; freeze 0 differing; codemap stale none.
 - 1.41.0 registered in rules/RULES_MANIFEST.json via tools/m9_rules_manifest.py (one AUTHORED line), as every
   registry version before it (tests/m9_kb/test_kb_registry.py::test_the_rule_store_gains_no_file).
-- L4 (full suite, 18,644 collected, run in two halves on 8ed5f2db + the maps): half B exit 0; half A one failure,
+- L4 (full suite, 18,644 collected, run in two halves on 8ed5f2db + the maps, before the switch to the V3.0.45 index): half B exit 0; half A one failure,
   tests/codemap test_repository_maps_are_current (maps stale after the manifest-tool line), fixed by the codemap
-  rebuild and re-run green with m9_kb / t479 / t478 / codemap; selfcheck PASS / PASS / PASS on the final tree.
+  rebuild and re-run green with m9_kb / t479 / t478 / codemap; after the V3.0.45 switch (data files, builder path and
+  test constants only) the registry folders, m9_kb, t479, t478, codemap and selfcheck re-run on the final head.
 
 ## Not done / proposals
 

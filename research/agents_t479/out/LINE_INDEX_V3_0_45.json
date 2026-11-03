@@ -1,5 +1,5 @@
 {
- "candidate_version": "ARCH_TAKEOFF_V3.0.44",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.45",
  "downgrades": [
   {
    "downgrade_id": "DG-1033b87f21613d24",
@@ -40,10 +40,7 @@
   },
   {
    "downgrade_id": "DG-3521554d2fd011b9",
-   "engine_qty": 15.179437,
-   "lines_to_held": 1,
-   "status": "APPLIED",
-   "unit": "m3"
+   "status": "STALE_CONTENT (not applied)"
   },
   {
    "downgrade_id": "DG-357cd4619619c4a5",
@@ -134,7 +131,7 @@
  ],
  "inputs": {
   "downgrades": "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766",
-  "lines": "8b2fe2b6cfcfcb848b98bf63ce8fd053f203291fc391d10f2fce506073ab7f81",
+  "lines": "5972888b659e249bed995992f57f0042571d042b50e761cabcc4221d653451d8",
   "verdicts": "b3b08dd767c82e3019ad4e72590ee9ff130cd44f104e198826c0f47f98974922"
  },
  "lines": [
@@ -1901,7 +1898,7 @@
    "class": "HELD",
    "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
    "held_high": 0.59,
-   "held_low": 0.552,
+   "held_low": 0.435,
    "item_code": "STR.CONC.BLINDING",
    "line_id": "L-080c97f5f6a92452cd04",
    "measured_net": null,
@@ -3389,6 +3386,18 @@
    "measured_net": 37.037262,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "held_high": 0.189,
+   "held_low": 0.0,
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-10032bf9a60368473a7b",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -4934,6 +4943,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "held_high": 2.352,
+   "held_low": 2.256,
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-16b95607fc88cda3844a",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -34883,13 +34904,13 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "RELEASED",
    "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTINGS_RELEASED",
-   "held_high": 15.179437,
-   "held_low": 15.179437,
+   "held_high": null,
+   "held_low": null,
    "item_code": "STR.CONC.BLINDING",
    "line_id": "L-98eb2d58075c9eddf1b4",
-   "measured_net": null,
+   "measured_net": 12.734438,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -47810,6 +47831,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.BLINDING",
+   "line_id": "L-d0313e5d204e2758996a",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,

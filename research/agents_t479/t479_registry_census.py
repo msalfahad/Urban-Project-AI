@@ -37,7 +37,7 @@ Definitions (each is a test in tests/t479_registry_refresh):
 - Registry block staleness (compare_blocks): a family's 'in_v3_0_candidate' must agree with the census (yes when the
   candidate has at least one line of the family); a disagreement is STALE_IN_CANDIDATE with both values.
 
-    python3 -I research/agents_t479/t479_registry_census.py --lines V3_0_44_BOQ_LINES.json --version V
+    python3 -I research/agents_t479/t479_registry_census.py --lines V3_0_45_BOQ_LINES.json --version V
         --master rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json --verdicts VERDICT_V2_SET.json
         [--downgrades DOWNGRADES.json] --out CENSUS.json [--index LINE_INDEX.json]
     python3 -I research/agents_t479/t479_registry_census.py --from-index LINE_INDEX.json

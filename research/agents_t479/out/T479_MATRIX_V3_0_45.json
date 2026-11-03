@@ -1,5 +1,5 @@
 {
- "candidate_version": "ARCH_TAKEOFF_V3.0.44",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.45",
  "complete_map": true,
  "components": 105,
  "gates": {
@@ -13,7 +13,7 @@
  "granularity": "line (T-479 line index)",
  "issue_counts": {},
  "issues": [],
- "lines": 4858,
+ "lines": 4861,
  "master_version": "1.41.0",
  "not_a_boq_lines": {
   "ARCH.EXTERIOR": {
@@ -3206,28 +3206,31 @@
    "level": 1,
    "line_classes": {
     "EXCLUDED": 0,
-    "HELD": 4,
-    "RELEASED": 0,
+    "HELD": 6,
+    "RELEASED": 1,
     "VERIFIED": 0
    },
    "line_ids": [
     "L-080c97f5f6a92452cd04",
+    "L-10032bf9a60368473a7b",
+    "L-16b95607fc88cda3844a",
     "L-35382b18e2e362df3ae6",
     "L-7a5214a334ea3559fa2d",
-    "L-98eb2d58075c9eddf1b4"
+    "L-98eb2d58075c9eddf1b4",
+    "L-d0313e5d204e2758996a"
    ],
    "name": "Blinding",
    "quantities": {
     "m3": {
-     "held_high": 26.104635,
-     "held_low": 20.680811,
-     "held_unknown_lines": 0,
-     "lines": 4,
-     "released": 0.0,
+     "held_high": 13.466198,
+     "held_low": 7.640374,
+     "held_unknown_lines": 1,
+     "lines": 7,
+     "released": 12.734438,
      "verified": 0.0
     }
    },
-   "reason": "4 of 4 lines held",
+   "reason": "6 of 7 lines held",
    "row": "T-445",
    "state": "APPLICABLE_HELD"
   },

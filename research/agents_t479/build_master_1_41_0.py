@@ -24,7 +24,7 @@ or default changes.
   T-270) and B10-13 / B7-13 (since V3.0.30, T-199) read 'in_v3_0_candidate: no'. Rewriting 'candidate' alone is refused
   by tools/family_master_candidate.py (every family must name the registry's candidate version, and 38 merged packages
   would have to be promoted with their verdicts first). -> NEW top-level 'candidate_census': a fresh line-level census
-  of the candidate of record (research/agents_t479/t479_registry_census.py on the merged V3.0.44 run) for EVERY family,
+  of the candidate of record (research/agents_t479/t479_registry_census.py on the merged V3.0.45 run) for EVERY family,
   dated by its own method version and lines sha256; and the stale reader text of the three families corrected
   (opt_in_readers / v3_0_planned_tasks / note) with file:line evidence. The 'candidate' blocks stay as of V3.0.7
   (the registry-wide promotion is a separate step, reported as finding F-T479-1).
@@ -50,7 +50,7 @@ if str(HERE) not in sys.path:
 import t479_registry_census as C  # noqa: E402
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.40.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json"
-INDEX = HERE / "out/LINE_INDEX_V3_0_44.json"
+INDEX = HERE / "out/LINE_INDEX_V3_0_45.json"
 REFRESHED = ("B8-08", "B10-13", "B7-13")
 
 
@@ -81,7 +81,7 @@ def pool_family():
             "research/agents_t343 (V3.0.25): the line, BLOCKED_RFI blank, bound 21.308727 m2 beside on the "
             "development villa"],
         "released_method_reads": "none",
-        "opt_in_readers": "ARCH_TAKEOFF_V3.0.25 .. V3.0.44 (engine/source/arch_v3025.py, merged T-343; opt-in "
+        "opt_in_readers": "ARCH_TAKEOFF_V3.0.25 .. V3.0.45 (engine/source/arch_v3025.py, merged T-343; opt-in "
                           "candidate; census: research/agents_t479)",
         "missing": "the finish is printed on no sheet and no owner rule sets it: the line stays BLOCKED_RFI blank "
                    "(never 0); not a floor (owner rule 2026-10-21: the pool water is never a floor) and not the pool "
@@ -125,7 +125,7 @@ def build(index):
                          "copied unchanged; family B13-09 added; pending packages unchanged)")
     new["source"] = (str(old.get("source", "")) + " | 1.41.0 (T-479): 1.40.0 + family B13-09 (pool water-face "
                      "finish) + not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the "
-                     "merged V3.0.44 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state")
+                     "merged V3.0.45 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state")
     iw = dict(new["item_codes_without_family"])
     iw.pop("EXT.POOL.WATER_FACE")
     iw["ARCH.EXTERIOR"] = (iw["ARCH.EXTERIOR"] + " | 1.41.0: declared NOT_A_BOQ_LINE (not_a_boq_line_codes) with "
@@ -137,23 +137,23 @@ def build(index):
     fams = {f["code"]: f for f in new["families"]}
     hub = "tools/urban_boq_m9.py"
     f = fams["B8-08"]
-    f["opt_in_readers"] = ("ARCH_TAKEOFF_V3.0.15 .. V3.0.44 (engine/source/arch_v3015.py, merged T-270; "
+    f["opt_in_readers"] = ("ARCH_TAKEOFF_V3.0.15 .. V3.0.45 (engine/source/arch_v3015.py, merged T-270; "
                            f"{_at(hub, r'^    v3015 = a.method in')} runs the V3.0.15 extension for every method "
                            "V3.0.15 .. V3.0.45; opt-in candidate)")
     f["note"] = (f["note"] + " | 1.41.0 (T-479, from the T-353 Checker note): the candidate CARRIES the eight "
-                 "WP.FOUNDATION codes since V3.0.15 (census V3.0.44 in candidate_census); 'in_v3_0_candidate: no' and "
-                 "the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1), not a statement about V3.0.44")
+                 "WP.FOUNDATION codes since V3.0.15 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and "
+                 "the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1), not a statement about V3.0.45")
     for code in ("B10-13", "B7-13"):
         g = fams[code]
         g["opt_in_readers"] = g["opt_in_readers"].replace(
             "ARCH_TAKEOFF_V3.0.30 (engine/source/arch_v3030.py, opt-in candidate; pending Gate B, T-199)",
-            f"ARCH_TAKEOFF_V3.0.30 .. V3.0.44 (engine/source/arch_v3030.py, merged T-199; "
+            f"ARCH_TAKEOFF_V3.0.30 .. V3.0.45 (engine/source/arch_v3030.py, merged T-199; "
             f"{_at(hub, r'^    v3030 = a.method in')} runs it for every method V3.0.30 .. V3.0.45; opt-in candidate)")
         assert "merged T-199" in g["opt_in_readers"], code
         if g.get("v3_0_planned_tasks") == ["T-199"]:
             g["v3_0_planned_tasks"] = []
         g["note"] = (str(g.get("note") or "") + " | 1.41.0 (T-479, from the T-474 handoff): T-199 merged; the "
-                     "candidate CARRIES this family since V3.0.30 (census V3.0.44 in candidate_census); "
+                     "candidate CARRIES this family since V3.0.30 (census V3.0.45 in candidate_census); "
                      "'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1)")
 
     cap = dict(new["capability_counts"])
@@ -179,10 +179,11 @@ def build(index):
         "lines_sha256": index["inputs"]["lines"],
         "verdicts_sha256": index["inputs"].get("verdicts"),
         "downgrades_sha256": index["inputs"].get("downgrades"),
-        "index": "research/agents_t479/out/LINE_INDEX_V3_0_44.json (sha256 "
+        "index": "research/agents_t479/out/LINE_INDEX_V3_0_45.json (sha256 "
                  + hashlib.sha256(INDEX.read_bytes()).hexdigest() + ")",
-        "scope": "the development villa run of the merged candidate of record V3.0.44 (T-422 merge b4e22291), "
-                 "reproduced from the Drive copies; the pending V3.0.45 (T-478) changes B10-01 lines only",
+        "scope": "the development villa run of the merged candidate of record V3.0.45 (T-478 merge 8ccf69b3; "
+                 "BOQ_LINES 5972888b reproduced from the Drive copies, V3.0.44 8b2fe2b6 on the way); the V3.0.44 verdict "
+                 "set binds by line content (V3.0.45 changes B10-01 lines only: 3 added, 2 changed, none verified)",
         "meaning": "per family: in_candidate yes/no, lines, item codes present and, per unit, released / held "
                    "(bounded low .. high, UNKNOWN count) / excluded, and the Checker-verified share apart: "
                    "VERIFIED_WHOLE (group verdict) and VERIFIED_COMPONENT (a one-line verdict equal to the whole "
