@@ -34,17 +34,17 @@ PENDING = {
     "changes_families_by_item_code": ["FIN.SKIRTING"],
     "note": "T-483 (research/agents_t483/T-483_SKIRTING_REMAINDER_INTEGRATION.md): the Checker-verified T-481 census "
             "integrated: GF-01 W11 / W12 sills 0.70 above the +0.30 floor (section B-B) -> skirting under them, room "
-            "line 14.218 -> 18.128 lm, its range line NOT_APPLICABLE (carried once); W02 and W17 floor glazing and "
-            "W13 / W25 stair-owned (R-T481-3): their held ranges closed NOT_APPLICABLE; the 1F dressing walked by "
-            "handle 5.100 lm (was HELD BLANK); the 1F shaft binding (9.050 lm to B7) WAITING; every other V3.0.47 "
-            "line byte-identical; the Gate B integration package",
+            "line 14.218 -> 18.128 lm, its range line NOT_APPLICABLE (carried once); W02 and W17 floor glazing: their "
+            "held ranges closed NOT_APPLICABLE; the 1F dressing walked by handle 5.100 lm (was HELD BLANK); the 1F "
+            "shaft faces 9.050 lm and the W13 / W25 range 2.200 lm WAITING (owner B7-07 / B7-08 not in the "
+            "candidate); every other V3.0.47 line byte-identical; the Gate B integration package",
 }
 PROPOSED = ("1.45.0 (T-483): moved by the pending ARCH_TAKEOFF_V3.0.48 package (Gate B); the released capability of "
             "V2.9 + route G is unchanged")
 OPT_IN = "ARCH_TAKEOFF_V3.0.48 (engine/source/arch_v3048.py, opt-in candidate; pending Gate B, T-483)"
-MISS = ("in the opt-in candidate V3.0.48: every window held since T-246 is decided (W11 / W12 skirted, W02 / W17 floor "
-        "glazing, W13 / W25 stair-owned): held range high 0; the 1F dressing valued 5.100 lm; still open: the 1F "
-        "shaft binding R-T481-3 (9.050 lm inside the 1F living net until bound by handle), the W02 pier D-53")
+MISS = ("in the opt-in candidate V3.0.48: W11 / W12 skirted, W02 / W17 floor glazing (ranges closed); the 1F dressing "
+        "valued 5.100 lm; still open: R-T481-3 on the 1F shaft (9.050 lm inside the 1F living net, W13 / W25 range "
+        "0 .. 2.200 held) until B7-07 / B7-08 have candidate lines, the W02 pier D-53")
 
 
 def _at(path, pattern):

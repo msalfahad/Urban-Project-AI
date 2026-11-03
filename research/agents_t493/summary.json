@@ -1,0 +1,453 @@
+{
+ "adjacency_overlap_m2": {
+  "ST01-2F-ARRIVAL vs 2F lobby L-9bd25c0c (x 2.50 .. 4.50, y -1.45 .. -0.20)": 0.0
+ },
+ "b3_b7_shared_m2": 0.0,
+ "b7_04_after_m2": 20.6894,
+ "bounds": {
+  "L-1983e89d GF-R31F8AE:landings 0 .. 2.9225": {
+   "landing_m2": 0,
+   "non_landing_m2": 2.9225,
+   "verdict": "NOT_APPLICABLE_AS_LANDING_BOUND"
+  },
+  "L-5d2be30d 2F-R4D1B62:landings 0 .. 9.225": {
+   "landing_m2": 7.7975,
+   "non_landing_m2": 1.4275,
+   "verdict": "LANDINGS_LEAVE_AS_OWN_LINES"
+  }
+ },
+ "candidate_lines": {
+  "index": "research/agents_t485/out/LINE_INDEX_V3_0_46.json",
+  "lines": {
+   "L-1983e89d": {
+    "class": "HELD",
+    "element": "GF-R31F8AE:landings",
+    "held": [
+     0.0,
+     2.9225
+    ],
+    "item": "FIN.MARBLE.LANDING",
+    "net": null
+   },
+   "L-3dd82a57": {
+    "class": "RELEASED",
+    "element": "GF-COURT#E1-LANDING",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.MARBLE.LANDING",
+    "net": 5.1794
+   },
+   "L-5d2be30d": {
+    "class": "HELD",
+    "element": "2F-R4D1B62:landings",
+    "held": [
+     0.0,
+     9.225001
+    ],
+    "item": "FIN.MARBLE.LANDING",
+    "net": null
+   },
+   "L-7625f35c": {
+    "class": "RELEASED",
+    "element": "GF-RC99C2A:floor",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.FLOOR.PORCELAIN",
+    "net": 109.478417
+   },
+   "L-8011889d": {
+    "class": "RELEASED",
+    "element": "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing#MATERIAL:FIN_MARBLE_LANDING",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.MARBLE.LANDING",
+    "net": 4.9225
+   },
+   "L-9bd25c0c": {
+    "class": "RELEASED",
+    "element": "2F-R4D1B62:2F-ST-LOBBY",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.FLOOR.PORCELAIN",
+    "net": 2.2
+   },
+   "L-b06400d4": {
+    "class": "RELEASED",
+    "element": "1F-R78C367:floor",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.FLOOR.PORCELAIN",
+    "net": 33.411036
+   },
+   "L-b4441a1b": {
+    "class": "RELEASED",
+    "element": "GF-R31F8AE:GF-ST-LOBBY030",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.FLOOR.FINISH_HELD",
+    "net": 1.3225
+   },
+   "L-f53d4986": {
+    "class": "RELEASED",
+    "element": "GF-R31F8AE:GF-ST-HALL",
+    "held": [
+     null,
+     null
+    ],
+    "item": "FIN.FLOOR.FINISH_HELD",
+    "net": 4.805
+   }
+  },
+  "note": "candidate of record V3.0.47 (T-443) changed FIN.SKIRTING only; every landing / floor line below is read from the V3.0.46 line index (T-485)"
+ },
+ "drawing_sha256_8": "ab54dd55",
+ "drawn_line_checks": "PASS",
+ "drawn_minus_line_m2": {
+  "ST01-1F-ARRIVAL": 0.0,
+  "ST01-GF-HALL": 0.0,
+  "ST01-GF-LOBBY030": 0.0,
+  "ST03-E1-LANDING": 0.0006
+ },
+ "existing_b7_04_landing_lines_m2": 10.1019,
+ "floor_levels": [
+  0.15,
+  0.3,
+  1.0,
+  5.5,
+  9.7
+ ],
+ "held_high_retired_m2": 12.1475,
+ "method": "LANDING_CENSUS_V1",
+ "ms2_ld_split": {
+  "surfaces": [
+   {
+    "area_m2": 1.495,
+    "id": "MS2-LD-W",
+    "level": 7.516
+   },
+   {
+    "area_m2": 1.4375,
+    "id": "MS2-LD-E",
+    "level": 7.684
+   }
+  ],
+  "total_m2": 2.9325
+ },
+ "ms2_ld_split_status": "HELD as a split (W / E): the closing riser is drawn as the pair BE4 / 12B4 + BE5 / 12B5 at x 1.25 / 1.30 (structural 5E2 at 1.30), but the 2F plan also draws the diagonal pair 2F1F / 2F20 across the east half (Q-ST-11, no stated meaning); the section A-A has one closing riser, so the total is established either way",
+ "proposed_b7_04_lines": [
+  {
+   "basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "level": 3.5,
+   "m2": 1.4375,
+   "material": "MARBLE",
+   "part": "ST01-MS1-LD"
+  },
+  {
+   "basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "level": 7.516,
+   "m2": 2.9325,
+   "material": "MARBLE",
+   "part": "ST01-MS2-LD"
+  },
+  {
+   "basis": "OWNER_ANSWER Q-70 A (condition met, T-129)",
+   "level": 9.7,
+   "m2": 4.865,
+   "material": "MARBLE",
+   "part": "ST01-2F-ARRIVAL"
+  },
+  {
+   "basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "level": 4.696,
+   "m2": 1.3525,
+   "material": "MARBLE",
+   "part": "ST02-RS-LD"
+  }
+ ],
+ "proposed_new_b7_04_m2": 10.5875,
+ "rows": [
+  {
+   "area_m2": 4.805,
+   "edges": "220 / 21B / 490 (D1 last nosing) / divider 47E-4A4 / DE (MS1-L riser face, T-418) / 298",
+   "element": "FLOOR_OR_LANDING",
+   "id": "ST01-GF-HALL",
+   "level": 1.0,
+   "line": "L-f53d4986",
+   "line_state": "FINISH_HELD 4.805 (B3-01)",
+   "material": null,
+   "material_basis": "HELD: no printed landing depth, no owner answer, no project source (R-T490-1)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MATERIAL_HELD",
+   "trade": "HELD (B3-01 or B7-04)"
+  },
+  {
+   "area_m2": 1.3225,
+   "edges": "481 (D1 first nosing) / 21B / 26F-door OP-013-2AB / divider",
+   "element": "FLOOR_OR_LANDING",
+   "id": "ST01-GF-LOBBY030",
+   "level": 0.3,
+   "line": "L-b4441a1b",
+   "line_state": "FINISH_HELD 1.3225 (B3-01)",
+   "material": null,
+   "material_basis": "HELD: no printed landing depth, no owner answer, no project source (R-T490-1)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MATERIAL_HELD",
+   "trade": "HELD (B3-01 or B7-04)"
+  },
+  {
+   "area_m2": null,
+   "edges": "485 / 4A2 / 49E / 4A0",
+   "element": "WINDER",
+   "id": "ST01-MS1-T",
+   "level": null,
+   "line": null,
+   "line_state": "tread family (T-412 / Q-51 HELD; S-9)",
+   "material": null,
+   "material_basis": "tread family (not a landing)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "TREAD_FAMILY",
+   "trade": "B7-02"
+  },
+  {
+   "area_m2": 1.4375,
+   "edges": "2C6 / 49C (GF, hidden) = BE4 (1F, seen below): own nosing x 1.25; A92 (MS1-U first nosing) y 3.85; 21B / B16 x 2.50; 2AB-26F / ADE y 5.00",
+   "element": "STAIR_LANDING",
+   "id": "ST01-MS1-LD",
+   "level": 3.5,
+   "line": null,
+   "line_state": "NO LINE (silent omission, F-3)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  },
+  {
+   "area_m2": 4.9225,
+   "edges": "printed 1950 (10DF) to AC0 y 0.50; divider end AC3 y 0.45 (-0.010); MS1-U floor nosing band y 0.50 .. 0.55 (+0.0575, T-269)",
+   "element": "STAIR_ARRIVAL",
+   "id": "ST01-1F-ARRIVAL",
+   "level": 5.5,
+   "line": "L-8011889d",
+   "line_state": "RELEASED 4.9225 (B7-04)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_ANSWER Q-66 B",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  },
+  {
+   "area_m2": 2.9325,
+   "edges": "A97 (MS2-L last nosing, printed 1200 10C3 / 14D5) y 3.80; divider end A9B / 1363 y 3.85; 135B (MS2-U first nosing) y 3.85; AF0 / 12B8 x 0; B16 / 129A x 2.50; ADE / 127E y 5.00; closing riser BE4 / 12B4 nosing x 1.25 (face 1.30) splits +7.516 / +7.684",
+   "element": "STAIR_LANDING",
+   "id": "ST01-MS2-LD",
+   "level": 7.516,
+   "line": null,
+   "line_state": "only inside HELD bound L-5d2be30d 0 .. 9.225 (no line of its own)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  },
+  {
+   "area_m2": 4.865,
+   "edges": "1282 / 1283 y -1.45 (door OP-001 changes no floor area); 12B7 x 0; lobby edge x 2.50 (L-9bd25c0c beyond); slab / guard edge 138A y 0.45 to x 1.35; MS2-U floor nosing band y 0.50 .. 0.55 (12th riser face 0.50 by the 0.300 going from 1385 0.80; nosing not drawn, T-412)",
+   "element": "STAIR_ARRIVAL",
+   "id": "ST01-2F-ARRIVAL",
+   "level": 9.7,
+   "line": null,
+   "line_state": "only inside HELD bound L-5d2be30d 0 .. 9.225 (F-1)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_ANSWER Q-70 A (condition met, T-129)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-01",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  },
+  {
+   "area_m2": null,
+   "edges": "RS-C first riser on the room floor; no landing zone drawn",
+   "element": "FLOOR",
+   "id": "ST02-GF-FOOT",
+   "level": 1.0,
+   "line": "L-7625f35c",
+   "line_state": "GF open-room porcelain (B3-01)",
+   "material": null,
+   "material_basis": "the room's floor line (B3) decides",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-02",
+   "status": "IN_ROOM_LINE",
+   "trade": "B3-01"
+  },
+  {
+   "area_m2": 1.3525,
+   "edges": "B4D (RS-S last nosing) x 0; 336 GF wall face y 0 to x 0.65 then column 3008 proud 0.050 (x 0.65 .. 1.20); AF5 x 1.20 (edge band AF5 / AF6); B59 (RS-A first nosing) y 1.15",
+   "element": "STAIR_LANDING",
+   "id": "ST02-RS-LD",
+   "level": 4.696,
+   "line": null,
+   "line_state": "NO LINE (F-2; deducted from 1F porcelain as R04 1.352454)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE UP-STAIR-005 (MANDATORY)",
+   "solid_cut_m2": 0.0275,
+   "stair": "ST-02",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  },
+  {
+   "area_m2": null,
+   "edges": "RS-A floor edge D22; the 1F living floor beyond; no landing zone drawn (nosing D22 lm in B7-05)",
+   "element": "FLOOR",
+   "id": "ST02-1F-TOP",
+   "level": 5.5,
+   "line": "L-b06400d4",
+   "line_state": "1F living porcelain (B3-01)",
+   "material": null,
+   "material_basis": "the room's floor line (B3) decides",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-02",
+   "status": "IN_ROOM_LINE",
+   "trade": "B3-01"
+  },
+  {
+   "area_m2": 5.18,
+   "edges": "printed 1400 (9A4) x 3700 (9B2), T-490 Checker re-measure",
+   "element": "STAIR_ARRIVAL",
+   "id": "ST03-E1-LANDING",
+   "level": 1.0,
+   "line": "L-3dd82a57",
+   "line_state": "RELEASED 5.1794 (B7-04)",
+   "material": "MARBLE",
+   "material_basis": "OWNER_ANSWER OWNER_RULE_OUTDOOR_FLOORS (outside stairs marble)",
+   "solid_cut_m2": 0.0,
+   "stair": "ST-03",
+   "status": "MEASURED",
+   "trade": "B7-04"
+  }
+ ],
+ "rule": "R-T493-1",
+ "stacked": {
+  "ST-01": [
+   {
+    "a": "ST01-GF-HALL",
+    "b": "ST01-1F-ARRIVAL",
+    "levels": [
+     1.0,
+     5.5
+    ],
+    "plan_overlap_m2": 1.2975,
+    "surface_overlap_m2": 0.0
+   },
+   {
+    "a": "ST01-GF-HALL",
+    "b": "ST01-2F-ARRIVAL",
+    "levels": [
+     1.0,
+     9.7
+    ],
+    "plan_overlap_m2": 1.24,
+    "surface_overlap_m2": 0.0
+   },
+   {
+    "a": "ST01-GF-LOBBY030",
+    "b": "ST01-MS1-LD",
+    "levels": [
+     0.3,
+     3.5
+    ],
+    "plan_overlap_m2": 1.3225,
+    "surface_overlap_m2": 0.0
+   },
+   {
+    "a": "ST01-GF-LOBBY030",
+    "b": "ST01-MS2-LD",
+    "levels": [
+     0.3,
+     7.516
+    ],
+    "plan_overlap_m2": 1.3225,
+    "surface_overlap_m2": 0.0
+   },
+   {
+    "a": "ST01-MS1-LD",
+    "b": "ST01-MS2-LD",
+    "levels": [
+     3.5,
+     7.516
+    ],
+    "plan_overlap_m2": 1.4375,
+    "surface_overlap_m2": 0.0
+   },
+   {
+    "a": "ST01-1F-ARRIVAL",
+    "b": "ST01-2F-ARRIVAL",
+    "levels": [
+     5.5,
+     9.7
+    ],
+    "plan_overlap_m2": 4.865,
+    "surface_overlap_m2": 0.0
+   }
+  ],
+  "ST-02": [],
+  "ST-03": []
+ },
+ "task": "T-493",
+ "under_nosing_beside": [
+  {
+   "flight": "MS1-L",
+   "m2": 0.0575,
+   "note": "IN the existing hall part (T-418 runs to the riser face DE y 1.15; the nosing DC is y 1.10): convention residual of the B3 line, named",
+   "part": "ST01-GF-HALL"
+  },
+  {
+   "flight": "D1",
+   "m2": 0.0575,
+   "note": "beside (part ends at nosing 481)",
+   "part": "ST01-GF-LOBBY030"
+  },
+  {
+   "flight": "MS1-U",
+   "m2": 0.0575,
+   "note": "beside (A92 / A93)",
+   "part": "ST01-MS1-LD"
+  },
+  {
+   "flight": "MS2-L",
+   "m2": 0.0575,
+   "note": "beside (AC0 / AC2)",
+   "part": "ST01-1F-ARRIVAL"
+  },
+  {
+   "flight": "MS2-TR + MS2-U",
+   "m2": 0.115,
+   "note": "beside (12B4 / 12B5 and 135B / 135C)",
+   "part": "ST01-MS2-LD"
+  },
+  {
+   "flight": "RS-A",
+   "m2": 0.0575,
+   "note": "beside (B59 / B6E)",
+   "part": "ST02-RS-LD"
+  }
+ ]
+}

@@ -24,7 +24,9 @@ openings, a door jamb is never skirted, and closes on the declared gross; (e) ev
 candidate (state, net, gross, range) and refused if stale; (f) held stays blank, never 0.
 
 NOT IN THIS VERSION (named, unchanged): the 1F ST-1F shaft binding of R-T481-3 (9.050 lm of the 1F living line's
-determinate net to B7) needs the engine edges of that line by handle (WAITING T483_1F_SHAFT); the W02 pier D-53.
+determinate net and its W13 / W25 held range 2.200 lm to B7): the owner lines B7-07 / B7-08 are not in the candidate,
+so a transfer would drop the faces from the BOQ (WAITING T483_1F_SHAFT); the W02 pier D-53. STAIR_OWNED closes are
+supported for a villa whose stair skirting lines exist.
 
 Nothing else moves: every V3.0.47 line not named by the inputs is byte-identical (asserted); totals move only in
 FIN.SKIRTING (asserted). Files: V3_0_48_BOQ_LINES.json / .csv, V3_0_48_INTEGRATION_LEDGER.json / .csv,
@@ -127,9 +129,9 @@ WAITING = dict(A3047.WAITING)
 WAITING.pop("T443_1F_SHAFT", None)
 WAITING.update({
     "T483_1F_SHAFT": "1F living line: the ST-1F shaft faces (R-T481-3: 9.050 lm along flights / landings to B7, 1.175 "
-                     "lm room) stay inside the determinate net until the engine edges of that line are bound by handle "
-                     "(no edge-level record in the line): a separate package; its W13 / W25 range is closed here "
-                     "(STAIR_OWNED)",
+                     "lm room) stay inside the determinate net, and its W13 / W25 range (0 .. 2.200) stays held: the "
+                     "owner B7-07 / B7-08 has no candidate line yet (NOT_IN_CANDIDATE), so moving a face there now "
+                     "would drop it from the BOQ; bind both (by handle) when the stair skirting lines exist",
     "T483_W02_PIER": "W02 pier (D-53): if the designer confirms one, its room face takes skirting; no width drawn, "
                      "nothing valued",
 })

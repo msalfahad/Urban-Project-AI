@@ -22,10 +22,6 @@ SOURCES = [
      "sha256": "9be4c4070bec20643186fe2af0912611bbfc7983f687c3ee8c8c54005497833d", "merge_commit": "a8609a7a",
      "checker_run": "Verifier 2026-11-03T05:44Z Gate A PASS (own re-measure W17 NW elevation chain, W11 section B-B "
                     "scan 0.72 over +0.30, W02 floor glazing, 1F dressing 5.100 lm by handle: AGREE)"},
-    {"task": "T-481-SHAFT", "file": "research/agents_t481/SHAFT_FACES_T481.csv",
-     "sha256": "ca91374125421e928764e4ba084f32e205d968d246d52154eefdac92f48dc4b9", "merge_commit": "a8609a7a",
-     "checker_run": "Verifier 2026-11-03T05:44Z merged T-481 (R-T481-3 shaft stations: worker table on the merged "
-                    "T-410 side table; NOT re-measured at Gate A: the Checker re-measures W13 / W25 here)"},
 ]
 DRESSING_LINE = "L-4a85470b3a822d6fb7bb"   # FIN.SKIRTING 1F-RFFE7AF (SKIRT-T422), BLOCKED_RFI blank since V3.0.44
 DRESSING_ROOM, DRESSING_FLOOR = "1F-RFFE7AF", "1F"
@@ -74,16 +70,9 @@ def build(project_id):
             ws.append(w)
         clo.append({"line_id": r["range"], "expect": {"low": 0.0, "high": r["range_hi"]}, "windows": ws,
                     "source_tasks": ["T-481"]})
-    lv = T481.L_LIVING
-    owner = {"W13": "MS2-L.W2 (T-410 stair side stretch, HELD there on sill vs flight)",
-             "W25": "MS2-LD.N (T-410 stair side stretch, HELD there)"}
-    clo.append({"line_id": lv["range"], "expect": {"low": 0.0, "high": lv["range_hi"]},
-                "windows": [{"census_id": c, "edge_lm": e, "sill_m": None, "status": "DRAWING-CONFIRMED",
-                             "reason": "STAIR_OWNED", "owner": owner[c],
-                             "why": "R-T481-3: the window's stretch lies inside a flight / landing side stretch of the "
-                                    "1F shaft (SHAFT_FACES_T481.csv), one face one owner"}
-                            for c, e in sorted(lv["windows"].items())],
-                "source_tasks": ["T-481-SHAFT"]})
+    # W13 / W25 (living range L-079bc766, 0 .. 2.200): R-T481-3 puts both inside stair side stretches, but B7-07 /
+    # B7-08 have no candidate line (NOT_IN_CANDIDATE in BOQ_FAMILY_MASTER 1.44.0): closing the range now would drop
+    # 2.200 lm from the BOQ. Kept HELD (WAITING T483_1F_SHAFT), with the 9.050 lm shaft faces.
     walk = [{"line_id": DRESSING_LINE, "room": DRESSING_ROOM, "floor": DRESSING_FLOOR,
              "expect": {"evidence_state": "BLOCKED_RFI"}, "gross_lm": 6.9, "evidence_status": "VERIFIED",
              "evidence_state": "SOURCE_DERIVED",

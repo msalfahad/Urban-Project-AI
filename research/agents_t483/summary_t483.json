@@ -1,0 +1,154 @@
+{
+ "task": "T-483",
+ "method": "ARCH_TAKEOFF_V3.0.48",
+ "extends": "ARCH_TAKEOFF_V3.0.47",
+ "base_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
+ "candidate_sha256": "f1fbc045bac457edc7917ef4a87bbbac25a961a6009eb0b864bde54800200a83",
+ "lines": {
+  "base": 4874,
+  "v3_0_48": 4874,
+  "added": 0,
+  "replaced": 5,
+  "outside_identical": 4869
+ },
+ "remainder": {
+  "absorbed": 1,
+  "closed": 2,
+  "closed_lm": 9.621076,
+  "released_lines": 1,
+  "released_lm": 3.90984,
+  "walked": 1,
+  "walked_lm": 5.1
+ },
+ "superseded_records": [
+  "deduction_listing_v3036",
+  "skirting_release_v3044"
+ ],
+ "totals_moved_by_code": {
+  "FIN.SKIRTING|lm": {
+   "base": {
+    "blocked_lines": 5,
+    "bounded_lines": 4,
+    "held_high": 15.730915,
+    "held_low": 0.0,
+    "lines": 23,
+    "released": 203.368752
+   },
+   "v3_0_48": {
+    "blocked_lines": 4,
+    "bounded_lines": 1,
+    "held_high": 2.2,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 212.378592
+   }
+  }
+ },
+ "rows": [
+  {
+   "line_id": "L-d32414916cfbd04c27be",
+   "element_id": "GF-R7512EA:skirting",
+   "floor": "GF",
+   "room_id": "GF-R7512EA",
+   "action": "RELEASE",
+   "change": "CHANGE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 14.218037
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 18.127877
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-836720153cd9a3578f63",
+   "element_id": "GF-R7512EA:skirting, boundary role unresolved",
+   "floor": "GF",
+   "room_id": "GF-R7512EA",
+   "action": "ABSORB_RANGE",
+   "change": "CHANGE",
+   "before": {
+    "high": 3.909839,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-e7dcdc69e1a2b24f8616",
+   "element_id": "GF-RC99C2A:skirting, boundary role unresolved",
+   "floor": "GF",
+   "room_id": "GF-RC99C2A",
+   "action": "CLOSE_RANGE",
+   "change": "CHANGE",
+   "before": {
+    "high": 6.331578,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-fbba0e0db25f6b481eaa",
+   "element_id": "1F-R3CFCFD:skirting, boundary role unresolved",
+   "floor": "1F",
+   "room_id": "1F-R3CFCFD",
+   "action": "CLOSE_RANGE",
+   "change": "CHANGE",
+   "before": {
+    "high": 3.289498,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "line_id": "L-4a85470b3a822d6fb7bb",
+   "element_id": "SKIRT-T422:1F-RFFE7AF",
+   "floor": "1F",
+   "room_id": "1F-RFFE7AF",
+   "action": "WALK",
+   "change": "CHANGE",
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 5.1
+   },
+   "evidence_status": "VERIFIED"
+  }
+ ]
+}
