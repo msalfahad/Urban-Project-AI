@@ -4,6 +4,10 @@ finding F-C-T485-1 (rule r4: a family that owns no item code says 'N/A', never '
 
     python3 -I research/agents_t350r4/build_master_1_45_0.py --task-commit <sha> | --check
 
+Package id T-350b: the first T-350 package (V3.0.43, merge 3077469a) is the merged package 'T-350'; this second
+T-350 package (round 4) takes the next letter (task ids T-nnn[a-z]); it integrates the merged T-350 r2 piece (42a99508,
+registered under T-350) and T-484 (12395ea4).
+
 Families: B1-02 / B1-03 (evidence, opt-in reader, missing / note text), B1-04 (note: stays HELD BLANK); the 7 families
 with no item code (B2-01, B2-03, B2-04, B2-05, B4-04, B7-14, B11-03): in_v3_0_candidate 'yes' -> 'N/A' and the counts.
 No capability, owner or candidate state changes; candidate_census and candidate blocks copied unchanged (promotion
@@ -30,8 +34,8 @@ MOD = "engine/source/arch_v3048.py"
 TST = "tests/t350r4_earthworks_values/test_arch_v3048.py"
 NA_FAMILIES = ("B2-01", "B2-03", "B2-04", "B2-05", "B4-04", "B7-14", "B11-03")
 PENDING = {
-    "task": "T-350", "method_version": "ARCH_TAKEOFF_V3.0.48", "module": MOD,
-    "status": FMC.PENDING_STATUS, "integrates": ["T-350r2", "T-484"],
+    "task": "T-350b", "method_version": "ARCH_TAKEOFF_V3.0.48", "module": MOD,
+    "status": FMC.PENDING_STATUS, "integrates": ["T-350", "T-484"],
     "tests": ["tests/t350r4_earthworks_values"],
     "changes_families_by_item_code": ["STR.EARTH.EXCAVATION", "STR.EARTH.BACKFILL"],
     "note": "T-350 r4 (research/agents_t350r4/T-350R4_EARTHWORKS_VALUES.md): the HELD BLANK V3.0.43 earthworks zone "
@@ -84,7 +88,7 @@ def build(task_commit):
             f"SOURCE_DERIVED by its evidence status) or ranged (BOUNDED_EXPOSURE), held parts by name beside; "
             f"{_at(MOD, r'^def load_inputs')} load_inputs() (backfill closes excavation - displacement at both ends); "
             f"{_at(MOD, r'^def check_earthworks')} check_earthworks(); "
-            f"{_at(TST, r'^def test_hand_villa_values')} (villa E348 by hand)"]
+            f"{_at(TST, r'^def test_hand_villa_values')} (villa E350 by hand)"]
         f["opt_in_readers"] = str(f.get("opt_in_readers") or "") + " | " + OPT_IN
     for code, m in MISS.items():
         f = fams[code]
