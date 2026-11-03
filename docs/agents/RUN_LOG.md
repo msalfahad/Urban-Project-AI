@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T19:12Z | Worker 2 | SUCCESS | T-486 READY (agents/task-T-486 @ ccbe3aca) | B8-07 balcony/terrace WP census: adds 0 m2 on the dev villa (2F roof terrace 115.832 m2 already in FIN.WP.ROOF; 1F roofs 55.559 / 32.721 carried); found the pool-court slab round the void with no WP line in any family: 4.907 m2 open-sky MISSING (B8-06) + 0.640 m2 overhang ledge HELD; vs T-062 6.130 the 0.584 is the bay-frame piers; no drain printed (RFI). 17 tests pass, freeze 0 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: first commit refused by the session classifier ([Sensitive-Source Provenance]) because the module held drawing-derived local coordinates; reworked to read the private drawing at run time, handles only, then committed
 - 2026-11-03T19:01Z | Worker 3 | IDLE | none (run lock held by run 20261103T170209-357-21557 since 2026-11-03T17:02Z) | overlap lock: another Worker 3 run is active; no claim, no change, no quantity | lock
 - 2026-11-03T18:53Z | Verifier | STARTED | run session_01E6cPnc4vCV5hn8JXFvrHkg | repo-attached routine | task state: READY T-443 r3 (Worker 1 18:09) per RUN_LOG | self-check pending
 - 2026-11-03T18:43Z | Worker 2 | STARTED | run session_01E6cPnb7f8PsvX8qhs7zV3a | repo-attached routine | task state: none yet | self-check pending
