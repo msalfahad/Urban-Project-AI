@@ -1,0 +1,1079 @@
+{
+ "drawing": {
+  "P7757.dxf_sha256_8": "ab54dd55"
+ },
+ "frame_note": "SHAFT frames GF / 1F / 2F share y; x per plan from the west wall face; RS from B4D",
+ "frames": {
+  "1F": {
+   "10C3": {
+    "layer": "4",
+    "pts": [
+     [
+      0.8628,
+      5.0
+     ],
+     [
+      0.8628,
+      3.8
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1200.0,
+    "what": "printed half-landing depth"
+   },
+   "10D1": {
+    "layer": "4",
+    "pts": [
+     [
+      0.8628,
+      3.8
+     ],
+     [
+      0.8628,
+      0.5
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 3300.0,
+    "what": "printed flight run"
+   },
+   "10DF": {
+    "layer": "4",
+    "pts": [
+     [
+      0.8628,
+      0.5
+     ],
+     [
+      1.4158,
+      -1.45
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1950.0,
+    "what": "printed arrival depth"
+   },
+   "10ED": {
+    "layer": "4",
+    "pts": [
+     [
+      0.0,
+      2.75
+     ],
+     [
+      1.2,
+      2.75
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1200.0,
+    "what": "printed lane width (west)"
+   },
+   "10FB": {
+    "layer": "4",
+    "pts": [
+     [
+      1.2,
+      2.75
+     ],
+     [
+      1.3,
+      2.7865
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 100.0,
+    "what": "printed divider"
+   },
+   "110A": {
+    "layer": "4",
+    "pts": [
+     [
+      1.3,
+      2.7865
+     ],
+     [
+      2.5,
+      2.7865
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1200.0,
+    "what": "printed lane width (east)"
+   },
+   "A92": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      3.85
+     ],
+     [
+      1.35,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-U first nosing = MS1-LD south edge seen below (L5)"
+   },
+   "A93": {
+    "layer": "2",
+    "pts": [
+     [
+      2.5,
+      3.8
+     ],
+     [
+      1.35,
+      3.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-U first riser face (L2)"
+   },
+   "A97": {
+    "layer": "5",
+    "pts": [
+     [
+      1.15,
+      3.8
+     ],
+     [
+      0.0,
+      3.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-L last nosing = MS2-LD west edge (L5)"
+   },
+   "A9A": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.85
+     ],
+     [
+      0.0,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-L last riser face (L2)"
+   },
+   "A9B": {
+    "layer": "5",
+    "pts": [
+     [
+      1.35,
+      3.85
+     ],
+     [
+      1.15,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "divider end (L5)"
+   },
+   "ABE": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      0.85
+     ],
+     [
+      1.35,
+      0.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-U 11th nosing (L5)"
+   },
+   "AC0": {
+    "layer": "5",
+    "pts": [
+     [
+      1.15,
+      0.5
+     ],
+     [
+      0.0,
+      0.5
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-L first nosing = 1F arrival edge (L5)"
+   },
+   "AC2": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      0.55
+     ],
+     [
+      0.0,
+      0.55
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-L first riser face (L2)"
+   },
+   "AC3": {
+    "layer": "5",
+    "pts": [
+     [
+      1.35,
+      0.45
+     ],
+     [
+      1.15,
+      0.45
+     ]
+    ],
+    "type": "LINE",
+    "what": "divider band south end (L5)"
+   },
+   "ADE": {
+    "layer": "1",
+    "pts": [
+     [
+      1.4,
+      5.0
+     ],
+     [
+      0.0,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "north wall face"
+   },
+   "AF0": {
+    "layer": "1",
+    "pts": [
+     [
+      0.0,
+      5.0
+     ],
+     [
+      0.0,
+      3.95
+     ]
+    ],
+    "type": "LINE",
+    "what": "west wall face (north part)"
+   },
+   "B16": {
+    "layer": "1",
+    "pts": [
+     [
+      2.5,
+      5.0
+     ],
+     [
+      2.5,
+      -0.2
+     ]
+    ],
+    "type": "LINE",
+    "what": "east wall face"
+   },
+   "BE4": {
+    "layer": "5",
+    "pts": [
+     [
+      1.25,
+      3.85
+     ],
+     [
+      1.25,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-LD own nosing seen below / MS2-TR nosing stacked (L5)"
+   },
+   "BE5": {
+    "layer": "2",
+    "pts": [
+     [
+      1.3,
+      3.85
+     ],
+     [
+      1.3,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "the riser face behind it (L2)"
+   }
+  },
+  "2F": {
+   "127E": {
+    "layer": "1",
+    "pts": [
+     [
+      1.4,
+      5.0
+     ],
+     [
+      0.0,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "north wall face"
+   },
+   "1282": {
+    "layer": "1",
+    "pts": [
+     [
+      0.0,
+      -1.45
+     ],
+     [
+      0.4158,
+      -1.45
+     ]
+    ],
+    "type": "LINE",
+    "what": "south wall face (west of door)"
+   },
+   "1283": {
+    "layer": "1",
+    "pts": [
+     [
+      1.4158,
+      -1.45
+     ],
+     [
+      4.5,
+      -1.45
+     ]
+    ],
+    "type": "LINE",
+    "what": "south wall face (east)"
+   },
+   "129A": {
+    "layer": "1",
+    "pts": [
+     [
+      2.5,
+      5.0
+     ],
+     [
+      2.5,
+      -0.2
+     ]
+    ],
+    "type": "LINE",
+    "what": "east wall face"
+   },
+   "12B4": {
+    "layer": "5",
+    "pts": [
+     [
+      1.25,
+      3.85
+     ],
+     [
+      1.25,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-TR nosing (L5)"
+   },
+   "12B5": {
+    "layer": "2",
+    "pts": [
+     [
+      1.3,
+      3.85
+     ],
+     [
+      1.3,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-TR riser face (L2)"
+   },
+   "12B7": {
+    "layer": "1",
+    "pts": [
+     [
+      0.0,
+      -1.45
+     ],
+     [
+      0.0,
+      2.75
+     ]
+    ],
+    "type": "LINE",
+    "what": "west wall face"
+   },
+   "135B": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      3.85
+     ],
+     [
+      1.35,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-U first nosing (L5)"
+   },
+   "135C": {
+    "layer": "2",
+    "pts": [
+     [
+      2.5,
+      3.8
+     ],
+     [
+      1.35,
+      3.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-U first riser face (L2)"
+   },
+   "1363": {
+    "layer": "5",
+    "pts": [
+     [
+      1.35,
+      3.85
+     ],
+     [
+      1.15,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "divider end (L5)"
+   },
+   "1385": {
+    "layer": "2",
+    "pts": [
+     [
+      2.5,
+      0.8
+     ],
+     [
+      1.35,
+      0.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-U 11th riser face (L2)"
+   },
+   "1386": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      0.85
+     ],
+     [
+      1.35,
+      0.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS2-U 11th nosing (L5)"
+   },
+   "138A": {
+    "layer": "5",
+    "pts": [
+     [
+      1.35,
+      0.45
+     ],
+     [
+      0.0,
+      0.45
+     ]
+    ],
+    "type": "LINE",
+    "what": "slab / guard edge (L5)"
+   },
+   "138B": {
+    "layer": "5",
+    "pts": [
+     [
+      1.3,
+      0.5
+     ],
+     [
+      0.0,
+      0.5
+     ]
+    ],
+    "type": "LINE",
+    "what": "guard face (L5)"
+   },
+   "14D5": {
+    "layer": "4",
+    "pts": [
+     [
+      0.8628,
+      5.0
+     ],
+     [
+      0.8628,
+      3.8
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1200.0,
+    "what": "printed half-landing depth"
+   },
+   "14F1": {
+    "layer": "4",
+    "pts": [
+     [
+      0.8628,
+      0.5
+     ],
+     [
+      1.4158,
+      -1.45
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1950.0,
+    "what": "printed arrival depth"
+   },
+   "152A": {
+    "layer": "4",
+    "pts": [
+     [
+      0.0,
+      -1.45
+     ],
+     [
+      4.5,
+      -1.45
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 4500.0,
+    "what": "printed lobby length"
+   },
+   "2F1F": {
+    "layer": "5",
+    "pts": [
+     [
+      1.35,
+      3.85
+     ],
+     [
+      2.5,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "unexplained diagonal (L5, Q-ST-11)"
+   },
+   "2F20": {
+    "layer": "2",
+    "pts": [
+     [
+      1.3854,
+      3.8146
+     ],
+     [
+      2.5354,
+      4.9646
+     ]
+    ],
+    "type": "LINE",
+    "what": "its companion (L2)"
+   },
+   "2F72": {
+    "layer": "S-COL.BON",
+    "pts": [
+     [
+      2.5,
+      -0.2
+     ],
+     [
+      2.7,
+      -0.2
+     ],
+     [
+      2.7,
+      0.3
+     ],
+     [
+      2.5,
+      0.3
+     ]
+    ],
+    "type": "LWPOLYLINE",
+    "what": "column at the lobby edge (S-COL.BON)"
+   }
+  },
+  "GF": {
+   "154": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.85
+     ],
+     [
+      1.35,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "divider end at the turn (L2)"
+   },
+   "21B": {
+    "layer": "1",
+    "pts": [
+     [
+      2.5,
+      5.0
+     ],
+     [
+      2.5,
+      2.9
+     ]
+    ],
+    "type": "LINE",
+    "what": "east wall face (north part)"
+   },
+   "220": {
+    "layer": "1",
+    "pts": [
+     [
+      1.4,
+      0.0
+     ],
+     [
+      -0.0,
+      0.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "south wall face"
+   },
+   "26F": {
+    "layer": "1",
+    "pts": [
+     [
+      2.3531,
+      5.0
+     ],
+     [
+      2.5,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "north wall face (east part)"
+   },
+   "298": {
+    "layer": "1",
+    "pts": [
+     [
+      0.0,
+      2.75
+     ],
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "west wall face"
+   },
+   "2AB": {
+    "layer": "1",
+    "pts": [
+     [
+      -0.0,
+      5.0
+     ],
+     [
+      1.4531,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "north wall face (west part)"
+   },
+   "2C6": {
+    "layer": "2",
+    "pts": [
+     [
+      1.25,
+      3.85
+     ],
+     [
+      1.25,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-LD own nosing, above the cut (L2)"
+   },
+   "481": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      3.85
+     ],
+     [
+      1.35,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "D1 first nosing = lobby edge (L5)"
+   },
+   "482": {
+    "layer": "2",
+    "pts": [
+     [
+      2.5,
+      3.8
+     ],
+     [
+      1.35,
+      3.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "D1 first riser face (L2)"
+   },
+   "485": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.8
+     ],
+     [
+      -0.0,
+      3.8
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-L last nosing / first winder front (L2)"
+   },
+   "490": {
+    "layer": "5",
+    "pts": [
+     [
+      2.5,
+      2.95
+     ],
+     [
+      1.35,
+      2.95
+     ]
+    ],
+    "type": "LINE",
+    "what": "D1 last nosing = hall edge (L5)"
+   },
+   "49C": {
+    "layer": "2",
+    "pts": [
+     [
+      1.25,
+      3.85
+     ],
+     [
+      1.25,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "same, duplicate (L2)"
+   },
+   "49D": {
+    "layer": "2",
+    "pts": [
+     [
+      1.3,
+      3.85
+     ],
+     [
+      1.3,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-T closing riser face below MS1-LD (L2)"
+   },
+   "49E": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.85
+     ],
+     [
+      -0.0,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "winder radial (L2)"
+   },
+   "4A0": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.85
+     ],
+     [
+      0.6384,
+      5.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "winder radial (L2)"
+   },
+   "4A2": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      3.85
+     ],
+     [
+      -0.0,
+      4.3616
+     ]
+    ],
+    "type": "LINE",
+    "what": "winder radial (L2)"
+   },
+   "4A6": {
+    "layer": "5",
+    "pts": [
+     [
+      1.3,
+      3.85
+     ],
+     [
+      1.35,
+      3.85
+     ]
+    ],
+    "type": "LINE",
+    "what": "divider end at the turn (L5)"
+   },
+   "DC": {
+    "layer": "5",
+    "pts": [
+     [
+      1.15,
+      1.1
+     ],
+     [
+      -0.0,
+      1.1
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-L first nosing (L5)"
+   },
+   "DE": {
+    "layer": "2",
+    "pts": [
+     [
+      1.15,
+      1.15
+     ],
+     [
+      -0.0,
+      1.15
+     ]
+    ],
+    "type": "LINE",
+    "what": "MS1-L first riser face (L2)"
+   }
+  },
+  "GFRS": {
+   "336": {
+    "layer": "1",
+    "pts": [
+     [
+      -2.0,
+      0.0
+     ],
+     [
+      0.65,
+      -0.0
+     ]
+    ],
+    "type": "LINE",
+    "what": "GF south wall face under the landing (L1)"
+   }
+  },
+  "RS": {
+   "1265": {
+    "layer": "4",
+    "pts": [
+     [
+      0.0,
+      1.7164
+     ],
+     [
+      1.25,
+      1.7164
+     ]
+    ],
+    "type": "DIMENSION",
+    "value_mm": 1250.0,
+    "what": "printed width incl. band"
+   },
+   "3008": {
+    "layer": "S-COL.BON",
+    "pts": [
+     [
+      0.65,
+      0.05
+     ],
+     [
+      0.65,
+      -0.2
+     ],
+     [
+      1.25,
+      -0.2
+     ],
+     [
+      1.25,
+      0.05
+     ]
+    ],
+    "type": "LWPOLYLINE",
+    "what": "column proud of the south face (S-COL.BON)"
+   },
+   "AF5": {
+    "layer": "5",
+    "pts": [
+     [
+      1.2,
+      0.0
+     ],
+     [
+      1.2,
+      2.4
+     ]
+    ],
+    "type": "LINE",
+    "what": "east edge band, inner face (L5)"
+   },
+   "AF6": {
+    "layer": "5",
+    "pts": [
+     [
+      1.25,
+      0.0
+     ],
+     [
+      1.25,
+      2.4
+     ]
+    ],
+    "type": "LINE",
+    "what": "east edge band, outer face (L5)"
+   },
+   "B4D": {
+    "layer": "5",
+    "pts": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.15
+     ]
+    ],
+    "type": "LINE",
+    "what": "RS-S last nosing = RS-LD west edge (L5)"
+   },
+   "B58": {
+    "layer": "2",
+    "pts": [
+     [
+      0.05,
+      0.0
+     ],
+     [
+      0.05,
+      1.15
+     ]
+    ],
+    "type": "LINE",
+    "what": "RS-S last riser face (L2)"
+   },
+   "B59": {
+    "layer": "5",
+    "pts": [
+     [
+      0.05,
+      1.15
+     ],
+     [
+      1.2,
+      1.15
+     ]
+    ],
+    "type": "LINE",
+    "what": "RS-A first nosing = RS-LD north edge (L5)"
+   },
+   "B6E": {
+    "layer": "2",
+    "pts": [
+     [
+      0.05,
+      1.2
+     ],
+     [
+      1.2,
+      1.2
+     ]
+    ],
+    "type": "LINE",
+    "what": "RS-A first riser face (L2)"
+   },
+   "D22": {
+    "layer": "5",
+    "pts": [
+     [
+      0.05,
+      2.35
+     ],
+     [
+      1.2,
+      2.35
+     ]
+    ],
+    "type": "LINE",
+    "what": "RS-A floor edge (L5)"
+   }
+  }
+ }
+}
