@@ -3208,7 +3208,7 @@ def cmd_arch(a):
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
     V3045, V3047 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47"  # T-443: V3.0.47 named on this line so the hub stays line-stable
-    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46", V3047)  # T-478 / T-419 / T-443 (see below)
+    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46") or a.method == V3047  # T-478 / T-419 / T-443 (see below)
     v3044 = a.method in (V3044, V3045, V3046, V3047)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
     v3043 = a.method in (V3043, V3044, V3045, V3046, V3047)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
     v3042 = a.method in (V3042, V3043, V3044, V3045, V3046, V3047)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
