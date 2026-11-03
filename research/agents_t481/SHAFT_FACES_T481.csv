@@ -1,0 +1,14 @@
+face,s0,s1,lm,owner,ref,by
+east B16 (1F-W03),0.000,1.200,1.200,STAIR,B16 (+ 2FF3 flush 4.700 .. 5.200),MS2-LD.E
+east B16 (1F-W03),0.850,4.150,3.300,STAIR,B16 (+ 2FF3 flush 4.700 .. 5.200),MS1-U.E1..E3
+east B16 (1F-W03),4.150,5.200,1.050,ROOM,B16 (+ 2FF3 flush 4.700 .. 5.200),floor zone
+west AF0 / C5C / AF1 (1F-W04),0.000,1.050,1.050,STAIR,AF0 (2FE1 flush),MS2-LD.W
+west AF0 / C5C / AF1 (1F-W04),1.050,2.250,1.200,WINDOW,W13 C5A-C5C,window: goes with the owner of its stretch
+west AF0 / C5C / AF1 (1F-W04),2.250,3.000,0.750,STAIR,AF1 (3005 proud 3.000 .. 3.500),MS2-L.W1B
+west AF0 / C5C / AF1 (1F-W04),3.000,3.500,0.500,STAIR,AF1 (3005 proud 3.000 .. 3.500),MS2-L.W1C
+west AF0 / C5C / AF1 (1F-W04),3.500,4.500,1.000,STAIR,AF1 (3005 proud 3.000 .. 3.500),MS2-L.W1
+west AF0 / C5C / AF1 (1F-W04),4.500,4.625,0.125,ROOM,AF1 (3005 proud 3.000 .. 3.500),floor zone
+north ADE / W25 / ADD (1F-W10),0.000,1.400,1.400,STAIR,ADE,MS2-LD.N
+north ADE / W25 / ADD (1F-W10),1.400,2.400,1.000,WINDOW,W25 CE2 + CE8 / CDF,window: goes with the owner of its stretch
+north ADE / W25 / ADD (1F-W10),2.400,2.500,0.100,STAIR,ADD,MS2-LD.N
+west,,,0.100,STAIR,MS2-L.W1C column 3005 returns 2 x 0.050 (T-410 r2),MS2-L.W1C column 3005 returns 2 x 0.050 (T-410 r2)

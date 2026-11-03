@@ -1,0 +1,11 @@
+opening,view,quantity,value,unit,source,note
+W11,DWF SECTION B-B,frame_base_level,0.999,m,apex ±0.00 to frame base 999.1 mm,street-wall cut; plan cut line 0.078 m outside W11's jamb (in the 0.81 pier); drawn opening 2.201 = W11
+W11,DWF SECTION B-B,ffl_level,0.3,m,"printed '+0.30' marker, same view (apex 300.6 mm)",dewaneya floor; GF plan prints +0.30 in the room
+W11,DWF FENCE ELEVATION,base_above_view_ground,0.849,m,"T-207 READINGS (merged), own re-read",no level printed in the view: ground line ±0.00 or +0.15 (plot) -> base +0.849 or +0.999
+W11,current issue Pages_11-12 p.11 (scan),base_above_ffl_check,0.72,m,400 dpi profile: floor line to sill edge over the printed 400 (floor to +4.30),"check only, +-0.03"
+W12,DWF FENCE ELEVATION,same_outline_as,W11,-,T-207: top / bottom lines shared to 1 mm,W12 binds to W11's reading
+W02,DWF SECTION B-B,frame_base_level,1.0,m,frame base on the +1.00 floor line (999.1 mm above the ±0.00 apex),cut inside the 6.232 m glazing span; four glazing lines continuous on the plan
+W02,DWF SECTION B-B,ffl_level,1.0,m,printed '100' dimension ±0.00 -> floor and '+1.00' marker,saloon floor; GF plan prints +1.00
+W02,current issue Pages_11-12 p.11 (scan),base_at_floor_check,0.0,m,glazing starts on the floor line at the end of the printed '100',AGREES; T-201 overlay 0.025 m
+W17,P7757.dxf NORTH WEST ELEVATION,jamb_base_level,5.5,m,jamb lines 2A46 .. start on the +5.50 marker block (handle-level read); printed chain 700/4300/200/3050.5 from the +1.00 marker: 1.00 + 4.30 + 0.20 = 5.50,frame W 2A47 .. 2A50 base 0.050 above: a frame member
+W17,P7757.dxf FIRST FLOOR plan,ffl_level,5.5,m,the only 1F level printed (5 texts '+5.50'),1F-11 master bedroom

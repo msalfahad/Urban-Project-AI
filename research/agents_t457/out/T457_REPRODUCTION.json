@@ -1,0 +1,164 @@
+{
+ "candidate": {
+  "adhesive_codes": [],
+  "bed_codes": [
+   "FIN.FLOOR.BED.DRY",
+   "FIN.FLOOR.BED.WET"
+  ],
+  "closure_modules": 187,
+  "entries": [
+   "engine/source/arch_v3044.py",
+   "tools/urban_boq_m9.py"
+  ],
+  "item_codes_in_closure": 69,
+  "one_backing_per_tile_line_refusal": true,
+  "one_plaster_line_per_room_refusal": true,
+  "render_or_spatter_codes": [],
+  "runtime_loaders": [
+   {
+    "file": "engine/source/rule_store.py",
+    "names_target": []
+   },
+   {
+    "file": "tools/urban_structural_boq.py",
+    "names_target": []
+   }
+  ],
+  "tables_in_closure": {
+   "engine/source/finish_materials_table.py": false,
+   "engine/source/finish_materials_table_v2.py": false,
+   "engine/source/finish_materials_table_v3.py": false
+  },
+  "wall_layer_codes": {
+   "ARCH.WALL_PANEL": [
+    "engine/source/arch_v3026.py",
+    "tools/urban_boq_m9.py"
+   ],
+   "ARCH.WALL_RUN": [
+    "engine/boq_room_workbook.py",
+    "engine/source/arch_measure.py",
+    "engine/source/boq_line.py"
+   ],
+   "ARCH.WALL_VOLUME": [
+    "engine/source/arch_v3026.py",
+    "tools/urban_boq_m9.py"
+   ],
+   "FIN.FLOOR.BED.DRY": [
+    "engine/source/arch_v3037.py"
+   ],
+   "FIN.FLOOR.BED.WET": [
+    "engine/source/arch_v3037.py"
+   ],
+   "FIN.PLASTER": [
+    "engine/boq_room_workbook.py",
+    "engine/source/arch_completeness.py",
+    "engine/source/arch_measure.py"
+   ],
+   "FIN.WALL.TILE": [
+    "engine/boq_room_workbook.py",
+    "engine/source/arch_completeness.py",
+    "engine/source/arch_measure.py"
+   ],
+   "FIN.WP.WALL_UPTURN": [
+    "engine/source/arch_v213.py",
+    "engine/source/boq_line.py",
+    "engine/source/project_rules.py"
+   ]
+  }
+ },
+ "cases": {
+  "V1": {
+   "adhesive_bags": 4.032,
+   "area_m2": 20.16,
+   "cement_layers": [
+    {
+     "cement_bags": 3.38688,
+     "layer": "tile bed (V1 label 'bed', mix 1:4)",
+     "mortar_m3": 0.42336,
+     "sand_m3": 0.465696,
+     "status": "PROVISIONAL",
+     "thickness_m": 0.02
+    }
+   ],
+   "fixing_materials": [
+    "ADHESIVE",
+    "MORTAR_BED (by its V1 label)"
+   ]
+  },
+  "V2": {
+   "adhesive_bags": 4.032,
+   "area_m2": 20.16,
+   "cement_layers": [
+    {
+     "cement_bags": 3.38688,
+     "layer": "tile bed (V1 label 'bed', mix 1:4)",
+     "mortar_m3": 0.42336,
+     "sand_m3": 0.465696,
+     "status": "PROVISIONAL",
+     "thickness_m": 0.02
+    }
+   ],
+   "fixing_materials": [
+    "ADHESIVE",
+    "MORTAR_BED (by its V1 label)"
+   ]
+  },
+  "V3": {
+   "adhesive_bags": 4.032,
+   "area_m2": 20.16,
+   "cement_layers": [
+    {
+     "layer": "SPATTER_DASH",
+     "mortar_m3": null,
+     "reason": "SPATTER_DASH thickness not given by the project, the owner or the company rules: HELD with this method named (area lines unaffected)",
+     "status": "HELD",
+     "thickness_m": null
+    },
+    {
+     "layer": "LEVELLING_RENDER",
+     "mortar_m3": null,
+     "reason": "LEVELLING_RENDER thickness not given by the project, the owner or the company rules: HELD with this method named (area lines unaffected)",
+     "status": "HELD",
+     "thickness_m": null
+    }
+   ],
+   "fixing_materials": [
+    "ADHESIVE"
+   ]
+  },
+  "project_totals": {
+   "V2": {
+    "cement_bags_high": 10.10688,
+    "cement_bags_low": 8.42688,
+    "mortar_m3_high": 1.26336,
+    "mortar_m3_low": 1.05336
+   },
+   "V3": {
+    "cement_bags_high": 6.72,
+    "cement_bags_low": 5.04,
+    "mortar_m3_high": 0.84,
+    "mortar_m3_low": 0.63
+   },
+   "note": "V2 adds the wet-wall layer (0.42336 m3) to the floor-bed total (0.63 .. 0.84 m3); V3 keeps floor beds only"
+  }
+ },
+ "hand": {
+  "door_widths": [
+   0.8
+  ],
+  "floor": "GF",
+  "height": 2.7,
+  "id": "WW-1",
+  "kind": "WET_WALL",
+  "openings": [
+   {
+    "height": 0.6,
+    "id": "W-1",
+    "width": 0.6
+   }
+  ],
+  "wall_length": 8.4
+ },
+ "question": "second mortar fixing bed on a wet wall (C2)",
+ "task": "T-457"
+}
