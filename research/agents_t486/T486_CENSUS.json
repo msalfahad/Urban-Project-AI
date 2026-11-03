@@ -1,0 +1,267 @@
+{
+ "method": "T486_TERRACE_WP_CENSUS_V1",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.46",
+ "poolcourt": {
+  "gross_m2": 9.954589,
+  "footprints_m2": 0.583653,
+  "openings_m2": 3.824496,
+  "net_m2": 5.54644,
+  "perimeter_lm": 23.229564,
+  "upturn_lm": 9.222544,
+  "open_edge_lm": 6.868422,
+  "opening_edge_lm": 7.138598,
+  "continuation_lm": 0.0,
+  "open_sky": {
+   "gross_m2": 8.353684,
+   "footprints_m2": 0.583653,
+   "openings_m2": 2.863164,
+   "net_m2": 4.906867,
+   "perimeter_lm": 17.446513,
+   "upturn_lm": 5.694267,
+   "open_edge_lm": 6.868422,
+   "opening_edge_lm": 4.321384,
+   "continuation_lm": 0.562439
+  },
+  "overhang": {
+   "gross_m2": 1.600904,
+   "footprints_m2": 0.0,
+   "openings_m2": 0.961331,
+   "net_m2": 0.639573,
+   "perimeter_lm": 6.90793,
+   "upturn_lm": 3.528277,
+   "open_edge_lm": 0.0,
+   "opening_edge_lm": 2.817214,
+   "continuation_lm": 0.562439
+  },
+  "footprint_each_m2": {
+   "north_pier": 0.29496,
+   "south_pier": 0.172391,
+   "southwest_pier": 0.116301
+  },
+  "footprint_free_faces_lm": {
+   "north_pier": 1.838058,
+   "south_pier": 1.374509,
+   "southwest_pier": 0.654602
+  },
+  "void_m2": 3.824496,
+  "void_perimeter_lm": 7.138598,
+  "t062_basis_m2": 6.130093,
+  "bay_face_lm": 3.528277
+ },
+ "families": {
+  "B8-06": {
+   "new_m2": 4.906867,
+   "carried_m2": 88.28,
+   "missing_zones": [
+    "POOLCOURT-550"
+   ],
+   "held_zones": [
+    "ROOF-1390"
+   ],
+   "carried_zones": [
+    "ROOF-430",
+    "TERRACE-550"
+   ],
+   "not_applicable_zones": []
+  },
+  "B8-07": {
+   "new_m2": 0.0,
+   "carried_m2": 115.832,
+   "missing_zones": [],
+   "held_zones": [],
+   "carried_zones": [
+    "ROOF-970"
+   ],
+   "not_applicable_zones": []
+  },
+  "UNASSIGNED": {
+   "new_m2": 0.0,
+   "carried_m2": 0.0,
+   "missing_zones": [],
+   "held_zones": [
+    "POOLCOURT-550-OVERHANG"
+   ],
+   "carried_zones": [],
+   "not_applicable_zones": []
+  }
+ },
+ "rows": [
+  {
+   "zone_id": "ROOF-430",
+   "label": "ROOF",
+   "below": "HABITABLE",
+   "doors": 0,
+   "exposed": true,
+   "membrane_m2": 55.560332,
+   "upturn_lm": 35.727,
+   "open_edge_lm": null,
+   "evidence": [
+    "ROOF label block B8D at printed +4.30 (LEVEL D20), 1.20 m below the 1F FFL +5.50",
+    "no door insert on its boundary (1F door census: 11 inserts, all inside the house walls)",
+    "under it: the GF floor plate, 100 % (T-062 shift check)",
+    "sanitary sheet 1F: SLOPE 1 % x 3 arrows to one gully + RWP T/B; one RWP F/A free discharge",
+    "own area = T-062 / T-321 hand trace 55.560 (Verifier re-multiplied)"
+   ],
+   "carried_m2": 55.559,
+   "carried_by": [
+    {
+     "line_id": "L-d57d2dc2fafac8bc72d8",
+     "item_code": "FIN.WP.ROOF",
+     "m2": 55.559
+    }
+   ],
+   "add_m2": 0.0,
+   "residual_m2": 0.001332,
+   "flags": [],
+   "wp_layer": "YES (UP-WP-ROOF-001: exposed slab top)",
+   "function": "ROOF",
+   "family": "B8-06",
+   "status": "CARRIED_BY_ROOF_LINE"
+  },
+  {
+   "zone_id": "TERRACE-550",
+   "label": "ROOF",
+   "below": "HABITABLE",
+   "doors": 0,
+   "exposed": true,
+   "membrane_m2": 32.721,
+   "upturn_lm": 52.94,
+   "open_edge_lm": null,
+   "evidence": [
+    "ROOF label block B81 at +5.50 = the 1F FFL (living +5.50); sanitary sheet labels it ROOF",
+    "no door insert on its boundary: windows of the living / bath only; the T-321 'door closure 0.406' is the Q-25 drafting gap on a layer-D line, not a door",
+    "under it: GF floor plate 100 % (T-062)",
+    "sanitary: SLOPE 1 % to a gully, RWP F/A free discharge",
+    "own area 18.97 x 1.30 + 1.30 x 6.20 = 32.721 (T-062)"
+   ],
+   "carried_m2": 32.721,
+   "carried_by": [
+    {
+     "line_id": "L-2f7502be6f501baf49b1",
+     "item_code": "FIN.WP.ROOF",
+     "m2": 32.721
+    }
+   ],
+   "add_m2": 0.0,
+   "residual_m2": 0.0,
+   "flags": [],
+   "wp_layer": "YES (UP-WP-ROOF-001: exposed slab top)",
+   "function": "ROOF",
+   "family": "B8-06",
+   "status": "CARRIED_BY_ROOF_LINE"
+  },
+  {
+   "zone_id": "ROOF-970",
+   "label": "ROOF",
+   "below": "HABITABLE",
+   "doors": 1,
+   "exposed": true,
+   "membrane_m2": 115.814,
+   "upturn_lm": 92.924,
+   "open_edge_lm": null,
+   "evidence": [
+    "ROOF labels 12AA / 12C3 at +9.70 on the 2F plan; reached by the 2F roof door (its swing cuts the finish hatch, T-321 s.2): an accessible ROOF TERRACE",
+    "under it: 145.079 of 146.532 m2 on the 1F plate (99.0 %, T-062)",
+    "dome footprints 2 x 15.359 m2 SCOPE_UNKNOWN under Q-24 / Q-29 (not this family)",
+    "own area 146.532 - 2 domes (circles) = 115.814; line deducts polygons: -0.018 named (T-321)"
+   ],
+   "carried_m2": 115.832,
+   "carried_by": [
+    {
+     "line_id": "L-636fd3ff1784a12e653b",
+     "item_code": "FIN.WP.ROOF",
+     "m2": 115.832
+    }
+   ],
+   "add_m2": 0.0,
+   "residual_m2": -0.018,
+   "flags": [],
+   "wp_layer": "YES (UP-WP-ROOF-001: exposed slab top)",
+   "function": "TERRACE_OR_BALCONY",
+   "family": "B8-07",
+   "status": "CARRIED_BY_ROOF_LINE"
+  },
+  {
+   "zone_id": "ROOF-1390",
+   "label": null,
+   "below": "HABITABLE",
+   "doors": 0,
+   "exposed": true,
+   "membrane_m2": null,
+   "upturn_lm": null,
+   "open_edge_lm": null,
+   "evidence": [
+    "the 2F block's own roof: on no plan sheet (D-62), HELD by owner Q-34 (49.665 m2 drawing-derived beside, T-321); no stair or door to it on any plan: a roof, not a terrace"
+   ],
+   "carried_m2": null,
+   "carried_by": [
+    {
+     "line_id": "L-3e8fe55da71851816dd4",
+     "item_code": "FIN.WP.ROOF",
+     "m2": null
+    }
+   ],
+   "add_m2": null,
+   "residual_m2": null,
+   "flags": [
+    "CARRIED_BY_A_HELD_LINE"
+   ],
+   "wp_layer": "YES (UP-WP-ROOF-001: exposed slab top)",
+   "function": "ROOF",
+   "family": "B8-06",
+   "status": "HELD"
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "label": null,
+   "below": "EXTERIOR",
+   "doors": 0,
+   "exposed": true,
+   "membrane_m2": 4.906867,
+   "upturn_lm": 5.694267,
+   "open_edge_lm": 11.189806,
+   "evidence": [
+    "slab top round the oval VOID (label BBF) at printed +5.50 (LEVEL 1251), no ROOF label; the part east of the 1F wall line (open to the sky)",
+    "a slab exists: the GF roof-slab sheet slabs the pool court (T-121 / T-127 / T-154 soffit 12.834 .. 14.704 m2, Q-68)",
+    "under it: the GF pool court (exterior), not a habitable space",
+    "open to the sky: the 2F plan draws nothing east of the 2F parapet at the wall line (12A7 / 131B)",
+    "no door: the bay is glazed (W arcs BD2..BD5), the bath has a 0.50 m window (C33..C3E)",
+    "no parapet on the north / east edges (one layer-5 line each; the inner lines are layer 2 = GF walls below); elevation: rounded slab nose, piers of the bay frame rise from the slab",
+    "sanitary sheet 1F: NO gully, NO RWP and NO slope arrow on this area (the other roofs have them)"
+   ],
+   "carried_m2": 0,
+   "carried_by": [],
+   "add_m2": 4.906867,
+   "residual_m2": null,
+   "flags": [],
+   "wp_layer": "YES (UP-WP-ROOF-001: exposed slab top)",
+   "function": "ROOF",
+   "family": "B8-06",
+   "status": "MISSING"
+  },
+  {
+   "zone_id": "POOLCOURT-550-OVERHANG",
+   "label": null,
+   "below": "EXTERIOR",
+   "doors": 0,
+   "exposed": null,
+   "membrane_m2": 0.639573,
+   "upturn_lm": 3.528277,
+   "open_edge_lm": null,
+   "evidence": [
+    "the same slab's 0.20 m ledge between the bay's outer face (BCD / BCE / BD0, r 1.935) and the void edge (BCF, r 1.735), west of the wall line: under the 2F roof slab's straight east edge, 4.20 m above (+5.50 to +9.70), open on the void side: covered, yet open to driven rain; no rule or print says whether such a ledge is waterproofed: HELD (area shown, never 0)"
+   ],
+   "carried_m2": 0.0,
+   "carried_by": [],
+   "add_m2": null,
+   "residual_m2": null,
+   "flags": [
+    "EXPOSURE_UNKNOWN"
+   ],
+   "wp_layer": "UNKNOWN (exposure not established)",
+   "status": "HELD",
+   "family": null,
+   "function": "UNKNOWN"
+  }
+ ]
+}
