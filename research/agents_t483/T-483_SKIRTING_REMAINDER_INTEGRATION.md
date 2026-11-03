@@ -35,7 +35,9 @@ Chain: research/agents_t167/v304_run.py, then research/agents_t483/v3048_run.py 
 ab54dd55, "ST7757 dxf.dxf" 9f9d1179): V3_0_47_BOQ_LINES.json = **e86a53a8** (the candidate of record reproduced,
 asserted); the hub reached V3.0.48 and every binding loaded (first run stopped in the V3.0.44 check on a superseded
 NARROW record of the living range, fixed: a version's check skips lines a later version changes, regression test).
-Numbers below: research/agents_t483/v3048_apply.py on that e86a53a8 file -> V3_0_48_BOQ_LINES.json **f1fbc045**
+Second hub run after the fix and the W13 / W25 decision (22:07-22:20 UTC, own): V3_0_47 e86a53a8 -> V3_0_48
+**f1fbc045** through the hub (DONE 0), identical to research/agents_t483/v3048_apply.py on that e86a53a8 file ->
+V3_0_48_BOQ_LINES.json **f1fbc045**
 (summary_t483.json; pinned by tests/t483_skirting_remainder/test_alsenan_pins.py). 4874 lines, 5 changed, 0 added,
 4869 byte-identical; totals move only in FIN.SKIRTING lm.
 
@@ -95,3 +97,16 @@ windows later decided NOT_SKIRTED had no closing path | a range-only operation w
 a decided window either joins its room line (skirted) or closes its range whole (not skirted); partial and whole are
 two named actions, each refused in the other's case | tests/t483_skirting_remainder test_partial_close_refused |
 T-483 |
+
+## 8. Validation (this run)
+
+- L1 / L2: tests/t483_skirting_remainder 39 pass (32 module, 3 pins, 4 registry).
+- L3 (impact of tools/urban_boq_m9.py, HIGH): every test folder importing the hub directly + t443 / t419 / t478 / t479 /
+  t485 / t459 / t422 / t481 / t471 / t469 on 5676d3d9 + inputs-only changes: 1 failure,
+  `tests/t485_registry_promotion::test_a_merged_package_never_stays_pending_in_the_newest_registry` reports 'T-443':
+  the same test fails on the working head e8ee22f0 (T-443 merged c814c55d, not promoted out of pending_packages in
+  1.44.0; 1.45.0 copies the list as the builder rule requires). Pre-existing, not this package: a registry promotion
+  (lane I) clears it.
+- Freeze 0 differing; codemap check stale none; BOQ_FAMILY_MASTER 1.45.0 equals its builder, FMC.check problems [];
+  RULES_MANIFEST drift []. t459 candidate binding rebuilt (adds arch_v3048.py: [], no lap token).
+- L4: see the board handoff (started on 39255dea; result there).
