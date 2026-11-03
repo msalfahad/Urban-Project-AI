@@ -99,7 +99,12 @@ from `candidate_census.families[*].units[*].verified_component*`; registry-wide 
 
 - tests/t479_registry_refresh 23 passed; the 41 folders holding a test_family_master_* test + t130 / t140 / t236 /
   t469 / t471 / codemap: all passed (after the codemap rebuild); tools/family_master_candidate.py check 1.41.0: 0
-  problems; builder --check reproduces; freeze 0 differing; codemap stale none. Full suite: see the commit message.
+  problems; builder --check reproduces; freeze 0 differing; codemap stale none.
+- 1.41.0 registered in rules/RULES_MANIFEST.json via tools/m9_rules_manifest.py (one AUTHORED line), as every
+  registry version before it (tests/m9_kb/test_kb_registry.py::test_the_rule_store_gains_no_file).
+- L4 (full suite, 18,644 collected, run in two halves on 8ed5f2db + the maps): half B exit 0; half A one failure,
+  tests/codemap test_repository_maps_are_current (maps stale after the manifest-tool line), fixed by the codemap
+  rebuild and re-run green with m9_kb / t479 / t478 / codemap; selfcheck PASS / PASS / PASS on the final tree.
 
 ## Not done / proposals
 
