@@ -1,8 +1,8 @@
-"""T-443: URBAN_V3046_INPUTS_V1 for the development villa: the Checker-verified T-441 face tables of the two walled
-stair rooms (merged ece154fe) re-booked as the stair-room skirting split of ARCH_TAKEOFF_V3.0.46. Nothing here is
+"""T-443: URBAN_V3047_INPUTS_V1 for the development villa: the Checker-verified T-441 face tables of the two walled
+stair rooms (merged ece154fe) re-booked as the stair-room skirting split of ARCH_TAKEOFF_V3.0.47. Nothing here is
 measured anew: every stretch, handle, opening id and cause is the merged T-441 table (research/agents_t441/
 t441_alsenan.py parts(), FLIGHT_STRETCHES), every closure term the merged T-441 summary (s.3). Line ids are the
-candidate of record's (V3.0.45 on the drawings of the T-441 run; bound and checked at load: a stale id stops the run).
+candidate of record's (V3.0.46 on the drawings of the T-441 run; bound and checked at load: a stale id stops the run).
 
     from t443_inputs import build; build(project_id)
 """
@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "agents_t441"))
 import t441_alsenan as T441  # noqa: E402
 
-SCHEMA = "URBAN_V3046_INPUTS_V1"
+SCHEMA = "URBAN_V3047_INPUTS_V1"
 SOURCES = [
     {"task": "T-441", "file": "research/agents_t441/FACES_T441.csv",
      "sha256": "084fdf8f95b6f3e15753112e36bf7152f0ea33b8a0d73b57ae58c570131fb592", "merge_commit": "ece154fe",
@@ -95,7 +95,7 @@ def _part(p):
 
 
 def build(project_id, owner_lines=None):
-    """-> the URBAN_V3046_INPUTS_V1 doc. owner_lines: {'GF': id} the stair skirting line named beside the GF flight
+    """-> the URBAN_V3047_INPUTS_V1 doc. owner_lines: {'GF': id} the stair skirting line named beside the GF flight
     faces (optional; the owner is named by its T-410 stretches either way)."""
     parts = {p["id"]: p for p in T441.parts()}
     ol = owner_lines or {}

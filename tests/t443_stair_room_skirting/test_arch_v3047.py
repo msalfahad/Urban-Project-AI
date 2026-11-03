@@ -1,4 +1,4 @@
-"""T-443: ARCH_TAKEOFF_V3.0.46 (stair-room skirting split) on a hand-calculated NON-Alsenan villa (K443).
+"""T-443: ARCH_TAKEOFF_V3.0.47 (stair-room skirting split) on a hand-calculated NON-Alsenan villa (K443).
 
 Villa K443, by hand (own figures; nothing from the development villa). Room-local metres, origin = the room's
 south-west inner corner.
@@ -36,7 +36,7 @@ sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v30 as A30  # noqa: E402
 from engine.source import arch_v304 as A304  # noqa: E402
-from engine.source import arch_v3046 as A  # noqa: E402
+from engine.source import arch_v3047 as A  # noqa: E402
 from engine.source import boq_line as BL  # noqa: E402
 
 PID, REV = "villa-k443", "f" * 64
@@ -216,9 +216,9 @@ def test_mirror_invariance():
 def test_write_files(tmp_path):
     lines, ch, log, out, ident = run()
     names, ident2, led = A.write(tmp_path, lines, ch, log)
-    assert "V3_0_46_BOQ_LINES.json" in names
+    assert "V3_0_47_BOQ_LINES.json" in names
     assert ident2["diff"]["vs_base"] == {"ADDED": 4, "CHANGED": 2, "SAME": 4}
-    run_doc = json.loads((tmp_path / "V3_0_46_RUN.json").read_text(encoding="utf-8"))
+    run_doc = json.loads((tmp_path / "V3_0_47_RUN.json").read_text(encoding="utf-8"))
     assert set(k.split("|")[0] for k in run_doc["totals_moved_by_code"]) == {"FIN.SKIRTING"}
     assert led["released_default"] is False and all(r["release_status"] == "NOT RELEASED" for r in led["rows"])
 
