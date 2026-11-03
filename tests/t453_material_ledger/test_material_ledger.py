@@ -104,27 +104,38 @@ def _lin(led, oid):
 
 def test_hand_black_blocks_and_mortar():
     led = run()
+    # r2 (R-T453-5): S-1 hosts the REQUIRED RC lintel of D1, face (1.00 + 2 x 0.40) x 0.20 = 0.36 m2 of concrete:
+    # material base 20.00 - 0.36 = 19.64 m2 (r1 counted 20.00, the lintel face twice: Checker F-C-T453-1)
     b = _mat(led, "L-b", "BLOCK_COUNT")
     assert b["status"] == "COMPUTED" and b["label"] == "VERIFIED-NET"
-    assert b["theoretical_count"] == 250.0                      # 20.00 m2 x 12.5
+    assert b["net_m2"] == 20.0 and b["material_base_m2"] == 19.64
+    assert b["theoretical_count"] == 245.5                      # 19.64 m2 x 12.5
     assert b["procurement_count"] is None and b["breakage"] == "HELD"
     m = _mat(led, "L-b", "LAYING_MATERIAL")
     assert m["status"] == "COMPUTED" and m["label"] == "PROVISIONAL-NET"   # owner-provisional joint, VERIFIED area
-    assert m["cement_bags"] == 2.36 and m["sand_m3_loose"] == 0.3245      # 0.295 x 8 ; 0.295 x 1.1
-    assert led["mortar"]["black_0_20_provisional_net"] == {"m3": 0.295, "cement_bags": 2.36,
-                                                           "sand_m3_loose": 0.3245, "lines": 1}
+    # T-367 0.295 m3 on 20.00 m2 = 0.01475 m3/m2 x 19.64 = 0.28969 m3; x 8 = 2.31752 bags; x 1.1 = 0.318659 m3
+    assert m["mortar_installed_m3"] == 0.28969 and m["cement_bags"] == 2.31752 and m["sand_m3_loose"] == 0.318659
+    assert led["mortar"]["black_0_20_provisional_net"] == {"m3": 0.28969, "cement_bags": 2.31752,
+                                                           "sand_m3_loose": 0.318659, "lines": 1}
 
 
 def test_hand_white_glue_and_held_project_group():
     led = run()
+    # r2 (R-T453-5): L-c = S-2 + S-3 = 16.00 m2. S-2 hosts X1 REQUIRED, face (2.50 + 0.80) x 0.30 = 0.99 m2 -> base
+    # 15.01; S-3 hosts X2 FLAGGED (at most 1), face (1.20 + 0.80) x 0.20 = 0.40 m2 -> range 14.61 .. 15.01 m2
     g = _mat(led, "L-c", "LAYING_MATERIAL")
-    assert g["label"] == "PROVISIONAL-NET" and g["consumption_kg"] == 72.0     # 16.00 x 4.5
-    assert g["bags_25kg_net"] == 2.88
+    assert g["status"] == "RANGE" and g["label"] == "RANGE-NET" and g["consumption_kg"] is None
+    assert g["net_m2"] == 16.0 and g["lintel_deduction_m2"] == 0.99 and g["material_base_m2"] == 15.01
+    assert g["material_base_range_m2"] == [14.61, 15.01]
+    assert g["consumption_kg_range"] == [65.745, 67.545]                      # 14.61 x 4.5 ; 15.01 x 4.5
+    assert g["bags_25kg_net_range"] == [2.6298, 2.7018]
     c = _mat(led, "L-c", "BLOCK_COUNT")
-    assert c["status"] == "HELD" and c["alternatives_beside"] == {"62.5x25": 102.4, "60x20": 133.333333}
+    assert c["status"] == "HELD" and c["alternatives_beside"] == {"62.5x25": 96.064, "60x20": 125.083333,
+                                                                  "on_m2": 15.01}
     grp = led["glue_groups"]["PROJECT"]
     assert grp["status"] == "HELD" and grp["bags_to_buy"] is None             # held parents: never 0, never 3
-    assert set(grp["held_lines"]) == {"L-a", "L-e"} and grp["known_kg"] == 72.0
+    assert set(grp["held_lines"]) == {"L-a", "L-c", "L-e"} and grp["known_kg"] == 0.0
+    assert led["glue_groups"]["known_part_by_label"]["RANGE-NET"]["kg_range"] == [65.745, 67.545]
 
 
 def test_hand_lintels():
@@ -133,6 +144,8 @@ def test_hand_lintels():
     assert d1["decision"] == "REQUIRED" and d1["schedule_row"] == "L1"
     assert d1["length_m"] == 1.8 and d1["concrete_m3"] == 0.072 and d1["formwork_m2"] == 0.92
     assert d1["rebar_kg"] == "HELD" and "precast_alternative_beside" not in d1      # black wall: no atab
+    assert d1["face_m2"] == 0.36 and d1["floor_buildup_m"] == 0.06 and d1["floor_buildup_status"] == "STAND-IN"
+    assert d1["spare_margin_m"] == 1.54                                       # 1.80 - (0.20 + 0.06)
     x1 = _lin(led, "X1")       # 2.50 m window, head 2.60, pieces 3.50 / 3.20: margin 0.60 >= 0.30 + 0.06
     assert x1["decision"] == "REQUIRED" and x1["schedule_row"] == "L3" and x1["length_m"] == 3.3
     assert x1["concrete_m3"] == 0.198 and x1["formwork_m2"] == 2.48       # 0.2x0.3x3.3 ; 2x0.3x3.3 + 0.2x2.5
@@ -244,6 +257,9 @@ def test_verified_net_only_from_verified_lines():
             assert m["source_label"] == "VERIFIED-NET"
     for r in led["lintels"]:
         assert r.get("label") in (None, "PROVISIONAL-NET")
+    for m in led["block_materials"]:
+        if m.get("lintel_held_faces"):
+            assert m["label"] in ("RANGE-NET", "HELD")
 
 
 # ------------------------------------------------------------------ committed ledger
@@ -255,3 +271,67 @@ def test_committed_ledger_rebuilds_byte_identically(tmp_path):
         assert (tmp_path / name).read_bytes() == (ROOT / "research/agents_t453/out" / name).read_bytes(), name
     assert led["block_totals"]["black_0_20_by_label"]["VERIFIED-NET"]["theoretical_blocks"] == 1346.55
     assert led["glue_groups"]["PROJECT"]["status"] == "HELD"
+    # r2 Checker hand case: L-2fdc 1F white 0.20 VERIFIED 101.976 m2 - W14 0.975 - W15 0.470 - W18 0.260 = 100.271 m2,
+    # HELD W16 / W19 / W20 / W24 0 .. 1.50 m2: glue 444.4695 .. 451.2195 kg (not VERIFIED-NET)
+    g = next(m for m in led["block_materials"] if m["line_id"] == "L-2fdc0f971a94348ec855"
+             and m["item"] == "LAYING_MATERIAL")
+    assert g["lintel_deduction_m2"] == 1.705 and g["consumption_kg_range"] == [444.4695, 451.2195]
+    assert g["label"] == "RANGE-NET"
+
+
+# ------------------------------------------------------------------ r2: R-T453-5 lintel faces leave the material base
+
+def test_required_lintel_in_verified_wall_reduces_base_not_area():
+    """normal: an RC lintel inside a VERIFIED panel leaves the material base by a named row; the contract area of the
+    MAS.BLOCK line (net_m2) is untouched and the label stays VERIFIED-NET."""
+    led = run()
+    b = _mat(led, "L-b", "BLOCK_COUNT")
+    assert b["contract_net_m2"] == 20.0 and b["net_m2"] == 20.0
+    assert [(x["opening_id"], x["face_m2"], x["length_m"], x["depth_m"]) for x in b["lintel_deductions"]] == [
+        ("D1", 0.36, 1.8, 0.2)]
+    assert b["base_state"] == "EXACT" and b["lintel_held_faces"] == []
+    assert led["source_lines"][[x["line_id"] for x in led["source_lines"]].index("L-b")]["net_m2"] == 20.0
+    f = led["lintel_reconciliation"]["faces_on_host_lines"]
+    assert f["L-b"] == {"required_m2": 0.36, "required": ["D1"], "held_max_m2": 0.0, "held": []}
+    # no lintel in the panel: base = net (L-d, 0.15 black, still HELD for its module)
+    assert _mat(led, "L-d", "BLOCK_COUNT")["material_base_m2"] == 8.0
+
+
+def test_held_lintel_is_a_named_range_never_silent_never_zero():
+    """adverse: a HELD lintel (head unknown) on a host line is neither deducted silently nor dropped (0): the material
+    becomes a RANGE 0 .. face and a VERIFIED source line loses its VERIFIED-NET label."""
+    v = villa()
+    v[3][0]["HEIGHT_STATUS"] = "HELD"            # D1 head unknown -> lintel HELD (at most 1) on VERIFIED L-b
+    led = run(v)
+    assert _lin(led, "D1")["decision"] == "HELD" and _lin(led, "D1")["face_max_m2"] == 0.36
+    b = _mat(led, "L-b", "BLOCK_COUNT")
+    assert b["source_label"] == "VERIFIED-NET" and b["label"] == "RANGE-NET" and b["status"] == "RANGE"
+    assert b["material_base_m2"] == 20.0 and b["material_base_range_m2"] == [19.64, 20.0]
+    assert b["theoretical_count"] is None and b["theoretical_count_range"] == [245.5, 250.0]
+    m = _mat(led, "L-b", "LAYING_MATERIAL")
+    assert m["cement_bags"] is None and m["cement_bags_range"] == [2.31752, 2.36]
+    assert led["mortar"]["range_net"]["lines"] == ["L-b"]
+    assert "VERIFIED-NET" not in led["block_totals"]["black_0_20_by_label"]
+
+
+def test_unbounded_lintel_face_holds_the_material():
+    """adverse: a HELD lintel whose face cannot be bounded (width unknown) holds the material, upper end stated."""
+    v = villa()
+    v[3][0]["WIDTH_M"] = ""                      # D1 width unknown: no band, no face
+    led = run(v)
+    b = _mat(led, "L-b", "BLOCK_COUNT")
+    assert b["status"] == "HELD" and b["label"] == "HELD" and b["material_base_range_m2"] == [None, 20.0]
+    assert "D1" in b["why"]
+    assert _mat(led, "L-b", "LAYING_MATERIAL")["status"] == "HELD"
+    assert led["lintel_reconciliation"]["faces_on_host_lines"]["L-b"]["held_max_m2"] is None
+
+
+def test_lintel_on_held_wall_deducts_nothing_and_faces_above_net_refused():
+    led = run()
+    assert [x["opening_id"] for x in led["lintel_reconciliation"]["faces_on_held_hosts"]] == ["D2"]
+    v = villa()
+    v[1]["lines"][0]["walls"][0]["carried"] = 0.3     # S-1 0.30 m2 cannot hold a 0.36 m2 lintel face
+    v[0]["lines"][1]["measured_net"] = 0.3
+    v[5][0]["area_m2 (established)"] = "0.3000"
+    with pytest.raises(T.LedgerError, match="exceed"):
+        run(v)

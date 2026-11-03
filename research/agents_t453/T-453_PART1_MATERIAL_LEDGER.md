@@ -23,7 +23,30 @@ joint mortar). Rebuild: `python3 -I research/agents_t453/t453_material_ledger.py
   piece = the beam serves / conflicts -> FLAGGED; between -> FLAGGED; unknown head, held wall or opening in a held
   piece -> HELD.
 
-## Result (labels never mixed; HELD is not 0)
+## r2 (Checker F-C-T453-1, REJECTED r1 @ cafdbb24): R-T453-5 lintel faces leave the material base
+- Physical element: the candidate MAS.BLOCK net is the fill net = drawn pieces (length x clear height) minus openings
+  w x h. An RC lintel (project LINTEL SCHEDULE) is cast inside that panel over (w + 2 x 0.40) x D: that face is
+  concrete in the lintel ledger, not glued / laid masonry (owner Q-73: only masonry that physically exists, no double
+  count). r1 counted it twice.
+- Rule: material base = contract net - every REQUIRED lintel face (one named row per lintel, `lintel_deductions`);
+  the MAS.BLOCK contract area (`net_m2`) is untouched. A HELD / FLAGGED lintel ('at most 1') on a released host line is
+  a named range 0 .. its face (`lintel_held_faces`): the material becomes RANGE-NET (never VERIFIED-NET); a face that
+  cannot be bounded (no width / band) holds the material. Lintels on HELD walls deduct nothing (material already HELD;
+  listed in `faces_on_held_hosts`). Black mortar = T-367 m3/m2 (uniform 40 x 20 joint) x base.
+- Effect on the training villa (before r1 -> after r2): REQUIRED faces 5.445 m2 on 6 lines (white 2.425, black 0.15
+  3.020 whose material stays HELD for its module), HELD / FLAGGED faces 0 .. 6.40 m2 on 6 lines. AAC glue VERIFIED-NET 575.595 kg -> 116.703 kg
+  (25.934 m2; L-2fdc moved to RANGE: 444.4695 .. 451.2195 kg = the Checker's figure); PROVISIONAL-NET 597.478 ->
+  112.8725 kg; RANGE-NET 907.2045 .. 932.9445 kg (4 lines). Upper sum 1,162.520 kg = r1 1,173.073 - 10.5525 kg
+  (white faces 1.705 x 4.5 + 0.36 x 3.5 + 0.36 x 4.5). Black 0.20 VERIFIED-NET 1,346.55 nr unchanged (no lintel in those
+  panels); 2F 3.80 m2 line (D-2F-02 in a held piece, 0 .. 0.34 m2) -> RANGE 43.25 .. 47.50 nr; black mortar
+  PROVISIONAL-NET 1.644979 -> 1.588929 m3 (12.71 bags, 1.748 m3 sand) + RANGE 0.051 .. 0.056 m3.
+- O-1 (Checker observation): the FFL-to-structural-top build-up is carried as `floor_buildup_m` 0.06, status STAND-IN,
+  with its source (Q-45 bed maximum; tile and screed not included); each lintel row prints `spare_margin_m` (W15 0.09,
+  W14 0.09) so a larger build-up is tested, not absorbed.
+- Tests: 19 pass (r1 14, two r1 hand values corrected to the physical base, 4 new: normal VERIFIED wall + RC lintel,
+  adverse HELD lintel range, unbounded face HELD, held-host / faces > net refused).
+
+## Result r1 (SUPERSEDED for block / glue / mortar by r2 above; lintel rows unchanged)
 | item | VERIFIED-NET | PROVISIONAL-NET | HELD |
 |---|---|---|---|
 | black 0.20 blocks (theoretical nr) | 107.724 m2 -> 1,346.55 | 3.800 m2 -> 47.50 | all 0.15 m black (7 lines, 201.142 m2), 7 held parents; procurement |

@@ -37,6 +37,11 @@ Rules applied (summary; full provenance in each row):
            unknown head or pieces -> HELD. Concrete m3 = B x D x (w + 2 x 0.40); formwork m2 = 2 x D x L + B x w;
            rebar kg HELD (cover, bends and anchorage not printed). Bearing availability at jambs and RC columns is not
            established here: every lintel row is PROVISIONAL with that check named.
+  R-T453-5 MATERIAL BASE (r2, Checker F-C-T453-1, owner Q-73) the candidate net is the fill net (pieces minus
+           openings w x h); an RC lintel cast in the panel is concrete, not masonry. Each material is computed on
+           the material base = contract net - every REQUIRED lintel face (w + 2 x bearing) x D (one named row per
+           lintel; the MAS.BLOCK contract area is untouched). A HELD / FLAGGED lintel on the host line is a named
+           range 0 .. its face: the material is a RANGE (RANGE-NET, never VERIFIED-NET); an unbounded face holds it.
 
     python3 -I research/agents_t453/t453_material_ledger.py [OUT_DIR]     # writes the ledger (default: ./out)
 """
@@ -59,7 +64,7 @@ for _p in (ROOT, ROOT / "research" / "agents_t279"):
 
 from engine.source import company_rulebook_v1 as C  # noqa: E402
 
-SCHEMA = "URBAN_T453_MATERIAL_LEDGER_V1"
+SCHEMA = "URBAN_T453_MATERIAL_LEDGER_V2"          # r2: material base = contract net - lintel faces (R-T453-5)
 CANDIDATE = "ARCH_TAKEOFF_V3.0.45"
 LINE_INDEX = ROOT / "research/agents_t479/out/LINE_INDEX_V3_0_45.json"
 REGISTER = ROOT / "research/agents_t449/round3/out/CORRECTION_REGISTER_BLOCKWORK_T449.json"
@@ -78,6 +83,14 @@ VNET, PNET = "VERIFIED-NET", "PROVISIONAL-NET"
 TOL = 0.0005                                    # m2: the candidate prints 4 decimals
 TILE_BED_MAX_M = 0.06                           # owner Q-45: bathroom bed 4-6 cm (the larger floor bed)
 TILE_BED_SRC = "owner Q-45 tile bed 3-4 cm floors / 4-6 cm bathrooms (UPC-TILE-BED-001 thickness_m_wet_floor max)"
+# O-T453-1 (Checker r1 observation): the head is printed above FFL, the clear height is measured from the structural
+# top, so the gap between them is the FLOOR BUILD-UP (screed + bed + tile), which no drawing prints per room. Q-45 gives
+# the bed only. The bed maximum stands in for the build-up; it is carried as its own field with this source, and every
+# lintel row states its spare margin so a larger build-up can be tested against it (never silently absorbed).
+FLOOR_BUILDUP = {"value_m": TILE_BED_MAX_M, "status": "STAND-IN",
+                 "source": TILE_BED_SRC + "; stands in for the FFL-to-structural-top build-up (not printed per room); "
+                           "the tile and any screed above the bed are NOT included"}
+RANGE, RNET = "RANGE", "RANGE-NET"
 MAX_OPENING_M = 10.0                            # a width above this is a unit error (mm passed as m), refused
 BASIS_LABEL = {"VERIFIED": VNET, "DRAWING_CONFIRMED": PNET, "ASSUMED___OWNER_APPROVED": PNET}
 FILL_STATUS = {"VERIFIED": "VERIFIED", "DRAWING-CONFIRMED": "DRAWING_CONFIRMED",
@@ -175,9 +188,80 @@ def reconcile(lines, walls):
     return rows
 
 
+# ------------------------------------------------------------------------------------------------ lintel faces
+# R-T453-5 (r2, Checker F-C-T453-1, owner Q-73 'only masonry that physically exists ... prevent double counting'): the
+# candidate MAS.BLOCK net is the fill net = drawn pieces (length x clear height) minus openings w x h. An RC lintel
+# cast inside that panel occupies (w + 2 x bearing) x D of it, which is concrete (lintel ledger), not glued / laid
+# masonry. The MATERIAL BASE of a host line = its contract net minus each REQUIRED lintel face (one named row per
+# lintel); the contract area (MAS.BLOCK line) is untouched. A HELD / FLAGGED lintel ('at most 1') is carried on its
+# host line as a named range 0 .. its face: the material becomes a RANGE (label RANGE-NET, never VERIFIED-NET), never
+# a silent deduction and never 0; a face that cannot be bounded (width / band unknown) holds the material (HELD).
+
+def host_lines(lines, rec_rows):
+    """(floor, wall id) -> released line id, from the reconciliation (each released wall sits in exactly one line)."""
+    floor = {ln["line_id"]: ln["floor"] for ln in lines}
+    out = {}
+    for r in rec_rows:
+        for wid in r["walls"]:
+            key = (floor[r["line_id"]], wid)
+            if key in out:
+                raise LedgerError(f"wall {key} sits in two released lines ({out[key]}, {r['line_id']})")
+            out[key] = r["line_id"]
+    return out
+
+
+def lintel_faces(lintels, hosts):
+    """lintel rows -> {line_id: {'required': [...], 'held': [...]}} and the lintels whose host is in no released line."""
+    by, outside = {}, []
+    for r in lintels:
+        lid = hosts.get((r["floor"], r["host"]))
+        if lid is None:
+            outside.append({"opening_id": r["opening_id"], "host": r["host"], "decision": r["decision"],
+                            "why": "host wall carries no released figure (HELD wall / HELD parent line): its material "
+                                   "is already HELD, nothing to deduct"})
+            continue
+        slot = by.setdefault(lid, {"required": [], "held": []})
+        row = {"opening_id": r["opening_id"], "host": r["host"], "decision": r["decision"],
+               "width_m": r.get("width_m"), "schedule_row": r.get("schedule_row"),
+               "length_m": r.get("length_m") or (None if r.get("face_max_m2") is None
+                                                 else _r(r["face_max_m2"] / r["section_m"][1])),
+               "depth_m": None if r.get("section_m") is None else r["section_m"][1]}
+        if r["decision"] == "REQUIRED":
+            slot["required"].append(dict(row, face_m2=r["face_m2"], rule="R-T453-5 named deduction"))
+        else:
+            slot["held"].append(dict(row, face_max_m2=r.get("face_max_m2"), rule="R-T453-5 named range 0 .. face",
+                                     why=r.get("why")))
+    for v in by.values():
+        v["required"].sort(key=lambda x: x["opening_id"])
+        v["held"].sort(key=lambda x: x["opening_id"])
+    return by, sorted(outside, key=lambda x: x["opening_id"])
+
+
+def material_base(ln, faces):
+    """contract net -> material base (REQUIRED faces deducted) and its range (HELD / FLAGGED faces 0 .. face)."""
+    f = faces.get(ln["line_id"], {"required": [], "held": []})
+    ded = _r(sum(x["face_m2"] for x in f["required"]))
+    base = _r(ln["net_m2"] - ded)
+    if base < -TOL:
+        raise LedgerError(f"{ln['line_id']}: lintel faces {ded} m2 exceed the line net {ln['net_m2']} m2")
+    out = {"contract_net_m2": ln["net_m2"], "lintel_deductions": f["required"], "lintel_deduction_m2": ded,
+           "material_base_m2": base, "lintel_held_faces": f["held"]}
+    if not f["held"]:
+        return dict(out, base_state="EXACT", material_base_range_m2=None)
+    unbounded = [x["opening_id"] for x in f["held"] if x["face_max_m2"] is None]
+    if unbounded:
+        return dict(out, base_state=HELD, material_base_range_m2=[None, base],
+                    base_why=f"lintel face of {', '.join(unbounded)} cannot be bounded (width / band unknown): the "
+                             f"material base is at most {base} m2, its lower end HELD")
+    hi = _r(sum(x["face_max_m2"] for x in f["held"]))
+    return dict(out, base_state=RANGE, material_base_range_m2=[_r(max(base - hi, 0.0)), base],
+                base_why=f"{len(f['held'])} HELD / FLAGGED lintel(s) ({', '.join(x['opening_id'] for x in f['held'])}) "
+                         f"may occupy up to {hi} m2 of this masonry: named range, never deducted silently, never 0")
+
+
 # ------------------------------------------------------------------------------------------------ block materials
 
-def _mortar(ln, mortar_rows):
+def _mortar(ln, mortar_rows, mb):
     """installed joint mortar m3 of the line from the merged T-367 ledger (10 mm joint, 40 x 20 module) -> cement /
     sand by UPC-BLACK-MORTAR-001 (Q-78 1:4). The 0.15 m black face is not stated: its joint geometry, hence its
     mortar, is HELD (the T-367 figure beside). Procurement mortar (waste, dry factor) is HELD: no sourced value."""
@@ -192,27 +276,45 @@ def _mortar(ln, mortar_rows):
     m3 = float(r["mortar_installed_m3"])
     if abs(float(r["area_m2 (established)"]) - ln["net_m2"]) > TOL:
         raise LedgerError(f"{ln['line_id']}: T-367 mortar area {r['area_m2 (established)']} != line {ln['net_m2']}")
+    per_m2 = m3 / ln["net_m2"]
     calc = C.black_block_laying_materials(m3)
     beside = {"mortar_installed_m3": _r(m3), "cement_bags": _r(calc["cement_bags"]),
-              "sand_m3_loose": _r(calc["sand_m3_loose"])}
+              "sand_m3_loose": _r(calc["sand_m3_loose"]), "on_contract_net_m2": ln["net_m2"]}
     if abs(ln["thickness_m"] - 0.20) > 1e-9:
         return dict(out, status=HELD, label=HELD, beside_t367_40x20=beside,
                     why="the 0.15 m black block face / module is not stated (owner 2026-11-02 data item): its joint "
                         "volume is not established; the T-367 40 x 20 figure is beside only (never 0)")
-    return dict(out, status="COMPUTED", label=PNET, unit="m3 / bags / m3", source_t367=r["mortar_or_adhesive_status"],
-                mortar_installed_m3=_r(m3), mortar_per_m2=_r(m3 / ln["net_m2"], 8), cement_bags=_r(calc["cement_bags"]),
-                sand_m3_loose=_r(calc["sand_m3_loose"]),
+    out.update(unit="m3 / bags / m3", source_t367=r["mortar_or_adhesive_status"], mortar_per_m2=_r(per_m2, 8),
+               t367_on_contract_net=beside, base_rule="R-T453-5: T-367 mortar per m2 (uniform 40 x 20 joint) x the "
+                                                       "material base (lintel faces are concrete, not laid block)")
+    if mb["base_state"] == HELD:
+        return dict(out, status=HELD, label=HELD, why=mb["base_why"])
+    def _calc(a):
+        c = C.black_block_laying_materials(per_m2 * a)
+        return _r(per_m2 * a), _r(c["cement_bags"]), _r(c["sand_m3_loose"])
+    if mb["base_state"] == RANGE:
+        lo, hi = (_calc(a) for a in mb["material_base_range_m2"])
+        return dict(out, status=RANGE, label=RNET, mortar_installed_m3=None, cement_bags=None, sand_m3_loose=None,
+                    mortar_installed_m3_range=[lo[0], hi[0]], cement_bags_range=[lo[1], hi[1]],
+                    sand_m3_loose_range=[lo[2], hi[2]], why=mb["base_why"])
+    m, cb, sd = _calc(mb["material_base_m2"])
+    return dict(out, status="COMPUTED", label=PNET, mortar_installed_m3=m, cement_bags=cb, sand_m3_loose=sd,
                 label_why="the 10 mm joint is an owner PROVISIONAL input (T-367, owner 2026-10-29): PROVISIONAL-NET "
                           "even on a VERIFIED area")
 
 
-def block_materials(ln, mortar_rows=None):
-    """one MAS.BLOCK line -> its material rows (theoretical; procurement only with a sourced waste)."""
+def block_materials(ln, mortar_rows=None, faces=None):
+    """one MAS.BLOCK line -> its material rows (theoretical; procurement only with a sourced waste). The material is
+    computed on the MATERIAL BASE (R-T453-5), never on the contract net when a lintel sits in the panel."""
     mortar_rows = mortar_rows or {}
     area = ln["net_m2"] if ln["label"] != HELD else None
     base = {"line_id": ln["line_id"], "element_id": ln["element_id"], "source_label": ln["label"],
             "net_m2": area, "thickness_m": ln["thickness_m"], "material_type": ln["material"]}
     out = []
+    if ln["label"] != HELD:
+        mb = material_base(ln, faces or {})
+        base.update(mb)
+        area = mb["material_base_m2"]
     if ln["label"] == HELD:
         why = "source line HELD (parent blank: its held walls / pieces are named in the candidate), never 0"
         for item in ("BLOCK_COUNT", "LAYING_MATERIAL"):
@@ -220,7 +322,18 @@ def block_materials(ln, mortar_rows=None):
         return out
     if ln["material"] == "BLACK":
         b = C.black_blocks(area, ln["thickness_m"])
-        if b["status"] == C.OK:
+        if b["status"] == C.OK and mb["base_state"] == HELD:
+            out.append(dict(base, item="BLOCK_COUNT", rule="R-T453-1 / " + b["rule"], status=HELD, label=HELD,
+                            why=mb["base_why"]))
+        elif b["status"] == C.OK and mb["base_state"] == RANGE:
+            lo, hi = (_r(C.black_blocks(a, ln["thickness_m"])["theoretical_count"])
+                      for a in mb["material_base_range_m2"])
+            out.append(dict(base, item="BLOCK_COUNT", rule="R-T453-1 / " + b["rule"], status=RANGE, label=RNET,
+                            unit="nr", blocks_per_m2=b["blocks_per_m2"], module_m=b["module_m"],
+                            module_basis=b["module_basis"], theoretical_count=None,
+                            theoretical_count_range=[lo, hi], breakage=HELD, procurement_count=None,
+                            why=mb["base_why"]))
+        elif b["status"] == C.OK:
             out.append(dict(base, item="BLOCK_COUNT", rule="R-T453-1 / " + b["rule"], status="COMPUTED",
                             label=ln["label"], unit="nr", blocks_per_m2=b["blocks_per_m2"], module_m=b["module_m"],
                             module_basis=b["module_basis"], theoretical_count=_r(b["theoretical_count"]),
@@ -230,11 +343,21 @@ def block_materials(ln, mortar_rows=None):
         else:
             out.append(dict(base, item="BLOCK_COUNT", rule="R-T453-1 / " + b["rule"], status=HELD, label=HELD,
                             why=b["why"], flag="15 cm black block face: data item (owner 2026-11-02)"))
-        out.append(dict(base, item="LAYING_MATERIAL", material="black-block mortar 1:4", **_mortar(ln, mortar_rows)))
+        out.append(dict(base, item="LAYING_MATERIAL", material="black-block mortar 1:4", **_mortar(ln, mortar_rows, mb)))
     elif ln["material"] == "WHITE":
         g = C.aac_bond_bags([{"id": ln["line_id"], "net_area_m2": area, "thickness_m": ln["thickness_m"]}])
         row = g["rows"][0]
-        if row["status"] == C.OK:
+        if row["status"] == C.OK and mb["base_state"] == HELD:
+            out.append(dict(base, item="LAYING_MATERIAL", material="white AAC glue", rule="R-T453-2 / " + g["rule"],
+                            status=HELD, label=HELD, why=mb["base_why"]))
+        elif row["status"] == C.OK and mb["base_state"] == RANGE:
+            lo, hi = (_r(a * row["kg_per_m2"]) for a in mb["material_base_range_m2"])
+            out.append(dict(base, item="LAYING_MATERIAL", material="white AAC glue", rule="R-T453-2 / " + g["rule"],
+                            status=RANGE, label=RNET, unit="kg", kg_per_m2=row["kg_per_m2"], consumption_kg=None,
+                            consumption_kg_range=[lo, hi], bags_25kg_net=None,
+                            bags_25kg_net_range=[_r(lo / 25.0), _r(hi / 25.0)], why=mb["base_why"],
+                            procurement="rounded once per purchasing group (see glue_groups)"))
+        elif row["status"] == C.OK:
             out.append(dict(base, item="LAYING_MATERIAL", material="white AAC glue", rule="R-T453-2 / " + g["rule"],
                             status="COMPUTED", label=ln["label"], unit="kg", kg_per_m2=row["kg_per_m2"],
                             consumption_kg=_r(row["consumption"]), bags_25kg_net=_r(row["consumption"] / 25.0),
@@ -246,33 +369,51 @@ def block_materials(ln, mortar_rows=None):
                         why="white AAC block face not selected by the project: the owner's supplier sheet (Q-60) "
                             "lists 62.5 x 25 (6.4 / m2) and 60 x 20 (8.33 / m2); the company rules give no AAC count "
                             "rule: HELD, never the black 12.5 / m2",
-                        alternatives_beside={"62.5x25": _r(area * 6.4), "60x20": _r(area / (0.60 * 0.20))}))
+                        alternatives_beside={"62.5x25": _r(area * 6.4), "60x20": _r(area / (0.60 * 0.20)),
+                                             "on_m2": area}))
     else:
         raise LedgerError(f"{ln['line_id']}: released line with no block type")
     return out
 
 
-def glue_groups(lines):
+def glue_groups(lines, mats):
     """25 kg glue bags once per purchasing group. The PROJECT group holds every masonry line: a held line (its
-    colour not split) holds the group; the known parts per label are stated as fractional bags, never rounded."""
+    colour not split) or a white line whose material base is a RANGE / HELD holds the group; the known parts per
+    label are stated as fractional bags, never rounded (RANGE-NET as low .. high)."""
+    glue = {m["line_id"]: m for m in mats if m.get("material") == "white AAC glue"}
     rows = []
     for ln in lines:
         if ln["label"] == HELD:
             rows.append({"id": ln["line_id"], "net_area_m2": None, "thickness_m": ln["thickness_m"]})
         elif ln["material"] == "WHITE":
-            rows.append({"id": ln["line_id"], "net_area_m2": ln["net_m2"], "thickness_m": ln["thickness_m"]})
+            m = glue[ln["line_id"]]
+            rows.append({"id": ln["line_id"], "thickness_m": ln["thickness_m"],
+                         "net_area_m2": m["material_base_m2"] if m["status"] == "COMPUTED" else None})
     g = C.aac_bond_bags(rows)["groups"]["PROJECT"]
     known = {}
-    for ln in lines:
-        if ln["label"] != HELD and ln["material"] == "WHITE":
-            k = known.setdefault(ln["label"], {"m2": 0.0, "kg": 0.0})
-            k["m2"] += ln["net_m2"]
-            k["kg"] += ln["net_m2"] * float(C.param("UPC-AAC-GLUE-001", "kg_per_m2_by_thickness_m")["value"]
-                                            [f"{ln['thickness_m']:.2f}"])
+    for m in glue.values():
+        if m["status"] == "COMPUTED":
+            k = known.setdefault(m["label"], {"m2": 0.0, "kg": 0.0})
+            k["m2"] += m["material_base_m2"]
+            k["kg"] += m["consumption_kg"]
+        elif m["status"] == RANGE:
+            k = known.setdefault(RNET, {"m2_range": [0.0, 0.0], "kg_range": [0.0, 0.0], "lines": []})
+            for i in (0, 1):
+                k["m2_range"][i] += m["material_base_range_m2"][i]
+                k["kg_range"][i] += m["consumption_kg_range"][i]
+            k["lines"].append(m["line_id"])
+    part = {}
+    for k, v in sorted(known.items()):
+        if k == RNET:
+            part[k] = {"m2_range": [_r(x) for x in v["m2_range"]], "kg_range": [_r(x) for x in v["kg_range"]],
+                       "bags_25kg_net_range": [_r(x / 25.0) for x in v["kg_range"]], "lines": sorted(v["lines"])}
+        else:
+            part[k] = {"m2": _r(v["m2"]), "kg": _r(v["kg"]), "bags_25kg_net": _r(v["kg"] / 25.0)}
     return {"PROJECT": {"status": g["status"], "bags_to_buy": g.get("bags_to_buy"), "held_lines": g["held_rows"],
                         "known_kg": _r(g["consumption_known"]), "why": g.get("why")},
-            "known_part_by_label": {k: {"m2": _r(v["m2"]), "kg": _r(v["kg"]), "bags_25kg_net": _r(v["kg"] / 25.0)}
-                                    for k, v in sorted(known.items())}}
+            "known_part_by_label": part,
+            "note": "material base = contract net minus REQUIRED lintel faces (R-T453-5); RANGE-NET lines carry a "
+                    "HELD / FLAGGED lintel face as 0 .. face; labels are never summed into one figure"}
 
 
 def block_totals(mats):
@@ -280,12 +421,24 @@ def block_totals(mats):
     for m in mats:
         if m["item"] == "BLOCK_COUNT" and m["status"] == "COMPUTED":
             t = tot.setdefault(m["label"], {"m2": 0.0, "blocks": 0.0, "lines": 0})
-            t["m2"] += m["net_m2"]
+            t["m2"] += m["material_base_m2"]
             t["blocks"] += m["theoretical_count"]
             t["lines"] += 1
+        elif m["item"] == "BLOCK_COUNT" and m["status"] == RANGE:
+            t = tot.setdefault(RNET, {"m2": [0.0, 0.0], "blocks": [0.0, 0.0], "lines": 0})
+            for i in (0, 1):
+                t["m2"][i] += m["material_base_range_m2"][i]
+                t["blocks"][i] += m["theoretical_count_range"][i]
+            t["lines"] += 1
     held = [m["line_id"] for m in mats if m["item"] == "BLOCK_COUNT" and m["status"] == HELD]
-    return {"black_0_20_by_label": {k: {"m2": _r(v["m2"]), "theoretical_blocks": _r(v["blocks"]),
-                                        "lines": v["lines"]} for k, v in sorted(tot.items())},
+    out = {}
+    for k, v in sorted(tot.items()):
+        if k == RNET:
+            out[k] = {"m2_range": [_r(x) for x in v["m2"]], "theoretical_blocks_range": [_r(x) for x in v["blocks"]],
+                      "lines": v["lines"]}
+        else:
+            out[k] = {"m2": _r(v["m2"]), "theoretical_blocks": _r(v["blocks"]), "lines": v["lines"]}
+    return {"black_0_20_by_label": out, "on": "material base (R-T453-5), not the contract net",
             "held_count_lines": held, "procurement": HELD,
             "note": "VERIFIED-NET and PROVISIONAL-NET are never summed into one figure; the held lines are not 0"}
 
@@ -360,8 +513,11 @@ def lintel_row(op, census, wall_pieces, rows, bearing_m):
     bnd, bwhy = band(w, rows)
     if bnd is None:
         return dict(rec, decision=FLAGGED, why=bwhy + ": cast-in-situ design item, never forced into a band")
+    L = round(w + 2 * bearing_m, 6)
+    face = _r(L * bnd["d_m"])
     rec.update(schedule_row=bnd["row"], section_m=[op["wall_t_m"], bnd["d_m"]], bottom=bnd["bottom"], top=bnd["top"],
-               stirrups=bnd["stirrups"])
+               stirrups=bnd["stirrups"], face_max_m2=face,
+               face_rule=f"R-T453-5 wall face the lintel would occupy: (w {w} + 2 x {bearing_m}) x D {bnd['d_m']}")
     h, s = c["HEIGHT_M"].strip(), c["SILL_M"].strip()
     if h == "" or s == "" or c["HEIGHT_STATUS"].strip() == "HELD":
         return dict(rec, decision=HELD, why="opening head not established (height / sill HELD in the census): whether "
@@ -376,20 +532,21 @@ def lintel_row(op, census, wall_pieces, rows, bearing_m):
         return dict(rec, decision=HELD, why="host wall has no drawn pieces with a printed soffit (wall HELD): the "
                                            "clear height above the head is not known; at most 1 lintel")
     hs = [p[1] for p in pcs]
-    need = bnd["d_m"] + TILE_BED_MAX_M
+    need = bnd["d_m"] + FLOOR_BUILDUP["value_m"]
     m_lo, m_hi = round(min(hs) - head, 6), round(max(hs) - head, 6)
     rec.update(clear_heights_m=sorted(set(hs)), margin_min_m=m_lo, margin_max_m=m_hi,
-               margin_rule=f"clear height (structural top -> soffit) - head (above FFL) >= D {bnd['d_m']} + "
-                           f"{TILE_BED_MAX_M} m ({TILE_BED_SRC})")
+               floor_buildup_m=FLOOR_BUILDUP["value_m"], floor_buildup_status=FLOOR_BUILDUP["status"],
+               spare_margin_m=_r(m_lo - need),
+               margin_rule=f"clear height (structural top -> soffit) - head (above FFL) >= D {bnd['d_m']} + floor "
+                           f"build-up {FLOOR_BUILDUP['value_m']} m ({FLOOR_BUILDUP['source']})")
     if m_hi < bnd["d_m"]:
         return dict(rec, decision=FLAGGED, why="no piece leaves room for the band depth above the head: the beam / "
                                               "slab serves the opening or the head conflicts with it (designer)")
     if m_lo < need:
         return dict(rec, decision=FLAGGED, why="the head leaves room for the lintel under some pieces only (or only "
                                               "without the floor bed): which piece is over the opening is not read")
-    L = round(w + 2 * bearing_m, 6)
     B, D = op["wall_t_m"], bnd["d_m"]
-    rec.update(decision="REQUIRED", count=1, label=PNET, type="CAST-IN-SITU RC (project LINTEL SCHEDULE, level 1)",
+    rec.update(decision="REQUIRED", count=1, face_m2=face, label=PNET, type="CAST-IN-SITU RC (project LINTEL SCHEDULE, level 1)",
                bearing_m=bearing_m, length_m=L, concrete_m3=_r(B * D * L), formwork_m2=_r(2 * D * L + B * w),
                rebar_kg=HELD, rebar_why="bar cover, bend / anchorage lengths not printed (detail): kg HELD",
                stirrups_per_m=5, open_checks=["bearing availability (MIN 40 cm) at both jambs not measured",
@@ -447,11 +604,18 @@ def lintel_ledger(walls, census, register, rows, bearing_m):
 # ------------------------------------------------------------------------------------------------ build
 
 def mortar_totals(mats):
-    tot, held = {"m3": 0.0, "cement_bags": 0.0, "sand_m3_loose": 0.0, "lines": 0}, []
+    tot, held, rng = {"m3": 0.0, "cement_bags": 0.0, "sand_m3_loose": 0.0, "lines": 0}, [], {}
     for m in mats:
         if m.get("material") != "black-block mortar 1:4":
             continue
-        if m["status"] == "COMPUTED":
+        if m["status"] == RANGE:
+            for k, f in (("m3", "mortar_installed_m3_range"), ("cement_bags", "cement_bags_range"),
+                         ("sand_m3_loose", "sand_m3_loose_range")):
+                r = rng.setdefault(k, [0.0, 0.0])
+                r[0] += m[f][0]
+                r[1] += m[f][1]
+            rng.setdefault("lines", []).append(m["line_id"])
+        elif m["status"] == "COMPUTED":
             tot["m3"] += m["mortar_installed_m3"]
             tot["cement_bags"] += m["cement_bags"]
             tot["sand_m3_loose"] += m["sand_m3_loose"]
@@ -459,7 +623,8 @@ def mortar_totals(mats):
         else:
             held.append(m["line_id"])
     return {"black_0_20_provisional_net": {k: (_r(v) if k != "lines" else v) for k, v in tot.items()},
-            "held_lines": held, "procurement": HELD, "label": PNET}
+            "range_net": {k: (sorted(v) if k == "lines" else [_r(x) for x in v]) for k, v in sorted(rng.items())},
+            "held_lines": held, "procurement": HELD, "label": PNET, "on": "material base (R-T453-5)"}
 
 
 def build_from(index, fill_doc, register, census_rows, schedule_csv_rows, mortar_csv_rows=()):
@@ -467,14 +632,22 @@ def build_from(index, fill_doc, register, census_rows, schedule_csv_rows, mortar
     walls = fill_walls(fill_doc)
     rec = reconcile(lines, walls)
     mrows = {r["part_line_id_v3026"]: r for r in mortar_csv_rows if r["part_line_id_v3026"].startswith("L-")}
-    mats = [m for ln in lines for m in block_materials(ln, mrows)]
     rows, bearing = schedule_rows(schedule_csv_rows)
     census = {r["ID"]: r for r in census_rows}
     lints, lint_extra = lintel_ledger(walls, census, register, rows, bearing)
+    faces, outside = lintel_faces(lints, host_lines(lines, rec))
+    mats = [m for ln in lines for m in block_materials(ln, mrows, faces)]
+    lint_extra["faces_on_host_lines"] = {k: {"required_m2": _r(sum(x["face_m2"] for x in v["required"])),
+                                             "required": [x["opening_id"] for x in v["required"]],
+                                             "held_max_m2": (None if any(x["face_max_m2"] is None for x in v["held"])
+                                                             else _r(sum(x["face_max_m2"] for x in v["held"]))),
+                                             "held": [x["opening_id"] for x in v["held"]]}
+                                         for k, v in sorted(faces.items())}
+    lint_extra["faces_on_held_hosts"] = outside
     return {"schema": SCHEMA, "candidate": index.get("candidate_version"), "rulebook": C.METHOD + " " + C.VERSION,
             "rulebook_digest": C.digest(), "source_lines": lines, "reconciliation": rec, "block_materials": mats,
-            "block_totals": block_totals(mats), "glue_groups": glue_groups(lines),
-            "mortar": mortar_totals(mats),
+            "block_totals": block_totals(mats), "glue_groups": glue_groups(lines, mats),
+            "mortar": mortar_totals(mats), "floor_buildup": FLOOR_BUILDUP,
             "lintels": lints, "lintel_reconciliation": lint_extra,
             "not_in_part_1": {"mesh_strip_m": "B9-03 (Q-77 optional item) is T-363's integration; no calculator in "
                                               "COMPANY_RULEBOOK_V1", "column_ties_pcs": "same (Q-77)"}}
@@ -499,16 +672,18 @@ def write(ledger, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "MATERIAL_LEDGER_T453.json").write_text(
         json.dumps(ledger, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
-    cols = ["line_id", "element_id", "item", "material", "source_label", "label", "status", "net_m2", "thickness_m",
-            "theoretical_count", "consumption_kg", "bags_25kg_net", "why"]
+    cols = ["line_id", "element_id", "item", "material", "source_label", "label", "status", "net_m2",
+            "lintel_deduction_m2", "material_base_m2", "base_state", "material_base_range_m2", "thickness_m",
+            "theoretical_count", "theoretical_count_range", "consumption_kg", "consumption_kg_range", "bags_25kg_net",
+            "why"]
     with (out_dir / "BLOCK_MATERIALS_T453.csv").open("w", encoding="utf-8", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         wr.writeheader()
         for m in ledger["block_materials"]:
             wr.writerow(m)
     cols = ["opening_id", "floor", "host", "block_type", "wall_t_m", "kind", "width_m", "head_above_ffl_m",
-            "margin_min_m", "margin_max_m", "schedule_row", "decision", "length_m", "concrete_m3", "formwork_m2",
-            "why"]
+            "margin_min_m", "margin_max_m", "spare_margin_m", "schedule_row", "decision", "length_m", "face_m2",
+            "face_max_m2", "concrete_m3", "formwork_m2", "why"]
     with (out_dir / "LINTELS_T453.csv").open("w", encoding="utf-8", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         wr.writeheader()
