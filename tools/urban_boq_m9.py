@@ -3300,6 +3300,10 @@ def cmd_arch(a):
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
     if getattr(a, "v3047_inputs", None) and not v3047:
         raise SystemExit("--v3047-inputs needs --method ARCH_TAKEOFF_V3.0.47 or later")
+    if getattr(a, "v3048_inputs", None) and not v3048:
+        raise SystemExit("--v3048-inputs needs --method ARCH_TAKEOFF_V3.0.48")
+    if v3048 and not getattr(a, "v3048_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the Checker-merged earthworks quantities)")
     if v3047 and not getattr(a, "v3047_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3046_inputs", None) and not v3046:
