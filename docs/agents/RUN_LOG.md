@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T23:50Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPnbakYT7DpoSWpJcC8D active since 2026-11-03T22:52Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-03 23:20 UTC | Worker 1 | SUCCESS | none | No claimable TODO row: the board holds 0 TODO rows (lane S rows T-382/T-487/T-488 are QUEUED for worker 3; worker 1's next row T-480 is QUEUED behind T-483, which is READY and not yet merged). No quantity changed. | self-check codemap check PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-03 23:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T23:15Z | Worker 3 | SUCCESS | T-496 READY (agents/task-T-496 @ aae5c7be, non-candidate) | Materials binding map + check on V3.0.47: 1,202 bindings of T-453/454/489/455/495, 0 failures, 276 owner-rule figures and all table subtotals reproduced; wireable now only T-453 (1,346.55 blocks, 1.588929 m3 mortar 12.71 bags, 229.58 kg glue); dry plaster 4.726962 m3 estimate beside HELD; 2 V3.0.46 MAS.BLOCK lines unread (glue group open 11->13); F-T496-1 T-455 0.0 subtotals over held rows; 88 bed lines have no material table; no line moved | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
