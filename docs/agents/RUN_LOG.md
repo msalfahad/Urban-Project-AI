@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T05:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T04:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-479 (integration package), T-481, T-457 per RUN_LOG | self-check pending
 - 2026-11-03T04:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T04:39Z | Worker 3 | SUCCESS | T-479 READY (agents/task-T-479 @ 672fcb76, integration package) | Registry 1.41.0: new family B13-09 owns the pool water-face line, ARCH.EXTERIOR declared NOT_A_BOQ_LINE with evidence; line census of merged V3.0.45 (5972888b reproduced, 4,861 lines): 0 lines outside families, 0 doubly mapped, T-471 matrix complete; B8-08 7/7 verified lines bound (WHOLE 20.7 m2 + 1.035 m3, COMPONENT 293.86 m2 + 5.4925 m3); B10-13 612 lines 1,027.977 m2 valued, B7-13 31 lines 36.927 m2. Finding: 38 merged packages never promoted out of pending_packages, 21 families' candidate blocks stale; B8-07 and B9-02 emit no candidate line. No quantity change. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
