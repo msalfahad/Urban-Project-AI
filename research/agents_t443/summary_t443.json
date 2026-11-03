@@ -1,15 +1,15 @@
 {
  "task": "T-443",
- "method": "ARCH_TAKEOFF_V3.0.46",
- "extends": "ARCH_TAKEOFF_V3.0.45",
- "base_sha256": "5972888b659e249bed995992f57f0042571d042b50e761cabcc4221d653451d8",
- "candidate_sha256": "0d44e03391a78719a15d2d49d059a92c460f8c676972ce72f970a412cf7c1636",
+ "method": "ARCH_TAKEOFF_V3.0.47",
+ "extends": "ARCH_TAKEOFF_V3.0.46",
+ "base_sha256": "35d70129d8bf59b4c0f874a11edeacca26f45a51001b03a4d6ca57e3942546a4",
+ "candidate_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
  "lines": {
-  "base": 4861,
-  "v3_0_46": 4868,
+  "base": 4867,
+  "v3_0_47": 4874,
   "added": 7,
   "replaced": 2,
-  "outside_identical": 4859
+  "outside_identical": 4865
  },
  "stair_rooms": {
   "held_children": 3,
@@ -28,7 +28,7 @@
     "lines": 17,
     "released": 189.818752
    },
-   "v3_0_46": {
+   "v3_0_47": {
     "blocked_lines": 5,
     "bounded_lines": 4,
     "held_high": 15.730915,

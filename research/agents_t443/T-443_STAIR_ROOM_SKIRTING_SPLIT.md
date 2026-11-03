@@ -102,3 +102,29 @@ The percentage is not an accuracy figure; two of three components are owner-rule
 - R-T481-3 (1F shaft, 9.050 lm from L-ba3599ec to B7; merged a8609a7a but not re-measured at its Gate A): a different
   room line, needs that line's engine edges by handle; WAITING `T443_1F_SHAFT`, not consumed here.
 - Flight faces: B7-07 / B7-08 own them (form ORR-007), unchanged.
+
+## Round 2 (rebase, worker 1, 2026-11-03): ARCH_TAKEOFF_V3.0.47 on the merged V3.0.46
+
+T-419 merged first (af1eaeb4, V3.0.46 35d70129) and T-485 promoted the registry (f514f1a5, master 1.43.0), so the
+split is renumbered under the merge-order rule: module `engine/source/arch_v3046.py` (round 1) -> `arch_v3047.py`
+(extends ARCH_TAKEOFF_V3.0.46, adds the T-419 `check_tie_masonry` to its identity), hub `--v3047-inputs`, master
+1.42.0 (round 1) -> 1.44.0 on 1.43.0 (B3-06 text only), run script `v3047_run.py` derived from T-419's. The T-419
+hub literals pinned by `tests/t419_tie_gb_masonry/test_hub_wiring.py` are kept as they are.
+
+Fresh own chain on the Drive copies (T-167 v304_run, then v3047_run): V3_0_46_BOQ_LINES.json = 35d70129 (candidate
+of record reproduced) -> V3_0_47_BOQ_LINES.json e86a53a8, 4867 -> 4874 lines (+7 children, 2 parents changed),
+4865 lines byte-identical, totals move only in FIN.SKIRTING: released 189.818752 -> 203.368752 lm (+13.550000), held
+range and every other code unchanged. Rows, parents, children and closures are identical to round 1 (summary diff:
+method, base / candidate hashes and line counts only).
+
+Open check of the Verifier's 09:40 note (worker evidence, for the Checker to confirm): in the east half of the GF
+stair room every tread line from 497 (y -796193.5) to 48A (y -794093.5) is on layer 2, linetype HIDDEN (drawn above
+the cut plane), while the treads north of 490 (y -794043.5: 490, 48F, 484, 481) are layer 5 CONTINUOUS with the UP
+arrow 4A7 starting on 490; the level tag '+1.00' sits inside the east half (x -143593). So the hidden treads are the
+upper flight drawn overhead, the hall below is floored at +1.00, and 21C 2.000 is a floor-level wall face of the hall
+(skirted), not a flight side: the hall 4.650 lm stands.
+
+Known failure on this branch (not new code behaviour): `tests/t485_registry_promotion/
+test_t485_promotion.py::test_a_merged_package_never_stays_pending_in_the_newest_registry` reports 'T-443' because the
+test treats a task commit reachable from HEAD as merged; on a task branch the package's own commit always is. On the
+working head it will also report T-443 until the merge promotes it (registry promotion at merge, as T-485).

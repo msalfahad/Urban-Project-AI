@@ -1,5 +1,5 @@
-"""T-443: pins of the development-villa run (research/agents_t443/summary_t443.json, from v3046_run.py on the Drive
-copies): the base is the candidate of record V3.0.45, the split adds 13.550 lm in FIN.SKIRTING only, the two parents
+"""T-443: pins of the development-villa run (research/agents_t443/summary_t443.json, from v3047_run.py on the Drive
+copies): the base is the candidate of record V3.0.46, the split adds 13.550 lm in FIN.SKIRTING only, the two parents
 carry no figure, and the inputs builder reproduces the hand figures of the merged T-441 tables without private data."""
 from __future__ import annotations
 
@@ -12,19 +12,19 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT), str(ROOT / "research" / "agents_t443")]
 
-from engine.source import arch_v3046 as A  # noqa: E402
+from engine.source import arch_v3047 as A  # noqa: E402
 import t443_inputs as I  # noqa: E402
 
 S = json.loads((ROOT / "research/agents_t443/summary_t443.json").read_text(encoding="utf-8"))
 
 
 def test_base_is_candidate_of_record_and_only_skirting_moves():
-    assert S["base_sha256"].startswith("5972888b") and S["candidate_sha256"].startswith("0d44e033")
+    assert S["base_sha256"].startswith("35d70129") and S["candidate_sha256"].startswith("e86a53a8")
     assert (S["lines"]["added"], S["lines"]["replaced"]) == (7, 2)
     assert S["lines"]["outside_identical"] == S["lines"]["base"] - 2
     t = S["totals_moved_by_code"]
     assert list(t) == ["FIN.SKIRTING|lm"]
-    assert t["FIN.SKIRTING|lm"]["v3_0_46"]["released"] - t["FIN.SKIRTING|lm"]["base"]["released"] == \
+    assert t["FIN.SKIRTING|lm"]["v3_0_47"]["released"] - t["FIN.SKIRTING|lm"]["base"]["released"] == \
         pytest.approx(13.55, abs=1e-6)
 
 
