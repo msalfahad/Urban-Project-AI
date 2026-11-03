@@ -17,6 +17,9 @@ import sys
 from pathlib import Path
 
 import pytest
+import sys as _sys_t485  # noqa: E402
+_sys_t485.path.insert(0, str(Path(__file__).resolve().parents[2] / "research" / "agents_t485"))
+import t485_accounting as _T485  # noqa: E402  (T-485: a newer registry may hold the entry promoted, rule r3)
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -192,7 +195,7 @@ def test_1_26_0_governs_and_the_1_1_0_era_exempts_its_moves(docs):
     # 1.26.0 governs its own head; a newer governing registry must carry every 1.26.0 pending entry unchanged
     assert gov["version"] == "1.26.0" or (
         T130._semver(gov["version"]) > T130._semver("1.26.0")
-        and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
+        and _T485.all_accounted(new["pending_packages"], gov))
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
     codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert {"FIN.ROOF.SCREED", "FIN.ROOF.FINISH", "STR.FORMWORK"} <= codes

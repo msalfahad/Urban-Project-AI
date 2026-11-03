@@ -125,6 +125,9 @@ FILE_CHECKS = ("test_status_vocabulary_and_change_direction", "test_every_file_l
 # package that opens a new prefix (MET.RAILING.GUARD) escapes it. The 1.25.0 guard scans MET. too (same files, same
 # helpers), and every UPPER.UPPER code literal of the V3.0.30 module must fall inside the scanned prefixes.
 import re  # noqa: E402
+import sys as _sys_t485  # noqa: E402
+_sys_t485.path.insert(0, str(Path(__file__).resolve().parents[2] / "research" / "agents_t485"))
+import t485_accounting as _T485  # noqa: E402  (T-485: a newer registry may hold the entry promoted, rule r3)
 
 SCAN_1_25 = ("STR", "FIN", "ARCH", "MAS", "DOOR", "MET")
 CODE_1_25 = re.compile(r"\"((?:" + "|".join(SCAN_1_25) + r")\.[A-Z0-9_.]*[A-Z0-9_])\"")
@@ -210,7 +213,7 @@ def test_1_25_0_is_the_governing_registry_and_the_1_1_0_era_exempts_only_its_mov
     # 1.25.0 governs its own head; a newer governing registry must carry every 1.25.0 pending entry unchanged
     assert gov["version"] == "1.25.0" or (
         T130._semver(gov["version"]) > T130._semver("1.25.0")
-        and gov["pending_packages"][:len(new["pending_packages"])] == new["pending_packages"])
+        and _T485.all_accounted(new["pending_packages"], gov))
     old110 = json.loads((ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json").read_text(encoding="utf-8"))
     codes, fams = T130._era_exemptions(old110, new, _own_head(T130._written_codes()))
     assert codes == {"STR.FORMWORK", "STR.FORMWORK.STAIR", "ARCH.SHUTTER"}       # FIN.HANDRAIL is known to 1.1.0

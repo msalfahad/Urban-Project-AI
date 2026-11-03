@@ -1,0 +1,268 @@
+[
+ {
+  "task": "T-231",
+  "merge_commit": "3b042470cab70c039473754cb76ce3fb2994cd59",
+  "verdict_time": "2026-10-23 19:03 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 3b042470 (Verifier 2026-10-23 19:03 UTC per `date -u`, GATE B PASS, head 9ee3fd40 merged onto 17ed6f92 (after T-226 / T-230)"
+ },
+ {
+  "task": "T-211",
+  "merge_commit": "55fc11ecd79b634442e26fd947ea23f56358be42",
+  "verdict_time": "2026-10-23 22:40 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 55fc11ec (Verifier 2026-10-23 22:40 UTC: Gate B PASS for V3.0.9a, verdict at the top; V3.0.9b still to come in this row)"
+ },
+ {
+  "task": "T-232",
+  "merge_commit": "a0cd9bbc51684eaa107620871b5a1ce8d2b69b1d",
+  "verdict_time": "2026-10-24 02:44 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED a0cd9bbc (Verifier 2026-10-24 02:44 UTC, GATE B PASS; was READY worker 3 02:02, claimed 01:05)"
+ },
+ {
+  "task": "T-239",
+  "merge_commit": "3c9b1484c5a4f43d8039e894d54657ee983d08f7",
+  "verdict_time": "2026-10-24 06:12 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 3c9b1484 (Verifier 2026-10-24 06:12 UTC, GATE B PASS: V3.0.11 reproduced bb5466b0, 2 lines changed / 3,608 byte-identical, outline 1B1B and schedule rows F10 / F re-read by me, footing HELD 2.176 .. 2.275, blindin"
+ },
+ {
+  "task": "T-146",
+  "merge_commit": "768ff1d6ab8bd25fe25cff7d7503de87593a8686",
+  "verdict_time": "2026-10-24 09:37 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 768ff1d6 (Verifier 2026-10-24 09:37 UTC per `date -u`, Gate B PASS with T-247, head a13746ab; see the Verifier 09:38 note)"
+ },
+ {
+  "task": "T-268",
+  "merge_commit": "d1d096013319163e1c23bda4cd95a94fff11b106",
+  "verdict_time": "2026-10-24 15:24 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-24 15:24 UTC: Gate B PASS, merge d1d09601; candidate of record ARCH_TAKEOFF_V3.0.13, NOT RELEASED; 8 changed lines hand-checked, 3,655 byte-identical; full suite on the merged head NEW 0)"
+ },
+ {
+  "task": "T-240",
+  "merge_commit": "d07af77338386e31629c08c447f1cf9132709005",
+  "verdict_time": "2026-10-24 18:44 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED d07af773 (Verifier 2026-10-24 18:44 UTC: Gate B PASS, full suite NEW 0 on the merged head, 37 changed rows by hand; floor line candidate 380.364 m2 NOT VERIFIED as a whole, NOT RELEASED)"
+ },
+ {
+  "task": "T-270",
+  "merge_commit": "04d3437887e4b0535b658c24baa2cfa9950d4adb",
+  "verdict_time": "2026-10-25 03:46 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 04d34378 (Verifier 2026-10-25 03:46 UTC per `date -u`, GATE B PASS on 2fc1ba44; run lock checker)"
+ },
+ {
+  "task": "T-245",
+  "merge_commit": "ef3305f1ea30c61fed26fdcc7788107ef3dd85a3",
+  "verdict_time": "2026-10-25 10:17 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED ef3305f1 (Verifier 2026-10-25 10:17 UTC, Gate B PASS on r2; published with `engine push`; CODEMAP / ROUTING conflict only, working-branch versions rebuilt by the tool; verdict note 'Verifier 2026-10-25 10:17'; V2 / downgrade RECORDS NOT YET ISSUED, next Checker run)"
+ },
+ {
+  "task": "T-254",
+  "merge_commit": "7c49e890d8b92c91b4a43dcfc7a6f406d68f90e5",
+  "verdict_time": "2026-10-25 13:35 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 7c49e890 (Verifier 2026-10-25 13:35 UTC: Gate B PASS; full suite NEW 0 / KNOWN 395 / ABSENT 1 on 7308eb76; own V3.0.17 run = hand-in; F-T254-01 ring end rule open, F-T254-02 PC-1F-B / P-6 watch; V3.0.17 V2 record set next Checker run)"
+ },
+ {
+  "task": "T-266",
+  "merge_commit": "ceeb513522b009b95a74cd9afb5911f39aac9a1d",
+  "verdict_time": "2026-10-25 22:42 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED ceeb5135 (Verifier 2026-10-25 22:42 UTC per `date -u`, run unknown, lock checker; STARTED 21:51; self-check codemap / pytest t061 / freeze PASS; Drive read OK, own decode 'ST7757 dxf.dxf' 9f9d1179, P7757_DXF_COMPRESSED.zip -> P7757.dxf ab54dd55)"
+ },
+ {
+  "task": "T-255",
+  "merge_commit": "e9eaaeac4503bc5ef90adc54b47e315bfd277487",
+  "verdict_time": "2026-10-26 03:43 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 01358449 (merge commit e9eaaeac; Verifier 2026-10-26 03:43 UTC per `date -u`, run unknown, lock checker token 20261026T024949-459-15179; STARTED 02:51; self-check codemap / pytest t061 / freeze PASS; Drive read OK: own decode 'ST7757 dxf.dxf' 9f9d1179, P7757.dxf ab54dd55, ST7757.pdf 74da1523)"
+ },
+ {
+  "task": "T-244",
+  "merge_commit": "59dbfd0ed7458c1b0cf6f056cd0d0c41d5443823",
+  "verdict_time": "2026-10-28 21:19 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 59dbfd0e (Verifier 2026-10-28 21:19 UTC per date -u, Gate B PASS; candidate of record ARCH_TAKEOFF_V3.0.20, NOT RELEASED; see the Verifier 2026-10-28 T-244 note)"
+ },
+ {
+  "task": "T-315",
+  "merge_commit": "b0041dd21eb43e942f76f491e0049765fdd8e878",
+  "verdict_time": "2026-10-29 07:49 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-29 07:49 UTC per date -u, Gate B PASS r2, merge b0041dd2 by engine push; verdict note 'Verifier 2026-10-29 T-315 r2')"
+ },
+ {
+  "task": "T-331",
+  "merge_commit": "15ac21f7f60314c48d2fb76e3050bef19953d0c0",
+  "verdict_time": "2026-10-29 11:38 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-29 11:38 UTC, Gate B PASS, 15ac21f7; candidate of record ARCH_TAKEOFF_V3.0.22, NOT RELEASED)"
+ },
+ {
+  "task": "T-319",
+  "merge_commit": "06e46b11a29abecc30e7643e61392f547988ae5b",
+  "verdict_time": "2026-10-29 15:46 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 06e46b11 (Verifier 2026-10-29 15:46 UTC per date -u, Gate B PASS, engine push 5fbf8677; candidate of record now ARCH_TAKEOFF_V3.0.23, NOT RELEASED; see the Verifier 2026-10-29 T-319 + T-341 note)"
+ },
+ {
+  "task": "T-338",
+  "merge_commit": "dd4c9f8f1b57de67b7012cd1811f430c2c308b0f",
+  "verdict_time": "2026-10-29 20:14 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-29 20:14 UTC, run session_01E6cPndQ8P3psQLivrqh7iu; Gate B PASS; merge dd4c9f8f pushed by engine push onto f2225238; CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.24, NOT RELEASED; no quantity, state or range changed; verdict note 'Verifier 2026-10-29 T-338')"
+ },
+ {
+  "task": "T-343",
+  "merge_commit": "bb772f5152ac0fe9670882ff0ca5878cb611fbca",
+  "verdict_time": "2026-10-30 03:32 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED bb772f51 (Verifier 2026-10-30 03:32 UTC, run session_01E6cPnbbQEa1NwWJTXG1Q9j, lock checker; Gate B PASS on r2 head f29fbeb9; engine push bb772f51 after T-355 21f7b58a; conflict in docs/CODEMAP.md only: working-br"
+ },
+ {
+  "task": "T-279",
+  "merge_commit": "88ef8cb8f542999699e2974e44fbc9b81246a314",
+  "verdict_time": "2026-10-30 07:50 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 88ef8cb8 (Verifier 2026-10-30 07:50 UTC, run session_01E6cPnavFGjS8UBcsU2a8gC, Gate B PASS: CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.26, NOT RELEASED; verdict in the Verifier 2026-10-30 07:55 entry)"
+ },
+ {
+  "task": "T-318",
+  "merge_commit": "93ab4fff8a0b1fa59df27bab89842d7fa54973cd",
+  "verdict_time": "2026-10-30 11:34 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 93ab4fff (Verifier 2026-10-30 11:34 UTC, run session_01E6cPndpf1cNrkAwihSX1U9, Gate B PASS: CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.27, NOT RELEASED; verdict in the Verifier 2026-10-30 11:34 entry)"
+ },
+ {
+  "task": "T-326",
+  "merge_commit": "ca171c67d09e55218762689f1e324e0433de2e85",
+  "verdict_time": "2026-10-30 18:30 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED ca171c67 (Verifier 2026-10-30 18:30 UTC: Gate B r2 PASS, engine push 30e7ab2a; candidate of record ARCH_TAKEOFF_V3.0.28, NOT RELEASED)"
+ },
+ {
+  "task": "T-327",
+  "merge_commit": "3f8c7d039f487aeb446f4c00a19caa2fa2d448a0",
+  "verdict_time": "2026-10-30 23:35 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 3f8c7d03 (Verifier 2026-10-30 23:35 UTC, run session_01E6cPnbbfMSioPX5SNxUv1y; GATE B PASS; engine push @ 3f8c7d03 on d1183d70 (T-378)"
+ },
+ {
+  "task": "T-199",
+  "merge_commit": "e29f372477bd005f3c6a1b2d2e73d28246a11f44",
+  "verdict_time": "2026-10-31 06:37 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-31 06:37 UTC per date -u, run session_01E6cPne1BmSpfvEKYSqWfFq, Gate B PASS r3, merge e29f3724 on 84283b73, engine push; CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.30, NOT RELEASED; released A unchanged)"
+ },
+ {
+  "task": "T-328",
+  "merge_commit": "94d85fc75aeef5ec8797d21ed084ac20942153d2",
+  "verdict_time": "2026-10-31 11:52 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-31 11:52 UTC per date -u, GATE B PASS on c8bc8af1, merge 94d85fc7 by engine push; CODEMAP conflict only (T-385 merge 5f99bfc3)"
+ },
+ {
+  "task": "T-284",
+  "merge_commit": "6c219179c72ef9ba5460d52e1c4f8ce89fe8a8f3",
+  "verdict_time": "2026-10-31 15:57 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 6c219179 (Verifier 2026-10-31 15:57 UTC per date -u, run session_01E6cPncbGKSbofBRfMWrtGX, lock checker: GATE B PASS on 6c708018, merge 6c219179 by engine push. CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.32 (NOT RELEASED; released default V2.9 + route G unchanged; rollback V3.0.31)"
+ },
+ {
+  "task": "T-397",
+  "merge_commit": "4492fd59a1333b820ae422abaafa5792dc04ab53",
+  "verdict_time": "2026-10-31 19:55 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-31 19:55 UTC per date -u, run session_01E6cPndCQvjwi3y2XkBbKhK, lock checker: GATE B PASS on 36e70b2c, merge 4492fd59 by engine push. CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.33 (NOT RELEASED; released default V2.9 + route G unchanged; rollback V3.0.32)"
+ },
+ {
+  "task": "T-399",
+  "merge_commit": "abf3de7632c85feffdd7e37e8ad6ec2d650a8da6",
+  "verdict_time": "2026-10-31 23:30 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-10-31 23:30 UTC per date -u (stamp corrected from 23:35)"
+ },
+ {
+  "task": "T-400",
+  "merge_commit": "0c5d526c65188791d83beae20ddf9ce06db3f96d",
+  "verdict_time": "2026-11-01 04:11 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 0c5d526c (Verifier 2026-11-01T04:11Z per date -u, run session_01E6cPndXQB7US7RNewjLRYM, lock checker; GATE B PASS on 48d0b690, published by engine push after T-411 49026f81)"
+ },
+ {
+  "task": "T-246",
+  "merge_commit": "61b78fe8681f8c630abea02684618bdf6e38aaf0",
+  "verdict_time": "2026-11-01 07:39 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 61b78fe8 (Verifier 2026-11-01T07:39Z per date -u (stamp corrected from 07:42 written ahead of the clock)"
+ },
+ {
+  "task": "T-420",
+  "merge_commit": "4c01fe06fd2404af0e9c3da97f5ff350743c119f",
+  "verdict_time": "2026-11-01 11:43 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 4c01fe06 (Verifier 2026-11-01T11:43Z per date -u, run session_01E6cPndaaRKVDyHstbkqM8t, lock checker; GATE B PASS on 4a8a8acd, published by engine push)"
+ },
+ {
+  "task": "T-421",
+  "merge_commit": "bc9f293c8052286fc8cc29012a5f93ff588df202",
+  "verdict_time": "2026-11-01 15:43 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED bc9f293c (Verifier 2026-11-01T15:43Z per date -u, run session_01E6cPnaurxyjspPeC4K9Hwd, lock checker; GATE B PASS on 62daaaa6, published by engine push)"
+ },
+ {
+  "task": "T-429",
+  "merge_commit": "a2a2e0803b475bba5746a9708990762cd6eb9025",
+  "verdict_time": "2026-11-01 19:44 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED a2a2e080 (Verifier 2026-11-01T19:44Z per date -u, run session_01E6cPneKQttYouw1QkpX3yH, lock checker)"
+ },
+ {
+  "task": "T-430",
+  "merge_commit": "3fe8f974fd9121f80e0173a7cc73771f819e2bac",
+  "verdict_time": "2026-11-01 22:30 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED 3fe8f974 (Verifier 2026-11-01T22:30Z per date -u, run session_01E6cPnd3acEY293NpCfd3uD, lock checker; GATE B FIRST PASS on 4957a0ce (+ working head 2f63773e = T-437 / T-439 research only)"
+ },
+ {
+  "task": "T-431",
+  "merge_commit": "a04e3ea84fd246c5468a657b8fffc1838e067d56",
+  "verdict_time": "2026-11-02 04:42 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED a04e3ea8 (Verifier 2026-11-02T04:42Z per date -u, run session_01E6cPncbmptLsaoUB7KRaMf, lock checker; GATE B PASS on c304739d, published by engine push; CODEMAP-only conflict with the T-450 / T-462 merges: working-branch version taken, rebuilt by the tool, check stale none, freeze 0)"
+ },
+ {
+  "task": "T-442",
+  "merge_commit": "6a13827f79132147812e4c196076f102d99f7577",
+  "verdict_time": "2026-11-02 10:44 UTC",
+  "board_file": "BOARD_ARCHIVE.md",
+  "board_status_head": "MERGED (Verifier 2026-11-02T10:44Z; merge 6a13827f by engine push; GATE B PASS; CANDIDATE OF RECORD NOW ARCH_TAKEOFF_V3.0.42 json 1793266d, NOT RELEASED)"
+ },
+ {
+  "task": "T-350",
+  "merge_commit": "3077469a6705ce48531202144a1298964e7cdba3",
+  "verdict_time": "2026-11-02 18:35 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED 3077469a [Verifier 2026-11-02 18:35 UTC, run session_01E6cPnbMXo9W57mVzHxdcHr: GATE B PASS]"
+ },
+ {
+  "task": "T-422",
+  "merge_commit": "b4e22291cf69286b819ebf34d57a01627a89cb84",
+  "verdict_time": "2026-11-02 22:50 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED b4e22291 (Verifier 2026-11-02T22:50Z per date -u, run session_01E6cPnbxjdWf32MBsD9pKvy: GATE B PASS; candidate of record now ARCH_TAKEOFF_V3.0.44 8b2fe2b6, NOT RELEASED, released default V2.9 + route G unchanged)"
+ },
+ {
+  "task": "T-478",
+  "merge_commit": "8ccf69b3adde45150ba797a4cdb59289be9aed23",
+  "verdict_time": "2026-11-03 04:03 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r3 (Verifier 2026-11-03 04:03 UTC per date -u: Gate B PASS, merge 8ccf69b3 on 2266198f; CANDIDATE OF RECORD ARCH_TAKEOFF_V3.0.45 5972888b, NOT RELEASED; VERDICT r3 below)"
+ }
+]
