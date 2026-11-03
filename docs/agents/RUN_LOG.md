@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03 16:15 UTC | Lead | STARTED | run session_01E6cPnbYqwbqEVPJxD1LUuX | repo-attached routine | task state: board | report pending
 - 2026-11-03T15:50Z | Verifier | IDLE | none (run lock held by run 20261103T135121-373-23150 since 2026-11-03T13:51Z) | overlap lock: another Verifier run is active; no claim, no change, no quantity | lock
 - 2026-11-03T15:32Z | Worker 1 | SUCCESS | T-491 READY (agents/task-T-491 @ 027c5f06) | B1-01/B1-07 site preparation as components, research unwired: boundary 92.740 lm (ARCH p.1 sides + P7757 handles), clearance 470.550 m2 (owner 17:20 (6) scope, extent rule PROPOSED), handover 1 item; net fence HELD (at most 92.740, no gate source), cabin/tanks/tanker/pump/generator/power/insurance HELD with formulas, no default; freelancer no row. Skipped T-443 (REJECTED r2, not TODO; r3 item (3) waits on Lead ruling F-C-T443-1). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-03T15:22Z | Worker 1 | STARTED | run session_01E6cPneFZD7cGaf9npp8GfK | repo-attached routine | task state: none yet | self-check pending
