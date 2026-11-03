@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T21:52Z | Verifier | STARTED | run session_01E6cPneSZkigPVJTiYG2bt8 | repo-attached routine | task state: READY T-493 (Worker 2 21:06) | self-check pending
 - 2026-11-03 21:22 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T21:06Z | Worker 2 | SUCCESS | T-493 READY @29ae2de4 | B7 landing census both stairs: 4 landings had no own line -> proposed B7-04 +10.5875 m2 (RS-LD 1.3525, 2F arrival 4.865, new MS1-LD 1.4375, MS2-LD 2.9325; released 10.1019 -> 20.6894), both bounds retired (GF holds no landing), B3/B7 shared 0, GF hall/lobby material HELD; freelancer 6.20 vs 4.37 UNRESOLVED; tests 43 pass, freeze 0 | self-check PASS codemap / PASS pytest t061 / PASS freeze; problem: tests/t485_registry_promotion::test_a_merged_package_never_stays_pending fails on the working branch c814c55d too (T-443 pending), not this task
 - 2026-11-03T21:01:54Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261103T170209-357-21557 since 2026-11-03T17:02Z recovered
