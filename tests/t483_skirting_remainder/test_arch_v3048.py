@@ -343,3 +343,19 @@ def test_post_integration_check_catches_a_figure_on_a_closed_range():
     rg["bounded_range"] = {"low": 0.0, "high": 0.0}
     with pytest.raises(ValueError, match="carries a figure"):
         A.check_remainder(bad, old)
+
+
+def test_range_with_an_earlier_narrow_record_closes():
+    """regression (Alsenan chain): a range line narrowed by V3.0.44 (its NARROW_RANGE record kept) closed here: the
+    V3.0.44 check must not read the superseded record; the closed line is checked by check_remainder."""
+    from engine.source import arch_v3044 as A44
+    lines = base_lines()
+    i = next(k for k, x in enumerate(lines) if x["location"]["element_id"] == "R3:skirting:range")
+    ln = copy.deepcopy(lines[i])
+    ln["calculation"]["inputs"][A44.REC_KEY] = {"action": "NARROW_RANGE"}
+    lines[i] = BL.validate(ln)
+    with pytest.raises(ValueError, match="not a held range"):
+        A44.check_skirting([dict(ln, evidence_state="NOT_APPLICABLE_WITH_EVIDENCE", bounded_range=None)])
+    _, new, ident, _ = run(lines)
+    assert by_eid(new, "R3:skirting:range")["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE"
+    assert ident["superseded_records"] == [A44.REC_KEY]

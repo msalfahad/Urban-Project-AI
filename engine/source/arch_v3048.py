@@ -591,6 +591,10 @@ def integrate(prev, changes, for_lead=()):
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
     guards = A3031._family_guards(out, for_lead)
+    # a line this version changes is checked by check_remainder; an earlier version's record left on it (e.g. a V3.0.44
+    # NARROW_RANGE on a range now closed) describes the superseded state, so that version's check skips it
+    mine = [ln for ln in out if ln["line_id"] in repl]
+    older = [ln for ln in out if ln["line_id"] not in repl]
     ident = {"base_lines": len(prev), "v3_0_48_lines": len(out), "v3_0_48_rows": len(changes),
              "replaced": len(repl), "added": 0, "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
@@ -598,9 +602,11 @@ def integrate(prev, changes, for_lead=()):
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3043.check_earthworks(out), "skirting": A3044.check_skirting(out),
+             "earthworks": A3043.check_earthworks(out), "skirting": A3044.check_skirting(older),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
-             "stair_rooms": A3047.check_stair_rooms(out), "remainder": check_remainder(out, prev)}
+             "stair_rooms": A3047.check_stair_rooms(out), "remainder": check_remainder(out, prev),
+             "superseded_records": sorted(k for ln in mine for k in ((ln.get("calculation") or {}).get("inputs") or {})
+                                          if k.endswith(("_v3044", "_v3036")) and k != REC_KEY)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")
