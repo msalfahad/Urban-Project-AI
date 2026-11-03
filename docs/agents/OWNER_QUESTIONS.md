@@ -156,6 +156,14 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+- **Q-79** (worker 2, T-454, 2026-11-03T11:02Z; ERS s.2.7 'material genuinely unspecified', s.6 format) Cement : sand mix of the three wall coats.
+  Issue: wall plaster (2 coats), wet-wall levelling render and spatter have no mix in the drawings, the rulebook (UPC-CEMENT-LAYERS-METHOD-001 null) or the readable references; thickness is found (KSE 'Bayt Al-Omr' 2023: plaster 1.5 + 0.5 cm, render not less than 1.5 cm; spatter none).
+  Investigation: the Kuwait General Specification 1990 plastering chapter is past the 97,008 characters the Drive connector returns; the Al-Jund finishes book has no text. 1:4 (Q-78 blocks) and 1:3 (Q-53 stair bed) are not borrowed.
+  Alternatives: (A) you state the Urban mix per coat (e.g. plaster 1:4, render 1:4, spatter 1:2); (B) upload the plastering chapter of the 1990 specification as a PDF under 6 MB and the agents take the mix from it (level 2 / 4, labelled).
+  Impact (V3.0.45, Q-53 conversion 1.33 / 1,440 kg / 50 kg): dry 4.727 m3 -> 30.2 (1:5) .. 45.3 (1:3) bags; wet render >= 5.105 m3 -> >= 32.6 .. 48.9 bags; sand about 5 m3 each.
+  Recommendation: A (company practice is the owner's decision; one figure per coat, used on every villa); B if you prefer the specification to govern.
+  Status: mortar m3 computed (plaster ESTIMATED-NET, render AT_LEAST bound); cement / sand / water HELD, never 0. Next: everything else continues; T-455 does not depend on it.
+
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.
