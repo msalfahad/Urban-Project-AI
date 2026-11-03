@@ -338,6 +338,8 @@ def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
             bad.append(f"{code}: {s} must say what changed")
     if doc.get("candidate_state_counts") != counts:
         bad.append(f"candidate_state_counts {doc.get('candidate_state_counts')} != families {counts}")
+    if yes_no.get("N/A") == 0:
+        del yes_no["N/A"]                   # r4: the N/A count is stated only when a family says it
     if doc.get("in_v3_0_candidate_counts") != yes_no:
         bad.append(f"in_v3_0_candidate_counts {doc.get('in_v3_0_candidate_counts')} != families {yes_no}")
     return bad
