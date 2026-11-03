@@ -37,7 +37,7 @@ tests/t452_project_scoreboard:
   while one of its compared lines is not (a right total from offsetting errors fails).
 
 CLI: python3 -I tools/project_scoreboard.py --manifest MANIFEST.json --out OUT.json [--markdown OUT.md]
-     [--run RUN_DIR] [--candidate-lines LINES.json]
+     [--run RUN_DIR] [--candidate-lines LINES.json --candidate-label LABEL]
 """
 
 from __future__ import annotations
@@ -53,6 +53,8 @@ if __package__ in (None, ""):
 
 from tools import alsenan_keymap as K      # noqa: E402  (key -> engine rows, reference rows; unchanged)
 from tools import alsenan_scoreboard as S  # noqa: E402  (the scorer; unchanged)
+
+DEFAULT_GUARD_CLASS = "TOOLING"        # T-212 property P1: a read-only scorer; comparison only, it produces no quantity
 
 SCHEMA = "URBAN_PROJECT_SCOREBOARD_V1"
 MANIFEST_SCHEMA = "URBAN_PROJECT_SCORE_MANIFEST_V1"
@@ -395,7 +397,7 @@ def _load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def load_manifest(path, run=None, candidate_lines=None):
+def load_manifest(path, run=None, candidate_lines=None, candidate_label=None):
     m = _load(path)
     if m.get("SCHEMA") != MANIFEST_SCHEMA:
         raise ValueError(f"manifest schema {m.get('SCHEMA')!r} is not {MANIFEST_SCHEMA}")
@@ -411,6 +413,15 @@ def load_manifest(path, run=None, candidate_lines=None):
     if m["run"] is None:
         raise ValueError("manifest: no run directory (manifest 'run' or --run)")
     m["candidate_lines"] = Path(candidate_lines) if candidate_lines else p(m.get("candidate_lines"))
+    # F-C-T452-1 (Checker 2026-11-03): lines given on the command line are not the lines the manifest's
+    # candidate_label names, so an override needs its own label; the manifest label is never carried onto them.
+    if candidate_lines and not _nonempty(candidate_label):
+        raise ValueError("--candidate-lines needs --candidate-label: the manifest's candidate_label names the "
+                         "manifest's candidate lines, not these")
+    if _nonempty(candidate_label):
+        if m["candidate_lines"] is None:
+            raise ValueError("--candidate-label given without candidate lines")
+        m["candidate_label"] = str(candidate_label)
     if m["candidate_lines"] is not None and not _nonempty(m.get("candidate_label")):
         raise ValueError("a candidate needs its candidate_label")
     if m["candidate_lines"] is not None and str(m["candidate_label"]).strip() == str(m["run_label"]).strip():
@@ -533,10 +544,11 @@ def main(argv=None):
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--run")
     ap.add_argument("--candidate-lines")
+    ap.add_argument("--candidate-label", help="label of the --candidate-lines side (required with it)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--markdown")
     a = ap.parse_args(argv)
-    res = build(load_manifest(a.manifest, a.run, a.candidate_lines))
+    res = build(load_manifest(a.manifest, a.run, a.candidate_lines, a.candidate_label))
     Path(a.out).write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     md = markdown(res)
     if a.markdown:

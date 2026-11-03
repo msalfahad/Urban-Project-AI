@@ -319,6 +319,32 @@ def test_candidate_side_kept_apart(tmp_path):
     assert by_key(res["sides"][1])["CONC.SLAB"]["reconciled"]["variance_pct"] == 0.0
 
 
+def test_candidate_lines_override_carries_its_own_label(tmp_path):
+    """F-C-T452-1 (r2): lines given on the command line never inherit the manifest's candidate label."""
+    cand = copy.deepcopy(LINES)
+    cand[3]["measured_net"] = 25.0
+    (tmp_path / "cand.json").write_text(json.dumps(cand), encoding="utf-8")
+    (tmp_path / "other.json").write_text(json.dumps(LINES), encoding="utf-8")
+    mf = write_project(tmp_path, extra={"candidate_lines": "cand.json", "candidate_label": "candidate B"})
+    # normal: the override is scored under the label given with it
+    res = P.build(P.load_manifest(mf, candidate_lines=str(tmp_path / "other.json"), candidate_label="candidate C"))
+    assert [s["label"] for s in res["sides"]] == ["run A", "candidate C"]
+    assert by_key(res["sides"][1])["CONC.SLAB"]["engine_qty"] == 48.0
+    # manifest-only path unchanged
+    assert [s["label"] for s in P.build(P.load_manifest(mf))["sides"]] == ["run A", "candidate B"]
+    # adverse: an override with no label of its own is refused (it would be shown as 'candidate B')
+    with pytest.raises(ValueError, match="needs --candidate-label"):
+        P.load_manifest(mf, candidate_lines=str(tmp_path / "other.json"))
+    with pytest.raises(ValueError, match="never combined"):
+        P.load_manifest(mf, candidate_lines=str(tmp_path / "other.json"), candidate_label="run A")
+    (tmp_path / "n").mkdir()
+    with pytest.raises(ValueError, match="without candidate lines"):
+        P.load_manifest(write_project(tmp_path / "n"), candidate_label="candidate C")
+    out = tmp_path / "o.json"
+    with pytest.raises(ValueError, match="needs --candidate-label"):
+        P.main(["--manifest", str(mf), "--out", str(out), "--candidate-lines", str(tmp_path / "other.json")])
+
+
 # ---- the training villa's committed manifest resolves and validates (its run is private, outside the repository) ----
 
 def test_dev_villa_manifest_inputs(tmp_path):
