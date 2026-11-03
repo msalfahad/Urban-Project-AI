@@ -76,7 +76,7 @@ TOL = 0.0005                              # metres / m2 on the beside measures (
 # the codes each piece may ADD; anything else is refused (a tie beam never in a column / ring-beam line, masonry
 # below N.G. of the house never in the fence masonry, the ground-beam concrete or the band)
 ADD_CODES = {P_TIE: ("STR.CONC.LIFT", "STR.FORMWORK", "STR.REBAR"), P_MAS: ("MAS.BLOCK",)}
-REFUSED_CODES = {P_TIE: ("STR.CONC.COLUMN", "STR.CONC.BEAM", "STR.CONC.RING_BEAM", "MAS.BLOCK"),
+REFUSED_CODES = {P_TIE: ("STR.CONC.COLUMN", "STR.CONC.BEAM", "MAS.BLOCK"),   # ring beams are STR.CONC.BEAM
                  P_MAS: ("EXT.FENCE.MASONRY_BELOW_NG", "EXT.FENCE.BLOCK", "EXT.FENCE.WALL", "STR.CONC.GROUND_BEAM",
                          "STR.CONC.FOOTING", "STR.CONC.BOUNDARY_WALL")}
 BESIDE_KINDS = ("LENGTH", "AT_LEAST_AREA", "NO_BOUND")
@@ -216,7 +216,8 @@ def load_inputs(doc, project_id=None):
         if x["piece"] not in ADD_CODES:
             raise InputsError(f"{w}: piece {x['piece']} is not {sorted(ADD_CODES)}")
         if x["item_code"] in REFUSED_CODES[x["piece"]]:
-            raise InputsError(f"{w}: {x['item_code']} refused for {x['piece']} (never inside that line: R-T419-1 a / b)")
+            raise InputsError(f"{w}: {x['item_code']} refused for {x['piece']} (never inside that line: "
+                              f"R-T419-1 a / b)")
         if x["item_code"] not in ADD_CODES[x["piece"]]:
             raise InputsError(f"{w}: {x['item_code']} is not a code of {x['piece']} {ADD_CODES[x['piece']]}")
         if not LINE_ID_RE.match(str(x["template_line"])):

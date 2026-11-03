@@ -3208,11 +3208,7 @@ def cmd_arch(a):
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
     V3045 = "ARCH_TAKEOFF_V3.0.45"
-    # T-419: ARCH_TAKEOFF_V3.0.46 = the SAME candidate (engine.source.arch_v3046): a V3.0.45 run (its files unchanged) +
-    # the Checker-verified lift tie beam / house below-ground masonry pieces (URBAN_V3046_INPUTS_V1); named here likewise.
-    V3046 = "ARCH_TAKEOFF_V3.0.46"
-    v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
-    v3045 = a.method in (V3045, V3046)                 # T-478: the V3.0.44 run, then its V3.0.45 blinding package
+    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46")  # T-478 / T-419 (see below)
     v3044 = a.method in (V3044, V3045, V3046)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
     v3043 = a.method in (V3043, V3044, V3045, V3046)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
     v3042 = a.method in (V3042, V3043, V3044, V3045, V3046)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
@@ -3258,6 +3254,10 @@ def cmd_arch(a):
     v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-142: V3.0.1 run, then V3.0.2
     v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-133: V3.0, then V3.0.1
     v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-131: runs V2.13
+    # T-419: ARCH_TAKEOFF_V3.0.46 = the SAME candidate (engine.source.arch_v3046): a V3.0.45 run (its files unchanged) +
+    # the Checker-verified lift tie beam / house below-ground masonry pieces (URBAN_V3046_INPUTS_V1); named here for the
+    # same reason as V3.0.41. Its name shares the V3.0.45 line above so the hub's earlier line numbers stay put.
+    v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:

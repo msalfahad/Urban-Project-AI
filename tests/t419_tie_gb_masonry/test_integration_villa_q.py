@@ -26,7 +26,8 @@ def mk(eid, code, unit, state, net=None, rfi=None, notes=""):
     if code == "STR.FORMWORK":       # the formwork book record every formwork line carries (V3.0.30 guard)
         inputs = {A3030.REC_KEY: {"policy": A3030.PIECES[A3030.FW_PIECE]["policy"], "status": "HELD",
                                   "face_ids": [f"Q.{eid}"], "concrete_line": None}}
-    return BL.make_line(inputs=inputs, project_id=PID, revision_set_sha256=REV, item_code=code, unit=unit, evidence_state=state,
+    return BL.make_line(inputs=inputs, project_id=PID, revision_set_sha256=REV, item_code=code, unit=unit,
+                        evidence_state=state,
                         measured_net=net, gross=net, element_id=eid, floor="GF", formula="synthetic", rule_id="R-X",
                         rule_version="1", rfi=rfi, notes=notes, item_en=code, item_ar=code,
                         trade="FORMWORK" if code == "STR.FORMWORK" else None)
@@ -318,7 +319,8 @@ def test_restated_form_face_tied_to_the_pit_wall_line():
     _ch, _log, (out, _i) = run(c, doc(c))
     by = {ln["location"]["element_id"]: ln for ln in out}
     q = by["PIT_FORM"]["rfi"]["question"]
-    assert by["PIT_WALLS"]["line_id"] in q and "superseded" in q and "no pit-wall line" in q   # the old text kept as 'was'
+    assert by["PIT_WALLS"]["line_id"] in q and "superseded" in q
+    assert "no pit-wall line" in q          # the old text kept after 'was:'
 
 
 def test_tie_to_non_concrete_refused():

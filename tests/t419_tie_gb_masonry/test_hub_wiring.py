@@ -41,4 +41,5 @@ def test_hub_chains_v3046_after_v3045():
     i45, i46 = src.index("A3045.write("), src.index("A3046.write(")
     assert i45 < i46 and "l3045 = A3045.integrate(l3044, ch_v45, fl24)[0]" in src
     assert '("ARCH_TAKEOFF_V3.0.46",)' in src
-    assert "v3045 = a.method in (V3045, V3046)" in src
+    assert 'V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46")' in src
+    assert "v3046 = a.method == V3046" in src
