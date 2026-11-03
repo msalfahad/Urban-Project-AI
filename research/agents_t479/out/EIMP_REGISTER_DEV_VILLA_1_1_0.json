@@ -1,0 +1,2519 @@
+{
+ "schema": "URBAN_T471_EIMP_REGISTER_V1",
+ "project": "development villa (training benchmark)",
+ "version": "1.1.0",
+ "master_version": "1.41.0",
+ "owner_gate": {
+  "earthworks": [
+   "C-B1-02",
+   "C-B1-03",
+   "C-B1-04"
+  ],
+  "foundation waterproofing": [
+   "C-B8-08"
+  ],
+  "external plaster": [
+   "C-B4-04",
+   "C-B4-07"
+  ],
+  "spatter dash": [
+   "C-B4-05"
+  ],
+  "masonry accessories": [
+   "C-B9-02",
+   "C-B9-03",
+   "C-B9-04"
+  ],
+  "formwork": [
+   "C-B10-13",
+   "C-B7-13"
+  ],
+  "stair marble / nosing / piece counts": [
+   "C-B7-02",
+   "C-B7-03",
+   "C-B7-04",
+   "C-B7-05",
+   "C-B7-06"
+  ],
+  "lift marble": [
+   "C-B6-06",
+   "C-B6-07"
+  ],
+  "entrance and stair-hall finishes": [
+   "C-B3-03",
+   "C-B3-01",
+   "C-B7-02",
+   "C-B7-04"
+  ],
+  "wet-area wall porcelain": [
+   "C-B4-01",
+   "C-B4-02"
+  ],
+  "ceiling areas and double-height exclusions": [
+   "C-B5-01",
+   "C-B2-05"
+  ],
+  "doors / windows / glazing": [
+   "C-B6-01",
+   "C-B6-02",
+   "C-B6-03",
+   "C-B6-04"
+  ],
+  "handrails along the slope": [
+   "C-B7-09",
+   "C-B7-10"
+  ],
+  "external paving": [
+   "C-B13-02"
+  ]
+ },
+ "components": [
+  {
+   "component_id": "C-B1-01",
+   "family": "B1-01",
+   "name": "Site clearance",
+   "applicability": "NOT_APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.1-16, ARCH PDF p.1-12, Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3: no clearance printed (31 sheets); DXF text census 0 hits"
+   ],
+   "method": "none",
+   "rules": "Lead ruling 2026-10-30 04:25 NOT IN DRAWN SCOPE; R-CLR-1",
+   "formula": "m2 from a printed scope only; none",
+   "materials": "none",
+   "exceptions": "a contract provisional item is a commercial decision",
+   "sources": [
+    "research/agents_t357 (MERGED 90135e91)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-02",
+   "family": "B1-02",
+   "name": "Excavation by type and depth",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' foundation plan: 24 neat pits by outline handle; Drive 'Alsenan chalet project' / ST7757.pdf p.13 blinding projection 0.10, p.9 boxed note 1; EG from LEL blocks"
+   ],
+   "method": "pit / trench / pool excavation EG to formation",
+   "rules": "Q-21 C; R-T347-1..5; OQ-13 open",
+   "formula": "m3 = in-plot neat pit plan x depth EG -> formation; lower bound only",
+   "materials": "none",
+   "exceptions": "RFI S1 formation; OQ-13 working space; Q-31 C; D-14; D-33/34/35",
+   "sources": [
+    "research/agents_t347 (MERGED 509f90c2)"
+   ],
+   "row": "T-350",
+   "item_codes": [
+    "STR.EARTH.EXCAVATION"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-03",
+   "family": "B1-03",
+   "name": "Backfill and compaction",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.13 / p.14 fill labels round footings, under GF slab and outside the lift pit"
+   ],
+   "method": "backfill and compaction round the buried structure",
+   "rules": "Q-21 C; register 'Buried structure' (displacement only)",
+   "formula": "m3 = excavation - displacement of buried components, net of overlaps",
+   "materials": "none quantified",
+   "exceptions": "excavation HELD (RFI S1, OQ-13); D-33/34/35",
+   "sources": [
+    "research/agents_t347 (MERGED 509f90c2)"
+   ],
+   "row": "T-350",
+   "item_codes": [
+    "STR.EARTH.BACKFILL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-04",
+   "family": "B1-04",
+   "name": "Disposal of surplus",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no disposal note printed; derived component of B1-02 minus B1-03 re-use"
+   ],
+   "method": "load and cart away surplus",
+   "rules": "Q-21 C (measured separately); no bulking rule answered",
+   "formula": "m3 = excavation - backfill re-use",
+   "materials": "none",
+   "exceptions": "bulking factor not given; excavation HELD",
+   "sources": [
+    "research/agents_t347 (MERGED 509f90c2)"
+   ],
+   "row": "T-350",
+   "item_codes": [
+    "STR.EARTH.DISPOSAL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-05",
+   "family": "B1-05",
+   "name": "Soil treatment / anti-termite",
+   "applicability": "NOT_APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.8 notes 1-24, p.9 notes 1-4, p.13 / p.14 labels; ARCH p.1-12; Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3: none requires soil treatment"
+   ],
+   "method": "none",
+   "rules": "R-ST-1..4 (T-354)",
+   "formula": "m2 per source wording; none",
+   "materials": "none",
+   "exceptions": "only a later specification creates it",
+   "sources": [
+    "research/agents_t354 (MERGED e157c2d1, Verifier Gate A)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-06",
+   "family": "B1-06",
+   "name": "Dewatering / shoring / temporary works",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.8 note 15 (excavation support) triggered on 4 sides; p.8 note 14 + p.9 boxed note 4 dewatering conditional"
+   ],
+   "method": "item: excavation support to a specialist study; conditional dewatering",
+   "rules": "R-TW-1..5 (T-358); Lead ruling 2026-10-30 12:40",
+   "formula": "item (lump sum); quantity only from a drawn extent",
+   "materials": "none",
+   "exceptions": "extent by contractor's study; lift-pit depth RFI L-1",
+   "sources": [
+    "research/agents_t358 (MERGED 048fdd70)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B1-07",
+   "family": "B1-07",
+   "name": "Preliminaries",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no drawing prints preliminaries; source_needed 'contract' (registry)"
+   ],
+   "method": "item (contract preliminaries)",
+   "rules": "none",
+   "formula": "item",
+   "materials": "none",
+   "exceptions": "needs the contract documents",
+   "sources": [
+    "rules/coverage/BOQ_FAMILY_MASTER_1.37.0.json"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B2-01",
+   "family": "B2-01",
+   "name": "Room register (stable id, AR/EN name, role)",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) room labels; sheet03 GF / sheet04 1F / Pages_05-06 p.5 2F plans"
+   ],
+   "method": "room register from labelled plan faces",
+   "rules": "ROOM_CENSUS_GUARD_V1; UP-SPACE-001/002; Q-06 A, Q-13 B, Q-67 A",
+   "formula": "one record per plan face (pcs); held faces keep their m2",
+   "materials": "none",
+   "exceptions": "unlabelled faces HELD",
+   "sources": [
+    "research/agents_t099",
+    "research/agents_t153 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B2-02",
+   "family": "B2-02",
+   "name": "Room clear internal floor area",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) plan faces; p7757_arch_sheet03.pdf GF plan"
+   ],
+   "method": "clear internal floor face per space",
+   "rules": "UP-SPACE-001/002; Q-06 A, Q-37 A, Q-66 B, Q-70 A",
+   "formula": "m2 = clear plan area of each space (no cabinetry deduction)",
+   "materials": "none",
+   "exceptions": "16 ARCH.SPACE lines HELD; garden band D-48",
+   "sources": [
+    "research/agents_t153 (MERGED)",
+    "research/agents_t427 (MERGED 65ce8f6d)"
+   ],
+   "row": null,
+   "item_codes": [
+    "ARCH.SPACE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B2-03",
+   "family": "B2-03",
+   "name": "Gross / covered floor area per floor",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Alsenan_Architectural_P7757_Pages_01-02 p.1 / p.2 area plans (area tables per floor)"
+   ],
+   "method": "printed area-plan figures per floor",
+   "rules": "project drawing",
+   "formula": "m2 per floor = printed value",
+   "materials": "none",
+   "exceptions": "no engine line; not re-measured against the outline",
+   "sources": [
+    "research/agents_t063",
+    "research/agents_t091 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B2-04",
+   "family": "B2-04",
+   "name": "Open pantry functional zone",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) GF open pantry printed 4.50 x 3.00, counter outline handles B4/AA/B2"
+   ],
+   "method": "open pantry zone inside the dining room, wet within its box",
+   "rules": "UP-PANTRY-001..004; UP-WET-001 1.1.0; Q-37 A",
+   "formula": "m2 = pantry box net of column",
+   "materials": "none",
+   "exceptions": "ceiling board / cove HELD; open side profile HELD",
+   "sources": [
+    "research/agents_t439",
+    "research/agents_t153 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B2-05",
+   "family": "B2-05",
+   "name": "Voids / double height / shafts",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' roof-slab plans: GF light well, 1F dome openings, stair shafts; 1F void edge"
+   ],
+   "method": "no-floor / no-ceiling zones excluded and listed apart",
+   "rules": "Q-44 A; Q-68 C; D-40; DCR-4",
+   "formula": "m2 per void = slab-opening outline",
+   "materials": "none",
+   "exceptions": "dome openings HELD (DCR-4) vs owner 'no domes' note",
+   "sources": [
+    "research/agents_t147 (MERGED d54cfac)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-01",
+   "family": "B3-01",
+   "name": "Dry floor porcelain / ceramic",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) dry room faces on sheet03 / sheet04 / Pages_05-06 p.5; no floor-finish note on 12 arch pages"
+   ],
+   "method": "porcelain on cement bed, dry rooms + doorway strips",
+   "rules": "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT v1 (ASSUMED - OWNER-APPROVED); Q-45, Q-66 B, Q-70 A",
+   "formula": "m2 = clear dry floor area + dry doorway strips",
+   "materials": "adhesive 20 kg bag per 5 m2 (60x60) / 3 m2 (120x60, 160x80), waste apart (Q-45, owner 2026-11-02)",
+   "exceptions": "tile size not printed (RFI-B-A12); 38 lines HELD",
+   "sources": [
+    "research/agents_t153 (MERGED)",
+    "research/agents_t427 (MERGED)"
+   ],
+   "row": "T-455",
+   "item_codes": [
+    "FIN.FLOOR.PORCELAIN",
+    "FIN.FLOOR.FINISH_HELD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-02",
+   "family": "B3-02",
+   "name": "Wet-room floor tile",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) square grid hatch on 11 bath / WC floors, angle hatch on GF kitchen; Drive 'Alsenan chalet project' / sanitary-7757.pdf floor drain per wet room"
+   ],
+   "method": "wet-room floor tile on cement bed over membrane",
+   "rules": "URBAN-WET-FLOOR-TILED v1; UP-WET-001; Q-06 A, Q-30 A, Q-37 A, Q-41, Q-45",
+   "formula": "m2 = clear wet-room floor area",
+   "materials": "bed 4-6 cm 1:4 (Q-45); adhesive per owner 2026-11-02",
+   "exceptions": "tile size not printed; annex rooms Q-54 B",
+   "sources": [
+    "research/agents_t091 (MERGED)",
+    "research/agents_t153 (MERGED)"
+   ],
+   "row": "T-455",
+   "item_codes": [
+    "FIN.FLOOR.WET_TILE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-03",
+   "family": "B3-03",
+   "name": "Marble floor / entrance",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no marble floor drawn or noted (T-091: 0 floor-finish notes on 12 arch pages + DXF); GF entrance / stair-hall floor parts ruled B3-01 (T-418)",
+    "own read T-471: the freelancer 'entrance marble' rows (workbook on Drive, floors / WP / decor / marble) are steps + a landing = the E1 external stair (B7-02 / B7-04 components), not a floor"
+   ],
+   "method": "marble floor on 1:3 bed only if the owner names marble",
+   "rules": "Q-66 B, Q-70 A (landings are B7-04); register ROOM WITH NO FLOOR-FINISH LINE",
+   "formula": "m2 = clear entrance / hall area if marble is specified; otherwise carried in B3-01",
+   "materials": "none (Q-53 1:3 bed if marble)",
+   "exceptions": "owner gate item 'entrance and stair-hall finishes'; finishes schedule RFI-B-A12",
+   "sources": [
+    "research/agents_t091 (MERGED)",
+    "research/agents_t418 (MERGED 361f6e47)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-04",
+   "family": "B3-04",
+   "name": "Door threshold marble",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) door inserts / widths (T-237, T-249 census)"
+   ],
+   "method": "marble threshold at each wet doorway",
+   "rules": "URBAN-WET-SERVICE-MARBLE-THRESHOLD v1; UP-THR-001",
+   "formula": "m2 = clear width x wall thickness per wet door",
+   "materials": "none",
+   "exceptions": "6 external entrances HELD (RFI A13); gate D-GF-15",
+   "sources": [
+    "research/agents_t325 (MERGED)",
+    "research/agents_t340 (MERGED)"
+   ],
+   "row": "T-423",
+   "item_codes": [
+    "ARCH.THRESHOLD",
+    "FIN.MARBLE.THRESHOLD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-05",
+   "family": "B3-05",
+   "name": "Screed / build-up",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "build-up from printed levels FFL - structural top (Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) + Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf')"
+   ],
+   "method": "cement-sand bed under tiles, one layer per room",
+   "rules": "Q-41; Q-45 (3-4 cm floors, 4-6 cm baths, 1:4)",
+   "formula": "m3 = room area x bed thickness (range)",
+   "materials": "1:4 about 8 x 50 kg cement + 1.1 m3 sand per m3 (Q-45)",
+   "exceptions": "wet drops D-41; 88 lines HELD",
+   "sources": [
+    "research/agents_t414 (MERGED 4f81eda1)"
+   ],
+   "row": "T-455",
+   "item_codes": [
+    "FIN.FLOOR.BED.DRY",
+    "FIN.FLOOR.BED.WET"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-06",
+   "family": "B3-06",
+   "name": "Ordinary skirting",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) dry wall / column faces at floor level; opening ids T-249"
+   ],
+   "method": "skirting at the foot of dry faces, openings deducted by id",
+   "rules": "UP-SKIRT-001 1.4.0; URBAN-SKIRTING-OPENING-METHOD v1; Q-48 A",
+   "formula": "lm = dry face base length - door / passage / lift widths",
+   "materials": "none",
+   "exceptions": "39 lines HELD; stair bases B7-07/08",
+   "sources": [
+    "research/agents_t296 (MERGED 57c31ae4)",
+    "research/agents_t441 (MERGED ece154fe)"
+   ],
+   "row": "T-422",
+   "item_codes": [
+    "FIN.SKIRTING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B3-07",
+   "family": "B3-07",
+   "name": "Hidden profile / transition strips",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "skirting system (hidden / normal) printed on no sheet and in no answered owner question (T-409)"
+   ],
+   "method": "hidden skirting profile + transition strips",
+   "rules": "US-08; URBAN-FINISH-EXTRAS-SEPARATE-ITEMS v1",
+   "formula": "lm = skirting path if HIDDEN, else NOT_APPLICABLE; transitions per boundary once",
+   "materials": "none",
+   "exceptions": "skirting system not specified",
+   "sources": [
+    "research/agents_t409 (MERGED)"
+   ],
+   "row": "T-460",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-01",
+   "family": "B4-01",
+   "name": "Wet-room wall porcelain / ceramic",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) wet-room wall faces (T-312 face ledger)"
+   ],
+   "method": "full-height porcelain: spatter + levelling render + adhesive + tile",
+   "rules": "UP-FIN-WALL-001 1.8.0; Q-48 A; Q-73; owner wet-area walls 2026-11-02",
+   "formula": "m2 = face length x tile height - openings in band",
+   "materials": "adhesive per owner 2026-11-02; levelling render ENGINEERING ESTIMATE",
+   "exceptions": "annex rooms Q-54 B; T-457 double count",
+   "sources": [
+    "research/agents_t315 (MERGED b0041dd2)"
+   ],
+   "row": "T-457",
+   "item_codes": [
+    "FIN.WALL.TILE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-02",
+   "family": "B4-02",
+   "name": "Kitchen / laundry / pantry tiled zones",
+   "applicability": "NOT_APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) kitchen / pantry counter outlines (layer 5, 20 handles re-read); every face already on a B4-01 line"
+   ],
+   "method": "carried by B4-01 (full-height wet-room tile)",
+   "rules": "UP-WET-001; UP-PANTRY-001..004; Q-37 A, Q-40 A, Q-48 A",
+   "formula": "0 own faces on this villa",
+   "materials": "none",
+   "exceptions": "none",
+   "sources": [
+    "research/agents_t351 (MERGED f0bd9f3c)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-03",
+   "family": "B4-03",
+   "name": "Internal plaster",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) dry wall faces; heights from sheet10 SECTION A-A and Pages_11-12 p.11 B-B"
+   ],
+   "method": "internal cement plaster on dry wall faces",
+   "rules": "UP-FIN-PLASTER-001; Q-72 (to structural soffit); Q-73",
+   "formula": "m2 = face length x (structural soffit - floor) - openings",
+   "materials": "ENGINEERING ESTIMATE pending (T-454)",
+   "exceptions": "75 lines HELD; annex Q-54 B",
+   "sources": [
+    "research/agents_t090 (MERGED)",
+    "research/agents_t128 (MERGED a6ac2c66)"
+   ],
+   "row": "T-454",
+   "item_codes": [
+    "FIN.PLASTER"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-04",
+   "family": "B4-04",
+   "name": "External plaster",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Pages_05-06 p.6 SE, Pages_07-08 p.7 SW / p.8 NW, p7757_arch_sheet09.pdf NE elevations; plan outlines"
+   ],
+   "method": "external plaster (spatter, rough, smooth) under Sigma",
+   "rules": "Q-07 B; Q-73 A; OD-V3B-4..7; OWNER_NOTES_SIGMA 2026-10-21",
+   "formula": "m2 = band length x storey band height - opening holes",
+   "materials": "none established",
+   "exceptions": "exterior finish not specified (BLOCKED_RFI); W02; slab edges Q-68 C",
+   "sources": [
+    "research/agents_t305 (MERGED 9d71ef09)"
+   ],
+   "row": "T-314",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-05",
+   "family": "B4-05",
+   "name": "Spatter dash",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "no drawing note (0 spatter notes in both DXFs); scope by owner decision OD-V3B-4; faces from the merged plaster ledgers"
+   ],
+   "method": "cement slurry bond coat on every plastered face",
+   "rules": "OD-V3B-4..7; owner wet-area walls 2026-11-02",
+   "formula": "m2 = face of the coat above it, once",
+   "materials": "none",
+   "exceptions": "interior rows blank (annex, shafts)",
+   "sources": [
+    "research/agents_t349 (MERGED 2d22bce1)",
+    "research/agents_t317 (MERGED 328a7095)"
+   ],
+   "row": "T-364",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-06",
+   "family": "B4-06",
+   "name": "Internal paint",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) dry faces as B4-03; no paint note printed"
+   ],
+   "method": "paint on plastered dry faces",
+   "rules": "UP-FIN-PAINT-001; owner 2026-11-02 (paint to finished ceiling); Q-72",
+   "formula": "m2 = face length x (finished ceiling - FFL) - openings",
+   "materials": "none established",
+   "exceptions": "76 lines HELD",
+   "sources": [
+    "research/agents_t090 (MERGED)",
+    "research/agents_t128 (MERGED)"
+   ],
+   "row": "T-423",
+   "item_codes": [
+    "FIN.PAINT",
+    "FIN.PAINT.CEILING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-07",
+   "family": "B4-07",
+   "name": "External paint / coatings",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "same elevations as B4-04"
+   ],
+   "method": "Sigma coat on external plaster faces",
+   "rules": "OWNER_NOTES_SIGMA 2026-10-21; OD-V3B-6",
+   "formula": "m2 = B4-04 net area (same faces, one figure)",
+   "materials": "none established",
+   "exceptions": "13 lines HELD / BLOCKED_RFI",
+   "sources": [
+    "OWNER_NOTES_SIGMA_2026-10-21.md",
+    "research/agents_t305 (MERGED)"
+   ],
+   "row": "T-314",
+   "item_codes": [
+    "ARCH.FACADE",
+    "ARCH.FACADE_RUN",
+    "FIN.EXT.FINISH"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-08",
+   "family": "B4-08",
+   "name": "Reveals and returns",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) opening census 59 openings; Pages_11-12 p.12 fence elevation W11 / W12"
+   ],
+   "method": "plastered reveals (jambs + head)",
+   "rules": "UP-REVEAL-001; URBAN-REVEAL-FINISH-METHOD v1; Q-55 C",
+   "formula": "m2 = (2h + w) x reveal depth per opening once",
+   "materials": "none",
+   "exceptions": "62 lines HELD; W17 arched D-53",
+   "sources": [
+    "research/agents_t340 (MERGED)",
+    "research/agents_t313 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [
+    "ARCH.WINDOW_REVEAL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-09",
+   "family": "B4-09",
+   "name": "Corner beads / profiles",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) arrises read by handle (T-405)"
+   ],
+   "method": "metal angle bead on exposed plaster arrises",
+   "rules": "OD-V3B-8; Q-48 A; Q-55 C",
+   "formula": "m.l per arris once",
+   "materials": "none",
+   "exceptions": "parapet tops, sills, arches HELD; NO_LINE",
+   "sources": [
+    "research/agents_t405 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-10",
+   "family": "B4-10",
+   "name": "45-degree ceramic edge / steel profile",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) + Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' wet-room external corners / wall ends by handle"
+   ],
+   "method": "exposed tile edge: 45-degree mitre OR steel profile (one per edge)",
+   "rules": "UP-CER-006/007; R-T368-1..7",
+   "formula": "m.l per exposed edge once; finish choice HELD",
+   "materials": "none",
+   "exceptions": "finish not printed; NO_LINE",
+   "sources": [
+    "research/agents_t368 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B4-11",
+   "family": "B4-11",
+   "name": "Facade cladding / stone",
+   "applicability": "NOT_APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "arch sheets Pages_01-02, sheet03/04, Pages_05-06, Pages_07-08, sheet09, sheet10, Pages_11-12: no material legend; 0 of 675 DXF texts name a cladding"
+   ],
+   "method": "none: plaster + Sigma on all faces",
+   "rules": "R-T360-1..5",
+   "formula": "0 m2",
+   "materials": "none",
+   "exceptions": "porch arch surround HELD by name (possible, RFI-B-A12 / A13)",
+   "sources": [
+    "research/agents_t360 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-01",
+   "family": "B5-01",
+   "name": "Physical ceiling area per room",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' GF/1F/2F roof-slab plans + Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) floor faces; no ceiling plan printed"
+   ],
+   "method": "physical ceiling area per room piece",
+   "rules": "Q-57 A mod; Q-48 A; Q-44 A; Q-68 C; URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL v1",
+   "formula": "m2 = plan under slab - voids / stair zones / domes",
+   "materials": "none",
+   "exceptions": "41 lines HELD; double-height exclusions per T-446",
+   "sources": [
+    "research/agents_t147 (MERGED)",
+    "research/agents_t283 (MERGED)",
+    "research/agents_t446 (MERGED)"
+   ],
+   "row": "T-423",
+   "item_codes": [
+    "FIN.CEILING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-02",
+   "family": "B5-02",
+   "name": "Gypsum / moisture-resistant / decorative ceiling",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "no ceiling board specified on any sheet; gypsum by owner Q-57 A mod"
+   ],
+   "method": "gypsum board ceiling; moisture-resistant only where specified",
+   "rules": "Q-57 A mod; Q-48 A",
+   "formula": "m2 by board class (dry / wet room)",
+   "materials": "none",
+   "exceptions": "wet-room board type HELD (RFI-B-A12); NO_LINE",
+   "sources": [
+    "research/agents_t147 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-03",
+   "family": "B5-03",
+   "name": "Cornice / cove / light channel",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no cove / cornice drawn or noted on any sheet (T-091)"
+   ],
+   "method": "cornice only if a detail is issued",
+   "rules": "Q-57 A mod",
+   "formula": "m.l = closed-room ceiling perimeter if detailed",
+   "materials": "none",
+   "exceptions": "no detail; freelancer cornice rows = RULE_DIFFERENCE / UNRESOLVED",
+   "sources": [
+    "research/agents_t147",
+    "research/agents_t271"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-04",
+   "family": "B5-04",
+   "name": "Bulkheads / dropped ceilings",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' beam bands under GF/1F/2F roof slabs over room faces"
+   ],
+   "method": "gypsum bulkhead faces where a beam drops below the ceiling",
+   "rules": "Q-57 A mod; Q-52 C mod; Q-61 C",
+   "formula": "m2 = free beam edge x drop below ceiling",
+   "materials": "none",
+   "exceptions": "edges on CONFLICT beams HELD; 14 lines HELD",
+   "sources": [
+    "research/agents_t147 (MERGED)",
+    "research/agents_t283 (MERGED)"
+   ],
+   "row": "T-423",
+   "item_codes": [
+    "FIN.CEILING.BULKHEAD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-05",
+   "family": "B5-05",
+   "name": "Access panels",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no access panel drawn or noted; MEP drawings absent"
+   ],
+   "method": "pcs per panel if specified",
+   "rules": "none",
+   "formula": "pcs",
+   "materials": "none",
+   "exceptions": "MEP-driven; no source",
+   "sources": [
+    "research/agents_t091 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B5-06",
+   "family": "B5-06",
+   "name": "Dome intrados finish",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "two dome positions on the 2F roof (ST p.7 dome detail); what closes the opening not drawn"
+   ],
+   "method": "dome intrados finish apart from FIN.CEILING",
+   "rules": "Q-44 A; Q-29 C; S0 baseline",
+   "formula": "m2 = intrados per dome",
+   "materials": "none",
+   "exceptions": "designer DCR-4; owner note 'no domes'; 2 BLANK lines",
+   "sources": [
+    "research/agents_t284",
+    "research/agents_t147"
+   ],
+   "row": null,
+   "item_codes": [
+    "FIN.DOME.SOFFIT"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-01",
+   "family": "B6-01",
+   "name": "Opening census (doors, windows, type, size, host wall)",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) plan glazing symbols / door blocks by handle bound to elevations; no schedule printed"
+   ],
+   "method": "opening census from plan symbols",
+   "rules": "UP-DOOR-CLS-001..006; Q-04; Q-38 A; Q-55 C",
+   "formula": "pcs per opening type",
+   "materials": "none",
+   "exceptions": "W02 count 1..2 HELD",
+   "sources": [
+    "research/agents_t249",
+    "research/agents_t207 (MERGED e081911c)"
+   ],
+   "row": null,
+   "item_codes": [
+    "ARCH.DOOR",
+    "ARCH.PASSAGE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-02",
+   "family": "B6-02",
+   "name": "Internal doors (PVC / wood)",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) door blocks and face-line ends; no door height printed"
+   ],
+   "method": "internal PVC / wood doors",
+   "rules": "UP-DOOR-CLS-001..006; Q-55 C (2.20 m ASSUMED - OWNER-APPROVED)",
+   "formula": "pcs + m2 = clear width x 2.20 where no head printed",
+   "materials": "none",
+   "exceptions": "25 lines HELD; material not printed",
+   "sources": [
+    "research/agents_t268 (MERGED d1d09601)"
+   ],
+   "row": null,
+   "item_codes": [
+    "DOOR.INTERNAL.PVC"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-03",
+   "family": "B6-03",
+   "name": "Main / external / steel doors",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "GF main entrance printed on SE elevation (Pages_05-06 p.6); gate on Pages_11-12 p.12"
+   ],
+   "method": "aluminium external doors; main entrance",
+   "rules": "UP-DOOR-CLS-001..006; Q-33; Q-55 C",
+   "formula": "pcs + m2 = width x printed height, else x 2.20",
+   "materials": "none",
+   "exceptions": "10 lines HELD; gate counted once in B13-04",
+   "sources": [
+    "research/agents_t268 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.MAIN_ENTRANCE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-04",
+   "family": "B6-04",
+   "name": "Windows / aluminium / glazing / skylights",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) glazing symbols; heights on elevations and fence elevation (T-207)"
+   ],
+   "method": "aluminium windows / glazing to the structural hole",
+   "rules": "Q-32; Q-33; Q-38 A; Q-39; Q-76",
+   "formula": "pcs + m2 = width x height (developed for arched / curved)",
+   "materials": "none",
+   "exceptions": "W02, W17 arched, W03 curved HELD; 36 lines",
+   "sources": [
+    "research/agents_t207 (MERGED e081911c)"
+   ],
+   "row": null,
+   "item_codes": [
+    "ARCH.WINDOW"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-05",
+   "family": "B6-05",
+   "name": "Shutters",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "W14 shutters on SE elevation Pages_05-06 p.6; W11 / W12 leaves on Pages_11-12 p.12"
+   ],
+   "method": "louvred shutter pair per window",
+   "rules": "Q-33; no owner basis rule",
+   "formula": "pcs drawn; m2 basis HELD",
+   "materials": "none",
+   "exceptions": "m2 basis and material HELD",
+   "sources": [
+    "research/agents_t164 (MERGED 390fabf4)"
+   ],
+   "row": null,
+   "item_codes": [
+    "ARCH.SHUTTER"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-06",
+   "family": "B6-06",
+   "name": "Elevator outer surround marble",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) lift door jambs on GF / 1F / 2F; door height printed nowhere"
+   ],
+   "method": "marble bands round the landing door",
+   "rules": "UP-ELEV-001..004 (library 1.4.0)",
+   "formula": "A(h) = h(L+R) + T(W+L+R) per station",
+   "materials": "none",
+   "exceptions": "door height (lift supplier RFI L-1); 2F right band",
+   "sources": [
+    "research/agents_t413 (MERGED ae87deb1)",
+    "research/agents_t421"
+   ],
+   "row": "T-475",
+   "item_codes": [
+    "FIN.MARBLE.LIFT_SURROUND"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B6-07",
+   "family": "B6-07",
+   "name": "Elevator threshold marble",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) 1.000 m clear opening between jamb lines at each station in the 0.200 shaft wall"
+   ],
+   "method": "marble threshold across the lift landing door",
+   "rules": "UP-ELEV-005 v1.1.0 (depth 0.50 ASSUMED - OWNER-APPROVED)",
+   "formula": "m2 = drawn clear width x 0.50 per station",
+   "materials": "none",
+   "exceptions": "position across the wall band not drawn",
+   "sources": [
+    "research/agents_t413 (MERGED ae87deb1)",
+    "research/agents_t421"
+   ],
+   "row": "T-475",
+   "item_codes": [
+    "FIN.MARBLE.LIFT_THRESHOLD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-01",
+   "family": "B7-01",
+   "name": "Stair assembly reconstruction (all stairs, occurrence once)",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) riser lines layers 5 / 2; sheet10 SECTION A-A; Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' p.4 / p.5 stair lines; 3 stairs, 89 risers"
+   ],
+   "method": "one verified geometry per flight",
+   "rules": "UP-STAIR-002; OWNER_RULE_STAIRS_2026-10-24 S-1, S-5..S-9; Q-46 A; Q-50 A cond",
+   "formula": "per flight risers / treads / landings from drawn front edges",
+   "materials": "none",
+   "exceptions": "winder turn D-67; curved part RFI-S27",
+   "sources": [
+    "research/agents_t184 (MERGED)",
+    "research/agents_t412 (MERGED f9c80501)"
+   ],
+   "row": null,
+   "item_codes": [
+    "FIN.STAIR.FLIGHT"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-02",
+   "family": "B7-02",
+   "name": "Tread marble",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) drawn front edges with 0.050 companion lines; E1 treads on sheet03"
+   ],
+   "method": "marble tread on each drawn going",
+   "rules": "UP-STAIR-001/002/003; OWNER_RULE_STAIRS s.1; OWNER_RULE_OUTDOOR_FLOORS",
+   "formula": "m2 = treads x going x net width; pcs = treads",
+   "materials": "slabs cut from full pieces (no waste rule)",
+   "exceptions": "winders, curved treads HELD",
+   "sources": [
+    "research/agents_t429",
+    "research/agents_t425 (MERGED 6f159091)"
+   ],
+   "row": "T-424",
+   "item_codes": [
+    "FIN.MARBLE.TREAD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-03",
+   "family": "B7-03",
+   "name": "Visible riser marble",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) riser lines; E1 levels on Pages_11-12 p.11 B-B"
+   ],
+   "method": "marble on visible riser faces",
+   "rules": "UP-STAIR-003/006; OWNER_RULE_STAIRS s.1-s.2",
+   "formula": "m2 = n x (riser - 0.030) x width",
+   "materials": "none",
+   "exceptions": "interior riser heights BLOCKED_RFI",
+   "sources": [
+    "research/agents_t429",
+    "research/agents_t343"
+   ],
+   "row": "T-424",
+   "item_codes": [
+    "FIN.MARBLE.RISER"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-04",
+   "family": "B7-04",
+   "name": "Landing marble",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) landing polygons in GF / 2F stair rooms; E1 landing printed on sheet03"
+   ],
+   "method": "marble landing on the drawn polygon",
+   "rules": "UP-STAIR-005; S-9; Q-66 B; Q-70 A cond",
+   "formula": "m2 = drawn landing polygon area",
+   "materials": "none",
+   "exceptions": "walled stair-room landing bounds HELD",
+   "sources": [
+    "research/agents_t418 (MERGED)",
+    "research/agents_t421"
+   ],
+   "row": "T-424",
+   "item_codes": [
+    "FIN.MARBLE.LANDING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-05",
+   "family": "B7-05",
+   "name": "Nosing / edge finishing",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) 89 front edges (NOSING_TABLE_T412.csv) drawn as 0.050 pairs; nosing form printed nowhere"
+   ],
+   "method": "nosing on each tread / landing front edge",
+   "rules": "OWNER_RULE_STAIRS s.1; UP-STAIR-004/008; register NOSING EDGE",
+   "formula": "lm = drawn front edge less proud faces",
+   "materials": "none",
+   "exceptions": "nosing specification HELD; winders / curved HELD",
+   "sources": [
+    "research/agents_t412 (MERGED f9c80501)"
+   ],
+   "row": "T-424",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-06",
+   "family": "B7-06",
+   "name": "Commercial step basis",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) same drawn front edges as B7-02"
+   ],
+   "method": "commercial step count (tread + riser + nosing)",
+   "rules": "UP-STAIR-008",
+   "formula": "lm = drawn fronts x width",
+   "materials": "none",
+   "exceptions": "winders / curved HELD",
+   "sources": [
+    "research/agents_t429",
+    "research/agents_t425 (MERGED)"
+   ],
+   "row": "T-424",
+   "item_codes": [
+    "FIN.STAIR.STEP_LM"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-07",
+   "family": "B7-07",
+   "name": "Stair skirting zigzag",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) wall faces beside each flight; column outlines on S-COL.BON; form not detailed"
+   ],
+   "method": "stair skirting stepped (zigzag); exclusive with B7-08",
+   "rules": "UP-STAIR-010; R-T410-4; form ORR-007 open",
+   "formula": "lm = rises + goings along each wall stretch",
+   "materials": "none",
+   "exceptions": "form ORR-007 unanswered; NO_LINE",
+   "sources": [
+    "research/agents_t410 (MERGED 2fb91300)",
+    "research/agents_t441 (MERGED)"
+   ],
+   "row": "T-443",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-08",
+   "family": "B7-08",
+   "name": "Stair skirting sloped",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "alternative form of the same skirting faces as B7-07 (one form per project, ORR-007)"
+   ],
+   "method": "stair skirting along the rake (sloped)",
+   "rules": "UP-STAIR-011; ORR-007 open",
+   "formula": "lm = hypot(run, rise) per wall stretch",
+   "materials": "none",
+   "exceptions": "exclusive with B7-07",
+   "sources": [
+    "research/agents_t410 (MERGED)"
+   ],
+   "row": "T-443",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-09",
+   "family": "B7-09",
+   "name": "Open-edge guardrail (3D installed path)",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) 50 mm well bands GF / 1F / 2F; sheet10 A-A top + mid rail on every ST-01 flight"
+   ],
+   "method": "guardrail on the open side of each flight (handrail along the slope)",
+   "rules": "UP-STAIR-012 v2.0.0; S-9; R-T393-1",
+   "formula": "lm = pitch-line length per flight + centreline turns",
+   "materials": "none (posts / infill not specified)",
+   "exceptions": "turns HELD (profile not drawn); 19 lines HELD",
+   "sources": [
+    "research/agents_t393 (MERGED 1a1925c4)",
+    "research/agents_t164 (MERGED)"
+   ],
+   "row": "T-476",
+   "item_codes": [
+    "FIN.RAILING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-10",
+   "family": "B7-10",
+   "name": "Wall-mounted handrail",
+   "applicability": "NOT_APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "no wall-mounted handrail drawn on any plan or section (Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf); sheet10 A-A rails on the well side only)"
+   ],
+   "method": "wall handrail only where shown",
+   "rules": "UP-STAIR-013",
+   "formula": "lm of a drawn wall run; none drawn",
+   "materials": "none",
+   "exceptions": "T-476 checks 'handrails along the slope' scope",
+   "sources": [
+    "research/agents_t393 (MERGED)",
+    "research/agents_t199"
+   ],
+   "row": "T-476",
+   "item_codes": [
+    "FIN.HANDRAIL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-11",
+   "family": "B7-11",
+   "name": "Posts / glass panels",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) posts drawn only on roof railings RL-01 / RL-02; glass not drawn; no specification"
+   ],
+   "method": "posts / glass infill as railing components",
+   "rules": "none",
+   "formula": "pcs = drawn posts per run",
+   "materials": "none",
+   "exceptions": "specification RFI-B-A12",
+   "sources": [
+    "research/agents_t361 (MERGED e8d0bb06)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-12",
+   "family": "B7-12",
+   "name": "Stair concrete",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.4 / p.5 stair panels (T 16), p.16 typical stair section"
+   ],
+   "method": "cast-in-situ RC waist, steps and landings",
+   "rules": "OWNER_RULE_STAIRS_2026-10-21/24; Q-19, Q-46 A, Q-47 A, Q-62 A",
+   "formula": "m3 = width x (step triangles + 0.16 sloped waist) + landings x T",
+   "materials": "concrete m3",
+   "exceptions": "C-ST-4; winders; E1 / D1 (S26)",
+   "sources": [
+    "research/agents_t433 (MERGED 304b9af2)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.STAIR"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-13",
+   "family": "B7-13",
+   "name": "Stair formwork",
+   "applicability": "APPLICABLE",
+   "level": 4,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' p.4 / p.5 stair lanes, wells, free edges, shaft walls by handle"
+   ],
+   "method": "soffit forms, riser boards, open-side forms",
+   "rules": "R-STAIR-FW-SIDE-1 (T-352)",
+   "formula": "m2 = soffits + risers + open side faces",
+   "materials": "none",
+   "exceptions": "construction sequence not printed (wall faces HELD)",
+   "sources": [
+    "research/agents_t352 (MERGED b12e10de)"
+   ],
+   "row": "T-474",
+   "item_codes": [
+    "STR.FORMWORK.STAIR"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-14",
+   "family": "B7-14",
+   "name": "Stair reinforcement",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' 8 dia 16 / m stair labels p.4 / p.5; every other bar on Drive 'Alsenan chalet project' / ST7757.pdf p.16 N.T.S. typical"
+   ],
+   "method": "cut, bend, fix stair bars",
+   "rules": "OWNER_RULE_REBAR_2026-10-24; owner option B 2026-10-29",
+   "formula": "kg = rate x width x bar length x kg/m per population",
+   "materials": "none",
+   "exceptions": "typical applicability G-T359-1; RFI-S24/S26/S27",
+   "sources": [
+    "research/agents_t359 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B7-15",
+   "family": "B7-15",
+   "name": "Stair soffit finish (flight / landing undersides)",
+   "applicability": "APPLICABLE",
+   "level": 4,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' p.3 / p.4 / p.5 stair slabs by handle; waist T 16 printed"
+   ],
+   "method": "finish on stair waist and landing undersides",
+   "rules": "Q-47 A; R-CEIL-R3-1; method O vs D = RULE_DIFFERENCE",
+   "formula": "m2 true = plan x hypot(going, riser) / going",
+   "materials": "none",
+   "exceptions": "method O vs D unresolved; 2 BLANK lines",
+   "sources": [
+    "research/agents_t281 (MERGED 40518c58)"
+   ],
+   "row": null,
+   "item_codes": [
+    "FIN.STAIR.SOFFIT"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-01",
+   "family": "B8-01",
+   "name": "Wet-room floor membrane",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "18 wet rooms on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) room polygons; floor drains on Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3"
+   ],
+   "method": "membrane over each wet-room floor",
+   "rules": "Q-30; Q-37 A; Q-40 A; UP-WP-004",
+   "formula": "m2 = wet-room floor area per room",
+   "materials": "rolls under B8-05",
+   "exceptions": "penetrations HELD; pantry FD missing",
+   "sources": [
+    "research/agents_t303 (MERGED 1d3f69b0)"
+   ],
+   "row": "T-310",
+   "item_codes": [
+    "FIN.WP.FLOOR",
+    "FIN.WP.PENETRATION"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-02",
+   "family": "B8-02",
+   "name": "Doorway floor continuation",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "15 physical wet-room doors (Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) insert handles, T-249)"
+   ],
+   "method": "membrane across each wet-room doorway, one transition per door",
+   "rules": "UP-WP-003; Q-35 C; UP-WP-DOOR-001",
+   "formula": "m2 = door width x wall thickness per door",
+   "materials": "none",
+   "exceptions": "two doors carry 2 transitions, three none (ENGINE_WRONG proposal)",
+   "sources": [
+    "research/agents_t303 (MERGED)"
+   ],
+   "row": "T-310",
+   "item_codes": [
+    "FIN.WP.DOORWAY",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "FIN.WP.DOORWAY_TRANSITION_NR",
+    "FIN.WP.THRESHOLD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-03",
+   "family": "B8-03",
+   "name": "Wet-room upturn (0.20 m incl. doorway)",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "wet-room wall-face census on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)"
+   ],
+   "method": "membrane folded 0.20 m up wet-room walls",
+   "rules": "UP-WP-002 2.0.0 = 0.20 m; Q-35 C; T-458 policy V2",
+   "formula": "m2 = upturn run x 0.20",
+   "materials": "rolls under B8-05",
+   "exceptions": "Q-35 C reading to reconcile in T-310",
+   "sources": [
+    "research/agents_t303 (MERGED)",
+    "research/agents_t458 (MERGED b3d773be)"
+   ],
+   "row": "T-310",
+   "item_codes": [
+    "FIN.WP.TERMINATION",
+    "FIN.WP.UPTURN",
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-04",
+   "family": "B8-04",
+   "name": "Shower floor and tanking",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "6 showers on Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3 (3 trays, 3 walk-in zones)"
+   ],
+   "method": "inside the wet-room membrane (no separate tanking)",
+   "rules": "Q-40 A; UP-WP-004",
+   "formula": "no own quantity (in B8-01 / B8-03)",
+   "materials": "none",
+   "exceptions": "shower extents not dimensioned; NO_LINE by rule",
+   "sources": [
+    "research/agents_t369 (MERGED 6b9ce820)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-05",
+   "family": "B8-05",
+   "name": "Membrane overlap / rolls / procurement",
+   "applicability": "APPLICABLE",
+   "level": 4,
+   "evidence": [
+    "derived from the B8-01 / B8-03 faces; no roll size printed"
+   ],
+   "method": "membrane strip layout and roll count per wet room",
+   "rules": "Q-49 A; Q-58; UP-WP-MAT-001; Q-26",
+   "formula": "pcs = ceil(layout area incl. 10 cm laps / roll area) per room",
+   "materials": "52 rolls PROVISIONAL (procurement)",
+   "exceptions": "procurement, not verified",
+   "sources": [
+    "research/agents_t303 (MERGED)",
+    "research/agents_t093"
+   ],
+   "row": "T-310",
+   "item_codes": [
+    "FIN.WP.DETAILING",
+    "FIN.WP.MEMBRANE_ROLLS"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-06",
+   "family": "B8-06",
+   "name": "Roof waterproofing + 0.20 upturn",
+   "applicability": "APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "roofs +4.30, +5.50 (TERRACE-550), +9.70 on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf); top roof +13.90 on elevations / sheet10 A-A"
+   ],
+   "method": "roof membrane inside the parapet + 0.20 upturn incl. dome rings",
+   "rules": "Q-24; Q-29 C; Q-34; Q-44 A",
+   "formula": "m2 = plan inside parapet inner faces; lm upturn = inner run + dome rings",
+   "materials": "rolls for roofs not computed",
+   "exceptions": "top roof HELD (Q-34); dome footprints SCOPE_UNKNOWN",
+   "sources": [
+    "research/agents_t303 (MERGED)",
+    "research/agents_t062"
+   ],
+   "row": "T-383",
+   "item_codes": [
+    "FIN.WP.ROOF",
+    "FIN.WP.ROOF_UPTURN"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-07",
+   "family": "B8-07",
+   "name": "Terraces / balconies / planters",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "no BALCONY / TERRACE space label on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf); the +5.50 sea-side edge is TERRACE-550 roof, waterproofed under B8-06"
+   ],
+   "method": "balcony membrane over a drawn exterior space",
+   "rules": "UP-WP-ROOF-001; one face one line",
+   "formula": "m2 = drawn balcony area",
+   "materials": "none",
+   "exceptions": "carried by B8-06 on this villa; RL-04 edge open",
+   "sources": [
+    "research/agents_t071",
+    "research/agents_t393 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [
+    "FIN.WP.BALCONY"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-08",
+   "family": "B8-08",
+   "name": "Foundations / basement / below-grade walls",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.13 typical isolated footing (screed / membrane chain), p.14 lift detail; 24 outlines on Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'"
+   ],
+   "method": "2 cm membrane + 5 cm screed under footings; lift-pit membrane, board, screed",
+   "rules": "R-WP-FOUND-1 (T-219); register footing underlay ruling",
+   "formula": "m2 = footing outlines; screed m3 = m2 x 0.05",
+   "materials": "procurement HELD (product not printed)",
+   "exceptions": "F10/F Q-31 C; sides by formation Q-21 C; pit walls RFI L-1",
+   "sources": [
+    "research/agents_t219 (MERGED de7c1c4c)"
+   ],
+   "row": "T-353",
+   "item_codes": [
+    "WP.FOUNDATION.BURIED_LIQUID",
+    "WP.FOUNDATION.FOOTING_MEMBRANE",
+    "WP.FOUNDATION.FOOTING_SCREED",
+    "WP.FOUNDATION.FOOTING_SIDES",
+    "WP.FOUNDATION.LIFT_PIT_BOARD",
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+    "WP.FOUNDATION.LIFT_PIT_SCREED",
+    "WP.FOUNDATION.PROCUREMENT"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B8-09",
+   "family": "B8-09",
+   "name": "Pool / tank internal waterproofing",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' DETAIL OF SWIMMING POOL: screed / membrane hatches on the outer faces only, none on the water side; tank structure drawn in neither discipline"
+   ],
+   "method": "none printed (internal tanking not drawn)",
+   "rules": "register pool membrane ruling (T-309)",
+   "formula": "m2 = water-face area only if a source prints it",
+   "materials": "none",
+   "exceptions": "S8.2 designer; tank G-T359-4",
+   "sources": [
+    "research/agents_t309 (MERGED 834ada3e)",
+    "research/agents_t359 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B9-01",
+   "family": "B9-01",
+   "name": "Block walls by type and thickness",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) wall network (register v4); Drive 'Alsenan chalet project' / ST7757.pdf p.14 typical details"
+   ],
+   "method": "black cement block (mortared) and white AAC (thin-bed) walls",
+   "rules": "Q-60 A; Q-73; Q-75 (12.5 / m2 for 40 x 20); Q-69",
+   "formula": "m2 = length x (floor to member soffit) - openings; m3 = m2 x t",
+   "materials": "black 12.5 / m2 + waste apart (Q-75); white family HELD",
+   "exceptions": "85 lines HELD; 7 wall groups UNKNOWN",
+   "sources": [
+    "research/agents_t333 (MERGED)",
+    "research/agents_t367 (MERGED 98ced66c)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_RUN",
+    "ARCH.WALL_VOLUME",
+    "MAS.BLOCK"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B9-02",
+   "family": "B9-02",
+   "name": "Lintels",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.13 LINTEL SCHEDULE (depth by width band, printed minimum bearing); wall openings from Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)"
+   ],
+   "method": "lintel over each masonry opening",
+   "rules": "drawing schedule (level 1) beside owner 2026-11-02 precast lengths / 15 cm bearing (level 3)",
+   "formula": "pcs per opening; L = shortest standard >= opening + 2 x bearing; m3 = L x b x d",
+   "materials": "rebar per schedule (research only)",
+   "exceptions": "printed cast schedule vs precast rule to reconcile; arched heads HELD; NO_LINE",
+   "sources": [
+    "research/alsenan_lintels_s8_6",
+    "research/agents_t355 (MERGED)"
+   ],
+   "row": "T-453",
+   "item_codes": [
+    "STR.CONC.LINTEL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B9-03",
+   "family": "B9-03",
+   "name": "Mesh at block-to-concrete joints",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "no mesh note in either DXF; joints from the verified wall register cut at column / beam / slab outlines; item by owner Q-77"
+   ],
+   "method": "bed-joint mesh every 3rd course; sharmat ties; plaster joint mesh (optional items)",
+   "rules": "Q-77; Q-75; R-T355-1..7; R-T362-1..4",
+   "formula": "strip m.l per 3rd-course level; ties pcs per junction; joint mesh m.l per band",
+   "materials": "none",
+   "exceptions": "white walls HELD; band B vs C; sharmat spec structural RFI; NO_LINE",
+   "sources": [
+    "research/agents_t355 (MERGED 21f7b58a)",
+    "research/agents_t362 (MERGED)"
+   ],
+   "row": "T-363",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B9-04",
+   "family": "B9-04",
+   "name": "Mortar / glue",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "no sheet prints block, joint or mortar; wall areas from MAS.BLOCK part lines"
+   ],
+   "method": "10 mm cement-sand joints (black); thin-bed glue (white AAC)",
+   "rules": "Q-75; Q-78 A (1:4); owner 2026-11-02 AAC glue",
+   "formula": "m3 = 0.07375 x t per m2 (black)",
+   "materials": "1:4 about 8 x 50 kg cement + 1.1 m3 sand per m3; glue 25 kg bag 3.5 / 4.5 kg per m2",
+   "exceptions": "joints at columns HELD; white areas HELD; NO_LINE",
+   "sources": [
+    "research/agents_t367 (MERGED 98ced66c)"
+   ],
+   "row": "T-372",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B9-05",
+   "family": "B9-05",
+   "name": "Parapet walls (block)",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "sheet10 A-A and Pages_11-12 p.11 B-B cut parapets as RC; ST7757.pdf p.14 typical parapet = brick on 0.30 upstand; no run keyed to a type"
+   ],
+   "method": "block parapet on RC upstand OR all-RC (undecided)",
+   "rules": "Q-65 C; R-T324-1..4",
+   "formula": "m2 = run x height above the upstand",
+   "materials": "none",
+   "exceptions": "designer RFI on parapet material; NO_LINE",
+   "sources": [
+    "research/agents_t311 (MERGED)",
+    "research/agents_t324 (MERGED)"
+   ],
+   "row": "T-314",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-01",
+   "family": "B10-01",
+   "name": "Blinding",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.13 10 cm layer under footings and GB, 0.10 projection; p.14 lift detail"
+   ],
+   "method": "0.10 m plain-concrete blinding",
+   "rules": "register footing underlay ruling; R-LIFT-BASE-1; Q-21 C",
+   "formula": "m3 = (L + 0.20)(W + 0.20) x 0.10 per pit, union, in-plot",
+   "materials": "plain concrete m3",
+   "exceptions": "24 pits VERIFIED piece valued in no line; FF / GB HELD",
+   "sources": [
+    "research/agents_t322 (MERGED d3bcd9d4)",
+    "research/agents_t433 (MERGED)"
+   ],
+   "row": "T-445",
+   "item_codes": [
+    "STR.CONC.BLINDING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-02",
+   "family": "B10-02",
+   "name": "Isolated / combined footings",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' foundation plan, 26 S-FOOTINGS outlines; Drive 'Alsenan chalet project' / ST7757.pdf p.9 schedule of footings"
+   ],
+   "method": "cast-in-situ RC footings + lift raft",
+   "rules": "R-CONC-OWN-1; D-32; Q-31 C; Q-17 A",
+   "formula": "m3 = outline x schedule H, overlaps once",
+   "materials": "concrete m3",
+   "exceptions": "F10+F HELD (Q-31 C / RFI-S02)",
+   "sources": [
+    "research/agents_t322 (MERGED)",
+    "research/agents_t347 (MERGED)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.FOOTING"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-03",
+   "family": "B10-03",
+   "name": "Necks",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "36 necks on Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'; sections from Drive 'Alsenan chalet project' / ST7757.pdf p.9"
+   ],
+   "method": "RC necks footing top -> GB / slab soffit",
+   "rules": "Q-21 C; register T-200 (FFL never a neck end)",
+   "formula": "m3 = section x (GB soffit - footing top)",
+   "materials": "concrete m3",
+   "exceptions": "founding level RFI S01",
+   "sources": [
+    "research/agents_t433 (MERGED 304b9af2)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.NECK"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-04",
+   "family": "B10-04",
+   "name": "Strap / ground beams",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' ground beams plan; Drive 'Alsenan chalet project' / ST7757.pdf p.13 GB sections by span class; straps SB1-SB3"
+   ],
+   "method": "RC ground beams between founded supports; straps",
+   "rules": "Q-74 A; Lead ruling 2026-11-01 12:20; Q-21 C",
+   "formula": "m3 = face-to-face run x section; straps axis length x section",
+   "materials": "concrete m3",
+   "exceptions": "RFI S09 / S11; 13 lines Checker downgrade",
+   "sources": [
+    "research/agents_t433 (MERGED)",
+    "research/agents_t347 (MERGED)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.GROUND_BEAM",
+    "STR.CONC.STRAP"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-05",
+   "family": "B10-05",
+   "name": "Ground slab",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' slab-on-grade panels closed on band faces, printed T=10cm"
+   ],
+   "method": "0.10 m slab on grade",
+   "rules": "R-T442-1; Lead rulings 2026-11-01 20:17 / 2026-11-02 00:20",
+   "formula": "m3 = panels closed on drawn faces x 0.10",
+   "materials": "concrete m3",
+   "exceptions": "rest of GS lines HELD",
+   "sources": [
+    "research/agents_t442 (Gate B MERGED, V3.0.42)"
+   ],
+   "row": null,
+   "item_codes": [
+    "STR.CONC.GROUND_SLAB"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-06",
+   "family": "B10-06",
+   "name": "Columns",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-COL.BON outlines per storey; Drive 'Alsenan chalet project' / ST7757.pdf p.9 column schedule"
+   ],
+   "method": "RC columns base -> controlling soffit",
+   "rules": "register column rulings; D-66 / RFI-S20; D-16; Q-61 C",
+   "formula": "m3 = section x height",
+   "materials": "concrete m3",
+   "exceptions": "RFI-S20 13 lines; S19 C8",
+   "sources": [
+    "research/agents_t433 (MERGED)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.COLUMN"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-07",
+   "family": "B10-07",
+   "name": "Beams",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' roof-slab plans (beam bands, marks) + beam schedule"
+   ],
+   "method": "RC beams cast with slabs (C1 non-overlap)",
+   "rules": "C1 convention; Q-61 C; Q-44 A",
+   "formula": "m3 = B x (D - t) x clear span, joints once",
+   "materials": "concrete m3",
+   "exceptions": "RFI S12-S15, S23; 191 lines",
+   "sources": [
+    "research/agents_t433 (MERGED)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.BEAM"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-08",
+   "family": "B10-08",
+   "name": "Suspended slabs",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' slab plans: 62 panels between beam faces, thickness tags else general note 18"
+   ],
+   "method": "RC suspended slabs",
+   "rules": "C1 convention",
+   "formula": "m3 = panel area x tag thickness",
+   "materials": "concrete m3",
+   "exceptions": "none on the volume",
+   "sources": [
+    "research/agents_t146",
+    "research/agents_t247 (Gate B MERGED 768ff1d6)"
+   ],
+   "row": null,
+   "item_codes": [
+    "STR.CONC.SLAB"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-09",
+   "family": "B10-09",
+   "name": "Domes / rings",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.7 DETAIL OF DOME (shell, span, rise); 2 terrace domes"
+   ],
+   "method": "RC shell domes on ring beams",
+   "rules": "Q-27 A; Q-29; Q-44 A",
+   "formula": "m3 = shell surface x 0.10",
+   "materials": "concrete m3",
+   "exceptions": "tower dome RFI S28; east ring D-28",
+   "sources": [
+    "research/agents_t433 (MERGED)"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.DOME"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-10-POOL",
+   "family": "B10-10",
+   "name": "Pool / tank / lift pit / pump room",
+   "applicability": "APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.7 DETAIL OF SWIMMING POOL",
+    "own read T-471: 'swimming pool' texts on both DXFs (architectural 1, structural 3 incl. the detail title)"
+   ],
+   "method": "RC pool shell",
+   "rules": "Q-26 A (flat pool floor)",
+   "formula": "m3 = walls + base from the p.7 section",
+   "materials": "concrete m3",
+   "exceptions": "pool steps A02",
+   "sources": [
+    "research/agents_t322",
+    "research/agents_t347"
+   ],
+   "row": "T-180",
+   "item_codes": [
+    "STR.CONC.POOL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-10-LIFT",
+   "family": "B10-10",
+   "name": "Pool / tank / lift pit / pump room",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.14 lift detail; ring handles on Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'"
+   ],
+   "method": "lift-pit raft + walls; GF lift tie beam",
+   "rules": "R-LIFT-BASE-1; Lead rulings 2026-10-31 16:20 / 2026-11-01 04:15",
+   "formula": "pit walls = ring area x pit depth (HELD); tie beam length x section (HELD)",
+   "materials": "concrete m3",
+   "exceptions": "pit depth RFI L-1; tie section D-43",
+   "sources": [
+    "research/agents_t322 (MERGED)",
+    "research/agents_t408 (MERGED e3d9a092)"
+   ],
+   "row": "T-419",
+   "item_codes": [
+    "STR.CONC.LIFT"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-10-TANK",
+   "family": "B10-10",
+   "name": "Pool / tank / lift pit / pump room",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.6 tank place panel only; own read T-471: one 'WATER TANK PLACE' text on Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf', no tank structure drawn in either discipline"
+   ],
+   "method": "water tank structure (not drawn)",
+   "rules": "none",
+   "formula": "m3 only from a tank detail",
+   "materials": "concrete m3",
+   "exceptions": "tank G-T359-4; pump room B-A14",
+   "sources": [
+    "research/agents_t359 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [
+    "STR.CONC.TANK"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-11",
+   "family": "B10-11",
+   "name": "Boundary wall concrete",
+   "applicability": "APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.14 TYPICAL BOUNDARY WALL plan + section; Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' S-BOUN"
+   ],
+   "method": "RC ground beams + pads + columns under the block boundary wall",
+   "rules": "Q-28 A provisional; DGP-T356-BAND",
+   "formula": "m3 = run x section per member; pads x count",
+   "materials": "concrete m3",
+   "exceptions": "RFI S03 / S04",
+   "sources": [
+    "research/agents_t433 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [
+    "STR.CONC.BOUNDARY_PAD",
+    "STR.CONC.BOUNDARY_WALL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-12",
+   "family": "B10-12",
+   "name": "RC parapets",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.14 TYPICAL DETAIL OF PARAPET SECTION (RC upstand)"
+   ],
+   "method": "RC upstand on roof / terrace edges",
+   "rules": "Lead PARAPET ruling 2026-10-29 16:30; Q-65 C",
+   "formula": "m3 = run x upstand section",
+   "materials": "concrete m3",
+   "exceptions": "RC or block above (Q-65 C)",
+   "sources": [
+    "research/agents_t319",
+    "research/agents_t433"
+   ],
+   "row": "T-314",
+   "item_codes": [
+    "STR.CONC.PARAPET"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B10-13",
+   "family": "B10-13",
+   "name": "Formwork (all elements)",
+   "applicability": "APPLICABLE",
+   "level": 4,
+   "evidence": [
+    "derived from the verified concrete faces on Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'; Drive 'Alsenan chalet project' / ST7757.pdf p.13 footing sides, p.8 notes 17 / 23"
+   ],
+   "method": "shuttering to every formed RC face, junctions deducted",
+   "rules": "OQ-10 open; UP-FW-001 draft; T-163 method G",
+   "formula": "m2 contact = soffits + sides + column perimeters x height + edges",
+   "materials": "none",
+   "exceptions": "OQ-10 formed vs earth-cast below ground; 612 lines HELD, 0 released",
+   "sources": [
+    "research/agents_t163 (MERGED 659f889f)"
+   ],
+   "row": "T-474",
+   "item_codes": [
+    "STR.FORMWORK"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B11-01",
+   "family": "B11-01",
+   "name": "Footing / column / beam / slab / GB bars",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.9 schedules, beam schedule, p.4-p.6 slab bar labels, p.13 GB sections, p.15 notes, p.8 note 9"
+   ],
+   "method": "cut, bend, fix bars by population",
+   "rules": "Q-71 (drawing-based counting); OWNER_RULE_REBAR_2026-10-24; owner option B",
+   "formula": "kg = count x length x kg/m per diameter",
+   "materials": "steel kg by diameter",
+   "exceptions": "links Q-71; D-46; 2,643 lines HELD",
+   "sources": [
+    "ELEMENT_REGISTER (T-136 / T-148 / T-138)"
+   ],
+   "row": "T-449",
+   "item_codes": [
+    "STR.REBAR"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B11-02",
+   "family": "B11-02",
+   "name": "Bar bending schedule (bar marks, shapes)",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "bends / hooks / legs not dimensioned on the Drive 'Alsenan chalet project' / ST7757.pdf details (T-371)"
+   ],
+   "method": "bar bending schedule",
+   "rules": "Lead BAR SHAPES ruling 2026-10-30 16:30",
+   "formula": "per row count x cut length x kg/m",
+   "materials": "none",
+   "exceptions": "RFI S21 shapes; NO_LINE",
+   "sources": [
+    "ELEMENT_REGISTER 2026-10-30 16:30"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B11-03",
+   "family": "B11-03",
+   "name": "Rebar of stairs / pool / domes / tank / pit / boundary wall",
+   "applicability": "APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.7 pool and dome bar labels, p.14 lift walls and boundary wall (79 populations)"
+   ],
+   "method": "bars of pool / dome / lift pit / boundary wall",
+   "rules": "OWNER_RULE_REBAR_2026-10-24; owner option B; Q-26 A; Q-71",
+   "formula": "kg = rate x width x length x kg/m per population",
+   "materials": "none",
+   "exceptions": "RFI-B-S11 and the T-359 gaps",
+   "sources": [
+    "research/agents_t359 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B11-04",
+   "family": "B11-04",
+   "name": "Net vs procurement (laps, stock length)",
+   "applicability": "APPLICABLE",
+   "level": 3,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / ST7757.pdf p.15 note 1, p.8 note 9, p.13 typical footing (conflict on lap)"
+   ],
+   "method": "laps / splices at stock length (procurement)",
+   "rules": "owner 2026-11-02 (40d columns, 60d beams / slabs / footings); R-T375-1",
+   "formula": "splices = ceil((L - S) / (S - lap)) for L > S",
+   "materials": "stock length S",
+   "exceptions": "p.13 vs note 9 conflict (designer)",
+   "sources": [
+    "research/agents_t375 (MERGED 7405e3a6)"
+   ],
+   "row": "T-382",
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B12-01",
+   "family": "B12-01",
+   "name": "Sanitary fixtures and floor drains",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3 fixtures room by room, FD 19, RWD 5"
+   ],
+   "method": "fixture and floor-drain count",
+   "rules": "register SANITARY FIXTURE; out of the scope freeze",
+   "formula": "pcs per type per room",
+   "materials": "none",
+   "exceptions": "out of the scope freeze (EIMP_SCOPE): no line by decision",
+   "sources": [
+    "research/agents_t370 (MERGED d7619aca)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B12-02",
+   "family": "B12-02",
+   "name": "Pipes / drainage / water supply",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / sanitary-7757.pdf p.1-3 manhole, cleanouts, stacks, RWP (not to scale)"
+   ],
+   "method": "drainage items counted; runs only where dimensioned",
+   "rules": "R-T380; out of the scope freeze",
+   "formula": "pcs; lm only from printed dimensions",
+   "materials": "none",
+   "exceptions": "pipe lengths not printed; out of scope freeze",
+   "sources": [
+    "research/agents_t380 (MERGED 801d3226)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B12-03",
+   "family": "B12-03",
+   "name": "Electrical points / DB / cables",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no electrical sheet in the drawing set"
+   ],
+   "method": "electrical points / DB / cables",
+   "rules": "out of the scope freeze",
+   "formula": "pcs / lm from electrical plans",
+   "materials": "none",
+   "exceptions": "BLOCKED_BY_SOURCE",
+   "sources": [
+    "EIMP_SCOPE_2026-11-02.md"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B12-04",
+   "family": "B12-04",
+   "name": "HVAC / ducts / grilles",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf): 3 ventilation marks in GF WCs; no HVAC sheet"
+   ],
+   "method": "HVAC / ducts / grilles",
+   "rules": "out of the scope freeze",
+   "formula": "pcs / lm / m2 from HVAC plans",
+   "materials": "none",
+   "exceptions": "BLOCKED_BY_SOURCE",
+   "sources": [
+    "research/agents_t370 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B12-05",
+   "family": "B12-05",
+   "name": "Low voltage / smart home",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no low-voltage sheet in the drawing set"
+   ],
+   "method": "low voltage / smart home",
+   "rules": "out of the scope freeze",
+   "formula": "pcs from LV plans",
+   "materials": "none",
+   "exceptions": "BLOCKED_BY_SOURCE",
+   "sources": [
+    "EIMP_SCOPE_2026-11-02.md"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B13-01",
+   "family": "B13-01",
+   "name": "Roofing build-up / insulation / screed to falls",
+   "applicability": "APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) roof finish hatches ROOF-430 / TERRACE-550 / ROOF-970; insulation / protection printed on no sheet"
+   ],
+   "method": "per roof: screed to falls, insulation, protection, finish",
+   "rules": "Q-41; Q-45; Q-42; Q-34; R-T328-1",
+   "formula": "finish m2 = hatch area to physical edges; screed m3 = area x t0 + falls wedge",
+   "materials": "screed 1:4 PROVISIONAL (Q-45)",
+   "exceptions": "t0 unprinted D-39; insulation / protection UNKNOWN; top roof Q-34",
+   "sources": [
+    "research/agents_t328 (Gate B MERGED 94d85fc7)"
+   ],
+   "row": "T-383",
+   "item_codes": [
+    "FIN.ROOF.FINISH",
+    "FIN.ROOF.INSULATION",
+    "FIN.ROOF.PROTECTION",
+    "FIN.ROOF.SCREED"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B13-02",
+   "family": "B13-02",
+   "name": "Interlock / external paving",
+   "applicability": "APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) GF court face inside the boundary-wall inner faces less the pool; north walk; section B-B p.11 open sky"
+   ],
+   "method": "court interlock; side walk porcelain",
+   "rules": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21; Q-67 A; R-T343-1",
+   "formula": "m2 = drawn piece area",
+   "materials": "none",
+   "exceptions": "porch and pool deck finish HELD",
+   "sources": [
+    "research/agents_t343 (Gate B MERGED bb772f51)"
+   ],
+   "row": null,
+   "item_codes": [
+    "EXT.FLOOR.OUTDOOR",
+    "EXT.FLOOR.PORCELAIN",
+    "EXT.PAVING.INTERLOCK"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B13-03",
+   "family": "B13-03",
+   "name": "Landscaping / irrigation",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "GF garden labels on Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf); no landscape plan"
+   ],
+   "method": "landscaping / irrigation",
+   "rules": "out of the scope freeze",
+   "formula": "m2 / lm from a landscape plan",
+   "materials": "none",
+   "exceptions": "garden band use D-48",
+   "sources": [
+    "research/agents_t427 (MERGED)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B13-04",
+   "family": "B13-04",
+   "name": "Fencing / gates",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) boundary lines; Pages_11-12 p.12 FENCE PLAN / ELEVATION / SECTION; Drive 'Alsenan chalet project' / ST7757.pdf p.14 typical boundary wall"
+   ],
+   "method": "block boundary wall with faces, top, below-NG masonry and gates",
+   "rules": "Q-65 C; Q-63 C; register PLOT BOUNDARY WALL",
+   "formula": "plane m2 = run x printed height; gates pcs",
+   "materials": "block type / count HELD (Q-65 C)",
+   "exceptions": "sea element Q-63 C; finishes HELD",
+   "sources": [
+    "research/agents_t361 (MERGED)",
+    "research/agents_t400 (Gate B MERGED 0c5d526c)"
+   ],
+   "row": null,
+   "item_codes": [
+    "EXT.FENCE.BLOCK",
+    "EXT.FENCE.BLOCK_COUNT",
+    "EXT.FENCE.FACE",
+    "EXT.FENCE.GATE",
+    "EXT.FENCE.MASONRY_BELOW_NG",
+    "EXT.FENCE.PAINT",
+    "EXT.FENCE.PLASTER",
+    "EXT.FENCE.TOP",
+    "EXT.FENCE.WALL"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B13-05",
+   "family": "B13-05",
+   "name": "Expansion joints / sealants",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 2,
+   "evidence": [
+    "no joint printed on ST p.1-16, ARCH p.1-12, SAN p.1-3; owner 3 mm joint answer for roof / outside tiling"
+   ],
+   "method": "movement joints and sealant",
+   "rules": "Q-42 (width only); R-JT-7",
+   "formula": "lm per measured joint",
+   "materials": "none",
+   "exceptions": "spacing and own line not answered",
+   "sources": [
+    "research/agents_t365 (MERGED 42d77b1c)"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B13-06",
+   "family": "B13-06",
+   "name": "Joinery / kitchen cabinets / wardrobes",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf) joinery boxes in the lobby and 1F dressing; no interior drawings"
+   ],
+   "method": "joinery / cabinets / wardrobes",
+   "rules": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD v1; out of the scope freeze",
+   "formula": "lm / pcs from interior drawings",
+   "materials": "none",
+   "exceptions": "BLOCKED_BY_SOURCE",
+   "sources": [
+    "research/agents_t223",
+    "research/agents_t240"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B13-07",
+   "family": "B13-07",
+   "name": "Special metalwork (canopies, pergolas)",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "no canopy or pergola identified on any sheet in the merged pieces"
+   ],
+   "method": "special metalwork",
+   "rules": "out of the scope freeze",
+   "formula": "kg / m2 from details",
+   "materials": "none",
+   "exceptions": "BLOCKED_BY_SOURCE",
+   "sources": [
+    "research/agents_t199"
+   ],
+   "row": null,
+   "item_codes": [],
+   "scope": "every villa (method); applicability for this villa only",
+   "out_of_scope_freeze": true
+  },
+  {
+   "component_id": "C-B13-08",
+   "family": "B13-08",
+   "name": "Guard railings outside stairs (roof / floor edge / balcony / fence), installed length",
+   "applicability": "APPLICABLE",
+   "level": 1,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf): 1F floor edge D-23, roof railings on SE / NW elevations, annex +4.30"
+   ],
+   "method": "guard rail on open edges outside stairs",
+   "rules": "register NON-STAIR GUARD RAILS F-T199-4; UP-STAIR-012",
+   "formula": "lm = installed path per drawn run",
+   "materials": "none",
+   "exceptions": "RL-04 HELD; street fence railing length not printed",
+   "sources": [
+    "research/agents_t393 (MERGED)",
+    "research/agents_t361 (MERGED)"
+   ],
+   "row": "T-476",
+   "item_codes": [
+    "MET.RAILING.GUARD"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  },
+  {
+   "component_id": "C-B13-09",
+   "family": "B13-09",
+   "name": "Pool internal finish on the water faces (tile / mosaic)",
+   "applicability": "POSSIBLY_APPLICABLE",
+   "level": 5,
+   "evidence": [
+    "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' DETAIL OF SWIMMING POOL: no hatch on the water side (T-309: water floor and walls NOT_COVERED by any layer)",
+    "own read T-471: the freelancer floors / marble workbook (Drive folder, title 'floors + WP + decor + marble') carries pool floor and pool wall tile rows"
+   ],
+   "method": "internal pool finish (tile / mosaic) on the water faces",
+   "rules": "registry 1.41.0 family B13-09 (T-479); no owner finish rule",
+   "formula": "m2 = water floor + water walls, once, only if a finish is specified",
+   "materials": "none",
+   "exceptions": "finish not printed on any sheet: the line stays BLOCKED_RFI blank",
+   "sources": [
+    "research/agents_t309 (MERGED 834ada3e)",
+    "research/agents_t343 (EXT.POOL.WATER_FACE line, V3.0.25)"
+   ],
+   "row": null,
+   "item_codes": [
+    "EXT.POOL.WATER_FACE"
+   ],
+   "scope": "every villa (method); applicability for this villa only"
+  }
+ ],
+ "codes_added_from_registry": {
+  "C-B1-02": [
+   "STR.EARTH.EXCAVATION"
+  ],
+  "C-B1-03": [
+   "STR.EARTH.BACKFILL"
+  ],
+  "C-B1-04": [
+   "STR.EARTH.DISPOSAL"
+  ]
+ }
+}

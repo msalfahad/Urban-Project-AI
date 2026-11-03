@@ -45,9 +45,12 @@ def test_checks_clean_on_head(docs):
     assert FMC.check(docs[1], root=ROOT, is_ancestor=None) == []
 
 
-def test_pending_dropped_is_stale(docs):
+def test_pending_dropped_is_stale(docs, monkeypatch):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = bad["pending_packages"][:-1]
+    # T-479: judged as the newest registry on the head (a later version, e.g. 1.41.0, that carries the pending entry
+    # forward would otherwise account for arch_v3045 by rule r3 and hide the drop this test is about)
+    monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
     assert any("arch_v3045" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
 
 
