@@ -1,0 +1,30 @@
+{
+ "boundary_lm": 92.74,
+ "counts": {
+  "ASSUMED - OWNER-APPROVED": 1,
+  "DRAWING-CONFIRMED": 2,
+  "HELD": 11
+ },
+ "dxf_sides_sum_lm": 92.74,
+ "held": [
+  "CONCRETE_PUMP_POURS",
+  "FORMATION_COMPACTION",
+  "GENERATOR_FUEL",
+  "GOVERNMENT_TEMPORARY_CONNECTION",
+  "GUARD_CABIN_OR_TENT",
+  "HOARDING_FENCE_NET",
+  "HOARDING_GATES",
+  "POUR_GENERATOR_DAYS",
+  "SITE_AND_WORKERS_INSURANCE",
+  "WATER_TANKER_TRIPS",
+  "WATER_TANKS"
+ ],
+ "method": "SITE_PREPARATION_V1 (research, unwired)",
+ "plot_area_m2": 470.55,
+ "quantified_not_released": {
+  "HOARDING_GROSS_BOUNDARY": 92.74,
+  "SITE_CLEARANCE": 470.55,
+  "SITE_HANDOVER_MUNICIPALITY_AND_OFFICE": 1.0
+ },
+ "rules": "owner 2026-11-02 17:20 notes (2) and (6); Q-21 C; T-357 R-PLOT-1"
+}

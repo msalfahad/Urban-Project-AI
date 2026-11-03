@@ -1,0 +1,31 @@
+{
+ "project": "development villa (Alsenan); references are Drive folder 'Alsenan chalet project' / file title + layer / handle / page only; no coordinates, no note text, no client data",
+ "read_this_run": "P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd554c31fe4a (Worker 1, 2026-11-03, T-491): boundary lines by handle, lengths in mm converted to m",
+ "unit": "m",
+ "plot_polygon": [[0.0, 0.0], [31.37, 0.0], [31.37, 15.0], [0.0, 15.0]],
+ "boundary_source": "ARCH p.1 / p.2 area plans and sanitary p.1 - p.3 print the four sides 15.00 / 31.37 / 15.00 / 31.37; P7757.dxf GF plan boundary lines re-measured by handle (T-357 R-PLOT-1; T-491 this run)",
+ "boundary_status": "DRAWING-CONFIRMED",
+ "boundary_sides_dxf": [
+  {"side": "street", "length_m": 15.0, "pieces": "107 0.833 (L1) + 341 1.955 (L5, W lines 342-344) + 108 1.145 (L1) + 347 1.955 (L5, W lines 348-34A) + 109 0.812 (L1) + 10F 8.300 (L5)", "sum_m": 15.0},
+  {"side": "lower neighbour", "length_m": 31.37, "pieces": "corner column 2F9D 0.370 (S-COL.BON) + 85 10.230 (L1) + 0.200 + 86 / 105 1.200 (L5, drawn twice) + 9A 3.000 (L1) + 0.200 + 8A 16.170 (L1); 103 16.370 overlaps 8A + 9A end", "sum_m": 31.37},
+  {"side": "sea", "length_m": 15.0, "pieces": "8B 0.900 (L1) + 261 6.332 (L5, W lines 262-265) + 8C 0.668 (L1) + 0.232 + 8D 5.168 (L5) + 8E 1.700 (L5)", "sum_m": 15.0},
+  {"side": "upper neighbour", "length_m": 31.37, "pieces": "98 16.370 + 99 15.000 (L5); building outline 13A runs 0.20 inside (house wall on the boundary)", "sum_m": 31.37}
+ ],
+ "permanent_openings_on_boundary_evidence_only": [
+  {"side": "street", "what": "access opening between boundary-wall end 10A and building corner 10B, hidden line 110 (layer 2) overhead", "width_m": 2.5},
+  {"side": "street", "what": "two glazed / grille openings in the boundary wall (layer W triple lines)", "width_m": 1.955, "count": 2},
+  {"side": "sea", "what": "door D120 insert 2D8 at the north end", "width_m": 1.0},
+  {"side": "sea", "what": "glazed band 261 (layer W, 262-265)", "width_m": 6.332}
+ ],
+ "gate_widths": null,
+ "gate_note": "a temporary hoarding gate is a construction-logistics element; no site plan, logistics plan or hoarding detail is in the issued set (T-195 MISSING row 2; T-357 SHEET_SEARCH 31 sheets). The permanent openings above are not temporary gates and are not used as such.",
+ "clearance_scope_source": "owner 2026-11-02 17:20 (6): SITE PREPARATION = B1-01 site clearance (quantities only), (2): site clearing m2 separate from formation compaction m2",
+ "clearance_limit_m2": null,
+ "programme": null,
+ "logistics": null,
+ "pour_sequence": null,
+ "pour_sequence_search": "no pour sequence, casting stages or construction joints printed: ST7757.pdf p.1 notes, p.8 notes 1-24 and p.9 boxed notes 1-4 read in full by T-357 (SHEET_SEARCH_T357.csv, 31 sheets); p.1 carries a formwork stripping-time note only",
+ "temporary_power": null,
+ "insurance": null,
+ "freelancer": "FREELANCER_RAW_ROWS (tests/alsenan/registers_b1, 885 rows): no clearance, hoarding, cabin, tank, tanker, pump, generator, power, insurance or handover row (Arabic / English search, T-491 this run; the boundary-wall rows are permanent masonry, not hoarding)"
+}

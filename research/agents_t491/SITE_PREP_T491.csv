@@ -1,0 +1,15 @@
+component,family,unit,quantity,status,formula,source,missing,at_most,note
+SITE_CLEARANCE,B1-01,m2,470.55,DRAWING-CONFIRMED,shoelace area of the printed plot boundary (extent R-T491-CLR-1),"owner 2026-11-02 17:20 (6): SITE PREPARATION = B1-01 site clearance (quantities only), (2): site clearing m2 separate from formation compaction m2",,,"geometry DRAWING-CONFIRMED; extent rule R-T491-CLR-1 PROPOSED (release only after the Lead adopts it as a rule version); reported apart from formation / fill compaction footprints (owner 17:20 (2)), never summed"
+FORMATION_COMPACTION,B1-02/B1-03,m2,,HELD,formation + fill compaction footprints per zone (owner 17:20 (2)),T-350 earthworks,"measured in T-350 earthworks, not here (separate from site clearance)",,
+HOARDING_GROSS_BOUNDARY,B1-07,lm,92.74,DRAWING-CONFIRMED,perimeter of the plot boundary polygon,ARCH p.1 / p.2 area plans and sanitary p.1 - p.3 print the four sides 15.00 / 31.37 / 15.00 / 31.37; P7757.dxf GF plan boundary lines re-measured by handle (T-357 R-PLOT-1; T-491 this run),,,"gross boundary length; a reference length, not the payable fence when gates exist"
+HOARDING_FENCE_NET,B1-07,lm,,HELD,gross boundary - sum(temporary gate widths),ARCH p.1 / p.2 area plans and sanitary p.1 - p.3 print the four sides 15.00 / 31.37 / 15.00 / 31.37; P7757.dxf GF plan boundary lines re-measured by handle (T-357 R-PLOT-1; T-491 this run),temporary site gate count and widths (site logistics plan / contract),92.74,
+HOARDING_GATES,B1-07,nos,,HELD,count of temporary site gates,site logistics plan / contract,temporary site gate count,,
+GUARD_CABIN_OR_TENT,B1-07,nos x months,,HELD,cabins / tents (nos) x construction months,none,cabins / tents (nos) (source: site logistics plan / contract);construction months (source: project programme),,
+WATER_TANKS,B1-07,nos,,HELD,water tanks (nos),none,water tanks (nos) (source: site logistics plan / contract),,
+WATER_TANKER_TRIPS,B1-07,trips,,HELD,trips per week x weeks of water use,none,trips per week (source: site logistics plan / contract);weeks of water use (source: project programme),,
+CONCRETE_PUMP_POURS,B1-07,pours,,HELD,pumped pours,none,pumped pours (source: structural pour sequence / pour plan),,
+POUR_GENERATOR_DAYS,B1-07,days,,HELD,pour days,none,pour days (source: structural pour sequence / pour plan),,
+GENERATOR_FUEL,B1-07,item,,HELD,one of GENERATOR_FUEL / GOVERNMENT_TEMPORARY_CONNECTION,none,the project's temporary power choice (contract / authority application),,
+GOVERNMENT_TEMPORARY_CONNECTION,B1-07,item,,HELD,one of GENERATOR_FUEL / GOVERNMENT_TEMPORARY_CONNECTION,none,the project's temporary power choice (contract / authority application),,
+SITE_AND_WORKERS_INSURANCE,B1-07,item,,HELD,1 item when the contract includes it,none,contract clause on site / workers insurance,,
+SITE_HANDOVER_MUNICIPALITY_AND_OFFICE,B1-07,item,1.0,ASSUMED - OWNER-APPROVED,1 item per project,"owner 2026-11-02 17:20 (6): named as an item, no contract condition",,,
