@@ -69,6 +69,17 @@ quantity.
   it prints porcelain, B7 stair lines for flights and landings inside the stair (OWNER_RULE_STAIRS_2026-10-24); a
   space already carried by B3-01 or B7 is never added to B3-03. T-490 names the owner trade per space before any line.
   Rows: T-490, T-443 / T-483 (stair-room skirting, same spaces).
+- STAIR LANDING at a flight end vs FLOOR FINISH (Lead 2026-11-03 20:20; T-490 MERGED 51c9ce14, Checker F-1 / F-2):
+  OWNER TRADE B7 stair finish for every landing inside the stair (dog-leg half landings, the round-stair quarter
+  landing, arrival landings up to the last riser line); a floor at a flight end with no printed landing depth is
+  FLOOR_OR_LANDING with its own line and the material HELD, never absorbed into a bound and never also in B3-01. The
+  1F round-stair quarter landing 1.3525 m2 (no line) and the arrival landing 4.875 m2 marble (inside the HELD bound
+  0 .. 9.225 only; the 10-21 row below calls it '1F arrival', T-490 '2F arrival': T-493 settles the storey) each get
+  one B7 line. Rows: T-493 (census), later stream F integration.
+- POOL-COURT SLAB round the void vs ROOF WP vs CEILING (Lead 2026-11-03 20:20; T-486 READY, not yet verified): the
+  open-sky slab top 4.907 m2 is WATERPROOFING B8-06 (exposed slab), the overhang ledge 0.640 m2 HELD; FIN.WP.ROOF
+  never takes it; the soffit stays the CEILING row PL-03 (10-21 below). Bay-frame piers 0.584 m2 are structure, not
+  WP area. Rows: T-486 (census), T-494 (component rows, after T-486 MERGED).
 
 - FOOTING-PIT BLINDING vs GROUND-BEAM / STRAP BLINDING (Lead 2026-11-02 16:16; T-445 MERGED ab6bd617, Checker's own DXF
   re-add of all 24 pits 12.7344375 m3): one blinding layer, OWNER TRADE CONC.BLINDING; where a ground-beam or strap run

@@ -46,6 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-03 20:18; recovery plan in force)
+
+- Since 12:18: 7 merged (T-492, T-455, T-490, T-491, T-489, T-443 r3 Gate B), 1 rejected and reworked (T-443 r2).
+  Candidate of record V3.0.47 e86a53a8 (FIN.SKIRTING +13.550 lm), BOQ_FAMILY_MASTER 1.44.0; not released. READY 1.
+- Step 2: stream F delivered 1 (T-443); next T-483, then T-480, T-423, T-424, T-310, T-314, T-364, T-363, T-372 = 9
+  left. Stream S delivered 0 since T-419: T-350 r3 lost two runs with nothing pushed -> r4 in 4 pushed stages; then
+  T-487, T-488, T-382, T-474 p2 = 5 left. 14 packages in 6.5 days at about 4 h each across 2 streams: 10 Nov AT RISK;
+  the 4 Nov review stands (move T-310 / T-314 to worker 2 if stream F is under 2 packages).
+- Step 5 materials: four tables merged unwired (T-453, T-454, T-455, T-489); binding map T-496 (NEW) prepares their
+  wiring after T-488. New gap rows from verdicts: T-493 (B7 landings), T-494 (B8-06 pool-court WP), T-495 (outdoor
+  floor material rows).
+
 ## Status (Lead, 2026-11-03 12:18; recovery plan in force)
 
 - Since 08:17: 6 merged, 0 rejected: T-419 stream S Gate B (candidate of record V3.0.46 35d70129: +6 HELD blank lines,

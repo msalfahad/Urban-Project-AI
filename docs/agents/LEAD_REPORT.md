@@ -1,5 +1,19 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-03 20:18 UTC
+
+Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record now V3.0.47 e86a53a8 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Skirting (stream F Gate B PASS, Checker own DXF read): stair-room skirting in the candidate, FIN.SKIRTING 189.819 -> 203.369 lm (+13.550 lm, 4 children; 3 pieces HELD blank); 4,865 lines identical. Freelancer 282.85 lm gross stays a rule difference, never the target.
+- Measured and checked, unwired: tile adhesive HELD 148.457 .. 247.428 bags (no tile size printed); site clearance 470.550 m2, boundary 92.740 lm (fence / cabin / services HELD with formulas); plaster mix estimate, cement / sand HELD; B3-03 stone floor NOT_APPLICABLE (0 m2).
+- Found by checks (no quantity yet): 2 stair landings with no line (1.3525 m2 quarter landing; 4.875 m2 arrival only inside a HELD 0 .. 9.225 bound); pool-court slab 4.907 m2 with no waterproofing line (+0.640 m2 ledge HELD), census READY; outdoor floors 17.227 m2 outside the adhesive bound. Four tasks opened; register rulings for landings and the pool-court slab.
+- Not measured / held: earthworks still unwired (pits backfill 119.96 .. 128.64 m3 PARTIALLY VERIFIED 7 / 8).
+- Gates: Gate 0 none; Gate 1 none open; Gate 2 stream S earthworks wiring (r4), stream F remaining skirting.
+Team health: the Checker merged 7 in 2 runs, 0 rejected; Worker 1 and 2 closed every run. Worker 3's 17:02 earthworks run stopped without a final line (second time today, cause not known, nothing pushed, no partial merge); its 18:59 run idled on the lock. The task is now split into 4 saved stages with an early hand-back rule. Self-check PASS.
+
+OWNER PACKAGE: none (no item meets standard section 2.7).
+
+NEEDS FIXING (only you): the Kuwait 1990 specification is over the 10 MB connector limit, so its plastering chapter cannot be read: a split or zipped copy under 6 MB would let the plaster mix move from HELD to a sourced value. Still open: repository privacy switch; released-path PyMuPDF decision; PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-03 16:17 UTC
 
 Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record still V3.0.46 35d70129 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). No quantity merged since 12:20.
@@ -29,19 +43,3 @@ Team health: since 08:18 every closed run wrote STARTED + final line (Worker 1 x
 OWNER PACKAGE: none today (no item meets standard section 2.7; Q-79 withdrawn, you may still give a company mix and it supersedes the estimate).
 
 NEEDS FIXING (only you): repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-
-## LEAD REPORT 2026-11-03 08:18 UTC
-
-Drive read OK (nothing created or modified since 04:00, no photo task). Training villa: candidate of record V3.0.45 5972888b unchanged (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3).
-- Earthworks (missing category, piece merged, not wired): pits excavation 208.165 m3 ESTIMATED on the owner-accepted formation (Checker own DXF re-measure 208.164, 0.0004 %); pool 17.777 m3 DRAWING-CONFIRMED; pits backfill 115.554 .. 128.622 m3 PARTIALLY VERIFIED 4 / 8; disposal HELD. Lower bound corrected 188.017 -> 186.974 m3 (F8 counted twice). No freelancer earthworks to compare. Wiring queued (stream S, after the lift tie beam); 4 backfill components -> new task.
-- Blockwork materials REJECTED r1: REQUIRED RC lintel faces (w + 0.80) x D sat in the host material base as well as in lintel concrete; glue line L-2fdc 458.892 kg -> 444.470 .. 451.220 kg (not VERIFIED-NET); black 0.20 blocks 1,346.55 nr unaffected. Exact fix written; rework next.
-- Registry (Gate B PASS, no quantity change): 0 lines outside families, 0 doubly mapped; found 38 merged packages unpromoted and B8-07 balcony WP / B9-02 lintels with no candidate line -> 3 new tasks.
-- Skirting remainder (checked, unwired): certain 189.82 -> 198.83 lm proposed, held 15.73 -> 0; freelancer 282.85 lm RULE_DIFFERENCE. Wet walls: one fixing material only (checked).
-- Learned (lessons rows): a material base must exclude every face another trade owns (lintel faces, PROPOSED, from F-C-T453-1); a printed lower bound must be re-derived when an overlap is found (188.017 -> 186.974, PROPOSED).
-- Gates: Gate 0 none; Gate 1 T-485; Gate 2 stream S T-419 (CLAIMED), stream F T-443 (CLAIMED).
-Team health: since 04:18 every closed run wrote STARTED + final line (Worker 1 x1, Worker 2 x2, Worker 3 x2, Verifier x4), self-checks PASS, no refusals; Checker 6 merged / 1 rejected. Open: Worker 3 07:01, Worker 1 07:20 (both in lock). Worker 1 now on stream F as ordered. 10 Nov AT RISK: 13 packages after the two claimed (S 4, F 9). Self-check PASS; queue check 24 actionable, 0 flagged.
-
-OWNER PACKAGE: none today (no item meets standard section 2.7).
-
-NEEDS FIXING (only you): repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-

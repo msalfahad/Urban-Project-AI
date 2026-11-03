@@ -3,6 +3,17 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-03 20:18 (since 16:17; the 12:18 and 16:17 runs recorded theirs on BOARD.md only)
+
+- T-443 r3 stair-room skirting (Gate B): WORKED (FIN.SKIRTING +13.550 lm, V3.0.47). Decision: T-483 TODO next in stream F.
+- T-492 t485 guard fix: WORKED (unblocked T-443 r3). Lessons row CLOSED.
+- T-455 tile adhesive / boxes: WORKED (unwired; F-C-T455-1 outdoor 17.227 m2 outside scope). Decision: NEW T-495.
+- T-490 B3-03 stone floor: WORKED (NOT_APPLICABLE; F-1 / F-2 landings without lines). Decision: NEW T-493 + register ruling.
+- T-491 site preparation: WORKED (unwired; fence / cabin / services HELD with formulas). Decision: wiring after stream S.
+- T-489 plaster mix: PARTIAL (mix HELD: 1990 spec over the connector limit). Decision: owner NEEDS FIXING item kept.
+- T-350 r3 earthworks wiring: FAILED twice (13:01, 17:02 runs, nothing pushed, cause not known). Decision: r4 OVERSIZED, 4 pushed stages.
+- T-486 terrace WP census: READY (pool-court 4.907 m2 omission). Decision: T-494 QUEUED after its merge.
+
 ## Lead 2026-11-03 08:17 (since 04:15; the 20:17, 00:16 and 04:15 runs recorded theirs on BOARD.md only)
 
 - T-481 skirting remainder census: WORKED (Checker re-measure AGREE). Decision: NEW T-483 integrates it (stream F, after T-443).

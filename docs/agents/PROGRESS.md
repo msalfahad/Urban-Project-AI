@@ -1,9 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-03 12:18 UTC (Lead). Previous version: 2026-11-03 08:17 UTC. The released numbers did not change
+Last update: 2026-11-03 20:20 UTC (Lead). Previous version: 2026-11-03 12:18 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.46 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.47 (not released).
+
+Since 3 Nov 12:18 (newest first; seven checked and merged, one sent back and then merged):
+- Stair-room skirting IN THE CANDIDATE (V3.0.47, checked line by line from the drawing): skirting 189.82 -> 203.37 m.l
+  (+13.55 m.l: ground-floor hall, back lobby, top-floor lobby and arrival); three pieces stay held (no figure);
+  every other line identical. The remaining skirting package (sills above the floor, dressing walk) is next.
+- Tile adhesive by tile size and tile boxes measured and checked (not yet in the candidate): held at 148.46 .. 247.43
+  bags until a tile size is printed. The two outdoor floors (porch and pool deck, 17.23 m2, finish not chosen) are
+  outside that bound; a new task names them.
+- Plaster mix: an estimate only; cement and sand stay held because the 1990 specification's plastering chapter
+  cannot be downloaded (file too large).
+- Site clearance 470.55 m2 and plot boundary 92.74 m measured and checked (not yet in the candidate); site fence,
+  cabin, water, power and similar preliminaries held with their formulas, no default.
+- Entrance / stair-hall stone floor: not applicable on the issued drawings (0 m2 new). Two stair landings found with
+  no line of their own (1.35 m2 quarter landing; 4.875 m2 arrival landing only inside a held range): a new task.
+- Balcony / terrace waterproofing census handed in: adds 0 m2 (the roof terrace is already in the roof
+  waterproofing), but it found the pool-court slab round the void with no waterproofing line: 4.91 m2 missing plus a
+  0.64 m2 held ledge. Waiting for the checker.
+- Earthworks wiring: two runs stopped without saving any work (cause not known; nothing lost, nothing half-merged);
+  it is now split into saved stages.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: about 12 integration packages left; earthworks wiring and the
+  remaining skirting are next, then lintels, blockwork, railings.
 
 Since 3 Nov 08:17 (newest first; six checked and merged, none sent back):
 - Plaster materials measured and checked (not yet in the candidate): dry-wall plaster mortar 4.73 m3 (236.35 m2 x

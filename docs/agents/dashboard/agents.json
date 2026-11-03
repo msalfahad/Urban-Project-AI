@@ -6,52 +6,52 @@
   "last_run": "2026-11-03T04:32:03Z",
   "result": "ok",
   "working_on": "Daily update 3 Nov 04:32 UTC (scheduler SUCCEEDED); next 4 Nov 04:31 UTC",
-  "as_of": "2026-11-03T16:20:00Z"
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-03T16:14:00Z",
+  "last_run": "2026-11-03T20:14:00Z",
   "result": "running",
-  "working_on": "Afternoon review: nothing merged since 12:20, skirting package sent back for 3 test faults (engineering agreed); ruled the registry guard a tooling defect and opened a small fix task; earthworks wiring re-opened after its run stopped without a final line",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "Evening review: 6 merged since 16:17 incl. the stair-room skirting into the candidate (+13.550 lm); earthworks wiring re-staged after a second run stopped without a final line; 4 new tasks from Checker findings (stair landings, pool-court slab waterproofing, outdoor floor materials, materials binding map)",
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T15:22:00Z",
+  "last_run": "2026-11-03T19:23:00Z",
   "result": "ok",
-  "working_on": "15:22-15:32 site preparation quantities (ready for check); 13:22-13:33 entrance stone floor (ready for check, not applicable on the drawings); next: stair-room skirting rework",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "19:23 no claimable task (skirting remainder waited for the stair-room skirting merge, now done); 17:25-18:09 stair-room skirting rework (merged 20:12); next: skirting remainder integration",
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T14:41:00Z",
+  "last_run": "2026-11-03T18:43:00Z",
   "result": "ok",
-  "working_on": "14:41-14:53 plaster mix estimate (ready for check, cement / sand held); 12:40-13:02 tile adhesive and boxes (ready for check); next: registry guard fix, balcony waterproofing",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "18:43-19:12 balcony / terrace waterproofing census (ready for check; found 4.907 m2 pool-court slab with no waterproofing line); 16:42 registry guard fix (merged); next: stair landing omissions",
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-03T14:59:44Z",
+  "last_run": "2026-11-03T18:59:45Z",
   "result": "ok",
-  "working_on": "13:01 run on earthworks wiring wrote no final line (incomplete, no work pushed); 15:00 run idled on its lock; next (16:59): earthworks wiring again",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "17:02 run on earthworks wiring wrote no final line (incomplete, no work pushed, second time); 18:59 run idled on its lock; next (20:59): earthworks wiring in pushed stages",
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-03T15:49:31Z",
+  "last_run": "2026-11-03T18:53:00Z",
   "result": "ok",
-  "working_on": "13:52 run wrote no final line (incomplete, nothing merged); 14:51 and 15:50 runs idled on its lock; 12:52-13:33 skirting package sent back (3 test faults); next: tiles, stone floor, site preparation, plaster mix",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "18:53-20:14 stair-room skirting integration merged (candidate V3.0.47); 16:51-17:12 merged guard fix, tiles adhesive, stone floor census, site preparation, plaster mix; next: balcony waterproofing census",
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-03T16:20:00Z"
+  "as_of": "2026-11-03T20:25:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
   "role": "Rewrites the dashboard data from the board",
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
-  "last_run": "2026-11-03T00:55:00Z",
+  "last_run": "2026-11-03T12:54:59Z",
   "result": "ok",
-  "working_on": "Refreshed 3 Nov 00:55 UTC (scheduler SUCCEEDED); next 3 Nov 12:54 UTC",
-  "as_of": "2026-11-03T16:20:00Z"
+  "working_on": "Refreshed 3 Nov 12:56 UTC (scheduler SUCCEEDED); next 4 Nov 00:54 UTC",
+  "as_of": "2026-11-03T20:25:00Z"
  }
 ]
