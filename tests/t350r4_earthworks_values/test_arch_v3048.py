@@ -200,3 +200,13 @@ def test_policy_and_hub_name():
     assert p["released_default"] is False
     hub = (ROOT / "tools/urban_boq_m9.py").read_text(encoding="utf-8")
     assert '"ARCH_TAKEOFF_V3.0.48"' in hub and "--v3048-inputs" in hub
+
+
+def test_hub_runs_every_earlier_stage_for_v3048():
+    """adverse found in this round: a V3.0.48 run must be a V3.0.2 .. V3.0.47 run first: every method list of the hub
+    that names V3.0.47 names V3.0.48 too (else '--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2')"""
+    import re
+    hub = (ROOT / "tools/urban_boq_m9.py").read_text(encoding="utf-8")
+    lists = re.findall(r"a\.method in \(([^)]*)\)", hub)
+    with47 = [x for x in lists if re.search(r"\bV3047\b", x)]
+    assert with47 and all(re.search(r"\bV3048\b", x) for x in with47)
