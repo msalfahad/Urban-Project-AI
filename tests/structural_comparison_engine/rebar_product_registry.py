@@ -261,4 +261,7 @@ OTHER_REBAR_AWARE = (
     # arch_v302 -> footing_rebar_population_v1 -> urban_methods_v3 -> urban_methods); it computes waterproofing areas
     # only, writes no reinforcement quantity, computes no kg and applies no ratio
     "engine/source/waterproofing_policy_v2.py",
+    # T-419: the V3.0.46 extension adds ONE HELD BLANK STR.REBAR line (the GF lift tie beam's bars: no bar detail
+    # printed) with its member length beside, never the quantity; it writes no kg, reads no bar and applies no ratio
+    "engine/source/arch_v3046.py",
 )
