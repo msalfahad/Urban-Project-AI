@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T05:24Z | Worker 1 | SUCCESS | T-452 r2 READY (agents/task-T-452 @ c4a8fc54) | Gate 4b fix: tools/project_scoreboard.py classified TOOLING for the t212 guard (t212 green on the head merged with 3d85bf39); Checker finding F-C-T452-1 fixed: --candidate-lines now requires --candidate-label, so a V3.0.43 line set can no longer be scored under the manifest's V3.0.42 label; no quantity or score number changed; 224 tests pass (t212 + 9 scorer folders) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-03T05:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T05:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T04:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-479 (integration package), T-481, T-457 per RUN_LOG | self-check pending
