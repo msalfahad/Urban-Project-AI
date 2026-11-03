@@ -1750,15 +1750,20 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-02 12:30)
-- Checker: each piece as it is handed in (the reinforcement test fix first), then the earthworks package, then the
-  skirting release; the rest of every run on independent line closures (concrete, then reinforcement, then blockwork).
-- Structural stream (worker 3): earthworks lines (excavation, backfill, disposal, held where the existing ground level
-  is unknown), then foundation waterproofing, lift tie beam, lap rule wiring; formwork scope census alongside.
-- Finishes stream (worker 1): skirting release, then stair-room skirting, ceilings and thresholds, nosing, wet-room
-  waterproofing, external plaster, spatter dash, block accessories, joint mortar; lift marble census alongside.
-- Architectural worker (worker 2): the reinforcement test fix, the full measurement plan on the new scope list, the PDF
-  reader rework.
+(Lead 2026-11-03 04:15)
+- Candidate (not released): the footing blinding is now split in the candidate: the 24 footing pits 12.734 m3 are
+  checked and valued as their own line; the raft, the strip beyond the plot and the ground-beam parts stay held with
+  their ranges beside (7.64 .. 13.47 m3), one line blank. The freelancer's 47.06 m3 is a plate under the whole plot
+  that no drawing shows (a rule difference, not an engine error). Released BOQ unchanged.
+- Checker next: the remaining window sills and skirting (certain skirting 189.82 -> 198.83 lm if confirmed), the
+  wet-wall fixing bed check (no second bed exists; one layer was mis-named and priced as a tile bed), then the
+  scoreboard restatement for the blinding change.
+- Structural stream: family register refresh (building), then the lift tie beam and below-ground masonry lines.
+- Finishes stream: the stair-room skirting lines into the candidate (ordered next; it has waited two runs), then
+  handrails along the flights.
+- Blockwork: the wall register is rebuilt from general rules (260 entries, none project-only); three open points
+  before it is wired: the top-floor wall height under the roof, one ground-floor wall range, one parapet area.
+- Materials: block / mortar / glue / lintel counts as a ledger from your confirmed rules (next for worker 2).
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

@@ -46,6 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-03 04:15; recovery plan in force)
+
+- Since 00:16: 3 merged, 1 rejected: T-478 r3 stream S Gate B -> candidate of record V3.0.45 5972888b (CONC.BLINDING
+  split: 24 pits 12.734438 m3 VERIFIED valued, rest HELD); T-466 known-failures 396 -> 0; T-449 r3 blockwork register
+  (unwired, wiring conditions -> NEW T-482). T-452 REJECTED r1 (t212 classification only) -> TODO r2. READY 2: T-481,
+  T-457 (both Gate A).
+- Step 2: packages delivered S 2, F 1 in about 30 h. Stream F has NOT moved since 22:50 (worker 1 took two backlog
+  rows over T-443): ordered next. Stream S T-479 (CLAIMED) -> T-419 (released for build) -> T-382 -> T-474 p2. About
+  12 packages remain for 7 days: 10 Nov AT RISK; the 4 Nov decision on pulling T-314 / T-364 / T-363 / T-372 forward
+  stands.
+- Step 5: T-453 part 1 TODO (worker 2); T-482 settles the blockwork basis before blocks are priced. Step 6: T-452 r2.
+
 ## Status (Lead, 2026-11-03 00:16; recovery plan in force)
 
 - Since 20:17: 6 merged, 0 rejected: T-422 first stream F Gate B -> candidate of record V3.0.44 (FIN.SKIRTING certain

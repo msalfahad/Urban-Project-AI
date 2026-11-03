@@ -1,5 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-03 04:15 UTC
+
+Drive read OK (nothing created since 00:00, no photo task). Training villa: candidate of record V3.0.45 5972888b (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3).
+- Concrete blinding (second structural Gate B, PASS): the footing blinding line 15.179 m3 is split: 24 pits 12.734 m3 VERIFIED and valued as their own line; raft, beyond-plot, ground-beam and F10 parts HELD 7.640 .. 13.466 m3, boundary-wall base blank (never 0). Freelancer 47.055 m3 is a whole-plot plate no drawing prints: RULE_DIFFERENCE (-72.9 %). 4,855 other lines byte-identical; L4 0 failed on the merge.
+- Blockwork: register rebuilt from general rules (260 entries: 234 reproduced, 26 specified, 0 project-only); generic rule 499.3007 vs carried 499.3040 m2 (0.0033 m2 named). Not wired: 2F wall height under the roof needs one roof datum, GF-W22 range, parapet NW-2 3.611 vs 3.167 m2 -> new investigation task.
+- Skirting (READY, not yet checked): W11 / W12 sills 0.70 m above the floor + 1F dressing walk: certain 189.82 -> 198.83 lm, held 15.73 -> 0; freelancer 282.85 lm RULE_DIFFERENCE.
+- Wet walls (READY): no second fixing bed exists; the one 2 cm layer is the levelling render, mis-named as a tile bed and summed into floor beds; corrected table unwired, no quantity moved.
+- Tests: known-failure list 396 -> 0, so a red test now always means a fault (L4 17,894 pass, 0 fail).
+- Learned (lessons rows): a line carries one status, never verified + held parts mixed (ADOPTED); name a layer by its function before pricing it (PROPOSED).
+- Gates: Gate 0 T-452 r2 (one-line test classification); Gate 1 T-479; Gate 2 stream S T-419 next, stream F T-443 next.
+Team health: since 00:12 every closed run wrote STARTED + final line (Worker 1 x2, Worker 2 x2, Worker 3 x1, Verifier x3 incl. 1 overlap guard), self-checks PASS, no refusals; Checker 3 merged / 1 rejected (narrow). Open: Worker 3 03:00 (T-479, in its lock). Finding: worker 1 skipped the finishes package twice for backlog rows, so finishes integration has not moved since 22:50; ordered next with a stated-reason rule. Scout paused by your 28 Oct cadence decision (last run 27 Oct); research requests idle. 10 Nov AT RISK: about 12 packages left for 7 days. Self-check PASS; queue check 23 actionable, 0 flagged.
+
+OWNER PACKAGE: none today (no item meets standard section 2.7).
+
+NEEDS FIXING (only you): repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-03 00:16 UTC
 
 Drive read OK (nothing created since 20:00). Training villa: candidate of record V3.0.44 8b2fe2b6 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, steel 10,250.17 kg).
@@ -36,20 +52,3 @@ OWNER PACKAGE: none today (no genuine decision under standard 2.7).
 
 NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r4); PR #3 / merged-branch clean-up.
 
-## LEAD REPORT 2026-11-02 16:18 UTC
-
-Drive read OK (nothing new since 12:00). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged; no quantity moved since 12:35.
-- Concrete / blinding: footing blinding measured as pieces (merged, unwired): 24 pits 12.734 m3 VERIFIED (Checker own re-add 0.0 %); freelancer 47.055 m3 = one 0.10 m plate over the plot rectangle, printed nowhere: RULE_DIFFERENCE, not an engine error. Candidate line 15.179 m3 mixes pits + FF raft HELD 2.256..2.352 (S08) + 0.189 beyond the plot (S06) -> split in NEW T-478.
-- Earthworks (missing category): T-350 READY as the first stream S Gate B package: 18 lines HELD-BLANK (formation / working space are designer items), bounds beside only: pits >= 188.017 m3 (+129.234 per m below the printed 1.50), pool >= 17.777 m3. Never a figure in a blank line.
-- Scope (recovery step 1): EIMP part 2 READY: 106 components, 0 unmapped / 0 doubly mapped; VERIFIED 1, MEASURED 5, HELD 50, MISSING 25, NA 5, to confirm 20; 2 candidate lines in no family (registry gap).
-- Finishes: lift landing marble census READY: B6-07 1.500 m2 / 3.000 m.l and B6-06 HELD 2.750..13.980 m2 = candidate (0.000); freelancer has no row (ENGINE_RIGHT on scope).
-- Reinforcement: firewall gate green again (T-477 merged); released steel unchanged.
-- Learned: a layer under members is measured as pieces under the members the drawings print it under, each plan area once; a line never mixes VERIFIED and HELD parts (lessons row PROPOSED).
-- Missing: formwork (all held), external plaster, spatter dash, masonry accessories / mortar, handrails; materials layer starts now (T-448).
-- Gates: Gate 0 none open; Gate 1 EIMP at the Checker; Gate 2 both streams building, first Gate B queued.
-Team health: 9 agent runs since 12:24, all STARTED + final line (one Worker 3 IDLE on its own lock, correct), self-checks PASS, no refusal; Checker 2 merged / 0 rejected; READY 3 (limit), CLAIMED 0. Watch: the Checker's 15:49 slot had no STARTED line by 16:16. 10 Nov stays AT RISK (16 packages in 8 days).
-Board: released T-353, T-448, T-476, T-452; new T-478; TODO 8. Queue check: 33 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none today (no genuine decision under standard 2.7).
-
-NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r3); PR #3 / merged-branch clean-up.

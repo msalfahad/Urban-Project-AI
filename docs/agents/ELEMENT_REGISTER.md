@@ -51,7 +51,8 @@ quantity.
   crosses a pit, the plan overlap belongs to the PIT piece and the beam / strap piece is netted by it (Checker
   F-C-T445-2); a pit outline crossing the plot line is clipped at the plot line (S06, F-C-T445-1); the FF raft piece
   stays HELD on S08; boundary-wall base blinding (structural p.14 section A-A) is its own HELD piece, never inside the
-  house footing layer. Integration: lane S T-478. Every villa: blinding is measured as pieces under the members the
+  house footing layer. Integration: lane S T-478, MERGED 8ccf69b3 (Lead 2026-11-03 04:15: candidate V3.0.45, pits
+  12.734438 m3 VERIFIED as their own valued line; FF / beyond-plot / GB parts HELD lines, BW base blank). Every villa: blinding is measured as pieces under the members the
   drawings print it under, each plan area once.
 - LIFT PIT vs GROUND SLAB: CONFIRMED (Lead 2026-11-02 00:20; T-444 MERGED 1fb9dec6, Checker's own handle re-measure of
   ALL FOUR panels on the structural DXF): GS cell L-41cfb82e = OWN-009 11.520000 + OWN-010 10.974202 + OWN-007 11.923674
@@ -169,6 +170,8 @@ quantity.
 - BELOW-GROUND MASONRY UNDER THE HOUSE GROUND BEAMS (Lead 2026-10-31 20:20; T-403 MERGED a72a7282): owner trade
   BLOCKWORK BELOW N.G., its own line per run, never inside the boundary-wall masonry (T-403 / T-400) and never inside the
   ground-beam concrete (T-391); the south run 29.97 m is MISSING in every state; height / type HELD until printed -> T-407.
+  Integration (Lead 2026-11-03 04:15): stream S T-419 builds the lines under this owner trade; the lift tie beam beside
+  it is STRUCTURE (entry below); neither line may contain the other.
 - LIFT GF TIE BEAM (Lead 2026-10-31 20:20; T-401 READY, unverified): owner trade STRUCTURE, one beam line between the
   lift column faces (the columns own the joints, T-394 ruling), never inside the column or pit-wall lines; section HELD
   D-43 -> T-408 after T-401 MERGED.

@@ -1,3 +1,21 @@
+## LEAD REPORT 2026-11-02 16:18 UTC
+
+Drive read OK (nothing new since 12:00). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged; no quantity moved since 12:35.
+- Concrete / blinding: footing blinding measured as pieces (merged, unwired): 24 pits 12.734 m3 VERIFIED (Checker own re-add 0.0 %); freelancer 47.055 m3 = one 0.10 m plate over the plot rectangle, printed nowhere: RULE_DIFFERENCE, not an engine error. Candidate line 15.179 m3 mixes pits + FF raft HELD 2.256..2.352 (S08) + 0.189 beyond the plot (S06) -> split in NEW T-478.
+- Earthworks (missing category): T-350 READY as the first stream S Gate B package: 18 lines HELD-BLANK (formation / working space are designer items), bounds beside only: pits >= 188.017 m3 (+129.234 per m below the printed 1.50), pool >= 17.777 m3. Never a figure in a blank line.
+- Scope (recovery step 1): EIMP part 2 READY: 106 components, 0 unmapped / 0 doubly mapped; VERIFIED 1, MEASURED 5, HELD 50, MISSING 25, NA 5, to confirm 20; 2 candidate lines in no family (registry gap).
+- Finishes: lift landing marble census READY: B6-07 1.500 m2 / 3.000 m.l and B6-06 HELD 2.750..13.980 m2 = candidate (0.000); freelancer has no row (ENGINE_RIGHT on scope).
+- Reinforcement: firewall gate green again (T-477 merged); released steel unchanged.
+- Learned: a layer under members is measured as pieces under the members the drawings print it under, each plan area once; a line never mixes VERIFIED and HELD parts (lessons row PROPOSED).
+- Missing: formwork (all held), external plaster, spatter dash, masonry accessories / mortar, handrails; materials layer starts now (T-448).
+- Gates: Gate 0 none open; Gate 1 EIMP at the Checker; Gate 2 both streams building, first Gate B queued.
+Team health: 9 agent runs since 12:24, all STARTED + final line (one Worker 3 IDLE on its own lock, correct), self-checks PASS, no refusal; Checker 2 merged / 0 rejected; READY 3 (limit), CLAIMED 0. Watch: the Checker's 15:49 slot had no STARTED line by 16:16. 10 Nov stays AT RISK (16 packages in 8 days).
+Board: released T-353, T-448, T-476, T-452; new T-478; TODO 8. Queue check: 33 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none today (no genuine decision under standard 2.7).
+
+NEEDS FIXING (owner only): repository privacy switch (PRIVACY_MOVE_PLAN step 0); released-path PyMuPDF licence decision (after T-465 r3); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-02 12:35 UTC
 
 Drive read OK (nothing new since 08:30). Training villa, candidate of record V3.0.42 (NOT RELEASED); released V2.9 + route G unchanged.
