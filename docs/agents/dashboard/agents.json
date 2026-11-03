@@ -6,52 +6,52 @@
   "last_run": "2026-11-03T04:32:03Z",
   "result": "ok",
   "working_on": "Daily update 3 Nov 04:32 UTC (scheduler SUCCEEDED); next 4 Nov 04:31 UTC",
-  "as_of": "2026-11-03T08:18:00Z"
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-03T08:13:00Z",
+  "last_run": "2026-11-03T12:14:00Z",
   "result": "running",
-  "working_on": "Morning review: 6 merged since 04:15 (registry refresh, earthworks quantities, skirting sills, wet-wall check, scorer, housekeeping), blockwork materials sent back with an exact fix; 5 new tasks (earthworks wiring follow-ups, lintel lines, balcony waterproofing, registry promotion, skirting integration)",
-  "as_of": "2026-11-03T08:18:00Z"
+  "working_on": "Midday review: 6 merged since 08:17 (lift tie beam package into the candidate, blockwork materials rework, backfill remainder, registry promotion, blockwork conditions, plaster materials), none sent back; plaster-mix question withdrawn and turned into an estimate task; 4 new tasks (blockwork wiring, plaster mix, entrance stone floor, site preparation)",
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T07:20:00Z",
+  "last_run": "2026-11-03T11:20:00Z",
   "result": "running",
-  "working_on": "07:20- stair-room skirting into the candidate (CLAIMED 07:21); 05:20-05:24 scorer fix (merged); next: blockwork wiring conditions, backfill remainder, skirting sills into the candidate",
-  "as_of": "2026-11-03T08:18:00Z"
+  "working_on": "11:20- stair-room skirting rebased on the new candidate (CLAIMED 11:21); 09:21-09:39 backfill remainder (merged); next: entrance / stair-hall stone floor, skirting sills into the candidate",
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T06:40:00Z",
+  "last_run": "2026-11-03T10:40:00Z",
   "result": "ok",
-  "working_on": "06:40-06:57 blockwork material ledger (sent back: lintel faces counted twice); 04:40-05:45 heights / mix housekeeping (merged); next: blockwork materials rework, plaster and tile materials, balcony waterproofing",
-  "as_of": "2026-11-03T08:18:00Z"
+  "working_on": "10:40-11:02 plaster materials (merged, cement held); 08:41-08:48 blockwork materials rework (merged); next: tile materials, plaster mix estimate, balcony waterproofing",
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-03T07:01:00Z",
-  "result": "running",
-  "working_on": "07:01- lift tie beam / below-ground masonry package (CLAIMED 07:00); 05:01-05:31 earthworks quantities (merged); 03:00-04:39 family register refresh (merged, Gate B); next: registry promotion, earthworks wiring",
-  "as_of": "2026-11-03T08:18:00Z"
+  "last_run": "2026-11-03T11:01:00Z",
+  "result": "ok",
+  "working_on": "11:01-11:13 blockwork conditions (merged); 09:01-10:48 registry promotion (merged); 07:01-08:35 lift tie beam package (merged, Gate B); next: earthworks wiring into the candidate, site preparation quantities",
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-03T07:51:00Z",
+  "last_run": "2026-11-03T11:51:00Z",
   "result": "ok",
-  "working_on": "07:51-07:59 blockwork materials REJECTED (exact fix); 05:51-06:48 earthworks, scorer, housekeeping merged; 04:51-05:44 skirting sills, wet-wall, registry (Gate B) merged; next: stream packages as they come, reference-line re-measure",
-  "as_of": "2026-11-03T08:18:00Z"
+  "working_on": "11:51-12:02 blockwork conditions + plaster materials merged; 10:51-11:21 registry merged; 09:51-09:58 backfill remainder merged; 08:50-09:36 lift tie beam (Gate B) + blockwork materials merged; next: skirting and earthworks packages, reference-line re-measure",
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-03T08:18:00Z"
+  "as_of": "2026-11-03T12:20:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-03T00:55:00Z",
   "result": "ok",
   "working_on": "Refreshed 3 Nov 00:55 UTC (scheduler SUCCEEDED); next 3 Nov 12:54 UTC",
-  "as_of": "2026-11-03T08:18:00Z"
+  "as_of": "2026-11-03T12:20:00Z"
  }
 ]

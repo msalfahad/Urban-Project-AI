@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-03 08:17 UTC (Lead). Previous version: 2026-11-03 00:16 UTC. The released numbers did not change
+Last update: 2026-11-03 12:18 UTC (Lead). Previous version: 2026-11-03 08:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is V3.0.45 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.46 (not released).
+
+Since 3 Nov 08:17 (newest first; six checked and merged, none sent back):
+- Plaster materials measured and checked (not yet in the candidate): dry-wall plaster mortar 4.73 m3 (236.35 m2 x
+  2 cm, an engineering estimate from a Kuwait reference), wet-wall render at least 5.10 m3 (340.30 m2 x 1.5 cm),
+  spatter dash 576.65 m2. Cement bags and sand stay held: no mix is printed. The question to you about the mix was
+  withdrawn: your rule order lets the team use a documented estimating method for a non-critical material, and the
+  1990 specification has not been read in full yet; a new task does that.
+- Blockwork conditions settled from the structural drawings: the top-storey walls under the roof have no printed
+  roof level, so their height stays held on the designer item (8 walls, about 52.8 m2 carried today on a what-if);
+  one ground-floor wall and one parapet are ranges with a named cause. Wiring into the candidate is a new task.
+- Blockwork materials reworked and merged: lintel faces leave the glued block area (one wall line 444.47 .. 451.22 kg
+  of glue); black 20 cm blocks 1,346.55 nos unchanged.
+- Earthworks: footing-pit backfill 119.96 .. 128.64 m3, 7 of its 8 parts re-measured by the checker; the rest waits on
+  two designer items (beam sections). Wiring into the candidate can start now.
+- Candidate V3.0.46: the ground-floor lift tie beam (5.50 m) and the house block below ground level (at least 11.39 m2)
+  added as held lines (no figure yet); everything else identical. Family register: 44 families now in the candidate
+  (was 13), every merged package recorded.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: about 13 integration packages left, two run at a time; earthworks
+  wiring and the stair-room skirting are next.
 
 Since 3 Nov 00:16 (newest first; nine checked and merged, two sent back: one reworked and merged, one waiting for its rework):
 - Blockwork materials (blocks, glue, mortar, lintels) SENT BACK: the checker found the concrete lintel faces over

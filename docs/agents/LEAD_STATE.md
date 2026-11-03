@@ -1,49 +1,52 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 8d5612ce..`,
-`git -C .work/board log <board commit of this run>..`, RUN_LOG lines after 08:13Z, rows changed since), then rewrite.
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log 1d311ee5..`,
+`git -C .work/board log <board commit of this run>..`, RUN_LOG lines after 12:14Z, rows changed since), then rewrite.
 
 ## Last seen
-- engine: 8d5612ce (candidate of record ARCH_TAKEOFF_V3.0.45 5972888b; released V2.9 + route G unchanged)
-- board: this run's final commit (Lead 2026-11-03 08:18, after 5e5d2c5c)
-- last Lead run: 2026-11-03 08:13-08:25 UTC (run session_01E6cPnezoUfzNM45hMbnEvy)
+- engine: 1d311ee5 (candidate of record ARCH_TAKEOFF_V3.0.46 35d70129; registry BOQ_FAMILY_MASTER 1.43.0; released
+  V2.9 + route G unchanged)
+- board: this run's final commit (Lead 2026-11-03 12:20, after ef0f8848)
+- last Lead run: 2026-11-03 12:14-12:25 UTC (run unknown)
 
-## Open runs at 08:18 (check their final lines next run)
-- Worker 3 STARTED 07:01 (T-419 CLAIMED 07:00). Worker 1 STARTED 07:20 (T-443 CLAIMED 07:21). No final line = INCOMPLETE.
+## Open runs at 12:20 (check their final lines next run)
+- Worker 1 STARTED 11:20 (T-443 r2 rebase CLAIMED 11:21). No final line = INCOMPLETE.
 
 ## Live rows
-- READY 0.
-- CLAIMED: T-419 (worker 3, stream S), T-443 (worker 1, stream F).
-- TODO 7: W1 T-482, T-484; W2 T-453 r2 (exact fix R-T453-5), T-454, T-455, T-486; W3 T-485.
-- QUEUED: W1 T-483 (after T-443), T-480, T-423, T-424, T-310, T-314, T-364, T-363, T-372; W2 T-460 (after T-443 + T-483);
-  W3 T-350 r3 (wiring, after T-419), T-487 (after T-453 r2 MERGED + T-350 r3), T-382, T-474 p2, T-468.
+- READY 0. CLAIMED: T-443 r2 (worker 1, stream F, rebase onto V3.0.46).
+- TODO 6: W1 T-490; W2 T-455, T-489, T-486; W3 T-350 r3, T-491.
+- QUEUED: W1 T-483 (after T-443), T-480, T-423, T-424, T-310, T-314, T-364, T-363, T-372; W2 T-460 (after T-443 +
+  T-483); W3 T-487 (after T-350 r3), T-488 (after T-487), T-382 (after T-488), T-474 p2, T-468.
 - IN PROGRESS: T-180 (Checker slot). PAUSED: T-450 part 2, T-451, T-472.
-- Lane order: S (worker 1): T-443, T-482, T-484, T-483, T-480, T-423, T-424, T-310, T-314, T-364, T-363, T-372 |
-  A (worker 2): T-453, T-454, T-455, T-486, T-460 | I (worker 3): T-419, T-485, T-350, T-487, T-382, T-474, T-468
+- Lane order: S (worker 1): T-443, T-490, T-483, T-480, T-423, T-424, T-310, T-314, T-364, T-363, T-372 |
+  A (worker 2): T-455, T-489, T-486, T-460 | I (worker 3): T-350, T-491, T-487, T-488, T-382, T-474, T-468
 
 ## Top 5 priorities
-1. Stream F: T-443 -> T-483 -> T-480 -> T-423 / T-424; 4 Nov review: if stream F delivered under 2 packages since
-   08:18, move one of T-310 / T-314 to worker 2 under the merge-order rule (decide, then record).
-2. Stream S: T-419 -> T-350 r3 (earthworks wiring) -> T-487 (lintel lines) -> T-382 -> T-474 p2.
-3. Checker: Gate B T-419 / T-443 as they come; T-453 r2 Gate A; T-180 slot otherwise.
-4. Materials: T-453 r2, then T-454 / T-455 (T-457 table V3 + UP-STAIR-017 folded into T-455); T-482 before blocks priced.
-5. Registry: T-485 (38 unpromoted packages); T-486 balcony WP applicability.
+1. Stream F: T-443 r2 -> T-483 -> T-480 -> T-423 / T-424. 4 Nov review (first run after 00:00 4 Nov): stream F has
+   delivered 0 packages since 22:50 2 Nov; if still under 2 packages, move T-310 / T-314 to worker 2 under the
+   merge-order rule (decide, then record).
+2. Stream S: T-350 r3 (earthworks wiring + F-C-T485-1 in its registry version) -> T-487 lintels -> T-488 blockwork
+   wiring -> T-382 -> T-474 p2.
+3. Checker: Gate B T-443 r2 / T-350 r3 as they come; then Gate A pieces; T-180 slot otherwise.
+4. Materials: T-455 tiles, T-489 plaster mix estimate (replaces Q-79); wiring of T-453 / T-454 tables needs a row
+   once T-488 lands (not yet written).
+5. Missing categories: T-490 B3-03 stone floor, T-491 B1-01 / B1-07 site preparation, T-486 balcony WP.
 
 ## Rules decided (keep)
 - Shared files: packages of different streams build in parallel; whichever is READY second rebases on the first merged
   candidate; version (candidate and BOQ_FAMILY_MASTER) allotted at merge. One package per stream at a time.
 - Each worker keeps at least one non-candidate (research / tool) TODO behind its stream package.
 - A worker run that skips its first-in-order stream package must state why in its final line (2026-11-03 04:15).
-- Queue check treats any 'after T-nnn' / 'behind T-nnn' and list position as WAITING; write 'claimable now' where a row
-  has no dependency. Status word first.
-- `board check` pulls first: commit the edits before running it.
-- Write stamps from `date -u` at the moment of writing (08:20 written ahead of the 08:18 clock this run, corrected to
-  08:17 in the files; the two board commit messages keep 08:20).
-- Element register rulings 2026-11-03: RC LINTEL vs host masonry (B9-02 owns the lintel; material base excludes
-  REQUIRED faces); FOUNDATION BACKFILL displacement (B1-03 owns volume, buried elements only as displacement).
+- Queue check treats any 'after T-nnn' / 'behind T-nnn' and list position as WAITING; status word first.
+- `board check` pulls first: commit the edits before running it. Write stamps from `date -u`.
+- Owner questions on non-critical material parameters are withdrawn into level-4 estimate tasks unless every source
+  was read in full (Q-79 -> T-489, 2026-11-03 12:18).
+- Element register rulings 2026-11-03: RC LINTEL vs host masonry; FOUNDATION BACKFILL displacement; TOP-STOREY WALL
+  HEIGHT vs ROOF BUILD-UP (structural roof underside, HELD on D-39 where unprinted); ENTRANCE / STAIR-HALL STONE FLOOR
+  (one owner trade per space).
 
 ## Blockers
-- None from the owner. Designer items keep lines HELD, never block integration.
+- None from the owner. Designer items (D-27, D-33, D-35, D-39, D-43) keep lines HELD, never block integration.
 
 ## Open owner items
 - Repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.

@@ -46,6 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-03 12:18; recovery plan in force)
+
+- Since 08:17: 6 merged, 0 rejected: T-419 stream S Gate B (candidate of record V3.0.46 35d70129: +6 HELD blank lines,
+  4,856 identical); T-453 r2, T-484, T-485 (registry 1.43.0), T-482, T-454 (Gate A pieces, unwired). READY 0.
+- Step 2: stream S delivered 1 package (T-419); next T-350 r3 (claimable now), then T-487, T-488 (blockwork wiring,
+  NEW), T-382, T-474 p2 = 5 left. Stream F delivered 0: T-443 went READY 08:24 but must rebase on V3.0.46 (CLAIMED
+  r2 11:21); 9 behind it. Stream F is the bottleneck: 10 packages in 7 days at about 4 h each fits only if worker 1
+  stays on it every run; 10 Nov AT RISK. The 4 Nov review (LEAD_STATE priority 1) decides whether T-310 / T-314
+  move to worker 2.
+- Step 5 materials: blocks / glue (T-453 r2) and plaster mortar (T-454) merged unwired; mix estimate T-489 (NEW,
+  replaces owner question Q-79); tiles T-455 next. Missing categories opened: B3-03 stone floor (T-490), B1-01 / B1-07
+  site preparation (T-491).
+
 ## Status (Lead, 2026-11-03 08:17; recovery plan in force)
 
 - Since 04:15: 6 merged, 1 rejected: T-479 stream S Gate B (registry 1.41.0, census 0 outside / 0 double, no quantity
