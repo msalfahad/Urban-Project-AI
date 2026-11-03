@@ -894,3 +894,74 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-02 03:20 | Worker 1 | OPEN | STARTED 03:20, still running at the window end |
 | 11-02 03:51 | Verifier | OPEN | STARTED 03:51, still running at the window end |
 | 11-02 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:18; board / Since 00:23: 6 WORKED first pass, 0 REJECTED (T-446, T-470 ignore rules, T-447, T-467 V2.9 hash lock,  |
+
+## 2026-11-02 04:31 -> 2026-11-03 04:31 UTC (66 runs: 64 SUCCESS, 1 IDLE (Worker 3 run lock held by its own earlier run, correct), 1 still running at the window end; 0 BLOCKED / FAILED / INCOMPLETE)
+
+| UTC | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-02 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 05:53; T-465 READY (agents/task-T-465 @ 93141a25) / Import boundary: no engine/source module but the K2 route imports |
+| 11-02 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:01; T-458 Gate A REJECTED -> TODO r2; RFI evidence register S02 / S05 / S08 CONFIRMED / Drive read OK (ST DXF 9f9d |
+| 11-02 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:46; T-469 READY (agents/task-T-469 09314a0a) / Re-scored candidate V3.0.41 (5176c7c4, reproduced) beside released  |
+| 11-02 05:19 | Worker 1 | SUCCESS | STARTED 05:19, final 06:10; T-473 READY (agents/task-T-473 @ 33d25717) / t374 gate fixed: DG-2ddc451c (4 ground-beam concrete lines, 1.152 |
+| 11-02 05:50 | Verifier | SUCCESS | STARTED 05:50, final 06:35; T-469 Gate A PASS MERGED cdb5486e (engine push); 9 V2 verdicts re-bound on V3.0.41 / Drive read OK. NO QUANTIT |
+| 11-02 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 07:31; T-463 READY (agents/task-T-463 @ 0e857dfc) / Tests that read old git history now pass on a --depth 50 clone: 1 |
+| 11-02 06:57 | Verifier | SUCCESS | STARTED 06:57, final 07:38; T-473 MERGED 94437cf5 (engine push); T-465 REJECTED / Drive read OK. T-473 Gate A PASS: t374 failure reproduce |
+| 11-02 07:03 | Worker 3 | SUCCESS | STARTED 07:03, final 07:22; T-449 round 1 CONCRETE READY (agents/task-T-449 @ 963571c5) / A1 register over every STR.CONC entry of V3.0.17 |
+| 11-02 07:32 | Worker 1 | SUCCESS | STARTED 07:32, final 07:40; T-458 r2 READY (head 8f904031) / wet-room WP policy V2 now bills the doorway per UP-WP-003 1.1.0: upturn = run |
+| 11-02 07:52 | Verifier | SUCCESS | STARTED 07:52, final 08:09; T-458 r2 MERGED b3d773be; T-449 round 1 MERGED 775a8ffe; T-463 REJECTED -> TODO r2 (all publications by engine |
+| 11-02 08:30 | Lead | SUCCESS | STARTED 08:30, final 08:38; board / Since 04:15: 7 MERGED (T-431 Gate B -> candidate of record V3.0.41 5176c7c4; T-469 8-category score; T |
+| 11-02 08:42 | Worker 2 | SUCCESS | STARTED 08:42, final 09:16; T-463 r2 READY (agents/task-T-463 @ 9746e2c6) / git_history.is_ancestor now raises HistoryUnavailable when the |
+| 11-02 08:52 | Verifier | SUCCESS | STARTED 08:52, final 08:52; none (READY 0; T-463 r2 CLAIMED by Worker 2) / No merge, no rejection, NO QUANTITY CHANGE: candidate ARCH_TAKE |
+| 11-02 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 09:49; T-442 READY (integration package V3.0.42, Gate B; branch agents/task-T-442 @ 3dcf6d15) / Ground slab: lift-sha |
+| 11-02 09:23 | Worker 1 | SUCCESS | STARTED 09:23, final 09:33; T-456 READY (head c6a6c325) / FINISH_MATERIALS_TABLE_V1 defect reproduced: a given 20 m2 with mm units became  |
+| 11-02 09:52 | Verifier | SUCCESS | STARTED 09:52, final 10:45; T-456 MERGED 579696f2; T-463 r2 MERGED 8239c309; T-442 GATE B PASS MERGED 6a13827f (all by engine push) / Driv |
+| 11-02 10:41 | Worker 2 | SUCCESS | STARTED 10:41, final 11:30; T-465 r2 READY (head 2a9cc24c) / all 5 import-rule ids green: concrete_ledger_v3 measure/apply back at :418/:5 |
+| 11-02 10:52 | Verifier | SUCCESS | STARTED 10:52, final 10:58; none READY; T-180 slot on the OWNER CHECKER CONDITIONS 2026-11-02 (1)-(4) / Drive read OK. No merge, no reject |
+| 11-02 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:30; T-449 round 2 (REINFORCEMENT) READY, branch agents/task-T-449 b465673f / census of 40 candidate input builders |
+| 11-02 11:29 | Worker 1 | SUCCESS | STARTED 11:29, final 11:40; T-459 READY (agents/task-T-459 @ 426ac92c) / NEW unwired REBAR_LAP_RULE_V2 (lap by element class, drawing firs |
+| 11-02 11:54 | Verifier | SUCCESS | STARTED 11:54, final 12:05; T-459 MERGED b266bc4c; T-449 r2 MERGED 4aaa9be0 (engine push); T-465 r2 REJECTED / Drive read OK. NO QUANTITY  |
+| 11-02 12:24 | Lead | SUCCESS | STARTED 12:24, final 12:36; board / Since 08:38: 5 MERGED (T-442 Gate B -> candidate V3.0.42, GS 17.241 -> 21.638 m3; T-449 r2, T-459 unwi |
+| 11-02 12:48 | Worker 2 | SUCCESS | STARTED 12:48, final 12:51; T-477 READY (agents/task-T-477 @ f580191d) / gate fix: firewall id engine_is_declared reproduced FAILING on 4a |
+| 11-02 13:16 | Verifier | SUCCESS | STARTED 13:16, final 13:19; T-477 MERGED 08d47b84 (engine push) / Gate A PASS: firewall id engine_is_declared reproduced FAILING on 4aaa9b |
+| 11-02 13:17 | Worker 3 | SUCCESS | STARTED 13:17, final 15:47; T-350 READY (16adf256, integration package for Gate B) / ARCH_TAKEOFF_V3.0.43 (6f534d5e, on V3.0.42 1793266d r |
+| 11-02 14:12 | Verifier | SUCCESS | STARTED 14:12, final 14:18; none READY; T-180 slot on OWNER SESSION 2026-10-31 (4) RFI evidence register (A) HOLD rows S03 / S06 / S07 / D |
+| 11-02 14:12 | Worker 1 | SUCCESS | STARTED 14:12, final 14:28; T-445 READY (agents/task-T-445 @ 93577483) / Footing blinding as pieces (own DXF + p.13/p.14 read): 24 pits 12 |
+| 11-02 15:19 | Worker 2 | SUCCESS | STARTED 15:19, final 15:46; T-471 READY (agents/task-T-471 @ 44a3fdb9) / EIMP part 2: completeness tool + 106-component register + matrix  |
+| 11-02 15:27 | Verifier | SUCCESS | STARTED 15:27, final 15:36; T-445 MERGED ab6bd617 (engine push); T-180 slot on OWNER SESSION 2026-10-31 (4) RFI register (A) row S10 / Dri |
+| 11-02 15:27 | Worker 1 | SUCCESS | STARTED 15:27, final 15:44; T-475 READY (agents/task-T-475 @ 2e7be547) / Lift marble census: 3 landing doors GF/1F/2F, roof NO_LANDING; ev |
+| 11-02 15:31 | Worker 3 | IDLE | 15:31 run lock held by the previous run; IDLE line written, run ended |
+| 11-02 16:14 | Lead | SUCCESS | STARTED 16:14, final 16:19; board / Since 12:24: 2 MERGED (T-477 gate fix; T-445 blinding pieces, 24 pits 12.734 m3 verified, unwired), 0  |
+| 11-02 16:34 | Verifier | SUCCESS | STARTED 16:34, final 17:25; T-475 MERGED 803f39fc; T-471 MERGED 0f0ac54c; T-350 Gate B hand checks PASS, stays READY (suite incomplete) /  |
+| 11-02 17:23 | Worker 2 | SUCCESS | STARTED 17:23, final 18:15; T-448 READY @8179877f / Company Rulebook 1.0.0 (9 OWNER CONFIRMED rules + L4 method, values HELD) + COMPANY_RU |
+| 11-02 17:25 | Verifier | SUCCESS | final 17:25 (single line); none (overlap guard: run session_01E6cPneqqyeCySsTrrw1dQm active since 2026-11-02T16:34Z) / no check, no merge |
+| 11-02 17:37 | Worker 3 | SUCCESS | STARTED 17:37, final 17:43; T-353 READY (head 9c31e894) / B8-08 foundation WP is already in the candidate since V3.0.15 (T-270): V3.0.42 c |
+| 11-02 17:50 | Worker 1 | SUCCESS | STARTED 17:50, final 18:05; T-476 READY @ 0aaeaf27 / Handrails flight by flight: B7-09 FIN.RAILING proposal 17.366 -> 33.319 lm (RL-07 15. |
+| 11-02 18:12 | Verifier | SUCCESS | STARTED 18:12, final 18:51; none (overlap guard: run session_01E6cPnbMXo9W57mVzHxdcHr active since 2026-11-02T18:12Z) / no check, no merge |
+| 11-02 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 19:25; T-465 r3 READY (agents/task-T-465 @ baa3441d) / OPENING_HEIGHT_PDF_V2 now reads glyph boxes as V1/PyMuPDF: des |
+| 11-02 19:02 | Worker 3 | SUCCESS | STARTED 19:02, final 20:00; T-474 part 1 READY (agents/task-T-474 @ be354f35) / formwork census: 643 candidate lines mapped by id on own V |
+| 11-02 19:06 | Verifier | SUCCESS | final 19:06 (single line); T-350 MERGED 3077469a (Gate B); T-476 MERGED 88e70ffe; T-353 MERGED f3fb62de / Drive read OK. T-350: L4 comple |
+| 11-02 19:21 | Worker 1 | SUCCESS | STARTED 19:21, final 20:32; T-422 READY @ 1ff32d19 / Skirting release ARCH_TAKEOFF_V3.0.44 (8b2fe2b6, on V3.0.43 6f534d5e reproduced): W04 |
+| 11-02 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:51; none (overlap guard: run session_01E6cPndRE72pRcJMvvKTxvG active since 2026-11-02T19:51Z) / no check, no merge |
+| 11-02 20:14 | Lead | SUCCESS | STARTED 20:14, final 20:18; board / Since 16:16: 5 MERGED (T-471 EIMP step 1 DONE; T-350 Gate B -> candidate V3.0.43, +18 held-blank earth |
+| 11-02 20:41 | Worker 2 | SUCCESS | STARTED 20:41, final 21:20; T-465 r4 READY (agents/task-T-465 @ dd62eead) / OPENING_HEIGHT_PDF_V2 now reads glyph widths as MuPDF stores t |
+| 11-02 21:00 | Worker 3 | SUCCESS | STARTED 21:00, final 21:51; T-478 READY (agents/task-T-478 @ dd3fe478, integration package) / CONC.BLINDING into V3.0.45 (arch_v3045.py on |
+| 11-02 21:13 | Verifier | SUCCESS | final 21:13 (single line); T-465 r3 REJECTED; T-448 MERGED f1bf61d7; T-474 part 1 MERGED 86335fa8 / Drive read OK. T-465: real set ST7757 |
+| 11-02 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 22:18; T-452 READY (agents/task-T-452 @ 226398b2) / Generic project scoreboard tools/project_scoreboard.py (one manif |
+| 11-02 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:51; none (overlap guard: run session_01E6cPnbxjdWf32MBsD9pKvy active since 2026-11-02T21:51Z) / no check, no merge |
+| 11-02 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 22:47; T-464 READY 51684fc0 / D3 worktree git-stamp: T-210 already followed the gitdir line (christiannp byte test pa |
+| 11-02 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:51; T-478 READY r2 (agents/task-T-478 @ 7a3b7177, integration package rebased) / No TODO for stream S (T-383 the o |
+| 11-02 23:05 | Verifier | SUCCESS | final 23:05 (single line); T-422 MERGED b4e22291 (Gate B); T-465 r4 MERGED 1d892eb4 / Drive read OK. T-422: V3.0.43 6f534d5e / V3.0.44 8b |
+| 11-02 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 23:32; T-383 READY agents/task-T-383 @ a47c3df9 (lane A; lane S had no TODO) / WP completeness join per BOQ line (R-T |
+| 11-02 23:51 | Verifier | SUCCESS | STARTED 23:51, final 00:35; T-464 MERGED 52ed1b7f; T-383 MERGED 983b75f4; T-452 REJECTED r1; T-478 r2 REJECTED (Gate B) / Drive read OK. T |
+| 11-03 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:17; board / Since 20:17: 6 MERGED (T-422 Gate B -> candidate V3.0.44, FIN.SKIRTING certain 184.017 -> 189.819 lm;  |
+| 11-03 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 01:24; T-466 READY (agents/task-T-466 @ d487a638) / Known-failures ledger shrunk 396 -> 0 ids: none was a real failur |
+| 11-03 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:45; none READY; T-383 export run (Lead queue (4)) / Drive read OK. Own chain reproduced V3.0.41 5176c7c4 / V3.0.44 |
+| 11-03 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 01:52; T-478 r3 READY (agents/task-T-478 @ 87676954) / CONC.BLINDING integration package regression rework: K1 record |
+| 11-03 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:36; T-449 round 3 BLOCKWORK READY (agents/task-T-449 @ 08b774e9) / A1 register over V3.0.44 inputs: 260 entries =  |
+| 11-03 01:52 | Verifier | SUCCESS | STARTED 01:52, final 02:14; T-449 r3 MERGED 72053020; T-466 MERGED 2266198f / Drive read OK. T-449 r3: own sheet-10 section A-A read 450/4 |
+| 11-03 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 02:58; T-481 READY (agents/task-T-481 @ eec0fd31) / Skirting remainder: W11/W12 sill 0.70 above FFL (DWF section B-B) |
+| 11-03 02:52 | Verifier | SUCCESS | STARTED 02:52, final 03:51; none (overlap guard: run unknown active since 2026-11-03T02:52Z) / no check, no merge, no quantity change / se |
+| 11-03 03:00 | Worker 3 | OPEN | STARTED 03:00, still running at the window end |
+| 11-03 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:35; T-457 READY (agents/task-T-457 @ 3eb1fd0f) / wet-wall 2nd fixing bed NOT reproduced: V1/V2 charge one 0.02 m 1 |
+| 11-03 04:04 | Verifier | SUCCESS | final 04:04 (single line); T-478 r3 MERGED 8ccf69b3 (Gate B PASS) / Drive read OK. T-478 r3: candidate of record ARCH_TAKEOFF_V3.0.45 597 |
+| 11-03 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:18; board / Since 00:16: 3 MERGED (T-478 r3 Gate B -> candidate V3.0.45, CONC.BLINDING split: 24 pits 12.734438 m3 |
