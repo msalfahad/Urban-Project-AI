@@ -1,6 +1,6 @@
-"""T-485: rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json = 1.41.0 + the promotion of the 38 merged pending packages
-(merge commit + Checker verdict each) + every family's candidate block re-derived at ARCH_TAKEOFF_V3.0.45 from
-candidate_census and the line diff of a reproduced chain run. No quantity, capability, owner or line change.
+"""T-485: rules/coverage/BOQ_FAMILY_MASTER_1.43.0.json = 1.42.0 (T-419) + the promotion of the 39 merged pending
+packages (merge commit + Checker verdict each) + every family's candidate block re-derived at ARCH_TAKEOFF_V3.0.46 from
+a fresh candidate_census and the line diff of a reproduced chain run. No quantity, capability, owner or line change.
 
 Synthetic cases by hand (villa K485, never the development villa) for the line-diff attribution, the state rules and
 the stale-pending guard; then the committed registry, line diff and promotion source."""
@@ -22,10 +22,11 @@ for p in (ROOT, ROOT / "research" / "agents_t469", ROOT / "research" / "agents_t
 from tools import family_master_candidate as FMC  # noqa: E402
 import t479_registry_census as C  # noqa: E402
 import t485_package_families as PF  # noqa: E402
-import build_master_1_42_0 as B  # noqa: E402
+import build_master_1_43_0 as B  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.43.0.json"
+INDEX = ROOT / "research/agents_t485/out/LINE_INDEX_V3_0_46.json"
 I, H, BL, NI = FMC.STATES
 
 
@@ -168,9 +169,9 @@ def test_a_merged_package_never_stays_pending_in_the_newest_registry():
     assert B.stale_pending(newest, _merged) == []
 
 
-def test_1_41_0_pending_are_stale_on_this_head(docs):
-    """adverse on real data: the registry this task supersedes fails the guard (38 merged packages pending)"""
-    assert len(B.stale_pending(docs[0], _merged)) == 38
+def test_1_42_0_pending_are_stale_on_this_head(docs):
+    """adverse on real data: the registry this task supersedes fails the guard (39 merged packages pending)"""
+    assert len(B.stale_pending(docs[0], _merged)) == 39
 
 
 # ---------- the committed registry ----------
@@ -188,7 +189,7 @@ def test_every_pending_package_promoted_with_its_merge_and_verdict(docs):
     old, new = docs
     by = {p["task"]: p for p in new["candidate_packages"]}
     assert new["pending_packages"] == []
-    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.45" and new["candidate"]["as_of_package"] == "T-478"
+    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.46" and new["candidate"]["as_of_package"] == "T-419"
     for p in old["pending_packages"]:
         q = by[p["task"]]
         assert q["method_version"] == p["method_version"] and q["task_commit"] == p["task_commit"]
@@ -201,7 +202,7 @@ def test_every_pending_package_promoted_with_its_merge_and_verdict(docs):
     assert [p["task"] for p in new["candidate_packages"][:8]] == [p["task"] for p in old["candidate_packages"]]
 
 
-def test_no_quantity_capability_or_census_change(docs):
+def test_no_quantity_capability_or_owner_change(docs):
     old, new = docs
     ob = {f["code"]: f for f in old["families"]}
     for f in new["families"]:
@@ -210,17 +211,25 @@ def test_no_quantity_capability_or_census_change(docs):
         if f["code"] in B.STALE_NOTE:
             assert f["note"].startswith(o["note"]) and "T-485" in f["note"]
         assert {k: v for k, v in f.items() if k not in moved} == {k: v for k, v in o.items() if k not in moved}
-    oc, nc = dict(old["candidate_census"]), dict(new["candidate_census"])
-    assert oc.pop("stale_in_candidate_vs_registry") and nc.pop("stale_in_candidate_vs_registry") == []
-    assert oc == nc
-    assert new["candidate_census"]["issue_counts"] == {}
-    for k in ("capability_counts", "capability_change_counts", "families", "item_codes_without_family"):
-        if k != "families":
-            assert new[k] == old[k]
+    for k in ("capability_counts", "capability_change_counts", "item_codes_without_family", "not_a_boq_line_codes",
+              "released_configuration", "capability_states", "candidate_states", "candidate_state_definitions"):
+        assert new[k] == old[k], k
+    assert set(new) - set(old) == {"promotion"}
 
 
-def test_registry_census_on_the_committed_index_is_unchanged():
-    idx = json.loads((ROOT / "research/agents_t479/out/LINE_INDEX_V3_0_45.json").read_text(encoding="utf-8"))
+def test_census_is_the_merged_v3_0_46_and_only_its_package_moved(docs):
+    old, new = docs
+    oc, nc = old["candidate_census"], new["candidate_census"]
+    assert nc["method_version"] == "ARCH_TAKEOFF_V3.0.46" and nc["lines_sha256"].startswith("35d70129")
+    assert nc["previous"]["lines_sha256"] == oc["lines_sha256"] and nc["issue_counts"] == {}
+    assert nc["stale_in_candidate_vs_registry"] == [] and nc["verdicts_sha256"] == oc["verdicts_sha256"]
+    t419 = set(json.loads(B.ATTRIB.read_text(encoding="utf-8"))["versions"]["ARCH_TAKEOFF_V3.0.46"]["families"])
+    moved = {c for c in nc["families"] if nc["families"][c] != oc["families"][c]}
+    assert moved <= t419                                  # every other family's census is byte-identical to V3.0.45
+
+
+def test_registry_census_on_the_committed_index_is_clean():
+    idx = json.loads(INDEX.read_text(encoding="utf-8"))
     new = json.loads(NEW.read_text(encoding="utf-8"))
     cen = C.census(idx, new)
     assert cen["issue_counts"] == {} and not cen["no_family"]
@@ -241,9 +250,10 @@ def test_no_line_families_and_their_rows(docs):
 def test_line_diff_ends_on_the_candidate_of_record():
     a = json.loads(B.ATTRIB.read_text(encoding="utf-8"))
     v = a["versions"]
+    assert v["ARCH_TAKEOFF_V3.0.46"]["lines_sha256"].startswith("35d70129")
     assert v["ARCH_TAKEOFF_V3.0.45"]["lines_sha256"].startswith("5972888b")
     assert v["ARCH_TAKEOFF_V3.0.44"]["lines_sha256"].startswith("8b2fe2b6")
-    assert v["ARCH_TAKEOFF_V3.0.45"]["lines"] == json.loads(NEW.read_text(encoding="utf-8"))["candidate_census"]["lines"]
+    assert v["ARCH_TAKEOFF_V3.0.46"]["lines"] == json.loads(NEW.read_text(encoding="utf-8"))["candidate_census"]["lines"]
     assert sorted(v["ARCH_TAKEOFF_V3.0.45"]["families"]) == ["B10-01"]        # T-478: blinding only (its own report)
 
 
@@ -258,7 +268,7 @@ def test_rebase_keeps_a_later_unmerged_package_pending(tmp_path, docs):
     p.write_text(json.dumps(base), encoding="utf-8")
     new = B.build(p, "9.9.9")
     assert [q["task"] for q in new["pending_packages"]] == ["T-999"]
-    assert len(new["candidate_packages"]) == len(docs[0]["candidate_packages"]) + 38
+    assert len(new["candidate_packages"]) == len(docs[0]["candidate_packages"]) + 39
     assert B.census_problems(new) == []
 
 

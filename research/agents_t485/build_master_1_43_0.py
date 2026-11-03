@@ -1,20 +1,21 @@
-"""T-485: build rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json = 1.41.0 (never edited) + the registry PROMOTION of every
-merged candidate package (F-T479-1). NO quantity, capability, owner state, line or default changes.
+"""T-485: build rules/coverage/BOQ_FAMILY_MASTER_1.43.0.json = 1.42.0 (T-419, never edited) + the registry PROMOTION of
+every merged candidate package (F-T479-1). NO quantity, capability, owner state, line or default changes.
 
-    python3 -I research/agents_t485/build_master_1_42_0.py [--check] [--base X.json --version V --out Y.json]
+    python3 -I research/agents_t485/build_master_1_43_0.py [--check] [--base X.json --version V --out Y.json]
 
 (--base / --version / --out: the registry version is allotted at merge; the package READY second re-runs this builder
 on the first merged registry, which then carries that package as pending or merged.)
 
-1 PROMOTION: the 38 packages 1.41.0 lists in pending_packages (V3.0.8 .. V3.0.45) all merged; each moves to
+1 PROMOTION: the 39 packages 1.42.0 lists in pending_packages (V3.0.8 .. V3.0.46) all merged; each moves to
   candidate_packages with its merge commit (the one merge on the working branch whose second parent holds the
   package's task commit and whose first parent does not: research/agents_t485/out/PROMOTIONS_SOURCE.json, re-checked
   by tests/t485_registry_promotion with git) and its Checker verdict (the head of the board status of its row, quoted
-  verbatim, board agents/control d92bef0a). pending_packages becomes empty; candidate = ARCH_TAKEOFF_V3.0.45 / T-478.
-2 CANDIDATE BLOCKS re-derived for every family at V3.0.45 from two line facts, never from an earlier package's text:
+  verbatim, board agents/control 26ad2473). pending_packages becomes empty; candidate = ARCH_TAKEOFF_V3.0.46 / T-419.
+2 CANDIDATE BLOCKS re-derived for every family at V3.0.46 from two line facts, never from an earlier package's text:
   - which packages changed the family: the line diff V3.0.(n-1) -> V3.0.n of a reproduced chain run
     (research/agents_t485/t485_package_families.py -> out/T485_PACKAGE_FAMILIES.json; item codes and counts only);
-  - what the candidate carries: candidate_census (T-479, V3.0.45 5972888b, unchanged).
+  - what the candidate carries: candidate_census, re-run by the T-479 census tool on the merged V3.0.46 run (BOQ_LINES
+    35d70129 reproduced; out/LINE_INDEX_V3_0_46.json: line id, item code, unit, class, net, bounds, binding only).
   Rules: census yes + a package changed it -> INTEGRATED_IN_CANDIDATE_AND_TESTED when the family releases a quantity
   in the candidate, else HELD_IN_CANDIDATE; census yes + no package -> IN_CANDIDATE_BASE_LINES; census no ->
   NOT_IN_CANDIDATE (B8-07 / B9-02: 'no_line', with the row that will fill it); a family that owns no item code
@@ -39,13 +40,14 @@ for _p in (ROOT, HERE, ROOT / "research" / "agents_t479"):
 import t479_registry_census as C  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
 
-BASE = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.41.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json"
-VERSION = "1.42.0"
+BASE = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.43.0.json"
+VERSION = "1.43.0"
+INDEX = HERE / "out/LINE_INDEX_V3_0_46.json"
 PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE.json"
 ATTRIB = HERE / "out/T485_PACKAGE_FAMILIES.json"
-BOARD_COMMIT = "d92bef0a"
-CAND, AS_OF = "ARCH_TAKEOFF_V3.0.45", "T-478"
+BOARD_COMMIT = "26ad2473"
+CAND, AS_OF = "ARCH_TAKEOFF_V3.0.46", "T-419"
 I, H, BL, NI = FMC.STATES
 NO_LINE_FILLED_BY = {"B8-07": "T-486", "B9-02": "T-487"}       # board rows that will fill them (Lead 2026-11-03 08:17)
 STALE_NOTE = ("B8-08", "B10-13", "B7-13")                       # 1.41.0 notes that say 'as of V3.0.7'
@@ -79,7 +81,7 @@ def releases(census_fam):
 
 
 def promote(pending, prom, attrib):
-    """pending package (1.41.0) -> merged candidate package (1.42.0)"""
+    """pending package (base registry) -> merged candidate package (this version)"""
     v = attrib["versions"][pending["method_version"]]
     rec = {"task": pending["task"], "method_version": pending["method_version"], "module": pending["module"],
            "merge_commit": prom["merge_commit"], "verdict": verdict_text(prom), "gate": "GATE_B",
@@ -121,14 +123,14 @@ def _family_block(f, census_fam, by_family, pkg_versions):
         c = {"state": NI, "method_version": CAND, "packages": [], "as_of_package": AS_OF, "changed": "",
              "open": "no candidate line; the released capability above is unchanged",
              "released_in_candidate": "none",
-             "candidate_basis": f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.45 (T-485)"}
+             "candidate_basis": f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485)"}
         if code in NO_LINE_FILLED_BY:
             c["no_line"] = {
                 "item_codes": list(f["item_codes"]),
-                "registry_before": f"1.2.0 .. 1.41.0 read {old['state']} (in_v3_0_candidate yes) without a line",
-                "checked": "no line of these item codes in any reproduced candidate version V3.0.7 .. V3.0.45 "
+                "registry_before": f"1.2.0 .. {by_family.get('_base', 'the base registry')} read {old['state']} (in_v3_0_candidate yes) without a line",
+                "checked": "no line of these item codes in any reproduced candidate version V3.0.7 .. V3.0.46 "
                            "(T-485 chain run, out/T485_PACKAGE_FAMILIES.json item_code_presence) nor in the census of "
-                           "V3.0.45 (T-479 F-T479-2)",
+                           "V3.0.46 (T-479 F-T479-2 on V3.0.45; T-485 census on V3.0.46)",
                 "filled_by": NO_LINE_FILLED_BY[code]}
             c["open"] = (f"NO_LINE: the candidate emits no {' / '.join(f['item_codes'])} line at any version; "
                          f"{NO_LINE_FILLED_BY[code]} will fill it; until then the family is outside the candidate (never "
@@ -142,7 +144,7 @@ def _family_block(f, census_fam, by_family, pkg_versions):
     pk.sort(key=lambda t: pkg_versions[t])
     rel = _units_text(census_fam["units"], "released")
     held = _units_text(census_fam["units"], "held")
-    basis = f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.45 (T-485)"
+    basis = f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485)"
     if not pk:
         c = {"state": BL, "method_version": CAND, "packages": [], "as_of_package": AS_OF, "changed": "",
              "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, "
@@ -155,7 +157,7 @@ def _family_block(f, census_fam, by_family, pkg_versions):
         for t in new_pk)
     changed = " | ".join(x for x in (
         old.get("changed") and f"to V3.0.7: {old['changed']}",
-        since and f"V3.0.8 .. V3.0.45 by line diff (lines added + / removed - / changed ~): {since}",
+        since and f"V3.0.8 .. V3.0.46 by line diff (lines added + / removed - / changed ~): {since}",
         f"census {CAND}: released {rel or 'none'}") if x)
     open_ = " | ".join(x for x in (
         old.get("open") and old["state"] != BL and f"to V3.0.7: {old['open']}",
@@ -213,13 +215,13 @@ def build(base=BASE, version=VERSION):
     still_pending = [p for p in pend if p["task"] not in prom]   # a package READY after this one (rebase at merge)
     new["supersedes"] = (f"{old['version']} (kept unchanged on disk; every released-configuration field copied unchanged; "
                          f"the {len(promoted)} pending packages promoted to candidate_packages; every family's candidate "
-                         "block re-derived at V3.0.45)")
+                         f"block re-derived at {CAND})")
     new["source"] = (old["source"] + f" | {version} (T-485, F-T479-1): {old['version']} + the {len(promoted)} merged "
                      "pending packages promoted (merge commit + Checker verdict each) + every family's candidate block "
                      f"re-derived at {CAND} from candidate_census and a line diff of the reproduced chain run "
                      "(research/agents_t485); no quantity, capability or owner change")
     new["v3_0_candidate"] = (
-        f"{CAND} (T-478 merge 8ccf69b3, Verifier 2026-11-03 04:03 UTC, Gate B PASS; BOQ_LINES 5972888b): the same "
+        f"{CAND} (T-419 merge af1eaeb4, Verifier 2026-11-03 09:35 UTC, Gate B PASS; BOQ_LINES 35d70129): the same "
         "opt-in candidate extended in place since ARCH_TAKEOFF_V3.0 (T-131 b1a6d6d): ARCH_TAKEOFF_V2.13 + route G with "
         "the M4 profile + the checker-verified pieces of candidate_packages; every line outside a package's rows "
         "byte-identical to the previous version (asserted by each package). NOT the released default "
@@ -227,14 +229,14 @@ def build(base=BASE, version=VERSION):
         "lines of the family; 'candidate.state' says how; 'v3_0_planned_tasks' = queued or READY lane I packages that "
         "change them next")
     cand = dict(old["candidate"], method_version=CAND, as_of_package=AS_OF)
-    cand["scope_of_the_figures"] = (old["candidate"]["scope_of_the_figures"] + "; from 1.42.0 the family blocks state "
+    cand["scope_of_the_figures"] = (old["candidate"]["scope_of_the_figures"] + f"; from {version} the family blocks state "
                                     "the candidate of record by line census (candidate_census) and line diff")
     new["candidate"] = cand
     new["candidate_packages"] = old["candidate_packages"] + promoted
     new["pending_packages"] = still_pending
     pkg_versions = {p["task"]: _vkey(p["method_version"]) for p in new["candidate_packages"]}
 
-    by_family = {"_v": {}, "_codes": {}, "_record": {}}
+    by_family = {"_v": {}, "_codes": {}, "_record": {}, "_base": old["version"]}
     for p in promoted:
         v = attrib["versions"][p["method_version"]]
         for fam in v["record_families"]:
@@ -245,7 +247,11 @@ def build(base=BASE, version=VERSION):
             by_family["_codes"][(p["task"], fam)] = codes
 
     merged = {t for p in new["candidate_packages"] for t in [p["task"], *p["integrates"]]}
-    cc = old["candidate_census"]["families"]
+    index = json.loads(INDEX.read_text(encoding="utf-8"))
+    census = C.census(index, new)            # the registry's own item-code ownership (unchanged from the base)
+    if census["candidate_version"] != CAND or census["issue_counts"]:
+        raise SystemExit(f"census {census['candidate_version']} issues {census['issue_counts']}")
+    cc = {c: census["families"][c] for c in sorted(census["families"])}
     counts = {s: 0 for s in FMC.STATES}
     yes_no = {"yes": 0, "no": 0}
     for f in new["families"]:
@@ -265,9 +271,28 @@ def build(base=BASE, version=VERSION):
     new["candidate_state_counts"] = counts
     new["in_v3_0_candidate_counts"] = yes_no
 
-    cen = dict(new["candidate_census"])
-    cen["stale_in_candidate_vs_registry"] = C.compare_blocks({"families": cc, "candidate_version": CAND}, new)
-    new["candidate_census"] = cen
+    old_cen = old["candidate_census"]
+    new["candidate_census"] = {
+        "method_version": CAND,
+        "builder": old_cen["builder"],
+        "lines": census["lines"],
+        "lines_sha256": index["inputs"]["lines"],
+        "verdicts_sha256": index["inputs"].get("verdicts"),
+        "downgrades_sha256": index["inputs"].get("downgrades"),
+        "index": "research/agents_t485/out/LINE_INDEX_V3_0_46.json (sha256 "
+                 + hashlib.sha256(INDEX.read_bytes()).hexdigest() + ")",
+        "scope": "the development villa run of the merged candidate of record V3.0.46 (T-419 merge af1eaeb4; BOQ_LINES "
+                 "35d70129 reproduced by T-485 from the Drive copies, every V3.0.7 .. V3.0.45 file on the way, V3.0.45 = "
+                 "5972888b); the V3.0.44 verdict set and the T-469 downgrade snapshot bind by line content, as in 1.41.0",
+        "meaning": old_cen["meaning"].replace("the 'candidate' blocks above stay as of V3.0.7",
+                                              "the family 'candidate' blocks are derived from it (1.43.0, T-485)"),
+        "families": cc,
+        "not_a_boq_lines": census["not_a_boq_lines"],
+        "no_family": census["no_family"],
+        "issue_counts": census["issue_counts"],
+        "stale_in_candidate_vs_registry": C.compare_blocks({"families": cc, "candidate_version": CAND}, new),
+        "previous": {"method_version": old_cen["method_version"], "lines": old_cen["lines"],
+                     "lines_sha256": old_cen["lines_sha256"]}}
     new["promotion"] = {
         "task": "T-485", "from_registry": old["version"], "promoted": [p["task"] for p in promoted],
         "merge_commits_source": "research/agents_t485/out/PROMOTIONS_SOURCE.json (sha256 "
@@ -277,7 +302,8 @@ def build(base=BASE, version=VERSION):
         "rule": "R-T485-1: a merged package never stays in pending_packages; a family's candidate state is derived from "
                 "the candidate's lines (census + line diff), never carried from a package's text; a family that owns no "
                 "item code is CARRIED and labelled so",
-        "quantity_change": "none (no engine, method, line or capability field moves)"}
+        "quantity_change": "none (no engine, method, line or capability field moves)",
+        "line_index": "research/agents_t485/out/LINE_INDEX_V3_0_46.json"}
     return new
 
 

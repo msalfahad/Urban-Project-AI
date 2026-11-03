@@ -25,7 +25,7 @@
   "merge_commit": "3c9b1484c5a4f43d8039e894d54657ee983d08f7",
   "verdict_time": "2026-10-24 06:12 UTC",
   "board_file": "BOARD_ARCHIVE.md",
-  "board_status_head": "MERGED 3c9b1484 (Verifier 2026-10-24 06:12 UTC, GATE B PASS: V3.0.11 reproduced bb5466b0, 2 lines changed / 3,608 byte-identical, outline 1B1B and schedule rows F10 / F re-read by me, footing HELD 2.176 .. 2.275, blindin"
+  "board_status_head": "MERGED 3c9b1484 (Verifier 2026-10-24 06:12 UTC, GATE B PASS: V3.0.11 reproduced bb5466b0, 2 lines changed / 3,608 byte-identical, outline 1B1B and schedule rows F10 / F re-read by me, footing HELD 2.176 .. 2.275, blinding HELD 0.552 .. 0.590, released footing 64.304 = the 25 verified; verdict note above)"
  },
  {
   "task": "T-146",
@@ -123,7 +123,7 @@
   "merge_commit": "bb772f5152ac0fe9670882ff0ca5878cb611fbca",
   "verdict_time": "2026-10-30 03:32 UTC",
   "board_file": "BOARD_ARCHIVE.md",
-  "board_status_head": "MERGED bb772f51 (Verifier 2026-10-30 03:32 UTC, run session_01E6cPnbbQEa1NwWJTXG1Q9j, lock checker; Gate B PASS on r2 head f29fbeb9; engine push bb772f51 after T-355 21f7b58a; conflict in docs/CODEMAP.md only: working-br"
+  "board_status_head": "MERGED bb772f51 (Verifier 2026-10-30 03:32 UTC, run session_01E6cPnbbQEa1NwWJTXG1Q9j, lock checker; Gate B PASS on r2 head f29fbeb9; engine push bb772f51 after T-355 21f7b58a; conflict in docs/CODEMAP.md only: working-branch version, maps rebuilt by the tool, check stale none, freeze 0; t343 / t355 / t338_line_state_v3024 / t130_family_master / m9_kb / t061 pass on the merged tree)"
  },
  {
   "task": "T-279",
@@ -264,5 +264,12 @@
   "verdict_time": "2026-11-03 04:03 UTC",
   "board_file": "BOARD.md",
   "board_status_head": "MERGED r3 (Verifier 2026-11-03 04:03 UTC per date -u: Gate B PASS, merge 8ccf69b3 on 2266198f; CANDIDATE OF RECORD ARCH_TAKEOFF_V3.0.45 5972888b, NOT RELEASED; VERDICT r3 below)"
+ },
+ {
+  "task": "T-419",
+  "merge_commit": "af1eaeb47dc6f2c125bcfc2f9a01d98632217c10",
+  "verdict_time": "2026-11-03 09:35 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-03T09:35Z per date -u, run session_01E6cPndSU1uDLDo6S42cLVP: GATE B PASS on f5611d04, engine merge af1eaeb4 (on b16f686b; only conflict docs/CODEMAP.md, taken from the working branch and rebuilt, codemap stale none, freeze 0)"
  }
 ]
