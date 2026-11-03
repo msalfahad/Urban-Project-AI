@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03 17:03 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261103T130102-364-4556 since 2026-11-03T13:01Z recovered
 - 2026-11-03T16:51Z | Verifier | STARTED | run session_01E6cPnceexjnsGxWUEMoPT6 | repo-attached routine | task state: READY T-492 (Worker 2 16:49), T-455, T-490, T-491, T-489 per RUN_LOG | self-check pending | stale run lock of run 20261103T135121-373-23150 since 2026-11-03T13:51Z recovered
 - 2026-11-03 16:49 UTC | Worker 2 | SUCCESS | T-492 READY (agents/task-T-492 @ 28e88d95) | stale-pending guard now counts a package merged only once its task commit reached origin/<working branch> (or a direct commit on the checked-out working branch); T-443 c165a8f3 guard failure reproduced and gone on a trial merge (3 -> 2 failures, the other 2 are T-443's own); 1.42.0 still 39 stale; L2 t485/t479/t459 pass; no quantity change; task was small (~10 min), single-task rule kept | self-check: codemap PASS, pytest t061 FAIL then PASS after re-running setup (first status call was cut off mid venv install: 'No module named pytest'), freeze PASS; problem: none
 - 2026-11-03 16:42 UTC | Worker 2 | STARTED | run session_01E6cPndayjpKWnrB964xvGD | repo-attached routine | task state: none yet | self-check pending
