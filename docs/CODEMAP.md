@@ -557,7 +557,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
 | `ground_system_spans_v2.py` | 589 | MEDIUM | 1 | GROUND_SYSTEM_SPANS_V2 - ground-beam span splitter and strap measurement, face to face (generic; stdlib only). |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
-| `knowledge.py` | 290 | HIGH | 33 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
+| `knowledge.py` | 289 | HIGH | 34 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 3 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
 | `level_chain_v1.py` | 495 | MEDIUM | 2 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
@@ -656,7 +656,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
 | `rule_store.py` | 124 | HIGH | 20 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
-| `rule_store_v2.py` | 152 | MEDIUM | 1 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
+| `rule_store_v2.py` | 186 | MEDIUM | 1 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |

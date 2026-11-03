@@ -7,6 +7,8 @@
     rule(rule_id, version, include_proposed=False)   -> the effective record (KeyError when absent)
     rule_ref(rule_id, version)                       -> what a quantity records about the rule it used
     check_chain()                                    -> problems of the overlay chain (empty = clean)
+    knowledge_versions() / knowledge_registry(v)     -> the knowledge registry versions incl. 1.8.0, and one of them
+                                                        (validated with engine/source/knowledge.validate, links checked)
     policy_record()
 
 Why a new module: engine/source/rule_store.py (V1) resolves 1.4.0 and 1.5.0 only, and its policy_record() is written
@@ -16,6 +18,10 @@ the same chain further: the owner library 1.4.0 (base) -> URBAN_RULES 1.5.0 -> 1
 version and file; the chain is followed from those fields and refused when a link disagrees. For 1.4.0 and 1.5.0 the
 rule set and its digest are identical to V1 (same origin text, same digest function), so a result can move from V1
 to V2 without any rule changing.
+
+Knowledge 1.8.0 (UP-HGT-001 / UP-FIN-WALL-001 owner wall height, T-081 r2) is registered HERE, not in
+engine/source/knowledge.py: that file is a released, frozen artefact (T-467 released freeze), so its VERSIONS stay
+1.0.0 .. 1.7.0 and knowledge.using("1.8.0") stays refused; finish_height_v2.py keeps reading the 1.8.0 file directly.
 
 Resolution, as V1: an OWNER_APPROVED overlay record replaces the record with the same rule_id or adds a new one; a
 PROPOSED record is ignored unless asked for; no file is ever edited; there is no default version (the caller names
@@ -40,6 +46,8 @@ OVERLAYS = {"1.5.0": "owner_decisions/URBAN_RULES_1.5.0.json",
             "1.7.0": "owner_decisions/URBAN_RULES_1.7.0.json",
             "1.8.0": "owner_decisions/URBAN_RULES_1.8.0.json"}
 APPROVED, PROPOSED = "OWNER_APPROVED", "PROPOSED"
+DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: resolves registered rule / knowledge versions; adds no default value
+KNOWLEDGE_EXTRA = {"1.8.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json"}   # T-081 r2 heights
 
 
 class RuleStoreError(ValueError):
@@ -143,8 +151,34 @@ def check_chain(overlays=None):
     return out
 
 
+def knowledge_versions():
+    """knowledge registry versions: those engine/source/knowledge.py resolves, plus the ones registered here."""
+    from engine.source import knowledge as K
+    return {**{v: p for v, p in K.VERSIONS.items()}, **KNOWLEDGE_EXTRA}
+
+
+@lru_cache(maxsize=None)
+def _knowledge(v):
+    from engine.source import knowledge as K
+    vers = knowledge_versions()
+    if v not in vers:
+        raise RuleStoreError(f"knowledge registry version {v} is not one of {sorted(vers)}")
+    reg = json.loads(vers[v].read_text(encoding="utf-8"))
+    probs = K.validate(reg)
+    if probs:
+        raise RuleStoreError("knowledge registry invalid: " + "; ".join(probs[:5]))
+    if reg.get("version") != v:
+        raise RuleStoreError(f"knowledge registry {vers[v].name} says version {reg.get('version')}")
+    return reg
+
+
+def knowledge_registry(v):
+    return copy.deepcopy(_knowledge(v))
+
+
 def policy_record():
     return {"policy_id": POLICY_ID, "versions": registered(), "default": None,
+            "knowledge_versions": sorted(knowledge_versions()),
             "rule": "the owner library 1.4.0 plus every URBAN_RULES overlay up to the named version, followed through "
                     "each file's base field; OWNER_APPROVED records replace by rule_id, PROPOSED ignored unless asked; "
                     "for 1.4.0 / 1.5.0 identical to engine/source/rule_store.py; no default version; read by no released "

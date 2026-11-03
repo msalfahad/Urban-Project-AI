@@ -197,12 +197,23 @@ def test_c_adverse_results_under_older_sets_keep_the_pending_entry():
 
 
 def test_d_knowledge_1_8_0_is_registered_and_loads():
-    assert "1.8.0" in K.VERSIONS and K.DEFAULT_VERSION == "1.0.0"
-    with K.using("1.8.0"):
-        assert K.version() == "1.8.0" and K.registry()["version"] == "1.8.0"
-        assert K.rule("UP-HGT-001")["effective_version"] == "1.8.0"
-        assert K.digest() == UNTOUCHED["knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json"]
-    assert K.version() == "1.0.0"
+    vers = RS2.knowledge_versions()
+    assert sorted(vers) == ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.5.0", "1.6.0", "1.7.0", "1.8.0"]
+    reg = RS2.knowledge_registry("1.8.0")
+    assert reg["version"] == "1.8.0" and sha(vers["1.8.0"]) == UNTOUCHED["knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json"]
+    hgt = [r for r in reg["rules"] if r["rule_id"] == "UP-HGT-001"]
+    assert len(hgt) == 1 and hgt[0]["effective_version"] == "1.8.0"
+    assert "1.8.0" in RS2.policy_record()["knowledge_versions"]
+
+
+def test_d_adverse_the_released_knowledge_module_is_not_changed():
+    # knowledge.py is a released, frozen artefact: 1.8.0 is registered in rule_store_v2, never there
+    assert "1.8.0" not in K.VERSIONS and K.DEFAULT_VERSION == "1.0.0"
+    with pytest.raises(K.KnowledgeError):
+        with K.using("1.8.0"):
+            pass
+    with pytest.raises(RS2.RuleStoreError):
+        RS2.knowledge_registry("1.9.0")
 
 
 def test_d_rule_store_v2_resolves_every_overlay_and_matches_v1():
