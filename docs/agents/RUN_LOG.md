@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03 14:53 UTC | Worker 2 | SUCCESS | T-489 READY (agents/task-T-489 @ d5af640c) | PLASTER_MATERIALS_TABLE_V2 (unwired): ratio x owner Q-53 C conversion, s.5 = weakest input (ESTIMATED-NET -> HELD). Kuwait spec 1990 download refused (11.8 MB > 10 MB limit; text cut at ch.02230, plastering ch.09200 unread): no sourced mix, cement/sand HELD never 0; sensitivity dry 4.727 m3 -> 45.27/36.21/30.18 bags (1:3/1:4/1:5), wet >=5.105 m3 -> 48.88/39.10/32.59; spatter no thickness | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive download_file_content 'File too large for download, over limit of 10 MB' (1990 spec)
 - 2026-11-03T14:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPneR1jXT8Hzr63MkQCj active since 2026-11-03T13:52Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-03 14:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T13:52Z | Verifier | STARTED | run session_01E6cPneR1jXT8Hzr63MkQCj | repo-attached routine | task state: READY T-455 (Worker 2 13:02), T-490 (Worker 1 13:33) per RUN_LOG | self-check pending
