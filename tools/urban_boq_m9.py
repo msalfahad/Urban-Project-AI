@@ -3260,7 +3260,7 @@ def cmd_arch(a):
     v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     # T-443: ARCH_TAKEOFF_V3.0.47 = the SAME candidate (engine.source.arch_v3047): a V3.0.46 run (its files unchanged) +
     # the Checker-verified stair-room skirting split (URBAN_V3047_INPUTS_V1); named on the V3.0.45 line above (line-stable hub).
-    v3047 = a.method in (V3047, V3048)        # T-443: the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first)
+    v3047, v3048 = a.method in (V3047, V3048), a.method == V3048  # T-443 / T-350 r4 (a.method becomes V2.13 below): the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first)
     v3046 = v3046 or v3047                    # T-443: a V3.0.47 run is a V3.0.46 run first
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
@@ -4244,7 +4244,7 @@ def cmd_arch(a):
                                                                                                                                                                             svgs += names47
                                                                                                                                                                             v30rec = dict(v30rec, method=V3047, extends=V3046,
                                                                                                                                                                                           identity=ident47, v3_0_46_identity=ident46)
-                                                                                                                                                                            if a.method == V3048:
+                                                                                                                                                                            if v3048:
                                                                                                                                                                                 # T-350 r4: ARCH_TAKEOFF_V3.0.48 (calculated earthworks) beside the V3_0_47_*
                                                                                                                                                                                 from engine.source import arch_v3048 as A3048
                                                                                                                                                                                 if not getattr(a, "v3048_inputs", None):

@@ -210,3 +210,11 @@ def test_hub_runs_every_earlier_stage_for_v3048():
     lists = re.findall(r"a\.method in \(([^)]*)\)", hub)
     with47 = [x for x in lists if re.search(r"\bV3047\b", x)]
     assert with47 and all(re.search(r"\bV3048\b", x) for x in with47)
+
+
+def test_hub_flag_survives_the_v213_rewrite():
+    """adverse found in this round: the hub rewrites a.method to V2.13 before the stages run, so the V3.0.48 stage is
+    gated by a flag computed beforehand, never by a.method"""
+    hub = (ROOT / "tools/urban_boq_m9.py").read_text(encoding="utf-8")
+    assert "a.method == V3048:" not in hub.replace("v3048 = a.method in (V3047, V3048), a.method == V3048", "")
+    assert "if v3048:" in hub and "a.method == V3048  #" in hub
