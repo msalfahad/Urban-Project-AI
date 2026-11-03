@@ -1,11 +1,12 @@
 {
   "SCHEMA": "R8_0_SOURCE_DEPENDENCY_REGISTER_V1",
   "scope": "engine/source/** (checked by tests/r8_0/test_r8_0_import_boundaries.py B-5/B-6)",
-  "third_party_allowed": ["ezdxf", "shapely", "numpy"],
+  "third_party_allowed": ["ezdxf", "shapely", "numpy", "pypdf"],
   "pins": {
     "ezdxf": {"version": "1.4.4", "licence": "MIT", "role": "D2/K2 route only; R8.1: K1 kernel_ocs is a clean Urban AAA and does not import ezdxf (ezdxf.math.OCS is a test oracle)"},
     "shapely": {"version": "2.1.2", "licence": "BSD-3-Clause (GEOS LGPL-2.1, dynamically linked)", "role": "geometry kernel (existing); R8.8: engine/source/topology_crosscheck.py only (independent GEOS cross-check of TS01, never an authority)"},
-    "numpy": {"version": "as installed", "licence": "BSD-3-Clause", "role": "numeric arrays (existing)"}
+    "numpy": {"version": "as installed", "licence": "BSD-3-Clause", "role": "numeric arrays (existing)"},
+    "pypdf": {"version": "6.19.0", "licence": "BSD-3-Clause", "role": "T-465 r2: PDF page reading for engine/source/opening_height_pdf_v2.py only (replaces PyMuPDF, AGPL; PLAN_READER 'not PyMuPDF'; T-210 (b)); lazy import inside page_primitives"}
   },
   "forbidden": ["scipy", "mcp", "fastmcp", "autocad_mcp", "autocad_mcp_pro", "opentakeoff", "win32com", "pythoncom", "comtypes", "research", "tests", "requests", "httpx"],
   "decoder_binaries": {

@@ -155,6 +155,7 @@ INVENTORY_SCHEMA = "URBAN_BOQ_EXPORT_INVENTORY_V1"
 V1_VERDICTS_SCHEMA = "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1"
 V2_VERDICT_SCHEMA = "URBAN_CHECKER_VERDICT_V2"
 COMPLETENESS_SCHEMA = "URBAN_LINE_COMPLETENESS_V1"
+WP_COMPLETENESS_SCHEMA = "URBAN_T383_WP_COMPLETENESS_V1"   # T-383: research/agents_t236/wp_join.py records
 V2_SET_SCHEMA = "URBAN_CHECKER_VERDICT_V2_SET"
 IDENTITY_SCHEMA = "URBAN_BOQ_PROJECT_IDENTITY_V1"   # T-245: engine/source/arch_v3016 V3_0_16_IDENTITY.json
 # T-245 (f) (owner 2026-10-24 23:53 / 23:57 (1), (2)): a Checker-issued, line-bound DOWNGRADE-ONLY record; it can
@@ -1078,6 +1079,39 @@ def completeness_from_report(report, lines, groups_lines, group_elements, ident)
     return out
 
 
+def wp_overlay(completeness, wp_doc, groups_lines, ident):
+    """T-383 (join reader only; the join is research/agents_t236/wp_join.py, R-T383-WP-WHOLE-1): the WATERPROOFING
+    lines' completeness records read from the per-item WP inventory join replace the per-trade ones (one trade spans
+    many WP lines, so the T-236 record can never pass for a WP line). The records are judged by the unchanged
+    completeness_passes. Refused (ExportError): another schema, project or revision set; a record for a group that is
+    not a WP line of this BOQ (a non-WP line is never touched); a group twice; a WP line of this BOQ the join does not
+    carry (it was computed on other lines). -> {group: record}"""
+    if not isinstance(wp_doc, dict) or wp_doc.get("schema") != WP_COMPLETENESS_SCHEMA or \
+            not isinstance(wp_doc.get("records"), list):
+        raise ExportError(f"--wp-completeness: schema must be {WP_COMPLETENESS_SCHEMA} with a records list (refused)")
+    pid, rev = ident[0], ident[1]
+    if (wp_doc.get("project_id"), wp_doc.get("revision_set_sha256")) != (pid, rev):
+        raise ExportError("--wp-completeness: the WP join of another project or revision set (refused)")
+    wp_groups = {g for g, ls in groups_lines.items() if ls and all(TC.line_trade(ln) == "WATERPROOFING" for ln in ls)}
+    out = dict(completeness or {})
+    seen = set()
+    for rec in wp_doc["records"]:
+        g = (rec.get("trade"), rec.get("item_code"), rec.get("unit"))
+        if rec.get("schema") != COMPLETENESS_SCHEMA:
+            raise ExportError(f"--wp-completeness: record {g} schema {rec.get('schema')!r} (refused)")
+        if g in seen:
+            raise ExportError(f"--wp-completeness: record {g} twice (refused)")
+        seen.add(g)
+        if g not in wp_groups:
+            raise ExportError(f"--wp-completeness: record {g} is not a WATERPROOFING line of this BOQ (refused)")
+        out[g] = rec
+    left = sorted(wp_groups - seen)
+    if left:
+        raise ExportError(f"--wp-completeness: {len(left)} WP line(s) of this BOQ not in the join (e.g. {left[0]}): "
+                          "it was computed on other lines (refused)")
+    return out
+
+
 def completeness_text(rec, ok):
     if rec is None:
         return ""
@@ -1134,7 +1168,7 @@ def _state_row(row, ln):
 
 def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_doc=None, inventory_doc=None,
           v2_records=(), completeness=None, completeness_report=None, expect_project=None, expect_revision_set=None,
-          downgrades=None):
+          downgrades=None, wp_completeness=None):
     """-> {"rows": [...canonical order], "summary": [...], "trades": [...], "identity": {...}, "counts": {...},
     "v2_verdicts": [{verdict_id, status}]}. completeness: {group: URBAN_LINE_COMPLETENESS_V1 record};
     completeness_report: the T-236 report (part (4)), from which those records and the UNMEASURED rows are derived."""
@@ -1211,6 +1245,12 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
     g_scope = {g: scope_split(glines[g], g_elements[g])[0] for g in groups}   # T-298: completeness scope
     if completeness_report is not None:
         completeness = completeness_from_report(completeness_report, lines, glines, g_elements, ident)
+    comp_input = ("T-236 report (URBAN_TRADE_COMPLETENESS_V1)" if completeness_report is not None
+                  else "records given" if completeness else "none given: no line can read VERIFIED")
+    if wp_completeness is not None:                       # T-383: each WP line reads its own inventory join
+        completeness = wp_overlay(completeness, wp_completeness, glines, ident)
+        comp_input = (comp_input if completeness_report is not None or comp_input == "records given"
+                      else "records given") + f" + T-383 WP join ({WP_COMPLETENESS_SCHEMA})"
 
     # V1 references (shown only)
     v1 = v1_verdict_refs(v1_doc, key_map_doc)
@@ -1297,9 +1337,7 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
             "v2_verdicts": v2_status, "downgrades": dg_status if downgrades is not None else None,
             "audit_rows": sorted(audit, key=lambda r: (str(r["item_code"]), str(r["floor"]), str(r["element_id"]),
                                                       str(r["line_id"]))),
-            "completeness_input": ("T-236 report (URBAN_TRADE_COMPLETENESS_V1)" if completeness_report is not None
-                                   else "records given" if completeness
-                                   else "none given: no line can read VERIFIED")}
+            "completeness_input": comp_input}
 
 
 def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines, comp_text=None):
@@ -1858,6 +1896,8 @@ def main(argv=None):
     ap.add_argument("--inventory")
     ap.add_argument("--verdicts-v2", help="a URBAN_CHECKER_VERDICT_V2_SET file")
     ap.add_argument("--completeness", help="the T-236 report TRADE_COMPLETENESS.json")
+    ap.add_argument("--wp-completeness", help="T-383: the WP inventory join (URBAN_T383_WP_COMPLETENESS_V1, "
+                                              "research/agents_t236/wp_join.py) for the WATERPROOFING lines only")
     ap.add_argument("--expect-project")
     ap.add_argument("--expect-revision-set")
     ap.add_argument("--code-commit")
@@ -1882,7 +1922,7 @@ def main(argv=None):
     docs = {}
     for k, p in (("verdicts_v1", a.verdicts_v1), ("key_map", a.key_map), ("inventory", a.inventory),
                  ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness), ("identity", a.identity),
-                 ("downgrades", a.downgrades)):
+                 ("downgrades", a.downgrades), ("wp_completeness", a.wp_completeness)):
         if p:
             docs[k], shas[k] = _load_json(p)
     v2 = ()
@@ -1901,7 +1941,7 @@ def main(argv=None):
                code_commit=_code_commit(a.code_commit), contract_units=a.contract_units, contractual=contractual,
                identity_doc=docs.get("identity"), downgrades=dg, v1_doc=docs.get("verdicts_v1"),
                key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
-               completeness_report=docs.get("completeness"),
+               completeness_report=docs.get("completeness"), wp_completeness=docs.get("wp_completeness"),
                expect_project=a.expect_project, expect_revision_set=a.expect_revision_set)
     print(json.dumps({"outputs": m["outputs"], "row_counts": m["row_counts"],
                       "trades": [{k: t[k] for k in ("trade", "status", "verified_whole_lines", "lines")}

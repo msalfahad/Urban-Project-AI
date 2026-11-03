@@ -207,9 +207,11 @@ def load_inputs(doc, project_id=None):
 def schedule_rows_from_drawing(structural_path, size_unit):
     """footing schedule rows drawn as blocks with one attribute per cell (a mark attribute and bar cells SH-* / LO-*),
     read as printed (FOOTING_REBAR_POPULATION_V1.rows_from_block_attributes). -> rows"""
-    import ezdxf
     from engine.source import footing_rebar_population_v1 as P
-    doc = ezdxf.readfile(str(structural_path))
+    from engine.source.cad import kernel_ezdxf as K2        # T-465: the K2 route reads the DXF (K1 never imports ezdxf)
+    doc, bad = K2.load(structural_path)
+    if doc is None:                                         # a failed read stays a visible failure, never 0 rows
+        raise OSError(f"schedule_rows_from_drawing: {structural_path}: " + "; ".join(f.detail for f in bad))
     rows = []
     for e in doc.modelspace().query("INSERT"):
         at = {x.dxf.tag: x.dxf.text for x in e.attribs}

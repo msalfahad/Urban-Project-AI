@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 698 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 699 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4417 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4423 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 50 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2069 | pytest suites, one folder per round. |
+| `tests/` | 2077 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (345 modules)
+## `engine/source/` (346 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -406,7 +406,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v27.py` | 1135 | MEDIUM | 5 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 9 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
 | `arch_v29.py` | 809 | MEDIUM | 7 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
-| `arch_v30.py` | 872 | HIGH | 89 | ARCH_TAKEOFF_V3.0 (T-131): ONE opt-in BOQ candidate that consolidates the checker-verified pieces into the |
+| `arch_v30.py` | 875 | HIGH | 90 | ARCH_TAKEOFF_V3.0 (T-131): ONE opt-in BOQ candidate that consolidates the checker-verified pieces into the |
 | `arch_v301.py` | 510 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.1 (T-133): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 (engine.source.arch_v30), extended |
 | `arch_v3010.py` | 745 | HIGH | 23 | ARCH_TAKEOFF_V3.0.10 (T-232): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.9 (engine.source.arch_v30, |
 | `arch_v3011.py` | 573 | HIGH | 21 | ARCH_TAKEOFF_V3.0.11 (T-239): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.10 (engine.source.arch_v30, |
@@ -418,7 +418,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3017.py` | 656 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.17 (T-254): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.16 (engine.source.arch_v30, |
 | `arch_v3018.py` | 792 | HIGH | 30 | ARCH_TAKEOFF_V3.0.18 (T-266): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.17 (engine.source.arch_v30, |
 | `arch_v3019.py` | 675 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.19 (T-255): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.18 (engine.source.arch_v30, |
-| `arch_v302.py` | 838 | HIGH | 46 | ARCH_TAKEOFF_V3.0.2 (T-142): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 (engine.source.arch_v30, |
+| `arch_v302.py` | 840 | HIGH | 47 | ARCH_TAKEOFF_V3.0.2 (T-142): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 / V3.0.1 (engine.source.arch_v30, |
 | `arch_v3020.py` | 607 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.20 (T-244): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.19 (engine.source.arch_v30, |
 | `arch_v3021.py` | 993 | HIGH | 15 | ARCH_TAKEOFF_V3.0.21 (T-315): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.20 (engine.source.arch_v30, |
 | `arch_v3022.py` | 838 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.22 (T-331): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.21 (engine.source.arch_v30, |
@@ -466,7 +466,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 144 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 145 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -490,7 +490,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
 | `concrete_curved_strips.py` | 254 | MEDIUM | 2 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
 | `concrete_ledger_v2.py` | 505 | MEDIUM | 2 | CONCRETE LEDGER V2 - the frozen route-G concrete ledger with its strip measurement replaced by the strip guard and |
-| `concrete_ledger_v3.py` | 533 | MEDIUM | 1 | CONCRETE LEDGER V3 - CONCRETE_LEDGER_V2 (strip guard, curved strips) with the slab-plan beams re-bound by |
+| `concrete_ledger_v3.py` | 548 | MEDIUM | 2 | CONCRETE LEDGER V3 - CONCRETE_LEDGER_V2 (strip guard, curved strips) with the slab-plan beams re-bound by |
 | `concrete_model.py` | 145 | MEDIUM | 1 | PHYSICAL NON-OVERLAPPING CONCRETE MODEL (V1) + STAIR CONCRETE (V1). |
 | `concrete_overlap_ownership.py` | 474 | MEDIUM | 3 | CONCRETE_OVERLAP_OWNERSHIP_V1 (T-189): concrete at intersecting structural elements is measured EXACTLY ONCE. |
 | `concrete_strip_guard.py` | 506 | MEDIUM | 4 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
@@ -540,7 +540,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
-| `footing_rebar_population_v1.py` | 361 | MEDIUM | 3 | FOOTING_REBAR_POPULATION_V1 - footing steel by bar population from the footing schedule (generic, NOT wired). |
+| `footing_rebar_population_v1.py` | 361 | MEDIUM | 4 | FOOTING_REBAR_POPULATION_V1 - footing steel by bar population from the footing schedule (generic, NOT wired). |
 | `footprint_authority.py` | 93 | MEDIUM | 2 | OBJECT FOOTPRINT AUTHORITY (RC1; V2 at RC1 final) - may a trade measure through the objects that stand on a site? |
 | `frame.py` | 1076 | HIGH | 15 | UNIT_CONTEXT + REGION_MEASUREMENT_TRANSFORM + MEASUREMENT_FRAME (R8.3). |
 | `freeze_schema.py` | 76 | MEDIUM | 5 | FREEZE SCHEMA (RC1 final) - every identity field of a freeze record is a real identity or says why not. |
@@ -584,7 +584,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `observations.py` | 208 | HIGH | 14 | Neutral source observations — the ONE shape K1 reads. |
 | `obstacle_authority.py` | 84 | MEDIUM | 2 | OBSTACLE AUTHORITY (R8.15) - which room holes stand on PHYSICAL authority, kept apart from topology geometry. |
 | `ocr_review.py` | 133 | MEDIUM | 2 | OCR REVIEW (M4) - a second, independent reading of every OCR-derived detail-evidence record, compared value by |
-| `opening_area.py` | 525 | MEDIUM | 3 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
+| `opening_area.py` | 537 | MEDIUM | 4 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
 | `opening_authority.py` | 95 | MEDIUM | 1 | OPENING AUTHORITY (V1) - existence, geometry, function, material and vertical extent of an opening are separate |
 | `opening_census.py` | 474 | CRITICAL | 9 | OPENING CENSUS - wall openings from plan wall faces, with the evidence that makes each one an opening (generic). |
 | `opening_completion.py` | 522 | MEDIUM | 1 | OPENING COMPLETION (V3) - zero-material topology closures for door openings the frozen door-closure rule leaves |
@@ -592,7 +592,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `opening_evidence.py` | 55 | MEDIUM | 2 | OPENING_EVIDENCE_V2 - an opening is not one status: count, width, height, area, function and material each carry |
 | `opening_facts.py` | 49 | MEDIUM | 2 | OPENING PHYSICAL CLASS FACTS (R8.17) - what ONE bound opening IS (a sliding glass door, a full-height glazed |
 | `opening_gaps.py` | 50 | MEDIUM | 5 | OPENING GAPS WITH A UNIT-RELATIVE MERGE TOLERANCE (M9 S6, ARCH_TAKEOFF_V2) - opening_census.band_gaps merges the two |
-| `opening_height_pdf.py` | 391 | MEDIUM | 1 | OPENING HEIGHT FROM A PDF (T-082): printed opening heights read from VECTOR PDF elevation and section sheets and |
+| `opening_height_pdf.py` | 354 | MEDIUM | 3 | OPENING HEIGHT FROM A PDF (T-082): printed opening heights read from VECTOR PDF elevation and section sheets and |
+| `opening_height_pdf_v2.py` | 797 | MEDIUM | 4 | OPENING HEIGHT FROM A PDF, V2 (T-465 r2, owner directive 2026-11-02 D4): the same method as OPENING_HEIGHT_PDF_V1 |
 | `opening_omission_guard.py` | 497 | MEDIUM | 1 | OPENING OMISSION GUARD (T-077): every drawn window and door appears once - MEASURED by the engine, or HELD with |
 | `opening_register.py` | 143 | MEDIUM | 2 | OPENING REGISTER (RC1) - one record per physical opening occurrence, with the authority of every attribute. |
 | `opening_reveals.py` | 106 | MEDIUM | 4 | OPENING REVEAL SURFACES (R8.14) - the jambs and soffit of an opening as their own surfaces, each owned once. |
@@ -606,7 +607,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `physical_wall_faces.py` | 80 | MEDIUM | 1 | PHYSICAL_WALL_FACE_REGISTER - wall faces exist before any finish decision (generic). |
 | `planar_shadow_topology.py` | 334 | CRITICAL | 1 | PLANAR_SHADOW_TOPOLOGY_V1 - an independent planar-graph route for validating physical spaces (Route B). |
 | `plane_poly.py` | 167 | HIGH | 11 | PLANE POLYGONS (M9 S2) - the small set of exact planar operations the polygon layouts need (generic; stdlib only). |
-| `plot_edge_members.py` | 673 | MEDIUM | 2 | PLOT EDGE MEMBERS V1 - the foundation members along a plot boundary as SEPARATE lines (owner Q-12 = B): the |
+| `plot_edge_members.py` | 694 | MEDIUM | 3 | PLOT EDGE MEMBERS V1 - the foundation members along a plot boundary as SEPARATE lines (owner Q-12 = B): the |
 | `pool_checklist.py` | 302 | MEDIUM | 1 | POOL CHECK LIST V1 (T-057) - for every villa with a pool: is a pool pump room drawn, where are the main manholes, |
 | `pool_qto.py` | 589 | CRITICAL | 4 | SWIMMING POOL QTO - source-controlled concrete and reinforcement quantities for a pool shell (generic). |
 | `population_conservation.py` | 88 | MEDIUM | 4 | PHYSICAL_POPULATION_CONSERVATION (generic). |
@@ -716,7 +717,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
 | `topology_policy.py` | 159 | HIGH | 9 | TOPOLOGY_TOLERANCE_POLICY (R8.8) - frozen BEFORE any room total of any project was looked at. |
 | `traceability.py` | 124 | MEDIUM | 2 | BOQ TRACEABILITY (M9 Phase 2B-3, ARCH_TAKEOFF_V2.5 only) - one chain per BOQ line: |
-| `trade_completeness_v1.py` | 544 | MEDIUM | 9 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
+| `trade_completeness_v1.py` | 544 | HIGH | 10 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
 | `trade_dependency.py` | 132 | MEDIUM | 2 | TRADE_DEPENDENCY_MATRIX - which evidence a trade quantity needs, and how a physical space that holds several |
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
@@ -751,7 +752,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `affine.py` | 68 | HIGH | 5 | 2D affine maps for K1: x' = a x + c y + e, y' = b x + d y + f. |
 | `census.py` | 82 | HIGH | 3 | Per-entity SOURCE CAPABILITY CENSUS (R8.2) — one row per thing the source engine |
 | `kernel.py` | 365 | HIGH | 17 | K1 — Urban's canonical CAD geometry kernel. |
-| `kernel_ezdxf.py` | 348 | HIGH | 11 | K2 — the second, independent CAD geometry route: DXF parsed and placed by ezdxf. |
+| `kernel_ezdxf.py` | 348 | HIGH | 14 | K2 — the second, independent CAD geometry route: DXF parsed and placed by ezdxf. |
 | `kernel_ocs.py` | 109 | HIGH | 2 | OCS -> WCS for K1: an Urban-owned Arbitrary Axis Algorithm, fail-closed. |
 | `libredwg_map.py` | 489 | HIGH | 10 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
@@ -784,7 +785,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
-| `boq_export_v1.py` | 1914 | HIGH | 16 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
+| `boq_export_v1.py` | 1954 | HIGH | 17 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
 | `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
@@ -873,7 +874,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `v30_gate_b_v2.py` | 1050 | MEDIUM | 5 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
-`tools/boq_export_v1.py` symbols: class ExportError (L237-238), def sha256_bytes (L243-244), def sort_key (L316-318), def group_key (L321-322), def identity (L327-344), def check_zero (L347-354), def v1_verdict_refs (L359-377), def schema_document (L380-429), def validate_v2 (L436-496), def line_bound (L514-516), def validate_v2_set (L530-538), def lines_sha256 (L541-543), def line_content_sha256 (L546-553), def own_content_status (L556-564), def verdict_add (L567-611), def validate_downgrade (L614-647), def downgrade_add (L650-679), def apply_downgrades (L682-745), def verdict_set_append (L752-770), def verdict_rebind (L773-836), def copy_json (L839-840), def bind_verdict (L843-893), def na_has_evidence (L899-902), def scope_split (L905-921), def completeness_passes (L924-936), def report_check (L950-959), def report_unmeasured_rows (L962-1009), def completeness_from_report (L1012-1078), def completeness_text (L1081-1091), def build (L1135-1302), def contract_view (L1360-1425), def contractual_rows (L1428-1436), def contract_summary (L1439-1463), def csv_bytes (L1478-1484), def xlsx_write (L1487-1512), def project_identity (L1525-1551), def export (L1554-1667), def semantic_sha256 (L1670-1673), def read_csv (L1676-1679), def main_verdict_add (L1699-1739), def main_downgrade_add (L1742-1782), def main_verdict_rebind (L1785-1827), def main_verdict_validate (L1830-1839), def main (L1842-1909)
+`tools/boq_export_v1.py` symbols: class ExportError (L238-239), def sha256_bytes (L244-245), def sort_key (L317-319), def group_key (L322-323), def identity (L328-345), def check_zero (L348-355), def v1_verdict_refs (L360-378), def schema_document (L381-430), def validate_v2 (L437-497), def line_bound (L515-517), def validate_v2_set (L531-539), def lines_sha256 (L542-544), def line_content_sha256 (L547-554), def own_content_status (L557-565), def verdict_add (L568-612), def validate_downgrade (L615-648), def downgrade_add (L651-680), def apply_downgrades (L683-746), def verdict_set_append (L753-771), def verdict_rebind (L774-837), def copy_json (L840-841), def bind_verdict (L844-894), def na_has_evidence (L900-903), def scope_split (L906-922), def completeness_passes (L925-937), def report_check (L951-960), def report_unmeasured_rows (L963-1010), def completeness_from_report (L1013-1079), def wp_overlay (L1082-1112), def completeness_text (L1115-1125), def build (L1169-1340), def contract_view (L1398-1463), def contractual_rows (L1466-1474), def contract_summary (L1477-1501), def csv_bytes (L1516-1522), def xlsx_write (L1525-1550), def project_identity (L1563-1589), def export (L1592-1705), def semantic_sha256 (L1708-1711), def read_csv (L1714-1717), def main_verdict_add (L1737-1777), def main_downgrade_add (L1780-1820), def main_verdict_rebind (L1823-1865), def main_verdict_validate (L1868-1877), def main (L1880-1949)
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)
 
@@ -1329,6 +1330,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t379_census_guard_class/` | 1 |
 | `tests/t380_drainage_census/` | 1 |
 | `tests/t381_rfi_rows/` | 1 |
+| `tests/t383_wp_completeness_join/` | 2 |
 | `tests/t384_currency_guard/` | 1 |
 | `tests/t385_concrete_recon/` | 2 |
 | `tests/t386_provenance_guard/` | 1 |
@@ -1396,6 +1398,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t459_lap_rule/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
 | `tests/t463_git_history/` | 1 |
+| `tests/t464_worktree_git_stamp/` | 1 |
+| `tests/t465_k1_boundary/` | 1 |
+| `tests/t465_pdf_reader_v2/` | 3 |
 | `tests/t467_released_freeze/` | 1 |
 | `tests/t469_trade_scoreboard/` | 1 |
 | `tests/t470_drawing_guard/` | 1 |
@@ -1662,7 +1667,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t233/` | 7 |
 | `research/agents_t234/` | 5 |
 | `research/agents_t235/` | 2 |
-| `research/agents_t236/` | 7 |
+| `research/agents_t236/` | 11 |
 | `research/agents_t237/` | 9 |
 | `research/agents_t238/` | 6 |
 | `research/agents_t239/` | 4 |
@@ -1860,6 +1865,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t458/` | 2 |
 | `research/agents_t459/` | 3 |
 | `research/agents_t463/` | 3 |
+| `research/agents_t465/` | 2 |
 | `research/agents_t469/` | 11 |
 | `research/agents_t471/` | 7 |
 | `research/agents_t474/` | 6 |

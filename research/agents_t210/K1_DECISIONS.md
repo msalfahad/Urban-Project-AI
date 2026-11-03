@@ -24,7 +24,7 @@ Decisions (definitions in the JSON):
 |---|---|---|---|
 | ALLOWED_OUTSIDE_K1 | 17 shapely + 1 numpy | registered in B-5 and pinned in requirements.txt; the module is not K1 and no K1 module reaches it | option 1 (recommended): scope the stdlib-only assertion to the K1 kernel (`EXPECTED_MODULES`), leaving the rest to the B-5 register and to this record's completeness test; option 2: add each file to `by_design` citing its record. Both are test changes: Lead / owner only |
 | OUTSIDE_K2_GATE | arch_v30, arch_v302, concrete_ledger_v3, opening_area, plot_edge_members | ezdxf is registered with the role "D2/K2 route only" but these import it outside kernel_ezdxf.py | the next version of each module takes the DXF document / curve flattening / XCLIP test from the K2 route kernel_ezdxf.py, byte-identical on its tests and on the candidate run; never edited in place (arch_v30 / arch_v302 are inside the Gate-B-verified V3.0.x chain) |
-| NOT_REGISTERED_HOLD | opening_height_pdf | pymupdf is not in the B-5 register | see (b) |
+| NOT_REGISTERED_HOLD | opening_height_pdf | pymupdf is not in the B-5 register | see (b); CLOSED by T-465 r2: V1 reads through OPENING_HEIGHT_PDF_V2 (pypdf, registered); record moved to "closed" |
 
 Why recommend option 1: requirements.txt states that shapely IS the project's geometry kernel ("This project does NOT
 own one"), so a stdlib-only rule over every engine/source module contradicts the repository's own dependency policy;

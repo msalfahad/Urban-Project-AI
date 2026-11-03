@@ -52,6 +52,7 @@ import math
 from engine.source import concrete_strip_guard as SG
 
 METHOD = "PLOT_EDGE_MEMBERS_V1"
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-212 / T-465: strap pieces read by arch_v30, inherited by V3.0.6
 RULES = ("UP-QTY-STATUS-001", "UP-KB-PREC-001", "OWNER-Q-12", "OWNER-Q-16", "OWNER-Q-19", "OWNER-Q-25",
          "OWNER-Q-28", "OWNER-Q-31")
 GAP_TOL_M = 1e-6               # owner direction via the scout (R-05a): loops close at this gap only
@@ -153,10 +154,30 @@ def _xclipped(ins):
     try:
         if not ins.has_extension_dict:
             return False
-        from ezdxf.xclip import XClip
-        return bool(XClip(ins).has_clipping_path)
+        return _has_spatial_filter(ins)
     except Exception:                       # noqa: BLE001  (an unreadable filter is treated as a clip: HELD)
         return True
+
+
+_DICTIONARY_TYPES = ("DICTIONARY", "ACDBDICTIONARYWDFLT")   # ezdxf Dictionary and its DictionaryWithDefault subclass
+
+
+def _has_spatial_filter(ins):
+    """T-465: ezdxf.xclip.XClip(ins).has_clipping_path (ezdxf 1.4.4 xclip.get_spatial_filter) read from the entity's
+    own extension dictionary, so this K1 module imports no ezdxf: extension dict -> ACAD_FILTER (a DICTIONARY) ->
+    SPATIAL (a SPATIAL_FILTER). Same answer as XClip on every case (tests/t465_k1_boundary); errors still raise to
+    _xclipped, which treats an unreadable filter as clipped (HELD)."""
+    if ins.dxftype() != "INSERT":                      # XClip refuses a non-INSERT (DXFTypeError -> _xclipped: HELD)
+        raise TypeError(f"INSERT entity required, got {ins.dxftype()}")
+    try:
+        xdict = ins.get_extension_dict()
+    except AttributeError:
+        return False
+    acad_filter = xdict.get("ACAD_FILTER")
+    if acad_filter is None or not hasattr(acad_filter, "dxftype") or acad_filter.dxftype() not in _DICTIONARY_TYPES:
+        return False
+    sf = acad_filter.get("SPATIAL")
+    return sf is not None and hasattr(sf, "dxftype") and sf.dxftype() == "SPATIAL_FILTER"
 
 
 def _poly_points(e):
