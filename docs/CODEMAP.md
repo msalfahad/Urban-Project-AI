@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 698 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 699 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4414 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4419 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 49 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2071 | pytest suites, one folder per round. |
+| `tests/` | 2074 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -173,7 +173,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `portal_match.py` | 314 | CRITICAL | 5 | Which wall does this door belong to — asked locally, or not answered. |
 | `portal_topology_fixtures.py` | 283 | HIGH | 1 | E102 — eleven doorways, three answers each, and no real drawing involved. |
 | `preliminaries.py` | 74 | MEDIUM | 2 | E17 — Preliminaries. |
-| `project_config.py` | 415 | MEDIUM | 5 | Per-project configuration: the DECLARED PROJECT FACTS of one villa (A1 class B). |
+| `project_config.py` | 415 | MEDIUM | 7 | Per-project configuration: the DECLARED PROJECT FACTS of one villa (A1 class B). |
 | `qa_workbook.py` | 1709 | MEDIUM | 4 | E40 — the read-only QA workbook. A window, never a valve. |
 | `qa_writer.py` | 97 | MEDIUM | 2 | E40 writer — puts the QA workbook on disk as .xlsx and adds no values. |
 | `qs_measurement_region.py` | 287 | MEDIUM | 9 | QS_MEASUREMENT_REGION_BUILDER - deterministic, geometry only. |
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (345 modules)
+## `engine/source/` (346 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -463,6 +463,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `beam_section_cut_binding.py` | 429 | MEDIUM | 1 | BEAM SECTION CUT BINDING V1 (T-102): a printed beam section settles the ONE beam span its cut line crosses. |
 | `benchmark_firewall.py` | 149 | MEDIUM | 1 | BENCHMARK FIREWALL (V1) - prove what a measurement run did NOT read. |
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
+| `blockwork_basis_rules_v1.py` | 259 | MEDIUM | 1 | BLOCKWORK_BASIS_RULES_V1: drawing-derived blockwork (masonry) basis rules (A1 class A, T-449 round 3 = blockwork). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
 | `boq_line.py` | 386 | HIGH | 143 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
@@ -1391,6 +1392,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t448_company_rulebook/` | 1 |
 | `tests/t449_correction_register/` | 2 |
 | `tests/t449_round2_rebar/` | 2 |
+| `tests/t449_round3_blockwork/` | 2 |
 | `tests/t450_project_config/` | 1 |
 | `tests/t456_finish_area_units/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
@@ -1858,7 +1860,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t445/` | 7 |
 | `research/agents_t446/` | 6 |
 | `research/agents_t447/` | 6 |
-| `research/agents_t449/` | 9 |
+| `research/agents_t449/` | 14 |
 | `research/agents_t456/` | 3 |
 | `research/agents_t458/` | 2 |
 | `research/agents_t459/` | 3 |
