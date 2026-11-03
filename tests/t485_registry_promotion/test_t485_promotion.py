@@ -15,7 +15,8 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
-for p in (ROOT, ROOT / "research" / "agents_t469", ROOT / "research" / "agents_t479", ROOT / "research" / "agents_t485"):
+for p in (ROOT, ROOT / "research" / "agents_t469", ROOT / "research" / "agents_t479", ROOT / "research" / "agents_t485",
+          ROOT / "research" / "agents_t492"):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
@@ -23,6 +24,7 @@ from tools import family_master_candidate as FMC  # noqa: E402
 import t479_registry_census as C  # noqa: E402
 import t485_package_families as PF  # noqa: E402
 import build_master_1_43_0 as B  # noqa: E402
+import working_branch_merge as WBM  # noqa: E402
 
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.42.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.43.0.json"
@@ -157,9 +159,16 @@ def _git(*a):
     return subprocess.run(["git", "-C", str(ROOT), *a], capture_output=True, text=True)
 
 
+_MERGED = []
+
+
 def _merged(commit):
-    """the task commit is on the checked head (a READY package's commit is on its own branch only)"""
-    return FMC.git_is_ancestor(commit, "HEAD", root=ROOT)
+    """T-492 (Lead ruling F-C-T443-1): the task commit reached the WORKING BRANCH (origin/<working branch>, or the
+    working branch itself checked out ahead of it), never merely an ancestor of HEAD: on a READY package's own branch,
+    or on a trial merge of it, its own pending entry is legitimate (research/agents_t492/working_branch_merge.py)"""
+    if not _MERGED:
+        _MERGED.append(WBM.make_merged(ROOT))
+    return _MERGED[0](commit)
 
 
 def test_a_merged_package_never_stays_pending_in_the_newest_registry():
