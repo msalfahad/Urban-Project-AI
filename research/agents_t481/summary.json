@@ -1,0 +1,56 @@
+{
+ "basis": "ARCH_TAKEOFF_V3.0.44 FIN.SKIRTING (json 8b2fe2b6), research ledger, no candidate change",
+ "dressing": {
+  "deductions": {
+   "arch A-1F-01 arch120 BEC": 1.0,
+   "door D315 BEE": 0.8
+  },
+  "gross_lm": 6.9,
+  "joinery_backed_lm": 2.8,
+  "skirting_lm": 5.1
+ },
+ "shaft": {
+  "living_net_after_binding": 32.38536,
+  "room_floor_level_lm": 1.175,
+  "stair_owned_lm": 9.05,
+  "t250_walk_in_line_lm": 10.232,
+  "unknown_lm": 0.0,
+  "walk_closure_residual_lm": 0.007
+ },
+ "task": "T-481",
+ "totals": {
+  "certain_after": 198.828591,
+  "certain_after_shaft_binding": 189.778591,
+  "certain_before": 189.818752,
+  "certain_delta": 9.009839,
+  "certain_includes_stair_owned_up_to_lm": 9.05,
+  "freelancer": 282.85,
+  "gap_after_binding_pct": -32.9,
+  "gap_after_lm": -84.021409,
+  "gap_after_pct": -29.71,
+  "held_high_after": 0.0,
+  "held_high_before": 15.730915
+ },
+ "windows": {
+  "W02": {
+   "decision": "NOT_SKIRTED",
+   "spread_m": 0.0,
+   "why": "1 view(s) agree"
+  },
+  "W11": {
+   "decision": "SKIRTED",
+   "spread_m": 0.15,
+   "why": "3 view(s) agree"
+  },
+  "W12": {
+   "decision": "SKIRTED",
+   "spread_m": 0.15,
+   "why": "3 view(s) agree"
+  },
+  "W17": {
+   "decision": "NOT_SKIRTED",
+   "spread_m": 0.0,
+   "why": "1 view(s) agree"
+  }
+ }
+}
