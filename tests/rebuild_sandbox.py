@@ -75,6 +75,19 @@ def _git_dir(root: Path) -> Path:
     return dot.resolve()
 
 
+def _readable_git_dir(root: Path) -> Path:
+    """`_git_dir(root)`, refused loudly when git cannot read a commit there (T-464: a worktree whose admin directory was
+    pruned or recreated, or a tree with no `.git` at all). Without this check the copy pointed at a dead git dir, git
+    failed inside the builder and every stamp silently became UNCOMMITTED, which surfaced only as a byte diff."""
+    gd = _git_dir(root)
+    p = subprocess.run(["git", "--git-dir", str(gd), "rev-parse", "--verify", "-q", "HEAD^{commit}"],
+                       capture_output=True, text=True)
+    if p.returncode:
+        raise RuntimeError(f"rebuilt_package(git=True): {gd} (from {root / '.git'}) is not a readable git directory "
+                           f"with a HEAD commit; refusing a rebuild whose stamps would read UNCOMMITTED")
+    return gd
+
+
 GIT_ABBREV = "7"  # git's own minimum abbreviation, the length every committed package stamp was written with
 
 
@@ -98,13 +111,14 @@ def rebuilt_package(root, builder, *args, git=False):
     root = Path(root)
     builder = Path(builder)
     rel = builder.relative_to(root) if builder.is_absolute() else builder
+    gitdir = _readable_git_dir(root) if git else None
     before = _tree_state(root)
     with tempfile.TemporaryDirectory(prefix="urban_rebuild_") as td:
         copy = Path(td) / root.name
         shutil.copytree(root, copy, symlinks=True, ignore=shutil.ignore_patterns(*SKIP))
         env = None
         if git:
-            (copy / ".git").write_text(f"gitdir: {_git_dir(root)}\n", encoding="utf-8")
+            (copy / ".git").write_text(f"gitdir: {gitdir}\n", encoding="utf-8")
             env = _git_env(os.environ)
         cmd = [sys.executable, "-I", str(copy / rel), *(_remap(a, root, copy) for a in args)]
         proc = subprocess.run(cmd, capture_output=True, cwd=copy, env=env)

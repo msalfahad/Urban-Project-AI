@@ -10,7 +10,23 @@ the ledger (n known)". The machine-readable ledger is `known_failures.json` (one
 cause, evidence line, first failing commit and its basis, owner); rebuild it only from a full-suite run with
 `build_ledger.py RUN.txt <head sha>`, which refuses any failure no listed cause explains.
 
-## 1. Head and run
+## 0. Current ledger (T-466, owner directive 2026-11-02 D5): EMPTY, 0 known failures
+
+- The ledger holds REAL known failures only, so a red test always means something is wrong. An environment failure
+  (private input absent, worktree or shallow-clone git layout, network or machine limit) is never a ledger cause:
+  `build_ledger.py` refuses the codes in `ENVIRONMENT_CODES`, and a failure no diagnosed cause covers stops the build.
+- Full suite on the task tree of T-466 (code = working head `983b75f4`; this change touches only this ledger, its builder,
+  one assertion of tests/t202 and the new tests/t466), Python 3.11.18 venv, two halves of the 665 top-level entries
+  of tests/ run in parallel with the wrapper, 2026-11-03 00:49 - 01:01 UTC: 17,782 passed, 622 skipped (377 private-input
+  phases with the reason; private files absent per half 41 and 52; the rest pre-existing skips), 105 xfailed, **0 failed, 0 errors**,
+  exit 0 for both halves. The run on the final commit is recorded in the T-466 board handoff.
+- What happened to the 396 ids of the T-202 ledger below (head d699b650): PRIVATE_INPUT_ABSENT 390 ids in 38 files ->
+  SKIPPED since T-462 (each file declares `PRIVATE_INPUTS` or calls `require_private`; tests/t466 keeps it so);
+  WORKTREE_GITDIR 1 -> passes since T-210 / T-464; DEPENDENCY_NOT_REGISTERED 2, K1_NOT_STDLIB 1, K1_IMPORTS_EZDXF 2 ->
+  fixed by T-465 (0 failures on 1d892eb4). The follow-ups of section 4 are therefore done (1: T-464, 2-3: T-465, 4: T-462).
+- Sections 1-4 are the T-202 history and no longer describe the head.
+
+## 1. Head and run (T-202 history)
 
 - Head: `d699b650` (Merge T-200, 2026-10-23 07:00 UTC), full suite `bash scripts/agent_env.sh pytest --tree task-T-202
   tests/` (Python 3.11.17 venv, pinned requirements), 07:03 - 07:22 UTC.

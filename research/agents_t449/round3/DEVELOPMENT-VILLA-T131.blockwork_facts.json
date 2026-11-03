@@ -1,0 +1,118 @@
+{
+ "schema": "URBAN_PROJECT_CONFIG_V1",
+ "project_id": "DEVELOPMENT-VILLA-T131",
+ "config_version": "1.0.0",
+ "note": "T-449 round 3 (blockwork): declared facts of the training villa's masonry lines. NOT declared: STOREY_HEIGHT.GF.ANNEX (owner Q-54 B: HOLD; the annex walls stay HELD); the 15 cm black block module (no masonry line counts blocks). The parapet RC upstand is the round-1 concrete fact.",
+ "facts": [
+  {
+   "fact_id": "STOREY_HEIGHT.GF.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 4.5,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "p7757_arch_sheet10.pdf section A-A level chain '450' (T-112); = structural tops +5.45 - +0.95 (round 1 LEVEL.STRUCTURAL_TOP.1F.MAIN - LEVEL.STRUCTURAL_TOP.GF.MAIN); owner Q-60 A uses it"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "by": "DESIGNER",
+    "date": "2026-10-20"
+   },
+   "affected_lines": [
+    "L-0531a33e040440c62453",
+    "L-0d9b9e89bb6455da475d",
+    "L-4165954ce4871eda30cc",
+    "L-4423d85b72b4b4c3e87e",
+    "L-63fa78622c74a1c30a1e",
+    "L-ed4cf41543c66921a592"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "a DRAWING-CONFIRMED reading of the printed set (architectural section chain), not a designer approval (Checker F-C-T449-1); the same storey heights every Checker-verified wall of register v4 uses"
+  },
+  {
+   "fact_id": "STOREY_HEIGHT.1F.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 4.2,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "p7757_arch_sheet10.pdf section A-A level chain '420' (T-112); = structural tops +9.65 - +5.45 (round 1 level facts); owner Q-60 A uses it"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "by": "DESIGNER",
+    "date": "2026-10-20"
+   },
+   "affected_lines": [
+    "L-398e95f4d0c65a04525b",
+    "L-5ffa7157a2fe483dd008",
+    "L-9a560362d91a6e60fd19",
+    "L-9cfe344301b76af03843",
+    "L-a471bd68df73e822c28a",
+    "L-c22e309433e7b671cf2d"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "a DRAWING-CONFIRMED reading of the printed set (architectural section chain), not a designer approval (Checker F-C-T449-1); the same storey heights every Checker-verified wall of register v4 uses"
+  },
+  {
+   "fact_id": "STOREY_HEIGHT.2F.MAIN",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 4.2,
+   "unit": "m",
+   "source": {
+    "kind": "DRAWING",
+    "reference": "p7757_arch_sheet10.pdf section A-A level chain '420' between the 2F slab and the main roof slab (T-112); owner Q-60 A uses it"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "by": "DESIGNER",
+    "date": "2026-10-20"
+   },
+   "affected_lines": [
+    "L-0d84cdb4f25220863c80",
+    "L-0e002eb073c9460e90db",
+    "L-14d6c60fe753e2bae0b4",
+    "L-246f3c09de4c6b90efe5",
+    "L-4f133d45c6e67ddbf631",
+    "L-afe984a62285e133ec2f"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "a DRAWING-CONFIRMED reading of the printed set (architectural section chain), not a designer approval (Checker F-C-T449-1); the same storey heights every Checker-verified wall of register v4 uses; the main roof structural top is NOT declared as a level (round 1 holds 13 columns at it, D-39 / Q-54 B): finding F-T449-R3-1 for the Checker"
+  },
+  {
+   "fact_id": "OPENING.DOOR.FALLBACK_HEIGHT",
+   "version": 1,
+   "quantity_kind": "LENGTH",
+   "value": 2.2,
+   "unit": "m",
+   "source": {
+    "kind": "OWNER_DECISION",
+    "reference": "OWNER_QUESTIONS_ANSWERED Q-55 C: Urban fallback internal door height 2.20 m, ASSUMED, only where the drawings are silent; measured width kept"
+   },
+   "approval": {
+    "status": "APPROVED",
+    "by": "PROJECT_OWNER",
+    "date": "2026-10-20"
+   },
+   "affected_lines": [
+    "L-0531a33e040440c62453",
+    "L-0d84cdb4f25220863c80",
+    "L-0d9b9e89bb6455da475d",
+    "L-246f3c09de4c6b90efe5",
+    "L-398e95f4d0c65a04525b",
+    "L-4165954ce4871eda30cc",
+    "L-4423d85b72b4b4c3e87e",
+    "L-4f133d45c6e67ddbf631",
+    "L-63fa78622c74a1c30a1e",
+    "L-9cfe344301b76af03843",
+    "L-c22e309433e7b671cf2d",
+    "L-ed4cf41543c66921a592"
+   ],
+   "confidence": "CONFIRMED",
+   "note": "evidence status ASSUMED — OWNER-APPROVED on every wall that deducts such a door"
+  }
+ ]
+}

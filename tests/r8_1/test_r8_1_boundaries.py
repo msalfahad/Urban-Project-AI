@@ -72,6 +72,7 @@ def test_k1_is_stdlib_only_in_r8_1():
                  # numpy==2.4.6). Checked entry by entry by research/agents_t257/k1_declarations.py (T-257).
                  # The OUTSIDE_K2_GATE (ezdxf) and NOT_REGISTERED_HOLD (pymupdf) modules are NOT declared.
                  "arch_v213.py": {"shapely"},                       # record: engine/source/arch_v213.py
+                 "arch_v3045.py": {"shapely"},                      # record: engine/source/arch_v3045.py (T-478 r3)
                  "beam_binding_v2.py": {"shapely"},                 # record: engine/source/beam_binding_v2.py
                  "concrete_overlap_ownership.py": {"numpy"},        # record: engine/source/concrete_overlap_ownership.py
                  "element_register_v0.py": {"shapely"},             # record: engine/source/element_register_v0.py
@@ -84,6 +85,7 @@ def test_k1_is_stdlib_only_in_r8_1():
                  "membrane_fold_v2.py": {"shapely"},                # record: engine/source/membrane_fold_v2.py
                  "membrane_fold_v3.py": {"shapely"},                # record: engine/source/membrane_fold_v3.py
                  "membrane_fold_v4.py": {"shapely"},                # record: engine/source/membrane_fold_v4.py
+                 "opening_height_pdf_v2.py": {"pypdf"},             # record: engine/source/opening_height_pdf_v2.py (T-465 r2)
                  "membrane_fold_v5.py": {"shapely"},                # record: engine/source/membrane_fold_v5.py
                  "room_census_guard.py": {"shapely"},               # record: engine/source/room_census_guard.py
                  "room_label_guard.py": {"shapely"},                # record: engine/source/room_label_guard.py

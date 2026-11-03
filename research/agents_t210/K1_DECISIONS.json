@@ -22,26 +22,15 @@
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
   },
   {
-   "module": "engine/source/arch_v30.py",
+   "module": "engine/source/arch_v3045.py",
    "packages": [
-    "ezdxf"
+    "shapely"
    ],
    "import_style": "nested",
-   "role": "ARCH_TAKEOFF_V3.0 opt-in candidate: reads the structural DXF (ezdxf.readfile) for the strap / footing outline pieces",
-   "decision": "OUTSIDE_K2_GATE",
-   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
-   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
-  },
-  {
-   "module": "engine/source/arch_v302.py",
-   "packages": [
-    "ezdxf"
-   ],
-   "import_style": "nested",
-   "role": "ARCH_TAKEOFF_V3.0.2 candidate: reads footing-schedule block attributes (ezdxf.readfile, INSERT attribs)",
-   "decision": "OUTSIDE_K2_GATE",
-   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
-   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+   "role": "ARCH_TAKEOFF_V3.0.45 opt-in candidate (T-478): CONC.BLINDING pieces (pit / plot-line / member overlap) on plain plan geometry with lazy shapely; not wired into the released method",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "none needed: declared in tests/r8_1/test_r8_1_boundaries.py by_design with {'shapely'}, citing this record (T-257 rule: one declaration per ALLOWED record; T-478 r3, as T-465 r2)"
   },
   {
    "module": "engine/source/beam_binding_v2.py",
@@ -53,17 +42,6 @@
    "decision": "ALLOWED_OUTSIDE_K1",
    "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
-  },
-  {
-   "module": "engine/source/concrete_ledger_v3.py",
-   "packages": [
-    "ezdxf"
-   ],
-   "import_style": "nested",
-   "role": "CONCRETE_LEDGER_V3 method piece: reads DIMENSION and LWPOLYLINE (vertices_in_wcs) of a section DXF",
-   "decision": "OUTSIDE_K2_GATE",
-   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
-   "fix_proposal": "next version of the module (never edited in place) takes the section DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
   },
   {
    "module": "engine/source/concrete_overlap_ownership.py",
@@ -198,37 +176,15 @@
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
   },
   {
-   "module": "engine/source/opening_area.py",
+   "module": "engine/source/opening_height_pdf_v2.py",
    "packages": [
-    "ezdxf"
+    "pypdf"
    ],
    "import_style": "nested",
-   "role": "OPENING_AREA_V1 method piece (T-078): the caller passes the ezdxf document; the module imports ezdxf.path lazily to flatten curves in read_view",
-   "decision": "OUTSIDE_K2_GATE",
-   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
-   "fix_proposal": "next version of the module (never edited in place) takes the curve flattening (ezdxf.path) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
-  },
-  {
-   "module": "engine/source/opening_height_pdf.py",
-   "packages": [
-    "pymupdf"
-   ],
-   "import_style": "nested",
-   "role": "OPENING_HEIGHT_PDF method piece (T-082): reads words and vectors of a PDF page (lazy pymupdf); not wired into a released method",
-   "decision": "NOT_REGISTERED_HOLD",
-   "why": "PyMuPDF is AGPL-3.0 / commercial (requirements.txt licence note by the Lead; PLAN_READER.md: never PyMuPDF); registering it would make the engine/source dependency register accept an AGPL library, which is a licence decision, not a test fix. Not registered: the two B-5 / B-6 ids (r8_0, r8_1) stay in the known-failures ledger",
-   "fix_proposal": "OPENING_HEIGHT_PDF_V2 (a new version; V1 never edited) reading the page through a reader under a permissive licence registered in B-5 first (pypdf 6.19.0 BSD is already pinned; pypdfium2 / pdfplumber per PLAN_READER.md), proven to give the same words and segments as V1 on its tests and on the vector elevation sheets it was built for; registering PyMuPDF instead needs the owner's licence decision"
-  },
-  {
-   "module": "engine/source/plot_edge_members.py",
-   "packages": [
-    "ezdxf"
-   ],
-   "import_style": "nested",
-   "role": "PLOT_EDGE_MEMBERS_V1 method piece read by ARCH_TAKEOFF_V3.0: lazy ezdxf.xclip to detect clipped inserts (HELD)",
-   "decision": "OUTSIDE_K2_GATE",
-   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
-   "fix_proposal": "next version of the module (never edited in place) takes the XCLIP test (ezdxf.xclip) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+   "role": "OPENING_HEIGHT_PDF_V2 method piece (T-465 r2): reads words and vectors of a PDF page with pypdf (lazy); V1 reads its pages through it; not wired into a released method",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "pypdf is in the B-5 register (T-465 r2, BSD-3-Clause) and requirements.txt (pypdf==6.19.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "none needed: declared in tests/r8_1/test_r8_1_boundaries.py by_design with {'pypdf'}, citing this record (T-257 rule: one declaration per ALLOWED record)"
   },
   {
    "module": "engine/source/room_census_guard.py",
@@ -273,6 +229,92 @@
    "decision": "ALLOWED_OUTSIDE_K1",
    "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  }
+ ],
+ "closed": [
+  {
+   "module": "engine/source/arch_v30.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "ARCH_TAKEOFF_V3.0 opt-in candidate: reads the structural DXF (ezdxf.readfile) for the strap / footing outline pieces",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)",
+   "closed_by": "T-465 (owner directive 2026-11-02 D4)",
+   "closed_how": "strap_changes reads the structural DXF through engine/source/cad/kernel_ezdxf.load (K2); a failed read raises OSError with the ROUTE_DECODE_FAILED detail (never 0 straps)",
+   "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/arch_v302.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "ARCH_TAKEOFF_V3.0.2 candidate: reads footing-schedule block attributes (ezdxf.readfile, INSERT attribs)",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)",
+   "closed_by": "T-465 (owner directive 2026-11-02 D4)",
+   "closed_how": "schedule_rows_from_drawing reads through engine/source/cad/kernel_ezdxf.load (K2); a failed read raises OSError (never 0 rows)",
+   "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/concrete_ledger_v3.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "CONCRETE_LEDGER_V3 method piece: reads DIMENSION and LWPOLYLINE (vertices_in_wcs) of a section DXF",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the section DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)",
+   "closed_by": "T-465 (owner directive 2026-11-02 D4)",
+   "closed_how": "read_section_drawing reads through engine/source/cad/kernel_ezdxf.load (K2); a failed read raises OSError (never 0 dims)",
+   "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/opening_area.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "OPENING_AREA_V1 method piece (T-078): the caller passes the ezdxf document; the module imports ezdxf.path lazily to flatten curves in read_view",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the curve flattening (ezdxf.path) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)",
+   "closed_by": "T-465 (owner directive 2026-11-02 D4)",
+   "closed_how": "read_view takes the curve flattening from its caller (flatten(entity, distance), the former ezdxf.path.make_path(e).flattening(d) call); a curve met without it raises FlattenNotGiven, also inside a block",
+   "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/plot_edge_members.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "PLOT_EDGE_MEMBERS_V1 method piece read by ARCH_TAKEOFF_V3.0: lazy ezdxf.xclip to detect clipped inserts (HELD)",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the XCLIP test (ezdxf.xclip) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)",
+   "closed_by": "T-465 (owner directive 2026-11-02 D4)",
+   "closed_how": "_xclipped reads ACAD_FILTER / SPATIAL from the insert's own extension dictionary (same answer as ezdxf.xclip.XClip.has_clipping_path on every case); an unreadable filter stays clipped (HELD)",
+   "proof": "tests/t465_k1_boundary"
+  },
+  {
+   "module": "engine/source/opening_height_pdf.py",
+   "packages": [
+    "pymupdf"
+   ],
+   "import_style": "nested",
+   "role": "OPENING_HEIGHT_PDF method piece (T-082): reads words and vectors of a PDF page (lazy pymupdf); not wired into a released method",
+   "decision": "NOT_REGISTERED_HOLD",
+   "why": "PyMuPDF is AGPL-3.0 / commercial (requirements.txt licence note by the Lead; PLAN_READER.md: never PyMuPDF); registering it would make the engine/source dependency register accept an AGPL library, which is a licence decision, not a test fix. Not registered: the two B-5 / B-6 ids (r8_0, r8_1) stay in the known-failures ledger",
+   "fix_proposal": "OPENING_HEIGHT_PDF_V2 (a new version; V1 never edited) reading the page through a reader under a permissive licence registered in B-5 first (pypdf 6.19.0 BSD is already pinned; pypdfium2 / pdfplumber per PLAN_READER.md), proven to give the same words and segments as V1 on its tests and on the vector elevation sheets it was built for; registering PyMuPDF instead needs the owner's licence decision",
+   "closed_by": "T-465 r2 (owner directive 2026-11-02 D4)",
+   "closed_how": "page_primitives reads the page through engine/source/opening_height_pdf_v2.py (OPENING_HEIGHT_PDF_V2, pypdf 6.19.0 BSD-3-Clause, registered in B-5); the module no longer imports pymupdf and PyMuPDF stays unregistered",
+   "proof": "tests/t465_pdf_reader_v2 (words and segments equal to the former PyMuPDF reading, value for value and id for id, on the T-082 sheets and the adverse pages)"
   }
  ]
 }

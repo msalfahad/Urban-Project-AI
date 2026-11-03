@@ -18,12 +18,15 @@ from research.agents_t257 import k1_declarations as D
 
 ROOT = Path(__file__).resolve().parents[2]
 
-# hand list (research/agents_t210/K1_DECISIONS.md rows 2, 3, 5, 18, 19, 20): what the K1 test may still meet
-NOT_DECLARABLE = {"engine/source/arch_v30.py": "OUTSIDE_K2_GATE", "engine/source/arch_v302.py": "OUTSIDE_K2_GATE",
-                  "engine/source/concrete_ledger_v3.py": "OUTSIDE_K2_GATE",
-                  "engine/source/opening_area.py": "OUTSIDE_K2_GATE",
-                  "engine/source/opening_height_pdf.py": "NOT_REGISTERED_HOLD",
-                  "engine/source/plot_edge_members.py": "OUTSIDE_K2_GATE"}
+# hand list (research/agents_t210/K1_DECISIONS.md rows 2, 3, 5, 18, 19, 20): what the K1 test may still meet.
+# T-465: the five OUTSIDE_K2_GATE modules (rows 2, 3, 5, 18, 20) no longer import ezdxf; their records moved to the
+# record's "closed" list (each with closed_by / closed_how / proof). T-465 r2: the pymupdf module (row 19) reads its
+# pages through OPENING_HEIGHT_PDF_V2 (pypdf, registered); its record is closed and V2 has its own ALLOWED record and
+# declaration, so NOTHING undeclarable remains and the K1 test itself passes (pinned below, not merely tolerated).
+NOT_DECLARABLE = {}
+CLOSED_BY_T465 = {"engine/source/arch_v30.py", "engine/source/arch_v302.py", "engine/source/concrete_ledger_v3.py",
+                  "engine/source/opening_area.py", "engine/source/plot_edge_members.py",
+                  "engine/source/opening_height_pdf.py"}
 
 
 # ------------------------------------------------------------------------------------------------ real tree
@@ -31,29 +34,26 @@ NOT_DECLARABLE = {"engine/source/arch_v30.py": "OUTSIDE_K2_GATE", "engine/source
 def test_every_declaration_is_backed_by_an_allowed_record_and_nothing_else_is_declared():
     problems, f = D.check(ROOT, V1.load_record())
     assert problems == [], problems
-    assert len(f["declarations"]) == 18
+    assert len(f["declarations"]) == 20                         # 18 + opening_height_pdf_v2 (pypdf, T-465 r2) + arch_v3045 (shapely, T-478 r3)
     assert f["r8_era"] == D.R8_ERA
-    assert len(f["offenders"]) == 24          # the record still covers all 24 (no STALE through a declaration)
+    # 20: the 24 of the sweep less the 6 closed by T-465, plus the two new ALLOWED modules opening_height_pdf_v2 and
+    # arch_v3045 (T-478 r3)
+    assert len(f["offenders"]) == 24 - len(CLOSED_BY_T465) + 2
+    assert {r["module"] for r in V1.load_record()["closed"]} == CLOSED_BY_T465
 
 
-def test_the_k1_test_still_meets_exactly_the_six_undeclarable_modules():
+def test_the_k1_test_still_meets_exactly_the_undeclarable_module():
     _, f = D.check(ROOT, V1.load_record())
     recs = {r["module"]: r["decision"] for r in V1.load_record()["records"]}
     assert {m: recs[m] for m in f["remaining"]} == NOT_DECLARABLE
 
 
-def test_the_k1_test_itself_fails_on_an_undeclarable_module_not_on_a_declared_one():
-    """run the K1 test's own loop (copied logic is NOT used: the function is called) and read its first offender."""
+def test_the_k1_test_itself_passes_now_that_no_module_is_undeclarable():
+    """run the K1 test's own loop (copied logic is NOT used: the function is called). T-465 r2: it PASSES on the tree;
+    the adverse synthetic cases below keep proving that it still fails on an undeclarable module."""
     from tests.r8_1 import test_r8_1_boundaries as T
-    try:
-        T.test_k1_is_stdlib_only_in_r8_1()
-    except AssertionError as err:
-        first = str(err).splitlines()[0]          # pytest rewrites the message: "('<path>', '<import>')\nassert ..."
-    else:
-        raise AssertionError("K1 test passed although six modules are not declarable: re-check the record")
-    rel, name = ast.literal_eval(first)
-    assert rel in NOT_DECLARABLE, rel
-    assert name.split(".")[0] in ("ezdxf", "pymupdf"), name
+    assert NOT_DECLARABLE == {}
+    T.test_k1_is_stdlib_only_in_r8_1()
 
 
 def test_k1_assertion_and_core_list_are_unchanged():
@@ -68,8 +68,8 @@ def test_k1_assertion_and_core_list_are_unchanged():
 
 def test_declared_packages_are_pinned_and_registered_on_the_tree():
     _, f = D.check(ROOT, V1.load_record())
-    assert f["pins"]["shapely"] == "2.2.0" and f["pins"]["numpy"] == "2.4.6"
-    assert {p for v in f["declarations"].values() for p in v} == {"shapely", "numpy"}
+    assert f["pins"]["shapely"] == "2.2.0" and f["pins"]["numpy"] == "2.4.6" and f["pins"]["pypdf"] == "6.19.0"
+    assert {p for v in f["declarations"].values() for p in v} == {"shapely", "numpy", "pypdf"}
 
 
 # --------------------------------------------------------------------------------------------- synthetic tree

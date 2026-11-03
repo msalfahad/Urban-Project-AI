@@ -1,0 +1,618 @@
+{
+ "components": [
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-01",
+   "conflict": null,
+   "family": "B8-01",
+   "gate": "HELD",
+   "inventory_elements": 0,
+   "lines": 35,
+   "reason": "17 of 35 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [],
+   "wp_inventory": "ABSENT"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-02",
+   "conflict": null,
+   "family": "B8-02",
+   "gate": "HELD",
+   "inventory_elements": 0,
+   "lines": 41,
+   "reason": "13 of 41 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [],
+   "wp_inventory": "ABSENT"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-03",
+   "conflict": null,
+   "family": "B8-03",
+   "gate": "HELD",
+   "inventory_elements": 0,
+   "lines": 25,
+   "reason": "8 of 25 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [],
+   "wp_inventory": "ABSENT"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-05",
+   "conflict": null,
+   "family": "B8-05",
+   "gate": "HELD",
+   "inventory_elements": 0,
+   "lines": 22,
+   "reason": "1 of 22 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [],
+   "wp_inventory": "ABSENT"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-06",
+   "conflict": null,
+   "family": "B8-06",
+   "gate": "HELD",
+   "inventory_elements": 0,
+   "lines": 8,
+   "reason": "2 of 8 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [],
+   "wp_inventory": "ABSENT"
+  },
+  {
+   "applicability": "APPLICABLE",
+   "component_id": "C-B8-08",
+   "conflict": null,
+   "family": "B8-08",
+   "gate": "HELD",
+   "inventory_elements": 416,
+   "lines": 19,
+   "reason": "11 of 19 lines held",
+   "state": "APPLICABLE_HELD",
+   "whole_countable_items": [
+    "WP.FOUNDATION.LIFT_PIT_SCREED[m2]",
+    "WP.FOUNDATION.LIFT_PIT_SCREED[m3]"
+   ],
+   "wp_inventory": "INCOMPLETE"
+  }
+ ],
+ "groups_passing": [
+  [
+   "WATERPROOFING",
+   "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "m2"
+  ],
+  [
+   "WATERPROOFING",
+   "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "m3"
+  ]
+ ],
+ "inventory_counts": {
+  "IN_LINE": 320,
+  "MISSING": 0,
+  "NOT_APPLICABLE": 96
+ },
+ "project_id": "development-villa-t131",
+ "records": [
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 14,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.DOORWAY",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 13,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 14,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 18,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.FLOOR",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 22,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 17,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.PENETRATION",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 4,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.ROOF",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 4,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 7,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.TERMINATION",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "blockers": [
+    "NO WP INVENTORY FOR THIS ITEM (its family inventory is absent: an absent inventory is never 'nothing missing')"
+   ],
+   "duplicated": null,
+   "element_scope_count": 18,
+   "held": null,
+   "inventory_count": null,
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "missing": null,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 178"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 5,
+   "held": 178,
+   "inventory_count": 5,
+   "inventory_faces": {
+    "held": 178,
+    "in_line": 210,
+    "missing": 0,
+    "not_applicable": 91
+   },
+   "inventory_qty_in_line": 45.4682,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_qty": 45.4682,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 2,
+   "held": 1,
+   "inventory_count": 2,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 25,
+    "missing": 0,
+    "not_applicable": 1
+   },
+   "inventory_qty_in_line": 109.85,
+   "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+   "line_qty": 109.85,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 2,
+   "held": 1,
+   "inventory_count": 2,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 25,
+    "missing": 0,
+    "not_applicable": 1
+   },
+   "inventory_qty_in_line": 109.85,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_qty": 109.85,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 2,
+   "held": 1,
+   "inventory_count": 2,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 25,
+    "missing": 0,
+    "not_applicable": 1
+   },
+   "inventory_qty_in_line": 5.4925,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_qty": 5.4925,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m3"
+  },
+  {
+   "blockers": [
+    "HELD 25"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 1,
+   "held": 25,
+   "inventory_count": 1,
+   "inventory_faces": {
+    "held": 25,
+    "in_line": 25,
+    "missing": 0,
+    "not_applicable": 1
+   },
+   "inventory_qty_in_line": null,
+   "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+   "line_qty": null,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": null,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 2,
+   "held": 1,
+   "inventory_count": 2,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 3,
+    "missing": 0,
+    "not_applicable": 1
+   },
+   "inventory_qty_in_line": 26.73,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_qty": 26.73,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 2,
+   "held": 1,
+   "inventory_count": 2,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 4,
+    "missing": 0,
+    "not_applicable": 0
+   },
+   "inventory_qty_in_line": 47.43,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_qty": 47.43,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [],
+   "duplicated": 0,
+   "element_scope_count": 1,
+   "held": 0,
+   "inventory_count": 1,
+   "inventory_faces": {
+    "held": 0,
+    "in_line": 1,
+    "missing": 0,
+    "not_applicable": 0
+   },
+   "inventory_qty_in_line": 20.7,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_qty": 20.7,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": true,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "blockers": [],
+   "duplicated": 0,
+   "element_scope_count": 1,
+   "held": 0,
+   "inventory_count": 1,
+   "inventory_faces": {
+    "held": 0,
+    "in_line": 1,
+    "missing": 0,
+    "not_applicable": 0
+   },
+   "inventory_qty_in_line": 1.035,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_qty": 1.035,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": 0.0,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": true,
+   "trade": "WATERPROOFING",
+   "unit": "m3"
+  },
+  {
+   "blockers": [
+    "HELD 1"
+   ],
+   "duplicated": 0,
+   "element_scope_count": 1,
+   "held": 1,
+   "inventory_count": 1,
+   "inventory_faces": {
+    "held": 1,
+    "in_line": 1,
+    "missing": 0,
+    "not_applicable": 0
+   },
+   "inventory_qty_in_line": null,
+   "item_code": "WP.FOUNDATION.PROCUREMENT",
+   "line_qty": null,
+   "missing": 0,
+   "principal_trade": "WATERPROOFING",
+   "project_id": "development-villa-t131",
+   "residual": null,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "rule_id": "R-T383-WP-WHOLE-1",
+   "schema": "URBAN_LINE_COMPLETENESS_V1",
+   "source": "URBAN_T383_WP_COMPLETENESS_V1",
+   "t383_passes": false,
+   "trade": "WATERPROOFING",
+   "unit": "item"
+  }
+ ],
+ "refused": null,
+ "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+ "rule_id": "R-T383-WP-WHOLE-1",
+ "schema": "URBAN_T383_WP_COMPLETENESS_V1",
+ "unread_lines_no_inventory": 0,
+ "v2_whole_records": 2,
+ "wp_groups": 20,
+ "wp_lines": 150,
+ "wp_whole_lines": [
+  {
+   "group": [
+    "WATERPROOFING",
+    "WP.FOUNDATION.LIFT_PIT_SCREED",
+    "m2"
+   ],
+   "line_id": "L-e11f17bb076058bf172d"
+  },
+  {
+   "group": [
+    "WATERPROOFING",
+    "WP.FOUNDATION.LIFT_PIT_SCREED",
+    "m3"
+   ],
+   "line_id": "L-e4789d76efedbc351bd4"
+  }
+ ],
+ "wp_whole_records_not_counted": []
+}

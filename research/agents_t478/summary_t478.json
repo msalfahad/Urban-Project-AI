@@ -1,0 +1,347 @@
+{
+ "base_v3_0_44_lines_sha256": "8b2fe2b6cfcfcb848b98bf63ce8fd053f203291fc391d10f2fce506073ab7f81",
+ "extends": "ARCH_TAKEOFF_V3.0.44",
+ "identity": {
+  "added": 3,
+  "base_lines": 4858,
+  "blinding": {
+   "added_held": 1,
+   "netted": 1,
+   "ranges_fixed": 1,
+   "split_lines": 2,
+   "valued_lines": 1,
+   "valued_m3": 12.734438
+  },
+  "diff": {
+   "vs_base": {
+    "ADDED": 3,
+    "CHANGED": 3,
+    "SAME": 4855
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3271,
+    "QUANTITY_DIFFERS": 990,
+    "SAME_QUANTITY": 600
+   }
+  },
+  "earthworks": {
+   "at_least_m3": 205.793783,
+   "bound_line_pairs": 213,
+   "by_family": {
+    "B1-02": 12,
+    "B1-03": 5,
+    "B1-04": 1
+   },
+   "lines": 18,
+   "lines_in_two_zones": [
+    "B1-02:L-0e30aadba2eebc6c3ede",
+    "B1-02:L-7a5214a334ea3559fa2d",
+    "B1-02:L-98eb2d58075c9eddf1b4",
+    "B1-02:L-fe78ae283abfb6256358"
+   ],
+   "ranges_fixed": 2
+  },
+  "outside_rows": 4855,
+  "outside_rows_identical_to_base": 4855,
+  "outside_rows_sha256": "8d6fcc6ff2740cc9d4dcfd14767889e09326c9d142fda504eb211e93f9628f78",
+  "replaced": 3,
+  "skirting": {
+   "absorbed": 4,
+   "missing": 1,
+   "narrowed": 1,
+   "released_lines": 4,
+   "released_lm": 5.802094
+  },
+  "v3_0_45_lines": 4861
+ },
+ "method": "ARCH_TAKEOFF_V3.0.45",
+ "plate": {
+  "basis": "the comparison blinding item = the plot rectangle x 0.10 (T-445 s.4, own numeric identity; his cell not opened)",
+  "beside": "beyond the plot line (0 .. 0.189 pits, up to 0.0495 F10 / F) is not in his rectangle",
+  "closes_high": true,
+  "closes_low": true,
+  "engine_valued_m3": 12.734438,
+  "engine_vs_plate_m3": -34.320562,
+  "engine_vs_plate_pct": -72.94,
+  "pieces_high": 22.217957,
+  "pieces_low": 20.374812,
+  "plate_m3": 47.055,
+  "rows": [
+   {
+    "cause": "valued after the SPLIT",
+    "high": 12.734438,
+    "line_id": "L-98eb2d58075c9eddf1b4",
+    "low": 12.734438,
+    "state": "SOURCE_DERIVED",
+    "term": "24 pits VERIFIED"
+   },
+   {
+    "cause": "RFI S08",
+    "high": 2.352,
+    "line_id": "L-16b95607fc88cda3844a",
+    "low": 2.256,
+    "state": "BOUNDED_EXPOSURE",
+    "term": "FF raft"
+   },
+   {
+    "cause": "RFI S02 (scenarios), S06 clip",
+    "high": 0.56,
+    "line_id": "L-080c97f5f6a92452cd04",
+    "low": 0.435,
+    "state": "BOUNDED_EXPOSURE",
+    "term": "F10 + F (inside the plot)"
+   },
+   {
+    "cause": "RFI S09 + S11; F-C-T445-2: 3.763679 m3 of the own-layer reading lies in plan over the footing blinding (netted here)",
+    "high": 5.658835,
+    "line_id": "L-7a5214a334ea3559fa2d",
+    "low": 4.949374,
+    "state": "BOUNDED_EXPOSURE",
+    "term": "ground beams (plan-distinct of the pit layer)"
+   },
+   {
+    "cause": "RFI S07 / D-15",
+    "high": 0.912684,
+    "line_id": "L-35382b18e2e362df3ae6",
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "term": "straps"
+   },
+   {
+    "cause": "the plate's one layer over the whole rectangle is drawn on no sheet (scope, not a measurement error)",
+    "high": 26.680188,
+    "low": 24.837043,
+    "term": "RULE_DIFFERENCE"
+   }
+  ]
+ },
+ "released_default": false,
+ "rows": [
+  {
+   "action": "SPLIT_VALUE",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTINGS_RELEASED",
+   "evidence_status": "VERIFIED",
+   "line_id": "L-98eb2d58075c9eddf1b4",
+   "still_held": [
+    {
+     "range": "2.256 .. 2.352",
+     "scenario": "split to its own held line",
+     "what": "FF_RAFT",
+     "why": "RFI S08 / S23: the FF governing detail prints the blinding without a projection (readings 0.10 inherited from the typical isolated footing, 0.15 scaled); S08 ESTIMATED 2.352 is a label, never VERIFIED"
+    },
+    {
+     "range": "0 .. 0.189",
+     "scenario": "split to its own held line",
+     "what": "BEYOND_PLOT",
+     "why": "RFI S06 / D-14: whether the printed projection is built past the plot line"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 15.179437
+   },
+   "v3_0_45": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 12.734438
+   }
+  },
+  {
+   "action": "SPLIT_ADD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_LIFT_RAFT_FF",
+   "evidence_status": "HELD",
+   "line_id": "L-16b95607fc88cda3844a",
+   "still_held": [
+    {
+     "range": "2.256 .. 2.352",
+     "scenario": "AT_LEAST",
+     "what": "FF_RAFT",
+     "why": "RFI S08 / S23: the FF governing detail prints the blinding without a projection (readings 0.10 inherited from the typical isolated footing, 0.15 scaled); S08 ESTIMATED 2.352 is a label, never VERIFIED"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_45": {
+    "high": 2.352,
+    "low": 2.256,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "SPLIT_ADD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BEYOND_PLOT_LINE",
+   "evidence_status": "HELD",
+   "line_id": "L-10032bf9a60368473a7b",
+   "still_held": [
+    {
+     "range": "0 .. 0.189",
+     "scenario": "HELD",
+     "what": "BEYOND_PLOT",
+     "why": "RFI S06 / D-14: whether the printed projection is built past the plot line"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_45": {
+    "high": 0.189,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "RANGE_FIX",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTING:FTG:SH10:T652:10A5",
+   "evidence_status": "HELD",
+   "line_id": "L-080c97f5f6a92452cd04",
+   "still_held": [
+    {
+     "range": "0.435 .. 0.59",
+     "scenario": "held range only",
+     "what": "L-080c97f5f6a92452cd04",
+     "why": "F-T445-2 (the owner's F10-alone scenario was outside the line) + F-C-T445-1 / F-C-S06-1 (the outline sits on the plot corner: up to 0.0495 m3 of its grown plan lies beyond the plot line)"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": 0.59,
+    "low": 0.552,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_45": {
+    "high": 0.59,
+    "low": 0.435,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "NETTING",
+   "element_id": "U-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAM",
+   "evidence_status": "HELD",
+   "line_id": "L-7a5214a334ea3559fa2d",
+   "still_held": [
+    {
+     "range": "4.949374 .. 9.422514",
+     "scenario": "record only; range unchanged",
+     "what": "L-7a5214a334ea3559fa2d",
+     "why": "the held range already nets the strips against the pit layer geometrically at its low end; the high end is the other detail reading (own layer), not a double count; no value until S09 / S11"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": 9.422514,
+    "low": 4.949374,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "v3_0_45": {
+    "high": 9.422514,
+    "low": 4.949374,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   }
+  },
+  {
+   "action": "ADD_HELD",
+   "element_id": "P-C:PLAIN_CONCRETE:FOUNDATION:BLINDING_BOUNDARY_WALL_BASE",
+   "evidence_status": "HELD",
+   "line_id": "L-d0313e5d204e2758996a",
+   "still_held": [
+    {
+     "range": null,
+     "scenario": "held blank",
+     "what": "BW_BASE",
+     "why": "pad count and spacing not printed (M2, RFI S04); the band between pads is not drawn on blinding"
+    }
+   ],
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   },
+   "v3_0_44": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "v3_0_45": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  }
+ ],
+ "totals_moved_by_code": {
+  "STR.CONC.BLINDING|m3": {
+   "base": {
+    "blocked_lines": 0,
+    "bounded_lines": 3,
+    "held_high": 10.925198,
+    "held_low": 5.501374,
+    "lines": 4,
+    "released": 15.179437
+   },
+   "v3_0_45": {
+    "blocked_lines": 1,
+    "bounded_lines": 5,
+    "held_high": 13.466198,
+    "held_low": 7.640374,
+    "lines": 7,
+    "released": 12.734438
+   }
+  }
+ },
+ "v3_0_45_lines_sha256": "5972888b659e249bed995992f57f0042571d042b50e761cabcc4221d653451d8",
+ "waiting": {
+  "T478_BW_PAD_COUNT": "boundary-wall base blinding: pad count and spacing not printed (M2, RFI S04): the new line is HELD BLANK; per pad at least 1.30 x 0.90 x 0.10 = 0.117 m3 beside; the band between pads is not drawn on blinding",
+  "T478_DOWNGRADE_RECORD": "DG-3521554d2fd011b9 (Checker, LINE_CONTENT_V1 binding on L-98eb2d58) held the whole footing-blinding line for its FF piece; after the SPLIT its content no longer exists (the line carries the 24 VERIFIED pits only, FF is its own held line): the Checker's downgrade check records it resolved by this split; the record file is not edited here (T-479 registry / verdict binding refresh)",
+  "T478_EARTHWORKS_BOUND_LISTS": "the V3.0.43 earthworks zones name L-98eb2d58 as a displacement line of the pits zone and the FF zone; the two new held lines (FF raft, beyond the plot line) are bound in the next earthworks round (held blank lines, no quantity moves)",
+  "T478_GB_NOT_REMEASURED": "the ground-beam blinding range is netted by plan overlap by construction (route G REACH low end) and stays HELD on S09 / S11; no Checker re-measure of the strips exists, so no value and no range change",
+  "T478_STRAPS": "strap blinding L-35382b18 stays HELD at its V3.0.43 range (S07 / D-15: no strap section on any sheet); the 0 .. 0.913 ledger is kept beside (F-T347-2)"
+ }
+}
