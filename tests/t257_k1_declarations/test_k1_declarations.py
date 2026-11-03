@@ -34,10 +34,11 @@ CLOSED_BY_T465 = {"engine/source/arch_v30.py", "engine/source/arch_v302.py", "en
 def test_every_declaration_is_backed_by_an_allowed_record_and_nothing_else_is_declared():
     problems, f = D.check(ROOT, V1.load_record())
     assert problems == [], problems
-    assert len(f["declarations"]) == 19                         # 18 + opening_height_pdf_v2 (pypdf, T-465 r2)
+    assert len(f["declarations"]) == 20                         # 18 + opening_height_pdf_v2 (pypdf, T-465 r2) + arch_v3045 (shapely, T-478 r3)
     assert f["r8_era"] == D.R8_ERA
-    # 19: the 24 of the sweep less the 6 closed by T-465, plus the one new ALLOWED module opening_height_pdf_v2
-    assert len(f["offenders"]) == 24 - len(CLOSED_BY_T465) + 1
+    # 20: the 24 of the sweep less the 6 closed by T-465, plus the two new ALLOWED modules opening_height_pdf_v2 and
+    # arch_v3045 (T-478 r3)
+    assert len(f["offenders"]) == 24 - len(CLOSED_BY_T465) + 2
     assert {r["module"] for r in V1.load_record()["closed"]} == CLOSED_BY_T465
 
 

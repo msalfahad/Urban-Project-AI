@@ -22,6 +22,17 @@
    "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
   },
   {
+   "module": "engine/source/arch_v3045.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "ARCH_TAKEOFF_V3.0.45 opt-in candidate (T-478): CONC.BLINDING pieces (pit / plot-line / member overlap) on plain plan geometry with lazy shapely; not wired into the released method",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "none needed: declared in tests/r8_1/test_r8_1_boundaries.py by_design with {'shapely'}, citing this record (T-257 rule: one declaration per ALLOWED record; T-478 r3, as T-465 r2)"
+  },
+  {
    "module": "engine/source/beam_binding_v2.py",
    "packages": [
     "shapely"
