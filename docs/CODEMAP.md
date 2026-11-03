@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4524 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4534 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 56 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2134 | pytest suites, one folder per round. |
+| `tests/` | 2137 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -448,8 +448,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3044.py` | 775 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.44 (T-422): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.43 (engine.source.arch_v30, |
 | `arch_v3045.py` | 906 | HIGH | 10 | ARCH_TAKEOFF_V3.0.45 (T-478, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.44 |
 | `arch_v3046.py` | 682 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.46 (T-419, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.45 |
-| `arch_v3047.py` | 822 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.47 (T-443, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.46 |
-| `arch_v3048.py` | 679 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.48 (T-350 r4, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.47 |
+| `arch_v3047.py` | 822 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.47 (T-443, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.46 |
+| `arch_v3048.py` | 679 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.48 (T-350 r4, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.47 |
 | `arch_v305.py` | 515 | HIGH | 45 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
 | `arch_v306.py` | 700 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.6 (T-187): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.5 (engine.source.arch_v30, |
 | `arch_v307.py` | 751 | HIGH | 17 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
@@ -812,7 +812,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `export_round6c.py` | 422 | MEDIUM | 2 | Freeze round 6C's P7757 register for independent audit. |
 | `export_round6d.py` | 331 | MEDIUM | 1 | Export round 6D: the register, the pantry, the stairs, hashed. |
 | `export_round6e.py` | 726 | MEDIUM | 0 | Export round 6E-A: the bundle an auditor can reproduce. |
-| `family_master_candidate.py` | 361 | HIGH | 45 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
+| `family_master_candidate.py` | 363 | HIGH | 45 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
 | `firestore_sandbox.py` | 68 | MEDIUM | 1 | A guarded Firestore writer for Phase 0 — sandbox only. |
 | `freeze_new_source.py` | 136 | MEDIUM | 1 | Freeze and source-audit a NEW project's drawing. No measurement. |
 | `freeze_verify.py` | 676 | MEDIUM | 3 | Freeze integrity verifier (P2-00 Stage 1). Stdlib only. It never writes into the repository: every rebuild runs in a |
@@ -876,7 +876,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `t334_line_state_check.py` | 332 | MEDIUM | 4 | LINE-STATE CONSISTENCY CHECK (task T-334) - a read-only export-integrity check beside tools/boq_export_v1.py. It |
 | `trade_completeness.py` | 106 | MEDIUM | 2 | Trade completeness runner (T-236): engine/source/trade_completeness_v1.check() on one project's input file. |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 4650 | HIGH | 51 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 4654 | HIGH | 52 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -894,7 +894,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L214-215), def structural_lines (L218-225), def run_rules (L228-232), def write_m9 (L235-274), def cmd_run (L277-297), def cmd_rooms (L300-306), class CompletenessFailed (L319-325), def arch_compute (L328-357), def K_value (L2503-2505), def v21_files (L2671-2758), def cmd_arch (L3191-4271), def cmd_tiles (L4285-4297), def cmd_membrane (L4300-4313), def cmd_rooms_check (L4316-4318), def cmd_rules (L4321-4327), def main (L4330-4645)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L214-215), def structural_lines (L218-225), def run_rules (L228-232), def write_m9 (L235-274), def cmd_run (L277-297), def cmd_rooms (L300-306), class CompletenessFailed (L319-325), def arch_compute (L328-357), def K_value (L2503-2505), def v21_files (L2671-2758), def cmd_arch (L3191-4275), def cmd_tiles (L4289-4301), def cmd_membrane (L4304-4317), def cmd_rooms_check (L4320-4322), def cmd_rules (L4325-4331), def main (L4334-4649)
 
 ## `tools/synth_villa/` (4 modules)
 
@@ -1313,7 +1313,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t349_spatter_binding/` | 2 |
 | `tests/t350_earthworks_integration/` | 2 |
 | `tests/t350r2_earthworks_quantities/` | 3 |
-| `tests/t350r4_earthworks_values/` | 3 |
+| `tests/t350r4_earthworks_values/` | 4 |
 | `tests/t351_tile_zones/` | 1 |
 | `tests/t352_stair_formwork/` | 1 |
 | `tests/t353_foundation_wp_carried/` | 1 |
@@ -1441,6 +1441,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t489_plaster_mix/` | 1 |
 | `tests/t490_stone_floor_census/` | 1 |
 | `tests/t491_site_preparation/` | 2 |
+| `tests/t493_landing_census/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1806,7 +1807,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t349/` | 10 |
 | `research/agents_t350/` | 6 |
 | `research/agents_t350r2/` | 8 |
-| `research/agents_t350r4/` | 2 |
+| `research/agents_t350r4/` | 6 |
 | `research/agents_t351/` | 7 |
 | `research/agents_t352/` | 9 |
 | `research/agents_t353/` | 2 |
@@ -1922,6 +1923,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t490/` | 5 |
 | `research/agents_t491/` | 7 |
 | `research/agents_t492/` | 2 |
+| `research/agents_t493/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
