@@ -192,6 +192,10 @@
    "kind": "AUTHORED",
    "sha256": "84aacdb68bff08577eeeb75b2ade9f2a3863a2c1585259c2eef876c13572cbb0"
   },
+  "owner_decisions/URBAN_RULES_1.8.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "0e4cc090f99bdbfddcc3e1130a3ca90efb4fee19de8bba6116ecf47b83900bac"
+  },
   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": {
    "kind": "COPY",
    "sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee",
@@ -212,6 +216,19 @@
   "engine/profiles/URBAN_M7_GENERIC_CONVENTIONS_V5.json": "e12d86d07a1a69ca3cbe27cd54ea574f925dc61efcc2e6478a5c625d79102d91",
   "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json": "c6e4dab8108ccd21807fb5d83ea811285682f57225c87b934f8e6c73ca173dca"
  },
+ "resolvers": {
+  "engine/source/rule_store.py": [
+   "1.4.0",
+   "1.5.0"
+  ],
+  "engine/source/rule_store_v2.py": [
+   "1.4.0",
+   "1.5.0",
+   "1.6.0",
+   "1.7.0",
+   "1.8.0"
+  ]
+ },
  "rule": "copies and exports are byte-equal to what their source gives; authored files change only with a new version; the structural convention profiles are referenced in place (frozen packages pin them)",
  "rule_sets": {
   "1.4.0": [
@@ -220,6 +237,24 @@
   "1.5.0": [
    "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
    "owner_decisions/URBAN_RULES_1.5.0.json"
+  ],
+  "1.6.0": [
+   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
+   "owner_decisions/URBAN_RULES_1.5.0.json",
+   "owner_decisions/URBAN_RULES_1.6.0.json"
+  ],
+  "1.7.0": [
+   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
+   "owner_decisions/URBAN_RULES_1.5.0.json",
+   "owner_decisions/URBAN_RULES_1.6.0.json",
+   "owner_decisions/URBAN_RULES_1.7.0.json"
+  ],
+  "1.8.0": [
+   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
+   "owner_decisions/URBAN_RULES_1.5.0.json",
+   "owner_decisions/URBAN_RULES_1.6.0.json",
+   "owner_decisions/URBAN_RULES_1.7.0.json",
+   "owner_decisions/URBAN_RULES_1.8.0.json"
   ]
  },
  "store": "URBAN_RULE_STORE",

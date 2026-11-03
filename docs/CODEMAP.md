@@ -11,18 +11,18 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `.claude/` | 6 |  |
 | `agents/` | 124 | Business agents a1-a17, each with prompt, schema and tests. |
 | `assets/` | 7 |  |
-| `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
+| `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 700 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 701 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
 | `research/` | 4428 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
-| `rules/` | 50 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
+| `rules/` | 51 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2081 | pytest suites, one folder per round. |
+| `tests/` | 2083 | pytest suites, one folder per round. |
 | `tools/` | 118 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -137,7 +137,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `golden.py` | 230 | MEDIUM | 1 | Golden regression fixtures — a guardrail, not a museum. |
 | `group_registry.py` | 230 | MEDIUM | 5 | E24R — Canonical group registry: apartments and zones. |
 | `height_parameters.py` | 43 | MEDIUM | 1 | Project height parameter table (PA04 §9): no single plaster height is |
-| `heights.py` | 311 | MEDIUM | 1 | E38 — Height registry. |
+| `heights.py` | 311 | MEDIUM | 2 | E38 — Height registry. |
 | `hybrid_path.py` | 191 | MEDIUM | 2 | E95 — run the hybrid path end to end, and keep each stage's answer apart. |
 | `identity_reconcile.py` | 316 | CRITICAL | 5 | Two labels in one room are usually one name written twice. |
 | `interior_exterior.py` | 325 | MEDIUM | 7 | Inside the building, outside it, or not established. Never by area. |
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (347 modules)
+## `engine/source/` (348 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -557,7 +557,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
 | `ground_system_spans_v2.py` | 589 | MEDIUM | 1 | GROUND_SYSTEM_SPANS_V2 - ground-beam span splitter and strap measurement, face to face (generic; stdlib only). |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
-| `knowledge.py` | 289 | HIGH | 32 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
+| `knowledge.py` | 290 | HIGH | 33 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 3 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
 | `level_chain_v1.py` | 495 | MEDIUM | 2 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
@@ -655,7 +655,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rough_rebar_sanity.py` | 227 | MEDIUM | 6 | ROUGH_REBAR_SUMMARY - the Urban estimating / sanity product (generic). |
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
-| `rule_store.py` | 124 | HIGH | 19 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
+| `rule_store.py` | 124 | HIGH | 20 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
+| `rule_store_v2.py` | 152 | MEDIUM | 1 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
@@ -837,7 +838,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `m7_independent.py` | 162 | CRITICAL | 1 | M7 PER-ITEM INDEPENDENT CHECKS - a second method for each measured concrete item of a route-G run, so the release |
 | `m7_metamorphic.py` | 195 | CRITICAL | 2 | M7 METAMORPHIC HARNESS - properties a quantity engine must keep when the drawing changes in ways that do not change |
 | `m8_evaluate.py` | 288 | CRITICAL | 1 | M8 SCOPE EVALUATION - every scope element a synthetic villa draws (tools/synthetic_villa_m8), measured or bounded by |
-| `m9_rules_manifest.py` | 147 | MEDIUM | 0 | M9 RULE STORE MANIFEST - build or check rules/RULES_MANIFEST.json. |
+| `m9_rules_manifest.py` | 155 | MEDIUM | 0 | M9 RULE STORE MANIFEST - build or check rules/RULES_MANIFEST.json. |
 | `membrane_table.py` | 116 | MEDIUM | 0 | MEMBRANE TABLE (task T-072, opt-in) - writes the owner's membrane purchase table from the output files of an |
 | `parse_cost_export.py` | 158 | MEDIUM | 1 | Parse a Urban Projects Manager "Cost By Category" PDF into a RateLibrary. |
 | `pdf_evidence.py` | 446 | MEDIUM | 1 | PDF EVIDENCE (M3) - typical-detail evidence from a drawing PDF: native text first, then the vector check, then |
@@ -1398,6 +1399,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t456_finish_area_units/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
 | `tests/t459_lap_rule/` | 1 |
+| `tests/t461_registry_housekeeping/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
 | `tests/t463_git_history/` | 1 |
 | `tests/t464_worktree_git_stamp/` | 1 |

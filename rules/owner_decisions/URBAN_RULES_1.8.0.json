@@ -1,0 +1,117 @@
+{
+ "rule_set": "URBAN_RULES",
+ "version": "1.8.0",
+ "base": {
+  "rule_set": "URBAN_RULES",
+  "version": "1.7.0",
+  "file": "rules/owner_decisions/URBAN_RULES_1.7.0.json"
+ },
+ "rule": "an overlay over URBAN_RULES 1.7.0: an OWNER_APPROVED record replaces the record with the same rule_id or adds a new rule; the 1.4.0, 1.5.0, 1.6.0 and 1.7.0 files are never edited; frozen results keep the version they were computed with. Resolved (opt-in) by engine/source/rule_store_v2.py together with 1.6.0 and 1.7.0; engine/source/rule_store.py (default 1.5.0) is unchanged, so no released method reads this file (T-461, owner directive 2026-11-02 C6)",
+ "records": [
+  {
+   "rule_id": "UP-GEN-003",
+   "version": "1.2.0",
+   "supersedes": "UP-GEN-003@1.1.0",
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-22",
+    "source": "Q-73 answered 2026-10-22 (ENGINEERING_REASONING_STANDARD section 6 directive), owner's words: 'The owner-approved rule is to deduct full openings from blockwork, plaster and paint, subject to the actual construction scope.' = option A; confirmed again 2026-11-02 (AGENT_BRIEF 'Openings: full deduction of every actual opening from blockwork'; company rulebook UPC-BLOCK-OPENINGS-001)"
+   },
+   "rule_name": "Openings are deducted per trade from one table: full actual openings from blockwork, plaster and paint; the waterproofing upturn is not deducted",
+   "trade": "ALL",
+   "scope": "OPENINGS",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": false,
+   "unit": "NONE",
+   "calculation_method": "per-trade opening table: SKIRTING deduct door widths (UP-CER-003); WALL_TILE gross - openings (UP-CER-005); WATERPROOFING_UPTURN no deduction (UP-WP-002 v2.0.0); PLASTER / PAINT and BLOCKWORK deduct every actual opening at its full size, no minimum size (Q-73 A), only from a face that is physically built there (no masonry, plaster or paint invented behind glazing or in a passage); reveals and returns are their own items",
+   "value": {
+    "SKIRTING": "DEDUCT_DOOR_WIDTHS",
+    "WALL_TILE": "GROSS_MINUS_OPENINGS",
+    "WATERPROOFING_UPTURN": "NO_DEDUCTION",
+    "PLASTER_PAINT": "DEDUCT_FULL_OPENINGS",
+    "BLOCKWORK": "DEDUCT_FULL_OPENINGS"
+   },
+   "note": "1.1.0 left PLASTER_PAINT as OWNER_DECISION_PENDING (Q-OPN-1); Q-73 A answered it for blockwork, plaster and paint together (T-461 C6 (c)). 1.1.0 stays in URBAN_RULES 1.5.0 unchanged; results computed under 1.5.0 keep it",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true,
+   "minimum_deducted_m2": 0.0,
+   "condition": "subject to the actual construction scope: an opening is deducted from a trade only where that trade is physically built on the face"
+  },
+  {
+   "rule_id": "UP-STAIR-017",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-20",
+    "source": "Q-53 answered C, CALCULATED PROVISIONAL RATE (owner directive in the main chat 2026-10-20 12:02 UTC; OWNER_QUESTIONS_ANSWERED Q-53; docs/agents/OWNER_DIRECTIVE_2026-10-20.md)"
+   },
+   "rule_name": "Stair marble bed 1:3 mortar: theoretical cement and sand per m3 derived from the mix (calculated provisional rate)",
+   "names": {
+    "ar": [
+     "مونة الرخام",
+     "خلطة 1:3",
+     "الدرج"
+    ],
+    "en": [
+     "stair marble bed",
+     "1:3 cement-sand mortar",
+     "stair"
+    ]
+   },
+   "trade": "MARBLE",
+   "scope": "STAIR",
+   "rule_kind": "MATERIAL_RATE",
+   "default_or_mandatory": "DEFAULT",
+   "project_override_allowed": true,
+   "unit": "per m3 of finished mortar",
+   "basis": "CALCULATED_PROVISIONAL",
+   "params": {
+    "mix_cement_sand": "1:3",
+    "dry_volume_factor": 1.33,
+    "cement_bulk_density_kg_m3": 1440.0,
+    "bag_kg": 50.0,
+    "theoretical_cement_m3_per_m3": 0.3325,
+    "theoretical_cement_kg_per_m3": 478.8,
+    "theoretical_cement_bags_per_m3": 9.576,
+    "theoretical_sand_m3_per_m3": 0.9975
+   },
+   "purchasing_allowance": {
+    "cement_bags_per_m3": 10.0,
+    "sand_m3_per_m3": 1.0,
+    "label": "PRELIMINARY PURCHASING (owner Q-53: about 10 bags + 1.00 m3), a separate layer, never the theoretical quantity"
+   },
+   "calculation_method": [
+    "dry volume = finished mortar m3 x 1.33",
+    "cement m3 = dry volume x 1 / (1 + 3); cement kg = cement m3 x 1440; bags = kg / 50 (theoretical, not rounded)",
+    "sand m3 = dry volume x 3 / (1 + 3)",
+    "mortar m3 = stair marble area x bed thickness from the drawings / approved detail or the owner's Q-45 stair bed (0.03 m); this record gives materials per m3 only"
+   ],
+   "never": [
+    "the 1:4 figures (8 bags, 1.1 m3) for a 1:3 bed",
+    "a waste or bulking allowance without a named source or owner-approved allowance",
+    "the purchasing allowance reported as the theoretical quantity",
+    "a universal constant: a supplier or approved mix design replaces it"
+   ],
+   "worked_examples": [
+    {
+     "stair_marble_m2": 10.0,
+     "bed_m": 0.03,
+     "mortar_m3": 0.3,
+     "cement_kg": 143.64,
+     "cement_bags": 2.8728,
+     "sand_m3": 0.29925,
+     "purchasing_bags": 3.0,
+     "purchasing_sand_m3": 0.3,
+     "source": "hand fixture (T-461), not a project"
+    }
+   ],
+   "country_context": "KUWAIT",
+   "owner_confirmed": true,
+   "note": "closes T-461 C6 (b): engine/source/finish_materials_table.py (V1) and the company rulebook UPC-TILE-BED-001 still name the 1:3 cement / sand as not given; wiring this record into a materials table is a new table version (integration path), not part of this overlay"
+  }
+ ]
+}

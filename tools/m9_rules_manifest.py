@@ -70,7 +70,8 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.40.0.json",   # T-478: 1.39.0 + the pending V3.0.45 package (B10-01 evidence and text; no owner change); read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
-            "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json")  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
+            "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
+            "owner_decisions/URBAN_RULES_1.8.0.json")  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
                    for m, v in ((2, 1), (3, 2), (4, 3), (5, 4), (7, 5), (8, 6)))
 
@@ -94,7 +95,14 @@ def manifest():
     return {"store": "URBAN_RULE_STORE", "version": "1.0.0",
             "rule_sets": {"1.4.0": ["owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json"],
                           "1.5.0": ["owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
-                                    "owner_decisions/URBAN_RULES_1.5.0.json"]},
+                                    "owner_decisions/URBAN_RULES_1.5.0.json"],
+                          # T-461: 1.6.0 .. 1.8.0 registered; resolved by engine/source/rule_store_v2.py (opt-in);
+                          # engine/source/rule_store.py (V1, default 1.5.0) is unchanged
+                          **{v: ["owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json"]
+                             + [f"owner_decisions/URBAN_RULES_{w}.json" for w in ("1.5.0", "1.6.0", "1.7.0", "1.8.0")[:i + 2]]
+                             for i, v in enumerate(("1.6.0", "1.7.0", "1.8.0"))}},
+            "resolvers": {"engine/source/rule_store.py": ["1.4.0", "1.5.0"],
+                          "engine/source/rule_store_v2.py": ["1.4.0", "1.5.0", "1.6.0", "1.7.0", "1.8.0"]},
             "latest_owner_approved": "1.5.0",
             "files": files,
             "referenced_not_copied": {p: sha(ROOT / p) for p in REFERENCED},
