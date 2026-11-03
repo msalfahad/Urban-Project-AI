@@ -44,7 +44,8 @@
   "engine/source/arch_v3041.py": [],
   "engine/source/arch_v3042.py": [],
   "engine/source/arch_v3043.py": [],
-  "engine/source/arch_v3044.py": []
+  "engine/source/arch_v3044.py": [],
+  "engine/source/arch_v3045.py": []
  },
  "later_steps_touching": []
 }
