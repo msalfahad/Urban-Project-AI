@@ -1,0 +1,33 @@
+{
+  "project": "23010",
+  "version": "2.1",
+  "supersedes": "data/registry/23010_heights.json (version 2.0, kept unchanged: results computed with it keep it)",
+  "effective_from": "2026-11-02",
+  "_note": "Keyed by truth domain, as 2.0. DESIGN carries no plaster or ceramic height any more: both are HEIGHT_REQUIRED and are derived PER FACE from the drawings (owner rule 2026-11-02: plaster to the underside of the structural slab or roof, paint to the finished ceiling, stair shafts at the full exposed height; wall tile per face, never a universal constant). A height that is absent is HEIGHT_REQUIRED; it is never filled in with a plausible number. Read by no method (opt-in; the paused project's pipeline keeps reading 2.0).",
+  "rules": ["UPC-HEIGHT-001 (rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json, owner 2026-11-02)", "Q-72 (owner 2026-11-02)", "UP-CER-009 (URBAN_RULES 1.5.0: wall ceramic height derived per face)", "owner directive 2026-11-02 C6 (a), board task T-461"],
+  "superseded": [
+    {
+      "height_id": "23010:DESIGN:plaster_height",
+      "value_m": "3.20",
+      "was_source_type": "APPROVED_PROJECT_RULE",
+      "was_approved_on": "2026-09-13",
+      "hard_coded_in": ["data/registry/23010_heights.json domains.DESIGN.plaster_height.value_m", "data/trade_rules/23010_plaster.json height_m"],
+      "reason": "one fixed plaster height for every wall of the project; not read from a section (its own source says so); the owner rule derives the plaster height per face to the underside of the structural slab or roof",
+      "now": "HEIGHT_REQUIRED (per face)"
+    },
+    {
+      "height_id": "23010:DESIGN:ceramic_height",
+      "value_m": "3.00",
+      "was_source_type": "APPROVED_PROJECT_RULE",
+      "was_approved_on": "2026-09-13",
+      "hard_coded_in": ["data/registry/23010_heights.json domains.DESIGN.ceramic_height.value_m", "data/trade_rules/23010_ceramic.json height_m"],
+      "reason": "one fixed wall-tile height for every wet face of the project; not read from a section (its own source says so); UP-CER-009 derives the wall ceramic height per face from the drawings",
+      "now": "HEIGHT_REQUIRED (per face)"
+    }
+  ],
+  "domains": {
+    "DESIGN": {},
+    "SITE": {},
+    "COMMERCIAL": {}
+  }
+}

@@ -300,6 +300,7 @@ Proposed, not in force: UP-WP-004 (A shower takes the wet-room floor and the UP-
 |---|---|
 | `data/registry/23010_groups.json` | project, version, effective_from, source, apartments, zones, zone_not_defined_reason |
 | `data/registry/23010_heights.json` | project, version, effective_from, _note, domains |
+| `data/registry/23010_heights_2.1.json` | project, version, supersedes, effective_from, _note, rules, superseded, domains |
 | `data/registry/OWNER_CLOSURE_REVIEWS.json` | SCHEMA, policy, reviews |
 | `data/registry/OWNER_FINISH_FACTS.json` | SCHEMA, policy, rule_store, facts, never |
 | `data/registry/OWNER_METHOD_FACTS.json` | SCHEMA, policy, facts, never |
