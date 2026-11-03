@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T03:51Z | Verifier | SUCCESS | none (overlap guard: run unknown active since 2026-11-03T02:52Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-03T03:35Z | Worker 1 | SUCCESS | T-457 READY (agents/task-T-457 @ 3eb1fd0f) | wet-wall 2nd fixing bed NOT reproduced: V1/V2 charge one 0.02 m 1:4 layer (= levelling render = candidate FIN.PLASTER wet backing) + adhesive; candidate V3.0.44 has no materials table and no wall bed/adhesive/render code. Defect was identity: layer billed as a tile bed with engine-assumed values and summed into floor beds (+0.42336 m3 on a 20.16 m2 fixture, +67 % of 0.63 m3). FINISH_MATERIALS_TABLE_V3 (unwired): 3 owner ops, render HELD unless sourced, 2nd bed refused; no quantity moves. Proposed lesson: name a layer by its function before pricing it. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-03T03:20Z | Worker 1 | STARTED | run session_01E6cPnbgFvrFkh3e9Xm6S3s | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T03:00Z | Worker 3 | STARTED | run session_01E6cPneC5ckLLk7hPndmgZ1 | repo-attached routine | task state: none yet | self-check pending
