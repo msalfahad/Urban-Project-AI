@@ -61,3 +61,10 @@ def test_family_naming_the_pending_package_refused(docs):
     b = next(f for f in bad["families"] if f["code"] == "B10-10")
     b["candidate"]["packages"] = list(b["candidate"]["packages"]) + ["T-419"]
     assert any("pending package T-419" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+
+
+def test_builder_reproduces_the_committed_file(docs):
+    sys.path.insert(0, str(ROOT / "research" / "agents_t419"))
+    import build_master_1_42_0 as B
+    tc = docs[1]["pending_packages"][-1]["task_commit"]
+    assert B.text(B.build(tc)) == NEW.read_text(encoding="utf-8")

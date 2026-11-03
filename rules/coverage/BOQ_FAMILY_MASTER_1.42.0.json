@@ -3566,7 +3566,7 @@
    "evidence": [
     "engine/source/arch_v3015.py:84 ITEMS: the eight WP.FOUNDATION.* codes (footing underlay membrane / screed / sides, lift-pit membrane / board / screed, buried-face liquid coat, procurement); :311 record_line()",
     "tests/t270_foundation_wp_lines/test_arch_v3015.py:135 test_family_totals_equal_the_hand_calculation()",
-    "engine/source/arch_v3046.py:360 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:456 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:104 (villa Q by hand)"
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "none",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.15 .. V3.0.45 (engine/source/arch_v3015.py, merged T-270; tools/urban_boq_m9.py:3241 runs the V3.0.15 extension for every method V3.0.15 .. V3.0.45; opt-in candidate) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
@@ -3652,7 +3652,7 @@
     "tools/urban_boq_m9.py:1172 _v29_masonry(): ARCH.WALL_PANEL m2 / ARCH.WALL_VOLUME m3 from height evidence",
     "commit 2dc1657 (T-027 masonry centreline, verifier run 39) and bc21314 (T-117 vs hand): engine/source/masonry_centreline.py:212 measure() read by no method",
     "commit 79bd397 (T-103 wall metres by hand, verifier run 37)",
-    "engine/source/arch_v3046.py:360 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:456 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:104 (villa Q by hand)"
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
@@ -4462,7 +4462,7 @@
     "route G POOL / WATER_TANK / LIFT families (engine/source/boq_line.py:113 ROUTE_G_FAMILY)",
     "commit 15de9c4 (T-057 pool check list), fd0d5dd (T-048 curved pool strips): read by no released method",
     "engine/source/arch_v3042.py:401 changes_for(): a held slab cell valued at its re-measured panels x T (shaft / ring beside with their owners), a stair-zone panel added as one ground-slab line, cause texts re-named with every figure kept; engine/source/arch_v3042.py:483 check_slab(): slab line = panels x T, no panel in two lines, one line per cell, no live held-bound record on a valued cell, a re-texted line moves no figure; tests/t442_ground_slab_integration/test_arch_v3042.py:111 test_hand_figures_g442() (G442 by hand)",
-    "engine/source/arch_v3046.py:360 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:456 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:104 (villa Q by hand)"
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.POOL, STR.CONC.TANK, STR.CONC.LIFT",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
@@ -4615,7 +4615,7 @@
     "development villa (tool run on the released route G registers, head 0dec24c): slab soffit 379.041 m2, beam soffit 99.123 m2, beam sides 337.405 (TOTAL) or 458.025 m2 (BELOW_SLAB), footing sides 93.260 m2 if FORMED or 0 if EARTH_CAST, ground-beam sides 10.581 m2 FORMED (3 rows only); 311 faces HELD (columns 118, slabs 76 edges, ground beams 59, ground slab 25, beams 24, others 9)",
     "engine/source/arch_v3030.py:80 FW_CODE = STR.FORMWORK: one formwork line per formed face group beside its bound concrete line (face by face from the merged T-332 r2 FILL table; CALCULATED / HELD blank / OQ-10 alternatives beside, never summed); engine/source/arch_v3030.py:352 fw_line()",
     "tests/t199_formwork_metalwork/test_arch_v3030.py:147 test_hand_totals_and_states() (V199 by hand: STR.FORMWORK 18.300 m2) / :160 test_valued_line_beside_its_concrete_line_with_its_state()",
-    "engine/source/arch_v3046.py:360 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:456 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:104 (villa Q by hand)"
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "none",
    "opt_in_readers": "none (standalone tool tools/struct_n10.py); ARCH_TAKEOFF_V3.0.30 .. V3.0.45 (engine/source/arch_v3030.py, merged T-199; tools/urban_boq_m9.py:3226 runs it for every method V3.0.30 .. V3.0.45; opt-in candidate) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
@@ -4658,7 +4658,7 @@
     "engine/source/boq_line.py:327 STR.REBAR for every REINFORCEMENT item",
     "commit 6d532c5 (T-136 FOOTING_REBAR_POPULATION_V1, verifier merge): engine/source/footing_rebar_population_v1.py:280 run(): footing steel by bar population, read by no method",
     "commit 8a22eec (T-148 column steel by bar population, verifier 2026-10-21 18:40 UTC, research only): hand ledger, no code",
-    "engine/source/arch_v3046.py:360 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:456 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:104 (villa Q by hand)"
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.REBAR (PROVISIONAL bar models)",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
