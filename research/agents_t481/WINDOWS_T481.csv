@@ -1,0 +1,5 @@
+opening,views,decision,spread_m,status
+W11,"DWF SECTION B-B: 0.699 | DWF FENCE ELEVATION, ground ±0.00: 0.549 | DWF FENCE ELEVATION, ground +0.15: 0.699",SKIRTED,0.15,DRAWING-CONFIRMED (section B-B geometry on printed markers; fence elevation agrees on the decision under both ground readings; scan check 0.72)
+W12,"DWF SECTION B-B: 0.699 | DWF FENCE ELEVATION, ground ±0.00: 0.549 | DWF FENCE ELEVATION, ground +0.15: 0.699",SKIRTED,0.15,"DRAWING-CONFIRMED (bound to W11: identical outline, fence elevation)"
+W02,DWF SECTION B-B: 0.000,NOT_SKIRTED,0.0,DRAWING-CONFIRMED (section B-B; current issue agrees) - count / pier D-53 contingent
+W17,P7757.dxf NW ELEVATION: 0.000,NOT_SKIRTED,0.0,DRAWING-CONFIRMED (printed chain from the +1.00 marker; jambs on +5.50)
