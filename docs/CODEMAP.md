@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 705 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 707 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4495 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4517 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 55 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2117 | pytest suites, one folder per round. |
+| `tests/` | 2128 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (352 modules)
+## `engine/source/` (354 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -487,7 +487,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_concrete_geometry.py` | 82 | MEDIUM | 1 | COLUMN_CONCRETE_GEOMETRY - column concrete independent of column reinforcement (generic). |
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `column_schedule_text_rows.py` | 485 | MEDIUM | 2 | SCHEDULE TEXT ROWS (V1) - schedule rows drawn as plain TEXT / MTEXT inside a block-attribute table, and struck-out |
-| `company_rulebook_v1.py` | 357 | MEDIUM | 4 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
+| `company_rulebook_v1.py` | 357 | MEDIUM | 5 | COMPANY RULEBOOK V1 (T-448) - the Urban Projects Company Rulebook: lookup with the 5-level hierarchy and the |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
 | `concrete_basis_rules_v1.py` | 220 | MEDIUM | 1 | CONCRETE_BASIS_RULES_V1: drawing-derived concrete basis rules (A1 class A, T-449 round 1 = concrete). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
@@ -538,9 +538,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_height.py` | 100 | MEDIUM | 4 | ARCHITECTURAL FINISH HEIGHT ENGINE (V1) - blockwork, plaster, paint and wall-tile heights are four separate |
 | `finish_height_v2.py` | 316 | MEDIUM | 2 | ARCHITECTURAL FINISH HEIGHT V2 (T-081) - plaster, paint and wall-tile heights of ONE room from printed values and |
 | `finish_height_v3.py` | 65 | MEDIUM | 1 | FINISH HEIGHT V3 - wall-face termination split by beam coverage (generic fix for blocker #16). |
-| `finish_materials_table.py` | 292 | MEDIUM | 5 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
+| `finish_materials_table.py` | 292 | MEDIUM | 7 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
 | `finish_materials_table_v2.py` | 105 | MEDIUM | 3 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
-| `finish_materials_table_v3.py` | 194 | MEDIUM | 1 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
+| `finish_materials_table_v3.py` | 194 | MEDIUM | 3 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
+| `finish_materials_table_v4.py` | 376 | MEDIUM | 1 | FINISH MATERIALS TABLE V4 (task T-455, owner directive 2026-11-02 B3 'tiles purchase quantities' as corrected by the |
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
@@ -611,7 +612,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `physical_wall_faces.py` | 80 | MEDIUM | 1 | PHYSICAL_WALL_FACE_REGISTER - wall faces exist before any finish decision (generic). |
 | `planar_shadow_topology.py` | 334 | CRITICAL | 1 | PLANAR_SHADOW_TOPOLOGY_V1 - an independent planar-graph route for validating physical spaces (Route B). |
 | `plane_poly.py` | 167 | HIGH | 11 | PLANE POLYGONS (M9 S2) - the small set of exact planar operations the polygon layouts need (generic; stdlib only). |
-| `plaster_materials_table_v1.py` | 225 | MEDIUM | 1 | PLASTER MATERIALS TABLE V1 (task T-454, owner directive 2026-11-02 B2 'plaster purchase quantities' as corrected by |
+| `plaster_materials_table_v1.py` | 225 | MEDIUM | 3 | PLASTER MATERIALS TABLE V1 (task T-454, owner directive 2026-11-02 B2 'plaster purchase quantities' as corrected by |
+| `plaster_materials_table_v2.py` | 232 | MEDIUM | 1 | PLASTER MATERIALS TABLE V2 (task T-489, from Q-79 withdrawn by the Lead 2026-11-03 12:18; opt-in, UNWIRED_PRODUCER: |
 | `plot_edge_members.py` | 694 | MEDIUM | 3 | PLOT EDGE MEMBERS V1 - the foundation members along a plot boundary as SEPARATE lines (owner Q-12 = B): the |
 | `pool_checklist.py` | 302 | MEDIUM | 1 | POOL CHECK LIST V1 (T-057) - for every villa with a pool: is a pool pump room drawn, where are the main manholes, |
 | `pool_qto.py` | 589 | CRITICAL | 4 | SWIMMING POOL QTO - source-controlled concrete and reinforcement quantities for a pool shell (generic). |
@@ -715,7 +717,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `terminal_ledger.py` | 58 | MEDIUM | 2 | TERMINAL_OBJECT_LEDGER - every admitted quantity-bearing object ends in exactly one terminal record. |
 | `text_role.py` | 173 | MEDIUM | 9 | TEXT ROLE AUTHORITY (R8.9): a text is not a room identity merely because it lies inside a polygon. |
 | `text_role_v3.py` | 124 | MEDIUM | 1 | TEXT ROLE V3 - text_role (TEXT_ROLE_POLICY_V2) with tag families scoped to the SOURCE revision. |
-| `tile_count.py` | 301 | MEDIUM | 1 | TILE COUNT (T-087) - tiles to buy per room from a laid grid, with the owner's joint widths (generic, every villa). |
+| `tile_count.py` | 301 | MEDIUM | 2 | TILE COUNT (T-087) - tiles to buy per room from a laid grid, with the owner's joint widths (generic, every villa). |
 | `tile_layout.py` | 440 | MEDIUM | 8 | TILE LAYOUT (M9 S1) - exact cutting plan of a RECTANGULAR surface for one tile size (generic; stdlib only). |
 | `topology.py` | 1244 | CRITICAL | 41 | ROOM / SPACE TOPOLOGY (R8.8): certified planar sites from positively admitted boundary geometry. |
 | `topology_closures.py` | 197 | HIGH | 30 | ZERO-MATERIAL TOPOLOGY CLOSURES (R8.11). |
@@ -873,7 +875,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `t334_line_state_check.py` | 332 | MEDIUM | 4 | LINE-STATE CONSISTENCY CHECK (task T-334) - a read-only export-integrity check beside tools/boq_export_v1.py. It |
 | `trade_completeness.py` | 106 | MEDIUM | 2 | Trade completeness runner (T-236): engine/source/trade_completeness_v1.check() on one project's input file. |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 4632 | HIGH | 51 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 4631 | HIGH | 51 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -891,7 +893,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L214-215), def structural_lines (L218-225), def run_rules (L228-232), def write_m9 (L235-274), def cmd_run (L277-297), def cmd_rooms (L300-306), class CompletenessFailed (L319-325), def arch_compute (L328-357), def K_value (L2503-2505), def v21_files (L2671-2758), def cmd_arch (L3191-4258), def cmd_tiles (L4272-4284), def cmd_membrane (L4287-4300), def cmd_rooms_check (L4303-4305), def cmd_rules (L4308-4314), def main (L4317-4627)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L214-215), def structural_lines (L218-225), def run_rules (L228-232), def write_m9 (L235-274), def cmd_run (L277-297), def cmd_rooms (L300-306), class CompletenessFailed (L319-325), def arch_compute (L328-357), def K_value (L2503-2505), def v21_files (L2671-2758), def cmd_arch (L3191-4257), def cmd_tiles (L4271-4283), def cmd_membrane (L4286-4299), def cmd_rooms_check (L4302-4304), def cmd_rules (L4307-4313), def main (L4316-4626)
 
 ## `tools/synth_villa/` (4 modules)
 
@@ -1407,6 +1409,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t452_project_scoreboard/` | 1 |
 | `tests/t453_material_ledger/` | 1 |
 | `tests/t454_plaster_materials/` | 1 |
+| `tests/t455_tile_purchase/` | 2 |
 | `tests/t456_finish_area_units/` | 1 |
 | `tests/t457_wet_wall_fixing/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
@@ -1431,7 +1434,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t481_skirting_remainder/` | 1 |
 | `tests/t482_blockwork_conditions/` | 2 |
 | `tests/t484_displacement/` | 2 |
-| `tests/t485_registry_promotion/` | 1 |
+| `tests/t485_registry_promotion/` | 2 |
+| `tests/t489_plaster_mix/` | 1 |
+| `tests/t490_stone_floor_census/` | 1 |
+| `tests/t491_site_preparation/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1889,6 +1895,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t452/` | 3 |
 | `research/agents_t453/` | 5 |
 | `research/agents_t454/` | 4 |
+| `research/agents_t455/` | 4 |
 | `research/agents_t456/` | 3 |
 | `research/agents_t457/` | 3 |
 | `research/agents_t458/` | 2 |
@@ -1906,6 +1913,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t482/` | 4 |
 | `research/agents_t484/` | 6 |
 | `research/agents_t485/` | 8 |
+| `research/agents_t489/` | 4 |
+| `research/agents_t490/` | 5 |
+| `research/agents_t491/` | 7 |
+| `research/agents_t492/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

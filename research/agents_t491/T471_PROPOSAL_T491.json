@@ -1,0 +1,126 @@
+[
+ {
+  "component_id": "C-B1-01",
+  "change": "applicability NOT_APPLICABLE -> APPLICABLE (owner 2026-11-02 17:20 (6) puts site clearance in scope for every villa; R-T491-CLR-1 supersedes the T-357 R-CLR-1 scope outcome, not its convention-extent refusal)",
+  "formula": "shoelace area of the printed plot boundary unless a clearance limit is printed",
+  "unit": "m2"
+ },
+ {
+  "component_id": "C-B1-07-HOARDING_GROSS_BOUNDARY",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "perimeter of the plot boundary polygon",
+  "unit": "lm",
+  "status_this_villa": "DRAWING-CONFIRMED",
+  "missing": []
+ },
+ {
+  "component_id": "C-B1-07-HOARDING_FENCE_NET",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "gross boundary - sum(temporary gate widths)",
+  "unit": "lm",
+  "status_this_villa": "HELD",
+  "missing": [
+   "temporary site gate count and widths (site logistics plan / contract)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-HOARDING_GATES",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "count of temporary site gates",
+  "unit": "nos",
+  "status_this_villa": "HELD",
+  "missing": [
+   "temporary site gate count"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-GUARD_CABIN_OR_TENT",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "cabins / tents (nos) x construction months",
+  "unit": "nos x months",
+  "status_this_villa": "HELD",
+  "missing": [
+   "cabins / tents (nos) (source: site logistics plan / contract)",
+   "construction months (source: project programme)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-WATER_TANKS",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "water tanks (nos)",
+  "unit": "nos",
+  "status_this_villa": "HELD",
+  "missing": [
+   "water tanks (nos) (source: site logistics plan / contract)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-WATER_TANKER_TRIPS",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "trips per week x weeks of water use",
+  "unit": "trips",
+  "status_this_villa": "HELD",
+  "missing": [
+   "trips per week (source: site logistics plan / contract)",
+   "weeks of water use (source: project programme)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-CONCRETE_PUMP_POURS",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "pumped pours",
+  "unit": "pours",
+  "status_this_villa": "HELD",
+  "missing": [
+   "pumped pours (source: structural pour sequence / pour plan)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-POUR_GENERATOR_DAYS",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "pour days",
+  "unit": "days",
+  "status_this_villa": "HELD",
+  "missing": [
+   "pour days (source: structural pour sequence / pour plan)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-GENERATOR_FUEL",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "one of GENERATOR_FUEL / GOVERNMENT_TEMPORARY_CONNECTION",
+  "unit": "item",
+  "status_this_villa": "HELD",
+  "missing": [
+   "the project's temporary power choice (contract / authority application)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-GOVERNMENT_TEMPORARY_CONNECTION",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "one of GENERATOR_FUEL / GOVERNMENT_TEMPORARY_CONNECTION",
+  "unit": "item",
+  "status_this_villa": "HELD",
+  "missing": [
+   "the project's temporary power choice (contract / authority application)"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-SITE_AND_WORKERS_INSURANCE",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "1 item when the contract includes it",
+  "unit": "item",
+  "status_this_villa": "HELD",
+  "missing": [
+   "contract clause on site / workers insurance"
+  ]
+ },
+ {
+  "component_id": "C-B1-07-SITE_HANDOVER_MUNICIPALITY_AND_OFFICE",
+  "change": "new component (owner 2026-11-02 17:20 (6)); listed present or HELD, no price",
+  "formula": "1 item per project",
+  "unit": "item",
+  "status_this_villa": "ASSUMED - OWNER-APPROVED",
+  "missing": []
+ }
+]
