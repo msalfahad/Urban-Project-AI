@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T19:01Z | Worker 3 | IDLE | none (run lock held by run 20261103T170209-357-21557 since 2026-11-03T17:02Z) | overlap lock: another Worker 3 run is active; no claim, no change, no quantity | lock
 - 2026-11-03T18:53Z | Verifier | STARTED | run session_01E6cPnc4vCV5hn8JXFvrHkg | repo-attached routine | task state: READY T-443 r3 (Worker 1 18:09) per RUN_LOG | self-check pending
 - 2026-11-03T18:43Z | Worker 2 | STARTED | run session_01E6cPnb7f8PsvX8qhs7zV3a | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T18:09Z | Worker 1 | SUCCESS | T-443 r3 READY (agents/task-T-443 @ 92a38a14) | Gate B r2 faults fixed, engineering unchanged (stair-room skirting 4 children, FIN.SKIRTING +13.550 lm): T-459 binding rebuilt (arch_v3047 touches no route G steel), hub V3.0.47 wiring line-stable (1.41.0 refs :3226/:3241 hold, T-419 literal kept), t485 left to T-492 (merged). L4 full suite to the end on e3aa69f3: 18,343 pass / 622 skip / 105 xfail / 0 fail (r2: 3 fail). Claimed although T-350 r3 (worker 3, CLAIMED) shares hub/master files: Lead order put T-443 first, merge-order rule applies. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: first STARTED board log timed out at 2 min (retried OK); first task push hit a 200 s timeout (retried OK)
