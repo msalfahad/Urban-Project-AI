@@ -128,3 +128,19 @@ Known failure on this branch (not new code behaviour): `tests/t485_registry_prom
 test_t485_promotion.py::test_a_merged_package_never_stays_pending_in_the_newest_registry` reports 'T-443' because the
 test treats a task commit reachable from HEAD as merged; on a task branch the package's own commit always is. On the
 working head it will also report T-443 until the merge promotes it (registry promotion at merge, as T-485).
+
+## Round 3 (worker 1, 2026-11-03 17:3x UTC): the three r2 Gate B (b) failures
+
+Engineering of r2 unchanged (4 / 4 children AGREE by the Checker, FIN.SKIRTING +13.550 lm; no quantity, input or
+module change in r3). Base: merged the working head 3507b6aa (T-492 226af560, T-455, T-489, T-490, T-491).
+
+1. `tests/t459_lap_rule::test_candidate_binding_rebuilds`: `research/agents_t459/T459_CANDIDATE_BINDING.json` rebuilt
+   with `t459_census.py candidate --write`; it adds `engine/source/arch_v3047.py: []` (no route G lap token) and
+   `later_steps_touching` stays `[]`: the stair-room skirting split touches no column / beam steel.
+2. `tests/t479_registry_refresh::test_builder_reproduces_the_committed_file` (1.41.0 cites `urban_boq_m9.py:3226` /
+   `:3241`): the hub wiring is line-stable again. `V3047` is named on the `V3045` line (3210) and joins `v3045` with
+   `or a.method == V3047` on the T-419 line (3211, the literal pinned by tests/t419 kept as a substring); the separate
+   r2 line is gone, so every line up to 3260 keeps its working-head number (3216 / 3226 / 3241 / 3258 checked).
+   1.41.0 / 1.42.0 / 1.43.0 / 1.44.0 are not edited; 1.44.0's `:3226` / `:3241` now point at the lines they name.
+3. `tests/t485_registry_promotion` (Lead ruling F-C-T443-1): fixed by T-492 (merged); not touched here. On this
+   head the guard no longer names T-443.
