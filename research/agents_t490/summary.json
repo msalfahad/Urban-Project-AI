@@ -1,0 +1,443 @@
+{
+ "method": "STONE_FLOOR_CENSUS_V1",
+ "rows": [
+  {
+   "area_basis": "V3.0.46 porcelain net of GF-RC99C2A (T-246 / T-427); the entrance zone has no drawn edge of its own (sheet03: the D200 double door opens straight into DINING)",
+   "area_m2": 109.478417,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-01"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 109.478417,
+   "carrier_minus_measure_m2": 0.0,
+   "carriers": [
+    "L-7625f35c503d9f8e6196"
+   ],
+   "element": "ROOM_FLOOR",
+   "evidence": "architectural DXF text census this run: 276 texts, room labels DINING / RECEPTION / SALOON / PANTRY / ..., no ENTRANCE / HALL / LOBBY word, no finish word (marble, granite, stone, porcelain, ceramic, tile, floor finish) in English; the Arabic labels on the plan sheets are room names; no finish schedule or legend on any sheet (T-091, T-153, T-471 F-4)",
+   "family": "B3-01",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-OPEN-ROOM-ENTRANCE-ZONE",
+   "line_state": "RELEASED",
+   "material": "PORCELAIN",
+   "material_basis": "DEFAULT_RULE",
+   "material_note": "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1",
+   "name": "entrance zone inside the main door D-GF-07 (open room: dining / reception / saloon)",
+   "owner_trade": "tiler (porcelain floor)",
+   "status": "NOT_APPLICABLE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "printed 140 x 370 (sheet03, re-read this run); drawn 5.1794 (T-343)",
+   "area_m2": 5.18,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 5.1794,
+   "carrier_minus_measure_m2": -0.0006,
+   "carriers": [
+    "L-3dd82a576dce1beb4250"
+   ],
+   "element": "STAIR_LANDING",
+   "evidence": "freelancer 'entrance marble' landing row 5.10 vs 5.1794 (T-343: ENGINE_RIGHT, printed 1.40 x 3.70)",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-E1-LANDING",
+   "line_state": "RELEASED",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "OWNER_RULE_OUTDOOR_FLOORS (outside stairs marble) + UP-STAIR-005",
+   "name": "entrance landing outside the main door, top of the entrance flight E1",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": [
+    {
+     "family": "B3-04",
+     "opening_id": "OP-021 (D-GF-07)",
+     "strip_m2": 0.4
+    }
+   ]
+  },
+  {
+   "area_basis": "printed 280, 4 treads 0.30 (sheet03; T-111 / T-343)",
+   "area_m2": 3.36,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 3.3594,
+   "carrier_minus_measure_m2": -0.0006,
+   "carriers": [
+    "L-314c3ac6d45431b687c5"
+   ],
+   "element": "TREADS",
+   "evidence": "freelancer 'entrance marble' step rows (T-471 F-4: steps + one landing = E1)",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-E1-TREADS",
+   "line_state": "RELEASED",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "OWNER_RULE_OUTDOOR_FLOORS",
+   "name": "entrance flight E1, 4 treads",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "printed 200 door, wall 20 (sheet03; T-175 D-GF-07)",
+   "area_m2": 0.4,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-04"
+   ],
+   "carried_held_high_m2": 0.4,
+   "carried_released_m2": 0,
+   "carrier_minus_measure_m2": null,
+   "carriers": [
+    "L-ad41b065d825c0190b7d"
+   ],
+   "element": "THRESHOLD",
+   "evidence": "ARCH.THRESHOLD HELD 0.40 (material not printed); porcelain doorway strip L-e6e75fa6 EXCLUDED",
+   "family": "B3-04",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-THRESHOLD-D-GF-07",
+   "line_state": "HELD_ONLY",
+   "material": null,
+   "material_basis": "NO_SOURCE",
+   "material_note": "no project source, owner rule or applicable default names the material",
+   "name": "main entrance door threshold (OP-021, 2.00 in a 0.20 wall)",
+   "owner_trade": "door-threshold marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "T-418 parts in the printed 250 x 500 stair room (sheet03, re-read this run)",
+   "area_m2": 4.805,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-01",
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 4.805,
+   "carrier_minus_measure_m2": 0.0,
+   "carriers": [
+    "L-f53d498668da3dc7c228"
+   ],
+   "element": "FLOOR_OR_LANDING",
+   "evidence": "FIN.FLOOR.FINISH_HELD (area released, material HELD); doorway strip OP-010 porcelain L-a3bbe40a 0.20",
+   "family": "HELD",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-ST-HALL",
+   "line_state": "RELEASED",
+   "material": null,
+   "material_basis": "NO_SOURCE",
+   "material_note": "no project source, owner rule or applicable default names the material",
+   "name": "GF stair room hall at +1.00: foot of MS1-L, top of D1",
+   "owner_trade": "undecided: B3-01 / B7",
+   "status": "HELD",
+   "thresholds": [
+    {
+     "family": "B3-04",
+     "opening_id": "OP-010",
+     "strip_m2": 0.2
+    }
+   ]
+  },
+  {
+   "area_basis": "T-418 (sheet03)",
+   "area_m2": 1.3225,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-01",
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 1.3225,
+   "carrier_minus_measure_m2": 0.0,
+   "carriers": [
+    "L-b4441a1b55eda53d98ea"
+   ],
+   "element": "FLOOR_OR_LANDING",
+   "evidence": "FIN.FLOOR.FINISH_HELD; threshold OP-013 ARCH.THRESHOLD HELD 0.18 (L-8111095f)",
+   "family": "HELD",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-ST-LOBBY030",
+   "line_state": "RELEASED",
+   "material": null,
+   "material_basis": "NO_SOURCE",
+   "material_note": "no project source, owner rule or applicable default names the material",
+   "name": "GF back-door lobby at +0.30 under the +3.50 half landing, foot of D1",
+   "owner_trade": "undecided: B3-01 / B7",
+   "status": "HELD",
+   "thresholds": [
+    {
+     "family": "B3-04",
+     "opening_id": "OP-013",
+     "strip_m2": 0.18000000000000002
+    }
+   ]
+  },
+  {
+   "area_basis": null,
+   "area_m2": null,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "UNREAD"
+   ],
+   "carried_held_high_m2": 0.23,
+   "carried_released_m2": 0,
+   "carrier_minus_measure_m2": null,
+   "carriers": [
+    "L-a788de4672b1f0d2e6c1"
+   ],
+   "element": "UNREAD",
+   "evidence": "two unread layer-2 lines (T-418): HELD 0 .. 0.2300, never 0",
+   "family": "HELD",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-ST-CN",
+   "line_state": "HELD_ONLY",
+   "material": null,
+   "material_basis": "NO_SOURCE",
+   "material_note": "no project source, owner rule or applicable default names the material",
+   "name": "0.20 strip north of the divider end",
+   "owner_trade": "undecided: UNREAD",
+   "status": "HELD",
+   "thresholds": []
+  },
+  {
+   "area_basis": null,
+   "area_m2": null,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 2.9225,
+   "carried_released_m2": 0,
+   "carrier_minus_measure_m2": null,
+   "carriers": [
+    "L-1983e89d8b619eade1db"
+   ],
+   "element": "STAIR_LANDING",
+   "evidence": "FIN.MARBLE.LANDING HELD 0 .. 2.9225 (T-421)",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "GF",
+   "id": "GF-ST-LANDINGS",
+   "line_state": "HELD_ONLY",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "UP-STAIR-001 / UP-STAIR-005 (OWNER-APPROVED)",
+   "name": "GF stair room landings bound (winders / half landing in the face)",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "printed 250 x 195 (sheet04, re-read this run)",
+   "area_m2": 4.875,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 4.9225,
+   "carrier_minus_measure_m2": 0.0475,
+   "carriers": [
+    "L-8011889d84788553a6b1"
+   ],
+   "element": "STAIR_ARRIVAL",
+   "evidence": "drawn 4.9225 = 4.875 - well end 0.010 + nosing band 0.0575 (T-240 / T-269); porcelain L-b06400d4 33.411036 already excludes it",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "1F",
+   "id": "1F-MAIN-ARRIVAL",
+   "line_state": "RELEASED",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "Q-66 B",
+   "name": "1F main-stair arrival landing at +5.50",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "T-345 piece R04 (drawn; size not printed)",
+   "area_m2": 1.352454,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 0,
+   "carrier_minus_measure_m2": null,
+   "carriers": [],
+   "element": "STAIR_LANDING",
+   "evidence": "deducted from 1F porcelain (T-345 R04); no released or held B7 line in V3.0.46 names it",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "1F",
+   "id": "1F-ROUND-QUARTER-LANDING",
+   "line_state": "NO_LINE",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "UP-STAIR-001 / UP-STAIR-005 (OWNER-APPROVED)",
+   "name": "round-stair quarter landing inside the 1F living",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "V3.0.46 porcelain net L-b06400d4 (T-421)",
+   "area_m2": 33.411036,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-01"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 33.411036,
+   "carrier_minus_measure_m2": 0.0,
+   "carriers": [
+    "L-b06400d46d252f242018"
+   ],
+   "element": "ROOM_FLOOR",
+   "evidence": "architectural DXF text census this run: 276 texts, room labels DINING / RECEPTION / SALOON / PANTRY / ..., no ENTRANCE / HALL / LOBBY word, no finish word (marble, granite, stone, porcelain, ceramic, tile, floor finish) in English; the Arabic labels on the plan sheets are room names; no finish schedule or legend on any sheet (T-091, T-153, T-471 F-4)",
+   "family": "B3-01",
+   "fixed_m2": 0.0,
+   "floor": "1F",
+   "id": "1F-LIVING",
+   "line_state": "RELEASED",
+   "material": "PORCELAIN",
+   "material_basis": "DEFAULT_RULE",
+   "material_note": "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1",
+   "name": "1F living (open stair hall)",
+   "owner_trade": "tiler (porcelain floor)",
+   "status": "NOT_APPLICABLE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "printed 250 x 195 (T-129 AL-2F, T-418)",
+   "area_m2": 4.875,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B7"
+   ],
+   "carried_held_high_m2": 9.225001,
+   "carried_released_m2": 0,
+   "carrier_minus_measure_m2": null,
+   "carriers": [
+    "L-5d2be30dd8d2ffeacc42"
+   ],
+   "element": "STAIR_ARRIVAL",
+   "evidence": "only inside the HELD landings bound 0 .. 9.225 of 2F-R4D1B62: no released B7-04 line of its own",
+   "family": "B7",
+   "fixed_m2": 0.0,
+   "floor": "2F",
+   "id": "2F-ST-ARRIVAL",
+   "line_state": "HELD_ONLY",
+   "material": "MARBLE",
+   "material_basis": "OWNER_RULE",
+   "material_note": "Q-70 A (condition met: T-129)",
+   "name": "2F main-stair arrival at +9.70",
+   "owner_trade": "stair marble",
+   "status": "CARRIED_ELSEWHERE",
+   "thresholds": []
+  },
+  {
+   "area_basis": "printed (450 - 250) x 125 (T-129 LB-2F, T-418)",
+   "area_m2": 2.2,
+   "b3_03_held": null,
+   "b3_03_move_m2": 0.0,
+   "b3_03_new_m2": 0.0,
+   "candidate_families": [
+    "B3-01"
+   ],
+   "carried_held_high_m2": 0,
+   "carried_released_m2": 2.2,
+   "carrier_minus_measure_m2": 0.0,
+   "carriers": [
+    "L-9bd25c0cec9da3a8f4d2"
+   ],
+   "element": "ROOM_FLOOR",
+   "evidence": "threshold OP-001 HELD 0.15 (L-3e5c6b7a); OP-007 doorway strip porcelain 0.18 (L-dc543495)",
+   "family": "B3-01",
+   "fixed_m2": 0.3,
+   "floor": "2F",
+   "id": "2F-ST-LOBBY",
+   "line_state": "RELEASED",
+   "material": "PORCELAIN",
+   "material_basis": "OWNER_RULE",
+   "material_note": "Q-70 A (candidate lobby porcelain)",
+   "name": "2F lobby beyond the stair width",
+   "owner_trade": "tiler (porcelain floor)",
+   "status": "NOT_APPLICABLE",
+   "thresholds": [
+    {
+     "family": "B3-04",
+     "opening_id": "OP-001",
+     "strip_m2": 0.15
+    },
+    {
+     "family": "B3-04",
+     "opening_id": "OP-007",
+     "strip_m2": 0.18000000000000002
+    }
+   ]
+  }
+ ],
+ "rule": "R-T490-1",
+ "totals": {
+  "b3_03_applicability": "NOT_APPLICABLE",
+  "b3_03_held_high_m2": 0,
+  "b3_03_held_unbounded": 0,
+  "b3_03_move_m2": 0.0,
+  "b3_03_new_m2": 0.0,
+  "by_family_m2": {
+   "B3-01": 145.089453,
+   "B3-04": 0.4,
+   "B7": 19.642454,
+   "HELD": 6.1275
+  },
+  "by_status": {
+   "CARRIED_ELSEWHERE": 7,
+   "HELD": 3,
+   "NOT_APPLICABLE": 3
+  }
+ }
+}
