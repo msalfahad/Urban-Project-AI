@@ -96,7 +96,8 @@ def test_markdown_lists_every_module(swept):
 # ------------------------------------------------------------------------------------------------ known failures
 def test_committed_ledger_is_well_formed():
     doc = KF.load_ledger()
-    assert doc["head"] and doc["failures"]
+    # T-466 (owner D5): the ledger holds real failures only; an empty list is the correct state of a green head
+    assert doc["head"] and isinstance(doc["failures"], list)
     for e in doc["failures"]:
         assert e["kind"] in ("FAILED", "ERROR") and "::" in e["id"]
 
