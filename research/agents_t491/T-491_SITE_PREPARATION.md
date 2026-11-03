@@ -36,6 +36,9 @@ pour sequence or contract, durations only from a programme. Proposed rules R-T49
 
 ## 3. Boundary re-measure (P7757.dxf ab54dd55, GF plan, this run)
 
+- Second drawing, own read this run: ARCH p.1 GF area plan (Alsenan_Architectural_P7757_Pages_01-02, 110 dpi) prints
+  STREET 15.00, SEA VIEW 15.00, NEIGHBOUR 31.37 on both long sides; its own chains close: 16.37 + 10.60 + 4.40 =
+  31.37 along the neighbour side and 13.50 + 1.50 = 15.00 across.
 - Street 15.000: 107 0.833 (L1) + 341 1.955 (L5, W 342-344) + 108 1.145 + 347 1.955 (W 348-34A) + 109 0.812 + 10F
   8.300 (L5). Lower neighbour 31.370: corner column 2F9D 0.370 + 85 10.230 + 0.200 + 86 / 105 1.200 + 9A 3.000 +
   0.200 + 8A 16.170. Sea 15.000: 8B 0.900 + 261 6.332 (W) + 8C 0.668 + 0.232 + 8D 5.168 + 8E 1.700. Upper neighbour
