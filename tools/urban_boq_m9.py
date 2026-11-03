@@ -3205,10 +3205,10 @@ def cmd_arch(a):
     # T-422: ARCH_TAKEOFF_V3.0.44 = the SAME candidate (engine.source.arch_v3044): a V3.0.43 run (its files unchanged) +
     # the Checker-verified skirting threshold release (URBAN_V3044_INPUTS_V1); named here for the same reason.
     V3044 = "ARCH_TAKEOFF_V3.0.44"
-    # T-478 / T-443: ARCH_TAKEOFF_V3.0.45 / V3.0.46 = the SAME candidate (arch_v3045 / arch_v3046): a V3.0.44 / V3.0.45 run
-    # + the Checker-verified blinding pieces / stair-room skirting split (URBAN_V3045 / V3046_INPUTS_V1); named here too.
-    V3045, V3046 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.46"
-    v3045 = a.method in (V3045, V3046)                 # T-478: the V3.0.44 run, then its V3.0.45 blinding package
+    # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
+    # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
+    V3045 = "ARCH_TAKEOFF_V3.0.45"
+    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46")  # T-478 / T-419 (see below)
     v3044 = a.method in (V3044, V3045, V3046)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
     v3043 = a.method in (V3043, V3044, V3045, V3046)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
     v3042 = a.method in (V3042, V3043, V3044, V3045, V3046)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
@@ -3254,7 +3254,10 @@ def cmd_arch(a):
     v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-142: V3.0.1 run, then V3.0.2
     v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-133: V3.0, then V3.0.1
     v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025, V3026, V3027, V3028, V3029, V3030, V3031, V3032, V3033, V3034, V3035, V3036, V3037, V3038, V3039, V3040, V3041, V3042, V3043, V3044, V3045, V3046)  # T-131: runs V2.13
-    v3046 = a.method == V3046                 # T-443: the V3.0.45 run, then its V3.0.46 stair-room skirting split
+    # T-419: ARCH_TAKEOFF_V3.0.46 = the SAME candidate (engine.source.arch_v3046): a V3.0.45 run (its files unchanged) +
+    # the Checker-verified lift tie beam / house below-ground masonry pieces (URBAN_V3046_INPUTS_V1); named here for the
+    # same reason as V3.0.41. Its name shares the V3.0.45 line above so the hub's earlier line numbers stay put.
+    v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3294,7 +3297,7 @@ def cmd_arch(a):
     if getattr(a, "v3046_inputs", None) and not v3046:
         raise SystemExit("--v3046-inputs needs --method ARCH_TAKEOFF_V3.0.46")
     if v3046 and not getattr(a, "v3046_inputs", None):
-        raise SystemExit("ARCH_TAKEOFF_V3.0.46 needs --v3046-inputs (the stair-room skirting split, Checker-verified)")
+        raise SystemExit("ARCH_TAKEOFF_V3.0.46 needs --v3046-inputs (the lift tie beam / G.B masonry table, Checker-verified)")
     if getattr(a, "v3045_inputs", None) and not v3045:
         raise SystemExit("--v3045-inputs needs --method ARCH_TAKEOFF_V3.0.45 or later")
     if v3045 and not getattr(a, "v3045_inputs", None):
@@ -4209,18 +4212,18 @@ def cmd_arch(a):
                                                                                                                                                                     svgs += names45
                                                                                                                                                                     v30rec = dict(v30rec, method=V3045, extends=V3044,
                                                                                                                                                                                   identity=ident45, v3_0_44_identity=ident44)
-                                                                                                                                                                if v3046:
-                                                                                                                                                                    # T-443: ARCH_TAKEOFF_V3.0.46 beside the V3_0_45_*
-                                                                                                                                                                    from engine.source import arch_v3046 as A3046
-                                                                                                                                                                    l3045 = A3045.integrate(l3044, ch_v45, fl24)[0]
-                                                                                                                                                                    inp46 = A3046.load_inputs(json.loads(Path(
-                                                                                                                                                                        a.v3046_inputs).read_text(encoding="utf-8")), l3045[0]["project"]["project_id"])
-                                                                                                                                                                    ch_v46, log_v46 = A3046.changes_for(inp46, l3045)
-                                                                                                                                                                    names46, ident46, _led46 = A3046.write(
-                                                                                                                                                                        out, l3045, ch_v46, log_v46, released, fl24)
-                                                                                                                                                                    svgs += names46
-                                                                                                                                                                    v30rec = dict(v30rec, method=V3046, extends=V3045,
-                                                                                                                                                                                  identity=ident46, v3_0_45_identity=ident45)
+                                                                                                                                                                    if v3046:
+                                                                                                                                                                        # T-419: ARCH_TAKEOFF_V3.0.46 beside the V3_0_45_*
+                                                                                                                                                                        from engine.source import arch_v3046 as A3046
+                                                                                                                                                                        l3045 = A3045.integrate(l3044, ch_v45, fl24)[0]
+                                                                                                                                                                        inp46 = A3046.load_inputs(json.loads(Path(
+                                                                                                                                                                            a.v3046_inputs).read_text(encoding="utf-8")), l3045[0]["project"]["project_id"])
+                                                                                                                                                                        ch_v46, log_v46 = A3046.changes_for(inp46, l3045)
+                                                                                                                                                                        names46, ident46, _led46 = A3046.write(
+                                                                                                                                                                            out, l3045, ch_v46, log_v46, released, fl24, doc=inp46)
+                                                                                                                                                                        svgs += names46
+                                                                                                                                                                        v30rec = dict(v30rec, method=V3046, extends=V3045,
+                                                                                                                                                                                      identity=ident46, v3_0_45_identity=ident45)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4375,7 +4378,7 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.43",) +   # T-350 (the V3.0.43 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.44",) +   # T-422 (the V3.0.44 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.45",) +   # T-478 (the V3.0.45 candidate; named in the hub, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.46",),   # T-443 (the V3.0.46 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.46",),   # T-419 (the V3.0.46 candidate; named in the hub, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4436,10 +4439,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
-    p.add_argument("--v3046-inputs", help="ARCH_TAKEOFF_V3.0.46 (URBAN_V3046_INPUTS_V1): the Checker-verified T-441 "
-                   "stair-room face tables: a BLOCKED stair-room skirting line split into one child per floor part "
-                   "(openings by id, a lift opening whole with no jambs), held faces their own HELD BLANK lines, the "
-                   "parent keeping the named remainder; every other V3.0.45 line byte-identical")
+    p.add_argument("--v3046-inputs", help="ARCH_TAKEOFF_V3.0.46 (URBAN_V3046_INPUTS_V1): the Checker-verified T-408 / "
+                   "T-407 pieces: the GF lift tie beam (concrete, forms, bars) and the house below-ground masonry runs "
+                   "added HELD BLANK with their measure beside, held reasons restated to name every fact, merged "
+                   "bindings re-checked; every other V3.0.45 line byte-identical")
     p.add_argument("--v3045-inputs", help="ARCH_TAKEOFF_V3.0.45 (URBAN_V3045_INPUTS_V1): the Checker-verified T-445 "
                    "blinding pieces: a mixed footing-blinding line SPLIT (verified pits valued, held pieces on their own "
                    "lines), held ranges fixed with the plot-line clip, the ground-beam netting record, a printed element "

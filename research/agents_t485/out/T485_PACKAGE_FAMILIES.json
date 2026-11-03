@@ -1,0 +1,5799 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.42.0",
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.7": {
+   "lines": 3545,
+   "lines_sha256": "2f678fae7299a86daba8689e56ee00de9fdad16470407b0dabf30cad41ef286c"
+  },
+  "ARCH_TAKEOFF_V3.0.8": {
+   "lines": 3553,
+   "lines_sha256": "a77572464347c1967abdaaebc9c09bd92b063875ac3fb36d94d2d2c33c1e612b",
+   "item_codes": {
+    "STR.CONC.COLUMN": {
+     "added": 3,
+     "removed": 0,
+     "changed": 8,
+     "record": 0
+    },
+    "STR.CONC.STRAP": {
+     "added": 5,
+     "removed": 0,
+     "changed": 5,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.STRAP": {
+      "added": 5,
+      "removed": 0,
+      "changed": 5,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 3,
+      "removed": 0,
+      "changed": 8,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 21,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.9": {
+   "lines": 3583,
+   "lines_sha256": "1dee622c1c1da83910f6ebedbbea4cd28aff9cc6f581ffab7183f050dded68e3",
+   "item_codes": {
+    "FIN.PAINT": {
+     "added": 15,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 15,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 15,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 15,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 56,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.10": {
+   "lines": 3610,
+   "lines_sha256": "d43435a45a17096e270918f50ab74339e683324d5d687c99c892cb77049a1a9f",
+   "item_codes": {
+    "ARCH.WINDOW": {
+     "added": 9,
+     "removed": 0,
+     "changed": 27,
+     "record": 0
+    },
+    "DOOR.EXTERNAL.ALUMINIUM": {
+     "added": 6,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "DOOR.INTERNAL.PVC": {
+     "added": 10,
+     "removed": 0,
+     "changed": 15,
+     "record": 0
+    },
+    "DOOR.MAIN_ENTRANCE": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B6-02": {
+     "DOOR.INTERNAL.PVC": {
+      "added": 10,
+      "removed": 0,
+      "changed": 15,
+      "record": 0
+     }
+    },
+    "B6-03": {
+     "DOOR.EXTERNAL.ALUMINIUM": {
+      "added": 6,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     },
+     "DOOR.MAIN_ENTRANCE": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B6-04": {
+     "ARCH.WINDOW": {
+      "added": 9,
+      "removed": 0,
+      "changed": 27,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 71,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.11": {
+   "lines": 3610,
+   "lines_sha256": "47c9a84e7a460559443b130e3f154828f6337e3fc1dad342674ce4f7206244fa",
+   "item_codes": {
+    "STR.CONC.BLINDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.FOOTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-02": {
+     "STR.CONC.FOOTING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 2,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.12": {
+   "lines": 3663,
+   "lines_sha256": "8b8e5bb515d8eec3eb0bd23568f044c11c87945a1b42c2cbaca871e62aae1f7d",
+   "item_codes": {
+    "STR.CONC.BEAM": {
+     "added": 53,
+     "removed": 0,
+     "changed": 50,
+     "record": 0
+    },
+    "STR.CONC.SLAB": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-07": {
+     "STR.CONC.BEAM": {
+      "added": 53,
+      "removed": 0,
+      "changed": 50,
+      "record": 0
+     }
+    },
+    "B10-08": {
+     "STR.CONC.SLAB": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 116,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.13": {
+   "lines": 3663,
+   "lines_sha256": "9a40a43b9f871dd7e8f68f67422a11e57e7982393a80c65d704e10c5c9dddb42",
+   "item_codes": {
+    "DOOR.EXTERNAL.ALUMINIUM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "DOOR.INTERNAL.PVC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "DOOR.MAIN_ENTRANCE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    }
+   },
+   "families": {
+    "B6-02": {
+     "DOOR.INTERNAL.PVC": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B6-03": {
+     "DOOR.EXTERNAL.ALUMINIUM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     },
+     "DOOR.MAIN_ENTRANCE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 8,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.14": {
+   "lines": 3680,
+   "lines_sha256": "48d7d54bece057ed106805f7cb3bf89ef29546408eb58c9b97955707f5b2c9db",
+   "item_codes": {
+    "ARCH.SPACE": {
+     "added": 4,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "ARCH.THRESHOLD": {
+     "added": 9,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 15,
+     "record": 0
+    },
+    "FIN.FLOOR.WET_TILE": {
+     "added": 3,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B2-02": {
+     "ARCH.SPACE": {
+      "added": 4,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B3-01": {
+     "FIN.FLOOR.PORCELAIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 15,
+      "record": 0
+     }
+    },
+    "B3-02": {
+     "FIN.FLOOR.WET_TILE": {
+      "added": 3,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B3-04": {
+     "ARCH.THRESHOLD": {
+      "added": 9,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 37,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.15": {
+   "lines": 3699,
+   "lines_sha256": "e54cae7470610c957b2635aed3fc6e40d1baf0dd16032b7283eb63845bedd2c2",
+   "item_codes": {
+    "WP.FOUNDATION.BURIED_LIQUID": {
+     "added": 5,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_MEMBRANE": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_SCREED": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.FOOTING_SIDES": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_BOARD": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_SCREED": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.PROCUREMENT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B8-08": {
+     "WP.FOUNDATION.BURIED_LIQUID": {
+      "added": 5,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_MEMBRANE": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_SCREED": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.FOOTING_SIDES": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.LIFT_PIT_BOARD": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.LIFT_PIT_SCREED": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "WP.FOUNDATION.PROCUREMENT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 19,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.16": {
+   "lines": 3699,
+   "lines_sha256": "3181cf12995c410d4c81c89b3e9d2c4c110f730215f9e70cecd20af205aacbcc",
+   "item_codes": {
+    "ARCH.EXTERIOR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "ARCH.FACADE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "ARCH.FACADE_RUN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 6
+    },
+    "ARCH.PASSAGE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 11
+    },
+    "ARCH.SPACE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 16
+    },
+    "ARCH.THRESHOLD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 23
+    },
+    "ARCH.WALL_PANEL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "ARCH.WALL_RUN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "ARCH.WALL_VOLUME": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "ARCH.WINDOW": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 36
+    },
+    "ARCH.WINDOW_REVEAL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 27
+    },
+    "DOOR.EXTERNAL.ALUMINIUM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 8
+    },
+    "DOOR.INTERNAL.PVC": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 25
+    },
+    "DOOR.MAIN_ENTRANCE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "FIN.CEILING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 36
+    },
+    "FIN.EXT.FINISH": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 3
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 32
+    },
+    "FIN.FLOOR.WET_TILE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 19
+    },
+    "FIN.MARBLE.LANDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "FIN.MARBLE.RISER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.MARBLE.THRESHOLD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 10
+    },
+    "FIN.MARBLE.TREAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 45
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 67
+    },
+    "FIN.RAILING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 39
+    },
+    "FIN.STAIR.FLIGHT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.STAIR.STEP_LM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.WALL.TILE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 17
+    },
+    "FIN.WP.DOORWAY": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.WP.DOORWAY_TRANSITION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 13
+    },
+    "FIN.WP.DOORWAY_TRANSITION_NR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 14
+    },
+    "FIN.WP.FLOOR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 18
+    },
+    "FIN.WP.MEMBRANE_ROLLS": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 22
+    },
+    "FIN.WP.PENETRATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 17
+    },
+    "FIN.WP.ROOF": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "FIN.WP.ROOF_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "FIN.WP.TERMINATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "FIN.WP.WALL_UPTURN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 18
+    },
+    "MAS.BLOCK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "STR.CONC.BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 191
+    },
+    "STR.CONC.BLINDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "STR.CONC.BOUNDARY_WALL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 72
+    },
+    "STR.CONC.DOME": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 5
+    },
+    "STR.CONC.FOOTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 26
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 58
+    },
+    "STR.CONC.GROUND_SLAB": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 25
+    },
+    "STR.CONC.NECK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 36
+    },
+    "STR.CONC.POOL": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 5
+    },
+    "STR.CONC.SLAB": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 75
+    },
+    "STR.CONC.STAIR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 9
+    },
+    "STR.CONC.STRAP": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 10
+    },
+    "STR.REBAR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2505
+    },
+    "WP.FOUNDATION.BURIED_LIQUID": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 5
+    },
+    "WP.FOUNDATION.FOOTING_MEMBRANE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "WP.FOUNDATION.FOOTING_SCREED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "WP.FOUNDATION.FOOTING_SIDES": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "WP.FOUNDATION.LIFT_PIT_BOARD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "WP.FOUNDATION.LIFT_PIT_SCREED": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "WP.FOUNDATION.PROCUREMENT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    }
+   },
+   "families": {},
+   "apart": [],
+   "record_families": [
+    "B10-01",
+    "B10-02",
+    "B10-03",
+    "B10-04",
+    "B10-05",
+    "B10-06",
+    "B10-07",
+    "B10-08",
+    "B10-09",
+    "B10-10",
+    "B10-11",
+    "B11-01",
+    "B2-02",
+    "B3-01",
+    "B3-02",
+    "B3-04",
+    "B3-06",
+    "B4-01",
+    "B4-03",
+    "B4-06",
+    "B4-07",
+    "B4-08",
+    "B5-01",
+    "B6-01",
+    "B6-02",
+    "B6-03",
+    "B6-04",
+    "B7-01",
+    "B7-02",
+    "B7-03",
+    "B7-04",
+    "B7-06",
+    "B7-09",
+    "B7-12",
+    "B8-01",
+    "B8-02",
+    "B8-03",
+    "B8-05",
+    "B8-06",
+    "B8-08",
+    "B9-01"
+   ],
+   "record_apart": [
+    {
+     "item_code": "ARCH.EXTERIOR",
+     "kind": "NOT_A_BOQ_LINE",
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    }
+   ],
+   "touched": 0,
+   "record_only": 3699
+  },
+  "ARCH_TAKEOFF_V3.0.17": {
+   "lines": 3700,
+   "lines_sha256": "366be2f8ac8b2fc1adab82824484cbeb12108073f537f3f440fa91c6174dc2b1",
+   "item_codes": {
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 21,
+     "record": 0
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 1,
+     "removed": 0,
+     "changed": 27,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 1,
+      "removed": 0,
+      "changed": 27,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 21,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 49,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.18": {
+   "lines": 3705,
+   "lines_sha256": "ec7410042de41383bbf2e44460ff8a0384fb85c083ab3cc3425a0240d15b1e26",
+   "item_codes": {
+    "FIN.FLOOR.WET_TILE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.LANDING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.STAIR": {
+     "added": 3,
+     "removed": 0,
+     "changed": 2,
+     "record": 3
+    }
+   },
+   "families": {
+    "B3-02": {
+     "FIN.FLOOR.WET_TILE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-04": {
+     "FIN.MARBLE.LANDING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-12": {
+     "STR.CONC.STAIR": {
+      "added": 3,
+      "removed": 0,
+      "changed": 2,
+      "record": 3
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 7,
+   "record_only": 3
+  },
+  "ARCH_TAKEOFF_V3.0.19": {
+   "lines": 3705,
+   "lines_sha256": "b35475bf9168adfc792fdba858515e7b77d8cb7bf934ba256b94d4af6c512904",
+   "item_codes": {
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 1,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.20": {
+   "lines": 3705,
+   "lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "item_codes": {
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 8,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.21": {
+   "lines": 3706,
+   "lines_sha256": "be22a4e4b68dbaa9e87a39ad45f7dec3be64b04aca3a5843301458720b645ad0",
+   "item_codes": {
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.WALL.TILE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 11,
+     "record": 0
+    }
+   },
+   "families": {
+    "B3-06": {
+     "FIN.SKIRTING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B4-01": {
+     "FIN.WALL.TILE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 11,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 16,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.22": {
+   "lines": 3706,
+   "lines_sha256": "7199c8b6f122f54dda9de3fdbfd73b70b7991d7030b4e570d808fe00c4d21587",
+   "item_codes": {
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 12,
+     "record": 6
+    },
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    }
+   },
+   "families": {
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 12,
+      "record": 6
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B3-06"
+   ],
+   "record_apart": [],
+   "touched": 12,
+   "record_only": 8
+  },
+  "ARCH_TAKEOFF_V3.0.23": {
+   "lines": 3710,
+   "lines_sha256": "19f654bd9d2050780a68b88d17f5e0712f4b216192b3e766e24d4293c7414312",
+   "item_codes": {
+    "STR.CONC.PARAPET": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-12": {
+     "STR.CONC.PARAPET": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 4,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.24": {
+   "lines": 3710,
+   "lines_sha256": "193947338acda73040bb0e88045ad3097cd66b53e1fb7f5ba208d82b683f3b00",
+   "item_codes": {
+    "ARCH.SPACE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "STR.REBAR": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 350
+    }
+   },
+   "families": {},
+   "apart": [],
+   "record_families": [
+    "B11-01",
+    "B2-02",
+    "B3-06",
+    "B4-03",
+    "B4-06"
+   ],
+   "record_apart": [],
+   "touched": 0,
+   "record_only": 366
+  },
+  "ARCH_TAKEOFF_V3.0.25": {
+   "lines": 3718,
+   "lines_sha256": "3064078abf6d02bb243712a090fed24f9ec06e4c4970e98326716d1235736829",
+   "item_codes": {
+    "EXT.FLOOR.OUTDOOR": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FLOOR.PORCELAIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.PAVING.INTERLOCK": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.POOL.WATER_FACE": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.LANDING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.RISER": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.TREAD": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B13-02": {
+     "EXT.FLOOR.OUTDOOR": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FLOOR.PORCELAIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.PAVING.INTERLOCK": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B13-09": {
+     "EXT.POOL.WATER_FACE": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-02": {
+     "FIN.MARBLE.TREAD": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-03": {
+     "FIN.MARBLE.RISER": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-04": {
+     "FIN.MARBLE.LANDING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 8,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.26": {
+   "lines": 3775,
+   "lines_sha256": "8959989c0773ab671763b7143642c1a8b1bd4f84185898f9f97059fbe8b90b46",
+   "item_codes": {
+    "ARCH.WALL_PANEL": {
+     "added": 19,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "ARCH.WALL_VOLUME": {
+     "added": 19,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "MAS.BLOCK": {
+     "added": 19,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    }
+   },
+   "families": {
+    "B9-01": {
+     "ARCH.WALL_PANEL": {
+      "added": 19,
+      "removed": 0,
+      "changed": 0,
+      "record": 7
+     },
+     "ARCH.WALL_VOLUME": {
+      "added": 19,
+      "removed": 0,
+      "changed": 0,
+      "record": 7
+     },
+     "MAS.BLOCK": {
+      "added": 19,
+      "removed": 0,
+      "changed": 0,
+      "record": 7
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 57,
+   "record_only": 21
+  },
+  "ARCH_TAKEOFF_V3.0.27": {
+   "lines": 3913,
+   "lines_sha256": "f7972540ee1be08675178f354b3210b6d3146d99e93e02ed0bcbad4f102e7936",
+   "item_codes": {
+    "STR.REBAR": {
+     "added": 138,
+     "removed": 0,
+     "changed": 196,
+     "record": 0
+    }
+   },
+   "families": {
+    "B11-01": {
+     "STR.REBAR": {
+      "added": 138,
+      "removed": 0,
+      "changed": 196,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 334,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.28": {
+   "lines": 3956,
+   "lines_sha256": "6f19b32bef5f1ad1a7c35ffe29a62b848b9546922bc1ec17b669f6b6a778f9dd",
+   "item_codes": {
+    "ARCH.WINDOW_REVEAL": {
+     "added": 35,
+     "removed": 0,
+     "changed": 26,
+     "record": 0
+    },
+    "FIN.PLASTER": {
+     "added": 8,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-03": {
+     "FIN.PLASTER": {
+      "added": 8,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B4-08": {
+     "ARCH.WINDOW_REVEAL": {
+      "added": 35,
+      "removed": 0,
+      "changed": 26,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 70,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.29": {
+   "lines": 3962,
+   "lines_sha256": "6b5dc44f7a5f271c21731c7fae2e5f2a8db32c0da86ac11c404ea3a1acf3b31e",
+   "item_codes": {
+    "ARCH.THRESHOLD": {
+     "added": 1,
+     "removed": 0,
+     "changed": 5,
+     "record": 0
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.THRESHOLD": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B3-01": {
+     "FIN.FLOOR.PORCELAIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B3-04": {
+     "ARCH.THRESHOLD": {
+      "added": 1,
+      "removed": 0,
+      "changed": 5,
+      "record": 0
+     },
+     "FIN.MARBLE.THRESHOLD": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 11,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.30": {
+   "lines": 4623,
+   "lines_sha256": "f90e8a66fd051e423389029fc7337f43b7bc988b110e5c8be023ea650ddcced3",
+   "item_codes": {
+    "ARCH.SHUTTER": {
+     "added": 6,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.HANDRAIL": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.RAILING": {
+     "added": 5,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MET.RAILING.GUARD": {
+     "added": 6,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.FORMWORK": {
+     "added": 612,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.FORMWORK.STAIR": {
+     "added": 31,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-13": {
+     "STR.FORMWORK": {
+      "added": 612,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B13-08": {
+     "MET.RAILING.GUARD": {
+      "added": 6,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B6-05": {
+     "ARCH.SHUTTER": {
+      "added": 6,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-09": {
+     "FIN.RAILING": {
+      "added": 5,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-10": {
+     "FIN.HANDRAIL": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-13": {
+     "STR.FORMWORK.STAIR": {
+      "added": 31,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 661,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.31": {
+   "lines": 4639,
+   "lines_sha256": "0de8e99864a2419b95c63c355e39187c23e517080dfe596654f6f387989c4a6d",
+   "item_codes": {
+    "FIN.ROOF.FINISH": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.ROOF.INSULATION": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.ROOF.PROTECTION": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.ROOF.SCREED": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B13-01": {
+     "FIN.ROOF.FINISH": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.ROOF.INSULATION": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.ROOF.PROTECTION": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.ROOF.SCREED": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 16,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.32": {
+   "lines": 4689,
+   "lines_sha256": "0c8bfbe67444ebdcad77d671f1d89d1ba89fb39ef5f66aff4fb4a9631941b799",
+   "item_codes": {
+    "FIN.CEILING": {
+     "added": 3,
+     "removed": 0,
+     "changed": 8,
+     "record": 23
+    },
+    "FIN.CEILING.BULKHEAD": {
+     "added": 13,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.DOME.SOFFIT": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.PAINT.CEILING": {
+     "added": 30,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.STAIR.SOFFIT": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-06": {
+     "FIN.PAINT.CEILING": {
+      "added": 30,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-01": {
+     "FIN.CEILING": {
+      "added": 3,
+      "removed": 0,
+      "changed": 8,
+      "record": 23
+     }
+    },
+    "B5-04": {
+     "FIN.CEILING.BULKHEAD": {
+      "added": 13,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-06": {
+     "FIN.DOME.SOFFIT": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-15": {
+     "FIN.STAIR.SOFFIT": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 58,
+   "record_only": 23
+  },
+  "ARCH_TAKEOFF_V3.0.33": {
+   "lines": 4690,
+   "lines_sha256": "a545c5b33b1d419b89e13854de281a96cbd413000c07cf21e08e24bf54f52ece",
+   "item_codes": {
+    "STR.CONC.BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 15,
+     "record": 0
+    },
+    "STR.CONC.GROUND_SLAB": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.LIFT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.FORMWORK": {
+     "added": 0,
+     "removed": 0,
+     "changed": 10,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-05": {
+     "STR.CONC.GROUND_SLAB": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 15,
+      "record": 0
+     }
+    },
+    "B10-07": {
+     "STR.CONC.BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B10-10": {
+     "STR.CONC.LIFT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B10-13": {
+     "STR.FORMWORK": {
+      "added": 0,
+      "removed": 0,
+      "changed": 10,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 31,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.34": {
+   "lines": 4690,
+   "lines_sha256": "4c7f581cf13b28c166cf93532cbce2a79d1ad711bb0f6e9f3915fc8f279f5402",
+   "item_codes": {
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B4-06": {
+     "FIN.PAINT": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 1,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.35": {
+   "lines": 4730,
+   "lines_sha256": "b011bace2958f3da42afa00587eb2511afed754a46aba78e8d08346aa2903e10",
+   "item_codes": {
+    "EXT.FENCE.BLOCK": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.BLOCK_COUNT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.FACE": {
+     "added": 9,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.GATE": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.MASONRY_BELOW_NG": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.PAINT": {
+     "added": 8,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.PLASTER": {
+     "added": 8,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.TOP": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "EXT.FENCE.WALL": {
+     "added": 4,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.BOUNDARY_PAD": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.GROUND_BEAM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-11": {
+     "STR.CONC.BOUNDARY_PAD": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B13-04": {
+     "EXT.FENCE.BLOCK": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.BLOCK_COUNT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.FACE": {
+      "added": 9,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.GATE": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.MASONRY_BELOW_NG": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.PAINT": {
+      "added": 8,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.PLASTER": {
+      "added": 8,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.TOP": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "EXT.FENCE.WALL": {
+      "added": 4,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 41,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.36": {
+   "lines": 4730,
+   "lines_sha256": "d462203f10eb52aed0c630901ff7298397ec71483c3aa6b661fe04807ee400f2",
+   "item_codes": {
+    "ARCH.WALL_RUN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 7
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "FIN.PAINT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "FIN.PLASTER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 4
+    },
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 10
+    },
+    "FIN.WALL.TILE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 12
+    }
+   },
+   "families": {},
+   "apart": [],
+   "record_families": [
+    "B3-01",
+    "B3-06",
+    "B4-01",
+    "B4-03",
+    "B4-06",
+    "B9-01"
+   ],
+   "record_apart": [],
+   "touched": 0,
+   "record_only": 39
+  },
+  "ARCH_TAKEOFF_V3.0.37": {
+   "lines": 4810,
+   "lines_sha256": "733f2efbda151a5f83a71c1ac8a8b0ca6eac9b98557904b7b58caa146b5f6616",
+   "item_codes": {
+    "FIN.FLOOR.BED.DRY": {
+     "added": 38,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.FLOOR.BED.WET": {
+     "added": 42,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B3-05": {
+     "FIN.FLOOR.BED.DRY": {
+      "added": 38,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.FLOOR.BED.WET": {
+      "added": 42,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 80,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.38": {
+   "lines": 4829,
+   "lines_sha256": "57cca61c9fbfc96807af52ee232bc182126b3621170db7db264192bba55cfc31",
+   "item_codes": {
+    "ARCH.THRESHOLD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 3,
+     "record": 0
+    },
+    "FIN.FLOOR.BED.DRY": {
+     "added": 6,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    },
+    "FIN.FLOOR.FINISH_HELD": {
+     "added": 3,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.MARBLE.LANDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.MARBLE.LIFT_SURROUND": {
+     "added": 3,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.MARBLE.LIFT_THRESHOLD": {
+     "added": 6,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B3-01": {
+     "FIN.FLOOR.FINISH_HELD": {
+      "added": 3,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "FIN.FLOOR.PORCELAIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B3-04": {
+     "ARCH.THRESHOLD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 3,
+      "record": 0
+     }
+    },
+    "B3-05": {
+     "FIN.FLOOR.BED.DRY": {
+      "added": 6,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B6-06": {
+     "FIN.MARBLE.LIFT_SURROUND": {
+      "added": 3,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B6-07": {
+     "FIN.MARBLE.LIFT_THRESHOLD": {
+      "added": 6,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B7-04": {
+     "FIN.MARBLE.LANDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 30,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.39": {
+   "lines": 4829,
+   "lines_sha256": "8d1bbe5dfc9a10854ca8aed885fe61e79298ada87d470c69ec17588b80d88a15",
+   "item_codes": {
+    "FIN.MARBLE.RISER": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 1
+    },
+    "FIN.MARBLE.TREAD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 9,
+     "record": 0
+    },
+    "FIN.STAIR.STEP_LM": {
+     "added": 0,
+     "removed": 0,
+     "changed": 9,
+     "record": 0
+    }
+   },
+   "families": {
+    "B7-02": {
+     "FIN.MARBLE.TREAD": {
+      "added": 0,
+      "removed": 0,
+      "changed": 9,
+      "record": 0
+     }
+    },
+    "B7-03": {
+     "FIN.MARBLE.RISER": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 1
+     }
+    },
+    "B7-06": {
+     "FIN.STAIR.STEP_LM": {
+      "added": 0,
+      "removed": 0,
+      "changed": 9,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 19,
+   "record_only": 1
+  },
+  "ARCH_TAKEOFF_V3.0.40": {
+   "lines": 4831,
+   "lines_sha256": "aa6aa9272354301ccb084222e7d9122818ebf900788a2b3fb62dc340688a2a88",
+   "item_codes": {
+    "STR.CONC.GROUND_BEAM": {
+     "added": 2,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    }
+   },
+   "families": {
+    "B10-04": {
+     "STR.CONC.GROUND_BEAM": {
+      "added": 2,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 6,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.41": {
+   "lines": 4838,
+   "lines_sha256": "5176c7c4ac2732827bfacabcc57640f6a29d2518c8808ecdcefd072ac21843d1",
+   "item_codes": {
+    "ARCH.SPACE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 2,
+     "record": 0
+    },
+    "FIN.CEILING": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.CEILING.BULKHEAD": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.FLOOR.BED.DRY": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.FLOOR.PORCELAIN": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.PAINT.CEILING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "FIN.SKIRTING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B2-02": {
+     "ARCH.SPACE": {
+      "added": 0,
+      "removed": 0,
+      "changed": 2,
+      "record": 0
+     }
+    },
+    "B3-01": {
+     "FIN.FLOOR.PORCELAIN": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B3-05": {
+     "FIN.FLOOR.BED.DRY": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B3-06": {
+     "FIN.SKIRTING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B4-06": {
+     "FIN.PAINT.CEILING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-01": {
+     "FIN.CEILING": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B5-04": {
+     "FIN.CEILING.BULKHEAD": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 10,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.42": {
+   "lines": 4839,
+   "lines_sha256": "1793266d185f9e6873bbd482219e59eb0fdae188a3ac2d676eec982ed66e7b77",
+   "item_codes": {
+    "STR.CONC.COLUMN": {
+     "added": 0,
+     "removed": 0,
+     "changed": 13,
+     "record": 0
+    },
+    "STR.CONC.GROUND_SLAB": {
+     "added": 1,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.LIFT": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    }
+   },
+   "families": {
+    "B10-05": {
+     "STR.CONC.GROUND_SLAB": {
+      "added": 1,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-06": {
+     "STR.CONC.COLUMN": {
+      "added": 0,
+      "removed": 0,
+      "changed": 13,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B10-10"
+   ],
+   "record_apart": [],
+   "touched": 15,
+   "record_only": 1
+  },
+  "ARCH_TAKEOFF_V3.0.43": {
+   "lines": 4857,
+   "lines_sha256": "6f534d5e099cd3a1d3fb45a7c9082c6358e40920c20e2fba57adef21673dce3c",
+   "item_codes": {
+    "STR.CONC.BLINDING": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.CONC.STRAP": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.EARTH.BACKFILL": {
+     "added": 5,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.EARTH.DISPOSAL": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.EARTH.EXCAVATION": {
+     "added": 12,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-02": {
+     "STR.EARTH.EXCAVATION": {
+      "added": 12,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B1-03": {
+     "STR.EARTH.BACKFILL": {
+      "added": 5,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B1-04": {
+     "STR.EARTH.DISPOSAL": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    },
+    "B10-04": {
+     "STR.CONC.STRAP": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 20,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.44": {
+   "lines": 4858,
+   "lines_sha256": "8b2fe2b6cfcfcb848b98bf63ce8fd053f203291fc391d10f2fce506073ab7f81",
+   "item_codes": {
+    "FIN.SKIRTING": {
+     "added": 1,
+     "removed": 0,
+     "changed": 9,
+     "record": 0
+    }
+   },
+   "families": {
+    "B3-06": {
+     "FIN.SKIRTING": {
+      "added": 1,
+      "removed": 0,
+      "changed": 9,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 10,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.45": {
+   "lines": 4861,
+   "lines_sha256": "5972888b659e249bed995992f57f0042571d042b50e761cabcc4221d653451d8",
+   "item_codes": {
+    "STR.CONC.BLINDING": {
+     "added": 3,
+     "removed": 0,
+     "changed": 2,
+     "record": 1
+    }
+   },
+   "families": {
+    "B10-01": {
+     "STR.CONC.BLINDING": {
+      "added": 3,
+      "removed": 0,
+      "changed": 2,
+      "record": 1
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 5,
+   "record_only": 1
+  },
+  "ARCH_TAKEOFF_V3.0.46": {
+   "lines": 4867,
+   "lines_sha256": "35d70129d8bf59b4c0f874a11edeacca26f45a51001b03a4d6ca57e3942546a4",
+   "item_codes": {
+    "MAS.BLOCK": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "STR.CONC.LIFT": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "STR.FORMWORK": {
+     "added": 2,
+     "removed": 0,
+     "changed": 0,
+     "record": 2
+    },
+    "STR.REBAR": {
+     "added": 1,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "WP.FOUNDATION.LIFT_PIT_BOARD": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    },
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE": {
+     "added": 0,
+     "removed": 0,
+     "changed": 0,
+     "record": 1
+    }
+   },
+   "families": {
+    "B10-10": {
+     "STR.CONC.LIFT": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 1
+     }
+    },
+    "B10-13": {
+     "STR.FORMWORK": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 2
+     }
+    },
+    "B11-01": {
+     "STR.REBAR": {
+      "added": 1,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B9-01": {
+     "MAS.BLOCK": {
+      "added": 2,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [
+    "B8-08"
+   ],
+   "record_apart": [],
+   "touched": 6,
+   "record_only": 5
+  }
+ },
+ "item_code_presence": {
+  "ARCH.EXTERIOR": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.FACADE": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.FACADE_RUN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.PASSAGE": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.SHUTTER": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.SPACE": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.THRESHOLD": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.WALL_PANEL": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.WALL_RUN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.WALL_VOLUME": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.WINDOW": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "ARCH.WINDOW_REVEAL": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "DOOR.EXTERNAL.ALUMINIUM": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "DOOR.INTERNAL.PVC": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "DOOR.MAIN_ENTRANCE": [
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.BLOCK": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.BLOCK_COUNT": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.FACE": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.GATE": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.MASONRY_BELOW_NG": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.PAINT": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.PLASTER": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.TOP": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FENCE.WALL": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FLOOR.OUTDOOR": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.FLOOR.PORCELAIN": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.PAVING.INTERLOCK": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "EXT.POOL.WATER_FACE": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.CEILING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.CEILING.BULKHEAD": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.DOME.SOFFIT": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.EXT.FINISH": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.FLOOR.BED.DRY": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.FLOOR.BED.WET": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.FLOOR.FINISH_HELD": [
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.FLOOR.PORCELAIN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.FLOOR.WET_TILE": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.HANDRAIL": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.LANDING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.LIFT_SURROUND": [
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.LIFT_THRESHOLD": [
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.RISER": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.THRESHOLD": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.MARBLE.TREAD": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.PAINT": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.PAINT.CEILING": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.PLASTER": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.RAILING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.ROOF.FINISH": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.ROOF.INSULATION": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.ROOF.PROTECTION": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.ROOF.SCREED": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.SKIRTING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.STAIR.FLIGHT": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.STAIR.SOFFIT": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.STAIR.STEP_LM": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WALL.TILE": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.DOORWAY": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.DOORWAY_TRANSITION": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.DOORWAY_TRANSITION_NR": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.FLOOR": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.MEMBRANE_ROLLS": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.PENETRATION": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.ROOF": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.ROOF_UPTURN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.TERMINATION": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "FIN.WP.WALL_UPTURN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "MAS.BLOCK": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "MET.RAILING.GUARD": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.BEAM": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.BLINDING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.BOUNDARY_PAD": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.BOUNDARY_WALL": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.COLUMN": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.DOME": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.FOOTING": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.GROUND_BEAM": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.GROUND_SLAB": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.LIFT": [
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.NECK": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.PARAPET": [
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.POOL": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.SLAB": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.STAIR": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.CONC.STRAP": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.EARTH.BACKFILL": [
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.EARTH.DISPOSAL": [
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.EARTH.EXCAVATION": [
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.FORMWORK": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.FORMWORK.STAIR": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "STR.REBAR": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.BURIED_LIQUID": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.FOOTING_MEMBRANE": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.FOOTING_SCREED": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.FOOTING_SIDES": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.LIFT_PIT_BOARD": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.LIFT_PIT_MEMBRANE": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.LIFT_PIT_SCREED": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "WP.FOUNDATION.PROCUREMENT": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ]
+ }
+}

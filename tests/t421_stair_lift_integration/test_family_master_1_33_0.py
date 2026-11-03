@@ -60,7 +60,7 @@ def test_pending_dropped_is_stale(docs):
         assert any("arch_v3038" in p for p in probs)
     else:
         gov = json.loads((ROOT / f"rules/coverage/BOQ_FAMILY_MASTER_{acc}.json").read_text(encoding="utf-8"))
-        assert docs[1]["pending_packages"][-1] in gov["pending_packages"]
+        assert _T485.accounted(docs[1]["pending_packages"][-1], gov)
 
 
 def test_family_naming_the_pending_package_refused(docs):
@@ -72,6 +72,9 @@ def test_family_naming_the_pending_package_refused(docs):
 
 # ------------------------------------------------------------------ the ownership census at full strength on 1.32.0
 import importlib.util  # noqa: E402
+import sys as _sys_t485  # noqa: E402
+_sys_t485.path.insert(0, str(Path(__file__).resolve().parents[2] / "research" / "agents_t485"))
+import t485_accounting as _T485  # noqa: E402  (T-485: a newer registry may hold the entry promoted, rule r3)
 
 _s127 = importlib.util.spec_from_file_location("t284_master_t421", ROOT / "tests/t284_ceiling_integration/"
                                                "test_family_master_1_27_0.py")

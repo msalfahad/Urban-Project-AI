@@ -1,8 +1,8 @@
 {
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.42.0",
- "supersedes": "1.41.0 (kept unchanged on disk; every family except B3-06, every released-configuration field, the candidate census and the pending entries up to T-478 copied unchanged)",
- "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no candidate state changes | r2 (Checker 2026-10-31 02:58): the item codes V3.0.30 writes are owned (STR.FORMWORK B10-13, STR.FORMWORK.STAIR B7-13, ARCH.SHUTTER B6-05, FIN.HANDRAIL B7-10) and B7-13 / B6-05 / B7-10 move NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in only), PROPOSED; candidate states unchanged | r3 (Checker 2026-10-31 04:02): MET.RAILING.GUARD (non-stair guard rails, written by V3.0.30) is listed under item_codes_without_family with its reason (no family of the 99 is that element; a new family is proposed to the register owner, F-T199-4); no family, line or quantity changes | 1.26.0 (T-328): 1.25.0 + pending ARCH_TAKEOFF_V3.0.31 (rule r3 of tools/family_master_candidate.py) + the V3.0.x ownership census (F-T199-5) + the guard-railing family B13-08 (F-T199-4); no candidate state changes | 1.27.0 (T-284): 1.26.0 + pending ARCH_TAKEOFF_V3.0.32 (rule r3 of tools/family_master_candidate.py) + the owners of its four codes; no candidate state changes | 1.28.0 (T-397): 1.27.0 + pending ARCH_TAKEOFF_V3.0.33 (rule r3 of tools/family_master_candidate.py); no new code, no family or candidate state changes | 1.29.0 (T-399): 1.28.0 + pending ARCH_TAKEOFF_V3.0.34 (rule r3 of tools/family_master_candidate.py) + B4-02 coverage_in_candidate (COVERED_BY_B4-01, pending); no new code, no capability or candidate state changes | 1.30.0 (T-400): 1.29.0 + pending ARCH_TAKEOFF_V3.0.35 (rule r3 of tools/family_master_candidate.py) + B13-04 owns the EXT.FENCE.* codes (IMPLEMENTED_NOT_INTEGRATED) + B10-11 owns STR.CONC.BOUNDARY_PAD; no candidate state changes | 1.31.0 (T-246): 1.30.0 + pending ARCH_TAKEOFF_V3.0.36 (rule r3 of tools/family_master_candidate.py); no family, code or candidate state changes | 1.32.0 (T-420): 1.31.0 + pending ARCH_TAKEOFF_V3.0.37 (rule r3 of tools/family_master_candidate.py) + B3-05 owns FIN.FLOOR.BED.DRY / .WET (capability IMPLEMENTED_NOT_INTEGRATED unchanged); no candidate state changes | 1.33.0 (T-421): 1.32.0 + pending ARCH_TAKEOFF_V3.0.38 (rule r3 of tools/family_master_candidate.py) + B3-01 owns FIN.FLOOR.FINISH_HELD, B6-07 FIN.MARBLE.LIFT_THRESHOLD, B6-06 FIN.MARBLE.LIFT_SURROUND; no candidate state changes | 1.34.0 (T-429): 1.33.0 + pending ARCH_TAKEOFF_V3.0.39 (rule r3 of tools/family_master_candidate.py) + the B7 stair families it rebinds; no candidate state changes | 1.35.0 (T-430): 1.34.0 + pending ARCH_TAKEOFF_V3.0.40 (rule r3 of tools/family_master_candidate.py) + the ground-beam family it splits and holds; no candidate state changes | 1.36.0 (T-431): 1.35.0 + pending ARCH_TAKEOFF_V3.0.41 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or moves; no candidate state changes | 1.37.0 (T-442): 1.36.0 + pending ARCH_TAKEOFF_V3.0.42 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds, values or re-texts; no candidate state changes | 1.38.0 (T-350): 1.37.0 + pending ARCH_TAKEOFF_V3.0.43 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or re-ranges; no candidate state changes | 1.39.0 (T-422): 1.38.0 + pending ARCH_TAKEOFF_V3.0.44 (rule r3 of tools/family_master_candidate.py) + the family whose lines it moves (B3-06); no code, capability or candidate state changes | 1.40.0 (T-478): 1.39.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits, re-ranges or adds; no candidate state changes | 1.41.0 (T-479): 1.40.0 + family B13-09 (pool water-face finish) + not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.45 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state | 1.42.0 (T-443): 1.41.0 + pending ARCH_TAKEOFF_V3.0.46 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits; no candidate state changes",
+ "supersedes": "1.41.0 (kept unchanged on disk; every family except B10-10, B10-13, B11-01, B9-01 and B8-08, every released-configuration field, the candidate census and the pending entries up to T-478 copied unchanged)",
+ "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.10.0 (T-270): 1.9.0 + pending ARCH_TAKEOFF_V3.0.15 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.11.0 (T-245): 1.10.0 + pending ARCH_TAKEOFF_V3.0.16 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.12.0 (T-254): 1.11.0 + pending ARCH_TAKEOFF_V3.0.17 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.13.0 (T-266): 1.12.0 + pending ARCH_TAKEOFF_V3.0.18 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.14.0 (T-255): 1.13.0 + pending ARCH_TAKEOFF_V3.0.19 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.15.0 (T-244): 1.14.0 + pending ARCH_TAKEOFF_V3.0.20 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.16.0 (T-315): 1.15.0 + pending ARCH_TAKEOFF_V3.0.21 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.17.0 (T-331): 1.16.0 + pending ARCH_TAKEOFF_V3.0.22 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.18.0 (T-319): 1.17.0 + pending ARCH_TAKEOFF_V3.0.23 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.19.0 (T-338): 1.18.0 + pending ARCH_TAKEOFF_V3.0.24 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.20.0 (T-343): 1.19.0 + pending ARCH_TAKEOFF_V3.0.25 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.21.0 (T-279): 1.20.0 + pending ARCH_TAKEOFF_V3.0.26 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.22.0 (T-318): 1.21.0 + pending ARCH_TAKEOFF_V3.0.27 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.23.0 (T-326): 1.22.0 + pending ARCH_TAKEOFF_V3.0.28 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.24.0 (T-327): 1.23.0 + pending ARCH_TAKEOFF_V3.0.29 (rule r3 of tools/family_master_candidate.py); no family state changes | 1.25.0 (T-199): 1.24.0 + pending ARCH_TAKEOFF_V3.0.30 (rule r3 of tools/family_master_candidate.py); no candidate state changes | r2 (Checker 2026-10-31 02:58): the item codes V3.0.30 writes are owned (STR.FORMWORK B10-13, STR.FORMWORK.STAIR B7-13, ARCH.SHUTTER B6-05, FIN.HANDRAIL B7-10) and B7-13 / B6-05 / B7-10 move NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in only), PROPOSED; candidate states unchanged | r3 (Checker 2026-10-31 04:02): MET.RAILING.GUARD (non-stair guard rails, written by V3.0.30) is listed under item_codes_without_family with its reason (no family of the 99 is that element; a new family is proposed to the register owner, F-T199-4); no family, line or quantity changes | 1.26.0 (T-328): 1.25.0 + pending ARCH_TAKEOFF_V3.0.31 (rule r3 of tools/family_master_candidate.py) + the V3.0.x ownership census (F-T199-5) + the guard-railing family B13-08 (F-T199-4); no candidate state changes | 1.27.0 (T-284): 1.26.0 + pending ARCH_TAKEOFF_V3.0.32 (rule r3 of tools/family_master_candidate.py) + the owners of its four codes; no candidate state changes | 1.28.0 (T-397): 1.27.0 + pending ARCH_TAKEOFF_V3.0.33 (rule r3 of tools/family_master_candidate.py); no new code, no family or candidate state changes | 1.29.0 (T-399): 1.28.0 + pending ARCH_TAKEOFF_V3.0.34 (rule r3 of tools/family_master_candidate.py) + B4-02 coverage_in_candidate (COVERED_BY_B4-01, pending); no new code, no capability or candidate state changes | 1.30.0 (T-400): 1.29.0 + pending ARCH_TAKEOFF_V3.0.35 (rule r3 of tools/family_master_candidate.py) + B13-04 owns the EXT.FENCE.* codes (IMPLEMENTED_NOT_INTEGRATED) + B10-11 owns STR.CONC.BOUNDARY_PAD; no candidate state changes | 1.31.0 (T-246): 1.30.0 + pending ARCH_TAKEOFF_V3.0.36 (rule r3 of tools/family_master_candidate.py); no family, code or candidate state changes | 1.32.0 (T-420): 1.31.0 + pending ARCH_TAKEOFF_V3.0.37 (rule r3 of tools/family_master_candidate.py) + B3-05 owns FIN.FLOOR.BED.DRY / .WET (capability IMPLEMENTED_NOT_INTEGRATED unchanged); no candidate state changes | 1.33.0 (T-421): 1.32.0 + pending ARCH_TAKEOFF_V3.0.38 (rule r3 of tools/family_master_candidate.py) + B3-01 owns FIN.FLOOR.FINISH_HELD, B6-07 FIN.MARBLE.LIFT_THRESHOLD, B6-06 FIN.MARBLE.LIFT_SURROUND; no candidate state changes | 1.34.0 (T-429): 1.33.0 + pending ARCH_TAKEOFF_V3.0.39 (rule r3 of tools/family_master_candidate.py) + the B7 stair families it rebinds; no candidate state changes | 1.35.0 (T-430): 1.34.0 + pending ARCH_TAKEOFF_V3.0.40 (rule r3 of tools/family_master_candidate.py) + the ground-beam family it splits and holds; no candidate state changes | 1.36.0 (T-431): 1.35.0 + pending ARCH_TAKEOFF_V3.0.41 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or moves; no candidate state changes | 1.37.0 (T-442): 1.36.0 + pending ARCH_TAKEOFF_V3.0.42 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds, values or re-texts; no candidate state changes | 1.38.0 (T-350): 1.37.0 + pending ARCH_TAKEOFF_V3.0.43 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or re-ranges; no candidate state changes | 1.39.0 (T-422): 1.38.0 + pending ARCH_TAKEOFF_V3.0.44 (rule r3 of tools/family_master_candidate.py) + the family whose lines it moves (B3-06); no code, capability or candidate state changes | 1.40.0 (T-478): 1.39.0 + pending ARCH_TAKEOFF_V3.0.45 (rule r3 of tools/family_master_candidate.py) + the family whose lines it splits, re-ranges or adds; no candidate state changes | 1.41.0 (T-479): 1.40.0 + family B13-09 (pool water-face finish) + not_a_boq_line_codes (ARCH.EXTERIOR) + candidate_census (fresh line census of the merged V3.0.45 run) + the reader text of B8-08 / B10-13 / B7-13; no quantity, no candidate state | 1.42.0 (T-419): 1.41.0 + pending ARCH_TAKEOFF_V3.0.46 (rule r3 of tools/family_master_candidate.py) + the families whose lines it adds or restates; no candidate state changes",
  "loaded_by": "nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads 1.1.0, so no run, census or quantity changes with this file",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -1002,12 +1002,11 @@
     "engine/source/arch_measure.py:506-557 FIN.SKIRTING per room (released, bounded or held)",
     "commit a51bdca (T-106 skirting deduction audit, verifier run 40): all released nets right; 20 of 28 lines do not list 17.035 m of deductions; engine/source/skirting_deduction_audit.py:196 audit() read by no method",
     "engine/source/arch_v3041.py:533 changes_for(): a piece cut off by a prolonged zone edge becomes one room floor line, the zone lines give the parts up by id (RETIRE / SHRINK), its bed pair, skirting rows and ceiling lines in the same step; engine/source/arch_v3041.py:643 check_pieces(): floor = parts, each part given up once, bed m2 = net, skirting rows close, decor + unread = floor, paint = decor; tests/t431_zone_extent_integration/test_arch_v3041.py:113 test_hand_figures_k431() (K431 by hand)",
-    "engine/source/arch_v3044.py:463 changes_for(): T-296 window readings by line id: a sill above the floor releases the listed halves into the room's line and carries its range line there, floor glazing / a wet base leaves the held range, a missing dry-room line is HELD BLANK; engine/source/arch_v3044.py:542 check_skirting(): released lines close and rose by the edges only, absorbed lines carry no figure, narrowed lines stay held, missing lines blank; tests/t422_skirting_release/test_arch_v3044.py:121 (K422 by hand)",
-    "engine/source/arch_v3046.py:534 changes_for(): SPLIT of a BLOCKED stair-room skirting line into one child per floor part (openings by id, a lift opening whole with no jambs), HELD BLANK face groups, the parent keeping the named remainder; engine/source/arch_v3046.py:279 load_inputs() (cover, one base one owner, closure in lm); engine/source/arch_v3046.py:609 check_stair_rooms(); tests/t443_stair_room_skirting/test_arch_v3046.py:152 (villa K443 by hand)"
+    "engine/source/arch_v3044.py:463 changes_for(): T-296 window readings by line id: a sill above the floor releases the listed halves into the room's line and carries its range line there, floor glazing / a wet base leaves the held range, a missing dry-room line is HELD BLANK; engine/source/arch_v3044.py:542 check_skirting(): released lines close and rose by the edges only, absorbed lines carry no figure, narrowed lines stay held, missing lines blank; tests/t422_skirting_release/test_arch_v3044.py:121 (K422 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.SKIRTING",
-   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.41 (engine/source/arch_v3041.py, opt-in candidate; pending Gate B, T-431) | ARCH_TAKEOFF_V3.0.44 (engine/source/arch_v3044.py, opt-in candidate; pending Gate B, T-422) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-443)",
-   "missing": "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id | in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 2 out of a range); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK | in the opt-in candidate V3.0.46: the walled stair rooms carry their floor parts' skirting (13.550 lm valued, material HELD except the 2F lobby, Q-70 A); divider band, reveal jambs and the back lobby west face HELD BLANK; flight faces stay with B7-07 / B7-08 (form ORR-007); the 1F shaft binding R-T481-3 waits",
+   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.41 (engine/source/arch_v3041.py, opt-in candidate; pending Gate B, T-431) | ARCH_TAKEOFF_V3.0.44 (engine/source/arch_v3044.py, opt-in candidate; pending Gate B, T-422)",
+   "missing": "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id | in the opt-in candidate V3.0.44: window bases follow the merged sill record (4 released, 2 out of a range); W02 / W11 / W12 / W17 sills and the stair-shaft bases stay held; the 1F dressing line HELD BLANK",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -1051,7 +1050,7 @@
     "open": "no verified piece integrated; the lines are the base run's (see 'missing' for the released path, which shares their code)",
     "released_in_candidate": "base lines"
    },
-   "note": " | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.39.0 (T-422): moved by the pending ARCH_TAKEOFF_V3.0.44 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.42.0 (T-443): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged"
+   "note": " | 1.36.0 (T-431): moved by the pending ARCH_TAKEOFF_V3.0.41 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.39.0 (T-422): moved by the pending ARCH_TAKEOFF_V3.0.44 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
   {
    "code": "B3-07",
@@ -3566,11 +3565,12 @@
    "next_slice": "S5",
    "evidence": [
     "engine/source/arch_v3015.py:84 ITEMS: the eight WP.FOUNDATION.* codes (footing underlay membrane / screed / sides, lift-pit membrane / board / screed, buried-face liquid coat, procurement); :311 record_line()",
-    "tests/t270_foundation_wp_lines/test_arch_v3015.py:135 test_family_totals_equal_the_hand_calculation()"
+    "tests/t270_foundation_wp_lines/test_arch_v3015.py:135 test_family_totals_equal_the_hand_calculation()",
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "ARCH_TAKEOFF_V3.0.15 .. V3.0.45 (engine/source/arch_v3015.py, merged T-270; tools/urban_boq_m9.py:3241 runs the V3.0.15 extension for every method V3.0.15 .. V3.0.45; opt-in candidate)",
-   "missing": "not in the released method; held pieces (footing sides by formation, pit walls by depth) blank",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0.15 .. V3.0.45 (engine/source/arch_v3015.py, merged T-270; tools/urban_boq_m9.py:3241 runs the V3.0.15 extension for every method V3.0.15 .. V3.0.45; opt-in candidate) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
+   "missing": "not in the released method; held pieces (footing sides by formation, pit walls by depth) blank | in the opt-in candidate V3.0.46: lift-pit membrane / board wall lines held on BOTH the pit depth and the GF build-up",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -3597,7 +3597,7 @@
     "open": "no candidate line; the released capability above is unchanged",
     "released_in_candidate": "none"
    },
-   "note": "1.0.0 .. 1.25.0 said NOT_IMPLEMENTED: the 1.25.0 scan did not see the WP. prefix (F-T199-5); 1.26.0 (T-328): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms | 1.41.0 (T-479, from the T-353 Checker note): the candidate CARRIES the eight WP.FOUNDATION codes since V3.0.15 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1), not a statement about V3.0.45"
+   "note": "1.0.0 .. 1.25.0 said NOT_IMPLEMENTED: the 1.25.0 scan did not see the WP. prefix (F-T199-5); 1.26.0 (T-328): PROPOSED by the worker, effective with the Gate B merge, the Checker confirms | 1.41.0 (T-479, from the T-353 Checker note): the candidate CARRIES the eight WP.FOUNDATION codes since V3.0.15 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1), not a statement about V3.0.45 | 1.42.0 (T-419): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
   {
    "code": "B8-09",
@@ -3651,11 +3651,12 @@
     "engine/source/arch_measure.py:789 _wall_lines(): ARCH.WALL_RUN by thickness (PROVISIONAL); :811 MAS.BLOCK held",
     "tools/urban_boq_m9.py:1172 _v29_masonry(): ARCH.WALL_PANEL m2 / ARCH.WALL_VOLUME m3 from height evidence",
     "commit 2dc1657 (T-027 masonry centreline, verifier run 39) and bc21314 (T-117 vs hand): engine/source/masonry_centreline.py:212 measure() read by no method",
-    "commit 79bd397 (T-103 wall metres by hand, verifier run 37)"
+    "commit 79bd397 (T-103 wall metres by hand, verifier run 37)",
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK",
-   "opt_in_readers": "none",
-   "missing": "panel m2 / m3 held (owner Q-60 height not wired); block type per wall (Q-65); census gap: B9-01 maps to MAS.BLOCK only",
+   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
+   "missing": "panel m2 / m3 held (owner Q-60 height not wired); block type per wall (Q-65); census gap: B9-01 maps to MAS.BLOCK only | in the opt-in candidate V3.0.46: house below-ground masonry MAIN_S HELD BLANK (formation, blinding, thickness, product; AT_LEAST 11.389 m2 net beside) and ANNEX_S HELD BLANK (D-35, no bound); street / sea runs existence UNKNOWN (register items, no line)",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
     "T-125",
@@ -3761,7 +3762,7 @@
     "ARCH.WALL_VOLUME",
     "MAS.BLOCK"
    ],
-   "note": "1.0.0 said EXPERIMENTAL (qs_core.masonry research)",
+   "note": "1.0.0 said EXPERIMENTAL (qs_core.masonry research) | 1.42.0 (T-419): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged",
    "in_v3_0_candidate_1_1_0": "yes",
    "candidate": {
     "state": "IN_CANDIDATE_BASE_LINES",
@@ -4460,11 +4461,12 @@
    "evidence": [
     "route G POOL / WATER_TANK / LIFT families (engine/source/boq_line.py:113 ROUTE_G_FAMILY)",
     "commit 15de9c4 (T-057 pool check list), fd0d5dd (T-048 curved pool strips): read by no released method",
-    "engine/source/arch_v3042.py:401 changes_for(): a held slab cell valued at its re-measured panels x T (shaft / ring beside with their owners), a stair-zone panel added as one ground-slab line, cause texts re-named with every figure kept; engine/source/arch_v3042.py:483 check_slab(): slab line = panels x T, no panel in two lines, one line per cell, no live held-bound record on a valued cell, a re-texted line moves no figure; tests/t442_ground_slab_integration/test_arch_v3042.py:111 test_hand_figures_g442() (G442 by hand)"
+    "engine/source/arch_v3042.py:401 changes_for(): a held slab cell valued at its re-measured panels x T (shaft / ring beside with their owners), a stair-zone panel added as one ground-slab line, cause texts re-named with every figure kept; engine/source/arch_v3042.py:483 check_slab(): slab line = panels x T, no panel in two lines, one line per cell, no live held-bound record on a valued cell, a re-texted line moves no figure; tests/t442_ground_slab_integration/test_arch_v3042.py:111 test_hand_figures_g442() (G442 by hand)",
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.POOL, STR.CONC.TANK, STR.CONC.LIFT",
-   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442)",
-   "missing": "pool compared line UNRESOLVED (owner Q-12); pool floor term FREELANCER_RIGHT (verifier 2026-10-19)",
+   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.42 (engine/source/arch_v3042.py, opt-in candidate; pending Gate B, T-442) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
+   "missing": "pool compared line UNRESOLVED (owner Q-12); pool floor term FREELANCER_RIGHT (verifier 2026-10-19) | in the opt-in candidate V3.0.46: GF lift tie beam concrete HELD BLANK (section b x d printed nowhere, D-43 / RFI-B-S14; 5.500 m beside); pit walls held on BOTH the pit depth and the GF build-up",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -4501,7 +4503,7 @@
     "open": "the pool line group is PARTIALLY VERIFIED: steps HELD 'NOT DRAWN, consultant item' (never 0); pool bar populations (T-191, merged in lane S) not integrated; pool blinding projection HELD; joints / waterstop, membrane termination and finishes UNKNOWN; no tank, lift-pit or pump-room concrete line of the candidate (not established); NOT RELEASED",
     "released_in_candidate": "yes"
    },
-   "note": " | 1.37.0 (T-442): moved by the pending ARCH_TAKEOFF_V3.0.42 package (Gate B); the released capability of V2.9 + route G is unchanged"
+   "note": " | 1.37.0 (T-442): moved by the pending ARCH_TAKEOFF_V3.0.42 package (Gate B); the released capability of V2.9 + route G is unchanged | 1.42.0 (T-419): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
   {
    "code": "B10-11",
@@ -4612,11 +4614,12 @@
     "commit 40f3184 (Structural N10); tests/m9_n10/test_n10_structural.py:45 test_hand_truth_faces() / :58 test_alternatives_are_never_summed_and_held_is_never_zero() / :158 test_formwork_matches_the_design() (hand truth faces, held never zero, synthetic villas)",
     "development villa (tool run on the released route G registers, head 0dec24c): slab soffit 379.041 m2, beam soffit 99.123 m2, beam sides 337.405 (TOTAL) or 458.025 m2 (BELOW_SLAB), footing sides 93.260 m2 if FORMED or 0 if EARTH_CAST, ground-beam sides 10.581 m2 FORMED (3 rows only); 311 faces HELD (columns 118, slabs 76 edges, ground beams 59, ground slab 25, beams 24, others 9)",
     "engine/source/arch_v3030.py:80 FW_CODE = STR.FORMWORK: one formwork line per formed face group beside its bound concrete line (face by face from the merged T-332 r2 FILL table; CALCULATED / HELD blank / OQ-10 alternatives beside, never summed); engine/source/arch_v3030.py:352 fw_line()",
-    "tests/t199_formwork_metalwork/test_arch_v3030.py:147 test_hand_totals_and_states() (V199 by hand: STR.FORMWORK 18.300 m2) / :160 test_valued_line_beside_its_concrete_line_with_its_state()"
+    "tests/t199_formwork_metalwork/test_arch_v3030.py:147 test_hand_totals_and_states() (V199 by hand: STR.FORMWORK 18.300 m2) / :160 test_valued_line_beside_its_concrete_line_with_its_state()",
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "none",
-   "opt_in_readers": "none (standalone tool tools/struct_n10.py); ARCH_TAKEOFF_V3.0.30 .. V3.0.45 (engine/source/arch_v3030.py, merged T-199; tools/urban_boq_m9.py:3226 runs it for every method V3.0.30 .. V3.0.45; opt-in candidate)",
-   "missing": "not in the released method; in the opt-in V3.0.30 the held faces, the OQ-10 FORMED / EARTH_CAST pairs and the parapet faces stay blank (never 0); owner conventions FW-D1 .. FW-D4 open",
+   "opt_in_readers": "none (standalone tool tools/struct_n10.py); ARCH_TAKEOFF_V3.0.30 .. V3.0.45 (engine/source/arch_v3030.py, merged T-199; tools/urban_boq_m9.py:3226 runs it for every method V3.0.30 .. V3.0.45; opt-in candidate) | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
+   "missing": "not in the released method; in the opt-in V3.0.30 the held faces, the OQ-10 FORMED / EARTH_CAST pairs and the parapet faces stay blank (never 0); owner conventions FW-D1 .. FW-D4 open | in the opt-in candidate V3.0.46: GF lift tie beam side and soffit forms HELD BLANK (d, b); pit-wall form faces held on BOTH facts",
    "in_v3_0_candidate": "no",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -4626,7 +4629,7 @@
    "item_codes": [
     "STR.FORMWORK"
    ],
-   "note": "1.0.0 and r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding | 1.41.0 (T-479, from the T-474 handoff): T-199 merged; the candidate CARRIES this family since V3.0.30 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1)",
+   "note": "1.0.0 and r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding | 1.41.0 (T-479, from the T-474 handoff): T-199 merged; the candidate CARRIES this family since V3.0.30 (census V3.0.45 in candidate_census); 'in_v3_0_candidate: no' and the 'candidate' block are as of V3.0.7 (registry-wide, F-T479-1) | 1.42.0 (T-419): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged",
    "in_v3_0_candidate_1_1_0": "no",
    "candidate": {
     "state": "NOT_IN_CANDIDATE",
@@ -4654,11 +4657,12 @@
     "route G bar models: engine/source/generic_route.py:1838 _footing_bars() footings, :1779 _gb_bars() ground beams, :2251 _beam_bars() beams, :2297 _slab_bars() slabs",
     "engine/source/boq_line.py:327 STR.REBAR for every REINFORCEMENT item",
     "commit 6d532c5 (T-136 FOOTING_REBAR_POPULATION_V1, verifier merge): engine/source/footing_rebar_population_v1.py:280 run(): footing steel by bar population, read by no method",
-    "commit 8a22eec (T-148 column steel by bar population, verifier 2026-10-21 18:40 UTC, research only): hand ledger, no code"
+    "commit 8a22eec (T-148 column steel by bar population, verifier 2026-10-21 18:40 UTC, research only): hand ledger, no code",
+    "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.REBAR (PROVISIONAL bar models)",
-   "opt_in_readers": "none",
-   "missing": "bar population merged for footings only and not wired (T-136; five per-metre footings HELD on owner Q-71); columns / ground beams by hand only (T-148 / T-138 r2); 30 lines held",
+   "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419)",
+   "missing": "bar population merged for footings only and not wired (T-136; five per-metre footings HELD on owner Q-71); columns / ground beams by hand only (T-148 / T-138 r2); 30 lines held | in the opt-in candidate V3.0.46: GF lift tie beam bars HELD BLANK (no bar detail; never a kg / m3 rate)",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [],
    "development_villa": {
@@ -4694,7 +4698,8 @@
     "changed": "footing steel by bar population 874.86 kg DRAWING-CONFIRMED + 2,742.51 .. 2,836.40 kg HELD (V3.0.2, T-136; owner Q-71); column 1,887.13 kg + held 1,280.99 .. 2,119.35, ground system 1,252.91 + held 1,297.14 .. 2,269.56, beam 5,171.03 + held 4,247.22 .. 6,120.24 kg (V3.0.3, T-148 / T-138 / T-149; route lines superseded); neck steel 1,428.571 kg BLOCKED (V3.0.4, Q-21 C); route slab steel 2,584.35 kg superseded by held 4,643.766 .. 6,832.326 kg (V3.0.5, T-152). STR.REBAR item totals in V3.0.5 r2 = V3.0.6 (all families, incl. the stair / pool / tank lines of B7-14 / B11-03): 10,250.168 kg released, held 15,250.786 .. 21,621.545 kg, 579 blocked lines",
     "open": "links per metre (Q-71), straps (Q-74 directive, T-174), laps / development (note 9), planted-column bars (D-46), neck steel (Q-21 C), every slab bar count held; all NOT RELEASED",
     "released_in_candidate": "yes"
-   }
+   },
+   "note": " | 1.42.0 (T-419): moved by the pending ARCH_TAKEOFF_V3.0.46 package (Gate B); the released capability of V2.9 + route G is unchanged"
   },
   {
    "code": "B11-02",
@@ -6336,24 +6341,27 @@
    "task_commit": "bf0790586a8dde7ff8da4d4ccb769ca8097af26d"
   },
   {
-   "task": "T-443",
+   "task": "T-419",
    "method_version": "ARCH_TAKEOFF_V3.0.46",
    "module": "engine/source/arch_v3046.py",
    "status": "READY_FOR_GATE_B",
    "integrates": [
-    "T-441",
-    "T-410",
-    "T-418",
-    "T-421"
+    "T-408",
+    "T-407"
    ],
    "tests": [
-    "tests/t443_stair_room_skirting"
+    "tests/t419_tie_gb_masonry"
    ],
    "changes_families_by_item_code": [
-    "FIN.SKIRTING"
+    "STR.CONC.LIFT",
+    "STR.FORMWORK",
+    "STR.REBAR",
+    "MAS.BLOCK",
+    "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+    "WP.FOUNDATION.LIFT_PIT_BOARD"
    ],
-   "note": "T-443 (research/agents_t443/T-443_STAIR_ROOM_SKIRTING_SPLIT.md): the two BLOCKED stair-room skirting lines split by floor part from the Checker-verified T-441 face tables: GF hall +1.00 4.650 lm and back lobby +0.30 1.400 lm (material HELD with their floors), 2F lobby 3.350 lm (porcelain Q-70 A, VERIFIED), 2F arrival 4.150 lm (material HELD beside the marble landing); OP-002 deducted whole as a lift opening, no jamb skirting; divider band, OP-020 reveal jambs and the lobby west face HELD BLANK children; GF parent HELD with the unread strip face 0.200, 2F parent NOT_APPLICABLE; every other V3.0.45 line byte-identical; the Gate B integration package",
-   "task_commit": "11d5e89ed8d4fefd42813ec73dae21d5bf6c8b6e"
+   "note": "T-419 (research/agents_t419/T-419_TIE_GB_MASONRY_INTEGRATION.md): GF lift tie beam added HELD BLANK as concrete (STR.CONC.LIFT), side + soffit forms (STR.FORMWORK) and bars (STR.REBAR), 5.500 m DRAWING-CONFIRMED beside, section D-43; house below-ground masonry MAIN_S HELD BLANK (AT_LEAST 11.389 m2 net beside) and ANNEX_S HELD BLANK (no bound, D-35), MAS.BLOCK, owner trade BLOCKWORK BELOW N.G.; the five pit-wall height lines restated to name both facts (pit depth AND GF build-up); ring beams 1.764 / cap 0.5184 / raft / paired GF block lines re-bound; every other V3.0.45 line byte-identical; the Gate B integration package",
+   "task_commit": "a098f3789be591ea8f85f8389be4592c47139c56"
   }
  ],
  "not_a_boq_line_codes": {
