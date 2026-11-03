@@ -58,6 +58,17 @@ quantity.
   the pits, C8, the external GB trench, F10 + F) enters only as DISPLACEMENT read from its own verified piece, never
   re-measured as a quantity of B1-03; the pool shell envelope and footing F4 / FN inside it are CONFLICT pieces
   (F-T350R2-2) until the structure owns them once. Rows: T-484 (remaining 4 / 8 components), T-350 r3 (wiring).
+- TOP-STOREY WALL HEIGHT under a roof plate vs the ROOF BUILD-UP (Lead 2026-11-03 12:18; T-482 MERGED 10e3afad, Checker
+  own SFRS + section A-A read): one datum for both trades, the STRUCTURAL roof slab underside (Q-72 heights, D-39 /
+  Q-54 B). MASONRY (B9-01) owns the wall face up to that underside; ROOFING (B13-01 / B8-06) owns everything above
+  the slab top; the slab itself stays B10 concrete. Where the structural plate prints no level, the wall height is HELD
+  U - L x b_r on D-39, never taken from the architectural FFL chain (the 0.054 m section band is a drafting band, not
+  a slab). Rows: T-488 (wiring), roof WP rows when they integrate.
+- ENTRANCE / STAIR-HALL STONE FLOOR vs PORCELAIN FLOOR vs STAIR FINISH (Lead 2026-11-03 12:18; EIMP B3-03 NO_LINE):
+  per space ONE owner trade for the floor finish: B3-03 where the finish schedule prints stone / marble, B3-01 where
+  it prints porcelain, B7 stair lines for flights and landings inside the stair (OWNER_RULE_STAIRS_2026-10-24); a
+  space already carried by B3-01 or B7 is never added to B3-03. T-490 names the owner trade per space before any line.
+  Rows: T-490, T-443 / T-483 (stair-room skirting, same spaces).
 
 - FOOTING-PIT BLINDING vs GROUND-BEAM / STRAP BLINDING (Lead 2026-11-02 16:16; T-445 MERGED ab6bd617, Checker's own DXF
   re-add of all 24 pits 12.7344375 m3): one blinding layer, OWNER TRADE CONC.BLINDING; where a ground-beam or strap run
