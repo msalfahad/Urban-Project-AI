@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-03T09:01Z | Worker 3 | STARTED | run session_01E6cPnbVt6LE7mpjJDmUjjq | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-03T08:50Z | Verifier | STARTED | run session_01E6cPndSU1uDLDo6S42cLVP | repo-attached routine | task state: READY T-419 (Gate B), T-443 (Gate B), T-453 r2 per RUN_LOG | self-check pending
 - 2026-11-03T08:48Z | Worker 2 | SUCCESS | T-453 r2 READY (agents/task-T-453 @ e4e9742c) | R-T453-5: block/glue/mortar now on material base = MAS.BLOCK net minus REQUIRED RC lintel faces (5.445 m2 deducted; HELD/FLAGGED 0..6.40 m2 as RANGE-NET). 1F white VERIFIED line 458.892 -> 444.47..451.22 kg (Checker figure); glue upper sum -10.55 kg (-0.9 %); black 0.20 V 1346.55 nr unchanged; mortar P 1.645 -> 1.589 m3. Learned: contract area is not the material base. Missing: jamb bearing, rebar kg, freelancer compare | self-check codemap PASS, pytest t061 PASS, freeze PASS; t453 19 pass; problem: 'agent_env.sh run' refuses non-scoreboard tools (AGENT_ENV FAIL: run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py), ledger rebuilt with .work/venv python
 - 2026-11-03T08:41Z | Worker 2 | STARTED | run session_01E6cPnaaxezfD8NxMkqr8PT | repo-attached routine | task state: none yet | self-check pending
