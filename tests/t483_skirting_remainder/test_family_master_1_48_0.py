@@ -1,6 +1,7 @@
-"""T-483 r2: rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json = 1.45.0 + the promotion of its two merged pending packages
-(T-443 V3.0.47 merge c814c55d, T-350b V3.0.48 merge 5de697ff; R-T485-1) with the families they changed re-derived from
-the V3.0.48 census and line diff, + the pending ARCH_TAKEOFF_V3.0.49 package and the B3-06 text. No owner, capability,
+"""T-483 r2: rules/coverage/BOQ_FAMILY_MASTER_1.48.0.json = 1.47.0 + the promotion of its three merged pending packages
+(T-443 V3.0.47 merge c814c55d, T-350b V3.0.48 merge 5de697ff, T-497 V3.0.50 merge 5f8814e8; R-T485-1) with the
+families they changed re-derived from the V3.0.50 census and the line diff along the merged chain, + the pending
+ARCH_TAKEOFF_V3.0.51 package and the B3-06 text. No owner, capability,
 item-code or quantity change; every family not touched by the line diff keeps its census and its state."""
 from __future__ import annotations
 
@@ -16,15 +17,15 @@ for p in (ROOT, ROOT / "research" / "agents_t483", ROOT / "research" / "agents_t
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
-from engine.source import arch_v3049 as A  # noqa: E402
+from engine.source import arch_v3051 as A  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
-import build_master_1_46_0 as M  # noqa: E402
+import build_master_1_48_0 as M  # noqa: E402
 import build_master_1_43_0 as B43  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.45.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.47.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.48.0.json"
 I, H, BL, NI = FMC.STATES
-MERGES = {"T-443": "c814c55d", "T-350b": "5de697ff"}
+MERGES = {"T-443": "c814c55d", "T-350b": "5de697ff", "T-497": "5f8814e8"}
 
 
 @pytest.fixture(scope="module")
@@ -41,18 +42,18 @@ def test_checks_clean_with_git(docs):
     assert B43.census_problems(docs[1]) == []
 
 
-def test_both_merged_pending_packages_promoted_and_only_v3049_pending(docs):
+def test_both_merged_pending_packages_promoted_and_only_v3051_pending(docs):
     old, new = docs
-    assert new["version"] == "1.46.0"
-    assert [p["task"] for p in old["pending_packages"]] == ["T-443", "T-350b"]
-    assert new["candidate_packages"][:-2] == old["candidate_packages"]
-    for p, o in zip(new["candidate_packages"][-2:], old["pending_packages"]):
+    assert new["version"] == "1.48.0"
+    assert [p["task"] for p in old["pending_packages"]] == ["T-443", "T-350b", "T-497"]
+    assert new["candidate_packages"][:-3] == old["candidate_packages"]
+    for p, o in zip(new["candidate_packages"][-3:], old["pending_packages"]):
         assert p["task"] == o["task"] and p["task_commit"] == o["task_commit"]
         assert p["merge_commit"].startswith(MERGES[p["task"]]) and p["verdict"].startswith("MERGED")
         assert MERGES[p["task"]] in p["verdict"]
-    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.48" and new["candidate"]["as_of_package"] == "T-350b"
+    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.50" and new["candidate"]["as_of_package"] == "T-497"
     (p,) = new["pending_packages"]
-    assert (p["task"], p["method_version"], p["module"]) == ("T-483", A.METHOD, "engine/source/arch_v3049.py")
+    assert (p["task"], p["method_version"], p["module"]) == ("T-483", A.METHOD, "engine/source/arch_v3051.py")
     assert "merge_commit" not in p and "verdict" not in p
 
 
@@ -60,7 +61,7 @@ def test_no_merged_package_stays_pending_normal_and_adverse(docs):
     old, new = docs
     merged = {p.get("task_commit") for p in new["candidate_packages"]} - {None}
     assert B43.stale_pending(new, lambda c: c in merged) == []
-    assert B43.stale_pending(old, lambda c: c in merged) == ["T-443", "T-350b"]   # the registry this one supersedes
+    assert B43.stale_pending(old, lambda c: c in merged) == ["T-443", "T-350b", "T-497"]   # the registry this one supersedes
 
 
 def test_line_diff_names_only_the_families_the_packages_changed(docs):
@@ -68,6 +69,7 @@ def test_line_diff_names_only_the_families_the_packages_changed(docs):
     by = {p["task"]: p for p in new["candidate_packages"]}
     assert by["T-443"]["families_changed_by_line_diff"] == ["B3-06"]
     assert by["T-350b"]["families_changed_by_line_diff"] == ["B1-02", "B1-03"]
+    assert by["T-497"]["families_changed_by_line_diff"] == ["B1-02"]
 
 
 def test_touched_families_rederived_from_the_census(docs):
@@ -75,7 +77,7 @@ def test_touched_families_rederived_from_the_census(docs):
     ob = {f["code"]: f for f in old["families"]}
     nb = {f["code"]: f for f in new["families"]}
     cc = new["candidate_census"]["families"]
-    for code, task in (("B3-06", "T-443"), ("B1-02", "T-350b"), ("B1-03", "T-350b")):
+    for code, task in (("B3-06", "T-443"), ("B1-02", "T-350b"), ("B1-02", "T-497"), ("B1-03", "T-350b")):
         c = nb[code]["candidate"]
         assert task in c["packages"] and set(ob[code]["candidate"]["packages"]) <= set(c["packages"])
         assert c["state"] == (I if B43.releases(cc[code]) else H)
@@ -101,7 +103,7 @@ def test_untouched_families_keep_state_census_and_every_other_field(docs):
         assert nc[code] == oc[code], code
         assert f["candidate"]["state"] == o["candidate"]["state"] and \
             f["candidate"]["packages"] == o["candidate"]["packages"], code
-        assert f["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.48" and f["candidate"]["as_of_package"] == "T-350b"
+        assert f["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.50" and f["candidate"]["as_of_package"] == "T-497"
 
 
 def test_counts_agree_and_nothing_released_changed(docs):
@@ -133,4 +135,4 @@ def test_adverse_pending_dropped_is_stale(docs, monkeypatch):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = []
     monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
-    assert any("arch_v3049" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+    assert any("arch_v3051" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))

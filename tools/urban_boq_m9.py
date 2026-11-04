@@ -3204,8 +3204,7 @@ def cmd_arch(a):
     V3043 = "ARCH_TAKEOFF_V3.0.43"
     # T-422: ARCH_TAKEOFF_V3.0.44 = the SAME candidate (engine.source.arch_v3044): a V3.0.43 run (its files unchanged) +
     # the Checker-verified skirting threshold release (URBAN_V3044_INPUTS_V1); named here for the same reason.
-    a.v3051 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.51"; a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3051 else a.method  # T-483 r2: a V3.0.51 run IS a V3.0.50 run first (rewritten before the V3.0.50 line below), then its V3.0.51 skirting remainder
-    V3044, a.v3050 = "ARCH_TAKEOFF_V3.0.44", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.50"; a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050 else a.method  # T-497: a V3.0.50 run IS a V3.0.48 run first (one line, hub line-stable), then its V3.0.50 zone-ownership restatement
+    a.v3051 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.51"; a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3051 else a.method; V3044, a.v3050 = "ARCH_TAKEOFF_V3.0.44", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.50"; a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050 else a.method  # T-497: a V3.0.50 run IS a V3.0.48 run first (one line, hub line-stable), then its V3.0.50 zone-ownership restatement | T-483 r2: a V3.0.51 run IS a V3.0.50 run first (same line, rewritten before the V3.0.50 test), then its V3.0.51 skirting remainder
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
     V3045, V3047, V3048 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47", "ARCH_TAKEOFF_V3.0.48"  # T-443 / T-350 r4: named on this line so the hub stays line-stable

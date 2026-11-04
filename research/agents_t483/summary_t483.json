@@ -1,12 +1,12 @@
 {
  "task": "T-483",
- "method": "ARCH_TAKEOFF_V3.0.49",
- "extends": "ARCH_TAKEOFF_V3.0.48",
- "base_sha256": "33a81c5387dc5c306086867da32415892e164a60a6a42893dc040e2d64f963ce",
- "candidate_sha256": "c79821979b0f289c3c517f71f3c5cc79791779c49b5d3c49b4f94e997461cd3f",
+ "method": "ARCH_TAKEOFF_V3.0.51",
+ "extends": "ARCH_TAKEOFF_V3.0.50",
+ "base_sha256": "d40c4ec55e051289786d113478fb1466e56295ec0acb89bb1d51cbab2cebb02b",
+ "candidate_sha256": "c0b6d664aeff58809641e1cb09cfe32834fb7a66a55565fa04cc74fb32da37b1",
  "lines": {
   "base": 4876,
-  "v3_0_49": 4876,
+  "v3_0_51": 4876,
   "added": 0,
   "replaced": 5,
   "outside_identical": 4871
@@ -34,7 +34,7 @@
     "lines": 23,
     "released": 203.368752
    },
-   "v3_0_49": {
+   "v3_0_51": {
     "blocked_lines": 4,
     "bounded_lines": 1,
     "held_high": 2.2,

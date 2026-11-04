@@ -1,21 +1,22 @@
-"""T-483 r2: build rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json = 1.45.0 (never edited)
-  (1) + the PROMOTION of the two packages 1.45.0 holds pending that have since merged (T-443 V3.0.47, merge c814c55d;
-      T-350b V3.0.48, merge 5de697ff), by the T-485 rule R-T485-1 (a merged package never stays pending): merge commit
-      and Checker verdict from git and the board (out/PROMOTIONS_SOURCE_1_46_0.json, t483_promotions_source.py), the
-      families each package changed from the LINE DIFF V3.0.46 -> V3.0.47 -> V3.0.48 of a reproduced chain run
-      (out/T483_PACKAGE_FAMILIES.json, research/agents_t485/t485_package_families.py unchanged), and the candidate
-      census re-run at V3.0.48 (out/LINE_INDEX_V3_0_48.json, research/agents_t479/t479_registry_census.py unchanged;
-      verdict set board verdicts/V3.0.44, downgrade snapshot research/agents_t469, as 1.43.0 .. 1.45.0);
-  (2) + the pending ARCH_TAKEOFF_V3.0.49 package (T-483, tools/family_master_candidate.py rule r3) and the B3-06 text
+"""T-483 r2: build rules/coverage/BOQ_FAMILY_MASTER_1.48.0.json = 1.47.0 (never edited)
+  (1) + the PROMOTION of the three packages 1.47.0 holds pending that have since merged (T-443 V3.0.47, merge c814c55d;
+      T-350b V3.0.48, merge 5de697ff; T-497 V3.0.50, merge 5f8814e8), by the T-485 rule R-T485-1 (a merged package
+      never stays pending): merge commit and Checker verdict from git and the board (out/PROMOTIONS_SOURCE_1_48_0.json,
+      t483_promotions_source.py), the families each package changed from the LINE DIFF along the merged chain V3.0.46
+      -> V3.0.47 -> V3.0.48 -> V3.0.50 of a reproduced chain run (out/T483_PACKAGE_FAMILIES.json,
+      t483_package_families.py with the T-485 diff rules unchanged), and the candidate census re-run at V3.0.50
+      (out/LINE_INDEX_V3_0_50.json, research/agents_t479/t479_registry_census.py unchanged; verdict set board
+      verdicts/V3.0.44, downgrade snapshot research/agents_t469, as 1.43.0 .. 1.47.0);
+  (2) + the pending ARCH_TAKEOFF_V3.0.51 package (T-483, tools/family_master_candidate.py rule r3) and the B3-06 text
       of the family whose lines it changes.
 
 Family blocks: a family the line diff names is re-derived (package added, state INTEGRATED_IN_CANDIDATE_AND_TESTED when
-the V3.0.48 census releases a quantity of it, else HELD_IN_CANDIDATE; released / held text from the census); every
-other family must have a census identical to 1.45.0's (asserted: its lines are byte-identical V3.0.46 -> V3.0.48), so
-only its candidate method version / as-of package move to V3.0.48 / T-350b. No quantity, capability, owner or line
+the V3.0.50 census releases a quantity of it, else HELD_IN_CANDIDATE; released / held text from the census); every
+other family must have a census identical to 1.47.0's (asserted: its lines are byte-identical V3.0.46 -> V3.0.50), so
+only its candidate method version / as-of package move to V3.0.50 / T-497. No quantity, capability, owner or line
 change with this file; the released default is untouched.
 
-    python3 -I research/agents_t483/build_master_1_46_0.py --task-commit <sha> | --check
+    python3 -I research/agents_t483/build_master_1_48_0.py --task-commit <sha> | --check
 """
 
 from __future__ import annotations
@@ -37,36 +38,37 @@ import t479_registry_census as C  # noqa: E402
 import build_master_1_43_0 as B  # noqa: E402  (unit text and release rule of T-485, unchanged)
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.45.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json"
-VERSION = "1.46.0"
-PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_46_0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.47.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.48.0.json"
+VERSION = "1.48.0"
+PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_48_0.json"
 ATTRIB = HERE / "out/T483_PACKAGE_FAMILIES.json"
-INDEX = HERE / "out/LINE_INDEX_V3_0_48.json"
-BOARD_COMMIT = "f371bc6e"
+INDEX = HERE / "out/LINE_INDEX_V3_0_50.json"
+BOARD_COMMIT = "e41c612b"
 OLD_CAND = "ARCH_TAKEOFF_V3.0.46"
-CAND, AS_OF = "ARCH_TAKEOFF_V3.0.48", "T-350b"
+CAND, AS_OF = "ARCH_TAKEOFF_V3.0.50", "T-497"
+DIFF_SPAN = "V3.0.47 .. V3.0.50"
 I, H, BL, NI = FMC.STATES
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
-MOD = "engine/source/arch_v3049.py"
-TST = "tests/t483_skirting_remainder/test_arch_v3049.py"
+MOD = "engine/source/arch_v3051.py"
+TST = "tests/t483_skirting_remainder/test_arch_v3051.py"
 PENDING = {
-    "task": "T-483", "method_version": "ARCH_TAKEOFF_V3.0.49", "module": MOD,
+    "task": "T-483", "method_version": "ARCH_TAKEOFF_V3.0.51", "module": MOD,
     "status": FMC.PENDING_STATUS, "integrates": ["T-481", "T-410", "T-422"],
     "tests": ["tests/t483_skirting_remainder"],
     "changes_families_by_item_code": ["FIN.SKIRTING"],
     "note": "T-483 r2 (research/agents_t483/T-483_SKIRTING_REMAINDER_INTEGRATION.md): the Checker-verified T-481 census "
-            "integrated on the merged V3.0.48: GF-01 W11 / W12 sills 0.70 above the +0.30 floor (section B-B) -> "
+            "integrated on the merged V3.0.50: GF-01 W11 / W12 sills 0.70 above the +0.30 floor (section B-B) -> "
             "skirting under them, room line 14.218 -> 18.128 lm, its range line NOT_APPLICABLE (carried once); W02 and "
             "W17 floor glazing: their held ranges closed NOT_APPLICABLE; the 1F dressing walked by handle 5.100 lm (was "
             "HELD BLANK); the 1F shaft faces 9.050 lm and the W13 / W25 range 2.200 lm stay HELD in FIN.SKIRTING until "
-            "T-501 gives them a B7-07 / B7-08 home; every other V3.0.48 line byte-identical; the Gate B integration "
+            "T-501 gives them a B7-07 / B7-08 home; every other V3.0.50 line byte-identical; the Gate B integration "
             "package",
 }
-PROPOSED = ("1.46.0 (T-483 r2): moved by the pending ARCH_TAKEOFF_V3.0.49 package (Gate B); the released capability "
+PROPOSED = ("1.48.0 (T-483 r2): moved by the pending ARCH_TAKEOFF_V3.0.51 package (Gate B); the released capability "
             "of V2.9 + route G is unchanged")
-OPT_IN = "ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-483 r2)"
-MISS = ("in the opt-in candidate V3.0.49: W11 / W12 skirted, W02 / W17 floor glazing (ranges closed); the 1F dressing "
+OPT_IN = "ARCH_TAKEOFF_V3.0.51 (engine/source/arch_v3051.py, opt-in candidate; pending Gate B, T-483 r2)"
+MISS = ("in the opt-in candidate V3.0.51: W11 / W12 skirted, W02 / W17 floor glazing (ranges closed); the 1F dressing "
         "valued 5.100 lm; still open: R-T481-3 on the 1F shaft (9.050 lm inside the 1F living net, W13 / W25 range "
         "0 .. 2.200 held) until B7-07 / B7-08 have candidate lines (T-501), the W02 pier D-53")
 
@@ -115,15 +117,15 @@ def touched_block(f, cen, new_pk, pkg_versions):
     held = B._units_text(cen["units"], "held")
     keep = [x for x in (old.get("changed") or "").split(" | ") if x and not x.startswith("census ")]
     since = "; ".join(_since(t, ver, codes) for t, ver, codes in new_pk)
-    changed = " | ".join(keep + [f"V3.0.47 .. V3.0.48 by line diff (T-483 r2): {since}",
+    changed = " | ".join(keep + [f"{DIFF_SPAN} by line diff (T-483 r2): {since}",
                                  f"census {CAND}: released {rel or 'none'}"])
     okeep = [x for x in (old.get("open") or "").split(" | ") if x and not x.startswith("held in the candidate ")]
     open_ = " | ".join(okeep + [f"held in the candidate {CAND}: {held or 'none'} (never 0, never summed; see "
                                 f"candidate_census)"])
     return {"state": state, "method_version": CAND, "packages": pk, "as_of_package": AS_OF, "changed": changed,
             "open": open_, "released_in_candidate": rel if state == I else "none",
-            "candidate_basis": f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.47 .. "
-                               f"V3.0.48 (T-483 r2)"}
+            "candidate_basis": f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + "
+                               f"{DIFF_SPAN} (T-483 r2)"}
 
 
 def carried_block(f):
@@ -132,8 +134,8 @@ def carried_block(f):
         for k in ("changed", "open", "candidate_basis"):
             c[k] = str(c.get(k) or "").replace(f"census {OLD_CAND}", f"census {CAND}").replace(
                 f"held in the candidate {OLD_CAND}", f"held in the candidate {CAND}")
-        c["candidate_basis"] = (f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + V3.0.47 .. "
-                                f"V3.0.48 (T-483 r2: no line of the family changed)")
+        c["candidate_basis"] = (f"CENSUS {CAND} (candidate_census) + LINE DIFF V3.0.7 .. V3.0.46 (T-485) + {DIFF_SPAN} "
+                                f"(T-483 r2: no line of the family changed)")
     return c
 
 
@@ -146,7 +148,7 @@ def build(task_commit):
     new["version"] = VERSION
     pend = old["pending_packages"]
     if sorted(prom) != sorted(p["task"] for p in pend):
-        raise SystemExit(f"promotion source {sorted(prom)} is not every pending package of 1.45.0")
+        raise SystemExit(f"promotion source {sorted(prom)} is not every pending package of {old['version']}")
     promoted = [promote(p, prom[p["task"]], attrib) for p in pend]
     new["supersedes"] = (f"{old['version']} (kept unchanged on disk; every released-configuration field copied "
                          f"unchanged; its {len(promoted)} pending packages promoted to candidate_packages; the families "
@@ -159,9 +161,9 @@ def build(task_commit):
     head = new["v3_0_candidate"].split(": the same opt-in candidate", 1)
     if len(head) != 2:
         raise SystemExit("v3_0_candidate text has no head to restate")
-    v48 = attrib["versions"][CAND]
-    new["v3_0_candidate"] = (f"{CAND} (T-350b merge {prom['T-350b']['merge_commit'][:8]}, Verifier "
-                             f"{prom['T-350b']['verdict_time']}, Gate B PASS; BOQ_LINES {v48['lines_sha256'][:8]}): "
+    vc = attrib["versions"][CAND]
+    new["v3_0_candidate"] = (f"{CAND} ({AS_OF} merge {prom[AS_OF]['merge_commit'][:8]}, Verifier "
+                             f"{prom[AS_OF]['verdict_time']}, Gate B PASS; BOQ_LINES {vc['lines_sha256'][:8]}): "
                              "the same opt-in candidate" + head[1])
     new["candidate"] = dict(old["candidate"], method_version=CAND, as_of_package=AS_OF)
     new["candidate_packages"] = old["candidate_packages"] + promoted
@@ -189,7 +191,7 @@ def build(task_commit):
             f["candidate"] = touched_block(f, cc[code], by_family[code], pkg_versions)
         else:
             if cc[code] != oc[code]:
-                raise SystemExit(f"{code}: no line changed V3.0.46 -> V3.0.48 but its census moved")
+                raise SystemExit(f"{code}: no line changed V3.0.46 -> V3.0.50 but its census moved")
             f["candidate"] = carried_block(f)
         counts[f["candidate"]["state"]] += 1
         yes_no[f["in_v3_0_candidate"]] += 1
@@ -212,12 +214,12 @@ def build(task_commit):
     new["candidate_census"] = dict(
         old_cen, method_version=CAND, lines=census["lines"], lines_sha256=index["inputs"]["lines"],
         verdicts_sha256=index["inputs"].get("verdicts"), downgrades_sha256=index["inputs"].get("downgrades"),
-        index="research/agents_t483/out/LINE_INDEX_V3_0_48.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
+        index="research/agents_t483/out/LINE_INDEX_V3_0_50.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
               + ")",
-        scope=(f"the development villa run of the merged candidate of record V3.0.48 (T-350b merge "
-               f"{prom['T-350b']['merge_commit'][:8]}; BOQ_LINES {v48['lines_sha256'][:8]} reproduced by T-483 r2 from "
-               "the Drive copies, V3.0.46 = 35d70129 and V3.0.47 = e86a53a8 on the way); the V3.0.44 verdict set and "
-               "the T-469 downgrade snapshot bind by line content, as in 1.43.0"),
+        scope=(f"the development villa run of the merged candidate of record V3.0.50 (T-497 merge "
+               f"{prom[AS_OF]['merge_commit'][:8]}; BOQ_LINES {vc['lines_sha256'][:8]} reproduced by T-483 r2 from "
+               "the Drive copies, V3.0.46 = 35d70129, V3.0.47 = e86a53a8 and V3.0.48 = 33a81c53 on the way); the "
+               "V3.0.44 verdict set and the T-469 downgrade snapshot bind by line content, as in 1.43.0"),
         families=cc, not_a_boq_lines=census["not_a_boq_lines"], no_family=census["no_family"],
         issue_counts=census["issue_counts"],
         stale_in_candidate_vs_registry=C.compare_blocks({"families": cc, "candidate_version": CAND}, new),
@@ -233,7 +235,7 @@ def build(task_commit):
                      + hashlib.sha256(ATTRIB.read_bytes()).hexdigest() + ")",
         "rule": old["promotion"]["rule"],
         "quantity_change": "none (no engine, method, line or capability field moves)",
-        "line_index": "research/agents_t483/out/LINE_INDEX_V3_0_48.json"}
+        "line_index": "research/agents_t483/out/LINE_INDEX_V3_0_50.json"}
     return new
 
 

@@ -21,7 +21,7 @@ S = json.loads((ROOT / "research/agents_t483/summary_t483.json").read_text(encod
 
 def test_base_is_candidate_of_record_and_only_skirting_moves():
     assert S["base_sha256"].startswith("d40c4ec5")          # V3.0.50, candidate of record (T-497 merge 5f8814e8)
-    assert S["candidate_sha256"].startswith("c7982197")     # V3.0.51 through the hub = v3051_apply.py on that file
+    assert S["candidate_sha256"].startswith("c0b6d664")     # V3.0.51 = v3051_apply.py on the d40c4ec5 file of the own chain run
     assert S["extends"] == "ARCH_TAKEOFF_V3.0.50"
     assert (S["lines"]["added"], S["lines"]["replaced"]) == (0, 5)
     assert S["lines"]["outside_identical"] == S["lines"]["base"] - 5

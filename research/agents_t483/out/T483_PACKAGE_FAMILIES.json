@@ -1,6 +1,12 @@
 {
  "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
- "registry": "1.45.0",
+ "registry": "1.47.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.46",
+  "ARCH_TAKEOFF_V3.0.47",
+  "ARCH_TAKEOFF_V3.0.48",
+  "ARCH_TAKEOFF_V3.0.50"
+ ],
  "versions": {
   "ARCH_TAKEOFF_V3.0.46": {
    "lines": 4867,
@@ -9,6 +15,7 @@
   "ARCH_TAKEOFF_V3.0.47": {
    "lines": 4874,
    "lines_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
+   "previous": "ARCH_TAKEOFF_V3.0.46",
    "item_codes": {
     "FIN.SKIRTING": {
      "added": 7,
@@ -36,6 +43,7 @@
   "ARCH_TAKEOFF_V3.0.48": {
    "lines": 4876,
    "lines_sha256": "33a81c5387dc5c306086867da32415892e164a60a6a42893dc040e2d64f963ce",
+   "previous": "ARCH_TAKEOFF_V3.0.47",
    "item_codes": {
     "STR.EARTH.BACKFILL": {
      "added": 2,
@@ -73,503 +81,34 @@
    "record_apart": [],
    "touched": 7,
    "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.50": {
+   "lines": 4876,
+   "lines_sha256": "d40c4ec55e051289786d113478fb1466e56295ec0acb89bb1d51cbab2cebb02b",
+   "previous": "ARCH_TAKEOFF_V3.0.48",
+   "item_codes": {
+    "STR.EARTH.EXCAVATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-02": {
+     "STR.EARTH.EXCAVATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 1,
+   "record_only": 0
   }
- },
- "item_code_presence": {
-  "ARCH.EXTERIOR": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.FACADE": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.FACADE_RUN": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.PASSAGE": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.SHUTTER": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.SPACE": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.THRESHOLD": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.WALL_PANEL": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.WALL_RUN": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.WALL_VOLUME": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.WINDOW": [
-   46,
-   47,
-   48
-  ],
-  "ARCH.WINDOW_REVEAL": [
-   46,
-   47,
-   48
-  ],
-  "DOOR.EXTERNAL.ALUMINIUM": [
-   46,
-   47,
-   48
-  ],
-  "DOOR.INTERNAL.PVC": [
-   46,
-   47,
-   48
-  ],
-  "DOOR.MAIN_ENTRANCE": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.BLOCK": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.BLOCK_COUNT": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.FACE": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.GATE": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.MASONRY_BELOW_NG": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.PAINT": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.PLASTER": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.TOP": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FENCE.WALL": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FLOOR.OUTDOOR": [
-   46,
-   47,
-   48
-  ],
-  "EXT.FLOOR.PORCELAIN": [
-   46,
-   47,
-   48
-  ],
-  "EXT.PAVING.INTERLOCK": [
-   46,
-   47,
-   48
-  ],
-  "EXT.POOL.WATER_FACE": [
-   46,
-   47,
-   48
-  ],
-  "FIN.CEILING": [
-   46,
-   47,
-   48
-  ],
-  "FIN.CEILING.BULKHEAD": [
-   46,
-   47,
-   48
-  ],
-  "FIN.DOME.SOFFIT": [
-   46,
-   47,
-   48
-  ],
-  "FIN.EXT.FINISH": [
-   46,
-   47,
-   48
-  ],
-  "FIN.FLOOR.BED.DRY": [
-   46,
-   47,
-   48
-  ],
-  "FIN.FLOOR.BED.WET": [
-   46,
-   47,
-   48
-  ],
-  "FIN.FLOOR.FINISH_HELD": [
-   46,
-   47,
-   48
-  ],
-  "FIN.FLOOR.PORCELAIN": [
-   46,
-   47,
-   48
-  ],
-  "FIN.FLOOR.WET_TILE": [
-   46,
-   47,
-   48
-  ],
-  "FIN.HANDRAIL": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.LANDING": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.LIFT_SURROUND": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.LIFT_THRESHOLD": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.RISER": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.THRESHOLD": [
-   46,
-   47,
-   48
-  ],
-  "FIN.MARBLE.TREAD": [
-   46,
-   47,
-   48
-  ],
-  "FIN.PAINT": [
-   46,
-   47,
-   48
-  ],
-  "FIN.PAINT.CEILING": [
-   46,
-   47,
-   48
-  ],
-  "FIN.PLASTER": [
-   46,
-   47,
-   48
-  ],
-  "FIN.RAILING": [
-   46,
-   47,
-   48
-  ],
-  "FIN.ROOF.FINISH": [
-   46,
-   47,
-   48
-  ],
-  "FIN.ROOF.INSULATION": [
-   46,
-   47,
-   48
-  ],
-  "FIN.ROOF.PROTECTION": [
-   46,
-   47,
-   48
-  ],
-  "FIN.ROOF.SCREED": [
-   46,
-   47,
-   48
-  ],
-  "FIN.SKIRTING": [
-   46,
-   47,
-   48
-  ],
-  "FIN.STAIR.FLIGHT": [
-   46,
-   47,
-   48
-  ],
-  "FIN.STAIR.SOFFIT": [
-   46,
-   47,
-   48
-  ],
-  "FIN.STAIR.STEP_LM": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WALL.TILE": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.DOORWAY": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.DOORWAY_TRANSITION": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.DOORWAY_TRANSITION_NR": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.FLOOR": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.MEMBRANE_ROLLS": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.PENETRATION": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.ROOF": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.ROOF_UPTURN": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.TERMINATION": [
-   46,
-   47,
-   48
-  ],
-  "FIN.WP.WALL_UPTURN": [
-   46,
-   47,
-   48
-  ],
-  "MAS.BLOCK": [
-   46,
-   47,
-   48
-  ],
-  "MET.RAILING.GUARD": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.BEAM": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.BLINDING": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.BOUNDARY_PAD": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.BOUNDARY_WALL": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.COLUMN": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.DOME": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.FOOTING": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.GROUND_BEAM": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.GROUND_SLAB": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.LIFT": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.NECK": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.PARAPET": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.POOL": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.SLAB": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.STAIR": [
-   46,
-   47,
-   48
-  ],
-  "STR.CONC.STRAP": [
-   46,
-   47,
-   48
-  ],
-  "STR.EARTH.BACKFILL": [
-   46,
-   47,
-   48
-  ],
-  "STR.EARTH.DISPOSAL": [
-   46,
-   47,
-   48
-  ],
-  "STR.EARTH.EXCAVATION": [
-   46,
-   47,
-   48
-  ],
-  "STR.FORMWORK": [
-   46,
-   47,
-   48
-  ],
-  "STR.FORMWORK.STAIR": [
-   46,
-   47,
-   48
-  ],
-  "STR.REBAR": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.BURIED_LIQUID": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.FOOTING_MEMBRANE": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.FOOTING_SCREED": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.FOOTING_SIDES": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.LIFT_PIT_BOARD": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.LIFT_PIT_MEMBRANE": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.LIFT_PIT_SCREED": [
-   46,
-   47,
-   48
-  ],
-  "WP.FOUNDATION.PROCUREMENT": [
-   46,
-   47,
-   48
-  ]
  }
 }
