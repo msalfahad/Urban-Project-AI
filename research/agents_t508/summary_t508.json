@@ -1,0 +1,2025 @@
+{
+ "chain": {
+  "V3_0_47": "e86a53a8",
+  "V3_0_48": "33a81c53",
+  "V3_0_50": "d40c4ec5",
+  "V3_0_51": "c0b6d664",
+  "V3_0_53": "36863f6c",
+  "V3_0_54": "c85c4630",
+  "V3_0_55": "a498fc61",
+  "V3_0_56": "4e25c54f"
+ },
+ "drawings": {
+  "plan": "training-villa Drive folder / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55",
+  "structural": "training-villa Drive folder / ST7757 dxf.dxf sha256 9f9d1179"
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.55",
+ "identity": {
+  "added": 50,
+  "base_lines": 4939,
+  "diff": {
+   "vs_base": {
+    "ADDED": 50,
+    "CHANGED": 2,
+    "SAME": 4937
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3399,
+    "QUANTITY_DIFFERS": 1009,
+    "SAME_QUANTITY": 581
+   }
+  },
+  "outside_rows": 4937,
+  "outside_rows_identical_to_base": 4937,
+  "outside_rows_sha256": "4cfe092a2a1b4816a55572bb8d8d19b49168e1dd8f988bd2dd6a494b1f8a4d5b",
+  "replaced": 2,
+  "stair_skirting": {
+   "closed": 1,
+   "landing_held": 3,
+   "landing_lm": 6.1,
+   "landings": 3,
+   "pairs": 44,
+   "retired_lm": 9.05,
+   "valued_pairs": 0
+  },
+  "v3_0_56_lines": 4989
+ },
+ "method": "ARCH_TAKEOFF_V3.0.56",
+ "rows": [
+  {
+   "action": "ADD_LANDING",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 1.15
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": null,
+   "element_id": "STAIR-SKIRT:MS1-LD:landing",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.SKIRTING",
+   "kind": null,
+   "landing_pieces": [
+    {
+     "pid": "MS1-LD.E",
+     "plan_lm": 1.15,
+     "returns_lm": 0.0
+    }
+   ],
+   "line_id": "L-549f98e6504c9fdf25f8",
+   "pair_line": null,
+   "piece": "MS1-LD",
+   "plan_lm": null,
+   "retired_lm": null,
+   "returns_lm": null,
+   "risers": null,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_LANDING",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 3.7
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": null,
+   "element_id": "STAIR-SKIRT:MS2-LD:landing",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "kind": null,
+   "landing_pieces": [
+    {
+     "pid": "MS2-LD.W",
+     "plan_lm": 1.05,
+     "returns_lm": 0.0
+    },
+    {
+     "pid": "MS2-LD.NW",
+     "plan_lm": 1.3,
+     "returns_lm": 0.0
+    },
+    {
+     "pid": "MS2-LD.NE",
+     "plan_lm": 0.1,
+     "returns_lm": 0.0
+    },
+    {
+     "pid": "MS2-LD.NE2",
+     "plan_lm": 0.1,
+     "returns_lm": 0.0
+    },
+    {
+     "pid": "MS2-LD.E",
+     "plan_lm": 1.15,
+     "returns_lm": 0.0
+    }
+   ],
+   "line_id": "L-b442a00bf07405eaaa93",
+   "pair_line": null,
+   "piece": "MS2-LD",
+   "plan_lm": null,
+   "retired_lm": null,
+   "returns_lm": null,
+   "risers": null,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_LANDING",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "MEASURED",
+    "value": 1.25
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": null,
+   "element_id": "STAIR-SKIRT:RS-LD:landing",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.SKIRTING",
+   "kind": null,
+   "landing_pieces": [
+    {
+     "pid": "RS-LD.S1",
+     "plan_lm": 0.65,
+     "returns_lm": 0.0
+    },
+    {
+     "pid": "RS-LD.S2",
+     "plan_lm": 0.55,
+     "returns_lm": 0.05
+    }
+   ],
+   "line_id": "L-66d6ac9a698b265778ae",
+   "pair_line": null,
+   "piece": "RS-LD",
+   "plan_lm": null,
+   "retired_lm": null,
+   "returns_lm": null,
+   "risers": null,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 0.733334,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-53f3b7f153af0e1f5538",
+   "pair_line": "L-a43adc74906d8bcd7b1c",
+   "piece": "MS1-L.W1",
+   "plan_lm": 0.4,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 2,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.470071,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-a43adc74906d8bcd7b1c",
+   "pair_line": "L-53f3b7f153af0e1f5538",
+   "piece": "MS1-L.W1",
+   "plan_lm": 0.4,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 2,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 0.766667,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-c56a452218763d5e7bbf",
+   "pair_line": "L-aed4c2990437f767dc90",
+   "piece": "MS1-L.W1C",
+   "plan_lm": 0.5,
+   "retired_lm": null,
+   "returns_lm": 0.1,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1C",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.687589,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-aed4c2990437f767dc90",
+   "pair_line": "L-c56a452218763d5e7bbf",
+   "piece": "MS1-L.W1C",
+   "plan_lm": 0.5,
+   "retired_lm": null,
+   "returns_lm": 0.1,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.250001,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-9e5ed7164ee85f0fc196",
+   "pair_line": "L-ff51392df9e2c8c21efe",
+   "piece": "MS1-L.W1B",
+   "plan_lm": 0.75,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-L.W1B",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.881383,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-ff51392df9e2c8c21efe",
+   "pair_line": "L-9e5ed7164ee85f0fc196",
+   "piece": "MS1-L.W1B",
+   "plan_lm": 0.75,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-L.W2",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": 1.716668,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-76748b7b62ab2d52b4e2",
+   "pair_line": "L-18efa069acded71c81e7",
+   "piece": "MS1-L.W2",
+   "plan_lm": 1.05,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-L.W2",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": 1.233936,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-18efa069acded71c81e7",
+   "pair_line": "L-76748b7b62ab2d52b4e2",
+   "piece": "MS1-L.W2",
+   "plan_lm": 1.05,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-5bc4cea35db33e41d78c",
+   "pair_line": "L-2fae5d35b21e97684844",
+   "piece": "MS1-T.W",
+   "plan_lm": 1.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-T.W",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-2fae5d35b21e97684844",
+   "pair_line": "L-5bc4cea35db33e41d78c",
+   "piece": "MS1-T.W",
+   "plan_lm": 1.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-5f0bd2b45c1718aeefc4",
+   "pair_line": "L-28c33cd0ab5d19426661",
+   "piece": "MS1-T.N",
+   "plan_lm": 1.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-T.N",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-28c33cd0ab5d19426661",
+   "pair_line": "L-5f0bd2b45c1718aeefc4",
+   "piece": "MS1-T.N",
+   "plan_lm": 1.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_LANDING_HELD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-LD.N",
+   "evidence_status": "HELD",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.SKIRTING",
+   "kind": "LANDING",
+   "landing_pieces": [],
+   "line_id": "L-5273c35e05acc8ebeb59",
+   "pair_line": null,
+   "piece": "MS1-LD.N",
+   "plan_lm": 1.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.616668,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-bc0e1e80ca50865ccd06",
+   "pair_line": "L-32f71724eeeaa46638c9",
+   "piece": "MS1-U.E1",
+   "plan_lm": 0.95,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-U.E1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 1.110855,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-32f71724eeeaa46638c9",
+   "pair_line": "L-bc0e1e80ca50865ccd06",
+   "piece": "MS1-U.E1",
+   "plan_lm": 0.95,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": 1.400001,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-1ed4cfaa1c12054b401d",
+   "pair_line": "L-20c2640927e41626893d",
+   "piece": "MS1-U.E2",
+   "plan_lm": 0.9,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS1-U.E2",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": 1.052389,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-20c2640927e41626893d",
+   "pair_line": "L-1ed4cfaa1c12054b401d",
+   "piece": "MS1-U.E2",
+   "plan_lm": 0.9,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.816668,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-9ec979f00305b8ae8049",
+   "pair_line": "L-cfecfcea2280155a6a74",
+   "piece": "MS1-U.E3a",
+   "plan_lm": 1.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS1-U.E3a",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 1.344719,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-cfecfcea2280155a6a74",
+   "pair_line": "L-9ec979f00305b8ae8049",
+   "piece": "MS1-U.E3a",
+   "plan_lm": 1.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "CONFLICT",
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "evidence_status": "CONFLICT",
+   "family": "B7-07",
+   "figure_beside_lm": 0.466667,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-984553ed0b69b0f77fe2",
+   "pair_line": "L-8e463d6ce740fc19e60c",
+   "piece": "MS1-U.E3b",
+   "plan_lm": 0.3,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "CONFLICT",
+   "element_id": "STAIR-SKIRT:MS1-U.E3b",
+   "evidence_status": "CONFLICT",
+   "family": "B7-08",
+   "figure_beside_lm": 0.350796,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-8e463d6ce740fc19e60c",
+   "pair_line": "L-984553ed0b69b0f77fe2",
+   "piece": "MS1-U.E3b",
+   "plan_lm": 0.3,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.672,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-656ab12cc9b9797d3b1a",
+   "pair_line": "L-9b1da1af7c162de2233c",
+   "piece": "MS2-L.W1",
+   "plan_lm": 1.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 1.17184,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-9b1da1af7c162de2233c",
+   "pair_line": "L-656ab12cc9b9797d3b1a",
+   "piece": "MS2-L.W1",
+   "plan_lm": 1.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 0.768,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-1c907e0a59c55204e430",
+   "pair_line": "L-193f8e812d9ade5f9c41",
+   "piece": "MS2-L.W1C",
+   "plan_lm": 0.5,
+   "retired_lm": null,
+   "returns_lm": 0.1,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1C",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.68592,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-193f8e812d9ade5f9c41",
+   "pair_line": "L-1c907e0a59c55204e430",
+   "piece": "MS2-L.W1C",
+   "plan_lm": 0.5,
+   "retired_lm": null,
+   "returns_lm": 0.1,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.254,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-20432b887f91dee03925",
+   "pair_line": "L-caacb4c1425981b2585f",
+   "piece": "MS2-L.W1B",
+   "plan_lm": 0.75,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-L.W1B",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.87888,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-caacb4c1425981b2585f",
+   "pair_line": "L-20432b887f91dee03925",
+   "piece": "MS2-L.W1B",
+   "plan_lm": 0.75,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-L.W2",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": 1.722,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-f45c2e6d46b0cc6a7e53",
+   "pair_line": "L-4ff56def5b73b558afbe",
+   "piece": "MS2-L.W2",
+   "plan_lm": 1.05,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-L.W2",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": 1.230432,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-4ff56def5b73b558afbe",
+   "pair_line": "L-f45c2e6d46b0cc6a7e53",
+   "piece": "MS2-L.W2",
+   "plan_lm": 1.05,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_LANDING_HELD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-LD.W13",
+   "evidence_status": "HELD",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "kind": "LANDING",
+   "landing_pieces": [],
+   "line_id": "L-33f2018c987f782d1c91",
+   "pair_line": null,
+   "piece": "MS2-LD.W13",
+   "plan_lm": 0.15,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_LANDING_HELD",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-LD.W25",
+   "evidence_status": "HELD",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "kind": "LANDING",
+   "landing_pieces": [],
+   "line_id": "L-760bfa8dd00061361695",
+   "pair_line": null,
+   "piece": "MS2-LD.W25",
+   "plan_lm": 1.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "evidence_status": "HELD",
+   "family": "B7-07",
+   "figure_beside_lm": 0.168,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "STEP",
+   "landing_pieces": [],
+   "line_id": "L-5021b820dba41f631dde",
+   "pair_line": "L-76de75ce9a315998be99",
+   "piece": "MS2-TR.N",
+   "plan_lm": 0.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "HELD",
+   "element_id": "STAIR-SKIRT:MS2-TR.N",
+   "evidence_status": "HELD",
+   "family": "B7-08",
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "STEP",
+   "landing_pieces": [],
+   "line_id": "L-76de75ce9a315998be99",
+   "pair_line": "L-5021b820dba41f631dde",
+   "piece": "MS2-TR.N",
+   "plan_lm": 0.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 5.316,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-c8dce28c50dabd7b17fb",
+   "pair_line": "L-4b902816d29b75fab7fc",
+   "piece": "MS2-U.E",
+   "plan_lm": 3.3,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 12,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:MS2-U.E",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 3.867073,
+   "floor": "1F",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-4b902816d29b75fab7fc",
+   "pair_line": "L-c8dce28c50dabd7b17fb",
+   "piece": "MS2-U.E",
+   "plan_lm": 3.3,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 12,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:D1.E",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.6,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-4548e7ad947b07624e81",
+   "pair_line": "L-775f62538c1f46077807",
+   "piece": "D1.E",
+   "plan_lm": 0.9,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:D1.E",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 1.140175,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-775f62538c1f46077807",
+   "pair_line": "L-4548e7ad947b07624e81",
+   "piece": "D1.E",
+   "plan_lm": 0.9,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 4,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "UNKNOWN",
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "evidence_status": "UNKNOWN",
+   "family": "B7-07",
+   "figure_beside_lm": 0.360714,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-c074ce526885a44423d0",
+   "pair_line": "L-ebe230d8c2fbc35332b8",
+   "piece": "RS-S.S0",
+   "plan_lm": 0.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "UNKNOWN",
+   "element_id": "STAIR-SKIRT:RS-S.S0",
+   "evidence_status": "UNKNOWN",
+   "family": "B7-08",
+   "figure_beside_lm": 0.232143,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-ebe230d8c2fbc35332b8",
+   "pair_line": "L-c074ce526885a44423d0",
+   "piece": "RS-S.S0",
+   "plan_lm": 0.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 1,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 1.332143,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-544b6b11bab9bbf037fb",
+   "pair_line": "L-0ae4be232407b92343ef",
+   "piece": "RS-S.S1",
+   "plan_lm": 0.8,
+   "retired_lm": null,
+   "returns_lm": 0.05,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:RS-S.S1",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 0.978571,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-0ae4be232407b92343ef",
+   "pair_line": "L-544b6b11bab9bbf037fb",
+   "piece": "RS-S.S1",
+   "plan_lm": 0.8,
+   "retired_lm": null,
+   "returns_lm": 0.05,
+   "risers": 3,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 3.125,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-8dde910ffeeb94a58323",
+   "pair_line": "L-d980ace38bdd63fa8de4",
+   "piece": "RS-S.S2",
+   "plan_lm": 2.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 7,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:RS-S.S2",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 2.321429,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-d980ace38bdd63fa8de4",
+   "pair_line": "L-8dde910ffeeb94a58323",
+   "piece": "RS-S.S2",
+   "plan_lm": 2.0,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 7,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "UNKNOWN",
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "evidence_status": "UNKNOWN",
+   "family": "B7-07",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-1a0d2ab50e42b0219eab",
+   "pair_line": "L-1c082cc60442407ed517",
+   "piece": "RS-C.OUT",
+   "plan_lm": 4.515532,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "UNKNOWN",
+   "element_id": "STAIR-SKIRT:RS-C.OUT",
+   "evidence_status": "UNKNOWN",
+   "family": "B7-08",
+   "figure_beside_lm": null,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-1c082cc60442407ed517",
+   "pair_line": "L-1a0d2ab50e42b0219eab",
+   "piece": "RS-C.OUT",
+   "plan_lm": 4.515532,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 0,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:E1.S",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-07",
+   "figure_beside_lm": 2.05,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.ZIGZAG",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-add5acd610925402e0f5",
+   "pair_line": "L-b77a64fb9a941582f25c",
+   "piece": "E1.S",
+   "plan_lm": 1.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 5,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "ADD_FORM_PAIR",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": null,
+    "value": null
+   },
+   "closed_lm": null,
+   "cls": "WALL",
+   "element_id": "STAIR-SKIRT:E1.S",
+   "evidence_status": "HELD-FORM",
+   "family": "B7-08",
+   "figure_beside_lm": 1.470544,
+   "floor": "GF",
+   "item_code": "FIN.STAIR.SKIRTING.SLOPED",
+   "kind": "FLIGHT",
+   "landing_pieces": [],
+   "line_id": "L-b77a64fb9a941582f25c",
+   "pair_line": "L-add5acd610925402e0f5",
+   "piece": "E1.S",
+   "plan_lm": 1.2,
+   "retired_lm": null,
+   "returns_lm": 0.0,
+   "risers": 5,
+   "stretches": [],
+   "unit": "lm"
+  },
+  {
+   "action": "RETIRE_ROOM_STRETCHES",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 32.38536
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 41.43536
+   },
+   "closed_lm": null,
+   "cls": null,
+   "element_id": "1F-R78C367:skirting",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "kind": null,
+   "landing_pieces": [],
+   "line_id": "L-ba3599ec2dc82c221617",
+   "pair_line": null,
+   "piece": null,
+   "plan_lm": null,
+   "retired_lm": 9.05,
+   "returns_lm": null,
+   "risers": null,
+   "stretches": [
+    {
+     "carried_by": [
+      "MS1-LD.E",
+      "MS2-LD.E",
+      "D1.E",
+      "MS1-U.E1",
+      "MS2-U.E",
+      "MS1-U.E2",
+      "MS1-U.E3a"
+     ],
+     "lm": 4.15,
+     "segment": "L-ba3599ec E 0 .. 4.150"
+    },
+    {
+     "carried_by": [
+      "MS1-T.W",
+      "MS2-LD.W"
+     ],
+     "lm": 1.05,
+     "segment": "L-ba3599ec W AF0"
+    },
+    {
+     "carried_by": [
+      "MS1-L.W1B",
+      "MS2-L.W1B",
+      "MS1-L.W1C",
+      "MS2-L.W1C",
+      "MS1-L.W1",
+      "MS2-L.W1"
+     ],
+     "lm": 2.35,
+     "segment": "L-ba3599ec W AF1 2.250 .. 4.500"
+    },
+    {
+     "carried_by": [
+      "MS1-T.N",
+      "MS2-LD.NW",
+      "MS2-LD.NE",
+      "MS1-LD.N"
+     ],
+     "lm": 1.4,
+     "segment": "L-ba3599ec N ADE"
+    },
+    {
+     "carried_by": [
+      "MS1-LD.N",
+      "MS2-LD.NE2"
+     ],
+     "lm": 0.1,
+     "segment": "L-ba3599ec N ADD"
+    }
+   ],
+   "unit": "lm"
+  },
+  {
+   "action": "CLOSE_ROOM_RANGE",
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+    "value": null
+   },
+   "before": {
+    "high": 2.2,
+    "low": 0.0,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "closed_lm": 2.2,
+   "cls": null,
+   "element_id": "1F-R78C367:skirting, boundary role unresolved",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "family": null,
+   "figure_beside_lm": null,
+   "floor": "1F",
+   "item_code": "FIN.SKIRTING",
+   "kind": null,
+   "landing_pieces": [],
+   "line_id": "L-079bc7669b2c68d5d11b",
+   "pair_line": null,
+   "piece": null,
+   "plan_lm": null,
+   "retired_lm": null,
+   "returns_lm": null,
+   "risers": null,
+   "stretches": [
+    {
+     "carried_by": [
+      "MS1-T.W",
+      "MS2-LD.W13",
+      "MS1-L.W2",
+      "MS2-L.W2"
+     ],
+     "lm": null,
+     "segment": "L-ba3599ec W13 (range L-079bc766)"
+    },
+    {
+     "carried_by": [
+      "MS1-LD.N",
+      "MS2-LD.W25"
+     ],
+     "lm": null,
+     "segment": "L-ba3599ec W25 (range L-079bc766)"
+    }
+   ],
+   "unit": "lm"
+  }
+ ],
+ "summary": {
+  "by_action": {
+   "ADD_FORM_PAIR": 44,
+   "ADD_LANDING": 3,
+   "ADD_LANDING_HELD": 3,
+   "CLOSE_ROOM_RANGE": 1,
+   "RETIRE_ROOM_STRETCHES": 1
+  },
+  "closed_range_lm": 2.2,
+  "form": null,
+  "form_beside": {
+   "risers": 53,
+   "sloped_lm": 17.009049,
+   "wall_pieces": 13,
+   "zigzag_lm": 23.300481
+  },
+  "held_pieces": [
+   "MS1-L.W2 HELD",
+   "MS1-T.W HELD",
+   "MS1-T.N HELD",
+   "MS1-U.E2 HELD",
+   "MS1-U.E3b CONFLICT",
+   "MS2-L.W2 HELD",
+   "MS2-TR.N HELD",
+   "RS-S.S0 UNKNOWN",
+   "RS-C.OUT UNKNOWN"
+  ],
+  "landing_held": [
+   "MS1-LD.N",
+   "MS2-LD.W13",
+   "MS2-LD.W25"
+  ],
+  "landing_lm": 6.1,
+  "landings": {
+   "MS1-LD": 1.15,
+   "MS2-LD": 3.7,
+   "RS-LD": 1.25
+  },
+  "pairs": 22,
+  "retired_lm": 9.05,
+  "risers_by_flight": {
+   "D1": 0.175,
+   "E1": 0.17,
+   "MS1-L": 0.166667,
+   "MS1-U": 0.166667,
+   "MS2-L": 0.168,
+   "MS2-U": 0.168,
+   "RS-S": 0.160714
+  }
+ },
+ "task": "T-508",
+ "totals_moved_by_code": {
+  "FIN.SKIRTING|lm": {
+   "base": {
+    "blocked_lines": 4,
+    "bounded_lines": 1,
+    "held_high": 2.2,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 212.378592
+   },
+   "v3_0_56": {
+    "blocked_lines": 7,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 25,
+    "released": 209.428592
+   }
+  },
+  "FIN.STAIR.SKIRTING.SLOPED|lm": {
+   "base": null,
+   "v3_0_56": {
+    "blocked_lines": 22,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 0.0
+   }
+  },
+  "FIN.STAIR.SKIRTING.ZIGZAG|lm": {
+   "base": null,
+   "v3_0_56": {
+    "blocked_lines": 22,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 22,
+    "released": 0.0
+   }
+  }
+ }
+}
