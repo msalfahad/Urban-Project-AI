@@ -6,52 +6,52 @@
   "last_run": "2026-11-04T04:31:20Z",
   "result": "ok",
   "working_on": "Daily update 4 Nov 04:31 UTC (scheduler SUCCEEDED); next 5 Nov 04:31 UTC",
-  "as_of": "2026-11-04T12:19:00Z"
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-04T12:13:41Z",
+  "last_run": "2026-11-04T16:13:52Z",
   "result": "running",
-  "working_on": "Midday review: 5 merged since 08:19 (lintels into candidate V3.0.53); 10 Nov review threshold met; blockwork wiring, pool-court WP, stair skirting and disposal wiring queued",
-  "as_of": "2026-11-04T12:19:00Z"
+  "working_on": "Afternoon review: handrail runs into candidate V3.0.54 (merged), status vocabulary merged; wet-area WP rebase and stair skirting wiring next",
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-04T11:19:30Z",
-  "result": "running",
-  "working_on": "11:20 skirting / narrow-opening check (claimed 11:21); 09:21-09:43 stair skirting pieces (merged)",
-  "as_of": "2026-11-04T12:19:00Z"
+  "last_run": "2026-11-04T15:25:00Z",
+  "result": "ok",
+  "working_on": "15:25-15:34 status vocabulary (merged); 13:23-14:39 stair guardrail runs integration (merged, V3.0.54)",
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-04T10:39:31Z",
-  "result": "failed",
-  "working_on": "10:39 run stopped by the usage limit at 11:14 (wet-area WP rebase, nothing lost, back to TODO); 08:40-10:03 rebase pushed, final suite owed",
-  "as_of": "2026-11-04T12:19:00Z"
+  "last_run": "2026-11-04T14:40:49Z",
+  "result": "ok",
+  "working_on": "14:42-14:53 tile bed mortar table (READY for the Checker); wet-area WP rebase waits for V3.0.54 (now merged)",
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-04T10:59:34Z",
-  "result": "failed",
-  "working_on": "10:59 run stopped by the usage limit at 11:14 (status vocabulary, nothing pushed, back to TODO); 09:02-09:11 mortar reconciliation (merged)",
-  "as_of": "2026-11-04T12:19:00Z"
+  "last_run": "2026-11-04T14:59:54Z",
+  "result": "running",
+  "working_on": "15:02 blockwork wiring into the candidate (claimed 15:02, scheduler PENDING)",
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-04T11:50:47Z",
+  "last_run": "2026-11-04T15:49:16Z",
   "result": "ok",
-  "working_on": "11:52 nothing READY; 10:50-10:57 merged stair skirting pieces + mortar reconciliation; 08:51-10:04 merged pool-court WP, disposal loss terms, lintels (Gate B, V3.0.53)",
-  "as_of": "2026-11-04T12:19:00Z"
+  "working_on": "14:52-15:52 merged stair guardrail runs (Gate B, V3.0.54) and status vocabulary; tile bed mortar table left READY",
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-04T12:19:00Z"
+  "as_of": "2026-11-04T16:16:36Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
   "role": "Rewrites the dashboard data from the board",
   "cadence": "every 12 h at :54 (since 28 Oct 21:44)",
-  "last_run": "2026-11-04T00:55:03Z",
+  "last_run": "2026-11-04T12:55:18Z",
   "result": "ok",
-  "working_on": "Refresh 4 Nov 00:55 (scheduler SUCCEEDED); next 12:54 UTC",
-  "as_of": "2026-11-04T12:19:00Z"
+  "working_on": "Refresh 4 Nov 12:55 (scheduler SUCCEEDED); next 5 Nov 00:54 UTC",
+  "as_of": "2026-11-04T16:16:36Z"
  }
 ]
