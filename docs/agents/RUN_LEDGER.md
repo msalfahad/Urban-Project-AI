@@ -965,3 +965,72 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-03 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:35; T-457 READY (agents/task-T-457 @ 3eb1fd0f) / wet-wall 2nd fixing bed NOT reproduced: V1/V2 charge one 0.02 m 1 |
 | 11-03 04:04 | Verifier | SUCCESS | final 04:04 (single line); T-478 r3 MERGED 8ccf69b3 (Gate B PASS) / Drive read OK. T-478 r3: candidate of record ARCH_TAKEOFF_V3.0.45 597 |
 | 11-03 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:18; board / Since 00:16: 3 MERGED (T-478 r3 Gate B -> candidate V3.0.45, CONC.BLINDING split: 24 pits 12.734438 m3 |
+
+## 2026-11-03 04:31 -> 2026-11-04 04:31 UTC (64 runs: 57 SUCCESS, 3 IDLE (run lock correctly held), 3 INCOMPLETE (Worker 3 13:01 / 17:03 died with nothing pushed; Worker 2 02:41 self-reported, rebase pending, work pushed d92383f5), 1 still running; 0 BLOCKED / FAILED; no lost work or partial merge)
+
+| UTC | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-03 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 05:45; T-461 READY @ ffea331e / C6 registry housekeeping by new versions: URBAN_RULES 1.8.0 (UP-GEN-003 1.2.0 Q-73 A  |
+| 11-03 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:44; T-481 MERGED a8609a7a; T-457 MERGED 3d85bf39; T-479 MERGED c3cbeb99 (Gate B PASS) / Drive read OK. T-481: own  |
+| 11-03 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:31; T-350 r2 (READY, Gate A lane S piece, agents/task-T-350 @ 438f3b88) / Calculated earthworks (S01 ESTIMATED, fo |
+| 11-03 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 05:24; T-452 r2 READY (agents/task-T-452 @ c4a8fc54) / Gate 4b fix: tools/project_scoreboard.py classified TOOLING fo |
+| 11-03 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:48; T-350 r2 MERGED 42a99508; T-452 r2 MERGED ccd33796; T-461 MERGED 8d5612ce (engine 8d5612ce) / Drive read OK. T |
+| 11-03 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:57; T-453 part 1 READY @ cafdbb24 / Blockwork material ledger beside V3.0.45: black 0.20 blocks 1346.55 nr VERIFIE |
+| 11-03 06:51 | Verifier | SUCCESS | STARTED 06:51, final 06:52; none (no READY task on BOARD.md; T-453 CLAIMED by worker 2 since 06:41) / Nothing to check or merge; engine st |
+| 11-03 07:01 | Worker 3 | SUCCESS | STARTED 07:01, final 08:35; T-419 READY (Gate B integration package, f5611d04) / V3.0.46 on V3.0.45 5972888b (own Drive run, reproduced):  |
+| 11-03 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 08:24; T-443 READY (agents/task-T-443 @ 9b097b52, Gate B) / V3.0.46 stair-room skirting split on V3.0.45 5972888b ->  |
+| 11-03 07:51 | Verifier | SUCCESS | STARTED 07:51, final 07:59; T-453 part 1 REJECTED r1 (cafdbb24) -> TODO r2 / Drive read OK. Own ST7757 p.13 lintel schedule/detail and W14 |
+| 11-03 08:13 | Lead | SUCCESS | STARTED 08:13, final 08:19; board / Since 04:15: 6 MERGED (T-479 Gate B registry 1.41.0 0 outside / 0 double; T-481, T-457, T-350 r2 earth |
+| 11-03 08:41 | Worker 2 | SUCCESS | STARTED 08:41, final 08:48; T-453 r2 READY (agents/task-T-453 @ e4e9742c) / R-T453-5: block/glue/mortar now on material base = MAS.BLOCK n |
+| 11-03 08:50 | Verifier | SUCCESS | STARTED 08:50, final 09:36; T-419 MERGED af1eaeb4 (Gate B PASS); T-453 r2 MERGED b16f686b (Gate A PASS); T-443 READY, rebase needed (confl |
+| 11-03 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 10:48; T-485 READY (agents/task-T-485 @ b5eeca5f, registry, no candidate quantity) / Drive read OK. BOQ_FAMILY_MASTER |
+| 11-03 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 09:39; T-484 READY (agents/task-T-484 @ 2acbea7f) / Own DXF re-measure of the pits-backfill remainder (S01): necks 5. |
+| 11-03 09:51 | Verifier | SUCCESS | STARTED 09:51, final 09:58; T-484 MERGED 12395ea4 (Gate A PASS); T-443 still READY-REBASE NEEDED (worker 1 has not rebased on V3.0.46) / D |
+| 11-03 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 11:02; T-454 READY @ 96f1e17c / plaster materials V3.0.45: dry 236.3481 m2 x 0.020 (KSE ref, ESTIMATE) = 4.726962 m3; |
+| 11-03 10:51 | Verifier | SUCCESS | STARTED 10:51, final 11:21; T-485 MERGED f514f1a5 (Gate A PASS); T-443 still READY-REBASE NEEDED (not rebased on V3.0.46) / Drive read OK. |
+| 11-03 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:13; T-482 READY (agents/task-T-482 @ c7463b9b) / Blockwork wiring conditions: 2F storey 4.20 is the finished chain |
+| 11-03 11:20 | Worker 1 | SUCCESS | STARTED 11:20, final 12:25; T-443 r2 READY (agents/task-T-443 @ c165a8f3, Gate B) / Stair-room skirting split rebased as ARCH_TAKEOFF_V3.0 |
+| 11-03 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:02; T-482 MERGED 10e3afad, T-454 MERGED 1d311ee5 (both Gate A PASS, pushed @ 1d311ee5); T-443 still READY-REBASE N |
+| 11-03 12:14 | Lead | SUCCESS | STARTED 12:14, final 12:20; board / Since 08:17: 6 MERGED, 0 rejected (T-419 Gate B -> candidate V3.0.46 35d70129 +6 HELD lines, 4,856 ide |
+| 11-03 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 13:02; T-455 READY (agents/task-T-455 @ ce7b3b84) / FINISH_MATERIALS_TABLE_V4 (unwired): adhesive by tile size (UPC-A |
+| 11-03 12:52 | Verifier | SUCCESS | STARTED 12:52, final 13:33; T-443 r2 REJECTED (gate b only; not merged) / Drive read OK. L4 to the end on c165a8f3: 18,224 pass / 3 FAIL,  |
+| 11-03 13:01 | Worker 3 | INCOMPLETE | STARTED 13:01, no final line; confirmed by the Lead 16:19: T-350 r3 claim, nothing pushed, stale lock recovered 17:03, work redone in r4 (merged); no partial merge |
+| 11-03 13:22 | Worker 1 | SUCCESS | STARTED 13:22, final 13:33; T-490 READY (agents/task-T-490 @ 12297917) / B3-03 entrance/stair-hall stone floor: NOT_APPLICABLE on issued d |
+| 11-03 13:52 | Verifier | SUCCESS | STARTED 13:52, final 14:51; none (overlap guard: run session_01E6cPneR1jXT8Hzr63MkQCj active since 2026-11-03T13:52Z) / no check, no merge |
+| 11-03 14:41 | Worker 2 | SUCCESS | STARTED 14:41, final 14:53; T-489 READY (agents/task-T-489 @ d5af640c) / PLASTER_MATERIALS_TABLE_V2 (unwired): ratio x owner Q-53 C conver |
+| 11-03 15:00 | Worker 3 | IDLE | 15:00 run lock held by the previous run; IDLE line written, run ended |
+| 11-03 15:22 | Worker 1 | SUCCESS | STARTED 15:22, final 15:32; T-491 READY (agents/task-T-491 @ 027c5f06) / B1-01/B1-07 site preparation as components, research unwired: bou |
+| 11-03 15:50 | Verifier | IDLE | 15:50 run lock held by the previous run; IDLE line written, run ended |
+| 11-03 16:15 | Lead | SUCCESS | STARTED 16:15, final 16:19; board / Since 12:20: 0 merged, 1 rejected (T-443 r2 gate b: 3 test faults, engineering AGREE +13.550 lm) -> r3 |
+| 11-03 16:42 | Worker 2 | SUCCESS | STARTED 16:42, final 16:49; T-492 READY (agents/task-T-492 @ 28e88d95) / stale-pending guard now counts a package merged only once its tas |
+| 11-03 16:51 | Verifier | SUCCESS | STARTED 16:51, final 17:12; T-492, T-455, T-490, T-491, T-489 all MERGED (engine 3507b6aa) / Drive read OK (P7757.dxf own read). T-492 gua |
+| 11-03 17:03 | Worker 3 | INCOMPLETE | STARTED 17:03, no final line; confirmed by the Lead 20:24: T-350 r3 2nd dead claim, nothing pushed, stale lock recovered 21:01; no partial merge |
+| 11-03 17:25 | Worker 1 | SUCCESS | STARTED 17:25, final 18:09; T-443 r3 READY (agents/task-T-443 @ 92a38a14) / Gate B r2 faults fixed, engineering unchanged (stair-room skir |
+| 11-03 17:52 | Verifier | SUCCESS | STARTED 17:52, final 18:00; none (READY 0; T-443 r3 still CLAIMED at c165a8f3) / T-180 slot: CLOSABLE LINES re-checked against the 17:12 m |
+| 11-03 18:43 | Worker 2 | SUCCESS | STARTED 18:43, final 19:12; T-486 READY (agents/task-T-486 @ ccbe3aca) / B8-07 balcony/terrace WP census: adds 0 m2 on the dev villa (2F r |
+| 11-03 18:53 | Verifier | SUCCESS | STARTED 18:53, final 19:51; none (overlap guard: run session_01E6cPnc4vCV5hn8JXFvrHkg active since 2026-11-03T18:53Z, checker lock 2026110 |
+| 11-03 19:01 | Worker 3 | IDLE | 19:01 run lock held by the previous run; IDLE line written, run ended |
+| 11-03 19:23 | Worker 1 | SUCCESS | STARTED 19:23, final 19:23; none / No TODO row on the board (only QUEUED / PAUSED / CLAIMED / READY; T-350 CLAIMED by worker 3); nothing c |
+| 11-03 20:14 | Lead | SUCCESS | STARTED 20:14, final 20:24; board / Since 16:17: 6 merged all WORKED (T-492, T-455, T-490, T-491, T-489 PARTIAL on source, T-443 r3 Gate B |
+| 11-03 20:14 | Verifier | SUCCESS | final 20:14 (single line); T-443 r3 MERGED (engine c814c55d) / Gate B PASS: L4 to the end on 92a38a14 18,344 pass / 621 skip / 105 xfail  |
+| 11-03 20:43 | Worker 2 | SUCCESS | STARTED 20:43, final 21:06; T-493 READY @29ae2de4 / B7 landing census both stairs: 4 landings had no own line -> proposed B7-04 +10.5875 m |
+| 11-03 20:52 | Verifier | SUCCESS | STARTED 20:52, final 20:59; T-486 MERGED (engine e8ee22f0) / Gate A PASS (research, unwired): own re-measure from P7757.dxf of the pool-co |
+| 11-03 21:22 | Worker 1 | SUCCESS | STARTED 21:22, final 22:40; T-483 READY (agents/task-T-483 @ de8c2ca0) / Skirting remainder integrated as ARCH_TAKEOFF_V3.0.48 on V3.0.47  |
+| 11-03 21:52 | Verifier | SUCCESS | STARTED 21:52, final 22:03; T-493 MERGED (engine 2a02de31) / Gate A PASS (research, unwired): own re-measure from P7757.dxf of all 4 landi |
+| 11-03 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 22:48; T-495 READY (agents/task-T-495 a8504813) / Outdoor finish-HELD rows in tile ledger V2 + scope guard: porch 10. |
+| 11-03 22:52 | Verifier | SUCCESS | STARTED 22:52, final 23:50; none (overlap guard: run session_01E6cPnbakYT7DpoSWpJcC8D active since 2026-11-03T22:52Z) / no check, no merge |
+| 11-03 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:15; T-496 READY (agents/task-T-496 @ aae5c7be, non-candidate) / Materials binding map + check on V3.0.47: 1,202 bi |
+| 11-03 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 23:20; none / No claimable TODO row: the board holds 0 TODO rows (lane S rows T-382/T-487/T-488 are QUEUED for worker |
+| 11-03 23:54 | Verifier | SUCCESS | final 23:54 (single line); T-495 MERGED (ffc45638), T-350 r4 MERGED (engine 5de697ff); T-483 READY must rebase / T-495 Gate A PASS (own b |
+| 11-04 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:21; board / Since 20:18: 4 merged (T-486, T-493, T-495 WORKED; T-350 r4 PARTIAL -> candidate V3.0.48, excavation 2 |
+| 11-04 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 01:45; T-310 READY @8fe8f39a / ARCH_TAKEOFF_V3.0.49 on 33a81c53 -> f3fe14da (18 changed, 5 added, 4858 identical): 1F |
+| 11-04 00:52 | Verifier | SUCCESS | STARTED 00:52, final 01:13; T-496 MERGED (engine 83709c96) / Gate A PASS (research, unwired): own check of 1,202 bindings vs V3.0.46 index |
+| 11-04 00:59 | Worker 3 | SUCCESS | STARTED 00:59, final 02:46; T-497 READY (agents/task-T-497 @ 3e3a4da6, integration package V3.0.50 + master 1.47.0) / Ext GB trench restat |
+| 11-04 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:30; T-503 READY e8fab101 / B1-04 disposal as one dry-mass balance over the V3.0.48 lines (DISPOSAL_BALANCE_V1): di |
+| 11-04 01:52 | Verifier | SUCCESS | STARTED 01:52, final 02:23; T-503 MERGED (engine b6133032); T-310 REJECTED / T-503 Gate A PASS (research, unwired): own re-derivation E 23 |
+| 11-04 02:41 | Worker 2 | INCOMPLETE | STARTED 02:41, final 03:42; T-310 r2 / Gate fix pushed d92383f5 (base b6133032): V3.0.49 now runs the default guard at integration (arch_v |
+| 11-04 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:49; T-497 MERGED (engine 5f8814e8) / T-497 Gate B PASS: L4 to the end on 3e3a4da6, 1 fail t485 ['T-443','T-350b']  |
+| 11-04 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:38; T-499 READY 3ccf93d5 / FINISH_MATERIALS_TABLE_V5 (R-T499-1): a subtotal over any HELD row is HELD with the kno |
+| 11-04 03:21 | Worker 1 | OPEN | STARTED 03:21, still running at the window end |
+| 11-04 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-499 MERGED (engine 416392e8) / T-499 Gate A PASS (reporting rule, unwired): R-T499-1 HELD subtotal with AT_L |
+| 11-04 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:18; board / Since 00:20: 4 merged all WORKED (T-496, T-503, T-497 Gate B -> candidate V3.0.50 trench 1.069..1.176  |
