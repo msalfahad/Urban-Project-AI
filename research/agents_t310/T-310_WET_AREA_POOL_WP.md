@@ -135,3 +135,29 @@ the swapped-back view), WAITING from arch_v3050. Engineering content unchanged (
 - Full suite on f8e9e6fc ran to the end: 2 failed = t310 summary pin (summary regenerated after this run) + t485
   'T-443','T-350b','T-497' (identical on the working branch 416392e8: baseline, T-483 r2's gate fix); t310 folder,
   t212, t379, t459, t497 green on the final commit.
+
+## 9. Round 4 (worker 2, 2026-11-04 08:40 UTC): rebase only, ARCH_TAKEOFF_V3.0.52 on the merged V3.0.51
+
+T-483 r3 merged V3.0.51 / master 1.48.0 (ea7d375f) before this package (Lead merge order, both stream F). Rebased on
+ea7d375f so that a V3.0.52 run is a V3.0.51 run first. Engineering content unchanged (rules, records, values; the
+Checker's 02:23 hand checks stand by citation).
+- engine/source/arch_v3052.py: EXTENDS = arch_v3051.METHOD, WAITING from arch_v3051 (T483_1F_SHAFT, T483_W02_PIER
+  carried); integrate() now also runs arch_v3051.check_remainder on the V3.0.52 lines (without `before`: the V3.0.50
+  lines are not this version's input) and the V3.0.44 skirting check only on the lines V3.0.51 did not re-book (a
+  re-booked line carries the superseded V3.0.44 record, as arch_v3051 itself does).
+- Hub tools/urban_boq_m9.py: the one V3.0.50 line rewrites V3.0.52 -> V3.0.51 before the V3.0.51 test (line-stable),
+  "--v3052-inputs and --method go together", the stage nested after the V3.0.51 stage on l3051.
+- Master 1.49.0 = 1.48.0 + T-483 promoted (R-T485-1: merge ea7d375f + the Checker's 08:06 verdict head,
+  out/PROMOTIONS_SOURCE_1_49_0.json; line diff V3.0.50 -> V3.0.51 = B3-06 FIN.SKIRTING 5 changed,
+  out/T310_PACKAGE_FAMILIES.json; census at V3.0.51, out/LINE_INDEX_V3_0_51.json, inputs checked: the same tool on
+  V3_0_50 reproduces T-483's LINE_INDEX_V3_0_50.json byte for byte) + pending V3.0.52 + the B8 text; builder
+  build_master_1_49_0.py (the 1.48.0 method, version span only), problems []. B3-06 released 212.378592 lm in the census.
+- Drive run r4 (own decode, own T-167 run, chained to the end, research/agents_t310/v3052_run.py + --v3051-inputs):
+  V3_0_48 33a81c53 -> V3_0_50 d40c4ec5 -> V3_0_51 c0b6d664 (the candidate of record, asserted) -> V3_0_52 2a51ae59
+  (4881): 18 changed + 5 added, 4858 identical; ledger rows, totals moved by code and the wet_area_wp identity equal
+  r3 (asserted by t310_summary.py --previous); remainder check on the V3.0.52 lines: released 3.90984 lm, closed
+  9.621076 lm, walked 5.1 lm (T-483's own figures); default guard RUN over 4881 lines, no hold.
+- Tests: tests/t310_wet_area_wp/test_rebase_v3051.py (K483 villa of the T-483 tests: normal pass-through with the
+  V3.0.51 summary re-run; adverse: absorbed range naming no line refused by the V3.0.51 check, broken released line
+  refused, closed range given 0 refused), hub tests on V3.0.51, master tests on 1.48.0 -> 1.49.0, pins on c0b6d664 ->
+  2a51ae59.
