@@ -242,9 +242,10 @@ def _entry(x, srcs):
         _lid(x["line_id"], w)
         _door(x["door_id"], w)
     elif act == "ADD_HELD_DOOR":
-        _need(x, ("door_id", "rooms", "floor", "template_line", "held_items"), w)
+        _need(x, ("door_id", "rooms", "floor", "template_line", "doorway_line", "held_items"), w)
         _door(x["door_id"], w)
         _lid(x["template_line"], f"{w} template")
+        _lid(x["doorway_line"], f"{w} doorway line")
         if x.get("value") not in (None, "") or x.get("low") not in (None, ""):
             raise InputsError(f"{w}: HELD_WITH_VALUE: a held door line carries no figure")
     else:
@@ -274,7 +275,8 @@ def load_inputs(doc, project_id=None):
                   boundary_lm, door_widths_m, openings_not_deducted [{kind, id, sill_m}], value, evidence_status;
                   REVALUE_FLOOR line_id, before, gross_m2, deductions [{what, m2, evidence}], value, residual_risk;
                   NOT_APPLICABLE line_id, item_code, evidence (+ door_id, carried_by for a transition);
-                  KEY_DOOR line_id, door_id; ADD_HELD_DOOR door_id, rooms, floor, template_line, held_items;
+                  KEY_DOOR line_id, door_id; ADD_HELD_DOOR door_id, rooms, floor, template_line, doorway_line (the door's
+                  FIN.WP.DOORWAY line: room, floor and opening of the new line), held_items;
                   ADD_POOL_LAYER item_code, element_id, value, evidence_status, template_code, held_part {what, low,
                   high, cause}, faces, function_held}]}"""
     if not doc:
@@ -400,16 +402,22 @@ def _keyed(ln, e, srcs):
     return _fin(new)
 
 
-def _added_door(tpl, e, srcs):
+def _added_door(tpl, dw, e, srcs):
+    """a HELD BLANK transition line for a door with none: located at the door's own doorway line (room, floor and
+    opening of the candidate), its text and documents from a sibling transition line."""
     from engine.source import boq_line as BL
-    eid = f"WP-T310:{e['door_id']}:TRANSITION"
+    loc = dw["location"]
+    eid = str(loc.get("element_id") or "").replace(":doorway ", ":doorway transition ", 1)
+    if eid == loc.get("element_id"):
+        eid = f"{eid}:transition"
     why = f"door {e['door_id']} ({' / '.join(e['rooms'])}): {e['held_items']}"
     rec = _rec(P_DOOR, srcs, action="ADD_HELD_DOOR", door_id=e["door_id"], rooms=list(e["rooms"]),
-               held_items=e["held_items"], basis=e["basis"], evidence_status="HELD")
+               doorway_line=dw["line_id"], held_items=e["held_items"], basis=e["basis"], evidence_status="HELD")
     ln = BL.make_line(
         project_id=tpl["project"]["project_id"], revision_set_sha256=tpl["project"]["revision_set_sha256"],
         item_code=TRANS, unit=tpl["unit"], evidence_state=HELD_STATE, measured_net=None, gross=None,
-        element_id=eid, floor=e["floor"], room_id=e["rooms"][0],
+        element_id=eid, floor=loc.get("floor"), room_id=loc.get("room_id"), room_name_en=loc.get("room_name_en"),
+        room_name_ar=loc.get("room_name_ar"),
         physical_element=f"doorway transition of door {e['door_id']}",
         formula=f"{METHOD}: HELD (no figure) doorway transition of physical door {e['door_id']}: {e['basis']}"[:1500],
         inputs={REC_KEY: rec, "evidence_status": "HELD"}, documents=copy.deepcopy(tpl["source"]["documents"]),
@@ -516,7 +524,15 @@ def changes_for(doc, prev):
                 downstream=[f"{TRANS}: keyed to door {e['door_id']} (quantity unchanged)"])
         elif act == "ADD_HELD_DOOR":
             tpl = line(e["template_line"], TRANS, f"{w} template")
-            add(P_DOOR, act, _added_door(tpl, e, srcs), srcs=srcs, evidence_status="HELD",
+            dw = line(e["doorway_line"], "FIN.WP.DOORWAY", f"{w} doorway line")
+            if dw["location"].get("floor") != e["floor"]:
+                raise InputsError(f"{w}: doorway line {dw['line_id']} is on {dw['location'].get('floor')}, not {e['floor']}")
+            new = _added_door(tpl, dw, e, srcs)
+            twin = [ln["line_id"] for ln in prev if ln["item_code"] == TRANS and
+                    ln["location"].get("element_id") == new["location"]["element_id"]]
+            if twin:
+                raise InputsError(f"{w}: the door already has transition line {twin[0]} (key it, do not add)")
+            add(P_DOOR, act, new, srcs=srcs, evidence_status="HELD",
                 held=[{"what": f"{TRANS} {e['door_id']}", "why": str(e["held_items"])[:300], "range": None,
                        "scenario": None}],
                 downstream=[f"coverage: door {e['door_id']} now has its own transition line (held)"])

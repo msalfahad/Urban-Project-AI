@@ -238,10 +238,14 @@ def main(argv=None):
     for lid, (door, closure) in L49.DUPLICATES.items():
         if closure not in json.dumps(l48[lid]["location"]):
             raise SystemExit(f"{lid}: closure {closure} of door {door} not in its location (stale binding)")
-    for door, op in L49.MISSING_DOORS.items():
-        codes = {ln["item_code"] for ln in l48.values() if op in json.dumps(ln["location"])}
-        if "FIN.WP.DOORWAY" not in codes or "FIN.WP.DOORWAY_TRANSITION" in codes:
-            raise SystemExit(f"door {door} ({op}): doorway / transition lines {sorted(codes)} (stale binding)")
+    for door, (floor, op, dwl) in L49.MISSING_DOORS.items():   # opening ids are per floor
+        dw = l48[dwl]
+        codes = {ln["item_code"] for ln in l48.values() if ln["location"].get("floor") == floor
+                 and ln["location"].get("room_id") == dw["location"]["room_id"]
+                 and str(ln["location"].get("element_id") or "").endswith(f" {op}")}
+        if dw["item_code"] != "FIN.WP.DOORWAY" or dw["location"].get("floor") != floor or \
+                not str(dw["location"]["element_id"]).endswith(f" {op}") or "FIN.WP.DOORWAY_TRANSITION" in codes:
+            raise SystemExit(f"door {door} ({floor} {op}): doorway / transition lines {sorted(codes)} (stale binding)")
     for r in json.loads((d / "V3_0_49_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))["rows"]:
         print("row", r["action"], r["line_id"], r["item_code"], r.get("room_id"), r.get("element_id"), "|",
               A302q(r["before_base"]), "->", A302q(r["after_v3_0_49"]))

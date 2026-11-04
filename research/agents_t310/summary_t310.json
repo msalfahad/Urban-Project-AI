@@ -1,0 +1,431 @@
+{
+ "task": "T-310",
+ "method": "ARCH_TAKEOFF_V3.0.49",
+ "base_candidate": {
+  "file": "V3_0_48_BOQ_LINES.json",
+  "sha256_8": "33a81c53",
+  "lines": 4876
+ },
+ "new_candidate": {
+  "file": "V3_0_49_BOQ_LINES.json",
+  "sha256_8": "f3fe14da",
+  "lines": 4881
+ },
+ "identity": {
+  "replaced": 18,
+  "added": 5,
+  "outside_rows": 4858,
+  "outside_rows_identical_to_base": 4858,
+  "outside_rows_sha256": "ccaf8f54d2218bf1f6ea0cba4ad9dc19ddf82652cccc8bdd26b5f553170625c2",
+  "wet_area_wp": {
+   "added_held_doors": 3,
+   "doors": {
+    "D-1F-01": "L-aed6f48195f99648c3f3",
+    "D-1F-04": "L-07b084a5187a64634108",
+    "D-1F-05": "L-689197a4778b786de143",
+    "D-1F-06": "L-bec3b3df8ec830a46447",
+    "D-1F-07": "L-19f6405a5e60a99c29f7",
+    "D-1F-10": "L-dfc4e74604047cb21407",
+    "D-2F-03": "L-b5a04e7c058346b6f734",
+    "D-GF-02": "L-1c36054a8cadc0726e65",
+    "D-GF-04": "L-b4a23dc5fc953bc5a163",
+    "D-GF-05": "L-b46013c737051e5441fe",
+    "D-GF-10": "L-77a630d7e60ca6c404ba",
+    "D-GF-11": "L-19908ce0b9a2bcadff80",
+    "D-GF-12": "L-65194e5d4497f0882024",
+    "D-GF-14": "L-20400ca6dc38abb30c33"
+   },
+   "keyed_doors": 11,
+   "not_applicable": 5,
+   "pool_lines": 2,
+   "revalued": 2
+  },
+  "diff": {
+   "vs_base": {
+    "ADDED": 5,
+    "CHANGED": 18,
+    "SAME": 4858
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3289,
+    "QUANTITY_DIFFERS": 998,
+    "SAME_QUANTITY": 594
+   }
+  }
+ },
+ "rows": [
+  {
+   "action": "REVALUE_UPTURN",
+   "line_id": "L-60f100105399a9bdfb08",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "floor": "1F",
+   "room_id": "1F-R48CDA5",
+   "element_id": "1F-R48CDA5:wp_wall_upturn",
+   "unit": "m2",
+   "base": "1.48",
+   "v3_0_49": "1.58",
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "NOT_APPLICABLE",
+   "line_id": "L-0a7238edb9989d99d37a",
+   "item_code": "FIN.WP.TERMINATION",
+   "floor": "1F",
+   "room_id": "1F-R48CDA5",
+   "element_id": "1F-R48CDA5:termination glazing D2:3126:0",
+   "unit": "lm",
+   "base": "0..0.4",
+   "v3_0_49": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "evidence_status": "NOT_APPLICABLE"
+  },
+  {
+   "action": "NOT_APPLICABLE",
+   "line_id": "L-1ef59757a75524c397d7",
+   "item_code": "FIN.WP.TERMINATION",
+   "floor": "1F",
+   "room_id": "1F-R48CDA5",
+   "element_id": "1F-R48CDA5:termination glazing D2:3123:0",
+   "unit": "lm",
+   "base": "0..0.05",
+   "v3_0_49": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "evidence_status": "NOT_APPLICABLE"
+  },
+  {
+   "action": "NOT_APPLICABLE",
+   "line_id": "L-8fb80f626889e06f6f97",
+   "item_code": "FIN.WP.TERMINATION",
+   "floor": "1F",
+   "room_id": "1F-R48CDA5",
+   "element_id": "1F-R48CDA5:termination glazing D2:3133:0",
+   "unit": "lm",
+   "base": "0..0.05",
+   "v3_0_49": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "evidence_status": "NOT_APPLICABLE"
+  },
+  {
+   "action": "REVALUE_FLOOR",
+   "line_id": "L-f32abcdb3b4db6877c64",
+   "item_code": "FIN.WP.FLOOR",
+   "floor": "GF",
+   "room_id": "GF-RC99C2A",
+   "element_id": "GF-RC99C2A:wp_floor:wet_zone",
+   "unit": "m2",
+   "base": "13.5",
+   "v3_0_49": "13.455",
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-aed6f48195f99648c3f3",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-R48AA46",
+   "element_id": "1F-R48AA46:doorway transition OP-004",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-07b084a5187a64634108",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-R8BDA49",
+   "element_id": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-689197a4778b786de143",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-R26FA0D",
+   "element_id": "1F-R26FA0D:doorway transition OP-008",
+   "unit": "m2",
+   "base": "0..0.18",
+   "v3_0_49": "0..0.18",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-19f6405a5e60a99c29f7",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-RED23B8",
+   "element_id": "1F-RED23B8:doorway transition OP-019",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-dfc4e74604047cb21407",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-R48CDA5",
+   "element_id": "1F-R48CDA5:doorway transition OP-018",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-b5a04e7c058346b6f734",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "2F",
+   "room_id": "2F-RE83BED",
+   "element_id": "2F-RE83BED:doorway transition OP-006",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-1c36054a8cadc0726e65",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RB62B55",
+   "element_id": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-b4a23dc5fc953bc5a163",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RFAD3C4",
+   "element_id": "GF-RFAD3C4:doorway transition OP-026",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-b46013c737051e5441fe",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RA3AD49",
+   "element_id": "GF-RA3AD49:doorway transition OP-025",
+   "unit": "m2",
+   "base": "0..0.2",
+   "v3_0_49": "0..0.2",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-77a630d7e60ca6c404ba",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RD36087",
+   "element_id": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "unit": "m2",
+   "base": "0..0.159408",
+   "v3_0_49": "0..0.159408",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "KEY_DOOR",
+   "line_id": "L-20400ca6dc38abb30c33",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RD6F891",
+   "element_id": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "0..0.16",
+   "evidence_status": "RECORD_ONLY"
+  },
+  {
+   "action": "NOT_APPLICABLE",
+   "line_id": "L-b60811f60f8fdc9a4447",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-R8496F0",
+   "element_id": "GF-R8496F0:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "unit": "m2",
+   "base": "0..0.16",
+   "v3_0_49": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "evidence_status": "NOT_APPLICABLE"
+  },
+  {
+   "action": "NOT_APPLICABLE",
+   "line_id": "L-e0c34550b13267b4e0f7",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RDF7D28",
+   "element_id": "GF-RDF7D28:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "unit": "m2",
+   "base": "0..0.159408",
+   "v3_0_49": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "evidence_status": "NOT_APPLICABLE"
+  },
+  {
+   "action": "ADD_HELD_DOOR",
+   "line_id": "L-bec3b3df8ec830a46447",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "1F",
+   "room_id": "1F-R26FA0D",
+   "element_id": "1F-R26FA0D:doorway transition OP-010",
+   "unit": "m2",
+   "base": "",
+   "v3_0_49": "BLOCKED_RFI",
+   "evidence_status": "HELD"
+  },
+  {
+   "action": "ADD_HELD_DOOR",
+   "line_id": "L-19908ce0b9a2bcadff80",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RF38DAF",
+   "element_id": "GF-RF38DAF:doorway transition OP-017",
+   "unit": "m2",
+   "base": "",
+   "v3_0_49": "BLOCKED_RFI",
+   "evidence_status": "HELD"
+  },
+  {
+   "action": "ADD_HELD_DOOR",
+   "line_id": "L-65194e5d4497f0882024",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "floor": "GF",
+   "room_id": "GF-RB28769",
+   "element_id": "GF-RB28769:doorway transition OP-018",
+   "unit": "m2",
+   "base": "",
+   "v3_0_49": "BLOCKED_RFI",
+   "evidence_status": "HELD"
+  },
+  {
+   "action": "ADD_POOL_LAYER",
+   "line_id": "L-176f88e2269b71bd1a6f",
+   "item_code": "WP.POOL.MEMBRANE",
+   "floor": "GF",
+   "room_id": null,
+   "element_id": "WP-T310:POOL-1:MEMBRANE",
+   "unit": "m2",
+   "base": "",
+   "v3_0_49": "29.5824",
+   "evidence_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "action": "ADD_POOL_LAYER",
+   "line_id": "L-335ae7ca24030b8e9be4",
+   "item_code": "WP.POOL.PROTECTION_SCREED",
+   "floor": "GF",
+   "room_id": null,
+   "element_id": "WP-T310:POOL-1:PROTECTION_SCREED",
+   "unit": "m3",
+   "base": "",
+   "v3_0_49": "1.5245",
+   "evidence_status": "DRAWING-CONFIRMED"
+  }
+ ],
+ "totals_moved_by_code": {
+  "FIN.WP.DOORWAY_TRANSITION|m2": {
+   "base": {
+    "blocked_lines": 0,
+    "bounded_lines": 13,
+    "held_high": 2.138816,
+    "held_low": 0.0,
+    "lines": 13,
+    "released": 0.0
+   },
+   "v3_0_49": {
+    "blocked_lines": 3,
+    "bounded_lines": 11,
+    "held_high": 1.819408,
+    "held_low": 0.0,
+    "lines": 14,
+    "released": 0.0
+   }
+  },
+  "FIN.WP.FLOOR|m2": {
+   "base": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 85.62071
+   },
+   "v3_0_49": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 85.57571
+   }
+  },
+  "FIN.WP.TERMINATION|lm": {
+   "base": {
+    "blocked_lines": 0,
+    "bounded_lines": 7,
+    "held_high": 3.660363,
+    "held_low": 0.0,
+    "lines": 7,
+    "released": 0.0
+   },
+   "v3_0_49": {
+    "blocked_lines": 0,
+    "bounded_lines": 4,
+    "held_high": 3.160363,
+    "held_low": 0.0,
+    "lines": 4,
+    "released": 0.0
+   }
+  },
+  "FIN.WP.WALL_UPTURN|m2": {
+   "base": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 25.114585
+   },
+   "v3_0_49": {
+    "blocked_lines": 1,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 18,
+    "released": 25.214585
+   }
+  },
+  "WP.POOL.MEMBRANE|m2": {
+   "base": null,
+   "v3_0_49": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 29.582355
+   }
+  },
+  "WP.POOL.PROTECTION_SCREED|m3": {
+   "base": null,
+   "v3_0_49": {
+    "blocked_lines": 0,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 1,
+    "released": 1.524503
+   }
+  }
+ },
+ "drawings": "Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run research/agents_t310/v3049_run.py --t167 (own T-167 run this session)"
+}

@@ -50,6 +50,7 @@ LINES = [
     _ln("FIN.WP.DOORWAY_TRANSITION", "B1:D1", "BOUNDED_EXPOSURE", rng=B, room="B1"),
     _ln("FIN.WP.DOORWAY_TRANSITION", "B2:D2", "BOUNDED_EXPOSURE", rng=B, room="B2"),
     _ln("FIN.WP.DOORWAY_TRANSITION", "B3:D2", "BOUNDED_EXPOSURE", rng=B, room="B3"),
+    _ln("FIN.WP.DOORWAY", "B4:doorway D3", "SOURCE_DERIVED", 0.16, room="B4"),
     _ln("WP.FOUNDATION.FOOTING_MEMBRANE", "F1:MEMBRANE", "SOURCE_DERIVED", 20.0),
     _ln("FIN.FLOOR.CERAMIC", "B1:FLOOR", "SOURCE_DERIVED", 6.0, room="B1"),
 ]
@@ -77,7 +78,8 @@ def entries():
          "door_id": "D-GF-02", "carried_by": ID["B2:D2"], "evidence": "second side", "basis": "inv",
          "source_tasks": ["T-A"]},
         {"action": "ADD_HELD_DOOR", "door_id": "D-GF-03", "rooms": ["B4"], "floor": "GF",
-         "template_line": ID["B1:D1"], "held_items": "detail not printed", "basis": "inv", "source_tasks": ["T-A"]},
+         "template_line": ID["B1:D1"], "doorway_line": ID["B4:doorway D3"], "held_items": "detail not printed",
+         "basis": "inv", "source_tasks": ["T-A"]},
         {"action": "ADD_POOL_LAYER", "item_code": "WP.POOL.MEMBRANE", "unit": "m2", "element_id": "P1:MEMBRANE",
          "value": 12.0, "evidence_status": "DRAWING-CONFIRMED", "template_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
          "faces": [{"face": "BASE_UNDERSIDE"}, {"face": "OUTER_WALLS"}],
@@ -125,7 +127,7 @@ def test_hand_values():
     assert t["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" and t["bounded_range"] is None
     dup = _by(out, "B3:D2")
     assert dup["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" and ID["B2:D2"] in dup["notes"]
-    held = _by(out, "WP-T310:D-GF-03:TRANSITION")
+    held = _by(out, "B4:doorway transition D3")
     assert held["evidence_state"] == "BLOCKED_RFI" and held["measured_net"] is None and held["bounded_range"] is None
     mem, scr = _by(out, "P1:MEMBRANE"), _by(out, "P1:SCREED")
     assert (mem["unit"], mem["measured_net"], scr["unit"], scr["measured_net"]) == ("m2", 12.0, "m3", 0.6)
@@ -137,7 +139,7 @@ def test_one_transition_per_door_and_check():
     prev, ch, out = _new()
     s = A.check_wet_area_wp(out, prev)
     assert s["doors"] == {"D-GF-01": ID["B1:D1"], "D-GF-02": ID["B2:D2"],
-                          "D-GF-03": _by(out, "WP-T310:D-GF-03:TRANSITION")["line_id"]}
+                          "D-GF-03": _by(out, "B4:doorway transition D3")["line_id"]}
     assert (s["revalued"], s["not_applicable"], s["keyed_doors"], s["added_held_doors"], s["pool_lines"]) == \
         (2, 2, 2, 1, 2)
 
@@ -189,6 +191,15 @@ def test_held_door_with_value_refused():
     _refused(lambda e: e[6].update(value=0.16), "HELD_WITH_VALUE")
 
 
+def test_held_door_on_wrong_floor_or_with_a_twin_refused():
+    _refused(lambda e: e[6].update(floor="1F"), "is on GF, not 1F")
+    e = entries()
+    prev = copy.deepcopy(LINES) + [_ln("FIN.WP.DOORWAY_TRANSITION", "B4:doorway transition D3", "BOUNDED_EXPOSURE",
+                                       rng=B, room="B4")]
+    with pytest.raises(A.InputsError, match="already has transition line"):
+        run(doc(e), prev)
+
+
 def test_door_keyed_twice_refused():
     _refused(lambda e: e[6].update(door_id="D-GF-01"), "two transition lines")
 
@@ -232,7 +243,7 @@ def test_applied_twice_refused():
 def test_held_door_line_never_zero_in_check():
     prev, ch, out = _new()
     bad = copy.deepcopy(out)
-    h = _by(bad, "WP-T310:D-GF-03:TRANSITION")
+    h = _by(bad, "B4:doorway transition D3")
     h["evidence_state"], h["measured_net"] = "SOURCE_DERIVED", 0.0
     with pytest.raises(ValueError, match="HELD BLANK"):
         A.check_wet_area_wp(bad, prev)
@@ -250,7 +261,7 @@ def test_record_on_another_code_refused_in_check():
 def test_integrate_identity_and_totals(tmp_path):
     prev, ch, log = run()
     out, ident = A.integrate(prev, ch)
-    assert (ident["replaced"], ident["added"], ident["outside_rows"]) == (8 - 2, 3, 2)
+    assert (ident["replaced"], ident["added"], ident["outside_rows"]) == (6, 3, 3)
     names, ident2, led = A.write(tmp_path, prev, ch, log)
     assert "V3_0_49_BOQ_LINES.json" in names and led["released_default"] is False
     import json

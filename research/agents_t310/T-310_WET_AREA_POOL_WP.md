@@ -73,3 +73,14 @@ missed by an entity-in-window search (the outline's body lay outside the box) | 
 entities INSIDE a region misses an outline that only overlaps it | test a region against every outline by polygon
 intersection area, never by insertion point or centroid (every villa: columns, shafts, ducts in wet rooms and floor
 zones) | tests/t310_wet_area_wp (floor less column) | PROPOSED.
+
+## 6. Run on the drawings (this session)
+
+research/agents_t310/v3049_run.py on the Drive copies (own decode; own T-167 run): V3_0_48_BOQ_LINES.json = candidate
+of record 33a81c53 (asserted), 4876 lines -> V3_0_49_BOQ_LINES.json f3fe14da, 4881 lines: 18 changed + 5 added, 4858
+byte-identical. Bindings asserted on the candidate: the two duplicates carry closures D2:495 / D2:825; the three
+missing doors' doorway lines (GF OP-017, GF OP-018, 1F OP-010; opening ids are per floor) have no transition line.
+Totals moved (waterproofing codes only): FIN.WP.WALL_UPTURN 25.114585 -> 25.214585 m2 (+0.100, +0.40 %);
+FIN.WP.FLOOR 85.62071 -> 85.57571 m2 (-0.045, -0.05 %); FIN.WP.DOORWAY_TRANSITION 13 bounded (high 2.138816) -> 11
+bounded (high 1.819408) + 3 HELD BLANK; FIN.WP.TERMINATION 7 bounded (high 3.660363) -> 4 (high 3.160363);
+WP.POOL.MEMBRANE + 29.582355 m2; WP.POOL.PROTECTION_SCREED + 1.524503 m3. Per-line rows: summary_t310.json.

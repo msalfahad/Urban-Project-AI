@@ -69,7 +69,9 @@ PANTRY_LINE, PANTRY_BEFORE = "L-f32abcdb3b4db6877c64", 13.5
 # duplicate transition lines (0 inventory elements in T-303) -> the door the Checker named by closure; the binding
 # is asserted against the candidate line's own element id in research/agents_t310/v3049_run.py (closure in the id)
 DUPLICATES = {"L-b60811f60f8fdc9a4447": ("D-GF-02", "D2:495"), "L-e0c34550b13267b4e0f7": ("D-GF-10", "D2:825")}
-MISSING_DOORS = {"D-GF-11": "OP-017", "D-GF-12": "OP-018", "D-1F-06": "OP-010"}   # Checker's candidate ids
+# Checker's candidate opening ids (per floor) and the candidate's doorway line of each (bound in v3049_run.py)
+MISSING_DOORS = {"D-GF-11": ("GF", "OP-017", "L-e3ffb8005f85e89113cb"), "D-GF-12": ("GF", "OP-018", "L-9cbc8b1b9ebf6e79df66"),
+                 "D-1F-06": ("1F", "OP-010", "L-bdf48c327992229649ca")}
 TEMPLATE_TRANSITION = "L-aed6f48195f99648c3f3"
 POOL_TEMPLATE_CODE = "WP.FOUNDATION.FOOTING_MEMBRANE"   # a membrane line whose documents / trade the pool lines share
 POOL_CODE = {"WP.POOL_TANK.POOL_MEMBRANE": "WP.POOL.MEMBRANE",
@@ -144,12 +146,13 @@ def build(project_id):
                      "basis": "T-303 verdict (e)(2): the same door booked from both room sides",
                      "evidence": f"second transition line of door {door} (closure {closure}, booked from the other "
                                  f"room side); 0 inventory elements"})
-    for door, cand in sorted(MISSING_DOORS.items()):
+    for door, (floor, cand, doorway) in sorted(MISSING_DOORS.items()):
         r = trans[door]
-        if r["status"] != "MISSING":
-            raise SystemExit(f"T-303 inventory: door {door} is not MISSING")
+        if r["status"] != "MISSING" or r["floor"] != floor:
+            raise SystemExit(f"T-303 inventory: door {door} is not MISSING on {floor}")
         ents.append({"action": "ADD_HELD_DOOR", "door_id": door, "rooms": r["owner"].split("|"), "floor": r["floor"],
-                     "candidate_opening": cand, "template_line": TEMPLATE_TRANSITION, "source_tasks": ["T-303"],
+                     "candidate_opening": cand, "template_line": TEMPLATE_TRANSITION, "doorway_line": doorway,
+                     "source_tasks": ["T-303"],
                      "basis": f"T-303 inventory: door {door} (candidate opening {cand}) has a doorway line and no "
                               f"transition (Checker own count)",
                      "held_items": "transition detail not printed (T-303); width x depth as the sibling doorway "
