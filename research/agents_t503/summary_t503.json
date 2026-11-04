@@ -1,0 +1,314 @@
+{
+ "candidate": {
+  "lines_sha256": "33a81c5387dc5c306086867da32415892e164a60a6a42893dc040e2d64f963ce",
+  "method": "ARCH_TAKEOFF_V3.0.48"
+ },
+ "conservation": [],
+ "disposal_insitu_m3": {
+  "high": {
+   "missing": [],
+   "qualifier": "AT_LEAST",
+   "scenario": "suitable share 0 (excavation high, fill low)",
+   "status": "ESTIMATED",
+   "value": 234.333083
+  },
+  "low": {
+   "missing": [
+    "in-situ dry density (MEASURED, e.g. field density test of the excavated soil)",
+    "placement target dry density of the fill (its own field and source)",
+    "suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile)",
+    "fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f L-91abe286a34e874e8ab2 L-6471367d85bdf361f9e7 L-eac006402d3035da007b (each can draw site soil)",
+    "excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde"
+   ],
+   "qualifier": "HELD",
+   "scenario": "suitable share 1 (excavation low, fill high)",
+   "status": "HELD",
+   "value": null
+  }
+ },
+ "disposal_line": "L-78d7c8a989ab34527a1c",
+ "disposal_loose_m3": {
+  "high": null,
+  "low": null,
+  "missing": [
+   "MEASURED bulking of the spoil (loose / in-situ)"
+  ]
+ },
+ "excavation": {
+  "held_lines": [
+   "L-4445d5e20d1805f12402",
+   "L-b4ebff00041d90e03eca",
+   "L-54baa058d6ccd9a38314",
+   "L-313384fed48301ae02d2",
+   "L-d9185fb243fd3b7130e9",
+   "L-438a4abd3adc0475d0bd",
+   "L-b97f95d2784d456e0743",
+   "L-952a18b10db99c4eb1d3",
+   "L-a5844c9318406eccedde"
+  ],
+  "held_parts": [
+   "L-ce0132c7212e42e306a5: STR.EARTH.EXCAVATION Z1-PIT-F10F (open outline 1B1B): beyond the plot line per scenario HELD; working space",
+   "L-cf8ffcdaacd0159b7e29: STR.EARTH.EXCAVATION Z1-PITS-24 (24 neat footing pits): working space HELD (not printed, no documented method; pits vs bulk dig OQ-13); beyond the plot line 3.1563 HELD (S06 / D-14); pit chains under the pool formati",
+   "L-0a49a302b7926f86a37f: STR.EARTH.EXCAVATION Z1-POOL (pool envelope to the printed -1.50): blinding projection beyond the membrane line, working space, envelope beyond the plot line 0.5486 HELD"
+  ],
+  "high": 234.333083,
+  "lines": [
+   "L-4445d5e20d1805f12402",
+   "L-ce0132c7212e42e306a5",
+   "L-b4ebff00041d90e03eca",
+   "L-cf8ffcdaacd0159b7e29",
+   "L-0a49a302b7926f86a37f",
+   "L-54baa058d6ccd9a38314",
+   "L-313384fed48301ae02d2",
+   "L-d9185fb243fd3b7130e9",
+   "L-438a4abd3adc0475d0bd",
+   "L-b97f95d2784d456e0743",
+   "L-952a18b10db99c4eb1d3",
+   "L-a5844c9318406eccedde"
+  ],
+  "low": 233.205833,
+  "open": true,
+  "status": "ESTIMATED"
+ },
+ "fill_demand": {
+  "held_lines": [
+   "L-89b8e6beaea55fc0e4c9",
+   "L-afa1a6f9e01eb47c56e4",
+   "L-2b8f1ae2ec46cd74552f",
+   "L-91abe286a34e874e8ab2",
+   "L-6471367d85bdf361f9e7",
+   "L-eac006402d3035da007b"
+  ],
+  "held_parts": [
+   "L-a6af7c610a8adce59df3: STR.EARTH.BACKFILL Z1-PITS-24: C8 mark conflict (drawing conflict, stays): 0.03 m3; D-33 / D-35 beam sections (designer items, stay): 8.650212 m3; working space HELD; pits beyond the plot lin"
+  ],
+  "high": 128.643547,
+  "lines": [
+   "L-89b8e6beaea55fc0e4c9",
+   "L-afa1a6f9e01eb47c56e4",
+   "L-2b8f1ae2ec46cd74552f",
+   "L-a6af7c610a8adce59df3",
+   "L-91abe286a34e874e8ab2",
+   "L-6471367d85bdf361f9e7",
+   "L-eac006402d3035da007b"
+  ],
+  "low": 119.963335,
+  "open": true,
+  "status": "PARTIALLY VERIFIED"
+ },
+ "import_compacted_m3": {
+  "high": {
+   "missing": [],
+   "qualifier": "AT_LEAST",
+   "scenario": "suitable share 0 (fill high, excavation low)",
+   "status": "ESTIMATED",
+   "value": 128.643547
+  },
+  "low": {
+   "missing": [
+    "in-situ dry density (MEASURED, e.g. field density test of the excavated soil)",
+    "placement target dry density of the fill (its own field and source)",
+    "suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile)",
+    "fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f L-91abe286a34e874e8ab2 L-6471367d85bdf361f9e7 L-eac006402d3035da007b (each can draw site soil)",
+    "excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde"
+   ],
+   "qualifier": "HELD",
+   "scenario": "suitable share 1 (fill low, excavation high)",
+   "status": "HELD",
+   "value": null
+  }
+ },
+ "import_material": {
+  "high": {
+   "dry_t": null,
+   "loose_m3": null,
+   "missing": [
+    "excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde"
+   ]
+  },
+  "low": {
+   "dry_t": null,
+   "loose_m3": null,
+   "missing": [
+    "in-situ dry density (MEASURED, e.g. field density test of the excavated soil)",
+    "placement target dry density of the fill (its own field and source)",
+    "suitable share of the excavated soil (geotechnical classification against the fill specification; bound 0 .. 1 meanwhile)",
+    "fill demand of the HELD fill lines L-89b8e6beaea55fc0e4c9 L-afa1a6f9e01eb47c56e4 L-2b8f1ae2ec46cd74552f L-91abe286a34e874e8ab2 L-6471367d85bdf361f9e7 L-eac006402d3035da007b (each can draw site soil)",
+    "excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde",
+    "excavation of the HELD lines L-4445d5e20d1805f12402 L-b4ebff00041d90e03eca L-54baa058d6ccd9a38314 L-313384fed48301ae02d2 L-d9185fb243fd3b7130e9 L-438a4abd3adc0475d0bd L-b97f95d2784d456e0743 L-952a18b10db99c4eb1d3 L-a5844c9318406eccedde"
+   ]
+  }
+ },
+ "k_insitu_per_compacted": null,
+ "method": "DISPOSAL_BALANCE_V1",
+ "payable": {
+  "basis": "IN_SITU",
+  "basis_source": "contract silent: in situ",
+  "high": 234.333083,
+  "low": null
+ },
+ "rule": "R-T503-1 1.0.0",
+ "single_number": false,
+ "state": "HELD_RANGE",
+ "suitable_share": {
+  "evidence": false,
+  "high": 1.0,
+  "low": 0.0,
+  "source": "no geotechnical evidence: bound 0 .. 1",
+  "status": "HELD"
+ },
+ "terms": [
+  {
+   "high": null,
+   "line_id": "L-4445d5e20d1805f12402",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-LOWER-GB-ROW"
+  },
+  {
+   "high": 8.39175,
+   "line_id": "L-ce0132c7212e42e306a5",
+   "low": 7.2645,
+   "role": "EXCAVATION_INSITU",
+   "status": "ESTIMATED",
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "high": null,
+   "line_id": "L-b4ebff00041d90e03eca",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "high": 208.164757,
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "low": 208.164757,
+   "role": "EXCAVATION_INSITU",
+   "status": "ESTIMATED",
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "high": 17.776576,
+   "line_id": "L-0a49a302b7926f86a37f",
+   "low": 17.776576,
+   "role": "EXCAVATION_INSITU",
+   "status": "DRAWING-CONFIRMED",
+   "zone": "Z1-POOL"
+  },
+  {
+   "high": null,
+   "line_id": "L-54baa058d6ccd9a38314",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-ANNEX"
+  },
+  {
+   "high": null,
+   "line_id": "L-313384fed48301ae02d2",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-BOUNDARY"
+  },
+  {
+   "high": null,
+   "line_id": "L-d9185fb243fd3b7130e9",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-COURT"
+  },
+  {
+   "high": null,
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "high": null,
+   "line_id": "L-b97f95d2784d456e0743",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-INT-GB-MAIN-D33"
+  },
+  {
+   "high": null,
+   "line_id": "L-952a18b10db99c4eb1d3",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-INT-GB-MAIN-ZERO"
+  },
+  {
+   "high": null,
+   "line_id": "L-a5844c9318406eccedde",
+   "low": null,
+   "role": "EXCAVATION_INSITU",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-STRAPS"
+  },
+  {
+   "high": null,
+   "line_id": "L-89b8e6beaea55fc0e4c9",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z1-OTHER-TRENCHES"
+  },
+  {
+   "high": null,
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "high": null,
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "high": 128.643547,
+   "line_id": "L-a6af7c610a8adce59df3",
+   "low": 119.963335,
+   "role": "FILL_COMPACTED",
+   "status": "PARTIALLY VERIFIED 6 / 8",
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "high": null,
+   "line_id": "L-91abe286a34e874e8ab2",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z1-POOL"
+  },
+  {
+   "high": null,
+   "line_id": "L-6471367d85bdf361f9e7",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "high": null,
+   "line_id": "L-eac006402d3035da007b",
+   "low": null,
+   "role": "FILL_COMPACTED",
+   "status": "HELD",
+   "zone": "Z2"
+  }
+ ]
+}
