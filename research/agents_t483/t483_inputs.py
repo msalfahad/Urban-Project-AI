@@ -1,8 +1,8 @@
-"""T-483: URBAN_V3048_INPUTS_V1 for the development villa: the Checker-verified T-481 census (merged a8609a7a;
+"""T-483: URBAN_V3049_INPUTS_V1 for the development villa: the Checker-verified T-481 census (merged a8609a7a;
 Verifier 2026-11-03T05:44Z own re-measure AGREE on W17 / W11 / W02 / the 1F dressing) re-booked as the skirting
-remainder of ARCH_TAKEOFF_V3.0.48. Nothing here is measured anew: every sill, edge, stretch, handle and opening id is
+remainder of ARCH_TAKEOFF_V3.0.49. Nothing here is measured anew: every sill, edge, stretch, handle and opening id is
 the merged T-481 table (research/agents_t481/t481_alsenan.py SILLS / LINES / DRESSING / SHAFT / L_LIVING). Line ids
-and expected states are the candidate of record's (V3.0.47 e86a53a8; bound and checked at load: a stale id stops the
+and expected states are the candidate of record's (V3.0.48 33a81c53, whose FIN.SKIRTING lines are V3.0.47 e86a53a8's byte-identical; bound and checked at load: a stale id stops the
 run).
 
     from t483_inputs import build; build(project_id)
@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "agents_t481"))
 import t481_alsenan as T481  # noqa: E402
 
-SCHEMA = "URBAN_V3048_INPUTS_V1"
+SCHEMA = "URBAN_V3049_INPUTS_V1"
 SOURCES = [
     {"task": "T-481", "file": "research/agents_t481/LINES_T481.csv",
      "sha256": "9be4c4070bec20643186fe2af0912611bbfc7983f687c3ee8c8c54005497833d", "merge_commit": "a8609a7a",

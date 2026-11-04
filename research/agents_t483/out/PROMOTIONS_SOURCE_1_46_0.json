@@ -1,0 +1,16 @@
+[
+ {
+  "task": "T-443",
+  "merge_commit": "c814c55dcd3d8796812b9be44342fb423e8c0639",
+  "verdict_time": "2026-11-03 20:12 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-03T20:12Z per date -u, run session_01E6cPnc4vCV5hn8JXFvrHkg: GATE B PASS on 92a38a14, engine merge c814c55d (on 3507b6aa, no conflict; merge tree = task tree, 0 diff)"
+ },
+ {
+  "task": "T-350b",
+  "merge_commit": "5de697ff8c5f44e7c91be82d1441e60cee246125",
+  "verdict_time": "2026-11-03 23:54 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED r4 5de697ff (Verifier 2026-11-03T23:54Z per date -u, run session_01E6cPnbakYT7DpoSWpJcC8D: GATE B PASS with ONE LINE HELD-DEFECTIVE)"
+ }
+]

@@ -1,4 +1,4 @@
-"""T-483: ARCH_TAKEOFF_V3.0.48 (skirting remainder: sill release, range close, cell walk) on a hand-calculated
+"""T-483: ARCH_TAKEOFF_V3.0.49 (skirting remainder: sill release, range close, cell walk) on a hand-calculated
 NON-Alsenan villa (K483).
 
 Villa K483, by hand (own figures; nothing from the development villa):
@@ -34,7 +34,7 @@ sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v30 as A30  # noqa: E402
 from engine.source import arch_v304 as A304  # noqa: E402
-from engine.source import arch_v3048 as A  # noqa: E402
+from engine.source import arch_v3049 as A  # noqa: E402
 from engine.source import boq_line as BL  # noqa: E402
 
 PID, REV = "villa-k483", "d" * 64
@@ -213,8 +213,8 @@ def test_files_written(tmp_path):
     d = A.load_inputs(inputs(old), PID)
     ch, log = A.changes_for(d, old)
     names, ident, led = A.write(tmp_path, old, ch, log)
-    assert "V3_0_48_BOQ_LINES.json" in names
-    run_doc = json.loads((tmp_path / "V3_0_48_RUN.json").read_text(encoding="utf-8"))
+    assert "V3_0_49_BOQ_LINES.json" in names
+    run_doc = json.loads((tmp_path / "V3_0_49_RUN.json").read_text(encoding="utf-8"))
     assert run_doc["released_default"] is False and "T483_1F_SHAFT" in run_doc["waiting_pieces"]
     assert "T443_1F_SHAFT" not in run_doc["waiting_pieces"]
 
