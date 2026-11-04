@@ -33,7 +33,7 @@ from __future__ import annotations
 
 POLICY_ID = "WATERPROOFING_POLICY_V2_UPTURN_020_NO_DOOR_DEDUCTION"
 SUPERSEDES = "WATERPROOFING_POLICY_V1 (engine/source/waterproofing_policy.py)"
-DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"   # T-212: a quantity producer wired into no released or candidate method yet
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-310 r2: wired via V3 into V3.0.57 (guard re-check)
 ROOF_UPTURN_M = 0.20
 MEASURED, HELD, NOT_BILLED = "MEASURED", "HELD", "NOT_BILLED"
 COVERAGE_INSIDE_PIECE, SEPARATE_RETURN = "COVERAGE_INSIDE_PIECE", "SEPARATE_RETURN"

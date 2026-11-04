@@ -56,6 +56,7 @@ from engine.source import opening_census as OC
 from engine.source import opening_gaps as OG
 
 POLICY = "BAND_GAP_CLASSES_V1"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"  # T-212 / T-512: opening deduction m2 + net wall area; imported by no method or CLI
 RULES = ("Q-73", "UP-WALL-GEOM-001", "UP-REF-COLUMN-001", "UP-SKIRT-001", "UP-QTY-STATUS-001", "R-T460-1", "R-T510-1")
 ENGINE_MIN_GAP_M = 0.50        # the released band path's minimum (lintel_measure / robust_geometry openings default)
 FLOOR_M = 0.002                # numerical floor: twice the 1 mm cover merge tolerance (T-460)
