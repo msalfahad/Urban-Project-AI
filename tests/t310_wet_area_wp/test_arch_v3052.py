@@ -1,4 +1,4 @@
-"""T-310: ARCH_TAKEOFF_V3.0.49 (wet-area waterproofing fixes + pool layer lines) on the hand-calculated NON-Alsenan
+"""T-310: ARCH_TAKEOFF_V3.0.52 (wet-area waterproofing fixes + pool layer lines) on the hand-calculated NON-Alsenan
 villa W310 (own figures, no drawing):
 
   Bath B1 3.00 x 2.00 m, one door 0.80 m (wall 0.20), one window W1 0.60 m wide, sill 1.10 m: boundary 10.000 lm incl.
@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v30 as A30  # noqa: E402
-from engine.source import arch_v3049 as A  # noqa: E402
+from engine.source import arch_v3052 as A  # noqa: E402
 from engine.source import boq_line as BL  # noqa: E402
 
 PID, REV = "W310-SYNTHETIC", "f" * 64
@@ -254,7 +254,7 @@ def test_record_on_another_code_refused_in_check():
     bad = copy.deepcopy(out)
     x = _by(bad, "B1:FLOOR")
     x["calculation"]["inputs"][A.REC_KEY] = {"action": "KEY_DOOR"}
-    with pytest.raises(ValueError, match="V3.0.49 record on FIN.FLOOR.CERAMIC"):
+    with pytest.raises(ValueError, match="V3.0.52 record on FIN.FLOOR.CERAMIC"):
         A.check_wet_area_wp(bad, prev)
 
 
@@ -263,7 +263,7 @@ def test_integrate_identity_and_totals(tmp_path):
     out, ident = A.integrate(prev, ch)
     assert (ident["replaced"], ident["added"], ident["outside_rows"]) == (6, 3, 3)
     names, ident2, led = A.write(tmp_path, prev, ch, log)
-    assert "V3_0_49_BOQ_LINES.json" in names and led["released_default"] is False
+    assert "V3_0_52_BOQ_LINES.json" in names and led["released_default"] is False
     import json
-    moved = json.loads((tmp_path / "V3_0_49_RUN.json").read_text(encoding="utf-8"))["totals_moved_by_code"]
+    moved = json.loads((tmp_path / "V3_0_52_RUN.json").read_text(encoding="utf-8"))["totals_moved_by_code"]
     assert {k.split("|")[0] for k in moved} <= set(A.WP_CODES)

@@ -1,8 +1,8 @@
-"""T-310 read-only run: ARCH_TAKEOFF_V3.0.49 (the WET-AREA / POOL WATERPROOFING package, on the merged V3.0.48 of
+"""T-310 read-only run: ARCH_TAKEOFF_V3.0.52 (the WET-AREA / POOL WATERPROOFING package, on the merged V3.0.48 of
 T-350 r4, merge 5de697ff). Derived from research/agents_t350r4/v3048_run.py (T-350 r4, below), its inputs unchanged,
-plus --v3049-inputs (t310_inputs.py: the merged T-303 / T-309 / T-286 pieces, sha-pinned):
+plus --v3052-inputs (t310_inputs.py: the merged T-303 / T-309 / T-286 pieces, sha-pinned):
 
-    .work/venv/bin/python -I research/agents_t310/v3049_run.py <plan.dxf> <structural.dxf> --out <private>/t310 \
+    .work/venv/bin/python -I research/agents_t310/v3052_run.py <plan.dxf> <structural.dxf> --out <private>/t310 \
         --t167 <dir of a finished research/agents_t167/v304_run.py run on the same drawings>
 
 The V3_0_48_BOQ_LINES.json of this run must be the candidate of record 33a81c53 (asserted).
@@ -209,25 +209,25 @@ def main(argv=None):
         "--v3042-inputs", str(out / "v3042_inputs.json"), "--v3043-inputs", str(out / "v3043_inputs.json"),
         "--v3044-inputs", str(out / "v3044_inputs.json"), "--v3045-inputs", str(out / "v3045_inputs.json"),
         "--v3046-inputs", str(out / "v3046_inputs.json"), "--v3047-inputs", str(out / "v3047_inputs.json"),
-        "--v3048-inputs", str(out / "v3048_inputs.json"), "--v3049-inputs", str(out / "v3049_inputs.json")]
+        "--v3048-inputs", str(out / "v3048_inputs.json"), "--v3052-inputs", str(out / "v3052_inputs.json")]
     (out / "v3046_inputs.json").write_text(json.dumps(L46.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     (out / "v3047_inputs.json").write_text(json.dumps(L47.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     (out / "v3048_inputs.json").write_text(json.dumps(L48.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
-    (out / "v3049_inputs.json").write_text(json.dumps(L49.build(T131.PID), ensure_ascii=False, indent=1),
+    (out / "v3052_inputs.json").write_text(json.dumps(L49.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
-    M.main(["arch", "--out", str(out / "v3049"), "--method", "ARCH_TAKEOFF_V3.0.49"] + common + extra)
-    d = out / "v3049"
+    M.main(["arch", "--out", str(out / "v3052"), "--method", "ARCH_TAKEOFF_V3.0.52"] + common + extra)
+    d = out / "v3052"
     base = hashlib.sha256((d / "V3_0_48_BOQ_LINES.json").read_bytes()).hexdigest()
-    new = hashlib.sha256((d / "V3_0_49_BOQ_LINES.json").read_bytes()).hexdigest()
+    new = hashlib.sha256((d / "V3_0_52_BOQ_LINES.json").read_bytes()).hexdigest()
     if not base.startswith(BASE_SHA):
         raise SystemExit(f"base candidate {base[:8]} is not {BASE_SHA} (not the candidate of record)")
-    run = json.loads((d / "V3_0_49_RUN.json").read_text(encoding="utf-8"))
+    run = json.loads((d / "V3_0_52_RUN.json").read_text(encoding="utf-8"))
     ident = run["identity"]
-    print("base: V3_0_48", base[:8], "lines", ident["base_lines"], "-> V3_0_49_BOQ_LINES.json", new[:8], "lines",
-          ident["v3_0_49_lines"])
+    print("base: V3_0_48", base[:8], "lines", ident["base_lines"], "-> V3_0_52_BOQ_LINES.json", new[:8], "lines",
+          ident["v3_0_52_lines"])
     print("identity:", json.dumps({k: ident[k] for k in ("replaced", "added", "outside_rows",
                                                           "outside_rows_identical_to_base", "wet_area_wp", "diff")},
                                   sort_keys=True))
@@ -246,9 +246,9 @@ def main(argv=None):
         if dw["item_code"] != "FIN.WP.DOORWAY" or dw["location"].get("floor") != floor or \
                 not str(dw["location"]["element_id"]).endswith(f" {op}") or "FIN.WP.DOORWAY_TRANSITION" in codes:
             raise SystemExit(f"door {door} ({floor} {op}): doorway / transition lines {sorted(codes)} (stale binding)")
-    for r in json.loads((d / "V3_0_49_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))["rows"]:
+    for r in json.loads((d / "V3_0_52_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))["rows"]:
         print("row", r["action"], r["line_id"], r["item_code"], r.get("room_id"), r.get("element_id"), "|",
-              A302q(r["before_base"]), "->", A302q(r["after_v3_0_49"]))
+              A302q(r["before_base"]), "->", A302q(r["after_v3_0_52"]))
     return 0
 
 

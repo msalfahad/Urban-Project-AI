@@ -1,5 +1,5 @@
-"""T-310: the development villa's V3.0.49 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
-committed run summary (research/agents_t310/summary_t310.json, from research/agents_t310/v3049_run.py on the Drive
+"""T-310: the development villa's V3.0.52 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
+committed run summary (research/agents_t310/summary_t310.json, from research/agents_t310/v3052_run.py on the Drive
 copies; no drawing needed here). Development villa, regression only: never an accuracy claim."""
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "research" / "agents_t310"))
 
 import t310_inputs as T  # noqa: E402
-from engine.source import arch_v3049 as A  # noqa: E402
+from engine.source import arch_v3052 as A  # noqa: E402
 
 S = json.loads((ROOT / "research/agents_t310/summary_t310.json").read_text(encoding="utf-8"))
 
@@ -39,9 +39,9 @@ def test_run_summary_pins():
     assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4858)
     t = S["totals_moved_by_code"]
     assert {k.split("|")[0] for k in t} <= set(A.WP_CODES)
-    assert t["FIN.WP.WALL_UPTURN|m2"]["v3_0_49"]["released"] - t["FIN.WP.WALL_UPTURN|m2"]["base"]["released"] == \
+    assert t["FIN.WP.WALL_UPTURN|m2"]["v3_0_52"]["released"] - t["FIN.WP.WALL_UPTURN|m2"]["base"]["released"] == \
         pytest.approx(0.100)
-    assert t["FIN.WP.FLOOR|m2"]["v3_0_49"]["released"] - t["FIN.WP.FLOOR|m2"]["base"]["released"] == \
+    assert t["FIN.WP.FLOOR|m2"]["v3_0_52"]["released"] - t["FIN.WP.FLOOR|m2"]["base"]["released"] == \
         pytest.approx(-0.045)
-    assert t["FIN.WP.DOORWAY_TRANSITION|m2"]["v3_0_49"]["blocked_lines"] == 3
+    assert t["FIN.WP.DOORWAY_TRANSITION|m2"]["v3_0_52"]["blocked_lines"] == 3
     assert len(i["wet_area_wp"]["doors"]) == 14

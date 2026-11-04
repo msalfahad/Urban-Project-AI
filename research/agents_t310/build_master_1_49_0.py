@@ -1,7 +1,8 @@
-"""T-310: build rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json = 1.45.0 (never edited) + the pending ARCH_TAKEOFF_V3.0.49
-package (tools/family_master_candidate.py rule r3) + the waterproofing families whose lines V3.0.49 changes or adds.
+"""T-310: build rules/coverage/BOQ_FAMILY_MASTER_1.49.0.json = 1.47.0 (never edited; T-310 r3 rebase on the
+merged V3.0.50 / 1.47.0 of T-497; 1.48.0 is T-483 r2's, parallel) + the pending ARCH_TAKEOFF_V3.0.52
+package (tools/family_master_candidate.py rule r3) + the waterproofing families whose lines V3.0.52 changes or adds.
 
-    python3 -I research/agents_t310/build_master_1_46_0.py --task-commit <sha> | --check
+    python3 -I research/agents_t310/build_master_1_49_0.py --task-commit <sha> | --check
 
 Families: B8-01 (pantry floor), B8-02 (transitions keyed per door, duplicates NA, missing doors HELD), B8-03 (east
 bath upturn run, window terminations NA) evidence / opt-in reader / missing / note text; B8-09 owns the two new pool
@@ -23,13 +24,13 @@ sys.path.insert(0, str(ROOT))
 
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.45.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.46.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.47.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.49.0.json"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
-MOD = "engine/source/arch_v3049.py"
-TST = "tests/t310_wet_area_wp/test_arch_v3049.py"
+MOD = "engine/source/arch_v3052.py"
+TST = "tests/t310_wet_area_wp/test_arch_v3052.py"
 PENDING = {
-    "task": "T-310", "method_version": "ARCH_TAKEOFF_V3.0.49", "module": MOD,
+    "task": "T-310", "method_version": "ARCH_TAKEOFF_V3.0.52", "module": MOD,
     "status": FMC.PENDING_STATUS, "integrates": ["T-303", "T-309", "T-286", "T-458"],
     "tests": ["tests/t310_wet_area_wp"],
     "changes_families_by_item_code": ["FIN.WP.WALL_UPTURN", "FIN.WP.FLOOR", "FIN.WP.TERMINATION",
@@ -40,20 +41,20 @@ PENDING = {
             "from the drawing); 11 transition lines keyed per physical door, 2 duplicates NOT APPLICABLE, 3 missing "
             "doors added HELD BLANK; pool membrane 29.582355 m2 and protection screed 1.524503 m3 added "
             "DRAWING-CONFIRMED (upstand 0 .. 1.349668 m2 / 0 .. 0.068072 m3 and the membrane function HELD beside); "
-            "every other V3.0.48 line byte-identical; the Gate B integration package",
+            "every other V3.0.50 line byte-identical; the Gate B integration package",
 }
-PROPOSED = ("1.46.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.49 package (Gate B); the released capability "
+PROPOSED = ("1.49.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.52 package (Gate B); the released capability "
             "of V2.9 + route G is unchanged")
-OPT_IN = "ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-310)"
+OPT_IN = "ARCH_TAKEOFF_V3.0.52 (engine/source/arch_v3052.py, opt-in candidate; pending Gate B, T-310)"
 MISS = {
-    "B8-01": ("in the opt-in candidate V3.0.49: pantry floor membrane 13.455 m2 (box 13.500 - column 0.045, "
+    "B8-01": ("in the opt-in candidate V3.0.52: pantry floor membrane 13.455 m2 (box 13.500 - column 0.045, "
               "DRAWING-CONFIRMED; flush-column reading +0.045 named); penetrations still HELD"),
-    "B8-02": ("in the opt-in candidate V3.0.49: one transition line per physical door (11 keyed, 2 duplicates NOT "
+    "B8-02": ("in the opt-in candidate V3.0.52: one transition line per physical door (11 keyed, 2 duplicates NOT "
               "APPLICABLE, 3 missing doors HELD BLANK); every transition figure HELD / bounded (detail not printed); "
               "the pantry door's threshold / transition MISSING (binding piece)"),
-    "B8-03": ("in the opt-in candidate V3.0.49: 1F east bath upturn 1.580 m2 (run by policy V3; doorway segments HELD "
+    "B8-03": ("in the opt-in candidate V3.0.52: 1F east bath upturn 1.580 m2 (run by policy V3; doorway segments HELD "
               "beside); 3 window termination lines NOT APPLICABLE; the pantry open-side termination MISSING"),
-    "B8-09": ("in the opt-in candidate V3.0.49: pool membrane 29.582355 m2 and protection screed 1.524503 m3 on the "
+    "B8-09": ("in the opt-in candidate V3.0.52: pool membrane 29.582355 m2 and protection screed 1.524503 m3 on the "
               "base and outer wall faces (DRAWING-CONFIRMED); upstand faces HELD (C9), membrane function HELD (S8.2); "
               "no water-side waterproofing is printed"),
 }
@@ -70,11 +71,12 @@ def _at(path, pattern):
 def build(task_commit):
     old = json.loads(OLD.read_text(encoding="utf-8"))
     new = copy.deepcopy(old)
-    new["version"] = "1.46.0"
-    new["supersedes"] = ("1.45.0 (kept unchanged on disk; every family except B8-01 / B8-02 / B8-03 / B8-09, every "
-                         "released-configuration field, the candidate census, every candidate block and the promotion "
-                         "record copied unchanged)")
-    new["source"] = (str(old.get("source", "")) + " | 1.46.0 (T-310): 1.45.0 + pending ARCH_TAKEOFF_V3.0.49 (rule "
+    new["version"] = "1.49.0"
+    new["supersedes"] = ("1.47.0 (kept unchanged on disk; every family except B8-01 / B8-02 / B8-03 / B8-09, every "
+                         "released-configuration field, the candidate census, every candidate block, the promotion "
+                         "record and the earlier pending entries copied unchanged; 1.48.0 is T-483 r2's, built in "
+                         "parallel)")
+    new["source"] = (str(old.get("source", "")) + " | 1.49.0 (T-310): 1.47.0 + pending ARCH_TAKEOFF_V3.0.52 (rule "
                      "r3) + the waterproofing families it changes; B8-09 owns the two pool layer codes; no candidate "
                      "state changes")
     new["pending_packages"] = list(old.get("pending_packages") or []) + [dict(PENDING, task_commit=task_commit)]
@@ -93,9 +95,9 @@ def build(task_commit):
         f["note"] = str(f.get("note") or "") + " | " + PROPOSED
     f = fams["B8-09"]
     if f["item_codes"]:
-        raise SystemExit("B8-09: owns item codes in 1.45.0 (expected none)")
+        raise SystemExit("B8-09: owns item codes in 1.47.0 (expected none)")
     f["item_codes"] = list(POOL_CODES)
-    f["note"] = str(f["note"]) + (" | 1.46.0 (T-310): owns WP.POOL.MEMBRANE (m2) and WP.POOL.PROTECTION_SCREED (m3), "
+    f["note"] = str(f["note"]) + (" | 1.49.0 (T-310): owns WP.POOL.MEMBRANE (m2) and WP.POOL.PROTECTION_SCREED (m3), "
                                   "the printed outer protective layers of the pool (ELEMENT_REGISTER: their own "
                                   "family, never B8-08 or the concrete line); the family's water-side waterproofing "
                                   "is not printed for the development villa")
@@ -112,10 +114,10 @@ def main(argv):
         tc = cur["pending_packages"][-1]["task_commit"]
         ok = NEW.read_text(encoding="utf-8") == text(build(tc))
         bad = FMC.check(cur, root=ROOT, is_ancestor=FMC.git_is_ancestor)
-        print("1.46.0 equals its builder:", ok, "| problems:", bad)
+        print("1.49.0 equals its builder:", ok, "| problems:", bad)
         return 0 if ok and not bad else 1
     if not TASK_COMMIT:
-        print("--task-commit <40-hex sha of the commit that adds engine/source/arch_v3049.py> is required")
+        print("--task-commit <40-hex sha of the commit that adds engine/source/arch_v3052.py> is required")
         return 2
     NEW.write_text(text(build(TASK_COMMIT)), encoding="utf-8")
     print("written", NEW.relative_to(ROOT))

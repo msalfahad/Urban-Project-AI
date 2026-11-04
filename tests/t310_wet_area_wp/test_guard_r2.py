@@ -1,7 +1,7 @@
-"""T-310 r2: ARCH_TAKEOFF_V3.0.49 wires the quantity producer waterproofing policy V3 (and through it V2), so the
+"""T-310 r2: ARCH_TAKEOFF_V3.0.52 wires the quantity producer waterproofing policy V3 (and through it V2), so the
 default guard runs AT integration (T-212 P2 / P4): the stage is a GUARD_HOST that re-runs the merged V3.0.6 guard
-(arch_v307.guard_changes) over the V3.0.48 lines with its changes + its added lines; the two policy modules leave the
-UNWIRED_PRODUCER class. Synthetic NON-Alsenan villa W310 of test_arch_v3049 (its figures, no drawing).
+(arch_v307.guard_changes) over the V3.0.50 lines with its changes + its added lines; the two policy modules leave the
+UNWIRED_PRODUCER class. Synthetic NON-Alsenan villa W310 of test_arch_v3052 (its figures, no drawing).
 
 Normal: no guard block -> NO_PROJECT_INPUT in the log, the changes unchanged; a guard block with a drawn inventory that
 every line carries -> RUN, no finding, the same changes byte for byte; every added line names its register element.
@@ -25,11 +25,11 @@ sys.path.insert(0, str(ROOT / "research" / "agents_t202"))
 
 import guard_property as GP                                    # noqa: E402
 import guard_sweep as GS                                       # noqa: E402
-import test_arch_v3049 as W                                    # noqa: E402
+import test_arch_v3052 as W                                    # noqa: E402
 from engine.source import arch_v307 as A307                    # noqa: E402
-from engine.source import arch_v3049 as A                      # noqa: E402
+from engine.source import arch_v3052 as A                      # noqa: E402
 
-V3049 = "engine/source/arch_v3049.py"
+V3052 = "engine/source/arch_v3052.py"
 WP2, WP3 = "engine/source/waterproofing_policy_v2.py", "engine/source/waterproofing_policy_v3.py"
 
 
@@ -106,18 +106,18 @@ def test_adverse_malformed_guard_is_refused_at_load():
 def test_guard_classes_on_the_live_tree():
     src = GP.live_sources()
     tab = GP.table()
-    assert GP.classify(V3049, src[V3049], tab) == (GS.GUARD_HOST, "declared in module")
+    assert GP.classify(V3052, src[V3052], tab) == (GS.GUARD_HOST, "declared in module")
     for m in (WP2, WP3):
         assert GP.classify(m, src[m], tab) == (GS.GUARDED_VIA_V306, "declared in module")
-    rep, problems = GP.check(src, [("A", V3049), ("A", WP3), ("M", WP2)], tab)
-    assert rep["guard_hosts"][V3049] is True
-    assert not [p for p in problems if "waterproofing_policy" in p or V3049 in p]
+    rep, problems = GP.check(src, [("A", V3052), ("A", WP3), ("M", WP2)], tab)
+    assert rep["guard_hosts"][V3052] is True
+    assert not [p for p in problems if "waterproofing_policy" in p or V3052 in p]
 
 
 def test_adverse_candidate_importing_a_producer_still_unwired_is_refused():
     src = GP.live_sources()
-    tree = {V3049: src[V3049], WP3: src[WP3].replace('"GUARDED_VIA_V3.0.6"', '"UNWIRED_PRODUCER"', 1),
+    tree = {V3052: src[V3052], WP3: src[WP3].replace('"GUARDED_VIA_V3.0.6"', '"UNWIRED_PRODUCER"', 1),
             WP2: src[WP2]}
-    _r, problems = GP.check(tree, [("A", V3049), ("A", WP3)], {})
-    assert any(p.startswith(f"{V3049} (a candidate or released method) reaches the unwired producer {WP3}")
+    _r, problems = GP.check(tree, [("A", V3052), ("A", WP3)], {})
+    assert any(p.startswith(f"{V3052} (a candidate or released method) reaches the unwired producer {WP3}")
                for p in problems)
