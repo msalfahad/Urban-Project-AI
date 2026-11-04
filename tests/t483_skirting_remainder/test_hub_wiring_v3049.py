@@ -64,3 +64,12 @@ def test_hub_chains_v3049_after_v3048():
 def test_integrate_checks_earthworks_with_the_v3048_check():
     src = (ROOT / "engine/source/arch_v3049.py").read_text(encoding="utf-8")
     assert '"earthworks": A3048.check_earthworks(out)' in src and "A3043.check_earthworks" not in src
+
+
+def test_hub_flag_survives_the_v213_rewrite():
+    """adverse (as T-350 r4): the hub rewrites a.method to V2.13 before the stages run, so the V3.0.49 stage is gated by
+    a flag computed beforehand, never by a.method; a V3.0.49 run sets the V3.0.48 flag too"""
+    hub = (ROOT / "tools/urban_boq_m9.py").read_text(encoding="utf-8")
+    assert "a.method == V3049:" not in hub and "if v3049:" in hub
+    assert "v3049 = a.method == V3049  " in hub and "v3048 = v3048 or v3049" in hub
+    assert hub.index("v3048 = v3048 or v3049") < hub.index('if getattr(a, "v3048_inputs", None) and not v3048:')
