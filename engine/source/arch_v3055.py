@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.52 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.51
-(engine.source.arch_v30, arch_v301 .. arch_v3048, arch_v3050, arch_v3051), extended with the WET-AREA WATERPROOFING fixes of the
+"""ARCH_TAKEOFF_V3.0.55 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.54
+(engine.source.arch_v30, arch_v301 .. arch_v3048, arch_v3050, arch_v3051, arch_v3053, arch_v3054), extended with the WET-AREA WATERPROOFING fixes of the
 Checker-verified T-303 inventory (merge 1d3f69b0) and the POOL MEMBRANE / SCREED lines of T-309 (merge 834ada3e) in
 ONE step:
 
@@ -30,14 +30,14 @@ waterproofing codes moves.
 
 DEFAULT GUARD (T-310 r2, T-212 P2 / P4): this stage wires the quantity producer waterproofing policy V3 (and through it
 V2) into the candidate, so the merged default guard runs AT integration over the result (arch_v307.guard_changes, the
-V3.0.6 guard re-check, over the V3.0.51 lines with this version's changes + the lines it adds): a guard finding on a
+V3.0.6 guard re-check, over the V3.0.54 lines with this version's changes + the lines it adds): a guard finding on a
 line this version changes or adds refuses the run, and so does a finding on any other line (this version moves nothing
 outside its waterproofing codes; that line belongs to an earlier stage). With no "guard" block in the inputs the guard
 is NOT run and only the run log says so (state NO_PROJECT_INPUT), the same limit as arch_v306 / arch_v307.
 
-Nothing else moves: every V3.0.51 line not named by the inputs is byte-identical (asserted); totals move only in the
-waterproofing codes (asserted). Files: V3_0_52_BOQ_LINES.json / .csv, V3_0_52_INTEGRATION_LEDGER.json / .csv,
-V3_0_52_DIFF.csv, V3_0_52_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
+Nothing else moves: every V3.0.54 line not named by the inputs is byte-identical (asserted); totals move only in the
+waterproofing codes (asserted). Files: V3_0_55_BOQ_LINES.json / .csv, V3_0_55_INTEGRATION_LEDGER.json / .csv,
+V3_0_55_DIFF.csv, V3_0_55_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
 from __future__ import annotations
@@ -71,21 +71,23 @@ from engine.source import arch_v3046 as A3046
 from engine.source import arch_v3047 as A3047
 from engine.source import arch_v3050 as A3050      # T-310 r3: rebased on the merged V3.0.50 (T-497, 5f8814e8)
 from engine.source import arch_v3051 as A3051      # T-310 r4: rebased on the merged V3.0.51 (T-483, ea7d375f)
+from engine.source import arch_v3053 as A3053      # T-310 r6: the merged V3.0.53 (T-487, dbc619fd) lintel check
+from engine.source import arch_v3054 as A3054      # T-310 r6: rebased on the merged V3.0.54 (T-480, 1b66b719)
 from engine.source import waterproofing_policy_v3 as WP3
 
 DEFAULT_GUARD_CLASS = "GUARD_HOST"      # T-212 / T-310 r2: wires policy V3; the guard re-check runs (arch_v307)
-METHOD = "ARCH_TAKEOFF_V3.0.52"
-EXTENDS = A3051.METHOD
+METHOD = "ARCH_TAKEOFF_V3.0.55"
+EXTENDS = A3054.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T310_ARCH_V3_0_52"
-INPUTS_SCHEMA = "URBAN_V3052_INPUTS_V1"
-LEDGER_SCHEMA = "URBAN_V3052_INTEGRATION_LEDGER_V1"
+POLICY_ID = "URBAN_BOQ_T310_ARCH_V3_0_55"
+INPUTS_SCHEMA = "URBAN_V3055_INPUTS_V1"
+LEDGER_SCHEMA = "URBAN_V3055_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 InputsError = A3031.InputsError
 _r = A3018._r
 _fmt = A3030._fmt
 RULE_ID, RULE_VERSION = "R-T310-1", "T-310"
-REC_KEY = "wet_area_wp_v3052"
+REC_KEY = "wet_area_wp_v3055"
 P_UPTURN, P_FLOOR, P_NA, P_DOOR, P_POOL = "WP_UPTURN", "WP_FLOOR", "WP_NA", "WP_DOOR", "POOL_LAYER"
 ACTIONS = ("REVALUE_UPTURN", "REVALUE_FLOOR", "NOT_APPLICABLE", "KEY_DOOR", "ADD_HELD_DOOR", "ADD_POOL_LAYER")
 PIECE_OF = {"REVALUE_UPTURN": P_UPTURN, "REVALUE_FLOOR": P_FLOOR, "NOT_APPLICABLE": P_NA, "KEY_DOOR": P_DOOR,
@@ -108,7 +110,7 @@ LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 DOOR_RE = re.compile(r"^D-[0-9A-Z]{2}-[0-9]{2}(-[A-Z]+)?$")
 
 PIECES = {
-    P_UPTURN: {"module": "engine/source/arch_v3052.py (a wet-room upturn line re-valued by waterproofing policy V3: "
+    P_UPTURN: {"module": "engine/source/arch_v3055.py (a wet-room upturn line re-valued by waterproofing policy V3: "
                          "boundary run excluding the doorway segments x 0.20; a window above the upturn is not deducted)",
                "policy": "WET_UPTURN_RUN_V3", "rule_id": "UP-WP-002 2.0.0 / UP-WP-003 1.1.0 (R-T310-1 a)",
                "owner_rules": ["UP-WP-002 2.0.0 (owner Q-03: upturn 0.20 m)",
@@ -120,7 +122,7 @@ PIECES = {
                "drawing_method": "the merged T-303 inventory (T-074 hand table) with the Checker's own re-measure of "
                                  "the room by handle: floor 2.250 x 2.100, boundary 8.700 lm, door 0.800, the 0.500 "
                                  "east opening a window with a printed sill 0.84 (T-144)"},
-    P_FLOOR: {"module": "engine/source/arch_v3052.py (a wet floor line = the printed box less the structural column "
+    P_FLOOR: {"module": "engine/source/arch_v3055.py (a wet floor line = the printed box less the structural column "
                         "intrusion drawn inside it)",
               "policy": "WET_FLOOR_BOX_LESS_COLUMN_V1", "rule_id": "UP-WP-001, Q-37 A (R-T310-1 a)",
               "owner_rules": ["Q-37 A (the pantry is wet within its printed 4.50 x 3.00 box)", "UP-WP-001 (floor face)",
@@ -129,21 +131,21 @@ PIECES = {
                                      "(a column standing in it)",
               "drawing_method": "the merged T-286 closure: box 13.500 - column notch 0.900 x 0.050 = 13.455 m2, "
                                 "own re-read of the column outline and the box faces this run (0.045000 m2)"},
-    P_NA: {"module": "engine/source/arch_v3052.py (a line with no physical element: NOT_APPLICABLE_WITH_EVIDENCE, no "
+    P_NA: {"module": "engine/source/arch_v3055.py (a line with no physical element: NOT_APPLICABLE_WITH_EVIDENCE, no "
                      "figure, the evidence and the carrying line named)",
            "policy": "WP_LINE_NOT_APPLICABLE_V1", "rule_id": "R-T303-WP-FAMILIES-1 (R-T310-1 b, c)",
            "owner_rules": ["Q-35 C (one transition per physical door)", "UP-QTY-STATUS-001"],
            "owner_manual_method": "no membrane edge where the membrane runs on under a window; one transition per door",
            "drawing_method": "the merged T-303 inventory and the Checker's own count (2 doors twice, 3 doors none) "
                              "and window read (W18 sill 0.84 above the upturn)"},
-    P_DOOR: {"module": "engine/source/arch_v3052.py (every transition m2 line keyed by its physical door; a missing "
+    P_DOOR: {"module": "engine/source/arch_v3055.py (every transition m2 line keyed by its physical door; a missing "
                        "door gets a HELD BLANK line)",
              "policy": "WP_TRANSITION_PER_DOOR_V1", "rule_id": "R-T303-WP-FAMILIES-1 (R-T310-1 b)",
              "owner_rules": ["Q-35 C", "UP-WP-003 1.1.0", "ELEMENT_REGISTER 'Wet-room DOORWAY' (a door shared by two "
                              "wet rooms: one element, never billed twice, never 0)", "UP-QTY-STATUS-001"],
              "owner_manual_method": "one doorway transition per physical door from the opening inventory",
              "drawing_method": "the merged T-249 opening inventory crosswalked to the candidate's door ids (T-303)"},
-    P_POOL: {"module": "engine/source/arch_v3052.py (a printed pool protective layer with no line: its own line on the "
+    P_POOL: {"module": "engine/source/arch_v3055.py (a printed pool protective layer with no line: its own line on the "
                        "protected concrete face, the unresolved upstand beside with its bound)",
              "policy": "POOL_LAYER_LINES_V1", "rule_id": "R-T309-1 (R-T310-1 d)",
              "owner_rules": ["Q-26 A (flat pool floor)", "ELEMENT_REGISTER 'Pool membrane and protection screed' "
@@ -152,7 +154,7 @@ PIECES = {
              "drawing_method": "the merged T-309 face ledger on the verified pool shell (Checker own re-read of the "
                                "detail by handle: layer order and faces AGREE)"},
 }
-WAITING = dict(A3051.WAITING)
+WAITING = dict(A3054.WAITING)
 WAITING.update({
     "T310_DOORWAY_SEGMENTS": "doorway upturn segments (door width x 0.20) HELD in every wet room while the project's "
                              "doorway detail (coverage inside the floor piece or a separate return) is not printed "
@@ -278,7 +280,7 @@ def _entry(x, srcs):
 
 
 def load_inputs(doc, project_id=None):
-    """URBAN_V3052_INPUTS_V1 -> the validated doc.
+    """URBAN_V3055_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
      "entries": [{"action" (ACTIONS), "basis", "source_tasks", ...per action: REVALUE_UPTURN line_id, before,
                   boundary_lm, door_widths_m, openings_not_deducted [{kind, id, sill_m}], value, evidence_status;
@@ -476,7 +478,7 @@ def changes_for(doc, prev):
     if not doc:
         return [], {"piece": "+".join(PIECES), "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
-        raise InputsError("the candidate already carries V3.0.52 records (applied once)")
+        raise InputsError("the candidate already carries V3.0.55 records (applied once)")
     by = {ln["line_id"]: ln for ln in prev}
     S = doc["_sources"]
     changes, seen = [], set(by)
@@ -568,7 +570,7 @@ def changes_for(doc, prev):
 
 
 def guard_recheck(doc, prev, changes):
-    """the merged default guard over the V3.0.51 lines with this version's changes + its added lines (arch_v307).
+    """the merged default guard over the V3.0.54 lines with this version's changes + its added lines (arch_v307).
     -> the guard log. Refuses on any finding that would hold a line: on a changed or added line (arch_v307 raises),
     and on any other line (this version moves nothing outside its codes)."""
     rep = {c["before"]["line_id"]: c["after"] for c in changes if c["action"] != "ADD"}
@@ -583,10 +585,10 @@ def guard_recheck(doc, prev, changes):
 
 # ================================================================================================ checks
 def check_wet_area_wp(lines, before=None):
-    """R-T310-1 on the integrated lines (a no-op on lines without a V3.0.52 record): (a) a re-valued line carries its
+    """R-T310-1 on the integrated lines (a no-op on lines without a V3.0.55 record): (a) a re-valued line carries its
     record's value in SOURCE_DERIVED and keeps id / code / unit / location; (b) the keyed transition lines carry each
     door once and every NA transition names a keyed carrying line; (c) NA lines carry no figure; (d) pool layer lines
-    carry their value and their held part beside; a V3.0.52 record on another code is refused. -> summary."""
+    carry their value and their held part beside; a V3.0.55 record on another code is refused. -> summary."""
     out = {"revalued": 0, "not_applicable": 0, "keyed_doors": 0, "added_held_doors": 0, "pool_lines": 0,
            "doors": {}}
     b4 = {ln["line_id"]: ln for ln in before or ()}
@@ -597,7 +599,7 @@ def check_wet_area_wp(lines, before=None):
         if not rec:
             continue
         if ln["item_code"] not in WP_CODES:
-            raise ValueError(f"{METHOD}: a V3.0.52 record on {ln['item_code']} {ln['line_id']}")
+            raise ValueError(f"{METHOD}: a V3.0.55 record on {ln['item_code']} {ln['line_id']}")
         act = rec.get("action")
         blank = ln.get("measured_net") is None and ln.get("bounded_range") is None
         if act in ("REVALUE_UPTURN", "REVALUE_FLOOR"):
@@ -647,7 +649,7 @@ def check_wet_area_wp(lines, before=None):
 
 # ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.52 lines, identity). Changed lines replace their candidate line in place; added lines follow; every
+    """-> (V3.0.55 lines, identity). Changed lines replace their candidate line in place; added lines follow; every
     other candidate line is byte-identical (asserted)."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     out = list(prev)
@@ -675,7 +677,7 @@ def integrate(prev, changes, for_lead=()):
     # T-310 r4: a skirting line V3.0.51 re-booked carries the superseded V3.0.44 record; V3.0.51's own check governs it
     # (check_remainder, without `before`: the V3.0.50 lines are not this version's input), the V3.0.44 check the rest
     older = [ln for ln in out if not ((ln.get("calculation") or {}).get("inputs") or {}).get(A3051.REC_KEY)]
-    ident = {"base_lines": len(prev), "v3_0_52_lines": len(out), "v3_0_52_rows": len(changes),
+    ident = {"base_lines": len(prev), "v3_0_55_lines": len(out), "v3_0_55_rows": len(changes),
              "replaced": len(repl), "added": len(adds), "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
              "corrections": A3033.check_corrections(out), "tile_zones": A3034.check_zones(out),
@@ -685,6 +687,7 @@ def integrate(prev, changes, for_lead=()):
              "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(older),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
              "stair_rooms": A3047.check_stair_rooms(out), "remainder": A3051.check_remainder(out),
+             "lintels": A3053.check_lintels(out), "rail_runs": A3054.check_runs(out),
              "wet_area_wp": check_wet_area_wp(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
@@ -713,7 +716,7 @@ def ledger_rows(changes, released_lines=None):
                      "line_id": ref["line_id"], "item_code": ref["item_code"], "floor": loc.get("floor"),
                      "room_id": loc.get("room_id"), "element_id": loc.get("element_id"), "unit": ref["unit"],
                      "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
-                     "after_v3_0_52": A30._qty(ref), "evidence_status": c.get("evidence_status"),
+                     "after_v3_0_55": A30._qty(ref), "evidence_status": c.get("evidence_status"),
                      "still_held": c.get("held"), "release_status": "NOT RELEASED",
                      "owner_manual_method": PIECES[c["piece"]]["owner_manual_method"],
                      "drawing_derived_method": PIECES[c["piece"]]["drawing_method"],
@@ -722,9 +725,9 @@ def ledger_rows(changes, released_lines=None):
 
 
 LEDGER_CSV = ("version", "piece", "action", "change", "line_id", "item_code", "floor", "room_id", "element_id", "unit",
-              "v2_9", "base", "v3_0_52", "evidence_status", "still_held", "verification")
+              "v2_9", "base", "v3_0_55", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
-            "v3_0_52")
+            "v3_0_55")
 
 
 def ledger_csv(rows):
@@ -737,7 +740,7 @@ def ledger_csv(rows):
                        "line_id": r["line_id"], "item_code": r["item_code"], "floor": r.get("floor") or "",
                        "room_id": r.get("room_id") or "", "element_id": r.get("element_id") or "", "unit": r["unit"],
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
-                       "v3_0_52": q(r.get("after_v3_0_52")), "evidence_status": r["evidence_status"],
+                       "v3_0_55": q(r.get("after_v3_0_55")), "evidence_status": r["evidence_status"],
                        "still_held": h(r),
                        "verification": f"{r['verification'].get('task')} "
                                        f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
@@ -758,12 +761,12 @@ def diff_rows(prev, new, released_lines=None):
         out.append({"line_id": ln["line_id"], "item_code": ln["item_code"], "floor": ln["location"].get("floor"),
                     "element_id": ln["location"].get("element_id"), "unit": ln["unit"], "vs_base": vs,
                     "vs_released_v2_9": vs29, "v2_9": A302._q(A30._qty(r)) if r else "",
-                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_52": A302._q(A30._qty(ln))})
+                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_55": A302._q(A30._qty(ln))})
     return out
 
 
 def write(out, prev, changes, log, released_lines=None, for_lead=()):
-    """the V3_0_52_* files beside the base candidate's files. -> (file names, identity, ledger)."""
+    """the V3_0_55_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
     out = Path(out)
@@ -783,7 +786,7 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
             dsum["vs_released_v2_9"][d["vs_released_v2_9"]] += 1
     ident = dict(ident, diff=dsum)
     t0, t1 = A304.code_totals(prev), A304.code_totals(new)
-    moved = {k: {"base": t0.get(k), "v3_0_52": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
+    moved = {k: {"base": t0.get(k), "v3_0_55": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
     for k in moved:
         if k.split("|")[0] not in WP_CODES:
             raise ValueError(f"{METHOD}: totals moved outside this version's codes: {k}")
@@ -794,12 +797,12 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
            "totals_moved_by_code": moved, "waiting_pieces": WAITING}
-    files = {"V3_0_52_BOQ_LINES.json": BL.dumps(new),
-             "V3_0_52_BOQ_LINES.csv": A30._lines_csv(new),
-             "V3_0_52_INTEGRATION_LEDGER.json": A30._j(led),
-             "V3_0_52_INTEGRATION_LEDGER.csv": ledger_csv(rows),
-             "V3_0_52_DIFF.csv": A305._csv(diff, DIFF_CSV),
-             "V3_0_52_RUN.json": A30._j(run)}
+    files = {"V3_0_55_BOQ_LINES.json": BL.dumps(new),
+             "V3_0_55_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_55_INTEGRATION_LEDGER.json": A30._j(led),
+             "V3_0_55_INTEGRATION_LEDGER.csv": ledger_csv(rows),
+             "V3_0_55_DIFF.csv": A305._csv(diff, DIFF_CSV),
+             "V3_0_55_RUN.json": A30._j(run)}
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     return sorted(files), ident, led

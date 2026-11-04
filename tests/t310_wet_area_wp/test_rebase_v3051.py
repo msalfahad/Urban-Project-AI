@@ -1,4 +1,4 @@
-"""T-310 r4: ARCH_TAKEOFF_V3.0.52 integrates on V3.0.51 lines that already carry the V3.0.51 skirting remainder records
+"""T-310 r4: ARCH_TAKEOFF_V3.0.55 integrates on V3.0.51 lines that already carry the V3.0.51 skirting remainder records
 (hand-calculated NON-Alsenan villa K483 of the T-483 tests: room R1 released 13.0 -> 16.0 lm under two raised sills, a
 held range absorbed, floor-glazing / stair-owned ranges closed, a blocked dry cell walked). Its skirting invariants are
 arch_v3051.check_remainder on every line (without `before`: the V3.0.50 lines are not this version's input) and the
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v3051 as A51  # noqa: E402
-from engine.source import arch_v3052 as A52  # noqa: E402
+from engine.source import arch_v3055 as A52  # noqa: E402
 from tests.t483_skirting_remainder import test_arch_v3051 as T  # noqa: E402
 
 
@@ -24,7 +24,8 @@ def _v3051():
 
 
 def test_extends_merged_v3051():
-    assert A52.EXTENDS == A51.METHOD == "ARCH_TAKEOFF_V3.0.51"
+    """r6: V3.0.55 extends V3.0.54 (test_rebase_v3054), which carries V3.0.51 through V3.0.53: its waiting pieces stay"""
+    assert A51.METHOD == "ARCH_TAKEOFF_V3.0.51"
     assert set(A51.WAITING) <= set(A52.WAITING)
 
 
@@ -33,7 +34,7 @@ def test_normal_v3051_records_pass_through_unchanged():
     _, _, ident51, _ = T.run()
     new, ident = A52.integrate(l51, [])
     assert new == l51
-    assert ident["remainder"] == ident51["remainder"]          # the V3.0.51 check, re-run on the V3.0.52 lines
+    assert ident["remainder"] == ident51["remainder"]          # the V3.0.51 check, re-run on the V3.0.55 lines
     assert ident["remainder"]["released_lm"] == pytest.approx(3.0)
     assert ident["outside_rows_identical_to_base"] == len(l51)
 
@@ -44,7 +45,7 @@ def _rec(lines, action):
 
 
 def test_adverse_absorbed_range_naming_no_line_refused_by_the_v3051_check():
-    """only V3.0.51's own check reads the absorbed range's carrier: it must run on the V3.0.52 lines"""
+    """only V3.0.51's own check reads the absorbed range's carrier: it must run on the V3.0.55 lines"""
     l51 = copy.deepcopy(_v3051())
     _rec(l51, "ABSORB_RANGE")["calculation"]["inputs"][A51.REC_KEY]["carried_by"] = "L-" + "0" * 20
     with pytest.raises(ValueError, match="absorbed range line .* names no candidate line"):
