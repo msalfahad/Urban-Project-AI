@@ -1,8 +1,9 @@
-# T-508 stair skirting B7-07 / B7-08 + landings: integration package ARCH_TAKEOFF_V3.0.55 (stream F; method every villa)
+# T-508 stair skirting B7-07 / B7-08 + landings: integration package ARCH_TAKEOFF_V3.0.56 (stream F; method every villa)
 
 Worker 1, 2026-11-04. Gate B integration of the merged T-501 stair-side table (5eded7df; Verifier Gate A 2026-11-04
 10:56Z, own re-measure by handle MS2-LD 3.700 lm and MS2-L W side sloped 2.737 / zigzag 3.694 lm AGREE; 1F shaft 9.050
-lm at +5.50 ENGINE_WRONG confirmed) into the SAME opt-in candidate, on V3.0.54 (T-480, merge 1b66b719). Released default
+lm at +5.50 ENGINE_WRONG confirmed) into the SAME opt-in candidate, on V3.0.55 (T-488, merge e8143e40; first built as V3.0.55 on V3.0.54, renumbered by the
+merge-order rule when T-488 merged first). Released default
 (V2.9 + route G) untouched; nothing released. No drawing, workbook, client name or coordinate in this folder.
 
 ## 1. Physical element (ERS s.2.1)
@@ -22,7 +23,7 @@ shaft where no floor of that level stands measures a strip that does not exist (
 | landing | level, with the room skirting | sum of the wall pieces drawn on both plans that bracket the landing (plan + returns, recomputed) |
 | 1F shaft at +5.50 | (no floor there: not measured) | each stretch retired only by closure: stair pieces at every level cover it exactly (plan union, residual 0) and none stands at +5.50 inside it (level-aware) |
 
-## 3. Rule R-T508-1 (engine/source/arch_v3055.py)
+## 3. Rule R-T508-1 (engine/source/arch_v3056.py)
 
 (1) form decides the family, a side ('wall', 'open side') or an average is refused as a form; (2) one strip one owner,
 level-aware (stations AND level band); (3) a room stretch retired only by closure, never where a stair piece stands at
@@ -38,7 +39,7 @@ NOT_APPLICABLE (tested on villa K508).
 
 ## 4. Before / after (development villa)
 
-| line | element | before (V3.0.54) | after (V3.0.55) | evidence |
+| line | element | before (V3.0.55) | after (V3.0.56) | evidence |
 |---|---|---|---|---|
 | L-ba3599ec 1F living | 1F-R78C367:skirting | 41.435360 lm SOURCE_DERIVED (gross 52.440) | 32.385360 lm (deduction STAIR-SHAFT-NO-FLOOR 9.050 = E 4.150 + W AF0 1.050 + W AF1 2.250 + returns 0.100 + N ADE 1.400 + N ADD 0.100) | T-501 binding, closure recomputed |
 | L-079bc766 1F living range | ...boundary role unresolved | 0 .. 2.200 BOUNDED | NOT_APPLICABLE_WITH_EVIDENCE (W13 / W25 faces carried by MS2-LD.W13 / MS2-L.W2 / MS1-L.W2 / MS1-T.W and MS2-LD.W25 / MS1-LD.N) | T-501 binding |
@@ -55,9 +56,14 @@ codes (asserted). Residual between FIN.SKIRTING and B7: 0 (each piece in exactly
 by named piece lines).
 
 Own chain (this session, Drive copies P7757.dxf ab54dd55 and "ST7757 dxf.dxf" 9f9d1179 in .work/private only): T-167
-v304_run -> research/agents_t480/v3054_run.py (unchanged): V3_0_53 **36863f6c** and V3_0_54 **c85c4630** (candidates
-of record reproduced) -> research/agents_t508/v3055_apply.py: V3_0_55 **5bfb871e**, 4,989 lines = 4,937 byte-identical +
-2 changed + 50 added; the hub run research/agents_t508/v3055_run.py reproduces it (summary_t508.json).
+v304_run -> research/agents_t508/v3056_run.py (one hub call through T-488 v3055_run / T-480 v3054_run, unchanged):
+V3_0_53 **36863f6c**, V3_0_54 **c85c4630**, V3_0_55 **a498fc61** (candidates of record reproduced) -> V3_0_56
+**4e25c54f**, 4,989 lines = 4,937 byte-identical + 2 changed + 50 added; research/agents_t508/v3056_apply.py on the
+hub's V3_0_55 gives the same 4e25c54f (summary_t508.json). Observation F-T508-1 (for the T-488 owner, no action here):
+replaying T-488 V3.0.55 OUTSIDE the hub on the V3_0_54 file gave 627d0ed1, not a498fc61: 6 lines (MAS.BLOCK /
+ARCH.WALL_PANEL / ARCH.WALL_VOLUME, 2 walls; formula / rfi text only) of the blockwork remainder
+lines list their "closable walls carried on their own lines" in a different order (a set iterated without sorting);
+quantities identical, hash not reproducible across processes.
 
 ## 5. Engine vs freelancer (recorded, never the target)
 
