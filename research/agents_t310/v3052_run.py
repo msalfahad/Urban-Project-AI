@@ -1,11 +1,13 @@
-"""T-310 read-only run: ARCH_TAKEOFF_V3.0.52 (the WET-AREA / POOL WATERPROOFING package, on the merged V3.0.48 of
-T-350 r4, merge 5de697ff). Derived from research/agents_t350r4/v3048_run.py (T-350 r4, below), its inputs unchanged,
-plus --v3052-inputs (t310_inputs.py: the merged T-303 / T-309 / T-286 pieces, sha-pinned):
+"""T-310 r3 read-only run: ARCH_TAKEOFF_V3.0.52 (the WET-AREA / POOL WATERPROOFING package, on the merged V3.0.50 of
+T-497, merge 5f8814e8). Derived from research/agents_t350r4/v3048_run.py (T-350 r4, below), its inputs unchanged,
+plus --v3050-inputs (research/agents_t497/t497_inputs.py, as research/agents_t497/v3050_run.py) and --v3052-inputs
+(t310_inputs.py: the merged T-303 / T-309 / T-286 pieces, sha-pinned):
 
     .work/venv/bin/python -I research/agents_t310/v3052_run.py <plan.dxf> <structural.dxf> --out <private>/t310 \
         --t167 <dir of a finished research/agents_t167/v304_run.py run on the same drawings>
 
-The V3_0_48_BOQ_LINES.json of this run must be the candidate of record 33a81c53 (asserted).
+The V3_0_48_BOQ_LINES.json of this run must be 33a81c53 and its V3_0_50_BOQ_LINES.json the candidate of record
+d40c4ec5 (both asserted).
 
 T-350 r4 read-only run: ARCH_TAKEOFF_V3.0.48 (the CALCULATED EARTHWORKS values, on the merged V3.0.47 of T-443,
 merge c814c55d). Derived from research/agents_t443/v3047_run.py (T-443, below), its inputs unchanged, plus
@@ -62,7 +64,7 @@ for p in (ROOT, ROOT / "research" / "agents_t131", ROOT / "research" / "agents_t
           ROOT / "research" / "agents_t193", ROOT / "research" / "agents_t231", ROOT / "research" / "agents_t211",
           ROOT / "research" / "agents_t232", ROOT / "research" / "agents_t239", ROOT / "research" / "agents_t146",
           ROOT / "research" / "agents_t268", ROOT / "research" / "agents_t240", ROOT / "research" / "agents_t270", ROOT / "research" / "agents_t245", ROOT / "research" / "agents_t254",
-          ROOT / "research" / "agents_t266", ROOT / "research" / "agents_t255", ROOT / "research" / "agents_t244", ROOT / "research" / "agents_t315", ROOT / "research" / "agents_t331", ROOT / "research" / "agents_t319", ROOT / "research" / "agents_t338", ROOT / "research" / "agents_t343", ROOT / "research" / "agents_t279", ROOT / "research" / "agents_t318", ROOT / "research" / "agents_t326", ROOT / "research" / "agents_t327", ROOT / "research" / "agents_t199", ROOT / "research" / "agents_t328", ROOT / "research" / "agents_t284", ROOT / "research" / "agents_t397", ROOT / "research" / "agents_t399", ROOT / "research" / "agents_t400", ROOT / "research" / "agents_t246", ROOT / "research" / "agents_t420", ROOT / "research" / "agents_t421", ROOT / "research" / "agents_t429", ROOT / "research" / "agents_t430", ROOT / "research" / "agents_t431", ROOT / "research" / "agents_t422", ROOT / "research" / "agents_t478", ROOT / "research" / "agents_t419", ROOT / "research" / "agents_t443", ROOT / "research" / "agents_t350r4", HERE):
+          ROOT / "research" / "agents_t266", ROOT / "research" / "agents_t255", ROOT / "research" / "agents_t244", ROOT / "research" / "agents_t315", ROOT / "research" / "agents_t331", ROOT / "research" / "agents_t319", ROOT / "research" / "agents_t338", ROOT / "research" / "agents_t343", ROOT / "research" / "agents_t279", ROOT / "research" / "agents_t318", ROOT / "research" / "agents_t326", ROOT / "research" / "agents_t327", ROOT / "research" / "agents_t199", ROOT / "research" / "agents_t328", ROOT / "research" / "agents_t284", ROOT / "research" / "agents_t397", ROOT / "research" / "agents_t399", ROOT / "research" / "agents_t400", ROOT / "research" / "agents_t246", ROOT / "research" / "agents_t420", ROOT / "research" / "agents_t421", ROOT / "research" / "agents_t429", ROOT / "research" / "agents_t430", ROOT / "research" / "agents_t431", ROOT / "research" / "agents_t422", ROOT / "research" / "agents_t478", ROOT / "research" / "agents_t419", ROOT / "research" / "agents_t443", ROOT / "research" / "agents_t350r4", ROOT / "research" / "agents_t497", HERE):
     sys.path.insert(0, str(p))
 
 import alsenan_v30_run as T131  # noqa: E402
@@ -111,11 +113,13 @@ import t478_inputs as L45       # noqa: E402
 import t419_inputs as L46       # noqa: E402
 import t443_inputs as L47       # noqa: E402
 import t350r4_inputs as L48     # noqa: E402
+import t497_inputs as L50       # noqa: E402
 import t310_inputs as L49       # noqa: E402
 import hashlib                  # noqa: E402
 import v302_run as T142         # noqa: E402
 
-BASE_SHA = "33a81c53"            # V3_0_48_BOQ_LINES.json, candidate of record (T-350 r4 Gate B, merge 5de697ff)
+V48_SHA = "33a81c53"             # V3_0_48_BOQ_LINES.json (T-350 r4 Gate B, merge 5de697ff)
+BASE_SHA = "d40c4ec5"            # V3_0_50_BOQ_LINES.json, candidate of record (T-497 Gate B, merge 5f8814e8)
 M4 = ROOT / "research/urban_engine_m4_correctness/profile_st7757_m4.json"
 
 
@@ -209,24 +213,30 @@ def main(argv=None):
         "--v3042-inputs", str(out / "v3042_inputs.json"), "--v3043-inputs", str(out / "v3043_inputs.json"),
         "--v3044-inputs", str(out / "v3044_inputs.json"), "--v3045-inputs", str(out / "v3045_inputs.json"),
         "--v3046-inputs", str(out / "v3046_inputs.json"), "--v3047-inputs", str(out / "v3047_inputs.json"),
-        "--v3048-inputs", str(out / "v3048_inputs.json"), "--v3052-inputs", str(out / "v3052_inputs.json")]
+        "--v3048-inputs", str(out / "v3048_inputs.json"), "--v3050-inputs", str(out / "v3050_inputs.json"),
+        "--v3052-inputs", str(out / "v3052_inputs.json")]
     (out / "v3046_inputs.json").write_text(json.dumps(L46.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     (out / "v3047_inputs.json").write_text(json.dumps(L47.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     (out / "v3048_inputs.json").write_text(json.dumps(L48.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
+    (out / "v3050_inputs.json").write_text(json.dumps(L50.build(T131.PID), ensure_ascii=False, indent=1),
+                                           encoding="utf-8")
     (out / "v3052_inputs.json").write_text(json.dumps(L49.build(T131.PID), ensure_ascii=False, indent=1),
                                            encoding="utf-8")
     M.main(["arch", "--out", str(out / "v3052"), "--method", "ARCH_TAKEOFF_V3.0.52"] + common + extra)
     d = out / "v3052"
-    base = hashlib.sha256((d / "V3_0_48_BOQ_LINES.json").read_bytes()).hexdigest()
+    v48 = hashlib.sha256((d / "V3_0_48_BOQ_LINES.json").read_bytes()).hexdigest()
+    if not v48.startswith(V48_SHA):
+        raise SystemExit(f"V3_0_48 {v48[:8]} is not {V48_SHA}")
+    base = hashlib.sha256((d / "V3_0_50_BOQ_LINES.json").read_bytes()).hexdigest()
     new = hashlib.sha256((d / "V3_0_52_BOQ_LINES.json").read_bytes()).hexdigest()
     if not base.startswith(BASE_SHA):
         raise SystemExit(f"base candidate {base[:8]} is not {BASE_SHA} (not the candidate of record)")
     run = json.loads((d / "V3_0_52_RUN.json").read_text(encoding="utf-8"))
     ident = run["identity"]
-    print("base: V3_0_48", base[:8], "lines", ident["base_lines"], "-> V3_0_52_BOQ_LINES.json", new[:8], "lines",
+    print("base: V3_0_50", base[:8], "lines", ident["base_lines"], "-> V3_0_52_BOQ_LINES.json", new[:8], "lines",
           ident["v3_0_52_lines"])
     print("identity:", json.dumps({k: ident[k] for k in ("replaced", "added", "outside_rows",
                                                           "outside_rows_identical_to_base", "wet_area_wp", "diff")},
@@ -234,7 +244,7 @@ def main(argv=None):
     print("totals moved:", json.dumps(run["totals_moved_by_code"], indent=1, sort_keys=True))
     # T-310 bindings, asserted on the candidate of record: each duplicate transition line carries the closure the
     # Checker named; each missing door's candidate opening has a doorway line and no transition line
-    l48 = {ln["line_id"]: ln for ln in json.loads((d / "V3_0_48_BOQ_LINES.json").read_text(encoding="utf-8"))}
+    l48 = {ln["line_id"]: ln for ln in json.loads((d / "V3_0_50_BOQ_LINES.json").read_text(encoding="utf-8"))}
     for lid, (door, closure) in L49.DUPLICATES.items():
         if closure not in json.dumps(l48[lid]["location"]):
             raise SystemExit(f"{lid}: closure {closure} of door {door} not in its location (stale binding)")
