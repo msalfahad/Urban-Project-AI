@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4593 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4609 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 59 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2174 | pytest suites, one folder per round. |
+| `tests/` | 2177 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -571,7 +571,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `level_chain_v1.py` | 495 | MEDIUM | 2 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
-| `lintel_measure.py` | 164 | MEDIUM | 8 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
+| `lintel_measure.py` | 164 | MEDIUM | 9 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
 | `lintel_qto.py` | 218 | CRITICAL | 4 | LINTEL QTO - schedule binding, lintel geometry, bar lengths and counts for masonry-wall lintels (generic). |
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
@@ -1422,6 +1422,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t457_wet_wall_fixing/` | 1 |
 | `tests/t458_wet_upturn/` | 1 |
 | `tests/t459_lap_rule/` | 1 |
+| `tests/t460_small_openings/` | 3 |
 | `tests/t461_registry_housekeeping/` | 1 |
 | `tests/t462_private_inputs/` | 1 |
 | `tests/t463_git_history/` | 1 |
@@ -1923,6 +1924,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t457/` | 3 |
 | `research/agents_t458/` | 2 |
 | `research/agents_t459/` | 3 |
+| `research/agents_t460/` | 16 |
 | `research/agents_t463/` | 3 |
 | `research/agents_t465/` | 2 |
 | `research/agents_t469/` | 11 |

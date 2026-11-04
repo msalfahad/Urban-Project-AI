@@ -1,0 +1,65 @@
+{
+ "frames": {
+  "1F": {
+   "by_class": {
+    "SMALL_DOOR": 0,
+    "SMALL_WINDOW": 1,
+    "SUB_MIN_GAP_UNEXPLAINED": 0,
+    "WALL_JUNCTION": 1
+   },
+   "deduct_measured_m2": 0,
+   "deduct_width_height_held_m": 0.467302,
+   "engine_min_gap_m": 0.5,
+   "engine_openings": 22,
+   "floor_m": 0.002,
+   "lost_by_engine": 1,
+   "policy": "SMALL_OPENING_CENSUS_V1",
+   "probe_gaps": 24,
+   "probe_only_wide": 0,
+   "spaces_openings": 22,
+   "sub_min": 2
+  },
+  "2F": {
+   "by_class": {
+    "SMALL_DOOR": 0,
+    "SMALL_WINDOW": 0,
+    "SUB_MIN_GAP_UNEXPLAINED": 0,
+    "WALL_JUNCTION": 0
+   },
+   "deduct_measured_m2": 0,
+   "deduct_width_height_held_m": 0,
+   "engine_min_gap_m": 0.5,
+   "engine_openings": 8,
+   "floor_m": 0.002,
+   "lost_by_engine": 0,
+   "policy": "SMALL_OPENING_CENSUS_V1",
+   "probe_gaps": 8,
+   "probe_only_wide": 0,
+   "spaces_openings": 8,
+   "sub_min": 0
+  },
+  "GF": {
+   "by_class": {
+    "SMALL_DOOR": 0,
+    "SMALL_WINDOW": 0,
+    "SUB_MIN_GAP_UNEXPLAINED": 0,
+    "WALL_JUNCTION": 0
+   },
+   "deduct_measured_m2": 0,
+   "deduct_width_height_held_m": 0,
+   "engine_min_gap_m": 0.5,
+   "engine_openings": 29,
+   "floor_m": 0.002,
+   "lost_by_engine": 0,
+   "policy": "SMALL_OPENING_CENSUS_V1",
+   "probe_gaps": 29,
+   "probe_only_wide": 0,
+   "spaces_openings": 29,
+   "sub_min": 0
+  }
+ },
+ "source": {
+  "file": "P7757.dxf",
+  "sha256_8": "ab54dd55"
+ }
+}

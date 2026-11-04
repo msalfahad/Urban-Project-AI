@@ -1,0 +1,3 @@
+floor,probe_id,cls,status,width_m,wall_t_m,start_jamb,end_jamb,split_at_column,glazing_m,glazing_ids,crossing_faces,swing,reason
+1F,1F-SG-001,SMALL_WINDOW,DEDUCT_HEIGHT_HELD,0.4673,0.200,COLUMN_JAMB,MASONRY_JAMB,True,1.939997,D2:3126:0 D2:3127:0 D2:3128:0 D2:3129:0 D2:3130:0 D2:3132:0 D2:3133:0 D2:3134:0,,,"opening height not printed / scheduled: area HELD, width measured; never 0"
+1F,1F-SG-002,WALL_JUNCTION,NOT_AN_OPENING,0.1500,0.150,MASONRY_JAMB,MASONRY_JAMB,False,,,"{""end"": [""D2:2774:0"", ""D2:2775:0""], ""start"": [""D2:2769:0"", ""D2:2770:0""]}",,a crossing wall runs through the band: continuous masonry
