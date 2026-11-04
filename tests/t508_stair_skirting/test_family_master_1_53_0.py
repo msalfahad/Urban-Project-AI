@@ -50,7 +50,7 @@ def test_only_stair_skirting_text_codes_and_the_promotion_change(docs):
     promoted = new["candidate_packages"][-1]
     assert new["candidate_packages"][:-1] == old["candidate_packages"]
     assert (promoted["task"], promoted["merge_commit"][:8], promoted["gate"]) == ("T-488", "e8143e40", "GATE_B")
-    assert promoted["families_changed_by_line_diff"] == ["B7-09"]
+    assert promoted["families_changed_by_line_diff"] == ["B9-01"]
     p = new["pending_packages"][-1]
     assert [x["task"] for x in new["pending_packages"]] == ["T-508"]
     assert (p["task"], p["method_version"], p["module"]) == ("T-508", A.METHOD, "engine/source/arch_v3056.py")
@@ -59,7 +59,7 @@ def test_only_stair_skirting_text_codes_and_the_promotion_change(docs):
     cen, ocen = new["candidate_census"], old["candidate_census"]
     assert cen["method_version"] == "ARCH_TAKEOFF_V3.0.55" and cen["lines"] == 4939 and cen["issue_counts"] == {}
     assert cen["lines_sha256"].startswith("a498fc61")
-    assert {c for c in cen["families"] if cen["families"][c] != ocen["families"][c]} == {"B7-07", "B7-08", "B7-09"}
+    assert {c for c in cen["families"] if cen["families"][c] != ocen["families"][c]} == {"B7-07", "B7-08", "B9-01"}
     for c in ("B7-07", "B7-08"):
         assert (ocen["families"][c]["in_candidate"], cen["families"][c]["in_candidate"]) == \
             ("n/a: owns no item code", "no") and cen["families"][c]["lines"] == 0
