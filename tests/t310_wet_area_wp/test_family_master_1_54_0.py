@@ -1,8 +1,9 @@
-"""T-310 r6: rules/coverage/BOQ_FAMILY_MASTER_1.52.0.json = 1.51.0 + the promotion of its merged pending package
-(T-480 V3.0.54, merge 1b66b719; R-T485-1) with the family it changed re-derived from the V3.0.54 census and the line
-diff V3.0.53 -> V3.0.54, + the pending ARCH_TAKEOFF_V3.0.57 package (T-310) and the waterproofing family text (B8-01 /
-B8-02 / B8-03 / B8-09), B8-09 owning the two pool layer codes. No owner, capability or quantity change; every family
-the line diff does not name keeps its census and its state."""
+"""T-310 r7: rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json = 1.53.0 + the promotion of its merged pending package
+(T-508 V3.0.56, merge 40ab9061; R-T485-1) with the families it changed (B3-06 skirting, B7-07 / B7-08 stair skirting
+forms) re-derived from the V3.0.56 census and the line diff V3.0.55 -> V3.0.56, + the pending ARCH_TAKEOFF_V3.0.57
+package (T-310) and the waterproofing family text (B8-01 / B8-02 / B8-03 / B8-09), B8-09 owning the two pool layer
+codes. No owner, capability or quantity change; every family the line diff does not name keeps its census and its
+state."""
 from __future__ import annotations
 
 import copy
@@ -19,11 +20,11 @@ for p in (ROOT, ROOT / "research" / "agents_t310", ROOT / "research" / "agents_t
 
 from engine.source import arch_v3057 as A  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
-import build_master_1_52_0 as M  # noqa: E402
+import build_master_1_54_0 as M  # noqa: E402
 import build_master_1_43_0 as B43  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.51.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.52.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.53.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
 I, H, BL, NI = FMC.STATES
 FAMS = {"B8-01", "B8-02", "B8-03", "B8-09"}
 TEXT = ("evidence", "opt_in_readers", "missing", "note")
@@ -43,15 +44,15 @@ def test_checks_clean_with_git(docs):
     assert B43.census_problems(docs[1]) == []
 
 
-def test_merged_t480_promoted_and_only_v3057_pending(docs):
+def test_merged_t508_promoted_and_only_v3057_pending(docs):
     old, new = docs
-    assert new["version"] == "1.52.0"
-    assert [p["task"] for p in old["pending_packages"]] == ["T-480"]
+    assert new["version"] == "1.54.0"
+    assert [p["task"] for p in old["pending_packages"]] == ["T-508"]
     assert new["candidate_packages"][:-1] == old["candidate_packages"]
     p, o = new["candidate_packages"][-1], old["pending_packages"][0]
-    assert p["task"] == "T-480" and p["task_commit"] == o["task_commit"]
-    assert p["merge_commit"].startswith("1b66b719") and p["verdict"].startswith("MERGED") and "1b66b719" in p["verdict"]
-    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.54" and new["candidate"]["as_of_package"] == "T-480"
+    assert p["task"] == "T-508" and p["task_commit"] == o["task_commit"]
+    assert p["merge_commit"].startswith("40ab9061") and p["verdict"].startswith("MERGED") and "40ab9061" in p["verdict"]
+    assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.56" and new["candidate"]["as_of_package"] == "T-508"
     (q,) = new["pending_packages"]
     assert (q["task"], q["method_version"], q["module"]) == ("T-310", A.METHOD, "engine/source/arch_v3057.py")
     assert "merge_commit" not in q and "verdict" not in q
@@ -61,24 +62,31 @@ def test_no_merged_package_stays_pending_normal_and_adverse(docs):
     old, new = docs
     merged = {p.get("task_commit") for p in new["candidate_packages"]} - {None}
     assert B43.stale_pending(new, lambda c: c in merged) == []
-    assert B43.stale_pending(old, lambda c: c in merged) == ["T-480"]      # the registry this one supersedes
+    assert B43.stale_pending(old, lambda c: c in merged) == ["T-508"]      # the registry this one supersedes
 
 
-def test_line_diff_names_only_railing(docs):
+STAIR = ("B3-06", "B7-07", "B7-08")
+
+
+def test_line_diff_names_only_the_skirting_families(docs):
     p = docs[1]["candidate_packages"][-1]
-    assert p["families_changed_by_line_diff"] == ["B7-09"]
-    assert p["lines_touched"] == 18                     # T-480: FIN.RAILING 15 changed + 3 added
+    assert p["families_changed_by_line_diff"] == list(STAIR)
+    assert p["lines_touched"] == 52                     # T-508: FIN.SKIRTING 2 changed + 6 added, 22 + 22 form lines
 
 
-def test_railing_rederived_from_the_v3054_census(docs):
+def test_skirting_rederived_from_the_v3056_census(docs):
     old, new = docs
     nb = {f["code"]: f for f in new["families"]}
     cc, oc = new["candidate_census"]["families"], old["candidate_census"]["families"]
-    c = nb["B7-09"]["candidate"]
-    assert "T-480" in c["packages"] and c["state"] == I and c["method_version"] == "ARCH_TAKEOFF_V3.0.54"
-    rel = cc["B7-09"]["units"]["lm"]["released"] - oc["B7-09"]["units"]["lm"]["released"]
-    assert rel == pytest.approx(15.953174)              # T-480: RL-07 valued along the pitch line (17.366 -> 33.319174)
-    assert new["candidate_census"]["lines"] == 4939 and new["candidate_census"]["lines_sha256"].startswith("c85c4630")
+    c = nb["B3-06"]["candidate"]
+    assert "T-508" in c["packages"] and c["state"] == I and c["method_version"] == "ARCH_TAKEOFF_V3.0.56"
+    rel = cc["B3-06"]["units"]["lm"]["released"] - oc["B3-06"]["units"]["lm"]["released"]
+    assert rel == pytest.approx(-2.950)                 # T-508: 9.050 lm shaft stretches retired, 6.100 lm landings
+    for code in ("B7-07", "B7-08"):                     # every form line blank (ORR-007 form not chosen): HELD
+        assert (oc[code]["lines"], cc[code]["lines"]) == (0, 22)
+        assert cc[code]["units"]["lm"]["released"] == 0.0 and cc[code]["units"]["lm"]["held_lines"] == 22
+        assert nb[code]["candidate"]["state"] == H and nb[code]["in_v3_0_candidate"] == "yes"
+    assert new["candidate_census"]["lines"] == 4989 and new["candidate_census"]["lines_sha256"].startswith("4e25c54f")
 
 
 def test_untouched_families_keep_state_census_and_every_other_field(docs):
@@ -89,15 +97,16 @@ def test_untouched_families_keep_state_census_and_every_other_field(docs):
         code = f["code"]
         o = ob[code]
         for k in set(f) | set(o):
-            if k == "candidate" or (code in FAMS and k in TEXT) or (code == "B8-09" and k == "item_codes"):
+            if k == "candidate" or (code in FAMS and k in TEXT) or (code == "B8-09" and k == "item_codes") or \
+                    (code in STAIR and k == "in_v3_0_candidate"):     # B7-07 / B7-08 enter the candidate (asserted above)
                 continue
             assert f.get(k) == o.get(k), (code, k)
-        if code == "B7-09":
+        if code in STAIR:
             continue
         assert nc[code] == oc[code], code
         assert f["candidate"]["state"] == o["candidate"]["state"] and \
             f["candidate"]["packages"] == o["candidate"]["packages"], code
-        assert f["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.54" and f["candidate"]["as_of_package"] == "T-480"
+        assert f["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.56" and f["candidate"]["as_of_package"] == "T-508"
 
 
 def test_waterproofing_text_and_pool_codes(docs):
@@ -118,8 +127,9 @@ def test_counts_agree_and_nothing_released_changed(docs):
     for k in ("capability_counts", "capability_change_counts", "released_configuration", "not_a_boq_line_codes"):
         assert new[k] == old[k]
     assert sum(new["candidate_state_counts"].values()) == len(new["families"])
-    assert new["in_v3_0_candidate_counts"] == old["in_v3_0_candidate_counts"]
-    assert new["candidate_census"]["previous"]["method_version"] == "ARCH_TAKEOFF_V3.0.53"
+    o, n = old["in_v3_0_candidate_counts"], new["in_v3_0_candidate_counts"]
+    assert (n["yes"] - o["yes"], n["no"] - o["no"], n["N/A"] - o["N/A"]) == (2, -2, 0)   # B7-07 / B7-08 enter
+    assert new["candidate_census"]["previous"]["method_version"] == "ARCH_TAKEOFF_V3.0.55"
 
 
 def test_adverse_family_naming_the_pending_package_refused(docs):
