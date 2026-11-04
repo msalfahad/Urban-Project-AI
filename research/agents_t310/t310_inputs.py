@@ -1,4 +1,4 @@
-"""T-310: the URBAN_V3055_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.55 (engine.source.arch_v3055), built ONLY from
+"""T-310: the URBAN_V3057_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.57 (engine.source.arch_v3057), built ONLY from
 Checker-merged files, each pinned by sha256 (an edited file stops the build). The door / line keys, the pool figures
 and their held parts are READ from those files; typed here are only the entry selection, the action per entry, the
 1F east bath re-measure the Checker printed in the T-303 verdict (its words, below) and the two duplicate transition
@@ -67,9 +67,9 @@ EAST_BATH = {"room": "1F-12", "line": "L-60f100105399a9bdfb08", "before": 1.48, 
              "terminations": ("L-0a7238edb9989d99d37a", "L-1ef59757a75524c397d7", "L-8fb80f626889e06f6f97")}
 PANTRY_LINE, PANTRY_BEFORE = "L-f32abcdb3b4db6877c64", 13.5
 # duplicate transition lines (0 inventory elements in T-303) -> the door the Checker named by closure; the binding
-# is asserted against the candidate line's own element id in research/agents_t310/v3055_run.py (closure in the id)
+# is asserted against the candidate line's own element id in research/agents_t310/v3057_run.py (closure in the id)
 DUPLICATES = {"L-b60811f60f8fdc9a4447": ("D-GF-02", "D2:495"), "L-e0c34550b13267b4e0f7": ("D-GF-10", "D2:825")}
-# Checker's candidate opening ids (per floor) and the candidate's doorway line of each (bound in v3055_run.py)
+# Checker's candidate opening ids (per floor) and the candidate's doorway line of each (bound in v3057_run.py)
 MISSING_DOORS = {"D-GF-11": ("GF", "OP-017", "L-e3ffb8005f85e89113cb"), "D-GF-12": ("GF", "OP-018", "L-9cbc8b1b9ebf6e79df66"),
                  "D-1F-06": ("1F", "OP-010", "L-bdf48c327992229649ca")}
 TEMPLATE_TRANSITION = "L-aed6f48195f99648c3f3"
@@ -95,7 +95,7 @@ def inventory():
 
 
 def build(project_id):
-    """-> the URBAN_V3055_INPUTS_V1 doc (the pool lines share documents / trade with the first candidate line of
+    """-> the URBAN_V3057_INPUTS_V1 doc (the pool lines share documents / trade with the first candidate line of
     POOL_TEMPLATE_CODE, picked by the engine)."""
     inv = inventory()
     trans = {r["element"].split(":", 1)[1]: r for r in inv if r["item_code"] == "FIN.WP.DOORWAY_TRANSITION"}
@@ -175,7 +175,7 @@ def build(project_id):
     sys.path.insert(0, str(ROOT / "research" / "agents_t193"))
     import t193_inputs as L7   # noqa: E402
     g = dict(L7.inputs(project_id)["guard"], new_records=[])
-    return {"schema": "URBAN_V3055_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
+    return {"schema": "URBAN_V3057_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
             "entries": ents, "guard": g}
 
 

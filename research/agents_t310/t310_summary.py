@@ -1,9 +1,9 @@
-"""T-310 r6: research/agents_t310/summary_t310.json from a finished v3055_run.py directory (<out>/v3055). Item codes,
+"""T-310 r6: research/agents_t310/summary_t310.json from a finished v3057_run.py directory (<out>/v3057). Item codes,
 units, states, quantities and engine ids only (no coordinates, no names). With --previous it asserts that the ledger
 rows, the totals moved by code and the wet_area_wp identity equal the previous summary's (a rebase moves no quantity
 of this package).
 
-    python3 -I research/agents_t310/t310_summary.py --run <out>/v3055 --out research/agents_t310/summary_t310.json \
+    python3 -I research/agents_t310/t310_summary.py --run <out>/v3057 --out research/agents_t310/summary_t310.json \
         [--previous <summary of the earlier round>]
 """
 from __future__ import annotations
@@ -20,9 +20,9 @@ sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v302 as A302  # noqa: E402
 
-BASE, NEW = "V3_0_54_BOQ_LINES.json", "V3_0_55_BOQ_LINES.json"
+BASE, NEW = "V3_0_54_BOQ_LINES.json", "V3_0_57_BOQ_LINES.json"
 DRAWINGS = ("Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run "
-            "research/agents_t310/v3055_run.py --t167 (own T-167 run this session); r6: V3_0_51 c0b6d664 (T-483) -> "
+            "research/agents_t310/v3057_run.py --t167 (own T-167 run this session); r6: V3_0_51 c0b6d664 (T-483) -> "
             "V3_0_53 36863f6c (T-487) -> V3_0_54 (T-480) base")
 
 
@@ -32,20 +32,20 @@ def _q(q):
 
 def build(d):
     d = Path(d)
-    run = json.loads((d / "V3_0_55_RUN.json").read_text(encoding="utf-8"))
-    led = json.loads((d / "V3_0_55_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))
+    run = json.loads((d / "V3_0_57_RUN.json").read_text(encoding="utf-8"))
+    led = json.loads((d / "V3_0_57_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))
 
     def cand(fn):
         raw = (d / fn).read_bytes()
         return {"file": fn, "sha256_8": hashlib.sha256(raw).hexdigest()[:8], "lines": len(json.loads(raw))}
     ident = run["identity"]
-    return {"task": "T-310", "method": "ARCH_TAKEOFF_V3.0.55", "base_candidate": cand(BASE),
+    return {"task": "T-310", "method": "ARCH_TAKEOFF_V3.0.57", "base_candidate": cand(BASE),
             "new_candidate": cand(NEW),
             "identity": {k: ident[k] for k in ("replaced", "added", "outside_rows", "outside_rows_identical_to_base",
                                                "outside_rows_sha256", "wet_area_wp", "diff")},
             "rows": [{"action": r["action"], "line_id": r["line_id"], "item_code": r["item_code"], "floor": r["floor"],
                       "room_id": r["room_id"], "element_id": r["element_id"], "unit": r["unit"],
-                      "base": _q(r["before_base"]), "v3_0_55": _q(r["after_v3_0_55"]),
+                      "base": _q(r["before_base"]), "v3_0_57": _q(r["after_v3_0_57"]),
                       "evidence_status": r["evidence_status"]} for r in led["rows"]],
             "totals_moved_by_code": run["totals_moved_by_code"], "drawings": DRAWINGS}
 
@@ -59,7 +59,7 @@ def main(argv=None):
     doc = build(a.run)
     if a.previous:
         old = json.loads(Path(a.previous).read_text(encoding="utf-8"))
-        def norm(x):   # T-310 r6: the version key of a row / total (v3_0_52 -> v3_0_55) is a renumbering, not a quantity
+        def norm(x):   # T-310 r6: the version key of a row / total (v3_0_52 -> v3_0_57) is a renumbering, not a quantity
             return json.loads(re.sub(r'"v3_0_5[0-9]"', '"v3_0_new"', json.dumps(x, sort_keys=True)))
         for k in ("rows", "totals_moved_by_code"):
             if norm(doc[k]) != norm(old[k]):

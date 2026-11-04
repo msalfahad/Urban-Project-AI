@@ -1,25 +1,24 @@
-"""T-310 r6: build rules/coverage/BOQ_FAMILY_MASTER_1.52.0.json = 1.51.0 (T-480, merged 1b66b719; never edited)
-  (1) + the PROMOTION of the one package 1.51.0 holds pending that has since merged (T-480 V3.0.54, merge 1b66b719),
-      by the T-485 rule R-T485-1 (a merged package never stays pending), with the T-483 r2 promotion functions
-      UNCHANGED (research/agents_t483/build_master_1_48_0.py promote / touched_block / carried_block, its module
-      constants set to this promotion, exactly as research/agents_t480/build_master_1_51_0.py): merge commit and verdict
-      from git and the board (out/PROMOTIONS_SOURCE_1_52_0.json, t310_promotions_source.py on 1.51.0), the families
-      the package changed from the LINE DIFF V3.0.53 -> V3.0.54 of this task's reproduced chain run
-      (out/T310_PACKAGE_FAMILIES.json, t310_package_families.py, chain (53, 54)), and the candidate census re-run at
-      V3.0.54 (out/LINE_INDEX_V3_0_54.json, research/agents_t479/t479_registry_census.py unchanged; verdict set board
+"""T-310 r7: build rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json = 1.53.0 (T-508, merged 40ab9061; never edited)
+  (1) + the PROMOTION of the one package 1.53.0 holds pending that has since merged (T-508 V3.0.56, merge 40ab9061,
+      Verifier 2026-11-04 19:52 Gate B), by the T-485 rule R-T485-1 (a merged package never stays pending), with the
+      T-483 r2 promotion functions UNCHANGED (research/agents_t483/build_master_1_48_0.py promote / touched_block /
+      carried_block, its module constants set to this promotion, exactly as research/agents_t508/build_master_1_53_0.py):
+      merge commit and verdict from git and the board (out/PROMOTIONS_SOURCE_1_54_0.json, t310_promotions_source.py on
+      1.53.0), the families the package changed from the LINE DIFF V3.0.55 -> V3.0.56 of this task's reproduced chain
+      run (out/T310_PACKAGE_FAMILIES.json, t310_package_families.py, chain (55, 56)), and the candidate census re-run at
+      V3.0.56 (out/LINE_INDEX_V3_0_56.json, research/agents_t479/t479_registry_census.py unchanged; verdict set board
       verdicts/V3.0.44, downgrade snapshot research/agents_t469);
-  (2) + the pending ARCH_TAKEOFF_V3.0.55 package (T-310, tools/family_master_candidate.py rule r3) and the B8-01 /
+  (2) + the pending ARCH_TAKEOFF_V3.0.57 package (T-310, tools/family_master_candidate.py rule r3) and the B8-01 /
       B8-02 / B8-03 / B8-09 text of the families whose lines it changes or adds; B8-09 owns the two pool layer codes
       WP.POOL.MEMBRANE and WP.POOL.PROTECTION_SCREED (ELEMENT_REGISTER: the pool membrane is its own family, never
       inside B8-08 or the concrete line; function HELD S8.2).
 
-The census is taken with the 1.51.0 family codes (the candidate of record V3.0.54 carries no pool layer line); the B8-09
+The census is taken with the 1.53.0 family codes (the candidate of record V3.0.56 carries no pool layer line); the B8-09
 codes are added after it, so the census describes the merged candidate only. r4 built the same package text as 1.49.0
-on 1.48.0 (V3.0.52, never merged; T-487 took 1.50.0 and T-480 1.51.0 meanwhile). T-508 may build its own master in
-parallel; under the merge-order rule the package merged later rebases. No quantity, capability, owner or line change
-with this file; the released default is untouched.
+(V3.0.52) and r6 as 1.52.0 (V3.0.55), never merged: T-488 took 1.52.0 and T-508 1.53.0 meanwhile (merge-order rule).
+No quantity, capability, owner or line change with this file; the released default is untouched.
 
-    python3 -I research/agents_t310/build_master_1_52_0.py --task-commit <sha> | --check
+    python3 -I research/agents_t310/build_master_1_54_0.py --task-commit <sha> | --check
 """
 from __future__ import annotations
 
@@ -41,22 +40,22 @@ import build_master_1_43_0 as B  # noqa: E402  (unit text and release rule of T-
 import build_master_1_48_0 as P48  # noqa: E402  (T-483 r2 promotion functions, unchanged)
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.51.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.52.0.json"
-VERSION = "1.52.0"
-PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_52_0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.53.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
+VERSION = "1.54.0"
+PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_54_0.json"
 ATTRIB = HERE / "out/T310_PACKAGE_FAMILIES.json"
-INDEX = HERE / "out/LINE_INDEX_V3_0_54.json"
-BOARD_COMMIT = "c2d9eb13"
-OLD_CAND = "ARCH_TAKEOFF_V3.0.53"
-CAND, AS_OF = "ARCH_TAKEOFF_V3.0.54", "T-480"
-DIFF_SPAN = "V3.0.54"
-WHO = "T-310 r6"
+INDEX = HERE / "out/LINE_INDEX_V3_0_56.json"
+BOARD_COMMIT = "bd7342e1"
+OLD_CAND = "ARCH_TAKEOFF_V3.0.55"
+CAND, AS_OF = "ARCH_TAKEOFF_V3.0.56", "T-508"
+DIFF_SPAN = "V3.0.56"
+WHO = "T-310 r7"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
-MOD = "engine/source/arch_v3055.py"
-TST = "tests/t310_wet_area_wp/test_arch_v3055.py"
+MOD = "engine/source/arch_v3057.py"
+TST = "tests/t310_wet_area_wp/test_arch_v3057.py"
 PENDING = {
-    "task": "T-310", "method_version": "ARCH_TAKEOFF_V3.0.55", "module": MOD,
+    "task": "T-310", "method_version": "ARCH_TAKEOFF_V3.0.57", "module": MOD,
     "status": FMC.PENDING_STATUS, "integrates": ["T-303", "T-309", "T-286", "T-458"],
     "tests": ["tests/t310_wet_area_wp"],
     "changes_families_by_item_code": ["FIN.WP.WALL_UPTURN", "FIN.WP.FLOOR", "FIN.WP.TERMINATION",
@@ -67,23 +66,23 @@ PENDING = {
             "from the drawing); 11 transition lines keyed per physical door, 2 duplicates NOT APPLICABLE, 3 missing "
             "doors added HELD BLANK; pool membrane 29.582355 m2 and protection screed 1.524503 m3 added "
             "DRAWING-CONFIRMED (upstand 0 .. 1.349668 m2 / 0 .. 0.068072 m3 and the membrane function HELD beside); "
-            "every other V3.0.54 line byte-identical; the Gate B integration package",
+            "every other V3.0.56 line byte-identical; the Gate B integration package",
 }
 
-PROPOSED = ("1.52.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.55 package (Gate B); the released capability "
+PROPOSED = ("1.54.0 (T-310): moved by the pending ARCH_TAKEOFF_V3.0.57 package (Gate B); the released capability "
             "of V2.9 + route G is unchanged")
 
-OPT_IN = "ARCH_TAKEOFF_V3.0.55 (engine/source/arch_v3055.py, opt-in candidate; pending Gate B, T-310)"
+OPT_IN = "ARCH_TAKEOFF_V3.0.57 (engine/source/arch_v3057.py, opt-in candidate; pending Gate B, T-310)"
 
 MISS = {
-    "B8-01": ("in the opt-in candidate V3.0.55: pantry floor membrane 13.455 m2 (box 13.500 - column 0.045, "
+    "B8-01": ("in the opt-in candidate V3.0.57: pantry floor membrane 13.455 m2 (box 13.500 - column 0.045, "
               "DRAWING-CONFIRMED; flush-column reading +0.045 named); penetrations still HELD"),
-    "B8-02": ("in the opt-in candidate V3.0.55: one transition line per physical door (11 keyed, 2 duplicates NOT "
+    "B8-02": ("in the opt-in candidate V3.0.57: one transition line per physical door (11 keyed, 2 duplicates NOT "
               "APPLICABLE, 3 missing doors HELD BLANK); every transition figure HELD / bounded (detail not printed); "
               "the pantry door's threshold / transition MISSING (binding piece)"),
-    "B8-03": ("in the opt-in candidate V3.0.55: 1F east bath upturn 1.580 m2 (run by policy V3; doorway segments HELD "
+    "B8-03": ("in the opt-in candidate V3.0.57: 1F east bath upturn 1.580 m2 (run by policy V3; doorway segments HELD "
               "beside); 3 window termination lines NOT APPLICABLE; the pantry open-side termination MISSING"),
-    "B8-09": ("in the opt-in candidate V3.0.55: pool membrane 29.582355 m2 and protection screed 1.524503 m3 on the "
+    "B8-09": ("in the opt-in candidate V3.0.57: pool membrane 29.582355 m2 and protection screed 1.524503 m3 on the "
               "base and outer wall faces (DRAWING-CONFIRMED); upstand faces HELD (C9), membrane function HELD (S8.2); "
               "no water-side waterproofing is printed"),
 }
@@ -131,11 +130,11 @@ def _build(task_commit):
     new["supersedes"] = (f"{old['version']} (kept unchanged on disk; every released-configuration field copied "
                          f"unchanged; its {len(promoted)} pending package promoted to candidate_packages; the families "
                          f"it changed re-derived at {CAND}, every other family's candidate block moved to {CAND} with "
-                         f"its census asserted unchanged; B8-01 / B8-02 / B8-03 / B8-09 text for the pending V3.0.55 "
-                         f"package, B8-09 owning the two pool layer codes; T-508 may build its own in parallel)")
+                         f"its census asserted unchanged; B8-01 / B8-02 / B8-03 / B8-09 text for the pending V3.0.57 "
+                         f"package, B8-09 owning the two pool layer codes; T-498 / T-423 may build their own in parallel)")
     new["source"] = (old["source"] + f" | {VERSION} ({WHO}): {old['version']} + the {len(promoted)} merged pending "
                      f"package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at {CAND}) + "
-                     "pending ARCH_TAKEOFF_V3.0.55 (rule r3) + the waterproofing families it changes; B8-09 owns the two "
+                     "pending ARCH_TAKEOFF_V3.0.57 (rule r3) + the waterproofing families it changes; B8-09 owns the two "
                      "pool layer codes; no quantity, capability or owner change")
     head = new["v3_0_candidate"].split(": the same opt-in candidate", 1)
     if len(head) != 2:
@@ -174,7 +173,7 @@ def _build(task_commit):
                 f"+ {DIFF_SPAN} (T-483 r2)", f"+ {DIFF_SPAN} ({WHO})")
         else:
             if cc[code] != oc[code]:
-                raise SystemExit(f"{code}: no line changed V3.0.53 -> V3.0.54 but its census moved")
+                raise SystemExit(f"{code}: no line changed V3.0.55 -> V3.0.56 but its census moved")
             f["candidate"] = P48.carried_block(f)
             f["candidate"]["candidate_basis"] = f["candidate"]["candidate_basis"].replace(
                 f"+ {DIFF_SPAN} (T-483 r2: no line", f"+ {DIFF_SPAN} ({WHO}: no line")
@@ -191,11 +190,11 @@ def _build(task_commit):
     new["candidate_census"] = dict(
         old_cen, method_version=CAND, lines=census["lines"], lines_sha256=index["inputs"]["lines"],
         verdicts_sha256=index["inputs"].get("verdicts"), downgrades_sha256=index["inputs"].get("downgrades"),
-        index="research/agents_t310/out/LINE_INDEX_V3_0_54.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
+        index="research/agents_t310/out/LINE_INDEX_V3_0_56.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
               + ")",
-        scope=(f"the development villa run of the merged candidate of record V3.0.54 (T-480 merge "
+        scope=(f"the development villa run of the merged candidate of record V3.0.56 (T-508 merge "
                f"{prom[AS_OF]['merge_commit'][:8]}; BOQ_LINES {vc['lines_sha256'][:8]} reproduced by {WHO} from the "
-               "Drive copies, V3.0.51 = c0b6d664 and V3.0.53 = 36863f6c on the way); the V3.0.44 "
+               "Drive copies, V3.0.54 = c85c4630 and V3.0.55 = a498fc61 on the way); the V3.0.44 "
                "verdict set and the T-469 downgrade snapshot bind by line content, as in 1.43.0"),
         families=cc, not_a_boq_lines=census["not_a_boq_lines"], no_family=census["no_family"],
         issue_counts=census["issue_counts"],
@@ -203,17 +202,17 @@ def _build(task_commit):
         previous={"method_version": old_cen["method_version"], "lines": old_cen["lines"],
                   "lines_sha256": old_cen["lines_sha256"]})
     new["promotion"] = {
-        "task": "T-310", "round": "r6", "from_registry": old["version"], "promoted": [p["task"] for p in promoted],
+        "task": "T-310", "round": "r7", "from_registry": old["version"], "promoted": [p["task"] for p in promoted],
         "previous_promotion": {"task": old["promotion"]["task"], "from_registry": old["promotion"]["from_registry"],
                                "promoted": old["promotion"]["promoted"]},
-        "merge_commits_source": "research/agents_t310/out/PROMOTIONS_SOURCE_1_52_0.json (sha256 "
+        "merge_commits_source": "research/agents_t310/out/PROMOTIONS_SOURCE_1_54_0.json (sha256 "
                                 + hashlib.sha256(PROMOTIONS.read_bytes()).hexdigest() + ")",
         "line_diff": "research/agents_t310/out/T310_PACKAGE_FAMILIES.json (sha256 "
                      + hashlib.sha256(ATTRIB.read_bytes()).hexdigest() + ")",
         "rule": old["promotion"]["rule"],
         "quantity_change": "none (no engine, method, line or capability field moves)",
-        "line_index": "research/agents_t310/out/LINE_INDEX_V3_0_54.json"}
-    # (2) the pending V3.0.55 package's families (after the census: it describes the merged candidate only)
+        "line_index": "research/agents_t310/out/LINE_INDEX_V3_0_56.json"}
+    # (2) the pending V3.0.57 package's families (after the census: it describes the merged candidate only)
     fams = {f["code"]: f for f in new["families"]}
     for code in ("B8-01", "B8-02", "B8-03", "B8-09"):
         f = fams[code]
@@ -231,7 +230,7 @@ def _build(task_commit):
     if f["item_codes"]:
         raise SystemExit(f"B8-09: owns item codes in {old['version']} (expected none)")
     f["item_codes"] = list(POOL_CODES)
-    f["note"] = str(f["note"]) + (" | 1.52.0 (T-310): owns WP.POOL.MEMBRANE (m2) and WP.POOL.PROTECTION_SCREED (m3), "
+    f["note"] = str(f["note"]) + (" | 1.54.0 (T-310): owns WP.POOL.MEMBRANE (m2) and WP.POOL.PROTECTION_SCREED (m3), "
                                   "the printed outer protective layers of the pool (ELEMENT_REGISTER: their own "
                                   "family, never B8-08 or the concrete line); the family's water-side waterproofing "
                                   "is not printed for the development villa")

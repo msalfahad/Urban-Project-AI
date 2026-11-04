@@ -1,10 +1,10 @@
-"""T-310 r6: the merge commit and Checker verdict head of every merged pending package of BOQ_FAMILY_MASTER_1.51.0
-(T-480 V3.0.54, merge 1b66b719), with the T-485 / T-483 r2 rules unchanged (research/agents_t483/t483_promotions_source.py
+"""T-310 r7: the merge commit and Checker verdict head of every merged pending package of BOQ_FAMILY_MASTER_1.53.0
+(T-508 V3.0.56, merge 40ab9061), with the T-485 / T-483 r2 rules unchanged (research/agents_t483/t483_promotions_source.py
 build / verdict_head: exactly one merge of agents/task-<row> on HEAD whose second parent holds the task commit and whose
 first parent does not; the verdict is the head of the row's Status cell, quoted verbatim).
 
     python3 -I research/agents_t310/t310_promotions_source.py --board <agents/control>/docs/agents \
-        --out research/agents_t310/out/PROMOTIONS_SOURCE_1_52_0.json
+        --out research/agents_t310/out/PROMOTIONS_SOURCE_1_54_0.json
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "research" / "agents_t483"))
 import t483_promotions_source as PS  # noqa: E402
 
-MASTER = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.51.0.json"
+MASTER = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.53.0.json"
 
 
 def main(argv=None):

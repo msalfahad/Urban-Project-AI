@@ -1,6 +1,6 @@
 """T-310 r6: rules/coverage/BOQ_FAMILY_MASTER_1.52.0.json = 1.51.0 + the promotion of its merged pending package
 (T-480 V3.0.54, merge 1b66b719; R-T485-1) with the family it changed re-derived from the V3.0.54 census and the line
-diff V3.0.53 -> V3.0.54, + the pending ARCH_TAKEOFF_V3.0.55 package (T-310) and the waterproofing family text (B8-01 /
+diff V3.0.53 -> V3.0.54, + the pending ARCH_TAKEOFF_V3.0.57 package (T-310) and the waterproofing family text (B8-01 /
 B8-02 / B8-03 / B8-09), B8-09 owning the two pool layer codes. No owner, capability or quantity change; every family
 the line diff does not name keeps its census and its state."""
 from __future__ import annotations
@@ -17,7 +17,7 @@ for p in (ROOT, ROOT / "research" / "agents_t310", ROOT / "research" / "agents_t
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
-from engine.source import arch_v3055 as A  # noqa: E402
+from engine.source import arch_v3057 as A  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
 import build_master_1_52_0 as M  # noqa: E402
 import build_master_1_43_0 as B43  # noqa: E402
@@ -43,7 +43,7 @@ def test_checks_clean_with_git(docs):
     assert B43.census_problems(docs[1]) == []
 
 
-def test_merged_t480_promoted_and_only_v3055_pending(docs):
+def test_merged_t480_promoted_and_only_v3057_pending(docs):
     old, new = docs
     assert new["version"] == "1.52.0"
     assert [p["task"] for p in old["pending_packages"]] == ["T-480"]
@@ -53,7 +53,7 @@ def test_merged_t480_promoted_and_only_v3055_pending(docs):
     assert p["merge_commit"].startswith("1b66b719") and p["verdict"].startswith("MERGED") and "1b66b719" in p["verdict"]
     assert new["candidate"]["method_version"] == "ARCH_TAKEOFF_V3.0.54" and new["candidate"]["as_of_package"] == "T-480"
     (q,) = new["pending_packages"]
-    assert (q["task"], q["method_version"], q["module"]) == ("T-310", A.METHOD, "engine/source/arch_v3055.py")
+    assert (q["task"], q["method_version"], q["module"]) == ("T-310", A.METHOD, "engine/source/arch_v3057.py")
     assert "merge_commit" not in q and "verdict" not in q
 
 
@@ -139,4 +139,4 @@ def test_adverse_pending_dropped_is_stale(docs, monkeypatch):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = []
     monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
-    assert any("arch_v3055" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+    assert any("arch_v3057" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
