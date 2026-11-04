@@ -1,0 +1,42 @@
+{
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.53",
+  "ARCH_TAKEOFF_V3.0.54"
+ ],
+ "registry": "1.51.0",
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.53": {
+   "lines": 4936,
+   "lines_sha256": "36863f6ca52749dabad4e624f97bca468ed8c299b38f15b5af7cfea4626729d7"
+  },
+  "ARCH_TAKEOFF_V3.0.54": {
+   "apart": [],
+   "families": {
+    "B7-09": {
+     "FIN.RAILING": {
+      "added": 3,
+      "changed": 15,
+      "record": 0,
+      "removed": 0
+     }
+    }
+   },
+   "item_codes": {
+    "FIN.RAILING": {
+     "added": 3,
+     "changed": 15,
+     "record": 0,
+     "removed": 0
+    }
+   },
+   "lines": 4939,
+   "lines_sha256": "c85c4630d117bcf37e012648d2411b1832a908e3eee0bb1ec71419ef6deae4c2",
+   "previous": "ARCH_TAKEOFF_V3.0.53",
+   "record_apart": [],
+   "record_families": [],
+   "record_only": 0,
+   "touched": 18
+  }
+ }
+}
