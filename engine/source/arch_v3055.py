@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.55 (T-488, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.53
-(engine.source.arch_v30, arch_v301 .. arch_v3053), with ONE new piece, the BLOCKWORK WIRING CONDITIONS of the merged
+"""ARCH_TAKEOFF_V3.0.55 (T-488, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.54
+(engine.source.arch_v30, arch_v301 .. arch_v3054), with ONE new piece, the BLOCKWORK WIRING CONDITIONS of the merged
 blockwork basis (T-449 round 3, BLOCKWORK_BASIS_RULES_V1) as the T-482 verdict settled them (BLOCKWORK_CONDITIONS_V1):
 
   ROOF_DATUM      (R-MAS-ROOF-DATUM-1) a wall of a storey under a ROOF-ONLY plate whose structural top is not printed
@@ -31,7 +31,7 @@ Refused (InputsError / ValueError, nothing written): a stale basis (a wall's car
 piece, or not U - L x the what-if build-up the carried storey implies); a held part line that still carries a figure;
 a wall twice; a conflict whose carried figure is not its low end; a range with low > high; an upper bound below the
 carried U; a parapet run whose stated 'before' is not the line's; a candidate that already carries V3.0.55 records.
-Every other line is byte-identical to V3.0.53 (asserted); totals move only in MAS.BLOCK, ARCH.WALL_PANEL and
+Every other line is byte-identical to V3.0.54 (asserted); totals move only in MAS.BLOCK, ARCH.WALL_PANEL and
 ARCH.WALL_VOLUME (asserted). Files: V3_0_55_BOQ_LINES.json / .csv, V3_0_55_INTEGRATION_LEDGER.json / .csv,
 V3_0_55_DIFF.csv, V3_0_55_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -50,16 +50,17 @@ from engine.source import arch_v3026 as A3026
 from engine.source import arch_v3046 as A3046
 from engine.source import arch_v3050 as A3050
 from engine.source import arch_v3053 as A3053
+from engine.source import arch_v3054 as A3054
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: holds / restates Checker-verified basis conditions; adds no value
 METHOD = "ARCH_TAKEOFF_V3.0.55"
-EXTENDS = A3053.METHOD
+EXTENDS = A3054.METHOD
 CANDIDATE = A30.METHOD
 POLICY_ID = "URBAN_BOQ_T488_ARCH_V3_0_55"
 INPUTS_SCHEMA = "URBAN_V3055_INPUTS_V1"
 LEDGER_SCHEMA = "URBAN_V3055_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
-InputsError = A3053.InputsError
+InputsError = A3054.InputsError
 _r = A3050._r
 _fmt = A3050._fmt
 RULE_ID, RULE_VERSION = "R-T488-1", "T-488"
@@ -99,7 +100,7 @@ PIECES = {
                                  "has no printed level -> U - L x b_r; D-27 width readings; the roof-level parapet "
                                  "run read straight)"},
 }
-WAITING = dict(A3053.WAITING)
+WAITING = dict(A3054.WAITING)
 WAITING.update({
     "T488_ROOF_BUILDUP": "the roof-storey walls stay HELD ON ROOF DATUM until the roof build-up b_r (or the structural "
                          "top of the roof-only plate) is printed (D-39); their terms U - L x b_r are on the record",
@@ -623,10 +624,28 @@ def check_wiring(lines):
 
 
 # ================================================================================================ integrate / write
+def _earlier_checks(out, for_lead=()):
+    """every check the V3.0.54 integration runs, on the V3.0.55 lines (same functions, same order)."""
+    from engine.source import arch_v3031 as A3031, arch_v3032 as A3032, arch_v3033 as A3033, arch_v3034 as A3034
+    from engine.source import arch_v3035 as A3035, arch_v3036 as A3036, arch_v3038 as A3038, arch_v3039 as A3039
+    from engine.source import arch_v3040 as A3040, arch_v3041 as A3041, arch_v3042 as A3042, arch_v3044 as A3044
+    from engine.source import arch_v3045 as A3045, arch_v3047 as A3047, arch_v3051 as A3051
+    older = [ln for ln in out if not _inp(ln).get(A3051.REC_KEY)]
+    return {"guards": A3031._family_guards(out, for_lead),
+            "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
+            "corrections": A3033.check_corrections(out), "tile_zones": A3034.check_zones(out),
+            "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
+            "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
+            "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
+            "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(older),
+            "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
+            "stair_rooms": A3047.check_stair_rooms(out), "remainder": A3051.check_remainder(out),
+            "lintels": A3053.check_lintels(out), "rail_runs": A3054.check_runs(out)}
+
+
 def integrate(prev, changes, for_lead=()):
     """-> (V3.0.55 lines, identity). Replaced lines keep their place and id; every other line is byte-identical
-    (asserted). Every earlier family guard and V3.0.53 check runs on the integrated lines."""
-    from engine.source import arch_v3031 as A3031
+    (asserted). Every earlier family guard and V3.0.54 check runs on the integrated lines."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     rep = {}
     for c in changes:
@@ -637,10 +656,8 @@ def integrate(prev, changes, for_lead=()):
             raise ValueError(f"{METHOD}: {a['line_id']} replaced twice")
         rep[a["line_id"]] = a
     out = [rep.get(ln["line_id"], ln) for ln in prev]
-    guards = A3031._family_guards(out, for_lead)
     ident = {"base_lines": len(prev), "v3_0_55_lines": len(out), "v3_0_55_rows": len(changes),
-             "replaced": len(rep), "added": 0, "guards": guards, "lintels": A3053.check_lintels(out),
-             "wiring": check_wiring(out)}
+             "replaced": len(rep), "added": 0, **_earlier_checks(out, for_lead), "wiring": check_wiring(out)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")

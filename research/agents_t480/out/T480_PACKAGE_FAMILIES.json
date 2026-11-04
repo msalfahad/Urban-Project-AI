@@ -1,0 +1,42 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.50.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.51",
+  "ARCH_TAKEOFF_V3.0.53"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.51": {
+   "lines": 4876,
+   "lines_sha256": "c0b6d664aeff58809641e1cb09cfe32834fb7a66a55565fa04cc74fb32da37b1"
+  },
+  "ARCH_TAKEOFF_V3.0.53": {
+   "lines": 4936,
+   "lines_sha256": "36863f6ca52749dabad4e624f97bca468ed8c299b38f15b5af7cfea4626729d7",
+   "previous": "ARCH_TAKEOFF_V3.0.51",
+   "item_codes": {
+    "STR.CONC.LINTEL": {
+     "added": 60,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B9-02": {
+     "STR.CONC.LINTEL": {
+      "added": 60,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 60,
+   "record_only": 0
+  }
+ }
+}
