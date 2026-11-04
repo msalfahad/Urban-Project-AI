@@ -84,3 +84,30 @@ Totals moved (waterproofing codes only): FIN.WP.WALL_UPTURN 25.114585 -> 25.2145
 FIN.WP.FLOOR 85.62071 -> 85.57571 m2 (-0.045, -0.05 %); FIN.WP.DOORWAY_TRANSITION 13 bounded (high 2.138816) -> 11
 bounded (high 1.819408) + 3 HELD BLANK; FIN.WP.TERMINATION 7 bounded (high 3.660363) -> 4 (high 3.160363);
 WP.POOL.MEMBRANE + 29.582355 m2; WP.POOL.PROTECTION_SCREED + 1.524503 m3. Per-line rows: summary_t310.json.
+
+## 7. r2 (Verifier rejection 2026-11-04 ~02:25 UTC: Gate B (b), 4 new failures)
+
+Cause: ARCH_TAKEOFF_V3.0.49 (declared TOOLING) imported waterproofing_policy_v3 -> v2, both declared UNWIRED_PRODUCER:
+the T-212 property P2 (no candidate reaches an unwired producer) failed in t212 (2) and t379 (1); the committed T-459
+binding (t459) did not list arch_v3049.
+
+Fix (no quantity change):
+- arch_v3049 is a GUARD_HOST: `guard_recheck()` runs the merged V3.0.6 guard through `arch_v307.guard_changes` over the
+  V3.0.48 lines with this version's changes + its 5 added lines (each ADD names its guard_element, part WHOLE). A hold
+  on a changed or added line refuses the run (arch_v307), and so does a hold on any other line (nothing outside the
+  waterproofing codes moves). No guard block -> NO_PROJECT_INPUT in the log. load_inputs validates the optional block.
+- Guard class record (own commit, guard tests untouched): waterproofing_policy_v2.py:36 and _v3.py:20
+  UNWIRED_PRODUCER -> GUARDED_VIA_V3.0.6 (their lines now reach the candidate and the V3.0.6 guard re-runs over them).
+  Rebar firewall (T-477): v2 stays OTHER_REBAR_AWARE; v3 carries no rebar word (t477 undeclared check passes).
+- t310_inputs.build carries the V3.0.7 guard inputs unchanged (t193, new_records [] as t146 / t211 / t231).
+- T-459 binding rebuilt by `t459_census.py candidate --write` (arch_v3049: no route G token, touching []); master
+  1.46.0 rebuilt by its builder (line references only); rules/RULES_MANIFEST.json rebuilt by m9_rules_manifest.py
+  (only the 1.46.0 sha).
+
+Drive run (this session, own decode of P7757_DXF_COMPRESSED.zip + ST7757 dxf, own T-167 run, chained to the end):
+V3_0_48 33a81c53 (4876 lines) -> V3_0_49 f3fe14da (4881), identical to r1; guard state RUN over 4881 lines, evidence
+research/agents_t193/dev_villa_guard_evidence_v2.json (a94e199b), held_live_new [], silent_omissions [], no hold
+on any line -> the run passes; findings stay recorded-only / listed-not-live as in V3.0.7.
+Tests: tests/t310_wet_area_wp/test_guard_r2.py (normal: no block, block with no finding = same changes, ADD
+guard_element; adverse: drawn part carried by no line refuses, hold outside the codes refuses, malformed block refused,
+candidate importing a still-unwired producer is a P2 problem).
