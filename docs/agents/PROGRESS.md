@@ -1812,20 +1812,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-11-03 04:15)
-- Candidate (not released): the footing blinding is now split in the candidate: the 24 footing pits 12.734 m3 are
-  checked and valued as their own line; the raft, the strip beyond the plot and the ground-beam parts stay held with
-  their ranges beside (7.64 .. 13.47 m3), one line blank. The freelancer's 47.06 m3 is a plate under the whole plot
-  that no drawing shows (a rule difference, not an engine error). Released BOQ unchanged.
-- Checker next: the remaining window sills and skirting (certain skirting 189.82 -> 198.83 lm if confirmed), the
-  wet-wall fixing bed check (no second bed exists; one layer was mis-named and priced as a tile bed), then the
-  scoreboard restatement for the blinding change.
-- Structural stream: family register refresh (building), then the lift tie beam and below-ground masonry lines.
-- Finishes stream: the stair-room skirting lines into the candidate (ordered next; it has waited two runs), then
-  handrails along the flights.
-- Blockwork: the wall register is rebuilt from general rules (260 entries, none project-only); three open points
-  before it is wired: the top-floor wall height under the roof, one ground-floor wall range, one parapet area.
-- Materials: block / mortar / glue / lintel counts as a ledger from your confirmed rules (next for worker 2).
+(Lead 2026-11-04 00:20)
+- Candidate (not released): earthworks are in the candidate for the first time: excavation 225.94 m3 (the footing
+  pits 208.16 m3 as an estimate, the pool 17.78 m3 from the drawings); backfill a range 119.96 .. 128.64 m3 (6 of 8
+  parts checked); disposal not measured yet. One small trench line counts up to 0.26 m3 twice and is held until a
+  fix package lands. Released BOQ unchanged.
+- Finishes: the rest of the skirting (certain 203.37 -> 212.38 m) is checked in engineering and waits only for a
+  rebase; four stair landings (10.10 -> 20.69 m2) and a 4.91 m2 slab round the pool court with no waterproofing are
+  confirmed by the checker and go into the candidate next. Waterproofing wiring now runs on a second worker.
+- Materials: blocks, mortar, glue, plaster and tile tables are checked but not wired; a map of where each goes is
+  waiting for the checker; tile bed cement / sand and a fix for totals that showed 0 over held rows are opened.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

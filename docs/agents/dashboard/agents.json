@@ -6,52 +6,52 @@
   "last_run": "2026-11-03T04:32:03Z",
   "result": "ok",
   "working_on": "Daily update 3 Nov 04:32 UTC (scheduler SUCCEEDED); next 4 Nov 04:31 UTC",
-  "as_of": "2026-11-03T20:25:00Z"
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-03T20:14:00Z",
+  "last_run": "2026-11-04T00:13:00Z",
   "result": "running",
-  "working_on": "Evening review: 6 merged since 16:17 incl. the stair-room skirting into the candidate (+13.550 lm); earthworks wiring re-staged after a second run stopped without a final line; 4 new tasks from Checker findings (stair landings, pool-court slab waterproofing, outdoor floor materials, materials binding map)",
-  "as_of": "2026-11-03T20:25:00Z"
+  "working_on": "Night review: 4 merged since 20:18 incl. earthworks into the candidate (V3.0.48, excavation 225.94 m3); trench fix, materials wiring, landings, stair skirting and disposal tasks opened; waterproofing wiring moved to worker 2 (4 Nov review)",
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T19:23:00Z",
+  "last_run": "2026-11-03T23:20:00Z",
   "result": "ok",
-  "working_on": "19:23 no claimable task (skirting remainder waited for the stair-room skirting merge, now done); 17:25-18:09 stair-room skirting rework (merged 20:12); next: skirting remainder integration",
-  "as_of": "2026-11-03T20:25:00Z"
+  "working_on": "21:22-22:40 skirting remainder integration (ready, must rebase on V3.0.48); 23:20 no claimable task; next: skirting rebase + registry gate fix",
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-03T18:43:00Z",
+  "last_run": "2026-11-03T22:41:00Z",
   "result": "ok",
-  "working_on": "18:43-19:12 balcony / terrace waterproofing census (ready for check; found 4.907 m2 pool-court slab with no waterproofing line); 16:42 registry guard fix (merged); next: stair landing omissions",
-  "as_of": "2026-11-03T20:25:00Z"
+  "working_on": "22:41-22:48 outdoor floor material rows (merged); 20:43-21:06 stair landings census (merged); next: wet-area waterproofing wiring into the candidate",
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-03T18:59:45Z",
+  "last_run": "2026-11-03T23:00:00Z",
   "result": "ok",
-  "working_on": "17:02 run on earthworks wiring wrote no final line (incomplete, no work pushed, second time); 18:59 run idled on its lock; next (20:59): earthworks wiring in pushed stages",
-  "as_of": "2026-11-03T20:25:00Z"
+  "working_on": "21:01-22:40 earthworks wiring in pushed stages (merged as V3.0.48); 23:00-23:15 materials binding map (ready for check); next: trench double-count fix",
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-03T18:53:00Z",
+  "last_run": "2026-11-03T23:49:21Z",
   "result": "ok",
-  "working_on": "18:53-20:14 stair-room skirting integration merged (candidate V3.0.47); 16:51-17:12 merged guard fix, tiles adhesive, stone floor census, site preparation, plaster mix; next: balcony waterproofing census",
-  "as_of": "2026-11-03T20:25:00Z"
+  "working_on": "22:52-23:54 merged earthworks package (Gate B, one line held defective) and outdoor material rows; 23:50 overlap guard; next: materials binding map",
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-03T20:25:00Z"
+  "as_of": "2026-11-04T00:30:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-03T12:54:59Z",
   "result": "ok",
   "working_on": "Refreshed 3 Nov 12:56 UTC (scheduler SUCCEEDED); next 4 Nov 00:54 UTC",
-  "as_of": "2026-11-03T20:25:00Z"
+  "as_of": "2026-11-04T00:30:00Z"
  }
 ]

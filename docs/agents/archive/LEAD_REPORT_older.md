@@ -1,3 +1,19 @@
+## LEAD REPORT 2026-11-03 12:20 UTC
+
+Drive read OK (nothing created or modified since 08:00, no photo task). Training villa: candidate of record now V3.0.46 35d70129 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Structure (stream S Gate B PASS): GF lift tie beam 5.500 m (Checker own DXF AGREE) and house block below ground AT_LEAST 11.389 m2 added as HELD lines (section D-43, annex D-35); 4,856 lines byte-identical; L4 0 fail.
+- Earthworks (piece, unwired): pits backfill 115.55 .. 128.62 -> 119.96 .. 128.64 m3, PARTIALLY VERIFIED 7 / 8 (necks 5.154, straps 0.180 m3 AGREE exact; residual D-33 / D-35 8.650 + C8 0.030 m3 named). Wiring claimable now.
+- Blockwork: materials r2 merged (glue L-2fdc 444.47 .. 451.22 kg RANGE-NET; black 0.20 1,346.55 nr unchanged). Conditions settled from the structural drawings: 8 2F walls under the roof HELD U - L x b_r on D-39 (52.776 m2 carried today = the b_r 0.05 what-if, it leaves the determinate total at wiring), GF-W22 CONFLICT 12.931 .. 12.944 m2, parapet NW-2 0 .. 3.167 m2. Checker 3 / 4 re-measured. Wiring -> new T-488.
+- Plaster materials (piece, unwired): dry mortar 4.727 m3 ESTIMATED (236.35 m2 x 0.020), wet render >= 5.105 m3 (340.30 m2 x >= 0.015), spatter 576.65 m2; Checker re-derived exact. Cement / sand HELD (no mix).
+- Registry 1.43.0: 39 packages promoted; families in the candidate 13 -> 44, stale blocks 21 -> 0.
+- Decision: Q-79 (plaster mix) WITHDRAWN, not ERS s.2.7 (non-critical procurement parameter; level-4 estimate allowed; the 1990 specification was only read to a 97,008-character cut) -> T-489. New: T-488, T-489, T-490 (B3-03 stone floor), T-491 (site preparation, your 17:20 item 6). 2 register rulings, 4 lessons rows (3 ADOPTED from Checker-endorsed verdicts).
+- Gates: Gate 0 none; Gate 2 stream S T-350 r3 next, stream F T-443 r2 rebasing.
+Team health: since 08:18 every closed run wrote STARTED + final line (Worker 1 x1, Worker 2 x2, Worker 3 x3 incl. the 07:01 run, Verifier x4), self-checks PASS, no refusals; Checker 6 merged / 0 rejected. Open: Worker 1 11:20 (in lock). Stream F delivered 0 packages since 22:50 (rebase after the stream S merge): 10 Nov AT RISK; 4 Nov review stands. Self-check PASS; queue check 22 actionable, 0 flagged, 0 stall.
+
+OWNER PACKAGE: none today (no item meets standard section 2.7; Q-79 withdrawn, you may still give a company mix and it supersedes the estimate).
+
+NEEDS FIXING (only you): repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-03 08:18 UTC
 
 Drive read OK (nothing created or modified since 04:00, no photo task). Training villa: candidate of record V3.0.45 5972888b unchanged (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3).

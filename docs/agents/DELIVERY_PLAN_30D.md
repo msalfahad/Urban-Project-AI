@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 00:20; recovery plan in force)
+
+- Since 20:18: 4 merged (T-486, T-493, T-495, T-350 r4 Gate B). Candidate of record V3.0.48 33a81c53 (earthworks
+  valued for the first time: excavation 225.941 m3), BOQ_FAMILY_MASTER 1.45.0; not released. READY 1 (T-496).
+- Step 2: stream S delivered T-350 r4; next T-497 (trench fix), T-487, T-488, T-498, T-382, T-474 p2 = 6 left.
+  Stream F delivered 0 more (T-483 must rebase as V3.0.49 with the t485 gate fix). 4 Nov review applied: T-310 /
+  T-314 (+ new T-502) go to worker 2, so three candidate packages build in parallel (merge-order rule). Remaining
+  candidate packages about 15 in 6 days across 3 builders: 10 Nov AT RISK (needs about 2.5 merges a day per stream).
+- Step 5 materials: binding map T-496 READY; T-498 (blockwork materials wiring after T-488), T-499 (held subtotals
+  written as 0), T-500 (bed mortar for 88 lines) opened; disposal T-503 by the owner material balance.
+
 ## Status (Lead, 2026-11-03 20:18; recovery plan in force)
 
 - Since 12:18: 7 merged (T-492, T-455, T-490, T-491, T-489, T-443 r3 Gate B), 1 rejected and reworked (T-443 r2).
