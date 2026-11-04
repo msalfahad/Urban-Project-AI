@@ -1,0 +1,349 @@
+{
+ "checker_drawn_outline_m3": [
+  1.069269,
+  1.176467
+ ],
+ "depths_m": {
+  "pits_and_f10f": 1.67,
+  "trench": 0.1
+ },
+ "dig_order": [
+  "pool envelope",
+  "footing pits",
+  "F10F",
+  "FF lift raft",
+  "ext main GB trench"
+ ],
+ "dxf_sha8": "9f9d1179",
+ "excavation_held_bound_m3": {
+  "consistent_scenarios": [
+   8.351769,
+   9.568217
+  ],
+  "restated": [
+   8.333769,
+   9.568217
+  ],
+  "v3048": [
+   8.467769,
+   9.824584
+  ]
+ },
+ "f10f_m3_all_scenarios": [
+  7.2645,
+  8.39175
+ ],
+ "ff_over_trench_m2": 0.0,
+ "method": "EXCAVATION_ZONE_OWNERSHIP_V1",
+ "pool_envelope_over_trench_m2": 0.0,
+ "reproduced_t484": {
+  "beyond_plot_m2": 2.295645,
+  "in_zone_m2": 13.591177,
+  "strip_total_m2": 27.919513
+ },
+ "rule": "R-T497-1 1.0.0",
+ "scenario_residual_m3": {
+  "in plot, F10F reading other than the drawn outline (up to)": 0.037,
+  "with beyond plot (up to)": 0.047499
+ },
+ "scenarios": {
+  "F10 alone east": {
+   "f10f_in_plot_m2": 4.35,
+   "f10f_m3": 7.2645,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.116981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.160006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.45,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.872685,
+   "trench_m3": [
+    1.087269,
+    1.198967
+   ],
+   "trench_plus_f10f_m3": [
+    8.351769,
+    8.463467
+   ]
+  },
+  "F10 alone west": {
+   "f10f_in_plot_m2": 4.5,
+   "f10f_m3": 7.515,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.176975,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 0.970006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.200006,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 11.062685,
+   "trench_m3": [
+    1.106269,
+    1.223966
+   ],
+   "trench_plus_f10f_m3": [
+    8.621269,
+    8.738966
+   ]
+  },
+  "F10 east + F north-east (union)": {
+   "f10f_in_plot_m2": 4.35,
+   "f10f_m3": 7.2645,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.116981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.160006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.45,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.872685,
+   "trench_m3": [
+    1.087269,
+    1.198967
+   ],
+   "trench_plus_f10f_m3": [
+    8.351769,
+    8.463467
+   ]
+  },
+  "F10 east + F north-west (union)": {
+   "f10f_in_plot_m2": 4.8,
+   "f10f_m3": 8.016,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.116981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.160006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.45,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.872685,
+   "trench_m3": [
+    1.087269,
+    1.198967
+   ],
+   "trench_plus_f10f_m3": [
+    9.103269,
+    9.214967
+   ]
+  },
+  "F10 east + F south-east (union)": {
+   "f10f_in_plot_m2": 4.35,
+   "f10f_m3": 7.2645,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.116981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.160006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.45,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.872685,
+   "trench_m3": [
+    1.087269,
+    1.198967
+   ],
+   "trench_plus_f10f_m3": [
+    8.351769,
+    8.463467
+   ]
+  },
+  "F10 east + F south-west (union)": {
+   "f10f_in_plot_m2": 4.755,
+   "f10f_m3": 7.94085,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.071981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.340006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.675,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.692685,
+   "trench_m3": [
+    1.069269,
+    1.176467
+   ],
+   "trench_plus_f10f_m3": [
+    9.010119,
+    9.117317
+   ]
+  },
+  "F10 west + F north-east (union)": {
+   "f10f_in_plot_m2": 4.85,
+   "f10f_m3": 8.0995,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.076981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.320006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.65,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.712685,
+   "trench_m3": [
+    1.071269,
+    1.178967
+   ],
+   "trench_plus_f10f_m3": [
+    9.170769,
+    9.278467
+   ]
+  },
+  "F10 west + F north-west (union)": {
+   "f10f_in_plot_m2": 4.5,
+   "f10f_m3": 7.515,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.176975,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 0.970006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.200006,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 11.062685,
+   "trench_m3": [
+    1.106269,
+    1.223966
+   ],
+   "trench_plus_f10f_m3": [
+    8.621269,
+    8.738966
+   ]
+  },
+  "F10 west + F south-east (union)": {
+   "f10f_in_plot_m2": 4.815,
+   "f10f_m3": 8.04105,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.131977,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.130006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.405004,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.902685,
+   "trench_m3": [
+    1.090269,
+    1.203466
+   ],
+   "trench_plus_f10f_m3": [
+    9.131319,
+    9.244516
+   ]
+  },
+  "F10 west + F south-west (union)": {
+   "f10f_in_plot_m2": 4.5,
+   "f10f_m3": 7.515,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.176975,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 0.970006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.200006,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 11.062685,
+   "trench_m3": [
+    1.106269,
+    1.223966
+   ],
+   "trench_plus_f10f_m3": [
+    8.621269,
+    8.738966
+   ]
+  },
+  "drawn outline": {
+   "f10f_in_plot_m2": 5.025,
+   "f10f_m3": 8.39175,
+   "pits_beyond_plot_m2": 1.822132,
+   "pits_in_plot_m2": 124.649045,
+   "trench_beyond_plot_m2": 1.071981,
+   "trench_given_up_in_plot_m2": {
+    "F10F": 1.340006,
+    "FF lift raft": 0.0,
+    "footing pits": 13.591177,
+    "pool envelope": 0.0
+   },
+   "trench_given_up_m2": {
+    "F10F": 1.675,
+    "footing pits": 14.479847
+   },
+   "trench_in_plot_m2": 10.692685,
+   "trench_m3": [
+    1.069269,
+    1.176467
+   ],
+   "trench_plus_f10f_m3": [
+    9.461019,
+    9.568217
+   ]
+  }
+ },
+ "trench_all_scenarios_m3": [
+  1.069269,
+  1.223966
+ ],
+ "trench_line_m3_drawn_outline": [
+  1.069269,
+  1.176467
+ ],
+ "v3048_trench_m3": [
+  1.203269,
+  1.432834
+ ]
+}
