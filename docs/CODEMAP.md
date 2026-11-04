@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 717 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 718 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4634 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4638 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 61 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2191 | pytest suites, one folder per round. |
+| `tests/` | 2192 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (364 modules)
+## `engine/source/` (365 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -399,7 +399,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_measure.py` | 1165 | HIGH | 21 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 478 | HIGH | 19 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
-| `arch_rooms.py` | 2250 | HIGH | 40 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
+| `arch_rooms.py` | 2250 | HIGH | 41 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v211.py` | 659 | MEDIUM | 6 | ARCH_TAKEOFF_V2.11 (board task T-079): ARCH_TAKEOFF_V2.10 + the verified waterproofing pieces wired into a method. |
 | `arch_v212.py` | 273 | MEDIUM | 4 | ARCH_TAKEOFF_V2.12 (board task T-096): ARCH_TAKEOFF_V2.11 + complete membrane coverage (MEMBRANE_FOLD_V3). |
 | `arch_v213.py` | 502 | MEDIUM | 4 | ARCH_TAKEOFF_V2.13 (board task T-120; opt-in, NOT the released default): ARCH_TAKEOFF_V2.12 + two membrane purchase |
@@ -462,6 +462,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
+| `band_gap_classes_v1.py` | 325 | MEDIUM | 1 | BAND GAP CLASSES V1 (T-510, follow-up of the Checker-verified T-460 C5 / R-T460-1): every gap of a wall band is |
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
 | `bbs_optimiser.py` | 114 | MEDIUM | 6 | BBS OPTIMISER (V3b) - bar hooks / bends by a recorded code method and deterministic cutting on stock lengths. |
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
@@ -573,7 +574,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `level_chain_v1.py` | 495 | MEDIUM | 2 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
-| `lintel_measure.py` | 164 | MEDIUM | 9 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
+| `lintel_measure.py` | 164 | HIGH | 11 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
 | `lintel_qto.py` | 218 | CRITICAL | 4 | LINTEL QTO - schedule binding, lintel geometry, bar lengths and counts for masonry-wall lintels (generic). |
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
@@ -582,7 +583,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `masonry_centreline_v2.py` | 880 | MEDIUM | 2 | MASONRY CENTRELINE RUN V2 (T-125, MASONRY_CENTRELINE_V2) - the masonry run of one floor per wall thickness on the |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
-| `member_detection.py` | 1143 | CRITICAL | 28 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
+| `member_detection.py` | 1143 | CRITICAL | 29 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
 | `membrane_coverage_proof_v1.py` | 462 | MEDIUM | 2 | MEMBRANE COVERAGE PROOF V1 (task T-137; a checker piece: read by no method, no quantity is changed or released here). |
 | `membrane_cutting_plan.py` | 399 | MEDIUM | 1 | MEMBRANE CUTTING PLAN V1 (task T-089, opt-in; no released method or quantity changed) - per wet room and per roof, |
 | `membrane_cutting_plan_v2.py` | 179 | MEDIUM | 6 | MEMBRANE CUTTING PLAN V2 (task T-096; read by ARCH_TAKEOFF_V2.12) - the installer's cutting plan of one wet room or |
@@ -598,12 +599,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ocr_review.py` | 133 | MEDIUM | 2 | OCR REVIEW (M4) - a second, independent reading of every OCR-derived detail-evidence record, compared value by |
 | `opening_area.py` | 537 | MEDIUM | 4 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
 | `opening_authority.py` | 95 | MEDIUM | 1 | OPENING AUTHORITY (V1) - existence, geometry, function, material and vertical extent of an opening are separate |
-| `opening_census.py` | 474 | CRITICAL | 9 | OPENING CENSUS - wall openings from plan wall faces, with the evidence that makes each one an opening (generic). |
+| `opening_census.py` | 474 | CRITICAL | 10 | OPENING CENSUS - wall openings from plan wall faces, with the evidence that makes each one an opening (generic). |
 | `opening_completion.py` | 522 | MEDIUM | 1 | OPENING COMPLETION (V3) - zero-material topology closures for door openings the frozen door-closure rule leaves |
 | `opening_consistency_v1.py` | 411 | MEDIUM | 1 | OPENING_CONSISTENCY_V1 (T-194, residential review R6): one opening, every source that shows it, compared attribute |
 | `opening_evidence.py` | 55 | MEDIUM | 2 | OPENING_EVIDENCE_V2 - an opening is not one status: count, width, height, area, function and material each carry |
 | `opening_facts.py` | 49 | MEDIUM | 2 | OPENING PHYSICAL CLASS FACTS (R8.17) - what ONE bound opening IS (a sliding glass door, a full-height glazed |
-| `opening_gaps.py` | 50 | MEDIUM | 5 | OPENING GAPS WITH A UNIT-RELATIVE MERGE TOLERANCE (M9 S6, ARCH_TAKEOFF_V2) - opening_census.band_gaps merges the two |
+| `opening_gaps.py` | 50 | MEDIUM | 6 | OPENING GAPS WITH A UNIT-RELATIVE MERGE TOLERANCE (M9 S6, ARCH_TAKEOFF_V2) - opening_census.band_gaps merges the two |
 | `opening_height_pdf.py` | 354 | MEDIUM | 3 | OPENING HEIGHT FROM A PDF (T-082): printed opening heights read from VECTOR PDF elevation and section sheets and |
 | `opening_height_pdf_v2.py` | 797 | MEDIUM | 4 | OPENING HEIGHT FROM A PDF, V2 (T-465 r2, owner directive 2026-11-02 D4): the same method as OPENING_HEIGHT_PDF_V1 |
 | `opening_omission_guard.py` | 497 | MEDIUM | 1 | OPENING OMISSION GUARD (T-077): every drawn window and door appears once - MEASURED by the engine, or HELD with |
@@ -655,7 +656,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `release_safety.py` | 213 | HIGH | 6 | RELEASE SAFETY (M9 Phase 2B-0, ARCH_TAKEOFF_V2.2 only) - the corrections of the Phase 2A acceptance review that make |
 | `reveal_finish.py` | 62 | MEDIUM | 5 | REVEAL OWNERSHIP + FINISH (R8.18) - a reveal is a PHYSICAL surface owned by ONE room side; its FINISH is a separate |
 | `reveal_physicality.py` | 74 | MEDIUM | 3 | REVEAL PHYSICALITY (R8.19) - whether a reveal SURFACE physically exists, decided BEFORE any finish. |
-| `robust_geometry.py` | 324 | HIGH | 11 | ROBUST GEOMETRY (M9 Phase 2A, ARCH_TAKEOFF_V2.1 only) - the reviewed robust predicate at the three band-path |
+| `robust_geometry.py` | 324 | HIGH | 13 | ROBUST GEOMETRY (M9 Phase 2A, ARCH_TAKEOFF_V2.1 only) - the reviewed robust predicate at the three band-path |
 | `role_authority.py` | 493 | HIGH | 17 | ROLE AUTHORITY (R8.9): a role CANDIDATE is not a role AUTHORITY. |
 | `room_boq.py` | 270 | MEDIUM | 2 | ROOM BOQ (M9 S1) - canonical lines and material results per room from a ROOM SCHEDULE (generic; stdlib only). |
 | `room_census_guard.py` | 353 | MEDIUM | 1 | ROOM CENSUS GUARD (T-099): every face of a plan is reported once - no room silently drops out of the census. |
@@ -1468,6 +1469,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t504_plaster_held_subtotals/` | 1 |
 | `tests/t505_disposal_balance_v2/` | 2 |
 | `tests/t506_mortar_reconcile/` | 2 |
+| `tests/t510_band_gap_classes/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1966,6 +1968,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t504/` | 1 |
 | `research/agents_t505/` | 4 |
 | `research/agents_t506/` | 5 |
+| `research/agents_t510/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
