@@ -5,7 +5,10 @@ pinned, merged files (an edited file stops the build):
       18:40, own re-measure ST-01 MS2-L 3.782209 lm AGREE 0.000 %): every flight side with kind, family, status, plan,
       rise, pitch-line length, run and the reason a piece is held;
   research/agents_t476/READER_BINDING_T476.csv  the same task's binding of the 14 per-flight plan-reader FIN.RAILING
-      lines to their 9 physical flights (all RETIRE) and the run lines that carry them.
+      lines to their 9 physical flights (all RETIRE) and the run lines that carry them;
+  research/agents_t476/t476_alsenan.py BINDINGS  the tread count of each reading: the reader ids T-476 read are not
+      the ids the V3.0.53 candidate carries (renamed by a later line version), so each reading binds to its candidate
+      line by floor + flight + treads (arch_v3054.reader_line: exactly one, or refused).
 
 Nothing is typed: every length is recomputed by arch_v3054 from plan and rise and asserted equal to the census. The run
 actions are the merged T-476 proposal (B7-09 17.366 -> 33.319 lm: RL-07 15.953 lm added; RL-05 / RL-08 / RL-06 re-measured
@@ -29,8 +32,10 @@ if str(ROOT) not in sys.path:
 
 CENSUS = ROOT / "research/agents_t476/FLIGHT_CENSUS_T476.csv"
 BINDING = ROOT / "research/agents_t476/READER_BINDING_T476.csv"
+READERS = ROOT / "research/agents_t476/t476_alsenan.py"     # its BINDINGS table: the tread count of each reading
 PINS = {CENSUS: "77f5fc462a71e2530af5f8822df75f86829a8716c31a38579f6ad651ce2ad688",
-        BINDING: "bb69fddf48e17fe1fdd099874f60e39064f111a31bbb3a86b9c0db202ebcd223"}
+        BINDING: "bb69fddf48e17fe1fdd099874f60e39064f111a31bbb3a86b9c0db202ebcd223",
+        READERS: "f32a9bffcae2ecd73ea6ca06bfc8c4febcf0e09f2998a1a93ebb2f832c4cd559"}
 CHECKER = ("Verifier 2026-11-02T18:40Z Gate A PASS on 0aaeaf27 (session_01E6cPnbMXo9W57mVzHxdcHr): own scan of the "
            "architectural DXF, 1F plan dimension 3300, 12 riser positions step 300, levels +5.50 / +9.70, 4.20 / 25 = "
            "0.168, MS2-L hypot(3.300, 1.848) = 3.782209 lm AGREE 0.000 %; 1 of 14 pieces own-measured")
@@ -51,6 +56,19 @@ def _load(p):
     if hashlib.sha256(b).hexdigest() != PINS[p]:
         raise SystemExit(f"{p.name}: sha256 differs from the pinned file (edited input)")
     return list(csv.DictReader(io.StringIO(b.decode("utf-8"))))
+
+
+def treads():
+    """reader line id (as T-476 read it) -> (floor, flight, treads) from the merged BINDINGS table (pinned file)"""
+    _load_bytes(READERS)
+    sys.path.insert(0, str(READERS.parent))
+    import t476_alsenan as T476
+    return {k: (v[0], v[1], v[2]) for k, v in T476.BINDINGS.items()}
+
+
+def _load_bytes(p):
+    if hashlib.sha256(p.read_bytes()).hexdigest() != PINS[p]:
+        raise SystemExit(f"{p.name}: sha256 differs from the pinned file (edited input)")
 
 
 def _f(x):
@@ -91,11 +109,15 @@ def build(project_id=None):
             unknowns.append(dict(p, floor="GF" if r["FLIGHT"].startswith("GF ") else None, source_tasks=["T-476"]))
         else:
             raise SystemExit(f"census row {r['piece_id']}: run {r['RUN']!r} has no merged action")
-    retire = []
+    retire, tr = [], treads()
     for b in _load(BINDING):
+        fl, fn, n = tr[b["LINE_ID"]]
+        if (fl, fn) != (b["FLOOR"], b["READER_FLIGHT"]):
+            raise SystemExit(f"binding {b['LINE_ID']}: the two merged tables disagree")
         if b["ACTION"] != "RETIRE":
             raise SystemExit(f"binding {b['LINE_ID']}: action {b['ACTION']} (only RETIRE is merged)")
-        retire.append({"line_id": b["LINE_ID"], "floor": b["FLOOR"], "reader_flight": b["READER_FLIGHT"],
+        retire.append({"reader_line_id": b["LINE_ID"], "floor": b["FLOOR"], "reader_flight": b["READER_FLIGHT"],
+                       "treads": n,
                        "physical_flight": b["PHYSICAL_FLIGHT"], "reading": b["READING"],
                        "homes": sorted(set(RUN_RE.findall(b["HOMES"]))), "why": b["NOTE"],
                        "source_tasks": ["T-476 binding"]})

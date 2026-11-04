@@ -206,8 +206,9 @@ def load_inputs(doc, project_id=None):
      "runs": [{"run", "action" VALUE / CONFIRM / KEEP, "pieces": [{"piece_id", "stair", "flight", "side", "kind",
                "status", "plan_m", "rise_m", "length_lm", "missing", "source"}], "source_tasks"}],
      "unknowns": [{piece as above, status UNKNOWN, "floor", "source_tasks"}],
-     "retire": [{"line_id", "floor", "reader_flight", "physical_flight", "reading", "homes": [run ids], "why",
-                 "source_tasks"}],
+     "retire": [{"reader_line_id" (the census task's reader id, recorded), "floor", "reader_flight", "treads" (the
+                 reading's tread count: binds it to its candidate line by floor + flight + treads, unique or refused),
+                 "physical_flight", "reading", "homes": [run ids], "why", "source_tasks"}],
      "no_rail_sides": [{"stair", "flight", "side", "why"}] (open side only: recorded, no line)}"""
     if not doc:
         return None
@@ -253,12 +254,17 @@ def load_inputs(doc, project_id=None):
         unk.append(x)
     ret, rl = [], set()
     for r in doc.get("retire") or ():
-        w = f"retire {r.get('line_id')}"
-        _need(r, ("line_id", "floor", "reader_flight", "physical_flight", "reading", "homes", "why"), w)
+        w = f"retire {r.get('reader_line_id')}"
+        _need(r, ("reader_line_id", "floor", "reader_flight", "treads", "physical_flight", "reading", "homes", "why"),
+              w)
         A3043._tasks(r, srcs, w)
-        if _lid(r["line_id"], w) in rl:
-            raise InputsError(f"{w}: line named twice")
-        rl.add(r["line_id"])
+        _lid(r["reader_line_id"], w)
+        key = (r["floor"], r["reader_flight"], r["treads"])
+        if key in rl:
+            raise InputsError(f"{w}: reading {key} named twice")
+        rl.add(key)
+        if not isinstance(r["treads"], int) or isinstance(r["treads"], bool) or r["treads"] <= 0:
+            raise InputsError(f"{w}: treads {r['treads']!r} is not a count")
         if not re.match(r"^F\d+$", str(r["reader_flight"])):
             raise InputsError(f"{w}: reader flight {r['reader_flight']!r} is not F<n>")
         if any(not RUN_RE.match(str(h)) for h in r["homes"]):
@@ -360,16 +366,31 @@ def _held_line(tpl, p, run, srcs, floor):
     return A3046._fin(ln)
 
 
+def reader_line(prev, r):
+    """the ONE candidate FIN.RAILING per-flight reader line of a reading: same floor, element '<room>:flight n' with
+    F<n> = the reading's flight, and the reading's tread count; none or several -> refused (stale binding)."""
+    w = f"retire {r['reader_line_id']}"
+    hits = []
+    for ln in prev:
+        m = READER_EID_RE.search(str(_eid(ln) or ""))
+        if ln["item_code"] != CODE or not m or f"F{m.group(1)}" != r["reader_flight"] or \
+                (ln.get("location") or {}).get("floor") != r["floor"]:
+            continue
+        if ((ln.get("calculation") or {}).get("inputs") or {}).get("treads") == r["treads"]:
+            hits.append(ln)
+    if len(hits) != 1:
+        raise InputsError(f"{w}: {len(hits)} candidate reader lines on {r['floor']} {r['reader_flight']} with "
+                          f"{r['treads']} treads (one expected; stale binding)")
+    return hits[0]
+
+
 def _retired(b, r, homes, srcs):
-    lid = r["line_id"]
-    if b is None or b["item_code"] != CODE or b["unit"] != UNIT:
+    lid = b["line_id"]
+    if b["item_code"] != CODE or b["unit"] != UNIT:
         raise InputsError(f"retire {lid}: not a {CODE} {UNIT} line of the candidate (stale binding)")
     ins = (b.get("calculation") or {}).get("inputs") or {}
     if ins.get(RUN_REC_KEY):
         raise InputsError(f"retire {lid}: a run line is never retired (only a reader line)")
-    m = READER_EID_RE.search(str(_eid(b) or ""))
-    if not m or f"F{m.group(1)}" != r["reader_flight"] or (b.get("location") or {}).get("floor") != r["floor"]:
-        raise InputsError(f"retire {lid}: {r['floor']} {r['reader_flight']} is not the line's {_eid(b)} (stale binding)")
     if not _blank(b):
         raise InputsError(f"retire {lid}: the reader line carries a figure (a valued reading is re-measured, not "
                           f"retired here)")
@@ -381,7 +402,8 @@ def _retired(b, r, homes, srcs):
     new["measured_net"], new["deductions"], new["additions"] = None, [], []
     new["calculation"]["formula"] = f"NOT_APPLICABLE: {text} ({METHOD})"[:1500]
     _inputs(new)[REC_KEY] = _rec(srcs, action="RETIRE_READER", physical_flight=r["physical_flight"],
-                                 reader_flight=r["reader_flight"], reading=r["reading"], homes=list(r["homes"]),
+                                 reader_flight=r["reader_flight"], treads=r["treads"],
+                                 census_reader_line_id=r["reader_line_id"], reading=r["reading"], homes=list(r["homes"]),
                                  home_lines=[homes[h]["line_id"] for h in r["homes"]],
                                  was={"evidence_state": b["evidence_state"], "rfi": b.get("rfi")},
                                  why=str(r["why"])[:300], evidence_status=CONFIRMED)
@@ -465,14 +487,19 @@ def changes_for(doc, prev):
             [{"what": p["piece_id"], "why": p["missing"], "range": None, "scenario": "held blank"}],
             ["B7-09: blocked-line count +1; no figure moves"])
         log["unknowns"].append(p["piece_id"])
+    seen_ret = set()
     for r in doc["_retire"]:
         srcs = [S[t] for t in r["source_tasks"]]
         homes = {}
         for h in r["homes"]:
             if h not in runs:
-                raise InputsError(f"retire {r['line_id']}: home run {h} has no line in the candidate")
+                raise InputsError(f"retire {r['reader_line_id']}: home run {h} has no line in the candidate")
             homes[h] = runs[h]
-        add("RETIRE_READER", _retired(by.get(r["line_id"]), r, homes, srcs), by.get(r["line_id"]), srcs, CONFIRMED,
+        b = reader_line(prev, r)
+        if b["line_id"] in seen_ret:
+            raise InputsError(f"retire {r['reader_line_id']}: candidate line {b['line_id']} bound twice")
+        seen_ret.add(b["line_id"])
+        add("RETIRE_READER", _retired(b, r, homes, srcs), b, srcs, CONFIRMED,
             [], ["B7-09: one reader reading leaves the held count; its flight is carried by its run line"])
         log["retired"] += 1
     log["by_action"] = dict(sorted(log["by_action"].items()))
@@ -689,5 +716,5 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "CODE", "load_inputs",
-           "pitch_length", "changes_for", "check_runs", "integrate", "check_totals", "ledger_rows", "diff_rows",
+           "pitch_length", "reader_line", "changes_for", "check_runs", "integrate", "check_totals", "ledger_rows", "diff_rows",
            "write", "InputsError"]

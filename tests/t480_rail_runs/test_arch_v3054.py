@@ -26,8 +26,10 @@ from engine.source import boq_line as BL
 PID, REV = "villa-d-t480", "0" * 64
 
 
-def mk(eid, code, unit, state, net=None, floor="GF", run=None):
+def mk(eid, code, unit, state, net=None, floor="GF", run=None, treads=None):
     inputs = {A3030.REC_KEY: {"policy": "SYNTHETIC_METALWORK_V1", "run": run}} if run else {}
+    if treads:
+        inputs["treads"] = treads
     return BL.make_line(project_id=PID, revision_set_sha256=REV, item_code=code, unit=unit, evidence_state=state,
                         measured_net=net, gross=net, element_id=eid, floor=floor, formula="synthetic", rule_id="R-X",
                         rule_version="1", item_en=code, item_ar=code, inputs=inputs,
@@ -39,9 +41,10 @@ def candidate():
             mk("RAIL:RL-01", "FIN.RAILING", "lm", "BLOCKED_RFI", run="RL-01"),
             mk("RAIL:RL-02", "FIN.RAILING", "lm", "MEASURED", 3.0, floor="RF", run="RL-02"),
             mk("RAIL:RL-03", "FIN.RAILING", "lm", "BLOCKED_RFI", run="RL-03"),
-            mk("GF-RA:flight 1", "FIN.RAILING", "lm", "BLOCKED_RFI"),
-            mk("GF-RA:flight 2", "FIN.RAILING", "lm", "BLOCKED_RFI"),
-            mk("1F-RB:flight 1", "FIN.RAILING", "lm", "BLOCKED_RFI", floor="1F")]
+            mk("GF-RA:flight 1", "FIN.RAILING", "lm", "BLOCKED_RFI", treads=8),
+            mk("GF-RA:flight 2", "FIN.RAILING", "lm", "BLOCKED_RFI", treads=9),
+            mk("1F-RB:flight 1", "FIN.RAILING", "lm", "BLOCKED_RFI", floor="1F", treads=9),
+            mk("GF-RC:flight 1", "FIN.RAILING", "lm", "BLOCKED_RFI", treads=3)]   # another stair's F1 on GF
 
 
 SRC = [{"task": "T-D", "file": "flight_census.csv", "sha256": "d" * 64, "merge_commit": "abcdef12",
@@ -58,7 +61,6 @@ def P(pid, kind, status, plan=None, rise=None, length=None, missing=None, **kw):
 
 
 def doc(c, **over):
-    by = {ln["location"]["element_id"]: ln["line_id"] for ln in c}
     d = {"schema": M.INPUTS_SCHEMA, "project_id": PID, "sources": SRC,
          "runs": [{"run": "RL-01", "action": "VALUE", "source_tasks": ["T-D"],
                    "pieces": [P("ST-D:F1", "INCLINED", "DRAWING-CONFIRMED", 2.24, 1.4, 2.641515),
@@ -71,11 +73,11 @@ def doc(c, **over):
                    "pieces": [P("ST-G:E1", "INCLINED", "HELD", 1.2, None, missing="rise not printed")]}],
          "unknowns": [P("ST-D:U1", "HORIZONTAL", "UNKNOWN", 1.0, missing="rail existence not drawn", floor="GF",
                         source_tasks=["T-D"])],
-         "retire": [{"line_id": by["GF-RA:flight 1"], "floor": "GF", "reader_flight": "F1", "physical_flight": "F1",
+         "retire": [{"reader_line_id": "L-" + "1" * 20, "floor": "GF", "reader_flight": "F1", "treads": 8, "physical_flight": "F1",
                      "reading": "PRIMARY", "homes": ["RL-01"], "why": "8 riser lines = F1", "source_tasks": ["T-D"]},
-                    {"line_id": by["GF-RA:flight 2"], "floor": "GF", "reader_flight": "F2", "physical_flight": "F2",
+                    {"reader_line_id": "L-" + "2" * 20, "floor": "GF", "reader_flight": "F2", "treads": 9, "physical_flight": "F2",
                      "reading": "PRIMARY", "homes": ["RL-01"], "why": "9 riser lines = F2", "source_tasks": ["T-D"]},
-                    {"line_id": by["1F-RB:flight 1"], "floor": "1F", "reader_flight": "F1", "physical_flight": "F2",
+                    {"reader_line_id": "L-" + "3" * 20, "floor": "1F", "reader_flight": "F1", "treads": 9, "physical_flight": "F2",
                      "reading": "SEEN_THROUGH_VOID", "homes": ["RL-01"], "why": "F2 seen from above",
                      "source_tasks": ["T-D"]}],
          "no_rail_sides": [{"stair": "ST-D", "flight": "F1", "side": "wall", "why": "no wall rail drawn"},
@@ -132,8 +134,9 @@ def test_readers_retired_against_their_run():
     c = candidate()
     _, _, (out, _) = run(c, doc(c))
     home = {eid(ln): ln for ln in out}["RAIL:RL-01"]["line_id"]
-    ret = [ln for ln in out if ":flight " in eid(ln)]
+    ret = [ln for ln in out if ":flight " in eid(ln) and eid(ln) != "GF-RC:flight 1"]
     assert len(ret) == 3
+    assert {eid(ln): ln for ln in out}["GF-RC:flight 1"] == candidate()[7]          # same floor + flight, 3 treads
     for ln in ret:
         assert ln["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" and ln["measured_net"] is None
         assert ln["calculation"]["inputs"][M.REC_KEY]["home_lines"] == [home]
@@ -214,7 +217,7 @@ def test_stale_bindings_refused():
     with pytest.raises(M.InputsError, match="a re-measure"):
         run(c, d)
     d = doc(c)
-    d["retire"][0]["reader_flight"] = "F2"              # wrong reader flight
+    d["retire"][0]["treads"] = 7                        # no reading with 7 treads on GF F1
     with pytest.raises(M.InputsError, match="stale binding"):
         run(c, d)
     d = doc(c)
@@ -226,13 +229,14 @@ def test_stale_bindings_refused():
 def test_reader_with_a_figure_and_run_line_never_retired():
     c = candidate()
     c2 = copy.deepcopy(c)
-    c2[4] = mk("GF-RA:flight 1", "FIN.RAILING", "lm", "MEASURED", 2.2)
+    c2[4] = mk("GF-RA:flight 1", "FIN.RAILING", "lm", "MEASURED", 2.2, treads=8)
     d = doc(c2)
     with pytest.raises(M.InputsError, match="carries a figure"):
         run(c2, d)
     d = doc(c)
-    d["retire"][0]["line_id"] = [x for x in c if eid(x) == "RAIL:RL-03"][0]["line_id"]
-    with pytest.raises(M.InputsError, match="run line is never retired"):
+    d["retire"][2]["treads"] = 8
+    d["retire"][2]["floor"] = "GF"                      # two readings bound to one candidate line
+    with pytest.raises(M.InputsError, match="named twice"):
         run(c, d)
 
 

@@ -157,6 +157,10 @@ def _build(task_commit):
             f["candidate"] = P48.carried_block(f)
             f["candidate"]["candidate_basis"] = f["candidate"]["candidate_basis"].replace(
                 f"+ {DIFF_SPAN} (T-483 r2: no line", f"+ {DIFF_SPAN} (T-480: no line")
+        if code in by_family and f["candidate"]["state"] != "NOT_IN_CANDIDATE" and f["in_v3_0_candidate"] == "no":
+            # a family whose first candidate lines merged (B9-02 by T-487) enters the candidate: the flag follows its
+            # re-derived state (tools/family_master_candidate.py rule: yes for every in-candidate state)
+            f["in_v3_0_candidate"] = "yes"
         counts[f["candidate"]["state"]] += 1
         yes_no[f["in_v3_0_candidate"]] += 1
     new["candidate_state_counts"] = counts
