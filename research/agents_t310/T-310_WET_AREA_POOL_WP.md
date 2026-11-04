@@ -161,3 +161,24 @@ Checker's 02:23 hand checks stand by citation).
   V3.0.51 summary re-run; adverse: absorbed range naming no line refused by the V3.0.51 check, broken released line
   refused, closed range given 0 refused), hub tests on V3.0.51, master tests on 1.48.0 -> 1.49.0, pins on c0b6d664 ->
   2a51ae59.
+
+## 10. r6 rebase (2026-11-04, worker 2): V3.0.52 -> ARCH_TAKEOFF_V3.0.55 on the merged V3.0.54 (T-480, 1b66b719)
+
+Engineering unchanged (the 02:23 hand checks and the Checker's T-303 / T-309 re-measures stand by citation). T-487
+took V3.0.53 (lintels, dbc619fd) and T-480 V3.0.54 (railing runs, 1b66b719) while r4 / r5 waited, so this package is
+renumbered: engine/source/arch_v3052.py -> arch_v3055.py (EXTENDS = V3.0.54; WAITING carries V3.0.54's; integrate()
+also re-runs arch_v3053.check_lintels and arch_v3054.check_runs on the V3.0.55 lines), hub: a V3.0.55 run IS a V3.0.54
+run first (same hub line, rewritten before the V3.0.54 test), research/agents_t310/v3055_run.py wraps
+research/agents_t480/v3054_run.py (one hub call re-pointed, + --v3055-inputs), master BOQ_FAMILY_MASTER_1.52.0 from
+1.51.0 (the never-merged 1.49.0 removed) promoting T-480 (clears F-C-T468-1: t485 stale pending ['T-480']).
+- Drive run r6 (own decode of P7757_DXF_COMPRESSED.zip + 'ST7757 dxf.dxf', own T-167 run, chained to the end):
+  V3_0_48 33a81c53 -> V3_0_50 d40c4ec5 -> V3_0_51 c0b6d664 -> V3_0_53 36863f6c -> V3_0_54 c85c4630 (the candidate of
+  record, asserted) -> V3_0_55 72be9379 (4944 lines): 18 changed + 5 added, 4921 identical; ledger rows, totals moved by
+  code and the wet_area_wp identity equal r4 (t310_summary.py --previous, version key normalised).
+- Master 1.52.0: line diff V3.0.53 -> V3.0.54 = B7-09 FIN.RAILING 15 changed + 3 added (out/T310_PACKAGE_FAMILIES.json);
+  census at V3.0.54 (out/LINE_INDEX_V3_0_54.json; the same tool on V3_0_53 reproduces T-480's LINE_INDEX_V3_0_53.json
+  byte for byte), issues {}; B7-09 released +15.953174 lm in the census; B8-01 / 02 / 03 / 09 text for V3.0.55; built by
+  build_master_1_52_0.py (T-480's builder method + the r4 B8 section), problems [].
+- Tests: tests/t310_wet_area_wp/test_rebase_v3054.py (villa D of T-480 and the T-487 villa: normal pass-through with the
+  V3.0.54 / V3.0.53 checks re-run; adverse: rail run re-valued on plan lengths, held turn line dropped, lintel line
+  without its record: each refused), hub tests on V3.0.54, master tests 1.51.0 -> 1.52.0, pins c85c4630 -> 72be9379.

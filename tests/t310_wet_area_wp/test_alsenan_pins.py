@@ -1,5 +1,5 @@
-"""T-310: the development villa's V3.0.52 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
-committed run summary (research/agents_t310/summary_t310.json, from research/agents_t310/v3052_run.py on the Drive
+"""T-310 r6: the development villa's V3.0.55 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
+committed run summary (research/agents_t310/summary_t310.json, from research/agents_t310/v3055_run.py on the Drive
 copies; no drawing needed here). Development villa, regression only: never an accuracy claim."""
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "research" / "agents_t310"))
 
 import t310_inputs as T  # noqa: E402
-from engine.source import arch_v3052 as A  # noqa: E402
+from engine.source import arch_v3055 as A  # noqa: E402
 
 S = json.loads((ROOT / "research/agents_t310/summary_t310.json").read_text(encoding="utf-8"))
 
@@ -33,15 +33,15 @@ def test_inputs_validate_and_count():
 
 
 def test_run_summary_pins():
-    assert S["base_candidate"] == {"file": "V3_0_51_BOQ_LINES.json", "sha256_8": "c0b6d664", "lines": 4876}  # r4: V3.0.51 of record
-    assert S["new_candidate"] == {"file": "V3_0_52_BOQ_LINES.json", "sha256_8": "2a51ae59", "lines": 4881}
+    assert S["base_candidate"] == {"file": "V3_0_54_BOQ_LINES.json", "sha256_8": "c85c4630", "lines": 4939}  # r6: V3.0.54 of record
+    assert S["new_candidate"] == {"file": "V3_0_55_BOQ_LINES.json", "sha256_8": "72be9379", "lines": 4944}
     i = S["identity"]
-    assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4858)
+    assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4921)
     t = S["totals_moved_by_code"]
     assert {k.split("|")[0] for k in t} <= set(A.WP_CODES)
-    assert t["FIN.WP.WALL_UPTURN|m2"]["v3_0_52"]["released"] - t["FIN.WP.WALL_UPTURN|m2"]["base"]["released"] == \
+    assert t["FIN.WP.WALL_UPTURN|m2"]["v3_0_55"]["released"] - t["FIN.WP.WALL_UPTURN|m2"]["base"]["released"] == \
         pytest.approx(0.100)
-    assert t["FIN.WP.FLOOR|m2"]["v3_0_52"]["released"] - t["FIN.WP.FLOOR|m2"]["base"]["released"] == \
+    assert t["FIN.WP.FLOOR|m2"]["v3_0_55"]["released"] - t["FIN.WP.FLOOR|m2"]["base"]["released"] == \
         pytest.approx(-0.045)
-    assert t["FIN.WP.DOORWAY_TRANSITION|m2"]["v3_0_52"]["blocked_lines"] == 3
+    assert t["FIN.WP.DOORWAY_TRANSITION|m2"]["v3_0_55"]["blocked_lines"] == 3
     assert len(i["wet_area_wp"]["doors"]) == 14
