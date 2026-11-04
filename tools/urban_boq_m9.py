@@ -3204,7 +3204,7 @@ def cmd_arch(a):
     V3043 = "ARCH_TAKEOFF_V3.0.43"
     # T-422: ARCH_TAKEOFF_V3.0.44 = the SAME candidate (engine.source.arch_v3044): a V3.0.43 run (its files unchanged) +
     # the Checker-verified skirting threshold release (URBAN_V3044_INPUTS_V1); named here for the same reason.
-    V3044, a.v3050 = "ARCH_TAKEOFF_V3.0.44", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.50"; a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050 else a.method  # T-497: a V3.0.50 run IS a V3.0.48 run first (one line, hub line-stable), then its V3.0.50 zone-ownership restatement
+    a.v3051 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.51"; a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3051 else a.method; V3044, a.v3050 = "ARCH_TAKEOFF_V3.0.44", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.50"; a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050 else a.method  # T-497: a V3.0.50 run IS a V3.0.48 run first (one line, hub line-stable), then its V3.0.50 zone-ownership restatement | T-483 r2: a V3.0.51 run IS a V3.0.50 run first (same line, rewritten before the V3.0.50 test), then its V3.0.51 skirting remainder
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
     V3045, V3047, V3048 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47", "ARCH_TAKEOFF_V3.0.48"  # T-443 / T-350 r4: named on this line so the hub stays line-stable
@@ -3305,6 +3305,7 @@ def cmd_arch(a):
     if v3048 and not getattr(a, "v3048_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the Checker-merged earthworks quantities)")
     if bool(getattr(a, "v3050_inputs", None)) != a.v3050: raise SystemExit("--v3050-inputs and --method ARCH_TAKEOFF_V3.0.50 go together (T-497 zone ownership)")  # noqa: E701
+    if bool(getattr(a, "v3051_inputs", None)) != a.v3051: raise SystemExit("--v3051-inputs and --method ARCH_TAKEOFF_V3.0.51 go together (T-483 skirting remainder)")  # noqa: E701
     if v3047 and not getattr(a, "v3047_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3046_inputs", None) and not v3046:
@@ -4275,6 +4276,18 @@ def cmd_arch(a):
                                                                                                                                                                                     svgs += names50
                                                                                                                                                                                     v30rec = dict(v30rec, method=A3050.METHOD, extends=V3048,
                                                                                                                                                                                                   identity=ident50, v3_0_48_identity=ident48)
+                                                                                                                                                                                    if a.v3051:
+                                                                                                                                                                                        # T-483 r2: ARCH_TAKEOFF_V3.0.51 (skirting remainder R-T483-1) beside the V3_0_50_*
+                                                                                                                                                                                        from engine.source import arch_v3051 as A3051
+                                                                                                                                                                                        l3050 = A3050.integrate(l3048, ch_v50, fl24)[0]
+                                                                                                                                                                                        inp51 = A3051.load_inputs(json.loads(Path(
+                                                                                                                                                                                            a.v3051_inputs).read_text(encoding="utf-8")), l3050[0]["project"]["project_id"])
+                                                                                                                                                                                        ch_v51, log_v51 = A3051.changes_for(inp51, l3050)
+                                                                                                                                                                                        names51, ident51, _led51 = A3051.write(
+                                                                                                                                                                                            out, l3050, ch_v51, log_v51, released, fl24)
+                                                                                                                                                                                        svgs += names51
+                                                                                                                                                                                        v30rec = dict(v30rec, method=A3051.METHOD, extends=A3050.METHOD,
+                                                                                                                                                                                                      identity=ident51, v3_0_50_identity=ident50)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4432,7 +4445,8 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.46",) +   # T-419 (the V3.0.46 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.47",) +   # T-443 (the V3.0.47 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.48",) +   # T-350 r4 (the V3.0.48 candidate; named in the hub, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.50",),   # T-497 (the V3.0.50 candidate; a V3.0.48 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.50",) +   # T-497 (the V3.0.50 candidate; a V3.0.48 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.51",),   # T-483 r2 (the V3.0.51 candidate; a V3.0.50 run first, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4493,6 +4507,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
+    p.add_argument("--v3051-inputs", help="ARCH_TAKEOFF_V3.0.51 (URBAN_V3051_INPUTS_V1): the Checker-verified T-481 "
+                   "skirting remainder: a window sill established above the floor released into its room line (range "
+                   "line counted in it), held ranges of floor glazing / stair-owned windows closed whole, a blocked "
+                   "dry-cell line valued from its walk by handle; every other V3.0.50 line byte-identical")
     p.add_argument("--v3050-inputs", help="ARCH_TAKEOFF_V3.0.50 (URBAN_V3050_INPUTS_V1): T-497 excavation zone "
                    "ownership (R-T497-1, Checker F-C-T350R4-1): a V3.0.48 ranged excavation zone restated on the plan "
                    "it alone owns; every other V3.0.48 line byte-identical")
