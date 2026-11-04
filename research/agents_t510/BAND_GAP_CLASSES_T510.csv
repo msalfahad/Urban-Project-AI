@@ -1,0 +1,4 @@
+floor,gap_id,cls,kind,status,width_m,wall_t_m,start_bound,end_bound,split_at_column,column_pieces,engine_opening,differs_from_engine,glazing_m,glazing_ids,crossing_faces
+GF,GF-SG-001,COINCIDENT_FACES,,NOT_AN_OPENING,0.000000,0.200,COLUMN_FACE,MASONRY_JAMB,True,1,False,False,,,
+1F,1F-SG-001,OPENING,WINDOW,DEDUCT_HEIGHT_HELD,0.467302,0.200,COLUMN_FACE,MASONRY_JAMB,True,1,False,False,1.939997,D2:3126:0 D2:3127:0 D2:3128:0 D2:3129:0 D2:3130:0 D2:3132:0 D2:3133:0 D2:3134:0,
+1F,1F-SG-002,WALL_JUNCTION,,NOT_AN_OPENING,0.150000,0.150,WALL_JUNCTION,WALL_JUNCTION,False,0,False,False,,,"{""end"": [""D2:2774:0"", ""D2:2775:0""], ""start"": [""D2:2769:0"", ""D2:2770:0""]}"

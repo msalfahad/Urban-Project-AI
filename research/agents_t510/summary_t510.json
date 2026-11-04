@@ -1,0 +1,94 @@
+{
+ "frames": {
+  "1F": {
+   "by_class": {
+    "COINCIDENT_FACES": 0,
+    "NO_BOUNDING_ELEMENT": 0,
+    "NO_DISTINCT_JAMBS": 0,
+    "OPENING": 1,
+    "WALL_JUNCTION": 1
+   },
+   "deduct_height_held_width_m": 0.467302,
+   "deduct_measured_m2": 0,
+   "differs_from_engine": 0,
+   "duplicates_on_another_layer": 0,
+   "engine_kept": 22,
+   "engine_max_end_diff_m": 0.0,
+   "engine_min_gap_m": 0.5,
+   "engine_not_matched": 0,
+   "engine_openings": 22,
+   "engine_rejected_listed": 1,
+   "floor_m": 0.002,
+   "new_openings": 1,
+   "policy": "BAND_GAP_CLASSES_V1",
+   "records": 25
+  },
+  "2F": {
+   "by_class": {
+    "COINCIDENT_FACES": 0,
+    "NO_BOUNDING_ELEMENT": 0,
+    "NO_DISTINCT_JAMBS": 0,
+    "OPENING": 0,
+    "WALL_JUNCTION": 0
+   },
+   "deduct_height_held_width_m": 0,
+   "deduct_measured_m2": 0,
+   "differs_from_engine": 0,
+   "duplicates_on_another_layer": 0,
+   "engine_kept": 8,
+   "engine_max_end_diff_m": 0.0,
+   "engine_min_gap_m": 0.5,
+   "engine_not_matched": 0,
+   "engine_openings": 8,
+   "engine_rejected_listed": 0,
+   "floor_m": 0.002,
+   "new_openings": 0,
+   "policy": "BAND_GAP_CLASSES_V1",
+   "records": 8
+  },
+  "GF": {
+   "by_class": {
+    "COINCIDENT_FACES": 1,
+    "NO_BOUNDING_ELEMENT": 0,
+    "NO_DISTINCT_JAMBS": 0,
+    "OPENING": 0,
+    "WALL_JUNCTION": 0
+   },
+   "deduct_height_held_width_m": 0,
+   "deduct_measured_m2": 0,
+   "differs_from_engine": 0,
+   "duplicates_on_another_layer": 0,
+   "engine_kept": 29,
+   "engine_max_end_diff_m": 0.0,
+   "engine_min_gap_m": 0.5,
+   "engine_not_matched": 0,
+   "engine_openings": 29,
+   "engine_rejected_listed": 1,
+   "floor_m": 0.002,
+   "new_openings": 0,
+   "policy": "BAND_GAP_CLASSES_V1",
+   "records": 31
+  }
+ },
+ "policy": {
+  "floor_m": 0.002,
+  "jamb_tol_m": 0.03,
+  "policy": "BAND_GAP_CLASSES_V1",
+  "replaces_minimum_m": 0.5,
+  "rule": "R-T510-1: a wall-band gap is classified by its bounding elements (column face, masonry jamb, closure, crossing wall) after the pieces of one column are joined; no width minimum decides that an opening does not exist; a gap with no bounding element is HELD, never 0",
+  "rules": [
+   "Q-73",
+   "UP-WALL-GEOM-001",
+   "UP-REF-COLUMN-001",
+   "UP-SKIRT-001",
+   "UP-QTY-STATUS-001",
+   "R-T460-1",
+   "R-T510-1"
+  ],
+  "wired": false
+ },
+ "source": {
+  "file": "P7757.dxf",
+  "sha256_8": "ab54dd55"
+ }
+}
