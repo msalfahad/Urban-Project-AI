@@ -1,0 +1,947 @@
+{
+ "b9_04_by_part_line": [
+  {
+   "installed_m3": 0.352525,
+   "line_id": "L-10dd62f66ad05488e63b",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.352525,
+   "t_m": 0.2,
+   "walls": [
+    "1F-W02",
+    "1F-W03",
+    "1F-W09"
+   ]
+  },
+  {
+   "installed_m3": 0.916919,
+   "line_id": "L-1c53fadb2f92d1f36d4e",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.916919,
+   "t_m": 0.2,
+   "walls": [
+    "GF-W01"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-4054259959463edd70fb",
+   "material_base_beside_m3": 0.279579,
+   "state": "HELD",
+   "t367_beside_m3": 0.279579,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W18",
+    "1F-W24"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-73acd5a9d7e7cf6515c1",
+   "material_base_beside_m3": 0.578768,
+   "state": "HELD",
+   "t367_beside_m3": 0.578768,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W20",
+    "1F-W21",
+    "1F-W22"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": 0.319485,
+   "line_id": "L-76a4d8e50423fb02b914",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.319485,
+   "t_m": 0.2,
+   "walls": [
+    "2F-W01",
+    "2F-W06"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-87e0023741a8e2d98b21",
+   "material_base_beside_m3": 0.109463,
+   "state": "HELD",
+   "t367_beside_m3": 0.109463,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W21",
+    "GF-W33"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "material_base_beside_m3": 0.622077,
+   "state": "HELD",
+   "t367_beside_m3": 0.644422,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W12",
+    "1F-W13",
+    "1F-W17",
+    "1F-W19",
+    "1F-W23"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "installed_m3_range": [
+    0.051035,
+    0.05605
+   ],
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "state": "RANGE",
+   "t367_beside_m3": 0.05605,
+   "t_m": 0.2,
+   "walls": [
+    "2F-W05"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-abf15bdf70ccf1e7b474",
+   "material_base_beside_m3": 0.260604,
+   "state": "HELD",
+   "t367_beside_m3": 0.268126,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W28",
+    "GF-W29"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-adb393d6db51056d343b",
+   "material_base_beside_m3": 0.238132,
+   "state": "HELD",
+   "t367_beside_m3": 0.238132,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W19",
+    "GF-W22"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "material_base_beside_m3": 0.103102,
+   "state": "HELD",
+   "t367_beside_m3": 0.106643,
+   "t_m": 0.15,
+   "walls": [
+    "2F-W08"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  }
+ ],
+ "candidate_checked": "ARCH_TAKEOFF_V3.0.50",
+ "governing": {
+  "material_line_producer": "T-453 r2 (research/agents_t453, merged b16f686b; T-496 binding): installed m3 on the material base, cement bags / loose sand by UPC-BLACK-MORTAR-001 (Q-78 1:4)",
+  "rule": "R-T506-2",
+  "t367_role": "READ input (joint geometry per m2 of the 40 x 20 module, 10 mm owner-provisional) + BESIDE figure for the 0.15 m walls and the contract-area basis; never a second wired mortar figure",
+  "t372_narrowed_to": "a B9-04 line per MAS.BLOCK part line carrying T-453 r2's figure for that line (COMPUTED / RANGE), the 0.15 m lines HELD with the T-367 figure beside, F-T367-1 perimeter joints a separate HELD component, cement / sand produced once (T-453 r2 or the B9-04 line, never both: R-T496-4 cross-trade)",
+  "why": [
+   "Q-73 / R-T453-5: an RC lintel face is concrete, not laid block: T-367's contract-area basis carries mortar where no joint exists",
+   "owner Q-75 answer 2026-11-02 (UPC-BLACK-BLOCK-001) post-dates T-367 (2026-10-30) and confirms the 40 x 20 module for 0.20 m only",
+   "Q-78 (owner 2026-11-02) gives the 1:4 mix T-367 held: T-453 r2 already applies it"
+  ]
+ },
+ "held_walls": [
+  {
+   "floor": "1F",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "1F-W11"
+  },
+  {
+   "floor": "1F",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "1F-W14 + 1F-W15"
+  },
+  {
+   "floor": "1F",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "1F-W16"
+  },
+  {
+   "floor": "1F",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "1F-W07"
+  },
+  {
+   "floor": "2F",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "2F-W00"
+  },
+  {
+   "floor": "GF",
+   "kind": "DROP (U - L x d, never evaluated)",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W20"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W23"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W24"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W25"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W26"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W27"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W30"
+  },
+  {
+   "floor": "GF",
+   "kind": "DROP (U - L x d, never evaluated)",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W31"
+  },
+  {
+   "floor": "GF",
+   "kind": "DROP (U - L x d, never evaluated)",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W32"
+  },
+  {
+   "floor": "GF",
+   "kind": "DROP (U - L x d, never evaluated)",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.15,
+   "wall_id": "GF-W34"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W00"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W02"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W03"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W08"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W09"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W13"
+  },
+  {
+   "floor": "GF",
+   "kind": "HELD WALL",
+   "state": "HELD IN BOTH LEDGERS (no established area): blank by name, never 0",
+   "t_m": 0.2,
+   "wall_id": "GF-W14"
+  }
+ ],
+ "inputs": {
+  "research/agents_t367/MORTAR_BY_WALL_T367.csv": "f658d79b9c44622ca684cebe3d2c73bebd9f5244e5c8dc188a558e1152de094b",
+  "research/agents_t367/summary.json": "293f2f2b62900ba4a109478cbd483f3c4704c59656a55041eb04a81742ef43af",
+  "research/agents_t453/out/MATERIAL_LEDGER_T453.json": "ad9bceee3bfdbc12218edec2a648e39104f3503bd73342c8ebb451b8394c13f9",
+  "research/agents_t483/out/LINE_INDEX_V3_0_50.json": "05de8b12e3352eadd805e6dc3ee240a9cdb1d42406c7fa017e8a331d41e69db2",
+  "research/agents_t496/out/BINDING_MAP_T496.json": "270a13c46e74ef1f0167ba6b91b6320b1d3cb39edfa56be4b2d9418f41fe96b5"
+ },
+ "ledger_check": {
+  "agree": true,
+  "t367_printed_m3": 3.870113,
+  "t453_pnet_printed_m3": 1.588929,
+  "t453_range_printed_m3": [
+   0.051035,
+   0.05605
+  ]
+ },
+ "perimeter_joints": "F-T367-1 (Checker 2026-10-30 09:58): perimeter joints at column faces and the soffit, bound (L b + 2 H j) t per junction, about +5.5 .. +13.4 % on 4 walls (about 0.2 .. 0.5 m3): a physical component in NEITHER ledger (T-453 r2 reads T-367's per-m2 rate): HELD by name, never 0, never summed into the bed / head m3",
+ "producer_census": {
+  "keys": 675,
+  "keys_bound_by_two_tables": 472,
+  "keys_with_two_producers": [],
+  "reader_divergences": [],
+  "roles": {
+   "T-367|BESIDE": 11,
+   "T-453|PRODUCER": 128,
+   "T-454|BESIDE": 312,
+   "T-454|PRODUCER": 156,
+   "T-455|PRODUCER": 128,
+   "T-489|PRODUCER": 312,
+   "T-489|READER": 156,
+   "T-495|PRODUCER": 10
+  },
+  "rows": 1213,
+  "summable_rows": 153
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.124138,
+   "beside_m3": 0.124138,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 11.5815,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "lintel_face_m3": 0.003982,
+   "material_base_m2": 11.2215,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.36,
+   "required_lintels": [
+    "D-1F-03"
+   ],
+   "t367_m3": 0.12812,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W12",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.178408,
+   "beside_m3": 0.18217,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 16.8073,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.34,
+   "held_lintels": [
+    "D-1F-09"
+   ],
+   "kind": "ESTABLISHED_PART (held piece named on the parent)",
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "lintel_face_m3": 0.003761,
+   "material_base_m2": 16.4673,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.34,
+   "required_lintels": [
+    "D-1F-08"
+   ],
+   "t367_m3": 0.185931,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W13",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.048391,
+   "beside_m3": 0.048391,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 4.6943,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "ESTABLISHED_PART (held piece named on the parent)",
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "lintel_face_m3": 0.00354,
+   "material_base_m2": 4.3743,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.32,
+   "required_lintels": [
+    "D-1F-10"
+   ],
+   "t367_m3": 0.051931,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W17",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "DRAWING-CONFIRMED",
+   "beside_low_m3": 0.218292,
+   "beside_m3": 0.218292,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 19.7326,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-4054259959463edd70fb",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 19.7326,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.218292,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W18",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.057436,
+   "beside_m3": 0.057436,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 5.512,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "lintel_face_m3": 0.00354,
+   "material_base_m2": 5.192,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.32,
+   "required_lintels": [
+    "D-1F-07"
+   ],
+   "t367_m3": 0.060976,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W19",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "beside_low_m3": 0.271109,
+   "beside_m3": 0.271109,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 24.507,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-73acd5a9d7e7cf6515c1",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 24.507,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.271109,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W20",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "beside_low_m3": 0.081973,
+   "beside_m3": 0.081973,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 7.41,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-73acd5a9d7e7cf6515c1",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 7.41,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.081973,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W21",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "beside_low_m3": 0.225686,
+   "beside_m3": 0.225686,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 20.401,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-73acd5a9d7e7cf6515c1",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 20.401,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.225686,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W22",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.209942,
+   "beside_m3": 0.209942,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 19.6578,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "lintel_face_m3": 0.007523,
+   "material_base_m2": 18.9778,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.68,
+   "required_lintels": [
+    "D-1F-02",
+    "D-1F-04"
+   ],
+   "t367_m3": 0.217464,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W23",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "DRAWING-CONFIRMED",
+   "beside_low_m3": 0.061287,
+   "beside_m3": 0.061287,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 5.5401,
+   "floor": "1F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "ESTABLISHED_PART (held piece named on the parent)",
+   "line_id": "L-4054259959463edd70fb",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 5.5401,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.061287,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "1F-W24",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 2.66,
+   "floor": "1F",
+   "governing_m3": 0.039235,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-10dd62f66ad05488e63b",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 2.66,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.039235,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "1F-W02",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 14.4,
+   "floor": "1F",
+   "governing_m3": 0.2124,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-10dd62f66ad05488e63b",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 14.4,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.2124,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "1F-W03",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 6.84,
+   "floor": "1F",
+   "governing_m3": 0.10089,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-10dd62f66ad05488e63b",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 6.84,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.10089,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "1F-W09",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.103102,
+   "beside_m3": 0.103102,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 9.64,
+   "floor": "2F",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "lintel_face_m3": 0.00354,
+   "material_base_m2": 9.32,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.32,
+   "required_lintels": [
+    "D-2F-03"
+   ],
+   "t367_m3": 0.106643,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "2F-W08",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 6.84,
+   "floor": "2F",
+   "governing_m3": 0.10089,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-76a4d8e50423fb02b914",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 6.84,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.10089,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "2F-W01",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  },
+  {
+   "area_status": "DRAWING-CONFIRMED",
+   "bucket": "RANGE-NET",
+   "contract_m2": 3.8,
+   "floor": "2F",
+   "governing_m3": null,
+   "governing_range_m3": [
+    0.051035,
+    0.05605
+   ],
+   "held_face_max_m2": 0.34,
+   "held_lintels": [
+    "D-2F-02"
+   ],
+   "kind": "ESTABLISHED_PART (held piece named on the parent)",
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 3.8,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.05605,
+   "t453_line_status": "RANGE",
+   "t_m": 0.2,
+   "wall_id": "2F-W05",
+   "why": "held lintel face(s) D-2F-02 0 .. face (R-T453-5): a named range, never a point figure"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 14.82,
+   "floor": "2F",
+   "governing_m3": 0.218595,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-76a4d8e50423fb02b914",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 14.82,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.218595,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "2F-W06",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  },
+  {
+   "area_status": "DRAWING-CONFIRMED",
+   "beside_low_m3": 0.095082,
+   "beside_m3": 0.095082,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 8.595,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-adb393d6db51056d343b",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 8.595,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.095082,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W19",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "beside_low_m3": 0.047668,
+   "beside_m3": 0.047668,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 4.309,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-87e0023741a8e2d98b21",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 4.309,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.047668,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W21",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "DRAWING-CONFIRMED",
+   "beside_low_m3": 0.14305,
+   "beside_m3": 0.14305,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 12.9311,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-adb393d6db51056d343b",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 12.9311,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.14305,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W22",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.218799,
+   "beside_m3": 0.218799,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 20.1384,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-abf15bdf70ccf1e7b474",
+   "lintel_face_m3": 0.003982,
+   "material_base_m2": 19.7784,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.36,
+   "required_lintels": [
+    "D-GF-13"
+   ],
+   "t367_m3": 0.222781,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W28",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "ASSUMED - OWNER-APPROVED",
+   "beside_low_m3": 0.041805,
+   "beside_m3": 0.041805,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 4.099,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-abf15bdf70ccf1e7b474",
+   "lintel_face_m3": 0.00354,
+   "material_base_m2": 3.779,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.32,
+   "required_lintels": [
+    "D-GF-10"
+   ],
+   "t367_m3": 0.045345,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W29",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "beside_low_m3": 0.061795,
+   "beside_m3": 0.061795,
+   "bucket": "HELD-0.15-MODULE",
+   "contract_m2": 5.586,
+   "floor": "GF",
+   "governing_m3": null,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-87e0023741a8e2d98b21",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 5.586,
+   "rate_m3_per_m2": 0.0110625,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.061795,
+   "t453_line_status": "HELD",
+   "t_m": 0.15,
+   "wall_id": "GF-W33",
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "area_status": "VERIFIED",
+   "bucket": "PROVISIONAL-NET",
+   "contract_m2": 62.164,
+   "floor": "GF",
+   "governing_m3": 0.916919,
+   "held_face_max_m2": 0.0,
+   "held_lintels": [],
+   "kind": "WHOLE",
+   "line_id": "L-1c53fadb2f92d1f36d4e",
+   "lintel_face_m3": 0.0,
+   "material_base_m2": 62.164,
+   "rate_m3_per_m2": 0.01475,
+   "required_face_m2": 0.0,
+   "required_lintels": [],
+   "t367_m3": 0.916919,
+   "t453_line_status": "COMPUTED",
+   "t_m": 0.2,
+   "wall_id": "GF-W01",
+   "why": "T-453 r2 R-T453-3 / R-T453-5"
+  }
+ ],
+ "schema": "URBAN_T506_MORTAR_RECONCILIATION_V1",
+ "t453_015_beside_on_contract_net_m3": 2.225134,
+ "totals": {
+  "HELD-0.15-MODULE": {
+   "low_m3": 2.187963,
+   "m2": 198.1221,
+   "m3": 2.191725,
+   "walls": 17
+  },
+  "LINTEL-FACE-CONCRETE": {
+   "m2": 3.02,
+   "m3": 0.033408,
+   "walls": 8
+  },
+  "PROVISIONAL-NET": {
+   "m2": 107.724,
+   "m3": 1.588929,
+   "walls": 6
+  },
+  "RANGE-NET": {
+   "low_m3": 0.051035,
+   "m2": 3.8,
+   "m3": 0.05605,
+   "walls": 1
+  },
+  "contract_m2": 312.6661,
+  "lintel_face_m3_by_t": {
+   "0.15": 0.033408,
+   "0.20": 0.0
+  },
+  "residual_m3": 0.0,
+  "t367_m3": 3.870112
+ }
+}
