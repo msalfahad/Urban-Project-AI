@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T08:49Z | Worker 3 | SUCCESS | T-487 READY | B9-02 lintels wired as ARCH_TAKEOFF_V3.0.53 on merged V3.0.51 (own chain c0b6d664 -> 36863f6c): 60 STR.CONC.LINTEL lines, 16 REQUIRED 1.016 m3 PROVISIONAL by the printed schedule, 42 HELD + 2 FLAGGED blank, 4876 lines byte-identical; master 1.50.0 promotes T-483; freelancer has no lintel key | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-04T08:40Z | Worker 2 | STARTED | run session_01E6cPncGJoXPYmEEZTUkzns | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04 08:19 UTC | Lead | SUCCESS | board | Since 04:14: 2 merged both WORKED (T-504 plaster table V3; T-483 r3 Gate B -> candidate V3.0.51, skirting certain 203.369 -> 212.379 lm +4.43 %, t485 green); T-310 r3 PARTIAL -> r4 rebase on ea7d375f; READY 3 (T-494, T-505, T-310); T-480 / T-460 / T-468 TODO; NEW T-506 (black-block mortar 3.870 vs 1.589 m3 reconciliation + producer roles, split from T-498); register entry SKIRTING BEHIND FITTED JOINERY (F-C-T483-1); T-483 lessons row ADOPTED; Drive OK no new files; owner package none; 10 Nov AT RISK (2 Gate B merges since 00:20, review 12:00); queue check: 21 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; ERS: read, s.7 applied; problem: none
 - 2026-11-04 08:13 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
