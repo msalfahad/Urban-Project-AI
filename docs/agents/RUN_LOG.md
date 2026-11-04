@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T05:52Z | Verifier | SUCCESS | T-504 MERGED (engine f621ce44) | T-504 Gate A PASS (reporting rule, unwired): R-T504-1 coat subtotal over any HELD row is HELD with known part AT_LEAST, never 0; own re-sum of the T-454/T-489 ledger WALL_PLASTER 4.726962 m3 over 25/52, BOND_COAT 576.6519 m2 over 37/70, RENDER bound 5.104557 m3 on 12/34 AGREE; villa P 1.600 m3 / 12.25728 bags AGREE. No quantity change (V3.0.50 d40c4ec5), no owner question, no line CLOSABLE NOW; T-483 r2 / T-310 r3 not READY | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-04T05:49Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-504 (Worker 3 05:11) per RUN_LOG | self-check pending
 - 2026-11-04T05:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T05:11Z | Worker 3 | SUCCESS | T-504 READY d65f46c9 | NEW PLASTER_MATERIALS_TABLE_V3 (R-T504-1, unwired): coat subtotal over any HELD row is HELD with known part AT_LEAST; F-T499-1 reproduced: WALL_PLASTER 4.726962 m3 over 25/52 rows -> HELD >= 4.726962; 17 V1/V2 subtotals change status; villa P 1.600 m3 / 12.25728 bags = V1/V2; no BOQ line moves; T-498 to read V3 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: wrapper refused full-suite path 'tests' (AGENT_ENV FAIL: pytest path must be under tests/ or agents/: tests), L2 run instead
