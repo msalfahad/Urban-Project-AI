@@ -46,6 +46,13 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- STAIR GUARDRAIL vs BALUSTRADE ON A SLAB EDGE (Lead 2026-11-04 16:17; T-480 Gate B, V3.0.54): a rail along a stair
+  flight or landing is B7-09 (FIN.RAILING), OWNER TRADE B7, measured flight by flight along the pitch line and bound by
+  floor + flight + tread range; a balustrade or parapet rail on a slab, void or terrace edge outside the stair is its own
+  element and never enters B7-09 (no double count at the top landing: the run ends at the landing nosing). Turn rails and
+  the GF band stay HELD blank by name until a form is printed. Rows: T-480, T-424 (nosing shares the flight ids).
+- SKIRTING BEHIND FITTED JOINERY: T-460 classified the 2.800 lm as HELD JOINERY_SCOPE_NOT_PRINTED (Checker 12:56);
+  it stays in the line as carried until a basis exists (Lead 2026-11-04 16:17).
 - SKIRTING BEHIND FITTED JOINERY (Lead 2026-11-04 08:15; Checker F-C-T483-1 on T-483 Gate B, V3.0.51): a wall base
   concealed by FITTED joinery (built-in wardrobe carcass) is a separate named piece of FIN.SKIRTING, never merged into
   the open walk. OWNER TRADE stays FIN.SKIRTING until classified; no rule yet says whether skirting runs behind fitted

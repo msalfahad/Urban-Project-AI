@@ -1,9 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-04 12:19 UTC (Lead). Previous version: 2026-11-04 08:15 UTC. The released numbers did not change
+Last update: 2026-11-04 16:17 UTC (Lead). Previous version: 2026-11-04 12:19 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.53 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.54 (not released).
+
+Since 4 Nov 12:19 (newest first; three checked and merged, none sent back):
+- Stair guardrails IN THE CANDIDATE (V3.0.54, checked line by line): 17.37 -> 33.32 m.l (+91.9 %). Whole flights had
+  dropped out because their pieces had been renumbered; each rail is now measured flight by flight along the slope.
+  One staircase's rails (15.95 m.l) re-measured by the checker and agree; the two turn rails and the ground-floor band
+  stay held (no form printed), so the run is partly verified (6 of 8 pieces). Freelancer 18.95 m.l: on that staircase
+  the engine is right; the overall difference (+75.8 %) is not yet explained.
+- One set of status words for every quantity (verified / measured unverified / held / unmeasured / excluded / not
+  priced) now checks the candidate; nothing outside a checker record can call a quantity verified. No quantity change.
+- Narrow wall gaps: a 0.47 m gap beside a column is dropped by the engine on any villa and only rescued here by a
+  project list; a fix (new version, not yet in the candidate) is next. Skirting behind the fitted wardrobe (2.80 m.l)
+  stays in the line, marked held: the drawings do not say whether skirting is fitted there.
+- Waiting for the checker: tile bed mortar (12.47 .. 17.20 m3 for 88 bed lines -> about 100 .. 138 bags of cement,
+  13.7 .. 18.9 m3 sand, waste apart; one bed held because its floor finish is held). The freelancer has no bed item.
+- In progress: blockwork into the candidate (the largest money item). Next: wet-area waterproofing and stair skirting
+  (212.38 -> 209.43 m.l certain) on the new candidate.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: 4 candidate packages merged since midnight, about 13 left in
+  6 days.
 
 Since 4 Nov 08:15 (newest first; five checked and merged, none sent back):
 - Lintels IN THE CANDIDATE for the first time (V3.0.53, checked line by line): 60 lintel lines; 16 openings get a

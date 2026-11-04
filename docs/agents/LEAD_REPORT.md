@@ -1,5 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+
+## LEAD REPORT 2026-11-04 16:17 UTC
+
+Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record now V3.0.54 c85c4630 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Stairs / railings (stream F Gate B PASS): B7-09 guardrail 17.366 -> 33.319 lm (+91.9 %): flights had fallen out on re-keyed census ids; now flight by flight along the pitch line. RL-07 15.953 lm Checker hand AGREE; 2 turn rails + GF band HELD; PARTIALLY VERIFIED 6/8. Freelancer 18.95 lm: +75.8 %, RL-07 ENGINE_RIGHT, rest UNRESOLVED. 4,921 lines byte-identical.
+- Walls (Gate A, unwired): band path drops gaps < 0.50 m on any villa (1F W18 0.467 m beside a column, rescued only by a project ledger; Alsenan 0 m2 effect). Fix as a new version: T-510.
+- Status words (Gate A): one vocabulary for all quantity states; 0 quantity change.
+- Finishes materials (READY, Gate A): tile bed 12.469 .. 17.195 m3 on 88 lines -> cement 99.75 .. 137.56 bags, sand 13.72 .. 18.91 m3, waste apart; freelancer has no bed row (ENGINE_RIGHT on scope proposed); 1 bed HELD (finish HELD).
+- Learned (2 lessons rows ADOPTED): bind stair rails by floor + flight + treads, never by census id alone; classify a wall gap by its bounding elements, not width. Element register: B7-09 rail vs slab-edge balustrade ruled.
+- Missing: blockwork wiring (CLAIMED), wet-area WP r6, stair skirting wiring, materials wiring, disposal wiring. Gate: M3 / 10 Nov AT RISK (4 Gate B since 00:20, about 13 packages in 6 days).
+- Team health: since 12:19 every run closed with a final line except Worker 3 15:02 (open, inside its lock). No usage-limit failure since 11:14. Self-check codemap / t061 / freeze PASS. Queue check: 18 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none (no item meets standard s.2.7).
+
+NEEDS FIXING (owner only, unchanged): Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-04 12:19 UTC
 
 Drive read OK (no file created in the project folders since 08:00, no photo task). Training villa: candidate of record V3.0.53 36863f6c / master 1.50.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
@@ -26,18 +42,3 @@ Team health: every run since 04:14 closed with a final line (Worker 3 run open o
 OWNER PACKAGE: none (no item meets standard section 2.7).
 
 NEEDS FIXING (only you): the Kuwait 1990 specification is over the 10 MB connector limit (plastering chapter unread): a split or zipped copy under 6 MB would let the plaster mix move from HELD to a sourced value. Still open: repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-
-## LEAD REPORT 2026-11-04 04:17 UTC
-
-Drive read OK (no file created in the project folders since 00:00, no photo task). Training villa: candidate of record now V3.0.50 d40c4ec5 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
-- Earthworks (stream S Gate B PASS, Checker own raw-DXF re-measure): external ground-beam trench 1.203 .. 1.433 -> 1.069 .. 1.176 m3 (-0.134 .. -0.256 m3 double count removed), excavation held part 8.468 .. 9.825 -> 8.334 .. 9.568 m3; valued excavation 225.941 m3 unchanged; 4,875 lines identical. General rule (every zone subtracts every other zone's plan) and its lessons row ADOPTED. No freelancer earthworks line: no comparison.
-- Disposal (piece, unwired): one dry-mass balance; no-reuse end at least 234.333 m3 in situ, import at least 128.644 m3; reuse ends HELD (no soil report on Drive). Loss terms missing (Checker F-C-T503-1) -> new piece before any reuse end is valued.
-- Material totals (piece, unwired): any subtotal over a HELD row is now HELD with an AT_LEAST known part (was 0.0 on 5 adhesive codes; wall tile 340.30 m2 over 12 / 18 lines). The plaster table has the same defect (4.727 m3 shown over 25 / 52 rows) -> new piece. Materials link map: 1,202 links, 0 wrong.
-- Not measured / held: wet-area waterproofing (engineering AGREE, rebase left), skirting remainder +9.010 lm (rebasing), landings +10.588 m2 and pool-court WP 4.907 m2 (unwired), lintels, blockwork, materials not wired.
-- Gates: Gate 0 none; Gate 1 t485 registry promotion (red on the working branch, in T-483 r2); Gate 2 three packages building (two finishes, one structural).
-Team health: 9 runs since 00:20 all closed with a final line (Worker 2 INCOMPLETE by design: a merge landed mid-run; nothing lost). Checker 4 merged / 1 rejected (test faults only). Worker 1 run open on its lock. Stream F has merged 0 packages since 3 Nov 20:12: 10 Nov AT RISK (about 14 packages in 6 days); 12:00 scope review stands. Self-check PASS (codemap, pytest t061, freeze); queue check 22 actionable, 0 flagged, 0 stall.
-
-OWNER PACKAGE: none (no item meets standard section 2.7).
-
-NEEDS FIXING (only you): the Kuwait 1990 specification is over the 10 MB connector limit, so its plastering chapter cannot be read: a split or zipped copy under 6 MB would let the plaster mix move from HELD to a sourced value. Still open: repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-

@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 16:17; recovery plan in force)
+
+- Since 12:19: 3 merged (T-460, T-468 Gate A; T-480 Gate B), 0 rejected. Candidate of record V3.0.54 c85c4630
+  (B7-09 guardrail 17.366 -> 33.319 lm, PARTIALLY VERIFIED 6/8), master 1.51.0; not released. READY 1 (T-500), CLAIMED 1
+  (T-488 blockwork wiring, worker 3).
+- Step 2: stream F next T-310 r6 (worker 2) and T-508 (worker 1) in parallel on V3.0.54, READY second rebases; then
+  T-507, T-314, T-502, T-423, T-424, T-364, T-363, T-372. Stream S: T-488, T-498, T-509, T-382, T-474 p2.
+  4 Gate B merges since 00:20; about 13 packages in 6 days (about 2.2 a day needed); 10 Nov AT RISK.
+- Step 5 materials: T-500 (tile bed mortar) READY; T-511 binds it with one producer per cement / sand key for T-498.
+- New non-candidate: T-510 band-path small-gap classification (new version, from T-460).
+
 ## Status (Lead, 2026-11-04 12:19; recovery plan in force)
 
 - Since 08:19: 5 merged (T-494, T-505, T-501, T-506 Gate A; T-487 Gate B), 0 rejected. Candidate of record V3.0.53
