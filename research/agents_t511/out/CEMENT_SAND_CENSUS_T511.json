@@ -3,6 +3,12 @@
  "beside": [
   {
    "basis": "released screed m3 with no printed mix: cement / sand HELD (no 1:n invented)",
+   "element_id": "WP-T310:POOL-1:PROTECTION_SCREED",
+   "installed_m3_released": 1.5245,
+   "line_id": "L-335ae7ca24030b8e9be4"
+  },
+  {
+   "basis": "released screed m3 with no printed mix: cement / sand HELD (no 1:n invented)",
    "element_id": "WPF:FOOTING_PROTECTION_SCREED",
    "installed_m3_released": 5.4925,
    "line_id": "L-4ec54f9922da7281573a"
@@ -32,8 +38,8 @@
    "line_id": "L-e4789d76efedbc351bd4"
   }
  ],
- "candidate": "ARCH_TAKEOFF_V3.0.56",
- "candidate_sha8": "4e25c54f",
+ "candidate": "ARCH_TAKEOFF_V3.0.57",
+ "candidate_sha8": "25a8b406",
  "code_classes": {
   "HOST": [
    "EXT.FENCE.BLOCK",
@@ -55,7 +61,8 @@
    "FIN.ROOF.SCREED",
    "MAS.BLOCK",
    "WP.FOUNDATION.FOOTING_SCREED",
-   "WP.FOUNDATION.LIFT_PIT_SCREED"
+   "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "WP.POOL.PROTECTION_SCREED"
   ],
   "NOT_A_KEY": [
    "ARCH.EXTERIOR",
@@ -123,7 +130,8 @@
    "WP.FOUNDATION.FOOTING_SIDES",
    "WP.FOUNDATION.LIFT_PIT_BOARD",
    "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
-   "WP.FOUNDATION.PROCUREMENT"
+   "WP.FOUNDATION.PROCUREMENT",
+   "WP.POOL.MEMBRANE"
   ],
   "PARTNER": [
    "EXT.FENCE.BLOCK_COUNT",
@@ -836,6 +844,11 @@
   ],
   [
    "SCREED",
+   "L-335ae7ca24030b8e9be4",
+   "NO_PRODUCER: pool protection screed, printed '5cm SECREED' (T-309 / T-310): mix not printed, no table"
+  ],
+  [
+   "SCREED",
    "L-4ec54f9922da7281573a",
    "NO_PRODUCER: printed '5 cm screed' (ST p.13): mix not printed, no table"
   ],
@@ -1130,23 +1143,68 @@
    "MISSING_BED_LINE: finish line HELD with no bed pair: bed HELD, never 0 (area None / 0.0 .. 0.23)"
   ]
  ],
- "host_lines": 278,
+ "host_lines": 279,
  "host_states_cement": {
-  "HELD": 159,
+  "HELD": 160,
   "NOT_APPLICABLE": 74,
   "PRODUCED": 46
  },
  "identity": {
-  "base_lines": 4939,
+  "host_partner_lines_identical_55_56": 365,
+  "t310_rows": [
+   [
+    "ADD_HELD_DOOR",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "NOT_A_KEY"
+   ],
+   [
+    "ADD_POOL_LAYER",
+    "WP.POOL.MEMBRANE",
+    "NOT_A_KEY"
+   ],
+   [
+    "ADD_POOL_LAYER",
+    "WP.POOL.PROTECTION_SCREED",
+    "HOST"
+   ],
+   [
+    "KEY_DOOR",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "NOT_A_KEY"
+   ],
+   [
+    "NOT_APPLICABLE",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "NOT_A_KEY"
+   ],
+   [
+    "NOT_APPLICABLE",
+    "FIN.WP.TERMINATION",
+    "NOT_A_KEY"
+   ],
+   [
+    "REVALUE_FLOOR",
+    "FIN.WP.FLOOR",
+    "NOT_A_KEY"
+   ],
+   [
+    "REVALUE_UPTURN",
+    "FIN.WP.WALL_UPTURN",
+    "NOT_A_KEY"
+   ]
+  ],
   "t508_codes": [
    "FIN.SKIRTING",
    "FIN.STAIR.SKIRTING.SLOPED",
    "FIN.STAIR.SKIRTING.ZIGZAG"
   ],
-  "t508_rows": 52,
-  "v3_0_56_lines_t508": 4989
+  "v3_0_55_lines": 4939,
+  "v3_0_56_lines": 4989,
+  "v3_0_57_lines": 4994
  },
  "input_sha256": {
+  "research/agents_t310/out/LINE_INDEX_V3_0_56.json": "f345716d0b34d9b7afb4016c830afcc013e28971285da51c9a7416c6c70b3626",
+  "research/agents_t310/summary_t310.json": "0302c88b37cce04d113d71ebaaf455f296e9dd7baed74653a4529e6496288351",
   "research/agents_t453/out/MATERIAL_LEDGER_T453.json": "ad9bceee3bfdbc12218edec2a648e39104f3503bd73342c8ebb451b8394c13f9",
   "research/agents_t454/out/PLASTER_MATERIALS_T454.json": "dd144416850ca735e114a7c6ee3d56fbcdc3e41eacc89bea9297fb3af4a57f66",
   "research/agents_t455/out/TILE_PURCHASE_T455.json": "30f3c90eeee907b9e531d73c9e43f3ec8dae8d249a4151963046c48e0ec9bed8",
@@ -27378,6 +27436,16 @@
    "HELD"
   ],
   [
+   "L-335ae7ca24030b8e9be4",
+   "CEMENT_50KG",
+   "HELD"
+  ],
+  [
+   "L-335ae7ca24030b8e9be4",
+   "SAND_LOOSE",
+   "HELD"
+  ],
+  [
    "L-342e9c8e06ae990376c5",
    "CEMENT_50KG",
    "NOT_APPLICABLE"
@@ -30980,6 +31048,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -31179,7 +31248,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "bags"
     },
@@ -31236,6 +31305,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -31435,7 +31505,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "m3"
     }
@@ -31496,6 +31566,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -31695,7 +31766,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "bags"
     },
@@ -31754,6 +31825,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -31953,7 +32025,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "m3"
     }
@@ -32014,6 +32086,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -32213,7 +32286,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "bags"
     },
@@ -32272,6 +32345,7 @@
       "L-314c3ac6d45431b687c5|STONE_BED",
       "L-31db3c83552682d92ca3|BOND_COAT",
       "L-31db3c83552682d92ca3|WALL_PLASTER",
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-34f4545187c3c764d174|BOND_COAT",
       "L-34f4545187c3c764d174|LEVELLING_RENDER",
       "L-34f4545187c3c764d174|WALL_PLASTER",
@@ -32471,7 +32545,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 291,
+     "rows": 292,
      "status": "HELD",
      "unit": "m3"
     }
@@ -32483,6 +32557,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32493,7 +32568,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "bags"
     },
@@ -32501,6 +32576,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32511,7 +32587,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "m3"
     }
@@ -32521,6 +32597,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32531,7 +32608,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "bags"
     },
@@ -32539,6 +32616,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32549,7 +32627,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "m3"
     }
@@ -32559,6 +32637,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32569,7 +32648,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "bags"
     },
@@ -32577,6 +32656,7 @@
      "at_least_high": null,
      "at_least_low": null,
      "held": [
+      "L-335ae7ca24030b8e9be4|SCREED",
       "L-4ec54f9922da7281573a|SCREED",
       "L-5f018cfc13aaa9ae2210|SCREED",
       "L-79bc828150bbfe63ce8e|SCREED",
@@ -32587,7 +32667,7 @@
      ],
      "high": null,
      "low": null,
-     "rows": 7,
+     "rows": 8,
      "status": "HELD",
      "unit": "m3"
     }

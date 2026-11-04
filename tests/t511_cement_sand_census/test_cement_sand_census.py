@@ -193,9 +193,12 @@ def test_candidate_census_clean(built):
     assert built["fails"] == []
     assert built["keys_with_two_producers"] == 0 and built["reader_divergences"] == 0
     assert built["keys_bound_by_two_tables"] == 88              # 44 bed hosts x cement / sand, T-500 + V1 reader
+    assert built["candidate"] == "ARCH_TAKEOFF_V3.0.57" and built["identity"]["v3_0_57_lines"] == 4994
     assert built["identity"]["t508_codes"] == ["FIN.SKIRTING", "FIN.STAIR.SKIRTING.SLOPED",
                                                "FIN.STAIR.SKIRTING.ZIGZAG"]
-    assert built["host_states_cement"] == {"HELD": 159, "NOT_APPLICABLE": 74, "PRODUCED": 46}
+    assert built["identity"]["host_partner_lines_identical_55_56"] == 365
+    assert ["ADD_POOL_LAYER", "WP.POOL.PROTECTION_SCREED", "HOST"] in built["identity"]["t310_rows"]
+    assert built["host_states_cement"] == {"HELD": 160, "NOT_APPLICABLE": 74, "PRODUCED": 46}
     assert "UNCLASSIFIED" not in built["code_classes"]
 
 
@@ -234,6 +237,24 @@ def test_candidate_plaster_and_no_producer_hosts(built):
     bs = {b["line_id"]: b for b in built["beside"]}
     assert bs["L-ab44fbc79bed353bde99"]["cement_bags"] == [round(21.0142 * 0.03 * 8, 6), round(21.0142 * 0.04 * 8, 6)]
     assert bs["L-4ec54f9922da7281573a"]["installed_m3_released"] == 5.4925
+    assert bs["L-e4789d76efedbc351bd4"]["installed_m3_released"] == 1.035
+    assert bs["L-335ae7ca24030b8e9be4"]["installed_m3_released"] == 1.5245      # T-310 pool screed (V3.0.57)
+    sc = built["subtotals"][M.SCREED][I][C]
+    assert sc["status"] == "HELD" and sc["at_least_low"] is None and sc["rows"] == 8
+
+
+def test_t310_identity_is_checked(monkeypatch):
+    real = M._load
+
+    def fake(p, pins=True):
+        d = real(p, pins)
+        if p == M.T310:
+            d = copy.deepcopy(d)
+            d["new_candidate"]["sha256_8"] = "00000000"
+        return d
+    monkeypatch.setattr(M, "_load", fake)
+    with pytest.raises(M.CensusError, match="STALE_CANDIDATE"):
+        M.candidate()
 
 
 def test_t508_touching_a_host_code_is_refused(monkeypatch):

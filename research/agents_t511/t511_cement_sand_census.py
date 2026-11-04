@@ -1,4 +1,5 @@
-"""T-511: CEMENT / SAND PRODUCER CENSUS and cross-trade binding on the candidate of record ARCH_TAKEOFF_V3.0.56
+"""T-511: CEMENT / SAND PRODUCER CENSUS and cross-trade binding on the candidate of record ARCH_TAKEOFF_V3.0.57
+(= V3.0.56 4e25c54f, the census the row asked for, + the T-310 change set merged 87ef8718 while this task ran)
 (research, UNWIRED: no candidate, released, engine, rule, knowledge or registry file changes; no line moves).
 
 Physical element (ERS s.2.1): the 50 kg bags of cement and the loose sand bought for SITE-MIXED cement : sand mortar,
@@ -55,14 +56,17 @@ from engine.source import finish_materials_table_v5 as V5  # noqa: E402
 
 SCHEMA = "URBAN_T511_CEMENT_SAND_CENSUS_V1"
 GUARD_CLASS = "UNWIRED_READER"
-CANDIDATE = "ARCH_TAKEOFF_V3.0.56"
-CANDIDATE_SHA8 = "4e25c54f"
+CANDIDATE = "ARCH_TAKEOFF_V3.0.57"
+CANDIDATE_SHA8 = "25a8b406"
+V56, V56_SHA8 = "ARCH_TAKEOFF_V3.0.56", "4e25c54f"
 BASE = "ARCH_TAKEOFF_V3.0.55"
 BASE_SHA8 = "a498fc61"
 
 R = "research/"
 INDEX = ROOT / (R + "agents_t508/out/LINE_INDEX_V3_0_55.json")
 T508 = ROOT / (R + "agents_t508/summary_t508.json")
+INDEX56 = ROOT / (R + "agents_t310/out/LINE_INDEX_V3_0_56.json")
+T310 = ROOT / (R + "agents_t310/summary_t310.json")
 T453 = ROOT / (R + "agents_t453/out/MATERIAL_LEDGER_T453.json")
 T454 = ROOT / (R + "agents_t454/out/PLASTER_MATERIALS_T454.json")
 T489 = ROOT / (R + "agents_t489/out/PLASTER_MIX_T489.json")
@@ -76,7 +80,9 @@ PINS = {INDEX: "80b7a634f866af0ca38d5974feb9c72b8b4511f03e827e9b6738b2f9b8cc81c2
         T489: "f04659307895198813cc378462dc14e68d98865ff58b8415def74d158fa173f7",
         T500: "e2689c7c3da11d9faf4a2133cd2946d96a74c4fe8c252471e6256ad8d2243a61",
         T495: "56aa1813c08ff738c496a4189b896af47a383a816ea55527eae2b1fd4ff5b94d",
-        T455: "30f3c90eeee907b9e531d73c9e43f3ec8dae8d249a4151963046c48e0ec9bed8"}
+        T455: "30f3c90eeee907b9e531d73c9e43f3ec8dae8d249a4151963046c48e0ec9bed8",
+        INDEX56: "f345716d0b34d9b7afb4016c830afcc013e28971285da51c9a7416c6c70b3626",
+        T310: "0302c88b37cce04d113d71ebaaf455f296e9dd7baed74653a4529e6496288351"}
 
 CEMENT, SAND = "CEMENT_50KG", "SAND_LOOSE"
 MATERIALS = (CEMENT, SAND)
@@ -126,6 +132,8 @@ CODE_TABLE = {
     "FIN.ROOF.SCREED": ("HOST", SCREED, "roof screed to falls: thickness HELD (Q-41), mix not stated, no table"),
     "WP.FOUNDATION.FOOTING_SCREED": ("HOST", SCREED, "printed '5 cm screed' (ST p.13): mix not printed, no table"),
     "WP.FOUNDATION.LIFT_PIT_SCREED": ("HOST", SCREED, "lift-pit base screed: mix not printed, no table"),
+    "WP.POOL.PROTECTION_SCREED": ("HOST", SCREED, "pool protection screed, printed '5cm SECREED' (T-309 / T-310): "
+                                                  "mix not printed, no table"),
     "FIN.STAIR.FLIGHT": ("PARTNER", None, "flight length record: the bed belongs to the tread / riser m2 lines"),
     "FIN.STAIR.STEP_LM": ("PARTNER", None, "step-edge length record (tread / riser m2 lines carry the bed)"),
     "FIN.SKIRTING": ("SCOPE_OPEN", None, "skirting fixing material not stated (adhesive or mortar)"),
@@ -156,7 +164,7 @@ for _c, _why in (("STR.REBAR", "steel"), ("STR.FORMWORK", "formwork"), ("STR.FOR
                  ("EXT.FENCE.WALL", "fence wall geometry record (block / plaster lines carry the materials)"),
                  ("WP.FOUNDATION.BURIED_LIQUID", "liquid membrane"), ("WP.FOUNDATION.FOOTING_MEMBRANE", "membrane"),
                  ("WP.FOUNDATION.FOOTING_SIDES", "membrane"), ("WP.FOUNDATION.LIFT_PIT_BOARD", "protection board"),
-                 ("WP.FOUNDATION.LIFT_PIT_MEMBRANE", "membrane"), ("WP.FOUNDATION.PROCUREMENT", "membrane rolls"),
+                 ("WP.FOUNDATION.LIFT_PIT_MEMBRANE", "membrane"), ("WP.POOL.MEMBRANE", "membrane"), ("WP.FOUNDATION.PROCUREMENT", "membrane rolls"),
                  ("FIN.WP.DOORWAY", "membrane"), ("FIN.WP.DOORWAY_TRANSITION", "membrane"),
                  ("FIN.WP.DOORWAY_TRANSITION_NR", "membrane"), ("FIN.WP.FLOOR", "membrane (bartash = bed line)"),
                  ("FIN.WP.MEMBRANE_ROLLS", "membrane rolls"), ("FIN.WP.PENETRATION", "membrane"),
@@ -327,26 +335,61 @@ def subtotals(contrib):
 
 
 # ---------------------------------------------------------------- the candidate of record --------------------------
+def _key(ln):
+    return (ln["item_code"], ln["class"], ln["measured_net"], ln["held_low"], ln["held_high"], ln["unit"])
+
+
+def _num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def candidate(pins=True):
-    """V3.0.56 = the V3.0.55 line index + the T-508 change set (FIN.SKIRTING / FIN.STAIR.SKIRTING only). Every
-    cement : sand HOST / PARTNER line is identical between them (asserted)."""
-    idx, s = _load(INDEX, pins), _load(T508, pins)
-    if not idx["inputs"]["lines"].startswith(BASE_SHA8) or s["chain"]["V3_0_55"] != BASE_SHA8 \
-            or s["chain"]["V3_0_56"] != CANDIDATE_SHA8 or s["method"] != CANDIDATE or s["extends"] != BASE:
+    """V3.0.57 = the V3.0.56 line index (T-310's, 4e25c54f) + the T-310 change set (25a8b406). Two proofs first:
+    (a) every cement : sand HOST / PARTNER line of V3.0.56 equals V3.0.55 (a498fc61) and the T-508 change set (the
+    only V3.0.55 -> .56 step) names no HOST / PARTNER code; (b) the T-310 identity block is V3.0.56 -> V3.0.57.
+    Every T-310 row is applied by code (an ADD with a number is a RELEASED line, otherwise HELD; a REVALUE sets the
+    net); a T-310 row on an unclassified code fails the census (R-T511-1)."""
+    i55, s508, i56, s310 = _load(INDEX, pins), _load(T508, pins), _load(INDEX56, pins), _load(T310, pins)
+    if not i55["inputs"]["lines"].startswith(BASE_SHA8) or s508["chain"]["V3_0_55"] != BASE_SHA8 \
+            or s508["chain"]["V3_0_56"] != V56_SHA8 or s508["method"] != V56 or s508["extends"] != BASE:
         raise CensusError("STALE_CANDIDATE: the T-508 identity block is not V3.0.55 -> V3.0.56")
-    touched = {r["item_code"] for r in s["rows"]}
-    for c in touched:
+    if not i56["inputs"]["lines"].startswith(V56_SHA8) or i56["candidate_version"] != V56 \
+            or s310["base_candidate"]["sha256_8"] != V56_SHA8 or s310["new_candidate"]["sha256_8"] != CANDIDATE_SHA8 \
+            or s310["method"] != CANDIDATE:
+        raise CensusError("STALE_CANDIDATE: the T-310 identity block is not V3.0.56 -> V3.0.57")
+    t508 = {r["item_code"] for r in s508["rows"]}
+    for c in t508:
         if CODE_TABLE.get(c, ("?",))[0] in ("HOST", "PARTNER", "?"):
-            raise CensusError(f"STALE_CANDIDATE: T-508 changes {c}, a cement : sand host; rebuild on V3.0.56")
-    lines = [dict(ln) for ln in idx["lines"]]
-    for r in s["rows"]:              # the added / replaced skirting lines (SCOPE_OPEN): carried by code only
-        if r["line_id"] and r["line_id"] not in {ln["line_id"] for ln in lines}:
-            lines.append({"line_id": r["line_id"], "item_code": r["item_code"], "element_id": r["element_id"],
-                          "class": "ADDED_T508", "measured_net": None, "held_low": None, "held_high": None,
-                          "unit": r["unit"]})
-    ident = {"base_lines": len(idx["lines"]), "t508_rows": len(s["rows"]), "t508_codes": sorted(touched),
-             "v3_0_56_lines_t508": s["identity"]["v3_0_56_lines"]}
-    return lines, ident
+            raise CensusError(f"STALE_CANDIDATE: T-508 changes {c}, a cement : sand host; rebuild")
+    hp = ("HOST", "PARTNER")
+    a = {ln["line_id"]: _key(ln) for ln in i55["lines"] if CODE_TABLE.get(ln["item_code"], ("?",))[0] in hp}
+    b = {ln["line_id"]: _key(ln) for ln in i56["lines"] if CODE_TABLE.get(ln["item_code"], ("?",))[0] in hp}
+    if a != b:
+        raise CensusError(f"STALE_CANDIDATE: {len(set(a.items()) ^ set(b.items()))} host / partner lines differ "
+                          "between V3.0.55 and V3.0.56")
+    lines = {ln["line_id"]: dict(ln) for ln in i56["lines"]}
+    applied = []
+    for r in s310["rows"]:
+        v = _num(r["v3_0_57"])
+        ln = lines.get(r["line_id"])
+        if ln is None:
+            lines[r["line_id"]] = ln = {"line_id": r["line_id"], "item_code": r["item_code"],
+                                        "element_id": r["element_id"], "unit": r["unit"],
+                                        "measured_net": None, "held_low": None, "held_high": None}
+        ln["class"] = "RELEASED" if v is not None else ("NOT_APPLICABLE" if r["action"] == "NOT_APPLICABLE"
+                                                         else "HELD")
+        ln["measured_net"] = v
+        applied.append([r["action"], r["item_code"], CODE_TABLE.get(r["item_code"], ("UNCLASSIFIED",))[0]])
+    out = [lines[k] for k in sorted(lines)]
+    if len(out) != s310["new_candidate"]["lines"]:
+        raise CensusError(f"STALE_CANDIDATE: {len(out)} lines, T-310 says {s310['new_candidate']['lines']}")
+    ident = {"v3_0_55_lines": len(i55["lines"]), "v3_0_56_lines": len(i56["lines"]), "v3_0_57_lines": len(out),
+             "t508_codes": sorted(t508), "host_partner_lines_identical_55_56": len(a),
+             "t310_rows": sorted(map(list, {tuple(x) for x in applied}))}
+    return out, ident
 
 
 # ---------------------------------------------------------------- readers of the merged tables ----------------------
@@ -492,6 +535,7 @@ def other_hosts(lines, pins=True):
     o = _load(T495, pins)
     rows, states, beside = [], {}, []
     per = V1.OWNER_VALUES["per_m3_of_mortar"]["1:4"]
+    m3_of = {(ln["item_code"], ln["element_id"], ln["unit"]) for ln in lines}
     for fr in o["finish_held_rows"]:
         for op in fr["options"]:
             bed = op.get("bed")
@@ -509,8 +553,7 @@ def other_hosts(lines, pins=True):
             states[ln["line_id"]] = (NA, trade, "line EXCLUDED in the candidate")
         elif ln["unit"] == "lm":
             states[ln["line_id"]] = (NA, trade, "lm partner of the same element's m2 line")
-        elif ln["unit"] == "m2" and ln["item_code"] in ("WP.FOUNDATION.FOOTING_SCREED",
-                                                         "WP.FOUNDATION.LIFT_PIT_SCREED"):
+        elif trade == SCREED and ln["unit"] == "m2" and (ln["item_code"], ln["element_id"], "m3") in m3_of:
             states[ln["line_id"]] = (NA, trade, "m2 partner of the same screed's m3 line")
         else:
             reason = ("FINISH_NOT_DECIDED (T-495 options beside)" if ln["item_code"] == "EXT.FLOOR.OUTDOOR"
@@ -525,8 +568,7 @@ def other_hosts(lines, pins=True):
                                "m3": [_r(a * lo), _r(a * hi)],
                                "cement_bags": [_r(a * lo * per["cement_bags_50kg"]), _r(a * hi * per["cement_bags_50kg"])],
                                "sand_m3": [_r(a * lo * per["sand_m3_loose"]), _r(a * hi * per["sand_m3_loose"])]})
-            if ln["item_code"] in ("WP.FOUNDATION.FOOTING_SCREED", "WP.FOUNDATION.LIFT_PIT_SCREED") \
-                    and ln["class"] == "RELEASED":
+            if trade == SCREED and ln["unit"] == "m3" and ln["class"] == "RELEASED":
                 beside.append({"line_id": ln["line_id"], "element_id": ln["element_id"],
                                "installed_m3_released": ln["measured_net"],
                                "basis": "released screed m3 with no printed mix: cement / sand HELD (no 1:n invented)"})
