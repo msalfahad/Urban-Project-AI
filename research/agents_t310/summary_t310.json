@@ -1,22 +1,22 @@
 {
  "task": "T-310",
- "method": "ARCH_TAKEOFF_V3.0.52",
+ "method": "ARCH_TAKEOFF_V3.0.55",
  "base_candidate": {
-  "file": "V3_0_51_BOQ_LINES.json",
-  "sha256_8": "c0b6d664",
-  "lines": 4876
+  "file": "V3_0_54_BOQ_LINES.json",
+  "sha256_8": "c85c4630",
+  "lines": 4939
  },
  "new_candidate": {
-  "file": "V3_0_52_BOQ_LINES.json",
-  "sha256_8": "2a51ae59",
-  "lines": 4881
+  "file": "V3_0_55_BOQ_LINES.json",
+  "sha256_8": "72be9379",
+  "lines": 4944
  },
  "identity": {
   "replaced": 18,
   "added": 5,
-  "outside_rows": 4858,
-  "outside_rows_identical_to_base": 4858,
-  "outside_rows_sha256": "7a6ee58b7bf59260251b32343053c5d057196fc64b16eda663ec465b43d6dcf6",
+  "outside_rows": 4921,
+  "outside_rows_identical_to_base": 4921,
+  "outside_rows_sha256": "3b2632fdfacdfdc73a95b6d98d337457e8e8955fe3e404696fc3133f0990c6c8",
   "wet_area_wp": {
    "added_held_doors": 3,
    "doors": {
@@ -44,12 +44,12 @@
    "vs_base": {
     "ADDED": 5,
     "CHANGED": 18,
-    "SAME": 4858
+    "SAME": 4921
    },
    "vs_released_v2_9": {
-    "NOT_IN_RELEASED": 3289,
-    "QUANTITY_DIFFERS": 1001,
-    "SAME_QUANTITY": 591
+    "NOT_IN_RELEASED": 3352,
+    "QUANTITY_DIFFERS": 1015,
+    "SAME_QUANTITY": 577
    }
   }
  },
@@ -63,7 +63,7 @@
    "element_id": "1F-R48CDA5:wp_wall_upturn",
    "unit": "m2",
    "base": "1.48",
-   "v3_0_52": "1.58",
+   "v3_0_55": "1.58",
    "evidence_status": "DRAWING-CONFIRMED"
   },
   {
@@ -75,7 +75,7 @@
    "element_id": "1F-R48CDA5:termination glazing D2:3126:0",
    "unit": "lm",
    "base": "0..0.4",
-   "v3_0_52": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "v3_0_55": "NOT_APPLICABLE_WITH_EVIDENCE",
    "evidence_status": "NOT_APPLICABLE"
   },
   {
@@ -87,7 +87,7 @@
    "element_id": "1F-R48CDA5:termination glazing D2:3123:0",
    "unit": "lm",
    "base": "0..0.05",
-   "v3_0_52": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "v3_0_55": "NOT_APPLICABLE_WITH_EVIDENCE",
    "evidence_status": "NOT_APPLICABLE"
   },
   {
@@ -99,7 +99,7 @@
    "element_id": "1F-R48CDA5:termination glazing D2:3133:0",
    "unit": "lm",
    "base": "0..0.05",
-   "v3_0_52": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "v3_0_55": "NOT_APPLICABLE_WITH_EVIDENCE",
    "evidence_status": "NOT_APPLICABLE"
   },
   {
@@ -111,7 +111,7 @@
    "element_id": "GF-RC99C2A:wp_floor:wet_zone",
    "unit": "m2",
    "base": "13.5",
-   "v3_0_52": "13.455",
+   "v3_0_55": "13.455",
    "evidence_status": "DRAWING-CONFIRMED"
   },
   {
@@ -123,7 +123,7 @@
    "element_id": "1F-R48AA46:doorway transition OP-004",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -135,7 +135,7 @@
    "element_id": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -147,7 +147,7 @@
    "element_id": "1F-R26FA0D:doorway transition OP-008",
    "unit": "m2",
    "base": "0..0.18",
-   "v3_0_52": "0..0.18",
+   "v3_0_55": "0..0.18",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -159,7 +159,7 @@
    "element_id": "1F-RED23B8:doorway transition OP-019",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -171,7 +171,7 @@
    "element_id": "1F-R48CDA5:doorway transition OP-018",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -183,7 +183,7 @@
    "element_id": "2F-RE83BED:doorway transition OP-006",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -195,7 +195,7 @@
    "element_id": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -207,7 +207,7 @@
    "element_id": "GF-RFAD3C4:doorway transition OP-026",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -219,7 +219,7 @@
    "element_id": "GF-RA3AD49:doorway transition OP-025",
    "unit": "m2",
    "base": "0..0.2",
-   "v3_0_52": "0..0.2",
+   "v3_0_55": "0..0.2",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -231,7 +231,7 @@
    "element_id": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
    "unit": "m2",
    "base": "0..0.159408",
-   "v3_0_52": "0..0.159408",
+   "v3_0_55": "0..0.159408",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -243,7 +243,7 @@
    "element_id": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "0..0.16",
+   "v3_0_55": "0..0.16",
    "evidence_status": "RECORD_ONLY"
   },
   {
@@ -255,7 +255,7 @@
    "element_id": "GF-R8496F0:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
    "unit": "m2",
    "base": "0..0.16",
-   "v3_0_52": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "v3_0_55": "NOT_APPLICABLE_WITH_EVIDENCE",
    "evidence_status": "NOT_APPLICABLE"
   },
   {
@@ -267,7 +267,7 @@
    "element_id": "GF-RDF7D28:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
    "unit": "m2",
    "base": "0..0.159408",
-   "v3_0_52": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "v3_0_55": "NOT_APPLICABLE_WITH_EVIDENCE",
    "evidence_status": "NOT_APPLICABLE"
   },
   {
@@ -279,7 +279,7 @@
    "element_id": "1F-R26FA0D:doorway transition OP-010",
    "unit": "m2",
    "base": "",
-   "v3_0_52": "BLOCKED_RFI",
+   "v3_0_55": "BLOCKED_RFI",
    "evidence_status": "HELD"
   },
   {
@@ -291,7 +291,7 @@
    "element_id": "GF-RF38DAF:doorway transition OP-017",
    "unit": "m2",
    "base": "",
-   "v3_0_52": "BLOCKED_RFI",
+   "v3_0_55": "BLOCKED_RFI",
    "evidence_status": "HELD"
   },
   {
@@ -303,7 +303,7 @@
    "element_id": "GF-RB28769:doorway transition OP-018",
    "unit": "m2",
    "base": "",
-   "v3_0_52": "BLOCKED_RFI",
+   "v3_0_55": "BLOCKED_RFI",
    "evidence_status": "HELD"
   },
   {
@@ -315,7 +315,7 @@
    "element_id": "WP-T310:POOL-1:MEMBRANE",
    "unit": "m2",
    "base": "",
-   "v3_0_52": "29.5824",
+   "v3_0_55": "29.5824",
    "evidence_status": "DRAWING-CONFIRMED"
   },
   {
@@ -327,7 +327,7 @@
    "element_id": "WP-T310:POOL-1:PROTECTION_SCREED",
    "unit": "m3",
    "base": "",
-   "v3_0_52": "1.5245",
+   "v3_0_55": "1.5245",
    "evidence_status": "DRAWING-CONFIRMED"
   }
  ],
@@ -341,7 +341,7 @@
     "lines": 13,
     "released": 0.0
    },
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 3,
     "bounded_lines": 11,
     "held_high": 1.819408,
@@ -359,7 +359,7 @@
     "lines": 18,
     "released": 85.62071
    },
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 0,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -377,7 +377,7 @@
     "lines": 7,
     "released": 0.0
    },
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 0,
     "bounded_lines": 4,
     "held_high": 3.160363,
@@ -395,7 +395,7 @@
     "lines": 18,
     "released": 25.114585
    },
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 1,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -406,7 +406,7 @@
   },
   "WP.POOL.MEMBRANE|m2": {
    "base": null,
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 0,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -417,7 +417,7 @@
   },
   "WP.POOL.PROTECTION_SCREED|m3": {
    "base": null,
-   "v3_0_52": {
+   "v3_0_55": {
     "blocked_lines": 0,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -427,5 +427,5 @@
    }
   }
  },
- "drawings": "Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run research/agents_t310/v3052_run.py --t167 (own T-167 run this session); r4: V3_0_48 33a81c53 -> V3_0_50 d40c4ec5 (T-497) -> V3_0_51 (T-483) base"
+ "drawings": "Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run research/agents_t310/v3055_run.py --t167 (own T-167 run this session); r6: V3_0_51 c0b6d664 (T-483) -> V3_0_53 36863f6c (T-487) -> V3_0_54 (T-480) base"
 }

@@ -1,5 +1,5 @@
 {
- "candidate_version": "ARCH_TAKEOFF_V3.0.51",
+ "candidate_version": "ARCH_TAKEOFF_V3.0.54",
  "downgrades": [
   {
    "downgrade_id": "DG-1033b87f21613d24",
@@ -131,7 +131,7 @@
  ],
  "inputs": {
   "downgrades": "817326399e5b9ffff1d727b9599dff46d1f917c930e759c37e1d5721f0f85766",
-  "lines": "c0b6d664aeff58809641e1cb09cfe32834fb7a66a55565fa04cc74fb32da37b1",
+  "lines": "c85c4630d117bcf37e012648d2411b1832a908e3eee0bb1ec71419ef6deae4c2",
   "verdicts": "b3b08dd767c82e3019ad4e72590ee9ff130cd44f104e198826c0f47f98974922"
  },
  "lines": [
@@ -167,6 +167,18 @@
    "held_low": null,
    "item_code": "STR.CONC.DOME",
    "line_id": "L-004e8e9fd032cb0aeb72",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W28",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-005334b6998987164a5d",
    "measured_net": null,
    "unbound_records": [],
    "unit": "m3"
@@ -302,6 +314,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "RAIL:ST-01b:GF east-lane band beyond D1",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-0129ba42e945a132bc36",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "lm"
   },
   {
    "binding": null,
@@ -1641,6 +1665,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-GF-09",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-072bc37c5486905a9d21",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:BEAM_STEEL:BM-2F-018:TOP_ENDS_NOTE_9_40D_70D_CANDIDATE_MARKS",
    "held_high": 2.987,
    "held_low": 1.707,
@@ -2108,6 +2144,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-GF-11",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-093df4d00eb35db3a4c0",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -2991,6 +3039,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-GF-08",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:2F-047:TOP_BARS_OVER_SUPPORTS:Y#SLAB_BAR_ENDS:VALUED",
    "held_high": 17.259,
    "held_low": 3.704,
@@ -3695,6 +3755,18 @@
   },
   {
    "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-08",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-10f18635f68cfd8cdd1d",
+   "measured_net": 0.051,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "P-S:BEAMS:1F:BAND0031.2:STI:D8",
    "held_high": null,
@@ -4170,6 +4242,18 @@
    "item_code": "STR.CONC.BEAM",
    "line_id": "L-13031ccc9cc57a0f3465",
    "measured_net": 0.144,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W04",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-1313767d897f06ef95b6",
+   "measured_net": null,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -5163,6 +5247,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-GF-14",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-17953d7882899d43473f",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:GF-020:DEVELOPMENT_ANCHORAGE:X",
    "held_high": null,
    "held_low": null,
@@ -5303,6 +5399,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "pcs"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-04",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-183f52083e693bdf8671",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -5654,6 +5762,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-GF-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-1a07849115af938b4a72",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -6101,6 +6221,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-2F-02",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "FW:L-2999807a87e55d057be3:FACES:CALCULATED:-:G",
    "held_high": null,
@@ -6254,6 +6386,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "RAIL:RL-07:ST-01:T-MS2-LD",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-1c899e8cc696d9c32490",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "lm"
   },
   {
    "binding": null,
@@ -7163,7 +7307,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-RC99C2A:flight 1",
    "held_high": null,
    "held_low": null,
@@ -8979,6 +9123,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-GF-04",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-274b112580029084b80e",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:2F-033:DEVELOPMENT_ANCHORAGE:Y",
    "held_high": null,
    "held_low": null,
@@ -9882,6 +10038,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-1F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:1F-065:BOTTOM_MESH:X",
    "held_high": 9.804,
    "held_low": 9.307,
@@ -10613,6 +10781,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:P-1F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-2efe48097978cae5fc99",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "FW:L-45e0d887d33192039e05:FACES:CALCULATED:-:G",
    "held_high": null,
@@ -11213,6 +11393,30 @@
    "measured_net": 0.364,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-07",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-3111418b702ac80f0ade",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-GF-13",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-31232f81202941d104c6",
+   "measured_net": 0.054,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -13482,6 +13686,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-3af715c6e83364208ad0",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:COLUMN_STEEL:COL-GF-29:MAIN_BARS_NET",
    "held_high": null,
    "held_low": null,
@@ -13613,6 +13829,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-GF-12",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-3bdff145e1546ac48f8e",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -13799,7 +14027,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 2",
    "held_high": null,
    "held_low": null,
@@ -14798,6 +15026,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W24",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-40e8c2597de12644e8e2",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "HL:BEAM_STEEL:BM-GF-035.2:R138:S2of2:BOTTOM",
    "held_high": null,
@@ -15594,6 +15834,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W05",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-441ae5fe85351347aff0",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "GF-WALLS:walls t=0.20",
    "held_high": null,
    "held_low": null,
@@ -16290,6 +16542,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W13",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "FENCE:F-NORTH:BLOCK_NET",
    "held_high": null,
    "held_low": null,
@@ -16797,6 +17061,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:A-1F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-4a12b89454e48ac510dc",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:GF-126:BOTTOM_MESH:Y",
    "held_high": 52.129,
    "held_low": 51.727,
@@ -16964,7 +17240,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-R31F8AE:flight 1",
    "held_high": null,
    "held_low": null,
@@ -19098,6 +19374,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W16",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-53ef44d8c490d1341b93",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
    "held_high": null,
    "held_low": null,
@@ -19586,6 +19874,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:W15",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-55cfc2395aca2e0c69e3",
+   "measured_net": 0.094,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -21914,6 +22214,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W19",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-6057028f3f666538a007",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "FW:L-713bc64aaa210610e7fe:FACES:CALCULATED:-:G",
    "held_high": null,
@@ -23325,6 +23637,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W20",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-6692d02cd6cd25120300",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:1F-023:BOTTOM_MESH:Y",
    "held_high": 51.63,
    "held_low": 49.171,
@@ -23747,7 +24071,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 4",
    "held_high": null,
    "held_low": null,
@@ -24215,6 +24539,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-02",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-6aa750fb944ad58ce960",
+   "measured_net": 0.054,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -25728,6 +26064,18 @@
   {
    "binding": null,
    "class": "RELEASED",
+   "element_id": "LINTEL:D-GF-10",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-7149ea268473ea337cd2",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
    "element_id": "FW:L-03f1399ed0091428743e:FACES:CALCULATED:-:G",
    "held_high": null,
    "held_low": null,
@@ -25796,6 +26144,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-GF-02",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-71998da6340be871d0af",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -27467,6 +27827,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W09",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-786344670c0002b31478",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "1F-R26FA0D:paint above wall tile",
    "held_high": null,
@@ -27563,7 +27935,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "2F-R4D1B62:flight 2",
    "held_high": null,
    "held_low": null,
@@ -27932,6 +28304,18 @@
    "measured_net": 1.6e-05,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-GF-06",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-7a73a338210ee7268b65",
+   "measured_net": 0.072,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": {
@@ -29009,7 +29393,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-RC99C2A:flight 4",
    "held_high": null,
    "held_low": null,
@@ -29078,6 +29462,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W08",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -30380,7 +30776,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-RC99C2A:flight 2",
    "held_high": null,
    "held_low": null,
@@ -31040,6 +31436,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W10",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-882717b0c35a87e363ef",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -31916,6 +32324,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-03",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-8b978b48668cde0f1b0c",
+   "measured_net": 0.054,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -32810,6 +33230,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:L-GF-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-8f69c40749d579c14bf1",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -34337,6 +34769,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-1F-09",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-961608860fcb38c106af",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -36383,6 +36827,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-1F-06",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-9ec762c0bd529b924f33",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "P-C:GROUND_SLAB:GROUND:SITE-b8f67954c29b4613",
    "held_high": null,
@@ -36608,6 +37064,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-2F-03",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-a0518076a024ab1be082",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -37319,7 +37787,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 1",
    "held_high": null,
    "held_low": null,
@@ -37740,6 +38208,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:L-1F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-a500f10eedbd63a147ab",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "FW:FACE:R4-262.GF-166~REST.BEAM_SIDE_HELD_M2",
    "held_high": null,
    "held_low": null,
@@ -37902,6 +38382,18 @@
    "item_code": "STR.EARTH.EXCAVATION",
    "line_id": "L-a5844c9318406eccedde",
    "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-2F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-a58aabc436c71d85bea3",
+   "measured_net": 0.054,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -38355,6 +38847,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:D-GF-03",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-a7848a35fb4329e09d10",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "GF-R31F8AE:GF-ST-CN",
    "held_high": 0.23,
    "held_low": 0.0,
@@ -38409,6 +38913,18 @@
    "item_code": "STR.CONC.GROUND_SLAB",
    "line_id": "L-a7ab57d873e26a587fd9",
    "measured_net": 0.114,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-1F-05",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "measured_net": null,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -39512,6 +40028,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W29",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-aca2db3c2b29719328c7",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -41685,6 +42213,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W26",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-b699ce0da6b29b888435",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:2F-013:BOTTOM_MESH:X",
    "held_high": 60.378,
    "held_low": 57.2,
@@ -41789,6 +42329,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:A-GF-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-b729bd6381f216153df8",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -43439,6 +43991,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "RAIL:RL-07:ST-01:T-MS1-N",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-be57e4fa144c4de18968",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "lm"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "1F-R78C367:OP-021",
    "held_high": null,
@@ -43619,6 +44183,18 @@
   },
   {
    "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:D-1F-10",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-befb0beb1707ef192326",
+   "measured_net": 0.048,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
    "held_high": 3.778,
@@ -43686,6 +44262,30 @@
    "item_code": "STR.CONC.GROUND_BEAM",
    "line_id": "L-bf5eb56348883cb2776d",
    "measured_net": 0.512675,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W23",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-bf76c17309c92605e174",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W25",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "measured_net": null,
    "unbound_records": [],
    "unit": "m3"
   },
@@ -44247,6 +44847,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W11",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "P-C:NECK:COL:SH10:C5@205273,54905",
    "held_high": 0.45,
    "held_low": 0.09,
@@ -44258,7 +44870,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 3",
    "held_high": null,
    "held_low": null,
@@ -44861,7 +45473,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-RC99C2A:flight 3",
    "held_high": null,
    "held_low": null,
@@ -45188,7 +45800,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "2F-R4D1B62:flight 1",
    "held_high": null,
    "held_low": null,
@@ -47102,7 +47714,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 5",
    "held_high": null,
    "held_low": null,
@@ -49382,7 +49994,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "GF-R31F8AE:flight 2",
    "held_high": null,
    "held_low": null,
@@ -49811,6 +50423,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:P-GF-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-d887eecf51c121831336",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -50885,6 +51509,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W21",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-dd5b41a7af885e96f797",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "P-S:BEAMS:GF:BAND0007:STI:D8",
    "held_high": null,
@@ -51338,6 +51974,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-GF-05",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-df32d6f42a824be21d3f",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -52380,6 +53028,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W12",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-e39175199fc6edc4db86",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D4-F8-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
    "held_high": 15.929,
    "held_low": 9.102,
@@ -52913,7 +53573,7 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "EXCLUDED",
    "element_id": "1F-R78C367:flight 6",
    "held_high": null,
    "held_low": null,
@@ -54326,13 +54986,13 @@
   },
   {
    "binding": null,
-   "class": "HELD",
+   "class": "RELEASED",
    "element_id": "RAIL:RL-07",
    "held_high": null,
    "held_low": null,
    "item_code": "FIN.RAILING",
    "line_id": "L-ec87473cb7160d5f4ac2",
-   "measured_net": null,
+   "measured_net": 15.953174,
    "unbound_records": [],
    "unit": "lm"
   },
@@ -54626,6 +55286,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "m2"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W07",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -55809,6 +56481,18 @@
   {
    "binding": null,
    "class": "HELD",
+   "element_id": "LINTEL:W06",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-f269fabb74f505755492",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
    "element_id": "HL:SLAB_STEEL:SLAB:GF-176:BOTTOM_MESH:X",
    "held_high": 14.428,
    "held_low": 12.367,
@@ -56708,6 +57392,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W22",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-f68444edf483bc1d87d4",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "RELEASED",
    "element_id": "HL:BEAM_STEEL:BM-GF-041:R045:Ssupport2:TOP_OVER_SUPPORT",
    "held_high": null,
@@ -57248,6 +57944,18 @@
   },
   {
    "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:W18",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-f8736409a6afa1424ea9",
+   "measured_net": 0.052,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "HELD",
    "element_id": "HL:BEAM_STEEL:BM-GF-005:R005:BOTTOM_ENDS_NOTE_9_40D_70D",
    "held_high": 4.743,
@@ -57257,6 +57965,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:W27",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-f892163c0602656f7e57",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
@@ -58367,6 +59087,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:D-GF-07",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-fd68db051119ea0266ee",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "P-S:BEAMS:1F:BAND0005.2:STI:D8",
    "held_high": null,
@@ -58391,6 +59123,18 @@
   },
   {
    "binding": null,
+   "class": "HELD",
+   "element_id": "LINTEL:L-2F-01",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "measured_net": null,
+   "unbound_records": [],
+   "unit": "m3"
+  },
+  {
+   "binding": null,
    "class": "EXCLUDED",
    "element_id": "P-S:COL:SH12:C6@250087,56100|1F:MAIN:D16",
    "held_high": null,
@@ -58400,6 +59144,18 @@
    "measured_net": null,
    "unbound_records": [],
    "unit": "kg"
+  },
+  {
+   "binding": null,
+   "class": "RELEASED",
+   "element_id": "LINTEL:W14",
+   "held_high": null,
+   "held_low": null,
+   "item_code": "STR.CONC.LINTEL",
+   "line_id": "L-fd9eabe1828ed735c43d",
+   "measured_net": 0.195,
+   "unbound_records": [],
+   "unit": "m3"
   },
   {
    "binding": null,
