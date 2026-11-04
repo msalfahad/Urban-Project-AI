@@ -65,6 +65,16 @@ quantity.
   developed length along the pitch; OWNER TRADE FIN.SKIRTING for level skirting on a landing or a stair-room floor
   (the T-443 stair-room children). A piece is in exactly one; the held shaft 9.050 lm + W13 / W25 2.200 lm stay HELD in
   FIN.SKIRTING until T-501 binds them to B7-07 / B7-08 lines (never dropped in the transfer). Rows: T-483, T-501.
+  UPDATE (Lead 2026-11-04 20:15, T-508 MERGED 40ab9061, V3.0.56): the 1F shaft 9.050 lm is retired by closure (no floor
+  at that level), W13 / W25 2.200 lm NOT_APPLICABLE, landings 6.100 lm stay FIN.SKIRTING (STAIR LANDING ruling); the 22
+  flight pieces are blank B7-07 / B7-08 lines (HELD-FORM, ORR-007), printed HELD, never 0.0 (F-C-T508-1 -> T-512).
+  Checker F-C-T508-2: when the GF stair-hall room skirting is valued it excludes every face the RS-LD landing owns (a
+  face in exactly one line). Rows: T-508, T-512.
+- BAND-PATH PIER FACE between a column and an opening / jamb (Lead 2026-11-04 20:15; T-460, T-510 MERGED 9e86fcf5):
+  the short wall face between a column face and a masonry jamb or glazing is a real face of its host wall: OWNER TRADE
+  the host wall's plaster / paint / skirting lines (one face, counted once), classed by its bounding elements, never by
+  width alone; a 0.150 m WALL_JUNCTION has no face; a gap with column faces at both ends and a curved band are their own
+  classes (HELD by name until ruled). Rows: T-510 (classes, unwired), T-513 (wiring).
 - EXCAVATION ZONES (Lead 2026-11-04 00:20; Checker F-C-T350R4-1): OWNER TRADE B1-02 for every excavated m3 exactly
   once; where zones overlap (pits, F10F, pool, external ground-beam trench, beyond-plot strip) the zone listed first in
   the dig sequence of the drawings owns the m3 and every other zone subtracts its plan by geometry. Disposal (B1-04)
