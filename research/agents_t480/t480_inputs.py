@@ -60,9 +60,9 @@ def _f(x):
 def census():
     rows = _load(CENSUS)
     seen, out = {}, []
-    for r in rows:
+    for r in rows:                     # a wall side with no rail (NOT_APPLICABLE) takes no piece id
         k = f"{r['STAIR']}:{r['FLIGHT']}"
-        seen[k] = seen.get(k, 0) + 1
+        seen[k] = seen.get(k, 0) + (r["STATUS"] != "NOT_APPLICABLE")
     for r in rows:
         k = f"{r['STAIR']}:{r['FLIGHT']}"
         pid = k if seen[k] == 1 else f"{k}:{r['SIDE']}"
