@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T03:38Z | Worker 3 | SUCCESS | T-499 READY 3ccf93d5 | FINISH_MATERIALS_TABLE_V5 (R-T499-1): a subtotal over any HELD row is HELD with the known part AT_LEAST (None if none), never 0.0 or a partial total; determinate subtotals = V4. Reproduced F-T496-1 (T-455 bags_known 0.0 on 5 codes + PROJECT; FIN.WALL.TILE 340.3038 m2 over 12/18 lines). New finding F-T499-1: PLASTER_MATERIALS_TABLE_V1 prints partial sums as totals (T-454 WALL_PLASTER mortar 4.726962 m3 over 25/52 rows) -> Lead: new V3 row. | self-check codemap PASS, pytest t061 PASS, freeze PASS; t499 12/12, full suite 1 fail t485 pre-existing on b6133032; problem: none
 - 2026-11-04T03:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T03:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T02:51Z | Verifier | STARTED | run session_01E6cPnbREoCZigd9H1MsM83 | repo-attached routine | task state: READY T-497 integration (Worker 3 02:46), T-483 (rebase pending) per RUN_LOG | self-check pending
