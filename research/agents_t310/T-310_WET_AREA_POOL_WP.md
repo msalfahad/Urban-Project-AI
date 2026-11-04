@@ -182,3 +182,24 @@ research/agents_t480/v3054_run.py (one hub call re-pointed, + --v3055-inputs), m
 - Tests: tests/t310_wet_area_wp/test_rebase_v3054.py (villa D of T-480 and the T-487 villa: normal pass-through with the
   V3.0.54 / V3.0.53 checks re-run; adverse: rail run re-valued on plan lengths, held turn line dropped, lintel line
   without its record: each refused), hub tests on V3.0.54, master tests 1.51.0 -> 1.52.0, pins c85c4630 -> 72be9379.
+
+## 11. r7 (2026-11-04, rebase only, engineering unchanged)
+
+- T-488 merged V3.0.55 / master 1.52.0 (e8143e40) and T-508 V3.0.56 / 1.53.0 (40ab9061) during r6's review, so by the
+  merge-order rule the package renumbers: engine/source/arch_v3057.py = ARCH_TAKEOFF_V3.0.57 EXTENDS V3.0.56 (WAITING
+  from arch_v3056; re-runs arch_v3055.check_wiring and arch_v3056.check_stair_skirting on the V3.0.57 lines; the V3.0.44
+  skirting check reads only the lines neither V3.0.51 nor V3.0.56 re-recorded). Hub: a V3.0.57 run IS a V3.0.56 run first
+  (same hub line, rewritten before the V3.0.56 test). research/agents_t310/v3057_run.py wraps research/agents_t508/
+  v3056_run.py (one hub call re-pointed, + --v3057-inputs). The r6 files (arch_v3055 of T-310, 1.52.0 of T-310) are gone.
+- Drive run r7 (own decode of P7757_DXF_COMPRESSED.zip + 'ST7757 dxf.dxf', own T-167 run, chained to the end):
+  ... V3_0_54 c85c4630 -> V3_0_55 a498fc61 -> V3_0_56 4e25c54f (the candidate of record, asserted) -> V3_0_57 25a8b406
+  (4994 lines): 18 changed + 5 added, 4971 identical; ledger rows, totals moved by code and the wet_area_wp identity
+  equal r6 (t310_summary.py --previous, version key normalised).
+- Master 1.54.0: line diff V3.0.55 -> V3.0.56 = B3-06 FIN.SKIRTING 2 changed + 6 added, B7-07 / B7-08 22 + 22 added
+  (out/T310_PACKAGE_FAMILIES.json); census at V3.0.56 (out/LINE_INDEX_V3_0_56.json; the same tool on V3_0_55
+  reproduces T-508's LINE_INDEX_V3_0_55.json byte for byte), issues {}; B3-06 released -2.950 lm; B7-07 / B7-08
+  NOT_IN_CANDIDATE -> HELD_IN_CANDIDATE (22 blank lines each); B8 text for V3.0.57; built by build_master_1_54_0.py,
+  problems [].
+- Tests: tests/t310_wet_area_wp/test_rebase_v3056.py (T-488 villa and K508: normal pass-through with the V3.0.55 /
+  V3.0.56 checks re-run; adverse: held roof-datum wall released, both skirting forms valued, zero landing, lone pair line:
+  each refused), hub tests on V3.0.56, master tests 1.53.0 -> 1.54.0, pins 4e25c54f -> 25a8b406.
