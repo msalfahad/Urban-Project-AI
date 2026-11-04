@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-KEYS = ("V3_0_47", "V3_0_48", "V3_0_50", "V3_0_51", "V3_0_53", "V3_0_55")
+KEYS = ("V3_0_47", "V3_0_48", "V3_0_50", "V3_0_51", "V3_0_53", "V3_0_54", "V3_0_55")
 
 
 def main(d):

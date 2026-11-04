@@ -1,0 +1,1610 @@
+{
+ "chain": {
+  "V3_0_47": "e86a53a8",
+  "V3_0_48": "33a81c53",
+  "V3_0_50": "d40c4ec5",
+  "V3_0_51": "c0b6d664",
+  "V3_0_53": "36863f6c",
+  "V3_0_54": "c85c4630",
+  "V3_0_55": "a498fc61"
+ },
+ "drawings": {
+  "plan": "training-villa Drive folder / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55",
+  "structural": "training-villa Drive folder / ST7757 dxf.dxf sha256 9f9d1179"
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.54",
+ "identity": {
+  "added": 0,
+  "base_lines": 4939,
+  "diff": {
+   "vs_base": {
+    "CHANGED": 32,
+    "SAME": 4907
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3349,
+    "QUANTITY_DIFFERS": 1008,
+    "SAME_QUANTITY": 582
+   }
+  },
+  "outside_rows": 4907,
+  "outside_rows_identical_to_base": 4907,
+  "outside_rows_sha256": "c5c3393fcee8725e0b3da6a4a8ab3308a6c7335e099536736e9f1cbb8c69ce20",
+  "replaced": 32,
+  "v3_0_55_lines": 4939,
+  "wiring": {
+   "conflicts": [
+    "GF-W22"
+   ],
+   "parapets": 2,
+   "parents": 9,
+   "part_held": 18,
+   "part_reduced": 3,
+   "roof_walls": [
+    "2F-W01",
+    "2F-W02",
+    "2F-W03",
+    "2F-W04",
+    "2F-W05",
+    "2F-W06",
+    "2F-W07",
+    "2F-W08"
+   ]
+  }
+ },
+ "method": "ARCH_TAKEOFF_V3.0.55",
+ "rows": [
+  {
+   "action": "PART_REDUCED",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 8.595
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.5261
+   },
+   "drop_upper": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "GF",
+   "item_code": "MAS.BLOCK",
+   "kept": [
+    "GF-W19"
+   ],
+   "line_id": "L-adb393d6db51056d343b",
+   "parapet": null,
+   "parent_line_id": "L-0d9b9e89bb6455da475d",
+   "removed": [
+    "GF-W22"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "GF-W22 CONFLICT [12.9311, 12.9439] m2 (D-27)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-27",
+     "kind": "CONFLICT",
+     "length": null,
+     "range": [
+      12.9311,
+      12.9439
+     ],
+     "terms": "GF-W22 CONFLICT [12.9311, 12.9439] m2 (D-27)",
+     "upper": null,
+     "wall": "GF-W22"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [
+    {
+     "after": "10.4121 - 1.7231 d",
+     "before": "10.3982 - 1.7231 d",
+     "wall": "GF-W34"
+    }
+   ],
+   "element_id": "GF-WALLS:walls t=0.15",
+   "floor": "GF",
+   "item_code": "MAS.BLOCK",
+   "kept": null,
+   "line_id": "L-0d9b9e89bb6455da475d",
+   "parapet": null,
+   "parent_line_id": "L-0d9b9e89bb6455da475d",
+   "removed": null,
+   "retired_increments": [
+    "GF-W22",
+    "GF-W34"
+   ],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_REDUCED",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 8.595
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.5261
+   },
+   "drop_upper": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "GF",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [
+    "GF-W19"
+   ],
+   "line_id": "L-173c180c331477adc8e8",
+   "parapet": null,
+   "parent_line_id": "L-0531a33e040440c62453",
+   "removed": [
+    "GF-W22"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "GF-W22 CONFLICT [12.9311, 12.9439] m2 (D-27)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-27",
+     "kind": "CONFLICT",
+     "length": null,
+     "range": [
+      12.9311,
+      12.9439
+     ],
+     "terms": "GF-W22 CONFLICT [12.9311, 12.9439] m2 (D-27)",
+     "upper": null,
+     "wall": "GF-W22"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [
+    {
+     "after": "10.4121 - 1.7231 d",
+     "before": "10.3982 - 1.7231 d",
+     "wall": "GF-W34"
+    }
+   ],
+   "element_id": "GF-WALLS:walls t=0.15",
+   "floor": "GF",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": null,
+   "line_id": "L-0531a33e040440c62453",
+   "parapet": null,
+   "parent_line_id": "L-0531a33e040440c62453",
+   "removed": null,
+   "retired_increments": [
+    "GF-W22",
+    "GF-W34"
+   ],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_REDUCED",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 1.28925
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 3.228915
+   },
+   "drop_upper": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "GF",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [
+    "GF-W19"
+   ],
+   "line_id": "L-7bfc772237a3518c4aae",
+   "parapet": null,
+   "parent_line_id": "L-ed4cf41543c66921a592",
+   "removed": [
+    "GF-W22"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "GF-W22 CONFLICT [1.939665, 1.941585] m3 (D-27)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-27",
+     "kind": "CONFLICT",
+     "length": null,
+     "range": [
+      1.939665,
+      1.941585
+     ],
+     "terms": "GF-W22 CONFLICT [1.939665, 1.941585] m3 (D-27)",
+     "upper": null,
+     "wall": "GF-W22"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [
+    {
+     "after": "1.5618 - 0.2585 d",
+     "before": "1.5597 - 0.2585 d",
+     "wall": "GF-W34"
+    }
+   ],
+   "element_id": "GF-WALLS:walls t=0.15",
+   "floor": "GF",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": null,
+   "line_id": "L-ed4cf41543c66921a592",
+   "parapet": null,
+   "parent_line_id": "L-ed4cf41543c66921a592",
+   "removed": null,
+   "retired_increments": [
+    "GF-W22",
+    "GF-W34"
+   ],
+   "terms": null,
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 9.64
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "parapet": null,
+   "parent_line_id": "L-246f3c09de4c6b90efe5",
+   "removed": [
+    "2F-W08"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W08 HELD ON ROOF DATUM 9.79 - 3 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 25.885
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-9056ebed77701b50abfc",
+   "parapet": null,
+   "parent_line_id": "L-246f3c09de4c6b90efe5",
+   "removed": [
+    "2F-W03"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W03 HELD ON ROOF DATUM 26.255 - 7.4 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.0,
+     "range": null,
+     "terms": "2F-W08 HELD ON ROOF DATUM 9.79 - 3 x b_r m2 (D-39)",
+     "upper": 9.79,
+     "wall": "2F-W08"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 7.4,
+     "range": null,
+     "terms": "2F-W03 HELD ON ROOF DATUM 26.255 - 7.4 x b_r m2 (D-39)",
+     "upper": 26.255,
+     "wall": "2F-W03"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.15",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": null,
+   "line_id": "L-246f3c09de4c6b90efe5",
+   "parapet": null,
+   "parent_line_id": "L-246f3c09de4c6b90efe5",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 9.64
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-241b48d23536eceb8944",
+   "parapet": null,
+   "parent_line_id": "L-0d84cdb4f25220863c80",
+   "removed": [
+    "2F-W08"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W08 HELD ON ROOF DATUM 9.79 - 3 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 25.885
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-60aa0250729fca805027",
+   "parapet": null,
+   "parent_line_id": "L-0d84cdb4f25220863c80",
+   "removed": [
+    "2F-W03"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W03 HELD ON ROOF DATUM 26.255 - 7.4 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.0,
+     "range": null,
+     "terms": "2F-W08 HELD ON ROOF DATUM 9.79 - 3 x b_r m2 (D-39)",
+     "upper": 9.79,
+     "wall": "2F-W08"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 7.4,
+     "range": null,
+     "terms": "2F-W03 HELD ON ROOF DATUM 26.255 - 7.4 x b_r m2 (D-39)",
+     "upper": 26.255,
+     "wall": "2F-W03"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.15",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": null,
+   "line_id": "L-0d84cdb4f25220863c80",
+   "parapet": null,
+   "parent_line_id": "L-0d84cdb4f25220863c80",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 1.446
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-cd564967192b34b7d5f5",
+   "parapet": null,
+   "parent_line_id": "L-4f133d45c6e67ddbf631",
+   "removed": [
+    "2F-W08"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W08 HELD ON ROOF DATUM 1.4685 - 0.45 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 3.88275
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-365002c9f6d57d8c7eb4",
+   "parapet": null,
+   "parent_line_id": "L-4f133d45c6e67ddbf631",
+   "removed": [
+    "2F-W03"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W03 HELD ON ROOF DATUM 3.93825 - 1.11 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.45,
+     "range": null,
+     "terms": "2F-W08 HELD ON ROOF DATUM 1.4685 - 0.45 x b_r m3 (D-39)",
+     "upper": 1.4685,
+     "wall": "2F-W08"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.11,
+     "range": null,
+     "terms": "2F-W03 HELD ON ROOF DATUM 3.93825 - 1.11 x b_r m3 (D-39)",
+     "upper": 3.93825,
+     "wall": "2F-W03"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.15",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": null,
+   "line_id": "L-4f133d45c6e67ddbf631",
+   "parapet": null,
+   "parent_line_id": "L-4f133d45c6e67ddbf631",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.66
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-76a4d8e50423fb02b914",
+   "parapet": null,
+   "parent_line_id": "L-afe984a62285e133ec2f",
+   "removed": [
+    "2F-W01",
+    "2F-W06"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W01 HELD ON ROOF DATUM 6.93 - 1.8 x b_r m2 (D-39)",
+    "2F-W06 HELD ON ROOF DATUM 15.015 - 3.9 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.476
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-e90c9dd5ca08ffb64728",
+   "parapet": null,
+   "parent_line_id": "L-afe984a62285e133ec2f",
+   "removed": [
+    "2F-W04"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W04 HELD ON ROOF DATUM 21.7875 - 6.225 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 3.8
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "parapet": null,
+   "parent_line_id": "L-afe984a62285e133ec2f",
+   "removed": [
+    "2F-W05"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W05 HELD ON ROOF DATUM 3.85 - 1 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 15.9165
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": [],
+   "line_id": "L-bbb82de298fecbafa11d",
+   "parapet": null,
+   "parent_line_id": "L-afe984a62285e133ec2f",
+   "removed": [
+    "2F-W02",
+    "2F-W07"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W02 HELD ON ROOF DATUM 9.865 - 3.47 x b_r m2 (D-39)",
+    "2F-W07 HELD ON ROOF DATUM 6.36 - 2.7 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.8,
+     "range": null,
+     "terms": "2F-W01 HELD ON ROOF DATUM 6.93 - 1.8 x b_r m2 (D-39)",
+     "upper": 6.93,
+     "wall": "2F-W01"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.9,
+     "range": null,
+     "terms": "2F-W06 HELD ON ROOF DATUM 15.015 - 3.9 x b_r m2 (D-39)",
+     "upper": 15.015,
+     "wall": "2F-W06"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 6.225,
+     "range": null,
+     "terms": "2F-W04 HELD ON ROOF DATUM 21.7875 - 6.225 x b_r m2 (D-39)",
+     "upper": 21.7875,
+     "wall": "2F-W04"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.0,
+     "range": null,
+     "terms": "2F-W05 HELD ON ROOF DATUM 3.85 - 1 x b_r m2 (D-39)",
+     "upper": 3.85,
+     "wall": "2F-W05"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.47,
+     "range": null,
+     "terms": "2F-W02 HELD ON ROOF DATUM 9.865 - 3.47 x b_r m2 (D-39)",
+     "upper": 9.865,
+     "wall": "2F-W02"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 2.7,
+     "range": null,
+     "terms": "2F-W07 HELD ON ROOF DATUM 6.36 - 2.7 x b_r m2 (D-39)",
+     "upper": 6.36,
+     "wall": "2F-W07"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.20",
+   "floor": "2F",
+   "item_code": "MAS.BLOCK",
+   "kept": null,
+   "line_id": "L-afe984a62285e133ec2f",
+   "parapet": null,
+   "parent_line_id": "L-afe984a62285e133ec2f",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.66
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-65d67489ebefd7cd74cc",
+   "parapet": null,
+   "parent_line_id": "L-14d6c60fe753e2bae0b4",
+   "removed": [
+    "2F-W01",
+    "2F-W06"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W01 HELD ON ROOF DATUM 6.93 - 1.8 x b_r m2 (D-39)",
+    "2F-W06 HELD ON ROOF DATUM 15.015 - 3.9 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 21.476
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-9501404f8bae7a21d588",
+   "parapet": null,
+   "parent_line_id": "L-14d6c60fe753e2bae0b4",
+   "removed": [
+    "2F-W04"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W04 HELD ON ROOF DATUM 21.7875 - 6.225 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 3.8
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-41d18d2a8210ea353bbf",
+   "parapet": null,
+   "parent_line_id": "L-14d6c60fe753e2bae0b4",
+   "removed": [
+    "2F-W05"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W05 HELD ON ROOF DATUM 3.85 - 1 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 15.9165
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": [],
+   "line_id": "L-18ebc5b6cd1ce1f72d2b",
+   "parapet": null,
+   "parent_line_id": "L-14d6c60fe753e2bae0b4",
+   "removed": [
+    "2F-W02",
+    "2F-W07"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W02 HELD ON ROOF DATUM 9.865 - 3.47 x b_r m2 (D-39)",
+    "2F-W07 HELD ON ROOF DATUM 6.36 - 2.7 x b_r m2 (D-39)"
+   ],
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.8,
+     "range": null,
+     "terms": "2F-W01 HELD ON ROOF DATUM 6.93 - 1.8 x b_r m2 (D-39)",
+     "upper": 6.93,
+     "wall": "2F-W01"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.9,
+     "range": null,
+     "terms": "2F-W06 HELD ON ROOF DATUM 15.015 - 3.9 x b_r m2 (D-39)",
+     "upper": 15.015,
+     "wall": "2F-W06"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 6.225,
+     "range": null,
+     "terms": "2F-W04 HELD ON ROOF DATUM 21.7875 - 6.225 x b_r m2 (D-39)",
+     "upper": 21.7875,
+     "wall": "2F-W04"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.0,
+     "range": null,
+     "terms": "2F-W05 HELD ON ROOF DATUM 3.85 - 1 x b_r m2 (D-39)",
+     "upper": 3.85,
+     "wall": "2F-W05"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 3.47,
+     "range": null,
+     "terms": "2F-W02 HELD ON ROOF DATUM 9.865 - 3.47 x b_r m2 (D-39)",
+     "upper": 9.865,
+     "wall": "2F-W02"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 2.7,
+     "range": null,
+     "terms": "2F-W07 HELD ON ROOF DATUM 6.36 - 2.7 x b_r m2 (D-39)",
+     "upper": 6.36,
+     "wall": "2F-W07"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.20",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_PANEL",
+   "kept": null,
+   "line_id": "L-14d6c60fe753e2bae0b4",
+   "parapet": null,
+   "parent_line_id": "L-14d6c60fe753e2bae0b4",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m2",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 4.332
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-081ecda837ea16af64ac",
+   "parapet": null,
+   "parent_line_id": "L-0e002eb073c9460e90db",
+   "removed": [
+    "2F-W01",
+    "2F-W06"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W01 HELD ON ROOF DATUM 1.386 - 0.36 x b_r m3 (D-39)",
+    "2F-W06 HELD ON ROOF DATUM 3.003 - 0.78 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 4.2952
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-99937b4e582e6225e147",
+   "parapet": null,
+   "parent_line_id": "L-0e002eb073c9460e90db",
+   "removed": [
+    "2F-W04"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W04 HELD ON ROOF DATUM 4.3575 - 1.245 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 0.76
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-1189005753f4561d1517",
+   "parapet": null,
+   "parent_line_id": "L-0e002eb073c9460e90db",
+   "removed": [
+    "2F-W05"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W05 HELD ON ROOF DATUM 0.77 - 0.2 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PART_HELD",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 3.1833
+   },
+   "drop_upper": null,
+   "element_id": "2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": [],
+   "line_id": "L-d3e5b3c7798bcb531a16",
+   "parapet": null,
+   "parent_line_id": "L-0e002eb073c9460e90db",
+   "removed": [
+    "2F-W02",
+    "2F-W07"
+   ],
+   "retired_increments": [],
+   "terms": [
+    "2F-W02 HELD ON ROOF DATUM 1.973 - 0.694 x b_r m3 (D-39)",
+    "2F-W07 HELD ON ROOF DATUM 1.272 - 0.54 x b_r m3 (D-39)"
+   ],
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARENT_RESTATED",
+   "added_held": [
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.36,
+     "range": null,
+     "terms": "2F-W01 HELD ON ROOF DATUM 1.386 - 0.36 x b_r m3 (D-39)",
+     "upper": 1.386,
+     "wall": "2F-W01"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.78,
+     "range": null,
+     "terms": "2F-W06 HELD ON ROOF DATUM 3.003 - 0.78 x b_r m3 (D-39)",
+     "upper": 3.003,
+     "wall": "2F-W06"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 1.245,
+     "range": null,
+     "terms": "2F-W04 HELD ON ROOF DATUM 4.3575 - 1.245 x b_r m3 (D-39)",
+     "upper": 4.3575,
+     "wall": "2F-W04"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.2,
+     "range": null,
+     "terms": "2F-W05 HELD ON ROOF DATUM 0.77 - 0.2 x b_r m3 (D-39)",
+     "upper": 0.77,
+     "wall": "2F-W05"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.694,
+     "range": null,
+     "terms": "2F-W02 HELD ON ROOF DATUM 1.973 - 0.694 x b_r m3 (D-39)",
+     "upper": 1.973,
+     "wall": "2F-W02"
+    },
+    {
+     "item": "D-39",
+     "kind": "ROOF_DATUM",
+     "length": 0.54,
+     "range": null,
+     "terms": "2F-W07 HELD ON ROOF DATUM 1.272 - 0.54 x b_r m3 (D-39)",
+     "upper": 1.272,
+     "wall": "2F-W07"
+    }
+   ],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": [],
+   "element_id": "2F-WALLS:walls t=0.20",
+   "floor": "2F",
+   "item_code": "ARCH.WALL_VOLUME",
+   "kept": null,
+   "line_id": "L-0e002eb073c9460e90db",
+   "parapet": null,
+   "parent_line_id": "L-0e002eb073c9460e90db",
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   }
+  },
+  {
+   "action": "PARAPET_BLOCK_ALT",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": null,
+   "element_id": "1F_ROOF#PARAPET_RC",
+   "floor": "1F",
+   "item_code": "STR.CONC.PARAPET",
+   "kept": null,
+   "line_id": "L-9a2c81164ec6499cc28c",
+   "parapet": {
+    "after_m2": [
+     0.0,
+     3.1672
+    ],
+    "before_m2": [
+     0.0,
+     3.6107
+    ],
+    "run": "NW-2"
+   },
+   "parent_line_id": null,
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  },
+  {
+   "action": "PARAPET_BLOCK_ALT",
+   "added_held": [],
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "drop_upper": null,
+   "element_id": "ANNEX_ROOF#PARAPET_RC",
+   "floor": "GF",
+   "item_code": "STR.CONC.PARAPET",
+   "kept": null,
+   "line_id": "L-1d419b64e8ca1af30fb4",
+   "parapet": {
+    "after_m2": [
+     0.0,
+     0.25999
+    ],
+    "before_m2": null,
+    "run": "NE-6x"
+   },
+   "parent_line_id": null,
+   "removed": null,
+   "retired_increments": [],
+   "terms": null,
+   "unit": "m3",
+   "v2_9": {
+    "high": null,
+    "low": null,
+    "state": "NOT_IN_RELEASED",
+    "value": null
+   }
+  }
+ ],
+ "task": "T-488",
+ "totals_moved_by_code": {
+  "ARCH.WALL_PANEL|m2": {
+   "base": {
+    "blocked_lines": 7,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 579.1011
+   },
+   "v3_0_55": {
+    "blocked_lines": 13,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 467.7925
+   }
+  },
+  "ARCH.WALL_VOLUME|m3": {
+   "base": {
+    "blocked_lines": 7,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 104.468865
+   },
+   "v3_0_55": {
+    "blocked_lines": 13,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 26,
+    "released": 84.62995
+   }
+  },
+  "MAS.BLOCK|m2": {
+   "base": {
+    "blocked_lines": 9,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 28,
+    "released": 579.1011
+   },
+   "v3_0_55": {
+    "blocked_lines": 15,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 28,
+    "released": 467.7925
+   }
+  }
+ }
+}
