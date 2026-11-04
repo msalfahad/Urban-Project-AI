@@ -3207,8 +3207,8 @@ def cmd_arch(a):
     V3044 = "ARCH_TAKEOFF_V3.0.44"
     # T-478: ARCH_TAKEOFF_V3.0.45 = the SAME candidate (engine.source.arch_v3045): a V3.0.44 run (its files unchanged) +
     # the Checker-verified blinding pieces (URBAN_V3045_INPUTS_V1); named here for the same reason.
-    V3045, V3047, V3048 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47", "ARCH_TAKEOFF_V3.0.48"  # T-443 / T-483: V3.0.47 / V3.0.48 named on this line so the hub stays line-stable
-    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46") or a.method in (V3047, V3048)  # T-478 / T-419 / T-443 (see below)
+    V3045, V3047, V3048 = "ARCH_TAKEOFF_V3.0.45", "ARCH_TAKEOFF_V3.0.47", "ARCH_TAKEOFF_V3.0.48"  # T-443 / T-350 r4: named on this line so the hub stays line-stable
+    V3046, v3045 = "ARCH_TAKEOFF_V3.0.46", a.method in (V3045, "ARCH_TAKEOFF_V3.0.46") or a.method in (V3047, V3048)  # T-478 / T-419 / T-443 / T-350 r4 (see below)
     v3044 = a.method in (V3044, V3045, V3046, V3047, V3048)                 # T-422: the V3.0.43 run, then its V3.0.44 skirting release
     v3043 = a.method in (V3043, V3044, V3045, V3046, V3047, V3048)                 # T-350: the V3.0.42 run, then its V3.0.43 earthworks zones
     v3042 = a.method in (V3042, V3043, V3044, V3045, V3046, V3047, V3048)                 # T-442: the V3.0.41 run, then its V3.0.42 ground-slab panels
@@ -3260,11 +3260,8 @@ def cmd_arch(a):
     v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     # T-443: ARCH_TAKEOFF_V3.0.47 = the SAME candidate (engine.source.arch_v3047): a V3.0.46 run (its files unchanged) +
     # the Checker-verified stair-room skirting split (URBAN_V3047_INPUTS_V1); named on the V3.0.45 line above (line-stable hub).
-    v3047 = a.method in (V3047, V3048)                # T-443: the V3.0.46 run, then its V3.0.47 stair-room skirting split
+    v3047, v3048 = a.method in (V3047, V3048), a.method == V3048  # T-443 / T-350 r4 (a.method becomes V2.13 below): the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first)
     v3046 = v3046 or v3047                    # T-443: a V3.0.47 run is a V3.0.46 run first
-    # T-483: ARCH_TAKEOFF_V3.0.48 = the SAME candidate (engine.source.arch_v3048): a V3.0.47 run (its files unchanged) +
-    # the Checker-verified skirting remainder (URBAN_V3048_INPUTS_V1); named on the V3.0.45 line above (line-stable hub).
-    v3048 = a.method == V3048                 # T-483: the V3.0.47 run, then its V3.0.48 skirting remainder
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3303,12 +3300,12 @@ def cmd_arch(a):
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
     if getattr(a, "v3047_inputs", None) and not v3047:
         raise SystemExit("--v3047-inputs needs --method ARCH_TAKEOFF_V3.0.47 or later")
-    if v3047 and not getattr(a, "v3047_inputs", None):
-        raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3048_inputs", None) and not v3048:
         raise SystemExit("--v3048-inputs needs --method ARCH_TAKEOFF_V3.0.48")
     if v3048 and not getattr(a, "v3048_inputs", None):
-        raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the skirting remainder, Checker-verified)")
+        raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the Checker-merged earthworks quantities)")
+    if v3047 and not getattr(a, "v3047_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3046_inputs", None) and not v3046:
         raise SystemExit("--v3046-inputs needs --method ARCH_TAKEOFF_V3.0.46 or later")
     if v3046 and not getattr(a, "v3046_inputs", None):
@@ -4251,18 +4248,20 @@ def cmd_arch(a):
                                                                                                                                                                             svgs += names47
                                                                                                                                                                             v30rec = dict(v30rec, method=V3047, extends=V3046,
                                                                                                                                                                                           identity=ident47, v3_0_46_identity=ident46)
-                                                                                                                                                                        if v3048:
-                                                                                                                                                                            # T-483: ARCH_TAKEOFF_V3.0.48 beside the V3_0_47_*
-                                                                                                                                                                            from engine.source import arch_v3048 as A3048
-                                                                                                                                                                            l3047 = A3047.integrate(l3046, ch_v47, fl24)[0]
-                                                                                                                                                                            inp48 = A3048.load_inputs(json.loads(Path(
-                                                                                                                                                                                a.v3048_inputs).read_text(encoding="utf-8")), l3047[0]["project"]["project_id"])
-                                                                                                                                                                            ch_v48, log_v48 = A3048.changes_for(inp48, l3047)
-                                                                                                                                                                            names48, ident48, _led48 = A3048.write(
-                                                                                                                                                                                out, l3047, ch_v48, log_v48, released, fl24)
-                                                                                                                                                                            svgs += names48
-                                                                                                                                                                            v30rec = dict(v30rec, method=V3048, extends=V3047,
-                                                                                                                                                                                          identity=ident48, v3_0_47_identity=ident47)
+                                                                                                                                                                            if v3048:
+                                                                                                                                                                                # T-350 r4: ARCH_TAKEOFF_V3.0.48 (calculated earthworks) beside the V3_0_47_*
+                                                                                                                                                                                from engine.source import arch_v3048 as A3048
+                                                                                                                                                                                if not getattr(a, "v3048_inputs", None):
+                                                                                                                                                                                    raise SystemExit("ARCH_TAKEOFF_V3.0.48 needs --v3048-inputs (the Checker-merged earthworks quantities)")
+                                                                                                                                                                                l3047 = A3047.integrate(l3046, ch_v47, fl24)[0]
+                                                                                                                                                                                inp48 = A3048.load_inputs(json.loads(Path(
+                                                                                                                                                                                    a.v3048_inputs).read_text(encoding="utf-8")), l3047[0]["project"]["project_id"])
+                                                                                                                                                                                ch_v48, log_v48 = A3048.changes_for(inp48, l3047)
+                                                                                                                                                                                names48, ident48, _led48 = A3048.write(
+                                                                                                                                                                                    out, l3047, ch_v48, log_v48, released, fl24)
+                                                                                                                                                                                svgs += names48
+                                                                                                                                                                                v30rec = dict(v30rec, method=V3048, extends=V3047,
+                                                                                                                                                                                              identity=ident48, v3_0_47_identity=ident47)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4419,7 +4418,7 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.45",) +   # T-478 (the V3.0.45 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.46",) +   # T-419 (the V3.0.46 candidate; named in the hub, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.47",) +   # T-443 (the V3.0.47 candidate; named in the hub, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.48",),   # T-483 (the V3.0.48 candidate; named in the hub, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.48",),   # T-350 r4 (the V3.0.48 candidate; named in the hub, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4480,10 +4479,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
-    p.add_argument("--v3048-inputs", help="ARCH_TAKEOFF_V3.0.48 (URBAN_V3048_INPUTS_V1): the Checker-verified T-481 "
-                   "skirting remainder: a window sill established above the floor released into its room line (range "
-                   "line counted in it), held ranges of floor glazing / stair-owned windows closed whole, a blocked "
-                   "dry-cell line valued from its walk by handle; every other V3.0.47 line byte-identical")
+    p.add_argument("--v3048-inputs", help="ARCH_TAKEOFF_V3.0.48 (URBAN_V3048_INPUTS_V1): the Checker-merged T-350 r2 "
+                   "/ T-484 earthworks quantities: HELD BLANK zone lines valued or ranged with their evidence status, "
+                   "held parts by name beside, backfill gap zones added HELD BLANK; every other V3.0.47 line "
+                   "byte-identical")
     p.add_argument("--v3047-inputs", help="ARCH_TAKEOFF_V3.0.47 (URBAN_V3047_INPUTS_V1): the Checker-verified T-441 "
                    "stair-room face tables: a BLOCKED stair-room skirting line split into one child per floor part "
                    "(openings by id, a lift opening whole with no jambs), held faces their own HELD BLANK lines, the "

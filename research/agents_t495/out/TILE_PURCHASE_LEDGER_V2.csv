@@ -1,0 +1,6 @@
+id,item_code,area_low_m2,area_high_m2,option,adhesive_low,adhesive_high,adhesive_reason,mortar_m3_low,mortar_m3_high,cement_bags_low,cement_bags_high,sand_m3_low,sand_m3_high,bed_reason,status
+L-1c51d1e7a3b65243382a,EXT.FLOOR.OUTDOOR,6.548912,6.548912,INTERLOCK,,,NO_OWNER_ADHESIVE_RULE for INTERLOCK (UPC-ADHESIVE-001 / Q-45 price porcelain / ceramic only),,,,,,,NO_OWNER_BED_RULE for INTERLOCK (Q-45 gives a cement-sand bed under tiles and stone only),HELD
+L-1c51d1e7a3b65243382a,EXT.FLOOR.OUTDOOR,6.548912,6.548912,PORCELAIN_CERAMIC,1.309782,2.182971,,0.206291,0.275054,1.650328,2.200432,0.22692,0.302559,,HELD
+L-dd6e372825ce06d45bdd,EXT.FLOOR.OUTDOOR,10.6785,10.6785,TIMBER_DECK,,,NO_OWNER_ADHESIVE_RULE for TIMBER_DECK (UPC-ADHESIVE-001 / Q-45 price porcelain / ceramic only),,,,,,,NO_OWNER_BED_RULE for TIMBER_DECK (Q-45 gives a cement-sand bed under tiles and stone only),HELD
+L-dd6e372825ce06d45bdd,EXT.FLOOR.OUTDOOR,10.6785,10.6785,PORCELAIN_CERAMIC,2.1357,3.5595,,0.336373,0.448497,2.690984,3.587976,0.37001,0.493347,,HELD
+L-dd6e372825ce06d45bdd,EXT.FLOOR.OUTDOOR,10.6785,10.6785,MARBLE_STONE,,,ADHESIVE_COVERAGE_NOT_GIVEN for MARBLE_STONE (Q-45: marble / stone coverage HELD),0.336373,0.448497,2.690984,3.587976,0.37001,0.493347,,HELD

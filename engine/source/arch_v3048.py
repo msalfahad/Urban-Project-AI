@@ -1,35 +1,29 @@
-"""ARCH_TAKEOFF_V3.0.48 (T-483, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.47
-(engine.source.arch_v30, arch_v301 .. arch_v3047), extended with the SKIRTING REMAINDER of the merged T-481 census
-(a8609a7a; Checker own re-measure AGREE on W17 / W11 / W02 / the 1F dressing) in ONE step:
+"""ARCH_TAKEOFF_V3.0.48 (T-350 r4, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.47
+(engine.source.arch_v30, arch_v301 .. arch_v3047), extended with the CALCULATED EARTHWORKS quantities of the
+Checker-merged T-350 r2 piece (merge 42a99508) and the T-484 displacement re-measure (merge 12395ea4) in ONE step:
 
-  SILL_RELEASE  a window whose sill is now ESTABLISHED above the room floor (> 0.02 m, read in a section or a printed
-                elevation chain) has wall under it, so the skirting runs under the sill: its listed halves (held
-                UNRESOLVED since V3.0.36) leave the room's determinate line, whose net rises by the window edge; the
-                room's held range line, which held exactly that edge, is counted in the determinate line now:
-                NOT_APPLICABLE_WITH_EVIDENCE (no figure, never 0, names the line that carries it).
-  RANGE_CLOSE   every window of a held range line now has an established reason for NO room skirting under it
-                (FLOOR_GLAZING: sill at the floor; STAIR_OWNED: the stretch is a flight / landing face owned by the
-                merged stair side table, B7-07 / B7-08): the range is closed NOT_APPLICABLE_WITH_EVIDENCE when the
-                windows account for its whole high; a partial close is refused (that is V3.0.44's narrowing).
-  CELL_WALK     a BLOCKED skirting line of a dry room with a merged drawing walk of the cell gets its value: sides cut
-                into stretches by DXF handle (faces skirted; openings deducted by id; joinery in front of a face is
-                not a boundary, reported beside), gross = sides, net = faces, gross - deductions = net.
+  EW_VALUE   a HELD BLANK earthworks zone line of V3.0.43 whose quantity the merged pieces calculate gets it: one figure
+             (PROVISIONAL for a scenario-level ESTIMATED basis, SOURCE_DERIVED for a DRAWING-CONFIRMED one) or one
+             admissible range (BOUNDED_EXPOSURE, both ends from the merged ledgers). The line keeps its id, its V3.0.43
+             zone record and its rule; the new record carries the evidence status of WORKFLOW_CONTROLS s.5, the
+             sensitivity, the corrected printed-minimum bound and every still-held item by name, beside, never in the
+             quantity.
+  EW_ADD     a zone the excavation family has and the backfill family lacks (a coverage gap) gets its own HELD BLANK
+             line (BLOCKED_RFI, never 0), the scenario figures beside.
 
-R-T483-1 (every villa; integrates R-T481-1 / R-T481-2 / R-T481-3 as merged, UP-SKIRT-001 1.4.0, UP-CER-003,
-R-T422-1, UP-QTY-STATUS-001): (a) a sill is released only with its status DRAWING-CONFIRMED / PRINTED and a sill above
-0.02 m in m; floor glazing needs a sill <= 0.02 m; a stair-owned window names its stair stretch owner; (b) a released
-edge is carried once (determinate up, range NA); (c) a range is closed only when its windows take its whole high
-(residual <= TOL), otherwise refused; (d) a walk covers each side exactly once with handles on faces and ids on
-openings, a door jamb is never skirted, and closes on the declared gross; (e) every binding is checked against the
-candidate (state, net, gross, range) and refused if stale; (f) held stays blank, never 0.
+R-T350-2 (every villa; integrates R-T350-1, R-T350R2 (EARTHWORKS_QTY_V1) and R-T484-1): (a) excavation = zone plan x
+(existing ground - formation) at the governing level basis; a scenario basis is ESTIMATED (PROVISIONAL), a printed one
+DRAWING-CONFIRMED (SOURCE_DERIVED), a basis with two admissible readings a RANGE (BOUNDED_EXPOSURE); (b) backfill of a
+zone = its excavation - every displacement below the existing ground at its actual position, once: the range must
+close excavation - displacement at both ends (asserted to TOL) and never exceed its excavation; (c) the parts of a
+zone that are designer items (working space, beyond the plot line, a drawing conflict, an unprinted section) stay
+HELD by name beside the line, never 0, never silently in or out; (d) a lift is a layer COUNT beside the backfill
+(ceil(zone depth / OWNER-PROVISIONAL lift)), never a quantity; (e) disposal stays HELD until the dry-mass balance has
+its densities (owner 2026-11-02 18:00 (3)); (f) a backfill zone with no line is added HELD BLANK; (g) nothing outside
+the earthworks codes moves.
 
-NOT IN THIS VERSION (named, unchanged): the 1F ST-1F shaft binding of R-T481-3 (9.050 lm of the 1F living line's
-determinate net and its W13 / W25 held range 2.200 lm to B7): the owner lines B7-07 / B7-08 are not in the candidate,
-so a transfer would drop the faces from the BOQ (WAITING T483_1F_SHAFT); the W02 pier D-53. STAIR_OWNED closes are
-supported for a villa whose stair skirting lines exist.
-
-Nothing else moves: every V3.0.47 line not named by the inputs is byte-identical (asserted); totals move only in
-FIN.SKIRTING (asserted). Files: V3_0_48_BOQ_LINES.json / .csv, V3_0_48_INTEGRATION_LEDGER.json / .csv,
+Nothing else moves: every V3.0.47 line not named by the inputs is byte-identical (asserted); totals move only in the
+earthworks codes (asserted). Files: V3_0_48_BOQ_LINES.json / .csv, V3_0_48_INTEGRATION_LEDGER.json / .csv,
 V3_0_48_DIFF.csv, V3_0_48_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
@@ -37,6 +31,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import math
 import re
 
 from engine.source import arch_v30 as A30
@@ -66,261 +61,193 @@ DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books checker-merged ledger
 METHOD = "ARCH_TAKEOFF_V3.0.48"
 EXTENDS = A3047.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T483_ARCH_V3_0_48"
+POLICY_ID = "URBAN_BOQ_T350R4_ARCH_V3_0_48"
 INPUTS_SCHEMA = "URBAN_V3048_INPUTS_V1"
 LEDGER_SCHEMA = "URBAN_V3048_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 InputsError = A3031.InputsError
 _r = A3018._r
 _fmt = A3030._fmt
-RULE_ID, RULE_VERSION = "R-T483-1", "T-483"
-REC_KEY = "skirting_remainder_v3048"
-CODE, UNIT = "FIN.SKIRTING", "lm"
-P_SILL, P_CLOSE, P_WALK = "SILL_RELEASE", "RANGE_CLOSE", "CELL_WALK"
-ACTIONS = ("RELEASE", "ABSORB_RANGE", "CLOSE_RANGE", "WALK")
-FLOOR_GLAZING_MAX_SILL_M = 0.02          # UP-SKIRT-001 1.4.0 / R-T481-1: masonry base above the FFL > 0.02 m is wall
-VALUED_STATES = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")
-RANGE_STATE, HELD_STATE, NA_STATE = "BOUNDED_EXPOSURE", "BLOCKED_RFI", "NOT_APPLICABLE_WITH_EVIDENCE"
-SKIRTED_STATUS = ("DRAWING-CONFIRMED", "PRINTED")
-CLOSE_WHY = ("FLOOR_GLAZING", "STAIR_OWNED")
-FACE = ("WALL", "COLUMN")
-OPENINGS = ("DOOR", "PASSAGE", "ARCH", "LIFT_OPENING")
-WALK_KINDS = FACE + OPENINGS
-TOL = 0.0005                             # tools/boq_export_v1.QTY_MATCH_TOL (the T-330 check's tolerance)
-BIND_TOL = 1e-6
-GEOM_TOL = 1e-6
-MAX_EDGE_M = 20.0                        # one window edge / one side in m; above it is a unit slip (mm / cm)
-MAX_SILL_M = 6.0
-LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
+RULE_ID, RULE_VERSION = "R-T350-2", "T-350 r4"
+REC_KEY = "earthworks_v3048"
+PRIOR_KEY = A3043.REC_KEY                # the V3.0.43 zone record every earthworks line carries
+P_VALUE, P_ADD = "EW_VALUE", "EW_ADD"
+EXC, BKF, DSP = A3043.EXC, A3043.BKF, A3043.DSP
+EW_CODES = A3043.EW_CODES
+FAMILY_CODE = A3043.FAMILY_CODE
+HELD_STATE = A3043.HELD_STATE            # BLOCKED_RFI
+RANGE_STATE = "BOUNDED_EXPOSURE"
+# WORKFLOW_CONTROLS s.5 evidence status -> the line's evidence state (one map, never a guess)
+STATE_FOR = {"ESTIMATED": "PROVISIONAL", "DRAWING-CONFIRMED": "SOURCE_DERIVED"}
+RANGE_STATUSES = ("ESTIMATED", "DRAWING-CONFIRMED", "PARTIALLY VERIFIED", "HELD")
+VALUED = ("PROVISIONAL", "SOURCE_DERIVED")
+ACTIONS = ("VALUE", "RANGE", "ADD_HELD")
+TOL = 0.0000015
+MAX_M3 = 100000.0
+LINE_ID_RE = A3043.LINE_ID_RE
+FORMULA_END_RE = A3043.FORMULA_END_RE
+PARTIAL_RE = re.compile(r"^PARTIALLY VERIFIED (\d+) / (\d+)$")
 
 PIECES = {
-    P_SILL: {"module": "engine/source/arch_v3048.py (a window sill established above the floor by a section or a "
-                       "printed chain: its base released into the room's determinate skirting line; the room's range "
-                       "line counted in it)", "policy": "SKIRTING_SILL_RELEASE_V2", "rule_id": "R-T481-1 (R-T483-1 a, b)",
-             "owner_rules": ["UP-SKIRT-001 1.4.0 (the wall base continues under a sill above the floor)",
-                             "UP-CER-002 (skirting in lm)", "UP-CER-003 (doors / passages deducted)",
-                             "UP-QTY-STATUS-001 (held is blank, never 0)"],
-             "owner_manual_method": "room perimeter at floor level less each door / passage width by opening; a "
-                                    "window is deducted only where no wall continues under it (sill at the floor)",
-             "drawing_method": "the merged T-481 sill reading of each window (section cut on printed level markers, "
-                               "elevation chain; spread across views named): sill above the floor -> both listed "
-                               "halves leave the list"},
-    P_CLOSE: {"module": "engine/source/arch_v3048.py (a held range whose every window has no room skirting under it "
-                        "closed NOT_APPLICABLE_WITH_EVIDENCE)", "policy": "SKIRTING_RANGE_CLOSE_V1",
-              "rule_id": "R-T481-1 / R-T481-3 (R-T483-1 a, c)",
-              "owner_rules": ["UP-SKIRT-001 1.4.0 (floor glazing: no wall base)",
-                              "OWNER_RULE_STAIRS (a face along a flight / landing is stair skirting, B7-07 / B7-08)",
-                              "UP-QTY-STATUS-001"],
-              "owner_manual_method": "not a quantity: the held window edge is either floor glazing (no base) or a "
-                                     "stair face (the stair skirting owns it)",
-              "drawing_method": "the merged T-481 readings: sill 0.00 drawing-confirmed (floor glazing), or the "
-                                "window's stretch inside a merged T-410 stair side stretch (station by nosing)"},
-    P_WALK: {"module": "engine/source/arch_v3048.py (a blocked dry-cell skirting line valued from the merged walk: "
-                       "sides by handle, openings by id)", "policy": "SKIRTING_CELL_WALK_V1",
-             "rule_id": "R-T481-2 (R-T483-1 d)",
-             "owner_rules": ["UP-SKIRT-001 (dry room: skirting at the wall base)", "UP-CER-003 (doors deducted)",
-                             "WALL_CONTACT_PATH_POLICY V1 / V2 (joinery is never a site boundary)",
-                             "UP-QTY-STATUS-001"],
-             "owner_manual_method": "room perimeter at floor level less the door / arch widths by id",
-             "drawing_method": "the merged T-481 cell walk on the plan by handle: each side cut into stretches, faces "
-                               "skirted, openings deducted by id, joinery-backed length beside (not deducted)"},
+    P_VALUE: {"module": "engine/source/arch_v3048.py (a HELD BLANK V3.0.43 earthworks zone line valued or ranged from "
+                        "the merged calculated quantities; held parts by name beside)",
+              "policy": "EW_VALUE_V1", "rule_id": "R-T350R2 (EARTHWORKS_QTY_V1), R-T484-1 (R-T350-2 a .. e, g)",
+              "owner_rules": ["RFI RE-REVIEW 2026-11-02 S01 ESTIMATED (owner-accepted): footing underside at the "
+                              "printed 1.50 m minimum, underlay + blinding under it; +-0.10 m sensitivity",
+                              "owner 2026-11-02 18:00 (1) maximum 150 mm finished compacted lift, OWNER-PROVISIONAL",
+                              "owner 2026-11-02 18:00 (3) acceptance density is not procurement density; (4) geometry "
+                              "is always calculated", "Q-21 C", "OQ-13 (working space: designer / contractor item)",
+                              "UP-QTY-STATUS-001 (held is blank or a range, never 0)",
+                              "ELEMENT_REGISTER ruling FOUNDATION BACKFILL displacement (each buried element once, "
+                              "at its actual position)"],
+              "owner_manual_method": "excavation = plan of each pit / trench x depth from the existing ground to the "
+                                     "formation (working space a separate item); backfill = excavation - the buried "
+                                     "structure below the existing ground (blinding, underlay, footings, necks, strap "
+                                     "ends, ground-beam solids); disposal = excavation - re-used fill, by dry mass",
+              "drawing_method": "the merged T-350 r2 FILL table (neat pit union by DXF outline handle in the plot, "
+                                "outside the pool envelope; Checker own re-measure 124.649020 m2 / 208.163863 m3 "
+                                "AGREE) and the T-484 displacement re-measure (necks 29 by handle 5.154, strap ends "
+                                "0.179618 VERIFIED; beam solids per piece; F10 + F union), Checker verdicts "
+                                "2026-11-03 06:05 and 09:56"},
+    P_ADD: {"module": "engine/source/arch_v3048.py (a backfill zone with no line added HELD BLANK, scenarios beside)",
+            "policy": "EW_ADD_HELD_V1", "rule_id": "R-T350R2 coverage gap (R-T350-2 f)",
+            "owner_rules": ["UP-QTY-STATUS-001", "Q-31 C (necks C10 / C held)"],
+            "owner_manual_method": "every excavated zone is backfilled: one backfill line per excavation zone",
+            "drawing_method": "the merged T-350 r2 FILL gap rows (PROPOSED_NEW_LINE_HELD) with the T-484 F10 + F union"},
 }
 WAITING = dict(A3047.WAITING)
-WAITING.pop("T443_1F_SHAFT", None)
 WAITING.update({
-    "T483_1F_SHAFT": "1F living line: the ST-1F shaft faces (R-T481-3: 9.050 lm along flights / landings to B7, 1.175 "
-                     "lm room) stay inside the determinate net, and its W13 / W25 range (0 .. 2.200) stays held: the "
-                     "owner B7-07 / B7-08 has no candidate line yet (NOT_IN_CANDIDATE), so moving a face there now "
-                     "would drop it from the BOQ; bind both (by handle) when the stair skirting lines exist",
-    "T483_W02_PIER": "W02 pier (D-53): if the designer confirms one, its room face takes skirting; no width drawn, "
-                     "nothing valued",
+    "T350R4_WORKING_SPACE": "working space round pits and trenches: not printed, no documented method (OQ-13 / RFI S1):"
+                            " HELD by name on every excavation and backfill line, never 0",
+    "T350R4_BEYOND_PLOT": "the parts of pit / trench / pool plans beyond the plot line (S06 / D-14): HELD by name",
+    "T350R4_POOL_CONFLICT": "F-T350R2-2 CONFLICT: F8 / F4 / FN pit chains inside the pool envelope under the pool "
+                            "formation 0.458211 m3: owned by neither line until the designer settles the pit-to-pool "
+                            "interface; named on the pits excavation line",
+    "T350R4_BEAM_SECTIONS": "D-33 / D-35 ground-beam sections (designer items): the width 8.650212 m3 of the pits "
+                            "backfill range; C8 mark conflict 0.030 m3 (drawn 0.24 vs schedule 0.27 m2)",
+    "T350R4_DISPOSAL": "B1-04 disposal: in-situ dry density, placement target density, suitable share, loose densities "
+                       "and the Z2 draw all HELD (owner 18:00 (3)); the line stays HELD BLANK",
+    "T350R4_LIFT_PIT": "Z1-PIT-FF lift raft and pit: pit depth 'as per lift manufacturer', not printed: HELD",
+    "T350R4_LOWER_GB_ROW": "Z1-LOWER-GB-ROW: not required under S01 (2.45 m < 2.50 m), REQUIRED at +0.10 m (2.55 m): "
+                           "the scenario flips it, the line stays HELD BLANK",
+    "T350R4_TRENCHES": "the annex, court, strap, boundary, interior D-33 and ZERO trench zones and Z2: S01 does not "
+                       "settle their open dimension: V3.0.43 lines unchanged",
 })
 
 
 # ================================================================================================ inputs
 def _need(s, keys, where):
     for k in keys:
-        if s.get(k) in (None, ""):
+        if s.get(k) in (None, "", [], {}):
             raise InputsError(f"{where}: {k} missing")
 
 
-def _num(x, where, pos=False, top=2000.0):
+def _num(x, where, pos=False):
     if not isinstance(x, (int, float)) or isinstance(x, bool) or x != x:
         raise InputsError(f"{where}: {x!r} is not a number")
     if x < 0 or (pos and x == 0):
-        raise InputsError(f"{where}: {x!r} is {'not positive' if pos else 'negative'}")
-    if x > top:
-        raise InputsError(f"{where}: {x} is not a length in m (mm / cm refused)")
+        raise InputsError(f"{where}: {x!r} is {'not positive' if pos else 'negative'} (held is never 0)")
+    if x > MAX_M3:
+        raise InputsError(f"{where}: {x} is not a quantity in m3 (litres / mm3 refused)")
     return float(x)
 
 
-def _lid(x, where):
-    if not LINE_ID_RE.match(str(x)):
-        raise InputsError(f"{where}: {x!r} is not a BOQ line id")
-    return x
+def _status(st, where, ranged):
+    if st in STATE_FOR and not ranged:
+        return st
+    if ranged and (st in RANGE_STATUSES or PARTIAL_RE.match(str(st))):
+        m = PARTIAL_RE.match(str(st))
+        if m and not (0 < int(m.group(1)) < int(m.group(2))):
+            raise InputsError(f"{where}: {st} is not a partial count (0 < n < m)")
+        return st
+    raise InputsError(f"{where}: evidence status {st!r} is not admissible for a {'range' if ranged else 'value'} "
+                      f"(VERIFIED is the Checker's word, never an integration input)")
 
 
-def _sources(doc):
-    srcs = {}
-    for s in doc.get("sources") or ():
-        _need(s, ("task", "file", "sha256", "merge_commit", "checker_run"), f"source {s.get('task')}")
-        srcs[s["task"]] = s
-    if not srcs:
-        raise InputsError("sources: the merged ledgers the rows come from")
-    return srcs
+def _components(x, where):
+    comps = x.get("displacement") or {}
+    _need(comps, ("verified_m3", "remeasured_low_m3", "remeasured_high_m3"), f"{where} displacement")
+    v = _num(comps["verified_m3"], f"{where} verified displacement")
+    lo = _num(comps["remeasured_low_m3"], f"{where} displacement low")
+    hi = _num(comps["remeasured_high_m3"], f"{where} displacement high")
+    if lo > hi:
+        raise InputsError(f"{where}: displacement low {lo} > high {hi}")
+    return {"verified": v, "low": lo, "high": hi}
 
 
-def _tasks(r, srcs, where):
-    if not r.get("source_tasks") or any(t not in srcs for t in r["source_tasks"]):
-        raise InputsError(f"{where}: no merged source named")
-
-
-def _sill(x, where):
-    if not isinstance(x, (int, float)) or isinstance(x, bool) or x != x or x < 0 or x > MAX_SILL_M:
-        raise InputsError(f"{where}: sill {x!r} is not a sill height in m above the FFL (mm refused)")
-    return float(x)
-
-
-def _window(w, where, mode):
-    """mode RELEASE: sill established above the floor; CLOSE: FLOOR_GLAZING (sill <= 0.02) or STAIR_OWNED (owner)."""
-    _need(w, ("census_id", "status", "why"), where)
-    e = _num(w.get("edge_lm"), f"{where} edge_lm", pos=True, top=MAX_EDGE_M)
-    if w["status"] not in SKIRTED_STATUS:
-        raise InputsError(f"{where}: status {w['status']!r} is not {SKIRTED_STATUS} (an unread sill stays held)")
-    if mode == "RELEASE":
-        s = _sill(w.get("sill_m"), where)
-        if s <= FLOOR_GLAZING_MAX_SILL_M:
-            raise InputsError(f"{where}: sill {s} m is not above the floor: nothing to release")
+def _entry(x, srcs, seen):
+    w = f"{x.get('action')} {x.get('family')} {x.get('zone')}"
+    _need(x, ("action", "family", "zone", "element_id", "evidence_status", "basis", "held_items", "source_tasks"), w)
+    if x["action"] not in ACTIONS:
+        raise InputsError(f"{w}: action {x['action']} is not one of {ACTIONS}")
+    if x["family"] not in FAMILY_CODE:
+        raise InputsError(f"{w}: family {x['family']} is not B1-02 / B1-03 / B1-04")
+    if any(t not in srcs for t in x["source_tasks"]):
+        raise InputsError(f"{w}: no merged source named")
+    key = (x["family"], x["element_id"])
+    if key in seen:
+        raise InputsError(f"{w}: zone named twice (one zone, one line)")
+    seen.add(key)
+    code = FAMILY_CODE[x["family"]]
+    if code == DSP and x["action"] != "ADD_HELD":
+        raise InputsError(f"{w}: disposal is never valued without its densities (R-T350-2 e)")
+    out = dict(x, _code=code, _value=None, _lo=None, _hi=None, _disp=None)
+    if x["action"] == "VALUE":
+        if x.get("low") not in (None, "") or x.get("high") not in (None, ""):
+            raise InputsError(f"{w}: a valued zone carries no range (the sensitivity goes beside)")
+        out["_value"] = _num(x.get("value"), f"{w} value", pos=True)
+        out["_status"] = _status(x["evidence_status"], w, False)
+    elif x["action"] == "RANGE":
+        if x.get("value") not in (None, ""):
+            raise InputsError(f"{w}: a ranged zone carries no single value")
+        lo, hi = _num(x.get("low"), f"{w} low", pos=True), _num(x.get("high"), f"{w} high", pos=True)
+        if lo > hi + TOL:
+            raise InputsError(f"{w}: low {lo} > high {hi}")
+        out.update(_lo=lo, _hi=hi, _status=_status(x["evidence_status"], w, True))
+        if code == BKF:
+            out["_disp"] = _components(x, w)
+            _need(x, ("excavation_element_id",), w)
     else:
-        why = w.get("reason")
-        if why not in CLOSE_WHY:
-            raise InputsError(f"{where}: a range close needs its reason {CLOSE_WHY}")
-        if why == "FLOOR_GLAZING" and _sill(w.get("sill_m"), where) > FLOOR_GLAZING_MAX_SILL_M:
-            raise InputsError(f"{where}: floor glazing needs an established sill <= {FLOOR_GLAZING_MAX_SILL_M} m")
-        if why == "STAIR_OWNED" and not w.get("owner"):
-            raise InputsError(f"{where}: a stair-owned window names its stair side stretch owner")
-    return dict(w, _edge=e)
-
-
-def check_walk(wk, where):
-    """R-T483-1 d: each side covered once by its stretches; faces carry handles; openings carry ids. -> measured."""
-    gross, net, ded, rows, ids = 0.0, 0.0, [], [], set()
-    for sd in wk.get("sides") or ():
-        sw = f"{where} side {sd.get('id')}"
-        _need(sd, ("id",), sw)
-        L = _num(sd.get("length"), f"{sw} length", pos=True, top=MAX_EDGE_M)
-        pos = 0.0
-        for st in sd.get("stretches") or ():
-            k = st.get("kind")
-            if k not in WALK_KINDS:
-                raise InputsError(f"{sw}: unknown stretch kind {k!r} (joinery is never a boundary)")
-            a = _num(st.get("s0"), f"{sw} s0", top=MAX_EDGE_M)
-            b = _num(st.get("s1"), f"{sw} s1", top=MAX_EDGE_M)
-            if b - a <= GEOM_TOL:
-                raise InputsError(f"{sw}: empty or reversed stretch {a} .. {b}")
-            if abs(a - pos) > GEOM_TOL:
-                raise InputsError(f"{sw}: {'gap' if a > pos else 'overlap'} at s {pos:.4f} .. {a:.4f}")
-            ln = _r(b - a)
-            if k in FACE:
-                if not str(st.get("handles") or "").split():
-                    raise InputsError(f"{sw}: {k} face at s {a:.4f} without a drawn handle")
-                net += ln
-            else:
-                oid = st.get("opening_id")
-                if not oid:
-                    raise InputsError(f"{sw}: {k} at s {a:.4f} deducted without an opening id (R-T246)")
-                if oid in ids:
-                    raise InputsError(f"{sw}: opening {oid} deducted twice")
-                ids.add(oid)
-                ded.append({"opening_id": oid, "kind": k, "qty": ln, "side": sd["id"], "jamb_skirting": False,
-                            "why": "opening deducted by id (UP-CER-003); no jamb return"})
-            gross += ln
-            rows.append({"side": sd["id"], "s0": a, "s1": b, "kind": k, "length_m": ln,
-                         "handles": st.get("handles") or "", "opening_id": st.get("opening_id") or ""})
-            pos = b
-        if abs(pos - L) > GEOM_TOL:
-            raise InputsError(f"{sw}: stretches end at {pos:.4f}, the side is {L:.4f} (short cover)")
-    if not rows:
-        raise InputsError(f"{where}: no side walked")
-    if wk.get("jambs"):
-        raise InputsError(f"{where}: a jamb return given skirting (a door / arch jamb is never skirted here)")
-    gross, net = _r(gross), _r(net)
-    if net <= 0:
-        raise InputsError(f"{where}: no skirted face")
-    return {"gross": gross, "net": net, "deductions": ded, "deducted": _r(sum(d["qty"] for d in ded)), "rows": rows}
+        if any(x.get(k) not in (None, "") for k in ("value", "low", "high")):
+            raise InputsError(f"{w}: HELD_WITH_VALUE: an added held zone carries its figures beside, never in it")
+        if x["evidence_status"] != "HELD":
+            raise InputsError(f"{w}: an added zone is HELD")
+        out["_status"] = "HELD"
+    lay = x.get("layers")
+    if lay is not None:
+        if code != BKF:
+            raise InputsError(f"{w}: a layer count belongs beside a backfill line")
+        _need(lay, ("depth_m", "lift_m", "status"), f"{w} layers")
+        d, l = _num(lay["depth_m"], f"{w} depth", pos=True), _num(lay["lift_m"], f"{w} lift", pos=True)
+        if l > 0.15 + 1e-9:
+            raise InputsError(f"{w}: lift {l} m exceeds the OWNER-PROVISIONAL 150 mm finished lift")
+        n = math.ceil(round(d / l, 9))
+        if lay.get("count") is not None and lay["count"] != n:
+            raise InputsError(f"{w}: layer count {lay['count']} is not ceil({d} / {l}) = {n}")
+        out["_layers"] = dict(lay, count=n)
+    return out
 
 
 def load_inputs(doc, project_id=None):
     """URBAN_V3048_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
-     "releases": [{"line_id", "expect": {"gross", "measured_net"}, "windows": [{"census_id", "edge_lm", "sill_m",
-                   "status", "why"}], "range_line": {"line_id", "expect": {"low", "high"}}, "source_tasks"}],
-     "closes": [{"line_id", "expect": {"low", "high"}, "windows": [{"census_id", "edge_lm", "sill_m", "status",
-                 "reason" FLOOR_GLAZING / STAIR_OWNED, "owner", "why"}], "source_tasks"}],
-     "walks": [{"line_id", "room", "floor", "expect": {"evidence_state"}, "gross_lm", "evidence_status",
-                "evidence_state", "joinery_backed_lm", "sides": [{"id", "length", "stretches": [{"s0", "s1", "kind",
-                "handles" | "opening_id"}]}], "source_tasks"}]}"""
+     "zones": [{"action" (VALUE / RANGE / ADD_HELD), "family", "zone", "element_id" (the V3.0.43 zone element, or the
+                new one for ADD_HELD), "evidence_status" (WORKFLOW_CONTROLS s.5), "value" | "low", "high", "basis",
+                "sensitivity", "printed_minimum_bound", "held_items", "displacement" (backfill: verified_m3,
+                remeasured_low_m3, remeasured_high_m3, residual), "excavation_element_id" (backfill), "layers"
+                (depth_m, lift_m, status, count), "scenarios_beside", "source_tasks"}]}"""
     if not doc:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
         raise InputsError(f"project inputs: schema must be {INPUTS_SCHEMA}")
     if project_id and doc.get("project_id") not in (None, project_id):
         raise InputsError(f"project inputs are for {doc.get('project_id')!r}, the run is {project_id!r}")
-    srcs = _sources(doc)
-    named = set()
-
-    def once(lid, where):
-        if lid in named:
-            raise InputsError(f"{where}: line {lid} named twice (one change per line)")
-        named.add(lid)
-
-    rel = []
-    for r in doc.get("releases") or ():
-        w = f"release {r.get('line_id')}"
-        _need(r, ("line_id", "expect", "windows", "range_line"), w)
-        _tasks(r, srcs, w)
-        once(_lid(r["line_id"], w), w)
-        _num(r["expect"].get("gross"), f"{w} expect.gross", pos=True)
-        _num(r["expect"].get("measured_net"), f"{w} expect.measured_net")
-        ws = [_window(x, f"{w} {x.get('census_id')}", "RELEASE") for x in r["windows"]]
-        if not ws or len({x["census_id"] for x in ws}) != len(ws):
-            raise InputsError(f"{w}: no window, or a window named twice")
-        rg = r["range_line"]
-        once(_lid(rg.get("line_id"), w), w)
-        _num((rg.get("expect") or {}).get("low"), f"{w} range expect.low")
-        _num((rg.get("expect") or {}).get("high"), f"{w} range expect.high", pos=True)
-        rel.append(dict(r, _windows=ws, _released=_r(sum(x["_edge"] for x in ws))))
-    clo = []
-    for r in doc.get("closes") or ():
-        w = f"close {r.get('line_id')}"
-        _need(r, ("line_id", "expect", "windows"), w)
-        _tasks(r, srcs, w)
-        once(_lid(r["line_id"], w), w)
-        _num((r["expect"] or {}).get("low"), f"{w} expect.low")
-        _num((r["expect"] or {}).get("high"), f"{w} expect.high", pos=True)
-        ws = [_window(x, f"{w} {x.get('census_id')}", "CLOSE") for x in r["windows"]]
-        if not ws or len({x["census_id"] for x in ws}) != len(ws):
-            raise InputsError(f"{w}: no window, or a window named twice")
-        clo.append(dict(r, _windows=ws, _out=_r(sum(x["_edge"] for x in ws))))
-    wal = []
-    for r in doc.get("walks") or ():
-        w = f"walk {r.get('line_id')}"
-        _need(r, ("line_id", "room", "floor", "expect", "evidence_status", "evidence_state", "sides"), w)
-        _tasks(r, srcs, w)
-        once(_lid(r["line_id"], w), w)
-        if r["evidence_state"] not in VALUED_STATES:
-            raise InputsError(f"{w}: a walked line is valued {VALUED_STATES}")
-        if r["evidence_status"] not in ("VERIFIED", "DRAWING-CONFIRMED"):
-            raise InputsError(f"{w}: evidence status {r['evidence_status']!r} is not established")
-        m = check_walk(r, w)
-        g = _num(r.get("gross_lm"), f"{w} gross_lm", pos=True)
-        if abs(g - m["gross"]) > TOL:
-            raise InputsError(f"{w}: sides sum {m['gross']} lm, the declared gross is {g} (a side missing or twice)")
-        jb = r.get("joinery_backed_lm")
-        wal.append(dict(r, _m=m, _joinery=None if jb in (None, "") else _num(jb, f"{w} joinery_backed_lm")))
-    if not (rel or clo or wal):
-        raise InputsError("no release, range close or walk in the inputs")
-    return dict(doc, _sources=srcs, _releases=rel, _closes=clo, _walks=wal)
+    srcs = A3043._sources(doc)
+    seen = set()
+    zones = [_entry(x, srcs, seen) for x in doc.get("zones") or ()]
+    if not zones:
+        raise InputsError("no earthworks zone in the inputs")
+    return dict(doc, _sources=srcs, _zones=zones)
 
 
 # ================================================================================================ lines
@@ -337,278 +264,292 @@ def _fin(ln):
     return BL.validate(ln)
 
 
-def _inputs(ln):
-    c = ln["calculation"] = dict(ln.get("calculation") or {})
-    c["inputs"] = dict(c.get("inputs") or {})
-    return c["inputs"]
+def _beside(z):
+    parts = []
+    if z.get("sensitivity"):
+        parts.append(f"sensitivity beside: {z['sensitivity']}")
+    if z.get("printed_minimum_bound"):
+        parts.append(f"printed-minimum bound beside: {z['printed_minimum_bound']}")
+    if z.get("_layers"):
+        L = z["_layers"]
+        parts.append(f"{L['count']} layers at {_fmt(L['lift_m'])} m over {_fmt(L['depth_m'])} m ({L['status']})")
+    if z.get("scenarios_beside"):
+        parts.append(f"scenarios beside (never the quantity): {z['scenarios_beside']}")
+    return "; ".join(parts)
 
 
-def _is_skirting(ln):
-    return ln is not None and ln["item_code"] == CODE and ln["unit"] == UNIT
-
-
-def _room(ln):
-    return (ln.get("location") or {}).get("room_id")
-
-
-def _sum(items):
-    return sum(float(x.get("qty") or 0) for x in items or () if isinstance(x, dict))
-
-
-def _released(b, r, srcs):
-    lid = r["line_id"]
-    if not _is_skirting(b):
-        raise InputsError(f"release {lid}: not a {CODE} {UNIT} line of the candidate (stale binding)")
-    e = r["expect"]
-    if b["evidence_state"] not in VALUED_STATES or not isinstance(b.get("gross"), (int, float)) or \
-            b.get("measured_net") is None or abs(b["gross"] - e["gross"]) > BIND_TOL or \
-            abs(b["measured_net"] - e["measured_net"]) > BIND_TOL:
-        raise InputsError(f"release {lid}: {b['evidence_state']} gross {b.get('gross')} net {b.get('measured_net')} "
-                          f"is not the ledger's {e} (stale binding)")
-    cids = {x["census_id"] for x in r["_windows"]}
-    ded = list(b.get("deductions") or [])
-    out = [x for x in ded if isinstance(x, dict) and x.get("census_id") in cids]
-    keep = [x for x in ded if not (isinstance(x, dict) and x.get("census_id") in cids)]
-    for x in r["_windows"]:
-        got = [y for y in out if y.get("census_id") == x["census_id"]]
-        if not got:
-            raise InputsError(f"release {lid}: window {x['census_id']} is not in the line's list (nothing to release)")
-        if abs(_sum(got) - x["_edge"]) > TOL:
-            raise InputsError(f"release {lid}: window {x['census_id']} listed {_r(_sum(got))} lm, the ledger edge is "
-                              f"{x['_edge']} (partial or doubled listing)")
-    gone = _r(_sum(out))
-    net = _r(b["measured_net"] + gone)
-    if net - b["gross"] > TOL:
-        raise InputsError(f"release {lid}: net {net} would exceed the gross {b['gross']}")
-    new = copy.deepcopy(b)
-    new["deductions"] = copy.deepcopy(keep)
-    new["measured_net"] = net
-    if abs(new["gross"] - _sum(keep) + _sum(new.get("additions")) - net) > TOL:
-        raise InputsError(f"release {lid}: gross - list + additions is not the released net {net}")
-    wtxt = ", ".join(f"{x['census_id']} {_fmt(x['_edge'])} (sill {_fmt(x['sill_m'])} m {x['status']})"
-                     for x in r["_windows"])
-    _inputs(new)[REC_KEY] = _rec(P_SILL, srcs, action="RELEASE", windows=[
-        {"census_id": x["census_id"], "edge_lm": x["_edge"], "sill_m": x["sill_m"], "status": x["status"],
-         "why": x["why"][:300]} for x in r["_windows"]], removed_items=copy.deepcopy(out),
-        was={"measured_net": b["measured_net"]}, released_lm=gone, range_line=r["range_line"]["line_id"],
-        evidence_status="DRAWING-CONFIRMED")
-    new["calculation"]["formula"] = (f"{b['calculation'].get('formula') or ''}; {METHOD}: + {_fmt(gone)} lm window "
-                                     f"base(s) under a sill above the floor ({wtxt}) = {_fmt(net)} lm")[:1500]
-    A305._note(new, f"{METHOD}: sill release {wtxt}: net {_fmt(b['measured_net'])} -> {_fmt(net)} lm; NOT RELEASED")
+def _valued(ln, z, srcs):
+    new = copy.deepcopy(ln)
+    word = A3043.ITEM_TEXT[z["_code"]][2]
+    beside = _beside(z)
+    if z["action"] == "VALUE":
+        new["evidence_state"] = STATE_FOR[z["_status"]]
+        new["measured_net"] = _r(z["_value"])
+        new["bounded_range"] = None
+        qty = f"{_fmt(z['_value'])} m3 ({z['_status']})"
+    else:
+        new["evidence_state"] = RANGE_STATE
+        new["measured_net"] = None
+        new["bounded_range"] = {"low": _r(z["_lo"]), "high": _r(z["_hi"]),
+                                "basis": f"{z['basis']} ({RULE_ID})"[:300]}
+        qty = f"range {_fmt(z['_lo'])} .. {_fmt(z['_hi'])} m3 ({z['_status']})"
+    new["gross"] = None
+    new["rfi"] = None if z["action"] == "VALUE" else {
+        "question": f"{word} zone '{z['zone']}': {z['held_items']}"[:900], "unlocks": z["element_id"],
+        "bound_beside": beside[:300]}
+    formula = (f"{METHOD}: {word} zone '{A3043._plain(z['zone'])}' {qty}: {A3043._plain(z['basis'])} | held beside, "
+               f"never in it: {A3043._plain(z['held_items'])}" + (f" | {A3043._plain(beside)}" if beside else ""))
+    new["calculation"] = dict(new["calculation"], formula=formula[:1500])
+    inp = new["calculation"]["inputs"] = dict(new["calculation"]["inputs"] or {})
+    was = {"state": ln["evidence_state"], "measured_net": ln.get("measured_net"),
+           "bounded_range": ln.get("bounded_range")}
+    disp = None
+    if z["_disp"]:
+        d = z["_disp"]
+        disp = {"verified_m3": d["verified"], "remeasured_low_m3": d["low"], "remeasured_high_m3": d["high"],
+                "residual": z["displacement"].get("residual"), "excavation_line": z.get("_exc_line"),
+                "excavation_m3": z.get("_exc_value")}
+    inp[REC_KEY] = _rec(P_VALUE, srcs, action=z["action"], family=z["family"], zone=z["zone"], was=was,
+                        value_m3=z["_value"], low_m3=z["_lo"], high_m3=z["_hi"], evidence_status=z["_status"],
+                        basis=z["basis"], sensitivity=z.get("sensitivity"),
+                        printed_minimum_bound=z.get("printed_minimum_bound"), held_items=z["held_items"],
+                        displacement=disp, layers=z.get("_layers"), scenarios_beside=z.get("scenarios_beside"),
+                        bulking="none (no answered rule; R-T347-5): in situ")
+    inp["evidence_status"] = z["_status"]
+    new["notes"] = (f"{ln.get('notes') or ''} | {METHOD}: {word} zone HELD BLANK -> {qty}; held parts by name beside; "
+                    f"NOT RELEASED")[:2000]
     return _fin(new)
 
 
-def _range_na(rg, r, srcs, outlm, text, action, **kw):
-    lid = rg["line_id"] if rg else r.get("line_id")
-    if not _is_skirting(rg):
-        raise InputsError(f"range line {lid}: not a {CODE} {UNIT} line of the candidate (stale binding)")
-    br, e = rg.get("bounded_range") or {}, (r.get("range_line") or r)["expect"]
-    if rg["evidence_state"] != RANGE_STATE or rg.get("measured_net") is not None or \
-            abs((br.get("low") or 0) - e["low"]) > BIND_TOL or abs((br.get("high") or 0) - e["high"]) > BIND_TOL:
-        raise InputsError(f"range line {lid}: {rg['evidence_state']} {br.get('low')} .. {br.get('high')} is not the "
-                          f"ledger's held range {e['low']} .. {e['high']} (stale binding)")
-    if abs(br["high"] - outlm) > TOL:
-        raise InputsError(f"range line {lid}: the windows take {outlm} lm of a held high {br['high']} (a range is "
-                          f"closed only whole; a partial close is a narrowing, not this version)")
-    new = copy.deepcopy(rg)
-    was = {"low": br.get("low"), "high": br.get("high"), "basis": br.get("basis")}
-    new["evidence_state"], new["bounded_range"], new["rfi"] = NA_STATE, None, None
-    new["calculation"]["formula"] = (f"NOT_APPLICABLE: {text} ({METHOD}); was range {_fmt(was['low'])} .. "
-                                     f"{_fmt(was['high'])}")[:1500]
-    A305._note(new, f"{METHOD}: NOT_APPLICABLE_WITH_EVIDENCE: {text}"[:400])
-    _inputs(new)[REC_KEY] = _rec(P_SILL if action == "ABSORB_RANGE" else P_CLOSE, srcs, action=action, was=was,
-                                 evidence_status="DRAWING-CONFIRMED", **kw)
-    return _fin(new)
-
-
-def _walked(b, r, srcs):
-    lid = r["line_id"]
-    if not _is_skirting(b):
-        raise InputsError(f"walk {lid}: not a {CODE} {UNIT} line of the candidate (stale binding)")
-    if b["evidence_state"] != r["expect"].get("evidence_state") or b.get("measured_net") is not None or \
-            b.get("bounded_range") is not None:
-        raise InputsError(f"walk {lid}: {b['evidence_state']} net {b.get('measured_net')} is not the held blank line "
-                          f"the ledger walked (stale binding)")
-    if _room(b) != r["room"] or (b.get("location") or {}).get("floor") != r["floor"]:
-        raise InputsError(f"walk {lid}: line room / floor is not {r['floor']} {r['room']}")
-    m = r["_m"]
-    new = copy.deepcopy(b)
-    new["evidence_state"] = r["evidence_state"]
-    new["gross"], new["measured_net"], new["bounded_range"] = m["gross"], m["net"], None
-    new["deductions"] = copy.deepcopy(m["deductions"])
-    new["additions"] = []
-    new["rfi"] = None
-    faces = "; ".join(f"{x['side']} {_fmt(x['length_m'])} ({x['handles']})" for x in m["rows"] if x["kind"] in FACE)
-    dtxt = " + ".join(f"{d['opening_id']} {_fmt(d['qty'])}" for d in m["deductions"]) or "none"
-    jb = "" if r["_joinery"] is None else f"; joinery-backed {_fmt(r['_joinery'])} lm beside, not deducted"
-    new["calculation"]["formula"] = (f"{METHOD}: cell walk by handle: gross {_fmt(m['gross'])} lm - {dtxt} = "
-                                     f"{_fmt(m['net'])} lm; faces {faces}{jb}")[:1500]
-    _inputs(new)[REC_KEY] = _rec(P_WALK, srcs, action="WALK", was={"evidence_state": b["evidence_state"],
-                                                                   "rfi": b.get("rfi")},
-                                 stretches=m["rows"], gross=m["gross"], deducted=m["deducted"], net=m["net"],
-                                 joinery_backed_lm=r["_joinery"], evidence_status=r["evidence_status"])
-    _inputs(new)["evidence_status"] = r["evidence_status"]
-    A305._note(new, f"{METHOD}: walked {_fmt(m['net'])} lm ({r['evidence_status']}); was {b['evidence_state']} "
-                    f"blank; NOT RELEASED")
-    return _fin(new)
+def _added(tpl, z, srcs):
+    from engine.source import boq_line as BL
+    code = z["_code"]
+    en, ar, word = A3043.ITEM_TEXT[code]
+    beside = _beside(z)
+    formula = (f"{METHOD}: HELD (never a value) {word} zone '{A3043._plain(z['zone'])}': {A3043._plain(z['basis'])} | "
+               f"held by: {A3043._plain(z['held_items'])}" + (f" | {A3043._plain(beside)}" if beside else ""))[:1500]
+    if FORMULA_END_RE.search(formula):
+        raise InputsError(f"zone {z['zone']}: the formula would conclude on a figure")
+    rec = _rec(P_ADD, srcs, action="ADD_HELD", family=z["family"], zone=z["zone"], evidence_status="HELD",
+               basis=z["basis"], held_items=z["held_items"], scenarios_beside=z.get("scenarios_beside"))
+    ln = BL.make_line(
+        project_id=tpl["project"]["project_id"], revision_set_sha256=tpl["project"]["revision_set_sha256"],
+        item_code=code, unit="m3", evidence_state=HELD_STATE, measured_net=None, gross=None,
+        element_id=z["element_id"], floor=tpl["location"].get("floor"),
+        physical_element=f"{word} zone {z['zone'].split(' ')[0]}", formula=formula,
+        inputs={REC_KEY: rec, "evidence_status": "HELD"}, documents=copy.deepcopy(tpl["source"]["documents"]),
+        geometry_source=tpl["source"]["geometry_source"], geometry_confidence=tpl["source"]["geometry_confidence"],
+        rule_id=RULE_ID, rule_version=RULE_VERSION, material_state="SOURCE",
+        rfi={"question": f"{word} zone '{z['zone']}': {z['held_items']}"[:900], "unlocks": z["element_id"],
+             "bound_beside": beside[:300]},
+        notes=f"{METHOD}: earthworks zone line added HELD BLANK (coverage gap); NOT RELEASED",
+        item_en=en, item_ar=ar, trade="EARTHWORKS", subtrade=z["family"])
+    return _fin(ln)
 
 
 # ================================================================================================ changes
+def _ew_line(by_elem, z, w):
+    ln = by_elem.get((z["_code"], z["element_id"]))
+    if ln is None:
+        raise InputsError(f"{w}: no {z['_code']} line {z['element_id']} in the candidate (stale binding)")
+    rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(PRIOR_KEY) or {}
+    if rec.get("action") != "ADD_ZONE" or rec.get("family") != z["family"]:
+        raise InputsError(f"{w}: {ln['line_id']} carries no V3.0.43 zone record of {z['family']}")
+    if ln["evidence_state"] != HELD_STATE or ln.get("measured_net") is not None or ln.get("bounded_range") is not None:
+        raise InputsError(f"{w}: {ln['line_id']} is {ln['evidence_state']}, not the HELD BLANK zone line "
+                          f"(applied once; stale binding)")
+    return ln
+
+
 def changes_for(doc, prev):
-    """-> (changes, log). Each change: piece, action (CHANGE), before (a candidate line), after."""
+    """-> (changes, log). Each change: piece, action (CHANGE / ADD), before (a candidate line or None), after."""
     if not doc:
-        return [], {"piece": "+".join((P_SILL, P_CLOSE, P_WALK)), "state": "NO_PROJECT_INPUT"}
+        return [], {"piece": "+".join((P_VALUE, P_ADD)), "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
         raise InputsError("the candidate already carries V3.0.48 records (applied once)")
     by = {ln["line_id"]: ln for ln in prev}
+    by_elem = {(ln["item_code"], (ln.get("location") or {}).get("element_id")): ln for ln in prev
+               if ln["item_code"] in EW_CODES}
+    if not by_elem:
+        raise InputsError("the candidate carries no earthworks zone lines (V3.0.43 first)")
+    tpl = next(iter(by_elem.values()))
     S = doc["_sources"]
-    changes = []
-    log = {"piece": "+".join((P_SILL, P_CLOSE, P_WALK)), "state": "RUN", "sources": doc["sources"], "by_action": {},
-           "lines_changed": 0, "released_lm": 0.0, "range_absorbed_lm": 0.0, "range_closed_lm": 0.0,
-           "walked_lm": 0.0}
+    changes, seen = [], set(by)
+    log = {"piece": "+".join((P_VALUE, P_ADD)), "state": "RUN", "sources": doc["sources"], "by_action": {},
+           "lines_added": 0, "lines_changed": 0, "valued_m3": {}, "ranged_m3": {}}
 
-    def add(piece, action, after, before, srcs, **kw):
-        if before["line_id"] != after["line_id"]:
-            raise ValueError(f"{METHOD}: a changed line keeps its id")
-        log["lines_changed"] += 1
+    def add(piece, action, after, before=None, **kw):
+        if before is None:
+            if after["line_id"] in seen:
+                raise ValueError(f"{METHOD}: added line {after['location']['element_id']} repeats an id")
+            seen.add(after["line_id"])
+            log["lines_added"] += 1
+        else:
+            if before["line_id"] != after["line_id"]:
+                raise ValueError(f"{METHOD}: a changed line keeps its id")
+            log["lines_changed"] += 1
         log["by_action"][action] = log["by_action"].get(action, 0) + 1
-        changes.append(A305._change(piece, "CHANGE", before, after, step=action,
+        srcs = kw.pop("srcs")
+        changes.append(A305._change(piece, "ADD" if before is None else "CHANGE", before, after, step=action,
                                     drawing_reference="; ".join(s["file"] for s in srcs),
                                     verification=A3043._ver(srcs), downstream=kw.pop("downstream", []),
                                     group=after["item_code"], **kw))
 
-    for r in doc["_releases"]:
-        srcs = [S[t] for t in r["source_tasks"]]
-        b = by.get(r["line_id"])
-        det = _released(b, r, srcs)
-        add(P_SILL, "RELEASE", det, b, srcs, evidence_status="DRAWING-CONFIRMED", held=[],
-            downstream=["skirting roll-up: certain lm up by the released edge(s)"])
-        rg = by.get(r["range_line"]["line_id"])
-        if rg is not None and (_room(rg) != _room(b) or
-                               (rg.get("location") or {}).get("floor") != (b.get("location") or {}).get("floor")):
-            raise InputsError(f"release {r['line_id']}: range line {rg['line_id']} is of another room")
-        na = _range_na(rg, r, srcs, r["_released"],
-                       f"the held window base(s) {', '.join(x['census_id'] for x in r['_windows'])} "
-                       f"({_fmt(r['_released'])} lm) are carried by the determinate line {det['line_id']}",
-                       "ABSORB_RANGE", carried_by=det["line_id"], released_lm=r["_released"])
-        add(P_SILL, "ABSORB_RANGE", na, rg, srcs, evidence_status="DRAWING-CONFIRMED", held=[],
-            downstream=["skirting roll-up: held high down by the same edge(s) (carried once)"])
-        log["released_lm"] = _r(log["released_lm"] + r["_released"])
-        log["range_absorbed_lm"] = _r(log["range_absorbed_lm"] + r["_released"])
-    for r in doc["_closes"]:
-        srcs = [S[t] for t in r["source_tasks"]]
-        rg = by.get(r["line_id"])
-        wtxt = ", ".join(f"{x['census_id']} {_fmt(x['_edge'])} ({x['reason']}"
-                         f"{': ' + x['owner'] if x['reason'] == 'STAIR_OWNED' else ''})" for x in r["_windows"])
-        na = _range_na(rg, r, srcs, r["_out"], f"no room skirting under {wtxt}", "CLOSE_RANGE",
-                       windows=[{"census_id": x["census_id"], "edge_lm": x["_edge"], "sill_m": x.get("sill_m"),
-                                 "reason": x["reason"], "owner": x.get("owner"), "status": x["status"],
-                                 "why": x["why"][:300]} for x in r["_windows"]], closed_lm=r["_out"])
-        add(P_CLOSE, "CLOSE_RANGE", na, rg, srcs, evidence_status="DRAWING-CONFIRMED", held=[],
-            downstream=["skirting roll-up: held high down; no certain value moves"])
-        log["range_closed_lm"] = _r(log["range_closed_lm"] + r["_out"])
-    for r in doc["_walks"]:
-        srcs = [S[t] for t in r["source_tasks"]]
-        b = by.get(r["line_id"])
-        new = _walked(b, r, srcs)
-        add(P_WALK, "WALK", new, b, srcs, evidence_status=r["evidence_status"], held=[],
-            downstream=[f"skirting roll-up: certain lm +{_fmt(r['_m']['net'])} (was a HELD BLANK line)"])
-        log["walked_lm"] = _r(log["walked_lm"] + r["_m"]["net"])
+    exc_value = {}
+    for z in doc["_zones"]:
+        if z["action"] == "VALUE" and z["_code"] == EXC:
+            exc_value[z["element_id"]] = z["_value"]
+    for z in doc["_zones"]:
+        w = f"{z['action']} {z['family']} {z['zone']}"
+        srcs = [S[t] for t in z["source_tasks"]]
+        held = [{"what": f"{z['_code']} {z['zone']}", "why": str(z["held_items"])[:300],
+                 "range": (f"{_fmt(z['_lo'])} .. {_fmt(z['_hi'])}" if z["_lo"] is not None else None),
+                 "scenario": _beside(z)[:300] or None}]
+        if z["action"] == "ADD_HELD":
+            if (z["_code"], z["element_id"]) in by_elem:
+                raise InputsError(f"{w}: the candidate already has this zone line (re-value it, do not add)")
+            add(P_ADD, "ADD_HELD", _added(tpl, z, srcs), srcs=srcs, evidence_status="HELD", held=held,
+                downstream=[f"coverage: {z['family']} zone {z['zone']} now has its own line (held)"])
+            continue
+        ln = _ew_line(by_elem, z, w)
+        if z["_disp"]:
+            ev = z["excavation_element_id"]
+            ex = exc_value.get(ev)
+            if ex is None:
+                raise InputsError(f"{w}: its excavation {ev} is not valued in the same inputs (backfill follows it)")
+            d = z["_disp"]
+            lo_close, hi_close = ex - d["verified"] - d["high"], ex - d["verified"] - d["low"]
+            if abs(lo_close - z["_lo"]) > TOL or abs(hi_close - z["_hi"]) > TOL:
+                raise InputsError(f"{w}: range {z['_lo']} .. {z['_hi']} does not close excavation {ex} - displacement "
+                                  f"({_fmt(lo_close)} .. {_fmt(hi_close)})")
+            if z["_hi"] > ex + TOL:
+                raise InputsError(f"{w}: backfill exceeds its excavation")
+            exc_ln = by_elem.get((EXC, ev))
+            z = dict(z, _exc_line=exc_ln["line_id"] if exc_ln else None, _exc_value=ex)
+        new = _valued(ln, z, srcs)
+        add(P_VALUE, z["action"], new, before=ln, srcs=srcs, evidence_status=z["_status"], held=held,
+            downstream=[f"earthworks roll-up {z['_code']}: HELD BLANK -> "
+                        + (f"{_fmt(z['_value'])} m3" if z["_value"] is not None else
+                           f"{_fmt(z['_lo'])} .. {_fmt(z['_hi'])} m3"),
+                        "no concrete / WP line moves (displacement lines are only read)"])
+        if z["_value"] is not None:
+            log["valued_m3"][f"{z['family']}|{z['zone']}"] = z["_value"]
+        else:
+            log["ranged_m3"][f"{z['family']}|{z['zone']}"] = [z["_lo"], z["_hi"]]
     log["by_action"] = dict(sorted(log["by_action"].items()))
     return changes, log
 
 
 # ================================================================================================ checks
-def check_remainder(lines, before=None):
-    """R-T483-1 on the integrated lines: a released line is valued, closes, lists no released window and rose by
-    exactly its released edges; an absorbed / closed range line is NOT_APPLICABLE with no figure (an absorbed one names
-    a candidate line); a walked line is valued and closes gross - deductions = net with every deduction by id and no
-    jamb skirting. -> summary."""
-    out = {"released_lines": 0, "released_lm": 0.0, "absorbed": 0, "closed": 0, "closed_lm": 0.0, "walked": 0,
-           "walked_lm": 0.0}
+def check_earthworks(lines, before=None):
+    """R-T350-1 / R-T350-2 on the integrated lines: every earthworks line carries a zone record (V3.0.43 or V3.0.48),
+    each (family, element) once; a line without a V3.0.48 record is HELD BLANK (as V3.0.43 left it); a V3.0.48 line is
+    valued in the state its evidence status maps to, or ranged low <= high, or HELD BLANK when added; a backfill range
+    never exceeds its excavation line's value; disposal is never valued; a re-valued line keeps its id, code, unit and
+    location (when `before` is given). -> summary."""
+    out = {"lines": 0, "held_blank": 0, "valued": 0, "ranged": 0, "added_held": 0, "by_family": {},
+           "valued_m3": 0.0, "range_low_m3": 0.0, "range_high_m3": 0.0}
     ids = {ln["line_id"]: ln for ln in lines}
     b4 = {ln["line_id"]: ln for ln in before or ()}
+    seen = set()
     for ln in lines:
-        rec = ((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY)
-        if not rec:
+        inp = (ln.get("calculation") or {}).get("inputs") or {}
+        rec, prior = inp.get(REC_KEY), inp.get(PRIOR_KEY)
+        if ln["item_code"] not in EW_CODES:
+            if rec:
+                raise ValueError(f"{METHOD}: a V3.0.48 record on {ln['item_code']} {ln['line_id']}")
             continue
-        if not _is_skirting(ln):
-            raise ValueError(f"{METHOD}: a V3.0.48 record on {ln['item_code']} {ln['line_id']}")
-        act = rec.get("action")
-        if act in ("RELEASE", "WALK"):
-            if ln["evidence_state"] not in VALUED_STATES or ln.get("measured_net") is None:
-                raise ValueError(f"{METHOD}: {act.lower()} line {ln['line_id']} is not valued")
-            if abs(ln["gross"] - _sum(ln.get("deductions")) + _sum(ln.get("additions")) - ln["measured_net"]) > TOL:
-                raise ValueError(f"{METHOD}: {act.lower()} line {ln['line_id']} does not close")
-            if act == "RELEASE":
-                cids = {w["census_id"] for w in rec["windows"]}
-                if any(isinstance(x, dict) and x.get("census_id") in cids for x in ln.get("deductions") or ()):
-                    raise ValueError(f"{METHOD}: released line {ln['line_id']} still lists a released window")
-                o = b4.get(ln["line_id"])
-                if o is not None and abs(ln["measured_net"] - o["measured_net"] - rec["released_lm"]) > TOL:
-                    raise ValueError(f"{METHOD}: released line {ln['line_id']} moved by other than its released edges")
-                out["released_lines"] += 1
-                out["released_lm"] = _r(out["released_lm"] + rec["released_lm"])
-            else:
-                for x in ln.get("deductions") or ():
-                    if not x.get("opening_id") or x.get("jamb_skirting") is not False:
-                        raise ValueError(f"{METHOD}: walked line {ln['line_id']}: a deduction without an id or with "
-                                         f"jamb skirting")
-                out["walked"] += 1
-                out["walked_lm"] = _r(out["walked_lm"] + ln["measured_net"])
-        elif act in ("ABSORB_RANGE", "CLOSE_RANGE"):
-            if ln["evidence_state"] != NA_STATE or ln.get("measured_net") is not None or ln.get("bounded_range") or \
-                    ln.get("gross") is not None:
-                raise ValueError(f"{METHOD}: {act.lower()} line {ln['line_id']} carries a figure")
-            if act == "ABSORB_RANGE":
-                if rec.get("carried_by") not in ids:
-                    raise ValueError(f"{METHOD}: absorbed range line {ln['line_id']} names no candidate line")
-                out["absorbed"] += 1
-            else:
-                out["closed"] += 1
-                out["closed_lm"] = _r(out["closed_lm"] + rec["closed_lm"])
+        fam = (rec or prior or {}).get("family")
+        if not rec and not prior:
+            raise ValueError(f"{METHOD}: earthworks line {ln['line_id']} carries no zone record")
+        k = (fam, ln["location"].get("element_id"))
+        if k in seen:
+            raise ValueError(f"{METHOD}: zone {k} carries two lines")
+        seen.add(k)
+        blank = ln.get("measured_net") is None and ln.get("bounded_range") is None and ln.get("gross") is None
+        act = (rec or {}).get("action")
+        if not rec or act == "ADD_HELD":
+            if ln["evidence_state"] != HELD_STATE or not blank:
+                raise ValueError(f"{METHOD}: earthworks line {ln['line_id']} is not HELD BLANK (held is never 0)")
+            if FORMULA_END_RE.search(ln["calculation"].get("formula") or ""):
+                raise ValueError(f"{METHOD}: held earthworks line {ln['line_id']} formula concludes on a figure")
+            out["added_held" if rec else "held_blank"] += 1
+        elif act == "VALUE":
+            if ln["item_code"] == DSP:
+                raise ValueError(f"{METHOD}: disposal {ln['line_id']} valued without its densities")
+            if ln["evidence_state"] != STATE_FOR.get(rec.get("evidence_status")) or ln.get("bounded_range") is not None \
+                    or abs((ln.get("measured_net") or -1) - rec["value_m3"]) > 1e-9:
+                raise ValueError(f"{METHOD}: valued line {ln['line_id']} does not carry its record's value / state")
+            out["valued"] += 1
+            out["valued_m3"] = _r(out["valued_m3"] + ln["measured_net"])
+        elif act == "RANGE":
+            br = ln.get("bounded_range") or {}
+            if ln["evidence_state"] != RANGE_STATE or ln.get("measured_net") is not None or \
+                    abs(br.get("low", -1) - rec["low_m3"]) > 1e-9 or abs(br.get("high", -1) - rec["high_m3"]) > 1e-9 \
+                    or br["low"] > br["high"]:
+                raise ValueError(f"{METHOD}: ranged line {ln['line_id']} is not held at its record's range")
+            disp = rec.get("displacement") or {}
+            exl = ids.get(disp.get("excavation_line")) if disp else None
+            if ln["item_code"] == BKF and disp:
+                if exl is None or exl.get("measured_net") is None:
+                    raise ValueError(f"{METHOD}: backfill {ln['line_id']} names no valued excavation line")
+                if br["high"] > exl["measured_net"] + TOL:
+                    raise ValueError(f"{METHOD}: backfill {ln['line_id']} exceeds its excavation")
+            out["ranged"] += 1
+            out["range_low_m3"] = _r(out["range_low_m3"] + br["low"])
+            out["range_high_m3"] = _r(out["range_high_m3"] + br["high"])
         else:
             raise ValueError(f"{METHOD}: action {act} on {ln['line_id']}")
+        o = b4.get(ln["line_id"])
+        if rec and o is not None:
+            for key in ("item_code", "unit", "location", "line_id", "rule"):
+                if o.get(key) != ln.get(key):
+                    raise ValueError(f"{METHOD}: re-valued line {ln['line_id']} moved {key}")
+            if ((o.get("calculation") or {}).get("inputs") or {}).get(PRIOR_KEY) != prior:
+                raise ValueError(f"{METHOD}: re-valued line {ln['line_id']} lost its V3.0.43 zone record")
+        out["lines"] += 1
+        out["by_family"][fam] = out["by_family"].get(fam, 0) + 1
+    out["by_family"] = dict(sorted(out["by_family"].items()))
     return out
 
 
 # ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.48 lines, identity). Changed lines replace their candidate line in place; every other candidate line is
-    byte-identical (asserted)."""
+    """-> (V3.0.48 lines, identity). Changed lines replace their candidate line in place; added lines follow; every
+    other candidate line is byte-identical (asserted)."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     out = list(prev)
-    repl = set()
+    adds, repl = [], set()
     for c in changes:
         a = c["after"]
-        if a["item_code"] != CODE:
-            raise ValueError(f"{METHOD}: {a['item_code']} is not the code this version may change")
-        if c["action"] != "CHANGE":
-            raise ValueError(f"{METHOD}: action {c['action']} (this version adds no line)")
-        i = sid.get(a["line_id"])
-        if i is None or a["line_id"] in repl:
-            raise ValueError(f"{METHOD}: a changed line is not a candidate line or changes twice")
-        out[i] = a
-        repl.add(a["line_id"])
+        if a["item_code"] not in EW_CODES:
+            raise ValueError(f"{METHOD}: {a['item_code']} is not a code this version may change or add")
+        if c["action"] == "ADD":
+            if a["line_id"] in sid:
+                raise ValueError(f"{METHOD}: an added line repeats a candidate id")
+            adds.append(a)
+        elif c["action"] == "CHANGE":
+            i = sid.get(a["line_id"])
+            if i is None or a["line_id"] in repl:
+                raise ValueError(f"{METHOD}: a changed line is not a candidate line or changes twice")
+            out[i] = a
+            repl.add(a["line_id"])
+        else:
+            raise ValueError(f"{METHOD}: action {c['action']}")
+    out = out + adds
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
     guards = A3031._family_guards(out, for_lead)
-    # a line this version changes is checked by check_remainder; an earlier version's record left on it (e.g. a V3.0.44
-    # NARROW_RANGE on a range now closed) describes the superseded state, so that version's check skips it
-    mine = [ln for ln in out if ln["line_id"] in repl]
-    older = [ln for ln in out if ln["line_id"] not in repl]
     ident = {"base_lines": len(prev), "v3_0_48_lines": len(out), "v3_0_48_rows": len(changes),
-             "replaced": len(repl), "added": 0, "guards": guards,
+             "replaced": len(repl), "added": len(adds), "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
              "corrections": A3033.check_corrections(out), "tile_zones": A3034.check_zones(out),
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3043.check_earthworks(out), "skirting": A3044.check_skirting(older),
+             "earthworks": check_earthworks(out, prev), "skirting": A3044.check_skirting(out),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
-             "stair_rooms": A3047.check_stair_rooms(out), "remainder": check_remainder(out, prev),
-             "superseded_records": sorted(k for ln in mine for k in ((ln.get("calculation") or {}).get("inputs") or {})
-                                          if k.endswith(("_v3044", "_v3036")) and k != REC_KEY)}
+             "stair_rooms": A3047.check_stair_rooms(out)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")
@@ -634,7 +575,7 @@ def ledger_rows(changes, released_lines=None):
         loc = ref.get("location") or {}
         rows.append({"version": METHOD, "piece": c["piece"], "action": c.get("step"), "change": c["action"],
                      "line_id": ref["line_id"], "item_code": ref["item_code"], "floor": loc.get("floor"),
-                     "room_id": loc.get("room_id"), "element_id": loc.get("element_id"), "unit": ref["unit"],
+                     "element_id": loc.get("element_id"), "unit": ref["unit"],
                      "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
                      "after_v3_0_48": A30._qty(ref), "evidence_status": c.get("evidence_status"),
                      "still_held": c.get("held"), "release_status": "NOT RELEASED",
@@ -644,8 +585,8 @@ def ledger_rows(changes, released_lines=None):
     return rows
 
 
-LEDGER_CSV = ("version", "piece", "action", "change", "line_id", "item_code", "floor", "room_id", "element_id", "unit",
-              "v2_9", "base", "v3_0_48", "evidence_status", "still_held", "verification")
+LEDGER_CSV = ("version", "piece", "action", "change", "line_id", "item_code", "floor", "element_id", "unit", "v2_9",
+              "base", "v3_0_48", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
             "v3_0_48")
 
@@ -653,12 +594,15 @@ DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "v
 def ledger_csv(rows):
     def q(x):
         return A302._q(x) if x and (x.get("value") is not None or x.get("low") is not None or x.get("state")) else ""
+
+    def h(r):
+        return "; ".join(f"{x['what']} {x.get('range')}" for x in (r.get("still_held") or ()))[:300]
     return A305._csv([{"version": r["version"], "piece": r["piece"], "action": r["action"], "change": r["change"],
                        "line_id": r["line_id"], "item_code": r["item_code"], "floor": r.get("floor") or "",
-                       "room_id": r.get("room_id") or "", "element_id": r.get("element_id") or "", "unit": r["unit"],
+                       "element_id": r.get("element_id") or "", "unit": r["unit"],
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
                        "v3_0_48": q(r.get("after_v3_0_48")), "evidence_status": r["evidence_status"],
-                       "still_held": "",
+                       "still_held": h(r),
                        "verification": f"{r['verification'].get('task')} "
                                        f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
                       for r in rows], LEDGER_CSV)
@@ -705,8 +649,8 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
     t0, t1 = A304.code_totals(prev), A304.code_totals(new)
     moved = {k: {"base": t0.get(k), "v3_0_48": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
     for k in moved:
-        if k.split("|")[0] != CODE:
-            raise ValueError(f"{METHOD}: totals moved outside this version's code: {k}")
+        if k.split("|")[0] not in EW_CODES:
+            raise ValueError(f"{METHOD}: totals moved outside this version's codes: {k}")
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
            "base": A30.BASE_METHOD, "released": A30.RELEASED_METHOD, "released_default": False, "rows": rows,
            "waiting_pieces": WAITING, "integration_package": True}
@@ -730,5 +674,5 @@ def policy_record():
             "released_default": False, "rollback": ROLLBACK, "actions": list(ACTIONS)}
 
 
-__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "changes_for",
-           "check_walk", "check_remainder", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
+__all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "EW_CODES", "load_inputs",
+           "changes_for", "check_earthworks", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
