@@ -198,7 +198,7 @@ def test_candidate_census_clean(built):
                                                "FIN.STAIR.SKIRTING.ZIGZAG"]
     assert built["identity"]["host_partner_lines_identical_55_56"] == 365
     assert ["ADD_POOL_LAYER", "WP.POOL.PROTECTION_SCREED", "HOST"] in built["identity"]["t310_rows"]
-    assert built["host_states_cement"] == {"HELD": 160, "NOT_APPLICABLE": 74, "PRODUCED": 46}
+    assert built["host_states_cement"] == {"HELD": 149, "NOT_APPLICABLE": 74, "PRODUCED": 57}
     assert "UNCLASSIFIED" not in built["code_classes"]
 
 
@@ -222,7 +222,8 @@ def test_candidate_tile_bed_and_project_held_never_partial(built):
     assert mb["effect_bags_at_most"] == round(0.23 * 0.06 * 8, 6)    # immaterial, still HELD
     p = built["subtotals"]["PROJECT"][I][C]
     assert p["status"] == "HELD" and p["low"] is None and "whole_bags_low" not in p
-    assert (p["at_least_low"], p["at_least_high"]) == (round(10.155552 + 99.748616, 6), round(10.155552 + 137.562192, 6))
+    assert (p["at_least_low"], p["at_least_high"]) == (round(10.155552 + 99.748616 + 10.178704, 6),
+                                                       round(10.155552 + 137.562192 + 10.178704, 6))
     for scope in built["subtotals"].values():                       # R-T499-1 on every group
         for stage in scope.values():
             for e in stage.values():
@@ -233,7 +234,7 @@ def test_candidate_plaster_and_no_producer_hosts(built):
     p = built["subtotals"][M.PLASTER][I][C]
     assert p["status"] == "HELD" and p["at_least_low"] is None and p["rows"] == 159
     trades = {t for t, _, _ in built["held_contributors"]}
-    assert {M.STONE_BED, M.SCREED, M.OUTDOOR_BED} <= trades
+    assert {M.STONE_BED, M.SCREED, M.OUTDOOR_BED} <= trades       # thresholds / lift marble stay NO_PRODUCER
     bs = {b["line_id"]: b for b in built["beside"]}
     assert bs["L-ab44fbc79bed353bde99"]["cement_bags"] == [round(21.0142 * 0.03 * 8, 6), round(21.0142 * 0.04 * 8, 6)]
     assert bs["L-4ec54f9922da7281573a"]["installed_m3_released"] == 5.4925
@@ -283,3 +284,68 @@ def test_committed_output_is_the_rebuild(tmp_path, built):
     M.write(built, tmp_path)
     for name in ("CEMENT_SAND_CENSUS_T511.json", "CEMENT_SAND_CENSUS_T511.csv"):
         assert (tmp_path / name).read_bytes() == (ROOT / "research/agents_t511/out" / name).read_bytes()
+
+
+# ------------------------------------------------------------------ R-T511-7 STAIR_BED_V1 (UP-STAIR-017)
+
+def _stair_lines():
+    return [_ln("T1", "FIN.MARBLE.TREAD", "RELEASED", 10.0), _ln("R1", "FIN.MARBLE.RISER", "RELEASED", 4.2),
+            _ln("L1", "FIN.MARBLE.LANDING", "HELD", None, 0.0, 2.5), _ln("T2", "FIN.MARBLE.TREAD", "EXCLUDED"),
+            _ln("TH1", "FIN.MARBLE.THRESHOLD", "RELEASED", 0.12)]
+
+
+def _get(rows, lid, mat, stage):
+    return next(r for r in rows if r["line_id"] == lid and r["material"] == mat and r["stage"] == stage)
+
+
+def test_stair_bed_by_hand_rule_worked_example():
+    """UP-STAIR-017 worked example: 10.00 m2 x 0.03 m = 0.300 m3 -> 2.8728 bags, 0.29925 m3 sand; purchasing 3.0
+    bags, 0.30 m3. Riser 4.20 m2: 0.126 m3 -> 1.206576 bags, 0.125685 m3; purchasing 1.26 / 0.126."""
+    rows, st = M.stair_bed_rows(_stair_lines())
+    assert (_get(rows, "T1", C, I)["low"], _get(rows, "T1", S, I)["low"]) == (2.8728, 0.29925)
+    assert (_get(rows, "T1", C, M.PROCUREMENT)["low"], _get(rows, "T1", S, M.PROCUREMENT)["low"]) == (3.0, 0.3)
+    assert (_get(rows, "R1", C, I)["low"], _get(rows, "R1", S, I)["low"]) == (1.206576, 0.125685)
+    assert _get(rows, "T1", C, M.WASTE)["low"] is None                       # never a waste without a source
+    assert _get(rows, "T1", C, I)["low"] / 0.3 != 8.0                         # never the 1:4 rate for a 1:3 bed
+    assert _get(rows, "L1", C, I)["low"] is None and _get(rows, "L1", C, I)["status"] == M.HELD   # held range
+    assert st == {"T2": (M.NA, M.STONE_BED, "line EXCLUDED in the candidate")}
+    assert not any(r["line_id"] == "TH1" for r in rows)                      # threshold: not a stair bed
+
+
+def test_stair_bed_held_area_holds_the_trade():
+    lines = _stair_lines()
+    rows, st = M.stair_bed_rows(lines)
+    st = dict(st, TH1=(M.HELD, M.STONE_BED, "NO_PRODUCER: test"))
+    c = M.census(lines, rows, st)
+    assert c["fails"] == []
+    e = c["subtotals"][M.STONE_BED][I][C]
+    assert e["status"] == "HELD" and e["low"] is None and e["at_least_low"] == round(2.8728 + 1.206576, 6)
+    lines[0]["item_code"] = "FIN.MARBLE.TREAD"
+    lines[0]["unit"] = "lm"
+    rows, st = M.stair_bed_rows(lines)
+    assert st["T1"][0] == M.HELD and st["T1"][2].startswith("UNIT")
+
+
+def test_stair_rule_must_be_the_owner_record(monkeypatch):
+    real = M._load
+
+    def fake(p, pins=True):
+        d = real(p, pins)
+        if p == M.RULES18:
+            d = json.loads(json.dumps(d).replace('"mix_cement_sand": "1:3"', '"mix_cement_sand": "1:4"'))
+        return d
+    monkeypatch.setattr(M, "_load", fake)
+    with pytest.raises(M.CensusError, match="UP-STAIR-017"):
+        M.stair_rule()
+
+
+def test_candidate_stair_bed(built):
+    rows = [r for r in built["rows"] if r["table"] == "STAIR_BED_V1" and r["stage"] == I and r["material"] == C
+            and r["low"] is not None]
+    assert len(rows) == 11                                                   # 8 treads, 1 riser, 2 landings released
+    e = built["subtotals"][M.STONE_BED][I][C]
+    assert e["status"] == "HELD" and e["at_least_low"] == 10.178704
+    area = round(e["at_least_low"] / (0.03 * 9.576), 4)
+    assert area == 35.4313                                                    # released stair marble m2 on V3.0.57
+    p = built["subtotals"]["PROJECT"][I][C]
+    assert p["at_least_low"] == round(10.155552 + 99.748616 + 10.178704, 6)

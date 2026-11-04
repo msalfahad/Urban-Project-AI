@@ -1,8 +1,8 @@
 # T-511: cement / sand producer census and cross-trade binding on candidate V3.0.57 (research, unwired)
 
 Worker 2, 2026-11-04. `t511_cement_sand_census.py` + `out/CEMENT_SAND_CENSUS_T511.{json,csv}` +
-`tests/t511_cement_sand_census/` (21 tests). No engine, rule, knowledge, registry or candidate file changed; no
-candidate or released (V2.9 + route G) line moves. Inputs sha256-pinned (10 files); drawings not re-read (every
+`tests/t511_cement_sand_census/` (25 tests). No engine, rule, knowledge, registry or candidate file changed; no
+candidate or released (V2.9 + route G) line moves. Inputs sha256-pinned (11 files); drawings not re-read (every
 producer table is merged and Checker-verified; this task binds and audits them). Rebuild: `python3 -I
 research/agents_t511/t511_cement_sand_census.py` (byte-identical, tested); `--check` exits 1 on any failure.
 
@@ -18,7 +18,7 @@ The 50 kg cement bags and loose sand bought for SITE-MIXED cement : sand layers:
 ready-mix concrete (bought as concrete m3), precast lintels, tile adhesive (20 kg product; T-455 carries no cement or
 sand key, checked), AAC glue (25 kg product). Kept apart per row: installed (theoretical), waste, procurement.
 
-## 2. Rules R-T511-1..6 (every villa; full text in the module docstring)
+## 2. Rules R-T511-1..7 (every villa; full text in the module docstring)
 
 1 every item code classified HOST / PARTNER / NOT_A_KEY / SCOPE_OPEN (an unclassified code fails); 2 one producer per
 PHYSICAL key (host element, layer, material, stage): a bed is keyed on its floor-finish host, so a finish-table row
@@ -32,25 +32,33 @@ trade, stage and range end, whole bags only over a COMPUTED project figure; 6 ev
 
 Census: 1,272 keys; keys with two producers 0; reader divergences 0 (88 keys bound twice: T-500 PRODUCER + the
 FINISH_MATERIALS_TABLE V1 `materials()` READER at procurement stage on the 44 bed hosts, agreement within 1e-5).
-279 host lines: 46 PRODUCED, 74 NOT_APPLICABLE, 160 HELD.
+279 host lines: 57 PRODUCED, 74 NOT_APPLICABLE, 149 HELD.
 
 | trade | producer | installed cement bags | installed sand m3 | status | held contributors |
 |---|---|---|---|---|---|
 | block laying mortar | T-453 r2 (R-T506-2) | >= 10.155552 | >= 1.396388 | HELD | 23 (7 0.15 m module, 7 parent lines, 2 stale, 2 house below NG, 5 fence) |
 | plaster coats | T-489 (T-454 beside) | none known | none known | HELD | 159 (no coat mix readable, T-489; 3 FIN.EXT.FINISH no producer) |
 | floor-tile bed | T-500 | >= 99.748616 .. 137.562192 | >= 13.715435 .. 18.914801 | HELD | 1 (GF-ST-CN bed MISSING) |
-| stone beds (marble) | none | none | none | HELD | 51 m2 lines (Q-45 / Q-53 C stairs: no bed line, no table) |
+| stair marble beds 1:3 | STAIR_BED_V1 (R-T511-7) | >= 10.178704 | >= 1.060280 | HELD | 40 (20 stair lines with a HELD area; 20 threshold / lift m2 lines NO_PRODUCER) |
 | screeds | none | none | none | HELD | 8 (3 RELEASED m3: footing 5.4925, lift pit 1.035, pool 1.5245 = 8.0520 m3, mix not printed) |
 | outdoor beds | none (T-495 options beside) | none | none | HELD | 4 |
-| **PROJECT** | | **HELD, known part >= 109.904168 .. 147.717744** | **HELD, >= 15.111823 .. 20.311189** | HELD | 246 |
+| **PROJECT** | | **HELD, known part >= 120.082872 .. 157.896448** | **HELD, >= 16.172103 .. 21.371469** | HELD | 235 |
 
-Waste: only the tile bed has a sourced factor (5 %, >= 4.987 .. 6.878 bags); procurement known part >= 104.736 ..
-144.440 bags (tile bed only). No bags-to-buy figure exists for any trade or the project: every group has a HELD
+Waste: only the tile bed has a sourced factor (5 %, >= 4.987 .. 6.878 bags); procurement known part >= 115.365 ..
+155.070 bags (tile bed 104.736 .. 144.440 + stair allowance 10.629). No bags-to-buy figure exists for any trade or the project: every group has a HELD
 member (R-T499-1).
+
+R-T511-7 STAIR_BED_V1 (the one producer this task adds, unwired, every villa): stair marble (tread, riser,
+landing) bed = released m2 x the Q-45 stair bed 0.03 m (V1 record, not retyped); cement / sand from the owner record
+UP-STAIR-017 (URBAN_RULES_1.8.0, Q-53 C: 1:3 = 9.576 bags + 0.9975 m3 loose sand per m3, theoretical); procurement =
+its PRELIMINARY PURCHASING allowance (10 bags + 1.00 m3 per m3), a separate layer; waste HELD (the rule: never without
+a named source). Thresholds and lift marble are not stair beds (no thickness / mix stated): they stay NO_PRODUCER.
 
 Hand checks: masonry 2.8202 (1F 0.20 black, 23.90 m2) + 7.335352 (GF 0.20 black, 62.164 m2) = 10.155552 bags =
 1.269444 m3 x 8 (= the fresh 0.20 m mortar T-498 restates; sand 0.387777 + 1.008611 = 1.396388). Tile bed = T-500
-PROJECT exactly. Project = 10.155552 + 99.748616 = 109.904168 .. + 137.562192 = 147.717744.
+PROJECT exactly. Stair beds: 11 released lines (8 treads, 1 riser, 2 landings) = 35.4313 m2 x 0.03 x 9.576 =
+10.178704 bags (e.g. 2F flight 2 tread 3.45 m2 -> 0.1035 m3 -> 0.991116 bags; UP-STAIR-017 worked example 10 m2 ->
+2.8728 bags reproduced). Project = 10.155552 + 99.748616 + 10.178704 = 120.082872 .. (137.562192) 157.896448.
 
 ## 4. Findings
 
@@ -63,8 +71,8 @@ PROJECT exactly. Project = 10.155552 + 99.748616 = 109.904168 .. + 137.562192 = 
   determinate rows while the GF-ST-CN host has no bed (finish HELD, area 0 .. 0.23 m2). By R-T499-1 the trade is HELD;
   the residual is immaterial (at most 0.23 x 0.06 x 8 = 0.1104 bags, 0.0152 m3 sand) but stays named, never 0.
 - **F-T511-3 NO PRODUCER for three released screed volumes** (8.0520 m3 installed: footing protection, lift-pit base,
-  pool protection; printed '5 cm screed', no mix) and for the marble beds (51 lines; Q-45 stairs 3 cm 1:3 and the
-  Q-53 C conversion exist, but no bed line or table), the released outdoor porcelain walk (21.0142 m2; T-495's basis
+  pool protection; printed '5 cm screed', no mix), the marble thresholds and lift surround / threshold (20 m2 lines:
+  bed not stated; stair marble now has STAIR_BED_V1), the released outdoor porcelain walk (21.0142 m2; T-495's basis
   would give 5.043 .. 6.725 bags BESIDE, not a producer) and the fence / house-below-NG masonry. Sensitivity only, NOT
   A QUANTITY: 8.052 m3 of screed at the owner's 1:4 figures would be about 64 bags.
 - **F-T511-4 two conversion conventions for one cement key.** Floors / blocks use the owner's 1:4 practice value
@@ -85,11 +93,11 @@ Verdict proposal: RULE_DIFFERENCE (scope), no numeric verdict; the census itself
 - T-498: read masonry cement / sand only from fresh producer rows (V3.0.56 lines); 1.269444 m3 / 10.155552 bags agrees.
 - A cross-trade cement / sand line can only be HELD with its known part AT_LEAST today; the census JSON lists every
   held contributor by line and reason.
-- New producer rows needed (not here): screed materials (mix source), stone-bed materials (B7 / B6, Q-53 C 1:3),
-  outdoor porcelain bed.
+- STAIR_BED_V1 is a research producer: wiring it is a lane I row (B7 stair bed material lines).
+- New producer rows still needed: screed materials (mix source), threshold / lift marble bed, outdoor porcelain bed.
 
 ## 7. Lessons row (proposed, ERS s.7)
 
 | Date | Problem | Root cause | General rule (scope) | Regression test | Status |
 |---|---|---|---|---|---|
-| 2026-11-04 | One cement key fed by five tables on three candidate versions; two masonry figures sat on lines the candidate had since HELD, and the tile-bed to-buy ignored a MISSING bed | each table checked its own lines at its own version; nobody keyed the shared product by physical layer across trades or re-checked a producer against the current candidate | R-T511-1..6 (every villa): classify every code, one producer per physical (host, layer, material, stage), readers agree, stale figures leave the sum and stay beside, HELD subtotal never partial, completeness by host | tests/t511_cement_sand_census (normal P511 by hand; adverse: held bed, second producer, divergent / lone reader, wall-tile key, stale class / net / absent, kg for bags, HELD as 0, range order, unclassified code, host without state, mirror / rotation / mm) | proposed |
+| 2026-11-04 | One cement key fed by five tables on three candidate versions; two masonry figures sat on lines the candidate had since HELD, and the tile-bed to-buy ignored a MISSING bed | each table checked its own lines at its own version; nobody keyed the shared product by physical layer across trades or re-checked a producer against the current candidate | R-T511-1..7 (every villa): classify every code, one producer per physical (host, layer, material, stage), readers agree, stale figures leave the sum and stay beside, HELD subtotal never partial, completeness by host | tests/t511_cement_sand_census (normal P511 by hand; adverse: held bed, second producer, divergent / lone reader, wall-tile key, stale class / net / absent, kg for bags, HELD as 0, range order, unclassified code, host without state, mirror / rotation / mm) | proposed |

@@ -28,6 +28,9 @@ Rules (project-independent; scope: every villa):
            .subtotal): COMPUTED only when every contributor of the group carries a number; otherwise HELD, value
            None, the known part AT_LEAST, the held contributors listed. Whole bags only over a COMPUTED project
            subtotal; waste only where a source gives it (else HELD).
+  R-T511-7 STAIR_BED_V1 (producer added here, every villa): stair marble (tread, riser, landing) bed = released
+           m2 x Q-45 stair bed 0.03 m; cement / sand from UP-STAIR-017 (1:3, 9.576 bags + 0.9975 m3 per m3);
+           procurement = its purchasing allowance (10 bags + 1.00 m3 per m3), waste HELD; HELD area stays HELD.
   R-T511-6 COMPLETENESS BY HOST: every HOST line ends in exactly one state per material: PRODUCED (fresh producer
            row), HELD (producer row held, stale, or NO_PRODUCER with the reason) or NOT_APPLICABLE (with evidence:
            line EXCLUDED, white AAC masonry, bed host not bedded with the producer's evidence).
@@ -55,7 +58,7 @@ from engine.source import finish_materials_table as V1  # noqa: E402
 from engine.source import finish_materials_table_v5 as V5  # noqa: E402
 
 SCHEMA = "URBAN_T511_CEMENT_SAND_CENSUS_V1"
-GUARD_CLASS = "UNWIRED_READER"
+GUARD_CLASS = "UNWIRED_PRODUCER"     # a census reader of the merged tables + the STAIR_BED_V1 producer (R-T511-7)
 CANDIDATE = "ARCH_TAKEOFF_V3.0.57"
 CANDIDATE_SHA8 = "25a8b406"
 V56, V56_SHA8 = "ARCH_TAKEOFF_V3.0.56", "4e25c54f"
@@ -67,6 +70,7 @@ INDEX = ROOT / (R + "agents_t508/out/LINE_INDEX_V3_0_55.json")
 T508 = ROOT / (R + "agents_t508/summary_t508.json")
 INDEX56 = ROOT / (R + "agents_t310/out/LINE_INDEX_V3_0_56.json")
 T310 = ROOT / (R + "agents_t310/summary_t310.json")
+RULES18 = ROOT / "rules/owner_decisions/URBAN_RULES_1.8.0.json"
 T453 = ROOT / (R + "agents_t453/out/MATERIAL_LEDGER_T453.json")
 T454 = ROOT / (R + "agents_t454/out/PLASTER_MATERIALS_T454.json")
 T489 = ROOT / (R + "agents_t489/out/PLASTER_MIX_T489.json")
@@ -82,7 +86,8 @@ PINS = {INDEX: "80b7a634f866af0ca38d5974feb9c72b8b4511f03e827e9b6738b2f9b8cc81c2
         T495: "56aa1813c08ff738c496a4189b896af47a383a816ea55527eae2b1fd4ff5b94d",
         T455: "30f3c90eeee907b9e531d73c9e43f3ec8dae8d249a4151963046c48e0ec9bed8",
         INDEX56: "f345716d0b34d9b7afb4016c830afcc013e28971285da51c9a7416c6c70b3626",
-        T310: "0302c88b37cce04d113d71ebaaf455f296e9dd7baed74653a4529e6496288351"}
+        T310: "0302c88b37cce04d113d71ebaaf455f296e9dd7baed74653a4529e6496288351",
+        RULES18: "0e4cc090f99bdbfddcc3e1130a3ca90efb4fee19de8bba6116ecf47b83900bac"}
 
 CEMENT, SAND = "CEMENT_50KG", "SAND_LOOSE"
 MATERIALS = (CEMENT, SAND)
@@ -122,10 +127,10 @@ CODE_TABLE = {
                                                  "bed basis for an exterior walk not stated"),
     "EXT.PAVING.INTERLOCK": ("HOST", OUTDOOR_BED, "interlock on a sand bed: no owner rule for pavers or their bed "
                                                   "(T-495 DECLARED_OUT)"),
-    "FIN.MARBLE.TREAD": ("HOST", STONE_BED, "marble on a 1:3 bed (Q-45 stairs 3 cm, Q-53 C): no bed line, "
-                                            "no material table on the candidate"),
-    "FIN.MARBLE.RISER": ("HOST", STONE_BED, "marble on a 1:3 bed (Q-45 / Q-53 C): no bed line, no table"),
-    "FIN.MARBLE.LANDING": ("HOST", STONE_BED, "landing marble bed: no bed line, no table"),
+    "FIN.MARBLE.TREAD": ("HOST", STONE_BED, "stair marble on a 1:3 bed (Q-45 stairs 3 cm; UP-STAIR-017)"),
+    "FIN.MARBLE.RISER": ("HOST", STONE_BED, "stair marble on a 1:3 bed (Q-45 stairs 3 cm; UP-STAIR-017)"),
+    "FIN.MARBLE.LANDING": ("HOST", STONE_BED, "stair landing marble on a 1:3 bed (Q-45 / Q-53: landings are "
+                                              "stair marble; UP-STAIR-017 scope STAIR)"),
     "FIN.MARBLE.THRESHOLD": ("HOST", STONE_BED, "threshold marble bed: thickness / mix not stated, no table"),
     "FIN.MARBLE.LIFT_SURROUND": ("HOST", STONE_BED, "lift surround marble fixing: not stated, no table"),
     "FIN.MARBLE.LIFT_THRESHOLD": ("HOST", STONE_BED, "lift threshold marble bed: not stated, no table"),
@@ -528,6 +533,68 @@ def bed_rows(lines, pins=True):
     return rows, states, missing
 
 
+STAIR_BED_CODES = ("FIN.MARBLE.TREAD", "FIN.MARBLE.RISER", "FIN.MARBLE.LANDING")
+STAIR_RULE = "UP-STAIR-017"
+
+
+def stair_rule(pins=True):
+    d = _load(RULES18, pins)
+    hit = []
+
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get("rule_id") == STAIR_RULE:
+                hit.append(o)
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(d)
+    if len(hit) != 1 or hit[0]["status"] != "OWNER_APPROVED" or hit[0]["params"]["mix_cement_sand"] != "1:3":
+        raise CensusError(f"STALE_CANDIDATE: {STAIR_RULE} not found once as an OWNER_APPROVED 1:3 record")
+    return hit[0]
+
+
+def stair_bed_rows(lines, pins=True, rule=None):
+    """R-T511-7 STAIR_BED_V1 (the stair-marble bed producer; any villa): installed mortar m3 = the released stair
+    marble m2 (tread, riser, landing line) x the owner's stair bed (Q-45: 0.03 m, the V1 record of Q-45, not
+    retyped); cement bags / loose sand = m3 x UP-STAIR-017 theoretical figures (Q-53 C: 9.576 bags, 0.9975 m3 per
+    m3 of 1:3); PROCUREMENT = m3 x the rule's preliminary purchasing allowance (10 bags, 1.00 m3), a separate layer;
+    WASTE HELD (the rule: never a waste allowance without a named source). A HELD line stays HELD (its range is not
+    a figure); an EXCLUDED line is NOT_APPLICABLE; no 1:4 figure is ever used for this bed."""
+    rule = rule or stair_rule(pins)
+    bed_lo, bed_hi = V1.OWNER_VALUES["bed_m"][V1.STAIR_FLIGHT]
+    pr, pa = rule["params"], rule["purchasing_allowance"]
+    rows, states = [], {}
+    for ln in lines:
+        if ln["item_code"] not in STAIR_BED_CODES:
+            continue
+        lid = ln["line_id"]
+        if ln["class"] == "EXCLUDED":
+            states[lid] = (NA, STONE_BED, "line EXCLUDED in the candidate")
+            continue
+        if ln["unit"] != "m2":
+            states[lid] = (HELD, STONE_BED, f"UNIT: {ln['unit']} is not an area")
+            continue
+        a = ln["measured_net"] if ln["class"] == "RELEASED" else None
+        read = {"class": ln["class"], "net": ln["measured_net"]}
+        why = None if a is not None else f"stair marble area HELD on the candidate ({ln['element_id']}), never 0"
+        m3 = None if a is None else (a * bed_lo, a * bed_hi)
+        for m, kt, kp in ((CEMENT, "theoretical_cement_bags_per_m3", "cement_bags_per_m3"),
+                          (SAND, "theoretical_sand_m3_per_m3", "sand_m3_per_m3")):
+            lo, hi = (None, None) if m3 is None else (m3[0] * pr[kt], m3[1] * pr[kt])
+            rows.append(prow("STAIR_BED_V1", PRODUCER, lid, lid, "STAIR_BED_1:3", m, INSTALLED, lo, hi, read=read,
+                             reason=why, trade=STONE_BED))
+            plo, phi = (None, None) if m3 is None else (m3[0] * pa[kp], m3[1] * pa[kp])
+            rows.append(prow("STAIR_BED_V1", PRODUCER, lid, lid, "STAIR_BED_1:3", m, PROCUREMENT, plo, phi,
+                             read=read, trade=STONE_BED,
+                             reason=why or "PRELIMINARY PURCHASING allowance (UP-STAIR-017), not the theoretical"))
+            rows.append(prow("STAIR_BED_V1", PRODUCER, lid, lid, "STAIR_BED_1:3", m, WASTE, None, None, read=read,
+                             trade=STONE_BED, reason="UP-STAIR-017: never a waste allowance without a named source"))
+    return rows, states
+
+
 def other_hosts(lines, pins=True):
     """Hosts no merged table produces: NO_PRODUCER HELD (stone beds, screeds, outdoor) or NOT_APPLICABLE when the
     candidate EXCLUDES the line / it is the lm partner. T-495 outdoor options: OPTION rows (never summed). The
@@ -547,7 +614,7 @@ def other_hosts(lines, pins=True):
                                  reason="option bound (finish not decided, OD-1): never summed"))
     for ln in lines:
         kind, trade, why = CODE_TABLE.get(ln["item_code"], ("?", None, None))
-        if kind != "HOST" or trade not in (STONE_BED, SCREED, OUTDOOR_BED):
+        if kind != "HOST" or trade not in (STONE_BED, SCREED, OUTDOOR_BED) or ln["item_code"] in STAIR_BED_CODES:
             continue
         if ln["class"] == "EXCLUDED":
             states[ln["line_id"]] = (NA, trade, "line EXCLUDED in the candidate")
@@ -587,9 +654,10 @@ def build(pins=True):
     p_rows, p_states = plaster_rows(lines, pins)
     b_rows, b_states, missing = bed_rows(lines, pins)
     o_rows, o_states, beside = other_hosts(lines, pins)
-    rows = m_rows + p_rows + b_rows + o_rows
+    s_rows, s_states = stair_bed_rows(lines, pins)
+    rows = m_rows + p_rows + b_rows + o_rows + s_rows
     states = {}
-    for st in (m_states, p_states, b_states, o_states):
+    for st in (m_states, p_states, b_states, o_states, s_states):
         for k, v in st.items():
             states[k] = v
     produced_lines = {r["line_id"] for r in rows if r["role"] == PRODUCER}
@@ -624,7 +692,9 @@ def build(pins=True):
         "schema": SCHEMA, "guard_class": GUARD_CLASS, "candidate": CANDIDATE, "candidate_sha8": CANDIDATE_SHA8,
         "base": BASE, "identity": ident,
         "input_sha256": {Path(p).relative_to(ROOT).as_posix(): h for p, h in PINS.items()},
-        "rules": ["R-T511-%d" % i for i in range(1, 7)],
+        "rules": ["R-T511-%d" % i for i in range(1, 8)],
+        "stair_rule": {k: stair_rule(pins)[k] for k in ("rule_id", "version", "status", "params",
+                                                        "purchasing_allowance")},
         "code_classes": {k: sorted(v) for k, v in sorted(by_code.items())},
         "host_lines": len(host_lines), "host_states_cement": dict(sorted(tally.items())),
         "keys": len(keyset), "keys_bound_by_two_tables": sum(1 for v in keyset.values() if len(v) > 1),
