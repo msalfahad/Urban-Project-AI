@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-04 20:15 (since 16:17)
+
+- T-488 blockwork wiring (Gate B): WORKED (V3.0.55, MAS.BLOCK 579.1011 -> 467.7925 m2, held walls by name). Decision: T-498 recomputes materials from this base; lessons row ADOPTED.
+- T-508 stair skirting wiring (Gate B): WORKED (V3.0.56, 209.429 lm). Decision: F-C-T508-1 (all-blank code printed 0.0) -> T-512 (b); F-C-T508-2 -> register.
+- T-500 tile bed mortar table (Gate A): WORKED. Decision: T-511 TODO.
+- T-510 band-gap classes (Gate A): PARTIAL (left t212 red; unwired). Decision: T-512 gate fix first for worker 1; T-513 wiring queued for worker 2.
+- T-310 r6 wet-area WP: PARTIAL (version collision with T-488, engineering unchanged). Decision: r7 rebase on V3.0.56, worker 2 first.
+- Process: 3 empty worker runs (18:41-19:19, 0 TODO). Decision: each worker keeps a non-candidate TODO behind its package.
+
 ## Lead 2026-11-04 08:15 (since 04:14)
 
 - T-504 plaster materials table V3: WORKED (Gate A, R-T504-1, own re-sum AGREE). Decision: T-498 reads V3; lessons row already covers it.

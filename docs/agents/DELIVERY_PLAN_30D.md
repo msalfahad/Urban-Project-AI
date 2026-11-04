@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 20:15; recovery plan in force)
+
+- Since 16:17: 4 merged (T-500, T-510 Gate A; T-488, T-508 Gate B), 0 rejected. Candidate of record V3.0.56 4e25c54f
+  (MAS.BLOCK 579.1011 -> 467.7925 m2 with 98.3775 m2 HELD D-39; FIN.SKIRTING 212.379 -> 209.429 lm), master 1.53.0;
+  not released. READY 0, CLAIMED 0, TODO 5.
+- Gate 0: T-512 (t212 red since the T-510 merge + all-blank codes printed as 0.0) first for worker 1.
+- Step 2: stream F T-310 r7 (worker 2) and T-423 (worker 1), stream S T-498 (worker 3) in parallel on V3.0.56, READY
+  second rebases; then T-507, T-513, T-314, T-502, T-424, T-364, T-363, T-372; stream S T-509, T-382, T-474 p2.
+  6 Gate B merges since 00:20; about 11 packages in 5.2 days; 10 Nov AT RISK.
+- Step 5 materials: T-498 recomputes blocks / mortar / glue from the V3.0.55 base; T-511 (cement / sand one producer).
+
 ## Status (Lead, 2026-11-04 16:17; recovery plan in force)
 
 - Since 12:19: 3 merged (T-460, T-468 Gate A; T-480 Gate B), 0 rejected. Candidate of record V3.0.54 c85c4630

@@ -1,9 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-04 16:17 UTC (Lead). Previous version: 2026-11-04 12:19 UTC. The released numbers did not change
+Last update: 2026-11-04 20:15 UTC (Lead). Previous version: 2026-11-04 16:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.54 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.56 (not released).
+
+Since 4 Nov 16:17 (newest first; four checked and merged, none sent back):
+- Blockwork IN THE CANDIDATE (V3.0.55, checked wall by wall): measured block area 579.10 -> 467.79 m2 (-19.2 %). The
+  eight roof-storey walls (98.38 m2) were valued to a height the drawings do not print and are now held until the roof
+  level is given; one ground-floor wall has two printed readings (12.93 .. 12.94 m2) and stays a range. Not yet compared
+  like for like with the freelancer (the held walls must be settled first).
+- Stair skirting IN THE CANDIDATE (V3.0.56): room skirting 212.38 -> 209.43 m.l certain (-1.39 %); the 9.05 m.l on a
+  first-floor level with no floor came out; landings 6.10 m.l re-measured by the checker and agree; the sloped flight
+  pieces are listed but held until their form is fixed (they will show as held, not as zero).
+- Tile bed mortar table checked (12.47 .. 17.20 m3 -> about 105 .. 145 bags of cement to buy); not yet in the candidate.
+- Narrow wall gaps beside columns: the new classification is checked but not yet used by the candidate, and it left one
+  automatic guard test failing; both are fixed next (no quantity changed).
+- Next: blockwork materials (blocks, mortar, glue) recomputed from the new blockwork area; wet-area waterproofing on
+  the new candidate; ceiling and paint deductions; the guard fix first.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: 6 candidate packages merged since midnight, about 11 left in
+  5 days; three worker runs this evening found no ready task (fixed this run).
 
 Since 4 Nov 12:19 (newest first; three checked and merged, none sent back):
 - Stair guardrails IN THE CANDIDATE (V3.0.54, checked line by line): 17.37 -> 33.32 m.l (+91.9 %). Whole flights had
