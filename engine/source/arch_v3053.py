@@ -90,7 +90,7 @@ PIECES = {
                                "ELEMENT_REGISTER ruling RC LINTEL vs host masonry (Lead 2026-11-03 08:17)",
                                "resolution order: drawings / project documents before company rules (AGENT_BRIEF)"],
                "owner_manual_method": "one lintel per opening in a block wall; length = opening + bearing each side; "
-                                      "cast-in-situ: concrete m3 = wall width x depth x length (+ formwork m2, rebar "
+                                      "cast-in-situ: concrete m3 = wall width x depth x length (+ formwork m2, bar steel "
                                       "kg from the detail); precast: count by standard length",
                "drawing_method": "T-453 r2 lintel ledger (MERGED b16f686b, Verifier Gate A 2026-11-03 08:55): the "
                                  "printed structural LINTEL SCHEDULE (bands L1-L5, B = wall width, D 20 / 20 / 30 / 40 "
@@ -102,7 +102,7 @@ WAITING = dict(A3050.WAITING)
 WAITING.update({
     "T487_LINTEL_FORMWORK": "lintel formwork (B10-13, 2 x D x L + B x w per REQUIRED lintel) is printed beside each "
                             "lintel line, never booked as an STR.FORMWORK line in this version",
-    "T487_LINTEL_REBAR": "lintel rebar kg (B11) HELD: bar cover, bend and anchorage lengths are not printed in the "
+    "T487_LINTEL_BARS": "lintel bar steel kg (B11) HELD: bar cover, bend and anchorage lengths are not printed in the "
                          "detail; the printed bars per band are on the record",
     "T487_HOST_MATERIAL": "the REQUIRED face (w + 2 x bearing) x D leaves the host wall's MATERIAL base only (T-498 "
                           "blockwork materials wiring); the MAS.BLOCK contract area is unchanged (R-MAS-ABOVE-LINTEL-1, "
@@ -273,7 +273,7 @@ def _line(tpl, x, sched, srcs):
         rec = _rec(srcs, action="ADD_LINTEL", pieces=1, schedule_row=b["row"], section_m=[x["_t"], b["d_m"]],
                    length_m=x["_L"], concrete_m3=x["_v"],
                    formwork_m2_beside=x["_fw"], host_face_m2=x["_face"], printed_bars=x.get("printed_bars"),
-                   rebar="HELD (cover / bends / anchorage not printed)", open_checks=list(x["open_checks"]),
+                   bar_steel="HELD (cover / bends / anchorage not printed)", open_checks=list(x["open_checks"]),
                    precast_alternative_beside=x.get("precast_alternative_beside"), **common)
         formula = (f"{METHOD}: 1 cast-in-situ RC lintel over {x['opening_id']} by the printed lintel schedule row "
                    f"{b['row']}: B {_fmt(x['_t'])} x D {_fmt(b['d_m'])} x L ({_fmt(x['_w'])} + 2 x "
@@ -356,12 +356,12 @@ def changes_for(doc, prev):
             raise ValueError(f"{METHOD}: lintel line {nl['line_id']} repeats an id")
         ids.add(nl["line_id"])
         if x["decision"] == REQUIRED:
-            held = [{"what": f"{x['opening_id']} rebar kg / jamb checks", "why": "; ".join(x["open_checks"])[:300],
+            held = [{"what": f"{x['opening_id']} bar steel kg / jamb checks", "why": "; ".join(x["open_checks"])[:300],
                      "range": None, "scenario": f"formwork {_fmt(x['_fw'])} m2 beside (B10-13, not booked)"}]
             down = [f"B9-02 STR.CONC.LINTEL +{_fmt(x['_v'])} m3 (1 piece, PROVISIONAL)",
                     f"material side (T-498): host face {_fmt(x['_face'])} m2 leaves {x.get('host_line') or 'no line'}"
                     f" material base; MAS.BLOCK contract area unchanged",
-                    f"B10-13 formwork {_fmt(x['_fw'])} m2 beside, not booked; B11 rebar kg HELD"]
+                    f"B10-13 formwork {_fmt(x['_fw'])} m2 beside, not booked; B11 bar steel kg HELD"]
             log["required_m3"] = _r(log["required_m3"] + x["_v"])
             log["required_pieces"] += 1
             log["formwork_m2_beside"] = _r(log["formwork_m2_beside"] + x["_fw"])
