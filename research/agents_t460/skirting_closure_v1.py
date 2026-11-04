@@ -30,6 +30,8 @@ def _lm(items):
     tot = 0.0
     for d in items or ():
         v = d.get("lm", d.get("length_m"))
+        if v is None and d.get("unit", "lm") == "lm":      # the candidate ledger rows: {"id", "qty", "unit": "lm"}
+            v = d.get("qty")
         if v is None:
             return None
         tot += float(v)

@@ -43,6 +43,15 @@ def test_adverse_no_gross_no_quantity_and_missing_length():
     assert r["state"] == "NO_GROSS" and r["listed_ded"] is None
 
 
+def test_candidate_ledger_rows_qty_unit_lm():
+    # the candidate's ledger rows carry {"id", "qty", "unit": "lm"}; a row in another unit is not an lm deduction
+    r = SK.close({"line_id": "K7", "gross": 15.0, "net": 14.1,
+                  "deductions": [{"id": "OP-1", "qty": 0.9, "unit": "lm"}], "additions": []})
+    assert r["state"] == "CLOSES" and r["listed_ded"] == pytest.approx(0.9)
+    m = SK.close({"line_id": "K8", "gross": 15.0, "net": 14.1, "deductions": [{"id": "OP-1", "qty": 1.0, "unit": "pcs"}]})
+    assert m["state"] == "NO_GROSS" and m["listed_ded"] is None
+
+
 def test_ledger_summary():
     L = SK.ledger([{"line_id": "K1", "gross": 15.0, "net": 14.4, "deductions": [DOOR, GLZ], "additions": [THR]},
                    {"line_id": "K3", "gross": 15.0, "net": 12.4, "deductions": [DOOR]},

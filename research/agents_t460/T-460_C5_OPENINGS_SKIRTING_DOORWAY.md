@@ -52,8 +52,23 @@ SUB_MIN_GAP_UNEXPLAINED records hold the host wall's net as a named range. Curve
 
 `skirting_closure_v1.py` (R-T460-2): per FIN.SKIRTING line, gross - listed deductions + listed additions = net within
 0.0005 lm; CLOSES / UNLISTED_DEDUCTION / UNLISTED_ADDITION / NO_GROSS / NO_QUANTITY. A residual is a piece that is in the
-net but not on the line, so a reviewer cannot add it back; it is named, never plugged. Results on the candidate run: see
-section 2.1 (SKIRTING_CLOSURE_T460.csv).
+net but not on the line, so a reviewer cannot add it back; it is named, never plugged.
+
+### 2.1 Results
+
+| run | lines | CLOSES | UNLISTED_DEDUCTION | NO_QUANTITY | net sum |
+|---|---|---|---|---|---|
+| V3.0.17 (merged T-296 extract, repo) | 39 | 2 | **9, short by 13.568824 lm** | 28 | 185.516658 lm |
+| V3.0.51 candidate of record (own run, V3_0_51_BOQ_LINES.json `c0b6d664` = record) | 47 | **15 / 15** | 0 | 32 | 212.378592 lm |
+
+REPRODUCED on V3.0.17: each of the 9 nets is short by exactly its floor-glazing edge (the F-17 equal-split credit:
+the glazing edge listed as a deduction AND taken again in the net, its range partner holding [0, x]); the 9 + their 9
+range partners + the 2 BLOCKED stair parents of that era make 20 skirting lines whose figures could not be re-added
+(the owner's count; the audit's own list is not in the repository, so the match is by mechanism, not by list).
+FIXED on the candidate: every V3.0.51 quantity line closes to 0.000001 lm (T-246 deductions by opening id, T-296 ledger,
+T-422 sill thresholds, T-481 / T-483 remainder, T-443 stair-room children); the 32 lines without a quantity are
+EXCLUDED / NOT_APPLICABLE_WITH_EVIDENCE / BLOCKED_RFI / BOUNDED, listed once, never 0. No quantity moves (verdict proposal:
+ENGINE_WRONG on V3.0.17, RESOLVED on V3.0.51; the closure ledger is the regression guard).
 
 ## 3. Wet-room doorway floor vs upturn (C5 item 3): NOT REPRODUCED, 0.000 m2 overlap
 
@@ -72,8 +87,11 @@ closure doorways (CLOSURE|...) are separate faces of the planar partition, overl
 - passage) x 0.20 exactly (walls only, Q-35 C), none = perimeter x 0.20 (the reading that would double the 0.20 m doorway
 transition), 1 HELD (GF wet zone). Three lines lower than walls only, none higher: 1F-R48CDA5 1.480 vs 1.580 (-0.100 m2,
 the W18 deduction from the upturn, ENGINE_WRONG already owned by T-310), GF-RB28769 1.20102 vs 1.201962 (-0.000942 m2,
-0.0047 lm), GF-RDBD4F9 1.32864 vs 1.579771 (-0.251131 m2, 1.2557 lm of the walk not under the upturn): not overlaps;
-residuals named in section 3.1 from the candidate run. Verdict proposal: NO DOUBLE COUNT on the candidate (DOORWAY vs
+0.0047 lm), GF-RDBD4F9 1.32864 vs 1.579771 (-0.251131 m2, 1.2557 lm of the walk not under the upturn): not overlaps.
+Named from the V3.0.51 line inputs (by_role_lm; WP lines identical to V3.0.50): 1F-R48CDA5 GLAZING 0.500 lm (W18 read
+as glazing, sill 0.84 above the upturn: T-310); GF-RB28769 OTHER 0.004711 lm x 0.20 = 0.000942 m2 (an unclassified
+boundary piece of 4.7 mm, residual named, not a door); GF-RDBD4F9 ZONE_LINE 1.255652 lm x 0.20 = 0.251130 m2 (an open
+zone edge, no wall to turn up: physically right). Verdict proposal: NO DOUBLE COUNT on the candidate (DOORWAY vs
 FLOOR 0.000 m2; DOORWAY_TRANSITION vs UPTURN 0.000 m2 by Q-35 C walls only); the old flag DOORWAY_DOUBLE_COVERAGE_REVIEW
 on V2.x FIN.WP.UPTURN (perimeter incl. doorways) is superseded on the candidate path by the walls-only line.
 
