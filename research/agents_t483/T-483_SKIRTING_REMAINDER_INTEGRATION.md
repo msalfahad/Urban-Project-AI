@@ -1,4 +1,36 @@
-# T-483: skirting remainder integration, ARCH_TAKEOFF_V3.0.48 (development villa; method every villa)
+# T-483: skirting remainder integration, ARCH_TAKEOFF_V3.0.49 (development villa; method every villa)
+
+## r2 (2026-11-04, worker 1): rebase on the merged V3.0.48 + registry gate fix
+
+Lead r2 (merge-order rule): T-350 r4 merged first as V3.0.48 (5de697ff, candidate 33a81c53), so this package is
+re-versioned ARCH_TAKEOFF_V3.0.49 / BOQ_FAMILY_MASTER 1.46.0, engineering unchanged. Sections 1-8 below are the r1
+record (written as "V3.0.48" on base V3.0.47); every figure in them holds on the new base, because V3.0.48 changed
+earthworks lines only and no FIN.SKIRTING line.
+
+- Code: engine/source/arch_v3049.py = the r1 module re-versioned (EXTENDS V3.0.48; WAITING from V3.0.48; the
+  integrated earthworks check is V3.0.48's check_earthworks). Hub: --v3049-inputs, V3.0.49 named in the line-stable
+  method sets, its stage chained after the V3.0.48 stage, its flag set before the V2.13 rewrite (the T-350 r4 pin on
+  the V3.0.48 flag line is kept verbatim). research/agents_t483/v3049_run.py / v3049_apply.py / t483_inputs.py
+  (URBAN_V3049_INPUTS_V1).
+- Own development-villa chain (T-167 v304_run, then v3049_run on the Drive copies P7757.dxf ab54dd55 / "ST7757
+  dxf.dxf" 9f9d1179): V3_0_46 35d70129, V3_0_47 e86a53a8, V3_0_48 **33a81c53** (candidate of record reproduced,
+  asserted) -> V3_0_49 **c7982197** through the hub = v3049_apply.py on that file (c7982197). 4876 lines: 5 CHANGED,
+  0 added, 4871 byte-identical; totals move only in FIN.SKIRTING: certain 203.368752 -> 212.378592 lm (+9.009840,
+  +4.43 %), held high 15.730915 -> 2.200. Earthworks identity unchanged (valued 225.941333 m3, ranged 3, held 13).
+- GATE FIX (1.46.0, research/agents_t483/build_master_1_46_0.py): the two packages 1.45.0 held pending had merged
+  (T-443 c814c55d, T-350b 5de697ff) and tests/t485 test_a_merged_package_never_stays_pending_in_the_newest_registry
+  was red on the working branch. Both promoted by R-T485-1 with merge commit + Checker verdict
+  (out/PROMOTIONS_SOURCE_1_46_0.json), the families they changed from the line diff V3.0.46 -> V3.0.48
+  (out/T483_PACKAGE_FAMILIES.json: T-443 B3-06 FIN.SKIRTING +7 ~1; T-350b B1-02 EXCAVATION ~4, B1-03 BACKFILL +2 ~1)
+  and the census re-run at V3.0.48 (out/LINE_INDEX_V3_0_48.json; inputs checked: the same tool on V3_0_46 reproduces
+  research/agents_t485/out/LINE_INDEX_V3_0_46.json byte for byte and the 1.45.0 census exactly). Re-derived: B3-06
+  INTEGRATED (+T-443, released 203.368752 lm), B1-02 HELD -> INTEGRATED (+T-350b, released 225.941333 m3 incl. the
+  PROVISIONAL S01 pits figure), B1-03 HELD (+T-350b, range 119.963335 .. 128.643547 m3, released none); every other
+  family's census asserted identical, only its as-of moves to V3.0.48 / T-350b. Pending: T-483 V3.0.49 only. No
+  quantity, capability or owner change. Known by design (r3): once T-483 merges, 1.46.0 holds it pending until the next
+  registry promotes it (the same gate turns red again then: the next registry must promote it first in its lane).
+- Validation r2: see section 9.
+
 
 Worker 1 (stream F, lane I), 2026-11-03. Gate B integration package on the candidate of record V3.0.47 (T-443, merge
 c814c55d, candidate e86a53a8). ERS applied: s.2.1 element, s.2.2 evidence (owner manual method and drawing method side
@@ -110,3 +142,12 @@ T-483 |
 - Freeze 0 differing; codemap check stale none; BOQ_FAMILY_MASTER 1.45.0 equals its builder, FMC.check problems [];
   RULES_MANIFEST drift []. t459 candidate binding rebuilt (adds arch_v3048.py: [], no lap token).
 - L4: see the board handoff (started on 39255dea; result there).
+
+## 9. Validation (r2, on the final head)
+
+- tests/t483_skirting_remainder (module 32 + hub wiring 8 + pins 3 + registry 11), tests/t350r4_earthworks_values,
+  tests/t485_registry_promotion (gate green), t212 / t379 guards, t459 (binding rebuilt with its tool): see the board
+  handoff for the counts and the L3 folder list.
+- Freeze 0; codemap rebuilt and check stale none; 1.46.0 equals its builder, FMC.check [] and census_problems [].
+- L4 full suite: NOT run to the end in this run (two cores; an aborted pre-run on c95d9d96 reached 14 % in 17 min).
+

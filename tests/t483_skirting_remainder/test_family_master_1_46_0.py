@@ -58,7 +58,7 @@ def test_both_merged_pending_packages_promoted_and_only_v3049_pending(docs):
 
 def test_no_merged_package_stays_pending_normal_and_adverse(docs):
     old, new = docs
-    merged = {p["task_commit"] for p in new["candidate_packages"]}
+    merged = {p.get("task_commit") for p in new["candidate_packages"]} - {None}
     assert B43.stale_pending(new, lambda c: c in merged) == []
     assert B43.stale_pending(old, lambda c: c in merged) == ["T-443", "T-350b"]   # the registry this one supersedes
 
