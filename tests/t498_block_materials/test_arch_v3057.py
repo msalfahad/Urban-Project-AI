@@ -19,6 +19,7 @@ import pytest
 from engine.source import arch_v304 as A304
 from engine.source import arch_v3057 as M
 from engine.source import boq_line as BL
+from engine.source import company_rulebook_v1 as CR
 
 PID, REV = "villa-k498", "0" * 64
 E_A = "GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK"
@@ -57,6 +58,11 @@ def candidate():
 SRC = [{"task": "T-K", "file": "ledger.py", "sha256": "k" * 64, "merge_commit": "abcdef12", "checker_run": "run k"}]
 JOINT = {"module_m": [0.40, 0.20], "unit_m": [0.39, 0.19], "joint_mm": 10, "status": "OWNER-PROVISIONAL",
          "source": "villa K498 joint"}
+RULEBOOK = {"method": CR.METHOD, "version": CR.VERSION, "digest": CR.digest(),
+            "records": {rid: {"status": CR.record(rid).get("status"),
+                              "params": {k: (v.get("value") if isinstance(v, dict) else v)
+                                         for k, v in CR.record(rid)["params"].items()}}
+                        for rid in (M.R_BLOCK, M.R_GLUE, M.R_MORTAR)}}
 EXPECT = {lid(E_A): {M.U_BLACK: 245.5, M.MORTAR: 0.28969},
           lid(E_B): {M.GLUE: [33.88, 35.0], M.U_WHITE: "HELD"},
           lid(E_C): {M.U_BLACK: "HELD", M.MORTAR: "HELD"},
@@ -65,6 +71,7 @@ EXPECT = {lid(E_A): {M.U_BLACK: 245.5, M.MORTAR: 0.28969},
 
 def doc(**over):
     d = {"schema": M.INPUTS_SCHEMA, "project": PID, "sources": SRC, "joint": copy.deepcopy(JOINT),
+         "rulebook": copy.deepcopy(RULEBOOK),
          "faces": {lid(E_A): {"required": [{"opening_id": "D-A", "face_m2": 0.36}], "held": []},
                    lid(E_B): {"required": [], "held": [{"opening_id": "D-B", "face_max_m2": 0.32, "why": "head"}]}},
          "expect": copy.deepcopy(EXPECT)}
@@ -140,6 +147,9 @@ def test_adverse_unbounded_held_face_holds_material():
     (lambda d: d["faces"][lid(E_A)]["required"].__setitem__(0, {"opening_id": "D-A", "face_m2": 25.0}), "millimetres"),
     (lambda d: d["expect"][lid(E_A)].update({M.U_BLACK: 250.0}), "expected"),
     (lambda d: d.update(sources=[]), "no source"),
+    (lambda d: d["rulebook"]["records"][M.R_BLOCK].update(status="PROPOSED"), "OWNER_CONFIRMED"),
+    (lambda d: d["rulebook"].update(digest=None), "digest"),
+    (lambda d: d["rulebook"]["records"][M.R_GLUE]["params"].pop("kg_per_m2_by_thickness_m"), "has no"),
 ])
 def test_adverse_inputs_refused(mutate, msg):
     d = doc()
@@ -177,6 +187,30 @@ def test_adverse_missing_net_never_zero():
     d = doc(faces={}, expect={})
     with pytest.raises(M.InputsError, match="no block type"):
         run(d, prev)
+
+
+def test_adverse_unconfirmed_thickness_holds_units():
+    """a rulebook whose 0.20 module is withdrawn: the 0.20 black units and mortar become HELD, never 12.5 borrowed."""
+    d = doc()
+    d["rulebook"]["records"][M.R_BLOCK]["params"]["confirmed_modules_m"] = {}
+    d["expect"][lid(E_A)] = {M.U_BLACK: "HELD", M.MORTAR: "HELD"}
+    _, ch, *_ = run(d)
+    b = by(ch)
+    assert b[(lid(E_A), M.U_BLACK)]["evidence_state"] == "BLOCKED_RFI"
+    assert b[(lid(E_A), M.MORTAR)]["measured_net"] is None
+
+
+def test_engine_does_not_import_the_rulebook():
+    """T-212 P2: company_rulebook_v1 is an UNWIRED_PRODUCER; the candidate reads its records from the inputs."""
+    import ast
+    import inspect
+    mods = set()
+    for n in ast.walk(ast.parse(inspect.getsource(M))):
+        if isinstance(n, ast.ImportFrom):
+            mods.update(f"{n.module}.{a.name}" for a in n.names)
+        elif isinstance(n, ast.Import):
+            mods.update(a.name for a in n.names)
+    assert not any("company_rulebook" in m for m in mods), mods
 
 
 def test_joint_geometry():

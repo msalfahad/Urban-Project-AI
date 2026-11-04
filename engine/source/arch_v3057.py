@@ -45,9 +45,9 @@ from engine.source import arch_v304 as A304
 from engine.source import arch_v305 as A305
 from engine.source import arch_v3046 as A3046
 from engine.source import arch_v3056 as A3056
-from engine.source import company_rulebook_v1 as C
 
-DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: books Checker-merged ledgers with owner rulebook rates; no default value
+DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: books Checker-merged ledgers; rates arrive as rulebook records in the
+#                                          inputs (company_rulebook_v1 is an UNWIRED_PRODUCER: never imported here)
 METHOD = "ARCH_TAKEOFF_V3.0.57"
 EXTENDS = A3056.METHOD
 CANDIDATE = A30.METHOD
@@ -72,6 +72,9 @@ ITEM_TEXT = {U_BLACK: ("Black block units (theoretical count)", "طابوق أس
 BY_COLOUR = {"BLACK": (U_BLACK, MORTAR), "WHITE": (GLUE, U_WHITE), None: (U_BLACK, MORTAR, GLUE, U_WHITE)}
 TRADE = "MASONRY"
 VALUED = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")
+R_BLOCK, R_GLUE, R_MORTAR = "UPC-BLACK-BLOCK-001", "UPC-AAC-GLUE-001", "UPC-BLACK-MORTAR-001"
+RULEBOOK_METHOD = "COMPANY_RULEBOOK_V1"
+OK = "OK"
 TOL = 1e-6                               # a recomputed figure against the expected figure (6 decimals)
 FACE_TOL = 0.0005                        # m2: the candidate prints 4 decimals
 MM_GUARD = 10.0                          # a face / width above it is millimetres or a unit error (refused)
@@ -118,7 +121,8 @@ def load_inputs(doc, project_id=None):
         raise InputsError("inputs name another project")
     for k in ("rates", "blocks_per_m2", "kg_per_m2"):
         if k in doc:
-            raise InputsError(f"a typed rate ({k}) is refused: rates come from {C.METHOD}")
+            raise InputsError(f"a typed rate ({k}) is refused: rates come from {RULEBOOK_METHOD} records")
+    rb = load_rulebook(doc.get("rulebook"))
     srcs = doc.get("sources") or []
     if not srcs:
         raise InputsError("no source ledger named")
@@ -161,9 +165,59 @@ def load_inputs(doc, project_id=None):
             if x["opening_id"] in seen:
                 raise InputsError(f"lintel {x['opening_id']} deducted from two lines ({seen[x['opening_id']]}, {lid})")
             seen[x["opening_id"]] = lid
-    return {"project": doc.get("project"), "sources": srcs, "joint": j, "faces": faces,
+    return {"project": doc.get("project"), "sources": srcs, "joint": j, "faces": faces, "rulebook": rb,
             "held_hosts": doc.get("faces_on_held_hosts") or [], "expect": doc.get("expect") or {},
             "beside": doc.get("beside") or {}}
+
+
+def load_rulebook(rb):
+    """the owner rulebook records this version reads, carried in the inputs with their provenance (method, version,
+    digest): each OWNER_CONFIRMED with its params; a missing record or param, or another status, is refused."""
+    if not isinstance(rb, dict) or rb.get("method") != RULEBOOK_METHOD or not rb.get("version") or not rb.get("digest"):
+        raise InputsError(f"rulebook: method {RULEBOOK_METHOD}, version and digest are stated")
+    recs = rb.get("records") or {}
+    need = {R_BLOCK: ("blocks_per_m2_40x20_module", "confirmed_modules_m"),
+            R_GLUE: ("kg_per_m2_by_thickness_m", "bag_kg"), R_MORTAR: ("cement_bags_per_m3", "loose_sand_m3_per_m3")}
+    out = {}
+    for rid, keys in need.items():
+        r = recs.get(rid)
+        if not r or r.get("status") != "OWNER_CONFIRMED":
+            raise InputsError(f"rulebook: {rid} is not an OWNER_CONFIRMED record")
+        p = {}
+        for k in keys:
+            v = (r.get("params") or {}).get(k)
+            if v is None:
+                raise InputsError(f"rulebook: {rid} has no {k}")
+            p[k] = v
+        out[rid] = p
+    _num(out[R_BLOCK]["blocks_per_m2_40x20_module"], "blocks per m2", 100.0)
+    for k, v in out[R_GLUE]["kg_per_m2_by_thickness_m"].items():
+        _num(v, f"glue kg/m2 {k}", 50.0)
+    _num(out[R_MORTAR]["cement_bags_per_m3"], "cement bags per m3", 50.0)
+    _num(out[R_MORTAR]["loose_sand_m3_per_m3"], "sand per m3", 5.0)
+    return {"method": rb["method"], "version": rb["version"], "digest": rb["digest"], "p": out}
+
+
+def black_rate(rb, t):
+    """UPC-BLACK-BLOCK-001: 12.5 / m2 only for a thickness whose installed module is confirmed 40 x 20."""
+    p = rb["p"][R_BLOCK]
+    key = f"{t:.2f}"
+    mod = p["confirmed_modules_m"].get(key)
+    if mod is None:
+        return {"status": "HELD", "why": f"the installed module of the {key} m black block is not stated (block "
+                                          f"schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is "
+                                          f"not borrowed"}
+    if abs(mod[0] - 0.40) > 1e-9 or abs(mod[1] - 0.20) > 1e-9:
+        return {"status": "HELD", "why": "the 12.5 / m2 company rate applies only to a confirmed 40 x 20 module"}
+    return {"status": OK, "blocks_per_m2": p["blocks_per_m2_40x20_module"], "module_m": list(mod),
+            "module_basis": f"{R_BLOCK} confirmed_modules_m[{key}]"}
+
+
+def glue_rate(rb, t):
+    k = rb["p"][R_GLUE]["kg_per_m2_by_thickness_m"].get(f"{t:.2f}")
+    if k is None:
+        return {"status": "HELD", "why": f"no AAC glue rate for {t:.2f} m in {R_GLUE}: HELD"}
+    return {"status": OK, "kg_per_m2": k}
 
 
 def joint_m3_per_m2(j, t):
@@ -177,8 +231,9 @@ def _rec(d, **kw):
     return dict({"piece": P_MAT, "policy": PIECES[P_MAT]["policy"], "tasks": [x["task"] for x in s],
                  "ledgers": [x["file"] for x in s], "ledger_sha256": [x["sha256"] for x in s],
                  "merge_commits": [x["merge_commit"] for x in s], "checker_runs": [x["checker_run"] for x in s],
-                 "rule_id": RULE_ID, "rule_version": RULE_VERSION, "rulebook": f"{C.METHOD} {C.VERSION}",
-                 "rulebook_digest": C.digest(), "release_status": "NOT RELEASED", "producer": True}, **kw)
+                 "rule_id": RULE_ID, "rule_version": RULE_VERSION,
+                 "rulebook": f"{d['rulebook']['method']} {d['rulebook']['version']}",
+                 "rulebook_digest": d["rulebook"]["digest"], "release_status": "NOT RELEASED", "producer": True}, **kw)
 
 
 def _new_line(src, *, code, state, net, rng=None, what, formula, rec, rfi=None, notes):
@@ -290,8 +345,8 @@ def materials_for(src, d, lintels):
     mb = material_base(src, d["faces"], lintels)
     out = []
     if colour == "BLACK":
-        b = C.black_blocks(mb["material_base_m2"], t)
-        if b["status"] != C.OK:
+        b = black_rate(d["rulebook"], t)
+        if b["status"] != OK:
             out.append(_blank(src, U_BLACK, d, b["why"], question="the installed black block face / module of this "
                               "thickness (block schedule, project evidence or supplier data)", extra={"base": mb}))
             jr = joint_m3_per_m2(d["joint"], t)
@@ -307,7 +362,8 @@ def materials_for(src, d, lintels):
             return out
         rate = b["blocks_per_m2"]
         jr = joint_m3_per_m2(d["joint"], t)
-        mix = C.black_block_laying_materials(1.0)
+        mp = d["rulebook"]["p"][R_MORTAR]
+        mix = {"cement_bags": mp["cement_bags_per_m3"], "sand_m3_loose": mp["loose_sand_m3_per_m3"]}
         if mb["base_state"] == "RANGE":
             lo, hi = mb["range_m2"]
             ur, mr = [_r(lo * rate), _r(hi * rate)], [_r(lo * jr), _r(hi * jr)]
@@ -319,7 +375,7 @@ def materials_for(src, d, lintels):
               "why": mb.get("why", "")}
         out.append(_valued(src, U_BLACK, d, state=src["evidence_state"], value=uv, rng=ur, extra=ex, formula=(
             f"{_r(mb['material_base_m2'], 4)} m2 material base (= {mb['contract_net_m2']} contract net - "
-            f"{mb['lintel_deduction_m2']} REQUIRED lintel faces) x {rate} / m2 (UPC-BLACK-BLOCK-001, 40 x 20) = "
+            f"{mb['lintel_deduction_m2']} REQUIRED lintel faces) x {rate} / m2 ({R_BLOCK}, 40 x 20) = "
             f"{uv if ur is None else ur} pcs theoretical; breakage HELD")))
         cb = None if mv is None else _r(mv * mix["cement_bags"])
         sd = None if mv is None else _r(mv * mix["sand_m3_loose"])
@@ -334,10 +390,10 @@ def materials_for(src, d, lintels):
             f"{d['joint']['module_m'][1]})) = {mv if mr is None else mr} m3 installed; 1:4 -> {cb} bags, {sd} m3 sand "
             f"beside; procurement HELD")))
         return out
-    g = C.aac_bond_bags([{"id": src["line_id"], "net_area_m2": mb["material_base_m2"], "thickness_m": t}])["rows"][0]
+    g = glue_rate(d["rulebook"], t)
     alt = {"62.5x25 (6.4 / m2)": _r(mb["material_base_m2"] * 6.4),
            "60x20 (8.33 / m2)": _r(mb["material_base_m2"] / (0.60 * 0.20)), "on_m2": mb["material_base_m2"]}
-    if g["status"] != C.OK or mb["base_state"] == "HELD":
+    if g["status"] != OK or mb["base_state"] == "HELD":
         out.append(_blank(src, GLUE, d, g.get("why") or mb["why"], question="the held lintel's width / band",
                           extra={"base": mb}))
     else:
@@ -350,7 +406,7 @@ def materials_for(src, d, lintels):
                                   "bags": "rounded once per purchasing group by the census, never per line"},
                            formula=f"{_r(mb['material_base_m2'], 4)} m2 material base (= {mb['contract_net_m2']} - "
                                    f"{mb['lintel_deduction_m2']} REQUIRED lintel faces) x {k} kg/m2 "
-                                   f"(UPC-AAC-GLUE-001, t {t}) = {v if rng is None else rng} kg"))
+                                   f"({R_GLUE}, t {t}) = {v if rng is None else rng} kg"))
     out.append(_blank(src, U_WHITE, d, "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 "
                       "and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2",
                       question="the AAC block face the project uses", beside=alt, extra={"base": mb}))

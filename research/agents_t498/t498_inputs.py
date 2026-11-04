@@ -32,6 +32,7 @@ for _p in (ROOT, ROOT / "research" / "agents_t279", ROOT / "research" / "agents_
 import t453_material_ledger as T453  # noqa: E402
 import t279_inputs as L26            # noqa: E402
 import t488_inputs as I488           # noqa: E402
+from engine.source import company_rulebook_v1 as CR  # noqa: E402  (research reads the rulebook; the engine does not)
 
 SCHEMA = "URBAN_V3057_INPUTS_V1"
 INDEX = ROOT / "research/agents_t508/out/LINE_INDEX_V3_0_55.json"
@@ -51,6 +52,15 @@ SOURCES = [
     {"task": "T-488", "file": "research/agents_t488/t488_inputs.py", "merge_commit": "e8143e40",
      "checker_run": "Verifier 2026-11-04 Gate B PASS: own chain V3_0_54 c85c4630 -> V3_0_55 a498fc61"},
 ]
+
+
+def rulebook():
+    """the owner rulebook records V3.0.57 reads, copied from COMPANY_RULEBOOK_V1 with its digest (no value typed)."""
+    return {"method": CR.METHOD, "version": CR.VERSION, "digest": CR.digest(),
+            "records": {rid: {"status": CR.record(rid).get("status"),
+                              "params": {k: (v.get("value") if isinstance(v, dict) else v)
+                                         for k, v in CR.record(rid)["params"].items()}}
+                        for rid in ("UPC-BLACK-BLOCK-001", "UPC-AAC-GLUE-001", "UPC-BLACK-MORTAR-001")}}
 
 
 def _sha(p):
@@ -134,6 +144,7 @@ def build(project_id=None):
             faces[m["line_id"]] = {"required": req, "held": held}
     srcs = [dict(s, sha256=_sha(ROOT / s["file"])) for s in SOURCES]
     return {"schema": SCHEMA, "project": project_id, "sources": srcs, "joint": JOINT, "faces": faces,
+            "rulebook": rulebook(),
             "faces_on_held_hosts": [{"opening_id": x["opening_id"], "host": x["host"], "decision": x["decision"]}
                                     for x in led["lintel_reconciliation"]["faces_on_held_hosts"]],
             "expect": _expect(led["block_materials"]),
