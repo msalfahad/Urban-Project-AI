@@ -1,0 +1,2419 @@
+{
+ "chain": {
+  "V3_0_47": "e86a53a8",
+  "V3_0_48": "33a81c53",
+  "V3_0_50": "d40c4ec5",
+  "V3_0_51": "c0b6d664",
+  "V3_0_53": "36863f6c",
+  "V3_0_54": "c85c4630",
+  "V3_0_55": "a498fc61",
+  "V3_0_56": "4e25c54f",
+  "V3_0_57": "53c15db2"
+ },
+ "drawings": {
+  "plan": "training-villa Drive folder / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55",
+  "structural": "training-villa Drive folder / ST7757 dxf.dxf sha256 9f9d1179"
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.56",
+ "identity": {
+  "added": 74,
+  "base_lines": 4989,
+  "diff": {
+   "vs_base": {
+    "ADDED": 74,
+    "SAME": 4989
+   }
+  },
+  "materials": {
+   "masonry_lines": 28,
+   "material_lines": 74,
+   "producers": 74
+  },
+  "outside_rows": 4989,
+  "outside_rows_identical_to_base": 4989,
+  "outside_rows_sha256": "f115ff8c28fce0e9939bf918b630e8f5dba6871554f09cc3af16cc82b5753eef",
+  "replaced": 0,
+  "v3_0_57_lines": 5063
+ },
+ "method": "ARCH_TAKEOFF_V3.0.57",
+ "rows": [
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-dc7b4e20a2f54668b179",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-0d9b9e89bb6455da475d",
+   "unit": "pcs",
+   "why": "the masonry line L-0d9b9e89bb6455da475d (GF-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-39a62186ff15c48d51d5",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-0d9b9e89bb6455da475d",
+   "unit": "m3",
+   "why": "the masonry line L-0d9b9e89bb6455da475d (GF-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-3594af8e0405355d51c4",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-0d9b9e89bb6455da475d",
+   "unit": "kg",
+   "why": "the masonry line L-0d9b9e89bb6455da475d (GF-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-c9b56cb8453e5f67a334",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-0d9b9e89bb6455da475d",
+   "unit": "pcs",
+   "why": "the masonry line L-0d9b9e89bb6455da475d (GF-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 298.75
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 23.9,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "SOURCE_DERIVED",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-5a1884e686d7e019f8f4",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 23.9,
+   "range_m2": null,
+   "source_line_id": "L-10dd62f66ad05488e63b",
+   "unit": "pcs",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.352525
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "cement_bags_50kg": 2.8202,
+    "note": "beside: the cross-trade cement / sand census sums PRODUCER rows once (T-511), not this line",
+    "per_m3": {
+     "cement_bags": 8.0,
+     "sand_m3_loose": 1.1
+    },
+    "sand_m3_loose": 0.387777
+   },
+   "contract_net_m2": 23.9,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "PROVISIONAL",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-e74c15038f1e32dbefe0",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 23.9,
+   "range_m2": null,
+   "source_line_id": "L-10dd62f66ad05488e63b",
+   "unit": "m3",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 777.05
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 62.164,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "SOURCE_DERIVED",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-3cc4faec43ebf6301425",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 62.164,
+   "range_m2": null,
+   "source_line_id": "L-1c53fadb2f92d1f36d4e",
+   "unit": "pcs",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 0.916919
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "cement_bags_50kg": 7.335352,
+    "note": "beside: the cross-trade cement / sand census sums PRODUCER rows once (T-511), not this line",
+    "per_m3": {
+     "cement_bags": 8.0,
+     "sand_m3_loose": 1.1
+    },
+    "sand_m3_loose": 1.008611
+   },
+   "contract_net_m2": 62.164,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "PROVISIONAL",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-1bacf0e3cec97219a455",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 62.164,
+   "range_m2": null,
+   "source_line_id": "L-1c53fadb2f92d1f36d4e",
+   "unit": "m3",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-318e6311ab5e01c0fa3e",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-246f3c09de4c6b90efe5",
+   "unit": "pcs",
+   "why": "the masonry line L-246f3c09de4c6b90efe5 (2F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-cdb8d54311c5c841528f",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-246f3c09de4c6b90efe5",
+   "unit": "m3",
+   "why": "the masonry line L-246f3c09de4c6b90efe5 (2F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-d6373b9f427e4b599a5d",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-246f3c09de4c6b90efe5",
+   "unit": "kg",
+   "why": "the masonry line L-246f3c09de4c6b90efe5 (2F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-6d9df440e35bc7c5551c",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-246f3c09de4c6b90efe5",
+   "unit": "pcs",
+   "why": "the masonry line L-246f3c09de4c6b90efe5 (2F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": 451.2195,
+    "low": 444.4695,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": null,
+   "contract_net_m2": 101.976,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "RANGE",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-4b9a29d424ea40e0af8a",
+   "lintel_deduction_m2": 1.705,
+   "lintels": [
+    {
+     "face_m2": 0.975,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-fd9eabe1828ed735c43d",
+     "opening_id": "W14"
+    },
+    {
+     "face_m2": 0.47,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-55cfc2395aca2e0c69e3",
+     "opening_id": "W15"
+    },
+    {
+     "face_m2": 0.26,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-f8736409a6afa1424ea9",
+     "opening_id": "W18"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-53ef44d8c490d1341b93",
+     "opening_id": "W16"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6057028f3f666538a007",
+     "opening_id": "W19"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6692d02cd6cd25120300",
+     "opening_id": "W20"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-40e8c2597de12644e8e2",
+     "opening_id": "W24"
+    }
+   ],
+   "material_base_m2": 100.271,
+   "range_m2": [
+    98.771,
+    100.271
+   ],
+   "source_line_id": "L-2fdc0f971a94348ec855",
+   "unit": "kg",
+   "why": "4 HELD / FLAGGED lintel(s) (W16, W19, W20, W24) may occupy 0 .. 1.5 m2 of this masonry: a named range, never deducted silently, never 0"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": {
+    "60x20 (8.33 / m2)": 835.591667,
+    "62.5x25 (6.4 / m2)": 641.7344,
+    "on_m2": 100.271
+   },
+   "contract_net_m2": 101.976,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-54ba4f569a7c37de7c4c",
+   "lintel_deduction_m2": 1.705,
+   "lintels": [
+    {
+     "face_m2": 0.975,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-fd9eabe1828ed735c43d",
+     "opening_id": "W14"
+    },
+    {
+     "face_m2": 0.47,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-55cfc2395aca2e0c69e3",
+     "opening_id": "W15"
+    },
+    {
+     "face_m2": 0.26,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-f8736409a6afa1424ea9",
+     "opening_id": "W18"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-53ef44d8c490d1341b93",
+     "opening_id": "W16"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6057028f3f666538a007",
+     "opening_id": "W19"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-6692d02cd6cd25120300",
+     "opening_id": "W20"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.47,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-40e8c2597de12644e8e2",
+     "opening_id": "W24"
+    }
+   ],
+   "material_base_m2": 100.271,
+   "range_m2": [
+    98.771,
+    100.271
+   ],
+   "source_line_id": "L-2fdc0f971a94348ec855",
+   "unit": "pcs",
+   "why": "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 25.2727,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-616b748b2c6051df27c9",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 25.2727,
+   "range_m2": null,
+   "source_line_id": "L-4054259959463edd70fb",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "mortar_m3": 0.279579,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 25.2727,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-a8f0d0e9fff641c0fa8e",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 25.2727,
+   "range_m2": null,
+   "source_line_id": "L-4054259959463edd70fb",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-e812502cb3615c2b9a56",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-4165954ce4871eda30cc",
+   "unit": "pcs",
+   "why": "the masonry line L-4165954ce4871eda30cc (GF-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-a6e9b9d47f2b81204b1e",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-4165954ce4871eda30cc",
+   "unit": "m3",
+   "why": "the masonry line L-4165954ce4871eda30cc (GF-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-0e1c62793fcfd587bd78",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-4165954ce4871eda30cc",
+   "unit": "kg",
+   "why": "the masonry line L-4165954ce4871eda30cc (GF-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-1a2a8192895b1cb3a201",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-4165954ce4871eda30cc",
+   "unit": "pcs",
+   "why": "the masonry line L-4165954ce4871eda30cc (GF-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "SOURCE_DERIVED",
+    "value": 20.061
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 4.458,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "SOURCE_DERIVED",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-09e6af683b908bbd24dd",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 4.458,
+   "range_m2": null,
+   "source_line_id": "L-4e304f59db838d5fc7ec",
+   "unit": "kg",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "60x20 (8.33 / m2)": 37.15,
+    "62.5x25 (6.4 / m2)": 28.5312,
+    "on_m2": 4.458
+   },
+   "contract_net_m2": 4.458,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-6444a86319689e07512c",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 4.458,
+   "range_m2": null,
+   "source_line_id": "L-4e304f59db838d5fc7ec",
+   "unit": "pcs",
+   "why": "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2"
+  },
+  {
+   "after": {
+    "high": 199.33875,
+    "low": 194.02875,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": null,
+   "contract_net_m2": 44.2975,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "RANGE",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-6989349aef1cd4fa0940",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-072bc37c5486905a9d21",
+     "opening_id": "D-GF-09"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-441ae5fe85351347aff0",
+     "opening_id": "W05"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f269fabb74f505755492",
+     "opening_id": "W06"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-ed7aadd01d9daa9559a9",
+     "opening_id": "W07"
+    }
+   ],
+   "material_base_m2": 44.2975,
+   "range_m2": [
+    43.1175,
+    44.2975
+   ],
+   "source_line_id": "L-541cf7210e52db0498bb",
+   "unit": "kg",
+   "why": "4 HELD / FLAGGED lintel(s) (D-GF-09, W05, W06, W07) may occupy 0 .. 1.18 m2 of this masonry: a named range, never deducted silently, never 0"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": {
+    "60x20 (8.33 / m2)": 369.145833,
+    "62.5x25 (6.4 / m2)": 283.504,
+    "on_m2": 44.2975
+   },
+   "contract_net_m2": 44.2975,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-356dacfc4b7952007c7d",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-072bc37c5486905a9d21",
+     "opening_id": "D-GF-09"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-441ae5fe85351347aff0",
+     "opening_id": "W05"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f269fabb74f505755492",
+     "opening_id": "W06"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-ed7aadd01d9daa9559a9",
+     "opening_id": "W07"
+    }
+   ],
+   "material_base_m2": 44.2975,
+   "range_m2": [
+    43.1175,
+    44.2975
+   ],
+   "source_line_id": "L-541cf7210e52db0498bb",
+   "unit": "pcs",
+   "why": "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-4b1429e0aedd15f625fd",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-5ffa7157a2fe483dd008",
+   "unit": "pcs",
+   "why": "the masonry line L-5ffa7157a2fe483dd008 (1F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-298e323d027a4723652d",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-5ffa7157a2fe483dd008",
+   "unit": "m3",
+   "why": "the masonry line L-5ffa7157a2fe483dd008 (1F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-5adcc762eca024e4cd94",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-5ffa7157a2fe483dd008",
+   "unit": "kg",
+   "why": "the masonry line L-5ffa7157a2fe483dd008 (1F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-90c7f0aecafe7b4a51a1",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-5ffa7157a2fe483dd008",
+   "unit": "pcs",
+   "why": "the masonry line L-5ffa7157a2fe483dd008 (1F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 52.318,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-06e9c6082a0625ad3821",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 52.318,
+   "range_m2": null,
+   "source_line_id": "L-73acd5a9d7e7cf6515c1",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "mortar_m3": 0.578768,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 52.318,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-2051ab0a71c27be038ae",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 52.318,
+   "range_m2": null,
+   "source_line_id": "L-73acd5a9d7e7cf6515c1",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-bd21b0ea1ce4e1c8dabd",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-7503af7cc1eea4e6735d",
+   "unit": "pcs",
+   "why": "the masonry line L-7503af7cc1eea4e6735d (HOUSE_BELOW_NG:MAIN_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-cf220ce7edefedd935b4",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-7503af7cc1eea4e6735d",
+   "unit": "m3",
+   "why": "the masonry line L-7503af7cc1eea4e6735d (HOUSE_BELOW_NG:MAIN_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-a951fbf0e4fdacf3308d",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-7503af7cc1eea4e6735d",
+   "unit": "kg",
+   "why": "the masonry line L-7503af7cc1eea4e6735d (HOUSE_BELOW_NG:MAIN_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:MAIN_S",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-09c52c7b398d3218cc0e",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-7503af7cc1eea4e6735d",
+   "unit": "pcs",
+   "why": "the masonry line L-7503af7cc1eea4e6735d (HOUSE_BELOW_NG:MAIN_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-8075d1bd45ac1b2c5e77",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-76a4d8e50423fb02b914",
+   "unit": "pcs",
+   "why": "the masonry line L-76a4d8e50423fb02b914 (2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-539af3a600dcf190cd01",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-76a4d8e50423fb02b914",
+   "unit": "m3",
+   "why": "the masonry line L-76a4d8e50423fb02b914 (2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 9.895,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-26c299b8e120e2ce6768",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 9.895,
+   "range_m2": null,
+   "source_line_id": "L-87e0023741a8e2d98b21",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "mortar_m3": 0.109463,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 9.895,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-794c7232f398260c7afb",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 9.895,
+   "range_m2": null,
+   "source_line_id": "L-87e0023741a8e2d98b21",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-bd48d897f8f11b6377ef",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-9056ebed77701b50abfc",
+   "unit": "kg",
+   "why": "the masonry line L-9056ebed77701b50abfc (2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-25ee426cc7cc99a0fdff",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-9056ebed77701b50abfc",
+   "unit": "pcs",
+   "why": "the masonry line L-9056ebed77701b50abfc (2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 23.535
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 5.59,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "evidence_status": "PROVISIONAL",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-d14c6c9b738045c797ec",
+   "lintel_deduction_m2": 0.36,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7a73a338210ee7268b65",
+     "opening_id": "D-GF-06"
+    }
+   ],
+   "material_base_m2": 5.23,
+   "range_m2": null,
+   "source_line_id": "L-a3f88ecda2402f67c500",
+   "unit": "kg",
+   "why": ""
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "60x20 (8.33 / m2)": 43.583333,
+    "62.5x25 (6.4 / m2)": 33.472,
+    "on_m2": 5.23
+   },
+   "contract_net_m2": 5.59,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.20#BLOCKWORK:ASSUMED___OWNER_APPROVED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-859f0937ec4a656a21f7",
+   "lintel_deduction_m2": 0.36,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7a73a338210ee7268b65",
+     "opening_id": "D-GF-06"
+    }
+   ],
+   "material_base_m2": 5.23,
+   "range_m2": null,
+   "source_line_id": "L-a3f88ecda2402f67c500",
+   "unit": "pcs",
+   "why": "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": null,
+   "contract_net_m2": 58.2529,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "lintel_deduction_m2": 2.02,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-6aa750fb944ad58ce960",
+     "opening_id": "D-1F-02"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-8b978b48668cde0f1b0c",
+     "opening_id": "D-1F-03"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-183f52083e693bdf8671",
+     "opening_id": "D-1F-04"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-3111418b702ac80f0ade",
+     "opening_id": "D-1F-07"
+    },
+    {
+     "face_m2": 0.34,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+     "opening_id": "D-1F-08"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-befb0beb1707ef192326",
+     "opening_id": "D-1F-10"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-961608860fcb38c106af",
+     "opening_id": "D-1F-09"
+    }
+   ],
+   "material_base_m2": 56.2329,
+   "range_m2": [
+    55.8929,
+    56.2329
+   ],
+   "source_line_id": "L-a56a8add7812d1b52cb7",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": {
+    "mortar_m3": 0.644423,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 58.2529,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-866a6602ffa70d03f210",
+   "lintel_deduction_m2": 2.02,
+   "lintels": [
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-6aa750fb944ad58ce960",
+     "opening_id": "D-1F-02"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-8b978b48668cde0f1b0c",
+     "opening_id": "D-1F-03"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-183f52083e693bdf8671",
+     "opening_id": "D-1F-04"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-3111418b702ac80f0ade",
+     "opening_id": "D-1F-07"
+    },
+    {
+     "face_m2": 0.34,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-10f18635f68cfd8cdd1d",
+     "opening_id": "D-1F-08"
+    },
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-befb0beb1707ef192326",
+     "opening_id": "D-1F-10"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.34,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-961608860fcb38c106af",
+     "opening_id": "D-1F-09"
+    }
+   ],
+   "material_base_m2": 56.2329,
+   "range_m2": [
+    55.8929,
+    56.2329
+   ],
+   "source_line_id": "L-a56a8add7812d1b52cb7",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-a9876502e10fb732bc6c",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-a6eedf5e4adec6d07618",
+   "unit": "pcs",
+   "why": "the masonry line L-a6eedf5e4adec6d07618 (2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-3cdc29f2fadd13ef35d4",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-a6eedf5e4adec6d07618",
+   "unit": "m3",
+   "why": "the masonry line L-a6eedf5e4adec6d07618 (2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 24.2374,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-1aa13ac06ca32ae43f02",
+   "lintel_deduction_m2": 0.68,
+   "lintels": [
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7149ea268473ea337cd2",
+     "opening_id": "D-GF-10"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-31232f81202941d104c6",
+     "opening_id": "D-GF-13"
+    }
+   ],
+   "material_base_m2": 23.5574,
+   "range_m2": null,
+   "source_line_id": "L-abf15bdf70ccf1e7b474",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "mortar_m3": 0.268126,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 24.2374,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-8f163174139bcf80c7c7",
+   "lintel_deduction_m2": 0.68,
+   "lintels": [
+    {
+     "face_m2": 0.32,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-7149ea268473ea337cd2",
+     "opening_id": "D-GF-10"
+    },
+    {
+     "face_m2": 0.36,
+     "face_max_m2": null,
+     "kind": "REQUIRED",
+     "lintel_line_id": "L-31232f81202941d104c6",
+     "opening_id": "D-GF-13"
+    }
+   ],
+   "material_base_m2": 23.5574,
+   "range_m2": null,
+   "source_line_id": "L-abf15bdf70ccf1e7b474",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": null,
+   "contract_net_m2": 8.595,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-fa0fae2380878a4f8428",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 8.595,
+   "range_m2": null,
+   "source_line_id": "L-adb393d6db51056d343b",
+   "unit": "pcs",
+   "why": "the installed module of the 0.15 m black block is not stated (block schedule, project evidence or supplier data): HELD, the 12.5 / m2 rate is not borrowed"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "EXACT",
+   "beside": {
+    "mortar_m3": 0.095082,
+    "per_m2": 0.0110625,
+    "source": "T-367 40 x 20 module, contract net"
+   },
+   "contract_net_m2": 8.595,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-33fcd56ef1548206bb1c",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [],
+   "material_base_m2": 8.595,
+   "range_m2": null,
+   "source_line_id": "L-adb393d6db51056d343b",
+   "unit": "m3",
+   "why": "the joint geometry of this thickness is not established (module not stated): the 40 x 20 joint figure is beside only"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-c7e5807d75a4b93bf229",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-afe984a62285e133ec2f",
+   "unit": "pcs",
+   "why": "the masonry line L-afe984a62285e133ec2f (2F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-4631ba5deb8ca9a53491",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-afe984a62285e133ec2f",
+   "unit": "m3",
+   "why": "the masonry line L-afe984a62285e133ec2f (2F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-1023c410bd8c6ab7fade",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-afe984a62285e133ec2f",
+   "unit": "kg",
+   "why": "the masonry line L-afe984a62285e133ec2f (2F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-5245ce2427156823ff3b",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-afe984a62285e133ec2f",
+   "unit": "pcs",
+   "why": "the masonry line L-afe984a62285e133ec2f (2F-WALLS:walls t=0.20) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": 210.762,
+    "low": 203.562,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": null,
+   "contract_net_m2": 46.836,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "RANGE",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-aa5532bb971eceac1b76",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.4,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-47882fa3a0d9cdcc122e",
+     "opening_id": "W13"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-dd5b41a7af885e96f797",
+     "opening_id": "W21"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f68444edf483bc1d87d4",
+     "opening_id": "W22"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf76c17309c92605e174",
+     "opening_id": "W23"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.36,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf88bf6f5efaa0ae5bdc",
+     "opening_id": "W25"
+    }
+   ],
+   "material_base_m2": 46.836,
+   "range_m2": [
+    45.236,
+    46.836
+   ],
+   "source_line_id": "L-b7b4d784fbe7fdbebe84",
+   "unit": "kg",
+   "why": "5 HELD / FLAGGED lintel(s) (W13, W21, W22, W23, W25) may occupy 0 .. 1.6 m2 of this masonry: a named range, never deducted silently, never 0"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": "RANGE",
+   "beside": {
+    "60x20 (8.33 / m2)": 390.3,
+    "62.5x25 (6.4 / m2)": 299.7504,
+    "on_m2": 46.836
+   },
+   "contract_net_m2": 46.836,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-f78bc052b5ce391b2cac",
+   "lintel_deduction_m2": 0.0,
+   "lintels": [
+    {
+     "face_m2": null,
+     "face_max_m2": 0.4,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-47882fa3a0d9cdcc122e",
+     "opening_id": "W13"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-dd5b41a7af885e96f797",
+     "opening_id": "W21"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-f68444edf483bc1d87d4",
+     "opening_id": "W22"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.28,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf76c17309c92605e174",
+     "opening_id": "W23"
+    },
+    {
+     "face_m2": null,
+     "face_max_m2": 0.36,
+     "kind": "HELD_RANGE",
+     "lintel_line_id": "L-bf88bf6f5efaa0ae5bdc",
+     "opening_id": "W25"
+    }
+   ],
+   "material_base_m2": 46.836,
+   "range_m2": [
+    45.236,
+    46.836
+   ],
+   "source_line_id": "L-b7b4d784fbe7fdbebe84",
+   "unit": "pcs",
+   "why": "white AAC block face not selected by the project (supplier sheet: 62.5 x 25 and 60 x 20); the company rules give no AAC count rule: HELD, never the black 12.5 / m2"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-bbb82de298fecbafa11d",
+   "unit": "kg",
+   "why": "the masonry line L-bbb82de298fecbafa11d (2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-45b7623964da3bbafd91",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-bbb82de298fecbafa11d",
+   "unit": "pcs",
+   "why": "the masonry line L-bbb82de298fecbafa11d (2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-e5a117db55cf7c5caaab",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-c22e309433e7b671cf2d",
+   "unit": "pcs",
+   "why": "the masonry line L-c22e309433e7b671cf2d (1F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-fdbe5743c95c05ae9c19",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-c22e309433e7b671cf2d",
+   "unit": "m3",
+   "why": "the masonry line L-c22e309433e7b671cf2d (1F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "1F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-8e250abdcadfdbf33951",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-c22e309433e7b671cf2d",
+   "unit": "kg",
+   "why": "the masonry line L-c22e309433e7b671cf2d (1F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "1F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-d4c62b9df1e162be5e8b",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-c22e309433e7b671cf2d",
+   "unit": "pcs",
+   "why": "the masonry line L-c22e309433e7b671cf2d (1F-WALLS:walls t=0.15) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-c76dd0d11a5776939008",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-e1e06ec149b44d4f6f8a",
+   "unit": "pcs",
+   "why": "the masonry line L-e1e06ec149b44d4f6f8a (2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-b765c24ac4b275c661bc",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-e1e06ec149b44d4f6f8a",
+   "unit": "m3",
+   "why": "the masonry line L-e1e06ec149b44d4f6f8a (2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "2F",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-320814d3876198a0e9a1",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-e90c9dd5ca08ffb64728",
+   "unit": "kg",
+   "why": "the masonry line L-e90c9dd5ca08ffb64728 (2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "2F",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-128f47fcdb032a1f2ddb",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-e90c9dd5ca08ffb64728",
+   "unit": "pcs",
+   "why": "the masonry line L-e90c9dd5ca08ffb64728 (2F-WALLS:walls t=0.20#BLOCKWORK:VERIFIED_WHITE) is BLOCKED_RFI: its walls / pieces are held by name in the candidate: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-8971f07e8552cf3831c0",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ee857398614d817e6917",
+   "unit": "pcs",
+   "why": "the masonry line L-ee857398614d817e6917 (HOUSE_BELOW_NG:ANNEX_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-17cea41ab1b8f2bdb19e",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ee857398614d817e6917",
+   "unit": "m3",
+   "why": "the masonry line L-ee857398614d817e6917 (HOUSE_BELOW_NG:ANNEX_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-6b0bb35ba62fe484aa7e",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ee857398614d817e6917",
+   "unit": "kg",
+   "why": "the masonry line L-ee857398614d817e6917 (HOUSE_BELOW_NG:ANNEX_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:HOUSE_BELOW_NG:ANNEX_S",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "FOUNDATION",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-2ae0aac40cd54e372c68",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ee857398614d817e6917",
+   "unit": "pcs",
+   "why": "the masonry line L-ee857398614d817e6917 (HOUSE_BELOW_NG:ANNEX_S) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.BLACK",
+   "line_id": "L-43f32c104c36f9bd85be",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ff06449b7f61f19c418d",
+   "unit": "pcs",
+   "why": "the masonry line L-ff06449b7f61f19c418d (GF-WALLS:walls t=0.40) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.MORTAR.BLACK",
+   "line_id": "L-07e80def32e147b160ac",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ff06449b7f61f19c418d",
+   "unit": "m3",
+   "why": "the masonry line L-ff06449b7f61f19c418d (GF-WALLS:walls t=0.40) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "evidence_status": "HELD",
+   "family": "B9-04",
+   "floor": "GF",
+   "item_code": "MAS.GLUE.AAC",
+   "line_id": "L-24d4696063cef72b0ddb",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ff06449b7f61f19c418d",
+   "unit": "kg",
+   "why": "the masonry line L-ff06449b7f61f19c418d (GF-WALLS:walls t=0.40) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  },
+  {
+   "after": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "base_state": null,
+   "beside": null,
+   "contract_net_m2": null,
+   "element_id": "MATERIAL:GF-WALLS:walls t=0.40",
+   "evidence_status": "HELD",
+   "family": "B9-01",
+   "floor": "GF",
+   "item_code": "MAS.UNITS.WHITE",
+   "line_id": "L-ee1c4e34adec6ee5813d",
+   "lintel_deduction_m2": null,
+   "lintels": [],
+   "material_base_m2": null,
+   "range_m2": null,
+   "source_line_id": "L-ff06449b7f61f19c418d",
+   "unit": "pcs",
+   "why": "the masonry line L-ff06449b7f61f19c418d (GF-WALLS:walls t=0.40) is BLOCKED_RFI: its walls / pieces are held by name in the candidate; its block colour is not split: its materials follow it"
+  }
+ ],
+ "summary": {
+  "blank": {
+   "MAS.GLUE.AAC": [
+    "L-0d9b9e89bb6455da475d",
+    "L-246f3c09de4c6b90efe5",
+    "L-4165954ce4871eda30cc",
+    "L-5ffa7157a2fe483dd008",
+    "L-7503af7cc1eea4e6735d",
+    "L-9056ebed77701b50abfc",
+    "L-afe984a62285e133ec2f",
+    "L-bbb82de298fecbafa11d",
+    "L-c22e309433e7b671cf2d",
+    "L-e90c9dd5ca08ffb64728",
+    "L-ee857398614d817e6917",
+    "L-ff06449b7f61f19c418d"
+   ],
+   "MAS.MORTAR.BLACK": [
+    "L-0d9b9e89bb6455da475d",
+    "L-246f3c09de4c6b90efe5",
+    "L-4054259959463edd70fb",
+    "L-4165954ce4871eda30cc",
+    "L-5ffa7157a2fe483dd008",
+    "L-73acd5a9d7e7cf6515c1",
+    "L-7503af7cc1eea4e6735d",
+    "L-76a4d8e50423fb02b914",
+    "L-87e0023741a8e2d98b21",
+    "L-a56a8add7812d1b52cb7",
+    "L-a6eedf5e4adec6d07618",
+    "L-abf15bdf70ccf1e7b474",
+    "L-adb393d6db51056d343b",
+    "L-afe984a62285e133ec2f",
+    "L-c22e309433e7b671cf2d",
+    "L-e1e06ec149b44d4f6f8a",
+    "L-ee857398614d817e6917",
+    "L-ff06449b7f61f19c418d"
+   ],
+   "MAS.UNITS.BLACK": [
+    "L-0d9b9e89bb6455da475d",
+    "L-246f3c09de4c6b90efe5",
+    "L-4054259959463edd70fb",
+    "L-4165954ce4871eda30cc",
+    "L-5ffa7157a2fe483dd008",
+    "L-73acd5a9d7e7cf6515c1",
+    "L-7503af7cc1eea4e6735d",
+    "L-76a4d8e50423fb02b914",
+    "L-87e0023741a8e2d98b21",
+    "L-a56a8add7812d1b52cb7",
+    "L-a6eedf5e4adec6d07618",
+    "L-abf15bdf70ccf1e7b474",
+    "L-adb393d6db51056d343b",
+    "L-afe984a62285e133ec2f",
+    "L-c22e309433e7b671cf2d",
+    "L-e1e06ec149b44d4f6f8a",
+    "L-ee857398614d817e6917",
+    "L-ff06449b7f61f19c418d"
+   ],
+   "MAS.UNITS.WHITE": [
+    "L-0d9b9e89bb6455da475d",
+    "L-246f3c09de4c6b90efe5",
+    "L-2fdc0f971a94348ec855",
+    "L-4165954ce4871eda30cc",
+    "L-4e304f59db838d5fc7ec",
+    "L-541cf7210e52db0498bb",
+    "L-5ffa7157a2fe483dd008",
+    "L-7503af7cc1eea4e6735d",
+    "L-9056ebed77701b50abfc",
+    "L-a3f88ecda2402f67c500",
+    "L-afe984a62285e133ec2f",
+    "L-b7b4d784fbe7fdbebe84",
+    "L-bbb82de298fecbafa11d",
+    "L-c22e309433e7b671cf2d",
+    "L-e90c9dd5ca08ffb64728",
+    "L-ee857398614d817e6917",
+    "L-ff06449b7f61f19c418d"
+   ]
+  },
+  "by_code": {
+   "MAS.GLUE.AAC": 17,
+   "MAS.MORTAR.BLACK": 20,
+   "MAS.UNITS.BLACK": 20,
+   "MAS.UNITS.WHITE": 17
+  },
+  "ranges": {
+   "MAS.GLUE.AAC": [
+    842.06025,
+    861.32025
+   ]
+  },
+  "sources": 28,
+  "valued": {
+   "MAS.GLUE.AAC": 43.596,
+   "MAS.MORTAR.BLACK": 1.269444,
+   "MAS.UNITS.BLACK": 1075.8
+  }
+ },
+ "task": "T-498",
+ "totals_moved_by_code": {
+  "MAS.GLUE.AAC|kg": {
+   "base": null,
+   "v3_0_57": {
+    "blocked_lines": 12,
+    "bounded_lines": 3,
+    "held_high": 861.32025,
+    "held_low": 842.06025,
+    "lines": 17,
+    "released": 43.596
+   }
+  },
+  "MAS.MORTAR.BLACK|m3": {
+   "base": null,
+   "v3_0_57": {
+    "blocked_lines": 18,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 1.269444
+   }
+  },
+  "MAS.UNITS.BLACK|pcs": {
+   "base": null,
+   "v3_0_57": {
+    "blocked_lines": 18,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 20,
+    "released": 1075.8
+   }
+  },
+  "MAS.UNITS.WHITE|pcs": {
+   "base": null,
+   "v3_0_57": {
+    "blocked_lines": 17,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 17,
+    "released": 0.0
+   }
+  }
+ }
+}

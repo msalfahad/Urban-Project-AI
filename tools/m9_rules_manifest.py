@@ -79,6 +79,7 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.51.0.json",   # T-480: 1.50.0 + T-487 promoted (R-T485-1, census + line diff at V3.0.53) + the pending V3.0.54 package (B7-09 evidence and text); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.52.0.json",   # T-488: 1.51.0 + T-480 promoted (R-T485-1, census + line diff at V3.0.54) + the pending V3.0.55 package (B9-01 / B10-12 evidence and text); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.53.0.json",   # T-508: 1.52.0 + T-488 promoted (R-T485-1, census + line diff at V3.0.55) + the pending V3.0.56 package (B3-06 / B7-07 / B7-08 text; B7-07 / B7-08 item codes); no owner change; read by no method
+            "coverage/BOQ_FAMILY_MASTER_1.54.0.json",   # T-498: 1.53.0 + T-508 promoted (R-T485-1, census + line diff at V3.0.56) + the pending V3.0.57 package (B9-01 / B9-04 text; MAS.UNITS.BLACK / .WHITE on B9-01, MAS.MORTAR.BLACK / MAS.GLUE.AAC on B9-04); no owner change; read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
