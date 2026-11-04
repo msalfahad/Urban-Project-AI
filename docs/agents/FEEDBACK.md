@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-04 04:14 (since 00:20)
+
+- T-496 materials binding map: WORKED (1,202 bindings, 0 mismatch). Decision: producer-role condition added to T-498.
+- T-503 disposal dry-mass balance: WORKED (s = 0 end >= 234.333 m3 in situ). Decision: NEW T-505 loss terms (F-C-T503-1).
+- T-497 ext GB trench fix (Gate B): WORKED (1.069 .. 1.176 m3 = Checker; V3.0.50). Decision: lessons row ADOPTED; T-487 TODO.
+- T-499 HELD subtotals never 0: WORKED (R-T499-1). Decision: NEW T-504 plaster table V3 (F-T499-1); lessons row ADOPTED.
+- T-310 wet-area WP wiring: PARTIAL (REJECTED 02:23 for 4 new suite failures; r2 fixed the guard, rebase not finished). Decision: TODO r3 rebase only on 416392e8, worker 2 first.
+
 ## Lead 2026-11-04 00:20 (since 20:18)
 
 - T-486 B8-07 balcony / terrace WP census: WORKED (0 m2 added, pool-court slab omission found). Decision: T-494 TODO.
