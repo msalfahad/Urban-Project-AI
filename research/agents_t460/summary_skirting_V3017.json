@@ -1,0 +1,12 @@
+{
+ "by_state": {
+  "CLOSES": 2,
+  "NO_QUANTITY": 28,
+  "UNLISTED_DEDUCTION": 9
+ },
+ "lines": 39,
+ "net_sum_lm": 185.516658,
+ "policy": "SKIRTING_LINE_CLOSURE_V1",
+ "unlisted_add_lm": 0,
+ "unlisted_ded_lm": 13.568824
+}

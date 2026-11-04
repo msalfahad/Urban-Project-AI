@@ -1,0 +1,8 @@
+segment,face,s0,s1,lm,status_before,covered_lm,residual_lm,decision,owners
+L-ba3599ec E 0 .. 4.150,ST-01 E,0.0,4.15,4.15,certain (net 41.435360),4.15,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-LD.E MS2-LD.E D1.E MS1-U.E1 MS2-U.E MS1-U.E2 MS1-U.E3a
+L-ba3599ec W AF0,ST-01 W,0.0,1.05,1.05,certain,1.05,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-T.W MS2-LD.W
+L-ba3599ec W13 (range L-079bc766),ST-01 W,1.05,2.25,1.2,held range,1.2,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-T.W MS2-LD.W13 MS1-L.W2 MS2-L.W2
+L-ba3599ec W AF1 2.250 .. 4.500,ST-01 W,2.25,4.5,2.25,certain (+ 3005 returns 0.100),2.25,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-L.W1B MS2-L.W1B MS1-L.W1C MS2-L.W1C MS1-L.W1 MS2-L.W1
+L-ba3599ec N ADE,ST-01 N,0.0,1.4,1.4,certain,1.4,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-T.N MS2-LD.NW MS2-LD.NE MS1-LD.N
+L-ba3599ec W25 (range L-079bc766),ST-01 N,1.4,2.4,1.0,held range,1.0,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-LD.N MS2-LD.W25
+L-ba3599ec N ADD,ST-01 N,2.4,2.5,0.1,certain,0.1,0.0,NOT_APPLICABLE (no floor at its level; moved to the pieces),MS1-LD.N MS2-LD.NE2

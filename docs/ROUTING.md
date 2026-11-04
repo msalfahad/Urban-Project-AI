@@ -40,7 +40,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 - `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 14 directly, 260 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 102 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 103 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
@@ -67,7 +67,7 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 
 **Open first:**
 
-- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 99 transitively, SHARED)
+- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 100 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`
 
@@ -94,7 +94,7 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 - `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 40 directly, 270 transitively, SHARED)
 - `engine/source/arch_plan.py` (478 lines, HIGH; imported by 19 directly, 277 transitively, SHARED)
-- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 65 transitively)
+- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 66 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 234 transitively)
 - `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 230 transitively, SHARED)
 - `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 219 transitively)
@@ -109,7 +109,7 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_kb/test_kb_integration.py tests/m9_kb/test_kb_space_model.py tests/m9_p2b2/test_p2b2_waterproofing.py tests/m9_p2b7/test_p2b7_wet.py tests/m9_p2b8/test_p2b8_recognition.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/m9_s5 tests/m9_s4 tests/m9_kb tests/m9_s3`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/m9_s5 tests/m9_s4 tests/m9_kb tests/m9_s3 tests/t310_wet_area_wp tests/m9_p2b0 tests/m9_p2a tests/t478_blinding_integration tests/t350r4_earthworks_values tests/t419_tie_gb_masonry` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/m9_s5 tests/m9_s4 tests/m9_kb tests/m9_s3 tests/m9_p2b0 tests/m9_p2a tests/t478_blinding_integration tests/t350r4_earthworks_values tests/t419_tie_gb_masonry tests/t483_skirting_remainder` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (2 unresolved of 4):
@@ -144,7 +144,7 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b8/test_p2b8_recognition.py tests/m9_p2b9/test_p2b9_walls.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/t310_wet_area_wp tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/t478_blinding_integration` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/t478_blinding_integration tests/m9_p2b2` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (4 unresolved of 5):
@@ -164,9 +164,9 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Open first:**
 
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 68 transitively)
-- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 65 transitively)
-- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 70 transitively, SHARED)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 69 transitively)
+- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 66 transitively)
+- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 71 transitively, SHARED)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 234 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/member_detection.py`
@@ -179,7 +179,7 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_door_standards.py tests/m9_kb/test_kb_finish_scope.py tests/m9_kb/test_kb_integration.py tests/m9_kb/test_kb_wp5.py tests/m9_p2a/test_p2a_doors.py tests/m9_p2b2/test_p2b2_door_feasibility.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2a tests/m9_p2b2 tests/m9_kb`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/m9_s6 tests/m9_p2b0 tests/m9_s5 tests/t310_wet_area_wp tests/m9_p2b3 tests/m9_s4` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/m9_s6 tests/m9_p2b0 tests/m9_s5 tests/m9_p2b3 tests/m9_s4 tests/t344_label_census_v2` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (4 unresolved of 7):
@@ -202,7 +202,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 **Open first:**
 
 - `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 7 directly, 258 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 325 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 326 transitively)
 - `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 267 transitively)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 274 transitively)
 
@@ -216,7 +216,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b9/test_p2b9_openings.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b9`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b9 tests/m9_s6 tests/t310_wet_area_wp tests/m9_p2b0 tests/t478_blinding_integration tests/m9_p2a tests/m3_recovery` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b9 tests/m9_s6 tests/m9_p2b0 tests/t478_blinding_integration tests/m9_p2a tests/m3_recovery tests/t350r4_earthworks_values` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (5 unresolved of 10):
@@ -256,7 +256,7 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_p2b9/test_p2b9_heights.py tests/m9_p2b9/test_p2b9_openings.py tests/m9_s5/test_s5_ceilings_wp.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_s6 tests/t310_wet_area_wp tests/m9_p2b0 tests/m9_p2a tests/t478_blinding_integration tests/m9_kb` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/t478_blinding_integration tests/m9_kb tests/m9_p2b2` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (6 unresolved of 13):
@@ -300,7 +300,7 @@ Risk **HIGH** (recommended validation L3). Ask about: waterproof, membrane, uptu
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_kb/test_kb_wp5.py tests/m9_p2b2/test_p2b2_registry.py tests/m9_p2b2/test_p2b2_waterproofing.py tests/t079_arch_v211/test_arch_v211.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b2 tests/m9_s5`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b2 tests/m9_s5 tests/m9_s6 tests/t310_wet_area_wp tests/t478_blinding_integration tests/m9_p2b0 tests/m9_p2a tests/t350r4_earthworks_values` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b2 tests/m9_s5 tests/m9_s6 tests/t478_blinding_integration tests/m9_p2b0 tests/m9_p2a tests/t350r4_earthworks_values tests/t419_tie_gb_masonry` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (4 unresolved of 4):
@@ -335,7 +335,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/stairs_s8_7 tests/stairs_s8_7a tests/stairs_s8_7b tests/stairs_s8_7c`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/stairs_s8_7 tests/stairs_s8_7a tests/stairs_s8_7b tests/stairs_s8_7c tests/t310_wet_area_wp tests/m9_p2b0 tests/t478_blinding_integration tests/m9_p2a tests/m3_recovery tests/t350r4_earthworks_values` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/stairs_s8_7 tests/stairs_s8_7a tests/stairs_s8_7b tests/stairs_s8_7c tests/m9_p2b0 tests/t478_blinding_integration tests/m9_p2a tests/m3_recovery tests/t350r4_earthworks_values tests/t419_tie_gb_masonry` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (1 unresolved of 1):
@@ -365,7 +365,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1 tests/slab_rebar_s7 tests/structural_s9 tests/structural_s9a tests/footing_rebar_s4 tests/ground_system_rebar_s5`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1 tests/slab_rebar_s7 tests/structural_s9 tests/structural_s9a tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/m9_s6 tests/t310_wet_area_wp tests/m3_recovery tests/m6_completeness tests/t478_blinding_integration tests/m4_correctness` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1 tests/slab_rebar_s7 tests/structural_s9 tests/structural_s9a tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/m9_s6 tests/m3_recovery tests/m6_completeness tests/t478_blinding_integration tests/m4_correctness tests/m7_reliability` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (13 unresolved of 13):
@@ -405,7 +405,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: rebar, reinforcement, 
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan tests/slab_rebar_s7 tests/superstructure_beam_rebar_s6 tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/slab_rebar_pre_s7`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan tests/slab_rebar_s7 tests/superstructure_beam_rebar_s6 tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/slab_rebar_pre_s7 tests/m9_s6 tests/t310_wet_area_wp tests/swimming_pool_s8_2 tests/t478_blinding_integration tests/ground_slab_s8_1 tests/m9_p2a` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan tests/slab_rebar_s7 tests/superstructure_beam_rebar_s6 tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/slab_rebar_pre_s7 tests/m9_s6 tests/swimming_pool_s8_2 tests/t478_blinding_integration tests/ground_slab_s8_1 tests/m9_p2a tests/m9_p2b0` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (8 unresolved of 9):
@@ -483,11 +483,11 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (4708 lines, HIGH; imported by 55 directly, 63 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 156 directly, 294 transitively, SHARED)
+- `tools/urban_boq_m9.py` (4723 lines, HIGH; imported by 56 directly, 64 transitively, SHARED)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 160 directly, 296 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/knowledge.py` (289 lines, HIGH; imported by 34 directly, 287 transitively, SHARED)
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 68 transitively)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 69 transitively)
 - `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 232 transitively)
 
 **Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v211.py`, `engine/source/arch_v212.py`
@@ -502,7 +502,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_door_standards.py tests/m9_kb/test_kb_integration.py tests/m9_kb/test_kb_questions.py tests/m9_kb/test_kb_registry.py tests/m9_p2b2/test_p2b2_integration.py tests/m9_p2b2/test_p2b2_project_rules.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_foundation tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b0 tests/m9_p2b8 tests/m9_p2b9`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_foundation tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b0 tests/m9_p2b8 tests/m9_p2b9 tests/m9_s6 tests/t310_wet_area_wp tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/t478_blinding_integration` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_foundation tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b0 tests/m9_p2b8 tests/m9_p2b9 tests/m9_s6 tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/t478_blinding_integration tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (6 unresolved of 7):

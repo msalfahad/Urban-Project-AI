@@ -1,0 +1,31 @@
+{
+ "dxf_sha8": "ab54dd55",
+ "task": "T-501",
+ "totals": {
+  "fin_skirting_certain_change_lm": -2.95,
+  "flight_form_held": {
+   "lines": 13,
+   "risers": 53,
+   "sloped_lm": 17.009049,
+   "zigzag_lm": 23.300481
+  },
+  "held_lines": 12,
+  "held_plan_lm": 12.665532,
+  "landing_fin_skirting_confirmed_lm": 6.1,
+  "landing_lines": {
+   "MS1-LD.E": 1.15,
+   "MS2-LD.E": 1.15,
+   "MS2-LD.NE": 0.1,
+   "MS2-LD.NE2": 0.1,
+   "MS2-LD.NW": 1.3,
+   "MS2-LD.W": 1.05,
+   "RS-LD.S1": 0.65,
+   "RS-LD.S2": 0.6
+  },
+  "retired_from_room_line": {
+   "certain_lm": 9.05,
+   "held_range_lm": 2.2,
+   "residual_lm": 0.0
+  }
+ }
+}

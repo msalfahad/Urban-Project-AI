@@ -1,0 +1,10 @@
+{
+ "max_overlap_m2": 4e-06,
+ "overlap_pairs": 0,
+ "pairs": 104,
+ "upturn_by_state": {
+  "HELD": 1,
+  "NEITHER": 3,
+  "WALLS_ONLY": 14
+ }
+}
