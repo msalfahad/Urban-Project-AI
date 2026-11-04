@@ -1,0 +1,114 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.47.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.46",
+  "ARCH_TAKEOFF_V3.0.47",
+  "ARCH_TAKEOFF_V3.0.48",
+  "ARCH_TAKEOFF_V3.0.50"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.46": {
+   "lines": 4867,
+   "lines_sha256": "35d70129d8bf59b4c0f874a11edeacca26f45a51001b03a4d6ca57e3942546a4"
+  },
+  "ARCH_TAKEOFF_V3.0.47": {
+   "lines": 4874,
+   "lines_sha256": "e86a53a8981725d6247039419325f2242316c45056c8d747aca56df5c88c2f58",
+   "previous": "ARCH_TAKEOFF_V3.0.46",
+   "item_codes": {
+    "FIN.SKIRTING": {
+     "added": 7,
+     "removed": 0,
+     "changed": 1,
+     "record": 1
+    }
+   },
+   "families": {
+    "B3-06": {
+     "FIN.SKIRTING": {
+      "added": 7,
+      "removed": 0,
+      "changed": 1,
+      "record": 1
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 8,
+   "record_only": 1
+  },
+  "ARCH_TAKEOFF_V3.0.48": {
+   "lines": 4876,
+   "lines_sha256": "33a81c5387dc5c306086867da32415892e164a60a6a42893dc040e2d64f963ce",
+   "previous": "ARCH_TAKEOFF_V3.0.47",
+   "item_codes": {
+    "STR.EARTH.BACKFILL": {
+     "added": 2,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    },
+    "STR.EARTH.EXCAVATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 4,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-02": {
+     "STR.EARTH.EXCAVATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 4,
+      "record": 0
+     }
+    },
+    "B1-03": {
+     "STR.EARTH.BACKFILL": {
+      "added": 2,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 7,
+   "record_only": 0
+  },
+  "ARCH_TAKEOFF_V3.0.50": {
+   "lines": 4876,
+   "lines_sha256": "d40c4ec55e051289786d113478fb1466e56295ec0acb89bb1d51cbab2cebb02b",
+   "previous": "ARCH_TAKEOFF_V3.0.48",
+   "item_codes": {
+    "STR.EARTH.EXCAVATION": {
+     "added": 0,
+     "removed": 0,
+     "changed": 1,
+     "record": 0
+    }
+   },
+   "families": {
+    "B1-02": {
+     "STR.EARTH.EXCAVATION": {
+      "added": 0,
+      "removed": 0,
+      "changed": 1,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 1,
+   "record_only": 0
+  }
+ }
+}
