@@ -232,7 +232,25 @@ def main(argv=None):
                                                           "outside_rows_identical_to_base", "wet_area_wp", "diff")},
                                   sort_keys=True))
     print("totals moved:", json.dumps(run["totals_moved_by_code"], indent=1, sort_keys=True))
+    # T-310 bindings, asserted on the candidate of record: each duplicate transition line carries the closure the
+    # Checker named; each missing door's candidate opening has a doorway line and no transition line
+    l48 = {ln["line_id"]: ln for ln in json.loads((d / "V3_0_48_BOQ_LINES.json").read_text(encoding="utf-8"))}
+    for lid, (door, closure) in L49.DUPLICATES.items():
+        if closure not in json.dumps(l48[lid]["location"]):
+            raise SystemExit(f"{lid}: closure {closure} of door {door} not in its location (stale binding)")
+    for door, op in L49.MISSING_DOORS.items():
+        codes = {ln["item_code"] for ln in l48.values() if op in json.dumps(ln["location"])}
+        if "FIN.WP.DOORWAY" not in codes or "FIN.WP.DOORWAY_TRANSITION" in codes:
+            raise SystemExit(f"door {door} ({op}): doorway / transition lines {sorted(codes)} (stale binding)")
+    for r in json.loads((d / "V3_0_49_INTEGRATION_LEDGER.json").read_text(encoding="utf-8"))["rows"]:
+        print("row", r["action"], r["line_id"], r["item_code"], r.get("room_id"), r.get("element_id"), "|",
+              A302q(r["before_base"]), "->", A302q(r["after_v3_0_49"]))
     return 0
+
+
+def A302q(q):
+    from engine.source import arch_v302 as A302
+    return A302._q(q) if q else ""
 
 
 if __name__ == "__main__":
