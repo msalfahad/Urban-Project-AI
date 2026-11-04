@@ -126,3 +126,12 @@ the swapped-back view), WAITING from arch_v3050. Engineering content unchanged (
   --check True, problems []); 1.46.0 dropped (never merged). RULES_MANIFEST and the T-459 binding rebuilt by their tools.
 - research/agents_t310/v3052_run.py: as before plus --v3050-inputs (research/agents_t497/t497_inputs.py), asserts
   V3_0_48 33a81c53 and the candidate of record V3_0_50 d40c4ec5 as the base.
+- Drive run r3 (own decode, own T-167 run, chained to the end): V3_0_48 33a81c53 -> V3_0_50 d40c4ec5 (4876, the
+  candidate of record, asserted) -> V3_0_52 dbb9aab0 (4881): 18 changed + 5 added, 4858 identical; the 23 ledger rows,
+  the totals moved by code and the wet_area_wp identity are identical to r2 (asserted by the summary builder), guard
+  RUN, no hold. The first r3 run refused: integrate() passed the V3.0.50 lines as `before` to check_zone_owner, which
+  then fed the V3.0.50 trench range to the V3.0.48 check; fixed (no `before`: the V3.0.48 form is rebuilt from the
+  record) with tests/t310_wet_area_wp/test_rebase_v3050.py (normal + adverse; the normal case fails on the old call).
+- Full suite on f8e9e6fc ran to the end: 2 failed = t310 summary pin (summary regenerated after this run) + t485
+  'T-443','T-350b','T-497' (identical on the working branch 416392e8: baseline, T-483 r2's gate fix); t310 folder,
+  t212, t379, t459, t497 green on the final commit.

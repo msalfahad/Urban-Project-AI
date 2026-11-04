@@ -33,7 +33,7 @@ def test_inputs_validate_and_count():
 
 
 def test_run_summary_pins():
-    assert S["base_candidate"] == {"file": "V3_0_48_BOQ_LINES.json", "sha256_8": "33a81c53", "lines": 4876}
+    assert S["base_candidate"] == {"file": "V3_0_50_BOQ_LINES.json", "sha256_8": "d40c4ec5", "lines": 4876}  # r3: V3.0.50 of record
     assert S["new_candidate"]["lines"] == 4881
     i = S["identity"]
     assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4858)
