@@ -1,0 +1,948 @@
+{
+ "chain": {
+  "V3_0_51": "c0b6d664aeff58809641e1cb09cfe32834fb7a66a55565fa04cc74fb32da37b1",
+  "V3_0_53": "36863f6ca52749dabad4e624f97bca468ed8c299b38f15b5af7cfea4626729d7",
+  "V3_0_54": "c85c4630d117bcf37e012648d2411b1832a908e3eee0bb1ec71419ef6deae4c2"
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.53",
+ "identity": {
+  "added": 3,
+  "base_lines": 4936,
+  "diff": {
+   "vs_base": {
+    "ADDED": 3,
+    "CHANGED": 15,
+    "SAME": 4921
+   }
+  },
+  "outside_rows": 4921,
+  "outside_rows_identical_to_base": 4921,
+  "rail_runs": {
+   "held_pieces": 2,
+   "retired": 14,
+   "unknowns": 1,
+   "valued_lm": 15.953174,
+   "valued_runs": 1
+  },
+  "replaced": 15,
+  "v3_0_54_lines": 4939
+ },
+ "method": "ARCH_TAKEOFF_V3.0.54",
+ "piece_log": {
+  "by_action": {
+   "ADD_HELD_PIECE": 2,
+   "ADD_UNKNOWN": 1,
+   "RETIRE_READER": 14,
+   "VALUE_RUN": 1
+  },
+  "confirmed": {
+   "RL-05": {
+    "census_lm": 16.323713,
+    "difference_lm": 0.000287,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-62577112dc4c8cdb8640",
+    "line_lm": 16.324
+   },
+   "RL-06": {
+    "census_lm": 2.4,
+    "difference_lm": 0.0,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-c9cd76a27a48bd353eea",
+    "line_lm": 2.4
+   },
+   "RL-08": {
+    "census_lm": 1.041933,
+    "difference_lm": 6.7e-05,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-7c65444302070a5f33e6",
+    "line_lm": 1.042
+   }
+  },
+  "held_pieces": [
+   "ST-01:T-MS1-N",
+   "ST-01:T-MS2-LD"
+  ],
+  "kept": [
+   {
+    "line_id": "L-665af3a256e864478b96",
+    "pieces": [
+     "ST-02:RS-C:outer (corner) UNKNOWN"
+    ],
+    "run": "RL-09"
+   },
+   {
+    "line_id": "L-ea254d77037e0fe64780",
+    "pieces": [
+     "ST-03:E1:side 1 HELD",
+     "ST-03:E1:side 2 HELD"
+    ],
+    "run": "RL-11"
+   }
+  ],
+  "no_rail_sides": 7,
+  "piece": "RAIL_RUNS",
+  "retired": 14,
+  "runs": {
+   "RL-07": 15.953174
+  },
+  "sources": [
+   {
+    "checker_run": "Verifier 2026-11-02T18:40Z Gate A PASS on 0aaeaf27 (session_01E6cPnbMXo9W57mVzHxdcHr): own scan of the architectural DXF, 1F plan dimension 3300, 12 riser positions step 300, levels +5.50 / +9.70, 4.20 / 25 = 0.168, MS2-L hypot(3.300, 1.848) = 3.782209 lm AGREE 0.000 %; 1 of 14 pieces own-measured",
+    "file": "research/agents_t476/FLIGHT_CENSUS_T476.csv",
+    "merge_commit": "88e70ffe",
+    "sha256": "77f5fc462a71e2530af5f8822df75f86829a8716c31a38579f6ad651ce2ad688",
+    "task": "T-476"
+   },
+   {
+    "checker_run": "Verifier 2026-11-02T18:40Z Gate A PASS on 0aaeaf27 (session_01E6cPnbMXo9W57mVzHxdcHr): own scan of the architectural DXF, 1F plan dimension 3300, 12 riser positions step 300, levels +5.50 / +9.70, 4.20 / 25 = 0.168, MS2-L hypot(3.300, 1.848) = 3.782209 lm AGREE 0.000 %; 1 of 14 pieces own-measured",
+    "file": "research/agents_t476/READER_BINDING_T476.csv",
+    "merge_commit": "88e70ffe",
+    "sha256": "bb69fddf48e17fe1fdd099874f60e39064f111a31bbb3a86b9c0db202ebcd223",
+    "task": "T-476 binding"
+   }
+  ],
+  "state": "RUN",
+  "unknowns": [
+   "ST-01b:GF east-lane band beyond D1"
+  ],
+  "valued_lm": 15.953174
+ },
+ "railing_lines": [
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-RC99C2A:flight 1",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-203f9074f39f54604c3f",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-RC99C2A:flight 1",
+   "floor": "GF",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640",
+    "L-665af3a256e864478b96"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-203f9074f39f54604c3f",
+   "lm": null,
+   "physical_flight": "ST02-RS-C",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-RC99C2A:flight 2",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-850e43560679238f3573",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-RC99C2A:flight 2",
+   "floor": "GF",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-850e43560679238f3573",
+   "lm": null,
+   "physical_flight": "ST02-RS-S",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-RC99C2A:flight 3",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-c43f0d2785bc13bbd2dd",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-RC99C2A:flight 3",
+   "floor": "GF",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-c43f0d2785bc13bbd2dd",
+   "lm": null,
+   "physical_flight": "ST02-RS-S",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-RC99C2A:flight 4",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-7f5c537417d60d60f7fc",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-RC99C2A:flight 4",
+   "floor": "GF",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640",
+    "L-c9cd76a27a48bd353eea"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-7f5c537417d60d60f7fc",
+   "lm": null,
+   "physical_flight": "ST02-RS-A",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-R31F8AE:flight 1",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-4b108517c2338cde23d4",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-R31F8AE:flight 1",
+   "floor": "GF",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-4b108517c2338cde23d4",
+   "lm": null,
+   "physical_flight": "ST01-MS1-L",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "GF-R31F8AE:flight 2",
+    "floor": "GF",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-d6c9ad28f3e335e6ce58",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "GF-R31F8AE:flight 2",
+   "floor": "GF",
+   "home_lines": [
+    "L-7c65444302070a5f33e6"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-d6c9ad28f3e335e6ce58",
+   "lm": null,
+   "physical_flight": "ST01b-D1",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 1",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-a341100df682c726ff92",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 1",
+   "floor": "1F",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640",
+    "L-665af3a256e864478b96"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-a341100df682c726ff92",
+   "lm": null,
+   "physical_flight": "ST02-RS-C",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 2",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-3ce252f3e7c905f40c03",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 2",
+   "floor": "1F",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-3ce252f3e7c905f40c03",
+   "lm": null,
+   "physical_flight": "ST01-MS2-L",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 3",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-c1f1513c5e9b4e546503",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 3",
+   "floor": "1F",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-c1f1513c5e9b4e546503",
+   "lm": null,
+   "physical_flight": "ST01-MS1-U",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 4",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-6874084b012c8cd8970a",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 4",
+   "floor": "1F",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-6874084b012c8cd8970a",
+   "lm": null,
+   "physical_flight": "ST02-RS-S",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 5",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-cca0e19047947cd5feb1",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 5",
+   "floor": "1F",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-cca0e19047947cd5feb1",
+   "lm": null,
+   "physical_flight": "ST01-MS1-T",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "1F-R78C367:flight 6",
+    "floor": "1F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-e5da6e150c9c3c87a9cc",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "1F-R78C367:flight 6",
+   "floor": "1F",
+   "home_lines": [
+    "L-62577112dc4c8cdb8640",
+    "L-c9cd76a27a48bd353eea"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-e5da6e150c9c3c87a9cc",
+   "lm": null,
+   "physical_flight": "ST02-RS-A",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "2F-R4D1B62:flight 1",
+    "floor": "2F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-c5805775b30be8ce5eb3",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "2F-R4D1B62:flight 1",
+   "floor": "2F",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-c5805775b30be8ce5eb3",
+   "lm": null,
+   "physical_flight": "ST01-MS2-L",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": "RETIRE_READER",
+   "before": {
+    "action": null,
+    "element_id": "2F-R4D1B62:flight 2",
+    "floor": "2F",
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-78f1ea3512eacbc9ba12",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "2F-R4D1B62:flight 2",
+   "floor": "2F",
+   "home_lines": [
+    "L-ec87473cb7160d5f4ac2"
+   ],
+   "item_code": "FIN.RAILING",
+   "line_id": "L-78f1ea3512eacbc9ba12",
+   "lm": null,
+   "physical_flight": "ST01-MS2-U",
+   "pieces": null,
+   "run": null,
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-01",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-b54ee211b5af50087b29",
+    "lm": 6.262,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-01",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-b54ee211b5af50087b29",
+   "lm": 6.262,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-02",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-1ff5e79e1c11b3a04eed",
+    "lm": 4.921,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-02",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-1ff5e79e1c11b3a04eed",
+   "lm": 4.921,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-03",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-b75c30fcd5e3b5607433",
+    "lm": 7.967,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-03",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-b75c30fcd5e3b5607433",
+   "lm": 7.967,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-04",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-98aa5d0a6600631563cb",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "RAIL:RL-04",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-98aa5d0a6600631563cb",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-05",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-62577112dc4c8cdb8640",
+    "lm": 16.324,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-05",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-62577112dc4c8cdb8640",
+   "lm": 16.324,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-06",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-c9cd76a27a48bd353eea",
+    "lm": 2.4,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-06",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-c9cd76a27a48bd353eea",
+   "lm": 2.4,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": "VALUE_RUN",
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-07",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-ec87473cb7160d5f4ac2",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "RAIL:RL-07",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-ec87473cb7160d5f4ac2",
+   "lm": 15.953174,
+   "physical_flight": null,
+   "pieces": [
+    {
+     "kind": "INCLINED",
+     "length_lm": 3.08869,
+     "piece_id": "ST-01:MS1-L",
+     "plan_m": 2.7,
+     "rise_m": 1.500003,
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "kind": "INCLINED",
+     "length_lm": 3.775066,
+     "piece_id": "ST-01:MS1-U",
+     "plan_m": 3.3,
+     "rise_m": 1.833337,
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "kind": "INCLINED",
+     "length_lm": 3.782209,
+     "piece_id": "ST-01:MS2-L",
+     "plan_m": 3.3,
+     "rise_m": 1.848,
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "kind": "INCLINED",
+     "length_lm": 3.782209,
+     "piece_id": "ST-01:MS2-U",
+     "plan_m": 3.3,
+     "rise_m": 1.848,
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "kind": "HORIZONTAL",
+     "length_lm": 0.2,
+     "piece_id": "ST-01:T-1F-S",
+     "plan_m": 0.2,
+     "rise_m": 0.0,
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "kind": "TURN",
+     "length_lm": null,
+     "piece_id": "ST-01:T-MS1-N",
+     "plan_m": null,
+     "rise_m": null,
+     "status": "HELD"
+    },
+    {
+     "kind": "TURN",
+     "length_lm": null,
+     "piece_id": "ST-01:T-MS2-LD",
+     "plan_m": null,
+     "rise_m": null,
+     "status": "HELD"
+    },
+    {
+     "kind": "HORIZONTAL",
+     "length_lm": 1.325,
+     "piece_id": "ST-01:G-2F",
+     "plan_m": 1.325,
+     "rise_m": 0.0,
+     "status": "DRAWING-CONFIRMED"
+    }
+   ],
+   "run": "RL-07",
+   "state": "PROVISIONAL"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-08",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-7c65444302070a5f33e6",
+    "lm": 1.042,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "MEASURED"
+   },
+   "element_id": "RAIL:RL-08",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-7c65444302070a5f33e6",
+   "lm": 1.042,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "MEASURED"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-09",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-665af3a256e864478b96",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "RAIL:RL-09",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-665af3a256e864478b96",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-10",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "MET.RAILING.GUARD",
+    "line_id": "L-78babf2c6da600cb800e",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "RAIL:RL-10",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "MET.RAILING.GUARD",
+   "line_id": "L-78babf2c6da600cb800e",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-11",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.RAILING",
+    "line_id": "L-ea254d77037e0fe64780",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "BLOCKED_RFI"
+   },
+   "element_id": "RAIL:RL-11",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-ea254d77037e0fe64780",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": null,
+   "before": {
+    "action": null,
+    "element_id": "RAIL:RL-12",
+    "floor": null,
+    "home_lines": null,
+    "item_code": "FIN.HANDRAIL",
+    "line_id": "L-abd258e2201cef0b22d8",
+    "lm": null,
+    "physical_flight": null,
+    "pieces": null,
+    "run": null,
+    "state": "EXCLUDED_WITH_REASON"
+   },
+   "element_id": "RAIL:RL-12",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.HANDRAIL",
+   "line_id": "L-abd258e2201cef0b22d8",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "EXCLUDED_WITH_REASON"
+  },
+  {
+   "action": "ADD_HELD_PIECE",
+   "before": null,
+   "element_id": "RAIL:RL-07:ST-01:T-MS1-N",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-be57e4fa144c4de18968",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": "RL-07",
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": "ADD_HELD_PIECE",
+   "before": null,
+   "element_id": "RAIL:RL-07:ST-01:T-MS2-LD",
+   "floor": null,
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-1c899e8cc696d9c32490",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": "RL-07",
+   "state": "BLOCKED_RFI"
+  },
+  {
+   "action": "ADD_UNKNOWN",
+   "before": null,
+   "element_id": "RAIL:ST-01b:GF east-lane band beyond D1",
+   "floor": "GF",
+   "home_lines": null,
+   "item_code": "FIN.RAILING",
+   "line_id": "L-0129ba42e945a132bc36",
+   "lm": null,
+   "physical_flight": null,
+   "pieces": null,
+   "run": null,
+   "state": "BLOCKED_RFI"
+  }
+ ],
+ "task": "T-480",
+ "totals_moved_by_code": {
+  "FIN.RAILING|lm": {
+   "base": {
+    "blocked_lines": 17,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 19,
+    "released": 17.366
+   },
+   "v3_0_54": {
+    "blocked_lines": 5,
+    "bounded_lines": 0,
+    "held_high": 0.0,
+    "held_low": 0.0,
+    "lines": 8,
+    "released": 33.319174
+   }
+  }
+ }
+}

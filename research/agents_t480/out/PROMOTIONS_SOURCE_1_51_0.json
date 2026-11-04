@@ -1,0 +1,9 @@
+[
+ {
+  "task": "T-487",
+  "merge_commit": "dbc619fd7c26c0b7c7bbf3b305302d85cb394ee7",
+  "verdict_time": "2026-11-04 10:02 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-04T10:02Z per `date -u`, run unknown, lock checker; GATE B PASS on e556c1b3, engine merge dbc619fd on 8b94facc (CODEMAP conflict only: working-branch version taken, rebuilt, stale: none, freeze 0)"
+ }
+]
