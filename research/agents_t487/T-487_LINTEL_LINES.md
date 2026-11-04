@@ -34,11 +34,12 @@ printed, bar kg not computable (cover / bends / anchorage not printed).
 
 ## 3. Development-villa run (own, this session)
 
-Drive copies P7757.dxf ab54dd55 and "ST7757 dxf.dxf" 9f9d1179 (decoded into .work/private only). Chain: T-167
-v304_run, then research/agents_t487/v3053_run.py: V3_0_47 e86a53a8, V3_0_48 33a81c53, V3_0_50 **d40c4ec5** (candidate
-of record reproduced, asserted) -> V3_0_53 (see summary_t487.json `chain`; the final-code apply
-v3053_apply.py on that d40c4ec5 file gives the same lines file). 4,936 lines = 4,876 byte-identical + 60 added; 0
-replaced; totals move only in STR.CONC.LINTEL.
+Drive copies P7757.dxf ab54dd55 and "ST7757 dxf.dxf" 9f9d1179 (decoded into .work/private only). Rebased during
+the run: T-483 r3 merged first (ea7d375f, V3.0.51 c0b6d664, master 1.48.0), so V3.0.53 EXTENDS V3.0.51 (merge-order
+rule). Chain: T-167 v304_run, then research/agents_t487/v3053_run.py (wraps T-483's v3051_run unchanged): V3_0_47
+e86a53a8, V3_0_48 33a81c53, V3_0_50 d40c4ec5, V3_0_51 **c0b6d664** (candidate of record reproduced, asserted) ->
+V3_0_53 **36863f6c**; v3053_apply.py on that c0b6d664 file gives the identical file. 4,936 lines = 4,876 byte-identical
++ 60 added; 0 replaced; totals move only in STR.CONC.LINTEL (released 1.016 m3, 60 lines, 44 blocked).
 
 | Opening | Floor | Band | B x D | L m | m3 | formwork m2 beside | host face m2 | host line | evidence |
 |---|---|---|---|---|---|---|---|---|---|
@@ -69,13 +70,16 @@ FLAGGED 2: W13 (1F, 1.20 m, L2) and W26 (2F, 1.20 m, L2): the head leaves room f
 
 ## 4. Diffs, downstream, regression
 
-- vs V3.0.50: 60 ADDED, 4,876 SAME, 0 CHANGED (asserted, outside rows sha in V3_0_53_RUN.json).
-- vs released V2.9 + route G: STR.CONC.LINTEL NOT_IN_RELEASED on every line (the released run emits no lintel line on
-  this villa; registry B9-02 evidence).
+- vs V3.0.51: 60 ADDED, 4,876 SAME, 0 CHANGED (asserted, outside rows sha in V3_0_53_RUN.json).
+- vs released V2.9 + route G: NOT_IN_RELEASED on all 60 lintel lines (the released run emits no lintel line on this
+  villa; registry B9-02 evidence); the other lines' V2.9 comparison is the V3.0.51 one, unchanged.
 - Downstream: B9-02 0 -> 60 lines, 1.016 m3 released-in-candidate (PROVISIONAL), 44 blocked; material side (T-498): the
   16 host faces 6.085 m2 leave the host material base (T-453 r2 already shows this beside the candidate); B10-13 lintel
   formwork 14.845 m2 beside, not booked; B11 lintel bar kg HELD; MAS.BLOCK contract area unchanged.
-- Registry: BOQ_FAMILY_MASTER_1.50.0 = 1.47.0 + pending V3.0.53 + B9-02 text (no capability / state change).
+- Registry: BOQ_FAMILY_MASTER_1.50.0 = 1.48.0 + T-483 PROMOTED (R-T485-1: merge ea7d375f, verdict 08:06, line diff
+  V3.0.50 -> V3.0.51 = B3-06 FIN.SKIRTING ~5 lines, census at V3.0.51: 4,876 lines, 0 issues, B3-06 released 212.378592
+  lm; every other family's census identical to 1.48.0) + pending V3.0.53 + B9-02 text; no capability / state change.
+  Without the promotion the T-485 gate (a merged package never stays pending in the newest registry) is red.
 - Freelancer: the training-villa key maps (tests/alsenan T001B / T001C) key no lintel row, so there is no freelancer
   lintel figure to compare; verdict proposal for the 16 lines: ENGINE_RIGHT by the printed schedule (hand formula above).
 - Tests: tests/t487_lintel_lines (synthetic villa L by hand 0.14225 m3 + 17 adverse cases; inputs; hub; registry; run

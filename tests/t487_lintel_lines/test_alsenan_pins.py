@@ -1,6 +1,6 @@
 """T-487: the development-villa run record (research/agents_t487/summary_t487.json, own chain T-167 -> v3053_run on the
-Drive drawings: V3_0_50 d40c4ec5 reproduced -> V3_0_53) is internally consistent and agrees with the pinned inputs: 60
-lintel lines added, 0 replaced, every V3.0.50 line byte-identical, REQUIRED lines recomputed by hand from the record."""
+Drive drawings: V3_0_51 c0b6d664 reproduced -> V3_0_53 36863f6c) is internally consistent and agrees with the pinned inputs: 60
+lintel lines added, 0 replaced, every V3.0.51 line byte-identical, REQUIRED lines recomputed by hand from the record."""
 from __future__ import annotations
 
 import json
@@ -20,7 +20,9 @@ S = json.loads((ROOT / "research/agents_t487/summary_t487.json").read_text(encod
 
 
 def test_chain_and_identity():
-    assert S["chain"]["V3_0_50"].startswith("d40c4ec5")                    # the candidate of record (T-497 Gate B)
+    assert S["chain"]["V3_0_50"].startswith("d40c4ec5")
+    assert S["chain"]["V3_0_51"].startswith("c0b6d664")                    # the candidate of record (T-483 Gate B)
+    assert S["chain"]["V3_0_53"].startswith("36863f6c") and S["extends"] == "ARCH_TAKEOFF_V3.0.51"
     i = S["identity"]
     assert (i["base_lines"], i["v3_0_53_lines"], i["replaced"], i["added"]) == (4876, 4936, 0, 60)
     assert i["outside_rows"] == i["outside_rows_identical_to_base"] == 4876

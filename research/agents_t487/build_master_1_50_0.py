@@ -76,15 +76,24 @@ def _at(path, pattern):
     raise SystemExit(f"{path}: no line matches {pattern!r}")
 
 
-def _set_promotion_constants():
-    """the T-483 r2 promotion functions read their module constants: point them at THIS promotion"""
-    for k, v in (("VERSION", VERSION), ("BOARD_COMMIT", BOARD_COMMIT), ("OLD_CAND", OLD_CAND), ("CAND", CAND),
-                 ("AS_OF", AS_OF), ("DIFF_SPAN", DIFF_SPAN)):
-        setattr(P48, k, v)
+CONSTANTS = (("VERSION", VERSION), ("BOARD_COMMIT", BOARD_COMMIT), ("OLD_CAND", OLD_CAND), ("CAND", CAND),
+             ("AS_OF", AS_OF), ("DIFF_SPAN", DIFF_SPAN))
 
 
 def build(task_commit):
-    _set_promotion_constants()
+    """the T-483 r2 promotion functions read their module constants: they point at THIS promotion while it is built
+    and are restored afterwards (the 1.48.0 builder itself is never changed)"""
+    saved = {k: getattr(P48, k) for k, _v in CONSTANTS}
+    try:
+        for k, v in CONSTANTS:
+            setattr(P48, k, v)
+        return _build(task_commit)
+    finally:
+        for k, v in saved.items():
+            setattr(P48, k, v)
+
+
+def _build(task_commit):
     old = json.loads(OLD.read_text(encoding="utf-8"))
     prom = {p["task"]: p for p in json.loads(PROMOTIONS.read_text(encoding="utf-8"))}
     attrib = json.loads(ATTRIB.read_text(encoding="utf-8"))

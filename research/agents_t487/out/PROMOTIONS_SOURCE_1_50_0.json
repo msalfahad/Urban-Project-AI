@@ -1,0 +1,9 @@
+[
+ {
+  "task": "T-483",
+  "merge_commit": "ea7d375f7746a83a3caeca4440a23a14e60879b3",
+  "verdict_time": "2026-11-04 08:06 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-04T08:06Z per `date -u`, run session_01E6cPncn4U7Nu1wtujbRaHp; GATE B PASS on a50c0cb4, engine merge ea7d375f on f621ce44 (no conflict; merge tree = task tree, 0 diff)"
+ }
+]
