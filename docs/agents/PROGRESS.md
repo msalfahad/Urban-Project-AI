@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-03 20:20 UTC (Lead). Previous version: 2026-11-03 12:18 UTC. The released numbers did not change
+Last update: 2026-11-04 04:14 UTC (Lead). Previous version: 2026-11-03 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.47 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.50 (not released).
+
+Since 3 Nov 20:20 (newest first; eight checked and merged, one sent back):
+- Earthworks IN THE CANDIDATE for the first time (V3.0.48, then corrected in V3.0.50): excavation 225.94 m3 valued
+  (footing pits 208.17 m3 as an estimate on the accepted founding-level scenario, pool 17.78 m3 from the drawing);
+  footing-pit backfill 119.96 .. 128.64 m3 (6 of 8 parts re-measured by the checker). The checker found the external
+  ground-beam trench counted soil already dug by a footing and by the pits' strip beyond the plot: corrected to
+  1.07 .. 1.18 m3 (still a range, held), with a general rule that every excavation zone subtracts every other zone.
+- Disposal measured as one soil balance (not yet in the candidate): if no dug soil is reused, at least 234.33 m3
+  (in place) leaves the site; with reuse it stays held until soil test data exist. Losses (handling, import) must be
+  added as their own items first: a new task.
+- Material totals: a total over any held item is now shown as held with "at least" the known part, never as 0 or as
+  a complete total (finish tables); the plaster materials table has the same fault and gets the same fix next.
+- Materials link map checked: 1,202 links from material tables to BOQ lines, 0 wrong; only the block / mortar / glue
+  quantities can go into the candidate now.
+- Not yet in the candidate, checked: stair landings (4 of 4 re-measured, landing floor 10.10 -> 20.69 m2), pool-court
+  slab waterproofing 4.91 m2 missing, remaining skirting +9.01 m.l (rebasing).
+- Wet-area waterproofing package sent back once for test failures (no quantity fault: the checker's own hand checks
+  agreed); the fix is done, only the rebase on the new candidate is left.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: about 14 integration packages left in 6 days.
 
 Since 3 Nov 12:18 (newest first; seven checked and merged, one sent back and then merged):
 - Stair-room skirting IN THE CANDIDATE (V3.0.47, checked line by line from the drawing): skirting 189.82 -> 203.37 m.l

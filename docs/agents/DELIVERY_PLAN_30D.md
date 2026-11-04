@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 04:14; recovery plan in force)
+
+- Since 00:20: 4 merged (T-496, T-503, T-497 Gate B, T-499), 1 rejected (T-310, suite failures; guard fixed in r2,
+  rebase outstanding). Candidate of record V3.0.50 d40c4ec5 (ext GB trench restated 1.069 .. 1.176 m3; excavation
+  held part 8.334 .. 9.568 m3, valued 225.941 m3 unchanged), BOQ_FAMILY_MASTER 1.47.0; not released. READY 0.
+- Step 2: stream S delivered T-497; next T-487 (lintels, TODO), T-488, T-498, T-382, T-474 p2 = 5 left. Stream F
+  delivered 0 since 3 Nov 20:12: T-483 r2 (CLAIMED) and T-310 r3 both rebase on 416392e8; then T-480, T-314, T-502,
+  T-423, T-424, T-364, T-363, T-372. About 14 candidate packages in 6 days: 10 Nov AT RISK. Review at 12:00 stands.
+- Step 5 materials: reporting rule R-T499-1 in place; T-504 (plaster table V3) and T-505 (disposal loss terms) opened
+  as non-candidate pieces behind each worker's package; T-498 wiring after T-488.
+
 ## Status (Lead, 2026-11-04 00:20; recovery plan in force)
 
 - Since 20:18: 4 merged (T-486, T-493, T-495, T-350 r4 Gate B). Candidate of record V3.0.48 33a81c53 (earthworks
