@@ -678,7 +678,7 @@ def integrate(prev, changes, for_lead=()):
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3050.check_zone_owner(out, prev), "skirting": A3044.check_skirting(out),
+             "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(out),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
              "stair_rooms": A3047.check_stair_rooms(out), "wet_area_wp": check_wet_area_wp(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}

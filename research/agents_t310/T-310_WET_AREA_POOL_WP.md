@@ -111,3 +111,18 @@ on any line -> the run passes; findings stay recorded-only / listed-not-live as 
 Tests: tests/t310_wet_area_wp/test_guard_r2.py (normal: no block, block with no finding = same changes, ADD
 guard_element; adverse: drawn part carried by no line refuses, hold outside the codes refuses, malformed block refused,
 candidate importing a still-unwired producer is a P2 problem).
+
+## 8. Round 3 (worker 2, 2026-11-04 04:41 UTC): rebase only, re-versioned ARCH_TAKEOFF_V3.0.52
+
+T-497 merged V3.0.50 / master 1.47.0 (5f8814e8, extends V3.0.48) during r2; T-483 r2 holds V3.0.51 / 1.48.0 in
+parallel. By the merge-order rule this package rebases on the merged 416392e8 as the next free numbers: module
+engine/source/arch_v3052.py (was arch_v3049.py; METHOD ARCH_TAKEOFF_V3.0.52, EXTENDS ARCH_TAKEOFF_V3.0.50, schema
+URBAN_V3052_INPUTS_V1, files V3_0_52_*), its earthworks invariant now arch_v3050.check_zone_owner (the V3.0.48 check on
+the swapped-back view), WAITING from arch_v3050. Engineering content unchanged (rules, records, values).
+- Hub tools/urban_boq_m9.py as T-497 / T-483 r2: a V3.0.52 run is rewritten to a V3.0.50 run on the one V3.0.50 line
+  (line-stable), "--v3052-inputs and --method go together", stage after the V3.0.50 stage on l3050; the r2 rewrite of
+  the 45 method lists is gone (shared files taken from the working branch).
+- Master rules/coverage/BOQ_FAMILY_MASTER_1.49.0.json = 1.47.0 + pending V3.0.52 (builder build_master_1_49_0.py,
+  --check True, problems []); 1.46.0 dropped (never merged). RULES_MANIFEST and the T-459 binding rebuilt by their tools.
+- research/agents_t310/v3052_run.py: as before plus --v3050-inputs (research/agents_t497/t497_inputs.py), asserts
+  V3_0_48 33a81c53 and the candidate of record V3_0_50 d40c4ec5 as the base.
