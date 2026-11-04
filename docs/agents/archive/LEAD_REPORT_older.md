@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-04 00:20 UTC
+
+Drive read OK (no file created in the project folders since 20:00, no photo task). Training villa: candidate of record now V3.0.48 33a81c53 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Earthworks (stream S Gate B PASS): first earthworks quantities in the candidate: excavation valued 0 -> 225.941 m3 (pits 208.165 ESTIMATED, Checker AGREE; pool 17.777 DRAWING-CONFIRMED); backfill HELD 119.963 .. 128.644 m3 PARTIALLY VERIFIED 6 / 8; 4,869 lines identical. No freelancer or released earthworks line: no comparison.
+- Found by the Checker: the external ground-beam trench bound 1.203 .. 1.433 m3 counts up to 0.256 m3 already dug by the footing and beyond-plot zones; line HELD, corrected scenario 1.069 .. 1.176 m3; fix package first in stream S, general rule (every zone subtracts all other zones) and lessons row.
+- Measured and checked, unwired: 4 stair landings 4 / 4 AGREE (B7-04 10.102 -> 20.689 m2 proposed); pool-court slab 4.907 m2 with no waterproofing line (ENGINE_WRONG omission; balcony WP otherwise 0 m2 missing); outdoor floor materials as bounds (finish HELD).
+- Skirting remainder (certain 203.369 -> 212.379 lm, +4.43 %) is right in engineering but collided with the earthworks version: rebase + a registry gate fix (one test red on the working branch since 3 Nov 20:12).
+- Not measured / held: disposal (now a material-balance task by your 17:45 rules), materials not wired (blocks, mortar, glue, plaster, tiles).
+- Gates: Gate 0 none; Gate 1 t485 registry promotion (in the rebase), held-as-0 tile subtotals (to reproduce); Gate 2 three packages in parallel.
+Team health: since 20:18 every run closed with a final line; Checker 4 merged / 0 rejected; Worker 3's staged hand-in worked. Worker 1 23:20 found no task (board had 0 TODO): now 8 TODO. 4 Nov review applied: stream F merged 1 package since 2 Nov, so waterproofing / exterior plaster wiring moved to worker 2. 10 Nov AT RISK (about 15 packages left in 6 days). Self-check: codemap PASS, freeze PASS, pytest t061 FAIL (this session's venv has no pytest; board work only); queue check 24 actionable, 0 flagged, 0 stall.
+
+OWNER PACKAGE: none (no item meets standard section 2.7).
+
+NEEDS FIXING (only you): the Kuwait 1990 specification is over the 10 MB connector limit, so its plastering chapter cannot be read: a split or zipped copy under 6 MB would let the plaster mix move from HELD to a sourced value. Still open: repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-03 20:18 UTC
 
 Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record now V3.0.47 e86a53a8 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).

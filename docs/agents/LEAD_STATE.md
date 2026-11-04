@@ -1,43 +1,44 @@
 # LEAD STATE (at most 5 KB; the Lead rewrites it at the end of every run)
 
-Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log ea7d375f..`,
-`git -C .work/board log <board commit of this run>..`, RUN_LOG lines after 08:13Z 4 Nov, rows changed since), then rewrite.
+Next Lead run: read this file, then only what changed since the commits below (`git -C .work/engine log aa79343a..`,
+`git -C .work/board log <board commit of this run>..`, RUN_LOG lines after 12:15Z 4 Nov, rows changed since), then rewrite.
 
 ## Last seen
-- engine: ea7d375f (T-483 merge; candidate of record ARCH_TAKEOFF_V3.0.51 c0b6d664; registry BOQ_FAMILY_MASTER
-  1.48.0; released V2.9 + route G unchanged). t485 green again.
-- board: this run's final commit (Lead 2026-11-04 08:20, after 465a04b2)
-- last Lead run: 2026-11-04 08:12-08:25 UTC (run unknown)
+- engine: aa79343a (T-506 merge; candidate of record ARCH_TAKEOFF_V3.0.53 36863f6c; registry BOQ_FAMILY_MASTER
+  1.50.0; released V2.9 + route G unchanged).
+- board: this run's final commit (Lead 2026-11-04 12:19, after bfaad368)
+- last Lead run: 2026-11-04 12:15-12:30 UTC (run session_01E6cPnanxEpJ1ZJ6ZRdZmXY)
 
 ## Run health
-- Every run since 04:14 closed with a final line. OPEN at 08:15: Worker 3 STARTED 07:00 (T-487 CLAIMED 07:01, lock to
-  10:00): if it has no final line by the next run, report INCOMPLETE and check agents/task-T-487 for pushed work.
-- Checker 07:50 stopped on the overlap guard (06:50 run still on T-483): T-494 has missed 1 Checker run.
+- Worker 2 (fired 10:39) and Worker 3 (fired 10:59): scheduler FAILED USAGE_LIMIT_REACHED 11:14, no final line =
+  INCOMPLETE, nothing pushed / lost; T-310 r5 and T-468 set back to TODO. Their locks (to 12:40 / 13:00) may make the
+  12:39 / 12:59 runs end IDLE on AGENT_ENV LOCKED: expected. If the usage limit recurs, report it (owner cadence choice).
+- OPEN at 12:19: Worker 1 STARTED 11:20 (T-460 CLAIMED 11:21, lock to 13:20, scheduler PENDING).
 
 ## Live rows
-- READY 3: T-494 (06:54, Gate A), T-505 (07:28, Gate A), T-310 r3 (MUST REBASE -> r4 rework, worker 2 first).
-- CLAIMED 1: T-487 (worker 3, 07:01).
-- TODO 6: W1 T-501, T-480; W2 T-500, T-460; W3 T-506, T-468 (+ T-310 r4 rework).
-- QUEUED: W1 T-423, T-424, T-364, T-363, T-372; W2 T-314, T-502; W3 T-488, T-498 (after T-488 + T-506), T-382, T-474 p2.
+- READY 0. CLAIMED 1: T-460 (worker 1, 11:21).
+- TODO 5: W1 T-480; W2 T-310 r5, T-500; W3 T-488, T-468.
+- QUEUED: W1 T-508, T-423, T-424, T-364, T-363, T-372; W2 T-507, T-314, T-502; W3 T-498, T-509, T-382, T-474 p2.
 - IN PROGRESS: T-180 (Checker slot). PAUSED: T-450 part 2, T-451, T-472.
-- Lane order: S (worker 1): T-501, T-480, T-423, T-424, T-364, T-363, T-372 |
-  A (worker 2): T-310, T-500, T-460, T-314, T-502 | I (worker 3): T-487, T-506, T-468, T-488, T-498, T-382, T-474
+- Lane order: S (worker 1): T-460, T-480, T-508, T-423, T-424, T-364, T-363, T-372 |
+  A (worker 2): T-310, T-507, T-500, T-314, T-502 | I (worker 3): T-488, T-468, T-498, T-509, T-382, T-474
 - TODO below 8 by design: one candidate package per worker; no other unblocked row moves a line.
 
 ## Top 5 priorities
-1. 12:00 REVIEW (next run): Gate B merges since 00:20 = 2 (T-497, T-483). If still fewer than 3 at 12:00, propose the
-   owner a scope order for 10 Nov (which trades go in as HELD lines), section 6 format, max 5 items.
-2. Stream F: T-310 r4 rebase (worker 2, 08:39) then T-480 handrails (worker 1); whichever READY second rebases.
-3. Stream S: T-487 lintels (CLAIMED) -> T-488 blockwork wiring -> T-498 materials (after T-506).
-4. Checker: T-494 at 09:49 at the latest, then T-505, T-310 r4, T-487; T-180 rest of every run.
-5. After T-494 MERGES: open the B8-06 wiring row (stream F, next free T-, worker 2 after T-310) for 4.907 m2 + upturn.
+1. Stream S: T-488 blockwork wiring (worker 3, 12:59 or 14:59) -> T-498 materials -> T-509 disposal.
+2. Stream F: T-310 r5 (worker 2) and T-480 (worker 1) in parallel, READY second rebases; then T-507, T-508.
+3. Checker: T-310 r5, T-488, T-480 as they come (Gate B); T-460 / T-500 / T-468 Gate A; T-180 rest of every run.
+4. 10 Nov: about 14 packages / 6 days; watch 2+ Gate B merges per 12 h (3 achieved 00:20-12:19).
+5. Usage limit: if another run dies on it, put it in NEEDS FIXING with the count and the slots lost.
 
 ## Rules decided (keep)
 - Shared files: packages of different streams build in parallel; whichever is READY second rebases on the first merged
   candidate; version (candidate and BOQ_FAMILY_MASTER) allotted at merge. One candidate package per worker at a time.
+  Two stream F packages of different workers on the same hub / master are NOT a file conflict (READY second rebases).
 - Each worker keeps at least one non-candidate (research / tool) TODO behind its stream package.
 - A worker run that skips its first-in-order stream package must state why in its final line (2026-11-03 04:15).
-- Queue check treats 'after T-nnn' / list position as WAITING; status word first; 9-field rows.
+- Queue check treats 'after T-nnn' / list position as WAITING; status word first; 9-field rows; history text in a
+  status cell must not say 'after T-nnn' for a met wait (write 'behind ... (history, met)').
 - `board check` pulls first: commit the edits before running it. Write stamps from `date -u`.
 - Owner questions on non-critical material parameters are withdrawn into level-4 estimate tasks unless every source
   was read in full (Q-79 -> T-489, 2026-11-03 12:18).
@@ -45,11 +46,13 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Long Gate B packages: pushed stages, hand back INCOMPLETE below 40 min of lock.
 - Element register rulings: RC LINTEL vs host masonry; FOUNDATION BACKFILL; TOP-STOREY WALL HEIGHT vs ROOF BUILD-UP;
   ENTRANCE / STAIR-HALL STONE FLOOR; STAIR LANDING; POOL-COURT SLAB WP (B8-06); STAIR SKIRTING vs ROOM SKIRTING;
-  EXCAVATION ZONES; 2026-11-04 08:15 SKIRTING BEHIND FITTED JOINERY (T-460 classifies the 2.800 lm).
-- Lessons rows 2026-11-04 ADOPTED: trench zone overlap, HELD subtotal R-T499-1 (covers R-T504-1), disposal balance,
-  skirting under raised sills + partial vs whole range close (T-483).
-- Materials wiring reads FINISH_MATERIALS_TABLE_V5 bound_subtotal() and PLASTER_MATERIALS_TABLE_V3; producer roles and
-  the mortar ledger choice come from T-506; disposal reuse ends need T-505 loss terms.
+  EXCAVATION ZONES; SKIRTING BEHIND FITTED JOINERY (T-460 classifies the 2.800 lm).
+- Lessons rows 2026-11-04 ADOPTED: trench zone overlap, HELD subtotal R-T499-1, disposal balance, skirting under raised
+  sills (T-483); 12:19: one producer per material key (T-506), skirting only on a floor (T-501), WP applicability for
+  every exposed slab (T-494).
+- Materials wiring reads FINISH_MATERIALS_TABLE_V5 bound_subtotal() and PLASTER_MATERIALS_TABLE_V3; producer roles from
+  T-506 (T-453 r2 produces black mortar; T-367 READ / BESIDE); disposal loss never inside payable (F-C-T505-1).
+- F-C-T487-1: lintel printed bars stay a named HELD rebar component on B9-02 (carried in T-488).
 
 ## Blockers
 - None from the owner. Designer items (D-27, D-33, D-35, D-39, D-43) keep lines HELD, never block integration.

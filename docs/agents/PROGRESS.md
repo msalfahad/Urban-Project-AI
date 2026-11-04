@@ -1,9 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-04 08:15 UTC (Lead). Previous version: 2026-11-04 04:14 UTC. The released numbers did not change
+Last update: 2026-11-04 12:19 UTC (Lead). Previous version: 2026-11-04 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.51 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.53 (not released).
+
+Since 4 Nov 08:15 (newest first; five checked and merged, none sent back):
+- Lintels IN THE CANDIDATE for the first time (V3.0.53, checked line by line): 60 lintel lines; 16 openings get a
+  precast lintel by the printed schedule, 1.016 m3 (provisional), 42 held (opening or wall data not yet read), 2 flagged
+  (openings too wide for a 4.00 m precast piece). The freelancer has no lintel item at all.
+- Black-block mortar explained: the two figures (3.87 vs 1.59 m3) are the same mortar on different bases, reconciled
+  wall by wall with nothing left over: the purchase figure comes from the 20 cm walls (1.59 m3), the 15 cm walls stay
+  held until the block size is known, and one table only produces each material figure, so nothing is bought twice.
+- Stair skirting measured flight by flight (not yet in the candidate): 9.05 m.l the engine placed on a first-floor
+  level where there is no floor is wrong and comes out; room skirting will go 212.38 -> 209.43 m.l certain when wired,
+  landings 6.10 m.l from the drawing, the sloped flights held until the form is fixed (both forms shown).
+- Pool-court slab waterproofing checked (4.91 m2 flat + 1.04 m2 upturn, missing today) and the disposal balance with
+  losses as their own items: both into the candidate next.
+- Two worker runs stopped on the usage limit at 11:14 with nothing lost; their tasks are open again.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK, but the pace improved: 3 candidate packages merged in 12 hours;
+  about 14 left in 6 days.
 
 Since 4 Nov 04:14 (newest first; two checked and merged, none sent back):
 - Remaining skirting IN THE CANDIDATE (V3.0.51, checked line by line, the checker walked the dressing room himself):

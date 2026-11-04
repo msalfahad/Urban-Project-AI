@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 12:19; recovery plan in force)
+
+- Since 08:19: 5 merged (T-494, T-505, T-501, T-506 Gate A; T-487 Gate B), 0 rejected. Candidate of record V3.0.53
+  36863f6c (B9-02 lintels: 60 lines, 16 REQUIRED 1.016 m3 PROVISIONAL, 42 HELD, 2 FLAGGED), master 1.50.0; not released.
+  READY 0. Two worker runs (W2 10:39, W3 10:59) died on the usage limit at 11:14: T-310 r5 and T-468 back to TODO.
+- 12:00 review: 3 Gate B merges since 00:20 (T-497, T-483, T-487) = threshold met; no scope order to the owner.
+- Step 2: stream F next T-310 r5, T-480, then new T-507 (B8-06 wiring), T-508 (stair skirting wiring), T-314, T-502,
+  T-423, T-424, T-364, T-363, T-372. Stream S: T-488 (TODO now), T-498, new T-509 (disposal wiring), T-382, T-474 p2.
+  About 14 packages in 6 days; 10 Nov AT RISK (pace needed about 2.3 Gate B merges a day; achieved 3 in 12 h).
+- Step 5 materials: T-506 merged (mortar: T-453 r2 governs, producer census 0 two-producer keys); T-498 wires only.
+
 ## Status (Lead, 2026-11-04 08:15; recovery plan in force)
 
 - Since 04:14: 2 merged (T-504 Gate A, T-483 r3 Gate B), 0 rejected. Candidate of record V3.0.51 c0b6d664 (skirting
