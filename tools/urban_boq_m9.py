@@ -3201,7 +3201,7 @@ def cmd_arch(a):
     V3042 = "ARCH_TAKEOFF_V3.0.42"
     # T-350: ARCH_TAKEOFF_V3.0.43 = the SAME candidate (engine.source.arch_v3043): a V3.0.42 run (its files unchanged) +
     # the Checker-verified earthworks zones, HELD BLANK (URBAN_V3043_INPUTS_V1); named here for the same reason.
-    a.v3056 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.56"; a.method = "ARCH_TAKEOFF_V3.0.55" if a.v3056 else a.method; a.v3055 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.55"; a.method = "ARCH_TAKEOFF_V3.0.54" if a.v3055 else a.method; a.v3054 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.54"; a.method = "ARCH_TAKEOFF_V3.0.53" if a.v3054 else a.method; V3043, a.v3053 = "ARCH_TAKEOFF_V3.0.43", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.53"; a.method = "ARCH_TAKEOFF_V3.0.51" if a.v3053 else a.method  # T-487: a V3.0.53 run IS a V3.0.51 run first (one line, hub line-stable), then its B9-02 lintel lines | T-480: a V3.0.54 run IS a V3.0.53 run first (same line), then its B7-09 railing runs | T-488: a V3.0.55 run IS a V3.0.54 run first (same line, rewritten before the V3.0.54 test), then its blockwork wiring conditions | T-508: a V3.0.56 run IS a V3.0.55 run first (same line), then its stair skirting home
+    a.v3057 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.57"; a.method = "ARCH_TAKEOFF_V3.0.56" if a.v3057 else a.method; a.v3056 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.56"; a.method = "ARCH_TAKEOFF_V3.0.55" if a.v3056 else a.method; a.v3055 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.55"; a.method = "ARCH_TAKEOFF_V3.0.54" if a.v3055 else a.method; a.v3054 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.54"; a.method = "ARCH_TAKEOFF_V3.0.53" if a.v3054 else a.method; V3043, a.v3053 = "ARCH_TAKEOFF_V3.0.43", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.53"; a.method = "ARCH_TAKEOFF_V3.0.51" if a.v3053 else a.method  # T-487: a V3.0.53 run IS a V3.0.51 run first (one line, hub line-stable), then its B9-02 lintel lines | T-480: a V3.0.54 run IS a V3.0.53 run first (same line), then its B7-09 railing runs | T-488: a V3.0.55 run IS a V3.0.54 run first (same line, rewritten before the V3.0.54 test), then its blockwork wiring conditions | T-508: a V3.0.56 run IS a V3.0.55 run first (same line), then its stair skirting home | T-498: a V3.0.57 run IS a V3.0.56 run first (same line), then its blockwork material lines
     # T-422: ARCH_TAKEOFF_V3.0.44 = the SAME candidate (engine.source.arch_v3044): a V3.0.43 run (its files unchanged) +
     # the Checker-verified skirting threshold release (URBAN_V3044_INPUTS_V1); named here for the same reason.
     a.v3051 = getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.51"; a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3051 else a.method; V3044, a.v3050 = "ARCH_TAKEOFF_V3.0.44", getattr(a, "method", None) == "ARCH_TAKEOFF_V3.0.50"; a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050 else a.method  # T-497: a V3.0.50 run IS a V3.0.48 run first (one line, hub line-stable), then its V3.0.50 zone-ownership restatement | T-483 r2: a V3.0.51 run IS a V3.0.50 run first (same line, rewritten before the V3.0.50 test), then its V3.0.51 skirting remainder
@@ -3310,6 +3310,7 @@ def cmd_arch(a):
     if bool(getattr(a, "v3054_inputs", None)) != a.v3054: raise SystemExit("--v3054-inputs and --method ARCH_TAKEOFF_V3.0.54 go together (T-480 railing runs)")  # noqa: E701
     if bool(getattr(a, "v3055_inputs", None)) != a.v3055: raise SystemExit("--v3055-inputs and --method ARCH_TAKEOFF_V3.0.55 go together (T-488 blockwork wiring)")  # noqa: E701
     if bool(getattr(a, "v3056_inputs", None)) != a.v3056: raise SystemExit("--v3056-inputs and --method ARCH_TAKEOFF_V3.0.56 go together (T-508 stair skirting)")  # noqa: E701
+    if bool(getattr(a, "v3057_inputs", None)) != a.v3057: raise SystemExit("--v3057-inputs and --method ARCH_TAKEOFF_V3.0.57 go together (T-498 blockwork materials)")  # noqa: E701
     if v3047 and not getattr(a, "v3047_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.47 needs --v3047-inputs (the stair-room skirting split, Checker-verified)")
     if getattr(a, "v3046_inputs", None) and not v3046:
@@ -4340,6 +4341,18 @@ def cmd_arch(a):
                                                                                                                                                                                                         svgs += names56
                                                                                                                                                                                                         v30rec = dict(v30rec, method=A3056.METHOD, extends=A3055.METHOD,
                                                                                                                                                                                                                       identity=ident56, v3_0_55_identity=ident55)
+                                                                                                                                                                                                        if a.v3057:
+                                                                                                                                                                                                            # T-498: ARCH_TAKEOFF_V3.0.57 (blockwork material lines, R-T498-1, beside the MAS.BLOCK lines) beside the V3_0_56_*
+                                                                                                                                                                                                            from engine.source import arch_v3057 as A3057
+                                                                                                                                                                                                            l3056 = A3056.integrate(l3055, ch_v56, fl24)[0]
+                                                                                                                                                                                                            inp57 = A3057.load_inputs(json.loads(Path(
+                                                                                                                                                                                                                a.v3057_inputs).read_text(encoding="utf-8")), l3056[0]["project"]["project_id"])
+                                                                                                                                                                                                            ch_v57, log_v57 = A3057.changes_for(inp57, l3056)
+                                                                                                                                                                                                            names57, ident57, _led57 = A3057.write(
+                                                                                                                                                                                                                out, l3056, ch_v57, log_v57, released, fl24)
+                                                                                                                                                                                                            svgs += names57
+                                                                                                                                                                                                            v30rec = dict(v30rec, method=A3057.METHOD, extends=A3056.METHOD,
+                                                                                                                                                                                                                          identity=ident57, v3_0_56_identity=ident56)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -4502,7 +4515,8 @@ def main(argv=None):
                    ("ARCH_TAKEOFF_V3.0.53",) +   # T-487 (the V3.0.53 candidate; a V3.0.51 run first, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.54",) +   # T-480 (the V3.0.54 candidate; a V3.0.53 run first, see cmd_arch)
                    ("ARCH_TAKEOFF_V3.0.55",) +   # T-488 (the V3.0.55 candidate; a V3.0.54 run first, see cmd_arch)
-                   ("ARCH_TAKEOFF_V3.0.56",),   # T-508 (the V3.0.56 candidate; a V3.0.55 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.56",) +   # T-508 (the V3.0.56 candidate; a V3.0.55 run first, see cmd_arch)
+                   ("ARCH_TAKEOFF_V3.0.57",),   # T-498 (the V3.0.57 candidate; a V3.0.56 run first, see cmd_arch)
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -4563,6 +4577,10 @@ def main(argv=None):
                                           "reveal ledgers (T-313 r2 with the T-325 cross-check): reveal-strip lines "
                                           "filled, door bounds narrowed at a printed height, missing faces added, "
                                           "held faces BLANK by name; every other V3.0.27 line byte-identical")
+    p.add_argument("--v3057-inputs", help="ARCH_TAKEOFF_V3.0.57 (URBAN_V3057_INPUTS_V1): T-498 blockwork material lines "
+                   "(R-T498-1) beside the MAS.BLOCK lines: black units / laying mortar / AAC glue on the material base "
+                   "(contract net - REQUIRED lintel faces, bound to the B9-02 lines), held masonry blank by name; every "
+                   "V3.0.56 line byte-identical")
     p.add_argument("--v3056-inputs", help="ARCH_TAKEOFF_V3.0.56 (URBAN_V3056_INPUTS_V1): T-508 stair skirting home from "
                    "the merged T-501 table (R-T508-1): room stretches along a shaft with no floor at their level retired "
                    "by closure, landing pieces in FIN.SKIRTING, flight pieces a blank zigzag / sloped pair (form not "
