@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- STAIR SKIRTING vs ROOM SKIRTING (Lead 2026-11-04 00:20; T-483 R-T481-3, EIMP_SCOPE B7-07 / B7-08 NO_LINE): OWNER
+  TRADE B7-07 (wall side) / B7-08 (open side) STAIR SKIRTING for every skirting piece along a flight's raking edge,
+  developed length along the pitch; OWNER TRADE FIN.SKIRTING for level skirting on a landing or a stair-room floor
+  (the T-443 stair-room children). A piece is in exactly one; the held shaft 9.050 lm + W13 / W25 2.200 lm stay HELD in
+  FIN.SKIRTING until T-501 binds them to B7-07 / B7-08 lines (never dropped in the transfer). Rows: T-483, T-501.
+- EXCAVATION ZONES (Lead 2026-11-04 00:20; Checker F-C-T350R4-1): OWNER TRADE B1-02 for every excavated m3 exactly
+  once; where zones overlap (pits, F10F, pool, external ground-beam trench, beyond-plot strip) the zone listed first in
+  the dig sequence of the drawings owns the m3 and every other zone subtracts its plan by geometry. Disposal (B1-04)
+  and imported fill take their volumes from one material balance over these zones (owner 2026-11-02 17:45). Rows:
+  T-497, T-503.
 - RC LINTEL over an opening vs the host masonry wall (Lead 2026-11-03 08:17; Checker F-C-T453-1 on T-453 r1, owner
   Q-73 'only masonry that physically exists'): OWNER TRADE B9-02 LINTELS for the lintel piece (concrete m3 / pieces by
   the printed RC lintel schedule where one is printed, the owner precast lengths only where none is); the host wall's
