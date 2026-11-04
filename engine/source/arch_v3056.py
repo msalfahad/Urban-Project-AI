@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.55 (T-508, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.54
-(engine.source.arch_v30, arch_v301 .. arch_v3053, arch_v3054), with ONE new piece, the STAIR SKIRTING home of the merged
+"""ARCH_TAKEOFF_V3.0.56 (T-508, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.55
+(engine.source.arch_v30, arch_v301 .. arch_v3054, arch_v3055), with ONE new piece, the STAIR SKIRTING home of the merged
 T-501 stair-side table (5eded7df; Checker own re-measure by handle: MS2-LD 3.700 lm, MS2-L W side sloped 2.737 / zigzag
 3.694 lm AGREE; the 1F shaft 9.050 lm at +5.50 ENGINE_WRONG confirmed):
 
@@ -28,11 +28,12 @@ is recomputed (plan + returns), a flight's sloped figure is recomputed from its 
 zigzag figure from plan + risers x riser (one riser per flight) + returns, each asserted equal to the table;
 (5) held / unknown / conflict stays blank, never 0; millimetres refused.
 
-Nothing else moves: every V3.0.54 line not named by the inputs is byte-identical (asserted); totals move only in
-FIN.SKIRTING, FIN.STAIR.SKIRTING.ZIGZAG and FIN.STAIR.SKIRTING.SLOPED (asserted). Version number: built on V3.0.54
-(T-480, merge 1b66b719); V3.0.55 may also be taken by T-310 in parallel (merge-order rule: whichever merges later
-rebases and renumbers). Files: V3_0_55_BOQ_LINES.json / .csv, V3_0_55_INTEGRATION_LEDGER.json / .csv, V3_0_55_DIFF.csv,
-V3_0_55_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
+Nothing else moves: every V3.0.55 line not named by the inputs is byte-identical (asserted); totals move only in
+FIN.SKIRTING, FIN.STAIR.SKIRTING.ZIGZAG and FIN.STAIR.SKIRTING.SLOPED (asserted). Version number: built on V3.0.55
+(T-488, merge e8143e40; first written as V3.0.55 on V3.0.54 and renumbered by the merge-order rule); V3.0.56 may also be
+taken by T-310 in parallel (whichever merges later rebases and renumbers). Files: V3_0_56_BOQ_LINES.json / .csv,
+V3_0_56_INTEGRATION_LEDGER.json / .csv, V3_0_56_DIFF.csv, V3_0_56_RUN.json. Nothing here names a project, a sheet, a
+layer or a coordinate.
 """
 
 from __future__ import annotations
@@ -66,20 +67,21 @@ from engine.source import arch_v3050 as A3050
 from engine.source import arch_v3051 as A3051
 from engine.source import arch_v3053 as A3053
 from engine.source import arch_v3054 as A3054
+from engine.source import arch_v3055 as A3055
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: books a Checker-merged table; adds no default value
-METHOD = "ARCH_TAKEOFF_V3.0.55"
-EXTENDS = A3054.METHOD
+METHOD = "ARCH_TAKEOFF_V3.0.56"
+EXTENDS = A3055.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T508_ARCH_V3_0_55"
-INPUTS_SCHEMA = "URBAN_V3055_INPUTS_V1"
-LEDGER_SCHEMA = "URBAN_V3055_INTEGRATION_LEDGER_V1"
+POLICY_ID = "URBAN_BOQ_T508_ARCH_V3_0_56"
+INPUTS_SCHEMA = "URBAN_V3056_INPUTS_V1"
+LEDGER_SCHEMA = "URBAN_V3056_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 InputsError = A3051.InputsError
 _r = A3050._r
 _fmt = A3050._fmt
 RULE_ID, RULE_VERSION = "R-T508-1", "T-508"
-REC_KEY = "stair_skirting_v3055"
+REC_KEY = "stair_skirting_v3056"
 P_STAIR = "STAIR_SKIRTING"
 ROOM_CODE, UNIT = "FIN.SKIRTING", "lm"
 ZIG, SLO = "FIN.STAIR.SKIRTING.ZIGZAG", "FIN.STAIR.SKIRTING.SLOPED"
@@ -107,7 +109,7 @@ LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 NON_FORMS = ("wall", "open", "wall side", "open side", "both", "average")
 
 PIECES = {
-    P_STAIR: {"module": "engine/source/arch_v3055.py (stair skirting home: room stretches along a shaft with no floor "
+    P_STAIR: {"module": "engine/source/arch_v3056.py (stair skirting home: room stretches along a shaft with no floor "
                         "at their level retired by closure to the stair pieces; landing pieces valued in FIN.SKIRTING; "
                         "flight pieces as a zigzag / sloped pair of blank lines until the form is chosen)",
               "policy": "STAIR_SKIRTING_HOME_V1", "rule_id": "R-T508-1 (on R-T501-1 .. 4)",
@@ -123,7 +125,7 @@ PIECES = {
                                 "stations of every piece read by handle, risers standing in it, level at each end; "
                                 "the 1F room line's shaft stretches bound to the pieces at every level (residual 0)"},
 }
-WAITING = dict(A3054.WAITING)
+WAITING = dict(A3055.WAITING)
 for _k in ("T483_1F_SHAFT", "T443_1F_SHAFT"):   # bound by this version (R-T508-1 (3)); no longer waiting
     WAITING.pop(_k, None)
 WAITING.update({
@@ -325,7 +327,7 @@ def bind_stretch(seg, pieces, floor_level):
 
 
 def load_inputs(doc, project_id=None):
-    """URBAN_V3055_INPUTS_V1 -> the validated doc.
+    """URBAN_V3056_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
      "form": null | "zigzag" | "sloped" (ORR-007),
      "pieces": [{"pid", "element", "face", "kind" FLIGHT / LANDING / STEP, "cls" WALL / HELD / CONFLICT / UNKNOWN,
@@ -577,7 +579,7 @@ def changes_for(doc, prev):
     if not doc:
         return [], {"piece": P_STAIR, "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
-        raise InputsError("the candidate already carries V3.0.55 records (applied once)")
+        raise InputsError("the candidate already carries V3.0.56 records (applied once)")
     if any(ln["item_code"] in (ZIG, SLO) for ln in prev):
         raise InputsError("the candidate already carries stair skirting form lines")
     by = {ln["line_id"]: ln for ln in prev}
@@ -686,7 +688,7 @@ def check_stair_skirting(lines):
                 raise ValueError(f"{METHOD}: stair skirting line {ln['line_id']} without its record")
             continue
         if ln["item_code"] not in CODES or ln["unit"] != UNIT:
-            raise ValueError(f"{METHOD}: a V3.0.55 record on {ln['item_code']} {ln['line_id']}")
+            raise ValueError(f"{METHOD}: a V3.0.56 record on {ln['item_code']} {ln['line_id']}")
         act = rec.get("action")
         if act == "ADD_FORM_PAIR":
             o = by.get(rec.get("pair_line"))
@@ -735,8 +737,8 @@ def check_stair_skirting(lines):
 
 # ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.55 lines, identity). Changed lines replace their candidate line in place, added lines follow; every
-    other candidate line is byte-identical (asserted). Every V3.0.54 check runs as V3.0.54 runs it."""
+    """-> (V3.0.56 lines, identity). Changed lines replace their candidate line in place, added lines follow; every
+    other candidate line is byte-identical (asserted). Every V3.0.55 check runs as V3.0.55 runs it."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     out, adds, repl = list(prev), [], set()
     for c in changes:
@@ -763,7 +765,7 @@ def integrate(prev, changes, for_lead=()):
     # range closed here) is checked by that version's own check, as V3.0.51 does
     older = [ln for ln in out if not any(((ln.get("calculation") or {}).get("inputs") or {}).get(k)
                                          for k in (A3051.REC_KEY, REC_KEY))]
-    ident = {"base_lines": len(prev), "v3_0_55_lines": len(out), "v3_0_55_rows": len(changes),
+    ident = {"base_lines": len(prev), "v3_0_56_lines": len(out), "v3_0_56_rows": len(changes),
              "replaced": len(repl), "added": len(adds), "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
              "corrections": A3033.check_corrections(out), "tile_zones": A3034.check_zones(out),
@@ -774,7 +776,7 @@ def integrate(prev, changes, for_lead=()):
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
              "stair_rooms": A3047.check_stair_rooms(out), "remainder": A3051.check_remainder(out),
              "lintels": A3053.check_lintels(out), "rail_runs": A3054.check_runs(out),
-             "stair_skirting": check_stair_skirting(out)}
+             "wiring": A3055.check_wiring(out), "stair_skirting": check_stair_skirting(out)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")
@@ -795,7 +797,7 @@ def check_totals(t0, t1):
             continue
         if k.split("|")[0] not in CODES:
             raise ValueError(f"{METHOD}: totals moved outside this version's codes: {k}")
-        moved[k] = {"base": t0.get(k), "v3_0_55": t1.get(k)}
+        moved[k] = {"base": t0.get(k), "v3_0_56": t1.get(k)}
     return moved
 
 
@@ -816,7 +818,7 @@ def ledger_rows(changes, released_lines=None):
                      "stair_piece": (rec.get("stair_piece") or {}).get("pid") or rec.get("element"),
                      "figure_beside_lm": rec.get("figure_beside_lm"),
                      "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
-                     "after_v3_0_55": A30._qty(ref), "evidence_status": c.get("evidence_status"),
+                     "after_v3_0_56": A30._qty(ref), "evidence_status": c.get("evidence_status"),
                      "still_held": c.get("held"), "release_status": "NOT RELEASED",
                      "owner_manual_method": PIECES[c["piece"]]["owner_manual_method"],
                      "drawing_derived_method": PIECES[c["piece"]]["drawing_method"],
@@ -826,9 +828,9 @@ def ledger_rows(changes, released_lines=None):
 
 
 LEDGER_CSV = ("version", "action", "change", "line_id", "item_code", "floor", "element_id", "unit", "stair_piece",
-              "figure_beside_lm", "v2_9", "base", "v3_0_55", "evidence_status", "still_held", "verification")
+              "figure_beside_lm", "v2_9", "base", "v3_0_56", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
-            "v3_0_55")
+            "v3_0_56")
 
 
 def ledger_csv(rows):
@@ -843,7 +845,7 @@ def ledger_csv(rows):
                        "stair_piece": r.get("stair_piece") or "",
                        "figure_beside_lm": "" if r.get("figure_beside_lm") is None else _fmt(r["figure_beside_lm"]),
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
-                       "v3_0_55": q(r.get("after_v3_0_55")), "evidence_status": r["evidence_status"],
+                       "v3_0_56": q(r.get("after_v3_0_56")), "evidence_status": r["evidence_status"],
                        "still_held": h(r),
                        "verification": f"{r['verification'].get('task')} "
                                        f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
@@ -852,11 +854,11 @@ def ledger_csv(rows):
 
 def diff_rows(prev, new, released_lines=None):
     rows = A3046.diff_rows(prev, new, released_lines)
-    return [dict({k: v for k, v in r.items() if k != "v3_0_46"}, v3_0_55=r["v3_0_46"]) for r in rows]
+    return [dict({k: v for k, v in r.items() if k != "v3_0_46"}, v3_0_56=r["v3_0_46"]) for r in rows]
 
 
 def write(out, prev, changes, log, released_lines=None, for_lead=()):
-    """the V3_0_55_* files beside the base candidate's files. -> (file names, identity, ledger)."""
+    """the V3_0_56_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
     out = Path(out)
@@ -886,12 +888,12 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
            "totals_moved_by_code": moved, "waiting_pieces": WAITING}
-    files = {"V3_0_55_BOQ_LINES.json": BL.dumps(new),
-             "V3_0_55_BOQ_LINES.csv": A30._lines_csv(new),
-             "V3_0_55_INTEGRATION_LEDGER.json": A30._j(led),
-             "V3_0_55_INTEGRATION_LEDGER.csv": ledger_csv(rows),
-             "V3_0_55_DIFF.csv": A305._csv(diff, DIFF_CSV),
-             "V3_0_55_RUN.json": A30._j(run)}
+    files = {"V3_0_56_BOQ_LINES.json": BL.dumps(new),
+             "V3_0_56_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_56_INTEGRATION_LEDGER.json": A30._j(led),
+             "V3_0_56_INTEGRATION_LEDGER.csv": ledger_csv(rows),
+             "V3_0_56_DIFF.csv": A305._csv(diff, DIFF_CSV),
+             "V3_0_56_RUN.json": A30._j(run)}
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     return sorted(files), ident, led

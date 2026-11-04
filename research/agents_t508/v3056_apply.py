@@ -1,12 +1,12 @@
-"""T-508 (read-only): apply ARCH_TAKEOFF_V3.0.55 to the candidate of record's V3_0_54_BOQ_LINES.json of a finished
-research/agents_t480/v3054_run.py / v3054_apply.py run on the same drawings (or a v3055_run.py run), outside the hub,
+"""T-508 (read-only): apply ARCH_TAKEOFF_V3.0.56 to the candidate of record's V3_0_55_BOQ_LINES.json of a finished
+research/agents_t488/v3055_run.py run on the same drawings (or a v3056_run.py run), outside the hub,
 and print the integration package summary (every changed / added line in hand-checkable terms). Every output goes to
 --out (outside the repository); printed: item codes, units, states, quantities and engine ids only (no coordinates, no
 names).
 
-    .work/venv/bin/python -I research/agents_t508/v3055_apply.py <dir of the run> --out <private>/t508a
+    .work/venv/bin/python -I research/agents_t508/v3056_apply.py <dir of the run> --out <private>/t508a
 
-The base must be the candidate of record V3_0_54 c85c4630 (asserted).
+The base must be the candidate of record V3_0_55 a498fc61 (asserted).
 """
 from __future__ import annotations
 
@@ -25,9 +25,9 @@ for p in (ROOT, ROOT / "research" / "agents_t131", HERE):
 import alsenan_v30_run as T131  # noqa: E402
 import t508_inputs as L55       # noqa: E402
 from engine.source import arch_v304 as A304  # noqa: E402
-from engine.source import arch_v3055 as A    # noqa: E402
+from engine.source import arch_v3056 as A    # noqa: E402
 
-BASE_SHA = "c85c4630"            # V3_0_54_BOQ_LINES.json, candidate of record (T-480 Gate B, merge 1b66b719)
+BASE_SHA = "a498fc61"            # V3_0_55_BOQ_LINES.json, candidate of record (T-488 Gate B, merge e8143e40)
 
 
 def room_expect(prev):
@@ -40,7 +40,7 @@ def main(argv=None):
     ap.add_argument("run_dir")
     ap.add_argument("--out", required=True)
     a = ap.parse_args(argv)
-    src = Path(a.run_dir) / "V3_0_54_BOQ_LINES.json"
+    src = Path(a.run_dir) / "V3_0_55_BOQ_LINES.json"
     raw = src.read_bytes()
     sha = hashlib.sha256(raw).hexdigest()
     if not sha.startswith(BASE_SHA):
@@ -56,16 +56,16 @@ def main(argv=None):
     d = A.load_inputs(L55.build(pid, room_expect(prev)), pid)
     ch, log = A.changes_for(d, prev)
     names, ident, led = A.write(out, prev, ch, log, released)
-    nsha = hashlib.sha256((out / "V3_0_55_BOQ_LINES.json").read_bytes()).hexdigest()
-    print("base V3_0_54", sha[:8], len(prev), "lines -> V3_0_55", nsha[:8], ident["v3_0_55_lines"], "lines")
+    nsha = hashlib.sha256((out / "V3_0_56_BOQ_LINES.json").read_bytes()).hexdigest()
+    print("base V3_0_55", sha[:8], len(prev), "lines -> V3_0_56", nsha[:8], ident["v3_0_56_lines"], "lines")
     print("identity:", json.dumps({k: ident[k] for k in ("replaced", "added", "outside_rows",
                                                           "outside_rows_identical_to_base", "stair_skirting", "diff")},
                                   sort_keys=True))
     for r in led["rows"]:
         print(r["action"], r["line_id"], r["item_code"], r["floor"], r["element_id"], r["before_base"], "->",
-              r["after_v3_0_55"], r["evidence_status"], "beside", r.get("figure_beside_lm"))
+              r["after_v3_0_56"], r["evidence_status"], "beside", r.get("figure_beside_lm"))
     print("summary:", json.dumps(led["summary"], sort_keys=True))
-    t0, t1 = A304.code_totals(prev), A304.code_totals(json.loads((out / "V3_0_55_BOQ_LINES.json").read_text()))
+    t0, t1 = A304.code_totals(prev), A304.code_totals(json.loads((out / "V3_0_56_BOQ_LINES.json").read_text()))
     print("totals moved:", json.dumps(A.check_totals(t0, t1), sort_keys=True))
     return 0
 

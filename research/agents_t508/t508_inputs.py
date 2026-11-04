@@ -1,4 +1,4 @@
-"""T-508: the URBAN_V3055_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.55 (engine.source.arch_v3055), built ONLY from
+"""T-508: the URBAN_V3056_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.56 (engine.source.arch_v3056), built ONLY from
 pinned, merged files (an edited file stops the build):
 
   research/agents_t501/LINES_T501.csv    T-501 stair-side table (MERGED 5eded7df, Verifier 2026-11-04T10:56Z Gate A,
@@ -9,8 +9,8 @@ pinned, merged files (an edited file stops the build):
 
 Nothing is typed except what the table cannot carry: the storey label of each stair element (the plan the flight
 starts on), the room floor level +5.50 of the retired stretches (T-501 s.1: the 1F floor) and the candidate figures
-of the two room lines the stretches leave (asserted against the candidate by arch_v3055; a stale figure is refused).
-Every length is recomputed by arch_v3055 (landing = plan + returns; sloped = hypot(plan, level change) + returns where
+of the two room lines the stretches leave (asserted against the candidate by arch_v3056; a stale figure is refused).
+Every length is recomputed by arch_v3056 (landing = plan + returns; sloped = hypot(plan, level change) + returns where
 the stations and levels are in the table; zigzag via one riser per flight) and asserted equal to the table. The form
 (ORR-007) is NOT chosen: every flight piece becomes a blank zigzag / sloped pair.
 
@@ -102,12 +102,12 @@ def build(project_id, room_expect=None):
     ret = {"room_line_id": ROOM_LINE, "floor_level": ROOM_FLOOR_LEVEL, "expect": room_expect or {},
            "stretches": stretches(), "range_line_id": RANGE_LINE, "range_expect": RANGE_EXPECT,
            "source_tasks": ["T-501 binding"]}
-    return {"schema": "URBAN_V3055_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
+    return {"schema": "URBAN_V3056_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
             "form": None, "pieces": pieces(), "retire": ret}
 
 
 if __name__ == "__main__":
-    from engine.source import arch_v3055 as A
+    from engine.source import arch_v3056 as A
     pid = sys.argv[1] if len(sys.argv) > 1 else None
     d = build(pid, ROOM_EXPECT)
     v = A.load_inputs(d)

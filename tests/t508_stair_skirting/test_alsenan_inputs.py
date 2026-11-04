@@ -1,5 +1,5 @@
 """T-508: the development-villa inputs (research/agents_t508/t508_inputs.py, built only from the pinned merged T-501
-table) validate under arch_v3055 with no private input: the 1F shaft stretches close (9.050 lm certain + 2.200 lm held
+table) validate under arch_v3056 with no private input: the 1F shaft stretches close (9.050 lm certain + 2.200 lm held
 range, residual 0, level-aware), one riser per flight, landings 6.100 lm, HELD-FORM zigzag 23.300481 / sloped 17.009049
 lm beside, the two earlier positions T-501 refused (MS2-LD.E to 1.200; E3 unsplit) refused here too."""
 from __future__ import annotations
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "research" / "agents_t508"))
 
 import t508_inputs as L  # noqa: E402
-from engine.source import arch_v3055 as A  # noqa: E402
+from engine.source import arch_v3056 as A  # noqa: E402
 
 PID = "dev-villa"
 

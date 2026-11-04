@@ -1,4 +1,4 @@
-"""T-508 ARCH_TAKEOFF_V3.0.55 on a synthetic villa-K508 candidate (hand fixture, not the development villa): stair
+"""T-508 ARCH_TAKEOFF_V3.0.56 on a synthetic villa-K508 candidate (hand fixture, not the development villa): stair
 skirting home. Room stretches along a shaft with no floor at their level retired by closure; landing pieces valued in
 FIN.SKIRTING; flight pieces a blank zigzag / sloped pair until the form is chosen; every other line byte-identical;
 adverse inputs refused.
@@ -23,7 +23,7 @@ import copy
 import pytest
 
 from engine.source import arch_v304 as A304
-from engine.source import arch_v3055 as M
+from engine.source import arch_v3056 as M
 from engine.source import boq_line as BL
 
 PID, REV = "villa-k508", "0" * 64
@@ -138,9 +138,9 @@ def test_totals_move_only_in_skirting_codes_and_rest_identical():
     moved = M.check_totals(A304.code_totals(prev), A304.code_totals(new))
     assert set(moved) == {"FIN.SKIRTING|lm", M.ZIG + "|lm", M.SLO + "|lm"}
     assert moved["FIN.SKIRTING|lm"]["base"]["released"] == 27.0
-    assert moved["FIN.SKIRTING|lm"]["v3_0_55"]["released"] == 24.3         # 12.0 + 9.0 + 3.3
-    assert moved["FIN.SKIRTING|lm"]["v3_0_55"]["bounded_lines"] == 0
-    assert moved[M.ZIG + "|lm"]["v3_0_55"]["blocked_lines"] == 2
+    assert moved["FIN.SKIRTING|lm"]["v3_0_56"]["released"] == 24.3         # 12.0 + 9.0 + 3.3
+    assert moved["FIN.SKIRTING|lm"]["v3_0_56"]["bounded_lines"] == 0
+    assert moved[M.ZIG + "|lm"]["v3_0_56"]["blocked_lines"] == 2
     assert ident["outside_rows"] == ident["outside_rows_identical_to_base"] == 2
     assert (ident["replaced"], ident["added"]) == (2, 6)
 
