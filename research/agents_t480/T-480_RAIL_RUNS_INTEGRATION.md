@@ -50,8 +50,19 @@ after is fully traceable; the held pieces DO get their own blank lines.
 | 14 reader lines (GF 6, 1F 6, 2F 2) | `<room>:flight n` | BLOCKED_RFI blank | NOT_APPLICABLE_WITH_EVIDENCE, naming the physical flight and its run line(s) | T-476 binding, 9 physical flights |
 
 B7-09 FIN.RAILING: 17.366 -> 33.319174 lm (+15.953174, +91.9 %); B13-08 21.550 unchanged; B7-10 NOT_APPLICABLE kept.
-Every other line byte-identical (asserted); totals move only in FIN.RAILING (asserted). Chain figures and identity are
-in summary_t480.json (own run on the Drive copies).
+Every other line byte-identical (asserted); totals move only in FIN.RAILING (asserted): 19 lines / 17 blocked ->
+8 counted / 5 blocked (14 retired NOT_APPLICABLE, 3 added blank).
+
+Own chain (this session, Drive copies P7757.dxf ab54dd55 and "ST7757 dxf.dxf" 9f9d1179 in .work/private only): T-167
+v304_run, then research/agents_t487/v3053_run.py (unchanged): V3_0_51 **c0b6d664** and V3_0_53 **36863f6c** (candidates
+of record reproduced) -> research/agents_t480/v3054_apply.py: V3_0_54 **c85c4630**, 4,939 lines = 4,921 byte-identical
++ 15 changed + 3 added. Summary in summary_t480.json.
+
+Finding F-T480-1 (binding): the 14 reader ids the merged T-476 binding names (e.g. L-7248a8eb...) are NOT the ids the
+V3.0.53 candidate carries (e.g. L-203f9074... for the same GF first flight): a later line version re-keyed them. The
+engine therefore binds each reading to its candidate line by floor + reader flight + tread count (the T-476 BINDINGS
+table, pinned), exactly one hit or refused; all 14 bound uniquely (GF: 12 / 6 / 3 / 3 treads in one stair room, 7 / 3
+in the other; 1F 12 / 11 / 10 / 10 / 4 / 4; 2F 10 / 10).
 
 ## 5. Engine vs freelancer (recorded, never the target)
 
