@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T15:51Z | Verifier | SUCCESS | none (overlap guard: run session_01E6cPnbrZJQ81JptfW36jPZ active since 2026-11-04T14:52Z) | no check, no merge, no quantity change | self-check not run
 - 2026-11-04 15:34 UTC | Worker 1 | SUCCESS | T-468 READY (agents/task-T-468 @ d81e1b8a) | One status vocabulary: QUANTITY = export QSTATES (VERIFIED / VERIFIED ZERO / VERIFIED COMPONENT / MEASURED UNVERIFIED / HELD / UNMEASURED / EXCLUDED) + PRICING (UNPRICED) + T-471 five states; 123 words of 21 vocabularies mapped, acceptance record with measurement + aggregation proofs; 40 new tests; no word outside a Checker record verifies (route G 'VERIFIED', INDEPENDENTLY_CHECKED, MERGED, INTEGRATED_AND_TESTED all read MEASURED UNVERIFIED or no quantity); census found COVERED_BY_B4-01 undeclared in candidate_states. 0 quantity change, unwired. | self-check codemap PASS, pytest t061 PASS (first attempt FAIL: venv had no pytest until setup completed), freeze PASS; problem: first status call timed out at 120 s during setup
 - 2026-11-04 15:25 UTC | Worker 1 | STARTED | run session_01E6cPndqxeTtgTYp1bXUvLE | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T15:02Z | Worker 3 | STARTED | run session_01E6cPnc48aDb9BNiT3i9dRL | repo-attached routine | task state: none yet | self-check pending | stale run lock of run 20261104T110013-374-24611 since 2026-11-04T11:00Z recovered
