@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4648 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4650 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 62 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2196 | pytest suites, one folder per round. |
+| `tests/` | 2197 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -440,7 +440,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3037.py` | 613 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.37 (T-420): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.36 (engine.source.arch_v30, |
 | `arch_v3038.py` | 1016 | HIGH | 19 | ARCH_TAKEOFF_V3.0.38 (T-421): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.37 (engine.source.arch_v30, |
 | `arch_v3039.py` | 692 | HIGH | 18 | ARCH_TAKEOFF_V3.0.39 (T-429): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.38 (engine.source.arch_v30, |
-| `arch_v304.py` | 539 | HIGH | 78 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
+| `arch_v304.py` | 539 | HIGH | 79 | ARCH_TAKEOFF_V3.0.4 (T-167): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.3 (engine.source.arch_v30, |
 | `arch_v3040.py` | 677 | HIGH | 17 | ARCH_TAKEOFF_V3.0.40 (T-430): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.39 (engine.source.arch_v30, |
 | `arch_v3041.py` | 900 | HIGH | 16 | ARCH_TAKEOFF_V3.0.41 (T-431): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.40 (engine.source.arch_v30, |
 | `arch_v3042.py` | 699 | HIGH | 15 | ARCH_TAKEOFF_V3.0.42 (T-442): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.41 (engine.source.arch_v30, |
@@ -463,7 +463,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
-| `band_gap_classes_v1.py` | 325 | MEDIUM | 1 | BAND GAP CLASSES V1 (T-510, follow-up of the Checker-verified T-460 C5 / R-T460-1): every gap of a wall band is |
+| `band_gap_classes_v1.py` | 326 | MEDIUM | 1 | BAND GAP CLASSES V1 (T-510, follow-up of the Checker-verified T-460 C5 / R-T460-1): every gap of a wall band is |
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
 | `bbs_optimiser.py` | 114 | MEDIUM | 6 | BBS OPTIMISER (V3b) - bar hooks / bends by a recorded code method and deterministic cutting on stock lengths. |
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
@@ -1472,6 +1472,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t506_mortar_reconcile/` | 2 |
 | `tests/t508_stair_skirting/` | 3 |
 | `tests/t510_band_gap_classes/` | 1 |
+| `tests/t512_held_totals/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1972,6 +1973,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t506/` | 5 |
 | `research/agents_t508/` | 10 |
 | `research/agents_t510/` | 4 |
+| `research/agents_t512/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

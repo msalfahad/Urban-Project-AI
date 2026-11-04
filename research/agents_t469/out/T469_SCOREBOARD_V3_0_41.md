@@ -58,16 +58,16 @@
 
 | Key | Freelancer | Released V2.9 + route G (V29_ROUTEG_NO_PROFILE) | ARCH_TAKEOFF_V3.0.41 (candidate, NOT RELEASED) |
 |---|---|---|---|
-| CONC.BLINDING | 47.055 m3 | released 0.000 on 0 + held 7.276 .. 16.887 (1) = -84.54 .. -64.11 % | released 0.000 on 0 + held 21.059 .. 25.964 (4) = -55.25 .. -44.82 % |
+| CONC.BLINDING | 47.055 m3 | released none (0 lines) + held 7.276 .. 16.887 (1) = -84.54 .. -64.11 % | released none (0 lines) + held 21.059 .. 25.964 (4) = -55.25 .. -44.82 % |
 | CONC.FOOTING | 77.631 m3 | released 77.265 on 30 = -0.47 % | released 67.695 on 28 + held 9.426 .. 9.998 (4) = -0.66 .. +0.08 % |
 | CONC.GROUND | 75.090 m3 | released 17.127 on 23 + held 22.568 .. 64.104 (61) = -47.14 .. +8.18 % | released 41.001 on 56 + held 2.808 .. 10.182 (15) + 15 UNKNOWN = at least -41.66 %, upper end open |
-| CONC.COLUMN | 39.752 m3 | released 0.000 on 0 + held 3.075 .. 15.375 (35) + 83 UNKNOWN = at least -92.26 %, upper end open | released 19.776 on 30 + held 12.243 .. 28.977 (53) + 17 UNKNOWN = at least -19.45 %, upper end open |
+| CONC.COLUMN | 39.752 m3 | released none (0 lines) + held 3.075 .. 15.375 (35) + 83 UNKNOWN = at least -92.26 %, upper end open | released 19.776 on 30 + held 12.243 .. 28.977 (53) + 17 UNKNOWN = at least -19.45 %, upper end open |
 | CONC.BEAM | 65.966 m3 | released 64.820 on 112 + held 8.449 .. 14.434 (24) = +11.07 .. +20.14 % | released 66.321 on 110 + held 8.373 .. 13.780 (22) + 5 UNKNOWN = at least +13.23 %, upper end open |
 | CONC.SLAB | 59.817 m3 | released 61.551 on 75 + held 2.740 .. 2.740 (1) = +7.48 .. +7.48 % | released 60.280 on 62 = +0.77 % |
 | CONC.STAIR_DOME | 21.833 m3 | released 12.007 on 5 = -45.01 % | released 10.450 on 8 + 6 UNKNOWN = at least -52.13 %, upper end open |
 | CONC.POOL | 12.348 m3 | released 3.495 on 2 = -71.69 % | released 7.202 on 2 + 1 UNKNOWN = at least -41.67 %, upper end open |
 | PLASTER.INTERNAL | 1,151.138 m2 | released 17.740 on 20 + held 2.360 .. 2.600 (2) + 27 UNKNOWN = at least -98.25 %, upper end open | released 580.582 on 42 + held 488.201 .. 544.061 (8) + 12 UNKNOWN = at least -7.15 %, upper end open |
-| PAINT.INTERNAL_WALL | 1,191.128 m2 | released 0.000 on 0 + 13 UNKNOWN = at least -100.00 %, upper end open | released 217.208 on 4 + held 487.121 .. 542.861 (7) + 3 UNKNOWN = at least -40.87 %, upper end open |
+| PAINT.INTERNAL_WALL | 1,191.128 m2 | released none (0 lines) + 13 UNKNOWN = at least -100.00 %, upper end open | released 217.208 on 4 + held 487.121 .. 542.861 (7) + 3 UNKNOWN = at least -40.87 %, upper end open |
 | FLOOR.INTERNAL | 409.580 m2 | TYPED_KEY (scored by tools/alsenan_keymap.py only) | TYPED_KEY (scored by tools/alsenan_keymap.py only) |
 | DOORS.ALUMINIUM | 12.000 m2 | NO_SAME_UNIT_LINE (engine units ['pcs']) | released 12.760 on 2 = +6.33 % |
 | WINDOWS.ALUMINIUM | 116.900 m2 | NO_SAME_UNIT_LINE (engine units ['pcs']) | released 76.256 on 3 + held 9.870 .. 11.515 (1) + 1 UNKNOWN = at least -26.33 %, upper end open |

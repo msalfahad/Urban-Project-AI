@@ -539,7 +539,9 @@ def markdown(doc):
                 if "released_qty" not in r:
                     cells.append(r["outcome"])
                     continue
-                t = f"released {_q(r['released_qty'])} on {r['released_lines']}"
+                # T-512 (F-C-T508-1 class): no released line -> 'released none', never a printed 0.000
+                t = (f"released {_q(r['released_qty'])} on {r['released_lines']}" if r["released_lines"]
+                     else "released none (0 lines)")
                 if r["held_lines"]:
                     b = r["held_lines"] - r["held_unknown_lines"]
                     if b:
