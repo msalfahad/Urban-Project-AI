@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T00:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-496 (Worker 3 23:15) per RUN_LOG | self-check pending
 - 2026-11-04T00:40Z | Worker 2 | STARTED | run session_01E6cPner8LiP93QwzhcyAtE | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T00:21Z | Lead | SUCCESS | board | Since 20:18: 4 merged (T-486, T-493, T-495 WORKED; T-350 r4 PARTIAL -> candidate V3.0.48, excavation 225.941 m3, trench HELD-DEFECTIVE -> NEW T-497); T-483 back to TODO r2 (rebase V3.0.49 + t485 T-443 gate fix); 4 Nov review: T-310/T-314 to worker 2; NEW T-497..T-503; 2 register rulings, lessons row; Drive OK no new files; owner package none; queue check: 24 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 FAIL, freeze PASS; problem: selfcheck pytest t061: '/home/claude/urban-project-ai/.work/venv/bin/python: No module named pytest' (venv has no packages in this session)
 - 2026-11-04T00:13Z | Lead | STARTED | run session_01E6cPndgDGLgUD2cFsQG4Gc | repo-attached routine | task state: board | report pending
