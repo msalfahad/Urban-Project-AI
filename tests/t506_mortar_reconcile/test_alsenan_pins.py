@@ -66,3 +66,15 @@ def test_t372_as_first_written_would_double(built):
     finally:
         R.ROLE_RULES[("T-367", "MASONRY_LAYING", "mortar_m3")] = "BESIDE"
     assert len(census["keys_with_two_producers"]) == 4
+
+
+def test_b9_04_part_lines(built):
+    pl = built[0]["b9_04_by_part_line"]
+    assert len(pl) == 11
+    st = {}
+    for p in pl:
+        st[p["state"]] = st.get(p["state"], 0) + 1
+        if p["state"] == "HELD":
+            assert p["installed_m3"] is None
+    assert st == {"COMPUTED": 3, "RANGE": 1, "HELD": 7}
+    assert sum(p["installed_m3"] for p in pl if p["state"] == "COMPUTED") == pytest.approx(1.588929, abs=2e-6)

@@ -1,4 +1,147 @@
 {
+ "b9_04_by_part_line": [
+  {
+   "installed_m3": 0.352525,
+   "line_id": "L-10dd62f66ad05488e63b",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.352525,
+   "t_m": 0.2,
+   "walls": [
+    "1F-W02",
+    "1F-W03",
+    "1F-W09"
+   ]
+  },
+  {
+   "installed_m3": 0.916919,
+   "line_id": "L-1c53fadb2f92d1f36d4e",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.916919,
+   "t_m": 0.2,
+   "walls": [
+    "GF-W01"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-4054259959463edd70fb",
+   "material_base_beside_m3": 0.279579,
+   "state": "HELD",
+   "t367_beside_m3": 0.279579,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W18",
+    "1F-W24"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-73acd5a9d7e7cf6515c1",
+   "material_base_beside_m3": 0.578768,
+   "state": "HELD",
+   "t367_beside_m3": 0.578768,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W20",
+    "1F-W21",
+    "1F-W22"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": 0.319485,
+   "line_id": "L-76a4d8e50423fb02b914",
+   "state": "COMPUTED",
+   "t367_beside_m3": 0.319485,
+   "t_m": 0.2,
+   "walls": [
+    "2F-W01",
+    "2F-W06"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-87e0023741a8e2d98b21",
+   "material_base_beside_m3": 0.109463,
+   "state": "HELD",
+   "t367_beside_m3": 0.109463,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W21",
+    "GF-W33"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-a56a8add7812d1b52cb7",
+   "material_base_beside_m3": 0.622077,
+   "state": "HELD",
+   "t367_beside_m3": 0.644422,
+   "t_m": 0.15,
+   "walls": [
+    "1F-W12",
+    "1F-W13",
+    "1F-W17",
+    "1F-W19",
+    "1F-W23"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "installed_m3_range": [
+    0.051035,
+    0.05605
+   ],
+   "line_id": "L-a6eedf5e4adec6d07618",
+   "state": "RANGE",
+   "t367_beside_m3": 0.05605,
+   "t_m": 0.2,
+   "walls": [
+    "2F-W05"
+   ]
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-abf15bdf70ccf1e7b474",
+   "material_base_beside_m3": 0.260604,
+   "state": "HELD",
+   "t367_beside_m3": 0.268126,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W28",
+    "GF-W29"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-adb393d6db51056d343b",
+   "material_base_beside_m3": 0.238132,
+   "state": "HELD",
+   "t367_beside_m3": 0.238132,
+   "t_m": 0.15,
+   "walls": [
+    "GF-W19",
+    "GF-W22"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  },
+  {
+   "installed_m3": null,
+   "line_id": "L-e1e06ec149b44d4f6f8a",
+   "material_base_beside_m3": 0.103102,
+   "state": "HELD",
+   "t367_beside_m3": 0.106643,
+   "t_m": 0.15,
+   "walls": [
+    "2F-W08"
+   ],
+   "why": "owner Q-75 answer 2026-11-02 / UPC-BLACK-BLOCK-001: the 0.15 m black block installed module is NOT stated (block schedule / supplier data item): joint geometry, hence mortar, HELD; the T-367 40 x 20 figure beside"
+  }
+ ],
  "candidate_checked": "ARCH_TAKEOFF_V3.0.50",
  "governing": {
   "material_line_producer": "T-453 r2 (research/agents_t453, merged b16f686b; T-496 binding): installed m3 on the material base, cement bags / loose sand by UPC-BLACK-MORTAR-001 (Q-78 1:4)",

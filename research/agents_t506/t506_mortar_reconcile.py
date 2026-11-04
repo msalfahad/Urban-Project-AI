@@ -247,6 +247,37 @@ def t453_015_beside(t453_by_line):
                   if m["thickness_m"] == 0.15 and m.get("beside_t367_40x20")))
 
 
+def by_part_line(rows):
+    """R-T506-2 for the narrowed T-372: per MAS.BLOCK part line, the figure a B9-04 line would carry (T-453 r2's),
+    the T-367 contract-basis figure beside, and the walls; HELD lines carry no figure."""
+    acc = {}
+    for r in rows:
+        a = acc.setdefault(r["line_id"], {"line_id": r["line_id"], "t_m": r["t_m"], "walls": [], "bucket": r["bucket"],
+                                          "t367_beside_m3": 0.0, "figure_m3": 0.0, "range_m3": [0.0, 0.0],
+                                          "held_beside_m3": 0.0})
+        if a["bucket"] != r["bucket"]:
+            raise ReconcileError(f"{r['line_id']}: walls in two buckets")
+        a["walls"].append(r["wall_id"])
+        a["t367_beside_m3"] += r["t367_m3"]
+        if r["bucket"] == PNET:
+            a["figure_m3"] += r["governing_m3"]
+        elif r["bucket"] == RANGE:
+            a["range_m3"] = [a["range_m3"][0] + r["governing_range_m3"][0], a["range_m3"][1] + r["governing_range_m3"][1]]
+        else:
+            a["held_beside_m3"] += r["beside_m3"]
+    out = []
+    for lid, a in sorted(acc.items()):
+        o = {"line_id": lid, "t_m": a["t_m"], "walls": sorted(a["walls"]), "t367_beside_m3": _r(a["t367_beside_m3"])}
+        if a["bucket"] == PNET:
+            o.update(state="COMPUTED", installed_m3=_r(a["figure_m3"]))
+        elif a["bucket"] == RANGE:
+            o.update(state="RANGE", installed_m3=None, installed_m3_range=[_r(x) for x in a["range_m3"]])
+        else:
+            o.update(state="HELD", installed_m3=None, material_base_beside_m3=_r(a["held_beside_m3"]), why=Q75_015)
+        out.append(o)
+    return out
+
+
 # ------------------------------------------------------------------------------------------- R-T506-3 roles
 def role_of(b):
     kind = b["kind"].split("@")[0]
@@ -319,6 +350,7 @@ def build_from(t367_walls, t453_ledger, bindings, index_lines=None, t367_total=N
     if census["keys_with_two_producers"] or census["reader_divergences"]:
         raise ReconcileError(f"R-T506-3: {census['keys_with_two_producers'][:3]} {census['reader_divergences'][:3]}")
     return {"schema": SCHEMA, "rows": rows, "held_walls": held, "totals": tot, "ledger_check": chk,
+            "b9_04_by_part_line": by_part_line(rows),
             "t453_015_beside_on_contract_net_m3": t453_015_beside(by),
             "perimeter_joints": PERIMETER_HELD, "governing": GOVERNING, "producer_census": census,
             "released_quantities_changed": 0}, roles
