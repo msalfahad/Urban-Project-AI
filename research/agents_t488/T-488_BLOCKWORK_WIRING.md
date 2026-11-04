@@ -78,3 +78,11 @@ Lessons row (proposed, ERS s.7): | 2026-11-04 | a storey under a roof-only plate
 architectural FFL chain is a storey | a storey is plate top to plate top; a roof-only plate with no printed structural
 level holds every wall under it as U - L x b_r, and a released part line whose walls are all held is blank by name |
 tests/t488_blockwork_wiring | T-488 |
+
+## 6. Validation
+
+L4 full suite on 37593400 (tests/, two shards to the end): 18,802 pass, 623 skip (private inputs absent), 105 xfail,
+1 fail = tests/t459_lap_rule test_candidate_binding_rebuilds (the T-459 binding lists every candidate module: arch_v3055
+added, no lap token) -> T459_CANDIDATE_BINDING.json rebuilt with its own tool, folder re-run green; agents/ + t459 +
+t488 green on the final head; freeze 0; codemap stale: none. tests/t488_blockwork_wiring: 33 (villa P279 by hand + 14
+adverse, inputs / hub, registry 1.52.0, run pins).
