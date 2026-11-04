@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 57 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2150 | pytest suites, one folder per round. |
+| `tests/` | 2151 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -450,10 +450,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3046.py` | 682 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.46 (T-419, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.45 |
 | `arch_v3047.py` | 822 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.47 (T-443, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.46 |
 | `arch_v3048.py` | 679 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.48 (T-350 r4, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.47 |
-| `arch_v3049.py` | 781 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.49 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.48 |
+| `arch_v3049.py` | 810 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.49 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.48 |
 | `arch_v305.py` | 515 | HIGH | 46 | ARCH_TAKEOFF_V3.0.5 (T-179): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.4 (engine.source.arch_v30, |
 | `arch_v306.py` | 700 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.6 (T-187): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.5 (engine.source.arch_v30, |
-| `arch_v307.py` | 751 | HIGH | 17 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
+| `arch_v307.py` | 751 | HIGH | 19 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
 | `arch_v308.py` | 680 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.8 (T-231): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.7 (engine.source.arch_v30, |
 | `arch_v309.py` | 591 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.9 (T-211, package V3.0.9a): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.8 |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
@@ -1275,7 +1275,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t307_slab_bar_ends/` | 2 |
 | `tests/t308_formwork_r5/` | 2 |
 | `tests/t309_pool_membrane/` | 2 |
-| `tests/t310_wet_area_wp/` | 5 |
+| `tests/t310_wet_area_wp/` | 6 |
 | `tests/t311_parapet_plinth/` | 2 |
 | `tests/t312_wall_tile_ledger/` | 2 |
 | `tests/t313_reveal_ledger/` | 2 |

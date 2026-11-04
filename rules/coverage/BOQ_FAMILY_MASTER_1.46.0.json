@@ -3342,7 +3342,7 @@
     "engine/source/waterproofing_system.py:284 areas_from_floor() (ARCH_TAKEOFF_V2.4+ system)",
     "commit 8fcabe0 (T-010, verifier run 22): wet / dry evidence 72.12 m2 vs the released 62.773 m2 (wet rooms merged into dry zones in the released method)",
     "commit 9f14742 (T-093 ARCH_TAKEOFF_V2.11, verifier run 32); commit 2264938 (V2.13, verifier run 44: 85.62 m2 with the typed pantry zone)",
-    "engine/source/arch_v3049.py:461 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:271 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:555 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
+    "engine/source/arch_v3049.py:473 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:279 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:584 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.FLOOR",
    "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13 | ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-310)",
@@ -3413,7 +3413,7 @@
     "engine/source/arch_measure.py:571 FIN.WP.DOORWAY / :602 FIN.WP.DOORWAY per doorway",
     "engine/source/surface_ledger.py:134 FIN.WP.DOORWAY_TRANSITION by detail (bounded until the detail is chosen)",
     "engine/source/arch_v211.py:494 door_transition_lines(): one transition per door (opt-in)",
-    "engine/source/arch_v3049.py:461 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:271 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:555 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
+    "engine/source/arch_v3049.py:473 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:279 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:584 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.DOORWAY, FIN.WP.DOORWAY_TRANSITION (bounded)",
    "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13 | ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-310)",
@@ -3519,7 +3519,7 @@
     "engine/source/waterproofing_system.py:905-910 FIN.WP.WALL_UPTURN on eligible wall boundaries (UP-WP-002)",
     "engine/source/surface_ledger.py:142 FIN.WP.WALL_UPTURN: the V2.4+ ledger replaces FIN.WP.UPTURN by FIN.WP.WALL_UPTURN",
     "engine/source/arch_measure.py:615 FIN.WP.UPTURN (ARCH_TAKEOFF_V1 .. V2.3 path only)",
-    "engine/source/arch_v3049.py:461 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:271 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:555 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
+    "engine/source/arch_v3049.py:473 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:279 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:584 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.WALL_UPTURN",
    "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13 | ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-310)",
@@ -3869,7 +3869,7 @@
    "next_slice": "S5",
    "evidence": [
     "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 ITEMS and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)",
-    "engine/source/arch_v3049.py:461 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:271 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:555 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
+    "engine/source/arch_v3049.py:473 changes_for(): REVALUE_UPTURN / REVALUE_FLOOR / NOT_APPLICABLE / KEY_DOOR / ADD_HELD_DOOR / ADD_POOL_LAYER by line id, stale bindings refused; engine/source/arch_v3049.py:279 load_inputs() (upturn value = waterproofing policy V3 run, floor = box - deductions, one transition per door); engine/source/arch_v3049.py:584 check_wet_area_wp(); tests/t310_wet_area_wp/test_arch_v3049.py:119 (villa W310 by hand)"
    ],
    "released_method_reads": "none",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.49 (engine/source/arch_v3049.py, opt-in candidate; pending Gate B, T-310)",

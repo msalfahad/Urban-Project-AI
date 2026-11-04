@@ -170,8 +170,13 @@ def build(project_id):
                      "function_held": ("function HELD (waterproofing or thermal insulation not stated, S8.2); "
                                        "product and laps not printed") if code == "WP.POOL.MEMBRANE" else None,
                      "source_tasks": ["T-309"], "basis": POOL_BASIS[code]})
+    # T-310 r2: the default guard re-check at integration (T-212 P2), the V3.0.7 guard inputs unchanged (as V3.0.8 ..
+    # V3.0.12, t146 / t211 / t231), no new printed record
+    sys.path.insert(0, str(ROOT / "research" / "agents_t193"))
+    import t193_inputs as L7   # noqa: E402
+    g = dict(L7.inputs(project_id)["guard"], new_records=[])
     return {"schema": "URBAN_V3049_INPUTS_V1", "project_id": project_id, "sources": list(SOURCES.values()),
-            "entries": ents}
+            "entries": ents, "guard": g}
 
 
 if __name__ == "__main__":

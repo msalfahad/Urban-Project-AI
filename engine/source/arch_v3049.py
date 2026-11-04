@@ -28,6 +28,13 @@ line carries no figure and states its evidence; (d) a pool layer line is booked 
 water side, and its unresolved part is beside with its bound, never 0, never in the quantity; (e) nothing outside the
 waterproofing codes moves.
 
+DEFAULT GUARD (T-310 r2, T-212 P2 / P4): this stage wires the quantity producer waterproofing policy V3 (and through it
+V2) into the candidate, so the merged default guard runs AT integration over the result (arch_v307.guard_changes, the
+V3.0.6 guard re-check, over the V3.0.48 lines with this version's changes + the lines it adds): a guard finding on a
+line this version changes or adds refuses the run, and so does a finding on any other line (this version moves nothing
+outside its waterproofing codes; that line belongs to an earlier stage). With no "guard" block in the inputs the guard
+is NOT run and only the run log says so (state NO_PROJECT_INPUT), the same limit as arch_v306 / arch_v307.
+
 Nothing else moves: every V3.0.48 line not named by the inputs is byte-identical (asserted); totals move only in the
 waterproofing codes (asserted). Files: V3_0_49_BOQ_LINES.json / .csv, V3_0_49_INTEGRATION_LEDGER.json / .csv,
 V3_0_49_DIFF.csv, V3_0_49_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
@@ -43,6 +50,7 @@ from engine.source import arch_v30 as A30
 from engine.source import arch_v302 as A302
 from engine.source import arch_v304 as A304
 from engine.source import arch_v305 as A305
+from engine.source import arch_v307 as A307
 from engine.source import arch_v3018 as A3018
 from engine.source import arch_v3030 as A3030
 from engine.source import arch_v3031 as A3031
@@ -64,7 +72,7 @@ from engine.source import arch_v3047 as A3047
 from engine.source import arch_v3048 as A3048
 from engine.source import waterproofing_policy_v3 as WP3
 
-DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books checker-merged ledgers; adds no default value
+DEFAULT_GUARD_CLASS = "GUARD_HOST"      # T-212 / T-310 r2: wires policy V3; the guard re-check runs (arch_v307)
 METHOD = "ARCH_TAKEOFF_V3.0.49"
 EXTENDS = A3048.METHOD
 CANDIDATE = A30.METHOD
@@ -278,7 +286,8 @@ def load_inputs(doc, project_id=None):
                   KEY_DOOR line_id, door_id; ADD_HELD_DOOR door_id, rooms, floor, template_line, doorway_line (the door's
                   FIN.WP.DOORWAY line: room, floor and opening of the new line), held_items;
                   ADD_POOL_LAYER item_code, element_id, value, evidence_status, template_code, held_part {what, low,
-                  high, cause}, faces, function_held}]}"""
+                  high, cause}, faces, function_held}],
+     "guard": as URBAN_V307_INPUTS_V1 "guard" (optional; validated by arch_v307.load_inputs)}"""
     if not doc:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
@@ -305,6 +314,9 @@ def load_inputs(doc, project_id=None):
             if car is None or car.get("line_id") != e["carried_by"]:
                 raise InputsError(f"{e['line_id']}: door {e['door_id']} is not keyed to the carrying line "
                                   f"{e['carried_by']}")
+    g = doc.get("guard")
+    if g is not None:
+        A307.load_inputs({"schema": A307.INPUTS_SCHEMA, "project": doc.get("project_id"), "guard": g}, project_id)
     return dict(doc, _sources=srcs, _entries=ents)
 
 
@@ -482,6 +494,8 @@ def changes_for(doc, prev):
             log["lines_changed"] += 1
         log["by_action"][action] = log["by_action"].get(action, 0) + 1
         srcs = kw.pop("srcs")
+        if before is None:
+            kw["guard_element"] = {"element_id": after["location"]["element_id"], "part": "WHOLE"}
         changes.append(A305._change(piece, "ADD" if before is None else "CHANGE", before, after, step=action,
                                     drawing_reference="; ".join(s["file"] for s in srcs),
                                     verification=A3043._ver(srcs), downstream=kw.pop("downstream", []),
@@ -548,7 +562,22 @@ def changes_for(doc, prev):
                        "range": f"{_fmt(e['_lo'])} .. {_fmt(e['_hi'])}", "scenario": None}],
                 downstream=[f"coverage: {e['item_code']} now has its line"])
     log["by_action"] = dict(sorted(log["by_action"].items()))
+    log["default_guard"] = guard_recheck(doc, prev, changes)
     return changes, log
+
+
+def guard_recheck(doc, prev, changes):
+    """the merged default guard over the V3.0.48 lines with this version's changes + its added lines (arch_v307).
+    -> the guard log. Refuses on any finding that would hold a line: on a changed or added line (arch_v307 raises),
+    and on any other line (this version moves nothing outside its codes)."""
+    rep = {c["before"]["line_id"]: c["after"] for c in changes if c["action"] != "ADD"}
+    view = [rep.get(ln["line_id"], ln) for ln in prev]
+    ch_g, log_g = A307.guard_changes(doc, view, [c for c in changes if c["action"] == "ADD"], set(rep))
+    if ch_g:
+        raise ValueError(f"{METHOD}: the default guard holds {len(ch_g)} line(s) this version does not change "
+                         f"({', '.join(sorted(c['before']['line_id'] for c in ch_g)[:5])}): an earlier stage owns "
+                         f"them; the run is refused, nothing outside the waterproofing codes moves")
+    return log_g
 
 
 # ================================================================================================ checks
@@ -777,4 +806,4 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "WP_CODES", "load_inputs",
-           "changes_for", "check_wet_area_wp", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
+           "changes_for", "guard_recheck", "check_wet_area_wp", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]
