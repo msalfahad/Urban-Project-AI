@@ -1,6 +1,7 @@
-"""T-498: rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json = 1.53.0 + T-508 (merged 40ab9061) PROMOTED by R-T485-1 + the
-pending ARCH_TAKEOFF_V3.0.57 package (T-498) + the B9-01 / B9-04 text and the four material item codes (units on B9-01,
-mortar / glue on B9-04); no owner or capability change; the file equals its builder; checks clean on the head."""
+"""T-498 r2: rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json = 1.54.0 + T-310 r7 (merged 87ef8718) PROMOTED by R-T485-1 +
+the pending ARCH_TAKEOFF_V3.0.58 package (T-498) + the B9-01 / B9-04 text and the four material item codes (units on
+B9-01, mortar / glue on B9-04) + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in code writes its
+codes); no owner change; the file equals its builder; checks clean on the head."""
 from __future__ import annotations
 
 import copy
@@ -13,11 +14,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from engine.source import arch_v3057 as A  # noqa: E402
+from engine.source import arch_v3058 as A  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.53.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json"
 
 
 @pytest.fixture(scope="module")
@@ -27,7 +28,7 @@ def docs():
 
 def test_only_material_text_codes_and_the_promotion_change(docs):
     old, new = docs
-    assert new["version"] == "1.54.0"
+    assert new["version"] == "1.55.0"
     ob = {f["code"]: f for f in old["families"]}
     nb = {f["code"]: f for f in new["families"]}
     assert {c for c in nb if {k: v for k, v in nb[c].items() if k != "candidate"}
@@ -53,7 +54,7 @@ def test_only_material_text_codes_and_the_promotion_change(docs):
     assert promoted["families_changed_by_line_diff"] == ["B3-06", "B7-07", "B7-08"]
     p = new["pending_packages"][-1]
     assert [x["task"] for x in new["pending_packages"]] == ["T-498"]
-    assert (p["task"], p["method_version"], p["module"]) == ("T-498", A.METHOD, "engine/source/arch_v3057.py")
+    assert (p["task"], p["method_version"], p["module"]) == ("T-498", A.METHOD, "engine/source/arch_v3058.py")
     assert p["changes_families_by_item_code"] == list(A.CODES)
     assert "merge_commit" not in p and FMC.SHA40.match(p["task_commit"])
     cen, ocen = new["candidate_census"], old["candidate_census"]
@@ -69,7 +70,7 @@ def test_only_material_text_codes_and_the_promotion_change(docs):
 
 def test_equals_its_builder(docs):
     sys.path.insert(0, str(ROOT / "research" / "agents_t498"))
-    import build_master_1_54_0 as B
+    import build_master_1_55_0 as B
     assert NEW.read_text(encoding="utf-8") == B.text(B.build(docs[1]["pending_packages"][-1]["task_commit"]))
 
 
@@ -81,4 +82,4 @@ def test_pending_dropped_is_stale(docs, monkeypatch):
     bad = copy.deepcopy(docs[1])
     bad["pending_packages"] = bad["pending_packages"][:-1]
     monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
-    assert any("arch_v3057" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))
+    assert any("arch_v3058" in p for p in FMC.check(bad, root=ROOT, is_ancestor=None))

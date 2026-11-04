@@ -1,9 +1,0 @@
-[
- {
-  "task": "T-508",
-  "merge_commit": "40ab9061aac4b962b839597ff8623d1d0a7ac20d",
-  "verdict_time": "2026-11-04 19:52 UTC",
-  "board_file": "BOARD.md",
-  "board_status_head": "MERGED 40ab9061 (Verifier 2026-11-04T19:52Z per `date -u`, run session_01E6cPnf1RBtAuTpBfdmLdT6, lock checker; GATE B PASS on 470c7960, merge on 9e86fcf5 clean (no conflict)"
- }
-]

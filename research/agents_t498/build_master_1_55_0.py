@@ -1,22 +1,27 @@
-"""T-498: build rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json = 1.53.0 (T-508, merged 40ab9061; never edited)
-  (1) + the PROMOTION of the one package 1.53.0 holds pending that has since merged (T-508 V3.0.56, merge 40ab9061,
-      Verifier 2026-11-04 19:52 Gate B), by the T-485 rule R-T485-1, with the T-483 r2 promotion functions UNCHANGED
+"""T-498 r2: build rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json = 1.54.0 (T-310 r7, merged 87ef8718; never edited)
+  (1) + the PROMOTION of the one package 1.54.0 holds pending that has since merged (T-310 r7 V3.0.57, merge 87ef8718,
+      Verifier 2026-11-04 22:45 Gate B), by the T-485 rule R-T485-1, with the T-483 r2 promotion functions UNCHANGED
       (research/agents_t483/build_master_1_48_0.py): merge commit and verdict from git and the board
-      (out/PROMOTIONS_SOURCE_1_54_0.json, research/agents_t483/t483_promotions_source.build on 1.53.0), the families the
-      package changed from the LINE DIFF V3.0.55 -> V3.0.56 of this task's reproduced chain run
-      (out/T498_PACKAGE_FAMILIES.json, research/agents_t483/t483_package_families.attribute, chain (55, 56)), and the
-      candidate census re-run at V3.0.56 (out/LINE_INDEX_V3_0_56.json, research/agents_t479/t479_registry_census.py
-      unchanged);
-  (2) + the pending ARCH_TAKEOFF_V3.0.57 package (T-498, tools/family_master_candidate.py rule r3), the B9-01 / B9-04
+      (out/PROMOTIONS_SOURCE_1_55_0.json, t498_promotions_source.py on 1.54.0), the families the package changed from
+      the LINE DIFF V3.0.56 -> V3.0.57 of this task's reproduced chain run (out/T498_PACKAGE_FAMILIES.json,
+      t498_package_families.py, chain (56, 57)), and the candidate census re-run at V3.0.57
+      (out/LINE_INDEX_V3_0_57.json, research/agents_t479/t479_registry_census.py unchanged; verdict set board
+      verdicts/V3.0.44 b3b08dd7, downgrade snapshot research/agents_t469 81732639);
+  (2) + the pending ARCH_TAKEOFF_V3.0.58 package (T-498, tools/family_master_candidate.py rule r3), the B9-01 / B9-04
       text, and the four item codes the package's lines carry: MAS.UNITS.BLACK / MAS.UNITS.WHITE owned by B9-01 (the
       'pcs procurement' part of block walls) and MAS.MORTAR.BLACK / MAS.GLUE.AAC owned by B9-04 (mortar / glue), one
-      family per code. B9-04 owned no item code: its census entry moves from 'n/a' to 'no' (0 lines at V3.0.56,
-      asserted); B9-01's census is unchanged (no line of the new codes at V3.0.56); states stay until a promotion.
+      family per code. B9-04 owned no item code: its census entry moves from 'n/a' to 'no' (0 lines at V3.0.57,
+      asserted); B9-01's census is unchanged (no line of the new codes at V3.0.57); candidate states stay until a
+      promotion;
+  (3) B9-04 CAPABILITY NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (RAISED; the T-199 1.25.0 precedent): merged,
+      tested code now writes its two codes (engine/source/arch_v3058.py, opt-in only; the released V2.9 + route G reads
+      none of it); its name_terms leave with NOT_IMPLEMENTED; capability counts re-derived.
 
-T-310 may build its own master in parallel on a READY branch; under the merge-order rule the package merged later
-rebases on the earlier. No quantity, capability, owner or line change with this file; the released default is untouched.
+r1 built 1.54.0 on 1.53.0 for the same package as V3.0.57; T-310 merged 1.54.0 / V3.0.57 first (merge-order rule: the
+package READY later rebases and renumbers). No quantity, owner or line change with this file; the released default is
+untouched.
 
-    python3 -I research/agents_t498/build_master_1_54_0.py --task-commit <sha> | --check
+    python3 -I research/agents_t498/build_master_1_55_0.py --task-commit <sha> | --check
 """
 from __future__ import annotations
 
@@ -38,41 +43,42 @@ import build_master_1_43_0 as B  # noqa: E402  (unit text and release rule of T-
 import build_master_1_48_0 as P48  # noqa: E402  (T-483 r2 promotion functions, unchanged)
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.53.0.json"
-NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
-VERSION = "1.54.0"
-PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_54_0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json"
+NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json"
+VERSION = "1.55.0"
+PROMOTIONS = HERE / "out/PROMOTIONS_SOURCE_1_55_0.json"
 ATTRIB = HERE / "out/T498_PACKAGE_FAMILIES.json"
-INDEX = HERE / "out/LINE_INDEX_V3_0_56.json"
-BOARD_COMMIT = "8765c0b1"
-OLD_CAND = "ARCH_TAKEOFF_V3.0.55"
-CAND, AS_OF = "ARCH_TAKEOFF_V3.0.56", "T-508"
-DIFF_SPAN = "V3.0.56"
+INDEX = HERE / "out/LINE_INDEX_V3_0_57.json"
+BOARD_COMMIT = "0884a2d0"
+OLD_CAND = "ARCH_TAKEOFF_V3.0.56"
+CAND, AS_OF = "ARCH_TAKEOFF_V3.0.57", "T-310"
+DIFF_SPAN = "V3.0.57"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
-MOD = "engine/source/arch_v3057.py"
-TST = "tests/t498_block_materials/test_arch_v3057.py"
+MOD = "engine/source/arch_v3058.py"
+TST = "tests/t498_block_materials/test_arch_v3058.py"
 UB, UW, MO, GL = "MAS.UNITS.BLACK", "MAS.UNITS.WHITE", "MAS.MORTAR.BLACK", "MAS.GLUE.AAC"
 NEW_CODES = {"B9-04": [MO, GL]}
 ADD_CODES = {"B9-01": [UB, UW]}   # B9-01 already owns MAS.BLOCK etc.: codes appended
 PENDING = {
-    "task": "T-498", "method_version": "ARCH_TAKEOFF_V3.0.57", "module": MOD,
+    "task": "T-498", "method_version": "ARCH_TAKEOFF_V3.0.58", "module": MOD,
     "status": FMC.PENDING_STATUS, "integrates": ["T-453", "T-506", "T-487", "T-488"],
     "tests": ["tests/t498_block_materials"],
     "changes_families_by_item_code": [UB, UW, MO, GL],
     "note": "T-498 (research/agents_t498/T-498_BLOCK_MATERIALS_INTEGRATION.md): blockwork material lines beside the "
-            "MAS.BLOCK lines (R-T498-1), recomputed on the V3.0.56 masonry lines with the merged T-453 r2 machinery "
+            "MAS.BLOCK lines (R-T498-1), recomputed on the V3.0.57 masonry lines (= V3.0.56: T-310 moved "
+            "waterproofing only) with the merged T-453 r2 machinery "
             "(material base = contract net - REQUIRED RC lintel faces bound to the B9-02 lines): black 0.20 units "
             "1,075.80 pcs (86.064 m2 VERIFIED), mortar 1.269444 m3 PROVISIONAL (10.155552 bags, 1.396388 m3 sand "
             "beside), AAC glue 20.061 kg VERIFIED + 23.535 kg PROVISIONAL + range 842.06025 .. 861.32025 kg (3 lines); "
             "0.15 m black units / mortar, white units and every held masonry line blank by name; the Gate B "
             "integration package",
 }
-PROPOSED = ("1.54.0 (T-498): moved by the pending ARCH_TAKEOFF_V3.0.57 package (Gate B); the released capability of "
-            "V2.9 + route G is unchanged; the V3.0.57 lines stay pending until a promotion version")
-OPT_IN = "ARCH_TAKEOFF_V3.0.57 (engine/source/arch_v3057.py, opt-in candidate; pending Gate B, T-498)"
-MISS = {"B9-01": "V3.0.57: black 0.20 units 1,075.80 pcs theoretical on 86.064 m2 (2 lines); 0.15 m black units HELD "
+PROPOSED = ("1.55.0 (T-498): moved by the pending ARCH_TAKEOFF_V3.0.58 package (Gate B); the released capability of "
+            "V2.9 + route G is unchanged; the V3.0.58 lines stay pending until a promotion version")
+OPT_IN = "ARCH_TAKEOFF_V3.0.58 (engine/source/arch_v3058.py, opt-in candidate; pending Gate B, T-498)"
+MISS = {"B9-01": "V3.0.58: black 0.20 units 1,075.80 pcs theoretical on 86.064 m2 (2 lines); 0.15 m black units HELD "
                  "(module not stated); white AAC units HELD (face not selected); procurement / breakage HELD",
-        "B9-04": "V3.0.57: black mortar 1.269444 m3 PROVISIONAL (10 mm joint owner-provisional), 0.15 m mortar HELD "
+        "B9-04": "V3.0.58: black mortar 1.269444 m3 PROVISIONAL (10 mm joint owner-provisional), 0.15 m mortar HELD "
                  "(T-367 beside); AAC glue 43.596 kg point + 842.06025 .. 861.32025 kg range; project bag group HELD "
                  "(16 held lines); the cross-trade cement / sand total is T-511's census"}
 
@@ -117,12 +123,13 @@ def _build(task_commit):
                          f"unchanged; its {len(promoted)} pending package promoted to candidate_packages; the families "
                          f"it changed re-derived at {CAND}, every other family's candidate block moved to {CAND} with "
                          f"its census asserted unchanged (B9-04: n/a -> no by its new item codes); B9-01 / B9-04 text "
-                         f"and the four item codes for the pending V3.0.57 package; T-310 "
-                         f"builds its own in parallel)")
+                         f"and the four item codes for the pending V3.0.58 package; B9-04 capability "
+                         f"NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED)")
     new["source"] = (old["source"] + f" | {VERSION} (T-498): {old['version']} + the {len(promoted)} merged pending "
                      f"package promoted (R-T485-1, merge commit + Checker verdict; census + line diff at {CAND}) + "
-                     "pending ARCH_TAKEOFF_V3.0.57 (rule r3) + the B9-01 / B9-04 text and the four material item "
-                     "codes it adds; no quantity, capability or owner change")
+                     "pending ARCH_TAKEOFF_V3.0.58 (rule r3) + the B9-01 / B9-04 text and the four material item "
+                     "codes it adds + B9-04 capability NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED (opt-in code writes "
+                     "its codes, file:line); no quantity or owner change")
     head = new["v3_0_candidate"].split(": the same opt-in candidate", 1)
     if len(head) != 2:
         raise SystemExit("v3_0_candidate text has no head to restate")
@@ -173,7 +180,7 @@ def _build(task_commit):
                 if oc[code]["in_candidate"] != C.NOT_LINE_ATTRIBUTABLE or cc[code] != want:
                     raise SystemExit(f"{code}: its census must move only from n/a to 'no' with 0 lines")
             elif cc[code] != oc[code]:
-                raise SystemExit(f"{code}: no line changed V3.0.55 -> V3.0.56 but its census moved")
+                raise SystemExit(f"{code}: no line changed V3.0.56 -> V3.0.57 but its census moved")
             f["candidate"] = P48.carried_block(f)
             f["candidate"]["candidate_basis"] = f["candidate"]["candidate_basis"].replace(
                 f"+ {DIFF_SPAN} (T-483 r2: no line", f"+ {DIFF_SPAN} (T-498: no line")
@@ -200,15 +207,16 @@ def _build(task_commit):
         f["missing"] = str(f.get("missing") or "") + " | " + MISS[code]
         f["note"] = (str(f["note"]) + " | " + PROPOSED) if f.get("note") else PROPOSED
 
+    raise_capability(new)
     old_cen = old["candidate_census"]
     new["candidate_census"] = dict(
         old_cen, method_version=CAND, lines=census["lines"], lines_sha256=index["inputs"]["lines"],
         verdicts_sha256=index["inputs"].get("verdicts"), downgrades_sha256=index["inputs"].get("downgrades"),
-        index="research/agents_t498/out/LINE_INDEX_V3_0_56.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
+        index="research/agents_t498/out/LINE_INDEX_V3_0_57.json (sha256 " + hashlib.sha256(INDEX.read_bytes()).hexdigest()
               + ")",
-        scope=(f"the development villa run of the merged candidate of record V3.0.56 (T-508 merge "
+        scope=(f"the development villa run of the merged candidate of record V3.0.57 (T-310 r7 merge "
                f"{prom[AS_OF]['merge_commit'][:8]}; BOQ_LINES {vc['lines_sha256'][:8]} reproduced by T-498 from the "
-               "Drive copies, V3.0.55 = a498fc61 on the way); the V3.0.44 "
+               "Drive copies, V3.0.56 = 4e25c54f on the way); the V3.0.44 "
                "verdict set and the T-469 downgrade snapshot bind by line content, as in 1.43.0"),
         families=cc, not_a_boq_lines=census["not_a_boq_lines"], no_family=census["no_family"],
         issue_counts=census["issue_counts"],
@@ -216,17 +224,41 @@ def _build(task_commit):
         previous={"method_version": old_cen["method_version"], "lines": old_cen["lines"],
                   "lines_sha256": old_cen["lines_sha256"]})
     new["promotion"] = {
-        "task": "T-498", "round": "r1", "from_registry": old["version"], "promoted": [p["task"] for p in promoted],
+        "task": "T-498", "round": "r2", "from_registry": old["version"], "promoted": [p["task"] for p in promoted],
         "previous_promotion": {"task": old["promotion"]["task"], "from_registry": old["promotion"]["from_registry"],
                                "promoted": old["promotion"]["promoted"]},
-        "merge_commits_source": "research/agents_t498/out/PROMOTIONS_SOURCE_1_54_0.json (sha256 "
+        "merge_commits_source": "research/agents_t498/out/PROMOTIONS_SOURCE_1_55_0.json (sha256 "
                                 + hashlib.sha256(PROMOTIONS.read_bytes()).hexdigest() + ")",
         "line_diff": "research/agents_t498/out/T498_PACKAGE_FAMILIES.json (sha256 "
                      + hashlib.sha256(ATTRIB.read_bytes()).hexdigest() + ")",
         "rule": old["promotion"]["rule"],
         "quantity_change": "none (no engine, method, line or capability field moves)",
-        "line_index": "research/agents_t498/out/LINE_INDEX_V3_0_56.json"}
+        "line_index": "research/agents_t498/out/LINE_INDEX_V3_0_57.json"}
     return new
+
+
+RAISE = "B9-04"
+RAISE_IMPL = "ARCH_TAKEOFF_V3.0.58 (opt-in): MAS.MORTAR.BLACK, MAS.GLUE.AAC"
+
+
+def raise_capability(new):
+    """(3): B9-04 NOT_IMPLEMENTED -> IMPLEMENTED_NOT_INTEGRATED by merged-candidate code that writes its codes (opt-in
+    only: released_method_reads stays 'none'); rank and counts as T-199 build_master_1_25_0 derives them"""
+    f = {x["code"]: x for x in new["families"]}[RAISE]
+    if f["capability"] != "NOT_IMPLEMENTED" or f["released_method_reads"] != "none":
+        raise SystemExit(f"{RAISE}: not a NOT_IMPLEMENTED family the released route never reads")
+    rank = {k: i for i, k in enumerate(new["capability_states"])}
+    f["capability"] = "IMPLEMENTED_NOT_INTEGRATED"
+    c0, c1 = rank[f["capability_1_0_0"]], rank[f["capability"]]
+    f["capability_change"] = "UNCHANGED" if c0 == c1 else ("RAISED" if c1 < c0 else "LOWERED")
+    f["implementation"] = RAISE_IMPL
+    f.pop("name_terms", None)
+    f["evidence"] = [e for e in f["evidence"] if not e.startswith("no method emits a line of this family")]
+    f["missing"] = MISS[RAISE] + " | released route: block mortar / glue not measured"
+    fam = new["families"]
+    new["capability_counts"] = {k: sum(1 for x in fam if x["capability"] == k) for k in new["capability_states"]}
+    new["capability_change_counts"] = {k: sum(1 for x in fam if x["capability_change"] == k)
+                                       for k in ("RAISED", "LOWERED", "UNCHANGED")}
 
 
 def text(doc):
