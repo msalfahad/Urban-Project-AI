@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-04T07:20Z | Worker 1 | STARTED | run session_01E6cPneihcQAYk7b9JowknZ | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04T07:00Z | Worker 3 | STARTED | run session_01E6cPnctWQZVtQCpzHq7Wxb | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-04 06:54Z | Worker 2 | SUCCESS | T-494 READY (agents/task-T-494 @5f5caabb) | B8-06 pool-court slab WP: new rule version WP_APPLICABILITY_RULES_V1 (unwired); flat 4.907 m2 MEASURED + upturn 5.194 lm (1.039 m2); HELD: window run 0.500 lm (sill not read), ledge 0.640 m2, edge terminations 11.19 lm; drains RFI; overlap with FIN.WP.ROOF 0 m2; roof WP 204.112 -> 209.019 m2 if wired (freelancer 285.00) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-04T06:50Z | Verifier | STARTED | run session_01E6cPncn4U7Nu1wtujbRaHp | repo-attached routine | task state: READY T-483 r3 (Worker 1 06:47), T-310 r3 (Worker 2 06:14) per RUN_LOG | self-check pending
