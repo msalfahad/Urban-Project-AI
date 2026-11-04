@@ -1,4 +1,4 @@
-"""T-310 r6: research/agents_t310/summary_t310.json from a finished v3057_run.py directory (<out>/v3057). Item codes,
+"""T-310 r7: research/agents_t310/summary_t310.json from a finished v3057_run.py directory (<out>/v3057). Item codes,
 units, states, quantities and engine ids only (no coordinates, no names). With --previous it asserts that the ledger
 rows, the totals moved by code and the wet_area_wp identity equal the previous summary's (a rebase moves no quantity
 of this package).
@@ -20,10 +20,10 @@ sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v302 as A302  # noqa: E402
 
-BASE, NEW = "V3_0_54_BOQ_LINES.json", "V3_0_57_BOQ_LINES.json"
+BASE, NEW = "V3_0_56_BOQ_LINES.json", "V3_0_57_BOQ_LINES.json"
 DRAWINGS = ("Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run "
-            "research/agents_t310/v3057_run.py --t167 (own T-167 run this session); r6: V3_0_51 c0b6d664 (T-483) -> "
-            "V3_0_53 36863f6c (T-487) -> V3_0_54 (T-480) base")
+            "research/agents_t310/v3057_run.py --t167 (own T-167 run this session); r7: V3_0_54 c85c4630 (T-480) -> "
+            "V3_0_55 a498fc61 (T-488) -> V3_0_56 (T-508) base")
 
 
 def _q(q):

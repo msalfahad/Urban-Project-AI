@@ -1,4 +1,4 @@
-"""T-310 r6: the development villa's V3.0.57 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
+"""T-310 r7: the development villa's V3.0.57 inputs (built from the sha-pinned merged T-303 / T-309 / T-286 files) and the
 committed run summary (research/agents_t310/summary_t310.json, from research/agents_t310/v3057_run.py on the Drive
 copies; no drawing needed here). Development villa, regression only: never an accuracy claim."""
 from __future__ import annotations
@@ -33,10 +33,10 @@ def test_inputs_validate_and_count():
 
 
 def test_run_summary_pins():
-    assert S["base_candidate"] == {"file": "V3_0_54_BOQ_LINES.json", "sha256_8": "c85c4630", "lines": 4939}  # r6: V3.0.54 of record
-    assert S["new_candidate"] == {"file": "V3_0_57_BOQ_LINES.json", "sha256_8": "72be9379", "lines": 4944}
+    assert S["base_candidate"] == {"file": "V3_0_56_BOQ_LINES.json", "sha256_8": "4e25c54f", "lines": 4989}  # r7: V3.0.56 of record
+    assert S["new_candidate"] == {"file": "V3_0_57_BOQ_LINES.json", "sha256_8": "25a8b406", "lines": 4994}
     i = S["identity"]
-    assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4921)
+    assert (i["replaced"], i["added"], i["outside_rows_identical_to_base"]) == (18, 5, 4971)
     t = S["totals_moved_by_code"]
     assert {k.split("|")[0] for k in t} <= set(A.WP_CODES)
     assert t["FIN.WP.WALL_UPTURN|m2"]["v3_0_57"]["released"] - t["FIN.WP.WALL_UPTURN|m2"]["base"]["released"] == \
