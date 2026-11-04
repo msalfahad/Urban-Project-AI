@@ -3260,7 +3260,9 @@ def cmd_arch(a):
     v3046 = a.method == V3046                 # T-419: the V3.0.45 run, then its V3.0.46 tie beam / G.B masonry package
     # T-443: ARCH_TAKEOFF_V3.0.47 = the SAME candidate (engine.source.arch_v3047): a V3.0.46 run (its files unchanged) +
     # the Checker-verified stair-room skirting split (URBAN_V3047_INPUTS_V1); named on the V3.0.45 line above (line-stable hub).
-    v3047, v3048, v3049 = a.method in (V3047, V3048, V3049), a.method in (V3048, V3049), a.method == V3049  # T-443 / T-350 r4 (a.method becomes V2.13 below): the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first) (T-310: a V3.0.49 run is a V3.0.48 run first)
+    v3047, v3048 = a.method in (V3047, V3048), a.method == V3048  # T-443 / T-350 r4 (a.method becomes V2.13 below): the V3.0.46 run, then its V3.0.47 stair-room skirting split (T-350 r4: a V3.0.48 run is a V3.0.47 run first)
+    v3049 = a.method == V3049                 # T-310 (flag set before the V2.13 rewrite): the V3.0.48 run, then its V3.0.49 wet-area / pool waterproofing
+    v3047, v3048 = v3047 or v3049, v3048 or v3049  # T-310: a V3.0.49 run is a V3.0.48 (so V3.0.47) run first
     v3046 = v3046 or v3047                    # T-443: a V3.0.47 run is a V3.0.46 run first
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
