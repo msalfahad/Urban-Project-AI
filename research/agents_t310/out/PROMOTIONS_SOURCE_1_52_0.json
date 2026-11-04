@@ -1,9 +1,0 @@
-[
- {
-  "task": "T-480",
-  "merge_commit": "1b66b7199181256597b4e7bdd9f7ba75f368bc3a",
-  "verdict_time": "2026-11-04 15:45 UTC",
-  "board_file": "BOARD.md",
-  "board_status_head": "MERGED 1b66b719 [Verifier 2026-11-04T15:45Z per `date -u` (stamp corrected from 15:50 written ahead of the clock), run session_01E6cPnbrZJQ81JptfW36jPZ, lock checker; GATE B PASS]"
- }
-]
