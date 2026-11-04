@@ -59,6 +59,26 @@ unchanged; every change is a 2F line T-488 held on D-39):
 Hand checks: GF black 62.164 x 12.5 = 777.05 pcs; 62.164 x 0.01475 = 0.916919 m3 x 8 = 7.335352 bags; 1F 23.9 x 12.5 =
 298.75; GF white 4.458 x 4.5 = 20.061 kg; GF OA white 0.20 5.59 - 0.36 (D-GF-06 face) = 5.23 x 4.5 = 23.535 kg.
 
+## 4a. Run of record, diffs, regression
+
+Own chain (this session, Drive copies P7757.dxf ab54dd55 and "ST7757 dxf.dxf" 9f9d1179 in .work/private only): T-167
+v304_run -> research/agents_t498/v3057_run.py (one hub call through T-508 v3056_run, unchanged): V3_0_53 36863f6c,
+V3_0_54 c85c4630, V3_0_55 a498fc61, V3_0_56 **4e25c54f** (candidates of record reproduced) -> V3_0_57 **53c15db2**,
+5,063 lines = 4,989 byte-identical + 74 added + 0 changed; v3057_apply.py on the hub's V3_0_56 gives the same 53c15db2
+(summary_t498.json). Totals move only in the four material codes (asserted):
+
+| code | lines | valued | range | blank (by name) |
+|---|---|---|---|---|
+| MAS.UNITS.BLACK pcs (B9-01) | 20 | 1,075.80 (2) | - | 18 |
+| MAS.MORTAR.BLACK m3 (B9-04) | 20 | 1.269444 PROVISIONAL (2) | - | 18 |
+| MAS.GLUE.AAC kg (B9-04) | 17 | 43.596 (2) | 842.06025 .. 861.32025 (3) | 12 |
+| MAS.UNITS.WHITE pcs (B9-01) | 17 | - | - | 17 |
+
+vs released V2.9 + route G: no material line exists there (all 74 NOT_IN_RELEASED). The run summary prints
+'released 0.0' for MAS.UNITS.WHITE whose 17 lines are all blank: same class as F-C-T508-1 (summary printer, T-512's
+fix), the lines themselves carry no figure. Registry: BOQ_FAMILY_MASTER_1.54.0 (T-508 promoted; census at V3.0.56
+4,989 lines, issues 0; pending V3.0.57; MAS.UNITS.* on B9-01, MAS.MORTAR.BLACK / MAS.GLUE.AAC on B9-04).
+
 ## 5. Lintel pieces
 
 The 16 REQUIRED / 44 blank STR.CONC.LINTEL lines (T-487) ARE the lintel pieces (cast in situ per the printed schedule,
