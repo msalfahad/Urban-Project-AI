@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4573 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4579 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 58 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2163 | pytest suites, one folder per round. |
+| `tests/` | 2166 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -1453,6 +1453,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t496_binding_map/` | 1 |
 | `tests/t497_zone_ownership/` | 4 |
 | `tests/t499_held_subtotals/` | 1 |
+| `tests/t501_stair_skirting_home/` | 2 |
 | `tests/t503_disposal_balance/` | 2 |
 | `tests/t504_plaster_held_subtotals/` | 1 |
 | `tests/t505_disposal_balance_v2/` | 2 |
@@ -1943,6 +1944,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t495/` | 4 |
 | `research/agents_t496/` | 4 |
 | `research/agents_t497/` | 7 |
+| `research/agents_t501/` | 6 |
 | `research/agents_t503/` | 4 |
 | `research/agents_t504/` | 1 |
 | `research/agents_t505/` | 4 |

@@ -1,0 +1,34 @@
+pid,element,face,kind,cls,s0,s1,plan_lm,risers,returns_lm,level0,level1,family,status,value_lm,zigzag_lm,sloped_lm,cause,evidence
+MS1-L.W1,MS1-L,ST-01 W,FLIGHT,WALL,3.5,3.9,0.4,2,0.0,1.2469136296296295,1.0,B7-07 | B7-08,HELD-FORM,,0.733334,0.470071,,GF 298
+MS1-L.W1C,MS1-L,ST-01 W,FLIGHT,WALL,3.0,3.5,0.5,1,0.1,1.5555556666666666,1.2469136296296295,B7-07 | B7-08,HELD-FORM,,0.766667,0.687589,,"GF 298, column 2FBD 0.050 proud"
+MS1-L.W1B,MS1-L,ST-01 W,FLIGHT,WALL,2.25,3.0,0.75,3,0.0,2.018518722222222,1.5555556666666666,B7-07 | B7-08,HELD-FORM,,1.250001,0.881383,,GF 298
+MS1-L.W2,MS1-L,ST-01 W,FLIGHT,HELD,1.2,2.25,1.05,4,0.0,2.666667,2.018518722222222,B7-07 | B7-08,HELD,,1.716668,1.233936,GF window 352-354 in the face beside treads +2.00 .. +2.67; sill / head not printed,GF 352-354
+MS1-T.W,MS1-T,ST-01 W,FLIGHT,HELD,0.0,1.2,1.2,0,0.0,3.5,2.666667,B7-07 | B7-08,HELD,,,,winder corner: 5 risers on A-A vs 4 wedges on the plans (T-184); winders never generated (S-9),GF 49E / 4A0 / 4A2
+MS1-T.N,MS1-T,ST-01 N,FLIGHT,HELD,0.0,1.15,1.15,0,0.0,2.666667,3.5,B7-07 | B7-08,HELD,,,,winder corner: 5 risers on A-A vs 4 wedges on the plans (T-184); winders never generated (S-9),GF 26E
+MS1-LD.E,MS1-LD,ST-01 E,LANDING,WALL,0.0,1.15,1.15,0,0.0,3.5,3.5,FIN.SKIRTING,DRAWING-CONFIRMED,1.15,,,,"GF 21B, 1F B16; south edge 481 / A92 s 1.150"
+MS1-LD.N,MS1-LD,ST-01 N,LANDING,HELD,1.35,2.5,1.15,0,0.0,3.5,3.5,FIN.SKIRTING,HELD,,,,0.103 wall + 0.900 opening (3FD / 3FE) + 0.147 wall; head / sill vs +3.50 not printed,GF 2AB / 3FD / 26F
+MS1-U.E1,MS1-U,ST-01 E,FLIGHT,WALL,1.15,2.1,0.95,4,0.0,3.5,4.075757575757576,B7-07 | B7-08,HELD-FORM,,1.616668,1.110855,,GF 21B; 1F B16
+MS1-U.E2,MS1-U,ST-01 E,FLIGHT,HELD,2.1,3.0,0.9,3,0.0,4.075757575757576,4.621212121212121,B7-07 | B7-08,HELD,,1.400001,1.052389,GF hidden opening 33C / 33D (0.90) in the face; height vs the flight not printed,GF 33C / 33D
+MS1-U.E3a,MS1-U,ST-01 E,FLIGHT,WALL,3.0,4.15,1.15,4,0.0,4.621212121212121,5.318181818181818,B7-07 | B7-08,HELD-FORM,,1.816668,1.344719,,GF 21C; 1F B16; to ABE s 4.150
+MS1-U.E3b,MS1-U,ST-01 E,FLIGHT,CONFLICT,4.15,4.45,0.3,1,0.0,5.318181818181818,5.5,B7-07 | B7-08,CONFLICT,,0.466667,0.350796,arch plans end MS1-U at its 11th riser line (ABE nosing s 4.150 / ABD face 4.200: 1F floor beyond); section A-A counts 12 risers and ST p.4 draws the 12th edge 459 at s 3.30 of the flight (s 4.450); Q-46 RFI / B20 head clash (T-412),1F ABE / ABD; ST p.4 459 (T-412)
+MS2-L.W1,MS2-L,ST-01 W,FLIGHT,WALL,3.5,4.5,1.0,4,0.0,6.110909090909091,5.5,B7-07 | B7-08,HELD-FORM,,1.672,1.17184,,1F AF1; 2F 12B7
+MS2-L.W1C,MS2-L,ST-01 W,FLIGHT,WALL,3.0,3.5,0.5,1,0.1,6.416363636363636,6.110909090909091,B7-07 | B7-08,HELD-FORM,,0.768,0.68592,,"1F AF1, column 3005 0.050 proud"
+MS2-L.W1B,MS2-L,ST-01 W,FLIGHT,WALL,2.25,3.0,0.75,3,0.0,6.874545454545455,6.416363636363636,B7-07 | B7-08,HELD-FORM,,1.254,0.87888,,1F AF1; 2F 12B7
+MS2-L.W2,MS2-L,ST-01 W,FLIGHT,HELD,1.2,2.25,1.05,4,0.0,7.516,6.874545454545455,B7-07 | B7-08,HELD,,1.722,1.230432,1F window C5A-C5C (W13) and 2F window 12CF-12D1 beside treads +7.18 .. +7.52; sill / head not printed,"1F C5C, 2F 12D1"
+MS2-LD.W,MS2-LD,ST-01 W,LANDING,WALL,0.0,1.05,1.05,0,0.0,7.516,7.516,FIN.SKIRTING,DRAWING-CONFIRMED,1.05,,,,"1F AF0, 2F 12B8 (wall on both plans)"
+MS2-LD.W13,MS2-LD,ST-01 W,LANDING,HELD,1.05,1.2,0.15,0,0.0,7.516,7.516,FIN.SKIRTING,HELD,,,,W13 (1F C5C / 2F 12D1) in the face beside the landing; sill / head vs +7.516 not printed,1F C5C
+MS2-LD.NW,MS2-LD,ST-01 N,LANDING,WALL,0.0,1.3,1.3,0,0.0,7.516,7.516,FIN.SKIRTING,DRAWING-CONFIRMED,1.3,,,,"1F ADE, 2F 127E; to the MS2-TR riser face BE5 / 12B5"
+MS2-LD.NE,MS2-LD,ST-01 N,LANDING,WALL,1.3,1.4,0.1,0,0.0,7.684,7.684,FIN.SKIRTING,DRAWING-CONFIRMED,0.1,,,,"1F ADE, 2F 127E; from the MS2-TR riser face"
+MS2-LD.W25,MS2-LD,ST-01 N,LANDING,HELD,1.4,2.4,1.0,0,0.0,7.684,7.684,FIN.SKIRTING,HELD,,,,"W25 (1F CE8 / CE2 / CDF, 2F 1348 / 1342 / 133F stacked) in the face; sill / head vs +7.684 not printed",1F CE2
+MS2-LD.NE2,MS2-LD,ST-01 N,LANDING,WALL,2.4,2.5,0.1,0,0.0,7.684,7.684,FIN.SKIRTING,DRAWING-CONFIRMED,0.1,,,,"1F ADD, 2F 127D"
+MS2-LD.E,MS2-LD,ST-01 E,LANDING,WALL,0.0,1.15,1.15,0,0.0,7.684,7.684,FIN.SKIRTING,DRAWING-CONFIRMED,1.15,,,,"1F B16, 2F 129A; to 135B s 1.150 (MS2-U first nosing)"
+MS2-TR.N,MS2-TR,ST-01 N,STEP,HELD,1.3,1.3,0.0,1,0.0,7.516,7.684,B7-07 | B7-08,HELD,,0.168,,"closing riser meets the north wall at x 1.30 (BE5 / 12B5, T-493); the 2F diagonal 2F1F / 2F20 is unexplained (Q-ST-11): the step's place on the wall not established","1F BE4 / BE5, 2F 12B4 / 12B5"
+MS2-U.E,MS2-U,ST-01 E,FLIGHT,WALL,1.15,4.45,3.3,12,0.0,7.684,9.7,B7-07 | B7-08,HELD-FORM,,5.316,3.867073,,"1F B16, 2F 129A, no opening"
+D1.E,D1,ST-01 E,FLIGHT,WALL,1.15,2.05,0.9,4,0.0,0.3,1.0,B7-07 | B7-08,HELD-FORM,,1.6,1.140175,,GF 21B
+RS-S.S0,RS-S,RS-S south (outer),FLIGHT,UNKNOWN,,,0.2,1,0.0,,,B7-07 | B7-08,UNKNOWN,,0.360714,0.232143,"no wall or column face on this stretch (wall layer 1 and column layer S-COL.BON both read): only the 50 mm outer band A7 / A9 (layer 5), the continuation of the curved flight's outer band RL-09 whose role (guard or string) is not established; the 0.050 west return of column 2FD2 waits on it",GF A7 / A9; S-COL.BON: nothing before 2FD2 (carried from T-410)
+RS-S.S1,RS-S,RS-S south (outer),FLIGHT,WALL,,,0.8,3,0.05,,,B7-07 | B7-08,HELD-FORM,,1.332143,0.978571,,"GF column 2FD2 (S-COL.BON, 0.800 x 0.250) 0.050 proud of the flight edge A7, ends on 336: 1 return x 0.050 confirmed (the west return HELD with RS-S.S0); ST plan 380 (carried from T-410)"
+RS-S.S2,RS-S,RS-S south (outer),FLIGHT,WALL,,,2.0,7,0.0,,,B7-07 | B7-08,HELD-FORM,,3.125,2.321429,,GF wall face 336 (layer 1) from its west end to beyond the last riser (carried from T-410)
+RS-LD.S1,RS-LD,RS-LD south,LANDING,WALL,,,0.65,0,0.0,,,FIN.SKIRTING,DRAWING-CONFIRMED,0.65,,,,GF wall face 336 to its east end (carried from T-410)
+RS-LD.S2,RS-LD,RS-LD south,LANDING,WALL,,,0.55,0,0.05,,,FIN.SKIRTING,DRAWING-CONFIRMED,0.6,,,,"GF column 2FC6 (S-COL.BON, 0.600 x 0.250) where 336 stops, 0.050 proud: its face to the landing edge AF5 + 1 return x 0.050 at the 336 end (the east end runs past the edge); ST plan 374 (carried from T-410)"
+RS-C.OUT,RS-C,RS-C outer,FLIGHT,UNKNOWN,,,4.515532,0,0.0,,,B7-07 | B7-08,UNKNOWN,,,,"outer 50 mm band 23D / 23E (RL-09): guard or string not established, no wall face drawn; the curved flight itself is UNRESOLVED (T-398, RFI-S27)","GF arcs 23D / 23E, radial tread lines 240 .. 256 (carried from T-410)"
+E1.S,E1,E1 south (wall),FLIGHT,WALL,,,1.2,5,0.0,,,B7-07 | B7-08,HELD-FORM,,2.05,1.470544,,GF wall face 15A (layer 1) along the whole run; riser lines end on it (carried from T-410)
