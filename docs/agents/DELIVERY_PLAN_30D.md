@@ -46,6 +46,16 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-04 08:15; recovery plan in force)
+
+- Since 04:14: 2 merged (T-504 Gate A, T-483 r3 Gate B), 0 rejected. Candidate of record V3.0.51 c0b6d664 (skirting
+  certain 212.379 lm, +9.010), BOQ_FAMILY_MASTER 1.48.0; t485 green again; not released. READY 3 (T-494, T-505, T-310
+  rebase owed).
+- Step 2: stream F delivered T-483 (first stream F merge since 3 Nov 20:12); next T-310 r4 (rebase), T-480 (TODO),
+  then T-314, T-502, T-423, T-424, T-364, T-363, T-372. Stream S: T-487 CLAIMED, then T-488, T-498 (after T-506),
+  T-382, T-474 p2. About 13 packages left in 6 days; 2 Gate B merges since 00:20: 10 Nov AT RISK; 12:00 review next run.
+- Step 5 materials: plaster table V3 merged; T-506 (mortar reconciliation + producer roles) opened so T-498 only wires.
+
 ## Status (Lead, 2026-11-04 04:14; recovery plan in force)
 
 - Since 00:20: 4 merged (T-496, T-503, T-497 Gate B, T-499), 1 rejected (T-310, suite failures; guard fixed in r2,

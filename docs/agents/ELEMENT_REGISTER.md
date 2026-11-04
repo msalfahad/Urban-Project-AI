@@ -46,6 +46,13 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- SKIRTING BEHIND FITTED JOINERY (Lead 2026-11-04 08:15; Checker F-C-T483-1 on T-483 Gate B, V3.0.51): a wall base
+  concealed by FITTED joinery (built-in wardrobe carcass) is a separate named piece of FIN.SKIRTING, never merged into
+  the open walk. OWNER TRADE stays FIN.SKIRTING until classified; no rule yet says whether skirting runs behind fitted
+  joinery or the joinery's own plinth replaces it (no owner answer, no drawing note found). The 2.800 lm dressing faces
+  stay in the V3.0.51 certain 212.379 lm as carried and are classified by T-460 (SKIRTED / NOT_SKIRTED with the drawing
+  or owner-rule basis, else HELD JOINERY_SCOPE_NOT_PRINTED); a move out of the line needs that basis; never 0, never
+  dropped. Joinery itself (doors / carcass) is not a finishes line. Rows: T-483, T-460.
 - STAIR SKIRTING vs ROOM SKIRTING (Lead 2026-11-04 00:20; T-483 R-T481-3, EIMP_SCOPE B7-07 / B7-08 NO_LINE): OWNER
   TRADE B7-07 (wall side) / B7-08 (open side) STAIR SKIRTING for every skirting piece along a flight's raking edge,
   developed length along the pitch; OWNER TRADE FIN.SKIRTING for level skirting on a landing or a stair-room floor

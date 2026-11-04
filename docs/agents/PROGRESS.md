@@ -1,9 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-04 04:14 UTC (Lead). Previous version: 2026-11-03 20:20 UTC. The released numbers did not change
+Last update: 2026-11-04 08:15 UTC (Lead). Previous version: 2026-11-04 04:14 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.50 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.51 (not released).
+
+Since 4 Nov 04:14 (newest first; two checked and merged, none sent back):
+- Remaining skirting IN THE CANDIDATE (V3.0.51, checked line by line, the checker walked the dressing room himself):
+  skirting 203.37 -> 212.38 m.l certain (+9.01 m.l, +4.43 %): skirting now runs under windows whose sill is above the
+  floor, floor-level glazing is deducted, the first-floor dressing room is walked; held part 15.73 -> 2.20 m.l (two
+  stair-side pieces, waiting for their stair line). Freelancer 282.85 m.l: a rule difference, not an error. Open point:
+  2.80 m.l behind the fitted wardrobe front is kept in for now; whether skirting is fitted behind built-in joinery is
+  being checked on the drawings (never dropped without a basis).
+- Plaster materials table: a coat total over any held row is now held with "at least" the known part (4.73 m3 known
+  over 25 of 52 rows), never shown as a complete total. Not yet in the candidate.
+- Waiting for the checker: pool-court slab waterproofing (4.91 m2 open to the sky, missing today) and the disposal
+  balance with losses as their own items (no-reuse end unchanged: at least 234.33 m3 in place leaves the site).
+- Wet-area waterproofing: engineering agreed, must rebase once more on the new candidate (next worker run).
+- Black-block mortar has two figures (3.87 m3 on all 24 walls vs 1.59 m3 on the 20 cm walls only): a check task now
+  explains the difference before any mortar goes into the candidate.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: about 13 integration packages left in 6 days.
 
 Since 3 Nov 20:20 (newest first; eight checked and merged, one sent back):
 - Earthworks IN THE CANDIDATE for the first time (V3.0.48, then corrected in V3.0.50): excavation 225.94 m3 valued

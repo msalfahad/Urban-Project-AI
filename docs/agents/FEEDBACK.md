@@ -3,6 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-04 08:15 (since 04:14)
+
+- T-504 plaster materials table V3: WORKED (Gate A, R-T504-1, own re-sum AGREE). Decision: T-498 reads V3; lessons row already covers it.
+- T-483 r3 skirting remainder (Gate B): WORKED (V3.0.51, +9.010 lm, 4,871 identical, t485 green). Decision: lessons row ADOPTED; F-C-T483-1 -> register entry + T-460; T-480 TODO.
+- T-310 r3 wet-area WP: PARTIAL (READY on V3.0.50, overtaken by the T-483 merge). Decision: r4 rebase on ea7d375f only, worker 2 first.
+- T-494 pool-court slab WP and T-505 disposal loss terms: READY, Checker pending (queue 1 and 2).
+
 ## Lead 2026-11-04 04:14 (since 00:20)
 
 - T-496 materials binding map: WORKED (1,202 bindings, 0 mismatch). Decision: producer-role condition added to T-498.
