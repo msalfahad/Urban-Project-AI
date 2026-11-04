@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.52 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.50
-(engine.source.arch_v30, arch_v301 .. arch_v3048, arch_v3050), extended with the WET-AREA WATERPROOFING fixes of the
+"""ARCH_TAKEOFF_V3.0.52 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.51
+(engine.source.arch_v30, arch_v301 .. arch_v3048, arch_v3050, arch_v3051), extended with the WET-AREA WATERPROOFING fixes of the
 Checker-verified T-303 inventory (merge 1d3f69b0) and the POOL MEMBRANE / SCREED lines of T-309 (merge 834ada3e) in
 ONE step:
 
@@ -30,12 +30,12 @@ waterproofing codes moves.
 
 DEFAULT GUARD (T-310 r2, T-212 P2 / P4): this stage wires the quantity producer waterproofing policy V3 (and through it
 V2) into the candidate, so the merged default guard runs AT integration over the result (arch_v307.guard_changes, the
-V3.0.6 guard re-check, over the V3.0.50 lines with this version's changes + the lines it adds): a guard finding on a
+V3.0.6 guard re-check, over the V3.0.51 lines with this version's changes + the lines it adds): a guard finding on a
 line this version changes or adds refuses the run, and so does a finding on any other line (this version moves nothing
 outside its waterproofing codes; that line belongs to an earlier stage). With no "guard" block in the inputs the guard
 is NOT run and only the run log says so (state NO_PROJECT_INPUT), the same limit as arch_v306 / arch_v307.
 
-Nothing else moves: every V3.0.50 line not named by the inputs is byte-identical (asserted); totals move only in the
+Nothing else moves: every V3.0.51 line not named by the inputs is byte-identical (asserted); totals move only in the
 waterproofing codes (asserted). Files: V3_0_52_BOQ_LINES.json / .csv, V3_0_52_INTEGRATION_LEDGER.json / .csv,
 V3_0_52_DIFF.csv, V3_0_52_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
@@ -70,11 +70,12 @@ from engine.source import arch_v3045 as A3045
 from engine.source import arch_v3046 as A3046
 from engine.source import arch_v3047 as A3047
 from engine.source import arch_v3050 as A3050      # T-310 r3: rebased on the merged V3.0.50 (T-497, 5f8814e8)
+from engine.source import arch_v3051 as A3051      # T-310 r4: rebased on the merged V3.0.51 (T-483, ea7d375f)
 from engine.source import waterproofing_policy_v3 as WP3
 
 DEFAULT_GUARD_CLASS = "GUARD_HOST"      # T-212 / T-310 r2: wires policy V3; the guard re-check runs (arch_v307)
 METHOD = "ARCH_TAKEOFF_V3.0.52"
-EXTENDS = A3050.METHOD
+EXTENDS = A3051.METHOD
 CANDIDATE = A30.METHOD
 POLICY_ID = "URBAN_BOQ_T310_ARCH_V3_0_52"
 INPUTS_SCHEMA = "URBAN_V3052_INPUTS_V1"
@@ -151,7 +152,7 @@ PIECES = {
              "drawing_method": "the merged T-309 face ledger on the verified pool shell (Checker own re-read of the "
                                "detail by handle: layer order and faces AGREE)"},
 }
-WAITING = dict(A3050.WAITING)
+WAITING = dict(A3051.WAITING)
 WAITING.update({
     "T310_DOORWAY_SEGMENTS": "doorway upturn segments (door width x 0.20) HELD in every wet room while the project's "
                              "doorway detail (coverage inside the floor piece or a separate return) is not printed "
@@ -567,7 +568,7 @@ def changes_for(doc, prev):
 
 
 def guard_recheck(doc, prev, changes):
-    """the merged default guard over the V3.0.50 lines with this version's changes + its added lines (arch_v307).
+    """the merged default guard over the V3.0.51 lines with this version's changes + its added lines (arch_v307).
     -> the guard log. Refuses on any finding that would hold a line: on a changed or added line (arch_v307 raises),
     and on any other line (this version moves nothing outside its codes)."""
     rep = {c["before"]["line_id"]: c["after"] for c in changes if c["action"] != "ADD"}
@@ -671,6 +672,9 @@ def integrate(prev, changes, for_lead=()):
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
     guards = A3031._family_guards(out, for_lead)
+    # T-310 r4: a skirting line V3.0.51 re-booked carries the superseded V3.0.44 record; V3.0.51's own check governs it
+    # (check_remainder, without `before`: the V3.0.50 lines are not this version's input), the V3.0.44 check the rest
+    older = [ln for ln in out if not ((ln.get("calculation") or {}).get("inputs") or {}).get(A3051.REC_KEY)]
     ident = {"base_lines": len(prev), "v3_0_52_lines": len(out), "v3_0_52_rows": len(changes),
              "replaced": len(repl), "added": len(adds), "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
@@ -678,9 +682,10 @@ def integrate(prev, changes, for_lead=()):
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(out),
+             "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(older),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
-             "stair_rooms": A3047.check_stair_rooms(out), "wet_area_wp": check_wet_area_wp(out, prev)}
+             "stair_rooms": A3047.check_stair_rooms(out), "remainder": A3051.check_remainder(out),
+             "wet_area_wp": check_wet_area_wp(out, prev)}
     pids = {(ln["project"]["project_id"], ln["project"]["revision_set_sha256"]) for ln in out}
     if len(pids) != 1:
         raise ValueError(f"{METHOD}: {len(pids)} project identities in the lines")

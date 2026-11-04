@@ -2,13 +2,13 @@
  "task": "T-310",
  "method": "ARCH_TAKEOFF_V3.0.52",
  "base_candidate": {
-  "file": "V3_0_50_BOQ_LINES.json",
-  "sha256_8": "d40c4ec5",
+  "file": "V3_0_51_BOQ_LINES.json",
+  "sha256_8": "c0b6d664",
   "lines": 4876
  },
  "new_candidate": {
   "file": "V3_0_52_BOQ_LINES.json",
-  "sha256_8": "dbb9aab0",
+  "sha256_8": "2a51ae59",
   "lines": 4881
  },
  "identity": {
@@ -16,7 +16,7 @@
   "added": 5,
   "outside_rows": 4858,
   "outside_rows_identical_to_base": 4858,
-  "outside_rows_sha256": "8e36f95085097534a4b97404b4f0492c5092e0e285012feff0838a7896e4031c",
+  "outside_rows_sha256": "7a6ee58b7bf59260251b32343053c5d057196fc64b16eda663ec465b43d6dcf6",
   "wet_area_wp": {
    "added_held_doors": 3,
    "doors": {
@@ -48,8 +48,8 @@
    },
    "vs_released_v2_9": {
     "NOT_IN_RELEASED": 3289,
-    "QUANTITY_DIFFERS": 998,
-    "SAME_QUANTITY": 594
+    "QUANTITY_DIFFERS": 1001,
+    "SAME_QUANTITY": 591
    }
   }
  },
@@ -427,5 +427,5 @@
    }
   }
  },
- "drawings": "Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run research/agents_t310/v3052_run.py --t167 (own T-167 run this session); r3: V3_0_48 33a81c53 -> V3_0_50 (T-497) base"
+ "drawings": "Drive 'Alsenan chalet project': P7757.dxf (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179; run research/agents_t310/v3052_run.py --t167 (own T-167 run this session); r4: V3_0_48 33a81c53 -> V3_0_50 d40c4ec5 (T-497) -> V3_0_51 (T-483) base"
 }
