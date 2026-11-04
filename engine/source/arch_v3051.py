@@ -1,5 +1,5 @@
-"""ARCH_TAKEOFF_V3.0.49 (T-483, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.48
-(engine.source.arch_v30, arch_v301 .. arch_v3048), extended with the SKIRTING REMAINDER of the merged T-481 census
+"""ARCH_TAKEOFF_V3.0.51 (T-483, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.50
+(engine.source.arch_v30, arch_v301 .. arch_v3048, arch_v3050), extended with the SKIRTING REMAINDER of the merged T-481 census
 (a8609a7a; Checker own re-measure AGREE on W17 / W11 / W02 / the 1F dressing) in ONE step:
 
   SILL_RELEASE  a window whose sill is now ESTABLISHED above the room floor (> 0.02 m, read in a section or a printed
@@ -28,9 +28,9 @@ determinate net and its W13 / W25 held range 2.200 lm to B7): the owner lines B7
 so a transfer would drop the faces from the BOQ (WAITING T483_1F_SHAFT); the W02 pier D-53. STAIR_OWNED closes are
 supported for a villa whose stair skirting lines exist.
 
-Nothing else moves: every V3.0.48 line not named by the inputs is byte-identical (asserted); totals move only in
-FIN.SKIRTING (asserted). Files: V3_0_49_BOQ_LINES.json / .csv, V3_0_49_INTEGRATION_LEDGER.json / .csv,
-V3_0_49_DIFF.csv, V3_0_49_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
+Nothing else moves: every V3.0.50 line not named by the inputs is byte-identical (asserted); totals move only in
+FIN.SKIRTING (asserted). Files: V3_0_51_BOQ_LINES.json / .csv, V3_0_51_INTEGRATION_LEDGER.json / .csv,
+V3_0_51_DIFF.csv, V3_0_51_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
 from __future__ import annotations
@@ -61,21 +61,21 @@ from engine.source import arch_v3044 as A3044
 from engine.source import arch_v3045 as A3045
 from engine.source import arch_v3046 as A3046
 from engine.source import arch_v3047 as A3047
-from engine.source import arch_v3048 as A3048
+from engine.source import arch_v3050 as A3050
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: re-books checker-merged ledgers; adds no default value
-METHOD = "ARCH_TAKEOFF_V3.0.49"
-EXTENDS = A3048.METHOD
+METHOD = "ARCH_TAKEOFF_V3.0.51"
+EXTENDS = A3050.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T483_ARCH_V3_0_49"
-INPUTS_SCHEMA = "URBAN_V3049_INPUTS_V1"
-LEDGER_SCHEMA = "URBAN_V3049_INTEGRATION_LEDGER_V1"
+POLICY_ID = "URBAN_BOQ_T483_ARCH_V3_0_51"
+INPUTS_SCHEMA = "URBAN_V3051_INPUTS_V1"
+LEDGER_SCHEMA = "URBAN_V3051_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 InputsError = A3031.InputsError
 _r = A3018._r
 _fmt = A3030._fmt
 RULE_ID, RULE_VERSION = "R-T483-1", "T-483"
-REC_KEY = "skirting_remainder_v3049"
+REC_KEY = "skirting_remainder_v3051"
 CODE, UNIT = "FIN.SKIRTING", "lm"
 P_SILL, P_CLOSE, P_WALK = "SILL_RELEASE", "RANGE_CLOSE", "CELL_WALK"
 ACTIONS = ("RELEASE", "ABSORB_RANGE", "CLOSE_RANGE", "WALK")
@@ -95,7 +95,7 @@ MAX_SILL_M = 6.0
 LINE_ID_RE = re.compile(r"^L-[0-9a-f]{20}$")
 
 PIECES = {
-    P_SILL: {"module": "engine/source/arch_v3049.py (a window sill established above the floor by a section or a "
+    P_SILL: {"module": "engine/source/arch_v3051.py (a window sill established above the floor by a section or a "
                        "printed chain: its base released into the room's determinate skirting line; the room's range "
                        "line counted in it)", "policy": "SKIRTING_SILL_RELEASE_V2", "rule_id": "R-T481-1 (R-T483-1 a, b)",
              "owner_rules": ["UP-SKIRT-001 1.4.0 (the wall base continues under a sill above the floor)",
@@ -106,7 +106,7 @@ PIECES = {
              "drawing_method": "the merged T-481 sill reading of each window (section cut on printed level markers, "
                                "elevation chain; spread across views named): sill above the floor -> both listed "
                                "halves leave the list"},
-    P_CLOSE: {"module": "engine/source/arch_v3049.py (a held range whose every window has no room skirting under it "
+    P_CLOSE: {"module": "engine/source/arch_v3051.py (a held range whose every window has no room skirting under it "
                         "closed NOT_APPLICABLE_WITH_EVIDENCE)", "policy": "SKIRTING_RANGE_CLOSE_V1",
               "rule_id": "R-T481-1 / R-T481-3 (R-T483-1 a, c)",
               "owner_rules": ["UP-SKIRT-001 1.4.0 (floor glazing: no wall base)",
@@ -116,7 +116,7 @@ PIECES = {
                                      "stair face (the stair skirting owns it)",
               "drawing_method": "the merged T-481 readings: sill 0.00 drawing-confirmed (floor glazing), or the "
                                 "window's stretch inside a merged T-410 stair side stretch (station by nosing)"},
-    P_WALK: {"module": "engine/source/arch_v3049.py (a blocked dry-cell skirting line valued from the merged walk: "
+    P_WALK: {"module": "engine/source/arch_v3051.py (a blocked dry-cell skirting line valued from the merged walk: "
                        "sides by handle, openings by id)", "policy": "SKIRTING_CELL_WALK_V1",
              "rule_id": "R-T481-2 (R-T483-1 d)",
              "owner_rules": ["UP-SKIRT-001 (dry room: skirting at the wall base)", "UP-CER-003 (doors deducted)",
@@ -126,7 +126,7 @@ PIECES = {
              "drawing_method": "the merged T-481 cell walk on the plan by handle: each side cut into stretches, faces "
                                "skirted, openings deducted by id, joinery-backed length beside (not deducted)"},
 }
-WAITING = dict(A3048.WAITING)
+WAITING = dict(A3050.WAITING)
 WAITING.pop("T443_1F_SHAFT", None)
 WAITING.update({
     "T483_1F_SHAFT": "1F living line: the ST-1F shaft faces (R-T481-3: 9.050 lm along flights / landings to B7, 1.175 "
@@ -252,7 +252,7 @@ def check_walk(wk, where):
 
 
 def load_inputs(doc, project_id=None):
-    """URBAN_V3049_INPUTS_V1 -> the validated doc.
+    """URBAN_V3051_INPUTS_V1 -> the validated doc.
     {"schema", "project_id", "sources": [{"task", "file", "sha256", "merge_commit", "checker_run"}],
      "releases": [{"line_id", "expect": {"gross", "measured_net"}, "windows": [{"census_id", "edge_lm", "sill_m",
                    "status", "why"}], "range_line": {"line_id", "expect": {"low", "high"}}, "source_tasks"}],
@@ -460,7 +460,7 @@ def changes_for(doc, prev):
     if not doc:
         return [], {"piece": "+".join((P_SILL, P_CLOSE, P_WALK)), "state": "NO_PROJECT_INPUT"}
     if any(((ln.get("calculation") or {}).get("inputs") or {}).get(REC_KEY) for ln in prev):
-        raise InputsError("the candidate already carries V3.0.49 records (applied once)")
+        raise InputsError("the candidate already carries V3.0.51 records (applied once)")
     by = {ln["line_id"]: ln for ln in prev}
     S = doc["_sources"]
     changes = []
@@ -534,7 +534,7 @@ def check_remainder(lines, before=None):
         if not rec:
             continue
         if not _is_skirting(ln):
-            raise ValueError(f"{METHOD}: a V3.0.49 record on {ln['item_code']} {ln['line_id']}")
+            raise ValueError(f"{METHOD}: a V3.0.51 record on {ln['item_code']} {ln['line_id']}")
         act = rec.get("action")
         if act in ("RELEASE", "WALK"):
             if ln["evidence_state"] not in VALUED_STATES or ln.get("measured_net") is None:
@@ -575,7 +575,7 @@ def check_remainder(lines, before=None):
 
 # ================================================================================================ integrate / write
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.49 lines, identity). Changed lines replace their candidate line in place; every other candidate line is
+    """-> (V3.0.51 lines, identity). Changed lines replace their candidate line in place; every other candidate line is
     byte-identical (asserted)."""
     sid = {ln["line_id"]: i for i, ln in enumerate(prev)}
     out = list(prev)
@@ -598,14 +598,14 @@ def integrate(prev, changes, for_lead=()):
     # NARROW_RANGE on a range now closed) describes the superseded state, so that version's check skips it
     mine = [ln for ln in out if ln["line_id"] in repl]
     older = [ln for ln in out if ln["line_id"] not in repl]
-    ident = {"base_lines": len(prev), "v3_0_49_lines": len(out), "v3_0_49_rows": len(changes),
+    ident = {"base_lines": len(prev), "v3_0_51_lines": len(out), "v3_0_51_rows": len(changes),
              "replaced": len(repl), "added": 0, "guards": guards,
              "roof_buildup": A3031.check_roof_layers(out), "ceilings": A3032.check_ceilings(out),
              "corrections": A3033.check_corrections(out), "tile_zones": A3034.check_zones(out),
              "fence": A3035.check_boundary(out), "lists": A3036.check_lists(out), "beds": A3038.check_beds(out),
              "lift": A3038.check_lift(out), "landing": A3038.check_landing(out), "flights": A3039.check_flights(out),
              "gb_runs": A3040.check_runs(out), "pieces": A3041.check_pieces(out), "slab": A3042.check_slab(out),
-             "earthworks": A3048.check_earthworks(out), "skirting": A3044.check_skirting(older),
+             "earthworks": A3050.check_zone_owner(out), "skirting": A3044.check_skirting(older),
              "blinding": A3045.check_blinding(out), "tie_masonry": A3046.check_tie_masonry(out),
              "stair_rooms": A3047.check_stair_rooms(out), "remainder": check_remainder(out, prev),
              "superseded_records": sorted(k for ln in mine for k in ((ln.get("calculation") or {}).get("inputs") or {})
@@ -637,7 +637,7 @@ def ledger_rows(changes, released_lines=None):
                      "line_id": ref["line_id"], "item_code": ref["item_code"], "floor": loc.get("floor"),
                      "room_id": loc.get("room_id"), "element_id": loc.get("element_id"), "unit": ref["unit"],
                      "before_released_v2_9": b29, "before_base": A30._qty(c.get("before")),
-                     "after_v3_0_49": A30._qty(ref), "evidence_status": c.get("evidence_status"),
+                     "after_v3_0_51": A30._qty(ref), "evidence_status": c.get("evidence_status"),
                      "still_held": c.get("held"), "release_status": "NOT RELEASED",
                      "owner_manual_method": PIECES[c["piece"]]["owner_manual_method"],
                      "drawing_derived_method": PIECES[c["piece"]]["drawing_method"],
@@ -646,9 +646,9 @@ def ledger_rows(changes, released_lines=None):
 
 
 LEDGER_CSV = ("version", "piece", "action", "change", "line_id", "item_code", "floor", "room_id", "element_id", "unit",
-              "v2_9", "base", "v3_0_49", "evidence_status", "still_held", "verification")
+              "v2_9", "base", "v3_0_51", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
-            "v3_0_49")
+            "v3_0_51")
 
 
 def ledger_csv(rows):
@@ -658,7 +658,7 @@ def ledger_csv(rows):
                        "line_id": r["line_id"], "item_code": r["item_code"], "floor": r.get("floor") or "",
                        "room_id": r.get("room_id") or "", "element_id": r.get("element_id") or "", "unit": r["unit"],
                        "v2_9": q(r.get("before_released_v2_9")), "base": q(r.get("before_base")),
-                       "v3_0_49": q(r.get("after_v3_0_49")), "evidence_status": r["evidence_status"],
+                       "v3_0_51": q(r.get("after_v3_0_51")), "evidence_status": r["evidence_status"],
                        "still_held": "",
                        "verification": f"{r['verification'].get('task')} "
                                        f"{' '.join(x[:8] for x in r['verification'].get('merge_commits') or ())}"}
@@ -679,12 +679,12 @@ def diff_rows(prev, new, released_lines=None):
         out.append({"line_id": ln["line_id"], "item_code": ln["item_code"], "floor": ln["location"].get("floor"),
                     "element_id": ln["location"].get("element_id"), "unit": ln["unit"], "vs_base": vs,
                     "vs_released_v2_9": vs29, "v2_9": A302._q(A30._qty(r)) if r else "",
-                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_49": A302._q(A30._qty(ln))})
+                    "base": A302._q(A30._qty(o)) if o else "", "v3_0_51": A302._q(A30._qty(ln))})
     return out
 
 
 def write(out, prev, changes, log, released_lines=None, for_lead=()):
-    """the V3_0_49_* files beside the base candidate's files. -> (file names, identity, ledger)."""
+    """the V3_0_51_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
     out = Path(out)
@@ -704,7 +704,7 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
             dsum["vs_released_v2_9"][d["vs_released_v2_9"]] += 1
     ident = dict(ident, diff=dsum)
     t0, t1 = A304.code_totals(prev), A304.code_totals(new)
-    moved = {k: {"base": t0.get(k), "v3_0_49": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
+    moved = {k: {"base": t0.get(k), "v3_0_51": t1.get(k)} for k in sorted(set(t0) | set(t1)) if t0.get(k) != t1.get(k)}
     for k in moved:
         if k.split("|")[0] != CODE:
             raise ValueError(f"{METHOD}: totals moved outside this version's code: {k}")
@@ -715,12 +715,12 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
            "totals_moved_by_code": moved, "waiting_pieces": WAITING}
-    files = {"V3_0_49_BOQ_LINES.json": BL.dumps(new),
-             "V3_0_49_BOQ_LINES.csv": A30._lines_csv(new),
-             "V3_0_49_INTEGRATION_LEDGER.json": A30._j(led),
-             "V3_0_49_INTEGRATION_LEDGER.csv": ledger_csv(rows),
-             "V3_0_49_DIFF.csv": A305._csv(diff, DIFF_CSV),
-             "V3_0_49_RUN.json": A30._j(run)}
+    files = {"V3_0_51_BOQ_LINES.json": BL.dumps(new),
+             "V3_0_51_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_51_INTEGRATION_LEDGER.json": A30._j(led),
+             "V3_0_51_INTEGRATION_LEDGER.csv": ledger_csv(rows),
+             "V3_0_51_DIFF.csv": A305._csv(diff, DIFF_CSV),
+             "V3_0_51_RUN.json": A30._j(run)}
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     return sorted(files), ident, led

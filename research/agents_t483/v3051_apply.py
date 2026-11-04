@@ -1,10 +1,10 @@
-"""T-483 stage 1 (read-only): apply ARCH_TAKEOFF_V3.0.49 to the candidate of record's V3_0_48_BOQ_LINES.json of a
-finished research/agents_t443/v3048_run.py run (same drawings), outside the hub. Every output goes to --out (outside
+"""T-483 stage 1 (read-only): apply ARCH_TAKEOFF_V3.0.51 to the candidate of record's V3_0_50_BOQ_LINES.json of a
+finished research/agents_t443/v3050_run.py run (same drawings), outside the hub. Every output goes to --out (outside
 the repository); printed: item codes, units, states, quantities and engine ids only (no coordinates, no names).
 
-    .work/venv/bin/python -I research/agents_t483/v3049_apply.py <dir of the v3048 run>/v3048 --out <private>/t483
+    .work/venv/bin/python -I research/agents_t483/v3051_apply.py <dir of the v3050 run>/v3050 --out <private>/t483
 
-The base must be the candidate of record 33a81c53 (asserted). The hub wiring (--v3049-inputs) is stage 2.
+The base must be the candidate of record d40c4ec5 (asserted). The hub wiring (--v3051-inputs) is stage 2.
 """
 from __future__ import annotations
 
@@ -21,9 +21,9 @@ for p in (ROOT, ROOT / "research" / "agents_t131", HERE):
 
 import alsenan_v30_run as T131  # noqa: E402
 import t483_inputs as L48       # noqa: E402
-from engine.source import arch_v3049 as A  # noqa: E402
+from engine.source import arch_v3051 as A  # noqa: E402
 
-BASE_SHA = "33a81c53"            # V3_0_48_BOQ_LINES.json, candidate of record (T-350 r4 Gate B, merge 5de697ff)
+BASE_SHA = "d40c4ec5"            # V3_0_50_BOQ_LINES.json, candidate of record (T-497 Gate B, merge 5f8814e8)
 
 
 def cert(lines):
@@ -34,37 +34,37 @@ def cert(lines):
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("v3048_dir")
+    ap.add_argument("v3050_dir")
     ap.add_argument("--out", required=True)
     a = ap.parse_args(argv)
-    src = Path(a.v3048_dir) / "V3_0_48_BOQ_LINES.json"
+    src = Path(a.v3050_dir) / "V3_0_50_BOQ_LINES.json"
     raw = src.read_bytes()
     sha = hashlib.sha256(raw).hexdigest()
     if not sha.startswith(BASE_SHA):
         raise SystemExit(f"base candidate {sha[:8]} is not {BASE_SHA} (not the candidate of record)")
     prev = json.loads(raw)
     released = None
-    rel = Path(a.v3048_dir) / "V2_9_BOQ_LINES.json"
+    rel = Path(a.v3050_dir) / "V2_9_BOQ_LINES.json"
     if rel.exists():
         released = json.loads(rel.read_text(encoding="utf-8"))
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     doc = L48.build(prev[0]["project"]["project_id"])
-    (out / "v3049_inputs.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / "v3051_inputs.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     d = A.load_inputs(doc, prev[0]["project"]["project_id"])
     ch, log = A.changes_for(d, prev)
     names, ident, led = A.write(out, prev, ch, log, released)
-    new = json.loads((out / "V3_0_49_BOQ_LINES.json").read_text(encoding="utf-8"))
-    nsha = hashlib.sha256((out / "V3_0_49_BOQ_LINES.json").read_bytes()).hexdigest()
-    print("base V3_0_48", sha[:8], len(prev), "lines -> V3_0_49", nsha[:8], len(new), "lines")
+    new = json.loads((out / "V3_0_51_BOQ_LINES.json").read_text(encoding="utf-8"))
+    nsha = hashlib.sha256((out / "V3_0_51_BOQ_LINES.json").read_bytes()).hexdigest()
+    print("base V3_0_50", sha[:8], len(prev), "lines -> V3_0_51", nsha[:8], len(new), "lines")
     print("identity:", json.dumps({k: ident[k] for k in ("replaced", "added", "outside_rows",
                                                           "outside_rows_identical_to_base", "remainder", "diff")},
                                   sort_keys=True))
-    print("FIN.SKIRTING certain / held high: base", cert(prev), "-> V3.0.49", cert(new))
+    print("FIN.SKIRTING certain / held high: base", cert(prev), "-> V3.0.51", cert(new))
     for r in led["rows"]:
         print(r["action"], r["line_id"], r["floor"], r["room_id"], "base", json.dumps(r["before_base"]),
-              "-> after", json.dumps(r["after_v3_0_49"]))
-    run = json.loads((out / "V3_0_49_RUN.json").read_text(encoding="utf-8"))
+              "-> after", json.dumps(r["after_v3_0_51"]))
+    run = json.loads((out / "V3_0_51_RUN.json").read_text(encoding="utf-8"))
     print("totals moved:", json.dumps(run["totals_moved_by_code"], sort_keys=True))
     return 0
 
