@@ -1,4 +1,4 @@
-"""T-487: rules/coverage/BOQ_FAMILY_MASTER_1.50.0.json = 1.47.0 + the pending ARCH_TAKEOFF_V3.0.53 package (T-487) + the
+"""T-487: rules/coverage/BOQ_FAMILY_MASTER_1.50.0.json = 1.48.0 + the pending ARCH_TAKEOFF_V3.0.53 package (T-487) + the
 B9-02 text; no owner, capability or candidate state changes; the file equals its builder; checks clean on the head."""
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT))
 from engine.source import arch_v3053 as A  # noqa: E402
 from tools import family_master_candidate as FMC  # noqa: E402
 
-OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.47.0.json"
+OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.48.0.json"
 NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.50.0.json"
 
 

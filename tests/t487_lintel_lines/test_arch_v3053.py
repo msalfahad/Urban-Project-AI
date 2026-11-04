@@ -17,7 +17,7 @@ import pytest
 
 from engine.source import arch_v30 as A30
 from engine.source import arch_v304 as A304
-from engine.source import arch_v3050 as A50
+from engine.source import arch_v3051 as A51
 from engine.source import arch_v3053 as M
 from engine.source import boq_line as BL
 
@@ -128,7 +128,7 @@ def test_write_files(tmp_path):
     diff = (tmp_path / "V3_0_53_DIFF.csv").read_text(encoding="utf-8").splitlines()
     assert sum(",ADDED," in x for x in diff) == 4 and sum(",SAME," in x for x in diff) == 4
     run_rec = json.loads((tmp_path / "V3_0_53_RUN.json").read_text(encoding="utf-8"))
-    assert run_rec["released_default"] is False and run_rec["extends"] == A50.METHOD
+    assert run_rec["released_default"] is False and run_rec["extends"] == A51.METHOD
 
 
 def test_mirror_and_order_do_not_matter():
@@ -250,5 +250,5 @@ def test_no_project_input_is_a_no_op():
     assert ch == [] and log["state"] == "NO_PROJECT_INPUT"
 
 
-def test_extends_merged_v3050():
-    assert M.EXTENDS == A50.METHOD == "ARCH_TAKEOFF_V3.0.50" and M.METHOD == "ARCH_TAKEOFF_V3.0.53"
+def test_extends_merged_v3051():
+    assert M.EXTENDS == A51.METHOD == "ARCH_TAKEOFF_V3.0.51" and M.METHOD == "ARCH_TAKEOFF_V3.0.53"

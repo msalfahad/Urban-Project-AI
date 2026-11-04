@@ -1,6 +1,6 @@
 """T-487: the development-villa inputs (research/agents_t487/t487_inputs.py, read from the sha-pinned merged T-453 r2
 ledger and the printed schedule transcription; no private file needed) reproduce the merged ledger's totals and the
-Checker's own re-measures by recomputation; the hub names ARCH_TAKEOFF_V3.0.53, runs it after the V3.0.50 step and
+Checker's own re-measures by recomputation; the hub names ARCH_TAKEOFF_V3.0.53, runs it after the V3.0.51 step and
 refuses it without its inputs (no data needed)."""
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "research" / "agents_t487"))
 
 import t487_inputs as T  # noqa: E402
-from engine.source import arch_v3050 as A50  # noqa: E402
+from engine.source import arch_v3051 as A51  # noqa: E402
 from engine.source import arch_v3053 as A  # noqa: E402
 from tools import urban_boq_m9 as M  # noqa: E402
 
@@ -81,7 +81,7 @@ FLAGS = [x for n in list(range(302, 310)) + list(range(3010, 3049)) for x in (f"
 def _exit(argv, tmp_path):
     with pytest.raises(SystemExit) as e:
         M.main(["arch", "--drawings", str(tmp_path / "none.dxf"), "--out", str(tmp_path / "o")] + argv + FLAGS
-               + ["--v3050-inputs", "y.json"])
+               + ["--v3050-inputs", "y.json", "--v3051-inputs", "z.json"])
     return str(e.value.code)
 
 
@@ -89,15 +89,16 @@ def test_v3053_needs_its_inputs(tmp_path):
     assert "--v3053-inputs and --method ARCH_TAKEOFF_V3.0.53 go together" in _exit(["--method", A.METHOD], tmp_path)
 
 
-def test_v3053_inputs_refused_on_v3050(tmp_path):
-    assert "go together" in _exit(["--method", A50.METHOD, "--v3053-inputs", "a.json"], tmp_path)
+def test_v3053_inputs_refused_on_v3051(tmp_path):
+    assert "go together" in _exit(["--method", A51.METHOD, "--v3053-inputs", "a.json"], tmp_path)
 
 
-def test_hub_chains_v3053_after_v3050():
+def test_hub_chains_v3053_after_v3051():
     src = (ROOT / "tools/urban_boq_m9.py").read_text(encoding="utf-8")
-    i50, i53 = src.index("A3050.write("), src.index("A3053.write(")
-    assert i50 < i53 and "l3050 = A3050.integrate(l3048, ch_v50, fl24)[0]" in src
+    i51, i53 = src.index("A3051.write("), src.index("A3053.write(")
+    assert i51 < i53 and "l3051 = A3051.integrate(l3050, ch_v51, fl24)[0]" in src
     assert '("ARCH_TAKEOFF_V3.0.53",)' in src
-    # a V3.0.53 run is a V3.0.50 run first: rewritten before the V3.0.50 rewrite and every stage list
-    assert src.index('a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3053') < src.index(
+    # a V3.0.53 run is a V3.0.51 run first: rewritten before the V3.0.51 / V3.0.50 rewrites and every stage list
+    assert src.index('a.method = "ARCH_TAKEOFF_V3.0.51" if a.v3053') < src.index(
+        'a.method = "ARCH_TAKEOFF_V3.0.50" if a.v3051') < src.index(
         'a.method = "ARCH_TAKEOFF_V3.0.48" if a.v3050') < src.index("v3044 = a.method in (")
