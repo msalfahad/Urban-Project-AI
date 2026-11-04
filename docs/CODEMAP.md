@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 714 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 715 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4577 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4584 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 59 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2167 | pytest suites, one folder per round. |
+| `tests/` | 2172 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (361 modules)
+## `engine/source/` (362 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -751,6 +751,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `waterproofing_policy_v3.py` | 79 | MEDIUM | 2 | WATERPROOFING POLICY V3 (T-310) - the NEW version of waterproofing_policy_v2.py (T-458, kept unchanged as history). |
 | `waterproofing_system.py` | 998 | HIGH | 10 | WATERPROOFING SYSTEM (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the owner's membrane standards (knowledge registry |
 | `wet_room_evidence.py` | 464 | MEDIUM | 4 | WET ROOM EVIDENCE V1 (T-010) - is a space wet, dry or held? The architectural room label first, the sanitary |
+| `wp_applicability_rules_v1.py` | 177 | MEDIUM | 1 | WP_APPLICABILITY_RULES_V1: waterproofing applicability of exposed slab tops, by the physical surface (T-494). |
 | `wp_geometry.py` | 317 | MEDIUM | 8 | WATERPROOFING BOUNDARY GEOMETRY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the boundary of a waterproofed area, |
 | `wp_install.py` | 1085 | MEDIUM | 4 | WATERPROOFING INSTALLATION LAYER (M9 Phase 2B-5, ARCH_TAKEOFF_V2.6 only) - what a membrane cutting plan means on |
 
@@ -1450,12 +1451,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t490_stone_floor_census/` | 1 |
 | `tests/t491_site_preparation/` | 2 |
 | `tests/t493_landing_census/` | 1 |
+| `tests/t494_poolcourt_wp/` | 1 |
 | `tests/t495_finish_held_ledger/` | 1 |
 | `tests/t496_binding_map/` | 1 |
 | `tests/t497_zone_ownership/` | 4 |
 | `tests/t499_held_subtotals/` | 1 |
 | `tests/t503_disposal_balance/` | 2 |
 | `tests/t504_plaster_held_subtotals/` | 1 |
+| `tests/t505_disposal_balance_v2/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1940,11 +1943,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t491/` | 7 |
 | `research/agents_t492/` | 2 |
 | `research/agents_t493/` | 6 |
+| `research/agents_t494/` | 3 |
 | `research/agents_t495/` | 4 |
 | `research/agents_t496/` | 4 |
 | `research/agents_t497/` | 7 |
 | `research/agents_t503/` | 4 |
 | `research/agents_t504/` | 1 |
+| `research/agents_t505/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

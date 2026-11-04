@@ -1,0 +1,316 @@
+{
+ "rule_version": "WP_APPLICABILITY_RULES_V1",
+ "runs": {
+  "parapet_face": 0.894779,
+  "parapet_end": 0.431578,
+  "window_face": 0.500002,
+  "open_edge": 6.869158,
+  "void_edge": 4.321407,
+  "continuation": 0.562437,
+  "north_pier": 1.838068,
+  "south_pier": 1.374508,
+  "southwest_pier": 0.654611,
+  "unassigned": 0.0,
+  "perimeter": 17.446513,
+  "net_m2": 4.906867
+ },
+ "rows": [
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "FLAT_MEMBRANE",
+   "unit": "m2",
+   "qty": 4.906867,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-EXPOSED-1 (scope extension of UP-WP-ROOF-001 by its purpose, provenance T-486)",
+   "evidence": [
+    "slab top round the oval VOID (label BBF), printed +5.50 (LEVEL 1251), no ROOF label: exposed by the 2F plan (nothing drawn east of the 2F parapet at the 1F wall line)",
+    "T-486 own measure 8.3537 gross - piers 0.5837 - void 2.8632 = 4.9069 m2; Checker re-measure 4.9069 AGREE (T-486 Gate A, own polygonisation)",
+    "below: the GF pool court (exterior); slab by the GF roof-slab sheet (T-127 / T-154, Q-68)"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "function": "ROOF"
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": 0.367614,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "bay-frame pier, layer D on 1F, same outline layer 5 on 2F; elevation: rises from the slab"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "north_pier",
+   "length_lm": 1.838068,
+   "height_m": 0.2
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": 0.274902,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "bay-frame pier, layer D on 1F / layer 5 on 2F"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "south_pier",
+   "length_lm": 1.374508,
+   "height_m": 0.2
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": 0.130922,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "bay-frame pier CA1 / CA3 / C9E, cut at the parapet face BDC"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "southwest_pier",
+   "length_lm": 0.654611,
+   "height_m": 0.2
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": 0.178956,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "BDC north face of the 0.20 m parapet pair BDC / BDB (layer 5); the SE strip (TERRACE-550, L-2f7502be) owns the BDB south face: distinct faces, no shared upturn"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "parapet_face",
+   "length_lm": 0.894779,
+   "height_m": 0.2
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": 0.086316,
+   "status": "MEASURED",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "C7F / B32: end of the SE-strip parapet on the plot line"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "parapet_end",
+   "length_lm": 0.431578,
+   "height_m": 0.2
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-UPTURN-1",
+   "evidence": [
+    "C35 (layer 5) closes the wall line across the 1F bath window (glazing C33 .. C3E, layer W); the window sill height above the slab top is printed in no view read this run"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "held_reason": "sill height above the slab top not established",
+   "family": "B8-06",
+   "run": "window_face",
+   "length_lm": 0.500002,
+   "height_m": 0.2,
+   "held_bound": 0.1
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "SLAB_EDGE_TERMINATION",
+   "unit": "lm",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-EDGE-1 / UP-WP-004",
+   "evidence": [
+    "C7D north edge 1.500 + B30 east edge 5.368: single layer-5 lines, no parapet (the parallel C7E / C80 / B31 are layer 2 = GF walls below)"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "held_reason": "treatment by the detail (none printed)",
+   "held_bound": 6.869158
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "VOID_EDGE_TERMINATION",
+   "unit": "lm",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-EDGE-1 / UP-WP-004",
+   "evidence": [
+    "void BCF / 2F1C / C7A / 2F1B east of the wall line (C7A = the GF pool water edge)"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "held_reason": "treatment by the detail (none printed)",
+   "held_bound": 4.321407
+  },
+  {
+   "zone_id": "POOLCOURT-550",
+   "component": "DRAINAGE_FALLS",
+   "unit": "nr",
+   "qty": null,
+   "status": "RFI",
+   "rule_basis": "R-WP-APPL-DRAIN-1",
+   "evidence": [
+    "sanitary-7757.pdf sheet 2 (1F drainage): no gully, no RWP and no slope arrow on this area; the other three roofs print them"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "held_reason": "no outlet / falls printed",
+   "blocks_quantity": false
+  },
+  {
+   "zone_id": "POOLCOURT-550-LEDGE",
+   "component": "FLAT_MEMBRANE",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-EXPOSED-1 (scope extension of UP-WP-ROOF-001 by its purpose, provenance T-486)",
+   "evidence": [
+    "0.20 m ledge between the bay's outer face (BCD / BCE / BD0, r 1.935) and the void edge (BCF, r 1.735), west of the wall line, under the 2F roof slab 4.20 m above (+5.50 to +9.70), open on the void side (T-486; Checker 0.6396 AGREE)"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "held_reason": "exposure: covered above, open at a side",
+   "held_bound": 0.639573
+  },
+  {
+   "zone_id": "POOLCOURT-550-LEDGE",
+   "component": "UPTURN",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-UPTURN-1 / UP-WP-003",
+   "evidence": [
+    "bay outer face BCD / BCE / BD0 (glazing BD2 .. BD5 inside it)"
+   ],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "run": "bay_face",
+   "length_lm": 3.528277,
+   "height_m": 0.2,
+   "held_reason": "exposure: covered above, open at a side",
+   "held_bound": 0.705655
+  },
+  {
+   "zone_id": "POOLCOURT-550-LEDGE",
+   "component": "VOID_EDGE_TERMINATION",
+   "unit": "lm",
+   "qty": null,
+   "status": "HELD",
+   "rule_basis": "R-WP-APPL-EDGE-1 / UP-WP-004",
+   "evidence": [],
+   "rule_version": "WP_APPLICABILITY_RULES_V1",
+   "family": "B8-06",
+   "held_reason": "treatment by the detail (none printed)",
+   "held_bound": 2.817214
+  }
+ ],
+ "totals": {
+  "B8-06|DRAINAGE_FALLS": {
+   "unit": "nr",
+   "measured": null,
+   "measured_rows": 0,
+   "held_rows": 1,
+   "held_bounds": [],
+   "other_rows": 0,
+   "rows": 1,
+   "state": "HELD"
+  },
+  "B8-06|FLAT_MEMBRANE": {
+   "unit": "m2",
+   "measured": 4.906867,
+   "measured_rows": 1,
+   "held_rows": 1,
+   "held_bounds": [
+    0.639573
+   ],
+   "other_rows": 0,
+   "rows": 2,
+   "state": "PART_AT_LEAST"
+  },
+  "B8-06|SLAB_EDGE_TERMINATION": {
+   "unit": "lm",
+   "measured": null,
+   "measured_rows": 0,
+   "held_rows": 1,
+   "held_bounds": [
+    6.869158
+   ],
+   "other_rows": 0,
+   "rows": 1,
+   "state": "HELD"
+  },
+  "B8-06|UPTURN": {
+   "unit": "m2",
+   "measured": 1.03871,
+   "measured_rows": 5,
+   "held_rows": 2,
+   "held_bounds": [
+    0.1,
+    0.705655
+   ],
+   "other_rows": 0,
+   "rows": 7,
+   "state": "PART_AT_LEAST"
+  },
+  "B8-06|VOID_EDGE_TERMINATION": {
+   "unit": "lm",
+   "measured": null,
+   "measured_rows": 0,
+   "held_rows": 2,
+   "held_bounds": [
+    4.321407,
+    2.817214
+   ],
+   "other_rows": 0,
+   "rows": 2,
+   "state": "HELD"
+  }
+ },
+ "overlap": [
+  {
+   "line_id": "L-d57d2dc2",
+   "zone": "ROOF-430 1F west",
+   "level": "+4.30",
+   "overlap_m2": 0.0,
+   "evidence": "label B8D 25.7 m west of the 1F wall line, 1.20 m below the pool-court slab top: another slab"
+  },
+  {
+   "line_id": "L-2f7502be",
+   "zone": "TERRACE-550 1F SE strip",
+   "level": "+5.50",
+   "overlap_m2": 0.0,
+   "evidence": "label B81 4.70 m south of BDC; separated by the 0.20 m parapet BDC / BDB; the strip measures to the BDB face, POOLCOURT-550 to the BDC face (outline south edge = BDC)"
+  },
+  {
+   "line_id": "L-636fd3ff",
+   "zone": "ROOF-970 2F roof terrace",
+   "level": "+9.70",
+   "overlap_m2": 0.0,
+   "evidence": "4.20 m above; its straight east edge on the 2F parapet at the 1F wall line, so in plan it covers only the ledge west of that line (the HELD row), not the open-sky part"
+  },
+  {
+   "line_id": "L-3e8fe55d",
+   "zone": "ROOF-1390 2F block roof (HELD)",
+   "level": "+13.90",
+   "overlap_m2": 0.0,
+   "evidence": "the 2F block's own roof, west of the 2F parapet: not over the court"
+  }
+ ]
+}
