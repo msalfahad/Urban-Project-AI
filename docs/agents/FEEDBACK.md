@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 20:25 (since 16:30)
+
+- T-531 lintel bars on measured ends (Gate A): WORKED (PRODUCED 6 = 38.761728 kg, FLAGGED 10 = 24.301496 kg AT_LEAST; bar ends HELD: ST p.13 prints no cover / bend / hook). Decision: into manifest V3 (T-538); bar ends stay a designer item, no owner question.
+- T-536 wiring manifest V2 (Gate A): WORKED (Checker arcs 0.551614 / 2.976663 lm AGREE). Decision: F-C-T536-1 (test pins a live READY commit) -> T-538 gate fix, worker 3 FIRST.
+- T-535 sand purchase unit (Gate A): WORKED (loose m3; F-T535-1 allowance-as-procurement confirmed). Decision: load size / density -> T-540 (sourced or HELD).
+- T-532 END_CENSUS_V3 (Gate A): WORKED (12+1 ends reproduced, 0 quantity change). Decision: ties / mesh lines -> T-539; F-C-T532-1 sliver head rule -> T-538 check.
+- T-537 ranged host face rule R-T498-2: PARTIAL (REJECTED gate e/h: D-GF-06 hi 1.54 m is a min-bearing figure, ceiling 1.899 m; GF glue low end 23.769 -> 23.4459 kg, -1.36 %). Decision: r2 same row, exact fault in the status cell; lessons row PROPOSED.
+- T-534 stair bed area (Gate A PASS 18:05): PARTIAL by a cause outside the row (merge blocked by F-C-T536-1, 3 Checker runs). Decision: T-538 first; riser / landing beds -> T-542.
+
 ## Lead 2026-11-05 16:30 (since 12:20)
 
 - T-528 FINISH V7 stair 1:3 bed (Gate A): WORKED (9.576 bags + 0.9975 m3 sand per m3; Alsenan 10.18 bags on 35.4313 m2). Decision: F-C-T528-1 area 39.49 vs 35.4313 m2 -> T-534 before wiring.

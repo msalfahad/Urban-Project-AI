@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 20:25; recovery plan in force)
+
+- Merged since 16:30 (all Gate A, research, no candidate line moved): T-531, T-532, T-535, T-536 (4/4 WORKED); T-537 REJECTED -> r2; T-534 PASS, merge-blocked -> T-538 gate fix. Unwired verified pieces now 18 (T-516..T-536).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh:211 unchanged at eafbb0f6).
+- New rows: T-538 (gate 0, I), T-539 (S), T-540, T-541, T-542 (A). T-541 is the first 12-13 Nov reconciliation row (roof WP vs freelancer).
+- 10 Nov: LOW (unchanged cause: no Gate B can start before the wrapper item; manifest V3 keeps the first day after it short).
+
 ## Status (Lead, 2026-11-05 16:30; recovery plan in force)
 
 - Merged since 12:20 (all Gate A, research, no candidate line moved): T-526..T-530 (5/5 WORKED, 0 rejected). T-525 BLOCKED (wrapper). Unwired verified pieces now 14 (T-516..T-530).

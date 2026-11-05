@@ -1,9 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-05 16:30 UTC (Lead). Previous version: 2026-11-05 08:15 UTC. The released numbers did not change
+Last update: 2026-11-05 20:25 UTC (Lead). Previous version: 2026-11-05 16:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 5 Nov 16:30 (newest first; four checked and merged, one sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Lintel steel: bars on the 6 lintels that can be produced are at least 38.8 kg, on the 10 held ones at least 24.3 kg
+  (at least 63.1 kg together); bar ends, bends and hooks are not printed on the schedule, so they stay held.
+- Wall ends at columns: the corrected end list now reads the wall pieces properly (12 ends + 1 confirmed, checked by hand
+  at 2 ends); no quantity moves; the wall ties and bed-joint mesh at those ends (about 30 ties, about 41 m of mesh) have
+  no BOQ line yet: being added.
+- Sand: bought as loose m3; the villa needs at least about 17.7 .. 23.4 m3 to buy (installed at least 17.0 .. 22.4 m3).
+  Truck size and weight per m3 are not sourced yet, so no tonnes or loads are shown (being sourced).
+- Lintel glue at the wall faces above lintels: sent back once: one lintel's longest length was read as 1.54 m, but up
+  to 1.90 m can be built there, so the low end of the glue range was 1.4 % too high; being reworked.
+- Stair marble bed: area reconciled to your 39.49 m2 question exactly (35.43 m2 on treads; the rest is risers,
+  width and a full first riser); checked but waits one small test fix before it can merge.
+- Freelancer: no rows for lintel steel, ties, mesh, sand or glue, so nothing compared. Roof waterproofing (his 285 m2
+  vs our 209.7 m2 once wired) will be reconciled part by part for the 12-13 Nov milestone; your top-roof hold stays.
+- Still blocked: every candidate package waits for the command wrapper. 10 Nov (end-to-end BOQ with every trade): LOW.
 
 Since 5 Nov 08:15 (newest first; eleven checked and merged, none sent back; no candidate quantity moved; all pieces wait
 to be wired into the candidate):
