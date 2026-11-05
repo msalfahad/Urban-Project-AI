@@ -46,6 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 00:15; recovery plan in force)
+
+- Since 20:15: 3 merged (T-512, T-511 Gate A; T-310 r7 Gate B), 0 rejected. Candidate of record ARCH_TAKEOFF_V3.0.57
+  25a8b406 (FIN.WP.FLOOR 85.6207 -> 85.5757 m2, upturn 25.1146 -> 25.2146 m2, pool membrane 29.582355 m2 + screed
+  1.524503 m3), master 1.54.0; not released. READY 0, CLAIMED 2 (T-498 W3, T-423 W1), TODO 3 (T-507, T-514, T-515).
+- Gate 0 clear (t212 green). Step 2: T-498 (S), T-423 (F), T-507 (F) in parallel on V3.0.57, READY second rebases;
+  then T-513, T-314, T-502, T-424, T-364, T-363, T-372; stream S T-509, T-382, T-474 p2. 7 Gate B merges since 00:20
+  4 Nov; about 10 packages in 5.0 days; 10 Nov AT RISK.
+- Step 5 materials: cement / sand census merged (project HELD, known >= 120.08 .. 157.90 bags); T-514 screed /
+  threshold / outdoor bed producers; T-515 lintel bar split (printed straight parts COMPUTED, ends HELD).
+
 ## Status (Lead, 2026-11-04 20:15; recovery plan in force)
 
 - Since 16:17: 4 merged (T-500, T-510 Gate A; T-488, T-508 Gate B), 0 rejected. Candidate of record V3.0.56 4e25c54f

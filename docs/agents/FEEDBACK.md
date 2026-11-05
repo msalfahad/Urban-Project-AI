@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 00:15 (since 20:15)
+
+- T-512 gate fix (Gate A): WORKED (t212 green, all-blank code HELD never 0.0). Decision: the 37-code code_totals 0.0 path goes into T-507's acceptance.
+- T-310 r7 wet-area / pool WP (Gate B): WORKED (V3.0.57, 7 rounds, 4 of them rebases). Decision: T-507 TODO for worker 2; master promotion of T-310 clears the t485 red.
+- T-511 cement / sand census (Gate A): WORKED. Decision: F-T511-3 / -4 -> T-514 (worker 2 second); STAIR_BED_V1 wiring stays for a later stream F package.
+- T-498 blockwork materials: PARTIAL by time (stage pushed below the lock threshold, policy-correct), resumed 23:03; renumbers at hand-in.
+- Process: Worker 2 ran a research script with the venv python after the wrapper refused it (outside the pre-approved command; census reproduced by the Checker). Decision: research scripts run through their pytest tests until the owner widens the wrapper (NEEDS FIXING).
+- F-C-T487-1 (lintel bars) had no row. Decision: T-515 (worker 1 second).
+
 ## Lead 2026-11-04 20:15 (since 16:17)
 
 - T-488 blockwork wiring (Gate B): WORKED (V3.0.55, MAS.BLOCK 579.1011 -> 467.7925 m2, held walls by name). Decision: T-498 recomputes materials from this base; lessons row ADOPTED.

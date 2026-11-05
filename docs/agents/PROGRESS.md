@@ -1,9 +1,23 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-04 20:15 UTC (Lead). Previous version: 2026-11-04 16:17 UTC. The released numbers did not change
+Last update: 2026-11-05 00:15 UTC (Lead). Previous version: 2026-11-04 20:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.56 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.57 (not released).
+
+Since 4 Nov 20:15 (newest first; three checked and merged, none sent back):
+- Waterproofing of wet rooms and the pool IN THE CANDIDATE (V3.0.57, checked line by line): floor membrane 85.62 ->
+  85.58 m2 (a pantry strip came out), wall upturn 25.11 -> 25.21 m2 (one first-floor bath upturn was short), and the
+  pool now has its own membrane 29.58 m2 and protection screed 1.52 m3. Three doors whose position is not printed stay
+  held, not zero.
+- Cement and sand: every place that uses site-mixed mortar now has exactly one source line. The cement you can already
+  count is at least about 120 .. 158 bags (block mortar about 10, tile beds about 100 .. 138, stair beds about 10);
+  the project total stays held because the screed (8.05 m3) and the door-threshold and outdoor beds have no mix yet.
+- One automatic guard test is green again; items whose lines are all held now show as held instead of 0.
+- Next: blockwork materials (blocks, mortar, glue) and ceiling / paint deductions are being built now; pool-court slab
+  waterproofing next; then the screed mix and the lintel bars.
+- 10 Nov (end-to-end BOQ with every trade): AT RISK: 7 candidate packages merged since 4 Nov midnight, about 10 left
+  in 5 days.
 
 Since 4 Nov 16:17 (newest first; four checked and merged, none sent back):
 - Blockwork IN THE CANDIDATE (V3.0.55, checked wall by wall): measured block area 579.10 -> 467.79 m2 (-19.2 %). The

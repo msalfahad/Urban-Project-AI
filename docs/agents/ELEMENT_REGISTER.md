@@ -87,6 +87,9 @@ quantity.
   a HELD / FLAGGED lintel face is a named range on the host line, never 0 and never silently deducted. The MAS.BLOCK
   contract area is untouched until the T-449 wiring settles R-MAS-ABOVE-LINTEL-1 (T-482). Rows: T-453 r2 (material),
   T-487 (B9-02 lines), T-482 (contract basis).
+  LINTEL REINFORCEMENT (Lead 2026-11-05 00:15; Checker F-C-T487-1): the lintel bars are a REBAR component of the B9-02
+  lintel line (kg, owner rule 2026-10-24), never inside MAS.BLOCK or the lintel concrete m3; printed straight parts
+  COMPUTED, cover / hooks / bends HELD by name (owner 2026-10-29 (B)); project figure AT_LEAST. Row: T-515.
 - FOUNDATION BACKFILL displacement (Lead 2026-11-03 08:17; T-350 r2 MERGED 42a99508): EARTHWORKS (B1-03) owns the
   backfill volume; every buried element (blinding, underlay, footings net of overlaps, necks, ground beams / straps over
   the pits, C8, the external GB trench, F10 + F) enters only as DISPLACEMENT read from its own verified piece, never
