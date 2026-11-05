@@ -1,0 +1,376 @@
+{
+ "changed_ends": [
+  {
+   "opening_id": "D-GF-11",
+   "side": "START",
+   "v1": [
+    0.831,
+    "END_OF_MASONRY"
+   ],
+   "v1_to_v2_m": -0.004,
+   "v2": [
+    0.827,
+    "COLUMN"
+   ],
+   "v2_to_v3_m": 0.0,
+   "v3": [
+    0.827,
+    "COLUMN",
+    ""
+   ]
+  },
+  {
+   "opening_id": "D-GF-13",
+   "side": "END",
+   "v1": [
+    1.261,
+    "COLUMN"
+   ],
+   "v1_to_v2_m": -0.001,
+   "v2": [
+    1.26,
+    "COLUMN"
+   ],
+   "v2_to_v3_m": 0.0,
+   "v3": [
+    1.26,
+    "COLUMN",
+    ""
+   ]
+  },
+  {
+   "opening_id": "W18",
+   "side": "END",
+   "v1": [
+    0.478,
+    "OPENING"
+   ],
+   "v1_to_v2_m": 0.0,
+   "v2": [
+    0.478,
+    "OPENING"
+   ],
+   "v2_to_v3_m": 0.099,
+   "v3": [
+    0.577,
+    "END_OF_MASONRY",
+    "CURVED_BAY:WB-FL0041-FL0042:CURVED_GLAZED_BAY"
+   ]
+  }
+ ],
+ "drawing": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha ab54dd55), numbers only",
+ "rule": "R-T527-1 (LINTEL_BEARING_V3)",
+ "sources": {
+  "research/agents_t527/out/JAMB_EVIDENCE_V3_T527.csv": "7ac6e6b93d2a4ac9e7dab3ff0db70d988a256a972b8bb7fb8a139360a43c2ee2"
+ },
+ "steps": {
+  "V1_to_V2": {
+   "t516": {
+    "D-GF-11": [
+     [
+      "ends.START.available_m",
+      0.831,
+      0.827
+     ],
+     [
+      "ends.START.bearing_hi_m",
+      0.831,
+      0.827
+     ],
+     [
+      "ends.START.stopper",
+      "END_OF_MASONRY",
+      "COLUMN"
+     ],
+     [
+      "length_hi_m",
+      1.869,
+      1.865
+     ],
+     [
+      "straight_ceiling_kg",
+      5.630075,
+      5.618025
+     ]
+    ],
+    "D-GF-13": [
+     [
+      "ends.END.available_m",
+      1.261,
+      1.26
+     ],
+     [
+      "ends.END.bearing_hi_m",
+      1.261,
+      1.26
+     ],
+     [
+      "length_hi_m",
+      3.764,
+      3.763
+     ],
+     [
+      "straight_ceiling_kg",
+      11.33847,
+      11.335458
+     ]
+    ]
+   },
+   "t519": {
+    "D-GF-11": [
+     [
+      "rc_length_hi_m",
+      1.869,
+      1.865
+     ]
+    ],
+    "D-GF-13": [
+     [
+      "rc_length_hi_m",
+      3.764,
+      3.763
+     ]
+    ]
+   },
+   "t524": []
+  },
+  "V2_to_V3": {
+   "t516": {
+    "W18": [
+     [
+      "ends.END.available_m",
+      0.478,
+      0.577
+     ],
+     [
+      "ends.END.bearing_hi_m",
+      0.478,
+      0.577
+     ],
+     [
+      "ends.END.stopper",
+      "OPENING",
+      "END_OF_MASONRY"
+     ],
+     [
+      "length_hi_m",
+      0.978,
+      1.077
+     ],
+     [
+      "links_hi",
+      5,
+      6
+     ],
+     [
+      "straight_ceiling_kg",
+      2.946074,
+      3.244297
+     ]
+    ]
+   },
+   "t519": {
+    "W18": [
+     [
+      "rc_length_hi_m",
+      0.978,
+      1.077
+     ]
+    ]
+   },
+   "t524": []
+  }
+ },
+ "summary": {
+  "V1": {
+   "ends": 32,
+   "ends_bounded": 21,
+   "ends_deficit": 10,
+   "ends_held": 1,
+   "ends_measured": 0,
+   "lintels": 16,
+   "lintels_bearing_ok": [
+    "D-1F-02",
+    "D-1F-08",
+    "D-2F-01",
+    "D-GF-13",
+    "W14",
+    "W15"
+   ],
+   "lintels_deficit": [
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-07",
+    "D-1F-10",
+    "D-2F-03",
+    "D-GF-06",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "W18"
+   ],
+   "lintels_held": [],
+   "note": "figures per lintel; HELD and deficit lintels carry no length / link figure in any total (never 0)",
+   "ok_length_lo_m": 12.7,
+   "ok_links_lo": 65
+  },
+  "V2": {
+   "ends": 32,
+   "ends_bounded": 21,
+   "ends_deficit": 10,
+   "ends_held": 1,
+   "ends_measured": 0,
+   "lintels": 16,
+   "lintels_bearing_ok": [
+    "D-1F-02",
+    "D-1F-08",
+    "D-2F-01",
+    "D-GF-13",
+    "W14",
+    "W15"
+   ],
+   "lintels_deficit": [
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-07",
+    "D-1F-10",
+    "D-2F-03",
+    "D-GF-06",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "W18"
+   ],
+   "lintels_held": [],
+   "note": "figures per lintel; HELD and deficit lintels carry no length / link figure in any total (never 0)",
+   "ok_length_lo_m": 12.7,
+   "ok_links_lo": 65
+  },
+  "V3": {
+   "ends": 32,
+   "ends_bounded": 21,
+   "ends_deficit": 10,
+   "ends_held": 1,
+   "ends_measured": 0,
+   "lintels": 16,
+   "lintels_bearing_ok": [
+    "D-1F-02",
+    "D-1F-08",
+    "D-2F-01",
+    "D-GF-13",
+    "W14",
+    "W15"
+   ],
+   "lintels_deficit": [
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-07",
+    "D-1F-10",
+    "D-2F-03",
+    "D-GF-06",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "W18"
+   ],
+   "lintels_held": [],
+   "note": "figures per lintel; HELD and deficit lintels carry no length / link figure in any total (never 0)",
+   "ok_length_lo_m": 12.7,
+   "ok_links_lo": 65
+  }
+ },
+ "t519_rc_produced": {
+  "V1": [
+   "D-1F-02",
+   "D-1F-08",
+   "D-2F-01",
+   "D-GF-13",
+   "W14",
+   "W15"
+  ],
+  "V2": [
+   "D-1F-02",
+   "D-1F-08",
+   "D-2F-01",
+   "D-GF-13",
+   "W14",
+   "W15"
+  ],
+  "V3": [
+   "D-1F-02",
+   "D-1F-08",
+   "D-2F-01",
+   "D-GF-13",
+   "W14",
+   "W15"
+  ]
+ },
+ "t524_summary": {
+  "V1": {
+   "corrected_hi_m3": 0.437542,
+   "corrected_lo_m3": 0.372692,
+   "cross_wall_window_max_m2": 0.12,
+   "end_stop_faces_max_m2": 0.12,
+   "formwork_hi_m2": 6.79638,
+   "formwork_lo_m2": 5.95038,
+   "host_face_overdeduct_min_m2": 0.457,
+   "inside_column_m3": {
+    "COL-C2-X10-Y09-2F": 0.00453,
+    "COL-C6-X08-Y04-GF": 0.01,
+    "COL-C8-X15-Y06-1F": 0.017308,
+    "COL-PC-X08-Y02-1F": 0.006
+   },
+   "inside_column_total_m3": 0.037838,
+   "lintel_on_lintel_m3": 0.01686,
+   "not_built_m3": 0.02176,
+   "removed_m3": 0.076458,
+   "split_held": [],
+   "t453_formwork_m2": 7.73,
+   "t453_m3": 0.514
+  },
+  "V2": {
+   "corrected_hi_m3": 0.437542,
+   "corrected_lo_m3": 0.372692,
+   "cross_wall_window_max_m2": 0.12,
+   "end_stop_faces_max_m2": 0.12,
+   "formwork_hi_m2": 6.79638,
+   "formwork_lo_m2": 5.95038,
+   "host_face_overdeduct_min_m2": 0.457,
+   "inside_column_m3": {
+    "COL-C2-X10-Y09-2F": 0.00453,
+    "COL-C6-X08-Y04-GF": 0.01,
+    "COL-C8-X15-Y06-1F": 0.017308,
+    "COL-PC-X08-Y02-1F": 0.006
+   },
+   "inside_column_total_m3": 0.037838,
+   "lintel_on_lintel_m3": 0.01686,
+   "not_built_m3": 0.02176,
+   "removed_m3": 0.076458,
+   "split_held": [],
+   "t453_formwork_m2": 7.73,
+   "t453_m3": 0.514
+  },
+  "V3": {
+   "corrected_hi_m3": 0.437542,
+   "corrected_lo_m3": 0.372692,
+   "cross_wall_window_max_m2": 0.12,
+   "end_stop_faces_max_m2": 0.12,
+   "formwork_hi_m2": 6.79638,
+   "formwork_lo_m2": 5.95038,
+   "host_face_overdeduct_min_m2": 0.457,
+   "inside_column_m3": {
+    "COL-C2-X10-Y09-2F": 0.00453,
+    "COL-C6-X08-Y04-GF": 0.01,
+    "COL-C8-X15-Y06-1F": 0.017308,
+    "COL-PC-X08-Y02-1F": 0.006
+   },
+   "inside_column_total_m3": 0.037838,
+   "lintel_on_lintel_m3": 0.01686,
+   "not_built_m3": 0.02176,
+   "removed_m3": 0.076458,
+   "split_held": [],
+   "t453_formwork_m2": 7.73,
+   "t453_m3": 0.514
+  }
+ }
+}
