@@ -8,20 +8,21 @@
   "V3_0_54": "c85c4630",
   "V3_0_55": "a498fc61",
   "V3_0_56": "4e25c54f",
-  "V3_0_57": "53c15db2"
+  "V3_0_57": "25a8b406",
+  "V3_0_58": "436f1e78"
  },
  "drawings": {
   "plan": "training-villa Drive folder / P7757_DXF_COMPRESSED.zip -> P7757.dxf sha256 ab54dd55",
   "structural": "training-villa Drive folder / ST7757 dxf.dxf sha256 9f9d1179"
  },
- "extends": "ARCH_TAKEOFF_V3.0.56",
+ "extends": "ARCH_TAKEOFF_V3.0.57",
  "identity": {
   "added": 74,
-  "base_lines": 4989,
+  "base_lines": 4994,
   "diff": {
    "vs_base": {
     "ADDED": 74,
-    "SAME": 4989
+    "SAME": 4994
    }
   },
   "materials": {
@@ -29,13 +30,13 @@
    "material_lines": 74,
    "producers": 74
   },
-  "outside_rows": 4989,
-  "outside_rows_identical_to_base": 4989,
-  "outside_rows_sha256": "f115ff8c28fce0e9939bf918b630e8f5dba6871554f09cc3af16cc82b5753eef",
+  "outside_rows": 4994,
+  "outside_rows_identical_to_base": 4994,
+  "outside_rows_sha256": "2675a8ad6341318923c230a2674bba9958f38deeaa14b8a395e87faf19f8f3f7",
   "replaced": 0,
-  "v3_0_57_lines": 5063
+  "v3_0_58_lines": 5068
  },
- "method": "ARCH_TAKEOFF_V3.0.57",
+ "method": "ARCH_TAKEOFF_V3.0.58",
  "rows": [
   {
    "after": {
@@ -2373,7 +2374,7 @@
  "totals_moved_by_code": {
   "MAS.GLUE.AAC|kg": {
    "base": null,
-   "v3_0_57": {
+   "v3_0_58": {
     "blocked_lines": 12,
     "bounded_lines": 3,
     "held_high": 861.32025,
@@ -2384,7 +2385,7 @@
   },
   "MAS.MORTAR.BLACK|m3": {
    "base": null,
-   "v3_0_57": {
+   "v3_0_58": {
     "blocked_lines": 18,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -2395,7 +2396,7 @@
   },
   "MAS.UNITS.BLACK|pcs": {
    "base": null,
-   "v3_0_57": {
+   "v3_0_58": {
     "blocked_lines": 18,
     "bounded_lines": 0,
     "held_high": 0.0,
@@ -2406,7 +2407,7 @@
   },
   "MAS.UNITS.WHITE|pcs": {
    "base": null,
-   "v3_0_57": {
+   "v3_0_58": {
     "blocked_lines": 17,
     "bounded_lines": 0,
     "held_high": 0.0,
