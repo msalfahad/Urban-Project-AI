@@ -1,9 +1,0 @@
-[
- {
-  "task": "T-310",
-  "merge_commit": "87ef87185f6207ecdb9c49b0ba81f473f4be9408",
-  "verdict_time": "2026-11-04 22:45 UTC",
-  "board_file": "BOARD.md",
-  "board_status_head": "MERGED (Verifier 2026-11-04T22:45Z per `date -u`, run session_01E6cPnekJMDRZWmXHSaafuJ, lock checker; GATE B PASS on d143b443, engine merge 87ef8718 on b7964886 (T-512 merged first this run; conflict ONLY docs/CODEMAP.md + docs/ROUTING.md: working-branch version taken, rebuilt by codemap build, stale: none, freeze 0)"
- }
-]
