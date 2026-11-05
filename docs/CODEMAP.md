@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4661 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4665 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 63 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2208 | pytest suites, one folder per round. |
+| `tests/` | 2210 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -547,7 +547,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_height.py` | 100 | MEDIUM | 4 | ARCHITECTURAL FINISH HEIGHT ENGINE (V1) - blockwork, plaster, paint and wall-tile heights are four separate |
 | `finish_height_v2.py` | 316 | MEDIUM | 2 | ARCHITECTURAL FINISH HEIGHT V2 (T-081) - plaster, paint and wall-tile heights of ONE room from printed values and |
 | `finish_height_v3.py` | 65 | MEDIUM | 1 | FINISH HEIGHT V3 - wall-face termination split by beam coverage (generic fix for blocker #16). |
-| `finish_materials_table.py` | 292 | MEDIUM | 8 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
+| `finish_materials_table.py` | 292 | MEDIUM | 9 | FINISH MATERIALS TABLE V1 (task T-086, opt-in; no released method or quantity changed) - the owner's room-by-room |
 | `finish_materials_table_v2.py` | 105 | MEDIUM | 3 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
 | `finish_materials_table_v3.py` | 194 | MEDIUM | 3 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
 | `finish_materials_table_v4.py` | 376 | MEDIUM | 3 | FINISH MATERIALS TABLE V4 (task T-455, owner directive 2026-11-02 B3 'tiles purchase quantities' as corrected by the |
@@ -1475,6 +1475,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t506_mortar_reconcile/` | 2 |
 | `tests/t508_stair_skirting/` | 3 |
 | `tests/t510_band_gap_classes/` | 1 |
+| `tests/t511_cement_sand_census/` | 1 |
 | `tests/t512_held_totals/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1977,6 +1978,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t506/` | 5 |
 | `research/agents_t508/` | 10 |
 | `research/agents_t510/` | 4 |
+| `research/agents_t511/` | 4 |
 | `research/agents_t512/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
