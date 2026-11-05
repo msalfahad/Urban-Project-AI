@@ -22,8 +22,11 @@ waste separate); bags only once per purchasing group (R-T523-1).
 
 ## 2. Rule R-T498-2 1.0.0 (scope: any host masonry line losing lintel faces; provenance R-T453-5, R-T516-1, R-T519-1, R-T524-1, R-T523-1, UP-QTY-STATUS-001; no new factor)
 
-1. FACE = D x [L_lo, L_hi] of the lintel line (VALUED lo = hi; BOUNDED_MIN_BEARING; HELD_BY_NAME with a T-524 bound).
-   L_hi unknown -> face OPEN. A legacy held face 0 .. max is kept only where the max is a PROVEN ceiling; a 'max' of
+1. FACE = D x [L_lo, L_hi] of the lintel line (VALUED lo = hi; BOUNDED_MIN_BEARING: T-516 lengths). HELD_BY_NAME (r2):
+   L_lo = T-524 lo; the T-524 hi is a MIN-BEARING figure (BOUNDED ends kept at 0.40), NOT a ceiling: L_hi = T-524 hi +
+   sum over BOUNDED ends (T-516 / T-527 V3 ceiling - 0.40) = w_net + ceilings + deficit a (`ceiling_length`); a BOUNDED
+   end without a ceiling or a HELD end -> OPEN. Every HELD_BY_NAME hi states CEILING or MIN_BEARING (refused as a
+   ceiling -> OPEN); no basis -> refused. L_hi unknown -> face OPEN. A legacy held face 0 .. max is kept only where the max is a PROVEN ceiling; a 'max' of
    D x (w + 2 x printed minimum bearing) is OPEN (F-T537-1, section 4).
 2. BASE = [net - sum face_hi - sum proven legacy max, net - sum face_lo]: the material's LOW end takes every face's
    HIGH end (longest lintel) and vice versa. No midpoint; never the larger or smaller alone. lo = hi -> one value.
@@ -51,8 +54,8 @@ two hosts -> both OPEN, on one host -> once; twice / pre-rounded -> refused; no 
 
 | host (stage line) | before (R-T498-1) | after R-T498-2 | change, cause |
 |---|---|---|---|
-| L-a3f88ecd GF 0.20 OA white (L-d14c6c9b), net 5.59 | 5.23 m2 -> 23.535 kg (0.9414 bags) | D-GF-06 face 0.20 x [1.40, 1.54] = [0.28, 0.308]: base [5.282, 5.31] m2 -> **[23.769, 23.895] kg**, [0.95076, 0.9558] bags | +0.234 .. +0.360 kg (+0.99 .. +1.53 %): T-453 deducted 0.36 (w + 0.80 = 1.80 m), the deficit lintel stops at its host (T-524) |
-| L-2fdc0f97 1F 0.20 VERIFIED white (L-4b9a29d4), net 101.976 | RANGE 98.771 .. 100.271 m2 -> 444.4695 .. 451.2195 kg | W14 [0.975, 1.23], W15 [0.47, 0.5674], W18 0.17346 (= 0.20 x 0.8673); W16 / W19 / W20 / W24 OPEN -> **HELD blank**, AT_MOST 451.60893 kg (100.35754 m2) beside | the low end loses its basis: F-T537-1 |
+| L-a3f88ecd GF 0.20 OA white (L-d14c6c9b), net 5.59 | 5.23 m2 -> 23.535 kg (0.9414 bags) | r2: D-GF-06 L [1.40, 1.899] (T-524 1.54 + START ceiling 0.759 - 0.40; = T-516 length_hi 1.899), face [0.28, 0.3798]: base [5.2102, 5.31] m2 -> **[23.4459, 23.895] kg**, [0.937836, 0.9558] bags (r1 [23.769, 23.895] had a false low end, -0.323 kg) | -0.089 .. +0.360 kg (-0.38 .. +1.53 %): T-453 deducted 0.36 (w + 0.80 = 1.80 m); the built lintel lies in [1.40, 1.899] m |
+| L-2fdc0f97 1F 0.20 VERIFIED white (L-4b9a29d4), net 101.976 | RANGE 98.771 .. 100.271 m2 -> 444.4695 .. 451.2195 kg | W14 [0.975, 1.23], W15 [0.47, 0.5674], W18 r2 [0.17346, 0.20886] (0.20 x [0.8673, 1.0443]: V3 END ceiling 0.577); W16 / W19 / W20 / W24 OPEN -> **HELD blank**, AT_MOST 451.60893 kg (100.35754 m2) beside | the low end loses its basis: F-T537-1 |
 
 F-T537-1 (ENGINE_WRONG proposal on the staged low end, every villa): the four held faces W16 / W19 / W20 / W24
 (head not established) carry 'max' 0.47 / 0.28 / 0.28 / 0.47 m2 = D x (w + 0.80), the T-453 length; R-T516-1 (Gate A
@@ -65,8 +68,14 @@ openings (measurable, no owner question). Also beside: W15 / W16 share a 0.493 m
 lintel, W15's high end is a pair case (rule (6)).
 
 AAC glue group (R-T523-1 through T-523's own function and bindings): before 35.42625 .. 36.19665 bags AT_LEAST (to buy
->= 36 .. 37); conditional = T-530 35.387755 .. 36.226627 (>= 36 .. 37); R-T498-2 **17.65683 .. 18.16227 AT_LEAST
-(>= 18 .. 19), HELD**: the known part shrinks because host 1 becomes open, not because less glue is needed.
+>= 36 .. 37); conditional = T-530 35.387755 .. 36.226627 (>= 36 .. 37); R-T498-2 r2 **17.643906 .. 18.16227 AT_LEAST
+(>= 18 .. 19), HELD** (r1 17.65683: -0.012924 bags from the GF low end): the known part shrinks because host 1 becomes open, not because less glue is needed.
+
+F-T537-2 (r2 residual, named): the ceilings are the T-516 / T-527 mm figures (floor-to-mm convention): D-GF-06 START
+0.759 (evidence 0.7591), W18 END 0.577 (V3 0.577994; Checker used 0.578 -> 1.0453 m). A floored ceiling understates the
+upper bound by < 1 mm per end: GF face hi -0.00002 m2, glue low end +0.00009 kg (no bag change); W18 does not move the
+1F result (host HELD; AT_MOST uses face lo). Proposal for the Lead: ceilings rounded UP to the mm in a later T-516 /
+T-527 version (bound direction), never edited here.
 
 ## 5. Verdicts, lessons
 
@@ -75,3 +84,4 @@ Engine vs freelancer: no freelancer glue / lintel row (UNRESOLVED, unchanged). L
 length | a bound's direction was not re-checked when the measure behind it changed meaning | every bound records its
 basis (UPPER_PROVEN / MIN_BEARING_LENGTH); a minimum-length 'max' opens the face; ranged faces enter the material
 base low-with-high (every villa) | tests/t537_ranged_face | proposed |
+| 2026-11-05 | r1 took the T-524 HELD_BY_NAME hi as a ceiling; it keeps BOUNDED ends at the 0.40 minimum | the same bound-direction check was not applied to every input carrying a 'hi' | every hi records its basis (CEILING / MIN_BEARING); a min-bearing hi is refused as a ceiling; L_hi = w_net + measured ceilings + deficit a (every villa) | tests/t537_ranged_face | proposed |

@@ -16,11 +16,16 @@ provenance: R-T453-5 face = D x L, R-T516-1 L in [w + 2 x printed minimum bearin
 length, R-T523-1 one ceiling per purchasing group, UP-QTY-STATUS-001, owner 2026-11-02 AAC glue / black block rules;
 no new factor, no new rate):
   (1) FACE. Each lintel face in the host is D x [L_lo, L_hi] in m2, D the lintel depth and [L_lo, L_hi] the built
-      length interval of ITS OWN lintel line (VALUED: L_lo = L_hi; BOUNDED_MIN_BEARING: T-516 lengths; HELD_BY_NAME with
-      a bound: T-524 lengths; a lone held face with no length: R-T498-1 0 .. face_max, kept ONLY where that maximum
-      is a proven ceiling). L_hi unknown -> the face is OPEN above. A held face whose 'maximum' is D x (w + 2 x the
-      printed minimum bearing) (the T-453 length) is OPEN: R-T516-1 proved that length is the LOWER bound of a built
-      lintel, so it bounds nothing from above (finding F-T537-1).
+      length interval of ITS OWN lintel line (VALUED: L_lo = L_hi; BOUNDED_MIN_BEARING: T-516 lengths
+      [w + 0.80, w + a_s + a_e]; HELD_BY_NAME: L_lo = the T-524 lo; L_hi is NOT the T-524 hi, which is a MIN-BEARING
+      figure (a BOUNDED end kept at the printed minimum b_min, so that end may bear more): L_hi = T-524 hi + sum over
+      the BOUNDED ends of (measured ceiling - b_min), i.e. w_net + the T-516 / T-527 V3 ceiling at every BOUNDED end +
+      the masonry a at every DEFICIT end (ceiling_length below); a BOUNDED end with no ceiling (search limit) or a HELD
+      end -> L_hi unknown (F-T537-2, Checker r1 e/h); a lone held face with no length: R-T498-1 0 .. face_max, kept
+      ONLY where that maximum is a proven ceiling). Every HELD_BY_NAME hi states its basis: CEILING (bound by
+      ceiling_length) or MIN_BEARING (refused as a ceiling: the face is OPEN above). L_hi unknown -> the face is OPEN
+      above. A held face whose 'maximum' is D x (w + 2 x the printed minimum bearing) (the T-453 length) is OPEN:
+      R-T516-1 proved that length is the LOWER bound of a built lintel, so it bounds nothing from above (F-T537-1).
   (2) BASE. material base = [net - sum(face_hi) - sum(legacy held max), net - sum(face_lo)]: the LOW end of the
       material takes the HIGH end of every face (the longest lintel) and the HIGH end takes the LOW end of every face;
       no midpoint, never the larger or the smaller alone. lo == hi on every face -> one value (EXACT).
@@ -57,6 +62,10 @@ D_MAX, L_MAX = 2.0, 20.0              # m: a depth / length above these is milli
 # the basis of a HELD face's maximum: UPPER_PROVEN = D x a measured ceiling length (piers / stoppers measured);
 # MIN_BEARING_LENGTH = D x (w + 2 x printed minimum bearing), the T-453 length, a LOWER bound of a built lintel (T-516)
 FACE_MAX_BASES = ("UPPER_PROVEN", "MIN_BEARING_LENGTH")
+# the basis of a HELD_BY_NAME lintel's upper length: CEILING = bound by ceiling_length (measured ceiling at every BOUNDED
+# end + a at every DEFICIT end); MIN_BEARING = the T-524 hi as printed (BOUNDED ends at b_min): no ceiling
+HI_BASES = ("CEILING", "MIN_BEARING")
+B_MIN_PRINTED = 0.40                  # m: printed 'MIN.40cm' bearing (R-T453-5, R-T516-1, R-T524-1)
 
 
 class RuleError(ValueError):
@@ -116,6 +125,18 @@ def lintel_face(lz, host_t_m):
         raise RuleError(f"{oid}: inverted length interval [{lo}, {hi}] (refused)")
     if st == "VALUED" and (hi is None or abs(hi - lo) > TOL):
         raise RuleError(f"{oid}: a VALUED lintel has one length")
+    if st == "HELD_BY_NAME" and hi is not None:
+        basis = lz.get("length_hi_basis")
+        if basis not in HI_BASES:
+            raise RuleError(f"{oid}: a HELD_BY_NAME upper length states its basis ({', '.join(HI_BASES)})")
+        if basis == "MIN_BEARING":
+            hi = None
+            min_bearing_hi = _r(D * _m(ln[1], f"{oid} L_hi", L_MAX))
+            if abs(B - float(host_t_m)) <= 1e-6:
+                return {"opening_id": oid, "face_m2": [_r(D * lo), None], "open": True, "legacy": False,
+                        "min_bearing_face_hi_m2": min_bearing_hi,
+                        "why": f"the upper length {ln[1]} m is a MIN-BEARING figure (a BOUNDED end kept at the printed "
+                               f"minimum; that end may bear more): refused as a ceiling, face open above (R-T498-2 (1))"}
     if abs(B - float(host_t_m)) > 1e-6:
         return {"opening_id": oid, "face_m2": [0.0, None], "open": True, "legacy": False,
                 "why": f"lintel width {B} m differs from the host thickness {host_t_m} m (partial-depth lintel: the "
@@ -125,6 +146,54 @@ def lintel_face(lz, host_t_m):
                 "why": "upper length not measured (no pier ceiling): face open above, the material HELD, never 0"}
     return {"opening_id": oid, "face_m2": [_r(D * lo), _r(D * hi)], "open": False, "legacy": False,
             "why": f"D {D} x L [{lo}, {hi}] of the lintel line ({st})"}
+
+
+def ceiling_length(oid, t524_length_m, ends, b_min=B_MIN_PRINTED):
+    """R-T498-2 (1), HELD_BY_NAME: the T-524 length interval [lo, hi_min_bearing] + the measured end ceilings ->
+    {"length_m": [lo, hi or None], "length_hi_basis": "CEILING" | None, "why"}.
+
+    ends: [{"side", "state" in BOUNDED | MEASURED | FLAGGED_DEFICIT | HELD, "ceiling_m": the T-516 / T-527 V3
+    bearing_hi_m (BOUNDED: None when the search stopped at its limit), "a_m": masonry at a DEFICIT end}].
+    T-524 basis (asserted, else refused): hi_min_bearing = lo + sum over DEFICIT ends of a. Result:
+    hi = hi_min_bearing + sum over BOUNDED ends of (ceiling - b_min); a BOUNDED end without a ceiling or a HELD end ->
+    hi None (OPEN), never the min-bearing figure."""
+    if not (isinstance(t524_length_m, (list, tuple)) and len(t524_length_m) == 2) or None in t524_length_m:
+        raise RuleError(f"{oid}: the T-524 length is [lo, hi] in metres")
+    lo = _m(t524_length_m[0], f"{oid} T-524 L_lo", L_MAX)
+    hi_mb = _m(t524_length_m[1], f"{oid} T-524 L_hi", L_MAX)
+    if lo > hi_mb + TOL:
+        raise RuleError(f"{oid}: inverted T-524 length interval [{lo}, {hi_mb}] (refused)")
+    if len(ends) != 2 or {e.get("side") for e in ends} != {"START", "END"}:
+        raise RuleError(f"{oid}: needs one START and one END")
+    deficit_a, extra, open_why = 0.0, 0.0, []
+    for e in ends:
+        st = e.get("state")
+        if st == "FLAGGED_DEFICIT":
+            a = _m(e.get("a_m"), f"{oid} {e['side']} a", L_MAX)
+            if a >= b_min - TOL:
+                raise RuleError(f"{oid} {e['side']}: a = {a} >= b_min is not a deficit")
+            deficit_a += a
+        elif st in ("BOUNDED", "MEASURED"):
+            c = e.get("ceiling_m")
+            if c is None:
+                open_why.append(f"{e['side']} BOUNDED with no measured ceiling (search limit)")
+                continue
+            c = _m(c, f"{oid} {e['side']} ceiling", L_MAX)
+            if c < b_min - TOL:
+                raise RuleError(f"{oid} {e['side']}: ceiling {c} m below the printed minimum: not a BOUNDED end")
+            extra += c - b_min
+        elif st == "HELD":
+            open_why.append(f"{e['side']} HELD (junction not resolved)")
+        else:
+            raise RuleError(f"{oid} {e['side']}: unknown end state {st!r}")
+    if abs(hi_mb - (lo + deficit_a)) > 1e-6:
+        raise RuleError(f"{oid}: T-524 hi {hi_mb} is not lo {lo} + the deficit masonry {_r(deficit_a)} (basis unknown)")
+    if open_why:
+        return {"length_m": [_r(lo), None], "length_hi_basis": None,
+                "why": "; ".join(open_why) + ": upper length unknown, face OPEN (never the min-bearing figure)"}
+    hi = _r(hi_mb + extra)
+    return {"length_m": [_r(lo), hi], "length_hi_basis": "CEILING",
+            "why": f"L_hi = T-524 min-bearing {hi_mb} + BOUNDED-end ceilings above b_min {_r(extra)} = {hi} m"}
 
 
 def pair_faces(pair, hosts_of):

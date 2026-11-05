@@ -5,6 +5,11 @@ names), from committed, merged inputs only (no drawing needed):
   research/agents_t530/WIRING_MANIFEST_T530.json       the lintel lines after the T-516 / T-519 / T-524 wiring
                                                        (section B x D, length interval, state) and T-530's own after
   research/agents_t523/t523_binding_map_v2.py          the R-T523-1 group function and bindings (merged, not copied)
+  research/agents_t516/out/JAMB_BEARING_T516.json      per-end state and bearing ceiling (R-T516-1, Checker AGREE)
+  research/agents_t527/out/EFFECT_T527.json            the V1 -> V2 -> V3 end changes (R-T527-1), applied on top
+
+r2 (Checker r1 e/h): a HELD_BY_NAME lintel's T-524 hi is a MIN-BEARING figure (BOUNDED ends kept at 0.40); its L_hi is
+re-bound by R.ceiling_length from the V3 end ceilings, or OPEN where a BOUNDED end has none.
 
 Every face is recomputed here as D x L from the lintel line (never read from T-530's face column); T-530's after is
 reproduced only under the CONDITIONAL reading (legacy held maxima accepted) and compared, as an independent check.
@@ -26,6 +31,8 @@ import r_t498_2 as R          # noqa: E402
 
 T453_LEDGER = ROOT / "research/agents_t453/out/MATERIAL_LEDGER_T453.json"
 T530_MANIFEST = ROOT / "research/agents_t530/WIRING_MANIFEST_T530.json"
+T516_BEARING = ROOT / "research/agents_t516/out/JAMB_BEARING_T516.json"
+T527_EFFECT = ROOT / "research/agents_t527/out/EFFECT_T527.json"
 HOSTS = ("L-2fdc0f971a94348ec855", "L-a3f88ecda2402f67c500")
 MIN_BEARING_SUM = 0.80          # T-453 length = w + 2 x 0.40 printed minimum (R-T453-5, R-T516-1 lower bound)
 PACK_KG = 25.0
@@ -38,6 +45,40 @@ def _json(p):
 
 def _r(x, n=6):
     return R._r(x, n)
+
+
+def v3_ends():
+    """{opening_id: {side: {"state", "bearing_hi_m", "available_m"}}}: the T-516 rows with T-527's V1->V2->V3 end
+    changes applied (each change's 'before' must match, else refused)."""
+    ends = {}
+    for r in _json(T516_BEARING)["rows"]:
+        ends[r["opening_id"]] = {e["side"]: {"state": e["state"], "bearing_hi_m": e.get("bearing_hi_m"),
+                                             "available_m": e.get("available_m")} for e in r["ends"]}
+    steps = _json(T527_EFFECT)["steps"]
+    for step in ("V1_to_V2", "V2_to_V3"):
+        for oid, changes in steps[step]["t516"].items():
+            for path, before, after in changes:
+                p = path.split(".")
+                if p[0] != "ends" or p[2] not in ("state", "bearing_hi_m", "available_m"):
+                    continue
+                cur = ends[oid][p[1]]
+                if cur[p[2]] != before:
+                    raise R.RuleError(f"{oid} {p[1]} {p[2]}: T-527 {step} 'before' {before} != {cur[p[2]]}")
+                cur[p[2]] = after
+    return ends
+
+
+def _ceiling_input(li, ends):
+    """HELD_BY_NAME (T-524 min-bearing hi) -> the same lintel with L_hi bound by the V3 end ceilings (R-T498-2 (1))."""
+    oid = li["opening_id"]
+    es = [{"side": side, "state": e["state"], "ceiling_m": e["bearing_hi_m"],
+           "a_m": e["bearing_hi_m"] if e["state"] == "FLAGGED_DEFICIT" else None} for side, e in ends[oid].items()]
+    c = R.ceiling_length(oid, li["length_m"], es)
+    out = dict(li, length_m=c["length_m"], length_hi_basis=c["length_hi_basis"] or "MIN_BEARING",
+               t524_length_m=list(li["length_m"]), ceiling_why=c["why"])
+    if c["length_hi_basis"] is None:          # no ceiling: the face opens (lintel_face holds it)
+        out["length_m"] = [c["length_m"][0], None]
+    return out
 
 
 def _lintel_input(row):
@@ -61,6 +102,8 @@ def _held_input(h, conditional):
 
 
 def host(m, lintels, *, conditional=False):
+    """strict (R-T498-2 r2): HELD_BY_NAME lintels carry their ceiling-bound L_hi; conditional: the T-530 reading (the
+    T-524 hi and the legacy held maxima taken as ceilings), kept only to reproduce T-530."""
     t = m["thickness_m"]
     faces = []
     for d in m["lintel_deductions"]:
@@ -70,6 +113,9 @@ def host(m, lintels, *, conditional=False):
         f = R.lintel_face(lz, t)
         f["lintel_line_id"] = lz["lintel_line_id"]
         f["lintel_state"] = lz["state"]
+        f["length_m"] = list(lz["length_m"])
+        if "t524_length_m" in lz:
+            f["t524_length_m"], f["ceiling_why"] = lz["t524_length_m"], lz["ceiling_why"]
         f["t453_face_m2"] = d["face_m2"]
         faces.append(f)
     for h in m.get("lintel_held_faces") or []:
@@ -108,18 +154,23 @@ def _glue_group(moves):
 def build():
     led = {m["line_id"]: m for m in _json(T453_LEDGER)["block_materials"] if m["item"] == "LAYING_MATERIAL"}
     man = _json(T530_MANIFEST)
-    lintels = {}
+    ends = v3_ends()
+    lintels, lintels_t530 = {}, {}
     for row in man["stream_S"]["lintel_lines"]:
         if "pair" in row["after"]:
             continue
         li = _lintel_input(row)
-        lintels[li["opening_id"]] = li
+        if li["state"] == "HELD_BY_NAME":
+            lintels_t530[li["opening_id"]] = dict(li, length_hi_basis="CEILING")     # T-530's reading (conditional)
+            lintels[li["opening_id"]] = _ceiling_input(li, ends)
+        else:
+            lintels_t530[li["opening_id"]] = lintels[li["opening_id"]] = li
     t530_after = {h["host_line_id"]: h for h in man["stream_S"]["host_material_lines"]}
     rows, strict_moves, cond_moves = [], {}, {}
     for lid in HOSTS:
         m = led[lid]
         strict = host(m, lintels)
-        cond = host(m, lintels, conditional=True)
+        cond = host(m, lintels_t530, conditional=True)
         t5 = t530_after[lid]
         agree = (cond["glue_kg"]["range"] == t5["after"]["kg_range"]
                  and cond["base"]["base_m2"] == t5["after"]["material_base_range_m2"])
@@ -149,9 +200,10 @@ def build():
              "t530_after": man["stream_S"]["glue_group"]["after"]}
     if group["after_conditional"]["at_least"] != group["t530_after"]["at_least"]:
         raise R.RuleError("the conditional glue group does not reproduce T-530")
-    return {"schema": "T537_APPLICATION_V1", "rule": f"{R.RULE_ID} {R.RULE_VERSION}", "extends": R.EXTENDS,
+    return {"schema": "T537_APPLICATION_V2", "rule": f"{R.RULE_ID} {R.RULE_VERSION}", "extends": R.EXTENDS,
             "inputs": {"t453_ledger": str(T453_LEDGER.relative_to(ROOT)), "t530_manifest": str(T530_MANIFEST.relative_to(ROOT)),
-                       "t523": "research/agents_t523/t523_binding_map_v2.py"},
+                       "t523": "research/agents_t523/t523_binding_map_v2.py",
+                       "t516": str(T516_BEARING.relative_to(ROOT)), "t527": str(T527_EFFECT.relative_to(ROOT))},
             "hosts": rows, "glue_group": group, "released_quantities_changed": 0,
             "note": "opt-in candidate not touched; the 2 lines are T-498 stage lines (not merged); nothing released"}
 

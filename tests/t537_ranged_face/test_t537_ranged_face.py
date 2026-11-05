@@ -12,6 +12,11 @@ Hand fixture K537 (not the training villa; numbers by hand):
     glue [49.77, 50.22] kg = [1.9908, 2.0088] bags -> to buy [2, 3]: a RANGE by name, never 'the 3'
   wall A + wall D in one purchasing group: [90.63, 91.53] kg = [3.6252, 3.6612] bags -> ONE ceiling [4, 4]
     (per-wall ceilings 2 + 2 .. 2 + 3 = 4 .. 5 are never bought)
+  r2 HELD_BY_NAME (wall A, door w 1.20): START BOUNDED, masonry ceiling 0.60 m; END DEFICIT, a 0.10 m at a column
+    T-524 (min-bearing basis): L [1.20 + 0.40 + 0, 1.20 + 0.40 + 0.10] = [1.60, 1.70]; 1.70 is NO ceiling
+    ceiling-bound: L_hi = 1.70 + (0.60 - 0.40) = 1.90 = 1.20 + 0.60 + 0.10 -> face 0.20 x [1.60, 1.90] = [0.32, 0.38]
+    base [9.48 - 0.38, 9.48 - 0.32] = [9.10, 9.16] m2 -> glue [40.95, 41.22] kg (the min-bearing hi would give
+    a false low end 9.14 -> 41.13 kg)
 """
 
 import importlib.util
@@ -103,6 +108,21 @@ def test_legacy_held_face_with_proven_ceiling_kept_as_r_t498_1():
     assert b["base_m2"] == [A(8.58), A(9.18)]
 
 
+def _hbn_ends(ceiling=0.60, a=0.10, start_state="BOUNDED"):
+    return [{"side": "START", "state": start_state, "ceiling_m": ceiling},
+            {"side": "END", "state": "FLAGGED_DEFICIT", "a_m": a}]
+
+
+def test_held_by_name_upper_length_bound_by_the_measured_ceiling():
+    c = R.ceiling_length("DK", [1.60, 1.70], _hbn_ends())
+    assert c["length_m"] == [A(1.60), A(1.90)] and c["length_hi_basis"] == "CEILING"
+    li = {"opening_id": "DK", "state": "HELD_BY_NAME", "section_B_D_m": [0.20, 0.20], "length_m": c["length_m"],
+          "length_hi_basis": c["length_hi_basis"]}
+    b = base_of(9.48, li)
+    assert b["base_m2"] == [A(9.10), A(9.16)]
+    assert R.material_line(b, 4.5, "kg")["range"] == [A(40.95), A(41.22)]
+
+
 def test_pair_on_one_host_carried_once():
     out = R.pair_faces({"pair": ["P1", "P2"], "D_m": 0.20, "length_m": [2.60, 3.00]}, {"P1": "H", "P2": "H"})
     assert list(out) == ["H"] and len(out["H"]) == 1 and out["H"][0]["face_m2"] == [A(0.52), A(0.60)]
@@ -164,6 +184,41 @@ def test_same_lintel_twice_and_prerounded_refused():
         R.group_to_buy("AAC", [{"state": "VALUED", "value": 2, "rounded": True}], 1.0)
 
 
+def test_min_bearing_hi_at_a_bounded_end_refused_as_a_ceiling():
+    li = {"opening_id": "DK", "state": "HELD_BY_NAME", "section_B_D_m": [0.20, 0.20], "length_m": [1.60, 1.70],
+          "length_hi_basis": "MIN_BEARING"}
+    f = R.lintel_face(li, 0.20)
+    assert f["open"] and f["face_m2"] == [A(0.32), None] and f["min_bearing_face_hi_m2"] == A(0.34)
+    b = R.material_base(9.48, [f])
+    g = R.material_line(b, 4.5, "kg")
+    assert b["state"] == "HELD" and g["value"] is None and g["range"] is None
+    assert g["at_most_beside"] == A(41.22)                          # (9.48 - 0.32) x 4.5, never the false 41.13 low end
+
+
+def test_held_by_name_hi_without_a_basis_refused():
+    li = {"opening_id": "DK", "state": "HELD_BY_NAME", "section_B_D_m": [0.20, 0.20], "length_m": [1.60, 1.70]}
+    with pytest.raises(R.RuleError, match="basis"):
+        R.lintel_face(li, 0.20)
+
+
+def test_bounded_end_without_a_ceiling_or_held_end_opens_the_length():
+    for ends in (_hbn_ends(ceiling=None), _hbn_ends(start_state="HELD")):
+        c = R.ceiling_length("DK", [1.60, 1.70], ends)
+        assert c["length_m"] == [A(1.60), None] and c["length_hi_basis"] is None
+
+
+@pytest.mark.parametrize("args, match", [
+    (([1.60, 1.75], _hbn_ends()), "basis unknown"),               # T-524 hi != lo + deficit a
+    (([1.70, 1.60], _hbn_ends()), "inverted"),
+    (([1.60, 1.70], _hbn_ends(ceiling=0.30)), "below the printed minimum"),
+    (([1.60, 1.70], _hbn_ends(a=0.45)), "not a deficit"),
+    (([1600, 1700], _hbn_ends()), "metres|above"),
+])
+def test_ceiling_length_adverse_refused(args, match):
+    with pytest.raises(R.RuleError, match=match):
+        R.ceiling_length("DK", *args)
+
+
 def test_no_midpoint_no_single_figure_on_a_range():
     g = R.material_line(base_of(9.48, lz()), 4.5, "kg")
     assert g["value"] is None and 41.085 not in g["range"]
@@ -183,10 +238,13 @@ def test_gf_host_d_gf_06_ranged_face(app):
     h = _host(app, "L-a3f88ecda2402f67c500")
     assert h["before"]["glue_kg"] == A(23.535)
     f = h["after_r_t498_2"]["base"]["faces"][0]
-    assert f["opening_id"] == "D-GF-06" and f["face_m2"] == [A(0.28), A(0.308)]        # 0.20 x [1.40, 1.54]
-    assert h["after_r_t498_2"]["base"]["base_m2"] == [A(5.282), A(5.31)]
-    assert h["after_r_t498_2"]["glue_kg"]["range"] == [A(23.769), A(23.895)]
-    assert h["after_r_t498_2"]["bags_25kg_net"]["range"] == [A(0.95076), A(0.9558)]
+    # T-524 [1.40, 1.54] is min-bearing at the BOUNDED START (0.759 m to a column, T-516): L_hi = 1.00 + 0.759 + 0.140
+    assert f["opening_id"] == "D-GF-06" and f["length_m"] == [A(1.40), A(1.899)]
+    assert f["t524_length_m"] == [A(1.40), A(1.54)]
+    assert f["face_m2"] == [A(0.28), A(0.3798)]                                         # 0.20 x [1.40, 1.899]
+    assert h["after_r_t498_2"]["base"]["base_m2"] == [A(5.2102), A(5.31)]
+    assert h["after_r_t498_2"]["glue_kg"]["range"] == [A(23.4459), A(23.895)]          # Checker r1 re-derivation
+    assert h["after_r_t498_2"]["bags_25kg_net"]["range"] == [A(0.937836), A(0.9558)]
 
 
 def test_1f_host_held_by_the_four_min_bearing_maxima(app):
@@ -195,7 +253,9 @@ def test_1f_host_held_by_the_four_min_bearing_maxima(app):
     faces = {f["opening_id"]: f for f in a["base"]["faces"]}
     assert faces["W14"]["face_m2"] == [A(0.975), A(1.23)]          # 0.30 x [3.25, 4.10]
     assert faces["W15"]["face_m2"] == [A(0.47), A(0.5674)]         # 0.20 x [2.35, 2.837]
-    assert faces["W18"]["face_m2"] == [A(0.17346), A(0.17346)]     # 0.20 x 0.8673 (T-524)
+    # W18: T-524 0.8673 (START 0.000 at a column, END kept at 0.40); V3 END ceiling 0.577 (T-527) -> 0.8673 + 0.177
+    assert faces["W18"]["length_m"] == [A(0.8673), A(1.0443)]
+    assert faces["W18"]["face_m2"] == [A(0.17346), A(0.20886)]
     assert sorted(k for k, f in faces.items() if f["open"]) == ["W16", "W19", "W20", "W24"]
     assert a["base"]["state"] == "HELD" and a["glue_kg"]["value"] is None
     assert a["glue_kg"]["at_most_beside"] == A(451.60893)           # (101.976 - 1.61846) x 4.5
@@ -213,6 +273,15 @@ def test_glue_group_strict_and_conditional(app):
     assert g["after_conditional"]["at_least"] == [A(35.387755), A(36.226627)]
     s = g["after_r_t498_2"]
     assert s["status"] == "HELD"
-    # 35.42625 - 17.77878 (host 1 leaves: open) - 0.9414 + 0.95076; 36.19665 - 18.04878 - 0.9414 + 0.9558
-    assert s["at_least"] == [A(17.65683), A(18.16227)] and s["to_buy_at_least"] == [18, 19]
+    # 35.42625 - 17.77878 (host 1 leaves: open) - 0.9414 + 0.937836; 36.19665 - 18.04878 - 0.9414 + 0.9558
+    assert s["at_least"] == [A(17.643906), A(18.16227)] and s["to_buy_at_least"] == [18, 19]
     assert app["released_quantities_changed"] == 0
+
+
+def test_gf_ceiling_equals_t516_own_length_ceiling(app):
+    """independent check: the ceiling-bound L_hi of D-GF-06 equals T-516's own length_hi_m (w + a_s + a_e)."""
+    import json
+    t516 = {r["opening_id"]: r for r in json.loads((ROOT / "research/agents_t516/out/JAMB_BEARING_T516.json")
+                                                    .read_text(encoding="utf-8"))["rows"]}
+    f = _host(app, "L-a3f88ecda2402f67c500")["after_r_t498_2"]["base"]["faces"][0]
+    assert f["length_m"][1] == A(t516["D-GF-06"]["length_hi_m"]) == A(1.899)
