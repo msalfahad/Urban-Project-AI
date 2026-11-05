@@ -1034,3 +1034,75 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-04 03:21 | Worker 1 | OPEN | STARTED 03:21, still running at the window end |
 | 11-04 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-499 MERGED (engine 416392e8) / T-499 Gate A PASS (reporting rule, unwired): R-T499-1 HELD subtotal with AT_L |
 | 11-04 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:18; board / Since 00:20: 4 merged all WORKED (T-496, T-503, T-497 Gate B -> candidate V3.0.50 trench 1.069..1.176  |
+
+## 2026-11-04 04:31 -> 2026-11-05 04:31 UTC (67 runs: 58 SUCCESS, 2 IDLE (lock correctly held), 7 INCOMPLETE = 2 dead runs (Worker 2 10:40, Worker 3 11:00; nothing lost) + 5 self-reported with work pushed or staged (Worker 2 08:40; Worker 3 21:00, 23:00, 01:01, 03:00: blocked by the run-wrapper limit and version collisions); 0 BLOCKED / FAILED)
+
+| UTC | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-04 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 06:14; T-310 r3 READY @1cb12525 (rebase only) / WP wet-area/pool package re-versioned ARCH_TAKEOFF_V3.0.52 on merged  |
+| 11-04 04:51 | Verifier | SUCCESS | final 04:51 (single line); none (READY 0; T-483 r2 and T-310 r3 CLAIMED, not handed in) / Nothing to gate or merge; engine stays 416392e8 |
+| 11-04 04:53 | Verifier | SUCCESS | final line 04:51 written before its STARTED stamp (clock skew); READY 0, nothing to gate |
+| 11-04 05:00 | Worker 3 | SUCCESS | STARTED 05:00, final 05:11; T-504 READY d65f46c9 / NEW PLASTER_MATERIALS_TABLE_V3 (R-T504-1, unwired): coat subtotal over any HELD row is  |
+| 11-04 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 06:47; T-483 r3 READY (agents/task-T-483 @ a50c0cb4) / Skirting remainder (V3.0.51 / master 1.48.0, engineering = r2) |
+| 11-04 05:49 | Verifier | SUCCESS | STARTED 05:49, final 05:52; T-504 MERGED (engine f621ce44) / T-504 Gate A PASS (reporting rule, unwired): R-T504-1 coat subtotal over any  |
+| 11-04 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:54; T-494 READY (agents/task-T-494 @5f5caabb) / B8-06 pool-court slab WP: new rule version WP_APPLICABILITY_RULES_ |
+| 11-04 06:50 | Verifier | SUCCESS | STARTED 06:50, final 07:50; none (overlap guard: run session_01E6cPncn4U7Nu1wtujbRaHp active since 2026-11-04T06:50Z) / no check, no merge |
+| 11-04 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 08:49; T-487 READY / B9-02 lintels wired as ARCH_TAKEOFF_V3.0.53 on merged V3.0.51 (own chain c0b6d664 -> 36863f6c):  |
+| 11-04 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:28; T-505 READY (agents/task-T-505 @ b09ed4e7) / DISPOSAL_BALANCE_V2 (R-T505-1): loss_reuse / loss_import as separ |
+| 11-04 08:08 | Verifier | SUCCESS | final 08:08 (single line); T-483 r3 MERGED (engine ea7d375f); T-310 r3 READY, MUST REBASE / T-483 Gate B PASS: L4 to the end on a50c0cb4  |
+| 11-04 08:13 | Lead | SUCCESS | STARTED 08:13, final 08:19; board / Since 04:14: 2 merged both WORKED (T-504 plaster table V3; T-483 r3 Gate B -> candidate V3.0.51, skirt |
+| 11-04 08:40 | Worker 2 | INCOMPLETE | STARTED 08:40, final 10:03; T-310 r4 / Rebase done, pushed agents/task-T-310 @c023a2c4 (engine 8b94facc): ARCH_TAKEOFF_V3.0.52 now extends |
+| 11-04 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:51; none (overlap guard: run unknown active since 2026-11-04T08:51Z) / no check, no merge, no quantity change / se |
+| 11-04 09:02 | Worker 3 | SUCCESS | STARTED 09:02, final 09:11; T-506 READY (agents/task-T-506 @ 0d13e0c3) / Black-block mortar reconciled wall by wall, residual 0: T-367 3.8 |
+| 11-04 09:21 | Worker 1 | SUCCESS | STARTED 09:21, final 09:43; T-501 READY (agents/task-T-501 @68f95dc0) / 1F shaft skirting 9.050 lm certain + 2.200 lm held bound to stair/ |
+| 11-04 10:04 | Verifier | SUCCESS | final 10:04 (single line); T-494 MERGED cddfdf7f; T-505 MERGED 8b94facc; T-487 MERGED dbc619fd (engine) / T-494 Gate A PASS (own DXF re-m |
+| 11-04 10:40 | Worker 2 | INCOMPLETE | STARTED 10:40, no final line; confirmed: lock went stale, recovered 14:42; T-310 work already pushed c023a2c4, no partial merge |
+| 11-04 10:50 | Verifier | SUCCESS | STARTED 10:50, final 10:57; T-501 MERGED 5eded7df; T-506 MERGED aa79343a (engine @ aa79343a) / T-501 Gate A PASS: own DXF re-measure by ha |
+| 11-04 11:00 | Worker 3 | INCOMPLETE | STARTED 11:00, no final line; confirmed: lock went stale, recovered 15:02; T-468 merged later (c906b76d), no lost work |
+| 11-04 11:20 | Worker 1 | SUCCESS | STARTED 11:20, final 12:24; T-460 READY (agents/task-T-460 @ 7f12137b) / C5 reproduced: engine band path drops wall gaps <0.50 m (1F W18 0 |
+| 11-04 11:52 | Verifier | SUCCESS | STARTED 11:52, final 11:54; none (READY 0: T-310 r5 CLAIMED W2 10:42, T-460 CLAIMED W1 11:21, T-468 CLAIMED W3 11:00; engine aa79343a, no  |
+| 11-04 12:15 | Lead | SUCCESS | STARTED 12:15, final 12:23; board / Since 08:19: 5 merged all WORKED (T-494, T-505, T-501, T-506 Gate A; T-487 Gate B -> candidate V3.0.53 |
+| 11-04 12:40 | Worker 2 | IDLE | 12:40 run lock held by the previous run; IDLE line written, run ended |
+| 11-04 12:51 | Verifier | SUCCESS | STARTED 12:51, final 12:56; T-460 MERGED 70590a81 (engine) / T-460 Gate A PASS (research, unwired): own DXF re-measure 1F W18 column face  |
+| 11-04 13:00 | Worker 3 | IDLE | 13:00 run lock held by the previous run; IDLE line written, run ended |
+| 11-04 13:23 | Worker 1 | SUCCESS | STARTED 13:23, final 14:39; T-480 READY (agents/task-T-480 @ d275b1ab) / B7-09 stair guardrail runs integrated as ARCH_TAKEOFF_V3.0.54 + m |
+| 11-04 13:50 | Verifier | SUCCESS | final 13:50 (single line); none (READY 0: T-480 CLAIMED W1 13:23; T-310 r5 / T-488 / T-468 / T-500 TODO; engine 70590a81, no merge since  |
+| 11-04 13:51 | Verifier | SUCCESS | final line 13:50 written before its STARTED stamp (clock skew); READY 0 |
+| 11-04 14:42 | Worker 2 | SUCCESS | STARTED 14:42, final 14:53; T-500 READY (agents/task-T-500 @ ac7b50e4) / Tile bed mortar table on V3.0.53: 88/88 bed lines bound (44 m3 BO |
+| 11-04 14:52 | Verifier | SUCCESS | STARTED 14:52, final 15:51; none (overlap guard: run session_01E6cPnbrZJQ81JptfW36jPZ active since 2026-11-04T14:52Z) / no check, no merge |
+| 11-04 15:02 | Worker 3 | SUCCESS | STARTED 15:02, final 16:23; T-488 READY (agents/task-T-488 @ c238e4e3) / Blockwork wiring as ARCH_TAKEOFF_V3.0.55 + master 1.52.0 on merge |
+| 11-04 15:25 | Worker 1 | SUCCESS | STARTED 15:25, final 15:34; T-468 READY (agents/task-T-468 @ d81e1b8a) / One status vocabulary: QUANTITY = export QSTATES (VERIFIED / VERI |
+| 11-04 15:52 | Verifier | SUCCESS | final 15:52 (single line); T-480 MERGED 1b66b719 (Gate B); T-468 MERGED c906b76d (Gate A); T-500 left READY (Gate B + one rule) / T-480 G |
+| 11-04 16:15 | Lead | SUCCESS | STARTED 16:15, final 16:19; board / Since 12:19: 3 merged all WORKED (T-460, T-468 Gate A; T-480 Gate B -> candidate V3.0.54 c85c4630, B7- |
+| 11-04 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 18:04; T-310 r6 READY @b6ba8712 / Rebase only: wet-area/pool WP package renumbered ARCH_TAKEOFF_V3.0.55 on V3.0.54 (T |
+| 11-04 16:52 | Verifier | SUCCESS | STARTED 16:52, final 17:36; T-500 MERGED f1ea10f5 (Gate A); T-488 MERGED e8143e40 (Gate B) / T-488 Gate B PASS: L4 to the end on c238e4e3  |
+| 11-04 17:01 | Worker 3 | SUCCESS | STARTED 17:01, final 17:18; T-510 READY 3b9f8850 / band-gap classes V1 (new, unwired): wall gaps classed by bounding elements after joinin |
+| 11-04 17:21 | Worker 1 | SUCCESS | STARTED 17:21, final 18:49; T-508 READY 470c7960 / ARCH_TAKEOFF_V3.0.56 stair skirting home on T-488 V3.0.55 (renumbered from .55 after T- |
+| 11-04 17:51 | Verifier | SUCCESS | STARTED 17:51, final 17:54; T-510 MERGED 9e86fcf5 (Gate A) / BAND_GAP_CLASSES_V1 (new, unwired): own re-measure from P7757.dxf 1F W18 colu |
+| 11-04 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:41; none / No claimable TODO row: board has 0 TODO; worker 2's QUEUED rows T-314 / T-502 / T-507 wait on T-310 (RE |
+| 11-04 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:50; none (overlap guard: run session_01E6cPnf1RBtAuTpBfdmLdT6 active since 2026-11-04T18:51Z) / no check, no merge |
+| 11-04 19:19 | Worker 1 | SUCCESS | STARTED 19:19, final 19:20; none / No claimable TODO row on the board @94521f67 (72 rows: 0 TODO; lane S rows T-382 / T-498 / T-509 and th |
+| 11-04 19:54 | Verifier | SUCCESS | final 19:54 (single line); T-508 MERGED 40ab9061 (Gate B); T-310 r6 READY, MUST REBASE / T-508 Gate B PASS: L4 to the end on 470c7960 (5  |
+| 11-04 20:12 | Lead | SUCCESS | STARTED 20:12, final 20:19; board / Since 16:17: 4 merged, 0 rejected: T-488 Gate B WORKED (V3.0.55, MAS.BLOCK 579.1011 -> 467.7925 m2, 98 |
+| 11-04 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 21:47; T-310 r7 READY @d143b443 / Rebase only (engineering unchanged): WP package renumbered ARCH_TAKEOFF_V3.0.57 on  |
+| 11-04 20:50 | Verifier | SUCCESS | STARTED 20:50, final 20:51; none / READY 0 in the Lead queue (T-512 / T-498 / T-423 TODO, T-310 r7 CLAIMED by W2 20:41); SCOREBOARD v2 alr |
+| 11-04 21:00 | Worker 3 | INCOMPLETE | STARTED 21:00, final 22:07; T-498 / ARCH_TAKEOFF_V3.0.57 blockwork material lines staged on agents/task-T-498 @ 4821c0cc: V3.0.56 4e25c54f |
+| 11-04 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 21:37; T-512 READY @8c6888d8 / t212 green (band_gap_classes_v1 = UNWIRED_PRODUCER); all-blank code view prints HELD ( |
+| 11-04 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:45; T-512, T-310 r7 / T-512 Gate A PASS MERGED b7964886 (t212 green again, all-blank codes view HELD never 0.0, 0  |
+| 11-04 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 22:58; T-511 READY @7201d218 / Cement/sand producer census on V3.0.57: 1,458 keys, 0 two-producer, 0 reader divergenc |
+| 11-04 22:50 | Verifier | SUCCESS | STARTED 22:50, final 22:51; none / READY 0 (T-498 / T-423 TODO, T-511 CLAIMED by W2 22:41; T-512 and T-310 r7 merged by the 22:45 run); no |
+| 11-04 23:00 | Worker 3 | INCOMPLETE | STARTED 23:00, final 00:34; T-498 / Blockwork material lines renumbered ARCH_TAKEOFF_V3.0.58 onto the merged T-310 V3.0.57 (version collis |
+| 11-04 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 00:43; T-423 READY (agents/task-T-423 @ a12153ab) / ARCH_TAKEOFF_V3.0.58 on own-reproduced V3.0.57 25a8b406 -> ae938f |
+| 11-04 23:52 | Verifier | SUCCESS | STARTED 23:52, final 23:59; T-511 / T-511 Gate A PASS MERGED 94b2e502 (cement / sand census + STAIR_BED_V1, research, unwired; 0 candidate |
+| 11-05 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:19; board / Since 20:15: 3 merged, 0 rejected, all WORKED: T-512 Gate A (t212 green, all-blank code HELD never 0.0 |
+| 11-05 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 01:42; T-507 READY (agents/task-T-507 @ ac1dfd87) / ARCH_TAKEOFF_V3.0.58 (provisional no.): B8-06 pool-court slab own |
+| 11-05 00:52 | Verifier | SUCCESS | STARTED 00:52, final 01:43; T-423, T-515 / T-423 Gate B REJECTED r1 -> TODO r2: L4 ran to the end on a12153ab, 3 NEW failures vs 94b2e502  |
+| 11-05 01:01 | Worker 3 | INCOMPLETE | STARTED 01:01, final 02:31; T-498 / Blockwork materials package (74 lines: black 0.20 1,075.80 pcs, mortar 1.269444 m3 PROV, AAC glue 43.5 |
+| 11-05 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:33; T-515 READY agents/task-T-515 @ 02207c42 / B9-02 lintel bars split: printed span segments COMPUTED 63.161728 k |
+| 11-05 01:50 | Verifier | SUCCESS | STARTED 01:50, final 02:23; T-507 / T-507 Gate B PASS MERGED c94b35c1 (on 21b5e7ec): candidate of record ARCH_TAKEOFF_V3.0.58 json c9570e6 |
+| 11-05 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 03:13; T-514 READY (f7b3ddfc) / Screed/threshold/outdoor bed cement-sand producers R-T514-1..6 on V3.0.58: north side |
+| 11-05 02:51 | Verifier | SUCCESS | STARTED 02:51, final 02:51; none (READY 0: T-498 TODO r3 after W3 INCOMPLETE 02:31, T-514 CLAIMED W2 02:41, T-423 TODO r2; T-507 / T-515 a |
+| 11-05 03:00 | Worker 3 | INCOMPLETE | STARTED 03:00, final 03:07; T-498 / r3 stage agents/task-T-498 @ e3e2ebb5: blockwork materials renumbered to ARCH_TAKEOFF_V3.0.59 on T-507 |
+| 11-05 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:21; none / No claimable TODO: the only TODO row is T-498 (stream S blockwork materials wiring, worker 3 FIRST, sta |
+| 11-05 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:54; T-514 Gate A PASS MERGED ee91e8b9 / Screed/threshold/outdoor bed producers (research, unwired): own re-measure |
+| 11-05 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:19; board / Since 00:15: 3 merged (T-515 lintel span bars WORKED, T-507 V3.0.58 roof WP 204.112 -> 209.019 m2 WORK |
