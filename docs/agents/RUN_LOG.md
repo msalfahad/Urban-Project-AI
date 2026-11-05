@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05 01:33 UTC | Worker 1 | SUCCESS | T-515 READY agents/task-T-515 @ 02207c42 | B9-02 lintel bars split: printed span segments COMPUTED 63.161728 kg AT_LEAST on 16 lintels (in-bearing / bends / link kg HELD by name, ceiling 106.95 kg beside, 104.22 kg if p.8 note 22 min cover applies), links 146, laps 0, 44 held blank; freelancer no lintel row: UNRESOLVED; learned: note 22 prints a beam MINIMUM cover only, W14/W15 use L3/L2 bars | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 01:20 UTC | Worker 1 | STARTED | run session_01E6cPnaxu27X4XQKBY4oamd | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05 01:01 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T00:52Z | Verifier | STARTED | run session_01E6cPne9HvdJEYWgJ3pwge7 | repo-attached routine | task state: READY T-423 (W1 00:43) | self-check pending
