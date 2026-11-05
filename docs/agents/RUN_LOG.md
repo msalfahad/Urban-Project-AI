@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T12:52Z | Verifier | STARTED | run session_01E6cPndgRALZvnCMvJ21xuh | repo-attached routine | task state: T-528 READY (W2 12:46) | self-check pending
 - 2026-11-05T12:46Z | Worker 2 | SUCCESS | T-528 READY 7cc43a88 | FINISH_MATERIALS_TABLE_V7 (unwired): stair 1:3 bed cement/sand from UP-STAIR-017 (Q-53 C, recomputed 9.576 bags + 0.9975 m3 sand per m3); Alsenan 35.4313 m2 stair bed would go HELD -> 1.062939 m3, 10.1787 bags theoretical (procurement 10.6876, buy 11), sand 1.0603 m3; Lead's fixture sand 0.360 is the rounded 'about 1.00', exact 0.3591 | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 12:40 UTC | Worker 2 | STARTED | run session_01E6cPnd3XtNgi1petGg5FQS | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T12:24Z | Lead | SUCCESS | board | Since 08:15: 6 merged, all WORKED (T-519 lintel pieces 6 PRODUCED/10 HELD, T-520 perimeter mortar +0.098145 m3, T-521 FINISH V6, T-522 window upturn 0.500 lm + ledge narrowed, T-523 binding V2, T-524 lintel end concrete 0.514 -> 0.372692..0.437542 m3); no candidate change (V3.0.58, released V2.9 + route G unchanged); gate 0 found: t485 red (T-507 stale pending) -> T-525; 7 new rows T-525..T-531; wrapper item open (not re-notified); Drive read OK, no new files; ERS: read, s.7 lessons rows proposed; queue check: 19 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
