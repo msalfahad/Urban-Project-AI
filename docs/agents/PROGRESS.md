@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-05 08:15 UTC (Lead). Previous version: 2026-11-05 04:15 UTC. The released numbers did not change
+Last update: 2026-11-05 16:30 UTC (Lead). Previous version: 2026-11-05 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 5 Nov 08:15 (newest first; eleven checked and merged, none sent back; no candidate quantity moved; all pieces wait
+to be wired into the candidate):
+- Pool-court ledge: the 0.64 m2 ledge under the floor above is open to the void and the court, so by your balcony rule it
+  takes the membrane: measured 0.64 m2 (checked by hand); roof waterproofing would go 209.02 -> 209.66 m2 (+0.3 %). The
+  bath window upturn (0.50 m) is also measured; the ledge upturn narrowed to 0.55 m plus 2.98 m at the glazing.
+- Lintels: lintel system follows the project's RC schedule on all 16 lintels; 6 can be produced, 10 are held on short
+  bearings; their end concrete narrowed 0.514 -> 0.373 .. 0.438 m3 (the part inside columns counted once there). The
+  curved-bay pier was re-read from the drawing (0.58 m, not 0.48 m); nothing changes state.
+- Black-block walls: mortar at column faces and slab soffits adds 0.098 m3 (+7.7 %) to the 1.27 m3 already counted; 12
+  wall ends that stop on a column were missing from the junction lists (wall length unchanged); the 0.15 m walls stay
+  held until a block size source is found.
+- Cement and sand: tile-bed mortar now counted without the 5 % (your 5 % is its own purchase allowance); stair marble bed
+  from your answer (about 9.6 bags + 1.0 m3 sand per m3): about 10.2 bags on 35.4 m2, but the stair area differs from
+  the 39.49 m2 in your question by 4.06 m2, now being reconciled; cement you can already count: at least about 131 .. 173
+  bags. Sand has no purchase unit yet (being sourced).
+- Freelancer: he has no lintel, cement, mortar or ledge rows, so none of this is compared (not counted as agreement).
+- Still blocked: every candidate package and the registry test fix wait for the command wrapper (see "Waiting for the
+  owner"). 10 Nov (end-to-end BOQ with every trade): LOW now: about 10 packages left in under 5 days, none can start.
 
 Since 5 Nov 04:15 (newest first; three checked and merged, none sent back; no candidate quantity moved):
 - Lintels: how far each lintel sits on its wall is now measured from the drawing: of 32 lintel ends, 21 have at least

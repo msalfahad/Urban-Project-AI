@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 16:30; recovery plan in force)
+
+- Merged since 12:20 (all Gate A, research, no candidate line moved): T-526..T-530 (5/5 WORKED, 0 rejected). T-525 BLOCKED (wrapper). Unwired verified pieces now 14 (T-516..T-530).
+- Integration streams S (T-498 + T-525 promotion) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh:211 unchanged at eafbb0f6; owner notified 04:15, not re-notified).
+- New Gate A rows (no wrapper needed): T-532, T-533 (S); T-534, T-535 (A); T-536 manifest V2, T-537 ranged-face rule (I). T-531 first in lane S.
+- 10 Nov: LOW (about 10 Gate B packages left in 4.5 days and none can start before the wrapper item; preparation (manifest V2, rule gap RG-1) keeps the first day after it short). 12-13 Nov, 19-20 Nov, 25 Nov follow it.
+
 ## Status (Lead, 2026-11-05 12:20; recovery plan in force)
 
 - Merged since 08:15 (all Gate A, research, no candidate line moved): T-519..T-524 (6/6 WORKED, 0 rejected). Unwired verified pieces now 9 (T-516..T-524).

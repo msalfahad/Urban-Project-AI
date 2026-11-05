@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 16:30 (since 12:20)
+
+- T-528 FINISH V7 stair 1:3 bed (Gate A): WORKED (9.576 bags + 0.9975 m3 sand per m3; Alsenan 10.18 bags on 35.4313 m2). Decision: F-C-T528-1 area 39.49 vs 35.4313 m2 -> T-534 before wiring.
+- T-526 column run ends (Gate A): WORKED (12 ends found, length / m2 delta 0, +0.007021 m3). Decision: F-C-T526-1 piece kinds BEAM / FACE -> T-532 END_CENSUS_V3.
+- T-525 registry gate fix: PARTIAL (BLOCKED by the wrapper, no bypass; correct stop). Decision: unchanged, promotion folded into the T-498 resume; owner item stays open.
+- T-527 LINTEL_BEARING_V3 (Gate A): WORKED (W18 END 0.578 m, Checker 0.577992 AGREE; no state moves). Decision: T-531 now claimable on V3 bearings; manifest rebuild T-536.
+- T-529 ledge exposure V2 (Gate A): WORKED (0.639573 m2 MEASURED, 100 % covered but open at the void: balcony rule). Decision: Lead's fixture expectation 0.48 was wrong (accepted 1.20); register corrected; into T-536.
+- T-530 wiring manifest (Gate A): WORKED (arithmetic AGREE). Decision: F-C-T530-1 / F-C-T529-1 / F-T530-4 -> T-536 V2; RG-1 -> T-537; F-T530-3 fixed in the register by the Lead.
+
 ## Lead 2026-11-05 12:20 (since 08:15)
 
 - T-521 FINISH V6 (Gate A): WORKED (installed bed without loss; 5 % own account = V5 exactly). Decision: Q-53 stair bed still HELD -> T-528 FINISH V7.

@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-05 04:15 UTC
+
+Drive read OK (no file created in the project folders since 00:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Roof waterproofing (stream F Gate B PASS, every new line by hand AGREE): FIN.WP.ROOF 204.112 -> 209.019 m2 (+2.40 %: pool-court exposed slab 4.907 m2 DRAWING-CONFIRMED, ledge HELD 0 .. 0.64 m2); upturn 181.589 -> 186.783 lm; vs freelancer 285.00 m2 -28.4 % -> -26.7 % (diagnostic, not a keyed pair). Lines PARTIALLY VERIFIED.
+- Lintel reinforcement (Gate A, research): printed span parts 63.162 kg AT_LEAST on 16 lintels; ends, bends, laps HELD by name; ceiling 106.95 kg only conditional on a 0.40 m bearing the drawing prints as a minimum -> new jamb-bearing census.
+- Screeds / thresholds / outdoor bed (Gate A, research): walk bed 5.04 .. 6.72 bags cement; project cement known part >= 125.13 .. 164.62 bags (was 120.08 .. 157.90); 31 hosts HELD on unprinted mix, never 0. Pool-court build-up above the new membrane has no line (silent omission) -> new task.
+- Ceiling / paint deductions: engineering AGREE (0 quantity moved, dome disc 15.359 m2 re-measured) but sent back for 3 new full-suite failures; blockwork materials (black 0.20 1,075.80 pcs, mortar 1.269 m3 PROV, glue 43.6 kg) staged twice, not finished.
+- Learned: a status cell must start with its status word (a sent-back row read as REJECTED hid a TODO for a run); waste is its own account, never inside installed (factor provenance census opened).
+- Gate: 2 (integration). 10 Nov end-to-end BOQ: AT RISK -> HIGH RISK: 8 Gate B merged since 4 Nov 00:20, about 10 left in 4.8 days, and every remaining package is blocked by the tooling item below.
+- Team health: since 00:15 4 merged-or-checked (3 MERGED, 1 REJECTED), every run closed with a final line, 1 empty worker run (W1 03:21, row-format fault, fixed). Self-check codemap / t061 / freeze PASS. Queue check: 15 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none (no engineering item meets standard s.2.7).
+
+NEEDS FIXING (owner only, blocks the critical path): the run wrapper (scripts/agent_env.sh on main, line 211) lets `run` start only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py. Every integration package must run its research/agents_t*/ scripts (Drive chain, master build, binding and git-facts tools); Worker 3's temporary pytest runner was refused by the permission classifier as a bypass, and the Checker cannot reproduce a chain either. Tried: workers barred from bypasses; blocked packages parked; three standalone pieces given so no run is empty. Needed: widen `run` to research/agents_t*/*.py (same venv, same tree rules), or name another approved path. Also open: venv install cut off at session start (recurring); Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-05 00:15 UTC
 
 Drive read OK (no file created in the project folders since 20:00, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.57 25a8b406 / master 1.54.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
