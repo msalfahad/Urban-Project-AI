@@ -124,6 +124,11 @@ quantity.
   open-sky slab top 4.907 m2 is WATERPROOFING B8-06 (exposed slab), the overhang ledge 0.640 m2 HELD; FIN.WP.ROOF
   never takes it; the soffit stays the CEILING row PL-03 (10-21 below). Bay-frame piers 0.584 m2 are structure, not
   WP area. Rows: T-486 (census), T-494 (component rows, after T-486 MERGED).
+  CORRECTION (Lead 2026-11-05 16:30, F-T530-3): the merged Gate B T-507 (c94b35c1) books the open-sky slab 4.906867 m2
+  as its own POOLCOURT-550 component INSIDE the FIN.WP.ROOF line (B8-06 trade, membrane system of the roof line); that
+  is the ruling now: owner trade WATERPROOFING, counted once there and in no TERRACE / pool line. The ledge is no longer
+  HELD: T-529 (MERGED 5f775ba6, Checker own re-measure) measured 0.639573 m2 EXPOSED by UP-WP-ROOF-001 (balcony
+  condition, R-WP-APPL-EXPOSED-2b), upturn 0.551614 lm; it joins FIN.WP.ROOF in the stream F package (T-536 manifest).
 
 - FOOTING-PIT BLINDING vs GROUND-BEAM / STRAP BLINDING (Lead 2026-11-02 16:16; T-445 MERGED ab6bd617, Checker's own DXF
   re-add of all 24 pits 12.7344375 m3): one blinding layer, OWNER TRADE CONC.BLINDING; where a ground-beam or strap run
