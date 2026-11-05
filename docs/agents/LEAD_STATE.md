@@ -42,7 +42,6 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Each worker keeps at least two non-candidate TODO behind its stream package while Gate B is blocked; second / third
   rows in a lane carry no 'after T-nnn' unless truly dependent (WAITING rows caused empty runs).
 - Status word FIRST in the status cell; 9-field rows; `board check` pulls first: commit before.
-- Lane order note: no T- ids in the sentence right after the lane order (the parser runs on).
 - 'merged' only when the commit reached the working branch through a merge (F-C-T443-1).
 - Research scripts only through committed package tests or the wrapper (never bare venv python, never a throwaway runner).
 - Register rulings: RC LINTEL vs host masonry + LINTEL REINFORCEMENT + LINTEL END VOLUME (12:20: inside a column = column
