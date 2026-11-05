@@ -334,8 +334,14 @@ def _move_face(b, e, srcs, ln=None):
         if abs(t0 - t1) > BIND_TOL:
             raise InputsError(f"{w}: the room's face total moves ({t0} -> {t1})")
     moved_list = 0
-    for d in ln.get("deductions") or ():          # the canonical list item of the hole names its face
-        if (d.get("id") == e["opening_id"] or d.get("census_id") == e["opening_id"]) and d.get("face") == e["from_face"]:
+    om = inp.get("owner_manual_method")
+    if isinstance(om, dict) and isinstance(om.get("deductions"), list):
+        om = inp["owner_manual_method"] = dict(om, deductions=[dict(d) for d in om["deductions"]])
+    ln["deductions"] = [dict(d) for d in ln.get("deductions") or ()]
+    for d in list(ln["deductions"]) + (om["deductions"] if isinstance(om, dict) and isinstance(om.get("deductions"),
+                                                                                             list) else []):
+        # the canonical list item (and the owner-method record) of the hole names its face
+        if e["opening_id"] in (d.get("id"), d.get("census_id"), d.get("opening")) and d.get("face") == e["from_face"]:
             d["face"] = e["to_face"]
             moved_list += 1
     log = rec.setdefault(REC_KEY, [])
