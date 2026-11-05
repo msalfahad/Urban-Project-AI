@@ -1,0 +1,26 @@
+key,surface,a_m2,b_m2,diff_m2,cause,cause_m2,note
+1F-ARR,LANDING,0.0,4.9225,4.9225,SCOPE,4.9225,"Q-66 B (answered 16:23 after T-086): landing marble, own element; Q-66 text: stair marble 39.49 + 4.875 = 44.365 m2"
+D1,RISER,0.84,0.0,-0.84,SCOPE,-0.84,"candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+D1,TREAD,1.44,1.035,-0.405,COUNT,-0.36,
+D1,TREAD,1.44,1.035,-0.405,WIDTH,-0.045,
+E1,RISER,2.38,1.96,-0.42,DEPTH_OR_HEIGHT,-0.42,
+E1,TREAD,4.2,3.3594,-0.8406,COUNT,-0.84,
+E1,TREAD,4.2,3.3594,-0.8406,POLYGON,-0.0006,candidate polygon 3.3594 vs printed 4 x 0.30 x 2.80 = 3.3600 (T-425 s.3.2 AGREE)
+E1-LD,LANDING,0.0,5.1794,5.1794,SCOPE,5.1794,T-086 carried no entrance landing (top E1 step counted as a 5th tread instead)
+MS1-L,RISER,2.0,0.0,-2.0,SCOPE,-2.0,"candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+MS1-L,TREAD,3.6,3.105,-0.495,COUNT,-0.36,
+MS1-L,TREAD,3.6,3.105,-0.495,WIDTH,-0.135,
+MS1-LD,LANDING,1.5,0.0,-1.5,SCOPE,-1.5,no candidate line (T-493 F-3: silent omission; the GF partition counts the +0.30 lobby under it); T-502 queued
+MS1-U,RISER,2.4,0.0,-2.4,SCOPE,-2.4,"candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+MS1-U,TREAD,4.32,3.795,-0.525,COUNT,-0.36,
+MS1-U,TREAD,4.32,3.795,-0.525,WIDTH,-0.165,
+MS2-L,RISER,2.4192,0.0,-2.4192,SCOPE,-2.4192,"candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+MS2-L,TREAD,4.32,3.795,-0.525,COUNT,-0.36,
+MS2-L,TREAD,4.32,3.795,-0.525,WIDTH,-0.165,
+MS2-LD,LANDING,3.125,0.0,-3.125,SCOPE,-3.125,only inside the HELD bound L-5d2be30d (T-493 F-4); T-502 queued
+MS2-TR,RISER,0.2016,0.0,-0.2016,SCOPE,-0.2016,"candidate has no closing-riser line (inside MS2-L riser lines, HELD); position HELD"
+MS2-U,RISER,2.4192,0.0,-2.4192,SCOPE,-2.4192,"candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+MS2-U,TREAD,4.32,3.45,-0.87,COUNT,-0.72,
+MS2-U,TREAD,4.32,3.45,-0.87,WIDTH,-0.15,
+RS-A,TREAD,0.0,1.38,1.38,SCOPE,1.38,as RS-S
+RS-S,TREAD,0.0,3.45,3.45,SCOPE,3.45,"T-086 held the round stair (Q-50 open then); Q-50 A cond: straight flights CALCULATED, valued by T-425 / T-429"
