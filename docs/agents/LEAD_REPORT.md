@@ -1,6 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
 
+## LEAD REPORT 2026-11-05 04:15 UTC
+
+Drive read OK (no file created in the project folders since 00:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Roof waterproofing (stream F Gate B PASS, every new line by hand AGREE): FIN.WP.ROOF 204.112 -> 209.019 m2 (+2.40 %: pool-court exposed slab 4.907 m2 DRAWING-CONFIRMED, ledge HELD 0 .. 0.64 m2); upturn 181.589 -> 186.783 lm; vs freelancer 285.00 m2 -28.4 % -> -26.7 % (diagnostic, not a keyed pair). Lines PARTIALLY VERIFIED.
+- Lintel reinforcement (Gate A, research): printed span parts 63.162 kg AT_LEAST on 16 lintels; ends, bends, laps HELD by name; ceiling 106.95 kg only conditional on a 0.40 m bearing the drawing prints as a minimum -> new jamb-bearing census.
+- Screeds / thresholds / outdoor bed (Gate A, research): walk bed 5.04 .. 6.72 bags cement; project cement known part >= 125.13 .. 164.62 bags (was 120.08 .. 157.90); 31 hosts HELD on unprinted mix, never 0. Pool-court build-up above the new membrane has no line (silent omission) -> new task.
+- Ceiling / paint deductions: engineering AGREE (0 quantity moved, dome disc 15.359 m2 re-measured) but sent back for 3 new full-suite failures; blockwork materials (black 0.20 1,075.80 pcs, mortar 1.269 m3 PROV, glue 43.6 kg) staged twice, not finished.
+- Learned: a status cell must start with its status word (a sent-back row read as REJECTED hid a TODO for a run); waste is its own account, never inside installed (factor provenance census opened).
+- Gate: 2 (integration). 10 Nov end-to-end BOQ: AT RISK -> HIGH RISK: 8 Gate B merged since 4 Nov 00:20, about 10 left in 4.8 days, and every remaining package is blocked by the tooling item below.
+- Team health: since 00:15 4 merged-or-checked (3 MERGED, 1 REJECTED), every run closed with a final line, 1 empty worker run (W1 03:21, row-format fault, fixed). Self-check codemap / t061 / freeze PASS. Queue check: 15 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none (no engineering item meets standard s.2.7).
+
+NEEDS FIXING (owner only, blocks the critical path): the run wrapper (scripts/agent_env.sh on main, line 211) lets `run` start only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py. Every integration package must run its research/agents_t*/ scripts (Drive chain, master build, binding and git-facts tools); Worker 3's temporary pytest runner was refused by the permission classifier as a bypass, and the Checker cannot reproduce a chain either. Tried: workers barred from bypasses; blocked packages parked; three standalone pieces given so no run is empty. Needed: widen `run` to research/agents_t*/*.py (same venv, same tree rules), or name another approved path. Also open: venv install cut off at session start (recurring); Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-05 00:15 UTC
 
 Drive read OK (no file created in the project folders since 20:00, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.57 25a8b406 / master 1.54.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
@@ -29,17 +44,3 @@ OWNER PACKAGE: none (no item meets standard s.2.7).
 
 NEEDS FIXING (owner only, unchanged): Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
 
-## LEAD REPORT 2026-11-04 16:17 UTC
-
-Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record now V3.0.54 c85c4630 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
-- Stairs / railings (stream F Gate B PASS): B7-09 guardrail 17.366 -> 33.319 lm (+91.9 %): flights had fallen out on re-keyed census ids; now flight by flight along the pitch line. RL-07 15.953 lm Checker hand AGREE; 2 turn rails + GF band HELD; PARTIALLY VERIFIED 6/8. Freelancer 18.95 lm: +75.8 %, RL-07 ENGINE_RIGHT, rest UNRESOLVED. 4,921 lines byte-identical.
-- Walls (Gate A, unwired): band path drops gaps < 0.50 m on any villa (1F W18 0.467 m beside a column, rescued only by a project ledger; Alsenan 0 m2 effect). Fix as a new version: T-510.
-- Status words (Gate A): one vocabulary for all quantity states; 0 quantity change.
-- Finishes materials (READY, Gate A): tile bed 12.469 .. 17.195 m3 on 88 lines -> cement 99.75 .. 137.56 bags, sand 13.72 .. 18.91 m3, waste apart; freelancer has no bed row (ENGINE_RIGHT on scope proposed); 1 bed HELD (finish HELD).
-- Learned (2 lessons rows ADOPTED): bind stair rails by floor + flight + treads, never by census id alone; classify a wall gap by its bounding elements, not width. Element register: B7-09 rail vs slab-edge balustrade ruled.
-- Missing: blockwork wiring (CLAIMED), wet-area WP r6, stair skirting wiring, materials wiring, disposal wiring. Gate: M3 / 10 Nov AT RISK (4 Gate B since 00:20, about 13 packages in 6 days).
-- Team health: since 12:19 every run closed with a final line except Worker 3 15:02 (open, inside its lock). No usage-limit failure since 11:14. Self-check codemap / t061 / freeze PASS. Queue check: 18 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none (no item meets standard s.2.7).
-
-NEEDS FIXING (owner only, unchanged): Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.

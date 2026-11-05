@@ -1,9 +1,24 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-05 00:15 UTC (Lead). Previous version: 2026-11-04 20:15 UTC. The released numbers did not change
+Last update: 2026-11-05 04:15 UTC (Lead). Previous version: 2026-11-05 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.57 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.58 (not released).
+
+Since 5 Nov 00:15 (newest first; three checked and merged, one sent back):
+- Roof waterproofing IN THE CANDIDATE (V3.0.58, checked line by line): 204.11 -> 209.02 m2 (+2.4 %): the open slab
+  round the pool court (4.91 m2) now has its membrane; its ledge stays held (0 .. 0.64 m2), not zero. Nothing is yet
+  measured on top of that membrane (screed, bed, finish): opened as its own piece.
+- Lintel bars: the bar lengths the detail prints are counted, at least 63.16 kg on 16 lintels; the bar ends and bends
+  stay held, and how far each lintel sits on its wall is now being measured so the rest can be counted.
+- Cement and sand: the outdoor walk bed now has its own figure (about 5.0 .. 6.7 bags); the cement you can already count
+  is at least about 125 .. 165 bags; screeds, thresholds and roof falls stay held until a mix is printed or given.
+- Ceiling and paint deductions: the engineering was checked and agrees (no quantity moves), but three automatic tests
+  failed; it goes back for those fixes.
+- Blocked: blockwork materials and the ceiling / paint fixes cannot be finished because the agents' command wrapper does
+  not allow the scripts that rebuild the BOQ from the drawings. Only you can widen it (see "Waiting for the owner").
+- 10 Nov (end-to-end BOQ with every trade): HIGH RISK: 8 candidate packages merged since 4 Nov midnight, about 10 left
+  in under 5 days, and none can finish until the wrapper is widened.
 
 Since 4 Nov 20:15 (newest first; three checked and merged, none sent back):
 - Waterproofing of wet rooms and the pool IN THE CANDIDATE (V3.0.57, checked line by line): floor membrane 85.62 ->
@@ -1939,6 +1954,10 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
+- NEW, blocks the critical path (5 Nov 04:15): the agents' command wrapper lets them run only the scoreboard and key-map
+  tools; every candidate package also has to run its own rebuild scripts, so blockwork materials, ceiling / paint
+  deductions and the next packages are stuck, and the checker cannot re-run a rebuild either. Asked: allow the
+  research scripts through the wrapper (or name another approved way). Nothing is lost: the work is saved on its branches.
 - One decision still open (asked 30 Oct 12:40, in the Lead report; nothing new at 16:30): which cement : sand mix Urban prices for the block-joint
   mortar of black block walls, so cement bags and sand can be counted (3.87 m3 of mortar measured; nothing is held up
   meanwhile). Your 29 Oct answers (mesh strip and sharmat ties, slab bar ends option B) are applied.

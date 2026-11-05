@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 04:15 (since 00:15)
+
+- T-515 lintel bar split (Gate A): WORKED (63.162 kg AT_LEAST on printed span parts). Decision: F-C-T515-1 -> T-516 jamb bearing census (worker 1 first).
+- T-507 pool-court slab WP (Gate B): WORKED (V3.0.58, roof WP +2.40 %). Decision: T-513 next for worker 2, behind T-517 and the wrapper fix.
+- T-514 screed / threshold / outdoor bed producers (Gate A): WORKED. Decision: F-T514-2 -> T-517 (pool-court build-up), F-C-T514-1 -> T-518 (waste factor provenance).
+- T-423 r1 ceiling / paint deductions (Gate B): PARTIAL (engineering AGREE, 3 new L4 failures). Decision: r2 with the 3 named fixes + renumber; BLOCKED on the wrapper (fixes 2-3 and the chain are research scripts). Row fault: status cell began with REJECTED, so worker 1 03:21 saw no TODO: corrected.
+- T-498 blockwork materials: PARTIAL x2 (renumber after T-507 merged; then research scripts refused). Decision: BLOCKED on the wrapper allow-list (owner NEEDS FIXING, notified); worker 3 takes T-518 meanwhile.
+
 ## Lead 2026-11-05 00:15 (since 20:15)
 
 - T-512 gate fix (Gate A): WORKED (t212 green, all-blank code HELD never 0.0). Decision: the 37-code code_totals 0.0 path goes into T-507's acceptance.

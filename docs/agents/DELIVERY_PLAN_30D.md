@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 04:15; recovery plan in force)
+
+- Merged since 00:15: T-515 (lintel span bars, research), T-507 (Gate B, candidate V3.0.58: pool-court slab roof WP), T-514 (screed / threshold / outdoor bed producers, research). Sent back: T-423 r1 (3 L4 test fixes, engineering AGREE).
+- Integration stream S (T-498) and F (T-423 r2, T-513 next) are BLOCKED: every package needs research/agents_t*/ scripts that the run wrapper refuses (owner NEEDS FIXING; notified 04:15).
+- Meanwhile Gate A pieces that move later lines: T-516 lintel jamb bearing, T-517 pool-court build-up, T-518 waste factor provenance.
+- 10 Nov: HIGH RISK (8 Gate B merged since 4 Nov 00:20; about 10 left in 4.8 days; none can finish until the wrapper item is fixed). 12-13 Nov, 19-20 Nov, 25 Nov follow it.
+
 ## Status (Lead, 2026-11-05 00:15; recovery plan in force)
 
 - Since 20:15: 3 merged (T-512, T-511 Gate A; T-310 r7 Gate B), 0 rejected. Candidate of record ARCH_TAKEOFF_V3.0.57
