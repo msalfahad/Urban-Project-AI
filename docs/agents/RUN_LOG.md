@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T09:20Z | Worker 1 | STARTED | run session_01E6cPnc1ZJ2RLs3AbDsMQkX | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05 09:12 UTC | Worker 3 | SUCCESS | T-523 READY 1db19aec | binding map V2: 1,202 T-496 bindings re-staged, 0 fail; 3 T-495 bed rows split installed/5 % loss/procurement (D-T518-2); 21 bindings on 7 T-453 lines stale on V3.0.57 (glue 229.58->43.60 kg, blocks -270.75); project cement procurement AT_LEAST 130.82..172.29 bags (was 120.66..162.13), one villa ceiling >=131..173 vs 133..175 summed (R-T523-1 proposed) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 09:00 UTC | Worker 3 | STARTED | run session_01E6cPnbu1eFzjwJhXqeSUtB | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T09:00Z | Verifier | SUCCESS | T-521 | T-521 GATE A PASS, MERGED ba35e0e2 (FINISH_MATERIALS_TABLE_V6, R-T521-1): bed mortar now installed = area x bed (20 m2 dry floor 0.600..0.800 m3), Q-45 5 % loss + procurement own fields (= V5 exactly), cement ceil once per group; fixture and own 9.715 m2 wet-floor case re-derived by hand, AGREE; UNWIRED: no candidate or released quantity change (V3.0.58 stays, V2.9 + route G unchanged); missing: 1:3 stair cement HELD (Q-53), sand pack unsourced; no Gate B, no owner question; Drive not read (not needed); T-180 slot not spent (none CLOSABLE NOW) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
