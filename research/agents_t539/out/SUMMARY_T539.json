@@ -1,0 +1,316 @@
+{
+ "rule": "R-T539-1 COLUMN_END_ACCESSORY_LEDGER_V2",
+ "schema": "T539_ACCESSORY_LEDGER_V2",
+ "module_register": {
+  "0.20": "RESOLVED (UPC-BLACK-BLOCK-001, 0.19 + 0.010 = 0.200 m = T-355 PRIMARY)",
+  "0.15": "HELD (R-T533-1: no sourced entry)",
+  "white": "HELD (Q-60)"
+ },
+ "what_if_modules": {
+  "S-A": 0.2,
+  "S-B": 0.21,
+  "S-C": 0.25
+ },
+ "ends": {
+  "listed": 12,
+  "held": [
+   "GF-W20 end 1"
+  ]
+ },
+ "end_ties": {
+  "measured_nr": 18,
+  "measured_ends": [
+   "1F-W09 e0 6",
+   "2F-W00 e1 6",
+   "2F-W01 e0 6"
+  ],
+  "held_015_figures": {
+   "1F-W23": {
+    "S-A": 6,
+    "S-B": 5,
+    "S-C": 4
+   },
+   "2F-W08": {
+    "S-A": 6,
+    "S-B": 6,
+    "S-C": 5
+   }
+  },
+  "measured_with_upper_bound": [
+   "2F-W00 e1"
+  ],
+  "t526_carried_nr": 30.0,
+  "t355_primary_on_ends_nr": 30,
+  "d39_2f_tie_range_0200": {
+   "2F-W00": [
+    6,
+    6
+   ],
+   "2F-W01": [
+    6,
+    6
+   ]
+  }
+ },
+ "interior_slivers": {
+  "SAME_MEMBER": 48,
+  "OTHER_MEMBER": 2,
+  "other_member_with_known_top": [],
+  "other_member": [
+   "GF-W01 GF|WB-FL0001-FL0002#2@17.170 OTHER_MEMBER: sliver 0.002599 m (NONE)",
+   "1F-W04 1F|WB-FL0074-FL0076@0.900 OTHER_MEMBER: sliver 0.000444 m (1F-016)"
+  ]
+ },
+ "d39_2f_sensitivity": {
+  "basis": "2F block top + (0.05 - b_r), b_r in [0, 0.10] (D-39)",
+  "ties": {
+   "2F-W00": {
+    "v2": 6,
+    "low": 6,
+    "high": 6
+   },
+   "2F-W01": {
+    "v2": 6,
+    "low": 6,
+    "high": 6
+   },
+   "2F-W06": {
+    "v2": 24,
+    "low": 24,
+    "high": 24
+   }
+  },
+  "strip_net_m": {
+   "2F-W00": {
+    "v2": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "2F-W01": {
+    "v2": 10.8,
+    "low": 10.8,
+    "high": 10.8
+   },
+   "2F-W05": {
+    "v2": 2.3,
+    "low": 2.3,
+    "high": 2.3
+   },
+   "2F-W06": {
+    "v2": 23.4,
+    "low": 23.4,
+    "high": 23.4
+   }
+  },
+  "ties_moving": [],
+  "strip_moving": []
+ },
+ "end_piece_slivers": {
+  "2F-W01 e0": "SAME_MEMBER (BM-2F-014): sliver 0.000417 m is a cut of the member over the next piece",
+  "GF-W03 e0": "SAME_MEMBER (BM-GF-057): sliver 0.000055 m is a cut of the member over the next piece",
+  "GF-W03 e1": "SAME_MEMBER (BM-GF-057): sliver 0.000495 m is a cut of the member over the next piece",
+  "GF-W10 e1": "OTHER_MEMBER: sliver 0.001695 m (GF-011)",
+  "GF-W25 e0": "OTHER_MEMBER: sliver 0.000713 m (BM-GF-013)",
+  "GF-W18 e0": "SAME_MEMBER (BM-GF-029): sliver 0.001344 m is a cut of the member over the next piece"
+ },
+ "end_strip_added_m": 0.0,
+ "end_vjoint": {
+  "owner_m": 40.9,
+  "drawing_m_classed": 44.2,
+  "drawing_m_t317_raw": 44.1,
+  "t526_owner": 40.9,
+  "t526_drawing": 44.1,
+  "held_end_sides": 14,
+  "by_class": {
+   "A": {
+    "owner_band_m": 10.05,
+    "drawing_band_m": 11.0,
+    "held_end_sides": 6
+   },
+   "B": {
+    "owner_band_m": 10.05,
+    "drawing_band_m": 11.1,
+    "held_end_sides": 4
+   },
+   "C": {
+    "owner_band_m": 3.75,
+    "drawing_band_m": 3.75,
+    "held_end_sides": 2
+   },
+   "MIXED": {
+    "owner_band_m": 7.0,
+    "drawing_band_m": 7.25,
+    "held_end_sides": 1
+   },
+   "UNKNOWN": {
+    "owner_band_m": 10.05,
+    "drawing_band_m": 11.1,
+    "held_end_sides": 1
+   }
+  },
+  "d39_2f_drawing": {
+   "2F-W00": "2 x (3.85 - b_r - 0.10) = 7.50 - 2 b_r m (T-488 basis) vs 7.4 (T-317 4.20)",
+   "2F-W01": "2 x (3.85 - b_r - 0.10) = 7.50 - 2 b_r m (T-488 basis) vs 7.4 (T-317 4.20)",
+   "2F-W08": "2 x (3.85 - b_r - 0.10) = 7.50 - 2 b_r m (T-488 basis) vs 7.4 (T-317 4.20)"
+  }
+ },
+ "ties_t355_interior": {
+  "measured_nr_t355": 182,
+  "moved_to_held_015": {
+   "junctions": 8,
+   "ties_t355": 49,
+   "walls": [
+    "1F-W14 + 1F-W15",
+    "1F-W20",
+    "1F-W23",
+    "GF-W26",
+    "GF-W28",
+    "GF-W32"
+   ]
+  }
+ },
+ "ties_v2": {
+  "junctions": 130,
+  "measured_junctions": 26,
+  "ties_measured": 151,
+  "held_junctions": 104,
+  "by_held_cause": {
+   "WHITE (AAC) block, thin-bed adhesive": 69,
+   "annex datum (Q-54 B)": 4,
+   "block top beside the column not established": 9,
+   "column meets 0.0195 m of the 0.150 m thickness": 1,
+   "installed face module of the 0.15 m black (cement) block": 10,
+   "lift tie beam size (ST p.8 n.19)": 11
+  },
+  "figures_015": {
+   "S-A": 61,
+   "S-B": 55,
+   "S-C": 45
+  },
+  "figures_015_junctions": 11,
+  "figures_015_unknown_top": 1
+ },
+ "ties_v2_interior": {
+  "junctions": 117,
+  "measured_junctions": 23,
+  "ties_measured": 133,
+  "held_junctions": 94,
+  "by_held_cause": {
+   "WHITE (AAC) block, thin-bed adhesive": 66,
+   "annex datum (Q-54 B)": 3,
+   "block top beside the column not established": 7,
+   "installed face module of the 0.15 m black (cement) block": 8,
+   "lift tie beam size (ST p.8 n.19)": 10
+  },
+  "figures_015": {
+   "S-A": 49,
+   "S-B": 44,
+   "S-C": 36
+  },
+  "figures_015_junctions": 8,
+  "figures_015_unknown_top": 0
+ },
+ "ties_v2_end": {
+  "junctions": 13,
+  "measured_junctions": 3,
+  "ties_measured": 18,
+  "held_junctions": 10,
+  "by_held_cause": {
+   "WHITE (AAC) block, thin-bed adhesive": 3,
+   "annex datum (Q-54 B)": 1,
+   "block top beside the column not established": 2,
+   "column meets 0.0195 m of the 0.150 m thickness": 1,
+   "installed face module of the 0.15 m black (cement) block": 2,
+   "lift tie beam size (ST p.8 n.19)": 1
+  },
+  "figures_015": {
+   "S-A": 12,
+   "S-B": 11,
+   "S-C": 9
+  },
+  "figures_015_junctions": 3,
+  "figures_015_unknown_top": 1
+ },
+ "strip_v2": {
+  "t355_net_m": 543.4739,
+  "v2_measured_net_m": 175.4844,
+  "v2_measured_walls": 9,
+  "held_015": {
+   "walls": 25,
+   "t355_net_m": 367.9895,
+   "figures_net_m": {
+    "S-A": 367.9895,
+    "S-B": 357.6506,
+    "S-C": 289.2131
+   }
+  },
+  "end_added_m": 0.0
+ },
+ "vjoint_by_class_before": {
+  "A": {
+   "owner_band_m": 109.85,
+   "drawing_band_m": 216.6229,
+   "held_end_sides": 0
+  },
+  "B": {
+   "owner_band_m": 67.9,
+   "drawing_band_m": 111.0228,
+   "held_end_sides": 0
+  },
+  "C": {
+   "owner_band_m": 230.1439,
+   "drawing_band_m": 230.1439,
+   "held_end_sides": 0
+  },
+  "MIXED": {
+   "owner_band_m": 87.05,
+   "drawing_band_m": 174.4379,
+   "held_end_sides": 0
+  },
+  "UNKNOWN": {
+   "owner_band_m": 16.75,
+   "drawing_band_m": 26.1185,
+   "held_end_sides": 0
+  }
+ },
+ "vjoint_by_class_after": {
+  "A": {
+   "owner_band_m": 119.9,
+   "drawing_band_m": 227.6229,
+   "held_end_sides": 6
+  },
+  "B": {
+   "owner_band_m": 77.95,
+   "drawing_band_m": 122.1228,
+   "held_end_sides": 4
+  },
+  "C": {
+   "owner_band_m": 233.8939,
+   "drawing_band_m": 233.8939,
+   "held_end_sides": 2
+  },
+  "MIXED": {
+   "owner_band_m": 94.05,
+   "drawing_band_m": 181.6879,
+   "held_end_sides": 1
+  },
+  "UNKNOWN": {
+   "owner_band_m": 26.8,
+   "drawing_band_m": 37.2185,
+   "held_end_sides": 1
+  }
+ },
+ "reconcile_board": {
+  "ties_+30": "T-526 +30 nr = 18 MEASURED (0.20 m: 1F-W09, 2F-W00, 2F-W01, 6 each) + 12 HELD by name (0.15 m 1F-W23 / 2F-W08, module HELD R-T533-1; figures beside)",
+  "mesh_+40.90_owner": "the T-317 plaster-stage V joints (B9-03), not the bed-joint strip; strip +0 m.l",
+  "mesh_+44.10_drawing": "T-317 raw drawing band; classed as T-355 R-T355-4 (exterior Sigma side one band) it is +44.20: GF-W16 EXT side 3.75 (owner = drawing) vs raw 3.65"
+ },
+ "sha256_inputs": {
+  "JUNCTIONS_V3_T532.csv": "7482a49d886f41be31648513080745ed6c24f9578d2ac7a0d231b66004971c95",
+  "END_CENSUS_V2_T526.csv": "087aa664562049ab19a75098e89f019a744acbd1894b8da941dcb22f93b4b0e8",
+  "MISSED_ENDS_T526.csv": "83afc44d1984ae9db719471f8c5a5985b291ef45c453335b2f56dde636d01171",
+  "SHARMAT_T355.csv": "7b261f49a67cddda87065ccf97ac3c0165fca342fa986672cbc6d88e2091d6bf",
+  "MESH_BY_WALL_T355.csv": "387d52ff2bc7f9425f496f4617cfc8197fa43c7e0e029c6ab4c71db19c6a722f",
+  "JOINT_MESH_CLASS_T355.csv": "4d409553f6058d7130d11d2910f33f231b4b9161e653c921d0fa8aaab6155b01"
+ }
+}

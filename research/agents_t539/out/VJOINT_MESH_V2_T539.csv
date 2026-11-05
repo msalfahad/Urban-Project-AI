@@ -1,0 +1,27 @@
+wall_id,run,end,side,finish,class,state,owner_m,drawing_m,t317_drawing_m,bound,held
+1F-W09,1F|WB-FL0024-FL0025,0,INT-A,PLASTER,B,MEASURED,3.350000,3.700000,3.700000,,
+1F-W09,1F|WB-FL0024-FL0025,0,INT-B,PLASTER,UNKNOWN,MEASURED,3.350000,3.700000,3.700000,,
+1F-W23,1F|WB-FL0074-FL0075,0,INT-A,PLASTER,MIXED,MEASURED,3.350000,3.600000,3.600000,UPPER: an opening of this band may meet the column (station alignment not checked),
+1F-W23,1F|WB-FL0074-FL0075,0,INT-B,PLASTER,A,MEASURED,3.350000,3.600000,3.600000,UPPER: an opening of this band may meet the column (station alignment not checked),
+2F-W00,2F|WB-FL0004-FL0005,1,INT-A,PLASTER,UNKNOWN,MEASURED,3.350000,3.700000,3.700000,UPPER: an opening of this band may meet the column (station alignment not checked),
+2F-W00,2F|WB-FL0004-FL0005,1,INT-B,PLASTER,A,MEASURED,3.350000,3.700000,3.700000,UPPER: an opening of this band may meet the column (station alignment not checked),
+2F-W01,2F|WB-FL0006-FL0007,0,INT-A,PLASTER,B,MEASURED,3.350000,3.700000,3.700000,,
+2F-W01,2F|WB-FL0006-FL0007,0,INT-B,PLASTER,UNKNOWN,MEASURED,3.350000,3.700000,3.700000,,
+2F-W08,2F|WB-FL0024-FL0025,0,INT-A,PLASTER,B,MEASURED,3.350000,3.700000,3.700000,UPPER: an opening of this band may meet the column (station alignment not checked),
+2F-W08,2F|WB-FL0024-FL0025,0,INT-B,PLASTER,A,MEASURED,3.350000,3.700000,3.700000,UPPER: an opening of this band may meet the column (station alignment not checked),
+GF-W03,GF|WB-FL0007-FL0008#2,0,INT-A,PLASTER,A,HELD,,,,,block top or finished band not established
+GF-W03,GF|WB-FL0007-FL0008#2,0,INT-B,PLASTER,A,HELD,,,,,block top or finished band not established
+GF-W03,GF|WB-FL0007-FL0008#2,1,INT-A,PLASTER,A,HELD,,,,,block top or finished band not established
+GF-W03,GF|WB-FL0007-FL0008#2,1,INT-B,PLASTER,A,HELD,,,,,block top or finished band not established
+GF-W09,GF|WB-FL0032-FL0033,0,INT-A,PLASTER,B,HELD,,,,,block top or finished band not established
+GF-W09,GF|WB-FL0032-FL0033,0,INT-B,PLASTER,UNKNOWN,HELD,,,,,block top or finished band not established
+GF-W10,GF|WB-FL0041-FL0042,1,INT,PLASTER,MIXED,HELD,,,,,end piece is a sub-5 mm sliver: the head beside the column is not taken from it (F-C-T532-1); also: block top or finished band not established
+GF-W10,GF|WB-FL0041-FL0042,1,EXT,SIGMA,C,HELD,,,,,end piece is a sub-5 mm sliver: the head beside the column is not taken from it (F-C-T532-1); also: block top or finished band not established
+GF-W20,GF|WB-FL0063-FL0064#2,1,INT-A,PLASTER,B,HELD,,,,,column meets 0.0195 m of the 0.150 m thickness: joint bound 0 .. contact x height
+GF-W20,GF|WB-FL0063-FL0064#2,1,INT-B,PLASTER,B,HELD,,,,,column meets 0.0195 m of the 0.150 m thickness: joint bound 0 .. contact x height
+GF-W16,GF|WB-FL0081-FL0082,0,INT,PLASTER,MIXED,MEASURED,3.650000,3.650000,3.650000,UPPER: an opening of this band may meet the column (station alignment not checked),
+GF-W16,GF|WB-FL0081-FL0082,0,EXT,SIGMA,C,MEASURED,3.750000,3.750000,3.650000,UPPER: an opening of this band may meet the column (station alignment not checked),
+GF-W25,GF|WB-FL0092-FL0093,0,INT-A,PLASTER,B,HELD,,,,,end piece is a sub-5 mm sliver: the head beside the column is not taken from it (F-C-T532-1); also: block top or finished band not established
+GF-W25,GF|WB-FL0092-FL0093,0,INT-B,PLASTER,A,HELD,,,,,end piece is a sub-5 mm sliver: the head beside the column is not taken from it (F-C-T532-1); also: block top or finished band not established
+GF-W18,GF|WB-FL0097-FL0098,0,INT,PLASTER,A,HELD,,,,,block top or finished band not established
+GF-W18,GF|WB-FL0097-FL0098,0,EXT,SIGMA,C,HELD,,,,,block top or finished band not established
