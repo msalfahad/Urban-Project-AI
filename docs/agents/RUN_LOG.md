@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05 05:39 UTC | Worker 1 | SUCCESS | T-516 READY agents/task-T-516 @9967d828 | B9-02 lintel jamb bearing from the DXF masonry beside each jamb: 16/16 lintels, 21 ends BOUNDED (>= MIN 0.40), 10 FLAGGED_DEFICIT (0.000-0.259 m: RC columns, cross walls, 0.238 m shared pier D-GF-11/12), 1 HELD; 6 lintels BEARING_OK with L in [w+0.80, w+a_s+a_e]; T-515 span 63.16 kg unchanged, its 106.95 kg ceiling re-read (not a ceiling); 0.514 m3 of T-453 lintel concrete not buildable as drawn; designer RFI, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 05:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T05:09Z | Worker 3 | SUCCESS | T-518 READY @72fa9f6d | Factor provenance census: 92 producer keys / 13 factors, unread 0, unsourced factor applied 0; Q-45 B 5 % tile-bed waste is owner-approved (2026-10-20 12:15), applied separately by T-500/T-514; 2 defects named: FINISH V1-V5 folds 5 % into installed mortar (10 m2 dry floor 0.315 vs 0.300 m3), T-496 binds T-495 bed +5 % as INSTALLED; stair-bed 5 % (0.508935 bags) HELD beside; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T05:00Z | Worker 3 | STARTED | run session_01E6cPncrjFd3FewHtHd2E3C | repo-attached routine | task state: none yet | self-check pending
