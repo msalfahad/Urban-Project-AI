@@ -1,4 +1,4 @@
-# T-423: T-246 split remainder (b)-(d) as ARCH_TAKEOFF_V3.0.58 (stage 1 of the integration package; NOT READY)
+# T-423: T-246 split remainder (b)-(d) as ARCH_TAKEOFF_V3.0.58 (integration package for Gate B)
 
 Worker 1, 2026-11-04 23:24 .. 2026-11-05 00:50 UTC. Stream F / lane I. Development villa, not an accuracy claim.
 Drawings cited by Drive title only ('Alsenan chalet project': P7757.dxf from P7757_DXF_COMPRESSED.zip `ab54dd55`,
@@ -9,7 +9,7 @@ Drawings cited by Drive title only ('Alsenan chalet project': P7757.dxf from P77
 Own chain run (research/agents_t167/v304_run.py -> research/agents_t310/v3057_run.py, Python 3.11.18):
 V3_0_56 `4e25c54f` -> V3_0_57_BOQ_LINES.json **`25a8b406`** (4,994 lines) = the candidate of record (T-310 r7, merge
 87ef8718). V3.0.58 was then produced on those lines by `arch_v3058.changes_for` / `write` directly (the same calls the
-hub makes; the hub is wired, `research/agents_t423/v3058_run.py` is the full-chain runner, not yet run end to end):
+hub makes; the full hub run in s.5 gives the same file):
 V3_0_58_BOQ_LINES.json `ae938fca`, 4,994 lines: **22 CHANGED_TEXT_ONLY, 4,972 SAME, 0 CHANGED, 0 ADDED;
 totals_moved_by_code {}**; every V3.0.10 .. V3.0.57 family check re-run on the result (arch_v3057.integrate) passes.
 
@@ -55,8 +55,9 @@ V3.0.56 -> V3.0.57 = B8-01 / B8-02 / B8-03 / B8-09, out/T423_PACKAGE_FAMILIES.js
 out/LINE_INDEX_V3_0_57.json, issues {}; the same census tool on V3_0_56 reproduces T-310's LINE_INDEX_V3_0_56.json byte
 for byte) + pending V3.0.58 + B3-01 / B3-04 / B4-01 / B4-03 / B5-01 text; 0 problems; RULES_MANIFEST by its tool.
 
-Still open: the end-to-end hub run `research/agents_t423/v3058_run.py` (the hub is wired and its V3_0_58 sha must equal
-`ae938fca`, produced here by the same module calls on the reproduced V3_0_57); L4.
+Full hub run (research/agents_t423/v3058_run.py on the Drive copies): V3_0_57 `25a8b406` -> V3_0_58_BOQ_LINES.json
+**`ae938fca`** (= the direct module run), 22 CHANGED_TEXT_ONLY, 4,972 SAME, totals moved {}; vs released V2.9 + route G:
+SAME_QUANTITY 576, QUANTITY_DIFFERS 1,016, NOT_IN_RELEASED 3,402 (as V3.0.57: nothing moves).
 
 ## 6. Lessons-register row (proposed)
 
