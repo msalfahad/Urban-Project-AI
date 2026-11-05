@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T13:01Z | Worker 3 | STARTED | run session_01E6cPne2nFwy4DUXy2Lh4Gq | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T12:53Z | Verifier | SUCCESS | T-528 | T-528 GATE A PASS, MERGED engine 046b9ad3 (engine push): own re-derivation of Q-53 C AGREE (9.576 bags + 0.9975 m3 sand per m3 1:3; fixture 0.360 m3 -> 3.44736 bags; Alsenan 35.4313 m2 -> 1.062939 m3, 10.1787 bags, proc 10.6876, sand 1.0603 m3, arithmetic only, area not re-measured); unwired, no candidate / released quantity change; F-C-T528-1 stair area 39.49 (Q-53 text) vs 35.4313 (T-511) to reconcile before wiring; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T12:52Z | Verifier | STARTED | run session_01E6cPndgRALZvnCMvJ21xuh | repo-attached routine | task state: T-528 READY (W2 12:46) | self-check pending
 - 2026-11-05T12:46Z | Worker 2 | SUCCESS | T-528 READY 7cc43a88 | FINISH_MATERIALS_TABLE_V7 (unwired): stair 1:3 bed cement/sand from UP-STAIR-017 (Q-53 C, recomputed 9.576 bags + 0.9975 m3 sand per m3); Alsenan 35.4313 m2 stair bed would go HELD -> 1.062939 m3, 10.1787 bags theoretical (procurement 10.6876, buy 11), sand 1.0603 m3; Lead's fixture sand 0.360 is the rounded 'about 1.00', exact 0.3591 | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
