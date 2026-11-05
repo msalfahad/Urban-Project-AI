@@ -1,0 +1,80 @@
+{
+ "rule": "R-T526-1 COLUMN_END_CENSUS_V2: a block-to-column junction exists at every run end whose end face meets a column outline across the full wall thickness within one joint, whether or not the column is a piece of the run; V1 listed only BLOCK / COLUMN boundaries between consecutive pieces of one run",
+ "joint_m": 0.01,
+ "census_ends": 140,
+ "runs_not_probed": [
+  "1F|BAY|WB-FL0041-FL0042: curved / bay run: no straight V1 band (T-274), not probed",
+  "GF|ARCBAND|D2:269:0|D2:270:0: curved / bay run: no straight V1 band (T-274), not probed"
+ ],
+ "classes": {
+  "COLUMN": 12,
+  "COLUMN_PIECE_IN_RUN": 54,
+  "NO_COLUMN": 73,
+  "PARTIAL_COLUMN": 1
+ },
+ "missed_by_v1": [
+  "1F-W09 end 0 (T_STEM) -> COL-1F-37 C1",
+  "1F-W23 end 0 (T_STEM) -> COL-1F-57 P.C 20x70",
+  "2F-W00 end 1 (T_STEM) -> COL-2F-55 C9",
+  "2F-W01 end 0 (T_STEM) -> COL-2F-53 C1",
+  "2F-W08 end 0 (FREE_END) -> COL-2F-54 C2",
+  "GF-W03 end 0 (FREE_END) -> COL-GF-23 C8",
+  "GF-W03 end 1 (FREE_END) -> COL-GF-22 C5",
+  "GF-W09 end 0 (T_STEM) -> COL-GF-07 C1",
+  "GF-W10 end 1 (FREE_END) -> COL-GF-01 C4",
+  "GF-W16 end 0 (T_STEM) -> COL-GF-30 C",
+  "GF-W25 end 0 (T_STEM) -> COL-GF-29 C3",
+  "GF-W18 end 0 (FREE_END) -> COL-GF-28 C"
+ ],
+ "held_ends": [
+  "GF-W20 end 1: column meets 0.0195 m of the 0.150 m thickness: joint bound 0 .. contact x height"
+ ],
+ "f_t520_1_four": [
+  "1F-W09 end 0",
+  "1F-W23 end 0",
+  "2F-W01 end 0",
+  "2F-W08 end 0"
+ ],
+ "unregistered_runs_with_end_column": [
+  "GF|WB-FL0028-FL0029 end 0 (COLUMN_PIECE_IN_RUN, t 0.40)"
+ ],
+ "structural_only_columns": {
+  "1F": {
+   "arch_columns": 20,
+   "matched": 20,
+   "max_residual_m": 0.0,
+   "structural_only_columns": [
+    "77B"
+   ]
+  },
+  "2F": {
+   "arch_columns": 9,
+   "matched": 9,
+   "max_residual_m": 0.0,
+   "structural_only_columns": []
+  },
+  "GF": {
+   "arch_columns": 30,
+   "matched": 30,
+   "max_residual_m": 0.0,
+   "structural_only_columns": [
+    "31B",
+    "329",
+    "386"
+   ]
+  }
+ },
+ "structural_only_contacts": [
+  "GF-W07 end 1: INSIDE_ARCH_COLUMN_PIECE 31B 0.400..0.600"
+ ],
+ "totals": {
+  "d_length_m": 0.0,
+  "d_blockwork_m2": 0.0,
+  "d_blocks_nr": 0.0,
+  "d_mesh_owner_ml": 40.9,
+  "d_mesh_drawing_ml": 44.1,
+  "d_ties_nr_measured": 30.0,
+  "d_perimeter_m3_computed_020": 0.007021
+ },
+ "sha256_census": "087aa664562049ab19a75098e89f019a744acbd1894b8da941dcb22f93b4b0e8"
+}
