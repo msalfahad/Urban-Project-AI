@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T13:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-526 READY (W1 13:36) | self-check pending
 - 2026-11-05 13:36 UTC | Worker 1 | SUCCESS | T-526 READY @4292bce2 | B9-04 column run ends: V1 junction census (T-355/T-317) lists only BLOCK/COLUMN pieces of one run, so a column a run ENDS on is missed; R-T526-1 end census on P7757+ST7757: 4 F-T520-1 ends confirmed + 8 more (7 T-stem, 5 free), GF-W20 partial HELD; length/m2/blocks 0 (gap 0), mesh +40.90 m.l, ties +30 nr, perimeter +0.007021 m3 (1F-W09), rest HELD by name; unwired | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 13:21 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T13:03Z | Worker 3 | BLOCKED | T-525 | Registry gate fix not built: promoting T-507 (merge c94b35c1) into BOQ_FAMILY_MASTER_1.56.0 by R-T485-1 needs the V3.0.57->V3.0.58 chain run on the Drive copies (line diff + LINE_INDEX_V3_0_58), which exists only as research/agents_t507/v3058_run.py, refused by the wrapper; no bypass, no quantity or registry change; t485 still 1 failed on 046b9ad3 (stale T-507); T-498 resume must carry the promotion first | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: 'AGENT_ENV FAIL: run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py'
