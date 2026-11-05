@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T04:50Z | Verifier | STARTED | run session_01E6cPndtn3yniCgpmwtJiFx | repo-attached routine | task state: none READY (T-516 TODO, T-517 CLAIMED W2, T-518 TODO) | self-check pending
 - 2026-11-05 04:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05 04:19 UTC | Lead | SUCCESS | board | Since 00:15: 3 merged (T-515 lintel span bars WORKED, T-507 V3.0.58 roof WP 204.112 -> 209.019 m2 WORKED, T-514 screed/bed producers WORKED), T-423 r1 rejected (3 L4 fixes, engineering AGREE: PARTIAL), T-498 INCOMPLETE x2 (PARTIAL, tooling); ROOT: wrapper refuses research/agents_t*/ scripts -> T-498 / T-423 r2 BLOCKED, owner notified (NEEDS FIXING); T-423 row-format fault (status began REJECTED, W1 03:21 empty run) corrected; NEW T-516 (lintel jamb bearing, W1), T-517 (pool-court build-up, W2), T-518 (waste factor provenance, W3); 10 Nov HIGH RISK; Drive OK no new files; owner package none; queue check: 15 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (workers' refusal: 'Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Auto-Mode Bypass]')
 - 2026-11-05 04:12 UTC | Lead | STARTED | run session_01E6cPne2GFfJiH4vuFGZfGa | repo-attached routine | task state: board | report pending
