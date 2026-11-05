@@ -73,7 +73,8 @@ TILE, BACKING = "FIN.WALL.TILE", "FIN.PLASTER"
 THRESHOLD_CODES = ("FIN.MARBLE.THRESHOLD", "FIN.PORCELAIN.THRESHOLD", "FIN.MARBLE.SILL", "FIN.WINDOW.SILL",
                    "FIN.THRESHOLD", "FIN.SILL")
 CODES_OF = {"LIST_CEILING": (CEILING,), "MOVE_FACE_DEDUCTION": (TILE, BACKING), "NOT_APPLICABLE": (PAINT,),
-            "MATERIAL_STATE": THRESHOLD_CODES, "MEASURE_PAIR": THRESHOLD_CODES}
+            "MATERIAL_STATE": THRESHOLD_CODES,
+            "MEASURE_PAIR": THRESHOLD_CODES + ("FIN.FLOOR.PORCELAIN",)}   # the dry doorway strip carried as porcelain
 VALUED_STATES = A3036.VALUED_STATES
 NA_STATE, HELD_STATE = "NOT_APPLICABLE_WITH_EVIDENCE", "BLOCKED_RFI"
 MATERIAL_STATES = ("SOURCE", "PROJECT_OWNER_FACT", "URBAN_METHOD", "BY_SPEC")
@@ -341,7 +342,7 @@ def _move_face(b, e, srcs, ln=None):
     for d in list(ln["deductions"]) + (om["deductions"] if isinstance(om, dict) and isinstance(om.get("deductions"),
                                                                                              list) else []):
         # the canonical list item (and the owner-method record) of the hole names its face
-        if e["opening_id"] in (d.get("id"), d.get("census_id"), d.get("opening")) and d.get("face") == e["from_face"]:
+        if e["opening_id"] in (d.get("id"), d.get("census_id"), d.get("opening"), d.get("opening_id")) and d.get("face") == e["from_face"]:
             d["face"] = e["to_face"]
             moved_list += 1
     log = rec.setdefault(REC_KEY, [])
@@ -372,9 +373,18 @@ def _not_applicable(b, e, srcs, by):
 
 
 def formula_measures(ln):
-    """(m2, m.l, pcs) as the line's own formula prints them, or None."""
-    m = MEASURE_RE.search((ln.get("calculation") or {}).get("formula") or "")
-    return None if m is None else (m.group(1), m.group(2), int(m.group(3)))
+    """(m2, m.l, pcs) as the line's own formula prints them; for a strip whose formula prints words only, as its own
+    calculation inputs carry them (length_m = m.l, length_m x depth_m = m2 within 1e-6, one strip = 1 pc); or None."""
+    calc = ln.get("calculation") or {}
+    m = MEASURE_RE.search(calc.get("formula") or "")
+    if m is not None:
+        return (m.group(1), m.group(2), int(m.group(3)))
+    inp = calc.get("inputs") or {}
+    lm, dp = inp.get("length_m"), inp.get("depth_m")
+    if isinstance(lm, (int, float)) and isinstance(dp, (int, float)) and isinstance(ln.get("measured_net"), (int, float)) \
+            and lm > 0 and dp > 0 and abs(lm * dp - ln["measured_net"]) <= BIND_TOL:
+        return (repr(float(ln["measured_net"])), repr(float(lm)), 1)
+    return None
 
 
 def _threshold(b, e, srcs, ln=None):
@@ -391,7 +401,7 @@ def _threshold(b, e, srcs, ln=None):
             raise InputsError(f"{e['line_id']}: a measure pair only on a valued strip line")
         fm = formula_measures(b)
         if fm is None:
-            raise InputsError(f"{e['line_id']}: the formula prints no 'm2 (m.l, pcs)' (nothing to carry)")
+            raise InputsError(f"{e['line_id']}: neither the formula nor the inputs carry m2 / m.l / pcs (nothing to carry)")
         if float(fm[0]) != e["m2"] or float(fm[1]) != e["ml"] or fm[2] != e["pcs"] or \
                 abs(b["measured_net"] - e["m2"]) > BIND_TOL:
             raise InputsError(f"{e['line_id']}: measures {e['m2']} / {e['ml']} / {e['pcs']} are not the formula's "

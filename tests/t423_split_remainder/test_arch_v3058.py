@@ -38,10 +38,10 @@ REC = "wall_tile_v3021"
 
 
 def _ln(code, eid, state, net=None, gross=None, room=None, unit="m2", formula=None, inputs=None, mat="BY_SPEC",
-        floor="1F"):
+        floor="1F", deductions=()):
     return BL.make_line(project_id=PID, revision_set_sha256=REV, item_code=code, unit=unit, evidence_state=state,
                         measured_net=net, gross=gross, element_id=eid, floor=floor, room_id=room,
-                        formula=formula or f"synthetic {code} {eid}", inputs=inputs, rule_id="R-SYN",
+                        formula=formula or f"synthetic {code} {eid}", inputs=inputs, deductions=deductions, rule_id="R-SYN",
                         rule_version="1", geometry_source="SYNTHETIC_FIXTURE", material_state=mat,
                         rfi={"question": "detail", "unlocks": eid} if state == "BLOCKED_RFI" else None,
                         notes="synthetic", **({} if code in BL.ITEMS else
@@ -57,7 +57,8 @@ def lines():
     return [
         _ln("FIN.CEILING", "R1:ceiling", "PROVISIONAL", 17.0, 20.0, room="R1"),
         _ln("FIN.CEILING", "R2:ceiling", "PROVISIONAL", 18.6747, 19.016545, room="R2"),
-        _ln("FIN.WALL.TILE", "B1:wall tile", "PROVISIONAL", 9.24, 10.92, room="B1", inputs={REC: copy.deepcopy(FACES)}),
+        _ln("FIN.WALL.TILE", "B1:wall tile", "PROVISIONAL", 9.24, 10.92, room="B1", inputs={REC: copy.deepcopy(FACES)},
+            deductions=[{"id": "D-1", "qty": 1.68, "unit": "m2", "face": "B1|W1"}]),
         _ln("FIN.WALL.TILE", "K1:wall tile", "PROVISIONAL", 30.0, 30.0, room="K1"),
         _ln("FIN.PAINT", "K1:paint", "BLOCKED_RFI", room="K1"),
         _ln("FIN.PAINT", "R1:paint", "PROVISIONAL", 40.0, 40.0, room="R1"),
@@ -140,6 +141,8 @@ def test_hand_values():
     assert f["B1|OFF:DOORWAY"]["net_m2"] == pytest.approx(0.84)
     assert [o["id"] for o in f["B1|OFF:DOORWAY"]["openings"]] == ["D-1"]
     assert sum(x["net_m2"] for x in f.values()) == pytest.approx(9.24) == b1["measured_net"]
+    assert b1["deductions"] == [{"id": "D-1", "qty": 1.68, "unit": "m2", "face": "B1|OFF:DOORWAY"}]   # list re-faced
+    assert b1["calculation"]["inputs"][REC][A.REC_KEY][0]["list_items_moved"] == 1
     k1 = _by(out, "K1:paint")
     assert k1["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" and k1["measured_net"] is None
     assert ID["K1:wall tile"] in k1["notes"]
@@ -283,3 +286,23 @@ def test_no_inputs_no_change():
     ch, log = A.changes_for(None, copy.deepcopy(LN))
     assert ch == [] and log["state"] == "NO_PROJECT_INPUT"
     assert A.load_inputs(None) is None and A30.METHOD
+
+
+def test_measure_pair_from_strip_inputs():
+    """a strip whose formula prints words only: m2 / m.l / pcs from its own inputs (length x depth = net)."""
+    s = _ln("FIN.MARBLE.THRESHOLD", "S1 strip", "SOURCE_DERIVED", 0.12, room="B3",
+            formula="clear door opening width x the doorway strip depth (measured strip face)",
+            inputs={"length_m": 0.8, "depth_m": 0.15})
+    assert A.formula_measures(s) == ("0.12", "0.8", 1)
+    bad = copy.deepcopy(s)
+    bad["calculation"]["inputs"]["depth_m"] = 0.2           # 0.8 x 0.2 = 0.16 != net 0.12: no measures
+    assert A.formula_measures(bad) is None
+    prev = copy.deepcopy(LN) + [s]
+    e = entries() + [{"action": "MEASURE_PAIR", "line_id": s["line_id"], "expect": _x("S1 strip", s),
+                      "source_tasks": ["T-C"], "m2": 0.12, "ml": 0.8, "pcs": 1},
+                     {"action": "MATERIAL_STATE", "line_id": s["line_id"], "expect": _x("S1 strip", s),
+                      "source_tasks": ["T-C"], "material_state": "URBAN_METHOD", "rule_source": "owner rule"}]
+    _, ch, _ = run(doc(e), prev)
+    out, ident = A.integrate(prev, ch)
+    assert _by(out, "S1 strip")["measure_pair"]["measures"] == {"m2": 0.12, "lm": 0.8, "nr": 1}
+    assert ident["split_remainder"]["threshold_states"] == {"URBAN_METHOD": 3}
