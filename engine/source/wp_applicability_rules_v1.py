@@ -37,7 +37,7 @@ library only; geometry arrives already measured (research/agents_t486 zone_geome
 from __future__ import annotations
 
 RULE_VERSION = "WP_APPLICABILITY_RULES_V1"
-DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"   # T-212: computes waterproofing component quantities, wired nowhere yet
+DEFAULT_GUARD_CLASS = "GUARDED_VIA_V3.0.6"  # T-507: read by V3.0.58 only (guard re-check), was UNWIRED_PRODUCER
 UPTURN_H_M = 0.20                          # UP-WP-003 (owner): upturn height; a printed project detail overrides
 
 MEASURED, HELD, NOT_APPLICABLE, CARRIED, RFI = "MEASURED", "HELD", "NOT_APPLICABLE", "CARRIED", "RFI"
