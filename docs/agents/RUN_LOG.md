@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T16:50Z | Verifier | STARTED | run session_01E6cPnc8voZYr92fjrgdhoV | repo-attached routine | task state: none READY (T-531..T-537 TODO / CLAIMED) | self-check pending
 - 2026-11-05T16:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T16:21Z | Lead | SUCCESS | board | Since 12:20: 5 merged, all WORKED (T-526 12 column run ends, delta 0 / +0.007021 m3; T-527 W18 bearing 0.478 -> 0.578 m, no state moves; T-528 FINISH V7 stair bed; T-529 ledge membrane 0.639573 m2 MEASURED, FIN.WP.ROOF 209.019 -> 209.658 m2 once wired; T-530 manifest); T-525 BLOCKED (wrapper, folded into T-498); no candidate change (V3.0.58; released V2.9 + route G unchanged); 6 new rows T-532..T-537 (S 2, A 2, I 2) from F-C-T526-1 / F-C-T528-1 / F-C-T530-1 / F-C-T529-1 / RG-1 / 0.15 module / sand unit; register POOL-COURT SLAB corrected (F-T530-3); 3 lessons rows; 10 Nov LOW; wrapper not re-notified; Drive OK no new files; owner package none; queue check: 20 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05 16:16 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
