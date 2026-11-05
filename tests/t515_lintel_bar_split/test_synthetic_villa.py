@@ -159,3 +159,22 @@ def test_lap_beyond_stock_is_held_with_count():
     lap = comp(r, "BOTTOM", "LAPS")
     assert lap["state"] == T.HELD and lap["laps_per_bar"] == 1 and lap["lap_m"] == pytest.approx(0.72)
     assert lap["kg"] is None and lap["kg_if_full_run_beside"] == pytest.approx(2 * 0.72 * 144 / 162, abs=1e-6)
+
+
+def test_printed_minimum_cover_tightens_the_ceiling_only():
+    # LA with a printed minimum cover 0.03 m: in-bearing ceiling 2 x (0.25 - 0.03) = 0.44 m per bar
+    # -> 0.44 x 488/162 = 1.325432 kg; ceiling 3.614815 + 1.325432 = 4.940247 kg; AT_LEAST unchanged 3.614815
+    x = dict(villa()[0], cover_min_m=0.03, cover_min_m_source="PRINTED general note", cover_min_applies="YES")
+    r = T.lintel_bars(x)
+    assert r["at_least_kg"] == pytest.approx(3.614815, abs=1e-6)
+    assert r["ceiling_straight_kg_if_min_cover_beside"] == pytest.approx(4.940247, abs=1e-6)
+    assert r["ceiling_straight_kg_beside"] == pytest.approx(5.120988, abs=1e-6)
+    ib = comp(r, "BOTTOM", "IN_BEARING")
+    assert ib["state"] == T.HELD and ib["kg"] is None and ib["min_cover"]["applies"] == "YES"
+
+
+def test_minimum_cover_without_source_or_outside_bearing_refused():
+    with pytest.raises(T.LintelBarError, match="defaulted"):
+        T.lintel_bars(dict(villa()[0], cover_min_m=0.025))
+    with pytest.raises(T.LintelBarError, match="not inside"):
+        T.lintel_bars(dict(villa()[0], cover_min_m=0.30, cover_min_m_source="PRINTED note"))

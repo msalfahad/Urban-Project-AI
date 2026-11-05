@@ -4,7 +4,8 @@ Physical element (ERS s.2.1). An RC lintel over an opening carries the masonry a
 side. Its reinforcement, as a lintel schedule + lintel detail print it: n bottom bars and n top bars of a printed
 diameter running along the lintel, their ends bent into the bearing (bend DRAWN, length NOT printed), and closed links
 at a printed rate per metre (cut length needs the cover and hook length, NOT printed). The concrete length L = clear
-span w + 2 x printed minimum bearing (merged V3.0.53 lintel lines).
+span w + 2 x printed minimum bearing (merged V3.0.53 lintel lines). A general note may print a MINIMUM cover ('not less
+than'): a minimum is not the value, so it only tightens the ceiling beside (cover_min_m), and only with its source.
 
 What is countable (owner 2026-10-29 (B): only drawn / printed bar parts; an undrawn part stays HELD unless physically
 certain from the drawings themselves):
@@ -64,7 +65,7 @@ REQUIRED = "REQUIRED"
 BAR = re.compile(r"^\s*(\d+)\s*[Ø×xX]\s*(\d+(?:\.\d+)?)\s*$")
 RATE = re.compile(r"^\s*(\d+)\s*[Ø×xX]\s*(\d+(?:\.\d+)?)\s*/\s*[Mm]\s*$")
 MAX_W_M = 20.0                    # a width above this is not a lintel opening in metres (mm / cm entry)
-DETAIL_KEYS = ("end_cover_m", "bend_m", "hook_m", "cover_m")
+DETAIL_KEYS = ("end_cover_m", "bend_m", "hook_m", "cover_m", "cover_min_m")
 
 
 class LintelBarError(ValueError):
@@ -150,6 +151,9 @@ def lintel_bars(rec, umass=UNIT_MASS):
     L = None if Bq is None else W + 2 * Bq
     cover = _printed(rec, "end_cover_m")
     bend = _printed(rec, "bend_m")
+    cmin = _printed(rec, "cover_min_m")      # a printed MINIMUM cover: tightens the ceiling only, never the value
+    if cmin is not None and Bq is not None and not 0 < cmin < float(Bq):
+        raise LintelBarError(f"{oid}: printed minimum cover {cmin} m is not inside the {bearing} m bearing")
     comps = []
     for role, key in (("BOTTOM", "bottom"), ("TOP", "top")):
         n, d = bars(rec.get(key), f"{oid} {role}")
@@ -169,7 +173,14 @@ def lintel_bars(rec, umass=UNIT_MASS):
                                basis=f"{n} x 2 x (bearing {bearing} - printed end cover {cover}) m", **base))
         else:
             comps.append(_comp(role, "IN_BEARING", HELD, ceiling_kg_beside=float(n * 2 * Bq * kgm),
-                               why=f"end cover not printed: straight segment 2 x ({bearing} m bearing - end cover) "
+                               ceiling_kg_if_min_cover_beside=None if cmin is None else
+                               float(n * 2 * (Bq - _f(cmin)) * kgm),
+                               min_cover=None if cmin is None else {
+                                   "m": cmin, "source": rec.get("cover_min_m_source"),
+                                   "applies": rec.get("cover_min_applies") or "UNRESOLVED",
+                                   "reading": "a 'not less than' cover is a minimum, not the value: it bounds the "
+                                              "straight segment from above only"},
+                               why=f"end cover value not printed (at most a printed minimum): straight segment 2 x ({bearing} m bearing - end cover) "
                                    f"per bar; ceiling beside = 2 x {bearing} m (the bar cannot leave the concrete "
                                    f"length L), never a quantity", **base))
         if bend is not None:
@@ -201,7 +212,7 @@ def lintel_bars(rec, umass=UNIT_MASS):
     over_L = None if L is None else _ceil(rn * L)
     comps.append(_comp("LINKS", "LINKS", HELD, n_over_L=over_L, n_over_span=over_w, dia_mm=rd, rate_per_m=rn,
                        count_method="RATE_COUNT ceil(rate x length) (engine column_rebar policy)",
-                       why="link cut length needs the cover and the hook length (not printed; B20 hook edition "
+                       why="link cut length needs the cover value and the hook length (not printed; B20 hook edition "
                            "unverified): kg HELD, the count is shown"))
     at_least = sum(c["kg"] for c in comps if c["state"] == COMPUTED)
     held = [f"{c['role']} {c['part']}" for c in comps if c["state"] == HELD]
@@ -210,6 +221,9 @@ def lintel_bars(rec, umass=UNIT_MASS):
                ceiling_straight_kg_beside=None if L is None else (
                    sum(c["kg"] for c in comps if c["part"] == "SPAN") +
                    sum(c.get("ceiling_kg_beside") or 0 for c in comps if c["part"] == "IN_BEARING")),
+               ceiling_straight_kg_if_min_cover_beside=None if (L is None or cmin is None) else (
+                   sum(c["kg"] for c in comps if c["part"] == "SPAN") +
+                   sum(c.get("ceiling_kg_if_min_cover_beside") or 0 for c in comps if c["part"] == "IN_BEARING")),
                links_over_L=over_L, links_over_span=over_w, components=comps)
     return out
 
@@ -255,6 +269,8 @@ def total(rows):
             "held_parts": held_p,
             "ceiling_straight_kg_beside": _r(sum(r.get("ceiling_straight_kg_beside") or 0 for r in rows
                                                  if r["state"] != HELD)),
+            "ceiling_straight_kg_if_min_cover_beside": _r(sum(r.get("ceiling_straight_kg_if_min_cover_beside") or 0
+                                                             for r in rows if r["state"] != HELD)),
             "links_over_L": sum(r.get("links_over_L") or 0 for r in rows if r["state"] != HELD),
             "links_over_span": sum(r.get("links_over_span") or 0 for r in rows if r["state"] != HELD),
             "rounding": "components and rows at full precision; only these totals rounded (6 dp), after summing",
@@ -268,6 +284,10 @@ SCHEDULE = ROOT / "research/alsenan_lintels_s8_6/02_LINTEL_SCHEDULE_TRANSCRIPTIO
 PINS = {LEDGER: "ad9bceee3bfdbc12218edec2a648e39104f3503bd73342c8ebb451b8394c13f9",
         SCHEDULE: "5d5baf166700d1d5968c5420f37118ae27836f61a2eeae88ed658f40e25936d7"}
 OUT = ROOT / "research/agents_t515/out/LINTEL_BAR_SPLIT_T515.json"
+# ST7757 p.8 'RECOMMENDATIONS' note 22 (Arabic, read by worker 1 2026-11-05 from the Drive copy): concrete cover not less
+# than 2.5 cm in columns, slabs and beams, 7 cm against soil. A minimum, and lintels are not named: ceiling only.
+NOTE22 = {"m": 0.025, "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)",
+          "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI"}
 
 
 def _load(p):
@@ -308,6 +328,7 @@ def records():
                                      f"{x['schedule_row']} {row}")
             r.update(band_lo_m=row["lo_m"], band_hi_m=row["hi_m"])
         if x["decision"] == REQUIRED:
+            r.update(cover_min_m=NOTE22["m"], cover_min_m_source=NOTE22["source"], cover_min_applies=NOTE22["applies"])
             if abs(x["length_m"] - (x["width_m"] + 2 * bearing)) > 1e-9:
                 raise LintelBarError(f"{x['opening_id']}: ledger L {x['length_m']} != w + 2 x {bearing}")
             r["bearing_m"] = bearing

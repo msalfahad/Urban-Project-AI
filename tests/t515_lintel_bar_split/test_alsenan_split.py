@@ -1,6 +1,7 @@
 """T-515 on the training villa, from the sha-pinned merged T-453 r2 lintel ledger + the printed lintel schedule (ST7757
 p.13, transcription pinned; re-read by worker 1 on 2026-11-05 from the Drive copy: rows L1 2Ø12 / 2Ø10, L2 2Ø14 / 2Ø12,
-L3 3Ø16 / 3Ø14, all 5Ø8/M, MIN.40cm bearing; no cover, no bend length printed). No private file needed.
+L3 3Ø16 / 3Ø14, all 5Ø8/M, MIN.40cm bearing; no bend / hook length printed; p.8 note 22: cover not less
+than 2.5 cm in columns, slabs and beams: a minimum, lintels not named, so a ceiling only). No private file needed.
 
 Hand calculation (kg/m = d^2/162; span = clear opening width):
   L1 per metre of span 2 x 144/162 + 2 x 100/162 = 488/162 = 3.012346 kg/m; 14 lintels, spans 5 x 1.00 + 7 x 0.80 + 0.90
@@ -44,6 +45,16 @@ def test_totals_by_hand(doc):
     assert t["at_least_t"] == pytest.approx(0.063162, abs=1e-6)
     assert t["ceiling_straight_kg_beside"] == pytest.approx(106.954321, abs=1e-6)
     assert t["links_over_L"] == 146 and t["links_over_span"] == 82
+    # note 22 minimum cover 2.5 cm (if it applies to lintels): ceiling - 0.05 m per bar
+    # = 106.954321 - 0.05 x (488/162 x 14 + 680/162 + 1356/162) = 106.954321 - 2.737037 = 104.217284 kg
+    assert t["ceiling_straight_kg_if_min_cover_beside"] == pytest.approx(104.217284, abs=1e-6)
+
+
+def test_note22_minimum_cover_is_a_ceiling_not_the_value(doc):
+    r = by(doc)["W14"]
+    ib = [c for c in r["components"] if c["part"] == "IN_BEARING"]
+    assert all(c["state"] == T.HELD and c["kg"] is None for c in ib)
+    assert all(c["min_cover"]["m"] == 0.025 and c["min_cover"]["applies"].startswith("UNRESOLVED") for c in ib)
 
 
 @pytest.mark.parametrize("oid,kg,links", [("W14", 20.507407, 17), ("W15", 6.506173, 12), ("D-1F-08", 488 / 162 * 0.9, 9),

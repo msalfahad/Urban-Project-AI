@@ -45,6 +45,7 @@
    "at_least_kg": 3.0123456790123457,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.4222222222222225,
+   "ceiling_straight_kg_if_min_cover_beside": 5.271604938271604,
    "components": [
     {
      "basis": "2 x clear span 1.0 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -59,14 +60,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -101,14 +109,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -140,7 +155,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -165,6 +180,7 @@
    "at_least_kg": 3.0123456790123457,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.4222222222222225,
+   "ceiling_straight_kg_if_min_cover_beside": 5.271604938271604,
    "components": [
     {
      "basis": "2 x clear span 1.0 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -179,14 +195,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -221,14 +244,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -260,7 +290,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -285,6 +315,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -299,14 +330,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -341,14 +379,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -380,7 +425,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -429,6 +474,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -443,14 +489,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -485,14 +538,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -524,7 +584,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -549,6 +609,7 @@
    "at_least_kg": 2.711111111111111,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.120987654320987,
+   "ceiling_straight_kg_if_min_cover_beside": 4.97037037037037,
    "components": [
     {
      "basis": "2 x clear span 0.9 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -563,14 +624,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -605,14 +673,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -644,7 +719,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -681,6 +756,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -695,14 +771,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -737,14 +820,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -776,7 +866,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -801,6 +891,7 @@
    "at_least_kg": 3.0123456790123457,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.4222222222222225,
+   "ceiling_straight_kg_if_min_cover_beside": 5.271604938271604,
    "components": [
     {
      "basis": "2 x clear span 1.0 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -815,14 +906,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -857,14 +955,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -896,7 +1001,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -933,6 +1038,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -947,14 +1053,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -989,14 +1102,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1028,7 +1148,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1113,6 +1233,7 @@
    "at_least_kg": 3.0123456790123457,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.4222222222222225,
+   "ceiling_straight_kg_if_min_cover_beside": 5.271604938271604,
    "components": [
     {
      "basis": "2 x clear span 1.0 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -1127,14 +1248,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -1169,14 +1297,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1208,7 +1343,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1269,6 +1404,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -1283,14 +1419,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -1325,14 +1468,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1364,7 +1514,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1389,6 +1539,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -1403,14 +1554,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -1445,14 +1603,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1484,7 +1649,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1509,6 +1674,7 @@
    "at_least_kg": 2.4098765432098763,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 4.819753086419753,
+   "ceiling_straight_kg_if_min_cover_beside": 4.669135802469135,
    "components": [
     {
      "basis": "2 x clear span 0.8 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -1523,14 +1689,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -1565,14 +1738,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1604,7 +1784,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1629,6 +1809,7 @@
    "at_least_kg": 3.0123456790123457,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 5.4222222222222225,
+   "ceiling_straight_kg_if_min_cover_beside": 5.271604938271604,
    "components": [
     {
      "basis": "2 x clear span 1.0 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -1643,14 +1824,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -1685,14 +1873,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -1724,7 +1919,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -1953,6 +2148,7 @@
    "at_least_kg": 20.507407407407406,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 27.203703703703702,
+   "ceiling_straight_kg_if_min_cover_beside": 26.785185185185185,
    "components": [
     {
      "basis": "3 x clear span 2.45 m x 1.580247 kg/m (bar drawn across the opening into both bearings)",
@@ -1967,14 +2163,21 @@
     },
     {
      "ceiling_kg_beside": 3.7925925925925923,
+     "ceiling_kg_if_min_cover_beside": 3.5555555555555554,
      "dia_mm": 16.0,
      "kg": null,
      "kg_per_m": 1.580247,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 3,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 16.0,
@@ -2009,14 +2212,21 @@
     },
     {
      "ceiling_kg_beside": 2.903703703703704,
+     "ceiling_kg_if_min_cover_beside": 2.7222222222222223,
      "dia_mm": 14.0,
      "kg": null,
      "kg_per_m": 1.209877,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 3,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 14.0,
@@ -2048,7 +2258,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -2073,6 +2283,7 @@
    "at_least_kg": 6.506172839506172,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 9.864197530864196,
+   "ceiling_straight_kg_if_min_cover_beside": 9.65432098765432,
    "components": [
     {
      "basis": "2 x clear span 1.55 m x 1.209877 kg/m (bar drawn across the opening into both bearings)",
@@ -2087,14 +2298,21 @@
     },
     {
      "ceiling_kg_beside": 1.9358024691358025,
+     "ceiling_kg_if_min_cover_beside": 1.8148148148148149,
      "dia_mm": 14.0,
      "kg": null,
      "kg_per_m": 1.209877,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 14.0,
@@ -2129,14 +2347,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -2168,7 +2393,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -2205,6 +2430,7 @@
    "at_least_kg": 1.5061728395061729,
    "bearing_m": 0.4,
    "ceiling_straight_kg_beside": 3.916049382716049,
+   "ceiling_straight_kg_if_min_cover_beside": 3.765432098765432,
    "components": [
     {
      "basis": "2 x clear span 0.5 m x 0.888889 kg/m (bar drawn across the opening into both bearings)",
@@ -2219,14 +2445,21 @@
     },
     {
      "ceiling_kg_beside": 1.422222222222222,
+     "ceiling_kg_if_min_cover_beside": 1.3333333333333333,
      "dia_mm": 12.0,
      "kg": null,
      "kg_per_m": 0.888889,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "BOTTOM",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 12.0,
@@ -2261,14 +2494,21 @@
     },
     {
      "ceiling_kg_beside": 0.9876543209876543,
+     "ceiling_kg_if_min_cover_beside": 0.9259259259259258,
      "dia_mm": 10.0,
      "kg": null,
      "kg_per_m": 0.617284,
+     "min_cover": {
+      "applies": "UNRESOLVED: the note names beams, not lintels; designer RFI",
+      "m": 0.025,
+      "reading": "a 'not less than' cover is a minimum, not the value: it bounds the straight segment from above only",
+      "source": "PRINTED ST7757 p.8 note 22: cover not less than 2.5 cm (columns, slabs, beams)"
+     },
      "n": 2,
      "part": "IN_BEARING",
      "role": "TOP",
      "state": "HELD",
-     "why": "end cover not printed: straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
+     "why": "end cover value not printed (at most a printed minimum): straight segment 2 x (0.4 m bearing - end cover) per bar; ceiling beside = 2 x 0.4 m (the bar cannot leave the concrete length L), never a quantity"
     },
     {
      "dia_mm": 10.0,
@@ -2300,7 +2540,7 @@
      "rate_per_m": 5,
      "role": "LINKS",
      "state": "HELD",
-     "why": "link cut length needs the cover and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
+     "why": "link cut length needs the cover value and the hook length (not printed; B20 hook edition unverified): kg HELD, the count is shown"
     }
    ],
    "decision": "REQUIRED",
@@ -2463,6 +2703,7 @@
   "at_least_kg": 63.161728,
   "at_least_t": 0.063162,
   "ceiling_straight_kg_beside": 106.954321,
+  "ceiling_straight_kg_if_min_cover_beside": 104.217284,
   "held_parts": [
    "BOTTOM END_BENDS",
    "BOTTOM IN_BEARING",
