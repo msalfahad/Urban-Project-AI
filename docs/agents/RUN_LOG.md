@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T07:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: checking (RUN_LOG shows 0 READY at 07:20) | self-check pending
 - 2026-11-05T07:20Z | Worker 1 | SUCCESS | none | No claimable TODO: T-516/T-517/T-518 MERGED; T-423 r2 and T-498 still BLOCKED on the wrapper allow-list (scripts/agent_env.sh:211 run still allows only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py); QUEUED rows not promoted by the Lead. No quantity changed. Lead: board has 0 TODO for lane S. | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-11-05T07:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T07:01Z | Worker 3 | SUCCESS | none | No claimable TODO row on the board (0 TODO, 0 READY): lane-I package T-498 stays BLOCKED on the wrapper allow-list (research/agents_t* scripts not runnable via scripts/agent_env.sh), queue T-509 / T-382 / T-474 QUEUED for Lead promotion; no quantity changed; candidate of record V3.0.58 and released V2.9 + route G untouched; Drive not read (not needed). | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
