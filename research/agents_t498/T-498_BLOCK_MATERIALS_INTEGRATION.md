@@ -106,7 +106,13 @@ V3.0.58 (T-498); MAS.UNITS.* on B9-01, MAS.MORTAR.BLACK / MAS.GLUE.AAC on B9-04;
 IMPLEMENTED_NOT_INTEGRATED** (RAISED, the T-199 1.25.0 precedent: merged, tested opt-in code writes its codes,
 arch_v3058.py:332 / :477; released_method_reads stays none; name_terms leave; counts NOT_IMPLEMENTED 9 -> 8,
 IMPLEMENTED_NOT_INTEGRATED 26 -> 27). This closes the r1 stage's red guards (t130 1_1_0 x3, t199 1_25_0 x1:
-'governing registry NOT_IMPLEMENTED hit', B9-04 owning written codes while NOT_IMPLEMENTED).
+'governing registry NOT_IMPLEMENTED hit', B9-04 owning written codes while NOT_IMPLEMENTED). The 1.25.0-era guard
+(t199 test_1_25_0_is_the_governing_registry...) scans every engine/source def name for the 1.25.0 NOT_IMPLEMENTED name
+terms without exempting newer modules' defs (only their item codes): r2 renames arch_v3058.glue_rate -> aac_bond_rate
+(no output changes: V3_0_58 436f1e78 byte-identical, BOQ_LINES / RUN / LEDGER compared), as every earlier package
+that raised a 1.25.0 term family (backfill, disposal, mortar, ...) kept the term out of def names. Proposed finding for
+the Lead (not fixed here: an existing test is never weakened): the era scan should exempt defs of modules newer than
+1.25.0 the way _own_head exempts their codes.
 
 ## 5. Lintel pieces
 

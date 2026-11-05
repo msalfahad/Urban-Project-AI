@@ -198,7 +198,7 @@ def _build(task_commit):
           f"beside each MAS.BLOCK line on the material base (contract net - REQUIRED lintel faces bound to valued "
           f"STR.CONC.LINTEL lines; HELD faces a named range), held masonry blank by name; "
           f"{_at(MOD, r'^def check_materials')} check_materials(); {_at(TST, r'^def test_normal_hand_figures')} "
-          f"(villa K498 by hand)")
+          f"test_normal_hand_figures() (villa K498 by hand)")
     for code in ("B9-01", "B9-04"):
         f = fams[code]
         f["evidence"] = list(f["evidence"]) + [ev]

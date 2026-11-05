@@ -214,7 +214,7 @@ def black_rate(rb, t):
             "module_basis": f"{R_BLOCK} confirmed_modules_m[{key}]"}
 
 
-def glue_rate(rb, t):
+def aac_bond_rate(rb, t):
     k = rb["p"][R_GLUE]["kg_per_m2_by_thickness_m"].get(f"{t:.2f}")
     if k is None:
         return {"status": "HELD", "why": f"no AAC glue rate for {t:.2f} m in {R_GLUE}: HELD"}
@@ -391,7 +391,7 @@ def materials_for(src, d, lintels):
             f"{d['joint']['module_m'][1]})) = {mv if mr is None else mr} m3 installed; 1:4 -> {cb} bags, {sd} m3 sand "
             f"beside; procurement HELD")))
         return out
-    g = glue_rate(d["rulebook"], t)
+    g = aac_bond_rate(d["rulebook"], t)
     alt = {"62.5x25 (6.4 / m2)": _r(mb["material_base_m2"] * 6.4),
            "60x20 (8.33 / m2)": _r(mb["material_base_m2"] / (0.60 * 0.20)), "on_m2": mb["material_base_m2"]}
     if g["status"] != OK or mb["base_state"] == "HELD":

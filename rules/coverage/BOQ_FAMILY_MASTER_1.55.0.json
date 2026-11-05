@@ -3929,7 +3929,7 @@
     "commit 79bd397 (T-103 wall metres by hand, verifier run 37)",
     "engine/source/arch_v3046.py:361 changes_for(): ADD_HELD (blank, the measure beside), RESTATE (every fact named, quantity fields asserted unchanged), BIND_CHECK; engine/source/arch_v3046.py:457 check_tie_masonry(); tests/t419_tie_gb_masonry/test_integration_villa_q.py:105 (villa Q by hand)",
     "engine/source/arch_v3055.py:267 changes_for(): a roof-storey wall HELD ON ROOF DATUM U - L x b_r (carried figure asserted = U - L x the what-if build-up), a width-conflict wall off its released part as a named range, a drop U at its high end, the retired conflict increments; engine/source/arch_v3055.py:572 check_wiring(); tests/t488_blockwork_wiring/test_arch_v3055.py:87 (villa P279 by hand: W7 11.400 - 4.000 x b_r m2, MAS.BLOCK 54.140 -> 32.140 m2)",
-    "engine/source/arch_v3058.py:332 materials_for(): black units / laying mortar / AAC glue / white units beside each MAS.BLOCK line on the material base (contract net - REQUIRED lintel faces bound to valued STR.CONC.LINTEL lines; HELD faces a named range), held masonry blank by name; engine/source/arch_v3058.py:477 check_materials(); tests/t498_block_materials/test_arch_v3058.py:94 (villa K498 by hand)"
+    "engine/source/arch_v3058.py:332 materials_for(): black units / laying mortar / AAC glue / white units beside each MAS.BLOCK line on the material base (contract net - REQUIRED lintel faces bound to valued STR.CONC.LINTEL lines; HELD faces a named range), held masonry blank by name; engine/source/arch_v3058.py:477 check_materials(); tests/t498_block_materials/test_arch_v3058.py:94 test_normal_hand_figures() (villa K498 by hand)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK",
    "opt_in_readers": "none | ARCH_TAKEOFF_V3.0.46 (engine/source/arch_v3046.py, opt-in candidate; pending Gate B, T-419) | ARCH_TAKEOFF_V3.0.55 (engine/source/arch_v3055.py, opt-in candidate; pending Gate B, T-488) | ARCH_TAKEOFF_V3.0.58 (engine/source/arch_v3058.py, opt-in candidate; pending Gate B, T-498)",
@@ -4160,7 +4160,7 @@
    "source_needed": "from B9-01",
    "next_slice": "S4",
    "evidence": [
-    "engine/source/arch_v3058.py:332 materials_for(): black units / laying mortar / AAC glue / white units beside each MAS.BLOCK line on the material base (contract net - REQUIRED lintel faces bound to valued STR.CONC.LINTEL lines; HELD faces a named range), held masonry blank by name; engine/source/arch_v3058.py:477 check_materials(); tests/t498_block_materials/test_arch_v3058.py:94 (villa K498 by hand)"
+    "engine/source/arch_v3058.py:332 materials_for(): black units / laying mortar / AAC glue / white units beside each MAS.BLOCK line on the material base (contract net - REQUIRED lintel faces bound to valued STR.CONC.LINTEL lines; HELD faces a named range), held masonry blank by name; engine/source/arch_v3058.py:477 check_materials(); tests/t498_block_materials/test_arch_v3058.py:94 test_normal_hand_figures() (villa K498 by hand)"
    ],
    "released_method_reads": "none",
    "opt_in_readers": "ARCH_TAKEOFF_V3.0.58 (engine/source/arch_v3058.py, opt-in candidate; pending Gate B, T-498)",
