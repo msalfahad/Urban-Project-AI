@@ -1,0 +1,123 @@
+{
+ "task": "T-541",
+ "rule": "R-T541-1",
+ "membrane": {
+  "unit": "m2",
+  "engine_total": "209.658440",
+  "freelancer_total": "285.00",
+  "gap": "75.341560",
+  "rows": [
+   {
+    "name": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
+    "qty": "34.390242",
+    "unit": "m2",
+    "delta": "34.390242",
+    "cause": "HELD",
+    "source": "P7757.dxf handles (re-read T-541); Q-34 parked",
+    "note": "49.665000 - 15.274758; engine lines L-3e8fe55d / L-aac1f35e HELD, never 0"
+   },
+   {
+    "name": "third dome footprint on the +13.90 roof",
+    "qty": "15.274758",
+    "unit": "m2",
+    "delta": "15.274758",
+    "cause": "RULE_DIFFERENCE",
+    "source": "P7757.dxf handles (re-read T-541) 1300; Q-29 client change (open skylight)",
+    "note": "inside the HELD roof; his row does not deduct it (hypothesis H1)"
+   },
+   {
+    "name": "two +9.70 dome footprints (circles)",
+    "qty": "30.718026",
+    "unit": "m2",
+    "delta": "30.718026",
+    "cause": "RULE_DIFFERENCE",
+    "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 / Q-29",
+    "note": "engine stops the membrane at each skylight opening (owner Q-29); a design-scope count keeps it"
+   },
+   {
+    "name": "engine arc discretisation of the two +9.70 dome deductions",
+    "qty": "0.018026",
+    "unit": "m2",
+    "delta": "-0.018026",
+    "cause": "TOLERANCE",
+    "source": "T-321 closure AT379 (146.532 - 115.832 = 30.700 vs circles)",
+    "note": "polygon chords; 0.016 % of the line; not a defect"
+   },
+   {
+    "name": "pool-court slab +5.50 and its ledge (T-507 / T-529)",
+    "qty": "5.546440",
+    "unit": "m2",
+    "delta": "-5.546440",
+    "cause": "ENGINE_RIGHT",
+    "source": "candidate lines L-eff54f96 / L-2361d6ec (Checker 4.9069 AGREE)",
+    "note": "exposed slab top; his row has no sub-row: whether his lump holds it is not printed"
+   },
+   {
+    "name": "RESIDUAL",
+    "qty": "0.523000",
+    "unit": "m2",
+    "delta": "0.523000",
+    "cause": "UNRESOLVED",
+    "source": "freelancer row total minus every named component",
+    "note": ""
+   }
+  ],
+  "residual": "0.523000",
+  "residual_pct_of_freelancer": "0.184"
+ },
+ "upturn": {
+  "unit": "lm",
+  "engine_total": "187.834160",
+  "freelancer_total": "194.00",
+  "gap": "6.165840",
+  "rows": [
+   {
+    "name": "2F block top roof parapet inner faces",
+    "qty": "28.300",
+    "unit": "lm",
+    "delta": "28.300",
+    "cause": "HELD",
+    "source": "P7757.dxf handles (re-read T-541); T-311 2F 28.300; Q-34 parked",
+    "note": "engine line L-aac1f35e HELD"
+   },
+   {
+    "name": "two +9.70 dome rings (circles)",
+    "qty": "27.785396",
+    "unit": "lm",
+    "delta": "-27.785396",
+    "cause": "RULE_DIFFERENCE",
+    "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 answer (0.20 m round a skylight)",
+    "note": "in the engine, not in a basis that keeps the domes in the area"
+   },
+   {
+    "name": "engine arc discretisation of the two rings",
+    "qty": "0.003396",
+    "unit": "lm",
+    "delta": "0.003396",
+    "cause": "TOLERANCE",
+    "source": "T-071 ring 27.782 vs circles 27.785396",
+    "note": ""
+   },
+   {
+    "name": "pool-court upturns, bath-window face and ledge (T-507 / T-529)",
+    "qty": "6.245160",
+    "unit": "lm",
+    "delta": "-6.245160",
+    "cause": "ENGINE_RIGHT",
+    "source": "candidate lines L-cf8d5ed4 / L-1954878b / L-d7d1bf8c",
+    "note": "5.193544 + 0.500002 + 0.551614"
+   },
+   {
+    "name": "RESIDUAL",
+    "qty": "11.893000",
+    "unit": "lm",
+    "delta": "11.893000",
+    "cause": "UNRESOLVED",
+    "source": "freelancer row total minus every named component",
+    "note": ""
+   }
+  ],
+  "residual": "11.893000",
+  "residual_pct_of_freelancer": "6.130"
+ }
+}
