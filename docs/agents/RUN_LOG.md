@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T10:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-522 CLAIMED W2 10:40; T-520 / T-524 TODO) | self-check pending
 - 2026-11-05T10:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T10:03Z | Verifier | SUCCESS | T-519, T-523 | T-519 GATE A PASS + T-523 GATE A PASS, MERGED engine 9a28e927 (CODEMAP-only conflict rebuilt): lintel system by hierarchy (project RC 16/16: 6 PRODUCED, 10 HELD); own DXF re-measure D-GF-06 / D-2F-01 / W18 AGREE except W18 END 0.578 vs 0.478 (V2 curved-bay construct, F-C-T519-1, no state moves); T-523 3 keys re-derived AGREE (bed 0.03 x 1.05 mis-stage confirmed; cement procurement >= 130.82..172.29, one ceiling 131..173); both UNWIRED: no candidate / released quantity change; no Gate B, no owner question; Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T09:51Z | Verifier | STARTED | run session_01E6cPndCQBSmNN9pL6GjDkh | repo-attached routine | task state: T-519 READY (W1 09:31), T-523 READY (W3 09:12) | self-check pending
