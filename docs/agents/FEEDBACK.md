@@ -3,7 +3,7 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Lead 2026-11-05 20:25 (since 16:30)
+## Lead 2026-11-05 20:17 (since 16:30)
 
 - T-531 lintel bars on measured ends (Gate A): WORKED (PRODUCED 6 = 38.761728 kg, FLAGGED 10 = 24.301496 kg AT_LEAST; bar ends HELD: ST p.13 prints no cover / bend / hook). Decision: into manifest V3 (T-538); bar ends stay a designer item, no owner question.
 - T-536 wiring manifest V2 (Gate A): WORKED (Checker arcs 0.551614 / 2.976663 lm AGREE). Decision: F-C-T536-1 (test pins a live READY commit) -> T-538 gate fix, worker 3 FIRST.

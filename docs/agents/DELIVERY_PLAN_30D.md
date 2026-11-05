@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-11-05 20:25; recovery plan in force)
+## Status (Lead, 2026-11-05 20:17; recovery plan in force)
 
 - Merged since 16:30 (all Gate A, research, no candidate line moved): T-531, T-532, T-535, T-536 (4/4 WORKED); T-537 REJECTED -> r2; T-534 PASS, merge-blocked -> T-538 gate fix. Unwired verified pieces now 18 (T-516..T-536).
 - Integration streams S (T-498 + T-525) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh:211 unchanged at eafbb0f6).

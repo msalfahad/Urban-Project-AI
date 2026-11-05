@@ -7,15 +7,15 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - engine: ba9eba77 (T-531 / T-536 / T-535 / T-532 merges; candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / BOQ_FAMILY_MASTER
   1.55.0; released V2.9 + route G unchanged).
 - main: eafbb0f6 (wrapper scripts/agent_env.sh:211 UNCHANGED: run allows only the two tools).
-- board: this run's final commit (Lead 2026-11-05 20:25)
-- last Lead run: 2026-11-05 20:13-20:35 UTC (run session_01E6cPnbaRwhAgRs72ThbLjT)
+- board: this run's final commit (Lead 2026-11-05 20:17)
+- last Lead run: 2026-11-05 20:13-20:20 UTC (run session_01E6cPnbaRwhAgRs72ThbLjT)
 
 ## Run health
 - Since 16:16 every run closed with a final line; 0 empty runs; 4 merged, 1 rejected (T-537, narrow), 0 blocked.
 - CRITICAL (owner, notified 04:15, not re-notified): wrapper refuses research/agents_t*/ scripts -> every Gate B + T-525 blocked.
 - tests/t485 still red on the working branch (T-507 stale pending in master 1.55.0).
 
-## Live rows (20:25)
+## Live rows (20:17)
 - READY 1: T-534 (Gate A PASS 18:05; merge waits T-538 gate fix).
 - TODO: S: T-533 0.15 module, T-539 ties / mesh lines; A: T-540 sand load / density, T-541 roof WP vs freelancer,
   T-542 stair riser / landing beds (after T-534); I: T-538 gate fix + manifest V3 (FIRST), T-537 r2 (bound direction).

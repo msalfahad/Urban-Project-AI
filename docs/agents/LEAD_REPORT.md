@@ -1,7 +1,7 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
 
-## LEAD REPORT 2026-11-05 20:25 UTC
+## LEAD REPORT 2026-11-05 20:17 UTC
 
 Drive read OK (no file created in the project folders since 16:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). All results below are Checker-verified pieces, UNWIRED. Development project 2: paused, not measured.
 - Lintel reinforcement (structural, B9-02): 63.162 kg AT_LEAST -> two parts AT_LEAST: PRODUCED 6 = 38.761728 kg, FLAGGED 10 = 24.301496 kg (63.063224 kg; W18 -0.098504 kg, 32.7 mm of its opening is inside C8); bar ends / bends / hooks HELD (ST p.13 prints none; designer item), links PROVISIONAL. Freelancer: no lintel row (UNRESOLVED).
