@@ -1,0 +1,2709 @@
+{
+ "A_q53_t086": {
+  "held": [
+   {
+    "key": "ST-MS1-T",
+    "reason": "HELD in T-086 (winders / round stair, Q-50 / Q-51 then open)"
+   },
+   {
+    "key": "ST-RS-C",
+    "reason": "HELD in T-086 (winders / round stair, Q-50 / Q-51 then open)"
+   },
+   {
+    "key": "ST-RS-S",
+    "reason": "HELD in T-086 (winders / round stair, Q-50 / Q-51 then open)"
+   },
+   {
+    "key": "ST-RS-A",
+    "reason": "HELD in T-086 (winders / round stair, Q-50 / Q-51 then open)"
+   },
+   {
+    "key": "ST-RS-LD",
+    "reason": "HELD in T-086 (winders / round stair, Q-50 / Q-51 then open)"
+   }
+  ],
+  "totals": {
+   "by_surface": {
+    "LANDING": 4.625,
+    "RISER": 12.66,
+    "TREAD": 22.2
+   },
+   "determinate_m2": 39.485,
+   "held": [],
+   "print": "39.4850 m2",
+   "state": "COMPLETE"
+  }
+ },
+ "B_candidate": {
+  "held_lines": [
+   {
+    "bound": [
+     0.0,
+     9.225001
+    ],
+    "class": "HELD",
+    "key": "2F-BOUND",
+    "line_id": "L-5d2be30dd8d2ffeacc42",
+    "note": "2F bound 0 .. 9.225: holds 2F-ARR 4.865 + MS2-LD 2.9325 (T-493)",
+    "surface": "LANDING"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "D1",
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     0.0,
+     2.9225
+    ],
+    "class": "HELD",
+    "key": "GF-BOUND",
+    "line_id": "L-1983e89d8b619eade1db",
+    "note": "GF stair-room bound 0 .. 2.9225: holds no landing (T-493: treads, winders, divider, strip)",
+    "surface": "LANDING"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS1-L",
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "note": "riser HELD (count convention; A-A 10)",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS1-T",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS1-T",
+    "line_id": "L-b4660de0ddd98ad0ffc2",
+    "note": "1F flight 5 = the winder turn seen through (T-425): HELD (S-9)",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS1-U",
+    "line_id": "L-07e0855f961a839c1277",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS2-L",
+    "line_id": "L-0f060e9951c28c4cf074",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "EXCLUDED",
+    "key": "MS2-L",
+    "line_id": "L-7adf1ccd0c407b61221a",
+    "note": "2F flight 1 riser: EXCLUDED",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "EXCLUDED",
+    "key": "MS2-L",
+    "line_id": "L-79beb9688604887c59c5",
+    "note": "2F flight 1 = MS2-L seen again: EXCLUDED (T-425 double count)",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "MS2-U",
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-A",
+    "line_id": "L-16e0c6682725260f28e7",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-A",
+    "line_id": "L-f24a09f1b4117814e4c8",
+    "note": "1F flight 6 riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     0.0,
+     1.38
+    ],
+    "class": "HELD",
+    "key": "RS-A",
+    "line_id": "L-5d338389185d72a6fb16",
+    "note": "1F flight 6 = RS-A seen from 1F: HELD bound (exposure, valued on GF)",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-C",
+    "line_id": "L-1e36bc3c0893eeeb9c58",
+    "note": "1F flight 1 riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-C",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     0.0,
+     4.094413
+    ],
+    "class": "HELD",
+    "key": "RS-C",
+    "line_id": "L-6cf11c2d30387d0942b9",
+    "note": "1F flight 1 = RS-C seen through the void: HELD bound (exposure)",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-C",
+    "line_id": "L-fa534ec5f9dc14947899",
+    "note": "GF-RC99C2A flight 1, curved: HELD (Q-50 A cond)",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-S",
+    "line_id": "L-099fe9fcfa5667fb8b99",
+    "note": "riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-S",
+    "line_id": "L-24792292e996c57c52d9",
+    "note": "1F flight 4 riser HELD",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "HELD",
+    "key": "RS-S",
+    "line_id": "L-2efa4a4f4cc2aad9a2f2",
+    "note": "flight 3 riser HELD (folded reading)",
+    "surface": "RISER"
+   },
+   {
+    "bound": [
+     null,
+     null
+    ],
+    "class": "EXCLUDED",
+    "key": "RS-S",
+    "line_id": "L-0ec429f1783f1f15e700",
+    "note": "GF-RC99C2A flight 3: folded into flight 2, EXCLUDED",
+    "surface": "TREAD"
+   },
+   {
+    "bound": [
+     0.0,
+     3.45
+    ],
+    "class": "HELD",
+    "key": "RS-S",
+    "line_id": "L-ea55ed317bc4de89aec1",
+    "note": "1F flight 4 = RS-S seen from 1F: HELD bound (exposure, valued on GF)",
+    "surface": "TREAD"
+   }
+  ],
+  "lines": [
+   {
+    "class": "RELEASED",
+    "element_id": "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing#MATERIAL:FIN_MARBLE_LANDING",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.LANDING",
+    "key": "1F-ARR",
+    "line_id": "L-8011889d84788553a6b1",
+    "net": 4.9225,
+    "note": "1F arrival landing (Q-66 B; T-493 4.875 - 0.010 + 0.0575)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "2F-R4D1B62:landings",
+    "held_high": 9.225001,
+    "held_low": 0.0,
+    "item_code": "FIN.MARBLE.LANDING",
+    "key": "2F-BOUND",
+    "line_id": "L-5d2be30dd8d2ffeacc42",
+    "net": null,
+    "note": "2F bound 0 .. 9.225: holds 2F-ARR 4.865 + MS2-LD 2.9325 (T-493)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "D1",
+    "line_id": "L-8938aa3b25bf605e4b9d",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-R31F8AE:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "D1",
+    "line_id": "L-a4aeb32035d11684f1a2",
+    "net": 1.035,
+    "note": "GF-R31F8AE flight 2"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-COURT#E1-RISERS",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "E1",
+    "line_id": "L-0afa7bd369ec489ebfc2",
+    "net": 1.96,
+    "note": "GF-COURT E1 risers"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-COURT#E1-TREADS",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "E1",
+    "line_id": "L-314c3ac6d45431b687c5",
+    "net": 3.3594,
+    "note": "GF-COURT E1 treads (polygon; printed 4 x 0.30 x 2.80)"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-COURT#E1-LANDING",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.LANDING",
+    "key": "E1-LD",
+    "line_id": "L-3dd82a576dce1beb4250",
+    "net": 5.1794,
+    "note": "GF-COURT E1 landing (polygon; printed 1.40 x 3.70)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:landings",
+    "held_high": 2.9225,
+    "held_low": 0.0,
+    "item_code": "FIN.MARBLE.LANDING",
+    "key": "GF-BOUND",
+    "line_id": "L-1983e89d8b619eade1db",
+    "net": null,
+    "note": "GF stair-room bound 0 .. 2.9225: holds no landing (T-493: treads, winders, divider, strip)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-R31F8AE:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS1-L",
+    "line_id": "L-ecc450d6cc865617f8f6",
+    "net": null,
+    "note": "riser HELD (count convention; A-A 10)"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-R31F8AE:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS1-L",
+    "line_id": "L-151d92470a81dd1c450b",
+    "net": 3.105,
+    "note": "GF-R31F8AE flight 1 (T-425 9 treads)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS1-T",
+    "line_id": "L-820baecf7f726b4d8f1e",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 5",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS1-T",
+    "line_id": "L-b4660de0ddd98ad0ffc2",
+    "net": null,
+    "note": "1F flight 5 = the winder turn seen through (T-425): HELD (S-9)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 3",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS1-U",
+    "line_id": "L-07e0855f961a839c1277",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "1F-R78C367:flight 3",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS1-U",
+    "line_id": "L-e1eb8b9a7cb92508ccc9",
+    "net": 3.795,
+    "note": "1F flight 3 (T-425 11 treads)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS2-L",
+    "line_id": "L-0f060e9951c28c4cf074",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "2F-R4D1B62:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS2-L",
+    "line_id": "L-7adf1ccd0c407b61221a",
+    "net": null,
+    "note": "2F flight 1 riser: EXCLUDED"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "1F-R78C367:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS2-L",
+    "line_id": "L-65806b4d02d476603bc5",
+    "net": 3.795,
+    "note": "1F flight 2"
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "2F-R4D1B62:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS2-L",
+    "line_id": "L-79beb9688604887c59c5",
+    "net": null,
+    "note": "2F flight 1 = MS2-L seen again: EXCLUDED (T-425 double count)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "2F-R4D1B62:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "MS2-U",
+    "line_id": "L-12f56cbfe750f8b30c41",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "2F-R4D1B62:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "MS2-U",
+    "line_id": "L-07f00d5b0c4e1924aaf5",
+    "net": 3.45,
+    "note": "2F flight 2 (10 treads; 11th going not drawn, HELD beside 0.345)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 4",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-A",
+    "line_id": "L-16e0c6682725260f28e7",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-A",
+    "line_id": "L-f24a09f1b4117814e4c8",
+    "net": null,
+    "note": "1F flight 6 riser HELD"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-RC99C2A:flight 4",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-A",
+    "line_id": "L-1dac5d9b574d7608d80d",
+    "net": 1.38,
+    "note": "GF-RC99C2A flight 4 (T-425 4 treads)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 6",
+    "held_high": 1.38,
+    "held_low": 0.0,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-A",
+    "line_id": "L-5d338389185d72a6fb16",
+    "net": null,
+    "note": "1F flight 6 = RS-A seen from 1F: HELD bound (exposure, valued on GF)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-C",
+    "line_id": "L-1e36bc3c0893eeeb9c58",
+    "net": null,
+    "note": "1F flight 1 riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-C",
+    "line_id": "L-913cda8eb6d73f6e28cc",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 1",
+    "held_high": 4.094413,
+    "held_low": 0.0,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-C",
+    "line_id": "L-6cf11c2d30387d0942b9",
+    "net": null,
+    "note": "1F flight 1 = RS-C seen through the void: HELD bound (exposure)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 1",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-C",
+    "line_id": "L-fa534ec5f9dc14947899",
+    "net": null,
+    "note": "GF-RC99C2A flight 1, curved: HELD (Q-50 A cond)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-S",
+    "line_id": "L-099fe9fcfa5667fb8b99",
+    "net": null,
+    "note": "riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-S",
+    "line_id": "L-24792292e996c57c52d9",
+    "net": null,
+    "note": "1F flight 4 riser HELD"
+   },
+   {
+    "class": "HELD",
+    "element_id": "GF-RC99C2A:flight 3",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.RISER",
+    "key": "RS-S",
+    "line_id": "L-2efa4a4f4cc2aad9a2f2",
+    "net": null,
+    "note": "flight 3 riser HELD (folded reading)"
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RC99C2A:flight 3",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-S",
+    "line_id": "L-0ec429f1783f1f15e700",
+    "net": null,
+    "note": "GF-RC99C2A flight 3: folded into flight 2, EXCLUDED"
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "GF-RC99C2A:flight 2",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-S",
+    "line_id": "L-89c84fdd4964dec8a323",
+    "net": 3.45,
+    "note": "GF-RC99C2A flight 2 (T-425 10 treads)"
+   },
+   {
+    "class": "HELD",
+    "element_id": "1F-R78C367:flight 4",
+    "held_high": 3.45,
+    "held_low": 0.0,
+    "item_code": "FIN.MARBLE.TREAD",
+    "key": "RS-S",
+    "line_id": "L-ea55ed317bc4de89aec1",
+    "net": null,
+    "note": "1F flight 4 = RS-S seen from 1F: HELD bound (exposure, valued on GF)"
+   }
+  ],
+  "totals": {
+   "by_surface": {
+    "LANDING": 10.1019,
+    "RISER": 1.96,
+    "TREAD": 23.3694
+   },
+   "determinate_m2": 35.4313,
+   "held": [
+    {
+     "beside": 9.225001,
+     "key": "2F-BOUND#L-5d2be30dd8d2ffeacc42",
+     "reason": "candidate line HELD: 2F bound 0 .. 9.225: holds 2F-ARR 4.865 + MS2-LD 2.9325 (T-493)",
+     "surface": "LANDING"
+    },
+    {
+     "beside": null,
+     "key": "D1#L-8938aa3b25bf605e4b9d",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": 2.9225,
+     "key": "GF-BOUND#L-1983e89d8b619eade1db",
+     "reason": "candidate line HELD: GF stair-room bound 0 .. 2.9225: holds no landing (T-493: treads, winders, divider, strip)",
+     "surface": "LANDING"
+    },
+    {
+     "beside": null,
+     "key": "MS1-L#L-ecc450d6cc865617f8f6",
+     "reason": "candidate line HELD: riser HELD (count convention; A-A 10)",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "MS1-T#L-820baecf7f726b4d8f1e",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "MS1-T#L-b4660de0ddd98ad0ffc2",
+     "reason": "candidate line HELD: 1F flight 5 = the winder turn seen through (T-425): HELD (S-9)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "MS1-U#L-07e0855f961a839c1277",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "MS2-L#L-0f060e9951c28c4cf074",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "MS2-U#L-12f56cbfe750f8b30c41",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "RS-A#L-16e0c6682725260f28e7",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "RS-A#L-f24a09f1b4117814e4c8",
+     "reason": "candidate line HELD: 1F flight 6 riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.38,
+     "key": "RS-A#L-5d338389185d72a6fb16",
+     "reason": "candidate line HELD: 1F flight 6 = RS-A seen from 1F: HELD bound (exposure, valued on GF)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "RS-C#L-1e36bc3c0893eeeb9c58",
+     "reason": "candidate line HELD: 1F flight 1 riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "RS-C#L-913cda8eb6d73f6e28cc",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": 4.094413,
+     "key": "RS-C#L-6cf11c2d30387d0942b9",
+     "reason": "candidate line HELD: 1F flight 1 = RS-C seen through the void: HELD bound (exposure)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "RS-C#L-fa534ec5f9dc14947899",
+     "reason": "candidate line HELD: GF-RC99C2A flight 1, curved: HELD (Q-50 A cond)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "RS-S#L-099fe9fcfa5667fb8b99",
+     "reason": "candidate line HELD: riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "RS-S#L-24792292e996c57c52d9",
+     "reason": "candidate line HELD: 1F flight 4 riser HELD",
+     "surface": "RISER"
+    },
+    {
+     "beside": null,
+     "key": "RS-S#L-2efa4a4f4cc2aad9a2f2",
+     "reason": "candidate line HELD: flight 3 riser HELD (folded reading)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 3.45,
+     "key": "RS-S#L-ea55ed317bc4de89aec1",
+     "reason": "candidate line HELD: 1F flight 4 = RS-S seen from 1F: HELD bound (exposure, valued on GF)",
+     "surface": "TREAD"
+    }
+   ],
+   "print": "AT_LEAST 35.4313 m2 + HELD (20 parts)",
+   "state": "PARTIAL"
+  }
+ },
+ "C_drawing": {
+  "bed_with_q45_riser_source": {
+   "by_surface": {
+    "LANDING": 20.69,
+    "RISER": 12.29861,
+    "TREAD": 23.37
+   },
+   "determinate_m2": 56.35861,
+   "held": [
+    {
+     "beside": 1.495,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.1587,
+     "key": "MS2-TR#held-risers",
+     "reason": "CLOSING_RISER_POSITION_HELD (A-A has it; plans: 12B4 / 12B5 at x 1.25 vs the 2F diagonal pair, Q-ST-11; T-412 / T-493)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.345,
+     "key": "MS2-U#held-treads",
+     "reason": "TREAD_GOING_NOT_DRAWN (11th front 1386 drawn, its rear = the 2F floor edge on no sheet; T-425)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 4.094413,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 1.803857,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 4.805,
+     "key": "GF-HALL",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    },
+    {
+     "beside": 1.3225,
+     "key": "GF-LOBBY",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    }
+   ],
+   "print": "AT_LEAST 56.3586 m2 + HELD (8 parts)",
+   "state": "PARTIAL"
+  },
+  "bed_without_riser_source": {
+   "by_surface": {
+    "LANDING": 20.69,
+    "RISER": 0.0,
+    "TREAD": 23.37
+   },
+   "determinate_m2": 44.06,
+   "held": [
+    {
+     "beside": 1.571667,
+     "key": "MS1-L",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.495,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.886,
+     "key": "MS1-U",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.9044,
+     "key": "MS2-L",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.1587,
+     "key": "MS2-TR#held-risers",
+     "reason": "CLOSING_RISER_POSITION_HELD (A-A has it; plans: 12B4 / 12B5 at x 1.25 vs the 2F diagonal pair, Q-ST-11; T-412 / T-493)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.345,
+     "key": "MS2-U#held-treads",
+     "reason": "TREAD_GOING_NOT_DRAWN (11th front 1386 drawn, its rear = the 2F floor edge on no sheet; T-425)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 1.9044,
+     "key": "MS2-U",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.667,
+     "key": "D1",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.96,
+     "key": "E1",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 4.094413,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 1.803857,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 1.653536,
+     "key": "RS-S",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.751607,
+     "key": "RS-A",
+     "reason": "RISER_BED_SOURCE_NOT_GIVEN (riser marble measured; its backing is not in the stair bed without a named source)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 4.805,
+     "key": "GF-HALL",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    },
+    {
+     "beside": 1.3225,
+     "key": "GF-LOBBY",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    }
+   ],
+   "print": "AT_LEAST 44.0600 m2 + HELD (16 parts)",
+   "state": "PARTIAL"
+  },
+  "marble": {
+   "by_surface": {
+    "LANDING": 20.69,
+    "RISER": 12.29861,
+    "TREAD": 23.37
+   },
+   "determinate_m2": 56.35861,
+   "held": [
+    {
+     "beside": 1.495,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": null,
+     "key": "MS1-T",
+     "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.1587,
+     "key": "MS2-TR#held-risers",
+     "reason": "CLOSING_RISER_POSITION_HELD (A-A has it; plans: 12B4 / 12B5 at x 1.25 vs the 2F diagonal pair, Q-ST-11; T-412 / T-493)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 0.345,
+     "key": "MS2-U#held-treads",
+     "reason": "TREAD_GOING_NOT_DRAWN (11th front 1386 drawn, its rear = the 2F floor edge on no sheet; T-425)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 4.094413,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "TREAD"
+    },
+    {
+     "beside": 1.803857,
+     "key": "RS-C",
+     "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+     "surface": "RISER"
+    },
+    {
+     "beside": 4.805,
+     "key": "GF-HALL",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    },
+    {
+     "beside": 1.3225,
+     "key": "GF-LOBBY",
+     "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+     "surface": "LANDING"
+    }
+   ],
+   "print": "AT_LEAST 56.3586 m2 + HELD (8 parts)",
+   "state": "PARTIAL"
+  },
+  "parts": [
+   {
+    "basis": "9 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 9,
+     "w": 1.15
+    },
+    "key": "MS1-L",
+    "m2": 3.105,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "10 risers x 1.15 x (0.166667 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.13666666666666666,
+     "n": 10,
+     "w": 1.15
+    },
+    "key": "MS1-L",
+    "m2": 1.571667,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "flight held",
+    "beside": 1.495,
+    "components": null,
+    "key": "MS1-T",
+    "m2": null,
+    "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+    "status": "HELD",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "flight held",
+    "beside": null,
+    "components": null,
+    "key": "MS1-T",
+    "m2": null,
+    "reason": "WINDER_TURN_HELD (owner S-9: never generate winders; A-A 5 risers vs plans 4 wedges, C-ST-3 / Q-51 A cond)",
+    "status": "HELD",
+    "surface": "RISER"
+   },
+   {
+    "basis": "11 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 11,
+     "w": 1.15
+    },
+    "key": "MS1-U",
+    "m2": 3.795,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "12 risers x 1.15 x (0.166667 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.13666666666666666,
+     "n": 12,
+     "w": 1.15
+    },
+    "key": "MS1-U",
+    "m2": 1.886,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "11 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 11,
+     "w": 1.15
+    },
+    "key": "MS2-L",
+    "m2": 3.795,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "12 risers x 1.15 x (0.168 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.138,
+     "n": 12,
+     "w": 1.15
+    },
+    "key": "MS2-L",
+    "m2": 1.9044,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "1 riser(s) with no drawn position",
+    "beside": 0.1587,
+    "components": null,
+    "key": "MS2-TR#held-risers",
+    "m2": null,
+    "reason": "CLOSING_RISER_POSITION_HELD (A-A has it; plans: 12B4 / 12B5 at x 1.25 vs the 2F diagonal pair, Q-ST-11; T-412 / T-493)",
+    "status": "HELD",
+    "surface": "RISER"
+   },
+   {
+    "basis": "10 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 10,
+     "w": 1.15
+    },
+    "key": "MS2-U",
+    "m2": 3.45,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "1 tread(s) with no drawn going",
+    "beside": 0.345,
+    "components": null,
+    "key": "MS2-U#held-treads",
+    "m2": null,
+    "reason": "TREAD_GOING_NOT_DRAWN (11th front 1386 drawn, its rear = the 2F floor edge on no sheet; T-425)",
+    "status": "HELD",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "12 risers x 1.15 x (0.168 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.138,
+     "n": 12,
+     "w": 1.15
+    },
+    "key": "MS2-U",
+    "m2": 1.9044,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "3 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 3,
+     "w": 1.15
+    },
+    "key": "D1",
+    "m2": 1.035,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "4 risers x 1.15 x (0.175 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.145,
+     "n": 4,
+     "w": 1.15
+    },
+    "key": "D1",
+    "m2": 0.667,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "4 treads x 0.3 going x 2.8 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 4,
+     "w": 2.8
+    },
+    "key": "E1",
+    "m2": 3.36,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "5 risers x 2.8 x (0.17 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.13999999999999999,
+     "n": 5,
+     "w": 2.8
+    },
+    "key": "E1",
+    "m2": 1.96,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "flight held",
+    "beside": 4.094413,
+    "components": null,
+    "key": "RS-C",
+    "m2": null,
+    "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+    "status": "HELD",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "flight held",
+    "beside": 1.803857,
+    "components": null,
+    "key": "RS-C",
+    "m2": null,
+    "reason": "CURVED_PART_HELD (Q-50 A cond: curved part HELD; RFI-S27)",
+    "status": "HELD",
+    "surface": "RISER"
+   },
+   {
+    "basis": "10 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 10,
+     "w": 1.15
+    },
+    "key": "RS-S",
+    "m2": 3.45,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "11 risers x 1.15 x (0.160714 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.13071428571428573,
+     "n": 11,
+     "w": 1.15
+    },
+    "key": "RS-S",
+    "m2": 1.653536,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "4 treads x 0.3 going x 1.15 width",
+    "beside": null,
+    "components": {
+     "d": 0.3,
+     "n": 4,
+     "w": 1.15
+    },
+    "key": "RS-A",
+    "m2": 1.38,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "TREAD"
+   },
+   {
+    "basis": "5 risers x 1.15 x (0.160714 rise - 0.03 tread marble) (UP-STAIR-003)",
+    "beside": null,
+    "components": {
+     "d": 0.13071428571428573,
+     "n": 5,
+     "w": 1.15
+    },
+    "key": "RS-A",
+    "m2": 0.751607,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "RISER"
+   },
+   {
+    "basis": "1.25 x 1.15",
+    "beside": null,
+    "components": {
+     "d": 1.25,
+     "n": 1,
+     "w": 1.15
+    },
+    "key": "MS1-LD",
+    "m2": 1.4375,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": null,
+    "components": null,
+    "key": "1F-ARR",
+    "m2": 4.9225,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": null,
+    "components": null,
+    "key": "MS2-LD",
+    "m2": 2.9325,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": null,
+    "components": null,
+    "key": "2F-ARR",
+    "m2": 4.865,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": null,
+    "components": null,
+    "key": "RS-LD",
+    "m2": 1.3525,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "1.4 x 3.7",
+    "beside": null,
+    "components": {
+     "d": 1.4,
+     "n": 1,
+     "w": 3.7
+    },
+    "key": "E1-LD",
+    "m2": 5.18,
+    "reason": null,
+    "status": "CALCULATED",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": 4.805,
+    "components": null,
+    "key": "GF-HALL",
+    "m2": null,
+    "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+    "status": "HELD",
+    "surface": "LANDING"
+   },
+   {
+    "basis": "area given",
+    "beside": 1.3225,
+    "components": null,
+    "key": "GF-LOBBY",
+    "m2": null,
+    "reason": "MATERIAL_HELD: FLOOR_OR_LANDING, no finish source (R-T490-1, RFI-B-A12)",
+    "status": "HELD",
+    "surface": "LANDING"
+   }
+  ]
+ },
+ "cause_meaning": {
+  "LANDING": {
+   "COUNT": "-",
+   "DEPTH_OR_HEIGHT": "printed landing depth vs drawn polygon (T-493 nosing / strip convention)",
+   "WIDTH": "printed landing width vs drawn polygon"
+  },
+  "RISER": {
+   "COUNT": "riser count",
+   "DEPTH_OR_HEIGHT": "full rise (T-086) vs visible riser = rise - 0.030 tread marble (UP-STAIR-003 / 006)",
+   "WIDTH": "printed 1.20 vs drawn 1.150"
+  },
+  "TREAD": {
+   "COUNT": "one tread per riser (T-086) vs the drawn tread fronts (the riser onto a landing / floor has no tread; MS2-U 11th going not drawn)",
+   "DEPTH_OR_HEIGHT": "going",
+   "WIDTH": "printed stair width 1.20 vs the drawn front edge 1.150 (T-412 / T-425 ENGINE_RIGHT)"
+  }
+ },
+ "constants": {
+  "riser_bed_source": "Q-45 answer B (owner 2026-10-19 21:40): item 1 asked 'marble stairs (treads, risers) __ cm'; stairs 3 cm, 1:3 accepted; Q-53 C keeps 'treads, risers, landings' in the stair bed scope",
+  "rises": {
+   "D1": [
+    0.175,
+    "+0.30 -> +1.00 = 0.70 / 4 risers (GF plan)"
+   ],
+   "E1": [
+    0.17,
+    "+0.15 -> +1.00 = 0.85 / 5 risers (GF plan)"
+   ],
+   "MS1": [
+    0.166666667,
+    "GF +1.00 -> 1F +5.50 = 4.50 / 27 risers (MS1-L 10 + MS1-T 5 + MS1-U 12, A-A)"
+   ],
+   "MS2": [
+    0.168,
+    "1F +5.50 -> 2F +9.70 = 4.20 / 25 risers (MS2-L 12 + MS2-TR 1 + MS2-U 12, A-A)"
+   ],
+   "RS": [
+    0.160714286,
+    "+1.00 -> +5.50 = 4.50 / 28 risers (12 + 11 + 5, Q-50 A cond, reconstructed, no section)"
+   ]
+  },
+  "tread_marble_t_m": 0.03,
+  "tread_t_source": "UP-STAIR-006 1.0.0 DEFAULT"
+ },
+ "flight_table": [
+  {
+   "A_q53_t086": null,
+   "B_candidate": {
+    "LANDING": 4.9225,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 4.9225
+   },
+   "C_drawing": {
+    "LANDING": 4.9225,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 4.9225
+   },
+   "flight": "1F-ARR"
+  },
+  {
+   "A_q53_t086": null,
+   "B_candidate": null,
+   "C_drawing": {
+    "LANDING": 4.865,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 4.865
+   },
+   "flight": "2F-ARR"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 0.84,
+    "TREAD": 1.44,
+    "sum": 2.28
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 1.035,
+    "sum": 1.035
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 0.667,
+    "TREAD": 1.035,
+    "sum": 1.702
+   },
+   "flight": "D1"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 2.38,
+    "TREAD": 4.2,
+    "sum": 6.58
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 1.96,
+    "TREAD": 3.3594,
+    "sum": 5.3194
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.96,
+    "TREAD": 3.36,
+    "sum": 5.32
+   },
+   "flight": "E1"
+  },
+  {
+   "A_q53_t086": null,
+   "B_candidate": {
+    "LANDING": 5.1794,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 5.1794
+   },
+   "C_drawing": {
+    "LANDING": 5.18,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 5.18
+   },
+   "flight": "E1-LD"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 2.0,
+    "TREAD": 3.6,
+    "sum": 5.6
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 3.105,
+    "sum": 3.105
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.571667,
+    "TREAD": 3.105,
+    "sum": 4.676667
+   },
+   "flight": "MS1-L"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 1.5,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 1.5
+   },
+   "B_candidate": null,
+   "C_drawing": {
+    "LANDING": 1.4375,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 1.4375
+   },
+   "flight": "MS1-LD"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 2.4,
+    "TREAD": 4.32,
+    "sum": 6.72
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 3.795,
+    "sum": 3.795
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.886,
+    "TREAD": 3.795,
+    "sum": 5.681
+   },
+   "flight": "MS1-U"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 2.4192,
+    "TREAD": 4.32,
+    "sum": 6.7392
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 3.795,
+    "sum": 3.795
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.9044,
+    "TREAD": 3.795,
+    "sum": 5.6994
+   },
+   "flight": "MS2-L"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 3.125,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 3.125
+   },
+   "B_candidate": null,
+   "C_drawing": {
+    "LANDING": 2.9325,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 2.9325
+   },
+   "flight": "MS2-LD"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 0.2016,
+    "TREAD": 0.0,
+    "sum": 0.2016
+   },
+   "B_candidate": null,
+   "C_drawing": null,
+   "flight": "MS2-TR"
+  },
+  {
+   "A_q53_t086": {
+    "LANDING": 0.0,
+    "RISER": 2.4192,
+    "TREAD": 4.32,
+    "sum": 6.7392
+   },
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 3.45,
+    "sum": 3.45
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.9044,
+    "TREAD": 3.45,
+    "sum": 5.3544
+   },
+   "flight": "MS2-U"
+  },
+  {
+   "A_q53_t086": null,
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 1.38,
+    "sum": 1.38
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 0.751607,
+    "TREAD": 1.38,
+    "sum": 2.131607
+   },
+   "flight": "RS-A"
+  },
+  {
+   "A_q53_t086": null,
+   "B_candidate": null,
+   "C_drawing": {
+    "LANDING": 1.3525,
+    "RISER": 0.0,
+    "TREAD": 0.0,
+    "sum": 1.3525
+   },
+   "flight": "RS-LD"
+  },
+  {
+   "A_q53_t086": null,
+   "B_candidate": {
+    "LANDING": 0.0,
+    "RISER": 0.0,
+    "TREAD": 3.45,
+    "sum": 3.45
+   },
+   "C_drawing": {
+    "LANDING": 0.0,
+    "RISER": 1.653536,
+    "TREAD": 3.45,
+    "sum": 5.103536
+   },
+   "flight": "RS-S"
+  }
+ ],
+ "guard_class": "UNWIRED_RESEARCH",
+ "inputs": {
+  "candidate": "ARCH_TAKEOFF_V3.0.57",
+  "candidate_of_record_note": "V3.0.58 (T-507) adds FIN.WP.ROOF lines only: stair lines = V3.0.57",
+  "line_index_v3_0_57": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+  "t086_csv": "148d27f909f7038374e2ee1ea9e7ed62f2a5ed320223828e6b8d4d7db93d5e91"
+ },
+ "reconcile": {
+  "A_to_B": {
+   "a_m2": 39.485,
+   "b_m2": 35.4313,
+   "by_cause": {
+    "COUNT": -3.0,
+    "DEPTH_OR_HEIGHT": -0.42,
+    "POLYGON": -0.0006,
+    "SCOPE": 0.0269,
+    "WIDTH": -0.66
+   },
+   "diff_m2": -4.0537,
+   "rows": [
+    {
+     "a_m2": 0.0,
+     "b_m2": 4.9225,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 4.9225,
+       "note": "Q-66 B (answered 16:23 after T-086): landing marble, own element; Q-66 text: stair marble 39.49 + 4.875 = 44.365 m2"
+      }
+     ],
+     "diff_m2": 4.9225,
+     "key": "1F-ARR",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.84,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -0.84,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": -0.84,
+     "key": "D1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 1.44,
+     "b_m2": 1.035,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.045,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.405,
+     "key": "D1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 2.38,
+     "b_m2": 1.96,
+     "causes": [
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.42,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.42,
+     "key": "E1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.2,
+     "b_m2": 3.3594,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.84,
+       "note": null
+      },
+      {
+       "cause": "POLYGON",
+       "m2": -0.0006,
+       "note": "candidate polygon 3.3594 vs printed 4 x 0.30 x 2.80 = 3.3600 (T-425 s.3.2 AGREE)"
+      }
+     ],
+     "diff_m2": -0.8406,
+     "key": "E1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 5.1794,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 5.1794,
+       "note": "T-086 carried no entrance landing (top E1 step counted as a 5th tread instead)"
+      }
+     ],
+     "diff_m2": 5.1794,
+     "key": "E1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 2.0,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -2.0,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": -2.0,
+     "key": "MS1-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.6,
+     "b_m2": 3.105,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.135,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.495,
+     "key": "MS1-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 1.5,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -1.5,
+       "note": "no candidate line (T-493 F-3: silent omission; the GF partition counts the +0.30 lobby under it); T-502 queued"
+      }
+     ],
+     "diff_m2": -1.5,
+     "key": "MS1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 2.4,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -2.4,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": -2.4,
+     "key": "MS1-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.795,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.165,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.525,
+     "key": "MS1-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 2.4192,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -2.4192,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": -2.4192,
+     "key": "MS2-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.795,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.165,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.525,
+     "key": "MS2-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 3.125,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -3.125,
+       "note": "only inside the HELD bound L-5d2be30d (T-493 F-4); T-502 queued"
+      }
+     ],
+     "diff_m2": -3.125,
+     "key": "MS2-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.2016,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -0.2016,
+       "note": "candidate has no closing-riser line (inside MS2-L riser lines, HELD); position HELD"
+      }
+     ],
+     "diff_m2": -0.2016,
+     "key": "MS2-TR",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 2.4192,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -2.4192,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": -2.4192,
+     "key": "MS2-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.45,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.72,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.15,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.87,
+     "key": "MS2-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.38,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.38,
+       "note": "as RS-S"
+      }
+     ],
+     "diff_m2": 1.38,
+     "key": "RS-A",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 3.45,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 3.45,
+       "note": "T-086 held the round stair (Q-50 open then); Q-50 A cond: straight flights CALCULATED, valued by T-425 / T-429"
+      }
+     ],
+     "diff_m2": 3.45,
+     "key": "RS-S",
+     "surface": "TREAD"
+    }
+   ],
+   "unexplained_m2": 0.0
+  },
+  "A_to_C": {
+   "a_m2": 39.485,
+   "b_m2": 56.35861,
+   "by_cause": {
+    "COUNT": -3.0,
+    "DEPTH_OR_HEIGHT": -2.0875,
+    "POLYGON": -0.1925,
+    "SCOPE": 23.353543,
+    "WIDTH": -1.199933
+   },
+   "diff_m2": 16.87361,
+   "rows": [
+    {
+     "a_m2": 0.0,
+     "b_m2": 4.9225,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 4.9225,
+       "note": "Q-66 B (answered 16:23 after T-086): landing marble, own element; Q-66 text: stair marble 39.49 + 4.875 = 44.365 m2"
+      }
+     ],
+     "diff_m2": 4.9225,
+     "key": "1F-ARR",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 4.865,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 4.865,
+       "note": "only inside the HELD bound L-5d2be30d (T-493 F-1); T-502 queued"
+      }
+     ],
+     "diff_m2": 4.865,
+     "key": "2F-ARR",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.84,
+     "b_m2": 0.667,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.035,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.138,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.173,
+     "key": "D1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 1.44,
+     "b_m2": 1.035,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.045,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.405,
+     "key": "D1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 2.38,
+     "b_m2": 1.96,
+     "causes": [
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.42,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.42,
+     "key": "E1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.2,
+     "b_m2": 3.36,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.84,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.84,
+     "key": "E1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 5.18,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 5.18,
+       "note": "T-086 carried no entrance landing (top E1 step counted as a 5th tread instead)"
+      }
+     ],
+     "diff_m2": 5.18,
+     "key": "E1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 2.0,
+     "b_m2": 1.571667,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.083333,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.345,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.428333,
+     "key": "MS1-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.6,
+     "b_m2": 3.105,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.135,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.495,
+     "key": "MS1-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 1.5,
+     "b_m2": 1.4375,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.12,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": 0.0575,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.0625,
+     "key": "MS1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 2.4,
+     "b_m2": 1.886,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.1,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.414,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.514,
+     "key": "MS1-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.795,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.165,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.525,
+     "key": "MS1-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 2.4192,
+     "b_m2": 1.9044,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.1008,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.414,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.5148,
+     "key": "MS2-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.795,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.36,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.165,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.525,
+     "key": "MS2-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 3.125,
+     "b_m2": 2.9325,
+     "causes": [
+      {
+       "cause": "POLYGON",
+       "m2": -0.1925,
+       "note": "T-086 printed 2.50 x 1.25 = 3.1250 vs T-493 drawn halves W 1.25 x 1.196 = 1.4950 + E 1.25 x 1.15 = 1.4375: the landing ends at the arriving nosings A97 (y 3.80) / 135B (y 3.85), not 1.25 from the wall"
+      }
+     ],
+     "diff_m2": -0.1925,
+     "key": "MS2-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.2016,
+     "b_m2": 0.0,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": -0.2016,
+       "note": "T-086 counted the closing riser in MS2-L (13); drawing: position HELD"
+      }
+     ],
+     "diff_m2": -0.2016,
+     "key": "MS2-TR",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 2.4192,
+     "b_m2": 1.9044,
+     "causes": [
+      {
+       "cause": "WIDTH",
+       "m2": -0.1008,
+       "note": null
+      },
+      {
+       "cause": "DEPTH_OR_HEIGHT",
+       "m2": -0.414,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.5148,
+     "key": "MS2-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 4.32,
+     "b_m2": 3.45,
+     "causes": [
+      {
+       "cause": "COUNT",
+       "m2": -0.72,
+       "note": null
+      },
+      {
+       "cause": "WIDTH",
+       "m2": -0.15,
+       "note": null
+      }
+     ],
+     "diff_m2": -0.87,
+     "key": "MS2-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 0.751607,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 0.751607,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 0.751607,
+     "key": "RS-A",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.38,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.38,
+       "note": "as RS-S"
+      }
+     ],
+     "diff_m2": 1.38,
+     "key": "RS-A",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.3525,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.3525,
+       "note": "no candidate line (T-493 F-2; deducted from 1F porcelain as R04); T-502 queued"
+      }
+     ],
+     "diff_m2": 1.3525,
+     "key": "RS-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.653536,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.653536,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.653536,
+     "key": "RS-S",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 3.45,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 3.45,
+       "note": "T-086 held the round stair (Q-50 open then); Q-50 A cond: straight flights CALCULATED, valued by T-425 / T-429"
+      }
+     ],
+     "diff_m2": 3.45,
+     "key": "RS-S",
+     "surface": "TREAD"
+    }
+   ],
+   "unexplained_m2": 0.0
+  },
+  "B_to_C": {
+   "a_m2": 35.4313,
+   "b_m2": 56.35861,
+   "by_cause": {
+    "POLYGON": 0.0012,
+    "SCOPE": 20.92611
+   },
+   "diff_m2": 20.92731,
+   "rows": [
+    {
+     "a_m2": 4.9225,
+     "b_m2": 4.9225,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "1F-ARR",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 4.865,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 4.865,
+       "note": "only inside the HELD bound L-5d2be30d (T-493 F-1); T-502 queued"
+      }
+     ],
+     "diff_m2": 4.865,
+     "key": "2F-ARR",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 0.667,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 0.667,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 0.667,
+     "key": "D1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 1.035,
+     "b_m2": 1.035,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "D1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 1.96,
+     "b_m2": 1.96,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "E1",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.3594,
+     "b_m2": 3.36,
+     "causes": [
+      {
+       "cause": "POLYGON",
+       "m2": 0.0006,
+       "note": "candidate polygon 3.3594 vs printed 4 x 0.30 x 2.80 = 3.3600 (T-425 s.3.2 AGREE)"
+      }
+     ],
+     "diff_m2": 0.0006,
+     "key": "E1",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 5.1794,
+     "b_m2": 5.18,
+     "causes": [
+      {
+       "cause": "POLYGON",
+       "m2": 0.0006,
+       "note": "candidate polygon 5.1794 vs printed 1.40 x 3.70 = 5.1800 (T-490 AGREE)"
+      }
+     ],
+     "diff_m2": 0.0006,
+     "key": "E1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.571667,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.571667,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.571667,
+     "key": "MS1-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.105,
+     "b_m2": 3.105,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "MS1-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.4375,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.4375,
+       "note": "no candidate line (T-493 F-3: silent omission; the GF partition counts the +0.30 lobby under it); T-502 queued"
+      }
+     ],
+     "diff_m2": 1.4375,
+     "key": "MS1-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.886,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.886,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.886,
+     "key": "MS1-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.795,
+     "b_m2": 3.795,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "MS1-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.9044,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.9044,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.9044,
+     "key": "MS2-L",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.795,
+     "b_m2": 3.795,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "MS2-L",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 2.9325,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 2.9325,
+       "note": "only inside the HELD bound L-5d2be30d (T-493 F-4); T-502 queued"
+      }
+     ],
+     "diff_m2": 2.9325,
+     "key": "MS2-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.9044,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.9044,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.9044,
+     "key": "MS2-U",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.45,
+     "b_m2": 3.45,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "MS2-U",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 0.751607,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 0.751607,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 0.751607,
+     "key": "RS-A",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 1.38,
+     "b_m2": 1.38,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "RS-A",
+     "surface": "TREAD"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.3525,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.3525,
+       "note": "no candidate line (T-493 F-2; deducted from 1F porcelain as R04); T-502 queued"
+      }
+     ],
+     "diff_m2": 1.3525,
+     "key": "RS-LD",
+     "surface": "LANDING"
+    },
+    {
+     "a_m2": 0.0,
+     "b_m2": 1.653536,
+     "causes": [
+      {
+       "cause": "SCOPE",
+       "m2": 1.653536,
+       "note": "candidate riser line HELD (STAIR_RISER_COUNT_CONVENTION / RISER_NOT_ESTABLISHED in arch_measure); counts since settled by T-412 (A-A / plans), not integrated"
+      }
+     ],
+     "diff_m2": 1.653536,
+     "key": "RS-S",
+     "surface": "RISER"
+    },
+    {
+     "a_m2": 3.45,
+     "b_m2": 3.45,
+     "causes": [],
+     "diff_m2": 0.0,
+     "key": "RS-S",
+     "surface": "TREAD"
+    }
+   ],
+   "unexplained_m2": 0.0
+  }
+ },
+ "released_quantities_changed": 0,
+ "schema": "URBAN_T534_STAIR_BED_RECONCILE_V1",
+ "v7": {
+  "on_candidate_B": {
+   "area_m2": 35.4313,
+   "cement_bags_low": 10.178704,
+   "cement_bags_procurement_allowance": 10.62939,
+   "mortar_m3_low": 1.062939,
+   "rows": 11,
+   "rule": "UP-STAIR-017",
+   "sand_m3_low": 1.06028,
+   "sand_m3_procurement_allowance": 1.062939
+  },
+  "on_drawing_C_bed": {
+   "area_m2": 56.35861,
+   "cement_bags_low": 16.190699,
+   "cement_bags_procurement_allowance": 16.90758,
+   "mortar_m3_low": 1.690758,
+   "rows": 22,
+   "rule": "UP-STAIR-017",
+   "sand_m3_low": 1.68653,
+   "sand_m3_procurement_allowance": 1.690758
+  }
+ }
+}

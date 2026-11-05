@@ -1,0 +1,193 @@
+{
+ "density_record": {
+  "source": null,
+  "state": null,
+  "status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+  "value_t_per_m3": null
+ },
+ "failures": [],
+ "group": {
+  "group": "SAND_LOOSE",
+  "loads": null,
+  "loads_status": "HELD: SAND_LOAD_SIZE_NOT_SOURCED",
+  "m3": [
+   17.746996,
+   23.44904
+  ],
+  "m3_status": "AT_LEAST",
+  "t": null,
+  "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+  "unit": "m3 loose (owner unit, R-T540-4)",
+  "villa": "TRAINING_VILLA"
+ },
+ "inputs": {
+  "research/agents_t535/out/SAND_PROCUREMENT_T535.json": "68fa293171b77af6924e134211b89946cf75aad02ffe902bc03151310d850d90"
+ },
+ "load_record": {
+  "size": null,
+  "source": null,
+  "state": null,
+  "status": "HELD: SAND_LOAD_SIZE_NOT_SOURCED",
+  "unit": null
+ },
+ "owner_state": "LOOSE_AS_BOUGHT",
+ "released_quantities_changed": 0,
+ "rules": {
+  "R-T540-1": "tonnes = loose m3 x a SOURCED bulk density in the SAME state as the m3 (LOOSE_AS_BOUGHT); another state is refused (no unsourced bulking factor); a range converts end to end.",
+  "R-T540-2": "a load size is used in its own unit: m3 loads only from a load in the same loose state; a tonne load needs R-T540-1 first.",
+  "R-T540-3": "loads = one ceiling per COMPLETE villa group; AT_LEAST group -> tonnes AT_LEAST, loads HELD; no m3 -> HELD, never 0.",
+  "R-T540-4": "tonnes and loads beside the loose m3; the m3 stays the owner unit (R-T535-1)."
+ },
+ "schema": "URBAN_T540_SAND_LOAD_DENSITY_V1",
+ "source_census": [
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "unit = m3 of loose sand (purchasing quantity)",
+   "source": "OWNER_QUESTIONS_ANSWERED Q-45 / Q-53 / Q-78; AGENT_BRIEF OWNER CONFIRMED table"
+  },
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "sand listed only as HELD",
+   "source": "CLARIFICATIONS_SUPPLIER_2026-10-23 rows 2-3"
+  },
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "cement 1440 kg/m3 and block delivery per trip only; nothing for sand",
+   "source": "skill quantity-takeoff-rules (supplier price / pallet data, 2025)"
+  },
+  {
+   "bulk_density": "none in the readable part",
+   "load_size": "none",
+   "note": "text read stops in division 2 (earthworks, paving: soil compaction to maximum dry density); the masonry / plaster divisions are past the readable range and the file is over the download limit",
+   "source": "Drive 'Engineering Sources' / 01 Kuwait References / MPW general specification 1990"
+  },
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "owner guide and contract templates; sand only as a pool filter",
+   "source": "Drive 01 Kuwait References / KSE 'bait al-omr' 2023"
+  },
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "readable text part has no sand quantity data",
+   "source": "Drive 02 Construction Books / 'supervisor's eye'"
+  },
+  {
+   "bulk_density": "unreadable",
+   "load_size": "unreadable",
+   "note": "scanned, over the download limit (REFERENCE_SOURCES)",
+   "source": "Drive 02 Construction Books / 'finishes' and 'mistakes in construction'"
+  },
+  {
+   "bulk_density": "none for sand",
+   "load_size": "none",
+   "note": "unit weights for plain / reinforced concrete, solid brick, sand-lime brick, wet clay only",
+   "source": "Drive 04 Regional Codes / Saudi code summary 2021 (SBC 1101 Table 3-D-1)"
+  },
+  {
+   "bulk_density": "not searched in text",
+   "load_size": "not searched in text",
+   "note": "86 MB, over the download limit; no text hit for the terms",
+   "source": "Drive 04 Regional Codes / QCS 2014"
+  },
+  {
+   "bulk_density": "none",
+   "load_size": "none",
+   "note": "full-text search hits are front matter only; no material weight table",
+   "source": "Drive 03 International Codes (IBC 2009 / 2018 / 2021, IPC 2006, ACI 318)"
+  },
+  {
+   "bulk_density": "HELD",
+   "load_size": "HELD",
+   "note": "agree with the census",
+   "source": "engine FINISH V6:91 / T-523 GROUPS / T-535 SAND_RECORD"
+  }
+ ],
+ "trades": {
+  "MASONRY_LAYING": {
+   "group": "MASONRY_LAYING",
+   "loads": null,
+   "loads_status": "NOT A PURCHASING GROUP: loads only on the villa group (R-T540-3)",
+   "m3": [
+    1.396388,
+    1.396388
+   ],
+   "m3_status": "AT_LEAST",
+   "t": null,
+   "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  },
+  "OUTDOOR_BED": {
+   "group": "OUTDOOR_BED",
+   "loads": null,
+   "loads_status": "NOT A PURCHASING GROUP: loads only on the villa group (R-T540-3)",
+   "m3": [
+    0.728142,
+    0.970856
+   ],
+   "m3_status": "COMPUTED",
+   "t": null,
+   "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  },
+  "PERIMETER_JOINT": {
+   "group": "PERIMETER_JOINT",
+   "loads": null,
+   "loads_status": "NOT A PURCHASING GROUP: loads only on the villa group (R-T540-3)",
+   "m3": [
+    0.107959,
+    0.107959
+   ],
+   "m3_status": "AT_LEAST",
+   "t": null,
+   "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  },
+  "PLASTER_COATS": {
+   "group": "PLASTER_COATS",
+   "loads": null,
+   "loads_status": "HELD: no m3 (never 0)",
+   "m3": null,
+   "m3_status": "HELD",
+   "t": null,
+   "t_status": "HELD: no m3 (never 0)",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  },
+  "STONE_BED": {
+   "group": "STONE_BED",
+   "loads": null,
+   "loads_status": "NOT A PURCHASING GROUP: loads only on the villa group (R-T540-3)",
+   "m3": [
+    1.113294,
+    1.113294
+   ],
+   "m3_status": "AT_LEAST",
+   "t": null,
+   "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  },
+  "TILE_BED": {
+   "group": "TILE_BED",
+   "loads": null,
+   "loads_status": "NOT A PURCHASING GROUP: loads only on the villa group (R-T540-3)",
+   "m3": [
+    14.401213,
+    19.860543
+   ],
+   "m3_status": "COMPUTED",
+   "t": null,
+   "t_status": "HELD: SAND_BULK_DENSITY_NOT_SOURCED",
+   "unit": "m3 loose (owner unit, R-T540-4)",
+   "villa": "TRAINING_VILLA"
+  }
+ }
+}
