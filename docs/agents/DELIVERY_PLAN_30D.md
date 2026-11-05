@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 08:15; recovery plan in force)
+
+- Merged since 04:15 (all Gate A, research, no candidate line moved): T-516 lintel jamb bearing, T-517 pool-court build-up, T-518 waste factor provenance.
+- Integration streams S (T-498) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh:211 unchanged).
+- 3 empty worker runs 06:44-07:20 (no TODO left; Lead fault). Now 6 Gate A rows, 2 per lane: T-519 lintel pieces + bearing V2, T-520 perimeter joint mortar (S); T-521 FINISH V6 waste out of installed, T-522 pool-court ledge / window-run WP (A); T-523 binding V2 + purchasing-group ceiling, T-524 lintel concrete at deficit ends (I).
+- 10 Nov: HIGH RISK (about 10 Gate B packages left in 4.7 days; none can finish until the wrapper item is fixed). 12-13 Nov, 19-20 Nov, 25 Nov follow it.
+
 ## Status (Lead, 2026-11-05 04:15; recovery plan in force)
 
 - Merged since 00:15: T-515 (lintel span bars, research), T-507 (Gate B, candidate V3.0.58: pool-court slab roof WP), T-514 (screed / threshold / outdoor bed producers, research). Sent back: T-423 r1 (3 L4 test fixes, engineering AGREE).

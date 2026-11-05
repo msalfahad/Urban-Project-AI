@@ -1,3 +1,17 @@
+## LEAD REPORT 2026-11-04 20:15 UTC
+
+Drive read OK (no file created in the project folders since 16:00, no photo task). Training villa: candidate of record now V3.0.56 4e25c54f (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Blockwork (stream S Gate B PASS, every moved wall by hand AGREE): MAS.BLOCK 579.1011 -> 467.7925 m2 (-19.2 %), volume 104.469 -> 84.630 m3; 8 roof-storey walls 98.3775 m2 HELD on the roof datum (D-39), GF-W22 CONFLICT 12.9311 .. 12.9439 m2 (D-27). No freelancer like-for-like until D-39 settles.
+- Stair skirting (stream F Gate B PASS): FIN.SKIRTING 212.379 -> 209.429 lm (-1.39 %); shaft 9.050 lm ENGINE_WRONG retired; landings 6.100 lm DRAWING-CONFIRMED; 22 flight pieces blank (HELD-FORM, both forms beside).
+- Tile bed mortar table (Gate A): 12.469 .. 17.195 m3 -> buy 105 .. 145 cement bags; unwired. Band-gap classes (Gate A): unwired, 0 m2 here; it left tests/t212 red on the working branch (F-C-T510-3) -> gate fix T-512 first.
+- Learned: a wall with an unprinted top datum is HELD with its terms, never valued to a borrowed height (lessons row ADOPTED); a new engine module declares its guard class in the same package (PROPOSED). Register: stair-hall vs landing faces; band-path pier face ruled.
+- Missing: blockwork materials (recompute from the new base), wet-area WP (rebase r7), ceiling / paint deductions, pool-court WP, disposal, landings, exterior plaster, nosing, spatter dash, accessories. Gate: M3 / 10 Nov AT RISK (6 Gate B since 00:20, about 11 in 5.2 days).
+- Team health: 4 merged, 0 rejected since 16:17; every run closed with a final line. 3 empty worker runs 18:41-19:19 (no TODO left by the 16:17 plan): fixed, 5 TODO now, each worker has a second row. Self-check codemap / t061 / freeze PASS. Queue check: see final line.
+
+OWNER PACKAGE: none (no item meets standard s.2.7).
+
+NEEDS FIXING (owner only, unchanged): Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+
 ## LEAD REPORT 2026-11-04 16:17 UTC
 
 Drive read OK (no file created in the project folders since 12:00, no photo task). Training villa: candidate of record now V3.0.54 c85c4630 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).

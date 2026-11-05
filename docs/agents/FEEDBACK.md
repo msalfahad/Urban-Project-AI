@@ -3,6 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 08:15 (since 04:15)
+
+- T-516 lintel jamb bearing (Gate A): WORKED (16/16 lintels; 21 ends BOUNDED, 10 FLAGGED_DEFICIT, 1 HELD; own re-measure AGREE, D-GF-11 +3.7 mm by tolerance). Decision: pieces by standard length + LINTEL_BEARING_V2 (F-C-T516-1) -> T-519; deficit-end concrete ownership -> T-524.
+- T-517 pool-court build-up (Gate A): WORKED (finish 4.519172 m2 AGREE 0.000000; screed HELD, insulation UNKNOWN). Decision: wiring with the next stream F package; ledge / window-run held parts -> T-522 (roof WP CLOSABLE).
+- T-518 waste factor provenance (Gate A): WORKED (92 keys, unsourced applied 0; Q-45 5 % owner-approved). Decision: D-T518-1 -> T-521 (FINISH V6), D-T518-2 + F-T518-3 -> T-523 (binding V2, one ceiling per purchasing group).
+- Process (Lead fault): 0 TODO after the 06:09 merges -> 3 empty worker runs (W2 06:44, W3 07:01, W1 07:20). Decision: every Lead run leaves at least 2 TODO per lane that need no candidate wiring while the wrapper item is open.
+
 ## Lead 2026-11-05 04:15 (since 00:15)
 
 - T-515 lintel bar split (Gate A): WORKED (63.162 kg AT_LEAST on printed span parts). Decision: F-C-T515-1 -> T-516 jamb bearing census (worker 1 first).

@@ -1,6 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
 
+## LEAD REPORT 2026-11-05 08:15 UTC
+
+Drive read OK (no file created in the project folders since 04:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
+- Lintels (structural, Gate A, research): built jamb bearing measured on 16/16 lintels, 32 ends: 21 BOUNDED >= 0.40 m, 10 FLAGGED_DEFICIT 0.000 .. 0.259 m (RC column, cross wall, 0.238 m shared pier), 1 HELD; Checker own DXF re-measure AGREE (one end +3.7 mm, tolerance method, no state moved). 0.514 m3 of ledger lintel concrete not buildable as drawn (designer item, HELD, never 0). Bars unchanged: 63.162 kg AT_LEAST.
+- Pool-court build-up (architectural, Gate A, research): finish 4.519172 m2 DRAWING-CONFIRMED extent (Checker 0.000000 difference); falls screed HELD on 4.906867 m2 (no thickness / fall / outlet printed, confirmed over 675 texts); insulation / protection UNKNOWN; if wired FIN.ROOF.FINISH 202.220 -> 206.739 m2 (+2.23 %). Freelancer one roof line 285.00 m2: UNRESOLVED (no comparable cell).
+- Materials (Gate A, research): 92 producer keys / 13 factors traced, 0 unsourced factor applied; owner Q-45 5 % confirmed ASSUMED - OWNER-APPROVED; 2 defects: FINISH V1-V5 put the 5 % inside installed mortar (10 m2 dry floor 0.315 vs 0.300 m3), the blockwork / finish binding marks the +5 % bed as INSTALLED (0.206291 vs 0.196467 m3); +1 cement bag if item ceilings are summed.
+- Learned (lessons rows PROPOSED): a FLAGGED_DEFICIT bearing is never defaulted to the printed minimum; a loss factor lives in its own account in every producer AND every binding.
+- Gate 2 (integration). 10 Nov end-to-end BOQ: HIGH RISK, unchanged (about 10 Gate B packages left in 4.7 days; all blocked by the wrapper item).
+- Team health: 3 merged, 0 rejected since 04:15; every run closed with a final line; 3 EMPTY worker runs 06:44-07:20 (Lead fault: no TODO left behind the 3 pieces) -> fixed: 6 new Gate A rows, 2 per lane, none needing the wrapper. Self-check codemap / t061 / freeze PASS. Queue check: 18 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none (no engineering item meets standard s.2.7).
+
+NEEDS FIXING (owner only, unchanged since 04:15, not re-notified): the run wrapper (scripts/agent_env.sh on main, line 211) still lets `run` start only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py; every integration package (blockwork materials, ceiling / paint fixes and about 8 more) needs its research/agents_t*/ scripts. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. Meanwhile workers do research pieces that run through pytest only. Also open: venv install cut off at session start; Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-05 04:15 UTC
 
 Drive read OK (no file created in the project folders since 00:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
@@ -29,18 +43,3 @@ Drive read OK (no file created in the project folders since 20:00, no photo task
 OWNER PACKAGE: none (no item meets standard s.2.7).
 
 NEEDS FIXING (owner only): (new) the run wrapper refuses research scripts ('AGENT_ENV FAIL: run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py'); Worker 2 ran a census script with the venv python directly, outside the pre-approved command: please allow research/agents_t*/ scripts in `run`, or confirm workers must call them only through pytest. (recurring) the session-start venv install is cut off (Checker 22:45 and 23:59: first selfcheck 'No module named pytest', fixed by re-running setup). Unchanged: Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-
-## LEAD REPORT 2026-11-04 20:15 UTC
-
-Drive read OK (no file created in the project folders since 16:00, no photo task). Training villa: candidate of record now V3.0.56 4e25c54f (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
-- Blockwork (stream S Gate B PASS, every moved wall by hand AGREE): MAS.BLOCK 579.1011 -> 467.7925 m2 (-19.2 %), volume 104.469 -> 84.630 m3; 8 roof-storey walls 98.3775 m2 HELD on the roof datum (D-39), GF-W22 CONFLICT 12.9311 .. 12.9439 m2 (D-27). No freelancer like-for-like until D-39 settles.
-- Stair skirting (stream F Gate B PASS): FIN.SKIRTING 212.379 -> 209.429 lm (-1.39 %); shaft 9.050 lm ENGINE_WRONG retired; landings 6.100 lm DRAWING-CONFIRMED; 22 flight pieces blank (HELD-FORM, both forms beside).
-- Tile bed mortar table (Gate A): 12.469 .. 17.195 m3 -> buy 105 .. 145 cement bags; unwired. Band-gap classes (Gate A): unwired, 0 m2 here; it left tests/t212 red on the working branch (F-C-T510-3) -> gate fix T-512 first.
-- Learned: a wall with an unprinted top datum is HELD with its terms, never valued to a borrowed height (lessons row ADOPTED); a new engine module declares its guard class in the same package (PROPOSED). Register: stair-hall vs landing faces; band-path pier face ruled.
-- Missing: blockwork materials (recompute from the new base), wet-area WP (rebase r7), ceiling / paint deductions, pool-court WP, disposal, landings, exterior plaster, nosing, spatter dash, accessories. Gate: M3 / 10 Nov AT RISK (6 Gate B since 00:20, about 11 in 5.2 days).
-- Team health: 4 merged, 0 rejected since 16:17; every run closed with a final line. 3 empty worker runs 18:41-19:19 (no TODO left by the 16:17 plan): fixed, 5 TODO now, each worker has a second row. Self-check codemap / t061 / freeze PASS. Queue check: see final line.
-
-OWNER PACKAGE: none (no item meets standard s.2.7).
-
-NEEDS FIXING (owner only, unchanged): Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
-

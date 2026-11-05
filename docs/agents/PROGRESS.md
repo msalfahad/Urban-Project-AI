@@ -1,9 +1,24 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-05 04:15 UTC (Lead). Previous version: 2026-11-05 00:15 UTC. The released numbers did not change
+Last update: 2026-11-05 08:15 UTC (Lead). Previous version: 2026-11-05 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record is now V3.0.58 (not released).
+the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 5 Nov 04:15 (newest first; three checked and merged, none sent back; no candidate quantity moved):
+- Lintels: how far each lintel sits on its wall is now measured from the drawing: of 32 lintel ends, 21 have at least
+  the 40 cm the detail asks for, 10 run into a column, a cross wall or a narrow pier (0 .. 26 cm), 1 is held. About
+  0.51 m3 of lintel concrete cannot be built as drawn there; next: lintel pieces by standard length, and who owns that
+  concrete where a lintel meets a column (counted once).
+- Pool-court build-up above the new membrane: finish area measured 4.52 m2 (checked by hand, exact); the falls screed
+  stays held (no thickness, fall or outlet printed), insulation / protection not known; nothing valued at 0.
+- Waste factors: every material figure was traced to its source. Your 5 % tile-bed waste is recorded as approved, but
+  two places put it inside the installed quantity instead of as its own purchase allowance; both are now being fixed.
+- Lead fault: after these merges the board was left with no ready work for about two hours, so three worker runs were
+  empty. Six new pieces (two per worker) are now on the board.
+- Still blocked: blockwork materials and the ceiling / paint fixes wait for the command wrapper (see "Waiting for the
+  owner"). 10 Nov (end-to-end BOQ with every trade): HIGH RISK, unchanged: about 10 candidate packages left in under 5
+  days and none of them can finish until the wrapper is widened.
 
 Since 5 Nov 00:15 (newest first; three checked and merged, one sent back):
 - Roof waterproofing IN THE CANDIDATE (V3.0.58, checked line by line): 204.11 -> 209.02 m2 (+2.4 %): the open slab
