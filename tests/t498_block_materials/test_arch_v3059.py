@@ -1,4 +1,4 @@
-"""T-498 ARCH_TAKEOFF_V3.0.58 on a synthetic villa-K498 candidate (hand fixture, not the development villa): blockwork
+"""T-498 ARCH_TAKEOFF_V3.0.59 on a synthetic villa-K498 candidate (hand fixture, not the development villa): blockwork
 material lines beside the MAS.BLOCK lines; every base line byte-identical; adverse inputs refused.
 
 Villa K498 by hand (company rulebook: black 12.5 / m2 for the 40 x 20 module, 0.20 m only; glue 3.5 / 4.5 kg/m2;
@@ -17,7 +17,7 @@ import copy
 import pytest
 
 from engine.source import arch_v304 as A304
-from engine.source import arch_v3058 as M
+from engine.source import arch_v3059 as M
 from engine.source import boq_line as BL
 from engine.source import company_rulebook_v1 as CR
 

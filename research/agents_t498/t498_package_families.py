@@ -1,9 +1,9 @@
-"""T-498 r2: PACKAGE -> FAMILY attribution by line diff along the merged candidate chain V3.0.56 -> V3.0.57 (T-310 r7,
-merge 87ef8718), with the T-485 diff and family rules unchanged (research/agents_t483/t483_package_families.attribute).
+"""T-498 r3: PACKAGE -> FAMILY attribution by line diff along the merged candidate chain V3.0.57 -> V3.0.58 (T-507,
+merge c94b35c1), with the T-485 diff and family rules unchanged (research/agents_t483/t483_package_families.attribute).
 Item codes, counts and hashes only.
 
-    python3 -I research/agents_t498/t498_package_families.py --run <dir with V3_0_56/57_BOQ_LINES.json> \
-        --master rules/coverage/BOQ_FAMILY_MASTER_1.54.0.json --out research/agents_t498/out/T498_PACKAGE_FAMILIES.json
+    python3 -I research/agents_t498/t498_package_families.py --run <dir with V3_0_57/58_BOQ_LINES.json> \
+        --master rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json --out research/agents_t498/out/T498_PACKAGE_FAMILIES.json
 """
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "research" / "agents_t483"))
 import t483_package_families as PF  # noqa: E402
 
-CHAIN = (56, 57)
+CHAIN = (57, 58)
 
 
 def main(argv=None):

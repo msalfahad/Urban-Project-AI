@@ -1,5 +1,5 @@
-"""T-498: the development-villa inputs of V3.0.58 rebuild from the pinned merged files (no drawing needed) and carry the
-recomputed material figures on the V3.0.57 masonry lines (= V3.0.56 by T-310: WP only) (T-453 r2 machinery with the T-488 held walls)."""
+"""T-498: the development-villa inputs of V3.0.59 rebuild from the pinned merged files (no drawing needed) and carry the
+recomputed material figures on the V3.0.58 masonry lines (= V3.0.56: T-310 / T-507 moved WP only) (T-453 r2 machinery with the T-488 held walls)."""
 import sys
 from pathlib import Path
 
@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "research" / "agents_t498"))
 
 import t498_inputs as L  # noqa: E402
-from engine.source import arch_v3058 as A  # noqa: E402
+from engine.source import arch_v3059 as A  # noqa: E402
 
 
 @pytest.fixture(scope="module")

@@ -130,3 +130,22 @@ holds 8 walls' materials; GF-W22 CONFLICT (D-27); 10 mm joint owner-provisional;
 Lessons row (proposed, ERS s.7): "a material line set produced from a merged ledger is re-run on the CURRENT candidate's
 lines before wiring, and every change is explained by a named upstream package (here: the T-488 roof-datum walls),
 never carried from the ledger's own base (every villa; T-498)".
+
+## 7. r3 (renumber onto T-507, stage only)
+
+T-507 merged ARCH_TAKEOFF_V3.0.58 + BOQ_FAMILY_MASTER_1.55.0 (c94b35c1) during r2's L4. r3 renames this package to
+ARCH_TAKEOFF_V3.0.59 (engine/source/arch_v3059.py, extends T-507's arch_v3058: integrate() re-runs A3058.integrate,
+so every V3.0.10 .. V3.0.58 family check runs on the result), URBAN_V3059_INPUTS_V1, REC_KEY block_materials_v3059,
+V3_0_59_* files; RUN.json now carries the T-512 code_totals_view (A3058.totals_view) and codes_held_no_valued_line,
+so MAS.UNITS.WHITE (17 blank lines) prints HELD, never 'released 0.0'. Hub: 'a V3.0.59 run IS a V3.0.58 run first'
+(one line), --v3059-inputs, the V3.0.59 block nested under T-507's. Runner v3059_run.py wraps T-507's v3058_run.py
+(asserts V3_0_58 c9570e6c). Engineering unchanged: the 74 material lines are computed from the same MAS.BLOCK /
+STR.CONC.LINTEL lines (T-507 moves FIN.WP.ROOF / ROOF_UPTURN only).
+
+NOT DONE in r3 (needs research scripts run outside pytest; this run's attempt to run them was refused, see the board):
+own Drive chain V3_0_58 c9570e6c -> V3_0_59 (expected 4,999 identical + 74 added = 5,073), out/LINE_INDEX_V3_0_58.json
+(t479 census), out/PROMOTIONS_SOURCE_1_56_0.json (t498_promotions_source.py on 1.55.0; BOARD_COMMIT constant to the
+board commit read), out/T498_PACKAGE_FAMILIES.json chain (57, 58), rules/coverage/BOQ_FAMILY_MASTER_1.56.0.json
+(build_master_1_56_0.py) + its RULES_MANIFEST / m9_rules_manifest entries, research/agents_t463/GIT_FACTS.json
+(build_t463_facts.py), summary_t498.json, then L4. Until 1.56.0 exists, t130 / t199 / t485 / t507 registry tests are
+red on this branch (codes MAS.UNITS.* / B9-04 written while the governing registry is 1.55.0): expected, not a defect.

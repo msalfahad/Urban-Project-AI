@@ -1,9 +1,9 @@
-"""T-498: the URBAN_V3058_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.58 (engine.source.arch_v3058), built ONLY from
+"""T-498: the URBAN_V3059_INPUTS_V1 project inputs of ARCH_TAKEOFF_V3.0.59 (engine.source.arch_v3059), built ONLY from
 pinned, merged files (an edited file stops the build):
 
   research/agents_t508/out/LINE_INDEX_V3_0_55.json  candidate line index V3.0.55 (a498fc61); its MAS.BLOCK and
-      STR.CONC.LINTEL lines are those of V3.0.56 and V3.0.57 (T-508 moved skirting, T-310 waterproofing only: asserted by
-      the runner against the V3_0_57 lines of the run of record);
+      STR.CONC.LINTEL lines are those of V3.0.56, V3.0.57 and V3.0.58 (T-508 moved skirting, T-310 / T-507 waterproofing
+      only: asserted by the runner against the V3_0_58 lines of the run of record);
   research/agents_t453/t453_material_ledger.py  T-453 r2 machinery (MERGED b16f686b, Verifier Gate A 2026-11-03):
       lintel decisions and faces (R-T453-4 / -5), materials per line (R-T453-1 .. 3), its own pinned inputs;
   research/agents_t488/t488_inputs.py  T-488 conditions (MERGED e8143e40, Gate B): the 8 roof-storey walls HELD
@@ -34,7 +34,7 @@ import t279_inputs as L26            # noqa: E402
 import t488_inputs as I488           # noqa: E402
 from engine.source import company_rulebook_v1 as CR  # noqa: E402  (research reads the rulebook; the engine does not)
 
-SCHEMA = "URBAN_V3058_INPUTS_V1"
+SCHEMA = "URBAN_V3059_INPUTS_V1"
 INDEX = ROOT / "research/agents_t508/out/LINE_INDEX_V3_0_55.json"
 INDEX_SHA = None                     # pinned below after the first read (asserted in build)
 CANDIDATE_LINES = "a498fc61c8484534d6682aff9409efd87733db6636ab4c366f7f5bb68b0e62cd"
@@ -55,7 +55,7 @@ SOURCES = [
 
 
 def rulebook():
-    """the owner rulebook records V3.0.58 reads, copied from COMPANY_RULEBOOK_V1 with its digest (no value typed)."""
+    """the owner rulebook records V3.0.59 reads, copied from COMPANY_RULEBOOK_V1 with its digest (no value typed)."""
     return {"method": CR.METHOD, "version": CR.VERSION, "digest": CR.digest(),
             "records": {rid: {"status": CR.record(rid).get("status"),
                               "params": {k: (v.get("value") if isinstance(v, dict) else v)

@@ -1,6 +1,6 @@
-"""ARCH_TAKEOFF_V3.0.58 (T-498, stream S; r2 renumbered from V3.0.57 onto the merged T-310 V3.0.57): the SAME opt-in BOQ
-candidate as ARCH_TAKEOFF_V3.0 .. V3.0.57
-(engine.source.arch_v30, arch_v301 .. arch_v3056, arch_v3057), with ONE new piece, the BLOCKWORK MATERIALS of the
+"""ARCH_TAKEOFF_V3.0.59 (T-498, stream S; r3 renumbered from V3.0.58 onto the merged T-507 V3.0.58, as r2 renumbered
+from V3.0.57 onto T-310): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.58
+(engine.source.arch_v30, arch_v301 .. arch_v3057, arch_v3058), with ONE new piece, the BLOCKWORK MATERIALS of the
 candidate's own MAS.BLOCK lines, as material lines BESIDE them (never inside them):
 
   BLOCK_MATERIALS  for every MAS.BLOCK line of the base candidate (B9-01 contract area, unchanged):
@@ -28,9 +28,9 @@ every material), never 0; (4) every figure is recomputed from the line and the c
 to the expected figure of the inputs (the merged ledgers' machinery on this candidate); (5) a lintel face larger than
 its line, a face on a held host, a millimetre width, a typed rate, a second producer are refused.
 
-Nothing else moves: every V3.0.57 line is byte-identical (asserted: this version only ADDS lines); totals move only in
-the four material codes (asserted). Files: V3_0_58_BOQ_LINES.json / .csv, V3_0_58_INTEGRATION_LEDGER.json / .csv,
-V3_0_58_DIFF.csv, V3_0_58_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
+Nothing else moves: every V3.0.58 line is byte-identical (asserted: this version only ADDS lines); totals move only in
+the four material codes (asserted). Files: V3_0_59_BOQ_LINES.json / .csv, V3_0_59_INTEGRATION_LEDGER.json / .csv,
+V3_0_59_DIFF.csv, V3_0_59_RUN.json. Nothing here names a project, a sheet, a layer or a coordinate.
 """
 
 from __future__ import annotations
@@ -45,20 +45,20 @@ from engine.source import arch_v302 as A302
 from engine.source import arch_v304 as A304
 from engine.source import arch_v305 as A305
 from engine.source import arch_v3046 as A3046
-from engine.source import arch_v3057 as A3057
+from engine.source import arch_v3058 as A3058
 
 DEFAULT_GUARD_CLASS = "TOOLING"          # T-212: books Checker-merged ledgers; rates arrive as rulebook records in the
 #                                          inputs (company_rulebook_v1 is an UNWIRED_PRODUCER: never imported here)
-METHOD = "ARCH_TAKEOFF_V3.0.58"
-EXTENDS = A3057.METHOD
+METHOD = "ARCH_TAKEOFF_V3.0.59"
+EXTENDS = A3058.METHOD
 CANDIDATE = A30.METHOD
-POLICY_ID = "URBAN_BOQ_T498_ARCH_V3_0_58"
-INPUTS_SCHEMA = "URBAN_V3058_INPUTS_V1"
-LEDGER_SCHEMA = "URBAN_V3058_INTEGRATION_LEDGER_V1"
+POLICY_ID = "URBAN_BOQ_T498_ARCH_V3_0_59"
+INPUTS_SCHEMA = "URBAN_V3059_INPUTS_V1"
+LEDGER_SCHEMA = "URBAN_V3059_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
 RULE_ID = "R-T498-1"
 RULE_VERSION = "1.0.0"
-REC_KEY = "block_materials_v3058"
+REC_KEY = "block_materials_v3059"
 P_MAT = "BLOCK_MATERIALS"
 SRC_CODE = "MAS.BLOCK"
 LINTEL_CODE = "STR.CONC.LINTEL"
@@ -88,7 +88,7 @@ PIECES = {P_MAT: {
     "drawing_method": "the candidate's MAS.BLOCK nets (drawn pieces x clear height - openings) minus the RC lintel faces "
                       "the printed lintel schedule casts inside the panel (T-453 r2 / T-487 lines), x the rulebook rates",
 }}
-WAITING = dict(A3057.WAITING)
+WAITING = dict(A3058.WAITING)
 WAITING.update({
     "T498_BLACK_015": "the 0.15 m black block face / module is not stated (owner 2026-11-02 data item): its units and "
                       "joint mortar stay HELD blank (T-367 figure beside)",
@@ -115,7 +115,7 @@ def _num(x, where, hi=MM_GUARD):
 
 # ================================================================================================ inputs
 def load_inputs(doc, project_id=None):
-    """URBAN_V3058_INPUTS_V1 -> checked dict. Typed rates are refused: every rate comes from the company rulebook."""
+    """URBAN_V3059_INPUTS_V1 -> checked dict. Typed rates are refused: every rate comes from the company rulebook."""
     if not isinstance(doc, dict) or doc.get("schema") != INPUTS_SCHEMA:
         raise InputsError(f"inputs schema is not {INPUTS_SCHEMA}")
     if project_id is not None and doc.get("project") not in (None, project_id):
@@ -500,21 +500,23 @@ def check_materials(lines):
 
 
 def integrate(prev, changes, for_lead=()):
-    """-> (V3.0.58 lines, identity). Added lines follow the base; every base line byte-identical (asserted)."""
+    """-> (V3.0.59 lines, identity). Added lines follow the base; every base line byte-identical (asserted)."""
     for c in changes:
         if c["action"] != "ADD" or c["after"]["item_code"] not in CODES:
             raise ValueError(f"{METHOD}: only material lines are added by this version")
-    base_lines, ident = A3057.integrate(prev, [], for_lead)
+    base_lines, ident = A3058.integrate(prev, [], for_lead)
     out = list(base_lines) + [c["after"] for c in changes]
     if len({ln["line_id"] for ln in out}) != len(out):
         raise ValueError(f"{METHOD}: a BOQ line id appears twice")
     bad = [a["line_id"] for a, b in zip(prev, out) if A30.line_sha(a) != A30.line_sha(b)]
     if bad:
         raise ValueError(f"{METHOD}: {len(bad)} candidate line(s) differ")
-    ident = {"base_lines": len(prev), "v3_0_58_lines": len(out), "v3_0_58_rows": len(changes), "replaced": 0,
-             "added": len(changes), "v3_0_57_checks": {k: v for k, v in ident.items()
-                                                      if k not in ("base_lines", "v3_0_57_lines", "v3_0_57_rows",
-                                                                   "replaced", "added")},
+    ident = {"base_lines": len(prev), "v3_0_59_lines": len(out), "v3_0_59_rows": len(changes), "replaced": 0,
+             "added": len(changes), "v3_0_58_checks": {k: v for k, v in ident.items()
+                                                      if k not in ("base_lines", "v3_0_58_lines", "v3_0_58_rows",
+                                                                   "replaced", "added", "outside_rows",
+                                                                   "outside_rows_identical_to_base",
+                                                                   "outside_rows_sha256")},
              "materials": check_materials(out), "outside_rows": len(prev),
              "outside_rows_identical_to_base": len(prev),
              "outside_rows_sha256": hashlib.sha256("".join(A30.line_sha(x) for x in prev).encode()).hexdigest()}
@@ -522,13 +524,16 @@ def integrate(prev, changes, for_lead=()):
 
 
 def check_totals(t0, t1):
+    """-> the moved totals with their T-512 views (A3058.total_view); refuses a move outside the four material codes."""
     moved = {}
     for k in sorted(set(t0) | set(t1)):
         if t0.get(k) == t1.get(k):
             continue
         if k.split("|")[0] not in CODES:
             raise ValueError(f"{METHOD}: totals moved outside this version's codes: {k}")
-        moved[k] = {"base": t0.get(k), "v3_0_58": t1.get(k)}
+        moved[k] = {"base": t0.get(k), "v3_0_59": t1.get(k),
+                    "view_base": None if t0.get(k) is None else A3058.total_view(t0[k]),
+                    "view_v3_0_59": None if t1.get(k) is None else A3058.total_view(t1[k])}
     return moved
 
 
@@ -543,7 +548,7 @@ def ledger_rows(changes, released_lines=None):
                      "floor": loc.get("floor"), "element_id": loc.get("element_id"), "unit": a["unit"],
                      "source_line_id": rec["source_line_id"], "before_released_v2_9": dict(A30._qty(None),
                                                                                           state="NOT_IN_RELEASED"),
-                     "before_base": A30._qty(None), "after_v3_0_58": A30._qty(a),
+                     "before_base": A30._qty(None), "after_v3_0_59": A30._qty(a),
                      "evidence_status": c["evidence_status"], "still_held": c.get("held"),
                      "release_status": "NOT RELEASED", "owner_manual_method": PIECES[P_MAT]["owner_manual_method"],
                      "drawing_derived_method": PIECES[P_MAT]["drawing_method"], "record": rec,
@@ -552,9 +557,9 @@ def ledger_rows(changes, released_lines=None):
 
 
 LEDGER_CSV = ("version", "action", "change", "line_id", "item_code", "family", "floor", "element_id", "unit",
-              "source_line_id", "base", "v3_0_58", "evidence_status", "still_held", "verification")
+              "source_line_id", "base", "v3_0_59", "evidence_status", "still_held", "verification")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_base", "vs_released_v2_9", "v2_9", "base",
-            "v3_0_58")
+            "v3_0_59")
 
 
 def ledger_csv(rows):
@@ -567,17 +572,17 @@ def ledger_csv(rows):
                        "item_code": r["item_code"], "family": r["family"], "floor": r.get("floor") or "",
                        "element_id": r.get("element_id") or "", "unit": r["unit"],
                        "source_line_id": r["source_line_id"], "base": q(r.get("before_base")),
-                       "v3_0_58": q(r.get("after_v3_0_58")), "evidence_status": r["evidence_status"],
+                       "v3_0_59": q(r.get("after_v3_0_59")), "evidence_status": r["evidence_status"],
                        "still_held": h(r), "verification": r["verification"]["task"]} for r in rows], LEDGER_CSV)
 
 
 def diff_rows(prev, new, released_lines=None):
     rows = A3046.diff_rows(prev, new, released_lines)
-    return [dict({k: v for k, v in r.items() if k != "v3_0_46"}, v3_0_58=r["v3_0_46"]) for r in rows]
+    return [dict({k: v for k, v in r.items() if k != "v3_0_46"}, v3_0_59=r["v3_0_46"]) for r in rows]
 
 
 def write(out, prev, changes, log, released_lines=None, for_lead=()):
-    """the V3_0_58_* files beside the base candidate's files. -> (file names, identity, ledger)."""
+    """the V3_0_59_* files beside the base candidate's files. -> (file names, identity, ledger)."""
     from pathlib import Path
     from engine.source import boq_line as BL
     out = Path(out)
@@ -593,20 +598,26 @@ def write(out, prev, changes, log, released_lines=None, for_lead=()):
         dsum.setdefault("vs_base", {}).setdefault(d["vs_base"], 0)
         dsum["vs_base"][d["vs_base"]] += 1
     ident = dict(ident, diff=dsum)
-    moved = check_totals(A304.code_totals(prev), A304.code_totals(new))
+    t1 = A304.code_totals(new)
+    moved = check_totals(A304.code_totals(prev), t1)
+    view = A3058.totals_view(t1)          # T-512: a code with no valued line never prints a number (MAS.UNITS.WHITE)
+    held_codes = sorted(k for k, v in view.items() if v and v["status"] in ("HELD", "HELD_BOUNDED"))
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
            "base": A30.BASE_METHOD, "released": A30.RELEASED_METHOD, "released_default": False, "rows": rows,
            "summary": log, "waiting_pieces": WAITING, "integration_package": True}
     run = {"method": METHOD, "policy": POLICY_ID, "extends": EXTENDS, "candidate": CANDIDATE,
            "base_method": A30.BASE_METHOD, "released_method": A30.RELEASED_METHOD, "released_default": False,
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "piece_logs": [log],
-           "totals_moved_by_code": moved, "waiting_pieces": WAITING}
-    files = {"V3_0_58_BOQ_LINES.json": BL.dumps(new),
-             "V3_0_58_BOQ_LINES.csv": A30._lines_csv(new),
-             "V3_0_58_INTEGRATION_LEDGER.json": A30._j(led),
-             "V3_0_58_INTEGRATION_LEDGER.csv": ledger_csv(rows),
-             "V3_0_58_DIFF.csv": A305._csv(diff, DIFF_CSV),
-             "V3_0_58_RUN.json": A30._j(run)}
+           "totals_moved_by_code": moved, "code_totals_view": view,
+           "code_totals_view_rule": "T-512 T512_HELD_TOTALS_VIEW_V1 through arch_v3058.totals_view (AGENT_BRIEF 'HELD "
+                                    "is never 0', R-T499-1): a code with no valued line never prints a number",
+           "codes_held_no_valued_line": held_codes, "waiting_pieces": WAITING}
+    files = {"V3_0_59_BOQ_LINES.json": BL.dumps(new),
+             "V3_0_59_BOQ_LINES.csv": A30._lines_csv(new),
+             "V3_0_59_INTEGRATION_LEDGER.json": A30._j(led),
+             "V3_0_59_INTEGRATION_LEDGER.csv": ledger_csv(rows),
+             "V3_0_59_DIFF.csv": A305._csv(diff, DIFF_CSV),
+             "V3_0_59_RUN.json": A30._j(run)}
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     return sorted(files), ident, led

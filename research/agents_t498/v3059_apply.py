@@ -1,11 +1,11 @@
-"""T-498 (read-only): apply ARCH_TAKEOFF_V3.0.58 to the candidate of record's V3_0_58_BOQ_LINES.json of a finished
-research/agents_t310/v3057_run.py run on the same drawings (or a v3058_run.py run), outside the hub, and print the
+"""T-498 (read-only): apply ARCH_TAKEOFF_V3.0.59 to the candidate of record's V3_0_58_BOQ_LINES.json of a finished
+research/agents_t507/v3058_run.py run on the same drawings (or a v3059_run.py run), outside the hub, and print the
 integration package summary (every added line in hand-checkable terms). Every output goes to --out (outside the
 repository); printed: item codes, units, states, quantities and engine ids only (no coordinates, no names).
 
-    .work/venv/bin/python -I research/agents_t498/v3058_apply.py <dir of the run> --out <private>/t498a [--summary F]
+    .work/venv/bin/python -I research/agents_t498/v3059_apply.py <dir of the run> --out <private>/t498a [--summary F]
 
-The base must be the candidate of record V3_0_58 25a8b406 (asserted), and its MAS.BLOCK / STR.CONC.LINTEL lines must be
+The base must be the candidate of record V3_0_58 c9570e6c (asserted), and its MAS.BLOCK / STR.CONC.LINTEL lines must be
 the V3.0.55 line index's (the inputs were built on it: asserted line by line).
 """
 from __future__ import annotations
@@ -24,9 +24,9 @@ for p in (ROOT, HERE):
 
 import t498_inputs as L56                    # noqa: E402
 from engine.source import arch_v304 as A304  # noqa: E402
-from engine.source import arch_v3058 as A    # noqa: E402
+from engine.source import arch_v3059 as A    # noqa: E402
 
-BASE_SHA = "25a8b406"            # V3_0_58_BOQ_LINES.json, candidate of record (T-310 r7 Gate B, merge 87ef8718)
+BASE_SHA = "c9570e6c"            # V3_0_58_BOQ_LINES.json, candidate of record (T-507 Gate B, merge c94b35c1)
 
 
 def check_index(prev):
@@ -56,8 +56,8 @@ def summary(prev, new, ch, log, ident, moved):
                      "material_base_m2": b.get("material_base_m2"), "base_state": b.get("base_state"),
                      "lintels": [(x["opening_id"], x["kind"], x["lintel_line_id"]) for x in b.get("lintels") or ()],
                      "beside": rec.get("figure_beside") or rec.get("beside_materials")})
-    return {"base_v3_0_57_sha256": hashlib.sha256(json.dumps(prev, sort_keys=True).encode()).hexdigest()[:8],
-            "identity": {k: ident[k] for k in ("base_lines", "v3_0_58_lines", "added", "replaced", "outside_rows",
+    return {"base_v3_0_58_sha256": hashlib.sha256(json.dumps(prev, sort_keys=True).encode()).hexdigest()[:8],
+            "identity": {k: ident[k] for k in ("base_lines", "v3_0_59_lines", "added", "replaced", "outside_rows",
                                                "outside_rows_identical_to_base", "materials", "diff")},
             "log": log, "totals_moved": moved, "rows": rows}
 
@@ -68,7 +68,7 @@ def main(argv=None):
     ap.add_argument("--out", required=True)
     ap.add_argument("--summary")
     a = ap.parse_args(argv)
-    raw = (Path(a.run_dir) / "V3_0_57_BOQ_LINES.json").read_bytes()
+    raw = (Path(a.run_dir) / "V3_0_58_BOQ_LINES.json").read_bytes()
     sha = hashlib.sha256(raw).hexdigest()
     if not sha.startswith(BASE_SHA):
         raise SystemExit(f"base candidate {sha[:8]} is not {BASE_SHA} (not the candidate of record)")
@@ -80,11 +80,11 @@ def main(argv=None):
     d = A.load_inputs(L56.build(pid), pid)
     ch, log = A.changes_for(d, prev)
     names, ident, led = A.write(out, prev, ch, log)
-    nsha = hashlib.sha256((out / "V3_0_58_BOQ_LINES.json").read_bytes()).hexdigest()
-    new = json.loads((out / "V3_0_58_BOQ_LINES.json").read_text())
+    nsha = hashlib.sha256((out / "V3_0_59_BOQ_LINES.json").read_bytes()).hexdigest()
+    new = json.loads((out / "V3_0_59_BOQ_LINES.json").read_text())
     moved = A.check_totals(A304.code_totals(prev), A304.code_totals(new))
-    print("base V3_0_57", sha[:8], len(prev), "lines (masonry / lintel lines as indexed:", n, ") -> V3_0_58", nsha[:8],
-          ident["v3_0_58_lines"], "lines")
+    print("base V3_0_58", sha[:8], len(prev), "lines (masonry / lintel lines as indexed:", n, ") -> V3_0_59", nsha[:8],
+          ident["v3_0_59_lines"], "lines")
     print("identity:", json.dumps({k: ident[k] for k in ("added", "replaced", "outside_rows",
                                                           "outside_rows_identical_to_base", "materials", "diff")},
                                   sort_keys=True))
@@ -92,7 +92,7 @@ def main(argv=None):
     print("totals moved:", json.dumps(moved, sort_keys=True))
     if a.summary:
         s = summary(prev, new, ch, log, ident, moved)
-        s.update(base_v3_0_57=sha[:8], v3_0_58=nsha[:8])
+        s.update(base_v3_0_58=sha[:8], v3_0_59=nsha[:8])
         Path(a.summary).write_text(json.dumps(s, indent=1, sort_keys=True, ensure_ascii=False) + "\n",
                                    encoding="utf-8")
     return 0
