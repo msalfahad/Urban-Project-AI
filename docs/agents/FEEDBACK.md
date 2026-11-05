@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-05 12:20 (since 08:15)
+
+- T-521 FINISH V6 (Gate A): WORKED (installed bed without loss; 5 % own account = V5 exactly). Decision: Q-53 stair bed still HELD -> T-528 FINISH V7.
+- T-519 lintel pieces + LINTEL_BEARING_V2: WORKED (6 PRODUCED, 10 HELD). Decision: F-C-T519-1 curved-bay end (W18 0.578 vs 0.478 m) -> T-527 V3; bars on produced lintels -> T-531.
+- T-523 binding V2: WORKED (cement procurement >= 130.82 .. 172.29 bags; 21 stale bindings on 7 lines). Decision: stale list into T-530 manifest; wiring at T-498 resume.
+- T-520 perimeter joint mortar: WORKED (+0.098145 m3, +7.73 %). Decision: F-T520-1 (4 run ends at columns missed by the junction censuses) -> T-526.
+- T-524 lintel end-zone concrete: WORKED (0.514 -> 0.372692 .. 0.437542 m3, every removed part owned once). Decision: register ruling on lintel end volume inside a column CLOSED (column line owns it); curved-bay re-check via T-527.
+- T-522 pool-court window / ledge: WORKED (window upturn 0.500 lm measured; ledge narrowed). Decision: ledge membrane exposure rule V2 -> T-529.
+- Gate: t485 red on the working branch (T-507 stale pending) -> T-525 gate 0.
+
 ## Lead 2026-11-05 08:15 (since 04:15)
 
 - T-516 lintel jamb bearing (Gate A): WORKED (16/16 lintels; 21 ends BOUNDED, 10 FLAGGED_DEFICIT, 1 HELD; own re-measure AGREE, D-GF-11 +3.7 mm by tolerance). Decision: pieces by standard length + LINTEL_BEARING_V2 (F-C-T516-1) -> T-519; deficit-end concrete ownership -> T-524.

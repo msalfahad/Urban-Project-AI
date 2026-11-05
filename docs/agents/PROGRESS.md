@@ -1941,6 +1941,15 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-05 12:20)
+- Candidate (not released) unchanged since early 5 Nov; released BOQ unchanged. Six checked pieces merged today wait
+  for wiring: lintel pieces and bearings (6 of 16 lintels fully produced, 10 held at short bearings), lintel concrete
+  at those short ends (0.514 -> 0.373 .. 0.438 m3; the rest already sits inside column lines or cannot be built as
+  drawn), mortar at wall-to-column and soffit joints (+0.098 m3 on the 0.20 m walls, +7.7 %), pool-court window
+  upturn 0.50 m measured and ledge narrowed, tile-bed mortar with the 5 % loss kept apart, and the material binding.
+- Next: a red registry test on the working branch fixed first; wall ends at columns the census missed; lintel
+  bearings at the curved bay; stair marble bed cement and sand from your Q-53 rule; the pool-court ledge membrane;
+  a wiring list so the packages wire everything in one pass once the command wrapper allows it.
 (Lead 2026-11-04 00:20)
 - Candidate (not released): earthworks are in the candidate for the first time: excavation 225.94 m3 (the footing
   pits 208.16 m3 as an estimate, the pool 17.78 m3 from the drawings); backfill a range 119.96 .. 128.64 m3 (6 of 8

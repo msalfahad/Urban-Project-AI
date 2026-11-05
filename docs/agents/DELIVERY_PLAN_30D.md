@@ -46,6 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-05 12:20; recovery plan in force)
+
+- Merged since 08:15 (all Gate A, research, no candidate line moved): T-519..T-524 (6/6 WORKED, 0 rejected). Unwired verified pieces now 9 (T-516..T-524).
+- Gate finding: tests/t485 red on the working branch (merged T-507 still pending in master 1.55.0) -> T-525 gate 0, lane I first.
+- Integration streams S (T-498) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh:211 unchanged, owner notified 04:15). T-530 prepares one wiring manifest so the packages wire every piece in one pass once it lands.
+- New Gate A rows: T-526, T-527, T-531 (S); T-528, T-529 (A); T-525, T-530 (I).
+- 10 Nov: HIGH RISK (about 10 Gate B packages left in 4.5 days; none can finish until the wrapper item is fixed). 12-13 Nov, 19-20 Nov, 25 Nov follow it.
+
 ## Status (Lead, 2026-11-05 08:15; recovery plan in force)
 
 - Merged since 04:15 (all Gate A, research, no candidate line moved): T-516 lintel jamb bearing, T-517 pool-court build-up, T-518 waste factor provenance.

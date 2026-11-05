@@ -87,6 +87,13 @@ quantity.
   a HELD / FLAGGED lintel face is a named range on the host line, never 0 and never silently deducted. The MAS.BLOCK
   contract area is untouched until the T-449 wiring settles R-MAS-ABOVE-LINTEL-1 (T-482). Rows: T-453 r2 (material),
   T-487 (B9-02 lines), T-482 (contract basis).
+  LINTEL END VOLUME at a FLAGGED_DEFICIT end (Lead 2026-11-05 12:20; T-524 MERGED 97e5ce74, Checker own re-measure
+  D-GF-06 END 0.0100 + W18 START 0.017308 m3 AGREE): the part of a scheduled lintel's nominal end that lies INSIDE an RC
+  column is OWNED by the column concrete line (STR column, already counted) and is never added to B9-02; a lintel resting
+  on another lintel at a shared pier is counted once, by the rule R-T524-1 (0.01686 m3 at the
+  D-GF-11/12 pier); a nominal end beyond a cross wall or column face that cannot be built as drawn is a designer item (HELD, never
+  0, never moved to another trade). B9-02 lintel concrete set 0.514 -> 0.372692 .. 0.437542 m3 (unwired). Curved-bay
+  ends re-read by T-527 (F-C-T519-1). Rows: T-524, T-527, T-531 (bars).
   LINTEL REINFORCEMENT (Lead 2026-11-05 00:15; Checker F-C-T487-1): the lintel bars are a REBAR component of the B9-02
   lintel line (kg, owner rule 2026-10-24), never inside MAS.BLOCK or the lintel concrete m3; printed straight parts
   COMPUTED, cover / hooks / bends HELD by name (owner 2026-10-29 (B)); project figure AT_LEAST. Row: T-515.

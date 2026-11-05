@@ -1,6 +1,21 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
 
+## LEAD REPORT 2026-11-05 12:20 UTC
+
+Drive read OK (no file created in the project folders since 08:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). All results below are Checker-verified pieces, UNWIRED.
+- Lintels (structural): project RC schedule governs 16/16: 6 PRODUCED, 10 HELD on short bearings; lintel concrete at the 10 short ends 0.514 -> 0.372692 .. 0.437542 m3 (0.037838 m3 already inside column lines, 0.01686 lintel-on-lintel once, 0.02176 not buildable as drawn: designer item, HELD). Checker found the curved-bay pier end W18 0.578 vs 0.478 m (no state moved) -> bearing V3.
+- Black-block mortar (structural): joints at column faces and soffits +0.098145 m3 on 1.269444 m3 (+7.73 %, COMPUTED, Checker own DXF AGREE on 2 junctions); 0.15 m walls 0.0786 .. 0.0899 m3 HELD (module); 4 run ends at columns missing from the junction censuses -> new census row.
+- Pool court (architectural): bath window sill '84' printed -> window upturn 0.500 lm MEASURED (roof upturn 186.783 -> 187.283 lm, +0.27 % if wired); ledge upturn 0 .. 3.528 -> 0 .. 0.552 lm + 2.977 lm glazing transition; ledge membrane 0 .. 0.640 m2 HELD (exposure rule needs a version from the drawn cover outline, not an angle).
+- Materials: tile-bed mortar installed without the 5 % (20 m2 dry floor 0.600 .. 0.800 m3), loss its own account; project cement procurement AT_LEAST 130.82 .. 172.29 bags (was 120.66 .. 162.13); stair bed cement still HELD although your Q-53 answer (C) covers it -> FINISH V7 row. Freelancer: no cement / lintel rows (RULE_DIFFERENCE / UNRESOLVED, not compared).
+- Learned (lessons rows PROPOSED): a printed value can sit in a DIMENSION block, not only in text (search both); an end volume inside another element is owned by that element's line once, never by default the minimum bearing.
+- Gate 0 found: tests/t485 red on the working branch (merged pool-court WP package still 'pending' in the newest registry) -> fix row first in lane I. Gate 2 (integration). 10 Nov end-to-end BOQ: HIGH RISK (about 10 Gate B packages in 4.5 days, all behind the wrapper item; 9 verified pieces wait).
+- Team health: 6 merged, 0 rejected since 08:15; every run closed with a final line; 0 empty runs; 7 new rows (S 3, A 2, I 2). Self-check codemap / t061 / freeze PASS. Queue check: see final RUN_LOG line.
+
+OWNER PACKAGE: none (no engineering item meets standard s.2.7).
+
+NEEDS FIXING (owner only, unchanged since 04:15, not re-notified): the run wrapper (scripts/agent_env.sh on main, line 211) still lets `run` start only the scoreboard and key-map tools; every integration package needs its research/agents_t*/ scripts, and the registry fix row may need one too. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-05 08:15 UTC
 
 Drive read OK (no file created in the project folders since 04:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
@@ -29,17 +44,3 @@ Drive read OK (no file created in the project folders since 00:00 UTC, no photo 
 OWNER PACKAGE: none (no engineering item meets standard s.2.7).
 
 NEEDS FIXING (owner only, blocks the critical path): the run wrapper (scripts/agent_env.sh on main, line 211) lets `run` start only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py. Every integration package must run its research/agents_t*/ scripts (Drive chain, master build, binding and git-facts tools); Worker 3's temporary pytest runner was refused by the permission classifier as a bypass, and the Checker cannot reproduce a chain either. Tried: workers barred from bypasses; blocked packages parked; three standalone pieces given so no run is empty. Needed: widen `run` to research/agents_t*/*.py (same venv, same tree rules), or name another approved path. Also open: venv install cut off at session start (recurring); Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
-
-## LEAD REPORT 2026-11-05 00:15 UTC
-
-Drive read OK (no file created in the project folders since 20:00, no photo task). Training villa: candidate of record now ARCH_TAKEOFF_V3.0.57 25a8b406 / master 1.54.0 (NOT RELEASED); released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).
-- Waterproofing, wet areas and pool (stream F Gate B PASS, every moved line by hand AGREE): FIN.WP.FLOOR 85.6207 -> 85.5757 m2 (-0.05 %: pantry floor 13.500 -> 13.455 m2), upturn 25.1146 -> 25.2146 m2 (+0.40 %: 1F east bath 1.480 -> 1.580 m2), pool membrane 29.582355 m2 and protection screed 1.524503 m3 as new lines; 3 doorway terminations NOT_APPLICABLE, 3 doors HELD blank. Freelancer comparison unchanged (his WP rows are not like-for-like by line).
-- Gate fix (Gate A): tests/t212 green again; an all-blank code now prints HELD (n blank lines), never 0.0; 0 quantity change. Census: 37 of 111 codes still print 0.0 in the candidate's code_totals summary path -> acceptance item of the next stream F package (T-507).
-- Cement / sand (Gate A, research): 1,458 keys, 0 with two producers; project installed cement HELD, known part >= 120.08 .. 157.90 bags (block mortar 10.16, tile bed 99.75 .. 137.56, stair bed 10.18 bags on 35.43 m2, Checker re-measured one flight 3.450 m2 AGREE). Missing producers: 8.052 m3 released screed, threshold / lift and outdoor beds (new row T-514). RULE_DIFFERENCE vs freelancer (no cement rows).
-- Learned: one producer per material key (lessons row ADOPTED by the Checker); a staged package must renumber at hand-in when another merges first (T-498 V3.0.57 -> next free; no engineering change).
-- Missing: blockwork materials (T-498 in progress), ceiling / paint deductions (T-423 in progress), pool-court WP (T-507 next), disposal, landings, exterior plaster, nosing, spatter dash, accessories, band-gap wiring; lintel bars split (T-515). Gate: M3 / 10 Nov AT RISK (7 Gate B since 00:20 4 Nov, about 10 in 5.0 days).
-- Team health: 3 merged, 0 rejected since 20:15; every run closed with a final line except Worker 3 (23:00) and Worker 1 (23:20), both still inside their locks; 0 empty runs. Self-check codemap / t061 / freeze PASS. Queue check: 15 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none (no item meets standard s.2.7).
-
-NEEDS FIXING (owner only): (new) the run wrapper refuses research scripts ('AGENT_ENV FAIL: run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py'); Worker 2 ran a census script with the venv python directly, outside the pre-approved command: please allow research/agents_t*/ scripts in `run`, or confirm workers must call them only through pytest. (recurring) the session-start venv install is cut off (Checker 22:45 and 23:59: first selfcheck 'No module named pytest', fixed by re-running setup). Unchanged: Kuwait 1990 spec copy under 6 MB (plastering chapter unread); repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.

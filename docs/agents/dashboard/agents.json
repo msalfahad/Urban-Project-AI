@@ -6,52 +6,52 @@
   "last_run": "2026-11-05T04:31:32Z",
   "result": "ok",
   "working_on": "Daily update 5 Nov 04:31 UTC (scheduler SUCCEEDED); next 6 Nov 04:31 UTC",
-  "as_of": "2026-11-05T08:25:00Z"
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-11-05T08:13:00Z",
+  "last_run": "2026-11-05T12:18:00Z",
   "result": "running",
-  "working_on": "Six new pieces on the board (two per worker) after three empty worker runs; integration still blocked by the command wrapper (your fix needed)",
-  "as_of": "2026-11-05T08:25:00Z"
+  "working_on": "Seven new pieces on the board after six merges (incl. a red registry test to fix first); integration still blocked by the command wrapper (your fix needed)",
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-05T07:20:00Z",
+  "last_run": "2026-11-05T11:20:00Z",
   "result": "ok",
-  "working_on": "07:20 no claimable task (board empty, Lead fault, fixed); 05:20-05:39 lintel jamb bearing (merged); next: lintel pieces by standard length",
-  "as_of": "2026-11-05T08:25:00Z"
+  "working_on": "11:20-11:44 perimeter joint mortar at column faces (merged); 09:20-09:31 lintel pieces (merged); next: wall ends at columns missed by the junction census",
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-11-05T06:41:00Z",
+  "last_run": "2026-11-05T10:40:00Z",
   "result": "ok",
-  "working_on": "06:41 no claimable task (board empty, fixed); 04:41-04:56 pool-court build-up (merged); next: finish mortar table V6 (waste out of installed)",
-  "as_of": "2026-11-05T08:25:00Z"
+  "working_on": "10:40-10:55 pool-court window run and ledge (merged); 08:40-08:46 finish mortar table V6 (merged); next: stair marble bed cement and sand (owner Q-53)",
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-11-05T07:00:02Z",
+  "last_run": "2026-11-05T11:00:00Z",
   "result": "ok",
-  "working_on": "07:01 no claimable task (board empty, fixed); 05:00-05:09 waste factor census (merged); next: material binding V2",
-  "as_of": "2026-11-05T08:25:00Z"
+  "working_on": "11:01-11:16 lintel concrete at deficit ends (merged); 09:00-09:12 material binding V2 (merged); next: fix the red registry test, then the wiring manifest",
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-11-05T07:51:00Z",
+  "last_run": "2026-11-05T11:51:00Z",
   "result": "ok",
-  "working_on": "07:51 and 06:52 nothing ready; 05:51-06:09 lintel bearing, pool-court build-up and waste census merged",
-  "as_of": "2026-11-05T08:25:00Z"
+  "working_on": "11:51-12:05 three pieces checked and merged (perimeter mortar, lintel end zones, pool-court window / ledge); 6 merged since 08:15, 0 rejected",
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused by you 28 Oct 21:44; its last run (27 Oct 23:50) failed on the usage limit",
-  "as_of": "2026-11-05T08:25:00Z"
+  "as_of": "2026-11-05T12:25:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-11-05T00:54:29Z",
   "result": "ok",
   "working_on": "Refreshed 00:54 UTC; next 12:54 UTC",
-  "as_of": "2026-11-05T08:25:00Z"
+  "as_of": "2026-11-05T12:25:00Z"
  }
 ]
