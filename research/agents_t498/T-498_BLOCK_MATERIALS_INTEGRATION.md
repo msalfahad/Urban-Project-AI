@@ -1,7 +1,17 @@
-# T-498 blockwork MATERIALS wiring: integration package ARCH_TAKEOFF_V3.0.57 (stream S; method every villa)
+# T-498 blockwork MATERIALS wiring: integration package ARCH_TAKEOFF_V3.0.58 (stream S; method every villa)
 
-Worker 3, 2026-11-04 (claim 21:00 UTC). Gate B integration package on the candidate of record ARCH_TAKEOFF_V3.0.56
-(T-508, merge 40ab9061; 4e25c54f). Opt-in candidate only; the released default V2.9 + route G is untouched; nothing
+Worker 3, 2026-11-04 (claim 21:00 UTC; r2 resumed 23:03 UTC). Gate B integration package on the candidate of record
+ARCH_TAKEOFF_V3.0.57 (T-310 r7, merge 87ef8718; 25a8b406).
+
+**r2 (rebase / renumber only, engineering unchanged).** r1 staged this package as V3.0.57 on V3.0.56 (53c15db2);
+T-310 r7 merged its own V3.0.57 (wet-area / pool waterproofing) and BOQ_FAMILY_MASTER 1.54.0 first, so by the
+merge-order rule this package is renumbered ARCH_TAKEOFF_V3.0.58 (engine/source/arch_v3058.py, extends A3057, its
+integrate re-runs every V3.0.57 check with no change), the hub line gains `a V3.0.58 run IS a V3.0.57 run first`, the
+runner wraps T-310's v3057_run, and the registry is 1.55.0 on 1.54.0. T-310 moved FIN.WP.* / WP.POOL.* lines only:
+the 88 MAS.BLOCK / STR.CONC.LINTEL lines of V3.0.57 equal the indexed V3.0.55 lines (asserted by v3058_apply.py), so
+every material figure below is unchanged: the 74 added lines carry the SAME line ids and figures as r1 (compared row
+by row against the r1 summary: 0 rows differ). Sections 1 - 6 keep r1's text; read "V3.0.57" in them as this package
+(now V3.0.58) where it names the package, and the base as V3.0.57. Opt-in candidate only; the released default V2.9 + route G is untouched; nothing
 released. No drawing, workbook, client name or coordinate in this folder.
 
 ## 1. Physical element (ERS s.2.1)
@@ -78,6 +88,25 @@ vs released V2.9 + route G: no material line exists there (all 74 NOT_IN_RELEASE
 'released 0.0' for MAS.UNITS.WHITE whose 17 lines are all blank: same class as F-C-T508-1 (summary printer, T-512's
 fix), the lines themselves carry no figure. Registry: BOQ_FAMILY_MASTER_1.54.0 (T-508 promoted; census at V3.0.56
 4,989 lines, issues 0; pending V3.0.57; MAS.UNITS.* on B9-01, MAS.MORTAR.BLACK / MAS.GLUE.AAC on B9-04).
+
+## 4b. r2 run of record, registry, regression
+
+Own chain (this session, fresh Drive copies, sha P7757.dxf ab54dd55, "ST7757 dxf.dxf" 9f9d1179, decoded into
+.work/private only): T-167 v304_run -> research/agents_t498/v3058_run.py (one hub call through T-310 v3057_run ->
+T-508 v3056_run, unchanged): V3_0_53 36863f6c, V3_0_54 c85c4630, V3_0_55 a498fc61, V3_0_56 4e25c54f, V3_0_57
+**25a8b406** (every candidate of record reproduced) -> V3_0_58 **436f1e78**, 5,068 lines = 4,994 byte-identical + 74
+added + 0 changed; v3058_apply.py on the hub's V3_0_57 gives the same 436f1e78 (summary_t498.json). Totals move only in
+the four material codes (asserted; same table as section 4a). vs released V2.9 + route G: all 74 NOT_IN_RELEASED.
+
+Registry BOQ_FAMILY_MASTER_1.55.0 (build_master_1_55_0.py; 1.54.0 never edited): T-310 PROMOTED by R-T485-1 (merge
+87ef8718, Verifier 22:45 Gate B; line diff V3.0.56 -> 57 = B8-01 / B8-02 / B8-03 / B8-09, all four re-derived
+INTEGRATED_IN_CANDIDATE_AND_TESTED; B8-09 enters the candidate); census at V3.0.57 (out/LINE_INDEX_V3_0_57.json, 4,994
+lines, issues {}; the same tool on V3_0_56 reproduces T-310's LINE_INDEX_V3_0_56.json byte for byte); pending
+V3.0.58 (T-498); MAS.UNITS.* on B9-01, MAS.MORTAR.BLACK / MAS.GLUE.AAC on B9-04; **B9-04 capability NOT_IMPLEMENTED ->
+IMPLEMENTED_NOT_INTEGRATED** (RAISED, the T-199 1.25.0 precedent: merged, tested opt-in code writes its codes,
+arch_v3058.py:332 / :477; released_method_reads stays none; name_terms leave; counts NOT_IMPLEMENTED 9 -> 8,
+IMPLEMENTED_NOT_INTEGRATED 26 -> 27). This closes the r1 stage's red guards (t130 1_1_0 x3, t199 1_25_0 x1:
+'governing registry NOT_IMPLEMENTED hit', B9-04 owning written codes while NOT_IMPLEMENTED).
 
 ## 5. Lintel pieces
 

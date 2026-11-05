@@ -32,39 +32,49 @@ def test_only_material_text_codes_and_the_promotion_change(docs):
     ob = {f["code"]: f for f in old["families"]}
     nb = {f["code"]: f for f in new["families"]}
     assert {c for c in nb if {k: v for k, v in nb[c].items() if k != "candidate"}
-            != {k: v for k, v in ob[c].items() if k != "candidate"}} == {"B9-01", "B9-04", "B7-07", "B7-08"}
-    # B7-07 / B7-08: their first candidate lines merged with T-508 (promotion), state re-derived from the census
+            != {k: v for k, v in ob[c].items() if k != "candidate"}} == {"B9-01", "B9-04", "B8-09"}
+    # B8-09: its first candidate lines (pool layers) merged with T-310 (promotion): in_v3_0_candidate follows the census
+    assert (ob["B8-09"]["in_v3_0_candidate"], nb["B8-09"]["in_v3_0_candidate"]) == ("no", "yes")
+    # B8-01 .. B8-03 / B8-09: the T-310 line diff re-derives their states from the census (promotion)
     assert {c: nb[c]["candidate"]["state"] for c in nb if nb[c]["candidate"]["state"] != ob[c]["candidate"]["state"]} \
-        == {"B7-07": "HELD_IN_CANDIDATE", "B7-08": "HELD_IN_CANDIDATE"}
+        == {c: "INTEGRATED_IN_CANDIDATE_AND_TESTED" for c in ("B8-01", "B8-02", "B8-03", "B8-09")}
     assert nb["B9-01"]["item_codes"] == ob["B9-01"]["item_codes"] + [A.U_BLACK, A.U_WHITE]
     assert (ob["B9-04"]["item_codes"], nb["B9-04"]["item_codes"]) == ([], [A.MORTAR, A.GLUE])
     for c in ("B9-01", "B9-04"):
-        for k in ("in_v3_0_candidate", "capability", "v3_0_planned_tasks"):
+        for k in ("in_v3_0_candidate", "v3_0_planned_tasks"):
             assert nb[c][k] == ob[c][k]
         assert A.METHOD in nb[c]["opt_in_readers"]
+    assert nb["B9-01"]["capability"] == ob["B9-01"]["capability"]
+    # B9-04: merged opt-in code writes its two codes -> IMPLEMENTED_NOT_INTEGRATED (the released route reads none)
+    assert (ob["B9-04"]["capability"], nb["B9-04"]["capability"], nb["B9-04"]["capability_change"]) == \
+        ("NOT_IMPLEMENTED", "IMPLEMENTED_NOT_INTEGRATED", "RAISED")
+    assert nb["B9-04"]["released_method_reads"] == "none" and "name_terms" not in nb["B9-04"]
+    assert all("arch_v3058.py:" in e or "test_arch_v3058.py:" in e for e in nb["B9-04"]["evidence"])
+    oc, nc = old["capability_counts"], new["capability_counts"]
+    assert {k: nc[k] - oc[k] for k in oc if nc[k] != oc[k]} == {"NOT_IMPLEMENTED": -1, "IMPLEMENTED_NOT_INTEGRATED": 1}
     owners = {}
     for f in new["families"]:
         for x in f.get("item_codes") or ():
             owners.setdefault(x, []).append(f["code"])
     assert all(owners[c] == [A.FAMILY[c]] for c in A.CODES)                     # one owner per code
-    assert [p["task"] for p in old["pending_packages"]] == ["T-508"]
+    assert [p["task"] for p in old["pending_packages"]] == ["T-310"]
     promoted = new["candidate_packages"][-1]
     assert new["candidate_packages"][:-1] == old["candidate_packages"]
-    assert (promoted["task"], promoted["merge_commit"][:8], promoted["gate"]) == ("T-508", "40ab9061", "GATE_B")
-    assert promoted["families_changed_by_line_diff"] == ["B3-06", "B7-07", "B7-08"]
+    assert (promoted["task"], promoted["merge_commit"][:8], promoted["gate"]) == ("T-310", "87ef8718", "GATE_B")
+    assert promoted["families_changed_by_line_diff"] == ["B8-01", "B8-02", "B8-03", "B8-09"]
     p = new["pending_packages"][-1]
     assert [x["task"] for x in new["pending_packages"]] == ["T-498"]
     assert (p["task"], p["method_version"], p["module"]) == ("T-498", A.METHOD, "engine/source/arch_v3058.py")
     assert p["changes_families_by_item_code"] == list(A.CODES)
     assert "merge_commit" not in p and FMC.SHA40.match(p["task_commit"])
     cen, ocen = new["candidate_census"], old["candidate_census"]
-    assert cen["method_version"] == "ARCH_TAKEOFF_V3.0.56" and cen["lines"] == 4989 and cen["issue_counts"] == {}
-    assert cen["lines_sha256"].startswith("4e25c54f")
-    assert {c for c in cen["families"] if cen["families"][c] != ocen["families"][c]} == {"B3-06", "B7-07", "B7-08",
-                                                                                         "B9-04"}
+    assert cen["method_version"] == "ARCH_TAKEOFF_V3.0.57" and cen["lines"] == 4994 and cen["issue_counts"] == {}
+    assert cen["lines_sha256"].startswith("25a8b406")
+    assert {c for c in cen["families"] if cen["families"][c] != ocen["families"][c]} == {"B8-01", "B8-02", "B8-03",
+                                                                                         "B8-09", "B9-04"}
     assert (ocen["families"]["B9-04"]["in_candidate"], cen["families"]["B9-04"]["in_candidate"]) == \
         ("n/a: owns no item code", "no") and cen["families"]["B9-04"]["lines"] == 0
-    for k in ("capability_counts", "not_a_boq_line_codes"):
+    for k in ("not_a_boq_line_codes",):
         assert new.get(k) == old.get(k)
 
 
