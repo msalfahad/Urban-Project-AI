@@ -47,13 +47,16 @@ hole not on its face, hole larger than the doorway piece, carrying line in anoth
 measure pair not the formula, 2 pcs, mm-scale slip, two material states left, set aside AND changed, stale set-aside
 name, a quantity moved, unknown code / action, mirrored face order.
 
-## 5. Not done in this run (next stage, same row)
+## 5. Registry and what is still open
 
-1. BOQ_FAMILY_MASTER 1.55.0 (promotion of the merged T-310 V3.0.57 by R-T485-1 + pending V3.0.58): the registry tests
-   t310 / t508 / t488 `test_checks_clean*` FAIL on this head until it exists (a newer candidate module than the
-   registry's as_of): this is why the row is not READY.
-2. The full hub run `research/agents_t423/v3058_run.py` end to end (V3_0_58 sha from the hub must equal `ae938fca`).
-3. L4 and the maps / GIT_FACTS as the T-310 package did.
+BOQ_FAMILY_MASTER **1.55.0** (research/agents_t423/build_master_1_55_0.py, the T-310 builder re-pointed): 1.54.0 + T-310
+V3.0.57 promoted by R-T485-1 (merge 87ef8718 + verdict from the board, out/PROMOTIONS_SOURCE_1_55_0.json; line diff
+V3.0.56 -> V3.0.57 = B8-01 / B8-02 / B8-03 / B8-09, out/T423_PACKAGE_FAMILIES.json; census at V3.0.57,
+out/LINE_INDEX_V3_0_57.json, issues {}; the same census tool on V3_0_56 reproduces T-310's LINE_INDEX_V3_0_56.json byte
+for byte) + pending V3.0.58 + B3-01 / B3-04 / B4-01 / B4-03 / B5-01 text; 0 problems; RULES_MANIFEST by its tool.
+
+Still open: the end-to-end hub run `research/agents_t423/v3058_run.py` (the hub is wired and its V3_0_58 sha must equal
+`ae938fca`, produced here by the same module calls on the reproduced V3_0_57); L4.
 
 ## 6. Lessons-register row (proposed)
 
