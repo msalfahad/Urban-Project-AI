@@ -1,0 +1,1631 @@
+{
+ "census": {
+  "factor_records": 13,
+  "keys": 92,
+  "producers": [
+   "FINISH_MATERIALS_TABLE_V1",
+   "STAIR_BED_V1",
+   "T-453",
+   "T-454",
+   "T-455",
+   "T-489",
+   "T-495",
+   "T-500",
+   "T-505",
+   "T-514"
+  ],
+  "read": 92,
+  "rows_behind": 3377,
+  "unread": 0,
+  "unread_keys": []
+ },
+ "checks": {
+  "finish_v1_v5_lineage": {
+   "area_m2": 10.0,
+   "folded": true,
+   "physical_m3": [
+    0.3,
+    0.4
+   ],
+   "v1_has_waste_field": false,
+   "v1_mortar_m3": [
+    0.315,
+    0.42
+   ],
+   "v2_materials_is_v1": true,
+   "v5_mortar_m3": [
+    0.315,
+    0.42
+   ],
+   "waste_fraction": 0.05
+  },
+  "rounding_scopes": {
+   "high": {
+    "excess_if_summed": 1,
+    "fractional": 144.440301,
+    "sum_of_item_code_ceils": 146,
+    "t500_project_ceil": 145
+   },
+   "low": {
+    "excess_if_summed": 0,
+    "fractional": 104.736047,
+    "sum_of_item_code_ceils": 105,
+    "t500_project_ceil": 105
+   },
+   "t511_project_cement_status": "HELD",
+   "t511_whole_bag_scopes_now": []
+  },
+  "stair_bed_q45_scope": {
+   "CEMENT_50KG": {
+    "installed": 10.178704,
+    "lines": 11,
+    "q45_waste_beside": 0.508935
+   },
+   "SAND_LOOSE": {
+    "installed": 1.06028,
+    "lines": 11,
+    "q45_waste_beside": 0.053014
+   }
+  },
+  "stair_purchasing_allowance": {
+   "checked": 44,
+   "fails": []
+  },
+  "t495_binding": [
+   {
+    "bound_m3": [
+     0.206291,
+     0.275054
+    ],
+    "folded_5pct": true,
+    "installed_m3": [
+     0.196468,
+     0.261956
+    ],
+    "overstatement_m3": [
+     0.009823,
+     0.013098
+    ],
+    "row": "BED|L-1c51d1e7a3b65243382a|PORCELAIN_CERAMIC",
+    "stage": "INSTALLED"
+   },
+   {
+    "bound_m3": [
+     0.336373,
+     0.448497
+    ],
+    "folded_5pct": true,
+    "installed_m3": [
+     0.320355,
+     0.42714
+    ],
+    "overstatement_m3": [
+     0.016018,
+     0.021357
+    ],
+    "row": "BED|L-dd6e372825ce06d45bdd|PORCELAIN_CERAMIC",
+    "stage": "INSTALLED"
+   },
+   {
+    "bound_m3": [
+     0.336373,
+     0.448497
+    ],
+    "folded_5pct": true,
+    "installed_m3": [
+     0.320355,
+     0.42714
+    ],
+    "overstatement_m3": [
+     0.016018,
+     0.021357
+    ],
+    "row": "BED|L-dd6e372825ce06d45bdd|MARBLE_STONE",
+    "stage": "INSTALLED"
+   }
+  ],
+  "t500_arithmetic": {
+   "checked": 616,
+   "fails": []
+  },
+  "t514_arithmetic": {
+   "checked": 12,
+   "fails": []
+  }
+ },
+ "factors": [
+  {
+   "code": "research/agents_t500/t500_tile_bed_mortar.py:193-200 (waste_* fields, procurement = installed x (1+w))",
+   "factor": "mortar waste",
+   "id": "FX-01",
+   "keys": "TILE_BED cement / sand",
+   "match": [
+    [
+     "T-500",
+     "TILE_BED"
+    ]
+   ],
+   "rounding": "whole cement bags per item code (DRY, WET) AND per T-500 project: sub-groups (see F-T518-3)",
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05,
+   "verdict": "OK: sourced, separate field; scope = Q-45 floor / bartash beds"
+  },
+  {
+   "code": "research/agents_t514/t514_screed_bed_producers.py:177-178, 297-301",
+   "factor": "mortar waste",
+   "id": "FX-02",
+   "keys": "FLOOR_TILE_BED cement / sand",
+   "match": [
+    [
+     "T-514",
+     "FLOOR_TILE_BED"
+    ]
+   ],
+   "rounding": "none at row level (T-511 project subtotal)",
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05,
+   "verdict": "OK: sourced (the producer's label 'PROVISIONAL, V1 record' undersells it: owner-approved, provisional rate); scope: an outdoor porcelain floor bed is a Q-45 'floor' bed"
+  },
+  {
+   "code": "research/agents_t514/t514_screed_bed_producers.py:182-187, 291-295",
+   "factor": "mortar waste",
+   "id": "FX-03",
+   "keys": "threshold stone bed / screeds (no merged row: HELD before any material)",
+   "match": [
+    [
+     "T-514",
+     "THRESHOLD"
+    ],
+    [
+     "T-514",
+     "SCREED"
+    ],
+    [
+     "T-514",
+     "STONE"
+    ]
+   ],
+   "rounding": "-",
+   "source": null,
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-514",
+   "value": null,
+   "verdict": "OK: HELD, never 0 (Q-45 scope does not cover screeds: Q-41 thickness HELD)"
+  },
+  {
+   "code": "research/agents_t511/t511_cement_sand_census.py:585-594 (PROCUREMENT = m3 x 10 / 1.00; WASTE HELD)",
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "id": "FX-04",
+   "keys": "STAIR_BED_1:3 cement / sand",
+   "match": [
+    [
+     "STAIR_BED_V1",
+     "STAIR_BED"
+    ]
+   ],
+   "rounding": "T-511 subtotals",
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null,
+   "verdict": "PURCHASING RATE sourced; WASTE HELD while the Q-45 B 5 % (owner-approved on Q-45 mortar, which named the marble stair bed) is applied to the same bed by FINISH V1: two producers disagree (F-T518-2)"
+  },
+  {
+   "code": "research/agents_t453/t453_material_ledger.py:267-272, 359-364",
+   "factor": "mortar / glue waste",
+   "id": "FX-05",
+   "keys": "black-block mortar m3, cement, sand; AAC glue kg / bags",
+   "match": [
+    [
+     "T-453",
+     "MASONRY_LAYING"
+    ]
+   ],
+   "rounding": "AAC glue: ceil once per PROJECT group (HELD: 11 held lines, known 229.5755 kg)",
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null,
+   "verdict": "OK: HELD; the Q-45 5 % is NOT borrowed (R-T518-3)"
+  },
+  {
+   "code": "research/agents_t453/t453_material_ledger.py:334-342",
+   "factor": "breakage / cutting",
+   "id": "FX-06",
+   "keys": "black / AAC block units",
+   "match": [
+    [
+     "T-453",
+     "MASONRY_UNITS"
+    ]
+   ],
+   "rounding": "procurement count HELD (theoretical not rounded)",
+   "source": "UPC-BLACK-BLOCK-001 waste null ('never a hardcoded 5 %'); Q-75 'track waste separately'",
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null,
+   "verdict": "OK: HELD, never 0"
+  },
+  {
+   "code": "research/agents_t453/t453_material_ledger.py (lintels)",
+   "factor": "none",
+   "id": "FX-07",
+   "keys": "lintel concrete m3 (no candidate line)",
+   "match": [
+    [
+     "T-453",
+     "LINTEL_RC"
+    ]
+   ],
+   "rounding": "-",
+   "source": null,
+   "stage": "NONE",
+   "status": "NO FACTOR",
+   "table": "T-453",
+   "value": null,
+   "verdict": "OK: no factor applied"
+  },
+  {
+   "code": "research/agents_t511/t511_cement_sand_census.py:479-481 (WASTE / PROCUREMENT HELD)",
+   "factor": "mortar waste",
+   "id": "FX-08",
+   "keys": "bond coat / levelling render / wall plaster mortar, cement, sand",
+   "match": [
+    [
+     "T-454",
+     ""
+    ],
+    [
+     "T-489",
+     ""
+    ]
+   ],
+   "rounding": "-",
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-454 / T-489",
+   "value": null,
+   "verdict": "OK: HELD (Q-45 'wall mortar 2 cm' is the superseded wet-wall bed, not plaster: R-T518-3)"
+  },
+  {
+   "code": "engine/source/finish_materials_table_v4.py:222-245 (ceil per group), :235",
+   "factor": "adhesive waste",
+   "id": "FX-09",
+   "keys": "tile adhesive bags",
+   "match": [
+    [
+     "T-455",
+     "TILE_ADHESIVE"
+    ],
+    [
+     "T-495",
+     "TILE_ADHESIVE"
+    ]
+   ],
+   "rounding": "ceil once per adhesive product at the PROJECT group (HELD group: no bags to buy; V5 AT_LEAST)",
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-455 / V4 / V5",
+   "value": null,
+   "verdict": "OK"
+  },
+  {
+   "code": "engine/source/finish_materials_table_v4.py:81, 262-272",
+   "factor": "cutting waste from layout + 1 spare box per tile product",
+   "id": "FX-10",
+   "keys": "tiles, boxes",
+   "match": [
+    [
+     "T-455",
+     "TILE_UNITS"
+    ]
+   ],
+   "rounding": "ceil(project tiles / pieces per box) per tile product, once; per-room sum beside only",
+   "source": "UP-CER-010@1.0.0 (owner 2026-10-12); spare: owner directive 2026-11-02 B3 as transcribed on the T-455 board row (not in the answered register)",
+   "stage": "LAYOUT (cutting plan), no %",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-455 / V4 / V5",
+   "value": null,
+   "verdict": "OK (boxes HELD: no pieces per box sourced)"
+  },
+  {
+   "code": "engine/source/finish_materials_table.py:67, 213-215 (mortar_m3 = area x bed x 1.05; cement / sand from it); finish_materials_table_v2.py:47-49 re-exports; v3 V2.row for every kind but WET_WALL; v4:198, v5",
+   "factor": "mortar waste",
+   "id": "FX-11",
+   "keys": "V1 mortar_m3 / cement / sand per finish row",
+   "match": [
+    [
+     "FINISH_MATERIALS_TABLE_V1",
+     "TILE_BED"
+    ]
+   ],
+   "rounding": "V1 project ceil of the summed bags",
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSIDE INSTALLED (DEFECT)",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "FINISH_MATERIALS_TABLE_V1 (V2..V5 inherit)",
+   "value": 0.05,
+   "verdict": "DEFECT D-T518-1: sourced value, wrong place (no waste field; mortar_m3 carries it). T-511 reads it correctly as a PROCUREMENT reader; unwired, no candidate quantity affected"
+  },
+  {
+   "code": "research/agents_t495/t495_finish_held_ledger.py:166-167 (V1 materials, '+5 % waste: a BOUND'); research/agents_t496/t496_binding_map.py:297-300 binds bed_mortar_m3 at stage INSTALLED",
+   "factor": "mortar waste",
+   "id": "FX-12",
+   "keys": "outdoor bed option mortar m3 / cement / sand",
+   "match": [
+    [
+     "T-495",
+     "OUTDOOR_BED"
+    ],
+    [
+     "T-495",
+     "TILE_BED_MORTAR"
+    ]
+   ],
+   "rounding": "-",
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSIDE INSTALLED (DEFECT)",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495 (bound by T-496)",
+   "value": 0.05,
+   "verdict": "DEFECT D-T518-2 (T-496 stage label): T-511 classes the same figures PROCUREMENT (correct); both HELD, never summed"
+  },
+  {
+   "code": "research/agents_t505/disposal_balance_v2.py:58-68",
+   "factor": "loss_reuse, loss_import",
+   "id": "FX-13",
+   "keys": "disposal / import loss terms",
+   "match": [
+    [
+     "T-505",
+     ""
+    ]
+   ],
+   "rounding": "-",
+   "source": "owner 2026-11-02 18:00 (3): losses separate accounts; values need a source",
+   "stage": "WASTE HELD, PROCUREMENT HELD",
+   "status": "NO SOURCE",
+   "table": "T-505",
+   "value": null,
+   "verdict": "OK: HELD, never 0"
+  }
+ ],
+ "findings": {
+  "D-T518-1": "FINISH_MATERIALS_TABLE V1 (engine/source/finish_materials_table.py:213-215) folds the Q-45 B 5 % into mortar_m3 / cement / sand with no waste field; V2 (:49 materials = V1.materials), V3 (every kind but WET_WALL via V2.row), V4 (:198) and V5 inherit it. Fix: a new version with installed / waste / procurement fields (T-500 shape); V1..V5 untouched.",
+  "D-T518-2": "T-496 binds the T-495 outdoor bed option mortar (V1, 5 % folded) at stage INSTALLED (t496_binding_map.py:297-300); T-511 classes the same figures PROCUREMENT. HELD, never summed.",
+  "F-T518-1": "F-C-T514-1 resolved: the 5 % on the Q-45 tile beds is ASSUMED - OWNER-APPROVED (Q-45 B + owner correction 2026-10-20 12:15), not unsourced; T-500 / T-514 apply it in a separate field.",
+  "F-T518-2": "Stair 1:3 bed: FINISH V1 applies the Q-45 B 5 % (Q-45 named the marble stair bed); STAIR_BED_V1 (Q-53 C / UP-STAIR-017) holds waste and uses the purchasing allowance. Two producers, two readings of one owner factor: waste stays HELD with the 5 % BESIDE until the Lead / Checker rule which governs (no stacking of 5 % on the purchasing allowance).",
+  "F-T518-3": "Cement whole bags are printed at sub-group scopes (T-500 per item code and per table; T-511 per trade); the purchasing group of 50 kg cement is the villa (all trades). A sum of sub-group ceilings is never a purchase (R-T518-2).",
+  "factors_inside_installed": [
+   "FX-11",
+   "FX-12"
+  ],
+  "unsourced_factor_applied": []
+ },
+ "input_sha256": {
+  "research/agents_t453/out/MATERIAL_LEDGER_T453.json": "ad9bceee3bfdbc12218edec2a648e39104f3503bd73342c8ebb451b8394c13f9",
+  "research/agents_t455/out/TILE_PURCHASE_T455.json": "30f3c90eeee907b9e531d73c9e43f3ec8dae8d249a4151963046c48e0ec9bed8",
+  "research/agents_t496/out/BINDING_MAP_T496.json": "270a13c46e74ef1f0167ba6b91b6320b1d3cb39edfa56be4b2d9418f41fe96b5",
+  "research/agents_t500/out/TILE_BED_MORTAR_T500.json": "e2689c7c3da11d9faf4a2133cd2946d96a74c4fe8c252471e6256ad8d2243a61",
+  "research/agents_t505/summary_t505.json": "8307f721485b6c5a7f49753613176775c8dc71f09b9e09a1537e5e8c4551dd36",
+  "research/agents_t511/out/CEMENT_SAND_CENSUS_T511.json": "a2716399281fbf9dde2e5e762b57562dabe8edccb53af9781da82bc58678aea5",
+  "research/agents_t514/out/SCREED_BED_PRODUCERS_T514.json": "dcd3e0aaa6f426595dea88f6077d4628e2e9da351ae67cb5d10b662bed2eb9de"
+ },
+ "keys": [
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-11",
+   "layer": "TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 44,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "FINISH_MATERIALS_TABLE_V1",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-11",
+   "layer": "TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 44,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "FINISH_MATERIALS_TABLE_V1",
+   "value": 0.05
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "CEMENT_50KG",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "CEMENT_50KG",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "CEMENT_50KG",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "SAND_LOOSE",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "SAND_LOOSE",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "purchasing allowance (cement 10 / 9.576 = x1.044277; sand 1.00 / 0.9975 = x1.002506)",
+   "factor_id": "FX-04",
+   "layer": "STAIR_BED_1:3",
+   "material": "SAND_LOOSE",
+   "placement": "PURCHASING-ALLOWANCE RATE (separate layer)",
+   "rows_behind": 31,
+   "source": "Q-53 C / UP-STAIR-017@1.0.0 purchasing_allowance (owner 2026-10-20 12:02)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "STAIR_BED_V1",
+   "value": null
+  },
+  {
+   "factor": "none",
+   "factor_id": "FX-07",
+   "layer": "LINTEL_RC",
+   "material": "concrete_m3",
+   "placement": "NONE",
+   "rows_behind": 60,
+   "source": null,
+   "stage": "NO_CANDIDATE_LINE",
+   "status": "NO FACTOR",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 11,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 4,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "glue_bags_25kg",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "PURCHASE",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "glue_bags_25kg_net",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 8,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "glue_kg",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 8,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "laying_material",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 14,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 4,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar / glue waste",
+   "factor_id": "FX-05",
+   "layer": "MASONRY_LAYING",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 4,
+   "source": "UPC-BLACK-MORTAR-001 not_given 'mortar waste (sourced value only)'; UPC-AAC-GLUE-001 waste null",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "breakage / cutting",
+   "factor_id": "FX-06",
+   "layer": "MASONRY_UNITS",
+   "material": "units_nr",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-BLACK-BLOCK-001 waste null ('never a hardcoded 5 %'); Q-75 'track waste separately'",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "breakage / cutting",
+   "factor_id": "FX-06",
+   "layer": "MASONRY_UNITS",
+   "material": "units_nr",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 26,
+   "source": "UPC-BLACK-BLOCK-001 waste null ('never a hardcoded 5 %'); Q-75 'track waste separately'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-453",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-454",
+   "value": null
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "adhesive_bags_20kg",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 64,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-455",
+   "value": null
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "bags_20kg",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "PURCHASE",
+   "status": "NO SOURCE",
+   "table": "T-455",
+   "value": null
+  },
+  {
+   "factor": "cutting waste from layout + 1 spare box per tile product",
+   "factor_id": "FX-10",
+   "layer": "TILE_UNITS",
+   "material": "boxes",
+   "placement": "LAYOUT (cutting plan), no %",
+   "rows_behind": 1,
+   "source": "UP-CER-010@1.0.0 (owner 2026-10-12); spare: owner directive 2026-11-02 B3 as transcribed on the T-455 board row (not in the answered register)",
+   "stage": "PURCHASE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-455",
+   "value": null
+  },
+  {
+   "factor": "cutting waste from layout + 1 spare box per tile product",
+   "factor_id": "FX-10",
+   "layer": "TILE_UNITS",
+   "material": "tiles_nr",
+   "placement": "LAYOUT (cutting plan), no %",
+   "rows_behind": 64,
+   "source": "UP-CER-010@1.0.0 (owner 2026-10-12); spare: owner directive 2026-11-02 B3 as transcribed on the T-455 board row (not in the answered register)",
+   "stage": "THEORETICAL",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-455",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "BOND_COAT",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 70,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "LEVELLING_RENDER",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 34,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "CEMENT_50KG",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "PROCUREMENT",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "SAND_LOOSE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "WASTE",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "cement_bags",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "mortar_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "INSTALLED",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-08",
+   "layer": "WALL_PLASTER",
+   "material": "sand_m3",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 52,
+   "source": "UPC-CEMENT-LAYERS-METHOD-001 values null; no owner record",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-489",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "OUTDOOR_BED@MARBLE_STONE",
+   "material": "CEMENT_50KG",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "OUTDOOR_BED@MARBLE_STONE",
+   "material": "SAND_LOOSE",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "OUTDOOR_BED@PORCELAIN_CERAMIC",
+   "material": "CEMENT_50KG",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 2,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "OUTDOOR_BED@PORCELAIN_CERAMIC",
+   "material": "SAND_LOOSE",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 2,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "adhesive_bags_20kg@INTERLOCK",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-495",
+   "value": null
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "adhesive_bags_20kg@MARBLE_STONE",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-495",
+   "value": null
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "adhesive_bags_20kg@PORCELAIN_CERAMIC",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 2,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-495",
+   "value": null
+  },
+  {
+   "factor": "adhesive waste",
+   "factor_id": "FX-09",
+   "layer": "TILE_ADHESIVE",
+   "material": "adhesive_bags_20kg@TIMBER_DECK",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "UPC-ADHESIVE-001 waste null; purchase 'waste NOT APPLIED'",
+   "stage": "THEORETICAL",
+   "status": "NO SOURCE",
+   "table": "T-495",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "TILE_BED_MORTAR",
+   "material": "bed_mortar_m3@INTERLOCK",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "TILE_BED_MORTAR",
+   "material": "bed_mortar_m3@MARBLE_STONE",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "TILE_BED_MORTAR",
+   "material": "bed_mortar_m3@PORCELAIN_CERAMIC",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 2,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-12",
+   "layer": "TILE_BED_MORTAR",
+   "material": "bed_mortar_m3@TIMBER_DECK",
+   "placement": "INSIDE INSTALLED (DEFECT)",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-495",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "MORTAR_M3",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 88,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-01",
+   "layer": "TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 132,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-500",
+   "value": 0.05
+  },
+  {
+   "factor": "loss_reuse, loss_import",
+   "factor_id": "FX-13",
+   "layer": "LOSS",
+   "material": "loss_import",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "owner 2026-11-02 18:00 (3): losses separate accounts; values need a source",
+   "stage": "LOSS",
+   "status": "NO SOURCE",
+   "table": "T-505",
+   "value": null
+  },
+  {
+   "factor": "loss_reuse, loss_import",
+   "factor_id": "FX-13",
+   "layer": "LOSS",
+   "material": "loss_reuse",
+   "placement": "WASTE HELD, PROCUREMENT HELD",
+   "rows_behind": 1,
+   "source": "owner 2026-11-02 18:00 (3): losses separate accounts; values need a source",
+   "stage": "LOSS",
+   "status": "NO SOURCE",
+   "table": "T-505",
+   "value": null
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "CEMENT_50KG",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "INSTALLED",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "PROCUREMENT",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  },
+  {
+   "factor": "mortar waste",
+   "factor_id": "FX-02",
+   "layer": "FLOOR_TILE_BED",
+   "material": "SAND_LOOSE",
+   "placement": "SEPARATE WASTE FIELD -> PROCUREMENT",
+   "rows_behind": 1,
+   "source": "Q-45 answer B (owner 2026-10-19 21:40: practice values accepted incl. waste 5 % on mortar, PROVISIONAL rate); owner correction 2026-10-20 12:15 (OWNER_DIRECTIVE_2026-10-20.md withdrawal note: X3 'waste 5 % not owner-approved' WITHDRAWN, Q-45 values incl. waste 5 % keep their applicability)",
+   "stage": "WASTE",
+   "status": "ASSUMED - OWNER-APPROVED",
+   "table": "T-514",
+   "value": 0.05
+  }
+ ],
+ "released_quantities_changed": 0,
+ "rules": [
+  "R-T518-1@1.0.0 factor placement: sourced -> separate account in procurement; unsourced -> BESIDE, procurement HELD (AT_LEAST); installed never carries a factor",
+  "R-T518-2@1.0.0 round once per product at its purchasing group",
+  "R-T518-3@1.0.0 an owner factor applies only within the scope of its decision"
+ ],
+ "schema": "URBAN_T518_FACTOR_CENSUS_V1"
+}
