@@ -250,10 +250,36 @@ def test_stale_source_commit_refused():
         M.check_sources(bad)
 
 
-def test_unmerged_ready_piece_refused_as_source():
-    # T-534 is READY on its own branch, not merged: naming it as a source is refused
+def _git(repo, *a):
+    import subprocess
+    env = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@t", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@t",
+           "GIT_CONFIG_GLOBAL": "/dev/null", "GIT_CONFIG_NOSYSTEM": "1", "PATH": "/usr/bin:/bin:/usr/local/bin"}
+    return subprocess.run(["git", "-C", str(repo), *a], check=True, capture_output=True, env=env).stdout.decode().strip()
+
+
+def test_unmerged_ready_piece_refused_as_source(monkeypatch, tmp_path):
+    # a READY piece lives on its own branch, not merged: naming its commit as a source is refused. F-C-T536-1 (T-538):
+    # the case is built on a SYNTHETIC repository (base commit on the working branch + one commit on a side branch, the
+    # shape of every READY task branch), never on a live board commit that a later merge turns into an ancestor.
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _git(repo, "init", "-q", "-b", "work")
+    (repo / "f").write_text("base\n")
+    _git(repo, "add", "f")
+    _git(repo, "commit", "-q", "-m", "base")
+    base = _git(repo, "rev-parse", "HEAD")
+    _git(repo, "checkout", "-q", "-b", "agents/task-T-999")
+    (repo / "f").write_text("piece\n")
+    _git(repo, "commit", "-q", "-am", "READY piece")
+    ready = _git(repo, "rev-parse", "HEAD")
+    _git(repo, "checkout", "-q", "work")
+    monkeypatch.setattr(M, "ROOT", repo)
+    assert M.in_tree(base) is True and M.in_tree(ready) is False      # a real object of the tree, not an ancestor
+    M.check_sources({"T-998": {"merge": base[:8]}})                   # a merged source passes
     with pytest.raises(M.ManifestError, match="STALE_SOURCE"):
-        M.check_sources({"T-534": {"merge": "f97634e0"}})
+        M.check_sources({"T-999": {"merge": ready[:8]}})
+    with pytest.raises(M.ManifestError, match="STALE_SOURCE"):
+        M.check_sources({"T-998": {"merge": base[:8]}, "T-999": {"merge": ready}})
 
 
 def test_edited_v1_manifest_refused(monkeypatch):
