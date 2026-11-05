@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05T14:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-529 CLAIMED W2 14:41; T-527/T-530/T-531 TODO) | self-check pending
 - 2026-11-05T14:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-05T14:13Z | Verifier | SUCCESS | T-526 | T-526 GATE A PASS, MERGED engine 1c0ac911 (engine push): own DXF re-measure (own arch->ST alignment 20/20, 9/9) of 1F-W09 e0 on ST S-COL.BON 682 and 2F-W08 e0 on 41B: gap 0, full-thickness cover, not a run piece AGREE; length/m2/blocks delta 0; 1F-W09 perimeter +0.007021 m3 AGREE; unwired, no candidate/released quantity change; F-C-T526-1 end_junctions() knows only BLOCK/COLUMN, T-274 masonry pieces are BEAM/FACE (fix at wiring); F-C-T526-2 wording | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T13:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-526 READY (W1 13:36) | self-check pending
