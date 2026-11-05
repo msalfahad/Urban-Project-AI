@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 723 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 724 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 64 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2242 | pytest suites, one folder per round. |
+| `tests/` | 2244 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (370 modules)
+## `engine/source/` (371 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -552,8 +552,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_materials_table_v2.py` | 105 | MEDIUM | 3 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
 | `finish_materials_table_v3.py` | 194 | MEDIUM | 3 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
 | `finish_materials_table_v4.py` | 376 | MEDIUM | 3 | FINISH MATERIALS TABLE V4 (task T-455, owner directive 2026-11-02 B3 'tiles purchase quantities' as corrected by the |
-| `finish_materials_table_v5.py` | 213 | MEDIUM | 3 | FINISH MATERIALS TABLE V5 (task T-499, from F-T496-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
-| `finish_materials_table_v6.py` | 245 | MEDIUM | 1 | FINISH MATERIALS TABLE V6 (task T-521, from D-T518-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v5.py` | 213 | MEDIUM | 4 | FINISH MATERIALS TABLE V5 (task T-499, from F-T496-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v6.py` | 245 | MEDIUM | 3 | FINISH MATERIALS TABLE V6 (task T-521, from D-T518-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v7.py` | 236 | MEDIUM | 1 | FINISH MATERIALS TABLE V7 (task T-528, from Q-53 C; opt-in, UNWIRED_PRODUCER: read by no released method and by no |
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
@@ -675,7 +676,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
 | `rule_store.py` | 124 | HIGH | 20 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
-| `rule_store_v2.py` | 186 | MEDIUM | 1 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
+| `rule_store_v2.py` | 186 | MEDIUM | 3 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
@@ -1491,6 +1492,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t522_ledge_window/` | 1 |
 | `tests/t523_binding_map_v2/` | 1 |
 | `tests/t524_lintel_end_ownership/` | 2 |
+| `tests/t528_stair_bed_1_3/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
