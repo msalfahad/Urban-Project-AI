@@ -1,0 +1,26 @@
+{
+ "1F": {
+  "arch_columns": 20,
+  "matched": 20,
+  "max_residual_m": 0.0,
+  "structural_only_columns": [
+   "77B"
+  ]
+ },
+ "2F": {
+  "arch_columns": 9,
+  "matched": 9,
+  "max_residual_m": 0.0,
+  "structural_only_columns": []
+ },
+ "GF": {
+  "arch_columns": 30,
+  "matched": 30,
+  "max_residual_m": 0.0,
+  "structural_only_columns": [
+   "31B",
+   "329",
+   "386"
+  ]
+ }
+}
