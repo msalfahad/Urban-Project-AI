@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-05 04:56 UTC | Worker 2 | SUCCESS | T-517 READY 9c6cb0c4 | pool-court (POOLCOURT-550) build-up above the membrane now has its 4 rows: falls screed HELD on 4.906867 m2 (t0 unprinted, no outlet/falls drawn; Q-41 scope), insulation/protection UNKNOWN, finish 4.519172 m2 MEASURED from designer hatch 1250+1253 (face 4.906867 beside, 0.387695 m2 gap named: hatch on layer-2 lines), ledge 0.639573 all HELD; no separate bed (one falls volume); cement/sand census 0 two-producer, 2 HELD keys; if wired FIN.ROOF.FINISH 202.220 -> 206.739 m2 (+2.23 %); 20 tests pass | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T04:51Z | Verifier | SUCCESS | none (READY 0: T-516 / T-518 TODO, T-517 CLAIMED W2 04:41; T-498 / T-423 r2 BLOCKED on the wrapper allow-list) | no check, no merge, no quantity change: candidate of record stays ARCH_TAKEOFF_V3.0.58 c9570e6c (NOT RELEASED), released V2.9 + route G unchanged; SCOREBOARD v2 already restated 03:54 today, no merge since; CLOSABLE LINES unchanged (none CLOSABLE NOW), T-180 slot not spent; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-05T04:50Z | Verifier | STARTED | run session_01E6cPndtn3yniCgpmwtJiFx | repo-attached routine | task state: none READY (T-516 TODO, T-517 CLAIMED W2, T-518 TODO) | self-check pending
 - 2026-11-05 04:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
