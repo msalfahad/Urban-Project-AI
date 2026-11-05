@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4735 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 4741 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 64 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2256 | pytest suites, one folder per round. |
+| `tests/` | 2258 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -554,7 +554,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_materials_table_v4.py` | 376 | MEDIUM | 3 | FINISH MATERIALS TABLE V4 (task T-455, owner directive 2026-11-02 B3 'tiles purchase quantities' as corrected by the |
 | `finish_materials_table_v5.py` | 213 | MEDIUM | 4 | FINISH MATERIALS TABLE V5 (task T-499, from F-T496-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
 | `finish_materials_table_v6.py` | 245 | MEDIUM | 4 | FINISH MATERIALS TABLE V6 (task T-521, from D-T518-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
-| `finish_materials_table_v7.py` | 236 | MEDIUM | 2 | FINISH MATERIALS TABLE V7 (task T-528, from Q-53 C; opt-in, UNWIRED_PRODUCER: read by no released method and by no |
+| `finish_materials_table_v7.py` | 236 | MEDIUM | 3 | FINISH MATERIALS TABLE V7 (task T-528, from Q-53 C; opt-in, UNWIRED_PRODUCER: read by no released method and by no |
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
@@ -1497,6 +1497,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t528_stair_bed_1_3/` | 1 |
 | `tests/t529_ledge_exposure/` | 1 |
 | `tests/t530_wiring_manifest/` | 1 |
+| `tests/t534_stair_bed/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -2015,6 +2016,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t527/` | 7 |
 | `research/agents_t529/` | 4 |
 | `research/agents_t530/` | 2 |
+| `research/agents_t534/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
