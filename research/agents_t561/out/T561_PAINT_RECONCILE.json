@@ -1,0 +1,1236 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 paint lines)",
+ "candidate_valued_FIN_PAINT_m2": "217.2081",
+ "ceiling_paint_beside": {
+  "candidate_FIN_PAINT_CEILING_lines": 31,
+  "candidate_valued_m2": "394.825677",
+  "freelancer_decor_paint_m2": "452.325",
+  "note": "ceiling paint (decor ceilings, cove strips) is a CEILING item (Q-57 A modified); listed beside so no ceiling face enters the wall pairs; its reconciliation belongs to the ceiling family",
+  "reconciled_here": false
+ },
+ "census_FIN_PAINT": {
+  "DRY room line": {
+   "held_lines": 7,
+   "lines": 11,
+   "valued_m2": "217.2081"
+  },
+  "EXCLUDED (superseded route room line)": {
+   "held_lines": 0,
+   "lines": 14,
+   "valued_m2": "0"
+  },
+  "EXCLUDED (wet: paint above wall tile, none under full-height porcelain)": {
+   "held_lines": 0,
+   "lines": 17,
+   "valued_m2": "0"
+  },
+  "SHAFT": {
+   "held_lines": 3,
+   "lines": 3,
+   "valued_m2": "0"
+  }
+ },
+ "coats": "his paint rows carry no coats factor (area only); coats are a rate in the price build-up, never an area multiplier (R-T561-1 c)",
+ "cross_check_T552": {
+  "dry_pair_identical_to_T552": true,
+  "equals_his_soffit_rows": "39.99",
+  "paint_minus_plaster_his_gross": "39.990"
+ },
+ "external": {
+  "engine_valued_m2": "0",
+  "freelancer_paint_workbook_external_m2": "0",
+  "gap": "0",
+  "held_lines": [
+   {
+    "class": "HELD",
+    "element": "1F-FACADE:facade",
+    "item": "FIN.EXT.FINISH",
+    "line_id": "L-8bb83e16cc7b104ab88b"
+   },
+   {
+    "class": "HELD",
+    "element": "GF-FACADE:facade",
+    "item": "FIN.EXT.FINISH",
+    "line_id": "L-b05f70c92405dbcfbe62"
+   },
+   {
+    "class": "HELD",
+    "element": "2F-FACADE:facade",
+    "item": "FIN.EXT.FINISH",
+    "line_id": "L-d52c4f763b19aedf8b8b"
+   },
+   {
+    "class": "HELD",
+    "element": "2F-FACADE:facade",
+    "item": "ARCH.FACADE",
+    "line_id": "L-348c4d8d32f3f6d35fe5"
+   },
+   {
+    "class": "HELD",
+    "element": "1F-FACADE:facade",
+    "item": "ARCH.FACADE",
+    "line_id": "L-43527ae4e8ec75c56636"
+   },
+   {
+    "class": "HELD",
+    "element": "GF-FACADE:facade below F.F.L. (plinth)",
+    "item": "ARCH.FACADE",
+    "line_id": "L-c0e9a4c62171de1f369b"
+   },
+   {
+    "class": "HELD",
+    "element": "GF-FACADE:facade",
+    "item": "ARCH.FACADE",
+    "line_id": "L-cc7dc0a51f3319a99482"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-SEA:FACE:OUTSIDE:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-0a2fbaa46f6a6b23323e"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-LOWER:FACE:OUTSIDE:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-1c6a9f23a2f8320764a0"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-NORTH:FACE:OUTSIDE:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-1e9a80dbea82741116cf"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-SEA:FACE:PLOT:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-2246f2ea8b345ac80584"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-STREET:FACE:PLOT:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-4465d1e72082b5678e4a"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-STREET:FACE:OUTSIDE:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-8502adc8f55776e67a28"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-LOWER:FACE:PLOT:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-8c90675aafd8738b1e26"
+   },
+   {
+    "class": "HELD",
+    "element": "FENCE:F-NORTH:FACE:PLOT:PAINT",
+    "item": "EXT.FENCE.PAINT",
+    "line_id": "L-bac8095037312e3e90f4"
+   }
+  ],
+  "his_rows_labelled_external_in_paint_sheet": [
+   29
+  ],
+  "note": "his paint workbook prices no exterior face (his row 29 'windows external spaces' is an opening of his internal list). His exterior coating (Sigma) is measured as his exterior plaster area in the plaster workbook (OWNER_NOTES_SIGMA_2026-10-21: 1,502.84 gross / 1,469.97 net), reconciled once by T-552 s.4 / T-567, never again here. Every candidate exterior finish line is HELD blank (T-314 QUEUED); boundary-wall paint EXT.FENCE.PAINT is another trade (Q-65 C)."
+ },
+ "inputs_sha256_16": {
+  "research/agents_t128/ROOMS_T128_R3.csv": "696333bc12f0acb9",
+  "research/agents_t281/summary.json": "8cce8bfc55b4c1a0",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "research/agents_t552/out/T552_PLASTER_RECONCILE.json": "706ff9fde046462b",
+  "research/agents_t552/t552_inputs.py": "d15d1425eed8cb16",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "internal": {
+  "by_cause": {
+   "ENGINE_RIGHT": "67.2756",
+   "HELD": "808.077084",
+   "RULE_DIFFERENCE": "92.08325",
+   "UNRESOLVED": "64.730966"
+  },
+  "engine_valued": "217.2081",
+  "freelancer_gross": "1249.375",
+  "freelancer_net": "1191.1275",
+  "gap_gross": "1032.1669",
+  "gap_net": "973.9194",
+  "his_half_deduction": "58.2475",
+  "pairs": {
+   "CEILING (stair soffits in his wall paint)": {
+    "by_cause": {
+     "HELD": "22.149034",
+     "UNRESOLVED": "17.840966"
+    },
+    "candidate_lines": [
+     {
+      "candidate": "HELD blank",
+      "candidate_line": "L-1fcec3328ccd0ea243d4",
+      "his_row": 18,
+      "stair": "ST-01"
+     },
+     {
+      "candidate": "HELD blank",
+      "candidate_line": "L-c77e3887f7e348b1461d",
+      "his_row": 19,
+      "stair": "ST-02"
+     }
+    ],
+    "class": "CEILING",
+    "engine_valued": "0",
+    "freelancer_gross": "39.99",
+    "gap": "39.99",
+    "outside": [],
+    "residual": "17.840966",
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "17.243246",
+      "name": "his row 18 (service stair (enclosed shaft stair), 1.2 x 20.2): ST-01 soffit, T-281 measured true area (method D)",
+      "qty": "17.243246",
+      "source": "L-1fcec332 (HELD blank) + T-281 STAIR_SOFFIT_V1 summary.json totals true_D_measured (ST-01 2 rows HELD, 1.50 m2 plan; ST-02 RS-C curved flight HELD, 4.443156 m2 plan, helicoid soffit not drawn)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "4.905788",
+      "name": "his row 19 (hall stair, 2.1 x 7.5): ST-02 soffit, T-281 measured true area (method D)",
+      "qty": "4.905788",
+      "source": "L-c77e3887 (HELD blank) + T-281 STAIR_SOFFIT_V1 summary.json totals true_D_measured (ST-01 2 rows HELD, 1.50 m2 plan; ST-02 RS-C curved flight HELD, 4.443156 m2 plan, helicoid soffit not drawn)"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "17.840966",
+      "name": "SOFFIT RESIDUAL: his widths x lengths vs the T-281 rows, plus the T-281 rows still HELD (ST-01 two rows 1.50 m2 plan; ST-02 RS-C curved flight 4.443156 m2 plan, helicoid not drawn); his row-to-stair reading from his labels",
+      "qty": "17.840966",
+      "source": "named residual (R-T552-1 e)"
+     }
+    ],
+    "why_not_wall_paint": "a flight / landing underside is a soffit: CEILING class (Q-57; FIN.STAIR.SOFFIT, arch_v3032); he prices it inside his wall-paint total (rows 18-19, not in his plaster sheet), so it is split out here and never enters a wall pair"
+   },
+   "DRY": {
+    "by_cause": {
+     "ENGINE_RIGHT": "53.4256",
+     "HELD": "587.71805",
+     "RULE_DIFFERENCE": "90.15325"
+    },
+    "class": "DRY",
+    "engine_valued": "217.2081",
+    "freelancer_gross": "948.505",
+    "gap": "731.2969",
+    "outside": [],
+    "residual": "0.00000",
+    "rooms": [
+     {
+      "crossing_beams": [
+       "CB6 0.75"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "72.26 .. 74.27",
+       "height": "3.59 .. 3.69",
+       "net": "52.45 .. 72.07",
+       "status": "HELD (net: W11, W12, arch to wash height not printed)"
+      },
+      "face_lm": "20.127",
+      "his_gross": "72.00",
+      "his_rows": [
+       4
+      ],
+      "net": {
+       "bound": [
+        "45.75",
+        "61.20"
+       ],
+       "source": "T-128 r3 owner net, G2 PROVISIONAL (annex roof datum)"
+      },
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "63.40005",
+       "height": "3.15"
+      },
+      "paint_line_id": "L-cdf7f5cd2789b67004f1",
+      "plaster_line_id": "L-b152995525ed123ddac9",
+      "room": "GF-01",
+      "state": "HELD",
+      "what": "GF annex reception room"
+     },
+     {
+      "crossing_beams": [],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "44.88 .. 46.12",
+       "height": "3.59 .. 3.69",
+       "net": "38.98 .. 42.38",
+       "status": "HELD (net: W04 height not printed)"
+      },
+      "face_lm": "12.5",
+      "his_gross": "45.00",
+      "his_rows": [
+       5
+      ],
+      "net": {
+       "bound": [
+        "33.74",
+        "35.63"
+       ],
+       "source": "T-128 r3 owner net, G2 PROVISIONAL"
+      },
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "39.375",
+       "height": "3.15"
+      },
+      "paint_line_id": "L-d7d6d2f765489a95c408",
+      "plaster_line_id": "L-1ddc23d5657b4c4e4d0d",
+      "room": "GF-04",
+      "state": "HELD",
+      "what": "GF annex driver room"
+     },
+     {
+      "crossing_beams": [],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "88.09 .. 90.24",
+       "height": "4.09 .. 4.19",
+       "net": "63.24 .. 64.89",
+       "status": "SPLIT: 85% of the face DRAWING-CONFIRMED (bounded b), 15% HELD (roof datum DCR-6)"
+      },
+      "face_lm": "21.537",
+      "his_gross": "75.780",
+      "his_rows": [
+       6
+      ],
+      "net": "56.0131",
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "78.61005",
+       "height": "3.65"
+      },
+      "paint_line_id": "L-7f083d3e2c2702d14356",
+      "plaster_line_id": "L-0d93f2209cd9bb827c0a",
+      "room": "GF-15",
+      "state": "RELEASED",
+      "what": "GF master bed room"
+     },
+     {
+      "crossing_beams": [
+       "B26 0.85",
+       "B27 0.85"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "217.54 .. 222.86",
+       "height": "4.09 .. 4.19",
+       "net": "171.51 .. 206.65",
+       "status": "HELD (net: lift landing door, W02 saloon glazing height not printed)"
+      },
+      "face_lm": "53.188",
+      "his_gross": "195.300",
+      "his_rows": [
+       7
+      ],
+      "net": [
+       "152.0505",
+       "178.805"
+      ],
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "194.13620",
+       "height": "3.65"
+      },
+      "paint_line_id": "L-c0ac22c964a42e7d71b1",
+      "plaster_line_id": "L-8cecb1d010d5aafbf25d",
+      "room": "GF-08",
+      "state": "HELD",
+      "what": "GF open room (dining / entrance / reception)"
+     },
+     {
+      "crossing_beams": [
+       "B6 0.50"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "67.08 .. 68.85",
+       "height": "3.79 .. 3.89",
+       "net": "59.20 .. 60.97",
+       "status": "HELD (roof datum: 100% of the face under a finished roof mark; roof build-up not printed, DCR-6 / G2)"
+      },
+      "face_lm": "17.7",
+      "his_gross": "59.50",
+      "his_rows": [
+       11
+      ],
+      "net": "51.415",
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "59.295",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-ade6f0567f690a869499",
+      "plaster_line_id": "L-af9621f43bc316a871ea",
+      "room": "1F-01",
+      "state": "RELEASED",
+      "what": "1F master bed room west"
+     },
+     {
+      "crossing_beams": [],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "65.95 .. 67.69",
+       "height": "3.79 .. 3.89",
+       "net": "56.11 .. 63.73",
+       "status": "HELD (net: W24 height not printed)"
+      },
+      "face_lm": "17.4",
+      "his_gross": "58.82",
+      "his_rows": [
+       12
+      ],
+      "net": "52.005",
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "58.290",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-d9f4ecdb6ef9a42d0220",
+      "plaster_line_id": "L-971f0bdaf68d7fd0966c",
+      "room": "1F-04",
+      "state": "RELEASED",
+      "what": "1F master bed room 500 x 365"
+     },
+     {
+      "crossing_beams": [
+       "B19 0.75",
+       "B6 0.50"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "61.40 .. 63.02",
+       "height": "3.79 .. 3.89",
+       "net": "55.63 .. 61.04",
+       "status": "HELD (net: arch120 to the dressing passage height not printed)"
+      },
+      "face_lm": "16.2",
+      "his_gross": "75.82",
+      "his_rows": [
+       13
+      ],
+      "net": [
+       "48.94",
+       "52.29"
+      ],
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "54.270",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-f53c1329983ad689b7ae",
+      "plaster_line_id": "L-2ba8077ba9bb2e1ff0f6",
+      "room": "1F-10",
+      "state": "HELD",
+      "what": "1F master bed room 380 x 430"
+     },
+     {
+      "crossing_beams": [],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "83.94 .. 86.16",
+       "height": "3.79 .. 3.89",
+       "net": "68.70 .. 70.92",
+       "status": "HELD (roof datum: 100% of the face under a finished roof mark; roof build-up not printed, DCR-6 / G2)"
+      },
+      "face_lm": "22.149",
+      "his_gross": "74.46",
+      "his_rows": [
+       14
+      ],
+      "net": [
+       "61.4626",
+       "61.7177"
+      ],
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "74.19915",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-349db74a70e1eecda2d2",
+      "plaster_line_id": "L-31db3c83552682d92ca3",
+      "room": "1F-11",
+      "state": "HELD",
+      "what": "1F master bed room east (curved)"
+     },
+     {
+      "crossing_beams": [
+       "B25 / CB12 0.75 on edges"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "149.52 .. 153.46",
+       "height": "3.79 .. 3.89",
+       "net": "125.98 .. 139.59",
+       "status": "HELD (net: lift landing door, W16 (twin of W15) height not printed)"
+      },
+      "face_lm": "39.45",
+      "his_gross": "172.665",
+      "his_rows": [
+       15,
+       16
+      ],
+      "net": [
+       "111.0177",
+       "114.3677"
+      ],
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "132.1575",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-be48ea84285be20645af",
+      "plaster_line_id": "L-9b4a7bab033d677e2017",
+      "room": "1F-13",
+      "state": "HELD",
+      "what": "1F living + corridor + landing"
+     },
+     {
+      "crossing_beams": [
+       "B2 0.40"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "71.63 .. 73.52",
+       "height": "3.79 .. 3.89",
+       "net": "63.34 .. 69.78",
+       "status": "HELD (net: W29 height not printed)"
+      },
+      "face_lm": "18.9",
+      "his_gross": "64.26",
+      "his_rows": [
+       21
+      ],
+      "net": "57.775",
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "63.315",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-5410f9045c80dd5933f0",
+      "plaster_line_id": "L-4ce74fc37a08d4bdf0d8",
+      "room": "2F-03",
+      "state": "RELEASED",
+      "what": "2F room 300 x 645"
+     },
+     {
+      "crossing_beams": [
+       "B15 1.20"
+      ],
+      "drawing_derived": {
+       "basis": "interval - slab 0.16 - b 0 .. 0.10 - decor 0.15: a decor ceiling hung 0.15 under the slab (upper bound where a beam drops it)",
+       "gross": "34.14 .. 35.05",
+       "height": "3.79 .. 3.89",
+       "net": "26.17 .. 30.87",
+       "status": "HELD (net: lift landing door height not printed)"
+      },
+      "face_lm": "9.009",
+      "his_gross": "30.60",
+      "his_rows": [
+       22
+      ],
+      "net": [
+       "22.6502",
+       "26.0002"
+      ],
+      "owner_method": {
+       "basis": "owner G1 (Q-48 A), PROVISIONAL under Q-52 C (finished ceiling not printed, O-P8-02)",
+       "gross": "30.18015",
+       "height": "3.35"
+      },
+      "paint_line_id": "L-c74cfb4e07bcc47bc5d6",
+      "plaster_line_id": "L-ae0cdd794cc5fdbe0c29",
+      "room": "2F-01",
+      "state": "HELD",
+      "what": "2F stair lobby"
+     },
+     {
+      "face_lm": "7.2",
+      "his_gross": "24.300",
+      "his_rows": [
+       9
+      ],
+      "paint_line_id": null,
+      "room": "GF-02",
+      "state": "WET (porcelain full height, no paint)",
+      "what": "GF annex wash by the reception room"
+     }
+    ],
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "63.40005",
+      "name": "GF-01 HELD paint line at its engine-basis gross face 20.127 x 3.15",
+      "note": "net {'bound': ['45.75', '61.20'], 'source': 'T-128 r3 owner net, G2 PROVISIONAL (annex roof datum)'}; opening heights / annex datum not established",
+      "qty": "63.40005",
+      "source": "L-cdf7f5cd (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "9.05715",
+      "name": "GF-01 height: his 3.6 vs the owner G1 paint height 3.15 on face 20.127",
+      "qty": "9.05715",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.4572",
+      "name": "GF-01 length: his rows vs the drawn face 20.127 lm (at his height)",
+      "qty": "0.4572",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "39.375",
+      "name": "GF-04 HELD paint line at its engine-basis gross face 12.5 x 3.15",
+      "note": "net {'bound': ['33.74', '35.63'], 'source': 'T-128 r3 owner net, G2 PROVISIONAL'}; opening heights / annex datum not established",
+      "qty": "39.375",
+      "source": "L-d7d6d2f7 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.625",
+      "name": "GF-04 height: his 3.6 vs the owner G1 paint height 3.15 on face 12.5",
+      "qty": "5.625",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "22.59695",
+      "name": "GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area inside the paint height)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "22.59695",
+      "source": "L-7f083d3e + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-1.07685",
+      "name": "GF-15 height: his 3.6 vs the owner G1 paint height 3.65 on face 21.537",
+      "qty": "1.07685",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-1.7532",
+      "name": "GF-15 length: his rows vs the drawn face 21.537 lm (at his height)",
+      "qty": "1.7532",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "194.13620",
+      "name": "GF-08 HELD paint line at its engine-basis gross face 53.188 x 3.65",
+      "note": "net ['152.0505', '178.805']; opening heights / annex datum not established",
+      "qty": "194.13620",
+      "source": "L-c0ac22c9 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-2.65940",
+      "name": "GF-08 height: his 3.6 vs the owner G1 paint height 3.65 on face 53.188",
+      "qty": "2.65940",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "3.8232",
+      "name": "GF-08 length: his rows vs the drawn face 53.188 lm (at his height)",
+      "qty": "3.8232",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "7.880",
+      "name": "1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area inside the paint height)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "7.880",
+      "source": "L-ade6f056 + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.885",
+      "name": "1F-01 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.7",
+      "qty": "0.885",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.68",
+      "name": "1F-01 length: his rows vs the drawn face 17.7 lm (at his height)",
+      "qty": "0.68",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "6.285",
+      "name": "1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area inside the paint height)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "6.285",
+      "source": "L-d9f4ecdb + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.870",
+      "name": "1F-04 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.4",
+      "qty": "0.870",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.34",
+      "name": "1F-04 length: his rows vs the drawn face 17.4 lm (at his height)",
+      "qty": "0.34",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "54.270",
+      "name": "1F-10 HELD paint line at its engine-basis gross face 16.2 x 3.35",
+      "note": "net ['48.94', '52.29']; opening heights / annex datum not established",
+      "qty": "54.270",
+      "source": "L-f53c1329 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.810",
+      "name": "1F-10 height: his 3.4 vs the owner G1 paint height 3.35 on face 16.2",
+      "qty": "0.810",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "20.74",
+      "name": "1F-10 length: his rows vs the drawn face 16.2 lm (at his height)",
+      "qty": "20.74",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "74.19915",
+      "name": "1F-11 HELD paint line at its engine-basis gross face 22.149 x 3.35",
+      "note": "net ['61.4626', '61.7177']; opening heights / annex datum not established",
+      "qty": "74.19915",
+      "source": "L-349db74a (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "1.10745",
+      "name": "1F-11 height: his 3.4 vs the owner G1 paint height 3.35 on face 22.149",
+      "qty": "1.10745",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.8466",
+      "name": "1F-11 length: his rows vs the drawn face 22.149 lm (at his height)",
+      "qty": "0.8466",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "132.1575",
+      "name": "1F-13 HELD paint line at its engine-basis gross face 39.45 x 3.35",
+      "note": "net ['111.0177', '114.3677']; opening heights / annex datum not established",
+      "qty": "132.1575",
+      "source": "L-be48ea84 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.9175",
+      "name": "1F-13 height: his 3.5 vs the owner G1 paint height 3.35 on face 39.45",
+      "qty": "5.9175",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "34.590",
+      "name": "1F-13 length: his rows vs the drawn face 39.45 lm (at his height)",
+      "qty": "34.590",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.540",
+      "name": "2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area inside the paint height)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "5.540",
+      "source": "L-5410f904 + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.945",
+      "name": "2F-03 height: his 3.4 vs the owner G1 paint height 3.35 on face 18.9",
+      "qty": "0.945",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "30.18015",
+      "name": "2F-01 HELD paint line at its engine-basis gross face 9.009 x 3.35",
+      "note": "net ['22.6502', '26.0002']; opening heights / annex datum not established",
+      "qty": "30.18015",
+      "source": "L-c74cfb4e (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.45045",
+      "name": "2F-01 height: his 3.4 vs the owner G1 paint height 3.35 on face 9.009",
+      "qty": "0.45045",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); owner Q-48 A (G1 = finished-ceiling formula, the paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.0306",
+      "name": "2F-01 length: his rows vs the drawn face 9.009 lm (at his height)",
+      "qty": "0.0306",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "25.92",
+      "name": "GF-02 wet space in his paint rows: drawn face 7.2 x his 3.6 (he also tiles it: his ceramic sheet row 51, T-547)",
+      "qty": "25.92",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived); UP-FIN-PAINT-001 (no paint over full-height porcelain); owner wet-area rule 2026-11-02; WET (T-128 KIND; owner Q-06 A wash space): spatter + levelling render, the tiler's render line is HELD blank (annex G2); not a dry plaster face"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-1.620",
+      "name": "GF-02 length: his row vs the drawn face 7.2",
+      "qty": "1.620",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces; OWNER_H = owner G1, DWG_PAINT_TILE_H = drawing-derived)"
+     }
+    ],
+    "two_methods": {
+     "difference": [
+      "109.20190",
+      "134.01190"
+     ],
+     "drawing_derived_gross_11_lines": [
+      "956.43",
+      "981.24"
+     ],
+     "owner_G1_gross_11_lines": "847.22810",
+     "released_lines": [
+      {
+       "difference": [
+        "7.2269",
+        "8.8769"
+       ],
+       "drawing_derived_net": [
+        "63.24",
+        "64.89"
+       ],
+       "line_id": "L-7f083d3e2c2702d14356",
+       "released_net_owner_method": "56.0131",
+       "room": "GF-15"
+      },
+      {
+       "difference": [
+        "7.785",
+        "9.555"
+       ],
+       "drawing_derived_net": [
+        "59.20",
+        "60.97"
+       ],
+       "line_id": "L-ade6f0567f690a869499",
+       "released_net_owner_method": "51.415",
+       "room": "1F-01"
+      },
+      {
+       "difference": [
+        "4.105",
+        "11.725"
+       ],
+       "drawing_derived_net": [
+        "56.11",
+        "63.73"
+       ],
+       "line_id": "L-d9f4ecdb6ef9a42d0220",
+       "released_net_owner_method": "52.005",
+       "room": "1F-04"
+      },
+      {
+       "difference": [
+        "5.565",
+        "12.005"
+       ],
+       "drawing_derived_net": [
+        "63.34",
+        "69.78"
+       ],
+       "line_id": "L-5410f9045c80dd5933f0",
+       "released_net_owner_method": "57.775",
+       "room": "2F-03"
+      }
+     ],
+     "status": "the 4 released paint lines rest on the owner G1 formula (Q-48 A), which Q-52 C calls an approximation that never overrides the drawings; the finished-ceiling level is printed nowhere (no reflected ceiling plan, O-P8-02), so the drawing-derived column (decor hung 0.15 under the slab) is an UPPER bound, lowered where a crossing beam sets the ceiling or a bulkhead forms; label the released lines PROVISIONAL (ASSUMED - OWNER-APPROVED, Q-48 A) until the designer prints the ceiling level: a designer item, not an owner question (ERS s.2.7)"
+    }
+   },
+   "RETURN": {
+    "by_cause": {
+     "HELD": "23.070",
+     "UNRESOLVED": "-7.110"
+    },
+    "class": "RETURN",
+    "engine_omission": "no FIN.PAINT line for door returns although every return is plastered and its exposed part is painted; proposed at integration: FIN.PAINT return lines from the plaster return geometry, HELD until the frame detail sets the covered depth",
+    "engine_valued": "0",
+    "freelancer_gross": "15.96",
+    "gap": "15.96",
+    "outside": [
+     {
+      "line_id": "L-3e19506bd9e093dfb7be",
+      "why": "plaster return HELD GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-64cb94b4b8dc2cb17608",
+      "why": "plaster return HELD 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-e70e7e48b4c15b4f5a21",
+      "why": "plaster return HELD GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-f4175f9915208dc5f9f7",
+      "why": "plaster return HELD GF-OPENING-OP-009:door jambs and head blank"
+     }
+    ],
+    "residual": "-7.110",
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "23.070",
+      "name": "return faces (jambs + head) of 26 doors: no FIN.PAINT return line in the candidate (ENGINE_OMISSION); the plastered return face of each opening (UP-FIN-PLASTER-001) is the upper bound of its painted part",
+      "note": "painted part = return face - the depth the frame / architrave covers (frame detail not printed): HELD, bounded above by this figure, never 0",
+      "qty": "23.070",
+      "source": "26 valued FIN.PLASTER OPENING lines (2 x t x door height + t x width, PROVISIONAL)"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "-7.110",
+      "name": "RETURN RESIDUAL: door count / size: 26 openings by id (T-292) against his 14 doors x 0.2 x 5.7; his doors are not listed by id",
+      "qty": "7.110",
+      "source": "named residual (R-T552-1 e)"
+     }
+    ]
+   },
+   "SHAFT": {
+    "by_cause": {
+     "ENGINE_RIGHT": "13.85",
+     "HELD": "175.14",
+     "RULE_DIFFERENCE": "1.93",
+     "UNRESOLVED": "54.000"
+    },
+    "candidate_lines": [
+     {
+      "candidate_bound": [
+       "48.52",
+       "62.01"
+      ],
+      "element": "ST_GF",
+      "line_id": "L-145bd2394f2907558243"
+     },
+     {
+      "candidate_bound": [
+       "42.48",
+       "47.67"
+      ],
+      "element": "ST_1F",
+      "line_id": "L-2ab93d5029a4b7cc4dca"
+     },
+     {
+      "candidate_bound": null,
+      "element": "ST_2F",
+      "line_id": "L-5a7a5c6f070ec7142ca5"
+     }
+    ],
+    "class": "SHAFT",
+    "engine_valued": "0",
+    "freelancer_gross": "244.920",
+    "gap": "244.920",
+    "outside": [],
+    "residual": "54.000",
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "175.14",
+      "name": "shaft faces, drawing-derived PAINT gross (3 HELD candidate lines; T-173 actual exposed geometry, Q-72 full height to the decor line under the roof)",
+      "note": "gross 171.88 .. 175.14 (b 0.10 .. 0); net 154.87 .. 159.03 (held items undeducted), 135.26 with every held item deducted; the candidate lines still carry the T-128 r2 storey-interval nets (restate on T-173 at integration)",
+      "qty": "175.14",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "20.11",
+      "name": "south side: his box counts a 2.40 m south wall over 12.90 m; above +5.50 the void is open to the arrival landings (GF south wall only, under the 1F slab)",
+      "qty": "20.11",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-2.64",
+      "name": "north side: his width 2.40 vs printed 2.50 and his +1.00 start vs the +0.30 lobby",
+      "qty": "2.64",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-3.62",
+      "name": "west / east: his 5.00 x 12.90 x 2 vs the faces to 5.20 under the slabs, the lobby / steps and the roof soffit 0.16 below +13.90",
+      "qty": "3.62",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "1.93",
+      "name": "paint top: under the roof the paint stops at the 0.15 decor line (Q-48 A, ASSUMED - OWNER-APPROVED in T-173), his 12.90 runs to the plaster top (T-173 plaster gross 177.07 - paint gross 175.14)",
+      "qty": "1.93",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft); owner 2026-11-02 paint to the finished ceiling"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "54.000",
+      "name": "SHAFT RESIDUAL: his row 25 (2.50 x 5.40 = 13.50, matches no drawn face, T-173) + his row 8 'stair wall' (11.25 x 3.60 = 40.50: no stair face outside the shaft box his row 24 already covers from +1.00)",
+      "qty": "54.000",
+      "source": "named residual (R-T552-1 e)"
+     }
+    ]
+   }
+  }
+ },
+ "plaster_vs_paint_height": {
+  "finding": "the paint lines carry the right basis (finished ceiling); the plaster lines do not (T-552 ENGINE_WRONG). Restating plaster must not move paint: the two heights stay separate fields.",
+  "register": "WALL PLASTER HEIGHT vs PAINT HEIGHT",
+  "rows": [
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.15"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "57.62493",
+      "75.08763"
+     ],
+     "m": [
+      "3.74",
+      "3.84"
+     ]
+    },
+    "plaster_line_id": "L-b152995525ed123ddac9",
+    "room": "GF-01",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.15"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "41.115",
+      "44.255"
+     ],
+     "m": [
+      "3.74",
+      "3.84"
+     ]
+    },
+    "plaster_line_id": "L-1ddc23d5657b4c4e4d0d",
+    "room": "GF-04",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.65"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "68.71993",
+      "70.87363"
+     ],
+     "m": [
+      "4.24",
+      "4.34"
+     ]
+    },
+    "plaster_line_id": "L-0d93f2209cd9bb827c0a",
+    "room": "GF-15",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.65"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "183.43142",
+      "215.50472"
+     ],
+     "m": [
+      "4.24",
+      "4.34"
+     ]
+    },
+    "plaster_line_id": "L-8cecb1d010d5aafbf25d",
+    "room": "GF-08",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "61.858",
+      "63.628"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-af9621f43bc316a871ea",
+    "room": "1F-01",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "62.271",
+      "64.011"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-971f0bdaf68d7fd0966c",
+    "room": "1F-04",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "58.498",
+      "63.468"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "room": "1F-10",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "74.53051",
+      "77.00051"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-31db3c83552682d92ca3",
+    "room": "1F-11",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "134.2932",
+      "141.5882"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-9b4a7bab033d677e2017",
+    "room": "1F-13",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "68.926",
+      "70.816"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-4ce74fc37a08d4bdf0d8",
+    "room": "2F-03",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   },
+   {
+    "paint_height": {
+     "basis": "finished ceiling: owner G1 (Q-48 A), drawing-derived beside",
+     "m": "3.35"
+    },
+    "plaster_height": {
+     "basis": "slab / roof underside (owner 2026-11-02, Q-72; T-552 / T-556)",
+     "corrected_net": [
+      "27.96551",
+      "32.21641"
+     ],
+     "m": [
+      "3.94",
+      "4.04"
+     ]
+    },
+    "plaster_line_id": "L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01",
+    "today": "FIN.PLASTER = FIN.PAINT per room (one height in the code path)"
+   }
+  ]
+ },
+ "schema": "URBAN_T561_PAINT_RECONCILE_V1"
+}
