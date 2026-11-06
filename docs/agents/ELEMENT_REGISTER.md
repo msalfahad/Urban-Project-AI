@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- PARAPET EDGE DOWNSTAND MEMBER (Lead 2026-11-06 08:15; T-550 MERGED f052dfeb, Checker F-C-T550-1): the 0.20 m wide
+  member at the 1F roof slab edge, running from the slab soffit level down 0.35 m below it and up to the finish (+4.95 ..
+  +6.00 at the NW cut, P7757 DXF 27D1 / 1C01), is a DOWNSTAND EDGE BEAM by geometry (not by the hatch, which also covers
+  the masonry part above the finish): OWNER TRADE B10 beam concrete for the part from its soffit to the slab top; the
+  parapet masonry (B9) starts at the slab finish and owns only the part above it (printed parapet height above finish).
+  His +0.50 m per run is this member, so it is never added to B9 again. OPEN: the owning edge-beam ids in the structural
+  schedule are not yet named -> T-559 names them and checks that B10-07 carries each exactly once (T-545 ledger).
+  Same rule for every villa: a parapet's masonry height is measured from the slab finish unless the drawing shows masonry
+  below it.
+- WALL PLASTER HEIGHT vs PAINT HEIGHT on one dry face (Lead 2026-11-06 08:15; T-552 MERGED 0106dbfb ENGINE_WRONG,
+  F-T555-3): plaster and paint are two layers of the same face with DIFFERENT heights: plaster to the underside of the
+  structural slab / roof (Q-72, owner 2026-11-02), paint to the finished ceiling. A FIN.PLASTER line that equals its
+  FIN.PAINT line on a room with a ceiling void is wrong by construction; the slab-to-ceiling band is plaster only. OWNER
+  TRADE B5 plaster for the full height, B6 paint for the lower part only. Rows: T-556 (method version), T-558 (wiring row).
 - WET-ROOM WALL FACE: PLASTER vs WALL TILE (Lead 2026-11-06 04:15; rows T-552, T-547): one tiled wet-room wall face
   carries two layers, each owned once: the spatter dash coat is PLASTER trade (T-552 counts the face in plaster m2 as
   spatter dash only, never as a full plaster coat); levelling render + adhesive + porcelain are WALL TILE trade (T-547);
