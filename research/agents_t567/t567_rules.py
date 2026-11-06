@@ -22,6 +22,10 @@ R-T567-4 (elevation matrix). Cells = drawn m2 of our elevation E matched into hi
 R-T567-5 (parapet faces). The inner face of a parapet runs on the inner perimeter (outer run - 8 t on a closed
     rectangle of wall thickness t), its top on the centre-line run (outer run - 4 t) x t: taking the inner face at the
     outer run is refused.
+R-T567-6 (projecting elements). A pier or frame band standing in front of a face key measured on its projected
+    length: the key holds the fronts; the returns (developed outline - projection) are faces of their own, per band
+    in which the plan of that level draws the element; a jamb return is an opening-reveal item; booking the developed
+    outline in full on top of the key is refused (projecting_returns, returns_face).
 """
 from __future__ import annotations
 
@@ -280,3 +284,34 @@ def parapet_inner_face(outer_run, t, h, run_basis="INNER"):
     if run_basis != "INNER":
         raise RuleError("the parapet inner face is measured on its inner run, not the outer run")
     return (d(outer_run) - 8 * d(t)) * d(h)
+
+
+# ---- R-T567-6: a projecting element (pier, frame band) standing in front of a face key that is measured on its
+# projected length. The key's m2 already holds the element's projection (its fronts); the faces it misses are the
+# returns: developed outline - projection, over the band(s) in which the plan of that level draws the element.
+# A return that frames an opening (a jamb) is an opening-reveal item (REVEAL family), never a render face here.
+def projecting_returns(segments, key_span, tolerance="0.000002"):
+    """segments: [(developed_m, projected_on_key_m, role)] with role 'face' or 'jamb'. The projections must add up to
+    the key span the element occupies (within the 6-dp rounding of the plan lengths, stated); returns
+    (render_extra_m, jamb_extra_m)."""
+    proj = sum((d(p) for _, p, _ in segments), Fraction(0))
+    if abs(proj - d(key_span)) > d(tolerance):
+        raise RuleError(f"projections {proj} do not cover the key span {key_span}: outline not closed on the key")
+    face_x = sum((d(a) - d(p) for a, p, r in segments if r == "face"), Fraction(0))
+    jamb_x = sum((d(a) - d(p) for a, p, r in segments if r == "jamb"), Fraction(0))
+    for a, p, r in segments:
+        if r not in ("face", "jamb"):
+            raise RuleError(f"segment role {r}")
+        if d(a) < d(p):
+            raise RuleError("a developed segment is never shorter than its projection")
+    return face_x, jamb_x
+
+
+def returns_face(key, elevation, extra_m, band_lo, band_hi=None, status="DRAWING-CONFIRMED", developed_in_full=False):
+    """The returns' face on one band: extra_m x band height (a range when the band top is HELD). Booking the whole
+    developed outline on top of the key's projected length is refused (it counts the fronts twice)."""
+    if developed_in_full:
+        raise RuleError(f"{key}: the developed outline in full double-counts the fronts the key already holds")
+    lo = d(extra_m) * d(band_lo)
+    hi = None if band_hi is None else d(extra_m) * d(band_hi)
+    return face(key, elevation, "STOREY" if "storey" in key else "PARAPET_OUTER", lo, hi, status)

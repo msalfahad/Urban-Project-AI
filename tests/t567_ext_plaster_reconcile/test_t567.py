@@ -200,16 +200,16 @@ def test_alsenan_check_mode():
 
 def test_alsenan_his_statement_and_bridge_pins():
     d = _j()
-    assert d["his"] == {"gross_J93": "1502.840000", "groups": {
-        "SW": "275.160000", "SE": "191.542500", "NE": "258.000000", "NW": "389.937500", "ROOF": "185.704000",
-        "PARAPETS": "44.380000", "BOUNDARY": "107.240000", "DRIP": "50.876000"}, "openings_J97": "65.745000",
-        "deduction_half": "32.872500", "net_invoice_r25": "1469.967500"}
+    assert d["his"] == {"gross_J93": "1502.8400000", "groups": {
+        "SW": "275.1600000", "SE": "191.5425000", "NE": "258.0000000", "NW": "389.9375000", "ROOF": "185.7040000",
+        "PARAPETS": "44.3800000", "BOUNDARY": "107.2400000", "DRIP": "50.8760000"}, "openings_J97": "65.7450000",
+        "deduction_half": "32.8725000", "net_invoice_r25": "1469.9675000"}
     lo, hi = d["passes"]["lo"], d["passes"]["hi"]
-    assert (lo["our_gross"], hi["our_gross"]) == ("1164.144740", "1182.457106")
-    assert lo["residual"] == hi["residual"] == "0.000000"
-    assert (lo["gross_diff"], hi["gross_diff"]) == ("338.695260", "320.382894")
-    assert d["net_bound"]["our_net_lo"] == "1032.870939" and d["net_bound"]["our_net_hi"] == "1084.668305"
-    assert d["like_for_like_gross"]["his_comparable_net"] == "1082.024000"
+    assert (lo["our_gross"], hi["our_gross"]) == ("1166.4517846", "1185.4079770")
+    assert lo["residual"] == hi["residual"] == "0.0000000"
+    assert (lo["gross_diff"], hi["gross_diff"]) == ("336.3882154", "317.4320230")
+    assert d["net_bound"]["our_net_lo"] == "1035.1779836" and d["net_bound"]["our_net_hi"] == "1087.6191760"
+    assert d["like_for_like_gross"]["his_comparable_net"] == "1082.0240000"
     for p in (lo, hi):
         for g, v in p["his_by_group"].items():   # each of his groups closes on his own subtotal
             assert F(v["drawn_matched"]) + F(v["terms"]) + F(v["his_only"]) == F(v["his"]), g
@@ -220,7 +220,7 @@ def test_alsenan_his_statement_and_bridge_pins():
 def test_alsenan_candidate_lines_held_never_zero():
     d = _j()
     assert all(v["quantity"] is None and v["class"] == "HELD" for v in d["candidate_lines"].values())
-    assert d["candidate_families"]["FIN.EXT.FINISH"] == {"lines": 3, "valued": 0, "blank": 3, "valued_m2": "0.000000"}
+    assert d["candidate_families"]["FIN.EXT.FINISH"] == {"lines": 3, "valued": 0, "blank": 3, "valued_m2": "0.0000000"}
     assert d["candidate_families"]["EXT.FENCE.PLASTER"]["valued"] == 0
 
 
@@ -228,10 +228,10 @@ def test_alsenan_faces_once_each_on_one_elevation_and_t348_applied():
     import csv
     rows = list(csv.DictReader((OUT / "FACES_T567.csv").open(encoding="utf-8")))
     keys = [r["key"] for r in rows]
-    assert len(keys) == len(set(keys)) == 109 - 2 + 11          # T-337 109; T-348 r2 removes 2, adds 11 (summary new_faces)
+    assert len(keys) == len(set(keys)) == 109 - 2 + 11 + 2      # T-337 109; T-348 r2 removes 2, adds 11; T-567 adds the SW pier returns (2)
     assert {r["elevation"] for r in rows} <= {"SW", "SE", "NE", "NW", "PASSAGE"}
     by = {r["key"]: r for r in rows}
-    assert by["1F/NW-2/PARAPET/parapet"]["lo"] == "3.977236" and by["1F/NW-2/PARAPET/parapet"]["status"] == \
+    assert by["1F/NW-2/PARAPET/parapet"]["lo"] == "3.9772360" and by["1F/NW-2/PARAPET/parapet"]["status"] == \
         "DRAWING-CONFIRMED"
     assert "1F/NW-1/SLAB_EDGE_BELOW/slab_edge" not in by and "1F/NW-3/SLAB_EDGE_BELOW/slab_edge" not in by
     assert by["1F/NW-2/SCREEN-INTRADOS/reveal"]["class"] == "REVEAL"          # own family, not in the totals
@@ -239,6 +239,35 @@ def test_alsenan_faces_once_each_on_one_elevation_and_t348_applied():
     assert set(d["own_family_faces_not_in_totals"]) == {"1F/NW-2/SCREEN-INTRADOS/reveal",
                                                         "1F/NW-2/RECESS-SOFFIT/soffit"}
     assert len(d["blank_faces_by_name"]) == 6                 # slab edges, depth not printed: blank, never 0
+
+
+def test_alsenan_sw_pier_returns_r_t567_6():
+    import csv
+    by = {r["key"]: r for r in csv.DictReader((OUT / "FACES_T567.csv").open(encoding="utf-8"))}
+    # pier outline 0.305222 + 0.157080 + 0.600000 + 0.479442 on a 1.005222 m span: returns 0.536522 m
+    assert by["1F/NW-5/SW-PIER-RETURNS/storey"]["lo"] == "2.2533924"            # x 4.20 (+5.50 -> +9.70)
+    assert (by["1F/NW-5/SW-PIER-RETURNS/parapet"]["lo"], by["1F/NW-5/SW-PIER-RETURNS/parapet"]["hi"]) == \
+        ("0.0536522", "0.6974786")                                                  # x 0.10 .. 1.30, HELD
+
+
+# ---- R-T567-6 on villa B567: a pier 0.60 wide projecting 0.30 with two square returns, on a key measured on its
+# projection, storey 3.50 m: returns 2 x 0.30 = 0.60 m x 3.50 = 2.10 m2; a jamb return is a reveal, not render.
+def test_projecting_pier_returns_by_hand():
+    seg = [("0.30", "0", "face"), ("0.60", "0.60", "face"), ("0.30", "0", "face")]
+    fx, jx = R.projecting_returns(seg, "0.60")
+    assert (fx, jx) == (F("0.60"), 0)
+    assert R.returns_face("P/SE/PIER/storey", "SE", fx, "3.50").lo == F("2.10")
+    fx, jx = R.projecting_returns([("0.157080", "0.100000", "jamb"), ("0.50", "0.50", "face")], "0.60")
+    assert fx == 0 and jx == F("0.057080")
+
+
+def test_projecting_returns_adverse():
+    with pytest.raises(R.RuleError, match="not closed on the key"):
+        R.projecting_returns([("0.30", "0", "face"), ("0.60", "0.60", "face")], "0.70")
+    with pytest.raises(R.RuleError, match="never shorter"):
+        R.projecting_returns([("0.50", "0.60", "face")], "0.60")
+    with pytest.raises(R.RuleError, match="double-counts the fronts"):
+        R.returns_face("P/SE/PIER/storey", "SE", "1.20", "3.50", developed_in_full=True)
 
 
 def test_alsenan_no_client_text_in_outputs():

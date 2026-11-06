@@ -93,6 +93,13 @@ def load_faces():
         else:
             book.add(f)
             changes.append((key, "NEW", st))
+    # R-T567-6: the SW pier's returns in front of the 1F NW-5 key (own DXF read, t567_inputs)
+    fx, jx = R.projecting_returns(I.PIER_SEGMENTS, I.PIER_SPAN)
+    bx, bj = R.projecting_returns(I.BAND_SEGMENTS, I.BAND_SPAN)
+    assert jx == 0 and bx == 0
+    for key, lo, hi, st in I.T567_NEW:
+        book.add(R.returns_face(key, "NW", fx, lo, hi, st))
+        changes.append((key, "NEW (T-567 R-T567-6)", st))
     return book, changes
 
 
@@ -226,7 +233,11 @@ def build():
 
 
 def q(x):
-    return R.fmt(x, 6)
+    """Output text with 7 decimals; every value of this bridge terminates within 7 (asserted), so the printed
+    figures add up exactly."""
+    if (x * 10 ** 7).denominator != 1:
+        raise R.RuleError(f"value {float(x)} does not terminate within 7 decimals")
+    return R.fmt(x, 7)
 
 
 def render():

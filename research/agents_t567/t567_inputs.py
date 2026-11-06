@@ -211,3 +211,26 @@ ROW_CELLS = {"51": [51], "52": [52], "53": [53], "54": [54], "55": [55], "58": [
              "61": [61], "63": [63], "64": [64], "65": [65], "68": [68], "69": [69], "70": [70], "71": [71],
              "74": [74], "72": [72], "73": [73], "75": [75], "77": [77], "78": [78], "79": [79], "83+84": [83, 84],
              "87-90": [87, 88, 89, 90], "92": [92]}
+
+# T-567 own read (R-T567-6) of the T-348 finding "the element SW of the W18 strip": P7757.dxf (sha256 ab54dd55), 1F plan
+# layer D outline in front of the 1F sea-face wall line B60 (layer 1, 2.099512 m, a segment of the T-159 key
+# 1F NW-5 measured on its projected 6.725 m). Plan lengths (m, 6 dp) and their projection on the key:
+#   pier (the SW pier of the bay frame, T-486: rises from the GF roof slab; the 2F plan draws the same outline on
+#   layer 5: 1310 exposed part 0.305222, 1312 r 0.10, 130E 0.60, 130F r 0.305222 -> it continues above +9.70):
+#     CA1 return 0.305222 (proj 0), CA3 quarter arc r 0.10 0.157080 (proj 0.100000), C9E front 0.600000 (0.600000),
+#     CA0 quarter arc r 0.305222 0.479442 (proj 0.305222)  -> span 1.005222 (= 2F 131C 1.005222)
+#   band (0.10 m frame band along the wall to the window jamb): C9D 0.994289 (0.994289), C9F jamb arc r 0.10 0.157080
+#     (proj 0.100000) -> span 1.094289; pier + band = 2.099511 = B60 (2.099512, 6-dp)
+# The same 0.10 band frames both NW-5 windows (C8D, B5E; jamb arcs C8F, C8E, C89; CB6 / CB5 overhead over the
+# windows) and turns the SW corner (C8B r 0.20 -> C8A 0.90 m, 0.30 m off the SW wall face): the jamb arcs are reveal
+# items (REVEAL family, not added here); the corner piece's outline is not closed this run (named, not measured).
+PIER_SEGMENTS = [("0.305222", "0", "face"), ("0.157080", "0.100000", "face"), ("0.600000", "0.600000", "face"),
+                 ("0.479442", "0.305222", "face")]
+PIER_SPAN = "1.005222"
+BAND_SEGMENTS = [("0.994289", "0.994289", "face"), ("0.157080", "0.100000", "jamb")]
+BAND_SPAN = "1.094289"
+JAMB_ARCS_NW5 = 4          # C9F, C8F, C8E, C89 (each 0.157080 developed, 0.100000 projected)
+# bands: storey +5.50 -> +9.70 printed (4.20); parapet above +9.70: NW-5's drawn top runs +9.80 .. +10.80 and the 1F
+# printed parapet maximum is +11.00 (piers NW-1 / NW-3): HELD 0.10 .. 1.30 (the pier's own top level is not printed)
+T567_NEW = [("1F/NW-5/SW-PIER-RETURNS/storey", "4.20", None, "DRAWING-CONFIRMED"),
+            ("1F/NW-5/SW-PIER-RETURNS/parapet", "0.10", "1.30", "HELD")]
