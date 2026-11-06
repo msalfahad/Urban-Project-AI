@@ -46,6 +46,11 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- ENCLOSED SPACE FLOOR (Lead 2026-11-06 12:18; T-553 MERGED b6e52d40, Checker F-T553-1 / F-T553-2): every enclosed
+  space that carries a ceiling or skirting line has exactly one finished-floor line, OWNER TRADE B3 floor finish
+  (class from the finish schedule; HELD by name where none is printed, never 0); a space with a wet bed or floor WP
+  line takes a WET floor finish class (Q-45 adhesive group). The 1F dressing (2.970 m2) and the GF kitchen class are
+  the first two cases; T-564 builds the census rule for every villa, T-562 states them, wiring follows the wrapper item.
 - PARAPET EDGE DOWNSTAND MEMBER (Lead 2026-11-06 08:15; T-550 MERGED f052dfeb, Checker F-C-T550-1): the 0.20 m wide
   member at the 1F roof slab edge, running from the slab soffit level down 0.35 m below it and up to the finish (+4.95 ..
   +6.00 at the NW cut, P7757 DXF 27D1 / 1C01), is a DOWNSTAND EDGE BEAM by geometry (not by the hatch, which also covers
