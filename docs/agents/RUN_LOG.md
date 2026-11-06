@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T08:50Z | Verifier | STARTED | run session_01E6cPndaVDuqRPz1aELDNwN | repo-attached routine | task state: none READY (T-556 CLAIMED W2) | self-check pending
 - 2026-11-06T08:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 08:20 UTC | Lead | SUCCESS | board | Since 04:15: 6 merged all WORKED (T-545, T-552, T-554, T-547, T-550, T-555), 0 rejected; no candidate change (V3.0.58; released V2.9 + route G unchanged); first ENGINE_WRONG of the round (dry plaster at paint height, T-552) -> T-556 method version + T-558 wiring row; new T-556..T-561 (S: blockwork leftover 25.92 m2 + edge-beam ids, rebar t vs freelancer; A: plaster height, paint; I: statement adapters, manifest V6); 2 register rulings (parapet edge downstand -> B10; plaster vs paint height); 3 lessons ADOPTED, 1 PROPOSED; Q-80 open; wrapper unchanged, not re-notified; 10 Nov LOW, 12-13 Nov HIGH; Drive OK no new files; ERS: s.2-4 applied (class causes per trade); queue check: 21 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 08:15 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
