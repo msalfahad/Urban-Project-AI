@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T16:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-568 CLAIMED W2; T-560/569/570/571/572/573/574 TODO) | self-check pending
 - 2026-11-06T16:40Z | Worker 2 | STARTED | run session_01E6cPnbaio9eK9LjSirXpVy | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 16:20 UTC | Lead | SUCCESS | board | Since 12:18: 6 merged (T-561 paint, T-562 statement V3, T-566 GF column marks, T-564 manifest V7 + floor census, T-565 earthworks NO_ROW, T-567 external plaster), 0 rejected, no candidate change (V3.0.58; released V2.9 + route G unchanged); Checker fix rows (paint returns 23.070 m2 ENGINE_OMISSION, dressing class A08 ESTIMATED, SW pier returns) -> T-569; new T-569..T-574 (statement V4, lintel count, structural HELD bounds, ceilings, skirting lm); T-560 stall cause fixed (row said 'third'); register 2 rulings; lessons 3 ADOPTED, 2 PROPOSED; no new owner decision; wrapper unchanged (not re-notified); Verifier privacy near-miss self-corrected (no leak); Drive read OK, no photos; queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 16:13 UTC | Lead | STARTED | run session_01E6cPnam5sewJiAYNeBkeBa | repo-attached routine | task state: board | report pending
