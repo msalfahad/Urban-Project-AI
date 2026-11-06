@@ -1,0 +1,2679 @@
+{
+ "schema": "T566_REGISTRATION_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (column / beam lines = V3.0.57 LINE_INDEX, R-T507-1 (e)); NOT RELEASED",
+ "source": {
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (Drive 'Alsenan chalet project')"
+ },
+ "binding": "own read: per-sheet minimum-total-distance label -> outline assignment; positions = FP outlines",
+ "positions": [
+  {
+   "position": "1084",
+   "labels": {
+    "FP": "C2/F2 (1675)",
+    "CAP": "C2 (1061)",
+    "GBP": "C2 (1DD)"
+   },
+   "class": "REGISTERED",
+   "mark": "C2",
+   "candidates": {
+    "C2": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C2",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C2": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "AGREE",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:32C",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-8b751f06280405a6b658",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:66D",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-9a33d59e28a53df74b18",
+     "line_class": "RELEASED"
+    },
+    "2F": {
+     "handle": "SFRS:40F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C2",
+    "1F": "C2",
+    "2F": "C2"
+   }
+  },
+  {
+   "position": "1087",
+   "labels": {
+    "FP": "C2/F2 (1674)",
+    "CAP": "C2 (1063)",
+    "GBP": "C2 (1E1)"
+   },
+   "class": "REGISTERED",
+   "mark": "C2",
+   "candidates": {
+    "C2": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C2",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C2": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "AGREE",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:32F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-8a88f805c490b970d754",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:670",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-99451ab1afb179bfb75c",
+     "line_class": "RELEASED"
+    },
+    "2F": {
+     "handle": "SFRS:412",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C2",
+    "1F": "C2",
+    "2F": "C2"
+   }
+  },
+  {
+   "position": "108A",
+   "labels": {
+    "FP": "C5/F5 (1673)",
+    "CAP": "C5 (1069)",
+    "GBP": "C5 (1E5)"
+   },
+   "class": "REGISTERED",
+   "mark": "C5",
+   "candidates": {
+    "C5": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C5",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "size_text_cm": [
+    30,
+    60
+   ],
+   "section_vs_schedule": {
+    "C5": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "DIFFERS",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:332",
+     "section_mm": [
+      250,
+      600
+     ],
+     "line_id": "L-8df3988123e987fa87f9",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:673",
+     "section_mm": [
+      250,
+      600
+     ],
+     "line_id": "L-c677b628a776d3b87b02",
+     "line_class": "HELD"
+    },
+    "2F": {
+     "handle": "SFRS:415",
+     "section_mm": [
+      200,
+      600
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C5",
+    "1F": "C5",
+    "2F": "C5"
+   }
+  },
+  {
+   "position": "108D",
+   "labels": {
+    "FP": "C4/F4 (1671)",
+    "CAP": "C4 (1067)",
+    "GBP": "C4 (1E9)"
+   },
+   "class": "REGISTERED",
+   "mark": "C4",
+   "candidates": {
+    "C4": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C4",
+   "neck_drawn_mm": [
+    250,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C4": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:335",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-d9530ea806606b886fc9",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:676",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-8f8ad257d9b2cb9e027f",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C4",
+    "1F": "C4"
+   }
+  },
+  {
+   "position": "1090",
+   "labels": {
+    "FP": "C9 (109A)",
+    "CAP": "C9 (1075)",
+    "GBP": "C9 (1F6)"
+   },
+   "class": "REGISTERED",
+   "mark": "C9",
+   "candidates": {
+    "C9": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C9",
+   "neck_drawn_mm": [
+    250,
+    1000
+   ],
+   "size_text_cm": [
+    25,
+    100
+   ],
+   "section_vs_schedule": {
+    "C9": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "AGREE",
+     "FOU_size_text": "DIFFERS"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:338",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "line_id": "L-7b41af5790ea7ad5156e",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:679",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "line_id": "L-755eb56b55e86301b488",
+     "line_class": "HELD"
+    },
+    "2F": {
+     "handle": "SFRS:418",
+     "section_mm": [
+      200,
+      700
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C9",
+    "1F": "C9",
+    "2F": "C9"
+   }
+  },
+  {
+   "position": "1093",
+   "labels": {
+    "FP": "C2 (109C)",
+    "CAP": "C2 (1077)",
+    "GBP": "C2 (1F8)"
+   },
+   "class": "REGISTERED",
+   "mark": "C2",
+   "candidates": {
+    "C2": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C2",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "size_text_cm": [
+    20,
+    50
+   ],
+   "section_vs_schedule": {
+    "C2": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "AGREE",
+     "FOU_size_text": "DIFFERS"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:33B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-bcefe951cf96fb351bf8",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:67C",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-734dc85d1a4ffbde5655",
+     "line_class": "RELEASED"
+    },
+    "2F": {
+     "handle": "SFRS:41B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C2",
+    "1F": "C2",
+    "2F": "C2"
+   }
+  },
+  {
+   "position": "1096",
+   "labels": {
+    "FP": "C2 (109B)",
+    "CAP": "C2 (107B)",
+    "GBP": "C2 (1F7)"
+   },
+   "class": "REGISTERED",
+   "mark": "C2",
+   "candidates": {
+    "C2": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C2",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "size_text_cm": [
+    20,
+    50
+   ],
+   "section_vs_schedule": {
+    "C2": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "AGREE",
+     "FOU_size_text": "DIFFERS"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:33E",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-a8abdc061090a72e84a4",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:67F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-6f56016cd0282ebad28a",
+     "line_class": "RELEASED"
+    },
+    "2F": {
+     "handle": "SFRS:41E",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C2",
+    "1F": "C2",
+    "2F": "C2"
+   }
+  },
+  {
+   "position": "1099",
+   "labels": {
+    "FP": "C1 (109D)",
+    "CAP": "C1 (1079)",
+    "GBP": "C1 (1F9)"
+   },
+   "class": "REGISTERED",
+   "mark": "C1",
+   "candidates": {
+    "C1": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C1",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "size_text_cm": [
+    20,
+    50
+   ],
+   "section_vs_schedule": {
+    "C1": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "AGREE",
+     "FOU_size_text": "DIFFERS"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:341",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-fa1c346855c5040632a5",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:682",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-322d1a1a7d9504e9cbc6",
+     "line_class": "RELEASED"
+    },
+    "2F": {
+     "handle": "SFRS:421",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C1",
+    "1F": "C1",
+    "2F": "C1"
+   }
+  },
+  {
+   "position": "10A0",
+   "labels": {
+    "FP": "C3 (10A1)",
+    "CAP": "C3 (106F)",
+    "GBP": "C3 (1FD)"
+   },
+   "class": "REGISTERED",
+   "mark": "C3",
+   "candidates": {
+    "C3": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:344",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-8de64040a1c3ae6cf137",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C3"
+   }
+  },
+  {
+   "position": "10A4",
+   "labels": {
+    "FP": "C (166E)",
+    "CAP": "C (105B)",
+    "GBP": "C (201)"
+   },
+   "class": "REGISTERED",
+   "mark": "C",
+   "candidates": {
+    "C": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:347",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-43dae3d6dfec957b26a8",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C"
+   }
+  },
+  {
+   "position": "10A8",
+   "labels": {
+    "FP": "C/F (blk:167F)",
+    "CAP": "C (84D)",
+    "GBP": "C (20C)"
+   },
+   "class": "REGISTERED",
+   "mark": "C",
+   "candidates": {
+    "C": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:34A",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-c0b3340a906c2c7650f8",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C"
+   }
+  },
+  {
+   "position": "10AB",
+   "labels": {
+    "FP": "C/F (blk:1680)",
+    "CAP": "C (1008)",
+    "GBP": "C (208)"
+   },
+   "class": "REGISTERED",
+   "mark": "C",
+   "candidates": {
+    "C": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:34D",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-e6c1c9a7feec10f64975",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C"
+   }
+  },
+  {
+   "position": "10AE",
+   "labels": {
+    "FP": "C3 (1681)",
+    "CAP": "C3 (100A)",
+    "GBP": "C (20D)"
+   },
+   "class": "CONFLICT",
+   "mark": null,
+   "candidates": {
+    "C": [
+     "GBP"
+    ],
+    "C3": [
+     "CAP",
+     "FP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    },
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:350",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-694a75c84dd6e4bb4491",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C|C3"
+   }
+  },
+  {
+   "position": "10B1",
+   "labels": {
+    "FP": "C3/F3 (168F)",
+    "CAP": "C3 (1006)",
+    "GBP": "C3 (20E)"
+   },
+   "class": "REGISTERED",
+   "mark": "C3",
+   "candidates": {
+    "C3": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:353",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-fad18af6e7139a5e99d1",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C3"
+   }
+  },
+  {
+   "position": "10B4",
+   "labels": {
+    "FP": "C/F (blk:1678)",
+    "CAP": "C (1004)",
+    "GBP": "C (215)"
+   },
+   "class": "REGISTERED",
+   "mark": "C",
+   "candidates": {
+    "C": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "AGREE",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:356",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-9f5a647014bbf83359f9",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C"
+   }
+  },
+  {
+   "position": "10B7",
+   "labels": {
+    "FP": "C/F (blk:1682)",
+    "CAP": "C (100C)",
+    "GBP": "C (blk:219)"
+   },
+   "class": "REGISTERED",
+   "mark": "C",
+   "candidates": {
+    "C": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C",
+   "neck_drawn_mm": [
+    300,
+    400
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "DIFFERS",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:359",
+     "section_mm": [
+      200,
+      400
+     ],
+     "line_id": "L-9cb26d86575a92694880",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C"
+   }
+  },
+  {
+   "position": "10BA",
+   "labels": {
+    "FP": "C11 (10BF)",
+    "CAP": "C11 (1012)",
+    "GBP": "C11 (225)"
+   },
+   "class": "REGISTERED",
+   "mark": "C11",
+   "candidates": {
+    "C11": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C11",
+   "neck_drawn_mm": [
+    300,
+    1100
+   ],
+   "size_text_cm": [
+    30,
+    110
+   ],
+   "section_vs_schedule": {
+    "C11": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:35C",
+     "section_mm": [
+      250,
+      1100
+     ],
+     "line_id": "L-689abc61dfc445f60224",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C11"
+   }
+  },
+  {
+   "position": "10BD",
+   "labels": {
+    "FP": "C5 (10BE)",
+    "CAP": "C5 (1010)",
+    "GBP": "C5 (224)"
+   },
+   "class": "REGISTERED",
+   "mark": "C5",
+   "candidates": {
+    "C5": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C5",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "size_text_cm": [
+    30,
+    60
+   ],
+   "section_vs_schedule": {
+    "C5": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:35F",
+     "section_mm": [
+      250,
+      600
+     ],
+     "line_id": "L-84bf7fb482a98fdbe482",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:685",
+     "section_mm": [
+      200,
+      600
+     ],
+     "line_id": "L-291ba2ddf4bbe4f14cf7",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C5",
+    "1F": "C5"
+   }
+  },
+  {
+   "position": "10C2",
+   "labels": {
+    "FP": "C6/F6 (168D)",
+    "CAP": "C6 (1014)",
+    "GBP": "C6 (229)"
+   },
+   "class": "REGISTERED",
+   "mark": "C6",
+   "candidates": {
+    "C6": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C6",
+   "neck_drawn_mm": [
+    300,
+    700
+   ],
+   "size_text_cm": [
+    30,
+    70
+   ],
+   "section_vs_schedule": {
+    "C6": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:362",
+     "section_mm": [
+      250,
+      700
+     ],
+     "line_id": "L-173531a454ee3e9d3317",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:688",
+     "section_mm": [
+      250,
+      700
+     ],
+     "line_id": "L-a87ea657a42a311cb851",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C6",
+    "1F": "C6"
+   }
+  },
+  {
+   "position": "10C5",
+   "labels": {
+    "FP": "C3/F3 (168E)",
+    "CAP": "C3 (100E)",
+    "GBP": "C3 (22D)"
+   },
+   "class": "REGISTERED",
+   "mark": "C3",
+   "candidates": {
+    "C3": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:365",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-7d70692d03102a2dc306",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:68B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "line_id": "L-a2c6fa502bd864cf5da2",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C3",
+    "1F": "C3"
+   }
+  },
+  {
+   "position": "10C8",
+   "labels": {
+    "FP": "C7 (10C9)",
+    "CAP": "C7 (105D)",
+    "GBP": "C7 (231)"
+   },
+   "class": "REGISTERED",
+   "mark": "C7",
+   "candidates": {
+    "C7": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C7",
+   "neck_drawn_mm": [
+    300,
+    800
+   ],
+   "size_text_cm": [
+    30,
+    80
+   ],
+   "section_vs_schedule": {
+    "C7": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:368",
+     "section_mm": [
+      250,
+      800
+     ],
+     "line_id": "L-a2cb6d533860e6f37b3e",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:68E",
+     "section_mm": [
+      250,
+      800
+     ],
+     "line_id": "L-85809d3db52bb93dfe96",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C7",
+    "1F": "C7"
+   }
+  },
+  {
+   "position": "10CC",
+   "labels": {
+    "FP": "C3 (10CD)",
+    "CAP": "C3 (105F)",
+    "GBP": "C3 (235)"
+   },
+   "class": "REGISTERED",
+   "mark": "C3",
+   "candidates": {
+    "C3": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "DIFFERS",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:36B",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-26491bc55abff7518911",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:691",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-cc702b8541c15fdfd98c",
+     "line_class": "HELD"
+    },
+    "2F": {
+     "handle": "SFRS:424",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": null,
+     "line_class": null
+    }
+   },
+   "carries": {
+    "GF": "C3",
+    "1F": "C3",
+    "2F": "C3"
+   }
+  },
+  {
+   "position": "10D0",
+   "labels": {
+    "FP": "C8 (1670)",
+    "CAP": "C8 (106D)",
+    "GBP": "C8 (239)"
+   },
+   "class": "REGISTERED",
+   "mark": "C8",
+   "candidates": {
+    "C8": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C8",
+   "neck_drawn_mm": [
+    300,
+    900
+   ],
+   "size_text_cm": [
+    30,
+    90
+   ],
+   "section_vs_schedule": {
+    "C8": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "AGREE",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:36E",
+     "section_mm": [
+      250,
+      900
+     ],
+     "line_id": "L-0b7c92233a525c8b42f2",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:664",
+     "section_mm": [
+      200,
+      900
+     ],
+     "line_id": "L-1ec3dfd936e83b658b2c",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C8",
+    "1F": "C8"
+   }
+  },
+  {
+   "position": "10D3",
+   "labels": {
+    "FP": "C5/F5 (166F)",
+    "CAP": "C5 (101C)",
+    "GBP": "C5 (23D)"
+   },
+   "class": "REGISTERED",
+   "mark": "C5",
+   "candidates": {
+    "C5": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C5",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "size_text_cm": [
+    30,
+    60
+   ],
+   "section_vs_schedule": {
+    "C5": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:374",
+     "section_mm": [
+      250,
+      600
+     ],
+     "line_id": "L-ae51e56262137366926b",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:694",
+     "section_mm": [
+      250,
+      600
+     ],
+     "line_id": "L-831f6fe3de133294bb8f",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C5",
+    "1F": "C5"
+   }
+  },
+  {
+   "position": "10D7",
+   "labels": {
+    "FP": "C4/F4 (1672)",
+    "CAP": "C4 (1065)",
+    "GBP": "C4 (242)"
+   },
+   "class": "REGISTERED",
+   "mark": "C4",
+   "candidates": {
+    "C4": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C4",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C4": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:377",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-d2e900a1b15cef2a913f",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:697",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-e112e2add2f8979a6c39",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C4",
+    "1F": "C4"
+   }
+  },
+  {
+   "position": "10DA",
+   "labels": {
+    "FP": "C9/F9 (1677)",
+    "CAP": "C9 (106B)",
+    "GBP": "C9 (246)"
+   },
+   "class": "REGISTERED",
+   "mark": "C9",
+   "candidates": {
+    "C9": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C9",
+   "neck_drawn_mm": [
+    300,
+    1000
+   ],
+   "size_text_cm": [
+    30,
+    100
+   ],
+   "section_vs_schedule": {
+    "C9": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:37A",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "line_id": "L-c41f79b9171044490619",
+     "line_class": "RELEASED"
+    },
+    "1F": {
+     "handle": "FFRS:667",
+     "section_mm": [
+      200,
+      1000
+     ],
+     "line_id": "L-4aed92c117a7ab1c90ee",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C9",
+    "1F": "C9"
+   }
+  },
+  {
+   "position": "10DD",
+   "labels": {
+    "FP": "C11/F11 (blk:1684)",
+    "CAP": "C11 (1016)",
+    "GBP": "C11 (24A)"
+   },
+   "class": "REGISTERED",
+   "mark": "C11",
+   "candidates": {
+    "C11": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C11",
+   "neck_drawn_mm": [
+    300,
+    1100
+   ],
+   "size_text_cm": [
+    30,
+    110
+   ],
+   "section_vs_schedule": {
+    "C11": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:37D",
+     "section_mm": [
+      250,
+      1100
+     ],
+     "line_id": "L-f169ec8deb0f70fe2681",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C11"
+   }
+  },
+  {
+   "position": "10E0",
+   "labels": {
+    "FP": "C8 (10E1)",
+    "CAP": "C8 (101A)",
+    "GBP": "C7 (24E)"
+   },
+   "class": "CONFLICT",
+   "mark": null,
+   "candidates": {
+    "C7": [
+     "GBP"
+    ],
+    "C8": [
+     "CAP",
+     "FP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C8",
+   "neck_drawn_mm": [
+    300,
+    800
+   ],
+   "size_text_cm": [
+    30,
+    80
+   ],
+   "section_vs_schedule": {
+    "C7": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    },
+    "C8": {
+     "FOUNDATION": "DIFFERS",
+     "GF": "DIFFERS",
+     "1F": "DIFFERS",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "DIFFERS"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:380",
+     "section_mm": [
+      250,
+      800
+     ],
+     "line_id": "L-4c4496579e5bfa20ae9f",
+     "line_class": "HELD"
+    },
+    "1F": {
+     "handle": "FFRS:69A",
+     "section_mm": [
+      250,
+      800
+     ],
+     "line_id": "L-1dc713c83bf62e525ff2",
+     "line_class": "HELD"
+    }
+   },
+   "carries": {
+    "GF": "C7|C8",
+    "1F": "C7|C8"
+   }
+  },
+  {
+   "position": "10E4",
+   "labels": {
+    "FP": "C3 (10E5)",
+    "CAP": "C3 (1018)",
+    "GBP": "C3 (252)"
+   },
+   "class": "REGISTERED",
+   "mark": "C3",
+   "candidates": {
+    "C3": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C3",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "size_text_cm": [
+    30,
+    50
+   ],
+   "section_vs_schedule": {
+    "C3": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:383",
+     "section_mm": [
+      250,
+      500
+     ],
+     "line_id": "L-96a9079f54bc9bae6482",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C3"
+   }
+  },
+  {
+   "position": "10E8",
+   "labels": {
+    "FP": "C10 (10D4)",
+    "CAP": "C10 (1059)",
+    "GBP": "C10 (23E)"
+   },
+   "class": "REGISTERED",
+   "mark": "C10",
+   "candidates": {
+    "C10": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "C10",
+   "neck_drawn_mm": [
+    300,
+    700
+   ],
+   "size_text_cm": [
+    30,
+    70
+   ],
+   "section_vs_schedule": {
+    "C10": {
+     "FOUNDATION": "AGREE",
+     "GF": "AGREE",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {
+    "GF": {
+     "handle": "GFRS:371",
+     "section_mm": [
+      250,
+      700
+     ],
+     "line_id": "L-90ed3048543112eb4be1",
+     "line_class": "RELEASED"
+    }
+   },
+   "carries": {
+    "GF": "C10"
+   }
+  },
+  {
+   "position": "10EE",
+   "labels": {
+    "FP": "CN/FN (10ED)",
+    "CAP": "CN (1073)",
+    "GBP": "CN/FN (7EC)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": [
+    30,
+    30
+   ],
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {},
+   "carries": {}
+  },
+  {
+   "position": "10F6",
+   "labels": {
+    "FP": "CN/FN (10F5)",
+    "CAP": "CN (17B6)",
+    "GBP": "CN/FN (7F4)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": [
+    30,
+    30
+   ],
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {},
+   "carries": {}
+  },
+  {
+   "position": "10FE",
+   "labels": {
+    "FP": "CN (10FD)",
+    "CAP": "CN (1071)",
+    "GBP": "CN/FN (808)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": [
+    30,
+    30
+   ],
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {},
+   "carries": {}
+  },
+  {
+   "position": "17C5",
+   "labels": {
+    "FP": "CN (17C9)",
+    "CAP": "CN (17D2)",
+    "GBP": "CN (17C2)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": [
+    30,
+    30
+   ],
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {},
+   "carries": {}
+  },
+  {
+   "position": "17C8",
+   "labels": {
+    "FP": "CN (17CA)",
+    "CAP": "CN (17D0)",
+    "GBP": "CN (17C3)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "CAP",
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "3/3",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": [
+    30,
+    30
+   ],
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN",
+     "FOU_size_text": "AGREE"
+    }
+   },
+   "members": {},
+   "carries": {}
+  },
+  {
+   "position": "180A",
+   "labels": {
+    "FP": "CN/FN (1810)",
+    "GBP": "CN (17B9)"
+   },
+   "class": "REGISTERED",
+   "mark": "CN",
+   "candidates": {
+    "CN": [
+     "FP",
+     "GBP"
+    ]
+   },
+   "support": "2/2",
+   "merged_T205_mark": "CN",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "size_text_cm": null,
+   "section_vs_schedule": {
+    "CN": {
+     "FOUNDATION": "AGREE",
+     "GF": "NOT_DRAWN",
+     "1F": "NOT_DRAWN",
+     "2F": "NOT_DRAWN"
+    }
+   },
+   "members": {},
+   "carries": {}
+  }
+ ],
+ "gf_counts": {
+  "registered": {
+   "C": 5,
+   "C1": 1,
+   "C10": 1,
+   "C11": 2,
+   "C2": 4,
+   "C3": 5,
+   "C4": 2,
+   "C5": 3,
+   "C6": 1,
+   "C7": 1,
+   "C8": 1,
+   "C9": 2
+  },
+  "conflict_positions": [
+   {
+    "position": "10AE",
+    "candidates": {
+     "C": [
+      "GBP"
+     ],
+     "C3": [
+      "CAP",
+      "FP"
+     ]
+    },
+    "gf_line": "L-694a75c84dd6e4bb4491",
+    "gf_line_class": "HELD"
+   },
+   {
+    "position": "10E0",
+    "candidates": {
+     "C7": [
+      "GBP"
+     ],
+     "C8": [
+      "CAP",
+      "FP"
+     ]
+    },
+    "gf_line": "L-4c4496579e5bfa20ae9f",
+    "gf_line_class": "HELD"
+   }
+  ]
+ },
+ "conflict_bounds": [
+  {
+   "position": "10AE",
+   "storey": "GF",
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "line_class": "HELD",
+   "low_m2": "0.080000",
+   "high_m2": "0.125000",
+   "no_band": []
+  },
+  {
+   "position": "10E0",
+   "storey": "GF",
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "line_class": "HELD",
+   "low_m2": "0.200000",
+   "high_m2": "0.225000",
+   "no_band": []
+  },
+  {
+   "position": "10E0",
+   "storey": "1F",
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "line_class": "HELD",
+   "low_m2": "0.160000",
+   "high_m2": "0.200000",
+   "no_band": []
+  }
+ ],
+ "agreement_with_merged_T205": {
+  "positions": 36,
+  "fp_label_equal": 36,
+  "registered_equal": 34,
+  "conflict_here": [
+   "10AE",
+   "10E0"
+  ]
+ },
+ "slab_frame_mark_like_texts": {
+  "GFRS": [
+   {
+    "text": "C",
+    "handle": "173A",
+    "layer": "S-SEC-TEXT"
+   }
+  ],
+  "FFRS": [],
+  "SFRS": []
+ },
+ "beam_untraced": {
+  "untraced_total_m3": "-0.365289",
+  "named": [
+   {
+    "mark": "GF B11",
+    "m3": "0.004050",
+    "cause": "DRAWING_PRECISION",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "one row of his against one drawn run (BAND0001); the row and the drawn line differ by < 0.05 m",
+    "bound_m3": null
+   },
+   {
+    "mark": "GF B8",
+    "m3": "0.003021",
+    "cause": "DRAWING_PRECISION",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "one row of his against one drawn run (BAND0003, drawn 0.200 x 3.52014, T-392); difference < 0.05 m",
+    "bound_m3": null
+   },
+   {
+    "mark": "1F B11",
+    "m3": "0.007173",
+    "cause": "DRAWING_PRECISION",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "one row of his against one drawn run (BAND0004); difference < 0.05 m",
+    "bound_m3": null
+   },
+   {
+    "mark": "1F B6",
+    "m3": "0.000273",
+    "cause": "DRAWING_PRECISION",
+    "verdict": "ENGINE_RIGHT",
+    "evidence": "his one row bound to run BAND0021 by the T-395 run binding; difference < 0.05 m",
+    "bound_m3": null
+   },
+   {
+    "mark": "2F B2",
+    "m3": "-0.087240",
+    "cause": "COUNT",
+    "verdict": "ENGINE_RIGHT (proposal; Checker re-counts the 2F B2 labels)",
+    "evidence": "his rows equal the four drawn face-to-face B2 runs (BAND0003 2.499, BAND0005 3.000, BAND0007.1 1.800, BAND0007.2 3.000) run by run, plus one more row of the 2.5 m run: no fifth drawn B2 run, and every 2F B2 end frames into a perpendicular beam (no collinear continuation). The mark residual -0.200 is that one row: UNTRACED -0.08724 + the T-545 THROUGH_SUPPORT -0.11276 of this mark (his lengths are face to face here)",
+    "bound_m3": null,
+    "reclassed_from_THROUGH_SUPPORT_m3": "-0.112760",
+    "mark_residual_m3": "-0.200000"
+   },
+   {
+    "mark": "GF B2",
+    "m3": "-0.011152",
+    "cause": "MARK_BOUNDARY",
+    "verdict": "ENGINE_RIGHT (drawn labels)",
+    "evidence": "BAND0020.2 (B2) continues collinearly through column 36B (gap 0.498 m) into BAND0020.1 (0.200 x 0.803 m) which the drawing labels B1 and the engine bills once under B1 (L-c254e0d17c22fcae49fe); his B2 excess beyond the B2 support allowance (0.139 m) fits inside that B1 piece; GF B1 carries a RUN_COUNT term of its own (T-545)",
+    "bound_m3": null
+   },
+   {
+    "mark": "1F CB12",
+    "m3": "-0.160962",
+    "cause": "BEYOND_EXTENT",
+    "verdict": "ENGINE_RIGHT (proposal)",
+    "evidence": "drawn CB12 = BAND0018.1 5.626 + gap over 664 0.899 + BAND0018.2 5.025, end supports 69D 0.20 and 676 0.25: outer-face extent 12.00 m; his one row is longer than that extent; no collinear beam continues CB12 at either end (B6 BAND0021 and B4 BAND0015 are perpendicular; BM-1F-036 BAND0025 lies beside BAND0018.2, sharing its long face, not beyond its end). Schedule spans 6.1 / 5.5 c/c (T-110) are also shorter than his row",
+    "bound_m3": null
+   },
+   {
+    "mark": "GF B7",
+    "m3": "-0.120452",
+    "cause": "UNRESOLVED",
+    "verdict": "UNRESOLVED (named)",
+    "evidence": "his two B7 rows; the longer has no location on his sheet (T-252 / T-392 s.3); drawn B7 = three straight runs (BAND0025.1, BAND0049, BAND0006) + the void ring RING-B7 0.499805 m3 measured between its own drawn edges (T-392); his total exceeds the drawn B7 outer-face extent incl. the ring by 0.80 m at 0.20 x 0.75",
+    "bound_m3": null
+   }
+  ],
+  "closure": {
+   "total_m3": "-0.365289",
+   "by_cause": {
+    "DRAWING_PRECISION": "0.014517",
+    "COUNT": "-0.087240",
+    "MARK_BOUNDARY": "-0.011152",
+    "BEYOND_EXTENT": "-0.160962",
+    "UNRESOLVED": "-0.120452"
+   }
+  }
+ },
+ "note": "engine figures, drawing handles and m3 terms only; no row, length or count of the freelancer",
+ "t551_resplit": [
+  {
+   "reading": {
+    "10AE": "C",
+    "10E0": "C7"
+   },
+   "tables": {
+    "GF": {
+     "residual_m3": "-1.945000",
+     "components": {
+      "COUNT": "-0.750000",
+      "HELD": "-3.937500",
+      "JOINT_HEAD": "2.281250",
+      "BASE": "0.192500",
+      "GLOBAL_DEPTH": "0.118750",
+      "HEIGHT_OPEN": "0.150000"
+     },
+     "by_mark": {
+      "C": {
+       "COUNT": "0.375000",
+       "HELD": "-2.250000"
+      },
+      "C1": {
+       "COUNT": "-0.375000",
+       "JOINT_HEAD": "0.075000"
+      },
+      "C10": {
+       "JOINT_HEAD": "0.148750",
+       "GLOBAL_DEPTH": "-0.017500"
+      },
+      "C11": {
+       "COUNT": "1.031250",
+       "JOINT_HEAD": "0.467500",
+       "GLOBAL_DEPTH": "-0.055000"
+      },
+      "C2": {
+       "COUNT": "-0.750000",
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "HELD": "-0.937500",
+       "JOINT_HEAD": "0.206250",
+       "BASE": "0.087500",
+       "GLOBAL_DEPTH": "0.075000"
+      },
+      "C4": {
+       "JOINT_HEAD": "0.187500"
+      },
+      "C5": {
+       "JOINT_HEAD": "0.337500",
+       "BASE": "0.105000"
+      },
+      "C6": {
+       "JOINT_HEAD": "0.087500",
+       "GLOBAL_DEPTH": "0.043750"
+      },
+      "C7": {
+       "COUNT": "0.750000",
+       "HELD": "-0.750000",
+       "HEIGHT_OPEN": "0.150000"
+      },
+      "C8": {
+       "COUNT": "-0.843750",
+       "JOINT_HEAD": "0.191250",
+       "GLOBAL_DEPTH": "-0.022500"
+      },
+      "C9": {
+       "COUNT": "-0.937500",
+       "JOINT_HEAD": "0.375000"
+      }
+     }
+    },
+    "1F": {
+     "residual_m3": "-3.444000",
+     "components": {
+      "COUNT": "0.345000",
+      "HELD": "-4.554000",
+      "JOINT_HEAD": "0.385000",
+      "GLOBAL_DEPTH": "0.095000",
+      "HEIGHT_OPEN": "0.285000"
+     },
+     "by_mark": {
+      "C1": {
+       "JOINT_HEAD": "0.075000"
+      },
+      "C2": {
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "-0.345000",
+       "HELD": "-0.345000",
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "C4": {
+       "HELD": "-0.690000"
+      },
+      "C5": {
+       "HELD": "-1.035000"
+      },
+      "C7": {
+       "HELD": "-1.104000"
+      },
+      "C8": {
+       "HEIGHT_OPEN": "0.135000"
+      },
+      "C9": {
+       "COUNT": "0.690000",
+       "HELD": "-1.380000"
+      },
+      "P.C 20x50": {
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "P.C 20x70": {
+       "JOINT_HEAD": "0.105000"
+      }
+     }
+    }
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C",
+    "10E0": "C8"
+   },
+   "tables": {
+    "GF": {
+     "residual_m3": "-1.945000",
+     "components": {
+      "COUNT": "-0.656250",
+      "HELD": "-4.031250",
+      "JOINT_HEAD": "2.281250",
+      "BASE": "0.192500",
+      "GLOBAL_DEPTH": "0.118750",
+      "HEIGHT_OPEN": "0.150000"
+     },
+     "by_mark": {
+      "C": {
+       "COUNT": "0.375000",
+       "HELD": "-2.250000"
+      },
+      "C1": {
+       "COUNT": "-0.375000",
+       "JOINT_HEAD": "0.075000"
+      },
+      "C10": {
+       "JOINT_HEAD": "0.148750",
+       "GLOBAL_DEPTH": "-0.017500"
+      },
+      "C11": {
+       "COUNT": "1.031250",
+       "JOINT_HEAD": "0.467500",
+       "GLOBAL_DEPTH": "-0.055000"
+      },
+      "C2": {
+       "COUNT": "-0.750000",
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "HELD": "-0.937500",
+       "JOINT_HEAD": "0.206250",
+       "BASE": "0.087500",
+       "GLOBAL_DEPTH": "0.075000"
+      },
+      "C4": {
+       "JOINT_HEAD": "0.187500"
+      },
+      "C5": {
+       "JOINT_HEAD": "0.337500",
+       "BASE": "0.105000"
+      },
+      "C6": {
+       "JOINT_HEAD": "0.087500",
+       "GLOBAL_DEPTH": "0.043750"
+      },
+      "C7": {
+       "HEIGHT_OPEN": "0.150000"
+      },
+      "C8": {
+       "HELD": "-0.843750",
+       "JOINT_HEAD": "0.191250",
+       "GLOBAL_DEPTH": "-0.022500"
+      },
+      "C9": {
+       "COUNT": "-0.937500",
+       "JOINT_HEAD": "0.375000"
+      }
+     }
+    },
+    "1F": {
+     "residual_m3": "-3.444000",
+     "components": {
+      "COUNT": "0.414000",
+      "HELD": "-4.623000",
+      "JOINT_HEAD": "0.385000",
+      "GLOBAL_DEPTH": "0.095000",
+      "HEIGHT_OPEN": "0.285000"
+     },
+     "by_mark": {
+      "C1": {
+       "JOINT_HEAD": "0.075000"
+      },
+      "C2": {
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "-0.345000",
+       "HELD": "-0.345000",
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "C4": {
+       "HELD": "-0.690000"
+      },
+      "C5": {
+       "HELD": "-1.035000"
+      },
+      "C7": {
+       "COUNT": "-0.552000",
+       "HELD": "-0.552000"
+      },
+      "C8": {
+       "COUNT": "0.621000",
+       "HELD": "-0.621000",
+       "HEIGHT_OPEN": "0.135000"
+      },
+      "C9": {
+       "COUNT": "0.690000",
+       "HELD": "-1.380000"
+      },
+      "P.C 20x50": {
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "P.C 20x70": {
+       "JOINT_HEAD": "0.105000"
+      }
+     }
+    }
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C3",
+    "10E0": "C7"
+   },
+   "tables": {
+    "GF": {
+     "residual_m3": "-1.945000",
+     "components": {
+      "COUNT": "-0.656250",
+      "HELD": "-4.031250",
+      "JOINT_HEAD": "2.281250",
+      "BASE": "0.192500",
+      "GLOBAL_DEPTH": "0.118750",
+      "HEIGHT_OPEN": "0.150000"
+     },
+     "by_mark": {
+      "C": {
+       "HELD": "-1.875000"
+      },
+      "C1": {
+       "COUNT": "-0.375000",
+       "JOINT_HEAD": "0.075000"
+      },
+      "C10": {
+       "JOINT_HEAD": "0.148750",
+       "GLOBAL_DEPTH": "-0.017500"
+      },
+      "C11": {
+       "COUNT": "1.031250",
+       "JOINT_HEAD": "0.467500",
+       "GLOBAL_DEPTH": "-0.055000"
+      },
+      "C2": {
+       "COUNT": "-0.750000",
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "0.468750",
+       "HELD": "-1.406250",
+       "JOINT_HEAD": "0.206250",
+       "BASE": "0.087500",
+       "GLOBAL_DEPTH": "0.075000"
+      },
+      "C4": {
+       "JOINT_HEAD": "0.187500"
+      },
+      "C5": {
+       "JOINT_HEAD": "0.337500",
+       "BASE": "0.105000"
+      },
+      "C6": {
+       "JOINT_HEAD": "0.087500",
+       "GLOBAL_DEPTH": "0.043750"
+      },
+      "C7": {
+       "COUNT": "0.750000",
+       "HELD": "-0.750000",
+       "HEIGHT_OPEN": "0.150000"
+      },
+      "C8": {
+       "COUNT": "-0.843750",
+       "JOINT_HEAD": "0.191250",
+       "GLOBAL_DEPTH": "-0.022500"
+      },
+      "C9": {
+       "COUNT": "-0.937500",
+       "JOINT_HEAD": "0.375000"
+      }
+     }
+    },
+    "1F": {
+     "residual_m3": "-3.444000",
+     "components": {
+      "COUNT": "0.345000",
+      "HELD": "-4.554000",
+      "JOINT_HEAD": "0.385000",
+      "GLOBAL_DEPTH": "0.095000",
+      "HEIGHT_OPEN": "0.285000"
+     },
+     "by_mark": {
+      "C1": {
+       "JOINT_HEAD": "0.075000"
+      },
+      "C2": {
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "-0.345000",
+       "HELD": "-0.345000",
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "C4": {
+       "HELD": "-0.690000"
+      },
+      "C5": {
+       "HELD": "-1.035000"
+      },
+      "C7": {
+       "HELD": "-1.104000"
+      },
+      "C8": {
+       "HEIGHT_OPEN": "0.135000"
+      },
+      "C9": {
+       "COUNT": "0.690000",
+       "HELD": "-1.380000"
+      },
+      "P.C 20x50": {
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "P.C 20x70": {
+       "JOINT_HEAD": "0.105000"
+      }
+     }
+    }
+   }
+  },
+  {
+   "reading": {
+    "10AE": "C3",
+    "10E0": "C8"
+   },
+   "tables": {
+    "GF": {
+     "residual_m3": "-1.945000",
+     "components": {
+      "COUNT": "-0.562500",
+      "HELD": "-4.125000",
+      "JOINT_HEAD": "2.281250",
+      "BASE": "0.192500",
+      "GLOBAL_DEPTH": "0.118750",
+      "HEIGHT_OPEN": "0.150000"
+     },
+     "by_mark": {
+      "C": {
+       "HELD": "-1.875000"
+      },
+      "C1": {
+       "COUNT": "-0.375000",
+       "JOINT_HEAD": "0.075000"
+      },
+      "C10": {
+       "JOINT_HEAD": "0.148750",
+       "GLOBAL_DEPTH": "-0.017500"
+      },
+      "C11": {
+       "COUNT": "1.031250",
+       "JOINT_HEAD": "0.467500",
+       "GLOBAL_DEPTH": "-0.055000"
+      },
+      "C2": {
+       "COUNT": "-0.750000",
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "0.468750",
+       "HELD": "-1.406250",
+       "JOINT_HEAD": "0.206250",
+       "BASE": "0.087500",
+       "GLOBAL_DEPTH": "0.075000"
+      },
+      "C4": {
+       "JOINT_HEAD": "0.187500"
+      },
+      "C5": {
+       "JOINT_HEAD": "0.337500",
+       "BASE": "0.105000"
+      },
+      "C6": {
+       "JOINT_HEAD": "0.087500",
+       "GLOBAL_DEPTH": "0.043750"
+      },
+      "C7": {
+       "HEIGHT_OPEN": "0.150000"
+      },
+      "C8": {
+       "HELD": "-0.843750",
+       "JOINT_HEAD": "0.191250",
+       "GLOBAL_DEPTH": "-0.022500"
+      },
+      "C9": {
+       "COUNT": "-0.937500",
+       "JOINT_HEAD": "0.375000"
+      }
+     }
+    },
+    "1F": {
+     "residual_m3": "-3.444000",
+     "components": {
+      "COUNT": "0.414000",
+      "HELD": "-4.623000",
+      "JOINT_HEAD": "0.385000",
+      "GLOBAL_DEPTH": "0.095000",
+      "HEIGHT_OPEN": "0.285000"
+     },
+     "by_mark": {
+      "C1": {
+       "JOINT_HEAD": "0.075000"
+      },
+      "C2": {
+       "JOINT_HEAD": "0.205000",
+       "GLOBAL_DEPTH": "0.095000"
+      },
+      "C3": {
+       "COUNT": "-0.345000",
+       "HELD": "-0.345000",
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "C4": {
+       "HELD": "-0.690000"
+      },
+      "C5": {
+       "HELD": "-1.035000"
+      },
+      "C7": {
+       "COUNT": "-0.552000",
+       "HELD": "-0.552000"
+      },
+      "C8": {
+       "COUNT": "0.621000",
+       "HELD": "-0.621000",
+       "HEIGHT_OPEN": "0.135000"
+      },
+      "C9": {
+       "COUNT": "0.690000",
+       "HELD": "-1.380000"
+      },
+      "P.C 20x50": {
+       "HEIGHT_OPEN": "0.075000"
+      },
+      "P.C 20x70": {
+       "JOINT_HEAD": "0.105000"
+      }
+     }
+    }
+   }
+  }
+ ],
+ "beam_row_checks_private_run": {
+  "GF B11": true,
+  "GF B8": true,
+  "1F B11": true,
+  "1F B6": true,
+  "2F B2 runs equal f2f, one extra row": true,
+  "2F B2 extra row x section = mark residual": true
+ }
+}
