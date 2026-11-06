@@ -1,0 +1,998 @@
+{
+ "schema": "T573_CEILING_RECONCILE_V1",
+ "rule": "R-T573-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "line_index": "research/agents_t507/out/LINE_INDEX_V3_0_57.json",
+ "pins": {
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0",
+  "research/agents_t283/CEILINGS_T283.csv": "10214b3dbffcf57a",
+  "research/agents_t561/out/T561_PAINT_RECONCILE.json": "f8d866b571e315ed",
+  "research/agents_t567/t567_inputs.py": "6fe7d700ea7e4c62"
+ },
+ "board": {
+  "groups": [
+   {
+    "id": "GF reception + dining + entrance (incl. pantry, south dining piece)",
+    "unit": "m2",
+    "ours": "108.822093",
+    "his": "147.96",
+    "gap": "-39.137907",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "26.6465"
+    ],
+    "lines": [
+     "L-eb3be58fc760b39f0e38",
+     "L-1624ef49fd8b69cc2bcb",
+     "L-ba5ea9bd4bbd2f713ea0",
+     "L-4b41debf41fff9e3faae"
+    ],
+    "rows": [
+     "DEC.D13",
+     "DEC.D15"
+    ],
+    "causes": [
+     {
+      "label": "no ceiling under the slab openings (light well 13.392 + pocket 1.551, S-OPENING outlines): his row ceils them",
+      "verdict": "ENGINE_RIGHT",
+      "amount": "-14.9434",
+      "source": "T-271 r2b s.5 / T-283 r3 CEILINGS_T283.csv"
+     },
+     {
+      "label": "stair ST-02 zone under the slab + beyond the stair face (stair soffit class, T-281)",
+      "verdict": "HELD",
+      "amount": "-11.6255",
+      "bound": [
+       "0",
+       "11.6255"
+      ],
+      "source": "T-271 r2b s.5 / T-283 r3 CEILINGS_T283.csv; his row covers it"
+     },
+     {
+      "label": "garden band 1.30 m under the 1F slab, class P-2 (designer D-48)",
+      "verdict": "HELD",
+      "amount": "-9.1010",
+      "bound": [
+       "0",
+       "9.1010"
+      ],
+      "source": "T-283 r3 / T-427; his row covers it"
+     },
+     {
+      "label": "west strip OP-003 3.80 x 0.20 (line L-4b41de HELD, no ceiling reading)",
+      "verdict": "HELD",
+      "amount": "-0.760",
+      "bound": [
+       "0",
+       "0.760"
+      ],
+      "source": "T-431 / T-435"
+     },
+     {
+      "label": "two unlabelled GF spaces GF-RF002DC 3.600 + GF-R7B7A5D 1.560 (class HELD; inside his row not established)",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       "5.1600"
+      ],
+      "source": "T-283 r3"
+     },
+     {
+      "label": "remainder: his row has no dimensions (T-271 at R2 found +1.182 not traceable on its own region); not separable",
+      "verdict": "UNRESOLVED",
+      "amount": "-2.708007",
+      "source": "this run"
+     }
+    ]
+   },
+   {
+    "id": "GF service stair room ST-01 (stairwell line HELD blank)",
+    "unit": "m2",
+    "ours": "0",
+    "his": "0",
+    "gap": "0",
+    "pct": null,
+    "held_bound": [
+     "0",
+     null
+    ],
+    "lines": [
+     "L-2175a965bb7c48a50e6c"
+    ],
+    "rows": [],
+    "causes": [
+     {
+      "label": "stair top under the slab 1.750 HELD (no finish printed) + soffit pieces (counted once, in the STAIR soffit table, never here); no decor row of his",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       null
+      ],
+      "source": "T-283 r3 / T-335 FILL"
+     }
+    ]
+   },
+   {
+    "id": "GF diwaniya",
+    "unit": "m2",
+    "ours": "24.940332",
+    "his": "24.84",
+    "gap": "0.100332",
+    "pct": "0.40",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-10cea378faf69d8d60b4"
+    ],
+    "rows": [
+     "DEC.D16"
+    ],
+    "causes": [
+     {
+      "label": "room size, finish vs structural face (his row has no sub-dimensions)",
+      "verdict": "TOLERANCE",
+      "amount": "0.100332",
+      "source": "T-271 / T-335"
+     }
+    ]
+   },
+   {
+    "id": "GF master bedroom",
+    "unit": "m2",
+    "ours": "16.54964",
+    "his": "16.66",
+    "gap": "-0.11036",
+    "pct": "-0.66",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-1415e7d55fbf3f25af2c"
+    ],
+    "rows": [
+     "DEC.D14"
+    ],
+    "causes": [
+     {
+      "label": "room size, finish vs structural face",
+      "verdict": "TOLERANCE",
+      "amount": "-0.11036",
+      "source": "T-271 / T-335"
+     }
+    ]
+   },
+   {
+    "id": "GF driver room",
+    "unit": "m2",
+    "ours": "7.875",
+    "his": "7.87",
+    "gap": "0.005",
+    "pct": "0.06",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-4a8e924113005f50aad0"
+    ],
+    "rows": [
+     "DEC.D17"
+    ],
+    "causes": [
+     {
+      "label": "room size",
+      "verdict": "TOLERANCE",
+      "amount": "0.005",
+      "source": "T-271 / T-335"
+     }
+    ]
+   },
+   {
+    "id": "GF wet rooms (kitchen, wash, 8 baths / W.C.; 10 lines = his 10 rows)",
+    "unit": "m2",
+    "ours": "35.426210",
+    "his": "35.48",
+    "gap": "-0.053790",
+    "pct": "-0.15",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-99c19f55c75e05a9269d",
+     "L-ca375a1aa007cced0c4f",
+     "L-1872aa0960386048f846",
+     "L-c36100853e30f91fe621",
+     "L-76e2f18fcd457f79aa2b",
+     "L-d8d08b98c7700716d224",
+     "L-cbc44c359f812d7d498e",
+     "L-f753591a0d8963fa0126",
+     "L-3d50c68ce33c30b9ea7a",
+     "L-dee48a60f23266badabd"
+    ],
+    "rows": [
+     "DEC.D42",
+     "DEC.D43",
+     "DEC.D44",
+     "DEC.D45",
+     "DEC.D46",
+     "DEC.D47",
+     "DEC.D48",
+     "DEC.D49",
+     "DEC.D50",
+     "DEC.D51"
+    ],
+    "causes": [
+     {
+      "label": "room sizes (sum of 10)",
+      "verdict": "TOLERANCE",
+      "amount": "-0.053790",
+      "source": "T-271 (rest -0.054 agree)"
+     }
+    ]
+   },
+   {
+    "id": "1F living (group line + 2 blank parents)",
+    "unit": "m2",
+    "ours": "51.0496",
+    "his": "38.96",
+    "gap": "12.0896",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "24.9334"
+    ],
+    "lines": [
+     "L-43bf1f869e1588f1d3bd",
+     "L-fc116bb666b184740090",
+     "L-35341ff2e6a848b9436b"
+    ],
+    "rows": [
+     "DEC.D21"
+    ],
+    "causes": [
+     {
+      "label": "double-height ceiling over the light-well footprint (1F roof slab closed over the void): in ours, his row omits it; the normal / double-height split is not drawn, so the term is the group gap (never pro rata, R-T284-1)",
+      "verdict": "ENGINE_RIGHT",
+      "amount": "12.0896",
+      "source": "T-271 verdict (1F double-height ceiling) / T-283 r3"
+     },
+     {
+      "label": "stair zone 10.725 + B23 foot 0.1725 + east dome 14.0359: in neither (his row is smaller)",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       "24.9334"
+      ],
+      "source": "T-283 r3"
+     }
+    ]
+   },
+   {
+    "id": "1F bedrooms 1-4",
+    "unit": "m2",
+    "ours": "60.698901",
+    "his": "74.00",
+    "gap": "-13.301099",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "11.9226"
+    ],
+    "lines": [
+     "L-69ebc828b4c61f4ea348",
+     "L-ac337bf041e8184a315c",
+     "L-cbe047c180804fe1ca65",
+     "L-9da183ba435f72f62897"
+    ],
+    "rows": [
+     "DEC.D22",
+     "DEC.D23",
+     "DEC.D24",
+     "DEC.D25"
+    ],
+    "causes": [
+     {
+      "label": "open dome positions over the rooms (west 11.5808 over 1F-RB72F22, east 0.3418): his room rows cover them (designer DCR-4, Q-44 A)",
+      "verdict": "HELD",
+      "amount": "-11.9226",
+      "bound": [
+       "0",
+       "11.9226"
+      ],
+      "source": "T-283 DOMES_T283.csv"
+     },
+     {
+      "label": "room sizes (T-208 UNRESOLVED; 1F-R0E919A second-room acceptance item open)",
+      "verdict": "UNRESOLVED",
+      "amount": "-1.378499",
+      "source": "T-271 / T-208"
+     }
+    ]
+   },
+   {
+    "id": "1F dressing (1.650 x 1.800)",
+    "unit": "m2",
+    "ours": "2.97",
+    "his": "0",
+    "gap": "2.97",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-d0a131bb108d5a3bb215"
+    ],
+    "rows": [],
+    "causes": [
+     {
+      "label": "drawn space, no row of his (T-295 finding c)",
+      "verdict": "ENGINE_RIGHT",
+      "amount": "2.97",
+      "source": "T-271 / T-295 / T-284"
+     }
+    ]
+   },
+   {
+    "id": "1F wet rooms (laundry + 5 baths; 6 lines = his 6 rows)",
+    "unit": "m2",
+    "ours": "28.0336",
+    "his": "30.91",
+    "gap": "-2.8764",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "3.1109"
+    ],
+    "lines": [
+     "L-788395228a7c93622567",
+     "L-05b1d88f06c38f962cb6",
+     "L-c25a76ebdaab3ec65076",
+     "L-c85ec92c5f1e50dadd11",
+     "L-41145bdf5e4088f2fefa",
+     "L-cf849a125a14605a4e96"
+    ],
+    "rows": [
+     "DEC.D55",
+     "DEC.D56",
+     "DEC.D57",
+     "DEC.D58",
+     "DEC.D59",
+     "DEC.D60"
+    ],
+    "causes": [
+     {
+      "label": "open dome positions over three baths (west 1.4227 + 1.2410, east 0.4472): his rows cover them",
+      "verdict": "HELD",
+      "amount": "-3.1109",
+      "bound": [
+       "0",
+       "3.1109"
+      ],
+      "source": "T-283 DOMES_T283.csv"
+     },
+     {
+      "label": "room sizes",
+      "verdict": "TOLERANCE",
+      "amount": "0.2345",
+      "source": "T-271 (+0.235)"
+     }
+    ]
+   },
+   {
+    "id": "2F maid room",
+    "unit": "m2",
+    "ours": "19.350001",
+    "his": "19.58",
+    "gap": "-0.229999",
+    "pct": "-1.17",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-7531772e1581b35eea5f"
+    ],
+    "rows": [
+     "DEC.D28"
+    ],
+    "causes": [
+     {
+      "label": "room size",
+      "verdict": "TOLERANCE",
+      "amount": "-0.229999",
+      "source": "T-271"
+     }
+    ]
+   },
+   {
+    "id": "2F stair hall lobby (his 'corridor')",
+    "unit": "m2",
+    "ours": "5.6258",
+    "his": "7.7",
+    "gap": "-2.0742",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "12.9742"
+    ],
+    "lines": [
+     "L-10e79bd48a8fbfbf14aa",
+     "L-dd6930fd19ca1b908c56"
+    ],
+    "rows": [
+     "DEC.D29"
+    ],
+    "causes": [
+     {
+      "label": "stair box top 12.9742 HELD (Q-72): his corridor 7.70 cannot hold the whole box (7.70 < 12.974); which part, if any, is in his row is not established",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       "12.9742"
+      ],
+      "source": "T-271 / T-283 r3"
+     },
+     {
+      "label": "his corridor 7.70 has no dimensions vs the drawn lobby 5.6258",
+      "verdict": "UNRESOLVED",
+      "amount": "-2.0742",
+      "source": "T-271 (-2.074)"
+     }
+    ]
+   },
+   {
+    "id": "2F W.C.",
+    "unit": "m2",
+    "ours": "5.55",
+    "his": "5.62",
+    "gap": "-0.07",
+    "pct": "-1.25",
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-1bd4ec39660768d22677"
+    ],
+    "rows": [
+     "DEC.D63"
+    ],
+    "causes": [
+     {
+      "label": "room size",
+      "verdict": "TOLERANCE",
+      "amount": "-0.07",
+      "source": "T-271"
+     }
+    ]
+   }
+  ],
+  "totals": {
+   "m2": {
+    "ours": "366.891177",
+    "his": "409.58",
+    "gap": "-42.688823",
+    "pct": "-10.42"
+   }
+  },
+  "by_verdict": {
+   "ENGINE_RIGHT": "0.1162",
+   "HELD": "-36.5200",
+   "TOLERANCE": "-0.124317",
+   "UNRESOLVED": "-6.160706"
+  },
+  "like_for_like_no_held": {
+   "ours": "109.691183",
+   "his": "110.05",
+   "gap": "-0.358817",
+   "pct": "-0.33"
+  }
+ },
+ "classes": {
+  "groups": [
+   {
+    "id": "BULKHEAD vertical faces (all rooms)",
+    "unit": "m2",
+    "ours": "27.9345",
+    "his": "0",
+    "gap": "27.9345",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "0.981420"
+    ],
+    "lines": [
+     "L-14db74c7a9e78a5d2386",
+     "L-1c461596d5be791caa26",
+     "L-31f9b7008ea883f1b78d",
+     "L-32d31fc6dd4ed09dd438",
+     "L-458c54750ace967bf641",
+     "L-57df06acea9cf0f94109",
+     "L-6d4b107ba8eab53176b5",
+     "L-807d1a9f295ba722cee4",
+     "L-995e89ff3ea50090a169",
+     "L-d9b2b5c9deb35678f3ca",
+     "L-e2970913c9601f185e8d",
+     "L-e3812b81da5231dbfc90",
+     "L-f31049b5c21fc49bd692",
+     "L-f9963cc5d85a6c1f2243"
+    ],
+    "rows": [],
+    "causes": [
+     {
+      "label": "owner bulkhead faces (free beam edge x 0.15, Q-48 A + Q-43): he lists no bulkhead",
+      "verdict": "NOT_IN_HIS_ROWS",
+      "amount": "27.9345",
+      "source": "T-283 r3 / T-284"
+     },
+     {
+      "label": "GF-RFD4E1D bulkhead HELD (edge 6.5428 m, depth not decided; owner-method bound 6.5428 x 0.15)",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       "0.981420"
+      ],
+      "source": "T-431"
+     }
+    ]
+   },
+   {
+    "id": "COVE / cornice runs (lm)",
+    "unit": "lm",
+    "ours": "0",
+    "his": "427.46",
+    "gap": "-427.46",
+    "pct": null,
+    "held_bound": [
+     "0",
+     null
+    ],
+    "lines": [],
+    "rows": [
+     "DEC.C13",
+     "DEC.C14",
+     "DEC.C15",
+     "DEC.C16",
+     "DEC.C17",
+     "DEC.C21",
+     "DEC.C22",
+     "DEC.C23",
+     "DEC.C24",
+     "DEC.C25",
+     "DEC.C28",
+     "DEC.C29",
+     "DEC.C42",
+     "DEC.C43",
+     "DEC.C44",
+     "DEC.C45",
+     "DEC.C46",
+     "DEC.C47",
+     "DEC.C48",
+     "DEC.C49",
+     "DEC.C50",
+     "DEC.C51",
+     "DEC.C55",
+     "DEC.C56",
+     "DEC.C57",
+     "DEC.C58",
+     "DEC.C59",
+     "DEC.C60",
+     "DEC.C63"
+    ],
+    "causes": [
+     {
+      "label": "no cove / cornice detail drawn: no candidate line; T-283 ledger runs HELD 288.6399 m where a run is printed, 6 faces blank",
+      "verdict": "HELD",
+      "amount": "-427.46",
+      "bound": [
+       "0",
+       null
+      ],
+      "source": "T-283 r3 / T-284 (coves 288.640 m)"
+     }
+    ]
+   },
+   {
+    "id": "STAIR soffits ST-01 / ST-02 (his wall-paint rows 18-19)",
+    "unit": "m2",
+    "ours": "0",
+    "his": "39.99",
+    "gap": "-39.99",
+    "pct": null,
+    "held_bound": [
+     "22.149034",
+     null
+    ],
+    "lines": [
+     "L-1fcec3328ccd0ea243d4",
+     "L-c77e3887f7e348b1461d"
+    ],
+    "rows": [
+     "PNT.I18",
+     "PNT.I19"
+    ],
+    "causes": [
+     {
+      "label": "T-281 true soffit (method D) 17.243246 + 4.905788, lines HELD blank",
+      "verdict": "HELD",
+      "amount": "-22.149034",
+      "bound": [
+       "22.149034",
+       null
+      ],
+      "source": "T-561 out (carried)"
+     },
+     {
+      "label": "his sizes vs the T-281 rows + T-281 rows still HELD (ST-01 1.50 plan, ST-02 RS-C 4.443156 plan)",
+      "verdict": "UNRESOLVED",
+      "amount": "-17.840966",
+      "source": "T-561 out (carried)"
+     }
+    ]
+   },
+   {
+    "id": "DOME intrados (2 lines)",
+    "unit": "m2",
+    "ours": "0",
+    "his": "0",
+    "gap": "0",
+    "pct": null,
+    "held_bound": [
+     "0",
+     null
+    ],
+    "lines": [
+     "L-cf3e2b55648f676ffb1d",
+     "L-f74c0fc7f78b579e6097"
+    ],
+    "rows": [],
+    "causes": [
+     {
+      "label": "dome finish HELD blank (designer DCR-4); he prices no dome ceiling",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       null
+      ],
+      "source": "T-284"
+     }
+    ]
+   },
+   {
+    "id": "EXTERIOR soffits (5 lines) vs his plaster row 73",
+    "unit": "m2",
+    "ours": "44.446",
+    "his": "19.154",
+    "gap": "25.292",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "0"
+    ],
+    "lines": [
+     "L-10404364d725471e3213",
+     "L-23072352a28aeca7b051",
+     "L-7cd2cd75128f101a208c",
+     "L-80bc93761800e7ba1968",
+     "L-c041069e7b1c0dffcd8c"
+    ],
+    "rows": [
+     "PLS.I73"
+    ],
+    "causes": [
+     {
+      "label": "pool-court soffit PL-03: his 2 x 3.14 x 3.05 = 19.154 vs the measured 12.834",
+      "verdict": "ENGINE_RIGHT",
+      "amount": "-6.320",
+      "source": "T-567 (carried)"
+     },
+     {
+      "label": "soffits PL-01 / PL-02 / PL-04 / PL-05 over outside air (T-121 / T-127): no row of his in his decor, paint or plaster statements",
+      "verdict": "NOT_IN_HIS_ROWS",
+      "amount": "31.612",
+      "source": "T-567 row map / this run"
+     }
+    ]
+   }
+  ],
+  "totals": "none: each face class is its own comparison (R-T573-1 (d))"
+ },
+ "paint": {
+  "groups": [
+   {
+    "id": "CEILING PAINT (31 lines) vs his decor paint rows 47-50",
+    "unit": "m2",
+    "ours": "394.825677",
+    "his": "452.325",
+    "gap": "-57.499323",
+    "pct": null,
+    "held_bound": [
+     "0",
+     "0.981420"
+    ],
+    "lines": [
+     "L-0a318f593fe373e11293",
+     "L-0eb7a690e0859a57747e",
+     "L-16e329ab4e3a7796f8f2",
+     "L-1acbaf5ba323bd3ae812",
+     "L-1fb0bb0fed7a4eb5beee",
+     "L-2a50551d7aab2e65f3f6",
+     "L-2e7ba14bc39ae0274447",
+     "L-3350ec07f2432e714b11",
+     "L-358b16bc37294eefe0e3",
+     "L-38c09aa706dd6aed8f35",
+     "L-3abfbce06209ecd9633a",
+     "L-71d7af3d46da2665a382",
+     "L-73da7ee80a6e215e823c",
+     "L-744c07ddc0001336e942",
+     "L-752dc194d1d6e60e7929",
+     "L-7671bf6f675c6d48dc1f",
+     "L-7ae9e5cae6515daa8b48",
+     "L-7c5041832fc43c4fcd49",
+     "L-82805c1646557a5ce08a",
+     "L-930690c1b91367f7014c",
+     "L-975c3f4b509193b81f84",
+     "L-9c4b119759526f94651c",
+     "L-a23eb0eab7e2425a1f5f",
+     "L-a965bc9d44d10bcb8361",
+     "L-baf7fb98b252273517bf",
+     "L-bf8bf4e1f486a87c2fce",
+     "L-c1374e0972caf39457ec",
+     "L-c7985c8b5242a43e7aa3",
+     "L-cad3f20c3770f7d66bad",
+     "L-d9e39637efa1e0f27b4a",
+     "L-fb0b0067009cbc321caa"
+    ],
+    "rows": [
+     "PNT.I47",
+     "PNT.I48",
+     "PNT.I49",
+     "PNT.I50"
+    ],
+    "causes": [
+     {
+      "label": "the board gap, room by room as the BOARD table",
+      "verdict": "BY_TABLE",
+      "amount": "-42.688823",
+      "source": "BOARD table (its own verdicts)"
+     },
+     {
+      "label": "bulkhead faces painted in ours; he paints none",
+      "verdict": "NOT_IN_HIS_ROWS",
+      "amount": "27.9345",
+      "source": "BULKHEAD table"
+     },
+     {
+      "label": "his cove-light strips 0.10 x 282.85 + 0.10 x 144.60 (no detail drawn; owner Q-57 A mod: actual paintable surfaces)",
+      "verdict": "RULE_DIFFERENCE",
+      "amount": "-42.745",
+      "source": "T-284 s.4"
+     },
+     {
+      "label": "GF-RFD4E1D bulkhead paint HELD with its bulkhead",
+      "verdict": "HELD",
+      "amount": "0",
+      "bound": [
+       "0",
+       "0.981420"
+      ],
+      "source": "T-431"
+     }
+    ]
+   }
+  ],
+  "totals": {
+   "m2": {
+    "ours": "394.825677",
+    "his": "452.325",
+    "gap": "-57.499323",
+    "pct": "-12.71"
+   }
+  },
+  "room_check": [
+   {
+    "room": "1F-R0E919A",
+    "paint": "18.1859",
+    "board": "16.34",
+    "bulkhead": "1.8459"
+   },
+   {
+    "room": "1F-R26FA0D",
+    "paint": "10.3656",
+    "board": "10.151",
+    "bulkhead": "0.2146"
+   },
+   {
+    "room": "1F-R3CFCFD",
+    "paint": "18.8051",
+    "board": "18.6747",
+    "bulkhead": "0.1304"
+   },
+   {
+    "room": "1F-R48AA46",
+    "paint": "3.7815",
+    "board": "3.7815",
+    "bulkhead": "0"
+   },
+   {
+    "room": "1F-R48CDA5",
+    "paint": "4.5703",
+    "board": "4.2778",
+    "bulkhead": "0.2925"
+   },
+   {
+    "room": "1F-R52AC05",
+    "paint": "2.646",
+    "board": "2.646",
+    "bulkhead": "0"
+   },
+   {
+    "room": "1F-R78C367",
+    "paint": "58.7108",
+    "board": "51.0496",
+    "bulkhead": "7.6612"
+   },
+   {
+    "room": "1F-R8BDA49",
+    "paint": "3.5998",
+    "board": "3.5998",
+    "bulkhead": "0"
+   },
+   {
+    "room": "1F-RB72F22",
+    "paint": "8.1067",
+    "board": "7.4692",
+    "bulkhead": "0.6375"
+   },
+   {
+    "room": "1F-RED0D19",
+    "paint": "18.762501",
+    "board": "18.215001",
+    "bulkhead": "0.5475"
+   },
+   {
+    "room": "1F-RED23B8",
+    "paint": "3.5775",
+    "board": "3.5775",
+    "bulkhead": "0"
+   },
+   {
+    "room": "1F-RFFE7AF",
+    "paint": "2.97",
+    "board": "2.97",
+    "bulkhead": "0"
+   },
+   {
+    "room": "2F-R1DB2D2",
+    "paint": "19.350001",
+    "board": "19.350001",
+    "bulkhead": "0"
+   },
+   {
+    "room": "2F-R4D1B62",
+    "paint": "5.6258",
+    "board": "5.6258",
+    "bulkhead": "0"
+   },
+   {
+    "room": "2F-RE83BED",
+    "paint": "5.55",
+    "board": "5.55",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-R51E127",
+    "paint": "7.875",
+    "board": "7.875",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-R7512EA",
+    "paint": "26.140332",
+    "board": "24.940332",
+    "bulkhead": "1.2"
+   },
+   {
+    "room": "GF-R75FBAE",
+    "paint": "18.58614",
+    "board": "16.54964",
+    "bulkhead": "2.0365"
+   },
+   {
+    "room": "GF-R8496F0",
+    "paint": "3.1325",
+    "board": "3.1325",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RA3AD49",
+    "paint": "9.630001",
+    "board": "9.630001",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RB28769",
+    "paint": "2.76471",
+    "board": "2.36761",
+    "bulkhead": "0.3971"
+   },
+   {
+    "room": "GF-RB62B55",
+    "paint": "3.375",
+    "board": "3.375",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RC06FED",
+    "paint": "3.128101",
+    "board": "2.800001",
+    "bulkhead": "0.3281"
+   },
+   {
+    "room": "GF-RC99C2A",
+    "paint": "113.055992",
+    "board": "101.137092",
+    "bulkhead": "11.9189"
+   },
+   {
+    "room": "GF-RD36087",
+    "paint": "1.485",
+    "board": "1.485",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RD6F891",
+    "paint": "3.717683",
+    "board": "3.717683",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RDBD4F9",
+    "paint": "5.454995",
+    "board": "4.730695",
+    "bulkhead": "0.7243"
+   },
+   {
+    "room": "GF-RDF7D28",
+    "paint": "2.3625",
+    "board": "2.3625",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RF38DAF",
+    "paint": "2.675221",
+    "board": "2.675221",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RFAD3C4",
+    "paint": "1.95",
+    "board": "1.95",
+    "bulkhead": "0"
+   },
+   {
+    "room": "GF-RFD4E1D",
+    "paint": "4.885",
+    "board": "4.885",
+    "bulkhead": "0"
+   }
+  ]
+ },
+ "cove_ledger_m": "288.6399",
+ "cove_ledger_blank_faces": 6,
+ "his_cove_paint_run_note": "his paint row 50 uses 144.60 m against his decor total 144.61 m (0.001 m2)",
+ "released": "NOTHING RELEASED; no candidate, engine, rule or registry file changed (research ledger)"
+}
