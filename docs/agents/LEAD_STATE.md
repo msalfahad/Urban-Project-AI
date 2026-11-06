@@ -14,7 +14,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Since 16:13 every run closed; 0 empty; 6 merged, 0 rejected.
 - CRITICAL (owner, notified 04:15 5 Nov, not re-notified): wrapper refuses research/agents_t*/ scripts -> every Gate B + T-525 blocked.
 - tests/t485 still red on the working branch (T-507 stale pending in master 1.55.0).
-- Privacy: T-560 17:31 second commit (drawing bar labels) refused by the classifier, not retried; 15:59 Verifier near-miss. T-575 row carries the rule: computed kg / t + sheet refs only.
+- Privacy: T-560 commit with drawing bar labels refused by the classifier (not retried); T-575 row: computed t + sheet refs only.
 
 ## Live rows (20:14)
 - READY 0.
@@ -52,8 +52,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
   benchmark basis first; count by drawn leaves. PROPOSED: re-cut openings at new height (on T-563), ceilings by face
   class (on T-579), printed minimum one-sided bound (on T-576), 4 older (see ERS s.7).
 - F-C-T570-1: return paint stays ENGINE_WRONG in the statement until a candidate FIN.PAINT return line exists.
-- Materials: FINISH_MATERIALS_TABLE_V7, PLASTER_MATERIALS_TABLE_V3 (plaster m2 moves with T-563); Q-45 5 % own account;
-  sand = loose m3, t / loads HELD.
+- Materials: FINISH V7, PLASTER V3 (plaster m2 moves with T-563); sand loose m3, t / loads HELD.
 
 ## Blockers
 - Wrapper allow-list (owner, main scripts/agent_env.sh). Designer items (D-16 / D-63 incl. 2 GF column CONFLICT positions,
