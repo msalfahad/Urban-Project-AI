@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T20:51Z | Verifier | STARTED | run session_01E6cPnbLhgpKYoo4zLeNRji | repo-attached routine | task state: checking board | self-check pending
 - 2026-11-06T20:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 20:18 UTC | Lead | SUCCESS | board | Since 16:17: 6 merged all WORKED (T-560 rebar TYPED_LUMP NOT_COMPARABLE + dome / lift-pit rebar ENGINE_OMISSION, T-570 statement V4, T-568 door counts ENGINE_RIGHT, T-572 structural HELD bounds, T-569 manifest V8, T-573 ceilings like for like -0.33 %), 0 rejected; no candidate change (V3.0.58; released V2.9 + route G unchanged); new T-575..T-580 (dome / lift-pit rebar t, 1F column +21.7 % causes, thresholds / sills, handrails + nosing, statement V5, manifest overlay dry run); RFI-A08 text fixed (F-T569-2); register 2 rulings; lessons 4 ADOPTED, 2 PROPOSED; no new owner decision; wrapper unchanged (not re-notified); Drive read OK, no photos; queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 20:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
