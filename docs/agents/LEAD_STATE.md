@@ -49,8 +49,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Register rulings: ELEMENT_REGISTER (16:17: PLASTERED RETURN FACE, PRECAST LINTEL; 20 earlier).
 - Lessons 06 Nov ADOPTED: class from geometry; net % never agreement; bound HELD before %; layer height own rule; enclosed
   space floor; label CONFLICT never by majority; NO_ROW never 0. PROPOSED: re-cut openings at new height (on T-563),
-  gross vs gross (on T-570), plastered face implies paint face (on T-569), loss own account, printed values in DIMENSION
-  blocks, end volume owned once, exact owner derivation.
+  gross vs gross (on T-570), plastered face implies paint face (on T-569), 4 older (see ERS s.7).
 - Materials: FINISH_MATERIALS_TABLE_V7, PLASTER_MATERIALS_TABLE_V3 (plaster m2 moves with T-563); Q-45 5 % own account;
   sand = loose m3, t / loads HELD.
 
