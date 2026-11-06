@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T17:20Z | Worker 1 | STARTED | run session_01E6cPnbzrczrQeBPZVfV83g | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T17:14Z | Worker 3 | SUCCESS | T-570 READY 7ff030b6 | Statement V4: paint 1209.385 vs 217.2081 m2 + soffit 39.99 close to T-561 gap 1032.1669 (return omission 23.07 ENGINE_WRONG, fix T-569); floor tile -5.49 % valued / -4.765 % EXPECTED; earthworks NOT_COMPARABLE (NO_ROW, no %); columns CONFLICT 4 readings ER 1.522..1.814 m3; beams UNRESOLVED 0.365->0.120 m3; external plaster restated gross vs gross, net beside. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T17:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T16:56Z | Worker 2 | SUCCESS | T-568 READY (agents/task-T-568 @ 6af372e9) | Doors/windows by type on V3.0.58 vs freelancer: ALU doors 6 vs 5 nr, 12.760 vs 12.000 m2; windows 28 (+W02 HELD) vs 29 nr, like for like -3.975 m2 (-4.95 %), with Q-76 A -3.555 (-3.96 %). T-559 +6.30 m2 counts closed: drawn leaves read in the DXF (GF 5 ext, 1F 10), W18 is his 6th bath window -> ENGINE_RIGHT +6.54, RULE_DIFFERENCE -0.24, residual 0. F-T568-1: candidate W17 still HELD though Q-76 A = 9.870 m2 (Gate B row needed). No new owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
