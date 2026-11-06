@@ -17,6 +17,10 @@ piece with its reason; missing -> MISSING_FROM_MANIFEST, outside / other commit 
 so a later merge belongs to V5 and never turns this file red (tested on a synthetic repository: T-903 merged after the
 head is ignored at the pinned head and refused when the head moves).
 
+Retro-check with the same function (not enforced on V2 / V3, their files are not edited): V2 (base 5953b91f) had
+T-531 merged inside its range (f05abdd6, 5953b91f] without covering it; V3 picked it up one manifest late. V3's own
+range (5953b91f, 9c160d22] = T-532, T-535, T-540 (+ T-538 itself): covered. R-T549-1 makes that lag a refusal.
+
 ## 2. Expectations that change V3 -> V4 (candidate lines moved: 0)
 
 | item | V3 / V2 expectation | V4 expectation | cause / owning package |
