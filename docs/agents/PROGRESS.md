@@ -2051,6 +2051,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-06 16:17)
+- Candidate (not released) and released BOQ unchanged. Six checked comparisons with the freelancer merged this
+  afternoon, all research, none wired yet: wall paint (his 1,249.4 vs our valued 217.2 m2, every m2 of the gap named:
+  808.1 held rooms, 92.1 rule differences, 67.3 ours right, 64.7 unexplained by name); external plaster (gross against
+  gross and net against net, like for like -4.3 % .. +0.5 %); earthworks (he has no earthworks row at all, so no %;
+  our scope confirmed on the drawings); ground-floor column marks (34 of 36 positions settled from the drawings, 2
+  where two sheets disagree, up to 0.469 m3, kept held); floor tile after the dressing-room fix -4.77 % (was -5.49 %).
+- Found: 26 plastered wall returns (23.07 m2) have plaster but no paint line; it goes into the wiring list, held.
+- Next: reinforcement tonnage, doors and windows, precast lintel count by length, ceilings, skirting (in metres), the
+  held structural parts given drawn bounds, and the updated statement for the 12-13 Nov tables.
 (Lead 2026-11-05 12:20)
 - Candidate (not released) unchanged since early 5 Nov; released BOQ unchanged. Six checked pieces merged today wait
   for wiring: lintel pieces and bearings (6 of 16 lintels fully produced, 10 held at short bearings), lintel concrete

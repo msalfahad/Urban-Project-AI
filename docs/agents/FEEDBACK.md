@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-06 16:17 (since 12:18)
+
+- T-561 paint vs freelancer (Gate A): WORKED (217.2081 vs 1249.375 m2 closed exactly by face class; Checker PARTIAL 2 / 4 engine lines). Decision: ENGINE_OMISSION 26 paint returns 23.070 m2 -> fix row in T-569 (HELD <= 23.07); register ruling PLASTERED RETURN FACE; 4 released paint lines PROVISIONAL with the drawing-derived bound beside (designer item).
+- T-562 statement V3 (Gate A): WORKED (16 sections re-closed by the Checker). Decision: T-570 adds paint, floor tile restated, earthworks, column CONFLICT and external plaster.
+- T-566 GF column marks + beam residual (Gate A): PARTIAL (36 / 36 positions VERIFIED, 2 CONFLICT bounded; beam residual 1 / 5 marks re-measured). Decision: CONFLICT positions to the D-16 / D-63 designer list (no owner question, s.2.7 not met); held bounds go to T-572; lesson ADOPTED.
+- T-564 manifest V7 + floor census (Gate A): PARTIAL (census 2 / 2 hits confirmed, coverage re-listed not re-derived). Decision: F-C-T564-1 dressing class label A08 ESTIMATED -> T-569; ENCLOSED SPACE FLOOR lesson ADOPTED.
+- T-565 earthworks vs freelancer (Gate A): PARTIAL (his NO_ROW confirmed; 8 / 24 pits re-measured; line stays S01 ESTIMATED). Decision: NO_ROW lesson ADOPTED; unbounded held parts to T-572; ground-beam per-line split stays open inside T-572 scope.
+- T-567 external plaster vs freelancer (Gate A): PARTIAL (his 8 / 8 subtotals; our side 1 / 120 faces). Decision: gross vs gross lesson PROPOSED (adopt when T-570 carries it); SW pier returns -> T-569; FIN.EXT.FINISH stays HELD (T-314).
+
 ## Lead 2026-11-06 12:18 (since 08:15)
 
 - T-556 plaster height method version (Gate A): WORKED (2 / 11 rooms re-measured; corrected a Checker over-statement of 3.268 m2 on GF-15). Decision: lessons row ADOPTED; wiring through T-563 (Gate B, after T-498, wrapper).
@@ -172,15 +181,6 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-465 import boundary: FAILED r1 (validated on an earlier head; 4 family-master citations broke). Decision: TODO r2 with the exact fault; released-path PyMuPDF clause BLOCKED-OWNER (release decision).
 - T-463 shallow-clone history: FAILED r1 (fallback answered True without proof). Decision: TODO r2, first in lane A (small).
 - Recurring cause (new, 2 of 3 rejections today): the hand-in's adverse test or full suite did not cover the final state (T-463 evidence present, T-465 earlier head). Decision: every hand-in runs its level's suites to the end on the FINAL head; two lessons rows proposed.
-
-## Lead 2026-11-01 16:15 (since 12:20)
-
-- T-428 concrete roll-up r4: WORKED (first pass; Checker reproduced r3 -> r4 by family delta, O-T428-1 ruled). Decision: T-433 TODO on the r4 HELD -116.428339 m3; the 9 no-owner unexplained parts (-2.594514 m3) become T-436 (ground slab -1.560570) and T-437 (other -1.033946).
-- T-434 winder turn: WORKED (first pass; Checker own section raster 0.1667 m / riser). Decision: lane I items into T-429 (same family); subdivision to the designer list D-67.
-- T-421 stair-room floors + lift marble (Gate B): WORKED (first pass, V3.0.38). Decision: T-429 TODO first in lane I.
-- T-432 ST-02 length basis: WORKED (first pass; result UNRESOLVED by evidence, which met the acceptance). Decision: the worker's second-drawing conflict (27 vs 28 risers) becomes T-438 and D-68 (draft, not for sending).
-- T-435 ceiling / skirting join: READY (not classified until the verdict). Provisional: T-431 acceptance creates the dining ceiling line; T-439 / T-440 / T-441 opened from its findings.
-- Recurring cause (new): a dependent row stays QUEUED for up to 4 h after its dependency merges (Worker 1 idle 15:21). Decision: keep 3-4 independent TODO in lanes S and A; the claim-on-dependency rule is a main-chat item.
 
 ## Recurring causes (lead 2026-10-20 10:20)
 

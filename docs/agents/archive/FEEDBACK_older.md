@@ -1,5 +1,14 @@
 ## 2026-10-29 20:30 (lead run; covers 16:30 - 20:30)
 
+## Lead 2026-11-01 16:15 (since 12:20)
+
+- T-428 concrete roll-up r4: WORKED (first pass; Checker reproduced r3 -> r4 by family delta, O-T428-1 ruled). Decision: T-433 TODO on the r4 HELD -116.428339 m3; the 9 no-owner unexplained parts (-2.594514 m3) become T-436 (ground slab -1.560570) and T-437 (other -1.033946).
+- T-434 winder turn: WORKED (first pass; Checker own section raster 0.1667 m / riser). Decision: lane I items into T-429 (same family); subdivision to the designer list D-67.
+- T-421 stair-room floors + lift marble (Gate B): WORKED (first pass, V3.0.38). Decision: T-429 TODO first in lane I.
+- T-432 ST-02 length basis: WORKED (first pass; result UNRESOLVED by evidence, which met the acceptance). Decision: the worker's second-drawing conflict (27 vs 28 risers) becomes T-438 and D-68 (draft, not for sending).
+- T-435 ceiling / skirting join: READY (not classified until the verdict). Provisional: T-431 acceptance creates the dining ceiling line; T-439 / T-440 / T-441 opened from its findings.
+- Recurring cause (new): a dependent row stays QUEUED for up to 4 h after its dependency merges (Worker 1 idle 15:21). Decision: keep 3-4 independent TODO in lanes S and A; the claim-on-dependency rule is a main-chat item.
+
 - T-340 reveals / sills / thresholds FILL: WORKED (Gate A PASS 16:58; W02 head 6.331578 x 0.080 = 0.506526 vs 0.5064 own (0.025 %), D-1F-03 / D-1F-04 thresholds 0.000 %; D-GF-10 0.797 width proposal NOT ADOPTED: the wall line overruns the 0.800 frame by 2.961 mm). Decision: none; T-326 / T-327 consume it in lane I order.
 - T-339 roof build-up FILL: WORKED (Gate A PASS 17:01; 1F terrace zone 38.355 / footprint 5.553 / finish hatch 31.6433 m2 own; D band ranged). Decision: none; T-328 consumes it.
 - T-344 label census V2: WORKED (Gate A PASS 17:10; own run 41 = 28 / 1 / 1 / 11, SILENT_OMISSION 0, V1 byte-identical). Decision: none.

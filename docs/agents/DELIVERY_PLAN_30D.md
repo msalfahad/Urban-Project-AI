@@ -46,6 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-06 16:17; recovery plan in force)
+
+- Merged since 12:18 (all Gate A, research, no candidate line moved): T-561, T-562, T-566, T-564, T-565, T-567 6/6 WORKED or PARTIAL (no FAILED); unwired verified pieces now 49.
+- New fix rows from the Checker: paint returns 23.070 m2 with no paint line (ENGINE_OMISSION), dressing floor class label A08 ESTIMATED, SW pier returns -> manifest V8 (T-569).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) still BLOCKED on the wrapper item (main unchanged at eafbb0f6).
+- 12-13 Nov reconciled quantities: closed roof WP, blockwork, wet-room floor WP, stair bed, beams, columns / footings, wall tile, internal plaster, floor tile, paint, external plaster, earthworks (NO_ROW); open rebar (T-560), doors / windows (T-568), lintels (T-571), ceilings (T-573), skirting (T-574), structural held bounds (T-572); statement V4 (T-570).
+- 10 Nov: LOW (unchanged cause, 4 days). 12-13 Nov: HIGH for reconciliation tables (12 trades closed, 6 open); scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 12:18; recovery plan in force)
 
 - Merged since 08:15 (all Gate A, research, no candidate line moved): T-556, T-557, T-559, T-558, T-551, T-553 6/6 WORKED; unwired verified pieces now 43.
