@@ -1,0 +1,1010 @@
+{
+ "task": "T-568",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (door / window lines = V3.0.57)",
+ "candidate_closure": [
+  {
+   "line": "DOOR.EXTERNAL.ALUMINIUM|2F|m2|SETTLED_ASSUMED_OWNER_APPROVED",
+   "candidate": [
+    2.2,
+    null,
+    null
+   ],
+   "openings": [
+    "2.200",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.EXTERNAL.ALUMINIUM|2F|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    1.0,
+    null,
+    null
+   ],
+   "openings": [
+    "1",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.EXTERNAL.ALUMINIUM|GF|m2|SETTLED_ASSUMED_OWNER_APPROVED",
+   "candidate": [
+    10.56,
+    null,
+    null
+   ],
+   "openings": [
+    "10.560",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.EXTERNAL.ALUMINIUM|GF|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    5.0,
+    null,
+    null
+   ],
+   "openings": [
+    "5",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|1F|m2|HELD",
+   "candidate": [
+    null,
+    3.476,
+    3.96
+   ],
+   "openings": [
+    "0",
+    "3.476",
+    "3.960"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|1F|m2|SETTLED_ASSUMED_OWNER_APPROVED",
+   "candidate": [
+    15.18,
+    null,
+    null
+   ],
+   "openings": [
+    "15.180",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|1F|pcs|HELD",
+   "candidate": [
+    null,
+    2.0,
+    2.0
+   ],
+   "openings": [
+    "0",
+    "2",
+    "2"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|1F|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    8.0,
+    null,
+    null
+   ],
+   "openings": [
+    "8",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|2F|m2|SETTLED_ASSUMED_OWNER_APPROVED",
+   "candidate": [
+    3.74,
+    null,
+    null
+   ],
+   "openings": [
+    "3.740",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|2F|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    2.0,
+    null,
+    null
+   ],
+   "openings": [
+    "2",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|GF|m2|HELD",
+   "candidate": [
+    null,
+    4.554,
+    5.28
+   ],
+   "openings": [
+    "0",
+    "4.554",
+    "5.280"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|GF|m2|SETTLED_ASSUMED_OWNER_APPROVED",
+   "candidate": [
+    9.68,
+    null,
+    null
+   ],
+   "openings": [
+    "9.680",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|GF|pcs|HELD",
+   "candidate": [
+    null,
+    3.0,
+    3.0
+   ],
+   "openings": [
+    "0",
+    "3",
+    "3"
+   ]
+  },
+  {
+   "line": "DOOR.INTERNAL.PVC|GF|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    5.0,
+    null,
+    null
+   ],
+   "openings": [
+    "5",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "DOOR.MAIN_ENTRANCE|GF|m2|HELD",
+   "candidate": [
+    null,
+    5.0,
+    5.0
+   ],
+   "openings": [
+    "0",
+    "5.000",
+    "5.000"
+   ]
+  },
+  {
+   "line": "DOOR.MAIN_ENTRANCE|GF|pcs|HELD",
+   "candidate": [
+    null,
+    1.0,
+    1.0
+   ],
+   "openings": [
+    "0",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|1F|m2|HELD",
+   "candidate": [
+    null,
+    9.87,
+    11.515
+   ],
+   "openings": [
+    "0",
+    "9.870",
+    "11.515"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|1F|m2|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    23.285,
+    null,
+    null
+   ],
+   "openings": [
+    "23.285",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|1F|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    13.0,
+    null,
+    null
+   ],
+   "openings": [
+    "13",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|2F|m2|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    5.82,
+    null,
+    null
+   ],
+   "openings": [
+    "5.820",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|2F|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    4.0,
+    null,
+    null
+   ],
+   "openings": [
+    "4",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|GF|m2|HELD_NO_FIGURE",
+   "candidate": [
+    null,
+    null,
+    null
+   ],
+   "openings": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|GF|m2|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    47.151,
+    null,
+    null
+   ],
+   "openings": [
+    "47.151",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|GF|pcs|HELD",
+   "candidate": [
+    null,
+    1.0,
+    2.0
+   ],
+   "openings": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "line": "WINDOW.ALUMINIUM|GF|pcs|SETTLED_DRAWING_CONFIRMED",
+   "candidate": [
+    11.0,
+    null,
+    null
+   ],
+   "openings": [
+    "11",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "not_supply_items": {
+  "A-GF-01": "arch, no leaf",
+  "A-1F-01": "arch, no leaf",
+  "SX-01": "filling HELD (T-161 F09)",
+  "SX-03": "passage, no leaf",
+  "P-GF-01 .. P-GF-05, P-1F-01": "passages, no leaf",
+  "D-GF-15": "site gate (no Urban door class)",
+  "U-01": "census UNRESOLVED (no host wall)"
+ },
+ "drawn_leaves": {
+  "GF external": {
+   "D120:15E": "D-GF-01",
+   "d220:1B5": "D-GF-03",
+   "D120:192": "D-GF-05",
+   "D120:33E": "D-GF-06",
+   "D120:3FF": "D-GF-09"
+  },
+  "1F internal": {
+   "D315:C2B": "D-1F-01",
+   "D115:C31": "D-1F-02",
+   "D115:C32": "D-1F-03",
+   "D315:C2E": "D-1F-04",
+   "d220:C1A": "D-1F-05",
+   "D315:11B4": "D-1F-06",
+   "D315:BEE": "D-1F-07",
+   "D215:C18": "D-1F-08",
+   "D215:BEF": "D-1F-09",
+   "D315:C12": "D-1F-10"
+  }
+ },
+ "jamb_reads": {
+  "D-GF-01": "1.000 (both faces)",
+  "D-GF-03": "0.900 (both faces)",
+  "D-GF-09": "0.900 (both faces)",
+  "D-GF-05": "1.000",
+  "D-GF-06": "1.000",
+  "D-GF-08": "1.000",
+  "D-1F-02": "1.000",
+  "D-1F-03": "1.000",
+  "D-1F-10": "0.800"
+ },
+ "supply_aluminium": {
+  "DOOR.EXTERNAL.ALUMINIUM": {
+   "nr": {
+    "ours_settled": 6,
+    "ours_count_held": [],
+    "his": 5,
+    "ours_minus_his": 1,
+    "by_cause": {
+     "ENGINE_RIGHT": "1"
+    }
+   },
+   "m2": {
+    "ours_settled": "12.760",
+    "ours_held": [],
+    "ours_held_bounds": {},
+    "his": "12.0",
+    "ours_minus_his": "0.760",
+    "by_cause": {
+     "ENGINE_RIGHT": "1.720",
+     "RULE_DIFFERENCE": "-0.960"
+    }
+   },
+   "rows": [
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-01 vs his 1 x 2.4",
+     "note": "his 4 x 1.00 GF external doors"
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-06 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "width",
+     "delta": "-0.240",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF D-GF-03 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-03 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "width",
+     "delta": "-0.240",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF D-GF-09 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-09 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "2F D-2F-01 vs his 1 x 2.4",
+     "note": "roof door"
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "nr",
+     "term": "ours only",
+     "delta": "1",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF D-GF-05 (no unit of his)",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.EXTERNAL.ALUMINIUM",
+     "unit": "m2",
+     "term": "ours only",
+     "delta": "2.200",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF D-GF-05 (no unit of his)",
+     "note": ""
+    }
+   ]
+  },
+  "WINDOW.ALUMINIUM": {
+   "nr": {
+    "ours_settled": 28,
+    "ours_count_held": [
+     "W02"
+    ],
+    "his": 29,
+    "ours_minus_his": -1,
+    "by_cause": {
+     "HELD": "-1"
+    }
+   },
+   "m2": {
+    "ours_settled": "76.256",
+    "ours_held": [
+     "W02",
+     "W17"
+    ],
+    "ours_held_bounds": {
+     "W02": [
+      "13.926",
+      null
+     ],
+     "W17": [
+      "9.870",
+      "11.515"
+     ]
+    },
+    "his": "116.900",
+    "ours_minus_his": "-40.644",
+    "by_cause": {
+     "ENGINE_RIGHT": "-3.975",
+     "HELD": "-36.669"
+    }
+   },
+   "rows": [
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-27.219",
+     "cause": "HELD",
+     "name": "GF W02 vs his 6.33 x 4.3",
+     "note": "count HELD (render 2)"
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "nr",
+     "term": "count HELD",
+     "delta": "-1",
+     "cause": "HELD",
+     "name": "GF W02 vs his 6.33 x 4.3",
+     "note": "count HELD (render 2)"
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.500",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF W10 vs his 1 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.750",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF W08 vs his 1.5 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "0.390",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF W11 vs his 1.95 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "0.390",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF W12 vs his 1.95 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.750",
+     "cause": "ENGINE_RIGHT",
+     "name": "GF W09 vs his 1.5 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.500",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W25 vs his 1 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "width",
+     "delta": "-0.080",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W18 vs his 0.6 x 0.8",
+     "note": "his sixth 0.60 x 0.80 = W18 (T-181 tie)"
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "0.680",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W18 vs his 0.6 x 0.8",
+     "note": "his sixth 0.60 x 0.80 = W18 (T-181 tie)"
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-9.45",
+     "cause": "HELD",
+     "name": "1F W17 vs his 3.15 x 3",
+     "note": "Q-76 A"
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.775",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W24 vs his 1.55 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.980",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W14 vs his 2.45 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "0.360",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F W13 vs his 1.2 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.500",
+     "cause": "ENGINE_RIGHT",
+     "name": "2F W27 vs his 1 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.360",
+     "cause": "ENGINE_RIGHT",
+     "name": "2F W26 vs his 1.2 x 2",
+     "note": ""
+    },
+    {
+     "cls": "WINDOW.ALUMINIUM",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.600",
+     "cause": "ENGINE_RIGHT",
+     "name": "2F W29 vs his 1.2 x 2",
+     "note": ""
+    }
+   ]
+  }
+ },
+ "pairing_move_ALU_T559_vs_T181": {
+  "nr": {},
+  "m2": {
+   "ENGINE_RIGHT": "0.020",
+   "RULE_DIFFERENCE": "-0.020"
+  }
+ },
+ "masonry_deduction_doors": {
+  "DOOR.INTERNAL.PVC": {
+   "nr": {
+    "ours_settled": 20,
+    "ours_count_held": [],
+    "his": 18,
+    "ours_minus_his": 2,
+    "by_cause": {
+     "ENGINE_RIGHT": "2"
+    }
+   },
+   "m2": {
+    "ours_settled": "28.600",
+    "ours_held": [
+     "D-GF-02",
+     "D-GF-10",
+     "D-GF-14",
+     "D-1F-03",
+     "D-1F-04"
+    ],
+    "ours_held_bounds": {
+     "D-GF-02": [
+      "1.518",
+      "1.760"
+     ],
+     "D-GF-10": [
+      "1.518",
+      "1.760"
+     ],
+     "D-GF-14": [
+      "1.518",
+      "1.760"
+     ],
+     "D-1F-03": [
+      "1.958",
+      "2.200"
+     ],
+     "D-1F-04": [
+      "1.518",
+      "1.760"
+     ]
+    },
+    "his": "36.96",
+    "ours_minus_his": "-8.360",
+    "by_cause": {
+     "ENGINE_RIGHT": "3.960",
+     "HELD": "-9.84",
+     "RULE_DIFFERENCE": "-2.480"
+    }
+   },
+   "rows": [
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-1.92",
+     "cause": "HELD",
+     "name": "GF D-GF-02 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-04 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-1.92",
+     "cause": "HELD",
+     "name": "GF D-GF-10 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-11 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-12 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-1.92",
+     "cause": "HELD",
+     "name": "GF D-GF-14 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-13 vs his 1 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "width",
+     "delta": "-0.240",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-08 vs his 1.1 x 2.4",
+     "note": "lobby door in GF-W08"
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.200",
+     "cause": "RULE_DIFFERENCE",
+     "name": "GF D-GF-08 vs his 1.1 x 2.4",
+     "note": "lobby door in GF-W08"
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-01 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-1.92",
+     "cause": "HELD",
+     "name": "1F D-1F-04 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-06 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-07 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-05 vs his 0.9 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-08 vs his 0.9 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "1F D-1F-09 vs his 0.9 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-2.16",
+     "cause": "HELD",
+     "name": "1F D-1F-03 vs his 0.9 x 2.4",
+     "note": "his fourth 0.90 vs a drawn 1.00 (D-1F-02 or D-1F-03)"
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.160",
+     "cause": "RULE_DIFFERENCE",
+     "name": "2F D-2F-03 vs his 0.8 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "height",
+     "delta": "-0.180",
+     "cause": "RULE_DIFFERENCE",
+     "name": "2F D-2F-02 vs his 0.9 x 2.4",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "nr",
+     "term": "ours only",
+     "delta": "1",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F D-1F-02 (no unit of his)",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours only",
+     "delta": "2.200",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F D-1F-02 (no unit of his)",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "nr",
+     "term": "ours only",
+     "delta": "1",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F D-1F-10 (no unit of his)",
+     "note": ""
+    },
+    {
+     "cls": "DOOR.INTERNAL.PVC",
+     "unit": "m2",
+     "term": "ours only",
+     "delta": "1.760",
+     "cause": "ENGINE_RIGHT",
+     "name": "1F D-1F-10 (no unit of his)",
+     "note": ""
+    }
+   ]
+  },
+  "LIFT.LANDING_OPENING": {
+   "nr": {
+    "ours_settled": 3,
+    "ours_count_held": [],
+    "his": 3,
+    "ours_minus_his": 0,
+    "by_cause": {}
+   },
+   "m2": {
+    "ours_settled": "0",
+    "ours_held": [
+     "L-GF-01",
+     "L-1F-01",
+     "L-2F-01"
+    ],
+    "ours_held_bounds": {
+     "L-GF-01": null,
+     "L-1F-01": null,
+     "L-2F-01": null
+    },
+    "his": "7.2",
+    "ours_minus_his": "-7.2",
+    "by_cause": {
+     "HELD": "-7.2"
+    }
+   },
+   "rows": [
+    {
+     "cls": "LIFT.LANDING_OPENING",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-2.4",
+     "cause": "HELD",
+     "name": "GF L-GF-01 vs his 1 x 2.4",
+     "note": "lift landing"
+    },
+    {
+     "cls": "LIFT.LANDING_OPENING",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-2.4",
+     "cause": "HELD",
+     "name": "1F L-1F-01 vs his 1 x 2.4",
+     "note": "lift landing"
+    },
+    {
+     "cls": "LIFT.LANDING_OPENING",
+     "unit": "m2",
+     "term": "ours HELD",
+     "delta": "-2.4",
+     "cause": "HELD",
+     "name": "2F L-2F-01 vs his 1 x 2.4",
+     "note": "lift landing"
+    }
+   ]
+  }
+ },
+ "windows_like_for_like": {
+  "settled_both_sides": {
+   "nr": 27,
+   "ours": "76.256",
+   "his": "80.231",
+   "diff": "-3.975",
+   "pct": "-4.95"
+  },
+  "with_Q76A_W17": {
+   "nr": 28,
+   "ours": "86.126",
+   "his": "89.681",
+   "diff": "-3.555",
+   "pct": "-3.96"
+  }
+ }
+}
