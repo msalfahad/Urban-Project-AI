@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06 07:10 UTC | Worker 3 | SUCCESS | T-555 READY c7988cc6 | WIRING MANIFEST V5 over (3f3b580c,47d74505], 7/7 merges covered, 0 candidate lines moved: T-544 bounds the 1F AAC glue host 437.88303..451.60893 kg (was HELD) and re-bounds GF/1F part-2 hosts; glue group 34.891351..36.226627 bags HELD (V4 17.64..18.16 stale). F-T555-3: T-552 dry plaster ENGINE_WRONG (217.2081 m2 at paint height -> HELD 261.77..269.33 m2) has no wiring row (Lead). | self-check codemap PASS / t061 PASS / freeze PASS; problem: none
 - 2026-11-06 07:00 UTC | Worker 3 | STARTED | run session_01E6cPneAGie5HYh7crN4CgD | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T06:56Z | Verifier | SUCCESS | T-547 | GATE A PASS MERGED (engine push 47d74505), research, no quantity change: wet-room wall tile V3.0.58 340.3038 vs freelancer 433.83 m2 (-21.56 %) residual 0 = HELD -138.39 bounded + RULE_DIFF +75.54 (height Q-48 A, pantry Q-37 A) + ENGINE_RIGHT -30.67; own DXF re-measure 1F-08 (1470 x 1800, H 3.35 from +5.50/+9.70) 19.6690 vs 19.6691 AGREE, his 144.61 lm x 3 AGREE; line PARTIALLY VERIFIED; CLOSABLE LINES unchanged, T-180 not spent; scoreboard restated | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T06:51Z | Verifier | STARTED | run session_01E6cPnbrWZsRepBMkM3Xsb9 | repo-attached routine | task state: none READY (T-547 CLAIMED W2) | self-check pending
