@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T07:52Z | Verifier | STARTED | run session_01E6cPncSFqKbg9DyWuA8smn | repo-attached routine | task state: T-550 READY (W1 11e6d2ca), T-555 READY (W3 c7988cc6) | self-check pending
 - 2026-11-06T07:35Z | Worker 1 | SUCCESS | T-550 READY @ 11e6d2ca | B9 parapet residual 71.47 m2 split: his heights = printed above finish + 0.50 (drawn edge member, MEASURED on DWF A-A/B-B + P7757.dxf), so 68.42 m2 concrete below finish + 7.63 per-run printed heights ENGINE_RIGHT, -1.29 HELD, 0.75 RULE_DIFF; B9 UNRESOLVED 101.43 -> 25.92 m2 (projections 41.25 element not found, openings -26.28, lengths named) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (Drive read OK)
 - 2026-11-06T07:20Z | Worker 1 | STARTED | run session_01E6cPnejbSPSQD3juAee7VA | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 07:10 UTC | Worker 3 | SUCCESS | T-555 READY c7988cc6 | WIRING MANIFEST V5 over (3f3b580c,47d74505], 7/7 merges covered, 0 candidate lines moved: T-544 bounds the 1F AAC glue host 437.88303..451.60893 kg (was HELD) and re-bounds GF/1F part-2 hosts; glue group 34.891351..36.226627 bags HELD (V4 17.64..18.16 stale). F-T555-3: T-552 dry plaster ENGINE_WRONG (217.2081 m2 at paint height -> HELD 261.77..269.33 m2) has no wiring row (Lead). | self-check codemap PASS / t061 PASS / freeze PASS; problem: none
