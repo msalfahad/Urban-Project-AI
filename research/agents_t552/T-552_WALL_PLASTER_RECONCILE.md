@@ -41,6 +41,13 @@ box -> drawing +20.11 south (open void side) -2.64 north -3.62 west / east; RESI
 RESIDUAL -7.11 named: the engine values 26 openings by id vs his 14 doors x 0.20 x 5.70 (not listed by id); OP-009
 (1.08 .. 1.20) and 3 reveal lines HELD blank stay outside (never 0).
 
+Independent cross-checks this run (repository ledgers, not the engine path): the opening deductions of the 4 valued
+dry lines (gross face x G1 - line net) equal T-292's per-opening ledger (OPENING_DEDUCTIONS_T292.csv, merged): GF-15
+22.59695 vs 22.5969 (D-GF-14 1.76 + W03 18.6369 + D-GF-13 2.20; 0.00005 = 4-dp rounding), 1F-01 7.880, 1F-04 6.285, 2F-03
+5.540 (0.0000 each). T-292 lists 26 distinct doors = the 26 valued return lines; by the rooms they open into (T-128
+class) 8 dry only, 8 wet only, 7 dry / wet, 3 shaft: his 14 doors match no printed subset, so the -7.11 stays
+UNRESOLVED (his door list is needed by id, not a rule question).
+
 Net view: his net 1,151.1375 - 240.2781 = +910.8594 = the gross gap - his half deduction 58.2475 (his convention, its
 own step, never a component). WET (not reconciled here, owned once): 18 render lines, 340.3038 valued + 6 HELD blank,
 against his spatter 433.83: T-547 (tile faces) / T-317 / T-349 (spatter).
