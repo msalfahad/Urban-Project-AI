@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-06 08:15 (since 04:15)
+
+- T-545 beam concrete vs freelancer (Gate A): WORKED (closes exactly, +0.227 m3 = cancellation; Checker PARTIAL: COUNT B27 re-measured, rest worker-proposed). Decision: adapter T-557 labels unconfirmed classes as such; 0.365 m3 UNRESOLVED stays named; edge downstand beams checked in T-559.
+- T-552 wall plaster vs freelancer (Gate A): WORKED (internal closes, residual 0); found ENGINE_WRONG dry plaster at paint height (Checker confirmed). Decision: T-556 new method version (lane A first), T-558 wiring row, register ruling WALL PLASTER HEIGHT vs PAINT HEIGHT, lessons row PROPOSED.
+- T-554 statement adapters + corrections (Gate A): WORKED (6 sections close exactly). Decision: T-557 adds beams, wall tile, plaster, blockwork restated.
+- T-547 wet-room wall tile vs freelancer (Gate A): WORKED (-21.56 % = 6 HELD rooms + rules; like for like +4.24 %). Decision: annex datum / GF-10/11 level / arch heads stay HELD under existing owner holds; no new row.
+- T-550 blockwork UNRESOLVED 101.43 m2 + H1 (Gate A): WORKED (H1 MEASURED, 101.43 -> 25.92 m2; Checker PARTIAL on 7.63 m2 per-run heights; F-C-T550-1 wording). Decision: T-559 (leftover + edge-beam ids + per-run handles), register ruling PARAPET EDGE DOWNSTAND MEMBER.
+- T-555 manifest V5 (Gate A): WORKED (7/7 merges covered). Decision: F-T555-3 gets its row T-558 (manifest V6).
+
 ## Lead 2026-11-06 04:15 (since 00:20)
 
 - T-542 stair bed beyond the treads (Gate A): WORKED (AT_LEAST 56.3586 m2, +20.9261 m2 risers / landings, 16.19 bags). Decision: V7 wiring reads the whole stair through manifest V5 (T-555); landing lines stay T-502.

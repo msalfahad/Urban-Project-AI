@@ -1,6 +1,23 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
 
+## LEAD REPORT 2026-11-06 08:15 UTC
+
+Drive read OK (no file created or modified in the project folders since 04:00 UTC 6 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. 6 merged, all Gate A research (unwired):
+- Blockwork (B9): H1 MEASURED on the sections: his parapet h = printed height above finish + 0.50 m slab-edge downstand beam (Checker 0 mm). 68.42 m2 of his parapet masonry is beam concrete -> ENGINE_RIGHT; UNRESOLVED 101.43 -> 25.92 m2 (projections 41.25 m2: no element on any sheet yet). Edge beam ownership ruled to B10 in the register; ids -> T-559.
+- Plaster (B5): internal his 1,209.385 vs valued 240.278 m2 closes, residual 0 (HELD 587.718, rule 90.153, lengths ENGINE_RIGHT 53.426, shaft 244.92 with 54.00 named). ENGINE_WRONG (first this round): 11 dry plaster lines at the paint height, 217.2081 -> 261.77..269.33 m2 HELD on the floor build-up (Q-72). Fix: T-556 method version, T-558 wiring row. External his 1,502.84 vs drawn 932.73..938.30 HELD.
+- Wall tile (B4): 340.3038 vs 433.83 m2 (-21.56 %), residual 0: 6 HELD rooms -138.39 (bounded), height Q-48 A +43.19, pantry Q-37 A +32.34, openings ENGINE_RIGHT -28.02; like for like 11 rooms +4.24 %.
+- Beams (B10-07): 66.321 vs 66.094 m3 (+0.34 %) is a cancellation: ENGINE_RIGHT +12.997, through-support rule -5.028, HELD -7.376, UNRESOLVED -0.365. Checker confirmed the omitted-mark class on B27 only (PARTIAL).
+- Statement adapters (6 sections exact) and manifest V5 (glue group 34.89..36.23 bags HELD) merged.
+- Learned (3 ADOPTED, 1 PROPOSED): a class comes from geometry, not a hatch; a small net % is not agreement (show gross components); bound HELD rooms and compare like for like before any %; two finish layers equal by construction = defect signal.
+- Gates: lowest open gate 0 (t485 behind the wrapper). 10 Nov end-to-end BOQ: LOW (37 verified pieces wait, no Gate B can start). 12-13 Nov tables: 7 trades closed, 5 open (columns / footings, rebar, floor tile, paint, blockwork leftover): HIGH.
+- Team health: 6 merged, 0 rejected, 0 blocked since 04:15; every run closed with a final line, 0 empty runs; each piece merged within 1 Checker run. Self-check codemap / t061 / freeze PASS. New rows T-556..T-561 (S 2, A 2, I 2). Queue check: 21 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE:
+1. Q-80 (unchanged, filed 00:16, OWNER_QUESTIONS.md Open): face size of the 15 cm black block; 15 walls 175.9 m2 HELD (2,198 / 2,043 / 1,759 blocks by option). Nothing else waits on it.
+
+NEEDS FIXING (owner only, unchanged since 04:15 5 Nov, not re-notified): the run wrapper (scripts/agent_env.sh on main, still at eafbb0f6) lets `run` start only the scoreboard and key-map tools; every integration package and the registry gate fix need research/agents_t*/ scripts. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. This alone decides the 10 Nov milestone. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-06 04:15 UTC
 
 Drive read OK (no file created or modified in the project folders since 00:00 UTC 6 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. 6 merged, all Gate A research (unwired):
@@ -34,20 +51,3 @@ OWNER PACKAGE:
 1. Q-80 (OWNER_QUESTIONS.md, Open): face size of the 15 cm black block. Options: (A) 40 x 20 installed, 12.5 / m2; (B) 41 x 21 installed, 11.6 / m2; (C) 40 x 25, 10 / m2; or upload 1990 spec section 04220 under 6 MB. Impact on 175.9 m2: 2,198 / 2,043 / 1,759 blocks; mortar 1.946 / 1.869 / 1.688 m3. Recommendation: from the supplier's sales record. HELD until then; nothing else waits.
 
 NEEDS FIXING (owner only, unchanged since 04:15 5 Nov, not re-notified): the run wrapper (scripts/agent_env.sh on main, line 211, still at eafbb0f6) lets `run` start only the scoreboard and key-map tools; every integration package and the registry gate fix need research/agents_t*/ scripts. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. This alone decides the 10 Nov milestone. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
-
-## LEAD REPORT 2026-11-05 20:17 UTC
-
-Drive read OK (no file created in the project folders since 16:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). All results below are Checker-verified pieces, UNWIRED. Development project 2: paused, not measured.
-- Lintel reinforcement (structural, B9-02): 63.162 kg AT_LEAST -> two parts AT_LEAST: PRODUCED 6 = 38.761728 kg, FLAGGED 10 = 24.301496 kg (63.063224 kg; W18 -0.098504 kg, 32.7 mm of its opening is inside C8); bar ends / bends / hooks HELD (ST p.13 prints none; designer item), links PROVISIONAL. Freelancer: no lintel row (UNRESOLVED).
-- Blockwork ends (structural, B9-04): END_CENSUS_V3 reads the wall pieces by plan role; 12+1 column ends reproduced, 118 interior junctions listed (117 = T-355 1:1): 0 m / 0 m2 / 0 blocks change; ties +30 nr and mesh +40.90 m.l have no BOQ line -> T-539 (missing category).
-- Lintel glue host (structural / materials): rule R-T498-2 sound, REJECTED on one binding: D-GF-06 hi 1.54 m is a min-bearing figure, the ceiling is 1.899 m: GF glue [23.769, 23.895] -> [23.4459, 23.895] kg (low end -1.36 %); 1F host HELD (<= 451.60893 kg). Rework r2.
-- Sand (materials): purchase unit = loose m3 (Q-45 / Q-53 / Q-78); villa installed >= 16.973531 .. 22.404053 m3, procurement >= 17.746996 .. 23.449040 m3 (+0.158314 vs T-523: stair allowance was bound as procurement); t / loads HELD (no sourced load size / density) -> T-540.
-- Stair bed (finishes, B7): your Q-53 39.485 m2 vs 35.4313 m2 reconciled to 0 residual (tread per riser -3.000, width 1.20 vs 1.15 -0.660, full E1 riser -0.420, polygon -0.0006, scope +0.027); Gate A PASS, merge blocked 3 Checker runs by a test that pinned its live commit -> gate fix T-538. Risers / landings beds -> T-542.
-- Roof WP vs freelancer: 209.658440 m2 once wired vs 285.00 m2 (-26.4 %), upturn 187.834160 vs 194.00 m (-3.2 %): component reconciliation T-541 for 12-13 Nov; your Q-34 top-roof hold stands (not re-asked).
-- Learned (lessons rows PROPOSED): a bound carries its direction (a min-bearing figure is never a ceiling); a test never uses a live commit; a sub-5 mm sliver piece never sets an element property.
-- Gates: lowest open gate 0 (t485 red behind the wrapper; T-538 new gate-0 row, no wrapper needed). 10 Nov end-to-end BOQ: LOW (about 10 Gate B packages, none can start; 18 verified pieces wait).
-- Team health: 4 merged, 1 rejected (narrow, fault named), 0 blocked since 16:30; every run closed with a final line; 0 empty runs; Checker merged within 1 run of READY. Self-check codemap / t061 / freeze PASS. New rows 5 (I 1, S 1, A 3).
-
-OWNER PACKAGE: none (no engineering item meets standard s.2.7).
-
-NEEDS FIXING (owner only, unchanged since 04:15, not re-notified): the run wrapper (scripts/agent_env.sh on main, line 211, still at eafbb0f6) lets `run` start only the scoreboard and key-map tools; every integration package and the registry gate fix need research/agents_t*/ scripts. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. This alone decides the 10 Nov milestone. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.

@@ -46,6 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-06 08:15; recovery plan in force)
+
+- Merged since 04:15 (all Gate A, research, no candidate line moved): T-545, T-547, T-550, T-552, T-554, T-555 6/6 WORKED; unwired verified pieces now 37.
+- First ENGINE_WRONG of the reconciliation round: dry plaster at paint height (T-552) -> T-556 method version + T-558 wiring row.
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main unchanged at eafbb0f6).
+- 12-13 Nov reconciled quantities: closed roof WP, blockwork (25.92 m2 UNRESOLVED named), wet-room floor WP, stair bed, beams, wall tile, internal plaster; open columns / footings (T-551), floor tile (T-553), rebar (T-560), paint (T-561), external plaster (drawn faces HELD), blockwork leftover (T-559); statement adapters T-557.
+- 10 Nov: LOW (unchanged cause). 12-13 Nov: HIGH for reconciliation tables on the candidate as it stands (7 trades closed, 5 open, 6 days); scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 04:15; recovery plan in force)
 
 - Merged since 00:20 (all Gate A, research, no candidate line moved): T-542, T-543, T-544, T-546, T-548, T-549 (6/6 WORKED). Unwired verified pieces now 31 (T-516..T-549).

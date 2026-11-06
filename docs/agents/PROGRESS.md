@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-06 04:15 UTC (Lead). Previous version: 2026-11-06 00:16 UTC. The released numbers did not change
+Last update: 2026-11-06 08:15 UTC (Lead). Previous version: 2026-11-06 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 6 Nov 04:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Blockwork leftover: his parapet heights are the printed height plus 0.50 m, and the drawings show that 0.50 m is the
+  concrete edge beam under the parapet, not blockwork (measured on the sections, checker agrees to the millimetre). So
+  68.4 m2 of his parapet blockwork is concrete; what is still unexplained drops from 101.4 to 25.9 m2 (his 'projections'
+  row, 41.3 m2, has no matching element on the drawings yet).
+- Wall plaster vs freelancer: inside his 1,209.4 m2 vs our valued 240.3 m2; the difference is held rooms, rule
+  differences (openings deducted per your Q-73) and wall lengths, nothing left over. One engine error found: our
+  plaster on 11 dry rooms stopped at the paint (ceiling) height instead of the slab underside (your rule): 217.2 m2
+  becomes 261.8 .. 269.3 m2, held on the floor build-up. Fix opened as a new method version. External plaster:
+  his 1,502.8 m2 vs ours not yet measured (drawn faces 932.7 .. 938.3 m2 held).
+- Wet-room wall tile: ours 340.3 vs his 433.8 m2 (-21.6 %): 138.4 m2 is six rooms we still hold; on the 11 rooms both
+  measure, ours is +4.2 %, from the tile height rule (your Q-48 A) and the pantry (Q-37 A); openings we deduct.
+- Beam concrete: ours 66.32 vs his 66.09 m3 (+0.3 %), but that is a cancellation: we measure 13.0 m3 more (six beams
+  he omits, runs, upstands, dome ring) and 12.4 m3 less (through supports by rule, held beams); 0.37 m3 unexplained.
+- Reconciliation statement adapters and wiring list V5 merged (first-floor glue 34.9 .. 36.2 bags, held).
+- Next: plaster height fix, columns and footings, reinforcement tonnage, floor tiles and paint vs freelancer, the
+  blockwork leftover 25.9 m2; all into the one statement for 12-13 Nov. 10 Nov (every trade wired): LOW, wrapper.
 
 Since 6 Nov 00:16 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):
