@@ -336,6 +336,9 @@ Count: 36 questions (structural 28, architect 8; A09 is a pointer, not a questio
 - Drawing: architectural P7757 sheet 04, 1F plan: the unlabelled 1.65 x 1.80 m space (2.970 m2) between the bath
   (2.00 x 1.80) and the master bed room (4.20 x 4.00) on the upper-neighbour side, a diagonal line drawn across it; no
   room name is printed and no finishes schedule is issued (D-10).
+  LEAD CORRECTION 2026-11-06 20:14Z (Checker F-T569-2, T-569 merged): the adjacent bed room read on A-1F-01 (T-292) and by
+  the T-553 pairing is 1F-R0E919A, 3.80 x 4.30 m, not 4.20 x 4.00; identify it by that size when the RFI is sent. No
+  quantity effect: both 1F bed rooms are porcelain on a dry bed, so the A08 ESTIMATED class does not depend on it.
 - Missing information: the use of the space and its floor finish.
 - Requested: the use of the space and its floor finish material.
 - Affected BOQ line: floor finish of this space HELD (area 2.970 m2 measured).
