@@ -1,0 +1,182 @@
+{
+ "H1": "MEASURED: his parapet heights are the printed heights above the finished roof plus 0.50 m on every row: 1.00 = 0.50 + 0.50 (GF / annex chain), 1.80 = 1.30 + 0.50 (1F roof), 1.00 = 0.50 + 0.50 (+13.90 roof). The architect's cuts draw the hatched edge member to 0.55 m below the finished level (0.50 m below the hatched slab top) on the +4.30, +5.50, +9.70 and +13.90 roofs; the drawn roof layer is a constant 0.05 m (refused as a roof build-up, T-214). So his +0.50 is the edge-member depth below the slab top, not the roof build-up b_edge; T-543's '+0.63 on the 1F roof' was his 1.80 against the engine's MEAN run height 1.171 m: the printed nominal is 1.30 (elevation dimensions 130), the 0.13 is the per-run printed heights (NW-5 0.448, SE-1 1.041, ...).",
+ "below_finish_evidence": "the face below the finished roof is concrete in every printed alternative: architect's cuts hatch the edge member to -0.55 m (DWF A-A / B-B; P7757.dxf 27D1 / 1C01), and ST p.14 P1 puts an RC upstand above the slab top 'more than the height of roof finishing' (T-311 / T-319): beam lines own the member to the slab top, STR.CONC.PARAPET (HELD) the upstand",
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "drawing_readings": {
+  "DWF SECTION A-A (t550_section_parapets.py on the architectural .dwf, datum by 4 level markers, spread 1.8 mm)": {
+   "+13.90 parapet": "hatch +0.50 .. -0.55; outline vertical up to +0.50",
+   "+5.50 parapet": "hatch +0.499 .. -0.549 (top 0.50 above finish; hatched edge member to 0.55 below finish)",
+   "+9.70 parapet (cut run)": "hatch +1.599 .. -0.549",
+   "slab band (t214 section_bands.py)": "build-up line 0.05 below each level, hatch 0.05 .. 0.20 below it"
+  },
+  "DWF SECTION B-B": {
+   "+4.30 annex parapets": "hatch top +0.499; bottoms -0.468 / -0.551 / -1.099 (edge members of two depths)"
+  },
+  "P7757.dxf NORTH WEST ELEVATION (cut at the +5.50 terrace edge)": {
+   "lines": "27E2 layer 5 at +5.50 (finished level); 27E5 +5.45 (hatched slab top); 27E4 +5.30 (soffit); 27E6 +4.95 (edge member bottom); 27E3 +6.00 (parapet top); hatch 27D1 +4.95 .. +6.00",
+   "printed": "dimension 29D0 5500 (+-0.00 to +5.50) and 29DE 500 (parapet above +5.50)"
+  },
+  "P7757.dxf SOUTH EAST ELEVATION (annex +4.30 edge)": {
+   "lines": "241A layer 5 at +4.30; 2419 / 241D +4.25 (slab top); 241C +4.10; 241E +3.75 (edge member bottom); 241B +4.80 (parapet top); hatch 1C01 +3.75 .. +4.80; dimension 24BC 500"
+  }
+ },
+ "engine_valued_total": "467.7925",
+ "freelancer_total": "1260.6895",
+ "gap": "792.8970",
+ "method": "R-T550-1 on R-T543-1",
+ "openings_note": "rows l (per floor -16.444) + his unassigned 20 cm openings (-9.84): his 122.39 m2 vs engine 96.106 m2. Named parts that cannot be moved to a number: (1) door height: he takes every door at 2.40 m (25.40 m of door width), the engine the owner fallback 2.20 m where no head is printed (Q-55 C): at most 25.40 x 0.20 = 5.08 m2; (2) HELD openings (lift L-*, arch A-*, panel P-*, D-GF-07 / D-GF-14) are not deducted by the engine but sit inside the HELD wall figures of row d, while he deducts them: their sizes are HELD, so the coupling is named, not moved; (3) his 4 openings in the 20 cm section (3 x 1.00 + 1.10 at 2.40) name no floor. Matching his openings to engine walls one by one is not done here.",
+ "parapet_residual_t543": "71.46577750",
+ "parapet_split": [
+  {
+   "chain": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00)",
+   "delta_m": "0.50",
+   "difference_m2": "36.722525",
+   "engine_centreline_m": "58.55495",
+   "engine_face_m2": "29.277475",
+   "his_m2": "66.0000",
+   "rows": [
+    {
+     "basis": "his 66.00 m exceeds the drawn annex + GF terrace chains 58.555 m (outer faces about 59.4 m) by 7.445 m; no further parapet run is drawn at +4.30 / +5.50 (layer 5 runs, T-311 / T-324)",
+     "cause": "UNRESOLVED",
+     "delta": "7.4450500",
+     "name": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): length census (his 66.00 m - engine centreline 58.55495 m) x his height 1.00 m"
+    },
+    {
+     "basis": "the face below the finished roof is concrete in every printed alternative: architect's cuts hatch the edge member to -0.55 m (DWF A-A / B-B; P7757.dxf 27D1 / 1C01), and ST p.14 P1 puts an RC upstand above the slab top 'more than the height of roof finishing' (T-311 / T-319): beam lines own the member to the slab top, STR.CONC.PARAPET (HELD) the upstand",
+     "cause": "ENGINE_RIGHT",
+     "delta": "29.2774750",
+     "name": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): his height below the finished roof (delta 0.50 m) x engine centreline 58.55495 m: concrete (edge member + RC upstand), never masonry"
+    },
+    {
+     "basis": "per-run printed heights above the finished roof (sections / elevations)",
+     "cause": "ENGINE_RIGHT",
+     "delta": "0E-7",
+     "name": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): his flat printed height 0.50 m vs each run's printed height (runs [])"
+    }
+   ]
+  },
+  {
+   "chain": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80)",
+   "delta_m": "0.50",
+   "difference_m2": "19.46825250",
+   "engine_centreline_m": "49.23265",
+   "engine_face_m2": "57.66174750",
+   "his_m2": "77.1300",
+   "rows": [
+    {
+     "basis": "his 42.85 m is 6.383 m short of the drawn 1F chain 49.233 m; the chain minus NW-5 (6.625 m, the low 0.448 m run) is 42.608 m (+0.242 m to his): consistent with omitting NW-5, not proven (his row names no run)",
+     "cause": "UNRESOLVED",
+     "delta": "-11.4887700",
+     "name": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): length census (his 42.85 m - engine centreline 49.23265 m) x his height 1.80 m"
+    },
+    {
+     "basis": "the face below the finished roof is concrete in every printed alternative: architect's cuts hatch the edge member to -0.55 m (DWF A-A / B-B; P7757.dxf 27D1 / 1C01), and ST p.14 P1 puts an RC upstand above the slab top 'more than the height of roof finishing' (T-311 / T-319): beam lines own the member to the slab top, STR.CONC.PARAPET (HELD) the upstand",
+     "cause": "ENGINE_RIGHT",
+     "delta": "24.6163250",
+     "name": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): his height below the finished roof (delta 0.50 m) x engine centreline 49.23265 m: concrete (edge member + RC upstand), never masonry"
+    },
+    {
+     "basis": "per-run printed heights above the finished roof (sections / elevations)",
+     "cause": "ENGINE_RIGHT",
+     "delta": "7.63068050",
+     "name": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): his flat printed height 1.30 m vs each run's printed height (runs ['1F:NW-1', '1F:NW-3', '1F:NW-4', '1F:NW-5', '1F:SE-1'])"
+    },
+    {
+     "basis": "printed elevations disagree / run end not printed: HELD range",
+     "cause": "HELD",
+     "delta": "-1.2899830",
+     "name": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): his flat printed height 1.30 m vs the HELD height range of runs ['1F:NE-1', '1F:SW-1', '1F:SW-2'] (engine upper end)"
+    }
+   ]
+  },
+  {
+   "chain": "+13.90 ROOF (his roof-page unlabelled row 29.80 x 1.00)",
+   "delta_m": "0.50",
+   "difference_m2": "15.2750",
+   "engine_centreline_m": "29.050",
+   "engine_face_m2": "14.5250",
+   "his_m2": "29.8000",
+   "rows": [
+    {
+     "basis": "his 29.80 = 2 x (8.10 + 6.80), the printed OUTER dimensions of the +13.90 roof; the engine measures the 0.20 / 0.15 parapet on its centreline 29.050 m (T-311 / T-541)",
+     "cause": "RULE_DIFFERENCE",
+     "delta": "0.75000",
+     "name": "+13.90 ROOF (his roof-page unlabelled row 29.80 x 1.00): length census (his 29.80 m - engine centreline 29.050 m) x his height 1.00 m"
+    },
+    {
+     "basis": "the face below the finished roof is concrete in every printed alternative: architect's cuts hatch the edge member to -0.55 m (DWF A-A / B-B; P7757.dxf 27D1 / 1C01), and ST p.14 P1 puts an RC upstand above the slab top 'more than the height of roof finishing' (T-311 / T-319): beam lines own the member to the slab top, STR.CONC.PARAPET (HELD) the upstand",
+     "cause": "ENGINE_RIGHT",
+     "delta": "14.52500",
+     "name": "+13.90 ROOF (his roof-page unlabelled row 29.80 x 1.00): his height below the finished roof (delta 0.50 m) x engine centreline 29.050 m: concrete (edge member + RC upstand), never masonry"
+    },
+    {
+     "basis": "per-run printed heights above the finished roof (sections / elevations)",
+     "cause": "ENGINE_RIGHT",
+     "delta": "0.00000",
+     "name": "+13.90 ROOF (his roof-page unlabelled row 29.80 x 1.00): his flat printed height 0.50 m vs each run's printed height (runs [])"
+    }
+   ]
+  }
+ ],
+ "projections_note": "his row 7.50 x 5.50, booked on his 1F external-walls page, no opening. 5.50 = the printed +-0.00 to +5.50 dimension (NW elevation 29D0); the only 7.50 printed is the GF plan dimension 4E9 along the sea-side SALOON facade, a run of 0.70 m wall + a 6.33 m glazed opening (window layer W, 262 / 263 / 264 / 265, 6.232 m) + 0.47 m wall (P7757.dxf B5 / B6). No 7.50 x 5.50 masonry face exists on any of the four elevations or the two sections; candidates checked: NW pool-court arch frame (T-172), SE stair-tower frame, the SW 1F overhang (about 4.5 m). Stays UNRESOLVED (physical element not identified; if it is that facade it is mostly glazing).",
+ "restated_by_cause": {
+  "ENGINE_RIGHT": "117.10076050",
+  "HELD": "585.9944680",
+  "RULE_DIFFERENCE": "65.898635",
+  "TOLERANCE": "-2.01930050",
+  "UNRESOLVED": "25.92243700"
+ },
+ "t543_by_cause": {
+  "ENGINE_RIGHT": "41.0512800",
+  "HELD": "587.284451",
+  "RULE_DIFFERENCE": "65.148635",
+  "TOLERANCE": "-2.01930050",
+  "UNRESOLVED": "101.43193450"
+ },
+ "t543_unresolved": "101.43193450",
+ "unresolved_after": [
+  {
+   "m2": "-5.7800",
+   "part": "GF storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+  },
+  {
+   "m2": "5.519348",
+   "part": "GF storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "m2": "-8.4990",
+   "part": "1F storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+  },
+  {
+   "m2": "11.241615",
+   "part": "1F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "m2": "-2.1650",
+   "part": "2F storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)"
+  },
+  {
+   "m2": "-1.760806",
+   "part": "2F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "m2": "41.25",
+   "part": "1F 'projections' row (his external section) / 1F 'projections' row (his external section)"
+  },
+  {
+   "m2": "-9.8400",
+   "part": "his 20 cm openings with no floor / his 20 cm openings with no floor"
+  },
+  {
+   "basis": "his 66.00 m exceeds the drawn annex + GF terrace chains 58.555 m (outer faces about 59.4 m) by 7.445 m; no further parapet run is drawn at +4.30 / +5.50 (layer 5 runs, T-311 / T-324)",
+   "m2": "7.4450500",
+   "part": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): length census (his 66.00 m - engine centreline 58.55495 m) x his height 1.00 m"
+  },
+  {
+   "basis": "his 42.85 m is 6.383 m short of the drawn 1F chain 49.233 m; the chain minus NW-5 (6.625 m, the low 0.448 m run) is 42.608 m (+0.242 m to his): consistent with omitting NW-5, not proven (his row names no run)",
+   "m2": "-11.4887700",
+   "part": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): length census (his 42.85 m - engine centreline 49.23265 m) x his height 1.80 m"
+  }
+ ],
+ "unresolved_after_gross_abs_m2": "104.9895890"
+}
