@@ -60,7 +60,6 @@ Next Lead run: read this file, then only what changed since the commits below (`
 ## Open owner items
 - Wrapper allow-list (CRITICAL, notified 04:15 5 Nov).
 - Q-80 15 cm black block face size (filed 00:16 6 Nov, owner package; 15 walls 175.9 m2 HELD).
-- Kuwait 1990 spec over the connector limit (plastering chapter and 04220 unread) -> a copy under 6 MB.
-- Repository privacy switch; released-path PyMuPDF decision (F-T465-1); PR #3 / merged-branch clean-up.
+- Kuwait 1990 spec copy under 6 MB; privacy switch; PyMuPDF decision (F-T465-1); PR #3 clean-up.
 - Q-34 2F top roof: raise only at the 12-13 Nov milestone with T-541's reconciliation.
 - Stage 2 of the token plan after 10 Nov. Scout paused (owner cadence 28 Oct).
