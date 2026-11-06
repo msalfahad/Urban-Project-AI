@@ -4,7 +4,7 @@ Worker 1, lane S, non-candidate, claim 2026-11-06 03:22 UTC (run session_01E6cPn
 Files: `t544_extract.py` (drawing reader: the merged LINTEL_BEARING_V3 run with the 4 openings as cases, plus an extended
 search for an end the 3.0 m search left open), `held_lintel_ceiling.py` (rule R-T544-1), `t544_apply.py` (application to
 the host, committed inputs only), `out/` (numbers only: lengths from a jamb or along a wall, ids, no coordinate),
-`tests/t544_held_lintel_ceiling/` (26 tests). Every merged module (T-516, T-519, T-527, T-537, T-523) imported read-only
+`tests/t544_held_lintel_ceiling/` (30 tests). Every merged module (T-516, T-519, T-527, T-537, T-523) imported read-only
 and unchanged; no engine, rule, knowledge, registry, master or candidate file changed; V2.9 + route G and V3.0.58
 untouched. Drawing cited by Drive folder and title only: 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf
 (sha ab54dd55).
@@ -79,7 +79,30 @@ AAC glue group (R-T523-1 via the T-523 function): before 17.643906 .. 18.16227 A
 **35.159227 .. 36.226627 AT_LEAST (>= 36 .. 37), still HELD** (other members' losses / lines stay open): the known part
 grows because the 1F host is now bounded, not because more glue is needed.
 
-## 5. Verdicts, residuals
+## 5. Part 2 (same topic, same run): the other three white AAC hosts with held lintels
+
+The T-453 ledger still carries R-T498-1 legacy ranges on three more hosts whose 13 held / flagged lintels (head not
+established; W13 / W26 FLAGGED: the head leaves room under some pieces only) use 'maximum' D x (w + 0.80), the lower
+bound of a built lintel (F-T537-1). The same V3 run (`out/JAMB_EVIDENCE_T544_P2.csv`, 26 ends, no SEARCH_LIMIT end;
+independent column projection AGREE 0.1 mm on every end) and R-T544-1 give:
+
+| host | lintels: L_ceil m (face hi m2) | before (legacy) glue kg | after glue kg | moved into group |
+|---|---|---|---|---|
+| GF L-541cf721 0.20 DC, net 44.2975 | D-GF-09 2.501 (0.5002); W05+W06 joint 3.470 (0.694); W07 3.350 (0.670) | 194.02875 .. 199.33875 | **190.94985 .. 199.33875** | yes (FRESH) |
+| 1F L-b7b4d784 0.20 DC, net 46.836 | W13 2.700 (0.540); W21+W22 3.470 (0.694); W23 3.350 (0.670); W25 2.500 (0.500) | 203.562 .. 210.762 | **199.944 .. 210.762** | yes (FRESH) |
+| 2F L-bbb82de2 0.20 DC, net 15.9165 | W26 2.700 (0.540); W27 2.500 (0.500); W28+W29 joint 3.470 (0.694) | 65.14425 .. 71.62425 | 63.82125 .. 71.62425 conditional | NO: contract HELD in the candidate (T-523 STALE_CLASS, 2F D-39): stays HELD by name |
+
+Ends worth naming: W06 / W22 / W29 END and W18-like jambs on a column face (a = 0.000: no masonry beside that jamb;
+a lintel there bears into the column or is a designer detail); deficits below 0.40 at D-GF-09 END 0.1469, W05 / W21 /
+W28 START 0.375, W25 / W27 END 0.100 (if those lintels exist: T-516-type FLAGGED_DEFICIT, designer). Joint spans equal
+column face to column face (2.70 -> 6.17 = 3.47 m on all three pier pairs). The legacy low ends fall by 3.079 kg (GF,
+-1.59 %), 3.618 kg (1F, -1.78 %), 1.323 kg (2F, conditional); high ends unchanged.
+
+AAC glue group with every FRESH host moved (`t544_apply.build_all`): **34.891351 .. 36.226627 AT_LEAST (>= 35 .. 37),
+HELD** (part 1 alone 35.159227 .. 36.226627): the low end drops 0.267876 bags because the two legacy low ends were no
+bounds; 2F L-bbb82de2, the losses and the other open members keep the group HELD.
+
+## 6. Verdicts, residuals
 
 - Engine vs freelancer: no freelancer lintel or glue row (his RC workbook gives one rebar total): UNRESOLVED, no
   comparable cell. Engine verdict: the T-537 low end was correctly HELD; T-530's conditional low end ENGINE_WRONG as a
@@ -90,6 +113,6 @@ grows because the 1F host is now bounded, not because more glue is needed.
   what the drawing proves; the head decides the rest.
 - Not wired: research only; a wiring package carries the range into the T-498 stage line (manifest after T-549).
 
-## 6. Lessons row (ERS s.7, proposed)
+## 7. Lessons row (ERS s.7, proposed)
 
-| 2026-11-06 | a HELD lintel's face stayed OPEN because its ends had no ceiling, and two lintels on one pier would each take the whole pier | the host material stayed HELD although the drawing bounds it; summing individual ceilings double-counts the pier | measure both jamb ends of every HELD lintel (V3 order, re-search past the limit), round ceilings UP, one joint record per shared pier on one host | tests/t544_held_lintel_ceiling | T-544 |
+| 2026-11-06 | a HELD lintel's face stayed OPEN because its ends had no ceiling, and two lintels on one pier would each take the whole pier | the host material stayed HELD although the drawing bounds it; summing individual ceilings double-counts the pier | measure both jamb ends of every HELD lintel (and re-bound every legacy D x (w + 0.80) host range) (V3 order, re-search past the limit), round ceilings UP, one joint record per shared pier on one host | tests/t544_held_lintel_ceiling | T-544 |

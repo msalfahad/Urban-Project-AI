@@ -27,6 +27,7 @@ import t537_apply as A  # noqa: E402  (read only)
 
 EVIDENCE = HERE / "out" / "JAMB_EVIDENCE_T544.csv"
 EXTENDED = HERE / "out" / "EXTENDED_SEARCH_T544.csv"
+EVIDENCE_P2 = HERE / "out" / "JAMB_EVIDENCE_T544_P2.csv"
 T527_EVIDENCE = ROOT / "research" / "agents_t527" / "out" / "JAMB_EVIDENCE_V3_T527.csv"
 HOST_1F = "L-2fdc0f971a94348ec855"
 HELD_IDS = ("W16", "W19", "W20", "W24")
@@ -42,7 +43,7 @@ def ends_of():
     """{oid: {side: {"a_m", "stopper", "stopper_id", "w_gap_m", "basis"}}}: V3 evidence, SEARCH_LIMIT ends replaced by
     their extended search where it found a stopper."""
     out = {}
-    for r in _csv(EVIDENCE) + [x for x in _csv(T527_EVIDENCE) if x["opening_id"] == "W15"]:
+    for r in _csv(EVIDENCE) + _csv(EVIDENCE_P2) + [x for x in _csv(T527_EVIDENCE) if x["opening_id"] == "W15"]:
         a = r["v3_available_6dp_m"]
         out.setdefault(r["opening_id"], {})[r["side"]] = {
             "side": r["side"], "a_m": float(a) if a else None, "stopper": r["stopper"], "stopper_id": r["stopper_id"],
@@ -138,9 +139,98 @@ def build():
             "released_quantities_changed": 0}
 
 
+# ------------------------------------------------------------------------------------------------ part 2
+HOSTS_P2 = ("L-541cf7210e52db0498bb", "L-b7b4d784fbe7fdbebe84", "L-bbb82de298fecbafa11d")
+
+
+def pairs_of(ids, ends):
+    """facing ends that stop at each other with one measured pier -> [(first, second)] in band order."""
+    out = []
+    for a in ids:
+        e = ends[a]["END"]
+        if e["stopper"] == "OPENING" and e["stopper_id"] in ids:
+            b = e["stopper_id"]
+            s = ends[b]["START"]
+            if s["stopper"] == "OPENING" and s["stopper_id"] == a and abs(s["a_m"] - e["a_m"]) <= 1e-6:
+                out.append((a, b))
+            else:
+                raise H.RuleError(f"{a}/{b}: facing ends disagree (not one pier)")
+    return out
+
+
+def faces_held_only(m, ends):
+    """a host whose lintel faces are all HELD / FLAGGED (existence not established): R-T544-1 per lintel, shared piers
+    joint on the host."""
+    if m.get("lintel_deductions"):
+        raise H.RuleError(f"{m['line_id']}: has REQUIRED lintels (use faces_1f-style input)")
+    t = m["thickness_m"]
+    held = _held_ledger(m)
+    singles = {oid: H.held_face(oid, [t, h["depth_m"]], ends[oid]["START"]["w_gap_m"],
+                                [ends[oid]["START"], ends[oid]["END"]], t) for oid, h in held.items()}
+    hosts_of = {k: m["line_id"] for k in held}
+    faces, used = [], set()
+    for a, b in pairs_of(list(held), ends):
+        mem = [{"opening_id": a, "D_m": held[a]["depth_m"], "w_gap_m": ends[a]["START"]["w_gap_m"], "face_lo_m2": 0.0,
+                "outer": ends[a]["START"], "pier_m": ends[a]["END"]["a_m"]},
+               {"opening_id": b, "D_m": held[b]["depth_m"], "w_gap_m": ends[b]["START"]["w_gap_m"], "face_lo_m2": 0.0,
+                "outer": ends[b]["END"]}]
+        faces += list(H.joint_face(mem, hosts_of).values())
+        used |= {a, b}
+    faces += [singles[k] for k in singles if k not in used]
+    return faces, singles
+
+
+def build_part2():
+    led = {m["line_id"]: m for m in A._json(A.T453_LEDGER)["block_materials"] if m["item"] == "LAYING_MATERIAL"}
+    ends = ends_of()
+    rows = []
+    for lid in HOSTS_P2:
+        m = led[lid]
+        faces, singles = faces_held_only(m, ends)
+        base = R.material_base(m["net_m2"], faces)
+        rows.append({"host_line_id": lid, "host_element": m["element_id"], "contract_net_m2": m["net_m2"],
+                     "kg_per_m2": m["kg_per_m2"],
+                     "before_t453_r1": {"base_m2": m["material_base_range_m2"], "glue_kg": m["consumption_kg_range"],
+                                        "bags_25kg_net": m["bags_25kg_net_range"],
+                                        "basis": "R-T498-1 legacy held maxima D x (w + 0.80): a LOWER bound of a built "
+                                                 "lintel (F-T537-1), so the low end is no proven bound"},
+                     "held_lintels": singles, "after": {"base": base,
+                                                        "glue_kg": R.material_line(base, m["kg_per_m2"], "kg"),
+                                                        "bags_25kg_net": R.material_line(base, m["kg_per_m2"] / A.PACK_KG,
+                                                                                         "bags_25kg_net")}})
+    return rows
+
+
+def host_freshness():
+    """{line_id: T-523 'fresh' of its glue_bags binding}: a host whose contract class is HELD in the candidate
+    (STALE_CLASS, e.g. the 2F roof-storey walls D-39) is never moved into a valued group member."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("t523_for_t544", ROOT / "research/agents_t523/t523_binding_map_v2.py")
+    m523 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m523)
+    return {b["line_id"]: b["fresh"] for b in m523.run()["bindings"]
+            if b["table"] == "T-453" and b["kind"] == "glue_bags_25kg_net"}
+
+
+def build_all():
+    """part 1 (the task host) + part 2 (the other three white AAC hosts with held lintels) + the glue group with every
+    moved host whose contract class is current (FRESH); a STALE / HELD host keeps its HELD binding (range beside)."""
+    p1 = build()
+    p2 = build_part2()
+    fresh = host_freshness()
+    for r in p2:
+        r["t523_fresh"] = fresh.get(r["host_line_id"])
+        r["group_member_moved"] = r["t523_fresh"] == "FRESH"
+    t537 = A.build()
+    gf = next(h for h in t537["hosts"] if h["host_line_id"] != HOST_1F)
+    moves = {HOST_1F: p1["after"]["bags_25kg_net"], gf["host_line_id"]: gf["after_r_t498_2"]["bags_25kg_net"]}
+    moves.update({r["host_line_id"]: r["after"]["bags_25kg_net"] for r in p2 if r["group_member_moved"]})
+    return {"part1": p1, "part2": p2, "glue_group_all": A._glue_group(moves)}
+
+
 def dumps(d):
     return json.dumps(d, indent=1, sort_keys=True, ensure_ascii=False, default=str) + "\n"
 
 
 if __name__ == "__main__":
-    sys.stdout.write(dumps(build()))
+    sys.stdout.write(dumps(build_all()))

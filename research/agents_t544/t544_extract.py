@@ -26,6 +26,7 @@ import t527_extract as X3  # noqa: E402  (read only)
 
 OUT = HERE / "out" / "JAMB_EVIDENCE_T544.csv"
 EXT_NAME = "EXTENDED_SEARCH_T544.csv"
+P2_NAME = "JAMB_EVIDENCE_T544_P2.csv"
 EXT_KEYS = ["opening_id", "side", "search_m", "available_m", "available_6dp_m", "stopper", "stopper_id", "own_band_m",
             "beyond_band_end", "through_walls", "band_length_m", "jamb_from_band_start_m"]
 # opening -> (storey, band, engine ref): the T-175 host table (research/agents_t175/T175_OPENING_HOSTS.csv)
@@ -35,15 +36,27 @@ CASES = {
     "W20": ("1F", "WB-FL0002-FL0003", "OP-002"),
     "W24": ("1F", "WB-FL0002-FL0003", "OP-003"),
 }
+# part 2 (same topic, same run): every other HELD / FLAGGED lintel on a white AAC host of the T-453 ledger
+CASES_PART2 = {
+    "D-GF-09": ("GF", "WB-FL0041-FL0042", "OP-013"), "W05": ("GF", "WB-FL0041-FL0042", "OP-014"),
+    "W06": ("GF", "WB-FL0041-FL0042", "OP-015"), "W07": ("GF", "WB-FL0041-FL0042", "OP-016"),
+    "W13": ("1F", "WB-FL0074-FL0076", "OP-021"),
+    "W21": ("1F", "WB-FL0030-FL0031", "OP-013"), "W22": ("1F", "WB-FL0030-FL0031", "OP-014"),
+    "W23": ("1F", "WB-FL0030-FL0031", "OP-015"), "W25": ("1F", "WB-FL0030-FL0031", "OP-012"),
+    "W26": ("2F", "WB-FL0035-FL0036", "OP-008"),
+    "W27": ("2F", "WB-FL0010-FL0011", "OP-003"), "W28": ("2F", "WB-FL0010-FL0011", "OP-004"),
+    "W29": ("2F", "WB-FL0010-FL0011", "OP-005"),
+}
 # stopper names for the openings that can bound these ends (T-175 host table)
 EXTRA_CENSUS_OF = {("1F", "WB-FL0002-FL0003", "OP-001"): "W19", ("1F", "WB-FL0002-FL0003", "OP-002"): "W20",
                    ("1F", "WB-FL0002-FL0003", "OP-003"): "W24"}
+EXTRA_CENSUS_OF.update({(fl, band, ref): oid for oid, (fl, band, ref) in CASES_PART2.items()})
 
 
-def run(scratch, out=None):
+def run(scratch, out=None, cases=None):
     saved_cases, saved_census = X1.CASES, X1.CENSUS_OF
     try:
-        X1.CASES = dict(CASES)
+        X1.CASES = dict(cases or CASES)
         X1.CENSUS_OF = {**saved_census, **EXTRA_CENSUS_OF}
         return X3.main(str(scratch), out=Path(out) if out else OUT, probe=None)
     finally:
@@ -70,7 +83,7 @@ def extended(scratch, rows):
         if r["stopper"] != "SEARCH_LIMIT":
             continue
         oid, side = r["opening_id"], r["side"]
-        fl, band, how = CASES[oid]
+        fl, band, how = {**CASES, **CASES_PART2}[oid]
         if fl not in cache:
             c1 = X1.storey(d["floors"][fl], v["floors"][fl]["v2"])
             cache[fl] = (c1, X3.storey_v3(fl, d["floors"][fl], c1))
@@ -108,12 +121,13 @@ def main(scratch, out=None):
     import csv
     out = Path(out) if out else OUT
     rows = run(scratch, out)
-    ext = extended(scratch, rows)
+    rows2 = run(scratch, out.parent / P2_NAME, CASES_PART2)
+    ext = extended(scratch, rows + rows2)
     with open(out.parent / EXT_NAME, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=EXT_KEYS, lineterminator="\n", extrasaction="ignore")
         w.writeheader()
         w.writerows(ext[k] for k in sorted(ext))
-    return rows, ext
+    return rows + rows2, ext
 
 
 if __name__ == "__main__":

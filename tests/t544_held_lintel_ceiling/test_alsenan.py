@@ -131,3 +131,59 @@ def test_adverse_unsearched_end_holds_the_host(app, monkeypatch):
     d = T.build()
     assert d["after"]["glue_kg"]["state"] == "HELD" and d["after"]["glue_kg"]["value"] is None
     assert d["after"]["glue_kg"]["at_most_beside"] == 451.60893 and rows
+
+
+# ------------------------------------------------------------------------------------------------ part 2
+# Hand calculation (ceilings rounded up; every a below re-measured by the independent column projection, AGREE 0.1 mm):
+#   GF L-541cf721 (net 44.2975): D-GF-09 0.9 + 1.4531->1.454 + 0.1469->0.147 = 2.501 -> 0.5002; W05+W06 joint 0.375 +
+#     0.6 + 1.895 + 0.6 + 0 = 3.470 -> 0.694 (column 2.70 to column 6.17); W07 0.400 + 0.6 + 2.350 = 3.350 -> 0.670;
+#     hi 1.8642 -> base [42.4333, 44.2975], glue [190.94985, 199.33875] (legacy low 194.02875)
+#   1F L-b7b4d784 (net 46.836): W13 0.75 + 1.2 + 0.75 = 2.700 -> 0.540; W21+W22 3.470 -> 0.694; W23 3.350 -> 0.670;
+#     W25 1.4 + 1.0 + 0.1 = 2.500 -> 0.500; hi 2.404 -> base [44.432, 46.836], glue [199.944, 210.762] (legacy 203.562)
+#   2F L-bbb82de2 (net 15.9165, contract HELD in the candidate: STALE_CLASS): W26 2.700 -> 0.540; W27 2.500 -> 0.500;
+#     W28+W29 0.375 + 0.6 + 1.295 + 1.2 + 0 = 3.470 -> 0.694; hi 1.734 -> conditional base [14.1825, 15.9165]
+
+
+@pytest.fixture(scope="module")
+def allr():
+    return T.build_all()
+
+
+def test_part2_ends_and_ceilings(allr):
+    hl = {k: v for r in allr["part2"] for k, v in r["held_lintels"].items()}
+    assert {k: v["L_ceil_m"] for k, v in hl.items()} == {
+        "D-GF-09": 2.501, "W05": 2.87, "W06": 2.495, "W07": 3.35, "W13": 2.7, "W21": 2.87, "W22": 2.495,
+        "W23": 3.35, "W25": 2.5, "W26": 2.7, "W27": 2.5, "W28": 2.27, "W29": 2.495}
+    assert hl["W06"]["ceilings_m"]["END"] == 0.0 and hl["W29"]["ceilings_m"]["END"] == 0.0   # jamb on a column face
+    assert hl["W05"]["ceilings_m"]["START"] == 0.375                                         # a deficit stays measured
+
+
+def test_part2_hosts(allr):
+    r = {x["host_line_id"][:10]: x for x in allr["part2"]}
+    want = {"L-541cf721": ([42.4333, 44.2975], [190.94985, 199.33875], [194.02875, 199.33875]),
+            "L-b7b4d784": ([44.432, 46.836], [199.944, 210.762], [203.562, 210.762]),
+            "L-bbb82de2": ([14.1825, 15.9165], [63.82125, 71.62425], [65.14425, 71.62425])}
+    for k, (base, glue, before) in want.items():
+        assert r[k]["after"]["base"]["base_m2"] == base and r[k]["after"]["glue_kg"]["range"] == glue
+        assert r[k]["before_t453_r1"]["glue_kg"] == before
+        assert glue[0] < before[0] and glue[1] == before[1]       # legacy low end was no bound; high end unmoved
+    joints = {f["opening_id"]: f for x in allr["part2"] for f in x["after"]["base"]["faces"] if "+" in f["opening_id"]}
+    assert {k: v["L_ceil_m"] for k, v in joints.items()} == {"W05+W06": 3.47, "W21+W22": 3.47, "W28+W29": 3.47}
+
+
+def test_part2_stale_host_not_moved_into_the_group(allr):
+    r = {x["host_line_id"][:10]: x for x in allr["part2"]}
+    assert r["L-bbb82de2"]["group_member_moved"] is False and r["L-bbb82de2"]["t523_fresh"].startswith("STALE_CLASS")
+    assert r["L-541cf721"]["group_member_moved"] and r["L-b7b4d784"]["group_member_moved"]
+    assert T.host_freshness()[T.HOST_1F] == "FRESH"
+    g = allr["glue_group_all"]
+    assert g["status"] == "HELD" and g["at_least"] == [34.891351, 36.226627] and g["to_buy_at_least"] == [35, 37]
+    assert "L-bbb82de298fecbafa11d" in g["open"]               # stays HELD by name, never a valued 0
+
+
+def test_part2_adverse_inconsistent_pier_refused(allr):
+    ends = T.ends_of()
+    bad = {k: {s: dict(e) for s, e in v.items()} for k, v in ends.items()}
+    bad["W06"]["START"]["a_m"] = 1.0                          # the two sides of one pier disagree
+    with pytest.raises(H.RuleError):
+        T.pairs_of(["W05", "W06", "W07"], bad)

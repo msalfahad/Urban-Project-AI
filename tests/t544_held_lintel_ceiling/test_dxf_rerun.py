@@ -37,3 +37,4 @@ def test_fresh_run_equals_committed_evidence():
     out = ROOT / "research" / "agents_t544" / "out"
     assert fresh.read_bytes() == (out / "JAMB_EVIDENCE_T544.csv").read_bytes()
     assert (fresh.parent / X.EXT_NAME).read_bytes() == (out / X.EXT_NAME).read_bytes()
+    assert (fresh.parent / X.P2_NAME).read_bytes() == (out / X.P2_NAME).read_bytes()
