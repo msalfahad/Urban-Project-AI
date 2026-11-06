@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T10:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-553 CLAIMED W2; T-551/558/560/561 TODO) | self-check pending
 - 2026-11-06T10:40Z | Worker 2 | STARTED | run session_01E6cPndTLbt7MNqd2cyq8fY | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T10:23Z | Verifier | SUCCESS | T-559, T-556, T-557 | 3x GATE A PASS MERGED (engine push 431ac67f), research / statement, no quantity change: T-556 own P7757 re-measure 1F-04 17.40 m face 63.141 m2, 2F-03 18.90 m 69.775 m2 AGREE, GF-15 66.529 confirms W03 correction (my T-552 68.72 over by 3.268); T-559 openings census rebuilt from his workbook (HELD 23.37, door head 0.20 x 19.50 = 3.90) + 9 parapet handles AGREE, 32 bands carried once, per-run heights not re-measured (PARTIAL); T-557 4 sections close exactly, reference totals re-read AGREE, plaster restatement now stale vs T-556 (Lead: next adapter); no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T09:51Z | Verifier | STARTED | run session_01E6cPnde3Y1gkoqgfN9dMTG | repo-attached routine | task state: T-556 READY (W2 935e04c6), T-557 READY (W3 09c68487), T-559 READY (W1 341b011a) | self-check pending
