@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T21:21Z | Worker 1 | STARTED | run session_01E6cPnd1GiA5u8SQXPLNr4N | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T21:18Z | Worker 3 | SUCCESS | T-579 READY (agents/task-T-579 @ f938883e) | Statement V5 = V4 rebuilt equal + rebar 44.19 t TYPED_LUMP vs 9.375 t valued (RULE_DIFF, no %), windows 116.9 vs 76.256 m2 (HELD 36.669, ER 3.975), ceilings by face class, T-572 bounds AT_LEAST (necks >=9.724 m3); V4 blockwork 6.30 m2 UNRESOLVED -> ER 6.54 / RD -0.24; manifest V8 rows beside, not lines; T-571/T-574 pending | self-check codemap PASS, pytest t061 PASS (after re-running setup: venv had no pytest, setup.log absent), freeze PASS; problem: first status call timed out at 2 min, none refused
 - 2026-11-06T21:02Z | Worker 3 | STARTED | run session_01E6cPneUpgtksTEgtrVLZiY | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T20:55Z | Worker 2 | SUCCESS | T-574 READY (agents/task-T-574) | Skirting vs freelancer: room 197.279 vs 282.85 lm = RULE_DIFF -43.62 (doors/passages) + ENGINE_RIGHT -32.08 (floor glazing, wet pantry, 1F shaft) + UNRESOLVED -9.69 + TOL -0.18; gross vs gross -2.37 %; stairs 12.15 vs 29.87 lm (flights HELD >= 17.009), 96 nr pieces not converted, yard 81.32 lm scope UNRESOLVED; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
