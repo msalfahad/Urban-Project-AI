@@ -1,0 +1,644 @@
+{
+ "classes": [
+  "ENGINE_RIGHT",
+  "ENGINE_WRONG",
+  "RULE_DIFFERENCE",
+  "HELD",
+  "TOLERANCE",
+  "UNRESOLVED"
+ ],
+ "provenance": {
+  "candidate_note": "T-534 lines from the V3.0.57 line index; T-541 adds the five V3.0.58 pool-court lines (T-507) at their T-529 / T-536 values (t541_inputs.py)",
+  "inputs": {
+   "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+   "research/agents_t534/out/T534_STAIR_BED_RECONCILE.json": "a79bb0f45544b2f31e961ccd193c6234782495057a22f8f1dcd5dc2719fbee4a",
+   "research/agents_t541/out/T541_ROOF_WP_RECONCILE.json": "4f7c76ddde1a21a970eb68f3ea27c56e8df442096f8daf22b3cf085253e310fc",
+   "research/agents_t541/t541_inputs.py": "2b151bf7a59a9bd920fdfb3f14a3d1a6ecd67c24a432961b789233b7cac49d4c"
+  },
+  "valued_lines_not_in_V3_0_57_index": {
+   "T-534/stair-bed": [],
+   "T-541/membrane": [
+    "L-eff54f96bfcfcf175d58",
+    "L-2361d6ec13c952bd2ae3"
+   ],
+   "T-541/upturn": [
+    "L-cf8d5ed40b0d546427d6",
+    "L-1954878bb02c91139e1b",
+    "L-d7d1bf8c5991ccf69ea2"
+   ]
+  }
+ },
+ "released_quantities_changed": 0,
+ "reports_covered": [
+  "T-541",
+  "T-534"
+ ],
+ "reports_pending": [
+  "T-543",
+  "T-545",
+  "T-546",
+  "T-547"
+ ],
+ "rule": "R-T548-1",
+ "schema": "URBAN_T548_RECONCILED_STATEMENT_V1",
+ "sections": [
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-5.54644",
+    "ENGINE_WRONG": "0",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "difference": "75.34156",
+   "difference_pct_of_reference": "26.44",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "209.65844"
+   },
+   "engine_valued": "209.65844",
+   "excluded_count": 0,
+   "freelancer_total": "285",
+   "held_count": 1,
+   "item_codes": [
+    "FIN.WP.ROOF"
+   ],
+   "reference_basis": "freelancer waterproofing sheet, one typed row 'roofs and annexes' (T-541 s.1, F-T541-1; Drive 'Alsenan chalet project'); no sub-rows",
+   "reference_kind": "FREELANCER",
+   "reference_total": "285",
+   "report": "T-541",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "34.390242",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-3e8fe55da71851816dd4"
+     ],
+     "name": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
+     "note": "49.665000 - 15.274758; engine lines L-3e8fe55d / L-aac1f35e HELD, never 0",
+     "source": "P7757.dxf handles (re-read T-541); Q-34 parked",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "15.274758",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "third dome footprint on the +13.90 roof",
+     "note": "inside the HELD roof; his row does not deduct it (hypothesis H1)",
+     "source": "P7757.dxf handles (re-read T-541) 1300; Q-29 client change (open skylight)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "30.718026",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "two +9.70 dome footprints (circles)",
+     "note": "engine stops the membrane at each skylight opening (owner Q-29); a design-scope count keeps it",
+     "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 / Q-29",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.018026",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "engine arc discretisation of the two +9.70 dome deductions",
+     "note": "polygon chords; 0.016 % of the line; not a defect",
+     "source": "T-321 closure AT379 (146.532 - 115.832 = 30.700 vs circles)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-5.54644",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "pool-court slab +5.50 and its ledge (T-507 / T-529)",
+     "note": "exposed slab top; his row has no sub-row: whether his lump holds it is not printed",
+     "source": "candidate lines L-eff54f96 / L-2361d6ec (Checker 4.9069 AGREE)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "0.523",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RESIDUAL",
+     "note": "",
+     "source": "freelancer row total minus every named component",
+     "source_cause": "UNRESOLVED"
+    }
+   ],
+   "section_id": "T-541/membrane",
+   "trade": "B8 roof waterproofing",
+   "unit": "m2",
+   "valued_count": 5
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-6.24516",
+    "ENGINE_WRONG": "0",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   },
+   "difference": "6.16584",
+   "difference_pct_of_reference": "3.18",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "187.83416"
+   },
+   "engine_valued": "187.83416",
+   "excluded_count": 0,
+   "freelancer_total": "194",
+   "held_count": 1,
+   "item_codes": [
+    "FIN.WP.ROOF_UPTURN"
+   ],
+   "reference_basis": "freelancer waterproofing sheet, one typed row 'roofs and annexes' (T-541 s.1, F-T541-1; Drive 'Alsenan chalet project'); no sub-rows",
+   "reference_kind": "FREELANCER",
+   "reference_total": "194",
+   "report": "T-541",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "28.3",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-aac1f35e08f85b643692"
+     ],
+     "name": "2F block top roof parapet inner faces",
+     "note": "engine line L-aac1f35e HELD",
+     "source": "P7757.dxf handles (re-read T-541); T-311 2F 28.300; Q-34 parked",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-27.785396",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "two +9.70 dome rings (circles)",
+     "note": "in the engine, not in a basis that keeps the domes in the area",
+     "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 answer (0.20 m round a skylight)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.003396",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "engine arc discretisation of the two rings",
+     "note": "",
+     "source": "T-071 ring 27.782 vs circles 27.785396",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-6.24516",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "pool-court upturns, bath-window face and ledge (T-507 / T-529)",
+     "note": "5.193544 + 0.500002 + 0.551614",
+     "source": "candidate lines L-cf8d5ed4 / L-1954878b / L-d7d1bf8c",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "11.893",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RESIDUAL",
+     "note": "",
+     "source": "freelancer row total minus every named component",
+     "source_cause": "UNRESOLVED"
+    }
+   ],
+   "section_id": "T-541/upturn",
+   "trade": "B8 roof waterproofing",
+   "unit": "lm",
+   "valued_count": 6
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "4.08",
+    "ENGINE_WRONG": "1.5",
+    "HELD": "13.405",
+    "RULE_DIFFERENCE": "-14.9319",
+    "TOLERANCE": "0.0006",
+    "UNRESOLVED": "0"
+   },
+   "difference": "4.0537",
+   "difference_pct_of_reference": "10.27",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "35.4313"
+   },
+   "engine_valued": "35.4313",
+   "excluded_count": 3,
+   "freelancer_total": null,
+   "held_count": 20,
+   "item_codes": [
+    "FIN.MARBLE.TREAD",
+    "FIN.MARBLE.RISER",
+    "FIN.MARBLE.LANDING"
+   ],
+   "reference_basis": "Q-53 text 39.49 m2 = the T-086 hand table (39.485); freelancer: no stair bed / cement / sand row (T-534 s.5, T-511 s.5)",
+   "reference_kind": "OWNER_QUESTION_FIGURE",
+   "reference_total": "39.485",
+   "report": "T-534",
+   "rows": [
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-4.9225",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F-ARR LANDING SCOPE",
+     "note": "Q-66 B answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.84",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-8938aa3b25bf605e4b9d"
+     ],
+     "name": "D1 RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "D1 TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.045",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "D1 TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.42",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 RISER DEPTH_OR_HEIGHT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "DEPTH_OR_HEIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.84",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.0006",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 TREAD POLYGON",
+     "note": "candidate polygon 3.3594 vs printed 4 x 0.30 x 2.80 = 3.3600 (T-425 s.3.2 AGREE)",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "POLYGON"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-5.1794",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1-LD LANDING SCOPE",
+     "note": "reference counted the top E1 step as a tread, no entrance landing (T-534 s.5 scope)",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-ecc450d6cc865617f8f6"
+     ],
+     "name": "MS1-L RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-L TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.135",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-L TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "ENGINE_WRONG",
+     "delta": "1.5",
+     "engine_status": "NONE",
+     "fix_row": "T-502",
+     "held_line_ids": [],
+     "name": "MS1-LD LANDING SCOPE",
+     "note": "no candidate line for a drawn landing (T-493 F-3 silent omission); T-502 adds it",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-07e0855f961a839c1277"
+     ],
+     "name": "MS1-U RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-U TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.165",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-U TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4192",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0f060e9951c28c4cf074"
+     ],
+     "name": "MS2-L RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-L TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.165",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-L TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "HELD",
+     "delta": "3.125",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-5d2be30dd8d2ffeacc42"
+     ],
+     "name": "MS2-LD LANDING SCOPE",
+     "note": "only inside the HELD 2F bound",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.2016",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0f060e9951c28c4cf074"
+     ],
+     "name": "MS2-TR RISER SCOPE",
+     "note": "closing riser inside the HELD MS2-L riser line; position HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4192",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-12f56cbfe750f8b30c41"
+     ],
+     "name": "MS2-U RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.72",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-U TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.15",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-U TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-1.38",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RS-A TREAD SCOPE",
+     "note": "Q-50 A cond answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-3.45",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RS-S TREAD SCOPE",
+     "note": "Q-50 A cond answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    }
+   ],
+   "section_id": "T-534/stair-bed",
+   "trade": "B7 stair marble bed",
+   "unit": "m2",
+   "valued_count": 11
+  }
+ ],
+ "totals": [
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "4.08",
+    "ENGINE_WRONG": "1.5",
+    "HELD": "13.405",
+    "RULE_DIFFERENCE": "-14.9319",
+    "TOLERANCE": "0.0006",
+    "UNRESOLVED": "0"
+   },
+   "difference": "4.0537",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "35.4313"
+   },
+   "engine_valued": "35.4313",
+   "freelancer_total": null,
+   "held_count": 20,
+   "reference_kind": "OWNER_QUESTION_FIGURE",
+   "reference_total": "39.485",
+   "sections": [
+    "T-534/stair-bed"
+   ],
+   "trade": "B7 stair marble bed",
+   "unit": "m2"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-6.24516",
+    "ENGINE_WRONG": "0",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   },
+   "difference": "6.16584",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "187.83416"
+   },
+   "engine_valued": "187.83416",
+   "freelancer_total": "194",
+   "held_count": 1,
+   "reference_kind": "FREELANCER",
+   "reference_total": "194",
+   "sections": [
+    "T-541/upturn"
+   ],
+   "trade": "B8 roof waterproofing",
+   "unit": "lm"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-5.54644",
+    "ENGINE_WRONG": "0",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "difference": "75.34156",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "209.65844"
+   },
+   "engine_valued": "209.65844",
+   "freelancer_total": "285",
+   "held_count": 1,
+   "reference_kind": "FREELANCER",
+   "reference_total": "285",
+   "sections": [
+    "T-541/membrane"
+   ],
+   "trade": "B8 roof waterproofing",
+   "unit": "m2"
+  }
+ ]
+}
