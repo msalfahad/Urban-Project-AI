@@ -11,7 +11,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - last Lead run: 2026-11-06 16:13-16:30 UTC (run session_01E6cPnam5sewJiAYNeBkeBa)
 
 ## Run health
-- Since 12:16 every run closed with a final line; 0 empty runs; 6 merged, 0 rejected, 0 blocked.
+- Since 12:16 every run closed; 0 empty; 6 merged, 0 rejected.
 - CRITICAL (owner, notified 04:15 5 Nov, not re-notified): wrapper refuses research/agents_t*/ scripts -> every Gate B + T-525 blocked.
 - tests/t485 still red on the working branch (T-507 stale pending in master 1.55.0).
 - Privacy near-miss 15:59: Verifier commit with workbook values refused by the classifier, rewritten (6f0215f7). Watch handoffs.
@@ -34,8 +34,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
    internal plaster, floor tile, paint, external plaster, earthworks NO_ROW); open rebar, doors / windows, lintels,
    ceilings, skirting, structural HELD bounds; T-570 statement before milestone text; Q-34 raised then.
 3. On T-569 merge: adopt 'plastered face implies paint face'; on T-570 merge: adopt 'gross vs gross'. Next Lead run: if 1 or
-   fewer TODO remain in a lane, add rows (candidates: links kg vs freelancer, T-474 part 2 scope split, waterproofing roof
-   vs freelancer re-check after T-563, marble / thresholds vs freelancer, beam residual 4 / 5 marks re-measure).
+   fewer TODO remain in a lane, add rows (links kg vs freelancer, T-474 part 2 split, marble / thresholds, beam 4 / 5 marks).
 4. 10 Nov: LOW (Gate B queue behind the wrapper; none can start before it).
 5. When a package merges, promote its queued successor in the same Lead run (T-509 after T-498; T-563 after T-498; T-424 after T-423).
 
@@ -47,7 +46,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
   7-cell rows; `board check` pulls first: commit before.
 - 'merged' only when the commit reached the working branch through a merge (F-C-T443-1).
 - A Checker finding that blocks a merge gets its fix row in the next Lead run, first in its lane.
-- Register rulings: see ELEMENT_REGISTER (new 16:17: PLASTERED RETURN FACE, PRECAST LINTEL; 12:18 ENCLOSED SPACE FLOOR; 19 earlier).
+- Register rulings: ELEMENT_REGISTER (16:17: PLASTERED RETURN FACE, PRECAST LINTEL; 20 earlier).
 - Lessons 06 Nov ADOPTED: class from geometry; net % never agreement; bound HELD before %; layer height own rule; enclosed
   space floor; label CONFLICT never by majority; NO_ROW never 0. PROPOSED: re-cut openings at new height (on T-563),
   gross vs gross (on T-570), plastered face implies paint face (on T-569), loss own account, printed values in DIMENSION
