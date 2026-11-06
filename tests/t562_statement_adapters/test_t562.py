@@ -415,3 +415,29 @@ def test_untouched_section_change_refused():
     [c for c in prev2["sections"] if c["section_id"] == "T-547/wall-tile"][0]["rows"][0]["delta"] = "1"
     with pytest.raises(Y.AdapterError):
         B.build_from(secs, prov, index, ctx, prev=prev2)
+
+
+def test_held_host_walls_cross_checked_with_t543(st):
+    """Independent route: every F-T562-1 move names a host wall that T-543's own HELD rows list (the register state
+    and the report agree); a held opening may sit in a valued wall only with its source class HELD."""
+    import re
+    d = json.loads((ROOT / "research/agents_t543/out/T543_BLOCKWORK_RECONCILE.json").read_text(encoding="utf-8"))
+    held = set()
+    for comp in d["rows"]:
+        if comp["cause"] == "SPLIT" and comp["name"].endswith("storey walls (net of openings)"):
+            for r in comp["decomposition"]["rows"]:
+                if r["cause"] == "HELD":
+                    for w in r["walls"]:
+                        held.update(x.strip() for x in w.split("+"))
+    b9 = [c for c in st["sections"] if c["section_id"] == "T-543/blockwork"][0]
+    moved = 0
+    for r in b9["rows"]:
+        if r.get("correction") == "T-559" and r["engine_status"] == "HELD":
+            m = re.search(r"host wall (\S+) ", r["note"])
+            wall = m.group(1) if m else "GF-W04"
+            if r.get("reclass"):
+                moved += 1
+                assert wall in held, r["name"]
+            elif wall not in held:
+                assert r["source_cause"] == "HELD" and "opening HELD" in r["note"], r["name"]
+    assert moved == 25

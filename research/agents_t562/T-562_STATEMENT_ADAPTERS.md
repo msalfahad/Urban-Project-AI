@@ -2,7 +2,7 @@
 
 Worker 3 (lane I), 2026-11-06, claim 13:01 UTC, run session_01E6cPnek9gHsQvAi5WHxsJC. Files: `t562_adapters.py`
 (R-T562-1, any villa), `t562_build.py` -> `out/RECONCILED_STATEMENT_T562.{json,md}` (`--check` rebuilds byte-identical),
-`tests/t562_statement_adapters/` (19 tests). The T-548 builder, the T-554 and T-557 adapters / builders are imported
+`tests/t562_statement_adapters/` (20 tests). The T-548 builder, the T-554 and T-557 adapters / builders are imported
 read only; every section is closed by the T-548 builder (R-T548-1). No engine module, method, rule / knowledge version,
 registry or candidate file changed; no quantity moves (`released_quantities_changed` 0). Inputs: the merged report
 JSONs T-551 (b6e52d40), T-553 (b6e52d40), T-556 / T-559 (431ac67f), the T-292 opening ledger (host walls), the T-543
@@ -42,7 +42,7 @@ opening-by-opening rows (exact). Each row takes the engine status of its own hos
 V3.0.58 state: 33 of the 53 terms sit on HELD walls (GF-W04 / W06 / W16 / W17 / W18 / W24 / W27 / W32, 1F-W07 / W11 / W16, every
 2F wall on D-39) or are held openings, so **F-T562-1 moves ER -2.8555, RD -2.46, TOL +0.0105 into HELD** (source class
 kept on each row). The 1F per-run parapet heights 7.6306805 stay HELD (F-T557-6; T-559 keeps them ENGINE_RIGHT in its
-own table: guard `verify_per_run_held`). The three below-finish ENGINE_RIGHT rows (68.4188) now carry T-559's answer to
+own table: guard `verify_per_run_held`). Independent route (test): every one of the 25 moves names a host wall that T-543's own HELD rows list; the one held term in a valued wall is the held opening W17 (1F-W25), source class HELD. The three below-finish ENGINE_RIGHT rows (68.4188) now carry T-559's answer to
 the F-C-T550-1 open point: 32 ST bands under the parapets, each carried once by a live B10 line, 0 omitted. UNRESOLVED
 25.922437 -> **58.506437** (projections 41.25, wall-length census +15.0002, parapet lengths +7.44505 / -11.48877,
 counts +6.30), gross 86.925589.
