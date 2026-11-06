@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T14:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-567 CLAIMED W2; T-560/564/565/568 TODO; T-563/T-498/T-423 r2/T-525 BLOCKED wrapper) | self-check pending
 - 2026-11-06T14:41Z | Worker 2 | STARTED | run session_01E6cPncudNM6EH1zr3ptjFE | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T14:00Z | Verifier | SUCCESS | T-566, T-562, T-561 | 3x GATE A PASS MERGED (engine push 33a5833f), research / statement, no quantity change (V3.0.58 NOT RELEASED, released V2.9 + route G unchanged): T-566 own ST7757 min-total label binding 34/36 REGISTERED + 2 CONFLICT (10AE GBP 'C' vs C3, 10E0 GBP 'C7' vs C8) AGREE -> T-551 GF C3 +0.469 m3 CONFLICT-BOUNDED 0..+0.469 (lines HELD); 2F B2 4 labels -> COUNT -0.200 ENGINE_RIGHT; beam 4/5 marks not re-measured (PARTIAL); T-562 16 sections re-closed from source JSONs, B9 HELD 561.2233 / UNRES 58.5064 rebuilt exactly; T-561 his paint workbook 26/26 rows (1249.375, soffits 39.99, net 1191.1275) + 2F-03 / 1F-04 faces AGREE, ENGINE_OMISSION paint return <= 23.07 m2 -> Lead fix row; scoreboard not re-run (no candidate line moved since 12:02); no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T13:52Z | Verifier | STARTED | run session_01E6cPneEzyh5WAFx4Gjiyhr | repo-attached routine | task state: T-561 READY (W2 d9c8613b), T-562 READY (W3 bd0c5729), T-566 READY (W1 336ca2b7) | self-check pending
