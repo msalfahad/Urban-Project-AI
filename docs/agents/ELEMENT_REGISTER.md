@@ -46,6 +46,14 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- PLASTERED RETURN FACE (Lead 2026-11-06 16:17; T-561 MERGED 33a5833f, Checker ENGINE_OMISSION 26 returns 23.070 m2):
+  a wall return (pier side, nib, reveal-free return) is one face carrying two layers: B5 plaster OWNS the plaster
+  area, B6 paint OWNS the paint area on the same face id (dry, untiled faces only; tiled faces carry neither paint nor
+  skirting, owner 2026-11-02). Today plaster has the line, paint has none: fix row in T-569 (HELD <= 23.07 m2, never 0).
+  External SW pier returns (T-567 R-T567-6): FIN.EXT.FINISH OWNS them (HELD blank until T-314); no internal line takes them.
+- PRECAST LINTEL (Lead 2026-11-06 16:17): OWNER TRADE B9 lintel family (lane S) for count by standard length (owner
+  lintel rule 2026-11-02: one per opening); the opening id and masonry width come from the opening ledger (lane A owns
+  the opening); blockwork deducts the lintel face once (no second deduction under the opening head). T-571.
 - ENCLOSED SPACE FLOOR (Lead 2026-11-06 12:18; T-553 MERGED b6e52d40, Checker F-T553-1 / F-T553-2): every enclosed
   space that carries a ceiling or skirting line has exactly one finished-floor line, OWNER TRADE B3 floor finish
   (class from the finish schedule; HELD by name where none is printed, never 0); a space with a wet bed or floor WP
