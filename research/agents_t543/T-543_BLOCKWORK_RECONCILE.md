@@ -82,6 +82,15 @@ above finish); his 66 m x 1.00 = the GF terrace + annex chains (58.555 m at 0.50
 exceeds the printed height above the finished roof by 0.50 m on three chains and 0.63 m on the 1F roof: he measures
 parapets from the slab, i.e. through the roof build-up b_edge the engine holds (D-39). His 0.50 is never adopted.
 
+Openings (rows l + 7, -26.28 m2 in all): his openings total 112.55 + 9.84 = 122.39 m2 vs the engine's established
+deductions 96.106 m2 (GF 42.660, 1F 41.851, 2F 11.595; held openings are not deducted, they hold their wall). He
+takes every door at 2.40 m (25.40 m of door width at 2.40 in his sheet); the engine uses the owner fallback 2.20 m
+(Q-55 C, fact OPENING.DOOR.FALLBACK_HEIGHT) where no head height is printed: at most 25.40 x 0.20 = 5.08 m2 of the
+-26.28 is that rule difference (beside, not a row: his doors are not matched to engine walls here). Projections
+(row 6): candidates from merged work are the facade frames (T-172: NW pool-court arch frame based at +5.50, SE
+stair-tower frame), both HELD on their profile; no 7.50 x 5.50 masonry element was read this run (drawings not
+re-opened).
+
 ## 4. Verdict proposals (for the Checker)
 
 - 1-3 storey walls: HELD scope dominates (GF 307.72 of which 305.58 HELD; 1F 82.50 of which 88.96 HELD; 2F 123.94 of
