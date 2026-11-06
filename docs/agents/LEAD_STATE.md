@@ -32,8 +32,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 2. 12-13 Nov: closed 16 trades (adds rebar NOT_COMPARABLE, doors / windows, ceilings, structural bounds); open lintels,
    skirting, thresholds / sills, handrails / nosing, dome / lift-pit bars, 1F column +21.7 %; T-579 statement V5 before
    milestone text; Q-34 raised then.
-3. Next Lead run: if 1 or fewer TODO remain in a lane, add rows (formwork T-474 part 2 split, links / stirrup population
-   per schedule, external works / hardscape vs freelancer, sanitary / MEP scope census, beam 4 / 5 marks evidence pack).
+3. If 1 or fewer TODO remain in a lane, add rows (T-474 part 2 split, link population, external works, MEP scope census).
    On T-579 merge: adopt 'ceilings by face class'; on T-576 merge: adopt 'printed minimum is a one-sided bound'.
 4. 10 Nov: LOW (Gate B queue behind the wrapper; none can start before it).
 5. When a package merges, promote its queued successor in the same Lead run (T-509 after T-498; T-563 after T-498; T-424 after T-423).
@@ -44,7 +43,6 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Each worker keeps at least two non-candidate TODO behind its stream package while Gate B is blocked.
 - Status word FIRST in the status cell, and its 'worker N first / second' text must match the lane order;
   7-cell rows; `board check` pulls first: commit before.
-- 'merged' only when the commit reached the working branch through a merge (F-C-T443-1).
 - A Checker finding that blocks a merge gets its fix row in the next Lead run, first in its lane.
 - Register rulings: ELEMENT_REGISTER (20:14: DOME / RING / LIFT-PIT WALL REINFORCEMENT, COLUMN-BEAM JOINT; 22 earlier).
 - Lessons 06 Nov ADOPTED: class from geometry; net % never agreement; bound HELD before %; layer height own rule; enclosed
