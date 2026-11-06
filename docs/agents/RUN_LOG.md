@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T12:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-561 CLAIMED W2; T-560/562/564/565/566/567/568 TODO) | self-check pending
 - 2026-11-06T12:40Z | Worker 2 | STARTED | run session_01E6cPneLyeY7vX4No8jbiPP | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 12:21 UTC | Lead | SUCCESS | board | Since 08:15: 6 merged all WORKED (T-556, T-557, T-559, T-558, T-551, T-553), 0 rejected; no candidate change (V3.0.58; released V2.9 + route G unchanged); columns -8.770 / footing -9.936 m3 and floor tile -5.49 % reconciled by component; 2 ENGINE_WRONG (dressing floor 2.970 m2 missing, kitchen dry class) -> T-564 fix rows + floor census; new T-562..T-568 (T-563 plaster wiring Gate B BLOCKED on wrapper); register ENCLOSED SPACE FLOOR; lessons 1 ADOPTED, 2 PROPOSED; no new owner decision; wrapper unchanged (not re-notified); Drive read OK, no photos; queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 12:16 UTC | Lead | STARTED | run session_01E6cPnaz9RXJ1E6PYwanLJH | repo-attached routine | task state: board | report pending
