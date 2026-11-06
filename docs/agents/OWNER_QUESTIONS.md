@@ -156,7 +156,14 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-(none: Q-79 withdrawn by the Lead 2026-11-03 12:18 UTC, see below)
+- **Q-80** (Lead 2026-11-06T00:16Z per `date -u`, from T-533 MERGED 93aba0d6; ERS s.2.7 'material genuinely unspecified' after levels 1-4; s.6 format) Face size of the 15 cm black block Urban buys.
+  Issue: the installed module (units per m2) of the 15 cm black block; your rule 2026-11-02 says '15 cm face from schedule / supplier'.
+  Evidence: drawings and KSE 2023 silent; Q-75 gives the 20 cm block only; the 1990 specification section 04220 is over the Drive connector limit (unread); the rulebook UPC-BLACK-BLOCK-001 covers 0.20 only.
+  Investigation: units and mortar computed for three candidate modules, method identical, only the module open.
+  Alternatives: (A) same face as the 20 cm block, 40 x 20 installed (12.5 per m2); (B) 40 x 20 actual face, 41 x 21 installed (11.6 per m2); (C) 40 x 25 installed (10 per m2); or upload section 04220 as a PDF under 6 MB.
+  Impact (15 walls, 175.9 m2 laid): units 2,198 / 2,043 / 1,759; panel mortar 1.946 / 1.869 / 1.688 m3; cement 16.3 / 15.7 / 14.2 bags.
+  Recommendation: answer from the supplier's sales record (same kind of evidence as Q-60); A only if that record shows the same 39 x 19 face for the 15 cm block.
+  Status: 0.15 m units, panel and perimeter mortar, cement, sand and 12 ties HELD by name (never 0, never the 0.20 module). Next: everything else continues; the answer becomes one rule version and the builder re-runs.
 
 ## Withdrawn by the Lead (not ERS s.2.7; turned into team investigations; the owner may still answer, an answer becomes a level-3 company rule and supersedes the estimate)
 

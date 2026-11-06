@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-05 12:20 UTC
+
+Drive read OK (no file created in the project folders since 08:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). All results below are Checker-verified pieces, UNWIRED.
+- Lintels (structural): project RC schedule governs 16/16: 6 PRODUCED, 10 HELD on short bearings; lintel concrete at the 10 short ends 0.514 -> 0.372692 .. 0.437542 m3 (0.037838 m3 already inside column lines, 0.01686 lintel-on-lintel once, 0.02176 not buildable as drawn: designer item, HELD). Checker found the curved-bay pier end W18 0.578 vs 0.478 m (no state moved) -> bearing V3.
+- Black-block mortar (structural): joints at column faces and soffits +0.098145 m3 on 1.269444 m3 (+7.73 %, COMPUTED, Checker own DXF AGREE on 2 junctions); 0.15 m walls 0.0786 .. 0.0899 m3 HELD (module); 4 run ends at columns missing from the junction censuses -> new census row.
+- Pool court (architectural): bath window sill '84' printed -> window upturn 0.500 lm MEASURED (roof upturn 186.783 -> 187.283 lm, +0.27 % if wired); ledge upturn 0 .. 3.528 -> 0 .. 0.552 lm + 2.977 lm glazing transition; ledge membrane 0 .. 0.640 m2 HELD (exposure rule needs a version from the drawn cover outline, not an angle).
+- Materials: tile-bed mortar installed without the 5 % (20 m2 dry floor 0.600 .. 0.800 m3), loss its own account; project cement procurement AT_LEAST 130.82 .. 172.29 bags (was 120.66 .. 162.13); stair bed cement still HELD although your Q-53 answer (C) covers it -> FINISH V7 row. Freelancer: no cement / lintel rows (RULE_DIFFERENCE / UNRESOLVED, not compared).
+- Learned (lessons rows PROPOSED): a printed value can sit in a DIMENSION block, not only in text (search both); an end volume inside another element is owned by that element's line once, never by default the minimum bearing.
+- Gate 0 found: tests/t485 red on the working branch (merged pool-court WP package still 'pending' in the newest registry) -> fix row first in lane I. Gate 2 (integration). 10 Nov end-to-end BOQ: HIGH RISK (about 10 Gate B packages in 4.5 days, all behind the wrapper item; 9 verified pieces wait).
+- Team health: 6 merged, 0 rejected since 08:15; every run closed with a final line; 0 empty runs; 7 new rows (S 3, A 2, I 2). Self-check codemap / t061 / freeze PASS. Queue check: see final RUN_LOG line.
+
+OWNER PACKAGE: none (no engineering item meets standard s.2.7).
+
+NEEDS FIXING (owner only, unchanged since 04:15, not re-notified): the run wrapper (scripts/agent_env.sh on main, line 211) still lets `run` start only the scoreboard and key-map tools; every integration package needs its research/agents_t*/ scripts, and the registry fix row may need one too. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-05 08:15 UTC
 
 Drive read OK (no file created in the project folders since 04:00 UTC, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 c9570e6c / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %).

@@ -1,9 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-05 20:17 UTC (Lead). Previous version: 2026-11-05 16:30 UTC. The released numbers did not change
+Last update: 2026-11-06 00:16 UTC (Lead). Previous version: 2026-11-05 20:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 5 Nov 20:17 (newest first; seven checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Wall ties at columns: 18 ties measured on the 0.20 m walls; 12 more on 0.15 m walls held (block size unknown). The
+  extra bed-joint mesh is 0 m: the 41 m found earlier is the plaster-stage joint mesh, already its own item.
+- Lintel glue: on the ground floor the glue above lintels is now 23.45 .. 23.90 kg (from measured wall ends); on the
+  first floor it stays held because 4 lintels have no measured end yet (being measured).
+- Roof waterproofing vs freelancer: his roof row is one typed figure (285 m2 / 194 m, no breakdown). Our 209.7 m2
+  differs by the held top roof (34.4 m2, your hold), the dome footprints (46.0 m2, a rule difference) and the pool court
+  (5.5 m2 he leaves out); 0.5 m2 left unexplained. Upturns: 11.9 m (6 %) left unexplained. No error found in the engine.
+- Stair marble bed: merged: 35.43 m2 on treads reconciled to your 39.49 m2 exactly; risers and landings next.
+- 0.15 m black blocks: no drawing or reference gives their face size, so their blocks and mortar stay held: one
+  question for you (below / in the report).
+- Sand: no source gives truck size or weight per m3; sand stays in loose m3, tonnes and loads held.
+- Next: part-by-part reconciliation with the freelancer for blockwork, beams, wet-room waterproofing and wall tiles, and
+  one statement that collects them per trade, for the 12-13 Nov milestone.
+- Still blocked: every candidate package waits for the command wrapper. 10 Nov (end-to-end BOQ with every trade): LOW.
 
 Since 5 Nov 16:30 (newest first; four checked and merged, one sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

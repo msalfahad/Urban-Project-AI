@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-06 00:16 (since 20:17)
+
+- T-540 sand load / density (Gate A): WORKED (no source -> both HELD by name, R-T540-1..4). Decision: no row; supplier fact only, sand stays loose m3.
+- T-538 gate fix + manifest V3 (Gate A): WORKED (t536 on a synthetic repo; 4 sliver heads AGREE). Decision: manifest V4 on the 6 later merges -> T-549.
+- T-534 stair bed area (Gate A): WORKED (39.485 -> 35.4313 m2, residual 0). Decision: T-542 dependency met, worker 2 FIRST.
+- T-533 0.15 m block module (Gate A): WORKED (HELD after a full source census). Decision: s.6 item filed as Q-80 (owner package).
+- T-541 roof WP vs freelancer (Gate A): WORKED (no ENGINE_WRONG; residuals +0.523 m2 / +11.893 lm on his typed lump). Decision: no rework (a lump row cannot be split further); same method -> T-543 / T-545 / T-546 / T-547, statement -> T-548.
+- T-537 r2 ranged lintel faces (Gate A): WORKED (GF [23.4459, 23.895] kg AGREE). Decision: 1F host HELD on 4 open lintel ends -> T-544.
+- T-539 accessory ledgers V2 (Gate A): WORKED (18 nr + 12 HELD; strip +0). Decision: lines into T-363 via manifest V4 (T-549).
+
 ## Lead 2026-11-05 20:17 (since 16:30)
 
 - T-531 lintel bars on measured ends (Gate A): WORKED (PRODUCED 6 = 38.761728 kg, FLAGGED 10 = 24.301496 kg AT_LEAST; bar ends HELD: ST p.13 prints no cover / bend / hook). Decision: into manifest V3 (T-538); bar ends stay a designer item, no owner question.

@@ -46,6 +46,15 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- WET-ROOM FLOOR MEMBRANE vs TILE BED vs STAIR / LANDING BED (Lead 2026-11-06 00:16; rows T-546, T-542, T-547): the
+  wet-room floor membrane and its upturn are B8 (OWNER TRADE B8, membrane m2 per room, upturn lm; an upturn m2 only with
+  a printed or owner-ruled height, never the freelancer's 1.00 m); the floor tile bed over it is B3-05 (floor bed family);
+  a stair landing bed is B7 only when the landing is not already a room floor in the floor-bed family (one owner per piece,
+  joined by element id); wet-wall tile faces are B4-02 to their tile height (full height in wet rooms, owner 2026-11-02).
+- MASONRY TIES AT COLUMN RUN ENDS (Lead 2026-11-06 00:16; T-539 MERGED 9b754fad): sharmat ties are B9 accessories
+  (OWNER TRADE B9, MAS.TIE.SHARMAT, pcs, optional per Q-77), never inside the block m2; ties on 0.15 m walls HELD with the
+  0.15 m module (Q-80); the +40.90 m at the plaster stage is the plaster joint mesh (B9-03 / plaster trade line), not
+  bed-joint strip (no double count). Rows: T-363 (wiring), T-549 (manifest V4).
 - STAIR GUARDRAIL vs BALUSTRADE ON A SLAB EDGE (Lead 2026-11-04 16:17; T-480 Gate B, V3.0.54): a rail along a stair
   flight or landing is B7-09 (FIN.RAILING), OWNER TRADE B7, measured flight by flight along the pitch line and bound by
   floor + flight + tread range; a balustrade or parapet rail on a slab, void or terrace edge outside the stair is its own
