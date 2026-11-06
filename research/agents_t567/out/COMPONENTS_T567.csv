@@ -1,0 +1,199 @@
+pass,row,group,kind,cause,m2,name,source
+lo,51,SW,TERM,ENGINE_RIGHT,0.2250000,"his height from +-0.00, the drawn face from the floor +0.15 (1.50 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,52,SW,TERM,RULE_DIFFERENCE,-5.7545000,plinth below his +1.00 plane (owner Q-07 B bands from the F.F.L.; 6.77 x 0.85),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,52,SW,TERM,ENGINE_RIGHT,1.3000000,his width 6.90 vs the drawn 6.77 m over his 10.00 m height,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,53,SW,TERM,ENGINE_RIGHT,1.2150000,"his height from +-0.00, the drawn face from +0.15 (8.10 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,53,SW,TERM,ENGINE_RIGHT,-2.8800000,his width 7.90 vs the drawn 8.10 m over his 14.40 m,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,54,SW,TERM,ENGINE_RIGHT,-7.8816000,annex run allocation: his 4.00 m vs the drawn 5.642 m (SW-1 3.10 + SW-2 arc 2.042 + NW-1 0.50) at the annex height 4.80 (group 54 + 55 + 60: 18.50 vs 18.742 m),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,54,SW,TERM,ENGINE_RIGHT,1.8000000,his height 5.25 vs the printed annex top +4.80 on his 4.00 m (no 5.25 level printed),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,54,SW,TERM,ENGINE_RIGHT,0.8463000,"his height from +-0.00, the drawn faces from +0.15 (5.642 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,54,SW,TERM,ROUNDING,-0.0002000,SW-2 arc face areas at 4 decimals (T-305) vs 2.042 x 4.65,T-305 FACE_LINE_LEDGER 4-dp areas
+lo,55,SW,TERM,ENGINE_RIGHT,31.6800000,annex run allocation: his 13.00 m vs the drawn SW-3 6.40 m at 4.80,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,55,SW,TERM,ENGINE_RIGHT,0.9600000,"his height from +-0.00, the drawn faces from +0.15 (6.40 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,55,SW,TERM,ENGINE_RIGHT,-0.1400000,"SW-3 covered 0.20 m strip runs to the house roof +5.50, not +4.80 (0.20 x 0.70)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,58,SE,TERM,ENGINE_RIGHT,21.8250000,his one plane 6.75 m wide from +-0.00: below +9.70 only the 4.50 m tower strip stands in that plane; the 2.25 m over the porch is open / the 1F roof (2.25 x 9.70); the recessed entrance faces behind it are our GF SE-2 / SE-3 (OURS_ONLY),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,58,SE,TERM,ENGINE_RIGHT,0.6750000,"his height from +-0.00, the tower strip from +0.15 (4.50 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,58,SE,TERM,ENGINE_RIGHT,-0.2350000,his width 6.75 vs the 2F face 6.80 m above +9.70 (4.70 m),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,59,SE,TERM,ENGINE_RIGHT,-26.6625000,"his length 5.25 vs the drawn 1F street face 7.50 m, at his 11.85 m",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,59,SE,TERM,ENGINE_RIGHT,45.4880000,"his height 11.85 (not printed) vs the drawn bands on 7.50 m: 3.40 m from the annex roof +4.30, 4.10 m from +5.50 over the porch court, wave top mean +10.741 (his height may take in the recessed porch faces SE-2 / SE-3 and the 4.10 m slab edge, which we hold apart)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,60,SE,TERM,ENGINE_RIGHT,-24.9600000,annex run allocation: his 1.50 m vs the drawn SE-1 6.70 m at 4.80 (+-0.00 -> +4.80 both),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,61,SE,HIS_ONLY,HELD,24.9300000,"frame bands 2 x 0.45 x 27.70: FIN.EXT.FRAME, profile not detailed (no face measured)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,63,NE,TERM,ENGINE_RIGHT,-3.8400000,his length 10.00 vs the drawn annex NE face 10.80 m at 4.80,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,64,NE,TERM,RULE_DIFFERENCE,-19.3700000,plinth below his +1.00 plane (Q-07 B; GF NE-4 19.37 x 1.00),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,64,NE,TERM,ENGINE_RIGHT,-9.6350000,his one plane hides the 0.50 m band where the GF parapet stands 1.50 m in front of the 1F face (both faces are built: 19.27 x 0.50),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,64,NE,TERM,ENGINE_RIGHT,-1.2000000,his width 19.20 vs GF 19.37 (+1.00 -> +6.00) and 1F 19.27 (+6.00 -> +11.00),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,65,NE,TERM,ENGINE_RIGHT,0.2250000,T-346 band: his +-0.00 vs the passage floor +0.15,T-346 BANDS_T346.csv
+lo,65,NE,TERM,ENGINE_RIGHT,1.0700000,"T-346 band: 0.20 m of his 1.50 is the boundary wall closing the passage (Q-65 C, other trade)",T-346 BANDS_T346.csv
+lo,65,NE,TERM,ENGINE_RIGHT,0.7500000,"T-346 band: the GF roof runs on over the passage, no face above +5.50",T-346 BANDS_T346.csv
+lo,65,NE,HIS_ONLY,ENGINE_RIGHT,9.0000000,NW end return of the 1.50 m NE band = the same GF NW-7 1.50 m portion as his row 68: double count in his sheet (1.50 x 6.00),T-346 ROWS_T346.csv
+lo,69,NW,TERM,RULE_DIFFERENCE,-6.4000000,plinth below his +1.00 plane (Q-07 B; GF NW-7 6.40 x 1.00),T-346 ROWS_T346.csv (drawn outside his band 6.400)
+lo,69,NW,TERM,ENGINE_RIGHT,1.6787020,T-346 bands: his width 6.75 vs GF NW-7 6.40 / 1F NW-5 6.725,T-346 BANDS_T346.csv
+lo,69,NW,TERM,ENGINE_RIGHT,-3.1875000,T-346 band: his one plane hides the 0.50 m where the GF parapet stands 1.50 m in front of the 1F face,T-346 BANDS_T346.csv
+lo,69,NW,TERM,ENGINE_RIGHT,4.4003980,T-346 band: his rectangle to the wave's printed peak +10.80 vs the drawn wave (mean top +10.148),T-346 BANDS_T346.csv
+lo,70,NW,TERM,ENGINE_RIGHT,8.1338200,"the screen's open arch (inner arch 8.133820 m2, T-348 r2): no face, not in his opening list",T-348 summary screen_hole_m2
+lo,70,NW,TERM,ENGINE_RIGHT,0.8111100,T-348: his width 4.95 vs the drawn 4.8077 x 5.70,T-348 RECON_T348.csv
+lo,70,NW,TERM,ROUNDING,0.0010840,T-348: CAD parapet tops +10.999 and the DXF chord,T-348 RECON_T348.csv
+lo,71,NW,TERM,ENGINE_RIGHT,8.1338200,the screen's open arch seen from the recess (8.133820 m2): no face,T-348 summary screen_hole_m2
+lo,71,NW,TERM,ENGINE_RIGHT,6.4350000,"T-348: his band above +9.70, where the recess is roofed (no face)",T-348 RECON_T348.csv
+lo,71,NW,TERM,ENGINE_RIGHT,-6.8783300,T-348: two faces stacked in depth (screen back on the chord + the curved wall on the arc) vs his one 4.95 m width,T-348 RECON_T348.csv
+lo,74,NW,TERM,ROUNDING,-0.0000010,T-348 face values at 6 decimals (1.252688 + 0.427737 vs the 1.680424 of the statement),T-348 RECON_T348.csv
+lo,74,NW,HIS_ONLY,ENGINE_RIGHT,52.7695760,the rest of two 4.95 x 5.50 side faces of the pool block: no exterior face exists (NE side runs on as NE-2 in his row 64; SW side is the 1F-11 / bath partition behind the W18 strip),T-348 RECON_T348.csv
+lo,72,NW,HIS_ONLY,RULE_DIFFERENCE,181.8060000,domes inside and outside 6 x 3.14 x 9.65: owner item 3 (no domes),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,73,NW,HIS_ONLY,RULE_DIFFERENCE,12.8340000,"pool-court soffit = the candidate's FIN.CEILING line L-23072352a28aeca7b051 (RELEASED 12.834, owner item 4): another line family, not a wall face",LINE_INDEX_V3_0_57 / T-127
+lo,73,NW,HIS_ONLY,ENGINE_RIGHT,6.3200000,his soffit 2 x 3.14 x 3.05 vs the measured 12.834,owner item 4 / T-127
+lo,75,NW,HIS_ONLY,HELD,3.9375000,"frame band 0.45 x 8.75: FIN.EXT.FRAME, profile not detailed",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,77,ROOF,TERM,UNRESOLVED,13.3950000,his run 17.75 vs the 2F NE 8.10 + NW 6.80 = 14.90 m at 4.70 (the 2F SE / SW faces are in his rows 58 / 53): 2.85 m of run no plan draws,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,78,ROOF,TERM,UNRESOLVED,21.0909800,his girth 1.70 printed nowhere (drawn 1.30 face + 0.20 top at most),T-324 FREELANCER_T324.csv
+lo,79,ROOF,TERM,ENGINE_RIGHT,-0.9310600,"his run 28.40 = the inner run without the B34 extension, top on his run",T-324 FREELANCER_T324.csv
+lo,83+84,PARAPETS,TERM,UNRESOLVED,5.5396550,7.5 m of run in his cells that no plan draws (his 0.70 = 0.50 face + 0.20 top agrees),T-324 FREELANCER_T324.csv
+lo,87-90,BOUNDARY,HIS_ONLY,HELD,107.2400000,"boundary wall faces: the candidate's EXT.FENCE.PLASTER family (8 lines, all HELD blank on V3.0.58); not a house face (Q-65 C)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,92,DRIP,HIS_ONLY,HELD,50.8760000,"drip edge 0.28 x 181.70: nothing drawn, owner not answered (UNKNOWN, no number of ours)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.5500000,GF/SW-5/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-13.5000000,GF/SW-5/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-3.1450000,GF/SE-2/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-16.6500000,GF/SE-2/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1900000,GF/NE-1/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-6.3000000,GF/NE-1/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3400000,GF/SE-3/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-1.8000000,GF/SE-3/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1900000,GF/SW-6/FLUSH/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-6.3000000,GF/SW-6/FLUSH/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2125000,GF/NW-2/FLUSH/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1250000,GF/NW-2/FLUSH/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.4250000,GF/NE-2/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2500000,GF/NE-2/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.0425000,GF/SE-5/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2250000,GF/SE-5/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.0680000,GF/NE-3/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3600000,GF/NE-3/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.1354500,GF/NW-3/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.8707000,GF/NW-3/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-4.6603900,GF/NW-4/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-29.9596000,GF/NW-4/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.1004500,GF/NW-5/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.6457000,GF/NW-5/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.0560000,GF/SW-8/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3600000,GF/SW-8/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3825000,GF/NW-6/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.0250000,GF/NW-6/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.4250000,GF/SW-9/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2500000,GF/SW-9/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.7050000,GF/P-1/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-24.4400000,GF/P-1/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.8900000,GF/P-2/COVERED/plinth,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-15.3000000,GF/P-2/COVERED/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.5350000,1F/NW-2/SLAB_EDGE_BELOW/slab_edge,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3360000,1F/NE-1/STOREY/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.0879680,1F/NE-1/PARAPET/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-1.9627000,1F/NW-4/STOREY/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.5135000,1F/NW-4/PARAPET/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3360000,1F/SW-1/STOREY/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.0879680,1F/SW-1/PARAPET/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-18.4800000,1F/SW-2/STOREY/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-1.6940000,1F/SW-2/PARAPET/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,0.0000000,GF/NE-6x/EDGE/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,0.0000000,1F/NW-2/SCREEN-MOULDING-STEPS/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.7150290,1F/NW-1/CORNER-ARC/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2213190,1F/NW-1/CORNER-ARC/parapet,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.8927200,GF/AT225/RING-INNER/slab_edge,drawn face in no row of his
+lo,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2533924,1F/NW-5/SW-PIER-RETURNS/storey,drawn face in no row of his
+lo,-,-,OURS_ONLY,HELD,-0.0536522,1F/NW-5/SW-PIER-RETURNS/parapet,drawn face in no row of his
+hi,51,SW,TERM,ENGINE_RIGHT,0.2250000,"his height from +-0.00, the drawn face from the floor +0.15 (1.50 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,52,SW,TERM,RULE_DIFFERENCE,-5.7545000,plinth below his +1.00 plane (owner Q-07 B bands from the F.F.L.; 6.77 x 0.85),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,52,SW,TERM,ENGINE_RIGHT,1.3000000,his width 6.90 vs the drawn 6.77 m over his 10.00 m height,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,53,SW,TERM,ENGINE_RIGHT,1.2150000,"his height from +-0.00, the drawn face from +0.15 (8.10 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,53,SW,TERM,ENGINE_RIGHT,-2.8800000,his width 7.90 vs the drawn 8.10 m over his 14.40 m,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,54,SW,TERM,ENGINE_RIGHT,-7.8816000,annex run allocation: his 4.00 m vs the drawn 5.642 m (SW-1 3.10 + SW-2 arc 2.042 + NW-1 0.50) at the annex height 4.80 (group 54 + 55 + 60: 18.50 vs 18.742 m),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,54,SW,TERM,ENGINE_RIGHT,1.8000000,his height 5.25 vs the printed annex top +4.80 on his 4.00 m (no 5.25 level printed),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,54,SW,TERM,ENGINE_RIGHT,0.8463000,"his height from +-0.00, the drawn faces from +0.15 (5.642 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,54,SW,TERM,ROUNDING,-0.0002000,SW-2 arc face areas at 4 decimals (T-305) vs 2.042 x 4.65,T-305 FACE_LINE_LEDGER 4-dp areas
+hi,55,SW,TERM,ENGINE_RIGHT,31.6800000,annex run allocation: his 13.00 m vs the drawn SW-3 6.40 m at 4.80,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,55,SW,TERM,ENGINE_RIGHT,0.9600000,"his height from +-0.00, the drawn faces from +0.15 (6.40 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,55,SW,TERM,ENGINE_RIGHT,-0.1400000,"SW-3 covered 0.20 m strip runs to the house roof +5.50, not +4.80 (0.20 x 0.70)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,58,SE,TERM,ENGINE_RIGHT,21.8250000,his one plane 6.75 m wide from +-0.00: below +9.70 only the 4.50 m tower strip stands in that plane; the 2.25 m over the porch is open / the 1F roof (2.25 x 9.70); the recessed entrance faces behind it are our GF SE-2 / SE-3 (OURS_ONLY),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,58,SE,TERM,ENGINE_RIGHT,0.6750000,"his height from +-0.00, the tower strip from +0.15 (4.50 x 0.15)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,58,SE,TERM,ENGINE_RIGHT,-0.2350000,his width 6.75 vs the 2F face 6.80 m above +9.70 (4.70 m),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,59,SE,TERM,ENGINE_RIGHT,-26.6625000,"his length 5.25 vs the drawn 1F street face 7.50 m, at his 11.85 m",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,59,SE,TERM,ENGINE_RIGHT,45.4880000,"his height 11.85 (not printed) vs the drawn bands on 7.50 m: 3.40 m from the annex roof +4.30, 4.10 m from +5.50 over the porch court, wave top mean +10.741 (his height may take in the recessed porch faces SE-2 / SE-3 and the 4.10 m slab edge, which we hold apart)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,60,SE,TERM,ENGINE_RIGHT,-24.9600000,annex run allocation: his 1.50 m vs the drawn SE-1 6.70 m at 4.80 (+-0.00 -> +4.80 both),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,61,SE,HIS_ONLY,HELD,24.9300000,"frame bands 2 x 0.45 x 27.70: FIN.EXT.FRAME, profile not detailed (no face measured)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,63,NE,TERM,ENGINE_RIGHT,-3.8400000,his length 10.00 vs the drawn annex NE face 10.80 m at 4.80,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,64,NE,TERM,RULE_DIFFERENCE,-19.3700000,plinth below his +1.00 plane (Q-07 B; GF NE-4 19.37 x 1.00),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,64,NE,TERM,ENGINE_RIGHT,-9.6350000,his one plane hides the 0.50 m band where the GF parapet stands 1.50 m in front of the 1F face (both faces are built: 19.27 x 0.50),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,64,NE,TERM,ENGINE_RIGHT,-1.2000000,his width 19.20 vs GF 19.37 (+1.00 -> +6.00) and 1F 19.27 (+6.00 -> +11.00),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,65,NE,TERM,ENGINE_RIGHT,0.2250000,T-346 band: his +-0.00 vs the passage floor +0.15,T-346 BANDS_T346.csv
+hi,65,NE,TERM,ENGINE_RIGHT,1.0700000,"T-346 band: 0.20 m of his 1.50 is the boundary wall closing the passage (Q-65 C, other trade)",T-346 BANDS_T346.csv
+hi,65,NE,TERM,ENGINE_RIGHT,0.7500000,"T-346 band: the GF roof runs on over the passage, no face above +5.50",T-346 BANDS_T346.csv
+hi,65,NE,HIS_ONLY,ENGINE_RIGHT,9.0000000,NW end return of the 1.50 m NE band = the same GF NW-7 1.50 m portion as his row 68: double count in his sheet (1.50 x 6.00),T-346 ROWS_T346.csv
+hi,69,NW,TERM,RULE_DIFFERENCE,-6.4000000,plinth below his +1.00 plane (Q-07 B; GF NW-7 6.40 x 1.00),T-346 ROWS_T346.csv (drawn outside his band 6.400)
+hi,69,NW,TERM,ENGINE_RIGHT,1.6787020,T-346 bands: his width 6.75 vs GF NW-7 6.40 / 1F NW-5 6.725,T-346 BANDS_T346.csv
+hi,69,NW,TERM,ENGINE_RIGHT,-3.1875000,T-346 band: his one plane hides the 0.50 m where the GF parapet stands 1.50 m in front of the 1F face,T-346 BANDS_T346.csv
+hi,69,NW,TERM,ENGINE_RIGHT,4.4003980,T-346 band: his rectangle to the wave's printed peak +10.80 vs the drawn wave (mean top +10.148),T-346 BANDS_T346.csv
+hi,70,NW,TERM,ENGINE_RIGHT,8.1338200,"the screen's open arch (inner arch 8.133820 m2, T-348 r2): no face, not in his opening list",T-348 summary screen_hole_m2
+hi,70,NW,TERM,ENGINE_RIGHT,0.8111100,T-348: his width 4.95 vs the drawn 4.8077 x 5.70,T-348 RECON_T348.csv
+hi,70,NW,TERM,ROUNDING,0.0010840,T-348: CAD parapet tops +10.999 and the DXF chord,T-348 RECON_T348.csv
+hi,71,NW,TERM,ENGINE_RIGHT,8.1338200,the screen's open arch seen from the recess (8.133820 m2): no face,T-348 summary screen_hole_m2
+hi,71,NW,TERM,ENGINE_RIGHT,6.4350000,"T-348: his band above +9.70, where the recess is roofed (no face)",T-348 RECON_T348.csv
+hi,71,NW,TERM,ENGINE_RIGHT,-6.8783300,T-348: two faces stacked in depth (screen back on the chord + the curved wall on the arc) vs his one 4.95 m width,T-348 RECON_T348.csv
+hi,74,NW,TERM,ROUNDING,-0.0000010,T-348 face values at 6 decimals (1.252688 + 0.427737 vs the 1.680424 of the statement),T-348 RECON_T348.csv
+hi,74,NW,HIS_ONLY,ENGINE_RIGHT,52.7695760,the rest of two 4.95 x 5.50 side faces of the pool block: no exterior face exists (NE side runs on as NE-2 in his row 64; SW side is the 1F-11 / bath partition behind the W18 strip),T-348 RECON_T348.csv
+hi,72,NW,HIS_ONLY,RULE_DIFFERENCE,181.8060000,domes inside and outside 6 x 3.14 x 9.65: owner item 3 (no domes),T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,73,NW,HIS_ONLY,RULE_DIFFERENCE,12.8340000,"pool-court soffit = the candidate's FIN.CEILING line L-23072352a28aeca7b051 (RELEASED 12.834, owner item 4): another line family, not a wall face",LINE_INDEX_V3_0_57 / T-127
+hi,73,NW,HIS_ONLY,ENGINE_RIGHT,6.3200000,his soffit 2 x 3.14 x 3.05 vs the measured 12.834,owner item 4 / T-127
+hi,75,NW,HIS_ONLY,HELD,3.9375000,"frame band 0.45 x 8.75: FIN.EXT.FRAME, profile not detailed",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,77,ROOF,TERM,UNRESOLVED,13.3950000,his run 17.75 vs the 2F NE 8.10 + NW 6.80 = 14.90 m at 4.70 (the 2F SE / SW faces are in his rows 58 / 53): 2.85 m of run no plan draws,T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,78,ROOF,TERM,UNRESOLVED,15.9439250,his girth 1.70 printed nowhere (drawn 1.30 face + 0.20 top at most),T-324 FREELANCER_T324.csv
+hi,79,ROOF,TERM,ENGINE_RIGHT,-1.0710600,"his run 28.40 = the inner run without the B34 extension, top on his run",T-324 FREELANCER_T324.csv
+hi,83+84,PARAPETS,TERM,UNRESOLVED,5.2560700,7.5 m of run in his cells that no plan draws (his 0.70 = 0.50 face + 0.20 top agrees),T-324 FREELANCER_T324.csv
+hi,87-90,BOUNDARY,HIS_ONLY,HELD,107.2400000,"boundary wall faces: the candidate's EXT.FENCE.PLASTER family (8 lines, all HELD blank on V3.0.58); not a house face (Q-65 C)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,92,DRIP,HIS_ONLY,HELD,50.8760000,"drip edge 0.28 x 181.70: nothing drawn, owner not answered (UNKNOWN, no number of ours)",T-162 r2 TERMS_T162.csv / T-337 FREELANCER_T337.csv
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.5500000,GF/SW-5/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-13.5000000,GF/SW-5/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-3.1450000,GF/SE-2/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-16.6500000,GF/SE-2/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1900000,GF/NE-1/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-6.3000000,GF/NE-1/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3400000,GF/SE-3/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-1.8000000,GF/SE-3/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1900000,GF/SW-6/FLUSH/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-6.3000000,GF/SW-6/FLUSH/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2125000,GF/NW-2/FLUSH/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-1.1250000,GF/NW-2/FLUSH/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.4250000,GF/NE-2/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2500000,GF/NE-2/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.0425000,GF/SE-5/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2250000,GF/SE-5/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.0680000,GF/NE-3/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3600000,GF/NE-3/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.1644750,GF/NW-3/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.8707000,GF/NW-3/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-5.6590450,GF/NW-4/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-29.9596000,GF/NW-4/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.1219750,GF/NW-5/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.6457000,GF/NW-5/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.0680000,GF/SW-8/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3600000,GF/SW-8/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3825000,GF/NW-6/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.0250000,GF/NW-6/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.4250000,GF/SW-9/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2500000,GF/SW-9/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.7050000,GF/P-1/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-24.4400000,GF/P-1/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.8900000,GF/P-2/COVERED/plinth,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-15.3000000,GF/P-2/COVERED/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-2.0062500,1F/NW-2/SLAB_EDGE_BELOW/slab_edge,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3360000,1F/NE-1/STOREY/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.1039680,1F/NE-1/PARAPET/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-1.9627000,1F/NW-4/STOREY/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.5135000,1F/NW-4/PARAPET/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.3360000,1F/SW-1/STOREY/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.1039680,1F/SW-1/PARAPET/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-18.4800000,1F/SW-2/STOREY/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-7.0400000,1F/SW-2/PARAPET/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.6000000,GF/NE-6x/EDGE/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-1.7762910,1F/NW-2/SCREEN-MOULDING-STEPS/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.7150290,1F/NW-1/CORNER-ARC/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-0.2213190,1F/NW-1/CORNER-ARC/parapet,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-3.3477000,GF/AT225/RING-INNER/slab_edge,drawn face in no row of his
+hi,-,-,OURS_ONLY,ENGINE_RIGHT,-2.2533924,1F/NW-5/SW-PIER-RETURNS/storey,drawn face in no row of his
+hi,-,-,OURS_ONLY,HELD,-0.6974786,1F/NW-5/SW-PIER-RETURNS/parapet,drawn face in no row of his
