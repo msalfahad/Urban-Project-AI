@@ -213,6 +213,21 @@ def test_dev_pairing_reads_t545(doc):
         assert D(p["column_JOINT_HEAD_m3"]) == D(jh) and D(p["net_m3"]) == D(jh) + D(ts)
 
 
+def test_dev_column_beam_crossings_bound(doc):
+    """Committed files only: his beam-through volume that can lie over VALUED columns, bounded per mark (no split
+    by apportionment); the piece set of every split mark reproduces T-395's own support allowance."""
+    import t551_alsenan as A
+    tot, per = A.column_beam_crossings()
+    for i in per:
+        if i["status"] != "SPLIT_BOUND":
+            continue
+        lo, hi = (D(v) for v in i["over_valued_columns_m3"])
+        assert D(i["through_support_m3"]) <= lo <= hi <= 0                 # signs engine - his: negative
+    for st, t in tot.items():
+        assert D(t["through_support_m3"]) == D(doc["column_beam_pairing"][st]["beam_THROUGH_SUPPORT_m3"])
+    assert json.loads(json.dumps(tot)) == doc.get("column_beam_crossings"), json.dumps(tot)
+
+
 def test_dev_no_freelancer_rows_tracked(doc):
     txt = OUT.read_text(encoding="utf-8")
     for k in ("\"label\"", "\"row\"", "\"b\"", "\"n\"", "formula"):

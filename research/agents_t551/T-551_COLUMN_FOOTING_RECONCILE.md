@@ -97,10 +97,26 @@ whole plot that no sheet draws); closes at both held ends.
 
 **Column / beam pairing per storey** (the T-545 hand-over): column JOINT_HEAD vs beam THROUGH_SUPPORT (his beam lengths
 through column and carrier footprints): GF +2.281 - 2.902 = **-0.620**, 1F +0.385 - 1.593 = **-1.208**, 2F 0 - 0.533 =
-**-0.533** m3. The joint + head on the valued columns is the most of his beam-through volume that can sit over valued
-columns; the rest of THROUGH_SUPPORT is over held columns (their joint volume is inside HELD here) and over carrier
-beams (beam / beam). The per-crossing split (which run passes which column) is NOT done: it needs the T-229 support
-input per run beside his beam rows (proposal for the Checker / a follow-up, no quantity moves).
+**-0.533** m3 (store-level net; not an agreement test).
+
+**Per crossing, bounded** (`column_beam_crossings`, committed files only): for each beam mark with a THROUGH_SUPPORT
+term, the T-229 support input lists every support the mark's pieces cross (gaps: exact column extent; end supports:
+extent between the outline's two sides, the axis is not in the committed input; beam ends: carrier width), each column
+bound to its V3.0.58 line by handle through T-394. His excess length can lie over VALUED columns only within
+[max(0, excess - held-column and beam allowance), min(excess, valued-column allowance)]; no apportionment. Every split
+mark's support set reproduces T-395's own allowance (checked). Result (m3, engine - his):
+
+| Storey | THROUGH_SUPPORT | over valued columns | marks not split | his column height omitted on valued members (JOINT_HEAD + GLOBAL_DEPTH + HEIGHT_OPEN) |
+|---|---|---|---|---|
+| GF | -2.902 | -1.053 .. -1.759 (16 marks) | 5 marks, -0.540 | +2.550 |
+| 1F | -1.593 | -0.253 .. -1.153 (7 marks) | 2 marks, -0.311 | +0.765 |
+| 2F | -0.533 | 0 (every 2F column held) | 1 mark, -0.240 | 0 |
+
+Reading: on GF his beams recover at most 1.759 of the 2.550 m3 his columns leave below the slab top on valued
+members, so at least 0.791 m3 of column head is in none of his beam rows (in his slab rows only if his slab counts
+the column heads; his slab is NET of the beam plan, T-545; not traced here: slab family). On 1F the bound straddles
+(-0.388 .. +0.512). Marks not split: the ledger section varies along the mark or his excess at the ledger section
+exceeds the allowance. No quantity moves; the bound is information for the Checker.
 
 ## 4. Who is right, what is open
 
@@ -120,11 +136,11 @@ input per run beside his beam rows (proposal for the Checker / a follow-up, no q
 
 R-T551-1 (column split per storey and mark, held CONFLICT columns in HELD, never SECTION), R-T551-2 (footing line split,
 a per-piece remainder needs a drawn cause else UNTRACED), R-T551-3 (column / slab once, neck from the footing top,
-blinding never structural, m3 only), R-T551-4 (held bound beside his row). `tests/t551_column_footing_reconcile` (20):
+blinding never structural, m3 only), R-T551-4 (held bound beside his row). `tests/t551_column_footing_reconcile` (21):
 hand villa V551 (footing 2.00 x 1.80 x 0.50 + neck 0.30 x 0.50 x 1.20 + column 0.25 x 0.50 through a 0.20 slab:
 6.3925 m3 both conventions; column split +0.18 = +0.32 - 0.32 + 0.18 + 0.06 - 0.06; footing split +0.80), adverse
 (column-slab twice / nowhere, neck from the footing bottom, blinding in a structural total, mm / kg / %, held as 0,
-missing, open sum, line not A x h, mirror / rotation), development villa from committed files, and the private rebuild.
+missing, open sum, line not A x h, mirror / rotation), development villa from committed files (incl. the bounded crossing split), and the private rebuild.
 
 Lessons row (ERS s.7): | 2026-11-06 | footing -0.37 m3 stood UNRESOLVED since 20 Oct and the column residuals moved
 sign between candidates | the keyed footing line mixes pads, straps and the boundary band; a candidate that holds

@@ -335,6 +335,94 @@ def column_beam_pairing(col_tables):
     return out
 
 
+def column_beam_crossings():
+    """Per beam mark with a T-545 THROUGH_SUPPORT term: how much of his beam-through length can lie over a VALUED
+    column (whose line owns the joint + head), over a HELD column, or over a carrier beam. Committed files only:
+    T-229 support input (gaps: exact column extent; end supports: extent between the outline's two sides, the axis is
+    not in the committed input), T-252 ledger pieces / sections, T-394 member -> line binding, V3.0.58 classes. The
+    split is a BOUND (no apportionment): over valued columns in [max(0, his excess - (held + beam allowance max)),
+    min(his excess, valued-column allowance max)]. The piece set is checked against T-395's own allowance per mark."""
+    import csv
+    sup = json.loads((RES / "agents_t229" / "ALSENAN_BEAM_SUPPORT_INPUT.json").read_text(encoding="utf-8"))
+    t395 = {(m["floor"], m["mark"]): m for m in json.loads((RES / "agents_t395" / "summary_t395.json")
+                                                           .read_text(encoding="utf-8"))["marks"]}
+    ts = {(m["floor"], m["mark"]): Decimal(m["THROUGH_SUPPORT"]) for m in json.loads(T545.read_text(
+        encoding="utf-8"))["marks"] if m.get("THROUGH_SUPPORT")}
+    cls = {x["line_id"]: x["class"] for x in index_lines()}
+    member_class = {r["member"].split(":", 1)[1]: cls.get(r["line_id"]) for r in json.loads(
+        T394.read_text(encoding="utf-8"))["per_line_engine"] if ":" in r["member"] and r["member"][0] in "GF"}
+    led = [r for r in csv.DictReader((RES / "agents_t252" / "LEDGER_T252.csv").open(encoding="utf-8"))
+           if r["status"] != "SUPERSEDED_R2"]
+    O = sup["outlines"]
+    pw = {k: v["width_m"] for k, v in sup["pieces"].items() if v.get("width_m")}
+    out, per = {}, []
+    for (st, mk), t in sorted(ts.items()):
+        rows = [r for r in led if r["storey"] == st and r["mark"] == mk]
+        pcs = {p.strip() for r in rows for p in re.split(r"[;|]", r["pieces"]) if p.strip().startswith(st + ":")}
+        pcs |= {k for k, v in sup["pieces"].items() if v["storey"] == st and v["mark"] == mk}
+        secs = {(Decimal(r["b_drawn_m"]), Decimal(r["depth_m"])) for r in rows if r["b_drawn_m"] and r["depth_m"]}
+        item = {"floor": st, "mark": mk, "through_support_m3": str(t)}
+        lo_a = {"VALUED": Decimal(0), "HELD": Decimal(0), "BEAM": Decimal(0)}
+        hi_a = dict(lo_a)
+        seen = set()
+
+        def col_kind(h):
+            c = member_class.get(h)
+            return "VALUED" if c == "RELEASED" else "HELD"      # held, excluded or a carried column without a line
+        for g in sup["gaps"]:
+            if (g["a"] in pcs or g["b"] in pcs) and (g["a"], g["b"]) not in seen:
+                seen.add((g["a"], g["b"]))
+                k = col_kind(g["members"][0][0])
+                L = Decimal(str(g["length_m"]))
+                lo_a[k] += L
+                hi_a[k] += L
+        for e in sup["ends"]:
+            if e["piece"] not in pcs:
+                continue
+            if e["touch"] in ("SUPPORT", "CARRIED"):
+                cols = [m[0] for m in e["members"] if m[0] in O]
+                if cols:
+                    o = O[cols[0]]
+                    k = col_kind(cols[0])
+                    lo_a[k] += Decimal(min(o["w_mm"], o["d_mm"])) / 1000
+                    hi_a[k] += Decimal(max(o["w_mm"], o["d_mm"])) / 1000
+            elif e["touch"] == "BEAM":
+                ws = [pw.get(m[0]) for m in e["members"] if m[1] == "BEAM" and pw.get(m[0])]
+                if ws:
+                    w = Decimal(str(max(ws)))
+                    lo_a["BEAM"] += w
+                    hi_a["BEAM"] += w
+        a395 = Decimal(str(t395.get((st, mk), {}).get("support_allowance_m", "NaN")))
+        lo_t, hi_t = sum(lo_a.values(), Decimal(0)), sum(hi_a.values(), Decimal(0))
+        if len(secs) != 1 or not (lo_t - Decimal("0.0005") <= a395 <= hi_t + Decimal("0.0005")):
+            item["status"] = "NOT_SPLIT (section varies or piece set differs from T-395)"
+            item["allowance_t395_m"], item["allowance_here_m"] = str(a395), [str(lo_t), str(hi_t)]
+            per.append(item)
+            continue
+        (b, D), = secs
+        x = -t / (b * D)                                           # his length beyond the drawn faces, m
+        v_lo = max(Decimal(0), x - hi_a["HELD"] - hi_a["BEAM"])
+        v_hi = min(x, hi_a["VALUED"])
+        if v_lo > v_hi:                                            # excess beyond the allowance at the ledger section
+            item["status"] = "NOT_SPLIT (his excess at the ledger section exceeds the allowance)"
+            item["excess_m"], item["allowance_here_m"] = str(d6(x)), [str(lo_t), str(hi_t)]
+            per.append(item)
+            continue
+        item.update({"status": "SPLIT_BOUND", "over_valued_columns_m3": [str(d6(-v_hi * b * D)),
+                                                                         str(d6(-v_lo * b * D))],
+                     "allowance_m": {k: [str(lo_a[k]), str(hi_a[k])] for k in lo_a}})
+        per.append(item)
+    for st in ("GF", "1F", "2F"):
+        its = [i for i in per if i["floor"] == st]
+        sp = [i for i in its if i["status"] == "SPLIT_BOUND"]
+        out[st] = {"through_support_m3": str(sum((Decimal(i["through_support_m3"]) for i in its), Decimal(0))),
+                   "marks_split": len(sp), "marks_not_split": len(its) - len(sp),
+                   "over_valued_columns_m3": [str(sum((Decimal(i["over_valued_columns_m3"][0]) for i in sp), Decimal(0))),
+                                              str(sum((Decimal(i["over_valued_columns_m3"][1]) for i in sp), Decimal(0)))],
+                   "not_split_m3": str(sum((Decimal(i["through_support_m3"]) for i in its if i not in sp), Decimal(0)))}
+    return out, per
+
+
 def build(freelancer):
     his, sub = his_rows(freelancer)
     cols = column_lines()
@@ -384,6 +472,7 @@ def summary(doc):
         "blinding": {k: b[k] for k in ("engine_released_m3", "engine_held_bound_m3", "his_m3", "residual_m3")}
         | ends,
         "column_beam_pairing": doc["column_beam_pairing"],
+        "column_beam_crossings": column_beam_crossings()[0],
     }
 
 
