@@ -46,6 +46,13 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- DOME / RING / LIFT-PIT WALL REINFORCEMENT (Lead 2026-11-06 20:14; T-560 MERGED 8ba76061, Checker ENGINE_OMISSION CONFIRMED;
+  V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
+  (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
+  line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
+- COLUMN-BEAM JOINT (Lead 2026-11-06 20:14; restates T-189 / R-CONC-OWN-1 for T-576): the beam OWNS the joint volume at
+  every column head; the column line takes the clear height floor-to-soffit. A freelancer through-height column is
+  RULE_DIFF on the joint, never ENGINE_WRONG. T-576.
 - PLASTERED RETURN FACE (Lead 2026-11-06 16:17; T-561 MERGED 33a5833f, Checker ENGINE_OMISSION 26 returns 23.070 m2):
   a wall return (pier side, nib, reveal-free return) is one face carrying two layers: B5 plaster OWNS the plaster
   area, B6 paint OWNS the paint area on the same face id (dry, untiled faces only; tiled faces carry neither paint nor

@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-06 20:14; recovery plan in force)
+
+- Merged since 16:17 (all Gate A, research, no candidate line moved): T-560, T-570, T-568, T-572, T-569, T-573 6/6 WORKED (no FAILED); manifest V8 now lists the return paint, dressing class, pier returns, W17 9.870 m2 and 6 HELD dome / lift-pit rebar rows.
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) still BLOCKED on the wrapper item (main unchanged at eafbb0f6); T-580 dry-runs V6-V8 on a copy of the index so the packages merge the run it lands.
+- 12-13 Nov reconciled quantities: closed 16 (adds rebar NOT_COMPARABLE, doors / windows, ceilings, structural held bounds); open lintels (T-571), skirting (T-574), thresholds / sills (T-577), handrails / nosing (T-578), dome / lift-pit rebar (T-575), 1F column +21.7 % (T-576); statement V5 (T-579).
+- 10 Nov: LOW (unchanged cause, 4 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 16:17; recovery plan in force)
 
 - Merged since 12:18 (all Gate A, research, no candidate line moved): T-561, T-562, T-566, T-564, T-565, T-567 6/6 WORKED or PARTIAL (no FAILED); unwired verified pieces now 49.

@@ -1,9 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-06 12:18 UTC (Lead). Previous version: 2026-11-06 08:15 UTC. The released numbers did not change
+Last update: 2026-11-06 20:14 UTC (Lead). Previous version: 2026-11-06 12:18 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 6 Nov 12:18 (newest first; twelve checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Ceilings vs freelancer: our board 366.9 vs his 409.6 m2 (-10.4 %, not a verdict): 36.5 m2 is rooms we hold, he puts a
+  ceiling over the stair light-well opening (16.0 m2 on the structural drawing, checker agrees exactly); like for like
+  -0.3 %; 6.2 m2 unexplained (his rows carry no dimensions). Bulkheads and cove strips kept apart.
+- Structural held parts now have bounds from the drawings: column necks at least 9.72 m3 (the drawing prints only a
+  minimum excavation depth), pit backfill at least 99.6 m3. On what both sides measure: ground-floor columns +10.2 %
+  (-6.2 % after the head-joint convention), first-floor columns +21.7 % (cause being split next), footings +0.9 %.
+- Doors and windows vs freelancer: first-floor doors ours 10 vs his 8; the checker counted the drawn door leaves
+  himself (27 in all) and confirms ours. Windows ours 28 (+1 held) vs his 29; like-for-like area -3.98 m2 (-4.95 %).
+- Reinforcement: his 44.19 t is seven typed figures with no bar listed, so no % is meaningful; ours 9.38 t valued +
+  14.28 .. 19.65 t held + lines not yet valued. The engine has no bar line for the domes and the lift-pit walls (gap
+  confirmed); measuring them from the drawings is next.
+- Paint vs freelancer: ours valued 217.2 vs his 1,249.4 m2; the 1,032.2 m2 gap is closed by face type (held rooms
+  808.1, rule differences 92.1, ours right 67.3, unexplained 64.7 named). 26 plastered wall returns (23.1 m2) have no
+  paint line: engine omission, fix listed for wiring.
+- External plaster: his gross 1,502.8 vs drawn 1,166.5 .. 1,185.4 m2; net vs net 1,470.0 vs 1,035.2 .. 1,087.6;
+  like for like -4.3 .. +0.5 %.
+- Earthworks: the freelancer has no earthworks row at all, so not comparable; our excavation 225.9 m3 valued plus held.
+- Floor tiles after the dressing-room fix: 390.1 vs 409.6 m2 (-4.8 %). Ground-floor column marks: 34 of 36 registered
+  from the drawings, 2 conflict between sheets (bounded 0 .. +0.47 m3, held).
+- Next: lintel count, dome / lift-pit bars, the first-floor column +21.7 %, skirting, thresholds and sills, handrails,
+  one statement for 12-13 Nov, and a dry run of all waiting wiring. 10 Nov (every trade wired): LOW, the command
+  wrapper still blocks wiring.
 
 Since 6 Nov 08:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

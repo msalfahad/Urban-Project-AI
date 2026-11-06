@@ -1,3 +1,20 @@
+## LEAD REPORT 2026-11-06 08:15 UTC
+
+Drive read OK (no file created or modified in the project folders since 04:00 UTC 6 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. 6 merged, all Gate A research (unwired):
+- Blockwork (B9): H1 MEASURED on the sections: his parapet h = printed height above finish + 0.50 m slab-edge downstand beam (Checker 0 mm). 68.42 m2 of his parapet masonry is beam concrete -> ENGINE_RIGHT; UNRESOLVED 101.43 -> 25.92 m2 (projections 41.25 m2: no element on any sheet yet). Edge beam ownership ruled to B10 in the register; ids -> T-559.
+- Plaster (B5): internal his 1,209.385 vs valued 240.278 m2 closes, residual 0 (HELD 587.718, rule 90.153, lengths ENGINE_RIGHT 53.426, shaft 244.92 with 54.00 named). ENGINE_WRONG (first this round): 11 dry plaster lines at the paint height, 217.2081 -> 261.77..269.33 m2 HELD on the floor build-up (Q-72). Fix: T-556 method version, T-558 wiring row. External his 1,502.84 vs drawn 932.73..938.30 HELD.
+- Wall tile (B4): 340.3038 vs 433.83 m2 (-21.56 %), residual 0: 6 HELD rooms -138.39 (bounded), height Q-48 A +43.19, pantry Q-37 A +32.34, openings ENGINE_RIGHT -28.02; like for like 11 rooms +4.24 %.
+- Beams (B10-07): 66.321 vs 66.094 m3 (+0.34 %) is a cancellation: ENGINE_RIGHT +12.997, through-support rule -5.028, HELD -7.376, UNRESOLVED -0.365. Checker confirmed the omitted-mark class on B27 only (PARTIAL).
+- Statement adapters (6 sections exact) and manifest V5 (glue group 34.89..36.23 bags HELD) merged.
+- Learned (3 ADOPTED, 1 PROPOSED): a class comes from geometry, not a hatch; a small net % is not agreement (show gross components); bound HELD rooms and compare like for like before any %; two finish layers equal by construction = defect signal.
+- Gates: lowest open gate 0 (t485 behind the wrapper). 10 Nov end-to-end BOQ: LOW (37 verified pieces wait, no Gate B can start). 12-13 Nov tables: 7 trades closed, 5 open (columns / footings, rebar, floor tile, paint, blockwork leftover): HIGH.
+- Team health: 6 merged, 0 rejected, 0 blocked since 04:15; every run closed with a final line, 0 empty runs; each piece merged within 1 Checker run. Self-check codemap / t061 / freeze PASS. New rows T-556..T-561 (S 2, A 2, I 2). Queue check: 21 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE:
+1. Q-80 (unchanged, filed 00:16, OWNER_QUESTIONS.md Open): face size of the 15 cm black block; 15 walls 175.9 m2 HELD (2,198 / 2,043 / 1,759 blocks by option). Nothing else waits on it.
+
+NEEDS FIXING (owner only, unchanged since 04:15 5 Nov, not re-notified): the run wrapper (scripts/agent_env.sh on main, still at eafbb0f6) lets `run` start only the scoreboard and key-map tools; every integration package and the registry gate fix need research/agents_t*/ scripts. Needed: widen `run` to research/agents_t*/*.py, or name another approved path. This alone decides the 10 Nov milestone. Also open: Kuwait 1990 spec over the connector limit; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-06 04:15 UTC
 
 Drive read OK (no file created or modified in the project folders since 00:00 UTC 6 Nov, no photo task). Training villa: candidate of record ARCH_TAKEOFF_V3.0.58 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. 6 merged, all Gate A research (unwired):
