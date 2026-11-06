@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T08:53Z | Worker 2 | SUCCESS | T-556 READY 935e04c6 | dry plaster to slab / roof underside (R-T556-1): H GF 4.29, 1F 3.99 (T-214 b 0.05, slab 0.16), roof faces HELD at drawn-section scenario; 11 dry lines 840.65..895.90 m2, 4 released 217.21 -> 262.02..262.05; corrects T-552 W03 above G1 (GF-15 -3.27 m2); vs freelancer gross +8.9 % | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T08:51Z | Verifier | SUCCESS | none | No task READY (T-556 CLAIMED W2; T-551/553/557..561 TODO), no Gate A/B, no merge, no quantity change (candidate V3.0.58 NOT RELEASED; released V2.9 + route G unchanged); CLOSABLE LINES re-read: none CLOSABLE NOW, T-180 slot not spent; scoreboard not refreshed (no candidate change, refreshed 08:10). Drive not read (not needed) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06T08:50Z | Verifier | STARTED | run session_01E6cPndaVDuqRPz1aELDNwN | repo-attached routine | task state: none READY (T-556 CLAIMED W2) | self-check pending
 - 2026-11-06T08:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
