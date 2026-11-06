@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T23:50Z | Verifier | STARTED | run session_01E6cPncJ7wRiv7kWGEwkFN2 | repo-attached routine | task state: T-577 READY (W2 c67d0ffb), T-580 READY (W3 81c07dd9), T-575 READY (W1 f0814678) | self-check pending
 - 2026-11-06 23:30 UTC | Worker 1 | SUCCESS | T-575 READY (agents/task-T-575 @ f0814678) | B11 dome/lift rebar from ST p.7/p.10/p.14, t: DOME-A/B shell 0.288..0.425 each, W ring 0.061..0.156 (B4 vs detail), E ring 0.097..0.156, DOME-3 HELD (no struct drawing), lift walls HELD kg(h) A 0.169..0.200 t/m; range 0.734..1.162 t, valued 0; freelancer TYPED_LUMP not comparable; laps/links/anchorage HELD | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 23:21 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T23:13Z | Worker 3 | SUCCESS | T-580 READY (agents/task-T-580 @ 81c07dd9) | Manifest overlay dry run: V2-V8 rows on a V3.0.58 index copy 4,999->5,123 lines in Gate B order, 0 STALE, 0 two-package lines, 0 unexplained conflicts; plaster rel 580.5819->363.3738 m2, windows +9.870 m2, floor classes = V7, roof WP 209.65844 = T-541; census/bindings close. Open: lintel index class unstated (rel 1.016->0 m3 if HELD), L-4ccc NO_BEFORE, T-498 stage identity on V3.0.57, 6 T-423 lines unaddressable | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
