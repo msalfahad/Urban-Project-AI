@@ -44,12 +44,9 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Each worker keeps at least two non-candidate TODO behind its stream package while Gate B is blocked.
 - Status word FIRST in the status cell; 7-cell rows; `board check` pulls first: commit before.
 - 'merged' only when the commit reached the working branch through a merge (F-C-T443-1).
-- Research scripts only through committed package tests or the wrapper (never bare venv python).
 - A Checker finding that blocks a merge gets its fix row in the next Lead run, first in its lane.
 - Register rulings: see ELEMENT_REGISTER (new 08:15: PARAPET EDGE DOWNSTAND MEMBER -> B10; WALL PLASTER HEIGHT vs PAINT
-  HEIGHT; earlier: WET-ROOM MEMBRANE vs BEDS, MASONRY TIES, RC LINTEL, LINTEL END VOLUME, FOUNDATION BACKFILL, TOP-STOREY
-  WALL HEIGHT, STONE FLOOR, STAIR LANDING, POOL-COURT SLAB WP, STAIR SKIRTING, EXCAVATION ZONES, SKIRTING BEHIND JOINERY,
-  GUARDRAIL vs BALUSTRADE, BAND-PATH PIER FACE, WET-ROOM WALL FACE, SHARED FLOOR AREA).
+  HEIGHT; 17 earlier rulings listed there).
 - Lessons 06 Nov 08:15 ADOPTED: class from geometry not hatch (R-T550); net % never agreement (R-T545); bound HELD
   before % (R-T547). PROPOSED: layer height own rule (T-556), loss own account, printed values in DIMENSION blocks,
   end volume owned once, exact owner derivation.
