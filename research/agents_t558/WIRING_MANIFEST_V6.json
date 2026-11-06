@@ -1,0 +1,6150 @@
+{
+ "bindings": {
+  "count": 132,
+  "figure_changes": 22,
+  "figure_changes_not_in_v5_stale": [
+   "T-454|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|mortar_m3",
+   "T-454|L-b152995525ed123ddac9|WALL_PLASTER|mortar_m3",
+   "T-489|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|mortar_m3",
+   "T-489|L-b152995525ed123ddac9|WALL_PLASTER|mortar_m3"
+  ],
+  "read_only_changes": 110,
+  "rows": [
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.120262,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.3305798,
+      1.3305798
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      0.8631,
+      0.8631
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": [
+      0.9788,
+      1.0458
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.16052,
+      1.241
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-31db3c83552682d92ca3|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-31db3c83552682d92ca3|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-31db3c83552682d92ca3|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-31db3c83552682d92ca3|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": [
+      1.229252,
+      1.234354
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.4955302,
+      1.6039682
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-31db3c83552682d92ca3|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-31db3c83552682d92ca3|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.1555,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.3955,
+      1.3955
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": [
+      3.04101,
+      3.5761
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      3.5644114,
+      4.2361054
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.0401,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.26282,
+      1.26282
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": [
+      2.220354,
+      2.287354
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      2.71251,
+      2.79231
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": [
+      0.453004,
+      0.520004
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      0.5471982,
+      0.6353182
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.0283,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.25146,
+      1.25214
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.2292866,
+      1.3050866
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-454|L-b152995525ed123ddac9|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-454"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.120262,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.3305798,
+      1.3305798
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 56.0131,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      66.52899,
+      66.52899
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      0.8631,
+      0.8631
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      43.155,
+      43.155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-1ddc23d5657b4c4e4d0d|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": [
+      0.9788,
+      1.0458
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.16052,
+      1.241
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      48.94,
+      52.29
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      58.026,
+      62.05
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-31db3c83552682d92ca3|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-31db3c83552682d92ca3|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-31db3c83552682d92ca3|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-31db3c83552682d92ca3|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": [
+      1.229252,
+      1.234354
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.4955302,
+      1.6039682
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-31db3c83552682d92ca3|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.4626,
+      61.7177
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      74.77651,
+      80.19841
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-31db3c83552682d92ca3|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-31db3c83552682d92ca3",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.1555,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.3955,
+      1.3955
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 57.775,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      69.775,
+      69.775
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": [
+      3.04101,
+      3.5761
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      3.5644114,
+      4.2361054
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      152.0505,
+      178.805
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      178.22057,
+      211.80527
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.0401,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.26282,
+      1.26282
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 52.005,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      63.141,
+      63.141
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": [
+      2.220354,
+      2.287354
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      2.71251,
+      2.79231
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      111.0177,
+      114.3677
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      135.6255,
+      139.6155
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": [
+      0.453004,
+      0.520004
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      0.5471982,
+      0.6353182
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      22.6502,
+      26.0002
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      27.35991,
+      31.76591
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": 1.0283,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "ESTIMATE_BESIDE_HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.25146,
+      1.25214
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "RELEASED",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": 51.415,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      62.573,
+      62.607
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": true,
+    "key": "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-af9621f43bc316a871ea",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|BOND_COAT|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|BOND_COAT|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|BOND_COAT|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "BOND_COAT",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|WALL_PLASTER|cement_bags",
+    "kind": "cement_bags",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "FIGURE",
+    "expected_after": {
+     "bound": [
+      1.2292866,
+      1.3050866
+     ],
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "BOUND_ONLY"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|WALL_PLASTER|mortar_m3",
+    "kind": "mortar_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   },
+   {
+    "before": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      null,
+      null
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "change": "READ_ONLY",
+    "expected_after": {
+     "bound": null,
+     "class_read": "HELD",
+     "estimate_beside": null,
+     "held_read": [
+      61.46433,
+      65.25433
+     ],
+     "net_read": null,
+     "value": null,
+     "wiring_state": "HELD"
+    },
+    "in_v5_stale_list": false,
+    "key": "T-489|L-b152995525ed123ddac9|WALL_PLASTER|sand_m3",
+    "kind": "sand_m3",
+    "line_id": "L-b152995525ed123ddac9",
+    "material": "WALL_PLASTER",
+    "table": "T-489"
+   }
+  ],
+  "rule": "T-454 bound beside a HELD line: held range x WALL_PLASTER reference thickness 0.02 m (EXACT, level-4 ENGINEERING ESTIMATE source), rounded 9 (research/agents_t454/t454_plaster_materials.py); T-489 reads V1 m3",
+  "table_sums": {
+   "T-454": {
+    "lines": 11,
+    "wall_plaster_mortar_m3_bound_after": [
+     16.8129162,
+     17.9179282
+    ],
+    "wall_plaster_mortar_m3_bound_before": [
+     7.92242,
+     8.663612
+    ],
+    "wall_plaster_mortar_m3_estimate_beside_after": 0.0,
+    "wall_plaster_mortar_m3_estimate_beside_before": 4.344162
+   },
+   "T-489": {
+    "lines": 11,
+    "wall_plaster_mortar_m3_bound_after": [
+     16.8129162,
+     17.9179282
+    ],
+    "wall_plaster_mortar_m3_bound_before": [
+     7.92242,
+     8.663612
+    ],
+    "wall_plaster_mortar_m3_estimate_beside_after": 0.0,
+    "wall_plaster_mortar_m3_estimate_beside_before": 4.344162
+   }
+  },
+  "table_sums_note": "per table only: T-489 reads the T-454 mortar m3 (one physical mortar), so the two tables are never added together",
+  "v5_blank_unchanged": 74,
+  "v5_stale": 58,
+  "v5_stale_read_only_now": [
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+   "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+   "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+   "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+   "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+   "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+   "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+   "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+   "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+   "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+   "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+   "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3"
+  ],
+  "values_after": 0,
+  "why": "a binding reads its line; the 11 lines all move (4 RELEASED -> HELD, 2 blank -> bounded, 5 re-bounded), so every binding is re-read; only WALL_PLASTER mortar m3 carries a figure (a bound beside); bond coat (no thickness) and cement / sand (NEEDS_MIX) stay HELD blank"
+ },
+ "bound_rule_reproduced_on": 16,
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+ "candidate_files_touched": 0,
+ "candidate_lines_moved_v5_to_v6": 0,
+ "coverage": {
+  "covered": [
+   "T-550",
+   "T-555",
+   "T-556",
+   "T-557",
+   "T-559"
+  ],
+  "first_parent_merges": 5,
+  "range": [
+   "47d74505",
+   "431ac67f"
+  ]
+ },
+ "coverage_rule": "R-T549-1 MANIFEST COVERAGE (every villa; provenance F-C-T536-1 / T-538, T-549): a wiring manifest names its range (previous manifest base, this base] on the first-parent line; every 'Merge agents/task-T-<n>' in it is a source with that merge commit or a declared NO_WIRING piece with its reason; a merged piece missing from the manifest, a source outside the range or with another merge commit is refused. The range is pinned: a later merge belongs to the next manifest and never turns this one red.",
+ "findings": [
+  "F-T558-1: V5 named 58 stale plaster bindings and 74 unchanged, with no after; on T-556 all 132 bindings of the 11 lines are re-read (the 2 blank lines gain a held range), 22 change a figure; listed one by one here",
+  "F-T558-2: V5's expectation for the 11 lines was the T-552 bound; T-556 (Checker 10:20) supersedes it (GF-15 -2.19 .. -4.34 m2, W03 head above the paint line); a package built on V5 would carry a wrong bound",
+  "F-T558-3: F-T555-3 now has an owning wiring item (PLASTER_HEIGHT_V1_WIRING); the Lead still has to open its board row (Gate B, after T-498)"
+ ],
+ "inputs": {
+  "engine/source/plaster_materials_table_v1.py": "816db619879504e1c21905e03fc77f35bddc9bb1406bb1411ff63d4efcd1c328",
+  "research/agents_t454/t454_plaster_materials.py": "9066d6c6c6c9d6a0b5e88a53a868b09c43736bb3b172d647432805390490a014",
+  "research/agents_t523/t523_binding_map_v2.py": "183982ab1d9bbac1515e59ca048b26bc6031260bfa1e677e7f0a25ae38f55f7b",
+  "research/agents_t555/WIRING_MANIFEST_V5.json": "fbdfa500039b11e9c43edf901e468bf5693f11e5faa66575291b8c9ae7149636",
+  "research/agents_t556/out/T556_PLASTER_HEIGHT.json": "8169a1953c386ccab7bbd9283404c100dc9d8105e6c10b7244593c9af442cd84"
+ },
+ "no_wiring": {
+  "T-550": "reconciliation to cause (blockwork vs the freelancer): moves no line; ENGINE_WRONG none found",
+  "T-555": "the V5 manifest itself: superseded here (every V5 statement carried unless listed in v5_to_v6)",
+  "T-557": "statement adapters: moves no line; its F-T557-2 ENGINE_WRONG (plaster height) is the T-556 row wired here",
+  "T-559": "reconciliation leftover (blockwork openings / parapet edge members): moves no line; ENGINE_WRONG none"
+ },
+ "packages": {
+  "PLASTER_HEIGHT_V1_WIRING (new, closes F-T555-3)": {
+   "v6_changes": [
+    "see wiring_row"
+   ],
+   "why": "T-556 merged; V5's T-552 bound superseded"
+  },
+  "T-363 / T-372 / T-513 / F package": {
+   "v6_changes": [],
+   "why": "no V6 piece moves their lines"
+  },
+  "T-423 r2 (paint / skirting)": {
+   "v6_changes": [],
+   "why": "FIN.PAINT unchanged (paint_unchanged); the plaster correction is PLASTER_HEIGHT_V1_WIRING only"
+  },
+  "T-498 (S package)": {
+   "v6_changes": [],
+   "why": "T-550 / T-559 restate the blockwork reconciliation to cause; ENGINE_WRONG none; no MAS line or glue host moves (V5 holds)"
+  },
+  "T-509 (B1-04 disposal)": {
+   "v6_changes": [],
+   "why": "no V6 piece touches B1 earthworks lines"
+  }
+ },
+ "paint": {
+  "paint_lines": [
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:ST_GF:PAINT",
+    "expected_after": "= before",
+    "held": [
+     48.52,
+     62.01
+    ],
+    "line_id": "L-145bd2394f2907558243",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R0E919A:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-22901c55ce6658640639",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:ST_1F:PAINT",
+    "expected_after": "= before",
+    "held": [
+     42.48,
+     47.67
+    ],
+    "line_id": "L-2ab93d5029a4b7cc4dca",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RDBD4F9:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-2e7ba2852011a8412e25",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:1F_11:PAINT",
+    "expected_after": "= before",
+    "held": [
+     61.4626,
+     61.7177
+    ],
+    "line_id": "L-349db74a70e1eecda2d2",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RD36087:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-34d47612540e192f451c",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R52AC05:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-3621a14bd1e193739089",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R3CFCFD:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-3b571e7f4455eaf44520",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R48AA46:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-43134b281f14a8bee79e",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-R7512EA:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-43a30919b89a61998e8c",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-R8496F0:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-4f330b1b31bc4ec620ab",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-RB72F22:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5113d7b0e638a6886d2f",
+    "value": null
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "HL:WALL_FINISH:2F_03:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5410f9045c80dd5933f0",
+    "value": 57.775
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RA3AD49:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5587711f87b2fd35c076",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-RED23B8:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-561e8611d7ba1bf514d3",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5a7a5c6f070ec7142ca5",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "2F-RE83BED:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5b91ae8508c9162b1e04",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "2F-R1DB2D2:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-5f7c33761a4635d2f326",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R78C367:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-735d4ea61db2276a8496",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R26FA0D:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-7878bf61681466dee87e",
+    "value": null
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "HL:WALL_FINISH:GF_15:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-7f083d3e2c2702d14356",
+    "value": 56.0131
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-R31F8AE:stair hall paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-83f2ef175321e6b61f54",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-RED0D19:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-889a14b5495001f9dfb4",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RD6F891:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-8f50fe9bb5760f61c78a",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RF38DAF:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-a05ce0360adda3a26c4a",
+    "value": null
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "HL:WALL_FINISH:1F_01:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-ade6f0567f690a869499",
+    "value": 51.415
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-R51E127:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-b2bfdc6c65e21f4b5062",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RB62B55:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-b6c5050566e308e1d4b1",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "2F-R4D1B62:stair hall paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-bacbf7fdc3454348b101",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:1F_13:PAINT",
+    "expected_after": "= before",
+    "held": [
+     111.0177,
+     114.3677
+    ],
+    "line_id": "L-be48ea84285be20645af",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:GF_08:PAINT",
+    "expected_after": "= before",
+    "held": [
+     152.0505,
+     178.805
+    ],
+    "line_id": "L-c0ac22c964a42e7d71b1",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "HL:WALL_FINISH:GF_07:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-c3f7e68ce91a436802e2",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RDF7D28:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-c555e556ccad6e32b0ba",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R8BDA49:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-c60782dc0946127b7e94",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:2F_01:PAINT",
+    "expected_after": "= before",
+    "held": [
+     22.6502,
+     26.0002
+    ],
+    "line_id": "L-c74cfb4e07bcc47bc5d6",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-R75FBAE:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-cd4c2de772f4ee4ef2bf",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-cdf7f5cd2789b67004f1",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RC06FED:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-d2134defaa68a3aeccc5",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-d7d6d2f765489a95c408",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "1F-R48CDA5:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-d8707985856b2cfbe5a2",
+    "value": null
+   },
+   {
+    "class": "RELEASED",
+    "element_id": "HL:WALL_FINISH:1F_04:PAINT",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-d9f4ecdb6ef9a42d0220",
+    "value": 52.005
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RFAD3C4:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-e70a851d21853b62afeb",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RB28769:paint above wall tile",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-f0047fe1e4a14e6528ed",
+    "value": null
+   },
+   {
+    "class": "HELD",
+    "element_id": "HL:WALL_FINISH:1F_10:PAINT",
+    "expected_after": "= before",
+    "held": [
+     48.94,
+     52.29
+    ],
+    "line_id": "L-f53c1329983ad689b7ae",
+    "value": null
+   },
+   {
+    "class": "EXCLUDED",
+    "element_id": "GF-RC99C2A:paint",
+    "expected_after": "= before",
+    "held": [
+     null,
+     null
+    ],
+    "line_id": "L-f8317f880c9c62324604",
+    "value": null
+   }
+  ],
+  "paint_lines_count": 45,
+  "paint_lines_moved": 0,
+  "paint_released_after_m2": 217.2081,
+  "paint_released_before_m2": 217.2081,
+  "pairs": [
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      null,
+      null
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      null,
+      null
+     ],
+     "value": null
+    },
+    "paint_line": "L-cdf7f5cd2789b67004f1",
+    "plaster_expected_after": [
+     61.46433,
+     65.25433
+    ],
+    "plaster_line": "L-b152995525ed123ddac9",
+    "room": "GF-01"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      null,
+      null
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      null,
+      null
+     ],
+     "value": null
+    },
+    "paint_line": "L-d7d6d2f765489a95c408",
+    "plaster_expected_after": [
+     43.155,
+     43.155
+    ],
+    "plaster_line": "L-1ddc23d5657b4c4e4d0d",
+    "room": "GF-04"
+   },
+   {
+    "paint_before": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 56.0131
+    },
+    "paint_expected_after": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 56.0131
+    },
+    "paint_line": "L-7f083d3e2c2702d14356",
+    "plaster_expected_after": [
+     66.52899,
+     66.52899
+    ],
+    "plaster_line": "L-0d93f2209cd9bb827c0a",
+    "room": "GF-15"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      152.0505,
+      178.805
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      152.0505,
+      178.805
+     ],
+     "value": null
+    },
+    "paint_line": "L-c0ac22c964a42e7d71b1",
+    "plaster_expected_after": [
+     178.22057,
+     211.80527
+    ],
+    "plaster_line": "L-8cecb1d010d5aafbf25d",
+    "room": "GF-08"
+   },
+   {
+    "paint_before": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 51.415
+    },
+    "paint_expected_after": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 51.415
+    },
+    "paint_line": "L-ade6f0567f690a869499",
+    "plaster_expected_after": [
+     62.573,
+     62.607
+    ],
+    "plaster_line": "L-af9621f43bc316a871ea",
+    "room": "1F-01"
+   },
+   {
+    "paint_before": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 52.005
+    },
+    "paint_expected_after": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 52.005
+    },
+    "paint_line": "L-d9f4ecdb6ef9a42d0220",
+    "plaster_expected_after": [
+     63.141,
+     63.141
+    ],
+    "plaster_line": "L-971f0bdaf68d7fd0966c",
+    "room": "1F-04"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      48.94,
+      52.29
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      48.94,
+      52.29
+     ],
+     "value": null
+    },
+    "paint_line": "L-f53c1329983ad689b7ae",
+    "plaster_expected_after": [
+     58.026,
+     62.05
+    ],
+    "plaster_line": "L-2ba8077ba9bb2e1ff0f6",
+    "room": "1F-10"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      61.4626,
+      61.7177
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      61.4626,
+      61.7177
+     ],
+     "value": null
+    },
+    "paint_line": "L-349db74a70e1eecda2d2",
+    "plaster_expected_after": [
+     74.77651,
+     80.19841
+    ],
+    "plaster_line": "L-31db3c83552682d92ca3",
+    "room": "1F-11"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      111.0177,
+      114.3677
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      111.0177,
+      114.3677
+     ],
+     "value": null
+    },
+    "paint_line": "L-be48ea84285be20645af",
+    "plaster_expected_after": [
+     135.6255,
+     139.6155
+    ],
+    "plaster_line": "L-9b4a7bab033d677e2017",
+    "room": "1F-13"
+   },
+   {
+    "paint_before": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 57.775
+    },
+    "paint_expected_after": {
+     "class": "RELEASED",
+     "held": [
+      null,
+      null
+     ],
+     "value": 57.775
+    },
+    "paint_line": "L-5410f9045c80dd5933f0",
+    "plaster_expected_after": [
+     69.775,
+     69.775
+    ],
+    "plaster_line": "L-4ce74fc37a08d4bdf0d8",
+    "room": "2F-03"
+   },
+   {
+    "paint_before": {
+     "class": "HELD",
+     "held": [
+      22.6502,
+      26.0002
+     ],
+     "value": null
+    },
+    "paint_expected_after": {
+     "class": "HELD",
+     "held": [
+      22.6502,
+      26.0002
+     ],
+     "value": null
+    },
+    "paint_line": "L-c74cfb4e07bcc47bc5d6",
+    "plaster_expected_after": [
+     27.35991,
+     31.76591
+    ],
+    "plaster_line": "L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01"
+   }
+  ],
+  "register": "ELEMENT_REGISTER 'WALL PLASTER HEIGHT vs PAINT HEIGHT': B5 plaster full height (slab / roof underside), B6 paint to the finished ceiling (G1); only FIN.PLASTER moves"
+ },
+ "pieces_new": {
+  "T-550": {
+   "gate": "A",
+   "merge": "f052dfeb",
+   "rules": [
+    "R-T550-1"
+   ],
+   "verdict": "Verifier 2026-11-06 08:05Z GATE A PASS: blockwork UNRESOLVED 101.43 m2 to physical causes, H1 measured, own raw-DXF read; ENGINE_WRONG none; no line moves"
+  },
+  "T-555": {
+   "gate": "A",
+   "merge": "e3e0ed0e",
+   "rules": [
+    "R-T549-1"
+   ],
+   "verdict": "Verifier 2026-11-06 08:08Z GATE A PASS: WIRING MANIFEST V5; F-T555-3 plaster height with no owning row -> T-556 / T-558"
+  },
+  "T-556": {
+   "gate": "A",
+   "merge": "655b9eac",
+   "rules": [
+    "R-T556-1"
+   ],
+   "verdict": "Verifier 2026-11-06 10:20Z GATE A PASS: PLASTER_HEIGHT_METHOD_V1; own raw-DXF re-measure 1F-04 63.141 and 2F-03 69.775 m2 AGREE, GF-15 66.529 by hand (T-552 bound over-stated 3.268, Checker error recorded); every line HELD; PARTIALLY VERIFIED 2 / 11; wiring T-558"
+  },
+  "T-557": {
+   "gate": "A",
+   "merge": "431ac67f",
+   "rules": [
+    "R-T557-1"
+   ],
+   "verdict": "Verifier 2026-11-06 10:20Z GATE A PASS: statement adapters T-545 / T-547 / T-552 + T-550 restatement; no quantity moves; plaster restatement superseded by T-556"
+  },
+  "T-559": {
+   "gate": "A",
+   "merge": "f6636468",
+   "rules": [
+    "R-T559-1",
+    "R-T559-2"
+   ],
+   "verdict": "Verifier 2026-11-06 10:20Z GATE A PASS: blockwork leftover 25.92 m2 by opening id and parapet edge member; ENGINE_WRONG none; no line moves"
+  }
+ },
+ "plaster_lines": {
+  "all_11_after_bound_m2": [
+   840.64581,
+   895.89641
+  ],
+  "code_view": {
+   "FIN.PLASTER_released_after_m2": 363.3738,
+   "FIN.PLASTER_released_now_m2": 580.5819,
+   "moved_to_held_bounded_m2": [
+    262.01799,
+    262.05199
+   ]
+  },
+  "equals_released_paint_m2": 217.2081,
+  "held_lines": 7,
+  "method": "PLASTER_HEIGHT_METHOD_V1 (R-T556-1, research, unwired)",
+  "released_after_bound_m2": [
+   262.01799,
+   262.05199
+  ],
+  "released_before_m2": 217.2081,
+  "released_change_pct": [
+   20.63,
+   20.65
+  ],
+  "released_lines": 4,
+  "rows": [
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": null,
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:GF_01:PLASTER",
+    "line_id": "L-b152995525ed123ddac9",
+    "room": "GF-01",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "CB6 0.75"
+     ],
+     "bound_m2": [
+      57.62493,
+      75.08763
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.74",
+      "3.84"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     3.8394,
+     -9.8333
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.79",
+     "class": "HELD",
+     "held_high": 65.25433,
+     "held_low": 61.46433,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 20.1270 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": null,
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:GF_04:PLASTER",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "room": "GF-04",
+    "v5_expected_after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      41.115,
+      44.255
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.74",
+      "3.84"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     2.04,
+     -1.1
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.79",
+     "class": "HELD",
+     "held_high": 43.155,
+     "held_low": 43.155,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 12.50 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed"
+   },
+   {
+    "before": {
+     "class": "RELEASED",
+     "held_m2": null,
+     "value": 56.0131
+    },
+    "element_id": "HL:WALL_FINISH:GF_15:PLASTER",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "room": "GF-15",
+    "v5_expected_after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      68.71993,
+      70.87363
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "4.24",
+      "4.34"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     -2.19094,
+     -4.34464
+    ],
+    "v6_expected_after": {
+     "H_floor_m": "4.29",
+     "H_roof_scenario_m": "4.29",
+     "class": "HELD",
+     "held_high": 66.52899,
+     "held_low": 66.52899,
+     "openings_head_above_G1": [
+      "W03"
+     ],
+     "roof_share": "0.15",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 3.23055 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 18.30645 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16)"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": [
+      152.0505,
+      178.805
+     ],
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "room": "GF-08",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B26 0.85",
+      "B27 0.85"
+     ],
+     "bound_m2": [
+      183.43142,
+      215.50472
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "4.24",
+      "4.34"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     -5.21085,
+     -3.69945
+    ],
+    "v6_expected_after": {
+     "H_floor_m": "4.29",
+     "H_roof_scenario_m": "4.29",
+     "class": "HELD",
+     "held_high": 211.80527,
+     "held_low": 178.22057,
+     "openings_head_above_G1": [
+      "W03"
+     ],
+     "roof_share": "0.61",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 32.44468 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 20.74332 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "RELEASED",
+     "held_m2": null,
+     "value": 51.415
+    },
+    "element_id": "HL:WALL_FINISH:1F_01:PLASTER",
+    "line_id": "L-af9621f43bc316a871ea",
+    "room": "1F-01",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B6 0.50"
+     ],
+     "bound_m2": [
+      61.858,
+      63.628
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     0.715,
+     -1.021
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 62.607,
+     "held_low": 62.573,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 17.70 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "RELEASED",
+     "held_m2": null,
+     "value": 52.005
+    },
+    "element_id": "HL:WALL_FINISH:1F_04:PLASTER",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "room": "1F-04",
+    "v5_expected_after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      62.271,
+      64.011
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     0.87,
+     -0.87
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 63.141,
+     "held_low": 63.141,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 17.40 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": [
+      48.94,
+      52.29
+     ],
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:1F_10:PLASTER",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "room": "1F-10",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B19 0.75",
+      "B6 0.50"
+     ],
+     "bound_m2": [
+      58.498,
+      63.468
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     -0.472,
+     -1.418
+    ],
+    "v6_expected_after": {
+     "H_floor_m": "3.99",
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 62.05,
+     "held_low": 58.026,
+     "openings_head_above_G1": [],
+     "roof_share": "0.59",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 9.558 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 6.642 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": [
+      61.4626,
+      61.7177
+     ],
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:1F_11:PLASTER",
+    "line_id": "L-31db3c83552682d92ca3",
+    "room": "1F-11",
+    "v5_expected_after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      74.53051,
+      77.00051
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     0.246,
+     3.1979
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 80.19841,
+     "held_low": 74.77651,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 22.1490 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": [
+      111.0177,
+      114.3677
+     ],
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "room": "1F-13",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B25 / CB12 0.75 on edges"
+     ],
+     "bound_m2": [
+      134.2932,
+      141.5882
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     1.3323,
+     -1.9727
+    ],
+    "v6_expected_after": {
+     "H_floor_m": "3.99",
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 139.6155,
+     "held_low": 135.6255,
+     "openings_head_above_G1": [],
+     "roof_share": "0.57",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 22.4865 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 16.9635 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts"
+   },
+   {
+    "before": {
+     "class": "RELEASED",
+     "held_m2": null,
+     "value": 57.775
+    },
+    "element_id": "HL:WALL_FINISH:2F_03:PLASTER",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "room": "2F-03",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B2 0.40"
+     ],
+     "bound_m2": [
+      68.926,
+      70.816
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     0.849,
+     -1.041
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 69.775,
+     "held_low": 69.775,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 18.90 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed"
+   },
+   {
+    "before": {
+     "class": "HELD",
+     "held_m2": [
+      22.6502,
+      26.0002
+     ],
+     "value": null
+    },
+    "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01",
+    "v5_expected_after": {
+     "beam_end_sections_held": [
+      "B15 1.20"
+     ],
+     "bound_m2": [
+      27.96551,
+      32.21641
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "v5_to_v6_m2": [
+     -0.6056,
+     -0.4505
+    ],
+    "v6_expected_after": {
+     "H_floor_m": null,
+     "H_roof_scenario_m": "3.99",
+     "class": "HELD",
+     "held_high": 31.76591,
+     "held_low": 27.35991,
+     "openings_head_above_G1": [],
+     "roof_share": "1.0",
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "why_held": "HELD: HELD on the roof build-up over 9.0090 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts"
+   }
+  ],
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06 10:20Z GATE A PASS: PLASTER_HEIGHT_METHOD_V1; own raw-DXF re-measure 1F-04 63.141 and 2F-03 69.775 m2 AGREE, GF-15 66.529 by hand (T-552 bound over-stated 3.268, Checker error recorded); every line HELD; PARTIALLY VERIFIED 2 / 11; wiring T-558",
+    "merge": "655b9eac",
+    "task": "T-556"
+   }
+  ],
+  "supersedes": "V5 plaster_height (T-552 bound) for these 11 lines",
+  "v5_all_11_bound_m2": [
+   839.2335,
+   918.4491
+  ]
+ },
+ "released_quantities_changed": 0,
+ "rule": "R-T558-1",
+ "schema": "URBAN_T558_WIRING_MANIFEST_V6",
+ "supersedes": "T-555 WIRING_MANIFEST_V5.json (every V5 / V4 / V3 / V2 statement carried unless listed in v5_to_v6)",
+ "task": "T-558",
+ "v5_to_v6": [
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    3.8394,
+    -9.8333
+   ],
+   "v5": [
+    57.62493,
+    75.08763
+   ],
+   "v6": [
+    61.46433,
+    65.25433
+   ],
+   "what": "plaster GF-01 L-b152995525ed123ddac9"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    2.04,
+    -1.1
+   ],
+   "v5": [
+    41.115,
+    44.255
+   ],
+   "v6": [
+    43.155,
+    43.155
+   ],
+   "what": "plaster GF-04 L-1ddc23d5657b4c4e4d0d"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    -2.19094,
+    -4.34464
+   ],
+   "v5": [
+    68.71993,
+    70.87363
+   ],
+   "v6": [
+    66.52899,
+    66.52899
+   ],
+   "what": "plaster GF-15 L-0d93f2209cd9bb827c0a"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    -5.21085,
+    -3.69945
+   ],
+   "v5": [
+    183.43142,
+    215.50472
+   ],
+   "v6": [
+    178.22057,
+    211.80527
+   ],
+   "what": "plaster GF-08 L-8cecb1d010d5aafbf25d"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    0.715,
+    -1.021
+   ],
+   "v5": [
+    61.858,
+    63.628
+   ],
+   "v6": [
+    62.573,
+    62.607
+   ],
+   "what": "plaster 1F-01 L-af9621f43bc316a871ea"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    0.87,
+    -0.87
+   ],
+   "v5": [
+    62.271,
+    64.011
+   ],
+   "v6": [
+    63.141,
+    63.141
+   ],
+   "what": "plaster 1F-04 L-971f0bdaf68d7fd0966c"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    -0.472,
+    -1.418
+   ],
+   "v5": [
+    58.498,
+    63.468
+   ],
+   "v6": [
+    58.026,
+    62.05
+   ],
+   "what": "plaster 1F-10 L-2ba8077ba9bb2e1ff0f6"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    0.246,
+    3.1979
+   ],
+   "v5": [
+    74.53051,
+    77.00051
+   ],
+   "v6": [
+    74.77651,
+    80.19841
+   ],
+   "what": "plaster 1F-11 L-31db3c83552682d92ca3"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    1.3323,
+    -1.9727
+   ],
+   "v5": [
+    134.2932,
+    141.5882
+   ],
+   "v6": [
+    135.6255,
+    139.6155
+   ],
+   "what": "plaster 1F-13 L-9b4a7bab033d677e2017"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    0.849,
+    -1.041
+   ],
+   "v5": [
+    68.926,
+    70.816
+   ],
+   "v6": [
+    69.775,
+    69.775
+   ],
+   "what": "plaster 2F-03 L-4ce74fc37a08d4bdf0d8"
+  },
+  {
+   "cause": "T-556 (supersedes T-552 bound)",
+   "delta_m2": [
+    -0.6056,
+    -0.4505
+   ],
+   "v5": [
+    27.96551,
+    32.21641
+   ],
+   "v6": [
+    27.35991,
+    31.76591
+   ],
+   "what": "plaster 2F-01 L-ae0cdd794cc5fdbe0c29"
+  },
+  {
+   "cause": "T-556 + T-454 bound rule",
+   "v5": "58 stale named, none listed with an after",
+   "v6": "132 listed one by one (22 FIGURE, 110 READ_ONLY)",
+   "what": "plaster bindings"
+  }
+ ],
+ "wiring_row": {
+  "blocked_by": "board row not yet opened (Lead); wrapper allow-list for candidate packages (T-498 / T-525)",
+  "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+  "closes": "F-T555-3 (no owning row in V5)",
+  "evidence_status": "PARTIALLY VERIFIED 2 / 11 rooms (Checker raw-DXF re-measure 1F-04, 2F-03; GF-15 by hand); roof faces ASSUMED at the drawn-section scenario, HELD (D-39 / DCR-6)",
+  "gate": "B (integration package; a RELEASED line moving to HELD is a Gate B change of its own, never inside another package)",
+  "id": "PLASTER_HEIGHT_V1_WIRING",
+  "method": "PLASTER_HEIGHT_METHOD_V1 (R-T556-1, research, unwired)",
+  "order": "after T-498 (one candidate package at a time); T-423 r2 (paint / skirting) must not carry it",
+  "steps": [
+   "1. 4 RELEASED dry FIN.PLASTER lines 217.2081 m2 -> HELD (BOUNDED) [262.01799, 262.05199] m2 (held_low / held_high from T-556 new_lo / new_hi); FIN.PLASTER released 580.5819 -> 363.3738 m2",
+   "2. 7 HELD lines: held_low / held_high = T-556 range (2 blank lines gain one)",
+   "3. 132 T-454 / T-489 bindings re-read (22 figure changes: WALL_PLASTER mortar m3 bound beside; the rest read-only), each to its 'expected_after' in this manifest",
+   "4. FIN.PAINT: 45 lines byte-identical (paint stays at G1)",
+   "5. every other candidate line byte-identical; HELD stays HELD (no plaster line is released)"
+  ]
+ }
+}
