@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-06 00:16 UTC (Lead). Previous version: 2026-11-05 20:17 UTC. The released numbers did not change
+Last update: 2026-11-06 04:15 UTC (Lead). Previous version: 2026-11-06 00:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 6 Nov 00:16 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Wet-room floor waterproofing vs freelancer: our 85.58 m2 vs his 72.01 m2 (+13.57 m2, +18.8 %) is fully explained room
+  by room: the pantry (13.46 m2, your answer Q-37 A), a basin reveal (-0.22 m2) and printed room sizes (+0.31 m2);
+  nothing left over. His upturn 144.61 is in metres (not m2): vs our 126.07 m, the difference is the doorways (15.5 m,
+  held) and open edges / reveal by rule.
+- Blockwork vs freelancer: his 1,260.7 m2 vs our 467.8 m2 (wired so far) splits into held scope 587.3 m2 (74 %), rule
+  differences 65.2 m2 (boundary wall in the fence family, heights), parapet share the engine measures right 41.1 m2,
+  and 101.4 m2 not yet explained (parapet edge, an elevation 'projections' row, openings, lengths): being traced.
+  No engine error found.
+- First-floor lintel glue: now 437.9 .. 451.6 kg from measured wall ends (was held); lintel existence on site and the
+  second floor stay held.
+- Stair marble bed on the whole stair: at least 56.36 m2 (treads 35.43, risers 10.34, landings 10.59), 16.2 bags.
+- One reconciliation statement per trade now exists (roof waterproofing and stair bed in it; blockwork, wet rooms next,
+  with one landing figure corrected: 1.44 m2 engine miss + 0.06 m2 from the reference's own size).
+- Next: plaster, floor tiles, columns and footings vs freelancer part by part; the blockwork leftover; all into the
+  statement for the 12-13 Nov milestone.
+- Still blocked: every candidate package waits for the command wrapper. 10 Nov (end-to-end BOQ with every trade): LOW.
 
 Since 5 Nov 20:17 (newest first; seven checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- WET-ROOM WALL FACE: PLASTER vs WALL TILE (Lead 2026-11-06 04:15; rows T-552, T-547): one tiled wet-room wall face
+  carries two layers, each owned once: the spatter dash coat is PLASTER trade (T-552 counts the face in plaster m2 as
+  spatter dash only, never as a full plaster coat); levelling render + adhesive + porcelain are WALL TILE trade (T-547);
+  no paint or skirting on tiled faces (owner 2026-11-02). Dry faces of the same room above the tile height are plaster +
+  paint. A face in both statements is listed by element id in each, with its owning layer. Source: owner wet-area rule
+  2026-11-02 (AGENT_BRIEF). Same rule for every villa.
+- FLOOR AREA SHARED BY FLOOR TILE and WET-ROOM MEMBRANE (Lead 2026-11-06 04:15; rows T-553, T-546 merged): the room floor
+  polygon is measured once (T-074 rooms); the membrane (WP trade) and the tile (FLOOR TILE trade) are separate layers on
+  it; T-553 reuses T-546's room table for wet rooms and never re-derives a differing area without a named cause. Stair
+  and landing marble stay with the STAIR / LANDING BED ruling below.
+
 - WET-ROOM FLOOR MEMBRANE vs TILE BED vs STAIR / LANDING BED (Lead 2026-11-06 00:16; rows T-546, T-542, T-547): the
   wet-room floor membrane and its upturn are B8 (OWNER TRADE B8, membrane m2 per room, upturn lm; an upturn m2 only with
   a printed or owner-ruled height, never the freelancer's 1.00 m); the floor tile bed over it is B3-05 (floor bed family);

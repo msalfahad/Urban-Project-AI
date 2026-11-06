@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-06 04:15 (since 00:20)
+
+- T-542 stair bed beyond the treads (Gate A): WORKED (AT_LEAST 56.3586 m2, +20.9261 m2 risers / landings, 16.19 bags). Decision: V7 wiring reads the whole stair through manifest V5 (T-555); landing lines stay T-502.
+- T-543 blockwork vs freelancer (Gate A): WORKED (792.897 m2 closed exactly, ENGINE_WRONG none). Decision: UNRESOLVED 101.43 m2 + H1 datum -> T-550; adapter -> T-554.
+- T-548 statement builder (Gate A): WORKED with a class correction (MS1-LD 1.4375 ENGINE_WRONG + 0.0625 RULE_DIFFERENCE). Decision: correction + T-543 / T-546 / T-542 adapters -> T-554, worker 3 FIRST.
+- T-549 wiring manifest V4 (Gate A): WORKED (8 merges covered). Decision: stale for T-544 / T-546 -> V5 (T-555).
+- T-544 1F lintel end ceilings (Gate A): WORKED (1F AAC glue host HELD -> 437.88303..451.60893 kg; existence D-45 and 2F D-39 stay HELD). Decision: into V5; no rework.
+- T-546 wet-room floor WP vs freelancer (Gate A): WORKED (+13.565710 m2 closes, residual 0; his upturn is lm). Decision: method reused for floor tile (T-553) and plaster (T-552).
+
 ## Lead 2026-11-06 00:16 (since 20:17)
 
 - T-540 sand load / density (Gate A): WORKED (no source -> both HELD by name, R-T540-1..4). Decision: no row; supplier fact only, sand stays loose m3.

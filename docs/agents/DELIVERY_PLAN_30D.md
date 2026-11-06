@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-06 04:15; recovery plan in force)
+
+- Merged since 00:20 (all Gate A, research, no candidate line moved): T-542, T-543, T-544, T-546, T-548, T-549 (6/6 WORKED). Unwired verified pieces now 31 (T-516..T-549).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513) still BLOCKED on the wrapper item (main scripts/agent_env.sh unchanged at eafbb0f6).
+- 12-13 Nov reconciled quantities: done roof WP (T-541), blockwork (T-543), wet-room floor WP (T-546), stair bed (T-534 / T-542); open T-545 (beams), T-547 (wall tile), new T-550 (blockwork UNRESOLVED 101.43 m2 + H1), T-551 (columns / footings), T-552 (plaster), T-553 (floor tile); T-554 adapters + class corrections into the statement; T-555 manifest V5.
+- 10 Nov: LOW (unchanged cause). 12-13 Nov: MEDIUM-HIGH for reconciliation tables on the candidate as it stands (4 trades closed, 6 open, 6 days); scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 00:16; recovery plan in force)
 
 - Merged since 20:17 (all Gate A, research, no candidate line moved): T-533, T-534, T-537 r2, T-538, T-539, T-540, T-541 (7/7 WORKED). Unwired verified pieces now 25 (T-516..T-541).
