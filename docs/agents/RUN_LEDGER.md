@@ -1106,3 +1106,77 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-05 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:21; none / No claimable TODO: the only TODO row is T-498 (stream S blockwork materials wiring, worker 3 FIRST, sta |
 | 11-05 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:54; T-514 Gate A PASS MERGED ee91e8b9 / Screed/threshold/outdoor bed producers (research, unwired): own re-measure |
 | 11-05 04:12 | Lead | SUCCESS | STARTED 04:12, final 04:19; board / Since 00:15: 3 merged (T-515 lintel span bars WORKED, T-507 V3.0.58 roof WP 204.112 -> 209.019 m2 WORK |
+
+## 2026-11-05 04:31 -> 2026-11-06 04:31 UTC (69 runs: 68 SUCCESS, 1 BLOCKED (Worker 3 13:01, registry gate fix needs a research script the run wrapper refuses); 0 INCOMPLETE after checking 5 apparent gaps: 4 Verifier clock-skew stamps, 1 seconds-format stamp)
+
+| UTC | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-05 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 04:56; T-517 READY 9c6cb0c4 / pool-court (POOLCOURT-550) build-up above the membrane now has its 4 rows: falls screed |
+| 11-05 04:50 | Verifier | SUCCESS | STARTED 04:50, final 04:51; none (READY 0: T-516 / T-518 TODO, T-517 CLAIMED W2 04:41; T-498 / T-423 r2 BLOCKED on the wrapper allow-list) |
+| 11-05 05:00 | Worker 3 | SUCCESS | STARTED 05:00, final 05:09; T-518 READY @72fa9f6d / Factor provenance census: 92 producer keys / 13 factors, unread 0, unsourced factor ap |
+| 11-05 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 05:39; T-516 READY agents/task-T-516 @9967d828 / B9-02 lintel jamb bearing from the DXF masonry beside each jamb: 16/ |
+| 11-05 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:09; T-516, T-517, T-518 Gate A PASS, MERGED engine 7f7b7564 (CODEMAP-only conflicts rebuilt) / own DXF re-measures |
+| 11-05 06:41 | Worker 2 | SUCCESS | STARTED 06:41, final 06:44; none / No claimable TODO row on the board (0 TODO, 0 READY): worker-2 queue T-314 / T-502 / T-513 is QUEUED fo |
+| 11-05 06:52 | Verifier | SUCCESS | STARTED 06:52, final 06:52; none (READY 0: T-498 / T-423 r2 BLOCKED on the wrapper allow-list; T-314 / T-502 / T-509 / T-513 QUEUED) / no  |
+| 11-05 07:01 | Worker 3 | SUCCESS | STARTED 07:01, final 07:01; none / No claimable TODO row on the board (0 TODO, 0 READY): lane-I package T-498 stays BLOCKED on the wrapper |
+| 11-05 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:20; none / No claimable TODO: T-516/T-517/T-518 MERGED; T-423 r2 and T-498 still BLOCKED on the wrapper allow-list |
+| 11-05 07:50 | Verifier | SUCCESS | final 07:50 (single line); none (READY 0: T-498 / T-423 r2 BLOCKED on the wrapper allow-list; no other row READY) / no check, no merge, n |
+| 11-05 07:51 | Verifier | SUCCESS | STARTED 07:51; final line stamped a minute before STARTED (clock skew), run closed |
+| 11-05 08:13 | Lead | SUCCESS | STARTED 08:13, final 08:18; board / Since 04:15: 3 merged, all WORKED (T-516 lintel jamb bearing 21 BOUNDED / 10 FLAGGED_DEFICIT / 1 HELD; |
+| 11-05 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:46; T-521 READY (agents/task-T-521 @ c7eb8ea4) / FINISH_MATERIALS_TABLE_V6: tile-bed mortar now INSTALLED without  |
+| 11-05 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:00; T-521 / T-521 GATE A PASS, MERGED ba35e0e2 (FINISH_MATERIALS_TABLE_V6, R-T521-1): bed mortar now installed = a |
+| 11-05 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:12; T-523 READY 1db19aec / binding map V2: 1,202 T-496 bindings re-staged, 0 fail; 3 T-495 bed rows split installe |
+| 11-05 09:20 | Worker 1 | SUCCESS | STARTED 09:20, final 09:31; T-519 READY df308c7f / B9-02 lintels: project RC schedule governs 16/16 (cast to length, no stock piece): 6 nr |
+| 11-05 09:51 | Verifier | SUCCESS | STARTED 09:51, final 10:03; T-519, T-523 / T-519 GATE A PASS + T-523 GATE A PASS, MERGED engine 9a28e927 (CODEMAP-only conflict rebuilt):  |
+| 11-05 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 10:55; T-522 READY 24583b2d / B8-06 pool court: bath window sill '84' printed (DXF NW elevation dim 2EEC + PDF) -> wi |
+| 11-05 10:52 | Verifier | SUCCESS | final 10:52 (single line); none (READY 0: T-522 CLAIMED W2 10:40; T-520 / T-524 TODO; T-498 / T-423 r2 BLOCKED on the wrapper allow-list) |
+| 11-05 10:53 | Verifier | SUCCESS | STARTED 10:53; final line stamped a minute before STARTED (clock skew), run closed |
+| 11-05 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:16; T-524 READY agents/task-T-524 @66ca67b4 / B9-02 lintel end zones at the 10 FLAGGED_DEFICIT lintels: T-453 0.51 |
+| 11-05 11:20 | Worker 1 | SUCCESS | STARTED 11:20, final 11:44; T-520 READY @06dd8e1e / B9-04 perimeter joint mortar (R-T520-1, increment over the panel by block count): 0.20 |
+| 11-05 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:05; T-520, T-524, T-522 / All 3 GATE A PASS, MERGED engine 4777890b (engine push): own DXF re-measure AGREE on 1F- |
+| 11-05 12:18 | Lead | SUCCESS | STARTED 12:18, final 12:24; board / Since 08:15: 6 merged, all WORKED (T-519 lintel pieces 6 PRODUCED/10 HELD, T-520 perimeter mortar +0.0 |
+| 11-05 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:46; T-528 READY 7cc43a88 / FINISH_MATERIALS_TABLE_V7 (unwired): stair 1:3 bed cement/sand from UP-STAIR-017 (Q-53  |
+| 11-05 12:52 | Verifier | SUCCESS | STARTED 12:52, final 12:53; T-528 / T-528 GATE A PASS, MERGED engine 046b9ad3 (engine push): own re-derivation of Q-53 C AGREE (9.576 bags |
+| 11-05 13:01 | Worker 3 | BLOCKED | STARTED 13:01, final 13:03; T-525 / Registry gate fix not built: promoting T-507 (merge c94b35c1) into BOQ_FAMILY_MASTER_1.56.0 by R-T485- |
+| 11-05 13:21 | Worker 1 | SUCCESS | STARTED 13:21, final 13:36; T-526 READY @4292bce2 / B9-04 column run ends: V1 junction census (T-355/T-317) lists only BLOCK/COLUMN pieces |
+| 11-05 13:52 | Verifier | SUCCESS | STARTED 13:52, final 14:13; T-526 / T-526 GATE A PASS, MERGED engine 1c0ac911 (engine push): own DXF re-measure (own arch->ST alignment 20 |
+| 11-05 14:40 | Worker 2 | SUCCESS | STARTED 14:40, final 15:02; T-529 READY 83ab8504 / B8-06 pool-court ledge: WP applicability V2 exposure step (R-WP-APPL-EXPOSED-2a..e, unw |
+| 11-05 14:51 | Verifier | SUCCESS | final 14:51 (single line); none (READY 0: T-529 CLAIMED W2 14:41; T-527 / T-530 / T-531 TODO; T-498 / T-525 blocked on the wrapper allow- |
+| 11-05 14:53 | Verifier | SUCCESS | STARTED 14:53; final line stamped a minute before STARTED (clock skew), run closed |
+| 11-05 15:00 | Worker 3 | SUCCESS | STARTED 15:00, final 15:21; T-530 READY 268ff93b / Wiring manifest on V3.0.58, test-checked (JSON == rebuild from merged outputs): 16 lint |
+| 11-05 15:21 | Worker 1 | SUCCESS | STARTED 15:21, final 15:35; T-527 READY @3186b467 / B9-02 lintel bearing at the curved bay: V3 reads the drawn inner face arc (r 1.935 m,  |
+| 11-05 15:50 | Verifier | SUCCESS | STARTED 15:50, final 16:02; T-527, T-529, T-530 (run session_01E6cPnaY3HqPUrdABVYu9xS; the STARTED line's id is garbled) / All 3 GATE A PA |
+| 11-05 16:16 | Lead | SUCCESS | STARTED 16:16, final 16:21; board / Since 12:20: 5 merged, all WORKED (T-526 12 column run ends, delta 0 / +0.007021 m3; T-527 W18 bearing |
+| 11-05 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 16:54:19 (seconds stamp); T-534 READY f97634e0 |
+| 11-05 16:50 | Verifier | SUCCESS | STARTED 16:50, final 16:51; none (READY 0: T-534 CLAIMED W2 16:41; T-531..T-533 / T-535..T-537 TODO; T-498 / T-525 blocked on the wrapper  |
+| 11-05 16:59 | Worker 3 | SUCCESS | STARTED 16:59, final 17:14; T-536 READY 6b7459ae / Wiring manifest V2 on V3.0.58 rebuilt from merged pieces: D-GF-13 lintel high 0.11292-> |
+| 11-05 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:32; T-531 READY 91d13020 / B9-02 lintel bars R-T531-1: ST7757 p.13 re-read prints no cover/bend/hook/first-link an |
+| 11-05 17:50 | Verifier | SUCCESS | STARTED 17:50, final 18:03; T-531, T-536, T-534 (run session_01E6cPndSPZ14Nhz9iYZdusv) / T-531 + T-536 GATE A PASS, MERGED engine 5953b91f |
+| 11-05 18:41 | Worker 2 | SUCCESS | STARTED 18:41, final 18:49; T-535 READY d5847801 / Sand purchase unit = loose m3 (owner Q-45/Q-53/Q-78, MISSION); supplier load size and b |
+| 11-05 18:50 | Verifier | SUCCESS | STARTED 18:50, final 18:53; T-535, T-534 (run session_01E6cPncZhoqEQeYNcHqxZxo) / T-535 GATE A PASS, MERGED engine c4a34358 (engine push): |
+| 11-05 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:10; T-537 READY d401b63d / R-T498-2 1.0.0 ranged lintel host face: base [net - sum face_hi, net - sum face_lo], op |
+| 11-05 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:26; T-532 READY (agents/task-T-532 @ b5297df0) / END_CENSUS_V3 (R-T532-1): T-274 kinds BEAM/FACE/NONE = masonry un |
+| 11-05 19:52 | Verifier | SUCCESS | STARTED 19:52, final 19:58; T-532, T-537, T-534 (run session_01E6cPndLBzoUT92VP9UfxXM) / T-532 GATE A PASS, MERGED engine ba9eba77 (engine |
+| 11-05 20:13 | Lead | SUCCESS | STARTED 20:13, final 20:17; board / Since 16:30: 4 merged WORKED (T-531 lintel bars AT_LEAST 38.761728 + 24.301496 kg, ends HELD; T-536 ma |
+| 11-05 20:41 | Worker 2 | SUCCESS | STARTED 20:41, final 20:49; T-540 READY (agents/task-T-540 @ 75ed76c2) / Sand load size + bulk density: census of owner rules, supplier li |
+| 11-05 20:51 | Verifier | SUCCESS | STARTED 20:51, final 20:54; T-540 (run unknown) / T-540 GATE A PASS, MERGED engine 509deaf7 (engine push): own check m3 = T-535 per trade  |
+| 11-05 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 21:14; T-538 READY (agents/task-T-538 @ 595742e5) / Gate fix F-C-T536-1: t536 unmerged-source case now on a synthetic |
+| 11-05 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 21:30; T-533 READY (agents/task-T-533 @ c8e73847) / 0.15 m black-block module: no level 1-4 source states it (drawing |
+| 11-05 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:15; T-538, T-534, T-533 (run session_01E6cPnb3SNn1zFPxmAQjA1N) / T-538 GATE A PASS, MERGED 9c160d22: t536 case on  |
+| 11-05 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 23:28; T-541 READY 83a30944 / Roof WP vs freelancer reconciled by component (his workbook read: one typed lump row 28 |
+| 11-05 22:50 | Verifier | SUCCESS | STARTED 22:50, final 22:55; T-541 (run session_01E6cPnrbudU7uynfst5PcGp) / T-541 GATE A PASS, MERGED engine 322c1409 (engine push): own P7 |
+| 11-05 22:59 | Worker 3 | SUCCESS | STARTED 22:59, final 23:05; T-537 r2 READY (agents/task-T-537 @ 79ce57bd) / R-T498-2 r2: HELD_BY_NAME lintel L_hi now bound by measured en |
+| 11-05 23:20 | Worker 1 | SUCCESS | STARTED 23:20, final 23:36; T-539 READY (agents/task-T-539 @ a963c2d5) / R-T539-1 accessory ledgers V2 on END_CENSUS_V3: 13 column ends gi |
+| 11-05 23:51 | Verifier | SUCCESS | STARTED 23:51, final 00:07; T-539, T-537 r2 (run session_01E6cPndrU9oTgjtPKM6h391) / T-539 GATE A PASS, MERGED 9b754fad: own T-274 thickne |
+| 11-06 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:20; board / Since 20:17: 7 merged all WORKED (T-540, T-538, T-534, T-533, T-541, T-537 r2, T-539), 0 rejected; no  |
+| 11-06 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 00:50; T-542 READY 5e7a3172 / Stair bed classed per component (tread Q-45 B, riser Q-45 item 1, landing/arrival Q-53  |
+| 11-06 00:51 | Verifier | SUCCESS | final 00:51 (single line); none (run session_01E6cPnacQED9qAFECYP1DA5) / READY 0 (T-542 CLAIMED W2; T-543..T-549 TODO; T-498 / T-423 r2 / |
+| 11-06 00:52 | Verifier | SUCCESS | STARTED 00:52; final line stamped a minute before STARTED (clock skew), run closed |
+| 11-06 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 01:06; T-548 READY c16dfbe4 / Reconciled-quantities statement builder R-T548-1 (exact closure, per trade/unit/referen |
+| 11-06 01:21 | Worker 1 | SUCCESS | STARTED 01:21, final 01:36; T-543 READY @54f9f313 / B9 blockwork vs freelancer closed exactly: his 1,260.6895 - V3.0.58 467.7925 = 792.897 |
+| 11-06 01:51 | Verifier | SUCCESS | STARTED 01:51, final 02:27; T-543, T-548, T-542 (run session_01E6cPnePbQJZ6FeB7EzpVLN) / 3x GATE A PASS, MERGED engine 3f3b580c (engine pu |
+| 11-06 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 02:54; T-546 READY 311c8ee7 / wet-room floor WP +13.565710 m2 (V3.0.58, +18.84 %) closes room by room, residual 0: pa |
+| 11-06 02:50 | Verifier | SUCCESS | STARTED 02:50, final 02:51; none (run session_01E6cPncb6mHooHG9LYZ4ft9) / READY 0 (T-542/T-543/T-548 merged 02:27 at 3f3b580c; T-546 CLAIM |
+| 11-06 02:59 | Worker 3 | SUCCESS | STARTED 02:59, final 03:12; T-549 READY a7721790 / WIRING MANIFEST V4: 8 merges since V3 covered under R-T549-1 (pinned range, missing pie |
+| 11-06 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:38; T-544 READY @045b194f / 1F held lintels W16/W19/W20/W24: 8 ends measured (V3, W24 END past 3.0 m to a column 4 |
+| 11-06 03:50 | Verifier | SUCCESS | STARTED 03:50, final 04:01; T-544, T-549, T-546 (run session_01E6cPnbEyfJ2CQfcp7BN3Qw) / 3x GATE A PASS MERGED (engine push a615fa41): T-5 |
