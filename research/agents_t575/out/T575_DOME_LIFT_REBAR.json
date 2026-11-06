@@ -1,0 +1,408 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (unchanged)",
+ "freelancer": "TYPED_LUMP 44.19 t, no bar row (T-560): NOT_COMPARABLE, no %",
+ "method": "DOME_LIFT_REBAR_V1 (R-T575-1 .. 6)",
+ "rows": [
+  {
+   "concrete_class": "HELD",
+   "concrete_line": "L-d5401fa8986900c66c37",
+   "groups": [],
+   "missing": "no structural drawing of the third (tower) dome: architectural only (S8.3 CF-S8.3-01, Q-27 / Q-S8.3-03); the p.7 detail is not referenced to it and its size differs (chord 4.41, rise 2.15): applying it would be a borrowed value",
+   "row_id": "DG5:DOME-3:SHELL:REBAR",
+   "status": "HELD_BLANK",
+   "t_high": null,
+   "t_low": null,
+   "unit": "t"
+  },
+  {
+   "bar_source_conflict": "no member tag (Q-61 C(3)): DETAIL OF DOME only",
+   "concrete_class": "HELD",
+   "concrete_line": "L-ab37afa17f2ac5b0efd1",
+   "groups": [
+    {
+     "group": "RING_MAINS[DETAIL]",
+     "kg_per_m": 10.740741,
+     "layers": [
+      "3 x d16 (RING_TOP)",
+      "3 x d18 (RING_BOTTOM)"
+     ],
+     "readings": [
+      {
+       "circle_m": 14.521,
+       "inbay_m": 8.9974,
+       "position": "DOME-B:PLAN",
+       "t": [
+        0.096638,
+        0.155966
+       ]
+      },
+      {
+       "circle_m": 13.2644,
+       "inbay_m": 13.1082,
+       "position": "DOME-B:DETAIL",
+       "t": [
+        0.140791,
+        0.142469
+       ]
+      }
+     ],
+     "source": "ST p.7 DETAIL OF DOME ring section (both cuts); depth dimensioned 'as per arch'",
+     "status": "HELD_RANGE",
+     "t": [
+      0.096638,
+      0.155966
+     ]
+    },
+    {
+     "count": [
+      72,
+      117
+     ],
+     "group": "RING_LINKS[DETAIL]",
+     "status": "HELD_BLANK",
+     "why": "count by the printed rate; mass needs cover + hooks (not printed) + ring depth ('as per arch')"
+    },
+    {
+     "group": "RING_SIDE[DETAIL]",
+     "status": "HELD_BLANK",
+     "why": "rows at the printed spacing over a depth 'as per arch'"
+    },
+    {
+     "group": "RING_LAPS_AND_JUNCTIONS",
+     "status": "HELD_BLANK",
+     "why": "closed ring 14.521 m > 12.0 m stock; no lap / junction detail with the framing beams and columns"
+    }
+   ],
+   "ring_position_readings": [
+    {
+     "id": "DOME-B:PLAN",
+     "inbay_area_m2": 1.799471303,
+     "r_c": 2.311092
+    },
+    {
+     "id": "DOME-B:DETAIL",
+     "inbay_area_m2": 2.621630119,
+     "r_c": 2.111092
+    }
+   ],
+   "row_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "status": "HELD_RANGE",
+   "t_high": 0.155966,
+   "t_low": 0.096638,
+   "unit": "t"
+  },
+  {
+   "bar_source_conflict": "B4 tag + schedule vs DETAIL OF DOME (R-T575-5; S8.3 CF-S8.3-04): both evaluated; Q-44 A chose B4 for a skylight with the dome removed, S0 keeps the dome (Q-29 refined 2026-10-22)",
+   "concrete_class": "RELEASED",
+   "concrete_line": "L-48b7d139bff681199543",
+   "groups": [
+    {
+     "group": "RING_MAINS[DETAIL]",
+     "kg_per_m": 10.740741,
+     "layers": [
+      "3 x d16 (RING_TOP)",
+      "3 x d18 (RING_BOTTOM)"
+     ],
+     "readings": [
+      {
+       "circle_m": 14.521,
+       "inbay_m": 7.5526,
+       "position": "DOME-A:PLAN",
+       "t": [
+        0.08112,
+        0.155966
+       ]
+      },
+      {
+       "circle_m": 13.2644,
+       "inbay_m": 11.4223,
+       "position": "DOME-A:DETAIL",
+       "t": [
+        0.122684,
+        0.142469
+       ]
+      }
+     ],
+     "source": "ST p.7 DETAIL OF DOME ring section (both cuts); depth dimensioned 'as per arch'",
+     "status": "HELD_RANGE",
+     "t": [
+      0.08112,
+      0.155966
+     ]
+    },
+    {
+     "count": [
+      61,
+      117
+     ],
+     "group": "RING_LINKS[DETAIL]",
+     "status": "HELD_BLANK",
+     "why": "count by the printed rate; mass needs cover + hooks (not printed) + ring depth ('as per arch')"
+    },
+    {
+     "group": "RING_SIDE[DETAIL]",
+     "status": "HELD_BLANK",
+     "why": "rows at the printed spacing over a depth 'as per arch'"
+    },
+    {
+     "group": "RING_MAINS[B4]",
+     "kg_per_m": 8.098765,
+     "layers": [
+      "2 x d12 (RING_TOP)",
+      "4 x d16 (RING_BOTTOM)"
+     ],
+     "readings": [
+      {
+       "circle_m": 14.521,
+       "inbay_m": 7.5526,
+       "position": "DOME-A:PLAN",
+       "t": [
+        0.061166,
+        0.117602
+       ]
+      },
+      {
+       "circle_m": 13.2644,
+       "inbay_m": 11.4223,
+       "position": "DOME-A:DETAIL",
+       "t": [
+        0.092506,
+        0.107425
+       ]
+      }
+     ],
+     "source": "ST p.10 simple-beam schedule row B4 20 x 50 (plan tag on the west ring, S6 / T-160)",
+     "status": "HELD_RANGE",
+     "t": [
+      0.061166,
+      0.117602
+     ]
+    },
+    {
+     "count": [
+      46,
+      88
+     ],
+     "group": "RING_LINKS[B4]",
+     "status": "HELD_BLANK",
+     "why": "count by the printed rate; mass needs cover + hooks (not printed)"
+    },
+    {
+     "group": "RING_LAPS_AND_JUNCTIONS",
+     "status": "HELD_BLANK",
+     "why": "closed ring 14.521 m > 12.0 m stock; no lap / junction detail with the framing beams and columns"
+    }
+   ],
+   "ring_position_readings": [
+    {
+     "id": "DOME-A:PLAN",
+     "inbay_area_m2": 1.510512768,
+     "r_c": 2.311092
+    },
+    {
+     "id": "DOME-A:DETAIL",
+     "inbay_area_m2": 2.284454952,
+     "r_c": 2.111092
+    }
+   ],
+   "row_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "status": "HELD_RANGE",
+   "t_high": 0.155966,
+   "t_low": 0.061166,
+   "unit": "t"
+  },
+  {
+   "concrete_class": "RELEASED",
+   "concrete_line": "L-8ea34765d16b54898140",
+   "geometry": {
+    "R_out": 2.235289,
+    "a": 0.335289,
+    "rho_bounds": [
+     2.141289,
+     2.229289
+    ]
+   },
+   "groups": [
+    {
+     "d_mm": 12,
+     "group": "SHELL_HOOP",
+     "m": [
+      162.0056,
+      183.7622
+     ],
+     "spacing_m": 0.15,
+     "status": "HELD_RANGE",
+     "t": [
+      0.144005,
+      0.163344
+     ],
+     "why": "bar radius within the shell (cover not printed) x first-hoop offset"
+    },
+    {
+     "d_mm": 12,
+     "group": "SHELL_MERIDIONAL",
+     "m": [
+      161.9876,
+      294.363
+     ],
+     "spacing_m": 0.15,
+     "status": "HELD_RANGE",
+     "t": [
+      0.143989,
+      0.261656
+     ],
+     "why": "crown curtailment not printed: area / s .. all bars to the crown"
+    },
+    {
+     "group": "SHELL_ANCHORAGE_INTO_RING",
+     "status": "HELD_BLANK",
+     "why": "leg into the ring follows the ring depth ('as per arch'); detail N.I.S"
+    },
+    {
+     "group": "SHELL_HOOP_LAPS",
+     "status": "HELD_BLANK",
+     "why": "longest hoop 13.848 m > 12.0 m stock: laps needed, no lap printed for shell bars (owner 2026-10-24 15:31 (3): every other lap HELD)"
+    }
+   ],
+   "row_id": "HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "source": "ST p.7 DETAIL OF DOME: chord / rise / thickness dims; one mesh, two directions, d12 at 0.15 (both labels)",
+   "status": "HELD_RANGE",
+   "t_high": 0.425,
+   "t_low": 0.287994,
+   "unit": "t"
+  },
+  {
+   "concrete_class": "RELEASED",
+   "concrete_line": "L-fffa895ed96b9d6a682c",
+   "geometry": {
+    "R_out": 2.235289,
+    "a": 0.335289,
+    "rho_bounds": [
+     2.141289,
+     2.229289
+    ]
+   },
+   "groups": [
+    {
+     "d_mm": 12,
+     "group": "SHELL_HOOP",
+     "m": [
+      162.0056,
+      183.7622
+     ],
+     "spacing_m": 0.15,
+     "status": "HELD_RANGE",
+     "t": [
+      0.144005,
+      0.163344
+     ],
+     "why": "bar radius within the shell (cover not printed) x first-hoop offset"
+    },
+    {
+     "d_mm": 12,
+     "group": "SHELL_MERIDIONAL",
+     "m": [
+      161.9876,
+      294.363
+     ],
+     "spacing_m": 0.15,
+     "status": "HELD_RANGE",
+     "t": [
+      0.143989,
+      0.261656
+     ],
+     "why": "crown curtailment not printed: area / s .. all bars to the crown"
+    },
+    {
+     "group": "SHELL_ANCHORAGE_INTO_RING",
+     "status": "HELD_BLANK",
+     "why": "leg into the ring follows the ring depth ('as per arch'); detail N.I.S"
+    },
+    {
+     "group": "SHELL_HOOP_LAPS",
+     "status": "HELD_BLANK",
+     "why": "longest hoop 13.848 m > 12.0 m stock: laps needed, no lap printed for shell bars (owner 2026-10-24 15:31 (3): every other lap HELD)"
+    }
+   ],
+   "row_id": "HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "source": "ST p.7 DETAIL OF DOME: chord / rise / thickness dims; one mesh, two directions, d12 at 0.15 (both labels)",
+   "status": "HELD_RANGE",
+   "t_high": 0.425,
+   "t_low": 0.287994,
+   "unit": "t"
+  },
+  {
+   "concrete_class": "HELD",
+   "concrete_line": "L-684fcad323adc0c8a267",
+   "formula": {
+    "A_t_per_m": [
+     0.169284,
+     0.200217
+    ],
+    "B_t": [
+     0.009778,
+     0.101057
+    ],
+    "horizontal_run_per_row_m": [
+     11.0,
+     16.8
+    ],
+    "kg(h)": "A x h + B",
+    "n_vertical": 70,
+    "net_wall_m": 5.5,
+    "segments_m": {
+     "E": 0.7,
+     "N": 1.8,
+     "S": 1.8,
+     "W": 1.2
+    }
+   },
+   "groups": [
+    {
+     "d_mm": 12,
+     "group": "WALL_HORIZONTAL",
+     "per_m": 6,
+     "status": "HELD_BLANK",
+     "why": "h"
+    },
+    {
+     "d_mm": 16,
+     "group": "WALL_VERTICAL",
+     "per_m": 6,
+     "status": "HELD_BLANK",
+     "why": "h; embedment into the raft bounded 0 .. raft depth (cover not printed)"
+    },
+    {
+     "d_mm": 12,
+     "group": "WALL_TOP_BARS",
+     "n": 2,
+     "status": "HELD_BLANK",
+     "why": "bounded in B; part of a wall that has no height"
+    },
+    {
+     "group": "WALL_LAPS_AND_COLUMN_JUNCTIONS",
+     "status": "HELD_BLANK",
+     "why": "not printed: bars stopping at or running through the lift columns is the A range"
+    }
+   ],
+   "missing": "pit depth / wall height h not printed ('as per lift manufacturer'); bars only as kg(h)",
+   "row_id": "LIFT_PIT:WALLS:REBAR",
+   "source": "ST p.14 lift detail: leader to the bar dots = horizontals d12 6/m each face; leader crossing the vertical lines = verticals d16 6/m each face, drawn down to the raft bottom mat; 2 d12 in the wall top; 2 d16 at the wall foot are raft bars (footing line, not here); pit depth not printed",
+   "status": "HELD_BLANK",
+   "t_high": null,
+   "t_low": null,
+   "unit": "t"
+  }
+ ],
+ "schema": "URBAN_T575_DOME_LIFT_REBAR_V1",
+ "task": "T-575",
+ "totals": {
+  "held_blank_rows": 2,
+  "held_range_rows": 4,
+  "rows": 6,
+  "t_high": 1.161932,
+  "t_low": 0.733792,
+  "valued_t": 0.0
+ },
+ "unit_mass": "d^2 / 162 kg/m (rebar_unit_mass.D2_OVER_162)"
+}
