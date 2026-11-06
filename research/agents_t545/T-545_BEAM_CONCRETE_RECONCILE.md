@@ -103,9 +103,11 @@ D-39 (roof datum) does not enter a beam volume: every beam depth is printed over
   D-02 / D-03 / D-04 / D-05 / D-26 / D-27, already in the RFI package; ERS s.2.7 not met: **no owner question**.
 - UNRESOLVED -0.365 m3 named per mark: GF B7 (one of his B7 rows has no location, T-252), 1F CB12 (his length 0.64 m
   beyond the drawn supports), 2F B2 (1.09 m beyond); +0.015 of 6-dp / sub-cm lengths on GF B11 / B8, 1F B11 / B6.
-- Uncertain: RUN_COUNT binds his rows to runs by length; his two 1F B4 rows (0.20 x 0.50) are bound to the straight B4
-  runs, the same section as the ring B4: the Checker should look at whether one is his ring reading (moves at most
-  +0.331 between RUN_COUNT and DOME_RING; total unchanged).
+- Uncertain: RUN_COUNT binds his rows to runs by length. 1F B4 and the ring share the section 0.20 x 0.50; engine side
+  (drawing facts only): three straight B4 runs 3.812 / 4.100 / 4.300 m and the west ring 7.552 m in bay. The Checker
+  compares his B4 rows privately (`MARKS_T545.csv`) with these; a ring reading would move at most +0.331 between
+  RUN_COUNT and DOME_RING, total unchanged. 1F CB12: T-110 records the schedule's printed spans 6.1 / 5.5 m
+  (centre to centre) beside the drawn 5.757 + 5.025 m; the Checker re-reads the UNTRACED term against both.
 - No ENGINE_WRONG found: no fix proposal, no quantity change.
 
 ## 7. Rules, tests, lessons row (proposed)
