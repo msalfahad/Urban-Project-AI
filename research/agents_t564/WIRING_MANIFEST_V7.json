@@ -1,0 +1,1369 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+ "candidate_files_touched": 0,
+ "candidate_lines_moved_v6_to_v7": 0,
+ "coverage": {
+  "covered": [
+   "T-551",
+   "T-553",
+   "T-558",
+   "T-561",
+   "T-562",
+   "T-566"
+  ],
+  "first_parent_merges": 6,
+  "range": [
+   "431ac67f",
+   "33a5833f"
+  ]
+ },
+ "coverage_rule": "R-T549-1 MANIFEST COVERAGE (every villa; provenance F-C-T536-1 / T-538, T-549): a wiring manifest names its range (previous manifest base, this base] on the first-parent line; every 'Merge agents/task-T-<n>' in it is a source with that merge commit or a declared NO_WIRING piece with its reason; a merged piece missing from the manifest, a source outside the range or with another merge commit is refused. The range is pinned: a later merge belongs to the next manifest and never turns this one red.",
+ "findings": [
+  "F-T564-1: the census finds F-T553-1 and F-T553-2 by rule (C1 / C2) and NO OTHER ENGINE_WRONG floor in the candidate; the one other C1 hit (2F-ST-ARRIVAL skirting) is ENGINE_RIGHT: its floor is the B7 landing L-5d2be30d (Q-70 A)",
+  "F-T564-2: the GF WP-floor cover residual 9.630133 m2 is the kitchen re-code (9.630001) + 0.000132 rounding of the pantry membrane printed to 3 dp (13.455 vs 13.454868 of wet finishes in 4 pieces): after the re-code every storey is COVERED",
+  "F-T564-3: T-561's return-paint omission had no owning row; PAINT_RETURN_MISSING carries it HELD, never 0"
+ ],
+ "fix_rows": {
+  "rows": [
+   {
+    "before": "no floor-finish line, no bed line",
+    "closes": "F-T553-1",
+    "evidence_status": "DRAWING-CONFIRMED area (ARCH.SPACE released since V3.0.14; Checker T-553 12:01 1.65 x 1.80 = 2.970); finish material HELD by name (unlabelled face, T-086); bed depth the candidate's own DRY range (Q-45)",
+    "expected_after": {
+     "add": [
+      {
+       "class": "RELEASED",
+       "element_id": "1F-RFFE7AF:floor",
+       "item_code": "FIN.FLOOR.FINISH_HELD",
+       "material": "HELD by name (no finish class in the line index for this space)",
+       "unit": "m2",
+       "value": 2.97
+      },
+      {
+       "class": "RELEASED",
+       "element_id": "1F-RFFE7AF:floor:bed",
+       "item_code": "FIN.FLOOR.BED.DRY",
+       "unit": "m2",
+       "value": 2.97
+      },
+      {
+       "class": "HELD",
+       "element_id": "1F-RFFE7AF:floor:bed",
+       "held_high": 0.1188,
+       "held_low": 0.0891,
+       "item_code": "FIN.FLOOR.BED.DRY",
+       "unit": "m3",
+       "value": null
+      }
+     ],
+     "floor_change_m2": 2.97
+    },
+    "id": "FLOOR_MISSING:1F-RFFE7AF",
+    "physical_element": "the finished floor of the enclosed 1F dressing (ceiling, ceiling paint and skirting lines exist; floor area = its ARCH.SPACE line)",
+    "source": [
+     {
+      "checker": "Verifier 2026-11-06 12:01Z GATE A PASS: floor tile 387.094 vs 409.58 m2 (-5.49 %) by room; ENGINE_WRONG F-T553-1 1F dressing 2.970 m2 no floor line, F-T553-2 GF kitchen coded PORCELAIN on a wet bed / membrane (0 m2); wiring T-564",
+      "merge": "b6e52d40",
+      "task": "T-553"
+     }
+    ],
+    "verdict": "ENGINE_WRONG"
+   },
+   {
+    "before": {
+     "class": "RELEASED",
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "m2": 9.630001
+    },
+    "closes": "F-T553-2",
+    "evidence_status": "VERIFIED area (unchanged); class from the line's own wet bed + WP floor (Q-30 A, UP-WET-001, owner wet-area rule 2026-11-02)",
+    "expected_after": {
+     "class": "RELEASED",
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "m2": 9.630001,
+     "m2_change": 0.0
+    },
+    "id": "FLOOR_CLASS:L-83609efc5fdb5d38f059",
+    "physical_element": "the floor finish of GF-RA3AD49 on a WET bed (L-2b9341453af532f440a9, L-4dbd4c820b77d0fd8d9f) under a floor membrane",
+    "source": [
+     {
+      "checker": "Verifier 2026-11-06 12:01Z GATE A PASS: floor tile 387.094 vs 409.58 m2 (-5.49 %) by room; ENGINE_WRONG F-T553-1 1F dressing 2.970 m2 no floor line, F-T553-2 GF kitchen coded PORCELAIN on a wet bed / membrane (0 m2); wiring T-564",
+      "merge": "b6e52d40",
+      "task": "T-553"
+     }
+    ],
+    "verdict": "ENGINE_WRONG (class)"
+   }
+  ],
+  "t553_restated": {
+   "after": {
+    "DRY": "295.390972",
+    "FINISH_HELD": "9.0975",
+    "WET": "85.575578"
+   },
+   "before": {
+    "DRY": "305.020973",
+    "FINISH_HELD": "6.1275",
+    "WET": "75.945577"
+   },
+   "freelancer_m2": "409.58",
+   "gap_after_pct": "-4.76",
+   "gap_before_pct": "-5.49",
+   "note": "areas installed, no waste; FINISH_HELD = area released, material HELD",
+   "total_after_m2": "390.064050",
+   "total_before_m2": "387.094050"
+  }
+ },
+ "floor_census": {
+  "adds": [
+   {
+    "binding": null,
+    "class": "RELEASED",
+    "element_id": "1F-RFFE7AF:floor",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.FLOOR.FINISH_HELD",
+    "line_id": "NEW:1F-RFFE7AF:0",
+    "measured_net": 2.97,
+    "unbound_records": [],
+    "unit": "m2"
+   },
+   {
+    "binding": null,
+    "class": "RELEASED",
+    "element_id": "1F-RFFE7AF:floor:bed",
+    "held_high": null,
+    "held_low": null,
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "NEW:1F-RFFE7AF:1",
+    "measured_net": 2.97,
+    "unbound_records": [],
+    "unit": "m2"
+   },
+   {
+    "binding": null,
+    "class": "HELD",
+    "element_id": "1F-RFFE7AF:floor:bed",
+    "held_high": 0.1188,
+    "held_low": 0.0891,
+    "item_code": "FIN.FLOOR.BED.DRY",
+    "line_id": "NEW:1F-RFFE7AF:2",
+    "measured_net": null,
+    "unbound_records": [],
+    "unit": "m3"
+   }
+  ],
+  "after_hits": {
+   "C1": [
+    "2F-ST-ARRIVAL"
+   ],
+   "C2": 0,
+   "C3": {
+    "1F": [
+     0.0,
+     "COVERED"
+    ],
+    "2F": [
+     0.0,
+     "COVERED"
+    ],
+    "GF": [
+     0.000132,
+     "COVERED"
+    ]
+   },
+   "C4": 0
+  },
+  "before": {
+   "C1_missing_floor": [
+    {
+     "ceiling_m2": [
+      2.97
+     ],
+     "evidence_lines": [
+      [
+       "L-4a85470b3a822d6fb7bb",
+       "FIN.SKIRTING",
+       "RELEASED"
+      ],
+      [
+       "L-975c3f4b509193b81f84",
+       "FIN.PAINT.CEILING",
+       "RELEASED"
+      ],
+      [
+       "L-d0a131bb108d5a3bb215",
+       "FIN.CEILING",
+       "RELEASED"
+      ]
+     ],
+     "key": "1F-RFFE7AF",
+     "space_lines": [
+      [
+       "L-390e3b9f1ce6e01d4d15",
+       2.97
+      ]
+     ],
+     "storey": "1F",
+     "wet_scope": false
+    },
+    {
+     "ceiling_m2": [],
+     "evidence_lines": [
+      [
+       "L-dff4f49f47f341682fb3",
+       "FIN.SKIRTING",
+       "RELEASED"
+      ]
+     ],
+     "key": "2F-ST-ARRIVAL",
+     "space_lines": [],
+     "storey": "2F",
+     "wet_scope": false
+    }
+   ],
+   "C2_wet_bed_dry_finish": [
+    {
+     "bed_lines": [
+      "L-2b9341453af532f440a9",
+      "L-4dbd4c820b77d0fd8d9f"
+     ],
+     "bed_scope": "WET",
+     "class": "RELEASED",
+     "element_id": "GF-RA3AD49:floor",
+     "expected_item_code": "FIN.FLOOR.WET_TILE",
+     "finish_scope": "DRY",
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-83609efc5fdb5d38f059",
+     "m2": 9.630001
+    }
+   ],
+   "C3_wp_floor_cover": {
+    "1F": {
+     "residual_m2": 0.0,
+     "shortfall_m2": 0.0,
+     "spaces": [
+      {
+       "key": "1F-R26FA0D",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 10.151,
+       "wp_lines": [
+        "L-66501a74bc489a80d283"
+       ],
+       "wp_m2": 10.151
+      },
+      {
+       "key": "1F-R48AA46",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 5.0225,
+       "wp_lines": [
+        "L-790a3049c29eda7dad2a"
+       ],
+       "wp_m2": 5.0225
+      },
+      {
+       "key": "1F-R48CDA5",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 4.725,
+       "wp_lines": [
+        "L-ef429ae8e32c8b5cc641"
+       ],
+       "wp_m2": 4.725
+      },
+      {
+       "key": "1F-R52AC05",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 2.646,
+       "wp_lines": [
+        "L-75a5ef579ff6ffa1cf0a"
+       ],
+       "wp_m2": 2.646
+      },
+      {
+       "key": "1F-R8BDA49",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 5.0225,
+       "wp_lines": [
+        "L-f15325df772daa7ceec0"
+       ],
+       "wp_m2": 5.0225
+      },
+      {
+       "key": "1F-RED23B8",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 3.5775,
+       "wp_lines": [
+        "L-6477c7ef451aae374ecc"
+       ],
+       "wp_m2": 3.5775
+      }
+     ],
+     "state": "COVERED",
+     "uncovered_wet_finish": [],
+     "uncovered_wet_m2": 0.0
+    },
+    "2F": {
+     "residual_m2": 0.0,
+     "shortfall_m2": 0.0,
+     "spaces": [
+      {
+       "key": "2F-RE83BED",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 5.55,
+       "wp_lines": [
+        "L-bed47a63708c41b2b150"
+       ],
+       "wp_m2": 5.55
+      }
+     ],
+     "state": "COVERED",
+     "uncovered_wet_finish": [],
+     "uncovered_wet_m2": 0.0
+    },
+    "GF": {
+     "residual_m2": 9.630133,
+     "shortfall_m2": 14.130134,
+     "spaces": [
+      {
+       "key": "GF-R8496F0",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 3.1325,
+       "wp_lines": [
+        "L-0c6db650bad175d34abb"
+       ],
+       "wp_m2": 3.1325
+      },
+      {
+       "key": "GF-RA3AD49",
+       "shortfall_m2": 9.630001,
+       "wet_finish_m2": 0.0,
+       "wp_lines": [
+        "L-2c557dad8748a2c2848b"
+       ],
+       "wp_m2": 9.630001
+      },
+      {
+       "key": "GF-RB28769",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 2.36761,
+       "wp_lines": [
+        "L-875de0625f00bf4128fc"
+       ],
+       "wp_m2": 2.36761
+      },
+      {
+       "key": "GF-RB62B55",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 3.375,
+       "wp_lines": [
+        "L-d7899629d78501dc3b66"
+       ],
+       "wp_m2": 3.375
+      },
+      {
+       "key": "GF-RC99C2A",
+       "shortfall_m2": 4.500133,
+       "wet_finish_m2": 8.954867,
+       "wp_lines": [
+        "L-f32abcdb3b4db6877c64"
+       ],
+       "wp_m2": 13.455
+      },
+      {
+       "key": "GF-RD36087",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 1.485,
+       "wp_lines": [
+        "L-514c78e25600e261a37c"
+       ],
+       "wp_m2": 1.485
+      },
+      {
+       "key": "GF-RD6F891",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 3.717683,
+       "wp_lines": [
+        "L-538c929be1d81708f09f"
+       ],
+       "wp_m2": 3.717683
+      },
+      {
+       "key": "GF-RDBD4F9",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 4.730695,
+       "wp_lines": [
+        "L-e37ce315bbb83a4630cf"
+       ],
+       "wp_m2": 4.730695
+      },
+      {
+       "key": "GF-RDF7D28",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 2.3625,
+       "wp_lines": [
+        "L-3e5759e5282160f313b6"
+       ],
+       "wp_m2": 2.3625
+      },
+      {
+       "key": "GF-RF38DAF",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 2.675221,
+       "wp_lines": [
+        "L-ed8d62f6e695b361d8f6"
+       ],
+       "wp_m2": 2.675221
+      },
+      {
+       "key": "GF-RFAD3C4",
+       "shortfall_m2": 0.0,
+       "wet_finish_m2": 1.95,
+       "wp_lines": [
+        "L-81e5c35fcaba34dd8e3e"
+       ],
+       "wp_m2": 1.95
+      }
+     ],
+     "state": "RESIDUAL",
+     "uncovered_wet_finish": [
+      [
+       "L-50307dd94f499430bd43",
+       "HL:FLOOR_SCOPE:TO_WET:GF:GF-OP-003-NO-OPENING:pantry",
+       0.6
+      ],
+      [
+       "L-6c83b9fcaa8684a4b85b",
+       "HL:FLOOR_SCOPE:WET:GF:SITE-0a31aaa10796d33a",
+       1.1
+      ],
+      [
+       "L-771d52d71dc386b53d29",
+       "HL:FLOOR_SCOPE:WET:GF:GF-PANTRY-RC06FED",
+       2.800001
+      ]
+     ],
+     "uncovered_wet_m2": 4.500001
+    }
+   },
+   "C4_bed_pair": [],
+   "out_of_scope": {
+    "SOFFIT:": {
+     "lines": [
+      "L-10404364d725471e3213",
+      "L-23072352a28aeca7b051",
+      "L-7cd2cd75128f101a208c",
+      "L-80bc93761800e7ba1968",
+      "L-c041069e7b1c0dffcd8c"
+     ],
+     "reason": "exterior slab soffit (no enclosed space below; T-435 reverse join: no floor finish by nature)"
+    },
+    "STAIR-SKIRT:": {
+     "lines": [
+      "L-33f2018c987f782d1c91",
+      "L-5273c35e05acc8ebeb59",
+      "L-549f98e6504c9fdf25f8",
+      "L-66d6ac9a698b265778ae",
+      "L-760bfa8dd00061361695",
+      "L-b442a00bf07405eaaa93"
+     ],
+     "reason": "B7 stair skirting (its floor is the B7 landing / tread marble, owned by the stair lines)"
+    }
+   },
+   "rule": "R-T564-1",
+   "spaces": 43
+  },
+  "c3_explained": {
+   "1F": {
+    "residual_after_m2": 0.0,
+    "residual_before_m2": 0.0,
+    "state_after": "COVERED",
+    "state_before": "COVERED"
+   },
+   "2F": {
+    "residual_after_m2": 0.0,
+    "residual_before_m2": 0.0,
+    "state_after": "COVERED",
+    "state_before": "COVERED"
+   },
+   "GF": {
+    "residual_after_m2": 0.000132,
+    "residual_before_m2": 9.630133,
+    "state_after": "COVERED",
+    "state_before": "RESIDUAL"
+   }
+  },
+  "classified": {
+   "C1": [
+    {
+     "ceiling_m2": [
+      2.97
+     ],
+     "evidence_lines": [
+      [
+       "L-4a85470b3a822d6fb7bb",
+       "FIN.SKIRTING",
+       "RELEASED"
+      ],
+      [
+       "L-975c3f4b509193b81f84",
+       "FIN.PAINT.CEILING",
+       "RELEASED"
+      ],
+      [
+       "L-d0a131bb108d5a3bb215",
+       "FIN.CEILING",
+       "RELEASED"
+      ]
+     ],
+     "expected_after": {
+      "add": [
+       {
+        "class": "RELEASED",
+        "element_id": "1F-RFFE7AF:floor",
+        "item_code": "FIN.FLOOR.FINISH_HELD",
+        "material": "HELD by name (no finish class in the line index for this space)",
+        "unit": "m2",
+        "value": 2.97
+       },
+       {
+        "class": "RELEASED",
+        "element_id": "1F-RFFE7AF:floor:bed",
+        "item_code": "FIN.FLOOR.BED.DRY",
+        "unit": "m2",
+        "value": 2.97
+       },
+       {
+        "class": "HELD",
+        "element_id": "1F-RFFE7AF:floor:bed",
+        "held_high": 0.1188,
+        "held_low": 0.0891,
+        "item_code": "FIN.FLOOR.BED.DRY",
+        "unit": "m3",
+        "value": null
+       }
+      ],
+      "floor_change_m2": 2.97
+     },
+     "key": "1F-RFFE7AF",
+     "space_lines": [
+      [
+       "L-390e3b9f1ce6e01d4d15",
+       2.97
+      ]
+     ],
+     "storey": "1F",
+     "verdict": "ENGINE_WRONG",
+     "wet_scope": false
+    },
+    {
+     "ceiling_m2": [],
+     "evidence_lines": [
+      [
+       "L-dff4f49f47f341682fb3",
+       "FIN.SKIRTING",
+       "RELEASED"
+      ]
+     ],
+     "expected_after": "no new line: the floor is carried by the owner line",
+     "key": "2F-ST-ARRIVAL",
+     "owner_line": "L-5d2be30dd8d2ffeacc42",
+     "space_lines": [],
+     "storey": "2F",
+     "verdict": "ENGINE_RIGHT",
+     "wet_scope": false,
+     "why": "T-443 (MERGED): SKIRT-T443:2F-ST-ARRIVAL 'material HELD beside the Q-70 A marble landing L-5d2be30d'; Q-70 A (owner): the 2F stair arrival is marble like the 1F landing (B7), not a B3 floor line"
+    }
+   ],
+   "C2": [
+    {
+     "bed_lines": [
+      "L-2b9341453af532f440a9",
+      "L-4dbd4c820b77d0fd8d9f"
+     ],
+     "bed_scope": "WET",
+     "class": "RELEASED",
+     "element_id": "GF-RA3AD49:floor",
+     "expected_after": {
+      "m2_change": 0.0,
+      "recode": [
+       "L-83609efc5fdb5d38f059",
+       "FIN.FLOOR.PORCELAIN",
+       "FIN.FLOOR.WET_TILE"
+      ]
+     },
+     "expected_item_code": "FIN.FLOOR.WET_TILE",
+     "finish_scope": "DRY",
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-83609efc5fdb5d38f059",
+     "m2": 9.630001,
+     "verdict": "ENGINE_WRONG"
+    }
+   ],
+   "bed_depth_m": {
+    "DRY": [
+     0.03,
+     0.04
+    ],
+    "WET": [
+     0.04,
+     0.06
+    ]
+   }
+  },
+  "recodes": {
+   "L-83609efc5fdb5d38f059": "FIN.FLOOR.WET_TILE"
+  },
+  "rule": "R-T564-1"
+ },
+ "inputs": {
+  "research/agents_t443/T-443_STAIR_ROOM_SKIRTING_SPLIT.md": "d6a27006b98209f9e6e41af5430b4bc90d84450907f2bf7ceb37d4290221fb87",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+  "research/agents_t523/t523_binding_map_v2.py": "183982ab1d9bbac1515e59ca048b26bc6031260bfa1e677e7f0a25ae38f55f7b",
+  "research/agents_t553/out/FLOOR_TILE_RECONCILE_T553.json": "6a58e668e48d8a7b3fe38a002c296495b7ba60ccebb341e0ad37e06333b3b8c4",
+  "research/agents_t558/WIRING_MANIFEST_V6.json": "b44b919e4ef749e7d283da6d080e1a806f590a9eba9ef474eeb833c23c78cfe9",
+  "research/agents_t561/out/T561_PAINT_RECONCILE.json": "f8d866b571e315ed5a877a27c23514e3f35bbc624a66992b6c34fbdea5de4b81",
+  "research/agents_t564/floor_census.py": "1be32ec382c997be74045348db16ea36c8b076c999bf1eeb539d78033a68f44f"
+ },
+ "no_wiring": {
+  "T-551": "reconciliation to cause (B10 concrete vs the freelancer): moves no line; ENGINE_WRONG none",
+  "T-558": "the V6 manifest itself: superseded here (every V6 statement carried unless listed in v6_to_v7)",
+  "T-562": "statement adapters (milestone text): moves no candidate line",
+  "T-566": "column mark registration: the 2 CONFLICT positions' lines (L-694a75c8, L-4c449657, L-1dc713c8) are already HELD; no line moves"
+ },
+ "packages": {
+  "FLOOR_FINISH_COMPLETENESS_WIRING (new)": {
+   "v7_changes": [
+    "see wiring_rows[0]"
+   ],
+   "why": "T-553 + R-T564-1"
+  },
+  "PAINT_RETURN_MISSING (new)": {
+   "v7_changes": [
+    "see wiring_rows[1]"
+   ],
+   "why": "T-561"
+  },
+  "T-363 / T-372 / T-513 / F package": {
+   "v7_changes": [],
+   "why": "no V7 piece moves their lines"
+  },
+  "T-423 r2 (paint / skirting)": {
+   "v7_changes": [],
+   "why": "the dressing skirting L-4a85470b exists; return paint is its own row PAINT_RETURN_MISSING"
+  },
+  "T-498 (S package)": {
+   "v7_changes": [],
+   "why": "no V7 piece moves a MAS line or a glue host"
+  },
+  "T-509 (B1-04 disposal)": {
+   "v7_changes": [],
+   "why": "no V7 piece touches B1"
+  },
+  "T-563 PLASTER_HEIGHT_V1_WIRING": {
+   "v7_changes": [],
+   "why": "T-561 confirms the paint height basis (only plaster moves); V6 row unchanged"
+  }
+ },
+ "pieces_new": {
+  "T-551": {
+   "gate": "A",
+   "merge": "ea98ad6e",
+   "rules": [
+    "R-T551-1",
+    "R-T551-2",
+    "R-T551-3",
+    "R-T551-4"
+   ],
+   "verdict": "Verifier 2026-11-06 11:59Z GATE A PASS: B10 columns -8.770 / necks -8.805 / footing -9.936 / blinding -34.321 m3 by component; no ENGINE_WRONG; PARTIAL GF C1-C3 marks -> T-566"
+  },
+  "T-553": {
+   "gate": "A",
+   "merge": "b6e52d40",
+   "rules": [
+    "R-T553-1"
+   ],
+   "verdict": "Verifier 2026-11-06 12:01Z GATE A PASS: floor tile 387.094 vs 409.58 m2 (-5.49 %) by room; ENGINE_WRONG F-T553-1 1F dressing 2.970 m2 no floor line, F-T553-2 GF kitchen coded PORCELAIN on a wet bed / membrane (0 m2); wiring T-564"
+  },
+  "T-558": {
+   "gate": "A",
+   "merge": "3b46332d",
+   "rules": [
+    "R-T558-1"
+   ],
+   "verdict": "Verifier 2026-11-06 12:00Z GATE A PASS: WIRING MANIFEST V6 + PLASTER_HEIGHT_V1_WIRING (Gate B row T-563)"
+  },
+  "T-561": {
+   "gate": "A",
+   "merge": "33a5833f",
+   "rules": [
+    "R-T561-1"
+   ],
+   "verdict": "Verifier 2026-11-06 13:55Z GATE A PASS: paint 217.2081 vs his 1249.375 m2 to cause; ENGINE_OMISSION no FIN.PAINT return line (HELD <= 23.070); paint height basis right; 4 released paint lines PROVISIONAL"
+  },
+  "T-562": {
+   "gate": "A",
+   "merge": "81b0eb6f",
+   "rules": [
+    "R-T562-1"
+   ],
+   "verdict": "Verifier 2026-11-06 13:55Z GATE A PASS: statement adapters V3 (T-551 / T-553 / T-559 / T-556); 25 host-wall terms -> HELD in the statement; no candidate line moves"
+  },
+  "T-566": {
+   "gate": "A",
+   "merge": "733cf1dd",
+   "rules": [
+    "R-T566-1",
+    "R-T566-2",
+    "R-T566-3",
+    "R-T566-4"
+   ],
+   "verdict": "Verifier 2026-11-06 13:55Z GATE A PASS: GF column marks 34 REGISTERED, 2 CONFLICT (10AE, 10E0: their GF / 1F lines already HELD); beam -0.365 m3 named; no line moves"
+  }
+ },
+ "released_quantities_changed": 0,
+ "return_paint": {
+  "bound_beside_total_m2": [
+   0.0,
+   23.07
+  ],
+  "closes": "T-561 ENGINE_OMISSION",
+  "evidence_status": "HELD (frame detail not printed); bound from T-561 (Checker 13:55)",
+  "fin_paint_released_after_m2": 217.2081,
+  "fin_paint_released_before_m2": 217.2081,
+  "id": "PAINT_RETURN_MISSING",
+  "lines": 30,
+  "owner_row": "none yet: Lead to open (B6 paint, stream F; not inside T-563 plaster or T-423 r2 skirting)",
+  "rows": [
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.81
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-020:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-020:door jambs and head",
+    "plaster_line": "L-0bc19199447147ca226a"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.08
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-010:door jambs and head",
+    "plaster_line": "L-1f443fe4e172a90ddd7c"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.4
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-021:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-021:door jambs and head",
+    "plaster_line": "L-2f94dca4dd5f2ec05822"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+    "plaster_line": "L-34f4545187c3c764d174"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.06
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-007:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "2F-OPENING-OP-007:door jambs and head",
+    "plaster_line": "L-39497d7b7639a776f8f2"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.08
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-025:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-025:door jambs and head",
+    "plaster_line": "L-3ae66decd178e43c61e0"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.06
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-013:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-013:door jambs and head",
+    "plaster_line": "L-3c21b044ce980ec0ee75"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "HELD",
+    "plaster_element": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+    "plaster_line": "L-3e19506bd9e093dfb7be"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-018:door jambs and head",
+    "plaster_line": "L-537fc3896f24cf408fe6"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-004:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-004:door jambs and head",
+    "plaster_line": "L-54b2eb0ad40cc47b9be5"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.795
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-006:door jambs and head",
+    "plaster_line": "L-5d309e25e8b180283606"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.81
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-012:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-012:door jambs and head",
+    "plaster_line": "L-61825a3103a391956d70"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "HELD",
+    "plaster_element": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+    "plaster_line": "L-64cb94b4b8dc2cb17608"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-018:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-018:door jambs and head",
+    "plaster_line": "L-672329032e0d70329d5f"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+    "plaster_line": "L-698dfa14c60ff86b5c60"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+    "plaster_line": "L-6ebb9be39b8c4ff4693a"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-017:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-017:door jambs and head",
+    "plaster_line": "L-7dcb2bab84655929f7e8"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-006:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "2F-OPENING-OP-006:door jambs and head",
+    "plaster_line": "L-833ba74bab1404d1f6cc"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+    "plaster_line": "L-8a038e1ca7c2d73d5b13"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.06
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-005:door jambs and head",
+    "plaster_line": "L-9cf5a4b4db78cf57cf7f"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.795
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-005:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-005:door jambs and head",
+    "plaster_line": "L-a85b83a93486fdc400f8"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.81
+     ],
+     "class": "HELD",
+     "element_id": "2F-OPENING-OP-001:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "2F-OPENING-OP-001:door jambs and head",
+    "plaster_line": "L-ca7d121f07fd1a73536d"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.08
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-008:door jambs and head",
+    "plaster_line": "L-e11de0ecd42fcb0b5756"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": null,
+     "class": "HELD",
+     "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "HELD",
+    "plaster_element": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+    "plaster_line": "L-e70e7e48b4c15b4f5a21"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.81
+     ],
+     "class": "HELD",
+     "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+    "plaster_line": "L-f0668097e8d872925fdf"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.06
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-008:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-008:door jambs and head",
+    "plaster_line": "L-f3590fade6406f912d2e"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-019:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-019:door jambs and head",
+    "plaster_line": "L-f38f6ecefecd7e617cac"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      1.2
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-009:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "HELD",
+    "plaster_element": "GF-OPENING-OP-009:door jambs and head",
+    "plaster_line": "L-f4175f9915208dc5f9f7"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "GF-OPENING-OP-026:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "GF-OPENING-OP-026:door jambs and head",
+    "plaster_line": "L-f4e9614350ce4659d186"
+   },
+   {
+    "expected_after": {
+     "bound_beside_m2": [
+      0.0,
+      0.78
+     ],
+     "class": "HELD",
+     "element_id": "1F-OPENING-OP-010:door jambs and head:RETURN_PAINT",
+     "item_code": "FIN.PAINT",
+     "value": null,
+     "why": "painted part = return face - frame-covered depth; frame detail not printed (T-561)"
+    },
+    "plaster_class": "RELEASED",
+    "plaster_element": "1F-OPENING-OP-010:door jambs and head",
+    "plaster_line": "L-f8a0d9bfc3e6a3f113b2"
+   }
+  ],
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06 13:55Z GATE A PASS: paint 217.2081 vs his 1249.375 m2 to cause; ENGINE_OMISSION no FIN.PAINT return line (HELD <= 23.070); paint height basis right; 4 released paint lines PROVISIONAL",
+    "merge": "33a5833f",
+    "task": "T-561"
+   }
+  ],
+  "valued_plaster_returns_m2": 23.07,
+  "verdict": "ENGINE_OMISSION (named MISSING, HELD)"
+ },
+ "rule": "R-T564-1",
+ "schema": "URBAN_T564_WIRING_MANIFEST_V7",
+ "supersedes": "T-558 WIRING_MANIFEST_V6.json (every V6 / V5 / V4 / V3 / V2 statement carried unless listed in v6_to_v7)",
+ "task": "T-564",
+ "tile_bindings": {
+  "adhesive_bound_by_code": {
+   "FIN.FLOOR.PORCELAIN": {
+    "after": [
+     59.078193,
+     98.463658
+    ],
+    "before": [
+     61.004193,
+     101.673658
+    ]
+   },
+   "FIN.FLOOR.WET_TILE": {
+    "after": [
+     17.115115,
+     28.525194
+    ],
+    "before": [
+     15.189115,
+     25.315194
+    ]
+   }
+  },
+  "note": "the project-total adhesive bound does not change (one purchasing group PROJECT for both codes); only the per-code split moves; bags stay BOUND_ONLY until a tile size is printed",
+  "reproduced_on": 42,
+  "rows": [
+   {
+    "before": {
+     "bound": [
+      1.926,
+      3.21
+     ],
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "status": "HELD",
+     "value": null
+    },
+    "change": "CODE_ONLY",
+    "expected_after": {
+     "bound": [
+      1.926,
+      3.21
+     ],
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "status": "HELD",
+     "value": null
+    },
+    "kind": "adhesive_bags_20kg",
+    "row": "ADH|L-83609efc5fdb5d38f059"
+   },
+   {
+    "before": {
+     "bound": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "status": "HELD",
+     "value": null
+    },
+    "change": "CODE_ONLY",
+    "expected_after": {
+     "bound": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "status": "HELD",
+     "value": null
+    },
+    "kind": "tiles_nr",
+    "row": "TILE|L-83609efc5fdb5d38f059"
+   },
+   {
+    "before": null,
+    "change": "NEW_HELD_BLANK",
+    "expected_after": {
+     "bound": null,
+     "item_code": "FIN.FLOOR.FINISH_HELD",
+     "status": "HELD",
+     "value": null
+    },
+    "kind": "adhesive_bags_20kg",
+    "row": "ADH|NEW:1F-RFFE7AF:floor"
+   },
+   {
+    "before": null,
+    "change": "NEW_HELD_BLANK",
+    "expected_after": {
+     "bound": null,
+     "item_code": "FIN.FLOOR.FINISH_HELD",
+     "status": "HELD",
+     "value": null
+    },
+    "kind": "tiles_nr",
+    "row": "TILE|NEW:1F-RFFE7AF:floor"
+   }
+  ],
+  "rule": "T-455: adhesive bound beside a released tile line = net / 5 .. net / 3 bags (Q-45, size not given), the same for PORCELAIN and WET_TILE: reproduced on every released row"
+ },
+ "v6_rows_carried": {
+  "PLASTER_HEIGHT_V1_WIRING": true
+ },
+ "v6_to_v7": [
+  {
+   "cause": "T-553 + R-T564-1",
+   "v6": "no row",
+   "v7": "FLOOR_FINISH_COMPLETENESS_WIRING (+2.970 m2 FINISH_HELD, 1 re-code 0 m2)",
+   "what": "floor finish completeness"
+  },
+  {
+   "cause": "T-561",
+   "v6": "no row",
+   "v7": "PAINT_RETURN_MISSING (30 HELD lines)",
+   "what": "return paint"
+  }
+ ],
+ "wiring_rows": [
+  {
+   "closes": "F-T553-1 + F-T553-2 (no owning row before V7)",
+   "gate": "B (integration package; adds 3 lines and re-codes 1; every other line byte-identical)",
+   "id": "FLOOR_FINISH_COMPLETENESS_WIRING",
+   "order": "after T-498 / T-423 r2 / T-563 (one candidate package at a time); independent of their lines",
+   "steps": [
+    "1. add FIN.FLOOR.FINISH_HELD 1F-RFFE7AF:floor RELEASED 2.97 m2",
+    "1. add FIN.FLOOR.BED.DRY 1F-RFFE7AF:floor:bed RELEASED 2.97 m2",
+    "1. add FIN.FLOOR.BED.DRY 1F-RFFE7AF:floor:bed HELD [0.0891, 0.1188] m3",
+    "2. re-code L-83609efc5fdb5d38f059 FIN.FLOOR.PORCELAIN -> FIN.FLOOR.WET_TILE (0 m2)",
+    "3. T-455 bindings: 4 rows to their expected_after (2 code-only, 2 new HELD blank)",
+    "4. FIN.FLOOR total +2.970 m2 (FINISH_HELD); the T-553 class split as t553_restated; the new dry bed is bound to the tile-bed mortar producers like the existing FINISH_HELD beds (materials binding row of the package, mortar HELD with its bed m3)",
+    "5. census R-T564-1 re-run on the package's line index: C1 only ENGINE_RIGHT hits, C2 / C4 empty, C3 COVERED on every storey"
+   ]
+  },
+  {
+   "closes": "T-561 ENGINE_OMISSION",
+   "gate": "B (adds HELD blank lines only; FIN.PAINT released unchanged)",
+   "id": "PAINT_RETURN_MISSING",
+   "order": "any time after T-423 r2 (same B6 family); never folded into a released paint line",
+   "steps": [
+    "1. 30 FIN.PAINT return lines, HELD blank, bound beside 0 .. the plaster return m2 (released total 23.07)",
+    "2. every other line byte-identical"
+   ]
+  }
+ ],
+ "wiring_sources": {
+  "T-553": [
+   "F-T553-1",
+   "F-T553-2"
+  ],
+  "T-561": [
+   "T-561 ENGINE_OMISSION (return paint)"
+  ]
+ }
+}
