@@ -46,6 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-06 12:18; recovery plan in force)
+
+- Merged since 08:15 (all Gate A, research, no candidate line moved): T-556, T-557, T-559, T-558, T-551, T-553 6/6 WORKED; unwired verified pieces now 43.
+- Second and third ENGINE_WRONG of the round: missing dressing floor line 2.970 m2 and kitchen dry class (T-553) -> T-564 fix rows + floor completeness census.
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563 plaster wiring) still BLOCKED on the wrapper item (main unchanged at eafbb0f6).
+- 12-13 Nov reconciled quantities: closed roof WP, blockwork (leftover split), wet-room floor WP, stair bed, beams, columns / footings, wall tile, internal plaster, floor tile; open rebar (T-560), paint (T-561), external plaster (T-567), earthworks (T-565), doors / windows (T-568); statement adapters T-562.
+- 10 Nov: LOW (unchanged cause). 12-13 Nov: HIGH for reconciliation tables on the candidate as it stands (9 trades closed, 5 open, 6 days); scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 08:15; recovery plan in force)
 
 - Merged since 04:15 (all Gate A, research, no candidate line moved): T-545, T-547, T-550, T-552, T-554, T-555 6/6 WORKED; unwired verified pieces now 37.

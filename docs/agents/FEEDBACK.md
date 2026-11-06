@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-06 12:18 (since 08:15)
+
+- T-556 plaster height method version (Gate A): WORKED (2 / 11 rooms re-measured; corrected a Checker over-statement of 3.268 m2 on GF-15). Decision: lessons row ADOPTED; wiring through T-563 (Gate B, after T-498, wrapper).
+- T-557 statement adapters (Gate A): WORKED (4 sections close exactly); plaster text SUPERSEDED by T-556. Decision: T-562 restates plaster and adds the T-559 / T-551 / T-553 sections.
+- T-559 blockwork leftover 25.92 m2 + edge-beam ids (Gate A): WORKED (closes exactly; 32 bands carried once; Checker PARTIAL per-run heights 0 / 8). Decision: T-562 puts the 7.63 m2 per-run heights in HELD (R-T548-1 (e)); counts +6.30 m2 go to T-568.
+- T-558 manifest V6 + plaster wiring row (Gate A): WORKED. Decision: Gate B row T-563 opened, BLOCKED (wrapper + after T-498).
+- T-551 columns / footings vs freelancer (Gate A): WORKED (columns -8.770, footing -9.936 m3 by component; Checker PARTIAL: COUNT 5 / 9 marks, GF C1-C3 marks not re-measured). Decision: T-566 registers GF marks from the drawings and traces beam 0.365 m3.
+- T-553 floor tile vs freelancer (Gate A): WORKED (-5.49 % closed by room) with 2 ENGINE_WRONG confirmed (dressing floor missing 2.970 m2; kitchen dry class on a wet bed). Decision: T-564 fix rows + floor completeness census; register ruling ENCLOSED SPACE FLOOR; lessons row PROPOSED.
+
 ## Lead 2026-11-06 08:15 (since 04:15)
 
 - T-545 beam concrete vs freelancer (Gate A): WORKED (closes exactly, +0.227 m3 = cancellation; Checker PARTIAL: COUNT B27 re-measured, rest worker-proposed). Decision: adapter T-557 labels unconfirmed classes as such; 0.365 m3 UNRESOLVED stays named; edge downstand beams checked in T-559.

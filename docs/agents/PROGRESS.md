@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-06 08:15 UTC (Lead). Previous version: 2026-11-06 04:15 UTC. The released numbers did not change
+Last update: 2026-11-06 12:18 UTC (Lead). Previous version: 2026-11-06 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 6 Nov 08:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Floor tiles vs freelancer: ours 387.1 vs his 409.6 m2 (-5.5 %), explained room by room: stair, arrival, lift and
+  strip rules 15.9 m2, the garden band we hold 9.7 m2, printed sizes 0.8 m2, 6.9 m2 still unexplained (named rooms).
+  Two engine errors found: the first-floor dressing room (1.65 x 1.80 = 2.97 m2) has a ceiling and skirting but no
+  floor line, and the kitchen floor has a wet bed and waterproofing but a dry tile class. Fix and a check for the same
+  error in every room opened. No tile size is printed on either side, so adhesive and boxes stay held.
+- Columns and footings vs freelancer: columns ours 19.78 vs his 28.55 m3 (-8.77; 12.13 of it is columns we hold, he
+  counts head joints by another convention +2.67); footings ours 67.70 vs his 77.63 m3 (-9.94; 10.56 is the footing
+  band and one footing type we hold). The old footing difference of -0.37 m3 from 20 Oct is now explained. The
+  checker confirmed the counts it re-measured; the ground-floor column marks are re-checked next.
+- Wall plaster height fix: plaster now runs to the slab underside (your rule) on the 11 dry rooms: the 4 valued rooms
+  go from 217.2 to 262.0 m2 (held, +20.6 %), all 11 rooms 840.6 .. 895.9 m2; paint unchanged. Ready to wire once the
+  command wrapper is fixed.
+- Blockwork leftover 25.9 m2 split by opening and by parapet run; every parapet edge beam is carried once in beam
+  concrete (no omission, no double count).
+- Next: reinforcement tonnage, paint, external plaster, earthworks, doors and windows vs freelancer; the floor fix and
+  check; the one statement for 12-13 Nov. 10 Nov (every trade wired): LOW, blocked by the command wrapper.
 
 Since 6 Nov 04:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):
