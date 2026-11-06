@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-06T09:20Z | Worker 1 | STARTED | run session_01E6cPnbeJMZGUoD81iZ7u1F | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06 09:14 UTC | Worker 3 | SUCCESS | T-557 READY 09c68487 | Statement adapters for T-545/T-547/T-552 + T-550 restatement on the T-548/T-554 builders: 10 sections close exactly; beams m3 his 66.094 vs engine 66.321 (-0.34 %, COUNT Checker-confirmed, rest worker-proposed); plaster int 1209.385 vs 240.278 m2 with 4 height rows ENGINE_WRONG (fix T-556), restated 261.775..269.329 m2 beside, never in the engine columns; blockwork UNRESOLVED 101.43 -> 25.92 m2 (projections 41.25 named). Proposed F-T557-1..6: components on HELD lines -> HELD, no candidate line -> UNRESOLVED (source cause kept). No quantity moved, no owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-06 09:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-06T08:53Z | Worker 2 | SUCCESS | T-556 READY 935e04c6 | dry plaster to slab / roof underside (R-T556-1): H GF 4.29, 1F 3.99 (T-214 b 0.05, slab 0.16), roof faces HELD at drawn-section scenario; 11 dry lines 840.65..895.90 m2, 4 released 217.21 -> 262.02..262.05; corrects T-552 W03 above G1 (GF-15 -3.27 m2); vs freelancer gross +8.9 % | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
