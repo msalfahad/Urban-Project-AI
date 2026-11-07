@@ -1,0 +1,336 @@
+{
+ "schema": "T606_OUTLINE_CAUSES_V1",
+ "rule": "R-T606-1",
+ "governing": [
+  "UP-SKIRT-001 1.4.0",
+  "R-T574-1",
+  "R-T601-1",
+  "Q-06 A",
+  "owner 2026-11-02 (no skirting on tiled faces)",
+  "ERS s.2 / s.3"
+ ],
+ "pins": {
+  "research/agents_t574/out/T574_SKIRTING_RECONCILE.json": "7b1e01bf83c20702",
+  "research/agents_t460/SKIRTING_CLOSURE_V3051.csv": "a2f3e6caa2893c5f",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "released": "NOTHING RELEASED; research ledger",
+ "t574_unresolved": "-9.693234",
+ "remeasured": [
+  {
+   "outline": "2F-MAID",
+   "line": "L-d057b5b05b9eaf131b59",
+   "drawn": "18.9",
+   "engine_gross": "18.9",
+   "diff": "0.0",
+   "area": "19.35",
+   "edges": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ]
+  },
+  {
+   "outline": "1F-380x430",
+   "line": "L-a8aea28451168e4032b6",
+   "drawn": "16.2",
+   "engine_gross": "16.2",
+   "diff": "0.0",
+   "area": "16.34",
+   "edges": [
+    "AD8",
+    "AFF",
+    "AD0",
+    "B08"
+   ]
+  },
+  {
+   "outline": "1F-500x365",
+   "line": "L-2f58111e59f0f5213c58",
+   "drawn": "17.4",
+   "engine_gross": "17.4",
+   "diff": "0.0",
+   "area": "18.215",
+   "edges": [
+    "AE7",
+    "AF8",
+    "AE9",
+    "C1E"
+   ]
+  },
+  {
+   "outline": "GF-DRIVER",
+   "line": "L-bb0ea96508a0dc69603c",
+   "drawn": "12.5",
+   "engine_gross": "12.5",
+   "diff": "0.0",
+   "area": "7.875",
+   "edges": [
+    "113",
+    "131",
+    "11E",
+    "12F"
+   ]
+  },
+  {
+   "outline": "GF-DEWANEYA",
+   "line": "L-d32414916cfbd04c27be",
+   "drawn": "20.127876",
+   "engine_gross": "20.127876",
+   "diff": "0.000000",
+   "area": "24.94032",
+   "edges": [
+    "119",
+    "127",
+    "10E",
+    "139",
+    "124"
+   ]
+  },
+  {
+   "outline": "1F-LIV.ours",
+   "line": "L-ba3599ec2dc82c221617",
+   "drawn": "52.44",
+   "engine_gross": "52.44",
+   "diff": "0.00",
+   "area": "75.983",
+   "edges": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "ADE",
+    "C21",
+    "AEB",
+    "AF7"
+   ]
+  },
+  {
+   "outline": "1F-CUR.ours",
+   "line": "L-309f118f6fce78b6c28e",
+   "drawn": "22.15067",
+   "engine_gross": "22.15067",
+   "diff": "0.00000",
+   "area": "19.016592",
+   "edges": [
+    "B1D",
+    "C0F",
+    "C0A",
+    "BD2",
+    "B6B",
+    "ACE",
+    "B0D",
+    "C09",
+    "C15",
+    "C0B",
+    "B0B"
+   ]
+  },
+  {
+   "outline": "2F-CORR.ours",
+   "line": "L-9ff582c9+L-dff4f49f + slab edge 2.50",
+   "drawn": "12.9",
+   "engine_gross": "12.90",
+   "diff": "0",
+   "area": "7.375",
+   "edges": [
+    "1283",
+    "1294",
+    "128A",
+    "129A",
+    "138B",
+    "12B7"
+   ]
+  }
+ ],
+ "rooms": [
+  {
+   "room": "1F living / open stair hall",
+   "his_row": "21",
+   "his": "43.78",
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [],
+    "a_only": []
+   },
+   "closest": {
+    "floor_drawn": [
+     "43.84",
+     "38.988"
+    ]
+   },
+   "ours": "52.44",
+   "gap": "8.66",
+   "causes": [
+    {
+     "id": "LIV-WELL",
+     "lm": "8.40",
+     "verdict": "ENGINE_RIGHT",
+     "edges": [
+      "B16",
+      "ADE",
+      "C21"
+     ],
+     "label": "dog-leg well walls above the drawn landing edge (E B16 4.15, N ADE 2.50, W C21 4.50, column 3005 returns 0.10) in our gross, his outline closes on the landing edge 2.85 (ABE 1.15 + A8F 0.35 + AC0 1.35): no floor at +5.50 there, our net already removes them (T-508 shaft 9.05 + W13 / W25)"
+    },
+    {
+     "id": "LIV-VOID",
+     "lm": "0.20",
+     "verdict": "ENGINE_WRONG",
+     "edges": [
+      "AF7",
+      "AEC"
+     ],
+     "label": "stair-opening zone: our gross walks the walls AF7 4.00 + AEC 7.02 with columns 300E / 3008 (notches 0.20), his the opening edges B74 5.87 + B75 1.60 + D24 1.15 + AF5 2.40 (11.02): the 0.20 of notch faces is the gross difference; the 11.22 lm of wall face itself is F-T606-1"
+    },
+    {
+     "id": "residual",
+     "lm": "0.06",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "no drawn reading reproduces his row (his rows carry no dimensions)"
+    }
+   ],
+   "unresolved": "0.06"
+  },
+  {
+   "room": "1F curved east bed room + lobby",
+   "his_row": "22",
+   "his": "22.89",
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [],
+    "a_only": []
+   },
+   "readings": {
+    "chord": [
+     "21.9",
+     "20.7"
+    ],
+    "ours": [
+     "22.15067",
+     "19.016592"
+    ],
+    "room_only": [
+     "16.65067",
+     "15.060342"
+    ],
+    "room_only_chord": [
+     "16.4",
+     "16.74375"
+    ]
+   },
+   "ours": "22.15067",
+   "gap": "-0.73933",
+   "causes": [
+    {
+     "id": "residual",
+     "lm": "-0.73933",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "no drawn reading reproduces his row (his rows carry no dimensions)"
+    }
+   ],
+   "unresolved": "-0.73933"
+  },
+  {
+   "room": "2F corridor = lobby + arrival",
+   "his_row": "29",
+   "his": "13.6",
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [
+     {
+      "base": "ours",
+      "addons": [
+       "lift door 1.00 reveals",
+       "roof door reveals"
+      ],
+      "P": "13.6",
+      "A": "7.725"
+     },
+     {
+      "base": "ours",
+      "addons": [
+       "maid door reveals",
+       "roof door reveals"
+      ],
+      "P": "13.6",
+      "A": "7.705"
+     }
+    ],
+    "a_only": []
+   },
+   "readings": {
+    "east_foot": [
+     "13.5",
+     "7.72"
+    ],
+    "ours": [
+     "12.9",
+     "7.375"
+    ]
+   },
+   "ours": "12.9",
+   "gap": "-0.7",
+   "causes": [
+    {
+     "id": "residual",
+     "lm": "-0.7",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "no drawn reading reproduces his row (his rows carry no dimensions)"
+    }
+   ],
+   "unresolved": "-0.7"
+  },
+  {
+   "room": "GF open room (reception + dining + entrance zone + open pantry)",
+   "his_row": "13+15",
+   "his": [
+    "72.92",
+    "147.96"
+   ],
+   "ours": null,
+   "gap": "-16.913904",
+   "causes": [
+    {
+     "id": "residual",
+     "lm": "-16.913904",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "not re-measured this run: his two rows' AREA re-adds to the room's gross outline (T-427, 0.30 m2) so his 72.92 is two sub-outline perimeters whose shared edge he counts twice, round pantry, garden band and stair zone that our face cuts off; follow-up row proposed"
+    }
+   ],
+   "unresolved": "-16.913904"
+  }
+ ],
+ "split": {
+  "named": "8.60",
+  "unresolved": "-18.293234"
+ },
+ "finding": {
+  "id": "F-T606-1",
+  "line": "L-ba3599ec2dc82c221617",
+  "line_net": "32.38536",
+  "lm": "11.22",
+  "edges": [
+   "AF7 (4.00 of 5.15)",
+   "AEC (7.02 of 10.67)",
+   "columns 300E / 3008 notches"
+  ],
+  "verdict_proposal": "ENGINE_WRONG",
+  "why": "the printed stair opening 5.87 x 4.00 (void B7A + round-stair treads, T-113 O1 / O2 / O3) and the stair box 1.15 x 2.40 (arriving flight, T-113 L1) leave no room floor at +5.50 against these faces; none of the line's deductions (doors 4.70, passage 1.00, glazing 3.10464, stair W13 / W25 2.20, dog-leg shaft 9.05) lies on them",
+  "released_V3_0_58": "209.428592",
+  "if_confirmed": "198.208592",
+  "pct": "-5.36"
+ }
+}
