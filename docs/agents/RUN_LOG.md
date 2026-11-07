@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T06:52:36Z | Worker 2 | SUCCESS | T-592 READY (agents/task-T-592 @ 8b625750) | External door step paid once as the stone in the wall gap (= T-325 strip): house 3.800 lm nr 4, riser 0.570 m2 (T-584: 3.500 edge + 0.390 m2 + D-GF-09 HELD); visible nosing 3.500 kept as attribute. D-GF-09 riser 0.15 DRAWING-CONFIRMED by region read (side walk reaches only +0.15). Gate 1.000 lm / 0.150 m2, NO_LINE (FR-T592-2). vs his 7.70 lm: -2.90 lm incl. gate, UNRESOLVED (no ids). Tests t592 20 + t584 + t061 pass. | self-check: codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-11-07T06:50Z | Verifier | SUCCESS | none | No task READY (T-592 CLAIMED W2 06:40; T-587 r2 / T-588..T-591 TODO; engine unchanged at 1b601534 since the 05:58 merges): no Gate A/B, no merge, no quantity change (candidate ARCH_TAKEOFF_V3.0.58 NOT RELEASED; released V2.9 + route G unchanged). Scoreboard not re-run (restated 05:58, no candidate change); CLOSABLE LINES unchanged (none CLOSABLE NOW): T-180 slot not spent; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T06:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-592 CLAIMED W2 06:40; T-587 r2 / T-588..T-591 TODO) | self-check pending
 - 2026-11-07T06:40Z | Worker 2 | STARTED | run session_01E6cPne5UVYef2VkCvY6h4k | repo-attached routine | task state: none yet | self-check pending
