@@ -84,7 +84,8 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
-            "owner_decisions/URBAN_RULES_1.8.0.json")  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
+            "owner_decisions/URBAN_RULES_1.8.0.json",  # T-461: UP-GEN-003 1.2.0 (Q-73 A) + UP-STAIR-017 (Q-53 C) over 1.7.0; rule_store_v2 only
+            "conventions/URBAN_CONVENTIONS_1.0.0.json")  # T-599: UP-CONC-JOINT-001 LEAD_ADOPTED (Q-62 A delegated); read by no method
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
                    for m, v in ((2, 1), (3, 2), (4, 3), (5, 4), (7, 5), (8, 6)))
 

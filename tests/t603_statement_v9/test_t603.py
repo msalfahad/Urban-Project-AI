@@ -181,7 +181,11 @@ def test_joint_rows_and_apart(st):
     assert j["of_record"] == {"n": 5, "signed_m3": "2.248826", "gross_m3": "7.581326"}
     assert j["all_audited_in_record_sections"] + j["superseded_audited_beside"] == 37
     assert [(g["row"], g["delta"]) for g in sp["counted_apart"]] == [("GF: UNTRACED -> GF B7 UNRESOLVED", "0.120452")]
-    assert sp["joint_rule_pointer"]["status"] == "REJECTED" and sp["joint_rule_pointer"]["in_rules_index"] is False
+    # the pointer status is the board state at the T-603 claim (REJECTED); in_rules_index is read from the live
+    # docs/RULES_INDEX.md (T-599 r2 lists UP-CONC-JOINT-001): a listed but unmerged rule never moves the joint class
+    assert sp["joint_rule_pointer"]["status"] == "REJECTED"
+    assert sp["joint_rule_pointer"]["in_rules_index"] is (
+        "| UP-CONC-JOINT-001 |" in (A.ROOT / "docs" / "RULES_INDEX.md").read_text(encoding="utf-8"))
     p = sp["pairs_per_storey"]["by_storey"]
     assert (p["GF"]["net_m3"], p["1F"]["net_m3"], p["2F"]["net_m3"]) == ("0.620464", "1.208362", "0.42")
     for c in st["sections_v9"]:

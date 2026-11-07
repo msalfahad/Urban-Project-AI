@@ -1,5 +1,9 @@
 {
  "files": {
+  "conventions/URBAN_CONVENTIONS_1.0.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "bc71230de4adcd7f67f0b0c3e80a11cbc54fa4ed3bb6af09f3c77cecac6a4355"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.0.0.json": {
    "kind": "AUTHORED",
    "sha256": "71acb9983343dfec7096e5778803f180bdcdf784e426dbefeb00c513a8e6c8f5"

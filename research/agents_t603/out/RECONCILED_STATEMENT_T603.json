@@ -24638,7 +24638,7 @@
    "superseded_audited_beside": 5
   },
   "joint_rule_pointer": {
-   "in_rules_index": false,
+   "in_rules_index": true,
    "rule_id": "UP-CONC-JOINT-001",
    "status": "REJECTED",
    "status_line": "REJECTED (Verifier 2026-11-07T13:58Z, gates F + H: the restatement promoted whole rows the rule does not explain)",
