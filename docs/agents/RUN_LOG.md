@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T09:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-591 READY (W2 eed6409a), T-593 READY (W3 427f3162), T-595 READY (W1 0d8ccd00) | self-check pending
 - 2026-11-07 09:28 UTC | Worker 1 | SUCCESS | T-595 READY (agents/task-T-595 @ 0d8ccd00) | R-T595-1: own ST p.7 read, ring side bars 2 levels x 2 faces = 4 d14: east ring low 0.122518 -> 0.144290 t, bounded rebar low 0.767783 -> 0.789555 t, highs HELD. R-T595-2: F10+F 2.176..2.275 -> 1.960..2.275 m3 (S02 scenarios), footing-line bounded low 7.8445 -> 7.6285 m3; his 1.960 now WITHIN; nothing released | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 09:22 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T09:09Z | Worker 3 | SUCCESS | T-593 READY @ 427f3162 | Manifest V10 overlay V2-V10 on V3.0.58 copy: 5,124 lines, 0 STALE / 0 two-package / 0 unexplained; door steps beside 4 threshold lines 3.800 lm nr 4 + riser 0.570 m2 (vs his 7.70 lm UNRESOLVED scope), gate 1.000 lm / 0.150 m2 own row PARTIAL; stair skirting two forms 17.009049 / 23.300481 lm as exact HELD bounds (lower 19.359); E1 landing + yard skirting NO_LINE; nothing released | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
