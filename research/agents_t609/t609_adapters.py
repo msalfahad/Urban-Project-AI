@@ -23,6 +23,17 @@ R-T609-1 (proposed, every villa). A statement restating sections on later merged
   (e) HELD STAYS HELD: an ENGINE_OMISSION on an element whose material is unprinted (G-01 stone) is ENGINE_WRONG in the
       statement now and becomes a HELD line at its point bound when its fix row is wired, never a valued line by
       default; no HELD or UNRESOLVED row becomes 0, and no % is printed beside a HELD row.
+  (f) A MERGED RULE SPLITS ONLY ITS MATCHED MAGNITUDE (r2, T-599 r2): every UNRESOLVED joint row (JOINT_HEAD /
+      THROUGH_SUPPORT) of a section of record, nested set or alternative reading must carry the merged rule's record;
+      a 'whole' SOURCED record reclasses the row to RULE_DIFFERENCE (evidence unchanged); a matched + residual record
+      splits it (matched RULE_DIFFERENCE, PARTIALLY VERIFIED as its verdict states; residual UNRESOLVED, worker-proposed,
+      to its residual task); a record whose row is not in the section of record is audited beside, never added; the
+      of-record moves must re-add to the rule's own headline (RULE_DIFFERENCE n / signed / gross) and nested or
+      alternative moves are reported apart, never in the class shift of record;
+  (g) ONE CAUSE, ONCE (r2, T-607): a cause the merged verdict says feeds several lines is restated in each line it
+      feeds with the same class, and the lines are never summed across (steps lm / nr and the nosing beside);
+  (h) A PRE-REGIME SECTION TAKES A VERDICT BESIDE (r2, T-605): a merged verdict on a row of a section that predates the
+      evidence stamps (R-T587-1, V6+) is a beside record with the row unchanged; no stamp is invented for it.
 """
 from __future__ import annotations
 
@@ -57,6 +68,21 @@ PINS = {
     T606_JSON: "e71d85471859e284a0163d44d4a417b8c79183f92f1cc167dff6a0ae6362c8c5",
     T589_JSON: A8.PINS[A8.T589_JSON],
 }
+# r2 inputs (merged after the r1 claim; committed research outputs only)
+T599_JSON = ROOT / "research/agents_t599/out/T599_JOINT_RULE_RESTATEMENT.json"
+T605_JSON = ROOT / "research/agents_t605/out/T605_FOOTING_PAIRS.json"
+T607_JSON = ROOT / "research/agents_t607/out/T607_SHARED_RESIDUAL.json"
+T610_JSON = ROOT / "research/agents_t610/out/T610_BEAM_OVERLAP_CENSUS.json"
+T611_JSON = ROOT / "research/agents_t611/out/WIRING_MANIFEST_V13.json"
+T612_JSON = ROOT / "research/agents_t612/out/T612_REMAINDER_CAUSES.json"
+PINS.update({
+    T599_JSON: "dacbb62ffd6db39f4b161e43729cac796484065bd1f932ba0e422ef5a73d92ac",
+    T605_JSON: "593489f45e65985dd522cf8c2a53b5304e18549a909b874e7dd3ea1f2bfd3541",
+    T607_JSON: "7a8867153e6d885b3d258e4347ac9851022cdc7d87f60f4e63e829efbee129a2",
+    T610_JSON: "8a146a0e2a9df2a8b91ac5373ef9ad341eef63cbad9a38a3c6f9c122cb985483",
+    T611_JSON: "a78e73d770a4429eed1a62dce7d65cfffa781fb86db11c1bf35f84e9072990f9",
+    T612_JSON: "fce519c7124ace028e47ef9e453e658100353de15bc38659763cc50d3e89a4ce",
+})
 
 # Checker verdicts (board / RUN_LOG, 2026-11-07), quoted as classes, figures and evidence only
 V602 = ("Checker 2026-11-07T15:02Z (T-602 Gate A, merge 6d211198): INDEPENDENT RE-MEASURE of G-01 from the architectural "
@@ -94,7 +120,35 @@ VP03_GF = ("Checker 2026-11-07T16:57Z (T-180 slot, T-589 P03 GF, RUN_LOG): GF B1
            "F-C-P03-2 ENGINE_WRONG -0.005295 m3, fix row for the Lead; GF B1 total 1.337040 vs 1.342119; residual by "
            "cause F-C-P03-3 (spans the RUN_COUNT and UNTRACED rows)")
 
+V599 = ("Checker 2026-11-07T19:55Z (T-599 r2 Gate A, merge 9dc3c2d3): split re-added by hand GF 2.901714 - 2.28125 = "
+        "0.620464, 1F 1.593362 - 0.385 = 1.208362, 2F 0.42 - 0 = 0.42; residual 2.248826 + B7 0.120452 = 2.369278 = "
+        "headline signed (unchanged); RD n4 signed 0 / gross 5.3325 AGREE; own ST7757 read 1F C1 0.075 + C2 0.205 = "
+        "0.280 m3 AGREE: PARTIALLY VERIFIED 2 / 4 1F marks (GF marks not re-measured this run); UP-CONC-JOINT-001 1.0.0 "
+        "LEAD_ADOPTED under Q-62 A (not owner-approved); residuals UNRESOLVED -> T-600; nothing released")
+V605 = ("Checker 2026-11-07T20:57Z (T-605 Gate A, merge c2db2962): own ST7757 read by handle: 180C 1.00 x 1.00 less "
+        "notch 0.40 x 0.35 = 0.86 m2, 180F 3.40 x 2.70; concrete F9 5.049 + FN 0.258 = 5.307 m3 AGREE engine; notch "
+        "0.042 m3 = his FN row excess ENGINE_RIGHT (own calc); blinding F9 10.44 / FN 1.30 / overlap 0.19 / union 11.55 m2 "
+        "AGREE; side forms 7.46 .. 7.685 m2 AGREE, stays HELD (OQ10); F8 1B24 / FN 10F0 pair not re-measured; F9 / FN "
+        "pair concrete + blinding VERIFIED (2 / 2); CONC.FOOTING line PARTIALLY VERIFIED; no quantity change")
+V607 = ("Checker 2026-11-07T20:57Z (T-607 Gate A, merge ad0290c2): own recount ST7757 ST p.4 / p.5: at most 50 fronts + "
+        "2 closings, no ST-01 front beyond the 56-edge census, his +7 has no drawn ST basis; R2 storey estimate +1 / +3 "
+        "/ +3 = 7 x 1.20 = 8.40 lm AGREE; steps 7 nr / 8.40 lm and nosing 8.40 lm = ONE cause C-T607-1, counted once; "
+        "ENGINE_RIGHT on the count; mechanism R1 / R2 named, not chosen; the 56 census split per flight on the 3 "
+        "architectural plans not re-proved (merged T-434 / T-598 basis reused)")
+V610 = ("Checker 2026-11-07T21:59Z (T-610 Gate A, merge 14cf2579): own ST7757 read GF B1 x B27 zone 0.014761 m2 AGREE; "
+        "B27 ledger 4.931529 m2 = drawn band - triangle - 0.001077: 'billed twice' NOT supported, billed once at B1 0.40: "
+        "ENGINE_WRONG_UNDER; B1 component -0.005295 VERIFIED, B27 +0.011252 .. +0.012547 bounded: FR-T610-1 net -0.005957 "
+        ".. -0.007252 m3 PARTIALLY VERIFIED; FR-T610-2 / -3 / -4 worker-measured; nothing wired")
+V611 = ("Checker 2026-11-07T21:56Z (T-611 Gate A, engine push a930d8f2): FR-T606-1 = 4.000 + 7.020 + 2 x 0.05 + 0.05 = "
+        "11.170 lm VERIFIED (4 / 4 components); manifest V13 FIN.SKIRTING 209.728592 - 11.170 = 198.558592 lm AGREE; "
+        "candidate unchanged (manifest only)")
+V612 = ("Checker 2026-11-07T22:02Z (T-612 Gate A, merge 66d3ad9c): own P7757 read: GF gross outline 55.906096 lm, face "
+        "56.006096 lm = engine gross: +0.10 face vs outline ENGINE_RIGHT VERIFIED (2 / 2 readings); 72.92 - 55.906096 = "
+        "17.013904 and split bound 3.056952 .. 8.506952 AGREE: GF -17.013904 UNRESOLVED (undrawn split CANDIDATE, never a "
+        "reading); 1F curved -0.73933 / 2F -0.70 stay UNRESOLVED")
+
 TAG_STEP, TAG_ROOM, TAG_PACK = "F-T609-1", "F-T609-2", "F-T609-3"
+TAG_JOINT, TAG_STAIR, TAG_ROOM2 = "F-T609-4", "F-T609-5", "F-T609-6"
 
 
 def load(p: Path) -> dict:
@@ -284,8 +338,10 @@ PACKS = [
      "findings": ["F-C-P03-1: B4 run / ring split restated, net binding-invariant"]},
     {"pack": "P03 GF", "scope": "GF RUN_COUNT (B1 runs)", "verdict": VP03_GF,
      "rows": {"GF: RUN_COUNT": {"state": "ENGINE_WRONG_FINDING", "finding": "F-C-P03-2", "m3": "-0.005295"}},
-     "findings": ["F-C-P03-2: B27 / B1 band overlap 0.014761 m2 billed twice: ENGINE_WRONG -0.005295 m3, fix row "
-                  "for the Lead, NOT applied (R-T609-1 (c))",
+     "findings": ["F-C-P03-2 (Checker 16:57 reading): B27 / B1 band overlap 0.014761 m2 'billed twice', B1 component "
+                  "-0.005295 m3; restated by T-610 (MERGED 14cf2579): billed ONCE at B1 0.40 where B27 0.85 is drawn, "
+                  "ENGINE_WRONG_UNDER, FR-T610-1 net -0.005957 .. -0.007252 m3 PARTIALLY VERIFIED; fix rows not wired, "
+                  "NOT applied (R-T609-1 (c))",
                   "F-C-P03-3: GF B1 residual by cause spans the RUN_COUNT and UNTRACED rows: no statement row is split "
                   "on it (not re-derivable from committed data)"]},
 ]
@@ -352,7 +408,22 @@ def t180_beams(st9: dict, packs: list[dict] = PACKS) -> tuple[dict, list, list]:
     return sec, ev_moves, [{k: v for k, v in p.items()} for p in packs]
 
 
-def packs_beside(packs: list[dict], ev_moves: list[dict], d589: dict) -> dict:
+def t610_restatement(d610: dict) -> dict:
+    """F-C-P03-2 as T-610 merged it: billed once (UNDER), B1 component the Checker's -0.005295 m3; nothing wired."""
+    f = d610["F_C_P03_2"]
+    fr = {x["id"]: x for x in d610["fix_rows"]}
+    if f["verdict"] != "ENGINE_WRONG_UNDER" or D(str(f["checker_B1_m3"])) != D("0.005295") or \
+            D(str(f["zone_m2"])) != D("0.014761") or D(str(fr["FR-T610-1"]["engine_minus_physical_m3"])) != \
+            D(str(f["engine_minus_physical_m3"])):
+        raise StatementError("T-610: F-C-P03-2 is not the merged UNDER restatement (B1 0.005295, zone 0.014761)")
+    return {"finding": "F-C-P03-2", "restated_by": "T-610", "billed": "ONCE (UNDER, not double)",
+            "zone_m2": s(D(str(f["zone_m2"]))), "physical_m3": s(D(str(f["physical_m3"]))),
+            "fix_rows_m3": {k: s(D(str(v["engine_minus_physical_m3"]))) for k, v in sorted(fr.items())},
+            "fr_t610_1_bound_m3": ["-0.005957", "-0.007252"], "applied": False, "evidence_moved": False,
+            "verification": V610}
+
+
+def packs_beside(packs: list[dict], ev_moves: list[dict], d589: dict, d610: dict | None = None) -> dict:
     out = []
     for p in packs:
         key = p["pack"].split(" ", 1)[0]
@@ -366,18 +437,21 @@ def packs_beside(packs: list[dict], ev_moves: list[dict], d589: dict) -> dict:
                        **({"open_marks": cov["open"]} if "open" in cov else {}),
                        **({"finding": cov["finding"], "finding_m3": cov["m3"], "applied": False}
                           if "finding" in cov else {})}
-        out.append({"pack": p["pack"], "t589_title": d589["packs"][key]["title"], "scope": p["scope"], "rows": rows,
-                    "findings": p["findings"], "verdict": p["verdict"]})
+        e = {"pack": p["pack"], "t589_title": d589["packs"][key]["title"], "scope": p["scope"], "rows": rows,
+             "findings": p["findings"], "verdict": p["verdict"]}
+        if d610 is not None and any(cov.get("finding") == "F-C-P03-2" for cov in p["rows"].values()):
+            e["t610_restatement"] = t610_restatement(d610)
+        out.append(e)
     return {"block_id": "T-180/packs-P01-P03@V10", "kind": "PACK_VERDICT_BESIDE", "report": "T-180 (T-589 packs)",
             "valued": "0", "candidate_line": False, "pct": None, "packs": out,
             "class_moves": 0, "evidence_moves": len(ev_moves),
             "note": "a pack moves evidence only, on a row it covered fully with every mark AGREE and the engine marks "
-                    "re-adding to the row (R-T609-1 (b)); classes and deltas unchanged; the joint rows stay UNRESOLVED "
-                    "(T-599 r2 not merged); ENGINE_WRONG findings wait for their fix rows"}
+                    "re-adding to the row (R-T609-1 (b)); classes and deltas unchanged by a pack; the joint rows take the "
+                    "merged T-599 r2 split separately (R-T609-1 (f)); ENGINE_WRONG findings wait for their fix rows"}
 
 
 # ================================================================================ (c) F-T606-1 pending fix ========
-def t606_pending(d606: dict, d604: dict) -> dict:
+def t606_pending(d606: dict, d604: dict, d611: dict | None = None) -> dict:
     f = d606["finding"]
     rel, ifc = D(f["released_V3_0_58"]), D(f["if_confirmed"])
     if rel - D(f["lm"]) != ifc:
@@ -389,7 +463,15 @@ def t606_pending(d606: dict, d604: dict) -> dict:
     if D(v12["before"]["released"]) != rel:
         raise StatementError("F-T606-1: manifest V11 FIN.SKIRTING is not the T-606 released figure")
     after_v12 = D(v12["after"]["released"])
-    return {"block_id": "T-606/F-T606-1@V10", "kind": "PENDING_FIX_BESIDE", "report": "T-606", "valued": "0",
+    v13 = None
+    if d611 is not None:
+        t = d611["overlay"]["v13_vs_v12_totals"]["FIN.SKIRTING|lm"]
+        if D(t["before"]["released"]) != after_v12 or D(t["after"]["released"]) != after_v12 - chk or \
+                (t["before"]["held_n"], t["before"]["excluded_n"]) != (t["after"]["held_n"], t["after"]["excluded_n"]):
+            raise StatementError("F-T606-1: manifest V13 FIN.SKIRTING is not V12 - 11.170 with HELD / excluded unchanged")
+        v13 = {"before": s(D(t["before"]["released"])), "after": s(D(t["after"]["released"])),
+               "held_n": t["after"]["held_n"], "excluded_n": t["after"]["excluded_n"], "verification": V611}
+    out = {"block_id": "T-606/F-T606-1@V10", "kind": "PENDING_FIX_BESIDE", "report": "T-606", "valued": "0",
             "candidate_line": False, "applied": False, "pct_of_line_family_not_a_verdict": None,
             "line": f["line"], "item": "FIN.SKIRTING", "unit": "lm",
             "worker_lm": f["lm"], "checker_lm": s(chk), "checker_minus_worker": "-0.05 (column 3008 east return "
@@ -397,11 +479,17 @@ def t606_pending(d606: dict, d604: dict) -> dict:
             "class": "ENGINE_WRONG (Checker CONFIRMED on 11.170)",
             "candidate_v3_0_58": {"before": s(rel), "after_if_wired": s(rel - chk)},
             "after_manifest_v12": {"before": s(after_v12), "after_if_wired": s(after_v12 - chk)},
-            "fix_row": "none yet: lane I fix row needed (deduction 'STAIR-OPENING-NO-FLOOR' on the 1F living line)",
+            "fix_row": ("none yet: lane I fix row needed (deduction 'STAIR-OPENING-NO-FLOOR' on the 1F living line)"
+                        if v13 is None else "FR-T606-1 in manifest V13 (T-611 MERGED a930d8f2; deduction VERIFIED 4 / 4 "
+                                            "components); manifest only: candidate V3.0.58 unchanged, so not applied "
+                                            "here"),
             "statement_effect": "none now: the room-skirting section compares his gross with the candidate net; when "
                                 "the fix row is wired the engine column falls 11.170 lm and a new ENGINE_RIGHT row (his "
                                 "gross along the opening edges, no floor) must be named in the next statement",
             "verification": V606}
+    if v13 is not None:
+        out["manifest_v13"] = v13
+    return out
 
 
 # ================================================================================ (d) T-597 B1 plan side =========
@@ -459,16 +547,313 @@ def t597_beside(st9: dict, d597: dict) -> dict:
 
 
 # ================================================================================ (e) evidence audit ===============
+V10_BASE = {"T-577/marble-lm@V10": "T-577/marble-lm@V8", "T-574/skirting-room@V10": "T-574/skirting-room@V9",
+            "T-545/beams@V10": "T-545/beams@V9", "T-551/columns@V10": "T-551/columns@V9",
+            "T-576/columns-GF@V10": "T-576/columns-GF@V9", "T-576/columns-1F@V10": "T-576/columns-1F@V9",
+            "T-576/columns-GF-reading-10E0-C7@V10": "T-576/columns-GF-reading-10E0-C7@V9",
+            "T-576/columns-1F-reading-10E0-C7@V10": "T-576/columns-1F-reading-10E0-C7@V9",
+            "T-584/stair-steps-lm@V10": "T-584/stair-steps-lm", "T-584/stair-steps-nr@V10": "T-584/stair-steps-nr"}
+JOINT_SUB_EVID = {"matched": PV, "residual": WP}
+T612_EVID = {"GF-FACE-VS-OUTLINE": CV, "residual": PV}
+
+
 def expected_v10(sid: str, r: dict, expected_v9) -> str:
+    """The verdict map for V10 rows, independent of the stamps the adapters wrote (R-T587-1 (a))."""
     tag = r.get("tag", "")
     if tag == TAG_STEP:
         return CV if r["class"] == "ENGINE_WRONG" else PV
     if tag == TAG_ROOM:
         return T606_EVID[r["t606_cause"]]
+    if tag == TAG_ROOM2:
+        return T612_EVID[r["t612_cause"]]
+    if tag == TAG_STAIR:
+        return PV                       # T-607: ST recount own; the 56 census split per flight reused, not re-proved
+    if tag == TAG_JOINT and "joint_sub" in r:
+        return JOINT_SUB_EVID[r["joint_sub"]]
     if r.get("tag_v10") == TAG_PACK:
         return CV
     if sid.endswith("@V10"):
-        base = {"T-577/marble-lm@V10": "T-577/marble-lm@V8", "T-574/skirting-room@V10": "T-574/skirting-room@V9",
-                "T-545/beams@V10": "T-545/beams@V9"}[sid]
-        return expected_v9(base, r)
+        return expected_v9(V10_BASE[sid], r)   # amended joint rows keep the evidence their V9 verdict gives
     return expected_v9(sid, r)
+
+
+# ================================================================================ (f) T-599 r2 joint rule (m3) =====
+JOINT_TERMS = (": JOINT_HEAD", ": THROUGH_SUPPORT")
+JOINT_SECTIONS_V9 = ("T-551/columns@V9", "T-576/columns-GF@V9", "T-576/columns-1F@V9",
+                     "T-576/columns-GF-reading-10E0-C7@V9", "T-576/columns-1F-reading-10E0-C7@V9")
+NESTED_OR_ALT_V10 = ("T-576/columns-GF@V10", "T-576/columns-1F@V10", "T-576/columns-GF-reading-10E0-C7@V10",
+                     "T-576/columns-1F-reading-10E0-C7@V10")
+JOINT_RULE_TXT = "UP-CONC-JOINT-001@1.0.0 (LEAD_ADOPTED under Q-62 A; not owner-approved)"
+
+
+def _is_joint(r: dict) -> bool:
+    return r["name"].endswith(JOINT_TERMS) and r["class"] == "UNRESOLVED"
+
+
+def t599_index(st9: dict, d599: dict) -> tuple[dict, list]:
+    """T-599 rows keyed by (section of record in V9, row name); a record whose row is not in its section of record is
+    audited beside (a superseded reading), never added (R-T609-1 (f))."""
+    if d599["rules_index"]["status"] != "LEAD_ADOPTED" or not d599["rule"].startswith("UP-CONC-JOINT-001@1.0.0"):
+        raise StatementError("T-599: rule is not UP-CONC-JOINT-001@1.0.0 LEAD_ADOPTED")
+    sup, secs = supersession(st9), all_sections(st9)
+    idx: dict = {}
+    beside = []
+    for r in d599["rows"]:
+        rec = A9.of_record(r["section_id"], sup)
+        if r["name"] not in [x["name"] for x in secs[rec]["rows"]]:
+            beside.append({"t599_section": r["section_id"], "row": r["name"], "sub": r["sub"], "delta_m3": r["delta_m3"],
+                           "outcome": r["outcome"], "of_record": rec,
+                           "why": "superseded reading: its row is not in the section of record (audited, never added)"})
+            continue
+        val = (r["sub"], D(r["delta_m3"]), r["outcome"], r["class_after"])
+        lst = idx.setdefault((rec, r["name"]), [])
+        if val not in lst:
+            lst.append(val)
+    for k, lst in idx.items():
+        if len({v[0] for v in lst}) != len(lst):
+            raise StatementError(f"T-599 {k}: two different records for one sub-row (levels disagree)")
+    return idx, beside
+
+
+def _joint_plan(sid9: str, src: dict, idx: dict) -> tuple[dict, dict, list]:
+    splits, amends, kept = {}, {}, []
+    for r in src["rows"]:
+        recs = idx.get((sid9, r["name"]))
+        if not _is_joint(r):
+            if recs and any(v[2] != "UNRESOLVED_APART" or v[3] != r["class"] for v in recs):
+                raise StatementError(f"{sid9} '{r['name']}': a T-599 record on a non-joint row moves it")
+            continue
+        if not recs:
+            raise StatementError(f"{sid9} '{r['name']}': UNRESOLVED joint row with no T-599 record (R-T609-1 (f))")
+        sub = {v[0]: v for v in recs}
+        if set(sub) == {"whole"}:
+            _, d, outc, ca = sub["whole"]
+            if (outc, ca) != ("SOURCED", "RULE_DIFFERENCE") or d != D(r["delta"]):
+                raise StatementError(f"{sid9} '{r['name']}': whole record {outc} {d} is not SOURCED at the row's delta")
+            amends[r["name"]] = {"tag": TAG_JOINT, "evidence": r["evidence_status"], "set": {
+                "class": "RULE_DIFFERENCE", "joint_outcome": "SOURCED", "joint_rule": JOINT_RULE_TXT,
+                "tag_v9": r.get("tag")}}
+        elif set(sub) == {"matched", "residual"}:
+            m, res = sub["matched"], sub["residual"]
+            if m[1] + res[1] != D(r["delta"]) or (m[2], m[3]) != ("SOURCED", "RULE_DIFFERENCE") or \
+                    (res[2], res[3]) != ("UNRESOLVED_RESIDUAL", "UNRESOLVED"):
+                raise StatementError(f"{sid9} '{r['name']}': matched + residual do not re-add to the row, or a part is "
+                                     "promoted beyond its record (R-T609-1 (f))")
+            if m[1] > D(r["delta"]) or m[1] <= 0:
+                raise StatementError(f"{sid9} '{r['name']}': matched joint outside 0 .. the row")
+            if r["evidence_status"] != WP:
+                raise StatementError(f"{sid9} '{r['name']}': beam joint row not worker-proposed in V9")
+            st = r["name"].split(":", 1)[0]
+            splits[r["name"]] = [
+                {"name": f"{st}: THROUGH_SUPPORT matched joint: his beam rows run through the column heads; our column "
+                         f"owns the joint to the slab top, beam face to face ({JOINT_RULE_TXT}); equal to the {st} "
+                         "column JOINT_HEAD of record (T-551, statement V9): RULE_DIFFERENCE SOURCED (T-599 r2)",
+                 "delta": m[1], "class": "RULE_DIFFERENCE", "evidence": JOINT_SUB_EVID["matched"], "tag": TAG_JOINT,
+                 "joint_sub": "matched", "joint_outcome": "SOURCED", "joint_rule": JOINT_RULE_TXT},
+                {"name": f"{st}: THROUGH_SUPPORT residual beyond the matched joint: not explained by the rule "
+                         "(UNRESOLVED, T-600; alternative column readings named in T-599, never chosen)",
+                 "delta": res[1], "class": "UNRESOLVED", "evidence": JOINT_SUB_EVID["residual"], "tag": TAG_JOINT,
+                 "joint_sub": "residual", "to_task": "T-600"}]
+        elif set(sub) == {"residual"}:
+            if sub["residual"][1] != D(r["delta"]) or sub["residual"][3] != "UNRESOLVED":
+                raise StatementError(f"{sid9} '{r['name']}': residual-only record is not the whole row")
+            kept.append({"section_id": sid9, "row": r["name"], "delta_m3": r["delta"],
+                         "kept": "matched joint 0: the whole row is the residual, UNRESOLVED -> T-600, row unchanged"})
+        else:
+            raise StatementError(f"{sid9} '{r['name']}': T-599 subs {sorted(sub)} not mapped")
+    return splits, amends, kept
+
+
+def t599_joint(st9: dict, d599: dict, beams_packs: dict) -> tuple[list, list, list, dict]:
+    """(f): the beam section after the packs and the five column sections restated on the merged T-599 r2 split.
+    Returns (sections, moves of record, moves nested / alternative, joint record)."""
+    idx, beside = t599_index(st9, d599)
+    secs9 = all_sections(st9)
+    targets = [("T-545/beams@V9", beams_packs)] + [(sid, secs9[sid]) for sid in JOINT_SECTIONS_V9]
+    out, mv_rec, mv_alt, kept = [], [], [], []
+    for sid9, src in targets:
+        splits, amends, k = _joint_plan(sid9, src, idx)
+        kept += k
+        new_id = sid9[:-3] + "@V10"
+        # A8.restate compares the totals as strings; V9 printed one difference unnormalised ('8.77' for 8.7700):
+        # compare on the normalised form, then keep V9's own text (value equal, checked)
+        src_n = copy.deepcopy(src)
+        src_n["difference"] = s(D(src["reference_total"]) - D(src["engine_valued"]))
+        if D(src_n["difference"]) != D(src["difference"]):
+            raise StatementError(f"{sid9}: V9 difference is not reference - engine")
+        sec, mv, pairs = A8.restate(src_n, new_id, splits, amends, V599, lambda x: x["evidence_status"])
+        sec["difference"] = src["difference"]
+        if pairs:
+            raise StatementError(f"{new_id}: the joint restatement produced PAIRED parts")
+        sec["restates"] = sid9
+        _no_pct_beside_held(sec)
+        (mv_alt if new_id in NESTED_OR_ALT_V10 else mv_rec).extend(dict(m, unit=sec["unit"]) for m in mv)
+        out.append(sec)
+    used = {(sid, r["name"]) for sid, src in targets for r in src["rows"]}
+    if set(idx) - used:
+        raise StatementError(f"T-599 records with no statement row: {sorted(set(idx) - used)}")
+    rd = [m for m in mv_rec if m["to"] == "RULE_DIFFERENCE"]
+    want = d599["headline_after"]["m3"]["RULE_DIFFERENCE"]
+    got = (len(rd), sum((D(m["delta"]) for m in rd), D(0)), sum((abs(D(m["delta"])) for m in rd), D(0)))
+    if got != (want["n"], D(want["signed"]), D(want["gross"])) or len(mv_rec) != len(rd):
+        raise StatementError(f"T-599: of-record moves {got} are not the rule's headline RULE_DIFFERENCE {want}")
+    of_rec = [c for c in out if c["section_id"] not in NESTED_OR_ALT_V10]
+    res = sum((D(r["delta"]) for c in of_rec for r in c["rows"] if r["class"] == "UNRESOLVED" and
+               (r.get("joint_sub") == "residual" or r["name"] == "2F: THROUGH_SUPPORT")), D(0))
+    if res != D(d599["headline_by_cause_m3"]["UNRESOLVED_pair_residual_T600"]["signed"]):
+        raise StatementError(f"T-599: residual of record {res} is not the rule's pair residual")
+    old = st9["structural_provenance_v9"]["joint_rule_pointer"]
+    if (old["rule_id"], old["status"], old["in_rules_index"]) != ("UP-CONC-JOINT-001", "REJECTED", True):
+        raise StatementError("V9 joint pointer is not the REJECTED pointer T-599 r2 left for V10 to restate")
+    record = {"rule_id": "UP-CONC-JOINT-001", "version": d599["rules_index"]["version"],
+              "rules_index_status": d599["rules_index"]["status"], "task": "T-599 r2", "merge": "9dc3c2d3",
+              "status": "MERGED (rule LEAD_ADOPTED under Q-62 A; not owner-approved)", "status_line": V599,
+              "v9_pointer": "structural_provenance_v9.joint_rule_pointer (REJECTED 13:58Z) carried byte-equal in V9 and "
+                            "superseded by this record",
+              "residual_of_record_m3": s(res), "residual_to": "T-600",
+              "untraced_apart_m3": "0.120452 (GF B7, unchanged UNRESOLVED)",
+              "rows_kept_whole_residual": kept, "superseded_audited_beside": beside,
+              "nested_alternative_note": "nested measured sets and alternative readings take the same outcome; their "
+                                         "moves are reported apart and never added to the sections of record"}
+    return out, mv_rec, mv_alt, record
+
+
+# ================================================================================ (g) T-607 one cause, once ========
+STAIR_ROWS = {"T-584/stair-steps-lm": lambda r: r["name"].startswith("ST-01: 7 pieces beyond every reading of his count"),
+              "T-584/stair-steps-nr": lambda r: r["name"] == "ST-01: pieces beyond every reading of his count"}
+
+
+def t607_steps(st9: dict, d607: dict) -> tuple[list, list, dict]:
+    c = _one(d607["causes"], lambda x: x["id"] == "C-T607-1", "T-607 cause C-T607-1")
+    if c["verdict"] != "ENGINE_RIGHT" or c["edges_in_governing_count"] != 0 or d607["sign"] != "his - ours":
+        raise StatementError("T-607: C-T607-1 is not ENGINE_RIGHT with no governing edge (his - ours)")
+    per, once = d607["shared"]["per_line"], d607["shared"]["total_once"]
+    out, moves = [], []
+    for sid, pred in STAIR_ROWS.items():
+        old = section_of_record(st9, sid)
+        if old["section_id"] != sid:
+            raise StatementError(f"{sid}: section of record is {old['section_id']}")
+        r = _one(old["rows"], pred, f"{sid} ST-01 beyond-count row")
+        q, unit = per[sid]
+        if unit != old["unit"] or D(str(q)) != D(r["delta"]) or r["class"] != "UNRESOLVED":
+            raise StatementError(f"{sid}: T-607 {q} {unit} is not the statement's UNRESOLVED row (R-T609-1 (a))")
+        am = {r["name"]: {"tag": TAG_STAIR, "evidence": PV, "set": {
+            "class": "ENGINE_RIGHT", "cause_id": "C-T607-1", "his_mechanism": c["his_mechanism"],
+            "once": "C-T607-1 feeds steps lm / nr and the nosing beside: one cause, restated in each line, never "
+                    "summed across lines (R-T609-1 (g))"}}}
+        sec, mv, _ = A8.restate(old, sid + "@V10", {}, am, V607, lambda x: x["evidence_status"])
+        _no_pct_beside_held(sec)
+        out.append(sec)
+        moves += [dict(m, unit=sec["unit"]) for m in mv]
+    if (once[0], D(str(once[1]))) != (int(per["T-584/stair-steps-nr"][0]), D(per["T-584/stair-steps-lm"][0])):
+        raise StatementError("T-607: total once is not the per-line figure")
+    nos = _one(st9["beside_v9"], lambda b: b.get("report") == "T-598" and "units" in b, "V9 T-598 nosing beside")
+    lm, nr = nos["units"]["lm"], nos["units"]["nr"]
+    q_lm, q_nr = D(per["T-598/nosing@V9 lm"][0]), int(per["T-598/nosing@V9 nr"][0])
+    if D(lm["by_class"]["UNRESOLVED"]) != q_lm or nr["gap_his_minus_ours"] != q_nr or D(lm["residual"]) != 0:
+        raise StatementError("T-607: the V9 nosing beside does not carry C-T607-1 as its UNRESOLVED")
+    bc = {k: D(v) for k, v in lm["by_class"].items()}
+    bc["ENGINE_RIGHT"] = bc.get("ENGINE_RIGHT", D(0)) + bc.pop("UNRESOLVED")
+    if sum(bc.values(), D(0)) != D(lm["gap_his_minus_ours"]):
+        raise StatementError("T-607: nosing classes do not re-add to its gap")
+    beside = {"block_id": "T-598/nosing@V10", "kind": "CROSS_REFERENCE", "report": "T-598 + T-607",
+              "supersedes_beside": nos.get("block_id", "T-598 nosing beside (V9)"), "valued": "0",
+              "candidate_line": False, "difference_added": False, "pct": None, "cause_id": "C-T607-1",
+              "units": {"lm": {"his": lm["his"], "ours_valued": lm["ours_valued"],
+                               "gap_his_minus_ours": lm["gap_his_minus_ours"],
+                               "by_class": {k: s(v) for k, v in sorted(bc.items())}, "residual": "0",
+                               "was_by_class": lm["by_class"]},
+                        "nr": {"his": nr["his"], "ours_valued": nr["ours_valued"], "gap_his_minus_ours": q_nr,
+                               "gap_class": "ENGINE_RIGHT (C-T607-1: no drawn piece beyond the 56 governing risers)",
+                               "was_gap_class": nr["gap_class"]}},
+              "once": "the same 7 nr / 8.4 lm as T-584/stair-steps-lm@V10 / -nr@V10; summing over the lines (16.8 lm / "
+                      "14 nr) refused",
+              "also_feeds": d607["shared"]["also_feeds"], "verification": V607}
+    return out, moves, beside
+
+
+def refuse_cause_summed(st: dict, cause: str = "C-T607-1") -> None:
+    """(g): a shared cause appears once per line; a headline or beside total that adds its lines is refused."""
+    hits = [(c["section_id"], r["unit"]) for c in st.get("sections_v10", []) for r in c["rows"]
+            if r.get("cause_id") == cause]
+    if len(hits) != len(set(hits)):
+        raise StatementError(f"{cause}: entered twice in one line (R-T609-1 (g))")
+    for b in st.get("beside_v10", []):
+        if b.get("cause_id") == cause and b.get("difference_added") is not False:
+            raise StatementError(f"{cause}: a beside block adds the shared cause to a column (R-T609-1 (g))")
+
+
+# ================================================================================ (a) T-612 GF open room (lm) =====
+T612_NAMES = {
+    "GF-FACE-VS-OUTLINE": "engine face 56.006096 vs the drawn gross outline 55.906096 (face on the band / curb line "
+                          "with columns notched, outline on the south facade and west wall): +0.10 lm in our gross on "
+                          "virtual edges that carry no skirting: ENGINE_RIGHT (T-612, Checker VERIFIED 2 / 2 readings)",
+    "residual": "his rows 58.16 + 14.76 = 72.92 vs the drawn gross outline 55.906096: no drawn reading reproduces both; "
+                "an undrawn split counted in both rows would explain 3.056952 .. 8.506952 lm (CANDIDATE, never a "
+                "reading; his rows carry no dimensions): UNRESOLVED (T-612)"}
+
+
+def t612_room(sec10: dict, d612: dict) -> tuple[dict, list]:
+    rm = _one(d612["rooms"], lambda r: r["room"].startswith("GF open room"), "T-612 GF open room")
+    row = _one(sec10["rows"], lambda r: r["name"].startswith("GF open room") and r["class"] == "UNRESOLVED" and
+               r.get("kind_of_cause") == "OUTLINE", "GF open room UNRESOLVED outline row")
+    # T-612 sign ours - his (as T-606); statement sign his - ours
+    if -D(rm["gap"]) != D(row["delta"]) or D(d612["t606_remainder"]["GF open room"]) != D(rm["gap"]):
+        raise StatementError("T-612 GF gap is not the statement's UNRESOLVED outline row (R-T609-1 (a))")
+    pre = row["name"].split(":", 1)[0] + ": "
+    parts = []
+    for c in rm["causes"]:
+        want = {"GF-FACE-VS-OUTLINE": "ENGINE_RIGHT", "residual": "UNRESOLVED"}[c["id"]]
+        if c["verdict"] != want:
+            raise StatementError(f"T-612 {c['id']}: merged class {c['verdict']}, statement map {want} (R-T609-1 (a))")
+        parts.append({"name": pre + T612_NAMES[c["id"]], "delta": -D(c["lm"]), "class": want,
+                      "evidence": T612_EVID[c["id"]], "tag": TAG_ROOM2, "kind_of_cause": "OUTLINE",
+                      "t612_cause": c["id"]})
+    if sum((p["delta"] for p in parts), D(0)) != D(row["delta"]):
+        raise StatementError("T-612 causes do not re-add to the GF open room row")
+    for k in ("1F curved", "2F corridor"):
+        rr = _one(d612["rooms"], lambda r, k=k: r["room"].startswith(k), f"T-612 {k}")
+        hit = [r for r in sec10["rows"] if r["name"].startswith(k) and r["class"] == "UNRESOLVED"]
+        if len(hit) != 1 or -D(rr["gap"]) != D(hit[0]["delta"]):
+            raise StatementError(f"T-612 {k}: its residual is not the statement's UNRESOLVED row")
+    sec, moves, _ = A8.restate(sec10, sec10["section_id"], {row["name"]: parts}, {}, V612,
+                               lambda x: x["evidence_status"])
+    sec["restates"] = sec10["restates"]
+    _no_pct_beside_held(sec)
+    return sec, moves
+
+
+# ================================================================================ (h) T-605 footing overlap =======
+def t605_beside(st9: dict, d605: dict) -> dict:
+    sec = section_of_record(st9, "T-551/footing-line")
+    if "headline_v9" in st9 and any(h["section_id"] == sec["section_id"] for h in st9["headline_v9"]):
+        raise StatementError("T-551/footing-line is in the evidence regime: restate it, not beside (R-T609-1 (h))")
+    r = _one(sec["rows"], lambda x: x["name"].startswith("footing line: OVERLAP FN notch"), "footing overlap row")
+    notch = D("0.40") * D("0.35") * D("0.30")
+    v = _one(d605["verdicts"], lambda x: x["item"] == "footing concrete", "T-605 footing concrete verdict")
+    c = d605["concrete"]
+    if D(r["delta"]) != notch or r["class"] != "ENGINE_RIGHT" or D(str(c["schedule_minus_drawn_m3"])) != notch or \
+            D(str(v["engine_m3"])) != D(str(v["own_m3"])) or D(str(v["his_m3"])) - D(str(v["engine_m3"])) != notch \
+            or D(str(c["engine_pads_m3"])) != D(str(c["pads_drawn_once_m3"])):
+        raise StatementError("T-605: the 0.042 m3 notch is not the statement row, his excess and engine = own")
+    b = d605["blinding"]
+    if D(str(b["sum_m2"])) - D(str(b["overlap_m2"])) != D(str(b["union_m2"])) or \
+            D(str(b["engine_minus_own_m3"])) != 0:
+        raise StatementError("T-605: blinding union does not re-add or engine differs from own")
+    fw = d605["formwork_notched_pair"]
+    return {"block_id": "T-605/footing-overlap@V10", "kind": "VERDICT_BESIDE", "report": "T-605", "valued": "0",
+            "candidate_line": False, "pct": None, "section_of_record": sec["section_id"], "row": r["name"],
+            "row_class": r["class"] + " (unchanged)", "row_delta_m3": r["delta"],
+            "evidence": "F9 / FN 180C pair concrete + blinding VERIFIED (2 / 2 components, Checker own read); the "
+                        "section predates the evidence stamps (R-T587-1 covers V6+ sections): no stamp is invented, "
+                        "the row is unchanged (R-T609-1 (h)); CONC.FOOTING line PARTIALLY VERIFIED",
+            "concrete_m3": {"engine": s(D(str(v["engine_m3"]))), "own": s(D(str(v["own_m3"]))),
+                            "his": s(D(str(v["his_m3"]))), "notch": s(notch),
+                            "pads_engine": s(D(str(c["engine_pads_m3"]))),
+                            "pads_schedule_rect_sum_refused": s(D(str(c["pads_schedule_rect_sum_m3"])))},
+            "blinding_m2": {"union": s(D(str(b["union_m2"]))), "sum": s(D(str(b["sum_m2"]))),
+                            "overlap": s(D(str(b["overlap_m2"]))), "in_plot": s(D(str(b["in_plot_m2"])))},
+            "side_forms_m2": {"bound": [s(D(str(fw["interface_none_m2"]))), s(D(str(fw["interface_once_m2"])))],
+                              "status": "HELD (OQ10 pour sequence; engine footing FW lines HELD blank, never 0)"},
+            "not_remeasured": "F8 1B24 / FN 10F0 blinding overlap 0.005625 m2 (worker-measured)",
+            "verification": V605}

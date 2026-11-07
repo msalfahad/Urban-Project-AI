@@ -4,7 +4,10 @@ R-T609-1 with adverse cases (parts not re-adding, an omission not drawing-confir
 the omitted step, a pack mark not AGREE, pack marks not re-adding, a pack setting a class, a pack on a row already
 verified, a merged class changed, a % beside HELD, a blank plan without HELD), then the merged training-villa sources
 (committed research outputs only; no private input): V9 carried byte-equal, the 2.90 -> 2.50 + 0.40 split, the 1F
-living -8.66 split, two evidence moves and no class move from the packs, NOT_COMPARABLE kept, nothing applied."""
+living -8.66 split, two evidence moves and no class move from the packs, NOT_COMPARABLE kept, nothing applied.
+r2: S609 joint rule by hand (whole SOURCED reclass, matched + residual split, residual-only kept, adverse: a residual
+promoted, a joint row with no record, matched beyond the row), one cause once (adverse: entered twice / summed beside),
+then the merged T-599 r2 / T-607 / T-612 / T-605 / T-610 / T-611 restatements on the training villa."""
 from __future__ import annotations
 
 import copy
@@ -188,7 +191,8 @@ def test_room_outline_split(st):
     c = _sec(st, "T-574/skirting-room@V10")
     parts = [(r["class"], r["delta"], r["evidence_status"]) for r in c["rows"] if r.get("tag") == A.TAG_ROOM]
     assert parts == [("ENGINE_RIGHT", "-8.40", A.CV), ("ENGINE_WRONG", "-0.20", A.WP), ("UNRESOLVED", "-0.06", A.PV)]
-    assert c["by_class"]["UNRESOLVED"] == "18.293234"          # T-606 'unresolved -18.293234' in its own sign
+    # T-606 'unresolved -18.293234' less the T-612 GF ENGINE_RIGHT -0.10 (the residual part grows to 17.013904)
+    assert c["by_class"]["UNRESOLVED"] == "18.393234"
     assert c["engine_valued"] == "197.278592"                   # F-T606-1 not applied (R-T609-1 (c))
 
 
@@ -202,26 +206,39 @@ def test_merged_class_changed_refused(st9):
 
 def test_packs_move_evidence_not_class(st, st9):
     old = A.section_of_record(st9, "T-545/beams")
-    new = _sec(st, "T-545/beams@V10")
+    new, _, _ = A.t180_beams(st9)                                        # the pack step, before the joint split
     assert [(r["name"], r["class"], r["delta"]) for r in old["rows"]] == \
         [(r["name"], r["class"], r["delta"]) for r in new["rows"]]
     moved = {m["row"]: (m["from"], m["to"], m["pack"]) for m in st["evidence_shift_v10"]}
     assert moved == {"2F: THROUGH_SUPPORT": (A.WP, A.CV, "P02 2F"), "1F: RUN_COUNT": (A.WP, A.CV, "P03 1F")}
     by = {r["name"]: r for r in new["rows"]}
-    assert by["2F: THROUGH_SUPPORT"]["class"] == "UNRESOLVED"            # joint pointer: T-599 r2 not merged
+    assert by["2F: THROUGH_SUPPORT"]["class"] == "UNRESOLVED"            # matched joint 0: whole row is residual
     assert by["GF: RUN_COUNT"]["evidence_status"] == A.WP                # F-C-P03-2 finding: not promoted
     assert by["1F: THROUGH_SUPPORT"]["evidence_status"] == A.WP          # P02 1F partial
-    assert "T-545/beams@V10" not in json.dumps(st["class_shift_v10"])
+    assert {m["row"] for m in st["reclasses"] if m.get("section_id") == "T-545/beams@V10"} <= \
+        {r["name"][:120] for r in _sec(st, "T-545/beams@V10")["rows"] if r.get("joint_sub") == "matched"}
+    fin = {r["name"]: r for r in _sec(st, "T-545/beams@V10")["rows"]}
+    assert fin["2F: THROUGH_SUPPORT"]["evidence_status"] == A.CV          # pack evidence survives the joint step
 
 
 def test_class_moves_per_unit(st):
-    assert st["class_shift_v10"] == {"lm": {"UNRESOLVED -> ENGINE_RIGHT": {"n": 1, "signed": "-8.40", "gross": "8.40"},
-                                            "UNRESOLVED -> ENGINE_WRONG": {"n": 2, "signed": "2.30", "gross": "2.70"}}}
+    assert st["class_shift_v10"] == {
+        "lm": {"UNRESOLVED -> ENGINE_RIGHT": {"n": 3, "signed": "-0.100000", "gross": "16.900000"},
+               "UNRESOLVED -> ENGINE_WRONG": {"n": 2, "signed": "2.30", "gross": "2.70"}},
+        "m3": {"UNRESOLVED -> RULE_DIFFERENCE": {"n": 4, "signed": "0.00000", "gross": "5.33250"}},
+        "nr": {"UNRESOLVED -> ENGINE_RIGHT": {"n": 1, "signed": "7", "gross": "7"}}}
+    assert st["class_shift_v10_nested_alternative"] == {
+        "m3": {"UNRESOLVED -> RULE_DIFFERENCE": {"n": 27, "signed": "-5.163750", "gross": "5.163750"}}}
 
 
 def test_no_pct_and_units_apart(st):
+    old = A.all_sections(st)
     for c in st["sections_v10"]:
-        assert c["difference_pct_of_reference"] is None
+        # a restatement prints no new %: it carries the % of the section it restates (the nested measured column sets
+        # T-576 GF / 1F carry theirs), and none where a HELD row stands (R-T609-1 (e))
+        assert c["difference_pct_of_reference"] == old[c["restates"]]["difference_pct_of_reference"]
+        if any(r["class"] == "HELD" for r in c["rows"]):
+            assert c["difference_pct_of_reference"] is None
         assert all(r["unit"] == c["unit"] for r in c["rows"])
     bad = copy.deepcopy(_sec(st, "T-545/beams@V10")["rows"])
     bad[0]["unit"] = "t"
@@ -253,8 +270,152 @@ def test_pending_fix_beside(st):
     assert b["applied"] is False and b["valued"] == "0" and b["checker_lm"] == "11.170"
     assert b["candidate_v3_0_58"] == {"before": "209.428592", "after_if_wired": "198.258592"}
     assert b["after_manifest_v12"] == {"before": "209.728592", "after_if_wired": "198.558592"}
+    assert (b["manifest_v13"]["before"], b["manifest_v13"]["after"]) == ("209.728592", "198.558592")
+    assert b["fix_row"].startswith("FR-T606-1 in manifest V13")
 
 
 def test_nothing_released(st):
     assert st["released_quantities_changed"] == 0
     assert all(x["candidate_line"] is False for x in st["beside_v10"])
+
+
+# ------------------------------------------------------------------------------- r2: S609 joint rule by hand -------
+# S609 columns: C1 JOINT_HEAD -0.30 (UNRESOLVED, CV); beams: GF THROUGH 0.50 (UNRESOLVED, WP) = matched 0.30 + residual
+# 0.20; 1F THROUGH 0.10 (UNRESOLVED, WP) = residual only (matched 0); RUN -1.0 (ENGINE_RIGHT) untouched.
+def _jsecs():
+    cols = {"section_id": "S609/columns@V9", "unit": "m3", "rows": [
+        {"name": "C1: JOINT_HEAD", "delta": "-0.30", "class": "UNRESOLVED", "unit": "m3", "evidence_status": A.CV}]}
+    beams = {"section_id": "S609/beams@V9", "unit": "m3", "reference_total": "10.0", "engine_valued": "10.4",
+             "difference": "-0.4", "difference_pct_of_reference": None, "rows": [
+        {"name": "GF: THROUGH_SUPPORT", "delta": "0.50", "class": "UNRESOLVED", "unit": "m3", "evidence_status": A.WP},
+        {"name": "1F: THROUGH_SUPPORT", "delta": "0.10", "class": "UNRESOLVED", "unit": "m3", "evidence_status": A.WP},
+        {"name": "GF: RUN", "delta": "-1.0", "class": "ENGINE_RIGHT", "unit": "m3", "evidence_status": A.WP}]}
+    return cols, beams
+
+
+def _jidx(res_outcome="UNRESOLVED_RESIDUAL", res_class="UNRESOLVED", matched="0.30"):
+    return {("S609/columns@V9", "C1: JOINT_HEAD"): [("whole", Dd("-0.30"), "SOURCED", "RULE_DIFFERENCE")],
+            ("S609/beams@V9", "GF: THROUGH_SUPPORT"): [
+                ("matched", Dd(matched), "SOURCED", "RULE_DIFFERENCE"),
+                ("residual", Dd("0.50") - Dd(matched), res_outcome, res_class)],
+            ("S609/beams@V9", "1F: THROUGH_SUPPORT"): [("residual", Dd("0.10"), "UNRESOLVED_RESIDUAL", "UNRESOLVED")]}
+
+
+def test_s609_joint_plan_by_hand():
+    cols, beams = _jsecs()
+    sp, am, kept = A._joint_plan("S609/columns@V9", cols, _jidx())
+    assert sp == {} and am["C1: JOINT_HEAD"]["set"]["class"] == "RULE_DIFFERENCE"
+    assert am["C1: JOINT_HEAD"]["evidence"] == A.CV                       # evidence unchanged by a rule
+    sp, am, kept = A._joint_plan("S609/beams@V9", beams, _jidx())
+    parts = [(p["class"], p["delta"], p["evidence"], p["joint_sub"]) for p in sp["GF: THROUGH_SUPPORT"]]
+    assert parts == [("RULE_DIFFERENCE", Dd("0.30"), A.PV, "matched"), ("UNRESOLVED", Dd("0.20"), A.WP, "residual")]
+    assert am == {} and [k["row"] for k in kept] == ["1F: THROUGH_SUPPORT"]
+    sec, mv, _ = A.A8.restate(beams, "S609/beams@V10", sp, am, "v", lambda x: x["evidence_status"])
+    assert [(m["from"], m["to"], m["delta"]) for m in mv] == [("UNRESOLVED", "RULE_DIFFERENCE", "0.30")]
+    assert sec["difference"] == "-0.4" and Dd(sec["closure_residual"]) == 0 and Dd(sec["by_class"]["UNRESOLVED"]) == Dd("0.30")
+
+
+def test_s609_joint_residual_promoted_refused():
+    _, beams = _jsecs()
+    with pytest.raises(E, match="promoted beyond its record"):
+        A._joint_plan("S609/beams@V9", beams, _jidx(res_outcome="SOURCED", res_class="RULE_DIFFERENCE"))
+
+
+def test_s609_joint_matched_beyond_row_refused():
+    _, beams = _jsecs()
+    with pytest.raises(E, match="outside 0 .. the row"):
+        A._joint_plan("S609/beams@V9", beams, _jidx(matched="0.60"))
+
+
+def test_s609_joint_row_without_record_refused():
+    cols, _ = _jsecs()
+    with pytest.raises(E, match="no T-599 record"):
+        A._joint_plan("S609/columns@V9", cols, {})
+
+
+def test_s609_cause_entered_twice_or_summed_refused():
+    row = {"name": "x", "unit": "lm", "cause_id": "C-S"}
+    with pytest.raises(E, match="twice in one line"):
+        A.refuse_cause_summed({"sections_v10": [{"section_id": "S", "rows": [row, dict(row)]}]}, "C-S")
+    with pytest.raises(E, match="adds the shared cause"):
+        A.refuse_cause_summed({"beside_v10": [{"cause_id": "C-S", "difference_added": True}]}, "C-S")
+
+
+# ------------------------------------------------------------------------------- r2: training villa ---------------
+def test_joint_split_t599(st):
+    b = {r["name"][:40]: r for r in _sec(st, "T-545/beams@V10")["rows"] if r.get("joint_sub")}
+    got = sorted((r["joint_sub"], r["class"], r["delta"], r["evidence_status"]) for r in b.values())
+    assert got == [("matched", "RULE_DIFFERENCE", "0.385", A.PV), ("matched", "RULE_DIFFERENCE", "2.28125", A.PV),
+                   ("residual", "UNRESOLVED", "0.620464", A.WP), ("residual", "UNRESOLVED", "1.208362", A.WP)]
+    c = {r["name"]: r for r in _sec(st, "T-551/columns@V10")["rows"]}
+    assert (c["columns GF: JOINT_HEAD"]["class"], c["columns 1F: JOINT_HEAD"]["class"]) == ("RULE_DIFFERENCE",) * 2
+    assert _sec(st, "T-545/beams@V10")["by_class"]["UNRESOLVED"] == "2.369278"   # 0.620464 + 1.208362 + 0.42 + B7
+    assert _sec(st, "T-551/columns@V10")["difference"] == "8.77"                  # V9 text kept, value equal
+    jr = st["joint_rule_v10"]
+    assert jr["status"].startswith("MERGED") and jr["residual_of_record_m3"] == "2.248826"
+    assert [k["row"] for k in jr["rows_kept_whole_residual"]] == ["2F: THROUGH_SUPPORT"]
+    assert {x["t599_section"] for x in jr["superseded_audited_beside"]} == \
+        {"T-572/measured-columns_GF", "T-572/measured-columns_1F"}
+    assert st["structural_provenance_v9"]["joint_rule_pointer"]["status"] == "REJECTED"   # V9 byte-equal
+
+
+def test_joint_rule_headline_mismatch_refused(st9):
+    d = copy.deepcopy(A.load(A.T599_JSON))
+    d["headline_after"]["m3"]["RULE_DIFFERENCE"]["gross"] = "5.0"
+    with pytest.raises(E, match="not the rule's headline"):
+        A.t599_joint(st9, d, A.t180_beams(st9)[0])
+
+
+def test_stair_cause_once_t607(st):
+    for sid, q in (("T-584/stair-steps-lm@V10", "8.4"), ("T-584/stair-steps-nr@V10", "7")):
+        c = _sec(st, sid)
+        r = [x for x in c["rows"] if x.get("cause_id") == "C-T607-1"]
+        assert len(r) == 1 and (r[0]["class"], r[0]["delta"], r[0]["evidence_status"]) == ("ENGINE_RIGHT", q, A.PV)
+        assert Dd(c["by_class"]["UNRESOLVED"]) == 0 and Dd(c["closure_residual"]) == 0
+    n = [x for x in st["beside_v10"] if x["block_id"] == "T-598/nosing@V10"][0]
+    assert n["units"]["lm"]["by_class"] == {"ENGINE_RIGHT": "11.02856", "HELD": "4.8"}
+    assert n["difference_added"] is False and n["valued"] == "0" and n["pct"] is None
+
+
+def test_stair_class_changed_refused(st9):
+    d = copy.deepcopy(A.load(A.T607_JSON))
+    d["causes"][0]["verdict"] = "FREELANCER_RIGHT"
+    with pytest.raises(E, match="not ENGINE_RIGHT"):
+        A.t607_steps(st9, d)
+
+
+def test_gf_open_room_t612(st):
+    c = _sec(st, "T-574/skirting-room@V10")
+    parts = [(r["class"], r["delta"], r["evidence_status"]) for r in c["rows"] if r.get("tag") == A.TAG_ROOM2]
+    assert parts == [("ENGINE_RIGHT", "-0.100000", A.CV), ("UNRESOLVED", "17.013904", A.PV)]
+    assert not any(r["class"] == "UNRESOLVED" and Dd(r["delta"]) == Dd("16.913904") for r in c["rows"])
+
+
+def test_gf_open_room_class_changed_refused(st9):
+    room, _ = A.t606_skirting_room(st9, A.load(A.T606_JSON))
+    d = copy.deepcopy(A.load(A.T612_JSON))
+    d["rooms"][0]["causes"][1]["verdict"] = "ENGINE_RIGHT"           # the undrawn split promoted to a reading
+    with pytest.raises(E, match="merged class"):
+        A.t612_room(room, d)
+
+
+def test_footing_overlap_beside_t605(st, st9):
+    b = [x for x in st["beside_v10"] if x["block_id"] == "T-605/footing-overlap@V10"][0]
+    assert b["row_delta_m3"] == "0.042" and b["row_class"] == "ENGINE_RIGHT (unchanged)" and b["valued"] == "0"
+    assert b["concrete_m3"]["engine"] == b["concrete_m3"]["own"] == "5.307"
+    assert b["side_forms_m2"]["status"].startswith("HELD")
+    d = copy.deepcopy(A.load(A.T605_JSON))
+    d["concrete"]["schedule_minus_drawn_m3"] = 0.05
+    with pytest.raises(E, match="notch"):
+        A.t605_beside(st9, d)
+
+
+def test_p03_restated_by_t610(st):
+    p = [x for x in st["beside_v10"] if x["block_id"] == "T-180/packs-P01-P03@V10"][0]
+    r6 = [q for q in p["packs"] if q["pack"] == "P03 GF"][0]["t610_restatement"]
+    assert r6["billed"].startswith("ONCE") and r6["applied"] is False and r6["evidence_moved"] is False
+    assert r6["fix_rows_m3"]["FR-T610-1"] == "-0.005957"
+    d = copy.deepcopy(A.load(A.T610_JSON))
+    d["F_C_P03_2"]["verdict"] = "ENGINE_WRONG_DOUBLE_COUNT"
+    with pytest.raises(E, match="UNDER restatement"):
+        A.t610_restatement(d)
