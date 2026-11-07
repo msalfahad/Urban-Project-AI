@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-07 20:17 (since 16:17)
+
+- T-604 manifest V12 (Gate A): WORKED (0 STALE / two-package / unexplained; skirting +0.30 lm). Decision: T-611 manifest V13 carries FR-T606-1.
+- T-606 room skirting residual (Gate A): WORKED (net split; +8.40 ENGINE_RIGHT; NEW F-T606-1 ENGINE_WRONG 11.17 lm, Checker re-measured; handoff defect F-C-T606-1 stale codemap). Decision: T-611 wires the fix; T-612 the GF / curved / corridor remainder; workers rebuild the codemap after the last commit.
+- T-599 r2 joint rule version (Gate A): WORKED (matched / residual split, L4 = baseline). Decision: T-600 FIRST in S with the 1F 0.385 / 0.460 m3 reading.
+- T-180 P03 GF (Checker slot): F-C-P03-2 ENGINE_WRONG -0.005295 m3 beam overlap. Decision: T-610 census of every beam-band overlap.
+- T-605 / T-607 / T-609: READY, not yet checked (CHECKER-RUNS).
+
 ## Lead 2026-11-07 12:16 (since 08:15)
 
 - T-591 finishes RULE_DIFF provenance (Gate A): WORKED (119 rows; 1 NONE -> UNRESOLVED A-1F-01 jambs 0.30 lm FREELANCER_RIGHT). Decision: register DOORLESS OPENING JAMB; T-601 census, T-604 fix rows.
@@ -170,15 +178,4 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-350 r4 earthworks wiring (Gate B): PARTIAL (V3.0.48 merged; trench HELD-DEFECTIVE F-C-T350R4-1). Decision: NEW T-497 first in stream S + lessons row + register ruling.
 - T-483 skirting remainder: PARTIAL (engineering agrees; version collision with V3.0.48, t485 red). Decision: TODO r2 rebase as V3.0.49 + T-443 promotion.
 - T-496 materials binding map: READY (not classified until the verdict). Findings -> NEW T-498, T-499, T-500.
-
-## Lead 2026-11-03 20:18 (since 16:17; the 12:18 and 16:17 runs recorded theirs on BOARD.md only)
-
-- T-443 r3 stair-room skirting (Gate B): WORKED (FIN.SKIRTING +13.550 lm, V3.0.47). Decision: T-483 TODO next in stream F.
-- T-492 t485 guard fix: WORKED (unblocked T-443 r3). Lessons row CLOSED.
-- T-455 tile adhesive / boxes: WORKED (unwired; F-C-T455-1 outdoor 17.227 m2 outside scope). Decision: NEW T-495.
-- T-490 B3-03 stone floor: WORKED (NOT_APPLICABLE; F-1 / F-2 landings without lines). Decision: NEW T-493 + register ruling.
-- T-491 site preparation: WORKED (unwired; fence / cabin / services HELD with formulas). Decision: wiring after stream S.
-- T-489 plaster mix: PARTIAL (mix HELD: 1990 spec over the connector limit). Decision: owner NEEDS FIXING item kept.
-- T-350 r3 earthworks wiring: FAILED twice (13:01, 17:02 runs, nothing pushed, cause not known). Decision: r4 OVERSIZED, 4 pushed stages.
-- T-486 terrace WP census: READY (pool-court 4.907 m2 omission). Decision: T-494 QUEUED after its merge.
 

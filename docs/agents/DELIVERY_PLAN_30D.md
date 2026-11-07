@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 20:17; recovery plan in force)
+
+- Merged since 16:17 (all Gate A, research, no candidate line moved): T-604, T-606, T-599 r2 WORKED; 0 rejected.
+- Closed for 12-13 Nov: manifest V12, joint rule version, room skirting 1F net split (+ F-T606-1 ENGINE_WRONG 11.17 lm). READY with the Checker: T-605, T-607, T-609 (statement V10). Remaining: manifest V13 (T-611), column residuals 2.369 m3 (T-600), beam overlap census (T-610), skirting remainder 18.35 lm gross (T-612), scorecard tables (T-613, after T-609), lift landing openings (T-608).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) BLOCKED on the wrapper item only (main unchanged at eafbb0f6).
+- 10 Nov: LOW (wrapper, under 3 days). 12-13 Nov: HIGH for reconciliation tables (V10 READY, T-613 tables next); scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-07 16:17; recovery plan in force)
 
 - Merged since 12:16 (all Gate A, research, no candidate line moved): T-596, T-601, T-602, T-597, T-603 WORKED; T-599 FAILED once (whole rows promoted; rework T-599 r2 first in S).

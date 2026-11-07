@@ -1,9 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 16:17 UTC (Lead). Previous version: 2026-11-07 12:16 UTC. The released numbers did not change
+Last update: 2026-11-07 20:17 UTC (Lead). Previous version: 2026-11-07 16:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 16:17 (newest first; three checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Beam / column joint rule written down and accepted by the checker: the column carries the joint to the slab top, the
+  beam runs face to face; only the explained part (5.33 m3 gross, net 0) cites it; 2.37 m3 stays unexplained and is
+  investigated column by column next (one first-floor head is read two ways: 0.385 or 0.460 m3).
+- Room skirting: the 9.69 m first-floor gap was several causes netted: 8.40 m of stair-well walls ours right, and a
+  NEW error of ours: 11.17 m of skirting on walls round the stair opening where no floor meets them (checker re-read
+  the drawing). When wired, skirting 209.73 -> 198.56 m (-5.3 %). Still unexplained: ground open room 16.91 m, a
+  curved wall 0.74 m, 2nd-floor corridor 0.70 m: checked next, room by room.
+- Wiring list V12 checked on a copy of the candidate: nothing stale; skirting +0.30 m at the first-floor arch.
+- The checker found one beam crossing at a column corner priced in both beams (0.005 m3, tiny); every crossing on
+  every floor is being checked for the same double count.
+- Waiting for the checker: footing overlap counted once (no quantity moves), stair step / nosing 8.40 m is one cause
+  read twice (ours right on the 56 drawn risers), statement V10 for the 12-13 Nov comparison.
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring (3 days left).
 
 Since 7 Nov 12:16 (newest first; five checked and merged, one sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

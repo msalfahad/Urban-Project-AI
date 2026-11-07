@@ -2,6 +2,19 @@
 
 
 
+## LEAD REPORT 2026-11-07 20:18 UTC
+
+Drive read OK (no file created in the project folders since 16:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 16:17; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines independently verified in the candidate: slab 60.28 m3 + footing-pit blinding 12.73 m3; released 0.
+- Beams / columns (m3): joint rule UP-CONC-JOINT-001 1.0.0 MERGED (Checker own ST read AGREE): matched joint RULE_DIFFERENCE signed 0 / gross 5.3325; residual 2.248826 + B7 0.120452 = 2.369278 UNRESOLVED -> T-600 by column mark; 1F head read 0.385 vs 0.460 (P.C 20x50 0.075) to settle there. Full suite = baseline (t374 x2 order-dependent, t485).
+- Skirting (lm): 1F living -9.693 was a net: +8.40 well walls ENGINE_RIGHT, +0.20 notches, and NEW F-T606-1 ENGINE_WRONG 11.17 lm on stair-opening walls with no floor (Checker re-measured): when wired 209.728592 -> 198.558592 (-5.33 %) -> T-611. Unexplained left: GF open room 16.914, 1F curved 0.739, 2F corridor 0.70 -> T-612.
+- Beam overlap (m3): Checker P03 GF found B27 / B1 billed twice at col 35C, ENGINE_WRONG -0.005295 (immaterial alone) -> T-610 census of every crossing on every floor.
+- Wiring list V12 MERGED (0 stale; skirting +0.30 lm). With the Checker (READY): footing overlap (no line moves; FN row +0.042 m3 ENGINE_RIGHT), step / nosing 8.40 lm one cause counted once (ENGINE_RIGHT proposal), statement V10.
+- Learned (ERS s.7): a residual is a net until split by face (ADOPTED); skirting only where a floor meets the wall (PROPOSED, T-611); crossing members by union of drawn outlines (PROPOSED, T-610).
+- Missing / gate: wiring (Gate B) waits on the wrapper; 12-13 Nov tables on track (V10 READY, T-613 next).
+TEAM HEALTH: 10 runs since 16:12 (W1 2, W2 2, W3 2, Verifier 4 incl. 1 overlap-guard skip by design), all closed, 0 empty, every working run ran code, self-check PASS (this run codemap / t061 / freeze PASS); 3 merged, 0 rejected; READY 3 (CHECKER-RUNS); 6 TODO (S 2, A 2, I 2); queue check 23 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new today (all settled by drawings, delegated rules or Lead rulings; ORR-007 and Q-80 already with you).
+NEEDS FIXING (only you): (1) wrapper allow-list for research/agents_t*/ scripts in main scripts/agent_env.sh:211 (CRITICAL, notified 5 Nov; blocks every Gate B; 10 Nov milestone LOW); (2) freelancer floors / rails workbooks over 6.2 MB (zipped copy); (3) privacy switch of the public repo.
+
 ## LEAD REPORT 2026-11-07 16:17 UTC
 
 Drive read OK (no file created in the project folders since 12:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 12:16; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines verified in the candidate: 2 (CONC.SLAB 60.28 m3, footing blinding 12.73 m3); released 0.
@@ -28,18 +41,3 @@ Drive read OK (no file created in the project folders since 08:00 UTC 7 Nov, no 
 TEAM HEALTH: 10 runs since 08:12 (W1 2, W2 2, W3 2, Verifier 4), all closed, 0 empty, 0 rejected, every agent ran code, self-check PASS (this run PASS / PASS / PASS); 6 merged; READY 0; 8 TODO (S 3, A 2, I 3); queue check 22 actionable, 0 flagged, 0 stall.
 OWNER PACKAGE: none new today (joint ownership settled under Q-62 A; stair skirting form ORR-007 and Q-80 already with you).
 NEEDS FIXING (only you): (1) wrapper allow-list for research/agents_t*/ scripts in main scripts/agent_env.sh:211 (CRITICAL, notified 5 Nov; blocks every Gate B and the 10 Nov milestone, now LOW); (2) freelancer floors / rails workbooks over 6.2 MB (zipped copy); (3) privacy switch of the public repo.
-
-## LEAD REPORT 2026-11-07 08:15 UTC
-
-Drive read OK (no file created or modified in the project folders since 04:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six merged since 04:15 (5 WORKED, 1 PARTIAL), one rework (T-587: map not rebuilt, merged on r2):
-- External door steps (lm / m2): one payable length = stone in the wall gap, 3.800 lm nr 4 + riser 0.570 m2 (was 3.50 lm + 0.390 m2 + D-GF-09 HELD): VERIFIED research quantity (Checker own DXF read). vs his 7.70 lm: -2.90 lm incl. gate, UNRESOLVED (his rows name no door). Gate step 1.000 lm / 0.150 m2 RULED door-step family (marble / stone), PARTIAL until its outer level is re-read.
-- Skirting (lm): yard 0 DRAWING-CONFIRMED (no base printed on any sheet) vs his 81.32 = his paving perimeter: RULE_DIFF / SCOPE; E1 landing RULED NOT_IN_DRAWING (exterior evidence = drawn base only). Stair flights two measured forms 17.009 (pitch) / 23.300 lm (zigzag).
-- Lintels (nr / lm): 60 nr, 91.5 .. 91.8 lm; D-GF-09 (1.00 frame over a 0.90 masonry gap) DRAWING CONFLICT, lintel 1.20 .. 1.50 HELD; T-571's 91.5 is not an upper bound.
-- Structural components (m3 / t): 91 classed; B10 59 = 10 VERIFIED / 30 CLOSABLE / 19 DESIGNER; B11 13 = 0 / 1 / 12; B1 19 = 0 / 1 / 15 / 3 (owner earthworks rulings). Dome ring side bars drawn on both faces: east ring low 0.122518 -> 0.144289 t, bounded low 0.767783 -> 0.789554 t; F10 + F footing S02 low 2.176 -> 1.960 m3 per owner 2 Nov. Both HELD lines; restated as versions next (T-595), wired in V11.
-- Wiring dry run V9: 5,124 lines, 0 STALE / two-package / unexplained; E1 steps STEP_LM 67.85 -> 79.05 lm; 3 second readings EXCLUDED (29.8964 lm double count); edge census 26 doubles / 4 orphans -> 0 / 0. Statement V7 merged.
-- Learned (ADOPTED): frame over masonry = DRAWING CONFLICT; outline vs deduction; lintel reference row first; one element one payable length, ownership by element class; exterior finish only from drawn evidence; one drawn edge one line. PROPOSED: count bars on every face the section draws (T-595).
-- Missing: manifest V10 (door / gate steps, E1 NO_LINE), statement V8, structural versions + V11, RULE_DIFF provenance (both lanes), nosing 20 HELD edges, B1 plan side; all wiring.
-- Team health: 6 merged / 1 rework since 04:15; every run closed, 0 empty; all agents ran code (self-check PASS, no venv failure this window); READY 0; TODO 8 (S 3, A 2, I 3) + 4 wrapper-blocked; queue check 22 actionable, 0 flagged, 0 stall.
-- 10 Nov (every trade wired): LOW, 3 days, wrapper only. 12-13 Nov tables: HIGH (lintel width, skirting, door steps now closed).
-OWNER PACKAGE: no new decision today (gate step and E1 landing settled by the element rules, ERS 2.7 not met). Still open: Q-80 (15 cm black block face size; 15 walls 175.9 m2 HELD).
-NEEDS FIXING (owner only): wrapper allow-list on main scripts/agent_env.sh:211 (run of research/agents_t*/ scripts) blocks every Gate B package (T-498, T-423 r2, T-525, T-563); notified 04:15 5 Nov, not re-notified. Freelancer floors / rails workbooks over the 6.2 MB connector limit (zipped or split copy). Kuwait 1990 spec copy under 6 MB; privacy switch; PyMuPDF decision; PR #3 clean-up.
