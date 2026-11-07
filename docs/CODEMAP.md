@@ -1559,6 +1559,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t591_rule_diff_provenance/` | 1 |
 | `tests/t592_door_step/` | 1 |
 | `tests/t593_manifest_v10/` | 1 |
+| `tests/t594_statement_v8/` | 1 |
 | `tests/t595/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -2140,6 +2141,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t591/` | 5 |
 | `research/agents_t592/` | 6 |
 | `research/agents_t593/` | 3 |
+| `research/agents_t594/` | 5 |
 | `research/agents_t595/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
