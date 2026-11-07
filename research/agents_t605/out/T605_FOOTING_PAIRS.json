@@ -1,0 +1,195 @@
+{
+ "blinding": {
+  "engine_m3": 12.734438,
+  "engine_minus_own_m3": 0.0,
+  "engine_notched_pair_m3": {
+   "180C": 0.111,
+   "180F": 1.044
+  },
+  "in_plot_m2": 127.344375,
+  "in_plot_m3": 12.734438,
+  "notched_pair_per_footing_m3": {
+   "180C": 0.111,
+   "180F": 1.044
+  },
+  "overlap_m2": 0.195625,
+  "sum_m2": 129.43,
+  "union_m2": 129.234375
+ },
+ "concrete": {
+  "engine_minus_own_m3": 0.0,
+  "engine_pads_m3": 64.304,
+  "pads_drawn_once_m3": 64.304,
+  "pads_schedule_rect_sum_m3": 64.346,
+  "per_pair": {
+   "10F0": 0.3,
+   "180C": 0.258,
+   "180F": 5.049,
+   "1B24": 7.2
+  },
+  "schedule_minus_drawn_m3": 0.042
+ },
+ "concrete_outlines": 25,
+ "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179",
+ "engine": {
+  "blinding_footings_m3": 12.734438,
+  "blinding_in_plot_m2": 127.344375,
+  "blinding_per_footing_m3": {
+   "180C": 0.111,
+   "180F": 1.044
+  },
+  "footing_formwork": "HELD (OQ10 formed / earth-cast; every footing FW line HELD blank)",
+  "footing_lines": {
+   "10F0": "L-f6af8a29e2c1b5fdcfd0",
+   "180C": "L-d2c75eb10451e4dd1db5",
+   "180F": "L-35da88665bf36b89a8fc",
+   "1B24": "L-10f3cd1eb0f81a3892f2"
+  },
+  "footing_m3": {
+   "10F0": 0.3,
+   "180C": 0.258,
+   "180F": 5.049,
+   "1B24": 7.2
+  },
+  "footing_pads_total_m3": 64.304
+ },
+ "footings_valued": 24,
+ "formwork_notched_pair": {
+  "interface_none_m2": 7.46,
+  "interface_once_m2": 7.685,
+  "schedule_rectangle_FN_faces_m2": 1.2,
+  "summed_faces_m2": 7.91
+ },
+ "freelancer": {
+  "FN_rows_m3": 1.2,
+  "note": "four FN rows at the schedule 1.00 x 1.00 x 0.30 (T-551)"
+ },
+ "held": {
+  "1B1B": "F10 + F open outline (Q-31 C)",
+  "1B2B": "FF lift raft (D-43): bottom not in the stack"
+ },
+ "pairs_within_2p": [
+  {
+   "blinding": {
+    "overlap_m2": 0.005625,
+    "owner": "1B24",
+    "status": "COUNTED_ONCE",
+    "why": "deeper (T-478)"
+   },
+   "concrete": {
+    "overlap_m3": 0.0,
+    "status": "NO_COMMON_PRISM"
+   },
+   "drawn_m2": [
+    1.0,
+    14.4
+   ],
+   "gap_m": 0.175,
+   "neat_overlap_m2": 0.0,
+   "notched": [
+    false,
+    false
+   ],
+   "pair": [
+    "10F0",
+    "1B24"
+   ],
+   "schedule_m2": [
+    1.0,
+    14.4
+   ],
+   "shared_edge_m": 0.0,
+   "types": [
+    "FN",
+    "F8"
+   ]
+  },
+  {
+   "blinding": {
+    "overlap_m2": 0.19,
+    "owner": "180F",
+    "status": "COUNTED_ONCE",
+    "why": "drawn whole"
+   },
+   "concrete": {
+    "overlap_m3": 0.0,
+    "status": "NO_COMMON_PRISM"
+   },
+   "drawn_m2": [
+    0.86,
+    9.18
+   ],
+   "formwork": {
+    "contact_m2": 0.225,
+    "exposed_m2": {
+     "180C": 0.0,
+     "180F": 0.1875
+    },
+    "interface_formed_m2": [
+     0.0,
+     0.225
+    ],
+    "status": "BOUNDED",
+    "summed_faces_would_be_m2": 0.6375
+   },
+   "gap_m": 0.0,
+   "neat_overlap_m2": 0.0,
+   "notched": [
+    true,
+    false
+   ],
+   "pair": [
+    "180C",
+    "180F"
+   ],
+   "schedule_m2": [
+    1.0,
+    9.18
+   ],
+   "shared_edge_m": 0.75,
+   "types": [
+    "FN",
+    "F9"
+   ]
+  }
+ ],
+ "schema": "T-605 footing overlap: handles, sizes, m2 / m3 only (no client data)",
+ "verdicts": [
+  {
+   "engine_m3": 5.307,
+   "his_m3": 5.349,
+   "item": "footing concrete",
+   "own_m3": 5.307,
+   "pair": "F9 180F / FN 180C",
+   "verdict": "ENGINE_RIGHT (AGREE with the drawing); his FN row bills the 0.40 x 0.35 x 0.30 = 0.042 m3 piece F9 already holds"
+  },
+  {
+   "engine_m3": 1.155,
+   "item": "blinding",
+   "own_m3": 1.155,
+   "pair": "F9 180F / FN 180C",
+   "verdict": "AGREE (union, F9 owns 0.19 m2: drawn whole and deeper); his plate is a RULE_DIFFERENCE (T-478)"
+  },
+  {
+   "engine": "HELD OQ10",
+   "item": "footing side forms",
+   "own_m2": [
+    7.46,
+    7.685
+   ],
+   "pair": "F9 180F / FN 180C",
+   "verdict": "NO_COMPARISON (engine HELD); summed faces 7.9100 refused (interface twice)"
+  },
+  {
+   "item": "concrete / forms",
+   "pair": "F8 1B24 / FN 10F0",
+   "verdict": "NO_COMMON_PRISM: neat outlines 0.175 m apart"
+  },
+  {
+   "item": "blinding",
+   "overlap_m2": 0.005625,
+   "pair": "F8 1B24 / FN 10F0",
+   "verdict": "AGREE (union); owner F8 (deeper 0.50 vs 0.30, T-478)"
+  }
+ ]
+}
