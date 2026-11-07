@@ -1,0 +1,334 @@
+{
+ "addons": {
+  "D115 wash-lobby door reveals (1.00)": {
+   "dA": "0.15",
+   "dP": "0.3",
+   "depth": "0.15",
+   "depth_handles": [
+    "2E4",
+    "2E1"
+   ],
+   "kind": "DOOR",
+   "width": "1.0",
+   "width_handles": [
+    "2E4",
+    "2E3"
+   ]
+  },
+  "D120 stair-hall door reveals (1.00)": {
+   "dA": "0.2",
+   "dP": "0.4",
+   "depth": "0.2",
+   "depth_handles": [
+    "20F",
+    "220"
+   ],
+   "kind": "DOOR",
+   "width": "1.0",
+   "width_handles": [
+    "20F",
+    "20E"
+   ]
+  },
+  "D120 west door reveals (1.00)": {
+   "dA": "0.2",
+   "dP": "0.4",
+   "depth": "0.2",
+   "depth_handles": [
+    "158",
+    "15A"
+   ],
+   "kind": "DOOR",
+   "width": "1.0",
+   "width_handles": [
+    "158",
+    "159"
+   ]
+  },
+  "D200 door reveals (west wall, 2.00)": {
+   "dA": "0.4",
+   "dP": "0.4",
+   "depth": "0.2",
+   "depth_handles": [
+    "AB",
+    "9D"
+   ],
+   "kind": "DOOR",
+   "width": "2.0",
+   "width_handles": [
+    "AB",
+    "AC"
+   ]
+  },
+  "lift landing door reveals (1.00)": {
+   "dA": "0.2",
+   "dP": "0.4",
+   "depth": "0.2",
+   "depth_handles": [
+    "20D",
+    "21D"
+   ],
+   "kind": "DOOR",
+   "width": "1.0",
+   "width_handles": [
+    "20D",
+    "20E"
+   ]
+  },
+  "wash-lobby mouth (open to the room)": {
+   "dA": "0.188348",
+   "dP": "0.3",
+   "depth": "0.15",
+   "depth_handles": [
+    "2DC",
+    "2DB"
+   ],
+   "kind": "OPENING",
+   "width": "1.255652",
+   "width_handles": [
+    "2DC",
+    "2DC"
+   ]
+  }
+ },
+ "grid_test": {
+  "rectangles": 1955100,
+  "reproducing_both": 0,
+  "x_positions": 57,
+  "y_positions": 50
+ },
+ "islands": {
+  "solids under the 1F south facade (columns + wall)": {
+   "area": "0.88",
+   "handles": [
+    "2FD2",
+    "336/337",
+    "2FC6"
+   ],
+   "perimeter": "8.7"
+  }
+ },
+ "outlines": {
+  "GF-OPEN.face": {
+   "area": "126.927717",
+   "edges": [
+    {
+     "handle": "B5",
+     "lm": "7.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "E0",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "97",
+     "lm": "0.691681",
+     "role": "WALL"
+    },
+    {
+     "handle": "27D#1",
+     "lm": "1.585596",
+     "role": "WALL"
+    },
+    {
+     "handle": "2E4",
+     "lm": "7.908923",
+     "role": "WALL"
+    },
+    {
+     "handle": "222",
+     "lm": "1.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "20F",
+     "lm": "4.7",
+     "role": "WALL"
+    },
+    {
+     "handle": "AB",
+     "lm": "3.4",
+     "role": "WALL"
+    },
+    {
+     "handle": "158",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "AE",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "A8",
+     "lm": "13.82",
+     "role": "ZONE_EDGE"
+    },
+    {
+     "handle": "30F",
+     "lm": "1.5",
+     "role": "ZONE_EDGE"
+    },
+    {
+     "handle": "104",
+     "lm": "5.15",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-71e2e002",
+   "interior_solids": [],
+   "notch_lm": "0.699896",
+   "notches": [
+    {
+     "handle": "2F8A",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FAE",
+     "lm": "0.0"
+    },
+    {
+     "handle": "2FB4",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FC0",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FC3",
+     "lm": "0.099896"
+    },
+    {
+     "handle": "2FC6",
+     "lm": "0.2"
+    },
+    {
+     "handle": "2FD2",
+     "lm": "0.1"
+    }
+   ],
+   "note": "engine face GF-RC99C2A: south side on the band / curb line prolonged west to the west wall, east end of the band, facade east of the band",
+   "perimeter": "56.006096",
+   "storey": "GF",
+   "virtual_lm": "15.32",
+   "wall_lm": "40.686096"
+  },
+  "GF-OPEN.full": {
+   "area": "147.657717",
+   "edges": [
+    {
+     "handle": "B5",
+     "lm": "7.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "E0",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "97",
+     "lm": "0.691681",
+     "role": "WALL"
+    },
+    {
+     "handle": "27D#1",
+     "lm": "1.585596",
+     "role": "WALL"
+    },
+    {
+     "handle": "2E4",
+     "lm": "7.908923",
+     "role": "WALL"
+    },
+    {
+     "handle": "222",
+     "lm": "1.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "20F",
+     "lm": "4.7",
+     "role": "WALL"
+    },
+    {
+     "handle": "AB",
+     "lm": "3.4",
+     "role": "WALL"
+    },
+    {
+     "handle": "158",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "AE",
+     "lm": "4.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "104",
+     "lm": "18.97",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "interior_solids": [
+    {
+     "area": "0.15",
+     "handle": "2FC6",
+     "perimeter": "1.7"
+    },
+    {
+     "area": "0.2",
+     "handle": "2FD2",
+     "perimeter": "2.1"
+    }
+   ],
+   "notch_lm": "0.599896",
+   "notches": [
+    {
+     "handle": "2F8A",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FAE",
+     "lm": "0.0"
+    },
+    {
+     "handle": "2FB4",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FC0",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FC3",
+     "lm": "0.099896"
+    },
+    {
+     "handle": "2FCF",
+     "lm": "0.1"
+    },
+    {
+     "handle": "2FD5",
+     "lm": "0.1"
+    }
+   ],
+   "note": "drawn gross outline: west wall to the south facade, band, curb, pantry strips and the solids under the 1F facade inside (T-427 147.658 m2)",
+   "perimeter": "55.906096",
+   "storey": "GF",
+   "virtual_lm": "0.0",
+   "wall_lm": "55.906096"
+  }
+ },
+ "rule": "R-T612-1",
+ "schema": "T612_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "units": "m / m2"
+}

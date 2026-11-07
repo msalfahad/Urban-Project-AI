@@ -1,0 +1,249 @@
+{
+ "schema": "T612_REMAINDER_CAUSES_V1",
+ "rule": "R-T612-1",
+ "base_rule": "R-T606-1",
+ "governing": [
+  "UP-SKIRT-001 1.4.0",
+  "R-T574-1",
+  "R-T601-1",
+  "Q-06 A",
+  "owner 2026-11-02 (no skirting on tiled faces)",
+  "ERS s.2 / s.3",
+  "R-T427-1 (zone ends at its own drawn outline)",
+  "R-T606-1"
+ ],
+ "pins": {
+  "research/agents_t574/out/T574_SKIRTING_RECONCILE.json": "7b1e01bf83c20702",
+  "research/agents_t606/out/T606_OUTLINE_CAUSES.json": "e71d85471859e284",
+  "research/agents_t606/T606_DRAWN.json": "aaea4a9c6116afd9"
+ },
+ "released": "NOTHING RELEASED; research ledger",
+ "t606_remainder": {
+  "GF open room": "-16.913904",
+  "1F curved east bed room": "-0.73933",
+  "2F corridor": "-0.7"
+ },
+ "t606_remainder_total": "-18.353234",
+ "rooms": [
+  {
+   "room": "GF open room (reception + dining + entrance zone + open pantry)",
+   "his_row": "13+15",
+   "his": "72.92",
+   "his_rows": {
+    "13": [
+     "58.16",
+     "137.5"
+    ],
+    "15": [
+     "14.76",
+     "10.46"
+    ]
+   },
+   "remeasured": {
+    "engine face": [
+     "56.006096",
+     "126.927717",
+     "engine gross 56.006096"
+    ],
+    "drawn gross outline": [
+     "55.906096",
+     "147.657717",
+     "T-427 147.658"
+    ]
+   },
+   "face_vs_outline": {
+    "by_edge": {
+     "104": "-13.82",
+     "30F": "1.5",
+     "A8": "13.82",
+     "AE": "-1.5"
+    },
+    "by_notch": {
+     "2FC6": "0.2",
+     "2FCF": "-0.1",
+     "2FD2": "0.1",
+     "2FD5": "-0.1"
+    },
+    "total": "0.100000"
+   },
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [],
+    "p_only_count": 0,
+    "a_only": [],
+    "a_only_count": 0
+   },
+   "split_bound": {
+    "undrawn_split_lm_max": "8.506952",
+    "undrawn_split_lm_min": "3.056952",
+    "pure_split_reading": {
+     "split_lm": "8.506952",
+     "entrance_outer_lm": "6.253048",
+     "reception_check": "58.160000"
+    },
+    "his_entrance_as_rectangle_sides": [
+     "5.466542",
+     "1.913458"
+    ],
+    "grid_test": {
+     "rectangles": 1955100,
+     "reproducing_both": 0,
+     "x_positions": 57,
+     "y_positions": 50
+    }
+   },
+   "interior_solids": {
+    "solids under the 1F south facade (columns + wall)": {
+     "area": "0.88",
+     "handles": [
+      "2FD2",
+      "336/337",
+      "2FC6"
+     ],
+     "perimeter": "8.7"
+    }
+   },
+   "ours": "56.006096",
+   "gap": "-16.913904",
+   "causes": [
+    {
+     "id": "GF-FACE-VS-OUTLINE",
+     "lm": "0.100000",
+     "verdict": "ENGINE_RIGHT",
+     "edges": [
+      "104",
+      "30F",
+      "A8",
+      "AE"
+     ],
+     "label": "engine face GF-RC99C2A vs the drawn gross outline his area re-adds to: the face's south side runs on the band / curb line A8 13.82 + band end 30F 1.50 (both virtual, no skirting) with the columns 2FD2 / 2FC6 notched (0.30), the outline on the south facade 104 (13.82 more) + west wall AE (1.50 more) with the facade columns 2FCF / 2FD5 notched (0.20): +15.32 + 0.30 - 13.82 - 1.50 - 0.20. No skirting quantity: the face's virtual edges are deducted (T-574), and the facade 3.90 of the dining piece is already the T-431 cause"
+    },
+    {
+     "id": "residual",
+     "lm": "-17.013904",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "his two rows 58.16 + 14.76 against the drawn gross outline 55.906096 (area 147.657717 vs his 147.96, +0.302283 m2): no drawn reading reproduces both (reading test below); the only reading that re-adds his perimeters is an UNDRAWN split between his rows counted in both: 8.506952 lm if he walked nothing else, 3.056952 lm if he walked every drawn piece (bound, R-T612-1.3), and no split changes his area: the +0.302283 m2 is his row above the drawn outline (T-427 'UNEXPLAINED 0.3023', reproduced here by a second route)"
+    }
+   ],
+   "unresolved": "-17.013904"
+  },
+  {
+   "room": "1F curved east bed room + lobby",
+   "his_row": "22",
+   "his": "22.89",
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [],
+    "a_only": []
+   },
+   "readings": {
+    "chord": [
+     "21.9",
+     "20.7"
+    ],
+    "ours": [
+     "22.15067",
+     "19.016592"
+    ],
+    "room_only": [
+     "16.65067",
+     "15.060342"
+    ],
+    "room_only_chord": [
+     "16.4",
+     "16.74375"
+    ]
+   },
+   "ours": "22.15067",
+   "gap": "-0.73933",
+   "causes": [
+    {
+     "id": "residual",
+     "lm": "-0.73933",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "no drawn reading reproduces his row (his rows carry no dimensions)"
+    }
+   ],
+   "unresolved": "-0.73933",
+   "t612": {
+    "arc_edge_lm": "3.509762",
+    "chord_reading": [
+     "21.9",
+     "20.7"
+    ],
+    "arc_minus_chord_lm": "0.25067",
+    "segment_m2": "1.683408",
+    "his_minus_ours": [
+     "0.73933",
+     "-1.726592"
+    ],
+    "sign_test": "an arc read as its chord: dP -0.25067, dA +1.683408; his dP +0.73933, dA -1.726592: opposite signs on both, so 'arc vs chord' explains none of the 0.73933 lm",
+    "verdict": "UNRESOLVED (T-606 readings stand: 4 bases x 2 door reveals, none reproduces either figure)"
+   }
+  },
+  {
+   "room": "2F corridor = lobby + arrival",
+   "his_row": "29",
+   "his": "13.6",
+   "reading_test": {
+    "status": "NOT_ESTABLISHED",
+    "both": [],
+    "p_only": [
+     {
+      "base": "ours",
+      "addons": [
+       "lift door 1.00 reveals",
+       "roof door reveals"
+      ],
+      "P": "13.6",
+      "A": "7.725"
+     },
+     {
+      "base": "ours",
+      "addons": [
+       "maid door reveals",
+       "roof door reveals"
+      ],
+      "P": "13.6",
+      "A": "7.705"
+     }
+    ],
+    "a_only": []
+   },
+   "readings": {
+    "east_foot": [
+     "13.5",
+     "7.72"
+    ],
+    "ours": [
+     "12.9",
+     "7.375"
+    ]
+   },
+   "ours": "12.9",
+   "gap": "-0.7",
+   "causes": [
+    {
+     "id": "residual",
+     "lm": "-0.7",
+     "verdict": "UNRESOLVED",
+     "residual": true,
+     "label": "no drawn reading reproduces his row (his rows carry no dimensions)"
+    }
+   ],
+   "unresolved": "-0.7",
+   "t612": {
+    "candidates_perimeter_only": "maid 2 x 0.20 + roof 2 x 0.15 = 0.70 (area 7.705, on his rounding boundary) and lift + roof reveals 0.70 (area 7.725): both refused (R-T606-1 step 4)",
+    "verdict": "UNRESOLVED (no drawn reading reproduces both his 13.60 and his 7.70)"
+   }
+  }
+ ],
+ "split": {
+  "named": "0.100000",
+  "unresolved": "-18.453234"
+ }
+}
