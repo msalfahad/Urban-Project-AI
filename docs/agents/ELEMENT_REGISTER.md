@@ -46,6 +46,19 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- EXTERNAL DOOR STEP vs THRESHOLD STRIP (Lead 2026-11-07 00:15; T-577 MERGED e8db39da, F-T577-2 UNRESOLVED element):
+  OPEN, owner trade not yet ruled. A drawn step (riser + tread outside an external door) and the marble threshold strip
+  inside the door opening are TWO elements unless the drawing shows one piece; until T-584 reads the step lines, the
+  threshold strip stays with marble thresholds (T-422 / T-577) and the step is NO_LINE HELD, never 0 and never folded
+  into the threshold. E1 entrance steps: owner trade marble / stone (T-490 entrance stone) once T-584 confirms them.
+- YARD SKIRTING (Lead 2026-11-07 00:15; T-574 MERGED 6bc78ff6, yard 81.32 lm UNRESOLVED scope): a skirting exists only
+  where a finished floor meets a finished wall face with a drawn or noted base; owner trade skirting (UP-SKIRT-001) for
+  DRAWING-CONFIRMED faces only; faces with no drawn finish are NOT_IN_DRAWING (his scope, named), never added by
+  majority or because the freelancer carries them. T-585 classes the faces.
+- LINTEL WIDTH BASIS (Lead 2026-11-07 00:15; F-C-T571-1): the masonry opening a lintel spans is the gap between the
+  drawn wall ends (block overall where the wall ends meet the block edge), never the frame clear; one basis for every
+  insert of a census. T-581 restates T-571 on it; the lintel stays owned by STR.CONC.LINTEL / precast lintel lines
+  (T-516 / T-524 ownership unchanged).
 - DOME / RING / LIFT-PIT WALL REINFORCEMENT (Lead 2026-11-06 20:14; T-560 MERGED 8ba76061, Checker ENGINE_OMISSION CONFIRMED;
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
