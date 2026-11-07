@@ -88,6 +88,19 @@ quantity.
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
   line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
+- FOOTING OVERLAP (Lead 2026-11-07 16:20; Checker F-C-T597-1 own ST7757 read): where two drawn footing outlines overlap
+  or one is drawn notched round another (FN 180C notched 0.40 x 0.35 where F9 180F sits; 1B24 / 10F0 0.005625 m2),
+  the overlap is ONE block of concrete, measured once: OWNER = the footing whose drawn outline is whole (the notched
+  outline gives it up); footing concrete, blinding and side forms follow the drawn outline, never the scheduled
+  rectangle where the drawing notches it. Pits plan: union (T-597). Depth HELD where S01 holds it, never 0. T-605.
+- LIFT LANDING DOOR (Lead 2026-11-07 16:20; Checker FR-T601-3): GF OP-011 / 1F OP-007 are framed lift landing doors,
+  NOT passages: no jamb skirting (DOORLESS OPENING JAMB does not apply), blockwork deducts the full opening (Q-73),
+  lintel per the owner lintel rule; door / frame supply owner trade HELD until a drawing note or spec names the lift
+  package (never assumed out of scope). T-608.
+- STAIR STEP / NOSING EDGE (Lead 2026-11-07 16:20): a tread's front edge is priced by the step line (stone / tile piece)
+  and, where a separate nosing item exists, by the nosing line once per edge id; one drawn edge never twice within one
+  line (R-T588-1); a residual shared by both lines (his 8.4 lm) is reconciled once by edge id and entered in each line
+  by its own unit. T-607.
 - COLUMN-BEAM JOINT (Lead 2026-11-07 12:30, CORRECTS the 2026-11-06 20:14 entry, which named the wrong owner and called
   the freelancer's column 'through-height'; F-C-T590 CONVENTION_RECORD_CONFLICT; no owner question: Q-62 A requires one
   convention and delegates the choice): the COLUMN line OWNS the joint volume to the slab top at every column head; the
