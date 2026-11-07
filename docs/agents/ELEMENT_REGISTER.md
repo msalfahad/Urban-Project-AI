@@ -88,9 +88,20 @@ quantity.
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
   line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
-- COLUMN-BEAM JOINT (Lead 2026-11-06 20:14; restates T-189 / R-CONC-OWN-1 for T-576): the beam OWNS the joint volume at
-  every column head; the column line takes the clear height floor-to-soffit. A freelancer through-height column is
-  RULE_DIFF on the joint, never ENGINE_WRONG. T-576.
+- COLUMN-BEAM JOINT (Lead 2026-11-07 12:30, CORRECTS the 2026-11-06 20:14 entry, which named the wrong owner and called
+  the freelancer's column 'through-height'; F-C-T590 CONVENTION_RECORD_CONFLICT; no owner question: Q-62 A requires one
+  convention and delegates the choice): the COLUMN line OWNS the joint volume to the slab top at every column head; the
+  beam is measured face to face between column faces (ERS s.7 rows 2026-10-31 ADOPTED; T-394 / T-395 Checker verdicts;
+  the engine already bills it so). Each joint once, never both, never neither. The freelancer bills the column clear
+  (GF 3.75 = 4.50 - 0.75) and the beam through the supports: same physical concrete under the other owner =
+  RULE_DIFFERENCE SOURCED once the rule version exists (T-599), never ENGINE_WRONG / FREELANCER_RIGHT; a per-storey
+  residual that the joint swap does not explain stays its own residual (T-600). Superseded text kept: 'beam OWNS ...
+  column clear height floor-to-soffit' (2026-11-06 20:14, T-576).
+- DOORLESS OPENING JAMB (Lead 2026-11-07 12:30; T-591 MERGED, Checker own read: arch120 jambs 0.15 DRAWING-CONFIRMED):
+  the two return faces of an opening with no leaf and no frame (arch, passage) are wall faces. OWNER TRADE B7 skirting
+  (UP-SKIRT-001 1.4.0, 'doorless_opening_jambs: included') where both sides are dry and the floor finish continues;
+  plaster / paint returns on the same face ids stay with the PLASTERED RETURN FACE entry (B5 / B6, UP-OPEN-SCHED-001
+  1.4.0), never billed twice. A door opening's jamb is never skirted. Jamb depth unknown -> HELD by name, never 0. T-601.
 - PLASTERED RETURN FACE (Lead 2026-11-06 16:17; T-561 MERGED 33a5833f, Checker ENGINE_OMISSION 26 returns 23.070 m2):
   a wall return (pier side, nib, reveal-free return) is one face carrying two layers: B5 plaster OWNS the plaster
   area, B6 paint OWNS the paint area on the same face id (dry, untiled faces only; tiled faces carry neither paint nor
