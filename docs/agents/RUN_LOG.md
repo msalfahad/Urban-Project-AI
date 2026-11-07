@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T05:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T05:13Z | Worker 3 | SUCCESS | T-587 READY @ 5c588c6d | Statement V7 = V6 byte-equal + T-576/578/583/584: cols GF -1.17375 m3 (count ER +1.03125 V), 1F -0.555 (head RD), V5 HEIGHT_OPEN -> RD; rails 18.95 vs 54.869 lm; steps 109.2 vs 67.85 lm; E1 11.20 lm -> ENGINE_WRONG (V); T-577 ER labelled worker-proposed; T-583 >= 0.767783 t high open; nothing released | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T05:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T04:57Z | Worker 2 | SUCCESS | T-585 READY 058fa409 | yard skirting 46 faces closed to 98.629 lm: 0 DRAWING-CONFIRMED (no base printed on any sheet), wall foot 59.582 lm NOT_IN_DRAWING (+6.00 under sills), porch/pool UNRESOLVED 0..11.61; his 81.32 lm = his paving perimeter (RULE_DIFF/SCOPE); flights two measured forms pitch 17.009 / zigzag 23.300 lm, lower bound 17.009->19.359, E1 landing 3.50 lm ENGINE_OMISSION proposal; 96 nr kept | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
