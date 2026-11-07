@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T15:50Z | Verifier | STARTED | run session_01E6cPnbAQ5aqKJLn3xPcLqK | repo-attached routine | task state: READY T-597 (W1 7e864fee), T-603 (W3 61c2deff) | self-check pending
 - 2026-11-07T15:35Z | Worker 1 | SUCCESS | T-597 READY (agents/task-T-597 @ 7e864fee) | B1 plan side from own ST7757 read: 24/24 pit outlines = schedule; union 129.234375 m2 vs sum 129.57 (overlap 0.335625 counted once); pits zone 124.648614 m2 vs engine 124.649555 (-0.000941, pool-arc polygonisation; -0.001572 m3 at S01, immaterial); pool envelope 11.851050 m2 and ext GB trench 1.069267..1.176467 m3 AGREE. Plans DRAWING-CONFIRMED, depths stay S01 HELD; FF / F10F plans HELD. Freelancer NO_ROW. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T15:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T15:12Z | Worker 3 | SUCCESS | T-603 READY 61c2deff | statement V9: joint rows RD->UNRESOLVED (T-599 REJECTED pointer) 5 of record +2.248826 m3 + B7 0.120452 apart; rebar 34.814694 t UNRESOLVED; finishes 40/76/1, A-1F-01 jambs 0.30 lm ENGINE_WRONG; nosing his-ours +15.828560 lm residual 0; stair skirting one element 17.009049..23.300481 lm, sum refused; F-T603-5 pair sign engine-ref (statement sign GF +0.620464 / 1F +1.208362 / 2F +0.42 m3) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
