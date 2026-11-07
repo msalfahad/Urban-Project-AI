@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T21:20Z | Worker 1 | STARTED | run session_01E6cPnb7TDmcX5pndguDRNz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07 21:05 UTC | Worker 3 | SUCCESS | T-611 READY b407b522 | Manifest V13: FR-T606-1 removes 11.170 lm (Checker 4.000+7.020+0.100+0.050) of 1F living skirting on stair-opening walls with no floor: line 32.38536->21.21536, FIN.SKIRTING 209.728592->198.558592 lm (-5.33 %; Checker V3.0.58 base 198.258592, bases differ by V12 +0.30); V12 label absorbed, 0 STALE / 0 two-package / 0 unexplained; T-605/607/599 0 rows, T-610 refused; nothing wired | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 21:03 UTC | Worker 2 | SUCCESS | T-612 READY 64376f76 | GF open room re-measured by handle: face 56.006096 lm = engine gross, drawn gross outline 55.906096 lm / 147.657717 m2; GF -16.913904 = +0.10 face-vs-outline (ENGINE_RIGHT) + -17.013904 UNRESOLVED (CANDIDATE undrawn split between his 2 rows counted twice, 3.057..8.507 lm); 1F curved -0.739 / 2F -0.70 UNRESOLVED; no ENGINE_WRONG; R-T612-1, 24 tests | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 21:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
