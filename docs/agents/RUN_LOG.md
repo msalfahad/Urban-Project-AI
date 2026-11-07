@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07 23:21 UTC | Worker 1 | STARTED | run session_01E6cPndunKvSAjaBqztrywU | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T23:15Z | Worker 3 | SUCCESS | T-609 r2 READY 2224bfcf | Statement V10 rebuilt on merged V9 pointer (r1 reject cause) + T-599 r2 joint split: beams GF 2.901714=2.28125 RD+0.620464 UNRES, 1F 1.593362=0.385 RD+1.208362 UNRES, column JOINT_HEAD->RD (pair nets 0, gross 5.3325 m3); ST-01 8.4 lm/7 nr->ENGINE_RIGHT once (C-T607-1); GF room 16.913904=-0.10 ER+17.013904 UNRES; T-605/T-610/T-611 beside. No total moves; nothing released. Missing: T-600 residuals 2.248826 m3, FR wiring | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T23:00Z | Worker 3 | STARTED | run session_01E6cPnbGe7QaEGXERV5wqLj | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T22:59Z | Worker 2 | SUCCESS | T-608 READY b43bd738 | Lift landing doors GF OP-011/1F OP-007 (+2F OP-002) scoped over 9 line families on V3.0.57: ARCH.PASSAGE counts 3 lift doors (FR-T608-1, 9->6 pcs), no landing-door supply line (FR-T608-2 ADD 3 HELD, trade not printed); threshold/surround/skirting/blockwork/lintel/faces correct. Unprinted landing height alone holds 1F-13 + 2F-01 plaster+paint (3.35 m2 ranges): RFI lift supplier proposed. No released quantity changed. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
