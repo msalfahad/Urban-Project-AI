@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07 07:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T07:10:21Z | Worker 3 | SUCCESS | T-587 READY r2 @ a86379e5 + T-588 READY @ 178a371b (same worker order) | T-587 r2: engine head merged, maps regenerated last, stale none. T-588 manifest V9 overlay after V2-V8 on V3.0.58 copy: 5,124 lines, 0 STALE / two-package / unexplained; E1 step +11.20 lm (STEP_LM 67.85->79.05), 3 second-reading step lines EXCLUDED (HELD double count 29.8964 lm), rebar AT_LEAST +767.783 kg high open, edge census 26 doubles/4 orphans -> 0/0; nothing released | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T07:00Z | Worker 3 | STARTED | run session_01E6cPnbs1ar4hLmECKtroxo | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T06:52:36Z | Worker 2 | SUCCESS | T-592 READY (agents/task-T-592 @ 8b625750) | External door step paid once as the stone in the wall gap (= T-325 strip): house 3.800 lm nr 4, riser 0.570 m2 (T-584: 3.500 edge + 0.390 m2 + D-GF-09 HELD); visible nosing 3.500 kept as attribute. D-GF-09 riser 0.15 DRAWING-CONFIRMED by region read (side walk reaches only +0.15). Gate 1.000 lm / 0.150 m2, NO_LINE (FR-T592-2). vs his 7.70 lm: -2.90 lm incl. gate, UNRESOLVED (no ids). Tests t592 20 + t584 + t061 pass. | self-check: codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
