@@ -1,0 +1,1995 @@
+{
+ "rule": "R-T581-1",
+ "t571_pins": {
+  "ledger_sha16": "ad9bceee3bfdbc12",
+  "census_sha16": "d79e6aa5d23edc0e"
+ },
+ "inserts": [
+  {
+   "block": "D120",
+   "handle": "15E",
+   "mirrored": true,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": {
+    "len_mm": 900.0,
+    "tag": "172"
+   },
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "10A",
+       "10C"
+      ]
+     },
+     "face_b": {
+      "left": -0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "138",
+       "139"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D120",
+   "handle": "192",
+   "mirrored": false,
+   "rotation_deg": 90.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": {
+    "len_mm": 900.0,
+    "tag": "19C"
+   },
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "A3",
+       "A2"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "A5",
+       "A4"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "19E",
+   "mirrored": false,
+   "rotation_deg": 270.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "131",
+       "130"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "133",
+       "132"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "d220",
+   "handle": "1B5",
+   "mirrored": false,
+   "rotation_deg": 180.0,
+   "overall_mm": 900.0,
+   "frame_clear_mm": 800.0,
+   "wall_t_mm": 200.0,
+   "frame_line": {
+    "len_mm": 800.0,
+    "tag": "1C6"
+   },
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "121",
+       "122"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "11D",
+       "11E"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "1EF",
+   "mirrored": true,
+   "rotation_deg": 180.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "118",
+       "117"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "116",
+       "115"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D200",
+   "handle": "281",
+   "mirrored": false,
+   "rotation_deg": 270.0,
+   "overall_mm": 2000.0,
+   "frame_clear_mm": 1900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 2000.0,
+      "gap_mm": 2000.0,
+      "tags": [
+       "9D",
+       "9E"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 2000.0,
+      "gap_mm": 2000.0,
+      "tags": [
+       "AB",
+       "AC"
+      ]
+     }
+    },
+    "gap_mm": 2000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D120",
+   "handle": "2C7",
+   "mirrored": false,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "21F",
+       "220"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "20E",
+       "20F"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D120",
+   "handle": "2D8",
+   "mirrored": true,
+   "rotation_deg": 90.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": {
+    "len_mm": 1700.0,
+    "tag": "8E"
+   },
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": null,
+      "right": null,
+      "gap_mm": null,
+      "tags": []
+     },
+     "face_b": {
+      "left": null,
+      "right": null,
+      "gap_mm": null,
+      "tags": []
+     }
+    },
+    "gap_mm": null,
+    "state": "UNRESOLVED",
+    "why": "a face has no wall end on each side within reach (or a face line runs through): never the block width"
+   },
+   "ends_sit": "UNRESOLVED"
+  },
+  {
+   "block": "D115",
+   "handle": "2F2",
+   "mirrored": false,
+   "rotation_deg": 0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "2E3",
+       "2E4"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "2E1",
+       "2E2"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "320",
+   "mirrored": false,
+   "rotation_deg": 45.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "31A",
+       "317"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "31D",
+       "31C"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "321",
+   "mirrored": true,
+   "rotation_deg": 45.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "31A",
+       "31B"
+      ]
+     },
+     "face_b": {
+      "left": -0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "31E",
+       "31F"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "339",
+   "mirrored": false,
+   "rotation_deg": 0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 3.0,
+      "right": 800.0,
+      "gap_mm": 797.0,
+      "tags": [
+       "2B1",
+       "2B2"
+      ]
+     },
+     "face_b": {
+      "left": 3.0,
+      "right": 800.0,
+      "gap_mm": 797.0,
+      "tags": [
+       "2AF",
+       "2B0"
+      ]
+     }
+    },
+    "gap_mm": 797.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D120",
+   "handle": "33E",
+   "mirrored": false,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "15B",
+       "15A"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "159",
+       "158"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D120",
+   "handle": "3FF",
+   "mirrored": false,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 200.0,
+   "frame_line": {
+    "len_mm": 900.0,
+    "tag": "3FD"
+   },
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 46.9,
+      "right": 946.9,
+      "gap_mm": 900.0,
+      "tags": [
+       "2B9",
+       "2B8"
+      ]
+     },
+     "face_b": {
+      "left": 46.9,
+      "right": 946.9,
+      "gap_mm": 900.0,
+      "tags": [
+       "26F",
+       "26E"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_FRAME_LINE"
+  },
+  {
+   "block": "D315",
+   "handle": "BEE",
+   "mirrored": false,
+   "rotation_deg": 90.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "B04",
+       "B03"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "B02",
+       "B01"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D215",
+   "handle": "BEF",
+   "mirrored": false,
+   "rotation_deg": 0,
+   "overall_mm": 900.0,
+   "frame_clear_mm": 800.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "AFA",
+       "AF9"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "B1D",
+       "B1C"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "C12",
+   "mirrored": false,
+   "rotation_deg": 270.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C10",
+       "C0F"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C0E",
+       "C0D"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D215",
+   "handle": "C18",
+   "mirrored": true,
+   "rotation_deg": 0,
+   "overall_mm": 900.0,
+   "frame_clear_mm": 800.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "AFA",
+       "AFB"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "AD9",
+       "AD8"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "d220",
+   "handle": "C1A",
+   "mirrored": true,
+   "rotation_deg": 0,
+   "overall_mm": 900.0,
+   "frame_clear_mm": 800.0,
+   "wall_t_mm": 200.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "AFC",
+       "AFD"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "B17",
+       "B18"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "C2B",
+   "mirrored": false,
+   "rotation_deg": 180.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C29",
+       "C2A"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C27",
+       "C28"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "C2E",
+   "mirrored": false,
+   "rotation_deg": 90.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C1D",
+       "C1E"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "C1B",
+       "C1C"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D115",
+   "handle": "C31",
+   "mirrored": true,
+   "rotation_deg": 90.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "AF1",
+       "C21"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "C20",
+       "C1F"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D115",
+   "handle": "C32",
+   "mirrored": true,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "AEA",
+       "AEB"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "AE8",
+       "AE9"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "11B4",
+   "mirrored": true,
+   "rotation_deg": 0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "AD2",
+       "ACF"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "AD7",
+       "AD3"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D115",
+   "handle": "12BA",
+   "mirrored": true,
+   "rotation_deg": 180.0,
+   "overall_mm": 1000.0,
+   "frame_clear_mm": 900.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "1282",
+       "1283"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 1000.0,
+      "gap_mm": 1000.0,
+      "tags": [
+       "1280",
+       "1281"
+      ]
+     }
+    },
+    "gap_mm": 1000.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "D315",
+   "handle": "12BB",
+   "mirrored": false,
+   "rotation_deg": 90.0,
+   "overall_mm": 800.0,
+   "frame_clear_mm": 700.0,
+   "wall_t_mm": 150.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "128C",
+       "128B"
+      ]
+     },
+     "face_b": {
+      "left": -0.0,
+      "right": 800.0,
+      "gap_mm": 800.0,
+      "tags": [
+       "1290",
+       "128F"
+      ]
+     }
+    },
+    "gap_mm": 800.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  },
+  {
+   "block": "d220",
+   "handle": "12C2",
+   "mirrored": true,
+   "rotation_deg": 270.0,
+   "overall_mm": 900.0,
+   "frame_clear_mm": 800.0,
+   "wall_t_mm": 200.0,
+   "frame_line": null,
+   "wall_ends": {
+    "faces": {
+     "face_a": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "1295",
+       "1294"
+      ]
+     },
+     "face_b": {
+      "left": 0.0,
+      "right": 900.0,
+      "gap_mm": 900.0,
+      "tags": [
+       "128E",
+       "128D"
+      ]
+     }
+    },
+    "gap_mm": 900.0,
+    "state": "DRAWING-CONFIRMED",
+    "why": ""
+   },
+   "ends_sit": "AT_BLOCK_EDGES"
+  }
+ ],
+ "openings": [
+  {
+   "id": "D-GF-01",
+   "handle": "15E",
+   "block": "D120",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": 0.9,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-GF-02",
+   "handle": "1EF",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "closure (jamb hits)",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-03",
+   "handle": "1B5",
+   "block": "d220",
+   "overall_m": 0.9,
+   "frame_clear_m": 0.8,
+   "frame_line_m": 0.8,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-04",
+   "handle": "19E",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-05",
+   "handle": "192",
+   "block": "D120",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": 0.9,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-GF-06",
+   "handle": "33E",
+   "block": "D120",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-GF-07",
+   "handle": "281",
+   "block": "D200",
+   "overall_m": 2.0,
+   "frame_clear_m": 1.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 2.0,
+   "face_b_gap_m": 2.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 2.0,
+   "census_w_m": 2.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "printed",
+   "lintel_masonry": 2.5,
+   "lintel_frame_clear": 2.5,
+   "lintel_overall": 2.5
+  },
+  {
+   "id": "D-GF-08",
+   "handle": "2C7",
+   "block": "D120",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-GF-09",
+   "handle": "3FF",
+   "block": "D120",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": 0.9,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_FRAME_LINE",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-GF-10",
+   "handle": "339",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.797,
+   "face_b_gap_m": 0.797,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.797,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "closure (jamb hits)",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-11",
+   "handle": "321",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-12",
+   "handle": "320",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-GF-13",
+   "handle": "2F2",
+   "block": "D115",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-1F-01",
+   "handle": "C2B",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-02",
+   "handle": "C31",
+   "block": "D115",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-1F-03",
+   "handle": "C32",
+   "block": "D115",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "closure (jamb hits)",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-1F-04",
+   "handle": "C2E",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "closure (jamb hits)",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-05",
+   "handle": "C1A",
+   "block": "d220",
+   "overall_m": 0.9,
+   "frame_clear_m": 0.8,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-06",
+   "handle": "11B4",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-07",
+   "handle": "BEE",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-08",
+   "handle": "C18",
+   "block": "D215",
+   "overall_m": 0.9,
+   "frame_clear_m": 0.8,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-09",
+   "handle": "BEF",
+   "block": "D215",
+   "overall_m": 0.9,
+   "frame_clear_m": 0.8,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-1F-10",
+   "handle": "C12",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-2F-01",
+   "handle": "12BA",
+   "block": "D115",
+   "overall_m": 1.0,
+   "frame_clear_m": 0.9,
+   "frame_line_m": null,
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 1.0,
+   "census_w_m": 1.0,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.5,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.5
+  },
+  {
+   "id": "D-2F-02",
+   "handle": "12C2",
+   "block": "d220",
+   "overall_m": 0.9,
+   "frame_clear_m": 0.8,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.9,
+   "face_b_gap_m": 0.9,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.9,
+   "census_w_m": 0.9,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  },
+  {
+   "id": "D-2F-03",
+   "handle": "12BB",
+   "block": "D315",
+   "overall_m": 0.8,
+   "frame_clear_m": 0.7,
+   "frame_line_m": null,
+   "face_a_gap_m": 0.8,
+   "face_b_gap_m": 0.8,
+   "wall_ends_sit": "AT_BLOCK_EDGES",
+   "masonry_m": 0.8,
+   "census_w_m": 0.8,
+   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_text": "jamb to jamb",
+   "lintel_masonry": 1.2,
+   "lintel_frame_clear": 1.2,
+   "lintel_overall": 1.2
+  }
+ ],
+ "outside_census": {
+  "2D8": "boundary (compound) wall door, S8.6 OP-GF-B01 SYMBOL_ONLY / SITE_BOUNDARY: the compound wall is drawn on the site layer, not a building masonry wall; not in the T-198 census or the T-453 lintel ledger"
+ },
+ "jamb_only_reads": {
+  "A-GF-01": {
+   "handle": "1F8",
+   "block": "arch120",
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0
+  },
+  "A-1F-01": {
+   "handle": "BEC",
+   "block": "arch120",
+   "face_a_gap_m": 1.0,
+   "face_b_gap_m": 1.0
+  }
+ },
+ "restated_owner_0.15": {
+  "before": {
+   "at_most": {
+    "1.2": {
+     "GF": 13,
+     "1F": 14,
+     "2F": 3,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 9,
+     "1F": 6,
+     "2F": 5,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 5,
+     "1F": 4,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "established": {
+    "1.2": {
+     "GF": 3,
+     "1F": 5,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 2,
+     "1F": 2,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "flagged": [],
+   "no_width": [],
+   "no_lintel": [
+    "D-GF-15",
+    "P-GF-05",
+    "SX-01",
+    "SX-03",
+    "U-01",
+    "W02",
+    "W03",
+    "W17"
+   ],
+   "total_at_most_nr": 60,
+   "total_established_nr": 16,
+   "lm_beside_at_most": {
+    "1.2": 36.0,
+    "1.5": 30.0,
+    "2.5": 22.5,
+    "3.0": 3.0,
+    "4.0": 0.0
+   }
+  },
+  "after": {
+   "at_most": {
+    "1.2": {
+     "GF": 13,
+     "1F": 14,
+     "2F": 3,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 9,
+     "1F": 6,
+     "2F": 5,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 5,
+     "1F": 4,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "established": {
+    "1.2": {
+     "GF": 3,
+     "1F": 5,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 2,
+     "1F": 2,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "flagged": [],
+   "no_width": [],
+   "no_lintel": [
+    "D-GF-15",
+    "P-GF-05",
+    "SX-01",
+    "SX-03",
+    "U-01",
+    "W02",
+    "W03",
+    "W17"
+   ],
+   "total_at_most_nr": 60,
+   "total_established_nr": 16,
+   "lm_beside_at_most": {
+    "1.2": 36.0,
+    "1.5": 30.0,
+    "2.5": 22.5,
+    "3.0": 3.0,
+    "4.0": 0.0
+   }
+  },
+  "diff_nr": {
+   "1.2": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "1.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "2.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   }
+  },
+  "diff_lm": 0.0,
+  "changes": []
+ },
+ "beside_frame_clear_refused": {
+  "diff_nr": {
+   "1.2": {
+    "GF": 5,
+    "1F": 2,
+    "2F": 1,
+    "UNSPLIT": 0
+   },
+   "1.5": {
+    "GF": -5,
+    "1F": -2,
+    "2F": -1,
+    "UNSPLIT": 0
+   },
+   "2.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   }
+  },
+  "diff_lm": -2.4,
+  "changes": [
+   {
+    "id": "D-1F-01",
+    "storey": "1F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-02",
+    "storey": "1F",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-03",
+    "storey": "1F",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-04",
+    "storey": "1F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-05",
+    "storey": "1F",
+    "w_old": 0.9,
+    "w_new": 0.8,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-06",
+    "storey": "1F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-07",
+    "storey": "1F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-08",
+    "storey": "1F",
+    "w_old": 0.9,
+    "w_new": 0.8,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-09",
+    "storey": "1F",
+    "w_old": 0.9,
+    "w_new": 0.8,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-1F-10",
+    "storey": "1F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-2F-01",
+    "storey": "2F",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-2F-02",
+    "storey": "2F",
+    "w_old": 0.9,
+    "w_new": 0.8,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-2F-03",
+    "storey": "2F",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-01",
+    "storey": "GF",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-02",
+    "storey": "GF",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-03",
+    "storey": "GF",
+    "w_old": 0.9,
+    "w_new": 0.8,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-04",
+    "storey": "GF",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-05",
+    "storey": "GF",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-06",
+    "storey": "GF",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-07",
+    "storey": "GF",
+    "w_old": 2.0,
+    "w_new": 1.9,
+    "piece_old": 2.5,
+    "piece_new": 2.5,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-08",
+    "storey": "GF",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-10",
+    "storey": "GF",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-11",
+    "storey": "GF",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-12",
+    "storey": "GF",
+    "w_old": 0.8,
+    "w_new": 0.7,
+    "piece_old": 1.2,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   },
+   {
+    "id": "D-GF-13",
+    "storey": "GF",
+    "w_old": 1.0,
+    "w_new": 0.9,
+    "piece_old": 1.5,
+    "piece_new": 1.2,
+    "state": "DRAWING-CONFIRMED"
+   }
+  ]
+ },
+ "beside_block_overall_refused": {
+  "diff_nr": {
+   "1.2": {
+    "GF": -1,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "1.5": {
+    "GF": 1,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "2.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   }
+  },
+  "diff_lm": 0.3,
+  "changes": [
+   {
+    "id": "D-GF-09",
+    "storey": "GF",
+    "w_old": 0.9,
+    "w_new": 1.0,
+    "piece_old": 1.2,
+    "piece_new": 1.5,
+    "state": "DRAWING-CONFIRMED"
+   }
+  ]
+ }
+}
