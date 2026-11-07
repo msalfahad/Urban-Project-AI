@@ -1,0 +1,1376 @@
+{
+ "F_T580_1_lintel_classes": {
+  "at_least_low_m3": 0.502,
+  "class_by_source_state": {
+   "BOUNDED_MIN_BEARING": "AT_LEAST",
+   "HELD_BY_NAME": "HELD",
+   "MEASURED": "RELEASED",
+   "PROVISIONAL": "RELEASED"
+  },
+  "freelancer": "no lintel concrete row in his workbooks (T-571 Checker own read): NOT_COMPARABLE, no %",
+  "per_class": {
+   "AT_LEAST": {
+    "beside_high": 0.0,
+    "beside_low": 0.0,
+    "beside_none_n": 0,
+    "blank_n": 0,
+    "high": 0.74642,
+    "high_open_n": 1,
+    "lines": 6,
+    "low": 0.502,
+    "released": 0.0
+   },
+   "HELD": {
+    "beside_high": 0.437542,
+    "beside_low": 0.372692,
+    "beside_none_n": 0,
+    "blank_n": 10,
+    "high": 0.0,
+    "high_open_n": 0,
+    "lines": 10,
+    "low": 0.0,
+    "released": 0.0
+   },
+   "RELEASED": {
+    "beside_high": 0.0,
+    "beside_low": 0.0,
+    "beside_none_n": 0,
+    "blank_n": 0,
+    "high": 0.0,
+    "high_open_n": 0,
+    "lines": 0,
+    "low": 0.0,
+    "released": 0.0
+   }
+  },
+  "reading": "released lintel concrete 1.016 -> 0.000 m3: no lintel has a built value on the drawings; 6 carry an AT_LEAST low 0.502 m3 (printed MIN 0.40 m both ends, DRAWING-CONFIRMED) with the pier-bounded high beside (5) or OPEN (D-2F-01), 10 are HELD by name with the T-524 bounds beside (8 per lintel + the D-GF-11 / 12 pair once). The class follows the source state, not the total; the low is never added to a released total and HELD is never 0.",
+  "released_m3": {
+   "after": 0.0,
+   "before": 1.016,
+   "change": -1.016
+  },
+  "rows": [
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": 0.13197,
+     "held_low": 0.054,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.054
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:D-1F-02",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-6aa750fb944ad58ce960",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.054
+    },
+    "beside_bound": {
+     "high": 0.04914,
+     "low": 0.042,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-1F-03",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-8b978b48668cde0f1b0c",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.03837,
+     "low": 0.036,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-1F-04",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-183f52083e693bdf8671",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.04377,
+     "low": 0.036,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-1F-07",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-3111418b702ac80f0ade",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": 0.14208,
+     "held_low": 0.051,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.051
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:D-1F-08",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-10f18635f68cfd8cdd1d",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.04377,
+     "low": 0.036,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-1F-10",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-befb0beb1707ef192326",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": 0.054,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.054
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:D-2F-01",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-a58aabc436c71d85bea3",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.04347,
+     "low": 0.036,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-2F-03",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-a0518076a024ab1be082",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.072
+    },
+    "beside_bound": {
+     "high": 0.0616,
+     "low": 0.056,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-GF-06",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-7a73a338210ee7268b65",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.04359,
+     "low": 0.036,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:D-GF-10",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-7149ea268473ea337cd2",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.07914,
+     "low": 0.06,
+     "pair": [
+      "D-GF-11",
+      "D-GF-12"
+     ],
+     "source": "T-524 pair (shared pier, per-lintel split HELD)"
+    },
+    "element_id": "LINTEL:D-GF-11",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-093df4d00eb35db3a4c0",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.048
+    },
+    "beside_bound": {
+     "high": 0.07914,
+     "low": 0.06,
+     "pair": [
+      "D-GF-11",
+      "D-GF-12"
+     ],
+     "source": "T-524 pair (shared pier, per-lintel split HELD)"
+    },
+    "element_id": "LINTEL:D-GF-12",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-3bdff145e1546ac48f8e",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": 0.11289,
+     "held_low": 0.054,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.054
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:D-GF-13",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-31232f81202941d104c6",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": 0.246,
+     "held_low": 0.195,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.195
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:W14",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-fd9eabe1828ed735c43d",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": 0.11348,
+     "held_low": 0.094,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.094
+    },
+    "beside_bound": null,
+    "element_id": "LINTEL:W15",
+    "evidence_status": "DRAWING-CONFIRMED low (printed MIN 0.40 m, piers measured); high pier-bounded or OPEN",
+    "line_id": "L-55cfc2395aca2e0c69e3",
+    "qclass": "AT_LEAST",
+    "source_state": "BOUNDED_MIN_BEARING",
+    "verdicts": [
+     "T-516 BEARING_OK (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)"
+    ]
+   },
+   {
+    "after": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "before": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.052
+    },
+    "beside_bound": {
+     "high": 0.034692,
+     "low": 0.034692,
+     "source": "T-524 per lintel"
+    },
+    "element_id": "LINTEL:W18",
+    "evidence_status": "HELD by name (designer item: jamb cannot take the printed minimum)",
+    "line_id": "L-f8736409a6afa1424ea9",
+    "qclass": "HELD",
+    "source_state": "HELD_BY_NAME",
+    "verdicts": [
+     "T-516 DEFICIT (merge 35db84c3, Gate A)",
+     "T-519 PROJECT_RC (merge dd9e24c3)",
+     "T-571 REQUIRED 1 nr (Gate A)",
+     "T-524 deficit-end bounds (merge 66ca67b4)"
+    ]
+   }
+  ],
+  "t524_set_bound_m3": [
+   0.372692,
+   0.437542
+  ]
+ },
+ "F_T580_2_t498_identity": {
+  "blocked_part": {
+   "owner": "T-498 package (its own runner), or the wrapper allow-list (owner item)",
+   "refusal": "AGENT_ENV FAIL: run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py",
+   "what": "outside_rows_sha256 and the full V3.0.59 run table on the 4,999-line V3.0.58 rows (the branch runner research/agents_t498/v3059_run.py on the private drawings)"
+  },
+  "line_ids_stable_because": "engine/source/boq_line.py line_id() hashes project, item code, element id, rule id / version and unit, not the candidate version: renumbering V3.0.58 -> V3.0.59 moves no stage line id",
+  "regenerated": {
+   "added": 74,
+   "base_lines": 4999,
+   "duplicate_live_lines": 0,
+   "expected_lines": 5073,
+   "extends": "ARCH_TAKEOFF_V3.0.58",
+   "hosts_on_base": 28,
+   "method": "ARCH_TAKEOFF_V3.0.59",
+   "replaced": 0,
+   "stage_ids_disjoint_from_base": true,
+   "t507_lines_hosting_a_stage_row": 0,
+   "t507_lines_in_base": 5
+  },
+  "stale_on_branch": {
+   "base_lines": 4994,
+   "branch_commit": "e3e2ebb5",
+   "extends": "ARCH_TAKEOFF_V3.0.57",
+   "method": "ARCH_TAKEOFF_V3.0.58"
+  }
+ },
+ "F_T580_3_l4ccc": {
+  "after": {
+   "class": "HELD",
+   "held_high": null,
+   "held_low": null,
+   "measured_net": null
+  },
+  "before": {
+   "class": "HELD",
+   "held_high": null,
+   "held_low": null,
+   "measured_net": null
+  },
+  "before_source": "T-498 stage row (state BLOCKED_RFI, branch e3e2ebb5, extract sha256 29eb31e5): the line it adds is HELD blank",
+  "beside": {
+   "conditional_range_kg": [
+    63.82125,
+    71.62425
+   ],
+   "not_a_bound_of": "the V4 legacy low 65.14425 (R-T544-1 part 2: the D x (w + 0.80) low end is no bound)",
+   "source": "V5 glue_hosts v5_expected_after"
+  },
+  "element_id": "MATERIAL:2F-WALLS:walls t=0.20#BLOCKWORK:DRAWING_CONFIRMED_WHITE",
+  "host": {
+   "class": "HELD",
+   "line_id": "L-bbb82de298fecbafa11d",
+   "measured_net": null,
+   "why": "2F block contract line HELD (D-39); T-523 STALE_CLASS"
+  },
+  "item_code": "MAS.GLUE.AAC",
+  "line_id": "L-4ccc5dc26bd2472b03ad",
+  "quantity_moved": 0,
+  "unit": "kg"
+ },
+ "F_T580_4_t423_r2": {
+  "lines": [
+   {
+    "address_source": "T-423 r1 s.2 (id prefix printed)",
+    "element_id": "1F-R8BDA49:wall_tile",
+    "item_code": "FIN.WALL.TILE",
+    "new": "L-a34d09209fb5aad3eb63",
+    "old": "L-a34d09209fb5aad3eb63",
+    "piece": "1F-02 tile face piece (FACE_PIECE, T-388 F1)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 27.9101
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "T-423 r1 s.2 (id prefix printed)",
+    "element_id": "1F-R8BDA49:plaster",
+    "item_code": "FIN.PLASTER",
+    "new": "L-3eba04f2458578e7dc19",
+    "old": "L-3eba04f2458578e7dc19",
+    "piece": "1F-02 backing face piece (FACE_PIECE, T-388 F1)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 27.9101
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "T-423 r1 s.2 (id prefix printed)",
+    "element_id": "GF-RC99C2A:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-eb3be58fc760b39f0e38",
+    "old": "L-eb3be58fc760b39f0e38",
+    "piece": "GF open plan ceiling (set aside, named; residual 9.785604)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 101.137092
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "T-423 r1 s.2 (id prefix printed)",
+    "element_id": "1F-R78C367:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-fc116bb666b184740090",
+    "old": "L-fc116bb666b184740090",
+    "piece": "1F open plan ceiling (set aside, named; BLOCKED_RFI)",
+    "state": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-STRIP-OP-018:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-07ce1d24164207cd06ca",
+    "old": "L-07ce1d24164207cd06ca",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "2F-STRIP-OP-006:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-0ca0f91144403e323c68",
+    "old": "L-0ca0f91144403e323c68",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-THRESHOLD-D-GF-10:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-1a229f1fead084efb881",
+    "old": "L-1a229f1fead084efb881",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-THRESHOLD-D-GF-14:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-3b166c2b5d136302f2dd",
+    "old": "L-3b166c2b5d136302f2dd",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-STRIP-OP-004:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-709aba3ec07bb0f26319",
+    "old": "L-709aba3ec07bb0f26319",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-THRESHOLD-D-GF-02:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-791a94968230969c030f",
+    "old": "L-791a94968230969c030f",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-STRIP-OP-026:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-8901e416cbce62854fbe",
+    "old": "L-8901e416cbce62854fbe",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-STRIP-OP-010:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-92721c425ab3612bb035",
+    "old": "L-92721c425ab3612bb035",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-STRIP-OP-018:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-a4909527ff598315be61",
+    "old": "L-a4909527ff598315be61",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-THRESHOLD-D-1F-04:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-bfdbdaa2d67a5c805f1e",
+    "old": "L-bfdbdaa2d67a5c805f1e",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-STRIP-OP-025:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-c8b5c7f742b22388339e",
+    "old": "L-c8b5c7f742b22388339e",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.2
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "GF-STRIP-OP-017:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-cbf11d0c1befb0519e98",
+    "old": "L-cbf11d0c1befb0519e98",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-STRIP-OP-008:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-ccb1182ae9409b432968",
+    "old": "L-ccb1182ae9409b432968",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.18
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "item code, 14 of 14",
+    "element_id": "1F-STRIP-OP-019:marble threshold",
+    "item_code": "FIN.MARBLE.THRESHOLD",
+    "new": "L-f2d296f1fc5184419774",
+    "old": "L-f2d296f1fc5184419774",
+    "piece": "THRESHOLD_FIELDS (O-T327-1 / -2)",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.12
+    },
+    "status": "SAME_ID"
+   },
+   {
+    "address_source": "T-335 FILL (gross 5.022500 - net 3.599800) + T-283 dome table (DOME:WEST 1F-R8BDA49 1.4227)",
+    "element_id": "1F-R8BDA49:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-05b1d88f06c38f962cb6",
+    "old": "L-05b1d88f06c38f962cb6",
+    "piece": "CEILING_LIST: one deduction DOME:WEST:over:1F-R8BDA49, gap 1.4227 m2",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 3.5998
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   },
+   {
+    "address_source": "T-335 FILL (gross 19.050000 - net 7.469200) + T-283 dome table (DOME:WEST 1F-RB72F22 11.5808)",
+    "element_id": "1F-RB72F22:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-69ebc828b4c61f4ea348",
+    "old": "L-69ebc828b4c61f4ea348",
+    "piece": "CEILING_LIST: one deduction DOME:WEST:over:1F-RB72F22, gap 11.5808 m2",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 7.4692
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   },
+   {
+    "address_source": "T-335 FILL (gross 19.016545 - net 18.674700) + T-283 dome table (DOME:EAST 1F-R3CFCFD 0.3418)",
+    "element_id": "1F-R3CFCFD:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-ac337bf041e8184a315c",
+    "old": "L-ac337bf041e8184a315c",
+    "piece": "CEILING_LIST: one deduction DOME:EAST:over:1F-R3CFCFD, gap 0.341845 m2",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 18.6747
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   },
+   {
+    "address_source": "T-335 FILL (gross 5.022500 - net 3.781500) + T-283 dome table (DOME:WEST 1F-R48AA46 1.2410)",
+    "element_id": "1F-R48AA46:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-c25a76ebdaab3ec65076",
+    "old": "L-c25a76ebdaab3ec65076",
+    "piece": "CEILING_LIST: one deduction DOME:WEST:over:1F-R48AA46, gap 1.2410 m2",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 3.7815
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   },
+   {
+    "address_source": "T-335 FILL (gross 4.725000 - net 4.277800) + T-283 dome table (DOME:EAST 1F-R48CDA5 0.4472)",
+    "element_id": "1F-R48CDA5:ceiling",
+    "item_code": "FIN.CEILING",
+    "new": "L-c85ec92c5f1e50dadd11",
+    "old": "L-c85ec92c5f1e50dadd11",
+    "piece": "CEILING_LIST: one deduction DOME:EAST:over:1F-R48CDA5, gap 0.4472 m2",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 4.2778
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   },
+   {
+    "address_source": "element 1F-THRESHOLD-D-1F-03:doorway strip (T-327 s.2: 0.150 m2 / 1.000 lm / 1)",
+    "element_id": "1F-THRESHOLD-D-1F-03:doorway strip",
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "new": "L-fcf3a49c67ae9e730028",
+    "old": "L-fcf3a49c67ae9e730028",
+    "piece": "THRESHOLD_FIELDS (O-T327-2): the D-1F-03 dry strip measure pair",
+    "state": {
+     "class": "RELEASED",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": 0.15
+    },
+    "status": "SAME_ID",
+    "was_unaddressable": true
+   }
+  ],
+  "slot": {
+   "r1": {
+    "base": "V3.0.57 (4,994)",
+    "method": "ARCH_TAKEOFF_V3.0.58",
+    "module": "engine/source/arch_v3058.py",
+    "registry": "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json",
+    "taken_by": "T-507 (merged)"
+   },
+   "r2": {
+    "base": "V3.0.59 = T-498 (5,073 expected)",
+    "condition": "after T-498 merges (Lead order T-498 -> T-423 r2); if T-498 does not merge first, r2 takes V3.0.59 / 1.56.0 on V3.0.58 instead (one free number each, never shared)",
+    "method": "ARCH_TAKEOFF_V3.0.60",
+    "module": "engine/source/arch_v3060.py",
+    "registry": "rules/coverage/BOQ_FAMILY_MASTER_1.57.0.json",
+    "registry_content": "1.56.0 (T-498) + T-498 promotion by R-T485-1 once merged + pending V3.0.60 + the B3-01 / B3-04 / B4-01 / B4-03 / B5-01 text; r1's T-310 promotion is already in 1.55.0 (same PROMOTIONS_SOURCE sha256 9933a9c3): drop it"
+   }
+  },
+  "summary": {
+   "formerly_unaddressable_now_addressed": 6,
+   "lines": 24,
+   "no_line": 0,
+   "renumbered": 0,
+   "same_id": 24
+  }
+ },
+ "F_T580_5_f_package": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.500002
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 0.500002,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "element_id": "1F-POOLCOURT-550:wp_upturn window_face",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-1954878bb02c91139e1b",
+   "op": "SET",
+   "row": "T-522/T-529"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.551614
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 3.528277,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "element_id": "1F-POOLCOURT-550-LEDGE:wp_upturn",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-d7d1bf8c5991ccf69ea2",
+   "op": "SET",
+   "row": "T-522/T-529"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.639573
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 0.639573,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "element_id": "1F-POOLCOURT-550-LEDGE:wp_membrane",
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-2361d6ec13c952bd2ae3",
+   "op": "SET",
+   "row": "T-522/T-529"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550:falls_screed",
+   "item_code": "FIN.ROOF.SCREED",
+   "line_id": "NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550:falls_screed",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550:insulation",
+   "item_code": "FIN.ROOF.INSULATION",
+   "line_id": "NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550:insulation",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550:protection",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line_id": "NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550:protection",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.519172
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550:finish",
+   "item_code": "FIN.ROOF.FINISH",
+   "line_id": "NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550:finish",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550-LEDGE:falls_screed",
+   "item_code": "FIN.ROOF.SCREED",
+   "line_id": "NEW:FIN.ROOF.SCREED:1F-POOLCOURT-550-LEDGE:falls_screed",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550-LEDGE:insulation",
+   "item_code": "FIN.ROOF.INSULATION",
+   "line_id": "NEW:FIN.ROOF.INSULATION:1F-POOLCOURT-550-LEDGE:insulation",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550-LEDGE:protection",
+   "item_code": "FIN.ROOF.PROTECTION",
+   "line_id": "NEW:FIN.ROOF.PROTECTION:1F-POOLCOURT-550-LEDGE:protection",
+   "op": "ADD",
+   "row": "T-517"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "element_id": "1F-POOLCOURT-550-LEDGE:finish",
+   "item_code": "FIN.ROOF.FINISH",
+   "line_id": "NEW:FIN.ROOF.FINISH:1F-POOLCOURT-550-LEDGE:finish",
+   "op": "ADD",
+   "row": "T-517"
+  }
+ ],
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "inputs": {
+  "research/agents_t283/DOMES_T283.csv": "b15b51c3c8e372e514f6518ffb6377724737cfa315902ced66bb3707e4b88953",
+  "research/agents_t335/FILL_T284_T335.csv": "31cf883848fe2a87e140b44d733731e2bbca2b77d00781705f15976dba9312b0",
+  "research/agents_t516/out/JAMB_BEARING_T516.json": "155ed68bc3f356d3011d342d836205e596ac7127f81bc8f8efc262d69fc5fef3",
+  "research/agents_t524/t524_lintel_end_ownership.py": "2bb2055468604f790800664bbad4771a4ae90d8e3c0e5e820a7bd79164f91990",
+  "research/agents_t536/WIRING_MANIFEST_V2.json": "305c2cf0c712824ea3cd6ceaa7aee2781642deb0274d193554c846d49febacf3",
+  "research/agents_t571/out/T571_LINTEL_COUNT.json": "ede7c1fd982e42f90ace54a2f3ccd2dcc0274506d37277cf5975b054d26cbc84",
+  "research/agents_t580/in/T498_STAGE_ROWS.json": "bb5d2ea1ec9c1612f20d48b0960375dfd0d485f3aee465ab142215e67467cd52",
+  "research/agents_t580/overlay.py": "1d181d11b40dba6dacb516085b007ce7d2b1003b167c1224d39eeccd03a951a7",
+  "research/agents_t580/t580_alsenan.py": "7ffa28c9b17ed2d4ff1ac68cc93ebdd648cfd9a7076f6468043ee8436522e334"
+ },
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "1F-WALLS:walls t=0.20",
+    "lines": [
+     "L-298e323d027a4723652d",
+     "L-e74c15038f1e32dbefe0",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "GF-WALLS:walls t=0.20",
+    "lines": [
+     "L-1bacf0e3cec97219a455",
+     "L-a6e9b9d47f2b81204b1e",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   }
+  ],
+  "flagged_rows": [],
+  "lines": {
+   "after": 5123,
+   "before": 4999
+  },
+  "missing_line": 0,
+  "no_before": 0,
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 103
+    }
+   },
+   {
+    "ops": 24,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 24
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_OMISSION",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   }
+  ],
+  "stale": 0,
+  "t423_totals_changed": {},
+  "t498_totals_changed": {
+   "MAS.GLUE.AAC|kg": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "885.60468",
+     "held_high_open_n": 0,
+     "held_low": "852.22278",
+     "held_n": 16,
+     "released": "20.061",
+     "released_n": 1
+    },
+    "before": null
+   },
+   "MAS.MORTAR.BLACK|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 18,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 18,
+     "released": "1.367589",
+     "released_n": 4
+    },
+    "before": null
+   },
+   "MAS.UNITS.BLACK|pcs": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 18,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 18,
+     "released": "1075.8",
+     "released_n": 2
+    },
+    "before": null
+   },
+   "MAS.UNITS.WHITE|pcs": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 17,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 17,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": null
+   },
+   "STR.CONC.LINTEL|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 54,
+     "held_high": "0.74642",
+     "held_high_open_n": 1,
+     "held_low": "0.502",
+     "held_n": 60,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 44,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 44,
+     "released": "1.016",
+     "released_n": 16
+    }
+   },
+   "STR.REBAR|kg": {
+    "after": {
+     "excluded_n": 577,
+     "held_blank_n": 799,
+     "held_high": "19646.877938",
+     "held_high_open_n": 2,
+     "held_low": "14341.312712",
+     "held_n": 1695,
+     "released": "9375.30576",
+     "released_n": 374
+    },
+    "before": {
+     "excluded_n": 577,
+     "held_blank_n": 799,
+     "held_high": "19646.877938",
+     "held_high_open_n": 0,
+     "held_low": "14278.249488",
+     "held_n": 1693,
+     "released": "9375.30576",
+     "released_n": 374
+    }
+   }
+  },
+  "unexplained_conflicts": 0
+ },
+ "released_quantities_changed": 0,
+ "rule": "R-T582-1",
+ "schema": "URBAN_T582_GATE_B_READINESS",
+ "task": "T-582"
+}
