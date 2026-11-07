@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07 07:31 UTC | Worker 1 | SUCCESS | T-589 READY (3328acd2) | 91 structural components of statement V6 + T-576/T-583 classed: B10 59 = 10 VERIFIED/30 CLOSABLE/19 DESIGNER, B11 13 = 1 CLOSABLE/12 DESIGNER, B1 19 = 1/15/3 OWNER GAP; 14 re-measure packs; own read ST p.7: dome-ring side bars on both faces -> east ring low 0.122518->0.144289 t (F-C-T583-1); F-T589-1 F10+F S02 low 2.176->1.960 m3 per owner 2 Nov; no quantity moves, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 07:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T07:10:21Z | Worker 3 | SUCCESS | T-587 READY r2 @ a86379e5 + T-588 READY @ 178a371b (same worker order) | T-587 r2: engine head merged, maps regenerated last, stale none. T-588 manifest V9 overlay after V2-V8 on V3.0.58 copy: 5,124 lines, 0 STALE / two-package / unexplained; E1 step +11.20 lm (STEP_LM 67.85->79.05), 3 second-reading step lines EXCLUDED (HELD double count 29.8964 lm), rebar AT_LEAST +767.783 kg high open, edge census 26 doubles/4 orphans -> 0/0; nothing released | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T07:00Z | Worker 3 | STARTED | run session_01E6cPnbs1ar4hLmECKtroxo | repo-attached routine | task state: none yet | self-check pending
