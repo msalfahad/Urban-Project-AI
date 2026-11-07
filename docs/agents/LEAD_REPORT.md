@@ -2,6 +2,21 @@
 
 
 
+## LEAD REPORT 2026-11-07 04:15 UTC
+
+Drive read OK (no file created or modified in the project folders since 00:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six merged, one rejected since 00:15 (3 WORKED, 3 PARTIAL, 1 FAILED):
+- Steps (lm / m2 / nr): E1 entrance 4 x 2.80 = 11.20 lm, nr 4: ENGINE_OMISSION VERIFIED by the Checker's own DXF read. External door steps = one element (threshold nosing + riser): 3.50 lm / 0.390 m2 at 4 doors (+D-GF-09 riser HELD 0 .. 0.27 m2); payable length open (edge 3.50 vs stone 3.80 lm) -> T-592. Stair steps ours / his: ST-01 51.75 / 75.60 lm, ST-02 16.10 / 33.60 lm, causes close exactly. PARTIAL (4 / 5 openings re-read).
+- Rails / guards (lm): ours 54.869 vs his 18.95 (a lone typed constant): -35.919 closed: guards -19.150, ST-01 rail -15.953, D1 -1.042 ENGINE_RIGHT scope, +0.226 UNRESOLVED. Nosing ours 87.35 + 20 HELD vs his 123.20 lm closed by cause; nr 69 vs 96. PARTIAL: his workbook over the connector limit, his side not re-read.
+- Columns (m3): 1F +0.555 (+21.74 %) = RULE_DIFF +0.460 (head depth 0.75 / 3.45) + ENGINE_RIGHT +0.095; GF +1.174 (+10.18 %) = RULE_DIFF +2.034 + ENGINE_RIGHT -0.860 (4 of his rows with no drawn member, 1 C11 missed); Checker's own hatch count CONFIRMS COUNT -1.031. PARTIAL: RULE_DIFF parts worker-proposed -> T-589 / T-590.
+- Dome / ring / lift-wall bars (t): every component valued, bounded or HELD by name; lift verticals 62 .. 78; strict low 0.733792 -> 0.767783 t; laps (no printed length), hooks, ring depth HELD; valued 0; his TYPED_LUMP NOT_COMPARABLE.
+- Lintels: 16 lines classed for wiring (6 AT_LEAST 0.502 m3, 10 HELD, 0 RELEASED; released 1.016 -> 0 m3 on wiring). Width basis REJECTED: D-GF-09 frame 1.00 over a 0.90 masonry gap is a drawing conflict (lintel 1.20 .. 1.50, +0.3 lm), not ENGINE_RIGHT -> T-581 r2.
+- Statement V6: 25 sections residual 0. Learned (ADOPTED): stair steps count x length, bound every bar component, statements restated row by row, measured-set % split by cause; PROPOSED: frame drawn over masonry = DRAWING CONFLICT, never resolved by method.
+- Missing: lintel width (r2), yard / stair skirting, door-step payable length; statement V7, manifest V9; rule provenance of every RULE_DIFF (new audit, both lanes); all wiring.
+- Team health: 6 merged / 1 rejected since 00:15; every run closed; all agents ran code (self-check PASS; venv empty at start in 3 worker runs, self-repaired by setup); READY 0; TODO 9 (S 3, A 3, I 2 + T-581 r2) + 4 blocked; queue check 22 actionable, 0 flagged, 0 stall.
+- 10 Nov (every trade wired): LOW, 3 days, wrapper only (T-582 cleared the readiness findings). 12-13 Nov tables: HIGH (23 trades closed, 3 open).
+OWNER PACKAGE: no new decision today. Still open: Q-80 (15 cm black block face size; 15 walls 175.9 m2 HELD).
+NEEDS FIXING (owner only): wrapper allow-list on main scripts/agent_env.sh:211 (run of research/agents_t*/ scripts) blocks every Gate B package (T-498, T-423 r2, T-525, T-563), now their only blocker; notified 04:15 5 Nov, not re-notified. Freelancer floors / rails workbooks over the 6.2 MB connector limit (Checker cannot re-read his side): a zipped or split copy on Drive. Also: Kuwait 1990 spec copy under 6 MB; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-07 00:15 UTC
 
 Drive read OK (no file created or modified in the project folders since 20:00 UTC 6 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six merged since 20:14 (4 WORKED, 2 PARTIAL, 0 rejected):
@@ -32,17 +47,3 @@ Drive read OK (no file created or modified in the project folders since 16:00 UT
 OWNER PACKAGE: no new decision today. Still open: Q-80 (15 cm black block face size; 15 walls 175.9 m2 HELD).
 NEEDS FIXING (owner only): wrapper allow-list on main scripts/agent_env.sh (run of research/agents_t*/ scripts) blocks every Gate B package (T-498, T-423 r2, T-525, T-563); notified 04:15 5 Nov, not re-notified. Also: Kuwait 1990 spec copy under 6 MB; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
 
-## LEAD REPORT 2026-11-06 16:17 UTC
-
-Drive read OK (no file created in the project folders since 12:00 UTC, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six Checker-verified comparisons merged (research, unwired):
-- Paint (B6, m2): engine valued 217.2081 vs freelancer gross 1,249.375 = +1,032.17 closed exactly: HELD +808.08, RULE_DIFF +92.08, ENGINE_RIGHT +67.28, UNRESOLVED +64.73 named. ENGINE_OMISSION: 26 plastered returns 23.070 m2 have no paint line -> HELD fix row (manifest V8). PARTIAL 2 / 4 engine lines.
-- External plaster (B5 ext, m2): gross 1,502.84 vs drawn 1,166.45 .. 1,185.41; net 1,469.97 vs 1,035.18 .. 1,087.62, like for like -4.3 .. +0.5 %; domes / soffit / plinth RULE_DIFF +163.12, HELD +178.68 .. 165.29, UNRESOLVED 40.03 .. 34.59. Candidate line still HELD blank.
-- Earthworks (B1, m3): freelancer NO_ROW (885 rows, 6 workbooks): not comparable, no %; engine scope ENGINE_RIGHT on the drawings; excavation 225.94 valued + 8.33 .. 9.57 held; backfill 119.96 .. 128.64; disposal not measured.
-- Floor tile (B3, m2): with the dressing fix row 390.064 vs 409.58 = -4.765 % (was -5.49 %); census found exactly the 2 known defects, no others.
-- Columns (B10, m3): GF positions 34 / 36 registered from the drawings, 2 CONFLICT between sheets, bounded 0 .. +0.469 m3 (designer list). Beam residual -0.365 m3 named (1 / 5 marks Checker-confirmed).
-- Learned (ADOPTED): every enclosed space has one floor line; a label conflict is never resolved by majority; a missing reference row is NO_ROW, never 0. PROPOSED: gross vs gross only; a plastered dry face implies a paint face.
-- Missing: rebar t, doors / windows, lintel count, ceilings, skirting vs freelancer; structural HELD bounds; statement V4 (new rows T-570 .. T-574, T-569).
-- Team health: 6 merged / 0 rejected since 12:18; every run closed with a final line; all agents ran code (self-check PASS); READY 0; TODO 8 (S 3, A 3, I 2) + 4 blocked; queue check 22 actionable, 0 flagged, 0 stall (T-560 stall cause fixed: its row said 'third'). Privacy near-miss, no leak: a Verifier commit with workbook values was refused by the classifier and rewritten.
-- 10 Nov (every trade wired): LOW, 4 days, Gate B queue behind the wrapper. 12-13 Nov tables: HIGH (12 trades closed, 6 open).
-OWNER PACKAGE: no new decision today. Still open: Q-80 (15 cm black block face size; 15 walls 175.9 m2 HELD).
-NEEDS FIXING (owner only): wrapper allow-list on main scripts/agent_env.sh (run of research/agents_t*/ scripts) blocks every Gate B package (T-498, T-423 r2, T-525, T-563); notified 04:15 5 Nov, not re-notified. Also: Kuwait 1990 spec copy under 6 MB; repository privacy switch; PyMuPDF decision; PR #3 clean-up.

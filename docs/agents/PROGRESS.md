@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 00:15 UTC (Lead). Previous version: 2026-11-06 20:14 UTC. The released numbers did not change
+Last update: 2026-11-07 04:15 UTC (Lead). Previous version: 2026-11-07 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 00:15 (newest first; six checked and merged, one sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Entrance steps: the checker measured them himself: 4 steps x 2.80 m = 11.20 m that our engine had missed; confirmed.
+  Steps outside the external doors: one element (stone threshold edge + riser), 3.50 m and 0.39 m2 at 4 doors; the
+  checker asks which length the line pays (visible edge 3.50 m or stone length 3.80 m); measured next. Stair steps by
+  count x length: ours 51.75 / 16.10 m vs his 75.60 / 33.60 m on the two stairs; every difference has a named cause.
+- Handrails and guards: ours 54.87 m vs his 18.95 m (one typed figure); the gap is guards and one stair rail he leaves
+  out, closed by cause. Stair nosing ours 87.35 m measured + 20 held vs his 123.20 m, closed by cause. His workbook is
+  too large for the connector, so the checker could not re-read his side.
+- Columns vs freelancer: first floor +21.7 % is the 0.75 / 3.45 head depth difference (his convention vs ours); ground
+  floor +10.2 %: he lists 4 columns that are not drawn and misses one; the checker counted the drawn columns himself and
+  agrees. Next: every structural difference must show which of your rules it rests on.
+- Dome and lift-pit bars: every bar part now has a value, a bound or a named hold; the lower figure is now strict
+  (0.77 t); laps and hooks are not printed and stay held.
+- Lintels: each of the 16 lintel lines now carries its class for wiring (6 at least 0.50 m3, 10 held, 0 released).
+  The width check was sent back: one door draws a 1.00 m frame inside a 0.90 m wall gap, which is a drawing conflict
+  (lintel 1.20 or 1.50 m), not a measured fact; it is being redone that way.
+- One statement for 12-13 Nov now covers 25 sections (residual 0); columns, rails, steps and dome bars go in next.
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring.
 
 Since 6 Nov 20:14 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

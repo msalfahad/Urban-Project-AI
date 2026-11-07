@@ -46,6 +46,13 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- EXTERNAL DOOR STEP (Lead 2026-11-07 04:15; T-584 MERGED 6d896db0, Checker AGREED FR-T584-3): RULED: at the 4 house
+  doors the drawn edge pair on the wall face is ONE element, threshold nosing + riser (3.50 lm / 0.390 m2, D-GF-09 riser
+  HELD 0 .. 0.27 m2); owner trade marble / stone thresholds (T-422 / T-577 line family); NOT a second step element and
+  never added to the threshold strip. E1 entrance steps: owner trade marble / stone (4 x 2.80 = 11.20 lm, nr 4, Checker
+  VERIFIED ENGINE_OMISSION; platform edge 30A = landing nosing R-T412-1, not a step). OPEN: the line pays ONE length
+  (visible edge between jambs vs stone strip length, F-C-T584-1) -> T-592; the gate opening not re-read (T-592).
+  Earlier text (00:15) kept below for history.
 - EXTERNAL DOOR STEP vs THRESHOLD STRIP (Lead 2026-11-07 00:15; T-577 MERGED e8db39da, F-T577-2 UNRESOLVED element):
   OPEN, owner trade not yet ruled. A drawn step (riser + tread outside an external door) and the marble threshold strip
   inside the door opening are TWO elements unless the drawing shows one piece; until T-584 reads the step lines, the

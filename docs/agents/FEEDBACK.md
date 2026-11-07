@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-07 04:15 (since 00:15)
+
+- T-582 Gate B readiness (Gate A): WORKED (16 / 16 lintel classes AGREE, AT_LEAST low 0.502 m3 re-derived). Decision: T-498 / T-423 r2 now wait on the wrapper only; F-T580-2 run table stays BLOCKED by it.
+- T-586 statement V6 (Gate A): WORKED (residual 0). Decision: F-C-T586-1 label + F-T586-1 E1 reclass -> T-587 (I FIRST).
+- T-583 dome / ring / lift-wall bars (Gate A): WORKED (strict low 0.767783 t, highs HELD, Checker AGREE). Decision: F-C-T583-1 side bars on one face (tightness) -> T-589 restates the low; F-T583-1 to the RFI-B-S21 family (designer).
+- T-576 columns by cause (Gate A): PARTIAL (COUNT -1.03125 m3 ENGINE_RIGHT CONFIRMED and 1F head section AGREE; RULE_DIFF parts worker-proposed). Decision: T-589 closable-component pack + T-590 RULE_DIFF provenance audit (S).
+- T-578 rails / nosing (Gate A): PARTIAL (rise basis AGREE; his side not re-read, workbook over the connector limit). Decision: T-587 carries his side as worker-read; T-588 wires the rows; 'files over 6 MB' stays an owner item.
+- T-584 steps (Gate A): PARTIAL (E1 11.20 lm VERIFIED; door steps 4 / 5 openings). Decision: T-592 (stone vs edge length, D-GF-09 riser, gate) before FR-T584-2 is wired; FR-T584-1 / -3 -> T-588.
+- T-581 lintel width basis (Gate A): FAILED (REJECTED: D-GF-09 drawing conflict called ENGINE_RIGHT). Decision: TODO r2 worker 1 FIRST with the Verifier's rework list; lesson row PROPOSED.
+
 ## Lead 2026-11-07 00:15 (since 20:14)
 
 - T-571 lintel count (Gate A): WORKED (no lintel row in his workbooks CONFIRMED; implied 27/17/8/1/1 = 84.9 lm vs engine 60 AT_MOST 91.5 lm re-derived AGREE). Decision: F-C-T571-1 mixed width basis -> T-581 (S); register ruling LINTEL WIDTH BASIS.
@@ -169,13 +179,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-477 rebar firewall declarations: WORKED (Checker reproduced the failure on 4aaa9be0 and green on the merge). Decision: gate green; no follow-up.
 - T-445 footing blinding as pieces: WORKED (research; 24 pits 12.734438 m3 re-added exactly by the Checker; -47.055 m3 item reconciled). Decision: NEW T-478 integrates the pits and the split, with the Checker's F-C-T445-1 / -2 and the boundary-wall blinding as held lines.
 - T-350 earthworks, T-471 EIMP part 2, T-475 lift marble: READY, classified after the Checker's verdict (queue 1-3).
-
-## Lead 2026-11-02 12:30 (since 08:35)
-
-- T-442 ground-slab panels (Gate B, V3.0.42): WORKED (first pass; GS valued 17.241 -> 21.638 m3). Decision: next quantity merge restates T-132 from the T-469 tool.
-- T-456 finish-material unit defect: WORKED (reproduced, fixed in a new unwired version; unreachable from both BOQs). Decision: T-457 keeps its place in worker 1's order.
-- T-463 r2 history helper: WORKED (r1 FAILED, r2 raises HistoryUnavailable). Decision: T-464 released to TODO.
-- T-459 lap rule V2: WORKED, unwired. Decision: wiring + Checker F-C-T459-1 (physical continuous runs) into T-382 acceptance (stream S).
-- T-449 round 2 reinforcement: WORKED for round 2 (row open). Decision: wiring via stream S after T-382; round 3 by worker 1 after T-452.
-- T-465 r2: FAILED (identity claim refuted on real PDFs, cross-axis boxes of simple TrueType text). Decision: TODO r3, two allowed ways out written in the row.
-- Merge side effect: firewall test id fails on 4aaa9be0 (3 undeclared modules). Decision: T-477 gate fix first in lane A.

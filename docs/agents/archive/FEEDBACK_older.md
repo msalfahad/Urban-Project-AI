@@ -1,5 +1,15 @@
 ## 2026-10-29 20:30 (lead run; covers 16:30 - 20:30)
 
+## Lead 2026-11-02 12:30 (since 08:35)
+
+- T-442 ground-slab panels (Gate B, V3.0.42): WORKED (first pass; GS valued 17.241 -> 21.638 m3). Decision: next quantity merge restates T-132 from the T-469 tool.
+- T-456 finish-material unit defect: WORKED (reproduced, fixed in a new unwired version; unreachable from both BOQs). Decision: T-457 keeps its place in worker 1's order.
+- T-463 r2 history helper: WORKED (r1 FAILED, r2 raises HistoryUnavailable). Decision: T-464 released to TODO.
+- T-459 lap rule V2: WORKED, unwired. Decision: wiring + Checker F-C-T459-1 (physical continuous runs) into T-382 acceptance (stream S).
+- T-449 round 2 reinforcement: WORKED for round 2 (row open). Decision: wiring via stream S after T-382; round 3 by worker 1 after T-452.
+- T-465 r2: FAILED (identity claim refuted on real PDFs, cross-axis boxes of simple TrueType text). Decision: TODO r3, two allowed ways out written in the row.
+- Merge side effect: firewall test id fails on 4aaa9be0 (3 undeclared modules). Decision: T-477 gate fix first in lane A.
+
 ## Lead 2026-11-02 08:35 (since 04:15)
 
 - T-431 dining strip + ceiling (Gate B): WORKED (first pass; V3.0.41 is the candidate of record). Decision: T-442 TODO, first in lane I, bound to V3.0.41.

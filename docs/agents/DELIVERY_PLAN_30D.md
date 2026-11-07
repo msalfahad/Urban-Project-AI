@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 04:15; recovery plan in force)
+
+- Merged since 00:15 (all Gate A, research, no candidate line moved): T-582, T-586, T-583 WORKED; T-576, T-578, T-584 PARTIAL; T-581 FAILED (REJECTED: drawing conflict at D-GF-09 must be UNRESOLVED) -> r2 FIRST in lane S.
+- T-582 closed the Gate B readiness findings (lintel classes, T-498 identity on V3.0.58, T-423 r2 addressed): T-498 / T-423 r2 / T-525 / T-563 now wait on the wrapper item ONLY (main unchanged at eafbb0f6).
+- 12-13 Nov reconciled quantities: closed 23 (adds handrails / nosing, 1F / GF columns by cause, steps (entrance, door steps, stair steps), dome / ring / lift bars every component bounded); open lintel width basis (T-581 r2), yard / stair skirting (T-585), door-step payable length (T-592); statement V7 (T-587); manifest V9 (T-588); RULE_DIFF provenance (T-590 / T-591) and structural closable pack (T-589) for the scorecard.
+- 10 Nov: LOW (unchanged cause, 3 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-07 00:15; recovery plan in force)
 
 - Merged since 20:14 (all Gate A, research, no candidate line moved): T-571, T-579, T-575, T-580 WORKED; T-574, T-577 PARTIAL (Checker re-measured 1 / 11 outlines and the freelancer side only); no FAILED.
