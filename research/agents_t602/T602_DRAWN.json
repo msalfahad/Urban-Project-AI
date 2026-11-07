@@ -1,0 +1,2526 @@
+{
+ "drawing": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (architectural DXF), read by handle",
+ "openings": {
+  "D-2F-01": {
+   "block": "D115",
+   "handles": [
+    "12BA"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+9.70": [
+     "134E"
+    ]
+   },
+   "levels_side_face_depth": {
+    "+9.70": [
+     "134E",
+     "1350",
+     "1352"
+    ]
+   },
+   "storey": "2F",
+   "width_m": 1.0
+  },
+  "D-GF-01": {
+   "block": "D120",
+   "handles": [
+    "15E"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "levels_side_face_depth": {
+    "+0.30": [
+     "401"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 1.0
+  },
+  "D-GF-03": {
+   "block": "d220",
+   "handles": [
+    "1B5"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "levels_side_face_depth": {
+    "+0.30": [
+     "403"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 0.9
+  },
+  "D-GF-05": {
+   "block": "D120",
+   "handles": [
+    "192"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+0.15": [
+     "407",
+     "409"
+    ]
+   },
+   "levels_side_face_depth": {
+    "+0.30": [
+     "405"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 1.0
+  },
+  "D-GF-06": {
+   "block": "D120",
+   "handles": [
+    "33E"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {},
+   "levels_side_face_depth": {
+    "+1.00": [
+     "411"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 1.0
+  },
+  "D-GF-07": {
+   "block": "D200",
+   "handles": [
+    "281"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {},
+   "levels_side_face_depth": {
+    "+1.00": [
+     "40F",
+     "A74"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 2.0
+  },
+  "D-GF-09": {
+   "block": "D120",
+   "handles": [
+    "3FF"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+0.15": [
+     "394",
+     "40B",
+     "4AE"
+    ]
+   },
+   "levels_side_face_depth": {},
+   "storey": "GF",
+   "width_m": 1.0
+  },
+  "D-GF-15": {
+   "block": "D120",
+   "handles": [
+    "2D8"
+   ],
+   "kind": "DOOR_INSERT",
+   "levels_side_face0": {
+    "+-0.00": [
+     "A88",
+     "A89",
+     "A8A"
+    ]
+   },
+   "levels_side_face_depth": {
+    "+0.15": [
+     "40B"
+    ]
+   },
+   "storey": "GF",
+   "width_m": 1.0
+  },
+  "G-01": {
+   "handle_a_m": null,
+   "handle_b_m": 8.3,
+   "handles": [
+    "110",
+    "10F"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "2",
+    "5"
+   ],
+   "levels_side_a": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "levels_side_b": {
+    "+-0.00": [
+     "37A",
+     "A86",
+     "A87"
+    ]
+   },
+   "storey": "GF"
+  },
+  "SX-01": {
+   "handle_a_m": 5.168422,
+   "handle_b_m": 5.168422,
+   "handles": [
+    "B7",
+    "8D"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "5",
+    "5"
+   ],
+   "levels_side_a": {},
+   "levels_side_b": {
+    "+-0.00": [
+     "A88",
+     "A89",
+     "A8A"
+    ]
+   },
+   "storey": "GF"
+  },
+  "SX-03": {
+   "handle_a_m": 1.0,
+   "handle_b_m": 1.0,
+   "handles": [
+    "3A2",
+    "3A1"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "2",
+    "2"
+   ],
+   "levels_side_a": {},
+   "levels_side_b": {
+    "+0.15": [
+     "40B"
+    ]
+   },
+   "storey": "GF"
+  },
+  "W15": {
+   "handle_a_m": 1.45232,
+   "handle_b_m": 1.55232,
+   "handles": [
+    "BC3",
+    "BC2"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "W",
+    "5"
+   ],
+   "levels_side_a": {
+    "+5.50": [
+     "D16",
+     "D18"
+    ]
+   },
+   "levels_side_b": {},
+   "storey": "1F"
+  },
+  "W16": {
+   "handle_a_m": 1.45232,
+   "handle_b_m": 1.55232,
+   "handles": [
+    "C93",
+    "C92"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "W",
+    "5"
+   ],
+   "levels_side_a": {
+    "+5.50": [
+     "D16",
+     "D18"
+    ]
+   },
+   "levels_side_b": {},
+   "storey": "1F"
+  },
+  "W17": {
+   "handle_a_m": null,
+   "handle_b_m": null,
+   "handles": [
+    "BD2",
+    "BCE"
+   ],
+   "kind": "LINE_PAIR",
+   "layers": [
+    "W",
+    "5"
+   ],
+   "levels_side_a": {},
+   "levels_side_b": {},
+   "storey": "1F"
+  }
+ },
+ "pairs": [
+  {
+   "companion": "A93",
+   "companion_m": 1.15,
+   "edge": "A92",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.298,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A94",
+   "companion_m": 1.15,
+   "edge": "A95",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.267,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A9A",
+   "companion_m": 1.15,
+   "edge": "A97",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.635,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A99",
+   "companion_m": 1.15,
+   "edge": "A98",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.608,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A9E",
+   "companion_m": 1.15,
+   "edge": "AA5",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.244,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AA0",
+   "companion_m": 1.15,
+   "edge": "AA6",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.228,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A9F",
+   "companion_m": 1.15,
+   "edge": "AA7",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.221,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "A9D",
+   "companion_m": 1.15,
+   "edge": "AA8",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.222,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AA4",
+   "companion_m": 1.15,
+   "edge": "AA9",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.23,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AA3",
+   "companion_m": 1.15,
+   "edge": "AAA",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.247,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AA2",
+   "companion_m": 1.15,
+   "edge": "AAB",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.271,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AA1",
+   "companion_m": 1.15,
+   "edge": "AAC",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.296,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AB1",
+   "companion_m": 1.15,
+   "edge": "AAD",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.572,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AB2",
+   "companion_m": 1.15,
+   "edge": "AAE",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.57,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AB4",
+   "companion_m": 1.15,
+   "edge": "AAF",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.588,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AB3",
+   "companion_m": 1.15,
+   "edge": "AB0",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.576,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AB9",
+   "companion_m": 1.15,
+   "edge": "AB5",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.646,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "ABA",
+   "companion_m": 1.15,
+   "edge": "AB6",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.62,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "ABB",
+   "companion_m": 1.15,
+   "edge": "AB7",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.597,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "ABC",
+   "companion_m": 1.15,
+   "edge": "AB8",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.581,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "ABD",
+   "companion_m": 1.15,
+   "edge": "ABE",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 11.326,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AC1",
+   "companion_m": 1.15,
+   "edge": "ABF",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.673,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "AC2",
+   "companion_m": 1.15,
+   "edge": "AC0",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+5.50": [
+     "D18"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 12.708,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B4E",
+   "companion_m": 1.15,
+   "edge": "B43",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.85,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B4F",
+   "companion_m": 1.15,
+   "edge": "B44",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.75,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B50",
+   "companion_m": 1.15,
+   "edge": "B45",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.05,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B51",
+   "companion_m": 1.15,
+   "edge": "B46",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.35,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B52",
+   "companion_m": 1.15,
+   "edge": "B47",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B53",
+   "companion_m": 1.15,
+   "edge": "B48",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.95,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B54",
+   "companion_m": 1.15,
+   "edge": "B49",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.25,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B55",
+   "companion_m": 1.15,
+   "edge": "B4A",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.55,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B56",
+   "companion_m": 1.15,
+   "edge": "B4B",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.45,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B57",
+   "companion_m": 1.15,
+   "edge": "B4C",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.15,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B58",
+   "companion_m": 1.15,
+   "edge": "B4D",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.85,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B6E",
+   "companion_m": 1.15,
+   "edge": "B59",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B6F",
+   "companion_m": 1.15,
+   "edge": "B5A",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B70",
+   "companion_m": 1.15,
+   "edge": "B5B",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "B71",
+   "companion_m": 1.15,
+   "edge": "B5C",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BA4",
+   "companion_m": 1.15,
+   "edge": "BA3",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.113,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.264,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BA6",
+   "companion_m": 1.15,
+   "edge": "BA5",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.323,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.477,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BA8",
+   "companion_m": 1.15,
+   "edge": "BA7",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.525,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.689,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BAA",
+   "companion_m": 1.15,
+   "edge": "BA9",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.715,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.897,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BAC",
+   "companion_m": 1.15,
+   "edge": "BAB",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.89,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 1.1,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BAE",
+   "companion_m": 1.15,
+   "edge": "BAD",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.046,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 1.299,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BB0",
+   "companion_m": 1.15,
+   "edge": "BAF",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.18,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 1.492,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BB2",
+   "companion_m": 1.15,
+   "edge": "BB1",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.291,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 1.678,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BB4",
+   "companion_m": 1.15,
+   "edge": "BB3",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.376,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 1.856,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BB6",
+   "companion_m": 1.15,
+   "edge": "BB5",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.434,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 2.026,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BB8",
+   "companion_m": 1.148281,
+   "edge": "BB7",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.465,
+    "id": "W16"
+   },
+   "nearest_t412_flight_edge_m": 2.186,
+   "offset_m": 0.05,
+   "overlap_m": 1.148281,
+   "storey": "1F"
+  },
+  {
+   "companion": "BBA",
+   "companion_m": 1.149742,
+   "edge": "BB9",
+   "edge_m": 1.2,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 9.461,
+    "id": "W16"
+   },
+   "nearest_t412_flight_edge_m": 2.336,
+   "offset_m": 0.05,
+   "overlap_m": 1.149742,
+   "storey": "1F"
+  },
+  {
+   "companion": "BE5",
+   "companion_m": 1.15,
+   "edge": "BE4",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.54,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.1,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "BE7",
+   "companion_m": 1.626346,
+   "edge": "BE6",
+   "edge_m": 1.626346,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.64,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.626346,
+   "storey": "1F"
+  },
+  {
+   "companion": "BE9",
+   "companion_m": 1.258652,
+   "edge": "BE8",
+   "edge_m": 1.258652,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.64,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.258652,
+   "storey": "1F"
+  },
+  {
+   "companion": "BEB",
+   "companion_m": 1.258652,
+   "edge": "BEA",
+   "edge_m": 1.258652,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 12.64,
+    "id": "W17"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.258652,
+   "storey": "1F"
+  },
+  {
+   "companion": "D24",
+   "companion_m": 1.15,
+   "edge": "D22",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {
+    "+5.50": [
+     "D16",
+     "D18"
+    ]
+   },
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.65,
+    "id": "W15"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "1F"
+  },
+  {
+   "companion": "12B5",
+   "companion_m": 1.15,
+   "edge": "12B4",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.301,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.1,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "12E3",
+   "companion_m": 1.25,
+   "edge": "12CE",
+   "edge_m": 1.2,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.245,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 1.55,
+   "offset_m": 0.05,
+   "overlap_m": 1.2,
+   "storey": "2F"
+  },
+  {
+   "companion": "135C",
+   "companion_m": 1.15,
+   "edge": "135B",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.3,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "135D",
+   "companion_m": 1.15,
+   "edge": "135E",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.0,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1362",
+   "companion_m": 1.15,
+   "edge": "135F",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.25,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1361",
+   "companion_m": 1.15,
+   "edge": "1360",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.95,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1366",
+   "companion_m": 1.15,
+   "edge": "136D",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.7,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1368",
+   "companion_m": 1.15,
+   "edge": "136E",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.4,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1367",
+   "companion_m": 1.15,
+   "edge": "136F",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.1,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1365",
+   "companion_m": 1.15,
+   "edge": "1370",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.8,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "136C",
+   "companion_m": 1.15,
+   "edge": "1371",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.5,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "136B",
+   "companion_m": 1.15,
+   "edge": "1372",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.2,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "136A",
+   "companion_m": 1.15,
+   "edge": "1373",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.9,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1369",
+   "companion_m": 1.15,
+   "edge": "1374",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.6,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1379",
+   "companion_m": 1.15,
+   "edge": "1375",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.75,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "137A",
+   "companion_m": 1.15,
+   "edge": "1376",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.05,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "137C",
+   "companion_m": 1.15,
+   "edge": "1377",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.65,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "137B",
+   "companion_m": 1.15,
+   "edge": "1378",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.35,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1381",
+   "companion_m": 1.15,
+   "edge": "137D",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.55,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1382",
+   "companion_m": 1.15,
+   "edge": "137E",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.85,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1383",
+   "companion_m": 1.15,
+   "edge": "137F",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.15,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1384",
+   "companion_m": 1.15,
+   "edge": "1380",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.45,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1385",
+   "companion_m": 1.15,
+   "edge": "1386",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.3,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1388",
+   "companion_m": 1.15,
+   "edge": "1387",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.25,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.2,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "1389",
+   "companion_m": 1.15,
+   "edge": "138B",
+   "edge_m": 1.3,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+9.70": [
+     "134E"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 1.95,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.304,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "2F"
+  },
+  {
+   "companion": "2F20",
+   "companion_m": 1.626346,
+   "edge": "2F1F",
+   "edge_m": 1.626346,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.3,
+    "id": "D-2F-01"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.626346,
+   "storey": "2F"
+  },
+  {
+   "companion": "110#0",
+   "companion_m": 2.5,
+   "edge": "10F",
+   "edge_m": 8.3,
+   "flight_handle": false,
+   "levels_high_side": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "levels_low_side": {
+    "+-0.00": [
+     "37A",
+     "A86",
+     "A87"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.05,
+    "id": "G-01"
+   },
+   "nearest_t412_flight_edge_m": 12.4,
+   "offset_m": 0.05,
+   "overlap_m": 2.5,
+   "storey": "GF"
+  },
+  {
+   "companion": "142",
+   "companion_m": 1.15,
+   "edge": "13C",
+   "edge_m": 0.6,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 8.287,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 2.074,
+   "offset_m": 0.05,
+   "overlap_m": 0.6,
+   "storey": "GF"
+  },
+  {
+   "companion": "143",
+   "companion_m": 1.15,
+   "edge": "13E",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.794,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 1.714,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "173",
+   "companion_m": 0.9,
+   "edge": "172",
+   "edge_m": 0.9,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.0,
+    "id": "D-GF-01"
+   },
+   "nearest_t412_flight_edge_m": 10.982,
+   "offset_m": 0.05,
+   "overlap_m": 0.9,
+   "storey": "GF"
+  },
+  {
+   "companion": "19D",
+   "companion_m": 0.9,
+   "edge": "19C",
+   "edge_m": 0.9,
+   "flight_handle": false,
+   "levels_high_side": {
+    "+0.30": [
+     "405"
+    ]
+   },
+   "levels_low_side": {
+    "+0.15": [
+     "407",
+     "409"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.0,
+    "id": "D-GF-05"
+   },
+   "nearest_t412_flight_edge_m": 3.985,
+   "offset_m": 0.05,
+   "overlap_m": 0.9,
+   "storey": "GF"
+  },
+  {
+   "companion": "1C7",
+   "companion_m": 0.8,
+   "edge": "1C6",
+   "edge_m": 0.8,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.0,
+    "id": "D-GF-03"
+   },
+   "nearest_t412_flight_edge_m": 4.8,
+   "offset_m": 0.05,
+   "overlap_m": 0.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "4B0#4",
+   "companion_m": 3.049079,
+   "edge": "22E",
+   "edge_m": 1.777764,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.383,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.165,
+   "offset_m": 0.05,
+   "overlap_m": 1.777529,
+   "storey": "GF"
+  },
+  {
+   "companion": "234",
+   "companion_m": 1.15,
+   "edge": "22F",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.427,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.214,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "235",
+   "companion_m": 1.15,
+   "edge": "230",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.241,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 1.114,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "236",
+   "companion_m": 1.15,
+   "edge": "231",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 7.516,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 1.414,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "237",
+   "companion_m": 1.15,
+   "edge": "232",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.967,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.814,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "238",
+   "companion_m": 1.15,
+   "edge": "233",
+   "edge_m": 1.15,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.695,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.514,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "241",
+   "companion_m": 1.15,
+   "edge": "240",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 6.185,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "243",
+   "companion_m": 1.15,
+   "edge": "242",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.979,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "245",
+   "companion_m": 1.15,
+   "edge": "244",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.766,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "247",
+   "companion_m": 1.15,
+   "edge": "246",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.544,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "249",
+   "companion_m": 1.15,
+   "edge": "248",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 5.241,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "24B",
+   "companion_m": 1.15,
+   "edge": "24A",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.872,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "24D",
+   "companion_m": 1.15,
+   "edge": "24C",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.508,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "24F",
+   "companion_m": 1.15,
+   "edge": "24E",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.159,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "251",
+   "companion_m": 1.15,
+   "edge": "250",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.837,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "253",
+   "companion_m": 1.15,
+   "edge": "252",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.556,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "255",
+   "companion_m": 1.148281,
+   "edge": "254",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.332,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.148281,
+   "storey": "GF"
+  },
+  {
+   "companion": "257",
+   "companion_m": 1.149742,
+   "edge": "256",
+   "edge_m": 1.2,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 3.134,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.149742,
+   "storey": "GF"
+  },
+  {
+   "companion": "2C9",
+   "companion_m": 1.05,
+   "edge": "2C8",
+   "edge_m": 1.05,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.729,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.071,
+   "offset_m": 0.05,
+   "overlap_m": 1.05,
+   "storey": "GF"
+  },
+  {
+   "companion": "2F1E",
+   "companion_m": 1.557241,
+   "edge": "2F1D",
+   "edge_m": 1.557241,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.6,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.05,
+   "offset_m": 0.05,
+   "overlap_m": 1.557241,
+   "storey": "GF"
+  },
+  {
+   "companion": "30D",
+   "companion_m": 2.8,
+   "edge": "30A",
+   "edge_m": 2.8,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.259,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 2.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "30E",
+   "companion_m": 2.8,
+   "edge": "30B",
+   "edge_m": 2.8,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.559,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 2.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "36B",
+   "companion_m": 2.8,
+   "edge": "36A",
+   "edge_m": 2.8,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.859,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 2.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "36D",
+   "companion_m": 2.8,
+   "edge": "36C",
+   "edge_m": 2.8,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.159,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 2.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "36F",
+   "companion_m": 2.8,
+   "edge": "36E",
+   "edge_m": 2.8,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.459,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 2.8,
+   "storey": "GF"
+  },
+  {
+   "companion": "3FE",
+   "companion_m": 0.9,
+   "edge": "3FD",
+   "edge_m": 0.9,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+0.15": [
+     "394",
+     "40B",
+     "4AE"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.0,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.283,
+   "offset_m": 0.05,
+   "overlap_m": 0.9,
+   "storey": "GF"
+  },
+  {
+   "companion": "47E",
+   "companion_m": 3.4,
+   "edge": "47F",
+   "edge_m": 2.75,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.663,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.05,
+   "offset_m": 0.05,
+   "overlap_m": 2.75,
+   "storey": "GF"
+  },
+  {
+   "companion": "482",
+   "companion_m": 1.15,
+   "edge": "481",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.26,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "483",
+   "companion_m": 1.15,
+   "edge": "484",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.56,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "488",
+   "companion_m": 1.15,
+   "edge": "48F",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 0.86,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "48A",
+   "companion_m": 1.15,
+   "edge": "490",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.16,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "8F",
+   "companion_m": 0.9,
+   "edge": "8E",
+   "edge_m": 1.7,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {
+    "+-0.00": [
+     "A88",
+     "A89",
+     "A8A"
+    ]
+   },
+   "nearest_exterior_opening": {
+    "distance_m": 0.0,
+    "id": "D-GF-15"
+   },
+   "nearest_t412_flight_edge_m": 13.718,
+   "offset_m": 0.05,
+   "overlap_m": 0.9,
+   "storey": "GF"
+  },
+  {
+   "companion": "A8",
+   "companion_m": 7.02,
+   "edge": "A9",
+   "edge_m": 3.82,
+   "flight_handle": false,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 4.724,
+    "id": "D-GF-06"
+   },
+   "nearest_t412_flight_edge_m": 0.071,
+   "offset_m": 0.05,
+   "overlap_m": 3.82,
+   "storey": "GF"
+  },
+  {
+   "companion": "CA",
+   "companion_m": 1.15,
+   "edge": "C6",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.067,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "CB",
+   "companion_m": 1.15,
+   "edge": "C7",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.791,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "CD",
+   "companion_m": 1.15,
+   "edge": "C8",
+   "edge_m": 0.575,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.631,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 0.575,
+   "storey": "GF"
+  },
+  {
+   "companion": "CC",
+   "companion_m": 1.15,
+   "edge": "C9",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.524,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "D0",
+   "companion_m": 1.15,
+   "edge": "CE",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.3,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "D1",
+   "companion_m": 1.15,
+   "edge": "CF",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.345,
+    "id": "D-GF-09"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "DE",
+   "companion_m": 1.15,
+   "edge": "DC",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 1.7,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  },
+  {
+   "companion": "DF",
+   "companion_m": 1.15,
+   "edge": "DD",
+   "edge_m": 1.15,
+   "flight_handle": true,
+   "levels_high_side": {},
+   "levels_low_side": {},
+   "nearest_exterior_opening": {
+    "distance_m": 2.0,
+    "id": "D-GF-07"
+   },
+   "nearest_t412_flight_edge_m": 0.0,
+   "offset_m": 0.05,
+   "overlap_m": 1.15,
+   "storey": "GF"
+  }
+ ],
+ "plan_level_figures": [
+  "+-0.00",
+  "+0.15",
+  "+0.30",
+  "+1.00",
+  "+4.30",
+  "+5.50",
+  "+9.70"
+ ],
+ "schema": "T602_DRAWN_V1",
+ "units": "m"
+}
