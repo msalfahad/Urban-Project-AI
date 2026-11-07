@@ -1,0 +1,2962 @@
+{
+ "schema": "URBAN_T590_RULE_DIFF_PROVENANCE_V1",
+ "rule": "R-T590-1 (= R-T591-1 + (g) method register, (h) requirement only, (i) choice record, (j) his side unreadable)",
+ "input": "statement V7 (T-587; V6 byte-equal inside it): B10 / B11 / B1 sections; architectural = T-591",
+ "pins": {
+  "research/agents_t587/out/RECONCILED_STATEMENT_T587.json": "3cd55327d5d0b960cc8ee5d3b91655a38630af2973533e0d50ca77678bd79745",
+  "rules/methods/URBAN_METHOD_REGISTER_V3.json": "d124d19647cdd754f11045b259836f1ae1440656701bba5b7a0ca6b3f8a400b1",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055",
+  "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json": "22cb3ffc2a747ad3992508717c0840f926def6885f695d8de6e53700821d8c99",
+  "research/agents_t591/t591_rules.py": "d42f358734e63dba807b55b2c7fd93d18aa2c6673f48865751a69ecee7410464",
+  "research/agents_t189/R-CONC-OWN-1.json": "38ad237b9c34044d911c0dd1e8bfb3fff25eb1ad236c27f990973e56ee61ad78"
+ },
+ "q_register_snapshot": "OWNER_QUESTIONS.md, agents/control @344858ff (2026-11-07T11:30Z): answered Q-01..Q-78 (not a rule Q-23 / Q-34 / Q-36; scenario only Q-29 S1), open Q-80, withdrawn Q-79 (unchanged since T-591's @189683b3)",
+ "his_side_read": "worker own read 2026-11-07 of Drive 'Alsenan chalet project', the concrete + rebar workbook (sha256 ae608411 = T-560 / T-576 manifest), .work/private only",
+ "rows_audited": 44,
+ "rows_headline": 12,
+ "rows_nested_live": 13,
+ "rows_superseded_or_conflict_reading": 19,
+ "outcome_counts_headline": {
+  "HIS_SIDE_UNREADABLE": 6,
+  "NONE": 6
+ },
+ "per_unit_headline": {
+  "m3": {
+   "NONE": {
+    "n": 6,
+    "signed": "2.369278",
+    "gross": "7.701778"
+   }
+  },
+  "t": {
+   "HIS_SIDE_UNREADABLE": {
+    "n": 6,
+    "signed": "34.814694",
+    "gross": "34.814694"
+   }
+  }
+ },
+ "per_unit_all_rows": {
+  "m3": {
+   "NONE": {
+    "n": 38,
+    "signed": "-0.148146",
+    "gross": "20.049354"
+   }
+  },
+  "t": {
+   "HIS_SIDE_UNREADABLE": {
+    "n": 6,
+    "signed": "34.814694",
+    "gross": "34.814694"
+   }
+  }
+ },
+ "b1_earthworks": {
+  "rd_rows": 0,
+  "sections": [
+   {
+    "level": "sections_v5",
+    "section_id": "T-572/held-bounds",
+    "trade": "B10 concrete / B1 earthworks HELD bounds (engine side only; beside the V4 T-551 sections and the T-565 block)",
+    "class": "BOUNDS",
+    "rd_rows": 0
+   },
+   {
+    "level": "sections_v5",
+    "section_id": "T-572/measured-necks",
+    "trade": "B10 necks on his count (34 necks, 13 marks): HELD, one-sided",
+    "class": "BELOW_DRAWN_LOWER",
+    "rd_rows": 0
+   }
+  ],
+  "note": "B1 sits in no V7 rows section: T-565/earthworks is NOT_COMPARABLE (his NO_ROW on every component, Checker CONFIRMED) and T-572/held-bounds carries families only; 0 RULE_DIFFERENCE rows to audit, nothing reclassed"
+ },
+ "column_beam_pair_net_m3": {
+  "1F": {
+   "beam_THROUGH_SUPPORT_m3": "-1.593362",
+   "column_JOINT_HEAD_m3": "0.385000",
+   "net_m3": "-1.208362"
+  },
+  "2F": {
+   "beam_THROUGH_SUPPORT_m3": "-0.532760",
+   "column_JOINT_HEAD_m3": "0",
+   "net_m3": "-0.532760"
+  },
+  "GF": {
+   "beam_THROUGH_SUPPORT_m3": "-2.901714",
+   "column_JOINT_HEAD_m3": "2.281250",
+   "net_m3": "-0.620464"
+  }
+ },
+ "pair_note": "per storey the column JOINT_HEAD and the beam THROUGH_SUPPORT do not cancel (GF -0.620464, 1F -1.208362, 2F -0.532760 m3, reference - engine): even under one recorded ownership rule only the matched part of each pair is a convention; the remainder is a residual of its own (T-551 s.3 per-crossing bound), never a RULE_DIFFERENCE by default",
+ "sections": [
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "trade": "B10-07 beam concrete",
+   "unit": "m3",
+   "rd_rows": 3,
+   "difference": "-0.227179",
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-12.639125",
+    "HELD": "7.376418",
+    "RULE_DIFFERENCE": "4.915076",
+    "UNRESOLVED": "0.120452"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-12.639125",
+    "HELD": "7.376418",
+    "UNRESOLVED": "5.035528"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/columns",
+   "trade": "B10 column concrete",
+   "unit": "m3",
+   "rd_rows": 2,
+   "difference": "8.77000",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "1.52200",
+    "HELD": "10.34925",
+    "RULE_DIFFERENCE": "-2.66625",
+    "UNRESOLVED": "-0.435"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "1.52200",
+    "HELD": "10.34925",
+    "UNRESOLVED": "-3.10125"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/necks",
+   "trade": "B10 neck concrete",
+   "unit": "m3",
+   "rd_rows": 0,
+   "difference": "8.805",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {},
+   "by_class_after": {}
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/lift-walls",
+   "trade": "B10 lift pit wall concrete",
+   "unit": "m3",
+   "rd_rows": 0,
+   "difference": "2.40",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {},
+   "by_class_after": {}
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/footing-line",
+   "trade": "B10 footing line concrete (pads + straps + boundary band)",
+   "unit": "m3",
+   "rd_rows": 0,
+   "difference": "9.936",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {},
+   "by_class_after": {}
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/blinding",
+   "trade": "B10 blinding (plain concrete, never structural)",
+   "unit": "m3",
+   "rd_rows": 0,
+   "difference": "34.320562",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {},
+   "by_class_after": {}
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "trade": "B11 reinforcement (installed, net)",
+   "unit": "t",
+   "rd_rows": 6,
+   "difference": "34.814694",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {
+    "RULE_DIFFERENCE": "34.814694"
+   },
+   "by_class_after": {
+    "UNRESOLVED": "34.814694"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-572/measured-columns_GF",
+   "trade": "B10 GF columns, measured set (9 marks fully valued, a row of his)",
+   "unit": "m3",
+   "rd_rows": 1,
+   "difference": "-1.173750",
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": "T-576/columns-GF",
+   "by_class_before": {
+    "ENGINE_RIGHT": "0.860000",
+    "RULE_DIFFERENCE": "-1.883750",
+    "UNRESOLVED": "-0.150000"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "0.860000",
+    "UNRESOLVED": "-2.033750"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-572/measured-columns_1F",
+   "trade": "B10 1F columns, measured set (4 marks)",
+   "unit": "m3",
+   "rd_rows": 1,
+   "difference": "-0.555000",
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": "T-576/columns-1F",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.095000",
+    "RULE_DIFFERENCE": "-0.385000",
+    "UNRESOLVED": "-0.075000"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.095000",
+    "UNRESOLVED": "-0.460000"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-572/measured-footing_pads_and_straps",
+   "trade": "B10 footing pads + straps, measured set (18 marks)",
+   "unit": "m3",
+   "rd_rows": 0,
+   "difference": "0",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {},
+   "by_class_after": {}
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "trade": "B10 GF columns, measured set (9 marks), by signed cause",
+   "unit": "m3",
+   "rd_rows": 9,
+   "difference": "-1.173750",
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "0.860000",
+    "RULE_DIFFERENCE": "-2.033750"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "0.860000",
+    "UNRESOLVED": "-2.033750"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F",
+   "trade": "B10 1F columns, measured set (4 marks), by signed cause",
+   "unit": "m3",
+   "rd_rows": 4,
+   "difference": "-0.555000",
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.095000",
+    "RULE_DIFFERENCE": "-0.460000"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.095000",
+    "UNRESOLVED": "-0.460000"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "trade": "B10 GF columns, measured set under the 10E0 C7 reading (CONFLICT, R-T566-1)",
+   "unit": "m3",
+   "rd_rows": 9,
+   "difference": "-0.348750",
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "0.882500",
+    "RULE_DIFFERENCE": "-2.075000",
+    "UNRESOLVED": "0.843750"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "0.882500",
+    "UNRESOLVED": "-1.231250"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "trade": "B10 1F columns, measured set under the 10E0 C7 reading (CONFLICT, R-T566-1)",
+   "unit": "m3",
+   "rd_rows": 5,
+   "difference": "-0.690000",
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.095000",
+    "RULE_DIFFERENCE": "-0.595000"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.095000",
+    "UNRESOLVED": "-0.595000"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "trade": "B10-07 beam concrete",
+   "unit": "m3",
+   "rd_rows": 4,
+   "difference": "-0.227179",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "by_class_before": {
+    "ENGINE_RIGHT": "-12.639125",
+    "HELD": "7.376418",
+    "RULE_DIFFERENCE": "5.035528"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-12.639125",
+    "HELD": "7.376418",
+    "UNRESOLVED": "5.035528"
+   }
+  }
+ ],
+ "rows": [
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "row": 2,
+   "unit": "m3",
+   "delta": "2.901714",
+   "name": "GF: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "reading_of_record": true
+  },
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "row": 11,
+   "unit": "m3",
+   "delta": "1.593362",
+   "name": "1F: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "reading_of_record": true
+  },
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "row": 19,
+   "unit": "m3",
+   "delta": "0.42",
+   "name": "2F: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "reading_of_record": true
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/columns",
+   "row": 6,
+   "unit": "m3",
+   "delta": "-2.28125",
+   "name": "columns GF: JOINT_HEAD",
+   "row_source": "T-551 s.2 columns (R-T551-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T551-1"
+   ],
+   "cited_not_governing": {
+    "R-T551-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections",
+   "section_id": "T-551/columns",
+   "row": 15,
+   "unit": "m3",
+   "delta": "-0.385",
+   "name": "columns 1F: JOINT_HEAD",
+   "row_source": "T-551 s.2 columns (R-T551-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T551-1"
+   ],
+   "cited_not_governing": {
+    "R-T551-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 0,
+   "unit": "t",
+   "delta": "13.232853",
+   "name": "G1_SUBSTRUCTURE: his FOOTINGS, GROUND_BEAMS_AND_SLAB vs engine FRP:FTG, HL:GROUND_SYSTEM_STEEL, P-S:GROUND_SLAB, P-S:GROUND_BEAMS",
+   "row_source": "T-560 s.4 group G1_SUBSTRUCTURE",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H17 5.8 + H18 9.75 = 15.55 t (footings; ground beams + ground slab): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 1,
+   "unit": "t",
+   "delta": "6.062872",
+   "name": "G2_COLUMNS_NECKS_WALLS: his WALLS_AND_COLUMNS vs engine HL:COLUMN_STEEL, P-S:NECK, P-S:COL",
+   "row_source": "T-560 s.4 group G2_COLUMNS_NECKS_WALLS",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H19 7.95 t (walls and columns): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 2,
+   "unit": "t",
+   "delta": "4.718969",
+   "name": "G3_BEAMS: his BEAMS vs engine HL:BEAM_STEEL, LIFT_TIE_BEAM:GF, P-S:BEAMS, U-S:BEAMS",
+   "row_source": "T-560 s.4 group G3_BEAMS",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H20 9.89 t (beams): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 3,
+   "unit": "t",
+   "delta": "5.400000",
+   "name": "G4_SLABS: his SLABS vs engine HL:SLAB_STEEL, P-S:SLABS",
+   "row_source": "T-560 s.4 group G4_SLABS",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H21 5.4 t (slabs): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 4,
+   "unit": "t",
+   "delta": "3.900000",
+   "name": "G5_STAIRS_DOME: his STAIRS_AND_DOME vs engine STAIR:ST",
+   "row_source": "T-560 s.4 group G5_STAIRS_DOME",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H22 3.9 t (stair + dome): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-560/rebar",
+   "row": 5,
+   "unit": "t",
+   "delta": "1.500000",
+   "name": "G6_POOL: his POOL vs engine STAIR:POOL",
+   "row_source": "T-560 s.4 group G6_POOL",
+   "our_side": [
+    {
+     "source": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "kind": "METHOD_REGISTER",
+     "status": "OWNER_DECISION:OD-V3-3"
+    },
+    {
+     "source": "Q-71",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "OWNER_FILE:OWNER_RULE_REBAR_2026-10-24#all",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "our_side_outcome": "SOURCED_RECITE",
+   "requirements": [],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "summary sheet H23 1.5 t (pool): a typed constant, no formula, no bar row on any of his 8 sheets (worker own read; Checker T-560 Gate A TYPED_LUMP CONFIRMED 7 / 7): no convention is readable",
+   "his_readable": false,
+   "outcome": "HIS_SIDE_UNREADABLE",
+   "class_after": "UNRESOLVED",
+   "conflict": null,
+   "flag": "the row also carries HELD-blank engine lines and, on G2 / G5, a CONFIRMED engine omission (lift-pit walls, dome shells / rings): not a pure convention gap even before his side is read",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-572/measured-columns_GF",
+   "row": 1,
+   "unit": "m3",
+   "delta": "-1.883750",
+   "name": "columns_GF: JOINT_HEAD",
+   "row_source": "T-572 s.3 measured set (engine - his restated)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": "T-576/columns-GF",
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-572/measured-columns_1F",
+   "row": 0,
+   "unit": "m3",
+   "delta": "-0.385000",
+   "name": "columns_1F: JOINT_HEAD",
+   "row_source": "T-572 s.3 measured set (engine - his restated)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": "T-576/columns-1F",
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 1,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "GF C1: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 2,
+   "unit": "m3",
+   "delta": "-0.148750",
+   "name": "GF C10: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 5,
+   "unit": "m3",
+   "delta": "-0.467500",
+   "name": "GF C11: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 8,
+   "unit": "m3",
+   "delta": "-0.205000",
+   "name": "GF C2: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 10,
+   "unit": "m3",
+   "delta": "-0.187500",
+   "name": "GF C4: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 11,
+   "unit": "m3",
+   "delta": "-0.337500",
+   "name": "GF C5: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 13,
+   "unit": "m3",
+   "delta": "-0.087500",
+   "name": "GF C6: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 15,
+   "unit": "m3",
+   "delta": "-0.150000",
+   "name": "GF C7: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF",
+   "row": 18,
+   "unit": "m3",
+   "delta": "-0.375000",
+   "name": "GF C9: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F",
+   "row": 0,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "1F C1: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F",
+   "row": 1,
+   "unit": "m3",
+   "delta": "-0.205000",
+   "name": "1F C2: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F",
+   "row": 3,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "1F P.C 20x50: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F",
+   "row": 5,
+   "unit": "m3",
+   "delta": "-0.105000",
+   "name": "1F P.C 20x70: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 1,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "GF C1: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 2,
+   "unit": "m3",
+   "delta": "-0.148750",
+   "name": "GF C10: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 5,
+   "unit": "m3",
+   "delta": "-0.467500",
+   "name": "GF C11: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 8,
+   "unit": "m3",
+   "delta": "-0.205000",
+   "name": "GF C2: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 10,
+   "unit": "m3",
+   "delta": "-0.187500",
+   "name": "GF C4: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 11,
+   "unit": "m3",
+   "delta": "-0.337500",
+   "name": "GF C5: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 13,
+   "unit": "m3",
+   "delta": "-0.087500",
+   "name": "GF C6: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 16,
+   "unit": "m3",
+   "delta": "-0.191250",
+   "name": "GF C8: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-GF-reading-10E0-C7",
+   "row": 19,
+   "unit": "m3",
+   "delta": "-0.375000",
+   "name": "GF C9: JOINT_HEAD",
+   "row_source": "T-576 GF measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "row": 0,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "1F C1: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "row": 1,
+   "unit": "m3",
+   "delta": "-0.205000",
+   "name": "1F C2: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "row": 3,
+   "unit": "m3",
+   "delta": "-0.135000",
+   "name": "1F C8: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "row": 5,
+   "unit": "m3",
+   "delta": "-0.075000",
+   "name": "1F P.C 20x50: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-576/columns-1F-reading-10E0-C7",
+   "row": 7,
+   "unit": "m3",
+   "delta": "-0.105000",
+   "name": "1F P.C 20x70: JOINT_HEAD",
+   "row_source": "T-576 1F measured set",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": false,
+   "nested_in": "T-551/columns",
+   "superseded_by": null,
+   "reading_of_record": false
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "row": 2,
+   "unit": "m3",
+   "delta": "2.901714",
+   "name": "GF: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "row": 7,
+   "unit": "m3",
+   "delta": "0.120452",
+   "name": "GF: UNTRACED -> GF B7 UNRESOLVED",
+   "row_source": "T-566 s.4 beam UNTRACED by mark (R-T566-5)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T566-5"
+   ],
+   "cited_not_governing": {
+    "R-T566-5": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": "THROUGH_SUPPORT on this B7 row is accepted by the Checker on 2 / 14 piece ends only (T-576 Gate A); the other 12 rest on the worker; was UNRESOLVED before T-587 F-T587-2",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "row": 11,
+   "unit": "m3",
+   "delta": "1.593362",
+   "name": "1F: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "row": 19,
+   "unit": "m3",
+   "delta": "0.42",
+   "name": "2F: THROUGH_SUPPORT",
+   "row_source": "T-545 floors table (R-T545-1)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "R-T394-1",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "R-T395-4",
+     "kind": "METHOD_RECORD",
+     "status": "WORKER"
+    },
+    {
+     "source": "REGISTER:R-CONC-OWN-1 1.0.0-proposed (T-189; precedence column > beam; 'not in force: adoption = a NEW rule version'; in no rule register)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 lessons row 2026-10-31 (Lead ADOPTED: the column line owns the joint to the slab top; beams face to face)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-06 20:14: the BEAM owns the joint volume at every column head; the column takes the clear height floor-to-soffit)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "our_side_outcome": "NONE",
+   "requirements": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T545-1"
+   ],
+   "cited_not_governing": {
+    "R-T545-1": "a worker method record / Lead register ruling: records how we measured, not a rule"
+   },
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "his_readable": true,
+   "outcome": "NONE",
+   "class_after": "UNRESOLVED",
+   "conflict": "CONVENTION_RECORD_CONFLICT: ERS s.7 2026-10-31 (Lead) and R-T394-1 / R-CONC-OWN-1 (engine, V3.0.58 column lines slab top to slab top) say the COLUMN owns the joint; ELEMENT_REGISTER 2026-11-06 20:14 (Lead, 'restates T-189 / R-CONC-OWN-1') says the BEAM owns it and the column runs floor-to-soffit, which is HIS convention. R-CONC-OWN-1 itself states column > beam: the 11-06 entry misstates it",
+   "flag": null,
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true
+  }
+ ],
+ "lead_actions": [
+  "ADOPT one column-beam joint ownership as a rule version (R-CONC-OWN-1 column > beam, as the engine bills, or the beam as ELEMENT_REGISTER 2026-11-06 says, which would re-split V3.0.58 column and beam lines): Q-62 leaves the choice to the project ('the chosen convention', 'one convention'), so ERS s.2.7 is not met and no owner question is raised",
+  "CORRECT the ELEMENT_REGISTER 'COLUMN-BEAM JOINT' entry of 2026-11-06 20:14: it contradicts the engine, the ERS s.7 row of 2026-10-31 and R-CONC-OWN-1 which it says it restates",
+  "RELABEL engine/source/arch_v3012.py:84 'owner_rules' R-CONC-OWN-1 (a proposed worker rule, not an owner rule) in the next method version that touches it (frozen module: never in place)",
+  "B11 typed lump: keep the six groups UNRESOLVED (his side unreadable) until a bar-level reference exists; the engine's own bar takeoff is checked against the drawings, not against his constants"
+ ],
+ "released_quantities_changed": 0
+}
