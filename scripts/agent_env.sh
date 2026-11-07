@@ -211,8 +211,29 @@ cmd_pytest() {
 cmd_run() {
   parse_tree "$@"; need_venv
   local script="${ARGS[0]:-}"
-  case "$script" in tools/alsenan_scoreboard.py|tools/alsenan_keymap.py) ;; *) die "run allows only tools/alsenan_scoreboard.py or tools/alsenan_keymap.py";; esac
+  case "$script" in
+    tools/alsenan_scoreboard.py|tools/alsenan_keymap.py) ;;
+    research/agents_t*/*.py) check_research_script "$script" ;;   # owner 2026-11-07: integration and Checker chains
+    *) die "run allows only tools/alsenan_scoreboard.py, tools/alsenan_keymap.py or research/agents_t*/*.py: $script";;
+  esac
   in_tree "$PY" -I "${ARGS[@]}"
+}
+
+# A research script may run only when it is a regular file directly inside research/agents_t<digits><name>/ of a
+# tree that really lies inside .work: no "..", no symlink anywhere on its path, no sub-folders (owner 2026-11-07).
+check_research_script() {
+  local s="$1" work_real tree_real dir_real file_real
+  [[ "$s" =~ ^research/agents_t[0-9][A-Za-z0-9_-]*/[A-Za-z0-9_-][A-Za-z0-9_.-]*\.py$ ]] || die "run: not a research/agents_t*/*.py path: $s"
+  [[ "$s" != *..* ]] || die "run: '..' is not allowed: $s"
+  work_real="$(cd "$WORK" && pwd -P)" || die "run: no .work folder"
+  tree_real="$(cd "$TREE_DIR" && pwd -P)" || die "run: tree missing: $TREE_DIR"
+  [[ "$tree_real" == "$work_real"/* ]] || die "run: tree is not inside .work: $TREE_DIR"
+  [[ ! -L "$TREE_DIR" && ! -L "$TREE_DIR/research" && ! -L "$TREE_DIR/$(dirname "$s")" && ! -L "$TREE_DIR/$s" ]] || die "run: symlink on the path: $s"
+  [[ -f "$TREE_DIR/$s" ]] || die "run: no such script in tree: $s"
+  dir_real="$(cd "$TREE_DIR/$(dirname "$s")" && pwd -P)"
+  [[ "$dir_real" == "$tree_real/$(dirname "$s")" ]] || die "run: script folder resolves outside the tree: $s"
+  file_real="$dir_real/$(basename "$s")"
+  [[ "$file_real" == "$tree_real/$s" ]] || die "run: script resolves outside the tree: $s"
 }
 
 cmd_selfcheck() {
