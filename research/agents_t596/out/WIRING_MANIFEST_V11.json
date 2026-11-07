@@ -1,0 +1,1979 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "findings": {
+  "F-T596-1": "the curtail parts (ST02-RSC-N01 0.949440, -N02 0.672000 lm) are owned by the B7-05 nosing line, not the step line (UP-STAIR-008, T-598 s.6): T-424 must carry them as sub-rows of the edge, or they are orphaned",
+  "F-T596-2": "ST02-RSC-N01: T-412 beside 1.200 = in-lane 1.150 (valued) + band 0 .. 0.050 (HELD sub-row); the 0.050 is never valued with the edge",
+  "F-T596-3": "board / T-595 low 0.789554 vs 0.789555 t is rounding of parts (1 g); the manifest carries T-595's row values (144.29 kg east ring)"
+ },
+ "footing": {
+  "after": {
+   "class": "HELD",
+   "held_high": 2.275,
+   "held_low": 1.96,
+   "measured_net": null
+  },
+  "before": {
+   "class": "HELD",
+   "held_high": 2.275,
+   "held_low": 2.176,
+   "measured_net": null
+  },
+  "family_bounded_part_m3": {
+   "v10": {
+    "candidate_state_differs": [
+     {
+      "candidate": [
+       "7.2204",
+       "7.2204"
+      ],
+      "line": "L-6290a9f3d93f38cd46d6",
+      "t572": [
+       "5.639000",
+       "11.033000"
+      ],
+      "t572_flags": [
+       "LINE_POINT_7.2204_IS_Q-28A_READING"
+      ]
+     }
+    ],
+    "components": 4,
+    "high": "13.9613",
+    "low": "7.8445"
+   },
+   "v11": {
+    "candidate_state_differs": [
+     {
+      "candidate": [
+       "7.2204",
+       "7.2204"
+      ],
+      "line": "L-6290a9f3d93f38cd46d6",
+      "t572": [
+       "5.639000",
+       "11.033000"
+      ],
+      "t572_flags": [
+       "LINE_POINT_7.2204_IS_Q-28A_READING"
+      ]
+     }
+    ],
+    "components": 4,
+    "high": "13.9613",
+    "low": "7.6285"
+   }
+  },
+  "family_total": "not stateable (boundary pad count, Q-28 A): unchanged",
+  "line": "L-164ae9d338976be9e582",
+  "low": "LOWERED"
+ },
+ "inputs": {
+  "research/agents_t412/NOSING_TABLE_T412.csv": "9da81b33ec1b5f4093ccd191223acede3e85ac58b599337b94a28604d83ea34c",
+  "research/agents_t572/out/T572_HELD_BOUNDS.json": "a39e7b4b838e3590d6b456327823618e66b023617cb49be39821ad93ccb264f5",
+  "research/agents_t588/out/WIRING_MANIFEST_V9.json": "42463dfe7a94b47166e04cfbf4167ce68dda2bf5b7239a498b81c0f92c95b711",
+  "research/agents_t593/manifest_v10.py": "d10125f990a7a6148bfbac7be97c8261b667b2f34ff8121d97eac42685c94b48",
+  "research/agents_t593/out/WIRING_MANIFEST_V10.json": "c05827ef4c27e365e05f565ed89c46493c95ccaf826a490342a96f83e1dcd3fe",
+  "research/agents_t595/out/T595_RESTATEMENTS.json": "80d32d7051ee9926201b252d761d20ca1c4609465eb992a67583cbbeb1567964",
+  "research/agents_t598/ALSENAN_EDGES_T598.json": "2ee67610d6abe69a6ca5dea4ef4a554f9cc2fc9ac9bfc6ad847b22c7e57149b6"
+ },
+ "nosing": {
+  "candidate_lines": "none (B7-05 has no line in V3.0.58; T-424 wires the ledger)",
+  "census_after_v11": {
+   "by_stair": {
+    "ST-01": {
+     "edges": 56,
+     "held": 4,
+     "nosing_line": 6,
+     "step_basis": 50
+    },
+    "ST-02": {
+     "edges": 28,
+     "held": 0,
+     "nosing_line": 2,
+     "step_basis": 26
+    },
+    "ST-03": {
+     "edges": 5,
+     "held": 0,
+     "nosing_line": 1,
+     "step_basis": 4
+    }
+   },
+   "doubles": 0,
+   "edges": 89,
+   "orphans": 0
+  },
+  "his": {
+   "by_stair": {
+    "ST-01": {
+     "causes": [
+      {
+       "cause": "COUNT his pieces beyond the drawn risers (UNRESOLVED, T-434)",
+       "lm": 8.4
+      },
+      {
+       "cause": "HELD his share opposite our held edges",
+       "lm": 4.8
+      },
+      {
+       "cause": "WIDTH his width vs the drawn front edge (ENGINE_RIGHT)",
+       "lm": 2.6
+      },
+      {
+       "cause": "NOTCH columns proud of the edge (ENGINE_RIGHT)",
+       "lm": 0.1
+      }
+     ],
+     "his_lm": 75.6,
+     "his_minus_ours": 15.9,
+     "his_pieces": 63,
+     "ours_edges_held": 4,
+     "ours_edges_valued": 52,
+     "ours_lm": 59.7,
+     "unexplained": 0.0
+    },
+    "ST-02": {
+     "causes": [
+      {
+       "cause": "WIDTH his width vs the drawn front edge (ENGINE_RIGHT)",
+       "lm": 1.4
+      },
+      {
+       "cause": "NOTCH columns proud of the edge (ENGINE_RIGHT)",
+       "lm": 0.15
+      },
+      {
+       "cause": "CURTAIL developed arc he does not carry (ENGINE_RIGHT on the drawn front + face pair)",
+       "lm": -1.62144
+      }
+     ],
+     "his_lm": 33.6,
+     "his_minus_ours": -0.07144,
+     "his_pieces": 28,
+     "ours_edges_held": 0,
+     "ours_edges_valued": 28,
+     "ours_lm": 33.67144,
+     "unexplained": 0.0
+    },
+    "ST-03": {
+     "causes": [],
+     "his_lm": 14.0,
+     "his_minus_ours": 0.0,
+     "his_pieces": 5,
+     "ours_edges_held": 0,
+     "ours_edges_valued": 5,
+     "ours_lm": 14.0,
+     "unexplained": 0.0
+    }
+   },
+   "causes_sum": "15.82856",
+   "his_minus_ours": "15.82856",
+   "lm": "123.2",
+   "note": "signed his - ours, no %",
+   "residual": "0"
+  },
+  "ledger": [
+   {
+    "eid": "ST01-MS1L-N01",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N02",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N03",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.1",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N04",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N05",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N06",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N07",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N08",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N09",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1L-N10",
+    "flight": "MS1-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "WINDER",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1T-N01",
+    "flight": "MS1-T",
+    "held_bound_lm": [
+     "1.15",
+     "1.735655"
+    ],
+    "in_step_basis": true,
+    "kind": "WINDER",
+    "lm": null,
+    "note": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "HELD",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS1T-N02",
+    "flight": "MS1-T",
+    "held_bound_lm": [
+     "1.15",
+     "1.735655"
+    ],
+    "in_step_basis": true,
+    "kind": "WINDER",
+    "lm": null,
+    "note": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "HELD",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS1T-N03",
+    "flight": "MS1-T",
+    "held_bound_lm": [
+     "1.15",
+     "1.735655"
+    ],
+    "in_step_basis": true,
+    "kind": "WINDER",
+    "lm": null,
+    "note": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "HELD",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS1T-N04",
+    "flight": "MS1-T",
+    "held_bound_lm": [
+     "1.15",
+     "1.735655"
+    ],
+    "in_step_basis": true,
+    "kind": "WINDER",
+    "lm": null,
+    "note": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "HELD",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS1T-N05",
+    "flight": "MS1-T",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "LANDING_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-434",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS1U-N01",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N02",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N03",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N04",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N05",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N06",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N07",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N08",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N09",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N10",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N11",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS1U-N12",
+    "flight": "MS1-U",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "FLOOR_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS2L-N01",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N02",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N03",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N04",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N05",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.1",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N06",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N07",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N08",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N09",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N10",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N11",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2L-N12",
+    "flight": "MS2-L",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "LANDING_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2TR-N01",
+    "flight": "MS2-TR",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "LANDING_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-MS2U-N01",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N02",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N03",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N04",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N05",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N06",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N07",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N08",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N09",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N10",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N11",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-MS2U-N12",
+    "flight": "MS2-U",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "FLOOR_EDGE",
+    "lm": "1.15",
+    "note": "F-C-T598-1: drawn on no plan; existence by the section A-A count (Q-46 A), length by lane 1358",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-598",
+    "stair": "ST-01",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST01-D1-N01",
+    "flight": "D1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-D1-N02",
+    "flight": "D1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-D1-N03",
+    "flight": "D1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST01-D1-N04",
+    "flight": "D1",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "FLOOR_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-412",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST03-E1-N01",
+    "flight": "E1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "2.8",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-03",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST03-E1-N02",
+    "flight": "E1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "2.8",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-03",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST03-E1-N03",
+    "flight": "E1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "2.8",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-03",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST03-E1-N04",
+    "flight": "E1",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "2.8",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-03",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST03-E1-N05",
+    "flight": "E1",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "LANDING_EDGE",
+    "lm": "2.8",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-412",
+    "stair": "ST-03",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSC-N01",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N02",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N03",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N04",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N05",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N06",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N07",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N08",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N09",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N10",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N11",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N12",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSS-N01",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N02",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.1",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N03",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.1",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N04",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.1",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N05",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N06",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N07",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N08",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N09",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N10",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSS-N11",
+    "flight": "RS-S",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "LANDING_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSA-N01",
+    "flight": "RS-A",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSA-N02",
+    "flight": "RS-A",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSA-N03",
+    "flight": "RS-A",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSA-N04",
+    "flight": "RS-A",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "1.15",
+    "owner": "B7-06 step-lm line of its flight (V9 census)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   },
+   {
+    "eid": "ST02-RSA-N05",
+    "flight": "RS-A",
+    "held_bound_lm": null,
+    "in_step_basis": false,
+    "kind": "FLOOR_EDGE",
+    "lm": "1.15",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "source": "T-412",
+    "stair": "ST-02",
+    "status": "DRAWING-CONFIRMED",
+    "t412_status": "DRAWING-CONFIRMED"
+   }
+  ],
+  "sub_row_owners": {
+   "ST02-RSC-N01#BAND": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+   "ST02-RSC-N01#CURTAIL": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+   "ST02-RSC-N02#CURTAIL": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)"
+  },
+  "sub_rows": [
+   {
+    "eid": "ST02-RSC-N01#CURTAIL",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "0.94944",
+    "note": "developed curtail arc of the front edge; the commercial step lm holds the in-lane width only (UP-STAIR-008, T-598 s.6)",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "part_of": "ST02-RSC-N01",
+    "source": "T-598 R-T598-2",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N02#CURTAIL",
+    "flight": "RS-C",
+    "held_bound_lm": null,
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": "0.672",
+    "note": "developed curtail arc of the front edge; the commercial step lm holds the in-lane width only (UP-STAIR-008, T-598 s.6)",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "part_of": "ST02-RSC-N02",
+    "source": "T-598 R-T598-2",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "t412_status": "HELD"
+   },
+   {
+    "eid": "ST02-RSC-N01#BAND",
+    "flight": "RS-C",
+    "held_bound_lm": [
+     "0",
+     "0.05"
+    ],
+    "in_step_basis": true,
+    "kind": "TREAD",
+    "lm": null,
+    "note": "BAND_KIND_NOT_PRINTED (RL-09): stringer cap / upstand / tread",
+    "owner": "B7-05 nosing line (T-424 adds it; no line in V3.0.58)",
+    "part_of": "ST02-RSC-N01",
+    "source": "T-598",
+    "stair": "ST-02",
+    "status": "HELD",
+    "t412_status": "HELD"
+   }
+  ],
+  "totals": {
+   "edges": 89,
+   "edges_held": 4,
+   "edges_valued": 85,
+   "held_bound_lm": [
+    "4.6",
+    "6.99262"
+   ],
+   "held_by_name": [
+    {
+     "bound_lm": [
+      "1.15",
+      "1.735655"
+     ],
+     "eid": "ST01-MS1T-N01"
+    },
+    {
+     "bound_lm": [
+      "1.15",
+      "1.735655"
+     ],
+     "eid": "ST01-MS1T-N02"
+    },
+    {
+     "bound_lm": [
+      "1.15",
+      "1.735655"
+     ],
+     "eid": "ST01-MS1T-N03"
+    },
+    {
+     "bound_lm": [
+      "1.15",
+      "1.735655"
+     ],
+     "eid": "ST01-MS1T-N04"
+    },
+    {
+     "bound_lm": [
+      "0",
+      "0.05"
+     ],
+     "eid": "ST02-RSC-N01#BAND"
+    }
+   ],
+   "sub_rows": 3,
+   "valued_lm": "107.37144",
+   "valued_lm_by_owner": {
+    "B7-05 nosing line (T-424 adds it; no line in V3.0.58)": "13.62144",
+    "B7-06 step-lm line of its flight (V9 census)": "93.75"
+   },
+   "valued_lm_by_status": {
+    "ASSUMED - OWNER-APPROVED": "16.57144",
+    "DRAWING-CONFIRMED": "90.8"
+   }
+  }
+ },
+ "overlay": {
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v10": 5124,
+   "after_v11": 5124,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v10_overlay": [],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v11_vs_v10_totals": {
+   "STR.CONC.FOOTING|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 0,
+     "held_high": "2.275",
+     "held_high_open_n": 0,
+     "held_low": "1.96",
+     "held_n": 1,
+     "released": "64.304",
+     "released_n": 25
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 0,
+     "held_high": "2.275",
+     "held_high_open_n": 0,
+     "held_low": "2.176",
+     "held_n": 1,
+     "released": "64.304",
+     "released_n": 25
+    }
+   },
+   "STR.REBAR|kg": {
+    "after": {
+     "excluded_n": 577,
+     "held_blank_n": 801,
+     "held_high": "19646.877938",
+     "held_high_open_n": 6,
+     "held_low": "15130.867712",
+     "held_n": 1701,
+     "released": "9375.30576",
+     "released_n": 374
+    },
+    "before": {
+     "excluded_n": 577,
+     "held_blank_n": 801,
+     "held_high": "19646.877938",
+     "held_high_open_n": 6,
+     "held_low": "15109.095712",
+     "held_n": 1701,
+     "released": "9375.30576",
+     "released_n": 374
+    }
+   }
+  }
+ },
+ "rebar": {
+  "board_low_t": "0.789554 (Checker: 0.767783 + 0.021771; T-595 sums the rounded row lows 0.789555: 1 g rounding, the row value 144.29 kg is T-595's)",
+  "bounded_low_kg": {
+   "delta": "21.772",
+   "v10": "767.783",
+   "v11": "789.555"
+  },
+  "carried_byte_equal": [
+   "NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR"
+  ],
+  "highs": "open by name on every row, unchanged (ring depth, links, hooks, laps, anchorage)",
+  "moved": {
+   "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR": {
+    "how": "RAISED",
+    "kg_after": 144.29,
+    "kg_before": 122.518
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "concrete_line": "L-d5401fa8986900c66c37",
+    "missing": "no structural drawing of the third dome (unchanged from T-575)",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "DG5:DOME-3:SHELL:REBAR",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 144.29,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "F-C-T583-1": "CLOSED by T-595 R-T595-1: the ring cut draws 2 d14 on BOTH vertical faces at two levels (4 bars): +21.771 kg on the low",
+    "bounded_part_high_kg": 155.966,
+    "concrete_line": "L-ab37afa17f2ac5b0efd1",
+    "high_open_by_name": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ],
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V2 (R-T595-1)"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-595 VERIFIER 2026-11-07T09:56Z (e): ST7757.dxf DETAIL OF DOME ring cut draws side-bar circles on BOTH vertical faces at TWO levels -> 4 x d14 CONFIRMED; 4 x 8.99725 x 1.209877 = 43.5426 kg, east ring low 0.122518 -> 0.144289 t (worker 0.144290, rounding, AGREE); F10 alone 1.960 / F10 + F 2.176 / outline 2.275 m3 AGREE, S02 low = min over accepted scenarios; (f) rows stay HELD bounds, S02 ESTIMATED owner PROVISIONAL, nothing VERIFIED as a line"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "note": "R-T595-1 restated low; high open by name, unchanged",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 63.897,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 158.208,
+    "concrete_line": "L-48b7d139bff681199543",
+    "high_open_by_name": [
+     "RING_LINKS[DETAIL]",
+     "RING_LINK_HOOKS[B4]",
+     "RING_LINK_HOOKS[DETAIL]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[B4]",
+     "RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL]",
+     "RING_SIDE[DETAIL]"
+    ],
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V2 (R-T595-1)"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 290.684,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 425.0,
+    "concrete_line": "L-8ea34765d16b54898140",
+    "high_open_by_name": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ],
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 290.684,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "bounded_part_high_kg": 425.0,
+    "concrete_line": "L-fffa895ed96b9d6a682c",
+    "high_open_by_name": [
+     "SHELL_ANCHORAGE_INTO_RING",
+     "SHELL_HOOP_LAPS"
+    ],
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "concrete_line": "L-684fcad323adc0c8a267",
+    "kg(h) = A h + B": {
+     "A_kg_per_m": [
+      156.642,
+      212.859
+     ],
+     "B_kg": [
+      0.0,
+      123.221
+     ],
+     "h": "not printed (HELD)"
+    },
+    "missing": "pit depth / wall height h not printed on p.14: bars only as kg(h)",
+    "version": "DOME_LIFT_REBAR_COMPONENTS_V1 (T-583, unchanged)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "LIFT_PIT:WALLS:REBAR",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-583 VERIFIER 2026-11-07T04:05Z (e): shell / ring / lift-wall lows re-derived AGREE; lift-wall A and B lows VERIFIED, highs bounded, h HELD: PARTIALLY VERIFIED; F-C-T583-1 east-ring low strict, tighter reading +0.021771 t open"
+   },
+   "item_code": "STR.REBAR",
+   "kind": "ADD",
+   "line_id": "NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "op_id": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR",
+   "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "row": "T-595",
+   "source": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "unit": "kg"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 2.275,
+    "held_low": 1.96,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 2.275,
+    "held_low": 2.176,
+    "measured_net": null
+   },
+   "beside": {
+    "element": "P-C:FTG:SH10:T652:10A5",
+    "high_basis": "R-T595-2: max = S02-3 drawn outline 3.25 x 1.40 x 0.50 (T-233 reading B)",
+    "his_class": "BELOW_DRAWN_LOWER -> WITHIN",
+    "his_m3": "1.960",
+    "low_basis": "R-T595-2: min of the owner-accepted S02 scenarios = S02-1 F10 alone 2.80 x 1.40 x 0.50 (owner 2026-11-02 RFI re-review (4))",
+    "same_element_other_families": "unchanged (blinding high split SCENARIO_SPLIT_OPEN; SB1 in footing 0 .. 0.385; PIT-F10F backfill UNBOUNDED)",
+    "status_label": "ESTIMATED range, owner PROVISIONAL; never VERIFIED (owner 2026-11-02)",
+    "version": "T572_HELD_BOUNDS_V2 (F10 + F component only) on T572_HELD_BOUNDS_V1",
+    "who_is_right": "RULE_DIFFERENCE (interpretation: he takes F10 alone), no % on a held line"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-595 VERIFIER 2026-11-07T09:56Z (e): ST7757.dxf DETAIL OF DOME ring cut draws side-bar circles on BOTH vertical faces at TWO levels -> 4 x d14 CONFIRMED; 4 x 8.99725 x 1.209877 = 43.5426 kg, east ring low 0.122518 -> 0.144289 t (worker 0.144290, rounding, AGREE); F10 alone 1.960 / F10 + F 2.176 / outline 2.275 m3 AGREE, S02 low = min over accepted scenarios; (f) rows stay HELD bounds, S02 ESTIMATED owner PROVISIONAL, nothing VERIFIED as a line"
+   },
+   "kind": "SET",
+   "line_id": "L-164ae9d338976be9e582",
+   "note": "R-T595-2 scenario-set bound: low LOWERED, high unchanged",
+   "op_id": "FOOTING_S02_BOUND (T-595 R-T595-2)|T-595 R-T595-2|L-164ae9d338976be9e582",
+   "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+   "row": "T-595 R-T595-2",
+   "source": "FOOTING_S02_BOUND (T-595 R-T595-2)"
+  }
+ ],
+ "rule": "R-T596-1",
+ "schema": "URBAN_T596_WIRING_MANIFEST_V11",
+ "sources_merged": {
+  "T-434": "a6b325b3",
+  "T-595": "568ce15e",
+  "T-598": "78196c45"
+ },
+ "supersedes": {
+  "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)": {
+   "by": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+   "op_ids": {
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+    "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)|T-583|NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)|T-595|NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR"
+   },
+   "same_line_ids": [
+    "NEW:STR.REBAR:DG5:DOME-3:SHELL:REBAR",
+    "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR",
+    "NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR",
+    "NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR",
+    "NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR",
+    "NEW:STR.REBAR:LIFT_PIT:WALLS:REBAR"
+   ]
+  },
+  "T-412 census edge statuses (read by the V9 / V10 census)": {
+   "by": "NOSING_LEDGER_V11 (T-434 + T-598 + F-C-T598-1), by edge id",
+   "edges": [
+    "ST01-MS1T-N01",
+    "ST01-MS1T-N02",
+    "ST01-MS1T-N03",
+    "ST01-MS1T-N04",
+    "ST01-MS1T-N05",
+    "ST01-MS1U-N12",
+    "ST01-MS2TR-N01",
+    "ST01-MS2U-N12",
+    "ST02-RSC-N01",
+    "ST02-RSC-N02",
+    "ST02-RSC-N03",
+    "ST02-RSC-N04",
+    "ST02-RSC-N05",
+    "ST02-RSC-N06",
+    "ST02-RSC-N07",
+    "ST02-RSC-N08",
+    "ST02-RSC-N09",
+    "ST02-RSC-N10",
+    "ST02-RSC-N11",
+    "ST02-RSC-N12"
+   ]
+  },
+  "candidate T-572 V1 bound on L-164ae9d338976be9e582": {
+   "by": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+   "why": "no earlier manifest wrote the line (R-T596-1 (c))"
+  }
+ },
+ "task": "T-596"
+}
