@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T11:29Z | Worker 1 | SUCCESS | T-590 READY 4b7eb66f | structural RULE_DIFF provenance: 44 rows (12 headline), none keeps a recorded source: 6 column/beam joint rows NONE->UNRESOLVED +2.369 m3 signed (ownership only in proposed R-CONC-OWN-1 + Lead records; ELEMENT_REGISTER 2026-11-06 says beam owns, engine bills column: Lead to adopt one rule version, no owner question), 6 rebar groups 34.815 t HIS_SIDE_UNREADABLE (typed lump); B1 0 rows; no quantity moved | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (t485_registry_promotion red on the working branch, pre-existing, T-525)
 - 2026-11-07T11:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T11:11Z | Worker 3 | SUCCESS | T-594 READY c079e26c | Statement V8 (V7 byte-equal, totals fixed, residual 0): lintel D-GF-09 RULE_DIFF->UNRESOLVED (conflict 1.20..1.50, lm 91.5..91.8); yard skirting 81.32 lm UNRESOLVED->RULE_DIFF/SCOPE; stair skirting held 17.009->19.359 lm (winders 2.350); his door steps 7.70 lm = HELD 2.80 + gate 1.00 PARTIAL + D-GF-05 1.00 already valued (paired) + UNRESOLVED 2.90. Learned: one step was already priced in the WET thresholds. Beside: dome rebar low 0.789555 t, S02 footing low 7.6285 m3 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T11:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
