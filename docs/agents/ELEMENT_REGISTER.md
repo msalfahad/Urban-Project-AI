@@ -88,6 +88,13 @@ quantity.
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
   line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
+- BEAM BAND OVERLAP (Lead 2026-11-07 20:17; Checker F-C-P03-2, T-180 P03 GF): where two beam bands cross or touch at a
+  column corner (GF B27 face 325 from col 35C crossing B1, 0.014761 m2), the common block is ONE piece of concrete,
+  measured once: OWNER by UP-CONC-JOINT-001 1.0.0 (beam face to face: the framing beam stops at the other beam's face;
+  the column owns its own footprint to the slab top); drawn band outlines, never schedule rectangles. T-610.
+- SKIRTING AT STAIR-OPENING WALLS (Lead 2026-11-07 20:17; Checker F-T606-1 own P7757 read, 11.17 lm): a wall face that
+  bounds a stair opening with no finished floor at that level carries NO room skirting (UP-SKIRT-001: floor meets wall);
+  the stair's own skirting is the stair skirting element (one element, range never summed, ORR-007). T-611 wires it.
 - FOOTING OVERLAP (Lead 2026-11-07 16:17; Checker F-C-T597-1 own ST7757 read): where two drawn footing outlines overlap
   or one is drawn notched round another (FN 180C notched 0.40 x 0.35 where F9 180F sits; 1B24 / 10F0 0.005625 m2),
   the overlap is ONE block of concrete, measured once: OWNER = the footing whose drawn outline is whole (the notched
