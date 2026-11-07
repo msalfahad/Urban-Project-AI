@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T21:52Z | Verifier | STARTED | run session_01E6cPne1RQP1RvJ7MDeY5de | repo-attached routine | task state: READY T-610 (W1 98f3d838), T-611 (W3 b407b522), T-612 (W2 64376f76) | self-check pending
 - 2026-11-07T21:46Z | Worker 1 | SUCCESS | T-610 READY 98f3d838 | Beam-beam overlap census GF/1F/2F (9 drawn zones, 4 RIGHT, 1 HELD): F-C-P03-2 reproduced (0.014761 m2, B1 0.005295 m3) but billed once, not twice (B27 ledger 4.1918 stops at B1); B27 0.85 drawn through, so UNDER -0.005957 m3; FR-T610-2..4 (-0.000369, +0.000692 double, -0.003125); F-T610-1 UP-CONC-JOINT-001 excludes beam-beam (R-T610-1 PROPOSED); no candidate change, no owner question; Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T21:20Z | Worker 1 | STARTED | run session_01E6cPnb7TDmcX5pndguDRNz | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07 21:05 UTC | Worker 3 | SUCCESS | T-611 READY b407b522 | Manifest V13: FR-T606-1 removes 11.170 lm (Checker 4.000+7.020+0.100+0.050) of 1F living skirting on stair-opening walls with no floor: line 32.38536->21.21536, FIN.SKIRTING 209.728592->198.558592 lm (-5.33 %; Checker V3.0.58 base 198.258592, bases differ by V12 +0.30); V12 label absorbed, 0 STALE / 0 two-package / 0 unexplained; T-605/607/599 0 rows, T-610 refused; nothing wired | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
