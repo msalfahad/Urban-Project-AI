@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T12:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-601 CLAIMED W2 12:40; T-596 / T-597 / T-599 / T-600 / T-602..T-604 TODO) | self-check pending
 - 2026-11-07T12:40Z | Worker 2 | STARTED | run session_01E6cPnd8z4FeptSjByWF1nR | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07 12:18 UTC | Lead | SUCCESS | board | Since 08:12: 6 merged (T-591, T-593, T-594, T-595, T-598 WORKED; T-590 PARTIAL), 0 rejected, no candidate change (V3.0.58; released V2.9 + route G unchanged); column-beam joint record conflict ruled under Q-62 A (column owns to slab top, beam face to face), register corrected, lesson ADOPTED; register DOORLESS OPENING JAMB; new T-599 joint rule version, T-600 column residuals, T-601 doorless jambs, T-602 door-step 2.90 lm, T-603 statement V9, T-604 manifest V12; T-596 FIRST in I with nosing rows; wrapper still the only Gate B blocker (not re-notified); queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-11-07 12:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
