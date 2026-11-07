@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T11:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T11:11Z | Worker 3 | SUCCESS | T-594 READY c079e26c | Statement V8 (V7 byte-equal, totals fixed, residual 0): lintel D-GF-09 RULE_DIFF->UNRESOLVED (conflict 1.20..1.50, lm 91.5..91.8); yard skirting 81.32 lm UNRESOLVED->RULE_DIFF/SCOPE; stair skirting held 17.009->19.359 lm (winders 2.350); his door steps 7.70 lm = HELD 2.80 + gate 1.00 PARTIAL + D-GF-05 1.00 already valued (paired) + UNRESOLVED 2.90. Learned: one step was already priced in the WET thresholds. Beside: dome rebar low 0.789555 t, S02 footing low 7.6285 m3 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T11:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T10:54Z | Worker 2 | SUCCESS | T-598 READY 64bded43 | B7-05 nosing: 20/20 held edges classed: MS1-U/MS2-U floor + MS2-TR 1.150 each DRAWING-CONFIRMED, RS-C 12 owner-approved count incl new curtail fronts 1.621 lm, 4 MS1-T winder fronts DESIGNER (4.600..6.943), band end 0..0.050; nosing 88.500 -> 107.371 lm valued, 4 HELD; his 123.20 - ours +15.829 closed by cause, residual 0. Nothing released. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
