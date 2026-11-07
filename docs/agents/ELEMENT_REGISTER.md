@@ -46,6 +46,24 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+- EXTERNAL DOOR STEP, PAYABLE LENGTH (Lead 2026-11-07 08:15; T-592 MERGED 80da26a0, Checker own DXF read AGREE): CLOSED.
+  The line pays ONE length: the stone in the wall gap between masonry faces (= the T-325 threshold strip basis):
+  house 3.800 lm nr 4, riser 0.570 m2 (D-GF-09 riser 0.15 DRAWING-CONFIRMED), VERIFIED research quantity, not wired.
+  The visible nosing between jambs (3.500 lm) is an attribute of the same element, never a second line. Owner trade
+  marble / stone (door-step family). Rows: T-593 (manifest V10). D-GF-09 door block 1.00 in a 0.90 gap stays the T-581
+  DRAWING CONFLICT (door size / lintel), not this element.
+- GATE STEP (Lead 2026-11-07 08:15; FR-T592-2, owning trade asked of the Lead): RULED by the physical element: a stone
+  tread + riser in a boundary-wall gate opening is the same element class as a house door step (stone in a wall gap
+  with a riser), so OWNER TRADE marble / stone, door-step family (R-T592-1 basis); the gate leaf, the opening and the
+  fence wall stay B13-04 (FENCE GATE G-02 ruling unchanged), listed without a step quantity. Quantity 1.000 lm / 0.150
+  m2 enters as PARTIAL until the gate outer level (+-0.00 by region reach, not re-read by hand) is re-read; never
+  folded into the house door-step total without its own row. Rows: T-593.
+- E1 LANDING SKIRTING (Lead 2026-11-07 08:15; F-C-T585-1): RULED: the physical test for a skirting is the same
+  everywhere (a finished floor meeting a finished wall face with a drawn or noted base); interior rooms evidence it
+  through the room-finish schedule, exterior spaces only through a drawn or noted base. The E1 landing is exterior
+  with no printed base, so the YARD SKIRTING criterion governs: NOT_IN_DRAWING, no line; the ENGINE_OMISSION proposal
+  by analogy with the interior MS1-LD / MS2-LD landings is withdrawn. If a later revision prints a base it becomes
+  FIN.SKIRTING (level skirting on a landing, STAIR SKIRTING vs ROOM SKIRTING ruling). Rows: T-593 (NO_LINE row), T-594.
 - EXTERNAL DOOR STEP (Lead 2026-11-07 04:15; T-584 MERGED 6d896db0, Checker AGREED FR-T584-3): RULED: at the 4 house
   doors the drawn edge pair on the wall face is ONE element, threshold nosing + riser (3.50 lm / 0.390 m2, D-GF-09 riser
   HELD 0 .. 0.27 m2); owner trade marble / stone thresholds (T-422 / T-577 line family); NOT a second step element and
