@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07 13:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T13:08Z | Worker 3 | SUCCESS | T-596 READY 393d6a48 | Manifest V11 dry run on V3.0.58: 5,124 lines, 0 stale / 0 unexplained, other lines = V10. East dome ring rebar low 122.518 -> 144.290 kg (highs open); F10+F 2.176..2.275 -> 1.960..2.275 m3, footing bounded low 7.8445 -> 7.6285 m3; nosing ledger 107.371440 lm valued + 4.600..6.992620 HELD by name, census 0/0, his 123.20 (+15.828560, resid 0). Nothing wired. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T13:00Z | Worker 3 | STARTED | run session_01E6cPne4GZnqayxLjRgBRuT | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T12:59Z | Worker 2 | SUCCESS | T-601 READY (fc3bc3a4) | Own DXF census, 64 wall gaps on 3 plans: 5 doorless + 3 framed lift doors. A-1F-01 real jambs 2x0.15 deducted -> FR-T601-1 +0.30 lm skirting (209.428592->209.728592, +0.14 %) = his 0.30 (FREELANCER_RIGHT); A-GF-01 / P-GF-01 dry|wet Q-06 A NOT_APPLICABLE (FR-2 OP-020 HELD->NA); P-1F-01 inside one cell (in outline); GF OP-011 / 1F OP-007 are lift landing doors, not passages (FR-3); P-GF-05 outdoor 0.40 HELD | selfcheck codemap PASS, t061 PASS, freeze PASS; problem: none
