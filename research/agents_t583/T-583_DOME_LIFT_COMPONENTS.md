@@ -54,7 +54,8 @@ reading 12 joints 22.06 kg (detail) / 14.70 kg (B4).
   RFI-B-S21 family (bend / anchorage of drawn legs). Not an owner question (ERS 2.7 not met).
 - F-T583-2 (method): the T-575 lift-wall high (70 bars) was below the both-faces reading (78): widened here.
 - F-T583-3 (shell, not applied): note 22 does not name shells; if it governed, the bar sphere narrows to
-  R_in + 0.031 .. R_out - 0.031 and the shell mains range narrows; kept at T-575 bounds, listed for the Checker.
+  R_in + 0.031 .. R_out - 0.031 and the shell mains range would narrow 0.287994 .. 0.425000 -> 0.295321 .. 0.415106 t
+  per dome (sensitivity only); kept at T-575 bounds, listed for the Checker.
 - Freelancer: 44.19 t TYPED_LUMP (T-560): NOT_COMPARABLE, no %. Verdict proposals: dome shells / rings
   ENGINE_OMISSION -> bounded HELD with every component named; lift walls UNRESOLVED (h, designer).
 
