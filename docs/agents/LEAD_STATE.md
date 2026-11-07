@@ -7,7 +7,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - engine: 37dcc11b (T-596 / T-601 / T-602 / T-597 / T-603 merges; candidate of record ARCH_TAKEOFF_V3.0.58 /
   BOQ_FAMILY_MASTER 1.55.0; released V2.9 + route G unchanged).
 - main: eafbb0f6 (wrapper scripts/agent_env.sh:211 UNCHANGED: run allows only the two tools).
-- board: this run's final commit (Lead 2026-11-07 16:20)
+- board: this run's final commit (Lead 2026-11-07 16:17)
 - last Lead run: 2026-11-07 16:12-16:40 UTC (run unknown)
 
 ## Run health
@@ -15,7 +15,7 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - CRITICAL (owner, notified 04:15 5 Nov, not re-notified): wrapper refuses research/agents_t*/ scripts -> every Gate B + T-525 blocked.
 - tests/t485 still red on the working branch (T-507 stale pending in master 1.55.0; T-525).
 
-## Live rows (16:20)
+## Live rows (16:17)
 - READY 0.
 - TODO: S: T-599 r2 (FIRST, critical, gate 1), T-605 footing overlap, T-600 (after T-599 r2);
   A: T-606 room skirting 9.693 lm (FIRST), T-607 step / nosing 8.4 lm (after T-606), T-608 lift landing openings (after T-607);
@@ -42,10 +42,10 @@ Next Lead run: read this file, then only what changed since the commits below (`
 - Status word FIRST in the status cell, and its 'worker N first / second' text must match the lane order;
   7-cell rows; `board check` pulls first: commit before.
 - A Checker finding that blocks a merge gets its fix row in the next Lead run, first in its lane.
-- Register (16:20): FOOTING OVERLAP (whole outline owns; drawn, not schedule), LIFT LANDING DOOR (not a passage; supply
+- Register (16:17): FOOTING OVERLAP (whole outline owns; drawn, not schedule), LIFT LANDING DOOR (not a passage; supply
   HELD), STAIR STEP / NOSING EDGE (one edge once per line). 12:16: COLUMN-BEAM JOINT CORRECTED, DOORLESS OPENING JAMB.
 - GF joint-head matched source = T-551 2.28125 m3 (V9 reading of record); T-572 / T-576 readings go to T-600.
-- Lessons 16:20 ADOPTED: matched-part-only reclass; plot-boundary gaps in step census; label not evidence; drawn
+- Lessons 16:17 ADOPTED: matched-part-only reclass; plot-boundary gaps in step census; label not evidence; drawn
   outlines for overlaps; restatement bounds; statement reclass = class move only.
 - F-C-T570-1, F-C-T593-1 (stair skirting one element, range never summed; ORR-007 open with owner).
 - Materials: FINISH V7, PLASTER V3 (plaster m2 moves with T-563); sand loose m3, t / loads HELD.

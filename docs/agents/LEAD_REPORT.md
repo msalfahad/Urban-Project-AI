@@ -2,7 +2,7 @@
 
 
 
-## LEAD REPORT 2026-11-07 16:20 UTC
+## LEAD REPORT 2026-11-07 16:17 UTC
 
 Drive read OK (no file created in the project folders since 12:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 12:16; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines verified in the candidate: 2 (CONC.SLAB 60.28 m3, footing blinding 12.73 m3); released 0.
 - B1 earthworks plan (m2): 24 pits union 129.234375 (overlap counted once), ours outside the pool 124.648614, pool envelope 11.851050: Checker own ST read AGREE to 1e-6 (engine -0.000941, arc chords, immaterial). Plans VERIFIED (plan only), depths HELD (no survey), his side NO_ROW. FN 180C drawn notched under F9 -> concrete overlap counted once: T-605.
