@@ -1,0 +1,302 @@
+{
+ "detail_sheets": "none: no door / threshold detail or section in the DXF (24 distinct model-space texts) or the PDF set (T-360 sheet census: plans, elevations, sections A-A / B-B, fence sheet)",
+ "drawing": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (architectural DXF), read by handle",
+ "openings": {
+  "D-GF-01": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face0": [
+    {
+     "handle": "172",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.0
+    },
+    {
+     "handle": "173",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.05
+    }
+   ],
+   "insert": "15E",
+   "jambs_m": [
+    0.05,
+    0.05
+   ],
+   "levels_reachable_high": {
+    "+0.30": [
+     "401"
+    ]
+   },
+   "levels_reachable_low": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "wall_depth_m": 0.2,
+   "wall_gap_face0": {
+    "ends": [
+     "10A",
+     "10C"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     0.0
+    ],
+    "gap_m": 1.0,
+    "through": []
+   },
+   "wall_gap_face_depth": {
+    "ends": [
+     "138",
+     "139"
+    ],
+    "ends_vs_block_span_m": [
+     -0.0,
+     0.0
+    ],
+    "gap_m": 1.0,
+    "through": []
+   }
+  },
+  "D-GF-03": {
+   "block": "d220",
+   "block_span_m": 0.9,
+   "edges_on_face0": [
+    {
+     "handle": "1C6",
+     "layer": "5",
+     "length_m": 0.8,
+     "offset_from_face_m": 0.0
+    },
+    {
+     "handle": "1C7",
+     "layer": "2",
+     "length_m": 0.8,
+     "offset_from_face_m": 0.05
+    }
+   ],
+   "insert": "1B5",
+   "jambs_m": [
+    0.05,
+    0.05
+   ],
+   "levels_reachable_high": {
+    "+0.30": [
+     "403"
+    ]
+   },
+   "levels_reachable_low": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "wall_depth_m": 0.2,
+   "wall_gap_face0": {
+    "ends": [
+     "121",
+     "122"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     0.0
+    ],
+    "gap_m": 0.9,
+    "through": []
+   },
+   "wall_gap_face_depth": {
+    "ends": [
+     "11D",
+     "11E"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     0.0
+    ],
+    "gap_m": 0.9,
+    "through": []
+   }
+  },
+  "D-GF-05": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face0": [
+    {
+     "handle": "19C",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.0
+    },
+    {
+     "handle": "19D",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.05
+    }
+   ],
+   "insert": "192",
+   "jambs_m": [
+    0.05,
+    0.05
+   ],
+   "levels_reachable_high": {
+    "+0.30": [
+     "405"
+    ]
+   },
+   "levels_reachable_low": {
+    "+0.15": [
+     "407",
+     "409"
+    ]
+   },
+   "wall_depth_m": 0.2,
+   "wall_gap_face0": {
+    "ends": [
+     "A3",
+     "A2"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     -0.0
+    ],
+    "gap_m": 1.0,
+    "through": []
+   },
+   "wall_gap_face_depth": {
+    "ends": [
+     "A5",
+     "A4"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     -0.0
+    ],
+    "gap_m": 1.0,
+    "through": []
+   }
+  },
+  "D-GF-09": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face0": [
+    {
+     "handle": "3FD",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_m": -0.0
+    },
+    {
+     "handle": "3FE",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.05
+    }
+   ],
+   "insert": "3FF",
+   "jambs_m": [
+    0.05,
+    0.05
+   ],
+   "levels_reachable_high": {
+    "+0.30": [
+     "4AC"
+    ]
+   },
+   "levels_reachable_low": {
+    "+0.15": [
+     "394",
+     "40B",
+     "4AE"
+    ]
+   },
+   "wall_depth_m": 0.2,
+   "wall_gap_face0": {
+    "ends": [
+     "2B9",
+     "2B8"
+    ],
+    "ends_vs_block_span_m": [
+     0.047,
+     0.053
+    ],
+    "gap_m": 0.9,
+    "through": []
+   },
+   "wall_gap_face_depth": {
+    "ends": [
+     "26F",
+     "26E"
+    ],
+    "ends_vs_block_span_m": [
+     0.047,
+     0.053
+    ],
+    "gap_m": 0.9,
+    "through": []
+   }
+  },
+  "D-GF-15": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face0": [
+    {
+     "handle": "8F",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_m": 0.05
+    }
+   ],
+   "insert": "2D8",
+   "jambs_m": [
+    0.05,
+    0.05
+   ],
+   "levels_reachable_high": {
+    "+0.15": [
+     "40B"
+    ]
+   },
+   "levels_reachable_low": {
+    "+-0.00": [
+     "A88",
+     "A89",
+     "A8A"
+    ]
+   },
+   "wall_depth_m": 0.2,
+   "wall_gap_face0": {
+    "gap_m": null,
+    "through": [
+     "8E"
+    ]
+   },
+   "wall_gap_face_depth": {
+    "ends": [
+     "B9",
+     "B8"
+    ],
+    "ends_vs_block_span_m": [
+     0.0,
+     0.0
+    ],
+    "gap_m": 1.0,
+    "through": []
+   }
+  }
+ },
+ "plan_level_figures": [
+  "+-0.00",
+  "+0.15",
+  "+0.30",
+  "+1.00",
+  "+4.30",
+  "+5.50",
+  "+9.70"
+ ],
+ "schema": "T592_DRAWN_V1",
+ "units": "m"
+}

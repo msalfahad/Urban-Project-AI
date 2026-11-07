@@ -1,0 +1,326 @@
+{
+ "before_after": {
+  "gate": {
+   "after": "1.0 lm / 0.150 m2",
+   "before": "0.900 lm / 0.135 m2 (edge basis)",
+   "cause": "gate re-read: wall gap 1.000 on the fence's inner face (the outer face line runs through), companion 0.900, low region +-0.00 (3 datum marks), high region +0.15"
+  },
+  "house_lm": {
+   "after": "3.8",
+   "before": "3.5 (visible edge, T-584)",
+   "cause": "the 4 x 2 frame jambs of 0.05 under which the stone runs (piece = wall gap)",
+   "delta": "0.3"
+  },
+  "house_riser_m2": {
+   "after": "0.570",
+   "before": "0.390 + D-GF-09 HELD 0 .. 0.270",
+   "cause": "riser x piece length (not the edge); D-GF-09 outside level +0.15 now read in its region (R-T592-1 (d))"
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "compare": {
+  "gap_house_lm": "-3.9",
+  "gap_with_gate_lm": "-2.9",
+  "his_door_steps_lm": "7.7",
+  "his_m2_column": "count x length in an area column (UNIT, T-584): never compared as m2",
+  "his_nr": "6",
+  "nr_ours_with_gate": 5,
+  "ours_gate_lm": "1.0",
+  "ours_house_lm": "3.8",
+  "ours_total_lm": "4.8",
+  "pct": null,
+  "unit": "lm",
+  "verdict": "UNRESOLVED (SCOPE): his 6 pieces carry no door id; matching by figure stays refused (R-T577-1). The basis question is closed on OUR side: one payable lm = the installed piece (wall gap)"
+ },
+ "detail_sheets": "none: no door / threshold detail or section in the DXF (24 distinct model-space texts) or the PDF set (T-360 sheet census: plans, elevations, sections A-A / B-B, fence sheet)",
+ "fix_rows": [
+  {
+   "id": "FR-T592-1",
+   "replaces": "FR-T584-2",
+   "status": "DRAWING-CONFIRMED quantities; material HELD",
+   "what": "on each owning threshold line (D-GF-01 L-b3933a51bd95e9bc542b, D-GF-03 L-74cd61b430eec9933d15, D-GF-05 L-c8b5c7f742b22388339e, D-GF-09 L-8111095f6db78f0e674b): step payable lm = the line's own strip width (1.000 / 0.900 / 1.000 / 0.900 = 3.800 lm, nr 4) + riser m2 beside (0.570 m2); visible nosing 3.500 lm as an attribute only; no second step line; material by the strip's specification (HELD)"
+  },
+  {
+   "id": "FR-T592-2",
+   "status": "DRAWING-CONFIRMED geometry; line and material HELD",
+   "what": "gate D-GF-15: NO_LINE today (T-325 UNBOUND). Strip evidence: wall gap 1.000 x fence depth 0.200 = 0.200 m2; step 1.000 lm, riser 0.150 m2, nosing 0.900 attribute; owner trade and material HELD (B13 boundary vs threshold family: Lead ruling)"
+  }
+ ],
+ "observations": [
+  {
+   "id": "OBS-T592-1",
+   "what": "T-325 strip depth 0.18 at D-GF-03 / D-GF-09 vs 0.200 between the drawn wall faces and the 0.200 frame depth (T-150 wall thickness basis): not this task's measure; named for the threshold m2 owner"
+  }
+ ],
+ "openings": {
+  "D-GF-01": {
+   "before_T584": {
+    "bound": null,
+    "lm": "0.9",
+    "m2": "0.135",
+    "riser_m": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "block": "D120",
+   "drawing_conflict": null,
+   "edge_vs_gap_residual_m": "0.00",
+   "frame_jambs_m": [
+    "0.05",
+    "0.05"
+   ],
+   "insert": "15E",
+   "inside_handles": [
+    "401"
+   ],
+   "inside_level": "+0.30",
+   "jambs_inside_gap_m": [
+    "0.05",
+    "0.05"
+   ],
+   "nosing_basis": "VISIBLE_EDGE_BETWEEN_JAMBS (attribute, not payable)",
+   "nosing_lm": "0.9",
+   "nosing_source": "front edge 172 (layer 5) = companion 173",
+   "nr": 1,
+   "opening": "D-GF-01",
+   "outside_region_levels": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "outside_status": "DRAWING-CONFIRMED",
+   "owning_line": "L-b3933a51bd95e9bc542b",
+   "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "riser_m2_bound": null,
+   "status": "DRAWING-CONFIRMED",
+   "t325_state": "MEASURED",
+   "t325_strip_width_m": "1.0",
+   "wall_depth_m": "0.2",
+   "wall_gap_source": "step face: wall-line ends 10A / 10C"
+  },
+  "D-GF-03": {
+   "before_T584": {
+    "bound": null,
+    "lm": "0.8",
+    "m2": "0.120",
+    "riser_m": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "block": "d220",
+   "drawing_conflict": null,
+   "edge_vs_gap_residual_m": "0.00",
+   "frame_jambs_m": [
+    "0.05",
+    "0.05"
+   ],
+   "insert": "1B5",
+   "inside_handles": [
+    "403"
+   ],
+   "inside_level": "+0.30",
+   "jambs_inside_gap_m": [
+    "0.05",
+    "0.05"
+   ],
+   "nosing_basis": "VISIBLE_EDGE_BETWEEN_JAMBS (attribute, not payable)",
+   "nosing_lm": "0.8",
+   "nosing_source": "front edge 1C6 (layer 5) = companion 1C7",
+   "nr": 1,
+   "opening": "D-GF-03",
+   "outside_region_levels": {
+    "+0.15": [
+     "394",
+     "4AE"
+    ]
+   },
+   "outside_status": "DRAWING-CONFIRMED",
+   "owning_line": "L-74cd61b430eec9933d15",
+   "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+   "payable_lm": "0.9",
+   "riser_m": "0.15",
+   "riser_m2": "0.135",
+   "riser_m2_bound": null,
+   "status": "DRAWING-CONFIRMED",
+   "t325_state": "MEASURED",
+   "t325_strip_width_m": "0.9",
+   "wall_depth_m": "0.2",
+   "wall_gap_source": "step face: wall-line ends 121 / 122"
+  },
+  "D-GF-05": {
+   "before_T584": {
+    "bound": null,
+    "lm": "0.9",
+    "m2": "0.135",
+    "riser_m": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "block": "D120",
+   "drawing_conflict": null,
+   "edge_vs_gap_residual_m": "0.00",
+   "frame_jambs_m": [
+    "0.05",
+    "0.05"
+   ],
+   "insert": "192",
+   "inside_handles": [
+    "405"
+   ],
+   "inside_level": "+0.30",
+   "jambs_inside_gap_m": [
+    "0.05",
+    "0.05"
+   ],
+   "nosing_basis": "VISIBLE_EDGE_BETWEEN_JAMBS (attribute, not payable)",
+   "nosing_lm": "0.9",
+   "nosing_source": "front edge 19C (layer 5) = companion 19D",
+   "nr": 1,
+   "opening": "D-GF-05",
+   "outside_region_levels": {
+    "+0.15": [
+     "407",
+     "409"
+    ]
+   },
+   "outside_status": "DRAWING-CONFIRMED",
+   "owning_line": "L-c8b5c7f742b22388339e",
+   "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "riser_m2_bound": null,
+   "status": "DRAWING-CONFIRMED",
+   "t325_state": "MEASURED",
+   "t325_strip_width_m": "1.0",
+   "wall_depth_m": "0.2",
+   "wall_gap_source": "step face: wall-line ends A3 / A2"
+  },
+  "D-GF-09": {
+   "before_T584": {
+    "bound": {
+     "m2": [
+      "0",
+      "0.270"
+     ],
+     "riser_m": [
+      "0",
+      "0.30"
+     ]
+    },
+    "lm": "0.9",
+    "m2": null,
+    "riser_m": null,
+    "status": "HELD"
+   },
+   "block": "D120",
+   "drawing_conflict": "door block span 1.0 drawn in a wall gap of 0.9 (block over the masonry 0.047 / 0.053): the stone fills the wall gap; the door size is the door schedule's question, not the stone's; edge vs gap - jambs residual -0.003 m named as drafting (within 0.010)",
+   "edge_vs_gap_residual_m": "-0.003",
+   "frame_jambs_m": [
+    "0.05",
+    "0.05"
+   ],
+   "insert": "3FF",
+   "inside_handles": [
+    "4AC"
+   ],
+   "inside_level": "+0.30",
+   "jambs_inside_gap_m": [
+    "0.003",
+    "0"
+   ],
+   "nosing_basis": "VISIBLE_EDGE_BETWEEN_JAMBS (attribute, not payable)",
+   "nosing_lm": "0.9",
+   "nosing_source": "front edge 3FD (layer 5) = companion 3FE",
+   "nr": 1,
+   "opening": "D-GF-09",
+   "outside_region_levels": {
+    "+0.15": [
+     "394",
+     "40B",
+     "4AE"
+    ]
+   },
+   "outside_status": "DRAWING-CONFIRMED",
+   "owning_line": "L-8111095f6db78f0e674b",
+   "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+   "payable_lm": "0.9",
+   "riser_m": "0.15",
+   "riser_m2": "0.135",
+   "riser_m2_bound": null,
+   "status": "DRAWING-CONFIRMED",
+   "t325_state": "MEASURED",
+   "t325_strip_width_m": "0.9",
+   "wall_depth_m": "0.2",
+   "wall_gap_source": "step face: wall-line ends 2B9 / 2B8"
+  },
+  "D-GF-15": {
+   "before_T584": {
+    "bound": null,
+    "lm": "0.9",
+    "m2": "0.135",
+    "riser_m": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "block": "D120",
+   "drawing_conflict": null,
+   "edge_vs_gap_residual_m": "0.00",
+   "frame_jambs_m": [
+    "0.05",
+    "0.05"
+   ],
+   "insert": "2D8",
+   "inside_handles": [
+    "40B"
+   ],
+   "inside_level": "+0.15",
+   "jambs_inside_gap_m": [
+    "0.05",
+    "0.05"
+   ],
+   "nosing_basis": "VISIBLE_EDGE_BETWEEN_JAMBS (attribute, not payable)",
+   "nosing_lm": "0.9",
+   "nosing_source": "face line runs through the opening; visible edge from the companion 8F (layer 2, 0.050 uphill; equal to the front edge at every house door)",
+   "nr": 1,
+   "opening": "D-GF-15",
+   "outside_region_levels": {
+    "+-0.00": [
+     "A88",
+     "A89",
+     "A8A"
+    ]
+   },
+   "outside_status": "DRAWING-CONFIRMED",
+   "owning_line": null,
+   "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "riser_m2_bound": null,
+   "status": "DRAWING-CONFIRMED",
+   "t325_state": "UNRESOLVED",
+   "t325_strip_width_m": null,
+   "wall_depth_m": "0.2",
+   "wall_gap_source": "step face carries a line through the opening (8E); gap from the other face: wall-line ends B9 / B8"
+  }
+ },
+ "pins": {
+  "research/agents_t325/SILL_THRESHOLD_LEDGER_T325.csv": "ef6f2cb0c0d7619e",
+  "research/agents_t584/out/T584_STEPS.json": "242b8e0d3fdbf271",
+  "research/agents_t592/T592_DRAWN.json": "7589369898adf162"
+ },
+ "released": "nothing: research, unwired",
+ "rule": "R-T592-1 (t592_rules.py)",
+ "schema": "T592_DOOR_STEPS_V1",
+ "sign": "ours - his",
+ "totals": {
+  "gate_nosing_lm_attribute": "0.9",
+  "gate_payable_lm": "1.0",
+  "gate_riser_m2": "0.150",
+  "house_nosing_lm_attribute": "3.5",
+  "house_nr": 4,
+  "house_payable_lm": "3.8",
+  "house_riser_m2": "0.570"
+ }
+}
