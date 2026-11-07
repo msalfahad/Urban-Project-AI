@@ -62,6 +62,12 @@ is NOT supported on the candidate; the net effect is an omission. With the deepe
 - FR-T610-4 1F CB12 x B6: 0.0125 m2 (CB12 0.25 wide runs 0.05 past the 0.20 column; B6 frames to the column face
   across it) billed by B6 at 0.50, CB12 0.75: UNDER -0.003125 (CB12 +0.009375, B6 -0.00625).
 
+### Sensitivity (oblique-end cap)
+
+With no oblique end (cap 0) FR-T610-1, -2 and -4 stand unchanged (each block lies where both faces of both beams are
+drawn); FR-T610-3 (0.000692 m3) exists only once a face may run on past its partner (cap 1 or 2 x width, same value):
+it is the one result that rests on the end-edge reading.
+
 ### Named open items
 
 - F-T610-1 (register vs rule scope): ELEMENT_REGISTER 'BEAM BAND OVERLAP' names the owner "by UP-CONC-JOINT-001

@@ -33,6 +33,12 @@ Candidate ARCH_TAKEOFF_V3.0.57 (= V3.0.58 for STR.CONC.BEAM); Drive 'Alsenan cha
 
 0 pair(s): none (route G junction squares are deducted once; ledger runs stop at other members' plans)
 
+## Sensitivity: oblique drawn end cap (a face running on past its partner)
+
+- base: cap 1 x width (the census above)
+- cap 0 x width: {'per_storey_engine_minus_physical_m3': {'GF': -0.006326, '1F': -0.003125, '2F': None}, 'fix_rows': ['GF B1 x B27 -0.005957', 'GF B27 x CB8 -0.000369', '1F CB12 x B6 -0.003125'], 'billed_twice_outside': 0}
+- cap 2 x width: {'per_storey_engine_minus_physical_m3': {'GF': -0.005634, '1F': -0.003125, '2F': 0.0}, 'fix_rows': ['GF B1 x B27 -0.005957', 'GF B27 x CB8 -0.000369', 'GF B27 x CB8 0.000692', '1F CB12 x B6 -0.003125'], 'billed_twice_outside': 0}
+
 ## Ledger plan checks (HL lines)
 
 - GF B24 L-007ee1494e960a6985a7: ledger 1.426197 vs plan model 1.415625 (residual 0.010572) MODEL_RESIDUAL

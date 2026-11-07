@@ -44,6 +44,7 @@ JSON_OUT = OUT / "T610_BEAM_OVERLAP_CENSUS.json"
 MD_OUT = OUT / "T610_BEAM_OVERLAP_CENSUS.md"
 DXF_SHA = "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
 SHEETS = {"GF": "SH06", "1F": "SH04", "2F": "SH02"}
+CAP_FACTOR = 1.0                     # oblique drawn end: a face may run on by at most this x the band width
 LEDGER_TOL_M3 = 0.01                 # a ledger plan model within this of the ledger value is MODEL_MATCHES
 
 
@@ -94,7 +95,7 @@ def _face_quad(b, segs):
     # where both faces are drawn the band is certain; past that, a face that runs on by no more than one band width
     # is the oblique drawn end (one face stops at a column / member face, the other at its corner); a face that runs
     # on further is a longer line (slab edge, a face shared with the next member) and the band ends with its partner
-    cap = abs(hi - lo) + 1.0
+    cap = CAP_FACTOR * abs(hi - lo) + 1.0
     t0, t1 = max(a0, b0), min(a1, b1)
     a0, b0 = [x if t0 - x <= cap else t0 for x in (a0, b0)]
     a1, b1 = [x if x - t1 <= cap else t1 for x in (a1, b1)]
@@ -357,11 +358,24 @@ def build(dxf):
     sha = hashlib.sha256(Path(dxf).read_bytes()).hexdigest()
     assert sha == DXF_SHA, sha
     G = route_g(dxf)["generic"]
-    zones, checks, per, twice = census(G, load_lines(), load_ledger())
+    global CAP_FACTOR
+    lines, ledger = load_lines(), load_ledger()
+    sens = {}
+    for cf in (0.0, 2.0):
+        CAP_FACTOR = cf
+        zs, _, pr, tw = census(G, lines, ledger)
+        sens[f"cap {cf:g} x width"] = {
+            "per_storey_engine_minus_physical_m3": {st: p.get("engine_minus_physical_m3") for st, p in pr.items()},
+            "fix_rows": [f"{f['storey']} {f['pair'].split(' (')[0]} x {f['pair'].split(' x ')[1].split(' (')[0]} "
+                         f"{f['engine_minus_physical_m3']}" for f in fix_rows(zs)],
+            "billed_twice_outside": len(tw)}
+    CAP_FACTOR = 1.0
+    zones, checks, per, twice = census(G, lines, ledger)
     out = {"schema": "T610_BEAM_OVERLAP_CENSUS_V1", "rule": R.RULE_ID, "candidate": "ARCH_TAKEOFF_V3.0.57 (= V3.0.58 "
            "for STR.CONC.BEAM)", "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179..)",
            "per_storey": per, "ledger_plan_checks": checks, "billed_twice_outside_drawn_zones": twice, "zones": zones, "fix_rows": fix_rows(zones),
            "F_C_P03_2": fcp032(zones),
+           "sensitivity_oblique_end_cap": {"base": "cap 1 x width (the census above)", **sens},
            "note": "areas m2, volumes m3, depths m (schedule, full depth to slab top as the candidate bills); no "
                    "coordinate. engine = the candidate line's billed plan in the zone x its depth; physical = zone x "
                    "deeper depth (R-T610-1 (b)); HELD = a member line not valued (depth not released)."}
@@ -399,6 +413,9 @@ def render_md(d):
                        for x in d["billed_twice_outside_drawn_zones"]) or "none (route G junction squares are "
                                                                             "deducted once; ledger runs stop at "
                                                                             "other members' plans)")]
+    L += ["", "## Sensitivity: oblique drawn end cap (a face running on past its partner)", ""]
+    for k, v in d["sensitivity_oblique_end_cap"].items():
+        L.append(f"- {k}: {v}")
     L += ["", "## Ledger plan checks (HL lines)", ""]
     for c in d["ledger_plan_checks"]:
         L.append(f"- {c['storey']} {c['mark']} {c['line_id']}: ledger {c['value_m3']} vs plan model "

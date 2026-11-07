@@ -459,6 +459,36 @@
  },
  "rule": "R-T610-1",
  "schema": "T610_BEAM_OVERLAP_CENSUS_V1",
+ "sensitivity_oblique_end_cap": {
+  "base": "cap 1 x width (the census above)",
+  "cap 0 x width": {
+   "billed_twice_outside": 0,
+   "fix_rows": [
+    "GF B1 x B27 -0.005957",
+    "GF B27 x CB8 -0.000369",
+    "1F CB12 x B6 -0.003125"
+   ],
+   "per_storey_engine_minus_physical_m3": {
+    "1F": -0.003125,
+    "2F": null,
+    "GF": -0.006326
+   }
+  },
+  "cap 2 x width": {
+   "billed_twice_outside": 0,
+   "fix_rows": [
+    "GF B1 x B27 -0.005957",
+    "GF B27 x CB8 -0.000369",
+    "GF B27 x CB8 0.000692",
+    "1F CB12 x B6 -0.003125"
+   ],
+   "per_storey_engine_minus_physical_m3": {
+    "1F": -0.003125,
+    "2F": 0.0,
+    "GF": -0.005634
+   }
+  }
+ },
  "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179..)",
  "zones": [
   {
