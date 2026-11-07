@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T05:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-585 READY (W2 058fa409), T-587 READY (W3 5c588c6d), T-581 r2 READY (W1 0c508c59) | self-check pending
 - 2026-11-07T05:25Z | Worker 1 | SUCCESS | T-581 r2 READY (agents/task-T-581 @ 0c508c59) | Lintel width basis: 25 frame-block doors DRAWING-CONFIRMED on masonry wall ends; D-GF-09 (D120 3FF, 1.00 frame drawn over 0.90 wall ends) now UNRESOLVED designer item, lintel 1.20..1.50 HELD. T-571 restated 60 nr, 91.5..91.8 lm (+0.3 lm high end); T-571 AT_MOST 91.5 is not an upper bound. R-T581-1 1.1.0 + adverse test; ENGINE_RIGHT withdrawn. No released quantity changed, no owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T05:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T05:13Z | Worker 3 | SUCCESS | T-587 READY @ 5c588c6d | Statement V7 = V6 byte-equal + T-576/578/583/584: cols GF -1.17375 m3 (count ER +1.03125 V), 1F -0.555 (head RD), V5 HEIGHT_OPEN -> RD; rails 18.95 vs 54.869 lm; steps 109.2 vs 67.85 lm; E1 11.20 lm -> ENGINE_WRONG (V); T-577 ER labelled worker-proposed; T-583 >= 0.767783 t high open; nothing released | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: none
