@@ -1,5 +1,6 @@
 {
  "rule": "R-T581-1",
+ "rule_version": "1.1.0",
  "t571_pins": {
   "ledger_sha16": "ad9bceee3bfdbc12",
   "census_sha16": "d79e6aa5d23edc0e"
@@ -13,6 +14,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": {
     "len_mm": 900.0,
     "tag": "172"
@@ -52,6 +55,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": {
     "len_mm": 900.0,
     "tag": "19C"
@@ -91,6 +96,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -127,6 +134,8 @@
    "overall_mm": 900.0,
    "frame_clear_mm": 800.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 900.0,
    "frame_line": {
     "len_mm": 800.0,
     "tag": "1C6"
@@ -166,6 +175,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -202,6 +213,8 @@
    "overall_mm": 2000.0,
    "frame_clear_mm": 1900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 2000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -238,6 +251,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -274,6 +289,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": {
     "len_mm": 1700.0,
     "tag": "8E"
@@ -307,6 +324,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -343,6 +362,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -379,6 +400,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -415,6 +438,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -451,6 +476,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -487,6 +514,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": {
     "len_mm": 900.0,
     "tag": "3FD"
@@ -512,11 +541,17 @@
       ]
      }
     },
-    "gap_mm": 900.0,
-    "state": "DRAWING-CONFIRMED",
-    "why": ""
+    "gap_mm": null,
+    "drawn_gap_mm": 900.0,
+    "state": "UNRESOLVED",
+    "conflict": "DRAWING CONFLICT (frame drawn over masonry)",
+    "bound_mm": [
+     900.0,
+     1000.0
+    ],
+    "why": "wall ends inside the block footprint (face_a left end +46.9 mm; face_a right end -53.1 mm; face_b left end +46.9 mm; face_b right end -53.1 mm): the 1000.0 mm frame is drawn over the masonry; masonry 900.0 mm vs frame 1000.0 mm is a designer item (R-T581-1 (2) 1.1.0)"
    },
-   "ends_sit": "AT_FRAME_LINE"
+   "ends_sit": "INSIDE_FOOTPRINT"
   },
   {
    "block": "D315",
@@ -526,6 +561,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -562,6 +599,8 @@
    "overall_mm": 900.0,
    "frame_clear_mm": 800.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 900.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -598,6 +637,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -634,6 +675,8 @@
    "overall_mm": 900.0,
    "frame_clear_mm": 800.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 900.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -670,6 +713,8 @@
    "overall_mm": 900.0,
    "frame_clear_mm": 800.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 900.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -706,6 +751,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -742,6 +789,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -778,6 +827,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -814,6 +865,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -850,6 +903,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -886,6 +941,8 @@
    "overall_mm": 1000.0,
    "frame_clear_mm": 900.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 1000.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -922,6 +979,8 @@
    "overall_mm": 800.0,
    "frame_clear_mm": 700.0,
    "wall_t_mm": 150.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 800.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -958,6 +1017,8 @@
    "overall_mm": 900.0,
    "frame_clear_mm": 800.0,
    "wall_t_mm": 200.0,
+   "frame_x0_mm": 0.0,
+   "frame_x1_mm": 900.0,
    "frame_line": null,
    "wall_ends": {
     "faces": {
@@ -996,6 +1057,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": 0.9,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1003,6 +1067,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1014,6 +1079,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1021,6 +1089,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "closure (jamb hits)",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1032,6 +1101,9 @@
    "frame_clear_m": 0.8,
    "frame_line_m": 0.8,
    "face_a_gap_m": 0.9,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.9,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.9,
@@ -1039,6 +1111,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1050,6 +1123,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1057,6 +1133,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1068,6 +1145,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": 0.9,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1075,6 +1155,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1086,6 +1167,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1093,6 +1177,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1104,6 +1189,9 @@
    "frame_clear_m": 1.9,
    "frame_line_m": null,
    "face_a_gap_m": 2.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 2.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 2.0,
@@ -1111,6 +1199,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "printed",
    "lintel_masonry": 2.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 2.5,
    "lintel_overall": 2.5
   },
@@ -1122,6 +1211,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1129,6 +1221,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1140,13 +1233,23 @@
    "frame_clear_m": 0.9,
    "frame_line_m": 0.9,
    "face_a_gap_m": 0.9,
+   "state": "UNRESOLVED",
+   "why": "wall ends inside the block footprint (face_a left end +46.9 mm; face_a right end -53.1 mm; face_b left end +46.9 mm; face_b right end -53.1 mm): the 1000.0 mm frame is drawn over the masonry; masonry 900.0 mm vs frame 1000.0 mm is a designer item (R-T581-1 (2) 1.1.0)",
+   "bound_m": [
+    0.9,
+    1.0
+   ],
    "face_b_gap_m": 0.9,
-   "wall_ends_sit": "AT_FRAME_LINE",
-   "masonry_m": 0.9,
+   "wall_ends_sit": "INSIDE_FOOTPRINT",
+   "masonry_m": null,
    "census_w_m": 0.9,
-   "census_basis_used": "MASONRY (= wall-end gap)",
+   "census_basis_used": "UNRESOLVED (DRAWING CONFLICT (frame drawn over masonry))",
    "census_basis_text": "jamb to jamb",
-   "lintel_masonry": 1.2,
+   "lintel_masonry": null,
+   "lintel_bound": [
+    1.2,
+    1.5
+   ],
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1158,6 +1261,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.797,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.797,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.797,
@@ -1165,6 +1271,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "closure (jamb hits)",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1176,6 +1283,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1183,6 +1293,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1194,6 +1305,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1201,6 +1315,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1212,6 +1327,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1219,6 +1337,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1230,6 +1349,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1237,6 +1359,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1248,6 +1371,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1255,6 +1381,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1266,6 +1393,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1273,6 +1403,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "closure (jamb hits)",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1284,6 +1415,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1291,6 +1425,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "closure (jamb hits)",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1302,6 +1437,9 @@
    "frame_clear_m": 0.8,
    "frame_line_m": null,
    "face_a_gap_m": 0.9,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.9,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.9,
@@ -1309,6 +1447,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1320,6 +1459,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1327,6 +1469,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1338,6 +1481,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1345,6 +1491,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1356,6 +1503,9 @@
    "frame_clear_m": 0.8,
    "frame_line_m": null,
    "face_a_gap_m": 0.9,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.9,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.9,
@@ -1363,6 +1513,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1374,6 +1525,9 @@
    "frame_clear_m": 0.8,
    "frame_line_m": null,
    "face_a_gap_m": 0.9,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.9,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.9,
@@ -1381,6 +1535,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1392,6 +1547,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1399,6 +1557,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1410,6 +1569,9 @@
    "frame_clear_m": 0.9,
    "frame_line_m": null,
    "face_a_gap_m": 1.0,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 1.0,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 1.0,
@@ -1417,6 +1579,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.5,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.5
   },
@@ -1428,6 +1591,9 @@
    "frame_clear_m": 0.8,
    "frame_line_m": null,
    "face_a_gap_m": 0.9,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.9,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.9,
@@ -1435,6 +1601,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   },
@@ -1446,6 +1613,9 @@
    "frame_clear_m": 0.7,
    "frame_line_m": null,
    "face_a_gap_m": 0.8,
+   "state": "DRAWING-CONFIRMED",
+   "why": "",
+   "bound_m": null,
    "face_b_gap_m": 0.8,
    "wall_ends_sit": "AT_BLOCK_EDGES",
    "masonry_m": 0.8,
@@ -1453,6 +1623,7 @@
    "census_basis_used": "MASONRY (= wall-end gap)",
    "census_basis_text": "jamb to jamb",
    "lintel_masonry": 1.2,
+   "lintel_bound": null,
    "lintel_frame_clear": 1.2,
    "lintel_overall": 1.2
   }
@@ -1565,6 +1736,151 @@
   "after": {
    "at_most": {
     "1.2": {
+     "GF": 12,
+     "1F": 14,
+     "2F": 3,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 9,
+     "1F": 6,
+     "2F": 5,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 5,
+     "1F": 4,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "established": {
+    "1.2": {
+     "GF": 3,
+     "1F": 5,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 2,
+     "1F": 2,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
+   },
+   "flagged": [],
+   "no_width": [
+    "D-GF-09"
+   ],
+   "no_lintel": [
+    "D-GF-15",
+    "P-GF-05",
+    "SX-01",
+    "SX-03",
+    "U-01",
+    "W02",
+    "W03",
+    "W17"
+   ],
+   "total_at_most_nr": 59,
+   "total_established_nr": 16,
+   "lm_beside_at_most": {
+    "1.2": 34.8,
+    "1.5": 30.0,
+    "2.5": 22.5,
+    "3.0": 3.0,
+    "4.0": 0.0
+   }
+  },
+  "diff_nr": {
+   "1.2": {
+    "GF": -1,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "1.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "2.5": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0,
+    "UNSPLIT": 0
+   }
+  },
+  "diff_lm": -1.2,
+  "changes": [
+   {
+    "id": "D-GF-09",
+    "storey": "GF",
+    "w_old": 0.9,
+    "w_new": null,
+    "piece_old": 1.2,
+    "piece_new": null,
+    "state": "UNRESOLVED"
+   }
+  ],
+  "held_bound": {
+   "D-GF-09": {
+    "bound_m": [
+     0.9,
+     1.0
+    ],
+    "lintel_bound_m": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  "table_low": {
+   "at_most": {
+    "1.2": {
      "GF": 13,
      "1F": 14,
      "2F": 3,
@@ -1649,40 +1965,97 @@
     "4.0": 0.0
    }
   },
-  "diff_nr": {
-   "1.2": {
-    "GF": 0,
-    "1F": 0,
-    "2F": 0,
-    "UNSPLIT": 0
+  "table_high": {
+   "at_most": {
+    "1.2": {
+     "GF": 12,
+     "1F": 14,
+     "2F": 3,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 10,
+     "1F": 6,
+     "2F": 5,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 5,
+     "1F": 4,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
    },
-   "1.5": {
-    "GF": 0,
-    "1F": 0,
-    "2F": 0,
-    "UNSPLIT": 0
+   "established": {
+    "1.2": {
+     "GF": 3,
+     "1F": 5,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "1.5": {
+     "GF": 2,
+     "1F": 2,
+     "2F": 1,
+     "UNSPLIT": 0
+    },
+    "2.5": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "3.0": {
+     "GF": 0,
+     "1F": 1,
+     "2F": 0,
+     "UNSPLIT": 0
+    },
+    "4.0": {
+     "GF": 0,
+     "1F": 0,
+     "2F": 0,
+     "UNSPLIT": 0
+    }
    },
-   "2.5": {
-    "GF": 0,
-    "1F": 0,
-    "2F": 0,
-    "UNSPLIT": 0
-   },
-   "3.0": {
-    "GF": 0,
-    "1F": 0,
-    "2F": 0,
-    "UNSPLIT": 0
-   },
-   "4.0": {
-    "GF": 0,
-    "1F": 0,
-    "2F": 0,
-    "UNSPLIT": 0
+   "flagged": [],
+   "no_width": [],
+   "no_lintel": [
+    "D-GF-15",
+    "P-GF-05",
+    "SX-01",
+    "SX-03",
+    "U-01",
+    "W02",
+    "W03",
+    "W17"
+   ],
+   "total_at_most_nr": 60,
+   "total_established_nr": 16,
+   "lm_beside_at_most": {
+    "1.2": 34.8,
+    "1.5": 31.5,
+    "2.5": 22.5,
+    "3.0": 3.0,
+    "4.0": 0.0
    }
   },
-  "diff_lm": 0.0,
-  "changes": []
+  "lm_low": 91.5,
+  "lm_high": 91.8,
+  "census_at_most_lm": 91.5,
+  "census_at_most_is_upper_bound": false
  },
  "beside_frame_clear_refused": {
   "diff_nr": {

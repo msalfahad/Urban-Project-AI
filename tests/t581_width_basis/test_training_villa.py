@@ -28,25 +28,37 @@ def test_every_frame_block_door_listed_once_with_both_widths(res):
 
 
 def test_census_used_one_basis_masonry(res):
-    assert {o["census_basis_used"] for o in res["openings"]} == {"MASONRY (= wall-end gap)"}
+    used = {o["id"]: o["census_basis_used"] for o in res["openings"]}
+    assert used.pop("D-GF-09") == "UNRESOLVED (" + W.CONFLICT + ")"
+    assert len(used) == 25 and set(used.values()) == {"MASONRY (= wall-end gap)"}
 
 
-def test_d_gf_09_wall_ends_are_090_not_the_d120_block(res):
+def test_d_gf_09_is_a_drawing_conflict_held_with_a_bound(res):
+    # insert 3FF: wall ends 46.9 / 946.9 mm on both faces inside the D120 footprint 0 / 1000: frame drawn over masonry
     o = next(o for o in res["openings"] if o["id"] == "D-GF-09")
-    assert o["block"] == "D120" and o["overall_m"] == 1.0
-    assert o["masonry_m"] == 0.9 and o["lintel_masonry"] == 1.2 and o["lintel_overall"] == 1.5
-    assert o["wall_ends_sit"] == "AT_FRAME_LINE"
+    assert o["block"] == "D120" and o["overall_m"] == 1.0 and o["face_a_gap_m"] == o["face_b_gap_m"] == 0.9
+    assert o["state"] == W.UNRESOLVED and o["wall_ends_sit"] == "INSIDE_FOOTPRINT"
+    assert o["masonry_m"] is None and o["lintel_masonry"] is None
+    assert o["bound_m"] == [0.9, 1.0] and o["lintel_bound"] == [1.2, 1.5]
     others = [x for x in res["openings"] if x["block"] == "D120" and x["id"] != "D-GF-09"]
     assert len(others) == 4 and all(x["wall_ends_sit"] == "AT_BLOCK_EDGES" and x["masonry_m"] == 1.0 for x in others)
+    assert [x["id"] for x in res["openings"] if x["state"] != W.CONFIRMED] == ["D-GF-09"]
 
 
-def test_t571_table_unchanged_on_the_masonry_basis(res):
+def test_t571_table_restated_with_d_gf_09_held(res):
     r = res["restated_owner_0.15"]
-    assert r["changes"] == [] and r["diff_lm"] == 0
-    assert all(v == 0 for row in r["diff_nr"].values() for v in row.values())
+    assert [c["id"] for c in r["changes"]] == ["D-GF-09"]
     a = r["after"]
-    assert a["total_at_most_nr"] == 60 and sum(a["lm_beside_at_most"].values()) == pytest.approx(91.5)
-    assert a["at_most"][1.2]["GF"] == 13 and a["at_most"][1.5]["GF"] == 9
+    assert a["no_width"] == ["D-GF-09"] and a["total_at_most_nr"] == 59
+    assert a["at_most"][1.2]["GF"] == 12 and a["at_most"][1.5]["GF"] == 9
+    lo, hi = r["table_low"], r["table_high"]
+    assert lo["total_at_most_nr"] == hi["total_at_most_nr"] == 60
+    assert (lo["at_most"][1.2]["GF"], lo["at_most"][1.5]["GF"]) == (13, 9)
+    assert (hi["at_most"][1.2]["GF"], hi["at_most"][1.5]["GF"]) == (12, 10)
+    assert lo["total_established_nr"] == hi["total_established_nr"] == 16
+    assert r["lm_low"] == pytest.approx(91.5) and r["lm_high"] == pytest.approx(91.8)
+    # T-571's AT_MOST 91.5 lm is not an upper bound once D-GF-09 may need 1.50: the upper bound is 91.8 lm
+    assert r["census_at_most_lm"] == pytest.approx(91.5) and r["census_at_most_is_upper_bound"] is False
 
 
 def test_refused_bases_beside(res):

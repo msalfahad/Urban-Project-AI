@@ -42,16 +42,35 @@ def test_task_fixture_masonry_basis_gives_the_150_piece():
     assert W.classify(FR, e) == "AT_BLOCK_EDGES"
 
 
-def test_shifted_symbol_masonry_is_the_wall_ends_not_the_block():
-    # block drawn 47 mm into the masonry: wall ends at 47 / 947 on both faces -> 0.90 (-> 1.20), never the 1.00 block
+def test_adverse_frame_drawn_over_masonry_is_unresolved_with_a_bound():
+    # R-T581-1 (2) 1.1.0: the 1.00 frame drawn 47 mm into the masonry on the left and 53 mm on the right (wall ends
+    # 47 / 947 on both faces): a 1.00 frame cannot sit in a 0.90 gap. Neither 0.90 (wall ends) nor 1.00 (symbol) is
+    # chosen: UNRESOLVED, width held (never 0), bound 0.90 .. 1.00 -> lintel 1.20 .. 1.50 (0.90 + 0.30 = 1.20 -> 1.20;
+    # 1.00 + 0.30 = 1.30 -> 1.50)
     e = W.wall_ends(faces(47, 947), FR)
-    assert e["gap_mm"] == 900 and W.classify(FR, e) == "AT_FRAME_LINE"
-    assert L.piece(e["gap_mm"] / 1000)["piece_m"] == 1.2
+    assert e["state"] == W.UNRESOLVED and e["gap_mm"] is None and e["conflict"] == W.CONFLICT
+    assert e["drawn_gap_mm"] == 900 and e["bound_mm"] == [900, 1000]
+    assert W.classify(FR, e) == "INSIDE_FOOTPRINT"
+    assert W.masonry_width({"id": "Z", "basis": W.MASONRY, "gap_mm": e["gap_mm"], "state": e["state"]}) is None
+    assert [L.piece(x / 1000)["piece_m"] for x in e["bound_mm"]] == [1.2, 1.5]
 
 
-def test_shifted_beyond_frame_is_shifted():
+def test_one_end_inside_the_footprint_is_unresolved_too():
+    # the block overlaps the masonry by 120 mm on the right only: gap 1.00 = frame, but the frame is not in the gap
     e = W.wall_ends(faces(-120, 880), FR)
-    assert e["gap_mm"] == 1000 and W.classify(FR, e) == "SHIFTED"
+    assert e["state"] == W.UNRESOLVED and e["drawn_gap_mm"] == 1000 and W.classify(FR, e) == "INSIDE_FOOTPRINT"
+
+
+def test_wall_end_within_tolerance_of_the_edge_is_not_a_conflict():
+    # 3 mm inside the edge (draughting tolerance 5 mm): DRAWING-CONFIRMED 0.997 (cf. a 0.797 D315 read)
+    e = W.wall_ends(faces(3, 1000), FR)
+    assert e["state"] == W.CONFIRMED and e["gap_mm"] == 997 and W.classify(FR, e) == "AT_BLOCK_EDGES"
+
+
+def test_wall_ends_outside_the_block_are_the_opening():
+    # the masonry gap 1.10 is wider than the 1.00 symbol (the frame fits inside it): the wall ends are the opening
+    e = W.wall_ends(faces(-50, 1050), FR)
+    assert e["state"] == W.CONFIRMED and e["gap_mm"] == 1100 and W.classify(FR, e) == "SHIFTED"
 
 
 def test_faces_disagree_unresolved_never_block_width():
@@ -112,6 +131,29 @@ def test_restate_attributes_each_change_to_an_opening():
     assert r["after"]["at_most"][3.0]["1F"] == 1
 
 
+def test_restate_holds_a_conflict_by_name_with_low_and_high_tables():
+    # Z-D1 frame drawn over masonry: bound 0.90 .. 1.00 -> 1.20 .. 1.50. Held table: Z-D1 named in no_width;
+    # low table = old (Z-D1 1.20), high table Z-D1 1.50: GF 1.20 -1, 1.50 +1, +0.30 lm; the census AT_MOST
+    # (0.90 -> 1.20, 0.80 -> 1.20, 1.00 -> 1.50, 2.40 -> 3.00 = 6.90 lm) is no longer an upper bound (7.20 > 6.90)
+    meas = {"Z-D1": {"basis": W.MASONRY, "gap_mm": None, "state": W.UNRESOLVED, "bound_mm": [900.0, 1000.0]},
+            "Z-D2": {"basis": W.MASONRY, "gap_mm": 800.0, "state": W.CONFIRMED}}
+    r = W.restate(_census(), meas, ["GF", "1F"])
+    assert r["after"]["no_width"] == ["Z-D1"] and r["after"]["total_at_most_nr"] == 3
+    assert r["held_bound"]["Z-D1"] == {"bound_m": [0.9, 1.0], "lintel_bound_m": [1.2, 1.5]}
+    assert r["table_low"]["total_at_most_nr"] == r["table_high"]["total_at_most_nr"] == 4
+    assert r["table_low"]["at_most"][1.2]["GF"] == 2 and r["table_high"]["at_most"][1.2]["GF"] == 1
+    assert r["table_high"]["at_most"][1.5]["GF"] == 1
+    assert r["census_at_most_lm"] == pytest.approx(6.9)
+    assert r["lm_low"] == pytest.approx(6.9) and r["lm_high"] == pytest.approx(7.2)
+    assert r["census_at_most_is_upper_bound"] is False
+
+
+def test_restate_bound_in_metres_refused():
+    meas = {"Z-D1": {"basis": W.MASONRY, "gap_mm": None, "state": W.UNRESOLVED, "bound_mm": [0.9, 1.0]}}
+    with pytest.raises(W.BasisError, match="units"):
+        W.restate(_census(), meas, ["GF", "1F"])
+
+
 def test_restate_refuses_mixed_measurements():
     meas = {"Z-D1": {"basis": W.MASONRY, "gap_mm": 1000.0, "state": W.CONFIRMED},
             "Z-D2": {"basis": "FRAME_CLEAR", "gap_mm": 700.0, "state": W.CONFIRMED}}
@@ -143,7 +185,15 @@ def test_dxf_reader_rotation_and_mirror(tmp_path, mirrored, rot):
     assert len(out) == 1
     o = out[0]
     assert o["overall_mm"] == 1000 and o["frame_clear_mm"] == 900 and o["mirrored"] == mirrored
-    assert o["wall_ends"]["gap_mm"] == pytest.approx(900.0, abs=0.2)
+    assert o["frame_x0_mm"] == 0 and o["frame_x1_mm"] == 1000
+    assert o["wall_ends"]["drawn_gap_mm"] == pytest.approx(900.0, abs=0.2)
+    assert o["wall_ends"]["state"] == W.UNRESOLVED and o["ends_sit"] == "INSIDE_FOOTPRINT"
+
+
+@pytest.mark.parametrize("mirrored,rot", [(False, 0.0), (True, 225.0)])
+def test_dxf_reader_ends_at_block_edges_confirmed(tmp_path, mirrored, rot):
+    o = W.measure_dxf(_dxf(tmp_path, mirrored=mirrored, rot=rot), "WALL")[0]
+    assert o["wall_ends"]["state"] == W.CONFIRMED and o["wall_ends"]["gap_mm"] == pytest.approx(1000.0, abs=0.2)
 
 
 def test_dxf_block_in_metres_refused(tmp_path):

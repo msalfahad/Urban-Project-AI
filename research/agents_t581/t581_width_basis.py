@@ -19,6 +19,11 @@ measured width), R-T571-1, ERS s.3 (a symbol is not the element)):
       refused, and a census mixing bases is refused;
   (2) the two faces agree within 5 mm -> the width (DRAWING-CONFIRMED); they disagree, or a face has no wall end within
       reach of the insert -> UNRESOLVED by name (never the block width, never a majority, never 0);
+      1.1.0 (T-581 r2, Verifier 2026-11-07T04:05Z): a wall end lying INSIDE the block footprint (more than 5 mm inside
+      the frame's outer edge: the frame is drawn over the masonry) is a DRAWING CONFLICT: a frame of the block's width
+      cannot sit in that gap, so either the masonry is the block width or the door is narrower than its symbol. Both are
+      admissible; the opening is UNRESOLVED (designer item), HELD by name with the bound [wall-end gap, block overall]
+      and the lintel bound that follows; neither end of the bound is chosen by this rule;
   (3) a printed dimension spanning the jambs governs the drawn gap (Q-32 A); none is used here unless supplied;
   (4) the block overall and frame-clear widths are listed BESIDE for every insert; they never become the width.
 Nothing here names a client, a sheet or a coordinate; DXF handles and block names only.
@@ -40,12 +45,14 @@ if str(T571) not in sys.path:
 import t571_lintel_count as L  # noqa: E402
 
 RULE_ID = "R-T581-1"
+RULE_VERSION = "1.1.0"
 FACE_TOL_MM = 5.0
 REACH_MM = 800.0          # a wall end is looked for at most this far outside the block footprint
 ACROSS_TOL_MM = 25.0      # a wall-face line lies on the block's face line (y = 0 or y = t) within this
 MASONRY = "MASONRY_WALL_ENDS"
 REFUSED_BASES = ("FRAME_CLEAR", "BLOCK_OVERALL", "LEAF_RADIUS")
 CONFIRMED, UNRESOLVED = "DRAWING-CONFIRMED", "UNRESOLVED"
+CONFLICT = "DRAWING CONFLICT (frame drawn over masonry)"
 
 
 class BasisError(ValueError):
@@ -108,12 +115,36 @@ def wall_ends(local_segments, frame):
     if abs(gaps[0] - gaps[1]) > FACE_TOL_MM:
         return {"faces": faces, "gap_mm": None, "state": UNRESOLVED,
                 "why": f"faces disagree ({gaps[0]} vs {gaps[1]} mm): which face the lintel spans is not established"}
-    return {"faces": faces, "gap_mm": round((gaps[0] + gaps[1]) / 2.0, 1), "state": CONFIRMED, "why": ""}
+    gap = round((gaps[0] + gaps[1]) / 2.0, 1)
+    inside = [f"{n} {side} end {round(v - edge, 1):+} mm" for n, f in faces.items()
+              for side, v, edge, sign in (("left", f["left"], x0, 1), ("right", f["right"], x1, -1))
+              if sign * (v - edge) > FACE_TOL_MM]
+    if inside:
+        ov = x1 - x0
+        return {"faces": faces, "gap_mm": None, "drawn_gap_mm": gap, "state": UNRESOLVED, "conflict": CONFLICT,
+                "bound_mm": [min(gap, ov), max(gap, ov)],
+                "why": f"wall ends inside the block footprint ({'; '.join(inside)}): the {ov} mm frame is drawn over "
+                       f"the masonry; masonry {gap} mm vs frame {ov} mm is a designer item (R-T581-1 (2) 1.1.0)"}
+    return {"faces": faces, "gap_mm": gap, "state": CONFIRMED, "why": ""}
+
+
+def rejudge(ends, frame):
+    """re-apply (2) to a stored wall_ends record from its face reads (left / right per face, block axes)."""
+    segs = []
+    for name, fy in (("face_a", frame["y0"]), ("face_b", frame["y0"] + frame["t_mm"])):
+        f = ends["faces"][name]
+        if f["left"] is None:
+            return dict(ends, state=UNRESOLVED, gap_mm=None)
+        segs += [((f["left"] - 500.0, fy), (f["left"], fy), (f.get("tags") or ["?", "?"])[0]),
+                 ((f["right"], fy), (f["right"] + 500.0, fy), (f.get("tags") or ["?", "?"])[-1])]
+    return wall_ends(segs, frame)
 
 
 def classify(frame, ends):
     """where the wall ends sit relative to the symbol: AT_BLOCK_EDGES (masonry = overall), AT_FRAME_LINE (masonry =
     frame clear), SHIFTED (neither: the block overlaps the masonry), or UNRESOLVED."""
+    if ends.get("conflict"):
+        return "INSIDE_FOOTPRINT"
     if ends["state"] != CONFIRMED:
         return UNRESOLVED
     fa = ends["faces"]["face_a"]
@@ -188,7 +219,8 @@ def measure_dxf(path, wall_layer, frame_line_layer=None, names=None):
                     break
         out.append({"block": n, "handle": ins.dxf.handle, "mirrored": ins.dxf.xscale < 0,
                     "rotation_deg": round(ins.dxf.rotation, 3), "overall_mm": fr["overall_mm"],
-                    "frame_clear_mm": fr["frame_clear_mm"], "wall_t_mm": fr["t_mm"], "frame_line": fl,
+                    "frame_clear_mm": fr["frame_clear_mm"], "wall_t_mm": fr["t_mm"], "frame_x0_mm": fr["x0"],
+                    "frame_x1_mm": fr["x1"], "frame_line": fl,
                     "wall_ends": ends, "ends_sit": classify(fr, ends)})
     return out
 
@@ -239,7 +271,44 @@ def restate(census, measured, storeys, bearing_m=None, bearing_source=None):
     diff = OrderedDict((Lg, OrderedDict((s, b["at_most"][Lg][s] - a["at_most"][Lg][s]) for s in storeys))
                        for Lg in L.STOCK)
     lm = round(sum(b["lm_beside_at_most"].values()) - sum(a["lm_beside_at_most"].values()), 6)
-    return {"before": L._strip(a), "after": L._strip(b), "diff_nr": diff, "diff_lm": lm, "changes": changes}
+    out = {"before": L._strip(a), "after": L._strip(b), "diff_nr": diff, "diff_lm": lm, "changes": changes}
+    out.update(bounds(census, measured, storeys, a, bearing_m, bearing_source))
+    return out
+
+
+def bounds(census, measured, storeys, before, bearing_m=None, bearing_source=None):
+    """the HELD openings that carry a drawing-conflict bound [lo, hi] mm: the table with every one at its low end and at
+    its high end (each held opening named), and whether the census's own AT_MOST lm is still an upper bound."""
+    held = OrderedDict((oid, m["bound_mm"]) for oid, m in measured.items()
+                       if m.get("state") == UNRESOLVED and m.get("bound_mm"))
+    if not held:
+        return {"held_bound": {}, "table_low": None, "table_high": None, "lm_low": None, "lm_high": None,
+                "census_at_most_lm": round(sum(before["lm_beside_at_most"].values()), 6),
+                "census_at_most_is_upper_bound": True}
+    ids = {r["id"] for r in census}
+    for oid, (lo, hi) in held.items():
+        if oid not in ids:
+            raise BasisError(f"{oid}: held opening is not in the census")
+        if not (300.0 <= lo <= hi <= 6000.0):
+            raise BasisError(f"{oid}: bound {lo} .. {hi} is not mm of a door opening (units refused)")
+    tabs = {}
+    for end, k in (("low", 0), ("high", 1)):
+        recs = [dict(r, key=None, width_m=round(held[r["id"]][k] / 1000.0, 3)) if r["id"] in held else dict(r, key=None)
+                for r in census]
+        for r in census:   # the non-held measured openings take their masonry width
+            m = measured.get(r["id"])
+            if m is not None and r["id"] not in held:
+                w = masonry_width(dict(m, id=r["id"]))
+                recs = [dict(x, width_m=w) if x["id"] == r["id"] else x for x in recs]
+        tabs[end] = L._strip(L.count_table(recs, storeys, bearing_m, bearing_source))
+    lm = {e: round(sum(t["lm_beside_at_most"].values()), 6) for e, t in tabs.items()}
+    hb = OrderedDict((oid, {"bound_m": [lo / 1000.0, hi / 1000.0],
+                            "lintel_bound_m": [L.piece(lo / 1000.0, bearing_m, bearing_source)["piece_m"],
+                                               L.piece(hi / 1000.0, bearing_m, bearing_source)["piece_m"]]})
+                     for oid, (lo, hi) in held.items())
+    cen = round(sum(before["lm_beside_at_most"].values()), 6)
+    return {"held_bound": hb, "table_low": tabs["low"], "table_high": tabs["high"], "lm_low": lm["low"],
+            "lm_high": lm["high"], "census_at_most_lm": cen, "census_at_most_is_upper_bound": lm["high"] <= cen + 1e-9}
 
 
 # ------------------------------------------------------------------------------------------- training villa
@@ -284,6 +353,13 @@ def build(dxf_path=None):
         inserts = measure_dxf(dxf_path, WALL_LAYER, FRAME_LINE_LAYER)
     else:
         inserts = json.loads(OUT.read_text(encoding="utf-8"))["inserts"]
+    for i in inserts:   # stored measurements are re-judged under R-T581-1 1.1.0 (frame edges kept in the record)
+        if "frame_x0_mm" not in i:
+            raise BasisError(f"{i['handle']}: stored insert lacks the frame edges; re-measure from the DXF")
+        fr = {"x0": i["frame_x0_mm"], "x1": i["frame_x1_mm"], "y0": 0.0, "t_mm": i["wall_t_mm"],
+              "overall_mm": i["overall_mm"], "frame_clear_mm": i["frame_clear_mm"]}
+        i["wall_ends"] = rejudge(i["wall_ends"], fr)
+        i["ends_sit"] = classify(fr, i["wall_ends"])
     by_h = {i["handle"]: i for i in inserts}
     missing = [h for h in INSERT_TO_OPENING if h not in by_h]
     if missing:
@@ -297,9 +373,13 @@ def build(dxf_path=None):
         i = by_h[h]
         e = i["wall_ends"]
         measured[oid] = {"basis": MASONRY, "gap_mm": e["gap_mm"], "state": e["state"]}
+        if e.get("bound_mm"):
+            measured[oid]["bound_mm"] = e["bound_mm"]
         w = masonry_width(dict(measured[oid], id=oid))
         c = cb[oid]
-        if w is None:
+        if w is None and e.get("conflict"):
+            used = "UNRESOLVED (" + e["conflict"] + ")"
+        elif w is None:
             used = "UNRESOLVED (masonry not read)"
         elif abs(c["census_w"] - w) <= 0.005:
             used = "MASONRY (= wall-end gap)"
@@ -313,15 +393,19 @@ def build(dxf_path=None):
                                  frame_clear_m=i["frame_clear_mm"] / 1000,
                                  frame_line_m=(i["frame_line"] or {}).get("len_mm", 0) / 1000 or None,
                                  face_a_gap_m=(e["faces"]["face_a"]["gap_mm"] or 0) / 1000 or None,
+                                 state=e["state"], why=e["why"],
+                                 bound_m=[x / 1000 for x in e["bound_mm"]] if e.get("bound_mm") else None,
                                  face_b_gap_m=(e["faces"]["face_b"]["gap_mm"] or 0) / 1000 or None,
                                  wall_ends_sit=i["ends_sit"], masonry_m=w, census_w_m=c["census_w"],
                                  census_basis_used=used, census_basis_text=c["census_basis"],
                                  lintel_masonry=L.piece(w)["piece_m"] if w else None,
+                                 lintel_bound=[L.piece(x / 1000)["piece_m"] for x in e["bound_mm"]]
+                                 if e.get("bound_mm") else None,
                                  lintel_frame_clear=L.piece(i["frame_clear_mm"] / 1000)["piece_m"],
                                  lintel_overall=L.piece(i["overall_mm"] / 1000)["piece_m"]))
     census = L.engine_records()
     storeys = ["GF", "1F", "2F", L.UNSPLIT]
-    res = OrderedDict(rule=RULE_ID, t571_pins=L.PINS, inserts=inserts, openings=table,
+    res = OrderedDict(rule=RULE_ID, rule_version=RULE_VERSION, t571_pins=L.PINS, inserts=inserts, openings=table,
                       outside_census=OUTSIDE_CENSUS, jamb_only_reads=JAMB_ONLY_READS)
     res["restated_owner_0.15"] = restate(census, measured, storeys)
     # BESIDE (refused as a basis): the same census if the frame-clear width were taken at every frame-block opening
