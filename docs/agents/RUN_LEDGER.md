@@ -1180,3 +1180,74 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-06 02:59 | Worker 3 | SUCCESS | STARTED 02:59, final 03:12; T-549 READY a7721790 / WIRING MANIFEST V4: 8 merges since V3 covered under R-T549-1 (pinned range, missing pie |
 | 11-06 03:21 | Worker 1 | SUCCESS | STARTED 03:21, final 03:38; T-544 READY @045b194f / 1F held lintels W16/W19/W20/W24: 8 ends measured (V3, W24 END past 3.0 m to a column 4 |
 | 11-06 03:50 | Verifier | SUCCESS | STARTED 03:50, final 04:01; T-544, T-549, T-546 (run session_01E6cPnbEyfJ2CQfcp7BN3Qw) / 3x GATE A PASS MERGED (engine push a615fa41): T-5 |
+
+## 2026-11-06 04:31 -> 2026-11-07 04:31 UTC (66 runs, 66 SUCCESS, 100 %; ledger stamp parser now reads seconds stamps)
+
+| UTC | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-06 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 04:57; T-552 READY c09551d4 / B5 wall plaster vs freelancer by face class: internal his gross 1209.385 vs valued 240. |
+| 11-06 04:52 | Verifier | SUCCESS | STARTED 04:52, final 04:58; none (run unknown) / READY 0 (T-552 CLAIMED W2 04:41; T-545/547/550/551/553/554/555 TODO; T-498/T-423 r2/T-525 |
+| 11-06 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:13; T-554 READY (agents/task-T-554 @ e949e29b) / Statement adapters for T-543/T-546/T-542 on the T-548 builder: 6  |
+| 11-06 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 05:34; T-545 READY (758a4e58) / B10-07 beam concrete V3.0.58 66.321054 vs freelancer rows 66.093875 m3 = +0.227 (+0.3 |
+| 11-06 05:51 | Verifier | SUCCESS | STARTED 05:51, final 05:59; T-545, T-554, T-552 / 3x GATE A PASS MERGED (engine push 0106dbfb), research only, no quantity change: T-545 o |
+| 11-06 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:50; T-547 READY 4445f737 / B4 wet-room wall tile, V3.0.58 340.3038 vs freelancer 433.83 m2 = -93.5262 (-21.56 %),  |
+| 11-06 06:51 | Verifier | SUCCESS | STARTED 06:51, final 06:56; T-547 / GATE A PASS MERGED (engine push 47d74505), research, no quantity change: wet-room wall tile V3.0.58 34 |
+| 11-06 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:10; T-555 READY c7988cc6 / WIRING MANIFEST V5 over (3f3b580c,47d74505], 7/7 merges covered, 0 candidate lines move |
+| 11-06 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:35; T-550 READY @ 11e6d2ca / B9 parapet residual 71.47 m2 split: his heights = printed above finish + 0.50 (drawn  |
+| 11-06 07:52 | Verifier | SUCCESS | STARTED 07:52, final 08:11; T-550, T-555 / 2x GATE A PASS MERGED (engine push e3e0ed0e), research / manifest, no quantity change: T-550 ow |
+| 11-06 08:15 | Lead | SUCCESS | STARTED 08:15, final 08:20; board / Since 04:15: 6 merged all WORKED (T-545, T-552, T-554, T-547, T-550, T-555), 0 rejected; no candidate  |
+| 11-06 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:53; T-556 READY 935e04c6 / dry plaster to slab / roof underside (R-T556-1): H GF 4.29, 1F 3.99 (T-214 b 0.05, slab |
+| 11-06 08:50 | Verifier | SUCCESS | STARTED 08:50, final 08:51; none / No task READY (T-556 CLAIMED W2; T-551/553/557..561 TODO), no Gate A/B, no merge, no quantity change (c |
+| 11-06 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:14; T-557 READY 09c68487 / Statement adapters for T-545/T-547/T-552 + T-550 restatement on the T-548/T-554 builder |
+| 11-06 09:20 | Worker 1 | SUCCESS | STARTED 09:20, final 09:39; T-559 READY @ 341b011a / B9 leftover 25.9224 m2 restated exactly: openings -26.284 split by opening id (HELD - |
+| 11-06 09:51 | Verifier | SUCCESS | STARTED 09:51, final 10:23; T-559, T-556, T-557 / 3x GATE A PASS MERGED (engine push 431ac67f), research / statement, no quantity change:  |
+| 11-06 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 10:54; T-553 READY 0b223a9c / B3 floor tile V3.0.58 387.094050 vs freelancer 409.58 m2 = -22.48595 (-5.49 %), split e |
+| 11-06 10:50 | Verifier | SUCCESS | STARTED 10:50, final 10:51; none / No task READY (T-553 CLAIMED W2; T-551/558/560/561 TODO): no Gate A/B, no merge, no quantity change (ca |
+| 11-06 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:07; T-558 READY a5ec8e99 / WIRING MANIFEST V6 (47d74505,431ac67f] 5/5 merges + wiring row PLASTER_HEIGHT_V1_WIRING |
+| 11-06 11:20 | Worker 1 | SUCCESS | STARTED 11:20, final 11:40; T-551 READY (667796a2) / B10 concrete V3.0.58 vs freelancer m3: columns 19.777 vs 28.547 = -8.770 (COUNT -0.14 |
+| 11-06 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:03; T-551, T-558, T-553 / 3x GATE A PASS MERGED (engine push b6e52d40), research / manifest, no quantity change (V |
+| 11-06 12:16 | Lead | SUCCESS | STARTED 12:16, final 12:21; board / Since 08:15: 6 merged all WORKED (T-556, T-557, T-559, T-558, T-551, T-553), 0 rejected; no candidate  |
+| 11-06 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:50; T-561 READY d9c8613b / B6 wall paint V3.0.58 217.2081 vs freelancer gross 1249.375 m2 = +1032.1669 exact by fa |
+| 11-06 12:52 | Verifier | SUCCESS | STARTED 12:52, final 12:56; none / No task READY (T-561 CLAIMED W2; T-560/562/564/565/566/567/568 TODO; T-498/T-423 r2/T-525/T-563 BLOCKED |
+| 11-06 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 13:17; T-562 READY (agents/task-T-562 @ bd0c5729) / Statement V3 on T-557: T-551 his-engine m3 columns +8.770 / necks |
+| 11-06 13:44 | Worker 1 | SUCCESS | final 13:44 (single line); T-566 READY (agents/task-T-566 @ 336ca2b7) / GF column marks registered from the drawings alone (own DXF read, |
+| 11-06 13:52 | Verifier | SUCCESS | STARTED 13:52, final 14:00; T-566, T-562, T-561 / 3x GATE A PASS MERGED (engine push 33a5833f), research / statement, no quantity change ( |
+| 11-06 14:41 | Worker 2 | SUCCESS | STARTED 14:41, final 15:03; T-567 READY @ 591d804c / B5 external plaster vs freelancer by elevation, exact bridge residual 0: his gross 1, |
+| 11-06 14:52 | Verifier | SUCCESS | STARTED 14:52, final 14:54; none / No task READY (T-567 CLAIMED W2; T-560/564/565/568 TODO; T-563/T-498/T-423 r2/T-525 BLOCKED on the wrap |
+| 11-06 15:00 | Worker 3 | SUCCESS | STARTED 15:00, final 15:11; T-564 READY 0f96c143 / WIRING MANIFEST V7 (431ac67f..33a5833f 6/6) + census R-T564-1 by rule: 1F dressing miss |
+| 11-06 15:25 | Worker 1 | SUCCESS | STARTED 15:25, final 15:35; T-565 READY 060cf3f8 / B1 earthworks vs freelancer: he has NO earthworks row (885 rows, 6 workbooks; NO_ROW, n |
+| 11-06 15:52 | Verifier | SUCCESS | STARTED 15:52, final 15:59; T-565, T-564, T-567 / 3x GATE A PASS MERGED (engine push 8aba0d81), research / manifest, no quantity change (V |
+| 11-06 16:13 | Lead | SUCCESS | STARTED 16:13, final 16:20; board / Since 12:18: 6 merged (T-561 paint, T-562 statement V3, T-566 GF column marks, T-564 manifest V7 + flo |
+| 11-06 16:40 | Worker 2 | SUCCESS | STARTED 16:40, final 16:56; T-568 READY (agents/task-T-568 @ 6af372e9) / Doors/windows by type on V3.0.58 vs freelancer: ALU doors 6 vs 5  |
+| 11-06 16:50 | Verifier | SUCCESS | STARTED 16:50, final 16:50; none / No task READY (T-568 CLAIMED W2; T-560/569/570/571/572/573/574 TODO; T-498/T-423 r2/T-525/T-563 BLOCKED |
+| 11-06 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 17:14; T-570 READY 7ff030b6 / Statement V4: paint 1209.385 vs 217.2081 m2 + soffit 39.99 close to T-561 gap 1032.1669 |
+| 11-06 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:31; T-560 READY (agents/task-T-560 @ 818c6fe6) / B11 rebar: freelancer 44.19 t is 7 typed family lumps with no bar |
+| 11-06 17:50 | Verifier | SUCCESS | STARTED 17:50, final 17:59; T-560, T-570, T-568 / 3x GATE A PASS MERGED (engine push 540bc99c; CODEMAP-only conflicts rebuilt), research / |
+| 11-06 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:52; T-573 READY (agents/task-T-573 @ 217a04dc) / Ceilings V3.0.58 vs freelancer by group and face class: board 366 |
+| 11-06 18:52 | Verifier | SUCCESS | STARTED 18:52, final 18:55; none / No task READY (T-573 CLAIMED W2; T-569/571/572/574 TODO; T-498/T-423 r2/T-525/T-563 BLOCKED on the wrap |
+| 11-06 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:07; T-569 READY (739469ba) / WIRING MANIFEST V8, 6/6 merges covered: 26 return-paint faces HELD <= 23.070 m2 + 4 H |
+| 11-06 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:37; T-572 READY (agents/task-T-572 @ e448fe8e) / 96 held B10/B1 components: 25 drawn both ends, 44 drawn lower-onl |
+| 11-06 19:51 | Verifier | SUCCESS | STARTED 19:51, final 19:58; T-572, T-569, T-573 / 3x GATE A PASS MERGED (engine push 587e47f9; CODEMAP-only conflicts rebuilt), research / |
+| 11-06 20:12 | Lead | SUCCESS | STARTED 20:12, final 20:18; board / Since 16:17: 6 merged all WORKED (T-560 rebar TYPED_LUMP NOT_COMPARABLE + dome / lift-pit rebar ENGINE |
+| 11-06 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:55; T-574 READY (agents/task-T-574) / Skirting vs freelancer: room 197.279 vs 282.85 lm = RULE_DIFF -43.62 (doors/ |
+| 11-06 20:51 | Verifier | SUCCESS | STARTED 20:51, final 20:51; none / No task READY (T-574 CLAIMED W2; T-571 / T-575..T-580 TODO; T-498 / T-525 / T-563 BLOCKED on the wrappe |
+| 11-06 21:02 | Worker 3 | SUCCESS | STARTED 21:02, final 21:18; T-579 READY (agents/task-T-579 @ f938883e) / Statement V5 = V4 rebuilt equal + rebar 44.19 t TYPED_LUMP vs 9.3 |
+| 11-06 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 21:34; T-571 / Precast lintel count by stock length x storey (owner rule, R-T571-1, head 0f7b5266, READY): engine 60  |
+| 11-06 21:51 | Verifier | SUCCESS | STARTED 21:51, final 21:59; T-571, T-579, T-574 / 3x GATE A PASS MERGED (engine push 6bc78ff6; CODEMAP-only conflicts rebuilt), research / |
+| 11-06 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 22:51; T-577 READY c67d0ffb / Marble/thresholds/sills/lift/E1 vs freelancer by unit: m2 18.0382 vs 26.80, lm 56.83 vs |
+| 11-06 22:50 | Verifier | SUCCESS | STARTED 22:50, final 22:50; none / No task READY (T-577 CLAIMED W2 22:40; T-575 / T-576 / T-578 / T-580 TODO; T-571 / T-574 / T-579 merged |
+| 11-06 23:01 | Worker 3 | SUCCESS | STARTED 23:01, final 23:13; T-580 READY (agents/task-T-580 @ 81c07dd9) / Manifest overlay dry run: V2-V8 rows on a V3.0.58 index copy 4,99 |
+| 11-06 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 23:30; T-575 READY (agents/task-T-575 @ f0814678) / B11 dome/lift rebar from ST p.7/p.10/p.14, t: DOME-A/B shell 0.28 |
+| 11-06 23:50 | Verifier | SUCCESS | STARTED 23:50, final 23:57; T-575, T-580, T-577 / 3x GATE A PASS MERGED (engine push e8db39da; CODEMAP-only conflicts rebuilt), research / |
+| 11-07 00:13 | Lead | SUCCESS | STARTED 00:13, final 00:19; board / Since 20:14: 6 merged (T-571 lintel count NO_ROW + implied 54 vs 60 AT_MOST, T-579 statement V5, T-575 |
+| 11-07 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 00:50; T-578 READY (agents/task-T-578 @ 4d105131) / Rails: his 18.95 lm lone typed constant vs ours 54.869174 lm (B7- |
+| 11-07 00:50 | Verifier | SUCCESS | STARTED 00:50, final 00:50; none / No task READY (T-578 CLAIMED W2 00:41; T-576, T-581..T-586 TODO; last merges T-575 / T-580 / T-577 at 2 |
+| 11-07 01:01 | Worker 3 | SUCCESS | STARTED 01:01, final 01:18; T-582 READY 590fd6dc + T-586 READY 9aad7a5d (same topic, Lead order) / T-582: 16 lintels classed by source sta |
+| 11-07 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:35; T-576 READY (agents/task-T-576 e43fe6a9) / 1F columns +0.555 m3 (+21.74 %) = 0.75/3.45 head depth: RULE_DIFF + |
+| 11-07 01:53 | Verifier | SUCCESS | STARTED 01:53, final 02:08; T-576, T-582, T-586, T-578 / 4x GATE A PASS MERGED (engine push f4409c96; CODEMAP-only conflicts rebuilt), res |
+| 11-07 02:41 | Worker 2 | SUCCESS | STARTED 02:41, final 02:56; T-584 READY be30089d / E1 step lm ENGINE_OMISSION confirmed 11.20 lm (4 x 2.80, no STEP_LM line); external doo |
+| 11-07 02:52 | Verifier | SUCCESS | STARTED 02:52, final 02:56; none / No task READY (T-584 CLAIMED W2 02:42; T-581 / T-583 / T-585 TODO; last merges T-576 / T-582 / T-586 /  |
+| 11-07 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:12; T-583 READY agents/task-T-583 @ b92ee427 / Dome/ring/lift-wall bars: every component now value, bound or HELD  |
+| 11-07 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:28; T-581 READY (agents/task-T-581 @ 21ef9da6) / Lintel width basis: wall-face ends read on both faces at all 26 f |
+| 11-07 03:51 | Verifier | SUCCESS | STARTED 03:51, final 04:08; T-583, T-584, T-581 / T-583 + T-584 GATE A PASS MERGED (engine push 6d896db0; CODEMAP-only conflict rebuilt),  |
+| 11-07 04:15 | Lead | SUCCESS | STARTED 04:15, final 04:19; board / Since 00:15: 6 merged (T-582 lintel classes / Gate B readiness, T-586 statement V6, T-583 dome bars st |
