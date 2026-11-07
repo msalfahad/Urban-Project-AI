@@ -198,10 +198,13 @@ def test_alsenan_rebuild_and_privacy():
     assert gf["remeasured"]["drawn gross outline"][:2] == ["55.906096", "147.657717"]
     assert gf["reading_test"]["status"] == "NOT_ESTABLISHED"
     assert gf["split_bound"]["grid_test"]["reproducing_both"] == 0
+    g3 = gf["split_bound"]["grid_test_3m_margin"]
+    assert g3["reproducing_both"] == 21 and g3["reproducing_both_with_sides_drawn"] == 0   # figure coincidences only
     assert D(gf["unresolved"]) == D("-17.013904")
     import re
     drawn = json.loads((ROOT / "research/agents_t612/T612_DRAWN.json").read_text())
     drawn.pop("grid_test")                            # counts only
+    drawn.pop("grid_test_3m_margin")
     drawn.pop("source")                               # the Drive title
     drawn.pop("rule")
     drawn.pop("schema")

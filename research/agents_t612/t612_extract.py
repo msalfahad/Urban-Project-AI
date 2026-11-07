@@ -173,23 +173,25 @@ def read(path):
         pieces = [(h, colmap[h]) if k == "COL" else ("/".join(h), _wall_rect(geom, *h)) for k, h in parts]
         out["islands"][name] = R.island(pieces)
     out["grid_test"] = _grid_test(geom, a0, b0)
+    out["grid_test_3m_margin"] = _grid_test(geom, a0, b0, 3000.0)   # the entrance porch outside D200 included
     return out
 
 
 HIS_ENTRANCE = ("14.76", "10.46")   # his row 15 (perimeter, area): the grid test target; numbers only
 
 
-def _grid_test(geom, a0, b0):
+def _grid_test(geom, a0, b0, margin=0.0):
     """every axis rectangle whose sides lie on a drawn horizontal / vertical LINE or a column corner inside the GF open
     room's drawn gross outline box: does any reproduce his entrance row (P and A within his rounding), with 0, 1 or 2
-    door reveals of 0.20 walked? Returns the counts only (no coordinate)."""
+    door reveals of 0.20 walked? A figure match is a coincidence unless every side of the rectangle is drawn over at
+    least half its length (otherwise its sides are lines of other elements far away). Returns counts only."""
     import itertools
     full = OUTLINES["GF-OPEN.full"][2]
     box_h = [geom[h][1] for h, _ in full if geom[h][0] == "LINE"]
     xs0 = [p[0] for s in box_h for p in s]
     ys0 = [p[1] for s in box_h for p in s]
-    X1, X2, Y1, Y2 = min(xs0), max(xs0), min(ys0), max(ys0)
-    xs, ys = set(), set()
+    X1, X2, Y1, Y2 = min(xs0) - margin, max(xs0) + margin, min(ys0) - margin, max(ys0) + margin
+    xs, ys = {}, {}
     for h, (t, g) in geom.items():
         if t != "LINE" or "#" in h:
             continue
@@ -197,12 +199,16 @@ def _grid_test(geom, a0, b0):
         if not (X1 - 1 <= min(x1, x2) <= X2 and Y1 - 1 <= min(y1, y2) <= Y2):
             continue
         if abs(x1 - x2) < 1e-6 and X1 <= x1 <= X2:
-            xs.add(round(x1, 1))
+            xs.setdefault(round(x1, 1), []).append((min(y1, y2), max(y1, y2)))
         if abs(y1 - y2) < 1e-6 and Y1 <= y1 <= Y2:
-            ys.add(round(y1, 1))
+            ys.setdefault(round(y1, 1), []).append((min(x1, x2), max(x1, x2)))
+
+    def support(segs, lo, hi):          # share of the side lo .. hi that drawn lines on its position carry
+        return sum(max(0.0, min(b, hi) - max(a, lo)) for a, b in segs) / (hi - lo)
+
     hp, ha = float(HIS_ENTRANCE[0]), float(HIS_ENTRANCE[1])
     t = float(R.half_unit(2))
-    n, hits = 0, 0
+    n, hits, carried = 0, 0, 0
     for x1, x2 in itertools.combinations(sorted(xs), 2):
         for y1, y2 in itertools.combinations(sorted(ys), 2):
             w, h = (x2 - x1) / 1000, (y2 - y1) / 1000
@@ -210,7 +216,12 @@ def _grid_test(geom, a0, b0):
             for dp in (0.0, 0.4, 0.8):
                 if abs(2 * (w + h) + dp - hp) < t and abs(w * h - ha) < t:
                     hits += 1
-    return {"x_positions": len(xs), "y_positions": len(ys), "rectangles": n, "reproducing_both": hits}
+                    # a drawn reading needs every side carried by drawn lines over at least half its length
+                    if min(support(xs[x1], y1, y2), support(xs[x2], y1, y2), support(ys[y1], x1, x2),
+                           support(ys[y2], x1, x2)) >= 0.5:
+                        carried += 1
+    return {"x_positions": len(xs), "y_positions": len(ys), "rectangles": n, "reproducing_both": hits,
+            "reproducing_both_with_sides_drawn": carried}
 
 
 def main(argv=None):
@@ -235,7 +246,7 @@ def main(argv=None):
         print(k, v["width"], v["depth"])
     for k, v in d["islands"].items():
         print("island", k, v)
-    print("grid", d["grid_test"])
+    print("grid", d["grid_test"], d["grid_test_3m_margin"])
 
 
 if __name__ == "__main__":

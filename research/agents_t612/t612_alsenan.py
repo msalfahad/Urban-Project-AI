@@ -123,7 +123,7 @@ def _gf(drawn, his, t574):
             "split_bound": {"undrawn_split_lm_max": str(s_max), "undrawn_split_lm_min": str(s_min),
                             "pure_split_reading": pure,
                             "his_entrance_as_rectangle_sides": [str(x) for x in rect] if rect else None,
-                            "grid_test": drawn["grid_test"]},
+                            "grid_test": drawn["grid_test"], "grid_test_3m_margin": drawn["grid_test_3m_margin"]},
             "interior_solids": drawn["islands"], **room}
 
 

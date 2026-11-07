@@ -94,8 +94,16 @@
  "grid_test": {
   "rectangles": 1955100,
   "reproducing_both": 0,
+  "reproducing_both_with_sides_drawn": 0,
   "x_positions": 57,
   "y_positions": 50
+ },
+ "grid_test_3m_margin": {
+  "rectangles": 16769025,
+  "reproducing_both": 21,
+  "reproducing_both_with_sides_drawn": 0,
+  "x_positions": 91,
+  "y_positions": 91
  },
  "islands": {
   "solids under the 1F south facade (columns + wall)": {

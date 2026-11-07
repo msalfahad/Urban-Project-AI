@@ -52,8 +52,12 @@ the 3.90 lm facade of the dining piece x 3.00 .. 6.80 inside it is already the T
   partition: split 8.506952 lm, his entrance row then has 6.253048 lm on the outline and 8.506952 shared (re-adds his
   58.16 exactly); with every drawn piece also walked the split is 3.056952 lm (bound 3.057 .. 8.507). The split line is
   **UNDRAWN**: his entrance row 14.76 / 10.46 as a rectangle would be 5.466542 x 1.913458, and none of 1,955,100 axis
-  rectangles on the drawn lines' 57 x 50 positions reproduces it (0, 1 or 2 reveals). CANDIDATE only (R-T612-1.3):
-  if established, a split carries no wall base, so that part of his figure is no skirting (ENGINE_RIGHT on it).
+  rectangles on the drawn lines' 57 x 50 positions reproduces it (0, 1 or 2 reveals). Widened 3 m round the outline
+  (the entrance porch outside D200 with its steps, sheet 03: no 'entrance hall' label inside the room, DINING /
+  RECEPTION / SALOON only): 21 of 16,769,025 rectangles hit both figures, and **0** of them has its four sides drawn
+  over at least half their length: every hit is a figure coincidence between lines of other elements (ERS s.3 in
+  numbers: a big enough search always finds a match by figure). CANDIDATE only (R-T612-1.3): if established, a split
+  carries no wall base, so that part of his figure is no skirting (ENGINE_RIGHT on it).
 
 ## 4. 1F curved -0.73933 and 2F corridor -0.70 (T-606 readings re-checked)
 
