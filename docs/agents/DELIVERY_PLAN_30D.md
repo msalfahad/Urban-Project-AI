@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 12:16; recovery plan in force)
+
+- Merged since 08:15 (all Gate A, research, no candidate line moved): T-591, T-593, T-594, T-595, T-598 WORKED; T-590 PARTIAL (exposed the column / beam joint record conflict: Lead ruled column owns, register corrected, T-599 rule version).
+- Closed for 12-13 Nov: statement V8, manifest V10, structural restatements, both provenance audits, nosing held edges. Remaining: manifest V11 (T-596, + nosing rows), statement V9 (T-603), manifest V12 (T-604), joint rule + column residuals (T-599 / T-600), doorless jambs (T-601), door-step 2.90 lm scope (T-602), B1 plan side (T-597).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) BLOCKED on the wrapper item only (main unchanged at eafbb0f6).
+- 10 Nov: LOW (wrapper, 3 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-07 08:15; recovery plan in force)
 
 - Merged since 04:15 (all Gate A, research, no candidate line moved): T-581 r2, T-587 r2, T-588, T-589, T-592 WORKED; T-585 PARTIAL (E1 landing class ruled by the Lead in the register); T-587 rejected once (map not rebuilt), merged on rework.

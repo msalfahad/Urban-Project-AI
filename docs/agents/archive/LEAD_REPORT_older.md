@@ -1,3 +1,18 @@
+## LEAD REPORT 2026-11-07 00:15 UTC
+
+Drive read OK (no file created or modified in the project folders since 20:00 UTC 6 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six merged since 20:14 (4 WORKED, 2 PARTIAL, 0 rejected):
+- Lintels (nr / lm): freelancer has NO lintel row (Checker CONFIRMED): NOT_COMPARABLE as a figure; his 54 deducted openings through the owner rule = 27/17/8/1/1 nr, 84.9 lm vs engine 60 AT_MOST, 91.5 lm; +6 nr closed by named cause (width read 3 openings, W17 not in masonry, engine-only identities; closure re-derived by the Checker). One door on a mixed width basis (attribution only) -> T-581.
+- Skirting (lm): 197.279 vs 282.85 (-85.571): RULE_DIFF -43.62 (doors / passages), ENGINE_RIGHT -32.08, UNRESOLVED -9.69 named; gross vs gross -2.37 %. Stairs 12.15 vs 29.87 (flights HELD >= 17.009); yard 81.32 lm scope open -> T-585. PARTIAL: 1 / 11 outlines re-measured.
+- Marble / thresholds / sills, units apart: m2 18.04 vs 26.80, lm 56.83 vs 21.70, nr 67 vs 11, causes close; his 'm2' total is 164.54 area + 130.9 count x length (UNIT). E1 step 11.20 lm ENGINE_OMISSION PLAUSIBLE, external door steps undefined -> T-584. PARTIAL: engine side 0 / 8 groups re-measured.
+- Dome shell / ring / lift-pit wall bars (t): first measurement from ST sheets, 0.734 .. 1.162 HELD_RANGE (valued 0), Checker 3 / 3 classes AGREE; lift-wall low not strict (62-bar reading 0.156642 t/m), laps / links HELD -> T-583. His 44.19 t TYPED_LUMP: no %.
+- Wiring dry run: V2-V8 rows apply cleanly on a V3.0.58 copy (0 STALE, 0 double-written lines); targets plaster 580.5819 -> 363.3738 m2, windows +9.870 m2. Lintel rows lack a class (1.016 -> 0 vs 0.502 m3 released): fixed in T-582 before T-498 Gate B. Statement V5: 17 sections residual 0.
+- Learned: ADOPTED ceilings by face class; PROPOSED (Checker-accepted) overlay before Gate B, class each reference cell by its own unit, bar-sphere dome counting, outline vs deduction terms, check the reference row exists first, restate statements row by row.
+- Missing: handrails / nosing, 1F columns +21.7 %, steps, yard skirting, lintel width basis, dome-bar laps; statement V6; all wiring.
+- Team health: 6 merged / 0 rejected since 20:14; every run closed; all agents ran code (self-check PASS); READY 0; TODO 8 (S 3, A 3, I 2) + 4 blocked; queue check 22 actionable, 0 flagged, 0 stall. One Verifier text with workbook cell values refused by the session check and rewritten (no leak).
+- 10 Nov (every trade wired): LOW, 3 days, wrapper. 12-13 Nov tables: HIGH (19 trades closed, 6 open).
+OWNER PACKAGE: no new decision today. Still open: Q-80 (15 cm black block face size; 15 walls 175.9 m2 HELD).
+NEEDS FIXING (owner only): wrapper allow-list on main scripts/agent_env.sh (run of research/agents_t*/ scripts) blocks every Gate B package (T-498, T-423 r2, T-525, T-563); notified 04:15 5 Nov, not re-notified. Also: Kuwait 1990 spec copy under 6 MB; repository privacy switch; PyMuPDF decision; PR #3 clean-up.
+
 ## LEAD REPORT 2026-11-06 20:14 UTC
 
 Drive read OK (no file created or modified in the project folders since 16:00 UTC, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved; released V2.9 + route G unchanged. Six merged since 16:17, all WORKED:

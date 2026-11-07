@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-07 12:16 (since 08:15)
+
+- T-591 finishes RULE_DIFF provenance (Gate A): WORKED (119 rows; 1 NONE -> UNRESOLVED A-1F-01 jambs 0.30 lm FREELANCER_RIGHT). Decision: register DOORLESS OPENING JAMB; T-601 census, T-604 fix rows.
+- T-593 manifest V10 (Gate A): WORKED (0 STALE / two-package / unexplained). Decision: F-C-T593-1 guard (one skirting form, never summed) in T-603 and at T-498 Gate B.
+- T-595 structural restatements (Gate A): WORKED (ring low 0.789554 t; S02 1.960 .. 2.275 m3). Decision: T-596 wires them (now FIRST in I).
+- T-590 structural RULE_DIFF provenance (Gate A): PARTIAL (0 / 44 sourced; joint record conflict +2.369 m3 UNRESOLVED). Decision: Lead ruling column owns (Q-62 A delegation), register corrected, T-599 rule version, T-600 residuals; lesson ADOPTED.
+- T-594 statement V8 (Gate A): WORKED (residual 0; his 2.90 lm door steps UNRESOLVED). Decision: T-602 element search.
+- T-598 nosing held edges (Gate A): WORKED (107.371 lm valued, residual 0; F-C-T598-1 label). Decision: T-596 carries the nosing rows with the Q-46 A label; binding on T-424.
+
 ## Lead 2026-11-07 08:15 (since 04:15)
 
 - T-581 r2 lintel width basis (Gate A): WORKED (D-GF-09 DRAWING CONFLICT held 1.20 .. 1.50; 91.5 .. 91.8 lm, Checker re-sum AGREE). Decision: lesson ADOPTED; D-GF-09 stays a designer item.
@@ -172,14 +181,4 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-489 plaster mix: PARTIAL (mix HELD: 1990 spec over the connector limit). Decision: owner NEEDS FIXING item kept.
 - T-350 r3 earthworks wiring: FAILED twice (13:01, 17:02 runs, nothing pushed, cause not known). Decision: r4 OVERSIZED, 4 pushed stages.
 - T-486 terrace WP census: READY (pool-court 4.907 m2 omission). Decision: T-494 QUEUED after its merge.
-
-## Lead 2026-11-03 08:17 (since 04:15; the 20:17, 00:16 and 04:15 runs recorded theirs on BOARD.md only)
-
-- T-481 skirting remainder census: WORKED (Checker re-measure AGREE). Decision: NEW T-483 integrates it (stream F, after T-443).
-- T-457 wet-wall fixing: WORKED (no second bed; table V3 unwired). Decision: wiring folded into T-455.
-- T-479 registry refresh (Gate B): WORKED / PARTIAL findings: F-T479-1 -> NEW T-485; F-T479-2 -> NEW T-486 (balcony WP), T-487 (lintel lines).
-- T-350 r2 calculated earthworks: PARTIAL (backfill 4 / 8 verified; unwired). Decision: T-350 r3 wiring QUEUED stream S after T-419; NEW T-484 for the other 4 components.
-- T-452 r2 scorer: WORKED. T-461 housekeeping: WORKED (UP-STAIR-017 wiring folded into T-455).
-- T-453 part 1 blockwork materials: FAILED r1 (F-C-T453-1 lintel faces double counted in the material base). Decision: TODO r2 with the exact fix R-T453-5, first in worker 2's order; register ruling 'RC LINTEL vs host masonry' added.
-- Recurring cause: none new; cross-trade double counts are still caught at Gate A, not before hand-in -> the element register rulings now name the owner trade before T-487 / T-483 start.
 

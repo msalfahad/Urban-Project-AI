@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 08:15 UTC (Lead). Previous version: 2026-11-07 04:15 UTC. The released numbers did not change
+Last update: 2026-11-07 12:16 UTC (Lead). Previous version: 2026-11-07 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 08:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Stair nosing: the 20 edges that were held are now named: nosing 88.50 -> 107.37 m valued against his 123.20 m, the
+  15.83 m gap fully explained (his 1.20 m width where both drawings print 1.15 m, pieces he adds, curved ends he leaves
+  out); 4 winder edges (4.60 .. 6.94 m) stay with the designer.
+- Rule sources: every finishes difference now names the rule it rests on (40 as cited, 76 citations corrected). One
+  was wrong on our side: the two arch openings with no door are skirted on their returns by your skirting method
+  (0.30 m, his figure is right); every such opening is being listed next.
+- Columns and beams: the structural rule-source check found two of our own records naming opposite owners of the
+  concrete where a beam meets a column (+2.37 m3 of differences without a source). Settled by your 'measured once,
+  one convention' answer: the column carries the joint up to the slab top and the beam runs face to face, as the
+  engine already does; the wrong record is corrected and the rule is being written down so the differences can
+  cite it. No quantity changes; what remains per storey (ground -0.62, first -1.21 m3) is investigated next.
+- Dome ring bars on both faces: lower bar figure 0.79 t; footing F10 kept as 1.96 .. 2.28 m3 per your 2 Nov ruling.
+- Door steps: his 7.70 m = our 3.80 m + gate 1.00 m + one door already priced with the thresholds + 2.90 m his rows
+  do not place on any door; each exterior opening is being checked for a drawn step next.
+- Wiring list V10 checked on a copy of the candidate: nothing stale or written twice; stair skirting has two drawn
+  forms of the same skirting, which must never be added together (your form ruling is still open).
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring (3 days left).
 
 Since 7 Nov 04:15 (newest first; six checked and merged, one sent back once for a missing map rebuild and merged on
 rework; no candidate quantity moved; all wait to be wired into the candidate):
