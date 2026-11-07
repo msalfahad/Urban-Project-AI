@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 04:15 UTC (Lead). Previous version: 2026-11-07 00:15 UTC. The released numbers did not change
+Last update: 2026-11-07 08:15 UTC (Lead). Previous version: 2026-11-07 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 04:15 (newest first; six checked and merged, one sent back once for a missing map rebuild and merged on
+rework; no candidate quantity moved; all wait to be wired into the candidate):
+- Steps outside the external doors: the line pays one length, the stone laid in the wall gap: 3.80 m at 4 doors plus
+  0.57 m2 of riser (the checker re-read the drawing and agrees). Against his 7.70 m we are 2.90 m lower including the
+  gate step; his rows name no door, so the remaining gap stays unexplained by name. The gate step (1.00 m) is the same
+  kind of stone step and goes with the door steps; its outside level is still to be re-read.
+- Structural differences sorted for checking: of 59 concrete parts, 10 are checked by the checker himself, 30 can be
+  checked from the drawings now, 19 need the designer; of 13 bar parts, 1 can be checked, 12 need the designer;
+  earthworks 1 / 15 / 3 (the 3 rest on your earthworks rulings of 2 Nov). The dome ring side bars are drawn on both
+  faces, so the lower figure rises 0.12 -> 0.14 t on that ring; footing F10 lower figure 2.18 -> 1.96 m3 per your
+  2 Nov ruling (both held, being written into the wiring list next).
+- Skirting outside the house: no sheet prints a base, so 0 m is drawing-confirmed; his 81.32 m is his paving edge
+  (a scope difference, not a measuring error). The entrance landing follows the same test: no skirting line.
+- Lintel widths: one door draws a 1.00 m frame inside a 0.90 m wall gap; kept as a drawing conflict (lintel 1.20 or
+  1.50 m), 60 lintels, 91.5 .. 91.8 m. The checker agrees.
+- Wiring list checked on a copy of the candidate: 5,124 lines, nothing stale or written twice; entrance steps add
+  11.20 m (step length 67.85 -> 79.05 m).
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring (3 days left).
 
 Since 7 Nov 00:15 (newest first; six checked and merged, one sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

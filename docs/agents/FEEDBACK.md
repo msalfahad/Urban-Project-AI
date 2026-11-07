@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-07 08:15 (since 04:15)
+
+- T-581 r2 lintel width basis (Gate A): WORKED (D-GF-09 DRAWING CONFLICT held 1.20 .. 1.50; 91.5 .. 91.8 lm, Checker re-sum AGREE). Decision: lesson ADOPTED; D-GF-09 stays a designer item.
+- T-585 skirting follow-ups (Gate A): PARTIAL (yard DC 0 lm and flights AGREE; E1 landing class UNRESOLVED F-C-T585-1). Decision: Lead RULED in the register (yard criterion, NOT_IN_DRAWING); NO_LINE row in T-593.
+- T-587 statement V7 (Gate A): WORKED after one rework (REJECTED gate c: CODEMAP stale after the head merge; content byte-equal on r2). Decision: no new task; worker step 5 already requires maps regenerated last.
+- T-588 manifest V9 (Gate A): WORKED (0 STALE, edge census 0 / 0). Decision: lesson F-T588 ADOPTED; V10 in T-593.
+- T-589 structural closable pack (Gate A): WORKED (91 components classed; F-C-T583-1 closed). Decision: T-595 versions the ring and F10 restatements, T-596 wires them; T-597 measures P13; Checker T-180 slot on P01 / P10 / P11.
+- T-592 door step (Gate A): WORKED (3.800 lm nr 4 + 0.570 m2 VERIFIED research quantity). Decision: FR-T592-2 gate owner trade RULED (door-step family); wired in T-593 with gate level PARTIAL.
+
 ## Lead 2026-11-07 04:15 (since 00:15)
 
 - T-582 Gate B readiness (Gate A): WORKED (16 / 16 lintel classes AGREE, AT_LEAST low 0.502 m3 re-derived). Decision: T-498 / T-423 r2 now wait on the wrapper only; F-T580-2 run table stays BLOCKED by it.
@@ -174,8 +183,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-453 part 1 blockwork materials: FAILED r1 (F-C-T453-1 lintel faces double counted in the material base). Decision: TODO r2 with the exact fix R-T453-5, first in worker 2's order; register ruling 'RC LINTEL vs host masonry' added.
 - Recurring cause: none new; cross-trade double counts are still caught at Gate A, not before hand-in -> the element register rulings now name the owner trade before T-487 / T-483 start.
 
-## Lead 2026-11-02 16:16 (since 12:30)
-
-- T-477 rebar firewall declarations: WORKED (Checker reproduced the failure on 4aaa9be0 and green on the merge). Decision: gate green; no follow-up.
-- T-445 footing blinding as pieces: WORKED (research; 24 pits 12.734438 m3 re-added exactly by the Checker; -47.055 m3 item reconciled). Decision: NEW T-478 integrates the pits and the split, with the Checker's F-C-T445-1 / -2 and the boundary-wall blinding as held lines.
-- T-350 earthworks, T-471 EIMP part 2, T-475 lift marble: READY, classified after the Checker's verdict (queue 1-3).

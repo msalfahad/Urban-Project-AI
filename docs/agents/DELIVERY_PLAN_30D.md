@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 08:15; recovery plan in force)
+
+- Merged since 04:15 (all Gate A, research, no candidate line moved): T-581 r2, T-587 r2, T-588, T-589, T-592 WORKED; T-585 PARTIAL (E1 landing class ruled by the Lead in the register); T-587 rejected once (map not rebuilt), merged on rework.
+- Closed for 12-13 Nov: lintel width basis (D-GF-09 conflict held), yard / stair skirting (scope + two flight forms), door-step payable length (3.800 lm + riser 0.570 m2); statement V7 and manifest V9 merged. Remaining: statement V8 (T-594), manifest V10 / V11 (T-593 / T-596), structural restatements (T-595), RULE_DIFF provenance (T-590 / T-591), nosing held edges (T-598), B1 plan side (T-597).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) BLOCKED on the wrapper item only (main unchanged at eafbb0f6).
+- 10 Nov: LOW (wrapper, 3 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-07 04:15; recovery plan in force)
 
 - Merged since 00:15 (all Gate A, research, no candidate line moved): T-582, T-586, T-583 WORKED; T-576, T-578, T-584 PARTIAL; T-581 FAILED (REJECTED: drawing conflict at D-GF-09 must be UNRESOLVED) -> r2 FIRST in lane S.
