@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T14:51Z | Verifier | STARTED | run session_01E6cPnuR4pN31D | repo-attached routine | task state: checking | self-check pending
 - 2026-11-07T14:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T13:59Z | Verifier | SUCCESS | T-596 MERGED, T-601 MERGED, T-599 REJECTED | Merged 545f63db / 2a7ad738 (push 2a7ad738): T-596 manifest V11 (own ST7757 read: F10 2.80x1.40x0.50=1.960, outline 3.25x1.40x0.50=2.275 m3 AGREE; ring +21.771 kg AGREE), T-601 census (own P7757 read: A-1F-01 2x0.15=0.30 lm jambs AGREE, FREELANCER_RIGHT; GF OP-011 / 1F OP-007 framed lift landing doors AGREE). T-599 REJECTED gates F+H: beam THROUGH_SUPPORT rows wholly RD SOURCED though 2.248826 m3 is the T-600 residual; split matched/residual and resubmit (L4 then to the end). No quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: T-596 head CODEMAP stale (count only), rebuilt at merge
 - 2026-11-07T13:50Z | Verifier | STARTED | run session_01E6cPnbX9jkHVxsUYSYF2Qi | repo-attached routine | task state: READY T-599, T-596, T-601 | self-check pending
