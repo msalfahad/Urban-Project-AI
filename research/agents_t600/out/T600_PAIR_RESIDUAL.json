@@ -1,0 +1,2904 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED",
+ "note": "engine / drawing figures and terms in m3; no row, length or count of the freelancer",
+ "readings": {
+  "1F": {
+   "T-551 (record)": {
+    "joint_m3": "0.385000",
+    "minus_record_by_member_m3": {}
+   },
+   "T-572": {
+    "joint_m3": "0.385000",
+    "minus_record_by_member_m3": {}
+   },
+   "T-576 (10E0 = C7)": {
+    "joint_m3": "0.595000",
+    "minus_record_by_member_m3": {
+     "C8 664 (D_low 0.75, LOWER_BOUND)": "0.135000",
+     "P.C 20x50 69D (D_low 0.75, LOWER_BOUND)": "0.075000"
+    }
+   },
+   "T-576 (10E0 = C8)": {
+    "joint_m3": "0.460000",
+    "minus_record_by_member_m3": {
+     "P.C 20x50 69D (D_low 0.75, LOWER_BOUND)": "0.075000"
+    }
+   }
+  },
+  "GF": {
+   "T-551 (record)": {
+    "joint_m3": "2.281250",
+    "minus_record_by_member_m3": {}
+   },
+   "T-572": {
+    "joint_m3": "1.883750",
+    "minus_record_by_member_m3": {
+     "C3 365": "-0.062500",
+     "C3 36B": "-0.050000",
+     "C3 383": "-0.093750",
+     "C8 36E": "-0.191250"
+    }
+   },
+   "T-576 (10E0 = C7)": {
+    "joint_m3": "2.075000",
+    "minus_record_by_member_m3": {
+     "C3 365": "-0.062500",
+     "C3 36B": "-0.050000",
+     "C3 383": "-0.093750"
+    }
+   },
+   "T-576 (10E0 = C8)": {
+    "joint_m3": "2.033750",
+    "minus_record_by_member_m3": {
+     "C3 365": "-0.062500",
+     "C3 36B": "-0.050000",
+     "C3 383": "-0.093750",
+     "C7 368 (D_low 0.75, LOWER_BOUND)": "0.150000",
+     "C8 36E": "-0.191250"
+    }
+   }
+  },
+  "note": "membership reconstructed from each report's own text and checked: every reported total is reproduced exactly by these members; a member's joint is the same in every reading (A x D_ctrl, or A x printed D_low labelled LOWER_BOUND)"
+ },
+ "rule": "R-T600-1 .. 3 (PROPOSED); UP-CONC-JOINT-001 1.0.0 (LEAD_ADOPTED)",
+ "schema": "T600_PAIR_RESIDUAL_V1",
+ "storey_2F": {
+  "column_partner": "every 2F column line is HELD (D-39, T-551 HELD -3.381): J = 0, the 0.564 joint sits in held column lines (OUTSIDE_SET_HELD), never 0",
+  "residual_m3": "0.420000",
+  "source": "Checker verdict T-180 P02 2F (SCOREBOARD 2026-11-07 15:00, F-C-P02-1, own ST7757 read): his roof-beam lengths through the support-column footprints 0.564 m3 (B3 0.028 + B8 0.120 + B15 0.240 + B1 0.176) less one drawn, tagged B1 run with no row of his 0.144 m3 (COUNT, ENGINE_RIGHT); residual 0.000. Cited, not re-derived (Lead amendment)."
+ },
+ "storeys": {
+  "1F": {
+   "b7_untraced_folded_m3": "0",
+   "beam_marks": {
+    "B1": {
+     "SHORT": "0.081400",
+     "T_m3": "0.118312",
+     "carriers": [
+      [
+       "B1 1F:BAND0008 -> 1F:BAND0004",
+       "0.016000"
+      ],
+      [
+       "B1 1F:BAND0008 -> 1F:BAND0030.1",
+       "0.032000"
+      ]
+     ],
+     "carriers_m3": "0.048000",
+     "zones_m3": "0.151712"
+    },
+    "B2": {
+     "SHORT": "0.148481",
+     "T_m3": "0.104000",
+     "carriers": [
+      [
+       "B2 1F:BAND0005.1 -> 1F:BAND0031.2",
+       "0.036000"
+      ],
+      [
+       "B2 1F:BAND0007.2 -> 1F:BAND0001.2",
+       "0.016000"
+      ]
+     ],
+     "carriers_m3": "0.052000",
+     "zones_m3": "0.200481"
+    },
+    "B23": {
+     "SHORT": "0.066680",
+     "T_m3": "0.150396",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.217076"
+    },
+    "B7": {
+     "SHORT": "0.067104",
+     "T_m3": "0.150000",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.217104"
+    },
+    "CB10": {
+     "SHORT": "0.089373",
+     "T_m3": "0.131000",
+     "carriers": [
+      [
+       "CB10 1F:BAND0026.2 -> 1F:BAND0031.1",
+       "0.056250"
+      ]
+     ],
+     "carriers_m3": "0.056250",
+     "zones_m3": "0.164123"
+    },
+    "CB11": {
+     "SHORT": "0.138010",
+     "T_m3": "0.394939",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.532949"
+    },
+    "CB12": {
+     "BEYOND": "-0.035097",
+     "T_m3": "0.254887",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.219790"
+    },
+    "CB13": {
+     "SHORT": "0.075239",
+     "T_m3": "0.109828",
+     "carriers": [
+      [
+       "CB13 1F:BAND0024.2 -> 1F:BAND0031.2",
+       "0.067500"
+      ]
+     ],
+     "carriers_m3": "0.067500",
+     "zones_m3": "0.117567"
+    },
+    "CB9": {
+     "SHORT": "0.001610",
+     "T_m3": "0.180000",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.181610"
+    }
+   },
+   "by_class_m3": {
+    "BESIDE": "0.207487",
+    "BEYOND": "0.035097",
+    "CARRIER_CROSSING": "0.223750",
+    "OUTSIDE_SET_HELD": "0.883632",
+    "OUTSIDE_SET_OPEN": "0.259744",
+    "OVERLAP_CROSSING": "0.193671",
+    "OVERLAP_REPEAT": "0.079640",
+    "SHORT": "-0.667897",
+    "UNCOVERED": "-0.006762"
+   },
+   "columns": {
+    "C1 682": {
+     "BESIDE": "0.000498",
+     "JOINT": "0.075000",
+     "OVERLAP_CROSSING": "0.015845",
+     "OVERLAP_REPEAT": "0.039758",
+     "UNCOVERED": "0.000353",
+     "UNION": "0.074647",
+     "ZONES": "0.130748",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.2",
+       "axis": "X",
+       "beside_m2": "0.000089",
+       "inside_m2": "0.039851",
+       "key": "B1|1F:BAND0012.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.500007",
+       "axis": "Y",
+       "beside_m2": "0.000391",
+       "inside_m2": "0.099410",
+       "key": "B2|1F:BAND0010.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.500017",
+       "axis": "Y",
+       "beside_m2": "0.000408",
+       "inside_m2": "0.099395",
+       "key": "B7|1F:BAND0011.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "682",
+     "kind": "REC",
+     "mark": "C1",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 66D": {
+     "BESIDE": "0.000361",
+     "JOINT": "0.040000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.040000",
+     "ZONES": "0.040361",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.500015",
+       "axis": "Y",
+       "beside_m2": "0.000903",
+       "inside_m2": "0.100000",
+       "key": "B2|1F:BAND0005.2|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "66D",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 670": {
+     "BESIDE": "0.000254",
+     "JOINT": "0.050000",
+     "OVERLAP_CROSSING": "0.015972",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.006136",
+     "UNION": "0.043864",
+     "ZONES": "0.060090",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.500007",
+       "axis": "Y",
+       "beside_m2": "0.000450",
+       "inside_m2": "0.099351",
+       "key": "B2|1F:BAND0010.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.5",
+       "along_m": "0.2",
+       "axis": "X",
+       "beside_m2": "0.000149",
+       "inside_m2": "0.040191",
+       "key": "CB9|1F:BAND0001.1|1F:BAND0001.2|GAP",
+       "recorded_m": "0.1996",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "670",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 67C": {
+     "BESIDE": "0.000112",
+     "JOINT": "0.040000",
+     "OVERLAP_CROSSING": "0.015893",
+     "OVERLAP_REPEAT": "0.039882",
+     "UNCOVERED": "0.000071",
+     "UNION": "0.039929",
+     "ZONES": "0.095816",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.5",
+       "axis": "Y",
+       "beside_m2": "0.000094",
+       "inside_m2": "0.099706",
+       "key": "B1|1F:BAND0007.1|1F:BAND0007.2|GAP",
+       "recorded_m": "0.5002",
+       "tag": "GAP"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.2",
+       "axis": "X",
+       "beside_m2": "0.000089",
+       "inside_m2": "0.039851",
+       "key": "B1|1F:BAND0012.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.5",
+       "axis": "Y",
+       "beside_m2": "0.000094",
+       "inside_m2": "0.099706",
+       "key": "B2|1F:BAND0007.1|1F:BAND0007.2|GAP",
+       "recorded_m": "0.5002",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "67C",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 67F": {
+     "BESIDE": "0.060200",
+     "JOINT": "0.075000",
+     "OVERLAP_CROSSING": "0.037100",
+     "OVERLAP_REPEAT": "0.000000",
+     "UNCOVERED": "0.000202",
+     "UNION": "0.074798",
+     "ZONES": "0.172098",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.2",
+       "axis": "X",
+       "beside_m2": "0.079929",
+       "inside_m2": "0.009791",
+       "key": "B23|1F:BAND0031.2|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.2",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.039940",
+       "key": "B7|1F:BAND0006.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.500017",
+       "axis": "Y",
+       "beside_m2": "0.000337",
+       "inside_m2": "0.099466",
+       "key": "B7|1F:BAND0011.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "67F",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C3 68B": {
+     "BESIDE": "0.024857",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.049744",
+     "ZONES": "0.074601",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.500009",
+       "axis": "Y",
+       "beside_m2": "0.049714",
+       "inside_m2": "0.099489",
+       "key": "CB10|1F:BAND0026.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "d_low_printed_m": "0.50",
+     "handle": "68B",
+     "joint_at_lower_bound_m3": "0.050000",
+     "kind": "OPEN",
+     "lower_bound_note": "T-119 FRAMING_MEMBER_HELD_D_OPEN: the printed framing members give D_low; an unprinted held member may be deeper (open above, never below)",
+     "mark": "C3",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C3 691": {
+     "BESIDE": "0.000218",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.040142",
+     "ZONES": "0.040360",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.5",
+       "axis": "Y",
+       "beside_m2": "0.000544",
+       "inside_m2": "0.100356",
+       "key": "B2|1F:BAND0005.1|1F:BAND0005.2|GAP",
+       "recorded_m": "0.5002",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "691",
+     "kind": "HELD",
+     "mark": "C3",
+     "outline_mm": [
+      250,
+      500
+     ]
+    },
+    "C4 676": {
+     "BESIDE": "0.000190",
+     "OVERLAP_CROSSING": "0.025253",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.072111",
+     "ZONES": "0.097554",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.25002",
+       "axis": "Y",
+       "beside_m2": "0.000005",
+       "inside_m2": "0.062800",
+       "key": "CB12|1F:BAND0018.2|END_COLUMN",
+       "recorded_m": "0.25",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.5",
+       "along_m": "0.5",
+       "axis": "X",
+       "beside_m2": "0.000372",
+       "inside_m2": "0.100528",
+       "key": "CB9|1F:BAND0001.4|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "676",
+     "kind": "HELD",
+     "mark": "C4",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C4 697": {
+     "BESIDE": "0.000186",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.050264",
+     "ZONES": "0.050450",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.5",
+       "axis": "X",
+       "beside_m2": "0.000372",
+       "inside_m2": "0.100528",
+       "key": "CB9|1F:BAND0001.3|1F:BAND0001.4|GAP",
+       "recorded_m": "0.5002",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "697",
+     "kind": "HELD",
+     "mark": "C4",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C5 673": {
+     "BESIDE": "0.000221",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.060319",
+     "ZONES": "0.060540",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.600007",
+       "axis": "X",
+       "beside_m2": "0.000443",
+       "inside_m2": "0.120639",
+       "key": "CB9|1F:BAND0001.2|1F:BAND0001.3|GAP",
+       "recorded_m": "0.5989",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "673",
+     "kind": "HELD",
+     "mark": "C5",
+     "outline_mm": [
+      600,
+      250
+     ]
+    },
+    "C5 685": {
+     "BESIDE": "0.029791",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.059731",
+     "ZONES": "0.089522",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.600009",
+       "axis": "Y",
+       "beside_m2": "0.059582",
+       "inside_m2": "0.119461",
+       "key": "CB10|1F:BAND0026.1|1F:BAND0026.2|GAP",
+       "recorded_m": "0.5989",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "685",
+     "kind": "HELD",
+     "mark": "C5",
+     "outline_mm": [
+      200,
+      600
+     ]
+    },
+    "C5 694": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.112500",
+     "ZONES": "0.112500",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.6",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.150000",
+       "key": "CB11|1F:BAND0027.2|1F:BAND0027.3|GAP",
+       "recorded_m": "0.601",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "694",
+     "kind": "HELD",
+     "mark": "C5",
+     "outline_mm": [
+      600,
+      250
+     ]
+    },
+    "C6 688": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.087500",
+     "ZONES": "0.087500",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.700017",
+       "axis": "Y",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.175000",
+       "key": "CB13|1F:BAND0024.1|1F:BAND0024.2|GAP",
+       "recorded_m": "0.6997",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "688",
+     "kind": "HELD",
+     "mark": "C6",
+     "outline_mm": [
+      250,
+      700
+     ]
+    },
+    "C7 68E": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.149786",
+     "ZONES": "0.149786",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.8",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.199715",
+       "key": "B23|1F:BAND0031.1|1F:BAND0031.2|GAP",
+       "recorded_m": "0.8007",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "68E",
+     "kind": "HELD",
+     "mark": "C7",
+     "outline_mm": [
+      800,
+      250
+     ]
+    },
+    "C8 664": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.135000",
+     "ZONES": "0.135000",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.900011",
+       "axis": "Y",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.180000",
+       "key": "CB12|1F:BAND0018.1|1F:BAND0018.2|GAP",
+       "recorded_m": "0.8994",
+       "tag": "GAP"
+      }
+     ],
+     "d_low_printed_m": "0.75",
+     "handle": "664",
+     "joint_at_lower_bound_m3": "0.135000",
+     "kind": "OPEN",
+     "lower_bound_note": "T-119 FRAMING_MEMBER_HELD_D_OPEN: the printed framing members give D_low; an unprinted held member may be deeper (open above, never below)",
+     "mark": "C8",
+     "outline_mm": [
+      200,
+      900
+     ]
+    },
+    "C8 69A": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.150000",
+     "ZONES": "0.150000",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.8",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.200000",
+       "key": "CB11|1F:BAND0027.1|1F:BAND0027.2|GAP",
+       "recorded_m": "0.7985",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "69A",
+     "kind": "HELD",
+     "mark": "C8",
+     "outline_mm": [
+      800,
+      250
+     ]
+    },
+    "C9 679": {
+     "BESIDE": "0.000075",
+     "OVERLAP_CROSSING": "0.015930",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.101279",
+     "ZONES": "0.117284",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "1.0",
+       "axis": "Y",
+       "beside_m2": "0.000189",
+       "inside_m2": "0.199411",
+       "key": "B1|1F:BAND0007.1|END_COLUMN",
+       "recorded_m": "1.0",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.25",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.049925",
+       "key": "B7|1F:BAND0006.1|END_COLUMN",
+       "recorded_m": "0.25",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "679",
+     "kind": "HELD",
+     "mark": "C9",
+     "outline_mm": [
+      250,
+      1000
+     ]
+    },
+    "P.C 20x50 69D": {
+     "BESIDE": "0.037755",
+     "OVERLAP_CROSSING": "0.037618",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.075000",
+     "ZONES": "0.150373",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.5",
+       "axis": "X",
+       "beside_m2": "0.050250",
+       "inside_m2": "0.100000",
+       "key": "CB11|1F:BAND0027.3|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.200027",
+       "axis": "Y",
+       "beside_m2": "0.000090",
+       "inside_m2": "0.050157",
+       "key": "CB12|1F:BAND0018.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "d_low_printed_m": "0.75",
+     "handle": "69D",
+     "joint_at_lower_bound_m3": "0.075000",
+     "kind": "OPEN",
+     "lower_bound_note": "T-119 FRAMING_MEMBER_HELD_D_OPEN: the printed framing members give D_low; an unprinted held member may be deeper (open above, never below)",
+     "mark": "P.C 20x50",
+     "outline_mm": [
+      500,
+      200
+     ]
+    },
+    "P.C 20x70 66A": {
+     "BESIDE": "0.052769",
+     "JOINT": "0.105000",
+     "OVERLAP_CROSSING": "0.030060",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.105000",
+     "ZONES": "0.187829",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.7",
+       "axis": "X",
+       "beside_m2": "0.070350",
+       "inside_m2": "0.140000",
+       "key": "CB11|1F:BAND0027.1|END_COLUMN",
+       "recorded_m": "0.7",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.5",
+       "along_m": "0.200047",
+       "axis": "Y",
+       "beside_m2": "0.000014",
+       "inside_m2": "0.060120",
+       "key": "CB13|1F:BAND0024.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "66A",
+     "kind": "REC",
+     "mark": "P.C 20x70",
+     "outline_mm": [
+      700,
+      200
+     ]
+    }
+   },
+   "joint_head_J_m3": "0.385000",
+   "notes": [
+    "B23 1F:BAND0031.1|1F:BAND0031.2 at 68E: beside-support strip 0.119374 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "CB11 1F:BAND0027.1|1F:BAND0027.2 at 69A: beside-support strip 0.030300 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "CB11 1F:BAND0027.2|1F:BAND0027.3 at 694: beside-support strip 0.022725 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "CB12 1F:BAND0018.1|1F:BAND0018.2 at 664: beside-support strip 0.034562 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "CB13 1F:BAND0024.1|1F:BAND0024.2 at 688: beside-support strip 0.017713 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess"
+   ],
+   "residual_m3": "1.208362",
+   "statement_pair_residual_m3": "1.208362",
+   "terms": [
+    [
+     "OUTSIDE_SET_OPEN",
+     "C8 664",
+     "0.135000"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "P.C 20x70 66A",
+     "0.030060"
+    ],
+    [
+     "BESIDE",
+     "P.C 20x70 66A",
+     "0.052769"
+    ],
+    [
+     "BESIDE",
+     "C2 66D",
+     "0.000361"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C2 670",
+     "0.015972"
+    ],
+    [
+     "BESIDE",
+     "C2 670",
+     "0.000254"
+    ],
+    [
+     "UNCOVERED",
+     "C2 670",
+     "-0.006136"
+    ],
+    [
+     "BESIDE",
+     "C5 673",
+     "0.000221"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C5 673",
+     "0.060319"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C4 676",
+     "0.025253"
+    ],
+    [
+     "BESIDE",
+     "C4 676",
+     "0.000190"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C4 676",
+     "0.072111"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C9 679",
+     "0.015930"
+    ],
+    [
+     "BESIDE",
+     "C9 679",
+     "0.000075"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C9 679",
+     "0.101279"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C2 67C",
+     "0.015893"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C2 67C",
+     "0.039882"
+    ],
+    [
+     "BESIDE",
+     "C2 67C",
+     "0.000112"
+    ],
+    [
+     "UNCOVERED",
+     "C2 67C",
+     "-0.000071"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C2 67F",
+     "0.037100"
+    ],
+    [
+     "BESIDE",
+     "C2 67F",
+     "0.060200"
+    ],
+    [
+     "UNCOVERED",
+     "C2 67F",
+     "-0.000202"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C1 682",
+     "0.015845"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C1 682",
+     "0.039758"
+    ],
+    [
+     "BESIDE",
+     "C1 682",
+     "0.000498"
+    ],
+    [
+     "UNCOVERED",
+     "C1 682",
+     "-0.000353"
+    ],
+    [
+     "BESIDE",
+     "C5 685",
+     "0.029791"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C5 685",
+     "0.059731"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C6 688",
+     "0.087500"
+    ],
+    [
+     "BESIDE",
+     "C3 68B",
+     "0.024857"
+    ],
+    [
+     "OUTSIDE_SET_OPEN",
+     "C3 68B",
+     "0.049744"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C7 68E",
+     "0.149786"
+    ],
+    [
+     "BESIDE",
+     "C3 691",
+     "0.000218"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C3 691",
+     "0.040142"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C5 694",
+     "0.112500"
+    ],
+    [
+     "BESIDE",
+     "C4 697",
+     "0.000186"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C4 697",
+     "0.050264"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C8 69A",
+     "0.150000"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "P.C 20x50 69D",
+     "0.037618"
+    ],
+    [
+     "BESIDE",
+     "P.C 20x50 69D",
+     "0.037755"
+    ],
+    [
+     "OUTSIDE_SET_OPEN",
+     "P.C 20x50 69D",
+     "0.075000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B1 1F:BAND0008 -> 1F:BAND0004",
+     "0.016000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B1 1F:BAND0008 -> 1F:BAND0030.1",
+     "0.032000"
+    ],
+    [
+     "SHORT",
+     "B1",
+     "-0.081400"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B2 1F:BAND0005.1 -> 1F:BAND0031.2",
+     "0.036000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B2 1F:BAND0007.2 -> 1F:BAND0001.2",
+     "0.016000"
+    ],
+    [
+     "SHORT",
+     "B2",
+     "-0.148481"
+    ],
+    [
+     "SHORT",
+     "B23",
+     "-0.066680"
+    ],
+    [
+     "SHORT",
+     "B7",
+     "-0.067104"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB10 1F:BAND0026.2 -> 1F:BAND0031.1",
+     "0.056250"
+    ],
+    [
+     "SHORT",
+     "CB10",
+     "-0.089373"
+    ],
+    [
+     "SHORT",
+     "CB11",
+     "-0.138010"
+    ],
+    [
+     "BEYOND",
+     "CB12",
+     "0.035097"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB13 1F:BAND0024.2 -> 1F:BAND0031.2",
+     "0.067500"
+    ],
+    [
+     "SHORT",
+     "CB13",
+     "-0.075239"
+    ],
+    [
+     "SHORT",
+     "CB9",
+     "-0.001610"
+    ]
+   ],
+   "through_support_T_m3": "1.593362"
+  },
+  "GF": {
+   "b7_untraced_folded_m3": "0.120452",
+   "beam_marks": {
+    "B13": {
+     "SHORT": "0.197746",
+     "T_m3": "0.078937",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.276683"
+    },
+    "B17": {
+     "SHORT": "0.399078",
+     "T_m3": "0.057080",
+     "carriers": [
+      [
+       "B17 GF:BAND0044.1 -> GF:BAND0041.2",
+       "0.118125"
+      ]
+     ],
+     "carriers_m3": "0.118125",
+     "zones_m3": "0.338033"
+    },
+    "B2": {
+     "SHORT": "0.000073",
+     "T_m3": "0.208648",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.208721"
+    },
+    "B20": {
+     "SHORT": "0.029881",
+     "T_m3": "0.179994",
+     "carriers": [
+      [
+       "B20 GF:BAND0043.2 -> GF:BAND0025.1",
+       "0.060000"
+      ]
+     ],
+     "carriers_m3": "0.060000",
+     "zones_m3": "0.149875"
+    },
+    "B21": {
+     "SHORT": "0.081271",
+     "T_m3": "0.107932",
+     "carriers": [
+      [
+       "B21 GF:BAND0042 -> GF:BAND0019.3",
+       "0.067500"
+      ]
+     ],
+     "carriers_m3": "0.067500",
+     "zones_m3": "0.121703"
+    },
+    "B24": {
+     "SHORT": "0.114645",
+     "T_m3": "0.167178",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.281823"
+    },
+    "B26": {
+     "BEYOND": "-0.036555",
+     "T_m3": "0.335400",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.298845"
+    },
+    "B29": {
+     "SHORT": "0.167100",
+     "T_m3": "0.001650",
+     "carriers": [
+      [
+       "B29 GF:BAND0008 -> GF:BAND0045",
+       "0.093750"
+      ],
+      [
+       "B29 GF:BAND0008 -> GF:BAND0042",
+       "0.075000"
+      ]
+     ],
+     "carriers_m3": "0.168750",
+     "zones_m3": "0.000000"
+    },
+    "B3": {
+     "SHORT": "0.143970",
+     "T_m3": "0.004000",
+     "carriers": [
+      [
+       "B3 GF:BAND0007 -> GF:BAND0021.2",
+       "0.016000"
+      ],
+      [
+       "B3 GF:BAND0007 -> GF:BAND0045",
+       "0.040000"
+      ],
+      [
+       "B3 GF:BAND0023.2 -> GF:BAND0036.1",
+       "0.020000"
+      ]
+     ],
+     "carriers_m3": "0.076000",
+     "zones_m3": "0.071970"
+    },
+    "B4": {
+     "SHORT": "0.407324",
+     "T_m3": "0.037667",
+     "carriers": [
+      [
+       "B4 GF:BAND0004 -> GF:BAND0001",
+       "0.020000"
+      ],
+      [
+       "B4 GF:BAND0004 -> GF:BAND0037.1",
+       "0.030000"
+      ],
+      [
+       "B4 GF:BAND0010 -> GF:BAND0042",
+       "0.040000"
+      ],
+      [
+       "B4 GF:BAND0010 -> GF:BAND0047.2",
+       "0.065000"
+      ],
+      [
+       "B4 GF:BAND0011 -> GF:BAND0010",
+       "0.020000"
+      ],
+      [
+       "B4 GF:BAND0011 -> GF:BAND0044.1",
+       "0.045000"
+      ],
+      [
+       "B4 GF:BAND0012 -> GF:BAND0014",
+       "0.020000"
+      ],
+      [
+       "B4 GF:BAND0012 -> GF:BAND0029.2",
+       "0.020000"
+      ],
+      [
+       "B4 GF:BAND0018 -> GF:BAND0048.2",
+       "0.090000"
+      ],
+      [
+       "B4 GF:BAND0018 -> GF:BAND0045",
+       "0.050000"
+      ],
+      [
+       "B4 GF:BAND0030.1 -> GF:BAND0014",
+       "0.020000"
+      ]
+     ],
+     "carriers_m3": "0.420000",
+     "zones_m3": "0.024991"
+    },
+    "B5": {
+     "SHORT": "0.106666",
+     "T_m3": "0.008340",
+     "carriers": [
+      [
+       "B5 GF:BAND0017 -> GF:BAND0048.1",
+       "0.090000"
+      ]
+     ],
+     "carriers_m3": "0.090000",
+     "zones_m3": "0.025006"
+    },
+    "B7": {
+     "SHORT": "0.177978",
+     "T_m3": "0.354452",
+     "carriers": [
+      [
+       "B7 BAND0006 end -> B8 BAND0003",
+       "0.030000"
+      ],
+      [
+       "B7 BAND0006 end -> CB1 BAND0041.2",
+       "0.052500"
+      ],
+      [
+       "B7 ring NW arc 2EE -> B8 face 46D",
+       "0.030000"
+      ],
+      [
+       "B7 ring SW arc 2EF -> B8 face 46D",
+       "0.030000"
+      ],
+      [
+       "B7 ring SW arc 2EF -> B17 face 42D",
+       "0.067500"
+      ],
+      [
+       "B7 ring SE arc 312 -> B17 face 42D",
+       "0.067500"
+      ],
+      [
+       "B7 ring SE arc 312 -> CB1 face 2A9",
+       "0.052500"
+      ],
+      [
+       "B7 ring NE arc 313 -> CB1 face 2A9",
+       "0.052500"
+      ]
+     ],
+     "carriers_m3": "0.382500",
+     "zones_m3": "0.149930"
+    },
+    "B9": {
+     "SHORT": "0.030263",
+     "T_m3": "0.059700",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.089963"
+    },
+    "CB1": {
+     "SHORT": "0.072509",
+     "T_m3": "0.133741",
+     "carriers": [
+      [
+       "CB1 GF:BAND0041.2 -> GF:BAND0046.2",
+       "0.131250"
+      ]
+     ],
+     "carriers_m3": "0.131250",
+     "zones_m3": "0.075000"
+    },
+    "CB2": {
+     "SHORT": "0.055008",
+     "T_m3": "0.108000",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.163008"
+    },
+    "CB3": {
+     "SHORT": "0.080718",
+     "T_m3": "0.204186",
+     "carriers": [
+      [
+       "CB3 GF:BAND0019.1 -> GF:BAND0045",
+       "0.075000"
+      ]
+     ],
+     "carriers_m3": "0.075000",
+     "zones_m3": "0.209904"
+    },
+    "CB4": {
+     "SHORT": "0.115955",
+     "T_m3": "0.084012",
+     "carriers": [
+      [
+       "CB4 GF:BAND0021.1 -> GF:BAND0048.1",
+       "0.090000"
+      ],
+      [
+       "CB4 GF:BAND0021.2 -> GF:BAND0043.2",
+       "0.040000"
+      ]
+     ],
+     "carriers_m3": "0.130000",
+     "zones_m3": "0.069967"
+    },
+    "CB5": {
+     "BEYOND": "-0.000040",
+     "T_m3": "0.088000",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.087960"
+    },
+    "CB6": {
+     "SHORT": "0.030015",
+     "T_m3": "0.112500",
+     "carriers": [
+      [
+       "CB6 GF:BAND0029.1 -> GF:BAND0028",
+       "0.030000"
+      ]
+     ],
+     "carriers_m3": "0.030000",
+     "zones_m3": "0.112515"
+    },
+    "CB7": {
+     "SHORT": "0.000046",
+     "T_m3": "0.119900",
+     "carriers": [],
+     "carriers_m3": "0",
+     "zones_m3": "0.119946"
+    },
+    "CB8": {
+     "SHORT": "0.216505",
+     "T_m3": "0.570849",
+     "carriers": [
+      [
+       "CB8 GF:BAND0039 -> GF:BAND0014",
+       "0.045000"
+      ]
+     ],
+     "carriers_m3": "0.045000",
+     "zones_m3": "0.742354"
+    }
+   },
+   "by_class_m3": {
+    "BESIDE": "0.544850",
+    "BEYOND": "0.036595",
+    "CARRIER_CROSSING": "1.794125",
+    "OUTSIDE_SET_HELD": "0.485819",
+    "OUTSIDE_SET_OPEN": "0.149875",
+    "OVERLAP_CROSSING": "0.442913",
+    "OVERLAP_REPEAT": "0.324209",
+    "SHORT": "-2.426751",
+    "UNCOVERED": "-0.610719"
+   },
+   "columns": {
+    "C 34A": {
+     "BESIDE": "0.001063",
+     "OVERLAP_CROSSING": "0.015749",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.059429",
+     "ZONES": "0.076241",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.200041",
+       "axis": "X",
+       "beside_m2": "0.000779",
+       "inside_m2": "0.039889",
+       "key": "B2|GF:BAND0027|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.400016",
+       "axis": "Y",
+       "beside_m2": "0.001001",
+       "inside_m2": "0.078962",
+       "key": "B9|GF:BAND0028|END_COLUMN",
+       "recorded_m": "0.4",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "34A",
+     "kind": "HELD",
+     "mark": "C",
+     "outline_mm": [
+      200,
+      400
+     ]
+    },
+    "C 34D": {
+     "BESIDE": "0.000709",
+     "OVERLAP_CROSSING": "0.029471",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.059783",
+     "ZONES": "0.089963",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.200032",
+       "axis": "Y",
+       "beside_m2": "0.000404",
+       "inside_m2": "0.039583",
+       "key": "B9|GF:BAND0028|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.400022",
+       "axis": "X",
+       "beside_m2": "0.000542",
+       "inside_m2": "0.079422",
+       "key": "CB7|GF:BAND0014|END_COLUMN",
+       "recorded_m": "0.4",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "34D",
+     "kind": "HELD",
+     "mark": "C",
+     "outline_mm": [
+      400,
+      200
+     ]
+    },
+    "C 356": {
+     "BESIDE": "0.000572",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.031958",
+     "ZONES": "0.032530",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.400021",
+       "axis": "X",
+       "beside_m2": "0.001430",
+       "inside_m2": "0.079894",
+       "key": "B2|GF:BAND0027|END_COLUMN",
+       "recorded_m": "0.4",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "356",
+     "kind": "HELD",
+     "mark": "C",
+     "outline_mm": [
+      400,
+      200
+     ]
+    },
+    "C 359": {
+     "BESIDE": "0.000010",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.059963",
+     "ZONES": "0.059973",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.400022",
+       "axis": "X",
+       "beside_m2": "0.000013",
+       "inside_m2": "0.079951",
+       "key": "CB7|GF:BAND0014|END_COLUMN",
+       "recorded_m": "0.4",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "359",
+     "kind": "HELD",
+     "mark": "C",
+     "outline_mm": [
+      400,
+      200
+     ]
+    },
+    "C1 341": {
+     "BESIDE": "0.000024",
+     "JOINT": "0.075000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0.039965",
+     "UNCOVERED": "0.000043",
+     "UNION": "0.074957",
+     "ZONES": "0.114946",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.500015",
+       "axis": "Y",
+       "beside_m2": "0.000041",
+       "inside_m2": "0.099912",
+       "key": "B2|GF:BAND0024.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.500017",
+       "axis": "Y",
+       "beside_m2": "0.000011",
+       "inside_m2": "0.099942",
+       "key": "B7|GF:BAND0025.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "341",
+     "kind": "REC",
+     "mark": "C1",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C10 371": {
+     "BESIDE": "0.035689",
+     "JOINT": "0.148750",
+     "OVERLAP_CROSSING": "0.121211",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.001338",
+     "UNION": "0.147412",
+     "ZONES": "0.304312",
+     "beams": [
+      {
+       "D": "0.85",
+       "along_m": "0.267125",
+       "axis": "Y",
+       "beside_m2": "0.012209",
+       "inside_m2": "0.161615",
+       "key": "B26|GF:BAND0047.1|END_COLUMN",
+       "recorded_m": "0.25",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.700028",
+       "axis": "X",
+       "beside_m2": "0.033748",
+       "inside_m2": "0.175000",
+       "key": "CB8|GF:BAND0040.2|END_COLUMN",
+       "recorded_m": "0.7",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "371",
+     "kind": "REC",
+     "mark": "C10",
+     "outline_mm": [
+      700,
+      250
+     ]
+    },
+    "C11 35C": {
+     "JOINT": "0.233750",
+     "UNCOVERED": "0.233750",
+     "UNION": "0.000000",
+     "beams": [],
+     "handle": "35C",
+     "kind": "REC",
+     "mark": "C11",
+     "note": "no beam mark of his with a through-support term meets this column"
+    },
+    "C11 37D": {
+     "BESIDE": "0.079543",
+     "JOINT": "0.233750",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0.206250",
+     "UNCOVERED": "0.027500",
+     "UNION": "0.206250",
+     "ZONES": "0.492043",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "1.100029",
+       "axis": "X",
+       "beside_m2": "0.053029",
+       "inside_m2": "0.275000",
+       "key": "CB8|GF:BAND0039|END_COLUMN",
+       "recorded_m": "1.1",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "1.10003",
+       "axis": "X",
+       "beside_m2": "0.053029",
+       "inside_m2": "0.275000",
+       "key": "CB8|GF:BAND0040.1|END_COLUMN",
+       "recorded_m": "1.1",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "37D",
+     "kind": "REC",
+     "mark": "C11",
+     "outline_mm": [
+      1100,
+      250
+     ]
+    },
+    "C2 32C": {
+     "BESIDE": "0.000363",
+     "JOINT": "0.040000",
+     "OVERLAP_CROSSING": "0.015699",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000086",
+     "UNION": "0.039914",
+     "ZONES": "0.055976",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.500015",
+       "axis": "Y",
+       "beside_m2": "0.000310",
+       "inside_m2": "0.099643",
+       "key": "B2|GF:BAND0020.2|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.20004",
+       "axis": "X",
+       "beside_m2": "0.000598",
+       "inside_m2": "0.039390",
+       "key": "B3|GF:BAND0016.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "32C",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 32F": {
+     "BESIDE": "0.000569",
+     "JOINT": "0.050000",
+     "OVERLAP_CROSSING": "0.019801",
+     "OVERLAP_REPEAT": "0.015773",
+     "UNCOVERED": "0.005080",
+     "UNION": "0.044920",
+     "ZONES": "0.081063",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.500015",
+       "axis": "Y",
+       "beside_m2": "0.000160",
+       "inside_m2": "0.099793",
+       "key": "B2|GF:BAND0024.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.20004",
+       "axis": "X",
+       "beside_m2": "0.000555",
+       "inside_m2": "0.039433",
+       "key": "B3|GF:BAND0016.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.5",
+       "along_m": "0.200058",
+       "axis": "X",
+       "beside_m2": "0.000566",
+       "inside_m2": "0.049609",
+       "key": "CB2|GF:BAND0036.1|END_COLUMN",
+       "recorded_m": "0.2",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "32F",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 33B": {
+     "BESIDE": "0.000199",
+     "JOINT": "0.040000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000219",
+     "UNION": "0.039781",
+     "ZONES": "0.039980",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.5",
+       "axis": "Y",
+       "beside_m2": "0.000497",
+       "inside_m2": "0.099453",
+       "key": "B3|GF:BAND0023.1|GF:BAND0023.2|GAP",
+       "recorded_m": "0.4981",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "33B",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C2 33E": {
+     "BESIDE": "0.000012",
+     "JOINT": "0.075000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000047",
+     "UNION": "0.074953",
+     "ZONES": "0.074965",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.500017",
+       "axis": "Y",
+       "beside_m2": "0.000016",
+       "inside_m2": "0.099937",
+       "key": "B7|GF:BAND0025.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "33E",
+     "kind": "REC",
+     "mark": "C2",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C3 344": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.075000",
+     "ZONES": "0.075000",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.500016",
+       "axis": "Y",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.100000",
+       "key": "CB1|GF:BAND0041.1|GF:BAND0041.2|GAP",
+       "recorded_m": "0.5015",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "344",
+     "kind": "HELD",
+     "mark": "C3",
+     "outline_mm": [
+      200,
+      500
+     ]
+    },
+    "C3 353": {
+     "BESIDE": "0.000452",
+     "OVERLAP_CROSSING": "0.019797",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.079746",
+     "ZONES": "0.099995",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.250034",
+       "axis": "Y",
+       "beside_m2": "0.000283",
+       "inside_m2": "0.049699",
+       "key": "B4|GF:BAND0030.1|END_COLUMN",
+       "recorded_m": "0.25",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.500025",
+       "axis": "X",
+       "beside_m2": "0.000415",
+       "inside_m2": "0.099590",
+       "key": "CB6|GF:BAND0029.1|GF:BAND0029.2|GAP",
+       "recorded_m": "0.5015",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "353",
+     "kind": "HELD",
+     "mark": "C3",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C3 365": {
+     "BESIDE": "0.000008",
+     "JOINT": "0.062500",
+     "OVERLAP_CROSSING": "0.015992",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.013512",
+     "UNION": "0.048988",
+     "ZONES": "0.064988",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.250056",
+       "axis": "X",
+       "beside_m2": "0.000011",
+       "inside_m2": "0.050000",
+       "key": "B5|GF:BAND0017|END_COLUMN",
+       "recorded_m": "0.25",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.4",
+       "along_m": "0.500019",
+       "axis": "Y",
+       "beside_m2": "0.000004",
+       "inside_m2": "0.099950",
+       "key": "CB5|GF:BAND0033.1|GF:BAND0033.2|GAP",
+       "recorded_m": "0.4981",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "365",
+     "kind": "REC",
+     "mark": "C3",
+     "outline_mm": [
+      250,
+      500
+     ]
+    },
+    "C3 36B": {
+     "BESIDE": "0.000059",
+     "JOINT": "0.050000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.010079",
+     "UNION": "0.039921",
+     "ZONES": "0.039980",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.5",
+       "axis": "Y",
+       "beside_m2": "0.000147",
+       "inside_m2": "0.099803",
+       "key": "B2|GF:BAND0020.1|GF:BAND0020.2|GAP",
+       "recorded_m": "0.4981",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "36B",
+     "kind": "REC",
+     "mark": "C3",
+     "outline_mm": [
+      250,
+      500
+     ]
+    },
+    "C3 383": {
+     "BESIDE": "0.000000",
+     "JOINT": "0.093750",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.093750",
+     "ZONES": "0.093750",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.50003",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.125000",
+       "key": "CB8|GF:BAND0040.1|GF:BAND0040.2|GAP",
+       "recorded_m": "0.5015",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "383",
+     "kind": "REC",
+     "mark": "C3",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C4 335": {
+     "BESIDE": "0.000000",
+     "JOINT": "0.093750",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.093750",
+     "ZONES": "0.093750",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.500028",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.125000",
+       "key": "B24|GF:BAND0046.1|GF:BAND0046.2|GAP",
+       "recorded_m": "0.5014",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "335",
+     "kind": "REC",
+     "mark": "C4",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C4 377": {
+     "BESIDE": "0.094780",
+     "JOINT": "0.093750",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0.062221",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.093750",
+     "ZONES": "0.250751",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.500028",
+       "axis": "X",
+       "beside_m2": "0.125764",
+       "inside_m2": "0.125000",
+       "key": "B24|GF:BAND0046.1|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.5",
+       "along_m": "0.50003",
+       "axis": "X",
+       "beside_m2": "0.000915",
+       "inside_m2": "0.124443",
+       "key": "CB2|GF:BAND0036.2|END_COLUMN",
+       "recorded_m": "0.5",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "377",
+     "kind": "REC",
+     "mark": "C4",
+     "outline_mm": [
+      500,
+      250
+     ]
+    },
+    "C5 332": {
+     "BESIDE": "0.000696",
+     "JOINT": "0.112500",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.037953",
+     "UNION": "0.074547",
+     "ZONES": "0.075243",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.600029",
+       "axis": "X",
+       "beside_m2": "0.001393",
+       "inside_m2": "0.149094",
+       "key": "CB2|GF:BAND0036.1|GF:BAND0036.2|GAP",
+       "recorded_m": "0.5997",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "332",
+     "kind": "REC",
+     "mark": "C5",
+     "outline_mm": [
+      600,
+      250
+     ]
+    },
+    "C5 35F": {
+     "BESIDE": "0.000018",
+     "JOINT": "0.112500",
+     "OVERLAP_CROSSING": "0.015990",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.043019",
+     "UNION": "0.069481",
+     "ZONES": "0.085489",
+     "beams": [
+      {
+       "D": "0.4",
+       "along_m": "0.600022",
+       "axis": "Y",
+       "beside_m2": "0.000004",
+       "inside_m2": "0.119940",
+       "key": "CB5|GF:BAND0033.2|END_COLUMN",
+       "recorded_m": "0.6",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.250072",
+       "axis": "X",
+       "beside_m2": "0.000022",
+       "inside_m2": "0.049993",
+       "key": "CB6|GF:BAND0029.2|GF:BAND0029.3|GAP",
+       "recorded_m": "0.2507",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "35F",
+     "kind": "REC",
+     "mark": "C5",
+     "outline_mm": [
+      250,
+      600
+     ]
+    },
+    "C5 374": {
+     "BESIDE": "0.000135",
+     "JOINT": "0.112500",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.022675",
+     "UNION": "0.089825",
+     "ZONES": "0.089960",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.600028",
+       "axis": "X",
+       "beside_m2": "0.000180",
+       "inside_m2": "0.119766",
+       "key": "CB3|GF:BAND0019.2|GF:BAND0019.3|GAP",
+       "recorded_m": "0.5997",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "374",
+     "kind": "REC",
+     "mark": "C5",
+     "outline_mm": [
+      600,
+      250
+     ]
+    },
+    "C6 362": {
+     "BESIDE": "0.000002",
+     "JOINT": "0.087500",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.017535",
+     "UNION": "0.069965",
+     "ZONES": "0.069967",
+     "beams": [
+      {
+       "D": "0.5",
+       "along_m": "0.700021",
+       "axis": "Y",
+       "beside_m2": "0.000004",
+       "inside_m2": "0.139930",
+       "key": "CB4|GF:BAND0021.1|GF:BAND0021.2|GAP",
+       "recorded_m": "0.7014",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "362",
+     "kind": "REC",
+     "mark": "C6",
+     "outline_mm": [
+      250,
+      700
+     ]
+    },
+    "C7 368": {
+     "BESIDE": "0.000000",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.149875",
+     "ZONES": "0.149875",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.800033",
+       "axis": "X",
+       "beside_m2": "0.000000",
+       "inside_m2": "0.199833",
+       "key": "B20|GF:BAND0043.1|GF:BAND0043.2|GAP",
+       "recorded_m": "0.7996",
+       "tag": "GAP"
+      }
+     ],
+     "d_low_printed_m": "0.75",
+     "handle": "368",
+     "joint_at_lower_bound_m3": "0.150000",
+     "kind": "OPEN",
+     "lower_bound_note": "T-119 FRAMING_MEMBER_HELD_D_OPEN: the printed framing members give D_low; an unprinted held member may be deeper (open above, never below)",
+     "mark": "C7",
+     "outline_mm": [
+      800,
+      250
+     ]
+    },
+    "C8 36E": {
+     "BESIDE": "0.013189",
+     "JOINT": "0.191250",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.053345",
+     "UNION": "0.137905",
+     "ZONES": "0.151094",
+     "beams": [
+      {
+       "D": "0.85",
+       "along_m": "0.273169",
+       "axis": "Y",
+       "beside_m2": "0.015516",
+       "inside_m2": "0.162241",
+       "key": "B26|GF:BAND0047.2|END_COLUMN",
+       "recorded_m": "0.9",
+       "tag": "END_AT_CARRIED (beam billed to the receiving face, T-229): support beyond read"
+      }
+     ],
+     "handle": "36E",
+     "kind": "REC",
+     "mark": "C8",
+     "outline_mm": [
+      900,
+      250
+     ]
+    },
+    "C8 380": {
+     "BESIDE": "0.000004",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNION": "0.119940",
+     "ZONES": "0.119944",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.800025",
+       "axis": "X",
+       "beside_m2": "0.000005",
+       "inside_m2": "0.159920",
+       "key": "CB3|GF:BAND0019.1|GF:BAND0019.2|GAP",
+       "recorded_m": "0.7996",
+       "tag": "GAP"
+      }
+     ],
+     "handle": "380",
+     "kind": "HELD",
+     "mark": "C8",
+     "outline_mm": [
+      800,
+      250
+     ]
+    },
+    "C9 338": {
+     "BESIDE": "0.041184",
+     "JOINT": "0.187500",
+     "OVERLAP_CROSSING": "0.000000",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.144538",
+     "UNION": "0.042962",
+     "ZONES": "0.084146",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "0.450163",
+       "axis": "OBLIQUE",
+       "beside_m2": "0.054912",
+       "inside_m2": "0.057283",
+       "key": "B13|GF:BAND0034.1|END_COLUMN",
+       "recorded_m": "1.0",
+       "tag": "END_COLUMN"
+      }
+     ],
+     "handle": "338",
+     "kind": "REC",
+     "mark": "C9",
+     "outline_mm": [
+      250,
+      1000
+     ]
+    },
+    "C9 37A": {
+     "BESIDE": "0.275570",
+     "JOINT": "0.187500",
+     "OVERLAP_CROSSING": "0.189203",
+     "OVERLAP_REPEAT": "0",
+     "UNCOVERED": "0.000000",
+     "UNION": "0.187500",
+     "ZONES": "0.652273",
+     "beams": [
+      {
+       "D": "0.75",
+       "along_m": "1.030032",
+       "axis": "OBLIQUE",
+       "beside_m2": "0.106108",
+       "inside_m2": "0.150608",
+       "key": "B13|GF:BAND0034.1|END_COLUMN",
+       "recorded_m": "1.0",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "1.000025",
+       "axis": "X",
+       "beside_m2": "0.200711",
+       "inside_m2": "0.250000",
+       "key": "B17|GF:BAND0044.1|END_COLUMN",
+       "recorded_m": "1.0",
+       "tag": "END_COLUMN"
+      },
+      {
+       "D": "0.75",
+       "along_m": "0.404065",
+       "axis": "Y",
+       "beside_m2": "0.060608",
+       "inside_m2": "0.101662",
+       "key": "B21|GF:BAND0042|END_COLUMN",
+       "recorded_m": "1.0",
+       "tag": "END_COLUMN (carried member over a real support: the support is read)"
+      }
+     ],
+     "handle": "37A",
+     "kind": "REC",
+     "mark": "C9",
+     "outline_mm": [
+      1000,
+      250
+     ]
+    }
+   },
+   "joint_head_J_m3": "2.281250",
+   "notes": [
+    "B20 GF:BAND0043.1|GF:BAND0043.2 at 368: beside-support strip 0.090075 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "B24 GF:BAND0046.1|GF:BAND0046.2 at 335: beside-support strip 0.094323 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "B26 GF:BAND0047.1|GF:BAND0047.2: gap under carried member 386: the beam line bills it (T-229), not a support zone",
+    "B7: complete closing-face set of T-576 (R-T576-3): curved / ring pieces have no T-229 end record; carriers at drawn widths",
+    "CB1 GF:BAND0041.1|GF:BAND0041.2 at 344: beside-support strip 0.057154 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess",
+    "CB8 GF:BAND0040.1|GF:BAND0040.2 at 383: beside-support strip 0.018082 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess"
+   ],
+   "residual_m3": "0.740916",
+   "statement_pair_residual_m3": "0.620464",
+   "terms": [
+    [
+     "OVERLAP_CROSSING",
+     "C2 32C",
+     "0.015699"
+    ],
+    [
+     "BESIDE",
+     "C2 32C",
+     "0.000363"
+    ],
+    [
+     "UNCOVERED",
+     "C2 32C",
+     "-0.000086"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C2 32F",
+     "0.019801"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C2 32F",
+     "0.015773"
+    ],
+    [
+     "BESIDE",
+     "C2 32F",
+     "0.000569"
+    ],
+    [
+     "UNCOVERED",
+     "C2 32F",
+     "-0.005080"
+    ],
+    [
+     "BESIDE",
+     "C5 332",
+     "0.000696"
+    ],
+    [
+     "UNCOVERED",
+     "C5 332",
+     "-0.037953"
+    ],
+    [
+     "BESIDE",
+     "C9 338",
+     "0.041184"
+    ],
+    [
+     "UNCOVERED",
+     "C9 338",
+     "-0.144538"
+    ],
+    [
+     "BESIDE",
+     "C2 33B",
+     "0.000199"
+    ],
+    [
+     "UNCOVERED",
+     "C2 33B",
+     "-0.000219"
+    ],
+    [
+     "BESIDE",
+     "C2 33E",
+     "0.000012"
+    ],
+    [
+     "UNCOVERED",
+     "C2 33E",
+     "-0.000047"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C1 341",
+     "0.039965"
+    ],
+    [
+     "BESIDE",
+     "C1 341",
+     "0.000024"
+    ],
+    [
+     "UNCOVERED",
+     "C1 341",
+     "-0.000043"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C3 344",
+     "0.075000"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C 34A",
+     "0.015749"
+    ],
+    [
+     "BESIDE",
+     "C 34A",
+     "0.001063"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C 34A",
+     "0.059429"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C 34D",
+     "0.029471"
+    ],
+    [
+     "BESIDE",
+     "C 34D",
+     "0.000709"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C 34D",
+     "0.059783"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C3 353",
+     "0.019797"
+    ],
+    [
+     "BESIDE",
+     "C3 353",
+     "0.000452"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C3 353",
+     "0.079746"
+    ],
+    [
+     "BESIDE",
+     "C 356",
+     "0.000572"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C 356",
+     "0.031958"
+    ],
+    [
+     "BESIDE",
+     "C 359",
+     "0.000010"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C 359",
+     "0.059963"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C5 35F",
+     "0.015990"
+    ],
+    [
+     "BESIDE",
+     "C5 35F",
+     "0.000018"
+    ],
+    [
+     "UNCOVERED",
+     "C5 35F",
+     "-0.043019"
+    ],
+    [
+     "BESIDE",
+     "C6 362",
+     "0.000002"
+    ],
+    [
+     "UNCOVERED",
+     "C6 362",
+     "-0.017535"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C3 365",
+     "0.015992"
+    ],
+    [
+     "BESIDE",
+     "C3 365",
+     "0.000008"
+    ],
+    [
+     "UNCOVERED",
+     "C3 365",
+     "-0.013512"
+    ],
+    [
+     "OUTSIDE_SET_OPEN",
+     "C7 368",
+     "0.149875"
+    ],
+    [
+     "BESIDE",
+     "C3 36B",
+     "0.000059"
+    ],
+    [
+     "UNCOVERED",
+     "C3 36B",
+     "-0.010079"
+    ],
+    [
+     "BESIDE",
+     "C8 36E",
+     "0.013189"
+    ],
+    [
+     "UNCOVERED",
+     "C8 36E",
+     "-0.053345"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C10 371",
+     "0.121211"
+    ],
+    [
+     "BESIDE",
+     "C10 371",
+     "0.035689"
+    ],
+    [
+     "UNCOVERED",
+     "C10 371",
+     "-0.001338"
+    ],
+    [
+     "BESIDE",
+     "C5 374",
+     "0.000135"
+    ],
+    [
+     "UNCOVERED",
+     "C5 374",
+     "-0.022675"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C4 377",
+     "0.062221"
+    ],
+    [
+     "BESIDE",
+     "C4 377",
+     "0.094780"
+    ],
+    [
+     "OVERLAP_CROSSING",
+     "C9 37A",
+     "0.189203"
+    ],
+    [
+     "BESIDE",
+     "C9 37A",
+     "0.275570"
+    ],
+    [
+     "OVERLAP_REPEAT",
+     "C11 37D",
+     "0.206250"
+    ],
+    [
+     "BESIDE",
+     "C11 37D",
+     "0.079543"
+    ],
+    [
+     "UNCOVERED",
+     "C11 37D",
+     "-0.027500"
+    ],
+    [
+     "BESIDE",
+     "C8 380",
+     "0.000004"
+    ],
+    [
+     "OUTSIDE_SET_HELD",
+     "C8 380",
+     "0.119940"
+    ],
+    [
+     "SHORT",
+     "B13",
+     "-0.197746"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B17 GF:BAND0044.1 -> GF:BAND0041.2",
+     "0.118125"
+    ],
+    [
+     "SHORT",
+     "B17",
+     "-0.399078"
+    ],
+    [
+     "SHORT",
+     "B2",
+     "-0.000073"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B20 GF:BAND0043.2 -> GF:BAND0025.1",
+     "0.060000"
+    ],
+    [
+     "SHORT",
+     "B20",
+     "-0.029881"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B21 GF:BAND0042 -> GF:BAND0019.3",
+     "0.067500"
+    ],
+    [
+     "SHORT",
+     "B21",
+     "-0.081271"
+    ],
+    [
+     "SHORT",
+     "B24",
+     "-0.114645"
+    ],
+    [
+     "BEYOND",
+     "B26",
+     "0.036555"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B29 GF:BAND0008 -> GF:BAND0045",
+     "0.093750"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B29 GF:BAND0008 -> GF:BAND0042",
+     "0.075000"
+    ],
+    [
+     "SHORT",
+     "B29",
+     "-0.167100"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B3 GF:BAND0007 -> GF:BAND0021.2",
+     "0.016000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B3 GF:BAND0007 -> GF:BAND0045",
+     "0.040000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B3 GF:BAND0023.2 -> GF:BAND0036.1",
+     "0.020000"
+    ],
+    [
+     "SHORT",
+     "B3",
+     "-0.143970"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0004 -> GF:BAND0001",
+     "0.020000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0004 -> GF:BAND0037.1",
+     "0.030000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0010 -> GF:BAND0042",
+     "0.040000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0010 -> GF:BAND0047.2",
+     "0.065000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0011 -> GF:BAND0010",
+     "0.020000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0011 -> GF:BAND0044.1",
+     "0.045000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0012 -> GF:BAND0014",
+     "0.020000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0012 -> GF:BAND0029.2",
+     "0.020000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0018 -> GF:BAND0048.2",
+     "0.090000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0018 -> GF:BAND0045",
+     "0.050000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B4 GF:BAND0030.1 -> GF:BAND0014",
+     "0.020000"
+    ],
+    [
+     "SHORT",
+     "B4",
+     "-0.407324"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B5 GF:BAND0017 -> GF:BAND0048.1",
+     "0.090000"
+    ],
+    [
+     "SHORT",
+     "B5",
+     "-0.106666"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 BAND0006 end -> B8 BAND0003",
+     "0.030000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 BAND0006 end -> CB1 BAND0041.2",
+     "0.052500"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring NW arc 2EE -> B8 face 46D",
+     "0.030000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring SW arc 2EF -> B8 face 46D",
+     "0.030000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring SW arc 2EF -> B17 face 42D",
+     "0.067500"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring SE arc 312 -> B17 face 42D",
+     "0.067500"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring SE arc 312 -> CB1 face 2A9",
+     "0.052500"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "B7 ring NE arc 313 -> CB1 face 2A9",
+     "0.052500"
+    ],
+    [
+     "SHORT",
+     "B7",
+     "-0.177978"
+    ],
+    [
+     "SHORT",
+     "B9",
+     "-0.030263"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB1 GF:BAND0041.2 -> GF:BAND0046.2",
+     "0.131250"
+    ],
+    [
+     "SHORT",
+     "CB1",
+     "-0.072509"
+    ],
+    [
+     "SHORT",
+     "CB2",
+     "-0.055008"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB3 GF:BAND0019.1 -> GF:BAND0045",
+     "0.075000"
+    ],
+    [
+     "SHORT",
+     "CB3",
+     "-0.080718"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB4 GF:BAND0021.1 -> GF:BAND0048.1",
+     "0.090000"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB4 GF:BAND0021.2 -> GF:BAND0043.2",
+     "0.040000"
+    ],
+    [
+     "SHORT",
+     "CB4",
+     "-0.115955"
+    ],
+    [
+     "BEYOND",
+     "CB5",
+     "0.000040"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB6 GF:BAND0029.1 -> GF:BAND0028",
+     "0.030000"
+    ],
+    [
+     "SHORT",
+     "CB6",
+     "-0.030015"
+    ],
+    [
+     "SHORT",
+     "CB7",
+     "-0.000046"
+    ],
+    [
+     "CARRIER_CROSSING",
+     "CB8 GF:BAND0039 -> GF:BAND0014",
+     "0.045000"
+    ],
+    [
+     "SHORT",
+     "CB8",
+     "-0.216505"
+    ],
+    [
+     "UNCOVERED",
+     "C11 35C",
+     "-0.233750"
+    ]
+   ],
+   "through_support_T_m3": "3.022166"
+  }
+ },
+ "verdicts": {
+  "BESIDE": "named geometry: his strip beside a narrower column (beam wider than the column); owner per line (T-229 / T-610), not a joint",
+  "BEYOND": "his length beyond every drawn support zone of the mark: UNRESOLVED by mark unless named",
+  "CARRIER_CROSSING": "ENGINE_RIGHT where realised: his framing beam row through a carrier beam that the carrier line already bills (beam-beam crossing, R-T610-1 owner)",
+  "OUTSIDE_SET_OPEN / HELD / NOLINE": "RULE_DIFFERENCE matched joint whose column partner is outside the compared set (D_ctrl open, HELD line, no line): the joint exists once under UP-CONC-JOINT-001; HELD partners stay HELD, never 0",
+  "OVERLAP_CROSSING / OVERLAP_REPEAT": "ENGINE_RIGHT where his rows reach: one solid inside one column billed by two of his beam rows; the engine bills it once (column line)",
+  "SHORT": "his row stops inside the support set of the mark: not apportioned to a support (his rows carry no location); a named negative term, never 0",
+  "UNCOVERED": "ENGINE_RIGHT: the column head A x D_ctrl outside every beam strip of his; his columns stop at one soffit depth, his beams are narrower than the column: that concrete is in none of his rows"
+ }
+}
