@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T10:49Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-598 CLAIMED W2 10:40; T-590 / T-594 / T-596 / T-597 TODO) | self-check pending
 - 2026-11-07T10:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T09:58Z | Verifier | SUCCESS | T-595, T-593, T-591 | 3x GATE A PASS MERGED (engine push 0b2f8d21; 2 CODEMAP-only conflicts rebuilt), research, no quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own DXF reads: dome ring 4 x d14 per section both faces CONFIRMED -> east ring low 0.144289 t, bounded low 0.789554 t AGREE; F10 280x140x50 + F 90x80x30, outline 3250x1400 -> S02 1.960..2.275 m3, footing low 7.6285 AGREE; arch120 jambs 0.15 -> A-1F-01 0.30 lm FREELANCER_RIGHT (unwired). F-C-T593-1: SLOPED + ZIGZAG stair skirting are two forms of one element, never summed at Gate B. No owner question. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T09:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-591 READY (W2 eed6409a), T-593 READY (W3 427f3162), T-595 READY (W1 0d8ccd00) | self-check pending
