@@ -1,0 +1,403 @@
+{
+ "E1_fronts": [
+  {
+   "handle": "36E",
+   "layer": "5",
+   "length_m": 2.8
+  },
+  {
+   "handle": "36C",
+   "layer": "5",
+   "length_m": 2.8
+  },
+  {
+   "handle": "36A",
+   "layer": "5",
+   "length_m": 2.8
+  },
+  {
+   "handle": "30B",
+   "layer": "5",
+   "length_m": 2.8
+  },
+  {
+   "handle": "30A",
+   "layer": "5",
+   "length_m": 2.8
+  }
+ ],
+ "E1_width_dimension_A06_m": 2.8,
+ "drawing": "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (architectural DXF), read by handle",
+ "openings": {
+  "D-2F-01": {
+   "block": "D115",
+   "block_span_m": 1.0,
+   "edges_on_face": [],
+   "face_lines_through_opening": [],
+   "id_source": "own read: the only 1.00 door block (D115) of the 2F stair lobby wall; T-175 / T-150: 2F lobby -> roof, 1.00, wall 0.150",
+   "insert": "12BA",
+   "levels_side_neg": [
+    {
+     "distance_m": 1.121,
+     "handle": "134E",
+     "level": "+9.70",
+     "walls_crossed": 0
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 3.835,
+     "handle": "1352",
+     "level": "+9.70",
+     "walls_crossed": 0
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-01": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face": [
+    {
+     "handle": "172",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.0
+    },
+    {
+     "handle": "173",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.05
+    }
+   ],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 (insert 15E, D120)",
+   "insert": "15E",
+   "levels_side_neg": [
+    {
+     "distance_m": 1.837,
+     "handle": "394",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.629,
+     "handle": "A86",
+     "level": "+-0.00",
+     "walls_crossed": 0
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 1.318,
+     "handle": "401",
+     "level": "+0.30",
+     "walls_crossed": 0
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-03": {
+   "block": "d220",
+   "block_span_m": 0.9,
+   "edges_on_face": [
+    {
+     "handle": "1C6",
+     "layer": "5",
+     "length_m": 0.8,
+     "offset_from_face_y0_m": 0.0
+    },
+    {
+     "handle": "1C7",
+     "layer": "2",
+     "length_m": 0.8,
+     "offset_from_face_y0_m": 0.05
+    }
+   ],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 control (insert 1B5, d220)",
+   "insert": "1B5",
+   "levels_side_neg": [
+    {
+     "distance_m": 4.509,
+     "handle": "409",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.606,
+     "handle": "394",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.674,
+     "handle": "401",
+     "level": "+0.30",
+     "walls_crossed": 2
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 1.142,
+     "handle": "403",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.004,
+     "handle": "405",
+     "level": "+0.30",
+     "walls_crossed": 4
+    },
+    {
+     "distance_m": 5.391,
+     "handle": "407",
+     "level": "+0.15",
+     "walls_crossed": 4
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-05": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face": [
+    {
+     "handle": "19C",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.0
+    },
+    {
+     "handle": "19D",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.05
+    }
+   ],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 (insert 192, D120)",
+   "insert": "192",
+   "levels_side_neg": [
+    {
+     "distance_m": 0.616,
+     "handle": "407",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.918,
+     "handle": "409",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.948,
+     "handle": "411",
+     "level": "+1.00",
+     "walls_crossed": 2
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 0.791,
+     "handle": "405",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.172,
+     "handle": "403",
+     "level": "+0.30",
+     "walls_crossed": 2
+    }
+   ],
+   "lines_beyond_face": [
+    {
+     "handle": "3CB",
+     "layer": "5",
+     "length_m": 1.0,
+     "offset_from_face_y0_m": -1.2
+    }
+   ]
+  },
+  "D-GF-06": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face": [],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 (insert 33E, D120)",
+   "insert": "33E",
+   "levels_side_neg": [
+    {
+     "distance_m": 3.514,
+     "handle": "409",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.957,
+     "handle": "40F",
+     "level": "+1.00",
+     "walls_crossed": 2
+    },
+    {
+     "distance_m": 5.392,
+     "handle": "413",
+     "level": "+1.00",
+     "walls_crossed": 2
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 1.5,
+     "handle": "411",
+     "level": "+1.00",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 4.814,
+     "handle": "407",
+     "level": "+0.15",
+     "walls_crossed": 2
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-07": {
+   "block": "D200",
+   "block_span_m": 2.0,
+   "edges_on_face": [],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 entrance note (insert 281, D200)",
+   "insert": "281",
+   "levels_side_neg": [
+    {
+     "distance_m": 3.388,
+     "handle": "411",
+     "level": "+1.00",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.663,
+     "handle": "409",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.268,
+     "handle": "4AE",
+     "level": "+0.15",
+     "walls_crossed": 2
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 2.8,
+     "handle": "40F",
+     "level": "+1.00",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.518,
+     "handle": "413",
+     "level": "+1.00",
+     "walls_crossed": 2
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-09": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face": [
+    {
+     "handle": "3FD",
+     "layer": "5",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": -0.0
+    },
+    {
+     "handle": "3FE",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.05
+    }
+   ],
+   "face_lines_through_opening": [],
+   "id_source": "T-260 (insert 3FF, D120)",
+   "insert": "3FF",
+   "levels_side_neg": [],
+   "levels_side_pos": [
+    {
+     "distance_m": 0.912,
+     "handle": "4AC",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 3.874,
+     "handle": "413",
+     "level": "+1.00",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 4.584,
+     "handle": "4AE",
+     "level": "+0.15",
+     "walls_crossed": 2
+    }
+   ],
+   "lines_beyond_face": []
+  },
+  "D-GF-15": {
+   "block": "D120",
+   "block_span_m": 1.0,
+   "edges_on_face": [
+    {
+     "handle": "8F",
+     "layer": "2",
+     "length_m": 0.9,
+     "offset_from_face_y0_m": 0.05
+    }
+   ],
+   "face_lines_through_opening": [
+    {
+     "covers_block_span": true,
+     "handle": "8E",
+     "layer": "5",
+     "length_m": 1.7
+    }
+   ],
+   "id_source": "own read: the D120 block in the sea-side fence line (T-175: gate 1.00 in the 7.00 fence)",
+   "insert": "2D8",
+   "levels_side_neg": [
+    {
+     "distance_m": 0.926,
+     "handle": "A89",
+     "level": "+-0.00",
+     "walls_crossed": 0
+    }
+   ],
+   "levels_side_pos": [
+    {
+     "distance_m": 3.706,
+     "handle": "40B",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    {
+     "distance_m": 5.707,
+     "handle": "40D",
+     "level": "+0.15",
+     "walls_crossed": 0
+    }
+   ],
+   "lines_beyond_face": []
+  }
+ },
+ "schema": "T584_DRAWN_V1",
+ "units": "m"
+}
