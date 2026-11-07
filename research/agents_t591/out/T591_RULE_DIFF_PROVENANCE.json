@@ -1,0 +1,4564 @@
+{
+ "schema": "URBAN_T591_RULE_DIFF_PROVENANCE_V1",
+ "rule": "R-T591-1",
+ "input": "statement V7 (T-587; V6 byte-equal inside it) finishes sections; structural B1 / B10 / B11 = T-590",
+ "pins": {
+  "research/agents_t587/out/RECONCILED_STATEMENT_T587.json": "3cd55327d5d0b960cc8ee5d3b91655a38630af2973533e0d50ca77678bd79745",
+  "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json": "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055",
+  "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json": "22cb3ffc2a747ad3992508717c0840f926def6885f695d8de6e53700821d8c99",
+  "research/agents_t175/T175_OPENING_HOSTS.csv": "d96cfbce9c732db50b7737038b374cab6fc91d5325cc36182416dd0dc35ac3e9",
+  "research/agents_t296/DEDUCTIONS_BY_OPENING_T296.csv": "be797b612f96dd2482c13aa0261aa1bf470abb4046ca0e5f1ee5657af9ec6074"
+ },
+ "q_register_snapshot": "OWNER_QUESTIONS.md index, agents/control @189683b3 (2026-11-07T08:40Z): answered Q-01..Q-78 (not a rule: Q-23, Q-34, Q-36; scenario only: Q-29 S1), open Q-80, withdrawn Q-79",
+ "rows_audited": 119,
+ "rows_live": 117,
+ "outcome_counts_live": {
+  "NONE": 1,
+  "SOURCED": 40,
+  "SOURCED_RECITE": 76
+ },
+ "per_unit_live": {
+  "lm": {
+   "NONE": {
+    "n": 1,
+    "signed": "0.30",
+    "gross": "0.30"
+   },
+   "SOURCED": {
+    "n": 6,
+    "signed": "-15.029396",
+    "gross": "40.541396"
+   },
+   "SOURCED_RECITE": {
+    "n": 21,
+    "signed": "38.82",
+    "gross": "57.02"
+   }
+  },
+  "m2": {
+   "SOURCED": {
+    "n": 34,
+    "signed": "13.166962",
+    "gross": "215.486862"
+   },
+   "SOURCED_RECITE": {
+    "n": 46,
+    "signed": "390.715292",
+    "gross": "421.051290"
+   }
+  },
+  "nr": {
+   "SOURCED_RECITE": {
+    "n": 9,
+    "signed": "95",
+    "gross": "115"
+   }
+  }
+ },
+ "per_unit_all_incl_superseded": {
+  "lm": {
+   "NONE": {
+    "n": 1,
+    "signed": "0.30",
+    "gross": "0.30"
+   },
+   "SOURCED": {
+    "n": 6,
+    "signed": "-15.029396",
+    "gross": "40.541396"
+   },
+   "SOURCED_RECITE": {
+    "n": 23,
+    "signed": "33.92",
+    "gross": "67.52"
+   }
+  },
+  "m2": {
+   "SOURCED": {
+    "n": 34,
+    "signed": "13.166962",
+    "gross": "215.486862"
+   },
+   "SOURCED_RECITE": {
+    "n": 46,
+    "signed": "390.715292",
+    "gross": "421.051290"
+   }
+  },
+  "nr": {
+   "SOURCED_RECITE": {
+    "n": 9,
+    "signed": "95",
+    "gross": "115"
+   }
+  }
+ },
+ "sections": [
+  {
+   "level": "sections",
+   "section_id": "T-541/membrane",
+   "unit": "m2",
+   "rd_rows": 2,
+   "difference": "75.341560",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-5.54644",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-5.54644",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-541/upturn",
+   "unit": "lm",
+   "rd_rows": 1,
+   "difference": "6.165840",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-6.24516",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-6.24516",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "unit": "m2",
+   "rd_rows": 5,
+   "difference": "4.0537",
+   "by_class_before": {
+    "ENGINE_RIGHT": "4.080",
+    "ENGINE_WRONG": "1.4375",
+    "HELD": "13.4050",
+    "RULE_DIFFERENCE": "-14.8694",
+    "TOLERANCE": "0.0006"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "4.080",
+    "ENGINE_WRONG": "1.4375",
+    "HELD": "13.4050",
+    "RULE_DIFFERENCE": "-14.8694",
+    "TOLERANCE": "0.0006"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "unit": "m2",
+   "rd_rows": 12,
+   "difference": "792.8970000",
+   "by_class_before": {
+    "ENGINE_RIGHT": "113.541080",
+    "HELD": "561.2232755",
+    "RULE_DIFFERENCE": "67.945508",
+    "TOLERANCE": "-2.0193005",
+    "UNRESOLVED": "52.206437"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "113.541080",
+    "HELD": "561.2232755",
+    "RULE_DIFFERENCE": "67.945508",
+    "TOLERANCE": "-2.0193005",
+    "UNRESOLVED": "52.206437"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/floor",
+   "unit": "m2",
+   "rd_rows": 2,
+   "difference": "-13.565710",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.307294",
+    "RULE_DIFFERENCE": "-13.235",
+    "TOLERANCE": "-0.023416"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.307294",
+    "RULE_DIFFERENCE": "-13.235",
+    "TOLERANCE": "-0.023416"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/upturn",
+   "unit": "lm",
+   "rd_rows": 4,
+   "difference": "18.537075",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.5183",
+    "HELD": "13.9",
+    "RULE_DIFFERENCE": "3.556",
+    "TOLERANCE": "-0.000625",
+    "UNRESOLVED": "1.6"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.5183",
+    "HELD": "13.9",
+    "RULE_DIFFERENCE": "3.556",
+    "TOLERANCE": "-0.000625",
+    "UNRESOLVED": "1.6"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "unit": "m2",
+   "rd_rows": 12,
+   "difference": "93.52620",
+   "by_class_before": {
+    "ENGINE_RIGHT": "30.672",
+    "HELD": "138.39",
+    "RULE_DIFFERENCE": "-75.53560",
+    "TOLERANCE": "-0.00020"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "30.672",
+    "HELD": "138.39",
+    "RULE_DIFFERENCE": "-75.53560",
+    "TOLERANCE": "-0.00020"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "unit": "m2",
+   "rd_rows": 5,
+   "difference": "969.10690",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-4.3932",
+    "ENGINE_WRONG": "1.62315",
+    "HELD": "856.76500",
+    "RULE_DIFFERENCE": "68.22195",
+    "UNRESOLVED": "46.89"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-4.3932",
+    "ENGINE_WRONG": "1.62315",
+    "HELD": "856.76500",
+    "RULE_DIFFERENCE": "68.22195",
+    "UNRESOLVED": "46.89"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-external",
+   "unit": "m2",
+   "rd_rows": 2,
+   "difference": "1502.840000",
+   "by_class_before": {
+    "ENGINE_RIGHT": "68.089576",
+    "HELD": "1160.366924",
+    "RULE_DIFFERENCE": "194.640",
+    "UNRESOLVED": "79.7435"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "68.089576",
+    "HELD": "1160.366924",
+    "RULE_DIFFERENCE": "194.640",
+    "UNRESOLVED": "79.7435"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "unit": "m2",
+   "rd_rows": 10,
+   "difference": "22.485950",
+   "by_class_before": {
+    "ENGINE_RIGHT": "0.797732",
+    "ENGINE_WRONG": "2.97",
+    "RULE_DIFFERENCE": "15.941912",
+    "TOLERANCE": "-0.028416",
+    "UNRESOLVED": "2.804722"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "0.797732",
+    "ENGINE_WRONG": "2.97",
+    "RULE_DIFFERENCE": "15.941912",
+    "TOLERANCE": "-0.028416",
+    "UNRESOLVED": "2.804722"
+   }
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "unit": "m2",
+   "rd_rows": 9,
+   "difference": "992.17690",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-4.3932",
+    "ENGINE_WRONG": "23.07",
+    "HELD": "856.76500",
+    "RULE_DIFFERENCE": "69.84510",
+    "UNRESOLVED": "46.89"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-4.3932",
+    "ENGINE_WRONG": "23.07",
+    "HELD": "856.76500",
+    "RULE_DIFFERENCE": "69.84510",
+    "UNRESOLVED": "46.89"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "unit": "m2",
+   "rd_rows": 5,
+   "difference": "-0.760",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-1.720",
+    "RULE_DIFFERENCE": "0.960"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-1.720",
+    "RULE_DIFFERENCE": "0.960"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "unit": "m2",
+   "rd_rows": 14,
+   "difference": "8.360",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-3.960",
+    "HELD": "9.84",
+    "RULE_DIFFERENCE": "2.480"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-3.960",
+    "HELD": "9.84",
+    "RULE_DIFFERENCE": "2.480"
+   }
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-573/ceiling-paint",
+   "unit": "m2",
+   "rd_rows": 1,
+   "difference": "57.499323",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-0.1162",
+    "HELD": "36.5200",
+    "RULE_DIFFERENCE": "42.745",
+    "TOLERANCE": "0.124317",
+    "UNRESOLVED": "-21.773794"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-0.1162",
+    "HELD": "36.5200",
+    "RULE_DIFFERENCE": "42.745",
+    "TOLERANCE": "0.124317",
+    "UNRESOLVED": "-21.773794"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-571/lintel-count-implied",
+   "unit": "nr",
+   "rd_rows": 2,
+   "difference": "-6",
+   "by_class_before": {
+    "RULE_DIFFERENCE": "0",
+    "UNRESOLVED": "-6"
+   },
+   "by_class_after": {
+    "RULE_DIFFERENCE": "0",
+    "UNRESOLVED": "-6"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "unit": "lm",
+   "rd_rows": 19,
+   "difference": "85.571408",
+   "by_class_before": {
+    "ENGINE_RIGHT": "32.082629",
+    "RULE_DIFFERENCE": "43.62",
+    "TOLERANCE": "0.175545",
+    "UNRESOLVED": "9.693234"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "32.082629",
+    "RULE_DIFFERENCE": "43.32",
+    "TOLERANCE": "0.175545",
+    "UNRESOLVED": "9.993234"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-pieces",
+   "unit": "nr",
+   "rd_rows": 3,
+   "difference": "96",
+   "by_class_before": {
+    "RULE_DIFFERENCE": "96"
+   },
+   "by_class_after": {
+    "RULE_DIFFERENCE": "96"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-m2",
+   "unit": "m2",
+   "rd_rows": 1,
+   "difference": "-12.9382",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-11.6888",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-1.250",
+    "TOLERANCE": "0.0006"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-11.6888",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-1.250",
+    "TOLERANCE": "0.0006"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-lm",
+   "unit": "lm",
+   "rd_rows": 2,
+   "difference": "-35.13",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-49.13",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-4.9",
+    "UNRESOLVED": "18.9"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-49.13",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-4.9",
+    "UNRESOLVED": "18.9"
+   }
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-nr",
+   "unit": "nr",
+   "rd_rows": 2,
+   "difference": "-56",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-47",
+    "RULE_DIFFERENCE": "-9"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-47",
+    "RULE_DIFFERENCE": "-9"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-lm",
+   "unit": "lm",
+   "rd_rows": 2,
+   "difference": "41.350",
+   "by_class_before": {
+    "ENGINE_RIGHT": "2.950",
+    "HELD": "20.4",
+    "RULE_DIFFERENCE": "9.6",
+    "UNRESOLVED": "8.4"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "2.950",
+    "HELD": "20.4",
+    "RULE_DIFFERENCE": "9.6",
+    "UNRESOLVED": "8.4"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-nr",
+   "unit": "nr",
+   "rd_rows": 2,
+   "difference": "32",
+   "by_class_before": {
+    "HELD": "17",
+    "RULE_DIFFERENCE": "8",
+    "UNRESOLVED": "7"
+   },
+   "by_class_after": {
+    "HELD": "17",
+    "RULE_DIFFERENCE": "8",
+    "UNRESOLVED": "7"
+   }
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-577/marble-lm@V7",
+   "unit": "lm",
+   "rd_rows": 2,
+   "difference": "-35.13",
+   "by_class_before": {
+    "ENGINE_RIGHT": "-49.13",
+    "ENGINE_WRONG": "11.2",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-4.9",
+    "UNRESOLVED": "7.7"
+   },
+   "by_class_after": {
+    "ENGINE_RIGHT": "-49.13",
+    "ENGINE_WRONG": "11.2",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-4.9",
+    "UNRESOLVED": "7.7"
+   }
+  }
+ ],
+ "rows": [
+  {
+   "level": "sections",
+   "section_id": "T-541/membrane",
+   "row": 1,
+   "unit": "m2",
+   "delta": "15.274758",
+   "name": "third dome footprint on the +13.90 roof",
+   "our_side": [
+    {
+     "source": "Q-24",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-29"
+   ],
+   "cited_not_governing": {
+    "Q-29": "skylight reading = scenario S1 only (owner 2026-10-22: approved design keeps the concrete domes); the deduction rests on Q-24 (membrane stops at the dome base, 0.20 m upturn round it) in either scenario"
+   },
+   "his_side": "his roof membrane row takes the +13.90 roof with the third dome footprint inside",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "engine side NONE: the 2F top roof is HELD (Q-34 deferred); the dome footprint is a component only",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-541/membrane",
+   "row": 2,
+   "unit": "m2",
+   "delta": "30.718026",
+   "name": "two +9.70 dome footprints (circles)",
+   "our_side": [
+    {
+     "source": "Q-24",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-29",
+    "Q-24"
+   ],
+   "cited_not_governing": {
+    "Q-29": "skylight reading = scenario S1 only (owner 2026-10-22: approved design keeps the concrete domes); the deduction rests on Q-24 (membrane stops at the dome base, 0.20 m upturn round it) in either scenario"
+   },
+   "his_side": "his roof membrane row keeps both +9.70 dome footprints inside the area",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-541/upturn",
+   "row": 1,
+   "unit": "lm",
+   "delta": "-27.785396",
+   "name": "two +9.70 dome rings (circles)",
+   "our_side": [
+    {
+     "source": "Q-24",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-24"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his upturn row has no ring round the +9.70 domes",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "row": 0,
+   "unit": "m2",
+   "delta": "-4.9225",
+   "name": "1F-ARR LANDING SCOPE",
+   "our_side": [
+    {
+     "source": "Q-66",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-66"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his T-086-era figure keeps the 1F arrival out of the stair bed",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "row": 7,
+   "unit": "m2",
+   "delta": "-5.1794",
+   "name": "E1-LD LANDING SCOPE",
+   "our_side": [
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "he counts the top E1 step as a tread and carries no entrance landing",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "row": 12,
+   "unit": "m2",
+   "delta": "0.0625",
+   "name": "MS1-LD LANDING SCOPE: reference size 1.20 x 1.25 vs drawn 1.25 x 1.15",
+   "our_side": [
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-53"
+   ],
+   "cited_not_governing": {
+    "Q-53": "Q-53 is the stair-bed mortar mix; it does not set a landing size"
+   },
+   "his_side": "the reference figure's own landing size 1.20 x 1.25",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "CLASS QUESTIONED: a size difference against the drawn 1.25 x 1.15, not a convention (Checker to class)",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "row": 24,
+   "unit": "m2",
+   "delta": "-1.38",
+   "name": "RS-A TREAD SCOPE",
+   "our_side": [
+    {
+     "source": "Q-50",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-50"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his figure predates the Q-50 A reconstruction scope",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-534/stair-bed",
+   "row": 25,
+   "unit": "m2",
+   "delta": "-3.45",
+   "name": "RS-S TREAD SCOPE",
+   "our_side": [
+    {
+     "source": "Q-50",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-50"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his figure predates the Q-50 A reconstruction scope",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 8,
+   "unit": "m2",
+   "delta": "2.524107",
+   "name": "GF: height convention: his flat storey heights vs the engine's clear height under each member",
+   "our_side": [
+    {
+     "source": "Q-60",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-MAS-HEIGHT-001",
+     "kind": "RULE",
+     "status": "PROVISIONAL:REQUIRES_CONFIRMATION"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "one flat storey height per storey (GF 3.838211 m, 1F 3.668934 m) on every wall",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 11,
+   "unit": "m2",
+   "delta": "-0.2",
+   "name": "openings GF: GF D-GF-06 vs his 1.00 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 24,
+   "unit": "m2",
+   "delta": "-0.16",
+   "name": "openings GF: GF D-GF-10 vs his 0.80 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 28,
+   "unit": "m2",
+   "delta": "-0.2",
+   "name": "openings GF: GF D-GF-13 vs his 1.00 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 33,
+   "unit": "m2",
+   "delta": "-0.24",
+   "name": "openings 20CM: 20CM D-GF-08 vs his 1.10 x 2.40 / width",
+   "our_side": [
+    {
+     "source": "UP-DOOR-OPEN-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1",
+    "Q-04",
+    "UP-DOOR-OPEN-003"
+   ],
+   "cited_not_governing": {},
+   "his_side": "1.10 m wide = the owner wall-opening minimum, not the drawn 1.000 m",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 43,
+   "unit": "m2",
+   "delta": "-0.16",
+   "name": "openings 1F: 1F D-1F-04 vs his 0.80 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 45,
+   "unit": "m2",
+   "delta": "-0.16",
+   "name": "openings 1F: 1F D-1F-07 vs his 0.80 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 47,
+   "unit": "m2",
+   "delta": "-0.18",
+   "name": "openings 1F: 1F D-1F-08 vs his 0.90 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 48,
+   "unit": "m2",
+   "delta": "-0.18",
+   "name": "openings 1F: 1F D-1F-09 vs his 0.90 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 50,
+   "unit": "m2",
+   "delta": "-0.2",
+   "name": "openings 1F: 1F D-1F-03 vs his 0.90 x 2.40 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-BLOCK-OPENINGS-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-73",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T559-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 68,
+   "unit": "m2",
+   "delta": "-7.298599",
+   "name": "1F: height convention: his flat storey heights vs the engine's clear height under each member",
+   "our_side": [
+    {
+     "source": "Q-60",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-MAS-HEIGHT-001",
+     "kind": "RULE",
+     "status": "PROVISIONAL:REQUIRES_CONFIRMATION"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "one flat storey height per storey (GF 3.838211 m, 1F 3.668934 m) on every wall",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-543/blockwork",
+   "row": 76,
+   "unit": "m2",
+   "delta": "74.4",
+   "name": "boundary wall (his 15 cm section)",
+   "our_side": [
+    {
+     "source": "FAMILY:EXT.FENCE.WALL",
+     "kind": "FAMILY",
+     "status": "PLACEMENT"
+    }
+   ],
+   "cited_in_row": [
+    "R-T507-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his 15 cm boundary wall sits in his blockwork section",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "PLACEMENT, not a convention: the same wall is compared under the fence family (no quantity convention)",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/floor",
+   "row": 1,
+   "unit": "m2",
+   "delta": "0.22",
+   "name": "GF basin space by the stair: passage reveal 0.20 x 1.10 taken into his room (1.55 x 1.10)",
+   "our_side": [
+    {
+     "source": "UP-WP-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-WP-DOOR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "UP-WP-003"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his room 1.55 x 1.10 takes the 0.20 m passage reveal into the room floor",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/floor",
+   "row": 17,
+   "unit": "m2",
+   "delta": "-13.455",
+   "name": "GF pantry (wet zone, Q-37 A): pantry box 4.50 x 3.00 less the column edge 0.900 x 0.050",
+   "our_side": [
+    {
+     "source": "Q-37",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-WET-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-37"
+   ],
+   "cited_not_governing": {},
+   "his_side": "he keeps the pantry in his dry reception row (no wet floor)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/upturn",
+   "row": 2,
+   "unit": "lm",
+   "delta": "1.256",
+   "name": "GF lobby wash (2 basins): lobby to stair hall, no wall",
+   "our_side": [
+    {
+     "source": "Q-35",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-WP-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-35"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his upturn runs the full boundary, open edges included",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/upturn",
+   "row": 6,
+   "unit": "lm",
+   "delta": "0.9",
+   "name": "GF basin space by the stair: basin space to passage, no wall",
+   "our_side": [
+    {
+     "source": "Q-35",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-WP-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-35"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his upturn runs the full boundary, open edges included",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/upturn",
+   "row": 7,
+   "unit": "lm",
+   "delta": "0.4",
+   "name": "GF basin space by the stair: boundary: hand reading vs his perimeter",
+   "our_side": [
+    {
+     "source": "UP-WP-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "Q-35",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his perimeter takes the two 0.20 m reveal returns (2 x 0.20)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "the reveal jamb faces belong to the passage termination (UP-WP-003 PASSAGE clause), not the wall upturn",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-546/upturn",
+   "row": 26,
+   "unit": "lm",
+   "delta": "1",
+   "name": "GF wash by the reception room: arch to the reception room, no leaf, no wall",
+   "our_side": [
+    {
+     "source": "Q-35",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-WP-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-35"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his upturn runs the full boundary, open edges included",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 1,
+   "unit": "m2",
+   "delta": "-4.8191",
+   "name": "GF-12 core W.C. wedge 289 x 167: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 4,
+   "unit": "m2",
+   "delta": "-4.4265",
+   "name": "GF-13 core W.C. wedge 245 x 167: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 9,
+   "unit": "m2",
+   "delta": "-5.37355",
+   "name": "GF-14 wash lobby, 2 basins: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 13,
+   "unit": "m2",
+   "delta": "-4.95625",
+   "name": "GF-16 master bath: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 17,
+   "unit": "m2",
+   "delta": "-3.15",
+   "name": "1F-02 west bath upper 245 x 205: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 22,
+   "unit": "m2",
+   "delta": "-3.15",
+   "name": "1F-03 west bath lower 245 x 205: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 26,
+   "unit": "m2",
+   "delta": "-5.929",
+   "name": "1F-07 laundry: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 30,
+   "unit": "m2",
+   "delta": "-2.289",
+   "name": "1F-08 W.C. 147 x 180: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 34,
+   "unit": "m2",
+   "delta": "-2.66",
+   "name": "1F-09 bath by the laundry: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 38,
+   "unit": "m2",
+   "delta": "-3.045",
+   "name": "1F-12 east bath 210 x 225: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 43,
+   "unit": "m2",
+   "delta": "-3.395",
+   "name": "2F-02 roof-floor W.C. 300 x 185: height: owner tile top vs his flat height",
+   "our_side": [
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CER-009",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat tile height per room on his ceramic sheet, not tied to the decor-ceiling underside",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-547/wall-tile",
+   "row": 46,
+   "unit": "m2",
+   "delta": "-32.3422",
+   "name": "GF-07 open pantry (wet, Q-37 A): room in the engine only",
+   "our_side": [
+    {
+     "source": "Q-37",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-PANTRY-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    }
+   ],
+   "cited_in_row": [
+    "Q-37",
+    "UP-PANTRY-003",
+    "R-T547-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "he keeps the pantry in his dry reception row (no wall tile)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "row": 5,
+   "unit": "m2",
+   "delta": "22.59695",
+   "name": "GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area per room side)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73",
+    "Q-43",
+    "Q-48"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "row": 11,
+   "unit": "m2",
+   "delta": "7.88",
+   "name": "1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area per room side)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73",
+    "Q-43",
+    "Q-48"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "row": 14,
+   "unit": "m2",
+   "delta": "6.285",
+   "name": "1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area per room side)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73",
+    "Q-43",
+    "Q-48"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "row": 26,
+   "unit": "m2",
+   "delta": "5.54",
+   "name": "2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area per room side)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73",
+    "Q-43",
+    "Q-48"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-internal",
+   "row": 31,
+   "unit": "m2",
+   "delta": "25.92",
+   "name": "GF-02 wet space in his dry rows: drawn face 7.2 x his 3.6",
+   "our_side": [
+    {
+     "source": "Q-06",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-WET-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UPC-WETWALL-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-43",
+    "Q-48",
+    "Q-06"
+   ],
+   "cited_not_governing": {},
+   "his_side": "the GF-02 wash space sits in his dry plaster rows (6.75 x 3.60)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-external",
+   "row": 3,
+   "unit": "m2",
+   "delta": "181.806",
+   "name": "his row 72 (NW): domes inside and outside 6 x 3.14 x 9.65: owner item 3 (no domes)",
+   "our_side": [
+    {
+     "source": "OWNER_FILE:OWNER_NOTES_SIGMA_2026-10-21#item 3",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    }
+   ],
+   "cited_in_row": [
+    "R-T567-3"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his row 72: domes inside and outside 6 x 3.14 x 9.65 in the render",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "project-specific (owner item 3)",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-552/plaster-external",
+   "row": 4,
+   "unit": "m2",
+   "delta": "12.834",
+   "name": "his row 73 (NW): pool-court soffit = the candidate's FIN.CEILING line L-23072352a28aeca7b051 (RELEASED 12.834, owner item 4): another line family, not a wall face",
+   "our_side": [
+    {
+     "source": "OWNER_FILE:OWNER_NOTES_SIGMA_2026-10-21#item 4",
+     "kind": "OWNER_FILE",
+     "status": "OWNER"
+    },
+    {
+     "source": "Q-68",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T567-3"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his row 73: the pool-court soffit inside the external render",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "PLACEMENT: owned by the FIN.CEILING line",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 0,
+   "unit": "m2",
+   "delta": "6.124412",
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): round-stair footprint below the cut (treads are B7 marble)",
+   "our_side": [
+    {
+     "source": "UP-CER-001",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "UP-CER-001",
+    "UP-STAIR-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his reception / dining / entrance rows take the round-stair footprint as floor tile",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 1,
+   "unit": "m2",
+   "delta": "0.3",
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): lift landing threshold, certain floor part 1.000 x 0.300",
+   "our_side": [
+    {
+     "source": "UP-ELEV-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    }
+   ],
+   "cited_in_row": [
+    "UP-ELEV-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his room rows run through the lift landing threshold",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 10,
+   "unit": "m2",
+   "delta": "-0.35",
+   "name": "GF doorway strips OP-010 (0.20) + OP-012 (0.15): porcelain strips in door openings between dry rooms",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "UP-THR-001",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "he measures rooms to the wall face: no doorway strip",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 11,
+   "unit": "m2",
+   "delta": "4.9225",
+   "name": "1F living / open stair hall: main-stair arrival +5.50 (marble, own line)",
+   "our_side": [
+    {
+     "source": "Q-66",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-66",
+    "UP-STAIR-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his 1F living rows take the main-stair arrival as tile",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 12,
+   "unit": "m2",
+   "delta": "0.3",
+   "name": "1F living / open stair hall: lift landing threshold, certain floor part",
+   "our_side": [
+    {
+     "source": "UP-ELEV-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    }
+   ],
+   "cited_in_row": [
+    "UP-ELEV-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his room rows run through the lift landing threshold",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 18,
+   "unit": "m2",
+   "delta": "-0.57",
+   "name": "1F doorway strips OP-005 / OP-006 (0.135 each), OP-020, D-1F-03 (0.15 each): porcelain strips in dry door openings",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "UP-THR-001",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "he measures rooms to the wall face: no doorway strip",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 20,
+   "unit": "m2",
+   "delta": "4.875",
+   "name": "2F lobby beyond the stair width (his 'corridor'): main-stair arrival +9.70, printed 2.50 x 1.95 (marble)",
+   "our_side": [
+    {
+     "source": "Q-70",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-70",
+    "UP-STAIR-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his 2F 'corridor' row takes the main-stair arrival as tile",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 21,
+   "unit": "m2",
+   "delta": "0.3",
+   "name": "2F lobby beyond the stair width (his 'corridor'): lift landing threshold, certain floor part",
+   "our_side": [
+    {
+     "source": "UP-ELEV-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    }
+   ],
+   "cited_in_row": [
+    "UP-ELEV-005",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his room rows run through the lift landing threshold",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 23,
+   "unit": "m2",
+   "delta": "-0.18",
+   "name": "2F doorway strip OP-007 (stair room / maid room): porcelain strip 0.90 x 0.20",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "UP-THR-001",
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "he measures rooms to the wall face: no doorway strip",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-553/floor-tile",
+   "row": 25,
+   "unit": "m2",
+   "delta": "0.22",
+   "name": "GF basin space by the stair: passage reveal 0.20 x 1.10 taken into his room (threshold piece, not floor)",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "Q-06",
+     "kind": "Q",
+     "status": "ANSWERED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T553-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his room takes the 0.20 m passage reveal into the floor",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 5,
+   "unit": "m2",
+   "delta": "22.59695",
+   "name": "DRY GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area inside the paint height)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 6,
+   "unit": "m2",
+   "delta": "-1.07685",
+   "name": "DRY GF-15 height: his 3.6 vs the owner G1 paint height 3.65 on face 21.537",
+   "our_side": [
+    {
+     "source": "UPC-HEIGHT-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat paint height per storey (3.60 GF, 3.40 1F / 2F)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 11,
+   "unit": "m2",
+   "delta": "7.88",
+   "name": "DRY 1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area inside the paint height)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 12,
+   "unit": "m2",
+   "delta": "0.885",
+   "name": "DRY 1F-01 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.7",
+   "our_side": [
+    {
+     "source": "UPC-HEIGHT-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat paint height per storey (3.60 GF, 3.40 1F / 2F)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 14,
+   "unit": "m2",
+   "delta": "6.285",
+   "name": "DRY 1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area inside the paint height)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 15,
+   "unit": "m2",
+   "delta": "0.87",
+   "name": "DRY 1F-04 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.4",
+   "our_side": [
+    {
+     "source": "UPC-HEIGHT-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat paint height per storey (3.60 GF, 3.40 1F / 2F)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 26,
+   "unit": "m2",
+   "delta": "5.54",
+   "name": "DRY 2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area inside the paint height)",
+   "our_side": [
+    {
+     "source": "UP-OPEN-SCHED-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-GEN-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "Q-73"
+   ],
+   "cited_not_governing": {
+    "Q-73": "Q-73 / UPC-BLOCK-OPENINGS-001 govern BLOCKWORK deductions; a plaster / paint face deduction is UP-OPEN-SCHED-001 (the opening's own length x its band) under UP-GEN-003"
+   },
+   "his_side": "he deducts half of his own opening list at his net step (owner Sigma item 1: a freelancer practice)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 27,
+   "unit": "m2",
+   "delta": "0.945",
+   "name": "DRY 2F-03 height: his 3.4 vs the owner G1 paint height 3.35 on face 18.9",
+   "our_side": [
+    {
+     "source": "UPC-HEIGHT-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    },
+    {
+     "source": "Q-48",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-48"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one flat paint height per storey (3.60 GF, 3.40 1F / 2F)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections",
+   "section_id": "T-561/paint-internal",
+   "row": 31,
+   "unit": "m2",
+   "delta": "25.92",
+   "name": "DRY GF-02 wet space in his paint rows: drawn face 7.2 x his 3.6 (he also tiles it: his ceramic sheet row 51, T-547)",
+   "our_side": [
+    {
+     "source": "UP-FIN-PAINT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "Q-06",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UPC-WETWALL-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    }
+   ],
+   "cited_in_row": [
+    "UP-FIN-PAINT-001",
+    "Q-06"
+   ],
+   "cited_not_governing": {},
+   "his_side": "the GF-02 wash space in his paint rows (he also tiles it, ceramic row 51)",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "row": 0,
+   "unit": "m2",
+   "delta": "0.200",
+   "name": "GF D-GF-01 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "row": 1,
+   "unit": "m2",
+   "delta": "0.200",
+   "name": "GF D-GF-06 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "row": 3,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "GF D-GF-03 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "row": 5,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "GF D-GF-09 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/alu-doors-m2",
+   "row": 6,
+   "unit": "m2",
+   "delta": "0.200",
+   "name": "2F D-2F-01 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 1,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "GF D-GF-04 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 3,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "GF D-GF-11 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 4,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "GF D-GF-12 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 6,
+   "unit": "m2",
+   "delta": "0.200",
+   "name": "GF D-GF-13 vs his 1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 7,
+   "unit": "m2",
+   "delta": "0.240",
+   "name": "GF D-GF-08 vs his 1.1 x 2.4 / width",
+   "our_side": [
+    {
+     "source": "UP-DOOR-OPEN-003",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "1.10 m wide = the owner wall-opening minimum, not the drawn 1.000 m",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 8,
+   "unit": "m2",
+   "delta": "0.200",
+   "name": "GF D-GF-08 vs his 1.1 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 9,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "1F D-1F-01 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 11,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "1F D-1F-06 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 12,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "1F D-1F-07 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 13,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "1F D-1F-05 vs his 0.9 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 14,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "1F D-1F-08 vs his 0.9 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 15,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "1F D-1F-09 vs his 0.9 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 17,
+   "unit": "m2",
+   "delta": "0.160",
+   "name": "2F D-2F-03 vs his 0.8 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-568/internal-doors-m2",
+   "row": 18,
+   "unit": "m2",
+   "delta": "0.180",
+   "name": "2F D-2F-02 vs his 0.9 x 2.4 / height",
+   "our_side": [
+    {
+     "source": "Q-55",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-DOOR-HGT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "UP-DOOR-AREA-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "every door in his opening list at a flat 2.40 m height",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v5",
+   "section_id": "T-573/ceiling-paint",
+   "row": 5,
+   "unit": "m2",
+   "delta": "42.745",
+   "name": "paint: his cove-light strips 0.10 x 282.85 + 0.10 x 144.60 (no detail drawn; owner Q-57 A mod: actual paintable surfaces)",
+   "our_side": [
+    {
+     "source": "Q-57",
+     "kind": "Q",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CEIL-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "Q-57"
+   ],
+   "cited_not_governing": {},
+   "his_side": "cove-light strips 0.10 m x room perimeters, no detail drawn",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-571/lintel-count-implied",
+   "row": 0,
+   "unit": "nr",
+   "delta": "0",
+   "name": "D-GF-03 vs FL-GF-EXT-09: WIDTH_READ",
+   "our_side": [
+    {
+     "source": "UPC-LINTEL-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his opening width through the owner rule gives the same stock length (0 net)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-571/lintel-count-implied",
+   "row": 1,
+   "unit": "nr",
+   "delta": "0",
+   "name": "D-GF-09 vs FL-GF-EXT-15: WIDTH_READ",
+   "our_side": [
+    {
+     "source": "UPC-LINTEL-001",
+     "kind": "RULEBOOK",
+     "status": "OWNER_CONFIRMED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his opening width through the owner rule gives the same stock length (0 net)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 0,
+   "unit": "lm",
+   "delta": "5.0",
+   "name": "GF open room: reception + dining + entrance zone + open pantry (his reception + dining and entrance rows): doors OP-008 / OP-010 / OP-012 (1.00 each) + OP-021 (2.00), by id (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 1,
+   "unit": "lm",
+   "delta": "12.22",
+   "name": "GF open room: reception + dining + entrance zone + open pantry (his reception + dining and entrance rows): open passages OP-003 11.22 + OP-011 1.00 less the shared run 1.40 = the engine passage run 10.82 (T-296 DEDUCTIONS_BY_OPENING (opening id, width); the 1.40 PASSAGE_RUN_RESIDUAL row is the T-431 addition)",
+   "our_side": [
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 7,
+   "unit": "lm",
+   "delta": "-1.4",
+   "name": "GF open room: reception + dining + entrance zone + open pantry (his reception + dining and entrance rows): shared passage run added back (T-431 binding: the PASSAGE_RUN_RESIDUAL row)",
+   "our_side": [
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 10,
+   "unit": "lm",
+   "delta": "2.0",
+   "name": "GF dewaneya 400 x 630 with the R1.10 corner: door OP-009 1.00 + arch OP-027 1.00 (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 13,
+   "unit": "lm",
+   "delta": "1.8",
+   "name": "GF master bed room: doors OP-012 1.00 + D-GF-14 0.80 (en-suite closure, T-237 width)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 17,
+   "unit": "lm",
+   "delta": "1.7",
+   "name": "GF driver room 175 x 450: doors OP-005 0.90 + OP-026 0.80 (T-296 DEDUCTIONS_BY_OPENING (opening id, width); W04 base released, T-422)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 18,
+   "unit": "lm",
+   "delta": "4.7",
+   "name": "1F living / open stair hall: doors OP-005 / OP-006 / OP-008 (0.90 each) + OP-020 1.00 + D-1F-03 1.00 (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 19,
+   "unit": "lm",
+   "delta": "1.0",
+   "name": "1F living / open stair hall: open passage OP-007 1.00 (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 21,
+   "unit": "lm",
+   "delta": "2.2",
+   "name": "1F living / open stair hall: W13 1.20 + W25 1.00 faces owned by the stair (MS2-LD / MS2-L / MS1 pieces, T-501 / T-508: one face one owner)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "REGISTER:STAIR SKIRTING vs ROOM SKIRTING",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his 1F living perimeter runs along W13 1.20 + W25 1.00, faces the stair owns",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 24,
+   "unit": "lm",
+   "delta": "1.7",
+   "name": "1F curved east bed room with its lobby (his 'bed room 1'): doors OP-006 0.90 + OP-018 0.80 (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 27,
+   "unit": "lm",
+   "delta": "0.9",
+   "name": "1F bed room 380 x 430 + dressing 165 x 180 (his 'bed room 2'): door OP-005 0.90 (T-296 DEDUCTIONS_BY_OPENING (opening id, width))",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 28,
+   "unit": "lm",
+   "delta": "0.8",
+   "name": "1F bed room 380 x 430 + dressing 165 x 180 (his 'bed room 2'): door D315 0.80 (T-483 walk by handle)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 29,
+   "unit": "lm",
+   "delta": "0.30",
+   "name": "1F bed room 380 x 430 + dressing 165 x 180 (his 'bed room 2'): his arch reveal returns 2 x 0.15 (his outline 2 x (3.80 + 4.30) + 2 x (1.65 + 1.80) - 2 x 1.00 + 2 x 0.15 = 21.40, T-218): a jamb takes no skirting (R-T443-1)",
+   "our_side": [],
+   "cited_in_row": [
+    "R-T443-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his outline adds the two 0.15 m jamb returns of the doorless arch (2 x 0.15 = 0.30 lm)",
+   "outcome": "NONE",
+   "provisional": false,
+   "class_after": "UNRESOLVED",
+   "flag": "candidate ENGINE_WRONG 0.30 lm if the Checker confirms the arch jambs meet the method's conditions",
+   "contrary_rule": "URBAN-SKIRTING-OPENING-METHOD DOORLESS_OPENING real_floor_side_jambs INCLUDED (conditions: no door, real jamb, eligible side, floor reaches it, not a full-tile room) and UP-SKIRT-001 1.4.0 doorless_opening_jambs included; the row's R-T443-1 says 'door jambs never', which does not cover a doorless arch",
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 30,
+   "unit": "lm",
+   "delta": "1.8",
+   "name": "1F bed room 500 x 365 (his 'bed room 3'): doors D-1F-03 1.00 + D-1F-04 0.80 (T-296 DEDUCTIONS_BY_OPENING (opening id, width); W24 base released, T-422)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 32,
+   "unit": "lm",
+   "delta": "1.8",
+   "name": "1F west bed room 425 x 450 (his 'bed room 4'): doors OP-004 0.80 + OP-020 1.00 (T-296 DEDUCTIONS_BY_OPENING (opening id, width); W14 base released, T-422)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 35,
+   "unit": "lm",
+   "delta": "1.7",
+   "name": "2F maid room 300 x 645: doors OP-006 0.80 + OP-007 0.90 (T-296 DEDUCTIONS_BY_OPENING (opening id, width); W29 base released, T-422)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 37,
+   "unit": "lm",
+   "delta": "1.9",
+   "name": "2F corridor = stair-room lobby + arrival (T-443 children; parent NOT_APPLICABLE): door OP-007 0.90 + lift opening OP-002 1.00 whole, no jambs (T-443; register LIFT DOOR GAP)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-DOOR-CLS-005",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 38,
+   "unit": "lm",
+   "delta": "1.0",
+   "name": "2F corridor = stair-room lobby + arrival (T-443 children; parent NOT_APPLICABLE): door OP-001 1.00 (T-443)",
+   "our_side": [
+    {
+     "source": "UP-CER-003",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his room perimeter rows are gross outlines with no opening deducted (tiles sheet C13..C29)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-room",
+   "row": 39,
+   "unit": "lm",
+   "delta": "2.5",
+   "name": "2F corridor = stair-room lobby + arrival (T-443 children; parent NOT_APPLICABLE): slab-opening / flight-top edge 2.50 with no floor (R-T410-1, B12; T-443)",
+   "our_side": [
+    {
+     "source": "URBAN-SKIRTING-OPENING-METHOD",
+     "kind": "OWNER_METHOD",
+     "status": "OWNER"
+    },
+    {
+     "source": "UP-SKIRT-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [
+    "R-T410-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "his 2F corridor perimeter runs along the flight-top slab edge (no floor)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-pieces",
+   "row": 0,
+   "unit": "nr",
+   "delta": "5",
+   "name": "ST-03 entrance (E1): stair-side pieces per step (nr): his pieces per step are counted in nr; our flight skirting is lm (B7-07 / B7-08), never converted (no printed piece size); count check: drawn risers 5 = his 5 (E1.S)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "stair-side skirting counted as pieces per step (nr)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-pieces",
+   "row": 1,
+   "unit": "nr",
+   "delta": "63",
+   "name": "ST-01 main: stair-side pieces per step (nr): his pieces per step are counted in nr; our flight skirting is lm (B7-07 / B7-08), never converted (no printed piece size); count check: his 63 vs 52 .. 54 risers drawn (T-084: +9 .. +11 not on any drawing read)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "stair-side skirting counted as pieces per step (nr)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-574/skirting-pieces",
+   "row": 2,
+   "unit": "nr",
+   "delta": "28",
+   "name": "ST-02 round (inner): stair-side pieces per step (nr): his pieces per step are counted in nr; our flight skirting is lm (B7-07 / B7-08), never converted (no printed piece size); count check: the plan's 28 = his 28 (T-084)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "stair-side skirting counted as pieces per step (nr)",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-m2",
+   "row": 1,
+   "unit": "m2",
+   "delta": "-1.250",
+   "name": "DRY: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "NO_ROW: none of his 885 rows names a doorway strip; may sit in his room floor rows",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-lm",
+   "row": 1,
+   "unit": "lm",
+   "delta": "-7.7",
+   "name": "DRY: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "NO_ROW: none of his 885 rows names a doorway strip; may sit in his room floor rows",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep",
+   "contrary_rule": null,
+   "live": false,
+   "superseded_by": "T-577/marble-lm@V7"
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-lm",
+   "row": 11,
+   "unit": "lm",
+   "delta": "2.8",
+   "name": "E1_STEPS: his 5th step x 2.80 = the top step to the landing, which the candidate books as the landing 1.40 x 3.70 (T-534: the top E1 step is the landing edge, not a tread)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his fifth E1 step x 2.80 = the top step to the landing",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": false,
+   "superseded_by": "T-577/marble-lm@V7"
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-nr",
+   "row": 1,
+   "unit": "nr",
+   "delta": "-10",
+   "name": "DRY: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "NO_ROW: none of his 885 rows names a doorway strip; may sit in his room floor rows",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v6",
+   "section_id": "T-577/marble-nr",
+   "row": 5,
+   "unit": "nr",
+   "delta": "1",
+   "name": "E1_STEPS: 4 treads printed (T-490) vs his 5 steps: his top step is our landing edge",
+   "our_side": [
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his fifth E1 step x 2.80 = the top step to the landing",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-lm",
+   "row": 2,
+   "unit": "lm",
+   "delta": "7.2",
+   "name": "ST-01: 6 arrival edges (landing / floor): his piece per riser, our step per tread (UP-STAIR-008, R-T412-1; the edge is a B7-05 nosing)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-008",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    },
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "UP-STAIR-008",
+    "R-T412-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one piece per riser, the arrival edge included",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-lm",
+   "row": 6,
+   "unit": "lm",
+   "delta": "2.4",
+   "name": "ST-02: 2 arrival edges (landing / floor): his piece per riser, our step per tread (UP-STAIR-008, R-T412-1; the edge is a B7-05 nosing)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-008",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    },
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [
+    "UP-STAIR-008",
+    "R-T412-1"
+   ],
+   "cited_not_governing": {},
+   "his_side": "one piece per riser, the arrival edge included",
+   "outcome": "SOURCED",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-nr",
+   "row": 1,
+   "unit": "nr",
+   "delta": "6",
+   "name": "ST-01: arrival edges counted as pieces by him",
+   "our_side": [
+    {
+     "source": "UP-STAIR-008",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    },
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "arrival edges counted as pieces",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-584/stair-steps-nr",
+   "row": 4,
+   "unit": "nr",
+   "delta": "2",
+   "name": "ST-02: arrival edges counted as pieces by him",
+   "our_side": [
+    {
+     "source": "UP-STAIR-008",
+     "kind": "RULE",
+     "status": "RULE_STORE_DEFAULT"
+    },
+    {
+     "source": "UP-STAIR-004",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "arrival edges counted as pieces",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-577/marble-lm@V7",
+   "row": 1,
+   "unit": "lm",
+   "delta": "-7.7",
+   "name": "DRY: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+   "our_side": [
+    {
+     "source": "UP-THR-001",
+     "kind": "RULE",
+     "status": "OWNER_APPROVED"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "NO_ROW: none of his 885 rows names a doorway strip; may sit in his room floor rows",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": "CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep",
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-577/marble-lm@V7",
+   "row": 11,
+   "unit": "lm",
+   "delta": "2.8",
+   "name": "E1_STEPS: his 5th step x 2.80 = the top step to the landing, which the candidate books as the landing 1.40 x 3.70 (T-534: the top E1 step is the landing edge, not a tread)",
+   "our_side": [
+    {
+     "source": "UP-STAIR-002",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    },
+    {
+     "source": "UP-STAIR-005",
+     "kind": "RULE",
+     "status": "RULE_STORE_MANDATORY"
+    }
+   ],
+   "cited_in_row": [],
+   "cited_not_governing": {},
+   "his_side": "his fifth E1 step x 2.80 = the top step to the landing",
+   "outcome": "SOURCED_RECITE",
+   "provisional": false,
+   "class_after": "RULE_DIFFERENCE",
+   "flag": null,
+   "contrary_rule": null,
+   "live": true,
+   "superseded_by": null
+  }
+ ],
+ "doorless_jamb_check": [
+  {
+   "opening": "A-1F-01 / 1F OP-011",
+   "line_t296": "L-a8aea28451168e4032b6",
+   "wall_t_m": "0.15",
+   "sides": "1F bed room 380 x 430 | dressing passage (both dry)",
+   "conditions": "no door (census kind OPENING, arch); real masonry jamb 0.15; both sides skirting-eligible dry rooms; floor porcelain continues through (UP-THR-001 dry strip); not a full-tile room",
+   "status": "CONDITIONS_MET",
+   "jamb_lm": "0.30",
+   "statement_row": "T-574/skirting-room row 29",
+   "verdict_proposal": "ENGINE_WRONG 0.30 lm (his 2 x 0.15 agrees with the owner method)"
+  },
+  {
+   "opening": "A-GF-01 / GF OP-027",
+   "line_t296": "L-d32414916cfbd04c27be",
+   "wall_t_m": "0.15",
+   "sides": "dewaneya | wash by the dewaneya (wet, Q-06 A)",
+   "conditions": "the floor at the jambs is the wet doorway's marble threshold (UP-THR-001 wet), not the dry floor finish: 'the floor finish reaches the jamb' fails (register: a marble-threshold opening into a full-tile wet space takes no skirting)",
+   "status": "NOT_APPLICABLE",
+   "jamb_lm": "0",
+   "statement_row": "none (his gross row has no jambs either)",
+   "verdict_proposal": "none"
+  },
+  {
+   "opening": "P-GF-01 / GF OP-020",
+   "line_t296": "(T-443 stair hall child)",
+   "wall_t_m": "0.20",
+   "sides": "GF stair hall doorless 0.90 opening with head lines",
+   "conditions": "doorless with a real head; already the candidate's HELD line SKIRT-T443:GF-ST-HALL:OP-020-JAMBS",
+   "status": "HELD_LINE_EXISTS",
+   "jamb_lm": "0.40 (held, its own cause)",
+   "statement_row": "none",
+   "verdict_proposal": "none (carried by its HELD line)"
+  },
+  {
+   "opening": "P-GF-04 / GF OP-003 11.22",
+   "line_t296": "L-71e2e002a3af624097f0 / L-af6fb2d3474c5fbdb80a",
+   "wall_t_m": "none",
+   "sides": "open side along the side passage (Q-67)",
+   "conditions": "an open side in no wall run, not an opening in a wall: the opening method does not apply",
+   "status": "NOT_AN_OPENING",
+   "jamb_lm": "0",
+   "statement_row": "T-574/skirting-room row 1",
+   "verdict_proposal": "none"
+  },
+  {
+   "opening": "GF OP-011 (no census id)",
+   "line_t296": "L-71e2e002a3af624097f0",
+   "wall_t_m": "not established",
+   "sides": "GF open room",
+   "conditions": "no host record (T-175): door / doorless and jamb depth not established",
+   "status": "HELD",
+   "jamb_lm": "HELD (2 x wall thickness, never 0)",
+   "statement_row": "T-574/skirting-room row 1",
+   "verdict_proposal": "UNRESOLVED until the opening is read"
+  },
+  {
+   "opening": "1F OP-007 (no census id)",
+   "line_t296": "L-ba3599ec2dc82c221617",
+   "wall_t_m": "not established",
+   "sides": "1F living / open stair hall",
+   "conditions": "no host record (T-175): jamb depth not established",
+   "status": "HELD",
+   "jamb_lm": "HELD (2 x wall thickness, never 0)",
+   "statement_row": "T-574/skirting-room row 19",
+   "verdict_proposal": "UNRESOLVED until the opening is read"
+  }
+ ],
+ "released_quantities_changed": 0
+}
