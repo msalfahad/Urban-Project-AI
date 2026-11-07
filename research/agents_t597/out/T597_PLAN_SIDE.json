@@ -1,0 +1,1469 @@
+{
+ "b1_rows": [
+  {
+   "cause": "the engine's pool envelope was a polygonised buffer (inscribed chords): its arc parts are smaller, so the pits gave up 2.694820 instead of the exact 2.695761 m2",
+   "depth": "HELD by name: S01 ESTIMATED founding (RFI-S01, Q-21 C); 1.67 used only to state the effect",
+   "engine_m3": 208.164757,
+   "engine_plan_m2": 124.649555,
+   "id": "B1-02 valued excavation: Z1-PITS-24",
+   "m3_at_S01": 208.163185,
+   "m3_delta_at_S01": -0.001572,
+   "plan_basis": "union of 24 neat pits (footing + 0.10, ST p.13), 24 / 24 sizes = schedule, in plot, less the pool envelope (exact arc)",
+   "plan_delta_m2": -0.000941,
+   "plan_m2": 124.648614,
+   "plan_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "depth": "printed -1.50 (T-183 r2): not S01",
+   "engine_m3": 17.776576,
+   "engine_plan_m2": 11.851051,
+   "id": "B1-02 valued excavation: Z1-POOL",
+   "m3": 17.776575,
+   "plan_basis": "pool shell 7C6 (half circle r 1.75 + 3.50 x 1.75) grown 0.10 (p.7 screed + membrane), back face on the plot line: A + (P - back) d + pi/2 d^2",
+   "plan_delta_m2": -1e-06,
+   "plan_m2": 11.85105,
+   "plan_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "depth": "0.10 blinding below EG (exterior GB bottom on N.G., T-253): printed; the beyond-plot part stays HELD (S06 / D-14)",
+   "engine_m3": [
+    1.069269,
+    1.176467
+   ],
+   "engine_plan_m2": [
+    10.692685,
+    1.071981
+   ],
+   "id": "EW-T350:B1-02:Z1-TRENCH-EXT-GB-MAIN",
+   "m3_at_blinding_0.10": [
+    1.069267,
+    1.176467
+   ],
+   "plan_basis": "17 pieces (15 straight + 2 more of 7E0+FD / 114 + 115 + 7DF, 1 arc) cut at the columns, strip = beam + 0.10 each side (p.13), owned after pool / pits / F10F outline / FF (R-T497-1)",
+   "plan_m2": [
+    10.692674,
+    1.072
+   ],
+   "plan_status": "DRAWING-CONFIRMED (geometry); main-exterior class from the T-253 ledger"
+  },
+  {
+   "depth": "HELD D-43",
+   "id": "EW-T350:B1-02:Z1-PIT-FF",
+   "plan_m2": null,
+   "plan_status": "HELD (neat plan): footprint 20.70 m2 drawn (1B2B 4.60 x 4.50 = schedule FF), blinding projection not dimensioned on p.14"
+  },
+  {
+   "depth": "HELD Q-21 C",
+   "id": "EW-T350:B1-02:Z1-PIT-F10F",
+   "plan_m2": null,
+   "plan_status": "HELD: open outline 1B1B (3.25 x 1.40 bounding, tags F10 + F), Q-31 C"
+  }
+ ],
+ "drawing": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' sha256 9f9d1179",
+ "envelope_convergence": {
+  "1024": {
+   "envelope_in_plot_m2": 11.851048,
+   "pits_given_up_m2": 2.69576
+  },
+  "16": {
+   "envelope_in_plot_m2": 11.843081,
+   "pits_given_up_m2": 2.690714
+  },
+  "256": {
+   "envelope_in_plot_m2": 11.851019,
+   "pits_given_up_m2": 2.695741
+  },
+  "4": {
+   "envelope_in_plot_m2": 11.72447,
+   "pits_given_up_m2": 2.619594
+  },
+  "4096": {
+   "envelope_in_plot_m2": 11.85105,
+   "pits_given_up_m2": 2.695761
+  },
+  "64": {
+   "envelope_in_plot_m2": 11.850552,
+   "pits_given_up_m2": 2.695442
+  }
+ },
+ "ext_gb_trench": {
+  "L_sum_main_ext_m": 55.8697,
+  "given_to_F10F_outline_m2": 1.675,
+  "given_to_FF_m2": 0.0,
+  "given_to_pits_in_plot_m2": 13.61786,
+  "given_to_pits_m2": 14.49786,
+  "given_to_pool_m2": 0.0,
+  "own_beyond_plot_m2": 1.072,
+  "own_in_plot_m2": 10.692674,
+  "own_m3_at_blinding_0.10": [
+   1.069267,
+   1.176467
+  ],
+  "pieces": [
+   {
+    "L_m": 2.4,
+    "L_t253_m": 2.4,
+    "axis_mm": [
+     134842.2,
+     137242.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.37,
+    "L_t253_m": 3.37,
+    "axis_mm": [
+     137542.2,
+     140912.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.35,
+    "L_t253_m": 3.35,
+    "axis_mm": [
+     141512.2,
+     144862.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.25,
+    "L_t253_m": 3.25,
+    "axis_mm": [
+     145362.2,
+     148612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 4,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.3,
+    "L_t253_m": 4.3,
+    "axis_mm": [
+     36648.0,
+     40948.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "10A+7C9",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.9,
+    "L_t253_m": 1.9,
+    "axis_mm": [
+     132642.2,
+     134542.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "145+7CA",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.4,
+    "L_t253_m": null,
+    "axis_mm": [
+     36648.0,
+     41048.0
+    ],
+    "dL_m": null,
+    "main_ext": false,
+    "piece": 1,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.4,
+    "L_t253_m": 4.4,
+    "axis_mm": [
+     41748.0,
+     46148.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 2.7,
+    "L_t253_m": 2.7,
+    "axis_mm": [
+     46648.0,
+     49348.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 0.3639,
+    "L_t253_m": 0.3639,
+    "axis_mm": [
+     44248.0,
+     44611.9
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "107+7CE",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 2.975,
+    "L_t253_m": 2.975,
+    "axis_mm": [
+     132042.2,
+     135017.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 5.745,
+    "L_t253_m": 5.745,
+    "axis_mm": [
+     136117.2,
+     141862.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 6.35,
+    "L_t253_m": 6.35,
+    "axis_mm": [
+     142362.2,
+     148712.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.2,
+    "L_t253_m": 1.2,
+    "axis_mm": [
+     149412.2,
+     150612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 4,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 2.325,
+    "L_t253_m": null,
+    "axis_mm": [
+     146387.2,
+     148712.2
+    ],
+    "dL_m": null,
+    "main_ext": false,
+    "piece": 1,
+    "run": "114+115+7DF",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.0,
+    "L_t253_m": 1.0,
+    "axis_mm": [
+     149612.2,
+     150612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "114+115+7DF",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.35,
+    "L_t253_m": 3.35,
+    "axis_mm": [
+     36848.0,
+     40198.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "7E0+FD",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.25,
+    "L_t253_m": 3.25,
+    "axis_mm": [
+     40498.0,
+     43748.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "7E0+FD",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 5.9658,
+    "angles": [
+     109.75,
+     259.836
+    ],
+    "main_ext": true,
+    "run": "ARC:157+158",
+    "width_m": 0.3
+   }
+  ],
+  "strip_beyond_plot_m2": 2.287,
+  "strip_in_plot_m2": 25.650534,
+  "strip_total_m2": 27.937534
+ },
+ "ext_gb_trench_either_face_extent": {
+  "L_sum_main_ext_m": 55.9697,
+  "given_to_F10F_outline_m2": 1.675,
+  "given_to_FF_m2": 0.0,
+  "given_to_pits_in_plot_m2": 13.65786,
+  "given_to_pits_m2": 14.54786,
+  "given_to_pool_m2": 0.0,
+  "own_beyond_plot_m2": 1.072,
+  "own_in_plot_m2": 10.692674,
+  "own_m3_at_blinding_0.10": [
+   1.069267,
+   1.176467
+  ],
+  "pieces": [
+   {
+    "L_m": 2.4,
+    "L_t253_m": 2.4,
+    "axis_mm": [
+     134842.2,
+     137242.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.37,
+    "L_t253_m": 3.37,
+    "axis_mm": [
+     137542.2,
+     140912.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.35,
+    "L_t253_m": 3.35,
+    "axis_mm": [
+     141512.2,
+     144862.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.25,
+    "L_t253_m": 3.25,
+    "axis_mm": [
+     145362.2,
+     148612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 4,
+    "run": "170+7C3",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.3,
+    "L_t253_m": 4.3,
+    "axis_mm": [
+     36648.0,
+     40948.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "10A+7C9",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.9,
+    "L_t253_m": 1.9,
+    "axis_mm": [
+     132642.2,
+     134542.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "145+7CA",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.4,
+    "L_t253_m": null,
+    "axis_mm": [
+     36648.0,
+     41048.0
+    ],
+    "dL_m": null,
+    "main_ext": false,
+    "piece": 1,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 4.4,
+    "L_t253_m": 4.4,
+    "axis_mm": [
+     41748.0,
+     46148.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 2.7,
+    "L_t253_m": 2.7,
+    "axis_mm": [
+     46648.0,
+     49348.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "109+7CB",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 0.3639,
+    "L_t253_m": 0.3639,
+    "axis_mm": [
+     44248.0,
+     44611.9
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "107+7CE",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.075,
+    "L_t253_m": 2.975,
+    "axis_mm": [
+     131942.2,
+     135017.2
+    ],
+    "dL_m": 0.1,
+    "main_ext": true,
+    "piece": 1,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 5.745,
+    "L_t253_m": 5.745,
+    "axis_mm": [
+     136117.2,
+     141862.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 6.35,
+    "L_t253_m": 6.35,
+    "axis_mm": [
+     142362.2,
+     148712.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 3,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.2,
+    "L_t253_m": 1.2,
+    "axis_mm": [
+     149412.2,
+     150612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 4,
+    "run": "7D0+FC",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 2.325,
+    "L_t253_m": null,
+    "axis_mm": [
+     146387.2,
+     148712.2
+    ],
+    "dL_m": null,
+    "main_ext": false,
+    "piece": 1,
+    "run": "114+115+7DF",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 1.0,
+    "L_t253_m": 1.0,
+    "axis_mm": [
+     149612.2,
+     150612.2
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "114+115+7DF",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.35,
+    "L_t253_m": 3.35,
+    "axis_mm": [
+     36848.0,
+     40198.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 1,
+    "run": "7E0+FD",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 3.25,
+    "L_t253_m": 3.25,
+    "axis_mm": [
+     40498.0,
+     43748.0
+    ],
+    "dL_m": 0.0,
+    "main_ext": true,
+    "piece": 2,
+    "run": "7E0+FD",
+    "width_m": 0.3
+   },
+   {
+    "L_m": 5.9658,
+    "angles": [
+     109.75,
+     259.836
+    ],
+    "main_ext": true,
+    "run": "ARC:157+158",
+    "width_m": 0.3
+   }
+  ],
+  "strip_beyond_plot_m2": 2.297,
+  "strip_in_plot_m2": 25.690534,
+  "strip_total_m2": 27.987534
+ },
+ "not_pits": [
+  {
+   "checked_before": false,
+   "handle": "1B1B",
+   "kind": "OPEN_LWPOLYLINE_BBOX",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    147662.2,
+    36348.0
+   ],
+   "size_m": [
+    3.25,
+    1.4
+   ],
+   "status": "OWN_ZONE: open outline 1B1B, two tags: zone F10F (Q-31 C)",
+   "type": "F10/F"
+  },
+  {
+   "checked_before": false,
+   "handle": "1B2B",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    136342.0,
+    43148.1
+   ],
+   "size_m": [
+    4.6,
+    4.5
+   ],
+   "status": "OWN_ZONE: lift raft: own zone Z1-PIT-FF (D-43)",
+   "type": "FF"
+  }
+ ],
+ "per_pit": {
+  "10F0": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.44,
+   "type": "FN"
+  },
+  "10F8": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.44,
+   "type": "FN"
+  },
+  "1100": {
+   "beyond_plot_m2": 0.12,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.44,
+   "type": "FN"
+  },
+  "165C": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 3.99,
+   "type": "F2"
+  },
+  "1663": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 3.99,
+   "type": "F2"
+  },
+  "1664": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 5.98,
+   "type": "F5"
+  },
+  "1665": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 5.28,
+   "type": "F4"
+  },
+  "1666": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.735358,
+   "neat_m2": 5.28,
+   "type": "F4"
+  },
+  "1667": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.1,
+   "type": "F"
+  },
+  "1668": {
+   "beyond_plot_m2": 0.11,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.1,
+   "type": "F"
+  },
+  "1669": {
+   "beyond_plot_m2": 0.2,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.1,
+   "type": "F"
+  },
+  "166A": {
+   "beyond_plot_m2": 0.11,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 1.1,
+   "type": "F"
+  },
+  "166B": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 2.88,
+   "type": "F3"
+  },
+  "166C": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 2.88,
+   "type": "F3"
+  },
+  "166D": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 5.98,
+   "type": "F5"
+  },
+  "180C": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.028558,
+   "neat_m2": 1.44,
+   "type": "FN"
+  },
+  "180F": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 10.44,
+   "type": "F9"
+  },
+  "1ABF": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 15.64,
+   "type": "F12"
+  },
+  "1ADB": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 11.7,
+   "type": "F13"
+  },
+  "1B07": {
+   "beyond_plot_m2": 0.37,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 6.29,
+   "type": "F11"
+  },
+  "1B19": {
+   "beyond_plot_m2": 0.0,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 6.72,
+   "type": "F6"
+  },
+  "1B1A": {
+   "beyond_plot_m2": 0.4,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 14.0,
+   "type": "F14"
+  },
+  "1B24": {
+   "beyond_plot_m2": 0.38,
+   "in_pool_envelope_in_plot_m2": 1.931845,
+   "neat_m2": 15.96,
+   "type": "F8"
+  },
+  "1B2A": {
+   "beyond_plot_m2": 0.2,
+   "in_pool_envelope_in_plot_m2": 0.0,
+   "neat_m2": 2.4,
+   "type": "F15"
+  }
+ },
+ "pits": [
+  {
+   "checked_before": false,
+   "handle": "10F0",
+   "kind": "FOUR_LINES 10F0 10F1 10F2 10F3",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    145737.2,
+    41323.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CF8",
+   "schedule_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "size_m": [
+    1.0,
+    1.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "FN"
+  },
+  {
+   "checked_before": false,
+   "handle": "10F8",
+   "kind": "FOUR_LINES 10F8 10F9 10FA 10FB",
+   "label_method": "NEAREST_LABEL 0.445 m (10F5)",
+   "min_mm": [
+    141212.2,
+    41323.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CF8",
+   "schedule_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "size_m": [
+    1.0,
+    1.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "FN"
+  },
+  {
+   "checked_before": false,
+   "handle": "1100",
+   "kind": "FOUR_LINES 1100 1101 1102 1103",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    149912.2,
+    39848.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CF8",
+   "schedule_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "size_m": [
+    1.0,
+    1.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "FN"
+  },
+  {
+   "checked_before": false,
+   "handle": "165C",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    133842.2,
+    48648.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C95",
+   "schedule_m": [
+    1.9,
+    1.7,
+    0.35
+   ],
+   "size_m": [
+    1.7,
+    1.9
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F2"
+  },
+  {
+   "checked_before": false,
+   "handle": "1663",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    136542.2,
+    48648.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C95",
+   "schedule_m": [
+    1.9,
+    1.7,
+    0.35
+   ],
+   "size_m": [
+    1.7,
+    1.9
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F2"
+  },
+  {
+   "checked_before": false,
+   "handle": "1664",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    140012.2,
+    48648.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CB6",
+   "schedule_m": [
+    2.4,
+    2.1,
+    0.4
+   ],
+   "size_m": [
+    2.4,
+    2.1
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F5"
+  },
+  {
+   "checked_before": false,
+   "handle": "1665",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    144012.2,
+    48698.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CAB",
+   "schedule_m": [
+    2.2,
+    2.0,
+    0.4
+   ],
+   "size_m": [
+    2.2,
+    2.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F4"
+  },
+  {
+   "checked_before": false,
+   "handle": "1666",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    148062.2,
+    48723.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CAB",
+   "schedule_m": [
+    2.2,
+    2.0,
+    0.4
+   ],
+   "size_m": [
+    2.2,
+    2.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F4"
+  },
+  {
+   "checked_before": false,
+   "handle": "1667",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "NEAREST_LABEL 0.128 m (1678)",
+   "min_mm": [
+    121942.2,
+    42498.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C79",
+   "schedule_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "size_m": [
+    0.9,
+    0.8
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F"
+  },
+  {
+   "checked_before": false,
+   "handle": "1668",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    119542.2,
+    42348.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C79",
+   "schedule_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "size_m": [
+    0.8,
+    0.9
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F"
+  },
+  {
+   "checked_before": false,
+   "handle": "1669",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    119542.2,
+    36348.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C79",
+   "schedule_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "size_m": [
+    0.9,
+    0.8
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F"
+  },
+  {
+   "checked_before": false,
+   "handle": "166A",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "NEAREST_LABEL 0.003 m (1682)",
+   "min_mm": [
+    131292.2,
+    36348.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1C79",
+   "schedule_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "size_m": [
+    0.9,
+    0.8
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F"
+  },
+  {
+   "checked_before": false,
+   "handle": "166B",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    123192.2,
+    40398.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CA0",
+   "schedule_m": [
+    1.6,
+    1.4,
+    0.3
+   ],
+   "size_m": [
+    1.6,
+    1.4
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F3"
+  },
+  {
+   "checked_before": false,
+   "handle": "166C",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    129492.2,
+    37298.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CA0",
+   "schedule_m": [
+    1.6,
+    1.4,
+    0.3
+   ],
+   "size_m": [
+    1.4,
+    1.6
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F3"
+  },
+  {
+   "checked_before": false,
+   "handle": "166D",
+   "kind": "INSERT_F_BLOCK",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    144112.2,
+    36948.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CB6",
+   "schedule_m": [
+    2.4,
+    2.1,
+    0.4
+   ],
+   "size_m": [
+    2.4,
+    2.1
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F5"
+  },
+  {
+   "checked_before": false,
+   "handle": "180C",
+   "kind": "CLOSED_NON_RECT",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    146262.2,
+    46648.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CF8",
+   "schedule_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "size_m": [
+    1.0,
+    1.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "FN"
+  },
+  {
+   "checked_before": true,
+   "handle": "180F",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    143262.2,
+    44298.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "1CD7",
+   "schedule_m": [
+    3.4,
+    2.7,
+    0.55
+   ],
+   "size_m": [
+    3.4,
+    2.7
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F9"
+  },
+  {
+   "checked_before": true,
+   "handle": "1ABF",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    131342.2,
+    43598.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "2A5E",
+   "schedule_m": [
+    4.4,
+    3.2,
+    0.7
+   ],
+   "size_m": [
+    4.4,
+    3.2
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F12"
+  },
+  {
+   "checked_before": true,
+   "handle": "1ADB",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    128842.0,
+    39748.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "2A98",
+   "schedule_m": [
+    4.3,
+    2.4,
+    0.5
+   ],
+   "size_m": [
+    4.3,
+    2.4
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F13"
+  },
+  {
+   "checked_before": true,
+   "handle": "1B07",
+   "kind": "OPEN_LWPOLYLINE_BBOX",
+   "label_method": "NEAREST_LABEL 0.795 m (1684)",
+   "min_mm": [
+    133817.2,
+    36348.0
+   ],
+   "open_outline": true,
+   "schedule_handle": "1CED",
+   "schedule_m": [
+    3.5,
+    1.5,
+    0.5
+   ],
+   "size_m": [
+    3.5,
+    1.5
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F11"
+  },
+  {
+   "checked_before": true,
+   "handle": "1B19",
+   "kind": "OPEN_LWPOLYLINE_BBOX",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    133592.2,
+    40098.0
+   ],
+   "open_outline": true,
+   "schedule_handle": "1CC1",
+   "schedule_m": [
+    2.6,
+    2.2,
+    0.5
+   ],
+   "size_m": [
+    2.2,
+    2.6
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F6"
+  },
+  {
+   "checked_before": true,
+   "handle": "1B1A",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    140062.2,
+    36348.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "2AD5",
+   "schedule_m": [
+    3.8,
+    3.3,
+    0.5
+   ],
+   "size_m": [
+    3.8,
+    3.3
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F14"
+  },
+  {
+   "checked_before": true,
+   "handle": "1B24",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    146912.2,
+    42298.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "2AF6",
+   "schedule_m": [
+    4.0,
+    3.6,
+    0.5
+   ],
+   "size_m": [
+    4.0,
+    3.6
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F8"
+  },
+  {
+   "checked_before": true,
+   "handle": "1B2A",
+   "kind": "CLOSED_LWPOLYLINE",
+   "label_method": "LABEL_INSIDE",
+   "min_mm": [
+    124742.2,
+    36348.0
+   ],
+   "open_outline": false,
+   "schedule_handle": "2B13",
+   "schedule_m": [
+    1.8,
+    1.0,
+    0.4
+   ],
+   "size_m": [
+    1.8,
+    1.0
+   ],
+   "size_vs_schedule": "AGREE",
+   "type": "F15"
+  }
+ ],
+ "pits_16_remeasured": {
+  "overlap_pairs": [],
+  "per_pit_m2": {
+   "10F0": 1.44,
+   "10F8": 1.44,
+   "1100": 1.44,
+   "165C": 3.99,
+   "1663": 3.99,
+   "1664": 5.98,
+   "1665": 5.28,
+   "1666": 5.28,
+   "1667": 1.1,
+   "1668": 1.1,
+   "1669": 1.1,
+   "166A": 1.1,
+   "166B": 2.88,
+   "166C": 2.88,
+   "166D": 5.98,
+   "180C": 1.44
+  },
+  "sum_m2": 46.42,
+  "union_m2": 46.42
+ },
+ "pits_zone": {
+  "beyond_plot_m2": 1.89,
+  "given_up_m2": {
+   "Z1-POOL envelope": 2.695761
+  },
+  "in_plot_m2": 127.344375,
+  "overlap_m2": 0.335625,
+  "overlap_pairs": [
+   [
+    "10F0",
+    "1B24",
+    0.005625
+   ],
+   [
+    "180C",
+    "180F",
+    0.33
+   ]
+  ],
+  "own_in_plot_m2": 124.648614,
+  "per_pit_m2": {
+   "10F0": 1.44,
+   "10F8": 1.44,
+   "1100": 1.44,
+   "165C": 3.99,
+   "1663": 3.99,
+   "1664": 5.98,
+   "1665": 5.28,
+   "1666": 5.28,
+   "1667": 1.1,
+   "1668": 1.1,
+   "1669": 1.1,
+   "166A": 1.1,
+   "166B": 2.88,
+   "166C": 2.88,
+   "166D": 5.98,
+   "180C": 1.44,
+   "180F": 10.44,
+   "1ABF": 15.64,
+   "1ADB": 11.7,
+   "1B07": 6.29,
+   "1B19": 6.72,
+   "1B1A": 14.0,
+   "1B24": 15.96,
+   "1B2A": 2.4
+  },
+  "pits_held": [],
+  "pits_valued": [
+   "10F0",
+   "10F8",
+   "1100",
+   "165C",
+   "1663",
+   "1664",
+   "1665",
+   "1666",
+   "1667",
+   "1668",
+   "1669",
+   "166A",
+   "166B",
+   "166C",
+   "166D",
+   "180C",
+   "180F",
+   "1ABF",
+   "1ADB",
+   "1B07",
+   "1B19",
+   "1B1A",
+   "1B24",
+   "1B2A"
+  ],
+  "sum_m2": 129.57,
+  "union_m2": 129.234375,
+  "zone": "Z1-PITS-24"
+ },
+ "pool": {
+  "back_face_on_plot_line": true,
+  "back_length_m": 3.5,
+  "envelope_beyond_plot_m2": 0.365708,
+  "envelope_in_plot_m2": 11.85105,
+  "envelope_in_plot_m2_exact": 11.85105,
+  "envelope_m2_exact": 12.216758,
+  "envelope_m2_polygon": 12.216758,
+  "shell_m2": 10.935564,
+  "shell_perimeter_m": 12.497787
+ },
+ "schema": "T-597 B1 plan side: handles, sizes, m2 only (no client data)",
+ "sheet_offset_mm": [
+  38724.406,
+  0.0
+ ],
+ "size_vs_schedule": {
+  "agree": 24,
+  "of": 24
+ }
+}
