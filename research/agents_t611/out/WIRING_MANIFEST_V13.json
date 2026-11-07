@@ -1,0 +1,396 @@
+{
+ "absorbed": {
+  "into": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)|FR-T606-1|L-ba3599ec2dc82c221617",
+  "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-ba3599ec2dc82c221617",
+  "why": "R1: one Gate B unit per line; the V12 FR-T601-3 op writes no quantity and states the same before (label PASSAGE -> LIFT LANDING DOOR on 1F OP-007 kept, carried by this row)"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "deduction": {
+  "checker": [
+   {
+    "lm": "4.000",
+    "what": "AF7 west wall, B74 y to AEC"
+   },
+   {
+    "lm": "7.020",
+    "what": "AEC south wall, AF7 to stair-box edge AF5 (5.87 + 1.15)"
+   },
+   {
+    "lm": "0.100",
+    "what": "column 300E returns inside the span (2 x 0.05)"
+   },
+   {
+    "lm": "0.050",
+    "what": "column 3008 west return (faces the void; straddles AF5)"
+   }
+  ],
+  "checker_lm": "11.17",
+  "finding": "F-T606-1",
+  "worker": {
+   "checker_lm": "11.17",
+   "governs": "Checker (own re-measure, verdict)",
+   "named_differences": [
+    {
+     "lm": "0.050",
+     "what": "column 3008 east return: faces the 1F floor east of AF5, keeps skirting (Checker)"
+    }
+   ],
+   "worker_lm": "11.22"
+  }
+ },
+ "findings": {
+  "F-T611-1": "the 11.17 lm leave the room line only; whether a balustrade / void-edge item takes the stair opening edge (his outline walks B74 / B75 / D24 / AF5, 11.02) is not a skirting question and is not in the candidate: no line written, none assumed"
+ },
+ "inputs": {
+  "research/agents_t604/manifest_v12.py": "1dd5dbc7e71328e26a994c5853ed556eb18edfc6ed18b14ce74f5c95f8ba99cf",
+  "research/agents_t604/out/WIRING_MANIFEST_V12.json": "3c2d0ec075c2489960c4ab0d1eab1f2eb37430ed4db733f5a57d65eaec748fb7",
+  "research/agents_t606/out/T606_OUTLINE_CAUSES.json": "e71d85471859e284a0163d44d4a417b8c79183f92f1cc167dff6a0ae6362c8c5"
+ },
+ "overlay": {
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v12": 5125,
+   "after_v13": 5125,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v12_overlay": [],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v13_vs_v12_totals": {
+   "FIN.SKIRTING|lm": {
+    "after": {
+     "excluded_n": 29,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "198.558592",
+     "released_n": 19
+    },
+    "before": {
+     "excluded_n": 29,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "209.728592",
+     "released_n": 19
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "absorbs": {
+    "beside": {
+     "label_after": "LIFT LANDING DOOR (LIFT DOOR GAP register; T-175 L-1F-01)",
+     "label_before": "PASSAGE (T-296 deduction kind)",
+     "opening": "1F OP-007",
+     "panel_lines_dxf": [
+      "B98",
+      "B99",
+      "B9A",
+      "B9B"
+     ]
+    },
+    "kind": "TEXT_ONLY",
+    "note": "R-T604-1 (d): label only; the 1.00 deduction stands; no jamb skirting",
+    "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-ba3599ec2dc82c221617",
+    "rule": "R-T611-1 (c) / R-T593-1 (f)"
+   },
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 21.21536
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.38536
+   },
+   "beside": {
+    "components": [
+     {
+      "lm": "4.000",
+      "what": "AF7 west wall, B74 y to AEC"
+     },
+     {
+      "lm": "7.020",
+      "what": "AEC south wall, AF7 to stair-box edge AF5 (5.87 + 1.15)"
+     },
+     {
+      "lm": "0.100",
+      "what": "column 300E returns inside the span (2 x 0.05)"
+     },
+     {
+      "lm": "0.050",
+      "what": "column 3008 west return (faces the void; straddles AF5)"
+     }
+    ],
+    "deducted_lm": "11.17",
+    "edges_worker": [
+     "AF7 (4.00 of 5.15)",
+     "AEC (7.02 of 10.67)",
+     "columns 300E / 3008 notches"
+    ],
+    "finding": "F-T606-1",
+    "net_after": "21.21536",
+    "net_before": "32.38536",
+    "rule": "UP-SKIRT-001 1.4.0 / R-T606-1",
+    "who_is_right": "ENGINE_WRONG (Checker CONFIRMED on 11.17 lm)",
+    "why": "the printed stair opening 5.87 x 4.00 (void B7A + round-stair treads, T-113 O1 / O2 / O3) and the stair box 1.15 x 2.40 (arriving flight, T-113 L1) leave no room floor at +5.50 against these faces; none of the line's deductions (doors 4.70, passage 1.00, glazing 3.10464, stair W13 / W25 2.20, dog-leg shaft 9.05) lies on them"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-606 VERIFIER 2026-11-07T17:59Z (f): F-T606-1 re-measured: west wall AF7 from B74 y to AEC = 4.000, south wall AEC from AF7 to the stair-box edge AF5 = 7.020 (5.87 + 1.15), column 300E inside the span 2 x 0.05 = 0.10, column 3008 straddles AF5: only its west return 0.05 faces the void; its east return faces the 1F floor and keeps skirting -> Checker 11.170 lm, worker 11.22 (+0.05 = 3008 east return, named). ENGINE_WRONG CONFIRMED on 11.17: candidate FIN.SKIRTING 209.428592 -> 198.258592 lm (-5.33 %) on V3.0.58 (198.558592 after V12), lane I fix row needed. Line status: room skirting PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-ba3599ec2dc82c221617",
+   "note": "R-T611-1 (b): floorless wall faces leave the room line; the line stays RELEASED",
+   "op_id": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)|FR-T606-1|L-ba3599ec2dc82c221617",
+   "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+   "row": "FR-T606-1",
+   "source": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+   "supersedes": [
+    "F-T606-1 worker proposal 11.22 lm (209.428592 -> 198.208592, -5.36 %)",
+    "the Checker's restatement on the candidate base (restated on the overlay base here)"
+   ]
+  }
+ ],
+ "rule": "R-T611-1",
+ "schema": "URBAN_T611_WIRING_MANIFEST_V13",
+ "skirting": {
+  "FIN.SKIRTING|lm": {
+   "v12": {
+    "excluded_n": 29,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "209.728592",
+    "released_n": 19
+   },
+   "v13": {
+    "excluded_n": 29,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "198.558592",
+    "released_n": 19
+   }
+  },
+  "bases_differ_by": "0.3 = FR-T601-1 jamb line (V12), both sides of the deduction",
+  "held": "held lines and bounds unchanged (6, 0 .. 0); no blank became 0",
+  "his": "1F living group (T-574): ours 32.38536 -> 21.21536 lm vs his 43.78 lm; the gap widens -11.39464 -> -22.56464 lm: ENGINE_WRONG on a physical cause, freelancer agreement is not the test; his outline cause stays split by T-606 (no %)",
+  "line": {
+   "id": "L-ba3599ec2dc82c221617",
+   "net_after": "21.21536",
+   "net_before": "32.38536"
+  },
+  "on_v12_base": "209.728592 - 11.17 = 198.558592",
+  "on_v3_0_58_base": "209.428592 - 11.17 = 198.258592 (Checker's restatement)",
+  "pct_vs_v12": "-5.33",
+  "released_delta_lm": "-11.17"
+ },
+ "sources_merged": {
+  "T-599": "9dc3c2d3",
+  "T-605": "c2db2962",
+  "T-606": "1ddf21f4",
+  "T-607": "ad0290c2"
+ },
+ "sources_no_row": {
+  "T-599": {
+   "merge": "9dc3c2d3",
+   "rows": 0,
+   "why": "joint rule now citable (UP-CONC-JOINT-001 1.0.0); no manifest V2 .. V12 row writes a joint line: the citation belongs to the reconciled statement (T-609 r2), 0 manifest rows"
+  },
+  "T-605": {
+   "merge": "c2db2962",
+   "rows": 0,
+   "why": "footing overlap counted once: candidate CONC.FOOTING unchanged (no fix row in the source)"
+  },
+  "T-607": {
+   "merge": "ad0290c2",
+   "rows": 0,
+   "why": "steps / nosing shared residual: one cause C-T607-1 for the statement; no candidate line moves"
+  }
+ },
+ "sources_refused": {
+  "T-610": {
+   "refusal": "T-610 is not MERGED with a Checker verdict: its rows cannot enter a manifest",
+   "state": "TODO at claim (beam band overlap): its rows are refused until it is MERGED"
+  }
+ },
+ "stair_edge_census_after_v13": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "supersedes": {
+  "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)|FR-T606-1|L-ba3599ec2dc82c221617": [
+   "F-T606-1 worker proposal 11.22 lm (209.428592 -> 198.208592, -5.36 %)",
+   "the Checker's restatement on the candidate base (restated on the overlay base here)"
+  ]
+ },
+ "task": "T-611"
+}
