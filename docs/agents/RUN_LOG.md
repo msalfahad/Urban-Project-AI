@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07 19:29 UTC | Worker 1 | SUCCESS | T-605 READY 021680e9 | Footing overlap: own ST7757 read finds 2 pairs within 0.20 m; FN 180C drawn 0.86 notched round F9, concrete 5.307 m3 and pads 64.304 m3 = engine (schedule sum 64.346 refused; his FN rows +0.042 ENGINE_RIGHT); blinding union 127.344375 m2 = engine 12.734438 m3, overlaps 0.19 (F9) + 0.005625 (F8); F9+FN side forms 7.46..7.685 m2, engine HELD OQ10. No line moves. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 19:20 UTC | Worker 1 | STARTED | run session_01E6cPnaPjj4JFJJ913zbHoA | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T19:12Z | Worker 3 | SUCCESS | T-609 READY (cbe2f201) | Statement V10 on V9 byte-equal: door steps +2.90 lm = G-01 street-gate step +2.50 ENGINE_WRONG (OMISSION, Checker-verified) + 0.40 UNRESOLVED, residual 0; skirting 1F living -8.66 lm = -8.40 ENGINE_RIGHT -0.20 ENGINE_WRONG -0.06 UNRESOLVED; packs P02 2F / P03 1F move evidence only (0.42 / -1.908946 m3 WP->V, 0 class moves); B1 plan side beside NOT_COMPARABLE (union 129.234375 / zone 124.648614 m2, depths HELD); F-T606-1 11.170 lm beside, not applied. No quantity released; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T19:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
