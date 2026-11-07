@@ -687,6 +687,19 @@ def render_rules(repo, P):
                  f"{r.get('default_or_mandatory', '')} | {r.get('version', '')} | {r['origin']} |")
     if prop:
         L += ["", "Proposed, not in force: " + ", ".join(f"{r['rule_id']} ({cell(r.get('rule_name', ''), 70)})" for r in prop)]
+    # T-599: delegated measurement conventions (LEAD_ADOPTED under an owner requirement; read by no released method)
+    for rel in sorted(p for p in repo.files if p.startswith("rules/conventions/") and p.endswith(".json")):
+        d = repo.json(rel)
+        recs = d.get("records") or []
+        L += ["", f"## Convention records `{rel}` (library {d.get('library', '')} {d.get('version', '')}; {len(recs)})", "",
+              "| Rule | Version | Status | Title | Supersedes | Delegation | Tests |", "|---|---|---|---|---|---|---|"]
+        for r in recs:
+            for x in r.get("tests") or []:
+                if not repo.exists(x.split("::")[0]):
+                    P.warn(f"rule {r['rule_id']}: test reference does not resolve: {x}")
+            dl = (r.get("delegation") or {}).get("owner_requirement", "")
+            L.append(f"| {r['rule_id']} | {r.get('version', '')} | {r.get('status', '')} | {cell(r.get('title', ''))} | "
+                     f"{r.get('supersedes') or '-'} | {cell(dl, 70)} | {', '.join(f'`{x}`' for x in (r.get('tests') or [])[:2])} |")
     for title, rel, key, cols in (
             ("Method register V3 (`rules/methods/`)", "rules/methods/URBAN_METHOD_REGISTER_V3.json", "methods",
              (("Method id", "id"), ("Applies to", "applies_to"), ("Statement", "statement"))),

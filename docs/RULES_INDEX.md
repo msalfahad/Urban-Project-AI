@@ -124,6 +124,12 @@ Rule files are versioned: never edit an existing version; add the next one (see 
 
 Proposed, not in force: UP-WP-004 (A shower takes the wet-room floor and the UP-WP-002 v2 upturn; higher…), UP-STAIR-014 (Railing posts, balusters and glass panels are measured only when defi…)
 
+## Convention records `rules/conventions/URBAN_CONVENTIONS_1.0.0.json` (library URBAN_CONVENTIONS 1.0.0; 1)
+
+| Rule | Version | Status | Title | Supersedes | Delegation | Tests |
+|---|---|---|---|---|---|---|
+| UP-CONC-JOINT-001 | 1.0.0 | LEAD_ADOPTED | Column-beam joint: the column owns the joint prism to the slab top; every beam is net of the column solid (ea… | - | Q-62 A cond (owner directive 2026-10-20 12:02 UTC, OWNER_QUESTIONS_AN… | `tests/t599/test_t599.py` |
+
 ## Method register V3 (`rules/methods/`) (8)
 
 | Method id | Applies to | Statement |
