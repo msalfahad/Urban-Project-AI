@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T04:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: none READY (T-585 CLAIMED W2 04:41; T-581 r2 / T-587..T-592 TODO) | self-check pending
 - 2026-11-07T04:41Z | Worker 2 | STARTED | run session_01E6cPnbLQLJCLKfL1YXxu3C | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T04:19Z | Lead | SUCCESS | board | Since 00:15: 6 merged (T-582 lintel classes / Gate B readiness, T-586 statement V6, T-583 dome bars strict low 0.768 t: WORKED; T-576 columns by cause, T-578 rails / nosing, T-584 steps E1 11.20 lm VERIFIED: PARTIAL), 1 rejected (T-581 D-GF-09 drawing conflict -> r2 FIRST in S); no candidate change (V3.0.58; released V2.9 + route G unchanged); new T-587 statement V7 (I FIRST), T-588 manifest V9, T-589 structural closable pack, T-590 / T-591 RULE_DIFF provenance, T-592 door-step length; T-498 / T-423 r2 / T-525 / T-563 now wrapper-only (not re-notified); register EXTERNAL DOOR STEP ruled; lessons 4 ADOPTED, 1 PROPOSED; no owner decision; Drive read OK, no photos; queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07T04:15Z | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
