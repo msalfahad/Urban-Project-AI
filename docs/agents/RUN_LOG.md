@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T16:50Z | Verifier | STARTED | run session_01E6cPncJp7i5wescpv7BBXp | repo-attached routine | task state: none READY (T-606 CLAIMED W2 16:40; T-599 r2 / T-604 / T-605 TODO) | self-check pending
 - 2026-11-07 16:41 UTC | Worker 2 | STARTED | run session_01E6cPncSHpxzbAGT4bzx71N | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07 16:18 UTC | Lead | SUCCESS | board | Since 12:12: 5 merged (T-596, T-601, T-602, T-597, T-603 WORKED), T-599 REJECTED -> T-599 r2 fix row FIRST in S (matched / residual split, GF source T-551 2.28125); T-604 FIRST in I (+ FR-T602-1 G-01 2.50 lm); new T-605 footing overlap, T-606 room skirting 9.693 lm, T-607 step / nosing 8.4 lm, T-608 lift landing openings, T-609 statement V10; register +3, lessons +6; no candidate change (V3.0.58; V2.9 + route G unchanged); wrapper still blocks Gate B (not re-notified); Drive OK, no photos; queue check: 22 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-07 16:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
