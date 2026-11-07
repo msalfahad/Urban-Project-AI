@@ -1,0 +1,573 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "door_steps": {
+  "delta": {
+   "lm": "2.5",
+   "nr": 1,
+   "riser_m2": "0.375"
+  },
+  "edge_census": {
+   "edges": 6,
+   "excluded_second_readings": [],
+   "owners": {
+    "D-GF-01:front edge 172 (layer 5) = companion 173": {
+     "claimant": "L-b3933a51bd95e9bc542b",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-b3933a51bd95e9bc542b"
+    },
+    "D-GF-03:front edge 1C6 (layer 5) = companion 1C7": {
+     "claimant": "L-74cd61b430eec9933d15",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-74cd61b430eec9933d15"
+    },
+    "D-GF-05:front edge 19C (layer 5) = companion 19D": {
+     "claimant": "L-c8b5c7f742b22388339e",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-c8b5c7f742b22388339e"
+    },
+    "D-GF-09:front edge 3FD (layer 5) = companion 3FE": {
+     "claimant": "L-8111095f6db78f0e674b",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-8111095f6db78f0e674b"
+    },
+    "D-GF-15:face line runs through the opening; visible edge from the companion 8F (layer 2, 0.050 uphill; equal to the front edge at every house door)": {
+     "claimant": "L-56acf34557c315f65bb1",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-2|L-56acf34557c315f65bb1"
+    },
+    "G-01:10F": {
+     "claimant": "L-124e0c1ce0b8015699c9",
+     "row": "GATE_STEP_G01 (T-602 FR-T602-1)|FR-T602-1|L-124e0c1ce0b8015699c9"
+    }
+   }
+  },
+  "his": {
+   "count": "his 6 = ours 6: FREELANCER_RIGHT on the count",
+   "lm": "7.7",
+   "nr": 6,
+   "ours_minus_his_lm": "-0.4",
+   "split": "-2.900 = -2.500 G-01 ENGINE_OMISSION (closed by FR-T602-1) + -0.400 UNRESOLVED (his rows carry no opening id; no %)",
+   "v10_residual_lm": "-2.9"
+  },
+  "house_total_unchanged": {
+   "house_lm": "3.8",
+   "house_nosing_attribute_lm": "3.5",
+   "house_nr": 4,
+   "house_riser_m2": "0.570"
+  },
+  "v11_family": {
+   "lm": "4.8",
+   "nr": 5,
+   "riser_m2": "0.720"
+  },
+  "v12_family": {
+   "by_opening": [
+    {
+     "line": "L-b3933a51bd95e9bc542b",
+     "lm": "1",
+     "opening": "D-GF-01",
+     "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+     "riser_m2": "0.15"
+    },
+    {
+     "line": "L-74cd61b430eec9933d15",
+     "lm": "0.9",
+     "opening": "D-GF-03",
+     "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+     "riser_m2": "0.135"
+    },
+    {
+     "line": "L-c8b5c7f742b22388339e",
+     "lm": "1",
+     "opening": "D-GF-05",
+     "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+     "riser_m2": "0.15"
+    },
+    {
+     "line": "L-8111095f6db78f0e674b",
+     "lm": "0.9",
+     "opening": "D-GF-09",
+     "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+     "riser_m2": "0.135"
+    },
+    {
+     "line": "L-56acf34557c315f65bb1",
+     "lm": "1",
+     "opening": "D-GF-15",
+     "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+     "riser_m2": "0.15"
+    },
+    {
+     "line": "L-124e0c1ce0b8015699c9",
+     "lm": "2.5",
+     "opening": "G-01",
+     "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+     "riser_m2": "0.375"
+    }
+   ],
+   "lm": "7.3",
+   "nr": 6,
+   "riser_m2": "1.095"
+  }
+ },
+ "findings": {
+  "F-T604-1": "ARCH.PASSAGE pcs (9 released) counts all three lift landing doors (GF OP-011 L-77a427c8, 1F OP-007 L-32d90a7a, 2F OP-002 L-c91732d6) as passages; T-601 settles them as framed landing doors. V12 moves no count (label only, Lead amendment); whether the lift landing doors leave ARCH.PASSAGE for the lift package is a coding question for the Lead",
+  "F-T604-2": "G-01 has no threshold or step line on the candidate: the step sits beside the gate leaf line L-124e0c1c (HELD, T-361); T-424 / the door-step family wiring must give it a payable line (2.500 lm, riser 0.375 m2) or it stays a beside figure",
+  "F-T604-3": "FR-T601-1 is a NEW jamb line (one per opening, as the T-443 OP-020-JAMBS precedent) rather than +0.15 on each room line: the two jamb faces are the opening's, and splitting them between the bed room and dressing lines would be an unsourced allocation"
+ },
+ "inputs": {
+  "research/agents_t593/out/WIRING_MANIFEST_V10.json": "c05827ef4c27e365e05f565ed89c46493c95ccaf826a490342a96f83e1dcd3fe",
+  "research/agents_t596/manifest_v11.py": "5590c392582a50f6c41c335d63268a92235d07a25eb397eccced5a61f480bc50",
+  "research/agents_t596/out/WIRING_MANIFEST_V11.json": "d909fa02db13e3fdeffec3fe14c805376b89e0457bad2d7da82091bba1657eb3",
+  "research/agents_t601/out/T601_DOORLESS_CENSUS.json": "1ee289bcb13429076dac56eff7ed5210b17445f783bfff89a2dc99825a05005c",
+  "research/agents_t602/out/T602_DOOR_STEPS.json": "c7cb2f106e7b2039482582c7b95688fd003368928b38b04d325b79f1cc92db40"
+ },
+ "joint": {
+  "joint_rows": "the column / beam joint rows keep their class (UNRESOLVED in statement V9, T-603) with the pointer T-599 (UP-CONC-JOINT-001 1.0.0 pending) / T-600 (per-storey residual); no rule citation from an unmerged task; no quantity change",
+  "lines_in_v11": "no manifest V2 .. V11 row writes a joint line: nothing to carry",
+  "manifest_rows": 0,
+  "refusal": "T-599 is not MERGED with a Checker verdict: its rows cannot enter a manifest",
+  "rule_task": "T-599",
+  "state_at_claim": "TODO r2 (Verifier 2026-11-07T13:58Z REJECTED head dd3baaa4, gates F + H)"
+ },
+ "overlay": {
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v11": 5124,
+   "after_v12": 5125,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 4,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v11_overlay": [],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v12_vs_v11_totals": {
+   "FIN.SKIRTING|lm": {
+    "after": {
+     "excluded_n": 29,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "209.728592",
+     "released_n": 19
+    },
+    "before": {
+     "excluded_n": 28,
+     "held_blank_n": 7,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 7,
+     "released": "209.428592",
+     "released_n": 18
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.3
+   },
+   "before": null,
+   "beside": {
+    "evidence_scope": "jamb geometry DRAWING-CONFIRMED (Checker own read); dry sides / floor continuity on the T-175 / T-296 records: PARTIALLY VERIFIED",
+    "his_lm": "0.30",
+    "jamb_ends": 2,
+    "jamb_faces_dxf": [
+     "AD0",
+     "AD1",
+     "AD4",
+     "AD5"
+    ],
+    "jamb_lm": "0.3",
+    "opening": "A-1F-01 (engine 1F OP-011)",
+    "room_lines_unchanged": [
+     "L-a8aea28451168e4032b6",
+     "L-4a85470b3a822d6fb7bb"
+    ],
+    "sides": "1F bed room 380 x 430 | dressing 165 x 180 (both dry, porcelain continues: T-175 / T-296 records)",
+    "wall_depth_m": "0.15",
+    "who_is_right": "FREELANCER_RIGHT (ENGINE_WRONG on our side: deducted, no jamb valued)"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "SKIRT-T601:1F-R0E919A:OP-011-JAMBS",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-601 VERIFIER 2026-11-07T13:58Z (e)/(f): own read P7757.dxf: A-1F-01 gap 1000 mm, two layer-1 jamb returns 0.150 deep, no leaf: 2 x 0.15 = 0.30 lm AGREE (FREELANCER_RIGHT, DRAWING-CONFIRMED jamb; dry sides / floor continuity on T-175 / T-296 records: PARTIALLY VERIFIED); GF OP-011 / 1F OP-007 framed lift landing doors, deduction stands, label PASSAGE wrong (FR-T601-3); A-GF-01 / P-GF-01 NA (Q-06 A wet side, rule application checked); FR-T601-1 209.428592 -> 209.728592 lm applies only when wired (T-604)"
+   },
+   "item_code": "FIN.SKIRTING",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.SKIRTING:SKIRT-T601:1F-R0E919A:OP-011-JAMBS",
+   "note": "R-T604-1 (b): the room lines deduct the opening and value no jamb; the jamb is its own line",
+   "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-1|NEW:FIN.SKIRTING:SKIRT-T601:1F-R0E919A:OP-011-JAMBS",
+   "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "row": "FR-T601-1",
+   "source": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "supersedes": [
+    "T-574 row 29 UNRESOLVED -0.30 lm ('bed room 2' group)",
+    "F-T591-1 open jamb name A-1F-01"
+   ],
+   "unit": "lm"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "opening": "P-GF-01 (engine GF OP-020)",
+    "rfi_b": "kept for the reveal's wall finish (B4 / B5), not for skirting",
+    "rule": "Q-06 A / UP-THR-001 1.0.0 (wet side: marble threshold, full-height tile; owner method condition 4)",
+    "sides": "GF stair hall | hand-wash space (Q-06 A wet; T-441 RFI b 'tile return or skirting')"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-601 VERIFIER 2026-11-07T13:58Z (e)/(f): own read P7757.dxf: A-1F-01 gap 1000 mm, two layer-1 jamb returns 0.150 deep, no leaf: 2 x 0.15 = 0.30 lm AGREE (FREELANCER_RIGHT, DRAWING-CONFIRMED jamb; dry sides / floor continuity on T-175 / T-296 records: PARTIALLY VERIFIED); GF OP-011 / 1F OP-007 framed lift landing doors, deduction stands, label PASSAGE wrong (FR-T601-3); A-GF-01 / P-GF-01 NA (Q-06 A wet side, rule application checked); FR-T601-1 209.428592 -> 209.728592 lm applies only when wired (T-604)"
+   },
+   "kind": "SET",
+   "line_id": "L-6ff876aefb5a3631565c",
+   "note": "R-T604-1 (c): NOT_APPLICABLE_WITH_EVIDENCE: the wet side takes no skirting; the line leaves the HELD sum by rule, never 0",
+   "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-2|L-6ff876aefb5a3631565c",
+   "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "row": "FR-T601-2",
+   "source": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "supersedes": [
+    "candidate HELD-blank jamb line (T-443, RFI b) on GF OP-020"
+   ]
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 28.571589
+   },
+   "beside": {
+    "label_after": "LIFT LANDING DOOR (LIFT DOOR GAP register; T-175 L-GF-01)",
+    "label_before": "PASSAGE (T-296 deduction kind)",
+    "opening": "GF OP-011",
+    "panel_lines_dxf": [
+     "228",
+     "229",
+     "22A",
+     "22B"
+    ]
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-601 VERIFIER 2026-11-07T13:58Z (e)/(f): own read P7757.dxf: A-1F-01 gap 1000 mm, two layer-1 jamb returns 0.150 deep, no leaf: 2 x 0.15 = 0.30 lm AGREE (FREELANCER_RIGHT, DRAWING-CONFIRMED jamb; dry sides / floor continuity on T-175 / T-296 records: PARTIALLY VERIFIED); GF OP-011 / 1F OP-007 framed lift landing doors, deduction stands, label PASSAGE wrong (FR-T601-3); A-GF-01 / P-GF-01 NA (Q-06 A wet side, rule application checked); FR-T601-1 209.428592 -> 209.728592 lm applies only when wired (T-604)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-71e2e002a3af624097f0",
+   "note": "R-T604-1 (d): label only; the 1.00 deduction stands; no jamb skirting",
+   "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-71e2e002a3af624097f0",
+   "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "row": "FR-T601-3",
+   "source": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "supersedes": [
+    "F-T591-1 HELD-by-name doorless reading of GF OP-011"
+   ]
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.38536
+   },
+   "beside": {
+    "label_after": "LIFT LANDING DOOR (LIFT DOOR GAP register; T-175 L-1F-01)",
+    "label_before": "PASSAGE (T-296 deduction kind)",
+    "opening": "1F OP-007",
+    "panel_lines_dxf": [
+     "B98",
+     "B99",
+     "B9A",
+     "B9B"
+    ]
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-601 VERIFIER 2026-11-07T13:58Z (e)/(f): own read P7757.dxf: A-1F-01 gap 1000 mm, two layer-1 jamb returns 0.150 deep, no leaf: 2 x 0.15 = 0.30 lm AGREE (FREELANCER_RIGHT, DRAWING-CONFIRMED jamb; dry sides / floor continuity on T-175 / T-296 records: PARTIALLY VERIFIED); GF OP-011 / 1F OP-007 framed lift landing doors, deduction stands, label PASSAGE wrong (FR-T601-3); A-GF-01 / P-GF-01 NA (Q-06 A wet side, rule application checked); FR-T601-1 209.428592 -> 209.728592 lm applies only when wired (T-604)"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-ba3599ec2dc82c221617",
+   "note": "R-T604-1 (d): label only; the 1.00 deduction stands; no jamb skirting",
+   "op_id": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-ba3599ec2dc82c221617",
+   "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "row": "FR-T601-3",
+   "source": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+   "supersedes": [
+    "F-T591-1 HELD-by-name doorless reading of 1F OP-007"
+   ]
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "companion": "110#0",
+    "edge": "10F",
+    "gate_leaf": "stays HELD (T-361); does not change the step",
+    "levels": {
+     "in": [
+      "+0.15"
+     ],
+     "out": [
+      "+-0.00"
+     ]
+    },
+    "material": "stone / finish HELD by name (not printed)",
+    "nr": 1,
+    "opening": "G-01",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER 'GATE STEP')",
+    "riser_m": "0.15",
+    "riser_m2": "0.375",
+    "step_lm_payable": "2.5"
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "scope": "the step's beside figures (DRAWING-CONFIRMED geometry); the gate leaf line's own HELD state is unchanged and not re-verified",
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-602 VERIFIER 2026-11-07T15:02Z (e)/(f): independent re-measure of G-01: boundary gap 2.500 m clear, plot edge layer 5 through the gap, layer-2 companion 0.050 over the gap, court +0.15 / street +-0.00: step 2.500 lm, riser 0.15 -> 0.375 m2 AGREE; G-01 DRAWING-CONFIRMED geometry, stone / finish HELD, 0.40 lm UNRESOLVED (no id on his rows); ENGINE_OMISSION (FR-T602-1), count FREELANCER_RIGHT"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-124e0c1ce0b8015699c9",
+   "note": "R-T604-1 (e): no threshold line exists at a boundary opening; the step sits beside the gate family's own line of G-01; never folded into the house door-step total",
+   "op_id": "GATE_STEP_G01 (T-602 FR-T602-1)|FR-T602-1|L-124e0c1ce0b8015699c9",
+   "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+   "row": "FR-T602-1",
+   "source": "GATE_STEP_G01 (T-602 FR-T602-1)",
+   "supersedes": [
+    "V10 door-step his-residual UNRESOLVED (SCOPE) -2.900 lm: 2.500 of it is this ENGINE_OMISSION"
+   ]
+  }
+ ],
+ "rule": "R-T604-1",
+ "schema": "URBAN_T604_WIRING_MANIFEST_V12",
+ "skirting": {
+  "FIN.SKIRTING|lm": {
+   "v11": {
+    "excluded_n": 28,
+    "held_blank_n": 7,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 7,
+    "released": "209.428592",
+    "released_n": 18
+   },
+   "v12": {
+    "excluded_n": 29,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "209.728592",
+    "released_n": 19
+   }
+  },
+  "held_lines": "7 -> 6 (FR-T601-2 OP-020 jamb line HELD-blank -> EXCLUDED by rule; held bounds 0 .. 0 unchanged, no blank became 0)",
+  "his": "A-1F-01 his 0.30 = ours 0.30 after the fix (AGREE); 'bed room 2' group gap -2.00 -> -1.70 lm (T-601 s.3); no %",
+  "released_delta_lm": "0.3",
+  "room_lines_unchanged": [
+   "L-a8aea28451168e4032b6",
+   "L-4a85470b3a822d6fb7bb"
+  ]
+ },
+ "sources_merged": {
+  "T-601": "2a7ad738",
+  "T-602": "6d211198"
+ },
+ "stair_edge_census_after_v12": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "supersedes": {
+  "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-1|NEW:FIN.SKIRTING:SKIRT-T601:1F-R0E919A:OP-011-JAMBS": [
+   "T-574 row 29 UNRESOLVED -0.30 lm ('bed room 2' group)",
+   "F-T591-1 open jamb name A-1F-01"
+  ],
+  "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-2|L-6ff876aefb5a3631565c": [
+   "candidate HELD-blank jamb line (T-443, RFI b) on GF OP-020"
+  ],
+  "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-71e2e002a3af624097f0": [
+   "F-T591-1 HELD-by-name doorless reading of GF OP-011"
+  ],
+  "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)|FR-T601-3|L-ba3599ec2dc82c221617": [
+   "F-T591-1 HELD-by-name doorless reading of 1F OP-007"
+  ],
+  "GATE_STEP_G01 (T-602 FR-T602-1)|FR-T602-1|L-124e0c1ce0b8015699c9": [
+   "V10 door-step his-residual UNRESOLVED (SCOPE) -2.900 lm: 2.500 of it is this ENGINE_OMISSION"
+  ]
+ },
+ "task": "T-604"
+}
