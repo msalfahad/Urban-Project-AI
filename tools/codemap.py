@@ -29,6 +29,7 @@ from collections import Counter, defaultdict, deque
 from functools import cached_property
 from pathlib import Path
 
+DEFAULT_GUARD_CLASS = "TOOLING"        # T-212 / T-599: navigation-map builder; it produces no quantity, so no guard to run
 DEFAULT_ROOT = Path(__file__).resolve().parents[1]
 MAPS = ("docs/ROUTE_QUICK.md", "docs/ROUTING.md", "docs/CODEMAP.md", "docs/RULES_INDEX.md")
 TOPICS_FILE = "tools/routing_topics.json"
