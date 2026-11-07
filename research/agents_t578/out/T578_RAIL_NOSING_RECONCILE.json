@@ -1,0 +1,863 @@
+{
+ "schema": "T578_RAIL_NOSING_RECONCILE_V1",
+ "rule": "R-T578-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "line_index": "research/agents_t507/out/LINE_INDEX_V3_0_57.json",
+ "pins": {
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0",
+  "research/agents_t412/NOSING_TABLE_T412.csv": "9da81b33ec1b5f40",
+  "research/agents_t476/FLIGHT_CENSUS_T476.csv": "77f5fc462a71e253"
+ },
+ "rails_lm": {
+  "unit": "lm",
+  "sign": "his - ours",
+  "ours": {
+   "by_family": {
+    "WALL_HANDRAIL": "0",
+    "BALUSTRADE": "33.319174",
+    "GUARD": "21.550"
+   },
+   "total": "54.869174",
+   "held_bound": {
+    "BALUSTRADE": [
+     "1.118196",
+     null
+    ],
+    "GUARD": [
+     "0",
+     null
+    ]
+   }
+  },
+  "his": {
+   "cell": "COV.B39",
+   "value": "18.95",
+   "label": "lm",
+   "typed_constant": true,
+   "rows_behind_it": 0
+  },
+  "gap": "-35.919174",
+  "pct": null,
+  "pct_withheld": "SCOPE and HELD causes (R-T578-1 (e))",
+  "like_for_like_hypothesis_A": {
+   "ours": "18.724",
+   "his": "18.95",
+   "his_minus_ours": "0.226",
+   "status": "a hypothesis about his scope, never proven; not a % claim"
+  },
+  "causes": [
+   {
+    "label": "roof / terrace guards RL-01 + RL-02 + RL-03 (B13-08): in our list only; his only railing row is labelled internal and none of his 885 rows names an external railing",
+    "verdict": "ENGINE_RIGHT",
+    "kind": "SCOPE",
+    "amount": "-19.150",
+    "source": "T-164 / T-199 (RL-02 + RL-03 Checker VERIFIED 12.888; RL-01 DRAWING-CONFIRMED)"
+   },
+   {
+    "label": "ST-01 balustrade run RL-07 (4 flights + 2 level pieces): outside his 18.95 under every decomposition (two balustraded staircases are drawn; his one figure covers at most one)",
+    "verdict": "ENGINE_RIGHT",
+    "kind": "SCOPE",
+    "amount": "-15.953174",
+    "source": "T-393 / T-476 / T-480 (MS2-L Checker own 3.782209)"
+   },
+   {
+    "label": "ST-01b D1 lobby flight rail RL-08: in our list only under decomposition A (his = ST-02 system + D-23)",
+    "verdict": "ENGINE_RIGHT",
+    "kind": "SCOPE",
+    "amount": "-1.042",
+    "source": "T-393 s.4 (section A-A draws it)"
+   },
+   {
+    "label": "unexplained: his 18.95 - (RL-05 16.324 + RL-06 2.400); his row has no breakdown",
+    "verdict": "UNRESOLVED",
+    "kind": "RESIDUAL",
+    "amount": "0.226",
+    "source": "T-393 s.4 decomposition A; T-578 re-read of his rows"
+   },
+   {
+    "label": "held / unknown balustrade pieces (5 lines blank): his share not separable from a typed constant",
+    "verdict": "HELD",
+    "kind": "HELD",
+    "amount": "0",
+    "bound": [
+     "1.118196",
+     null
+    ],
+    "source": "T-476 / T-480"
+   },
+   {
+    "label": "held guards RL-04 / RL-10 (2 lines blank)",
+    "verdict": "HELD",
+    "kind": "HELD",
+    "amount": "0",
+    "bound": [
+     "0",
+     null
+    ],
+    "source": "T-164 / T-199"
+   },
+   {
+    "label": "pitch vs plan length: tested, 0 in the closure (if his were plan length, ST-02 sloped pieces would be 1.205719 lower and decomposition A would leave 1.431719, a worse fit; every flight piece here is installed along the pitch, R-T578-1 (a))",
+    "verdict": "ENGINE_RIGHT",
+    "kind": "MEASURE",
+    "amount": "0",
+    "source": "T-476 census, recomputed"
+   },
+   {
+    "label": "both sides vs one side of a flight: 0 (no wall rail drawn on any wall side, UP-STAIR-013; B7-10 NOT_APPLICABLE)",
+    "verdict": "AGREE",
+    "kind": "MEASURE",
+    "amount": "0",
+    "source": "T-476 scan"
+   }
+  ],
+  "runs": [
+   {
+    "run": "RAIL:RL-01",
+    "line": "L-b54ee211b5af50087b29",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "DRAWING-CONFIRMED",
+    "value": "6.262",
+    "pieces": [],
+    "pieces_sum": null,
+    "line_minus_pieces": null,
+    "note": "roof / terrace guard measured by T-164 (no flight piece)",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-02",
+    "line": "L-1ff5e79e1c11b3a04eed",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "DRAWING-CONFIRMED",
+    "value": "4.921",
+    "pieces": [],
+    "pieces_sum": null,
+    "line_minus_pieces": null,
+    "note": "roof / terrace guard measured by T-164 (no flight piece)",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-03",
+    "line": "L-b75c30fcd5e3b5607433",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "DRAWING-CONFIRMED",
+    "value": "7.967",
+    "pieces": [],
+    "pieces_sum": null,
+    "line_minus_pieces": null,
+    "note": "roof / terrace guard measured by T-164 (no flight piece)",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-04",
+    "line": "L-98aa5d0a6600631563cb",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "HELD",
+    "value": null,
+    "why": "GF roof strip sea edge: plan band 6.127 vs elevation 7.500 between piers; railing / glazing / parapet not established (T-164 / T-393): 0 .. the larger drawn extent",
+    "bound": [
+     "0",
+     "7.500"
+    ]
+   },
+   {
+    "run": "RAIL:RL-05",
+    "line": "L-62577112dc4c8cdb8640",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "DRAWING-CONFIRMED",
+    "value": "16.324",
+    "pieces": [
+     {
+      "id": "ST-02:RS-C:inner (void)",
+      "kind": "INCLINED",
+      "plan": "2.587274",
+      "rise": "1.928568",
+      "installed": "3.228281"
+     },
+     {
+      "id": "ST-02:RS-S:north (void)",
+      "kind": "INCLINED",
+      "plan": "3.000000",
+      "rise": "1.607140",
+      "installed": "3.403366"
+     },
+     {
+      "id": "ST-02:RS-A:west (void)",
+      "kind": "INCLINED",
+      "plan": "1.200000",
+      "rise": "0.642856",
+      "installed": "1.361346"
+     },
+     {
+      "id": "ST-02:volute:level",
+      "kind": "HORIZONTAL",
+      "plan": "0.810720",
+      "rise": null,
+      "installed": "0.810720"
+     },
+     {
+      "id": "ST-02:corner landing RS-LD:level",
+      "kind": "HORIZONTAL",
+      "plan": "0.050000",
+      "rise": null,
+      "installed": "0.050000"
+     },
+     {
+      "id": "ST-02:1F void edge beside RS-A:level",
+      "kind": "HORIZONTAL",
+      "plan": "1.625000",
+      "rise": null,
+      "installed": "1.625000"
+     },
+     {
+      "id": "ST-02:1F gallery void edge:level",
+      "kind": "HORIZONTAL",
+      "plan": "5.845000",
+      "rise": null,
+      "installed": "5.845000"
+     }
+    ],
+    "pieces_sum": "16.323713",
+    "line_minus_pieces": "0.000287",
+    "note": "line rounding to 3 dp",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-06",
+    "line": "L-c9cd76a27a48bd353eea",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "DRAWING-CONFIRMED",
+    "value": "2.4",
+    "pieces": [
+     {
+      "id": "ST-02:RS-A:east (living floor edge D-23)",
+      "kind": "HORIZONTAL",
+      "plan": "2.400000",
+      "rise": null,
+      "installed": "2.400000"
+     }
+    ],
+    "pieces_sum": "2.400000",
+    "line_minus_pieces": "0.000000",
+    "note": "",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-07",
+    "line": "L-ec87473cb7160d5f4ac2",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "DRAWING-CONFIRMED",
+    "value": "15.953174",
+    "pieces": [
+     {
+      "id": "ST-01:MS1-L:inner (well)",
+      "kind": "INCLINED",
+      "plan": "2.700000",
+      "rise": "1.500003",
+      "installed": "3.088690"
+     },
+     {
+      "id": "ST-01:MS1-U:inner (well)",
+      "kind": "INCLINED",
+      "plan": "3.300000",
+      "rise": "1.833337",
+      "installed": "3.775066"
+     },
+     {
+      "id": "ST-01:MS2-L:inner (well)",
+      "kind": "INCLINED",
+      "plan": "3.300000",
+      "rise": "1.848000",
+      "installed": "3.782209"
+     },
+     {
+      "id": "ST-01:MS2-U:inner (well)",
+      "kind": "INCLINED",
+      "plan": "3.300000",
+      "rise": "1.848000",
+      "installed": "3.782209"
+     },
+     {
+      "id": "ST-01:T-1F-S:well-end turn",
+      "kind": "HORIZONTAL",
+      "plan": "0.200000",
+      "rise": null,
+      "installed": "0.200000"
+     },
+     {
+      "id": "ST-01:G-2F:2F floor edge over MS2-L",
+      "kind": "HORIZONTAL",
+      "plan": "1.325000",
+      "rise": null,
+      "installed": "1.325000"
+     }
+    ],
+    "pieces_sum": "15.953174",
+    "line_minus_pieces": "0.000000",
+    "note": "",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-07:ST-01:T-MS1-N",
+    "line": "L-be57e4fa144c4de18968",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "HELD",
+    "value": null,
+    "why": "rail drawn on both sides of the 5-winder turn (well band); profile over the 0.10 m well not drawn: at least the chord between its drawn ends, no upper bound",
+    "bound": [
+     "0.856999",
+     null
+    ]
+   },
+   {
+    "run": "RAIL:RL-07:ST-01:T-MS2-LD",
+    "line": "L-1c899e8cc696d9c32490",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "HELD",
+    "value": null,
+    "why": "closing riser MS2-TR position against the turn not drawn: at least the chord",
+    "bound": [
+     "0.261197",
+     null
+    ]
+   },
+   {
+    "run": "RAIL:RL-08",
+    "line": "L-7c65444302070a5f33e6",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "DRAWING-CONFIRMED",
+    "value": "1.042",
+    "pieces": [
+     {
+      "id": "ST-01b:D1:well side",
+      "kind": "INCLINED",
+      "plan": "0.900000",
+      "rise": "0.525000",
+      "installed": "1.041933"
+     }
+    ],
+    "pieces_sum": "1.041933",
+    "line_minus_pieces": "0.000067",
+    "note": "line rounding to 3 dp",
+    "bound": null
+   },
+   {
+    "run": "RAIL:RL-09",
+    "line": "L-665af3a256e864478b96",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "HELD",
+    "value": null,
+    "why": "ST-02 RS-C outer band: balustrade or string not established (designer RFI); band end differs between the plans (259.1 vs 270.4 deg), so no upper bound is formed",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   {
+    "run": "RAIL:RL-10",
+    "line": "L-78babf2c6da600cb800e",
+    "code": "MET.RAILING.GUARD",
+    "family": "GUARD",
+    "status": "HELD",
+    "value": null,
+    "why": "street fence X railing: length not printed (never scaled), T-164",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   {
+    "run": "RAIL:RL-11",
+    "line": "L-ea254d77037e0fe64780",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "HELD",
+    "value": null,
+    "why": "ST-03 E1 entrance stair (0.85 m rise): no guard drawn on either side; extent not printed",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   {
+    "run": "RAIL:RL-12",
+    "line": "L-abd258e2201cef0b22d8",
+    "code": "FIN.HANDRAIL",
+    "family": "WALL_HANDRAIL",
+    "status": "NOT_APPLICABLE",
+    "value": null,
+    "why": "UP-STAIR-013: no wall handrail drawn on any wall side of the 9 flights (T-476 scan)",
+    "bound": null
+   },
+   {
+    "run": "RAIL:ST-01b:GF east-lane band beyond D1",
+    "line": "L-0129ba42e945a132bc36",
+    "code": "FIN.RAILING",
+    "family": "BALUSTRADE",
+    "status": "HELD",
+    "value": null,
+    "why": "F-T476-1: 1.875 m (centreline plan) of layer-5 band beyond D1, no level change printed across it: rail or drafting edge UNKNOWN",
+    "bound": [
+     "0",
+     "1.875"
+    ]
+   }
+  ],
+  "reader_lines_retired": {
+   "count": 14,
+   "class": "EXCLUDED (NOT_APPLICABLE_WITH_EVIDENCE, T-480)",
+   "figure": null
+  }
+ },
+ "nosing_lm": {
+  "unit": "lm",
+  "sign": "his - ours",
+  "groups": [
+   {
+    "stair": "ST-01",
+    "his_cells": "MRB.B23 x MRB.C23",
+    "his_count": "63",
+    "his_width": "1.2",
+    "his": "75.6",
+    "ours": "55.100000",
+    "ours_confirmed_n": 48,
+    "ours_held_n": 8,
+    "held_bound": [
+     "0",
+     null
+    ],
+    "held_drawn_beside": {
+     "lm": "7.593650",
+     "n_drawn": 6,
+     "n_not_drawn": 2
+    },
+    "gap": "20.500000",
+    "pct": null,
+    "causes": [
+     {
+      "label": "7 pieces in his row beyond the 56 risers drawn (one nosing per riser); every reading of his count tested fails (T-412 s.5)",
+      "verdict": "UNRESOLVED",
+      "kind": "RESIDUAL",
+      "amount": "8.4",
+      "source": "T-412 (risers by section A-A, Q-46 A)"
+     },
+     {
+      "label": "8 nosings HELD on our side (his pieces opposite them at his width)",
+      "verdict": "HELD",
+      "kind": "HELD",
+      "amount": "9.6",
+      "bound": [
+       "0",
+       null
+      ],
+      "source": "T-412 (winder CONFLICT, undrawn floor edges, MS2-TR, RS-C curved Q-50 A cond)"
+     },
+     {
+      "label": "width basis: his 1.2 (the structural lane) vs the drawn front edge 1.150000 on 48 confirmed nosings",
+      "verdict": "ENGINE_RIGHT",
+      "kind": "MEASURE",
+      "amount": "2.400000",
+      "source": "T-412 s.4 (every drawn marble front edge 1.150, both DXFs)"
+     },
+     {
+      "label": "drawn column notches on the front edge (he deducts none)",
+      "verdict": "ENGINE_RIGHT",
+      "kind": "MEASURE",
+      "amount": "0.100000",
+      "source": "T-412 / T-410 R-T410-4"
+     }
+    ],
+    "held": [
+     {
+      "id": "ST01-MS1T-N01",
+      "flight": "MS1-T",
+      "kind": "WINDER",
+      "bound": [
+       "0",
+       "1.258652"
+      ]
+     },
+     {
+      "id": "ST01-MS1T-N02",
+      "flight": "MS1-T",
+      "kind": "WINDER",
+      "bound": [
+       "0",
+       "1.626346"
+      ]
+     },
+     {
+      "id": "ST01-MS1T-N03",
+      "flight": "MS1-T",
+      "kind": "WINDER",
+      "bound": [
+       "0",
+       "1.258652"
+      ]
+     },
+     {
+      "id": "ST01-MS1T-N04",
+      "flight": "MS1-T",
+      "kind": "WINDER",
+      "bound": [
+       "0",
+       null
+      ]
+     },
+     {
+      "id": "ST01-MS1T-N05",
+      "flight": "MS1-T",
+      "kind": "LANDING_EDGE",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST01-MS1U-N12",
+      "flight": "MS1-U",
+      "kind": "FLOOR_EDGE",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST01-MS2TR-N01",
+      "flight": "MS2-TR",
+      "kind": "LANDING_EDGE",
+      "bound": [
+       "0",
+       null
+      ]
+     },
+     {
+      "id": "ST01-MS2U-N12",
+      "flight": "MS2-U",
+      "kind": "FLOOR_EDGE",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     }
+    ]
+   },
+   {
+    "stair": "ST-02",
+    "his_cells": "MRB.B30 x MRB.C30",
+    "his_count": "28",
+    "his_width": "1.2",
+    "his": "33.6",
+    "ours": "18.250000",
+    "ours_confirmed_n": 16,
+    "ours_held_n": 12,
+    "held_bound": [
+     "0",
+     "13.850000"
+    ],
+    "held_drawn_beside": {
+     "lm": "13.850000",
+     "n_drawn": 12,
+     "n_not_drawn": 0
+    },
+    "gap": "15.350000",
+    "pct": null,
+    "causes": [
+     {
+      "label": "12 nosings HELD on our side (his pieces opposite them at his width)",
+      "verdict": "HELD",
+      "kind": "HELD",
+      "amount": "14.4",
+      "bound": [
+       "0",
+       "13.850000"
+      ],
+      "source": "T-412 (winder CONFLICT, undrawn floor edges, MS2-TR, RS-C curved Q-50 A cond)"
+     },
+     {
+      "label": "width basis: his 1.2 (the structural lane) vs the drawn front edge 1.150000 on 16 confirmed nosings",
+      "verdict": "ENGINE_RIGHT",
+      "kind": "MEASURE",
+      "amount": "0.800000",
+      "source": "T-412 s.4 (every drawn marble front edge 1.150, both DXFs)"
+     },
+     {
+      "label": "drawn column notches on the front edge (he deducts none)",
+      "verdict": "ENGINE_RIGHT",
+      "kind": "MEASURE",
+      "amount": "0.150000",
+      "source": "T-412 / T-410 R-T410-4"
+     }
+    ],
+    "held": [
+     {
+      "id": "ST02-RSC-N01",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.200000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N02",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N03",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N04",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N05",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N06",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N07",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N08",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N09",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N10",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N11",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     },
+     {
+      "id": "ST02-RSC-N12",
+      "flight": "RS-C",
+      "kind": "TREAD",
+      "bound": [
+       "0",
+       "1.150000"
+      ]
+     }
+    ]
+   },
+   {
+    "stair": "ST-03",
+    "his_cells": "MRB.B16 x MRB.C16",
+    "his_count": "5",
+    "his_width": "2.8",
+    "his": "14.0",
+    "ours": "14.000000",
+    "ours_confirmed_n": 5,
+    "ours_held_n": 0,
+    "held_bound": null,
+    "held_drawn_beside": {
+     "lm": "0",
+     "n_drawn": 0,
+     "n_not_drawn": 0
+    },
+    "gap": "0.000000",
+    "pct": "0.00",
+    "causes": [
+     {
+      "label": "same count and width",
+      "verdict": "AGREE",
+      "kind": "MEASURE",
+      "amount": "0",
+      "source": "T-412"
+     }
+    ],
+    "held": []
+   }
+  ],
+  "totals": {
+   "his": "123.2",
+   "ours": "87.350000",
+   "gap": "35.850000",
+   "held_n": 20,
+   "held_bound": [
+    "0",
+    null
+   ],
+   "pct": null,
+   "pct_withheld": "HELD and UNRESOLVED count causes (R-T578-1 (e))"
+  },
+  "his_note": "he carries no nosing row; his only lm along the nosing edges is each step row's count x width (cells in his marble sheet booked in its area column, T-577 F-T577-3)"
+ },
+ "nosing_nr": {
+  "unit": "nr",
+  "sign": "his - ours",
+  "groups": [
+   {
+    "stair": "ST-01",
+    "his": "63",
+    "ours": 48,
+    "gap": "15",
+    "causes": [
+     {
+      "label": "pieces beyond the risers drawn",
+      "verdict": "UNRESOLVED",
+      "kind": "RESIDUAL",
+      "amount": "7"
+     },
+     {
+      "label": "8 nosings HELD on our side",
+      "verdict": "HELD",
+      "kind": "HELD",
+      "amount": "8",
+      "bound": [
+       "0",
+       "8"
+      ]
+     }
+    ]
+   },
+   {
+    "stair": "ST-02",
+    "his": "28",
+    "ours": 16,
+    "gap": "12",
+    "causes": [
+     {
+      "label": "12 nosings HELD on our side",
+      "verdict": "HELD",
+      "kind": "HELD",
+      "amount": "12",
+      "bound": [
+       "0",
+       "12"
+      ]
+     }
+    ]
+   },
+   {
+    "stair": "ST-03",
+    "his": "5",
+    "ours": 5,
+    "gap": "0",
+    "causes": [
+     {
+      "label": "same count",
+      "verdict": "AGREE",
+      "kind": "MEASURE",
+      "amount": "0"
+     }
+    ]
+   }
+  ],
+  "totals": {
+   "his": "96",
+   "ours": 69,
+   "gap": "27"
+  }
+ },
+ "code_closure": {
+  "FIN.RAILING": {
+   "lines": 22,
+   "by_class": {
+    "EXCLUDED": 14,
+    "HELD": 5,
+    "RELEASED": 3
+   },
+   "valued_lm": "33.319174"
+  },
+  "MET.RAILING.GUARD": {
+   "lines": 6,
+   "by_class": {
+    "HELD": 2,
+    "RELEASED": 4
+   },
+   "valued_lm": "21.550"
+  },
+  "FIN.HANDRAIL": {
+   "lines": 1,
+   "by_class": {
+    "EXCLUDED": 1
+   },
+   "valued_lm": "0"
+  },
+  "FIN.STAIR.STEP_LM": {
+   "lines": 14,
+   "by_class": {
+    "EXCLUDED": 2,
+    "HELD": 5,
+    "RELEASED": 7
+   },
+   "valued_lm": "67.85",
+   "why": "not this element: the commercial step lm per tread (UP-STAIR-008, tread + riser + nosing in one step basis), reconciled under T-412 / T-577; the nosing is one edge per riser and has no candidate line yet (T-424 QUEUED)"
+  },
+  "nosing_lines_in_candidate": 0
+ },
+ "released": "NOTHING RELEASED; no candidate, engine, rule or registry file changed (research ledger)"
+}
