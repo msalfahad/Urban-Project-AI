@@ -62,6 +62,17 @@ Input: statement V7 (T-587; V6 byte-equal inside it) finishes sections; structur
 - T-577/marble-nr row 1: CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep
 - T-577/marble-lm@V7 row 1: CLASS QUESTIONED: his side has no row (R-T586-1 (a) NO_ROW); Checker to class NOT_COMPARABLE or keep
 
+## F-T591-1: doorless-opening jamb skirting, condition check (committed T-175 / T-296 records)
+
+| Opening | Wall t (m) | Status | Jamb lm | Statement row | Proposal |
+|---|---|---|---|---|---|
+| A-1F-01 / 1F OP-011 | 0.15 | CONDITIONS_MET | 0.30 | T-574/skirting-room row 29 | ENGINE_WRONG 0.30 lm (his 2 x 0.15 agrees with the owner method) |
+| A-GF-01 / GF OP-027 | 0.15 | NOT_APPLICABLE | 0 | none (his gross row has no jambs either) | none |
+| P-GF-01 / GF OP-020 | 0.20 | HELD_LINE_EXISTS | 0.40 (held, its own cause) | none | none (carried by its HELD line) |
+| P-GF-04 / GF OP-003 11.22 | none | NOT_AN_OPENING | 0 | T-574/skirting-room row 1 | none |
+| GF OP-011 (no census id) | not established | HELD | HELD (2 x wall thickness, never 0) | T-574/skirting-room row 1 | UNRESOLVED until the opening is read |
+| 1F OP-007 (no census id) | not established | HELD | HELD (2 x wall thickness, never 0) | T-574/skirting-room row 19 | UNRESOLVED until the opening is read |
+
 ## Sections: classes before / after (difference unchanged)
 
 | Section | Unit | RD rows | Difference | RULE_DIFFERENCE before | after | UNRESOLVED after |

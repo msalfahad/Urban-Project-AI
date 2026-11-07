@@ -36,8 +36,13 @@ Every section's difference is unchanged; only T-574/skirting-room moves 0.30 lm 
   door jambs are excluded (DOOR_PRESENT jamb_skirting NONE). So the row has no rule on our side: UNRESOLVED 0.30 lm.
   Wider effect (no number here): the same refusal applies to every doorless opening in the skirting table (open
   passages OP-003 / OP-011, 1F OP-007, the dewaneya arch OP-027, the dressing arches); the candidate has one HELD jamb
-  line (SKIRT-T443 OP-020 jambs) and no valued one. Fix row proposed for the Lead: jamb depth per doorless opening from
-  the plan, the method's conditions checked opening by opening, held where the floor edge is not drawn.
+  line (SKIRT-T443 OP-020 jambs) and no valued one. Condition check from the committed drawing-derived records (T-175
+  opening hosts, T-296 skirting deductions; table in out/*.md): A-1F-01 (1F OP-011, the bed room 2 / dressing arch,
+  masonry 0.15, no door, both sides dry, porcelain continues) meets every condition -> 2 x 0.15 = 0.30 lm, exactly his
+  figure: verdict proposal ENGINE_WRONG 0.30 lm. A-GF-01 (dewaneya / wet wash) NOT_APPLICABLE (marble threshold at the
+  jambs); GF OP-020 already a HELD line (0.40); GF OP-003 an open side, not an opening; GF OP-011 and 1F OP-007 have no
+  host record: jamb depth HELD by name. Fix row proposed for the Lead: value the A-1F-01 jambs in a candidate package
+  and read GF OP-011 / 1F OP-007 from the plan.
 - **F-T591-2 (citation):** 8 plaster / paint opening-deduction rows (T-552 rows 5 / 11 / 14 / 26, T-561 rows 5 / 11 /
   14 / 26; +42.30195 m2 each section) cite Q-73 'full'. Q-73 (UPC-BLOCK-OPENINGS-001) governs blockwork. The finish
   deduction rests on UP-OPEN-SCHED-001 (the opening's own length x its band, OWNER_APPROVED) under UP-GEN-003. His side
@@ -61,10 +66,11 @@ No owner question: the one gap is answered by the owner's own method record (ERS
   owner method URBAN-*, answered binding Q-, owner rule file + item, family code for placement only); refused: unknown
   id, deprecated, open / withdrawn / non-rule answers, scenario-only answers; method records and Lead register rulings
   never count alone; REQUIRES_CONFIRMATION labelled provisional; NONE -> UNRESOLVED with its delta; no %.
-- tests/t591_rule_diff_provenance (31): K591 hand villa (door SOURCED, arch jambs NONE, closure 1.22 lm), adverse:
+- tests/t591_rule_diff_provenance (32): K591 hand villa (door SOURCED, arch jambs NONE, closure 1.22 lm), adverse:
   Q-80 open, Q-79 withdrawn, Q-34 / Q-23 not a rule, unknown id, deprecated rule, method record / register / Q-29 alone,
   wrong-trade citation, empty his side, non-RD row, unit outside the list; training villa: rebuild identical, 119 / 117
-  rows, one NONE, sections close, Q-73 never accepted for plaster / paint, pin drift refused.
+  rows, one NONE, sections close, Q-73 never accepted for plaster / paint, pin drift refused, the doorless
+  jamb check (0.30 = 2 x 0.15; unknown depth HELD, never 0).
 - Lesson row proposed (ERS s.7): | 2026-11-07 | an arch's jamb returns were refused as 'door jambs' and a blockwork
   answer was cited for plaster / paint deductions | a RULE_DIFFERENCE was labelled from a worker method record, not
   from the owner rule text | every RULE_DIFFERENCE names the governing rule id read in its text, for that trade and
@@ -74,5 +80,5 @@ No owner question: the one gap is answered by the owner's own method record (ERS
 ## 5. Rebuild
 
 `python3 -I research/agents_t591/t591_alsenan.py --check` (identical); the V7 JSON, rulebook 1.0.0 and family master
-1.55.0 are sha256-pinned; RULES_INDEX and the owner method rules are read live (a removed or deprecated rule shows in the
+1.55.0, the T-175 hosts and T-296 deductions are sha256-pinned; RULES_INDEX and the owner method rules are read live (a removed or deprecated rule shows in the
 rebuild test).

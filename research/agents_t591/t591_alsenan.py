@@ -28,7 +28,46 @@ PINS = {
     "rules/rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json":
         "4e9c57cef33d32ede26bea4eaf3823e2dc3880d56708dd18ec5df3760b84c055",
     "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json": "22cb3ffc2a747ad3992508717c0840f926def6885f695d8de6e53700821d8c99",
+    "research/agents_t175/T175_OPENING_HOSTS.csv": "d96cfbce9c732db50b7737038b374cab6fc91d5325cc36182416dd0dc35ac3e9",
+    "research/agents_t296/DEDUCTIONS_BY_OPENING_T296.csv":
+        "be797b612f96dd2482c13aa0261aa1bf470abb4046ca0e5f1ee5657af9ec6074",
 }
+# F-T591-1 condition check (URBAN-SKIRTING-OPENING-METHOD DOORLESS_OPENING) for every doorless opening the skirting
+# table deducts, from the committed drawing-derived records (T-175 hosts: kind, wall thickness, sides; T-296: the
+# skirting line that deducts it). Jamb lm = 2 jambs x wall thickness. Never 0 for an unknown depth.
+DOORLESS = [
+    {"opening": "A-1F-01 / 1F OP-011", "line_t296": "L-a8aea28451168e4032b6", "wall_t_m": "0.15",
+     "sides": "1F bed room 380 x 430 | dressing passage (both dry)",
+     "conditions": "no door (census kind OPENING, arch); real masonry jamb 0.15; both sides skirting-eligible dry "
+                   "rooms; floor porcelain continues through (UP-THR-001 dry strip); not a full-tile room",
+     "status": "CONDITIONS_MET", "jamb_lm": "0.30", "statement_row": "T-574/skirting-room row 29",
+     "verdict_proposal": "ENGINE_WRONG 0.30 lm (his 2 x 0.15 agrees with the owner method)"},
+    {"opening": "A-GF-01 / GF OP-027", "line_t296": "L-d32414916cfbd04c27be", "wall_t_m": "0.15",
+     "sides": "dewaneya | wash by the dewaneya (wet, Q-06 A)",
+     "conditions": "the floor at the jambs is the wet doorway's marble threshold (UP-THR-001 wet), not the dry floor "
+                   "finish: 'the floor finish reaches the jamb' fails (register: a marble-threshold opening into a "
+                   "full-tile wet space takes no skirting)",
+     "status": "NOT_APPLICABLE", "jamb_lm": "0", "statement_row": "none (his gross row has no jambs either)",
+     "verdict_proposal": "none"},
+    {"opening": "P-GF-01 / GF OP-020", "line_t296": "(T-443 stair hall child)", "wall_t_m": "0.20",
+     "sides": "GF stair hall doorless 0.90 opening with head lines",
+     "conditions": "doorless with a real head; already the candidate's HELD line SKIRT-T443:GF-ST-HALL:OP-020-JAMBS",
+     "status": "HELD_LINE_EXISTS", "jamb_lm": "0.40 (held, its own cause)", "statement_row": "none",
+     "verdict_proposal": "none (carried by its HELD line)"},
+    {"opening": "P-GF-04 / GF OP-003 11.22", "line_t296": "L-71e2e002a3af624097f0 / L-af6fb2d3474c5fbdb80a",
+     "wall_t_m": "none", "sides": "open side along the side passage (Q-67)",
+     "conditions": "an open side in no wall run, not an opening in a wall: the opening method does not apply",
+     "status": "NOT_AN_OPENING", "jamb_lm": "0", "statement_row": "T-574/skirting-room row 1",
+     "verdict_proposal": "none"},
+    {"opening": "GF OP-011 (no census id)", "line_t296": "L-71e2e002a3af624097f0", "wall_t_m": "not established",
+     "sides": "GF open room", "conditions": "no host record (T-175): door / doorless and jamb depth not established",
+     "status": "HELD", "jamb_lm": "HELD (2 x wall thickness, never 0)", "statement_row": "T-574/skirting-room row 1",
+     "verdict_proposal": "UNRESOLVED until the opening is read"},
+    {"opening": "1F OP-007 (no census id)", "line_t296": "L-ba3599ec2dc82c221617", "wall_t_m": "not established",
+     "sides": "1F living / open stair hall", "conditions": "no host record (T-175): jamb depth not established",
+     "status": "HELD", "jamb_lm": "HELD (2 x wall thickness, never 0)", "statement_row": "T-574/skirting-room row 19",
+     "verdict_proposal": "UNRESOLVED until the opening is read"},
+]
 # docs/RULES_INDEX.md and data/registry/URBAN_OWNER_METHOD_RULES.json are read live (they grow with every rule
 # version): an outcome changes only if a cited rule disappears or is deprecated, which the rebuild test then reports.
 OUT = HERE / "out"
@@ -221,6 +260,7 @@ def build() -> dict:
         "per_unit_all_incl_superseded": tab(unit_items),
         "sections": sections_out,
         "rows": rows_out,
+        "doorless_jamb_check": DOORLESS,
         "released_quantities_changed": 0,
     }
 
@@ -258,6 +298,11 @@ def to_markdown(o: dict) -> str:
         if r["flag"] and r["live"] and (r["section_id"], r["flag"]) not in seen:
             seen.add((r["section_id"], r["flag"]))
             L.append(f"- {r['section_id']} row {r['row']}: {r['flag']}")
+    L += ["", "## F-T591-1: doorless-opening jamb skirting, condition check (committed T-175 / T-296 records)", "",
+          "| Opening | Wall t (m) | Status | Jamb lm | Statement row | Proposal |", "|---|---|---|---|---|---|"]
+    for d in o["doorless_jamb_check"]:
+        L.append(f"| {d['opening']} | {d['wall_t_m']} | {d['status']} | {d['jamb_lm']} | {d['statement_row']} | "
+                 f"{d['verdict_proposal']} |")
     L += ["", "## Sections: classes before / after (difference unchanged)", "",
           "| Section | Unit | RD rows | Difference | RULE_DIFFERENCE before | after | UNRESOLVED after |",
           "|---|---|---|---|---|---|---|"]

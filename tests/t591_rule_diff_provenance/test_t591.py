@@ -174,3 +174,14 @@ def test_alsenan_pin_refused_on_drift(monkeypatch):
     monkeypatch.setitem(B.PINS, "research/agents_t587/out/RECONCILED_STATEMENT_T587.json", "0" * 64)
     with pytest.raises(E, match="sha256"):
         B.build()
+
+
+def test_alsenan_doorless_jamb_check(built):
+    rows = {d["opening"]: d for d in built["doorless_jamb_check"]}
+    a = rows["A-1F-01 / 1F OP-011"]
+    assert a["status"] == "CONDITIONS_MET" and Dd(a["jamb_lm"]) == 2 * Dd(a["wall_t_m"]) == Dd("0.30")
+    none = next(r for r in built["rows"] if r["outcome"] == "NONE")
+    assert Dd(none["delta"]) == Dd(a["jamb_lm"]) and a["statement_row"] == "T-574/skirting-room row 29"
+    for d in built["doorless_jamb_check"]:
+        if d["status"] == "HELD":                       # an unknown jamb depth is held by name, never 0
+            assert d["jamb_lm"].startswith("HELD") and d["wall_t_m"] == "not established"
