@@ -1,9 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 12:16 UTC (Lead). Previous version: 2026-11-07 08:15 UTC. The released numbers did not change
+Last update: 2026-11-07 16:20 UTC (Lead). Previous version: 2026-11-07 12:16 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 12:16 (newest first; five checked and merged, one sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Statement for the 12-13 Nov comparison brought up to date: the beam / column joint differences stay unexplained
+  until the joint rule is accepted; the two stair skirting forms are shown as a range (17.01 .. 23.30 m), never added.
+- Footing pits on plan: the checker re-read the structural drawing himself: 24 pits cover 129.23 m2 (overlaps counted
+  once), 124.65 m2 of it ours outside the pool, pool envelope 11.85 m2; agrees with the engine to under 0.001 m2. Pit
+  depths stay held (no level survey). One footing is drawn notched where its neighbour sits: the concrete of that
+  overlap must be counted once; checked next.
+- Steps outside the doors: the street gate has a 2.50 m step that our engine had missed (checker re-read the drawing);
+  of his 2.90 m that matched no door, 2.50 m is now named and 0.40 m stays unexplained (his rows name no opening).
+- Arch openings with no door: two real returns of 0.15 m each at one first-floor arch, so skirting +0.30 m (his figure
+  right). Two 'passages' on the ground and first floor are in fact lift landing doors: no skirting there; how each
+  trade treats those two openings is checked next.
+- Wiring list V11 checked on a copy of the candidate: nothing stale; footing F10 and the dome ring bars restated.
+- The joint rule record was sent back once: it explained whole beam rows where only part of each difference is the
+  joint (2.25 m3 is not); it is being split so only the explained part cites the rule.
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring (3 days left).
 
 Since 7 Nov 08:15 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

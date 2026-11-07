@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 16:20; recovery plan in force)
+
+- Merged since 12:16 (all Gate A, research, no candidate line moved): T-596, T-601, T-602, T-597, T-603 WORKED; T-599 FAILED once (whole rows promoted; rework T-599 r2 first in S).
+- Closed for 12-13 Nov: manifest V11, statement V9, doorless jambs, door-step 2.90 lm (2.50 named + 0.40 UNRESOLVED), B1 plan side. Remaining: manifest V12 (T-604), statement V10 (T-609), joint rule r2 + column residuals (T-599 / T-600), footing overlap (T-605), room skirting 9.693 lm (T-606), step / nosing 8.4 lm (T-607), lift landing openings (T-608).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) BLOCKED on the wrapper item only (main unchanged at eafbb0f6).
+- 10 Nov: LOW (wrapper, 3 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-07 12:16; recovery plan in force)
 
 - Merged since 08:15 (all Gate A, research, no candidate line moved): T-591, T-593, T-594, T-595, T-598 WORKED; T-590 PARTIAL (exposed the column / beam joint record conflict: Lead ruled column owns, register corrected, T-599 rule version).
