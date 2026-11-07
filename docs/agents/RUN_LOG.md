@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-07T22:50Z | Verifier | STARTED | run session_01E6cPndTiRqv96F12Ai4g88 | repo-attached routine | task state: none READY (T-608 CLAIMED W2; T-600/T-613 TODO) | self-check pending
 - 2026-11-07T22:41Z | Worker 2 | STARTED | run session_01E6cPneNhqLuPqvkuK6kJjt | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-07T22:03Z | Verifier | SUCCESS | T-611 MERGED, T-610 MERGED, T-612 MERGED | GATE A PASS x3, engine push 66d3ad9c: T-611 FIN.SKIRTING V12 209.728592 - 11.170 = 198.558592 lm re-added AGREE (FR-T606-1 4/4 VERIFIED); T-610 own ST7757 B1 x B27 zone 0.014761 m2 AGREE, B27 ledger 4.931529 m2 = drawn net band 4.947367 - block - 0.001077 so billed ONCE (UNDER, not double), FR-T610-1 -0.005957..-0.007252 m3 PARTIALLY VERIFIED 1/2; T-612 own P7757 GF outline 55.906096 lm / face 56.006096 lm AGREE, his -17.013904 lm stays UNRESOLVED. Research only: no candidate quantity change; no owner question. | self-check codemap PASS, pytest t061 PASS (first try FAIL: venv had no pytest, repaired by setup), freeze PASS; problem: none
 - 2026-11-07T21:52Z | Verifier | STARTED | run session_01E6cPne1RQP1RvJ7MDeY5de | repo-attached routine | task state: READY T-610 (W1 98f3d838), T-611 (W3 b407b522), T-612 (W2 64376f76) | self-check pending
