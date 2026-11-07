@@ -42,7 +42,7 @@ text is in MISSION.md, OWNER_QUESTIONS.md (answered index) and OWNER_SESSION_CHA
 | Tile adhesive | 20 kg bag: normal tiles incl. 60x60 5 m2; 120x60 3 m2; 160x80 3 m2; ceil per purchasing group; waste separate | Q-45, owner 2026-11-02 |
 | White AAC glue | 25 kg bag: 15 cm block 3.5 kg/m2, 20 cm block 4.5 kg/m2 | owner 2026-11-02 |
 | Black-block mortar | 1:4 (about 8 x 50 kg cement + 1.1 m3 sand per m3) | Q-78 |
-| Black blocks | 12.5 per m2 for the 40 x 20 installed module (CONFIRMED); waste separate; 15 cm face from schedule / supplier | Q-75, owner 2026-11-02 |
+| Black blocks | 12.5 per m2, 40 x 20 face, for both 20 cm and 15 cm blocks (CONFIRMED); waste separate; report any drawing that shows another face | Q-75, Q-80, owner 2026-11-07 |
 | Wet-area walls | spatter dash (plasterer) + levelling render (tiler) + adhesive and porcelain; no second fixing bed; no paint or skirting on tiled faces | owner 2026-11-02 |
 | Heights | plaster to the structural slab / roof underside; paint to the finished ceiling; stair shafts at full exposed height | Q-72, owner 2026-11-02 |
 | Openings | full deduction of every actual opening from blockwork | Q-73 |

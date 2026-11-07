@@ -156,15 +156,6 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-- **Q-80** (Lead 2026-11-06T00:16Z per `date -u`, from T-533 MERGED 93aba0d6; ERS s.2.7 'material genuinely unspecified' after levels 1-4; s.6 format) Face size of the 15 cm black block Urban buys.
-  Issue: the installed module (units per m2) of the 15 cm black block; your rule 2026-11-02 says '15 cm face from schedule / supplier'.
-  Evidence: drawings and KSE 2023 silent; Q-75 gives the 20 cm block only; the 1990 specification section 04220 is over the Drive connector limit (unread); the rulebook UPC-BLACK-BLOCK-001 covers 0.20 only.
-  Investigation: units and mortar computed for three candidate modules, method identical, only the module open.
-  Alternatives: (A) same face as the 20 cm block, 40 x 20 installed (12.5 per m2); (B) 40 x 20 actual face, 41 x 21 installed (11.6 per m2); (C) 40 x 25 installed (10 per m2); or upload section 04220 as a PDF under 6 MB.
-  Impact (15 walls, 175.9 m2 laid): units 2,198 / 2,043 / 1,759; panel mortar 1.946 / 1.869 / 1.688 m3; cement 16.3 / 15.7 / 14.2 bags.
-  Recommendation: answer from the supplier's sales record (same kind of evidence as Q-60); A only if that record shows the same 39 x 19 face for the 15 cm block.
-  Status: 0.15 m units, panel and perimeter mortar, cement, sand and 12 ties HELD by name (never 0, never the 0.20 module). Next: everything else continues; the answer becomes one rule version and the builder re-runs.
-
 ## Withdrawn by the Lead (not ERS s.2.7; turned into team investigations; the owner may still answer, an answer becomes a level-3 company rule and supersedes the estimate)
 
 - **Q-79 WITHDRAWN -> T-489** (Lead 2026-11-03 12:18 UTC per `date -u`). Why: a plaster / render / spatter mix is a non-critical procurement parameter; MISSION 'Cement-based materials' and the rule hierarchy (level 4: documented engineering estimating method, labelled ENGINEERING ESTIMATE with assumption, calculation and sensitivity) cover it, and the investigation is not exhausted: the 1990 specification can be downloaded whole with download_file_content (limit about 6.2 MB) and decoded into .work/private, instead of read_file_content's 97,008-character cut. Cement / sand stay HELD (never 0) until T-489 lands.
@@ -177,6 +168,7 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
   Status: mortar m3 computed (plaster ESTIMATED-NET, render AT_LEAST bound); cement / sand / water HELD, never 0. Next: everything else continues; T-455 does not depend on it.
 
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
+- **Q-80** Face size of the 15 cm black block. — Answer: A (owner 2026-11-07, main chat): 40 x 20 face, 12.5 blocks per m2, "tell me if the drawings show otherwise" (drawings silent per the question's own evidence; any drawing found to differ goes back to the owner).
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.
 

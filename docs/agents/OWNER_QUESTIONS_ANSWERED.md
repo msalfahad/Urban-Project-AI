@@ -4,6 +4,19 @@ The binding Answer line of each question is also in the index at the end of OWNE
 
 ## Answered
 
+### Q-80 Face size of the 15 cm black block Urban buys (Lead 2026-11-06T00:16Z)
+
+Question: (Lead 2026-11-06T00:16Z per `date -u`, from T-533 MERGED 93aba0d6; ERS s.2.7 'material genuinely unspecified' after levels 1-4; s.6 format) Face size of the 15 cm black block Urban buys.
+  Issue: the installed module (units per m2) of the 15 cm black block; your rule 2026-11-02 says '15 cm face from schedule / supplier'.
+  Evidence: drawings and KSE 2023 silent; Q-75 gives the 20 cm block only; the 1990 specification section 04220 is over the Drive connector limit (unread); the rulebook UPC-BLACK-BLOCK-001 covers 0.20 only.
+  Investigation: units and mortar computed for three candidate modules, method identical, only the module open.
+  Alternatives: (A) same face as the 20 cm block, 40 x 20 installed (12.5 per m2); (B) 40 x 20 actual face, 41 x 21 installed (11.6 per m2); (C) 40 x 25 installed (10 per m2); or upload section 04220 as a PDF under 6 MB.
+  Impact (15 walls, 175.9 m2 laid): units 2,198 / 2,043 / 1,759; panel mortar 1.946 / 1.869 / 1.688 m3; cement 16.3 / 15.7 / 14.2 bags.
+  Recommendation: answer from the supplier's sales record (same kind of evidence as Q-60); A only if that record shows the same 39 x 19 face for the 15 cm block.
+  Status: 0.15 m units, panel and perimeter mortar, cement, sand and 12 ties HELD by name (never 0, never the 0.20 module). Next: everything else continues; the answer becomes one rule version and the builder re-runs.
+
+ANSWER (owner 2026-11-07, main chat, verbatim): "Q-80: 40×20 face, 12.5 blocks/m² (tell me if the drawings show otherwise)." = option A. 15 walls 175.9 m2: 2,198 units, panel mortar 1.946 m3, cement 16.3 bags. If any drawing shows a different 15 cm block face, report it to the owner; do not override.
+
 ### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
 
 PLAIN QUESTION (owner 2026-11-02: the question above was not clear; this version replaces it for the answer):
