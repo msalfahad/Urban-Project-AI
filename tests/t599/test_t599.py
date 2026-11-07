@@ -177,14 +177,18 @@ def test_adverse_rule_record_must_stay_lead_adopted(tmp_path):
 # ------------------------------------------------------------------------------- T-590 restatement -------------
 def test_t590_rows_restated():
     o = J.build()
-    assert o["rows_m3"] == 38 and o["joint_rows_sourced"] == 37
+    assert o["rows_m3"] == 38 and o["sub_rows_m3"] == 42 and o["sub_rows_sourced"] == 35
     assert o["unresolved_apart"] == ["T-545/beams@V7 row 7 0.120452 m3"]
+    assert o["matched_joint_m3_by_storey"] == {"GF": "2.28125", "1F": "0.385", "2F": "0"}
     assert o["headline_before"]["m3"] == {"UNRESOLVED": {"n": 6, "signed": "2.369278", "gross": "7.701778"}}
     a = o["headline_after"]["m3"]
-    assert a["RULE_DIFFERENCE"]["n"] == 5 and a["UNRESOLVED"] == {"n": 1, "signed": "0.120452", "gross": "0.120452"}
+    # Checker r1 fix: only the matched joint is RULE_DIFFERENCE (signed 0, gross 2 x (2.28125 + 0.385)); the beam
+    # residuals GF 0.620464 / 1F 1.208362 / 2F 0.42 and the untraced 0.120452 stay UNRESOLVED
+    assert a["RULE_DIFFERENCE"]["n"] == 4 and Dd(a["RULE_DIFFERENCE"]["signed"]) == 0
+    assert Dd(a["RULE_DIFFERENCE"]["gross"]) == Dd("5.3325")
+    assert a["UNRESOLVED"]["n"] == 4 and Dd(a["UNRESOLVED"]["signed"]) == Dd("2.248826") + Dd("0.120452")
     assert Dd(a["RULE_DIFFERENCE"]["signed"]) + Dd(a["UNRESOLVED"]["signed"]) == Dd("2.369278")
     assert Dd(a["RULE_DIFFERENCE"]["gross"]) + Dd(a["UNRESOLVED"]["gross"]) == Dd("7.701778")
-    # by cause: the matched joint nets 0 signed; the per-storey residual is named, never hidden in the RULE_DIFF
     c = o["headline_by_cause_m3"]
     assert Dd(c["RULE_DIFFERENCE_SOURCED_matched_joint"]["signed"]) == 0
     assert Dd(c["RULE_DIFFERENCE_SOURCED_matched_joint"]["gross"]) == Dd("2") * (Dd("2.28125") + Dd("0.385"))
@@ -192,11 +196,57 @@ def test_t590_rows_restated():
     assert Dd(c["check_signed_total"]) == Dd("2.369278")
     p = o["column_beam_pair_V7_m3_reference_minus_engine"]
     assert (p["GF"]["net_m3"], p["1F"]["net_m3"], p["2F"]["net_m3"]) == ("0.620464", "1.208362", "0.42")
+    # every row's sub-rows sum back to the T-590 row; no beam row is SOURCED beyond its matched joint
+    by_row = {}
     for r in o["rows"]:
+        by_row.setdefault((r["section_id"], r["row"]), [Dd(r["parent_delta_m3"]), Dd(0)])[1] += Dd(r["delta_m3"])
         if r["outcome"] == "SOURCED":
             assert r["cited"] == ["UP-CONC-JOINT-001"] and r["class_after"] == "RULE_DIFFERENCE"
             assert r["basis_label"].startswith("LEAD_ADOPTED")
+            if "THROUGH_SUPPORT" in r["name"]:
+                assert r["sub"] == "matched" and Dd(r["delta_m3"]) == Dd(r["matched_joint_m3"])
+        if r["outcome"] == "UNRESOLVED_RESIDUAL":
+            assert r["pointer"] == "T-600" and r["class_after"] == "UNRESOLVED"
+    assert len(by_row) == 38 and all(v[0] == v[1] for v in by_row.values())
+    # 2F has no column joint of record: its beam row is wholly residual, never sourced
+    assert [r["outcome"] for r in o["rows"] if r["section_id"] == "T-545/beams@V7" and r["row"] == 19] == \
+        ["UNRESOLVED_RESIDUAL"]
+    # alternative column readings named with their difference to T-551, never chosen
+    alt = o["alternative_column_readings_m3"]
+    assert alt["GF"]["T-572"] == {"joint_m3": "1.883750", "minus_record_m3": "-0.397500"}
+    assert Dd(alt["GF"]["T-576"]["joint_m3"]) == Dd("2.03375") and Dd(alt["GF"]["T-576/10E0-C7"]["joint_m3"]) == Dd("2.075")
     assert o["released_quantities_changed"] == 0
+
+
+def test_split_beam_row_normal():
+    # K599-style storey: beam through-support 0.90 m3 against a column joint of record 0.60 m3
+    assert J.split_beam_row(Dd("0.90"), Dd("0.60")) == [("matched", Dd("0.60")), ("residual", Dd("0.30"))]
+    assert J.split_beam_row(Dd("0.60"), Dd("0.60")) == [("matched", Dd("0.60"))]          # fully explained
+    assert J.split_beam_row(Dd("0.42"), Dd("0")) == [("residual", Dd("0.42"))]            # no joint: all residual
+
+
+def test_adverse_row_exceeding_its_matched_joint_refused_as_wholly_sourced():
+    with pytest.raises(E, match="refused as wholly SOURCED"):
+        J.source_whole(Dd("2.901714"), Dd("2.28125"))
+    assert J.source_whole(Dd("2.28125"), Dd("2.28125")) == Dd("2.28125")
+    # a restatement row promoting the whole GF beam row (the r1 defect) is refused by the guard
+    bad = [{"outcome": "SOURCED", "name": "GF: THROUGH_SUPPORT", "delta_m3": "2.901714", "matched_joint_m3": "2.28125"}]
+    with pytest.raises(E, match="refused as wholly SOURCED"):
+        J.guard_sourced(bad)
+    with pytest.raises(E, match="exceeds the beam row"):
+        J.split_beam_row(Dd("0.30"), Dd("0.60"))
+    with pytest.raises(E, match="signs not beam"):
+        J.split_beam_row(Dd("-0.30"), Dd("0.60"))
+
+
+def test_adverse_tampered_t590_whole_row_cannot_be_sourced():
+    t590 = json.loads(J.T590_OUT.read_text(encoding="utf-8"))
+    # drop the GF column joint of record: the GF beam row must then be wholly residual, not sourced
+    t590["rows"] = [r for r in t590["rows"] if not (r["section_id"] == J.RECORD_SECTION and "GF" in r["name"])]
+    o = J.restate(t590, J.Registers(requirement_only=J.REQUIREMENT_ONLY), J.convention_index())
+    gf = [r for r in o["rows"] if r["section_id"] == "T-545/beams@V7" and r["row"] == 2]
+    assert [(r["outcome"], r["delta_m3"]) for r in gf] == [("UNRESOLVED_RESIDUAL", "2.901714")]
+    assert Dd(o["headline_after"]["m3"]["RULE_DIFFERENCE"]["gross"]) == Dd("0.77")      # 1F matched only
 
 
 def test_committed_outputs_current():

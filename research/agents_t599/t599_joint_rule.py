@@ -240,59 +240,153 @@ def _tab(items):
             for u, v in sorted(R590.R591.per_unit(items).items())}
 
 
+# reading of record for the matched part (Lead ruling 2026-11-07T16:17Z on Checker (ii)): the column JOINT_HEAD rows of
+# T-551, which statement V9 (T-603, MERGED) carries; T-572 and T-576 are alternative readings, named, never chosen
+RECORD_SECTION = "T-551/columns"
+ALT_SECTIONS = ("T-572/", "T-576/")
+STOREYS = ("GF", "1F", "2F")
+
+
+def storey_of(name: str) -> str:
+    m = re.search(r"(?<![0-9A-Z])(GF|1F|2F)(?![0-9A-Z])", name)
+    if not m:
+        raise JointRuleError(f"row '{name}': no storey")
+    return m.group(1)
+
+
+def matched_joints(t590_rows: list[dict]) -> dict[str, D]:
+    """storey -> magnitude (m3) of the column JOINT_HEAD on the reading of record (T-551); a storey with no column
+    JOINT_HEAD row has no matched joint (0): its beam row is then wholly residual, never sourced by the rule."""
+    out = {s: D(0) for s in STOREYS}
+    seen = set()
+    for r in t590_rows:
+        if r["unit"] == "m3" and r["section_id"] == RECORD_SECTION and "JOINT_HEAD" in r["name"]:
+            st = storey_of(r["name"])
+            if st in seen:
+                raise JointRuleError(f"{RECORD_SECTION}: two JOINT_HEAD rows for {st}")
+            seen.add(st)
+            d = D(r["delta"])
+            if d > 0:
+                raise JointRuleError(f"{RECORD_SECTION} {st}: JOINT_HEAD {d} not reference - engine negative")
+            out[st] = -d
+    return out
+
+
+def source_whole(delta: D, matched: D) -> D:
+    """A row may be classed RULE_DIFFERENCE SOURCED in full only when the rule explains all of it: its magnitude is
+    at most the matched joint. Anything more is a partial explanation and is refused (split it instead)."""
+    if abs(delta) > matched:
+        raise JointRuleError(f"row delta {delta} m3 exceeds its matched joint {matched} m3: refused as wholly SOURCED "
+                             f"(split into a matched sub-row and an UNRESOLVED residual)")
+    return delta
+
+
+def split_beam_row(delta: D, matched: D) -> list[tuple[str, D]]:
+    """beam THROUGH_SUPPORT delta (reference - engine, >= 0) -> [('matched', m), ('residual', delta - m)], zero parts
+    dropped; the matched part is the storey's column JOINT_HEAD of record (the same joint under the other owner)."""
+    if delta < 0 or matched < 0:
+        raise JointRuleError(f"beam THROUGH_SUPPORT {delta} / matched {matched}: signs not beam + / column - "
+                             f"(reference - engine): no matched convention")
+    if matched > delta:
+        raise JointRuleError(f"matched joint {matched} m3 exceeds the beam row {delta} m3: the residual would sit on the "
+                             f"column side; not handled by this split")
+    parts = [("matched", source_whole(matched, matched)), ("residual", delta - matched)]
+    return [(k, v) for k, v in parts if v != 0]
+
+
+def guard_sourced(rows: list[dict]) -> None:
+    """Every SOURCED beam (sub-)row carries at most its storey's matched joint."""
+    for r in rows:
+        if r["outcome"] == "SOURCED" and "THROUGH_SUPPORT" in r["name"]:
+            source_whole(D(r["delta_m3"]), D(r["matched_joint_m3"]))
+
+
 def restate(t590: dict, reg: Registers, index: dict[str, dict]) -> dict:
     require_indexed(RULE_ID, RULE_VERSION, index)
+    src_rows = [r for r in t590["rows"] if r["unit"] == "m3"]
+    matched = matched_joints(src_rows)
     rows, head_b, head_a, all_b, all_a = [], [], [], [], []
-    for r in t590["rows"]:
-        if r["unit"] != "m3":
-            continue
+
+    def sourced(r):
+        row = {"class": "RULE_DIFFERENCE", "delta": r["delta"], "name": r["name"],
+               "note": f"joint owner per {RULE_ID}@{RULE_VERSION} (column to the slab top, beam net)",
+               "source": f"{RULE_ID}"}   # R-T591-1 (d): the citation is the rule; the method record is kept apart
+        rec = R590.classify(reg, row, TRACED, r["his_side"])
+        if rec["outcome"] != "SOURCED":
+            raise JointRuleError(f"{r['section_id']} row {r['row']}: expected SOURCED, got {rec['outcome']}")
+        return {"outcome": "SOURCED", "class_after": "RULE_DIFFERENCE", "cited": rec["cited_valid"],
+                "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
+                "our_side": rec["sources"]}
+
+    for r in src_rows:
         d = D(r["delta"])
         headline = r["live"] and not r["nested_in"]
-        untraced = "UNTRACED" in r["name"]
-        if untraced:
-            out = {"outcome": "UNRESOLVED_APART", "class_after": "UNRESOLVED", "cited": [], "reason": UNTRACED_REASON}
+        base = {"level": r["level"], "section_id": r["section_id"], "row": r["row"], "name": r["name"],
+                "parent_delta_m3": r["delta"], "live": r["live"], "nested_in": r["nested_in"],
+                "superseded_by": r["superseded_by"], "reading_of_record": r["reading_of_record"],
+                "headline": headline, "t590_class": r["class_after"], "measured_record": r["row_source"],
+                "his_side": r["his_side"]}
+        subs = []
+        if "UNTRACED" in r["name"]:
+            subs.append(({"sub": "whole", "delta_m3": r["delta"]},
+                         {"outcome": "UNRESOLVED_APART", "class_after": "UNRESOLVED", "cited": [], "reason": UNTRACED_REASON}))
+        elif "THROUGH_SUPPORT" in r["name"]:
+            st = storey_of(r["name"])
+            m = matched[st]
+            for kind, v in split_beam_row(d, m):
+                info = {"sub": kind, "delta_m3": str(v), "storey": st, "matched_joint_m3": str(m),
+                        "matched_source": f"{RECORD_SECTION} {st} JOINT_HEAD (reading of record, statement V9)"}
+                if kind == "matched":
+                    subs.append((info, sourced(r)))
+                else:
+                    subs.append((info, {"outcome": "UNRESOLVED_RESIDUAL", "class_after": "UNRESOLVED", "cited": [],
+                                        "pointer": "T-600",
+                                        "reason": (f"beam through-support beyond the {st} column joint of record "
+                                                   f"({m} m3): not explained by {RULE_ID}; traced in T-600")}))
+        elif "JOINT_HEAD" in r["name"]:
+            # a column JOINT_HEAD row is the joint itself (column head inside the beams): wholly the convention
+            info = {"sub": "whole", "delta_m3": r["delta"], "storey": storey_of(r["name"])}
+            if r["section_id"].startswith(ALT_SECTIONS):
+                info["alternative_reading"] = (f"not chosen; the matched part uses {RECORD_SECTION}; its difference to "
+                                               f"the reading of record goes to T-600")
+            subs.append((info, sourced(r)))
         else:
-            if not ("JOINT_HEAD" in r["name"] or "THROUGH_SUPPORT" in r["name"]):
-                raise JointRuleError(f"{r['section_id']} row {r['row']}: not a column-beam joint row")
-            row = {"class": "RULE_DIFFERENCE", "delta": r["delta"], "name": r["name"],
-                   "note": f"joint owner per {RULE_ID}@{RULE_VERSION} (column to the slab top, beam net)",
-                   "source": f"{RULE_ID}"}   # R-T591-1 (d): the citation is the rule; the method record is kept apart
-            rec = R590.classify(reg, row, TRACED, r["his_side"])
-            if rec["outcome"] != "SOURCED":
-                raise JointRuleError(f"{r['section_id']} row {r['row']}: expected SOURCED, got {rec['outcome']}")
-            out = {"outcome": "SOURCED", "class_after": "RULE_DIFFERENCE", "cited": rec["cited_valid"],
-                   "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
-                   "our_side": rec["sources"]}
-        rows.append({"level": r["level"], "section_id": r["section_id"], "row": r["row"], "name": r["name"],
-                     "delta_m3": r["delta"], "live": r["live"], "nested_in": r["nested_in"],
-                     "superseded_by": r["superseded_by"], "reading_of_record": r["reading_of_record"],
-                     "headline": headline, "t590_class": r["class_after"], "measured_record": r["row_source"], "his_side": r["his_side"], **out})
-        all_b.append(("m3", "UNRESOLVED", d))
-        all_a.append(("m3", out["class_after"], d))
-        if headline:
-            head_b.append(("m3", "UNRESOLVED", d))
-            head_a.append(("m3", out["class_after"], d))
+            raise JointRuleError(f"{r['section_id']} row {r['row']}: not a column-beam joint row")
+        tot = D(0)
+        for info, out in subs:
+            v = D(info["delta_m3"])
+            tot += v
+            rows.append({**base, **info, **out})
+            all_b.append(("m3", "UNRESOLVED", v))
+            all_a.append(("m3", out["class_after"], v))
+            if headline:
+                head_b.append(("m3", "UNRESOLVED", v))
+                head_a.append(("m3", out["class_after"], v))
+        if tot != d:
+            raise JointRuleError(f"{r['section_id']} row {r['row']}: sub-rows {tot} != row {d}")
+    guard_sourced(rows)
     sb, sa = sum(x[2] for x in head_b), sum(x[2] for x in head_a)
     gb, ga = sum(abs(x[2]) for x in head_b), sum(abs(x[2]) for x in head_a)
     if sb != sa or gb != ga or sum(x[2] for x in all_b) != sum(x[2] for x in all_a):
         raise JointRuleError("a restatement moved a quantity")
+    # T-590 headline 'before' is per original row (n = rows, not sub-rows)
+    hb_rows = [("m3", "UNRESOLVED", D(r["delta"])) for r in src_rows if r["live"] and not r["nested_in"]]
+    ab_rows = [("m3", "UNRESOLVED", D(r["delta"])) for r in src_rows]
     pair = {}
-    for r in rows:
-        if not r["headline"] or r["outcome"] != "SOURCED":
+    for r in src_rows:
+        if not (r["live"] and not r["nested_in"]) or "UNTRACED" in r["name"]:
             continue
-        st = r["name"].split()[0] if r["name"].split()[0] in ("GF:", "1F:", "2F:") else r["name"].split()[1]
-        st = st.rstrip(":")
+        st = storey_of(r["name"])
         b = pair.setdefault(st, {"beam_THROUGH_SUPPORT_m3": D(0), "column_JOINT_HEAD_m3": D(0)})
-        b["beam_THROUGH_SUPPORT_m3" if "THROUGH_SUPPORT" in r["name"] else "column_JOINT_HEAD_m3"] += D(r["delta_m3"])
+        b["beam_THROUGH_SUPPORT_m3" if "THROUGH_SUPPORT" in r["name"] else "column_JOINT_HEAD_m3"] += D(r["delta"])
+    for st in pair:
+        if -pair[st]["column_JOINT_HEAD_m3"] != matched[st]:
+            raise JointRuleError(f"{st}: headline column JOINT_HEAD is not the reading of record")
     pair = {k: {**{n: str(v) for n, v in b.items()},
                 "net_m3": str(b["beam_THROUGH_SUPPORT_m3"] + b["column_JOINT_HEAD_m3"])} for k, b in sorted(pair.items())}
-    # matched part of each storey pair = the convention (signed 0: the same joint under the other owner); the rest
-    # of the beam row is a residual of its own (UNRESOLVED, T-600), never hidden inside the RULE_DIFFERENCE
     split, conv_g, resid_s = {}, D(0), D(0)
     for k, v in pair.items():
         b, c = D(v["beam_THROUGH_SUPPORT_m3"]), D(v["column_JOINT_HEAD_m3"])
-        if b < 0 or c > 0:
-            raise JointRuleError(f"{k}: pair signs not beam + / column - (reference - engine): no matched convention")
         m = min(b, -c)
         split[k] = {"convention_matched_m3_each_side": str(m), "convention_signed_m3": str(m - m),
                     "residual_unresolved_m3": str(b + c)}
@@ -301,35 +395,56 @@ def restate(t590: dict, reg: Registers, index: dict[str, dict]) -> dict:
     apart = sum((D(r["delta_m3"]) for r in rows if r["headline"] and r["outcome"] == "UNRESOLVED_APART"), D(0))
     if resid_s + apart != sa:
         raise JointRuleError(f"headline by cause {resid_s} + {apart} != headline signed {sa}")
+    ha = _tab(head_a)["m3"]
+    if D(ha["RULE_DIFFERENCE"]["signed"]) != 0 or D(ha["RULE_DIFFERENCE"]["gross"]) != conv_g:
+        raise JointRuleError("headline RULE_DIFFERENCE is not the matched joint alone")
+    # alternative column readings per storey (never chosen): sum and difference to the reading of record
+    alts = {}
+    for r in src_rows:
+        if "JOINT_HEAD" in r["name"] and r["section_id"].startswith(ALT_SECTIONS):
+            st = storey_of(r["name"])
+            k = r["section_id"].split("/")[0] + ("/10E0-C7" if "10E0-C7" in r["section_id"] else "")
+            if r["section_id"].startswith("T-572/") and "measured-columns" not in r["section_id"]:
+                continue
+            a = alts.setdefault(st, {}).setdefault(k, D(0))
+            alts[st][k] = a - D(r["delta"])
+    alt_out = {st: {k: {"joint_m3": str(v), "minus_record_m3": str(v - matched[st])} for k, v in sorted(a.items())}
+               for st, a in sorted(alts.items())}
     n_joint = sum(1 for r in rows if r["outcome"] == "SOURCED")
     return {
-        "schema": "URBAN_T599_JOINT_RULE_RESTATEMENT_V1",
+        "schema": "URBAN_T599_JOINT_RULE_RESTATEMENT_V2",
         "rule": f"{RULE_ID}@{RULE_VERSION} (rules/conventions/URBAN_CONVENTIONS_1.0.0.json, LEAD_ADOPTED under Q-62 A)",
         "rules_index": index[RULE_ID],
         "input": "research/agents_t590/out/T590_RULE_DIFF_PROVENANCE.json (T-590 MERGED 7855b9b2): its 38 m3 rows",
         "pins": {k: _sha(ROOT / k) for k in ("research/agents_t590/out/T590_RULE_DIFF_PROVENANCE.json",
                                              "rules/conventions/URBAN_CONVENTIONS_1.0.0.json")},
-        "rows_m3": len(rows), "joint_rows_sourced": n_joint,
+        "rows_m3": len(src_rows), "sub_rows_m3": len(rows), "sub_rows_sourced": n_joint,
+        "sub_rows_unresolved_residual": [f"{r['section_id']} row {r['row']} {r['storey']} {r['delta_m3']} m3"
+                                         for r in rows if r["outcome"] == "UNRESOLVED_RESIDUAL"],
         "unresolved_apart": [f"{r['section_id']} row {r['row']} {r['delta_m3']} m3" for r in rows
                              if r["outcome"] == "UNRESOLVED_APART"],
-        "headline_before": _tab(head_b), "headline_after": _tab(head_a),
-        "all_rows_before": _tab(all_b), "all_rows_after": _tab(all_a),
+        "matched_joint_m3_by_storey": {k: str(v) for k, v in matched.items()},
+        "matched_source": (f"{RECORD_SECTION} JOINT_HEAD rows: the reading of record that statement V9 (T-603, MERGED) "
+                           f"carries (Lead ruling 2026-11-07T16:17Z)"),
+        "alternative_column_readings_m3": alt_out,
+        "alternative_readings_note": ("named, never chosen; each difference to the reading of record is not explained "
+                                      "by the rule choice and goes to T-600 with the beam residual"),
+        "headline_before": _tab(hb_rows), "headline_after": _tab(head_a),
+        "all_rows_before": _tab(ab_rows), "all_rows_after": _tab(all_a),
         "headline_signed_m3_unchanged": str(sa), "headline_gross_m3_unchanged": str(ga),
         "column_beam_pair_V7_m3_reference_minus_engine": pair,
         "headline_by_cause_m3": {
             "RULE_DIFFERENCE_SOURCED_matched_joint": {"signed": "0", "gross": str(conv_g)},
             "UNRESOLVED_pair_residual_T600": {"signed": str(resid_s), "gross": str(resid_s)},
-            "UNRESOLVED_untraced_apart": {"signed": str(sum(D(r["delta_m3"]) for r in rows if r["headline"]
-                                                            and r["outcome"] == "UNRESOLVED_APART"))},
-            "check_signed_total": str(resid_s + sum(D(r["delta_m3"]) for r in rows if r["headline"]
-                                                    and r["outcome"] == "UNRESOLVED_APART"))},
+            "UNRESOLVED_untraced_apart": {"signed": str(apart)},
+            "check_signed_total": str(resid_s + apart)},
         "pair_split": split,
         "pair_note": ("F-C-T590-1 restated on the V7 reading (T-545@V7 headline rows + T-551 column rows; sign "
-                      "reference - engine as in the statement): the per-storey pair does not cancel; the net is not "
-                      "a convention and stays its own residual (T-600). T-590's note quoted the pre-V7 2F beam "
-                      "-0.532760 and printed the GF / 1F nets with the opposite sign (-0.620464 / -1.208362): with "
-                      "the statement sign the reference carries MORE concrete in the pair (beam through-support > "
-                      "column joint head) on every storey"),
+                      "reference - engine as in the statement): the per-storey pair does not cancel; each beam "
+                      "THROUGH_SUPPORT row is split into its matched joint (RULE_DIFFERENCE SOURCED) and its residual "
+                      "(UNRESOLVED, T-600). T-590's note quoted the pre-V7 2F beam -0.532760 and printed the GF / 1F "
+                      "nets with the opposite sign (-0.620464 / -1.208362): with the statement sign the reference "
+                      "carries MORE concrete in the pair (beam through-support > column joint head) on every storey"),
         "rows": rows,
         "released_quantities_changed": 0,
     }
@@ -346,8 +461,12 @@ def build() -> dict:
 def to_markdown(o: dict) -> str:
     L = ["# T-599 column-beam joint rule: T-590 rows restated (generated)", "",
          f"Rule {o['rule']}; RULES_INDEX: {o['rules_index']}. Input: {o['input']}.", "",
-         f"m3 rows {o['rows_m3']}: {o['joint_rows_sourced']} joint rows UNRESOLVED -> RULE_DIFFERENCE SOURCED; "
+         f"m3 rows {o['rows_m3']} -> {o['sub_rows_m3']} sub-rows: {o['sub_rows_sourced']} RULE_DIFFERENCE SOURCED; "
+         f"beam residuals UNRESOLVED (T-600): {', '.join(o['sub_rows_unresolved_residual'])}; "
          f"apart (stays UNRESOLVED): {', '.join(o['unresolved_apart'])}.", "",
+         f"Matched joint by storey (m3): {json.dumps(o['matched_joint_m3_by_storey'])}; source: {o['matched_source']}.",
+         "", f"Alternative column readings (m3, never chosen): {json.dumps(o['alternative_column_readings_m3'])}; "
+         f"{o['alternative_readings_note']}.", "",
          "| | before (T-590) | after (T-599) |", "|---|---|---|",
          f"| headline | {json.dumps(o['headline_before']['m3'])} | {json.dumps(o['headline_after']['m3'])} |",
          f"| all rows (nested / superseded audited beside) | {json.dumps(o['all_rows_before']['m3'])} | "
@@ -358,9 +477,11 @@ def to_markdown(o: dict) -> str:
          "| storey | beam THROUGH_SUPPORT | column JOINT_HEAD | net (residual, T-600) |", "|---|---|---|---|"]
     for k, v in o["column_beam_pair_V7_m3_reference_minus_engine"].items():
         L.append(f"| {k} | {v['beam_THROUGH_SUPPORT_m3']} | {v['column_JOINT_HEAD_m3']} | {v['net_m3']} |")
-    L += ["", o["pair_note"], "", "## Rows", "", "| section | row | name | m3 | headline | outcome |", "|---|---|---|---|---|---|"]
+    L += ["", o["pair_note"], "", "## Rows", "", "| section | row | sub | name | m3 | headline | outcome |",
+          "|---|---|---|---|---|---|---|"]
     for r in o["rows"]:
-        L.append(f"| {r['section_id']} | {r['row']} | {r['name']} | {r['delta_m3']} | {r['headline']} | {r['outcome']} |")
+        L.append(f"| {r['section_id']} | {r['row']} | {r['sub']} | {r['name']} | {r['delta_m3']} | {r['headline']} | "
+                 f"{r['outcome']} |")
     return "\n".join(L) + "\n"
 
 

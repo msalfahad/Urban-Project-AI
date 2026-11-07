@@ -1,5 +1,5 @@
 {
- "schema": "URBAN_T599_JOINT_RULE_RESTATEMENT_V1",
+ "schema": "URBAN_T599_JOINT_RULE_RESTATEMENT_V2",
  "rule": "UP-CONC-JOINT-001@1.0.0 (rules/conventions/URBAN_CONVENTIONS_1.0.0.json, LEAD_ADOPTED under Q-62 A)",
  "rules_index": {
   "version": "1.0.0",
@@ -12,10 +12,56 @@
   "rules/conventions/URBAN_CONVENTIONS_1.0.0.json": "bc71230de4adcd7f67f0b0c3e80a11cbc54fa4ed3bb6af09f3c77cecac6a4355"
  },
  "rows_m3": 38,
- "joint_rows_sourced": 37,
+ "sub_rows_m3": 42,
+ "sub_rows_sourced": 35,
+ "sub_rows_unresolved_residual": [
+  "T-545/beams row 2 GF 0.620464 m3",
+  "T-545/beams row 11 1F 1.208362 m3",
+  "T-545/beams row 19 2F 0.42 m3",
+  "T-545/beams@V7 row 2 GF 0.620464 m3",
+  "T-545/beams@V7 row 11 1F 1.208362 m3",
+  "T-545/beams@V7 row 19 2F 0.42 m3"
+ ],
  "unresolved_apart": [
   "T-545/beams@V7 row 7 0.120452 m3"
  ],
+ "matched_joint_m3_by_storey": {
+  "GF": "2.28125",
+  "1F": "0.385",
+  "2F": "0"
+ },
+ "matched_source": "T-551/columns JOINT_HEAD rows: the reading of record that statement V9 (T-603, MERGED) carries (Lead ruling 2026-11-07T16:17Z)",
+ "alternative_column_readings_m3": {
+  "1F": {
+   "T-572": {
+    "joint_m3": "0.385000",
+    "minus_record_m3": "0.000000"
+   },
+   "T-576": {
+    "joint_m3": "0.460000",
+    "minus_record_m3": "0.075000"
+   },
+   "T-576/10E0-C7": {
+    "joint_m3": "0.595000",
+    "minus_record_m3": "0.210000"
+   }
+  },
+  "GF": {
+   "T-572": {
+    "joint_m3": "1.883750",
+    "minus_record_m3": "-0.397500"
+   },
+   "T-576": {
+    "joint_m3": "2.033750",
+    "minus_record_m3": "-0.247500"
+   },
+   "T-576/10E0-C7": {
+    "joint_m3": "2.075000",
+    "minus_record_m3": "-0.206250"
+   }
+  }
+ },
+ "alternative_readings_note": "named, never chosen; each difference to the reading of record is not explained by the rule choice and goes to T-600 with the beam residual",
  "headline_before": {
   "m3": {
    "UNRESOLVED": {
@@ -28,14 +74,14 @@
  "headline_after": {
   "m3": {
    "RULE_DIFFERENCE": {
-    "n": 5,
-    "signed": "2.248826",
-    "gross": "7.581326"
+    "n": 4,
+    "signed": "0.00000",
+    "gross": "5.33250"
    },
    "UNRESOLVED": {
-    "n": 1,
-    "signed": "0.120452",
-    "gross": "0.120452"
+    "n": 4,
+    "signed": "2.369278",
+    "gross": "2.369278"
    }
   }
  },
@@ -51,14 +97,14 @@
  "all_rows_after": {
   "m3": {
    "RULE_DIFFERENCE": {
-    "n": 37,
-    "signed": "-0.268598",
-    "gross": "19.928902"
+    "n": 35,
+    "signed": "-4.766250",
+    "gross": "15.431250"
    },
    "UNRESOLVED": {
-    "n": 1,
-    "signed": "0.120452",
-    "gross": "0.120452"
+    "n": 7,
+    "signed": "4.618104",
+    "gross": "4.618104"
    }
   }
  },
@@ -112,14 +158,14 @@
    "residual_unresolved_m3": "0.620464"
   }
  },
- "pair_note": "F-C-T590-1 restated on the V7 reading (T-545@V7 headline rows + T-551 column rows; sign reference - engine as in the statement): the per-storey pair does not cancel; the net is not a convention and stays its own residual (T-600). T-590's note quoted the pre-V7 2F beam -0.532760 and printed the GF / 1F nets with the opposite sign (-0.620464 / -1.208362): with the statement sign the reference carries MORE concrete in the pair (beam through-support > column joint head) on every storey",
+ "pair_note": "F-C-T590-1 restated on the V7 reading (T-545@V7 headline rows + T-551 column rows; sign reference - engine as in the statement): the per-storey pair does not cancel; each beam THROUGH_SUPPORT row is split into its matched joint (RULE_DIFFERENCE SOURCED) and its residual (UNRESOLVED, T-600). T-590's note quoted the pre-V7 2F beam -0.532760 and printed the GF / 1F nets with the opposite sign (-0.620464 / -1.208362): with the statement sign the reference carries MORE concrete in the pair (beam through-support > column joint head) on every storey",
  "rows": [
   {
    "level": "sections",
    "section_id": "T-545/beams",
    "row": 2,
    "name": "GF: THROUGH_SUPPORT",
-   "delta_m3": "2.901714",
+   "parent_delta_m3": "2.901714",
    "live": false,
    "nested_in": null,
    "superseded_by": "T-545/beams@V7",
@@ -128,6 +174,84 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "matched",
+   "delta_m3": "2.28125",
+   "storey": "GF",
+   "matched_joint_m3": "2.28125",
+   "matched_source": "T-551/columns GF JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "SOURCED",
+   "class_after": "RULE_DIFFERENCE",
+   "cited": [
+    "UP-CONC-JOINT-001"
+   ],
+   "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
+   "our_side": [
+    {
+     "source": "Q-62",
+     "kind": "REQUIREMENT",
+     "status": "ANSWERED"
+    },
+    {
+     "source": "UP-CONC-JOINT-001",
+     "kind": "RULE",
+     "status": "LEAD_ADOPTED"
+    },
+    {
+     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-07 12:30, corrected: the COLUMN owns the joint to the slab top, beam face to face; cites T-599)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    },
+    {
+     "source": "REGISTER:ERS s.7 rows 2026-10-31 (ADOPTED) and 2026-11-07 (ADOPTED)",
+     "kind": "REGISTER",
+     "status": "LEAD_RULING"
+    }
+   ]
+  },
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "row": 2,
+   "name": "GF: THROUGH_SUPPORT",
+   "parent_delta_m3": "2.901714",
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "reading_of_record": true,
+   "headline": false,
+   "t590_class": "UNRESOLVED",
+   "measured_record": "T-545 floors table (R-T545-1)",
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "residual",
+   "delta_m3": "0.620464",
+   "storey": "GF",
+   "matched_joint_m3": "2.28125",
+   "matched_source": "T-551/columns GF JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the GF column joint of record (2.28125 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
+  },
+  {
+   "level": "sections",
+   "section_id": "T-545/beams",
+   "row": 11,
+   "name": "1F: THROUGH_SUPPORT",
+   "parent_delta_m3": "1.593362",
+   "live": false,
+   "nested_in": null,
+   "superseded_by": "T-545/beams@V7",
+   "reading_of_record": true,
+   "headline": false,
+   "t590_class": "UNRESOLVED",
+   "measured_record": "T-545 floors table (R-T545-1)",
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "matched",
+   "delta_m3": "0.385",
+   "storey": "1F",
+   "matched_joint_m3": "0.385",
+   "matched_source": "T-551/columns 1F JOINT_HEAD (reading of record, statement V9)",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -162,7 +286,7 @@
    "section_id": "T-545/beams",
    "row": 11,
    "name": "1F: THROUGH_SUPPORT",
-   "delta_m3": "1.593362",
+   "parent_delta_m3": "1.593362",
    "live": false,
    "nested_in": null,
    "superseded_by": "T-545/beams@V7",
@@ -171,41 +295,23 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
-   "outcome": "SOURCED",
-   "class_after": "RULE_DIFFERENCE",
-   "cited": [
-    "UP-CONC-JOINT-001"
-   ],
-   "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
-   "our_side": [
-    {
-     "source": "Q-62",
-     "kind": "REQUIREMENT",
-     "status": "ANSWERED"
-    },
-    {
-     "source": "UP-CONC-JOINT-001",
-     "kind": "RULE",
-     "status": "LEAD_ADOPTED"
-    },
-    {
-     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-07 12:30, corrected: the COLUMN owns the joint to the slab top, beam face to face; cites T-599)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    },
-    {
-     "source": "REGISTER:ERS s.7 rows 2026-10-31 (ADOPTED) and 2026-11-07 (ADOPTED)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    }
-   ]
+   "sub": "residual",
+   "delta_m3": "1.208362",
+   "storey": "1F",
+   "matched_joint_m3": "0.385",
+   "matched_source": "T-551/columns 1F JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the 1F column joint of record (0.385 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
   },
   {
    "level": "sections",
    "section_id": "T-545/beams",
    "row": 19,
    "name": "2F: THROUGH_SUPPORT",
-   "delta_m3": "0.42",
+   "parent_delta_m3": "0.42",
    "live": false,
    "nested_in": null,
    "superseded_by": "T-545/beams@V7",
@@ -214,41 +320,23 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
-   "outcome": "SOURCED",
-   "class_after": "RULE_DIFFERENCE",
-   "cited": [
-    "UP-CONC-JOINT-001"
-   ],
-   "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
-   "our_side": [
-    {
-     "source": "Q-62",
-     "kind": "REQUIREMENT",
-     "status": "ANSWERED"
-    },
-    {
-     "source": "UP-CONC-JOINT-001",
-     "kind": "RULE",
-     "status": "LEAD_ADOPTED"
-    },
-    {
-     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-07 12:30, corrected: the COLUMN owns the joint to the slab top, beam face to face; cites T-599)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    },
-    {
-     "source": "REGISTER:ERS s.7 rows 2026-10-31 (ADOPTED) and 2026-11-07 (ADOPTED)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    }
-   ]
+   "sub": "residual",
+   "delta_m3": "0.42",
+   "storey": "2F",
+   "matched_joint_m3": "0",
+   "matched_source": "T-551/columns 2F JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the 2F column joint of record (0 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
   },
   {
    "level": "sections",
    "section_id": "T-551/columns",
    "row": 6,
    "name": "columns GF: JOINT_HEAD",
-   "delta_m3": "-2.28125",
+   "parent_delta_m3": "-2.28125",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -257,6 +345,9 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-551 s.2 columns (R-T551-1)",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-2.28125",
+   "storey": "GF",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -291,7 +382,7 @@
    "section_id": "T-551/columns",
    "row": 15,
    "name": "columns 1F: JOINT_HEAD",
-   "delta_m3": "-0.385",
+   "parent_delta_m3": "-0.385",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -300,6 +391,9 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-551 s.2 columns (R-T551-1)",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.385",
+   "storey": "1F",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -334,7 +428,7 @@
    "section_id": "T-572/measured-columns_GF",
    "row": 1,
    "name": "columns_GF: JOINT_HEAD",
-   "delta_m3": "-1.883750",
+   "parent_delta_m3": "-1.883750",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": "T-576/columns-GF",
@@ -343,6 +437,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-572 s.3 measured set (engine - his restated)",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-1.883750",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -377,7 +475,7 @@
    "section_id": "T-572/measured-columns_1F",
    "row": 0,
    "name": "columns_1F: JOINT_HEAD",
-   "delta_m3": "-0.385000",
+   "parent_delta_m3": "-0.385000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": "T-576/columns-1F",
@@ -386,6 +484,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-572 s.3 measured set (engine - his restated)",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.385000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -420,7 +522,7 @@
    "section_id": "T-576/columns-GF",
    "row": 1,
    "name": "GF C1: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -429,6 +531,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -463,7 +569,7 @@
    "section_id": "T-576/columns-GF",
    "row": 2,
    "name": "GF C10: JOINT_HEAD",
-   "delta_m3": "-0.148750",
+   "parent_delta_m3": "-0.148750",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -472,6 +578,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.148750",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -506,7 +616,7 @@
    "section_id": "T-576/columns-GF",
    "row": 5,
    "name": "GF C11: JOINT_HEAD",
-   "delta_m3": "-0.467500",
+   "parent_delta_m3": "-0.467500",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -515,6 +625,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.467500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -549,7 +663,7 @@
    "section_id": "T-576/columns-GF",
    "row": 8,
    "name": "GF C2: JOINT_HEAD",
-   "delta_m3": "-0.205000",
+   "parent_delta_m3": "-0.205000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -558,6 +672,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.205000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -592,7 +710,7 @@
    "section_id": "T-576/columns-GF",
    "row": 10,
    "name": "GF C4: JOINT_HEAD",
-   "delta_m3": "-0.187500",
+   "parent_delta_m3": "-0.187500",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -601,6 +719,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.187500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -635,7 +757,7 @@
    "section_id": "T-576/columns-GF",
    "row": 11,
    "name": "GF C5: JOINT_HEAD",
-   "delta_m3": "-0.337500",
+   "parent_delta_m3": "-0.337500",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -644,6 +766,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.337500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -678,7 +804,7 @@
    "section_id": "T-576/columns-GF",
    "row": 13,
    "name": "GF C6: JOINT_HEAD",
-   "delta_m3": "-0.087500",
+   "parent_delta_m3": "-0.087500",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -687,6 +813,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.087500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -721,7 +851,7 @@
    "section_id": "T-576/columns-GF",
    "row": 15,
    "name": "GF C7: JOINT_HEAD",
-   "delta_m3": "-0.150000",
+   "parent_delta_m3": "-0.150000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -730,6 +860,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.150000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -764,7 +898,7 @@
    "section_id": "T-576/columns-GF",
    "row": 18,
    "name": "GF C9: JOINT_HEAD",
-   "delta_m3": "-0.375000",
+   "parent_delta_m3": "-0.375000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -773,6 +907,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.375000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -807,7 +945,7 @@
    "section_id": "T-576/columns-1F",
    "row": 0,
    "name": "1F C1: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -816,6 +954,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -850,7 +992,7 @@
    "section_id": "T-576/columns-1F",
    "row": 1,
    "name": "1F C2: JOINT_HEAD",
-   "delta_m3": "-0.205000",
+   "parent_delta_m3": "-0.205000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -859,6 +1001,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.205000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -893,7 +1039,7 @@
    "section_id": "T-576/columns-1F",
    "row": 3,
    "name": "1F P.C 20x50: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -902,6 +1048,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -936,7 +1086,7 @@
    "section_id": "T-576/columns-1F",
    "row": 5,
    "name": "1F P.C 20x70: JOINT_HEAD",
-   "delta_m3": "-0.105000",
+   "parent_delta_m3": "-0.105000",
    "live": true,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -945,6 +1095,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.105000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -979,7 +1133,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 1,
    "name": "GF C1: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -988,6 +1142,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1022,7 +1180,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 2,
    "name": "GF C10: JOINT_HEAD",
-   "delta_m3": "-0.148750",
+   "parent_delta_m3": "-0.148750",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1031,6 +1189,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.148750",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1065,7 +1227,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 5,
    "name": "GF C11: JOINT_HEAD",
-   "delta_m3": "-0.467500",
+   "parent_delta_m3": "-0.467500",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1074,6 +1236,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.467500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1108,7 +1274,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 8,
    "name": "GF C2: JOINT_HEAD",
-   "delta_m3": "-0.205000",
+   "parent_delta_m3": "-0.205000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1117,6 +1283,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.205000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1151,7 +1321,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 10,
    "name": "GF C4: JOINT_HEAD",
-   "delta_m3": "-0.187500",
+   "parent_delta_m3": "-0.187500",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1160,6 +1330,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.187500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1194,7 +1368,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 11,
    "name": "GF C5: JOINT_HEAD",
-   "delta_m3": "-0.337500",
+   "parent_delta_m3": "-0.337500",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1203,6 +1377,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.337500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1237,7 +1415,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 13,
    "name": "GF C6: JOINT_HEAD",
-   "delta_m3": "-0.087500",
+   "parent_delta_m3": "-0.087500",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1246,6 +1424,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.087500",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1280,7 +1462,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 16,
    "name": "GF C8: JOINT_HEAD",
-   "delta_m3": "-0.191250",
+   "parent_delta_m3": "-0.191250",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1289,6 +1471,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.191250",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1323,7 +1509,7 @@
    "section_id": "T-576/columns-GF-reading-10E0-C7",
    "row": 19,
    "name": "GF C9: JOINT_HEAD",
-   "delta_m3": "-0.375000",
+   "parent_delta_m3": "-0.375000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1332,6 +1518,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 GF measured set",
    "his_side": "his walls-and-columns sheet, GF rows 36-47: every column height 3.75 = storey 4.50 (+0.95 -> +5.45) - 0.75 = clear height to a 0.75 beam soffit, one global head depth on every row; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.375000",
+   "storey": "GF",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1366,7 +1556,7 @@
    "section_id": "T-576/columns-1F-reading-10E0-C7",
    "row": 0,
    "name": "1F C1: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1375,6 +1565,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1409,7 +1603,7 @@
    "section_id": "T-576/columns-1F-reading-10E0-C7",
    "row": 1,
    "name": "1F C2: JOINT_HEAD",
-   "delta_m3": "-0.205000",
+   "parent_delta_m3": "-0.205000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1418,6 +1612,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.205000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1452,7 +1650,7 @@
    "section_id": "T-576/columns-1F-reading-10E0-C7",
    "row": 3,
    "name": "1F C8: JOINT_HEAD",
-   "delta_m3": "-0.135000",
+   "parent_delta_m3": "-0.135000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1461,6 +1659,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.135000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1495,7 +1697,7 @@
    "section_id": "T-576/columns-1F-reading-10E0-C7",
    "row": 5,
    "name": "1F P.C 20x50: JOINT_HEAD",
-   "delta_m3": "-0.075000",
+   "parent_delta_m3": "-0.075000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1504,6 +1706,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.075000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1538,7 +1744,7 @@
    "section_id": "T-576/columns-1F-reading-10E0-C7",
    "row": 7,
    "name": "1F P.C 20x70: JOINT_HEAD",
-   "delta_m3": "-0.105000",
+   "parent_delta_m3": "-0.105000",
    "live": false,
    "nested_in": "T-551/columns",
    "superseded_by": null,
@@ -1547,6 +1753,10 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-576 1F measured set",
    "his_side": "his walls-and-columns sheet, 1F rows 52-61 (2F rows 66-71): every column height 3.45 = storey 4.20 (+5.45 -> +9.65) - 0.75 = clear height to a 0.75 beam soffit; joint left to his beams",
+   "sub": "whole",
+   "delta_m3": "-0.105000",
+   "storey": "1F",
+   "alternative_reading": "not chosen; the matched part uses T-551/columns; its difference to the reading of record goes to T-600",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1581,7 +1791,7 @@
    "section_id": "T-545/beams@V7",
    "row": 2,
    "name": "GF: THROUGH_SUPPORT",
-   "delta_m3": "2.901714",
+   "parent_delta_m3": "2.901714",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -1590,6 +1800,11 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "matched",
+   "delta_m3": "2.28125",
+   "storey": "GF",
+   "matched_joint_m3": "2.28125",
+   "matched_source": "T-551/columns GF JOINT_HEAD (reading of record, statement V9)",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1622,9 +1837,34 @@
   {
    "level": "sections_v7",
    "section_id": "T-545/beams@V7",
+   "row": 2,
+   "name": "GF: THROUGH_SUPPORT",
+   "parent_delta_m3": "2.901714",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true,
+   "headline": true,
+   "t590_class": "UNRESOLVED",
+   "measured_record": "T-545 floors table (R-T545-1)",
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "residual",
+   "delta_m3": "0.620464",
+   "storey": "GF",
+   "matched_joint_m3": "2.28125",
+   "matched_source": "T-551/columns GF JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the GF column joint of record (2.28125 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
    "row": 7,
    "name": "GF: UNTRACED -> GF B7 UNRESOLVED",
-   "delta_m3": "0.120452",
+   "parent_delta_m3": "0.120452",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -1633,6 +1873,8 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-566 s.4 beam UNTRACED by mark (R-T566-5)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "whole",
+   "delta_m3": "0.120452",
    "outcome": "UNRESOLVED_APART",
    "class_after": "UNRESOLVED",
    "cited": [],
@@ -1643,7 +1885,7 @@
    "section_id": "T-545/beams@V7",
    "row": 11,
    "name": "1F: THROUGH_SUPPORT",
-   "delta_m3": "1.593362",
+   "parent_delta_m3": "1.593362",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -1652,6 +1894,11 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "matched",
+   "delta_m3": "0.385",
+   "storey": "1F",
+   "matched_joint_m3": "0.385",
+   "matched_source": "T-551/columns 1F JOINT_HEAD (reading of record, statement V9)",
    "outcome": "SOURCED",
    "class_after": "RULE_DIFFERENCE",
    "cited": [
@@ -1684,9 +1931,9 @@
   {
    "level": "sections_v7",
    "section_id": "T-545/beams@V7",
-   "row": 19,
-   "name": "2F: THROUGH_SUPPORT",
-   "delta_m3": "0.42",
+   "row": 11,
+   "name": "1F: THROUGH_SUPPORT",
+   "parent_delta_m3": "1.593362",
    "live": true,
    "nested_in": null,
    "superseded_by": null,
@@ -1695,34 +1942,41 @@
    "t590_class": "UNRESOLVED",
    "measured_record": "T-545 floors table (R-T545-1)",
    "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
-   "outcome": "SOURCED",
-   "class_after": "RULE_DIFFERENCE",
-   "cited": [
-    "UP-CONC-JOINT-001"
-   ],
-   "basis_label": "LEAD_ADOPTED under Q-62 A (delegated choice; not owner-approved)",
-   "our_side": [
-    {
-     "source": "Q-62",
-     "kind": "REQUIREMENT",
-     "status": "ANSWERED"
-    },
-    {
-     "source": "UP-CONC-JOINT-001",
-     "kind": "RULE",
-     "status": "LEAD_ADOPTED"
-    },
-    {
-     "source": "REGISTER:ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-07 12:30, corrected: the COLUMN owns the joint to the slab top, beam face to face; cites T-599)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    },
-    {
-     "source": "REGISTER:ERS s.7 rows 2026-10-31 (ADOPTED) and 2026-11-07 (ADOPTED)",
-     "kind": "REGISTER",
-     "status": "LEAD_RULING"
-    }
-   ]
+   "sub": "residual",
+   "delta_m3": "1.208362",
+   "storey": "1F",
+   "matched_joint_m3": "0.385",
+   "matched_source": "T-551/columns 1F JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the 1F column joint of record (0.385 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
+  },
+  {
+   "level": "sections_v7",
+   "section_id": "T-545/beams@V7",
+   "row": 19,
+   "name": "2F: THROUGH_SUPPORT",
+   "parent_delta_m3": "0.42",
+   "live": true,
+   "nested_in": null,
+   "superseded_by": null,
+   "reading_of_record": true,
+   "headline": true,
+   "t590_class": "UNRESOLVED",
+   "measured_record": "T-545 floors table (R-T545-1)",
+   "his_side": "his beam sheet rows carry each beam at full depth (e.g. GF 0.75) with lengths that run through the column / carrier footprints (T-545 s.2, R-T395 support allowance per mark); his column rows stop 0.75 below the slab top: the joint is in his beam rows",
+   "sub": "residual",
+   "delta_m3": "0.42",
+   "storey": "2F",
+   "matched_joint_m3": "0",
+   "matched_source": "T-551/columns 2F JOINT_HEAD (reading of record, statement V9)",
+   "outcome": "UNRESOLVED_RESIDUAL",
+   "class_after": "UNRESOLVED",
+   "cited": [],
+   "pointer": "T-600",
+   "reason": "beam through-support beyond the 2F column joint of record (0 m3): not explained by UP-CONC-JOINT-001; traced in T-600"
   }
  ],
  "released_quantities_changed": 0
