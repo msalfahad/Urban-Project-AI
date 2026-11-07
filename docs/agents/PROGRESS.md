@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-06 20:14 UTC (Lead). Previous version: 2026-11-06 12:18 UTC. The released numbers did not change
+Last update: 2026-11-07 00:15 UTC (Lead). Previous version: 2026-11-06 20:14 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 6 Nov 20:14 (newest first; six checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Marble, thresholds and sills vs freelancer, each unit apart: area ours 18.04 vs his 26.80 m2, length ours 56.83 vs
+  his 21.70 m, pieces ours 67 vs his 11; every difference has a named cause. His marble total marked 'm2' (295.44) is
+  164.54 m2 of real area plus 130.9 of piece-count x length written in the same column (checker re-read his workbook).
+  Possibly missing on our side: the entrance steps (11.20 m) and the steps outside the external doors; measured next.
+- Dome and lift-pit reinforcement, measured from the structural drawings for the first time: main bars 0.73 .. 1.16 t
+  (held, not priced in; checker re-measured each element type and agrees). Laps, ring links and the lift-wall height
+  are not printed; the next step bounds them and makes the lower figure strict.
+- Precast lintels: the freelancer has no lintel row in any workbook (checker confirmed). Putting his 54 deducted
+  openings through your lintel rule gives 54 pieces (84.9 m) against our 60 at most (91.5 m); the 6 extra are named
+  one by one. One door is read on a different width basis from the others; a check of every framed door is next.
+- Skirting vs freelancer: ours 197.3 vs his 282.9 m; outline against outline -2.4 %; the rest is doors and passages
+  he does not deduct (43.6 m), faces we rightly leave out (32.1 m) and 9.7 m unexplained by name. His yard skirting
+  (81.3 m) has no element on our side yet: we check the drawings for a finished base on each yard wall.
+- A dry run of all waiting wiring on a copy of the candidate: everything applies cleanly (plaster 580.6 -> 363.4 m2
+  valued, windows +9.87 m2); four small fixes (lintel classes, line numbering) are made before the wiring package.
+- One statement for 12-13 Nov now covers 17 sections; lintels, skirting, dome bars and marble go in next.
+- 10 Nov (every trade wired): LOW, the command wrapper still blocks wiring.
 
 Since 6 Nov 12:18 (newest first; twelve checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

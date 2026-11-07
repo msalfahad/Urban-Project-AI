@@ -46,6 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-07 00:15; recovery plan in force)
+
+- Merged since 20:14 (all Gate A, research, no candidate line moved): T-571, T-579, T-575, T-580 WORKED; T-574, T-577 PARTIAL (Checker re-measured 1 / 11 outlines and the freelancer side only); no FAILED.
+- T-580 dry run: V2-V8 rows apply cleanly on a V3.0.58 copy (0 STALE, 0 two-package lines); four findings must close before T-498 Gate B (lintel index class, stage identity on V3.0.58, L-4ccc before, T-423 r2 renumbering) -> T-582 FIRST in lane I.
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) still BLOCKED on the wrapper item (main unchanged at eafbb0f6); T-498 / T-423 r2 now also after T-582.
+- 12-13 Nov reconciled quantities: closed 19 (adds lintels NOT_COMPARABLE with implied count, skirting by cause, thresholds / sills / marble by unit; dome / lift-pit main bars bounded HELD); open handrails / nosing (T-578), 1F column +21.7 % (T-576), steps (T-584), skirting yard / stairs (T-585), lintel width basis (T-581), dome / lift bar laps (T-583); statement V6 (T-586).
+- 10 Nov: LOW (unchanged cause, 3 days). 12-13 Nov: HIGH for reconciliation tables; scorecard on wired quantities depends on the wrapper.
+
 ## Status (Lead, 2026-11-06 20:14; recovery plan in force)
 
 - Merged since 16:17 (all Gate A, research, no candidate line moved): T-560, T-570, T-568, T-572, T-569, T-573 6/6 WORKED (no FAILED); manifest V8 now lists the return paint, dressing class, pier returns, W17 9.870 m2 and 6 HELD dome / lift-pit rebar rows.
