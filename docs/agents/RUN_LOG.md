@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T12:51Z | Verifier | STARTED | run session_01E6cPnb3BzTUafRwRMYkyT7 | repo-attached routine | task state: READY T-629 (W3 e2149c13), T-625 (W2 05814508) | self-check pending
 - 2026-11-08T12:40Z | Worker 2 | STARTED | run session_01E6cPnevDQYZYGUw6ktmHcx | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08 12:17 UTC | Lead | SUCCESS | board | Since 08:19: T-615, T-620, T-622, T-623, T-624 WORKED (5 merged, 0 rejected), READY T-629 (first) + T-625; B10 beams when wired 66.401795 vs his 66.093875 m3 (+0.466 %); Checker F-C-P02-12 B20 upstand 4.325 vs 3.00 m -> T-632 (S first); new T-631 manifest V16, T-633 B9 39 rows, T-634 B5/B6 31 rows, T-635 statement V12; register +1, lessons 2 ADOPTED / 1 PROPOSED; no candidate change (V3.0.58; V2.9 + route G unchanged); PR #4 still open (not re-notified); W1 ran a research script outside the wrapper (noted); Drive OK, no photos; queue check: 25 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08 12:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
