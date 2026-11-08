@@ -23,7 +23,7 @@ R-T636-1 (every villa on the engine's line-index scheme; the trial BOQ method):
       one for the line; the record of the LATEST task wins (task number; on a tie the overlay op, the wired state);
       the others are listed as 'also stated by'. Sources, by kind: the overlay op that set the line (beside.cause /
       missing / high_open_by_name, else the Checker verdict line), the merged hold censuses (T-638 formwork, T-639
-      rebar, T-640 finishes, T-642 P02 / P04 / parapet, T-644 lintels), the T-572 HELD-bound components, an APPLIED
+      rebar, T-640 finishes, T-642 P02 / P04 / parapet, T-644 lintels, T-645 stair finishes), the T-572 HELD-bound components, an APPLIED
       Checker downgrade of the V3.0.57 index, the T-449 correction registers (held_reason), and the candidate record
       extracts T-297 (V3.0.16 rebar: reasons / rfi / bound basis; used only while its bound equals the line's) and
       T-311 (V3.0.19: rfi head). A material line whose op names its host ('host L-...') and has no own record takes
@@ -75,6 +75,7 @@ SRC = {
     "T640": ROOT / "research/agents_t640/out/HOLD_CENSUS_T640.json",
     "T642": ROOT / "research/agents_t642/out/T642_FIX_ROWS.json",
     "T644": ROOT / "research/agents_t644/out/T644_LINTEL_PIECES.json",
+    "T645": ROOT / "research/agents_t645/out/STAIR_HOLD_CENSUS_T645.json",
     "T572": ROOT / "research/agents_t572/out/T572_HELD_BOUNDS.json",
     "DG": ROOT / "research/agents_t469/DOWNGRADES_SNAPSHOT.json",
     "T449C": ROOT / "research/agents_t449/out/CORRECTION_REGISTER_CONCRETE_T449.json",
@@ -91,14 +92,14 @@ TASK_RE = re.compile(r"\bT-(\d{3})\b")
 HOST_RE = re.compile(r"^host (L-[0-9a-f]{20}|NEW:\S+)$")
 MERGED_SINCE_V17 = {"T-637": "master 1.56.0 (the grouping of this BOQ)",
                     "T-642": "P02 / P04 + parapet fix rows (cause source; no line moved in the overlay)",
-                    "T-644": "B9-02 lintel pieces (cause source; pieces not wired)"}
+                    "T-644": "B9-02 lintel pieces (cause source; pieces not wired)",
+                    "T-645": "B7 stair finish HELD census, merged ebc5a76a 23:03Z (cause source; its 16 fix rows "
+                             "are not in the overlay: their lines show the V17 state)"}
 
 
 # board rows open at claim (2026-11-08T23:00Z) whose scope names the item codes of F-T636-1 lines (pointer only: no
 # quantity or cause is taken from an unmerged row)
-OPEN_ROWS = (("FIN.STAIR.", "T-645 (READY, not merged)"), ("FIN.MARBLE.RISER", "T-645 (READY, not merged)"),
-             ("FIN.MARBLE.TREAD", "T-645 (READY, not merged)"), ("FIN.MARBLE.LANDING", "T-645 (READY, not merged)"),
-             ("FIN.ROOF.", "T-646 (TODO)"), ("EXT.FENCE.", "T-646 (TODO, fence plaster / paint / face)"),
+OPEN_ROWS = (("FIN.ROOF.", "T-646 (TODO)"), ("EXT.FENCE.", "T-646 (TODO, fence plaster / paint / face)"),
              ("STR.REBAR", "T-643 (TODO, 208 unbound rebar lines)"), ("MAS.BLOCK", "T-633 (TODO, blockwork rows)"))
 
 
@@ -203,6 +204,9 @@ def census_records(src):
             put(r["line_id"], _rec(642, f"T-642 fix row {r['id']} (merged 1c7411a5)", r["cause"], kind="T-642 fix rows"))
     for k, v in src["T644"]["m3_lines"].items():
         put(v["line_id"], _rec(644, f"T-644 lintel {k} (merged cc7f9a48)", v.get("m3_cause_proposed") or "", kind="T-644 lintel census"))
+    for l in src["T645"]["lines"]:
+        put(l["line_id"], _rec(645, "T-645 stair finish hold census (merged ebc5a76a)", l.get("cause") or "",
+                               kind="T-645 stair finish census"))
     for c in src["T572"]["components"]:
         if not c.get("line_id"):
             continue

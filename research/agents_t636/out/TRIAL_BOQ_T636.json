@@ -461,7 +461,7 @@
  ],
  "contains": [
   "WILL contain, for every trade that has lines: each BOQ line with its released quantity split into WIRED IN V3.0.58 / FIX ROW NOT YET WIRED (overlay) / UNVERIFIED, and its HELD lines counted with their cause: B1 m3 2 released lines; B2 m2 11 released lines; B3 lm 19 released lines; B3 m2 104 released lines; B4 lm 3 released lines; B4 m2 139 released lines; B5 m2 49 released lines; B6 lm 3 released lines; B6 m2 11 released lines; B6 pcs 17 released lines; B7 lm 11 released lines; B7 m2 21 released lines; B7 m3 6 released lines; B8 lm 6 released lines; B8 m2 61 released lines; B8 m3 3 released lines; B8 pcs 35 released lines; B9 kg 1 released lines; B9 m2 13 released lines; B9 m3 16 released lines; B9 pcs 8 released lines; B10 m2 298 released lines; B10 m3 293 released lines; B11 kg 380 released lines; B13 lm 5 released lines; B13 m2 10 released lines.",
-  "WILL show HELD lines as HELD with a cause or with finding F-T636-1 by line id, never as 0 and never summed: B1 m3 18; B2 m2 2; B3 lm 6; B3 m2 19; B3 m3 47; B4 lm 3; B4 m2 85; B5 m2 8; B6 m2 10; B6 pcs 7; B7 lm 65; B7 m2 42; B7 m3 5; B8 item 1; B8 lm 5; B8 m2 25; B8 m3 1; B8 pcs 18; B9 kg 16; B9 m2 15; B9 m3 77; B9 pcs 30; B10 m2 320; B10 m3 145; B11 kg 1695; B13 lm 3; B13 m2 47; B13 m3 6; B13 pcs 3. Causes found for 2283 of 2750 HELD lines.",
+  "WILL show HELD lines as HELD with a cause or with finding F-T636-1 by line id, never as 0 and never summed: B1 m3 18; B2 m2 2; B3 lm 6; B3 m2 19; B3 m3 47; B4 lm 3; B4 m2 85; B5 m2 8; B6 m2 10; B6 pcs 7; B7 lm 65; B7 m2 42; B7 m3 5; B8 item 1; B8 lm 5; B8 m2 25; B8 m3 1; B8 pcs 18; B9 kg 16; B9 m2 15; B9 m3 77; B9 pcs 30; B10 m2 320; B10 m3 145; B11 kg 1695; B13 lm 3; B13 m2 47; B13 m3 6; B13 pcs 3. Causes found for 2314 of 2750 HELD lines.",
   "WILL print a trade x unit TOTAL only where every component is valued: B6 lm 3.",
   "will NOT contain any line for trade group(s) B12 (no family carries a line), nor for the families listed in F-T636-4.",
   "will NOT be a complete BOQ: it is NOT called complete while any trade is missing or carries HELD lines; no unit grand is a total; the document is a non-candidate trial built on the V3.0.58 candidate + overlay V17; the released default (V2.9 + route G) is unchanged and only Gate B merges move the candidate.",
@@ -2665,39 +2665,17 @@
       "L-5d2be30dd8d2ffeacc42"
      ],
      "n": 2,
-     "open_board_row": "T-645 (READY, not merged)",
-     "stale_v3_0_16_record": 0
-    },
-    "B7 FIN.MARBLE.RISER (m2)": {
-     "line_ids": [
-      "L-07e0855f961a839c1277",
-      "L-099fe9fcfa5667fb8b99",
-      "L-0f060e9951c28c4cf074",
-      "L-12f56cbfe750f8b30c41",
-      "L-16e0c6682725260f28e7",
-      "L-1e36bc3c0893eeeb9c58",
-      "L-24792292e996c57c52d9",
-      "L-2efa4a4f4cc2aad9a2f2",
-      "L-820baecf7f726b4d8f1e",
-      "L-8938aa3b25bf605e4b9d",
-      "L-913cda8eb6d73f6e28cc",
-      "L-ecc450d6cc865617f8f6",
-      "L-f24a09f1b4117814e4c8"
-     ],
-     "n": 13,
-     "open_board_row": "T-645 (READY, not merged)",
+     "open_board_row": null,
      "stale_v3_0_16_record": 0
     },
     "B7 FIN.MARBLE.TREAD (m2)": {
      "line_ids": [
       "L-5d338389185d72a6fb16",
       "L-6cf11c2d30387d0942b9",
-      "L-b4660de0ddd98ad0ffc2",
-      "L-ea55ed317bc4de89aec1",
-      "L-fa534ec5f9dc14947899"
+      "L-ea55ed317bc4de89aec1"
      ],
-     "n": 5,
-     "open_board_row": "T-645 (READY, not merged)",
+     "n": 3,
+     "open_board_row": null,
      "stale_v3_0_16_record": 0
     },
     "B7 FIN.RAILING (lm)": {
@@ -2709,27 +2687,6 @@
      "open_board_row": null,
      "stale_v3_0_16_record": 0
     },
-    "B7 FIN.STAIR.FLIGHT (lm)": {
-     "line_ids": [
-      "L-0c2df36a42803126d3b9",
-      "L-23e0ff3c4f454647b2b5",
-      "L-256e8ae3e15334092b5d",
-      "L-30009d8eb01996ec6399",
-      "L-406aae9a9854e015c45e",
-      "L-437643d5f8553a89a0cd",
-      "L-48bb13e2f1c94d852a03",
-      "L-509c6af3d162ae145108",
-      "L-54eb280b9f7bf5eda65f",
-      "L-a08d67ca292ab16ef9c3",
-      "L-a1a0ab49818d4b9621b5",
-      "L-c6724654ee4ccdb0c508",
-      "L-cccf54f717124cd750b3",
-      "L-d827589991777fe63819"
-     ],
-     "n": 14,
-     "open_board_row": "T-645 (READY, not merged)",
-     "stale_v3_0_16_record": 0
-    },
     "B7 FIN.STAIR.SKIRTING.SLOPED (lm)": {
      "line_ids": [
       "L-1c082cc60442407ed517",
@@ -2738,7 +2695,7 @@
       "L-76de75ce9a315998be99"
      ],
      "n": 4,
-     "open_board_row": "T-645 (READY, not merged)",
+     "open_board_row": null,
      "stale_v3_0_16_record": 0
     },
     "B7 FIN.STAIR.SKIRTING.ZIGZAG (lm)": {
@@ -2753,16 +2710,7 @@
       "L-f45c2e6d46b0cc6a7e53"
      ],
      "n": 8,
-     "open_board_row": "T-645 (READY, not merged)",
-     "stale_v3_0_16_record": 0
-    },
-    "B7 FIN.STAIR.SOFFIT (m2)": {
-     "line_ids": [
-      "L-1fcec3328ccd0ea243d4",
-      "L-c77e3887f7e348b1461d"
-     ],
-     "n": 2,
-     "open_board_row": "T-645 (READY, not merged)",
+     "open_board_row": null,
      "stale_v3_0_16_record": 0
     },
     "B7 STR.CONC.STAIR (m3)": {
@@ -3037,7 +2985,7 @@
      "stale_v3_0_16_record": 0
     }
    },
-   "lines": 467,
+   "lines": 436,
    "what": "HELD lines whose cause no committed record states (listed by line id, never dropped, never given a typed cause); the full candidate line records (rfi / notes / rule of each line) are a private-run output (V3_0_58_BOQ_LINES.json, not committed): the causes here are read from the committed overlay ops, censuses, registers and extracts only"
   },
   "F-T636-2": {
@@ -3102,19 +3050,20 @@
   }
  },
  "held": {
-  "finding_F_T636_1": 467,
+  "finding_F_T636_1": 436,
   "lines": 2750,
-  "with_cause": 2283
+  "with_cause": 2314
  },
  "held_cause_by_source": {
   "Checker downgrade (APPLIED)": 396,
-  "F-T636-1 (no committed record)": 467,
+  "F-T636-1 (no committed record)": 436,
   "T-449 correction register": 13,
   "T-572 HELD-bound components": 94,
   "T-638 formwork census": 316,
   "T-639 rebar census": 801,
   "T-640 finish census": 39,
   "T-644 lintel census": 60,
+  "T-645 stair finish census": 31,
   "candidate record V3.0.16 (T-297)": 373,
   "candidate record V3.0.19 (T-311)": 62,
   "host work line (one step)": 28,
@@ -3167,9 +3116,9 @@
    "with_cause": 3
   },
   "B7": {
-   "finding": 75,
+   "finding": 44,
    "held": 112,
-   "with_cause": 37
+   "with_cause": 68
   },
   "B8": {
    "finding": 48,
@@ -3202,6 +3151,7 @@
   "research/agents_t641/out/WIRING_MANIFEST_V17.json": "7a0889aaa9f488cf5bea38a363b1a1342e779f399635b433800be4c1215c4065",
   "research/agents_t642/out/T642_FIX_ROWS.json": "5ce2188f8862d7ab449e8bc89f7ef5c8b8b4ea23bdd7040df0c73860159f028d",
   "research/agents_t644/out/T644_LINTEL_PIECES.json": "705568360c5f69581758e634c69eb3305aeefa74c451fa922ed3dca4e2c41a02",
+  "research/agents_t645/out/STAIR_HOLD_CENSUS_T645.json": "3e1384ee4e84bf9ed74a976e3a27170aad0fe4b049d76708cfe7dc3f60fe9629",
   "rules/coverage/BOQ_FAMILY_MASTER_1.56.0.json": "15b2402d1602ab3c4c2c115277485d8770833e442be5927629d460bb03bddc94"
  },
  "lines": {
@@ -3215,7 +3165,8 @@
  "merged_since_v17_not_in_overlay": {
   "T-637": "master 1.56.0 (the grouping of this BOQ)",
   "T-642": "P02 / P04 + parapet fix rows (cause source; no line moved in the overlay)",
-  "T-644": "B9-02 lintel pieces (cause source; pieces not wired)"
+  "T-644": "B9-02 lintel pieces (cause source; pieces not wired)",
+  "T-645": "B7 stair finish HELD census, merged ebc5a76a 23:03Z (cause source; its 16 fix rows are not in the overlay: their lines show the V17 state)"
  },
  "not_claimed": "development villa trial BOQ; nothing wired, nothing released (V3.0.58 NOT RELEASED; V2.9 + route G unchanged); no accuracy figure; freelancer agreement is never proof",
  "overlay": "WIRING MANIFEST V17 (T-641, merged, engine 57620ab8)",
@@ -6045,17 +5996,20 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184); 12th front = ST p.4 459 (1.150); its position lies in the B20 head clash (Q-46 RFI), which moves no riser area (width = the lane 1.150, height R)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-184"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -6629,17 +6583,20 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -7505,17 +7462,21 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "MS2-L read again on the 2F plan through the opening (DOUBLE_COUNT, T-425 confirmed; no flight leaves 2F, T-184 R-STAIR-CONT-1): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-a08d67ca292ab16ef9c3 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-184",
+    "T-425"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -8502,17 +8463,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: 1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-184"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -9858,17 +9822,21 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "MS2-U: the 12th riser's front (2F floor edge) and the 11th going are drawn on no sheet (arch 2F 11 fronts, ST p.5 11 lines; T-412 N12 HELD, T-429 T429_LAST_GOING; head clash B23, Q-46 RFI) - stays HELD; bounded by the drawn readings",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-412",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -11372,17 +11340,20 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -14280,17 +14251,19 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-C seen through the void from 1F (SEEN_THROUGH, BOUNDED_EXPOSURE); the carrier GF F1 is itself HELD: the FIN.MARBLE.RISER quantity of this flight is carried by L-913cda8eb6d73f6e28cc (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -14983,17 +14956,23 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "ST-01 soffit: T-281 measured rows (method O 17.197803 / D 17.243246 m2 true) + MS1-L in either reading (C-ST-4: O 3.677828 .. 4.501478, D 3.225561 .. 4.049212) are present in every reading; the high end is OPEN: MS1-T warped soffit and MS2-TR junction not drawn (D-67 / C-ST-3, plan 1.500 m2 HELD), column 691 exposure HELD (D-16), method O vs D a RULE_DIFFERENCE (no owner soffit rule), finish type of a stair soffit not printed",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "C-ST-3",
+    "C-ST-4",
+    "D-16",
+    "D-67",
+    "T-281"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-15",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -16811,17 +16790,21 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "RS-S read on the 1F plan (BOUNDED_EXPOSURE reading); the carrier is the GF F2 reading corrected to the drawn 10 treads (T-425 / T-429): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-509c6af3d162ae145108 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -17051,17 +17034,21 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-S read on the 1F plan (BOUNDED_EXPOSURE reading); the carrier is the GF F2 reading corrected to the drawn 10 treads (T-425 / T-429): the FIN.MARBLE.RISER quantity of this flight is carried by L-099fe9fcfa5667fb8b99 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -17380,17 +17367,19 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "RS-C seen through the void from 1F (SEEN_THROUGH, BOUNDED_EXPOSURE); the carrier GF F1 is itself HELD: the FIN.STAIR.FLIGHT quantity of this flight is carried by L-30009d8eb01996ec6399 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -20947,17 +20936,21 @@
    "unit": "pcs"
   },
   {
-   "cause": null,
+   "cause": "RS-S partial reading FOLDED into GF F2 (T-425 / T-429): the FIN.MARBLE.RISER quantity of this flight is carried by L-099fe9fcfa5667fb8b99 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -21397,17 +21390,19 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: none: the engine's mid-radius walking line is an assumed offset (S-9)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -27964,17 +27959,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -29043,17 +29041,21 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "RS-A read on the 1F plan; the carrier is GF F4 corrected to the drawn 4 treads (T-425 / T-438): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-406aae9a9854e015c45e (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -31191,17 +31193,21 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "MS2-U: the 12th riser's front (2F floor edge) and the 11th going are drawn on no sheet (arch 2F 11 fronts, ST p.5 11 lines; T-412 N12 HELD, T-429 T429_LAST_GOING; head clash B23, Q-46 RFI) - stays HELD; bounded by the drawn readings",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-412",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -34139,17 +34145,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: GF FFL +1.00 and 1F FFL +5.50 printed; 12 + 11 + 5 = 28 risers (T-438 MERGED 63f77c1d: 1F plan + ST p.4 govern, Checker AGREE on two drawings); riser ASSUMED - OWNER-APPROVED (Q-50 A cond: round stair reconstructed from the plans, no section)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -36001,17 +36010,20 @@
    "unit": "m3"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: half landing +3.50 and 1F FFL +5.50 printed; 12 risers section A-A (Q-46 A, T-184); 12th front = ST p.4 459 (1.150); its position lies in the B20 head clash (Q-46 RFI), which moves no riser area (width = the lane 1.150, height R)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-184"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -53230,17 +53242,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: 5 risers (count DRAWING-CONFIRMED, A-A) of R 0.166667; winder fronts of the drawn 4-riser fan 4.144 lm (T-412) do not subdivide 5",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "D-67",
+    "T-412"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -55833,17 +55848,20 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: +0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "T-184",
+    "T-412"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -58877,17 +58895,20 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: 12 radial fronts 13.850 lm (T-412) x (R 0.160714 - 0.030) = 1.810393 m2, illustrative only",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-412"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -64764,17 +64785,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: 1F FFL +5.50 and 2F FFL +9.70 printed; 12 + 1 (MS2-TR) + 12 risers section A-A (Q-46 A, T-184); landing levels +7.516 / +7.684 are not printed and are not used",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-46",
+    "T-184"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -65032,17 +65056,21 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "C-ST-4 / RFI-A04 (open, architect + structural): MS1-L riser count and landing edge: architectural GF plan 10 fronts over 2.700 (DC .. 486; with section A-A 10 + 5, Q-46 A, T-434) vs ST p.4 12 straight lines over 3.300 (45A .. 25E); owner 2026-10-22 18:00: MS1-L HELD on the riser-count conflict - stays HELD; bounded by the drawn readings",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "C-ST-4",
+    "Q-46",
+    "T-434"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -72407,17 +72435,21 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: drawn 4-riser fan region 1.495 m2 (engine reading, T-425; T-281 plan 1.495)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "D-67",
+    "T-281",
+    "T-425"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-02",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -79429,17 +79461,19 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "MS1-T winder turn seen from 1F: section A-A governs 5 winders, every plan draws a 4-riser fan: the winder subdivision is not drawn (D-67, WINDER_SUBDIVISION_NOT_DRAWN; OWNER_RULE_STAIRS S-9: never generated, no walking line) - beside: none: a winder pitch line needs a walking line, never assumed (S-9)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "D-67"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -79726,17 +79760,23 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "ST-02 soffit: T-281 measured rows method O 4.460946 / D 4.905788 m2 true; the high end is OPEN: RS-C helicoid soffit not drawn (plan 4.443156 m2, Q-50 A cond / C-ST-3), sub-pieces under the 'B3 (With Stair)' band and the CA member HELD (Q-61 C, T-258), unknown pairs 0.596481 m2 plan; method O vs D a RULE_DIFFERENCE; finish type not printed",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "C-ST-3",
+    "Q-50",
+    "Q-61",
+    "T-258",
+    "T-281"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-15",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -82361,17 +82401,20 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "BLOCKED_RFI STAIR_RISER_NOT_ESTABLISHED in the candidate (the engine had no riser input); the riser follows from the printed levels and the governing count: +0.30 (ST p.3, section A-A) and GF FFL +1.00 printed; 4 riser lines on the GF plan (T-184 ST-01b, T-412)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "T-184",
+    "T-412"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -86655,17 +86698,21 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-S partial reading FOLDED into GF F2 (T-425 / T-429): the FIN.STAIR.FLIGHT quantity of this flight is carried by L-509c6af3d162ae145108 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-429"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-01",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -94307,17 +94354,21 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "C-ST-4 / RFI-A04 (open, architect + structural): MS1-L riser count and landing edge: architectural GF plan 10 fronts over 2.700 (DC .. 486; with section A-A 10 + 5, Q-46 A, T-434) vs ST p.4 12 straight lines over 3.300 (45A .. 25E); owner 2026-10-22 18:00: MS1-L HELD on the riser-count conflict - stays HELD; bounded by the drawn readings",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "C-ST-4",
+    "Q-46",
+    "T-434"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -96603,17 +96654,21 @@
    "unit": "m2"
   },
   {
-   "cause": null,
+   "cause": "RS-A read on the 1F plan; the carrier is GF F4 corrected to the drawn 4 treads (T-425 / T-438): the FIN.MARBLE.RISER quantity of this flight is carried by L-16e0c6682725260f28e7 (one flight, one valued line; R-T429-1)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "R-T429-1",
+    "T-425",
+    "T-438"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-03",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -99923,17 +99978,20 @@
    "unit": "kg"
   },
   {
-   "cause": null,
+   "cause": "RS-C curved flight of the round stair: owner Q-50 A cond holds the curved part (no section; RFI-A03 / RFI-S27); a curved going or walking line is never generated (S-9) - beside: engine 4.094413 m2; drawn region 4.443096 m2 (T-415)",
    "cause_also_stated_by": [],
-   "cause_ids": [],
-   "cause_kind": null,
-   "cause_source": null,
+   "cause_ids": [
+    "Q-50",
+    "T-415"
+   ],
+   "cause_kind": "T-645 stair finish census",
+   "cause_source": "T-645 stair finish hold census (merged ebc5a76a)",
    "class": "HELD",
    "column": null,
    "evidence": "HELD",
    "evidence_basis": "HELD class",
    "family": "B7-02",
-   "finding": "F-T636-1",
+   "finding": null,
    "group": "B7",
    "held_high": null,
    "held_low": null,
@@ -106738,9 +106796,11 @@
        "held_blank_n": 14,
        "held_bounded_n": 0,
        "held_causes": {
-        "by_source": {},
-        "finding": 14,
-        "with_cause": 0
+        "by_source": {
+         "T-645 stair finish census": 14
+        },
+        "finding": 0,
+        "with_cause": 14
        },
        "held_high": null,
        "held_high_open_n": 0,
@@ -107135,9 +107195,11 @@
        "held_blank_n": 2,
        "held_bounded_n": 3,
        "held_causes": {
-        "by_source": {},
-        "finding": 5,
-        "with_cause": 0
+        "by_source": {
+         "T-645 stair finish census": 2
+        },
+        "finding": 3,
+        "with_cause": 2
        },
        "held_high": "8.924413",
        "held_high_open_n": 0,
@@ -107196,9 +107258,11 @@
        "held_blank_n": 13,
        "held_bounded_n": 0,
        "held_causes": {
-        "by_source": {},
-        "finding": 13,
-        "with_cause": 0
+        "by_source": {
+         "T-645 stair finish census": 13
+        },
+        "finding": 0,
+        "with_cause": 13
        },
        "held_high": null,
        "held_high_open_n": 0,
@@ -107379,9 +107443,11 @@
        "held_blank_n": 2,
        "held_bounded_n": 0,
        "held_causes": {
-        "by_source": {},
-        "finding": 2,
-        "with_cause": 0
+        "by_source": {
+         "T-645 stair finish census": 2
+        },
+        "finding": 0,
+        "with_cause": 2
        },
        "held_high": null,
        "held_high_open_n": 0,
