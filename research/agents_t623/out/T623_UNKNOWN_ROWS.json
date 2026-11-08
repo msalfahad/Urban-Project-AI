@@ -1,0 +1,1266 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (beam lines = V3.0.57 LINE_INDEX); NOT RELEASED",
+ "lines": {
+  "T-545/beams@V10": {
+   "by_class_own": {
+    "ENGINE_RIGHT": "-1.020710",
+    "UNRESOLVED": "1.828826"
+   },
+   "drift_m3": "0.027012",
+   "own_unknown_delta_m3": "0.808116",
+   "rows": [
+    {
+     "class": "UNRESOLVED",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "J_members_agreeing": "20 / 20",
+      "J_own_m3": "2.281250",
+      "J_statement_m3": "2.281250",
+      "T_m3": "2.901714",
+      "T_source": "T-545 per-mark THROUGH_SUPPORT (his lengths, private) - cited",
+      "capacity_terms": "T-600 r2 s.2 (zones at HELD / D_ctrl-open columns, OVERLAP, BESIDE, CARRIER_NODE, UNCOVERED, BEYOND) - cited; SHORT stays UNRESOLVED by group",
+      "why_open": "his rows carry no location: which zones his lengths reach is not printed"
+     },
+     "name": "GF: THROUGH_SUPPORT residual beyond the matched joint: not explained by the rule (UNRESOLVED, T-600; alternative column readings named in T-599, never chosen)",
+     "own_delta": "0.620464",
+     "pieces": [
+      "J GF"
+     ],
+     "row": 3,
+     "statement_class": "UNRESOLVED",
+     "statement_delta": "0.620464",
+     "status": "RE-MEASURED (PARTS)",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "-0.000622",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "drawn B1 runs (faces + tag) beyond his four rows: his B1 length is shorter than the drawn face-to-face length of the mark, so no part can be support run-through",
+      "detail": [
+       {
+        "band": "BAND0002",
+        "depth_m": "0.4",
+        "faces": [
+         "429",
+         "27A"
+        ],
+        "own_m3": "0.117600",
+        "plan_m2": "0.294000"
+       },
+       {
+        "band": "BAND0005",
+        "depth_m": "0.4",
+        "faces": [
+         "436",
+         "28D"
+        ],
+        "own_m3": "0.140000",
+        "plan_m2": "0.350000"
+       },
+       {
+        "band": "BAND0009",
+        "depth_m": "0.4",
+        "faces": [
+         "464",
+         "290"
+        ],
+        "own_m3": "0.205557",
+        "plan_m2": "0.513891"
+       },
+       {
+        "band": "BAND0013",
+        "depth_m": "0.4",
+        "faces": [
+         "4F7",
+         "4F8"
+        ],
+        "own_m3": "0.096000",
+        "plan_m2": "0.240000"
+       },
+       {
+        "band": "BAND0015",
+        "depth_m": "0.4",
+        "faces": [
+         "272",
+         "2AA"
+        ],
+        "own_m3": "0.091584",
+        "plan_m2": "0.228961"
+       },
+       {
+        "band": "BAND0020.1",
+        "depth_m": "0.4",
+        "faces": [
+         "284",
+         "286"
+        ],
+        "own_m3": "0.064000",
+        "plan_m2": "0.160000"
+       },
+       {
+        "band": "BAND0023.1",
+        "depth_m": "0.4",
+        "faces": [
+         "28E",
+         "291"
+        ],
+        "own_m3": "0.056000",
+        "plan_m2": "0.140000"
+       },
+       {
+        "band": "BAND0026",
+        "depth_m": "0.4",
+        "faces": [
+         "294",
+         "295"
+        ],
+        "own_m3": "0.144000",
+        "plan_m2": "0.360000"
+       },
+       {
+        "band": "BAND0029.3",
+        "depth_m": "0.4",
+        "faces": [
+         "2AE",
+         "2AF"
+        ],
+        "own_m3": "0.096000",
+        "plan_m2": "0.240000"
+       },
+       {
+        "band": "BAND0029.4",
+        "depth_m": "0.4",
+        "faces": [
+         "2AE",
+         "2AF"
+        ],
+        "own_m3": "0.152000",
+        "plan_m2": "0.380000"
+       },
+       {
+        "band": "BAND0032",
+        "depth_m": "0.4",
+        "faces": [
+         "2F1",
+         "2F2"
+        ],
+        "own_m3": "0.076000",
+        "plan_m2": "0.190000"
+       },
+       {
+        "band": "BAND0033.1",
+        "depth_m": "0.4",
+        "faces": [
+         "2B5",
+         "2B8"
+        ],
+        "own_m3": "0.104000",
+        "plan_m2": "0.260000"
+       }
+      ],
+      "engine_m3": "1.342119",
+      "mark": "B1",
+      "own_delta": "-0.210741",
+      "own_m3": "1.342741"
+     },
+     "name": "GF: RUN_COUNT",
+     "own_delta": "-0.210741",
+     "pieces": [
+      "BAND0002",
+      "BAND0005",
+      "BAND0009",
+      "BAND0013",
+      "BAND0015",
+      "BAND0020.1",
+      "BAND0023.1",
+      "BAND0026",
+      "BAND0029.3",
+      "BAND0029.4",
+      "BAND0032",
+      "BAND0033.1"
+     ],
+     "row": 4,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.210119",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000288",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "one row of his against one drawn run; his length rounded (< 0.05 m)",
+      "detail": [
+       {
+        "band": "BAND0001",
+        "depth_m": "0.75",
+        "faces": [
+         "428",
+         "28F"
+        ],
+        "own_m3": "0.686262",
+        "plan_m2": "0.915016"
+       }
+      ],
+      "engine_m3": "0.68655",
+      "mark": "B11",
+      "own_delta": "-0.003762",
+      "own_m3": "0.686262"
+     },
+     "name": "GF: UNTRACED -> GF B11 DRAWING_PRECISION",
+     "own_delta": "-0.003762",
+     "pieces": [
+      "BAND0001"
+     ],
+     "row": 5,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.00405",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "one row of his against one drawn run; his length rounded (< 0.05 m)",
+      "detail": [
+       {
+        "band": "BAND0003",
+        "depth_m": "0.75",
+        "faces": [
+         "42C",
+         "46D"
+        ],
+        "own_m3": "0.528021",
+        "plan_m2": "0.704028"
+       }
+      ],
+      "engine_m3": "0.528021",
+      "mark": "B8",
+      "own_delta": "-0.003021",
+      "own_m3": "0.528021"
+     },
+     "name": "GF: UNTRACED -> GF B8 DRAWING_PRECISION",
+     "own_delta": "-0.003021",
+     "pieces": [
+      "BAND0003"
+     ],
+     "row": 6,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.003021",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000848",
+     "drift_cause": null,
+     "evidence": {
+      "allowance_carrier_at_width_m3": "0.208000",
+      "allowance_carrier_crossed_m3": "0.208000",
+      "beyond_if_carrier_crossed_m3": "0.012000",
+      "capacity_B1_piece_m3": "0.064000",
+      "capacity_carrier_crossing_beyond_width_m3": "0.000000",
+      "cause": "his B2 length beyond the drawn B2 pieces and their supports (carrier B7 at its width): it fits BOTH in the collinear piece the drawing labels B1 (BAND0020.1, billed once under B1) AND in the oblique crossing of the curved carrier B7 on the B2 axis; his rows carry no location",
+      "detail": [
+       {
+        "band": "BAND0020.2",
+        "depth_m": "0.4",
+        "faces": [
+         "284",
+         "286"
+        ],
+        "own_m3": "0.216000",
+        "plan_m2": "0.540000"
+       },
+       {
+        "band": "BAND0024.1",
+        "depth_m": "0.4",
+        "faces": [
+         "292",
+         "296"
+        ],
+        "own_m3": "0.216000",
+        "plan_m2": "0.540000"
+       },
+       {
+        "band": "BAND0027",
+        "depth_m": "0.4",
+        "faces": [
+         "29E",
+         "2B9"
+        ],
+        "own_m3": "0.200000",
+        "plan_m2": "0.500000"
+       }
+      ],
+      "excess_over_face_to_face_m3": "0.220000",
+      "inside_piece_columns": [],
+      "inside_piece_columns_m3": "0.000000",
+      "mark": "B2",
+      "own_delta": "0.012000",
+      "own_m3": "0.632000",
+      "supports": [
+       {
+        "end": "start",
+        "extent_m": "0.500000",
+        "piece": "BAND0020.2",
+        "support": "column 32C"
+       },
+       {
+        "end": "end",
+        "extent_m": "0.500000",
+        "piece": "BAND0020.2",
+        "support": "column 36B"
+       },
+       {
+        "end": "start",
+        "extent_m": "0.500000",
+        "piece": "BAND0024.1",
+        "support": "column 32F"
+       },
+       {
+        "end": "end",
+        "extent_m": "0.500000",
+        "piece": "BAND0024.1",
+        "support": "column 341"
+       },
+       {
+        "end": "start",
+        "extent_m": "0.200000",
+        "piece": "BAND0027",
+        "support": "column 34A"
+       },
+       {
+        "end": "end",
+        "extent_m": "0.400000",
+        "piece": "BAND0027",
+        "support": "column 356"
+       }
+      ]
+     },
+     "name": "GF: UNTRACED -> GF B2 MARK_BOUNDARY",
+     "own_delta": "0.012000",
+     "pieces": [
+      "BAND0020.2",
+      "BAND0024.1",
+      "BAND0027"
+     ],
+     "row": 7,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.011152",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "0.20 x 0.20 upstand drawn on the B20 section, no row of his",
+      "detail": [
+       {
+        "band": "BAND0043.1",
+        "distinct_x_on_section": 3,
+        "own_m3": "0.120000",
+        "section_area_m2": "0.340000",
+        "section_outline": "560",
+        "span_m": "3.000000",
+        "upstand_area_m2": "0.040000",
+        "upstand_height_m": "0.200000"
+       }
+      ],
+      "mark": "B20 upstand",
+      "own_delta": "-0.120000",
+      "own_m3": "0.120000"
+     },
+     "name": "GF: UPSTAND",
+     "own_delta": "-0.120000",
+     "pieces": [
+      "BAND0043.1 upstand"
+     ],
+     "row": 9,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.12",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "UNRESOLVED",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "J_members_agreeing": "6 / 6",
+      "J_own_m3": "0.385000",
+      "J_statement_m3": "0.385000",
+      "T_m3": "1.593362",
+      "T_source": "T-545 per-mark THROUGH_SUPPORT (his lengths, private) - cited",
+      "capacity_terms": "T-600 r2 s.2 (zones at HELD / D_ctrl-open columns, OVERLAP, BESIDE, CARRIER_NODE, UNCOVERED, BEYOND) - cited; SHORT stays UNRESOLVED by group",
+      "why_open": "his rows carry no location: which zones his lengths reach is not printed"
+     },
+     "name": "1F: THROUGH_SUPPORT residual beyond the matched joint: not explained by the rule (UNRESOLVED, T-600; alternative column readings named in T-599, never chosen)",
+     "own_delta": "1.208362",
+     "pieces": [
+      "J 1F"
+     ],
+     "row": 13,
+     "statement_class": "UNRESOLVED",
+     "statement_delta": "1.208362",
+     "status": "RE-MEASURED (PARTS)",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "one row of his against one drawn run; his length rounded (< 0.05 m)",
+      "detail": [
+       {
+        "band": "BAND0004",
+        "depth_m": "0.75",
+        "faces": [
+         "5C3",
+         "6C1"
+        ],
+        "own_m3": "0.712173",
+        "plan_m2": "0.949563"
+       }
+      ],
+      "engine_m3": "0.712173",
+      "mark": "B11",
+      "own_delta": "-0.007173",
+      "own_m3": "0.712173"
+     },
+     "name": "1F: UNTRACED -> 1F B11 DRAWING_PRECISION",
+     "own_delta": "-0.007173",
+     "pieces": [
+      "BAND0004"
+     ],
+     "row": 15,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.007173",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "one row of his against one drawn run; his length rounded (< 0.05 m)",
+      "detail": [
+       {
+        "band": "BAND0021",
+        "depth_m": "0.5",
+        "faces": [
+         "6D5",
+         "6D6"
+        ],
+        "own_m3": "0.546523",
+        "plan_m2": "1.093046"
+       }
+      ],
+      "engine_m3": "0.546523",
+      "mark": "B6",
+      "own_delta": "-0.000273",
+      "own_m3": "0.546523"
+     },
+     "name": "1F: UNTRACED -> 1F B6 DRAWING_PRECISION",
+     "own_delta": "-0.000273",
+     "pieces": [
+      "BAND0021"
+     ],
+     "row": 16,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.000273",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.026538",
+     "drift_cause": "EXTENT_VS_ALLOWANCE: the statement row is his - engine less T-545's THROUGH_SUPPORT allowance; the own row is his length beyond the drawn outer-face extent; the difference is the part of the allowance T-545 took beyond the outer faces (engine CB12 line bills a T-229 beyond strip)",
+     "evidence": {
+      "cause": "his CB12 row is longer than the drawn member between the outer faces of its two end supports",
+      "detail": [
+       {
+        "band": "BAND0018.1",
+        "depth_m": "0.75",
+        "faces": [
+         "5DE",
+         "5DF"
+        ],
+        "own_m3": "1.071562",
+        "plan_m2": "1.428750"
+       },
+       {
+        "band": "BAND0018.2",
+        "depth_m": "0.75",
+        "faces": [
+         "5DE",
+         "5DF"
+        ],
+        "own_m3": "0.959063",
+        "plan_m2": "1.278750"
+       }
+      ],
+      "end_supports": [
+       {
+        "end": "start",
+        "extent_m": "0.200000",
+        "support": "column 69D"
+       },
+       {
+        "end": "end",
+        "extent_m": "0.250000",
+        "support": "column 676"
+       }
+      ],
+      "engine_m3": "2.021651",
+      "extent_minus_engine_m3": "0.228349",
+      "mark": "CB12",
+      "outer_face_extent_m": "12.000000",
+      "own_delta": "0.187500",
+      "own_m3": "2.250000"
+     },
+     "name": "1F: UNTRACED -> 1F CB12 BEYOND_EXTENT",
+     "own_delta": "0.187500",
+     "pieces": [
+      "BAND0018.1",
+      "BAND0018.2"
+     ],
+     "row": 17,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.160962",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "0.20 x 0.20 upstand drawn on the B23 section, no row of his",
+      "detail": [
+       {
+        "band": "BAND0031.1",
+        "distinct_x_on_section": 3,
+        "own_m3": "0.120000",
+        "section_area_m2": "0.377500",
+        "section_outline": "16BF",
+        "span_m": "3.000000",
+        "upstand_area_m2": "0.040000",
+        "upstand_height_m": "0.200000"
+       }
+      ],
+      "mark": "B23 upstand",
+      "own_delta": "-0.120000",
+      "own_m3": "0.120000"
+     },
+     "name": "1F: UPSTAND",
+     "own_delta": "-0.120000",
+     "pieces": [
+      "BAND0031.1 upstand"
+     ],
+     "row": 18,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.12",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "-0.000040",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "ring beam B4 0.20 x 0.50 drawn round the west dome opening (two B4 tags); his dome row is a 0.10 shell plate (T-398), no ring row",
+      "detail": [
+       {
+        "arcs_long": [
+         "5FE",
+         "5FF"
+        ],
+        "arcs_short": [
+         "600",
+         "601",
+         "602",
+         "603"
+        ],
+        "bay_box_m": [
+         "4.100000",
+         "4.422183"
+        ],
+        "bay_faces": {
+         "E": "5C7",
+         "N": "6BB",
+         "S": "6DF",
+         "W": "5E8"
+        },
+        "depth_m": "0.5",
+        "own_m3": "0.755240",
+        "r_inner_m": "2.211092",
+        "r_outer_m": "2.411092",
+        "ring_plan_m2": "1.510481"
+       }
+      ],
+      "mark": "B4 ring",
+      "own_delta": "-0.755240",
+      "own_m3": "0.755240"
+     },
+     "name": "1F: DOME_RING",
+     "own_delta": "-0.755240",
+     "pieces": [
+      "RING:1F:WEST"
+     ],
+     "row": 19,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.7552",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    }
+   ],
+   "statement_unknown_delta_m3": "0.781104",
+   "unknown_rows": 12
+  },
+  "T-551/columns@V10": {
+   "by_class_own": {
+    "ENGINE_RIGHT": "1.063750"
+   },
+   "drift_m3": "0.000000",
+   "own_unknown_delta_m3": "1.063750",
+   "rows": [
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "his C1 count on GF exceeds the drawn C1 members",
+      "column_plan_tags": [
+       "1079"
+      ],
+      "drawn_count": 1,
+      "his_neck_rows_equal_drawn_count": true,
+      "mark": "C1",
+      "members": [
+       {
+        "A_m2": "0.100000",
+        "handle": "341",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       }
+      ],
+      "own_delta": "0.375000",
+      "own_m3": "0.375000",
+      "tags_equal_members": true
+     },
+     "name": "columns GF: COUNT C1",
+     "own_delta": "0.375000",
+     "pieces": [
+      "341"
+     ],
+     "row": 0,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.375",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "his C2 count on GF exceeds the drawn C2 members",
+      "column_plan_tags": [
+       "1061",
+       "1063",
+       "1077",
+       "107B"
+      ],
+      "drawn_count": 4,
+      "his_neck_rows_equal_drawn_count": true,
+      "mark": "C2",
+      "members": [
+       {
+        "A_m2": "0.100000",
+        "handle": "32C",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       },
+       {
+        "A_m2": "0.100000",
+        "handle": "32F",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       },
+       {
+        "A_m2": "0.100000",
+        "handle": "33B",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       },
+       {
+        "A_m2": "0.100000",
+        "handle": "33E",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       }
+      ],
+      "own_delta": "0.750000",
+      "own_m3": "1.500000",
+      "tags_equal_members": true
+     },
+     "name": "columns GF: COUNT C2",
+     "own_delta": "0.750000",
+     "pieces": [
+      "32C",
+      "32F",
+      "33B",
+      "33E"
+     ],
+     "row": 1,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.75",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "base_m": "0.25 (T-287 G1, cited)",
+      "cause": "the two CB5-line columns stand on the annex ground beam (base +0.25), 0.70 m below the +0.95 base his uniform height assumes",
+      "mark": "C3 365 / C5 35F",
+      "members": [
+       {
+        "A_m2": "0.125000",
+        "D_ctrl_own_m": "0.5",
+        "framing": [
+         "B1 0.4",
+         "CB5 0.4",
+         "B5 0.5"
+        ],
+        "handle": "365"
+       },
+       {
+        "A_m2": "0.150000",
+        "D_ctrl_own_m": "0.75",
+        "framing": [
+         "B1 0.4",
+         "CB5 0.4",
+         "CB6 0.75"
+        ],
+        "handle": "35F"
+       }
+      ],
+      "own_delta": "-0.192500",
+      "own_m3": "0.192500"
+     },
+     "name": "columns GF: BASE",
+     "own_delta": "-0.192500",
+     "pieces": [
+      "365 base",
+      "35F base"
+     ],
+     "row": 7,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.1925",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "his one 0.75 soffit depth against each member's own controlling depth (the deepest beam framing in): A x (D_ctrl - 0.75) per member",
+      "joint_head_own_m3": "2.281250",
+      "mark": "compared set",
+      "members": [
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.4",
+        "D_ctrl_record_m": "0.4",
+        "agrees": true,
+        "framing": [
+         "B2 0.4",
+         "B3 0.4"
+        ],
+        "handle": "32C",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.5",
+        "D_ctrl_record_m": "0.5",
+        "agrees": true,
+        "framing": [
+         "B2 0.4",
+         "B3 0.4",
+         "CB2 0.5"
+        ],
+        "handle": "32F",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.150000",
+        "A_record_m2": "0.150000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "CB2 0.5",
+         "B11 0.75"
+        ],
+        "handle": "332",
+        "mark": "C5"
+       },
+       {
+        "A_m2": "0.125000",
+        "A_record_m2": "0.125000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B24 0.75"
+        ],
+        "handle": "335",
+        "mark": "C4"
+       },
+       {
+        "A_m2": "0.250000",
+        "A_record_m2": "0.250000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B13 0.75",
+         "B14 0.75"
+        ],
+        "handle": "338",
+        "mark": "C9"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.4",
+        "D_ctrl_record_m": "0.4",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B3 0.4"
+        ],
+        "handle": "33B",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B14 0.75",
+         "B20 0.75",
+         "B7 0.75"
+        ],
+        "handle": "33E",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B2 0.4",
+         "B7 0.75"
+        ],
+        "handle": "341",
+        "mark": "C1"
+       },
+       {
+        "A_m2": "0.275000",
+        "A_record_m2": "0.275000",
+        "D_ctrl_own_m": "0.85",
+        "D_ctrl_record_m": "0.85",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B27 0.85"
+        ],
+        "handle": "35C",
+        "mark": "C11"
+       },
+       {
+        "A_m2": "0.150000",
+        "A_record_m2": "0.150000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "CB5 0.4",
+         "CB6 0.75"
+        ],
+        "handle": "35F",
+        "mark": "C5"
+       },
+       {
+        "A_m2": "0.175000",
+        "A_record_m2": "0.175000",
+        "D_ctrl_own_m": "0.5",
+        "D_ctrl_record_m": "0.5",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "CB4 0.5"
+        ],
+        "handle": "362",
+        "mark": "C6"
+       },
+       {
+        "A_m2": "0.125000",
+        "A_record_m2": "0.125000",
+        "D_ctrl_own_m": "0.5",
+        "D_ctrl_record_m": "0.5",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "CB5 0.4",
+         "B5 0.5"
+        ],
+        "handle": "365",
+        "mark": "C3"
+       },
+       {
+        "A_m2": "0.125000",
+        "A_record_m2": "0.125000",
+        "D_ctrl_own_m": "0.4",
+        "D_ctrl_record_m": "0.4",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B2 0.4"
+        ],
+        "handle": "36B",
+        "mark": "C3"
+       },
+       {
+        "A_m2": "0.225000",
+        "A_record_m2": "0.225000",
+        "D_ctrl_own_m": "0.85",
+        "D_ctrl_record_m": "0.85",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B28 0.75",
+         "B26 0.85"
+        ],
+        "handle": "36E",
+        "mark": "C8"
+       },
+       {
+        "A_m2": "0.175000",
+        "A_record_m2": "0.175000",
+        "D_ctrl_own_m": "0.85",
+        "D_ctrl_record_m": "0.85",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "CB8 0.75",
+         "B26 0.85"
+        ],
+        "handle": "371",
+        "mark": "C10"
+       },
+       {
+        "A_m2": "0.150000",
+        "A_record_m2": "0.150000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "CB3 0.75"
+        ],
+        "handle": "374",
+        "mark": "C5"
+       },
+       {
+        "A_m2": "0.125000",
+        "A_record_m2": "0.125000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "CB2 0.5",
+         "B16 0.75",
+         "B24 0.75"
+        ],
+        "handle": "377",
+        "mark": "C4"
+       },
+       {
+        "A_m2": "0.250000",
+        "A_record_m2": "0.250000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B13 0.75",
+         "B16 0.75",
+         "B17 0.75",
+         "B21 0.75"
+        ],
+        "handle": "37A",
+        "mark": "C9"
+       },
+       {
+        "A_m2": "0.275000",
+        "A_record_m2": "0.275000",
+        "D_ctrl_own_m": "0.85",
+        "D_ctrl_record_m": "0.85",
+        "agrees": true,
+        "framing": [
+         "CB8 0.75",
+         "B27 0.85"
+        ],
+        "handle": "37D",
+        "mark": "C11"
+       },
+       {
+        "A_m2": "0.125000",
+        "A_record_m2": "0.125000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "CB8 0.75"
+        ],
+        "handle": "383",
+        "mark": "C3"
+       }
+      ],
+      "members_agreeing": "20 / 20",
+      "own_delta": "-0.118750",
+      "own_m3": null
+     },
+     "name": "columns GF: GLOBAL_DEPTH",
+     "own_delta": "-0.118750",
+     "pieces": [
+      "32C depth",
+      "32F depth",
+      "332 depth",
+      "335 depth",
+      "338 depth",
+      "33B depth",
+      "33E depth",
+      "341 depth",
+      "35C depth",
+      "35F depth",
+      "362 depth",
+      "365 depth",
+      "36B depth",
+      "36E depth",
+      "371 depth",
+      "374 depth",
+      "377 depth",
+      "37A depth",
+      "37D depth",
+      "383 depth"
+     ],
+     "row": 8,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.11875",
+     "status": "RE-MEASURED",
+     "storey": "GF"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "his C3 count on 1F exceeds the drawn C3 members",
+      "column_plan_tags": "not read (no 1F tag sheet)",
+      "drawn_count": 2,
+      "his_neck_rows_equal_drawn_count": false,
+      "mark": "C3",
+      "members": [
+       {
+        "A_m2": "0.100000",
+        "handle": "68B",
+        "sides_m": [
+         "0.200000",
+         "0.500000"
+        ]
+       },
+       {
+        "A_m2": "0.125000",
+        "handle": "691",
+        "sides_m": [
+         "0.250000",
+         "0.500000"
+        ]
+       }
+      ],
+      "own_delta": "0.345000",
+      "own_m3": "0.690000",
+      "tags_equal_members": null
+     },
+     "name": "columns 1F: COUNT C3",
+     "own_delta": "0.345000",
+     "pieces": [
+      "68B",
+      "691"
+     ],
+     "row": 10,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "0.345",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "drift": "0.000000",
+     "drift_cause": null,
+     "evidence": {
+      "cause": "his one 0.75 soffit depth against each member's own controlling depth (the deepest beam framing in): A x (D_ctrl - 0.75) per member",
+      "joint_head_own_m3": "0.385000",
+      "mark": "compared set",
+      "members": [
+       {
+        "A_m2": "0.140000",
+        "A_record_m2": "0.140000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B4 0.5",
+         "CB13 0.5",
+         "CB11 0.75"
+        ],
+        "handle": "66A",
+        "mark": "P.C 20x70"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.4",
+        "D_ctrl_record_m": "0.4",
+        "agrees": true,
+        "framing": [
+         "B2 0.4",
+         "B3 0.4"
+        ],
+        "handle": "66D",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.5",
+        "D_ctrl_record_m": "0.5",
+        "agrees": true,
+        "framing": [
+         "B2 0.4",
+         "B3 0.4",
+         "CB9 0.5"
+        ],
+        "handle": "670",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.4",
+        "D_ctrl_record_m": "0.4",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B2 0.4"
+        ],
+        "handle": "67C",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B23 0.75",
+         "B7 0.75"
+        ],
+        "handle": "67F",
+        "mark": "C2"
+       },
+       {
+        "A_m2": "0.100000",
+        "A_record_m2": "0.100000",
+        "D_ctrl_own_m": "0.75",
+        "D_ctrl_record_m": "0.75",
+        "agrees": true,
+        "framing": [
+         "B1 0.4",
+         "B2 0.4",
+         "B7 0.75"
+        ],
+        "handle": "682",
+        "mark": "C1"
+       }
+      ],
+      "members_agreeing": "6 / 6",
+      "own_delta": "-0.095000",
+      "own_m3": null
+     },
+     "name": "columns 1F: GLOBAL_DEPTH",
+     "own_delta": "-0.095000",
+     "pieces": [
+      "66A depth",
+      "66D depth",
+      "670 depth",
+      "67C depth",
+      "67F depth",
+      "682 depth"
+     ],
+     "row": 16,
+     "statement_class": "ENGINE_RIGHT",
+     "statement_delta": "-0.095",
+     "status": "RE-MEASURED",
+     "storey": "1F"
+    }
+   ],
+   "statement_unknown_delta_m3": "1.063750",
+   "unknown_rows": 6
+  }
+ },
+ "note": "m3 / m2 / m only; handles are raw DXF handles; no coordinate, no row or length of his",
+ "rule": "R-T623-1..3",
+ "schema": "T623_UNKNOWN_ROWS_V1",
+ "sign": "reference - engine (statement sign); own_delta = his rows - own drawn measure",
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179..) + concrete workbook",
+ "statement": "T-609 V10 sections_v10 [2] T-545/beams@V10, [3] T-551/columns@V10 (scorecard T-613 rows UNKNOWN)"
+}
