@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T09:00Z | Worker 3 | STARTED | run session_01E6cPnak6qQMDWTEgWTndJf | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T08:55Z | Verifier | SUCCESS | none READY; T-180 P02 GF B24 ext + B22 | No Gate A/B, no merge, no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). F-C-P02-10 resolved: B24 east of C26 = BM-GF-059 HELD 0.375..0.5625 m3 (D-04, unlabelled); own plan 1.500 x 0.50 = 0.750 m2 to CB1 outer face AGREE (CB1 span stops at B24 face: corner billed once); T-545 'drawn 1.501' is 1.500. GF B22 own 7.80 x 0.50 x 0.75 = 2.925000 vs 2.925 m3 AGREE (his = engine). P02 GF 12 / 21; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-11-08T08:53Z | Worker 2 | SUCCESS | T-622 READY (84ff134f) | B4 wall tile: 47/47 UNKNOWN rows rebuilt from P7757 by handle, 42 DRAWING-CONFIRMED, 5 DIFFER: GF-14 line +0.086709 m2 high (open side threshold 2DB 1.255652 vs 1.245), pantry line -0.0328 m2 short (faces 10.500, F-T351-1 closed); -44.86380 m2 re-split exactly; HELD 6 (138.39 m2) untouched; lesson: open sides on their own drawn line, never a walk residual | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T08:50Z | Verifier | STARTED | run session_01E6cPnbzjgHdAt75rn1ABga | repo-attached routine | task state: none READY (T-622 CLAIMED W2; T-620/T-623..T-630 TODO) | self-check pending
