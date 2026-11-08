@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T10:52Z | Verifier | STARTED | run session_01E6cPneNTShPBUbj1hLnYC1 | repo-attached routine | task state: none READY (T-625 CLAIMED W2; T-624/T-626..T-630 TODO) | self-check pending
 - 2026-11-08T10:42Z | Worker 2 | STARTED | run session_01E6cPndS3iYLTmT18WmM2Zw | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T10:00Z | Verifier | SUCCESS | T-623 MERGED, T-620 MERGED, T-622 MERGED (engine push 31fe39db; CODEMAP-only conflicts rebuilt) | GATE A PASS x3, research only: no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757 re-measure AGREE: 1F CB12 extent 12.000 m (his 13.00) -> BEYOND 0.1875 / inside 0.228349 m3 (F-T623-1), ring 0.755240, B20 upstand 0.120, GF C2 +0.750 / C1 +0.375 / BASE -0.1925 m3; own P7757 wall tile 2F-02 30.255, 1F-07 52.529, GF-07 32.375 m2 (engine 32.3422 short 0.0328, ENGINE_WRONG); T-620 B10 + lintel APART re-added AGREE. No Gate B, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: three board stamps first written ahead of the clock, corrected per date -u
 - 2026-11-08T09:50Z | Verifier | STARTED | run session_01E6cPnbMvNQwoq3HkjZ9fgV | repo-attached routine | task state: READY T-622 (W2 84ff134f), T-620 (W3 d952709b), T-623 (W1 4abb0f09) | self-check pending
