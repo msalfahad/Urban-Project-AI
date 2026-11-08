@@ -270,6 +270,27 @@ def test_write_master():
     assert doc["version"] == "1.56.0"
 
 
+@pytest.mark.skipif(os.environ.get("URBAN_T637_MANIFEST_WRITE") != "1", reason="writer: URBAN_T637_MANIFEST_WRITE=1 only")
+def test_write_rules_manifest():
+    """r2 (Verifier 18:32): register 1.56.0 in rules/RULES_MANIFEST.json by the manifest tool (T-507 precedent), no hand digest."""
+    from tools import m9_rules_manifest as M
+    assert M.check() == []                       # copies / exports / referenced profiles unchanged before the rebuild
+    M.build()
+    assert M.check() == []
+
+
+def test_the_new_master_is_registered_in_the_rule_store():
+    """1.56.0 lives under rules/ (read by V1 .. V2.2 through the manifest): it must carry its AUTHORED entry and digest."""
+    import hashlib
+    from tools import m9_rules_manifest as M
+    rel = "coverage/BOQ_FAMILY_MASTER_1.56.0.json"
+    assert rel in M.AUTHORED
+    m = json.loads((ROOT / "rules/RULES_MANIFEST.json").read_text(encoding="utf-8"))
+    assert m["files"][rel] == {"kind": "AUTHORED",
+                               "sha256": hashlib.sha256((ROOT / "rules" / rel).read_bytes()).hexdigest()}
+    assert M.check() == []
+
+
 @pytest.mark.skipif(os.environ.get("URBAN_T637_READER_WRITE") != "1", reason="writer: URBAN_T637_READER_WRITE=1 only")
 def test_write_reader():
     import reader_1_56_0 as R
