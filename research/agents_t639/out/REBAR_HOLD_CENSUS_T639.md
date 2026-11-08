@@ -1,0 +1,100 @@
+# T-639 rebar hold census (R-T639-1; ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999), overlay V15 (as T-630))
+
+Lines classed: 807 (801 HELD blank + 6 open-high). By class: {'A': 188, 'B': 603, 'C': 10, 'D': 6}.
+
+## By class and cause kind
+
+| class | kind | lines |
+|---|---|---|
+| A | A_CONCRETE_HELD | 188 |
+| B | B_BOXED_NOTATION | 20 |
+| B | B_CANDIDATE_SECTION | 34 |
+| B | B_DATUM_HELD | 5 |
+| B | B_DETAIL_NOT_DIMENSIONED | 251 |
+| B | B_FOOTING_COVER | 38 |
+| B | B_HELD_UNQUANTIFIED | 6 |
+| B | B_JOINT_LINKS_INFO | 30 |
+| B | B_LINK_RULE_GAP | 33 |
+| B | B_NOT_DRAWN | 9 |
+| B | B_NO_BARS_PRINTED | 49 |
+| B | B_OPEN_HIGH_DETAIL | 5 |
+| B | B_POOL_DESIGNER | 19 |
+| B | B_Q71_NOTATION | 102 |
+| B | B_REGISTER_CONFLICT | 2 |
+| C | C_NOTE9_OUTSIDE_GROUP | 10 |
+| D | D_COLUMN_MAIN_D_SETTLED | 6 |
+
+## By class and element family
+
+| class | family | lines |
+|---|---|---|
+| A | DG5:DOME-3 | 1 |
+| A | FRP:FTG | 1 |
+| A | HL:BEAM_STEEL | 35 |
+| A | HL:COLUMN_STEEL | 92 |
+| A | HL:DOME_RING | 1 |
+| A | LIFT_PIT:WALLS | 1 |
+| A | LIFT_TIE_BEAM:GF | 1 |
+| A | P-S:NECK | 56 |
+| B | FRP:FTG | 64 |
+| B | HL:BEAM_STEEL | 85 |
+| B | HL:COLUMN_STEEL | 84 |
+| B | HL:DOME_RING | 1 |
+| B | HL:DOME_SHELL | 2 |
+| B | HL:GROUND_SYSTEM_STEEL | 128 |
+| B | HL:SLAB_STEEL | 199 |
+| B | HL:STAIR_POOL_TANK_STEEL | 38 |
+| B | LINTEL_BARS:FLAGGED | 1 |
+| B | LINTEL_BARS:PRODUCED | 1 |
+| C | HL:BEAM_STEEL | 7 |
+| C | HL:GROUND_SYSTEM_STEEL | 3 |
+| D | HL:COLUMN_STEEL | 6 |
+
+## Class D fix rows (kg; display t)
+
+Total D 412.444444 kg = 0.412444 t. Released before 9375.305760 kg; with D wired 9787.750204 kg = 9.787750 t.
+
+| fix row | column | storey | n | d | L m | kg | t | released sibling (method check) |
+|---|---|---|---|---|---|---|---|---|
+| FR-T639-1 | COL-GF-01 | GF | 8 | 16 | 4.50 | 56.888889 | 0.056889 | COL-GF-08 56.889 kg = 56.888889 |
+| FR-T639-2 | COL-GF-02 | GF | 10 | 16 | 4.50 | 71.111111 | 0.071111 | COL-GF-08 56.889 kg = 56.888889 |
+| FR-T639-3 | COL-GF-03 | GF | 8 | 16 | 4.50 | 56.888889 | 0.056889 | COL-GF-08 56.889 kg = 56.888889 |
+| FR-T639-4 | COL-GF-05 | GF | 8 | 16 | 4.50 | 56.888889 | 0.056889 | COL-GF-08 56.889 kg = 56.888889 |
+| FR-T639-5 | COL-GF-09 | GF | 14 | 16 | 4.50 | 99.555556 | 0.099556 | COL-GF-08 56.889 kg = 56.888889 |
+| FR-T639-6 | COL-GF-22 | GF | 10 | 16 | 4.50 | 71.111111 | 0.071111 | COL-GF-08 56.889 kg = 56.888889 |
+
+## The 6 open-high lines
+
+| line | low kg | class | what keeps the high end open |
+|---|---|---|---|
+| NEW:STR.REBAR:HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY:REBAR | 144.29 | A | OPEN_HIGH: low 144.29 kg measured; high open by name: RING_LINKS[DETAIL], RING_LINK_HOOKS[DETAIL], RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL], RING_SIDE[DETAIL] |
+| NEW:STR.REBAR:HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY:REBAR | 63.897 | B | OPEN_HIGH: low 63.897 kg measured; high open by name: RING_LINKS[DETAIL], RING_LINK_HOOKS[B4], RING_LINK_HOOKS[DETAIL], RING_MAIN_LAPS_AND_ANCHORAGE[B4], RING_MAIN_LAPS_AND_ANCHORAGE[DETAIL], RING_SID |
+| NEW:STR.REBAR:HL:DOME_SHELL:DOME-A:SHELL:REBAR | 290.684 | B | OPEN_HIGH: low 290.684 kg measured; high open by name: SHELL_ANCHORAGE_INTO_RING, SHELL_HOOP_LAPS |
+| NEW:STR.REBAR:HL:DOME_SHELL:DOME-B:SHELL:REBAR | 290.684 | B | OPEN_HIGH: low 290.684 kg measured; high open by name: SHELL_ANCHORAGE_INTO_RING, SHELL_HOOP_LAPS |
+| NEW:STR.REBAR:LINTEL_BARS:FLAGGED | 24.301496 | B | OPEN_HIGH: low 24.301496 kg measured; high open by name: B1 BEND_END, B1 BEND_START, B1 EXTENSION_END, B1 EXTENSION_START, B1 LAPS, S1 LINKS, T1 BEND_END, T1 BEND_START, T1 EXTENSION_END, T1 EXTENSION |
+| NEW:STR.REBAR:LINTEL_BARS:PRODUCED | 38.761728 | B | OPEN_HIGH: low 38.761728 kg measured; high open by name: B1 BEND_END, B1 BEND_START, B1 EXTENSION_END, B1 EXTENSION_START, B1 LAPS, S1 LINKS, T1 BEND_END, T1 BEND_START, T1 EXTENSION_END, T1 EXTENSION |
+
+## D refused (column D_ctrl-settled main bars not freed)
+
+- none
+
+## Finding F-T639-1: 14 RELEASED bar lines on a HELD concrete line (754.723 kg)
+
+- HL:COLUMN_STEEL:COL-1F-41:MAIN_BARS_NET 79.644 kg on L-755eb56b55e86301b488 (HELD)
+- HL:COLUMN_STEEL:COL-2F-51:MAIN_BARS_NET 39.822 kg on L-919a5749ef79759e01ca (HELD)
+- HL:COLUMN_STEEL:COL-1F-33:MAIN_BARS_NET 53.096 kg on L-e112e2add2f8979a6c39 (HELD)
+- HL:COLUMN_STEEL:COL-1F-31:MAIN_BARS_NET 53.096 kg on L-8f8ad257d9b2cb9e027f (HELD)
+- HL:COLUMN_STEEL:COL-2F-54:MAIN_BARS_NET 39.822 kg on L-26f6b6f2365c72e42291 (HELD)
+- HL:COLUMN_STEEL:COL-2F-50:MAIN_BARS_NET 39.822 kg on L-0ede77cfd0badc4c7d62 (HELD)
+- HL:COLUMN_STEEL:COL-1F-39:MAIN_BARS_NET 79.644 kg on L-4aed92c117a7ab1c90ee (HELD)
+- HL:COLUMN_STEEL:COL-GF-14:MAIN_BARS_NET 56.889 kg on L-8de64040a1c3ae6cf137 (HELD)
+- HL:COLUMN_STEEL:COL-1F-44:MAIN_BARS_NET 53.096 kg on L-a87ea657a42a311cb851 (HELD)
+- HL:COLUMN_STEEL:COL-2F-53:MAIN_BARS_NET 39.822 kg on L-d79d17d14f39d5148cb8 (HELD)
+- HL:COLUMN_STEEL:COL-1F-47:MAIN_BARS_NET 53.096 kg on L-831f6fe3de133294bb8f (HELD)
+- HL:COLUMN_STEEL:COL-1F-32:MAIN_BARS_NET 53.096 kg on L-c677b628a776d3b87b02 (HELD)
+- HL:COLUMN_STEEL:COL-GF-24:MAIN_BARS_NET 56.889 kg on L-43dae3d6dfec957b26a8 (HELD)
+- HL:COLUMN_STEEL:COL-GF-30:MAIN_BARS_NET 56.889 kg on L-9cb26d86575a92694880 (HELD)
+
+Lines with no recorded concrete binding (classed by own hold text): 208.
+
+NOTHING RELEASED; no candidate, engine, rule / knowledge version or registry file changed; fix rows are proposals for the wiring manifest (lane I)
