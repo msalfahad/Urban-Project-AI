@@ -1,3 +1,20 @@
+## Lead 2026-11-04 04:14 (since 00:20)
+
+- T-496 materials binding map: WORKED (1,202 bindings, 0 mismatch). Decision: producer-role condition added to T-498.
+- T-503 disposal dry-mass balance: WORKED (s = 0 end >= 234.333 m3 in situ). Decision: NEW T-505 loss terms (F-C-T503-1).
+- T-497 ext GB trench fix (Gate B): WORKED (1.069 .. 1.176 m3 = Checker; V3.0.50). Decision: lessons row ADOPTED; T-487 TODO.
+- T-499 HELD subtotals never 0: WORKED (R-T499-1). Decision: NEW T-504 plaster table V3 (F-T499-1); lessons row ADOPTED.
+- T-310 wet-area WP wiring: PARTIAL (REJECTED 02:23 for 4 new suite failures; r2 fixed the guard, rebase not finished). Decision: TODO r3 rebase only on 416392e8, worker 2 first.
+
+## Lead 2026-11-04 00:20 (since 20:18)
+
+- T-486 B8-07 balcony / terrace WP census: WORKED (0 m2 added, pool-court slab omission found). Decision: T-494 TODO.
+- T-493 B7 landings census: WORKED (4 / 4 AGREE). Decision: NEW T-502 integration (worker 2, after T-310).
+- T-495 outdoor floor material rows: WORKED (bounds, finish HELD OD-1). Decision: none (wiring with T-498 family later).
+- T-350 r4 earthworks wiring (Gate B): PARTIAL (V3.0.48 merged; trench HELD-DEFECTIVE F-C-T350R4-1). Decision: NEW T-497 first in stream S + lessons row + register ruling.
+- T-483 skirting remainder: PARTIAL (engineering agrees; version collision with V3.0.48, t485 red). Decision: TODO r2 rebase as V3.0.49 + T-443 promotion.
+- T-496 materials binding map: READY (not classified until the verdict). Findings -> NEW T-498, T-499, T-500.
+
 ## 2026-10-29 20:30 (lead run; covers 16:30 - 20:30)
 
 ## Lead 2026-11-02 12:30 (since 08:35)

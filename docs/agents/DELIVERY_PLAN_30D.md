@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-08 04:15; recovery plan in force)
+
+- Merged since 00:15 (all Gate A, research, no candidate line moved): T-616, T-600 r2 WORKED; T-613 merged on r2; T-614 rejected once (rework r2 first in S); T-617 READY.
+- Closed for 12-13 Nov: scorecard tables on V10, column residual causes, lintel count by opening. Remaining: manifest V14 (T-619), statement + scorecard V11 (T-620), beam-end census r2 (T-614), lift landing head (T-617, with the Checker), small finishes residuals (T-618), Q-80 quantities out of HELD (T-615); new evidence rows so lines can close: floor tile (T-621), wall tile (T-622), beams / columns (T-623).
+- Integration streams S (T-498 + T-525) and F (T-423 r2, T-513, T-563) BLOCKED on the wrapper only: PR #4 still open (mergeable), awaiting the owner.
+- 10 Nov: LOW (wrapper, 2 days left). 12-13 Nov: HIGH for reconciliation tables (V10 tables merged; V11 queued); scorecard on wired quantities depends on PR #4.
+
 ## Status (Lead, 2026-11-08 00:15; recovery plan in force)
 
 - Merged since 20:17 (all Gate A, research, no candidate line moved): T-605, T-607, T-611, T-610, T-612, T-608 WORKED; T-609 merged on r2; T-600 FAILED once (rework r2 first in S).

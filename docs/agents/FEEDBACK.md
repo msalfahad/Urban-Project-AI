@@ -3,6 +3,14 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-08 04:15 (since 00:15)
+
+- T-616 lintel count by opening (Gate A): WORKED (his 54 vs 60 split by opening; W17 curved band takes no straight lintel; UNRESOLVED 2..4). Decision: fold into statement V11 (T-620).
+- T-600 r2 column / beam residual causes (Gate A): WORKED (carrier capacity once per node, Checker re-added 3 nodes; 2.248826 m3 stays UNRESOLVED by mark). Decision: T-620 folds it; per-row re-measure T-623.
+- T-613 scorecard tables: PARTIAL r1 (B11 line VERIFIED over 798 HELD-blank lines) -> WORKED r2 (status caps). Decision: scorecard V11 in T-620; UNKNOWN rows of the largest lines to evidence: T-621 / T-622 / T-623.
+- T-614 beam-end census: PARTIAL r1 REJECTED (CB8 col 2 east +0.002309 m3 called billed by a ledger model inside a tolerance larger than the piece). Decision: r2 FIRST in S with the Checker's 4-item list (incl. FR-T610-3).
+- T-617 lift landing head: READY (bounded above by ring beam soffits, low end HELD). Decision: first in the next Checker run.
+
 ## Lead 2026-11-08 00:15 (since 20:17)
 
 - T-605 footing overlap (Gate A): WORKED (concrete 5.307 AGREE, his +0.042 ENGINE_RIGHT; side forms HELD). Decision: none, no fix row.
@@ -173,21 +181,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-483 r3 skirting remainder (Gate B): WORKED (V3.0.51, +9.010 lm, 4,871 identical, t485 green). Decision: lessons row ADOPTED; F-C-T483-1 -> register entry + T-460; T-480 TODO.
 - T-310 r3 wet-area WP: PARTIAL (READY on V3.0.50, overtaken by the T-483 merge). Decision: r4 rebase on ea7d375f only, worker 2 first.
 - T-494 pool-court slab WP and T-505 disposal loss terms: READY, Checker pending (queue 1 and 2).
-
-## Lead 2026-11-04 04:14 (since 00:20)
-
-- T-496 materials binding map: WORKED (1,202 bindings, 0 mismatch). Decision: producer-role condition added to T-498.
-- T-503 disposal dry-mass balance: WORKED (s = 0 end >= 234.333 m3 in situ). Decision: NEW T-505 loss terms (F-C-T503-1).
-- T-497 ext GB trench fix (Gate B): WORKED (1.069 .. 1.176 m3 = Checker; V3.0.50). Decision: lessons row ADOPTED; T-487 TODO.
-- T-499 HELD subtotals never 0: WORKED (R-T499-1). Decision: NEW T-504 plaster table V3 (F-T499-1); lessons row ADOPTED.
-- T-310 wet-area WP wiring: PARTIAL (REJECTED 02:23 for 4 new suite failures; r2 fixed the guard, rebase not finished). Decision: TODO r3 rebase only on 416392e8, worker 2 first.
-
-## Lead 2026-11-04 00:20 (since 20:18)
-
-- T-486 B8-07 balcony / terrace WP census: WORKED (0 m2 added, pool-court slab omission found). Decision: T-494 TODO.
-- T-493 B7 landings census: WORKED (4 / 4 AGREE). Decision: NEW T-502 integration (worker 2, after T-310).
-- T-495 outdoor floor material rows: WORKED (bounds, finish HELD OD-1). Decision: none (wiring with T-498 family later).
-- T-350 r4 earthworks wiring (Gate B): PARTIAL (V3.0.48 merged; trench HELD-DEFECTIVE F-C-T350R4-1). Decision: NEW T-497 first in stream S + lessons row + register ruling.
-- T-483 skirting remainder: PARTIAL (engineering agrees; version collision with V3.0.48, t485 red). Decision: TODO r2 rebase as V3.0.49 + T-443 promotion.
-- T-496 materials binding map: READY (not classified until the verdict). Findings -> NEW T-498, T-499, T-500.
-

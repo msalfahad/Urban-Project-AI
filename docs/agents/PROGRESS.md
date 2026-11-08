@@ -2210,6 +2210,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
+(Lead 2026-11-08 04:15)
+- Candidate (not released) and released BOQ unchanged. Merged since midnight, all research, none wired: the lintel
+  count gap (his 54 against our 60) explained opening by opening; the column / beam leftover split with each beam
+  crossing booked once (2.25 m3 still unexplained by beam, kept open, never 0); the 12-13 Nov scorecard tables (one
+  line fully verified so far; lines with held parts are never shown as verified).
+- With the checker: lift landing door head height (bounded by the ring beams above, lower end not printed, held).
+  Sent back once: the beam-end census (one 0.002 m3 piece wrongly treated as already billed).
+- Next: floor tile (409.6 vs our 387.1 m2) and wall tile (433.8 vs 340.3 m2) re-measured room by room so the
+  checker can verify them; every never-measured beam and column row re-measured; the 15 cm block walls from your
+  answer; the updated statement and scorecard. Wiring still waits on the command-wrapper change (PR #4).
 (Lead 2026-11-06 16:17)
 - Candidate (not released) and released BOQ unchanged. Six checked comparisons with the freelancer merged this
   afternoon, all research, none wired yet: wall paint (his 1,249.4 vs our valued 217.2 m2, every m2 of the gap named:
