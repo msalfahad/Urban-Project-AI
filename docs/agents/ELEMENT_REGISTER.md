@@ -92,6 +92,16 @@ quantity.
   curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
   FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
   band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- BLOCKWORK MATERIALS AND REGISTER CODES (Lead 2026-11-08 16:15; T-630 F-T630-1 / -3, for T-637): OWNER TRADE B9. The
+  laid block panel is ONE element with ONE work line per unit: MAS.BLOCK m2 (Q-75). Block units (MAS.UNITS.*, pcs) are
+  MATERIAL rows of that element in B9-01, never re-added into the m2 work; joint mortar and AAC glue (MAS.MORTAR.*,
+  MAS.GLUE.*) are owned by B9-04. ARCH.WALL_PANEL / WALL_RUN / WALL_VOLUME are geometry carriers of the same walls: each
+  is ruled NOT_A_BOQ_LINE or work in master 1.56.0 with its evidence, so no family re-add counts a wall twice.
+- LIFT LANDING DOOR (Lead 2026-11-08 16:15; T-619 EXCLUDED from ARCH.PASSAGE, T-630 F-T630-1): OWNER TRADE B6 openings,
+  its own family in master 1.56.0; the 3 lines stay HELD blank with the cause LIFT LANDING HEAD (head height printed
+  nowhere) until the lift supplier schedule; the wall opening deduction stays with the wall lines.
+- SLAB EDGE STRIP (Lead 2026-11-08 16:15; T-632 census): the 0.865 m2 per storey slab-edge outline strip beside GF B20 /
+  1F B23 (unhatched, absent from section A-A) is slab concrete, OWNER TRADE B10 slab line, billed by no line today: T-638 (D).
 - BEAM UPSTAND EXTENT (Lead 2026-11-08 12:13; Checker F-C-P02-12 vs T-623 Gate A): a concrete upstand / downstand on a
   beam band is its own strip (section profile minus the band, e.g. GF B20 0.20 x 0.20) times the drawn strip length
   between named end lines; the band stays with its beam line, the strip is counted once (UP-CONC-JOINT-001). OWNER TRADE
