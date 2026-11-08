@@ -25,9 +25,18 @@ R-T613-1 (proposed, every villa: the table method). A scorecard read from a reco
       verdict names the row's own re-measure (READINGS below, quoted with its board time); WORKER_PROPOSED, no stamp or
       evidence by reference -> UNKNOWN with that sub-status. DRAWING-CONFIRMED is counted only where a row's own
       evidence says so; none is invented. A VERIFIED row without a cited Checker verdict is refused;
+      r2 (Checker 2026-11-08T01:57Z, F-C-T613-1): on the CHECKER_VERIFIED path only a re-measure field
+      (evidence_verdict / verification_basis / source_verdict) can cite the Checker; a class_basis text is a class /
+      provenance confirmation and never supports VERIFIED. A row whose evidence verdict is a bare stamp (not a Checker
+      text, e.g. 'CHECKER_CONFIRMED') is UNKNOWN (class confirmed, quantity not re-measured) when a Checker class text
+      stands behind it, and refused when nothing cites a Checker at all; a row carrying HELD content inside it
+      (engine_held_blank_lines > 0, an engine_held_range, an engine_omission_of_a_line) is never VERIFIED: at most
+      PARTIALLY VERIFIED;
   (e) A LINE (section) IS VERIFIED only when every residual row is VERIFIED and none is HELD; otherwise PARTIALLY
       VERIFIED n / m (n VERIFIED rows of m) when any row is VERIFIED or PARTIALLY VERIFIED, HELD m / m when every
-      row is HELD, else UNKNOWN 0 / m;
+      row is HELD, else UNKNOWN 0 / m. r2: a section-level Checker verdict that reads PARTIALLY VERIFIED caps the line
+      at PARTIALLY VERIFIED n / m even when every row is VERIFIED, unless a pinned later Checker verdict (SECTION_READINGS,
+      quoted with its board time) accepts that line VERIFIED; the cap only lowers, it never raises a line;
   (f) HELD IS NEVER 0 AND NEVER CORRECT: a HELD row is counted HELD with its delta and, where the statement carries
       it, its bound (low .. high, OPEN when the high is open); a HELD row with delta 0 and no bound is refused (a
       HELD counted as 0); HELD and UNKNOWN never enter an agreement figure, and no agreement figure is computed;
@@ -65,6 +74,7 @@ LEVELS = ("sections", "sections_v5", "sections_v6", "sections_v7", "sections_v8"
 SUPERSEDES = ("supersedes_v7", "supersedes_v8", "supersedes_v9", "supersedes_v10")
 SCORED_KINDS = (None, "DIFFERENCE")
 CITE_FIELDS = ("evidence_verdict", "verification_basis", "source_verdict", "class_basis")
+REMEASURE_FIELDS = ("evidence_verdict", "verification_basis", "source_verdict")   # r2: class_basis never supports VERIFIED
 
 
 class ScorecardError(Exception):
@@ -101,15 +111,25 @@ READINGS = {
         "-57.499323 AGREE (arithmetic); cove strips RULE_DIFFERENCE; (f) no ceiling line VERIFIED"),
 }
 
+# r2: a section whose own Checker verdict reads PARTIALLY VERIFIED keeps a VERIFIED line only where a later Checker
+# verdict, quoted from BOARD.md with its time, accepts that line VERIFIED (R-T613-1 (e)).
+SECTION_READINGS = {
+    "T-568/alu-doors-nr": (
+        "Checker 2026-11-08T01:57Z (T-613 r1 Gate A verdict): 'T-568 alu-doors-nr VERIFIED accepted (pinned reading: "
+        "door counts 3 / 3 storeys by own census of 27 inserts)'; the section's own T-568 Gate A text: 'door counts 3 / 3 "
+        "storeys CONFIRMED from the drawn leaves (own census of 27 door inserts ...)': the PARTIALLY VERIFIED part is "
+        "window counts, door widths and m2 terms, none of which is in this nr line"),
+}
+
 # Merged or open work that is not in statement V10 (R-T613-1 (h)); the statement's own pending list is appended.
 PENDING_NOT_IN_V10 = (
-    {"task": "T-600", "state": "open (TODO r2 at the claim 2026-11-08T01:02Z)",
+    {"task": "T-600", "state": "MERGED r2 61fef828 (after V10; open at the r1 claim)",
      "effect": "column / beam per-storey residuals GF 0.620464 (+ B7 0.120452) / 1F 1.208362 / 2F 0.42 m3 stay "
                "UNRESOLVED in T-545/beams@V10; not folded in"},
     {"task": "T-608", "state": "MERGED 3c3aa2f8 (after V10)",
      "effect": "FR-T608-1 ARCH.PASSAGE 9 -> 6 pcs (3 lift lines RELEASED -> EXCLUDED), FR-T608-2 lift landing door "
                "supply ADD HELD-blank x 3: no V10 section carries these lines; fix rows not wired; not folded in"},
-    {"task": "T-616", "state": "merged on the engine branch 17559e1b (board row READY at the claim)",
+    {"task": "T-616", "state": "MERGED 17559e1b (after V10)",
      "effect": "lintel-implied count his 54 vs 60 by opening (T-571/lintel-count-implied@V8, an APART section, "
                "UNRESOLVED -6 nr): split ENGINE_RIGHT 3..5 + W17 / UNRESOLVED 2..4 not in V10; not folded in"},
 )
@@ -179,6 +199,33 @@ def _reading(sid: str, row: dict):
     return None
 
 
+def _remeasure_cite(row: dict) -> str | None:
+    for f in REMEASURE_FIELDS:
+        if row.get(f) and str(row[f]).startswith("Checker"):
+            return row[f]
+    return None
+
+
+def held_content(row: dict) -> list[str]:
+    """HELD engine quantity carried inside a non-HELD row (r2): never VERIFIED."""
+    out = []
+    if (row.get("engine_held_blank_lines") or 0) > 0:
+        out.append(f"{row['engine_held_blank_lines']} engine HELD-blank lines")
+    if row.get("engine_held_range_t") or row.get("engine_held_range"):
+        rg = row.get("engine_held_range_t") or row.get("engine_held_range")
+        out.append(f"engine HELD range {rg[0]} .. {rg[1]}")
+    if row.get("engine_omission_of_a_line"):
+        out.append(f"{len(row['engine_omission_of_a_line'])} ENGINE_OMISSION of a line")
+    return out
+
+
+def _cap_held_content(status: str, sub: str, row: dict) -> tuple[str, str]:
+    hc = held_content(row)
+    if status == "VERIFIED" and hc:
+        return "PARTIALLY VERIFIED", f"{sub}; capped: HELD content inside the row ({'; '.join(hc)})"
+    return status, sub
+
+
 def row_status(sid: str, row: dict) -> tuple[str, str, str | None]:
     """(status, sub-status, Checker citation or None)."""
     ev = row.get("evidence_status")
@@ -187,12 +234,21 @@ def row_status(sid: str, row: dict) -> tuple[str, str, str | None]:
     if row["class"] == "HELD":
         return "HELD", f"evidence {ev or ver[:40] or 'none'}", _cite(row)
     if rd is not None:
-        return rd[0], "pinned Checker Gate A reading (V5 stamp qualified)", rd[1]
+        s, sub = _cap_held_content(rd[0], "pinned Checker Gate A reading (V5 stamp qualified)", row)
+        return s, sub, rd[1]
     if ev == "CHECKER_VERIFIED":
-        c = _cite(row)
-        if not c or "Checker" not in c:
-            raise ScorecardError(f"{sid}: '{row['name'][:60]}' VERIFIED without a cited Checker verdict")
-        return "VERIFIED", "CHECKER_VERIFIED", c
+        c = _remeasure_cite(row)
+        if c is None:
+            cls = _cite(row)
+            if not cls or "Checker" not in cls:
+                raise ScorecardError(f"{sid}: '{row['name'][:60]}' VERIFIED without a cited Checker verdict")
+            stamp = row.get("evidence_verdict") or ver or "none"
+            hc = held_content(row)
+            return "UNKNOWN", (f"class confirmed, quantity not re-measured (evidence verdict a bare {stamp!r} stamp; "
+                               "the Checker text cited is a class / provenance confirmation)"
+                               + (f"; HELD content inside the row ({'; '.join(hc)})" if hc else "")), cls
+        s, sub = _cap_held_content("VERIFIED", "CHECKER_VERIFIED", row)
+        return s, sub, c
     if ev == "PARTIALLY_VERIFIED":
         return "PARTIALLY VERIFIED", "PARTIALLY_VERIFIED", _cite(row)
     if ev == "DRAWING_CONFIRMED":
@@ -229,6 +285,16 @@ def held_bound(sid: str, row: dict) -> tuple[Decimal, Decimal | None]:
     return D(0), D(0)
 
 
+def held_inside_out(h: dict) -> dict:
+    """Engine HELD carried inside non-HELD rows (r2): beside the classes, never 0, high OPEN when a row has no range."""
+    hi = "OPEN" if h["unranged_rows"] else str(h["range_hi"])
+    return {"rows": h["rows"], "blank_lines": h["blank_lines"], "omissions": h["omissions"],
+            "unranged_rows": h["unranged_rows"], "engine_held_range": [str(h["range_lo"]), hi],
+            "ranged_high": str(h["range_hi"]),
+            "note": ("engine quantity HELD inside these rows: beside the classes, never added, never 0; the rows "
+                     "cannot be VERIFIED") if h["rows"] else "none"}
+
+
 # ================================================================================ (e) (g) (h) one section =========
 def section_card(sid: str, sec: dict) -> dict:
     unit, rows = sec["unit"], sec.get("rows", [])
@@ -241,6 +307,7 @@ def section_card(sid: str, sec: dict) -> dict:
     st_gross = {s: D(0) for s in STATUSES}
     subs: dict = {}
     held_lo, held_hi_open, held_hi = D(0), False, D(0)
+    hin = {"rows": 0, "blank_lines": 0, "omissions": 0, "range_lo": D(0), "range_hi": D(0), "unranged_rows": 0}
     out_rows = []
     for r in rows:
         if r.get("unit") not in (None, unit):
@@ -264,6 +331,16 @@ def section_card(sid: str, sec: dict) -> dict:
                 held_hi += hi
             if D(r["delta"]) == 0:
                 b = [str(lo), str(hi) if hi is not None else "OPEN"]
+        if held_content(r):   # r2: engine HELD inside a non-HELD row, reported beside, never added to a class
+            hin["rows"] += 1
+            hin["blank_lines"] += int(r.get("engine_held_blank_lines") or 0)
+            hin["omissions"] += len(r.get("engine_omission_of_a_line") or [])
+            rg = r.get("engine_held_range_t") or r.get("engine_held_range")
+            if rg:
+                hin["range_lo"] += D(rg[0])
+                hin["range_hi"] += D(rg[1])
+            else:
+                hin["unranged_rows"] += 1
         out_rows.append({"name": r["name"][:160], "class": r["class"], "delta": r["delta"], "status": status,
                          "sub": sub, "checker_citation": (cite[:240] if cite else None), "held_bound": b})
     if rows:
@@ -285,6 +362,15 @@ def section_card(sid: str, sec: dict) -> dict:
         line = f"PARTIALLY VERIFIED {n} / {m}" + (f" (+{pv} rows PV)" if pv else "")
     else:
         line = f"UNKNOWN 0 / {m}"
+    sec_ver = sec.get("verification") or ""
+    line_cap = None
+    if sec_ver.startswith("Checker") and "PARTIALLY VERIFIED" in sec_ver:
+        line_cap = sec_ver[:240]
+        if line == "VERIFIED":
+            if sid in SECTION_READINGS:
+                line_cap = f"not applied: {SECTION_READINGS[sid]}"
+            else:
+                line = f"PARTIALLY VERIFIED {n} / {m} (capped: the section's Checker verdict reads PARTIALLY VERIFIED)"
     kind = sec.get("kind")
     pct = sec.get("difference_pct_of_reference")
     if kind not in SCORED_KINDS:
@@ -310,8 +396,8 @@ def section_card(sid: str, sec: dict) -> dict:
             "by_class": {c: str(by[c]) if rows else sec["by_class"].get(c, "0") for c in CLASSES},
             "status_count": st_count, "status_signed": {s: str(v) for s, v in st_signed.items()},
             "status_gross": {s: str(v) for s, v in st_gross.items()}, "sub_status": dict(sorted(subs.items())),
-            "held_rows": held_rows, "held_bound_add": [str(held_lo), "OPEN" if held_hi_open else str(held_hi)],
-            "line_status": line, "rows": out_rows}
+            "held_inside_rows": held_inside_out(hin), "held_rows": held_rows, "held_bound_add": [str(held_lo), "OPEN" if held_hi_open else str(held_hi)],
+            "line_status": line, "section_verdict_cap": line_cap, "rows": out_rows}
 
 
 # ================================================================================ (a) (b) trade tables ============
@@ -338,6 +424,13 @@ def sum_group(code: str, unit: str, rk: str, cs: list[dict]) -> dict:
     ss = {s: str(sum((D(c["status_signed"][s]) for c in cs), D(0))) for s in STATUSES}
     sg = {s: str(sum((D(c["status_gross"][s]) for c in cs), D(0))) for s in STATUSES}
     lo = sum((D(c["held_bound_add"][0]) for c in cs), D(0))
+    hin = {"rows": 0, "blank_lines": 0, "omissions": 0, "range_lo": D(0), "range_hi": D(0), "unranged_rows": 0}
+    for c in cs:
+        h = c["held_inside_rows"]
+        for k in ("rows", "blank_lines", "omissions", "unranged_rows"):
+            hin[k] += h[k]
+        hin["range_lo"] += D(h["engine_held_range"][0])
+        hin["range_hi"] += D(h["ranged_high"])
     hi_open = any(c["held_bound_add"][1] == "OPEN" for c in cs)
     hi = "OPEN" if hi_open else str(sum((D(c["held_bound_add"][1]) for c in cs), D(0)))
     lines = {}
@@ -349,7 +442,7 @@ def sum_group(code: str, unit: str, rk: str, cs: list[dict]) -> dict:
             "reference_total": str(tot["reference_total"]), "engine_valued": str(tot["engine_valued"]),
             "difference": str(tot["difference"]), "by_class": {k: str(v) for k, v in by.items()},
             "status_count": sc, "status_signed": ss, "status_gross": sg, "held_bound_add": [str(lo), hi],
-            "lines_by_status": dict(sorted(lines.items())),
+            "lines_by_status": dict(sorted(lines.items())), "held_inside_rows": held_inside_out(hin),
             "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"}
 
 
@@ -452,6 +545,23 @@ def markdown(sc: dict) -> str:
                  f"{t['reference_total']} | {t['engine_valued']} | {t['difference']} | {b['ENGINE_RIGHT']} | "
                  f"{b['ENGINE_WRONG']} | {b['RULE_DIFFERENCE']} | {b['HELD']} | {b['TOLERANCE']} | {b['UNRESOLVED']} | "
                  f"{_lines(t)} | {t['held_bound_add'][0]} .. {t['held_bound_add'][1]} |")
+    L += ["", "## Engine HELD inside non-HELD rows (r2; beside the classes, never added, never 0)", "",
+          "| Trade | Unit | Rows | HELD-blank lines | ENGINE_OMISSION of a line | Engine HELD range | Rows with no range |",
+          "|---|---|---|---|---|---|---|"]
+    for t in sc["trade_tables"]:
+        h = t["held_inside_rows"]
+        if h["rows"]:
+            L.append(f"| {t['trade_code']} | {t['unit']} | {h['rows']} | {h['blank_lines']} | {h['omissions']} | "
+                     f"{h['engine_held_range'][0]} .. {h['engine_held_range'][1]} | {h['unranged_rows']} |")
+    L += ["", "## Status caps applied (r2: bare stamp, HELD content inside a row, section verdict PARTIALLY VERIFIED)", ""]
+    for c in sc["reference_lines"]:
+        capped = [r for r in c["rows"] if "capped" in r["sub"] or "bare" in r["sub"]]
+        if capped:
+            L.append(f"- {c['section_id']} ({c['unit']}): {len(capped)} row(s) -> " + "; ".join(
+                sorted({f"{r['status']}: {r['sub'][:110]}" for r in capped})))
+        if "capped" in c["line_status"] or (c["section_verdict_cap"] or "").startswith("not applied"):
+            L.append(f"- {c['section_id']} ({c['unit']}) line {c['line_status']}; section verdict: "
+                     f"{(c['section_verdict_cap'] or '')[:200]}")
     L += ["", "## Residual rows by evidence status per trade table: count / signed / gross |delta|", "",
           "| Trade | Unit | Ref. kind | " + " | ".join(STATUSES) + " |", "|---|---|---|" + "---|" * len(STATUSES)]
     for t in sc["trade_tables"]:

@@ -9,7 +9,7 @@ Sections in the statement 74; of record 48 (superseded, never read: 26); scored 
 | Trade | Unit | Ref. kind | Lines | Reference | Engine valued | Difference | ENGINE_RIGHT | ENGINE_WRONG | RULE_DIFFERENCE | HELD | TOLERANCE | UNRESOLVED | Lines by status | HELD rows at delta 0: bound |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | B10 | m3 | FREELANCER | 6 | 230.530875 | 166.526492 | 64.004383 | -10.995125 | 0 | 0.00000 | 73.065230 | 0 | 1.934278 | HELD 2, PARTIALLY VERIFIED 2, UNKNOWN 2 | 0 .. 0 |
-| B11 | t | FREELANCER | 1 | 44.190000 | 9.375306 | 34.814694 | 0 | 0 | 0 | 0 | 0 | 34.814694 | VERIFIED 1 | 0 .. 0 |
+| B11 | t | FREELANCER | 1 | 44.190000 | 9.375306 | 34.814694 | 0 | 0 | 0 | 0 | 0 | 34.814694 | UNKNOWN 1 | 0 .. 0 |
 | B12 | m2 | FREELANCER | 2 | 128.900 | 89.016 | 39.884 | 2.255 | 0 | 0.960 | 36.669 | 0 | 0 | UNKNOWN 2 | 0 .. 0 |
 | B12 | nr | FREELANCER | 2 | 34 | 34 | 0 | -1 | 0 | 0 | 1 | 0 | 0 | HELD 1, VERIFIED 1 | 0 .. 0 |
 | B3 | m2 | FREELANCER | 1 | 409.58 | 387.09405 | 22.48595 | 0.797732 | 2.97 | 15.941912 | 0 | -0.028416 | 2.804722 | UNKNOWN 1 | 0 .. 0 |
@@ -29,12 +29,23 @@ Sections in the statement 74; of record 48 (superseded, never read: 26); scored 
 | UNCODED: marble / stone thresholds, sills, lift and E1 stone (nr) | nr | FREELANCER | 1 | 11 | 67 | -56 | -47 | 0 | -9 | 0 | 0 | 0 | PARTIALLY VERIFIED 1 | 0 .. 0 |
 | UNCODED: outdoor court / yard skirting | lm | FREELANCER | 1 | 81.32 | 0 | 81.32 | 0 | 0 | 81.32 | 0 | 0 | 0 | PARTIALLY VERIFIED 1 | 0 .. 0 |
 
+## Engine HELD inside non-HELD rows (r2; beside the classes, never added, never 0)
+
+| Trade | Unit | Rows | HELD-blank lines | ENGINE_OMISSION of a line | Engine HELD range | Rows with no range |
+|---|---|---|---|---|---|---|
+| B11 | t | 6 | 798 | 2 | 14.278249 .. OPEN | 1 |
+
+## Status caps applied (r2: bare stamp, HELD content inside a row, section verdict PARTIALLY VERIFIED)
+
+- T-568/alu-doors-nr (nr) line VERIFIED; section verdict: not applied: Checker 2026-11-08T01:57Z (T-613 r1 Gate A verdict): 'T-568 alu-doors-nr VERIFIED accepted (pinned reading: door counts 3 / 3 storeys by own census of 27 inserts)'; the section's own T-56
+- T-560/rebar@V9 (t): 6 row(s) -> UNKNOWN: class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text
+
 ## Residual rows by evidence status per trade table: count / signed / gross |delta|
 
 | Trade | Unit | Ref. kind | VERIFIED | PARTIALLY VERIFIED | DRAWING-CONFIRMED | HELD | UNKNOWN |
 |---|---|---|---|---|---|---|---|
 | B10 | m3 | FREELANCER | 13 / -13.814403 / 18.033403 | 3 / 2.786702 / 2.786702 | 0 / 0 / 0 | 14 / 73.065230 / 76.624730 | 22 / 1.966854 / 6.563026 |
-| B11 | t | FREELANCER | 6 / 34.814694 / 34.814694 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+| B11 | t | FREELANCER | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 6 / 34.814694 / 34.814694 |
 | B12 | m2 | FREELANCER | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 2 / 36.669 / 36.669 | 22 / 3.215 / 11.255 |
 | B12 | nr | FREELANCER | 1 / -1 / 1 | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 1 / 1 | 0 / 0 / 0 |
 | B3 | m2 | FREELANCER | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 41 / 22.485950 / 41.586124 |
@@ -87,7 +98,7 @@ Sections in the statement 74; of record 48 (superseded, never read: 26); scored 
 | T-578/rails | B7 | lm | 18.95 | 54.869174 | -35.919174 | none (none: SCOPE and HELD causes (R-T578-1 (e))) | PARTIALLY VERIFIED 2 / 7 (+2 rows PV) | VERIFIED 2 / PARTIALLY VERIFIED 2 / DRAWING-CONFIRMED 0 / HELD 2 / UNKNOWN 1 |
 | T-574/skirting-outdoor@V8 | UNCODED: outdoor court / yard skirting | lm | 81.32 | 0 | 81.32 | none (none: not printed by the statement) | PARTIALLY VERIFIED 0 / 1 (+1 rows PV) | VERIFIED 0 / PARTIALLY VERIFIED 1 / DRAWING-CONFIRMED 0 / HELD 0 / UNKNOWN 0 |
 | T-574/skirting-stairs@V8 | B7 | lm | 29.87 | 12.15 | 17.72 | none (none: HELD rows present (R-T579-1 (e))) | PARTIALLY VERIFIED 0 / 14 (+3 rows PV) | VERIFIED 0 / PARTIALLY VERIFIED 3 / DRAWING-CONFIRMED 0 / HELD 11 / UNKNOWN 0 |
-| T-560/rebar@V9 | B11 | t | 44.190000 | 9.375306 | 34.814694 | none (none: TYPED_LUMP reference (R-T560-1): no %, no agreement) | VERIFIED | VERIFIED 6 / PARTIALLY VERIFIED 0 / DRAWING-CONFIRMED 0 / HELD 0 / UNKNOWN 0 |
+| T-560/rebar@V9 | B11 | t | 44.190000 | 9.375306 | 34.814694 | none (none: TYPED_LUMP reference (R-T560-1): no %, no agreement) | UNKNOWN 0 / 6 | VERIFIED 0 / PARTIALLY VERIFIED 0 / DRAWING-CONFIRMED 0 / HELD 0 / UNKNOWN 6 |
 | T-577/marble-lm@V10 | UNCODED: marble / stone thresholds, sills, lift and E1 stone (lm) | lm | 21.7 | 56.83 | -35.13 | none (none: HELD / SCOPE / UNIT causes (R-T577-1 (e))) | PARTIALLY VERIFIED 3 / 15 (+1 rows PV) | VERIFIED 3 / PARTIALLY VERIFIED 1 / DRAWING-CONFIRMED 0 / HELD 6 / UNKNOWN 5 |
 | T-574/skirting-room@V10 | B6 | lm | 282.85 | 197.278592 | 85.571408 | none (none: not printed by the statement) | PARTIALLY VERIFIED 2 / 44 (+15 rows PV) | VERIFIED 2 / PARTIALLY VERIFIED 15 / DRAWING-CONFIRMED 0 / HELD 0 / UNKNOWN 27 |
 | T-545/beams@V10 | B10 | m3 | 66.093875 | 66.321054 | -0.227179 | none (none: HELD rows present (R-T579-1 (e))) | PARTIALLY VERIFIED 6 / 24 (+3 rows PV) | VERIFIED 6 / PARTIALLY VERIFIED 3 / DRAWING-CONFIRMED 0 / HELD 3 / UNKNOWN 12 |
@@ -161,9 +172,9 @@ Sections in the statement 74; of record 48 (superseded, never read: 26); scored 
 
 ## Pending, not in V10 (never folded in)
 
-- T-600 (open (TODO r2 at the claim 2026-11-08T01:02Z)): column / beam per-storey residuals GF 0.620464 (+ B7 0.120452) / 1F 1.208362 / 2F 0.42 m3 stay UNRESOLVED in T-545/beams@V10; not folded in
+- T-600 (MERGED r2 61fef828 (after V10; open at the r1 claim)): column / beam per-storey residuals GF 0.620464 (+ B7 0.120452) / 1F 1.208362 / 2F 0.42 m3 stay UNRESOLVED in T-545/beams@V10; not folded in
 - T-608 (MERGED 3c3aa2f8 (after V10)): FR-T608-1 ARCH.PASSAGE 9 -> 6 pcs (3 lift lines RELEASED -> EXCLUDED), FR-T608-2 lift landing door supply ADD HELD-blank x 3: no V10 section carries these lines; fix rows not wired; not folded in
-- T-616 (merged on the engine branch 17559e1b (board row READY at the claim)): lintel-implied count his 54 vs 60 by opening (T-571/lintel-count-implied@V8, an APART section, UNRESOLVED -6 nr): split ENGINE_RIGHT 3..5 + W17 / UNRESOLVED 2..4 not in V10; not folded in
+- T-616 (MERGED 17559e1b (after V10)): lintel-implied count his 54 vs 60 by opening (T-571/lintel-count-implied@V8, an APART section, UNRESOLVED -6 nr): split ENGINE_RIGHT 3..5 + W17 / UNRESOLVED 2..4 not in V10; not folded in
 - statement V10 pending (as listed by T-609): T-600 (column per-storey residuals GF 0.620464 / 1F 1.208362 / 2F 0.42 m3 and GF B7 0.120452: TODO)
 - statement V10 pending (as listed by T-609): F-T606-1 in manifest V13 (FR-T606-1, VERIFIED 4 / 4) but not wired in the candidate: beside, not applied
 - statement V10 pending (as listed by T-609): FR-T610-1 .. 4 (beam-beam overlaps, F-C-P03-2 restated UNDER): not wired, beside in the packs

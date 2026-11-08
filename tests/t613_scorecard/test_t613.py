@@ -287,3 +287,72 @@ def test_no_client_text_in_outputs(real):
     txt = T.dumps(sc) + T.markdown(sc)
     assert not any("؀" <= ch <= "ۿ" for ch in txt)
     assert "reference_basis" not in txt
+
+
+# ------------------------------------------------------------------------------- r2 (Checker 2026-11-08T01:57Z) ---
+CLS = "Checker 2026-11-01 11:00 (S613 provenance Gate A): class confirmed from the registers; difference AGREE"
+
+
+def _line(sc, sid):
+    return next(c for c in sc["reference_lines"] if c["section_id"] == sid)
+
+
+def test_r2_bare_stamp_behind_a_class_text_is_unknown_not_verified():
+    st = s613()
+    r = _sec(st, "S613/skirting")["rows"][0]
+    r.update(evidence_verdict="CHECKER_CONFIRMED", verification="CHECKER_CONFIRMED", class_basis=CLS)
+    line = _line(T.build(st, pending=()), "S613/skirting")
+    assert line["rows"][0]["status"] == "UNKNOWN" and "bare" in line["rows"][0]["sub"]
+    assert line["line_status"] == "UNKNOWN 0 / 1"                       # a class confirmation is not a re-measure
+
+
+@pytest.mark.parametrize("held", [{"engine_held_blank_lines": 3}, {"engine_held_range_t": ["0.5", "0.9"]},
+                                  {"engine_omission_of_a_line": [{"element": "pit wall"}]}])
+def test_r2_checker_verified_row_with_held_blank_lines_refused_as_verified(held):
+    st = s613()
+    _sec(st, "S613/skirting")["rows"][0].update(held)                  # a real re-measure verdict, HELD inside
+    line = _line(T.build(st, pending=()), "S613/skirting")
+    assert line["rows"][0]["status"] == "PARTIALLY VERIFIED" and "HELD content" in line["rows"][0]["sub"]
+    assert line["line_status"] != "VERIFIED" and line["held_inside_rows"]["rows"] == 1
+    st = s613()                                                          # zero held lines is no HELD content
+    _sec(st, "S613/skirting")["rows"][0].update(engine_held_blank_lines=0, engine_omission_of_a_line=[],
+                                                engine_held_range_t=None)
+    assert _line(T.build(st, pending=()), "S613/skirting")["line_status"] == "VERIFIED"
+
+
+def test_r2_section_pv_verdict_with_every_row_stamped_line_not_verified(monkeypatch):
+    st = s613()
+    _sec(st, "S613/skirting")["verification"] = "Checker 2026-11-01 10:00 (S613 Gate A) PARTIALLY VERIFIED: 1 / 3 runs"
+    line = _line(T.build(st, pending=()), "S613/skirting")
+    assert line["rows"][0]["status"] == "VERIFIED"                      # the row keeps its own re-measure
+    assert line["line_status"].startswith("PARTIALLY VERIFIED 1 / 1 (capped")
+    monkeypatch.setitem(T.SECTION_READINGS, "S613/skirting", "Checker 2026-11-02 (S613) line VERIFIED accepted")
+    line = _line(T.build(st, pending=()), "S613/skirting")
+    assert line["line_status"] == "VERIFIED" and line["section_verdict_cap"].startswith("not applied")
+    st = s613()                                                          # the cap never raises a line
+    _sec(st, "S613/tiles@V10")["verification"] = "Checker 2026-11-01 (S613) PARTIALLY VERIFIED"
+    assert _line(T.build(st, pending=()), "S613/tiles@V10")["line_status"] == "PARTIALLY VERIFIED 1 / 3 (+1 rows PV)"
+
+
+def test_r2_b11_restated_and_headline_counts(real):
+    _, sc = real
+    b11 = _line(sc, "T-560/rebar@V9")
+    assert b11["line_status"] == "UNKNOWN 0 / 6" and b11["status_count"]["UNKNOWN"] == 6
+    assert b11["held_inside_rows"]["blank_lines"] == 798 and b11["held_inside_rows"]["omissions"] == 2
+    assert b11["held_inside_rows"]["engine_held_range"] == ["14.278249", "OPEN"]   # G6 pool: no range -> OPEN
+    assert Dd(b11["by_class"]["UNRESOLVED"]) == Dd("34.814694")                      # classes unchanged
+    verified = [c["section_id"] for c in sc["reference_lines"] if c["line_status"] == "VERIFIED"]
+    assert verified == ["T-568/alu-doors-nr"]
+    rows = {}
+    for c in sc["reference_lines"]:
+        for r in c["rows"]:
+            rows[r["status"]] = rows.get(r["status"], 0) + 1
+    assert rows == {"VERIFIED": 21, "PARTIALLY VERIFIED": 52, "HELD": 192, "UNKNOWN": 335}
+    st = T.load_statement()
+    rec = T.sections_of_record(st)
+    for c in sc["reference_lines"]:
+        for r, raw in zip(c["rows"], rec[c["section_id"]]["rows"]):
+            if r["status"] == "VERIFIED":
+                assert not T.held_content(raw)
+                assert str(raw.get("evidence_verdict") or raw.get("verification_basis") or
+                           raw.get("source_verdict") or "").startswith("Checker") or T._reading(c["section_id"], raw)

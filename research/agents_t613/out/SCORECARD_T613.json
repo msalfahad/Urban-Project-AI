@@ -94,6 +94,18 @@
     "PARTIALLY VERIFIED": 2,
     "UNKNOWN": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -115,32 +127,44 @@
     "UNRESOLVED": "34.814694"
    },
    "status_count": {
-    "VERIFIED": 6,
+    "VERIFIED": 0,
     "PARTIALLY VERIFIED": 0,
     "DRAWING-CONFIRMED": 0,
     "HELD": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 6
    },
    "status_signed": {
-    "VERIFIED": "34.814694",
+    "VERIFIED": "0",
     "PARTIALLY VERIFIED": "0",
     "DRAWING-CONFIRMED": "0",
     "HELD": "0",
-    "UNKNOWN": "0"
+    "UNKNOWN": "34.814694"
    },
    "status_gross": {
-    "VERIFIED": "34.814694",
+    "VERIFIED": "0",
     "PARTIALLY VERIFIED": "0",
     "DRAWING-CONFIRMED": "0",
     "HELD": "0",
-    "UNKNOWN": "0"
+    "UNKNOWN": "34.814694"
    },
    "held_bound_add": [
     "0",
     "0"
    ],
    "lines_by_status": {
-    "VERIFIED": 1
+    "UNKNOWN": 1
+   },
+   "held_inside_rows": {
+    "rows": 6,
+    "blank_lines": 798,
+    "omissions": 2,
+    "unranged_rows": 1,
+    "engine_held_range": [
+     "14.278249",
+     "OPEN"
+    ],
+    "ranged_high": "19.646878",
+    "note": "engine quantity HELD inside these rows: beside the classes, never added, never 0; the rows cannot be VERIFIED"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -190,6 +214,18 @@
    ],
    "lines_by_status": {
     "UNKNOWN": 2
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -241,6 +277,18 @@
     "HELD": 1,
     "VERIFIED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -289,6 +337,18 @@
    "lines_by_status": {
     "UNKNOWN": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -336,6 +396,18 @@
    ],
    "lines_by_status": {
     "UNKNOWN": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -386,6 +458,18 @@
    "lines_by_status": {
     "UNKNOWN": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -433,6 +517,18 @@
    ],
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -484,6 +580,18 @@
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1,
     "UNKNOWN": 2
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -537,6 +645,18 @@
     "PARTIALLY VERIFIED": 3,
     "UNKNOWN": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -585,6 +705,18 @@
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -632,6 +764,18 @@
    ],
    "lines_by_status": {
     "UNKNOWN": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -682,6 +826,18 @@
    "lines_by_status": {
     "PARTIALLY VERIFIED": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -730,6 +886,18 @@
    ],
    "lines_by_status": {
     "UNKNOWN": 2
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -780,6 +948,18 @@
    "lines_by_status": {
     "UNKNOWN": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -827,6 +1007,18 @@
    ],
    "lines_by_status": {
     "UNKNOWN": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -876,6 +1068,18 @@
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -923,6 +1127,18 @@
    ],
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
@@ -972,6 +1188,18 @@
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   },
   {
@@ -1019,6 +1247,18 @@
    ],
    "lines_by_status": {
     "PARTIALLY VERIFIED": 1
+   },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
    },
    "note": "sums of reference lines in one unit and one reference kind; not an agreement figure"
   }
@@ -1071,12 +1311,25 @@
     "HELD / evidence none": 1,
     "UNKNOWN / no stamp (pre-stamp section)": 5
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 6",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
@@ -1181,12 +1434,25 @@
     "HELD / evidence none": 1,
     "UNKNOWN / no stamp (pre-stamp section)": 4
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 5",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "2F block top roof parapet inner faces",
@@ -1282,12 +1548,25 @@
     "HELD / evidence none": 7,
     "UNKNOWN / no stamp (pre-stamp section)": 19
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 7,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 26",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "1F-ARR LANDING SCOPE",
@@ -1576,12 +1855,25 @@
     "UNKNOWN / no stamp (pre-stamp section)": 11,
     "UNKNOWN / worker-proposed": 6
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 50,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 89",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF: HELD walls: CB2 width conflict (D-27)",
@@ -2432,12 +2724,25 @@
    "sub_status": {
     "UNKNOWN / no stamp (pre-stamp section)": 18
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 18",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF lobby wash (2 basins): 2-dp rounding",
@@ -2650,12 +2955,25 @@
     "HELD / evidence none": 17,
     "UNKNOWN / no stamp (pre-stamp section)": 22
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 17,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 39",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF lobby wash (2 basins): doorway segment 0.80 m",
@@ -3057,12 +3375,25 @@
     "HELD / evidence CHECKER_CONFIRMED": 6,
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 47
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 6,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 53",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF-12 core W.C. wedge 289 x 167: length: tiled face vs his lm",
@@ -3590,12 +3921,25 @@
     "HELD / evidence WORKER_PROPOSED": 24,
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 15
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 24,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 39",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF-01 HELD line at its engine-basis gross face 20.127 x 3.15",
@@ -3999,12 +4343,25 @@
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 5,
     "UNKNOWN / worker-proposed": 3
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 3,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 11",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "his row 61 (SE): frame bands 2 x 0.45 x 27.70: FIN.EXT.FRAME, profile not detailed (no face measured)",
@@ -4153,12 +4510,25 @@
    "sub_status": {
     "HELD / evidence CHECKER_CONFIRMED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "HELD 1 / 1",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "necks: HELD",
@@ -4218,12 +4588,25 @@
     "HELD / evidence CHECKER_CONFIRMED": 1,
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 2",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "lift pit walls: SCOPE_DOUBLE (four column pieces in his ring, also in his neck rows)",
@@ -4293,12 +4676,25 @@
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 2,
     "UNKNOWN / worker-proposed": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 5",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "footing line: COUNT F3 (two drawn outlines both tagged F3)",
@@ -4393,12 +4789,25 @@
    "sub_status": {
     "HELD / evidence CHECKER_CONFIRMED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "HELD 1 / 1",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "blinding: his one 0.10 plate over the plot rectangle vs the engine pits + held blinding elements",
@@ -4458,12 +4867,25 @@
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 16,
     "UNKNOWN / worker-proposed": 25
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 41",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): round-stair footprint below the cut (treads ",
@@ -4884,12 +5306,25 @@
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 10,
     "UNKNOWN / worker-proposed": 6
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 25,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 41",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "DRY GF-01 HELD paint line at its engine-basis gross face 20.127 x 3.15",
@@ -5309,12 +5744,25 @@
     "HELD / evidence WORKER_PROPOSED": 2,
     "UNKNOWN / class confirmed (pre-stamp), quantity not stamped": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 3",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "SOFFIT his row 18 (service stair (enclosed shaft stair), 1.2 x 20.2): ST-01 soffit, T-281 measured true area (method D)",
@@ -5391,12 +5839,25 @@
    "sub_status": {
     "VERIFIED / pinned Checker Gate A reading (V5 stamp qualified)": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "VERIFIED",
+   "section_verdict_cap": "not applied: Checker 2026-11-08T01:57Z (T-613 r1 Gate A verdict): 'T-568 alu-doors-nr VERIFIED accepted (pinned reading: door counts 3 / 3 storeys by own census of 27 inserts)'; the section's own T-568 Gate A text: 'door counts 3 / 3 storeys CONFIRMED from the drawn leaves (own census of 27 door inserts ...)': the PARTIALLY VERIFIED part is window counts, door widths and m2 terms, none of which is in this nr line",
    "rows": [
     {
      "name": "GF D-GF-05 (no unit of his) / ours only",
@@ -5455,12 +5916,25 @@
    "sub_status": {
     "UNKNOWN / worker-proposed": 8
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 8",
+   "section_verdict_cap": "Checker 2026-11-06 17:57 (T-568 Gate A) PARTIALLY VERIFIED: door counts 3 / 3 storeys CONFIRMED from the drawn leaves (own census of 27 door inserts in P7757.dxf); window counts, door widths and every m2 term worker-proposed (ACCEPTED as wo",
    "rows": [
     {
      "name": "GF D-GF-01 vs his 1 x 2.4 / height",
@@ -5582,12 +6056,25 @@
    "sub_status": {
     "HELD / evidence WORKER_PROPOSED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 1,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "HELD 1 / 1",
+   "section_verdict_cap": "Checker 2026-11-06 17:57 (T-568 Gate A) PARTIALLY VERIFIED: door counts 3 / 3 storeys CONFIRMED from the drawn leaves (own census of 27 door inserts in P7757.dxf); window counts, door widths and every m2 term worker-proposed (ACCEPTED as wo",
    "rows": [
     {
      "name": "GF W02 vs his 6.33 x 4.3 / count HELD",
@@ -5647,12 +6134,25 @@
     "HELD / evidence WORKER_PROPOSED": 2,
     "UNKNOWN / worker-proposed": 14
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 16",
+   "section_verdict_cap": "Checker 2026-11-06 17:57 (T-568 Gate A) PARTIALLY VERIFIED: door counts 3 / 3 storeys CONFIRMED from the drawn leaves (own census of 27 door inserts in P7757.dxf); window counts, door widths and every m2 term worker-proposed (ACCEPTED as wo",
    "rows": [
     {
      "name": "GF W02 vs his 6.33 x 4.3 / ours HELD",
@@ -5848,12 +6348,25 @@
     "PARTIALLY VERIFIED / pinned Checker Gate A reading (V5 stamp qualified)": 1,
     "UNKNOWN / worker-proposed": 12
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 9,
    "held_bound_add": [
     "0",
     "OPEN"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 22 (+1 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 20:02 (T-573 Gate A) PARTIALLY VERIFIED: light-well outline 16.005 m2 and round flight re-measured (no-ceiling 13.39 AGREE 0.02 %); causes re-added; no ceiling line VERIFIED; light well ENGINE_RIGHT CONFIRMED; cove strips",
    "rows": [
     {
      "name": "GF reception + dining + entrance (incl. pantry, south dining piece): no ceiling under the slab openings (light well 13.392 + pocket 1.551, S-OPENING outlines): ",
@@ -6113,12 +6626,25 @@
    "sub_status": {
     "UNKNOWN / worker-proposed": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "UNKNOWN 0 / 1",
+   "section_verdict_cap": "Checker 2026-11-06 20:02 (T-573 Gate A) PARTIALLY VERIFIED: light-well outline 16.005 m2 and round flight re-measured (no-ceiling 13.39 AGREE 0.02 %); causes re-added; no ceiling line VERIFIED; light well ENGINE_RIGHT CONFIRMED; cove strips",
    "rows": [
     {
      "name": "his cornice runs (halls / rooms + kitchens / baths)",
@@ -6181,12 +6707,25 @@
     "UNKNOWN / evidence by reference (AS T-573/ceiling-board)": 3,
     "UNKNOWN / worker-proposed": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0.981420"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 7 (+1 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 20:02 (T-573 Gate A) PARTIALLY VERIFIED: light-well outline 16.005 m2 and round flight re-measured (no-ceiling 13.39 AGREE 0.02 %); causes re-added; no ceiling line VERIFIED; light well ENGINE_RIGHT CONFIRMED; cove strips",
    "rows": [
     {
      "name": "board gap by the BOARD table: ENGINE_RIGHT",
@@ -6302,12 +6841,25 @@
    "sub_status": {
     "PARTIALLY VERIFIED / Checker section verdict": 3
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 3 (+3 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 21:58 (T-574 Gate A) PARTIALLY VERIFIED 1 / 11 room outlines (GF dewaneya 20.127876 lm DRAWING-CONFIRMED); arithmetic re-added; deductions worker-proposed, not re-measured; his room perimeters not re-read (register reused",
    "rows": [
     {
      "name": "ST-03 entrance (E1): stair-side pieces per step (nr): his pieces per step are counted in nr; our flight skirting is lm (B7-07 / B7-08), never converted (no prin",
@@ -6385,12 +6937,25 @@
     "HELD / evidence Checker 2026-11-06 23:58 (T-577 Gate A) ": 5,
     "PARTIALLY VERIFIED / Checker section verdict": 8
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 5,
    "held_bound_add": [
     "4.06",
     "OPEN"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 13 (+8 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 23:58 (T-577 Gate A) PARTIALLY VERIFIED: freelancer side 3 / 3 units re-read (AGREE), engine side 0 / 8 groups re-measured; LENGTH_IN_AREA_COLUMN never compared; E1 step-lm ENGINE_OMISSION PLAUSIBLE, not confirmed; extern",
    "rows": [
     {
      "name": "WET: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rul",
@@ -6572,12 +7137,25 @@
    "sub_status": {
     "PARTIALLY VERIFIED / Checker section verdict": 6
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 6 (+6 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 23:58 (T-577 Gate A) PARTIALLY VERIFIED: freelancer side 3 / 3 units re-read (AGREE), engine side 0 / 8 groups re-measured; LENGTH_IN_AREA_COLUMN never compared; E1 step-lm ENGINE_OMISSION PLAUSIBLE, not confirmed; extern",
    "rows": [
     {
      "name": "WET: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rul",
@@ -6684,12 +7262,25 @@
     "UNKNOWN / worker-proposed": 1,
     "VERIFIED / CHECKER_VERIFIED": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "1.118196",
     "OPEN"
    ],
    "line_status": "PARTIALLY VERIFIED 2 / 7 (+2 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-07 02:06 (T-578 Gate A) PARTIALLY VERIFIED: rails 1 / 5 runs re-measured: RL-07 15.953174 lm ENGINE_RIGHT on scope CONFIRMED on its length (pitch basis AGREE); RL-01..03 / RL-08 ENGINE_RIGHT PLAUSIBLE (RL-02 + RL-03 12.888 l",
    "rows": [
     {
      "name": "roof / terrace guards RL-01 + RL-02 + RL-03 (B13-08): in our list only; his only railing row is labelled internal and none of his 885 rows names an external rai",
@@ -6808,12 +7399,25 @@
    "sub_status": {
     "PARTIALLY VERIFIED / PARTIALLY_VERIFIED": 1
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 1 (+1 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 21:58 (T-574 Gate A) PARTIALLY VERIFIED 1 / 11 room outlines (GF dewaneya 20.127876 lm DRAWING-CONFIRMED); arithmetic re-added; deductions worker-proposed, not re-measured; his room perimeters not re-read (register reused",
    "rows": [
     {
      "name": "OUTDOOR yard skirting: his 81.32 lm is the perimeter typed for his paving row (G13 = C13), a paving outline; no sheet prints an outdoor base (DXF 0 strings), so",
@@ -6873,12 +7477,25 @@
     "HELD / evidence PARTIALLY_VERIFIED": 11,
     "PARTIALLY VERIFIED / PARTIALLY_VERIFIED": 3
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 11,
    "held_bound_add": [
     "0",
     "7.45"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 14 (+3 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 21:58 (T-574 Gate A) PARTIALLY VERIFIED 1 / 11 room outlines (GF dewaneya 20.127876 lm DRAWING-CONFIRMED); arithmetic re-added; deductions worker-proposed, not re-measured; his room perimeters not re-read (register reused",
    "rows": [
     {
      "name": "ST-03 entrance (E1): flight skirting, form not chosen (ORR-007; one line per form, never additive): HELD-FORM pieces count at their smaller form, HELD / CONFLIC",
@@ -7052,42 +7669,60 @@
     "UNRESOLVED": "34.814694"
    },
    "status_count": {
-    "VERIFIED": 6,
+    "VERIFIED": 0,
     "PARTIALLY VERIFIED": 0,
     "DRAWING-CONFIRMED": 0,
     "HELD": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 6
    },
    "status_signed": {
-    "VERIFIED": "34.814694",
+    "VERIFIED": "0",
     "PARTIALLY VERIFIED": "0",
     "DRAWING-CONFIRMED": "0",
     "HELD": "0",
-    "UNKNOWN": "0"
+    "UNKNOWN": "34.814694"
    },
    "status_gross": {
-    "VERIFIED": "34.814694",
+    "VERIFIED": "0",
     "PARTIALLY VERIFIED": "0",
     "DRAWING-CONFIRMED": "0",
     "HELD": "0",
-    "UNKNOWN": "0"
+    "UNKNOWN": "34.814694"
    },
    "sub_status": {
-    "VERIFIED / CHECKER_VERIFIED": 6
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (128 engine HELD-blank lines; engine HELD range 4.247223 .. 6.120242)": 1,
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (17 engine HELD-blank lines; engine HELD range 1.039160 .. 1.443671; 1 ENGINE_OMISSION of a line)": 1,
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (196 engine HELD-blank lines; engine HELD range 4.039645 .. 5.105957)": 1,
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (199 engine HELD-blank lines; engine HELD range 3.671229 .. 4.857659)": 1,
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (20 engine HELD-blank lines)": 1,
+    "UNKNOWN / class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (238 engine HELD-blank lines; engine HELD range 1.280992 .. 2.119349; 1 ENGINE_OMISSION of a line)": 1
+   },
+   "held_inside_rows": {
+    "rows": 6,
+    "blank_lines": 798,
+    "omissions": 2,
+    "unranged_rows": 1,
+    "engine_held_range": [
+     "14.278249",
+     "OPEN"
+    ],
+    "ranged_high": "19.646878",
+    "note": "engine quantity HELD inside these rows: beside the classes, never added, never 0; the rows cannot be VERIFIED"
    },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
-   "line_status": "VERIFIED",
+   "line_status": "UNKNOWN 0 / 6",
+   "section_verdict_cap": "Checker 2026-11-06 17:57 (T-560 Gate A) PARTIALLY VERIFIED: his side 7 / 7 typed family cells (TYPED_LUMP CONFIRMED, own read of his workbook); engine totals and part counts 4 / 4 (own sum of the pinned index); one valued bar group R043 2 /",
    "rows": [
     {
      "name": "G1_SUBSTRUCTURE: his FOOTINGS, GROUND_BEAMS_AND_SLAB vs engine FRP:FTG, HL:GROUND_SYSTEM_STEEL, P-S:GROUND_SLAB, P-S:GROUND_BEAMS",
      "class": "UNRESOLVED",
      "delta": "13.232853",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (196 engine HELD-blank lines; engine HELD range 4.039645 .. 5.105957)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     },
@@ -7095,8 +7730,8 @@
      "name": "G2_COLUMNS_NECKS_WALLS: his WALLS_AND_COLUMNS vs engine HL:COLUMN_STEEL, P-S:NECK, P-S:COL",
      "class": "UNRESOLVED",
      "delta": "6.062872",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (238 engine HELD-blank lines; engine HELD range 1.280992 .. 2.119349; 1 ENGINE_OMISSION of a line)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     },
@@ -7104,8 +7739,8 @@
      "name": "G3_BEAMS: his BEAMS vs engine HL:BEAM_STEEL, LIFT_TIE_BEAM:GF, P-S:BEAMS, U-S:BEAMS",
      "class": "UNRESOLVED",
      "delta": "4.718969",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (128 engine HELD-blank lines; engine HELD range 4.247223 .. 6.120242)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     },
@@ -7113,8 +7748,8 @@
      "name": "G4_SLABS: his SLABS vs engine HL:SLAB_STEEL, P-S:SLABS",
      "class": "UNRESOLVED",
      "delta": "5.400000",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (199 engine HELD-blank lines; engine HELD range 3.671229 .. 4.857659)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     },
@@ -7122,8 +7757,8 @@
      "name": "G5_STAIRS_DOME: his STAIRS_AND_DOME vs engine STAIR:ST",
      "class": "UNRESOLVED",
      "delta": "3.900000",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (17 engine HELD-blank lines; engine HELD range 1.039160 .. 1.443671; 1 ENGINE_OMISSION of a line)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     },
@@ -7131,8 +7766,8 @@
      "name": "G6_POOL: his POOL vs engine STAIR:POOL",
      "class": "UNRESOLVED",
      "delta": "1.500000",
-     "status": "VERIFIED",
-     "sub": "CHECKER_VERIFIED",
+     "status": "UNKNOWN",
+     "sub": "class confirmed, quantity not re-measured (evidence verdict a bare 'CHECKER_CONFIRMED' stamp; the Checker text cited is a class / provenance confirmation); HELD content inside the row (20 engine HELD-blank lines)",
      "checker_citation": "Checker 2026-11-07 11:58 (T-590 Gate A): provenance checked from the registers themselves: RULES_INDEX holds neither R-CONC-OWN-1 nor R-T394-1; R-CONC-OWN-1 PROPOSED, not in force; Q-62 A cond a REQUIREMENT (chooses no owner); ERS s.7 2026-",
      "held_bound": null
     }
@@ -7189,12 +7824,25 @@
     "UNKNOWN / worker-proposed": 5,
     "VERIFIED / CHECKER_VERIFIED": 3
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 6,
    "held_bound_add": [
     "4.0",
     "OPEN"
    ],
    "line_status": "PARTIALLY VERIFIED 3 / 15 (+1 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 23:58 (T-577 Gate A) PARTIALLY VERIFIED: freelancer side 3 / 3 units re-read (AGREE), engine side 0 / 8 groups re-measured; LENGTH_IN_AREA_COLUMN never compared; E1 step-lm ENGINE_OMISSION PLAUSIBLE, not confirmed; extern",
    "rows": [
     {
      "name": "WET: he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rul",
@@ -7393,12 +8041,25 @@
     "UNKNOWN / worker-proposed": 27,
     "VERIFIED / CHECKER_VERIFIED": 2
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 0,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 2 / 44 (+15 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-06 21:58 (T-574 Gate A) PARTIALLY VERIFIED 1 / 11 room outlines (GF dewaneya 20.127876 lm DRAWING-CONFIRMED); arithmetic re-added; deductions worker-proposed, not re-measured; his room perimeters not re-read (register reused",
    "rows": [
     {
      "name": "GF open room: reception + dining + entrance zone + open pantry (his reception + dining and entrance rows): doors OP-008 / OP-010 / OP-012 (1.00 each) + OP-021 (",
@@ -7847,12 +8508,25 @@
     "UNKNOWN / worker-proposed": 12,
     "VERIFIED / CHECKER_VERIFIED": 6
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 3,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 6 / 24 (+3 rows PV)",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "GF: COUNT",
@@ -8120,12 +8794,25 @@
     "UNKNOWN / worker-proposed": 6,
     "VERIFIED / CHECKER_VERIFIED": 7
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 6,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 7 / 19",
+   "section_verdict_cap": null,
    "rows": [
     {
      "name": "columns GF: COUNT C1",
@@ -8347,12 +9034,25 @@
     "HELD / evidence PARTIALLY_VERIFIED": 2,
     "PARTIALLY VERIFIED / PARTIALLY_VERIFIED": 5
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 7 (+5 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-07 04:05 (T-584 Gate A): E1 ENGINE_OMISSION CONFIRMED, VERIFIED (4 fronts x 2.80 = 11.20 lm, nr 4); 30A platform edge = landing nosing RULE_DIFFERENCE AGREED; door steps 3.50 lm / 0.390 m2 PARTIALLY VERIFIED 4 / 5 openings (",
    "rows": [
     {
      "name": "ST-01: width: 45 drawn treads x (drawn front edge 1.150 - his 1.2)",
@@ -8466,12 +9166,25 @@
     "HELD / evidence PARTIALLY_VERIFIED": 2,
     "PARTIALLY VERIFIED / PARTIALLY_VERIFIED": 3
    },
+   "held_inside_rows": {
+    "rows": 0,
+    "blank_lines": 0,
+    "omissions": 0,
+    "unranged_rows": 0,
+    "engine_held_range": [
+     "0",
+     "0"
+    ],
+    "ranged_high": "0",
+    "note": "none"
+   },
    "held_rows": 2,
    "held_bound_add": [
     "0",
     "0"
    ],
    "line_status": "PARTIALLY VERIFIED 0 / 5 (+3 rows PV)",
+   "section_verdict_cap": "Checker 2026-11-07 04:05 (T-584 Gate A): E1 ENGINE_OMISSION CONFIRMED, VERIFIED (4 fronts x 2.80 = 11.20 lm, nr 4); 30A platform edge = landing nosing RULE_DIFFERENCE AGREED; door steps 3.50 lm / 0.390 m2 PARTIALLY VERIFIED 4 / 5 openings (",
    "rows": [
     {
      "name": "ST-01: treads in HELD flight lines",
@@ -9035,7 +9748,7 @@
  "pending_not_in_v10": [
   {
    "task": "T-600",
-   "state": "open (TODO r2 at the claim 2026-11-08T01:02Z)",
+   "state": "MERGED r2 61fef828 (after V10; open at the r1 claim)",
    "effect": "column / beam per-storey residuals GF 0.620464 (+ B7 0.120452) / 1F 1.208362 / 2F 0.42 m3 stay UNRESOLVED in T-545/beams@V10; not folded in"
   },
   {
@@ -9045,7 +9758,7 @@
   },
   {
    "task": "T-616",
-   "state": "merged on the engine branch 17559e1b (board row READY at the claim)",
+   "state": "MERGED 17559e1b (after V10)",
    "effect": "lintel-implied count his 54 vs 60 by opening (T-571/lintel-count-implied@V8, an APART section, UNRESOLVED -6 nr): split ENGINE_RIGHT 3..5 + W17 / UNRESOLVED 2..4 not in V10; not folded in"
   },
   {
