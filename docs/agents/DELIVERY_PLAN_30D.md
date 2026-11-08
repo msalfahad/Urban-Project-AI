@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-08 16:15; owner delivery directive 12:40 in force)
+
+- Merged since 12:13 (all Gate A, research, no candidate line moved): T-625, T-626, T-628, T-629, T-630, T-632 WORKED; T-627, T-631 PARTIAL (door heads unruled; bed lines unmoved). READY 0.
+- 10 Nov TRIAL BOQ (owner item 3) critical path, in order: T-637 master 1.56.0 (W3, 16:59 run) -> T-636 trial BOQ (W3, after T-637 merges); in parallel T-638 formwork 370 + T-639 rebar 801 (W1), T-640 finishes 72 (W2); T-641 manifest V17 after T-636. Fix rows reach the trial BOQ as an OVERLAY column, never counted as wired.
+- Will NOT be in the 10 Nov trial BOQ as wired quantities: anything after V3.0.58 (all Gate B waits on PR #4); B12 MEP (no source); 39 families with no line (T-630 list) shown as MISSING with their cause.
+- Confidence: trial BOQ document on 10 Nov MEDIUM (5 dependent worker runs, ~10-12 h of slots, plus Checker runs); trial BOQ wired into the candidate LOW (PR #4). 12-13 Nov reconciliation tables: HIGH.
+
 ## Status (Lead, 2026-11-08 12:13; recovery plan in force)
 
 - Merged since 08:19 (all Gate A, research, no candidate line moved): T-615, T-620, T-622, T-623, T-624 WORKED; READY T-625 (floor tile carry-forward), T-629 (manifest V15).

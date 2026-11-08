@@ -1,9 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-08 12:13 UTC (Lead). Previous version: 2026-11-08 08:19 UTC. The released numbers did not change
+Last update: 2026-11-08 16:15 UTC (Lead). Previous version: 2026-11-08 12:13 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 8 Nov 12:13 (newest first; eight checked and merged, none sent back; NOTHING wired into the candidate: wiring
+waits for your PR #4 merge; your 12:40 delivery directive now sets the order):
+- The 10 Nov all-trade dry run exists: 5,141 lines (1,499 calculated, 2,801 held, 841 not BOQ lines); adding up from
+  each line to its BOQ line, trade and unit total reproduces exactly in all six units. No trade total can be printed
+  yet because every unit still has held lines: reinforcement 801 lines held with no value (9.38 t calculated only),
+  formwork 370 held with no value, earthworks 15. 88 lines (block units, mortar, glue, 3 lift doors) belong to no BOQ
+  family yet, and the blockwork walls appear under two codes (467.79 m2 would be counted twice in a family sum).
+- Independently verified whole lines in the candidate: unchanged (the slab group and 4 single lines; no trade subtotal).
+- Footings and lift walls: 7 rows re-measured; our footing count / straps right; 9.94 m3 of the gap is his footing
+  band and a combined footing that the drawings bound (5.64 .. 11.03 m3 band, his figure inside), held.
+- Windows and doors: all 22 opening rows have their own drawn size; our windows confirmed; three door heads may be
+  2.20 m (0.58 m2), waiting for the checker to re-read the elevations.
+- Waterproofing: 23 of 24 rows agree with the drawing; the roof differs 0.52 m2 (named, held).
+- Beam B20 upstand: settled at 3.00 m from the drawings (ours right); the checker withdrew its finding. A 0.87 m2
+  per-storey slab-edge strip is billed by no line (ours to add).
+- Floor tiles: the round stair 0.013 m2 short (ours) goes into the wiring list; the bed under those tiles must follow.
+- Next (delivery for 10 Nov, in this order): give the 88 lines their BOQ family and stop the double wall count; give
+  every held formwork, reinforcement and wall / ceiling finish line either a quantity or its stated cause; then the
+  trial BOQ itself, trade by trade, with what is wired, what is checked but not wired, and what is held and why.
+- 10 Nov: a trial BOQ document is MEDIUM; a trial BOQ WIRED into the candidate stays LOW until PR #4 is merged.
 
 Since 8 Nov 08:19 (newest first; five checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):
