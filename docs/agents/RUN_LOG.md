@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T19:51Z | Verifier | STARTED | run session_01E6cPneDC5cdJbJA6Asi74g | repo-attached routine | task state: READY T-639 (W1 c8ae3b96), T-634 (W2 b9abbf9d) | self-check pending
 - 2026-11-08T19:37Z | Worker 1 | SUCCESS | T-639 READY (agents/task-T-639 @ c8ae3b96) | B11-01 rebar 801 HELD-blank + 6 open-high lines all classed with a named cause: A 188 (concrete HELD), B 603 (notation / detail not given), C 10 (note-9 outside starter group, owner option B), D 6 fix rows FR-T639-1..6 = GF column main bars 58 T16 x 4.50 m = 412.444 kg (released 9.375 -> 9.788 t if wired); F-T639-1: 14 released column bar lines (754.723 kg) sit on HELD concrete; 208 lines lack a concrete binding (own hold stands) | self-check codemap PASS, pytest t061 PASS (after re-running setup: venv install had been interrupted, first selfcheck said 'No module named pytest'), freeze PASS; problem: none
 - 2026-11-08T19:21Z | Worker 1 | STARTED | run session_01E6cPnaMu6r2HpPpicDwtDt | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08 19:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
