@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T04:54Z | Verifier | STARTED | run session_01E6cPnf57gajbpppL6DEPdd | repo-attached routine | task state: READY T-617 (per Lead 04:19) | self-check pending
 - 2026-11-08T04:40Z | Worker 2 | STARTED | run session_01E6cPndyJAZ9M4rsk9SWQLe | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08 04:19 UTC | Lead | SUCCESS | board | Since 00:18: T-616, T-600 r2 WORKED, T-613 merged r2 (status caps), T-614 r1 REJECTED -> r2 FIRST in S with the Checker's 4-item list (CB8 col 2 east +0.002309 m3, FR-T610-3), T-617 READY first in Verifier queue; new T-620 statement+scorecard V11, T-621 floor tile 41 rows, T-622 wall tile 47 rows, T-623 beams 12 + columns 6 UNKNOWN rows to evidence; register +4, lessons 3 ADOPTED / 1 PROPOSED; no candidate change (V3.0.58; V2.9 + route G unchanged); PR #4 still open with owner (not re-notified); Drive OK, no photos; queue check: 23 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08 04:13 UTC | Lead | STARTED | run session_01E6cPncjG39WhnxxFAXpdTe | repo-attached routine | task state: board | report pending
