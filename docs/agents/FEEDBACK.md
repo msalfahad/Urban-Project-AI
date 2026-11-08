@@ -3,6 +3,18 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-08 00:15 (since 20:17)
+
+- T-605 footing overlap (Gate A): WORKED (concrete 5.307 AGREE, his +0.042 ENGINE_RIGHT; side forms HELD). Decision: none, no fix row.
+- T-607 steps / nosing shared residual (Gate A): WORKED (7 nr / 8.40 lm one cause, ENGINE_RIGHT once). Decision: none.
+- T-611 manifest V13 (Gate A): WORKED (FIN.SKIRTING 198.558592 lm after FR-T606-1). Decision: T-619 manifest V14.
+- T-610 beam overlap census (Gate A): WORKED (billed once / UNDER; FR-T610-1..4 PV). Decision: T-619 carries them as a range.
+- T-612 skirting remainder (Gate A): WORKED (GF +0.10 VERIFIED; -17.013904 lm UNRESOLVED). Decision: small rows to T-618; the GF -17.01 stays UNRESOLVED until his source rows are readable (not re-tasked).
+- T-609 statement V10 (Gate A): PARTIAL then WORKED (r1 stale V9 pointer; r2 merged). Decision: T-613 FIRST in I.
+- T-608 lift landing openings (Gate A): WORKED (3 lift doors; FR-T608-1 / -2; landing head unprinted). Decision: T-617 bound from drawings; T-616 lintel per opening.
+- T-600 column residuals (Gate A): FAILED r1 (node capacity twice; oblique extent; SHORT as cause). Decision: T-600 r2 FIRST in S with the fault list.
+- T-180 P02 1F (Checker slot): F-C-P02-3 ENGINE_WRONG OMISSION CB11 +0.018750 m3. Decision: T-614 census.
+
 ## Lead 2026-11-07 20:17 (since 16:17)
 
 - T-604 manifest V12 (Gate A): WORKED (0 STALE / two-package / unexplained; skirting +0.30 lm). Decision: T-611 manifest V13 carries FR-T606-1.

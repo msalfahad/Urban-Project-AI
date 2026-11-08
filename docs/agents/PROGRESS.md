@@ -1,9 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-07 20:17 UTC (Lead). Previous version: 2026-11-07 16:17 UTC. The released numbers did not change
+Last update: 2026-11-08 00:15 UTC (Lead). Previous version: 2026-11-07 20:17 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 7 Nov 20:17 (newest first; seven checked and merged, two sent back once each (one merged on rework); no
+candidate quantity moved; all wait to be wired into the candidate):
+- Lift: the two 'passages' plus one on the 2nd floor are lift landing doors (checker re-read the drawing on all three
+  floors): passage count 9 -> 6 when wired; the landing door supply has no line yet and stays held (trade not printed).
+  The landing door height is not printed: two small plaster / paint faces stay ranges (3.35 m2 each) until the
+  sections are read for it; no question to the lift supplier yet.
+- Statement for the 12-13 Nov comparison is up to date (V10); the scorecard tables are built from it next.
+- Skirting wiring list V13 checked: skirting 209.73 -> 198.56 m (-5.3 %) when wired. Ground open room: our outline is
+  right (checker re-measured); his 16.9 m extra matches no drawn reading and stays unexplained.
+- Footing overlap: the notched footing's overlap is counted once; the checker agrees (his +0.042 m3, ours right).
+- Stair steps / nosing: the 8.40 m he has extra on the main stair is one cause, not two; ours is right on the 56
+  drawn risers.
+- Beam crossings: every crossing censused; none is billed twice, a few are a few thousandths of m3 short.
+- NEW from the checker: one first-floor beam ends at a corner column narrower than the beam: 0.019 m3 of concrete is
+  owned by nobody (our omission). Every beam end is being checked for the same.
+- Column / beam residual 2.37 m3: the first split was sent back (one crossing counted from two beams; a balancing
+  figure shown as a cause); reworked next. Proven so far: one first-floor joint is at least 0.075 m3.
+- Your Q-80 answer (15 cm block 40 x 20, 12.5 per m2) is being applied: the 15 walls (175.9 m2, about 2,198 blocks)
+  leave 'held' next; any drawing showing another face will be reported to you.
+- 10 Nov (every trade wired): LOW, wiring waits on your merge of the run-command change (2 days left).
 
 Since 7 Nov 16:17 (newest first; three checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

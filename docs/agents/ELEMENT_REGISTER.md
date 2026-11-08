@@ -88,6 +88,15 @@ quantity.
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
   line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
+- BEAM END AT NARROW COLUMN (Lead 2026-11-08 00:15; Checker F-C-P02-3 own ST7757 read, 1F CB11 at corner col 69D): where a
+  beam run ends at a column whose depth across the beam is less than the drawn band width (or that sits off the band
+  axis), the uncovered band part is concrete OWNED BY THE BEAM (it runs to the next drawn member face; the column owns
+  only its own footprint to the slab top, UP-CONC-JOINT-001 1.0.0); never left unowned, never inside a T-610 crossing
+  zone twice. CB11 +0.018750 m3 ENGINE_WRONG OMISSION. T-614 census.
+- LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15; from T-608 MERGED + T-571 count): whether a precast lintel exists over a
+  lift landing door depends on the host wall (masonry vs concrete shaft wall) and the head vs beam soffit; decided per
+  opening from the drawings in T-616, never from the PASSAGE / DOOR label. Supply of the landing door stays HELD (trade not
+  printed, FR-T608-2).
 - BEAM BAND OVERLAP (Lead 2026-11-07 20:17; Checker F-C-P03-2, T-180 P03 GF): where two beam bands cross or touch at a
   column corner (GF B27 face 325 from col 35C crossing B1, 0.014761 m2), the common block is ONE piece of concrete,
   measured once: OWNER by UP-CONC-JOINT-001 1.0.0 (beam face to face: the framing beam stops at the other beam's face;
