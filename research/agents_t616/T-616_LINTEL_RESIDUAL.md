@@ -49,6 +49,16 @@ ENGINE_RIGHT bound 3 .. 5; then the shaft carries one of {D-GF-08, L-GF/1F/2F-01
 | A-GF-01 | 0.15 GF-W26 | arch drawn (B-B, no dimension); no trace of the member over it | UNRESOLVED 0 .. 1 |
 | W17 | curved band R 1.935 .. 2.135 (T-302) | arched head, outer arc 3.2895: a straight piece over the opening + 2 x 0.15 has an outer-face sagitta of 0.711 m in a 0.20 band filled by a 0.20 lintel | NO_STRAIGHT_PIECE: no stock lintel can exist; the spandrel support (CB12 0.75 soffit, DCR-3, or a curved cast element) stays HELD by name |
 
+Own reads this run (P7757.dxf from Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip, decoded into the private
+folder only; handles and figures only):
+- W17: outer arc BD2 (layer W) R 2135.0 mm, sweep 88.278 deg, arc 3289.5 mm; inner arcs BCD / BCE / BD0 R 1935.0, same
+  centre: band 0.200. Sagitta by hand: theta = (3.2895 + 0.30) / 2.135 = 1.6811 rad, 2.135 x (1 - cos 0.8406) =
+  0.711 m (0.603 m over the opening alone). AGREES with T-302.
+- P-1F-01: jambs C15 / C16 150.0 deep at 1300.0 apart; head lines C13 / C14 (layer 2) 1300.0 across both faces; faces
+  C09 / C0B (a 0.500 nib) and C0A. AGREES with T-198 / T-601.
+- D-GF-05: D120 insert 192 (rotation 90) in a 0.200 wall (faces x -149439.9 / -149639.9); A2 / A4 end and A3 / A5
+  start exactly 1000.0 apart on both faces, at the block edges. AGREES with T-581: DRAWING-CONFIRMED 1.00.
+
 ## 4. Verdicts (proposals for the Checker)
 
 - AT_MOST basis: every one-list candidate is a drawn opening in a masonry wall, both faces read: **ENGINE_RIGHT**; W17
