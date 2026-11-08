@@ -208,6 +208,8 @@ def test_dev_pads_and_overlaps():
     lw = d["lines"]["T-551/lift-walls"]["rows"]
     assert lw[0]["evidence"]["column_pieces_m2"] == "0.500000" and lw[1]["evidence"]["net_ring_m2"] == "1.100000"
     assert d["fix_rows"][0]["corrected_engine_bounded"] == ["75.539200", "81.655600"]
+    sb1 = d["lines"]["T-551/footing-line"]["beside_zero_components"]["SB1 in F10 + F"]
+    assert sb1["agree_high"] and sb1["column_pieces_m2"] == {"10E8": "0.035000"}
 
 
 def test_dev_no_coordinates_or_reference_rows_tracked():

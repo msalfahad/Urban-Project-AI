@@ -19,6 +19,27 @@
  ],
  "lines": {
   "T-551/footing-line": {
+   "beside_zero_components": {
+    "SB1 in F10 + F": {
+     "agree_high": true,
+     "column_pieces_m2": {
+      "10E8": "0.035000"
+     },
+     "diff_cause": "drawing precision of the strap face end points (0.0001 m order)",
+     "held_line": "L-abd65e1b745315dd17c2",
+     "held_line_bound_m3": [
+      "0.000000",
+      "0.385000"
+     ],
+     "high_diff_m3": "0.000018",
+     "net_m2": "0.770036",
+     "note": "the column outline owns its plan; low end 0 (level of strap vs F10 + F not printed, HELD with the outline, Q-31 C)",
+     "outline": "1B1B",
+     "own_high_m3": "0.385018",
+     "piece_m2": "0.805036"
+    },
+    "SB3 in F3": "not re-measured: level model of T-230 (one straight strap, one level), held 0.0295 .. 0.2683 cited"
+   },
    "engine_m3": "67.6945",
    "rows": [
     {

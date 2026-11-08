@@ -326,7 +326,33 @@ def build(dxf, workbook):
                    "evidence": {"straps": straps, "own_straps_m3": str(own_s), "engine_straps_m3": str(eng_s),
                                 "engine_line_rounding_m3": str(rounding)}})
 
-    causes_f = {"COUNT F3 (two drawn outlines)": ("ENGINE_RIGHT", rows_f[0]["own_delta"]),
+    # beside (no row of his): SB1 piece inside the F10 + F outline, against its held line 0 .. high
+    from shapely.geometry import Polygon as _P
+    A, B = dr.seg("1689"), dr.seg("1B1C")
+    piece = _P([A[0], A[1], B[1], B[0]]).buffer(0).intersection(outl[ch])
+    colp = {}
+    for e in dr.msp.query("LWPOLYLINE[layer=='S-COL.BON']"):
+        g = dr.poly(e.dxf.handle)
+        if g.is_valid and g.intersection(piece).area > 1e-9:
+            colp[e.dxf.handle] = g.intersection(piece).area
+    sb1_net = piece.area - sum(colp.values())
+    sb1_hi = R.d6(D(str(round(sb1_net, 6))) * D(straps["SB1"]["section_m"][1]))
+    sb1_line = next(ln for ln in lines.values() if ln["element_id"] == "HL:STRAP_CONCRETE:SB1:IN_FOOTING:F10_F")
+    beside = {"SB1 in F10 + F": {"outline": ch, "piece_m2": str(R.d6(piece.area)),
+                                 "column_pieces_m2": {h: str(R.d6(a)) for h, a in sorted(colp.items())},
+                                 "net_m2": str(R.d6(sb1_net)), "own_high_m3": str(sb1_hi),
+                                 "held_line": sb1_line["line_id"],
+                                 "held_line_bound_m3": [str(R.d6(sb1_line["held_low"])),
+                                                        str(R.d6(sb1_line["held_high"]))],
+                                 "agree_high": abs(sb1_hi - R.d6(sb1_line["held_high"])) <= R.TOL_M3,
+                                 "high_diff_m3": str(R.d6(sb1_hi - R.d6(sb1_line["held_high"]))),
+                                 "diff_cause": "drawing precision of the strap face end points (0.0001 m order)",
+                                 "note": "the column outline owns its plan; low end 0 (level of strap vs F10 + F not "
+                                         "printed, HELD with the outline, Q-31 C)"},
+              "SB3 in F3": "not re-measured: level model of T-230 (one straight strap, one level), held 0.0295 .. "
+                           "0.2683 cited"}
+
+    causes_f = {"COUNT F3 (two drawn outlines)":("ENGINE_RIGHT", rows_f[0]["own_delta"]),
                 "HELD F10 + F outline (Q-31 C)": ("HELD", rows_f[1]["own_delta"]),
                 "HELD boundary band (Q-28 A provisional)": ("HELD", rows_f[2]["own_delta"]),
                 "OVERLAP FN notch owned by F9": ("ENGINE_RIGHT", rows_f[3]["own_delta"]),
@@ -394,7 +420,8 @@ def build(dxf, workbook):
         "pads_total_m3": str(R.d6(pads_total)), "outline_count": len(outl), "overlapping_outline_pairs": 0,
         "lines": {
             "T-551/footing-line": {"engine_m3": sec["engine_valued"], "statement_delta_m3": sec["difference"],
-                                   "rows": rows_f, "split": {k: [c, str(R.d6(v))] for k, (c, v) in causes_f.items()}},
+                                   "rows": rows_f, "split": {k: [c, str(R.d6(v))] for k, (c, v) in causes_f.items()},
+                                   "beside_zero_components": beside},
             "T-551/lift-walls": {"engine_m3": lsec["engine_valued"], "statement_delta_m3": lsec["difference"],
                                  "rows": lrows, "split": {k: [c, str(R.d6(v))] for k, (c, v) in causes_l.items()}},
         },

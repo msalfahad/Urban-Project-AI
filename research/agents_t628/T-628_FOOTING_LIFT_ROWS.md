@@ -62,7 +62,10 @@ Pads: own 64.304 = engine pads to the m3 (15 marks, 25 outlines; 1B1B held); no 
   alone (R-T628-3); engine and reference agree; no owner item.
 - HELD stay HELD by name, never 0: F10 + F (Q-31 C, CONFLICT), band (Q-28: section and crossing levels), pit height (D-43).
   ERS s.2.7 not met: no owner question.
-- Not re-measured here: SB1 / SB3 pieces inside 1B1B / 166B (zero-valued components, held lines), blinding.
+- Beside (no row of his): SB1 inside 1B1B = strap faces 1689 / 1B1C clipped to the outline 0.805036 m2 less column C10
+  10E8 0.035 = 0.770036 m2 x 0.50 = 0.385018 m3: AGREE the held line L-abd65e1b745315dd17c2 high end 0.385 (+0.000018,
+  drawing precision); T-233's 0.4025 included the column plan. SB3 inside F3 (0.0295 .. 0.2683, T-230 level model) and the
+  blinding were not re-measured.
 
 ## 5. Rules, tests, lessons row (proposed)
 
