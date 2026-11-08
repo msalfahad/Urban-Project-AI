@@ -1,0 +1,1223 @@
+{
+ "drawing": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "evidence_count": {
+  "T-552/plaster-internal": {
+   "DIFFERS": 1,
+   "DRAWING-CONFIRMED": 14,
+   "HELD_untouched": 24
+  },
+  "T-561/paint-internal": {
+   "DIFFERS": 1,
+   "DRAWING-CONFIRMED": 15,
+   "HELD_untouched": 25
+  }
+ },
+ "gf02_wet": {
+  "chain": [
+   "11F",
+   "12B",
+   "118",
+   "12E"
+  ],
+  "face_lm_own": "7.200000",
+  "openings": [
+   {
+    "id": "A-GF-01",
+    "kind": "arch",
+    "width": "1.0"
+   },
+   {
+    "id": "D-GF-02",
+    "kind": "door",
+    "width": "0.8"
+   }
+  ],
+  "paint_refused": true
+ },
+ "governing": [
+  "Q-72 plaster to the slab / roof underside, paint to the finished ceiling",
+  "Q-48 A / owner G1 formula",
+  "Q-73 full opening deduction, reveals separate",
+  "Q-55 C door head 2.20",
+  "owner 2026-11-02 wet-area walls (no paint on a tiled face)",
+  "UP-FIN-PLASTER-001 returns",
+  "R-T547-1 row split",
+  "R-T606-1 / R-T621-1 outline geometry",
+  "ERS s.2 / s.3"
+ ],
+ "inputs_sha256_16": {
+  "SCORECARD_T620.json": "4e26155f2ae48c3a",
+  "T556_PLASTER_HEIGHT.json": "8169a1953c386cca",
+  "T634_DRAWN.json": "03157883316e40e0"
+ },
+ "returns": {
+  "both_sides_wet_m2": "3.899556",
+  "engine_valued": "23.07",
+  "note": "the paint return (ENGINE_OMISSION, fix row T-569) on a door with WET rooms on both sides meets tiled faces (one finish per face, R-T634-1 step 4): paint there is not established; the plaster (render) return stays on all 26",
+  "own_minus_engine": "-0.000444",
+  "own_total": "23.069556",
+  "paint_return_bound": [
+   "19.170000",
+   "23.069556"
+  ],
+  "rows": [
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-WEST-BED",
+    "id": "D-1F-01",
+    "jamb_face_handles": [
+     "C28",
+     "C27"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-WEST-BED",
+    "id": "D-1F-02",
+    "jamb_face_handles": [
+     "C21",
+     "AF1"
+    ],
+    "return_m2": "0.810000",
+    "t": "0.15",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-500x365",
+    "id": "D-1F-03",
+    "jamb_face_handles": [
+     "AEB",
+     "AEA"
+    ],
+    "return_m2": "0.810000",
+    "t": "0.15",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-500x365",
+    "id": "D-1F-04",
+    "jamb_face_handles": [
+     "C1C",
+     "C1B"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-LAUNDRY / B17",
+    "id": "D-1F-05",
+    "jamb_face_handles": [
+     "AFC",
+     "AFD"
+    ],
+    "return_m2": "1.060000",
+    "t": "0.2",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": true,
+    "head": "2.20",
+    "host": "T-621 1F-WC-LAUNDRY / AD3",
+    "id": "D-1F-06",
+    "jamb_face_handles": [
+     "ACF",
+     "AD2"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-BATH-LAUNDRY / B02",
+    "id": "D-1F-07",
+    "jamb_face_handles": [
+     "B04",
+     "B03"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-380x430 / AD8",
+    "id": "D-1F-08",
+    "jamb_face_handles": [
+     "AFB",
+     "AFA"
+    ],
+    "return_m2": "0.795000",
+    "t": "0.15",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-606 1F-CUR.ours / B1D",
+    "id": "D-1F-09",
+    "jamb_face_handles": [
+     "AFA",
+     "AF9"
+    ],
+    "return_m2": "0.795000",
+    "t": "0.15",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 1F-EAST-BATH / C0E",
+    "id": "D-1F-10",
+    "jamb_face_handles": [
+     "C10",
+     "C0F"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-606 2F-CORR.ours / 1283",
+    "id": "D-2F-01",
+    "jamb_face_handles": [
+     "1280",
+     "1281"
+    ],
+    "return_m2": "0.810000",
+    "t": "0.15",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-606 2F-MAID",
+    "id": "D-2F-02",
+    "jamb_face_handles": [
+     "1294",
+     "1295"
+    ],
+    "return_m2": "1.060000",
+    "t": "0.2",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-606 2F-MAID",
+    "id": "D-2F-03",
+    "jamb_face_handles": [
+     "128F",
+     "1290"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": true,
+    "head": "2.20",
+    "host": "T-621 GF-WASH-REC",
+    "id": "D-GF-02",
+    "jamb_face_handles": [
+     "116",
+     "115"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 GF-DRIVER / 11D",
+    "id": "D-GF-03",
+    "jamb_face_handles": [
+     "121",
+     "122"
+    ],
+    "return_m2": "1.060000",
+    "t": "0.2",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 GF-DRIVER / 130",
+    "id": "D-GF-04",
+    "jamb_face_handles": [
+     "132",
+     "133"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 GF-KITCHEN / A5",
+    "id": "D-GF-05",
+    "jamb_face_handles": [
+     "A3",
+     "A2"
+    ],
+    "return_m2": "1.080000",
+    "t": "0.2",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-622 PANTRY / 158",
+    "id": "D-GF-06",
+    "jamb_face_handles": [
+     "15B",
+     "15A"
+    ],
+    "return_m2": "1.080000",
+    "t": "0.2",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.50",
+    "host": "T-612 GF-OPEN.full / AB",
+    "id": "D-GF-07",
+    "jamb_face_handles": [
+     "9D",
+     "9E"
+    ],
+    "return_m2": "1.400000",
+    "t": "0.2",
+    "width": "2.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "PIECE GF-STAIR-HALL / 220",
+    "id": "D-GF-08",
+    "jamb_face_handles": [
+     "20F",
+     "20E"
+    ],
+    "return_m2": "1.080000",
+    "t": "0.2",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "PIECE GF-STAIR-LOBBY / 26F",
+    "id": "D-GF-09",
+    "jamb_face_handles": [
+     "2B9",
+     "2B8"
+    ],
+    "return_m2": "1.060000",
+    "t": "0.2",
+    "width": "0.9"
+   },
+   {
+    "both_sides_wet": true,
+    "head": "2.20",
+    "host": "T-621 GF-WC-STAIR / 2AF",
+    "id": "D-GF-10",
+    "jamb_face_handles": [
+     "2B1",
+     "2B2"
+    ],
+    "return_m2": "0.779556",
+    "t": "0.15",
+    "width": "0.797039"
+   },
+   {
+    "both_sides_wet": true,
+    "head": "2.20",
+    "host": "T-621 GF-WC-CORE-289 / 31F",
+    "id": "D-GF-11",
+    "jamb_face_handles": [
+     "31B",
+     "31A"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": true,
+    "head": "2.20",
+    "host": "T-621 GF-WC-CORE-245 / 31D",
+    "id": "D-GF-12",
+    "jamb_face_handles": [
+     "31A",
+     "317"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 GF-MASTER",
+    "id": "D-GF-13",
+    "jamb_face_handles": [
+     "2E4",
+     "2E3"
+    ],
+    "return_m2": "0.810000",
+    "t": "0.15",
+    "width": "1.0"
+   },
+   {
+    "both_sides_wet": false,
+    "head": "2.20",
+    "host": "T-621 GF-MASTER",
+    "id": "D-GF-14",
+    "jamb_face_handles": [
+     "2E5",
+     "2E6"
+    ],
+    "return_m2": "0.780000",
+    "t": "0.15",
+    "width": "0.8"
+   }
+  ]
+ },
+ "rooms": {
+  "1F-01": {
+   "chain": [
+    "C2A",
+    "C1F",
+    "C24",
+    "B40"
+   ],
+   "chain_source": "T-621 1F-WEST-BED",
+   "face_lm_engine": "17.7",
+   "face_lm_own": "17.700000",
+   "line_id": "L-af9621f43bc316a871ea",
+   "openings": [
+    {
+     "edge": "C2A",
+     "head": "2.20",
+     "id": "D-1F-01",
+     "kind": "door",
+     "part_m2": "1.760000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "0.8"
+    },
+    {
+     "edge": "C1F",
+     "head": "2.20",
+     "id": "D-1F-02",
+     "kind": "door",
+     "part_m2": "2.200000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "1.0"
+    },
+    {
+     "edge": "B40",
+     "head": "3.00",
+     "id": "W14",
+     "kind": "window",
+     "part_m2": "3.919638",
+     "sill": "1.40",
+     "source": "T-175 PRINTED (height 160 SE DIMENSION 2B47, T-627 own read; sill 1.40)",
+     "width": "2.449774"
+    }
+   ],
+   "paint_G1": {
+    "H": "3.35",
+    "basis": "FINISHED_CEILING",
+    "class": "TOLERANCE",
+    "engine_line": "51.415",
+    "gross": "59.295000",
+    "line_minus_own": "-0.000362",
+    "net_own": "51.415362",
+    "openings": "7.879638",
+    "source": "owner G1 room formula (Q-48 A): interval - 0.60 - 0.15 - 0.10 = GF 3.65 / 1F, 2F 3.35, FINISHED_CEILING basis"
+   },
+   "plaster_Q72_beside": {
+    "H": "3.99",
+    "basis": "SLAB_SOFFIT",
+    "beam_ends": [
+     "0.136000",
+     "0.170000"
+    ],
+    "gross": "70.623000",
+    "net_own": [
+     "62.573362",
+     "62.607362"
+    ],
+    "openings": "7.879638",
+    "own_minus_t556": [
+     "0.000362",
+     "0.000362"
+    ],
+    "source": "T-556 (merged): slab 0.16 + floor build-up 0.05 (T-214 DRAWING-CONFIRMED) / roof DRAWN-SECTION SCENARIO 0.05 (D-39 / DCR-6, ESTIMATED)",
+    "status": "HELD: HELD on the roof build-up over 17.70 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts",
+    "t556_net": [
+     "62.5730",
+     "62.6070"
+    ]
+   },
+   "split": {
+    "height": "0.885000",
+    "length": "-0.680000",
+    "line_residual": "0.000362",
+    "openings": "7.879638",
+    "own_net": "51.415362",
+    "residual_class": "TOLERANCE",
+    "total": "8.085000"
+   },
+   "zone": "1F"
+  },
+  "1F-04": {
+   "chain": [
+    "AE6",
+    "AF8",
+    "AE9",
+    "C1E"
+   ],
+   "chain_source": "T-621 1F-500x365",
+   "face_lm_engine": "17.4",
+   "face_lm_own": "17.400000",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "openings": [
+    {
+     "edge": "AE6",
+     "head": "2.50",
+     "id": "W24",
+     "kind": "window",
+     "part_m2": "2.328480",
+     "sill": "1.00",
+     "source": "T-627 / T-201 DRAWING-CONFIRMED NE outline +6.50 .. +8.00 over the 1F +5.50",
+     "width": "1.55232"
+    },
+    {
+     "edge": "AE9",
+     "head": "2.20",
+     "id": "D-1F-03",
+     "kind": "door",
+     "part_m2": "2.200000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "1.0"
+    },
+    {
+     "edge": "C1E",
+     "head": "2.20",
+     "id": "D-1F-04",
+     "kind": "door",
+     "part_m2": "1.760000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "0.8"
+    }
+   ],
+   "paint_G1": {
+    "H": "3.35",
+    "basis": "FINISHED_CEILING",
+    "class": "TOLERANCE",
+    "engine_line": "52.005",
+    "gross": "58.290000",
+    "line_minus_own": "0.003480",
+    "net_own": "52.001520",
+    "openings": "6.288480",
+    "source": "owner G1 room formula (Q-48 A): interval - 0.60 - 0.15 - 0.10 = GF 3.65 / 1F, 2F 3.35, FINISHED_CEILING basis"
+   },
+   "plaster_Q72_beside": {
+    "H": "3.99",
+    "basis": "SLAB_SOFFIT",
+    "beam_ends": [
+     "0.000000",
+     "0.000000"
+    ],
+    "gross": "69.426000",
+    "net_own": [
+     "63.137520",
+     "63.137520"
+    ],
+    "openings": "6.288480",
+    "own_minus_t556": [
+     "-0.003480",
+     "-0.003480"
+    ],
+    "source": "T-556 (merged): slab 0.16 + floor build-up 0.05 (T-214 DRAWING-CONFIRMED) / roof DRAWN-SECTION SCENARIO 0.05 (D-39 / DCR-6, ESTIMATED)",
+    "status": "HELD: HELD on the roof build-up over 17.40 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed",
+    "t556_net": [
+     "63.1410",
+     "63.1410"
+    ]
+   },
+   "split": {
+    "height": "0.870000",
+    "length": "-0.340000",
+    "line_residual": "-0.003480",
+    "openings": "6.288480",
+    "own_net": "52.001520",
+    "residual_class": "TOLERANCE",
+    "total": "6.815000"
+   },
+   "zone": "1F"
+  },
+  "2F-03": {
+   "chain": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ],
+   "chain_source": "T-606 2F-MAID",
+   "face_lm_engine": "18.9",
+   "face_lm_own": "18.900000",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "openings": [
+    {
+     "edge": "1279",
+     "head": "2.50",
+     "id": "W29",
+     "kind": "window",
+     "part_m2": "1.800000",
+     "sill": "1.00",
+     "source": "T-627 / T-201 DRAWING-CONFIRMED SW outline +10.70 .. +12.20 over the 2F +9.70",
+     "width": "1.2"
+    },
+    {
+     "edge": "128B",
+     "head": "2.20",
+     "id": "D-2F-03",
+     "kind": "door",
+     "part_m2": "1.760000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "0.8"
+    },
+    {
+     "edge": "128B",
+     "head": "2.20",
+     "id": "D-2F-02",
+     "kind": "door",
+     "part_m2": "1.980000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "0.9"
+    }
+   ],
+   "paint_G1": {
+    "H": "3.35",
+    "basis": "FINISHED_CEILING",
+    "class": "TOLERANCE",
+    "engine_line": "57.775",
+    "gross": "63.315000",
+    "line_minus_own": "0.000000",
+    "net_own": "57.775000",
+    "openings": "5.540000",
+    "source": "owner G1 room formula (Q-48 A): interval - 0.60 - 0.15 - 0.10 = GF 3.65 / 1F, 2F 3.35, FINISHED_CEILING basis"
+   },
+   "plaster_Q72_beside": {
+    "H": "3.99",
+    "basis": "SLAB_SOFFIT",
+    "beam_ends": [
+     "0.096000",
+     "0.096000"
+    ],
+    "gross": "75.411000",
+    "net_own": [
+     "69.775000",
+     "69.775000"
+    ],
+    "openings": "5.540000",
+    "own_minus_t556": [
+     "0.000000",
+     "0.000000"
+    ],
+    "source": "T-556 (merged): slab 0.16 + floor build-up 0.05 (T-214 DRAWING-CONFIRMED) / roof DRAWN-SECTION SCENARIO 0.05 (D-39 / DCR-6, ESTIMATED)",
+    "status": "HELD: HELD on the roof build-up over 18.90 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed",
+    "t556_net": [
+     "69.7750",
+     "69.7750"
+    ]
+   },
+   "split": {
+    "height": "0.945000",
+    "length": "0.000000",
+    "line_residual": "0.000000",
+    "openings": "5.540000",
+    "own_net": "57.775000",
+    "residual_class": "TOLERANCE",
+    "total": "6.485000"
+   },
+   "zone": "2F"
+  },
+  "GF-15": {
+   "chain": [
+    "2B5",
+    "27D#0",
+    "27D#1",
+    "2E2",
+    "2E0",
+    "319",
+    "2E7",
+    "2DE"
+   ],
+   "chain_source": "T-621 GF-MASTER",
+   "face_lm_engine": "21.537",
+   "face_lm_own": "21.534454",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "openings": [
+    {
+     "edge": "27D#1",
+     "head": "4.30",
+     "id": "W03",
+     "kind": "glazing",
+     "part_m2": "18.621789",
+     "sill": "0",
+     "source": "T-175 / T-150 PRINTED NW elevation +1.00 .. +5.30 (sill 0 on the GF FFL); width = the room-side glazing face 27D (layer W) at its true length",
+     "width": "5.10186"
+    },
+    {
+     "edge": "2E2",
+     "head": "2.20",
+     "id": "D-GF-13",
+     "kind": "door",
+     "part_m2": "2.200000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "1.0"
+    },
+    {
+     "edge": "2E7",
+     "head": "2.20",
+     "id": "D-GF-14",
+     "kind": "door",
+     "part_m2": "1.760000",
+     "sill": "0",
+     "source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn (gap between the face pieces)",
+     "width": "0.8"
+    }
+   ],
+   "paint_G1": {
+    "H": "3.65",
+    "basis": "FINISHED_CEILING",
+    "class": "TOLERANCE",
+    "engine_line": "56.0131",
+    "gross": "78.600757",
+    "line_minus_own": "-0.005868",
+    "net_own": "56.018968",
+    "openings": "22.581789",
+    "source": "owner G1 room formula (Q-48 A): interval - 0.60 - 0.15 - 0.10 = GF 3.65 / 1F, 2F 3.35, FINISHED_CEILING basis"
+   },
+   "plaster_Q72_beside": {
+    "H": "4.29",
+    "basis": "SLAB_SOFFIT",
+    "beam_ends": [
+     "0.000000",
+     "0.000000"
+    ],
+    "gross": "92.382808",
+    "net_own": [
+     "66.535828",
+     "66.535828"
+    ],
+    "openings": "25.846979",
+    "own_minus_t556": [
+     "0.006838",
+     "0.006838"
+    ],
+    "source": "T-556 (merged): slab 0.16 + floor build-up 0.05 (T-214 DRAWING-CONFIRMED) / roof DRAWN-SECTION SCENARIO 0.05 (D-39 / DCR-6, ESTIMATED)",
+    "status": "HELD: HELD on the roof build-up over 3.23055 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 18.30645 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16)",
+    "t556_net": [
+     "66.5289900",
+     "66.5289900"
+    ]
+   },
+   "split": {
+    "height": "-1.076723",
+    "length": "-1.744034",
+    "line_residual": "0.005868",
+    "openings": "22.581789",
+    "own_net": "56.018968",
+    "residual_class": "TOLERANCE",
+    "total": "19.766900"
+   },
+   "zone": "GF_MAIN"
+  }
+ },
+ "rows": [
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DIFFERS",
+   "name": "GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area per room side)",
+   "own": "22.581789",
+   "own_minus_stated": "-0.015161",
+   "row_index": 5,
+   "section": "T-552/plaster-internal",
+   "stated": "22.596950"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "ENGINE_WRONG",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "GF-15 height: his 3.6 vs the line's owner G1 3.65 on face 21.537",
+   "own": "-1.076723",
+   "own_minus_stated": "0.000127",
+   "row_index": 6,
+   "section": "T-552/plaster-internal",
+   "stated": "-1.076850"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "GF-15 length: his rows vs the drawn face 21.537 lm (at his height)",
+   "own": "-1.744034",
+   "own_minus_stated": "0.009166",
+   "row_index": 7,
+   "section": "T-552/plaster-internal",
+   "stated": "-1.753200"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area per room side)",
+   "own": "7.879638",
+   "own_minus_stated": "-0.000362",
+   "row_index": 11,
+   "section": "T-552/plaster-internal",
+   "stated": "7.880000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "ENGINE_WRONG",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-01 height: his 3.4 vs the line's owner G1 3.35 on face 17.7",
+   "own": "0.885000",
+   "own_minus_stated": "0.000000",
+   "row_index": 12,
+   "section": "T-552/plaster-internal",
+   "stated": "0.885000"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-01 length: his rows vs the drawn face 17.7 lm (at his height)",
+   "own": "-0.680000",
+   "own_minus_stated": "0.000000",
+   "row_index": 13,
+   "section": "T-552/plaster-internal",
+   "stated": "-0.680000"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area per room side)",
+   "own": "6.288480",
+   "own_minus_stated": "0.003480",
+   "row_index": 14,
+   "section": "T-552/plaster-internal",
+   "stated": "6.285000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "ENGINE_WRONG",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-04 height: his 3.4 vs the line's owner G1 3.35 on face 17.4",
+   "own": "0.870000",
+   "own_minus_stated": "0.000000",
+   "row_index": 15,
+   "section": "T-552/plaster-internal",
+   "stated": "0.870000"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "1F-04 length: his rows vs the drawn face 17.4 lm (at his height)",
+   "own": "-0.340000",
+   "own_minus_stated": "0.000000",
+   "row_index": 16,
+   "section": "T-552/plaster-internal",
+   "stated": "-0.340000"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area per room side)",
+   "own": "5.540000",
+   "own_minus_stated": "0.000000",
+   "row_index": 26,
+   "section": "T-552/plaster-internal",
+   "stated": "5.540000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "ENGINE_WRONG",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "2F-03 height: his 3.4 vs the line's owner G1 3.35 on face 18.9",
+   "own": "0.945000",
+   "own_minus_stated": "0.000000",
+   "row_index": 27,
+   "section": "T-552/plaster-internal",
+   "stated": "0.945000"
+  },
+  {
+   "basis": "own F (chain 11F / 12B / 118 / 12E) x his 3.6 (WET space, Q-06 A)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "GF-02 wet space in his dry rows: drawn face 7.2 x his 3.6",
+   "own": "25.920000",
+   "own_minus_stated": "0.000000",
+   "row_index": 31,
+   "section": "T-552/plaster-internal",
+   "stated": "25.920000"
+  },
+  {
+   "basis": "(his 6.75 - own F 7.2) x 3.6",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "GF-02 length: his row vs the drawn face 7.2",
+   "own": "-1.620000",
+   "own_minus_stated": "0.000000",
+   "row_index": 32,
+   "section": "T-552/plaster-internal",
+   "stated": "-1.620000"
+  },
+  {
+   "basis": "his two rows (2.50 x 5.40 + 11.25 x 3.60); no drawn face: the GF stair-hall / lobby piece outlines re-read (12.3 / 4.6 lm, wall-layer 6.6 / 2.3 lm) lie inside the T-173 box",
+   "class": "UNRESOLVED",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "SHAFT: SHAFT RESIDUAL: his row 24 (2.50 x 5.40 = 13.50, matches no drawn face, T-173) + his row 8 'stair wall' (11.25 x 3.60 = 40.50: no stair face outside the ",
+   "own": "54.000000",
+   "own_minus_stated": "0.000000",
+   "row_index": 37,
+   "section": "T-552/plaster-internal",
+   "stated": "54.000000"
+  },
+  {
+   "basis": "his 14 x 0.20 x 5.70 - own 26 returns (t x (2 x head + w), each re-read)",
+   "class": "UNRESOLVED",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "RETURN RESIDUAL: door count / size: the engine values 26 openings by id (2 x wall t x head + wall t x width, UP-FIN-PLASTER-001, PROVISIONAL) against his 14 doo",
+   "own": "-7.109556",
+   "own_minus_stated": "0.000444",
+   "row_index": 38,
+   "section": "T-552/plaster-internal",
+   "stated": "-7.110000"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DIFFERS",
+   "name": "DRY GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area inside the paint height)",
+   "own": "22.581789",
+   "own_minus_stated": "-0.015161",
+   "row_index": 5,
+   "section": "T-561/paint-internal",
+   "stated": "22.596950"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY GF-15 height: his 3.6 vs the owner G1 paint height 3.65 on face 21.537",
+   "own": "-1.076723",
+   "own_minus_stated": "0.000127",
+   "row_index": 6,
+   "section": "T-561/paint-internal",
+   "stated": "-1.076850"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY GF-15 length: his rows vs the drawn face 21.537 lm (at his height)",
+   "own": "-1.744034",
+   "own_minus_stated": "0.009166",
+   "row_index": 7,
+   "section": "T-561/paint-internal",
+   "stated": "-1.753200"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area inside the paint height)",
+   "own": "7.879638",
+   "own_minus_stated": "-0.000362",
+   "row_index": 11,
+   "section": "T-561/paint-internal",
+   "stated": "7.880000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-01 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.7",
+   "own": "0.885000",
+   "own_minus_stated": "0.000000",
+   "row_index": 12,
+   "section": "T-561/paint-internal",
+   "stated": "0.885000"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-01 length: his rows vs the drawn face 17.7 lm (at his height)",
+   "own": "-0.680000",
+   "own_minus_stated": "0.000000",
+   "row_index": 13,
+   "section": "T-561/paint-internal",
+   "stated": "-0.680000"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area inside the paint height)",
+   "own": "6.288480",
+   "own_minus_stated": "0.003480",
+   "row_index": 14,
+   "section": "T-561/paint-internal",
+   "stated": "6.285000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-04 height: his 3.4 vs the owner G1 paint height 3.35 on face 17.4",
+   "own": "0.870000",
+   "own_minus_stated": "0.000000",
+   "row_index": 15,
+   "section": "T-561/paint-internal",
+   "stated": "0.870000"
+  },
+  {
+   "basis": "(his L - own F) x his H",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 1F-04 length: his rows vs the drawn face 17.4 lm (at his height)",
+   "own": "-0.340000",
+   "own_minus_stated": "0.000000",
+   "row_index": 16,
+   "section": "T-561/paint-internal",
+   "stated": "-0.340000"
+  },
+  {
+   "basis": "own openings at G1 (drawn widths, heads per source)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area inside the paint height)",
+   "own": "5.540000",
+   "own_minus_stated": "0.000000",
+   "row_index": 26,
+   "section": "T-561/paint-internal",
+   "stated": "5.540000"
+  },
+  {
+   "basis": "(his H - G1) x own F",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY 2F-03 height: his 3.4 vs the owner G1 paint height 3.35 on face 18.9",
+   "own": "0.945000",
+   "own_minus_stated": "0.000000",
+   "row_index": 27,
+   "section": "T-561/paint-internal",
+   "stated": "0.945000"
+  },
+  {
+   "basis": "own F (chain 11F / 12B / 118 / 12E) x his 3.6 (WET space, Q-06 A)",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY GF-02 wet space in his paint rows: drawn face 7.2 x his 3.6 (he also tiles it: his ceramic sheet row 51, T-547)",
+   "own": "25.920000",
+   "own_minus_stated": "0.000000",
+   "row_index": 31,
+   "section": "T-561/paint-internal",
+   "stated": "25.920000"
+  },
+  {
+   "basis": "(his 6.75 - own F 7.2) x 3.6",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "DRY GF-02 length: his row vs the drawn face 7.2",
+   "own": "-1.620000",
+   "own_minus_stated": "0.000000",
+   "row_index": 32,
+   "section": "T-561/paint-internal",
+   "stated": "-1.620000"
+  },
+  {
+   "basis": "his two rows (2.50 x 5.40 + 11.25 x 3.60); no drawn face: the GF stair-hall / lobby piece outlines re-read (12.3 / 4.6 lm, wall-layer 6.6 / 2.3 lm) lie inside the T-173 box",
+   "class": "UNRESOLVED",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "SHAFT: SHAFT RESIDUAL: his row 25 (2.50 x 5.40 = 13.50, matches no drawn face, T-173) + his row 8 'stair wall' (11.25 x 3.60 = 40.50: no stair face outside the ",
+   "own": "54.000000",
+   "own_minus_stated": "0.000000",
+   "row_index": 38,
+   "section": "T-561/paint-internal",
+   "stated": "54.000000"
+  },
+  {
+   "basis": "own 26 returns (t x (2 x head + w), each re-read)",
+   "class": "ENGINE_WRONG",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "RETURN: return faces (jambs + head) of 26 doors: no FIN.PAINT return line in the candidate (ENGINE_OMISSION); the plastered return face of each opening (UP-FIN-",
+   "own": "23.069556",
+   "own_minus_stated": "-0.000444",
+   "row_index": 39,
+   "section": "T-561/paint-internal",
+   "stated": "23.070000"
+  },
+  {
+   "basis": "his 14 x 0.20 x 5.70 - own 26 returns (t x (2 x head + w), each re-read)",
+   "class": "UNRESOLVED",
+   "evidence": "DRAWING-CONFIRMED",
+   "name": "RETURN: RETURN RESIDUAL: door count / size: 26 openings by id (T-292) against his 14 doors x 0.2 x 5.7; his doors are not listed by id",
+   "own": "-7.109556",
+   "own_minus_stated": "0.000444",
+   "row_index": 40,
+   "section": "T-561/paint-internal",
+   "stated": "-7.110000"
+  }
+ ],
+ "rule": "R-T634-1",
+ "schema": "T634_PLASTER_PAINT_REMEASURE_V1",
+ "shaft_pieces": {
+  "GF-STAIR-HALL": {
+   "chain": [
+    "220",
+    "21C",
+    "490",
+    "47E",
+    "47C",
+    "157",
+    "DE",
+    "298"
+   ],
+   "edges": [
+    {
+     "handle": "220",
+     "layer": "1",
+     "lm": "2.5"
+    },
+    {
+     "handle": "21C",
+     "layer": "1",
+     "lm": "2.95"
+    },
+    {
+     "handle": "490",
+     "layer": "5",
+     "lm": "1.15"
+    },
+    {
+     "handle": "47E",
+     "layer": "2",
+     "lm": "2.5"
+    },
+    {
+     "handle": "47C",
+     "layer": "2",
+     "lm": "0.2"
+    },
+    {
+     "handle": "157",
+     "layer": "5",
+     "lm": "0.7"
+    },
+    {
+     "handle": "DE",
+     "layer": "2",
+     "lm": "1.15"
+    },
+    {
+     "handle": "298",
+     "layer": "1",
+     "lm": "1.15"
+    }
+   ],
+   "perimeter": "12.3",
+   "storey": "GF",
+   "wall_layer_lm": "6.6"
+  },
+  "GF-STAIR-LOBBY": {
+   "chain": [
+    "481",
+    "21B",
+    "26F",
+    "47E"
+   ],
+   "edges": [
+    {
+     "handle": "481",
+     "layer": "5",
+     "lm": "1.15"
+    },
+    {
+     "handle": "21B",
+     "layer": "1",
+     "lm": "1.15"
+    },
+    {
+     "handle": "26F",
+     "layer": "1",
+     "lm": "1.15"
+    },
+    {
+     "handle": "47E",
+     "layer": "2",
+     "lm": "1.15"
+    }
+   ],
+   "perimeter": "4.6",
+   "storey": "GF",
+   "wall_layer_lm": "2.3"
+  }
+ },
+ "split": {
+  "T-552/plaster-internal": {
+   "exact": true,
+   "line_residuals_sum": "0.002750",
+   "own_rows_plus_residuals": "112.341900",
+   "own_rows_sum": "112.339594",
+   "return_line_residual": "-0.000444",
+   "scorecard_unknown_signed": "112.34190",
+   "stated_unknown_sum": "112.341900"
+  },
+  "T-561/paint-internal": {
+   "exact": true,
+   "line_residuals_sum": "0.002750",
+   "own_rows_plus_residuals": "135.411900",
+   "own_rows_sum": "135.409150",
+   "return_line_residual": "0.000000",
+   "scorecard_unknown_signed": "135.41190",
+   "stated_unknown_sum": "135.411900"
+  }
+ }
+}
