@@ -1,0 +1,1090 @@
+{
+ "count": {
+  "by_evidence": {
+   "DIFFERS": 1,
+   "DRAWING_CONFIRMED": 23
+  },
+  "rows": 24
+ },
+ "drawing": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "floor_own_total_m2": "85.575708",
+ "governing": [
+  "UP-WP-001 .. 005",
+  "UP-WP-LAY-001",
+  "UP-WP-ROOF-001",
+  "UP-WET-001 / 002",
+  "Q-37 A",
+  "Q-30",
+  "Q-29",
+  "Q-24",
+  "Q-34 (top roof HELD)",
+  "R-T621-1 (evidence statuses)",
+  "R-T606-1 (outline geometry)",
+  "ERS s.2 / s.3"
+ ],
+ "held": [
+  {
+   "delta": "34.390242",
+   "lines": "L-3e8fe55da71851816dd4 / L-aac1f35e08f85b643692",
+   "row": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
+   "waits_on": "Q-34 (top roof +13.90 has no roof plan)"
+  }
+ ],
+ "roof_fields_own_m2": {
+  "ROOF-1390": "49.665000",
+  "ROOF-430": "55.560332",
+  "ROOF-970": "146.532000",
+  "TERRACE-550": "32.721000"
+ },
+ "roof_residual_proposal": {
+  "delta": "0.523",
+  "parts": [
+   {
+    "class": "TOLERANCE",
+    "evidence": "READING: own ROOF-430 (T-321 handles, exact arc) - engine line; DRAWING_CONFIRMED",
+    "name": "engine arc discretisation of the +4.30 annex roof corner arc B2B (line L-d57d2dc2 55.559 vs own exact-arc 55.560332)",
+    "qty": "0.001332"
+   },
+   {
+    "class": "UNRESOLVED",
+    "evidence": "none: the reference row has no sub-rows",
+    "name": "RESIDUAL (remainder)",
+    "qty": "0.521668"
+   }
+  ],
+  "remainder_evidence": "DRAWING_CONFIRMED",
+  "remainder_expected_minus_delta": "0.000000",
+  "row": "T-541/membrane RESIDUAL"
+ },
+ "room_table": [
+  {
+   "chain_from": "T-621 GF-LOBBY-WASH",
+   "drawn_symbols_inside": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ],
+   "engine": "4.730695",
+   "handles": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "his": "4.73",
+   "line_id": "L-e37ce315bbb83a4630cf",
+   "own": "4.730695",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "9.498855",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "703=2.050000X",
+    "874=0.935172X"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF lobby wash (2 basins)",
+   "wet_basis": "FIXTURES: 2 basins + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-BASIN-STAIR",
+   "drawn_symbols_inside": [
+    "WASH2"
+   ],
+   "engine": "1.485",
+   "handles": [
+    "2B2",
+    "215",
+    "218",
+    "211"
+   ],
+   "his": "1.7",
+   "line_id": "L-514c78e25600e261a37c",
+   "own": "1.485",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "4.9",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "70F=1.100000Y"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF basin space by the stair",
+   "wet_basis": "FIXTURES: basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-MASTER-BATH",
+   "drawn_symbols_inside": [],
+   "engine": "3.717683",
+   "handles": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "his": "3.7",
+   "line_id": "L-538c929be1d81708f09f",
+   "own": "3.717683",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "7.624665",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "777=2.000000Y",
+    "78E=2.100000X"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF master bath",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-WC-CORE-245",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "2.36761",
+   "handles": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "his": "2.3",
+   "line_id": "L-875de0625f00bf4128fc",
+   "own": "2.367609",
+   "own_minus_engine": "-0.000001",
+   "perimeter_lm": "6.809808",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "7D3=2.448717X",
+    "7F7=1.672071Y"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF core W.C. 245 x 167 (wedge)",
+   "wet_basis": "FIXTURES: WC + shower + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-WC-CORE-289",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "2.675221",
+   "handles": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "his": "2.67",
+   "line_id": "L-ed8d62f6e695b361d8f6",
+   "own": "2.675221",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "7.414037",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "7DF=2.887272Y",
+    "7EB=1.665409X"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF core W.C. 289 x 167 (wedge)",
+   "wet_basis": "FIXTURES: WC + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-WC-STAIR",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "2.3625",
+   "handles": [
+    "271",
+    "213",
+    "2AF",
+    "210"
+   ],
+   "his": "2.36",
+   "line_id": "L-3e5759e5282160f313b6",
+   "own": "2.3625",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "6.2",
+   "printed_basis": "printed 1.350000 x 1.750000 (749 / 726)",
+   "printed_dims": [
+    "726=1.750000Y",
+    "749=1.350000X"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "2.362500",
+   "room": "GF stair-core W.C. 175 x 135",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-KITCHEN",
+   "drawn_symbols_inside": [
+    "LE",
+    "kit"
+   ],
+   "engine": "9.630001",
+   "handles": [
+    "11A",
+    "136",
+    "14F",
+    "135",
+    "111",
+    "A5"
+   ],
+   "his": "9.55",
+   "line_id": "L-2c557dad8748a2c2848b",
+   "own": "9.63",
+   "own_minus_engine": "-0.000001",
+   "perimeter_lm": "14.5",
+   "printed_basis": "printed 523 x 635 + 641 x (605 - 635) + notch",
+   "printed_dims": [
+    "523=2.700000X",
+    "605=4.500000Y",
+    "635=3.000000Y",
+    "641=1.050000X"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "9.630000",
+   "room": "GF kitchen",
+   "wet_basis": "FIXTURES: FD 4in (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "new (T-626)",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "1.95",
+   "handles": [
+    "112",
+    "134",
+    "14E",
+    "132"
+   ],
+   "his": "1.95",
+   "line_id": "L-81e5c35fcaba34dd8e3e",
+   "own": "1.95",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "5.6",
+   "printed_basis": "printed 1.500000 x 1.300000 (658 / 61E)",
+   "printed_dims": [
+    "61E=1.300000Y",
+    "658=1.500000X"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "1.950000",
+   "room": "GF driver W.C.",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-WC-REC",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "3.375",
+   "handles": [
+    "115",
+    "129",
+    "114",
+    "12D"
+   ],
+   "his": "3.37",
+   "line_id": "L-d7899629d78501dc3b66",
+   "own": "3.375",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "7.5",
+   "printed_basis": "printed 1.500000 x 2.250000 (551 / 5A4)",
+   "printed_dims": [
+    "551=1.500000X",
+    "5A4=2.250000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "3.375000",
+   "room": "GF W.C. by the reception room",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 GF-WASH-REC",
+   "drawn_symbols_inside": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ],
+   "engine": "3.1325",
+   "handles": [
+    "11F",
+    "12B",
+    "118",
+    "12E"
+   ],
+   "his": "3.15",
+   "line_id": "L-0c6db650bad175d34abb",
+   "own": "3.1325",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "7.2",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "5BD=2.100000Y"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "GF wash by the reception room",
+   "wet_basis": "FIXTURES: 2 basins + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-EAST-BATH",
+   "drawn_symbols_inside": [
+    "bath"
+   ],
+   "engine": "4.725",
+   "handles": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "his": "4.72",
+   "line_id": "L-ef429ae8e32c8b5cc641",
+   "own": "4.725",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "8.7",
+   "printed_basis": "printed 2.250000 x 2.100000 (F7C / FAA)",
+   "printed_dims": [
+    "F7C=2.250000X",
+    "FAA=2.100000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "4.725000",
+   "room": "1F east bath 210 x 225",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-BATH-LAUNDRY",
+   "drawn_symbols_inside": [
+    "bath"
+   ],
+   "engine": "3.5775",
+   "handles": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "his": "3.6",
+   "line_id": "L-6477c7ef451aae374ecc",
+   "own": "3.5775",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "7.6",
+   "printed_basis": "printed 2.000000 x 1.800000 (ED1 / F0F) -0.0225 column notch 2FE7",
+   "printed_dims": [
+    "ED1=2.000000X",
+    "F0F=1.800000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "3.577500",
+   "room": "1F bath by the laundry",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-WC-LAUNDRY",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "2.646",
+   "handles": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "his": "2.59",
+   "line_id": "L-75a5ef579ff6ffa1cf0a",
+   "own": "2.646",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "6.54",
+   "printed_basis": "printed 1.470000 x 1.800000 (FC2 / FD9)",
+   "printed_dims": [
+    "FC2=1.470000X",
+    "FD9=1.800000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "2.646000",
+   "room": "1F W.C. by the laundry",
+   "wet_basis": "FIXTURES: WC + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-WBATH-1",
+   "drawn_symbols_inside": [
+    "bath"
+   ],
+   "engine": "5.0225",
+   "handles": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "his": "5",
+   "line_id": "L-790a3049c29eda7dad2a",
+   "own": "5.0225",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "9.0",
+   "printed_basis": "printed 2.050000 x 2.450000 (1008 / 10AB)",
+   "printed_dims": [
+    "1008=2.050000X",
+    "10AB=2.450000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "5.022500",
+   "room": "1F west bath A 245 x 205",
+   "wet_basis": "FIXTURES: WC + shower + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-WBATH-2",
+   "drawn_symbols_inside": [
+    "bath"
+   ],
+   "engine": "5.0225",
+   "handles": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "his": "5",
+   "line_id": "L-f15325df772daa7ceec0",
+   "own": "5.0225",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "9.0",
+   "printed_basis": "printed 2.050000 x 2.450000 (101F / FE5)",
+   "printed_dims": [
+    "101F=2.050000X",
+    "FE5=2.450000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "5.022500",
+   "room": "1F west bath B 245 x 205",
+   "wet_basis": "FIXTURES: WC + shower + basin + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 1F-LAUNDRY",
+   "drawn_symbols_inside": [
+    "laun"
+   ],
+   "engine": "10.151",
+   "handles": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "his": "10",
+   "line_id": "L-66501a74bc489a80d283",
+   "own": "10.151",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "16.94",
+   "printed_basis": "chain only (printed sides listed)",
+   "printed_dims": [
+    "1071=3.470000X",
+    "D6F=3.000000Y",
+    "DB7=1.850000X",
+    "EA1=1.470000X",
+    "EDD=3.050000Y"
+   ],
+   "printed_minus_own": null,
+   "printed_second_read": null,
+   "room": "1F laundry",
+   "wet_basis": "FIXTURES: FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "T-621 2F-ROOF-WC",
+   "drawn_symbols_inside": [
+    "WC"
+   ],
+   "engine": "5.55",
+   "handles": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "his": "5.62",
+   "line_id": "L-bed47a63708c41b2b150",
+   "own": "5.55",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "9.7",
+   "printed_basis": "printed 1.850000 x 3.000000 (13F1 / 13D8)",
+   "printed_dims": [
+    "13D8=3.000000Y",
+    "13F1=1.850000X"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "5.550000",
+   "room": "2F roof-floor W.C. 300 x 185",
+   "wet_basis": "FIXTURES: WC + basin + shower + FD (sanitary drawing via T-074 hand table)"
+  },
+  {
+   "chain_from": "new (T-626)",
+   "drawn_symbols_inside": [
+    "LE",
+    "PAN"
+   ],
+   "engine": "13.455",
+   "handles": [
+    "A6",
+    "B3",
+    "158",
+    "AF"
+   ],
+   "his": null,
+   "line_id": "L-f32abcdb3b4db6877c64",
+   "own": "13.455",
+   "own_minus_engine": "0.000000",
+   "perimeter_lm": "15.0",
+   "printed_basis": "printed 3.000000 x 4.500000 (5D5 / 5E1) -0.045 column notch 2FAE",
+   "printed_dims": [
+    "5D5=3.000000X",
+    "5E1=4.500000Y"
+   ],
+   "printed_minus_own": "0.000000",
+   "printed_second_read": "13.455000",
+   "room": "GF pantry (wet zone, Q-37 A)",
+   "wet_basis": "OWNER: Q-37 A (pantry is a wet zone)"
+  }
+ ],
+ "rows": [
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.000695",
+   "engine": "4.730695",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "his": "4.73",
+   "his_minus_own": "-0.000695",
+   "kind": "ROOM",
+   "measures": [
+    "GF lobby wash (2 basins)"
+   ],
+   "name": "GF lobby wash (2 basins): 2-dp rounding",
+   "own": "4.730695",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.22",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "70F",
+    "672"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+GF-BASIN-REVEAL"
+   ],
+   "name": "GF basin space by the stair: passage reveal 0.20 x 1.10 taken into his room (1.55 x 1.10)",
+   "own": "0.220000",
+   "own_minus_abs_delta": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected": "-0.005000",
+   "expected_minus_delta": "0.000000",
+   "kind": "READING",
+   "name": "GF basin space by the stair: his 1.705 truncated to 2 dp",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.017683",
+   "engine": "3.717683",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "his": "3.7",
+   "his_minus_own": "-0.017683",
+   "kind": "ROOM",
+   "measures": [
+    "GF master bath"
+   ],
+   "name": "GF master bath: diagonal-wall corner 0.983 x 0.982 / 2 out of 2.10 x 2.00",
+   "own": "3.717683",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.06761",
+   "engine": "2.36761",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "his": "2.3",
+   "his_minus_own": "-0.067609",
+   "kind": "ROOM",
+   "measures": [
+    "GF core W.C. 245 x 167 (wedge)"
+   ],
+   "name": "GF core W.C. 245 x 167 (wedge): wedge room by shoelace on the drawn wall faces",
+   "own": "2.367609",
+   "own_minus_engine": "-0.000001",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005221",
+   "engine": "2.675221",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "his": "2.67",
+   "his_minus_own": "-0.005221",
+   "kind": "ROOM",
+   "measures": [
+    "GF core W.C. 289 x 167 (wedge)"
+   ],
+   "name": "GF core W.C. 289 x 167 (wedge): 2-dp truncation",
+   "own": "2.675221",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.0025",
+   "engine": "2.3625",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "271",
+    "213",
+    "2AF",
+    "210"
+   ],
+   "his": "2.36",
+   "his_minus_own": "-0.002500",
+   "kind": "ROOM",
+   "measures": [
+    "GF stair-core W.C. 175 x 135"
+   ],
+   "name": "GF stair-core W.C. 175 x 135: 2-dp truncation",
+   "own": "2.3625",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.080001",
+   "engine": "9.630001",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "11A",
+    "136",
+    "14F",
+    "135",
+    "111",
+    "A5"
+   ],
+   "his": "9.55",
+   "his_minus_own": "-0.080000",
+   "kind": "ROOM",
+   "measures": [
+    "GF kitchen"
+   ],
+   "name": "GF kitchen: printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+   "own": "9.63",
+   "own_minus_engine": "-0.000001",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "engine": "3.375",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "115",
+    "129",
+    "114",
+    "12D"
+   ],
+   "his": "3.37",
+   "his_minus_own": "-0.005000",
+   "kind": "ROOM",
+   "measures": [
+    "GF W.C. by the reception room"
+   ],
+   "name": "GF W.C. by the reception room: 2-dp truncation",
+   "own": "3.375",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.0175",
+   "engine": "3.1325",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "11F",
+    "12B",
+    "118",
+    "12E"
+   ],
+   "his": "3.15",
+   "his_minus_own": "0.017500",
+   "kind": "ROOM",
+   "measures": [
+    "GF wash by the reception room"
+   ],
+   "name": "GF wash by the reception room: column corner out of the printed 150 x 210",
+   "own": "3.1325",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "engine": "4.725",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "his": "4.72",
+   "his_minus_own": "-0.005000",
+   "kind": "ROOM",
+   "measures": [
+    "1F east bath 210 x 225"
+   ],
+   "name": "1F east bath 210 x 225: 2-dp truncation",
+   "own": "4.725",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.0225",
+   "engine": "3.5775",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "his": "3.6",
+   "his_minus_own": "0.022500",
+   "kind": "ROOM",
+   "measures": [
+    "1F bath by the laundry"
+   ],
+   "name": "1F bath by the laundry: drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+   "own": "3.5775",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.056",
+   "engine": "2.646",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "his": "2.59",
+   "his_minus_own": "-0.056000",
+   "kind": "ROOM",
+   "measures": [
+    "1F W.C. by the laundry"
+   ],
+   "name": "1F W.C. by the laundry: printed 180 x 147 against his 1.80 x 1.44",
+   "own": "2.646",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.0225",
+   "engine": "5.0225",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "his": "5",
+   "his_minus_own": "-0.022500",
+   "kind": "ROOM",
+   "measures": [
+    "1F west bath A 245 x 205"
+   ],
+   "name": "1F west bath A 245 x 205: printed 245 x 205 against his 5.00",
+   "own": "5.0225",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.0225",
+   "engine": "5.0225",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "his": "5",
+   "his_minus_own": "-0.022500",
+   "kind": "ROOM",
+   "measures": [
+    "1F west bath B 245 x 205"
+   ],
+   "name": "1F west bath B 245 x 205: printed 245 x 205 against his 5.00",
+   "own": "5.0225",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.151",
+   "engine": "10.151",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "his": "10",
+   "his_minus_own": "-0.151000",
+   "kind": "ROOM",
+   "measures": [
+    "1F laundry"
+   ],
+   "name": "1F laundry: printed 347 x 300 / 185 with the W.C. corner, against his typed 10.00",
+   "own": "10.151",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.07",
+   "engine": "5.55",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "his": "5.62",
+   "his_minus_own": "0.070000",
+   "kind": "ROOM",
+   "measures": [
+    "2F roof-floor W.C. 300 x 185"
+   ],
+   "name": "2F roof-floor W.C. 300 x 185: printed 185 against his 1.875",
+   "own": "5.55",
+   "own_minus_engine": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "-13.455",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "A6",
+    "B3",
+    "158",
+    "AF"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+GF pantry (wet zone, Q-37 A)"
+   ],
+   "name": "GF pantry (wet zone, Q-37 A): pantry box 4.50 x 3.00 less the column edge 0.900 x 0.050",
+   "own": "13.455000",
+   "own_minus_abs_delta": "0.000000",
+   "section": "T-546/floor"
+  },
+  {
+   "class": "HELD",
+   "delta": "34.390242",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "1279",
+    "1283",
+    "1292",
+    "12B7",
+    "1300"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+ROOF-1390",
+    "-ROOF-1390 DOME-3"
+   ],
+   "name": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
+   "own": "34.390242",
+   "own_minus_abs_delta": "0.000000",
+   "section": "T-541/membrane"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "15.274758",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "1300"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+ROOF-1390 DOME-3"
+   ],
+   "name": "third dome footprint on the +13.90 roof",
+   "own": "15.274758",
+   "own_minus_abs_delta": "0.000000",
+   "section": "T-541/membrane"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "30.718026",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "12EB",
+    "2F33"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+ROOF-970 DOME-W",
+    "+ROOF-970 DOME-E"
+   ],
+   "name": "two +9.70 dome footprints (circles)",
+   "own": "30.718026",
+   "own_minus_abs_delta": "0.000000",
+   "section": "T-541/membrane"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.018026",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected": "-0.018026",
+   "expected_minus_delta": "0.000000",
+   "kind": "READING",
+   "name": "engine arc discretisation of the two +9.70 dome deductions",
+   "section": "T-541/membrane"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-5.54644",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "handles": [
+    "T-486 / T-494 named set",
+    "BCE",
+    "T-486 void chain"
+   ],
+   "kind": "PIECE",
+   "measures": [
+    "+POOLCOURT-550-OPEN-SKY",
+    "+POOLCOURT-550-LEDGE"
+   ],
+   "name": "pool-court slab +5.50 and its ledge (T-507 / T-529)",
+   "own": "5.546442",
+   "own_minus_abs_delta": "0.000002",
+   "section": "T-541/membrane"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "0.523",
+   "evidence_status": "DIFFERS",
+   "expected": "0.521668",
+   "expected_minus_delta": "-0.001332",
+   "kind": "READING",
+   "name": "RESIDUAL",
+   "section": "T-541/membrane"
+  }
+ ],
+ "rule": "R-T626-1",
+ "schema": "T626_ROW_EVIDENCE_V1",
+ "split": {
+  "T-541/membrane": {
+   "by_class": {
+    "ENGINE_RIGHT": "-5.54644",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "by_evidence": {
+    "DIFFERS": "0.523",
+    "DRAWING_CONFIRMED": "74.818560"
+   },
+   "count_by_evidence": {
+    "DIFFERS": 1,
+    "DRAWING_CONFIRMED": 5
+   },
+   "total": "75.341560"
+  },
+  "T-546/floor": {
+   "by_class": {
+    "ENGINE_RIGHT": "-0.307294",
+    "RULE_DIFFERENCE": "-13.235",
+    "TOLERANCE": "-0.023416"
+   },
+   "by_evidence": {
+    "DRAWING_CONFIRMED": "-13.565710"
+   },
+   "count_by_evidence": {
+    "DRAWING_CONFIRMED": 18
+   },
+   "total": "-13.565710"
+  }
+ },
+ "statement": {
+  "file": "research/agents_t620/out/RECONCILED_STATEMENT_T620.json",
+  "sections": [
+   "T-546/floor",
+   "T-541/membrane"
+  ],
+  "sha256": "db5f7bceb8b6b44b1d9f87c40e83022cdd1123789e4e3be81fe43e9bad298e69"
+ }
+}

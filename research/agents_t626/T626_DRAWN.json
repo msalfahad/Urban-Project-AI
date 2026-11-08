@@ -1,0 +1,931 @@
+{
+ "poolcourt": {
+  "POOLCOURT-550-LEDGE": {
+   "area": "0.639575",
+   "handles": [
+    "BCE",
+    "T-486 void chain"
+   ],
+   "kind": "OUTLINE",
+   "note": "T-529 own construction: bay disk r of arc BCE west of the wall line less the void chain (re-run this session, read only)",
+   "source": "DRAWING"
+  },
+  "POOLCOURT-550-OPEN-SKY": {
+   "area": "4.906867",
+   "handles": [
+    "T-486 / T-494 named set"
+   ],
+   "kind": "OUTLINE",
+   "note": "slab top +5.50 east of the wall line less piers and the void (merged T-486 / T-494 reader re-run this session, read only)",
+   "source": "DRAWING"
+  }
+ },
+ "roof": {
+  "ROOF-1390": {
+   "area": "49.665000",
+   "circles": {
+    "DOME-3": {
+     "area": "15.274758",
+     "circumference": "13.854540",
+     "handle": "1300",
+     "layer": "2",
+     "r": "2.205018498"
+    }
+   },
+   "handles": [
+    "1279",
+    "1283",
+    "1292",
+    "12B7"
+   ],
+   "inner_sides": [
+    "7.700000",
+    "6.450000"
+   ],
+   "kind": "OUTLINE",
+   "note": "main roof over the 2F block, printed +13.90 (no roof plan; outline from the 2F walls the parapet continues, T-172 / T-311 section A-A)",
+   "source": "DRAWING"
+  },
+  "ROOF-430": {
+   "area": "55.560332",
+   "circles": {},
+   "handles": [
+    "ADF",
+    "B2B",
+    "B34",
+    "B35",
+    "B37",
+    "B38",
+    "B3A",
+    "B41",
+    "CEC"
+   ],
+   "kind": "OUTLINE",
+   "note": "annex roof, printed +4.30 (1F plan AT220; T-221 ROOF-430)",
+   "source": "DRAWING"
+  },
+  "ROOF-970": {
+   "area": "146.532000",
+   "circles": {
+    "DOME-E": {
+     "area": "15.359013",
+     "circumference": "13.892698",
+     "handle": "2F33",
+     "layer": "5",
+     "r": "2.211091524"
+    },
+    "DOME-W": {
+     "area": "15.359013",
+     "circumference": "13.892698",
+     "handle": "12EB",
+     "layer": "5",
+     "r": "2.211091524"
+    }
+   },
+   "handles": [
+    "1278",
+    "1281",
+    "1285",
+    "1288",
+    "1291",
+    "12A7",
+    "12B9",
+    "12C9"
+   ],
+   "kind": "OUTLINE",
+   "note": "1F roof terraces round the 2F block, printed +9.70 (2F plan AT379 + AT385; T-221 ROOF-970)",
+   "source": "DRAWING"
+  },
+  "TERRACE-550": {
+   "area": "32.721000",
+   "circles": {},
+   "handles": [
+    "AE3",
+    "B25",
+    "B33",
+    "B5D",
+    "BDB",
+    "CED"
+   ],
+   "kind": "OUTLINE",
+   "note": "GF roof strips at +5.50 south and sea side of the 1F (1F plan AT216; T-221 TERRACE-550)",
+   "source": "DRAWING"
+  }
+ },
+ "rooms": {
+  "1F W.C. by the laundry": {
+   "area": "2.646",
+   "chain_from": "T-621 1F-WC-LAUNDRY",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "180 x 147",
+   "perimeter": "6.54",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "FC2",
+     "m": "1.470000"
+    },
+    {
+     "dir": "Y",
+     "handle": "FD9",
+     "m": "1.800000"
+    }
+   ],
+   "printed_rect": {
+    "area": "2.646000",
+    "area_less_notch": "2.646000",
+    "handles": [
+     "FC2",
+     "FD9"
+    ],
+    "values": [
+     "1.470000",
+     "1.800000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "1F bath by the laundry": {
+   "area": "3.5775",
+   "chain_from": "T-621 1F-BATH-LAUNDRY",
+   "fixtures": [
+    "bath"
+   ],
+   "handles": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2FE7"
+   ],
+   "notch_m2": "-0.0225",
+   "note": "200 x 180 less the drawn jamb",
+   "perimeter": "7.6",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "ED1",
+     "m": "2.000000"
+    },
+    {
+     "dir": "Y",
+     "handle": "F0F",
+     "m": "1.800000"
+    }
+   ],
+   "printed_rect": {
+    "area": "3.600000",
+    "area_less_notch": "3.577500",
+    "handles": [
+     "ED1",
+     "F0F"
+    ],
+    "values": [
+     "2.000000",
+     "1.800000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "bath"
+   ]
+  },
+  "1F east bath 210 x 225": {
+   "area": "4.725",
+   "chain_from": "T-621 1F-EAST-BATH",
+   "fixtures": [
+    "bath"
+   ],
+   "handles": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "210 x 225",
+   "perimeter": "8.7",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "F7C",
+     "m": "2.250000"
+    },
+    {
+     "dir": "Y",
+     "handle": "FAA",
+     "m": "2.100000"
+    }
+   ],
+   "printed_rect": {
+    "area": "4.725000",
+    "area_less_notch": "4.725000",
+    "handles": [
+     "F7C",
+     "FAA"
+    ],
+    "values": [
+     "2.250000",
+     "2.100000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "bath"
+   ]
+  },
+  "1F laundry": {
+   "area": "10.151",
+   "chain_from": "T-621 1F-LAUNDRY",
+   "fixtures": [],
+   "handles": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2FED"
+   ],
+   "notch_m2": "-0.04",
+   "note": "L-shaped laundry: 1.85 wide north part beside the W.C., 3.47 x ... south part to the lift box and the living door; column 2FF0 notch",
+   "perimeter": "16.94",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "1071",
+     "m": "3.470000"
+    },
+    {
+     "dir": "Y",
+     "handle": "D6F",
+     "m": "3.000000"
+    },
+    {
+     "dir": "X",
+     "handle": "DB7",
+     "m": "1.850000"
+    },
+    {
+     "dir": "X",
+     "handle": "EA1",
+     "m": "1.470000"
+    },
+    {
+     "dir": "Y",
+     "handle": "EDD",
+     "m": "3.050000"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "laun"
+   ]
+  },
+  "1F west bath A 245 x 205": {
+   "area": "5.0225",
+   "chain_from": "T-621 1F-WBATH-1",
+   "fixtures": [
+    "bath"
+   ],
+   "handles": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "west bath 245 x 205 (first of two congruent baths)",
+   "perimeter": "9.0",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "1008",
+     "m": "2.050000"
+    },
+    {
+     "dir": "Y",
+     "handle": "10AB",
+     "m": "2.450000"
+    }
+   ],
+   "printed_rect": {
+    "area": "5.022500",
+    "area_less_notch": "5.022500",
+    "handles": [
+     "1008",
+     "10AB"
+    ],
+    "values": [
+     "2.050000",
+     "2.450000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "bath"
+   ]
+  },
+  "1F west bath B 245 x 205": {
+   "area": "5.0225",
+   "chain_from": "T-621 1F-WBATH-2",
+   "fixtures": [
+    "bath"
+   ],
+   "handles": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "west bath 245 x 205 (second)",
+   "perimeter": "9.0",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "101F",
+     "m": "2.050000"
+    },
+    {
+     "dir": "Y",
+     "handle": "FE5",
+     "m": "2.450000"
+    }
+   ],
+   "printed_rect": {
+    "area": "5.022500",
+    "area_less_notch": "5.022500",
+    "handles": [
+     "101F",
+     "FE5"
+    ],
+    "values": [
+     "2.050000",
+     "2.450000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "1F",
+   "symbols_inside": [
+    "bath"
+   ]
+  },
+  "2F roof-floor W.C. 300 x 185": {
+   "area": "5.55",
+   "chain_from": "T-621 2F-ROOF-WC",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "300 x 185",
+   "perimeter": "9.7",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "13D8",
+     "m": "3.000000"
+    },
+    {
+     "dir": "X",
+     "handle": "13F1",
+     "m": "1.850000"
+    }
+   ],
+   "printed_rect": {
+    "area": "5.550000",
+    "area_less_notch": "5.550000",
+    "handles": [
+     "13F1",
+     "13D8"
+    ],
+    "values": [
+     "1.850000",
+     "3.000000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "2F",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF W.C. by the reception room": {
+   "area": "3.375",
+   "chain_from": "T-621 GF-WC-REC",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "115",
+    "129",
+    "114",
+    "12D"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "W.C. by the reception room",
+   "perimeter": "7.5",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "551",
+     "m": "1.500000"
+    },
+    {
+     "dir": "Y",
+     "handle": "5A4",
+     "m": "2.250000"
+    }
+   ],
+   "printed_rect": {
+    "area": "3.375000",
+    "area_less_notch": "3.375000",
+    "handles": [
+     "551",
+     "5A4"
+    ],
+    "values": [
+     "1.500000",
+     "2.250000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF basin space by the stair": {
+   "area": "1.485",
+   "chain_from": "T-621 GF-BASIN-STAIR",
+   "fixtures": [
+    "WASH2"
+   ],
+   "handles": [
+    "2B2",
+    "215",
+    "218",
+    "211"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "basin space by the stair (to the reveal face)",
+   "perimeter": "4.9",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "70F",
+     "m": "1.100000"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WASH2"
+   ]
+  },
+  "GF core W.C. 245 x 167 (wedge)": {
+   "area": "2.367609",
+   "chain_from": "T-621 GF-WC-CORE-245",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2F84"
+   ],
+   "notch_m2": "-0.029",
+   "note": "core W.C. wedge 245 x 167, column notch",
+   "perimeter": "6.809808",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "7D3",
+     "m": "2.448717"
+    },
+    {
+     "dir": "Y",
+     "handle": "7F7",
+     "m": "1.672071"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF core W.C. 289 x 167 (wedge)": {
+   "area": "2.675221",
+   "chain_from": "T-621 GF-WC-CORE-289",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "core W.C. wedge 289 x 167",
+   "perimeter": "7.414037",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "7DF",
+     "m": "2.887272"
+    },
+    {
+     "dir": "X",
+     "handle": "7EB",
+     "m": "1.665409"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF driver W.C.": {
+   "area": "1.95",
+   "chain_from": "new (T-626)",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "112",
+    "134",
+    "14E",
+    "132"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "south face 112, east face 134, north face 14E, west face 132 (door D315 19E in the 1900 wall); printed 1500 (658) x 1300 (61E)",
+   "perimeter": "5.6",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "61E",
+     "m": "1.300000"
+    },
+    {
+     "dir": "X",
+     "handle": "658",
+     "m": "1.500000"
+    }
+   ],
+   "printed_rect": {
+    "area": "1.950000",
+    "area_less_notch": "1.950000",
+    "handles": [
+     "658",
+     "61E"
+    ],
+    "values": [
+     "1.500000",
+     "1.300000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF kitchen": {
+   "area": "9.63",
+   "chain_from": "T-621 GF-KITCHEN",
+   "fixtures": [],
+   "handles": [
+    "11A",
+    "136",
+    "14F",
+    "135",
+    "111",
+    "A5"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2FB1",
+    "2FB7"
+   ],
+   "notch_m2": "-0.045",
+   "note": "300 x 270 + 105 x 150, two piers notch",
+   "perimeter": "14.5",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "523",
+     "m": "2.700000"
+    },
+    {
+     "dir": "Y",
+     "handle": "605",
+     "m": "4.500000"
+    },
+    {
+     "dir": "Y",
+     "handle": "635",
+     "m": "3.000000"
+    },
+    {
+     "dir": "X",
+     "handle": "641",
+     "m": "1.050000"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "LE",
+    "kit"
+   ]
+  },
+  "GF lobby wash (2 basins)": {
+   "area": "4.730695",
+   "chain_from": "T-621 GF-LOBBY-WASH",
+   "fixtures": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ],
+   "handles": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "lobby with two basins: diagonal walls, closed on the step line D2 / 2DB to wall face 222",
+   "perimeter": "9.498855",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "703",
+     "m": "2.050000"
+    },
+    {
+     "dir": "X",
+     "handle": "874",
+     "m": "0.935172"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ]
+  },
+  "GF master bath": {
+   "area": "3.717683",
+   "chain_from": "T-621 GF-MASTER-BATH",
+   "fixtures": [],
+   "handles": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "2.10 x 2.00 less the diagonal-wall corner",
+   "perimeter": "7.624665",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "777",
+     "m": "2.000000"
+    },
+    {
+     "dir": "X",
+     "handle": "78E",
+     "m": "2.100000"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": []
+  },
+  "GF pantry (wet zone, Q-37 A)": {
+   "area": "13.455",
+   "chain_from": "new (T-626)",
+   "fixtures": [],
+   "handles": [
+    "A6",
+    "B3",
+    "158",
+    "AF"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2FAE"
+   ],
+   "notch_m2": "-0.045",
+   "note": "south face A6, open east edge B3 (layer 5), north face 158, west face AF; printed 3000 (5D5) x 4500 (5E1); column 2FAE notch",
+   "perimeter": "15.0",
+   "printed_dims": [
+    {
+     "dir": "X",
+     "handle": "5D5",
+     "m": "3.000000"
+    },
+    {
+     "dir": "Y",
+     "handle": "5E1",
+     "m": "4.500000"
+    }
+   ],
+   "printed_rect": {
+    "area": "13.500000",
+    "area_less_notch": "13.455000",
+    "handles": [
+     "5D5",
+     "5E1"
+    ],
+    "values": [
+     "3.000000",
+     "4.500000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "LE",
+    "PAN"
+   ]
+  },
+  "GF stair-core W.C. 175 x 135": {
+   "area": "2.3625",
+   "chain_from": "T-621 GF-WC-STAIR",
+   "fixtures": [
+    "WC"
+   ],
+   "handles": [
+    "271",
+    "213",
+    "2AF",
+    "210"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [],
+   "notch_m2": "0.0",
+   "note": "stair-core W.C. 175 x 135",
+   "perimeter": "6.2",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "726",
+     "m": "1.750000"
+    },
+    {
+     "dir": "X",
+     "handle": "749",
+     "m": "1.350000"
+    }
+   ],
+   "printed_rect": {
+    "area": "2.362500",
+    "area_less_notch": "2.362500",
+    "handles": [
+     "749",
+     "726"
+    ],
+    "values": [
+     "1.350000",
+     "1.750000"
+    ]
+   },
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WC"
+   ]
+  },
+  "GF wash by the reception room": {
+   "area": "3.1325",
+   "chain_from": "T-621 GF-WASH-REC",
+   "fixtures": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ],
+   "handles": [
+    "11F",
+    "12B",
+    "118",
+    "12E"
+   ],
+   "kind": "OUTLINE",
+   "notch_columns": [
+    "2FA5"
+   ],
+   "notch_m2": "-0.0175",
+   "note": "150 x 210 less the column corner",
+   "perimeter": "7.2",
+   "printed_dims": [
+    {
+     "dir": "Y",
+     "handle": "5BD",
+     "m": "2.100000"
+    }
+   ],
+   "printed_rect": null,
+   "source": "DRAWING",
+   "storey": "GF",
+   "symbols_inside": [
+    "WASH",
+    "WASH2",
+    "WASH2"
+   ]
+  },
+  "GF-BASIN-REVEAL": {
+   "area": "0.220000",
+   "handles": [
+    "70F",
+    "672"
+   ],
+   "kind": "DIM",
+   "note": "passage reveal of the basin space, printed 1.10 x 0.20",
+   "source": "DRAWING",
+   "storey": "GF",
+   "values": [
+    "1.100000",
+    "0.200000"
+   ]
+  }
+ },
+ "schema": "T626_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "units": "m / m2"
+}
