@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T21:21Z | Worker 1 | STARTED | run session_01E6cPnbyPpNpaJXP1QQ4JNs | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T21:13Z | Worker 3 | SUCCESS | T-641 READY (head c85f2036, integration package) | Manifest V17 on V16: 5,151 lines, 0 stale / 0 unexplained; bed follows finish (GF bed 109.478417 -> 109.071302 m2 + HELD 0..0.393843, mortar on the bed area x 0.03..0.04); band HELD 5.6392..11.0328 m3; formwork +33.127 m2 (+3.22 %); GF col bars +412.444 kg (B11 9,787.750, +4.40 %); T-640 bounds 87.234..138.540 m2. Not wired: T-627 0.580 m2 class move, T-634 tolerance items, T-640 RETIRE x2 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T21:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T20:57Z | Worker 2 | SUCCESS | T-644 READY 13304a83 | B9-02 precast lintel pieces, 60/60 openings classed on measured jamb masonry (59 re-read on P7757.dxf): ESTABLISHED 13 pcs 21.5 lm, AT_MOST 37 pcs 60.6 lm, FLAGGED 19 (13 end <0.15 m, 4 shared piers, 2 head room), HELD 4; m3 lines stay HELD with cause; F-T644-1 system ruling conflict (PAYABLE FORM vs RC LINTEL / R-T519-1) for the Lead; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
