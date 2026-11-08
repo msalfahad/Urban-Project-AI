@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T20:51Z | Verifier | STARTED | run session_01E6cPneJYJfBR2ciSWUJdpT | repo-attached routine | task state: READY T-637 r2 (W3 20ce44b0) | self-check pending
 - 2026-11-08T20:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T20:19Z | Lead | SUCCESS | board | Since 16:19: T-640, T-638, T-639, T-634 MERGED (WORKED), T-637 r1 REJECTED narrow -> r2 READY; nothing wired (V3.0.58 NOT RELEASED; V2.9 + route G unchanged); PR #4 still OPEN on GitHub although the 12:40 directive says merged (owner notified once); new fix rows T-642 (Checker P02/P04 findings + parapet), T-643 (F-T639-1 rebar on HELD concrete), T-644 lintels as pcs, T-645 B7 stair finishes, T-646 B13 roof/fence; T-641 moved before T-636; register +3, lessons 1 ADOPTED / 1 PROPOSED; T-627 8-cell row fixed; Drive OK, no photos; queue check: 24 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T20:14Z | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
