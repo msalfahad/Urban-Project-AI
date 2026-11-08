@@ -1,0 +1,1484 @@
+{
+ "beam_b10": {
+  "STR.CONC.BEAM|m3": {
+   "v13": {
+    "excluded_n": 54,
+    "held_blank_n": 5,
+    "held_high": "13.77951",
+    "held_high_open_n": 0,
+    "held_low": "8.372829",
+    "held_n": 27,
+    "released": "66.321054",
+    "released_n": 110
+   },
+   "v14": {
+    "excluded_n": 54,
+    "held_blank_n": 5,
+    "held_high": "13.780805",
+    "held_high_open_n": 0,
+    "held_low": "8.372829",
+    "held_n": 28,
+    "released": "66.392081",
+    "released_n": 110
+   }
+  },
+  "after_total_range_m3": "66.392081 .. 66.393376 released (+ the FR-T610-1 companion 0 .. 0.001295); pre-existing HELD 8.372829 .. 13.77951 unchanged beside",
+  "end_pieces_m3": "0.061576",
+  "fix_rows": [
+   {
+    "fix_row": "FR-T610-1",
+    "lines": {
+     "L-39779d6e8cbcc6ac2bae": "-0.005295",
+     "L-3dddf99008ab922da814": "0.011252"
+    },
+    "net_m3": "0.005957",
+    "range": {
+     "high": "0.012547",
+     "line": "L-3dddf99008ab922da814",
+     "low": "0.011252"
+    }
+   },
+   {
+    "fix_row": "FR-T610-2",
+    "lines": {
+     "L-3dddf99008ab922da814": "0.003137",
+     "L-7c1a1da8004c4272ccba": "-0.002768"
+    },
+    "net_m3": "0.000369",
+    "range": null
+   },
+   {
+    "fix_row": "FR-T610-4",
+    "lines": {
+     "L-076a6d9e6df46aef97d1": "0.009375",
+     "L-651a3d191bc4cb07cc1d": "-0.00625"
+    },
+    "net_m3": "0.003125",
+    "range": null
+   }
+  ],
+  "hand": "66.321054 + 0.009451 (T-610 FR-1 low / FR-2 / FR-4) + 0.061576 (T-614 FR-1 .. -5) = 66.392081 .. 66.393376",
+  "not_wired": "FR-T614-H1 HELD 0 .. 0.003405 m3 (no owning line named); GF CB4 BAND0021.1.r2 +0.01355 m3 possible double billing (T-614 open, named for the T-610 / T-229 owners, not a fix row); 1F CB10 crossing zone HELD with its line (T-610)",
+  "pct_vs_v13": "0.107",
+  "released_delta_m3": "0.071027"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "findings": {
+  "F-T619-1": "the B27 line takes two crossing-zone steps (FR-T610-1 low end, FR-T610-2) in one package; the FR-T610-1 high end is carried by a companion HELD line 0 .. 0.001295 m3, so the B10 total reads as a range until the B27 tip attribution is re-measured",
+  "F-T619-2": "FR-T614-H1 (GF CB8 col 2 west, 0.00454 m2, bound 0.003405 m3) names no owning line: listed, not wired; the T-614 owner (lane S) to name the line before it can enter"
+ },
+ "held_not_wired": [
+  {
+   "bound_m3": "0 .. 0.003405",
+   "column": "C13",
+   "id": "FR-T614-H1",
+   "m2": 0.00454,
+   "marks": [
+    "CB8"
+   ],
+   "state": "HELD (R-T614-1 (f): band face not drawn beside the column; never 0)",
+   "storey": "GF",
+   "wired": "NO: the source names no owning line; never placed on a guessed line, never 0"
+  }
+ ],
+ "inputs": {
+  "research/agents_t608/out/T608_SCOPE_TABLE.json": "e138a0f3f7c6d9729f68399a10223ffb7ae6cfd9d859a7bca9a3a58befddd4a8",
+  "research/agents_t610/out/T610_BEAM_OVERLAP_CENSUS.json": "8a146a0e2a9df2a8b91ac5373ef9ad341eef63cbad9a38a3c6f9c122cb985483",
+  "research/agents_t611/manifest_v13.py": "ab7f2736eb67865c6537af1ed9d1aa8234d94cb89565d8916224de3089614428",
+  "research/agents_t611/out/WIRING_MANIFEST_V13.json": "a78e73d770a4429eed1a62dce7d65cfffa781fb86db11c1bf35f84e9072990f9",
+  "research/agents_t614/out/T614_BEAM_END_CENSUS.json": "ac0e64b82ef0f8bf14f6f450174bdc0f1e6e2336028da91dd4a717dce9b1c237",
+  "research/agents_t616/out/T616_RESIDUAL.json": "0d1d1b06c96410238878d055beaa089ecc1474112094242327405c44d8c31922"
+ },
+ "lift_landing_door": {
+  "DOOR.LIFT_LANDING|pcs": {
+   "excluded_n": 0,
+   "held_blank_n": 3,
+   "held_high": "0",
+   "held_high_open_n": 0,
+   "held_low": "0",
+   "held_n": 3,
+   "released": "0",
+   "released_n": 0
+  },
+  "note": "3 HELD-blank lines, count 1 beside each, trade HELD by name"
+ },
+ "line_table": [
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "ARCH.PASSAGE",
+   "kind": "SET",
+   "line_id": "L-77a427c89787ef3480a7",
+   "row": "FR-T608-1"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "ARCH.PASSAGE",
+   "kind": "SET",
+   "line_id": "L-32d90a7a3cff7e9feb2a",
+   "row": "FR-T608-1"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "ARCH.PASSAGE",
+   "kind": "SET",
+   "line_id": "L-c91732d6f75d440d677e",
+   "row": "FR-T608-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "HELD",
+   "item": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:GF-RC99C2A:OP-011",
+   "row": "FR-T608-2"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "HELD",
+   "item": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:1F-R78C367:OP-007",
+   "row": "FR-T608-2"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "HELD",
+   "item": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:2F-R4D1B62:OP-002",
+   "row": "FR-T608-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.146096
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.151391
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-39779d6e8cbcc6ac2bae",
+   "row": "FR-T610-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.203052
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.1918
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-3dddf99008ab922da814",
+   "row": "FR-T610-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.001295,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "ADD",
+   "line_id": "NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "row": "FR-T610-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.206189
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.203052
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-3dddf99008ab922da814",
+   "row": "FR-T610-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.714169
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.716937
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "row": "FR-T610-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.088838
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.079463
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-076a6d9e6df46aef97d1",
+   "row": "FR-T610-4"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.546523
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.552773
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-651a3d191bc4cb07cc1d",
+   "row": "FR-T610-4"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.430887
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.42875
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-b6b4eb28a8001c2af2dd",
+   "row": "FR-T614-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.76125
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.7425
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-780b8142b030c0108b6b",
+   "row": "FR-T614-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.313273
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.310964
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-bd16e6923af088014236",
+   "row": "FR-T614-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.463697
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.426197
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-007ee1494e960a6985a7",
+   "row": "FR-T614-4"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.540532
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.539652
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-9696bbb45246c6dce183",
+   "row": "FR-T614-5"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "STR.CONC.LINTEL",
+   "kind": "TEXT_ONLY",
+   "line_id": "L-d887eecf51c121831336",
+   "row": "FR-T616-1"
+  }
+ ],
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "STR.CONC",
+    "fix_row": "FR-T614-5",
+    "host": "HL:BEAM_LEDGER:1F:BM-1F-023",
+    "lines": [
+     "L-935e72dff296573fff64",
+     "L-9696bbb45246c6dce183"
+    ],
+    "ruling": "FR-T614-5 adds the END_LO piece at column C3 to L-9696bbb45246c6dce183; the other run(s) of the same ledger beam {'L-935e72dff296573fff64': 'BM-1F-023#BAND0027.2 (2.65 m, rect 0.795 m2)'} bill only their own rectangle (T-614 ledger_extents ext / add NONE): separate spans, no shared piece",
+    "sources": [
+     "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+     "CANDIDATE"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   }
+  ],
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v13": 5125,
+   "after_v14": 5129,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 6,
+    "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 7,
+    "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+    "status": {
+     "APPLIED": 7
+    }
+   },
+   {
+    "ops": 5,
+    "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v13_overlay": [],
+  "rulings_v14": [
+   {
+    "fix_row": "FR-T614-5",
+    "host_re": "^HL:BEAM_LEDGER:1F:BM-1F-023$",
+    "layer": "STR.CONC",
+    "ruling": "FR-T614-5 adds the END_LO piece at column C3 to L-9696bbb45246c6dce183; the other run(s) of the same ledger beam {'L-935e72dff296573fff64': 'BM-1F-023#BAND0027.2 (2.65 m, rect 0.795 m2)'} bill only their own rectangle (T-614 ledger_extents ext / add NONE): separate spans, no shared piece",
+    "sources": [
+     "CANDIDATE",
+     "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+    ]
+   }
+  ],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v14_vs_v13_totals": {
+   "ARCH.PASSAGE|pcs": {
+    "after": {
+     "excluded_n": 5,
+     "held_blank_n": 0,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 0,
+     "released": "6",
+     "released_n": 6
+    },
+    "before": {
+     "excluded_n": 2,
+     "held_blank_n": 0,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 0,
+     "released": "9",
+     "released_n": 9
+    }
+   },
+   "DOOR.LIFT_LANDING|pcs": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 3,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 3,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": null
+   },
+   "STR.CONC.BEAM|m3": {
+    "after": {
+     "excluded_n": 54,
+     "held_blank_n": 5,
+     "held_high": "13.780805",
+     "held_high_open_n": 0,
+     "held_low": "8.372829",
+     "held_n": 28,
+     "released": "66.392081",
+     "released_n": 110
+    },
+    "before": {
+     "excluded_n": 54,
+     "held_blank_n": 5,
+     "held_high": "13.77951",
+     "held_high_open_n": 0,
+     "held_low": "8.372829",
+     "held_n": 27,
+     "released": "66.321054",
+     "released_n": 110
+    }
+   }
+  }
+ },
+ "passage": {
+  "ARCH.PASSAGE|pcs": {
+   "v13": {
+    "excluded_n": 2,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "9",
+    "released_n": 9
+   },
+   "v14": {
+    "excluded_n": 5,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "6",
+    "released_n": 6
+   }
+  },
+  "hand": "9 released - 3 lift landing lines (GF OP-011, 1F OP-007, 2F OP-002) = 6 pcs"
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "beside": {
+    "kind": "LIFT_LANDING_DOOR (R-T608-1)",
+    "opening": "GF OP-011 (L-GF-01)",
+    "rule": "R-T608-1 / register LIFT LANDING DOOR",
+    "who_is_right": "ENGINE_WRONG: a lift landing door is not a passage"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "kind": "SET",
+   "line_id": "L-77a427c89787ef3480a7",
+   "note": "R-T619-1 (e): leaves as EXCLUDED, never RELEASED 0",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-1|L-77a427c89787ef3480a7",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-1",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "beside": {
+    "kind": "LIFT_LANDING_DOOR (R-T608-1)",
+    "opening": "1F OP-007 (L-1F-01)",
+    "rule": "R-T608-1 / register LIFT LANDING DOOR",
+    "who_is_right": "ENGINE_WRONG: a lift landing door is not a passage"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "kind": "SET",
+   "line_id": "L-32d90a7a3cff7e9feb2a",
+   "note": "R-T619-1 (e): leaves as EXCLUDED, never RELEASED 0",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-1|L-32d90a7a3cff7e9feb2a",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-1",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.0
+   },
+   "beside": {
+    "kind": "LIFT_LANDING_DOOR (R-T608-1)",
+    "opening": "2F OP-002 (L-2F-01)",
+    "rule": "R-T608-1 / register LIFT LANDING DOOR",
+    "who_is_right": "ENGINE_WRONG: a lift landing door is not a passage"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "kind": "SET",
+   "line_id": "L-c91732d6f75d440d677e",
+   "note": "R-T619-1 (e): leaves as EXCLUDED, never RELEASED 0",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-1|L-c91732d6f75d440d677e",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-1",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "assembly": "frame + leaves + sill",
+    "code": "DOOR.LIFT_LANDING chosen by lane I for the source's 'proposed DOOR.LIFT_LANDING'",
+    "count_nr": "1 (DRAWING-CONFIRMED, T-608 own + Checker read)",
+    "never": "not priced in DOOR.INTERNAL.PVC; not EXCLUDED as 'by others' until a note / spec says so",
+    "opening": "GF OP-011 (L-GF-01)",
+    "trade": "HELD: no printed note or spec names the lift package (T-608: 0 notes)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "GF-RC99C2A:OP-011",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "item_code": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:GF-RC99C2A:OP-011",
+   "note": "R-T619-1 (f): HELD blank, count beside",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-2|NEW:DOOR.LIFT_LANDING:GF-RC99C2A:OP-011",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-2",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "assembly": "frame + leaves + sill",
+    "code": "DOOR.LIFT_LANDING chosen by lane I for the source's 'proposed DOOR.LIFT_LANDING'",
+    "count_nr": "1 (DRAWING-CONFIRMED, T-608 own + Checker read)",
+    "never": "not priced in DOOR.INTERNAL.PVC; not EXCLUDED as 'by others' until a note / spec says so",
+    "opening": "1F OP-007 (L-1F-01)",
+    "trade": "HELD: no printed note or spec names the lift package (T-608: 0 notes)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "1F-R78C367:OP-007",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "item_code": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:1F-R78C367:OP-007",
+   "note": "R-T619-1 (f): HELD blank, count beside",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-2|NEW:DOOR.LIFT_LANDING:1F-R78C367:OP-007",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-2",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "assembly": "frame + leaves + sill",
+    "code": "DOOR.LIFT_LANDING chosen by lane I for the source's 'proposed DOOR.LIFT_LANDING'",
+    "count_nr": "1 (DRAWING-CONFIRMED, T-608 own + Checker read)",
+    "never": "not priced in DOOR.INTERNAL.PVC; not EXCLUDED as 'by others' until a note / spec says so",
+    "opening": "2F OP-002 (L-2F-01)",
+    "trade": "HELD: no printed note or spec names the lift package (T-608: 0 notes)"
+   },
+   "class_after": "HELD",
+   "class_before": null,
+   "element_id": "2F-R4D1B62:OP-002",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-608 VERIFIER 2026-11-07T23:57Z (e): own read P7757 DXF GF / 1F / 2F: 4 panel lines 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, stacked: LIFT_LANDING_DOOR x 3 AGREE (DRAWING-CONFIRMED); FR-T608-1 ARCH.PASSAGE RELEASED 9 minus the 3 lift lines = 6 pcs AGREE; landing-door supply ENGINE_OMISSION HELD-blank x 3 (FR-T608-2); no released quantity changed"
+   },
+   "item_code": "DOOR.LIFT_LANDING",
+   "kind": "ADD",
+   "line_id": "NEW:DOOR.LIFT_LANDING:2F-R4D1B62:OP-002",
+   "note": "R-T619-1 (f): HELD blank, count beside",
+   "op_id": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)|FR-T608-2|NEW:DOOR.LIFT_LANDING:2F-R4D1B62:OP-002",
+   "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "row": "FR-T608-2",
+   "source": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.146096
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.151391
+   },
+   "beside": {
+    "change_m3": "-0.005295",
+    "component_evidence": "VERIFIED",
+    "owner_deeper": "L-3dddf99008ab922da814",
+    "pair": "B1 (L-39779d6e8cbcc6ac2bae) x B27 (L-3dddf99008ab922da814)",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "GF",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.014761
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-39779d6e8cbcc6ac2bae",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-1|L-39779d6e8cbcc6ac2bae",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-1",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.203052
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.1918
+   },
+   "beside": {
+    "change_m3": "0.011252",
+    "component_evidence": "PARTIALLY VERIFIED",
+    "owner_deeper": "L-3dddf99008ab922da814",
+    "pair": "B1 (L-39779d6e8cbcc6ac2bae) x B27 (L-3dddf99008ab922da814)",
+    "range_m3": "0.011252 .. 0.012547 (SET at the low end; companion HELD 0 .. 0.001295; R-T619-1 (c))",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "GF",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.014761
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-3dddf99008ab922da814",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-1|L-3dddf99008ab922da814",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-1",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.001295,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_m3": "0.012547",
+    "low_m3": "0.011252",
+    "range_of": "L-3dddf99008ab922da814",
+    "rule": "R-T619-1 (c): a range is never a point",
+    "why": "the B27 tip attribution 0.001524 m2 lies inside the Checker's model residual: B27 billed 0 .. 0.001295 m3 of the zone before"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "item_code": "STR.CONC.BEAM",
+   "kind": "ADD",
+   "line_id": "NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "note": "companion of the ranged SET; HELD 0 .. width",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-1|NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-1",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.206189
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.203052
+   },
+   "beside": {
+    "change_m3": "0.003137",
+    "component_evidence": "PARTIALLY VERIFIED",
+    "owner_deeper": "L-3dddf99008ab922da814",
+    "pair": "B27 (L-3dddf99008ab922da814) x CB8 (L-7c1a1da8004c4272ccba)",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "GF",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.00369
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-3dddf99008ab922da814",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-2|L-3dddf99008ab922da814",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-2",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.714169
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.716937
+   },
+   "beside": {
+    "change_m3": "-0.002768",
+    "component_evidence": "PARTIALLY VERIFIED",
+    "owner_deeper": "L-3dddf99008ab922da814",
+    "pair": "B27 (L-3dddf99008ab922da814) x CB8 (L-7c1a1da8004c4272ccba)",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "GF",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.00369
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-2|L-7c1a1da8004c4272ccba",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-2",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.088838
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.079463
+   },
+   "beside": {
+    "change_m3": "0.009375",
+    "component_evidence": "PARTIALLY VERIFIED",
+    "owner_deeper": "L-076a6d9e6df46aef97d1",
+    "pair": "CB12 (L-076a6d9e6df46aef97d1) x B6 (L-651a3d191bc4cb07cc1d)",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "1F",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.0125
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-076a6d9e6df46aef97d1",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-4|L-076a6d9e6df46aef97d1",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-4",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.546523
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.552773
+   },
+   "beside": {
+    "change_m3": "-0.00625",
+    "component_evidence": "PARTIALLY VERIFIED",
+    "owner_deeper": "L-076a6d9e6df46aef97d1",
+    "pair": "CB12 (L-076a6d9e6df46aef97d1) x B6 (L-651a3d191bc4cb07cc1d)",
+    "rule": "R-T610-1 (crossing zone billed once, by the deeper band)",
+    "storey": "1F",
+    "verdict": "ENGINE_WRONG_UNDER",
+    "zone_m2": 0.0125
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-610 VERIFIER 2026-11-07T21:59Z: own re-measure GF B1 x B27 zone 0.014761 m2 AGREE, physical 0.014761 x 0.85 = 0.012547 m3; B1 component -0.005295 VERIFIED; B27 component +0.011252 rests on the 0.001524 m2 tip attribution inside the model residual: bounded +0.011252 .. +0.012547, FR-T610-1 PARTIALLY VERIFIED (1 / 2 line components); FR-T610-2 / -3 / -4 NOT re-measured (worker-measured); fix rows enter the next manifest as PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-651a3d191bc4cb07cc1d",
+   "note": "R-T619-1 (d): one package per line, steps chained",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T610-4|L-651a3d191bc4cb07cc1d",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T610-4",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.430887
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.42875
+   },
+   "beside": {
+    "change_m3": "0.002137",
+    "column": "C25",
+    "component_evidence": "VERIFIED (piece re-measured by the Checker); the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": 0.75,
+    "mark": "CB8",
+    "piece_m2": 0.00285,
+    "position": "END_HI",
+    "rule": "R-T614-1 / UP-CONC-JOINT-001 1.0.0 (beam face to face on drawn members)",
+    "since": "r1",
+    "storey": "GF",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-614 VERIFIER 2026-11-08T05:59Z (r2): own re-measure GF CB8 col 2 east +0.002308 m3 AGREE (FR-T614-3), GF B24 west end +0.037500 AGREE (FR-T614-4), 1F CB11 west end +0.000878 AGREE (FR-T614-5); FR-T614-1 / -2 cited (Checker 03:55 AGREE); FR-T614-1..-5 ENGINE_WRONG OMISSION total +0.061576 m3; col 2 west 0.00454 m2 HELD (bound 0.003405 m3); FR-T610-3 WITHDRAWAL AGREE (CB8 BAND0040.1 bills no B27 zone)"
+   },
+   "kind": "SET",
+   "line_id": "L-b6b4eb28a8001c2af2dd",
+   "note": "piece added to the owning beam line; nothing inside a T-610 crossing zone",
+   "op_id": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)|FR-T614-1|L-b6b4eb28a8001c2af2dd",
+   "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+   "row": "FR-T614-1",
+   "source": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.76125
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.7425
+   },
+   "beside": {
+    "change_m3": "0.01875",
+    "column": "C18",
+    "component_evidence": "VERIFIED (piece re-measured by the Checker); the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": 0.75,
+    "mark": "CB11",
+    "piece_m2": 0.025,
+    "position": "END_HI",
+    "rule": "R-T614-1 / UP-CONC-JOINT-001 1.0.0 (beam face to face on drawn members)",
+    "since": "r1",
+    "storey": "1F",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-614 VERIFIER 2026-11-08T05:59Z (r2): own re-measure GF CB8 col 2 east +0.002308 m3 AGREE (FR-T614-3), GF B24 west end +0.037500 AGREE (FR-T614-4), 1F CB11 west end +0.000878 AGREE (FR-T614-5); FR-T614-1 / -2 cited (Checker 03:55 AGREE); FR-T614-1..-5 ENGINE_WRONG OMISSION total +0.061576 m3; col 2 west 0.00454 m2 HELD (bound 0.003405 m3); FR-T610-3 WITHDRAWAL AGREE (CB8 BAND0040.1 bills no B27 zone)"
+   },
+   "kind": "SET",
+   "line_id": "L-780b8142b030c0108b6b",
+   "note": "piece added to the owning beam line; nothing inside a T-610 crossing zone",
+   "op_id": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)|FR-T614-2|L-780b8142b030c0108b6b",
+   "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+   "row": "FR-T614-2",
+   "source": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.313273
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.310964
+   },
+   "beside": {
+    "change_m3": "0.002309",
+    "column": "C13",
+    "component_evidence": "VERIFIED (piece re-measured by the Checker); the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": 0.75,
+    "mark": "CB8",
+    "piece_m2": 0.003078,
+    "position": "END_LO",
+    "rule": "R-T614-1 / UP-CONC-JOINT-001 1.0.0 (beam face to face on drawn members)",
+    "since": "r2",
+    "storey": "GF",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-614 VERIFIER 2026-11-08T05:59Z (r2): own re-measure GF CB8 col 2 east +0.002308 m3 AGREE (FR-T614-3), GF B24 west end +0.037500 AGREE (FR-T614-4), 1F CB11 west end +0.000878 AGREE (FR-T614-5); FR-T614-1 / -2 cited (Checker 03:55 AGREE); FR-T614-1..-5 ENGINE_WRONG OMISSION total +0.061576 m3; col 2 west 0.00454 m2 HELD (bound 0.003405 m3); FR-T610-3 WITHDRAWAL AGREE (CB8 BAND0040.1 bills no B27 zone)"
+   },
+   "kind": "SET",
+   "line_id": "L-bd16e6923af088014236",
+   "note": "piece added to the owning beam line; nothing inside a T-610 crossing zone",
+   "op_id": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)|FR-T614-3|L-bd16e6923af088014236",
+   "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+   "row": "FR-T614-3",
+   "source": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.463697
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.426197
+   },
+   "beside": {
+    "change_m3": "0.0375",
+    "column": "C23",
+    "component_evidence": "VERIFIED (piece re-measured by the Checker); the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": 0.75,
+    "mark": "B24",
+    "piece_m2": 0.05,
+    "position": "END_LO",
+    "rule": "R-T614-1 / UP-CONC-JOINT-001 1.0.0 (beam face to face on drawn members)",
+    "since": "r2",
+    "storey": "GF",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-614 VERIFIER 2026-11-08T05:59Z (r2): own re-measure GF CB8 col 2 east +0.002308 m3 AGREE (FR-T614-3), GF B24 west end +0.037500 AGREE (FR-T614-4), 1F CB11 west end +0.000878 AGREE (FR-T614-5); FR-T614-1 / -2 cited (Checker 03:55 AGREE); FR-T614-1..-5 ENGINE_WRONG OMISSION total +0.061576 m3; col 2 west 0.00454 m2 HELD (bound 0.003405 m3); FR-T610-3 WITHDRAWAL AGREE (CB8 BAND0040.1 bills no B27 zone)"
+   },
+   "kind": "SET",
+   "line_id": "L-007ee1494e960a6985a7",
+   "note": "piece added to the owning beam line; nothing inside a T-610 crossing zone",
+   "op_id": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)|FR-T614-4|L-007ee1494e960a6985a7",
+   "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+   "row": "FR-T614-4",
+   "source": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.540532
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.539652
+   },
+   "beside": {
+    "change_m3": "0.00088",
+    "column": "C3",
+    "component_evidence": "VERIFIED (piece re-measured by the Checker); the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": 0.75,
+    "mark": "CB11",
+    "piece_m2": 0.001173,
+    "position": "END_LO",
+    "rule": "R-T614-1 / UP-CONC-JOINT-001 1.0.0 (beam face to face on drawn members)",
+    "since": "r2",
+    "storey": "1F",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-614 VERIFIER 2026-11-08T05:59Z (r2): own re-measure GF CB8 col 2 east +0.002308 m3 AGREE (FR-T614-3), GF B24 west end +0.037500 AGREE (FR-T614-4), 1F CB11 west end +0.000878 AGREE (FR-T614-5); FR-T614-1 / -2 cited (Checker 03:55 AGREE); FR-T614-1..-5 ENGINE_WRONG OMISSION total +0.061576 m3; col 2 west 0.00454 m2 HELD (bound 0.003405 m3); FR-T610-3 WITHDRAWAL AGREE (CB8 BAND0040.1 bills no B27 zone)"
+   },
+   "kind": "SET",
+   "line_id": "L-9696bbb45246c6dce183",
+   "note": "piece added to the owning beam line; nothing inside a T-610 crossing zone",
+   "op_id": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)|FR-T614-5|L-9696bbb45246c6dce183",
+   "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+   "row": "FR-T614-5",
+   "source": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "cause_after": "HEAD_UNDER_BEAM: S1 band over the full width (S8.6 OP-GF-020), lintel 0 .. 1, column jamb gives no masonry bearing",
+    "cause_before": "head not established",
+    "state": "unchanged HELD blank"
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-616 VERIFIER 2026-11-08T01:00Z (f): no quantity moves; counts ENGINE_RIGHT 3 .. 5 / UNRESOLVED 2 .. 4 named (P-GF-01, D-GF-05, A-GF-01 or D-GF-13, D-1F-01 / -06); W17 no straight piece ENGINE_RIGHT AGREE; lintel add / drop none"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-d887eecf51c121831336",
+   "note": "T-616 s.5: cause text only",
+   "op_id": "LINTEL_CAUSES (T-616 FR-T616-1)|FR-T616-1|L-d887eecf51c121831336",
+   "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+   "row": "FR-T616-1",
+   "source": "LINTEL_CAUSES (T-616 FR-T616-1)"
+  }
+ ],
+ "rule": "R-T619-1",
+ "schema": "URBAN_T619_WIRING_MANIFEST_V14",
+ "skirting": {
+  "FIN.SKIRTING|lm": {
+   "excluded_n": 29,
+   "held_blank_n": 6,
+   "held_high": "0",
+   "held_high_open_n": 0,
+   "held_low": "0",
+   "held_n": 6,
+   "released": "198.558592",
+   "released_n": 19
+  },
+  "unchanged": "T-608: skirting at the landing doors correct; V14 writes no skirting line",
+  "v13_released": "198.558592"
+ },
+ "sources_merged": {
+  "T-608": "3c3aa2f8",
+  "T-610": "14cf2579",
+  "T-612": "66d3ad9c",
+  "T-614": "a7f1f3af",
+  "T-616": "17559e1b",
+  "T-617": "44ee93d5"
+ },
+ "sources_no_row": {
+  "T-612": {
+   "merge": "66d3ad9c",
+   "rows": 0,
+   "why": "FR-T612-1 restates the GF -16.913904 lm residual in the reconciled statement (+0.10 ENGINE_RIGHT + -17.013904 UNRESOLVED); no candidate line moves (statement V11, T-620)"
+  },
+  "T-617": {
+   "merge": "44ee93d5",
+   "rows": 0,
+   "why": "FR-T617-1 is for the plaster wiring (T-558): Q-72 plaster keeps D - t 0.59 / 0.59 / 0.24 m2; the merged verdict moves 0.000 m2 on 1F-13 / 2F-01 / GF-08: no manifest line"
+  }
+ },
+ "sources_refused": {},
+ "stair_edge_census_after_v14": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "task": "T-619",
+ "withdrawn": {
+  "FR-T610-3": {
+   "by": "T-614",
+   "merge": "a7f1f3af",
+   "rows": 0,
+   "t610_line_changes_m3": {
+    "L-3dddf99008ab922da814": 0.0,
+    "L-bd16e6923af088014236": -0.000692
+   },
+   "why": "CB8 BAND0040.1 does not bill the B27 x CB8 zone on its own extent; billed once by B27 (owner, deeper); line change 0.000 instead of -0.000692 m3 (T-614 r2 t610_fix_rows_r2, Checker AGREE)"
+  }
+ }
+}
