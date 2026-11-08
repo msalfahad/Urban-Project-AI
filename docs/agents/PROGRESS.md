@@ -1,9 +1,28 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-08 16:15 UTC (Lead). Previous version: 2026-11-08 12:13 UTC. The released numbers did not change
+Last update: 2026-11-08 20:15 UTC (Lead). Previous version: 2026-11-08 16:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
-untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
-the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+untouched). Your measure: whole BOQ lines independently verified in the candidate: unchanged (the slab group and 4
+single lines; no trade subtotal); released: 0. The candidate of record stays V3.0.58 (not released). PR #4 is still
+open on GitHub, so nothing can be wired into the candidate yet.
+
+Since 8 Nov 16:15 (newest first; four checked and merged, one sent back once and handed in again; NOTHING wired):
+- Reinforcement: all 807 held / open lines now carry a cause: 188 wait for their concrete, 603 lack a bar notation or
+  detail on the drawings, 10 are outside the starter group, 6 are measurable now: ground-floor column main bars
+  412.44 kg (checker agrees); when wired the calculated reinforcement goes 9,375.31 -> 9,787.75 kg. NEW: 754.72 kg of
+  column bars are shown calculated while their columns' concrete is held; that is being checked bar line by bar line.
+- Formwork: all 370 held lines carry a cause; 54 get a value now (+33.13 m2; ground-floor column shafts 27.00 m2
+  checker-verified); 316 stay held (no concrete, or the contact below ground not drawn).
+- Wall / ceiling finishes: all 72 held lines carry a cause; 33 get a drawn range (87.23 .. 138.54 m2, held as a range);
+  internal plaster / paint: 29 of 31 rows agree with the drawing, 2 differ by 0.015 m2.
+- Three door heads confirmed at 2.20 m by the checker (our 0.58 m2 right).
+- The BOQ family register for the trial BOQ was sent back once (a registry file not listed) and is handed in again.
+- NEW from the checker: two small concrete strips billed by no line (up to 0.075 and 0.028 m3), one beam 0.003 m3
+  too high, one corner arc band with no printed depth (0.15 .. 0.28 m3, held).
+- Next (10 Nov): the checker merges the family register; the wiring list takes today's four results; then the trial
+  BOQ itself, trade by trade, with every held line's cause. In parallel: lintels as pieces under your lintel rule (60
+  openings), stair finishes, roof layers and fence finishes given a value or a cause, and the checker's new findings.
+- 10 Nov: a trial BOQ document is MEDIUM-HIGH; a trial BOQ WIRED into the candidate stays LOW until PR #4 is merged.
 
 Since 8 Nov 12:13 (newest first; eight checked and merged, none sent back; NOTHING wired into the candidate: wiring
 waits for your PR #4 merge; your 12:40 delivery directive now sets the order):

@@ -1,5 +1,18 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-08 20:15 UTC
+
+Drive read OK (no file created in the project folder since 16:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED); NO quantity wired since 16:15 (PR #4 still OPEN on GitHub, head fd71bc30, mergeable clean); released V2.9 + route G unchanged.
+- Rebar B11 (kg): 807 / 807 held / open-high lines now carry a cause (188 concrete HELD, 603 notation / detail not given, 10 outside the starter group, 6 measurable); FR-T639-1..6 GF column main bars 412.444 kg Checker AGREE -> calculated 9,375.306 -> 9,787.750 kg when wired (+4.40 %). No freelancer comparison (his rebar is a typed lump: NOT_COMPARABLE). NEW F-T639-1: 754.723 kg released on HELD columns -> T-643.
+- Formwork B10-13 (m2): 370 / 370 HELD-blank lines classed; +33.127 m2 measurable (GF column shafts 27.002 VERIFIED, 50 split faces 6.125 CALCULATED); 316 stay HELD with cause (113 = contact below N.G., same missing working-space item as earthworks OQ-13). Released 1,027.977 -> 1,061.104 m2 when wired (+3.22 %).
+- Finishes B4 / B5 (m2): 72 / 72 held lines classed, 33 to drawn ranges 87.234 .. 138.540 (HELD as range); internal plaster / paint 29 / 31 rows DRAWING-CONFIRMED, 2 DIFFER (GF-15 -0.015161 m2). Door heads D-GF-01 / -03 / -06 ruled 2.20 m: ours right 12.76 vs his 12.0 m2 (+6.33 %, RULE_DIFFERENCE -> ENGINE_RIGHT).
+- Concrete B10 (m3): Checker P04 closed (4 AGREE, GF B11 -0.003159 ENGINE_WRONG, F-C-P04-1 omission +0.024375 .. 0.0275), P02 B3 / B4 AGREE, F-C-P02-14 omission 0.040 .. 0.075 HELD, F-C-P02-13 arc band 0.150796 .. 0.282743 UNRESOLVED (depth unsourced) -> one fix row T-642.
+- Learned: a bar line can be more certain than its concrete only when its length inputs are printed independently (lesson PROPOSED, T-643); T-628 range-from-drawn-extremes ADOPTED. Register +3: precast lintel payable form (pcs, B9-02), roof build-up layers (one roof area), rebar-to-concrete binding.
+- 10 Nov trial BOQ: T-637 r2 READY (Checker next) and T-641 V17 (W3 20:59) -> T-636 (W3 next slot). Document MEDIUM-HIGH; wired LOW (PR #4). Missing in it: wired post-V3.0.58 quantities, B12 MEP, 39 families with no line.
+TEAM HEALTH: since 16:12 10 runs, all closed, 0 empty; 4 MERGED, 1 REJECTED narrow (T-637 r1, re-handed in 81 min); no wrapper bypass since 15:33 (W1 19:37 clean). Setup gave 'No module named pytest' twice (W1 19:21, Verifier 19:51) until setup rebuilt the venv: environment, self-corrected. queue check: 24 actionable rows, 0 flagged, 0 stall checks (fixed one Verifier-made 8-cell row T-627).
+OWNER PACKAGE: none today (no section 2.7 decision).
+NEEDS FIXING: (1) PR #4 (allow research scripts in the run wrapper) is still OPEN although the 12:40 directive text records it as merged: please merge it on GitHub; until then Gate B (T-525 -> T-498 -> T-423 r2 -> T-563 -> T-314) and every wiring stay blocked and the 10 Nov BOQ cannot be wired. (2) venv setup interrupted twice today (rebuilt by setup itself): watch only.
+
 ## LEAD REPORT 2026-11-08 16:15 UTC
 
 Drive read OK (no file created in the project folder since 12:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED); NO quantity wired into the candidate since 12:13 (Gate B waits on PR #4); released V2.9 + route G unchanged. Your 12:40 delivery directive now orders the board.
@@ -31,18 +44,3 @@ Drive read OK (no file created or modified in the project folders since 08:00 UT
 TEAM HEALTH: 12 runs since 08:12 (W1 2, W2 2, W3 2, Verifier 4 incl. the 07:51 run now closed), all closed, 0 empty, all ran code; 5 merged, 0 rejected, READY 2; this run self-check codemap / t061 / freeze PASS; queue check 25 actionable, 0 flagged, 0 stall checks. Worker 1 11:45: wrapper refused a research script and the worker ran it with the venv python directly (no harm; board told to use pytest or record BLOCKED).
 OWNER PACKAGE: none new (all settled by drawings or answered rules; ORR-007 stair skirting form still with you).
 NEEDS FIXING (only you): (1) merge PR #4 (open, mergeable clean since 7 Nov 21:05) - blocks every Gate B, the 10 Nov milestone in the candidate, and is now pushing workers toward running scripts outside the wrapper; (2) freelancer floors / rails workbooks + 1990 spec when ready (not blockers).
-
-## LEAD REPORT 2026-11-08 08:19 UTC
-
-Drive read OK (no file created or modified in the project folders since 04:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged.
-- Floor tile B3 (m2): his 409.58 vs engine 387.09405 (diff 22.48595, +5.49 % printed, not a verdict): 40 / 41 rows now DRAWING_CONFIRMED by own handle chains (16.361538 of the 22.485950 m2 explained by drawn area); Checker own re-measure AGREE on 3 rooms (19.350 / 24.940332 / 19.050 m2) = rows VERIFIED 3; open: round-stair footprint 6.124412 and the GF / 1F open-plan boundaries (not closable on wall faces) -> next row.
-- Beams B10 (m3): beam-end census merged on rework: +0.061576 m3 owned by no line (ENGINE_WRONG OMISSION, 3 pieces Checker re-measured); manifest V14 when wired 66.321054 -> 66.392081 .. 66.393376 (+0.107 %); vs his 66.093875 the gap widens on physical causes. Residual 2.248826 UNRESOLVED (unchanged).
-- Openings (pcs): passages 9 -> 6 when wired (3 lift landing doors); landing head bounded by ring-beam soffits, 0.000 m2 change, low end HELD.
-- Skirting / stairs / rails (lm): five small residuals (2.78 lm) closed to causes or ranges; E1 porch 3.50 lm possible omission, scope HELD; 0 ENGINE_WRONG.
-- Blockwork B9: your Q-80 applied (READY with the Checker): 175.871 m2 of 0.15 m walls out of HELD, 2,194.14 .. 2,198.39 units, 16.16 .. 16.28 cement bags; no drawing prints another face (nothing to report); waste / procurement HELD.
-- Learned (ERS s.7): billing only inside the line's own extent ADOPTED; a measured range is wired as low end + HELD companion, never a point ADOPTED; an open-plan side ends at a named printed line PROPOSED.
-- Next: per-row evidence so lines can close: wall tile (47 rows), waterproofing (24), window / door area (22), beams / columns (18), footings / lift walls (7); statement + scorecard V11; manifest V15; a 10 Nov end-to-end all-trade dry run beside the candidate.
-- Missing / gate: candidate wiring (Gate B) waits on PR #4; 10 Nov end-to-end in the candidate LOW (2 days); 12-13 Nov tables HIGH.
-TEAM HEALTH: 10 runs since 04:13 (W1 2, W2 2, W3 2, Verifier 4; the 07:51 Verifier run still open), all others closed, 0 empty; W3 05:00 BLOCKED by an environment download refusal (pip 403, pytest absent; nothing claimed, recovered 06:59); 5 merged, 0 rejected, READY 1; this run self-check codemap / t061 / freeze PASS; queue check 25 actionable, 0 flagged, 0 stall checks.
-OWNER PACKAGE: none new (all settled by drawings, your Q-80 answer or delegated rules; ORR-007 stair skirting form still with you).
-NEEDS FIXING (only you): (1) merge PR #4 (open, mergeable clean since 7 Nov 21:05; run allow-list for research/agents_t*/ scripts) - blocks every Gate B and the 10 Nov milestone in the candidate; (2) freelancer floors / rails workbooks + 1990 spec when ready (not blockers).
