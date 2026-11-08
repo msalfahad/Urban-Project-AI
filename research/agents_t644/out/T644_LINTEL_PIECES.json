@@ -1,0 +1,2359 @@
+{
+ "rule": "R-T644-1",
+ "version": "1.0.0",
+ "inputs": {
+  "ledger_T453_sha16": "ad9bceee3bfdbc12",
+  "jamb_evidence_T644_sha16": "8b72cfb16ad6fcf8",
+  "line_index_V3_0_57_sha16": "fed5141ea31bfdd9",
+  "e2e_T630_sha16": "e5dde7867c8fe6ad",
+  "t571_sha16": "ede7c1fd982e42f9"
+ },
+ "candidate_lines": 60,
+ "openings": 60,
+ "stock_m": [
+  1.2,
+  1.5,
+  2.5,
+  3.0,
+  4.0
+ ],
+ "min_bearing_m": 0.15,
+ "governing_system_note": "NOT_APPLICABLE (not 0): the printed project lintel schedule governs every block-wall lintel (R-T487-1 (1), R-T519-1: PROJECT_RC 16 / 16 REQUIRED); this count is the owner manual method BESIDE",
+ "tables": {
+  "established_nr": {
+   "1.2": {
+    "GF": 1,
+    "1F": 3,
+    "2F": 1
+   },
+   "1.5": {
+    "GF": 1,
+    "1F": 3,
+    "2F": 1
+   },
+   "2.5": {
+    "GF": 0,
+    "1F": 2,
+    "2F": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 1,
+    "2F": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0
+   }
+  },
+  "at_most_nr": {
+   "1.2": {
+    "GF": 5,
+    "1F": 10,
+    "2F": 3
+   },
+   "1.5": {
+    "GF": 5,
+    "1F": 3,
+    "2F": 1
+   },
+   "2.5": {
+    "GF": 5,
+    "1F": 4,
+    "2F": 0
+   },
+   "3.0": {
+    "GF": 0,
+    "1F": 1,
+    "2F": 0
+   },
+   "4.0": {
+    "GF": 0,
+    "1F": 0,
+    "2F": 0
+   }
+  },
+  "established_total_nr": 13,
+  "at_most_total_nr": 37,
+  "lm_beside_established": {
+   "1.2": 6.0,
+   "1.5": 7.5,
+   "2.5": 5.0,
+   "3.0": 3.0,
+   "4.0": 0.0
+  },
+  "lm_beside_at_most": {
+   "1.2": 21.6,
+   "1.5": 13.5,
+   "2.5": 22.5,
+   "3.0": 3.0,
+   "4.0": 0.0
+  },
+  "by_class": {
+   "PIECE": [
+    "A-1F-01",
+    "D-1F-02",
+    "D-1F-03",
+    "D-1F-07",
+    "D-1F-08",
+    "D-1F-10",
+    "D-2F-01",
+    "D-2F-03",
+    "D-GF-10",
+    "D-GF-13",
+    "P-1F-01",
+    "W14",
+    "W15"
+   ],
+   "PIECE_IF_BUILT": [
+    "A-GF-01",
+    "D-1F-01",
+    "D-1F-05",
+    "D-1F-09",
+    "D-2F-02",
+    "D-GF-01",
+    "D-GF-02",
+    "D-GF-04",
+    "D-GF-05",
+    "D-GF-07",
+    "W01",
+    "W05",
+    "W07",
+    "W08",
+    "W09",
+    "W11",
+    "W12",
+    "W16",
+    "W19",
+    "W20",
+    "W21",
+    "W23",
+    "W24",
+    "W28"
+   ],
+   "FLAGGED_OVER_4M": [],
+   "FLAGGED_NO_BEARING": [
+    "D-1F-04",
+    "D-1F-06",
+    "D-GF-06",
+    "D-GF-08",
+    "D-GF-09",
+    "P-GF-01",
+    "W06",
+    "W10",
+    "W18",
+    "W22",
+    "W25",
+    "W27",
+    "W29"
+   ],
+   "FLAGGED_SHORT_PIERS": [],
+   "FLAGGED_SHARED_PIER": [
+    "D-GF-03",
+    "D-GF-11",
+    "D-GF-12",
+    "W04"
+   ],
+   "FLAGGED_HEAD_ROOM": [
+    "W13",
+    "W26"
+   ],
+   "HELD_WIDTH": [],
+   "HELD_ENDS": [
+    "D-GF-14"
+   ],
+   "HELD_REGISTER": [
+    "L-1F-01",
+    "L-2F-01",
+    "L-GF-01"
+   ]
+  },
+  "class_counts": {
+   "PIECE": 13,
+   "PIECE_IF_BUILT": 24,
+   "FLAGGED_OVER_4M": 0,
+   "FLAGGED_NO_BEARING": 13,
+   "FLAGGED_SHORT_PIERS": 0,
+   "FLAGGED_SHARED_PIER": 4,
+   "FLAGGED_HEAD_ROOM": 2,
+   "HELD_WIDTH": 0,
+   "HELD_ENDS": 1,
+   "HELD_REGISTER": 3
+  }
+ },
+ "per_opening": {
+  "A-1F-01": {
+   "id": "A-1F-01",
+   "storey": "1F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "T-616: arch120 BEC, both bearings drawn masonry, no beam band (S8.6 LT-OP-1F-018)",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "OPENING"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "A-GF-01": {
+   "id": "A-GF-01",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "OPENING"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "D-1F-01": {
+   "id": "D-1F-01",
+   "storey": "1F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-1F-02": {
+   "id": "D-1F-02",
+   "storey": "1F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-1F-03": {
+   "id": "D-1F-03",
+   "storey": "1F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-1F-04": {
+   "id": "D-1F-04",
+   "storey": "1F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.080 / 2.120 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-1F-05": {
+   "id": "D-1F-05",
+   "storey": "1F",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-1F-06": {
+   "id": "D-1F-06",
+   "storey": "1F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.747 / 0.073 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-1F-07": {
+   "id": "D-1F-07",
+   "storey": "1F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-1F-08": {
+   "id": "D-1F-08",
+   "storey": "1F",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-1F-09": {
+   "id": "D-1F-09",
+   "storey": "1F",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-1F-10": {
+   "id": "D-1F-10",
+   "storey": "1F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-2F-01": {
+   "id": "D-2F-01",
+   "storey": "2F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-2F-02": {
+   "id": "D-2F-02",
+   "storey": "2F",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-2F-03": {
+   "id": "D-2F-03",
+   "storey": "2F",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-GF-01": {
+   "id": "D-GF-01",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-GF-02": {
+   "id": "D-GF-02",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-GF-03": {
+   "id": "D-GF-03",
+   "storey": "GF",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_SHARED_PIER",
+   "why": "ends 0.150 / 0.850 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-GF-04": {
+   "id": "D-GF-04",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-GF-05": {
+   "id": "D-GF-05",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-GF-06": {
+   "id": "D-GF-06",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.759 / 0.141 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-07": {
+   "id": "D-GF-07",
+   "storey": "GF",
+   "width_m": 2.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is HELD in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is HELD in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "D-GF-08": {
+   "id": "D-GF-08",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.600 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-09": {
+   "id": "D-GF-09",
+   "storey": "GF",
+   "width_m": null,
+   "width_bound_m": [
+    0.9,
+    1.0
+   ],
+   "existence": "HELD",
+   "cause": "opening is IN_HELD_PIECE in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1 ; width UNRESOLVED R-T581-1 1.1.0 (frame drawn over masonry)",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2,
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.453 / 0.147 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-10": {
+   "id": "D-GF-10",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-GF-11": {
+   "id": "D-GF-11",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_SHARED_PIER",
+   "why": "ends 0.827 / 0.238 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-GF-12": {
+   "id": "D-GF-12",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_SHARED_PIER",
+   "why": "ends 0.238 / 0.642 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-GF-13": {
+   "id": "D-GF-13",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "D-GF-14": {
+   "id": "D-GF-14",
+   "storey": "GF",
+   "width_m": 0.8,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is HELD in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "DOOR"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "HELD_ENDS",
+   "why": "no V2 band (T-125 MISSING, GF-W30, T-175): jambs not in the masonry capture"
+  },
+  "L-1F-01": {
+   "id": "L-1F-01",
+   "storey": "1F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "cause": "register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "LIFT"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": null,
+   "cls": "HELD_REGISTER",
+   "why": "register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "L-2F-01": {
+   "id": "L-2F-01",
+   "storey": "2F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "cause": "register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "LIFT"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": null,
+   "cls": "HELD_REGISTER",
+   "why": "register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "L-GF-01": {
+   "id": "L-GF-01",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD_REGISTER",
+   "cause": "register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "LIFT"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": null,
+   "cls": "HELD_REGISTER",
+   "why": "register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "P-1F-01": {
+   "id": "P-1F-01",
+   "storey": "1F",
+   "width_m": 1.3,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "T-616: header lines, L2 under no member (S8.6 LT-OP-1F-021)",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.15,
+    "kind": "OPENING"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "P-GF-01": {
+   "id": "P-GF-01",
+   "storey": "GF",
+   "width_m": 0.9,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "BLACK",
+    "t_m": 0.2,
+    "kind": "OPENING"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.000 / 1.800 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W01": {
+   "id": "W01",
+   "storey": "GF",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": 1.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening is ON_HELD_WALL in the merged fill: the drawn pieces do not cover it, the clear height above its head is not known; at most 1"
+  },
+  "W04": {
+   "id": "W04",
+   "storey": "GF",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_SHARED_PIER",
+   "why": "ends 1.300 / 0.150 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "W05": {
+   "id": "W05",
+   "storey": "GF",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W06": {
+   "id": "W06",
+   "storey": "GF",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.895 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W07": {
+   "id": "W07",
+   "storey": "GF",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W08": {
+   "id": "W08",
+   "storey": "GF",
+   "width_m": 1.5,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W09": {
+   "id": "W09",
+   "storey": "GF",
+   "width_m": 1.5,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W10": {
+   "id": "W10",
+   "storey": "GF",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.100 / 1.050 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W11": {
+   "id": "W11",
+   "storey": "GF",
+   "width_m": 1.95,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W12": {
+   "id": "W12",
+   "storey": "GF",
+   "width_m": 1.95,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W13": {
+   "id": "W13",
+   "storey": "1F",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "FLAGGED_HEAD_ROOM",
+   "cause": "the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": null,
+   "cls": "FLAGGED_HEAD_ROOM",
+   "why": "piece fits the piers but the head leaves no room for it under some soffits: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read"
+  },
+  "W14": {
+   "id": "W14",
+   "storey": "1F",
+   "width_m": 2.45,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    3.0
+   ],
+   "piece_m": 3.0,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "W15": {
+   "id": "W15",
+   "storey": "1F",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE",
+   "why": "lintel required (head established) and the piece rests on >= 0.15 m both ends"
+  },
+  "W16": {
+   "id": "W16",
+   "storey": "1F",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W18": {
+   "id": "W18",
+   "storey": "1F",
+   "width_m": 0.5,
+   "width_bound_m": null,
+   "existence": "REQUIRED",
+   "cause": "",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 0.000 / 0.578 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W19": {
+   "id": "W19",
+   "storey": "1F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W20": {
+   "id": "W20",
+   "storey": "1F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W21": {
+   "id": "W21",
+   "storey": "1F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W22": {
+   "id": "W22",
+   "storey": "1F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.895 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W23": {
+   "id": "W23",
+   "storey": "1F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W24": {
+   "id": "W24",
+   "storey": "1F",
+   "width_m": 1.55,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    2.5
+   ],
+   "piece_m": 2.5,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W25": {
+   "id": "W25",
+   "storey": "1F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.400 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W26": {
+   "id": "W26",
+   "storey": "2F",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "FLAGGED_HEAD_ROOM",
+   "cause": "the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "piece_m": null,
+   "cls": "FLAGGED_HEAD_ROOM",
+   "why": "piece fits the piers but the head leaves no room for it under some soffits: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read"
+  },
+  "W27": {
+   "id": "W27",
+   "storey": "2F",
+   "width_m": 1.0,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.400 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W28": {
+   "id": "W28",
+   "storey": "2F",
+   "width_m": 0.6,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.2
+   ],
+   "piece_m": 1.2,
+   "cls": "PIECE_IF_BUILT",
+   "why": "piece fits; whether a lintel is built is HELD: opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel"
+  },
+  "W29": {
+   "id": "W29",
+   "storey": "2F",
+   "width_m": 1.2,
+   "width_bound_m": null,
+   "existence": "HELD",
+   "cause": "opening head not established (height / sill HELD in the census): whether masonry is built above it is not known; at most 1 lintel",
+   "wall": {
+    "block": "WHITE",
+    "t_m": 0.2,
+    "kind": "WINDOW"
+   },
+   "piece_beside_m": [
+    1.5
+   ],
+   "cls": "FLAGGED_NO_BEARING",
+   "why": "ends 1.295 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  }
+ },
+ "no_stock_piece_outside_the_60": {
+  "W17": "register CURVED-BAND OPENING HEAD: curved band, chord sagitta 0.711 m > 0 (T-616): no straight stock piece; head owned by the structural line carrying the band (FLAGGED, never a piece)"
+ },
+ "gap_check": [
+  {
+   "id": "A-1F-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "A-GF-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-01",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-02",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-03",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-04",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-05",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-06",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-07",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-08",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-09",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-1F-10",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-2F-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-2F-02",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-2F-03",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-02",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-03",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-04",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-05",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-06",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-07",
+   "census_w": 2.0,
+   "measured_gap_m": 2.0,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-08",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-10",
+   "census_w": 0.8,
+   "measured_gap_m": 0.797,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-11",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-12",
+   "census_w": 0.8,
+   "measured_gap_m": 0.8,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "D-GF-13",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "L-1F-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "L-2F-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "L-GF-01",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "P-1F-01",
+   "census_w": 1.3,
+   "measured_gap_m": 1.3,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "P-GF-01",
+   "census_w": 0.9,
+   "measured_gap_m": 0.9,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W01",
+   "census_w": 1.2,
+   "measured_gap_m": 1.2,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W04",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W05",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W06",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W07",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W08",
+   "census_w": 1.5,
+   "measured_gap_m": 1.5,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W09",
+   "census_w": 1.5,
+   "measured_gap_m": 1.5,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W10",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W11",
+   "census_w": 1.95,
+   "measured_gap_m": 1.9549,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W12",
+   "census_w": 1.95,
+   "measured_gap_m": 1.9549,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W13",
+   "census_w": 1.2,
+   "measured_gap_m": 1.2,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W14",
+   "census_w": 2.45,
+   "measured_gap_m": 2.4498,
+   "piece_census": 3.0,
+   "piece_gap": 3.0,
+   "same_piece": true
+  },
+  {
+   "id": "W15",
+   "census_w": 1.55,
+   "measured_gap_m": 1.5523,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W16",
+   "census_w": 1.55,
+   "measured_gap_m": 1.5523,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W18",
+   "census_w": 0.5,
+   "measured_gap_m": 0.5,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W19",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W20",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W21",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W22",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W23",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W24",
+   "census_w": 1.55,
+   "measured_gap_m": 1.5524,
+   "piece_census": 2.5,
+   "piece_gap": 2.5,
+   "same_piece": true
+  },
+  {
+   "id": "W25",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W26",
+   "census_w": 1.2,
+   "measured_gap_m": 1.2,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W27",
+   "census_w": 1.0,
+   "measured_gap_m": 1.0,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  },
+  {
+   "id": "W28",
+   "census_w": 0.6,
+   "measured_gap_m": 0.6,
+   "piece_census": 1.2,
+   "piece_gap": 1.2,
+   "same_piece": true
+  },
+  {
+   "id": "W29",
+   "census_w": 1.2,
+   "measured_gap_m": 1.2,
+   "piece_census": 1.5,
+   "piece_gap": 1.5,
+   "same_piece": true
+  }
+ ],
+ "m3_lines": {
+  "W28": {
+   "line_id": "L-005334b6998987164a5d",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-09": {
+   "line_id": "L-072bc37c5486905a9d21",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.453 / 0.147 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-11": {
+   "line_id": "L-093df4d00eb35db3a4c0",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_SHARED_PIER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_SHARED_PIER - ends 0.827 / 0.238 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-GF-08": {
+   "line_id": "L-0d5e2e3ac4167df90d6d",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.600 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-1F-08": {
+   "line_id": "L-10f18635f68cfd8cdd1d",
+   "class_now": "HELD",
+   "held_low_m3": 0.051,
+   "held_high_m3": 0.14208,
+   "piece_class": "PIECE",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W04": {
+   "line_id": "L-1313767d897f06ef95b6",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_SHARED_PIER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_SHARED_PIER - ends 1.300 / 0.150 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-GF-14": {
+   "line_id": "L-17953d7882899d43473f",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "HELD_ENDS",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: HELD_ENDS - no V2 band (T-125 MISSING, GF-W30, T-175): jambs not in the masonry capture"
+  },
+  "D-1F-04": {
+   "line_id": "L-183f52083e693bdf8671",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.080 / 2.120 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-01": {
+   "line_id": "L-1a07849115af938b4a72",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-2F-02": {
+   "line_id": "L-1c0e7646345156fcd0cb",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-04": {
+   "line_id": "L-274b112580029084b80e",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-1F-01": {
+   "line_id": "L-2c1c49db7cd7b16c6206",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "P-1F-01": {
+   "line_id": "L-2efe48097978cae5fc99",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-1F-07": {
+   "line_id": "L-3111418b702ac80f0ade",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-13": {
+   "line_id": "L-31232f81202941d104c6",
+   "class_now": "HELD",
+   "held_low_m3": 0.054,
+   "held_high_m3": 0.11289,
+   "piece_class": "PIECE",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W01": {
+   "line_id": "L-3af715c6e83364208ad0",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-12": {
+   "line_id": "L-3bdff145e1546ac48f8e",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_SHARED_PIER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_SHARED_PIER - ends 0.238 / 0.642 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "W24": {
+   "line_id": "L-40e8c2597de12644e8e2",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W05": {
+   "line_id": "L-441ae5fe85351347aff0",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W13": {
+   "line_id": "L-47882fa3a0d9cdcc122e",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_HEAD_ROOM",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_HEAD_ROOM - piece fits the piers but the head leaves no room for it under some soffits: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read"
+  },
+  "A-1F-01": {
+   "line_id": "L-4a12b89454e48ac510dc",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W16": {
+   "line_id": "L-53ef44d8c490d1341b93",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W15": {
+   "line_id": "L-55cfc2395aca2e0c69e3",
+   "class_now": "HELD",
+   "held_low_m3": 0.094,
+   "held_high_m3": 0.11348,
+   "piece_class": "PIECE",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W19": {
+   "line_id": "L-6057028f3f666538a007",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W20": {
+   "line_id": "L-6692d02cd6cd25120300",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-1F-02": {
+   "line_id": "L-6aa750fb944ad58ce960",
+   "class_now": "HELD",
+   "held_low_m3": 0.054,
+   "held_high_m3": 0.13197,
+   "piece_class": "PIECE",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-10": {
+   "line_id": "L-7149ea268473ea337cd2",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-02": {
+   "line_id": "L-71998da6340be871d0af",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W09": {
+   "line_id": "L-786344670c0002b31478",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-06": {
+   "line_id": "L-7a73a338210ee7268b65",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.759 / 0.141 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W08": {
+   "line_id": "L-7f9eb7cced8df33202a5",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W10": {
+   "line_id": "L-882717b0c35a87e363ef",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.100 / 1.050 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-1F-03": {
+   "line_id": "L-8b978b48668cde0f1b0c",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "L-GF-01": {
+   "line_id": "L-8f69c40749d579c14bf1",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "HELD_REGISTER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: HELD_REGISTER - register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "D-1F-09": {
+   "line_id": "L-961608860fcb38c106af",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-1F-06": {
+   "line_id": "L-9ec762c0bd529b924f33",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.747 / 0.073 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-2F-03": {
+   "line_id": "L-a0518076a024ab1be082",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "L-1F-01": {
+   "line_id": "L-a500f10eedbd63a147ab",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "HELD_REGISTER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: HELD_REGISTER - register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "D-2F-01": {
+   "line_id": "L-a58aabc436c71d85bea3",
+   "class_now": "HELD",
+   "held_low_m3": 0.054,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-03": {
+   "line_id": "L-a7848a35fb4329e09d10",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_SHARED_PIER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_SHARED_PIER - ends 0.150 / 0.850 m: a shared pier cannot carry both neighbours' 0.15 m minimum overhangs"
+  },
+  "D-1F-05": {
+   "line_id": "L-a7b8b292503ae1bf6c77",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W29": {
+   "line_id": "L-aca2db3c2b29719328c7",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.295 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W26": {
+   "line_id": "L-b699ce0da6b29b888435",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_HEAD_ROOM",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_HEAD_ROOM - piece fits the piers but the head leaves no room for it under some soffits: the head leaves room for the lintel under some pieces only (or only without the floor bed): which piece is over the opening is not read"
+  },
+  "A-GF-01": {
+   "line_id": "L-b729bd6381f216153df8",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-1F-10": {
+   "line_id": "L-befb0beb1707ef192326",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W23": {
+   "line_id": "L-bf76c17309c92605e174",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W25": {
+   "line_id": "L-bf88bf6f5efaa0ae5bdc",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.400 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W11": {
+   "line_id": "L-c1e57b06555adcf8edf7",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "P-GF-01": {
+   "line_id": "L-d887eecf51c121831336",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.000 / 1.800 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W21": {
+   "line_id": "L-dd5b41a7af885e96f797",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "D-GF-05": {
+   "line_id": "L-df32d6f42a824be21d3f",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W12": {
+   "line_id": "L-e39175199fc6edc4db86",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W07": {
+   "line_id": "L-ed7aadd01d9daa9559a9",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 1.2,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "W06": {
+   "line_id": "L-f269fabb74f505755492",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.895 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W22": {
+   "line_id": "L-f68444edf483bc1d87d4",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.895 / 0.000 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W18": {
+   "line_id": "L-f8736409a6afa1424ea9",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 0.000 / 0.578 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "W27": {
+   "line_id": "L-f892163c0602656f7e57",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "FLAGGED_NO_BEARING",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: FLAGGED_NO_BEARING - ends 1.400 / 0.100 m: an end below the 0.15 m minimum bearing (column face / cross wall / free end at the jamb)"
+  },
+  "D-GF-07": {
+   "line_id": "L-fd68db051119ea0266ee",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "PIECE_IF_BUILT",
+   "piece_m": 2.5,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  },
+  "L-2F-01": {
+   "line_id": "L-fd8aaedc3457d6648f18",
+   "class_now": "HELD",
+   "held_low_m3": null,
+   "held_high_m3": null,
+   "piece_class": "HELD_REGISTER",
+   "piece_m": null,
+   "m3_cause_proposed": "HELD: HELD_REGISTER - register hold: register LIFT LANDING DOOR LINTEL (Lead 2026-11-08 00:15): lintel over a lift landing door decided per opening (host shaft wall, head vs soffit); supply trade not printed (FR-T608-2)"
+  },
+  "W14": {
+   "line_id": "L-fd9eabe1828ed735c43d",
+   "class_now": "HELD",
+   "held_low_m3": 0.195,
+   "held_high_m3": 0.246,
+   "piece_class": "PIECE",
+   "piece_m": 3.0,
+   "m3_cause_proposed": "HELD: precast piece governs the payable form under register PRECAST LINTEL PAYABLE FORM (owner lintel rule 2026-11-02); see F-T644-1"
+  }
+ },
+ "appendix_freelancer_implied": {
+  "source": "T-571 R-T571-1 (his 54 deducted openings through the same rule; he has no lintel row: implied, not his figure)",
+  "at_most_nr": {
+   "1.2": {
+    "1F": 14,
+    "2F": 3,
+    "GF": 10,
+    "UNSPLIT": 0
+   },
+   "1.5": {
+    "1F": 2,
+    "2F": 4,
+    "GF": 7,
+    "UNSPLIT": 4
+   },
+   "2.5": {
+    "1F": 3,
+    "2F": 0,
+    "GF": 5,
+    "UNSPLIT": 0
+   },
+   "3.0": {
+    "1F": 1,
+    "2F": 0,
+    "GF": 0,
+    "UNSPLIT": 0
+   },
+   "4.0": {
+    "1F": 1,
+    "2F": 0,
+    "GF": 0,
+    "UNSPLIT": 0
+   }
+  }
+ }
+}
