@@ -1,0 +1,161 @@
+{
+ "from_census": "research/agents_t601/T601_DRAWN.json (gaps with PANEL_LINES evidence)",
+ "lift_gaps": {
+  "1F": {
+   "evidence": [
+    "PANEL_LINES",
+    "SHAFT_CROSS"
+   ],
+   "jamb_face_handles": [
+    "AFD",
+    "AFE",
+    "B19",
+    "B1A"
+   ],
+   "panel_lines": [
+    {
+     "covers_gap": true,
+     "handle": "B98",
+     "offset_from_shaft_face_mm": 0.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "B99",
+     "offset_from_shaft_face_mm": 50.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "B9A",
+     "offset_from_shaft_face_mm": 100.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "B9B",
+     "offset_from_shaft_face_mm": 200.0
+    }
+   ],
+   "shaft_cross_handles": [
+    "B94"
+   ],
+   "shaft_side": true,
+   "wall_t_m": 0.2,
+   "width_m": 1.0
+  },
+  "2F": {
+   "evidence": [
+    "PANEL_LINES",
+    "SHAFT_CROSS"
+   ],
+   "jamb_face_handles": [
+    "1289",
+    "128A",
+    "129B",
+    "129C"
+   ],
+   "panel_lines": [
+    {
+     "covers_gap": true,
+     "handle": "12B0",
+     "offset_from_shaft_face_mm": 0.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "12B1",
+     "offset_from_shaft_face_mm": 50.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "12B2",
+     "offset_from_shaft_face_mm": 100.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "12B3",
+     "offset_from_shaft_face_mm": 200.0
+    }
+   ],
+   "shaft_cross_handles": [
+    "12AC"
+   ],
+   "shaft_side": true,
+   "wall_t_m": 0.2,
+   "width_m": 1.0
+  },
+  "GF": {
+   "evidence": [
+    "PANEL_LINES",
+    "SHAFT_CROSS"
+   ],
+   "jamb_face_handles": [
+    "20D",
+    "20E",
+    "21D",
+    "21E"
+   ],
+   "panel_lines": [
+    {
+     "covers_gap": true,
+     "handle": "228",
+     "offset_from_shaft_face_mm": 0.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "229",
+     "offset_from_shaft_face_mm": 50.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "22A",
+     "offset_from_shaft_face_mm": 100.0
+    },
+    {
+     "covers_gap": true,
+     "handle": "22B",
+     "offset_from_shaft_face_mm": 200.0
+    }
+   ],
+   "shaft_cross_handles": [
+    "224"
+   ],
+   "shaft_side": true,
+   "wall_t_m": 0.2,
+   "width_m": 1.0
+  }
+ },
+ "schema": "T608_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "text_census": {
+  "P7757.dxf": {
+   "hits": {
+    "height_notation": [],
+    "lift_words": [],
+    "supply_or_schedule": []
+   },
+   "text_entities": 177
+  },
+  "ST7757 dxf.dxf": {
+   "hits": {
+    "height_notation": [],
+    "lift_words": [
+     "1C64"
+    ],
+    "supply_or_schedule": [
+     "1B3A",
+     "1C32",
+     "1E47",
+     "2035",
+     "206B",
+     "272B"
+    ]
+   },
+   "text_entities": 1934
+  },
+  "note": "a hit is listed by handle only; the builder refuses any hit it has no reviewed reading for (t608_alsenan.REVIEWED_HITS)",
+  "patterns": {
+   "height_notation": "\\b(h|ht|height)\\s*[=:]\\s*\\d|\\b\\d{3,4}\\s*[xX\\*]\\s*\\d{3,4}\\b|ارتفاع",
+   "lift_words": "\\b(lift|elevator|elev\\.?|ELV)\\b|مصعد|اسانسير|أسانسير",
+   "supply_or_schedule": "suppl|manufactur|schedule|by others|vendor|جدول|المورد|الشركة|المصنع"
+  }
+ },
+ "units": "mm drawing; figures written in m / mm as named"
+}

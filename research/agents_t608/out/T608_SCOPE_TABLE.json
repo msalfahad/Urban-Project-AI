@@ -1,0 +1,1344 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index, T-507)",
+ "drawing": {
+  "openings": {
+   "1F": {
+    "evidence": [
+     "PANEL_LINES",
+     "SHAFT_CROSS"
+    ],
+    "jamb_face_handles": [
+     "AFD",
+     "AFE",
+     "B19",
+     "B1A"
+    ],
+    "panel_lines": [
+     {
+      "covers_gap": true,
+      "handle": "B98",
+      "offset_from_shaft_face_mm": 0.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "B99",
+      "offset_from_shaft_face_mm": 50.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "B9A",
+      "offset_from_shaft_face_mm": 100.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "B9B",
+      "offset_from_shaft_face_mm": 200.0
+     }
+    ],
+    "shaft_cross_handles": [
+     "B94"
+    ],
+    "shaft_side": true,
+    "wall_t_m": 0.2,
+    "width_m": 1.0
+   },
+   "2F": {
+    "evidence": [
+     "PANEL_LINES",
+     "SHAFT_CROSS"
+    ],
+    "jamb_face_handles": [
+     "1289",
+     "128A",
+     "129B",
+     "129C"
+    ],
+    "panel_lines": [
+     {
+      "covers_gap": true,
+      "handle": "12B0",
+      "offset_from_shaft_face_mm": 0.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "12B1",
+      "offset_from_shaft_face_mm": 50.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "12B2",
+      "offset_from_shaft_face_mm": 100.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "12B3",
+      "offset_from_shaft_face_mm": 200.0
+     }
+    ],
+    "shaft_cross_handles": [
+     "12AC"
+    ],
+    "shaft_side": true,
+    "wall_t_m": 0.2,
+    "width_m": 1.0
+   },
+   "GF": {
+    "evidence": [
+     "PANEL_LINES",
+     "SHAFT_CROSS"
+    ],
+    "jamb_face_handles": [
+     "20D",
+     "20E",
+     "21D",
+     "21E"
+    ],
+    "panel_lines": [
+     {
+      "covers_gap": true,
+      "handle": "228",
+      "offset_from_shaft_face_mm": 0.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "229",
+      "offset_from_shaft_face_mm": 50.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "22A",
+      "offset_from_shaft_face_mm": 100.0
+     },
+     {
+      "covers_gap": true,
+      "handle": "22B",
+      "offset_from_shaft_face_mm": 200.0
+     }
+    ],
+    "shaft_cross_handles": [
+     "224"
+    ],
+    "shaft_side": true,
+    "wall_t_m": 0.2,
+    "width_m": 1.0
+   }
+  },
+  "reviewed_hits": [
+   {
+    "handle": "1C64",
+    "pattern": "lift_words",
+    "reading": "the lift BASE label on the foundation plan (pit / raft): not a landing-door note",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "1B3A",
+    "pattern": "supply_or_schedule",
+    "reading": "column schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "1C32",
+    "pattern": "supply_or_schedule",
+    "reading": "footing schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "1E47",
+    "pattern": "supply_or_schedule",
+    "reading": "simple-beam schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "2035",
+    "pattern": "supply_or_schedule",
+    "reading": "continuous-beam schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "206B",
+    "pattern": "supply_or_schedule",
+    "reading": "continuous-beam schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   },
+   {
+    "handle": "272B",
+    "pattern": "supply_or_schedule",
+    "reading": "continuous-beam schedule title (structural members)",
+    "source": "ST7757 dxf.dxf"
+   }
+  ],
+  "text_census": {
+   "P7757.dxf": {
+    "hits": {
+     "height_notation": [],
+     "lift_words": [],
+     "supply_or_schedule": []
+    },
+    "text_entities": 177
+   },
+   "ST7757 dxf.dxf": {
+    "hits": {
+     "height_notation": [],
+     "lift_words": [
+      "1C64"
+     ],
+     "supply_or_schedule": [
+      "1B3A",
+      "1C32",
+      "1E47",
+      "2035",
+      "206B",
+      "272B"
+     ]
+    },
+    "text_entities": 1934
+   },
+   "note": "a hit is listed by handle only; the builder refuses any hit it has no reviewed reading for (t608_alsenan.REVIEWED_HITS)",
+   "patterns": {
+    "height_notation": "\\b(h|ht|height)\\s*[=:]\\s*\\d|\\b\\d{3,4}\\s*[xX\\*]\\s*\\d{3,4}\\b|ارتفاع",
+    "lift_words": "\\b(lift|elevator|elev\\.?|ELV)\\b|مصعد|اسانسير|أسانسير",
+    "supply_or_schedule": "suppl|manufactur|schedule|by others|vendor|جدول|المورد|الشركة|المصنع"
+   }
+  }
+ },
+ "findings": [
+  {
+   "id": "F-T608-1",
+   "what": "T-568 type table labels the 3 lift landing openings 'excluded: lift supply'; no printed note supports the exclusion: restate as 'trade HELD (no printed note)' in the next type / statement table (label only, no quantity)"
+  },
+  {
+   "id": "F-T608-2",
+   "what": "the landing-entrance structural opening height is printed nowhere (text census 0 height notations; Q-55 census: only the main entrance height); it alone holds the 1F-13 and 2F-01 plaster + paint lines (4 lines, ranges 3.35 m2 wide each) and shares GF-08 with W02; it also holds 3 blockwork deductions, 3 lintel counts and the B6-06 surrounds. Source: the lift supplier (as the pit depth, CLARIFICATIONS S14) or the architect: proposed for the RFI package with the landing-door supply scope (Lead decides; not an owner question: a project fact, ERS s.2.7)"
+  },
+  {
+   "id": "F-T608-3",
+   "what": "Q-55's 2.20 m fallback is scoped to doors of the door trade; extending it to a lift entrance (height fixed by the lift product) would be a borrowed value: not applied. If the owner wishes a provisional lift-entrance height, that is a new owner rule (none requested here)"
+  }
+ ],
+ "fix_rows": [
+  {
+   "after": "EXCLUDED (kind LIFT_LANDING_DOOR, R-T608-1)",
+   "before": "RELEASED 1 pcs each",
+   "evidence": "DRAWING-CONFIRMED (T608_DRAWN: 4 panel lines at 0 / 50 / 100 / 200 mm from the shaft face + shaft cross, every storey; Checker T-601 13:58 own read GF / 1F)",
+   "family": "OPENING_COUNT",
+   "family_total": {
+    "after": "6",
+    "before": "9",
+    "delta": "-3",
+    "unit": "pcs"
+   },
+   "id": "FR-T608-1",
+   "item_code": "ARCH.PASSAGE",
+   "kind": "SET",
+   "lines": [
+    "L-77a427c89787ef3480a7",
+    "L-32d90a7a3cff7e9feb2a",
+    "L-c91732d6f75d440d677e"
+   ],
+   "openings": [
+    "GF OP-011 (L-GF-01)",
+    "1F OP-007 (L-1F-01)",
+    "2F OP-002 (L-2F-01)"
+   ],
+   "scope": "GF OP-011 / 1F OP-007 (task) + 2F OP-002 (F-T604-1, same element on the same drawing)"
+  },
+  {
+   "after": "class HELD, measured_net blank, count 1 beside per storey (frame + leaves + sill), owner trade HELD (no printed note names the lift package); never priced in DOOR.INTERNAL.PVC, never EXCLUDED as 'by others' until a note / spec says so",
+   "before": "no line",
+   "family": "DOOR_SUPPLY",
+   "family_total": {
+    "after": "3 HELD (count established)",
+    "before": "0 (omitted)",
+    "unit": "nr"
+   },
+   "id": "FR-T608-2",
+   "item_code": "proposed DOOR.LIFT_LANDING (code to the Lead / integration)",
+   "kind": "ADD",
+   "lines": [
+    "new: GF OP-011 (L-GF-01)",
+    "new: 1F OP-007 (L-1F-01)",
+    "new: 2F OP-002 (L-2F-01)"
+   ]
+  }
+ ],
+ "governing": [
+  "ELEMENT_REGISTER 'LIFT LANDING DOOR' (Lead 2026-11-07 16:17)",
+  "LIFT DOOR GAP IN SKIRTING (T-441)",
+  "LIFT LANDING THRESHOLD / LIFT ENTRANCE (T-413)",
+  "R-T601-1",
+  "Q-73 (full deduction)",
+  "Q-55 C (door fallback scope)",
+  "owner lintel rule 2026-11-02 + RC LINTEL register ruling",
+  "UP-OPEN-SCHED-001 1.4.0",
+  "ERS s.2 / s.3"
+ ],
+ "inputs": {
+  "DRAWN": "7cda8c0f80b646e851566ec7839997a644c5b894e2852780459472a5e71f55bb",
+  "INDEX": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+  "T128": "696333bc12f0acb9c2be106b05731575009ca194eaf7171cfba030076790c8b7",
+  "T175_CONS": "cd34f2628b2fa007d778d375a33e461fbc9bb53597d4240c6d3c378f9463f478",
+  "T175_NET": "15d700a6ba9d2dcedb04124478f5cfdf87459866425bc20c310485e9fa2a141f",
+  "T292": "005c86dd6b61edbfb048649ff7f3c404b0dbb97f9004b61f88b8642032a22bfc",
+  "T453": "ad9bceee3bfdbc12218edec2a648e39104f3503bd73342c8ebb451b8394c13f9",
+  "T487": "feb71118a22d1158581e43e752e873a85cd514a4ba2394b35c0157b2ed8f6693",
+  "T511": "c4a41d9b736c7d11019573827a4c67957dd96dfa49b723c4f8ad226fbf76eae5",
+  "T559": "73a05432f590e28cfddcf57e60524eb419d5172d82021caa96963b5d9fcff464",
+  "T568": "0ed2f5b5e05c65818c3948040db94823e57a8208f63cff57e7eea2563647bb8e",
+  "V12": "3c2d0ec075c2489960c4ab0d1eab1f2eb37430ed4db733f5a57d65eaec748fb7",
+  "V13": "a78e73d770a4429eed1a62dce7d65cfffa781fb86db11c1bf35f84e9072990f9"
+ },
+ "rows": [
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none (not a passage)",
+    "status": "EXCLUDED",
+    "value": null,
+    "why": "a framed landing door with leaves is not a doorless passage"
+   },
+   "family": "OPENING_COUNT",
+   "fix": "EXCLUDE from the passage count (kind LIFT_LANDING_DOOR); -1 pcs",
+   "in_task_scope": true,
+   "kind_on_line": "PASSAGE",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "GF-RC99C2A:OP-011",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.PASSAGE",
+     "line_id": "L-77a427c89787ef3480a7",
+     "measured_net": "1",
+     "unit": "pcs"
+    }
+   ],
+   "note": "the engine counts the framed landing door as a doorless passage (T-604 F-T604-1)",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "0 (EXCLUDED; the element moves to the landing-door family)",
+    "before": "1",
+    "unit": "pcs"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "FIX_ROW"
+  },
+  {
+   "expected": {
+    "bound": [
+     "1",
+     "1"
+    ],
+    "owner_trade": "HELD (no printed note)",
+    "status": "HELD",
+    "value": null,
+    "why": "one landing-door assembly drawn (count established); its supply trade is printed nowhere: HELD by name, never a door-trade line, never 'by others'"
+   },
+   "family": "DOOR_SUPPLY",
+   "fix": "ADD a HELD-blank landing-door assembly line (count 1 beside, trade HELD by name)",
+   "in_task_scope": true,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "no line holds the landing-door assembly; T-568 lists the three as 'excluded: lift supply' with no printed note (text census of the architectural + structural DXF: 2111 text entities, Arabic decoded; 7 hits, all read: the lift BASE label and member schedules, none names the landing door; Q-55 census: no door schedule; ST p.14 'as per lift manufacturer' prints the PIT depth only and is not extended to the door)",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "1 beside a HELD-blank line (count DRAWING-CONFIRMED, trade HELD)",
+    "before": "none",
+    "unit": "nr"
+   },
+   "storey": "GF",
+   "takes_it": false,
+   "verdict": "OMISSION"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-07 lift threshold marble",
+    "status": "AS_B6-07",
+    "value": null,
+    "why": "one threshold piece across the clear opening; not a door threshold or porcelain strip"
+   },
+   "family": "THRESHOLD",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (B6-07)",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-GF",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-c32effca1d7eae7f36f8",
+     "measured_net": "0.5",
+     "unit": "m2"
+    },
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-GF:edge",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-f2b76041971aa9e86acb",
+     "measured_net": "1",
+     "unit": "lm"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:GF:OP-011",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-6f5806adbacba9118497",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "GF-STRIP-OP-011:doorway strip",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-2621372661b2eb15b748",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-07 piece RELEASED (depth ASSUMED - OWNER-APPROVED UP-ELEV-005); ARCH.THRESHOLD band and porcelain strip EXCLUDED inside its footprint; its bed is named 'not stated, no table' (T-511), unchanged",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "0.5 m2 + 1 lm",
+    "unit": "m2 / lm"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-06 lift surround",
+    "status": "HELD",
+    "value": null,
+    "why": "jambs + head finish and arrises belong to the surround: no plaster / paint return, no bead"
+   },
+   "family": "SURROUND",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (B6-06)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LIFT:ELV-01-GF:surround",
+     "held_high": "5",
+     "held_low": "1",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "line_id": "L-b66b8e76425d81ff9f19",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-06 HELD (door height not printed); no plaster / paint 'door jambs and head' line names the opening and no corner bead line exists: correct by the LIFT ENTRANCE register",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "HELD blank (register range 2.750 .. 13.980 for the three)",
+    "unit": "m2"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "skirting (deduction only)",
+    "status": "DEDUCT_WHOLE",
+    "value": "1.0",
+    "why": "the whole width leaves the skirting run; jamb skirting 0 (framed, leaves)"
+   },
+   "family": "SKIRTING",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT LANDING DOOR (V12 FR-T601-3 label; T-296 deducted 1.00)",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "GF-RC99C2A:skirting",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.SKIRTING",
+     "line_id": "L-71e2e002a3af624097f0",
+     "measured_net": "28.571589",
+     "unit": "lm"
+    }
+   ],
+   "note": "the whole 1.00 is deducted, no jamb skirting (LIFT DOOR GAP register); the label was fixed in V12 and, on 1F, absorbed by the V13 FR-T606-1 row (R1)",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "28.571589",
+    "unit": "lm"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.650"
+    ],
+    "owner_trade": "masonry",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "BLOCKWORK",
+   "fix": null,
+   "his_basis": "flat 2.40 m height (printed nowhere; Q-55 refuses it without evidence)",
+   "his_m2": "2.40",
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (T-175 SHAFT row; deduction HELD)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "GF-WALLS:walls t=0.20",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "MAS.BLOCK",
+     "line_id": "L-4165954ce4871eda30cc",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "host wall GF-W08 HELD (T-175 net bounds 12.023 .. 15.773 m2); his deduction 1.00 x 2.40 = 2.40 m2 (T-559) rests on a height printed nowhere: UNRESOLVED on his side, ours HELD",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged; settles with h",
+    "before": "HELD (deduction 1.00 x h, h not printed)",
+    "unit": "m2"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "0.072"
+    ],
+    "owner_trade": "structure (lintel schedule)",
+    "status": "HELD",
+    "value": null,
+    "why": "head not established: whether masonry is built above it is not known; at most one lintel"
+   },
+   "family": "LINTEL",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (T-453 / T-487 L1 row)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LINTEL:L-GF-01",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "STR.CONC.LINTEL",
+     "line_id": "L-8f69c40749d579c14bf1",
+     "measured_net": null,
+     "unit": "m3"
+    }
+   ],
+   "note": "L1 schedule L1 0.20 x 0.20, if built at least 0.072 m3 (T-487); printed schedule governs over the owner precast lengths (RC LINTEL register ruling); count 0 .. 1 HELD on the head",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged; 0 .. 1 x 0.072 m3 beside",
+    "before": "HELD blank",
+    "unit": "m3"
+   },
+   "storey": "GF",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.650"
+    ],
+    "owner_trade": "plaster / paint (each face)",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "WALL_FACES",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "held opening (T-128 r3 opening table)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_08:PLASTER",
+     "held_high": "178.805",
+     "held_low": "152.0505",
+     "item_code": "FIN.PLASTER",
+     "line_id": "L-8cecb1d010d5aafbf25d",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:GF_08:PAINT",
+     "held_high": "178.805",
+     "held_low": "152.0505",
+     "item_code": "FIN.PAINT",
+     "line_id": "L-c0ac22c964a42e7d71b1",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "GF-08 plaster + paint HELD 152.0505 .. 178.805 m2 each; range width 26.7545 = lift 1.00 x 0 .. 3.65 (3.65) + W02 saloon glazing (23.1045)",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "unchanged; with a printed h: still HELD on the other open term",
+    "before": "HELD 152.0505 .. 178.805 (x2 lines)",
+    "unit": "m2"
+   },
+   "sole_blocker": false,
+   "storey": "GF",
+   "t292_ledger": "152.0505 .. 178.8050",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none",
+    "status": "NOT_APPLICABLE",
+    "value": null,
+    "why": "both sides dry / shaft: no wall tile, doorway waterproofing or transition"
+   },
+   "family": "WET_TRADES",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "both sides dry room / shaft: no wall tile, doorway WP or transition line names the opening (correct)",
+   "opening": "GF OP-011 (L-GF-01)",
+   "quantity_effect": {
+    "after": "none",
+    "before": "none",
+    "unit": "-"
+   },
+   "storey": "GF",
+   "takes_it": false,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none (not a passage)",
+    "status": "EXCLUDED",
+    "value": null,
+    "why": "a framed landing door with leaves is not a doorless passage"
+   },
+   "family": "OPENING_COUNT",
+   "fix": "EXCLUDE from the passage count (kind LIFT_LANDING_DOOR); -1 pcs",
+   "in_task_scope": true,
+   "kind_on_line": "PASSAGE",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "1F-R78C367:OP-007",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.PASSAGE",
+     "line_id": "L-32d90a7a3cff7e9feb2a",
+     "measured_net": "1",
+     "unit": "pcs"
+    }
+   ],
+   "note": "the engine counts the framed landing door as a doorless passage (T-604 F-T604-1)",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "0 (EXCLUDED; the element moves to the landing-door family)",
+    "before": "1",
+    "unit": "pcs"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "FIX_ROW"
+  },
+  {
+   "expected": {
+    "bound": [
+     "1",
+     "1"
+    ],
+    "owner_trade": "HELD (no printed note)",
+    "status": "HELD",
+    "value": null,
+    "why": "one landing-door assembly drawn (count established); its supply trade is printed nowhere: HELD by name, never a door-trade line, never 'by others'"
+   },
+   "family": "DOOR_SUPPLY",
+   "fix": "ADD a HELD-blank landing-door assembly line (count 1 beside, trade HELD by name)",
+   "in_task_scope": true,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "no line holds the landing-door assembly; T-568 lists the three as 'excluded: lift supply' with no printed note (text census of the architectural + structural DXF: 2111 text entities, Arabic decoded; 7 hits, all read: the lift BASE label and member schedules, none names the landing door; Q-55 census: no door schedule; ST p.14 'as per lift manufacturer' prints the PIT depth only and is not extended to the door)",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "1 beside a HELD-blank line (count DRAWING-CONFIRMED, trade HELD)",
+    "before": "none",
+    "unit": "nr"
+   },
+   "storey": "1F",
+   "takes_it": false,
+   "verdict": "OMISSION"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-07 lift threshold marble",
+    "status": "AS_B6-07",
+    "value": null,
+    "why": "one threshold piece across the clear opening; not a door threshold or porcelain strip"
+   },
+   "family": "THRESHOLD",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (B6-07)",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-1F",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-9840d1da235dd7583427",
+     "measured_net": "0.5",
+     "unit": "m2"
+    },
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-1F:edge",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-64dd750f95ead1a38c9a",
+     "measured_net": "1",
+     "unit": "lm"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:1F:OP-007",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-084df97d3d41525a65c2",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "1F-STRIP-OP-007:doorway strip",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-bb09715ec8ccdd5d11a8",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-07 piece RELEASED (depth ASSUMED - OWNER-APPROVED UP-ELEV-005); ARCH.THRESHOLD band and porcelain strip EXCLUDED inside its footprint; its bed is named 'not stated, no table' (T-511), unchanged",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "0.5 m2 + 1 lm",
+    "unit": "m2 / lm"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-06 lift surround",
+    "status": "HELD",
+    "value": null,
+    "why": "jambs + head finish and arrises belong to the surround: no plaster / paint return, no bead"
+   },
+   "family": "SURROUND",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (B6-06)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LIFT:ELV-01-1F:surround",
+     "held_high": "4.7",
+     "held_low": "1",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "line_id": "L-d788f643b290e8f92558",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-06 HELD (door height not printed); no plaster / paint 'door jambs and head' line names the opening and no corner bead line exists: correct by the LIFT ENTRANCE register",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "HELD blank (register range 2.750 .. 13.980 for the three)",
+    "unit": "m2"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "skirting (deduction only)",
+    "status": "DEDUCT_WHOLE",
+    "value": "1.0",
+    "why": "the whole width leaves the skirting run; jamb skirting 0 (framed, leaves)"
+   },
+   "family": "SKIRTING",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT LANDING DOOR (V12 FR-T601-3 label; T-296 deducted 1.00)",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "1F-R78C367:skirting",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.SKIRTING",
+     "line_id": "L-ba3599ec2dc82c221617",
+     "measured_net": "32.38536",
+     "unit": "lm"
+    }
+   ],
+   "note": "the whole 1.00 is deducted, no jamb skirting (LIFT DOOR GAP register); the label was fixed in V12 and, on 1F, absorbed by the V13 FR-T606-1 row (R1)",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged by T-608 (V13 line state 21.21536)",
+    "before": "32.38536",
+    "unit": "lm"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.350"
+    ],
+    "owner_trade": "masonry",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "BLOCKWORK",
+   "fix": null,
+   "his_basis": "flat 2.40 m height (printed nowhere; Q-55 refuses it without evidence)",
+   "his_m2": "2.40",
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (T-175 SHAFT row; deduction HELD)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "1F-WALLS:walls t=0.20",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "MAS.BLOCK",
+     "line_id": "L-5ffa7157a2fe483dd008",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "host wall 1F-W07 HELD (T-175 net bounds 6.155 .. 9.605 m2); his deduction 1.00 x 2.40 = 2.40 m2 (T-559) rests on a height printed nowhere: UNRESOLVED on his side, ours HELD",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged; settles with h",
+    "before": "HELD (deduction 1.00 x h, h not printed)",
+    "unit": "m2"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "0.072"
+    ],
+    "owner_trade": "structure (lintel schedule)",
+    "status": "HELD",
+    "value": null,
+    "why": "head not established: whether masonry is built above it is not known; at most one lintel"
+   },
+   "family": "LINTEL",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "LIFT (T-453 / T-487 L1 row)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LINTEL:L-1F-01",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "STR.CONC.LINTEL",
+     "line_id": "L-a500f10eedbd63a147ab",
+     "measured_net": null,
+     "unit": "m3"
+    }
+   ],
+   "note": "L1 schedule L1 0.20 x 0.20, if built at least 0.072 m3 (T-487); printed schedule governs over the owner precast lengths (RC LINTEL register ruling); count 0 .. 1 HELD on the head",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged; 0 .. 1 x 0.072 m3 beside",
+    "before": "HELD blank",
+    "unit": "m3"
+   },
+   "storey": "1F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.350"
+    ],
+    "owner_trade": "plaster / paint (each face)",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "WALL_FACES",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": "held opening (T-128 r3 opening table)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_13:PLASTER",
+     "held_high": "114.3677",
+     "held_low": "111.0177",
+     "item_code": "FIN.PLASTER",
+     "line_id": "L-9b4a7bab033d677e2017",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:1F_13:PAINT",
+     "held_high": "114.3677",
+     "held_low": "111.0177",
+     "item_code": "FIN.PAINT",
+     "line_id": "L-be48ea84285be20645af",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "1F-13 plaster + paint HELD 111.0177 .. 114.3677 m2 each; range width 3.35 = lift 1.00 x 0 .. 3.35 (the ONLY open term: the line is held by the landing-door height alone; W15 / W16 settled by T-238, T-292 ledger)",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "unchanged; with a printed h: 114.3677 - 1.00 x h each, RELEASABLE",
+    "before": "HELD 111.0177 .. 114.3677 (x2 lines)",
+    "unit": "m2"
+   },
+   "sole_blocker": true,
+   "storey": "1F",
+   "t292_ledger": "111.0175 .. 114.3675",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none",
+    "status": "NOT_APPLICABLE",
+    "value": null,
+    "why": "both sides dry / shaft: no wall tile, doorway waterproofing or transition"
+   },
+   "family": "WET_TRADES",
+   "fix": null,
+   "in_task_scope": true,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "both sides dry room / shaft: no wall tile, doorway WP or transition line names the opening (correct)",
+   "opening": "1F OP-007 (L-1F-01)",
+   "quantity_effect": {
+    "after": "none",
+    "before": "none",
+    "unit": "-"
+   },
+   "storey": "1F",
+   "takes_it": false,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none (not a passage)",
+    "status": "EXCLUDED",
+    "value": null,
+    "why": "a framed landing door with leaves is not a doorless passage"
+   },
+   "family": "OPENING_COUNT",
+   "fix": "EXCLUDE from the passage count (kind LIFT_LANDING_DOOR); -1 pcs",
+   "in_task_scope": false,
+   "kind_on_line": "PASSAGE",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "2F-R4D1B62:OP-002",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.PASSAGE",
+     "line_id": "L-c91732d6f75d440d677e",
+     "measured_net": "1",
+     "unit": "pcs"
+    }
+   ],
+   "note": "the engine counts the framed landing door as a doorless passage (T-604 F-T604-1)",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "0 (EXCLUDED; the element moves to the landing-door family)",
+    "before": "1",
+    "unit": "pcs"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "FIX_ROW"
+  },
+  {
+   "expected": {
+    "bound": [
+     "1",
+     "1"
+    ],
+    "owner_trade": "HELD (no printed note)",
+    "status": "HELD",
+    "value": null,
+    "why": "one landing-door assembly drawn (count established); its supply trade is printed nowhere: HELD by name, never a door-trade line, never 'by others'"
+   },
+   "family": "DOOR_SUPPLY",
+   "fix": "ADD a HELD-blank landing-door assembly line (count 1 beside, trade HELD by name)",
+   "in_task_scope": false,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "no line holds the landing-door assembly; T-568 lists the three as 'excluded: lift supply' with no printed note (text census of the architectural + structural DXF: 2111 text entities, Arabic decoded; 7 hits, all read: the lift BASE label and member schedules, none names the landing door; Q-55 census: no door schedule; ST p.14 'as per lift manufacturer' prints the PIT depth only and is not extended to the door)",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "1 beside a HELD-blank line (count DRAWING-CONFIRMED, trade HELD)",
+    "before": "none",
+    "unit": "nr"
+   },
+   "storey": "2F",
+   "takes_it": false,
+   "verdict": "OMISSION"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-07 lift threshold marble",
+    "status": "AS_B6-07",
+    "value": null,
+    "why": "one threshold piece across the clear opening; not a door threshold or porcelain strip"
+   },
+   "family": "THRESHOLD",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": "LIFT (B6-07)",
+   "lines": [
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-2F",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-eba7ac43f3fce9bbd0b5",
+     "measured_net": "0.5",
+     "unit": "m2"
+    },
+    {
+     "class": "RELEASED",
+     "element_id": "LIFT:ELV-01-2F:edge",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.MARBLE.LIFT_THRESHOLD",
+     "line_id": "L-e29e57482abbca2266b0",
+     "measured_net": "1",
+     "unit": "lm"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "HL:FLOOR_SCOPE:THRESHOLD:2F:OP-002",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-3c5a3be22e861d9d4cfb",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "EXCLUDED",
+     "element_id": "2F-STRIP-OP-002:doorway strip",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-17a56dfafc5504f41a28",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-07 piece RELEASED (depth ASSUMED - OWNER-APPROVED UP-ELEV-005); ARCH.THRESHOLD band and porcelain strip EXCLUDED inside its footprint; its bed is named 'not stated, no table' (T-511), unchanged",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "0.5 m2 + 1 lm",
+    "unit": "m2 / lm"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "B6-06 lift surround",
+    "status": "HELD",
+    "value": null,
+    "why": "jambs + head finish and arrises belong to the surround: no plaster / paint return, no bead"
+   },
+   "family": "SURROUND",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": "LIFT (B6-06)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LIFT:ELV-01-2F:surround",
+     "held_high": "4.28",
+     "held_low": "0.75",
+     "item_code": "FIN.MARBLE.LIFT_SURROUND",
+     "line_id": "L-fdbd9636828f045aae5a",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "B6-06 HELD (door height not printed); no plaster / paint 'door jambs and head' line names the opening and no corner bead line exists: correct by the LIFT ENTRANCE register",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "HELD blank (register range 2.750 .. 13.980 for the three)",
+    "unit": "m2"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "skirting (deduction only)",
+    "status": "DEDUCT_WHOLE",
+    "value": "1",
+    "why": "T-443 deducts OP-002 as a lift opening"
+   },
+   "family": "SKIRTING",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": "LIFT (T-443 deduction)",
+   "lines": [],
+   "note": "2F lobby skirting: deducted as a lift by T-443 (MERGED 92a38a14)",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged",
+    "before": "T-443",
+    "unit": "lm"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.350"
+    ],
+    "owner_trade": "masonry",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "BLOCKWORK",
+   "fix": null,
+   "his_basis": "flat 2.40 m height (printed nowhere; Q-55 refuses it without evidence)",
+   "his_m2": "2.40",
+   "in_task_scope": false,
+   "kind_on_line": "LIFT (T-175 SHAFT row; deduction HELD)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "2F-WALLS:walls t=0.20",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "MAS.BLOCK",
+     "line_id": "L-afe984a62285e133ec2f",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "host wall 2F-W00 HELD (T-175 net bounds 3.040 .. 6.840 m2); his deduction 1.00 x 2.40 = 2.40 m2 (T-559) rests on a height printed nowhere: UNRESOLVED on his side, ours HELD",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged; settles with h",
+    "before": "HELD (deduction 1.00 x h, h not printed)",
+    "unit": "m2"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "0.072"
+    ],
+    "owner_trade": "structure (lintel schedule)",
+    "status": "HELD",
+    "value": null,
+    "why": "head not established: whether masonry is built above it is not known; at most one lintel"
+   },
+   "family": "LINTEL",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": "LIFT (T-453 / T-487 L1 row)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "LINTEL:L-2F-01",
+     "held_high": null,
+     "held_low": null,
+     "item_code": "STR.CONC.LINTEL",
+     "line_id": "L-fd8aaedc3457d6648f18",
+     "measured_net": null,
+     "unit": "m3"
+    }
+   ],
+   "note": "L1 schedule L1 0.20 x 0.20, if built at least 0.072 m3 (T-487); printed schedule governs over the owner precast lengths (RC LINTEL register ruling); count 0 .. 1 HELD on the head",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged; 0 .. 1 x 0.072 m3 beside",
+    "before": "HELD blank",
+    "unit": "m3"
+   },
+   "storey": "2F",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": [
+     "0",
+     "3.350"
+    ],
+    "owner_trade": "plaster / paint (each face)",
+    "status": "HELD",
+    "value": null,
+    "why": "landing-entrance height not printed: deduction HELD 0 .. width x wall height, never 0, never a door-trade fallback or the freelancer's height"
+   },
+   "family": "WALL_FACES",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": "held opening (T-128 r3 opening table)",
+   "lines": [
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:2F_01:PLASTER",
+     "held_high": "26.0002",
+     "held_low": "22.6502",
+     "item_code": "FIN.PLASTER",
+     "line_id": "L-ae0cdd794cc5fdbe0c29",
+     "measured_net": null,
+     "unit": "m2"
+    },
+    {
+     "class": "HELD",
+     "element_id": "HL:WALL_FINISH:2F_01:PAINT",
+     "held_high": "26.0002",
+     "held_low": "22.6502",
+     "item_code": "FIN.PAINT",
+     "line_id": "L-c74cfb4e07bcc47bc5d6",
+     "measured_net": null,
+     "unit": "m2"
+    }
+   ],
+   "note": "2F-01 plaster + paint HELD 22.6502 .. 26.0002 m2 each; range width 3.35 = lift 1.00 x 0 .. 3.35 (the ONLY open term: the line is held by the landing-door height alone; W15 / W16 settled by T-238, T-292 ledger)",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "unchanged; with a printed h: 26.0002 - 1.00 x h each, RELEASABLE",
+    "before": "HELD 22.6502 .. 26.0002 (x2 lines)",
+    "unit": "m2"
+   },
+   "sole_blocker": true,
+   "storey": "2F",
+   "t292_ledger": "22.6500 .. 26.0000",
+   "takes_it": true,
+   "verdict": "CORRECT"
+  },
+  {
+   "expected": {
+    "bound": null,
+    "owner_trade": "none",
+    "status": "NOT_APPLICABLE",
+    "value": null,
+    "why": "both sides dry / shaft: no wall tile, doorway waterproofing or transition"
+   },
+   "family": "WET_TRADES",
+   "fix": null,
+   "in_task_scope": false,
+   "kind_on_line": null,
+   "lines": [],
+   "note": "both sides dry room / shaft: no wall tile, doorway WP or transition line names the opening (correct)",
+   "opening": "2F OP-002 (L-2F-01)",
+   "quantity_effect": {
+    "after": "none",
+    "before": "none",
+    "unit": "-"
+   },
+   "storey": "2F",
+   "takes_it": false,
+   "verdict": "CORRECT"
+  }
+ ],
+ "rule": "R-T608-1",
+ "schema": "URBAN_T608_LIFT_LANDING_SCOPE_V1",
+ "summary": {
+  "candidate_files_touched": 0,
+  "passage_pcs_delta_task": "-2",
+  "passage_pcs_delta_with_2F": "-3",
+  "released_quantities_changed": 0,
+  "task_non_correct": [
+   "GF OPENING_COUNT",
+   "GF DOOR_SUPPLY",
+   "1F OPENING_COUNT",
+   "1F DOOR_SUPPLY"
+  ],
+  "task_rows": 18
+ },
+ "task": "T-608"
+}
