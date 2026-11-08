@@ -1,0 +1,2886 @@
+{
+ "block_015": {
+  "freelancer": "blockwork in m2 only (T-176): units / mortar UNRESOLVED (no comparison possible)",
+  "held_hosts_untouched": [
+   {
+    "element": "MATERIAL:2F-WALLS:walls t=0.15",
+    "item": "MAS.UNITS.BLACK",
+    "line": "L-318e6311ab5e01c0fa3e",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:GF-WALLS:walls t=0.15",
+    "item": "MAS.MORTAR.BLACK",
+    "line": "L-39a62186ff15c48d51d5",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "item": "MAS.MORTAR.BLACK",
+    "line": "L-b765c24ac4b275c661bc",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:2F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "item": "MAS.UNITS.BLACK",
+    "line": "L-c76dd0d11a5776939008",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:2F-WALLS:walls t=0.15",
+    "item": "MAS.MORTAR.BLACK",
+    "line": "L-cdb8d54311c5c841528f",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:GF-WALLS:walls t=0.15",
+    "item": "MAS.UNITS.BLACK",
+    "line": "L-dc7b4e20a2f54668b179",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:1F-WALLS:walls t=0.15",
+    "item": "MAS.UNITS.BLACK",
+    "line": "L-e5a117db55cf7c5caaab",
+    "state": "HELD blank"
+   },
+   {
+    "element": "MATERIAL:1F-WALLS:walls t=0.15",
+    "item": "MAS.MORTAR.BLACK",
+    "line": "L-fdbe5743c95c05ae9c19",
+    "state": "HELD blank"
+   }
+  ],
+  "hosts": [
+   {
+    "contract_m2": "25.2727",
+    "element": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "host": "L-4054259959463edd70fb",
+    "lines": {
+     "panel": "L-a8f0d0e9fff641c0fa8e",
+     "units": "L-616b748b2c6051df27c9"
+    },
+    "panel_m3": [
+     "0.279579",
+     "0.279579"
+    ],
+    "perimeter_m3": [
+     "0.014744",
+     "0.014744",
+     "0.02083"
+    ],
+    "perimeter_open": true,
+    "units": [
+     "315.90875",
+     "315.90875"
+    ],
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ]
+   },
+   {
+    "contract_m2": "52.318",
+    "element": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "host": "L-73acd5a9d7e7cf6515c1",
+    "lines": {
+     "panel": "L-2051ab0a71c27be038ae",
+     "units": "L-06e9c6082a0625ad3821"
+    },
+    "panel_m3": [
+     "0.578768",
+     "0.578768"
+    ],
+    "perimeter_m3": [
+     "0.018729",
+     "0.018729",
+     "0.019896"
+    ],
+    "perimeter_open": false,
+    "units": [
+     "653.975",
+     "653.975"
+    ],
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ]
+   },
+   {
+    "contract_m2": "9.895",
+    "element": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+    "host": "L-87e0023741a8e2d98b21",
+    "lines": {
+     "panel": "L-794c7232f398260c7afb",
+     "units": "L-26c299b8e120e2ce6768"
+    },
+    "panel_m3": [
+     "0.109463",
+     "0.109463"
+    ],
+    "perimeter_m3": [
+     "0.003167",
+     "0.003167",
+     "0.003167"
+    ],
+    "perimeter_open": false,
+    "units": [
+     "123.6875",
+     "123.6875"
+    ],
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ]
+   },
+   {
+    "contract_m2": "58.2529",
+    "element": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "host": "L-a56a8add7812d1b52cb7",
+    "lines": {
+     "panel": "L-866a6602ffa70d03f210",
+     "units": "L-1e61a4aaeb00aa711dcd"
+    },
+    "panel_m3": [
+     "0.618315",
+     "0.622076"
+    ],
+    "perimeter_m3": [
+     "0.028344",
+     "0.028622",
+     "0.032121"
+    ],
+    "perimeter_open": true,
+    "units": [
+     "698.66125",
+     "702.91125"
+    ],
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ]
+   },
+   {
+    "contract_m2": "24.2374",
+    "element": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+    "host": "L-abf15bdf70ccf1e7b474",
+    "lines": {
+     "panel": "L-8f163174139bcf80c7c7",
+     "units": "L-1aa13ac06ca32ae43f02"
+    },
+    "panel_m3": [
+     "0.260604",
+     "0.260604"
+    ],
+    "perimeter_m3": [
+     "0.010361",
+     "0.010639",
+     "0.010639"
+    ],
+    "perimeter_open": false,
+    "units": [
+     "294.4675",
+     "294.4675"
+    ],
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ]
+   },
+   {
+    "contract_m2": "8.595",
+    "element": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+    "host": "L-adb393d6db51056d343b",
+    "lines": {
+     "panel": "L-33fcd56ef1548206bb1c",
+     "units": "L-fa0fae2380878a4f8428"
+    },
+    "panel_m3": [
+     "0.095082",
+     "0.095082"
+    ],
+    "perimeter_m3": [
+     "0.003237",
+     "0.003237",
+     "0.003237"
+    ],
+    "perimeter_open": false,
+    "units": [
+     "107.4375",
+     "107.4375"
+    ],
+    "walls": [
+     "GF-W19"
+    ]
+   }
+  ],
+  "mortar_m3": {
+   "hand": "1.367589 + panel 1.941811 + perimeter 0.078582 = 3.387982; companions panel 0 .. 0.003761, perimeter bounded 0 .. 0.011308 with 2 host(s) open (dome-opening pieces HELD by name, T-520)",
+   "v14": {
+    "excluded_n": 0,
+    "held_blank_n": 18,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 18,
+    "released": "1.367589",
+    "released_n": 4
+   },
+   "v15": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "0.005206",
+    "held_high_open_n": 2,
+    "held_low": "0",
+    "held_n": 17,
+    "released": "3.387982",
+    "released_n": 16
+   }
+  },
+  "summary_reread": {
+   "panel": "1.9455729375",
+   "panel_low": "1.9418116875",
+   "per_fig": "0.079138",
+   "per_hi": "0.08989",
+   "per_lo": "0.078582",
+   "units": "2198.3875",
+   "units_low": "2194.1375"
+  },
+  "units_pcs": {
+   "hand": "1075.8 + 2194.1375 (6 hosts, low) = 3269.9375; companion HELD 0 .. 4.25 (1F-W13 D-1F-09 face 0 .. 0.34 m2 x 12.5)",
+   "range_after": "3269.9375 .. 3274.1875",
+   "v14": {
+    "excluded_n": 0,
+    "held_blank_n": 18,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 18,
+    "released": "1075.8",
+    "released_n": 2
+   },
+   "v15": {
+    "excluded_n": 0,
+    "held_blank_n": 12,
+    "held_high": "4.25",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 13,
+    "released": "3269.9375",
+    "released_n": 8
+   }
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "findings": {
+  "F-T629-1": "the T-563 Gate B package carries FR-T617-1 as chained steps on GF-08 / 1F-13 / 2F-01; its V6 binding reads (T-454 bond coat etc.) on those lines must re-read the new low end at Gate B",
+  "F-T629-2": "the T-498 Gate B package now releases the 0.15 m black units / mortar on the 6 hosts as ASSUMED \u2014 OWNER-APPROVED; T-580 block_module_check (stage rows HELD) still holds for the stage extract itself, the V15 steps chain after it"
+ },
+ "held_not_wired": {
+  "FR-T618-2": {
+   "source": "FR-T618-2 (Lead, scope): E1 +1.00 porch landing skirting 3.5",
+   "state": "ENGINE_OMISSION CANDIDATE; scope (porch / outdoor skirting) HELD for the Lead; no owning line or item code ruled: not wired, never 0",
+   "what": "E1 +1.00 porch landing skirting, walled faces N 1.40 + E 0.90 + 0.80 + S 0.26 + 0.14 = 3.50 lm (Checker own read)"
+  },
+  "T-622 GF-14": {
+   "state": "worker DRAWING-CONFIRMED, not re-measured by the Checker and not named as a fix row: listed, not wired",
+   "what": "GF-14 wash lobby wall tile line +0.086709 m2 high (per-face rounding)"
+  },
+  "accessories_T615": {
+   "MAS.MESH.BED_JOINT|m.l": {
+    "ledger": "175.4844 -> 543.4739",
+    "restated": "367.9895",
+    "walls": 25
+   },
+   "MAS.TIE.SHARMAT|pcs": {
+    "ledger": "151 -> 212 measured",
+    "restated": 61,
+    "still_held_junctions": 94
+   },
+   "cement_sand": "beside the mortar lines (UPC-BLACK-MORTAR-001 x 8 bags / x 1.1 m3 per m3): purchasing group keys, not candidate lines (V3 'sand is a material-group key'); waste HELD",
+   "conditional_on_parent_held": [
+    {
+     "parent_held": "D-27 area conflict on its parent (T-488), own HELD",
+     "reads": "conditional on the parent's HELD area (F-C-T615-1), never an unconditional point",
+     "strip_ml": "20.2105",
+     "wall": "GF-W22"
+    },
+    {
+     "parent_held": "D-39 2F storey (T-488), own HELD",
+     "reads": "conditional on the parent's HELD area (F-C-T615-1), never an unconditional point",
+     "strip_ml": "13.9997",
+     "wall": "2F-W08"
+    },
+    {
+     "parent_held": "D-39 2F storey (T-488), own HELD",
+     "reads": "count by course 6 .. 6 on 3.75 .. 3.85 m (T-615), the wall area stays HELD",
+     "ties_pcs": "6",
+     "wall": "2F-W08"
+    }
+   ],
+   "wired": "NO: no candidate line carries MAS.TIE.SHARMAT / MAS.MESH.BED_JOINT (families B9-06 / B9-07 proposed, no registry row); listed for the T-498 materials package, never 0"
+  }
+ },
+ "inputs": {
+  "research/agents_t549/WIRING_MANIFEST_V4.json": "b0a8c6736122522e44690f9b49d2781eb1508cf8be3514f472cc169d5e5fc387",
+  "research/agents_t556/out/T556_PLASTER_HEIGHT.json": "8169a1953c386ccab7bbd9283404c100dc9d8105e6c10b7244593c9af442cd84",
+  "research/agents_t558/WIRING_MANIFEST_V6.json": "b44b919e4ef749e7d283da6d080e1a806f590a9eba9ef474eeb833c23c78cfe9",
+  "research/agents_t615/out/ACCESSORIES_015_T615.csv": "87a1d4884cf70e028e46180914df61e23f939cb6f694ab936d7f4814fae79a2d",
+  "research/agents_t615/out/SUMMARY_T615.json": "6192fe79c09f9a203f8702387c7ad0ec3651fd86d56ac85f4b9014b6f783c8dc",
+  "research/agents_t615/out/WALLS_015_T615.csv": "4811f105711ad7112cef72c4de7bf186b8122b123fbea58170b1ec2b382e12e0",
+  "research/agents_t617/out/T617_HEAD_BOUNDS.json": "883043d7ae606f37384d9071804f1aa0ac8a331fa854adde53ccc39646caaf3d",
+  "research/agents_t618/out/T618_RESIDUALS.json": "3ca6790cf6378e2221d57fabbb7b775566fd27a0fea80b0b18190dcc8a0ef49f",
+  "research/agents_t619/manifest_v14.py": "4b31afc68bd31ef64deece60604b2af0ee90e65d2a45de250b5efcf1ca81a901",
+  "research/agents_t619/out/WIRING_MANIFEST_V14.json": "a8409ce1286fef3cf39a7129d7d97839e5ae73b911bfaf0ac3b3d84e2834c959",
+  "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json": "9750dad42874b7214cca2476f859911f26243a1b6442241ecd68dbdb58b151f3"
+ },
+ "line_table": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 315.90875
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-616b748b2c6051df27c9",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.279579
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-a8f0d0e9fff641c0fa8e",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.014744
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 653.975
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-06e9c6082a0625ad3821",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.578768
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-2051ab0a71c27be038ae",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.018729
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.001167,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 123.6875
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-26c299b8e120e2ce6768",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.109463
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-794c7232f398260c7afb",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.003167
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-87e0023741a8e2d98b21",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 698.66125
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 4.25,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.UNITS.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-1:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.618315
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-866a6602ffa70d03f210",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.003761,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-2:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.028344
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 294.4675
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-1aa13ac06ca32ae43f02",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.260604
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-8f163174139bcf80c7c7",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.010361
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.000278,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 107.4375
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.UNITS.BLACK",
+   "kind": "SET",
+   "line_id": "L-fa0fae2380878a4f8428",
+   "package": "T-498",
+   "row": "FR-T615-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.095082
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "SET",
+   "line_id": "L-33fcd56ef1548206bb1c",
+   "package": "T-498",
+   "row": "FR-T615-2"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.003237
+   },
+   "before": null,
+   "evidence": "ASSUMED \u2014 OWNER-APPROVED",
+   "item": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-adb393d6db51056d343b",
+   "package": "T-498",
+   "row": "FR-T615-3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 211.80527,
+    "held_low": 178.81057,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 211.80527,
+    "held_low": 178.22057,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "FIN.PLASTER",
+   "kind": "SET",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "package": "T-563",
+   "row": "FR-T617-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 139.6155,
+    "held_low": 136.2155,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 139.6155,
+    "held_low": 135.6255,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "FIN.PLASTER",
+   "kind": "SET",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "package": "T-563",
+   "row": "FR-T617-1"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 31.76591,
+    "held_low": 27.59991,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 31.76591,
+    "held_low": 27.35991,
+    "measured_net": null
+   },
+   "evidence": "HELD",
+   "item": "FIN.PLASTER",
+   "kind": "SET",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "package": "T-563",
+   "row": "FR-T617-1"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.375
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.3422
+   },
+   "evidence": "VERIFIED",
+   "item": "FIN.WALL.TILE",
+   "kind": "SET",
+   "line_id": "L-f5c5a1a9c9ee2b644cb5",
+   "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+   "row": "FR-T622-1"
+  }
+ ],
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 + V15 FR-T615-3 (perimeter, 0.15 m hosts) carries both lines apart",
+    "host": "1F-WALLS:walls t=0.15",
+    "lines": [
+     "L-2051ab0a71c27be038ae",
+     "L-866a6602ffa70d03f210",
+     "L-a8f0d0e9fff641c0fa8e",
+     "L-fdbe5743c95c05ae9c19",
+     "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+     "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE",
+     "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE",
+     "NEW:MAS.MORTAR.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-2:RANGE",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7"
+    ],
+    "ruling": "B9-04 perimeter joint mortar of the 0.15 m black walls is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1; the T-498 step 6 / 0.20 m ruling, extended by T-615)",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 + V15 FR-T615-3 (perimeter, 0.15 m hosts) carries both lines apart",
+    "host": "GF-WALLS:walls t=0.15",
+    "lines": [
+     "L-33fcd56ef1548206bb1c",
+     "L-39a62186ff15c48d51d5",
+     "L-794c7232f398260c7afb",
+     "L-8f163174139bcf80c7c7",
+     "NEW:MAS.MORTAR.BLACK:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-87e0023741a8e2d98b21",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-adb393d6db51056d343b"
+    ],
+    "ruling": "B9-04 perimeter joint mortar of the 0.15 m black walls is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1; the T-498 step 6 / 0.20 m ruling, extended by T-615)",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   }
+  ],
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v14": 5129,
+   "after_v15": 5141,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 127,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 126,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 25,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 25
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 6,
+    "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 7,
+    "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+    "status": {
+     "APPLIED": 7
+    }
+   },
+   {
+    "ops": 5,
+    "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   }
+  ],
+  "other_lines_changed_vs_v14_overlay": [],
+  "rulings_v15": [
+   {
+    "fix_row": "T-498 + V15 FR-T615-3 (perimeter, 0.15 m hosts) carries both lines apart",
+    "host_re": "^(GF|1F)-WALLS:walls t=0\\.15$",
+    "layer": "MAS.MORTAR",
+    "ruling": "B9-04 perimeter joint mortar of the 0.15 m black walls is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1; the T-498 step 6 / 0.20 m ruling, extended by T-615)",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ]
+   }
+  ],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v15_vs_v14_totals": {
+   "FIN.PLASTER|m2": {
+    "after": {
+     "excluded_n": 13,
+     "held_blank_n": 10,
+     "held_high": "1006.77641",
+     "held_high_open_n": 0,
+     "held_low": "934.14581",
+     "held_n": 24,
+     "released": "363.3738",
+     "released_n": 38
+    },
+    "before": {
+     "excluded_n": 13,
+     "held_blank_n": 10,
+     "held_high": "1006.77641",
+     "held_high_open_n": 0,
+     "held_low": "932.72581",
+     "held_n": 24,
+     "released": "363.3738",
+     "released_n": 38
+    }
+   },
+   "FIN.WALL.TILE|m2": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "340.3366",
+     "released_n": 12
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "340.3038",
+     "released_n": 12
+    }
+   },
+   "MAS.MORTAR.BLACK|m3": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "0.005206",
+     "held_high_open_n": 2,
+     "held_low": "0",
+     "held_n": 17,
+     "released": "3.387982",
+     "released_n": 16
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 18,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 18,
+     "released": "1.367589",
+     "released_n": 4
+    }
+   },
+   "MAS.UNITS.BLACK|pcs": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_high": "4.25",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 13,
+     "released": "3269.9375",
+     "released_n": 8
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 18,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 18,
+     "released": "1075.8",
+     "released_n": 2
+    }
+   }
+  }
+ },
+ "pantry": {
+  "FIN.WALL.TILE|m2": {
+   "v14": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "340.3038",
+    "released_n": 12
+   },
+   "v15": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "340.3366",
+    "released_n": 12
+   }
+  },
+  "change_m2": "0.0328",
+  "hand": "10.5 x 3.65 - 5.95 = 32.375",
+  "line": "L-f5c5a1a9c9ee2b644cb5"
+ },
+ "plaster_band": {
+  "FIN.PLASTER|m2": {
+   "v14": {
+    "excluded_n": 13,
+    "held_blank_n": 10,
+    "held_high": "1006.77641",
+    "held_high_open_n": 0,
+    "held_low": "932.72581",
+    "held_n": 24,
+    "released": "363.3738",
+    "released_n": 38
+   },
+   "v15": {
+    "excluded_n": 13,
+    "held_blank_n": 10,
+    "held_high": "1006.77641",
+    "held_high_open_n": 0,
+    "held_low": "934.14581",
+    "held_n": 24,
+    "released": "363.3738",
+    "released_n": 38
+   }
+  },
+  "binding_reads_to_reread": [
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     178.22057,
+     211.80527
+    ],
+    "key": "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "178.81057",
+     "211.80527"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     135.6255,
+     139.6155
+    ],
+    "key": "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "136.2155",
+     "139.6155"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|cement_bags",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|mortar_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|BOND_COAT|sand_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|cement_bags",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   },
+   {
+    "expected_after_v6": [
+     27.35991,
+     31.76591
+    ],
+    "key": "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|sand_m3",
+    "reads_after_v15": [
+     "27.59991",
+     "31.76591"
+    ]
+   }
+  ],
+  "hand": "0.59 + 0.59 + 0.24 = 1.42 m2 on the HELD low end; high, class and released unchanged",
+  "rows": [
+   {
+    "after": [
+     "178.81057",
+     "211.80527"
+    ],
+    "band_m2": "0.59",
+    "before": [
+     "178.22057",
+     "211.80527"
+    ],
+    "door": "L-GF-01",
+    "line": "L-8cecb1d010d5aafbf25d",
+    "room": "GF-08"
+   },
+   {
+    "after": [
+     "136.2155",
+     "139.6155"
+    ],
+    "band_m2": "0.59",
+    "before": [
+     "135.6255",
+     "139.6155"
+    ],
+    "door": "L-1F-01",
+    "line": "L-9b4a7bab033d677e2017",
+    "room": "1F-13"
+   },
+   {
+    "after": [
+     "27.59991",
+     "31.76591"
+    ],
+    "band_m2": "0.24",
+    "before": [
+     "27.35991",
+     "31.76591"
+    ],
+    "door": "L-2F-01",
+    "line": "L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01"
+   }
+  ]
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 315.90875
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "derivation": "25.2727 m2 x 12.5 / m2",
+    "host": "L-4054259959463edd70fb",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-616b748b2c6051df27c9",
+   "op_id": "T-498|FR-T615-1|L-616b748b2c6051df27c9",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.279579
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "cement_bags_50kg": "2.236632 .. 2.236632",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-4054259959463edd70fb",
+    "item": "panel bed / head joint mortar",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.307537 .. 0.307537",
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-a8f0d0e9fff641c0fa8e",
+   "op_id": "T-498|FR-T615-2|L-a8f0d0e9fff641c0fa8e",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.014744
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "cement_bags_50kg": "0.117952 .. 0.16664",
+    "figure_m3": "0.014744",
+    "held_pieces": "1F-W24: west dome opening 1F-073 1.0577 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "host": "L-4054259959463edd70fb",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "range": "0.014744 .. 0.02083 + named pieces HELD (open) (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.016218 .. 0.022913",
+    "walls": [
+     "1F-W18",
+     "1F-W24"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "0.02083",
+    "low": "0.014744",
+    "open": true,
+    "range_of": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-4054259959463edd70fb",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 653.975
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "derivation": "52.318 m2 x 12.5 / m2",
+    "host": "L-73acd5a9d7e7cf6515c1",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-06e9c6082a0625ad3821",
+   "op_id": "T-498|FR-T615-1|L-06e9c6082a0625ad3821",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.578768
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "cement_bags_50kg": "4.630144 .. 4.630144",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-73acd5a9d7e7cf6515c1",
+    "item": "panel bed / head joint mortar",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.636645 .. 0.636645",
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-2051ab0a71c27be038ae",
+   "op_id": "T-498|FR-T615-2|L-2051ab0a71c27be038ae",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.018729
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "cement_bags_50kg": "0.149832 .. 0.159168",
+    "figure_m3": "0.018729",
+    "held_pieces": null,
+    "host": "L-73acd5a9d7e7cf6515c1",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "range": "0.018729 .. 0.019896 (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.020602 .. 0.021886",
+    "walls": [
+     "1F-W20",
+     "1F-W21",
+     "1F-W22"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.001167,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "0.019896",
+    "low": "0.018729",
+    "open": false,
+    "range_of": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-73acd5a9d7e7cf6515c1",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 123.6875
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "derivation": "9.895 m2 x 12.5 / m2",
+    "host": "L-87e0023741a8e2d98b21",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-26c299b8e120e2ce6768",
+   "op_id": "T-498|FR-T615-1|L-26c299b8e120e2ce6768",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.109463
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "cement_bags_50kg": "0.875704 .. 0.875704",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-87e0023741a8e2d98b21",
+    "item": "panel bed / head joint mortar",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.120409 .. 0.120409",
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-794c7232f398260c7afb",
+   "op_id": "T-498|FR-T615-2|L-794c7232f398260c7afb",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.003167
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "VERIFIED"
+    ],
+    "cement_bags_50kg": "0.025336 .. 0.025336",
+    "figure_m3": "0.003167",
+    "held_pieces": null,
+    "host": "L-87e0023741a8e2d98b21",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.003484 .. 0.003484",
+    "walls": [
+     "GF-W21",
+     "GF-W33"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:VERIFIED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-87e0023741a8e2d98b21",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-87e0023741a8e2d98b21",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 698.66125
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "derivation": "56.2329 m2 x 12.5 / m2",
+    "host": "L-a56a8add7812d1b52cb7",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "range": "698.66125 .. 702.91125 (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-1e61a4aaeb00aa711dcd",
+   "op_id": "T-498|FR-T615-1|L-1e61a4aaeb00aa711dcd",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 4.25,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "702.91125",
+    "low": "698.66125",
+    "open": false,
+    "range_of": "L-1e61a4aaeb00aa711dcd",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-1:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.UNITS.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.UNITS.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-1:RANGE",
+   "op_id": "T-498|FR-T615-1|NEW:MAS.UNITS.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-1:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498",
+   "unit": "pcs"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.618315
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "cement_bags_50kg": "4.94652 .. 4.976608",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-a56a8add7812d1b52cb7",
+    "item": "panel bed / head joint mortar",
+    "range": "0.618315 .. 0.622076 (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.680147 .. 0.684284",
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-866a6602ffa70d03f210",
+   "op_id": "T-498|FR-T615-2|L-866a6602ffa70d03f210",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.003761,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "0.622076",
+    "low": "0.618315",
+    "open": false,
+    "range_of": "L-866a6602ffa70d03f210",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-2:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-2:RANGE",
+   "op_id": "T-498|FR-T615-2|NEW:MAS.MORTAR.BLACK:MATERIAL:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-2:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.028344
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "cement_bags_50kg": "0.226752 .. 0.256968",
+    "figure_m3": "0.028622",
+    "held_pieces": "1F-W13: east ring west crossing 0.2903 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer); east dome opening 1F-077 2.8947 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer); east ring east crossing 0.2903 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer); 1F-W17: east dome opening 1F-077 0.4616 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer); east ring sliver 0.0029 m: dome opening piece: top of wall not drawn (T-227 / T-261, designer)",
+    "host": "L-a56a8add7812d1b52cb7",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "range": "0.028344 .. 0.032121 + named pieces HELD (open) (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.031178 .. 0.035333",
+    "walls": [
+     "1F-W12",
+     "1F-W13",
+     "1F-W17",
+     "1F-W19",
+     "1F-W23"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "0.032121",
+    "low": "0.028344",
+    "open": true,
+    "range_of": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-a56a8add7812d1b52cb7",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "AT_LEAST",
+   "class_before": null,
+   "element_id": "1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:1F-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 294.4675
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "derivation": "23.5574 m2 x 12.5 / m2",
+    "host": "L-abf15bdf70ccf1e7b474",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-1aa13ac06ca32ae43f02",
+   "op_id": "T-498|FR-T615-1|L-1aa13ac06ca32ae43f02",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.260604
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "cement_bags_50kg": "2.084832 .. 2.084832",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-abf15bdf70ccf1e7b474",
+    "item": "panel bed / head joint mortar",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.286664 .. 0.286664",
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-8f163174139bcf80c7c7",
+   "op_id": "T-498|FR-T615-2|L-8f163174139bcf80c7c7",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.010361
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "ASSUMED - OWNER-APPROVED"
+    ],
+    "cement_bags_50kg": "0.082888 .. 0.085112",
+    "figure_m3": "0.010639",
+    "held_pieces": null,
+    "host": "L-abf15bdf70ccf1e7b474",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "range": "0.010361 .. 0.010639 (line at the low end; companion HELD; R-T629-1 (d))",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.011397 .. 0.011703",
+    "walls": [
+     "GF-W28",
+     "GF-W29"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.000278,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_stated": "0.010639",
+    "low": "0.010361",
+    "open": false,
+    "range_of": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-abf15bdf70ccf1e7b474",
+    "rule": "R-T629-1 (d): a range is never a point"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:GF-WALLS:walls t=0.15#BLOCKWORK:ASSUMED___OWNER_APPROVED_BLACK#FR-T615-3:RANGE",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 107.4375
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "derivation": "8.595 m2 x 12.5 / m2",
+    "host": "L-adb393d6db51056d343b",
+    "item": "units, theoretical (procurement HELD: waste not sourced)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "walls": [
+     "GF-W19"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-fa0fae2380878a4f8428",
+   "op_id": "T-498|FR-T615-1|L-fa0fae2380878a4f8428",
+   "package": "T-498",
+   "row": "FR-T615-1",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.095082
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "cement_bags_50kg": "0.760656 .. 0.760656",
+    "derivation": "base x 0.0110625 m3 / m2 (0.15 x (1 - 0.39 x 0.19 x 12.5))",
+    "host": "L-adb393d6db51056d343b",
+    "item": "panel bed / head joint mortar",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "sand_m3_loose": "0.10459 .. 0.10459",
+    "walls": [
+     "GF-W19"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "kind": "SET",
+   "line_id": "L-33fcd56ef1548206bb1c",
+   "op_id": "T-498|FR-T615-2|L-33fcd56ef1548206bb1c",
+   "package": "T-498",
+   "row": "FR-T615-2",
+   "source": "T-498"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.003237
+   },
+   "before": null,
+   "beside": {
+    "area_status": [
+     "DRAWING-CONFIRMED"
+    ],
+    "cement_bags_50kg": "0.025896 .. 0.025896",
+    "figure_m3": "0.003237",
+    "held_pieces": null,
+    "host": "L-adb393d6db51056d343b",
+    "item": "perimeter joint mortar (own key beside the panel)",
+    "rule": "UPC-BLACK-BLOCK-001 1.1.0 (rulebook 1.1.0; Q-80 A owner 2026-11-07)",
+    "rule_perimeter": "R-T520-1 on the register module",
+    "sand_m3_loose": "0.003561 .. 0.003561",
+    "walls": [
+     "GF-W19"
+    ],
+    "was": "HELD blank by name (R-T533-1, V4 block_module)",
+    "why_assumed": "owner company rule (Q-80 A), not printed: weakest of the area statuses and the module status"
+   },
+   "class_after": "RELEASED",
+   "class_before": null,
+   "element_id": "GF-WALLS:walls t=0.15#BLOCKWORK:DRAWING_CONFIRMED_BLACK",
+   "evidence": {
+    "status": "ASSUMED \u2014 OWNER-APPROVED",
+    "verdict_line": "BOARD T-615 VERIFIER 2026-11-08T08:21Z: GATE A PASS; rulebook 1.1.0 UPC-BLACK-BLOCK-001 confirmed_modules_m 0.15 = 0.40 x 0.20 (Q-80 A verbatim); own checks: 1 / (0.40 x 0.20) = 12.5 / m2; 15 wall bases 175.871 (low 175.531) -> units 2,198.3875 (low 2,194.1375) AGREE; panel 0.0110625 m3 / m2 -> 1.945573 (low 1.941812) AGREE; cement x 8, sand x 1.1 AGREE; ties AGREE; drawing search: no 15 cm face printed. Statuses ASSUMED - OWNER-APPROVED; waste / procurement HELD; F-C-T615-1: GF-W22 / 2F-W08 strip carries the parent's HELD cause"
+   },
+   "item_code": "MAS.MORTAR.BLACK",
+   "kind": "ADD",
+   "line_id": "NEW:MAS.MORTAR.BLACK:PERIMETER:L-adb393d6db51056d343b",
+   "op_id": "T-498|FR-T615-3|NEW:MAS.MORTAR.BLACK:PERIMETER:L-adb393d6db51056d343b",
+   "package": "T-498",
+   "row": "FR-T615-3",
+   "source": "T-498:perimeter",
+   "unit": "m3"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 211.80527,
+    "held_low": 178.81057,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 211.80527,
+    "held_low": 178.22057,
+    "measured_net": null
+   },
+   "beside": {
+    "band_m2": "0.59",
+    "chained_after": "T-563|PLASTER_HEIGHT_V1|L-8cecb1d010d5aafbf25d",
+    "deduction_after": "0 .. 3.7000",
+    "deduction_before": "0 .. 4.290",
+    "door": "L-GF-01",
+    "high": "unchanged",
+    "low": "178.22057 + 0.59 = 178.81057",
+    "member": "B14 D 0.75",
+    "room": "GF-08",
+    "rule": "Q-72 (plaster to the slab underside) + R-T617-1; R-T629-1 (e)",
+    "storey": "GF"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-617 VERIFIER 2026-11-08T04:58Z: soffits GF 3.70 / 1F 3.40 / 2F 3.75 (own DXF read, B14 / B7 20 x 75, B2 20 x 40); FR-T617-1 band 1.00 x (D - 0.16) = 0.59 / 0.59 / 0.24 m2 AGREE (for the plaster wiring T-558); head DRAWING-BOUNDED above, low end HELD"
+   },
+   "kind": "SET",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "note": "R-T629-1 (b): chained inside the T-563 package",
+   "op_id": "T-563|FR-T617-1|L-8cecb1d010d5aafbf25d",
+   "package": "T-563",
+   "row": "FR-T617-1",
+   "source": "T-563"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 139.6155,
+    "held_low": 136.2155,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 139.6155,
+    "held_low": 135.6255,
+    "measured_net": null
+   },
+   "beside": {
+    "band_m2": "0.59",
+    "chained_after": "T-563|PLASTER_HEIGHT_V1|L-9b4a7bab033d677e2017",
+    "deduction_after": "0 .. 3.4000",
+    "deduction_before": "0 .. 3.990",
+    "door": "L-1F-01",
+    "high": "unchanged",
+    "low": "135.6255 + 0.59 = 136.2155",
+    "member": "B7 D 0.75",
+    "room": "1F-13",
+    "rule": "Q-72 (plaster to the slab underside) + R-T617-1; R-T629-1 (e)",
+    "storey": "1F"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-617 VERIFIER 2026-11-08T04:58Z: soffits GF 3.70 / 1F 3.40 / 2F 3.75 (own DXF read, B14 / B7 20 x 75, B2 20 x 40); FR-T617-1 band 1.00 x (D - 0.16) = 0.59 / 0.59 / 0.24 m2 AGREE (for the plaster wiring T-558); head DRAWING-BOUNDED above, low end HELD"
+   },
+   "kind": "SET",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "note": "R-T629-1 (b): chained inside the T-563 package",
+   "op_id": "T-563|FR-T617-1|L-9b4a7bab033d677e2017",
+   "package": "T-563",
+   "row": "FR-T617-1",
+   "source": "T-563"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 31.76591,
+    "held_low": 27.59991,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 31.76591,
+    "held_low": 27.35991,
+    "measured_net": null
+   },
+   "beside": {
+    "band_m2": "0.24",
+    "chained_after": "T-563|PLASTER_HEIGHT_V1|L-ae0cdd794cc5fdbe0c29",
+    "deduction_after": "0 .. 3.7500",
+    "deduction_before": "0 .. 3.990",
+    "door": "L-2F-01",
+    "high": "unchanged",
+    "low": "27.35991 + 0.24 = 27.59991",
+    "member": "B2 D 0.40",
+    "room": "2F-01",
+    "rule": "Q-72 (plaster to the slab underside) + R-T617-1; R-T629-1 (e)",
+    "storey": "2F"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-617 VERIFIER 2026-11-08T04:58Z: soffits GF 3.70 / 1F 3.40 / 2F 3.75 (own DXF read, B14 / B7 20 x 75, B2 20 x 40); FR-T617-1 band 1.00 x (D - 0.16) = 0.59 / 0.59 / 0.24 m2 AGREE (for the plaster wiring T-558); head DRAWING-BOUNDED above, low end HELD"
+   },
+   "kind": "SET",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "note": "R-T629-1 (b): chained inside the T-563 package",
+   "op_id": "T-563|FR-T617-1|L-ae0cdd794cc5fdbe0c29",
+   "package": "T-563",
+   "row": "FR-T617-1",
+   "source": "T-563"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.375
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 32.3422
+   },
+   "beside": {
+    "change_m2": "0.0328",
+    "deductions_m2": [
+     {
+      "m2": "2.25",
+      "what": "W09 1.50 x 1.50"
+     },
+     {
+      "m2": "1.50",
+      "what": "W10 1.00 x 1.50"
+     },
+     {
+      "m2": "2.20",
+      "what": "door 1.00 x 2.20"
+     }
+    ],
+    "faces_m": [
+     {
+      "m": "4.500",
+      "what": "west face 4.450 + column 2FAE return 0.050"
+     },
+     {
+      "m": "3.000",
+      "what": "north face"
+     },
+     {
+      "m": "3.000",
+      "what": "south face"
+     }
+    ],
+    "faces_total_m": "10.5",
+    "hand": "10.5 x 3.65 - 5.95 = 32.375",
+    "height_m": "3.65",
+    "rule": "Q-37 A pantry wet + UP-PANTRY-003 host walls full height; open edge tiles nothing (UP-PANTRY-002)",
+    "who_is_right": "ENGINE_WRONG (walk face 10.491 vs drawn 10.500)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-622 VERIFIER 2026-11-08T10:00Z: own re-measure GF-07 pantry faces 10.500 m x 3.65 = 38.325 - W09 2.25 - W10 1.50 - door 2.20 = 32.375 m2 AGREE worker; engine line 32.3422 (walk face 10.491) 0.0328 m2 short: ENGINE_WRONG confirmed -> fix row for an integration package; GF-14 +0.086709 ENGINE_WRONG stays worker DRAWING-CONFIRMED (not re-measured)"
+   },
+   "kind": "SET",
+   "line_id": "L-f5c5a1a9c9ee2b644cb5",
+   "note": "room line re-measured by the Checker; the B4 family stays PARTIALLY VERIFIED",
+   "op_id": "WALL_TILE_PANTRY (T-622 FR-T622-1)|FR-T622-1|L-f5c5a1a9c9ee2b644cb5",
+   "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+   "row": "FR-T622-1",
+   "source": "WALL_TILE_PANTRY (T-622 FR-T622-1)"
+  }
+ ],
+ "rule": "R-T629-1",
+ "schema": "URBAN_T629_WIRING_MANIFEST_V15",
+ "sources_merged": {
+  "T-615": "b8265219",
+  "T-617": "44ee93d5",
+  "T-618": "85a473ce",
+  "T-620": "91b73cd8",
+  "T-621": "T-621 engine merge (Verifier 2026-11-08T08:01Z)",
+  "T-622": "31fe39db",
+  "T-623": "T-623 engine merge (Verifier 2026-11-08T09:59Z)"
+ },
+ "sources_no_row": {
+  "T-618": {
+   "merge": "85a473ce",
+   "rows": 0,
+   "why": "FR-T618-1 restates two statement residuals as ranges (stair skirting (-inf, 0.710951], rails (-inf, 0.226]): statement only (folded in V11, T-620); FR-T618-2 porch skirting: no owning line (listed held)"
+  },
+  "T-620": {
+   "merge": "91b73cd8",
+   "rows": 0,
+   "why": "reconciled statement V11 + scorecard V11: reads lines, moves none"
+  },
+  "T-621": {
+   "merge": "T-621 engine merge (Verifier 2026-11-08T08:01Z)",
+   "rows": 0,
+   "why": "B3 floor tile rows to evidence: no class or quantity moved"
+  },
+  "T-623": {
+   "merge": "T-623 engine merge (Verifier 2026-11-08T09:59Z)",
+   "rows": 0,
+   "why": "B10 beam / column rows to evidence; F-T623-1 is a split correction inside the statement, no line moves"
+  }
+ },
+ "sources_refused": {
+  "T-624": {
+   "refusal": "T-624 is not MERGED with a Checker verdict: its rows cannot enter a manifest",
+   "state": "TODO at claim (beam-end open items)"
+  },
+  "T-628": {
+   "refusal": "T-628 is not MERGED with a Checker verdict: its rows cannot enter a manifest",
+   "state": "TODO at claim (footing / lift-wall rows)"
+  }
+ },
+ "stair_edge_census_after_v15": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "supersedes": {
+  "V14 sources_no_row T-617 ('FR-T617-1: no manifest line')": "superseded: on the T-563 plaster basis (Q-72, to the slab soffit) the band narrows the HELD low end; 0.000 m2 holds only on the candidate's G1 faces (paint, and plaster before T-563)",
+  "V4 block_module stage_material_lines (R-T533-1: the 12 staged lines on the 6 hosts stay HELD blank)": "superseded on those 12 lines by T-615 (Q-80 A, UPC-BLACK-BLOCK-001 1.1.0); the 0.15 m material lines of the hosts outside V4 (GF-W22 D-27 parent, 2F-W08 D-39, unclassed 0.15) stay HELD blank"
+ },
+ "task": "T-629"
+}
