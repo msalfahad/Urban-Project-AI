@@ -92,6 +92,16 @@ quantity.
   curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
   FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
   band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- PRECAST LINTEL PAYABLE FORM (Lead 2026-11-08 20:15; T-630 table, for T-644): OWNER TRADE B9 (B9-02). Under the owner
+  lintel rule 2026-11-02 a lintel is ONE precast piece per masonry opening, counted in pcs by standard length; the
+  STR.CONC.LINTEL m3 lines are not the payable form and stay HELD with that cause (never 0, never re-added with the pcs).
+  An opening FLAGGED (> 4.00 m, curved band, no masonry both ends) is owned by the structural line that carries its head.
+- ROOF BUILD-UP LAYERS (Lead 2026-11-08 20:15; for T-646): every layer over one roof (screed, membrane, insulation,
+  protection, finish) uses ONE roof plan area; OWNER TRADE B13-01 for screed / insulation / protection / finish, B8-06
+  for the membrane and its upturns (T-626). A layer differs from the roof finish area only by a named, drawn cause.
+- REBAR-TO-CONCRETE BINDING (Lead 2026-11-08 20:15; F-T639-1, for T-643): every B11 bar line binds to exactly one
+  concrete element id (B10 owner); a bar line is never more certain than the inputs its length uses: released bars on a
+  HELD member stay released only when every input of the bar length is printed independently of the hold.
 - BLOCKWORK MATERIALS AND REGISTER CODES (Lead 2026-11-08 16:15; T-630 F-T630-1 / -3, for T-637): OWNER TRADE B9. The
   laid block panel is ONE element with ONE work line per unit: MAS.BLOCK m2 (Q-75). Block units (MAS.UNITS.*, pcs) are
   MATERIAL rows of that element in B9-01, never re-added into the m2 work; joint mortar and AAC glue (MAS.MORTAR.*,
