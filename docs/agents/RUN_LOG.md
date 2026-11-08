@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08 17:00 UTC | Worker 3 | STARTED | run session_01E6cPne84Wp5cXqzDq7woFS | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08 16:55 UTC | Worker 2 | SUCCESS | T-640 READY (agents/task-T-640 @ a36c7459) | 72/72 HELD-blank B4/B5 m2 lines classed with causes: 33 get bounded fix rows (87.234..138.540 m2 HELD; ST_2F shaft plaster 44.512..49.872 / paint 42.722..47.932, 27 return-paint faces, 4 ceilings), 8 carried (T-314 facade rows, 1F group line), 24 genuinely held (Q-54 B annex, T-088, D-45/53/62, DCR-4), 7 pending a DXF read (W03/W17 curved reveal depth); 35 leave blank, nothing wired. Missing: W03/W17 depths, ST shaft low-end release ruling. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (note: early in the run I read repo JSON with plain python3 and once imported the new builder read-only outside the wrapper to list T-573 ids; all builds/tests ran through the wrapper)
 - 2026-11-08T16:50Z | Verifier | STARTED | run session_01E6cPneGK6pYeMcLasvutLJ | repo-attached routine | task state: checking board (READY 0 at Lead 16:19) | self-check pending
 - 2026-11-08 16:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
