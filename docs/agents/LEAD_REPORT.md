@@ -1,5 +1,20 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-11-08 12:13 UTC
+
+Drive read OK (no file created or modified in the project folders since 08:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 08:19; released V2.9 + route G unchanged.
+- Beams B10 (m3): 18 / 18 never-measured beam / column rows re-measured from ST7757 (15 / 16 within 0.001 m3, 1F CB12 BEYOND / THROUGH split corrected, line total unchanged; 2 THROUGH_SUPPORT stay UNRESOLVED); beam-end open items closed: +0.009714 m3 ENGINE_WRONG OMISSION (3 pieces Checker re-measured) -> when wired 66.401795 vs his 66.093875 (+0.466 %, physical causes, not a verdict). Residual 2.248826 UNRESOLVED unchanged.
+- NEW Checker finding (structural, gate 1): GF B20 upstand drawn 4.325 m vs billed 3.00 m (0 .. +0.053 m3), contradicting the 09:59 reading (3.000 m on hidden line 55F): fix row first in S with an every-upstand census.
+- Wall tile B4 (m2): his 433.83 vs engine 340.3038: 47 / 47 UNKNOWN rows own value by handle, 42 DRAWING-CONFIRMED, 5 DIFFER (GF-14 +0.0867 high, pantry 0.0328 short: ENGINE_WRONG); Checker AGREE on 3 rooms (30.255 / 52.529 / 32.375); HELD 6 rows 138.39 stay HELD.
+- Floor tile B3 (m2): round-stair footprint own 6.137684 vs 6.124412 (+0.22 %, chords); GF-OPEN 147.657691 / 1F-LIV 38.5855 AGREE with every open side named (READY with the Checker).
+- Blockwork B9: Q-80 rule version merged (175.871 m2 of 0.15 m walls out of HELD, Checker own 2,198.39 nr AGREE); his 1260.69 vs 467.79 m2: 39 UNKNOWN rows (231.67 m2) to evidence next, 50 HELD rows (561.22 m2) stay HELD.
+- Learned (ERS s.7): open side on its own drawn line ADOPTED; add-term placement by the owning rule's own region ADOPTED; upstand extent from the drawn strip, never the section-mark span PROPOSED.
+- Next: B20 upstand census, footings / lift walls, waterproofing, opening areas, blockwork 39 rows, plaster / paint 31 rows; manifest V16; 10 Nov all-trade dry run; statement + scorecard V12.
+- Missing / gate: candidate wiring (Gate B) waits on PR #4; 10 Nov end-to-end in the candidate LOW (2 days); 12-13 Nov tables HIGH.
+TEAM HEALTH: 12 runs since 08:12 (W1 2, W2 2, W3 2, Verifier 4 incl. the 07:51 run now closed), all closed, 0 empty, all ran code; 5 merged, 0 rejected, READY 2; this run self-check codemap / t061 / freeze PASS; queue check 25 actionable, 0 flagged, 0 stall checks. Worker 1 11:45: wrapper refused a research script and the worker ran it with the venv python directly (no harm; board told to use pytest or record BLOCKED).
+OWNER PACKAGE: none new (all settled by drawings or answered rules; ORR-007 stair skirting form still with you).
+NEEDS FIXING (only you): (1) merge PR #4 (open, mergeable clean since 7 Nov 21:05) - blocks every Gate B, the 10 Nov milestone in the candidate, and is now pushing workers toward running scripts outside the wrapper; (2) freelancer floors / rails workbooks + 1990 spec when ready (not blockers).
+
 ## LEAD REPORT 2026-11-08 08:19 UTC
 
 Drive read OK (no file created or modified in the project folders since 04:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged.
@@ -32,17 +47,3 @@ OWNER PACKAGE: none new (all settled by drawings, your Q-80 answer or delegated 
 NEEDS FIXING (only you): (1) merge PR #4 (open, mergeable, run allow-list for research/agents_t*/ scripts) - blocks every Gate B and the 10 Nov milestone; (2) freelancer floors / rails workbooks + 1990 spec when ready (not blockers).
 
 
-## LEAD REPORT 2026-11-08 00:15 UTC
-
-Drive read OK (no file created in the project folders since 20:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 20:18; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines independently verified in the candidate: slab 60.28 m3 + footing-pit blinding 12.73 m3; released 0.
-- Beams / columns (m3): residual 2.369278 UNRESOLVED (unchanged). Split r1 REJECTED: B27 oblique node booked as carrier from B4 and B5 (0.180 vs drawn 1.120 x 0.20 x 0.50 = 0.112), SHORT -2.427 GF used as a cause -> r2 FIRST. Proven: 1F 69D joint >= 0.075 m3 (settles 0.385 / 0.460 as a set choice). NEW F-C-P02-3 CB11 corner-column omission +0.018750 m3 ENGINE_WRONG -> beam-end census (T-614). Beam crossings: billed once, UNDER -0.005957 .. -0.007252 m3 (PV).
-- Footings (m3): FN 180C notch owned by F9, pair 5.307 = Checker own read; his 5.349 (+0.042) ENGINE_RIGHT; side forms 7.46 .. 7.685 m2 HELD.
-- Skirting (lm): manifest V13 209.728592 -> 198.558592 (-5.33 %) when wired. GF open room +0.10 ENGINE_RIGHT VERIFIED; his -17.013904 (-23.3 % of that room) UNRESOLVED (no drawn reading gives 72.92). Small residuals 2.78 lm -> T-618.
-- Stairs (lm / nr): steps + nosing 8.40 lm / 7 nr one cause, ENGINE_RIGHT once (56 drawn risers), never summed across lines.
-- Openings (pcs): 3 lift landing doors DRAWING-CONFIRMED; ARCH.PASSAGE 9 -> 6 (FR-T608-1); landing door supply HELD x 3; head height unprinted keeps 2 x 3.35 m2 plaster / paint ranges -> T-617 reads the sections before any RFI. Lintels 60 AT_MOST vs his implied 54: -6 nr by opening -> T-616.
-- Blockwork: your Q-80 A applied next (T-615): 175.9 m2 of 15 cm walls leave HELD (about 2,198 units, 1.946 m3 panel mortar, 16.3 cement bags, to be reproduced).
-- Learned (ERS s.7): node capacity once across marks, a balancing term is never a cause (PROPOSED); a beam owns its band beyond a narrow column (PROPOSED); skirting-where-floor and crossing-union ADOPTED.
-- Missing / gate: wiring (Gate B) waits on PR #4; 12-13 Nov tables on track (V10 merged, T-613 next).
-TEAM HEALTH: 10 working runs since 20:15 (W1 2, W2 2, W3 2, Verifier 4), all closed, 0 empty, all ran code, self-check PASS (this run codemap / t061 / freeze PASS); 7 merged, 2 rejected (T-609 r1 merged on rework, T-600 r1 reworked next); READY 0; 8 TODO (S 3, A 3, I 2); queue check 22 actionable, 0 flagged, 0 stall.
-OWNER PACKAGE: none new (all settled by drawings, your Q-80 answer or delegated rules; ORR-007 stair skirting form still with you).
-NEEDS FIXING (only you): (1) merge PR #4 (run allow-list for research/agents_t*/ scripts; PR #3 merged, thank you) - blocks every Gate B; 10 Nov milestone LOW; (2) freelancer floors / rails workbooks and the 1990 spec (coming, not blockers); (3) privacy switch of the public repo.

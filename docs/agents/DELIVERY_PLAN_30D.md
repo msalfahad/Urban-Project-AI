@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-08 12:13; recovery plan in force)
+
+- Merged since 08:19 (all Gate A, research, no candidate line moved): T-615, T-620, T-622, T-623, T-624 WORKED; READY T-625 (floor tile carry-forward), T-629 (manifest V15).
+- Closed for 12-13 Nov: statement + scorecard V11, wall tile 47 rows, beams / columns 18 rows, beam-end open items, Q-80 rule version. Remaining: V15 / V16 manifests (T-629, T-631), statement + scorecard V12 (T-635), evidence rows footings (T-628), waterproofing (T-626), opening areas (T-627), blockwork (T-633), internal plaster / paint (T-634); Checker finding B20 upstand (T-632).
+- 10 Nov: non-candidate end-to-end all-trade dry run (T-630, worker 3 first). Candidate wiring still BLOCKED on PR #4 only.
+- 10 Nov candidate wiring: LOW (PR #4, 2 days left). 12-13 Nov reconciliation tables: HIGH.
+
 ## Status (Lead, 2026-11-08 08:19; recovery plan in force)
 
 - Merged since 04:15 (all Gate A, research, no candidate line moved): T-617, T-614 r2, T-618, T-619 WORKED; T-621 PARTIAL (40 / 41 rows; 3 rooms Checker-VERIFIED); T-615 READY (Q-80 block walls).

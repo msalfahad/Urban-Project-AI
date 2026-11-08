@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-08 12:13 (since 08:19)
+
+- T-615 Q-80 0.15 m block module (Gate A): WORKED (rule version 1.1.0, 175.871 m2 out of HELD, Checker own count AGREE). Decision: quantities chained in V15 (T-629) behind T-498.
+- T-620 statement + scorecard V11: WORKED (no quantity moved; floor tile UNKNOWN 41 -> 1). Decision: V12 (T-635) after the 8 Nov evidence rows merge.
+- T-622 wall tile 47 rows (Gate A): WORKED (42 DRAWING-CONFIRMED, 5 DIFFER, 3 rooms Checker-VERIFIED; GF-14 +0.086709 high, pantry -0.0328 short ENGINE_WRONG). Decision: pantry in V15; GF-14 into V16 (T-631).
+- T-623 beams / columns 18 rows (Gate A): WORKED (15 / 16 within 0.001 m3; CB12 split corrected; 2 THROUGH_SUPPORT stay UNRESOLVED). Decision: fold into V12 (T-635); Checker's B20 upstand reading later contradicted by F-C-P02-12 -> T-632.
+- T-624 beam-end open items (Gate A): WORKED (FR-T624-1..3 +0.009714 m3; B10 66.401795). Decision: V16 (T-631), cut after V15 missed it.
+- T-625, T-629: READY. Decision: T-629 first (V15 base for T-631 / T-630), T-625 second.
+- Worker 1 11:45: wrapper refused a research script; ran it with the venv python directly. Decision: board note: drive research scripts through pytest or record BLOCKED until PR #4; owner told under NEEDS FIXING.
+
 ## Lead 2026-11-08 08:19 (since 04:15)
 
 - T-617 lift landing head (Gate A): WORKED (bounded by ring-beam soffits, low end HELD, 0.000 m2 change). Decision: fold into statement V11 (T-620); FR-T617-1 into manifest V15 (T-629).
@@ -176,11 +186,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - Process: Worker 2 ran a research script with the venv python after the wrapper refused it (outside the pre-approved command; census reproduced by the Checker). Decision: research scripts run through their pytest tests until the owner widens the wrapper (NEEDS FIXING).
 - F-C-T487-1 (lintel bars) had no row. Decision: T-515 (worker 1 second).
 
-## Lead 2026-11-04 20:15 (since 16:17)
-
-- T-488 blockwork wiring (Gate B): WORKED (V3.0.55, MAS.BLOCK 579.1011 -> 467.7925 m2, held walls by name). Decision: T-498 recomputes materials from this base; lessons row ADOPTED.
-- T-508 stair skirting wiring (Gate B): WORKED (V3.0.56, 209.429 lm). Decision: F-C-T508-1 (all-blank code printed 0.0) -> T-512 (b); F-C-T508-2 -> register.
-- T-500 tile bed mortar table (Gate A): WORKED. Decision: T-511 TODO.
-- T-510 band-gap classes (Gate A): PARTIAL (left t212 red; unwired). Decision: T-512 gate fix first for worker 1; T-513 wiring queued for worker 2.
-- T-310 r6 wet-area WP: PARTIAL (version collision with T-488, engineering unchanged). Decision: r7 rebase on V3.0.56, worker 2 first.
-- Process: 3 empty worker runs (18:41-19:19, 0 TODO). Decision: each worker keeps a non-candidate TODO behind its package.

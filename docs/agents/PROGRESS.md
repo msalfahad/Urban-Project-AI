@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-08 08:19 UTC (Lead). Previous version: 2026-11-08 00:15 UTC. The released numbers did not change
+Last update: 2026-11-08 12:13 UTC (Lead). Previous version: 2026-11-08 08:19 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 8 Nov 08:19 (newest first; five checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Beam ends: the last open beam-end pieces are settled; three small pieces owned by no line (0.0097 m3 together) are
+  our omission; when wired, beams 66.39 -> 66.40 m3 vs his 66.09 (+0.47 %, physical causes, not a verdict).
+- Beams and columns: all 18 never-measured rows re-measured from the structural drawing; 15 of 16 measurable rows
+  reproduce ours within 0.001 m3; one first-floor beam's split between 'beyond' and 'through' corrected (total
+  unchanged); 2 rows stay unexplained (never 0).
+- NEW from the checker: the ground beam B20 upstand is drawn 4.33 m long but billed 3.00 m (up to +0.053 m3); an
+  earlier check read 3.00 m from a different line. Settled from the drawings next, with every other upstand.
+- Wall tiles: all 47 never-measured wall-tile rows re-measured face by face; 42 agree with the drawing, 5 differ
+  (one ground bath 0.09 m2 too high, the pantry 0.03 m2 short: our errors, small); the checker re-measured three
+  rooms itself and agrees (30.26 / 52.53 / 32.38 m2). 6 held rows (138.39 m2) stay held.
+- Your Q-80 answer is now in a rule version (checked): 175.9 m2 of 15 cm walls out of held, about 2,198 blocks.
+- Floor tiles: the round stair footprint is 6.14 m2 by its true arc (ours 6.12, 0.2 % short); the ground open room
+  (147.66 m2) and 1st-floor living (38.59 m2) now end on a named printed line on every open side. With the checker.
+- Statement and scorecard for 12-13 Nov updated (floor tile: unknown rows 41 -> 1).
+- Next: footing and lift-wall rows, waterproofing, window / door areas, blockwork (39 rows, 231.7 m2) and internal
+  plaster / paint rows re-measured; wiring list V16; the 10 Nov end-to-end dry run of every trade.
+- 10 Nov: wiring into the candidate itself stays LOW until you merge the run-command change (PR #4).
 
 Since 8 Nov 04:15 (newest first; five checked and merged, none sent back; no candidate quantity moved; all wait to be
 wired into the candidate):

@@ -92,6 +92,11 @@ quantity.
   curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
   FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
   band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- BEAM UPSTAND EXTENT (Lead 2026-11-08 12:13; Checker F-C-P02-12 vs T-623 Gate A): a concrete upstand / downstand on a
+  beam band is its own strip (section profile minus the band, e.g. GF B20 0.20 x 0.20) times the drawn strip length
+  between named end lines; the band stays with its beam line, the strip is counted once (UP-CONC-JOINT-001). OWNER TRADE
+  B10 concrete (beams line). GF B20: plan strip 4.325 m vs billed 3.00 m vs hidden line 55F 3.000 m: UNSETTLED, east
+  part 0 .. 0.053 m3 HELD companion until T-632 settles it from the governing drawing.
 - LIFT LANDING HEAD (Lead 2026-11-08 04:15; T-617 READY 5903d8d4): the landing door head height is printed nowhere; it is
   bounded above by the door-side ring beam soffit per storey (GF B14 / 1F B7 / 2F B2), low end HELD. Plaster / paint faces
   above the head (OWNER TRADE B5 / B6, Q-72) stay ranges until printed or answered by the RFI; the landing door supply stays
