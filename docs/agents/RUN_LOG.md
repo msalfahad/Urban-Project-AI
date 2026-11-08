@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T23:52Z | Verifier | STARTED | run session_01E6cPne4HoqW3eNsA9LCqGJ | repo-attached routine | task state: READY T-643 (W1 49746e9f), T-636 (W3 3cc5ac92) | self-check pending
 - 2026-11-08T23:30Z | Worker 1 | SUCCESS | T-643 READY (agents/task-T-643 @ 49746e9f) | 14 released column main-bar lines on HELD concrete (754.723 kg): 10 KEEP 595.435 kg (section-conflict hold enters no bar input; L = declared interval; schedule re-read 8/8), 4 DOWNGRADE proposals 159.288 kg (2F interval to undeclared roof D-39); 208 unbound: 185 bound (56 also class A), 23 unresolved with reason; nothing released | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-11-08T23:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T23:12Z | Worker 3 | SUCCESS | T-636 READY (agents/task-T-636 @ 3cc5ac92) | 10 Nov trial BOQ from V3.0.58 + overlay V17 by master 1.56.0: 5151 lines, 1559 released / 2750 HELD / 842 excluded; released per BOQ line split WIRED / OVERLAY / UNVERIFIED with exact re-add in every unit (B11 9787.750205 kg released = 0 + 412.444445 + 9375.30576, no total: 1695 HELD); HELD cause found for 2314 / 2750 from committed records, 436 listed by id as F-T636-1 (full candidate line records are private-run output, not committed); NO_FAMILY 0; no unit grand is a total | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
