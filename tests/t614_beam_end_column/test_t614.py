@@ -134,6 +134,76 @@ def test_beside_strip_clip_bridge_and_end_gap():
     assert bridged.area == pytest.approx(0.025 * 0.30 + 1.10 * 0.05, abs=1e-9)
 
 
+# ---- R-T614-1 (g) (r2): billing by a LEDGER line read from its own extent and named adds (hand fixture, not Alsenan)
+# band y 0 .. 0.30 from x 0 to 6.00, depth 0.60; partial column CA x 0 .. 0.50, y 0 .. 0.20 at the west end (covers
+# 0.20 of 0.30); full-width column CB x 5.50 .. 6.00 at the east end. The ledger run is printed 5.00 m (CA east face
+# x 0.50 to CB west face x 5.50) x 0.30: its rectangle. The drawn hull runs past the printed length beside CA: strip
+# x 0 .. 0.50, y 0.20 .. 0.30 = 0.050 m2 -> 0.030 m3 at 0.60.
+CA = box(0.0, 0.0, 0.50, 0.20)
+CB = box(5.50, -0.05, 6.00, 0.35)
+RUN = box(0.50, 0.0, 5.50, 0.30)
+STRIP = box(0.0, 0.20, 0.50, 0.30)
+
+
+def test_ledger_run_bills_its_rectangle_only_and_the_strip_past_its_length_is_an_omission():
+    rec = R.ledger_billing(RUN, STRIP, 5.00 * 0.30 - RUN.area, [], D)
+    assert rec["model_only_m2"] == pytest.approx(0.050, abs=1e-9)
+    assert rec["billed"].area == pytest.approx(1.50, abs=1e-9)
+    acc = R.account_piece(STRIP, D, {"L": rec["billed"]})
+    assert acc["verdict"] == "ENGINE_WRONG_OMISSION"
+    assert acc["omission_m3"] == pytest.approx(0.030, abs=1e-9)
+
+
+def test_adverse_model_match_never_proves_billing_of_a_smaller_piece():
+    # a whole-line model (rectangle + every drawn part) compared with the line value inside a tolerance as large as
+    # the piece would 'match'; the piece outside the printed extent with no named add is still unbilled: refused
+    model = R.union([RUN, STRIP])
+    with pytest.raises(R.Refused):
+        R.refuse_model_proof(STRIP, RUN, model, "MODEL_MATCHES")
+    assert R.refuse_model_proof(STRIP, R.union([RUN, STRIP]), model, "MODEL_MATCHES") == 0.0
+
+
+def test_named_add_places_the_strip_and_a_wrong_value_does_not():
+    ok = R.ledger_billing(RUN, STRIP, 0.0, [0.0300], D)
+    assert ok["add_state"] == "PLACED" and ok["model_only_m2"] == pytest.approx(0.0, abs=1e-12)
+    assert R.account_piece(STRIP, D, {"L": ok["billed"]})["verdict"] == "ENGINE_RIGHT"
+    bad = R.ledger_billing(RUN, STRIP, 0.0, [0.0500], D)          # 0.050 m3 is no drawn part set: not proof
+    assert bad["add_state"] == "UNPLACED" and bad["model_only_m2"] == pytest.approx(0.050, abs=1e-9)
+
+
+def test_printed_length_longer_than_the_rectangle_places_the_excess():
+    # an oblique end billed on the mean length (R-BEAM-END-OBLIQUE-2): printed 5.1667 m x 0.30 = rectangle + 0.050
+    rec = R.ledger_billing(RUN, STRIP, (5.00 + 0.05 / 0.30) * 0.30 - RUN.area, [], D)
+    assert rec["ext_state"] == "PLACED" and rec["extent_m2"] == pytest.approx(0.050, abs=1e-9)
+
+
+def test_two_equal_end_parts_and_one_add_is_ambiguous_not_silent():
+    other = box(5.50, 0.20, 6.00, 0.30)          # a second 0.050 m2 part at the east end
+    rec = R.ledger_billing(RUN, R.union([STRIP, other]), 0.0, [0.0300], D)
+    assert rec["add_state"] == "PLACED_AMBIGUOUS"
+    assert rec["model_only_m2"] == pytest.approx(0.050, abs=1e-9)
+
+
+def test_named_add_without_depth_is_refused():
+    with pytest.raises(R.Refused):
+        R.ledger_billing(RUN, STRIP, 0.0, [0.03], None)
+
+
+@pytest.mark.parametrize("op", ["mirror", "rotate", "mm"])
+def test_ledger_billing_invariant_under_mirror_rotation_and_units(op):
+    def T(g):
+        if op == "mirror":
+            return affinity.scale(g, -1.0, 1.0, origin=(0, 0))
+        if op == "rotate":
+            return affinity.rotate(g, 37.0, origin=(0, 0))
+        return affinity.scale(g, 1000.0, 1000.0, origin=(0, 0))
+    k = {"mirror": 1.0, "rotate": 1.0, "mm": 1000.0}[op]
+    rec = R.ledger_billing(T(RUN), T(STRIP), 0.0, [0.0300 * k ** 2], D)   # volume scales with plan (depth kept)
+    assert rec["add_state"] == "PLACED"
+    rec0 = R.ledger_billing(T(RUN), T(STRIP), 0.0, [], D)
+    assert rec0["model_only_m2"] == pytest.approx(0.050 * k * k, rel=1e-6)
+
+
 # ---- the committed development-villa census (arithmetic only; the build needs the private drawing)
 @pytest.fixture(scope="module")
 def census():
@@ -158,12 +228,53 @@ def test_every_drawn_end_examined(census):
 
 def test_fix_rows_are_the_measured_omissions_and_re_add(census):
     om = [p for p in census["pairs"] if p.get("final_verdict") == "ENGINE_WRONG_OMISSION"]
-    assert len(om) == len(census["fix_rows"]) == 2
+    assert len(om) == len(census["fix_rows"]) == 5
     tot = sum(f["change_m3"] for f in census["fix_rows"])
     assert tot == pytest.approx(sum(p["omission_m3"] for st, p in census["per_storey"].items()), abs=2e-6)
-    assert tot == pytest.approx(0.002137 + 0.018750, abs=2e-6)
+    by = {f["id"]: f for f in census["fix_rows"]}
+    # r1 rows kept with their ids (Checker AGREE 03:55): GF CB8 col 4, 1F CB11 at 69D
+    assert (by["FR-T614-1"]["storey"], by["FR-T614-1"]["mark"], by["FR-T614-1"]["since"]) == ("GF", "CB8", "r1")
+    assert by["FR-T614-1"]["change_m3"] == pytest.approx(0.002137, abs=2e-6)
+    assert (by["FR-T614-2"]["storey"], by["FR-T614-2"]["mark"]) == ("1F", "CB11")
+    assert by["FR-T614-2"]["change_m3"] == pytest.approx(0.018750, abs=1e-6)
+    # r2 rows (R-T614-1 (g)): GF CB8 col 2 east (Checker 0.003078 m2 / +0.002309), GF B24 at its west column,
+    # 1F CB11 at its west column (an 11.7 mm drawn step between the column face and the CB13 face)
+    assert (by["FR-T614-3"]["mark"], by["FR-T614-3"]["piece_m2"]) == ("CB8", pytest.approx(0.003078, abs=1e-6))
+    assert by["FR-T614-3"]["change_m3"] == pytest.approx(0.002309, abs=1e-6)
+    assert (by["FR-T614-4"]["mark"], by["FR-T614-4"]["piece_m2"]) == ("B24", pytest.approx(0.05, abs=1e-6))
+    assert by["FR-T614-4"]["change_m3"] == pytest.approx(0.0375, abs=1e-6)
+    assert (by["FR-T614-5"]["mark"], by["FR-T614-5"]["storey"]) == ("CB11", "1F")
+    assert by["FR-T614-5"]["change_m3"] == pytest.approx(0.00088, abs=1e-6)
+    assert tot == pytest.approx(0.002137 + 0.018750 + 0.002309 + 0.0375 + 0.00088, abs=5e-6)
     for f in census["fix_rows"]:
         assert f["piece_m2"] * f["depth_m"] == pytest.approx(f["change_m3"], abs=1e-6)
+
+
+def test_r2_model_only_pairs_are_listed_and_never_engine_right(census):
+    mo = {(p["storey"], p["line_mark"], p["column"]): p for p in census["model_only_pairs"]}
+    assert len(mo) == 8
+    for p in mo.values():
+        assert p["r1_model_verdict"] == "ENGINE_RIGHT"
+        assert p["final_verdict"] in ("ENGINE_WRONG_OMISSION", "UNRESOLVED_ADD_UNPLACED", "UNRESOLVED_ADD_AMBIGUOUS")
+    assert mo[("GF", "CB8", "C13")]["billed_by_model_only_m2"] == pytest.approx(0.003078, abs=1e-6)
+
+
+def test_r2_ledger_values_rebuilt_from_own_extent_and_printed_terms(census):
+    # every RELEASED ledger line value = (rectangle + placed excess) x depth + printed adds - printed deducts, within
+    # 0.1 dm3, except the two named residuals (reported, not hidden)
+    off = {x["run"]: x["extent_value_residual_m3"] for x in census["ledger_extents"]
+           if abs(x["extent_value_residual_m3"]) > 0.001}
+    assert set(off) == {"BM-GF-021#BAND0021.1.r2", "BM-GF-048#BAND0048.1"}
+    assert off["BM-GF-021#BAND0021.1.r2"] == pytest.approx(0.01355, abs=1e-5)
+
+
+def test_r2_fr_t610_3_withdrawn_and_fcp025_restated_by_column(census):
+    r2 = census["F_C_P02_5_r2"]
+    assert r2["FR_T610_3"]["billed_r2_m2"]["L-bd16e6923af088014236"] == 0.0
+    assert r2["FR_T610_3"]["billed_r2_m2"]["L-3dddf99008ab922da814"] == pytest.approx(0.000923, abs=1e-6)
+    assert r2["col3_C21"]["verdict"] == "ENGINE_RIGHT"
+    assert r2["col2_east_C13"]["verdict"] == r2["col4_C25"]["verdict"] == "ENGINE_WRONG_OMISSION"
+    assert r2["col2_west_C13"]["verdict"] == "HELD" and r2["col2_west_C13"]["piece_m2"] > 0
 
 
 def test_column_strips_partition_exactly(census):

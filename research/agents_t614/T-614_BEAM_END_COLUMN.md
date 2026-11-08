@@ -86,3 +86,37 @@ classified only gaps between pieces; the Checker read the strip from one band | 
 beside the column belongs to the beam whose DRAWN band holds it (deeper band first); outside every drawn band it is
 HELD; read the billing of every neighbouring line before naming an omission (every villa) | tests/t614_beam_end_column
 normal + adverse | PROPOSED |
+
+## r2 (Checker 2026-11-08T03:55Z, Gate A (e)): billing read from the line's own extent, never from a plan model
+
+R-T614-1 (g) (PROPOSED): a LEDGER line bills its own route G rectangle (= printed length between the faces it names
+x drawn width), a printed excess (mean-length oblique end, run over an unlabelled span) only through drawn parts whose
+area matches it, named adds (T-229 END_SHORT_*, T-229 run) only through drawn parts whose volume matches the add
+(best subset, 1 dm3 or 1 %), SUPPORT_CUT_BESIDE only at its cut. Every other drawn part beyond the rectangle is
+MODEL_ONLY: not billed, whatever the T-610 whole-line model's MODEL_MATCHES says. Check of the basis: 28 of the 30
+RELEASED ledger line values are rebuilt from (rectangle + placed excess) x depth + printed adds - printed deducts within
+0.001 m3 (26 within 0.0001; GF CB8 BAND0039 +0.000638, GF B26 +0.000103); the two exceptions are named: GF CB4 BAND0021.1.r2 +0.01355 m3 (its mean-length excess 0.0271 m2 has no
+drawn part outside other members' rectangles: it lies inside a neighbour's rectangle, a possible double billing for
+the T-610 / T-229 owners) and GF B27 +0.00296 m3 (T-229 corner slivers).
+
+Census on that basis (out/T614_BEAM_END_CENSUS.json, schema V2; 8 pairs whose r1 'billed' rested on the model):
+
+| pair | r1 | r2 | m3 |
+|---|---|---|---|
+| GF CB8 col 2 east (C13) | ENGINE_RIGHT (model) | ENGINE_WRONG_OMISSION FR-T614-3, 0.003078 m2 (= Checker) | +0.002309 |
+| GF B24 west end column (C23), cover 0.25 of 0.50 | ENGINE_RIGHT (model) | ENGINE_WRONG_OMISSION FR-T614-4, 0.20 x 0.25 = 0.050 m2 between the column face and B16's east face, inside B24's drawn band, outside its 3.55 m run | +0.037500 |
+| 1F CB11 west end column (C3) | ENGINE_RIGHT (model) | ENGINE_WRONG_OMISSION FR-T614-5, 0.01174 x 0.10 = 0.001173 m2 (drawn 11.7 mm step: column face vs CB13 face) | +0.000880 |
+| GF B26 at C25 / C27, GF B28 at C27 | ENGINE_RIGHT (model) | UNRESOLVED_ADD_UNPLACED: the named add (B26 run +0.1798, B28 END_SHORT_AT_CARRIED +0.0612) is placed by no drawn part set; bound = piece x depth 0.005245 / 0.125226 / 0.011971 | none |
+| GF B27 at C8, 1F B19 at C15 | ENGINE_RIGHT (model) | UNRESOLVED_ADD_AMBIGUOUS (two part sets match the add): 0.00144 / 0.001064 | none |
+
+Kept (cited, not redone): FR-T614-1 GF CB8 col 4 +0.002137 (Checker 0.002140), FR-T614-2 1F CB11 at 69D +0.018750.
+Fix rows total +0.061576 m3 (5 rows). F-C-P02-5 by column: col 3 ENGINE_RIGHT (credit 0.0184 vs 0.01875, -0.00035);
+col 2 east + col 4 ENGINE_WRONG; col 2 west HELD 0.00454 m2 (bound 0.003405); B27 part RULE_DIFFERENCE 0.054816 m2;
+B26 part RULE_DIFFERENCE except 0.006171 m2 UNRESOLVED (B26's add unplaced). FR-T610-3 (0.000923 m2, -0.000692 m3 on
+CB8) WITHDRAWN on this basis: CB8 BAND0040.1 does not bill the zone; B27 (deeper, owner) bills it once; FR-T610-1 / 2 / 4
+unchanged.
+
+Who is right: FR-T614-3 / -4 / -5 ENGINE_WRONG OMISSION (hand: drawn band faces, column outline, run printed length);
+the rest UNRESOLVED for the T-229 add placement. Lessons row (PROPOSED, every villa): 'billing of a piece is read from
+the line's own measured extent and named adds, never from a plan model inside a tolerance larger than the piece'
+(tests/t614 adverse: test_adverse_model_match_never_proves_billing_of_a_smaller_piece).

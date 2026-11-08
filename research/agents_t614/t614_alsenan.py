@@ -36,6 +36,7 @@ MD_OUT = OUT / "T614_BEAM_END_CENSUS.md"
 DXF_SHA = T610.DXF_SHA
 SHEETS = T610.SHEETS                       # GF roof slab SH06, 1F roof slab SH04, 2F (top roof) slab SH02
 VALUE_MATCH_M3 = 0.001                     # an unmapped ledger run 'explains' a piece when value = piece x depth +- this
+R1_FIX_IDS = {("GF", "CB8", "C25"): 1, ("1F", "CB11", "C18"): 2}   # r1 fix rows (census indices C<n>)
 CHECKER_CB11 = {"storey": "1F", "mark": "CB11", "piece_m2": 0.025, "m3": 0.018750}
 
 
@@ -100,6 +101,40 @@ def adds_lines(adds):
     return {a["line_id"] for a in adds}
 
 
+END_ADD_RE = re.compile(r"T-229 (END_SHORT_[A-Z_]+) \+([0-9.]+)")
+RUN_ADD_RE = re.compile(r"T-229 run [A-Z0-9]+ [A-Z0-9]+ \([A-Z0-9.]+\) [0-9.]+ replaces T-110 [0-9.]+ \+([0-9.]+)")
+
+
+def ledger_extents(recs, ledger, members):
+    """R-T614-1 (g): per RELEASED LEDGER line, the plan it bills from its own extent and named adds (not the T-610
+    whole-line model) and the model-only rest."""
+    out = {}
+    for lid, r in sorted(recs.items()):
+        if r["kind"] != "LEDGER" or r.get("billed") is None:
+            continue
+        row = ledger[r["element_id"].split(":", 3)[3]]
+        own = r["own_pieces"]
+        rect_b = R.union([members[p]["billed"] for p in own])
+        rect_a = R.union([members[p]["rect"] for p in own]).area
+        others = R.union([m["rect"] for k, m in members.items() if k not in own])
+        beyond = R.minus(R.minus(r["drawn"], others), rect_b)
+        L, b = float(row["length_m"]), float(row["b_drawn_m"]) if row["b_drawn_m"] else None
+        ext = (L * b - rect_a) if b else 0.0
+        adds = [float(m.group(2)) for m in END_ADD_RE.finditer(row["adds"] or "")] + \
+               [float(m.group(1)) for m in RUN_ADD_RE.finditer(row["adds"] or "")]
+        rec = R.ledger_billing(rect_b, beyond, ext, adds, r["depth_m"])
+        cut = [float(m.group(1)) for m in re.finditer(r"SUPPORT_CUT_BESIDE \(to [A-Z0-9]+:[A-Z0-9.]+\) \+([0-9.]+)",
+                                                         row["adds"] or "")]
+        ded = [float(m.group(1)) for m in re.finditer(r"\) -([0-9.]+)", row["deducts"] or "")]
+        # the line value rebuilt from its own extent and printed terms (named adds as printed, not as placed)
+        recon = (rect_b.area + rec["extent_m2"]) * r["depth_m"] + sum(adds) + sum(cut) - sum(ded)
+        out[lid] = dict(rec, extent_value_m3=recon, extent_value_residual_m3=(r["value_m3"] or 0.0) - recon,
+                        run=row["run"], mark=row["mark"], length_m=L, b_drawn_m=b, rect_m2=rect_a,
+                        model_m2=r["billed"].area, model_state=r.get("ledger_model_state"),
+                        model_residual_m3=r.get("ledger_residual_m3"))
+    return out
+
+
 def storey_census(G, sid, st, lines, ledger):
     members, cols, n_carried = T610.storey_members(G, sid, st)
     recs, piece_line = T610.line_members(lines, ledger, members, st)
@@ -107,7 +142,11 @@ def storey_census(G, sid, st, lines, ledger):
     hulls = parent_hulls(G, sid)
     col_list = sorted(getattr(cols, "geoms", [cols]), key=lambda c: (round(c.centroid.x, 3), round(c.centroid.y, 3)))
     col_list = [c for c in col_list if c.area > R.EPS_M2]
-    billed = {lid: r["billed"] for lid, r in live.items() if r["billed"] is not None}
+    billed_model = {lid: r["billed"] for lid, r in live.items() if r["billed"] is not None}
+    exts = ledger_extents(live, ledger, members)
+    # r2 (R-T614-1 (g)): a LEDGER line bills its own extent and named adds only; the T-610 model plan is kept as
+    # billed_model to list every pair whose 'billed' rested on it
+    billed = {lid: (exts[lid]["billed"] if lid in exts else g) for lid, g in billed_model.items()}
     held = [r["drawn"] for r in live.values() if r["billed"] is None]
     unmapped = unmapped_runs(lines, ledger, st)
     pairs, ends, claimed_held = [], [], []
@@ -159,14 +198,15 @@ def storey_census(G, sid, st, lines, ledger):
                 depth = ln.get("depth_m")
             # T-229 SUPPORT_CUT_BESIDE: a ledger run that adds the strip beside the support at the cut to the next
             # piece bills the WHOLE strip at that column (beam_support.classify_gap: beside = gap - support)
-            bill = dict(billed)
+            bill, bill_m = dict(billed), dict(billed_model)
             adds = []
             near_kids = [k for k in kids if members[k]["rect"].distance(c) <= R.END_TOL_M]
             for k in near_kids:
                 lk = piece_line.get(k)
                 for a in beside_adds.get(lk, []):
                     if a["to"] in near_kids and a["to"] != k and lk in bill:
-                        bill[lk] = R.union([bill[lk], R.minus(E, R.union(others))])
+                        for bd in (bill, bill_m):
+                            bd[lk] = R.union([bd[lk], R.minus(E, R.union(others))])
                         adds.append({"line_id": lk, "to": a["to"], "value_m3": a["value_m3"]})
                         # the neighbouring run's ledger value is its rectangle (L x b x D): the half strip the
                         # T-610 plan model gives it past the cut is model only (GF CB1 L-9270: residual -0.028125
@@ -174,8 +214,11 @@ def storey_census(G, sid, st, lines, ledger):
                         for k2 in near_kids:
                             l2 = piece_line.get(k2)
                             if l2 != lk and l2 in bill and live[l2]["kind"] == "LEDGER":
-                                bill[l2] = R.minus(bill[l2], E)
+                                for bd in (bill, bill_m):
+                                    bd[l2] = R.minus(bd[l2], E)
             acc = R.account_piece(E, depth, bill, held, others)
+            acc_m = R.account_piece(E, depth, bill_m, held, others)
+            model_only_pair = max(acc_m["billed_m2"] - acc["billed_m2"], 0.0)
             # R-T614-1 (f): the strip the column leaves beside it over its whole span (end gap included) must be
             # inside the drawn band for the piece to be MEASURED; the rest (face broken / band not drawn there) HELD
             # the collinear continuation of this band on the column's far side (same axis and face offsets)
@@ -220,6 +263,12 @@ def storey_census(G, sid, st, lines, ledger):
                                                     residual_m3=r6(a["value_m3"] - acc["owned_m2"] * depth)
                                                     if depth else None) for a in adds],
                    "collinear_continuation": bridge,
+                   "billed_by_model_only_m2": r6(model_only_pair),
+                   "line_ext_state": exts[lid]["ext_state"] if lid in exts else None,
+                   "line_add_state": exts[lid]["add_state"] if lid in exts else None,
+                   "line_add_unplaced_m3": r6(exts[lid]["add_target_m3"]) if lid in exts and
+                   exts[lid]["add_state"] == "UNPLACED" else None,
+                   "r1_model_verdict": acc_m["verdict"],
                    "beside_full_span_m2": r6(full_diag.area),
                    "beside_full_span_in_other_band_m2": r6(R.inter(R.minus(full_diag, E), oth_d).area),
                    "beside_full_span_in_other_band_billed_m2": r6(R.inter(R.inter(R.minus(full_diag, E), oth_d),
@@ -253,14 +302,17 @@ def storey_census(G, sid, st, lines, ledger):
         X = R.minus(R.union(ca["X"]), R.union(col_list))
         if X.area <= R.EPS_M2:
             continue
-        bl = {}
-        for k, g in billed.items():
-            g2 = R.union([g] + ca["extra_bill"].get(k, []))
-            g2 = R.minus(g2, R.union(ca["model_only"].get(k, [])))
-            a = R.inter(X, g2)
-            if a.area > R.EPS_M2:
-                bl[k] = a
+        bl, bl_m = {}, {}
+        for src, dst in ((billed, bl), (billed_model, bl_m)):
+            for k, g in src.items():
+                g2 = R.union([g] + ca["extra_bill"].get(k, []))
+                g2 = R.minus(g2, R.union(ca["model_only"].get(k, [])))
+                a = R.inter(X, g2)
+                if a.area > R.EPS_M2:
+                    dst[k] = a
         bu = R.union(list(bl.values()))
+        bu_m = R.union(list(bl_m.values()))
+        model_only_strip = R.minus(bu_m, bu)
         held_d = R.minus(R.inter(X, R.union(held)), bu)
         in_drawn = R.minus(R.minus(R.inter(X, drawn_all), bu), held_d)
         undrawn = R.minus(R.minus(R.minus(X, drawn_all), bu), held_d)
@@ -275,7 +327,10 @@ def storey_census(G, sid, st, lines, ledger):
                "billed_twice_m2": r6(sum(v.area for v in bl.values()) - bu.area),
                "in_crossing_zone_m2": r6(R.inter(X, crossings).area),
                "held_line_m2": r6(held_d.area), "drawn_unbilled_m2": r6(in_drawn.area),
-               "undrawn_unbilled_m2": r6(undrawn.area), "own_depth_m": d_own}
+               "undrawn_unbilled_m2": r6(undrawn.area), "own_depth_m": d_own,
+               "r1_model_billed_by": {f"{live[k].get('mark')} {k}": r6(v.area) for k, v in sorted(bl_m.items())},
+               "model_only_m2": r6(model_only_strip.area),
+               "model_only_in_drawn_m2": r6(R.inter(model_only_strip, drawn_all).area)}
         rec["drawn_unbilled_m3"] = r6(in_drawn.area * d_own) if d_own else None
         rec["undrawn_bound_m3"] = r6(undrawn.area * d_own) if d_own else None
         if abs(bu.area + held_d.area + in_drawn.area + undrawn.area - X.area) > 1e-7:
@@ -293,7 +348,29 @@ def storey_census(G, sid, st, lines, ledger):
     n_arc = len(hulls) - n_straight
     assert len([e for e in ends if e["end"] != "ARC"]) == 2 * n_straight and \
         len([e for e in ends if e["end"] == "ARC"]) == n_arc, "an end was not examined"
+    # T-610 fix rows re-read on the r2 billing basis: each crossing zone billed by each line, model vs own extent
+    t610 = json.loads((ROOT / "research/agents_t610/out/T610_BEAM_OVERLAP_CENSUS.json").read_text(encoding="utf-8"))
+    t610_r2 = []
+    for fr in t610["fix_rows"]:
+        if fr["storey"] != st:
+            continue
+        a, b = re.findall(r"\((L-[0-9a-f]+)\)", fr["pair"])
+        if a not in live or b not in live:
+            continue
+        zone = R.inter(live[a]["drawn"], live[b]["drawn"])
+        rec = {"id": fr["id"], "storey": st, "pair": fr["pair"], "verdict_t610": fr["verdict"],
+               "zone_m2_t610": fr["zone_m2"], "zone_m2": r6(zone.area), "line_changes_t610_m3": fr["line_changes_m3"],
+               "billed_model_m2": {}, "billed_r2_m2": {}}
+        for lid in (a, b):
+            if lid in billed_model:
+                rec["billed_model_m2"][lid] = r6(R.inter(zone, billed_model[lid]).area)
+                rec["billed_r2_m2"][lid] = r6(R.inter(zone, billed[lid]).area)
+        rec["changed_by_r2"] = rec["billed_model_m2"] != rec["billed_r2_m2"]
+        t610_r2.append(rec)
+    ext_rows = [{"storey": st, "line_id": lid, **{k: (r6(v) if isinstance(v, float) else v) for k, v in x.items()
+                                                   if k not in ("billed", "model_only")}} for lid, x in sorted(exts.items())]
     return {"pairs": pairs, "ends": ends, "unmapped_runs": unmapped, "column_strips": column_strips, "columns": len(col_list),
+            "ledger_extents": ext_rows, "t610_fix_rows_r2": t610_r2,
             "carried_columns": n_carried, "parents": len(hulls)}
 
 
@@ -304,7 +381,14 @@ def classify(row):
         return v
     if row.get("unmapped_explains"):
         return "ENGINE_RIGHT_UNMAPPED_RUN"
-    if row.get("line_model_state") == "MODEL_RESIDUAL" and row["line_model_residual_m3"] is not None and \
+    # R-T614-1 (g): the line carries a named add that no drawn part set places (UNPLACED) and whose value covers the
+    # piece, or one placed two ways (PLACED_AMBIGUOUS) while the piece is in the model-only rest: billing is neither
+    # proved nor disproved -> UNRESOLVED (no fix row; bound = piece x depth), never ENGINE_RIGHT by the model
+    if (row.get("line_add_unplaced_m3") or 0) >= row["omission_m3"] - 1e-9:
+        return "UNRESOLVED_ADD_UNPLACED"
+    if row.get("line_add_state") == "PLACED_AMBIGUOUS" and (row.get("billed_by_model_only_m2") or 0) > R.EPS_M2:
+        return "UNRESOLVED_ADD_AMBIGUOUS"
+    if row.get("line_ext_state") is None and row.get("line_model_state") == "MODEL_RESIDUAL" and row["line_model_residual_m3"] is not None and \
             row["line_model_residual_m3"] >= row["omission_m3"] - 0.001:
         return "MODEL_DEPENDENT"
     return v
@@ -315,7 +399,7 @@ def build(dxf):
     assert sha == DXF_SHA, sha
     G = T610.route_g(dxf)["generic"]
     lines, ledger = T610.load_lines(), T610.load_ledger()
-    per, pairs, ends, unmapped, strips = {}, [], [], [], []
+    per, pairs, ends, unmapped, strips, lext, t610r2 = {}, [], [], [], [], [], []
     for st, sid in SHEETS.items():
         c = storey_census(G, sid, st, lines, ledger)
         for p in c["pairs"]:
@@ -323,6 +407,8 @@ def build(dxf):
         pairs += c["pairs"]
         ends += c["ends"]
         strips += c["column_strips"]
+        lext += c["ledger_extents"]
+        t610r2 += c["t610_fix_rows_r2"]
         unmapped += [{"storey": st, **{k: v for k, v in x.items() if k != "pieces_text"}} for x in c["unmapped_runs"]]
         cnt = defaultdict(int)
         for p in c["pairs"]:
@@ -342,15 +428,21 @@ def build(dxf):
                    "strip_drawn_unbilled_m2": r6(sum(x["drawn_unbilled_m2"] for x in c["column_strips"])),
                    "strip_undrawn_unbilled_HELD_m2": r6(sum(x["undrawn_unbilled_m2"] for x in c["column_strips"])),
                    "strip_held_line_m2": r6(sum(x["held_line_m2"] for x in c["column_strips"]))}
-    fixes, n = [], 0
+    fixes, n = [], max(R1_FIX_IDS.values())
     for p in pairs:
         if p["final_verdict"] != "ENGINE_WRONG_OMISSION":
             continue
-        n += 1
-        fixes.append({"id": f"FR-T614-{n}", "storey": p["storey"], "mark": p["line_mark"], "line_id": p["line_id"],
+        key = (p["storey"], p["line_mark"], p["column"])
+        if key in R1_FIX_IDS:
+            fid = R1_FIX_IDS[key]           # r1 ids kept (Checker AGREE 03:55): cited, not renumbered
+        else:
+            n += 1
+            fid = n
+        fixes.append({"id": f"FR-T614-{fid}", "since": "r1" if key in R1_FIX_IDS else "r2", "storey": p["storey"], "mark": p["line_mark"], "line_id": p["line_id"],
                       "column": p["column"], "position": p["position"], "piece_m2": p["unowned_m2"],
                       "depth_m": p["depth_m"], "change_m3": p["omission_m3"],
                       "cover_across_m": p["cover_across_m"], "band_width_m": p["band_width_m"]})
+    fixes.sort(key=lambda f: int(f["id"].rsplit("-", 1)[1]))
     held_rows, n = [], 0
     for x in strips:
         if x["undrawn_unbilled_m2"] > R.EPS_M2:
@@ -364,13 +456,52 @@ def build(dxf):
                           "gap_m2": 0.00744, "credit_m3": 0.0184, "omission_claim_m3": 0.073430,
                           "col3_verified_m3": 0.018750, "col2_col4_gap_unresolved_m3": 0.054680},
               "census_by_column": cb8}
+    def pr(st, col, mark):
+        return next(p for p in pairs if p["storey"] == st and p["column"] == col and p["line_mark"] == mark
+                    and p["piece_m2"] > R.EPS_M2)
+    c2e, c3, c4 = pr("GF", "C13", "CB8"), pr("GF", "C21", "CB8"), pr("GF", "C25", "CB8")
+    h1 = next(h for h in held_rows if h["storey"] == "GF" and h["column"] == "C13")
+    fcp025_r2 = {
+        "col2_east_C13": {"verdict": c2e["final_verdict"], "piece_m2": c2e["unowned_m2"], "m3": c2e["omission_m3"],
+                          "fix_row": "FR-T614-3", "checker_m2": 0.003078, "checker_m3": 0.002309,
+                          "basis": "CB8 run BM-GF-041#BAND0040.1 measured 5.745 m from col 2 east face: the strip "
+                                   "beside col 2 is outside its extent and no named add places it (R-T614-1 (g))"},
+        "col2_west_C13": {"verdict": "HELD", "piece_m2": h1["undrawn_unbilled_m2"], "bound_m3": h1["bound_m3"],
+                          "fix_row": h1["id"], "checker_m2": 0.004543},
+        "col3_C21": {"verdict": c3["final_verdict"], "piece_m2": c3["piece_m2"],
+                     "credit_m3": c3["support_cut_beside_adds"][0]["value_m3"] if c3["support_cut_beside_adds"] else None,
+                     "credit_residual_m3": c3["support_cut_beside_adds"][0]["residual_m3"]
+                     if c3["support_cut_beside_adds"] else None, "basis": "named add SUPPORT_CUT_BESIDE at its cut"},
+        "col4_C25": {"verdict": c4["final_verdict"], "piece_m2": c4["unowned_m2"], "m3": c4["omission_m3"],
+                     "fix_row": "FR-T614-1", "checker_m3": 0.002140},
+        "B27_part_col2": {"verdict": "RULE_DIFFERENCE",
+                          "m2": r6(sum(v for x in strips if x["storey"] == "GF" and x["column"] == "C13"
+                                       for k, v in x["billed_by"].items() if k.split()[0] == "B27")),
+                          "basis": "inside the deeper B27 drawn band and billed by B27's own rectangle (r2 unchanged; "
+                                   "R-T610-1): by-mark attribution only, no BOQ total effect"},
+        "B26_part_col4": {"verdict": "RULE_DIFFERENCE for the part in B26's rectangle; the piece beside col 4 in B26's "
+                                     "band outside its rectangle is UNRESOLVED_ADD_UNPLACED (B26's named run add "
+                                     "+0.1798 is placed by no drawn part set)",
+                          "m2_checker": 0.032217,
+                          "unresolved_m2": pr("GF", "C25", "B26")["billed_by_model_only_m2"],
+                          "unresolved_bound_m3": pr("GF", "C25", "B26")["omission_m3"]},
+        "FR_T610_3": next((dict(x, restated="WITHDRAWN: CB8 BAND0040.1 does not bill the zone on its own extent; "
+                                            "billed once by B27 (owner, deeper); line change 0.000 instead of "
+                                            "-0.000692 m3") for x in t610r2 if x["id"] == "FR-T610-3"), None)}
     cb11 = [p for p in pairs if p["storey"] == "1F" and p["line_mark"] == "CB11" and
-            p["final_verdict"] == "ENGINE_WRONG_OMISSION" and p["position"].startswith("END")]
-    out = {"schema": "T614_BEAM_END_CENSUS_V1", "rule": R.RULE_ID,
+            p["final_verdict"] == "ENGINE_WRONG_OMISSION" and p["position"].startswith("END")
+            and p["column"] == "C18"]       # the Checker's corner column 69D (census index C18); C3 is FR-T614-5
+    out = {"schema": "T614_BEAM_END_CENSUS_V2", "rule": R.RULE_ID,
            "candidate": "ARCH_TAKEOFF_V3.0.57 (= V3.0.58 for STR.CONC.BEAM)",
            "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179..)",
            "per_storey": per, "pairs": pairs, "ends": ends, "unmapped_ledger_runs": unmapped, "fix_rows": fixes,
-           "column_strips": strips, "held_rows": held_rows, "F_C_P02_5": fcp025,
+           "column_strips": strips, "held_rows": held_rows, "F_C_P02_5": fcp025, "F_C_P02_5_r2": fcp025_r2,
+           "ledger_extents": lext, "t610_fix_rows_r2": t610r2,
+           "model_only_pairs": [{k: p.get(k) for k in ("storey", "marks", "column", "position", "line_mark",
+                                                         "line_id", "piece_m2", "billed_by_model_only_m2",
+                                                         "r1_model_verdict", "final_verdict", "omission_m3",
+                                                         "line_ext_state", "line_add_state")}
+                                for p in pairs if (p.get("billed_by_model_only_m2") or 0) > R.EPS_M2],
            "F_C_P02_3": {"checker": CHECKER_CB11, "reproduced": [{k: p[k] for k in (
                "parent", "column", "position", "cover_across_m", "band_width_m", "unowned_m2", "depth_m",
                "omission_m3", "line_id")} for p in cb11]},
@@ -431,6 +562,26 @@ def render_md(d):
     for x in d["unmapped_ledger_runs"]:
         L.append(f"- {x['storey']} {x['mark']} {x['line_id']} {x['run']} ({x['class']}): {x['value_m3']} m3, depth "
                  f"{x['depth_m']}")
+    L += ["", "## r2: LEDGER line billing from its own extent and named adds (R-T614-1 (g))", "",
+          "| storey | mark | run | length x b m | rect m2 | model m2 (T-610) | model state | excess placed m2 (state) "
+          "| named add m3 (state, diff) | model-only m2 | value rebuilt m3 | residual m3 |", "|" + "---|" * 12]
+    for x in d["ledger_extents"]:
+        L.append(f"| {x['storey']} | {x['mark']} | {x['run']} | {x['length_m']} x {x['b_drawn_m']} | {x['rect_m2']} | "
+                 f"{x['model_m2']} | {x['model_state']} | {x['extent_m2']} ({x['ext_state']}) | {x['add_target_m3']} "
+                 f"({x['add_state']}, {x['add_diff_m3']}) | {x['model_only_m2']} | {x['extent_value_m3']} | "
+                 f"{x['extent_value_residual_m3']} |")
+    L += ["", "### Pairs whose r1 'billed' rested on the T-610 model beyond the run (r2 verdict)", "",
+          "| storey | mark | column | position | piece m2 | model-only m2 | r1 | r2 | m3 |", "|" + "---|" * 9]
+    for p in d["model_only_pairs"]:
+        L.append(f"| {p['storey']} | {p['line_mark']} | {p['column']} | {p['position']} | {p['piece_m2']} | "
+                 f"{p['billed_by_model_only_m2']} | {p['r1_model_verdict']} | {p['final_verdict']} | "
+                 f"{p['omission_m3']} |")
+    L += ["", "### T-610 fix rows re-read on the r2 basis", ""]
+    for x in d["t610_fix_rows_r2"]:
+        L.append(f"- {x['id']} {x['pair']}: zone {x['zone_m2']} m2; billed model {x['billed_model_m2']} -> own extent "
+                 f"{x['billed_r2_m2']}; changed {x['changed_by_r2']}")
+    L += ["", "## F-C-P02-5 restated by column (r2)", "", "```", json.dumps(d["F_C_P02_5_r2"], indent=1, sort_keys=True),
+          "```"]
     L += ["", "## F-C-P02-3", "", "```", json.dumps(d["F_C_P02_3"], indent=1), "```", "",
           "## F-C-P02-5 (GF CB8, census by column)", "", "```", json.dumps(d["F_C_P02_5"], indent=1, sort_keys=True),
           "```", ""]

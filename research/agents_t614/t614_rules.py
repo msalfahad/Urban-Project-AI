@@ -22,6 +22,15 @@ UP-CONC-JOINT-001 1.0.0 'beam face to face' on DRAWN outlines, never on the colu
       case: a broken face beside the column);
   (e) a column that fills the band width across its span gives E = 0 (the normal case: the column face closes the
       run); a census reports it as FULL, not as a finding.
+  (g) (r2, Checker 2026-11-08T03:55Z, F-C-T614-2) BILLING OF A PIECE BY A LEDGER LINE is read from the line's own
+      measured extent and its named add terms, never from a plan model: the line bills (i) its own route G rectangle(s)
+      (= the printed length between the faces it names x the drawn width), (ii) where the printed length x width
+      exceeds that rectangle (a mean-length oblique end, a run over an unlabelled span), only the drawn parts beyond the
+      rectangle whose area matches that excess within EXT_TOL_M2, (iii) a named add term (T-229 END_SHORT_*, a T-229 run
+      that replaces the schedule value) only through drawn parts beyond the rectangle whose area x depth matches the
+      add value within ADD_TOL (best subset), (iv) a SUPPORT_CUT_BESIDE add only at its own cut column (placed by the
+      census). Every other drawn part beyond the rectangle is MODEL_ONLY: not billed, however well a whole-line plan
+      model matches the line value (a match within a tolerance larger than the piece proves nothing about the piece).
 
 Accounting against an engine (account_piece): each candidate line bills a plan polygon; over E the engine bills
 |E n union(billed)| at the line's depth; HELD lines (no valued depth) carry |E n held| as HELD; what lies in no
@@ -239,6 +248,92 @@ def account_piece(E, depth_m, billed, held=(), other_bands=()):
     else:
         rec["verdict"] = "ENGINE_RIGHT"
     return rec
+
+
+EXT_TOL_M2 = 1e-4           # (g)(ii): printed length x width minus the rectangle, matched by drawn parts within 1 cm2 ...
+EXT_TOL_REL = 0.001         # ... or 0.1 % of the excess (a 4-decimal printed length on a 0.65 m band: GF B26 0.18 mm)
+ADD_TOL_ABS_M3 = 0.001      # (g)(iii): a named add placed by drawn parts whose volume matches within 1 dm3 ...
+ADD_TOL_REL = 0.01          # ... or 1 % of the add (T-229 printed its adds to 4 decimals from hand-rounded areas)
+MAX_PARTS = 12              # subset search bound (a run end has a handful of parts)
+
+
+def parts_of(g, min_m2=1e-9):
+    g = polys(g)
+    return [p for p in getattr(g, "geoms", [g]) if not p.is_empty and p.area > min_m2]
+
+
+def _best_subset(areas, target, weight=1.0):
+    """Indices of the subset whose sum x weight is nearest the target; (best, diff, runner_up_diff, runner_up)."""
+    n = len(areas)
+    if n > MAX_PARTS:
+        raise Refused(f"{n} parts beyond one ledger rectangle: too many to place a named add (inspect by hand)")
+    scored = []
+    for mask in range(1 << n):
+        s = sum(areas[i] for i in range(n) if mask >> i & 1) * weight
+        scored.append((abs(s - target), bin(mask).count("1"), mask))
+    scored.sort()
+    best = scored[0]
+    second = scored[1] if len(scored) > 1 else (math.inf, 0, 0)
+    idx = [i for i in range(n) if best[2] >> i & 1]
+    idx2 = [i for i in range(n) if second[2] >> i & 1]
+    return idx, best[0], second[0], idx2
+
+
+def ledger_billing(rect_billed, beyond, ext_m2, add_m3, depth_m):
+    """(g): the plan a LEDGER line bills. rect_billed: its own route G rectangle(s) (junction deductions applied);
+    beyond: the drawn parts of its own pieces outside every rectangle (the T-610 model's extra plan); ext_m2: printed
+    length x drawn width minus the rectangle area (<= EPS: none); add_m3: named END / run add values (not
+    SUPPORT_CUT_BESIDE, placed at its cut by the census); depth_m: the line's depth.
+    Returns {'billed': plan, 'extent_m2', 'add_m2', 'model_only_m2', 'model_only': plan, 'ext_state', 'add_state',
+    'add_diff_m3', 'add_runner_up_diff_m3'}."""
+    ps = parts_of(beyond)
+    areas = [p.area for p in ps]
+    used = set()
+    rec = {"ext_state": "NONE", "add_target_m3": sum(add_m3),
+           "add_state": "NONE", "add_diff_m3": None, "add_runner_up_diff_m3": None}
+    ext_parts, add_parts = [], []
+    ext_tol = max(EXT_TOL_M2, EXT_TOL_REL * ext_m2)
+    rec["ext_target_m2"] = ext_m2 if ext_m2 > ext_tol else 0.0
+    if ext_m2 > ext_tol:
+        idx, diff, _, _ = _best_subset(areas, ext_m2)
+        if diff <= ext_tol:
+            ext_parts = idx
+            used |= set(idx)
+            rec["ext_state"] = "PLACED"
+        else:
+            rec["ext_state"] = "UNPLACED"      # the printed extent is longer than any drawn part set: not proof
+        rec["ext_diff_m2"] = diff
+    if add_m3:
+        if depth_m is None:
+            raise Refused("a named add cannot be placed without the line's depth")
+        rest = [i for i in range(len(ps)) if i not in used]
+        idx, diff, diff2, idx2 = _best_subset([areas[i] for i in rest], sum(add_m3), depth_m)
+        tol = max(ADD_TOL_ABS_M3, ADD_TOL_REL * sum(add_m3))
+        rec["add_diff_m3"], rec["add_runner_up_diff_m3"] = diff, diff2
+        if diff <= tol:
+            add_parts = [rest[i] for i in idx]
+            used |= set(add_parts)
+            # a second, different subset inside the tolerance: the placement is not unique; flagged, never silent
+            rec["add_state"] = "PLACED_AMBIGUOUS" if diff2 <= tol and set(idx) != set(idx2) else "PLACED"
+        else:
+            rec["add_state"] = "UNPLACED"
+    mo = [ps[i] for i in range(len(ps)) if i not in used]
+    rec["billed"] = union([rect_billed] + [ps[i] for i in ext_parts + add_parts])
+    rec["model_only"] = union(mo)
+    rec["extent_m2"] = sum(areas[i] for i in ext_parts)
+    rec["add_m2"] = sum(areas[i] for i in add_parts)
+    rec["model_only_m2"] = sum(p.area for p in mo)
+    return rec
+
+
+def refuse_model_proof(piece, line_extent_plan, model_plan, model_state):
+    """Adverse guard (g): a piece outside the ledger line's own extent / named adds offered as billed because the
+    whole-line model matches (MODEL_MATCHES within LEDGER_TOL) is refused."""
+    out = minus(inter(piece, model_plan), line_extent_plan)
+    if out.area > EPS_M2 and model_state == "MODEL_MATCHES":
+        raise Refused(f"{out.area:.6f} m2 of the piece lies outside the line's measured extent and named adds: a "
+                      f"plan model matching the line value within a tolerance never proves billing of a piece")
+    return out.area
 
 
 def refuse_recount(claims, crossing_zones):
