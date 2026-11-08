@@ -1,0 +1,1084 @@
+{
+ "beam_b10": {
+  "STR.CONC.BEAM|m3": {
+   "v15": {
+    "excluded_n": 54,
+    "held_blank_n": 5,
+    "held_high": "13.780805",
+    "held_high_open_n": 0,
+    "held_low": "8.372829",
+    "held_n": 28,
+    "released": "66.392081",
+    "released_n": 110
+   },
+   "v16": {
+    "excluded_n": 55,
+    "held_blank_n": 5,
+    "held_high": "13.77951",
+    "held_high_open_n": 0,
+    "held_low": "8.372829",
+    "held_n": 27,
+    "released": "66.401795",
+    "released_n": 110
+   }
+  },
+  "hand": "66.392081 + 0.005245 + 0.001064 + 0.003405 = 66.401795 (a point: companion 0 .. 0.001295 EXCLUDED by FR-T624-4); pre-existing HELD unchanged",
+  "vs_freelancer": "his 66.093875: +0.307920 m3 (+0.466 %), ENGINE_RIGHT on the Checker's own calc for the three omissions (T-624)"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "downstream_not_moved": [
+  {
+   "element": "GF-RC99C2A:floor:bed",
+   "item": "FIN.FLOOR.BED.DRY",
+   "line": "L-20a8e714e66725ec03cc",
+   "state": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.478417
+   },
+   "unit": "m2"
+  },
+  {
+   "element": "GF-RC99C2A:floor:bed",
+   "item": "FIN.FLOOR.BED.DRY",
+   "line": "L-77a1828643912803397f",
+   "state": {
+    "class": "HELD",
+    "held_high": 4.379137,
+    "held_low": 3.284353,
+    "measured_net": null
+   },
+   "unit": "m3"
+  },
+  {
+   "element": "1F-R78C367:floor:bed",
+   "item": "FIN.FLOOR.BED.DRY",
+   "line": "L-eaa8f30545cb37cac799",
+   "state": {
+    "class": "HELD",
+    "held_high": 1.336441,
+    "held_low": 1.002331,
+    "measured_net": null
+   },
+   "unit": "m3"
+  },
+  {
+   "element": "1F-R78C367:floor:bed",
+   "item": "FIN.FLOOR.BED.DRY",
+   "line": "L-ebce765b8341024e776f",
+   "state": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 33.411036
+   },
+   "unit": "m2"
+  }
+ ],
+ "findings": {
+  "F-T631-1": "the floor bed lines on the GF / 1F porcelain hosts follow the floor area by rule; V16 moves the porcelain only (verdict-named): the bed lines listed under downstream_not_moved need the same delta at Gate B or their own verdict",
+  "F-T631-2": "the T-625 curtail 0.157787 m2 and the RS-A arrival band 0.0575 m2 are worker proposals the Checker did not re-measure: they need a Checker verdict before any manifest carries them"
+ },
+ "floor_porcelain": {
+  "FIN.FLOOR.PORCELAIN|m2": {
+   "v15": {
+    "excluded_n": 13,
+    "held_blank_n": 0,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 0,
+    "released": "295.390972",
+    "released_n": 21
+   },
+   "v16": {
+    "excluded_n": 13,
+    "held_blank_n": 0,
+    "held_high": "0.769843",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 2,
+    "released": "294.983857",
+    "released_n": 21
+   }
+  },
+  "hand": "GF 109.478417 - 0.013272 (row 0) = 109.465145; strings low end - 0.393843 = 109.071302 + HELD 0 .. 0.393843; 1F 33.411036 + HELD 0 .. 0.376",
+  "t625": {
+   "engine": "6.124412",
+   "gf_after_high": "109.465145",
+   "gf_after_low": "109.071302",
+   "margin_bound": "0.376",
+   "own": "6.137684",
+   "strings": "0.393843"
+  }
+ },
+ "held_not_wired": {
+  "T-625": {
+   "curtail_0.157787_m2": "worker ENGINE_WRONG proposal (first-step curtail, arc 258), Checker did not re-measure: listed, not wired (R-T631-1 (f)); marble trade check named",
+   "rs_a_arrival_band_0.0575_m2": "worker ENGINE_WRONG proposal (1F arrival nosing band D24 / D22), not named a fix row: listed, not wired"
+  },
+  "T-632": "hatches 390 (3.100 m x 0.200) / 391 (1.782 m x 0.200) HELD length only; strip 2 x 0.865 m2 HELD (thickness unprinted): no owning line, Lead slab-edge fix row"
+ },
+ "inputs": {
+  "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json": "9750dad42874b7214cca2476f859911f26243a1b6442241ecd68dbdb58b151f3",
+  "research/agents_t624/out/T624_BEAM_END_OPEN_ITEMS.json": "17c00e0f7b855f52a78d4b7adbee4cce9a6880be55d7cf63fb539fb98ec2bdbb",
+  "research/agents_t625/out/T625_EVIDENCE.json": "c23dfaf7688a9a244df73b26f408b75fdfd80cf363620f755d2381ed249f13ef",
+  "research/agents_t629/manifest_v15.py": "0bed02658cae851174245d6368c1f33e318a617d2bc5d3a794522a7970ad0a60",
+  "research/agents_t629/out/WIRING_MANIFEST_V15.json": "05c92b00a35263c45de8e482122013a20617ba5ad9a7b4b4e16eb8057a4b9e27",
+  "research/agents_t632/out/T632_UPSTAND_CENSUS.json": "57bcb9c0219c3cfd01cd03da69ec1cb6ffc705d5ad1beee9c6c94200769ba184"
+ },
+ "line_table": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.089845
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.0846
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-c6fa4992eb3ed2aa01e6",
+   "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+   "row": "FR-T624-1",
+   "verdict": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: "
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.624624
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.62356
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-45e0d887d33192039e05",
+   "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+   "row": "FR-T624-2",
+   "verdict": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: "
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.717574
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.714169
+   },
+   "evidence": "PARTIALLY VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T624-3",
+   "verdict": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: "
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 0.001295,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "evidence": "VERIFIED",
+   "item": "STR.CONC.BEAM",
+   "kind": "SET",
+   "line_id": "NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T624-4",
+   "verdict": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: "
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 26.567691
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 26.6544
+   },
+   "evidence": "DRAWING-CONFIRMED",
+   "item": "FIN.WALL.TILE",
+   "kind": "SET",
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "package": "WALL_TILE_GF14 (T-622 FR-T622-2)",
+   "row": "FR-T622-2",
+   "verdict": "BOARD T-622 VERIFIER 2026-11-08T10:00Z: "
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.465145
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.478417
+   },
+   "evidence": "VERIFIED",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "kind": "SET",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-1",
+   "verdict": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: "
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.071302
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.465145
+   },
+   "evidence": "HELD",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "kind": "SET",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-2",
+   "verdict": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: "
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.393843,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "HELD",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.FLOOR.PORCELAIN:GF-RC99C2A:floor#FR-T625-2:RANGE",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-2",
+   "verdict": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: "
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.376,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "evidence": "HELD",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.FLOOR.PORCELAIN:1F-R78C367:floor#FR-T625-3:RANGE",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-3",
+   "verdict": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: "
+  }
+ ],
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "FIN.FLOOR",
+    "fix_row": "FR-T625-3",
+    "host": "1F-R78C367:floor",
+    "lines": [
+     "L-b06400d46d252f242018",
+     "NEW:FIN.FLOOR.PORCELAIN:1F-R78C367:floor#FR-T625-3:RANGE"
+    ],
+    "ruling": "FR-T625-3 adds the HELD companion 0 .. 0.376 m2 of the 1F living porcelain (slab-edge margin, T-625 UNRESOLVED): a range width beside its own line, never a second floor",
+    "sources": [
+     "CANDIDATE",
+     "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m2"
+   }
+  ],
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v15": 5141,
+   "after_v16": 5143,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 127,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 126,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 25,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 25
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS_V2 (T-595 R-T595-1; supersedes V9 REBAR_COMPONENTS by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FOOTING_S02_BOUND (T-595 R-T595-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 3,
+    "package": "DOORLESS_JAMBS (T-601 FR-T601-1 / FR-T601-2 / FR-T601-3)",
+    "status": {
+     "APPLIED": 3
+    }
+   },
+   {
+    "ops": 1,
+    "package": "GATE_STEP_G01 (T-602 FR-T602-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "FLOORLESS_FACES (T-606 FR-T606-1; absorbs V12 FR-T601-3 on the same line)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 6,
+    "package": "LIFT_LANDING_DOORS (T-608 FR-T608-1 / FR-T608-2)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 9,
+    "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+    "status": {
+     "APPLIED": 9
+    }
+   },
+   {
+    "ops": 5,
+    "package": "BEAM_END_PIECES (T-614 r2 FR-T614-1 .. -5)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 1,
+    "package": "LINTEL_CAUSES (T-616 FR-T616-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_PANTRY (T-622 FR-T622-1)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 1,
+    "package": "WALL_TILE_GF14 (T-622 FR-T622-2)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 4,
+    "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+    "status": {
+     "APPLIED": 4
+    }
+   }
+  ],
+  "other_lines_changed_vs_v15_overlay": [],
+  "rulings_v16": [
+   {
+    "fix_row": "FR-T624-1",
+    "host_re": "^HL:BEAM_LEDGER:GF:BM-GF-047$",
+    "layer": "STR.CONC",
+    "ruling": "FR-T624-1 adds the drawn wedge at C25 (371) to L-c6fa4992eb3ed2aa01e6: billed by no line and in no T-229 region (T-624 b_pairs: wedge_billed_by_any_line 0, in_any_t229_region 0): the other run(s) of the ledger beam do not hold it",
+    "sources": [
+     "CANDIDATE",
+     "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)"
+    ]
+   },
+   {
+    "fix_row": "FR-T624-2",
+    "host_re": "^HL:BEAM_LEDGER:1F:BM-1F-025$",
+    "layer": "STR.CONC",
+    "ruling": "FR-T624-2 adds the drawn wedge at C15 (667) to L-45e0d887d33192039e05: billed by no line and in no T-229 region (T-624 b_pairs: wedge_billed_by_any_line 0, in_any_t229_region 0): the other run(s) of the ledger beam do not hold it",
+    "sources": [
+     "CANDIDATE",
+     "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)"
+    ]
+   },
+   {
+    "fix_row": "FR-T625-3",
+    "host_re": "^1F-R78C367:floor$",
+    "layer": "FIN.FLOOR",
+    "ruling": "FR-T625-3 adds the HELD companion 0 .. 0.376 m2 of the 1F living porcelain (slab-edge margin, T-625 UNRESOLVED): a range width beside its own line, never a second floor",
+    "sources": [
+     "CANDIDATE",
+     "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)"
+    ]
+   }
+  ],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v16_vs_v15_totals": {
+   "FIN.FLOOR.PORCELAIN|m2": {
+    "after": {
+     "excluded_n": 13,
+     "held_blank_n": 0,
+     "held_high": "0.769843",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 2,
+     "released": "294.983857",
+     "released_n": 21
+    },
+    "before": {
+     "excluded_n": 13,
+     "held_blank_n": 0,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 0,
+     "released": "295.390972",
+     "released_n": 21
+    }
+   },
+   "FIN.WALL.TILE|m2": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "340.249891",
+     "released_n": 12
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 6,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 6,
+     "released": "340.3366",
+     "released_n": 12
+    }
+   },
+   "STR.CONC.BEAM|m3": {
+    "after": {
+     "excluded_n": 55,
+     "held_blank_n": 5,
+     "held_high": "13.77951",
+     "held_high_open_n": 0,
+     "held_low": "8.372829",
+     "held_n": 27,
+     "released": "66.401795",
+     "released_n": 110
+    },
+    "before": {
+     "excluded_n": 54,
+     "held_blank_n": 5,
+     "held_high": "13.780805",
+     "held_high_open_n": 0,
+     "held_low": "8.372829",
+     "held_n": 28,
+     "released": "66.392081",
+     "released_n": 110
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "rows": [
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.089845
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 4.0846
+   },
+   "beside": {
+    "cause": "DRAWN_WEDGE (d)",
+    "change_m3": "0.005245",
+    "column": "C25 (371)",
+    "component_evidence": "VERIFIED piece; the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": "0.85",
+    "mark": "B26",
+    "rule": "R-T624-1 / UP-CONC-JOINT-001 1.0.0 (face to face on drawn members)",
+    "storey": "GF",
+    "wedge_m2": "0.006171",
+    "wedge_sides_on": [
+     "1353 (S-TEXT-SLAB)",
+     "881 (S-COL.BON)",
+     "881 (S-COL.BON)",
+     "903 (1)",
+     "904 (1)"
+    ],
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE, own 0.005261 vs 0.005245: -0.000016 m3 immaterial, named)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: (c) B27 rect rebuilt 3.271257 x 0.9 = 2.944132 m2, tip in it 0.001524 m2: billed once, companion 0, V14 closes to 66.392081 AGREE; (d) CB8 gap 0.004540 m2 x 0.75 = 0.003405 AGREE; (b) B19 @ C15 wedge 0.001418 x 0.75 = 0.001064 AGREE; B26 @ C25 own 0.006189 x 0.85 = 0.005261 vs 0.005245 (-0.000016 m3, immaterial, named); B10 66.401795 ENGINE_RIGHT on own calc for the three omissions; FR-T624-1..3 for the next manifest"
+   },
+   "kind": "SET",
+   "line_id": "L-c6fa4992eb3ed2aa01e6",
+   "note": "R-T631-1 (b): no earlier package writes the line",
+   "op_id": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)|FR-T624-1|L-c6fa4992eb3ed2aa01e6",
+   "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+   "row": "FR-T624-1",
+   "source": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.624624
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 1.62356
+   },
+   "beside": {
+    "cause": "DRAWN_WEDGE (d)",
+    "change_m3": "0.001064",
+    "column": "C15 (667)",
+    "component_evidence": "VERIFIED piece; the line as a whole stays PARTIALLY VERIFIED",
+    "depth_m": "0.75",
+    "mark": "B19",
+    "rule": "R-T624-1 / UP-CONC-JOINT-001 1.0.0 (face to face on drawn members)",
+    "storey": "1F",
+    "wedge_m2": "0.001418",
+    "wedge_sides_on": [
+     "1639 (S-COL.BON)",
+     "1713 (1)"
+    ],
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: (c) B27 rect rebuilt 3.271257 x 0.9 = 2.944132 m2, tip in it 0.001524 m2: billed once, companion 0, V14 closes to 66.392081 AGREE; (d) CB8 gap 0.004540 m2 x 0.75 = 0.003405 AGREE; (b) B19 @ C15 wedge 0.001418 x 0.75 = 0.001064 AGREE; B26 @ C25 own 0.006189 x 0.85 = 0.005261 vs 0.005245 (-0.000016 m3, immaterial, named); B10 66.401795 ENGINE_RIGHT on own calc for the three omissions; FR-T624-1..3 for the next manifest"
+   },
+   "kind": "SET",
+   "line_id": "L-45e0d887d33192039e05",
+   "note": "R-T631-1 (b): no earlier package writes the line",
+   "op_id": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)|FR-T624-2|L-45e0d887d33192039e05",
+   "package": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)",
+   "row": "FR-T624-2",
+   "source": "BEAM_END_WEDGES (T-624 FR-T624-1 / FR-T624-2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.717574
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.714169
+   },
+   "beside": {
+    "at": "C13 west end gap (col 2, 37D)",
+    "cause": "END_GAP (c); supersedes FR-T614-H1",
+    "chained_after": "FR-T610-2 on the same line",
+    "change_m3": "0.003405",
+    "depth_m": "0.75",
+    "gap_m": "0.024783",
+    "mark": "CB8",
+    "piece_m2": "0.00454",
+    "storey": "GF",
+    "supersedes": "FR-T614-H1 HELD 0 .. 0.003405 m3 (V14 held_not_wired) by name",
+    "who_is_right": "ENGINE_WRONG OMISSION (Checker AGREE 0.004540 x 0.75)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: (c) B27 rect rebuilt 3.271257 x 0.9 = 2.944132 m2, tip in it 0.001524 m2: billed once, companion 0, V14 closes to 66.392081 AGREE; (d) CB8 gap 0.004540 m2 x 0.75 = 0.003405 AGREE; (b) B19 @ C15 wedge 0.001418 x 0.75 = 0.001064 AGREE; B26 @ C25 own 0.006189 x 0.85 = 0.005261 vs 0.005245 (-0.000016 m3, immaterial, named); B10 66.401795 ENGINE_RIGHT on own calc for the three omissions; FR-T624-1..3 for the next manifest"
+   },
+   "kind": "SET",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "note": "R-T631-1 (b): chained inside the T-610 package",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T624-3|L-7c1a1da8004c4272ccba",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T624-3",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "EXCLUDED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": 0.001295,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "beside": {
+    "B27_rect_m2": "2.944132",
+    "closes": "F-T619-1 (V14 range 66.392081 .. 66.393376)",
+    "in_B27_rect_m2": "0.001524",
+    "rule": "R-T631-1 (c): a range closed by a merged re-measure leaves as EXCLUDED, never RELEASED 0; B27 low end 4.206189 stands",
+    "tip_m2": "0.001524"
+   },
+   "class_after": "EXCLUDED",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-624 VERIFIER 2026-11-08T11:58Z: (c) B27 rect rebuilt 3.271257 x 0.9 = 2.944132 m2, tip in it 0.001524 m2: billed once, companion 0, V14 closes to 66.392081 AGREE; (d) CB8 gap 0.004540 m2 x 0.75 = 0.003405 AGREE; (b) B19 @ C15 wedge 0.001418 x 0.75 = 0.001064 AGREE; B26 @ C25 own 0.006189 x 0.85 = 0.005261 vs 0.005245 (-0.000016 m3, immaterial, named); B10 66.401795 ENGINE_RIGHT on own calc for the three omissions; FR-T624-1..3 for the next manifest"
+   },
+   "kind": "SET",
+   "line_id": "NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "note": "chained in the package that added the companion",
+   "op_id": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)|FR-T624-4|NEW:STR.CONC.BEAM:HL:BEAM_LEDGER:GF:BM-GF-048#BAND0048.1#FR-T610-1:RANGE",
+   "package": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)",
+   "row": "FR-T624-4",
+   "source": "BEAM_CROSSING_ZONES (T-610 FR-T610-1 / -2 / -4; FR-T610-3 withdrawn by T-614 r2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 26.567691
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 26.6544
+   },
+   "beside": {
+    "chain": [
+     "31B",
+     "31A",
+     "324",
+     "318",
+     "BE",
+     "D2",
+     "222"
+    ],
+    "change_m2": "-0.086709",
+    "doors": [
+     "D-GF-11 0.8 x 2.20",
+     "D-GF-12 0.8 x 2.20"
+    ],
+    "face_lm": "8.243203",
+    "hand": "8.243203 x 3.65 - 3.52 = 26.56769095 -> 26.567691 (6 dp)",
+    "height_m": "3.65",
+    "open_side": [
+     {
+      "handle": "2DB",
+      "layer": "2",
+      "lm": "1.255652",
+      "on_edge": "D2"
+     }
+    ],
+    "rule": "owner 2026-11-02 wet-area walls, Q-48 A tile top, Q-55 C door head, Q-73",
+    "who_is_right": "ENGINE_WRONG (per-face 4 dp rounding + open side on threshold 2DB): worker DRAWING-CONFIRMED, the Checker did not re-measure GF-14"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "DRAWING-CONFIRMED",
+    "verdict_line": "BOARD T-622 VERIFIER 2026-11-08T10:00Z: GF-14 (+0.086709 ENGINE_WRONG stays worker DRAWING-CONFIRMED) not re-measured; 39 other rows DRAWING-CONFIRMED; line stays PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "note": "carried DRAWING-CONFIRMED; the Checker re-adds it at Gate B",
+   "op_id": "WALL_TILE_GF14 (T-622 FR-T622-2)|FR-T622-2|L-fa408571a8adcfaf1a1f",
+   "package": "WALL_TILE_GF14 (T-622 FR-T622-2)",
+   "row": "FR-T622-2",
+   "source": "WALL_TILE_GF14 (T-622 FR-T622-2)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.465145
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.478417
+   },
+   "beside": {
+    "cause": "the engine's tread union flattens the curved band into chords through the nosing points (chord loss 0.012453) and its quads leave 0.000838; CAD -0.000019 (run outer edge A7 vs the outer arc end, 0.05 mm)",
+    "change_m2": "-0.013272",
+    "footprint_after_m2": "6.137684",
+    "footprint_before_m2": "6.124412",
+    "parts": {
+     "F1 arc band (239 / 23D / 256)": "4.044824",
+     "F2 run (22E / A7 / 13C less 2FD2)": "2.09286"
+    },
+    "row": "T-621 row 0 round-stair footprint (deducted from the GF porcelain, UP-CER-001)",
+    "rule": "R-T631-1 (d): the host floor moves by minus the footprint change",
+    "who_is_right": "ENGINE_WRONG 0.013272 m2 (chord flattening), Checker own re-measure AGREE"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: ROW 0 own 6.137684 m2 AGREE (sector 4.044824 + run 2.092860); engine 6.124412 is 0.013272 short = ENGINE_WRONG (chord flattening); row 0 VERIFIED; NOT re-measured: curtail 0.157787, strings 0 .. 0.393843 (UNRESOLVED), slab margin 0 .. 0.376; fix row for manifest V16 (T-631)"
+   },
+   "kind": "SET",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "op_id": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)|FR-T625-1|L-7625f35c503d9f8e6196",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-1",
+   "source": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)"
+  },
+  {
+   "after": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.071302
+   },
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 109.465145
+   },
+   "beside": {
+    "class": "UNRESOLVED (no owner question: ERS 2.7 not met, designer item)",
+    "range_m2": "109.071302 .. 109.465145 (line at the low end; companion HELD 0 .. 0.393843; R-T619-1 (c))",
+    "what": "0.05 string bands beside the tread edges (inner curve 0.092854 + inner run 0.092454 + outer curve 0.208535): stair structure / cladding (then out of the porcelain) or floor; ST-02 structure undrawn (Q-50 / T-269 designer item)"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: ROW 0 own 6.137684 m2 AGREE (sector 4.044824 + run 2.092860); engine 6.124412 is 0.013272 short = ENGINE_WRONG (chord flattening); row 0 VERIFIED; NOT re-measured: curtail 0.157787, strings 0 .. 0.393843 (UNRESOLVED), slab margin 0 .. 0.376; fix row for manifest V16 (T-631)"
+   },
+   "kind": "SET",
+   "line_id": "L-7625f35c503d9f8e6196",
+   "note": "R-T631-1 (e): range, never a point",
+   "op_id": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)|FR-T625-2|L-7625f35c503d9f8e6196",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-2",
+   "source": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.393843,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_m2": "109.465145",
+    "low_m2": "109.071302",
+    "range_of": "L-7625f35c503d9f8e6196",
+    "rule": "R-T619-1 (c): a range is never a point"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "GF-RC99C2A:floor#FR-T625-2:RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: ROW 0 own 6.137684 m2 AGREE (sector 4.044824 + run 2.092860); engine 6.124412 is 0.013272 short = ENGINE_WRONG (chord flattening); row 0 VERIFIED; NOT re-measured: curtail 0.157787, strings 0 .. 0.393843 (UNRESOLVED), slab margin 0 .. 0.376; fix row for manifest V16 (T-631)"
+   },
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.FLOOR.PORCELAIN:GF-RC99C2A:floor#FR-T625-2:RANGE",
+   "note": "companion of the ranged SET; HELD 0 .. width",
+   "op_id": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)|FR-T625-2|NEW:FIN.FLOOR.PORCELAIN:GF-RC99C2A:floor#FR-T625-2:RANGE",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-2",
+   "source": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "unit": "m2"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.376,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": null,
+   "beside": {
+    "high_m2": "33.787036",
+    "low_m2": "33.411036",
+    "range_of": "L-b06400d46d252f242018",
+    "rule": "R-T631-1 (e): the line is already its low end; the companion carries the width",
+    "what": "1F slab edge 0.05 beyond the void lines B74 / B75 (ST 2D2 / 2CF): finish only if a void-edge / balustrade detail puts it there"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": null,
+   "element_id": "1F-R78C367:floor#FR-T625-3:RANGE",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-625 VERIFIER 2026-11-08T12:59Z: ROW 0 own 6.137684 m2 AGREE (sector 4.044824 + run 2.092860); engine 6.124412 is 0.013272 short = ENGINE_WRONG (chord flattening); row 0 VERIFIED; NOT re-measured: curtail 0.157787, strings 0 .. 0.393843 (UNRESOLVED), slab margin 0 .. 0.376; fix row for manifest V16 (T-631)"
+   },
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "kind": "ADD",
+   "line_id": "NEW:FIN.FLOOR.PORCELAIN:1F-R78C367:floor#FR-T625-3:RANGE",
+   "note": "companion only; the 1F porcelain line stays",
+   "op_id": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)|FR-T625-3|NEW:FIN.FLOOR.PORCELAIN:1F-R78C367:floor#FR-T625-3:RANGE",
+   "package": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "row": "FR-T625-3",
+   "source": "ROUND_STAIR_FOOTPRINT (T-625 FR-T625-1 / -2 / -3)",
+   "unit": "m2"
+  }
+ ],
+ "rule": "R-T631-1",
+ "schema": "URBAN_T631_WIRING_MANIFEST_V16",
+ "sources_merged": {
+  "T-622": "31fe39db",
+  "T-624": "1e38add2",
+  "T-625": "47824e04",
+  "T-626": "74e52c34",
+  "T-629": "b0eb7f60",
+  "T-630": "d9714012",
+  "T-632": "e90e0f4d"
+ },
+ "sources_no_row": {
+  "T-626": {
+   "merge": "74e52c34",
+   "rows": 0,
+   "why": "wet-room / roof membrane rows to evidence: every class stands (RULE_DIFFERENCE pantry, ENGINE_RIGHT domes, TOLERANCE +4.30 0.001332 accepted, residual 0.521668 UNRESOLVED on his lump row): no line moves"
+  },
+  "T-629": {
+   "merge": "b0eb7f60",
+   "rows": 0,
+   "why": "manifest V15: the base of V16 (rebuilt and compared, not restated)"
+  },
+  "T-630": {
+   "merge": "d9714012",
+   "rows": 0,
+   "why": "end-to-end BOQ dry run on V15: reads lines, moves none"
+  },
+  "T-632": {
+   "merge": "e90e0f4d",
+   "rows": 0,
+   "why": "B20 upstand ENGINE_RIGHT (0.120 m3 = engine); hatches 390 / 391 HELD length only (no volume, thickness unprinted): no fix row"
+  }
+ },
+ "sources_refused": {
+  "T-627": {
+   "refusal": "T-627 is not MERGED with a Checker verdict",
+   "state": "READY at claim (B12 opening rows), not merged"
+  },
+  "T-628": {
+   "refusal": "T-628 is not MERGED with a Checker verdict",
+   "state": "TODO at claim (footing / lift-wall)"
+  }
+ },
+ "stair_edge_census_after_v16": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "supersedes": {
+  "V14 F-T619-1 / FR-T610-1 companion HELD 0 .. 0.001295 m3": "FR-T624-4 EXCLUDED (range closed, billed once)",
+  "V14 held_not_wired FR-T614-H1 (CB8 col 2 west, HELD 0 .. 0.003405 m3)": "FR-T624-3 (measured 0.003405)",
+  "V15 held_not_wired 'T-622 GF-14'": "FR-T622-2 (wired DRAWING-CONFIRMED on the Lead's T-631 row)"
+ },
+ "task": "T-631",
+ "wall_tile": {
+  "FIN.WALL.TILE|m2": {
+   "v15": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "340.3366",
+    "released_n": 12
+   },
+   "v16": {
+    "excluded_n": 0,
+    "held_blank_n": 6,
+    "held_high": "0",
+    "held_high_open_n": 0,
+    "held_low": "0",
+    "held_n": 6,
+    "released": "340.249891",
+    "released_n": 12
+   }
+  },
+  "change_m2": "-0.086709",
+  "hand": "8.243203 x 3.65 - 3.52 = 26.56769095 -> 26.567691 (6 dp)",
+  "line": "L-fa408571a8adcfaf1a1f"
+ }
+}
