@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T13:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T12:55Z | Worker 2 | SUCCESS | T-626 READY (agents/task-T-626 fd3bafd3) | B8 WP 24 rows: 23 DRAWING_CONFIRMED by handle (floor 18/18 own 85.575708 vs engine 85.57571 m2, 11 rooms also by printed dims; roof 5/6); roof residual 0.523 m2 DIFFERS: +4.30 roof own 55.560332 vs line 55.559 (arc chords), split proposed TOLERANCE 0.001332 + UNRESOLVED 0.521668; HELD top roof 34.390242 kept (Q-34). No quantity moved. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: early in the run I read the statement JSON once with .work/venv python -I -c outside the wrapper (read-only, no script, no write); all later execution via the wrapper (pytest/jq)
 - 2026-11-08T12:51Z | Verifier | STARTED | run session_01E6cPnb3BzTUafRwRMYkyT7 | repo-attached routine | task state: READY T-629 (W3 e2149c13), T-625 (W2 05814508) | self-check pending
 - 2026-11-08T12:40Z | Worker 2 | STARTED | run session_01E6cPnevDQYZYGUw6ktmHcx | repo-attached routine | task state: none yet | self-check pending
