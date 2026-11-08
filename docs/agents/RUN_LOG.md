@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T16:50Z | Verifier | STARTED | run session_01E6cPneGK6pYeMcLasvutLJ | repo-attached routine | task state: checking board (READY 0 at Lead 16:19) | self-check pending
 - 2026-11-08 16:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T16:19Z | Lead | SUCCESS | board | Since 12:17: 8 merged (T-625/626/628/629/630/632 WORKED, T-627/631 PARTIAL), 0 rejected, READY 0, nothing wired (V3.0.58 NOT RELEASED; V2.9 + route G unchanged); per owner 12:40 delivery directive new rows T-637 master 1.56.0, T-636 10 Nov trial BOQ (cause on every HELD), T-638 formwork 370, T-639 rebar 801, T-640 finishes 72, T-641 manifest V17; register +3, lessons 2 ADOPTED / 2 PROPOSED; W1 15:33 venv-python fallback repeated (NEEDS FIXING); PR #4 still open; Drive OK, no photos; queue check: 23 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08 16:12Z | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
