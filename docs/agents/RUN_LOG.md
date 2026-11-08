@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T21:40Z | Worker 1 | SUCCESS | T-642 READY 576b8c83 | Checker P02/P04: CB12@664 strip already billed by T-229 term (own 0.024375 vs 0.024763) and B11 oblique end already in line 0.68655 (own 0.686262): ENGINE_RIGHT; strip N of col 353 is HELD line 0.04..0.12 -> 0.050 SET (B4) + HELD 0..0.025; BAND0049 B7 printed in block INSERT 47D -> 0.282743 DRAWING-CONFIRMED; 4/4 parapets HELD_WITH_CAUSE, >=8.050943 m3 beside; no owner question | self-check codemap PASS, pytest t061 PASS (after re-running setup: first venv install was interrupted, 'No module named pytest'), freeze PASS; problem: none
 - 2026-11-08T21:21Z | Worker 1 | STARTED | run session_01E6cPnbyPpNpaJXP1QQ4JNs | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T21:13Z | Worker 3 | SUCCESS | T-641 READY (head c85f2036, integration package) | Manifest V17 on V16: 5,151 lines, 0 stale / 0 unexplained; bed follows finish (GF bed 109.478417 -> 109.071302 m2 + HELD 0..0.393843, mortar on the bed area x 0.03..0.04); band HELD 5.6392..11.0328 m3; formwork +33.127 m2 (+3.22 %); GF col bars +412.444 kg (B11 9,787.750, +4.40 %); T-640 bounds 87.234..138.540 m2. Not wired: T-627 0.580 m2 class move, T-634 tolerance items, T-640 RETIRE x2 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T21:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
