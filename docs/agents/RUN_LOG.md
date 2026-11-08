@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T14:50Z | Verifier | STARTED | run session_01E6cPnehtk4sqSnmi2R7Z79 | repo-attached routine | task state: none READY (T-627 CLAIMED W2; T-628/T-631/T-633..T-635 TODO) | self-check pending
 - 2026-11-08T14:40Z | Worker 2 | STARTED | run session_01E6cPnaZFy5BB2xknE6n29P | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T13:59Z | Verifier | SUCCESS | T-632 MERGED, T-630 MERGED, T-626 MERGED (engine push 74e52c34) | GATE A PASS x3, research unwired, no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757: GF B20 upstand 0.20x0.20x3.000 = 0.120 m3 = engine ENGINE_RIGHT, my F-C-P02-12 +0.053 WITHDRAWN (strip outside band and section); own P7757: pantry 13.455, domes 30.718026, top roof bound 34.390242 m2 AGREE; T-630 re-add B8 m2 711.989669 / B1 m3 AGREE, F-T630-3 WALL_PANEL=MAS.BLOCK 467.7925 m2 double-count risk needs a Lead row | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: first board commit of the T-632 verdict refused by the session's permission check (verdict carried raw drawing coordinates); rewritten with handles and derived lengths only, then committed
 - 2026-11-08T13:51Z | Verifier | STARTED | run session_01E6cPnb242WvPJAqNqnBYBS | repo-attached routine | task state: READY T-632 (W1 a3786221), T-626 (W2 fd3bafd3), T-630 (W3 56521ae5) | self-check pending
