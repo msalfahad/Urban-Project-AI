@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08 15:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T15:00Z | Worker 2 | SUCCESS | T-627 READY (agents/task-T-627 @ b3e7de48) | B12 opening m2: 22/22 UNKNOWN rows given own w x h from DXF dims / masonry jambs / bound DWF outlines, all deltas reproduce 0.000; windows ENGINE_RIGHT 3.975 m2 confirmed (his flat 2.00 heights), W02/W17 HELD named; doors: vector NE/SW elevations draw D-GF-01/03/06 at 2.20 above floor -> propose 0.580 m2 RULE_DIFFERENCE->ENGINE_RIGHT (12.76 vs 12.0, -6.33 %); D-GF-09 frame-only conflict stays Q-55 C | self-check codemap PASS, t061 PASS, freeze PASS; problem: none
 - 2026-11-08T14:54Z | Verifier | SUCCESS | none READY; T-180 slot P02 GF B21 + B29 | No merge, no quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged). Own ST7757: GF B21 3.017574 m2 x 0.75 = 2.263180 vs 2.262872 m3 AGREE (col 322 = 1F T.C column, twin 667 on the 1F roof plan, no deduction), B29 1.351431 m2 -> 1.013573 vs 1.013607 m3 AGREE; both ENGINE_RIGHT on drawn width, HELD D-27 (drawn 0.40/0.20 vs schedule 0.45/0.25). P02 GF 18/21, beam line PARTIALLY VERIFIED | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T14:50Z | Verifier | STARTED | run session_01E6cPnehtk4sqSnmi2R7Z79 | repo-attached routine | task state: none READY (T-627 CLAIMED W2; T-628/T-631/T-633..T-635 TODO) | self-check pending
