@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T09:48Z | Worker 1 | SUCCESS | T-623 READY (agents/task-T-623 @ 4abb0f09) | B10 beams/columns 18 UNKNOWN rows re-measured from ST7757 raw handles: 15/16 measurable rows reproduce statement V10 within 0.001 m3 (columns +1.063750 m3 exact; J 2.28125/0.385 re-derived, 26/26 members agree), F-T623-1 1F CB12 BEYOND 0.160962 -> 0.1875 m3 vs THROUGH 0.254887 -> 0.228349 (line total unchanged), 2 THROUGH_SUPPORT residuals stay UNRESOLVED; no ENGINE_WRONG, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T09:21Z | Worker 1 | STARTED | run session_01E6cPneJu8LgxaYGTncX7fK | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T09:14Z | Worker 3 | SUCCESS | T-620 READY d952709b | Statement V11 + scorecard V11 (non-candidate): V10 byte-equal + 9 merged folds; B3 floor tile UNKNOWN 0/41 -> PV 3/41 (+37 DC); B10 beams 66.321054 vs 66.093875 m3 unchanged, 2.248826 m3 stays UNRESOLVED with T-600 bounds; stair/rail residuals now ranges; lintel APART -6 nr = ER -2 + UNR -4; F-T613-5 fixed (rebar HELD-blank 799 = 798 rows + 1 tank). No quantity moved. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T09:00Z | Worker 3 | STARTED | run session_01E6cPnak6qQMDWTEgWTndJf | repo-attached routine | task state: none yet | self-check pending
