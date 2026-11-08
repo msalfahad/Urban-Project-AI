@@ -1,0 +1,889 @@
+{
+ "dims": {
+  "GF-07.box": {
+   "handles": [
+    "5D5",
+    "5E1"
+   ],
+   "values": [
+    "3.0",
+    "4.5"
+   ]
+  },
+  "W18": {
+   "handles": [
+    "2EEC",
+    "2EFA"
+   ],
+   "note": "NW elevation chain: sill above the 1F floor, window height (printed 84 / 216)",
+   "values": [
+    "0.83927",
+    "2.16073"
+   ]
+  }
+ },
+ "rooms": {
+  "1F-02": {
+   "chain": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "chain_source": "T-621 chain 1F-WBATH-2 (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "AE4",
+     "lm": "2.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "C23",
+     "lm": "2.45",
+     "role": "WALL"
+    },
+    {
+     "handle": "C27",
+     "lm": "2.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "B3E",
+     "lm": "2.45",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "west bath upper 245 x 205 (T-621 second congruent bath)",
+   "open": [],
+   "openings": [
+    {
+     "edge": "AE4",
+     "id": "W20",
+     "jambs": [
+      "AE4",
+      "AE5"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    },
+    {
+     "edge": "C27",
+     "id": "D-1F-04",
+     "jambs": [
+      "C27",
+      "C28"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "9.0",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "9.0"
+  },
+  "1F-03": {
+   "chain": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "chain_source": "T-621 chain 1F-WBATH-1 (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "C1C",
+     "lm": "2.45",
+     "role": "WALL"
+    },
+    {
+     "handle": "C26",
+     "lm": "2.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "C22",
+     "lm": "2.45",
+     "role": "WALL"
+    },
+    {
+     "handle": "C25",
+     "lm": "2.05",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "west bath lower 245 x 205 (T-621 first congruent bath)",
+   "open": [],
+   "openings": [
+    {
+     "edge": "C1C",
+     "id": "D-1F-01",
+     "jambs": [
+      "C1B",
+      "C1C"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "C25",
+     "id": "W19",
+     "jambs": [
+      "C25"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    }
+   ],
+   "perimeter": "9.0",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "9.0"
+  },
+  "1F-07": {
+   "chain": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "chain_source": "T-621 chain 1F-LAUNDRY (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "ADB",
+     "lm": "1.85",
+     "role": "WALL"
+    },
+    {
+     "handle": "B07",
+     "lm": "1.95",
+     "role": "WALL"
+    },
+    {
+     "handle": "ACF",
+     "lm": "1.62",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0F",
+     "lm": "3.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "B17",
+     "lm": "1.47",
+     "role": "WALL"
+    },
+    {
+     "handle": "B06",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "B14",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "B12",
+     "lm": "3.0",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "L-shaped laundry, column 2FF0 notch",
+   "open": [],
+   "openings": [
+    {
+     "edge": "ADB",
+     "id": "W21",
+     "jambs": [
+      "ADC",
+      "ADB"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    },
+    {
+     "edge": "ACF",
+     "id": "D-1F-06",
+     "jambs": [
+      "ACF",
+      "AD2"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "B17",
+     "id": "D-1F-05",
+     "jambs": [
+      "B17",
+      "B18"
+     ],
+     "kind": "door",
+     "width": "0.9"
+    }
+   ],
+   "perimeter": "16.94",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "16.94"
+  },
+  "1F-08": {
+   "chain": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "chain_source": "T-621 chain 1F-WC-LAUNDRY (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "AD3",
+     "lm": "1.47",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0E",
+     "lm": "1.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "ADA",
+     "lm": "1.47",
+     "role": "WALL"
+    },
+    {
+     "handle": "B05",
+     "lm": "1.8",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "W.C. 147 x 180",
+   "open": [],
+   "openings": [
+    {
+     "edge": "AD3",
+     "id": "D-1F-06",
+     "jambs": [
+      "AD3",
+      "AD7"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "ADA",
+     "id": "W22",
+     "jambs": [
+      "ADA"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    }
+   ],
+   "perimeter": "6.54",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "6.54"
+  },
+  "1F-09": {
+   "chain": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "chain_source": "T-621 chain 1F-BATH-LAUNDRY (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "B02",
+     "lm": "1.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "B1F",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "B09",
+     "lm": "1.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AD6",
+     "lm": "2.0",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "bath by the laundry 200 x 180 less the drawn jamb",
+   "open": [],
+   "openings": [
+    {
+     "edge": "B02",
+     "id": "D-1F-07",
+     "jambs": [
+      "B02",
+      "B01"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "B1F",
+     "id": "W23",
+     "jambs": [
+      "B1F",
+      "B1E"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    }
+   ],
+   "perimeter": "7.6",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "7.6"
+  },
+  "1F-12": {
+   "chain": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "chain_source": "T-621 chain 1F-EAST-BATH (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "B69",
+     "lm": "2.1",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0C",
+     "lm": "2.25",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0E",
+     "lm": "2.1",
+     "role": "WALL"
+    },
+    {
+     "handle": "B1B",
+     "lm": "2.25",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "east bath 210 x 225",
+   "open": [],
+   "openings": [
+    {
+     "edge": "B69",
+     "id": "W18",
+     "jambs": [
+      "B69",
+      "B6A"
+     ],
+     "kind": "window",
+     "width": "0.5"
+    },
+    {
+     "edge": "C0E",
+     "id": "D-1F-10",
+     "jambs": [
+      "C0E",
+      "C0D"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "8.7",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "1F",
+   "wall_lm": "8.7"
+  },
+  "2F-02": {
+   "chain": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "chain_source": "T-621 chain 2F-ROOF-WC (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "127B",
+     "lm": "1.85",
+     "role": "WALL"
+    },
+    {
+     "handle": "1296",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "1298",
+     "lm": "1.85",
+     "role": "WALL"
+    },
+    {
+     "handle": "1290",
+     "lm": "3.0",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "roof-floor W.C. 300 x 185",
+   "open": [],
+   "openings": [
+    {
+     "edge": "127B",
+     "id": "W28",
+     "jambs": [
+      "127B",
+      "127C"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    },
+    {
+     "edge": "1290",
+     "id": "D-2F-03",
+     "jambs": [
+      "1290",
+      "128F"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "9.7",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "2F",
+   "wall_lm": "9.7"
+  },
+  "GF-07": {
+   "chain": [
+    "AE",
+    "A6",
+    "B3",
+    "158"
+   ],
+   "chain_source": "new chain (T-622)",
+   "edges": [
+    {
+     "handle": "AE",
+     "lm": "4.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "A6",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "B3",
+     "lm": "4.5",
+     "role": "ZONE_EDGE"
+    },
+    {
+     "handle": "158",
+     "lm": "3.0",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "open pantry (Q-37 A wet): box 3.00 x 4.50 (DIMENSIONs 5D5 / 5E1), west face AE with W09 / W10, south A6, north 158 with the door, east side open on the counter-front line B3; column 2FAE notch",
+   "open": [
+    {
+     "handle": "B3",
+     "layer": "5",
+     "lm": "4.5",
+     "on_edge": "B3"
+    }
+   ],
+   "openings": [
+    {
+     "edge": "AE",
+     "id": "W09",
+     "jambs": [
+      "AE",
+      "AF"
+     ],
+     "kind": "window",
+     "width": "1.5"
+    },
+    {
+     "edge": "AE",
+     "id": "W10",
+     "jambs": [
+      "AF",
+      "B0"
+     ],
+     "kind": "window",
+     "width": "1.0"
+    },
+    {
+     "edge": "158",
+     "id": "D-GF-06",
+     "jambs": [
+      "159",
+      "158"
+     ],
+     "kind": "door",
+     "width": "1.0"
+    }
+   ],
+   "perimeter": "15.0",
+   "roles": [
+    "WALL",
+    "WALL",
+    "ZONE_EDGE",
+    "WALL"
+   ],
+   "storey": "GF",
+   "wall_lm": "10.5"
+  },
+  "GF-12": {
+   "chain": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "chain_source": "T-621 chain GF-WC-CORE-289 (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "31F",
+     "lm": "1.727975",
+     "role": "WALL"
+    },
+    {
+     "handle": "326",
+     "lm": "2.355244",
+     "role": "WALL"
+    },
+    {
+     "handle": "221",
+     "lm": "2.887272",
+     "role": "WALL"
+    },
+    {
+     "handle": "217",
+     "lm": "0.443546",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "core W.C. wedge 289 x 167",
+   "open": [],
+   "openings": [
+    {
+     "edge": "31F",
+     "id": "D-GF-11",
+     "jambs": [
+      "31F",
+      "31E"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "7.414037",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "GF",
+   "wall_lm": "7.414037"
+  },
+  "GF-13": {
+   "chain": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "chain_source": "T-621 chain GF-WC-CORE-245 (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "2B4",
+     "lm": "2.450596",
+     "role": "WALL"
+    },
+    {
+     "handle": "327",
+     "lm": "2.364666",
+     "role": "WALL"
+    },
+    {
+     "handle": "31D",
+     "lm": "1.101",
+     "role": "WALL"
+    },
+    {
+     "handle": "BD",
+     "lm": "0.893546",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "core W.C. wedge 245 x 167, column notch",
+   "open": [],
+   "openings": [
+    {
+     "edge": "2B4",
+     "id": "W06",
+     "jambs": [
+      "2B4",
+      "2B3"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    },
+    {
+     "edge": "31D",
+     "id": "D-GF-12",
+     "jambs": [
+      "31D",
+      "31C"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "6.809808",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "GF",
+   "wall_lm": "6.809808"
+  },
+  "GF-14": {
+   "chain": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "chain_source": "T-621 chain GF-LOBBY-WASH (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "31B",
+     "lm": "0.562663",
+     "role": "WALL"
+    },
+    {
+     "handle": "31A",
+     "lm": "2.354651",
+     "role": "WALL"
+    },
+    {
+     "handle": "324",
+     "lm": "1.322533",
+     "role": "WALL"
+    },
+    {
+     "handle": "318",
+     "lm": "1.340709",
+     "role": "WALL"
+    },
+    {
+     "handle": "BE",
+     "lm": "1.023977",
+     "role": "WALL"
+    },
+    {
+     "handle": "D2",
+     "lm": "2.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "222",
+     "lm": "0.844322",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "wash lobby, 2 basins; open to the stair hall over the threshold line 2DB",
+   "open": [
+    {
+     "handle": "2DB",
+     "layer": "2",
+     "lm": "1.255652",
+     "on_edge": "D2"
+    }
+   ],
+   "openings": [
+    {
+     "edge": "31A",
+     "id": "D-GF-11",
+     "jambs": [
+      "31B",
+      "31A"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "31A",
+     "id": "D-GF-12",
+     "jambs": [
+      "31A",
+      "317"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "9.498855",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "GF",
+   "wall_lm": "9.498855"
+  },
+  "GF-16": {
+   "chain": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "chain_source": "T-621 chain GF-MASTER-BATH (merged e8709e09), re-measured",
+   "edges": [
+    {
+     "handle": "273",
+     "lm": "2.1",
+     "role": "WALL"
+    },
+    {
+     "handle": "2DD",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "2E5",
+     "lm": "1.117842",
+     "role": "WALL"
+    },
+    {
+     "handle": "325",
+     "lm": "1.388981",
+     "role": "WALL"
+    },
+    {
+     "handle": "2DF",
+     "lm": "1.017842",
+     "role": "WALL"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "master bath",
+   "open": [],
+   "openings": [
+    {
+     "edge": "273",
+     "id": "W07",
+     "jambs": [
+      "272",
+      "273"
+     ],
+     "kind": "window",
+     "width": "0.6"
+    },
+    {
+     "edge": "2E5",
+     "id": "D-GF-14",
+     "jambs": [
+      "2E6",
+      "2E5"
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "7.624665",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "GF",
+   "wall_lm": "7.624665"
+  }
+ },
+ "rule": "R-T622-1",
+ "schema": "T622_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "units": "m"
+}
