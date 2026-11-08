@@ -1,0 +1,1302 @@
+{
+ "area_tol": "0.001",
+ "beside": {
+  "1F_arrival_printed": "4.875",
+  "1F_living_own_floor_at_550": {
+   "basis": "engine - own = 0.0475 arrival rule piece (by reference) + 0.000536",
+   "engine_minus_own": "0.048036",
+   "engine_porcelain_lift_arrival": "38.633536",
+   "own_east_foot": "38.988",
+   "own_printed_edge": "38.5855"
+  },
+  "gf_open_stair_footprint_by_closure": {
+   "basis": "own gross 147.657717 - engine open-room lines 130.648285 - own lift / band / curb / solids; NOT a re-measure (uses the engine)",
+   "row_0": "6.124412",
+   "value": "6.124432"
+  },
+  "his_bed_room_2_reproduced": {
+   "basis": "own 380 x 430 + own dressing + own arch strip OP-011",
+   "his": "19.46",
+   "own": "19.46"
+  }
+ },
+ "checker_top5": [
+  {
+   "area": "147.657717",
+   "handles": [
+    "B5",
+    "E0",
+    "97",
+    "27D#1",
+    "2E4",
+    "222",
+    "20F",
+    "AB",
+    "158",
+    "AE",
+    "104"
+   ],
+   "id": "GF-OPEN.full"
+  },
+  {
+   "area": "24.94032",
+   "handles": [
+    "119",
+    "127",
+    "10E",
+    "139",
+    "124"
+   ],
+   "id": "GF-DEWANEYA"
+  },
+  {
+   "area": "19.35",
+   "handles": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ],
+   "id": "2F-MAID"
+  },
+  {
+   "area": "19.05",
+   "handles": [
+    "C2A",
+    "C1F",
+    "C24",
+    "B40"
+   ],
+   "id": "1F-WEST-BED"
+  },
+  {
+   "area": "19.016592",
+   "handles": [
+    "B1D",
+    "C0F",
+    "C0A",
+    "BD2",
+    "B6B",
+    "ACE",
+    "B0D",
+    "C09",
+    "C15",
+    "C0B",
+    "B0B"
+   ],
+   "id": "1F-CUR.ours"
+  }
+ ],
+ "difference": "22.48595",
+ "drawn": "research/agents_t621/T621_DRAWN.json",
+ "engine_valued": "387.09405",
+ "governing": [
+  "R-T606-1 (outline geometry)",
+  "R-T612-1 (gross with interior solids)",
+  "R-T553-1 (floor tile scope)",
+  "R-T613-1 (statuses)",
+  "UP-ELEV-005 (lift threshold certain part 0.300)",
+  "UP-THR-001",
+  "UP-CER-001",
+  "ERS s.2 / s.3"
+ ],
+ "reference_total": "409.58",
+ "rows": [
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "6.124412",
+   "difference_to_row": null,
+   "engine_room": "130.648285",
+   "evidence_status": "NOT_REMEASURED",
+   "expected_delta": null,
+   "his_room": "147.96",
+   "kind": "NOT_ESTABLISHED",
+   "measures": [],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): round-stair footprint below the cut (treads are B7 marble)",
+   "note": "round-stair footprint not re-measured from its tread outline; closure only (own gross - own pieces - engine lines, printed). Closes: the tread outline by handle (T-341 treads 8.194412 - under-stair floor 2.07)",
+   "own": null,
+   "row": 0,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.3",
+   "difference_to_row": "0.000000",
+   "engine_room": "130.648285",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "147.96",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.300000",
+     "handles": [
+      "20D",
+      "20E"
+     ],
+     "id": "GF-LIFT-DOOR x 0.300 (UP-ELEV-005)"
+    }
+   ],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): lift landing threshold, certain floor part 1.000 x 0.300",
+   "note": "drawn door width x rule depth 0.300 (UP-ELEV-005)",
+   "own": "0.300000",
+   "row": 1,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "9.101",
+   "difference_to_row": "0.000",
+   "engine_room": "130.648285",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "147.96",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "9.101",
+     "handles": [
+      "310",
+      "104",
+      "30F",
+      "337"
+     ],
+     "id": "GF-BAND"
+    }
+   ],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): garden band x 6.80 .. 13.82, 7.02 x 1.30 - column notch 0.025",
+   "note": "band 7.02 x 1.30 less column 2FD5 notch; class HELD (D-48) kept",
+   "own": "9.101",
+   "row": 2,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "0.604",
+   "difference_to_row": "0.000",
+   "engine_room": "130.648285",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "147.96",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.604",
+     "handles": [
+      "310",
+      "4B4",
+      "2FD2#0",
+      "A8"
+     ],
+     "id": "GF-CURB"
+    }
+   ],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): garden band curb strip 3.02 x 0.20",
+   "note": "curb 3.02 x 0.20; class kept (D-48)",
+   "own": "0.604",
+   "row": 3,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.88",
+   "difference_to_row": "0.00",
+   "engine_room": "130.648285",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "147.96",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.2",
+     "handles": [
+      "2FD2"
+     ],
+     "id": "GF-SOLID-COL-2FD2"
+    },
+    {
+     "area": "0.15",
+     "handles": [
+      "2FC6"
+     ],
+     "id": "GF-SOLID-COL-2FC6"
+    },
+    {
+     "area": "0.53",
+     "handles": [
+      "336",
+      "2FC6#0",
+      "337",
+      "2FD2#2"
+     ],
+     "id": "GF-SOLID-WALL"
+    }
+   ],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): wall 2.65 x 0.20 + columns 0.80 x 0.25 + 0.60 x 0.25 inside his gross outline",
+   "note": "columns 0.80 x 0.25 + 0.60 x 0.25 + wall 2.65 x 0.20 inside his gross outline",
+   "own": "0.88",
+   "row": 4,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "0.302303",
+   "difference_to_row": "-0.000020",
+   "engine_room": "130.648285",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": "0.302283",
+   "his_room": "147.96",
+   "kind": "READING",
+   "measures": [
+    {
+     "area": "147.657717",
+     "handles": [
+      "B5",
+      "E0",
+      "97",
+      "27D#1",
+      "2E4",
+      "222",
+      "20F",
+      "AB",
+      "158",
+      "AE",
+      "104"
+     ],
+     "id": "GF-OPEN.full"
+    }
+   ],
+   "name": "GF open room: dining / reception / saloon / entrance zone / open pantry (his reception + dining and entrance rows): his two rows above the drawn outline",
+   "note": "his rows 137.50 + 10.46 minus the own drawn gross outline (T-612 chain re-measured)",
+   "own": null,
+   "row": 5,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.100332",
+   "difference_to_row": "-0.000012",
+   "engine_room": "24.940332",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.10032",
+   "his_room": "24.84",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "24.94032",
+     "handles": [
+      "119",
+      "127",
+      "10E",
+      "139",
+      "124"
+     ],
+     "id": "GF-DEWANEYA"
+    }
+   ],
+   "name": "GF dewaneya 400 x 630 less the R1.10 corner: printed 4.00 x 6.30 - (1.21 - pi 1.21 / 4) = 24.9403 (DXF dims 568 / 57F re-read this run)",
+   "note": "",
+   "own": "24.94032",
+   "row": 6,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.11036",
+   "difference_to_row": "0.000079",
+   "engine_room": "16.54964",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.110281",
+   "his_room": "16.66",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "16.549719",
+     "handles": [
+      "2B5",
+      "27D#0",
+      "27D#1",
+      "2E2",
+      "2E0",
+      "319",
+      "2E7",
+      "2DE"
+     ],
+     "id": "GF-MASTER"
+    }
+   ],
+   "name": "GF master bed room: drawn room face (V2.9 face 16.5496; T-147 own region 16.557)",
+   "note": "room to the curved glazing face + the hall to its bath (2E0 / 319 / 2E7), column 2F85 notch",
+   "own": "16.549719",
+   "row": 7,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "difference_to_row": "0.000",
+   "engine_room": "7.875",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.005",
+   "his_room": "7.87",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "7.875",
+     "handles": [
+      "130",
+      "11D",
+      "12F",
+      "113"
+     ],
+     "id": "GF-DRIVER"
+    }
+   ],
+   "name": "GF driver room 175 x 450: his 7.875 truncated to 2 dp",
+   "note": "",
+   "own": "7.875",
+   "row": 8,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "-6.1275",
+   "difference_to_row": null,
+   "engine_room": "6.1275",
+   "evidence_status": "NOT_REMEASURED",
+   "expected_delta": null,
+   "his_room": null,
+   "kind": "NOT_ESTABLISHED",
+   "measures": [],
+   "name": "GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HELD: porcelain or landing marble): stair-room floor parts in none of his floor rows",
+   "note": "hall 4.805 + lobby 1.3225 stay T-418 (by reference); closes: the hall / lobby outlines by riser and wall handles",
+   "own": null,
+   "row": 9,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "-0.35",
+   "difference_to_row": "0.00",
+   "engine_room": "0.35",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": null,
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.2",
+     "handles": [
+      "20F",
+      "20E",
+      "20F",
+      "220"
+     ],
+     "id": "GF-OP-010"
+    },
+    {
+     "area": "0.15",
+     "handles": [
+      "2E1",
+      "2E2",
+      "2E1",
+      "2E3"
+     ],
+     "id": "GF-OP-012"
+    }
+   ],
+   "name": "GF doorway strips OP-010 (0.20) + OP-012 (0.15): porcelain strips in door openings between dry rooms",
+   "note": "jamb-to-jamb x face-to-face",
+   "own": "0.35",
+   "row": 10,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "4.9225",
+   "difference_to_row": null,
+   "engine_room": "33.411036",
+   "evidence_status": "NOT_REMEASURED",
+   "expected_delta": null,
+   "his_room": "38.96",
+   "kind": "NOT_ESTABLISHED",
+   "measures": [],
+   "name": "1F living / open stair hall: main-stair arrival +5.50 (marble, own line)",
+   "note": "printed 2.50 x 1.95 = 4.875 re-read (DIMENSIONs D25 / 10DF); the +0.0475 (well end / nosing band, T-240 / T-269) is by reference; closes: those two drawn pieces by handle",
+   "own": null,
+   "row": 11,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.3",
+   "difference_to_row": "0.000000",
+   "engine_room": "33.411036",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "38.96",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.300000",
+     "handles": [
+      "AFE",
+      "AFD"
+     ],
+     "id": "1F-LIFT-DOOR x 0.300 (UP-ELEV-005)"
+    }
+   ],
+   "name": "1F living / open stair hall: lift landing threshold, certain floor part",
+   "note": "drawn door width x rule depth 0.300 (UP-ELEV-005)",
+   "own": "0.300000",
+   "row": 12,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "0.326464",
+   "difference_to_row": null,
+   "engine_room": "33.411036",
+   "evidence_status": "NOT_REMEASURED",
+   "expected_delta": null,
+   "his_room": "38.96",
+   "kind": "NOT_ESTABLISHED",
+   "measures": [],
+   "name": "1F living / open stair hall: his unsplit row vs porcelain 33.711036 + arrival 4.9225",
+   "note": "own floor at +5.50 (printed landing edge) 38.5855 by handle; the residual also needs the +0.0475 arrival piece (by reference); his 38.96 vs the drawn east-flight-foot reading 38.988 (-0.028, outside his rounding)",
+   "own": null,
+   "row": 13,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "-1.726545",
+   "difference_to_row": "-0.000047",
+   "engine_room": "19.016545",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": "-1.726592",
+   "his_room": "17.29",
+   "kind": "READING",
+   "measures": [
+    {
+     "area": "19.016592",
+     "handles": [
+      "B1D",
+      "C0F",
+      "C0A",
+      "BD2",
+      "B6B",
+      "ACE",
+      "B0D",
+      "C09",
+      "C15",
+      "C0B",
+      "B0B"
+     ],
+     "id": "1F-CUR.ours"
+    }
+   ],
+   "name": "1F curved east bed room with its lobby (his 'bed room 1'): no reading reproduces his 17.29",
+   "note": "his 17.29 vs own drawn room + lobby; readings 15.060 / 16.744 / 20.700 reproduce nothing: UNRESOLVED kept",
+   "own": null,
+   "row": 14,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "ENGINE_WRONG",
+   "delta": "2.97",
+   "difference_to_row": "0.00",
+   "engine_room": "16.49",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "19.46",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "2.97",
+     "handles": [
+      "B20",
+      "B03",
+      "AD5",
+      "B00"
+     ],
+     "id": "1F-DRESSING"
+    }
+   ],
+   "name": "1F bed room 380 x 430 + dressing 165 x 180 + arch strip OP-011 (his 'bed room 2'): dressing 1.65 x 1.80 has NO floor tile line (only ARCH.SPACE L-390e3b9f 2.970)",
+   "note": "dressing 1.65 x 1.80 own outline; his 19.46 = own 16.34 + 2.97 + arch strip 0.15 (checked)",
+   "own": "2.97",
+   "row": 15,
+   "verdict_proposal": "ENGINE_WRONG"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.034999",
+   "difference_to_row": "-0.000001",
+   "engine_room": "18.215001",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.035",
+   "his_room": "18.25",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "18.215",
+     "handles": [
+      "AE6",
+      "AF8",
+      "AE9",
+      "C1E"
+     ],
+     "id": "1F-500x365"
+    }
+   ],
+   "name": "1F bed room 500 x 365: drawn column notch 0.035",
+   "note": "",
+   "own": "18.215",
+   "row": 16,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.05",
+   "difference_to_row": "0.00",
+   "engine_room": "19.05",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.05",
+   "his_room": "19",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "19.05",
+     "handles": [
+      "C2A",
+      "C1F",
+      "C24",
+      "B40"
+     ],
+     "id": "1F-WEST-BED"
+    }
+   ],
+   "name": "1F west bed room 425 x 450: printed 4.25 x 4.50 = 19.125 less drawn column notches 0.075 vs his typed 19.00",
+   "note": "",
+   "own": "19.05",
+   "row": 17,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "-0.57",
+   "difference_to_row": "0.000",
+   "engine_room": "0.570",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": null,
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.135",
+     "handles": [
+      "AFA",
+      "AF9",
+      "AFA",
+      "B1D"
+     ],
+     "id": "1F-OP-005"
+    },
+    {
+     "area": "0.135",
+     "handles": [
+      "AD8",
+      "AD9",
+      "AD9",
+      "AFA"
+     ],
+     "id": "1F-OP-006"
+    },
+    {
+     "area": "0.15",
+     "handles": [
+      "C1F",
+      "C20",
+      "C1F",
+      "C21"
+     ],
+     "id": "1F-OP-020"
+    },
+    {
+     "area": "0.15",
+     "handles": [
+      "AE8",
+      "AE9",
+      "AE8",
+      "AEA"
+     ],
+     "id": "1F-D-1F-03"
+    }
+   ],
+   "name": "1F doorway strips OP-005 / OP-006 (0.135 each), OP-020, D-1F-03 (0.15 each): porcelain strips in dry door openings",
+   "note": "",
+   "own": "0.570",
+   "row": 18,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.229999",
+   "difference_to_row": "-0.000001",
+   "engine_room": "19.350001",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.23",
+   "his_room": "19.58",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "19.35",
+     "handles": [
+      "1284",
+      "1292",
+      "1279",
+      "128B"
+     ],
+     "id": "2F-MAID"
+    }
+   ],
+   "name": "2F maid room 300 x 645: printed 3.00 x 6.45 = 19.350 vs his typed 19.58",
+   "note": "",
+   "own": "19.35",
+   "row": 19,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "4.875",
+   "difference_to_row": "0.000",
+   "engine_room": "2.2",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "7.7",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "4.875",
+     "handles": [
+      "138E",
+      "14F1"
+     ],
+     "id": "2F-ARRIVAL"
+    }
+   ],
+   "name": "2F lobby beyond the stair width (his 'corridor'): main-stair arrival +9.70, printed 2.50 x 1.95 (marble)",
+   "note": "printed 2.50 x 1.95 (DIMENSIONs 138E / 14F1)",
+   "own": "4.875",
+   "row": 20,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.3",
+   "difference_to_row": "0.000000",
+   "engine_room": "2.2",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "7.7",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.300000",
+     "handles": [
+      "128A",
+      "1289"
+     ],
+     "id": "2F-LIFT-DOOR x 0.300 (UP-ELEV-005)"
+    }
+   ],
+   "name": "2F lobby beyond the stair width (his 'corridor'): lift landing threshold, certain floor part",
+   "note": "drawn door width x rule depth 0.300 (UP-ELEV-005)",
+   "own": "0.300000",
+   "row": 21,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "UNRESOLVED",
+   "delta": "0.325",
+   "difference_to_row": "0.000",
+   "engine_room": "2.2",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": "0.325",
+   "his_room": "7.7",
+   "kind": "READING",
+   "measures": [
+    {
+     "area": "7.375",
+     "handles": [
+      "1283",
+      "1294",
+      "128A",
+      "129A",
+      "138B",
+      "12B7"
+     ],
+     "id": "2F-CORR.ours"
+    }
+   ],
+   "name": "2F lobby beyond the stair width (his 'corridor'): his 7.70 vs the printed 450 x 195 lobby",
+   "note": "his 7.70 vs own lobby + arrival (landing edge at the printed 1.95); east-foot reading 7.72 outside his rounding",
+   "own": null,
+   "row": 22,
+   "verdict_proposal": "UNRESOLVED"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "-0.18",
+   "difference_to_row": "0.00",
+   "engine_room": "0.18",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": null,
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.18",
+     "handles": [
+      "128E",
+      "128D",
+      "128E",
+      "1295"
+     ],
+     "id": "2F-OP-007"
+    }
+   ],
+   "name": "2F doorway strip OP-007 (stair room / maid room): porcelain strip 0.90 x 0.20",
+   "note": "",
+   "own": "0.18",
+   "row": 23,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.000695",
+   "difference_to_row": "0.000000",
+   "engine_room": "4.730695",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.000695",
+   "his_room": "4.73",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "4.730695",
+     "handles": [
+      "31B",
+      "31A",
+      "324",
+      "318",
+      "BE",
+      "D2",
+      "222"
+     ],
+     "id": "GF-LOBBY-WASH"
+    }
+   ],
+   "name": "GF lobby wash (2 basins): 2-dp rounding",
+   "note": "",
+   "own": "4.730695",
+   "row": 24,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "RULE_DIFFERENCE",
+   "delta": "0.22",
+   "difference_to_row": "0.00",
+   "engine_room": "1.485",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_room": "1.7",
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "0.22",
+     "handles": [
+      "70F",
+      "672"
+     ],
+     "id": "GF-BASIN-REVEAL"
+    }
+   ],
+   "name": "GF basin space by the stair: passage reveal 0.20 x 1.10 taken into his room (threshold piece, not floor)",
+   "note": "printed 1.10 x 0.20 (DIMENSIONs 70F / 672)",
+   "own": "0.22",
+   "row": 25,
+   "verdict_proposal": "RULE_DIFFERENCE"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "difference_to_row": "0.000",
+   "engine_room": "1.485",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": "-0.005",
+   "his_room": "1.7",
+   "kind": "READING",
+   "measures": [
+    {
+     "area": "1.485",
+     "handles": [
+      "2B2",
+      "215",
+      "218",
+      "211"
+     ],
+     "id": "GF-BASIN-STAIR"
+    },
+    {
+     "area": "0.22",
+     "handles": [
+      "70F",
+      "672"
+     ],
+     "id": "GF-BASIN-REVEAL"
+    }
+   ],
+   "name": "GF basin space by the stair: his 1.705 truncated",
+   "note": "his 1.70 truncated",
+   "own": null,
+   "row": 26,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.017683",
+   "difference_to_row": "0.000000",
+   "engine_room": "3.717683",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.017683",
+   "his_room": "3.7",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "3.717683",
+     "handles": [
+      "273",
+      "2DD",
+      "2E5",
+      "325",
+      "2DF"
+     ],
+     "id": "GF-MASTER-BATH"
+    }
+   ],
+   "name": "GF master bath: diagonal-wall corner out of 2.10 x 2.00",
+   "note": "",
+   "own": "3.717683",
+   "row": 27,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.06761",
+   "difference_to_row": "-0.000001",
+   "engine_room": "2.36761",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.067609",
+   "his_room": "2.3",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "2.367609",
+     "handles": [
+      "2B4",
+      "327",
+      "31D",
+      "BD"
+     ],
+     "id": "GF-WC-CORE-245"
+    }
+   ],
+   "name": "GF core W.C. 245 x 167 (wedge): wedge room by shoelace on the drawn faces",
+   "note": "",
+   "own": "2.367609",
+   "row": 28,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005221",
+   "difference_to_row": "0.000000",
+   "engine_room": "2.675221",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.005221",
+   "his_room": "2.67",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "2.675221",
+     "handles": [
+      "31F",
+      "326",
+      "221",
+      "217"
+     ],
+     "id": "GF-WC-CORE-289"
+    }
+   ],
+   "name": "GF core W.C. 289 x 167 (wedge): 2-dp truncation",
+   "note": "",
+   "own": "2.675221",
+   "row": 29,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.0025",
+   "difference_to_row": "0.0000",
+   "engine_room": "2.3625",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.0025",
+   "his_room": "2.36",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "2.3625",
+     "handles": [
+      "271",
+      "213",
+      "2AF",
+      "210"
+     ],
+     "id": "GF-WC-STAIR"
+    }
+   ],
+   "name": "GF stair-core W.C. 175 x 135: 2-dp truncation",
+   "note": "",
+   "own": "2.3625",
+   "row": 30,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.080001",
+   "difference_to_row": "-0.000001",
+   "engine_room": "9.630001",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.08",
+   "his_room": "9.55",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "9.63",
+     "handles": [
+      "11A",
+      "136",
+      "14F",
+      "135",
+      "111",
+      "A5"
+     ],
+     "id": "GF-KITCHEN"
+    }
+   ],
+   "name": "GF kitchen (floor line coded FIN.FLOOR.PORCELAIN): printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+   "note": "class move F-T553-2 (porcelain code, wet room) untouched: 0 m2",
+   "own": "9.63",
+   "row": 31,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "difference_to_row": "0.000",
+   "engine_room": "3.375",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.005",
+   "his_room": "3.37",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "3.375",
+     "handles": [
+      "115",
+      "129",
+      "114",
+      "12D"
+     ],
+     "id": "GF-WC-REC"
+    }
+   ],
+   "name": "GF W.C. by the reception room: 2-dp truncation",
+   "note": "",
+   "own": "3.375",
+   "row": 32,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.0175",
+   "difference_to_row": "0.0000",
+   "engine_room": "3.1325",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.0175",
+   "his_room": "3.15",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "3.1325",
+     "handles": [
+      "11F",
+      "12B",
+      "118",
+      "12E"
+     ],
+     "id": "GF-WASH-REC"
+    }
+   ],
+   "name": "GF wash by the reception room: column corner out of the printed 150 x 210",
+   "note": "",
+   "own": "3.1325",
+   "row": 33,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "TOLERANCE",
+   "delta": "-0.005",
+   "difference_to_row": "0.000",
+   "engine_room": "4.725",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.005",
+   "his_room": "4.72",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "4.725",
+     "handles": [
+      "B69",
+      "C0C",
+      "C0E",
+      "B1B"
+     ],
+     "id": "1F-EAST-BATH"
+    }
+   ],
+   "name": "1F east bath 210 x 225: 2-dp truncation",
+   "note": "",
+   "own": "4.725",
+   "row": 34,
+   "verdict_proposal": "TOLERANCE"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.0225",
+   "difference_to_row": "0.0000",
+   "engine_room": "3.5775",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.0225",
+   "his_room": "3.6",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "3.5775",
+     "handles": [
+      "B02",
+      "B1F",
+      "B09",
+      "AD6"
+     ],
+     "id": "1F-BATH-LAUNDRY"
+    }
+   ],
+   "name": "1F bath by the laundry: drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+   "note": "",
+   "own": "3.5775",
+   "row": 35,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.056",
+   "difference_to_row": "0.000",
+   "engine_room": "2.646",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.056",
+   "his_room": "2.59",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "2.646",
+     "handles": [
+      "AD3",
+      "B0E",
+      "ADA",
+      "B05"
+     ],
+     "id": "1F-WC-LAUNDRY"
+    }
+   ],
+   "name": "1F W.C. by the laundry: printed 180 x 147 against his 1.80 x 1.44",
+   "note": "",
+   "own": "2.646",
+   "row": 36,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.0225",
+   "difference_to_row": "0.0000",
+   "engine_room": "5.0225",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.0225",
+   "his_room": "5",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "5.0225",
+     "handles": [
+      "C1C",
+      "C26",
+      "C22",
+      "C25"
+     ],
+     "id": "1F-WBATH-1"
+    }
+   ],
+   "name": "1F west bath A 245 x 205: printed 245 x 205",
+   "note": "A / B paired by equal area: the two baths are congruent (5.0225)",
+   "own": "5.0225",
+   "row": 37,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.0225",
+   "difference_to_row": "0.0000",
+   "engine_room": "5.0225",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.0225",
+   "his_room": "5",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "5.0225",
+     "handles": [
+      "AE4",
+      "C23",
+      "C27",
+      "B3E"
+     ],
+     "id": "1F-WBATH-2"
+    }
+   ],
+   "name": "1F west bath B 245 x 205: printed 245 x 205",
+   "note": "A / B paired by equal area: the two baths are congruent (5.0225)",
+   "own": "5.0225",
+   "row": 38,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "-0.151",
+   "difference_to_row": "0.000",
+   "engine_room": "10.151",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "-0.151",
+   "his_room": "10",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "10.151",
+     "handles": [
+      "ADB",
+      "B07",
+      "ACF",
+      "B0F",
+      "B17",
+      "B06",
+      "B14",
+      "B12"
+     ],
+     "id": "1F-LAUNDRY"
+    }
+   ],
+   "name": "1F laundry: printed 347 x 300 / 185 with the W.C. corner, his typed 10.00",
+   "note": "",
+   "own": "10.151",
+   "row": 39,
+   "verdict_proposal": "ENGINE_RIGHT"
+  },
+  {
+   "class": "ENGINE_RIGHT",
+   "delta": "0.07",
+   "difference_to_row": "0.00",
+   "engine_room": "5.55",
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": null,
+   "his_minus_own": "0.07",
+   "his_room": "5.62",
+   "kind": "ROOM",
+   "measures": [
+    {
+     "area": "5.55",
+     "handles": [
+      "127B",
+      "1296",
+      "1298",
+      "1290"
+     ],
+     "id": "2F-ROOF-WC"
+    }
+   ],
+   "name": "2F roof-floor W.C. 300 x 185: printed 185 against his 1.875",
+   "note": "",
+   "own": "5.55",
+   "row": 40,
+   "verdict_proposal": "ENGINE_RIGHT"
+  }
+ ],
+ "rule": "R-T621-1",
+ "schema": "T621_ROW_EVIDENCE_V1",
+ "section": "T-553/floor-tile",
+ "split": {
+  "by_class": {
+   "ENGINE_RIGHT": "0.797732",
+   "ENGINE_WRONG": "2.97",
+   "RULE_DIFFERENCE": "15.941912",
+   "TOLERANCE": "-0.028416",
+   "UNRESOLVED": "2.804722"
+  },
+  "by_evidence": {
+   "DRAWING_CONFIRMED": "17.240074",
+   "NOT_REMEASURED": "5.245876"
+  },
+  "count_by_evidence": {
+   "DRAWING_CONFIRMED": 37,
+   "NOT_REMEASURED": 4
+  },
+  "total": "22.485950"
+ },
+ "statement": {
+  "path": "research/agents_t609/out/RECONCILED_STATEMENT_T609.json",
+  "sha256": "dc2b25d65003e383d9aee2d73da609891e35d28d780744b65702638bf8d665b7"
+ },
+ "t553": {
+  "path": "research/agents_t553/out/FLOOR_TILE_RECONCILE_T553.json",
+  "sha256": "6a58e668e48d8a7b3fe38a002c296495b7ba60ccebb341e0ad37e06333b3b8c4"
+ }
+}
