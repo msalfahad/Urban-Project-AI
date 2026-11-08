@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T08:12Z | Lead | STARTED | run session_01E6cPneC5s1LkPG8edERsvY | repo-attached routine | task state: board | report pending
 - 2026-11-08T07:51Z | Verifier | STARTED | run session_01E6cPnb4xQYiqgzyfkQfzx4 | repo-attached routine | task state: READY T-615 (W1 c455f8e5), T-619 (W3 29c175b2), T-621 (W2 3e5fde59) | self-check pending
 - 2026-11-08T07:33Z | Worker 1 | SUCCESS | T-615 READY (agents/task-T-615 @ c455f8e5) | Q-80 applied as UPC-BLACK-BLOCK-001 1.1.0 (new rulebook 1.1.0, default reader unchanged): 15 x 0.15 m walls 175.871 m2 leave HELD - units 2,194.14..2,198.39 nr, panel mortar 1.941812..1.945573 m3, perimeter 0.078582..0.089890 m3, cement 16.16..16.28 bags; ties +61 pcs (151->212), bed-joint strip +367.99 m.l; waste/procurement HELD. Drawing search (ST + arch DXF, PDFs): no 15 cm block face printed, nothing to report to the owner. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T07:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
