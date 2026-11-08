@@ -1,6 +1,6 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-08 08:30 UTC (Lead). Previous version: 2026-11-08 00:15 UTC. The released numbers did not change
+Last update: 2026-11-08 08:19 UTC (Lead). Previous version: 2026-11-08 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).

@@ -96,11 +96,11 @@ quantity.
   bounded above by the door-side ring beam soffit per storey (GF B14 / 1F B7 / 2F B2), low end HELD. Plaster / paint faces
   above the head (OWNER TRADE B5 / B6, Q-72) stay ranges until printed or answered by the RFI; the landing door supply stays
   HELD (FR-T608-2). Verified only by the Checker's Gate A on T-617.
-- OPEN-PLAN FLOOR BOUNDARY (Lead 2026-11-08 08:30; Checker T-621 verdict): an open-plan floor (GF open room, 1F living)
+- OPEN-PLAN FLOOR BOUNDARY (Lead 2026-11-08 08:19; Checker T-621 verdict): an open-plan floor (GF open room, 1F living)
   does not close on wall faces alone; each open side ends at a printed line (stair opening edge, step nosing, threshold,
   level change, finish hatch boundary), named per side with its handle; never closed by the nearest wall. OWNER TRADE B3
   floor finish; stair finishes stay with the stair lines (OWNER_RULE_STAIRS). T-625 reads it; Checker re-measures GF-OPEN.
-- 0.15 m BLACK BLOCK MODULE (Lead 2026-11-08 08:30; Q-80 A owner 2026-11-07; T-615 READY c455f8e5): 12.5 blocks / m2,
+- 0.15 m BLACK BLOCK MODULE (Lead 2026-11-08 08:19; Q-80 A owner 2026-11-07; T-615 READY c455f8e5): 12.5 blocks / m2,
   40 x 20 installed face incl. 10 mm joint, same as 0.20 m; waste / procurement separate and HELD; OWNER TRADE B9 blockwork
   (units, mortar, ties, bed-joint strip); any drawing printing another 15 cm face is REPORTED, never overridden (none found).
 - BEAM BAND END vs LEDGER EXTENT (Lead 2026-11-08 04:15; Checker T-614 r1 verdict, F-C-T614-1 / -2): a band piece beside a

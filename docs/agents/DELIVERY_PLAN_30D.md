@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-11-08 08:30; recovery plan in force)
+## Status (Lead, 2026-11-08 08:19; recovery plan in force)
 
 - Merged since 04:15 (all Gate A, research, no candidate line moved): T-617, T-614 r2, T-618, T-619 WORKED; T-621 PARTIAL (40 / 41 rows; 3 rooms Checker-VERIFIED); T-615 READY (Q-80 block walls).
 - Closed for 12-13 Nov: manifest V14, beam-end census, lift landing head, small finishes residuals, floor tile rows 40 / 41. Remaining: statement + scorecard V11 (T-620), manifest V15 (T-629), evidence rows wall tile (T-622), beams / columns (T-623), floor tile carry-forward (T-625), waterproofing (T-626), opening areas (T-627), footings (T-628), beam-end open items (T-624).

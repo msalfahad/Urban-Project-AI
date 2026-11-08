@@ -3,7 +3,7 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Lead 2026-11-08 08:30 (since 04:15)
+## Lead 2026-11-08 08:19 (since 04:15)
 
 - T-617 lift landing head (Gate A): WORKED (bounded by ring-beam soffits, low end HELD, 0.000 m2 change). Decision: fold into statement V11 (T-620); FR-T617-1 into manifest V15 (T-629).
 - T-614 r2 beam-end census (Gate A): WORKED (billing only inside the line's own extent, +0.061576 m3 fix rows, Checker re-measured 3 pieces). Decision: open items CB4 r2 0.01355 m3 + 5 T-229 add pairs -> T-624.

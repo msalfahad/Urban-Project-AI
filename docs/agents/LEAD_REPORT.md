@@ -1,6 +1,6 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
-## LEAD REPORT 2026-11-08 08:30 UTC
+## LEAD REPORT 2026-11-08 08:19 UTC
 
 Drive read OK (no file created or modified in the project folders since 04:00 UTC 8 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 04:15; released V2.9 + route G unchanged.
 - Floor tile B3 (m2): his 409.58 vs engine 387.09405 (diff 22.48595, +5.49 % printed, not a verdict): 40 / 41 rows now DRAWING_CONFIRMED by own handle chains (16.361538 of the 22.485950 m2 explained by drawn area); Checker own re-measure AGREE on 3 rooms (19.350 / 24.940332 / 19.050 m2) = rows VERIFIED 3; open: round-stair footprint 6.124412 and the GF / 1F open-plan boundaries (not closable on wall faces) -> next row.

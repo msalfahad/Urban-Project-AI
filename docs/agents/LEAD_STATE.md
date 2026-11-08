@@ -8,17 +8,17 @@ rows changed since), then rewrite.
 - engine: e8709e09 (T-619 / T-621 merges; before them T-617 44ee93d5, T-614 r2 a7f1f3af, T-618 85a473ce; candidate of
   record ARCH_TAKEOFF_V3.0.58 / BOQ_FAMILY_MASTER 1.55.0; released V2.9 + route G unchanged).
 - main: 134cd005 (PR #4 allow-list OPEN since 7 Nov 21:05, mergeable clean, owner to merge).
-- board: this run's final commit (Lead 2026-11-08 08:3x)
-- last Lead run: 2026-11-08 08:12-08:4x UTC (run session_01E6cPneC5s1LkPG8edERsvY)
+- board: this run's final commit (Lead 2026-11-08 08:2x)
+- last Lead run: 2026-11-08 08:12-08:2x UTC (run session_01E6cPneC5s1LkPG8edERsvY)
 
 ## Run health
-- Since 04:13: 10 runs, all closed except the Verifier 07:51 run (open at 08:30, merged T-619 + T-621 08:01: check its
+- Since 04:13: 10 runs, all closed except the Verifier 07:51 run (open at 08:19, merged T-619 + T-621 08:01: check its
   final line); 5 merged, 0 rejected. W3 05:00 BLOCKED: setup pip 403 (pypdf wheel), pytest absent; recovered 06:59.
   If it repeats twice, report it under NEEDS FIXING (environment / proxy).
 - CRITICAL (owner): PR #4 not merged -> every Gate B + T-525 blocked. Owner told 7 Nov; not re-notified.
 - tests/t485 + t374 x2 (order-dependent) red on the working branch = baseline (T-525).
 
-## Live rows (08:30)
+## Live rows (08:19)
 - READY 1: T-615 (07:33, CHECKER-RUNS; FIRST in the next Checker run).
 - TODO: S: T-623 (FIRST), T-624, T-628; A: T-622 (FIRST), T-625, T-626, T-627; I: T-620 (FIRST), T-629, T-630.
 - BLOCKED (PR #4 only): T-525 (W3), T-498 (W3), T-563 (W3, after T-498), T-423 r2 (W1).
@@ -46,11 +46,11 @@ rows changed since), then rewrite.
   version allotted at merge. One candidate package per worker at a time.
 - Status word FIRST; 'worker N first / second' text matches lane order; 7-cell rows; NEVER a '|' inside a cell text;
   `board check` pulls first: commit before. Lead note stamp must be 'Lead YYYY-MM-DD HH:MM per' (a 'T..Z' stamp is not
-  read by queue_check: 08:30 run fixed it).
+  read by queue_check: 08:19 run fixed it).
 - A Checker finding gets its fix row in the next Lead run.
-- Register (08:30): OPEN-PLAN FLOOR BOUNDARY, 0.15 m BLACK BLOCK MODULE. 04:15: CURVED-BAND OPENING HEAD, LIFT LANDING
+- Register (08:19): OPEN-PLAN FLOOR BOUNDARY, 0.15 m BLACK BLOCK MODULE. 04:15: CURVED-BAND OPENING HEAD, LIFT LANDING
   HEAD, BEAM BAND END vs LEDGER EXTENT, FLOOR FINISH PER ROOM / WET-WALL FACE.
-- Lessons 08:30: T-614 billing-extent ADOPTED; range = low end + HELD companion ADOPTED (T-619); open-plan side ends at a
+- Lessons 08:19: T-614 billing-extent ADOPTED; range = low end + HELD companion ADOPTED (T-619); open-plan side ends at a
   named printed line PROPOSED (T-625).
 - F-C-T570-1, F-C-T593-1 (stair skirting one element, range never summed; ORR-007 open with owner).
 - Materials: FINISH V7, PLASTER V3; Q-80 A -> UPC-BLACK-BLOCK-001 1.1.0 (T-615 READY).
