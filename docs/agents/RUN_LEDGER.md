@@ -1251,3 +1251,74 @@ the owner's instruction "continue the flow but make sure we do not hit limit" (2
 | 11-07 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:28; T-581 READY (agents/task-T-581 @ 21ef9da6) / Lintel width basis: wall-face ends read on both faces at all 26 f |
 | 11-07 03:51 | Verifier | SUCCESS | STARTED 03:51, final 04:08; T-583, T-584, T-581 / T-583 + T-584 GATE A PASS MERGED (engine push 6d896db0; CODEMAP-only conflict rebuilt),  |
 | 11-07 04:15 | Lead | SUCCESS | STARTED 04:15, final 04:19; board / Since 00:15: 6 merged (T-582 lintel classes / Gate B readiness, T-586 statement V6, T-583 dome bars st |
+
+## 2026-11-07 04:31 -> 2026-11-08 04:31 UTC (66 runs, 66 SUCCESS, 100 %; 0 BLOCKED / FAILED / INCOMPLETE)
+
+| Slot (UTC) | Agent | Result | Evidence |
+|---|---|---|---|
+| 11-07 04:41 | Worker 2 | SUCCESS | STARTED 04:41, final 04:57; T-585 READY 058fa409 / yard skirting 46 faces closed to 98.629 lm: 0 DRAWING-CONFIRMED (no base printed on any |
+| 11-07 04:50 | Verifier | SUCCESS | STARTED 04:50, final 04:50; none / No task READY (T-585 CLAIMED W2 04:41; T-581 r2 / T-587..T-592 TODO; last merges T-583 / T-584 at 04:08 |
+| 11-07 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:13; T-587 READY @ 5c588c6d / Statement V7 = V6 byte-equal + T-576/578/583/584: cols GF -1.17375 m3 (count ER +1.03 |
+| 11-07 05:21 | Worker 1 | SUCCESS | STARTED 05:21, final 05:25; T-581 r2 READY (agents/task-T-581 @ 0c508c59) / Lintel width basis: 25 frame-block doors DRAWING-CONFIRMED on  |
+| 11-07 05:50 | Verifier | SUCCESS | STARTED 05:50, final 05:59; T-581 r2, T-587, T-585 / T-581 r2 + T-585 GATE A PASS MERGED (engine push 1b601534; T-585 CODEMAP-only conflic |
+| 11-07 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:52; T-592 READY (agents/task-T-592 @ 8b625750) / External door step paid once as the stone in the wall gap (= T-32 |
+| 11-07 06:50 | Verifier | SUCCESS | STARTED 06:50, final 06:50; none / No task READY (T-592 CLAIMED W2 06:40; T-587 r2 / T-588..T-591 TODO; engine unchanged at 1b601534 since |
+| 11-07 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:10; T-587 READY r2 @ a86379e5 + T-588 READY @ 178a371b (same worker order) / T-587 r2: engine head merged, maps re |
+| 11-07 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 07:31; T-589 READY (3328acd2) / 91 structural components of statement V6 + T-576/T-583 classed: B10 59 = 10 VERIFIED/ |
+| 11-07 07:51 | Verifier | SUCCESS | STARTED 07:51, final 07:59; T-587 r2, T-588, T-589, T-592 / 4x GATE A PASS MERGED (engine push 80da26a0; 3 CODEMAP-only conflicts rebuilt) |
+| 11-07 08:12 | Lead | SUCCESS | STARTED 08:12, final 08:18; board / Since 04:15: 6 merged (T-581 r2, T-587 r2, T-588, T-589, T-592 WORKED; T-585 PARTIAL), T-587 one rewor |
+| 11-07 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 08:54; T-591 READY eed6409a / RULE_DIFF provenance, finishes: 119 rows of statement V7 (117 live), 40 sourced as cite |
+| 11-07 08:53 | Verifier | SUCCESS | STARTED 08:53, final 08:58; none READY; T-180 slot: T-589 P10 / No task READY (T-591 CLAIMED W2; T-590 / T-593..T-598 TODO): no Gate A/B,  |
+| 11-07 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:09; T-593 READY @ 427f3162 / Manifest V10 overlay V2-V10 on V3.0.58 copy: 5,124 lines, 0 STALE / 0 two-package / 0 |
+| 11-07 09:22 | Worker 1 | SUCCESS | STARTED 09:22, final 09:28; T-595 READY (agents/task-T-595 @ 0d8ccd00) / R-T595-1: own ST p.7 read, ring side bars 2 levels x 2 faces = 4  |
+| 11-07 09:51 | Verifier | SUCCESS | STARTED 09:51, final 09:58; T-595, T-593, T-591 / 3x GATE A PASS MERGED (engine push 0b2f8d21; 2 CODEMAP-only conflicts rebuilt), research |
+| 11-07 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 10:54; T-598 READY 64bded43 / B7-05 nosing: 20/20 held edges classed: MS1-U/MS2-U floor + MS2-TR 1.150 each DRAWING-C |
+| 11-07 10:49 | Verifier | SUCCESS | STARTED 10:49, final 10:52; none READY; T-180 slot: T-589 P11 / No task READY (T-598 CLAIMED W2; T-590 / T-594 / T-596 / T-597 TODO): no G |
+| 11-07 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:11; T-594 READY c079e26c / Statement V8 (V7 byte-equal, totals fixed, residual 0): lintel D-GF-09 RULE_DIFF->UNRES |
+| 11-07 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 11:29; T-590 READY 4b7eb66f / structural RULE_DIFF provenance: 44 rows (12 headline), none keeps a recorded source: 6 |
+| 11-07 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:05; T-590, T-594, T-598 / 3x GATE A PASS MERGED (engine push 78196c45; 1 CODEMAP-only conflict rebuilt), research, |
+| 11-07 12:12 | Lead | SUCCESS | STARTED 12:12, final 12:18; board / Since 08:12: 6 merged (T-591, T-593, T-594, T-595, T-598 WORKED; T-590 PARTIAL), 0 rejected, no candid |
+| 11-07 12:40 | Worker 2 | SUCCESS | STARTED 12:40, final 12:59; T-601 READY (fc3bc3a4) / Own DXF census, 64 wall gaps on 3 plans: 5 doorless + 3 framed lift doors. A-1F-01 re |
+| 11-07 12:51 | Verifier | SUCCESS | STARTED 12:51, final 12:57; none READY; T-180 slot: T-589 P01 / No task READY (T-601 CLAIMED W2): no Gate A/B, no merge, no quantity chang |
+| 11-07 13:00 | Worker 3 | SUCCESS | STARTED 13:00, final 13:08; T-596 READY 393d6a48 / Manifest V11 dry run on V3.0.58: 5,124 lines, 0 stale / 0 unexplained, other lines = V1 |
+| 11-07 13:20 | Worker 1 | SUCCESS | STARTED 13:20, final 13:31; T-599 READY (agents/task-T-599 @ dd3baaa4) / Column-beam joint convention recorded as UP-CONC-JOINT-001 1.0.0  |
+| 11-07 13:50 | Verifier | SUCCESS | STARTED 13:50, final 13:59; T-596 MERGED, T-601 MERGED, T-599 REJECTED / Merged 545f63db / 2a7ad738 (push 2a7ad738): T-596 manifest V11 (o |
+| 11-07 14:41 | Worker 2 | SUCCESS | STARTED 14:41, final 14:56; T-602 READY (head 658eee99) / Exterior-opening step census: 14 openings + 128 edge pairs; new G-01 street-gate |
+| 11-07 14:51 | Verifier | SUCCESS | STARTED 14:51, final 15:00; T-602 MERGED; T-180 slot T-589 P02 2F / T-602 GATE A PASS, merge 6d211198 (own P7757.dxf read: street-gate G-0 |
+| 11-07 15:01 | Worker 3 | SUCCESS | STARTED 15:01, final 15:12; T-603 READY 61c2deff / statement V9: joint rows RD->UNRESOLVED (T-599 REJECTED pointer) 5 of record +2.248826  |
+| 11-07 15:21 | Worker 1 | SUCCESS | STARTED 15:21, final 15:35; T-597 READY (agents/task-T-597 @ 7e864fee) / B1 plan side from own ST7757 read: 24/24 pit outlines = schedule; |
+| 11-07 15:50 | Verifier | SUCCESS | STARTED 15:50, final 16:04; T-597 MERGED, T-603 MERGED; T-180 slot T-589 P03 1F / 2x GATE A PASS, engine push 37dcc11b (CODEMAP-only confl |
+| 11-07 16:12 | Lead | SUCCESS | STARTED 16:12, final 16:18; board / Since 12:12: 5 merged (T-596, T-601, T-602, T-597, T-603 WORKED), T-599 REJECTED -> T-599 r2 fix row F |
+| 11-07 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 17:04; T-606 READY e12baa8a / Room skirting UNRESOLVED -9.693234 lm was a net: 1F living +8.66 split into dog-leg wel |
+| 11-07 16:50 | Verifier | SUCCESS | STARTED 16:50, final 16:57; none READY; T-180 slot T-589 P03 GF / No task READY (T-606 CLAIMED W2; T-599 r2 / T-604 / T-605 TODO): no Gate |
+| 11-07 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 17:08; T-604 READY (8369966d) / Manifest V12 on a V3.0.58 copy after V2..V11: 5,125 lines, 0 STALE/two-package/unexpl |
+| 11-07 17:21 | Worker 1 | SUCCESS | STARTED 17:21, final 18:40; T-599 r2 READY (agents/task-T-599 @ d1993085) / Column-beam joint restatement fixed per Checker F/H: beam THRO |
+| 11-07 17:52 | Verifier | SUCCESS | STARTED 17:52, final 18:05; T-604 MERGED, T-606 MERGED; T-180 slot T-589 P02 1F / 2x GATE A PASS, engine push 1ddf21f4 (CODEMAP-only confl |
+| 11-07 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 18:59; T-607 READY 1275e451 / ST-01 steps/nosing shared residual: his one cell 63x1.20 vs governing 56 risers = ONE c |
+| 11-07 18:51 | Verifier | SUCCESS | STARTED 18:51, final 19:51; none (overlap guard: run session_01E6cPnc9P5jySpst3WZPSMB active since 2026-11-07T18:51Z) / no check, no merge |
+| 11-07 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:12; T-609 READY (cbe2f201) / Statement V10 on V9 byte-equal: door steps +2.90 lm = G-01 street-gate step +2.50 ENG |
+| 11-07 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:29; T-605 READY 021680e9 / Footing overlap: own ST7757 read finds 2 pairs within 0.20 m; FN 180C drawn 0.86 notche |
+| 11-07 19:57 | Verifier | SUCCESS | final 19:57 (single line); T-599 r2 MERGED / GATE A PASS, engine push 9dc3c2d3: UP-CONC-JOINT-001 1.0.0 LEAD_ADOPTED; beam THROUGH_SUPPOR |
+| 11-07 20:15 | Lead | SUCCESS | STARTED 20:15, final 20:18; board / Since 16:12: 3 merged (T-604, T-606, T-599 r2 WORKED), 0 rejected; F-T606-1 skirting ENGINE_WRONG 11.1 |
+| 11-07 20:41 | Worker 2 | SUCCESS | STARTED 20:41, final 21:03; T-612 READY 64376f76 / GF open room re-measured by handle: face 56.006096 lm = engine gross, drawn gross outli |
+| 11-07 20:51 | Verifier | SUCCESS | STARTED 20:51, final 20:58; T-605 MERGED, T-607 MERGED, T-609 REJECTED r1 / GATE A PASS x2, engine push ad0290c2: own ST7757 read F9 180F  |
+| 11-07 21:00 | Worker 3 | SUCCESS | STARTED 21:00, final 21:05; T-611 READY b407b522 / Manifest V13: FR-T606-1 removes 11.170 lm (Checker 4.000+7.020+0.100+0.050) of 1F livin |
+| 11-07 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 21:46; T-610 READY 98f3d838 / Beam-beam overlap census GF/1F/2F (9 drawn zones, 4 RIGHT, 1 HELD): F-C-P03-2 reproduce |
+| 11-07 21:52 | Verifier | SUCCESS | STARTED 21:52, final 22:03; T-611 MERGED, T-610 MERGED, T-612 MERGED / GATE A PASS x3, engine push 66d3ad9c: T-611 FIN.SKIRTING V12 209.72 |
+| 11-07 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 22:59; T-608 READY b43bd738 / Lift landing doors GF OP-011/1F OP-007 (+2F OP-002) scoped over 9 line families on V3.0 |
+| 11-07 22:50 | Verifier | SUCCESS | STARTED 22:50, final 22:57; none READY; T-180 slot T-589 P02 1F (CB10 / CB11 / CB12) / No task READY (T-608 CLAIMED W2; T-600 / T-613 TODO |
+| 11-07 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:15; T-609 r2 READY 2224bfcf / Statement V10 rebuilt on merged V9 pointer (r1 reject cause) + T-599 r2 joint split: |
+| 11-07 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 23:40; T-600 READY (agents/task-T-600 @ 19f52bf3) / Column-beam pair residual split by cause, by column and beam mark |
+| 11-07 23:51 | Verifier | SUCCESS | STARTED 23:51, final 23:59; T-609 r2 MERGED, T-608 MERGED, T-600 REJECTED r1 / GATE A PASS x2, engine push 3c3aa2f8: T-609 V10 re-added by |
+| 11-08 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:18; board / Since 20:15: 7 merged (T-605, T-607, T-611, T-610, T-612, T-608 WORKED; T-609 r2 after r1 reject), T-6 |
+| 11-08 00:41 | Worker 2 | SUCCESS | STARTED 00:41, final 00:56; T-616 READY (agents/task-T-616 @ 6270e18e) / Lintel-implied residual his 54 vs engine 60 AT_MOST (+6 nr) close |
+| 11-08 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:01; T-616 MERGED; T-180 P02 GF CB1..CB8 / GATE A PASS, engine push 17559e1b: T-616 his 54 deductions recounted by  |
+| 11-08 01:01 | Worker 3 | SUCCESS | STARTED 01:01, final 01:11; T-613 READY (agents/task-T-613 e76ec5ae) / Scorecard from statement V10 of record: 36 lines in 20 trade/unit t |
+| 11-08 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 01:33; T-600 r2 READY (61a8e1ca) / Carrier crossings re-read on the framing axis (B27 0.90/sin 53.6 = 1.120 m, not 0. |
+| 11-08 01:51 | Verifier | SUCCESS | STARTED 01:51, final 01:58; T-600 r2 MERGED; T-613 REJECTED r1 / GATE A PASS, engine push 61fef828: T-600 carrier nodes re-measured by han |
+| 11-08 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 02:52; T-617 READY 5903d8d4 / Lift landing head printed nowhere; bounded above by the door-side ring beam (GF B14 3.7 |
+| 11-08 02:52 | Verifier | SUCCESS | STARTED 02:52, final 03:20; none READY; T-180 P02 GF B2 / No task READY (T-617 CLAIMED W2; T-613 r2 / T-614 / T-615 / T-618 / T-619 TODO): |
+| 11-08 02:59 | Worker 3 | SUCCESS | STARTED 02:59, final 03:06; T-613 r2 READY (cfdf5275) / Scorecard r2 per Checker 01:57Z: B11 rebar t (ref 44.19 / engine 9.375306, UNRESOL |
+| 11-08 03:22 | Worker 1 | SUCCESS | STARTED 03:22, final 03:42; T-614 READY 48e270b9 / Beam band x partial column census (R-T614-1 PROPOSED, research, unwired; 126 pairs, 193 |
+| 11-08 03:50 | Verifier | SUCCESS | STARTED 03:50, final 03:57; T-613 r2 MERGED, T-614 REJECTED r1 / GATE A PASS T-613 r2 (engine push d2de9f31): B11 t re-added by hand from  |
+| 11-08 04:13 | Lead | SUCCESS | STARTED 04:13, final 04:19; board / Since 00:18: T-616, T-600 r2 WORKED, T-613 merged r2 (status caps), T-614 r1 REJECTED -> r2 FIRST in S |
