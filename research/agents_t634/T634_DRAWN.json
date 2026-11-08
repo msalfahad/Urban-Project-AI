@@ -1,0 +1,781 @@
+{
+ "doors": {
+  "D-1F-05": {
+   "chain_source": "T-621 1F-LAUNDRY",
+   "edge": "B17",
+   "jambs_t": [
+    {
+     "handle": "AFC",
+     "t": "0.2"
+    },
+    {
+     "handle": "AFD",
+     "t": "0.2"
+    }
+   ],
+   "width": "0.9"
+  },
+  "D-1F-06": {
+   "chain_source": "T-621 1F-WC-LAUNDRY",
+   "edge": "AD3",
+   "jambs_t": [
+    {
+     "handle": "ACF",
+     "t": "0.15"
+    },
+    {
+     "handle": "AD2",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  },
+  "D-1F-07": {
+   "chain_source": "T-621 1F-BATH-LAUNDRY",
+   "edge": "B02",
+   "jambs_t": [
+    {
+     "handle": "B04",
+     "t": "0.15"
+    },
+    {
+     "handle": "B03",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  },
+  "D-1F-08": {
+   "chain_source": "T-621 1F-380x430",
+   "edge": "AD8",
+   "jambs_t": [
+    {
+     "handle": "AFB",
+     "t": "0.15"
+    },
+    {
+     "handle": "AFA",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.9"
+  },
+  "D-1F-09": {
+   "chain_source": "T-606 1F-CUR.ours",
+   "edge": "B1D",
+   "jambs_t": [
+    {
+     "handle": "AFA",
+     "t": "0.15"
+    },
+    {
+     "handle": "AF9",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.9"
+  },
+  "D-1F-10": {
+   "chain_source": "T-621 1F-EAST-BATH",
+   "edge": "C0E",
+   "jambs_t": [
+    {
+     "handle": "C10",
+     "t": "0.15"
+    },
+    {
+     "handle": "C0F",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  },
+  "D-2F-01": {
+   "chain_source": "T-606 2F-CORR.ours",
+   "edge": "1283",
+   "jambs_t": [
+    {
+     "handle": "1280",
+     "t": "0.15"
+    },
+    {
+     "handle": "1281",
+     "t": "0.15"
+    }
+   ],
+   "width": "1.0"
+  },
+  "D-GF-03": {
+   "chain_source": "T-621 GF-DRIVER",
+   "edge": "11D",
+   "jambs_t": [
+    {
+     "handle": "121",
+     "t": "0.2"
+    },
+    {
+     "handle": "122",
+     "t": "0.2"
+    }
+   ],
+   "width": "0.9"
+  },
+  "D-GF-04": {
+   "chain_source": "T-621 GF-DRIVER",
+   "edge": "130",
+   "jambs_t": [
+    {
+     "handle": "132",
+     "t": "0.15"
+    },
+    {
+     "handle": "133",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  },
+  "D-GF-05": {
+   "chain_source": "T-621 GF-KITCHEN",
+   "edge": "A5",
+   "jambs_t": [
+    {
+     "handle": "A3",
+     "t": "0.2"
+    },
+    {
+     "handle": "A2",
+     "t": "0.2"
+    }
+   ],
+   "width": "1.0"
+  },
+  "D-GF-06": {
+   "chain_source": "T-622 PANTRY",
+   "edge": "158",
+   "jambs_t": [
+    {
+     "handle": "15B",
+     "t": "0.2"
+    },
+    {
+     "handle": "15A",
+     "t": "0.2"
+    }
+   ],
+   "width": "1.0"
+  },
+  "D-GF-07": {
+   "chain_source": "T-612 GF-OPEN.full",
+   "edge": "AB",
+   "jambs_t": [
+    {
+     "handle": "9D",
+     "t": "0.2"
+    },
+    {
+     "handle": "9E",
+     "t": "0.2"
+    }
+   ],
+   "width": "2.0"
+  },
+  "D-GF-08": {
+   "chain_source": "PIECE GF-STAIR-HALL",
+   "edge": "220",
+   "jambs_t": [
+    {
+     "handle": "20F",
+     "t": "0.2"
+    },
+    {
+     "handle": "20E",
+     "t": "0.2"
+    }
+   ],
+   "width": "1.0"
+  },
+  "D-GF-09": {
+   "chain_source": "PIECE GF-STAIR-LOBBY",
+   "edge": "26F",
+   "jambs_t": [
+    {
+     "handle": "2B9",
+     "t": "0.2"
+    },
+    {
+     "handle": "2B8",
+     "t": "0.2"
+    }
+   ],
+   "width": "0.9"
+  },
+  "D-GF-10": {
+   "chain_source": "T-621 GF-WC-STAIR",
+   "edge": "2AF",
+   "jambs_t": [
+    {
+     "handle": "2B1",
+     "t": "0.15"
+    },
+    {
+     "handle": "2B2",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.797039"
+  },
+  "D-GF-11": {
+   "chain_source": "T-621 GF-WC-CORE-289",
+   "edge": "31F",
+   "jambs_t": [
+    {
+     "handle": "31B",
+     "t": "0.15"
+    },
+    {
+     "handle": "31A",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  },
+  "D-GF-12": {
+   "chain_source": "T-621 GF-WC-CORE-245",
+   "edge": "31D",
+   "jambs_t": [
+    {
+     "handle": "31A",
+     "t": "0.15"
+    },
+    {
+     "handle": "317",
+     "t": "0.15"
+    }
+   ],
+   "width": "0.8"
+  }
+ },
+ "rooms": {
+  "1F-01": {
+   "chain": [
+    "C2A",
+    "C1F",
+    "C24",
+    "B40"
+   ],
+   "chain_source": "T-621 1F-WEST-BED",
+   "edges": [
+    {
+     "handle": "C2A",
+     "layer": "1",
+     "lm": "4.25",
+     "type": "LINE"
+    },
+    {
+     "handle": "C1F",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    },
+    {
+     "handle": "C24",
+     "layer": "1",
+     "lm": "4.25",
+     "type": "LINE"
+    },
+    {
+     "handle": "B40",
+     "layer": "1",
+     "lm": "4.5",
+     "type": "LINE"
+    }
+   ],
+   "notch_lm": "0.2",
+   "note": "1F master bed room west 4.25 x 4.50, two column notches",
+   "openings": [
+    {
+     "edge": "C2A",
+     "id": "D-1F-01",
+     "jambs_t": [
+      {
+       "handle": "C28",
+       "t": "0.15"
+      },
+      {
+       "handle": "C27",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "C1F",
+     "id": "D-1F-02",
+     "jambs_t": [
+      {
+       "handle": "C21",
+       "t": "0.15"
+      },
+      {
+       "handle": "AF1",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "1.0"
+    },
+    {
+     "edge": "B40",
+     "id": "W14",
+     "jambs_t": [],
+     "kind": "window",
+     "width": "2.449774"
+    }
+   ],
+   "perimeter": "17.7",
+   "storey": "1F"
+  },
+  "1F-04": {
+   "chain": [
+    "AE6",
+    "AF8",
+    "AE9",
+    "C1E"
+   ],
+   "chain_source": "T-621 1F-500x365",
+   "edges": [
+    {
+     "handle": "AE6",
+     "layer": "1",
+     "lm": "3.65",
+     "type": "LINE"
+    },
+    {
+     "handle": "AF8",
+     "layer": "1",
+     "lm": "5.0",
+     "type": "LINE"
+    },
+    {
+     "handle": "AE9",
+     "layer": "1",
+     "lm": "3.65",
+     "type": "LINE"
+    },
+    {
+     "handle": "C1E",
+     "layer": "1",
+     "lm": "5.0",
+     "type": "LINE"
+    }
+   ],
+   "notch_lm": "0.1",
+   "note": "1F master bed room 5.00 x 3.65, column notch",
+   "openings": [
+    {
+     "edge": "AE6",
+     "id": "W24",
+     "jambs_t": [],
+     "kind": "window",
+     "width": "1.55232"
+    },
+    {
+     "edge": "AE9",
+     "id": "D-1F-03",
+     "jambs_t": [
+      {
+       "handle": "AEB",
+       "t": "0.15"
+      },
+      {
+       "handle": "AEA",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "1.0"
+    },
+    {
+     "edge": "C1E",
+     "id": "D-1F-04",
+     "jambs_t": [
+      {
+       "handle": "C1C",
+       "t": "0.15"
+      },
+      {
+       "handle": "C1B",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "17.4",
+   "storey": "1F"
+  },
+  "2F-03": {
+   "chain": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ],
+   "chain_source": "T-606 2F-MAID",
+   "edges": [
+    {
+     "handle": "1284",
+     "layer": "1",
+     "lm": "3.0",
+     "type": "LINE"
+    },
+    {
+     "handle": "1292",
+     "layer": "1",
+     "lm": "6.45",
+     "type": "LINE"
+    },
+    {
+     "handle": "1279",
+     "layer": "1",
+     "lm": "3.0",
+     "type": "LINE"
+    },
+    {
+     "handle": "128B",
+     "layer": "1",
+     "lm": "6.45",
+     "type": "LINE"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "2F room 3.00 x 6.45",
+   "openings": [
+    {
+     "edge": "1279",
+     "id": "W29",
+     "jambs_t": [],
+     "kind": "window",
+     "width": "1.2"
+    },
+    {
+     "edge": "128B",
+     "id": "D-2F-03",
+     "jambs_t": [
+      {
+       "handle": "128F",
+       "t": "0.15"
+      },
+      {
+       "handle": "1290",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "0.8"
+    },
+    {
+     "edge": "128B",
+     "id": "D-2F-02",
+     "jambs_t": [
+      {
+       "handle": "1294",
+       "t": "0.2"
+      },
+      {
+       "handle": "1295",
+       "t": "0.2"
+      }
+     ],
+     "kind": "door",
+     "width": "0.9"
+    }
+   ],
+   "perimeter": "18.9",
+   "storey": "2F"
+  },
+  "GF-02": {
+   "chain": [
+    "11F",
+    "12B",
+    "118",
+    "12E"
+   ],
+   "chain_source": "T-621 GF-WASH-REC",
+   "edges": [
+    {
+     "handle": "11F",
+     "layer": "1",
+     "lm": "1.5",
+     "type": "LINE"
+    },
+    {
+     "handle": "12B",
+     "layer": "1",
+     "lm": "2.1",
+     "type": "LINE"
+    },
+    {
+     "handle": "118",
+     "layer": "1",
+     "lm": "1.5",
+     "type": "LINE"
+    },
+    {
+     "handle": "12E",
+     "layer": "1",
+     "lm": "2.1",
+     "type": "LINE"
+    }
+   ],
+   "notch_lm": "0.0",
+   "note": "GF annex wash by the reception room 1.50 x 2.10 (WET space, Q-06 A)",
+   "openings": [
+    {
+     "edge": "12B",
+     "id": "A-GF-01",
+     "jambs_t": [
+      {
+       "handle": "128",
+       "t": "0.15"
+      },
+      {
+       "handle": "127",
+       "t": "0.15"
+      }
+     ],
+     "kind": "arch",
+     "width": "1.0"
+    },
+    {
+     "edge": "118",
+     "id": "D-GF-02",
+     "jambs_t": [
+      {
+       "handle": "116",
+       "t": "0.15"
+      },
+      {
+       "handle": "115",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "7.2",
+   "storey": "GF"
+  },
+  "GF-15": {
+   "chain": [
+    "2B5",
+    "27D#0",
+    "27D#1",
+    "2E2",
+    "2E0",
+    "319",
+    "2E7",
+    "2DE"
+   ],
+   "chain_source": "T-621 GF-MASTER",
+   "edges": [
+    {
+     "handle": "2B5",
+     "layer": "1",
+     "lm": "4.82",
+     "type": "LINE"
+    },
+    {
+     "handle": "27D#0",
+     "layer": "W",
+     "lm": "0.091681",
+     "type": "LINE"
+    },
+    {
+     "handle": "27D#1",
+     "layer": "W",
+     "lm": "5.010179",
+     "type": "ARC"
+    },
+    {
+     "handle": "2E2",
+     "layer": "1",
+     "lm": "5.582863",
+     "type": "LINE"
+    },
+    {
+     "handle": "2E0",
+     "layer": "1",
+     "lm": "0.961845",
+     "type": "LINE"
+    },
+    {
+     "handle": "319",
+     "layer": "1",
+     "lm": "1.256041",
+     "type": "LINE"
+    },
+    {
+     "handle": "2E7",
+     "layer": "1",
+     "lm": "1.361845",
+     "type": "LINE"
+    },
+    {
+     "handle": "2DE",
+     "layer": "1",
+     "lm": "2.15",
+     "type": "LINE"
+    }
+   ],
+   "notch_lm": "0.3",
+   "note": "GF master bed room 4.82 x 4.00 to the curved glazing face + the hall to its bath; column 2F85 notch",
+   "openings": [
+    {
+     "edge": "27D#1",
+     "id": "W03",
+     "jambs_t": [],
+     "kind": "glazing",
+     "pieces": [
+      "27D#0"
+     ],
+     "width": "5.10186"
+    },
+    {
+     "edge": "2E2",
+     "id": "D-GF-13",
+     "jambs_t": [
+      {
+       "handle": "2E4",
+       "t": "0.15"
+      },
+      {
+       "handle": "2E3",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "1.0"
+    },
+    {
+     "edge": "2E7",
+     "id": "D-GF-14",
+     "jambs_t": [
+      {
+       "handle": "2E5",
+       "t": "0.15"
+      },
+      {
+       "handle": "2E6",
+       "t": "0.15"
+      }
+     ],
+     "kind": "door",
+     "width": "0.8"
+    }
+   ],
+   "perimeter": "21.534454",
+   "storey": "GF"
+  }
+ },
+ "rule": "R-T634-1",
+ "schema": "T634_DRAWN_V1",
+ "shaft_pieces": {
+  "GF-STAIR-HALL": {
+   "chain": [
+    "220",
+    "21C",
+    "490",
+    "47E",
+    "47C",
+    "157",
+    "DE",
+    "298"
+   ],
+   "edges": [
+    {
+     "handle": "220",
+     "layer": "1",
+     "lm": "2.5"
+    },
+    {
+     "handle": "21C",
+     "layer": "1",
+     "lm": "2.95"
+    },
+    {
+     "handle": "490",
+     "layer": "5",
+     "lm": "1.15"
+    },
+    {
+     "handle": "47E",
+     "layer": "2",
+     "lm": "2.5"
+    },
+    {
+     "handle": "47C",
+     "layer": "2",
+     "lm": "0.2"
+    },
+    {
+     "handle": "157",
+     "layer": "5",
+     "lm": "0.7"
+    },
+    {
+     "handle": "DE",
+     "layer": "2",
+     "lm": "1.15"
+    },
+    {
+     "handle": "298",
+     "layer": "1",
+     "lm": "1.15"
+    }
+   ],
+   "perimeter": "12.3",
+   "storey": "GF",
+   "wall_layer_lm": "6.6"
+  },
+  "GF-STAIR-LOBBY": {
+   "chain": [
+    "481",
+    "21B",
+    "26F",
+    "47E"
+   ],
+   "edges": [
+    {
+     "handle": "481",
+     "layer": "5",
+     "lm": "1.15"
+    },
+    {
+     "handle": "21B",
+     "layer": "1",
+     "lm": "1.15"
+    },
+    {
+     "handle": "26F",
+     "layer": "1",
+     "lm": "1.15"
+    },
+    {
+     "handle": "47E",
+     "layer": "2",
+     "lm": "1.15"
+    }
+   ],
+   "perimeter": "4.6",
+   "storey": "GF",
+   "wall_layer_lm": "2.3"
+  }
+ },
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "units": "m"
+}
