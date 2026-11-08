@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T03:42Z | Worker 1 | SUCCESS | T-614 READY 48e270b9 | Beam band x partial column census (R-T614-1 PROPOSED, research, unwired; 126 pairs, 193 ends, 0 unexamined): F-C-P02-3 1F CB11 +0.018750 m3 reproduced exactly (FR-T614-2), GF CB8 col4 +0.002137 m3 (FR-T614-1), CB8 col2 0.00454 m2 HELD (<=0.003405 m3); all 9 T-229 cut credits match the drawn strip; F-C-P02-5 col3 is credited and 0.08697 m2 of his CB8 strips are billed in the deeper B27/B26 bands (RULE_DIFFERENCE). Cause: band ENDS have no T-229 cut. No candidate line moved; Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T03:22Z | Worker 1 | STARTED | run session_01E6cPncr1Lh2iarxqwQWJ8N | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T03:06Z | Worker 3 | SUCCESS | T-613 r2 READY (cfdf5275) | Scorecard r2 per Checker 01:57Z: B11 rebar t (ref 44.19 / engine 9.375306, UNRESOLVED 34.814694) VERIFIED -> UNKNOWN 0/6 (bare CHECKER_CONFIRMED stamp = class only; 798 held-blank lines, 2 line omissions, engine held 14.278249..OPEN inside the rows); section PV verdict now caps lines; lines VERIFIED 2 -> 1, rows 27 -> 21; no class or total moves; F-T613-5 statement 799 vs 798 held lines. | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T02:59Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
