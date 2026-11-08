@@ -2,7 +2,7 @@
 
 Worker 2 (lane A), 2026-11-08, claim 12:40 UTC, run session_01E6cPnevDQYZYGUw6ktmHcx. Files: `t626_extract.py`
 (drawing read by handle -> `T626_DRAWN.json`), `t626_rules.py` (R-T626-1, any villa), `t626_alsenan.py` (builder ->
-`out/T626_ROW_EVIDENCE.json` / `.md`), `tests/t626_wet_roof_wp_evidence/` (18 tests). No engine module, method, rule /
+`out/T626_ROW_EVIDENCE.json` / `.md`), `tests/t626_wet_roof_wp_evidence/` (19 tests). No engine module, method, rule /
 knowledge version, registry, candidate or statement file changed; no quantity moves. Drawing by Drive title and handle
 only ("Alsenan chalet project", P7757_DXF_COMPRESSED.zip -> P7757.dxf, decoded this run into .work/private).
 
@@ -48,5 +48,8 @@ Checker re-measure suggestion (3 largest): pantry 13.455, +9.70 domes 30.718026,
 R-T626-1 (module docstring): wet only on fixtures or an owner rule; laid area to faces incl. room bays (shower
 recess), less inside openings only, circles exact; residual split into named READING parts. Lesson proposal: a
 residual row must be rebuilt from OWN areas, not engine lines: an engine arc-sampling loss hid inside 'UNRESOLVED'.
-Missing: upturns not re-measured (lm, outside this m2 package); 7 wet rooms rest on one read (chain); the pool-court
+Upturns (lm), where the same faces settle them: the 17 own chain perimeters total 144.727365 lm against the T-074
+hand boundaries 144.7285 lm that the T-546 upturn table rests on (-0.001135 lm; largest room, the lobby wash,
+-0.001345): the boundary basis is confirmed; its doorway / open-edge split was not re-measured.
+Missing: upturn doorway / open-edge segments and the roof upturns not re-measured (lm, outside this m2 package); 7 wet rooms rest on one read (chain); the pool-court
 reads re-run merged readers rather than a third method; the residual 0.521668 m2 stays UNRESOLVED (his lump row).

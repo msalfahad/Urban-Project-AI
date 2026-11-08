@@ -52,6 +52,8 @@ Statement research/agents_t620/out/RECONCILED_STATEMENT_T620.json sha256 db5f7bc
 | 2F roof-floor W.C. 300 x 185 | 5.55 | 5.55 | 0.000000 | 5.550000 | 0.000000 | FIXTURES: WC + basin + shower + FD (sanitary drawing via T-074 hand table) | 5.62 |
 | GF pantry (wet zone, Q-37 A) | 13.455 | 13.455 | 0.000000 | 13.455000 | 0.000000 | OWNER: Q-37 A (pantry is a wet zone) | None |
 
+Upturn basis check (lm): own perimeters 144.727365 vs T-074 hand boundaries 144.7285, difference -0.001135; largest ['GF lobby wash (2 basins)', '-0.001345'].
+
 ## Roof residual split (PROPOSED)
 
 Row delta 0.523 m2 ->

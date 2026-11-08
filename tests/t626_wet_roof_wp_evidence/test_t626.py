@@ -183,3 +183,11 @@ def test_dev_no_coordinates_or_client_text_in_committed_files():
 def test_dev_drawing_re_read_identical():
     import t626_extract as X
     assert (HERE / "T626_DRAWN.json").read_text(encoding="utf-8") == X.dumps(X.read(str(DXF)))
+
+
+def test_dev_upturn_basis_settled_by_the_same_faces():
+    _, d = _build()
+    b = d["upturn_boundary_check_lm"]
+    # T-546 upturn table rests on the T-074 hand boundaries 144.7285 lm; own chain perimeters on the same faces
+    assert b["hand_boundaries_lm"] == "144.7285" and b["own_perimeters_lm"] == "144.727365"
+    assert D(b["difference_lm"]) == D("-0.001135") and abs(D(b["largest_room_difference"][1])) < D("0.002")

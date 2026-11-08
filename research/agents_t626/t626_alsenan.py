@@ -176,6 +176,7 @@ def room_table(drawn):
     """per wet room: engine line, own outline (handles), printed second read, wet basis, his cell."""
     eng, his = _engine_floor(), _his_floor()
     lids = {r[0]: r[1] for r in I46.ROOMS}
+    hand = {r[0]: (None if r[8] is None else D(r[8])) for r in I46.ROOMS}   # T-074 hand boundary (T-546 upturn basis)
     out = []
     for room in eng:
         d = drawn["rooms"][room]
@@ -195,7 +196,9 @@ def room_table(drawn):
                                    "fixture_source": SAN_SRC, "owner_rule": OWNER.get(room)})
         out.append({"room": room, "line_id": lids[room], "engine": str(eng[room]), "own": str(own),
                     "own_minus_engine": str(R.q6(own - eng[room])), "handles": d["handles"], "chain_from": d["chain_from"],
-                    "perimeter_lm": d["perimeter"], "printed_second_read": None if pr is None else str(pr),
+                    "perimeter_lm": d["perimeter"], "hand_boundary_lm_T074": None if hand[room] is None else str(hand[room]),
+                    "perimeter_minus_hand_lm": None if hand[room] is None else str(R.q6(D(d["perimeter"]) - hand[room])),
+                    "printed_second_read": None if pr is None else str(pr),
                     "printed_minus_own": None if pr is None else str(pr - own), "printed_basis": prs,
                     "printed_dims": [f"{x['handle']}={x['m']}{x['dir']}" for x in d["printed_dims"]],
                     "drawn_symbols_inside": d["symbols_inside"], "wet_basis": basis,
@@ -240,12 +243,30 @@ def build():
         "count": {"rows": len(rows), "by_evidence": _count(rows)},
         "room_table": room_table(drawn),
         "floor_own_total_m2": str(tot_floor_own),
+        "upturn_boundary_check_lm": _boundary_check(drawn),
         "roof_fields_own_m2": {k: str(v) for k, v in m["roof"].items()},
         "roof_residual_proposal": {"row": "T-541/membrane RESIDUAL", "delta": res["delta"], "parts": proposal,
                                    "remainder_evidence": rem_ev, "remainder_expected_minus_delta": str(rem_diff)},
         "held": [{"row": r["name"], "delta": r["delta"], "lines": "L-3e8fe55da71851816dd4 / L-aac1f35e08f85b643692",
                   "waits_on": "Q-34 (top roof +13.90 has no roof plan)"} for r in rf if r["class"] == "HELD"],
     }
+
+
+def _boundary_check(drawn):
+    """own outline perimeters against the T-074 hand boundaries that the T-546 upturn (lm) table rests on: the faces
+    that settle the floor rows also settle that basis (the doorway / open-edge segments stay as T-546 split them)."""
+    own = hand = Z
+    worst = ("", Z)
+    for r in I46.ROOMS:
+        if r[8] is None:
+            continue
+        p = D(drawn["rooms"][r[0]]["perimeter"])
+        own, hand = own + p, hand + D(r[8])
+        if (p - D(r[8])).copy_abs() > worst[1].copy_abs():
+            worst = (r[0], p - D(r[8]))
+    return {"rooms": 17, "own_perimeters_lm": str(R.q6(own)), "hand_boundaries_lm": str(hand),
+            "difference_lm": str(R.q6(own - hand)), "largest_room_difference": [worst[0], str(R.q6(worst[1]))],
+            "note": "pantry upturn HELD (open side, T-303 / T-310): not in the check"}
 
 
 def _sec_diff(sec):
@@ -278,6 +299,9 @@ def render_md(d) -> str:
     for t in d["room_table"]:
         L.append(f"| {t['room']} | {t['engine']} | {t['own']} | {t['own_minus_engine']} | {t['printed_second_read']} | "
                  f"{t['printed_minus_own']} | {t['wet_basis']} | {t['his']} |")
+    b = d["upturn_boundary_check_lm"]
+    L += ["", f"Upturn basis check (lm): own perimeters {b['own_perimeters_lm']} vs T-074 hand boundaries "
+          f"{b['hand_boundaries_lm']}, difference {b['difference_lm']}; largest {b['largest_room_difference']}."]
     p = d["roof_residual_proposal"]
     L += ["", "## Roof residual split (PROPOSED)", "", f"Row delta {p['delta']} m2 ->"]
     for x in p["parts"]:
