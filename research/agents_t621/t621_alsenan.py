@@ -51,16 +51,17 @@ SPEC = [
     (7, "GF master bed room", "ROOM", "GF-MASTER",
      "room to the curved glazing face + the hall to its bath (2E0 / 319 / 2E7), column 2F85 notch"),
     (8, "GF driver room", "ROOM", "GF-DRIVER", ""),
-    (9, "GF stair room", "NOT_ESTABLISHED", None,
-     "hall 4.805 + lobby 1.3225 stay T-418 (by reference); closes: the hall / lobby outlines by riser and wall handles"),
+    (9, "GF stair room", "PIECE", [(1, "GF-STAIR-HALL"), (1, "GF-STAIR-LOBBY")],
+     "hall 4.805 + lobby 1.3225 (the T-418 reading) re-measured by riser and wall handles; material HELD kept"),
     (10, "GF doorway strips", "PIECE", [(1, "GF-OP-010"), (1, "GF-OP-012")], "jamb-to-jamb x face-to-face"),
-    (11, "1F living", "NOT_ESTABLISHED", None,
-     "printed 2.50 x 1.95 = 4.875 re-read (DIMENSIONs D25 / 10DF); the +0.0475 (well end / nosing band, T-240 / T-269) "
-     "is by reference; closes: those two drawn pieces by handle"),
+    (11, "1F living", "PIECE", [(1, "1F-ARRIVAL-DRAWN")],
+     "drawn arrival = printed 4.875 (DIMENSIONs D25 / 10DF; rectangle by handle) - well end 0.20 x 0.05 (AC3) + "
+     "nosing band 1.15 x 0.05 (AC2)"),
     (12, "1F living", "PIECE", [(1, ("LIFT", "1F-LIFT-DOOR"))], "drawn door width x rule depth 0.300 (UP-ELEV-005)"),
-    (13, "1F living", "NOT_ESTABLISHED", None,
-     "own floor at +5.50 (printed landing edge) 38.5855 by handle; the residual also needs the +0.0475 arrival piece "
-     "(by reference); his 38.96 vs the drawn east-flight-foot reading 38.988 (-0.028, outside his rounding)"),
+    (13, "1F living", "READING", ("38.96", [(1, "1F-LIV.floor_printed"), (-1, "1F-ARRIVAL-RECT"),
+                                            (1, "1F-ARRIVAL-DRAWN")]),
+     "his unsplit 38.96 vs own floor at +5.50 (printed edge, T-606 chain) with the drawn arrival in place of the printed "
+     "rectangle; his row vs the east-flight-foot reading 38.988 (-0.028) is outside his rounding: UNRESOLVED kept"),
     (14, "1F curved", "READING", ("17.29", [(1, "1F-CUR.ours")]),
      "his 17.29 vs own drawn room + lobby; readings 15.060 / 16.744 / 20.700 reproduce nothing: UNRESOLVED kept"),
     (15, "1F bed room 380 x 430", "PIECE", [(1, "1F-DRESSING")],

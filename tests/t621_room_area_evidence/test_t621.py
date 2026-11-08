@@ -146,7 +146,7 @@ def test_alsenan_rebuild_identical_and_split():
     assert B.markdown(d) == B.OUT_MD.read_text(encoding="utf-8")
     assert len(d["rows"]) == 41
     assert d["split"]["total"] == "22.485950" == str(D(d["difference"]).quantize(D("0.000001")))
-    assert d["split"]["count_by_evidence"] == {"DRAWING_CONFIRMED": 37, "NOT_REMEASURED": 4}
+    assert d["split"]["count_by_evidence"] == {"DRAWING_CONFIRMED": 40, "NOT_REMEASURED": 1}
     assert d["split"]["by_class"] == {"ENGINE_RIGHT": "0.797732", "ENGINE_WRONG": "2.97", "RULE_DIFFERENCE": "15.941912",
                                       "TOLERANCE": "-0.028416", "UNRESOLVED": "2.804722"}
     for r in d["rows"]:
@@ -155,7 +155,7 @@ def test_alsenan_rebuild_identical_and_split():
             assert D(r["difference_to_row"]).copy_abs() <= R.AREA_TOL
         else:
             assert r["kind"] == "NOT_ESTABLISHED" and r["note"]
-    assert [r["row"] for r in d["rows"] if r["evidence_status"] == "NOT_REMEASURED"] == [0, 9, 11, 13]
+    assert [r["row"] for r in d["rows"] if r["evidence_status"] == "NOT_REMEASURED"] == [0]
     assert len(d["checker_top5"]) == 5
 
 

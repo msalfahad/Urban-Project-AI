@@ -13,11 +13,11 @@ Section T-553/floor-tile: reference 409.58 vs engine 387.09405 m2, difference 22
 | 6 | GF dewaneya 400 x 630 less the R1.10 corner: printed 4.00 x 6.30 - (1. | ENGINE_RIGHT | -0.100332 | ROOM | 24.94032 | -0.000012 | DRAWING_CONFIRMED | GF-DEWANEYA: 119 127 10E 139 124 |
 | 7 | GF master bed room: drawn room face (V2.9 face 16.5496; T-147 own regi | ENGINE_RIGHT | 0.11036 | ROOM | 16.549719 | 0.000079 | DRAWING_CONFIRMED | GF-MASTER: 2B5 27D#0 27D#1 2E2 2E0 319 2E7 2DE |
 | 8 | GF driver room 175 x 450: his 7.875 truncated to 2 dp | TOLERANCE | -0.005 | ROOM | 7.875 | 0.000 | DRAWING_CONFIRMED | GF-DRIVER: 130 11D 12F 113 |
-| 9 | GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HE | UNRESOLVED | -6.1275 | NOT_ESTABLISHED | - | - | NOT_REMEASURED | - |
+| 9 | GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HE | UNRESOLVED | -6.1275 | PIECE | 6.1275 | 0.0000 | DRAWING_CONFIRMED | GF-STAIR-HALL: 220 21C 490 47E 47C 157 DE 298; GF-STAIR-LOBBY: 481 21B 26F 47E |
 | 10 | GF doorway strips OP-010 (0.20) + OP-012 (0.15): porcelain strips in d | RULE_DIFFERENCE | -0.35 | PIECE | 0.35 | 0.00 | DRAWING_CONFIRMED | GF-OP-010: 20F 20E 20F 220; GF-OP-012: 2E1 2E2 2E1 2E3 |
-| 11 | 1F living / open stair hall: main-stair arrival +5.50 (marble, own lin | RULE_DIFFERENCE | 4.9225 | NOT_ESTABLISHED | - | - | NOT_REMEASURED | - |
+| 11 | 1F living / open stair hall: main-stair arrival +5.50 (marble, own lin | RULE_DIFFERENCE | 4.9225 | PIECE | 4.9225 | 0.0000 | DRAWING_CONFIRMED | 1F-ARRIVAL-DRAWN: AC2 A8D AC3 A8F AC0 B16 AEB C21 |
 | 12 | 1F living / open stair hall: lift landing threshold, certain floor par | RULE_DIFFERENCE | 0.3 | PIECE | 0.300000 | 0.000000 | DRAWING_CONFIRMED | 1F-LIFT-DOOR x 0.300 (UP-ELEV-005): AFE AFD |
-| 13 | 1F living / open stair hall: his unsplit row vs porcelain 33.711036 +  | UNRESOLVED | 0.326464 | NOT_ESTABLISHED | - | - | NOT_REMEASURED | - |
+| 13 | 1F living / open stair hall: his unsplit row vs porcelain 33.711036 +  | UNRESOLVED | 0.326464 | READING | exp 0.3270 | 0.000536 | DRAWING_CONFIRMED | 1F-LIV.floor_printed: AEC B68 AF9 B10 AFE B16 AC0 C21 AEB AF7 B74 B75 D24 AF5; 1F-ARRIVAL-RECT: AC0 B16 AEB C21; 1F-ARRIVAL-DRAWN: AC2 A8D AC3 A8F AC0 B16 AEB C21 |
 | 14 | 1F curved east bed room with its lobby (his 'bed room 1'): no reading  | UNRESOLVED | -1.726545 | READING | exp -1.726592 | -0.000047 | DRAWING_CONFIRMED | 1F-CUR.ours: B1D C0F C0A BD2 B6B ACE B0D C09 C15 C0B B0B |
 | 15 | 1F bed room 380 x 430 + dressing 165 x 180 + arch strip OP-011 (his 'b | ENGINE_WRONG | 2.97 | PIECE | 2.97 | 0.00 | DRAWING_CONFIRMED | 1F-DRESSING: B20 B03 AD5 B00 |
 | 16 | 1F bed room 500 x 365: drawn column notch 0.035 | ENGINE_RIGHT | 0.034999 | ROOM | 18.215 | -0.000001 | DRAWING_CONFIRMED | 1F-500x365: AE6 AF8 AE9 C1E |
@@ -46,7 +46,7 @@ Section T-553/floor-tile: reference 409.58 vs engine 387.09405 m2, difference 22
 | 39 | 1F laundry: printed 347 x 300 / 185 with the W.C. corner, his typed 10 | ENGINE_RIGHT | -0.151 | ROOM | 10.151 | 0.000 | DRAWING_CONFIRMED | 1F-LAUNDRY: ADB B07 ACF B0F B17 B06 B14 B12 |
 | 40 | 2F roof-floor W.C. 300 x 185: printed 185 against his 1.875 | ENGINE_RIGHT | 0.07 | ROOM | 5.55 | 0.00 | DRAWING_CONFIRMED | 2F-ROOF-WC: 127B 1296 1298 1290 |
 
-Split (re-adds exactly to 22.485950): by class {'ENGINE_RIGHT': '0.797732', 'ENGINE_WRONG': '2.97', 'RULE_DIFFERENCE': '15.941912', 'TOLERANCE': '-0.028416', 'UNRESOLVED': '2.804722'}; by evidence {'DRAWING_CONFIRMED': '17.240074', 'NOT_REMEASURED': '5.245876'}; rows {'DRAWING_CONFIRMED': 37, 'NOT_REMEASURED': 4}.
+Split (re-adds exactly to 22.485950): by class {'ENGINE_RIGHT': '0.797732', 'ENGINE_WRONG': '2.97', 'RULE_DIFFERENCE': '15.941912', 'TOLERANCE': '-0.028416', 'UNRESOLVED': '2.804722'}; by evidence {'DRAWING_CONFIRMED': '16.361538', 'NOT_REMEASURED': '6.124412'}; rows {'DRAWING_CONFIRMED': 40, 'NOT_REMEASURED': 1}.
 
 Beside (never a confirmation):
 - gf_open_stair_footprint_by_closure: {'value': '6.124432', 'row_0': '6.124412', 'basis': 'own gross 147.657717 - engine open-room lines 130.648285 - own lift / band / curb / solids; NOT a re-measure (uses the engine)'}
@@ -54,4 +54,4 @@ Beside (never a confirmation):
 - 1F_living_own_floor_at_550: {'own_printed_edge': '38.5855', 'own_east_foot': '38.988', 'engine_porcelain_lift_arrival': '38.633536', 'engine_minus_own': '0.048036', 'basis': 'engine - own = 0.0475 arrival rule piece (by reference) + 0.000536'}
 - 1F_arrival_printed: 4.875
 
-Checker re-measure set (5 largest own measures): GF-OPEN.full 147.657717; GF-DEWANEYA 24.94032; 2F-MAID 19.35; 1F-WEST-BED 19.05; 1F-CUR.ours 19.016592
+Checker re-measure set (5 largest own measures): GF-OPEN.full 147.657717; 1F-LIV.floor_printed 38.5855; GF-DEWANEYA 24.94032; 2F-MAID 19.35; 1F-WEST-BED 19.05

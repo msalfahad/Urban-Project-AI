@@ -45,6 +45,40 @@
     "1.95"
    ]
   },
+  "1F-ARRIVAL-DRAWN": {
+   "area": "4.9225",
+   "handles": [
+    "AC2",
+    "A8D",
+    "AC3",
+    "A8F",
+    "AC0",
+    "B16",
+    "AEB",
+    "C21"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "main-stair arrival +5.50 as drawn: west lane to its riser AC2 (nosing band 0.05), the well end AC3 (0.05 into the printed rectangle), east lane on the printed edge AC0 prolonged",
+   "perimeter": "9.1",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-ARRIVAL-RECT": {
+   "area": "4.875",
+   "handles": [
+    "AC0",
+    "B16",
+    "AEB",
+    "C21"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "the printed 2.50 x 1.95 rectangle by handle",
+   "perimeter": "8.9",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
   "1F-BATH-LAUNDRY": {
    "area": "3.5775",
    "handles": [
@@ -846,6 +880,40 @@
    "notch_m2": "0.0",
    "note": "wall 336 / 337 between the two columns",
    "perimeter": "5.7",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-STAIR-HALL": {
+   "area": "4.805",
+   "handles": [
+    "220",
+    "21C",
+    "490",
+    "47E",
+    "47C",
+    "157",
+    "DE",
+    "298"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "hall at +1.00: south face 220 (door OP-010 closed on it), lift-wall face 21C, D1 top riser 490 (layer 5), divider faces 47E / 47C / 157 (layer 2 / 5), MS1-L first riser DE (layer 2), west face 298: 2.50 x 0.45 + 1.15 x 0.70 + 1.15 x 2.50",
+   "perimeter": "12.3",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-STAIR-LOBBY": {
+   "area": "1.3225",
+   "handles": [
+    "481",
+    "21B",
+    "26F",
+    "47E"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "back-door lobby at +0.30 under the +3.50 half landing: D1 foot riser 481, wall faces 21B / 26F (north door 0.90 closed on 26F), divider line 47E prolonged: 1.15 x 1.15",
+   "perimeter": "4.6",
    "source": "DRAWING",
    "storey": "GF"
   },

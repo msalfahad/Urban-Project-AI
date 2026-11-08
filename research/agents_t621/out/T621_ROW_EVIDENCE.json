@@ -39,6 +39,26 @@
    "id": "GF-OPEN.full"
   },
   {
+   "area": "38.5855",
+   "handles": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "AC0",
+    "C21",
+    "AEB",
+    "AF7",
+    "B74",
+    "B75",
+    "D24",
+    "AF5"
+   ],
+   "id": "1F-LIV.floor_printed"
+  },
+  {
    "area": "24.94032",
    "handles": [
     "119",
@@ -68,23 +88,6 @@
     "B40"
    ],
    "id": "1F-WEST-BED"
-  },
-  {
-   "area": "19.016592",
-   "handles": [
-    "B1D",
-    "C0F",
-    "C0A",
-    "BD2",
-    "B6B",
-    "ACE",
-    "B0D",
-    "C09",
-    "C15",
-    "C0B",
-    "B0B"
-   ],
-   "id": "1F-CUR.ours"
   }
  ],
  "difference": "22.48595",
@@ -364,16 +367,41 @@
   {
    "class": "UNRESOLVED",
    "delta": "-6.1275",
-   "difference_to_row": null,
+   "difference_to_row": "0.0000",
    "engine_room": "6.1275",
-   "evidence_status": "NOT_REMEASURED",
+   "evidence_status": "DRAWING_CONFIRMED",
    "expected_delta": null,
    "his_room": null,
-   "kind": "NOT_ESTABLISHED",
-   "measures": [],
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "4.805",
+     "handles": [
+      "220",
+      "21C",
+      "490",
+      "47E",
+      "47C",
+      "157",
+      "DE",
+      "298"
+     ],
+     "id": "GF-STAIR-HALL"
+    },
+    {
+     "area": "1.3225",
+     "handles": [
+      "481",
+      "21B",
+      "26F",
+      "47E"
+     ],
+     "id": "GF-STAIR-LOBBY"
+    }
+   ],
    "name": "GF stair room: hall at +1.00 and back-door lobby at +0.30 (material HELD: porcelain or landing marble): stair-room floor parts in none of his floor rows",
-   "note": "hall 4.805 + lobby 1.3225 stay T-418 (by reference); closes: the hall / lobby outlines by riser and wall handles",
-   "own": null,
+   "note": "hall 4.805 + lobby 1.3225 (the T-418 reading) re-measured by riser and wall handles; material HELD kept",
+   "own": "6.1275",
    "row": 9,
    "verdict_proposal": "UNRESOLVED"
   },
@@ -417,16 +445,31 @@
   {
    "class": "RULE_DIFFERENCE",
    "delta": "4.9225",
-   "difference_to_row": null,
+   "difference_to_row": "0.0000",
    "engine_room": "33.411036",
-   "evidence_status": "NOT_REMEASURED",
+   "evidence_status": "DRAWING_CONFIRMED",
    "expected_delta": null,
    "his_room": "38.96",
-   "kind": "NOT_ESTABLISHED",
-   "measures": [],
+   "kind": "PIECE",
+   "measures": [
+    {
+     "area": "4.9225",
+     "handles": [
+      "AC2",
+      "A8D",
+      "AC3",
+      "A8F",
+      "AC0",
+      "B16",
+      "AEB",
+      "C21"
+     ],
+     "id": "1F-ARRIVAL-DRAWN"
+    }
+   ],
    "name": "1F living / open stair hall: main-stair arrival +5.50 (marble, own line)",
-   "note": "printed 2.50 x 1.95 = 4.875 re-read (DIMENSIONs D25 / 10DF); the +0.0475 (well end / nosing band, T-240 / T-269) is by reference; closes: those two drawn pieces by handle",
-   "own": null,
+   "note": "drawn arrival = printed 4.875 (DIMENSIONs D25 / 10DF; rectangle by handle) - well end 0.20 x 0.05 (AC3) + nosing band 1.15 x 0.05 (AC2)",
+   "own": "4.9225",
    "row": 11,
    "verdict_proposal": "RULE_DIFFERENCE"
   },
@@ -458,15 +501,60 @@
   {
    "class": "UNRESOLVED",
    "delta": "0.326464",
-   "difference_to_row": null,
+   "difference_to_row": "0.000536",
    "engine_room": "33.411036",
-   "evidence_status": "NOT_REMEASURED",
-   "expected_delta": null,
+   "evidence_status": "DRAWING_CONFIRMED",
+   "expected_delta": "0.3270",
    "his_room": "38.96",
-   "kind": "NOT_ESTABLISHED",
-   "measures": [],
+   "kind": "READING",
+   "measures": [
+    {
+     "area": "38.5855",
+     "handles": [
+      "AEC",
+      "B68",
+      "AF9",
+      "B10",
+      "AFE",
+      "B16",
+      "AC0",
+      "C21",
+      "AEB",
+      "AF7",
+      "B74",
+      "B75",
+      "D24",
+      "AF5"
+     ],
+     "id": "1F-LIV.floor_printed"
+    },
+    {
+     "area": "4.875",
+     "handles": [
+      "AC0",
+      "B16",
+      "AEB",
+      "C21"
+     ],
+     "id": "1F-ARRIVAL-RECT"
+    },
+    {
+     "area": "4.9225",
+     "handles": [
+      "AC2",
+      "A8D",
+      "AC3",
+      "A8F",
+      "AC0",
+      "B16",
+      "AEB",
+      "C21"
+     ],
+     "id": "1F-ARRIVAL-DRAWN"
+    }
+   ],
    "name": "1F living / open stair hall: his unsplit row vs porcelain 33.711036 + arrival 4.9225",
-   "note": "own floor at +5.50 (printed landing edge) 38.5855 by handle; the residual also needs the +0.0475 arrival piece (by reference); his 38.96 vs the drawn east-flight-foot reading 38.988 (-0.028, outside his rounding)",
+   "note": "his unsplit 38.96 vs own floor at +5.50 (printed edge, T-606 chain) with the drawn arrival in place of the printed rectangle; his row vs the east-flight-foot reading 38.988 (-0.028) is outside his rounding: UNRESOLVED kept",
    "own": null,
    "row": 13,
    "verdict_proposal": "UNRESOLVED"
@@ -1282,12 +1370,12 @@
    "UNRESOLVED": "2.804722"
   },
   "by_evidence": {
-   "DRAWING_CONFIRMED": "17.240074",
-   "NOT_REMEASURED": "5.245876"
+   "DRAWING_CONFIRMED": "16.361538",
+   "NOT_REMEASURED": "6.124412"
   },
   "count_by_evidence": {
-   "DRAWING_CONFIRMED": 37,
-   "NOT_REMEASURED": 4
+   "DRAWING_CONFIRMED": 40,
+   "NOT_REMEASURED": 1
   },
   "total": "22.485950"
  },

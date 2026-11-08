@@ -91,6 +91,17 @@ PIECE_OUTLINES = {
     "GF-CURB": ("GF", ["310", "4B4", "2FD2#0", "A8"], "curb 0.20 between 4B4 and A8, from 310 to the west face of "
                 "column 2FD2"),
     "GF-SOLID-WALL": ("GF", ["336", "2FC6#0", "337", "2FD2#2"], "wall 336 / 337 between the two columns"),
+    "GF-STAIR-HALL": ("GF", ["220", "21C", "490", "47E", "47C", "157", "DE", "298"],
+                      "hall at +1.00: south face 220 (door OP-010 closed on it), lift-wall face 21C, D1 top riser 490 "
+                      "(layer 5), divider faces 47E / 47C / 157 (layer 2 / 5), MS1-L first riser DE (layer 2), west "
+                      "face 298: 2.50 x 0.45 + 1.15 x 0.70 + 1.15 x 2.50"),
+    "GF-STAIR-LOBBY": ("GF", ["481", "21B", "26F", "47E"],
+                       "back-door lobby at +0.30 under the +3.50 half landing: D1 foot riser 481, wall faces 21B / 26F "
+                       "(north door 0.90 closed on 26F), divider line 47E prolonged: 1.15 x 1.15"),
+    "1F-ARRIVAL-DRAWN": ("1F", ["AC2", "A8D", "AC3", "A8F", "AC0", "B16", "AEB", "C21"],
+                         "main-stair arrival +5.50 as drawn: west lane to its riser AC2 (nosing band 0.05), the well "
+                         "end AC3 (0.05 into the printed rectangle), east lane on the printed edge AC0 prolonged"),
+    "1F-ARRIVAL-RECT": ("1F", ["AC0", "B16", "AEB", "C21"], "the printed 2.50 x 1.95 rectangle by handle"),
 }
 SOLIDS = {"GF-SOLID-COL-2FD2": "2FD2", "GF-SOLID-COL-2FC6": "2FC6"}
 # door / arch strips and lift landing doors: id -> (storey, width jamb pair, depth face pair, note)
