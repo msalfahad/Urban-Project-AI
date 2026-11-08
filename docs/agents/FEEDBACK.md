@@ -3,6 +3,16 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-08 08:30 (since 04:15)
+
+- T-617 lift landing head (Gate A): WORKED (bounded by ring-beam soffits, low end HELD, 0.000 m2 change). Decision: fold into statement V11 (T-620); FR-T617-1 into manifest V15 (T-629).
+- T-614 r2 beam-end census (Gate A): WORKED (billing only inside the line's own extent, +0.061576 m3 fix rows, Checker re-measured 3 pieces). Decision: open items CB4 r2 0.01355 m3 + 5 T-229 add pairs -> T-624.
+- T-618 small finishes residuals (Gate A): WORKED (causes or ranges; E1 porch 3.50 lm omission candidate HELD; curved / corridor UNRESOLVED needing his sides). Decision: fold into V11; FR-T618-1 / -2 into V15.
+- T-619 manifest V14 (Gate A): WORKED (B10 66.392081 .. 66.393376 m3 as a range, passages 9 -> 6, Checker re-added). Decision: F-T619-1 / -2 -> T-624; next V15 (T-629).
+- T-621 floor tile rows (Gate A): PARTIAL (40 / 41 by handle; 3 rooms Checker-VERIFIED; row 0 round-stair footprint unmeasured, open-plan boundaries not closable on wall faces). Decision: T-625 with the boundary-per-open-side rule.
+- T-615 Q-80 block walls: READY. Decision: first Gate A item in the next Checker run.
+- Worker 3 05:00 BLOCKED (venv pip download 403): environment, self-recovered at 06:59; no action beyond watching for a repeat.
+
 ## Lead 2026-11-08 04:15 (since 00:15)
 
 - T-616 lintel count by opening (Gate A): WORKED (his 54 vs 60 split by opening; W17 curved band takes no straight lintel; UNRESOLVED 2..4). Decision: fold into statement V11 (T-620).
@@ -174,10 +184,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-510 band-gap classes (Gate A): PARTIAL (left t212 red; unwired). Decision: T-512 gate fix first for worker 1; T-513 wiring queued for worker 2.
 - T-310 r6 wet-area WP: PARTIAL (version collision with T-488, engineering unchanged). Decision: r7 rebase on V3.0.56, worker 2 first.
 - Process: 3 empty worker runs (18:41-19:19, 0 TODO). Decision: each worker keeps a non-candidate TODO behind its package.
-
-## Lead 2026-11-04 08:15 (since 04:14)
-
-- T-504 plaster materials table V3: WORKED (Gate A, R-T504-1, own re-sum AGREE). Decision: T-498 reads V3; lessons row already covers it.
-- T-483 r3 skirting remainder (Gate B): WORKED (V3.0.51, +9.010 lm, 4,871 identical, t485 green). Decision: lessons row ADOPTED; F-C-T483-1 -> register entry + T-460; T-480 TODO.
-- T-310 r3 wet-area WP: PARTIAL (READY on V3.0.50, overtaken by the T-483 merge). Decision: r4 rebase on ea7d375f only, worker 2 first.
-- T-494 pool-court slab WP and T-505 disposal loss terms: READY, Checker pending (queue 1 and 2).

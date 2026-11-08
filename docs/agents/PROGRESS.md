@@ -1,9 +1,27 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
-Last update: 2026-11-08 00:15 UTC (Lead). Previous version: 2026-11-07 20:17 UTC. The released numbers did not change
+Last update: 2026-11-08 08:30 UTC (Lead). Previous version: 2026-11-08 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released reinforcement 10,250.17 kg; released default V2.9 + route G
 untouched). Your measure: whole BOQ lines independently verified in the candidate: the concrete slab (60.28 m3) and
 the footing-pit blinding (12.73 m3) as its own line; released: 0. The candidate of record stays V3.0.58 (not released).
+
+Since 8 Nov 04:15 (newest first; five checked and merged, none sent back; no candidate quantity moved; all wait to be
+wired into the candidate):
+- Floor tiles: 40 of the 41 room rows now have their own drawn area from the plan; the checker re-measured three rooms
+  itself and agrees (2nd-floor maid room 19.35 m2, ground dewaneya 24.94 m2, 1st-floor west bedroom 19.05 m2). Still
+  open: the round stair footprint (6.12 m2) and where the ground open room and 1st-floor living end on their open
+  sides; these are read next. His 409.58 vs ours 387.09 m2 is split by cause; no area moved.
+- Beam concrete: every beam end beside a narrower column was checked; 0.062 m3 of beam concrete is owned by no line
+  (our omission, the checker re-measured each piece). When wired, beams 66.32 -> 66.39 m3 (+0.11 %, a small range);
+  this moves us further from his 66.09 for physical reasons.
+- Passages: when wired, 9 -> 6 (the three lift landing doors leave the passage count).
+- Lift landing door head: printed nowhere; bounded by the ring beams above it (no area change); low end stays held.
+- Five small finishes gaps (2.8 m in all) closed to causes or ranges; the entrance porch may lack 3.50 m of skirting
+  (held until its scope is read); two small room gaps need his room sides to explain.
+- Your Q-80 answer applied: 175.9 m2 of 15 cm walls leave held (about 2,194 to 2,198 blocks, 16.2 to 16.3 cement bags);
+  no drawing shows another block face. With the checker now.
+- 10 Nov: an end-to-end BOQ of every trade is prepared as a dry run beside the candidate; wiring into the candidate
+  itself stays LOW until you merge the run-command change (PR #4).
 
 Since 7 Nov 20:17 (newest first; seven checked and merged, two sent back once each (one merged on rework); no
 candidate quantity moved; all wait to be wired into the candidate):

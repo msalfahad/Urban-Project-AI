@@ -1,3 +1,16 @@
+## LEAD REPORT 2026-11-07 20:18 UTC
+
+Drive read OK (no file created in the project folders since 16:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 16:17; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines independently verified in the candidate: slab 60.28 m3 + footing-pit blinding 12.73 m3; released 0.
+- Beams / columns (m3): joint rule UP-CONC-JOINT-001 1.0.0 MERGED (Checker own ST read AGREE): matched joint RULE_DIFFERENCE signed 0 / gross 5.3325; residual 2.248826 + B7 0.120452 = 2.369278 UNRESOLVED -> T-600 by column mark; 1F head read 0.385 vs 0.460 (P.C 20x50 0.075) to settle there. Full suite = baseline (t374 x2 order-dependent, t485).
+- Skirting (lm): 1F living -9.693 was a net: +8.40 well walls ENGINE_RIGHT, +0.20 notches, and NEW F-T606-1 ENGINE_WRONG 11.17 lm on stair-opening walls with no floor (Checker re-measured): when wired 209.728592 -> 198.558592 (-5.33 %) -> T-611. Unexplained left: GF open room 16.914, 1F curved 0.739, 2F corridor 0.70 -> T-612.
+- Beam overlap (m3): Checker P03 GF found B27 / B1 billed twice at col 35C, ENGINE_WRONG -0.005295 (immaterial alone) -> T-610 census of every crossing on every floor.
+- Wiring list V12 MERGED (0 stale; skirting +0.30 lm). With the Checker (READY): footing overlap (no line moves; FN row +0.042 m3 ENGINE_RIGHT), step / nosing 8.40 lm one cause counted once (ENGINE_RIGHT proposal), statement V10.
+- Learned (ERS s.7): a residual is a net until split by face (ADOPTED); skirting only where a floor meets the wall (PROPOSED, T-611); crossing members by union of drawn outlines (PROPOSED, T-610).
+- Missing / gate: wiring (Gate B) waits on the wrapper; 12-13 Nov tables on track (V10 READY, T-613 next).
+TEAM HEALTH: 10 runs since 16:12 (W1 2, W2 2, W3 2, Verifier 4 incl. 1 overlap-guard skip by design), all closed, 0 empty, every working run ran code, self-check PASS (this run codemap / t061 / freeze PASS); 3 merged, 0 rejected; READY 3 (CHECKER-RUNS); 6 TODO (S 2, A 2, I 2); queue check 23 actionable, 0 flagged, 0 stall.
+OWNER PACKAGE: none new today (all settled by drawings, delegated rules or Lead rulings; ORR-007 and Q-80 already with you).
+NEEDS FIXING (only you): (1) wrapper allow-list for research/agents_t*/ scripts in main scripts/agent_env.sh:211 (CRITICAL, notified 5 Nov; blocks every Gate B; 10 Nov milestone LOW); (2) freelancer floors / rails workbooks over 6.2 MB (zipped copy); (3) privacy switch of the public repo.
+
 ## LEAD REPORT 2026-11-07 16:17 UTC
 
 Drive read OK (no file created in the project folders since 12:00 UTC 7 Nov, no photo task). Training villa: candidate ARCH_TAKEOFF_V3.0.58 / master 1.55.0 (NOT RELEASED), no candidate quantity moved since 12:16; released V2.9 + route G unchanged (concrete 92.77 vs 111.81 m3, -17.03 %). Whole lines verified in the candidate: 2 (CONC.SLAB 60.28 m3, footing blinding 12.73 m3); released 0.

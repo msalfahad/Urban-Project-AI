@@ -46,6 +46,13 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
+## Status (Lead, 2026-11-08 08:30; recovery plan in force)
+
+- Merged since 04:15 (all Gate A, research, no candidate line moved): T-617, T-614 r2, T-618, T-619 WORKED; T-621 PARTIAL (40 / 41 rows; 3 rooms Checker-VERIFIED); T-615 READY (Q-80 block walls).
+- Closed for 12-13 Nov: manifest V14, beam-end census, lift landing head, small finishes residuals, floor tile rows 40 / 41. Remaining: statement + scorecard V11 (T-620), manifest V15 (T-629), evidence rows wall tile (T-622), beams / columns (T-623), floor tile carry-forward (T-625), waterproofing (T-626), opening areas (T-627), footings (T-628), beam-end open items (T-624).
+- 10 Nov: a non-candidate end-to-end all-trade BOQ dry run on the overlay (T-630) shows every trade present / held / missing; the candidate itself cannot move until PR #4 is merged (streams S T-498 + T-525, F T-423 r2 / T-513 / T-563 BLOCKED on it only).
+- 10 Nov candidate wiring: LOW (PR #4, 2 days left). 12-13 Nov reconciliation tables: HIGH.
+
 ## Status (Lead, 2026-11-08 04:15; recovery plan in force)
 
 - Merged since 00:15 (all Gate A, research, no candidate line moved): T-616, T-600 r2 WORKED; T-613 merged on r2; T-614 rejected once (rework r2 first in S); T-617 READY.
