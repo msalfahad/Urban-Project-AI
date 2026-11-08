@@ -1,0 +1,139 @@
+{
+ "architectural": {
+  "1F": {
+   "cross_handle": "B94",
+   "door_side": "S",
+   "wall_span_mm": 2535.0
+  },
+  "2F": {
+   "cross_handle": "12AC",
+   "door_side": "S",
+   "wall_span_mm": 2000.0
+  },
+  "GF": {
+   "cross_handle": "224",
+   "door_side": "S",
+   "wall_span_mm": 2300.0
+  }
+ },
+ "input_sha256": {
+  "architectural": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "structural": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "schema": "T617_DRAWN_V1",
+ "source": {
+  "architectural": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+  "structural": "Drive 'Alsenan chalet project' / ST7757 dxf.dxf"
+ },
+ "structural": {
+  "1F_ROOF": {
+   "box_mm": [
+    1800.0,
+    1800.0
+   ],
+   "box_source": "S-OPENING",
+   "cross_handles": [
+    "73F",
+    "740"
+   ],
+   "sides": {
+    "E": {
+     "dist_mm": 130.7,
+     "handle": "6CE",
+     "mark": "B1"
+    },
+    "N": {
+     "dist_mm": 394.0,
+     "handle": "6CB",
+     "mark": "B1"
+    },
+    "S": {
+     "dist_mm": 130.8,
+     "handle": "6CC",
+     "mark": "B7"
+    },
+    "W": {
+     "dist_mm": 375.2,
+     "handle": "6CD",
+     "mark": "B7"
+    }
+   },
+   "south_band_line_offsets_mm": [
+    -200.0,
+    0.0
+   ]
+  },
+  "2F_ROOF": {
+   "box_mm": [
+    1800.0,
+    1800.0
+   ],
+   "box_source": "CLOSED (box = 1F roof box - sheet pitch)",
+   "cross_handles": [],
+   "sides": {
+    "E": {
+     "dist_mm": 144.1,
+     "handle": "78B",
+     "mark": "B1"
+    },
+    "N": {
+     "dist_mm": 272.9,
+     "handle": "78D",
+     "mark": "B1"
+    },
+    "S": {
+     "dist_mm": 145.5,
+     "handle": "78A",
+     "mark": "B2"
+    },
+    "W": {
+     "dist_mm": 347.9,
+     "handle": "78C",
+     "mark": "B1"
+    }
+   },
+   "south_band_line_offsets_mm": [
+    -200.0,
+    0.0
+   ]
+  },
+  "GF_ROOF": {
+   "box_mm": [
+    1800.0,
+    1800.0
+   ],
+   "box_source": "S-OPENING",
+   "cross_handles": [
+    "54F",
+    "550"
+   ],
+   "sides": {
+    "E": {
+     "dist_mm": 123.8,
+     "handle": "4B7",
+     "mark": "B1"
+    },
+    "N": {
+     "dist_mm": 443.4,
+     "handle": "45E",
+     "mark": "B1"
+    },
+    "S": {
+     "dist_mm": 114.4,
+     "handle": "45F",
+     "mark": "B14"
+    },
+    "W": {
+     "dist_mm": 404.4,
+     "handle": "4B6",
+     "mark": "B7"
+    }
+   },
+   "south_band_line_offsets_mm": [
+    -200.0,
+    0.0
+   ]
+  },
+  "sheet_pitch_mm": 38724.4
+ }
+}
