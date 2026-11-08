@@ -3,7 +3,7 @@
 Worker 2, lane A, non-candidate, backlog-permitted, claim 2026-11-08T00:41Z, engine base 3c3aa2f8. Research only, unwired:
 no engine module, method, rule / knowledge version, registry, frozen or candidate file changed; nothing released;
 released default V2.9 + route G unchanged. Files: `t616_rules.py` (R-T616-1, every villa), `t616_alsenan.py` (the
-table, merged inputs pinned by sha), `out/T616_RESIDUAL.json`, `tests/t616/` (15 tests). His deduction list was read
+table, merged inputs pinned by sha), `out/T616_RESIDUAL.json`, `tests/t616/` (14 tests). His deduction list was read
 this run from Drive 'Alsenan chalet project' (blockwork workbook, Drive text reader); only counts by width per section
 are used, the same figures T-571 / T-559 carry. Training villa; not an accuracy claim.
 
@@ -90,7 +90,7 @@ storey and one group per id (else refused), keys -> same width -> nearest width,
 COUNT unique across pairings (else refused), ids FIRM / POSSIBLE, closure asserted, a non-zero group with no named
 opening refused. (3) verdict as a bound over the admissible sets; a one-list opening that takes no lintel refused.
 (4) deduction-list absence is not omission.
-Tests (`tests/t616`, 15, PASS with tests/t571_lintel_count): villa Z by hand (sagitta 0.2177, closure 4 - 3 = +1 =
+Tests (`tests/t616`, 14, PASS with tests/t571_lintel_count): villa Z by hand (sagitta 0.2177, closure 4 - 3 = +1 =
 +2 - 1, sets {D1, P1} / {D2, P1}, bound 1 / 1), mirrored order, tie branching, gentle curve admitted, stock pieces;
 adverse: lintel in an RC wall, straight piece in a curved wall, opening in two storeys, listed twice, one-list opening
 without a lintel, 0 / mm / None widths, key to an absent width, unknown vocabulary; training villa rebuild byte-identical.
