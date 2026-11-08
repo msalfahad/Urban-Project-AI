@@ -88,6 +88,20 @@ quantity.
   V8 HELD-blank rows T-569): OWNER TRADE B11 reinforcement (lane S), one STR.REBAR line per live concrete element id
   (dome shells, rings, lift-pit walls); the concrete lines (B10) keep the volume only; the 2 EXCLUDED scope domes get no
   line. Raft starters into the pit walls are owned by the wall line, not the raft line (one bar, one owner). T-575.
+- CURVED-BAND OPENING HEAD (Lead 2026-11-08 04:15; T-616 MERGED 17559e1b, Checker sagitta re-read AGREE): an opening in a
+  curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
+  FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
+  band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- LIFT LANDING HEAD (Lead 2026-11-08 04:15; T-617 READY 5903d8d4): the landing door head height is printed nowhere; it is
+  bounded above by the door-side ring beam soffit per storey (GF B14 / 1F B7 / 2F B2), low end HELD. Plaster / paint faces
+  above the head (OWNER TRADE B5 / B6, Q-72) stay ranges until printed or answered by the RFI; the landing door supply stays
+  HELD (FR-T608-2). Verified only by the Checker's Gate A on T-617.
+- BEAM BAND END vs LEDGER EXTENT (Lead 2026-11-08 04:15; Checker T-614 r1 verdict, F-C-T614-1 / -2): a band piece beside a
+  column is billed only if it lies inside the beam line's own measured run (its printed length between named faces) or a
+  named add term; GF CB8 col 2 east 0.003078 m2 lies beyond the 5.745 m run: unbilled, OWNER TRADE S beam line (T-614 r2).
+- FLOOR FINISH PER ROOM and WET-WALL FACE (Lead 2026-11-08 04:15; T-621 / T-622): the per-row evidence for B3-01 floor tile
+  and B4-02 wall tile is re-measured from the drawings room by room; ownership unchanged (B3 one finished-floor line per
+  space; B4-02 to tile height, full height in wet rooms, owner 2026-11-02); no row is VERIFIED by a class stamp (R-T613-1).
 - BEAM END AT NARROW COLUMN (Lead 2026-11-08 00:15; Checker F-C-P02-3 own ST7757 read, 1F CB11 at corner col 69D): where a
   beam run ends at a column whose depth across the beam is less than the drawn band width (or that sits off the band
   axis), the uncovered band part is concrete OWNED BY THE BEAM (it runs to the next drawn member face; the column owns
