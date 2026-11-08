@@ -130,6 +130,49 @@ def _band(bands, piece):
     return p["pts"] if p else None
 
 
+DXF_PATH: list = []
+RING_FACE_BAND = {"46D": "BAND0003", "42D": "BAND0044.1", "2A9": "BAND0041.2"}
+RING_SUPERSET_HALF_W = 0.20    # census only: a 0.40 strip centred on the drawn ring edge holds the 0.20 ring either side
+
+
+def b7_census_poly(bands, where, who, st):
+    """Plan polygon of a B7 closing-face carrier for the node census (R-T600-1 r2). The capacity stays T-576's
+    (verified). Straight piece BAND0006: its drawn crossing. Ring arcs: the tangent strip at the arc end on the face
+    (superset, both sides of the drawn edge) crossed with the face member's band."""
+    import math
+    import ezdxf
+    if where.startswith("BAND0006"):
+        carrier = who.split(" ")[1]
+        return R.crossing(_band(bands, f"{st}:BAND0006"), _band(bands, f"{st}:{carrier}"))["poly"], \
+            "drawn crossing of BAND0006 (capacity T-576)"
+    arc_h = where.split(" ")[-1]
+    face_h = who.split(" ")[-1]
+    doc = ezdxf.readfile(DXF_PATH[0]) if not hasattr(b7_census_poly, "_doc") else b7_census_poly._doc
+    b7_census_poly._doc = doc
+    arc, face = doc.entitydb.get(arc_h), doc.entitydb.get(face_h)
+    fx0, fy0, fx1, fy1 = (face.dxf.start.x / 1000, face.dxf.start.y / 1000, face.dxf.end.x / 1000,
+                          face.dxf.end.y / 1000)
+    best = None
+    for sgn, ang, pt in ((-1, arc.dxf.start_angle, arc.start_point), (1, arc.dxf.end_angle, arc.end_point)):
+        px, py = pt.x / 1000, pt.y / 1000
+        dist = abs((fx1 - fx0) * (fy0 - py) - (fx0 - px) * (fy1 - fy0)) / math.hypot(fx1 - fx0, fy1 - fy0)
+        if best is None or dist < best[0]:
+            best = (dist, sgn, ang, px, py)
+    dist, sgn, ang, px, py = best
+    if dist > 0.002:
+        raise R.Refused(f"{arc_h}: no arc end on face {face_h}")
+    from shapely.geometry import Polygon
+    cx, cy, r = arc.dxf.center.x / 1000, arc.dxf.center.y / 1000, arc.dxf.radius / 1000
+    w = float(next(x[2] for x in B7_CARRIERS if x[0] == where and x[1] == who))
+    sweep = w / r                                   # the ring continued past its drawn end by the billed width
+    h = RING_SUPERSET_HALF_W
+    angs = [math.radians(ang) + sgn * sweep * i / 16 for i in range(17)]
+    outer = [(cx + (r + h) * math.cos(t), cy + (r + h) * math.sin(t)) for t in angs]
+    inner = [(cx + (r - h) * math.cos(t), cy + (r - h) * math.sin(t)) for t in reversed(angs)]
+    return Polygon(outer + inner), (f"ring continued {w} m past its drawn end ({round(px, 3)}, {round(py, 3)}) on "
+                                    f"face {face_h}, +-{h} m about the drawn edge (census superset; capacity T-576)")
+
+
 def _end_record(sup, piece, member):
     for e in sup["ends"]:
         if e["piece"] == piece and any(m[0] == member for m in e["members"]):
@@ -187,14 +230,30 @@ def mark_zones(st, m, sup, bands, rects, kinds):
     if st == "GF" and m["mark"] == "B7":
         items = [it for it in items if it[0] == "END_COLUMN"]          # straight piece column ends (T-229)
         for where, who, w in B7_CARRIERS:
-            carriers.append((f"B7 {where} -> {who}", d6(D(w) * b * Dd)))
+            key = f"B7 {where} -> {who}"
+            poly, info = b7_census_poly(bands, where, who, st)
+            carriers.append({"key": key, "mark": "B7", "m3": d6(D(w) * b * Dd), "poly": poly, "D": Dd, "b": b,
+                             "w_drawn": None, "how": info, "L": w})
         notes.append("B7: complete closing-face set of T-576 (R-T576-3): curved / ring pieces have no T-229 end "
                      "record; carriers at drawn widths")
     for kind, piece, mem, ext in items:
         if kind == "END_BEAM":
             e = _end_record(sup, piece, mem)
             beam = next((x[0] for x in e["members"] if x[1] == "BEAM"), mem) if e else mem
-            carriers.append((f"{m['mark']} {piece} -> {beam}", d6(D(str(ext)) * b * Dd)))
+            key = f"{m['mark']} {piece} -> {beam}"
+            fp, cp = _band(bands, piece), _band(bands, beam)
+            try:
+                x = R.crossing(fp, cp)
+                carriers.append({"key": key, "mark": m["mark"], "m3": R.entry_m3(x["L"], b, Dd), "poly": x["poly"],
+                                 "D": Dd, "b": b, "w_drawn": x["w_framing"], "L": str(d6(x["L"])),
+                                 "how": f"DRAWN_CROSSING sin {round(x['sin'], 3)} (w_carrier "
+                                        f"{round(x['w_carrier'], 3)} / sin), T-229 recorded {ext}"})
+            except R.Refused as why:
+                if "parallel" not in str(why):
+                    raise
+                carriers.append({"key": key, "mark": m["mark"], "m3": d6(D(str(ext)) * b * Dd), "poly": None,
+                                 "D": Dd, "b": b, "w_drawn": None, "L": str(ext),
+                                 "how": "RECORDED_PARALLEL (collinear members: no crossing; T-229 recorded extent)"})
             continue
         pts = _band(bands, piece if kind == "END_COLUMN" else piece.split("|")[0])
         ax = R.axis_of(pts) if pts else "NONE"
@@ -245,9 +304,10 @@ def build(freelancer, bands_path, dxf_path):
     T119_DLOW.update(t119_dlow())
     LEDGER_BESIDE.clear()
     LEDGER_BESIDE.update(ledger_beside())
-    doc = {"schema": "T600_PAIR_RESIDUAL_V1",
+    DXF_PATH[:] = [dxf_path]
+    doc = {"schema": "T600_PAIR_RESIDUAL_V2",
            "candidate": "ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED",
-           "rule": "R-T600-1 .. 3 (PROPOSED); UP-CONC-JOINT-001 1.0.0 (LEAD_ADOPTED)",
+           "rule": "R-T600-1 .. 3 r2 (PROPOSED; carrier node once, SHORT not a cause); UP-CONC-JOINT-001 1.0.0 (LEAD_ADOPTED)",
            "note": "engine / drawing figures and terms in m3; no row, length or count of the freelancer",
            "storeys": {}}
     for st in STOREYS:
@@ -256,22 +316,82 @@ def build(freelancer, bands_path, dxf_path):
         col_z = defaultdict(list)
         mark_terms = {}
         notes = []
+        entries = []
+        zone_polys = []
+        sect = {}
         for m in smarks:
             t = -d6(m["length"]["THROUGH_SUPPORT"])
             if st == "GF" and m["mark"] == "B7":
                 t += B7_UNTRACED                                   # T-576: the whole B7 excess is through-support
             T_marks[m["mark"]] = t
+            sect[m["mark"]] = tuple(D(str(x)) for x in m["split"]["his_section"])
             cz, car, nt = mark_zones(st, m, sup, bands, rects, kinds)
             notes += nt
             zsum = Decimal(0)
             for col, z in cz:
                 col_z[col].append(z)
+                zone_polys.append((z["key"], col, z["poly"]))
                 zsum += sum(R.zone_m3(z), Decimal(0))
-            csum = sum((v for _, v in car), Decimal(0))
-            mark_terms[m["mark"]] = {"T_m3": str(t), "zones_m3": str(d6(zsum)), "carriers_m3": str(csum),
-                                     "carriers": [[k, str(v)] for k, v in car],
-                                     **{k: str(v) for k, v in R.mark_short(d6(zsum) + csum, t).items()}}
-        terms = []
+            entries += car
+            mark_terms[m["mark"]] = {"T_m3": str(t), "zones_m3": str(d6(zsum))}
+        # R-T600-1 r2: carrier capacity once per physical node, across marks
+        nodes = R.carrier_nodes(entries)
+        node_of = {k: nd for nd in nodes for k in nd["keys"]}
+        ent = {e["key"]: e for e in entries}
+        for k, z_key, poly in [(e["key"], None, e["poly"]) for e in entries]:
+            for zk, col, zp in zone_polys:
+                if poly is not None and poly.intersection(zp).area > R.NODE_AREA_MIN:
+                    notes.append(f"carrier {k} shares {round(poly.intersection(zp).area, 4)} m2 with column zone {zk}")
+        mark_nodes = {mk: set() for mk in mark_terms}
+        for e in entries:
+            mark_nodes[e["mark"]].add(node_of[e["key"]]["id"])
+        groups = R.mark_groups(mark_nodes)
+        group_of = {mk: g for g in groups for mk in g}
+        for mk, mt in mark_terms.items():
+            mine = [e for e in entries if e["mark"] == mk]
+            excl = sum((node_of[e["key"]]["capacity_m3"] for e in mine if not node_of[e["key"]]["shared"]),
+                       Decimal(0))
+            shared = sum((d6(e["m3"]) for e in mine if node_of[e["key"]]["shared"]), Decimal(0))
+            lo, hi = R.short_bounds(D(mt["zones_m3"]) + excl, shared, D(mt["T_m3"]))
+            mt.update({"carriers": [{"key": e["key"], "entry_m3": str(d6(e["m3"])), "L_m": str(e["L"]),
+                                     "how": e["how"], "node": node_of[e["key"]]["id"],
+                                     "node_shared": node_of[e["key"]]["shared"]} for e in mine],
+                       "capacity_exclusive_m3": str(d6(D(mt["zones_m3"]) + excl)),
+                       "capacity_shared_entries_m3": str(shared), "group": " + ".join(group_of[mk]),
+                       "short_bounds_m3": [str(lo), str(hi)]})
+            b, Dd = sect[mk]
+            alone = len(group_of[mk]) == 1
+            if alone and not shared and R.short_is_zero(lo, b, Dd):
+                mt["proposal"] = ("PER-MARK: his row runs through every zone and carrier of the mark (|SHORT| "
+                                  f"{abs(lo)} <= 0.01 x b x D): column classes of this mark realised")
+            elif alone and not shared and any(R.short_is_zero(lo - node_of[e["key"]]["capacity_m3"], b, Dd)
+                                              for e in mine):
+                mt["proposal"] = ("CONDITIONAL: SHORT equals one carrier entry within 0.01 x b x D: his row runs "
+                                  "through the column zones and stops at the carrier face (not proved: the "
+                                  "split is not unique)")
+            else:
+                mt["proposal"] = "NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location)"
+        pend = []
+        for nd in nodes:
+            pend.append(("CARRIER_NODE", nd["id"], nd["capacity_m3"]))
+        for g in groups:
+            capg = sum((D(mark_terms[mk]["zones_m3"]) for mk in g), Decimal(0)) + sum(
+                (nd["capacity_m3"] for nd in nodes if set(nd["marks"]) & set(g)), Decimal(0))
+            Tg = sum((D(mark_terms[mk]["T_m3"]) for mk in g), Decimal(0))
+            sh = R.mark_short(capg, Tg)
+            if "SHORT" in sh:
+                pend.append(("UNRESOLVED_SHORT", " + ".join(g), -sh["SHORT"]))
+            else:
+                pend.append(("BEYOND", " + ".join(g), -sh["BEYOND"]))
+            for mk in g:
+                mark_terms[mk]["group_capacity_m3"] = str(d6(capg))
+                mark_terms[mk]["group_T_m3"] = str(d6(Tg))
+                mark_terms[mk]["group_" + next(iter(sh))] = str(next(iter(sh.values())))
+        node_rows = [{"id": nd["id"], "marks": nd["marks"], "shared": nd["shared"],
+                      "capacity_m3": str(nd["capacity_m3"]), "entries_sum_m3": str(nd["entries_sum_m3"]),
+                      "entered_more_than_once_m3": str(nd["entries_sum_m3"] - nd["capacity_m3"]),
+                      "how": sorted({ent[k]["how"] for k in nd["keys"]})} for nd in nodes]
+        terms = list(pend)
         columns = {}
         for col, zz in sorted(col_z.items()):
             info = kinds.get((st, col))
@@ -305,13 +425,6 @@ def build(freelancer, bands_path, dxf_path):
                 if kind == "HELD":
                     v = R.held_term(v)
                 terms.append((cls, label, v))
-        for mk, mt in sorted(mark_terms.items()):
-            for k, v in mt["carriers"]:
-                terms.append(("CARRIER_CROSSING", k, D(v)))
-            if "SHORT" in mt:
-                terms.append(("SHORT", mk, -D(mt["SHORT"])))
-            else:
-                terms.append(("BEYOND", mk, -D(mt["BEYOND"])))
         # joint of the compared set: every REC column, also those no beam of his reaches
         J = sum((v["joint"] for (s, h), v in kinds.items() if s == st and v["kind"] == "REC"), Decimal(0))
         assert d6(J) == d6(J_RECORD[st]), (st, J)
@@ -324,6 +437,34 @@ def build(freelancer, bands_path, dxf_path):
                                   "UNCOVERED": str(d6(v["joint"])), "note": "no beam mark of his with a "
                                   "through-support term meets this column"}
                 terms.append(("UNCOVERED", label, -d6(v["joint"])))
+        # per-mark who-is-right only where the mark's row provably runs through (PER-MARK / CONDITIONAL)
+        run_through = {mk for mk, mt in mark_terms.items() if mt["proposal"].startswith(("PER-MARK", "CONDITIONAL"))}
+        prop_kind = {"REC": "RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line "
+                            "bills once, UP-CONC-JOINT-001); no quantity error",
+                     "HELD": "HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0",
+                     "OPEN": "RULE_DIFFERENCE at the printed LOWER_BOUND (D_ctrl open above)"}
+        for mk in sorted(run_through):
+            rows = []
+            for lab, c in columns.items():
+                for bz in c["beams"]:
+                    if bz["key"].split("|")[0] != mk:
+                        continue
+                    others = sorted({x["key"].split("|")[0] for x in c["beams"]} - {mk})
+                    p = prop_kind.get(c["kind"], "UNRESOLVED: support without a column line")
+                    if D(c.get("OVERLAP_CROSSING", "0")) + D(c.get("OVERLAP_REPEAT", "0")) > 0 and others:
+                        strict = {m for m in run_through if mark_terms[m]["proposal"].startswith("PER-MARK")}
+                        if set(others) <= strict and mk in strict:
+                            p += "; OVERLAP with " + ", ".join(others) + " realised: ENGINE_RIGHT (one solid, two rows)"
+                        elif set(others) <= run_through:
+                            p += ("; OVERLAP with " + ", ".join(others) + " ENGINE_RIGHT only if the CONDITIONAL "
+                                  "run-through holds (PLAUSIBLE)")
+                        else:
+                            p += "; OVERLAP with " + ", ".join(others) + " not provable (other row may stop short)"
+                    if D(bz["beside_m2"]) > 0:
+                        p += "; BESIDE strip: named geometry (owner per line, T-229 / T-610)"
+                    rows.append({"column": lab, "kind": c["kind"], "inside_m2": bz["inside_m2"],
+                                 "beside_m2": bz["beside_m2"], "D": bz["D"], "proposal": p})
+            mark_terms[mk]["per_column"] = rows
         T = sum(T_marks.values(), Decimal(0))
         exp_T = T_RECORD[st] + (B7_UNTRACED if st == "GF" else 0)
         assert d6(T) == d6(exp_T), (st, T, exp_T)
@@ -333,7 +474,8 @@ def build(freelancer, bands_path, dxf_path):
             "through_support_T_m3": str(d6(T)), "joint_head_J_m3": str(d6(J)), "residual_m3": str(resid),
             "statement_pair_residual_m3": str(d6(T_RECORD[st] - J_RECORD[st])),
             "b7_untraced_folded_m3": str(B7_UNTRACED) if st == "GF" else "0",
-            "by_class_m3": by_class, "columns": columns, "beam_marks": mark_terms,
+            "by_class_m3": by_class, "columns": columns, "beam_marks": mark_terms, "carrier_nodes": node_rows,
+            "groups": [" + ".join(g) for g in groups],
             "terms": [[c, k, str(d6(v))] for c, k, v in terms if d6(v) != 0], "notes": sorted(set(notes))}
     doc["readings"] = readings(kinds)
     doc["storey_2F"] = cite_2f()
@@ -400,10 +542,12 @@ def verdicts(doc):
         "OUTSIDE_SET_OPEN / HELD / NOLINE": "RULE_DIFFERENCE matched joint whose column partner is outside the "
                                             "compared set (D_ctrl open, HELD line, no line): the joint exists once "
                                             "under UP-CONC-JOINT-001; HELD partners stay HELD, never 0",
-        "CARRIER_CROSSING": "ENGINE_RIGHT where realised: his framing beam row through a carrier beam that the "
-                            "carrier line already bills (beam-beam crossing, R-T610-1 owner)",
-        "SHORT": "his row stops inside the support set of the mark: not apportioned to a support (his rows carry no "
-                 "location); a named negative term, never 0",
+        "CARRIER_NODE": "CAPACITY, entered once per physical node (r2): the drawn crossing of the framing strip with "
+                        "the carrier strip on the framing axis (w_carrier / sin); a node entered by several marks "
+                        "counts its depth-layered union once; realised only as far as his rows reach (SHORT)",
+        "UNRESOLVED_SHORT": "NOT A CAUSE (r2): capacity minus his through-support volume per group of marks sharing a "
+                            "node; his rows carry no location, so which zone / node he stops short of is UNRESOLVED; "
+                            "per-mark bounds printed",
         "BEYOND": "his length beyond every drawn support zone of the mark: UNRESOLVED by mark unless named"}
 
 
@@ -421,10 +565,20 @@ def markdown(doc):
             L.append(f"| {lab} | {c['kind']} | {c.get('ZONES', '0')} | {c['UNION']} | {c.get('JOINT', '')} | "
                      f"{c.get('OVERLAP_CROSSING', '0')} / {c.get('OVERLAP_REPEAT', '0')} | {c.get('BESIDE', '0')} | "
                      f"{c.get('UNCOVERED', '')} |")
-        L += ["", "| beam mark | T | zones | carriers | SHORT / BEYOND |", "|---|---|---|---|---|"]
+        L += ["", "| carrier node | marks | capacity | entries sum | entered more than once |", "|---|---|---|---|---|"]
+        for n in s["carrier_nodes"]:
+            L.append(f"| {n['id']} | {', '.join(n['marks'])} | {n['capacity_m3']} | {n['entries_sum_m3']} | "
+                     f"{n['entered_more_than_once_m3']} |")
+        L += ["", "| beam mark | T | zones | exclusive capacity | shared entries | SHORT bounds | group | proposal |",
+              "|---|---|---|---|---|---|---|---|"]
         for mk, b in s["beam_marks"].items():
-            L.append(f"| {mk} | {b['T_m3']} | {b['zones_m3']} | {b['carriers_m3']} | "
-                     f"{b.get('SHORT', b.get('BEYOND'))} |")
+            L.append(f"| {mk} | {b['T_m3']} | {b['zones_m3']} | {b['capacity_exclusive_m3']} | "
+                     f"{b['capacity_shared_entries_m3']} | {b['short_bounds_m3'][0]} .. {b['short_bounds_m3'][1]} | "
+                     f"{b['group']} | {b['proposal']} |")
+        for mk, b in s["beam_marks"].items():
+            for r in b.get("per_column", []):
+                L.append(f"- {mk} at {r['column']} ({r['kind']}, inside {r['inside_m2']} m2, beside {r['beside_m2']} m2,"
+                         f" D {r['D']}): {r['proposal']}")
         if s["notes"]:
             L += [""] + [f"- {n}" for n in s["notes"]]
         L.append("")

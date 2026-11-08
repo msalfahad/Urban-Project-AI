@@ -43,6 +43,21 @@ R-T600-3 READINGS OF THE COMPARED SET. Where two comparisons used different colu
       A x D_low where only the printed lower depth is known, labelled LOWER_BOUND), never chosen by majority and never
       netted; the physical joint does not depend on the set, only the label does.
 
+r2 (Verifier 2026-11-07T23:58Z, GATE A (e) + (h)):
+R-T600-1 (r2) CARRIER CAPACITY ONCE PER PHYSICAL NODE. A carrier crossing is the solid where the framing beam's
+      drawn strip (its lateral band range, extended along its own axis) crosses the carrier's drawn strip (lateral range
+      along the carrier axis): a parallelogram whose length on the framing axis is w_carrier / sin(theta), never the
+      T-229 perpendicular extent; near-parallel members (sin < 0.2) have no crossing (the recorded extent is kept,
+      labelled RECORDED_PARALLEL). Crossings whose plan polygons overlap (any marks, any pieces) are ONE node; the
+      node's capacity is the depth-layered union x the printed depths, entered once (CARRIER_NODE term per node).
+      A single-entry node keeps L x his b x D; a shared node needs every entry's drawn width = his b within 1 cm
+      (TOL_M), else it is refused. Ring / hand items without a band enter the census by a tangent-strip superset.
+R-T600-1 (r2) SHORT IS NOT A CAUSE. Per beam mark the zones and carriers are a CAPACITY (upper bound of where his
+      through-support volume can lie). Marks sharing a node form a group; UNRESOLVED_SHORT = capacity - T per group
+      (one term per group, named by its marks), with per-mark bounds [exclusive capacity - T_m, exclusive + shared
+      entries - T_m]. A who-is-right proposal per mark is made only where the group is that mark alone and
+      |SHORT| <= TOL_M x b x D (his row runs through every zone of the mark within the drawn-edge tolerance).
+
 Provenance: T-600 (2026-11-07), on UP-CONC-JOINT-001 1.0.0 (T-599), R-T395-4 (allowance), T-229 (carried members),
 T-551 / T-572 / T-576 (column readings), T-545 (beam marks), F-C-P02-1 (2F footprint vs un-rowed run). Scope: every
 villa. Status: PROPOSED (research; no line, rule register or method version changes).
@@ -57,7 +72,9 @@ from shapely.ops import unary_union
 Q6 = Decimal("0.000001")
 TOL_M = Decimal("0.01")          # R-T395-4 drawn-edge fit tolerance on a support allowance (m)
 TERM_CLASSES = ("OVERLAP_CROSSING", "OVERLAP_REPEAT", "BESIDE", "UNCOVERED", "OUTSIDE_SET_OPEN", "OUTSIDE_SET_HELD",
-                "OUTSIDE_SET_NOLINE", "CARRIER_CROSSING", "SHORT", "BEYOND", "UNRESOLVED")
+                "OUTSIDE_SET_NOLINE", "CARRIER_NODE", "UNRESOLVED_SHORT", "BEYOND", "UNRESOLVED")
+SIN_MIN = 0.2                    # below this two members are parallel: no crossing (R-T600-1 r2)
+NODE_AREA_MIN = 1e-6             # m2: crossings sharing more plan area than this are one physical node
 
 
 class Refused(ValueError):
@@ -230,6 +247,135 @@ def held_term(v):
     if v is None or d6(v) == 0:
         raise Refused("a HELD partner's zone shown as 0 or missing")
     return d6(v)
+
+
+# ------------------------------------------------------------------------------------------------- R-T600-1 r2 nodes
+def _strip_poly(pts, half_len=500.0):
+    """The band's lateral range extended along its own axis (a long rectangle) and its drawn width (m)."""
+    from shapely.geometry import Polygon
+    ux, uy = direction_of(pts)
+    vx, vy = -uy, ux
+    sv = [p[0] * vx + p[1] * vy for p in pts]
+    su = [p[0] * ux + p[1] * uy for p in pts]
+    b0, b1 = min(sv), max(sv)
+    c = (min(su) + max(su)) / 2
+    poly = Polygon([(a * ux + b * vx, a * uy + b * vy) for a, b in ((c - half_len, b0), (c + half_len, b0),
+                                                                     (c + half_len, b1), (c - half_len, b1))])
+    return poly, b1 - b0, (ux, uy)
+
+
+def crossing(framing_pts, carrier_pts):
+    """Drawn crossing of a framing band through a carrier band (R-T600-1 r2). Returns {'poly', 'w_framing',
+    'w_carrier', 'sin', 'L'} with L = w_carrier / sin on the framing axis; refused when parallel (sin < 0.2)."""
+    import math
+    fs, fw, fu = _strip_poly(framing_pts)
+    cs, cw, cu = _strip_poly(carrier_pts)
+    sn = abs(fu[0] * cu[1] - fu[1] * cu[0])
+    if sn < SIN_MIN:
+        raise Refused("parallel members: no crossing (keep the recorded extent, RECORDED_PARALLEL)")
+    poly = fs.intersection(cs)
+    L = cw / sn
+    if not math.isclose(poly.area, fw * L, rel_tol=1e-6, abs_tol=1e-9):
+        raise Refused("crossing polygon does not match w x L")
+    return {"poly": poly, "w_framing": fw, "w_carrier": cw, "sin": sn, "L": L}
+
+
+def entry_m3(L, b, D_):
+    """Single-entry carrier capacity: drawn crossing length on the framing axis x his b x his D."""
+    return d6(Decimal(repr(round(float(L), 6))) * Decimal(str(_metres(b, "width"))) * Decimal(str(_metres(D_, "depth"))))
+
+
+def _layered_union(polys_d):
+    union, prev = Decimal(0), Decimal(0)
+    for d in sorted({dd for _, dd in polys_d}):
+        u = unary_union([p for p, dd in polys_d if dd >= d])
+        union += Decimal(repr(u.area)) * (d - prev)
+        prev = d
+    return d6(union)
+
+
+def carrier_nodes(entries):
+    """entries = [{'key', 'mark', 'poly' (plan polygon or None), 'D', 'b', 'w_drawn' (or None), 'm3' (single-entry
+    capacity)}]. Clusters entries whose polygons overlap into physical nodes (transitive). Returns a list of nodes
+    {'id', 'keys', 'marks', 'capacity_m3', 'entries_sum_m3', 'shared'} - capacity once per node."""
+    keys = [e["key"] for e in entries]
+    if len(keys) != len(set(keys)):
+        raise Refused("one carrier entry given twice (a cause counted twice)")
+    n = len(entries)
+    parent = list(range(n))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    for i in range(n):
+        for j in range(i + 1, n):
+            a, b = entries[i]["poly"], entries[j]["poly"]
+            if a is not None and b is not None and a.intersection(b).area > NODE_AREA_MIN:
+                parent[find(i)] = find(j)
+    groups = {}
+    for i in range(n):
+        groups.setdefault(find(i), []).append(entries[i])
+    out = []
+    for ee in groups.values():
+        s = sum((d6(e["m3"]) for e in ee), Decimal(0))
+        if len(ee) == 1:
+            cap = d6(ee[0]["m3"])
+        else:
+            for e in ee:
+                if e["w_drawn"] is None or abs(Decimal(repr(round(e["w_drawn"], 6))) - Decimal(str(e["b"]))) > TOL_M:
+                    raise Refused(f"shared node: {e['key']} drawn width differs from his b by more than 1 cm")
+            cap = _layered_union([(e["poly"], Decimal(str(e["D"]))) for e in ee])
+        ee = sorted(ee, key=lambda e: e["key"])
+        out.append({"id": " + ".join(e["key"] for e in ee), "keys": [e["key"] for e in ee],
+                    "marks": sorted({e["mark"] for e in ee}), "capacity_m3": cap, "entries_sum_m3": s,
+                    "shared": len(ee) > 1})
+    return sorted(out, key=lambda x: x["id"])
+
+
+def assert_nodes_once(claims):
+    """claims = [(key, plan polygon, m3)] entered as separate capacity terms. Two claims sharing plan area are one
+    physical node entered twice: refused (the adverse case 'one node, two marks')."""
+    for i in range(len(claims)):
+        for j in range(i + 1, len(claims)):
+            a, b = claims[i][1], claims[j][1]
+            if a is not None and b is not None and a.intersection(b).area > NODE_AREA_MIN:
+                raise Refused(f"one physical node entered twice: {claims[i][0]} / {claims[j][0]}")
+
+
+def mark_groups(mark_nodes):
+    """mark_nodes = {mark: set(node ids)}; marks sharing a node are one group (transitive). Returns sorted list of
+    sorted mark tuples."""
+    marks = sorted(mark_nodes)
+    parent = {m: m for m in marks}
+
+    def find(m):
+        while parent[m] != m:
+            m = parent[m]
+        return m
+    owner = {}
+    for m in marks:
+        for nd in mark_nodes[m]:
+            if nd in owner:
+                parent[find(m)] = find(owner[nd])
+            else:
+                owner[nd] = m
+    g = {}
+    for m in marks:
+        g.setdefault(find(m), []).append(m)
+    return sorted(tuple(sorted(v)) for v in g.values())
+
+
+def short_bounds(excl_m3, shared_full_m3, T_m3):
+    """Per-mark bounds of his unrun capacity: [exclusive - T, exclusive + shared entries - T] (m3)."""
+    lo = d6(excl_m3) - d6(T_m3)
+    return lo, lo + d6(shared_full_m3)
+
+
+def short_is_zero(short_m3, b, D_):
+    """SHORT ~ 0: |SHORT| within the drawn-edge tolerance (1 cm) x his b x D."""
+    return abs(d6(short_m3)) <= d6(TOL_M * Decimal(str(b)) * Decimal(str(D_)))
 
 
 # ------------------------------------------------------------------------------------------------- R-T600-3 readings

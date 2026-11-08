@@ -71,8 +71,9 @@ def test_hand_pair_closure():
     T, J = D("0.151"), D("0.084")
     terms = [("OVERLAP_CROSSING", "K1", k1["OVERLAP_CROSSING"]), ("UNCOVERED", "K1", -k1["UNCOVERED"]),
              ("BESIDE", "K2", k2["BESIDE"]), ("UNCOVERED", "K2", -k2["UNCOVERED"]),
-             ("OUTSIDE_SET_HELD", "K3", R.held_term(k3["UNION"])), ("CARRIER_CROSSING", "M1 carrier", D("0.024")),
-             ("SHORT", "M1", -m1["SHORT"]), ("SHORT", "M2", D(0)), ("SHORT", "M3", D(0)),
+             ("OUTSIDE_SET_HELD", "K3", R.held_term(k3["UNION"])), ("CARRIER_NODE", "M1 carrier", D("0.024")),
+             ("UNRESOLVED_SHORT", "M1", -m1["SHORT"]), ("UNRESOLVED_SHORT", "M2", D(0)),
+             ("UNRESOLVED_SHORT", "M3", D(0)),
              ("BEYOND", "M4", -m4["BEYOND"])]
     by = R.pair_closure(T - J, terms)
     assert sum(D(v) for v in by.values()) == D("0.067000")
@@ -113,6 +114,69 @@ def test_hand_oblique_strip_and_repeat():
     assert t["UNCOVERED"] == D("0.024000")                              # 0.10 - 0.04 m2 outside the strip x 0.40
 
 
+
+# ---- r2: carrier nodes (hand villa "V600", metres) -------------------------------------------------------------------
+# carrier CR 0.90 wide on an axis at 53.6 deg through the origin; framing W (from the west) and E (from the east) on the
+# X axis, 0.20 wide (y -0.10 .. 0.10), both D 0.50, b 0.20; N (vertical, x 0.30 .. 0.50) D 0.50 b 0.20.
+# crossing on the X axis: L = 0.90 / sin 53.6 = 0.90 / 0.804894 = 1.118160; W and E occupy the same parallelogram: node once.
+import math  # noqa: E402
+TH = math.radians(53.6)
+CU = (math.cos(TH), math.sin(TH))
+CV = (-CU[1], CU[0])
+CR = [(s_ * CU[0] + t_ * CV[0], s_ * CU[1] + t_ * CV[1]) for s_, t_ in ((-5, -0.45), (5, -0.45), (5, 0.45), (-5, 0.45))]
+W = [(-6.0, -0.1), (-0.8, -0.1), (-0.8, 0.1), (-6.0, 0.1)]
+E = [(0.8, -0.1), (6.0, -0.1), (6.0, 0.1), (0.8, 0.1)]
+N = [(0.30, 1.0), (0.50, 1.0), (0.50, 6.0), (0.30, 6.0)]
+
+
+def _entry(key, mark, band, D_="0.50", b="0.20"):
+    x = R.crossing(band, CR)
+    return {"key": key, "mark": mark, "poly": x["poly"], "D": D(D_), "b": D(b), "w_drawn": x["w_framing"],
+            "m3": R.entry_m3(x["L"], b, D_), "L": x["L"]}
+
+
+def test_hand_oblique_crossing_on_the_framing_axis():
+    x = R.crossing(W, CR)
+    assert x["L"] == pytest.approx(0.90 / math.sin(TH), abs=1e-9)          # not the 0.90 perpendicular extent
+    assert x["poly"].area == pytest.approx(0.20 * 0.90 / math.sin(TH), abs=1e-9)
+    assert R.entry_m3(x["L"], "0.20", "0.50") == D("0.111816")             # 0.90 / 0.804894 = 1.118160 x 0.20 x 0.50
+    with pytest.raises(R.Refused):
+        R.crossing(W, E)                                                    # collinear: no crossing
+
+
+def test_hand_node_entered_by_two_marks_counted_once():
+    nodes = R.carrier_nodes([_entry("W", "MW", W), _entry("E", "ME", E)])
+    assert len(nodes) == 1 and nodes[0]["shared"] and nodes[0]["marks"] == ["ME", "MW"]
+    n = nodes[0]
+    assert n["capacity_m3"] == D("0.111816") and n["entries_sum_m3"] == D("0.223632")
+    # a third mark crossing the same carrier at another angle and overlapping part of the node joins it (union)
+    nodes = R.carrier_nodes([_entry("W", "MW", W), _entry("E", "ME", E), _entry("N", "MN", N)])
+    assert len(nodes) == 1 and nodes[0]["marks"] == ["ME", "MN", "MW"]
+    xw, xn = R.crossing(W, CR)["poly"], R.crossing(N, CR)["poly"]
+    exp = R.d6(D(repr(xw.union(xn).area)) * D("0.50"))
+    assert nodes[0]["capacity_m3"] == exp < nodes[0]["entries_sum_m3"]
+    groups = R.mark_groups({"MW": {nodes[0]["id"]}, "ME": {nodes[0]["id"]}, "MX": {"other"}})
+    assert groups == [("ME", "MW"), ("MX",)]
+
+
+def test_adverse_one_node_two_marks_refused():
+    a, b = _entry("W", "MW", W), _entry("E", "ME", E)
+    with pytest.raises(R.Refused):
+        R.assert_nodes_once([(a["key"], a["poly"], a["m3"]), (b["key"], b["poly"], b["m3"])])
+    R.assert_nodes_once([(a["key"], a["poly"], a["m3"]), ("far", box(50, 50, 51, 51), D("0.1"))])
+    bad = dict(b, w_drawn=0.30)                                              # drawn 0.30 vs his b 0.20
+    with pytest.raises(R.Refused):
+        R.carrier_nodes([a, bad])
+    with pytest.raises(R.Refused):
+        R.carrier_nodes([a, dict(a)])                                        # one entry twice
+
+
+def test_short_bounds_and_tolerance():
+    lo, hi = R.short_bounds("0.30", "0.11", "0.25")
+    assert (lo, hi) == (D("0.050000"), D("0.160000"))
+    assert R.short_is_zero("0.000073", "0.20", "0.40") and not R.short_is_zero("0.0009", "0.20", "0.40")
+
+
 # ---- adverse -------------------------------------------------------------------------------------------------------
 def test_adverse_cause_counted_twice_refused():
     with pytest.raises(R.Refused):
@@ -128,7 +192,9 @@ def test_adverse_held_conflict_never_zero_and_missing_refused():
     with pytest.raises(R.Refused):
         R.held_term(None)
     with pytest.raises(R.Refused):
-        R.pair_closure("0.01", [("SHORT", "M1", None)])
+        R.pair_closure("0.01", [("UNRESOLVED_SHORT", "M1", None)])
+    with pytest.raises(R.Refused):
+        R.pair_closure("0.01", [("SHORT", "M1", "0.01")])                   # r2: SHORT is not a cause class
 
 
 def test_adverse_units_percent_and_open_sum():
@@ -190,15 +256,61 @@ def test_villa_columns_and_marks_reconcile():
         J = sum(D(c["JOINT"]) for c in s["columns"].values() if c["kind"] == "REC")
         assert J == D(s["joint_head_J_m3"])
         for mk, b in s["beam_marks"].items():
-            z = D(b["zones_m3"]) + D(b["carriers_m3"])
-            assert z - D(b["T_m3"]) == D(b.get("SHORT", b.get("BEYOND"))), mk
+            lo, hi = (D(x) for x in b["short_bounds_m3"])
+            assert lo == D(b["capacity_exclusive_m3"]) - D(b["T_m3"]), mk
+            assert hi - lo == D(b["capacity_shared_entries_m3"]), mk
+        # group closure: zones + node capacities - T = group SHORT / BEYOND, each group once
+        for g in s["groups"]:
+            mk = g.split(" + ")
+            cap = sum(D(s["beam_marks"][m]["zones_m3"]) for m in mk) + sum(
+                D(n["capacity_m3"]) for n in s["carrier_nodes"] if set(n["marks"]) & set(mk))
+            T = sum(D(s["beam_marks"][m]["T_m3"]) for m in mk)
+            b = s["beam_marks"][mk[0]]
+            assert cap - T == D(b.get("group_SHORT", b.get("group_BEYOND"))), g
+
+
+def test_villa_carrier_capacity_once_per_node():
+    """r2 (Verifier 23:58): B27 node entered by B5 and B4 (and CB4) counted once; orthogonal entries unchanged."""
+    gf = _doc()["storeys"]["GF"]
+    keys = [k for n in gf["carrier_nodes"] for k in n["id"].split(" + ")]
+    assert len(keys) == len(set(keys))                                   # every entry in exactly one node
+    b27 = next(n for n in gf["carrier_nodes"] if "B5 GF:BAND0017 -> GF:BAND0048.1" in n["id"])
+    assert b27["marks"] == ["B4", "B5", "CB4"] and b27["shared"]
+    assert D(b27["capacity_m3"]) < D(b27["entries_sum_m3"])
+    b22 = next(n for n in gf["carrier_nodes"] if "CB3 GF:BAND0019.1 -> GF:BAND0045" in n["id"])
+    assert b22["marks"] == ["B4", "CB3"] and D(b22["capacity_m3"]) == D("0.074690")   # deeper CB3 (0.75) covers B4
+    car = {c["key"]: c for c in gf["beam_marks"]["B4"]["carriers"]}
+    assert \
+        abs(D(car["B4 GF:BAND0018 -> GF:BAND0048.2"]["L_m"]) - D("1.120")) < D("0.002")   # 0.90 / sin 53.6 deg
+    assert car["B4 GF:BAND0011 -> GF:BAND0044.1"]["entry_m3"] == "0.045070"           # orthogonal: as T-229
+    f1 = _doc()["storeys"]["1F"]
+    n = next(n for n in f1["carrier_nodes"] if n["shared"])
+    assert n["marks"] == ["B2", "CB13"] and n["capacity_m3"] == "0.067425"
+    for st in ("GF", "1F"):
+        terms = [t for t in _doc()["storeys"][st]["terms"] if t[0] == "CARRIER_NODE"]
+        assert sum(D(t[2]) for t in terms) == sum(D(n["capacity_m3"]) for n in _doc()["storeys"][st]["carrier_nodes"])
+        assert "SHORT" not in _doc()["storeys"][st]["by_class_m3"]                    # r2: never a cause
+
+
+def test_villa_per_mark_proposals_only_where_short_zero():
+    for st in ("GF", "1F"):
+        for mk, b in _doc()["storeys"][st]["beam_marks"].items():
+            if b["proposal"].startswith("PER-MARK"):
+                assert b["group"] == mk and b["capacity_shared_entries_m3"] == "0"
+                assert abs(D(b["short_bounds_m3"][0])) <= D("0.001"), mk
+            if b.get("per_column"):
+                assert b["proposal"].startswith(("PER-MARK", "CONDITIONAL")), mk
+    gf = _doc()["storeys"]["GF"]["beam_marks"]
+    assert {m for m, b in gf.items() if b["proposal"].startswith("PER-MARK")} == {"B2", "CB5", "CB7"}
+    assert gf["CB6"]["proposal"].startswith("CONDITIONAL")
 
 
 def test_villa_b7_row_traced():
     b7 = _doc()["storeys"]["GF"]["beam_marks"]["B7"]
     assert D(b7["T_m3"]) == D("0.354452")                                # 0.234000 through + 0.120452 untraced
-    assert "SHORT" in b7 and D(b7["SHORT"]) >= 0                         # inside the drawn closing faces
-    assert D(b7["zones_m3"]) + D(b7["carriers_m3"]) == D("0.532430")     # 3.55 m x 0.20 x 0.75 (T-576)
+    assert b7["group"] == "B7" and D(b7["group_SHORT"]) == D("0.177978")  # inside the drawn closing faces
+    assert D(b7["capacity_exclusive_m3"]) == D("0.532430")               # 3.55 m x 0.20 x 0.75 (T-576)
+    assert len(b7["carriers"]) == 8 and not any(c["node_shared"] for c in b7["carriers"])   # ring ends distinct
 
 
 def test_villa_readings_reproduce_reported_totals():

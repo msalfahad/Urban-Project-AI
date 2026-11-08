@@ -1,6 +1,6 @@
 # T-600 column-beam pair residual by cause (generated)
 
-Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED; R-T600-1 .. 3 (PROPOSED); UP-CONC-JOINT-001 1.0.0 (LEAD_ADOPTED). engine / drawing figures and terms in m3; no row, length or count of the freelancer.
+Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELEASED; R-T600-1 .. 3 r2 (PROPOSED; carrier node once, SHORT not a cause); UP-CONC-JOINT-001 1.0.0 (LEAD_ADOPTED). engine / drawing figures and terms in m3; no row, length or count of the freelancer.
 
 ## GF: T 3.022166 - J 2.281250 = R 0.740916 m3 (statement pair 0.620464 + B7 folded 0.120452)
 
@@ -8,13 +8,13 @@ Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELE
 |---|---|
 | BESIDE | 0.544850 |
 | BEYOND | 0.036595 |
-| CARRIER_CROSSING | 1.794125 |
+| CARRIER_NODE | 1.720971 |
 | OUTSIDE_SET_HELD | 0.485819 |
 | OUTSIDE_SET_OPEN | 0.149875 |
 | OVERLAP_CROSSING | 0.442913 |
 | OVERLAP_REPEAT | 0.324209 |
-| SHORT | -2.426751 |
 | UNCOVERED | -0.610719 |
+| UNRESOLVED_SHORT | -2.353597 |
 
 | column | kind | zones | union | joint | overlap X / R | beside | uncovered |
 |---|---|---|---|---|---|---|---|
@@ -47,29 +47,75 @@ Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELE
 | C3 383 | REC | 0.093750 | 0.093750 | 0.093750 | 0.000000 / 0 | 0.000000 | 0.000000 |
 | C11 35C | REC | 0 | 0.000000 | 0.233750 | 0 / 0 | 0 | 0.233750 |
 
-| beam mark | T | zones | carriers | SHORT / BEYOND |
+| carrier node | marks | capacity | entries sum | entered more than once |
 |---|---|---|---|---|
-| B13 | 0.078937 | 0.276683 | 0 | 0.197746 |
-| B17 | 0.057080 | 0.338033 | 0.118125 | 0.399078 |
-| B2 | 0.208648 | 0.208721 | 0 | 0.000073 |
-| B20 | 0.179994 | 0.149875 | 0.060000 | 0.029881 |
-| B21 | 0.107932 | 0.121703 | 0.067500 | 0.081271 |
-| B24 | 0.167178 | 0.281823 | 0 | 0.114645 |
-| B26 | 0.335400 | 0.298845 | 0 | -0.036555 |
-| B29 | 0.001650 | 0.000000 | 0.168750 | 0.167100 |
-| B3 | 0.004000 | 0.071970 | 0.076000 | 0.143970 |
-| B4 | 0.037667 | 0.024991 | 0.420000 | 0.407324 |
-| B5 | 0.008340 | 0.025006 | 0.090000 | 0.106666 |
-| B7 | 0.354452 | 0.149930 | 0.382500 | 0.177978 |
-| B9 | 0.059700 | 0.089963 | 0 | 0.030263 |
-| CB1 | 0.133741 | 0.075000 | 0.131250 | 0.072509 |
-| CB2 | 0.108000 | 0.163008 | 0 | 0.055008 |
-| CB3 | 0.204186 | 0.209904 | 0.075000 | 0.080718 |
-| CB4 | 0.084012 | 0.069967 | 0.130000 | 0.115955 |
-| CB5 | 0.088000 | 0.087960 | 0 | -0.000040 |
-| CB6 | 0.112500 | 0.112515 | 0.030000 | 0.030015 |
-| CB7 | 0.119900 | 0.119946 | 0 | 0.000046 |
-| CB8 | 0.570849 | 0.742354 | 0.045000 | 0.216505 |
+| B17 GF:BAND0044.1 -> GF:BAND0041.2 | B17 | 0.118935 | 0.118935 | 0.000000 |
+| B20 GF:BAND0043.2 -> GF:BAND0025.1 | B20 | 0.059970 | 0.059970 | 0.000000 |
+| B21 GF:BAND0042 -> GF:BAND0019.3 | B21 | 0.068317 | 0.068317 | 0.000000 |
+| B29 GF:BAND0008 -> GF:BAND0042 | B29 | 0.076248 | 0.076248 | 0.000000 |
+| B29 GF:BAND0008 -> GF:BAND0045 | B29 | 0.093394 | 0.093394 | 0.000000 |
+| B3 GF:BAND0007 -> GF:BAND0021.2 | B3 | 0.015992 | 0.015992 | 0.000000 |
+| B3 GF:BAND0007 -> GF:BAND0045 | B3 | 0.039848 | 0.039848 | 0.000000 |
+| B3 GF:BAND0023.2 -> GF:BAND0036.1 | B3 | 0.020064 | 0.020064 | 0.000000 |
+| B4 GF:BAND0004 -> GF:BAND0001 | B4 | 0.019990 | 0.019990 | 0.000000 |
+| B4 GF:BAND0004 -> GF:BAND0037.1 | B4 | 0.029820 | 0.029820 | 0.000000 |
+| B4 GF:BAND0010 -> GF:BAND0042 | B4 | 0.040666 | 0.040666 | 0.000000 |
+| B4 GF:BAND0010 -> GF:BAND0047.2 | B4 | 0.065094 | 0.065094 | 0.000000 |
+| B4 GF:BAND0011 -> GF:BAND0010 | B4 | 0.020000 | 0.020000 | 0.000000 |
+| B4 GF:BAND0011 -> GF:BAND0044.1 | B4 | 0.045070 | 0.045070 | 0.000000 |
+| B4 GF:BAND0012 -> GF:BAND0014 | B4 | 0.019990 | 0.019990 | 0.000000 |
+| B4 GF:BAND0012 -> GF:BAND0029.2 | B4 | 0.020000 | 0.020000 | 0.000000 |
+| B4 GF:BAND0018 -> GF:BAND0045 + CB3 GF:BAND0019.1 -> GF:BAND0045 | B4, CB3 | 0.074690 | 0.124525 | 0.049835 |
+| B4 GF:BAND0018 -> GF:BAND0048.2 + B5 GF:BAND0017 -> GF:BAND0048.1 + CB4 GF:BAND0021.1 -> GF:BAND0048.1 | B4, B5, CB4 | 0.243784 | 0.375801 | 0.132017 |
+| B4 GF:BAND0030.1 -> GF:BAND0014 | B4 | 0.019990 | 0.019990 | 0.000000 |
+| B7 BAND0006 end -> B8 BAND0003 | B7 | 0.030000 | 0.030000 | 0.000000 |
+| B7 BAND0006 end -> CB1 BAND0041.2 | B7 | 0.052500 | 0.052500 | 0.000000 |
+| B7 ring NE arc 313 -> CB1 face 2A9 | B7 | 0.052500 | 0.052500 | 0.000000 |
+| B7 ring NW arc 2EE -> B8 face 46D | B7 | 0.030000 | 0.030000 | 0.000000 |
+| B7 ring SE arc 312 -> B17 face 42D | B7 | 0.067500 | 0.067500 | 0.000000 |
+| B7 ring SE arc 312 -> CB1 face 2A9 | B7 | 0.052500 | 0.052500 | 0.000000 |
+| B7 ring SW arc 2EF -> B17 face 42D | B7 | 0.067500 | 0.067500 | 0.000000 |
+| B7 ring SW arc 2EF -> B8 face 46D | B7 | 0.030000 | 0.030000 | 0.000000 |
+| CB1 GF:BAND0041.2 -> GF:BAND0046.2 | CB1 | 0.131644 | 0.131644 | 0.000000 |
+| CB4 GF:BAND0021.2 -> GF:BAND0043.2 | CB4 | 0.039980 | 0.039980 | 0.000000 |
+| CB6 GF:BAND0029.1 -> GF:BAND0028 | CB6 | 0.029985 | 0.029985 | 0.000000 |
+| CB8 GF:BAND0039 -> GF:BAND0014 | CB8 | 0.045000 | 0.045000 | 0.000000 |
+
+| beam mark | T | zones | exclusive capacity | shared entries | SHORT bounds | group | proposal |
+|---|---|---|---|---|---|---|---|
+| B13 | 0.078937 | 0.276683 | 0.276683 | 0 | 0.197746 .. 0.197746 | B13 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B17 | 0.057080 | 0.338033 | 0.456968 | 0 | 0.399888 .. 0.399888 | B17 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B2 | 0.208648 | 0.208721 | 0.208721 | 0 | 0.000073 .. 0.000073 | B2 | PER-MARK: his row runs through every zone and carrier of the mark (|SHORT| 0.000073 <= 0.01 x b x D): column classes of this mark realised |
+| B20 | 0.179994 | 0.149875 | 0.209845 | 0 | 0.029851 .. 0.029851 | B20 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B21 | 0.107932 | 0.121703 | 0.190020 | 0 | 0.082088 .. 0.082088 | B21 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B24 | 0.167178 | 0.281823 | 0.281823 | 0 | 0.114645 .. 0.114645 | B24 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B26 | 0.335400 | 0.298845 | 0.298845 | 0 | -0.036555 .. -0.036555 | B26 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B29 | 0.001650 | 0.000000 | 0.169642 | 0 | 0.167992 .. 0.167992 | B29 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B3 | 0.004000 | 0.071970 | 0.147874 | 0 | 0.143874 .. 0.143874 | B3 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B4 | 0.037667 | 0.024991 | 0.305611 | 0.161762 | 0.267944 .. 0.429706 | B4 + B5 + CB3 + CB4 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B5 | 0.008340 | 0.025006 | 0.025006 | 0.111981 | 0.016666 .. 0.128647 | B4 + B5 + CB3 + CB4 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B7 | 0.354452 | 0.149930 | 0.532430 | 0 | 0.177978 .. 0.177978 | B7 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B9 | 0.059700 | 0.089963 | 0.089963 | 0 | 0.030263 .. 0.030263 | B9 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB1 | 0.133741 | 0.075000 | 0.206644 | 0 | 0.072903 .. 0.072903 | CB1 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB2 | 0.108000 | 0.163008 | 0.163008 | 0 | 0.055008 .. 0.055008 | CB2 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB3 | 0.204186 | 0.209904 | 0.209904 | 0.074715 | 0.005718 .. 0.080433 | B4 + B5 + CB3 + CB4 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB4 | 0.084012 | 0.069967 | 0.109947 | 0.151868 | 0.025935 .. 0.177803 | B4 + B5 + CB3 + CB4 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB5 | 0.088000 | 0.087960 | 0.087960 | 0 | -0.000040 .. -0.000040 | CB5 | PER-MARK: his row runs through every zone and carrier of the mark (|SHORT| 0.000040 <= 0.01 x b x D): column classes of this mark realised |
+| CB6 | 0.112500 | 0.112515 | 0.142500 | 0 | 0.030000 .. 0.030000 | CB6 | CONDITIONAL: SHORT equals one carrier entry within 0.01 x b x D: his row runs through the column zones and stops at the carrier face (not proved: the split is not unique) |
+| CB7 | 0.119900 | 0.119946 | 0.119946 | 0 | 0.000046 .. 0.000046 | CB7 | PER-MARK: his row runs through every zone and carrier of the mark (|SHORT| 0.000046 <= 0.01 x b x D): column classes of this mark realised |
+| CB8 | 0.570849 | 0.742354 | 0.787354 | 0 | 0.216505 .. 0.216505 | CB8 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+- B2 at C2 32C (REC, inside 0.099643 m2, beside 0.000310 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with B3 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- B2 at C2 32F (REC, inside 0.099793 m2, beside 0.000160 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with B3, CB2 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- B2 at C1 341 (REC, inside 0.099912 m2, beside 0.000041 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with B7 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- B2 at C 34A (HELD, inside 0.039889 m2, beside 0.000779 m2, D 0.4): HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0; OVERLAP with B9 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- B2 at C 356 (HELD, inside 0.079894 m2, beside 0.001430 m2, D 0.4): HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0; BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- B2 at C3 36B (REC, inside 0.099803 m2, beside 0.000147 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB5 at C5 35F (REC, inside 0.119940 m2, beside 0.000004 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with CB6 ENGINE_RIGHT only if the CONDITIONAL run-through holds (PLAUSIBLE); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB5 at C3 365 (REC, inside 0.099950 m2, beside 0.000004 m2, D 0.4): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with B5 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB6 at C3 353 (HELD, inside 0.099590 m2, beside 0.000415 m2, D 0.75): HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0; OVERLAP with B4 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB6 at C5 35F (REC, inside 0.049993 m2, beside 0.000022 m2, D 0.75): RULE_DIFFERENCE: joint matched (his beam row bills the joint the engine column line bills once, UP-CONC-JOINT-001); no quantity error; OVERLAP with CB5 ENGINE_RIGHT only if the CONDITIONAL run-through holds (PLAUSIBLE); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB7 at C 34D (HELD, inside 0.079422 m2, beside 0.000542 m2, D 0.75): HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0; OVERLAP with B9 not provable (other row may stop short); BESIDE strip: named geometry (owner per line, T-229 / T-610)
+- CB7 at C 359 (HELD, inside 0.079951 m2, beside 0.000013 m2, D 0.75): HELD: column partner HELD (CONFLICT), matched joint stays HELD, never 0; BESIDE strip: named geometry (owner per line, T-229 / T-610)
 
 - B20 GF:BAND0043.1|GF:BAND0043.2 at 368: beside-support strip 0.090075 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
 - B24 GF:BAND0046.1|GF:BAND0046.2 at 335: beside-support strip 0.094323 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
@@ -77,6 +123,7 @@ Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELE
 - B7: complete closing-face set of T-576 (R-T576-3): curved / ring pieces have no T-229 end record; carriers at drawn widths
 - CB1 GF:BAND0041.1|GF:BAND0041.2 at 344: beside-support strip 0.057154 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
 - CB8 GF:BAND0040.1|GF:BAND0040.2 at 383: beside-support strip 0.018082 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
+- carrier B20 GF:BAND0043.2 -> GF:BAND0025.1 shares 0.0001 m2 with column zone B7|GF:BAND0025.1|END_COLUMN
 
 ## 1F: T 1.593362 - J 0.385000 = R 1.208362 m3 (statement pair 1.208362 + B7 folded 0)
 
@@ -84,13 +131,13 @@ Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELE
 |---|---|
 | BESIDE | 0.207487 |
 | BEYOND | 0.035097 |
-| CARRIER_CROSSING | 0.223750 |
+| CARRIER_NODE | 0.188034 |
 | OUTSIDE_SET_HELD | 0.883632 |
 | OUTSIDE_SET_OPEN | 0.259744 |
 | OVERLAP_CROSSING | 0.193671 |
 | OVERLAP_REPEAT | 0.079640 |
-| SHORT | -0.667897 |
 | UNCOVERED | -0.006762 |
+| UNRESOLVED_SHORT | -0.632181 |
 
 | column | kind | zones | union | joint | overlap X / R | beside | uncovered |
 |---|---|---|---|---|---|---|---|
@@ -114,17 +161,25 @@ Candidate ARCH_TAKEOFF_V3.0.58 (structural lines = V3.0.57 LINE_INDEX); NOT RELE
 | C8 69A | HELD | 0.150000 | 0.150000 |  | 0.000000 / 0 | 0.000000 |  |
 | P.C 20x50 69D | OPEN | 0.150373 | 0.075000 |  | 0.037618 / 0 | 0.037755 |  |
 
-| beam mark | T | zones | carriers | SHORT / BEYOND |
+| carrier node | marks | capacity | entries sum | entered more than once |
 |---|---|---|---|---|
-| B1 | 0.118312 | 0.151712 | 0.048000 | 0.081400 |
-| B2 | 0.104000 | 0.200481 | 0.052000 | 0.148481 |
-| B23 | 0.150396 | 0.217076 | 0 | 0.066680 |
-| B7 | 0.150000 | 0.217104 | 0 | 0.067104 |
-| CB10 | 0.131000 | 0.164123 | 0.056250 | 0.089373 |
-| CB11 | 0.394939 | 0.532949 | 0 | 0.138010 |
-| CB12 | 0.254887 | 0.219790 | 0 | -0.035097 |
-| CB13 | 0.109828 | 0.117567 | 0.067500 | 0.075239 |
-| CB9 | 0.180000 | 0.181610 | 0 | 0.001610 |
+| B1 1F:BAND0008 -> 1F:BAND0004 | B1 | 0.016144 | 0.016144 | 0.000000 |
+| B1 1F:BAND0008 -> 1F:BAND0030.1 | B1 | 0.032246 | 0.032246 | 0.000000 |
+| B2 1F:BAND0005.1 -> 1F:BAND0031.2 + CB13 1F:BAND0024.2 -> 1F:BAND0031.2 | B2, CB13 | 0.067425 | 0.103178 | 0.035753 |
+| B2 1F:BAND0007.2 -> 1F:BAND0001.2 | B2 | 0.016144 | 0.016144 | 0.000000 |
+| CB10 1F:BAND0026.2 -> 1F:BAND0031.1 | CB10 | 0.056075 | 0.056075 | 0.000000 |
+
+| beam mark | T | zones | exclusive capacity | shared entries | SHORT bounds | group | proposal |
+|---|---|---|---|---|---|---|---|
+| B1 | 0.118312 | 0.151712 | 0.200102 | 0 | 0.081790 .. 0.081790 | B1 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B2 | 0.104000 | 0.200481 | 0.216625 | 0.035888 | 0.112625 .. 0.148513 | B2 + CB13 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B23 | 0.150396 | 0.217076 | 0.217076 | 0 | 0.066680 .. 0.066680 | B23 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| B7 | 0.150000 | 0.217104 | 0.217104 | 0 | 0.067104 .. 0.067104 | B7 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB10 | 0.131000 | 0.164123 | 0.220198 | 0 | 0.089198 .. 0.089198 | CB10 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB11 | 0.394939 | 0.532949 | 0.532949 | 0 | 0.138010 .. 0.138010 | CB11 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB12 | 0.254887 | 0.219790 | 0.219790 | 0 | -0.035097 .. -0.035097 | CB12 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB13 | 0.109828 | 0.117567 | 0.117567 | 0.067290 | 0.007739 .. 0.075029 | B2 + CB13 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
+| CB9 | 0.180000 | 0.181610 | 0.181610 | 0 | 0.001610 .. 0.001610 | CB9 | NONE: capacity bound only; SHORT UNRESOLVED (his rows carry no location) |
 
 - B23 1F:BAND0031.1|1F:BAND0031.2 at 68E: beside-support strip 0.119374 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
 - CB11 1F:BAND0027.1|1F:BAND0027.2 at 69A: beside-support strip 0.030300 m3 billed by the engine beam line (T-229 SUPPORT_CUT_BESIDE in the ledger run): not a zone of his excess
