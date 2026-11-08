@@ -1,0 +1,607 @@
+{
+ "acceptance": {
+  "aggregation_re_adds_exactly": true,
+  "b6_08_state_1_56_0": "HELD (every live line HELD)",
+  "b9_04_state_1_55_0": "MISSING (the family owns no item code: no method writes a line of it)",
+  "b9_04_state_1_56_0": "PRESENT with 33 HELD line(s)",
+  "differences": [],
+  "other_family_rows_byte_equal": true,
+  "register_beside_work_pairs_1_55_0": [
+   {
+    "codes": [
+     "ARCH.WALL_PANEL",
+     "MAS.BLOCK"
+    ],
+    "family": "B9-01",
+    "kind": "REGISTER_BESIDE_WORK: a re-add over both counts the same elements twice",
+    "released": "467.7925",
+    "released_n": 13,
+    "unit": "m2"
+   }
+  ],
+  "register_beside_work_pairs_1_56_0": [],
+  "uncoded_no_family_lines_1_55_0": 91,
+  "uncoded_no_family_lines_1_56_0": 0
+ },
+ "aggregation_proof_1_56_0": [
+  {
+   "boq_lines_sum": "0",
+   "families_sum": "0",
+   "held_n": 1,
+   "lines": 1,
+   "overlay_totals_sum": "0",
+   "re_adds_exactly": true,
+   "released_lines_sum": "0",
+   "trades_sum": "0",
+   "unit": "item",
+   "unit_grand": "0"
+  },
+  {
+   "boq_lines_sum": "9395.36676",
+   "families_sum": "9395.36676",
+   "held_n": 1717,
+   "lines": 2669,
+   "overlay_totals_sum": "9395.36676",
+   "re_adds_exactly": true,
+   "released_lines_sum": "9395.36676",
+   "trades_sum": "9395.36676",
+   "unit": "kg",
+   "unit_grand": "9395.36676"
+  },
+  {
+   "boq_lines_sum": "970.468546",
+   "families_sum": "970.468546",
+   "held_n": 82,
+   "lines": 188,
+   "overlay_totals_sum": "970.468546",
+   "re_adds_exactly": true,
+   "released_lines_sum": "970.468546",
+   "trades_sum": "970.468546",
+   "unit": "lm",
+   "unit_grand": "970.468546"
+  },
+  {
+   "boq_lines_sum": "6109.048732",
+   "families_sum": "6109.048732",
+   "held_n": 634,
+   "lines": 1388,
+   "overlay_totals_sum": "6109.048732",
+   "re_adds_exactly": true,
+   "released_lines_sum": "6109.048732",
+   "trades_sum": "6109.048732",
+   "unit": "m2",
+   "unit_grand": "6109.048732"
+  },
+  {
+   "boq_lines_sum": "611.950209",
+   "families_sum": "611.950209",
+   "held_n": 310,
+   "lines": 729,
+   "overlay_totals_sum": "611.950209",
+   "re_adds_exactly": true,
+   "released_lines_sum": "611.950209",
+   "trades_sum": "611.950209",
+   "unit": "m3",
+   "unit_grand": "611.950209"
+  },
+  {
+   "boq_lines_sum": "3396.9375",
+   "families_sum": "3396.9375",
+   "held_n": 58,
+   "lines": 168,
+   "overlay_totals_sum": "3396.9375",
+   "re_adds_exactly": true,
+   "released_lines_sum": "3396.9375",
+   "trades_sum": "3396.9375",
+   "unit": "pcs",
+   "unit_grand": "3396.9375"
+  }
+ ],
+ "b6_08_rows_1_56_0": {
+  "B6-08|pcs": {
+   "boq_lines": {
+    "DOOR.LIFT_LANDING": {
+     "excluded_n": 0,
+     "held_blank_n": 3,
+     "held_bounded_n": 0,
+     "held_high": null,
+     "held_high_open_n": 0,
+     "held_low": null,
+     "held_n": 3,
+     "lines": 3,
+     "live_lines": 3,
+     "released": "0",
+     "released_n": 0,
+     "status": {
+      "HELD": 3
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 3 HELD blank"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B6",
+   "held_blank_n": 3,
+   "held_bounded_n": 0,
+   "held_high": null,
+   "held_high_open_n": 0,
+   "held_low": null,
+   "held_n": 3,
+   "lines": 3,
+   "live_lines": 3,
+   "released": "0",
+   "released_n": 0,
+   "status": {
+    "HELD": 3
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 3 HELD blank"
+  }
+ },
+ "b9_04_rows_1_55_0": {},
+ "b9_by_hand": {
+  "ARCH.WALL_PANEL|m2": {
+   "excluded_n": 0,
+   "held_n": 13,
+   "released": "467.7925",
+   "released_n": 13
+  },
+  "ARCH.WALL_RUN|lm": {
+   "excluded_n": 0,
+   "held_n": 0,
+   "released": "216.931061",
+   "released_n": 7
+  },
+  "ARCH.WALL_VOLUME|m3": {
+   "excluded_n": 0,
+   "held_n": 13,
+   "released": "84.62995",
+   "released_n": 13
+  },
+  "MAS.BLOCK|m2": {
+   "excluded_n": 0,
+   "held_n": 15,
+   "released": "467.7925",
+   "released_n": 13
+  },
+  "MAS.GLUE.AAC|kg": {
+   "excluded_n": 0,
+   "held_n": 16,
+   "released": "20.061",
+   "released_n": 1
+  },
+  "MAS.MORTAR.BLACK|m3": {
+   "excluded_n": 0,
+   "held_n": 17,
+   "released": "3.387982",
+   "released_n": 16
+  },
+  "MAS.UNITS.BLACK|pcs": {
+   "excluded_n": 0,
+   "held_n": 13,
+   "released": "3269.9375",
+   "released_n": 8
+  },
+  "MAS.UNITS.WHITE|pcs": {
+   "excluded_n": 0,
+   "held_n": 17,
+   "released": "0",
+   "released_n": 0
+  }
+ },
+ "b9_rows_1_56_0": {
+  "B9-01|m2": {
+   "boq_lines": {
+    "MAS.BLOCK": {
+     "excluded_n": 0,
+     "held_blank_n": 15,
+     "held_bounded_n": 0,
+     "held_high": null,
+     "held_high_open_n": 0,
+     "held_low": null,
+     "held_n": 15,
+     "lines": 28,
+     "live_lines": 28,
+     "released": "467.7925",
+     "released_n": 13,
+     "status": {
+      "HELD": 15,
+      "UNKNOWN": 13
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 15 HELD blank"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B9",
+   "held_blank_n": 15,
+   "held_bounded_n": 0,
+   "held_high": null,
+   "held_high_open_n": 0,
+   "held_low": null,
+   "held_n": 15,
+   "lines": 28,
+   "live_lines": 28,
+   "released": "467.7925",
+   "released_n": 13,
+   "status": {
+    "HELD": 15,
+    "UNKNOWN": 13
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 15 HELD blank"
+  },
+  "B9-01|pcs": {
+   "boq_lines": {
+    "MAS.UNITS.BLACK": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_bounded_n": 1,
+     "held_high": "4.25",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 13,
+     "lines": 21,
+     "live_lines": 21,
+     "released": "3269.9375",
+     "released_n": 8,
+     "status": {
+      "ASSUMED — OWNER-APPROVED": 6,
+      "HELD": 13,
+      "UNKNOWN": 2
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 12 HELD blank; 1 HELD bounded 0 .. 4.25"
+    },
+    "MAS.UNITS.WHITE": {
+     "excluded_n": 0,
+     "held_blank_n": 17,
+     "held_bounded_n": 0,
+     "held_high": null,
+     "held_high_open_n": 0,
+     "held_low": null,
+     "held_n": 17,
+     "lines": 17,
+     "live_lines": 17,
+     "released": "0",
+     "released_n": 0,
+     "status": {
+      "HELD": 17
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 17 HELD blank"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B9",
+   "held_blank_n": 29,
+   "held_bounded_n": 1,
+   "held_high": "4.25",
+   "held_high_open_n": 0,
+   "held_low": "0",
+   "held_n": 30,
+   "lines": 38,
+   "live_lines": 38,
+   "released": "3269.9375",
+   "released_n": 8,
+   "status": {
+    "ASSUMED — OWNER-APPROVED": 6,
+    "HELD": 30,
+    "UNKNOWN": 2
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 29 HELD blank; 1 HELD bounded 0 .. 4.25"
+  },
+  "B9-02|m3": {
+   "boq_lines": {
+    "STR.CONC.LINTEL": {
+     "excluded_n": 0,
+     "held_blank_n": 54,
+     "held_bounded_n": 6,
+     "held_high": null,
+     "held_high_open_n": 1,
+     "held_low": "0.502",
+     "held_n": 60,
+     "lines": 60,
+     "live_lines": 60,
+     "released": "0",
+     "released_n": 0,
+     "status": {
+      "HELD": 60
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 54 HELD blank; 6 HELD bounded 0.502 .. OPEN"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B9",
+   "held_blank_n": 54,
+   "held_bounded_n": 6,
+   "held_high": null,
+   "held_high_open_n": 1,
+   "held_low": "0.502",
+   "held_n": 60,
+   "lines": 60,
+   "live_lines": 60,
+   "released": "0",
+   "released_n": 0,
+   "status": {
+    "HELD": 60
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 54 HELD blank; 6 HELD bounded 0.502 .. OPEN"
+  },
+  "B9-04|kg": {
+   "boq_lines": {
+    "MAS.GLUE.AAC": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_bounded_n": 4,
+     "held_high": "885.60468",
+     "held_high_open_n": 0,
+     "held_low": "852.22278",
+     "held_n": 16,
+     "lines": 17,
+     "live_lines": 17,
+     "released": "20.061",
+     "released_n": 1,
+     "status": {
+      "HELD": 16,
+      "UNKNOWN": 1
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 12 HELD blank; 4 HELD bounded 852.22278 .. 885.60468"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B9",
+   "held_blank_n": 12,
+   "held_bounded_n": 4,
+   "held_high": "885.60468",
+   "held_high_open_n": 0,
+   "held_low": "852.22278",
+   "held_n": 16,
+   "lines": 17,
+   "live_lines": 17,
+   "released": "20.061",
+   "released_n": 1,
+   "status": {
+    "HELD": 16,
+    "UNKNOWN": 1
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 12 HELD blank; 4 HELD bounded 852.22278 .. 885.60468"
+  },
+  "B9-04|m3": {
+   "boq_lines": {
+    "MAS.MORTAR.BLACK": {
+     "excluded_n": 0,
+     "held_blank_n": 12,
+     "held_bounded_n": 5,
+     "held_high": null,
+     "held_high_open_n": 2,
+     "held_low": "0",
+     "held_n": 17,
+     "lines": 33,
+     "live_lines": 33,
+     "released": "3.387982",
+     "released_n": 16,
+     "status": {
+      "ASSUMED — OWNER-APPROVED": 12,
+      "HELD": 17,
+      "UNKNOWN": 4
+     },
+     "total": null,
+     "total_state": "NO TOTAL: 12 HELD blank; 5 HELD bounded 0 .. OPEN"
+    }
+   },
+   "excluded_n": 0,
+   "group": "B9",
+   "held_blank_n": 12,
+   "held_bounded_n": 5,
+   "held_high": null,
+   "held_high_open_n": 2,
+   "held_low": "0",
+   "held_n": 17,
+   "lines": 33,
+   "live_lines": 33,
+   "released": "3.387982",
+   "released_n": 16,
+   "status": {
+    "ASSUMED — OWNER-APPROVED": 12,
+    "HELD": 17,
+    "UNKNOWN": 4
+   },
+   "total": null,
+   "total_state": "NO TOTAL: 12 HELD blank; 5 HELD bounded 0 .. OPEN"
+  }
+ },
+ "candidate_files_touched": 0,
+ "flagged_overlay_rows": [
+  {
+   "beside": {
+    "conditional_range_beside_kg": [
+     63.82125,
+     71.62425
+    ]
+   },
+   "index": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "kind": "SET",
+   "line_id": "L-4ccc5dc26bd2472b03ad",
+   "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+   "package": "T-498",
+   "row": "HOST_FACES_V5",
+   "status": "NO_BEFORE"
+  }
+ ],
+ "inputs": {
+  "research/agents_t631/out/WIRING_MANIFEST_V16.json": "be619bf1cc08e9fad82a985213f5bc4e512f738e273152bf0bd3088b9d218f4f",
+  "rules/coverage/BOQ_FAMILY_MASTER_1.55.0.json": "22cb3ffc2a747ad3992508717c0840f926def6885f695d8de6e53700821d8c99",
+  "rules/coverage/BOQ_FAMILY_MASTER_1.56.0.json": "15b2402d1602ab3c4c2c115277485d8770833e442be5927629d460bb03bddc94"
+ },
+ "lines": 5143,
+ "moved_codes": {
+  "ARCH.WALL_PANEL": {
+   "from": [
+    "B9",
+    "B9-01"
+   ],
+   "lines": 26,
+   "to": [
+    "UNCODED (NOT_A_BOQ_LINE)",
+    "UNCODED (NOT_A_BOQ_LINE)"
+   ]
+  },
+  "ARCH.WALL_RUN": {
+   "from": [
+    "B9",
+    "B9-01"
+   ],
+   "lines": 7,
+   "to": [
+    "UNCODED (NOT_A_BOQ_LINE)",
+    "UNCODED (NOT_A_BOQ_LINE)"
+   ]
+  },
+  "ARCH.WALL_VOLUME": {
+   "from": [
+    "B9",
+    "B9-01"
+   ],
+   "lines": 26,
+   "to": [
+    "UNCODED (NOT_A_BOQ_LINE)",
+    "UNCODED (NOT_A_BOQ_LINE)"
+   ]
+  },
+  "DOOR.LIFT_LANDING": {
+   "from": [
+    "UNCODED (NO_FAMILY)",
+    "UNCODED (NO_FAMILY)"
+   ],
+   "lines": 3,
+   "to": [
+    "B6",
+    "B6-08"
+   ]
+  },
+  "MAS.GLUE.AAC": {
+   "from": [
+    "UNCODED (NO_FAMILY)",
+    "UNCODED (NO_FAMILY)"
+   ],
+   "lines": 17,
+   "to": [
+    "B9",
+    "B9-04"
+   ]
+  },
+  "MAS.MORTAR.BLACK": {
+   "from": [
+    "UNCODED (NO_FAMILY)",
+    "UNCODED (NO_FAMILY)"
+   ],
+   "lines": 33,
+   "to": [
+    "B9",
+    "B9-04"
+   ]
+  },
+  "MAS.UNITS.BLACK": {
+   "from": [
+    "UNCODED (NO_FAMILY)",
+    "UNCODED (NO_FAMILY)"
+   ],
+   "lines": 21,
+   "to": [
+    "B9",
+    "B9-01"
+   ]
+  },
+  "MAS.UNITS.WHITE": {
+   "from": [
+    "UNCODED (NO_FAMILY)",
+    "UNCODED (NO_FAMILY)"
+   ],
+   "lines": 17,
+   "to": [
+    "B9",
+    "B9-01"
+   ]
+  }
+ },
+ "overlay": "V3.0.58 + WIRING MANIFEST V16 (T-631, merged 01880ae3)",
+ "released_quantities_changed": 0,
+ "rule": "R-T637-1 (reader R-T630-1 unchanged)",
+ "schema": "URBAN_T637_READER",
+ "task": "T-637",
+ "uncoded_1_55_0": [
+  {
+   "bucket": "UNCODED (NOT_A_BOQ_LINE)",
+   "item_code": "ARCH.EXTERIOR",
+   "lines": 1,
+   "unit": "m2"
+  },
+  {
+   "bucket": "UNCODED (NO_FAMILY)",
+   "item_code": "DOOR.LIFT_LANDING",
+   "lines": 3,
+   "unit": "pcs"
+  },
+  {
+   "bucket": "UNCODED (NO_FAMILY)",
+   "item_code": "MAS.GLUE.AAC",
+   "lines": 17,
+   "unit": "kg"
+  },
+  {
+   "bucket": "UNCODED (NO_FAMILY)",
+   "item_code": "MAS.MORTAR.BLACK",
+   "lines": 33,
+   "unit": "m3"
+  },
+  {
+   "bucket": "UNCODED (NO_FAMILY)",
+   "item_code": "MAS.UNITS.BLACK",
+   "lines": 21,
+   "unit": "pcs"
+  },
+  {
+   "bucket": "UNCODED (NO_FAMILY)",
+   "item_code": "MAS.UNITS.WHITE",
+   "lines": 17,
+   "unit": "pcs"
+  }
+ ],
+ "uncoded_1_56_0": [
+  {
+   "bucket": "UNCODED (NOT_A_BOQ_LINE)",
+   "item_code": "ARCH.EXTERIOR",
+   "lines": 1,
+   "unit": "m2"
+  },
+  {
+   "bucket": "UNCODED (NOT_A_BOQ_LINE)",
+   "item_code": "ARCH.WALL_PANEL",
+   "lines": 26,
+   "unit": "m2"
+  },
+  {
+   "bucket": "UNCODED (NOT_A_BOQ_LINE)",
+   "item_code": "ARCH.WALL_RUN",
+   "lines": 7,
+   "unit": "lm"
+  },
+  {
+   "bucket": "UNCODED (NOT_A_BOQ_LINE)",
+   "item_code": "ARCH.WALL_VOLUME",
+   "lines": 26,
+   "unit": "m3"
+  }
+ ]
+}

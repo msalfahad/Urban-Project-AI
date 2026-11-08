@@ -81,6 +81,7 @@ AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_
             "coverage/BOQ_FAMILY_MASTER_1.53.0.json",   # T-508: 1.52.0 + T-488 promoted (R-T485-1, census + line diff at V3.0.55) + the pending V3.0.56 package (B3-06 / B7-07 / B7-08 text; B7-07 / B7-08 item codes); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.54.0.json",   # T-310 r7: 1.53.0 + T-508 promoted (R-T485-1, census + line diff at V3.0.56) + the pending V3.0.57 package (B8-01 / B8-02 / B8-03 / B8-09 text; B8-09 owns the two pool layer codes); no owner change; read by no method
             "coverage/BOQ_FAMILY_MASTER_1.55.0.json",   # T-507: 1.54.0 + T-310 promoted (R-T485-1, census + line diff at V3.0.57) + the pending V3.0.58 package (B8-06 text: exposed-slab roof WP lines)
+            "coverage/BOQ_FAMILY_MASTER_1.56.0.json",   # T-637: 1.55.0 + R-T637-1 (UNCODED codes to families, register codes NOT_A_BOQ_LINE, V11 trade-key crosswalk); no quantity or owner change; read by no method
             "owner_decisions/URBAN_RULES_1.6.0.json",   # T-158: owner stair rule UP-STAIR-015 over 1.5.0; rule_store not yet
             "owner_decisions/URBAN_RULES_1.7.0.json",   # T-267: owner stair finish-level rule UP-STAIR-016 over 1.6.0; rule_store not yet
             "rulebook/URBAN_COMPANY_RULEBOOK_1.0.0.json",  # T-448: Company Rulebook (owner 2026-11-02); read by company_rulebook_v1 only
