@@ -1,0 +1,1924 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 + WIRING MANIFEST V15 overlay (T-630 dry run, 5,141 lines)",
+ "counts": {
+  "by_class": {
+   "A_BOUND": 33,
+   "A_CARRIED": 8,
+   "B_HELD": 24,
+   "C_DRAWING": 0,
+   "C_PENDING": 7
+  },
+  "fix_rows": 35,
+  "lines": 72,
+  "stay_held_blank": 37
+ },
+ "families": [
+  {
+   "classes": {
+    "B_HELD": 6
+   },
+   "family": "B4-01",
+   "fix_bound_m2": [
+    "0",
+    "0"
+   ],
+   "fix_rows": 0,
+   "item_code": "FIN.WALL.TILE",
+   "lines": 6
+  },
+  {
+   "classes": {
+    "A_BOUND": 1,
+    "B_HELD": 9
+   },
+   "family": "B4-03",
+   "fix_bound_m2": [
+    "44.512",
+    "49.872"
+   ],
+   "fix_rows": 1,
+   "item_code": "FIN.PLASTER",
+   "lines": 10
+  },
+  {
+   "classes": {
+    "A_BOUND": 28,
+    "B_HELD": 5
+   },
+   "family": "B4-06",
+   "fix_bound_m2": [
+    "42.722",
+    "72.202"
+   ],
+   "fix_rows": 28,
+   "item_code": "FIN.PAINT",
+   "lines": 33
+  },
+  {
+   "classes": {
+    "A_CARRIED": 3,
+    "B_HELD": 1
+   },
+   "family": "B4-07",
+   "fix_bound_m2": [
+    "0",
+    "0"
+   ],
+   "fix_rows": 0,
+   "item_code": "ARCH.FACADE",
+   "lines": 4
+  },
+  {
+   "classes": {
+    "A_CARRIED": 3
+   },
+   "family": "B4-07",
+   "fix_bound_m2": [
+    "0",
+    "0"
+   ],
+   "fix_rows": 0,
+   "item_code": "FIN.EXT.FINISH",
+   "lines": 3
+  },
+  {
+   "classes": {
+    "B_HELD": 1,
+    "C_PENDING": 7
+   },
+   "family": "B4-08",
+   "fix_bound_m2": [
+    "0",
+    "0"
+   ],
+   "fix_rows": 0,
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "lines": 8
+  },
+  {
+   "classes": {
+    "A_BOUND": 3,
+    "A_CARRIED": 2
+   },
+   "family": "B5-01",
+   "fix_bound_m2": [
+    "0",
+    "15.4842"
+   ],
+   "fix_rows": 5,
+   "item_code": "FIN.CEILING",
+   "lines": 5
+  },
+  {
+   "classes": {
+    "A_BOUND": 1
+   },
+   "family": "B5-04",
+   "fix_bound_m2": [
+    "0",
+    "0.98142"
+   ],
+   "fix_rows": 1,
+   "item_code": "FIN.CEILING.BULKHEAD",
+   "lines": 1
+  },
+  {
+   "classes": {
+    "B_HELD": 2
+   },
+   "family": "B5-06",
+   "fix_bound_m2": [
+    "0",
+    "0"
+   ],
+   "fix_rows": 0,
+   "item_code": "FIN.DOME.SOFFIT",
+   "lines": 2
+  }
+ ],
+ "fix_bound_total_m2": [
+  "87.234",
+  "138.53962"
+ ],
+ "lines": [
+  {
+   "carrier": "FIN.EXT.FINISH 1F face rows (T-314)",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "A_CARRIED",
+   "element_id": "1F-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-43527ae4e8ec75c56636",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md s.1 / s.3",
+    "BOARD T-314 row",
+    "research/agents_t630 F-T630-3"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "FIN.EXT.FINISH 2F face rows (T-314)",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "A_CARRIED",
+   "element_id": "2F-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md s.1 / s.3",
+    "BOARD T-314 row",
+    "research/agents_t630 F-T630-3"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "FIN.EXT.FINISH GF face rows (T-314)",
+   "cause": "register line beside the work line (REGISTER_BESIDE_WORK, F-T630-3 pattern): the storey's facade m2 is the same face set as FIN.EXT.FINISH of that storey, measured once in the merged T-305 / T-337 / T-348 r2 / T-567 face ledgers and wired as face rows by T-314 (QUEUED, owner Gate B order item 2); an own figure here would count the faces twice",
+   "class": "A_CARRIED",
+   "element_id": "GF-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md s.1 / s.3",
+    "BOARD T-314 row",
+    "research/agents_t630 F-T630-3"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "plinth below the lowest F.F.L.: the external ground level is not printed (no site / external works plan, D-62); his planes start at +1.00 (owner Q-07 B, T-567 RULE_DIFFERENCE -31.5245 m2); the plinth faces stay their own line until the ground level is issued",
+   "class": "B_HELD",
+   "element_id": "GF-FACADE:facade below F.F.L. (plinth)",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "ARCH.FACADE",
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t337/CANDIDATE_V3022_T337.json PLINTH_NOT_MEASURED",
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md",
+    "DESIGNER_CLARIFICATIONS D-62"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W17 curved 1F window: opening 3.29 x 3.00 is owner Q-76 A, but the frame position in the 0.20 m curved wall (IN / OUT reveal depth) is not measured (T-313: curved, T-302 developed hole; T-302 s.78 'jamb reveals 0.20 deep, not measured'). Lead for the read: T-302 s.1 puts the glass line ON the room face BD2 (r 2.135), which would make IN = NONE (a face that does not exist: EXCLUDED with evidence, never 0) and OUT = the full radial 0.20 between jambs BD9 / BD7 under the arched head (2.168 / 2.219 at the jambs, 3.00 crown); to confirm by handle on the architectural DXF (frame lines vs both arcs) before any figure",
+   "class": "C_PENDING",
+   "element_id": "1F-REVEAL-W17:IN:JAMBS_HEAD:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-3e3a3bf8e2fd272a4c8e",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/T-313_OPENING_REVEAL_LEDGER.md",
+    "research/agents_t302/T-302_W17_ARCHED_HOLE.md",
+    "OWNER_QUESTIONS_ANSWERED Q-76 A"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W17 curved 1F window: opening 3.29 x 3.00 is owner Q-76 A, but the frame position in the 0.20 m curved wall (IN / OUT reveal depth) is not measured (T-313: curved, T-302 developed hole; T-302 s.78 'jamb reveals 0.20 deep, not measured'). Lead for the read: T-302 s.1 puts the glass line ON the room face BD2 (r 2.135), which would make IN = NONE (a face that does not exist: EXCLUDED with evidence, never 0) and OUT = the full radial 0.20 between jambs BD9 / BD7 under the arched head (2.168 / 2.219 at the jambs, 3.00 crown); to confirm by handle on the architectural DXF (frame lines vs both arcs) before any figure",
+   "class": "C_PENDING",
+   "element_id": "1F-REVEAL-W17:OUT:JAMBS_HEAD:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-ee6793c9a96916a5a7c9",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/T-313_OPENING_REVEAL_LEDGER.md",
+    "research/agents_t302/T-302_W17_ARCHED_HOLE.md",
+    "OWNER_QUESTIONS_ANSWERED Q-76 A"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W17 curved 1F window: opening 3.29 x 3.00 is owner Q-76 A, but the frame position in the 0.20 m curved wall (IN / OUT reveal depth) is not measured (T-313: curved, T-302 developed hole; T-302 s.78 'jamb reveals 0.20 deep, not measured'). Lead for the read: T-302 s.1 puts the glass line ON the room face BD2 (r 2.135), which would make IN = NONE (a face that does not exist: EXCLUDED with evidence, never 0) and OUT = the full radial 0.20 between jambs BD9 / BD7 under the arched head (2.168 / 2.219 at the jambs, 3.00 crown); to confirm by handle on the architectural DXF (frame lines vs both arcs) before any figure",
+   "class": "C_PENDING",
+   "element_id": "1F-STRIP-COP-001:window reveal strip",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-c90d5d6c06a671fc3b99",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/T-313_OPENING_REVEAL_LEDGER.md",
+    "research/agents_t302/T-302_W17_ARCHED_HOLE.md",
+    "OWNER_QUESTIONS_ANSWERED Q-76 A"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W02 outside jambs: the window count (one drawn vs two rendered with a pier) is open (D-53), so the jamb count and the head run are not settled; head 0.080 x 6.330 = 0.5064 m2 holds only for the one-window reading",
+   "class": "B_HELD",
+   "element_id": "GF-REVEAL-W02:OUT:JAMBS_HEAD:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-bcc55693d203e384d46e",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv W02 OUT",
+    "DESIGNER_CLARIFICATIONS D-53",
+    "research/agents_t627/T-627_OPENING_AREA_EVIDENCE.md s.2 (W02 waits on D-53)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W03 curved floor glazing: the frame position in the curved wall (reveal depth per side) was never measured (T-313 UNRESOLVED 'depth not measured'; T-197 left the GF curved glazing band unrun); to read by handle on the architectural DXF (frame band vs inner / outer wall arcs), developed along the arc (T-302 method); heights are printed (D-45 list)",
+   "class": "C_PENDING",
+   "element_id": "GF-REVEAL-W03:IN:JAMBS_HEAD:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-e21b84e60826b8be59fa",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv W03",
+    "research/agents_t197/T-197_CURVED_GEOMETRY.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W03 curved floor glazing: the frame position in the curved wall (reveal depth per side) was never measured (T-313 UNRESOLVED 'depth not measured'; T-197 left the GF curved glazing band unrun); to read by handle on the architectural DXF (frame band vs inner / outer wall arcs), developed along the arc (T-302 method); heights are printed (D-45 list)",
+   "class": "C_PENDING",
+   "element_id": "GF-REVEAL-W03:IN:SILL:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-29637dbaa9fe1acc7b82",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv W03",
+    "research/agents_t197/T-197_CURVED_GEOMETRY.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W03 curved floor glazing: the frame position in the curved wall (reveal depth per side) was never measured (T-313 UNRESOLVED 'depth not measured'; T-197 left the GF curved glazing band unrun); to read by handle on the architectural DXF (frame band vs inner / outer wall arcs), developed along the arc (T-302 method); heights are printed (D-45 list)",
+   "class": "C_PENDING",
+   "element_id": "GF-REVEAL-W03:OUT:JAMBS_HEAD:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-e44e09189fe2941f2d21",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv W03",
+    "research/agents_t197/T-197_CURVED_GEOMETRY.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "W03 curved floor glazing: the frame position in the curved wall (reveal depth per side) was never measured (T-313 UNRESOLVED 'depth not measured'; T-197 left the GF curved glazing band unrun); to read by handle on the architectural DXF (frame band vs inner / outer wall arcs), developed along the arc (T-302 method); heights are printed (D-45 list)",
+   "class": "C_PENDING",
+   "element_id": "GF-REVEAL-W03:OUT:SILL:HELD",
+   "family": "B4-08",
+   "group": "B4",
+   "item_code": "ARCH.WINDOW_REVEAL",
+   "line_id": "L-30133ea5a4fb6847c519",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv W03",
+    "research/agents_t197/T-197_CURVED_GEOMETRY.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "T-314 integration package (face rows keyed to the T-305 / T-337 ledger)",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "A_CARRIED",
+   "element_id": "1F-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "BOARD T-314 row",
+    "research/agents_t305/T-305_EXTERIOR_PLASTER_SIGMA_LEDGER.md",
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "T-314 integration package (face rows keyed to the T-305 / T-337 ledger)",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "A_CARRIED",
+   "element_id": "2F-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "BOARD T-314 row",
+    "research/agents_t305/T-305_EXTERIOR_PLASTER_SIGMA_LEDGER.md",
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "T-314 integration package (face rows keyed to the T-305 / T-337 ledger)",
+   "cause": "the storey's exterior render / Sigma area is measured face by face in the merged ledgers (T-305: GF 387.285 .. 420.770 HELD on W02 / D-GF-07, 1F 234.526, 2F 132.205 in line; restated by T-337 / T-348 r2 / T-567: gross 1,166.4517846 .. 1,185.4079770 m2 incl. parapets) and is wired by T-314 (QUEUED, owner Gate B order item 2), which REPLACES this blank line by face rows; a T-640 row on the same line would collide (overlay R1)",
+   "class": "A_CARRIED",
+   "element_id": "GF-FACADE:facade",
+   "family": "B4-07",
+   "group": "B4",
+   "item_code": "FIN.EXT.FINISH",
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "BOARD T-314 row",
+    "research/agents_t305/T-305_EXTERIOR_PLASTER_SIGMA_LEDGER.md",
+    "research/agents_t567/T-567_EXTERNAL_PLASTER_RECONCILE.md"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-004:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-54b2eb0ad40cc47b9be5); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-1",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-004:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-54b2eb0ad40cc47b9be5 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-005:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.795",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.795 m2 (L-a85b83a93486fdc400f8); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-2",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-005:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-a85b83a93486fdc400f8 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-006:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.795",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.795 m2 (L-5d309e25e8b180283606); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-3",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-006:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-5d309e25e8b180283606 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-008:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.06",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.06 m2 (L-f3590fade6406f912d2e); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-4",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-008:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f3590fade6406f912d2e (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-010:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-f8a0d9bfc3e6a3f113b2); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-5",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-010:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f8a0d9bfc3e6a3f113b2 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-018:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-537fc3896f24cf408fe6); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-6",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-018:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-537fc3896f24cf408fe6 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-019:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-f38f6ecefecd7e617cac); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-7",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-019:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f38f6ecefecd7e617cac (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-OPENING-OP-020:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.81",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.81 m2 (L-0bc19199447147ca226a); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-8",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-OPENING-OP-020:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-0bc19199447147ca226a (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "paint on a plastered return whose plaster is itself HELD blank: arch A-1F-01 is drawn on no plan, elevation or section (T-313: UNKNOWN): width, height and wall thickness not established",
+   "class": "B_HELD",
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-06",
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t313/T-313_OPENING_REVEAL_LEDGER.md s.HELD",
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint.held"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.81",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.81 m2 (L-f0668097e8d872925fdf); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-9",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-D-1F-03:THROUGH:JAMBS_HEAD:VALUED",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f0668097e8d872925fdf (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-34f4545187c3c764d174); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-10",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:1F-REVEAL-D-1F-04:THROUGH:JAMBS_HEAD:VALUED",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-34f4545187c3c764d174 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "2F-OPENING-OP-001:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.81",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.81 m2 (L-ca7d121f07fd1a73536d); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-11",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-001:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-ca7d121f07fd1a73536d (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "2F-OPENING-OP-006:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-833ba74bab1404d1f6cc); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-12",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-006:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-833ba74bab1404d1f6cc (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "2F-OPENING-OP-007:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.06",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.06 m2 (L-39497d7b7639a776f8f2); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-13",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:2F-OPENING-OP-007:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-39497d7b7639a776f8f2 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-005:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.06",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.06 m2 (L-9cf5a4b4db78cf57cf7f); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-14",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-005:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-9cf5a4b4db78cf57cf7f (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-008:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.08",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.08 m2 (L-e11de0ecd42fcb0b5756); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-15",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-008:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-e11de0ecd42fcb0b5756 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-009:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.2",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.2 m2 (L-f4175f9915208dc5f9f7); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-16",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-009:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f4175f9915208dc5f9f7 (HELD)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-010:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.08",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.08 m2 (L-1f443fe4e172a90ddd7c); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-17",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-010:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-1f443fe4e172a90ddd7c (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-012:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.81",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.81 m2 (L-61825a3103a391956d70); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-18",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-012:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-61825a3103a391956d70 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-013:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.06",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.06 m2 (L-3c21b044ce980ec0ee75); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-19",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-013:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-3c21b044ce980ec0ee75 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-017:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-7dcb2bab84655929f7e8); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-20",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-017:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-7dcb2bab84655929f7e8 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-018:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-672329032e0d70329d5f); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-21",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-018:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-672329032e0d70329d5f (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-021:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.4",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.4 m2 (L-2f94dca4dd5f2ec05822); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-22",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-021:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-2f94dca4dd5f2ec05822 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-025:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.08",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 1.08 m2 (L-3ae66decd178e43c61e0); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-23",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-025:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-3ae66decd178e43c61e0 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-OPENING-OP-026:door jambs and head",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-f4e9614350ce4659d186); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-24",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-OPENING-OP-026:door jambs and head",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-f4e9614350ce4659d186 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "paint on a plastered return whose plaster is itself HELD blank: arch A-GF-01 through-wall reveal: candidate 2 x 0.150 x 2.200 + 0.150 x developed 1.223795 = 0.843569 m2 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK; the arch spring / rise is not printed (D-45), so the outline (R-T326-2) is not settled",
+   "class": "B_HELD",
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-06",
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv A-GF-01",
+    "DESIGNER_CLARIFICATIONS D-45",
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint.held"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-6ebb9be39b8c4ff4693a); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-25",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-02:THROUGH:JAMBS_HEAD:VALUED",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-6ebb9be39b8c4ff4693a (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-698dfa14c60ff86b5c60); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-26",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-10:THROUGH:JAMBS_HEAD:VALUED",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-698dfa14c60ff86b5c60 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "painted part = return face - frame-covered depth; frame detail not printed (T-561 ENGINE_OMISSION, R-T569-1); bound 0 .. the plaster m2 of the same face",
+   "class": "A_BOUND",
+   "element_id": "GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.78",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "R-T569-1: 0 .. plaster face 0.78 m2 (L-8a038e1ca7c2d73d5b13); the bound moves from 'beside' into the line state; no low end is released (0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-27",
+    "kind": "SET",
+    "rule_text": "R-T569-1 (one face, two layers): a plastered return face carries a B6 paint row on the SAME face id; while the frame-covered depth is not printed the paint row is HELD, bound beside 0 .. the plaster m2 of that face (never 0, never folded into a released paint line); a blank plaster return stays HELD by name; after wiring, every plastered return has exactly one paint row."
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-14:THROUGH:JAMBS_HEAD:VALUED",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint (T-569 MERGED 5aee8f5a; T-561 Checker 13:55Z)",
+    "plaster line L-8a038e1ca7c2d73d5b13 (RELEASED)"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "paint on a plastered return whose plaster is itself HELD blank: gate D-GF-15: width / wall thickness not established (T-313 UNRESOLVED; D-53 entrance family)",
+   "class": "B_HELD",
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-06",
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "NEW:FIN.PAINT:GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "origin": "overlay ADD (V15)",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv D-GF-15",
+    "DESIGNER_CLARIFICATIONS D-53",
+    "research/agents_t569/WIRING_MANIFEST_V8.json return_paint.held"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum; owner 3.15 m shown beside as OWNER MANUAL METHOD - PROVISIONAL",
+   "class": "B_HELD",
+   "element_id": "HL:WALL_FINISH:GF_01:PAINT",
+   "family": "B4-06",
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-cdf7f5cd2789b67004f1",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t335/CANDIDATE_V3021_T335.json (GF_01 paint formula)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum; owner 3.15 m shown beside as OWNER MANUAL METHOD - PROVISIONAL",
+   "class": "B_HELD",
+   "element_id": "HL:WALL_FINISH:GF_04:PAINT",
+   "family": "B4-06",
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-d7d6d2f765489a95c408",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t335/CANDIDATE_V3021_T335.json (GF_04 paint formula)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "2F stair-shaft band above +9.70: held only for the Checker's T-173 corrections (D-T173-1 roof panel T 18, roof B3 downstand contact), both now applied; the band keeps its held items (W27 head / sill, B20 / B23 ends, roof build-up b 0 .. 0.10) as the range, like the ST_GF / ST_1F lines of the same shaft",
+   "class": "A_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_2F:PAINT",
+   "family": "B4-06",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "47.932",
+     "held_low": "42.722",
+     "measured_net": null
+    },
+    "basis": "T-173 band above +9.70: LO-case net_lo 43.06 - D-T173-1 (W 0.104 + E 0.104 + N 0.05) - B3 contacts 0.08 = 42.722; HI-case net_hi 48.14 - (W 0.104 + E 0.104) = 47.932 m2",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-28",
+    "kind": "SET",
+    "low_end_note": "low end > 0: releasable with a HELD companion; kept bounded here because the sibling ST_GF / ST_1F bands are bounded HELD (one convention per shaft; Lead / Checker to rule for all three)"
+   },
+   "group": "B4",
+   "item_code": "FIN.PAINT",
+   "line_id": "L-5a7a5c6f070ec7142ca5",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t173/SHAFT_T173.json summary (T-173 MERGED 8b4d2c83)",
+    "BOARD_ARCHIVE T-173 verdict: D-T173-1 and B3 contacts (Checker own re-measure)",
+    "LINE_INDEX_V3_0_57 ST_GF / ST_1F lines HELD 48.52 .. 62.01 / 42.48 .. 47.67"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "arch A-1F-01 is drawn on no plan, elevation or section (T-313: UNKNOWN): width, height and wall thickness not established",
+   "class": "B_HELD",
+   "element_id": "1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-64cb94b4b8dc2cb17608",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/T-313_OPENING_REVEAL_LEDGER.md s.HELD"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-R8496F0:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-2211463bba5eeb2e4282",
+   "origin": "V3.0.57 index",
+   "room": "GF-02 wash by the dewaneya",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 is a roof mark (G2, Q-54 B HOLD, D-39); arch A-GF-01 head not printed"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RA3AD49:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-595181aa140e7efb2ac7",
+   "origin": "V3.0.57 index",
+   "room": "GF-06 kitchen",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RB62B55:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f43782d52f32b53a6f1e",
+   "origin": "V3.0.57 index",
+   "room": "GF-03 W.C. by the dewaneya",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "B_HELD",
+   "element_id": "GF-RD36087:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-a636dabcd4bc7e59169a",
+   "origin": "V3.0.57 index",
+   "room": "GF-11 basin space 110 x 135",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "room floor level +0.30 or +1.00 not drawn (T-088); doorway P-GF-01 head not printed"
+  },
+  {
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "B_HELD",
+   "element_id": "GF-RDF7D28:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3f7fb1b37e68e6d6c7b7",
+   "origin": "V3.0.57 index",
+   "room": "GF-10 W.C. 175 x 135 by the stair",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "room floor level +0.30 or +1.00 not drawn (T-088)"
+  },
+  {
+   "candidate_beside_m2": "0.843569",
+   "cause": "arch A-GF-01 through-wall reveal: candidate 2 x 0.150 x 2.200 + 0.150 x developed 1.223795 = 0.843569 m2 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK; the arch spring / rise is not printed (D-45), so the outline (R-T326-2) is not settled",
+   "class": "B_HELD",
+   "element_id": "GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-3e19506bd9e093dfb7be",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv A-GF-01",
+    "DESIGNER_CLARIFICATIONS D-45"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "gate D-GF-15: width / wall thickness not established (T-313 UNRESOLVED; D-53 entrance family)",
+   "class": "B_HELD",
+   "element_id": "GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-e70e7e48b4c15b4f5a21",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t313/REVEAL_LEDGER_T313.csv D-GF-15",
+    "DESIGNER_CLARIFICATIONS D-53"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RFAD3C4:plaster",
+   "family": "B4-03",
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-f179fc08a266294ad4a4",
+   "origin": "V3.0.57 index",
+   "room": "GF-05 driver W.C.",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "cause": "2F stair-shaft band above +9.70: held only for the Checker's T-173 corrections (D-T173-1 roof panel T 18, roof B3 downstand contact), both now applied; the band keeps its held items (W27 head / sill, B20 / B23 ends, roof build-up b 0 .. 0.10) as the range, like the ST_GF / ST_1F lines of the same shaft",
+   "class": "A_BOUND",
+   "element_id": "HL:WALL_FINISH:ST_2F:PLASTER",
+   "family": "B4-03",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "49.872",
+     "held_low": "44.512",
+     "measured_net": null
+    },
+    "basis": "T-173 band above +9.70: LO-case net_lo 44.85 - D-T173-1 (W 0.104 + E 0.104 + N 0.05) - B3 contacts 0.08 = 44.512; HI-case net_hi 50.08 - (W 0.104 + E 0.104) = 49.872 m2",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-29",
+    "kind": "SET",
+    "low_end_note": "low end > 0: releasable with a HELD companion; kept bounded here because the sibling ST_GF / ST_1F bands are bounded HELD (one convention per shaft; Lead / Checker to rule for all three)"
+   },
+   "group": "B4",
+   "item_code": "FIN.PLASTER",
+   "line_id": "L-418121a4b223cb4e8646",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t173/SHAFT_T173.json summary (T-173 MERGED 8b4d2c83)",
+    "BOARD_ARCHIVE T-173 verdict: D-T173-1 and B3 contacts (Checker own re-measure)",
+    "LINE_INDEX_V3_0_57 ST_GF / ST_1F lines HELD 48.52 .. 62.01 / 42.48 .. 47.67"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-R8496F0:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-d0858b30e0ea869bd047",
+   "origin": "V3.0.57 index",
+   "room": "GF-02 wash by the dewaneya",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 is a roof mark (G2, Q-54 B HOLD, D-39); arch A-GF-01 head not printed"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RA3AD49:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-c330b8dc47261d5ada7e",
+   "origin": "V3.0.57 index",
+   "room": "GF-06 kitchen",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RB62B55:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-96d9839bd3bca4c08a67",
+   "origin": "V3.0.57 index",
+   "room": "GF-03 W.C. by the dewaneya",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "B_HELD",
+   "element_id": "GF-RD36087:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-de4088e7012e655bb071",
+   "origin": "V3.0.57 index",
+   "room": "GF-11 basin space 110 x 135",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "room floor level +0.30 or +1.00 not drawn (T-088); doorway P-GF-01 head not printed"
+  },
+  {
+   "cause": "room floor level +0.30 or +1.00 not drawn (T-088; T-173 C-SH-2: the floor under the stair-core rooms has no edge or level); both the plaster band (floor -> 1F slab soffit, Q-72) and the tile band start from it",
+   "class": "B_HELD",
+   "element_id": "GF-RDF7D28:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-1341e0410a469089c3be",
+   "origin": "V3.0.57 index",
+   "room": "GF-10 W.C. 175 x 135 by the stair",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "room floor level +0.30 or +1.00 not drawn (T-088)"
+  },
+  {
+   "cause": "annex height: +4.30 is a roof mark, not a proven slab top (owner Q-54 B HOLD; D-06 / D-17 roof build-up; D-39 roof datum); the plaster runs to the slab underside (Q-72), the tile top / paint height follow the same unproven datum",
+   "class": "B_HELD",
+   "element_id": "GF-RFAD3C4:wall_tile",
+   "family": "B4-01",
+   "group": "B4",
+   "item_code": "FIN.WALL.TILE",
+   "line_id": "L-88c11c5d8dc1dfd7c27e",
+   "origin": "V3.0.57 index",
+   "room": "GF-05 driver W.C.",
+   "sources": [
+    "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json held_rows (T-622 MERGED)",
+    "OWNER_QUESTIONS_ANSWERED Q-54 B",
+    "DESIGNER_CLARIFICATIONS D-17 / D-39",
+    "research/agents_t292/CANDIDATE_V3015_WALL_FINISH_LINES.json rfi WALL_FINISH_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "status": "HELD",
+   "t622_waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "carrier": "L-43bf1f869e1588f1d3bd (RELEASED 51.0496 m2)",
+   "cause": "blank PARENT of the 1F living decor group line L-43bf1f869e1588f1d3bd (FIN.CEILING 1F-R78C367:ceiling#DECOR_GROUP, RELEASED 51.0496 m2): the normal / double-height split is not drawn, so the room's board is carried whole by the group line (R-T284-1, never pro rata); a figure here would count it twice",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:ceiling",
+   "family": "B5-01",
+   "fix": {
+    "after": null,
+    "basis": "the quantity is in L-43bf1f869e1588f1d3bd; the blank parent leaves the BOQ line count (proposal: RETIRE with the carrier named, Checker to rule; never 0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-30",
+    "kind": "RETIRE_CARRIED"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-fc116bb666b184740090",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9) board '1F living (group line + 2 blank parents)'",
+    "research/agents_t507/out/LINE_INDEX_V3_0_57.json"
+   ],
+   "status": "HELD"
+  },
+  {
+   "carrier": "L-43bf1f869e1588f1d3bd (RELEASED 51.0496 m2)",
+   "cause": "blank PARENT of the 1F living decor group line L-43bf1f869e1588f1d3bd (FIN.CEILING 1F-R78C367:ceiling#DECOR_GROUP, RELEASED 51.0496 m2): the normal / double-height split is not drawn, so the room's board is carried whole by the group line (R-T284-1, never pro rata); a figure here would count it twice",
+   "class": "A_CARRIED",
+   "element_id": "1F-R78C367:ceiling over void",
+   "family": "B5-01",
+   "fix": {
+    "after": null,
+    "basis": "the quantity is in L-43bf1f869e1588f1d3bd; the blank parent leaves the BOQ line count (proposal: RETIRE with the carrier named, Checker to rule; never 0)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-31",
+    "kind": "RETIRE_CARRIED"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-35341ff2e6a848b9436b",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9) board '1F living (group line + 2 blank parents)'",
+    "research/agents_t507/out/LINE_INDEX_V3_0_57.json"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "stair box top 12.9742 HELD (Q-72): his corridor 7.70 cannot hold the whole box (7.70 < 12.974); which part, if any, is in his row is not established (finish / level not printed: O-P8-02 every ceiling line is PROVISIONAL by design)",
+   "class": "A_BOUND",
+   "element_id": "2F-R4D1B62:stairwell ceiling",
+   "family": "B5-01",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "12.9742",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "stair box top under the 2F roof 12.9742 m2 drawn (T-271 / T-283 r3); finish at the box top not printed (Q-72 / O-P8-02)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-32",
+    "kind": "SET"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-dd6930fd19ca1b908c56",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9)",
+    "T-573 source T-271 / T-283 r3"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "stair top under the slab 1.750 HELD (no finish printed) + soffit pieces (counted once, in the STAIR soffit table, never here); no decor row of his (finish / level not printed: O-P8-02 every ceiling line is PROVISIONAL by design)",
+   "class": "A_BOUND",
+   "element_id": "GF-R31F8AE:stairwell ceiling",
+   "family": "B5-01",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "1.75",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "stair top under the 1F slab 1.750 m2 (T-283 r3, T-573 label); the flight soffit pieces are counted once in the STAIR soffit table (T-281), never in this line, so the open high of T-573 closes at 1.750",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-33",
+    "kind": "SET"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-2175a965bb7c48a50e6c",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9)",
+    "T-573 source T-283 r3 / T-335 FILL"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "west strip OP-003 3.80 x 0.20 (line L-4b41de HELD, no ceiling reading) (finish / level not printed: O-P8-02 every ceiling line is PROVISIONAL by design)",
+   "class": "A_BOUND",
+   "element_id": "GF-RFD4E1D:west-strip:ceiling",
+   "family": "B5-01",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.76",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "west strip OP-003 3.80 x 0.20 = 0.760 m2 drawn; no ceiling reading (finish / level) for the strip",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-34",
+    "kind": "SET"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING",
+   "line_id": "L-4b41debf41fff9e3faae",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9)",
+    "T-573 source T-431 / T-435"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "GF-RFD4E1D bulkhead HELD (edge 6.5428 m, depth not decided; owner-method bound 6.5428 x 0.15) (finish / level not printed: O-P8-02 every ceiling line is PROVISIONAL by design)",
+   "class": "A_BOUND",
+   "element_id": "GF-RFD4E1D:bulkhead",
+   "family": "B5-04",
+   "fix": {
+    "after": {
+     "class": "HELD",
+     "held_high": "0.98142",
+     "held_low": "0",
+     "measured_net": null
+    },
+    "basis": "free beam edge 6.5428 m x owner-method drop 0.15 = 0.98142 m2 high end; drop depth not decided (T-431)",
+    "before": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "id": "FR-T640-35",
+    "kind": "SET"
+   },
+   "group": "B5",
+   "item_code": "FIN.CEILING.BULKHEAD",
+   "line_id": "L-31f9b7008ea883f1b78d",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json (T-573 MERGED 587e47f9)",
+    "T-573 source T-431"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "dome intrados finish: the dome opening / closure (glazing at slab, at drum top or a closed ceiling) is a designer item (D-20, DCR-4; owner Q-29 / Q-44); T-573 keeps both lines HELD unbounded",
+   "class": "B_HELD",
+   "element_id": "DOME:EAST:intrados",
+   "family": "B5-06",
+   "group": "B5",
+   "item_code": "FIN.DOME.SOFFIT",
+   "line_id": "L-f74c0fc7f78b579e6097",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json DOME intrados",
+    "DESIGNER_CLARIFICATIONS D-20"
+   ],
+   "status": "HELD"
+  },
+  {
+   "cause": "dome intrados finish: the dome opening / closure (glazing at slab, at drum top or a closed ceiling) is a designer item (D-20, DCR-4; owner Q-29 / Q-44); T-573 keeps both lines HELD unbounded",
+   "class": "B_HELD",
+   "element_id": "DOME:WEST:intrados",
+   "family": "B5-06",
+   "group": "B5",
+   "item_code": "FIN.DOME.SOFFIT",
+   "line_id": "L-cf3e2b55648f676ffb1d",
+   "origin": "V3.0.57 index",
+   "sources": [
+    "research/agents_t573/out/T573_CEILING_RECONCILE.json DOME intrados",
+    "DESIGNER_CLARIFICATIONS D-20"
+   ],
+   "status": "HELD"
+  }
+ ],
+ "not_claimed": "development villa; nothing wired, released or verified; fix rows are proposals for the lane I manifest; V3.0.58 NOT RELEASED; V2.9 + route G unchanged",
+ "pins": {
+  "research/agents_t173/SHAFT_T173.json": "73603066376671fe",
+  "research/agents_t313/REVEAL_LEDGER_T313.csv": "2cfa42112aa470c8",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "research/agents_t569/WIRING_MANIFEST_V8.json": "c71ecdc0eb11cba4",
+  "research/agents_t573/out/T573_CEILING_RECONCILE.json": "447804a48e21142e",
+  "research/agents_t622/out/WALL_TILE_REMEASURE_T622.json": "9750dad42874b721",
+  "research/agents_t630/out/E2E_BOQ_DRY_RUN_T630.json": "e5dde7867c8fe6ad"
+ },
+ "rule": "R-T640-1",
+ "schema": "URBAN_T640_FINISH_HOLD_CENSUS_V1",
+ "scope": "B4 m2 + B5 m2 HELD-blank lines (T-630 per_line: class HELD, no bound)",
+ "task": "T-640"
+}
