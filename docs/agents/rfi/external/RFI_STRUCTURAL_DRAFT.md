@@ -225,8 +225,10 @@
 ## 38. GF lift-wall tie beam
 
 - Drawing reference: ST p.8 recommendation note 19 (tie beam at 3.00 m); ST p.14 lift details.
-- Missing or conflicting information: the tie-beam section.
-- Requested: the section (and bars) of the lift-wall tie beam.
+- Missing or conflicting information: the tie-beam section; on which sides of the shaft the tie beams run (in
+  particular across the landing-door wall); which point of the beam the 3.00 m gives (top, axis or underside) and from
+  which level it is measured.
+- Requested: the section (and bars) of the lift-wall tie beam, its sides, and its level reference.
 
 ## 39. Black block on the neighbour-side ground beams
 
