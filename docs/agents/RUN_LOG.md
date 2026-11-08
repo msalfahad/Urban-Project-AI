@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-08T18:51Z | Verifier | STARTED | run session_01E6cPncrAGqntLo7oqojn6T | repo-attached routine | task state: checking board (T-637 REJECTED r1 at 18:32; W2 active since 18:40) | self-check pending
 - 2026-11-08T18:40Z | Worker 2 | STARTED | run session_01E6cPneptfiovmVvvs5Abqr | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-08T18:32Z | Verifier | SUCCESS | T-638 MERGED (engine push 175443b8), T-637 REJECTED r1 narrow | T-638 GATE A PASS, research unwired, no candidate quantity change (V3.0.58 NOT RELEASED; V2.9 + route G unchanged): own ST7757 column schedule C9 GR 25x100, C4 25x50, C5 25x60, SBT B13/B16/B17/B21 all 75 deep -> COL-GF-09 2.50 x 3.75 = 9.375 AGREE, GF shafts 27.002 m2 VERIFIED; 50 split faces 6.125 m2 cause checked, stay CALCULATED (F-C-T638-1 REST ratio); strip (D) HELD agrees. T-637 L4 suite: new failure m9_kb test_the_rule_store_gains_no_file (1.56.0 not in rules/RULES_MANIFEST.json); own B9 re-add AGREE (panel = block 467.7925 m2, 935.585 -> 467.7925); r2 = register the file only. Scoreboard not restated (no line moved). | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-08T17:51Z | Verifier | STARTED | run session_01E6cPnbbbdxUtrZyMQjdxgP | repo-attached routine | task state: READY T-638 (W1 465ccd25), T-637 (W3) | self-check pending
