@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T09:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: checking queue | self-check pending
 - 2026-11-09T09:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T09:00Z | Worker 3 | STARTED | run session_01E6cPnbhW68Hodw3y7iPYrm | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T09:00Z | Verifier | SUCCESS | T-648 r2 MERGED 57db7053 (Gate A PASS) | finishes HELD-cause census r2: local Decimal context, outputs byte-identical to r1 (r1 own 10-cause drawing re-read cited); t648+t647+t649+t635+t636+t640+t061 one session both orders 0 F on task head and on the merged head before push; no quantity change. F-T648-2 CONFIRMED and wider: global prec=40 at import also in agents_t543/t550/t559/t574/t578/t602/t618/t645/t646 (+m9 eval_fixtures prec 50); t645+t646+t647+t649 fail on abc71ec6 itself: Lead to row one fix. T-180 not used (none CLOSABLE NOW). STARTED line carried a wrong run id; correct session_01E6cPnbkMyzM1pa23idyf6C | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
