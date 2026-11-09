@@ -89,10 +89,18 @@ set_upstream() {  # track origin/<branch> so that pull and push need no argument
   git -C "$ROOT" config "branch.$1.merge" "refs/heads/$1"
 }
 
-need_venv() { [[ -x "$PY" ]] || die "venv missing; run: bash scripts/agent_env.sh setup"; }
+req_hash() { sha256sum "$WORK/engine/requirements.txt" 2>/dev/null | cut -c1-16; }
+# owner 2026-11-09: a venv counts as ready only when its install FINISHED (the hash marker is written last) and the
+# packages import. A setup cut off mid-install (hook timeout) used to leave bin/python without pytest, and every later
+# command took that half-built venv as prepared ('No module named pytest' in about half of the runs).
+venv_ready() {
+  [[ -x "$PY" && -n "$(req_hash)" && "$(cat "$VENV/.req_hash" 2>/dev/null)" == "$(req_hash)" ]] || return 1
+  "$PY" -c 'import pytest, ezdxf, shapely' >/dev/null 2>&1
+}
+need_venv() { venv_ready || die "venv missing or incomplete; run: bash scripts/agent_env.sh setup"; }
 
 is_cloud() { [[ "${CLAUDE_CODE_REMOTE:-}" == "true" || "${AGENT_ENV_FORCE:-}" == "1" ]]; }
-prepared() { [[ -d "$WORK/engine" && -d "$WORK/board" && -x "$PY" ]]; }
+prepared() { [[ -d "$WORK/engine" && -d "$WORK/board" ]] && venv_ready; }
 
 ensure_prepared() {  # self-healing: a session whose SessionStart hook did not run prepares itself here
   prepared && { install_push_guard; return 0; }
@@ -141,14 +149,15 @@ cmd_setup() {
   done
   (( ${#missing[@]} == 0 )) || die "expected files missing: ${missing[*]}"
 
-  local req_hash
-  req_hash="$(sha256sum "$WORK/engine/requirements.txt" | cut -c1-16)"
-  if [[ -x "$PY" && "$(cat "$VENV/.req_hash" 2>/dev/null)" == "$req_hash" ]]; then
+  if venv_ready; then
     say "venv up to date"
   else
+    [[ -x "$PY" ]] && say "venv incomplete or outdated: reinstalling"
+    rm -f "$VENV/.req_hash"   # the marker is written only after a finished, importable install
     uv venv --quiet --allow-existing -p python3.11 "$VENV"
     uv pip install --quiet -p "$PY" -r "$WORK/engine/requirements.txt"
-    echo "$req_hash" > "$VENV/.req_hash"
+    "$PY" -c 'import pytest, ezdxf, shapely' >/dev/null 2>&1 || die "venv install finished but pytest / ezdxf / shapely do not import"
+    req_hash > "$VENV/.req_hash"
   fi
 
   install_push_guard
@@ -165,6 +174,7 @@ cmd_status() {
   [[ -d "$WORK/engine" ]] && say "engine $WORK/engine @ $(git -C "$WORK/engine" rev-parse --short HEAD) (origin/$ENGINE_BRANCH)"
   [[ -d "$WORK/board" ]] && say "board $WORK/board on $(git -C "$WORK/board" rev-parse --abbrev-ref HEAD) @ $(git -C "$WORK/board" rev-parse --short HEAD)"
   [[ -x "$PY" ]] && say "venv $("$PY" --version 2>&1) at $VENV"
+  [[ -x "$PY" ]] && ! venv_ready && say "venv INCOMPLETE (install unfinished or packages missing)"
   [[ -d "$PRIVATE" ]] && say "private drawings go only to $PRIVATE (git-excluded, outside every worktree)"
   [[ -f "$WORK/setup.log" ]] && say "prepared: $(tail -1 "$WORK/setup.log")"
   prepared || say "NOT PREPARED (not a cloud session, or setup failed above)"

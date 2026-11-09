@@ -13,7 +13,11 @@ R="$TMP/msalfahad/Urban-Project-AI"; mkdir -p "$R/scripts"
 cp "$HERE/scripts/agent_env.sh" "$R/scripts/agent_env.sh"
 git -C "$R" init --quiet && git -C "$R" remote add origin "https://github.com/msalfahad/Urban-Project-AI.git"
 mkdir -p "$R/.work/board" "$R/.work/venv/bin" "$R/.work/engine/research/agents_t999/sub" "$TMP/outside/research/agents_t998"
-ln -s "$(command -v python3)" "$R/.work/venv/bin/python"
+# a READY venv (owner 2026-11-09 readiness rule): finished-install marker + importable pytest / ezdxf / shapely stubs
+mkdir -p "$R/.work/venv/site"; for m in pytest ezdxf shapely; do mkdir -p "$R/.work/venv/site/$m"; touch "$R/.work/venv/site/$m/__init__.py"; done
+printf '#!/usr/bin/env bash\nPYTHONPATH="%s" exec python3 "$@"\n' "$R/.work/venv/site" > "$R/.work/venv/bin/python"; chmod +x "$R/.work/venv/bin/python"
+echo "pytest==9.1.1" > "$R/.work/engine/requirements.txt"
+sha256sum "$R/.work/engine/requirements.txt" | cut -c1-16 > "$R/.work/venv/.req_hash"
 E="$R/.work/engine/research"
 printf 'import sys\nprint("RAN", sys.flags.isolated, *sys.argv[1:])\n' > "$E/agents_t999/hello.py"
 cp "$E/agents_t999/hello.py" "$E/agents_t999/sub/deep.py"

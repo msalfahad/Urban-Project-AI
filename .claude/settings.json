@@ -24,6 +24,7 @@
       "Bash(git push * *:main *)",
       "Bash(git push main *)",
       "Bash(git push * refs/heads/main*)",
+      "Bash(git push * *:refs/heads/main*)",
       "mcp__*__add_repo",
       "mcp__*__create_session",
       "mcp__*__create_trigger",
