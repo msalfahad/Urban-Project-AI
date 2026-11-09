@@ -3,6 +3,15 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
+## Lead 2026-11-09 04:15 (since 00:19)
+
+- T-646 B13 roof layers + fence finishes 43 HELD blank: WORKED (43 / 43 classed; screed AT_LEAST 10.628996 m3 .. OPEN; Checker own ROOF-430 screed and F-NORTH faces AGREE). Decision: rows into V18 (T-649).
+- T-525 registry gate fix: WORKED (master 1.57.0 promotes T-507 only, t485 green, Checker reproduced the Drive chain V3.0.58 c9570e6c). Decision: T-649 / T-498 build on master 1.57.0; F-T525-1 stale B8-06 text cleared in T-649.
+- T-650 lintel payable form: WORKED (60 / 60 RC cast m3 under the printed schedule; B9-02 low 0.502 -> 0.991692 m3, high OPEN). Decision: V18 (T-649) after the Checker's two missing re-measures (D-1F-07, L-GF-01); F-T650-3 ruled by the Lead this run.
+- T-647 structural HELD causes 183: PARTIAL (REJECTED narrow: 17 B11 fix rows 51.574 kg called DRAWING-CONFIRMED on a count the drawing does not print). Decision: r2 TODO W1 FIRST, those 17 rows HELD as a count-convention gap with an adverse test; the rest of ec383e02 kept.
+- T-633 blockwork 39 UNKNOWN rows: WORKED (own 231.6726 vs stated 231.6737 m2, residual -0.0011 TOLERANCE; D-GF-06 head class RD -> ER proposed). Decision: class move into statement V12 (T-635).
+- T-498 blockwork materials (Gate B, owner order 2nd): CLAIMED W3 03:01, still running at 04:15. Decision: Checker's first Gate B slot when READY; T-423 r2 waits on its files.
+
 ## Lead 2026-11-09 00:15 (since 20:19)
 
 - T-637 r2 master 1.56.0: WORKED (registered in RULES_MANIFEST, L4 = 3 pre-existing failures only). Decision: grouping for T-636 / T-649.
@@ -22,13 +31,4 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - T-634 internal plaster / paint 31 rows (Gate A): WORKED (29 DRAWING-CONFIRMED, 2 DIFFER, GF-15 -0.015161 m2). Decision: V17 (T-641); statement V12 (T-635).
 - Checker T-180 P02 / P04 slots: F-C-P02-13 (arc band, depth unsourced), F-C-P02-14 and F-C-P04-1 (omissions), GF B11 ENGINE_WRONG -0.003159 m3. Decision: one fix row T-642 (S FIRST).
 
-## Lead 2026-11-08 12:13 (since 08:19)
-
-- T-615 Q-80 0.15 m block module (Gate A): WORKED (rule version 1.1.0, 175.871 m2 out of HELD, Checker own count AGREE). Decision: quantities chained in V15 (T-629) behind T-498.
-- T-620 statement + scorecard V11: WORKED (no quantity moved; floor tile UNKNOWN 41 -> 1). Decision: V12 (T-635) after the 8 Nov evidence rows merge.
-- T-622 wall tile 47 rows (Gate A): WORKED (42 DRAWING-CONFIRMED, 5 DIFFER, 3 rooms Checker-VERIFIED; GF-14 +0.086709 high, pantry -0.0328 short ENGINE_WRONG). Decision: pantry in V15; GF-14 into V16 (T-631).
-- T-623 beams / columns 18 rows (Gate A): WORKED (15 / 16 within 0.001 m3; CB12 split corrected; 2 THROUGH_SUPPORT stay UNRESOLVED). Decision: fold into V12 (T-635); Checker's B20 upstand reading later contradicted by F-C-P02-12 -> T-632.
-- T-624 beam-end open items (Gate A): WORKED (FR-T624-1..3 +0.009714 m3; B10 66.401795). Decision: V16 (T-631), cut after V15 missed it.
-- T-625, T-629: READY. Decision: T-629 first (V15 base for T-631 / T-630), T-625 second.
-- Worker 1 11:45: wrapper refused a research script; ran it with the venv python directly. Decision: board note: drive research scripts through pytest or record BLOCKED until PR #4; owner told under NEEDS FIXING.
 

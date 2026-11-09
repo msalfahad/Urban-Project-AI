@@ -92,6 +92,14 @@ quantity.
   curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
   FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
   band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- LINTEL BEARING TOLERANCE (Lead 2026-11-09 04:15; ruling F-T650-3, T-650 MERGED 2a2e28ca): OWNER TRADE B9 (B9-02).
+  T-650 confirmed the printed ST p.13 schedule covers every block wall: all 60 openings are RC cast m3, precast pcs
+  NOT_APPLICABLE on this villa (method kept for villas without a schedule). The 3 lift landing door jambs reading 0.399 m
+  are 0.39996 / 0.40004 m reaches truncated by the reader; the printed chain is 1.00 + 2 x 0.40 between columns 1.80 m
+  apart, so the physical bearing is 0.40 m (DRAWING-CONFIRMED, not a deficit). Bearing and clearance tests compare at
+  the drawing's printed precision (1 mm, rounded, never truncated); applying that to R-T516-1 is a new rule version made
+  by the package that wires those lintels. The lift landing door lintel lines stay HELD meanwhile by LIFT LANDING DOOR
+  LINTEL below (head low end), never by this tolerance.
 - PRECAST LINTEL PAYABLE FORM RESTATED (Lead 2026-11-09 00:15; system ruling F-T644-1, for T-650; supersedes the 20:15
   wording below where they differ): the AGENT_BRIEF resolution order (drawings before OWNER CONFIRMED company rules)
   governs: where the printed ST p.13 RC lintel schedule covers an opening (R-T519-1 PROJECT_RC) the lintel is an RC
