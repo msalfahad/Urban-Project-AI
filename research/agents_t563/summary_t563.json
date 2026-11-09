@@ -1,0 +1,480 @@
+{
+ "bindings": {
+  "T-454": {
+   "bindings_checked": 66,
+   "figure_rows": 11,
+   "rows_moved": 11,
+   "values_after": 0,
+   "wall_plaster_mortar_bound_m3": [
+    16.8129162,
+    17.9179282
+   ]
+  },
+  "T-489": {
+   "bindings_checked": 66,
+   "figure_rows": 11,
+   "rows_moved": 11,
+   "values_after": 0,
+   "wall_plaster_mortar_bound_m3": [
+    16.8129162,
+    17.9179282
+   ]
+  },
+  "all_equal_manifest": true,
+  "bindings_checked": 132
+ },
+ "diff_vs_v3_0_60": {
+  "CHANGED": 11,
+  "SAME": 5062
+ },
+ "extends": "ARCH_TAKEOFF_V3.0.60",
+ "fin_paint": {
+  "byte_identical": 45,
+  "lines": 45,
+  "totals_equal": true,
+  "v3_0_61": {
+   "blocked_lines": 3,
+   "bounded_lines": 7,
+   "held_high": 542.8606,
+   "held_low": 487.121,
+   "lines": 14,
+   "released": 217.2081
+  }
+ },
+ "fin_plaster": {
+  "v3_0_60": {
+   "blocked_lines": 12,
+   "bounded_lines": 8,
+   "held_high": 544.0606,
+   "held_low": 488.201,
+   "lines": 62,
+   "released": 580.5819
+  },
+  "v3_0_61": {
+   "blocked_lines": 10,
+   "bounded_lines": 14,
+   "held_high": 1006.77641,
+   "held_low": 932.72581,
+   "lines": 62,
+   "released": 363.3738
+  }
+ },
+ "identity": {
+  "added": 0,
+  "diff": {
+   "vs_base": {
+    "CHANGED": 11,
+    "SAME": 5062
+   },
+   "vs_released_v2_9": {
+    "NOT_IN_RELEASED": 3481,
+    "QUANTITY_DIFFERS": 1016,
+    "SAME_QUANTITY": 576
+   }
+  },
+  "outside_rows": 5062,
+  "outside_rows_identical_to_base": 5062,
+  "plaster_height": {
+   "paint_pairs_unchanged": 11,
+   "released_before": 4,
+   "restated": 11
+  },
+  "replaced": 11,
+  "restated": {
+   "all_after_bound_m2": [
+    840.64581,
+    895.89641
+   ],
+   "lines": 11,
+   "released_after_bound_m2": [
+    262.01799,
+    262.05199
+   ],
+   "released_before_m2": 217.2081,
+   "released_lines": 4
+  }
+ },
+ "ledger_rows": 11,
+ "lines": {
+  "v3_0_60": 5073,
+  "v3_0_61": 5073
+ },
+ "method": "ARCH_TAKEOFF_V3.0.61",
+ "rows": [
+  {
+   "after": {
+    "high": 65.25433,
+    "low": 61.46433,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-b152995525ed123ddac9",
+   "manifest_after": [
+    61.46433,
+    65.25433
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-cdf7f5cd2789b67004f1",
+   "room": "GF-01"
+  },
+  {
+   "after": {
+    "high": 43.155,
+    "low": 43.155,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "manifest_after": [
+    43.155,
+    43.155
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "BLOCKED_RFI",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-d7d6d2f765489a95c408",
+   "room": "GF-04"
+  },
+  {
+   "after": {
+    "high": 66.52899,
+    "low": 66.52899,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 56.0131
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "manifest_after": [
+    66.52899,
+    66.52899
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 56.0131
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-7f083d3e2c2702d14356",
+   "room": "GF-15"
+  },
+  {
+   "after": {
+    "high": 211.80527,
+    "low": 178.22057,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 178.805,
+    "low": 152.0505,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "manifest_after": [
+    178.22057,
+    211.80527
+   ],
+   "paint": {
+    "high": 178.805,
+    "low": 152.0505,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-c0ac22c964a42e7d71b1",
+   "room": "GF-08"
+  },
+  {
+   "after": {
+    "high": 62.607,
+    "low": 62.573,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 51.415
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "line_id": "L-af9621f43bc316a871ea",
+   "manifest_after": [
+    62.573,
+    62.607
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 51.415
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-ade6f0567f690a869499",
+   "room": "1F-01"
+  },
+  {
+   "after": {
+    "high": 63.141,
+    "low": 63.141,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 52.005
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "manifest_after": [
+    63.141,
+    63.141
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 52.005
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-d9f4ecdb6ef9a42d0220",
+   "room": "1F-04"
+  },
+  {
+   "after": {
+    "high": 62.05,
+    "low": 58.026,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 52.29,
+    "low": 48.94,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "manifest_after": [
+    58.026,
+    62.05
+   ],
+   "paint": {
+    "high": 52.29,
+    "low": 48.94,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-f53c1329983ad689b7ae",
+   "room": "1F-10"
+  },
+  {
+   "after": {
+    "high": 80.19841,
+    "low": 74.77651,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 61.7177,
+    "low": 61.4626,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-31db3c83552682d92ca3",
+   "manifest_after": [
+    74.77651,
+    80.19841
+   ],
+   "paint": {
+    "high": 61.7177,
+    "low": 61.4626,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-349db74a70e1eecda2d2",
+   "room": "1F-11"
+  },
+  {
+   "after": {
+    "high": 139.6155,
+    "low": 135.6255,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 114.3677,
+    "low": 111.0177,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-9b4a7bab033d677e2017",
+   "manifest_after": [
+    135.6255,
+    139.6155
+   ],
+   "paint": {
+    "high": 114.3677,
+    "low": 111.0177,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-be48ea84285be20645af",
+   "room": "1F-13"
+  },
+  {
+   "after": {
+    "high": 69.775,
+    "low": 69.775,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 57.775
+   },
+   "class": [
+    "RELEASED",
+    "HELD"
+   ],
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "manifest_after": [
+    69.775,
+    69.775
+   ],
+   "paint": {
+    "high": null,
+    "low": null,
+    "state": "PROVISIONAL",
+    "value": 57.775
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-5410f9045c80dd5933f0",
+   "room": "2F-03"
+  },
+  {
+   "after": {
+    "high": 31.76591,
+    "low": 27.35991,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "before": {
+    "high": 26.0002,
+    "low": 22.6502,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "class": [
+    "HELD",
+    "HELD"
+   ],
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "manifest_after": [
+    27.35991,
+    31.76591
+   ],
+   "paint": {
+    "high": 26.0002,
+    "low": 22.6502,
+    "state": "BOUNDED_EXPOSURE",
+    "value": null
+   },
+   "paint_byte_identical": true,
+   "paint_line_id": "L-c74cfb4e07bcc47bc5d6",
+   "room": "2F-01"
+  }
+ ],
+ "schema": "URBAN_T563_SUMMARY_V1",
+ "totals_moved_by_code": {
+  "FIN.PLASTER|m2": {
+   "base": {
+    "blocked_lines": 12,
+    "bounded_lines": 8,
+    "held_high": 544.0606,
+    "held_low": 488.201,
+    "lines": 62,
+    "released": 580.5819
+   },
+   "v3_0_61": {
+    "blocked_lines": 10,
+    "bounded_lines": 14,
+    "held_high": 1006.77641,
+    "held_low": 932.72581,
+    "lines": 62,
+    "released": 363.3738
+   }
+  }
+ },
+ "v3_0_60_sha256_8": "8c8a9642",
+ "v3_0_61_sha256_8": "2bc99980"
+}
