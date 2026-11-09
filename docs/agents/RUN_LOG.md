@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T05:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T04:58Z | Worker 2 | SUCCESS | T-648 READY c4d37ec8 | 198 finishes HELD lines with no committed cause (F-T636-1 B2-B8 183 + 15 B13) -> 0: OWNER_DECISION 72 (Q-45 beds 44 recomputed area x band), DESIGNER_ITEM 63, PRINTED_VALUE_GAP 34, OWNER_OPEN 14 (ORR-007, OD-1), DEPENDENCY 9, ENGINE_DEFECT 6; 1 fix row threshold L-868aee12 0.150 m2 (own DXF read AGREE), not wired; 195 causes sat in merged ledgers the T-636 reader skips (T-649). ERS: read, s.2.1 / s.7 applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T04:53Z | Verifier | STARTED | run session_01E6cPnassQVBSGAA4gCUC7y | repo-attached routine | task state: READY T-498 (W3 d037e3fb, integration package) | self-check pending
 - 2026-11-09T04:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
