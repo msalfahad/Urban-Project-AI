@@ -1,0 +1,53 @@
+{
+ "library": "URBAN_CONVENTIONS",
+ "version": "1.0.0",
+ "supersedes": null,
+ "rule": "the Urban measurement-convention library: conventions whose CHOICE the owner delegated to the project / Lead while fixing the requirement himself (e.g. Q-62 A: 'the same concrete measured once ... one convention for the whole project'). A record here is LEAD_ADOPTED under that delegation: it is a recorded rule version a row may cite, it is NOT owner-approved and NOT a company rule (rules/rulebook). Project documents (approved drawings, specification, a printed measurement basis) override it for that project; an owner decision supersedes it with a new version of this library. Existing versions are never edited; a change is the next version. Read by no released or candidate method (no quantity moves by this file).",
+ "provenance": "task T-599 (worker 1, 2026-11-07), from the Lead decision 2026-11-07 12:16 / 12:30 (agents/control docs/agents/ELEMENT_REGISTER.md 'COLUMN-BEAM JOINT', corrected entry; ENGINEERING_REASONING_STANDARD s.7 row 2026-11-07) after Checker finding F-C-T590 CONVENTION_RECORD_CONFLICT (T-590 MERGED 7855b9b2)",
+ "records": [
+  {
+   "rule_id": "UP-CONC-JOINT-001",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "LEAD_ADOPTED",
+   "owner_approved": false,
+   "title": "Column-beam joint: the column owns the joint prism to the slab top; every beam is net of the column solid (each joint once)",
+   "trade": "CONCRETE",
+   "scope": "every villa; cast-in-situ concrete columns (including columns turned off the drawing axes and planted columns standing on a beam) and every beam / ground beam / upstand beam framing into them, straight or oblique in plan. NOT in scope (own conventions, unchanged): beam-beam junctions, slab-beam (URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1 and the route G bases), stair-landing / stair-beam (Q-62 A, R-CONC-OWN-1 stair corollary, PROPOSED), neck-footing, footing-ground beam, pool base-wall.",
+   "delegation": {
+    "owner_requirement": "Q-62 A cond (owner directive 2026-10-20 12:02 UTC, OWNER_QUESTIONS_ANSWERED Q-62, OWNER_DIRECTIVE_2026-10-20): the same concrete is measured once; no double count at column-beam junctions; never deduct plan overlaps unless the volumes intersect in 3-D; keep the deduction in the ledger; one convention for the whole project. The answer requires these properties and leaves the owner element to 'the chosen convention' (choice delegated; ERS s.2.7 not met, so no owner question).",
+    "adopted_by": "Lead",
+    "adopted_on": "2026-11-07",
+    "decision_record": "ELEMENT_REGISTER 'COLUMN-BEAM JOINT' (Lead 2026-11-07 12:30, corrects the 2026-11-06 20:14 entry which named the beam); ERS s.7 rows 2026-10-31 (T-395 / T-391 / T-394, ADOPTED Lead 2026-10-31) and 2026-11-07 (T-590 / T-599)"
+   },
+   "convention": {
+    "owner_element": "COLUMN",
+    "column_height": "from its owned base (the top of the element it stands on: footing / neck / ground beam / slab top / supporting beam top for a planted column) to the SLAB TOP of the floor it carries (top of the joint), measured at the column's own position; the full column section over that height",
+    "beam_length": "each beam is measured NET of every column solid it meets: beam prism minus its 3-D intersection with the column prism. For a beam square to the column face this is face to face between column faces; for an oblique beam it is the beam prism clipped by the column outline in plan (not the axis length to the face), over the beam's depth",
+    "intersection_volume": "the 3-D intersection of the two vertical prisms = (plan intersection area of column outline and beam outline) x (overlap of their vertical extents); 0 where the extents do not overlap (a plan overlap alone is never deducted)",
+    "planted_column": "a column standing ON a beam starts at that beam's top: it has no 3-D intersection with the supporting beam, which is measured through under it (not cut); at its own head it owns its joints like any column",
+    "slab": "the slab over a column is net of the column section within the slab depth (the column runs to the slab top); slab-beam ownership is governed separately (out of scope above)",
+    "once": "every joint has exactly one owner line: never in both the column and a beam line, never in neither; a beam meeting a column on its extension beyond the column (no 3-D intersection) deducts nothing"
+   },
+   "precedence": "PROJECT DOCUMENT (a printed measurement basis or specification that states another ownership) > owner decision (a later version of this library) > this record",
+   "unknown_behavior": "where the slab-top level, the beam depth or the column outline at the joint is not established, the joint volume is HELD with its bounded exposure (zero to the full intersection) on the column line; never 0, never deducted from the beam by guess",
+   "unit": "m3",
+   "engine_conformance": "the candidate lines already bill this convention (V3.0.58 column lines slab top to slab top, R-T394-1; beams face to face, R-T395-4; Checker T-394 / T-395 verdicts): recording it moves no quantity",
+   "reference_convention_note": "a reference that bills the beam through the supports and the column clear to the beam soffit carries the SAME physical joint under the other owner: the pair is a RULE_DIFFERENCE sourced by this record only for the matched part of each joint; any remainder per storey is its own residual",
+   "provenance": [
+    "owner Q-20 (no concrete counted twice)",
+    "owner Q-62 A cond, 2026-10-20 (requirement; choice delegated)",
+    "research/agents_t189/R-CONC-OWN-1.json 1.0.0-proposed (T-189): precedence column > beam; this record adopts the column-beam pair only, the rest of R-CONC-OWN-1 stays PROPOSED",
+    "Checker verdicts T-394 (MERGED e27c5d78) and T-395 (MERGED 8cf46e7d, CB1 joint 0.135 m3 carried by the column once)",
+    "Lead decision 2026-11-07 12:16 / 12:30 (ELEMENT_REGISTER 'COLUMN-BEAM JOINT', corrected)",
+    "Checker F-C-T590 CONVENTION_RECORD_CONFLICT (T-590 Gate A 2026-11-07 11:58)"
+   ],
+   "tests": [
+    "tests/t599/test_t599.py"
+   ],
+   "code": [
+    "research/agents_t599/t599_joint_rule.py::joint_ledger"
+   ]
+  }
+ ]
+}

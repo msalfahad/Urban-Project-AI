@@ -1,0 +1,425 @@
+{
+ "task": "T-567",
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (= V3.0.57 facade lines, arch_v3058 (e))",
+ "inputs_sha256_16": {
+  "binding": "c6c8ec03e27012e6",
+  "openings": "8866005a72e4dc8c",
+  "items": "f9d3aac329df63dc",
+  "t348_fill": "b1296ed473ea1b9e",
+  "t348_recon": "1eb5d54eea4e4e9e",
+  "t346_bands": "c66331f79515792c",
+  "t324_his": "d7733acd1b1764eb",
+  "his_cells": "752c9f4e0c4546d0",
+  "line_index": "fed5141ea31bfdd9"
+ },
+ "his": {
+  "gross_J93": "1502.8400000",
+  "groups": {
+   "SW": "275.1600000",
+   "SE": "191.5425000",
+   "NE": "258.0000000",
+   "NW": "389.9375000",
+   "ROOF": "185.7040000",
+   "PARAPETS": "44.3800000",
+   "BOUNDARY": "107.2400000",
+   "DRIP": "50.8760000"
+  },
+  "openings_J97": "65.7450000",
+  "deduction_half": "32.8725000",
+  "net_invoice_r25": "1469.9675000"
+ },
+ "candidate_lines": {
+  "L-b05f70c92405dbcfbe62": {
+   "floor": "GF",
+   "item": "FIN.EXT.FINISH",
+   "class": "HELD",
+   "quantity": null
+  },
+  "L-8bb83e16cc7b104ab88b": {
+   "floor": "1F",
+   "item": "FIN.EXT.FINISH",
+   "class": "HELD",
+   "quantity": null
+  },
+  "L-d52c4f763b19aedf8b8b": {
+   "floor": "2F",
+   "item": "FIN.EXT.FINISH",
+   "class": "HELD",
+   "quantity": null
+  }
+ },
+ "candidate_families": {
+  "ARCH.FACADE": {
+   "lines": 4,
+   "valued": 0,
+   "blank": 4,
+   "valued_m2": "0.0000000"
+  },
+  "ARCH.WINDOW_REVEAL": {
+   "lines": 62,
+   "valued": 54,
+   "blank": 8,
+   "valued_m2": "12.4388660"
+  },
+  "EXT.FENCE.PLASTER": {
+   "lines": 8,
+   "valued": 0,
+   "blank": 8,
+   "valued_m2": "0.0000000"
+  },
+  "FIN.EXT.FINISH": {
+   "lines": 3,
+   "valued": 0,
+   "blank": 3,
+   "valued_m2": "0.0000000"
+  }
+ },
+ "t348_changes": [
+  [
+   "1F/NW-2/PARAPET/parapet",
+   "RE-MEASURED",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-2/SCREEN-FRONT/storey",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-2/SCREEN-BACK/storey",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-2/SCREEN-INTRADOS/reveal",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-2/SCREEN-MOULDING-STEPS/storey",
+   "NEW",
+   "HELD"
+  ],
+  [
+   "1F/NW-1/CORNER-ARC/storey",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-1/CORNER-ARC/parapet",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-3/SW-RETURN/storey",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-3/SW-RETURN/parapet",
+   "NEW",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-2/RECESS-SOFFIT/soffit",
+   "NEW",
+   "HELD"
+  ],
+  [
+   "1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
+   "RE-MEASURED",
+   "HELD"
+  ],
+  [
+   "GF/AT225/RING-INNER/slab_edge",
+   "NEW",
+   "HELD"
+  ],
+  [
+   "1F/NW-1/SLAB_EDGE_BELOW/slab_edge",
+   "REMOVED",
+   "NOT_A_FACE"
+  ],
+  [
+   "1F/NW-3/SLAB_EDGE_BELOW/slab_edge",
+   "REMOVED",
+   "NOT_A_FACE"
+  ],
+  [
+   "GF/POOL-COURT-FRONT/slab_edge",
+   "NEW",
+   "HELD"
+  ],
+  [
+   "1F/NW-5/SW-PIER-RETURNS/storey",
+   "NEW (T-567 R-T567-6)",
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1F/NW-5/SW-PIER-RETURNS/parapet",
+   "NEW (T-567 R-T567-6)",
+   "HELD"
+  ]
+ ],
+ "own_family_faces_not_in_totals": {
+  "1F/NW-2/RECESS-SOFFIT/soffit": {
+   "class": "SOFFIT",
+   "lo": "0.0000000",
+   "hi": "1.6009070",
+   "status": "HELD"
+  },
+  "1F/NW-2/SCREEN-INTRADOS/reveal": {
+   "class": "REVEAL",
+   "lo": "2.3072400",
+   "hi": "2.3072400",
+   "status": "DRAWING-CONFIRMED"
+  }
+ },
+ "blank_faces_by_name": [
+  "1F/NE-1/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-4/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-5/SLAB_EDGE_BELOW/slab_edge",
+  "1F/SE-1/SLAB_EDGE_BELOW/slab_edge",
+  "1F/SW-1/SLAB_EDGE_BELOW/slab_edge",
+  "1F/SW-2/SLAB_EDGE_BELOW/slab_edge"
+ ],
+ "our_openings_full": {
+  "fixed": "97.7888010",
+  "held_lo": "0.0000000",
+  "held_hi": "33.4850000",
+  "by_elevation": {
+   "NE": {
+    "fixed": "5.4850000",
+    "held_hi": "0.0000000",
+    "n": 4
+   },
+   "NW": {
+    "fixed": "47.5688010",
+    "held_hi": "28.4850000",
+    "n": 8
+   },
+   "PASSAGE": {
+    "fixed": "5.9500000",
+    "held_hi": "0.0000000",
+    "n": 3
+   },
+   "SE": {
+    "fixed": "19.5350000",
+    "held_hi": "5.0000000",
+    "n": 7
+   },
+   "SW": {
+    "fixed": "19.2500000",
+    "held_hi": "0.0000000",
+    "n": 16
+   }
+  }
+ },
+ "passes": {
+  "lo": {
+   "our_gross": "1166.4517846",
+   "his_gross": "1502.8400000",
+   "gross_diff": "336.3882154",
+   "residual": "0.0000000",
+   "our_openings": "97.7888010",
+   "our_net": "1068.6629836",
+   "his_net": "1469.9675000",
+   "net_diff": "401.3045164",
+   "net_diff_check": "net_diff = gross_diff - his deduction + our openings",
+   "by_cause": {
+    "ENGINE_RIGHT": "-45.4337044",
+    "HELD": "178.6799018",
+    "ROUNDING": "0.0008830",
+    "RULE_DIFFERENCE": "163.1155000",
+    "UNRESOLVED": "40.0256350"
+   },
+   "our_by_elevation": {
+    "SW": "298.6939680",
+    "SE": "172.6845000",
+    "NE": "323.1319680",
+    "NW": "200.6919236",
+    "PASSAGE": "50.2900000",
+    "ROOF (parapet inner + top)": "120.9594250"
+   },
+   "his_by_group": {
+    "SW": {
+     "drawn_matched": "253.7900000",
+     "terms": "21.3700000",
+     "his_only": "0.0000000",
+     "his": "275.1600000"
+    },
+    "SE": {
+     "drawn_matched": "150.4820000",
+     "terms": "16.1305000",
+     "his_only": "24.9300000",
+     "his": "191.5425000"
+    },
+    "NE": {
+     "drawn_matched": "281.0000000",
+     "terms": "-32.0000000",
+     "his_only": "9.0000000",
+     "his": "258.0000000"
+    },
+    "NW": {
+     "drawn_matched": "119.1423210",
+     "terms": "13.1281030",
+     "his_only": "257.6670760",
+     "his": "389.9375000"
+    },
+    "ROOF": {
+     "drawn_matched": "152.1490800",
+     "terms": "33.5549200",
+     "his_only": "0.0000000",
+     "his": "185.7040000"
+    },
+    "PARAPETS": {
+     "drawn_matched": "38.8403450",
+     "terms": "5.5396550",
+     "his_only": "0.0000000",
+     "his": "44.3800000"
+    },
+    "BOUNDARY": {
+     "drawn_matched": "0.0000000",
+     "terms": "0.0000000",
+     "his_only": "107.2400000",
+     "his": "107.2400000"
+    },
+    "DRIP": {
+     "drawn_matched": "0.0000000",
+     "terms": "0.0000000",
+     "his_only": "50.8760000",
+     "his": "50.8760000"
+    }
+   },
+   "ours_only_by_elevation": {
+    "SW": "47.2289680",
+    "SE": "22.2025000",
+    "NE": "11.0169680",
+    "NW": "47.2646026",
+    "PASSAGE": "43.3350000",
+    "ROOF (parapet inner + top)": "0.0000000"
+   }
+  },
+  "hi": {
+   "our_gross": "1185.4079770",
+   "his_gross": "1502.8400000",
+   "gross_diff": "317.4320230",
+   "residual": "0.0000000",
+   "our_openings": "131.2738010",
+   "our_net": "1054.1341760",
+   "his_net": "1469.9675000",
+   "net_diff": "415.8333240",
+   "net_diff_check": "net_diff = gross_diff - his deduction + our openings",
+   "by_cause": {
+    "ENGINE_RIGHT": "-45.5737044",
+    "HELD": "165.2943494",
+    "ROUNDING": "0.0008830",
+    "RULE_DIFFERENCE": "163.1155000",
+    "UNRESOLVED": "34.5949950"
+   },
+   "our_by_elevation": {
+    "SW": "304.0679680",
+    "SE": "172.6845000",
+    "NE": "323.7479680",
+    "NW": "208.0874760",
+    "PASSAGE": "50.2900000",
+    "ROOF (parapet inner + top)": "126.5300650"
+   },
+   "his_by_group": {
+    "SW": {
+     "drawn_matched": "253.7900000",
+     "terms": "21.3700000",
+     "his_only": "0.0000000",
+     "his": "275.1600000"
+    },
+    "SE": {
+     "drawn_matched": "150.4820000",
+     "terms": "16.1305000",
+     "his_only": "24.9300000",
+     "his": "191.5425000"
+    },
+    "NE": {
+     "drawn_matched": "281.0000000",
+     "terms": "-32.0000000",
+     "his_only": "9.0000000",
+     "his": "258.0000000"
+    },
+    "NW": {
+     "drawn_matched": "119.1423210",
+     "terms": "13.1281030",
+     "his_only": "257.6670760",
+     "his": "389.9375000"
+    },
+    "ROOF": {
+     "drawn_matched": "157.4361350",
+     "terms": "28.2678650",
+     "his_only": "0.0000000",
+     "his": "185.7040000"
+    },
+    "PARAPETS": {
+     "drawn_matched": "39.1239300",
+     "terms": "5.2560700",
+     "his_only": "0.0000000",
+     "his": "44.3800000"
+    },
+    "BOUNDARY": {
+     "drawn_matched": "0.0000000",
+     "terms": "0.0000000",
+     "his_only": "107.2400000",
+     "his": "107.2400000"
+    },
+    "DRIP": {
+     "drawn_matched": "0.0000000",
+     "terms": "0.0000000",
+     "his_only": "50.8760000",
+     "his": "50.8760000"
+    }
+   },
+   "ours_only_by_elevation": {
+    "SW": "52.6029680",
+    "SE": "22.2025000",
+    "NE": "11.6329680",
+    "NW": "54.6601550",
+    "PASSAGE": "43.3350000",
+    "ROOF (parapet inner + top)": "0.0000000"
+   }
+  }
+ },
+ "net_bound": {
+  "our_net_lo": "1035.1779836",
+  "our_net_hi": "1087.6191760",
+  "his_net": "1469.9675000",
+  "his_minus_ours_lo": "382.3483240",
+  "his_minus_ours_hi": "434.7895164",
+  "ours_vs_his_pct": [
+   "-29.58",
+   "-26.01"
+  ]
+ },
+ "like_for_like_gross": {
+  "his_rows_excluded_as_other_family_or_held_scope": [
+   "61",
+   "72",
+   "73",
+   "75",
+   "87-90",
+   "92"
+  ],
+  "his_excluded_m2": "387.9435000",
+  "his_comparable_gross": "1114.8965000",
+  "our_gross_lo": "1166.4517846",
+  "our_gross_hi": "1185.4079770",
+  "ours_vs_his_pct": [
+   "4.62",
+   "6.32"
+  ],
+  "note": "his comparable = his gross less domes (owner item 3), the pool soffit row (a FIN.CEILING line), frames (HELD), boundary wall (EXT.FENCE.PLASTER, HELD) and drip (UNKNOWN); his double count (row 65) and the no-face part of row 74 stay inside (they are his errors on wall rows)",
+  "his_comparable_net": "1082.0240000",
+  "our_net_lo": "1035.1779836",
+  "our_net_hi": "1087.6191760",
+  "net_ours_vs_his_pct": [
+   "-4.33",
+   "0.52"
+  ]
+ }
+}

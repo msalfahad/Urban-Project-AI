@@ -1,0 +1,1000 @@
+{
+ "measures": {
+  "1F-380x430": {
+   "area": "16.34",
+   "handles": [
+    "AD0",
+    "B08",
+    "AD8",
+    "AFF"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "380 x 430 (T-606 chain)",
+   "perimeter": "16.2",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-500x365": {
+   "area": "18.215",
+   "handles": [
+    "AE6",
+    "AF8",
+    "AE9",
+    "C1E"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.035",
+   "note": "500 x 365, column notch",
+   "perimeter": "17.4",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-ARRIVAL": {
+   "area": "4.875",
+   "handles": [
+    "D25",
+    "10DF"
+   ],
+   "kind": "DIM",
+   "note": "main-stair arrival +5.50, printed 2.50 x 1.95",
+   "source": "DRAWING",
+   "storey": "1F",
+   "values": [
+    "2.5",
+    "1.95"
+   ]
+  },
+  "1F-ARRIVAL-DRAWN": {
+   "area": "4.9225",
+   "handles": [
+    "AC2",
+    "A8D",
+    "AC3",
+    "A8F",
+    "AC0",
+    "B16",
+    "AEB",
+    "C21"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "main-stair arrival +5.50 as drawn: west lane to its riser AC2 (nosing band 0.05), the well end AC3 (0.05 into the printed rectangle), east lane on the printed edge AC0 prolonged",
+   "perimeter": "9.1",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-ARRIVAL-RECT": {
+   "area": "4.875",
+   "handles": [
+    "AC0",
+    "B16",
+    "AEB",
+    "C21"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "the printed 2.50 x 1.95 rectangle by handle",
+   "perimeter": "8.9",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-BATH-LAUNDRY": {
+   "area": "3.5775",
+   "handles": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.0225",
+   "note": "200 x 180 less the drawn jamb",
+   "perimeter": "7.6",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-CUR.chord": {
+   "area": "20.7",
+   "handles": [
+    "B1D",
+    "C0F",
+    "C0A",
+    "B6A",
+    "ACE",
+    "B0D",
+    "C09",
+    "C15",
+    "C0B",
+    "B0B"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.075",
+   "note": "T-606 chain: the curved face read as the straight inner wall line",
+   "perimeter": "21.9",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "CHORD",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-CUR.ours": {
+   "area": "19.016592",
+   "handles": [
+    "B1D",
+    "C0F",
+    "C0A",
+    "BD2",
+    "B6B",
+    "ACE",
+    "B0D",
+    "C09",
+    "C15",
+    "C0B",
+    "B0B"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.075",
+   "note": "T-606 chain: bed room with its curved face + passage returns + lobby (one cell)",
+   "perimeter": "22.15067",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-CUR.room_only": {
+   "area": "15.060342",
+   "handles": [
+    "C09",
+    "BD2",
+    "B6B",
+    "ACE",
+    "B0D"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.05625",
+   "note": "T-606 chain: bed room alone, closed across the 1.30 passage on the bed room face",
+   "perimeter": "16.65067",
+   "roles": [
+    "ZONE_EDGE",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-CUR.room_only_chord": {
+   "area": "16.74375",
+   "handles": [
+    "C09",
+    "B6A",
+    "ACE",
+    "B0D"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.05625",
+   "note": "T-606 chain: bed room alone, straight east line",
+   "perimeter": "16.4",
+   "roles": [
+    "ZONE_EDGE",
+    "CHORD",
+    "WALL",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-D-1F-03": {
+   "area": "0.15",
+   "depth": "0.15",
+   "handles": [
+    "AE8",
+    "AE9",
+    "AE8",
+    "AEA"
+   ],
+   "kind": "GAP",
+   "note": "door D115 C32 (living | bed room 500 x 365)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "1.0"
+  },
+  "1F-DRESSING": {
+   "area": "2.97",
+   "handles": [
+    "B20",
+    "B03",
+    "AD5",
+    "B00"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "dressing 165 x 180 beyond the arch OP-011",
+   "perimeter": "6.9",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-EAST-BATH": {
+   "area": "4.725",
+   "handles": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "210 x 225",
+   "perimeter": "8.7",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-LAUNDRY": {
+   "area": "10.151",
+   "handles": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.04",
+   "note": "L-shaped laundry: 1.85 wide north part beside the W.C., 3.47 x ... south part to the lift box and the living door; column 2FF0 notch",
+   "perimeter": "16.94",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-LIFT-DOOR": {
+   "area": "0.2",
+   "depth": "0.2",
+   "handles": [
+    "AFE",
+    "AFD",
+    "AFE",
+    "B1A"
+   ],
+   "kind": "GAP",
+   "note": "lift landing door AR1 AC5 (width only is used)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "1.0"
+  },
+  "1F-LIV.floor_drawn": {
+   "area": "38.988",
+   "handles": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "ABE",
+    "A8F",
+    "AC0",
+    "C21",
+    "AEB",
+    "AF7",
+    "B74",
+    "B75",
+    "D24",
+    "AF5"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.0025",
+   "note": "T-606 chain: floor at +5.50 only: east flight foot 0.35 beyond the printed landing (T-113 S3)",
+   "perimeter": "43.84",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "WALL",
+    "WALL",
+    "WALL",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE"
+   ],
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-LIV.floor_printed": {
+   "area": "38.5855",
+   "handles": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "AC0",
+    "C21",
+    "AEB",
+    "AF7",
+    "B74",
+    "B75",
+    "D24",
+    "AF5"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.0025",
+   "note": "T-606 chain: floor at +5.50 only: printed 1.95 landing edge; void / stair-box edges",
+   "perimeter": "43.14",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "WALL",
+    "WALL",
+    "WALL",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE"
+   ],
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-OP-005": {
+   "area": "0.135",
+   "depth": "0.15",
+   "handles": [
+    "AFA",
+    "AF9",
+    "AFA",
+    "B1D"
+   ],
+   "kind": "GAP",
+   "note": "door D215 BEF (living | curved bed room lobby)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "0.9"
+  },
+  "1F-OP-006": {
+   "area": "0.135",
+   "depth": "0.15",
+   "handles": [
+    "AD8",
+    "AD9",
+    "AD9",
+    "AFA"
+   ],
+   "kind": "GAP",
+   "note": "door D215 C18 (living | bed room 380 x 430)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "0.9"
+  },
+  "1F-OP-011": {
+   "area": "0.15",
+   "depth": "0.15",
+   "handles": [
+    "AD1",
+    "AD0",
+    "AD0",
+    "AD4"
+   ],
+   "kind": "GAP",
+   "note": "arch 1.00 (bed room 380 x 430 | dressing)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "1.0"
+  },
+  "1F-OP-020": {
+   "area": "0.15",
+   "depth": "0.15",
+   "handles": [
+    "C1F",
+    "C20",
+    "C1F",
+    "C21"
+   ],
+   "kind": "GAP",
+   "note": "door D115 C31 (living | west bed room)",
+   "source": "DRAWING",
+   "storey": "1F",
+   "width": "1.0"
+  },
+  "1F-WBATH-1": {
+   "area": "5.0225",
+   "handles": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "west bath 245 x 205 (first of two congruent baths)",
+   "perimeter": "9.0",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-WBATH-2": {
+   "area": "5.0225",
+   "handles": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "west bath 245 x 205 (second)",
+   "perimeter": "9.0",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-WC-LAUNDRY": {
+   "area": "2.646",
+   "handles": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "180 x 147",
+   "perimeter": "6.54",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "1F-WEST-BED": {
+   "area": "19.05",
+   "handles": [
+    "C2A",
+    "C1F",
+    "C24",
+    "B40"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.075",
+   "note": "425 x 450, two column notches",
+   "perimeter": "17.7",
+   "source": "DRAWING",
+   "storey": "1F"
+  },
+  "2F-ARRIVAL": {
+   "area": "4.875",
+   "handles": [
+    "138E",
+    "14F1"
+   ],
+   "kind": "DIM",
+   "note": "main-stair arrival +9.70, printed 2.50 x 1.95",
+   "source": "DRAWING",
+   "storey": "2F",
+   "values": [
+    "2.5",
+    "1.95"
+   ]
+  },
+  "2F-CORR.east_foot": {
+   "area": "7.72",
+   "handles": [
+    "1283",
+    "1294",
+    "128A",
+    "129A",
+    "1385",
+    "1358",
+    "138B",
+    "12B7"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "T-606 chain: east flight's first line 0.30 beyond the printed landing",
+   "perimeter": "13.5",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "2F"
+  },
+  "2F-CORR.ours": {
+   "area": "7.375",
+   "handles": [
+    "1283",
+    "1294",
+    "128A",
+    "129A",
+    "138B",
+    "12B7"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "T-606 chain: lobby + arrival, landing edge at the printed 1.95 (T-443)",
+   "perimeter": "12.9",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "2F"
+  },
+  "2F-LIFT-DOOR": {
+   "area": "0.2",
+   "depth": "0.2",
+   "handles": [
+    "128A",
+    "1289",
+    "128A",
+    "129C"
+   ],
+   "kind": "GAP",
+   "note": "lift landing door AR1 138C (width only is used)",
+   "source": "DRAWING",
+   "storey": "2F",
+   "width": "1.0"
+  },
+  "2F-MAID": {
+   "area": "19.35",
+   "handles": [
+    "1284",
+    "1292",
+    "1279",
+    "128B"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "T-606 chain: 300 x 645",
+   "perimeter": "18.9",
+   "source": "DRAWING",
+   "storey": "2F"
+  },
+  "2F-OP-007": {
+   "area": "0.18",
+   "depth": "0.2",
+   "handles": [
+    "128E",
+    "128D",
+    "128E",
+    "1295"
+   ],
+   "kind": "GAP",
+   "note": "door d220 12C2 (maid room | stair lobby)",
+   "source": "DRAWING",
+   "storey": "2F",
+   "width": "0.9"
+  },
+  "2F-ROOF-WC": {
+   "area": "5.55",
+   "handles": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "300 x 185",
+   "perimeter": "9.7",
+   "source": "DRAWING",
+   "storey": "2F"
+  },
+  "GF-BAND": {
+   "area": "9.101",
+   "handles": [
+    "310",
+    "104",
+    "30F",
+    "337"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.025",
+   "note": "garden band: west end 310, facade face 104, east end 30F, north on the 1.30 line (337 / 4B4); column 2FD5 notch",
+   "perimeter": "16.74",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-BASIN-REVEAL": {
+   "area": "0.22",
+   "handles": [
+    "70F",
+    "672"
+   ],
+   "kind": "DIM",
+   "note": "passage reveal of the basin space, printed 1.10 x 0.20",
+   "source": "DRAWING",
+   "storey": "GF",
+   "values": [
+    "1.1",
+    "0.2"
+   ]
+  },
+  "GF-BASIN-STAIR": {
+   "area": "1.485",
+   "handles": [
+    "2B2",
+    "215",
+    "218",
+    "211"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "basin space by the stair (to the reveal face)",
+   "perimeter": "4.9",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-CURB": {
+   "area": "0.604",
+   "handles": [
+    "310",
+    "4B4",
+    "2FD2#0",
+    "A8"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "curb 0.20 between 4B4 and A8, from 310 to the west face of column 2FD2",
+   "perimeter": "6.44",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-DEWANEYA": {
+   "area": "24.94032",
+   "handles": [
+    "119",
+    "127",
+    "10E",
+    "139",
+    "124"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "400 x 630 with the R1.10 corner arc (T-606 chain)",
+   "perimeter": "20.127876",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-DRIVER": {
+   "area": "7.875",
+   "handles": [
+    "130",
+    "11D",
+    "12F",
+    "113"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "175 x 450",
+   "perimeter": "12.5",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-KITCHEN": {
+   "area": "9.63",
+   "handles": [
+    "11A",
+    "136",
+    "14F",
+    "135",
+    "111",
+    "A5"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.045",
+   "note": "300 x 270 + 105 x 150, two piers notch",
+   "perimeter": "14.5",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-LIFT-DOOR": {
+   "area": "0.2",
+   "depth": "0.2",
+   "handles": [
+    "20D",
+    "20E",
+    "20D",
+    "21D"
+   ],
+   "kind": "GAP",
+   "note": "lift landing door (width only is used)",
+   "source": "DRAWING",
+   "storey": "GF",
+   "width": "1.0"
+  },
+  "GF-LOBBY-WASH": {
+   "area": "4.730695",
+   "handles": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "lobby with two basins: diagonal walls, closed on the step line D2 / 2DB to wall face 222",
+   "perimeter": "9.498855",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-MASTER": {
+   "area": "16.549719",
+   "handles": [
+    "2B5",
+    "27D#0",
+    "27D#1",
+    "2E2",
+    "2E0",
+    "319",
+    "2E7",
+    "2DE"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.125",
+   "note": "room 4.82 x 4.00 to the curved glazing face (27D straight + bulge segment) + the hall to its bath (2E0 / 319 / 2E7, door D115 to the open room in 2E1 / 2E2); column 2F85 notch",
+   "perimeter": "21.534454",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-MASTER-BATH": {
+   "area": "3.717683",
+   "handles": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "2.10 x 2.00 less the diagonal-wall corner",
+   "perimeter": "7.624665",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-OP-010": {
+   "area": "0.2",
+   "depth": "0.2",
+   "handles": [
+    "20F",
+    "20E",
+    "20F",
+    "220"
+   ],
+   "kind": "GAP",
+   "note": "stair-hall door D120 (open room | stair room)",
+   "source": "DRAWING",
+   "storey": "GF",
+   "width": "1.0"
+  },
+  "GF-OP-012": {
+   "area": "0.15",
+   "depth": "0.15",
+   "handles": [
+    "2E1",
+    "2E2",
+    "2E1",
+    "2E3"
+   ],
+   "kind": "GAP",
+   "note": "door D115 (open room | master bed room hall)",
+   "source": "DRAWING",
+   "storey": "GF",
+   "width": "1.0"
+  },
+  "GF-OPEN.full": {
+   "area": "147.657717",
+   "handles": [
+    "B5",
+    "E0",
+    "97",
+    "27D#1",
+    "2E4",
+    "222",
+    "20F",
+    "AB",
+    "158",
+    "AE",
+    "104"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "n/a (gross: interior solids kept)",
+   "note": "T-612 chain: drawn gross outline: west wall to the south facade, band, curb, pantry strips and the solids under the 1F facade inside (T-427 147.658 m2)",
+   "perimeter": "55.906096",
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-SOLID-COL-2FC6": {
+   "area": "0.15",
+   "handles": [
+    "2FC6"
+   ],
+   "kind": "SOLID",
+   "note": "closed S-COL.BON polygon",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-SOLID-COL-2FD2": {
+   "area": "0.2",
+   "handles": [
+    "2FD2"
+   ],
+   "kind": "SOLID",
+   "note": "closed S-COL.BON polygon",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-SOLID-WALL": {
+   "area": "0.53",
+   "handles": [
+    "336",
+    "2FC6#0",
+    "337",
+    "2FD2#2"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "wall 336 / 337 between the two columns",
+   "perimeter": "5.7",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-STAIR-HALL": {
+   "area": "4.805",
+   "handles": [
+    "220",
+    "21C",
+    "490",
+    "47E",
+    "47C",
+    "157",
+    "DE",
+    "298"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "hall at +1.00: south face 220 (door OP-010 closed on it), lift-wall face 21C, D1 top riser 490 (layer 5), divider faces 47E / 47C / 157 (layer 2 / 5), MS1-L first riser DE (layer 2), west face 298: 2.50 x 0.45 + 1.15 x 0.70 + 1.15 x 2.50",
+   "perimeter": "12.3",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-STAIR-LOBBY": {
+   "area": "1.3225",
+   "handles": [
+    "481",
+    "21B",
+    "26F",
+    "47E"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "back-door lobby at +0.30 under the +3.50 half landing: D1 foot riser 481, wall faces 21B / 26F (north door 0.90 closed on 26F), divider line 47E prolonged: 1.15 x 1.15",
+   "perimeter": "4.6",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-WASH-REC": {
+   "area": "3.1325",
+   "handles": [
+    "11F",
+    "12B",
+    "118",
+    "12E"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.0175",
+   "note": "150 x 210 less the column corner",
+   "perimeter": "7.2",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-WC-CORE-245": {
+   "area": "2.367609",
+   "handles": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "-0.029",
+   "note": "core W.C. wedge 245 x 167, column notch",
+   "perimeter": "6.809808",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-WC-CORE-289": {
+   "area": "2.675221",
+   "handles": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "core W.C. wedge 289 x 167",
+   "perimeter": "7.414037",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-WC-REC": {
+   "area": "3.375",
+   "handles": [
+    "115",
+    "129",
+    "114",
+    "12D"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "W.C. by the reception room",
+   "perimeter": "7.5",
+   "source": "DRAWING",
+   "storey": "GF"
+  },
+  "GF-WC-STAIR": {
+   "area": "2.3625",
+   "handles": [
+    "271",
+    "213",
+    "2AF",
+    "210"
+   ],
+   "kind": "OUTLINE",
+   "notch_m2": "0.0",
+   "note": "stair-core W.C. 175 x 135",
+   "perimeter": "6.2",
+   "source": "DRAWING",
+   "storey": "GF"
+  }
+ },
+ "rule": "R-T621-1",
+ "schema": "T621_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "units": "m / m2"
+}

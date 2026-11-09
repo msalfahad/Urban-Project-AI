@@ -1,0 +1,817 @@
+{
+ "schema": "T584_STEPS_V1",
+ "rule": "R-T584-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "sign": "ours - his",
+ "pins": {
+  "research/agents_t584/T584_DRAWN.json": "1abe50a74e13f42e",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "research/agents_t325/SILL_THRESHOLD_LEDGER_T325.csv": "ef6f2cb0c0d7619e",
+  "research/agents_t412/FLIGHT_TABLE_T412.csv": "20703ee293f0b39c",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "openings": {
+  "D-GF-01": {
+   "line": "L-b3933a51bd95e9bc542b",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "1.0",
+   "block": "D120",
+   "block_span_m": 1.0,
+   "evidence": {
+    "front": "172",
+    "companion": "173",
+    "high": {
+     "distance_m": 1.318,
+     "handle": "401",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    "low": {
+     "distance_m": 1.837,
+     "handle": "394",
+     "level": "+0.15",
+     "walls_crossed": 0
+    }
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "THRESHOLD_STEP",
+    "lm": "0.9",
+    "riser_m": "0.15",
+    "m2": "0.135",
+    "nr": 1,
+    "status": "DRAWING-CONFIRMED",
+    "bound": null
+   }
+  },
+  "D-GF-03": {
+   "line": "L-74cd61b430eec9933d15",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "0.9",
+   "block": "d220",
+   "block_span_m": 0.9,
+   "evidence": {
+    "front": "1C6",
+    "companion": "1C7",
+    "high": {
+     "distance_m": 1.142,
+     "handle": "403",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    "low": {
+     "distance_m": 4.509,
+     "handle": "409",
+     "level": "+0.15",
+     "walls_crossed": 0
+    }
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "THRESHOLD_STEP",
+    "lm": "0.8",
+    "riser_m": "0.15",
+    "m2": "0.120",
+    "nr": 1,
+    "status": "DRAWING-CONFIRMED",
+    "bound": null
+   }
+  },
+  "D-GF-05": {
+   "line": "L-c8b5c7f742b22388339e",
+   "strip_class": "WET (T-325); outside door to the side passage (T-268 ruled, open mouth)",
+   "strip_width_m_T325": "1.0",
+   "block": "D120",
+   "block_span_m": 1.0,
+   "evidence": {
+    "front": "19C",
+    "companion": "19D",
+    "high": {
+     "distance_m": 0.791,
+     "handle": "405",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    "low": {
+     "distance_m": 0.616,
+     "handle": "407",
+     "level": "+0.15",
+     "walls_crossed": 0
+    }
+   },
+   "beyond_named": [
+    {
+     "handle": "3CB",
+     "why": "D-GF-05: the inner line of the window in the passage's opposite wall 1.20 away (glazing lines 3CC .. 3CF behind it on layer W, wall ends 3D1 / 3D5 on layer 1), not a step front"
+    }
+   ],
+   "piece": {
+    "kind": "THRESHOLD_STEP",
+    "lm": "0.9",
+    "riser_m": "0.15",
+    "m2": "0.135",
+    "nr": 1,
+    "status": "DRAWING-CONFIRMED",
+    "bound": null
+   }
+  },
+  "D-GF-06": {
+   "line": "L-9fa69ef1a11ef9987967",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "1.0",
+   "block": "D120",
+   "block_span_m": 1.0,
+   "evidence": {
+    "levels": [
+     {
+      "handle": "ruling",
+      "level": "+1.00",
+      "distance_m": null,
+      "walls_crossed": 0,
+      "source": "T-260 OUTDOOR_STAIR_LANDING (landing +1.00, step lines 30A / 30C / 30D start 0.059 past the jamb); T-412 E1 +0.15 -> +1.00"
+     },
+     {
+      "distance_m": 1.5,
+      "handle": "411",
+      "level": "+1.00",
+      "walls_crossed": 0
+     }
+    ]
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "NO_STEP",
+    "lm": null,
+    "riser_m": null,
+    "m2": null,
+    "nr": 0,
+    "status": "NOT_APPLICABLE",
+    "bound": null
+   }
+  },
+  "D-GF-07": {
+   "line": "L-ad41b065d825c0190b7d",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "2.0",
+   "block": "D200",
+   "block_span_m": 2.0,
+   "evidence": {
+    "levels": [
+     {
+      "distance_m": 3.388,
+      "handle": "411",
+      "level": "+1.00",
+      "walls_crossed": 0
+     },
+     {
+      "distance_m": 2.8,
+      "handle": "40F",
+      "level": "+1.00",
+      "walls_crossed": 0
+     }
+    ]
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "NO_STEP",
+    "lm": null,
+    "riser_m": null,
+    "m2": null,
+    "nr": 0,
+    "status": "NOT_APPLICABLE",
+    "bound": null
+   }
+  },
+  "D-GF-09": {
+   "line": "L-8111095f6db78f0e674b",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "0.9",
+   "block": "D120",
+   "block_span_m": 1.0,
+   "evidence": {
+    "front": "3FD",
+    "companion": "3FE",
+    "high": {
+     "distance_m": 0.912,
+     "handle": "4AC",
+     "level": "+0.30",
+     "walls_crossed": 0
+    },
+    "low": null
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "THRESHOLD_STEP",
+    "lm": "0.9",
+    "riser_m": null,
+    "m2": null,
+    "nr": 1,
+    "status": "HELD",
+    "bound": {
+     "riser_m": [
+      "0",
+      "0.30"
+     ],
+     "m2": [
+      "0",
+      "0.270"
+     ]
+    }
+   }
+  },
+  "D-2F-01": {
+   "line": "L-3e5c6b7af8dd06b2836c",
+   "strip_class": "EXT",
+   "strip_width_m_T325": "1.0",
+   "block": "D115",
+   "block_span_m": 1.0,
+   "evidence": {
+    "levels": [
+     {
+      "distance_m": 1.121,
+      "handle": "134E",
+      "level": "+9.70",
+      "walls_crossed": 0
+     },
+     {
+      "distance_m": 3.835,
+      "handle": "1352",
+      "level": "+9.70",
+      "walls_crossed": 0
+     }
+    ]
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "NO_STEP",
+    "lm": null,
+    "riser_m": null,
+    "m2": null,
+    "nr": 0,
+    "status": "NOT_APPLICABLE",
+    "bound": null
+   }
+  },
+  "D-GF-15": {
+   "line": "L-56acf34557c315f65bb1",
+   "strip_class": "GATE (fence, T-175 / T-327: width / host not established)",
+   "strip_width_m_T325": null,
+   "block": "D120",
+   "block_span_m": 1.0,
+   "evidence": {
+    "front": "8E (face line through the opening)",
+    "companion": "8F",
+    "high": {
+     "distance_m": 3.706,
+     "handle": "40B",
+     "level": "+0.15",
+     "walls_crossed": 0
+    },
+    "low": {
+     "distance_m": 0.926,
+     "handle": "A89",
+     "level": "+-0.00",
+     "walls_crossed": 0
+    }
+   },
+   "beyond_named": [],
+   "piece": {
+    "kind": "THRESHOLD_STEP",
+    "lm": "0.9",
+    "riser_m": "0.15",
+    "m2": "0.135",
+    "nr": 1,
+    "status": "DRAWING-CONFIRMED",
+    "bound": null
+   }
+  }
+ },
+ "e1": {
+  "treads": 4,
+  "arrival": 1,
+  "lm": "11.200",
+  "fronts": [
+   "36E",
+   "36C",
+   "36A",
+   "30B",
+   "30A"
+  ],
+  "status": "DRAWING-CONFIRMED",
+  "levels": "+0.15 -> +1.00 (T-184 ST-03; T-412)"
+ },
+ "flights": {
+  "ST-01": {
+   "own": [
+    {
+     "line": "L-d4d764ae7bb07b474b6f",
+     "flight": "MS1-L",
+     "treads": 9,
+     "lm": "10.350",
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "line": "L-f20f8544a42807c0cfcf",
+     "flight": "D1",
+     "treads": 3,
+     "lm": "3.450",
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "line": "L-0aa47300a16de572c967",
+     "flight": "MS1-U",
+     "treads": 11,
+     "lm": "12.650",
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "line": "L-23651ecfef77992ec8d4",
+     "flight": "MS2-L",
+     "treads": 11,
+     "lm": "12.650",
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "line": "L-60fc97c4306696c74c38",
+     "flight": "MS2-U",
+     "treads": 11,
+     "lm": "12.650",
+     "status": "DRAWING-CONFIRMED"
+    }
+   ],
+   "held": [
+    {
+     "line": "L-e085c168dee5fb19a7fb",
+     "flight": "MS1-T",
+     "treads": 5,
+     "bound": [
+      "4.14365",
+      null
+     ],
+     "why": "T-429 / T-434: three drawn winder fronts 4.14365 beside, candidate reading 4.7815; governing count 5 winders (section A-A, Q-46 A), subdivision not drawn (C-ST-3)"
+    }
+   ],
+   "second_readings": [
+    {
+     "line": "L-1e88ac0d4ba0b4e8a950",
+     "flight": "MS2-L",
+     "class": "EXCLUDED",
+     "why": "the same drawn flight read again (seen through the void / folded); owned by the flight's own line (T-129 / T-429), never a step of its own"
+    }
+   ],
+   "census": {
+    "treads": 50,
+    "arrival": 6,
+    "risers": 56
+   }
+  },
+  "ST-02": {
+   "own": [
+    {
+     "line": "L-59354cfe423b026db61a",
+     "flight": "RS-S",
+     "treads": 10,
+     "lm": "11.500",
+     "status": "DRAWING-CONFIRMED"
+    },
+    {
+     "line": "L-f145a2d130cba9450a24",
+     "flight": "RS-A",
+     "treads": 4,
+     "lm": "4.600",
+     "status": "DRAWING-CONFIRMED"
+    }
+   ],
+   "held": [
+    {
+     "line": "L-95b9555dd144951b071e",
+     "flight": "RS-C",
+     "treads": 12,
+     "bound": [
+      "13.7964",
+      "13.85"
+     ],
+     "why": "T-429 beside 13.7964; T-412 drawn radial fronts 13.85 (Q-50 A cond, RFI-S27)"
+    }
+   ],
+   "second_readings": [
+    {
+     "line": "L-3a3aabb15b187e33e3da",
+     "flight": "RS-C",
+     "class": "HELD",
+     "why": "the same drawn flight read again (seen through the void / folded); owned by the flight's own line (T-129 / T-429), never a step of its own"
+    },
+    {
+     "line": "L-c955f6b3a3abca48d562",
+     "flight": "RS-S",
+     "class": "HELD",
+     "why": "the same drawn flight read again (seen through the void / folded); owned by the flight's own line (T-129 / T-429), never a step of its own"
+    },
+    {
+     "line": "L-57202d2823270429cd80",
+     "flight": "RS-A",
+     "class": "HELD",
+     "why": "the same drawn flight read again (seen through the void / folded); owned by the flight's own line (T-129 / T-429), never a step of its own"
+    },
+    {
+     "line": "L-fef9ec154deaec502498",
+     "flight": "RS-S",
+     "class": "EXCLUDED",
+     "why": "the same drawn flight read again (seen through the void / folded); owned by the flight's own line (T-129 / T-429), never a step of its own"
+    }
+   ],
+   "census": {
+    "treads": 26,
+    "arrival": 2,
+    "risers": 28
+   }
+  }
+ },
+ "tables": {
+  "stairs": {
+   "lm": [
+    {
+     "id": "ST-01",
+     "ours": "51.750",
+     "his": "75.6",
+     "gap": "-23.850",
+     "pct": null,
+     "causes": [
+      {
+       "label": "width: 45 drawn treads x (drawn front edge 1.150 - his 1.2)",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "MEASURE",
+       "amount": "-2.250",
+       "source": "T-412 s.2 (every drawn marble front edge 1.150; 0.050 is the band)"
+      },
+      {
+       "label": "5 treads in HELD flight lines (MS1-T): his share 5 x 1.2; ours blank with the bound beside",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "-6.0",
+       "bound": [
+        "4.14365",
+        null
+       ],
+       "source": "T-429 / T-434: three drawn winder fronts 4.14365 beside, candidate reading 4.7815; governing count 5 winders (section A-A, Q-46 A), subdivision not drawn (C-ST-3)"
+      },
+      {
+       "label": "6 arrival edges (landing / floor): his piece per riser, our step per tread (UP-STAIR-008, R-T412-1; the edge is a B7-05 nosing)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-7.2",
+       "source": "T-412 flight table landing_edges + floor_edges"
+      },
+      {
+       "label": "7 pieces beyond every reading of his count (risers 56, treads 50): no breakdown in his row",
+       "verdict": "UNRESOLVED",
+       "kind": "MEASURE",
+       "amount": "-8.4",
+       "source": "T-412 s.5; T-578 F-T578-3"
+      }
+     ]
+    },
+    {
+     "id": "ST-02",
+     "ours": "16.100",
+     "his": "33.6",
+     "gap": "-17.500",
+     "pct": null,
+     "causes": [
+      {
+       "label": "width: 14 drawn treads x (drawn front edge 1.150 - his 1.2)",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "MEASURE",
+       "amount": "-0.700",
+       "source": "T-412 s.2 (every drawn marble front edge 1.150; 0.050 is the band)"
+      },
+      {
+       "label": "12 treads in HELD flight lines (RS-C): his share 12 x 1.2; ours blank with the bound beside",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "-14.4",
+       "bound": [
+        "13.7964",
+        "13.85"
+       ],
+       "source": "T-429 beside 13.7964; T-412 drawn radial fronts 13.85 (Q-50 A cond, RFI-S27)"
+      },
+      {
+       "label": "2 arrival edges (landing / floor): his piece per riser, our step per tread (UP-STAIR-008, R-T412-1; the edge is a B7-05 nosing)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-2.4",
+       "source": "T-412 flight table landing_edges + floor_edges"
+      }
+     ]
+    },
+    {
+     "id": "ST-03",
+     "ours": "0",
+     "his": "14.0",
+     "gap": "-14.0",
+     "pct": null,
+     "causes": [
+      {
+       "label": "E1 has no FIN.STAIR.STEP_LM line: 4 drawn treads x 2.800 = 11.200 (fronts 36E 36C 36A 30B; dimension A06 2800) - fix row FR-T584-1",
+       "verdict": "ENGINE_OMISSION",
+       "kind": "MEASURE",
+       "amount": "-11.200",
+       "source": "own read by handle + T-412 (36E 36C 36A 30B, 30A platform edge)"
+      },
+      {
+       "label": "his 5th piece = the platform edge 30A (landing / arrival edge, not a step)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-2.8",
+       "source": "T-412 / T-534"
+      }
+     ]
+    }
+   ],
+   "m2": [
+    {
+     "id": "STAIR_STEPS",
+     "ours": "0",
+     "his": "123.2",
+     "gap": "-123.2",
+     "pct": null,
+     "causes": [
+      {
+       "label": "his H16 / H23 / H30 are count x length in an area column (no width cell): never compared as m2 (R-T577-1 (c)); the tread / riser m2 lines are B7-02 / B7-03, not the step",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "UNIT",
+       "amount": "-123.2",
+       "source": "his B x C = H, D / F blank"
+      }
+     ]
+    }
+   ],
+   "nr": [
+    {
+     "id": "ST-01",
+     "ours": "45",
+     "his": "63",
+     "gap": "-18",
+     "pct": null,
+     "causes": [
+      {
+       "label": "treads in HELD flight lines",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "-5",
+       "bound": [
+        "4",
+        "5"
+       ],
+       "source": "as lm"
+      },
+      {
+       "label": "arrival edges counted as pieces by him",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-6",
+       "source": "as lm"
+      },
+      {
+       "label": "pieces beyond every reading of his count",
+       "verdict": "UNRESOLVED",
+       "kind": "MEASURE",
+       "amount": "-7",
+       "source": "as lm"
+      }
+     ]
+    },
+    {
+     "id": "ST-02",
+     "ours": "14",
+     "his": "28",
+     "gap": "-14",
+     "pct": null,
+     "causes": [
+      {
+       "label": "treads in HELD flight lines",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "-12",
+       "bound": [
+        "12",
+        "12"
+       ],
+       "source": "as lm"
+      },
+      {
+       "label": "arrival edges counted as pieces by him",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-2",
+       "source": "as lm"
+      }
+     ]
+    },
+    {
+     "id": "ST-03",
+     "ours": "0",
+     "his": "5",
+     "gap": "-5",
+     "pct": null,
+     "causes": [
+      {
+       "label": "E1 treads with no step line (FR-T584-1)",
+       "verdict": "ENGINE_OMISSION",
+       "kind": "MEASURE",
+       "amount": "-4",
+       "source": "as lm"
+      },
+      {
+       "label": "his platform-edge piece",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-1",
+       "source": "as lm"
+      }
+     ]
+    }
+   ]
+  },
+  "doors": {
+   "lm": [
+    {
+     "id": "DOOR_STEPS",
+     "ours": "3.5",
+     "his": "7.7",
+     "gap": "-4.2",
+     "pct": null,
+     "causes": [
+      {
+       "label": "his 6 door-step pieces carry no door id (matching his rows to doors by figure is refused, R-T577-1); drawn: 4 steps (D-GF-01, D-GF-03, D-GF-05, D-GF-09) and no step at D-2F-01, D-GF-06, D-GF-07 (same level printed both sides, no edge drawn). Reading H1 (one piece per T-325 external door) would put 3 of his pieces where nothing is drawn and none at D-GF-05; not established, so UNRESOLVED",
+       "verdict": "UNRESOLVED",
+       "kind": "MEASURE",
+       "amount": "-4.2",
+       "source": "own DXF read (T584_DRAWN.json); his B36..B41 x C36..C41"
+      }
+     ]
+    },
+    {
+     "id": "GATE_STEP",
+     "ours": "0.9",
+     "his": "0",
+     "gap": "0.9",
+     "pct": null,
+     "causes": [
+      {
+       "label": "the fence gate step (court +0.15 / outside datum +-0.00, edge on the fence line): whether his rows hold it is not established (no id)",
+       "verdict": "UNRESOLVED",
+       "kind": "SCOPE",
+       "amount": "0.9",
+       "source": "own DXF read"
+      }
+     ]
+    }
+   ],
+   "m2": [
+    {
+     "id": "DOOR_STEPS",
+     "ours": "0.390",
+     "his": "7.7",
+     "gap": "-7.310",
+     "pct": null,
+     "causes": [
+      {
+       "label": "his H36..H41 are count x length in an area column: never compared as m2",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "UNIT",
+       "amount": "-7.7",
+       "source": "his B x C = H"
+      },
+      {
+       "label": "our riser faces (edge x printed level difference) have no area counterpart in his rows",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "0.390",
+       "source": "own DXF read"
+      },
+      {
+       "label": "riser HELD where the outside level is not printed (D-GF-09)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        "0.270"
+       ],
+       "source": "plan lowest printed level +-0.00 (datum LEL) bounds the drop"
+      }
+     ]
+    },
+    {
+     "id": "GATE_STEP",
+     "ours": "0.135",
+     "his": "0",
+     "gap": "0.135",
+     "pct": null,
+     "causes": [
+      {
+       "label": "riser face of the gate step; no counterpart",
+       "verdict": "UNRESOLVED",
+       "kind": "SCOPE",
+       "amount": "0.135",
+       "source": "own DXF read"
+      }
+     ]
+    }
+   ],
+   "nr": [
+    {
+     "id": "DOOR_STEPS",
+     "ours": "4",
+     "his": "6",
+     "gap": "-2",
+     "pct": null,
+     "causes": [
+      {
+       "label": "his 6 door-step pieces carry no door id (matching his rows to doors by figure is refused, R-T577-1); drawn: 4 steps (D-GF-01, D-GF-03, D-GF-05, D-GF-09) and no step at D-2F-01, D-GF-06, D-GF-07 (same level printed both sides, no edge drawn). Reading H1 (one piece per T-325 external door) would put 3 of his pieces where nothing is drawn and none at D-GF-05; not established, so UNRESOLVED",
+       "verdict": "UNRESOLVED",
+       "kind": "MEASURE",
+       "amount": "-2",
+       "source": "as lm"
+      }
+     ]
+    },
+    {
+     "id": "GATE_STEP",
+     "ours": "1",
+     "his": "0",
+     "gap": "1",
+     "pct": null,
+     "causes": [
+      {
+       "label": "as lm",
+       "verdict": "UNRESOLVED",
+       "kind": "SCOPE",
+       "amount": "1",
+       "source": "own DXF read"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "fix_rows": [
+  {
+   "id": "FR-T584-1",
+   "family": "B7-06 FIN.STAIR.STEP_LM",
+   "element": "GF-COURT#E1 steps",
+   "proposal": "NEW line 11.200 lm / 4 nr, DRAWING-CONFIRMED (4 fronts x 2.800, A06 2800), material marble (OWNER_RULE_OUTDOOR_FLOORS: outside stairs marble), bound to L-314c3ac6d45431b687c5 (tread) / L-0afa7bd369ec489ebfc2 (riser); 30A stays the landing edge (L-3dd82a576dce1beb4250, B7-05)",
+   "state": "HELD until wired (manifest row, lane I)"
+  },
+  {
+   "id": "FR-T584-2:D-GF-01",
+   "family": "external threshold (ARCH.THRESHOLD / B6 threshold line)",
+   "element": "D-GF-01 THRESHOLD_STEP",
+   "line": "L-b3933a51bd95e9bc542b",
+   "proposal": "two measures beside the strip on its own line: nosing 0.9 lm (drawn edge 172 / 173), riser 0.15 x 0.9 = 0.135 m2; no new step line; material by the strip's specification (HELD)",
+   "state": "HELD until wired"
+  },
+  {
+   "id": "FR-T584-2:D-GF-03",
+   "family": "external threshold (ARCH.THRESHOLD / B6 threshold line)",
+   "element": "D-GF-03 THRESHOLD_STEP",
+   "line": "L-74cd61b430eec9933d15",
+   "proposal": "two measures beside the strip on its own line: nosing 0.8 lm (drawn edge 1C6 / 1C7), riser 0.15 x 0.8 = 0.120 m2; no new step line; material by the strip's specification (HELD)",
+   "state": "HELD until wired"
+  },
+  {
+   "id": "FR-T584-2:D-GF-05",
+   "family": "external threshold (ARCH.THRESHOLD / B6 threshold line)",
+   "element": "D-GF-05 THRESHOLD_STEP",
+   "line": "L-c8b5c7f742b22388339e",
+   "proposal": "two measures beside the strip on its own line: nosing 0.9 lm (drawn edge 19C / 19D), riser 0.15 x 0.9 = 0.135 m2; no new step line; material by the strip's specification (HELD)",
+   "state": "HELD until wired"
+  },
+  {
+   "id": "FR-T584-2:D-GF-09",
+   "family": "external threshold (ARCH.THRESHOLD / B6 threshold line)",
+   "element": "D-GF-09 THRESHOLD_STEP",
+   "line": "L-8111095f6db78f0e674b",
+   "proposal": "two measures beside the strip on its own line: nosing 0.9 lm (drawn edge 3FD / 3FE), riser HELD 0 .. 0.30 (outside level not printed), m2 0 .. 0.270; no new step line; material by the strip's specification (HELD)",
+   "state": "HELD until wired"
+  },
+  {
+   "id": "FR-T584-2:D-GF-15",
+   "family": "external threshold (ARCH.THRESHOLD / B6 threshold line)",
+   "element": "D-GF-15 THRESHOLD_STEP",
+   "line": "L-56acf34557c315f65bb1",
+   "proposal": "two measures beside the strip on its own line: nosing 0.9 lm (drawn edge 8E (face line through the opening) / 8F), riser 0.15 x 0.9 = 0.135 m2; no new step line; material by the strip's specification (HELD)",
+   "state": "HELD until wired"
+  },
+  {
+   "id": "FR-T584-3",
+   "family": "element register",
+   "element": "external door step vs threshold strip",
+   "proposal": "R-T584-1 (b): edge on the wall face = ONE element (the threshold stone with its nosing and riser, owned by the threshold line); edge beyond the face = EXT_STEP (outside stair, B7, marble); same level both sides and no edge = NOT_APPLICABLE",
+   "state": "proposal for the Lead (ELEMENT_REGISTER ruling)"
+  }
+ ],
+ "released": "NOTHING RELEASED; no candidate, engine, rule or registry file changed (research ledger)"
+}

@@ -1,0 +1,1536 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 plaster lines)",
+ "candidate_valued_FIN_PLASTER_m2": "580.5819",
+ "census_FIN_PLASTER": {
+  "DRY room line": {
+   "held_lines": 7,
+   "lines": 11,
+   "valued_m2": "217.2081"
+  },
+  "EXCLUDED (superseded route room line)": {
+   "held_lines": 0,
+   "lines": 13,
+   "valued_m2": "0"
+  },
+  "RETURN": {
+   "held_lines": 4,
+   "lines": 30,
+   "valued_m2": "23.070"
+  },
+  "SHAFT": {
+   "held_lines": 3,
+   "lines": 3,
+   "valued_m2": "0"
+  },
+  "WET render line": {
+   "held_lines": 6,
+   "lines": 18,
+   "valued_m2": "340.3038"
+  }
+ },
+ "external": {
+  "bridge_hi": {
+   "by_cause": {
+    "ENGINE_RIGHT": "119.969300",
+    "HELD": "1125.285700",
+    "RULE_DIFFERENCE": "164.435000",
+    "UNRESOLVED": "93.150000"
+   },
+   "class": "EXTERNAL",
+   "engine_valued": "0",
+   "freelancer_gross": "1502.840000",
+   "gap": "1502.840000",
+   "outside": [],
+   "residual": "93.150000",
+   "rows": [
+    {
+     "cause": "HELD",
+     "delta": "8.7750",
+     "name": "his row 51: drawn faces (GF storey; PARAPET-OUTER GF; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "8.7750",
+     "source": "T-337 FREELANCER_T337.csv row 51"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "0.225000",
+     "name": "his row 51 vs the drawn faces",
+     "qty": "0.225000",
+     "source": "T-337 FREELANCER_T337.csv row 51 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "73.4545",
+     "name": "his row 52: drawn faces (GF storey; 1F storey; PARAPET-OUTER 1F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "73.4545",
+     "source": "T-337 FREELANCER_T337.csv row 52"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-4.454500",
+     "name": "his row 52 vs the drawn faces",
+     "qty": "4.454500",
+     "source": "T-337 FREELANCER_T337.csv row 52 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "115.4250",
+     "name": "his row 53: drawn faces (GF storey; 1F storey; 2F storey; PARAPET-OUTER 2F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "115.4250",
+     "source": "T-337 FREELANCER_T337.csv row 53"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-1.665000",
+     "name": "his row 53 vs the drawn faces",
+     "qty": "1.665000",
+     "source": "T-337 FREELANCER_T337.csv row 53 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "26.2355",
+     "name": "his row 54: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "26.2355",
+     "source": "T-337 FREELANCER_T337.csv row 54"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-5.235500",
+     "name": "his row 54 vs the drawn faces",
+     "qty": "5.235500",
+     "source": "T-337 FREELANCER_T337.csv row 54 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "29.9000",
+     "name": "his row 55: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "29.9000",
+     "source": "T-337 FREELANCER_T337.csv row 55"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "32.500000",
+     "name": "his row 55 vs the drawn faces",
+     "qty": "32.500000",
+     "source": "T-337 FREELANCER_T337.csv row 55 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "74.9350",
+     "name": "his row 58: drawn faces (GF storey; 1F storey; 2F storey; PARAPET-OUTER 2F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "74.9350",
+     "source": "T-337 FREELANCER_T337.csv row 58"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "22.265000",
+     "name": "his row 58 vs the drawn faces",
+     "qty": "22.265000",
+     "source": "T-337 FREELANCER_T337.csv row 58 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "43.3870",
+     "name": "his row 59: drawn faces (1F storey; PARAPET-OUTER 1F; GF storey (the 4.080 face on th)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "43.3870",
+     "source": "T-337 FREELANCER_T337.csv row 59"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "18.825500",
+     "name": "his row 59 vs the drawn faces",
+     "qty": "18.825500",
+     "source": "T-337 FREELANCER_T337.csv row 59 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "32.1600",
+     "name": "his row 60: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "32.1600",
+     "source": "T-337 FREELANCER_T337.csv row 60"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-24.960000",
+     "name": "his row 60 vs the drawn faces",
+     "qty": "24.960000",
+     "source": "T-337 FREELANCER_T337.csv row 60 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "24.930000",
+     "his_scope_row": true,
+     "name": "his row 61 (NOT_IN_T159): no wall face drawn",
+     "qty": "24.930000",
+     "source": "T-337 / T-159: frame bands not measured (profile not printed)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "51.8400",
+     "name": "his row 63: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "51.8400",
+     "source": "T-337 FREELANCER_T337.csv row 63"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-3.840000",
+     "name": "his row 63 vs the drawn faces",
+     "qty": "3.840000",
+     "source": "T-337 FREELANCER_T337.csv row 63 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "222.2050",
+     "name": "his row 64: drawn faces (GF storey; 1F storey; PARAPET-OUTER GF; PARAPET-OUTER 1F; PL)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "222.2050",
+     "source": "T-337 FREELANCER_T337.csv row 64"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "-30.205000",
+     "name": "his row 64 vs the drawn faces",
+     "qty": "30.205000",
+     "source": "T-337 FREELANCER_T337.csv row 64 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "63.4252",
+     "name": "his row 70+71+74: drawn faces (1F storey; PARAPET-OUTER 1F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "63.4252",
+     "source": "T-337 FREELANCER_T337.csv row 70+71+74"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "46.464800",
+     "name": "his row 70+71+74 vs the drawn faces",
+     "qty": "46.464800",
+     "source": "T-337 FREELANCER_T337.csv row 70+71+74 / T-159"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "181.806000",
+     "his_scope_row": true,
+     "name": "his row 72 (EXCLUDED): no wall face drawn",
+     "qty": "181.806000",
+     "source": "owner note item 3 (OWNER_NOTES_SIGMA_2026-10-21: no domes; T-161)"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "12.834",
+     "name": "his row 73 pool-court soffit: the engine's CEILING line",
+     "qty": "12.834",
+     "source": "L-23072352a28aeca7b051; owner note item 4 accepts the measured pool-court soffit 12.834 (T-127, Checker 12.8343): a CEILING line (FIN.CEILING), not a wall face"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "6.320000",
+     "name": "his row 73 (2 x 3.14 x 3.05) vs the measured soffit",
+     "qty": "6.320000",
+     "source": "owner note item 4 accepts the measured pool-court soffit 12.834 (T-127, Checker 12.8343): a CEILING line (FIN.CEILING), not a wall face"
+    },
+    {
+     "cause": "HELD",
+     "delta": "3.937500",
+     "his_scope_row": true,
+     "name": "his row 75 (NOT_IN_T159): no wall face drawn",
+     "qty": "3.937500",
+     "source": "T-337 / T-159: frame bands not measured (profile not printed)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "70.0300",
+     "name": "his row 77: drawn faces (2F storey; PARAPET-OUTER 2F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "70.0300",
+     "source": "T-337 FREELANCER_T337.csv row 77"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "13.395000",
+     "name": "his row 77 vs the drawn faces",
+     "qty": "13.395000",
+     "source": "T-337 FREELANCER_T337.csv row 77 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "66.455",
+     "name": "his row 78: drawn faces (PARAPET-INNER 1F; UPTURN-ZONE 1F; PARAPET-TOP 1F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "66.455",
+     "source": "T-337 FREELANCER_T337.csv row 78"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "15.944000",
+     "name": "his row 78 vs the drawn faces",
+     "qty": "15.944000",
+     "source": "T-337 FREELANCER_T337.csv row 78 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "20.951",
+     "name": "his row 79: drawn faces (PARAPET-INNER ANNEX; UPTURN-ZONE ANNEX; PARAPET-TOP ANNEX)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "20.951",
+     "source": "T-337 FREELANCER_T337.csv row 79"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-1.071000",
+     "name": "his row 79 vs the drawn faces",
+     "qty": "1.071000",
+     "source": "T-337 FREELANCER_T337.csv row 79 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "39.124",
+     "name": "his row 83+84: drawn faces (PARAPET-INNER GF + 2F; UPTURN-ZONE GF + 2F; PARAPET-TOP GF +)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "39.124",
+     "source": "T-337 FREELANCER_T337.csv row 83+84"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "5.256000",
+     "name": "his row 83+84 vs the drawn faces",
+     "qty": "5.256000",
+     "source": "T-337 FREELANCER_T337.csv row 83+84 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "107.240000",
+     "his_scope_row": true,
+     "name": "his row 87-90 (HELD_Q-65): no wall face drawn",
+     "qty": "107.240000",
+     "source": "owner Q-65 C: boundary wall is another trade (EXT.FENCE lines, HELD)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "50.876000",
+     "his_scope_row": true,
+     "name": "his row 92 (HELD_UNANSWERED): no wall face drawn",
+     "qty": "50.876000",
+     "source": "owner note item 3 (drip edge FIN.EXT.DRIP not answered)"
+    },
+    {
+     "cause": "UNRESOLVED",
+     "delta": "93.150000",
+     "name": "EXTERNAL RESIDUAL: his rows 65, 68, 69 match no drawn face (T-337 UNRESOLVED: possible double counts of the 1F set-back ends and the 2F sea face)",
+     "qty": "93.150000",
+     "source": "named residual (R-T552-1 e)"
+    }
+   ]
+  },
+  "bridge_lo": {
+   "by_cause": {
+    "ENGINE_RIGHT": "125.540300",
+    "HELD": "1119.714700",
+    "RULE_DIFFERENCE": "164.435000",
+    "UNRESOLVED": "93.150000"
+   },
+   "class": "EXTERNAL",
+   "engine_valued": "0",
+   "freelancer_gross": "1502.840000",
+   "gap": "1502.840000",
+   "outside": [],
+   "residual": "93.150000",
+   "rows": [
+    {
+     "cause": "HELD",
+     "delta": "8.7750",
+     "name": "his row 51: drawn faces (GF storey; PARAPET-OUTER GF; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "8.7750",
+     "source": "T-337 FREELANCER_T337.csv row 51"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "0.225000",
+     "name": "his row 51 vs the drawn faces",
+     "qty": "0.225000",
+     "source": "T-337 FREELANCER_T337.csv row 51 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "73.4545",
+     "name": "his row 52: drawn faces (GF storey; 1F storey; PARAPET-OUTER 1F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "73.4545",
+     "source": "T-337 FREELANCER_T337.csv row 52"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-4.454500",
+     "name": "his row 52 vs the drawn faces",
+     "qty": "4.454500",
+     "source": "T-337 FREELANCER_T337.csv row 52 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "115.4250",
+     "name": "his row 53: drawn faces (GF storey; 1F storey; 2F storey; PARAPET-OUTER 2F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "115.4250",
+     "source": "T-337 FREELANCER_T337.csv row 53"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-1.665000",
+     "name": "his row 53 vs the drawn faces",
+     "qty": "1.665000",
+     "source": "T-337 FREELANCER_T337.csv row 53 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "26.2355",
+     "name": "his row 54: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "26.2355",
+     "source": "T-337 FREELANCER_T337.csv row 54"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-5.235500",
+     "name": "his row 54 vs the drawn faces",
+     "qty": "5.235500",
+     "source": "T-337 FREELANCER_T337.csv row 54 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "29.9000",
+     "name": "his row 55: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "29.9000",
+     "source": "T-337 FREELANCER_T337.csv row 55"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "32.500000",
+     "name": "his row 55 vs the drawn faces",
+     "qty": "32.500000",
+     "source": "T-337 FREELANCER_T337.csv row 55 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "74.9350",
+     "name": "his row 58: drawn faces (GF storey; 1F storey; 2F storey; PARAPET-OUTER 2F; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "74.9350",
+     "source": "T-337 FREELANCER_T337.csv row 58"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "22.265000",
+     "name": "his row 58 vs the drawn faces",
+     "qty": "22.265000",
+     "source": "T-337 FREELANCER_T337.csv row 58 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "43.3870",
+     "name": "his row 59: drawn faces (1F storey; PARAPET-OUTER 1F; GF storey (the 4.080 face on th)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "43.3870",
+     "source": "T-337 FREELANCER_T337.csv row 59"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "18.825500",
+     "name": "his row 59 vs the drawn faces",
+     "qty": "18.825500",
+     "source": "T-337 FREELANCER_T337.csv row 59 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "32.1600",
+     "name": "his row 60: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "32.1600",
+     "source": "T-337 FREELANCER_T337.csv row 60"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-24.960000",
+     "name": "his row 60 vs the drawn faces",
+     "qty": "24.960000",
+     "source": "T-337 FREELANCER_T337.csv row 60 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "24.930000",
+     "his_scope_row": true,
+     "name": "his row 61 (NOT_IN_T159): no wall face drawn",
+     "qty": "24.930000",
+     "source": "T-337 / T-159: frame bands not measured (profile not printed)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "51.8400",
+     "name": "his row 63: drawn faces (GF storey; PARAPET-OUTER ANNEX; PLINTH)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "51.8400",
+     "source": "T-337 FREELANCER_T337.csv row 63"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-3.840000",
+     "name": "his row 63 vs the drawn faces",
+     "qty": "3.840000",
+     "source": "T-337 FREELANCER_T337.csv row 63 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "222.2050",
+     "name": "his row 64: drawn faces (GF storey; 1F storey; PARAPET-OUTER GF; PARAPET-OUTER 1F; PL)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "222.2050",
+     "source": "T-337 FREELANCER_T337.csv row 64"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "-30.205000",
+     "name": "his row 64 vs the drawn faces",
+     "qty": "30.205000",
+     "source": "T-337 FREELANCER_T337.csv row 64 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "63.4252",
+     "name": "his row 70+71+74: drawn faces (1F storey; PARAPET-OUTER 1F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "63.4252",
+     "source": "T-337 FREELANCER_T337.csv row 70+71+74"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "46.464800",
+     "name": "his row 70+71+74 vs the drawn faces",
+     "qty": "46.464800",
+     "source": "T-337 FREELANCER_T337.csv row 70+71+74 / T-159"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "181.806000",
+     "his_scope_row": true,
+     "name": "his row 72 (EXCLUDED): no wall face drawn",
+     "qty": "181.806000",
+     "source": "owner note item 3 (OWNER_NOTES_SIGMA_2026-10-21: no domes; T-161)"
+    },
+    {
+     "cause": "RULE_DIFFERENCE",
+     "delta": "12.834",
+     "name": "his row 73 pool-court soffit: the engine's CEILING line",
+     "qty": "12.834",
+     "source": "L-23072352a28aeca7b051; owner note item 4 accepts the measured pool-court soffit 12.834 (T-127, Checker 12.8343): a CEILING line (FIN.CEILING), not a wall face"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "6.320000",
+     "name": "his row 73 (2 x 3.14 x 3.05) vs the measured soffit",
+     "qty": "6.320000",
+     "source": "owner note item 4 accepts the measured pool-court soffit 12.834 (T-127, Checker 12.8343): a CEILING line (FIN.CEILING), not a wall face"
+    },
+    {
+     "cause": "HELD",
+     "delta": "3.937500",
+     "his_scope_row": true,
+     "name": "his row 75 (NOT_IN_T159): no wall face drawn",
+     "qty": "3.937500",
+     "source": "T-337 / T-159: frame bands not measured (profile not printed)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "70.0300",
+     "name": "his row 77: drawn faces (2F storey; PARAPET-OUTER 2F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "70.0300",
+     "source": "T-337 FREELANCER_T337.csv row 77"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "13.395000",
+     "name": "his row 77 vs the drawn faces",
+     "qty": "13.395000",
+     "source": "T-337 FREELANCER_T337.csv row 77 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "61.308",
+     "name": "his row 78: drawn faces (PARAPET-INNER 1F; UPTURN-ZONE 1F; PARAPET-TOP 1F)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "61.308",
+     "source": "T-337 FREELANCER_T337.csv row 78"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "21.091000",
+     "name": "his row 78 vs the drawn faces",
+     "qty": "21.091000",
+     "source": "T-337 FREELANCER_T337.csv row 78 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "20.811",
+     "name": "his row 79: drawn faces (PARAPET-INNER ANNEX; UPTURN-ZONE ANNEX; PARAPET-TOP ANNEX)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "20.811",
+     "source": "T-337 FREELANCER_T337.csv row 79"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "-0.931000",
+     "name": "his row 79 vs the drawn faces",
+     "qty": "0.931000",
+     "source": "T-337 FREELANCER_T337.csv row 79 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "38.840",
+     "name": "his row 83+84: drawn faces (PARAPET-INNER GF + 2F; UPTURN-ZONE GF + 2F; PARAPET-TOP GF +)",
+     "note": "measured faces, not in the candidate (FIN.EXT.FINISH / ARCH.FACADE HELD, T-314)",
+     "qty": "38.840",
+     "source": "T-337 FREELANCER_T337.csv row 83+84"
+    },
+    {
+     "cause": "ENGINE_RIGHT",
+     "delta": "5.540000",
+     "name": "his row 83+84 vs the drawn faces",
+     "qty": "5.540000",
+     "source": "T-337 FREELANCER_T337.csv row 83+84 / T-159"
+    },
+    {
+     "cause": "HELD",
+     "delta": "107.240000",
+     "his_scope_row": true,
+     "name": "his row 87-90 (HELD_Q-65): no wall face drawn",
+     "qty": "107.240000",
+     "source": "owner Q-65 C: boundary wall is another trade (EXT.FENCE lines, HELD)"
+    },
+    {
+     "cause": "HELD",
+     "delta": "50.876000",
+     "his_scope_row": true,
+     "name": "his row 92 (HELD_UNANSWERED): no wall face drawn",
+     "qty": "50.876000",
+     "source": "owner note item 3 (drip edge FIN.EXT.DRIP not answered)"
+    },
+    {
+     "cause": "UNRESOLVED",
+     "delta": "93.150000",
+     "name": "EXTERNAL RESIDUAL: his rows 65, 68, 69 match no drawn face (T-337 UNRESOLVED: possible double counts of the 1F set-back ends and the 2F sea face)",
+     "qty": "93.150000",
+     "source": "named residual (R-T552-1 e)"
+    }
+   ]
+  },
+  "engine_valued": "0",
+  "freelancer_gross": "1502.84",
+  "freelancer_net": "1469.9675",
+  "his_half_deduction": "32.8725"
+ },
+ "inputs_sha256_16": {
+  "research/agents_t128/ROOMS_T128_R3.csv": "696333bc12f0acb9",
+  "research/agents_t337/FREELANCER_T337.csv": "0f7d962798425b8a",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "internal": {
+  "WET": {
+   "freelancer_spatter_wet_m2": "433.83",
+   "held_blank": 6,
+   "lines": 18,
+   "note": "wet-room FIN.PLASTER backing lines = the levelling render (tiler), T-331 / T-454; their faces are the wall-tile faces of T-547 (tile) and T-317 / T-349 (spatter); never in a DRY pair",
+   "valued_m2": "340.3038"
+  },
+  "engine_valued_dry_plus_returns": "240.2781",
+  "freelancer_gross": "1209.385",
+  "freelancer_net": "1151.1375",
+  "gap_gross": "969.1069",
+  "gap_net": "910.8594",
+  "his_half_deduction": "58.2475",
+  "pairs": {
+   "DRY": {
+    "by_cause": {
+     "ENGINE_RIGHT": "53.4256",
+     "HELD": "587.71805",
+     "RULE_DIFFERENCE": "90.15325"
+    },
+    "class": "DRY",
+    "engine_valued": "217.2081",
+    "freelancer_gross": "948.505",
+    "gap": "731.2969",
+    "outside": [],
+    "residual": "0.00000",
+    "rooms": [
+     {
+      "crossing_beams": [
+       "CB6 0.75"
+      ],
+      "delta_his_minus_gross": "8.59995",
+      "engine_gross": "63.40005",
+      "face_lm": "20.127",
+      "his_gross": "72.00",
+      "his_rows": [
+       4
+      ],
+      "line_id": "L-b152995525ed123ddac9",
+      "net": {
+       "bound": [
+        "45.75",
+        "61.20"
+       ],
+       "source": "T-128 r3 owner net, G2 PROVISIONAL (annex roof datum)"
+      },
+      "owner_h": "3.15",
+      "room": "GF-01",
+      "state": "HELD",
+      "what": "GF annex reception room"
+     },
+     {
+      "crossing_beams": [],
+      "delta_his_minus_gross": "5.625",
+      "engine_gross": "39.375",
+      "face_lm": "12.5",
+      "his_gross": "45.00",
+      "his_rows": [
+       5
+      ],
+      "line_id": "L-1ddc23d5657b4c4e4d0d",
+      "net": {
+       "bound": [
+        "33.74",
+        "35.63"
+       ],
+       "source": "T-128 r3 owner net, G2 PROVISIONAL"
+      },
+      "owner_h": "3.15",
+      "room": "GF-04",
+      "state": "HELD",
+      "what": "GF annex driver room"
+     },
+     {
+      "crossing_beams": [],
+      "delta_his_minus_gross": "-2.83005",
+      "engine_gross": "78.61005",
+      "face_lm": "21.537",
+      "his_gross": "75.780",
+      "his_rows": [
+       6
+      ],
+      "line_id": "L-0d93f2209cd9bb827c0a",
+      "net": "56.0131",
+      "owner_h": "3.65",
+      "room": "GF-15",
+      "state": "RELEASED",
+      "what": "GF master bed room"
+     },
+     {
+      "crossing_beams": [
+       "B26 0.85",
+       "B27 0.85"
+      ],
+      "delta_his_minus_gross": "1.16380",
+      "engine_gross": "194.13620",
+      "face_lm": "53.188",
+      "his_gross": "195.300",
+      "his_rows": [
+       7
+      ],
+      "line_id": "L-8cecb1d010d5aafbf25d",
+      "net": [
+       "152.0505",
+       "178.805"
+      ],
+      "owner_h": "3.65",
+      "room": "GF-08",
+      "state": "HELD",
+      "what": "GF open room (dining / entrance / reception)"
+     },
+     {
+      "crossing_beams": [
+       "B6 0.50"
+      ],
+      "delta_his_minus_gross": "0.205",
+      "engine_gross": "59.295",
+      "face_lm": "17.7",
+      "his_gross": "59.50",
+      "his_rows": [
+       11
+      ],
+      "line_id": "L-af9621f43bc316a871ea",
+      "net": "51.415",
+      "owner_h": "3.35",
+      "room": "1F-01",
+      "state": "RELEASED",
+      "what": "1F master bed room west"
+     },
+     {
+      "crossing_beams": [],
+      "delta_his_minus_gross": "0.530",
+      "engine_gross": "58.290",
+      "face_lm": "17.4",
+      "his_gross": "58.82",
+      "his_rows": [
+       12
+      ],
+      "line_id": "L-971f0bdaf68d7fd0966c",
+      "net": "52.005",
+      "owner_h": "3.35",
+      "room": "1F-04",
+      "state": "RELEASED",
+      "what": "1F master bed room 500 x 365"
+     },
+     {
+      "crossing_beams": [
+       "B19 0.75",
+       "B6 0.50"
+      ],
+      "delta_his_minus_gross": "21.550",
+      "engine_gross": "54.270",
+      "face_lm": "16.2",
+      "his_gross": "75.82",
+      "his_rows": [
+       13
+      ],
+      "line_id": "L-2ba8077ba9bb2e1ff0f6",
+      "net": [
+       "48.94",
+       "52.29"
+      ],
+      "owner_h": "3.35",
+      "room": "1F-10",
+      "state": "HELD",
+      "what": "1F master bed room 380 x 430"
+     },
+     {
+      "crossing_beams": [],
+      "delta_his_minus_gross": "0.26085",
+      "engine_gross": "74.19915",
+      "face_lm": "22.149",
+      "his_gross": "74.46",
+      "his_rows": [
+       14
+      ],
+      "line_id": "L-31db3c83552682d92ca3",
+      "net": [
+       "61.4626",
+       "61.7177"
+      ],
+      "owner_h": "3.35",
+      "room": "1F-11",
+      "state": "HELD",
+      "what": "1F master bed room east (curved)"
+     },
+     {
+      "crossing_beams": [
+       "B25 / CB12 0.75 on edges"
+      ],
+      "delta_his_minus_gross": "40.5075",
+      "engine_gross": "132.1575",
+      "face_lm": "39.45",
+      "his_gross": "172.665",
+      "his_rows": [
+       15,
+       16
+      ],
+      "line_id": "L-9b4a7bab033d677e2017",
+      "net": [
+       "111.0177",
+       "114.3677"
+      ],
+      "owner_h": "3.35",
+      "room": "1F-13",
+      "state": "HELD",
+      "what": "1F living + corridor + landing"
+     },
+     {
+      "crossing_beams": [
+       "B2 0.40"
+      ],
+      "delta_his_minus_gross": "0.945",
+      "engine_gross": "63.315",
+      "face_lm": "18.9",
+      "his_gross": "64.26",
+      "his_rows": [
+       19
+      ],
+      "line_id": "L-4ce74fc37a08d4bdf0d8",
+      "net": "57.775",
+      "owner_h": "3.35",
+      "room": "2F-03",
+      "state": "RELEASED",
+      "what": "2F room 300 x 645"
+     },
+     {
+      "crossing_beams": [
+       "B15 1.20"
+      ],
+      "delta_his_minus_gross": "0.41985",
+      "engine_gross": "30.18015",
+      "face_lm": "9.009",
+      "his_gross": "30.60",
+      "his_rows": [
+       20
+      ],
+      "line_id": "L-ae0cdd794cc5fdbe0c29",
+      "net": [
+       "22.6502",
+       "26.0002"
+      ],
+      "owner_h": "3.35",
+      "room": "2F-01",
+      "state": "HELD",
+      "what": "2F stair lobby"
+     },
+     {
+      "face_lm": "7.2",
+      "his_gross": "24.300",
+      "his_rows": [
+       9
+      ],
+      "line_id": null,
+      "room": "GF-02",
+      "state": "WET (render, not dry plaster)",
+      "what": "GF annex wash by the reception room"
+     }
+    ],
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "63.40005",
+      "name": "GF-01 HELD line at its engine-basis gross face 20.127 x 3.15",
+      "note": "net {'bound': ['45.75', '61.20'], 'source': 'T-128 r3 owner net, G2 PROVISIONAL (annex roof datum)'}; opening heights / annex datum not established",
+      "qty": "63.40005",
+      "source": "L-b1529955 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "9.05715",
+      "name": "GF-01 height: his 3.6 vs the line's owner G1 3.15 on face 20.127",
+      "qty": "9.05715",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.4572",
+      "name": "GF-01 length: his rows vs the drawn face 20.127 lm (at his height)",
+      "qty": "0.4572",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "39.375",
+      "name": "GF-04 HELD line at its engine-basis gross face 12.5 x 3.15",
+      "note": "net {'bound': ['33.74', '35.63'], 'source': 'T-128 r3 owner net, G2 PROVISIONAL'}; opening heights / annex datum not established",
+      "qty": "39.375",
+      "source": "L-1ddc23d5 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.625",
+      "name": "GF-04 height: his 3.6 vs the line's owner G1 3.15 on face 12.5",
+      "qty": "5.625",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "22.59695",
+      "name": "GF-15 opening deductions (engine gross 78.61005 - line net 56.0131; Q-73 full, each opening by its own area per room side)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "22.59695",
+      "source": "L-0d93f220 + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-1.07685",
+      "name": "GF-15 height: his 3.6 vs the line's owner G1 3.65 on face 21.537",
+      "qty": "1.07685",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-1.7532",
+      "name": "GF-15 length: his rows vs the drawn face 21.537 lm (at his height)",
+      "qty": "1.7532",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "194.13620",
+      "name": "GF-08 HELD line at its engine-basis gross face 53.188 x 3.65",
+      "note": "net ['152.0505', '178.805']; opening heights / annex datum not established",
+      "qty": "194.13620",
+      "source": "L-8cecb1d0 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-2.65940",
+      "name": "GF-08 height: his 3.6 vs the line's owner G1 3.65 on face 53.188",
+      "qty": "2.65940",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "3.8232",
+      "name": "GF-08 length: his rows vs the drawn face 53.188 lm (at his height)",
+      "qty": "3.8232",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "7.880",
+      "name": "1F-01 opening deductions (engine gross 59.295 - line net 51.415; Q-73 full, each opening by its own area per room side)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "7.880",
+      "source": "L-af9621f4 + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.885",
+      "name": "1F-01 height: his 3.4 vs the line's owner G1 3.35 on face 17.7",
+      "qty": "0.885",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.68",
+      "name": "1F-01 length: his rows vs the drawn face 17.7 lm (at his height)",
+      "qty": "0.68",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "6.285",
+      "name": "1F-04 opening deductions (engine gross 58.290 - line net 52.005; Q-73 full, each opening by its own area per room side)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "6.285",
+      "source": "L-971f0bda + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.870",
+      "name": "1F-04 height: his 3.4 vs the line's owner G1 3.35 on face 17.4",
+      "qty": "0.870",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.34",
+      "name": "1F-04 length: his rows vs the drawn face 17.4 lm (at his height)",
+      "qty": "0.34",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "54.270",
+      "name": "1F-10 HELD line at its engine-basis gross face 16.2 x 3.35",
+      "note": "net ['48.94', '52.29']; opening heights / annex datum not established",
+      "qty": "54.270",
+      "source": "L-2ba8077b (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.810",
+      "name": "1F-10 height: his 3.4 vs the line's owner G1 3.35 on face 16.2",
+      "qty": "0.810",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "20.74",
+      "name": "1F-10 length: his rows vs the drawn face 16.2 lm (at his height)",
+      "qty": "20.74",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "74.19915",
+      "name": "1F-11 HELD line at its engine-basis gross face 22.149 x 3.35",
+      "note": "net ['61.4626', '61.7177']; opening heights / annex datum not established",
+      "qty": "74.19915",
+      "source": "L-31db3c83 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "1.10745",
+      "name": "1F-11 height: his 3.4 vs the line's owner G1 3.35 on face 22.149",
+      "qty": "1.10745",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.8466",
+      "name": "1F-11 length: his rows vs the drawn face 22.149 lm (at his height)",
+      "qty": "0.8466",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "132.1575",
+      "name": "1F-13 HELD line at its engine-basis gross face 39.45 x 3.35",
+      "note": "net ['111.0177', '114.3677']; opening heights / annex datum not established",
+      "qty": "132.1575",
+      "source": "L-9b4a7bab (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.9175",
+      "name": "1F-13 height: his 3.5 vs the line's owner G1 3.35 on face 39.45",
+      "qty": "5.9175",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "34.590",
+      "name": "1F-13 length: his rows vs the drawn face 39.45 lm (at his height)",
+      "qty": "34.590",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "5.540",
+      "name": "2F-03 opening deductions (engine gross 63.315 - line net 57.775; Q-73 full, each opening by its own area per room side)",
+      "note": "in his gross; he deducts half of his own opening list at his net step",
+      "qty": "5.540",
+      "source": "L-4ce74fc3 + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.945",
+      "name": "2F-03 height: his 3.4 vs the line's owner G1 3.35 on face 18.9",
+      "qty": "0.945",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "HELD",
+      "delta": "30.18015",
+      "name": "2F-01 HELD line at its engine-basis gross face 9.009 x 3.35",
+      "note": "net ['22.6502', '26.0002']; opening heights / annex datum not established",
+      "qty": "30.18015",
+      "source": "L-ae0cdd79 (HELD) + T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "0.45045",
+      "name": "2F-01 height: his 3.4 vs the line's owner G1 3.35 on face 9.009",
+      "qty": "0.45045",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); owner Q-43 / Q-48 A (G1 = paint height)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.0306",
+      "name": "2F-01 length: his rows vs the drawn face 9.009 lm (at his height)",
+      "qty": "0.0306",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A) (two independent traces, T-106 / T-250 faces)"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "25.92",
+      "name": "GF-02 wet space in his dry rows: drawn face 7.2 x his 3.6",
+      "qty": "25.92",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A); WET (T-128 KIND; owner Q-06 A wash space): spatter + levelling render, the tiler's render line is HELD blank (annex G2); not a dry plaster face"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-1.620",
+      "name": "GF-02 length: his row vs the drawn face 7.2",
+      "qty": "1.620",
+      "source": "T-128 r3 ROOMS_T128_R3.csv (walked drawn faces, owner G1 heights Q-43 / Q-48 A)"
+     }
+    ]
+   },
+   "RETURN": {
+    "by_cause": {
+     "UNRESOLVED": "-7.110"
+    },
+    "class": "RETURN",
+    "engine_valued": "23.070",
+    "freelancer_gross": "15.96",
+    "gap": "-7.110",
+    "outside": [
+     {
+      "line_id": "L-3e19506bd9e093dfb7be",
+      "why": "HELD GF-REVEAL-A-GF-01:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-64cb94b4b8dc2cb17608",
+      "why": "HELD 1F-REVEAL-A-1F-01:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-e70e7e48b4c15b4f5a21",
+      "why": "HELD GF-REVEAL-D-GF-15:THROUGH:JAMBS_HEAD:HELD blank"
+     },
+     {
+      "line_id": "L-f4175f9915208dc5f9f7",
+      "why": "HELD GF-OPENING-OP-009:door jambs and head bound 1.08 .. 1.2"
+     }
+    ],
+    "residual": "-7.110",
+    "rows": [
+     {
+      "cause": "UNRESOLVED",
+      "delta": "-7.110",
+      "name": "RETURN RESIDUAL: door count / size: the engine values 26 openings by id (2 x wall t x head + wall t x width, UP-FIN-PLASTER-001, PROVISIONAL) against his 14 doors x 0.2 x 5.7; his doors are not listed by id",
+      "qty": "7.110",
+      "source": "named residual (R-T552-1 e)"
+     }
+    ],
+    "valued_lines": 26
+   },
+   "SHAFT": {
+    "by_cause": {
+     "ENGINE_RIGHT": "13.85",
+     "HELD": "177.07",
+     "UNRESOLVED": "54.000"
+    },
+    "candidate_lines": [
+     {
+      "candidate_bound": [
+       "48.52",
+       "62.01"
+      ],
+      "element": "ST_GF",
+      "line_id": "L-95f2c45c2eccaaeccb08"
+     },
+     {
+      "candidate_bound": [
+       "42.48",
+       "47.67"
+      ],
+      "element": "ST_1F",
+      "line_id": "L-0eac839f9132da7bd116"
+     },
+     {
+      "candidate_bound": null,
+      "element": "ST_2F",
+      "line_id": "L-418121a4b223cb4e8646"
+     }
+    ],
+    "class": "SHAFT",
+    "engine_valued": "0",
+    "freelancer_gross": "244.920",
+    "gap": "244.920",
+    "outside": [],
+    "residual": "54.000",
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "177.07",
+      "name": "shaft faces, drawing-derived plaster gross (3 HELD candidate lines; T-173 actual exposed geometry, Q-72 full height)",
+      "note": "gross 173.82 .. 177.07 (b 0.10 .. 0); net 156.82 .. 160.98; the candidate lines still carry the T-128 r2 storey-interval nets (restate on T-173 at integration)",
+      "qty": "177.07",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "20.11",
+      "name": "south side: his box counts a 2.40 m south wall over 12.90 m; above +5.50 the void is open to the arrival landings (GF south wall only, under the 1F slab)",
+      "qty": "20.11",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-2.64",
+      "name": "north side: his width 2.40 vs printed 2.50 and his +1.00 start vs the +0.30 lobby",
+      "qty": "2.64",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-3.62",
+      "name": "west / east: his 5.00 x 12.90 x 2 vs the faces to 5.20 under the slabs, the lobby / steps and the roof soffit 0.16 below +13.90",
+      "qty": "3.62",
+      "source": "T-173 STAIR_SHAFT_WALLS s.1 / s.3 (his box closed to the drawing, test tests/t173_shaft)"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "54.000",
+      "name": "SHAFT RESIDUAL: his row 24 (2.50 x 5.40 = 13.50, matches no drawn face, T-173) + his row 8 'stair wall' (11.25 x 3.60 = 40.50: no stair face outside the shaft box his row 23 already covers from +1.00)",
+      "qty": "54.000",
+      "source": "named residual (R-T552-1 e)"
+     }
+    ]
+   }
+  }
+ },
+ "q72_dry_plaster_height": {
+  "beam_ends": "a crossing beam framing into a wall above the G1 height removes its end section (width x depth below the slab) from the wall face; widths not in this table: HELD per beam end; its sides and soffit are CEILING items (Q-57)",
+  "missing_total": [
+   "146.41440",
+   "171.23040"
+  ],
+  "rows": [
+   {
+    "beam_end_sections_held": [
+     "CB6 0.75"
+    ],
+    "corrected_net": [
+     "57.62493",
+     "75.08763"
+    ],
+    "face_lm": "20.127",
+    "interval": "4.00",
+    "line_height_basis": "owner G1 3.15 (= paint height)",
+    "line_id": "L-b152995525ed123ddac9",
+    "missing_m2": [
+     "11.87493",
+     "13.88763"
+    ],
+    "plaster_height": [
+     "3.74",
+     "3.84"
+    ],
+    "room": "GF-01",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [],
+    "corrected_net": [
+     "41.115",
+     "44.255"
+    ],
+    "face_lm": "12.5",
+    "interval": "4.00",
+    "line_height_basis": "owner G1 3.15 (= paint height)",
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "missing_m2": [
+     "7.375",
+     "8.625"
+    ],
+    "plaster_height": [
+     "3.74",
+     "3.84"
+    ],
+    "room": "GF-04",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [],
+    "corrected_net": [
+     "68.71993",
+     "70.87363"
+    ],
+    "face_lm": "21.537",
+    "interval": "4.50",
+    "line_height_basis": "owner G1 3.65 (= paint height)",
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "missing_m2": [
+     "12.70683",
+     "14.86053"
+    ],
+    "plaster_height": [
+     "4.24",
+     "4.34"
+    ],
+    "room": "GF-15",
+    "state": "RELEASED",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.15)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B26 0.85",
+     "B27 0.85"
+    ],
+    "corrected_net": [
+     "183.43142",
+     "215.50472"
+    ],
+    "face_lm": "53.188",
+    "interval": "4.50",
+    "line_height_basis": "owner G1 3.65 (= paint height)",
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "missing_m2": [
+     "31.38092",
+     "36.69972"
+    ],
+    "plaster_height": [
+     "4.24",
+     "4.34"
+    ],
+    "room": "GF-08",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.61)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B6 0.50"
+    ],
+    "corrected_net": [
+     "61.858",
+     "63.628"
+    ],
+    "face_lm": "17.7",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-af9621f43bc316a871ea",
+    "missing_m2": [
+     "10.443",
+     "12.213"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "1F-01",
+    "state": "RELEASED",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [],
+    "corrected_net": [
+     "62.271",
+     "64.011"
+    ],
+    "face_lm": "17.4",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "missing_m2": [
+     "10.266",
+     "12.006"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "1F-04",
+    "state": "RELEASED",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B19 0.75",
+     "B6 0.50"
+    ],
+    "corrected_net": [
+     "58.498",
+     "63.468"
+    ],
+    "face_lm": "16.2",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "missing_m2": [
+     "9.558",
+     "11.178"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "1F-10",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.59)"
+   },
+   {
+    "beam_end_sections_held": [],
+    "corrected_net": [
+     "74.53051",
+     "77.00051"
+    ],
+    "face_lm": "22.149",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-31db3c83552682d92ca3",
+    "missing_m2": [
+     "13.06791",
+     "15.28281"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "1F-11",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B25 / CB12 0.75 on edges"
+    ],
+    "corrected_net": [
+     "134.2932",
+     "141.5882"
+    ],
+    "face_lm": "39.45",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-9b4a7bab033d677e2017",
+    "missing_m2": [
+     "23.2755",
+     "27.2205"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "1F-13",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.57)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B2 0.40"
+    ],
+    "corrected_net": [
+     "68.926",
+     "70.816"
+    ],
+    "face_lm": "18.9",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "missing_m2": [
+     "11.151",
+     "13.041"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "2F-03",
+    "state": "RELEASED",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "beam_end_sections_held": [
+     "B15 1.20"
+    ],
+    "corrected_net": [
+     "27.96551",
+     "32.21641"
+    ],
+    "face_lm": "9.009",
+    "interval": "4.20",
+    "line_height_basis": "owner G1 3.35 (= paint height)",
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "missing_m2": [
+     "5.31531",
+     "6.21621"
+    ],
+    "plaster_height": [
+     "3.94",
+     "4.04"
+    ],
+    "room": "2F-01",
+    "state": "HELD",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   }
+  ],
+  "rule": "plaster to the underside of the structural slab / roof (owner 2026-11-02, Q-72; rulebook 'Plaster and paint heights')",
+  "verdict": "ENGINE_WRONG (candidate plaster at the paint height after the 2 Nov owner rule)"
+ },
+ "schema": "URBAN_T552_PLASTER_RECONCILE_V1"
+}

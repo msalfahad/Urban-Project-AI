@@ -1,0 +1,435 @@
+{
+ "after_fix_rows_lm": "209.728592",
+ "candidate_fin_skirting_released_lm": "209.428592",
+ "census": [
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "COLUMN_JAMB"
+   ],
+   "engine_line": null,
+   "evidence": [
+    "CROSSED"
+   ],
+   "evidence_ids": {},
+   "fix_lm": null,
+   "his": null,
+   "his_lm": null,
+   "jamb_face_handles": [
+    "103",
+    "111",
+    "85"
+   ],
+   "jamb_lm": "0",
+   "kind": "NOT_AN_OPENING",
+   "opening": "1.40 junction at the service passage's outer end (T-175 P-GF-02 'open side'): a cross-wall face (handle A3) stands inside the strip",
+   "side_names": null,
+   "sides": [
+    null,
+    null
+   ],
+   "status": "NO_JAMB_SKIRTING",
+   "storey": "GF",
+   "wall_t_m": "0.2",
+   "why": "a wall face crosses the gap: not an opening, no jamb",
+   "width_m": "1.4"
+  },
+  {
+   "bound_lm": "0.4",
+   "ends": [
+    "COLUMN_JAMB",
+    "COLUMN_JAMB"
+   ],
+   "engine_line": "none (no room skirting line on either side)",
+   "evidence": [],
+   "evidence_ids": {},
+   "fix_lm": null,
+   "his": "inside his yard skirting 81.32 lm (scope UNRESOLVED, T-574 section 4)",
+   "his_lm": null,
+   "jamb_face_handles": [
+    "120",
+    "15A"
+   ],
+   "jamb_lm": null,
+   "kind": "DOORLESS",
+   "opening": "P-GF-05 (engine GF OP-007, T-175 'open side')",
+   "side_names": "court +0.15 under the canopy | open service passage between two blocks (open at its far end)",
+   "sides": [
+    "OUTDOOR",
+    "OUTDOOR"
+   ],
+   "status": "OUTDOOR_SCOPE",
+   "storey": "GF",
+   "wall_t_m": "0.2",
+   "why": "a side is outdoors: the returns belong to the outdoor skirting scope (unresolved), held by name",
+   "width_m": "1.2"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": "L-d32414916cfbd04c27be (T-296: OP-027 1.000 deducted)",
+   "evidence": [
+    "ARCH_BLOCK"
+   ],
+   "evidence_ids": {
+    "arch_inserts": [
+     "1F8"
+    ]
+   },
+   "fix_lm": null,
+   "his": "his dewaneya row 20.00 is a gross outline with no jamb term (T-574 / T-591)",
+   "his_lm": "0",
+   "jamb_face_handles": [
+    "127",
+    "128",
+    "12A",
+    "12B"
+   ],
+   "jamb_lm": "0",
+   "kind": "DOORLESS",
+   "opening": "A-GF-01 (engine GF OP-027)",
+   "side_names": "dewaneya | hand-wash space by the dewaneya (Q-06 A wet)",
+   "sides": [
+    "DRY",
+    "WET"
+   ],
+   "status": "NOT_APPLICABLE",
+   "storey": "GF",
+   "wall_t_m": "0.15",
+   "why": "a side is a full-tile wet space with a marble threshold (Q-06 A, UP-THR-001) or a shaft: the floor finish does not reach the jamb (owner method condition 4)",
+   "width_m": "1.0"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "CONTINUOUS_FACE",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": null,
+   "evidence": [
+    "CROSSED"
+   ],
+   "evidence_ids": {},
+   "fix_lm": null,
+   "his": null,
+   "his_lm": null,
+   "jamb_face_handles": [
+    "14F",
+    "336",
+    "337"
+   ],
+   "jamb_lm": "0",
+   "kind": "NOT_AN_OPENING",
+   "opening": "13.27 alignment of two collinear wall pieces across the house: crossed by four wall faces",
+   "side_names": null,
+   "sides": [
+    null,
+    null
+   ],
+   "status": "NO_JAMB_SKIRTING",
+   "storey": "GF",
+   "wall_t_m": "0.2",
+   "why": "a wall face crosses the gap: not an opening, no jamb",
+   "width_m": "13.27"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": null,
+   "evidence": [
+    "PANEL_LINES"
+   ],
+   "evidence_ids": {
+    "panel_lines": [
+     "228",
+     "229",
+     "22A",
+     "22B"
+    ]
+   },
+   "fix_lm": null,
+   "his": null,
+   "his_lm": null,
+   "jamb_face_handles": [
+    "20D",
+    "20E",
+    "21D",
+    "21E"
+   ],
+   "jamb_lm": "0",
+   "kind": "FRAMED",
+   "opening": "L-GF-01 lift landing door (engine GF OP-011; T-296 kind PASSAGE on L-71e2e002a3af624097f0)",
+   "side_names": null,
+   "sides": [
+    null,
+    null
+   ],
+   "status": "NO_JAMB_SKIRTING",
+   "storey": "GF",
+   "wall_t_m": "0.2",
+   "why": "a landing-door / frame is drawn across the gap: not doorless, jamb_skirting NONE",
+   "width_m": "1.0"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "COLUMN_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": "SKIRT-T443:GF-ST-HALL (6.550 - OP-010 1.000 - OP-020 0.900) + HELD SKIRT-T443:GF-ST-HALL:OP-020-JAMBS",
+   "evidence": [
+    "HEAD_LINES"
+   ],
+   "evidence_ids": {
+    "head_lines": [
+     "33C",
+     "33D"
+    ]
+   },
+   "fix_lm": null,
+   "his": "his stair-hall skirting sits in his unsplit ST-01 marble row 23.10 (T-574): not comparable",
+   "his_lm": null,
+   "jamb_face_handles": [
+    "215",
+    "21A",
+    "21C"
+   ],
+   "jamb_lm": "0",
+   "kind": "DOORLESS",
+   "opening": "P-GF-01 (engine GF OP-020)",
+   "side_names": "GF stair hall | hand-wash space (Q-06 A wet; T-441 RFI b 'tile return or skirting')",
+   "sides": [
+    "DRY",
+    "WET"
+   ],
+   "status": "NOT_APPLICABLE",
+   "storey": "GF",
+   "wall_t_m": "0.2",
+   "why": "a side is a full-tile wet space with a marble threshold (Q-06 A, UP-THR-001) or a shaft: the floor finish does not reach the jamb (owner method condition 4)",
+   "width_m": "0.9"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": "L-a8aea28451168e4032b6 and L-4a85470b3a822d6fb7bb (each deducts the arch 1.00, T-574 group 'bed room 2')",
+   "evidence": [
+    "ARCH_BLOCK"
+   ],
+   "evidence_ids": {
+    "arch_inserts": [
+     "BEC"
+    ]
+   },
+   "fix_lm": "0.30",
+   "his": "his outline adds 2 x 0.15 arch returns (21.40, T-218 / T-574)",
+   "his_lm": "0.30",
+   "jamb_face_handles": [
+    "AD0",
+    "AD1",
+    "AD4",
+    "AD5"
+   ],
+   "jamb_lm": "0.30",
+   "kind": "DOORLESS",
+   "opening": "A-1F-01 (engine 1F OP-011)",
+   "side_names": "1F bed room 380 x 430 | dressing 165 x 180 (both dry, porcelain continues: T-175 / T-296 records)",
+   "sides": [
+    "DRY",
+    "DRY"
+   ],
+   "status": "FIX_ROW",
+   "storey": "1F",
+   "wall_t_m": "0.15",
+   "why": "2 real jamb(s) x 0.15 m; the skirting line deducts the opening and values no jamb",
+   "width_m": "1.0"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": null,
+   "evidence": [
+    "PANEL_LINES"
+   ],
+   "evidence_ids": {
+    "panel_lines": [
+     "B98",
+     "B99",
+     "B9A",
+     "B9B"
+    ]
+   },
+   "fix_lm": null,
+   "his": null,
+   "his_lm": null,
+   "jamb_face_handles": [
+    "AFD",
+    "AFE",
+    "B19",
+    "B1A"
+   ],
+   "jamb_lm": "0",
+   "kind": "FRAMED",
+   "opening": "L-1F-01 lift landing door (engine 1F OP-007; T-296 kind PASSAGE on L-ba3599ec2dc82c221617)",
+   "side_names": null,
+   "sides": [
+    null,
+    null
+   ],
+   "status": "NO_JAMB_SKIRTING",
+   "storey": "1F",
+   "wall_t_m": "0.2",
+   "why": "a landing-door / frame is drawn across the gap: not doorless, jamb_skirting NONE",
+   "width_m": "1.0"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "CONTINUOUS_FACE"
+   ],
+   "engine_line": "L-309f118f6fce78b6c28e (T-296 lists no OP-009 deduction on it; doors OP-006 0.90 + OP-018 0.80 are the lobby's)",
+   "evidence": [
+    "HEAD_LINES"
+   ],
+   "evidence_ids": {
+    "head_lines": [
+     "C13",
+     "C14"
+    ]
+   },
+   "fix_lm": null,
+   "his": "his 'bed room 1' 22.89 vs drawn outline 22.15067: -0.73933 UNRESOLVED (T-218), not a jamb cause",
+   "his_lm": null,
+   "jamb_face_handles": [
+    "C09",
+    "C0A",
+    "C0B"
+   ],
+   "jamb_lm": "0.15",
+   "kind": "DOORLESS",
+   "opening": "P-1F-01 (engine 1F OP-009)",
+   "side_names": "1F curved east bed room | its lobby (one skirting cell: T-574 group 'with its lobby')",
+   "sides": [
+    "DRY",
+    "DRY"
+   ],
+   "status": "INCLUDED_IN_OUTLINE",
+   "storey": "1F",
+   "wall_t_m": "0.15",
+   "why": "both sides are one skirting cell: the room outline already walks the jamb faces",
+   "width_m": "1.3"
+  },
+  {
+   "bound_lm": null,
+   "ends": [
+    "MASONRY_JAMB",
+    "MASONRY_JAMB"
+   ],
+   "engine_line": null,
+   "evidence": [
+    "PANEL_LINES"
+   ],
+   "evidence_ids": {
+    "panel_lines": [
+     "12B0",
+     "12B1",
+     "12B2",
+     "12B3"
+    ]
+   },
+   "fix_lm": null,
+   "his": null,
+   "his_lm": null,
+   "jamb_face_handles": [
+    "1289",
+    "128A",
+    "129B",
+    "129C"
+   ],
+   "jamb_lm": "0",
+   "kind": "FRAMED",
+   "opening": "L-2F-01 lift landing door (engine 2F OP-002; already a lift in T-443)",
+   "side_names": null,
+   "sides": [
+    null,
+    null
+   ],
+   "status": "NO_JAMB_SKIRTING",
+   "storey": "2F",
+   "wall_t_m": "0.2",
+   "why": "a landing-door / frame is drawn across the gap: not doorless, jamb_skirting NONE",
+   "width_m": "1.0"
+  }
+ ],
+ "fix_rows": [
+  {
+   "after": "209.728592",
+   "change": "+0.30 lm FIN.SKIRTING: A-1F-01 two real 0.15 jambs (DXF faces AD0 / AD1 / AD4 / AD5, arch120 BEC), both sides dry",
+   "effect_lm": "0.30",
+   "id": "FR-T601-1",
+   "line": "L-a8aea28451168e4032b6 / L-4a85470b3a822d6fb7bb (or one new jamb line)"
+  },
+  {
+   "change": "HELD -> NOT_APPLICABLE by Q-06 A (the wash side is a basin-only wet space: marble threshold, full-height tile): the same class as A-GF-01 (T-591 NOT_APPLICABLE); RFI b stays for the reveal's wall finish (B4 / B5), not for skirting",
+   "effect_lm": "0 valued (held 0.40 removed)",
+   "id": "FR-T601-2",
+   "line": "SKIRT-T443:GF-ST-HALL:OP-020-JAMBS (HELD, blank, 0.400 beside)"
+  },
+  {
+   "change": "relabel 'open passage' -> 'lift landing door (LIFT DOOR GAP register)': deduction 1.00 each stands, no jamb skirting; T-591 HELD-by-name for both is closed",
+   "effect_lm": "0",
+   "id": "FR-T601-3",
+   "line": "statement labels T-574 GF open room and 1F living rows; T-296 kind of GF OP-011 / 1F OP-007"
+  }
+ ],
+ "gap_counts": {
+  "1F:CURVED_WINDOW": 1,
+  "1F:DOOR": 10,
+  "1F:DOORLESS": 2,
+  "1F:DOOR_INSERTS_NOT_IN_A_GAP": [],
+  "1F:FRAMED": 1,
+  "1F:WINDOW": 11,
+  "2F:DOOR": 3,
+  "2F:DOOR_INSERTS_NOT_IN_A_GAP": [],
+  "2F:FRAMED": 1,
+  "2F:WINDOW": 4,
+  "GF:DOOR": 14,
+  "GF:DOORLESS": 3,
+  "GF:DOOR_INSERTS_NOT_IN_A_GAP": [
+   "2D8"
+  ],
+  "GF:FRAMED": 1,
+  "GF:NOT_AN_OPENING": 2,
+  "GF:WINDOW": 11
+ },
+ "governing": [
+  "URBAN-SKIRTING-OPENING-METHOD v1",
+  "UP-SKIRT-001 1.4.0",
+  "UP-THR-001 1.0.0",
+  "Q-06 A"
+ ],
+ "held_by_name": [
+  "P-GF-05 (engine GF OP-007, T-175 'open side')"
+ ],
+ "pins": {
+  "research/agents_t175/T175_OPENING_HOSTS.csv": "d96cfbce9c732db50b7737038b374cab6fc91d5325cc36182416dd0dc35ac3e9",
+  "research/agents_t296/DEDUCTIONS_BY_OPENING_T296.csv": "be797b612f96dd2482c13aa0261aa1bf470abb4046ca0e5f1ee5657af9ec6074",
+  "research/agents_t601/T601_DRAWN.json": "0c4ee6cd69685af939f334428536ac2cad281a33a84a2aa7d5c18c4c3e961d95"
+ },
+ "rule": "R-T601-1",
+ "schema": "T601_DOORLESS_CENSUS_V1",
+ "valued_fix_lm": "0.30"
+}

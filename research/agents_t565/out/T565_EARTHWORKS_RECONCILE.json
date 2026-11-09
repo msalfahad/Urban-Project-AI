@@ -1,0 +1,726 @@
+{
+ "benchmark_search": {
+  "freelancer": {
+   "hits": {},
+   "per_file": {
+    "ALU": 50,
+    "BLK": 190,
+    "FIN": 197,
+    "PLS": 115,
+    "PNT": 77,
+    "RC": 256
+   },
+   "rows": 885
+  },
+  "web_app": {
+   "hits": {
+    "WEB": {
+     "رمل": 3
+    }
+   },
+   "hits_read": [
+    {
+     "category": "السيراميكبند",
+     "class": "MATERIAL_LOAD_NOT_EARTHWORKS",
+     "id": "WEB-006",
+     "unit": "qty"
+    },
+    {
+     "category": "مساحبند",
+     "class": "MATERIAL_LOAD_NOT_EARTHWORKS",
+     "id": "WEB-038",
+     "unit": "qty"
+    },
+    {
+     "category": "الاسودخرسانهبند",
+     "class": "MATERIAL_LOAD_NOT_EARTHWORKS",
+     "id": "WEB-048",
+     "unit": "qty"
+    }
+   ],
+   "per_file": {
+    "WEB": 88
+   },
+   "rows": 88
+  }
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (lines of V3.0.57, R-T507-1 (e): V3.0.58 moves FIN.WP.ROOF only)",
+ "components": [
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-OTHER-TRENCHES",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-89b8e6beaea55fc0e4c9",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-PIT-F10F",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-PIT-FF",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-PITS-24",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "high": "128.643547",
+    "low": "119.963335",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-a6af7c610a8adce59df3",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-POOL",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-91abe286a34e874e8ab2",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z1-TRENCH-EXT-GB-MAIN",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-6471367d85bdf361f9e7",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-03 Z2",
+   "difference": null,
+   "engine": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-eac006402d3035da007b",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-04 ALL",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-78d7c8a989ab34527a1c",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-LOWER-GB-ROW",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-4445d5e20d1805f12402",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-PIT-F10F",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "high": "8.391750",
+    "low": "7.264500",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-ce0132c7212e42e306a5",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-PIT-FF",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-b4ebff00041d90e03eca",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-PITS-24",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "state": "VALUED",
+    "value": "208.164757"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-POOL",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "state": "VALUED",
+    "value": "17.776576"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-0a49a302b7926f86a37f",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-ANNEX",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-54baa058d6ccd9a38314",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-BOUNDARY",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-313384fed48301ae02d2",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-COURT",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-d9185fb243fd3b7130e9",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-EXT-GB-MAIN",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "high": "1.176467",
+    "low": "1.069269",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-INT-GB-MAIN-D33",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-b97f95d2784d456e0743",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-INT-GB-MAIN-ZERO",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-952a18b10db99c4eb1d3",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "B1-02 Z1-TRENCH-STRAPS",
+   "difference": null,
+   "engine": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "his": "NO_ROW",
+   "line_id": "L-a5844c9318406eccedde",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "compaction layers (pits zone backfill, 0.15 m OWNER-PROVISIONAL lift)",
+   "difference": null,
+   "engine": {
+    "basis": "COUNT",
+    "state": "VALUED",
+    "value": "11.000000"
+   },
+   "his": "NO_ROW",
+   "line_id": null,
+   "note": "information beside the backfill line, not a BOQ line (no compaction standard adopted)",
+   "pct": null
+  },
+  {
+   "class": "NOT_COMPARABLE",
+   "component": "formation compaction footprint, pits + pool",
+   "difference": null,
+   "engine": {
+    "basis": "AREA",
+    "state": "VALUED",
+    "value": "136.500606"
+   },
+   "his": "NO_ROW",
+   "line_id": null,
+   "note": "the ext GB trench footprint 13.917 .. 14.180 m2 beside (T-350 r2), not added",
+   "pct": null
+  },
+  {
+   "class": "AGREE_ABSENT",
+   "component": "B1-05 soil treatment / anti-termite",
+   "difference": null,
+   "engine": {
+    "basis": "AREA",
+    "evidence": "T-354: 31 sheets, DXF text, specification, owner rules searched: NOT_IN_DRAWN_SCOPE",
+    "state": "NOT_IN_SCOPE"
+   },
+   "his": "NO_ROW",
+   "line_id": null,
+   "pct": null
+  }
+ ],
+ "family_totals": {
+  "STR.EARTH.BACKFILL": {
+   "basis": "COMPACTED",
+   "family": "B1-03",
+   "held_blank_lines": 6,
+   "held_high": "128.643547",
+   "held_low": "119.963335",
+   "lines": 7,
+   "valued": null
+  },
+  "STR.EARTH.DISPOSAL": {
+   "basis": "IN_SITU",
+   "family": "B1-04",
+   "held_blank_lines": 1,
+   "held_high": null,
+   "held_low": null,
+   "lines": 1,
+   "valued": null
+  },
+  "STR.EARTH.EXCAVATION": {
+   "basis": "IN_SITU",
+   "family": "B1-02",
+   "held_blank_lines": 8,
+   "held_high": "9.568217",
+   "held_low": "8.333769",
+   "lines": 12,
+   "valued": "225.941333"
+  }
+ },
+ "level_basis": "S01 ESTIMATED (owner-accepted): footing underside -1.50, underlay 0.07 + blinding 0.10; EG +-0.00 DERIVED (T-357)",
+ "method": "EARTHWORKS_RECONCILE_V1 (R-T565-1 .. 4)",
+ "ownership": {
+  "blinding": {
+   "in_env_in_plot_plan_from_line_m2": "2.694820",
+   "in_env_in_plot_plan_per_pit_sum_m2": "2.695361",
+   "line_id": "L-98eb2d58075c9eddf1b4",
+   "line_m3": "12.734438",
+   "overlap_inside_envelope_m2": "0.000541",
+   "per_zone": {
+    "Z1-PITS-24": "12.464956",
+    "Z1-POOL-INTERFACE (held, under-pool band)": "0.269482"
+   }
+  },
+  "footings": {
+   "frame_offset_mm": [
+    75968,
+    14448
+   ],
+   "handle_differs": [
+    "P-C:FTG:SH10:F11@209785,50796:109682",
+    "P-C:FTG:SH10:F6@209560,54546:cf553f"
+   ],
+   "held_line": {
+    "bound": [
+     "2.176",
+     "2.275"
+    ],
+    "element": "P-C:FTG:SH10:T652:10A5",
+    "zone": "Z1-PIT-F10F (own zone, S02)"
+   },
+   "lines": 26,
+   "per_zone": {
+    "Z1-PIT-FF (held blank)": "11.385000",
+    "Z1-PITS-24": "51.917740",
+    "Z1-POOL-INTERFACE (held, F-T350R2-2)": "1.001260"
+   },
+   "pits_joined": 24,
+   "t320_ledger_pits_m3": "52.961000",
+   "t350r2_footings_m3": "51.917740",
+   "valued_lines": 25,
+   "valued_m3": "64.304000"
+  },
+  "necks": {
+   "all_concrete_lines_held": true,
+   "concrete_held_bound": [
+    "3.075000",
+    "15.375000"
+   ],
+   "concrete_lines": 36,
+   "necks_per_zone": {
+    "Z1-PIT-F10F": 2,
+    "Z1-PIT-FF": 4,
+    "Z1-PITS-24": 30
+   },
+   "pits_C8_conflict_m3": [
+    "0.24",
+    "0.27"
+   ],
+   "pits_calculated_29_m3_S01": "5.154000"
+  },
+  "straps": {
+   "lines": {
+    "SB1": "1.592500",
+    "SB2": "1.146400",
+    "SB3": "0.651600"
+   },
+   "per_element": {
+    "SB1": {
+     "Z1-PIT-F10F": "0.035000",
+     "Z1-PITS-24": "0.035000",
+     "Z1-TRENCH-STRAPS (held blank)": "1.522500"
+    },
+    "SB2": {
+     "Z1-PITS-24": "0.101894",
+     "Z1-TRENCH-STRAPS (held blank)": "1.044506"
+    },
+    "SB3": {
+     "Z1-PITS-24": "0.042724",
+     "Z1-TRENCH-STRAPS (held blank)": "0.608876"
+    }
+   },
+   "per_zone": {
+    "Z1-PIT-F10F": "0.035000",
+    "Z1-PITS-24": "0.179618",
+    "Z1-TRENCH-STRAPS (held blank)": "3.175882"
+   }
+  }
+ },
+ "pits_backfill_closure": {
+  "backfill_high": "128.643547",
+  "backfill_low": "119.963335",
+  "excavation": "208.164757",
+  "line_high": "128.643547",
+  "line_low": "119.963335",
+  "remeasured_displacement": [
+   "7.595955",
+   "16.276167"
+  ],
+  "verified_displacement": "71.925255"
+ },
+ "pits_verified_displacement_parts": {
+  "blinding": "12.464956",
+  "footings": "51.917740",
+  "underlay": "7.542559"
+ },
+ "printed_minimum_bound_pits_m3": "186.974333",
+ "schema": "URBAN_T565_EARTHWORKS_RECONCILE_V1",
+ "sensitivity_S01_pits_excavation_m3": {
+  "+0.10": "220.629712",
+  "-0.10": "195.699801"
+ },
+ "zone_lines": [
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-89b8e6beaea55fc0e4c9",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-OTHER-TRENCHES"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-afa1a6f9e01eb47c56e4",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-2b8f1ae2ec46cd74552f",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-a6af7c610a8adce59df3",
+   "q": {
+    "basis": "COMPACTED",
+    "high": "128.643547",
+    "low": "119.963335",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-91abe286a34e874e8ab2",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-POOL"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-6471367d85bdf361f9e7",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "code": "STR.EARTH.BACKFILL",
+   "family": "B1-03",
+   "line_id": "L-eac006402d3035da007b",
+   "q": {
+    "basis": "COMPACTED",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z2"
+  },
+  {
+   "code": "STR.EARTH.DISPOSAL",
+   "family": "B1-04",
+   "line_id": "L-78d7c8a989ab34527a1c",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "ALL"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-4445d5e20d1805f12402",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-LOWER-GB-ROW"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-ce0132c7212e42e306a5",
+   "q": {
+    "basis": "IN_SITU",
+    "high": "8.391750",
+    "low": "7.264500",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "zone": "Z1-PIT-F10F"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-b4ebff00041d90e03eca",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-PIT-FF"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-cf8ffcdaacd0159b7e29",
+   "q": {
+    "basis": "IN_SITU",
+    "state": "VALUED",
+    "value": "208.164757"
+   },
+   "zone": "Z1-PITS-24"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-0a49a302b7926f86a37f",
+   "q": {
+    "basis": "IN_SITU",
+    "state": "VALUED",
+    "value": "17.776576"
+   },
+   "zone": "Z1-POOL"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-54baa058d6ccd9a38314",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-ANNEX"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-313384fed48301ae02d2",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-BOUNDARY"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-d9185fb243fd3b7130e9",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-COURT"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-438a4abd3adc0475d0bd",
+   "q": {
+    "basis": "IN_SITU",
+    "high": "1.176467",
+    "low": "1.069269",
+    "reason": "bounded held zone",
+    "state": "HELD_RANGE"
+   },
+   "zone": "Z1-TRENCH-EXT-GB-MAIN"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-b97f95d2784d456e0743",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-INT-GB-MAIN-D33"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-952a18b10db99c4eb1d3",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-INT-GB-MAIN-ZERO"
+  },
+  {
+   "code": "STR.EARTH.EXCAVATION",
+   "family": "B1-02",
+   "line_id": "L-a5844c9318406eccedde",
+   "q": {
+    "basis": "IN_SITU",
+    "reason": "zone held blank (formation / extent / section / density not printed)",
+    "state": "HELD_BLANK"
+   },
+   "zone": "Z1-TRENCH-STRAPS"
+  }
+ ]
+}

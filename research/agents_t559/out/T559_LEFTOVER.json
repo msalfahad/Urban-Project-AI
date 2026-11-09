@@ -1,0 +1,1734 @@
+{
+ "by_cause": {
+  "ENGINE_RIGHT": "-5.32450",
+  "HELD": "-23.3700",
+  "RULE_DIFFERENCE": "-3.9000",
+  "TOLERANCE": "0.01050",
+  "UNRESOLVED": "58.5064370"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "edge_members": [
+  {
+   "band": "BAND0014",
+   "covered_m": "11.800",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-013#BAND0014",
+   "excluded_twins": 1,
+   "handles": "B34 / AC7",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-128bbb3f98713383935f",
+   "mark": "CB7 20x75",
+   "measured_m3": "1.6801",
+   "run": "ANNEX NE-6 (+4.30)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0028",
+   "covered_m": "6.300",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-029#BAND0028",
+   "excluded_twins": 1,
+   "handles": "B37 / B2D / B2E",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-db759eb6300a0147c463",
+   "mark": "B9 20x75",
+   "measured_m3": "0.9153",
+   "run": "ANNEX SE-1 (+4.30)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0027",
+   "covered_m": "2.900",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-028#BAND0027",
+   "excluded_twins": 1,
+   "handles": "B41 / B28",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-ac63a60a21f5618611a1",
+   "mark": "B2 20x40",
+   "measured_m3": "0.2002",
+   "run": "ANNEX SW-1 (+4.30)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0029.2",
+   "covered_m": "5.819",
+   "element_id": "P-C:BEAMS:GF:BAND0029.2",
+   "excluded_twins": 0,
+   "handles": "B35 / B36",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-6bdfcf21ebb29773436e",
+   "mark": "CB6 20x75",
+   "measured_m3": "0.8775",
+   "run": "ANNEX SW-3 (+4.30)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0039",
+   "covered_m": "3.372",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-040#BAND0039",
+   "excluded_twins": 1,
+   "handles": "B25 / AC7",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-7c1a1da8004c4272ccba",
+   "mark": "CB8 30x75",
+   "measured_m3": "0.716937",
+   "run": "GF NE-4 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0040.1",
+   "covered_m": "5.983",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-041#BAND0040.1",
+   "excluded_twins": 1,
+   "handles": "B25 / AC7",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-bd16e6923af088014236",
+   "mark": "CB8 30x75",
+   "measured_m3": "1.310964",
+   "run": "GF NE-4 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0040.2",
+   "covered_m": "6.589",
+   "element_id": "P-C:BEAMS:GF:BAND0040.2",
+   "excluded_twins": 0,
+   "handles": "B25 / AC7",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-b6b4eb28a8001c2af2dd",
+   "mark": "CB8 30x75",
+   "measured_m3": "1.42875",
+   "run": "GF NE-4 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0015",
+   "covered_m": "1.385",
+   "element_id": "P-C:BEAMS:GF:BAND0015",
+   "excluded_twins": 0,
+   "handles": "B25 / AC7",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-2f85d9047ea71f6b0b14",
+   "mark": "B1 20x40",
+   "measured_m3": "0.091584",
+   "run": "GF NE-4 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0041.1",
+   "covered_m": "7.319",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-042#BAND0041.1",
+   "excluded_twins": 1,
+   "handles": "B33 / B30 / C85 / C86",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-2e2fc5195697247a6a0b",
+   "mark": "CB1 35x75",
+   "measured_m3": "1.940009",
+   "run": "GF NW-7 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0032",
+   "covered_m": "0.864",
+   "element_id": "P-C:BEAMS:GF:BAND0032",
+   "excluded_twins": 0,
+   "handles": "BDB / BDC",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-6873e8f788bfcd4f9031",
+   "mark": "B1 20x40",
+   "measured_m3": "0.076",
+   "run": "GF SW-9 (+5.50)",
+   "state": "CARRIED_ONCE",
+   "storey": "GF"
+  },
+  {
+   "band": "BAND0002.1",
+   "covered_m": "4.050",
+   "element_id": "P-C:BEAMS:1F:BAND0002.1",
+   "excluded_twins": 0,
+   "handles": "127F / 1285",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-02ee97d409df4b3a501b",
+   "mark": "B4 20x50",
+   "measured_m3": "0.381173",
+   "run": "1F NE-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0027.1",
+   "covered_m": "6.948",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-023#BAND0027.1",
+   "excluded_twins": 1,
+   "handles": "127F / 1285",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-9696bbb45246c6dce183",
+   "mark": "CB11 30x75",
+   "measured_m3": "1.539652",
+   "run": "1F NE-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0027.2",
+   "covered_m": "2.891",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-023#BAND0027.2",
+   "excluded_twins": 1,
+   "handles": "127F / 1285",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-935e72dff296573fff64",
+   "mark": "CB11 30x75",
+   "measured_m3": "0.619159",
+   "run": "1F NE-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0027.3",
+   "covered_m": "3.539",
+   "element_id": "P-C:BEAMS:1F:BAND0027.3",
+   "excluded_twins": 0,
+   "handles": "127F / 1285",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-780b8142b030c0108b6b",
+   "mark": "CB11 30x75",
+   "measured_m3": "0.7425",
+   "run": "1F NE-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0014",
+   "covered_m": "7.500",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "excluded_twins": 0,
+   "handles": "12C4 / 12C7",
+   "held_m3": "0.6 .. 1.8",
+   "line_class": "HELD",
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "mark": "unlabelled 0.20 (BM-1F-034)",
+   "measured_m3": null,
+   "run": "1F SE-1 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0001.3",
+   "covered_m": "2.340",
+   "element_id": "P-C:BEAMS:1F:BAND0001.3",
+   "excluded_twins": 0,
+   "handles": "1273 / 1278",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-fce03d2bd6dae64f2641",
+   "mark": "CB9 20x50",
+   "measured_m3": "0.335",
+   "run": "1F SW-3 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0001.4",
+   "covered_m": "3.790",
+   "element_id": "P-C:BEAMS:1F:BAND0001.4",
+   "excluded_twins": 0,
+   "handles": "1273 / 1278",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-7a4d5364c39aa3fe5850",
+   "mark": "CB9 20x50",
+   "measured_m3": "0.355",
+   "run": "1F SW-3 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0031.1",
+   "covered_m": "2.920",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-026#BAND0031.1",
+   "excluded_twins": 1,
+   "handles": "12B9",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-ab62c5990fe1114d6171",
+   "mark": "B23 45x75",
+   "measured_m3": "1.132104",
+   "run": "1F SW-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0031.2",
+   "covered_m": "0.644",
+   "element_id": "P-C:BEAMS:1F:BAND0031.2",
+   "excluded_twins": 0,
+   "handles": "12B9",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-5ca0573b64ee1cb22e0e",
+   "mark": "B23 45x75",
+   "measured_m3": "1.11375",
+   "run": "1F SW-2 (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0018.1",
+   "covered_m": "5.745",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-017#BAND0018.1",
+   "excluded_twins": 1,
+   "handles": "12A7 / 1308 / 1322 / 1323",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-076a6d9e6df46aef97d1",
+   "mark": "CB12 25x75",
+   "measured_m3": "1.079463",
+   "run": "1F NW (sea side, +9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0018.2",
+   "covered_m": "5.195",
+   "element_id": "P-C:BEAMS:1F:BAND0018.2",
+   "excluded_twins": 0,
+   "handles": "12A7 / 12A6",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-76d0bad3c40bd8cedca2",
+   "mark": "CB12 25x75",
+   "measured_m3": "0.942188",
+   "run": "1F NW (sea side, +9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0025",
+   "covered_m": "3.959",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "excluded_twins": 1,
+   "handles": "1318 / 1319",
+   "held_m3": "0.676 .. 1.015",
+   "line_class": "HELD",
+   "line_id": "L-56d278bedc8dda2837a9",
+   "mark": "unlabelled 0.349 (BM-1F-036)",
+   "measured_m3": null,
+   "run": "1F NW (sea side, +9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0023",
+   "covered_m": "0.900",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "excluded_twins": 0,
+   "handles": "1309 / 130B",
+   "held_m3": "0.135 .. 0.2025",
+   "line_class": "HELD",
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "mark": "unlabelled 0.30 (BM-1F-035)",
+   "measured_m3": null,
+   "run": "1F NW corner (+9.70)",
+   "state": "CARRIED_ONCE",
+   "storey": "1F"
+  },
+  {
+   "band": "BAND0006.1",
+   "covered_m": "3.100",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": "0.248 .. 0.744",
+   "line_class": "HELD",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "mark": "unlabelled 0.199 (BM-2F-016)",
+   "measured_m3": null,
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0006.2",
+   "covered_m": "2.700",
+   "element_id": "P-C:BEAMS:2F:BAND0006.2",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-713bc64aaa210610e7fe",
+   "mark": "B15 20x120",
+   "measured_m3": "0.648",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0009",
+   "covered_m": "6.600",
+   "element_id": "P-C:BEAMS:2F:BAND0009",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-f4a95b8019ae333d81ae",
+   "mark": "B7 20x75",
+   "measured_m3": "0.99",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0001.1",
+   "covered_m": "2.500",
+   "element_id": "P-C:BEAMS:2F:BAND0001.1",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-c484802154b46ed37908",
+   "mark": "B3 20x40",
+   "measured_m3": "0.2",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0001.2",
+   "covered_m": "3.470",
+   "element_id": "P-C:BEAMS:2F:BAND0001.2",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-84768dadb07330d74cbd",
+   "mark": "B8 20x75",
+   "measured_m3": "0.5205",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0001.3",
+   "covered_m": "1.130",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "excluded_twins": 1,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": "0.09 .. 0.271",
+   "line_class": "HELD",
+   "line_id": "L-8d031491396379f0cbb1",
+   "mark": "unlabelled 0.20 (BM-2F-015)",
+   "measured_m3": null,
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0003",
+   "covered_m": "2.500",
+   "element_id": "P-C:BEAMS:2F:BAND0003",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-bcfa6dddf762d6cf0fb3",
+   "mark": "B2 20x40",
+   "measured_m3": "0.2",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0004",
+   "covered_m": "1.800",
+   "element_id": "P-C:BEAMS:2F:BAND0004",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-b835f51602e05704c045",
+   "mark": "B1 20x40",
+   "measured_m3": "0.144",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  },
+  {
+   "band": "BAND0005",
+   "covered_m": "3.000",
+   "element_id": "P-C:BEAMS:2F:BAND0005",
+   "excluded_twins": 0,
+   "handles": "outline 8.10 x 6.80",
+   "held_m3": null,
+   "line_class": "RELEASED",
+   "line_id": "L-2999807a87e55d057be3",
+   "mark": "B2 20x40",
+   "measured_m3": "0.24",
+   "run": "2F (+13.90) perimeter",
+   "state": "CARRIED_ONCE",
+   "storey": "2F"
+  }
+ ],
+ "edge_summary": {
+  "CARRIED_ONCE": 32,
+  "OMITTED": 0
+ },
+ "method": "R-T559-1 / R-T559-2 on R-T550-1 / R-T543-1",
+ "openings": {
+  "groups": [
+   {
+    "delta": "-7.97850",
+    "engine_m2": "40.4615",
+    "floor": "GF",
+    "his_m2": "48.4400",
+    "rows": [
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "GF D-GF-01 vs his 1.00 x 2.40",
+      "note": "ext door 1.00",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "GF D-GF-05 vs his 1.00 x 2.40",
+      "note": "ext door 1.00",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "GF D-GF-06 vs his 1.00 x 2.40",
+      "note": "ext door 1.00",
+      "term": "height"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "-0.2400",
+      "name": "GF D-GF-03 vs his 1.00 x 2.40",
+      "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+      "term": "width"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1800",
+      "name": "GF D-GF-03 vs his 1.00 x 2.40",
+      "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.5000",
+      "name": "GF W10 vs his 1.00 x 2.00",
+      "note": "1.00 window",
+      "term": "height"
+     },
+     {
+      "cause": "TOLERANCE",
+      "delta": "0.00200",
+      "name": "GF W08 vs his 1.50 x 2.00",
+      "note": "1.50 window",
+      "term": "width"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.75050",
+      "name": "GF W08 vs his 1.50 x 2.00",
+      "note": "1.50 window",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.7500",
+      "name": "GF W09 vs his 1.50 x 2.00",
+      "note": "1.50 window",
+      "term": "height"
+     },
+     {
+      "cause": "HELD",
+      "delta": "-4.8000",
+      "name": "GF D-GF-07 vs his 2.00 x 2.40",
+      "note": "main door 2.00 (engine HELD opening in held wall GF-W15)",
+      "term": "held opening"
+     },
+     {
+      "cause": "TOLERANCE",
+      "delta": "0.01000",
+      "name": "GF W11 vs his 1.95 x 2.00",
+      "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+      "term": "width"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.38000",
+      "name": "GF W11 vs his 1.95 x 2.00",
+      "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.3900",
+      "name": "GF W12 vs his 1.95 x 2.00",
+      "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "GF D-GF-02 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "GF D-GF-04 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "GF D-GF-10 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "GF D-GF-11 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "GF D-GF-12 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "HELD",
+      "delta": "-1.9200",
+      "name": "GF D-GF-14 vs his 0.80 x 2.40",
+      "note": "15 cm door 0.80 (engine HELD, wall GF-W30)",
+      "term": "held opening"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "GF D-GF-13 vs his 1.00 x 2.40",
+      "note": "15 cm door 1.00",
+      "term": "height"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "1.9800",
+      "name": "GF D-GF-09 (engine deducts; no unit of his)",
+      "note": "engine-only opening",
+      "term": "count"
+     }
+    ]
+   },
+   {
+    "delta": "-7.6400",
+    "engine_m2": "2.2000",
+    "floor": "20CM",
+    "his_m2": "9.8400",
+    "rows": [
+     {
+      "cause": "HELD",
+      "delta": "-2.4000",
+      "name": "20CM L-GF-01 vs his 1.00 x 2.40",
+      "note": "lift landing door, GF (HELD height, wall GF-W08)",
+      "term": "held opening"
+     },
+     {
+      "cause": "HELD",
+      "delta": "-2.4000",
+      "name": "20CM L-1F-01 vs his 1.00 x 2.40",
+      "note": "lift landing door, 1F (HELD, wall 1F-W07)",
+      "term": "held opening"
+     },
+     {
+      "cause": "HELD",
+      "delta": "-2.4000",
+      "name": "20CM L-2F-01 vs his 1.00 x 2.40",
+      "note": "lift landing door, 2F (HELD, wall 2F-W00)",
+      "term": "held opening"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "-0.2400",
+      "name": "20CM D-GF-08 vs his 1.10 x 2.40",
+      "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+      "term": "width"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "20CM D-GF-08 vs his 1.10 x 2.40",
+      "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+      "term": "height"
+     }
+    ]
+   },
+   {
+    "delta": "-8.4990",
+    "engine_m2": "41.8510",
+    "floor": "1F",
+    "his_m2": "50.3500",
+    "rows": [
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.5000",
+      "name": "1F W25 vs his 1.00 x 2.00",
+      "note": "1.00 window",
+      "term": "height"
+     },
+     {
+      "cause": "HELD",
+      "delta": "-9.4500",
+      "name": "1F W17 vs his 3.15 x 3.00",
+      "note": "arched opening 3.286 (engine outline HELD 4.4361 .. 9.858, wall 1F-W25)",
+      "term": "held opening"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.2870",
+      "name": "1F W15 vs his 1.55 x 3.00",
+      "note": "arched window: true outline (UP-OPEN-ARCH-001 v1.1) vs his rectangle",
+      "term": "true outline vs his rectangle"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.2870",
+      "name": "1F W16 vs his 1.55 x 3.00",
+      "note": "arched window: true outline vs his rectangle",
+      "term": "true outline vs his rectangle"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.7750",
+      "name": "1F W24 vs his 1.55 x 2.00",
+      "note": "1.55 window",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.9800",
+      "name": "1F W14 vs his 2.45 x 2.00",
+      "note": "2.45 window",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "0.3600",
+      "name": "1F W13 vs his 1.20 x 2.00",
+      "note": "1.20 window",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "1F D-1F-01 vs his 0.80 x 2.40",
+      "note": "door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "1F D-1F-04 vs his 0.80 x 2.40",
+      "note": "door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "1F D-1F-06 vs his 0.80 x 2.40",
+      "note": "door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "1F D-1F-07 vs his 0.80 x 2.40",
+      "note": "door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1800",
+      "name": "1F D-1F-05 vs his 0.90 x 2.40",
+      "note": "door 0.90 (20 cm wall 1F-W07; his 15 cm section)",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1800",
+      "name": "1F D-1F-08 vs his 0.90 x 2.40",
+      "note": "door 0.90",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1800",
+      "name": "1F D-1F-09 vs his 0.90 x 2.40",
+      "note": "door 0.90",
+      "term": "height"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "0.2400",
+      "name": "1F D-1F-03 vs his 0.90 x 2.40",
+      "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+      "term": "width"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "1F D-1F-03 vs his 0.90 x 2.40",
+      "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+      "term": "height"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "1.0800",
+      "name": "1F W18 (engine deducts; no unit of his)",
+      "note": "engine-only opening",
+      "term": "count"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "1.7600",
+      "name": "1F D-1F-10 (engine deducts; no unit of his)",
+      "note": "engine-only opening",
+      "term": "count"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "2.2000",
+      "name": "1F D-1F-02 (engine deducts; no unit of his)",
+      "note": "engine-only opening",
+      "term": "count"
+     },
+     {
+      "cause": "UNRESOLVED",
+      "delta": "-0.4800",
+      "name": "1F his 0.60 x 0.80 (no engine opening)",
+      "note": "his-only unit",
+      "term": "count"
+     }
+    ]
+   },
+   {
+    "delta": "-2.1650",
+    "engine_m2": "11.5950",
+    "floor": "2F",
+    "his_m2": "13.7600",
+    "rows": [
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.5000",
+      "name": "2F W27 vs his 1.00 x 2.00",
+      "note": "1.00 window",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.6000",
+      "name": "2F W29 vs his 1.20 x 2.00",
+      "note": "1.20 window",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.2000",
+      "name": "2F D-2F-01 vs his 1.00 x 2.40",
+      "note": "door 1.00",
+      "term": "height"
+     },
+     {
+      "cause": "ENGINE_RIGHT",
+      "delta": "-0.5250",
+      "name": "2F W26 vs his 1.20 x 2.00",
+      "note": "arched outline vs his rectangle",
+      "term": "true outline vs his rectangle"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1600",
+      "name": "2F D-2F-03 vs his 0.80 x 2.40",
+      "note": "door 0.80",
+      "term": "height"
+     },
+     {
+      "cause": "RULE_DIFFERENCE",
+      "delta": "-0.1800",
+      "name": "2F D-2F-02 vs his 0.90 x 2.40",
+      "note": "door 0.90 (20 cm wall 2F-W05; his 15 cm section)",
+      "term": "height"
+     }
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "GF D-GF-01 vs his 1.00 x 2.40",
+    "note": "ext door 1.00",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "GF D-GF-05 vs his 1.00 x 2.40",
+    "note": "ext door 1.00",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "GF D-GF-06 vs his 1.00 x 2.40",
+    "note": "ext door 1.00",
+    "term": "height"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "-0.2400",
+    "name": "GF D-GF-03 vs his 1.00 x 2.40",
+    "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+    "term": "width"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1800",
+    "name": "GF D-GF-03 vs his 1.00 x 2.40",
+    "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.5000",
+    "name": "GF W10 vs his 1.00 x 2.00",
+    "note": "1.00 window",
+    "term": "height"
+   },
+   {
+    "cause": "TOLERANCE",
+    "delta": "0.00200",
+    "name": "GF W08 vs his 1.50 x 2.00",
+    "note": "1.50 window",
+    "term": "width"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.75050",
+    "name": "GF W08 vs his 1.50 x 2.00",
+    "note": "1.50 window",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.7500",
+    "name": "GF W09 vs his 1.50 x 2.00",
+    "note": "1.50 window",
+    "term": "height"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-4.8000",
+    "name": "GF D-GF-07 vs his 2.00 x 2.40",
+    "note": "main door 2.00 (engine HELD opening in held wall GF-W15)",
+    "term": "held opening"
+   },
+   {
+    "cause": "TOLERANCE",
+    "delta": "0.01000",
+    "name": "GF W11 vs his 1.95 x 2.00",
+    "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+    "term": "width"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "0.38000",
+    "name": "GF W11 vs his 1.95 x 2.00",
+    "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "0.3900",
+    "name": "GF W12 vs his 1.95 x 2.00",
+    "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "GF D-GF-02 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "GF D-GF-04 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "GF D-GF-10 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "GF D-GF-11 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "GF D-GF-12 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-1.9200",
+    "name": "GF D-GF-14 vs his 0.80 x 2.40",
+    "note": "15 cm door 0.80 (engine HELD, wall GF-W30)",
+    "term": "held opening"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "GF D-GF-13 vs his 1.00 x 2.40",
+    "note": "15 cm door 1.00",
+    "term": "height"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "1.9800",
+    "name": "GF D-GF-09 (engine deducts; no unit of his)",
+    "note": "engine-only opening",
+    "term": "count"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-2.4000",
+    "name": "20CM L-GF-01 vs his 1.00 x 2.40",
+    "note": "lift landing door, GF (HELD height, wall GF-W08)",
+    "term": "held opening"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-2.4000",
+    "name": "20CM L-1F-01 vs his 1.00 x 2.40",
+    "note": "lift landing door, 1F (HELD, wall 1F-W07)",
+    "term": "held opening"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-2.4000",
+    "name": "20CM L-2F-01 vs his 1.00 x 2.40",
+    "note": "lift landing door, 2F (HELD, wall 2F-W00)",
+    "term": "held opening"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "-0.2400",
+    "name": "20CM D-GF-08 vs his 1.10 x 2.40",
+    "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+    "term": "width"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "20CM D-GF-08 vs his 1.10 x 2.40",
+    "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.5000",
+    "name": "1F W25 vs his 1.00 x 2.00",
+    "note": "1.00 window",
+    "term": "height"
+   },
+   {
+    "cause": "HELD",
+    "delta": "-9.4500",
+    "name": "1F W17 vs his 3.15 x 3.00",
+    "note": "arched opening 3.286 (engine outline HELD 4.4361 .. 9.858, wall 1F-W25)",
+    "term": "held opening"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.2870",
+    "name": "1F W15 vs his 1.55 x 3.00",
+    "note": "arched window: true outline (UP-OPEN-ARCH-001 v1.1) vs his rectangle",
+    "term": "true outline vs his rectangle"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.2870",
+    "name": "1F W16 vs his 1.55 x 3.00",
+    "note": "arched window: true outline vs his rectangle",
+    "term": "true outline vs his rectangle"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.7750",
+    "name": "1F W24 vs his 1.55 x 2.00",
+    "note": "1.55 window",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.9800",
+    "name": "1F W14 vs his 2.45 x 2.00",
+    "note": "2.45 window",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "0.3600",
+    "name": "1F W13 vs his 1.20 x 2.00",
+    "note": "1.20 window",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "1F D-1F-01 vs his 0.80 x 2.40",
+    "note": "door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "1F D-1F-04 vs his 0.80 x 2.40",
+    "note": "door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "1F D-1F-06 vs his 0.80 x 2.40",
+    "note": "door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "1F D-1F-07 vs his 0.80 x 2.40",
+    "note": "door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1800",
+    "name": "1F D-1F-05 vs his 0.90 x 2.40",
+    "note": "door 0.90 (20 cm wall 1F-W07; his 15 cm section)",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1800",
+    "name": "1F D-1F-08 vs his 0.90 x 2.40",
+    "note": "door 0.90",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1800",
+    "name": "1F D-1F-09 vs his 0.90 x 2.40",
+    "note": "door 0.90",
+    "term": "height"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "0.2400",
+    "name": "1F D-1F-03 vs his 0.90 x 2.40",
+    "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+    "term": "width"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "1F D-1F-03 vs his 0.90 x 2.40",
+    "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+    "term": "height"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "1.0800",
+    "name": "1F W18 (engine deducts; no unit of his)",
+    "note": "engine-only opening",
+    "term": "count"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "1.7600",
+    "name": "1F D-1F-10 (engine deducts; no unit of his)",
+    "note": "engine-only opening",
+    "term": "count"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "2.2000",
+    "name": "1F D-1F-02 (engine deducts; no unit of his)",
+    "note": "engine-only opening",
+    "term": "count"
+   },
+   {
+    "cause": "UNRESOLVED",
+    "delta": "-0.4800",
+    "name": "1F his 0.60 x 0.80 (no engine opening)",
+    "note": "his-only unit",
+    "term": "count"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.5000",
+    "name": "2F W27 vs his 1.00 x 2.00",
+    "note": "1.00 window",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.6000",
+    "name": "2F W29 vs his 1.20 x 2.00",
+    "note": "1.20 window",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.2000",
+    "name": "2F D-2F-01 vs his 1.00 x 2.40",
+    "note": "door 1.00",
+    "term": "height"
+   },
+   {
+    "cause": "ENGINE_RIGHT",
+    "delta": "-0.5250",
+    "name": "2F W26 vs his 1.20 x 2.00",
+    "note": "arched outline vs his rectangle",
+    "term": "true outline vs his rectangle"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1600",
+    "name": "2F D-2F-03 vs his 0.80 x 2.40",
+    "note": "door 0.80",
+    "term": "height"
+   },
+   {
+    "cause": "RULE_DIFFERENCE",
+    "delta": "-0.1800",
+    "name": "2F D-2F-02 vs his 0.90 x 2.40",
+    "note": "door 0.90 (20 cm wall 2F-W05; his 15 cm section)",
+    "term": "height"
+   },
+   {
+    "cause": "TOLERANCE",
+    "delta": "-0.0015",
+    "name": "GF register V2 prints the GF-W04 wall total 4.7115 as 4.710",
+    "note": "register rounding",
+    "term": "print"
+   }
+  ],
+  "total": "-26.28400"
+ },
+ "openings_t550_m2": "-26.2840",
+ "per_run_heights_1F": [
+  {
+   "centreline_m": "0.04",
+   "h_printed_m": null,
+   "h_status": "HELD 1.0996 .. 1.2996",
+   "handles": "run end",
+   "run": "NE-1",
+   "term_m2": null
+  },
+  {
+   "centreline_m": "19.07",
+   "h_printed_m": "1.3",
+   "h_status": "PRINTED",
+   "handles": "127F / 1285",
+   "run": "NE-2",
+   "term_m2": "0.0000"
+  },
+  {
+   "centreline_m": "1.02275",
+   "h_printed_m": "1.299",
+   "h_status": "PRINTED",
+   "handles": "sea-side group 12A7 / 1308 .. 1313",
+   "run": "NW-1",
+   "term_m2": "0.00102275"
+  },
+  {
+   "centreline_m": "3.1672",
+   "h_printed_m": "1.3",
+   "h_status": "PRINTED",
+   "handles": "sea-side group",
+   "run": "NW-2",
+   "term_m2": "0.000000"
+  },
+  {
+   "centreline_m": "0.53045",
+   "h_printed_m": "1.299",
+   "h_status": "PRINTED",
+   "handles": "sea-side group",
+   "run": "NW-3",
+   "term_m2": "0.00053045"
+  },
+  {
+   "centreline_m": "0.4673",
+   "h_printed_m": "1.099",
+   "h_status": "PRINTED",
+   "handles": "sea-side group",
+   "run": "NW-4",
+   "term_m2": "0.0939273"
+  },
+  {
+   "centreline_m": "6.625",
+   "h_printed_m": "0.448",
+   "h_status": "PRINTED",
+   "handles": "sea-side group",
+   "run": "NW-5",
+   "term_m2": "5.644500"
+  },
+  {
+   "centreline_m": "7.3",
+   "h_printed_m": "1.041",
+   "h_status": "PRINTED",
+   "handles": "12C4 / 12C7",
+   "run": "SE-1",
+   "term_m2": "1.8907"
+  },
+  {
+   "centreline_m": "0.04",
+   "h_printed_m": null,
+   "h_status": "HELD 1.0996 .. 1.2996",
+   "handles": "run end",
+   "run": "SW-1",
+   "term_m2": null
+  },
+  {
+   "centreline_m": "4.30005",
+   "h_printed_m": null,
+   "h_status": "HELD 0.385 .. 1.6",
+   "handles": "12B9",
+   "run": "SW-2",
+   "term_m2": null
+  },
+  {
+   "centreline_m": "6.6699",
+   "h_printed_m": "1.3",
+   "h_status": "PRINTED",
+   "handles": "1273 / 1278",
+   "run": "SW-3",
+   "term_m2": "0.000000"
+  }
+ ],
+ "per_run_sum_m2": "7.63068050",
+ "restated_b9_by_cause": {
+  "ENGINE_RIGHT": "111.77626050",
+  "HELD": "562.6244680",
+  "RULE_DIFFERENCE": "61.998635",
+  "TOLERANCE": "-2.00880050",
+  "UNRESOLVED": "58.50643700"
+ },
+ "t550_unresolved_m2": "25.9224370",
+ "t550_unresolved_parts": {
+  "1F 'projections' row (his external section) / 1F 'projections' row (his external section)": "41.25",
+  "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): length census (his 42.85 m - engine centreline 49.23265 m) x his height 1.80 m": "-11.4887700",
+  "1F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding": "11.241615",
+  "1F storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)": "-8.4990",
+  "2F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding": "-1.760806",
+  "2F storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)": "-2.1650",
+  "GF storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding": "5.519348",
+  "GF storey walls (net of openings) / openings census: his deductions vs the engine's (both deduct every opening, Q-73)": "-5.7800",
+  "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): length census (his 66.00 m - engine centreline 58.55495 m) x his height 1.00 m": "7.4450500",
+  "his 20 cm openings with no floor / his 20 cm openings with no floor": "-9.8400"
+ },
+ "table": [
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "ext door 1.00",
+   "part": "GF D-GF-01 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "ext door 1.00",
+   "part": "GF D-GF-05 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "ext door 1.00",
+   "part": "GF D-GF-06 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "-0.2400",
+   "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+   "part": "GF D-GF-03 vs his 1.00 x 2.40 / width"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1800",
+   "note": "his fourth ext door 1.00 vs a 0.90 door (D-GF-03 or D-GF-09: the other is engine-only)",
+   "part": "GF D-GF-03 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.5000",
+   "note": "1.00 window",
+   "part": "GF W10 vs his 1.00 x 2.00 / height"
+  },
+  {
+   "cause": "TOLERANCE",
+   "m2": "0.00200",
+   "note": "1.50 window",
+   "part": "GF W08 vs his 1.50 x 2.00 / width"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.75050",
+   "note": "1.50 window",
+   "part": "GF W08 vs his 1.50 x 2.00 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.7500",
+   "note": "1.50 window",
+   "part": "GF W09 vs his 1.50 x 2.00 / height"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-4.8000",
+   "note": "main door 2.00 (engine HELD opening in held wall GF-W15)",
+   "part": "GF D-GF-07 vs his 2.00 x 2.40 / held opening"
+  },
+  {
+   "cause": "TOLERANCE",
+   "m2": "0.01000",
+   "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+   "part": "GF W11 vs his 1.95 x 2.00 / width"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "0.38000",
+   "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+   "part": "GF W11 vs his 1.95 x 2.00 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "0.3900",
+   "note": "1.95 glazed (h 2.20 drawing-confirmed T-207, cap 4.29)",
+   "part": "GF W12 vs his 1.95 x 2.00 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "15 cm door 0.80",
+   "part": "GF D-GF-02 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "15 cm door 0.80",
+   "part": "GF D-GF-04 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "15 cm door 0.80",
+   "part": "GF D-GF-10 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "15 cm door 0.80",
+   "part": "GF D-GF-11 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "15 cm door 0.80",
+   "part": "GF D-GF-12 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-1.9200",
+   "note": "15 cm door 0.80 (engine HELD, wall GF-W30)",
+   "part": "GF D-GF-14 vs his 0.80 x 2.40 / held opening"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "15 cm door 1.00",
+   "part": "GF D-GF-13 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "1.9800",
+   "note": "engine-only opening",
+   "part": "GF D-GF-09 (engine deducts; no unit of his) / count"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-2.4000",
+   "note": "lift landing door, GF (HELD height, wall GF-W08)",
+   "part": "20CM L-GF-01 vs his 1.00 x 2.40 / held opening"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-2.4000",
+   "note": "lift landing door, 1F (HELD, wall 1F-W07)",
+   "part": "20CM L-1F-01 vs his 1.00 x 2.40 / held opening"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-2.4000",
+   "note": "lift landing door, 2F (HELD, wall 2F-W00)",
+   "part": "20CM L-2F-01 vs his 1.00 x 2.40 / held opening"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "-0.2400",
+   "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+   "part": "20CM D-GF-08 vs his 1.10 x 2.40 / width"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "lift-lobby door in the 20 cm wall GF-W08 (engine 1.00 wide, his 1.10)",
+   "part": "20CM D-GF-08 vs his 1.10 x 2.40 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.5000",
+   "note": "1.00 window",
+   "part": "1F W25 vs his 1.00 x 2.00 / height"
+  },
+  {
+   "cause": "HELD",
+   "m2": "-9.4500",
+   "note": "arched opening 3.286 (engine outline HELD 4.4361 .. 9.858, wall 1F-W25)",
+   "part": "1F W17 vs his 3.15 x 3.00 / held opening"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.2870",
+   "note": "arched window: true outline (UP-OPEN-ARCH-001 v1.1) vs his rectangle",
+   "part": "1F W15 vs his 1.55 x 3.00 / true outline vs his rectangle"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.2870",
+   "note": "arched window: true outline vs his rectangle",
+   "part": "1F W16 vs his 1.55 x 3.00 / true outline vs his rectangle"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.7750",
+   "note": "1.55 window",
+   "part": "1F W24 vs his 1.55 x 2.00 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.9800",
+   "note": "2.45 window",
+   "part": "1F W14 vs his 2.45 x 2.00 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "0.3600",
+   "note": "1.20 window",
+   "part": "1F W13 vs his 1.20 x 2.00 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "door 0.80",
+   "part": "1F D-1F-01 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "door 0.80",
+   "part": "1F D-1F-04 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "door 0.80",
+   "part": "1F D-1F-06 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "door 0.80",
+   "part": "1F D-1F-07 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1800",
+   "note": "door 0.90 (20 cm wall 1F-W07; his 15 cm section)",
+   "part": "1F D-1F-05 vs his 0.90 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1800",
+   "note": "door 0.90",
+   "part": "1F D-1F-08 vs his 0.90 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1800",
+   "note": "door 0.90",
+   "part": "1F D-1F-09 vs his 0.90 x 2.40 / height"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "0.2400",
+   "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+   "part": "1F D-1F-03 vs his 0.90 x 2.40 / width"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "his fourth 0.90 door vs a 1.00 door (D-1F-02 or D-1F-03)",
+   "part": "1F D-1F-03 vs his 0.90 x 2.40 / height"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "1.0800",
+   "note": "engine-only opening",
+   "part": "1F W18 (engine deducts; no unit of his) / count"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "1.7600",
+   "note": "engine-only opening",
+   "part": "1F D-1F-10 (engine deducts; no unit of his) / count"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "2.2000",
+   "note": "engine-only opening",
+   "part": "1F D-1F-02 (engine deducts; no unit of his) / count"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "-0.4800",
+   "note": "his-only unit",
+   "part": "1F his 0.60 x 0.80 (no engine opening) / count"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.5000",
+   "note": "1.00 window",
+   "part": "2F W27 vs his 1.00 x 2.00 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.6000",
+   "note": "1.20 window",
+   "part": "2F W29 vs his 1.20 x 2.00 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.2000",
+   "note": "door 1.00",
+   "part": "2F D-2F-01 vs his 1.00 x 2.40 / height"
+  },
+  {
+   "cause": "ENGINE_RIGHT",
+   "m2": "-0.5250",
+   "note": "arched outline vs his rectangle",
+   "part": "2F W26 vs his 1.20 x 2.00 / true outline vs his rectangle"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1600",
+   "note": "door 0.80",
+   "part": "2F D-2F-03 vs his 0.80 x 2.40 / height"
+  },
+  {
+   "cause": "RULE_DIFFERENCE",
+   "m2": "-0.1800",
+   "note": "door 0.90 (20 cm wall 2F-W05; his 15 cm section)",
+   "part": "2F D-2F-02 vs his 0.90 x 2.40 / height"
+  },
+  {
+   "cause": "TOLERANCE",
+   "m2": "-0.0015",
+   "note": "register rounding",
+   "part": "GF register V2 prints the GF-W04 wall total 4.7115 as 4.710 / print"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "5.519348",
+   "part": "GF storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "11.241615",
+   "part": "1F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "-1.760806",
+   "part": "2F storey walls (net of openings) / RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "41.25",
+   "part": "1F 'projections' row (his external section) / 1F 'projections' row (his external section)"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "7.4450500",
+   "part": "GF+ANNEX (his 1F-page row 'الدروه' 66.00 x 1.00): length census (his 66.00 m - engine centreline 58.55495 m) x his height 1.00 m"
+  },
+  {
+   "cause": "UNRESOLVED",
+   "m2": "-11.4887700",
+   "part": "1F ROOF +9.70 (his roof-page row 'الدروه' 42.85 x 1.80): length census (his 42.85 m - engine centreline 49.23265 m) x his height 1.80 m"
+  }
+ ],
+ "unresolved_gross_abs_m2": "86.9255890"
+}

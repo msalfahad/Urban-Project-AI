@@ -1,0 +1,1468 @@
+{
+ "bench": {
+  "bar_rows_in_workbook": 0,
+  "basis": "TYPED_LUMP",
+  "families": {
+   "BEAMS": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "149.93",
+    "own_concrete_m3": "65.965875",
+    "round_rate_interval_kg_m3": [
+     "149.85",
+     "150.00"
+    ],
+    "t": "9.890000"
+   },
+   "FOOTINGS": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "74.71",
+    "own_concrete_m3": "77.630500",
+    "round_rate_interval_kg_m3": [
+     "74.65",
+     "74.78"
+    ],
+    "t": "5.800000"
+   },
+   "GROUND_BEAMS_AND_SLAB": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "129.84",
+    "own_concrete_m3": "75.090000",
+    "round_rate_interval_kg_m3": [
+     "129.78",
+     "129.91"
+    ],
+    "t": "9.750000"
+   },
+   "POOL": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "121.48",
+    "own_concrete_m3": "12.348000",
+    "round_rate_interval_kg_m3": [
+     "121.07",
+     "121.88"
+    ],
+    "t": "1.500000"
+   },
+   "SLABS": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "90.27",
+    "own_concrete_m3": "59.817400",
+    "round_rate_interval_kg_m3": [
+     "90.19",
+     "90.36"
+    ],
+    "t": "5.400000"
+   },
+   "STAIRS_AND_DOME": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "178.63",
+    "own_concrete_m3": "21.832800",
+    "round_rate_interval_kg_m3": [
+     "178.40",
+     "178.86"
+    ],
+    "t": "3.900000"
+   },
+   "WALLS_AND_COLUMNS": {
+    "basis": "TYPED_LUMP",
+    "formula": null,
+    "implied_kg_per_m3": "199.99",
+    "own_concrete_m3": "39.751500",
+    "round_rate_interval_kg_m3": [
+     "199.87",
+     "200.12"
+    ],
+    "t": "7.950000"
+   }
+  },
+  "total_equals_family_sum": true,
+  "total_formula": null,
+  "total_t": "44.190000"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (STR.REBAR lines = V3.0.57 line index, byte-identical per T-507 s.6)",
+ "engine_bar_groups_kg": {
+  "FRP:FTG": {
+   "ALL": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_LONG": {
+    "excluded": 0,
+    "held_blank": 20,
+    "held_high_kg": "834.896790",
+    "held_low_kg": "807.096790",
+    "n_range": 5,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_SHORT": {
+    "excluded": 0,
+    "held_blank": 20,
+    "held_high_kg": "820.663704",
+    "held_low_kg": "798.972346",
+    "n_range": 5,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOXED": {
+    "excluded": 0,
+    "held_blank": 20,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_END_LEGS": {
+    "excluded": 0,
+    "held_blank": 4,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_LONG": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "592.887901",
+    "held_low_kg": "568.206420",
+    "n_range": 5,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_SHORT": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "587.951605",
+    "held_low_kg": "568.230618",
+    "n_range": 5,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "HL:BEAM_STEEL": {
+   "ALL_BARS": {
+    "excluded": 0,
+    "held_blank": 12,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM": {
+    "excluded": 0,
+    "held_blank": 9,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 109,
+    "valued_kg": "3597.675000"
+   },
+   "BOTTOM_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "123.892000",
+    "held_low_kg": "107.610000",
+    "n_range": 9,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_ENDS_NOTE_#_#D_#D": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "2278.043000",
+    "held_low_kg": "1301.737000",
+    "n_range": 118,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_ENDS_NOTE_#_#D_#D_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "105.059000",
+    "held_low_kg": "52.630000",
+    "n_range": 9,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_S": {
+    "excluded": 0,
+    "held_blank": 4,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "END_#": {
+    "excluded": 0,
+    "held_blank": 32,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LINKS_#_#_M_Q_#": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "2496.809000",
+    "held_low_kg": "2193.220000",
+    "n_range": 118,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LINKS_#_#_M_Q_#_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "116.978000",
+    "held_low_kg": "48.711000",
+    "n_range": 11,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "PLANTED_COLUMN_EXTRA_P_#": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "SIDE_BARS_#_#_#CM": {
+    "excluded": 0,
+    "held_blank": 49,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "SIDE_BARS_#_#_#CM_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 5,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP": {
+    "excluded": 0,
+    "held_blank": 5,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 84,
+    "valued_kg": "1022.699000"
+   },
+   "TOP_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "96.748000",
+    "held_low_kg": "60.348000",
+    "n_range": 9,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_CORNER": {
+    "excluded": 0,
+    "held_blank": 4,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 24,
+    "valued_kg": "160.354000"
+   },
+   "TOP_CORNER_ENDS_NOTE_#_#D_#D": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "97.862000",
+    "held_low_kg": "55.924000",
+    "n_range": 28,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_CORNER_LN_RANGE": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "0.144000",
+    "held_low_kg": "0.000000",
+    "n_range": 2,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_CORNER_OVER_THE_END_COLUMN_INSIDE_THE_REGIST": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_ENDS_NOTE_#_#D_#D": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "663.402000",
+    "held_low_kg": "379.094000",
+    "n_range": 89,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_ENDS_NOTE_#_#D_#D_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "101.549000",
+    "held_low_kg": "40.749000",
+    "n_range": 9,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_OVER_SUPPORT": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 13,
+    "valued_kg": "390.303000"
+   },
+   "TOP_OVER_SUPPORT_CANDIDATE_MARKS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "26.664000",
+    "held_low_kg": "0.000000",
+    "n_range": 1,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_OVER_SUPPORT_ENDS_NOTE_#_#D_#D": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "12.600000",
+    "held_low_kg": "7.200000",
+    "n_range": 1,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_OVER_SUPPORT_LN_RANGE": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "0.492000",
+    "held_low_kg": "0.000000",
+    "n_range": 2,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_SPAN": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "HL:COLUMN_STEEL": {
+   "BAR_ENDS_STOPPING_AT_THIS_ROOF": {
+    "excluded": 0,
+    "held_blank": 46,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LAP_AT_STOREY_BOTTOM_READING_P": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "874.320000",
+    "held_low_kg": "499.614000",
+    "n_range": 56,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LINKS_#_#_M": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": "1245.029000",
+    "held_low_kg": "781.378000",
+    "n_range": 57,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LINKS_IN_THE_JOINT_INFORMATION": {
+    "excluded": 0,
+    "held_blank": 59,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "MAIN_BARS_NET": {
+    "excluded": 0,
+    "held_blank": 28,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 31,
+    "valued_kg": "1874.486000"
+   },
+   "SECTION_TRANSITION_AT_BOTTOM": {
+    "excluded": 0,
+    "held_blank": 44,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TURN_EXTRA_#_#_P_#": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 1,
+    "valued_kg": "12.642000"
+   },
+   "TURN_SPIRAL_#_#_M_P_#": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "HL:GROUND_SYSTEM_STEEL": {
+   "BARS_OVER_THE_FOOTINGS": {
+    "excluded": 0,
+    "held_blank": 3,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BAR_ENDS_DEVELOPMENT_#D_#D_NOTE_#": {
+    "excluded": 0,
+    "held_blank": 23,
+    "held_high_kg": "1194.517000",
+    "held_low_kg": "646.528000",
+    "n_range": 39,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "201.765333",
+    "held_low_kg": "101.647803",
+    "n_range": 3,
+    "n_valued": 26,
+    "valued_kg": "634.168000"
+   },
+   "BOTTOM_ROW_#": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 24,
+    "valued_kg": "201.104000"
+   },
+   "LONGITUDINAL": {
+    "excluded": 0,
+    "held_blank": 6,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LONGITUDINAL_SECTION_CANDIDATES": {
+    "excluded": 0,
+    "held_blank": 14,
+    "held_high_kg": "305.422222",
+    "held_low_kg": "265.005556",
+    "n_range": 8,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "PROCUREMENT_WEIGHT_INCL_LAPS_LAPS_ONLY": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "31.858000",
+    "held_low_kg": "18.204000",
+    "n_range": 2,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "SIDE_#_T#_#": {
+    "excluded": 0,
+    "held_blank": 30,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "STIRRUP": {
+    "excluded": 0,
+    "held_blank": 33,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "STIRRUP_#_T#_M": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "99.985383",
+    "held_low_kg": "52.873955",
+    "n_range": 3,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "STIRRUP_T#_#": {
+    "excluded": 0,
+    "held_blank": 22,
+    "held_high_kg": "31.601000",
+    "held_low_kg": "29.632000",
+    "n_range": 4,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "404.408000",
+    "held_low_kg": "183.248000",
+    "n_range": 3,
+    "n_valued": 38,
+    "valued_kg": "417.635000"
+   }
+  },
+  "HL:SLAB_STEEL": {
+   "ALL_BARS": {
+    "excluded": 0,
+    "held_blank": 13,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "CORNER_BARS_#_O#": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "SECOND_BAR_#O#_M_ZONE": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TEMPERATURE_BARS": {
+    "excluded": 0,
+    "held_blank": 3,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "VALUED": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "1629.410000",
+    "held_low_kg": "701.958000",
+    "n_range": 138,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "X": {
+    "excluded": 6,
+    "held_blank": 87,
+    "held_high_kg": "1703.738000",
+    "held_low_kg": "1551.362000",
+    "n_range": 54,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "Y": {
+    "excluded": 2,
+    "held_blank": 94,
+    "held_high_kg": "1524.511000",
+    "held_low_kg": "1417.909000",
+    "n_range": 51,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "LIFT_TIE_BEAM:GF": {
+   "REBAR": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "P-S:BEAMS": {
+   "D#": {
+    "excluded": 336,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "P-S:COL": {
+   "D#": {
+    "excluded": 122,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "P-S:GROUND_BEAMS": {
+   "D#": {
+    "excluded": 9,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "P-S:GROUND_SLAB": {
+   "D#": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 24,
+    "valued_kg": "1064.239760"
+   }
+  },
+  "P-S:NECK": {
+   "D#": {
+    "excluded": 0,
+    "held_blank": 56,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "P-S:SLABS": {
+   "D#": {
+    "excluded": 72,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "STAIR:POOL": {
+   "CORNER_BARS_FLOOR_WALL": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "FLOOR_BOTTOM_DOT_ROW_BARS": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "FLOOR_BOTTOM_SECTION_LINE_BARS": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "FLOOR_TOP_DOT_ROW_BARS": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "FLOOR_TOP_SECTION_LINE_BARS": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "RIM_BARS_AT_THE_WALL_TOP": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "WALL_HORIZONTAL_HOOPS_INNER_FACE": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "WALL_HORIZONTAL_HOOPS_OUTER_FACE": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "WALL_VERTICAL_INNER_FACE": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "WALL_VERTICAL_OUTER_FACE": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "STAIR:ST": {
+   "ALL_FAMILIES": {
+    "excluded": 0,
+    "held_blank": 3,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "BOTTOM_BARS": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "DEVELOPMENT": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "718.480000",
+    "held_low_kg": "373.390000",
+    "n_range": 22,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "DISTRIBUTION_UNDER_THE_MAIN_BARS": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "111.288000",
+    "held_low_kg": "104.846000",
+    "n_range": 6,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP": {
+    "excluded": 0,
+    "held_blank": 2,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LANDING_STRIP_BOTTOM_BARS_ACROSS_THE_STAIR": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "86.914000",
+    "held_low_kg": "79.012000",
+    "n_range": 2,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "LANDING_STRIP_TOP_BARS_ACROSS_THE_STAIR": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "40.000000",
+    "held_low_kg": "35.556000",
+    "n_range": 2,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "MAIN_BOTTOM_BARS_ALONG_THE_WAIST": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "333.625000",
+    "held_low_kg": "303.295000",
+    "n_range": 6,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "NOSING_BAR_ONE_PER_TREAD": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "59.910000",
+    "held_low_kg": "59.910000",
+    "n_range": 6,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "STEP_BARS_TREAD_RISER_SHAPE": {
+    "excluded": 0,
+    "held_blank": 0,
+    "held_high_kg": "93.454000",
+    "held_low_kg": "83.151000",
+    "n_range": 6,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "STEP_NOSING_BARS": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_BARS_AT_THE_FOOT": {
+    "excluded": 0,
+    "held_blank": 4,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "TOP_BARS_AT_THE_HEAD": {
+    "excluded": 0,
+    "held_blank": 6,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "STAIR:TANK": {
+   "ALL_FAMILIES": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  },
+  "U-S:BEAMS": {
+   "CB_SUPPORT_TOP#": {
+    "excluded": 4,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "CB_TOP_THROUGH": {
+    "excluded": 24,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "D#": {
+    "excluded": 2,
+    "held_blank": 0,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   }
+  }
+ },
+ "engine_families_kg": {
+  "FRP:FTG": {
+   "excluded": 0,
+   "held_blank": 65,
+   "held_high_kg": "2836.400000",
+   "held_low_kg": "2742.506174",
+   "n_range": 20,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "HL:BEAM_STEEL": {
+   "excluded": 0,
+   "held_blank": 127,
+   "held_high_kg": "6120.242000",
+   "held_low_kg": "4247.223000",
+   "n_range": 406,
+   "n_valued": 230,
+   "valued_kg": "5171.031000"
+  },
+  "HL:COLUMN_STEEL": {
+   "excluded": 0,
+   "held_blank": 182,
+   "held_high_kg": "2119.349000",
+   "held_low_kg": "1280.992000",
+   "n_range": 113,
+   "n_valued": 32,
+   "valued_kg": "1887.128000"
+  },
+  "HL:GROUND_SYSTEM_STEEL": {
+   "excluded": 0,
+   "held_blank": 131,
+   "held_high_kg": "2269.556938",
+   "held_low_kg": "1297.139314",
+   "n_range": 62,
+   "n_valued": 88,
+   "valued_kg": "1252.907000"
+  },
+  "HL:SLAB_STEEL": {
+   "excluded": 8,
+   "held_blank": 199,
+   "held_high_kg": "4857.659000",
+   "held_low_kg": "3671.229000",
+   "n_range": 243,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "LIFT_TIE_BEAM:GF": {
+   "excluded": 0,
+   "held_blank": 1,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "P-S:BEAMS": {
+   "excluded": 336,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "P-S:COL": {
+   "excluded": 122,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "P-S:GROUND_BEAMS": {
+   "excluded": 9,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "P-S:GROUND_SLAB": {
+   "excluded": 0,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 24,
+   "valued_kg": "1064.239760"
+  },
+  "P-S:NECK": {
+   "excluded": 0,
+   "held_blank": 56,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "P-S:SLABS": {
+   "excluded": 72,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "STAIR:POOL": {
+   "excluded": 0,
+   "held_blank": 20,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "STAIR:ST": {
+   "excluded": 0,
+   "held_blank": 17,
+   "held_high_kg": "1443.671000",
+   "held_low_kg": "1039.160000",
+   "n_range": 50,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "STAIR:TANK": {
+   "excluded": 0,
+   "held_blank": 1,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  },
+  "U-S:BEAMS": {
+   "excluded": 30,
+   "held_blank": 0,
+   "held_high_kg": null,
+   "held_low_kg": null,
+   "n_range": 0,
+   "n_valued": 0,
+   "valued_kg": null
+  }
+ },
+ "engine_lines": 2644,
+ "engine_totals_kg": {
+  "excluded": 577,
+  "held_blank": 799,
+  "held_high_kg": "19646.877938",
+  "held_low_kg": "14278.249488",
+  "n_range": 894,
+  "n_valued": 374,
+  "valued_kg": "9375.305760"
+ },
+ "engine_totals_t": {
+  "excluded_lines": 577,
+  "held_blank_lines": 799,
+  "held_high": "19.646878",
+  "held_low": "14.278249",
+  "valued": "9.375306"
+ },
+ "groups": {
+  "G1_SUBSTRUCTURE": {
+   "bench_families": [
+    "FOOTINGS",
+    "GROUND_BEAMS_AND_SLAB"
+   ],
+   "blank_groups": [
+    "FRP:FTG:ALL",
+    "FRP:FTG:BOTTOM_LONG",
+    "FRP:FTG:BOTTOM_SHORT",
+    "FRP:FTG:BOXED",
+    "FRP:FTG:TOP_END_LEGS",
+    "HL:GROUND_SYSTEM_STEEL:BARS_OVER_THE_FOOTINGS",
+    "HL:GROUND_SYSTEM_STEEL:BAR_ENDS_DEVELOPMENT_#D_#D_NOTE_#",
+    "HL:GROUND_SYSTEM_STEEL:LONGITUDINAL",
+    "HL:GROUND_SYSTEM_STEEL:LONGITUDINAL_SECTION_CANDIDATES",
+    "HL:GROUND_SYSTEM_STEEL:SIDE_#_T#_#",
+    "HL:GROUND_SYSTEM_STEEL:STIRRUP",
+    "HL:GROUND_SYSTEM_STEEL:STIRRUP_T#_#"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "FRP:FTG",
+    "HL:GROUND_SYSTEM_STEEL",
+    "P-S:GROUND_SLAB",
+    "P-S:GROUND_BEAMS"
+   ],
+   "engine_held_blank_lines": 196,
+   "engine_held_high_t": "5.105957",
+   "engine_held_low_t": "4.039645",
+   "engine_kg": {
+    "excluded": 9,
+    "held_blank": 196,
+    "held_high_kg": "5105.956938",
+    "held_low_kg": "4039.645488",
+    "n_range": 82,
+    "n_valued": 112,
+    "valued_kg": "2317.146760"
+   },
+   "engine_valued_t": "2.317147",
+   "gap_valued_t": "13.232853",
+   "held_bounded_t": [
+    "4.039645",
+    "5.105957"
+   ],
+   "his_t": "15.550000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "9.193208",
+   "residual_low_t": "8.126896",
+   "scope_items": []
+  },
+  "G2_COLUMNS_NECKS_WALLS": {
+   "bench_families": [
+    "WALLS_AND_COLUMNS"
+   ],
+   "blank_groups": [
+    "HL:COLUMN_STEEL:BAR_ENDS_STOPPING_AT_THIS_ROOF",
+    "HL:COLUMN_STEEL:LINKS_#_#_M",
+    "HL:COLUMN_STEEL:LINKS_IN_THE_JOINT_INFORMATION",
+    "HL:COLUMN_STEEL:MAIN_BARS_NET",
+    "HL:COLUMN_STEEL:SECTION_TRANSITION_AT_BOTTOM",
+    "HL:COLUMN_STEEL:TURN_EXTRA_#_#_P_#",
+    "HL:COLUMN_STEEL:TURN_SPIRAL_#_#_M_P_#",
+    "P-S:NECK:D#"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "HL:COLUMN_STEEL",
+    "P-S:NECK",
+    "P-S:COL"
+   ],
+   "engine_held_blank_lines": 238,
+   "engine_held_high_t": "2.119349",
+   "engine_held_low_t": "1.280992",
+   "engine_kg": {
+    "excluded": 122,
+    "held_blank": 238,
+    "held_high_kg": "2119.349000",
+    "held_low_kg": "1280.992000",
+    "n_range": 113,
+    "n_valued": 32,
+    "valued_kg": "1887.128000"
+   },
+   "engine_valued_t": "1.887128",
+   "gap_valued_t": "6.062872",
+   "held_bounded_t": [
+    "1.280992",
+    "2.119349"
+   ],
+   "his_t": "7.950000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "SCOPE_ONE_LIST",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "4.781880",
+   "residual_low_t": "3.943523",
+   "scope_items": [
+    "LIFT_PIT:WALLS: concrete line STR.CONC.LIFT HELD in the candidate, no STR.REBAR line (his walls-and-columns family includes the lift walls)"
+   ]
+  },
+  "G3_BEAMS": {
+   "bench_families": [
+    "BEAMS"
+   ],
+   "blank_groups": [
+    "HL:BEAM_STEEL:ALL_BARS",
+    "HL:BEAM_STEEL:BOTTOM",
+    "HL:BEAM_STEEL:BOTTOM_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_S",
+    "HL:BEAM_STEEL:END_#",
+    "HL:BEAM_STEEL:PLANTED_COLUMN_EXTRA_P_#",
+    "HL:BEAM_STEEL:SIDE_BARS_#_#_#CM",
+    "HL:BEAM_STEEL:SIDE_BARS_#_#_#CM_CANDIDATE_MARKS",
+    "HL:BEAM_STEEL:TOP",
+    "HL:BEAM_STEEL:TOP_CORNER",
+    "HL:BEAM_STEEL:TOP_CORNER_OVER_THE_END_COLUMN_INSIDE_THE_REGIST",
+    "HL:BEAM_STEEL:TOP_OVER_SUPPORT",
+    "HL:BEAM_STEEL:TOP_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_SPAN",
+    "LIFT_TIE_BEAM:GF:REBAR"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "HL:BEAM_STEEL",
+    "LIFT_TIE_BEAM:GF",
+    "P-S:BEAMS",
+    "U-S:BEAMS"
+   ],
+   "engine_held_blank_lines": 128,
+   "engine_held_high_t": "6.120242",
+   "engine_held_low_t": "4.247223",
+   "engine_kg": {
+    "excluded": 366,
+    "held_blank": 128,
+    "held_high_kg": "6120.242000",
+    "held_low_kg": "4247.223000",
+    "n_range": 406,
+    "n_valued": 230,
+    "valued_kg": "5171.031000"
+   },
+   "engine_valued_t": "5.171031",
+   "gap_valued_t": "4.718969",
+   "held_bounded_t": [
+    "4.247223",
+    "6.120242"
+   ],
+   "his_t": "9.890000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "0.471746",
+   "residual_low_t": "-1.401273",
+   "scope_items": []
+  },
+  "G4_SLABS": {
+   "bench_families": [
+    "SLABS"
+   ],
+   "blank_groups": [
+    "HL:SLAB_STEEL:ALL_BARS",
+    "HL:SLAB_STEEL:CORNER_BARS_#_O#",
+    "HL:SLAB_STEEL:SECOND_BAR_#O#_M_ZONE",
+    "HL:SLAB_STEEL:TEMPERATURE_BARS",
+    "HL:SLAB_STEEL:X",
+    "HL:SLAB_STEEL:Y"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "HL:SLAB_STEEL",
+    "P-S:SLABS"
+   ],
+   "engine_held_blank_lines": 199,
+   "engine_held_high_t": "4.857659",
+   "engine_held_low_t": "3.671229",
+   "engine_kg": {
+    "excluded": 80,
+    "held_blank": 199,
+    "held_high_kg": "4857.659000",
+    "held_low_kg": "3671.229000",
+    "n_range": 243,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "engine_valued_t": null,
+   "gap_valued_t": "5.400000",
+   "held_bounded_t": [
+    "3.671229",
+    "4.857659"
+   ],
+   "his_t": "5.400000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "1.728771",
+   "residual_low_t": "0.542341",
+   "scope_items": []
+  },
+  "G5_STAIRS_DOME": {
+   "bench_families": [
+    "STAIRS_AND_DOME"
+   ],
+   "blank_groups": [
+    "STAIR:ST:ALL_FAMILIES",
+    "STAIR:ST:BOTTOM_BARS",
+    "STAIR:ST:FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP",
+    "STAIR:ST:STEP_NOSING_BARS",
+    "STAIR:ST:TOP_BARS_AT_THE_FOOT",
+    "STAIR:ST:TOP_BARS_AT_THE_HEAD"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "STAIR:ST"
+   ],
+   "engine_held_blank_lines": 17,
+   "engine_held_high_t": "1.443671",
+   "engine_held_low_t": "1.039160",
+   "engine_kg": {
+    "excluded": 0,
+    "held_blank": 17,
+    "held_high_kg": "1443.671000",
+    "held_low_kg": "1039.160000",
+    "n_range": 50,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "engine_valued_t": null,
+   "gap_valued_t": "3.900000",
+   "held_bounded_t": [
+    "1.039160",
+    "1.443671"
+   ],
+   "his_t": "3.900000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "SCOPE_ONE_LIST",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "2.860840",
+   "residual_low_t": "2.456329",
+   "scope_items": [
+    "HL:DOME_SHELL / HL:DOME_RING / DG5 dome lines: concrete in the candidate (DOME-A shell 2.540681 m3 valued, rings), no STR.REBAR line with a dome element id (his family is stairs + dome)"
+   ]
+  },
+  "G6_POOL": {
+   "bench_families": [
+    "POOL"
+   ],
+   "blank_groups": [
+    "STAIR:POOL:CORNER_BARS_FLOOR_WALL",
+    "STAIR:POOL:FLOOR_BOTTOM_DOT_ROW_BARS",
+    "STAIR:POOL:FLOOR_BOTTOM_SECTION_LINE_BARS",
+    "STAIR:POOL:FLOOR_TOP_DOT_ROW_BARS",
+    "STAIR:POOL:FLOOR_TOP_SECTION_LINE_BARS",
+    "STAIR:POOL:RIM_BARS_AT_THE_WALL_TOP",
+    "STAIR:POOL:WALL_HORIZONTAL_HOOPS_INNER_FACE",
+    "STAIR:POOL:WALL_HORIZONTAL_HOOPS_OUTER_FACE",
+    "STAIR:POOL:WALL_VERTICAL_INNER_FACE",
+    "STAIR:POOL:WALL_VERTICAL_OUTER_FACE"
+   ],
+   "cls": "RULE_DIFF",
+   "engine_families": [
+    "STAIR:POOL"
+   ],
+   "engine_held_blank_lines": 20,
+   "engine_held_high_t": null,
+   "engine_held_low_t": null,
+   "engine_kg": {
+    "excluded": 0,
+    "held_blank": 20,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "engine_valued_t": null,
+   "gap_valued_t": "1.500000",
+   "held_bounded_t": [
+    "0.000000",
+    "0.000000"
+   ],
+   "his_t": "1.500000",
+   "percent": null,
+   "residual_carried_by": [
+    "HELD_BLANK",
+    "METHOD_RULE_DIFF",
+    "LAPS_WASTE_UNKNOWN"
+   ],
+   "residual_high_t": "1.500000",
+   "residual_low_t": "1.500000",
+   "scope_items": []
+  },
+  "G7_TANK": {
+   "bench_families": [],
+   "blank_groups": [
+    "STAIR:TANK:ALL_FAMILIES"
+   ],
+   "cls": "NO_ROW",
+   "engine_families": [
+    "STAIR:TANK"
+   ],
+   "engine_held_blank_lines": 1,
+   "engine_held_high_t": null,
+   "engine_held_low_t": null,
+   "engine_kg": {
+    "excluded": 0,
+    "held_blank": 1,
+    "held_high_kg": null,
+    "held_low_kg": null,
+    "n_range": 0,
+    "n_valued": 0,
+    "valued_kg": null
+   },
+   "engine_valued_t": null,
+   "gap_valued_t": null,
+   "his_t": null,
+   "percent": null,
+   "residual_high_t": null,
+   "residual_low_t": null,
+   "scope_items": [
+    "TANK: engine rebar line HELD blank; the benchmark has no tank family (NO_ROW)"
+   ]
+  }
+ },
+ "inputs": {
+  "census": "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json",
+  "census_sha256": "752c9f4e0c4546d00ab9707c19dc5c3761187ba56b9e96a674d68a39edf8adea",
+  "line_index": "research/agents_t507/out/LINE_INDEX_V3_0_57.json",
+  "line_index_sha256": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738"
+ },
+ "schema": "URBAN_T560_REBAR_TONNAGE_RECONCILE_V1"
+}

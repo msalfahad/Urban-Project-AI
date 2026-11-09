@@ -1,0 +1,842 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 plaster lines)",
+ "edge_beams": {
+  "1F-13": "B25 / CB12 0.75 lie on the zone edges (T-128 r3): not crossing; no wall-face interruption"
+ },
+ "freelancer_same_rooms": {
+  "cause": "heights: his flat 3.60 / 3.40 / 3.50 stop below the soffit (4.29 GF, 3.99 1F / 2F, 3.79 annex): ENGINE_RIGHT under the owner rule Q-72; lengths ENGINE_RIGHT (T-128 r3 / T-552); roof faces at the DRAWN-SECTION SCENARIO",
+  "delta": "81.8455000",
+  "delta_pct": "8.9",
+  "engine_gross_at_plaster_height": "1006.0505000",
+  "his_gross": "924.205"
+ },
+ "heights": {
+  "floor_buildup": [
+   "0.05",
+   "T-214 drawn layer FFL -> slab top on every floor band of sections A-A / B-B (0.049 .. 0.051), DRAWING-CONFIRMED, Verifier re-measured 2026-10-23 14:12 (dry zones)"
+  ],
+  "roof_scenario": [
+   "0.05",
+   "roof DRAWN-SECTION SCENARIO: the same 0.05 layer the cut sections draw on the roof bands (A-A +13.90, B-B +4.30; T-214 table); refused by T-214 as a roof datum (constant layer vs the printed 1 % falls), roof build-up D-39 / DCR-6 HELD"
+  ],
+  "slab": [
+   "0.16",
+   "structural general note 'all slabs 16 cm unless stated' (owner Q-14 answer; T-200 / T-206: suspended slabs and the annex / 2F roof slabs 0.16)"
+  ],
+  "zones": {
+   "1F": [
+    "4.20",
+    "section A-A marks +5.50 / +9.70 (T-128 s.2, T-214)",
+    "ROOF-970 (+9.70)"
+   ],
+   "2F": [
+    "4.20",
+    "section A-A marks +9.70 / +13.90 (+13.90 = finished top roof mark)",
+    "ROOF-1390 (+13.90, Q-34)"
+   ],
+   "GF_ANNEX": [
+    "4.00",
+    "section B-B marks +0.30 / +4.30 (+4.30 = finished annex roof mark, G2)",
+    "ROOF-430 (+4.30)"
+   ],
+   "GF_MAIN": [
+    "4.50",
+    "section A-A storey marks +1.00 / +5.50 (T-128 s.2, T-214)",
+    "TERRACE-550 (+5.50 finished)"
+   ]
+  }
+ },
+ "inputs_sha256_16": {
+  "research/agents_t110/BEAM_MEMBER_REGISTER.csv": "368d0fa2d690fb02",
+  "research/agents_t128/ROOMS_T128_R3.csv": "696333bc12f0acb9",
+  "research/agents_t292/OPENING_DEDUCTIONS_T292.csv": "4d75de86848509e4",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "research/agents_t552/out/T552_PLASTER_RECONCILE.json": "706ff9fde046462b"
+ },
+ "method": "PLASTER_HEIGHT_METHOD_V1 (R-T556-1, research, unwired)",
+ "released_4_lines": {
+  "new": [
+   "262.0179900",
+   "262.0519900"
+  ],
+  "old": "217.2081"
+ },
+ "rows": [
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.79",
+   "candidate_class": "HELD",
+   "face_lm": "20.127",
+   "line_id": "L-b152995525ed123ddac9",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "2",
+      "hi": "0.236",
+      "lo": "0.236",
+      "mark": "CB6"
+     }
+    ],
+    "beam_ends_hi": "0.236",
+    "beam_ends_lo": "0.236",
+    "face_floor_lm": "0.0000",
+    "face_roof_lm": "20.1270",
+    "gross": "76.281330",
+    "net_hi": "65.254330",
+    "net_lo": "61.464330",
+    "openings": [
+     {
+      "basis": "HOLE_HEIGHT (sill not needed below the soffit)",
+      "hi": "4.30100",
+      "id": "W11",
+      "lo": "4.30100"
+     },
+     {
+      "basis": "HOLE_HEIGHT (sill not needed below the soffit)",
+      "hi": "4.2900",
+      "id": "W12",
+      "lo": "4.2900"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-GF-01",
+      "lo": "2.20"
+     },
+     {
+      "basis": "HELD (no height established)",
+      "hi": "3.790",
+      "id": "A-GF-01",
+      "lo": "0"
+     }
+    ],
+    "openings_hi": "14.58100",
+    "openings_lo": "10.79100",
+    "roof_sensitivity_m2_per_0.01m": "0.201270"
+   },
+   "new_hi": "65.254330",
+   "new_lo": "61.464330",
+   "old_paint_height_basis": {
+    "G1_m": "3.15",
+    "reproduction": "line HELD blank (no range); T-292 at G1 gives 49.47005 .. 61.20005",
+    "value": null
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "GF-01",
+   "status": "HELD: HELD on the roof build-up over 20.1270 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "57.62493",
+    "75.08763"
+   ],
+   "zone": "GF_ANNEX"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.79",
+   "candidate_class": "HELD",
+   "face_lm": "12.5",
+   "line_id": "L-1ddc23d5657b4c4e4d0d",
+   "new": {
+    "beam_ends": [],
+    "beam_ends_hi": "0",
+    "beam_ends_lo": "0",
+    "face_floor_lm": "0.00",
+    "face_roof_lm": "12.50",
+    "gross": "47.3750",
+    "net_hi": "43.1550",
+    "net_lo": "43.1550",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "0.48",
+      "id": "W04",
+      "lo": "0.48"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-GF-03",
+      "lo": "1.98"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-GF-04",
+      "lo": "1.76"
+     }
+    ],
+    "openings_hi": "4.22",
+    "openings_lo": "4.22",
+    "roof_sensitivity_m2_per_0.01m": "0.1250"
+   },
+   "new_hi": "43.1550",
+   "new_lo": "43.1550",
+   "old_paint_height_basis": {
+    "G1_m": "3.15",
+    "reproduction": "line HELD blank (no range); T-292 at G1 gives 35.1550 .. 35.1550",
+    "value": null
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "GF-04",
+   "status": "HELD: HELD on the roof build-up over 12.50 lm (ROOF-430 (+4.30); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed",
+   "t552_restated": [
+    "41.115",
+    "44.255"
+   ],
+   "zone": "GF_ANNEX"
+  },
+  {
+   "H_floor_m": "4.29",
+   "H_roof_scenario_m": "4.29",
+   "candidate_class": "RELEASED",
+   "face_lm": "21.537",
+   "line_id": "L-0d93f2209cd9bb827c0a",
+   "new": {
+    "beam_ends": [],
+    "beam_ends_hi": "0",
+    "beam_ends_lo": "0",
+    "face_floor_lm": "18.30645",
+    "face_roof_lm": "3.23055",
+    "gross": "92.3937300",
+    "net_hi": "66.5289900",
+    "net_lo": "66.5289900",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-GF-14",
+      "lo": "1.76"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "21.90474",
+      "id": "W03",
+      "lo": "21.90474"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-GF-13",
+      "lo": "2.20"
+     }
+    ],
+    "openings_hi": "25.86474",
+    "openings_lo": "25.86474",
+    "roof_sensitivity_m2_per_0.01m": "0.0323055"
+   },
+   "new_hi": "66.5289900",
+   "new_lo": "66.5289900",
+   "old_paint_height_basis": {
+    "G1_m": "3.65",
+    "reproduction": "EXACT (face x G1 - T-292 = the released line, < 0.0001 m2)",
+    "value": [
+     "56.0131",
+     "56.0131"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [
+    "W03"
+   ],
+   "roof_share": "0.15",
+   "room": "GF-15",
+   "status": "HELD: HELD on the roof build-up over 3.23055 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 18.30645 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16)",
+   "t552_restated": [
+    "68.71993",
+    "70.87363"
+   ],
+   "zone": "GF_MAIN"
+  },
+  {
+   "H_floor_m": "4.29",
+   "H_roof_scenario_m": "4.29",
+   "candidate_class": "HELD",
+   "face_lm": "53.188",
+   "line_id": "L-8cecb1d010d5aafbf25d",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "(0, 2)",
+      "hi": "0.8970",
+      "lo": "0.0000",
+      "mark": "B26"
+     },
+     {
+      "ends": "(0, 2)",
+      "hi": "1.242",
+      "lo": "0.000",
+      "mark": "B27"
+     }
+    ],
+    "beam_ends_hi": "2.1390",
+    "beam_ends_lo": "0.0000",
+    "face_floor_lm": "20.74332",
+    "face_roof_lm": "32.44468",
+    "gross": "228.1765200",
+    "net_hi": "211.8052700",
+    "net_lo": "178.2205700",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-GF-08",
+      "lo": "2.20"
+     },
+     {
+      "basis": "HELD (no height established)",
+      "hi": "4.290",
+      "id": "L-GF-01",
+      "lo": "0"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-GF-13",
+      "lo": "2.20"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "6.97125",
+      "id": "W03",
+      "lo": "6.97125"
+     },
+     {
+      "basis": "HELD (no height established)",
+      "hi": "27.1557",
+      "id": "W02",
+      "lo": "0"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "5.00",
+      "id": "D-GF-07",
+      "lo": "5.00"
+     }
+    ],
+    "openings_hi": "47.81695",
+    "openings_lo": "16.37125",
+    "roof_sensitivity_m2_per_0.01m": "0.3244468"
+   },
+   "new_hi": "211.8052700",
+   "new_lo": "178.2205700",
+   "old_paint_height_basis": {
+    "G1_m": "3.65",
+    "reproduction": "line HELD range kept as the old value; T-292 at G1 gives 152.05050 .. 178.80500",
+    "value": [
+     "152.0505",
+     "178.805"
+    ]
+   },
+   "open_sides_lm": "5.735",
+   "openings_head_above_G1": [
+    "W03"
+   ],
+   "roof_share": "0.61",
+   "room": "GF-08",
+   "status": "HELD: HELD on the roof build-up over 32.44468 lm (TERRACE-550 (+5.50 finished); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 20.74332 lm at H 4.29 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "183.43142",
+    "215.50472"
+   ],
+   "zone": "GF_MAIN"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "RELEASED",
+   "face_lm": "17.7",
+   "line_id": "L-af9621f43bc316a871ea",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "2",
+      "hi": "0.1700",
+      "lo": "0.136",
+      "mark": "B6"
+     }
+    ],
+    "beam_ends_hi": "0.1700",
+    "beam_ends_lo": "0.136",
+    "face_floor_lm": "0.00",
+    "face_roof_lm": "17.70",
+    "gross": "70.6230",
+    "net_hi": "62.6070",
+    "net_lo": "62.5730",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-1F-02",
+      "lo": "2.20"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-1F-01",
+      "lo": "1.76"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "3.920",
+      "id": "W14",
+      "lo": "3.920"
+     }
+    ],
+    "openings_hi": "7.880",
+    "openings_lo": "7.880",
+    "roof_sensitivity_m2_per_0.01m": "0.1770"
+   },
+   "new_hi": "62.6070",
+   "new_lo": "62.5730",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "EXACT (face x G1 - T-292 = the released line, < 0.0001 m2)",
+    "value": [
+     "51.415",
+     "51.415"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "1F-01",
+   "status": "HELD: HELD on the roof build-up over 17.70 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "61.858",
+    "63.628"
+   ],
+   "zone": "1F"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "RELEASED",
+   "face_lm": "17.4",
+   "line_id": "L-971f0bdaf68d7fd0966c",
+   "new": {
+    "beam_ends": [],
+    "beam_ends_hi": "0",
+    "beam_ends_lo": "0",
+    "face_floor_lm": "0.00",
+    "face_roof_lm": "17.40",
+    "gross": "69.4260",
+    "net_hi": "63.1410",
+    "net_lo": "63.1410",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-1F-03",
+      "lo": "2.20"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.325",
+      "id": "W24",
+      "lo": "2.325"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-1F-04",
+      "lo": "1.76"
+     }
+    ],
+    "openings_hi": "6.285",
+    "openings_lo": "6.285",
+    "roof_sensitivity_m2_per_0.01m": "0.1740"
+   },
+   "new_hi": "63.1410",
+   "new_lo": "63.1410",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "EXACT (face x G1 - T-292 = the released line, < 0.0001 m2)",
+    "value": [
+     "52.005",
+     "52.005"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "1F-04",
+   "status": "HELD: HELD on the roof build-up over 17.40 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed",
+   "t552_restated": [
+    "62.271",
+    "64.011"
+   ],
+   "zone": "1F"
+  },
+  {
+   "H_floor_m": "3.99",
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "HELD",
+   "face_lm": "16.2",
+   "line_id": "L-2ba8077ba9bb2e1ff0f6",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "2",
+      "hi": "0.472",
+      "lo": "0.472",
+      "mark": "B19"
+     },
+     {
+      "ends": "2",
+      "hi": "0.1700",
+      "lo": "0.136",
+      "mark": "B6"
+     }
+    ],
+    "beam_ends_hi": "0.6420",
+    "beam_ends_lo": "0.608",
+    "face_floor_lm": "6.642",
+    "face_roof_lm": "9.558",
+    "gross": "64.63800",
+    "net_hi": "62.05000",
+    "net_lo": "58.02600",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-1F-08",
+      "lo": "1.98"
+     },
+     {
+      "basis": "HELD (no height established)",
+      "hi": "3.990",
+      "id": "A-1F-01",
+      "lo": "0"
+     }
+    ],
+    "openings_hi": "5.970",
+    "openings_lo": "1.98",
+    "roof_sensitivity_m2_per_0.01m": "0.09558"
+   },
+   "new_hi": "62.05000",
+   "new_lo": "58.02600",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "line HELD range kept as the old value; T-292 at G1 gives 48.9400 .. 52.2900",
+    "value": [
+     "48.94",
+     "52.29"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "0.59",
+   "room": "1F-10",
+   "status": "HELD: HELD on the roof build-up over 9.558 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 6.642 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "58.498",
+    "63.468"
+   ],
+   "zone": "1F"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "HELD",
+   "face_lm": "22.149",
+   "line_id": "L-31db3c83552682d92ca3",
+   "new": {
+    "beam_ends": [],
+    "beam_ends_hi": "0",
+    "beam_ends_lo": "0",
+    "face_floor_lm": "0.0000",
+    "face_roof_lm": "22.1490",
+    "gross": "88.374510",
+    "net_hi": "80.198410",
+    "net_lo": "74.776510",
+    "openings": [
+     {
+      "basis": "HELD (outline area range)",
+      "hi": "9.858",
+      "id": "W17",
+      "lo": "4.4361"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-1F-10",
+      "lo": "1.76"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-1F-09",
+      "lo": "1.98"
+     }
+    ],
+    "openings_hi": "13.598",
+    "openings_lo": "8.1761",
+    "roof_sensitivity_m2_per_0.01m": "0.221490"
+   },
+   "new_hi": "80.198410",
+   "new_lo": "74.776510",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "line HELD range kept as the old value; T-292 at G1 gives 60.60115 .. 66.02305",
+    "value": [
+     "61.4626",
+     "61.7177"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "1F-11",
+   "status": "HELD: HELD on the roof build-up over 22.1490 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "74.53051",
+    "77.00051"
+   ],
+   "zone": "1F"
+  },
+  {
+   "H_floor_m": "3.99",
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "HELD",
+   "face_lm": "39.45",
+   "line_id": "L-9b4a7bab033d677e2017",
+   "new": {
+    "beam_ends": [],
+    "beam_ends_hi": "0",
+    "beam_ends_lo": "0",
+    "face_floor_lm": "16.9635",
+    "face_roof_lm": "22.4865",
+    "gross": "157.405500",
+    "net_hi": "139.615500",
+    "net_lo": "135.625500",
+    "openings": [
+     {
+      "basis": "HELD (no height established)",
+      "hi": "3.990",
+      "id": "L-1F-01",
+      "lo": "0"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-1F-05",
+      "lo": "1.98"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-1F-08",
+      "lo": "1.98"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-1F-09",
+      "lo": "1.98"
+     },
+     {
+      "basis": "AREA",
+      "hi": "4.363",
+      "id": "W15",
+      "lo": "4.363"
+     },
+     {
+      "basis": "AREA",
+      "hi": "4.363",
+      "id": "W16",
+      "lo": "4.363"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-1F-03",
+      "lo": "2.20"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "0.924",
+      "id": "D-1F-02",
+      "lo": "0.924"
+     }
+    ],
+    "openings_hi": "21.780",
+    "openings_lo": "17.790",
+    "roof_sensitivity_m2_per_0.01m": "0.224865"
+   },
+   "new_hi": "139.615500",
+   "new_lo": "135.625500",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "line HELD range kept as the old value; T-292 at G1 gives 111.0175 .. 114.3675",
+    "value": [
+     "111.0177",
+     "114.3677"
+    ]
+   },
+   "open_sides_lm": "2.49",
+   "openings_head_above_G1": [],
+   "roof_share": "0.57",
+   "room": "1F-13",
+   "status": "HELD: HELD on the roof build-up over 22.4865 lm (ROOF-970 (+9.70); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; floor part 16.9635 lm at H 3.99 DRAWING-CONFIRMED height (T-214 b, slab 0.16); BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "134.2932",
+    "141.5882"
+   ],
+   "zone": "1F"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "RELEASED",
+   "face_lm": "18.9",
+   "line_id": "L-4ce74fc37a08d4bdf0d8",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "2",
+      "hi": "0.096",
+      "lo": "0.096",
+      "mark": "B2"
+     }
+    ],
+    "beam_ends_hi": "0.096",
+    "beam_ends_lo": "0.096",
+    "face_floor_lm": "0.00",
+    "face_roof_lm": "18.90",
+    "gross": "75.4110",
+    "net_hi": "69.7750",
+    "net_lo": "69.7750",
+    "openings": [
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-2F-02",
+      "lo": "1.98"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.76",
+      "id": "D-2F-03",
+      "lo": "1.76"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.80",
+      "id": "W29",
+      "lo": "1.80"
+     }
+    ],
+    "openings_hi": "5.54",
+    "openings_lo": "5.54",
+    "roof_sensitivity_m2_per_0.01m": "0.1890"
+   },
+   "new_hi": "69.7750",
+   "new_lo": "69.7750",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "EXACT (face x G1 - T-292 = the released line, < 0.0001 m2)",
+    "value": [
+     "57.775",
+     "57.775"
+    ]
+   },
+   "open_sides_lm": "0",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "2F-03",
+   "status": "HELD: HELD on the roof build-up over 18.90 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed",
+   "t552_restated": [
+    "68.926",
+    "70.816"
+   ],
+   "zone": "2F"
+  },
+  {
+   "H_floor_m": null,
+   "H_roof_scenario_m": "3.99",
+   "candidate_class": "HELD",
+   "face_lm": "9.009",
+   "line_id": "L-ae0cdd794cc5fdbe0c29",
+   "new": {
+    "beam_ends": [
+     {
+      "ends": "(0, 2)",
+      "hi": "0.416",
+      "lo": "0.000",
+      "mark": "B15"
+     }
+    ],
+    "beam_ends_hi": "0.416",
+    "beam_ends_lo": "0.000",
+    "face_floor_lm": "0.0000",
+    "face_roof_lm": "9.0090",
+    "gross": "35.945910",
+    "net_hi": "31.765910",
+    "net_lo": "27.359910",
+    "openings": [
+     {
+      "basis": "HELD (no height established)",
+      "hi": "3.990",
+      "id": "L-2F-01",
+      "lo": "0"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "1.98",
+      "id": "D-2F-02",
+      "lo": "1.98"
+     },
+     {
+      "basis": "SILL_HEAD",
+      "hi": "2.20",
+      "id": "D-2F-01",
+      "lo": "2.20"
+     }
+    ],
+    "openings_hi": "8.170",
+    "openings_lo": "4.18",
+    "roof_sensitivity_m2_per_0.01m": "0.090090"
+   },
+   "new_hi": "31.765910",
+   "new_lo": "27.359910",
+   "old_paint_height_basis": {
+    "G1_m": "3.35",
+    "reproduction": "line HELD range kept as the old value; T-292 at G1 gives 22.65015 .. 26.00015",
+    "value": [
+     "22.6502",
+     "26.0002"
+    ]
+   },
+   "open_sides_lm": "2.491",
+   "openings_head_above_G1": [],
+   "roof_share": "1.0",
+   "room": "2F-01",
+   "status": "HELD: HELD on the roof build-up over 9.0090 lm (ROOF-1390 (+13.90, Q-34); D-39 / DCR-6): value at the DRAWN-SECTION SCENARIO, ESTIMATED, no lower bound printed; BOUNDED by openings without an established height and / or beam-end counts",
+   "t552_restated": [
+    "27.96551",
+    "32.21641"
+   ],
+   "zone": "2F"
+  }
+ ],
+ "schema": "URBAN_T556_PLASTER_HEIGHT_V1",
+ "totals": {
+  "new": [
+   "840.6458100",
+   "895.8964100"
+  ],
+  "old": [
+   "613.3291",
+   "650.3887"
+  ],
+  "t552": [
+   "839.23350",
+   "918.44910"
+  ]
+ },
+ "totals_note": "old = candidate values of the 9 lines that carry one (2 HELD blank lines have none); t552 and new cover all 11 lines"
+}

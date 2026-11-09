@@ -1,0 +1,534 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (no line changed)",
+ "e1": "the E1 entrance flight (his H16 5 x 2.80) is not in his door-step rows; FR-T584-1 owns it",
+ "fix_rows": [
+  {
+   "id": "FR-T602-1",
+   "row": "B7 external step at the street gate G-01 (boundary opening, no threshold line exists): payable 2.500 lm, nr 1, riser 0.15 m = 0.375 m2 beside, DRAWING-CONFIRMED geometry; stone / finish HELD (not printed); owning trade with the gate family (FR-T592-2) for the Lead; the gate leaf stays HELD (T-361) and does not change the step"
+  }
+ ],
+ "his": {
+  "ids": "none (no door / gate id on any row)",
+  "lm": "7.7",
+  "nr": 6,
+  "rows": [
+   {
+    "lm": "1.3",
+    "nr": 1,
+    "row": 36
+   },
+   {
+    "lm": "2.5",
+    "nr": 1,
+    "row": 37
+   },
+   {
+    "lm": "1",
+    "nr": 1,
+    "row": 38
+   },
+   {
+    "lm": "1",
+    "nr": 1,
+    "row": 39
+   },
+   {
+    "lm": "0.9",
+    "nr": 1,
+    "row": 40
+   },
+   {
+    "lm": "1",
+    "nr": 1,
+    "row": 41
+   }
+  ]
+ },
+ "openings": [
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "173",
+    "edge": "172",
+    "high_side": {},
+    "low_side": {
+     "+0.15": [
+      "394",
+      "4AE"
+     ]
+    }
+   },
+   "gap_basis": "step face: wall-line ends 10A / 10C",
+   "handles": [
+    "15E"
+   ],
+   "levels_in": [
+    "+0.30"
+   ],
+   "levels_out": [
+    "+0.15"
+   ],
+   "nr": 1,
+   "opening": "D-GF-01",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "source": "T-592 (merged) region read; own pair read agrees on the low side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  },
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "1C7",
+    "edge": "1C6",
+    "high_side": {},
+    "low_side": {
+     "+0.15": [
+      "394",
+      "4AE"
+     ]
+    }
+   },
+   "gap_basis": "step face: wall-line ends 121 / 122",
+   "handles": [
+    "1B5"
+   ],
+   "levels_in": [
+    "+0.30"
+   ],
+   "levels_out": [
+    "+0.15"
+   ],
+   "nr": 1,
+   "opening": "D-GF-03",
+   "payable_lm": "0.9",
+   "riser_m": "0.15",
+   "riser_m2": "0.135",
+   "source": "T-592 (merged) region read; own pair read agrees on the low side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  },
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "19D",
+    "edge": "19C",
+    "high_side": {
+     "+0.30": [
+      "405"
+     ]
+    },
+    "low_side": {
+     "+0.15": [
+      "407",
+      "409"
+     ]
+    }
+   },
+   "gap_basis": "step face: wall-line ends A3 / A2",
+   "handles": [
+    "192"
+   ],
+   "levels_in": [
+    "+0.30"
+   ],
+   "levels_out": [
+    "+0.15"
+   ],
+   "nr": 1,
+   "opening": "D-GF-05",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "source": "T-592 (merged) region read; own pair read agrees on the low side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "33E"
+   ],
+   "levels_in": [],
+   "levels_out": [
+    "+1.00"
+   ],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "D-GF-06",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: E1 entrance landing: no figure printed on it; +1.00 by the merged T-260 ruling (T-584 s.2)",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "281"
+   ],
+   "levels_in": [],
+   "levels_out": [
+    "+1.00"
+   ],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "D-GF-07",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: E1 entrance landing: as D-GF-06 (T-260 ruling, T-584 s.2)",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "3FE",
+    "edge": "3FD",
+    "high_side": {},
+    "low_side": {
+     "+0.15": [
+      "394",
+      "40B",
+      "4AE"
+     ]
+    }
+   },
+   "gap_basis": "step face: wall-line ends 2B9 / 2B8",
+   "handles": [
+    "3FF"
+   ],
+   "levels_in": [
+    "+0.30"
+   ],
+   "levels_out": [
+    "+0.15"
+   ],
+   "nr": 1,
+   "opening": "D-GF-09",
+   "payable_lm": "0.9",
+   "riser_m": "0.15",
+   "riser_m2": "0.135",
+   "source": "T-592 (merged) region read; own pair read agrees on the low side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  },
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "8F",
+    "edge": "8E",
+    "high_side": {},
+    "low_side": {
+     "+-0.00": [
+      "A88",
+      "A89",
+      "A8A"
+     ]
+    }
+   },
+   "gap_basis": "step face carries a line through the opening (8E); gap from the other face: wall-line ends B9 / B8",
+   "handles": [
+    "2D8"
+   ],
+   "levels_in": [
+    "+0.15"
+   ],
+   "levels_out": [
+    "+-0.00"
+   ],
+   "nr": 1,
+   "opening": "D-GF-15",
+   "payable_lm": "1.0",
+   "riser_m": "0.15",
+   "riser_m2": "0.150",
+   "source": "T-592 (merged) region read; own pair read agrees on the low side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "12BA"
+   ],
+   "levels_in": [
+    "+9.70"
+   ],
+   "levels_out": [
+    "+9.70"
+   ],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "D-2F-01",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "2F",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "B7",
+    "8D"
+   ],
+   "levels_in": [],
+   "levels_out": [
+    "+-0.00"
+   ],
+   "not_passable": "low wall drawn THROUGH the 4.521 opening (layer-5 faces 8D / B7 run uninterrupted; T-154 / T-161 F09: an arch over a low wall with a railing; filling HELD on D-53): no walk-through, no step",
+   "nr": 0,
+   "opening": "SX-01",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: pool court figure 40D (+0.15) on the court side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": "not passable (drawn through / over a void)"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "3A2",
+    "3A1"
+   ],
+   "levels_in": [],
+   "levels_out": [
+    "+0.15"
+   ],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "SX-03",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: pool court figure 40D (+0.15) on the court side",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "BC3",
+    "BC2"
+   ],
+   "levels_in": [
+    "+5.50"
+   ],
+   "levels_out": [],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "W15",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: sea-side roof terrace figures 1251 / D1D (+5.50) outside the window",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "1F",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "C93",
+    "C92"
+   ],
+   "levels_in": [
+    "+5.50"
+   ],
+   "levels_out": [],
+   "not_passable": null,
+   "nr": 0,
+   "opening": "W16",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read; beside: sea-side roof terrace figures 1251 / D1D (+5.50) outside the window",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "1F",
+   "why": "same printed level both sides"
+  },
+  {
+   "decision": "NO_STEP",
+   "edge_pair": null,
+   "handles": [
+    "BD2",
+    "BCE"
+   ],
+   "levels_in": [],
+   "levels_out": [],
+   "not_passable": "window over the void above the pool (T-150: outside 'over the pool'; no walking surface beyond)",
+   "nr": 0,
+   "opening": "W17",
+   "payable_lm": null,
+   "riser_m": null,
+   "riser_m2": null,
+   "source": "own region read",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "1F",
+   "why": "not passable (drawn through / over a void)"
+  },
+  {
+   "decision": "STEP",
+   "edge_pair": {
+    "companion": "110#0",
+    "edge": "10F",
+    "high_side": {
+     "+0.15": [
+      "394",
+      "4AE"
+     ]
+    },
+    "low_side": {
+     "+-0.00": [
+      "37A",
+      "A86",
+      "A87"
+     ]
+    }
+   },
+   "gap_basis": "companion 110 = gap between the fence cap 10B and the annex corner (T-361)",
+   "handles": [
+    "110",
+    "10F"
+   ],
+   "levels_in": [
+    "+0.15"
+   ],
+   "levels_out": [
+    "+-0.00"
+   ],
+   "nr": 1,
+   "opening": "G-01",
+   "payable_lm": "2.5",
+   "riser_m": "0.15",
+   "riser_m2": "0.375",
+   "source": "own read: plot line 10F (layer 5) runs through the gap; companion 110 (layer 2) 0.050 on the plot side, 2.500 long = T-361 opening (p.12 '250')",
+   "status": "DRAWING-CONFIRMED",
+   "storey": "GF",
+   "why": null
+  }
+ ],
+ "pair_census": {
+  "at_exterior_openings": [
+   "D-GF-01: 172 / 173",
+   "D-GF-03: 1C6 / 1C7",
+   "D-GF-05: 19C / 19D",
+   "D-GF-09: 3FD / 3FE",
+   "D-GF-15: 8E / 8F",
+   "G-01: 10F / 110#0"
+  ],
+  "away_from_every_exterior_opening": 122,
+  "away_reaching_an_outdoor_figure": [],
+  "away_with_t412_flight_handle": 79,
+  "away_without_flight_handle_max_distance_to_a_flight_edge_m": "2.336",
+  "min_distance_away_pair_to_an_exterior_opening_m": "0.259",
+  "pairs": 128,
+  "ruling": "R-T602-1 (c): none of the pairs away from the exterior openings is a door step (stair-zone edges owned by B7 / T-412 / T-598); none of them reaches an outdoor figure"
+ },
+ "pins": {
+  "research/agents_t150/OPENINGS_T150.csv": "20ab092ad34bb5d6",
+  "research/agents_t361/GATES_T361.csv": "e9554a2e4fc18c8f",
+  "research/agents_t592/out/T592_DOOR_STEPS.json": "c32be0ed6d17ff05",
+  "research/agents_t602/T602_DRAWN.json": "bf2e7cc61774bfce",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0"
+ },
+ "reconciliation": {
+  "attribution": "AGGREGATE_ONLY (his rows carry no opening id; figure matching refused)",
+  "ours_lm": "7.3",
+  "ours_nr": 6,
+  "ours_riser_m2": "1.095",
+  "ours_steps": [
+   {
+    "lm": "1.0",
+    "opening": "D-GF-01",
+    "riser_m": "0.15",
+    "riser_m2": "0.150"
+   },
+   {
+    "lm": "0.9",
+    "opening": "D-GF-03",
+    "riser_m": "0.15",
+    "riser_m2": "0.135"
+   },
+   {
+    "lm": "1.0",
+    "opening": "D-GF-05",
+    "riser_m": "0.15",
+    "riser_m2": "0.150"
+   },
+   {
+    "lm": "0.9",
+    "opening": "D-GF-09",
+    "riser_m": "0.15",
+    "riser_m2": "0.135"
+   },
+   {
+    "lm": "1.0",
+    "opening": "D-GF-15",
+    "riser_m": "0.15",
+    "riser_m2": "0.150"
+   },
+   {
+    "lm": "2.5",
+    "opening": "G-01",
+    "riser_m": "0.15",
+    "riser_m2": "0.375"
+   }
+  ],
+  "residual_lm": "-0.4",
+  "residual_nr": 0,
+  "residual_pct_of_his_lm": "-5.19",
+  "v8_before": {
+   "ours_lm": "4.8",
+   "ours_nr": 5,
+   "unresolved_lm": "2.9"
+  },
+  "v8_unresolved_split": [
+   {
+    "lm": "2.5",
+    "part": "G-01 street gate step (ENGINE_OMISSION: drawn edge pair 10F / 110, +0.15 / +-0.00, no candidate line)",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "candidate_causes_not_attributed": [
+     "D-GF-09: door block drawn 1.000 over a 0.900 masonry gap (T-592 named conflict): +0.10 if the block was read",
+     "D-GF-15: the NW elevation draws the gate zone as a 1.30 panel (27FA, T-361) against the plan's 1.000 gap: +0.30 if the elevation panel was read"
+    ],
+    "lm": "0.4",
+    "part": "residual, his lengths exceed the drawn gaps in aggregate (count equal, 6 = 6)",
+    "status": "UNRESOLVED",
+    "why_not_closed": "his rows carry no id; equal figures are not evidence (R-T602-1 (d))"
+   }
+  ]
+ },
+ "released": "ARCH_TAKEOFF_V2.9 + route G (unchanged)",
+ "rule": "R-T602-1 (t602_rules.py)",
+ "schema": "URBAN_T602_DOOR_STEPS_V1",
+ "sign": "ours - his",
+ "verdicts": {
+  "G-01 step 2.500 lm / riser 0.15 m / 0.375 m2": "ENGINE_OMISSION (drawing, own read); his count of 6 pieces = 6 drawn steps: FREELANCER_RIGHT on the count",
+  "residual 0.40 lm": "UNRESOLVED (two candidate causes named, neither attributable)"
+ }
+}

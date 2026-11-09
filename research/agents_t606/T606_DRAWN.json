@@ -1,0 +1,849 @@
+{
+ "addons": {
+  "1F-CUR": {
+   "bath door reveals": {
+    "dA": "0.12",
+    "dP": "0.3",
+    "depth": "0.15",
+    "depth_handles": [
+     "C0F",
+     "C0D"
+    ],
+    "width": "0.8",
+    "width_handles": [
+     "C0F",
+     "C10"
+    ]
+   },
+   "lobby door reveals": {
+    "dA": "0.135",
+    "dP": "0.3",
+    "depth": "0.15",
+    "depth_handles": [
+     "B1D",
+     "AFA"
+    ],
+    "width": "0.9",
+    "width_handles": [
+     "B1D",
+     "B1C"
+    ]
+   }
+  },
+  "2F-CORR": {
+   "lift door 1.00 reveals": {
+    "dA": "0.2",
+    "dP": "0.4",
+    "depth": "0.2",
+    "depth_handles": [
+     "128A",
+     "129C"
+    ],
+    "width": "1.0",
+    "width_handles": [
+     "128A",
+     "1289"
+    ]
+   },
+   "maid door reveals": {
+    "dA": "0.18",
+    "dP": "0.4",
+    "depth": "0.2",
+    "depth_handles": [
+     "1294",
+     "128D"
+    ],
+    "width": "0.9",
+    "width_handles": [
+     "1294",
+     "1295"
+    ]
+   },
+   "roof door reveals": {
+    "dA": "0.15",
+    "dP": "0.3",
+    "depth": "0.15",
+    "depth_handles": [
+     "1283",
+     "1281"
+    ],
+    "width": "1.0",
+    "width_handles": [
+     "1282",
+     "1283"
+    ]
+   }
+  }
+ },
+ "outlines": {
+  "1F-380x430": {
+   "area": "16.34",
+   "edges": [
+    {
+     "handle": "AD8",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AFF",
+     "lm": "4.3",
+     "role": "WALL"
+    },
+    {
+     "handle": "AD0",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "B08",
+     "lm": "4.3",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-a8aea284",
+   "notch_lm": "0.0",
+   "note": "380 x 430",
+   "perimeter": "16.2",
+   "storey": "1F",
+   "virtual_lm": "0.0",
+   "wall_lm": "16.2"
+  },
+  "1F-500x365": {
+   "area": "18.215",
+   "edges": [
+    {
+     "handle": "AE7",
+     "lm": "3.65",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF8",
+     "lm": "5.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "AE9",
+     "lm": "3.65",
+     "role": "WALL"
+    },
+    {
+     "handle": "C1E",
+     "lm": "5.0",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-2f58111e",
+   "notch_lm": "0.1",
+   "note": "500 x 365 + column notch",
+   "perimeter": "17.4",
+   "storey": "1F",
+   "virtual_lm": "0.0",
+   "wall_lm": "17.4"
+  },
+  "1F-CUR.chord": {
+   "area": "20.7",
+   "edges": [
+    {
+     "handle": "B1D",
+     "lm": "1.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0F",
+     "lm": "2.25",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0A",
+     "lm": "2.4",
+     "role": "WALL"
+    },
+    {
+     "handle": "B6A",
+     "lm": "4.0",
+     "role": "CHORD"
+    },
+    {
+     "handle": "ACE",
+     "lm": "4.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0D",
+     "lm": "4.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "C09",
+     "lm": "0.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "C15",
+     "lm": "0.15",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0B",
+     "lm": "0.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0B",
+     "lm": "2.1",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "-0.0",
+   "note": "the curved face read as the straight inner wall line",
+   "perimeter": "21.9",
+   "storey": "1F",
+   "virtual_lm": "4.0",
+   "wall_lm": "17.9"
+  },
+  "1F-CUR.ours": {
+   "area": "19.016592",
+   "edges": [
+    {
+     "handle": "B1D",
+     "lm": "1.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0F",
+     "lm": "2.25",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0A",
+     "lm": "2.265716",
+     "role": "WALL"
+    },
+    {
+     "handle": "BD2",
+     "lm": "3.509762",
+     "role": "WALL"
+    },
+    {
+     "handle": "B6B",
+     "lm": "0.875192",
+     "role": "WALL"
+    },
+    {
+     "handle": "ACE",
+     "lm": "4.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0D",
+     "lm": "4.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "C09",
+     "lm": "0.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "C15",
+     "lm": "0.15",
+     "role": "WALL"
+    },
+    {
+     "handle": "C0B",
+     "lm": "0.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0B",
+     "lm": "2.1",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-309f118f",
+   "notch_lm": "-0.0",
+   "note": "bed room with its curved face + passage returns + lobby (one cell)",
+   "perimeter": "22.15067",
+   "storey": "1F",
+   "virtual_lm": "0.0",
+   "wall_lm": "22.15067"
+  },
+  "1F-CUR.room_only": {
+   "area": "15.060342",
+   "edges": [
+    {
+     "handle": "C09",
+     "lm": "4.065716",
+     "role": "ZONE_EDGE"
+    },
+    {
+     "handle": "BD2",
+     "lm": "3.509762",
+     "role": "WALL"
+    },
+    {
+     "handle": "B6B",
+     "lm": "0.875192",
+     "role": "WALL"
+    },
+    {
+     "handle": "ACE",
+     "lm": "4.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0D",
+     "lm": "4.0",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.0",
+   "note": "bed room alone, closed across the 1.30 passage on the bed room face",
+   "perimeter": "16.65067",
+   "storey": "1F",
+   "virtual_lm": "4.065716",
+   "wall_lm": "12.584954"
+  },
+  "1F-CUR.room_only_chord": {
+   "area": "16.74375",
+   "edges": [
+    {
+     "handle": "C09",
+     "lm": "4.2",
+     "role": "ZONE_EDGE"
+    },
+    {
+     "handle": "B6A",
+     "lm": "4.0",
+     "role": "CHORD"
+    },
+    {
+     "handle": "ACE",
+     "lm": "4.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "B0D",
+     "lm": "4.0",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.0",
+   "note": "bed room alone, straight east line",
+   "perimeter": "16.4",
+   "storey": "1F",
+   "virtual_lm": "8.2",
+   "wall_lm": "8.2"
+  },
+  "1F-LIV.floor_drawn": {
+   "area": "38.988",
+   "edges": [
+    {
+     "handle": "AEC",
+     "lm": "3.65",
+     "role": "WALL"
+    },
+    {
+     "handle": "B68",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF9",
+     "lm": "8.3",
+     "role": "WALL"
+    },
+    {
+     "handle": "B10",
+     "lm": "1.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AFE",
+     "lm": "3.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B16",
+     "lm": "1.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "ABE",
+     "lm": "1.15",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "A8F",
+     "lm": "0.35",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "AC0",
+     "lm": "1.35",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "C21",
+     "lm": "1.95",
+     "role": "WALL"
+    },
+    {
+     "handle": "AEB",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF7",
+     "lm": "1.15",
+     "role": "WALL"
+    },
+    {
+     "handle": "B74",
+     "lm": "5.87",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "B75",
+     "lm": "1.6",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "D24",
+     "lm": "1.15",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "AF5",
+     "lm": "2.4",
+     "role": "VOID_EDGE"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.0",
+   "note": "floor at +5.50 only: east flight foot 0.35 beyond the printed landing (T-113 S3)",
+   "perimeter": "43.84",
+   "storey": "1F",
+   "virtual_lm": "13.87",
+   "wall_lm": "29.97"
+  },
+  "1F-LIV.floor_printed": {
+   "area": "38.5855",
+   "edges": [
+    {
+     "handle": "AEC",
+     "lm": "3.65",
+     "role": "WALL"
+    },
+    {
+     "handle": "B68",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF9",
+     "lm": "8.3",
+     "role": "WALL"
+    },
+    {
+     "handle": "B10",
+     "lm": "1.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AFE",
+     "lm": "3.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B16",
+     "lm": "0.7",
+     "role": "WALL"
+    },
+    {
+     "handle": "AC0",
+     "lm": "2.5",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "C21",
+     "lm": "1.95",
+     "role": "WALL"
+    },
+    {
+     "handle": "AEB",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF7",
+     "lm": "1.15",
+     "role": "WALL"
+    },
+    {
+     "handle": "B74",
+     "lm": "5.87",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "B75",
+     "lm": "1.6",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "D24",
+     "lm": "1.15",
+     "role": "VOID_EDGE"
+    },
+    {
+     "handle": "AF5",
+     "lm": "2.4",
+     "role": "VOID_EDGE"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.0",
+   "note": "floor at +5.50 only: printed 1.95 landing edge; void / stair-box edges",
+   "perimeter": "43.14",
+   "storey": "1F",
+   "virtual_lm": "13.52",
+   "wall_lm": "29.62"
+  },
+  "1F-LIV.ours": {
+   "area": "75.983",
+   "edges": [
+    {
+     "handle": "AEC",
+     "lm": "10.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B68",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF9",
+     "lm": "8.3",
+     "role": "WALL"
+    },
+    {
+     "handle": "B10",
+     "lm": "1.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AFE",
+     "lm": "3.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B16",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "ADE",
+     "lm": "2.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "C21",
+     "lm": "6.45",
+     "role": "WALL"
+    },
+    {
+     "handle": "AEB",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF7",
+     "lm": "5.15",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-ba3599ec",
+   "notch_lm": "0.3",
+   "note": "walls round living + corridor + connector + the whole dog-leg well + the void zone walls",
+   "perimeter": "52.44",
+   "storey": "1F",
+   "virtual_lm": "0.0",
+   "wall_lm": "52.44"
+  },
+  "1F-LIV.well_cut": {
+   "area": "65.1605",
+   "edges": [
+    {
+     "handle": "AEC",
+     "lm": "10.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B68",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF9",
+     "lm": "8.3",
+     "role": "WALL"
+    },
+    {
+     "handle": "B10",
+     "lm": "1.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "AFE",
+     "lm": "3.67",
+     "role": "WALL"
+    },
+    {
+     "handle": "B16",
+     "lm": "1.05",
+     "role": "WALL"
+    },
+    {
+     "handle": "ABE",
+     "lm": "1.15",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "A8F",
+     "lm": "0.35",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "AC0",
+     "lm": "1.35",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "C21",
+     "lm": "1.95",
+     "role": "WALL"
+    },
+    {
+     "handle": "AEB",
+     "lm": "3.8",
+     "role": "WALL"
+    },
+    {
+     "handle": "AF7",
+     "lm": "5.15",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.2",
+   "note": "ours with the dog-leg well cut at the drawn landing edge; void zone walls kept",
+   "perimeter": "44.04",
+   "storey": "1F",
+   "virtual_lm": "2.85",
+   "wall_lm": "41.19"
+  },
+  "2F-CORR.east_foot": {
+   "area": "7.72",
+   "edges": [
+    {
+     "handle": "1283",
+     "lm": "4.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "1294",
+     "lm": "1.25",
+     "role": "WALL"
+    },
+    {
+     "handle": "128A",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "129A",
+     "lm": "1.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "1385",
+     "lm": "1.15",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "1358",
+     "lm": "0.3",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "138B",
+     "lm": "1.35",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "12B7",
+     "lm": "1.95",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": null,
+   "notch_lm": "0.0",
+   "note": "east flight's first line 0.30 beyond the printed landing",
+   "perimeter": "13.5",
+   "storey": "2F",
+   "virtual_lm": "2.8",
+   "wall_lm": "10.7"
+  },
+  "2F-CORR.ours": {
+   "area": "7.375",
+   "edges": [
+    {
+     "handle": "1283",
+     "lm": "4.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "1294",
+     "lm": "1.25",
+     "role": "WALL"
+    },
+    {
+     "handle": "128A",
+     "lm": "2.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "129A",
+     "lm": "0.7",
+     "role": "WALL"
+    },
+    {
+     "handle": "138B",
+     "lm": "2.5",
+     "role": "LANDING_EDGE"
+    },
+    {
+     "handle": "12B7",
+     "lm": "1.95",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-9ff582c9 + L-dff4f49f + slab edge",
+   "notch_lm": "0.0",
+   "note": "lobby + arrival, landing edge at the printed 1.95 (T-443)",
+   "perimeter": "12.9",
+   "storey": "2F",
+   "virtual_lm": "2.5",
+   "wall_lm": "10.4"
+  },
+  "2F-MAID": {
+   "area": "19.35",
+   "edges": [
+    {
+     "handle": "1284",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "1292",
+     "lm": "6.45",
+     "role": "WALL"
+    },
+    {
+     "handle": "1279",
+     "lm": "3.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "128B",
+     "lm": "6.45",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-d057b5b0",
+   "notch_lm": "0.0",
+   "note": "300 x 645",
+   "perimeter": "18.9",
+   "storey": "2F",
+   "virtual_lm": "0.0",
+   "wall_lm": "18.9"
+  },
+  "GF-DEWANEYA": {
+   "area": "24.94032",
+   "edges": [
+    {
+     "handle": "119",
+     "lm": "4.0",
+     "role": "WALL"
+    },
+    {
+     "handle": "127",
+     "lm": "5.2",
+     "role": "WALL"
+    },
+    {
+     "handle": "10E",
+     "lm": "1.727876",
+     "role": "WALL"
+    },
+    {
+     "handle": "139",
+     "lm": "2.9",
+     "role": "WALL"
+    },
+    {
+     "handle": "124",
+     "lm": "6.3",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-d3241491",
+   "notch_lm": "0.0",
+   "note": "400 x 630 with the R1.10 corner",
+   "perimeter": "20.127876",
+   "storey": "GF",
+   "virtual_lm": "0.0",
+   "wall_lm": "20.127876"
+  },
+  "GF-DRIVER": {
+   "area": "7.875",
+   "edges": [
+    {
+     "handle": "113",
+     "lm": "1.75",
+     "role": "WALL"
+    },
+    {
+     "handle": "131",
+     "lm": "4.5",
+     "role": "WALL"
+    },
+    {
+     "handle": "11E",
+     "lm": "1.75",
+     "role": "WALL"
+    },
+    {
+     "handle": "12F",
+     "lm": "4.5",
+     "role": "WALL"
+    }
+   ],
+   "engine_line": "L-bb0ea965",
+   "notch_lm": "0.0",
+   "note": "175 x 450",
+   "perimeter": "12.5",
+   "storey": "GF",
+   "virtual_lm": "0.0",
+   "wall_lm": "12.5"
+  }
+ },
+ "rule": "R-T606-1",
+ "schema": "T606_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+ "units": "m / m2"
+}

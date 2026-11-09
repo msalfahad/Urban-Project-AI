@@ -1,0 +1,2286 @@
+{
+ "schema": "T577_MARBLE_RECONCILE_V1",
+ "rule": "R-T577-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.58",
+ "line_index": "research/agents_t507/out/LINE_INDEX_V3_0_57.json",
+ "pins": {
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json": "752c9f4e0c4546d0",
+  "research/agents_t325/SILL_THRESHOLD_LEDGER_T325.csv": "ef6f2cb0c0d7619e"
+ },
+ "tables": {
+  "m2": {
+   "groups": [
+    {
+     "id": "WET",
+     "name": "wet doorway thresholds, marble (UP-THR-001 + URBAN-WET-SERVICE-MARBLE-THRESHOLD v1)",
+     "ours": "1.82",
+     "his": "0",
+     "gap": "1.82",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "D-1F-01",
+      "D-1F-04",
+      "D-1F-05",
+      "D-1F-06",
+      "D-1F-07",
+      "D-1F-10",
+      "D-2F-03",
+      "D-GF-02",
+      "D-GF-04",
+      "D-GF-05",
+      "D-GF-10",
+      "D-GF-11",
+      "D-GF-12",
+      "D-GF-14"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rule; his omission",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "1.82",
+       "source": "T-325 / T-327 (14 strips, Checker-merged ledger)"
+      }
+     ]
+    },
+    {
+     "id": "DRY",
+     "name": "dry doorway / arch strips, the floor porcelain continued once (UP-THR-001)",
+     "ours": "1.250",
+     "his": "0",
+     "gap": "1.250",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "A-1F-01",
+      "A-GF-01",
+      "D-1F-02",
+      "D-1F-03",
+      "D-1F-08",
+      "D-1F-09",
+      "D-2F-02",
+      "D-GF-08",
+      "D-GF-13",
+      "D-GF-15"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "SCOPE",
+       "amount": "1.250",
+       "source": "T-325 / T-327; floor rows in T-553"
+      },
+      {
+       "label": "D-GF-15 gate strip (width / host wall not established, unbounded) and A-GF-01 arch strip (held by name, T-377; 1.000 x 0.150 beside, NOT applied, T-327)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-327 s.4"
+      }
+     ]
+    },
+    {
+     "id": "EXT",
+     "name": "external entrance doors: threshold strip (ours) vs his 'door steps' block",
+     "ours": "0",
+     "his": "7.7",
+     "gap": "-7.7",
+     "pct": null,
+     "held_bound": [
+      "1.31",
+      "1.31"
+     ],
+     "pieces": [
+      "D-2F-01",
+      "D-GF-01",
+      "D-GF-03",
+      "D-GF-06",
+      "D-GF-07",
+      "D-GF-09"
+     ],
+     "cells": [
+      "MRB.H36",
+      "MRB.H37",
+      "MRB.H38",
+      "MRB.H39",
+      "MRB.H40",
+      "MRB.H41"
+     ],
+     "causes": [
+      {
+       "label": "his H36..H41 are count x length in an area column (no width cell): 7.70 of length booked as m2; never compared as m2 and never converted (R-T577-1 (c))",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "UNIT",
+       "amount": "-7.7",
+       "source": "his own cells (B x C = H, D / F blank)"
+      },
+      {
+       "label": "external entrance strips: area / width measured (T-325), material by specification, so each line is HELD at its point bound (never 0)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "1.31",
+        "1.31"
+       ],
+       "source": "T-325 / T-327"
+      }
+     ]
+    },
+    {
+     "id": "SILL",
+     "name": "window sills, raised windows (UP-REVEAL-001; material UNKNOWN, consultant A13)",
+     "ours": "2.5614",
+     "his": "0",
+     "gap": "2.5614",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "W01:OUT",
+      "W02:OUT",
+      "W04:OUT",
+      "W05:OUT",
+      "W06:OUT",
+      "W07:OUT",
+      "W08:OUT",
+      "W09:OUT",
+      "W10:OUT",
+      "W11:OUT",
+      "W12:OUT",
+      "W13:OUT",
+      "W14:OUT",
+      "W17:OUT",
+      "W18:OUT",
+      "W19:OUT",
+      "W20:OUT",
+      "W21:OUT",
+      "W22:OUT",
+      "W23:OUT",
+      "W24:OUT",
+      "W26:OUT",
+      "W28:OUT",
+      "W29:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): a sill is its own item (UP-REVEAL-001); quantity from the drawn frame (no return printed: length = opening width), material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "2.5614",
+       "source": "T-325 / T-326 / T-327"
+      },
+      {
+       "label": "W17 curved sill (T-302: radius / chord basis not established, unbounded)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-327 s.4"
+      }
+     ]
+    },
+    {
+     "id": "FLOORGLAZING",
+     "name": "floor-level glazing outside strips (onto a terrace: its floor finish; over air: UNKNOWN)",
+     "ours": "0.4080",
+     "his": "0",
+     "gap": "0.4080",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "W03:IN",
+      "W03:OUT",
+      "W15:OUT",
+      "W16:OUT",
+      "W25:OUT",
+      "W27:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): W15 / W16 outside strips onto the 1F terrace take its floor finish; W25 / W27 over air, material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "0.4080",
+       "source": "T-325 R-T325-1"
+      },
+      {
+       "label": "W03 inner / outer floor strips (GF-15 floor glazing; frame position not established, unbounded)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-325 / T-327"
+      }
+     ]
+    },
+    {
+     "id": "LIFT",
+     "name": "lift landing threshold B6-07 and surround B6-06 (T-475)",
+     "ours": "1.5",
+     "his": "0",
+     "gap": "1.5",
+     "pct": null,
+     "held_bound": [
+      "2.75",
+      "13.98"
+     ],
+     "pieces": [
+      "ELV-01-1F",
+      "ELV-01-1F:SURROUND",
+      "ELV-01-2F",
+      "ELV-01-2F:SURROUND",
+      "ELV-01-GF",
+      "ELV-01-GF:SURROUND"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): B6-07 per landing door by owner rule (UP-ELEV-005), 3 stations drawn on two drawings",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "1.5",
+       "source": "T-475 (Checker-merged census)"
+      },
+      {
+       "label": "B6-06 surrounds: door clear height not printed (RFI L-1), 2F right band 0 .. 0.400",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "2.75",
+        "13.98"
+       ],
+       "source": "T-475 / T-421"
+      }
+     ]
+    },
+    {
+     "id": "E1_STEPS",
+     "name": "entrance stair E1 steps (his 'entrance marble' steps)",
+     "ours": "5.3194",
+     "his": "14",
+     "gap": "-8.6806",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "E1:RISERS",
+      "E1:TREADS"
+     ],
+     "cells": [
+      "MRB.H16"
+     ],
+     "causes": [
+      {
+       "label": "his H16 = 5 steps x 2.80 = 14.00 of length in an area column: never compared as m2 (R-T577-1 (c))",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "UNIT",
+       "amount": "-14",
+       "source": "his B16 x C16 = H16, D / F blank"
+      },
+      {
+       "label": "our tread 3.3594 (4 x 0.30 x 2.80 printed = 3.3600; drawn -0.0006) + riser 1.96 (5 x (0.85 / 5 - 0.030) x 2.80) m2 have no area counterpart in his row",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "5.3194",
+       "source": "T-343 / T-490"
+      }
+     ]
+    },
+    {
+     "id": "E1_LANDING",
+     "name": "entrance stair E1 landing (his 'entrance marble' landing)",
+     "ours": "5.1794",
+     "his": "5.1",
+     "gap": "0.0794",
+     "pct": "1.56",
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "E1:LANDING"
+     ],
+     "cells": [
+      "MRB.H17"
+     ],
+     "causes": [
+      {
+       "label": "printed 1.40 x 3.70 = 5.18 vs his 5.10 typed",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "MEASURE",
+       "amount": "0.08",
+       "source": "sheet 03 print (T-343 / T-490)"
+      },
+      {
+       "label": "drawn polygon 5.1794 vs printed 5.18 (4-dp vertices)",
+       "verdict": "TOLERANCE",
+       "kind": "MEASURE",
+       "amount": "-0.0006",
+       "source": "line index vs print"
+      }
+     ]
+    }
+   ],
+   "totals": {
+    "ours": "18.0382",
+    "his": "26.8",
+    "gap": "-8.7618",
+    "pct": null,
+    "pct_withheld": "a group carries a HELD, SCOPE or UNIT cause (R-T577-1 (e))"
+   },
+   "his_marble_total": {
+    "total": "295.44",
+    "parts": [
+     [
+      "in this table: door steps H36..H41 (length in an area column)",
+      "7.7"
+     ],
+     [
+      "in this table: entrance steps H16 (5 x 2.80, length in an area column)",
+      "14"
+     ],
+     [
+      "in this table: entrance landing H17 (area)",
+      "5.1"
+     ],
+     [
+      "other owner: court floor H13 (area; EXT.FLOOR family, OWNER_RULE_OUTDOOR_FLOORS, T-495 / T-553)",
+      "151.8"
+     ],
+     [
+      "other owner: main-stair steps H23 (63 x 1.20, length in an area column; no stair-finish reconciliation row yet)",
+      "75.6"
+     ],
+     [
+      "other owner: main-stair landing H24 (area)",
+      "6.2"
+     ],
+     [
+      "other owner: inner-stair steps H30 (28 x 1.20, length in an area column)",
+      "33.6"
+     ],
+     [
+      "other owner: inner-stair landing H31 (area)",
+      "1.44"
+     ]
+    ],
+    "area_shaped": "164.54",
+    "length_shaped": "130.9",
+    "note": "his 'stairs and landings' m2 total adds 130.9 of count x length (lm) to 164.54 of area (m2): it is not an area; R-T577-1 (c) keeps each number in its own label"
+   }
+  },
+  "lm": {
+   "groups": [
+    {
+     "id": "WET",
+     "name": "wet doorway thresholds, marble (UP-THR-001 + URBAN-WET-SERVICE-MARBLE-THRESHOLD v1)",
+     "ours": "11.5",
+     "his": "0",
+     "gap": "11.5",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "D-1F-01",
+      "D-1F-04",
+      "D-1F-05",
+      "D-1F-06",
+      "D-1F-07",
+      "D-1F-10",
+      "D-2F-03",
+      "D-GF-02",
+      "D-GF-04",
+      "D-GF-05",
+      "D-GF-10",
+      "D-GF-11",
+      "D-GF-12",
+      "D-GF-14"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rule; his omission",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "11.5",
+       "source": "T-325 / T-327 (14 strips, Checker-merged ledger)"
+      }
+     ]
+    },
+    {
+     "id": "DRY",
+     "name": "dry doorway / arch strips, the floor porcelain continued once (UP-THR-001)",
+     "ours": "7.7",
+     "his": "0",
+     "gap": "7.7",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "A-1F-01",
+      "A-GF-01",
+      "D-1F-02",
+      "D-1F-03",
+      "D-1F-08",
+      "D-1F-09",
+      "D-2F-02",
+      "D-GF-08",
+      "D-GF-13",
+      "D-GF-15"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "SCOPE",
+       "amount": "7.7",
+       "source": "T-325 / T-327; floor rows in T-553"
+      },
+      {
+       "label": "D-GF-15 gate strip (width / host wall not established, unbounded) and A-GF-01 arch strip (held by name, T-377; 1.000 x 0.150 beside, NOT applied, T-327)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-327 s.4"
+      }
+     ]
+    },
+    {
+     "id": "EXT",
+     "name": "external entrance doors: threshold strip (ours) vs his 'door steps' block",
+     "ours": "0",
+     "his": "7.7",
+     "gap": "-7.7",
+     "pct": null,
+     "held_bound": [
+      "6.8",
+      "6.8"
+     ],
+     "pieces": [
+      "D-2F-01",
+      "D-GF-01",
+      "D-GF-03",
+      "D-GF-06",
+      "D-GF-07",
+      "D-GF-09"
+     ],
+     "cells": [
+      "MRB.B36xC36",
+      "MRB.B37xC37",
+      "MRB.B38xC38",
+      "MRB.B39xC39",
+      "MRB.B40xC40",
+      "MRB.B41xC41"
+     ],
+     "causes": [
+      {
+       "label": "his 'door steps' are step pieces outside the external doors (EXT_STEP), ours the strip inside the wall thickness: different elements (T-325 RULE_DIFFERENCE, element); no EXT_STEP piece is in the candidate, and whether a step stands outside each of the six doors (outside level vs F.F.L.) is not established in a merged reading: a possible ENGINE_OMISSION named for the Lead, never valued here",
+       "verdict": "UNRESOLVED",
+       "kind": "SCOPE",
+       "amount": "-7.7",
+       "source": "his own count x length cells; T-325 s.4"
+      },
+      {
+       "label": "external entrance strips: area / width measured (T-325), material by specification, so each line is HELD at its point bound (never 0)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "6.8",
+        "6.8"
+       ],
+       "source": "T-325 / T-327"
+      }
+     ],
+     "note": "at the bound the strip widths are 6.800 lm vs his piece lengths 7.700 lm (-0.900): two elements, not a gap; his 1.30 / 2.50 exceed every 1.00 / 2.00 jamb gap, and matching his rows to doors by figure is refused (his rows carry no door id)"
+    },
+    {
+     "id": "SILL",
+     "name": "window sills, raised windows (UP-REVEAL-001; material UNKNOWN, consultant A13)",
+     "ours": "29.53",
+     "his": "0",
+     "gap": "29.53",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "W01:OUT",
+      "W02:OUT",
+      "W04:OUT",
+      "W05:OUT",
+      "W06:OUT",
+      "W07:OUT",
+      "W08:OUT",
+      "W09:OUT",
+      "W10:OUT",
+      "W11:OUT",
+      "W12:OUT",
+      "W13:OUT",
+      "W14:OUT",
+      "W17:OUT",
+      "W18:OUT",
+      "W19:OUT",
+      "W20:OUT",
+      "W21:OUT",
+      "W22:OUT",
+      "W23:OUT",
+      "W24:OUT",
+      "W26:OUT",
+      "W28:OUT",
+      "W29:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): a sill is its own item (UP-REVEAL-001); quantity from the drawn frame (no return printed: length = opening width), material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "29.53",
+       "source": "T-325 / T-326 / T-327"
+      },
+      {
+       "label": "W17 curved sill (T-302: radius / chord basis not established, unbounded)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-327 s.4"
+      }
+     ]
+    },
+    {
+     "id": "FLOORGLAZING",
+     "name": "floor-level glazing outside strips (onto a terrace: its floor finish; over air: UNKNOWN)",
+     "ours": "5.10",
+     "his": "0",
+     "gap": "5.10",
+     "pct": null,
+     "held_bound": [
+      "0",
+      null
+     ],
+     "pieces": [
+      "W03:IN",
+      "W03:OUT",
+      "W15:OUT",
+      "W16:OUT",
+      "W25:OUT",
+      "W27:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): W15 / W16 outside strips onto the 1F terrace take its floor finish; W25 / W27 over air, material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "5.10",
+       "source": "T-325 R-T325-1"
+      },
+      {
+       "label": "W03 inner / outer floor strips (GF-15 floor glazing; frame position not established, unbounded)",
+       "verdict": "HELD",
+       "kind": "HELD",
+       "amount": "0",
+       "bound": [
+        "0",
+        null
+       ],
+       "source": "T-325 / T-327"
+      }
+     ]
+    },
+    {
+     "id": "LIFT",
+     "name": "lift landing threshold B6-07 and surround B6-06 (T-475)",
+     "ours": "3.0",
+     "his": "0",
+     "gap": "3.0",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "ELV-01-1F",
+      "ELV-01-2F",
+      "ELV-01-GF"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): B6-07 per landing door by owner rule (UP-ELEV-005), 3 stations drawn on two drawings",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "3.0",
+       "source": "T-475 (Checker-merged census)"
+      }
+     ]
+    },
+    {
+     "id": "E1_STEPS",
+     "name": "entrance stair E1 steps (his 'entrance marble' steps)",
+     "ours": "0",
+     "his": "14.0",
+     "gap": "-14.0",
+     "pct": "-100.00",
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [],
+     "cells": [
+      "MRB.B16xC16"
+     ],
+     "causes": [
+      {
+       "label": "E1 has no FIN.STAIR.STEP_LM line while the other flights carry one (per tread x width): printed 4 treads x 2.80 = 11.20 lm; ENGINE_OMISSION named for the Lead, not valued here",
+       "verdict": "ENGINE_OMISSION",
+       "kind": "MEASURE",
+       "amount": "-11.2",
+       "source": "T-490 print 4 x 0.30 x 2.80; index codes"
+      },
+      {
+       "label": "his 5th step x 2.80 = the top step to the landing, which the candidate books as the landing 1.40 x 3.70 (T-534: the top E1 step is the landing edge, not a tread)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-2.8",
+       "source": "T-534 / T-343"
+      }
+     ]
+    }
+   ],
+   "totals": {
+    "ours": "56.83",
+    "his": "21.7",
+    "gap": "35.13",
+    "pct": null,
+    "pct_withheld": "a group carries a HELD, SCOPE or UNIT cause (R-T577-1 (e))"
+   },
+   "his_marble_total": {
+    "total": "29.87",
+    "parts": [
+     [
+      "other owner: stair / entrance skirting G18 + G25 + G32 (T-574 stair groups)",
+      "29.87"
+     ]
+    ],
+    "note": "his lm marble total is skirting only; the door-step and entrance-step lengths sit inside his m2 total (above) and are compared here from his own count x length cells"
+   }
+  },
+  "nr": {
+   "groups": [
+    {
+     "id": "WET",
+     "name": "wet doorway thresholds, marble (UP-THR-001 + URBAN-WET-SERVICE-MARBLE-THRESHOLD v1)",
+     "ours": "14",
+     "his": "0",
+     "gap": "14",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "D-1F-01",
+      "D-1F-04",
+      "D-1F-05",
+      "D-1F-06",
+      "D-1F-07",
+      "D-1F-10",
+      "D-2F-03",
+      "D-GF-02",
+      "D-GF-04",
+      "D-GF-05",
+      "D-GF-10",
+      "D-GF-11",
+      "D-GF-12",
+      "D-GF-14"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): every wet doorway takes a marble strip by owner rule; his omission",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "14",
+       "source": "T-325 / T-327 (14 strips, Checker-merged ledger)"
+      }
+     ]
+    },
+    {
+     "id": "DRY",
+     "name": "dry doorway / arch strips, the floor porcelain continued once (UP-THR-001)",
+     "ours": "10",
+     "his": "0",
+     "gap": "10",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "A-1F-01",
+      "A-GF-01",
+      "D-1F-02",
+      "D-1F-03",
+      "D-1F-08",
+      "D-1F-09",
+      "D-2F-02",
+      "D-GF-08",
+      "D-GF-13",
+      "D-GF-15"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone); the strip is the floor porcelain continued, so it may sit inside his room floor rows (not established: his rows carry no strip)",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "SCOPE",
+       "amount": "10",
+       "source": "T-325 / T-327; floor rows in T-553"
+      }
+     ]
+    },
+    {
+     "id": "EXT",
+     "name": "external entrance doors: threshold strip (ours) vs his 'door steps' block",
+     "ours": "6",
+     "his": "6",
+     "gap": "0",
+     "pct": "0.00",
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "D-2F-01",
+      "D-GF-01",
+      "D-GF-03",
+      "D-GF-06",
+      "D-GF-07",
+      "D-GF-09"
+     ],
+     "cells": [
+      "MRB.B36",
+      "MRB.B37",
+      "MRB.B38",
+      "MRB.B39",
+      "MRB.B40",
+      "MRB.B41"
+     ],
+     "causes": [
+      {
+       "label": "six external doors drawn (T-325 census: D-GF-01 / 03 / 06 / 07 / 09, D-2F-01) = his six door-step pieces: the count agrees; the elements differ (strip vs step), so the agreement is a count only",
+       "verdict": "AGREE",
+       "kind": "MEASURE",
+       "amount": "0",
+       "source": "T-325 ledger; his B36..B41"
+      }
+     ]
+    },
+    {
+     "id": "SILL",
+     "name": "window sills, raised windows (UP-REVEAL-001; material UNKNOWN, consultant A13)",
+     "ours": "24",
+     "his": "0",
+     "gap": "24",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "W01:OUT",
+      "W02:OUT",
+      "W04:OUT",
+      "W05:OUT",
+      "W06:OUT",
+      "W07:OUT",
+      "W08:OUT",
+      "W09:OUT",
+      "W10:OUT",
+      "W11:OUT",
+      "W12:OUT",
+      "W13:OUT",
+      "W14:OUT",
+      "W17:OUT",
+      "W18:OUT",
+      "W19:OUT",
+      "W20:OUT",
+      "W21:OUT",
+      "W22:OUT",
+      "W23:OUT",
+      "W24:OUT",
+      "W26:OUT",
+      "W28:OUT",
+      "W29:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): a sill is its own item (UP-REVEAL-001); quantity from the drawn frame (no return printed: length = opening width), material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "24",
+       "source": "T-325 / T-326 / T-327"
+      }
+     ]
+    },
+    {
+     "id": "FLOORGLAZING",
+     "name": "floor-level glazing outside strips (onto a terrace: its floor finish; over air: UNKNOWN)",
+     "ours": "6",
+     "his": "0",
+     "gap": "6",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "W03:IN",
+      "W03:OUT",
+      "W15:OUT",
+      "W16:OUT",
+      "W25:OUT",
+      "W27:OUT"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): W15 / W16 outside strips onto the 1F terrace take its floor finish; W25 / W27 over air, material UNKNOWN",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "6",
+       "source": "T-325 R-T325-1"
+      }
+     ]
+    },
+    {
+     "id": "LIFT",
+     "name": "lift landing threshold B6-07 and surround B6-06 (T-475)",
+     "ours": "3",
+     "his": "0",
+     "gap": "3",
+     "pct": null,
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "ELV-01-1F",
+      "ELV-01-2F",
+      "ELV-01-GF"
+     ],
+     "cells": [],
+     "causes": [
+      {
+       "label": "he carries no row for this element (T-325 census: 0 of 885 rows names a threshold / sill / lift stone): B6-07 per landing door by owner rule (UP-ELEV-005), 3 stations drawn on two drawings",
+       "verdict": "ENGINE_RIGHT",
+       "kind": "SCOPE",
+       "amount": "3",
+       "source": "T-475 (Checker-merged census)"
+      }
+     ]
+    },
+    {
+     "id": "E1_STEPS",
+     "name": "entrance stair E1 steps (his 'entrance marble' steps)",
+     "ours": "4",
+     "his": "5",
+     "gap": "-1",
+     "pct": "-20.00",
+     "held_bound": [
+      "0",
+      "0"
+     ],
+     "pieces": [
+      "E1:TREADS"
+     ],
+     "cells": [
+      "MRB.B16"
+     ],
+     "causes": [
+      {
+       "label": "4 treads printed (T-490) vs his 5 steps: his top step is our landing edge",
+       "verdict": "RULE_DIFFERENCE",
+       "kind": "MEASURE",
+       "amount": "-1",
+       "source": "T-490 / T-534"
+      }
+     ]
+    }
+   ],
+   "totals": {
+    "ours": "67",
+    "his": "11",
+    "gap": "56",
+    "pct": null,
+    "pct_withheld": "a group carries a HELD, SCOPE or UNIT cause (R-T577-1 (e))"
+   },
+   "his_marble_total": {
+    "total": "96",
+    "parts": [
+     [
+      "other owner: stair-side pieces per step G19 + G26 + G33 (T-574 nr groups)",
+      "96"
+     ]
+    ],
+    "note": "his nr marble total is stair-side pieces only; the door-step and entrance-step counts are his column B cells"
+   }
+  }
+ },
+ "pieces": {
+  "A-1F-01": {
+   "group": "DRY",
+   "line": "L-e2eb7cee560d74ae91e4",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "A-GF-01": {
+   "group": "DRY",
+   "line": "L-868aee125705bb8d17f6",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     "0.15"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     "1.0"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-01": {
+   "group": "WET",
+   "line": "L-709aba3ec07bb0f26319",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-02": {
+   "group": "DRY",
+   "line": "L-47d54293f7a3856044e1",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-03": {
+   "group": "DRY",
+   "line": "L-fcf3a49c67ae9e730028",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-04": {
+   "group": "WET",
+   "line": "L-bfdbdaa2d67a5c805f1e",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-05": {
+   "group": "WET",
+   "line": "L-ccb1182ae9409b432968",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.18",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.9",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-06": {
+   "group": "WET",
+   "line": "L-92721c425ab3612bb035",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-07": {
+   "group": "WET",
+   "line": "L-f2d296f1fc5184419774",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-08": {
+   "group": "DRY",
+   "line": "L-fcf9fbf8a5145fbd7bca",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.135",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.9",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-09": {
+   "group": "DRY",
+   "line": "L-05443e1e907e1a21c4a3",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.135",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.9",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-1F-10": {
+   "group": "WET",
+   "line": "L-a4909527ff598315be61",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-2F-01": {
+   "group": "EXT",
+   "line": "L-3e5c6b7af8dd06b2836c",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.15",
+     "0.15"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "1.0",
+     "1.0"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-2F-02": {
+   "group": "DRY",
+   "line": "L-dc5434957e2f76cc794b",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.18",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.9",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-2F-03": {
+   "group": "WET",
+   "line": "L-0ca0f91144403e323c68",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-01": {
+   "group": "EXT",
+   "line": "L-b3933a51bd95e9bc542b",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.2",
+     "0.2"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "1.0",
+     "1.0"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-02": {
+   "group": "WET",
+   "line": "L-791a94968230969c030f",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-03": {
+   "group": "EXT",
+   "line": "L-74cd61b430eec9933d15",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.18",
+     "0.18"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.9",
+     "0.9"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-04": {
+   "group": "WET",
+   "line": "L-8901e416cbce62854fbe",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-05": {
+   "group": "WET",
+   "line": "L-c8b5c7f742b22388339e",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-06": {
+   "group": "EXT",
+   "line": "L-9fa69ef1a11ef9987967",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.2",
+     "0.2"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "1.0",
+     "1.0"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-07": {
+   "group": "EXT",
+   "line": "L-ad41b065d825c0190b7d",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.4",
+     "0.4"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "2.0",
+     "2.0"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-08": {
+   "group": "DRY",
+   "line": "L-a3bbe40ac52ff6f2764b",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-09": {
+   "group": "EXT",
+   "line": "L-8111095f6db78f0e674b",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.18",
+     "0.18"
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.9",
+     "0.9"
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-10": {
+   "group": "WET",
+   "line": "L-1a229f1fead084efb881",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-11": {
+   "group": "WET",
+   "line": "L-cbf11d0c1befb0519e98",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-12": {
+   "group": "WET",
+   "line": "L-07ce1d24164207cd06ca",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-13": {
+   "group": "DRY",
+   "line": "L-25915d704e8aa6e868af",
+   "code": "FIN.FLOOR.PORCELAIN",
+   "m2": {
+    "value": "0.15",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-14": {
+   "group": "WET",
+   "line": "L-3b166c2b5d136302f2dd",
+   "code": "FIN.MARBLE.THRESHOLD",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "D-GF-15": {
+   "group": "DRY",
+   "line": "L-56acf34557c315f65bb1",
+   "code": "ARCH.THRESHOLD",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "E1:LANDING": {
+   "group": "E1_LANDING",
+   "line": "L-3dd82a576dce1beb4250",
+   "code": "FIN.MARBLE.LANDING",
+   "m2": {
+    "value": "5.1794",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": null,
+   "nr": null
+  },
+  "E1:RISERS": {
+   "group": "E1_STEPS",
+   "line": "L-0afa7bd369ec489ebfc2",
+   "code": "FIN.MARBLE.RISER",
+   "m2": {
+    "value": "1.96",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": null,
+   "nr": null
+  },
+  "E1:TREADS": {
+   "group": "E1_STEPS",
+   "line": "L-314c3ac6d45431b687c5",
+   "code": "FIN.MARBLE.TREAD",
+   "m2": {
+    "value": "3.3594",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": null,
+   "nr": {
+    "value": "4",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "ELV-01-1F": {
+   "group": "LIFT",
+   "line": "L-9840d1da235dd7583427",
+   "code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "m2": {
+    "value": "0.5",
+    "status": "ASSUMED - OWNER-APPROVED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "ELV-01-1F:SURROUND": {
+   "group": "LIFT",
+   "line": "L-d788f643b290e8f92558",
+   "code": "FIN.MARBLE.LIFT_SURROUND",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "1.0",
+     "4.7"
+    ]
+   },
+   "lm": null,
+   "nr": null
+  },
+  "ELV-01-2F": {
+   "group": "LIFT",
+   "line": "L-eba7ac43f3fce9bbd0b5",
+   "code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "m2": {
+    "value": "0.5",
+    "status": "ASSUMED - OWNER-APPROVED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "ELV-01-2F:SURROUND": {
+   "group": "LIFT",
+   "line": "L-fdbd9636828f045aae5a",
+   "code": "FIN.MARBLE.LIFT_SURROUND",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0.75",
+     "4.28"
+    ]
+   },
+   "lm": null,
+   "nr": null
+  },
+  "ELV-01-GF": {
+   "group": "LIFT",
+   "line": "L-c32effca1d7eae7f36f8",
+   "code": "FIN.MARBLE.LIFT_THRESHOLD",
+   "m2": {
+    "value": "0.5",
+    "status": "ASSUMED - OWNER-APPROVED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "ELV-01-GF:SURROUND": {
+   "group": "LIFT",
+   "line": "L-b66b8e76425d81ff9f19",
+   "code": "FIN.MARBLE.LIFT_SURROUND",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "1.0",
+     "5.0"
+    ]
+   },
+   "lm": null,
+   "nr": null
+  },
+  "W01:OUT": {
+   "group": "SILL",
+   "line": "L-0de10f4db591a2467b82",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W02:OUT": {
+   "group": "SILL",
+   "line": "L-a430e89b6d52e1c994e0",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.5064",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "6.33",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W03:IN": {
+   "group": "FLOORGLAZING",
+   "line": "L-29637dbaa9fe1acc7b82",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W03:OUT": {
+   "group": "FLOORGLAZING",
+   "line": "L-30133ea5a4fb6847c519",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W04:OUT": {
+   "group": "SILL",
+   "line": "L-6add1d9c5ce0493a3e60",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W05:OUT": {
+   "group": "SILL",
+   "line": "L-bd633784436adfde4033",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W06:OUT": {
+   "group": "SILL",
+   "line": "L-eef0162ee1ce392fc7d5",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W07:OUT": {
+   "group": "SILL",
+   "line": "L-dec26399645ab26c13f9",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W08:OUT": {
+   "group": "SILL",
+   "line": "L-b6691e6f54bf47eb4f89",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.120",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.5",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W09:OUT": {
+   "group": "SILL",
+   "line": "L-1bedabba8af5d2529e77",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.120",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.5",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W10:OUT": {
+   "group": "SILL",
+   "line": "L-bea7d46e51c809fbe623",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.080",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W11:OUT": {
+   "group": "SILL",
+   "line": "L-10af4bb68e88181775a7",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.195",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.95",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W12:OUT": {
+   "group": "SILL",
+   "line": "L-36e2b88d45f02c84a404",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.195",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.95",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W13:OUT": {
+   "group": "SILL",
+   "line": "L-ec91f75c35edf30f9c65",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W14:OUT": {
+   "group": "SILL",
+   "line": "L-ea48300c45f8efa96ffe",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.245",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "2.45",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W15:OUT": {
+   "group": "FLOORGLAZING",
+   "line": "L-0e2e7299371efb8338cc",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.1240",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.55",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W16:OUT": {
+   "group": "FLOORGLAZING",
+   "line": "L-146170b53ca02c2456f9",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.1240",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.55",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W17:OUT": {
+   "group": "SILL",
+   "line": "L-c90d5d6c06a671fc3b99",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "lm": {
+    "value": null,
+    "status": "HELD",
+    "bound": [
+     "0",
+     null
+    ]
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W18:OUT": {
+   "group": "SILL",
+   "line": "L-cd88cb0d77ee82dc7259",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.040",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.5",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W19:OUT": {
+   "group": "SILL",
+   "line": "L-e709025cfb48633cc369",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W20:OUT": {
+   "group": "SILL",
+   "line": "L-e60b1ffc24c8bc76ec1a",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W21:OUT": {
+   "group": "SILL",
+   "line": "L-cdd13c017d2f5328032e",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W22:OUT": {
+   "group": "SILL",
+   "line": "L-dbec1a970ca591bebd43",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W23:OUT": {
+   "group": "SILL",
+   "line": "L-1b5962c15890ecb2f6da",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W24:OUT": {
+   "group": "SILL",
+   "line": "L-560e87c03e18569ae941",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.1240",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.55",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W25:OUT": {
+   "group": "FLOORGLAZING",
+   "line": "L-63087103666a3c4b177b",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.080",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W26:OUT": {
+   "group": "SILL",
+   "line": "L-d91627a1feb6dc854723",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.12",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W27:OUT": {
+   "group": "FLOORGLAZING",
+   "line": "L-d540d2198577747bcf84",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.080",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.0",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W28:OUT": {
+   "group": "SILL",
+   "line": "L-44f5f5c49b50d62b44f3",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.048",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "0.6",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  },
+  "W29:OUT": {
+   "group": "SILL",
+   "line": "L-a6565fe2cd9df42f77fd",
+   "code": "ARCH.WINDOW_REVEAL",
+   "m2": {
+    "value": "0.096",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "lm": {
+    "value": "1.2",
+    "status": "DRAWING-CONFIRMED"
+   },
+   "nr": {
+    "value": "1",
+    "status": "DRAWING-CONFIRMED"
+   }
+  }
+ },
+ "code_closure": {
+  "FIN.MARBLE.THRESHOLD": {
+   "lines": 14,
+   "used": 14,
+   "released_total": {
+    "m2": "1.82"
+   },
+   "released_used": {
+    "m2": "1.82"
+   },
+   "not_this_element": 0,
+   "why": ""
+  },
+  "FIN.MARBLE.LIFT_THRESHOLD": {
+   "lines": 6,
+   "used": 6,
+   "released_total": {
+    "lm": "3.0",
+    "m2": "1.5"
+   },
+   "released_used": {
+    "lm": "3.0",
+    "m2": "1.5"
+   },
+   "not_this_element": 0,
+   "why": ""
+  },
+  "FIN.MARBLE.LIFT_SURROUND": {
+   "lines": 3,
+   "used": 3,
+   "released_total": {
+    "m2": "0"
+   },
+   "released_used": {
+    "m2": "0"
+   },
+   "not_this_element": 0,
+   "why": ""
+  },
+  "ARCH.THRESHOLD": {
+   "lines": 24,
+   "used": 8,
+   "released_total": {
+    "m2": "0"
+   },
+   "released_used": {
+    "m2": "0"
+   },
+   "not_this_element": 16,
+   "why": "T-325 s.3: not census openings (GF OP-020 passage under wet review; 5 WALL_BAND_REMAINDER / STRIP_NOT_ATTRIBUTED wall bodies; 3 lift landing sills and the OP-001 / OP-003 pair NOT_APPLICABLE; 5 closure lines retired by T-327)"
+  },
+  "ARCH.WINDOW_REVEAL": {
+   "lines": 62,
+   "used": 30,
+   "released_total": {
+    "m2": "12.438866"
+   },
+   "released_used": {
+    "m2": "2.9694"
+   },
+   "not_this_element": 32,
+   "why": "jamb + head reveal lines (finish of the reveal faces, plaster / paint trade), not a sill"
+  }
+ },
+ "released": "NOTHING RELEASED; no candidate, engine, rule or registry file changed (research ledger)"
+}

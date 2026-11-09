@@ -1,0 +1,2127 @@
+{
+ "first_floor": {
+  "arrival_band": {
+   "area": "0.0575",
+   "depth": "0.05",
+   "handles": [
+    "D24",
+    "D22"
+   ],
+   "layers": [
+    "2",
+    "5"
+   ],
+   "width": "1.15"
+  },
+  "slab_edge_margin": {
+   "bound_m2": "0.376",
+   "east_len_to_band_top": "1.6",
+   "east_offset": "0.05",
+   "handles": {
+    "arch": [
+     "B74",
+     "B75",
+     "D24"
+    ],
+    "st": [
+     "2D2",
+     "2CF"
+    ]
+   },
+   "north_len": "5.87",
+   "north_offset": "0.05"
+  },
+  "st_lines": {
+   "315": {
+    "arch_line": "D24",
+    "layer": "2",
+    "length": "1.15",
+    "note": "top riser of the round-stair flight RS-A",
+    "offset_to_arch_line_mm": "0.0"
+   },
+   "459": {
+    "arch_line": "AC0",
+    "layer": "2",
+    "length": "1.15",
+    "note": "east-lane top riser of ST-01 (12th)",
+    "offset_to_arch_line_mm": "0.0"
+   }
+  }
+ },
+ "outlines": {
+  "1F-LIV.floor_drawn": {
+   "account": {
+    "metres": {
+     "DOOR_ON_FACE": "4.7",
+     "PRINTED_DIMENSION": "0.10",
+     "PRINTED_LINE": "14.77",
+     "WALL": "24.270000"
+    },
+    "open_sides": [
+     {
+      "by": [
+       "BEF"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AF9",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C18"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AF9",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C1A"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AFE",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B9B"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AFE",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "ABE"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "ABE",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "A8F"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "A8F",
+      "length": "0.35",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "10DF"
+      ],
+      "class": "PRINTED_DIMENSION",
+      "edge": "AC0",
+      "length": "0.05",
+      "status": "PRINTED_ONLY"
+     },
+     {
+      "by": [
+       "AC4"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AC0",
+      "length": "0.1",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "10DF"
+      ],
+      "class": "PRINTED_DIMENSION",
+      "edge": "AC0",
+      "length": "0.05",
+      "status": "PRINTED_ONLY"
+     },
+     {
+      "by": [
+       "AC0"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AC0",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C31"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "C21",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C32"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AEB",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B74"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "B74",
+      "length": "5.87",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B75"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "B75",
+      "length": "1.6",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "D24"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "D24",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "AF5"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AF5",
+      "length": "2.4",
+      "status": "DRAWING_CONFIRMED"
+     }
+    ],
+    "perimeter": "43.840000"
+   },
+   "area_exact_green": "38.9905",
+   "area_exact_net": "38.988",
+   "area_route2": {
+    "area": "38.988",
+    "method": "R-T606-1 (T-606 tool, 0.5 deg flattening, column notches)",
+    "notch_m2": "-0.0025"
+   },
+   "chain_from": "T606",
+   "column_notch_at_boundary": "0.0025",
+   "columns_inside": [],
+   "columns_notched": [
+    "3008"
+   ],
+   "dim_checks": {},
+   "edges": [
+    {
+     "handle": "AEC",
+     "kind": "LINE",
+     "length": "3.65",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "3011#3",
+         "WALL"
+        ],
+        [
+         "AEC",
+         "WALL"
+        ],
+        [
+         "AED",
+         "WALL"
+        ],
+        [
+         "AEE",
+         "WALL"
+        ],
+        [
+         "AEF",
+         "WALL"
+        ]
+       ],
+       "length": "3.65"
+      }
+     ]
+    },
+    {
+     "handle": "B68",
+     "kind": "LINE",
+     "length": "5.2",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B65",
+         "WALL"
+        ],
+        [
+         "B66",
+         "WALL"
+        ],
+        [
+         "B67",
+         "WALL"
+        ],
+        [
+         "B68",
+         "WALL"
+        ],
+        [
+         "BC0",
+         "WALL"
+        ],
+        [
+         "BC3",
+         "WALL"
+        ],
+        [
+         "BCA",
+         "WALL"
+        ],
+        [
+         "C90",
+         "WALL"
+        ],
+        [
+         "C93",
+         "WALL"
+        ],
+        [
+         "C9A",
+         "WALL"
+        ]
+       ],
+       "length": "5.2"
+      }
+     ]
+    },
+    {
+     "handle": "AF9",
+     "kind": "LINE",
+     "length": "8.3",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF9",
+         "WALL"
+        ]
+       ],
+       "length": "2.662686"
+      },
+      {
+       "evidence": {
+        "block": "D215",
+        "door": "BEF"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "AFA",
+         "WALL"
+        ]
+       ],
+       "length": "0.844547"
+      },
+      {
+       "evidence": {
+        "block": "D215",
+        "door": "C18"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "AFB",
+         "WALL"
+        ]
+       ],
+       "length": "2.992767"
+      }
+     ]
+    },
+    {
+     "handle": "B10",
+     "kind": "LINE",
+     "length": "1.2",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B10",
+         "WALL"
+        ]
+       ],
+       "length": "1.2"
+      }
+     ]
+    },
+    {
+     "handle": "AFE",
+     "kind": "LINE",
+     "length": "3.67",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AFC",
+         "WALL"
+        ]
+       ],
+       "length": "0.235"
+      },
+      {
+       "evidence": {
+        "block": "d220",
+        "door": "C1A"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "2FED#0",
+         "WALL"
+        ],
+        [
+         "AFD",
+         "WALL"
+        ]
+       ],
+       "length": "0.935"
+      },
+      {
+       "drawn_by": [
+        [
+         "B9B",
+         "PRINTED:LIFT_SILL"
+        ]
+       ],
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "2FF3#0",
+         "WALL"
+        ],
+        [
+         "AFE",
+         "WALL"
+        ]
+       ],
+       "length": "0.6"
+      }
+     ]
+    },
+    {
+     "handle": "B16",
+     "kind": "LINE",
+     "length": "1.05",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "2FF3#3",
+         "WALL"
+        ],
+        [
+         "B16",
+         "WALL"
+        ]
+       ],
+       "length": "1.05"
+      }
+     ]
+    },
+    {
+     "handle": "ABE",
+     "kind": "LINE",
+     "length": "1.15",
+     "role": "LANDING_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "ABE",
+         "PRINTED:NOSING"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "A8F",
+     "kind": "LINE",
+     "length": "0.35",
+     "role": "LANDING_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "A8F",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "0.35"
+      }
+     ]
+    },
+    {
+     "handle": "AC0",
+     "kind": "LINE",
+     "length": "1.35",
+     "role": "LANDING_EDGE",
+     "segments": [
+      {
+       "evidence": {
+        "corroboration": [],
+        "dimension": "10DF",
+        "on_line": true
+       },
+       "length": "0.05"
+      },
+      {
+       "drawn_by": [
+        [
+         "AC4",
+         "PRINTED:NOSING"
+        ]
+       ],
+       "length": "0.1"
+      },
+      {
+       "evidence": {
+        "corroboration": [],
+        "dimension": "10DF",
+        "on_line": true
+       },
+       "length": "0.05"
+      },
+      {
+       "drawn_by": [
+        [
+         "AC0",
+         "PRINTED:NOSING"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "C21",
+     "kind": "LINE",
+     "length": "1.95",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF1",
+         "WALL"
+        ]
+       ],
+       "length": "0.125114"
+      },
+      {
+       "evidence": {
+        "block": "D115",
+        "door": "C31"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "C21",
+         "WALL"
+        ]
+       ],
+       "length": "0.824886"
+      }
+     ]
+    },
+    {
+     "handle": "AEB",
+     "kind": "LINE",
+     "length": "3.8",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AEA",
+         "WALL"
+        ]
+       ],
+       "length": "0.08852"
+      },
+      {
+       "evidence": {
+        "block": "D115",
+        "door": "C32"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "AEB",
+         "WALL"
+        ]
+       ],
+       "length": "2.71148"
+      }
+     ]
+    },
+    {
+     "handle": "AF7",
+     "kind": "LINE",
+     "length": "1.15",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF7",
+         "WALL"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "B74",
+     "kind": "LINE",
+     "length": "5.87",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B74",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "5.87"
+      }
+     ]
+    },
+    {
+     "handle": "B75",
+     "kind": "LINE",
+     "length": "1.6",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B75",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "1.6"
+      }
+     ]
+    },
+    {
+     "handle": "D24",
+     "kind": "LINE",
+     "length": "1.15",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "D24",
+         "PRINTED:RISER"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "AF5",
+     "kind": "LINE",
+     "length": "2.4",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF5",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "2.4"
+      }
+     ]
+    }
+   ],
+   "handles": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "ABE",
+    "A8F",
+    "AC0",
+    "C21",
+    "AEB",
+    "AF7",
+    "B74",
+    "B75",
+    "D24",
+    "AF5"
+   ],
+   "levels": [
+    {
+     "level": "+5.50",
+     "mark": "D15"
+    },
+    {
+     "level": "+5.50",
+     "mark": "D17"
+    }
+   ],
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "LANDING_EDGE",
+    "WALL",
+    "WALL",
+    "WALL",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE"
+   ],
+   "storey": "1F"
+  },
+  "1F-LIV.floor_printed": {
+   "account": {
+    "metres": {
+     "DOOR_ON_FACE": "4.7",
+     "PRINTED_DIMENSION": "1.25",
+     "PRINTED_LINE": "13.27",
+     "WALL": "23.920000"
+    },
+    "open_sides": [
+     {
+      "by": [
+       "BEF"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AF9",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C18"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AF9",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C1A"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AFE",
+      "length": "0.9",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B9B"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AFE",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "10DF"
+      ],
+      "class": "PRINTED_DIMENSION",
+      "edge": "AC0",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "10DF"
+      ],
+      "class": "PRINTED_DIMENSION",
+      "edge": "AC0",
+      "length": "0.05",
+      "status": "PRINTED_ONLY"
+     },
+     {
+      "by": [
+       "AC4"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AC0",
+      "length": "0.1",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "10DF"
+      ],
+      "class": "PRINTED_DIMENSION",
+      "edge": "AC0",
+      "length": "0.05",
+      "status": "PRINTED_ONLY"
+     },
+     {
+      "by": [
+       "AC0"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AC0",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C31"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "C21",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "C32"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AEB",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B74"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "B74",
+      "length": "5.87",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "B75"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "B75",
+      "length": "1.6",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "D24"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "D24",
+      "length": "1.15",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "AF5"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "AF5",
+      "length": "2.4",
+      "status": "DRAWING_CONFIRMED"
+     }
+    ],
+    "perimeter": "43.140000"
+   },
+   "area_exact_green": "38.588",
+   "area_exact_net": "38.5855",
+   "area_route2": {
+    "area": "38.5855",
+    "method": "R-T606-1 (T-606 tool, 0.5 deg flattening, column notches)",
+    "notch_m2": "-0.0025"
+   },
+   "chain_from": "T606",
+   "column_notch_at_boundary": "0.0025",
+   "columns_inside": [],
+   "columns_notched": [
+    "3008"
+   ],
+   "dim_checks": {
+    "AC0": {
+     "diff": "0.0",
+     "dims": [
+      "+D25"
+     ],
+     "edge": "2.5",
+     "printed": "2.5"
+    },
+    "AEB": {
+     "diff": "0.0",
+     "dims": [
+      "+FF1",
+      "+E56"
+     ],
+     "edge": "3.8",
+     "printed": "3.8"
+    },
+    "AEC": {
+     "diff": "-0.0",
+     "dims": [
+      "+105A"
+     ],
+     "edge": "3.65",
+     "printed": "3.65"
+    },
+    "AF7": {
+     "diff": "0.0",
+     "dims": [
+      "+EC5",
+      "-1042"
+     ],
+     "edge": "1.15",
+     "printed": "1.15"
+    },
+    "AFE": {
+     "diff": "-0.0",
+     "dims": [
+      "+1071",
+      "+DAA"
+     ],
+     "edge": "3.67",
+     "printed": "3.67"
+    },
+    "B16": {
+     "diff": "0.0",
+     "dims": [
+      "+10DF",
+      "-1042"
+     ],
+     "edge": "0.7",
+     "printed": "0.7"
+    },
+    "B68": {
+     "diff": "0.0",
+     "dims": [
+      "+DE9"
+     ],
+     "edge": "5.2",
+     "printed": "5.2"
+    },
+    "B74": {
+     "diff": "0.0",
+     "dims": [
+      "+F34"
+     ],
+     "edge": "5.87",
+     "printed": "5.87"
+    },
+    "C21": {
+     "diff": "0.0",
+     "dims": [
+      "+10DF"
+     ],
+     "edge": "1.95",
+     "printed": "1.95"
+    }
+   },
+   "edges": [
+    {
+     "handle": "AEC",
+     "kind": "LINE",
+     "length": "3.65",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "3011#3",
+         "WALL"
+        ],
+        [
+         "AEC",
+         "WALL"
+        ],
+        [
+         "AED",
+         "WALL"
+        ],
+        [
+         "AEE",
+         "WALL"
+        ],
+        [
+         "AEF",
+         "WALL"
+        ]
+       ],
+       "length": "3.65"
+      }
+     ]
+    },
+    {
+     "handle": "B68",
+     "kind": "LINE",
+     "length": "5.2",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B65",
+         "WALL"
+        ],
+        [
+         "B66",
+         "WALL"
+        ],
+        [
+         "B67",
+         "WALL"
+        ],
+        [
+         "B68",
+         "WALL"
+        ],
+        [
+         "BC0",
+         "WALL"
+        ],
+        [
+         "BC3",
+         "WALL"
+        ],
+        [
+         "BCA",
+         "WALL"
+        ],
+        [
+         "C90",
+         "WALL"
+        ],
+        [
+         "C93",
+         "WALL"
+        ],
+        [
+         "C9A",
+         "WALL"
+        ]
+       ],
+       "length": "5.2"
+      }
+     ]
+    },
+    {
+     "handle": "AF9",
+     "kind": "LINE",
+     "length": "8.3",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF9",
+         "WALL"
+        ]
+       ],
+       "length": "2.662686"
+      },
+      {
+       "evidence": {
+        "block": "D215",
+        "door": "BEF"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "AFA",
+         "WALL"
+        ]
+       ],
+       "length": "0.844547"
+      },
+      {
+       "evidence": {
+        "block": "D215",
+        "door": "C18"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "AFB",
+         "WALL"
+        ]
+       ],
+       "length": "2.992767"
+      }
+     ]
+    },
+    {
+     "handle": "B10",
+     "kind": "LINE",
+     "length": "1.2",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B10",
+         "WALL"
+        ]
+       ],
+       "length": "1.2"
+      }
+     ]
+    },
+    {
+     "handle": "AFE",
+     "kind": "LINE",
+     "length": "3.67",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AFC",
+         "WALL"
+        ]
+       ],
+       "length": "0.235"
+      },
+      {
+       "evidence": {
+        "block": "d220",
+        "door": "C1A"
+       },
+       "length": "0.9"
+      },
+      {
+       "drawn_by": [
+        [
+         "2FED#0",
+         "WALL"
+        ],
+        [
+         "AFD",
+         "WALL"
+        ]
+       ],
+       "length": "0.935"
+      },
+      {
+       "drawn_by": [
+        [
+         "B9B",
+         "PRINTED:LIFT_SILL"
+        ]
+       ],
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "2FF3#0",
+         "WALL"
+        ],
+        [
+         "AFE",
+         "WALL"
+        ]
+       ],
+       "length": "0.6"
+      }
+     ]
+    },
+    {
+     "handle": "B16",
+     "kind": "LINE",
+     "length": "0.7",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "2FF3#3",
+         "WALL"
+        ],
+        [
+         "B16",
+         "WALL"
+        ]
+       ],
+       "length": "0.7"
+      }
+     ]
+    },
+    {
+     "handle": "AC0",
+     "kind": "LINE",
+     "length": "2.5",
+     "role": "LANDING_EDGE",
+     "segments": [
+      {
+       "evidence": {
+        "corroboration": [
+         "ST7757:459"
+        ],
+        "dimension": "10DF",
+        "on_line": true
+       },
+       "length": "1.15"
+      },
+      {
+       "evidence": {
+        "corroboration": [],
+        "dimension": "10DF",
+        "on_line": true
+       },
+       "length": "0.05"
+      },
+      {
+       "drawn_by": [
+        [
+         "AC4",
+         "PRINTED:NOSING"
+        ]
+       ],
+       "length": "0.1"
+      },
+      {
+       "evidence": {
+        "corroboration": [],
+        "dimension": "10DF",
+        "on_line": true
+       },
+       "length": "0.05"
+      },
+      {
+       "drawn_by": [
+        [
+         "AC0",
+         "PRINTED:NOSING"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "C21",
+     "kind": "LINE",
+     "length": "1.95",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF1",
+         "WALL"
+        ]
+       ],
+       "length": "0.125114"
+      },
+      {
+       "evidence": {
+        "block": "D115",
+        "door": "C31"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "C21",
+         "WALL"
+        ]
+       ],
+       "length": "0.824886"
+      }
+     ]
+    },
+    {
+     "handle": "AEB",
+     "kind": "LINE",
+     "length": "3.8",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AEA",
+         "WALL"
+        ]
+       ],
+       "length": "0.08852"
+      },
+      {
+       "evidence": {
+        "block": "D115",
+        "door": "C32"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "AEB",
+         "WALL"
+        ]
+       ],
+       "length": "2.71148"
+      }
+     ]
+    },
+    {
+     "handle": "AF7",
+     "kind": "LINE",
+     "length": "1.15",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF7",
+         "WALL"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "B74",
+     "kind": "LINE",
+     "length": "5.87",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B74",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "5.87"
+      }
+     ]
+    },
+    {
+     "handle": "B75",
+     "kind": "LINE",
+     "length": "1.6",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "B75",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "1.6"
+      }
+     ]
+    },
+    {
+     "handle": "D24",
+     "kind": "LINE",
+     "length": "1.15",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "D24",
+         "PRINTED:RISER"
+        ]
+       ],
+       "length": "1.15"
+      }
+     ]
+    },
+    {
+     "handle": "AF5",
+     "kind": "LINE",
+     "length": "2.4",
+     "role": "VOID_EDGE",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AF5",
+         "PRINTED:VOID_EDGE"
+        ]
+       ],
+       "length": "2.4"
+      }
+     ]
+    }
+   ],
+   "handles": [
+    "AEC",
+    "B68",
+    "AF9",
+    "B10",
+    "AFE",
+    "B16",
+    "AC0",
+    "C21",
+    "AEB",
+    "AF7",
+    "B74",
+    "B75",
+    "D24",
+    "AF5"
+   ],
+   "levels": [
+    {
+     "level": "+5.50",
+     "mark": "D15"
+    },
+    {
+     "level": "+5.50",
+     "mark": "D17"
+    }
+   ],
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "LANDING_EDGE",
+    "WALL",
+    "WALL",
+    "WALL",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE",
+    "VOID_EDGE"
+   ],
+   "storey": "1F"
+  },
+  "GF-OPEN.full": {
+   "account": {
+    "metres": {
+     "DOOR_ON_FACE": "5.0",
+     "PRINTED_DIMENSION": "0",
+     "PRINTED_LINE": "2.255652",
+     "WALL": "48.050548"
+    },
+    "open_sides": [
+     {
+      "by": [
+       "2F2"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "2E4",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "2DC"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "2E4",
+      "length": "1.255652",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "22B"
+      ],
+      "class": "PRINTED_LINE",
+      "edge": "20F",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "2C7"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "20F",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "281"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "AB",
+      "length": "2.0",
+      "status": "DRAWING_CONFIRMED"
+     },
+     {
+      "by": [
+       "33E"
+      ],
+      "class": "DOOR_ON_FACE",
+      "edge": "158",
+      "length": "1.0",
+      "status": "DRAWING_CONFIRMED"
+     }
+    ],
+    "perimeter": "55.306200"
+   },
+   "area_exact_green": "147.947655",
+   "area_exact_net": "147.657691",
+   "area_route2": {
+    "area": "147.657717",
+    "method": "R-T612-1 gross (T-612 tool, 0.5 deg flattening)"
+   },
+   "chain_from": "T612",
+   "column_notch_at_boundary": "0.289964",
+   "columns_inside": [
+    "2FC6",
+    "2FD2"
+   ],
+   "columns_notched": [
+    "2F8A",
+    "2FAE",
+    "2FB4",
+    "2FC0",
+    "2FC3",
+    "2FCF",
+    "2FD5"
+   ],
+   "dim_checks": {
+    "104": {
+     "diff": "0.0",
+     "dims": [
+      "+5F9",
+      "+5D5"
+     ],
+     "edge": "18.97",
+     "printed": "18.97"
+    },
+    "158": {
+     "diff": "0.0",
+     "dims": [
+      "+5D5"
+     ],
+     "edge": "3.0",
+     "printed": "3.0"
+    },
+    "222": {
+     "diff": "-0.0",
+     "dims": [
+      "+5ED",
+      "-6AD"
+     ],
+     "edge": "1.05",
+     "printed": "1.05"
+    },
+    "AB": {
+     "diff": "-0.0",
+     "dims": [
+      "+6AD",
+      "-5E1"
+     ],
+     "edge": "3.4",
+     "printed": "3.4"
+    },
+    "AE": {
+     "diff": "0.0",
+     "dims": [
+      "+5E1"
+     ],
+     "edge": "4.5",
+     "printed": "4.5"
+    },
+    "B5": {
+     "diff": "-0.0",
+     "dims": [
+      "+4E9"
+     ],
+     "edge": "7.5",
+     "printed": "7.5"
+    },
+    "E0": {
+     "diff": "0.0",
+     "dims": [
+      "+939"
+     ],
+     "edge": "2.0",
+     "printed": "2.0"
+    }
+   },
+   "edges": [
+    {
+     "handle": "B5",
+     "kind": "LINE",
+     "length": "7.5",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "25C",
+         "WALL"
+        ],
+        [
+         "262",
+         "WALL"
+        ],
+        [
+         "269",
+         "WALL"
+        ],
+        [
+         "2F96#3",
+         "WALL"
+        ],
+        [
+         "2F99#3",
+         "WALL"
+        ],
+        [
+         "B5",
+         "WALL"
+        ],
+        [
+         "B6",
+         "WALL"
+        ]
+       ],
+       "length": "7.5"
+      }
+     ]
+    },
+    {
+     "handle": "E0",
+     "kind": "LINE",
+     "length": "2.0",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "E0",
+         "WALL"
+        ],
+        [
+         "E1",
+         "WALL"
+        ]
+       ],
+       "length": "2.0"
+      }
+     ]
+    },
+    {
+     "handle": "97",
+     "kind": "LINE",
+     "length": "0.691681",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "27D#2",
+         "WALL"
+        ],
+        [
+         "2FC0#2",
+         "WALL"
+        ],
+        [
+         "97",
+         "WALL"
+        ]
+       ],
+       "length": "0.691681"
+      }
+     ]
+    },
+    {
+     "handle": "27D#1",
+     "kind": "ARC",
+     "length": "1.585596",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "27D#1",
+         "WALL"
+        ]
+       ],
+       "length": "1.585596"
+      }
+     ]
+    },
+    {
+     "handle": "2E4",
+     "kind": "LINE",
+     "length": "7.908923",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "2E4",
+         "WALL"
+        ],
+        [
+         "2FCC#1",
+         "WALL"
+        ]
+       ],
+       "length": "4.149866"
+      },
+      {
+       "evidence": {
+        "block": "D115",
+        "door": "2F2"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "20C",
+         "WALL"
+        ],
+        [
+         "2E3",
+         "WALL"
+        ]
+       ],
+       "length": "1.503405"
+      },
+      {
+       "drawn_by": [
+        [
+         "2DC",
+         "PRINTED:MOUTH"
+        ]
+       ],
+       "length": "1.255652"
+      }
+     ]
+    },
+    {
+     "handle": "222",
+     "kind": "LINE",
+     "length": "1.05",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "222",
+         "WALL"
+        ]
+       ],
+       "length": "1.05"
+      }
+     ]
+    },
+    {
+     "handle": "20F",
+     "kind": "LINE",
+     "length": "4.7",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "20D",
+         "WALL"
+        ],
+        [
+         "2F8A#0",
+         "WALL"
+        ]
+       ],
+       "length": "0.6"
+      },
+      {
+       "drawn_by": [
+        [
+         "22B",
+         "PRINTED:LIFT_SILL"
+        ]
+       ],
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "20E",
+         "WALL"
+        ],
+        [
+         "2F90#0",
+         "WALL"
+        ],
+        [
+         "BB",
+         "WALL"
+        ]
+       ],
+       "length": "0.7"
+      },
+      {
+       "evidence": {
+        "block": "D120",
+        "door": "2C7"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "20F",
+         "WALL"
+        ]
+       ],
+       "length": "1.4"
+      }
+     ]
+    },
+    {
+     "handle": "AB",
+     "kind": "LINE",
+     "length": "3.4",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "AB",
+         "WALL"
+        ]
+       ],
+       "length": "0.4"
+      },
+      {
+       "evidence": {
+        "block": "D200",
+        "door": "281"
+       },
+       "length": "2.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "AC",
+         "WALL"
+        ]
+       ],
+       "length": "1.0"
+      }
+     ]
+    },
+    {
+     "handle": "158",
+     "kind": "LINE",
+     "length": "3.0",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "159",
+         "WALL"
+        ],
+        [
+         "2FB4#0",
+         "WALL"
+        ]
+       ],
+       "length": "0.34089"
+      },
+      {
+       "evidence": {
+        "block": "D120",
+        "door": "33E"
+       },
+       "length": "1.0"
+      },
+      {
+       "drawn_by": [
+        [
+         "158",
+         "WALL"
+        ]
+       ],
+       "length": "1.65911"
+      }
+     ]
+    },
+    {
+     "handle": "AE",
+     "kind": "LINE",
+     "length": "4.5",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "3BC",
+         "WALL"
+        ],
+        [
+         "3BF",
+         "WALL"
+        ],
+        [
+         "3C6",
+         "WALL"
+        ],
+        [
+         "3C9",
+         "WALL"
+        ],
+        [
+         "3CC",
+         "WALL"
+        ],
+        [
+         "3D3",
+         "WALL"
+        ],
+        [
+         "AE",
+         "WALL"
+        ],
+        [
+         "AF",
+         "WALL"
+        ],
+        [
+         "B0",
+         "WALL"
+        ]
+       ],
+       "length": "4.5"
+      }
+     ]
+    },
+    {
+     "handle": "104",
+     "kind": "LINE",
+     "length": "18.97",
+     "role": "WALL",
+     "segments": [
+      {
+       "drawn_by": [
+        [
+         "104",
+         "WALL"
+        ],
+        [
+         "2FAB#3",
+         "WALL"
+        ],
+        [
+         "A6",
+         "WALL"
+        ]
+       ],
+       "length": "18.97"
+      }
+     ]
+    }
+   ],
+   "handles": [
+    "B5",
+    "E0",
+    "97",
+    "27D#1",
+    "2E4",
+    "222",
+    "20F",
+    "AB",
+    "158",
+    "AE",
+    "104"
+   ],
+   "levels": [
+    {
+     "level": "+1.00",
+     "mark": "40E"
+    },
+    {
+     "level": "+1.00",
+     "mark": "410"
+    },
+    {
+     "level": "+1.00",
+     "mark": "A73"
+    }
+   ],
+   "roles": [
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL",
+    "WALL"
+   ],
+   "storey": "GF"
+  }
+ },
+ "rule": "R-T625-1",
+ "schema": "T625_DRAWN_V1",
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf); second drawing 'ST7757 dxf.dxf'",
+ "st_frame": {
+  "pair_arch": [
+   "2FE7",
+   "3008"
+  ],
+  "pair_st": [
+   "332",
+   "374"
+  ],
+  "residual_mm": "0.0"
+ },
+ "stair_row0": {
+  "F1_band_exact": "4.044824",
+  "F1_chord": "4.032371",
+  "F1_chord_loss": "0.012453",
+  "F2_column_in_run": "0.039974",
+  "F2_from_first_run_nosing_net": "2.03",
+  "F2_run_gross": "2.132834",
+  "F2_run_len_inner": "1.849315",
+  "F2_run_len_outer": "1.860042",
+  "F2_run_net": "2.09286",
+  "F2_run_width": "1.15",
+  "beside": {
+   "curtail_first_step": "0.157787",
+   "inner_string_curve": "0.12691",
+   "inner_string_curve_in_curtail": "0.034056",
+   "inner_string_run": "0.092454",
+   "outer_string_curve": "0.224814",
+   "outer_string_curve_in_face": "0.208535"
+  },
+  "handles": {
+   "column": "2FD2",
+   "curb_line": "A8",
+   "curtail_arc": "258",
+   "cut": "13C",
+   "dim_band_width": "955",
+   "dim_first_step": "963",
+   "first_nosing": "256",
+   "first_run_nosing": "22F",
+   "inner_arc": "239",
+   "inner_string_arc": "23F",
+   "nosings": [
+    "256",
+    "254",
+    "252",
+    "250",
+    "24E",
+    "24C",
+    "24A",
+    "248",
+    "246",
+    "244",
+    "242",
+    "240"
+   ],
+   "outer_arc": "23D",
+   "outer_string_arc": "23E",
+   "run_inner": "22E",
+   "run_inner_string": "22C",
+   "run_outer": "A7"
+  },
+  "inner_r": "1.580511",
+  "layers": {
+   "13C": "5",
+   "22C": "5",
+   "22E": "5",
+   "22F": "5",
+   "239": "5",
+   "23D": "5",
+   "23E": "5",
+   "23F": "5",
+   "256": "5",
+   "258": "5",
+   "A7": "5"
+  },
+  "nosing_steps_deg": [
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791",
+   "7.791"
+  ],
+  "outer_r": "2.730511",
+  "printed": {
+   "955_band_plus_string": "1.2",
+   "963_end_on_curtail_arc_mm": "0.0",
+   "963_end_on_first_nosing_outer_end_mm": "0.0",
+   "963_first_step": "1.518726",
+   "drawn_band_plus_string": "1.2",
+   "first_nosing_outer_r": "2.780511"
+  },
+  "strip_arc_end_to_first_run_nosing": "0.062879",
+  "sweep_deg": "93.491946",
+  "width": "1.15"
+ },
+ "units": "m / m2 / deg"
+}

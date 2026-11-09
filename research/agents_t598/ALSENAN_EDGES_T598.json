@@ -1,0 +1,719 @@
+{
+ "reading": {
+  "MS1U": {
+   "floor_front_line_on_arch_plan": false,
+   "front_len_m": 1.15,
+   "fronts": [
+    "A92",
+    "A95",
+    "AA5",
+    "AA6",
+    "AA7",
+    "AA8",
+    "AA9",
+    "AAA",
+    "AAB",
+    "AAC",
+    "ABE"
+   ],
+   "going_m": 0.3,
+   "governing_floor_front_s": 4.45,
+   "lane_bound_east": {
+    "h": "B16",
+    "s": [
+     0.0,
+     5.2
+    ]
+   },
+   "lane_bound_west": {
+    "h": "A8F",
+    "s": [
+     1.15,
+     4.55
+    ]
+   },
+   "s_first": 1.15,
+   "s_last": 4.15
+  },
+  "MS2TR": {
+   "diagonal": {
+    "face": "2F20",
+    "face_offset_m": 0.05,
+    "front": "2F1F",
+    "len_m": 1.626346,
+    "on_structural_plan": false
+   },
+   "face": "12B5",
+   "face_offset_m": 0.05,
+   "front": "12B4",
+   "front_len_m": 1.15,
+   "front_s_span": [
+    0.0,
+    1.15
+   ],
+   "front_to_east_lane_edge_m": 0.1
+  },
+  "MS2U": {
+   "floor_front_line_on_arch_plan": false,
+   "front_len_m": 1.15,
+   "fronts": [
+    "135B",
+    "135E",
+    "136D",
+    "136E",
+    "136F",
+    "1370",
+    "1371",
+    "1372",
+    "1373",
+    "1374",
+    "1386"
+   ],
+   "governing_floor_front_s": 4.45,
+   "lane_bound_east": {
+    "h": "129A",
+    "s": [
+     0.0,
+     5.2
+    ]
+   },
+   "lane_bound_west": {
+    "h": "1358",
+    "s": [
+     1.15,
+     4.55
+    ]
+   },
+   "s_first": 1.15,
+   "s_last": 4.15
+  },
+  "RSC": {
+   "curtail": {
+    "258": {
+     "chord_m": 0.689393,
+     "continues": "256",
+     "face": "259",
+     "face_r_m": 0.338268,
+     "face_sweep_deg": 142.327135,
+     "joins_front_inner_end_mm": 0.0,
+     "len_m": 0.94944,
+     "min_r_m": 1.269094,
+     "r_m": 0.354001,
+     "returns_to_inner_edge_at_251_mm": 0.828714,
+     "sweep_deg": 153.668724
+    },
+    "25A": {
+     "chord_m": 0.478219,
+     "continues": "254",
+     "face": "25B",
+     "face_r_m": 0.226778,
+     "face_sweep_deg": 142.240647,
+     "joins_front_inner_end_mm": 0.0,
+     "len_m": 0.672,
+     "min_r_m": 1.365052,
+     "r_m": 0.243547,
+     "returns_to_inner_edge_at_251_mm": 0.828714,
+     "sweep_deg": 158.091733
+    }
+   },
+   "fronts": {
+    "240": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "242": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "244": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "246": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "248": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "24A": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "24C": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "24E": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "250": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "252": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "254": {
+     "len_m": 1.15,
+     "r": [
+      1.580511,
+      2.730511
+     ]
+    },
+    "256": {
+     "len_m": 1.2,
+     "r": [
+      1.580511,
+      2.780511
+     ]
+    }
+   },
+   "inner_band_r": 1.530511,
+   "inner_r": 1.580511,
+   "outer_band_r": 2.780511,
+   "outer_band_starts_on_256": true,
+   "outer_r": 2.730511,
+   "st_curtail_faces": {
+    "2EB": {
+     "r_m": 0.338268,
+     "sweep_deg": 142.327135
+    },
+    "2EC": {
+     "r_m": 0.226778,
+     "sweep_deg": 142.240647
+    }
+   },
+   "st_radials": {
+    "count": 12,
+    "len_m": [
+     1.148281,
+     1.149742,
+     1.15
+    ]
+   }
+  },
+  "ST4": {
+   "count": 12,
+   "faces": [
+    "25B",
+    "25C",
+    "261",
+    "263",
+    "262",
+    "260",
+    "267",
+    "266",
+    "265",
+    "264",
+    "270",
+    "459"
+   ],
+   "opening_south_s": 4.3,
+   "s_459": 4.5,
+   "s_faces": [
+    1.2,
+    1.5,
+    1.8,
+    2.1,
+    2.4,
+    2.7,
+    3.0,
+    3.3,
+    3.6,
+    3.9,
+    4.2,
+    4.5
+   ]
+  },
+  "ST5": {
+   "count": 11,
+   "faces": [
+    "62F",
+    "630",
+    "635",
+    "637",
+    "636",
+    "634",
+    "63B",
+    "63A",
+    "639",
+    "638",
+    "644"
+   ],
+   "opening_south_s": 4.3,
+   "s_faces": [
+    1.2,
+    1.5,
+    1.8,
+    2.1,
+    2.4,
+    2.7,
+    3.0,
+    3.3,
+    3.6,
+    3.9,
+    4.2
+   ],
+   "tr_face": "5E2",
+   "tr_face_len_m": 1.15,
+   "tr_face_to_east_lane_edge_m": 0.05
+  }
+ },
+ "result": {
+  "checks": {
+   "ms1u_clash_m": 0.2,
+   "ms1u_floor_face_on_st4": true,
+   "ms2tr_face_agrees": true,
+   "ms2u_clash_m": 0.2,
+   "ms2u_floor_on_any_plan": false,
+   "rsc_curtail_faces_match_st": true,
+   "rsc_curtail_joins_fronts": true,
+   "rsc_lane_m": 1.15,
+   "rsc_st_radials_12": true
+  },
+  "designer_or_conflict": [
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N01"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N02"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N03"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N04"
+   },
+   {
+    "bound": [
+     0.0,
+     0.05
+    ],
+    "cls": "DESIGNER_ITEM",
+    "id": "ST02-RSC-256-BAND"
+   }
+  ],
+  "edges": [
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cause": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N01",
+    "lm": null,
+    "sheet": "arch GF plan + ST p.4 (3 radial fronts = 4-riser fan) vs section A-A (5 risers)",
+    "stair": "ST-01",
+    "status": "HELD",
+    "why": "geometry not drawn"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cause": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N02",
+    "lm": null,
+    "sheet": "arch GF plan + ST p.4 (3 radial fronts = 4-riser fan) vs section A-A (5 risers)",
+    "stair": "ST-01",
+    "status": "HELD",
+    "why": "geometry not drawn"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cause": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N03",
+    "lm": null,
+    "sheet": "arch GF plan + ST p.4 (3 radial fronts = 4-riser fan) vs section A-A (5 risers)",
+    "stair": "ST-01",
+    "status": "HELD",
+    "why": "geometry not drawn"
+   },
+   {
+    "bound": [
+     1.15,
+     1.735655
+    ],
+    "cause": "WINDER_SUBDIVISION_NOT_DRAWN (R-T434-2, S-9, A8)",
+    "cls": "DESIGNER_ITEM",
+    "id": "ST01-MS1T-N04",
+    "lm": null,
+    "sheet": "arch GF plan + ST p.4 (3 radial fronts = 4-riser fan) vs section A-A (5 risers)",
+    "stair": "ST-01",
+    "status": "HELD",
+    "why": "geometry not drawn"
+   },
+   {
+    "bound": null,
+    "cause": "FLOOR_EDGE (R-T412-1 one riser one nosing)",
+    "cls": "VALUE",
+    "id": "ST01-MS1U-FLOOR",
+    "lm": 1.15,
+    "position_range_s": [
+     4.25,
+     4.45
+    ],
+    "second_drawing_draws_it": true,
+    "sheet": "arch 1F plan lane A8F / B16; ST p.4 riser face 459",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "why": "head clash: the governing 12th riser face lies 0.200 inside the slab opening end (B20, Q-46 RFI): position only"
+   },
+   {
+    "bound": null,
+    "cause": "FLOOR_EDGE (R-T412-1 one riser one nosing)",
+    "cls": "VALUE",
+    "id": "ST01-MS2U-FLOOR",
+    "lm": 1.15,
+    "position_range_s": [
+     4.25,
+     4.45
+    ],
+    "second_drawing_draws_it": false,
+    "sheet": "arch 2F plan lane 1358 / 129A; not drawn on ST p.5",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "why": "head clash: the governing 12th riser face lies 0.200 inside the slab opening end (B23, Q-46 RFI): position only"
+   },
+   {
+    "beside_if_diagonal_were_the_riser_m": 1.626346,
+    "bound": null,
+    "cause": "CLOSING_RISER",
+    "cls": "VALUE",
+    "id": "ST01-MS2TR",
+    "lm": 1.15,
+    "sheet": "arch 2F plan 12B4 / 12B5 + ST p.5 5E2",
+    "stair": "ST-01",
+    "status": "DRAWING-CONFIRMED",
+    "why": "arch 2F also draws a diagonal front + face pair 2F1F / 2F20 (1.626346) across the east half; not on ST p.5; the section admits one riser: designer item Q-ST-11, never added"
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.94944,
+    "drawn_len_m": 1.2,
+    "id": "ST02-RSC-256",
+    "in_lane_m": 1.15,
+    "lm": 2.09944,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.672,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-254",
+    "in_lane_m": 1.15,
+    "lm": 1.822,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-252",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-250",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-24E",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-24C",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-24A",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-248",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-246",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-244",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-242",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": null,
+    "cause": "CURVED_FLIGHT (Q-50 A cond)",
+    "cls": "VALUE",
+    "curtail_m": 0.0,
+    "drawn_len_m": 1.15,
+    "id": "ST02-RSC-240",
+    "in_lane_m": 1.15,
+    "lm": 1.15,
+    "sheet": "arch GF plan radial front + ST p.4 radial face (2DF .. 2EA)",
+    "stair": "ST-02",
+    "status": "ASSUMED - OWNER-APPROVED",
+    "why": ""
+   },
+   {
+    "bound": [
+     0.0,
+     0.05
+    ],
+    "cause": "BAND_KIND_NOT_PRINTED (RL-09): stringer cap / upstand / tread",
+    "cls": "DESIGNER_ITEM",
+    "id": "ST02-RSC-256-BAND",
+    "lm": null,
+    "sheet": "arch GF plan 256 over the outer band 23D / 23E",
+    "stair": "ST-02",
+    "status": "HELD",
+    "why": "geometry not drawn"
+   }
+  ],
+  "held_bound_lm": [
+   4.6,
+   6.99262
+  ],
+  "his_minus_ours_total": 15.82856,
+  "his_total": 123.2,
+  "named_held_edges_closed": 19,
+  "nosing_after": {
+   "edges_held": 4,
+   "edges_valued": 85,
+   "valued_lm": 107.37144
+  },
+  "reconciliation": {
+   "ST-01": {
+    "causes": [
+     {
+      "cause": "COUNT his pieces beyond the drawn risers (UNRESOLVED, T-434)",
+      "lm": 8.4
+     },
+     {
+      "cause": "HELD his share opposite our held edges",
+      "lm": 4.8
+     },
+     {
+      "cause": "WIDTH his width vs the drawn front edge (ENGINE_RIGHT)",
+      "lm": 2.6
+     },
+     {
+      "cause": "NOTCH columns proud of the edge (ENGINE_RIGHT)",
+      "lm": 0.1
+     }
+    ],
+    "his_lm": 75.6,
+    "his_minus_ours": 15.9,
+    "his_pieces": 63,
+    "ours_edges_held": 4,
+    "ours_edges_valued": 52,
+    "ours_lm": 59.7,
+    "unexplained": 0.0
+   },
+   "ST-02": {
+    "causes": [
+     {
+      "cause": "WIDTH his width vs the drawn front edge (ENGINE_RIGHT)",
+      "lm": 1.4
+     },
+     {
+      "cause": "NOTCH columns proud of the edge (ENGINE_RIGHT)",
+      "lm": 0.15
+     },
+     {
+      "cause": "CURTAIL developed arc he does not carry (ENGINE_RIGHT on the drawn front + face pair)",
+      "lm": -1.62144
+     }
+    ],
+    "his_lm": 33.6,
+    "his_minus_ours": -0.07144,
+    "his_pieces": 28,
+    "ours_edges_held": 0,
+    "ours_edges_valued": 28,
+    "ours_lm": 33.67144,
+    "unexplained": 0.0
+   },
+   "ST-03": {
+    "causes": [],
+    "his_lm": 14.0,
+    "his_minus_ours": 0.0,
+    "his_pieces": 5,
+    "ours_edges_held": 0,
+    "ours_edges_valued": 5,
+    "ours_lm": 14.0,
+    "unexplained": 0.0
+   }
+  },
+  "value_lm": 18.87144,
+  "value_lm_by_status": {
+   "ASSUMED - OWNER-APPROVED": 15.42144,
+   "DRAWING-CONFIRMED": 3.45
+  }
+ },
+ "sources": [
+  "Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip (architectural DXF)",
+  "Drive 'Alsenan chalet project' ST7757 dxf.dxf (structural DXF)"
+ ],
+ "task": "T-598"
+}

@@ -1,0 +1,601 @@
+{
+ "b20_strip": {
+  "1F": {
+   "band": "BAND0013",
+   "billed_by": "no line (slab engine: inside a beam band; beam binder: UNBOUND)",
+   "crossed_by_cut": "76E",
+   "face_layers": [
+    "1"
+   ],
+   "faces": [
+    "5E1",
+    "5E6"
+   ],
+   "hatched": false,
+   "identity": {
+    "class": "NOT_UPSTAND",
+    "identity": "slab-edge outline"
+   },
+   "length_m": "4.325000",
+   "outline_corner_arcs": [
+    "647"
+   ],
+   "plan_m2": "0.865000",
+   "section_base_m": "0.450000",
+   "slab_engine_face": "BEAM / BEAM_STRIP",
+   "status": "HELD (thickness of the strip not printed; not an upstand)",
+   "width_m": "0.200000"
+  },
+  "GF": {
+   "band": "BAND0031",
+   "billed_by": "no line (slab engine: inside a beam band; beam binder: UNBOUND)",
+   "crossed_by_cut": "55A",
+   "face_layers": [
+    "1"
+   ],
+   "faces": [
+    "2C6",
+    "2C7"
+   ],
+   "hatched": false,
+   "identity": {
+    "class": "NOT_UPSTAND",
+    "identity": "slab-edge outline"
+   },
+   "length_m": "4.325000",
+   "outline_corner_arcs": [
+    "316"
+   ],
+   "plan_m2": "0.865000",
+   "section_base_m": "0.400000",
+   "slab_engine_face": "BEAM / BEAM_STRIP",
+   "status": "HELD (thickness of the strip not printed; not an upstand)",
+   "width_m": "0.200000"
+  }
+ },
+ "drawing_sha256": "9f9d1179",
+ "rules": "R-T632-1..3",
+ "sections": {
+  "A": {
+   "area_m2": "0.340000",
+   "base_m": "0.400000",
+   "height_m": "0.950000",
+   "outline": "560",
+   "title": "1727",
+   "units_per_cm": 40.0
+  },
+  "B": {
+   "area_m2": "0.377500",
+   "base_m": "0.450000",
+   "height_m": "0.950000",
+   "outline": "16BF",
+   "title": "1730",
+   "units_per_cm": 40.0
+  },
+  "C": {
+   "area_m2": "0.244760",
+   "base_m": "0.348000",
+   "height_m": "0.750000",
+   "outline": "173F",
+   "title": "176C",
+   "units_per_cm": 40.0
+  },
+  "D": {
+   "area_m2": "0.252291",
+   "base_m": "0.348000",
+   "height_m": "0.750000",
+   "outline": "1775",
+   "title": "17A2",
+   "units_per_cm": 40.0
+  }
+ },
+ "storeys": {
+  "1F": [
+   {
+    "band": "BAND0013",
+    "band_piece_m": "4.325000",
+    "class": "NO_UPSTAND_EVIDENCE",
+    "depth_m": null,
+    "extent": {
+     "state": "NO_PLAN_EVIDENCE"
+    },
+    "faces": [
+     "5E1",
+     "5E6"
+    ],
+    "mark": null,
+    "sections": [
+     {
+      "arrows": [
+       "76D",
+       "76F"
+      ],
+      "cut": "76E",
+      "cut_t_from_band_start_m": "1.698244",
+      "letter": "B",
+      "outline": "16BF",
+      "section_area_m2": "0.377500",
+      "section_base_m": "0.450000",
+      "upstand": {
+       "state": "NOT_THIS_BAND",
+       "why": "section base 0.45 m is not the schedule b 0.20000000000051604 m"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "1F"
+   },
+   {
+    "band": "BAND0019",
+    "band_piece_m": "4.100000",
+    "class": "NO_UPSTAND_EVIDENCE",
+    "depth_m": 0.5,
+    "extent": {
+     "state": "NO_PLAN_EVIDENCE"
+    },
+    "faces": [
+     "6BB",
+     "6BC"
+    ],
+    "mark": "B6",
+    "sections": [
+     {
+      "arrows": [
+       "76D",
+       "76F"
+      ],
+      "cut": "76E",
+      "cut_t_from_band_start_m": "1.398244",
+      "letter": "B",
+      "outline": "16BF",
+      "section_area_m2": "0.377500",
+      "section_base_m": "0.450000",
+      "upstand": {
+       "state": "NOT_THIS_BAND",
+       "why": "section base 0.45 m is not the schedule b 0.25 m"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "1F"
+   },
+   {
+    "band": "BAND0031.1",
+    "band_piece_m": "3.000000",
+    "billed": {
+     "length_m": "3.000000",
+     "m3": "0.120000",
+     "row": "statement V11 '1F: UPSTAND'"
+    },
+    "class": "ENGINE_RIGHT",
+    "depth_m": 0.75,
+    "engine_minus_own_m3": "0.000000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 5E0",
+      "TOP_EDGE 7BC"
+     ],
+     "length_m": "3.000000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "5E1",
+     "5E4"
+    ],
+    "mark": "B23",
+    "own": {
+     "area_m2": "0.040000",
+     "basis": "DRAWN_EXTENT (= section-mark span)",
+     "length_m": "3.000000",
+     "state": "MEASURED",
+     "volume_m3": "0.120000"
+    },
+    "sections": [
+     {
+      "arrows": [
+       "76D",
+       "76F"
+      ],
+      "cut": "76E",
+      "cut_t_from_band_start_m": "1.698244",
+      "letter": "B",
+      "outline": "16BF",
+      "section_area_m2": "0.377500",
+      "section_base_m": "0.450000",
+      "upstand": {
+       "h_m": "0.200000",
+       "plan_side": "+n",
+       "side": "RIGHT",
+       "state": "PRESENT",
+       "w_m": "0.200000"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "1F",
+    "top_edge_offsets_m": [
+     {
+      "from_minus_n_face": "0.250000",
+      "handle": "7BC",
+      "to_plus_n_face": "0.200000"
+     }
+    ]
+   }
+  ],
+  "2F": [
+   {
+    "band": "BAND0001.3",
+    "band_piece_m": "1.130000",
+    "class": "HELD",
+    "depth_m": 0.75,
+    "drawn_length_m": "1.130000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 38C"
+     ],
+     "length_m": "1.130000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "3F2",
+     "38E"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "B8",
+    "sections": [],
+    "stair_series_excluded": [],
+    "storey": "2F"
+   },
+   {
+    "band": "BAND0006.1",
+    "band_piece_m": "3.100000",
+    "class": "HELD",
+    "depth_m": 1.2,
+    "drawn_length_m": "3.100000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 390"
+     ],
+     "length_m": "3.100000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "396",
+     "397"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "B15",
+    "sections": [],
+    "stair_series_excluded": [],
+    "storey": "2F"
+   },
+   {
+    "band": "BAND0009",
+    "band_piece_m": "6.600000",
+    "class": "HELD",
+    "depth_m": 0.75,
+    "drawn_length_m": "1.781733",
+    "extent": {
+     "ends_at_band_end": false,
+     "evidence": [
+      "HATCH 391"
+     ],
+     "length_m": "1.781733",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "39A",
+     "39B"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "B7",
+    "sections": [],
+    "stair_series_excluded": [],
+    "storey": "2F"
+   }
+  ],
+  "GF": [
+   {
+    "band": "BAND0030.2",
+    "band_piece_m": "0.500000",
+    "class": "HELD",
+    "depth_m": 0.5,
+    "drawn_length_m": "0.500000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 2B1"
+     ],
+     "length_m": "0.500000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "2B2",
+     "2B3"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "B4",
+    "sections": [],
+    "stair_series_excluded": [],
+    "storey": "GF"
+   },
+   {
+    "band": "BAND0031",
+    "band_piece_m": "4.325000",
+    "class": "NO_UPSTAND_EVIDENCE",
+    "depth_m": null,
+    "extent": {
+     "state": "NO_PLAN_EVIDENCE"
+    },
+    "faces": [
+     "2C6",
+     "2C7"
+    ],
+    "mark": null,
+    "sections": [
+     {
+      "arrows": [
+       "553",
+       "55C"
+      ],
+      "cut": "55A",
+      "cut_t_from_band_start_m": "2.050712",
+      "letter": "A",
+      "outline": "560",
+      "section_area_m2": "0.340000",
+      "section_base_m": "0.400000",
+      "upstand": {
+       "state": "NOT_THIS_BAND",
+       "why": "section base 0.4 m is not the schedule b 0.2000000000003329 m"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "GF"
+   },
+   {
+    "band": "BAND0038",
+    "band_piece_m": "1.150000",
+    "class": "HELD",
+    "depth_m": 0.5,
+    "drawn_length_m": "1.150000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 54D"
+     ],
+     "length_m": "1.150000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "54E",
+     "54E"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "CA",
+    "sections": [],
+    "stair_series_excluded": [],
+    "storey": "GF"
+   },
+   {
+    "band": "BAND0041.2",
+    "band_piece_m": "5.100000",
+    "class": "NO_UPSTAND_EVIDENCE",
+    "depth_m": 0.75,
+    "extent": {
+     "state": "NO_PLAN_EVIDENCE"
+    },
+    "faces": [
+     "2A8",
+     "2A9"
+    ],
+    "mark": "CB1",
+    "sections": [
+     {
+      "arrows": [
+       "1737"
+      ],
+      "cut": "1738",
+      "cut_t_from_band_start_m": "2.918150",
+      "letter": "C",
+      "outline": "173F",
+      "section_area_m2": "0.244760",
+      "section_base_m": "0.348000",
+      "upstand": {
+       "h_m": "0.750000",
+       "state": "NOT_PRESENT"
+      }
+     },
+     {
+      "arrows": [
+       "176D"
+      ],
+      "cut": "176E",
+      "cut_t_from_band_start_m": "0.493397",
+      "letter": "D",
+      "outline": "1775",
+      "section_area_m2": "0.252291",
+      "section_base_m": "0.348000",
+      "upstand": {
+       "h_m": "0.750000",
+       "state": "NOT_PRESENT"
+      }
+     },
+     {
+      "arrows": [
+       "1771"
+      ],
+      "cut": "1772",
+      "cut_t_from_band_start_m": "4.735435",
+      "letter": "D",
+      "outline": "1775",
+      "section_area_m2": "0.252291",
+      "section_base_m": "0.348000",
+      "upstand": {
+       "h_m": "0.750000",
+       "state": "NOT_PRESENT"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "GF"
+   },
+   {
+    "band": "BAND0043.1",
+    "band_piece_m": "3.000000",
+    "billed": {
+     "length_m": "3.000000",
+     "m3": "0.120000",
+     "row": "statement V11 'GF: UPSTAND'"
+    },
+    "class": "ENGINE_RIGHT",
+    "depth_m": 0.75,
+    "engine_minus_own_m3": "0.000000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 2B4",
+      "TOP_EDGE 55F"
+     ],
+     "length_m": "3.000000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "458",
+     "2C6"
+    ],
+    "mark": "B20",
+    "own": {
+     "area_m2": "0.040000",
+     "basis": "DRAWN_EXTENT (= section-mark span)",
+     "length_m": "3.000000",
+     "state": "MEASURED",
+     "volume_m3": "0.120000"
+    },
+    "sections": [
+     {
+      "arrows": [
+       "553",
+       "55C"
+      ],
+      "cut": "55A",
+      "cut_t_from_band_start_m": "2.050712",
+      "letter": "A",
+      "outline": "560",
+      "section_area_m2": "0.340000",
+      "section_base_m": "0.400000",
+      "upstand": {
+       "h_m": "0.200000",
+       "plan_side": "+n",
+       "side": "RIGHT",
+       "state": "PRESENT",
+       "w_m": "0.200000"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "GF",
+    "top_edge_offsets_m": [
+     {
+      "from_minus_n_face": "0.200000",
+      "handle": "55F",
+      "to_plus_n_face": "0.200000"
+     }
+    ]
+   },
+   {
+    "band": "BAND0046.2",
+    "band_piece_m": "1.500000",
+    "class": "HELD",
+    "depth_m": 0.75,
+    "drawn_length_m": "1.500000",
+    "extent": {
+     "ends_at_band_end": true,
+     "evidence": [
+      "HATCH 273"
+     ],
+     "length_m": "1.500000",
+     "starts_at_band_end": true,
+     "state": "MEASURED"
+    },
+    "faces": [
+     "274",
+     "277"
+    ],
+    "held_why": "level-change hatch on the band; no section printed through this band shows an upstand (cross-section and direction not printed): upstand or dropped band unresolved; billed by no line",
+    "mark": "B24",
+    "sections": [
+     {
+      "arrows": [
+       "181C"
+      ],
+      "cut": "181D",
+      "cut_t_from_band_start_m": "0.877929",
+      "letter": "D",
+      "outline": "1775",
+      "section_area_m2": "0.252291",
+      "section_base_m": "0.348000",
+      "upstand": {
+       "state": "NOT_THIS_BAND",
+       "why": "section base 0.348 m is not the schedule b 0.500000000000334 m"
+      }
+     }
+    ],
+    "stair_series_excluded": [],
+    "storey": "GF"
+   }
+  ],
+  "GROUND": [
+   {
+    "band": "BAND0001.1",
+    "class": "OUT_OF_SCOPE",
+    "evidence": [
+     "TOP_EDGE 1AE 0.900000 m"
+    ],
+    "mark": null,
+    "storey": "GROUND",
+    "why": "ground-beam plan: hidden lines inside ground-beam bands, no section prints an upstand; not a slab-level upstand"
+   },
+   {
+    "band": "BAND0001.2",
+    "class": "OUT_OF_SCOPE",
+    "evidence": [
+     "TOP_EDGE 16D 2.029677 m"
+    ],
+    "mark": null,
+    "storey": "GROUND",
+    "why": "ground-beam plan: hidden lines inside ground-beam bands, no section prints an upstand; not a slab-level upstand"
+   },
+   {
+    "band": "BAND0012.1",
+    "class": "OUT_OF_SCOPE",
+    "evidence": [
+     "TOP_EDGE 156 0.900000 m"
+    ],
+    "mark": null,
+    "storey": "GROUND",
+    "why": "ground-beam plan: hidden lines inside ground-beam bands, no section prints an upstand; not a slab-level upstand"
+   },
+   {
+    "band": "BAND0035",
+    "class": "OUT_OF_SCOPE",
+    "evidence": [
+     "TOP_EDGE 146 0.900000 m"
+    ],
+    "mark": null,
+    "storey": "GROUND",
+    "why": "ground-beam plan: hidden lines inside ground-beam bands, no section prints an upstand; not a slab-level upstand"
+   }
+  ]
+ }
+}

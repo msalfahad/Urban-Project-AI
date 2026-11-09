@@ -1,0 +1,2021 @@
+{
+ "absorbed": {
+  "into": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-c8b5c7f742b22388339e",
+  "op_id": "T-423 r2|TEXT_ONLY_22|L-c8b5c7f742b22388339e",
+  "why": "R1: one Gate B unit per line; the T-423 r2 op writes no quantity and states the same before"
+ },
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (V3.0.57 line index 25a8b406, 4,994 lines, + the 5 T-507 roof WP lines = 4,999)",
+ "candidate_files_touched": 0,
+ "door_steps": {
+  "edge_census": {
+   "edges": 5,
+   "excluded_second_readings": [],
+   "owners": {
+    "D-GF-01:front edge 172 (layer 5) = companion 173": {
+     "claimant": "L-b3933a51bd95e9bc542b",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-b3933a51bd95e9bc542b"
+    },
+    "D-GF-03:front edge 1C6 (layer 5) = companion 1C7": {
+     "claimant": "L-74cd61b430eec9933d15",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-74cd61b430eec9933d15"
+    },
+    "D-GF-05:front edge 19C (layer 5) = companion 19D": {
+     "claimant": "L-c8b5c7f742b22388339e",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-c8b5c7f742b22388339e"
+    },
+    "D-GF-09:front edge 3FD (layer 5) = companion 3FE": {
+     "claimant": "L-8111095f6db78f0e674b",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-8111095f6db78f0e674b"
+    },
+    "D-GF-15:face line runs through the opening; visible edge from the companion 8F (layer 2, 0.050 uphill; equal to the front edge at every house door)": {
+     "claimant": "L-56acf34557c315f65bb1",
+     "row": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-2|L-56acf34557c315f65bb1"
+    }
+   }
+  },
+  "gate": {
+   "in_house_total": false,
+   "nosing_attribute_lm": "0.9",
+   "riser_m2": "0.150",
+   "status": "PARTIAL",
+   "step_lm": "1.0"
+  },
+  "his": {
+   "lm": "7.7",
+   "nr": "6",
+   "ours_minus_his_house_lm": "-3.9",
+   "ours_minus_his_with_gate_lm": "-2.9",
+   "verdict": "UNRESOLVED (SCOPE): no door id on his rows; no %"
+  },
+  "house": {
+   "house_lm": "3.8",
+   "house_nosing_attribute_lm": "3.5",
+   "house_nr": 4,
+   "house_riser_m2": "0.570"
+  },
+  "t592_totals": {
+   "gate_nosing_lm_attribute": "0.9",
+   "gate_payable_lm": "1.0",
+   "gate_riser_m2": "0.150",
+   "house_nosing_lm_attribute": "3.5",
+   "house_nr": 4,
+   "house_payable_lm": "3.8",
+   "house_riser_m2": "0.570"
+  }
+ },
+ "findings": {
+  "F-T593-1": "T-592 prints owning_line null for the gate (T-325 UNRESOLVED) but V3.0.58 carries a HELD-blank ARCH.THRESHOLD line for D-GF-15 (L-56acf345...); the gate step sits beside it as its own row; the strip m2 (1.000 x 0.200 = 0.200 evidence) is NOT wired",
+  "F-T593-2": "the yard porch / pool-court skirting UNRESOLVED 0 .. 11.61 lm (OD-1) has no HELD line: absent, not 0; Lead to rule whether a HELD line is owed",
+  "F-T593-3": "the four house threshold lines hold their m2 as HELD exact bounds (0.2 / 0.18 / 0.18) or RELEASED (D-GF-05 0.2): each equals payable lm x 0.200 wall depth, so the step binds the right line; the lines' own states are not moved by V10"
+ },
+ "inputs": {
+  "research/agents_t501/LINES_T501.csv": "1551662ca02dbca17add9ebd9201e8de13857d5aed5981cf882108c1996f9bbd",
+  "research/agents_t585/out/T585_SKIRTING_FOLLOWUPS.json": "207d4c6a35172786a54caaa1732351cac23947ed3e69228fb815a8538361bb7e",
+  "research/agents_t588/manifest_v9.py": "33dca6006ab0a533c3f50708ebea4c879593a2bc34a017bf99f1363b5719bc1d",
+  "research/agents_t588/out/WIRING_MANIFEST_V9.json": "42463dfe7a94b47166e04cfbf4167ce68dda2bf5b7239a498b81c0f92c95b711",
+  "research/agents_t592/out/T592_DOOR_STEPS.json": "c32be0ed6d17ff05e3a116fafb3c0bb241a90d9cdfaf602877e16977e256f689"
+ },
+ "no_line_rows": [
+  {
+   "class": "NO_LINE",
+   "element": "GF-COURT E1 landing walls (house face, stub, pantry face)",
+   "live_lines_after": [],
+   "live_lines_before": [],
+   "measured_beside_lm": "3.5",
+   "probe": {
+    "codes": [
+     "FIN.SKIRTING",
+     "FIN.STAIR.SKIRTING.SLOPED",
+     "FIN.STAIR.SKIRTING.ZIGZAG"
+    ],
+    "element_contains": [
+     "E1-L",
+     "E1-LD",
+     "E1:landing",
+     "E1#LANDING"
+    ]
+   },
+   "replaces": "T-585 ENGINE_OMISSION proposal (withdrawn by the Lead ruling)",
+   "row": "E1 LANDING SKIRTING",
+   "status": "NOT_IN_DRAWING",
+   "verdict_line": "BOARD T-585 VERIFIER F-C-T585-1 + ELEMENT_REGISTER 'E1 LANDING SKIRTING' (Lead 2026-11-07 08:15): exterior landing, no printed base: YARD SKIRTING criterion governs, NOT_IN_DRAWING, no line; the ENGINE_OMISSION proposal withdrawn; E1 landing walls 3.500 lm geometry VERIFIED (named only)"
+  },
+  {
+   "beside": {
+    "drawing_confirmed_lm": "0",
+    "his_lm": "81.32",
+    "no_face_lm": "13.5946",
+    "under_unprinted_sills_hi_lm": "6",
+    "unresolved_bound_lm": [
+     "0",
+     "11.61"
+    ],
+    "wall_foot_not_in_drawing_lm": "59.582",
+    "who_is_right": "RULE_DIFFERENCE / FREELANCER_SCOPE (his = his paving perimeter)"
+   },
+   "class": "NO_LINE",
+   "element": "46 yard faces (west court, side walk, porch, pool court)",
+   "live_lines_after": [],
+   "live_lines_before": [],
+   "open": "the porch / pool-court faces UNRESOLVED 0 .. 11.61 lm (floor finish HELD, OD-1) have no HELD line: named for the Lead (F-T593-2), not added here",
+   "probe": {
+    "codes": [
+     "FIN.SKIRTING"
+    ],
+    "element_contains": [
+     "YARD",
+     "COURT",
+     "PORCH",
+     "POOL-DECK",
+     "SIDE-WALK"
+    ]
+   },
+   "row": "YARD SKIRTING",
+   "status": "NOT_IN_DRAWING (0 DRAWING-CONFIRMED)",
+   "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(1)/(f): 0 of 83 DXF strings name a skirting / base: yard DRAWING-CONFIRMED 0 lm basis CONFIRMED, face lengths worker-measured (PARTIALLY VERIFIED); his 81.32 lm RULE_DIFFERENCE / FREELANCER_SCOPE ACCEPTED"
+  }
+ ],
+ "overlay": {
+  "conflicts": [
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "none: two elements by the coverage census, no quantity shared",
+    "host": "1F-R78C367:flight 5",
+    "lines": [
+     "L-c6724654ee4ccdb0c508",
+     "L-e085c168dee5fb19a7fb"
+    ],
+    "ruling": "FIN.STAIR.FLIGHT (B7-01: sloping pitch length nosing to nosing, engine/source/arch_measure.py:930) and FIN.STAIR.STEP_LM (B7-06: commercial step per tread, UP-STAIR-008) are two elements of one flight (engine/source/coverage_census.py B7-01 vs B7-06); the same pair stands on every candidate flight; V9 writes only the step line",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "none: two elements by the coverage census, no quantity shared",
+    "host": "GF-RC99C2A:flight 1",
+    "lines": [
+     "L-30009d8eb01996ec6399",
+     "L-95b9555dd144951b071e"
+    ],
+    "ruling": "FIN.STAIR.FLIGHT (B7-01: sloping pitch length nosing to nosing, engine/source/arch_measure.py:930) and FIN.STAIR.STEP_LM (B7-06: commercial step per tread, UP-STAIR-008) are two elements of one flight (engine/source/coverage_census.py B7-01 vs B7-06); the same pair stands on every candidate flight; V9 writes only the step line",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:MS1-L.W2",
+    "lines": [
+     "L-18efa069acded71c81e7",
+     "L-76748b7b62ab2d52b4e2"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:MS1-U.E2",
+    "lines": [
+     "L-1ed4cfaa1c12054b401d",
+     "L-20c2640927e41626893d"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:MS1-U.E3b",
+    "lines": [
+     "L-8e463d6ce740fc19e60c",
+     "L-984553ed0b69b0f77fe2"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:MS2-L.W2",
+    "lines": [
+     "L-4ff56def5b73b558afbe",
+     "L-f45c2e6d46b0cc6a7e53"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:MS2-TR.N",
+    "lines": [
+     "L-5021b820dba41f631dde",
+     "L-76de75ce9a315998be99"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "FIN.STAIR",
+    "fix_row": "T-585 two forms / held bound (R-T593-1 (d))",
+    "host": "STAIR-SKIRT:RS-S.S0",
+    "lines": [
+     "L-c074ce526885a44423d0",
+     "L-ebe230d8c2fbc35332b8"
+    ],
+    "ruling": "FIN.STAIR.SKIRTING.SLOPED and .ZIGZAG on one STAIR-SKIRT piece are the two forms of ONE skirting (ORR-007 picks one); a held piece bounds only the form its source bounds; never added across forms",
+    "sources": [
+     "CANDIDATE",
+     "STAIR_SKIRTING_FORMS (T-585 flights)"
+    ],
+    "status": "EXPLAINED",
+    "unit": "lm"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "1F-WALLS:walls t=0.20",
+    "lines": [
+     "L-298e323d027a4723652d",
+     "L-e74c15038f1e32dbefe0",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-10dd62f66ad05488e63b"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   },
+   {
+    "family": "MAS.MORTAR",
+    "fix_row": "T-498 step 6 (perimeter mortar) carries both lines apart",
+    "host": "GF-WALLS:walls t=0.20",
+    "lines": [
+     "L-1bacf0e3cec97219a455",
+     "L-a6e9b9d47f2b81204b1e",
+     "NEW:MAS.MORTAR.BLACK:PERIMETER:L-1c53fadb2f92d1f36d4e"
+    ],
+    "ruling": "B9-04 perimeter joint mortar is its own producer key beside the panel bed-joint mortar, never inside it (R-T520-1 / T-526 / T-532; V2 stream_S.perimeter_lines 'own key')",
+    "sources": [
+     "T-498",
+     "T-498:perimeter"
+    ],
+    "status": "EXPLAINED",
+    "unit": "m3"
+   }
+  ],
+  "flagged_rows": [
+   {
+    "beside": {
+     "conditional_range_beside_kg": [
+      63.82125,
+      71.62425
+     ]
+    },
+    "index": {
+     "class": "HELD",
+     "held_high": null,
+     "held_low": null,
+     "measured_net": null
+    },
+    "kind": "SET",
+    "line_id": "L-4ccc5dc26bd2472b03ad",
+    "op_id": "T-498|HOST_FACES_V5|L-4ccc5dc26bd2472b03ad",
+    "package": "T-498",
+    "row": "HOST_FACES_V5",
+    "status": "NO_BEFORE"
+   }
+  ],
+  "lines": {
+   "after_v10": 5124,
+   "after_v9": 5124,
+   "base": 4999
+  },
+  "order": [
+   {
+    "ops": 103,
+    "package": "T-498",
+    "status": {
+     "APPLIED": 102,
+     "NO_BEFORE": 1
+    }
+   },
+   {
+    "ops": 17,
+    "package": "T-423 r2",
+    "status": {
+     "APPLIED": 17
+    }
+   },
+   {
+    "ops": 22,
+    "package": "T-563",
+    "status": {
+     "APPLIED": 22
+    }
+   },
+   {
+    "ops": 0,
+    "package": "T-513",
+    "status": {}
+   },
+   {
+    "ops": 4,
+    "package": "FLOOR_FINISH_COMPLETENESS_WIRING",
+    "status": {
+     "APPLIED": 4
+    }
+   },
+   {
+    "ops": 30,
+    "package": "RETURN_PAINT_FACES",
+    "status": {
+     "APPLIED": 30
+    }
+   },
+   {
+    "ops": 1,
+    "package": "PIER_RETURNS_EXT (with T-314)",
+    "status": {
+     "APPLIED": 1
+    }
+   },
+   {
+    "ops": 2,
+    "package": "W17_Q76A",
+    "status": {
+     "APPLIED": 2
+    }
+   },
+   {
+    "ops": 6,
+    "package": "REBAR_COMPONENTS (T-583; supersedes V8 REBAR_OMISSION by name)",
+    "status": {
+     "APPLIED": 6
+    }
+   },
+   {
+    "ops": 11,
+    "package": "F package (no board row)",
+    "status": {
+     "APPLIED": 11
+    }
+   },
+   {
+    "ops": 15,
+    "package": "RAILS_GUARDS (T-578)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 15,
+    "package": "STAIR_STEPS (T-584 FR-T584-1 / FR-T584-3)",
+    "status": {
+     "APPLIED": 15
+    }
+   },
+   {
+    "ops": 5,
+    "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+    "status": {
+     "APPLIED": 5
+    }
+   },
+   {
+    "ops": 44,
+    "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+    "status": {
+     "APPLIED": 44
+    }
+   }
+  ],
+  "other_lines_changed_vs_v9_overlay": [],
+  "stale": 0,
+  "two_package_lines": 0,
+  "unexplained_conflicts": 0,
+  "v10_vs_v9_totals": {
+   "FIN.STAIR.SKIRTING.SLOPED|lm": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 4,
+     "held_high": "21.108745",
+     "held_high_open_n": 0,
+     "held_low": "17.009049",
+     "held_n": 22,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 22,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 22,
+     "released": "0",
+     "released_n": 0
+    }
+   },
+   "FIN.STAIR.SKIRTING.ZIGZAG|lm": {
+    "after": {
+     "excluded_n": 0,
+     "held_blank_n": 8,
+     "held_high": "23.468481",
+     "held_high_open_n": 0,
+     "held_low": "23.300481",
+     "held_n": 22,
+     "released": "0",
+     "released_n": 0
+    },
+    "before": {
+     "excluded_n": 0,
+     "held_blank_n": 22,
+     "held_high": "0",
+     "held_high_open_n": 0,
+     "held_low": "0",
+     "held_n": 22,
+     "released": "0",
+     "released_n": 0
+    }
+   }
+  }
+ },
+ "released_quantities_changed": 0,
+ "replaces": {
+  "FR-T584-2 (T-584: edge 3.50 lm, riser 0.390 m2 + D-GF-09 HELD 0 .. 0.270)": "FR-T592-1 house 3.800 lm nr 4, riser 0.570 m2 (FR-T584-2 closed, F-C-T584-1 / F-C-T584-2 closed)",
+  "T-585 E1 landing ENGINE_OMISSION proposal (3.500 lm)": "NO_LINE NOT_IN_DRAWING (F-C-T585-1)"
+ },
+ "rows": [
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": 0.2,
+    "held_low": 0.2,
+    "measured_net": null
+   },
+   "beside": {
+    "binding": {
+     "line_m2": "0.2",
+     "payable_x_depth_eq_line_m2": true,
+     "strip_width_m": "1",
+     "wall_depth_m": "0.2"
+    },
+    "material": "by the strip's specification (HELD)",
+    "nosing_lm_attribute": "0.9",
+    "nr": 1,
+    "opening": "D-GF-01",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER)",
+    "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+    "riser_m": "0.15",
+    "riser_m2": "0.15",
+    "step_lm_payable": "1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-592 VERIFIER 2026-11-07T07:59Z (e)/(f): own DXF read, wall gaps 1.000 / 0.900 / 1.000 / 0.900 = 3.800 lm nr 4, edges 3.500 AGREE, D-GF-09 riser 0.15 DRAWING-CONFIRMED (F-C-T584-2 closed), riser 3.80 x 0.15 = 0.570 m2 AGREE: VERIFIED as a research quantity; F-C-T584-1 closed"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-b3933a51bd95e9bc542b",
+   "op_id": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-b3933a51bd95e9bc542b",
+   "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+   "row": "FR-T592-1",
+   "source": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": 0.18,
+    "held_low": 0.18,
+    "measured_net": null
+   },
+   "beside": {
+    "binding": {
+     "line_m2": "0.18",
+     "payable_x_depth_eq_line_m2": true,
+     "strip_width_m": "0.9",
+     "wall_depth_m": "0.2"
+    },
+    "material": "by the strip's specification (HELD)",
+    "nosing_lm_attribute": "0.8",
+    "nr": 1,
+    "opening": "D-GF-03",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER)",
+    "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+    "riser_m": "0.15",
+    "riser_m2": "0.135",
+    "step_lm_payable": "0.9"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-592 VERIFIER 2026-11-07T07:59Z (e)/(f): own DXF read, wall gaps 1.000 / 0.900 / 1.000 / 0.900 = 3.800 lm nr 4, edges 3.500 AGREE, D-GF-09 riser 0.15 DRAWING-CONFIRMED (F-C-T584-2 closed), riser 3.80 x 0.15 = 0.570 m2 AGREE: VERIFIED as a research quantity; F-C-T584-1 closed"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-74cd61b430eec9933d15",
+   "op_id": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-74cd61b430eec9933d15",
+   "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+   "row": "FR-T592-1",
+   "source": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)"
+  },
+  {
+   "absorbs": {
+    "kind": "TEXT_ONLY",
+    "note": "no figure printed: state read at this step",
+    "op_id": "T-423 r2|TEXT_ONLY_22|L-c8b5c7f742b22388339e",
+    "rule": "R-T593-1 (f)"
+   },
+   "after": null,
+   "before": {
+    "class": "RELEASED",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": 0.2
+   },
+   "beside": {
+    "binding": {
+     "line_m2": "0.2",
+     "payable_x_depth_eq_line_m2": true,
+     "strip_width_m": "1",
+     "wall_depth_m": "0.2"
+    },
+    "material": "by the strip's specification (HELD)",
+    "nosing_lm_attribute": "0.9",
+    "nr": 1,
+    "opening": "D-GF-05",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER)",
+    "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+    "riser_m": "0.15",
+    "riser_m2": "0.15",
+    "step_lm_payable": "1"
+   },
+   "class_after": "RELEASED",
+   "class_before": "RELEASED",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-592 VERIFIER 2026-11-07T07:59Z (e)/(f): own DXF read, wall gaps 1.000 / 0.900 / 1.000 / 0.900 = 3.800 lm nr 4, edges 3.500 AGREE, D-GF-09 riser 0.15 DRAWING-CONFIRMED (F-C-T584-2 closed), riser 3.80 x 0.15 = 0.570 m2 AGREE: VERIFIED as a research quantity; F-C-T584-1 closed"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-c8b5c7f742b22388339e",
+   "op_id": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-c8b5c7f742b22388339e",
+   "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+   "row": "FR-T592-1",
+   "source": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": 0.18,
+    "held_low": 0.18,
+    "measured_net": null
+   },
+   "beside": {
+    "binding": {
+     "line_m2": "0.18",
+     "payable_x_depth_eq_line_m2": true,
+     "strip_width_m": "0.9",
+     "wall_depth_m": "0.2"
+    },
+    "drawing_conflict_named": "door block span 1.0 drawn in a wall gap of 0.9 (block over the masonry 0.047 / 0.053): the stone fills the wall gap; the door size is the door schedule's question, not the stone's; edge vs gap - jambs residual -0.003 m named as drafting (within 0.010)",
+    "material": "by the strip's specification (HELD)",
+    "nosing_lm_attribute": "0.9",
+    "nr": 1,
+    "opening": "D-GF-09",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER)",
+    "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+    "riser_m": "0.15",
+    "riser_m2": "0.135",
+    "step_lm_payable": "0.9"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD_RANGE",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "VERIFIED",
+    "verdict_line": "BOARD T-592 VERIFIER 2026-11-07T07:59Z (e)/(f): own DXF read, wall gaps 1.000 / 0.900 / 1.000 / 0.900 = 3.800 lm nr 4, edges 3.500 AGREE, D-GF-09 riser 0.15 DRAWING-CONFIRMED (F-C-T584-2 closed), riser 3.80 x 0.15 = 0.570 m2 AGREE: VERIFIED as a research quantity; F-C-T584-1 closed"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-8111095f6db78f0e674b",
+   "op_id": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-1|L-8111095f6db78f0e674b",
+   "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+   "row": "FR-T592-1",
+   "source": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "binding": {
+     "line_m2": null,
+     "strip_evidence_m2_not_wired": "0.2",
+     "strip_width_m": null,
+     "t325_state": "UNRESOLVED",
+     "wall_depth_m": "0.2",
+     "wall_gap_m": "1"
+    },
+    "material": "by the strip's specification (HELD)",
+    "nosing_lm_attribute": "0.9",
+    "nr": 1,
+    "opening": "D-GF-15",
+    "owner_trade": "marble / stone, door-step family (ELEMENT_REGISTER)",
+    "partial_cause": "gate outer level +-0.00 by region reach, not re-read by hand; never folded into the house door-step total",
+    "payable_basis": "INSTALLED_PIECE_MASONRY_OPENING",
+    "riser_m": "0.15",
+    "riser_m2": "0.15",
+    "status": "PARTIAL",
+    "step_lm_payable": "1"
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-592 VERIFIER 2026-11-07T07:59Z (e): gate B8 / B9 gap 1.000, 8F 0.900 AGREE; gate outer level +-0.00 by region reach not re-read by hand: gate PARTIAL; owner trade by ELEMENT_REGISTER 'GATE STEP' (Lead 08:15)"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-56acf34557c315f65bb1",
+   "note": "gate step beside the candidate's own HELD-blank D-GF-15 threshold line (T-592 printed owning_line null: F-T593-1)",
+   "op_id": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)|FR-T592-2|L-56acf34557c315f65bb1",
+   "package": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)",
+   "row": "FR-T592-2",
+   "source": "DOOR_STEPS (T-592 FR-T592-1 / FR-T592-2)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.140175,
+    "held_low": 1.140175,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-4548e7ad947b07624e81",
+    "piece": "D1.E"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-775f62538c1f46077807",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-775f62538c1f46077807",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.6,
+    "held_low": 1.6,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-775f62538c1f46077807",
+    "piece": "D1.E"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-4548e7ad947b07624e81",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-4548e7ad947b07624e81",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.470544,
+    "held_low": 1.470544,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-add5acd610925402e0f5",
+    "piece": "E1.S"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-b77a64fb9a941582f25c",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-b77a64fb9a941582f25c",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 2.05,
+    "held_low": 2.05,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-b77a64fb9a941582f25c",
+    "piece": "E1.S"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-add5acd610925402e0f5",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-add5acd610925402e0f5",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.470071,
+    "held_low": 0.470071,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-53f3b7f153af0e1f5538",
+    "piece": "MS1-L.W1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-a43adc74906d8bcd7b1c",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-a43adc74906d8bcd7b1c",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.733334,
+    "held_low": 0.733334,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-a43adc74906d8bcd7b1c",
+    "piece": "MS1-L.W1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-53f3b7f153af0e1f5538",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-53f3b7f153af0e1f5538",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.881383,
+    "held_low": 0.881383,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-9e5ed7164ee85f0fc196",
+    "piece": "MS1-L.W1B"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-ff51392df9e2c8c21efe",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-ff51392df9e2c8c21efe",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.250001,
+    "held_low": 1.250001,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-ff51392df9e2c8c21efe",
+    "piece": "MS1-L.W1B"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-9e5ed7164ee85f0fc196",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-9e5ed7164ee85f0fc196",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.687589,
+    "held_low": 0.687589,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-c56a452218763d5e7bbf",
+    "piece": "MS1-L.W1C"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-aed4c2990437f767dc90",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-aed4c2990437f767dc90",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.766667,
+    "held_low": 0.766667,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-aed4c2990437f767dc90",
+    "piece": "MS1-L.W1C"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-c56a452218763d5e7bbf",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-c56a452218763d5e7bbf",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.233936,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "HELD",
+    "form": "SLOPED",
+    "piece": "MS1-L.W2"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-18efa069acded71c81e7",
+   "note": "GF window 352-354 in the face beside treads +2.00 .. +2.67; sill / head not printed",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-18efa069acded71c81e7",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-76748b7b62ab2d52b4e2",
+   "note": "zigzag form of MS1-L.W2: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-76748b7b62ab2d52b4e2",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "cause": "winder corner S-9 (5 risers on A-A vs 4 wedges); both faces walls; pitch sum between the plans 2.35 and the whole rise 0.833333 on one side 2.620191",
+    "pair": "MS1-T.W + MS1-T.N",
+    "pair_bound_lm": [
+     "2.35",
+     "2.620191"
+    ]
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-28c33cd0ab5d19426661",
+   "note": "a bound over two lines moves neither line (R-T593-1 (d))",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 winder pair|L-28c33cd0ab5d19426661",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 winder pair",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-5f0bd2b45c1718aeefc4",
+   "note": "zigzag form of the winder pair: no bound formed",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-5f0bd2b45c1718aeefc4",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "cause": "winder corner S-9 (5 risers on A-A vs 4 wedges); both faces walls; pitch sum between the plans 2.35 and the whole rise 0.833333 on one side 2.620191",
+    "pair": "MS1-T.W + MS1-T.N",
+    "pair_bound_lm": [
+     "2.35",
+     "2.620191"
+    ]
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "scope": "the beside figures; the line's own state is unchanged and not re-verified",
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "BESIDE",
+   "line_id": "L-2fae5d35b21e97684844",
+   "note": "a bound over two lines moves neither line (R-T593-1 (d))",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 winder pair|L-2fae5d35b21e97684844",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 winder pair",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-5bc4cea35db33e41d78c",
+   "note": "zigzag form of the winder pair: no bound formed",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-5bc4cea35db33e41d78c",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.110855,
+    "held_low": 1.110855,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-bc0e1e80ca50865ccd06",
+    "piece": "MS1-U.E1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-32f71724eeeaa46638c9",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-32f71724eeeaa46638c9",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.616668,
+    "held_low": 1.616668,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-32f71724eeeaa46638c9",
+    "piece": "MS1-U.E1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-bc0e1e80ca50865ccd06",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-bc0e1e80ca50865ccd06",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.052389,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "HELD",
+    "form": "SLOPED",
+    "piece": "MS1-U.E2"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-20c2640927e41626893d",
+   "note": "GF hidden opening 33C / 33D (0.90) in the face; height vs the flight not printed",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-20c2640927e41626893d",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1ed4cfaa1c12054b401d",
+   "note": "zigzag form of MS1-U.E2: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-1ed4cfaa1c12054b401d",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.344719,
+    "held_low": 1.344719,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-9ec979f00305b8ae8049",
+    "piece": "MS1-U.E3a"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-cfecfcea2280155a6a74",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-cfecfcea2280155a6a74",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.816668,
+    "held_low": 1.816668,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-cfecfcea2280155a6a74",
+    "piece": "MS1-U.E3a"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-9ec979f00305b8ae8049",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-9ec979f00305b8ae8049",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.350796,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "CONFLICT",
+    "form": "SLOPED",
+    "piece": "MS1-U.E3b"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-8e463d6ce740fc19e60c",
+   "note": "arch plans end MS1-U at its 11th riser line (ABE nosing s 4.150 / ABD face 4.200: 1F floor beyond); section A-A counts 12 risers and ST p.4 draws the 12th edge 459 at s 3.30 of the flight (s 4.450); Q-46 RFI / B20 head clash (T-412)",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-8e463d6ce740fc19e60c",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-984553ed0b69b0f77fe2",
+   "note": "zigzag form of MS1-U.E3b: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-984553ed0b69b0f77fe2",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.17184,
+    "held_low": 1.17184,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-656ab12cc9b9797d3b1a",
+    "piece": "MS2-L.W1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-9b1da1af7c162de2233c",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-9b1da1af7c162de2233c",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.672,
+    "held_low": 1.672,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-9b1da1af7c162de2233c",
+    "piece": "MS2-L.W1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-656ab12cc9b9797d3b1a",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-656ab12cc9b9797d3b1a",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.87888,
+    "held_low": 0.87888,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-20432b887f91dee03925",
+    "piece": "MS2-L.W1B"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-caacb4c1425981b2585f",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-caacb4c1425981b2585f",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.254,
+    "held_low": 1.254,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-caacb4c1425981b2585f",
+    "piece": "MS2-L.W1B"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-20432b887f91dee03925",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-20432b887f91dee03925",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.68592,
+    "held_low": 0.68592,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-1c907e0a59c55204e430",
+    "piece": "MS2-L.W1C"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-193f8e812d9ade5f9c41",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-193f8e812d9ade5f9c41",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.768,
+    "held_low": 0.768,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-193f8e812d9ade5f9c41",
+    "piece": "MS2-L.W1C"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-1c907e0a59c55204e430",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-1c907e0a59c55204e430",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.230432,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "HELD",
+    "form": "SLOPED",
+    "piece": "MS2-L.W2"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-4ff56def5b73b558afbe",
+   "note": "1F window C5A-C5C (W13) and 2F window 12CF-12D1 beside treads +7.18 .. +7.52; sill / head not printed",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-4ff56def5b73b558afbe",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-f45c2e6d46b0cc6a7e53",
+   "note": "zigzag form of MS2-L.W2: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-f45c2e6d46b0cc6a7e53",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.168,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "HELD",
+    "form": "ZIGZAG",
+    "piece": "MS2-TR.N"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-5021b820dba41f631dde",
+   "note": "closing riser meets the north wall at x 1.30 (BE5 / 12B5, T-493); the 2F diagonal 2F1F / 2F20 is unexplained (Q-ST-11): the step's place on the wall not established",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-5021b820dba41f631dde",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-76de75ce9a315998be99",
+   "note": "sloped form of MS2-TR.N: T-585 bounds the zigzag form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-76de75ce9a315998be99",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 3.867073,
+    "held_low": 3.867073,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-c8dce28c50dabd7b17fb",
+    "piece": "MS2-U.E"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-4b902816d29b75fab7fc",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-4b902816d29b75fab7fc",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 5.316,
+    "held_low": 5.316,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-4b902816d29b75fab7fc",
+    "piece": "MS2-U.E"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-c8dce28c50dabd7b17fb",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-c8dce28c50dabd7b17fb",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1c082cc60442407ed517",
+   "note": "UNKNOWN: no bound formed; outer 50 mm band 23D / 23E (RL-09): guard or string not established, no wall face drawn; the curved flight itself is UNRESOLVED (T-398, RFI-S27)",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 unbounded|L-1c082cc60442407ed517",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 unbounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-1a0d2ab50e42b0219eab",
+   "note": "zigzag form of RS-C.OUT: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-1a0d2ab50e42b0219eab",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.232143,
+    "held_low": 0.0,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "class": "UNKNOWN",
+    "form": "SLOPED",
+    "piece": "RS-S.S0"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-ebe230d8c2fbc35332b8",
+   "note": "no wall or column face on this stretch (wall layer 1 and column layer S-COL.BON both read): only the 50 mm outer band A7 / A9 (layer 5), the continuation of the curved flight's outer band RL-09 whose role (guard or string) is not established; the 0.050 west return of column 2FD2 waits on it",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 held bound|L-ebe230d8c2fbc35332b8",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 held bound",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": null,
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "class_after": "HELD",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "HELD",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "TEXT_ONLY",
+   "line_id": "L-c074ce526885a44423d0",
+   "note": "zigzag form of RS-S.S0: T-585 bounds the sloped form only",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 not bounded|L-c074ce526885a44423d0",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 not bounded",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 0.978571,
+    "held_low": 0.978571,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-544b6b11bab9bbf037fb",
+    "piece": "RS-S.S1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-0ae4be232407b92343ef",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-0ae4be232407b92343ef",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 1.332143,
+    "held_low": 1.332143,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-0ae4be232407b92343ef",
+    "piece": "RS-S.S1"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-544b6b11bab9bbf037fb",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-544b6b11bab9bbf037fb",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 2.321429,
+    "held_low": 2.321429,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "SLOPED",
+    "other_form_line": "L-8dde910ffeeb94a58323",
+    "piece": "RS-S.S2"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-d980ace38bdd63fa8de4",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-d980ace38bdd63fa8de4",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  },
+  {
+   "after": {
+    "class": "HELD",
+    "held_high": 3.125,
+    "held_low": 3.125,
+    "measured_net": null
+   },
+   "before": {
+    "class": "HELD",
+    "held_high": null,
+    "held_low": null,
+    "measured_net": null
+   },
+   "beside": {
+    "form": "ZIGZAG",
+    "other_form_line": "L-d980ace38bdd63fa8de4",
+    "piece": "RS-S.S2"
+   },
+   "class_after": "HELD_RANGE",
+   "class_before": "HELD",
+   "evidence": {
+    "status": "PARTIALLY VERIFIED",
+    "verdict_line": "BOARD T-585 VERIFIER 2026-11-07T05:58Z (e)(3)-(4)/(f): E1 pitch 1.470544 AGREE, winders 2.350 .. 2.620191 AGREE, flight lower bound 19.359049 AGREE; the 13 flight pitches rest on T-501 (merged), not re-measured: two forms + bounds PARTIALLY VERIFIED"
+   },
+   "kind": "SET",
+   "line_id": "L-8dde910ffeeb94a58323",
+   "note": "exact measure of this form; ORR-007 picks the payable form; never added to the other form, never released",
+   "op_id": "STAIR_SKIRTING_FORMS (T-585 flights)|T-585 two forms|L-8dde910ffeeb94a58323",
+   "package": "STAIR_SKIRTING_FORMS (T-585 flights)",
+   "row": "T-585 two forms",
+   "source": "STAIR_SKIRTING_FORMS (T-585 flights)"
+  }
+ ],
+ "rule": "R-T593-1",
+ "schema": "URBAN_T593_WIRING_MANIFEST_V10",
+ "stair_edge_census_after_v10": {
+  "doubles": 0,
+  "edges": 89,
+  "orphans": 0
+ },
+ "stair_skirting": {
+  "flight_lower_bound_lm": "19.359049",
+  "pitch_lm": "17.009049",
+  "t585_flight_lo": "19.359049",
+  "two_form_pieces": 13,
+  "winder_pair_bound_lm": {
+   "MS1-T.W + MS1-T.N": [
+    "2.35",
+    "2.620191"
+   ]
+  },
+  "zigzag_lm": "23.300481"
+ },
+ "task": "T-593"
+}

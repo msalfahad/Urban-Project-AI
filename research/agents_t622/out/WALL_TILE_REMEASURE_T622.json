@@ -1,0 +1,1206 @@
+{
+ "schema": "URBAN_T622_WALL_TILE_REMEASURE_V1",
+ "rule": "R-T622-1",
+ "governing": [
+  "owner 2026-11-02 wet-area walls",
+  "Q-48 A tile top",
+  "Q-73 openings / reveals",
+  "Q-55 C door head",
+  "R-T547-1 (row split)",
+  "R-T606-1 / R-T621-1 (outline geometry)",
+  "ERS s.2 / s.3"
+ ],
+ "section": "T-547/wall-tile",
+ "statement": "research/agents_t609/out/RECONCILED_STATEMENT_T609.json",
+ "statement_schema": "URBAN_T609_RECONCILED_STATEMENT_V10",
+ "drawing": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha256 ab54dd55...)",
+ "unknown_rows": 47,
+ "rows_rebuilt": 47,
+ "drawing_confirmed": 42,
+ "differs": 5,
+ "unknown_signed_stated": "-44.86380",
+ "stated_split_by_class": {
+  "ENGINE_RIGHT": "30.672",
+  "RULE_DIFFERENCE": "-75.53560",
+  "TOLERANCE": "-0.00020"
+ },
+ "own_split_by_cause": {
+  "ENGINE_RIGHT": "30.741426",
+  "ENGINE_WRONG": "-0.053909",
+  "RULE_DIFFERENCE": "-75.552613",
+  "TOLERANCE": "0.001296"
+ },
+ "rows": [
+  {
+   "row": 0,
+   "name": "GF-12 core W.C. wedge 289 x 167: length: tiled face vs his lm",
+   "stated": "-0.042",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.042111",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "-0.000111"
+  },
+  {
+   "row": 1,
+   "name": "GF-12 core W.C. wedge 289 x 167: height: owner tile top vs his flat height",
+   "stated": "-4.8191",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-4.819124",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "-0.000024"
+  },
+  {
+   "row": 2,
+   "name": "GF-12 core W.C. wedge 289 x 167: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": null,
+   "name": "GF-12 core W.C. wedge 289 x 167: line rounding (per-face 4 dp)",
+   "stated": null,
+   "own": "0.000135",
+   "class": "TOLERANCE",
+   "evidence": "OWN ONLY (CAD noise < 0.010, no stated row)",
+   "diff": "0.000135"
+  },
+  {
+   "row": 3,
+   "name": "GF-13 core W.C. wedge 245 x 167: length: tiled face vs his lm",
+   "stated": "-0.33",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.329424",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000576"
+  },
+  {
+   "row": 4,
+   "name": "GF-13 core W.C. wedge 245 x 167: height: owner tile top vs his flat height",
+   "stated": "-4.4265",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-4.426375",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000125"
+  },
+  {
+   "row": 5,
+   "name": "GF-13 core W.C. wedge 245 x 167: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 6,
+   "name": "GF-13 core W.C. wedge 245 x 167: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": null,
+   "name": "GF-13 core W.C. wedge 245 x 167: line rounding (per-face 4 dp)",
+   "stated": null,
+   "own": "-0.000701",
+   "class": "TOLERANCE",
+   "evidence": "OWN ONLY (CAD noise < 0.010, no stated row)",
+   "diff": "-0.000701"
+  },
+  {
+   "row": 7,
+   "name": "GF-14 wash lobby, 2 basins: open side, no wall, no tile",
+   "stated": "3.735",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "3.766956",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DIFFERS",
+   "diff": "0.031956"
+  },
+  {
+   "row": 8,
+   "name": "GF-14 wash lobby, 2 basins: length: tiled face vs his lm",
+   "stated": "-0.036",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.003435",
+   "class": "TOLERANCE",
+   "evidence": "DIFFERS",
+   "diff": "0.039435"
+  },
+  {
+   "row": 9,
+   "name": "GF-14 wash lobby, 2 basins: height: owner tile top vs his flat height",
+   "stated": "-5.37355",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-5.358082",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DIFFERS",
+   "diff": "0.015468"
+  },
+  {
+   "row": 10,
+   "name": "GF-14 wash lobby, 2 basins: doors / arches deducted (he deducts none)",
+   "stated": "3.52",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "3.520000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 11,
+   "name": "GF-14 wash lobby, 2 basins: line rounding (per-face 4 dp)",
+   "stated": "0.00015",
+   "stated_class": "TOLERANCE",
+   "own": "-0.086709",
+   "class": "ENGINE_WRONG",
+   "evidence": "DIFFERS",
+   "diff": "-0.086859"
+  },
+  {
+   "row": 12,
+   "name": "GF-16 master bath: length: tiled face vs his lm",
+   "stated": "-0.075",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.073995",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.001005"
+  },
+  {
+   "row": 13,
+   "name": "GF-16 master bath: height: owner tile top vs his flat height",
+   "stated": "-4.95625",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-4.956032",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000218"
+  },
+  {
+   "row": 14,
+   "name": "GF-16 master bath: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 15,
+   "name": "GF-16 master bath: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 16,
+   "name": "GF-16 master bath: line rounding (per-face 4 dp)",
+   "stated": "0.00005",
+   "stated_class": "TOLERANCE",
+   "own": "-0.001173",
+   "class": "TOLERANCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "-0.001223"
+  },
+  {
+   "row": 17,
+   "name": "1F-02 west bath upper 245 x 205: height: owner tile top vs his flat height",
+   "stated": "-3.15",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-3.150000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 18,
+   "name": "1F-02 west bath upper 245 x 205: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 19,
+   "name": "1F-02 west bath upper 245 x 205: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 20,
+   "name": "1F-02 west bath upper 245 x 205: line rounding (per-face 4 dp)",
+   "stated": "-0.0001",
+   "stated_class": "TOLERANCE",
+   "own": "-0.000100",
+   "class": "TOLERANCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 21,
+   "name": "1F-03 west bath lower 245 x 205: length: tiled face vs his lm",
+   "stated": "-0.3",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.300000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 22,
+   "name": "1F-03 west bath lower 245 x 205: height: owner tile top vs his flat height",
+   "stated": "-3.15",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-3.150000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 23,
+   "name": "1F-03 west bath lower 245 x 205: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 24,
+   "name": "1F-03 west bath lower 245 x 205: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 25,
+   "name": "1F-07 laundry: length: tiled face vs his lm",
+   "stated": "-0.27",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.270000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 26,
+   "name": "1F-07 laundry: height: owner tile top vs his flat height",
+   "stated": "-5.929",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-5.929000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 27,
+   "name": "1F-07 laundry: doors / arches deducted (he deducts none)",
+   "stated": "3.74",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "3.740000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 28,
+   "name": "1F-07 laundry: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 29,
+   "name": "1F-08 W.C. 147 x 180: length: tiled face vs his lm",
+   "stated": "-0.18",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "-0.180000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 30,
+   "name": "1F-08 W.C. 147 x 180: height: owner tile top vs his flat height",
+   "stated": "-2.289",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-2.289000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 31,
+   "name": "1F-08 W.C. 147 x 180: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 32,
+   "name": "1F-08 W.C. 147 x 180: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 33,
+   "name": "1F-08 W.C. 147 x 180: line rounding (per-face 4 dp)",
+   "stated": "-0.0001",
+   "stated_class": "TOLERANCE",
+   "own": "-0.000100",
+   "class": "TOLERANCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 34,
+   "name": "1F-09 bath by the laundry: height: owner tile top vs his flat height",
+   "stated": "-2.66",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-2.660000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 35,
+   "name": "1F-09 bath by the laundry: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 36,
+   "name": "1F-09 bath by the laundry: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 37,
+   "name": "1F-09 bath by the laundry: line rounding (per-face 4 dp)",
+   "stated": "-0.0001",
+   "stated_class": "TOLERANCE",
+   "own": "-0.000100",
+   "class": "TOLERANCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 38,
+   "name": "1F-12 east bath 210 x 225: height: owner tile top vs his flat height",
+   "stated": "-3.045",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-3.045000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 39,
+   "name": "1F-12 east bath 210 x 225: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 40,
+   "name": "1F-12 east bath 210 x 225: windows inside the band (he deducts none)",
+   "stated": "1.08",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.080000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 41,
+   "name": "1F-12 east bath 210 x 225: line rounding (per-face 4 dp)",
+   "stated": "-0.0001",
+   "stated_class": "TOLERANCE",
+   "own": "-0.000100",
+   "class": "TOLERANCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 42,
+   "name": "2F-02 roof-floor W.C. 300 x 185: length: tiled face vs his lm",
+   "stated": "0.15",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.150000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 43,
+   "name": "2F-02 roof-floor W.C. 300 x 185: height: owner tile top vs his flat height",
+   "stated": "-3.395",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-3.395000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 44,
+   "name": "2F-02 roof-floor W.C. 300 x 185: doors / arches deducted (he deducts none)",
+   "stated": "1.76",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "1.760000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 45,
+   "name": "2F-02 roof-floor W.C. 300 x 185: windows inside the band (he deducts none)",
+   "stated": "0.48",
+   "stated_class": "ENGINE_RIGHT",
+   "own": "0.480000",
+   "class": "ENGINE_RIGHT",
+   "evidence": "DRAWING-CONFIRMED",
+   "diff": "0.000000"
+  },
+  {
+   "row": 46,
+   "name": "GF-07 open pantry (wet, Q-37 A): room in the engine only",
+   "stated": "-32.3422",
+   "stated_class": "RULE_DIFFERENCE",
+   "own": "-32.375000",
+   "class": "RULE_DIFFERENCE",
+   "evidence": "DIFFERS",
+   "diff": "-0.032800",
+   "line_shortfall": "0.032800",
+   "note": "Q-37 A pantry wet + UP-PANTRY-003 host walls full height; open edge B3 4.50 tiles nothing (UP-PANTRY-002); the line carries the T-312 face 10.491, the drawn faces are 10.500"
+  }
+ ],
+ "rooms": [
+  {
+   "room": "GF-12",
+   "statement_room": "GF-12 core W.C. wedge 289 x 167",
+   "line_id": "L-c34694477f67800ae2e3",
+   "line": "25.3011",
+   "his_cell": "22.2",
+   "chain": [
+    "31F",
+    "326",
+    "221",
+    "217"
+   ],
+   "chain_source": "T-621 chain GF-WC-CORE-289 (merged e8709e09), re-measured",
+   "face_lm": "7.414037",
+   "open": [],
+   "H": "3.65",
+   "H_source": "Q-48 A tile top; owner formula 4.50 - 0.85 = 3.65 (G1)",
+   "openings": [
+    {
+     "id": "D-GF-11",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "31F",
+      "31F",
+      "31E"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "27.061235",
+   "own_net": "25.301235",
+   "line_minus_own": "-0.000135"
+  },
+  {
+   "room": "GF-13",
+   "statement_room": "GF-13 core W.C. wedge 245 x 167",
+   "line_id": "L-a3cb2c8a9b6080769ebc",
+   "line": "22.6165",
+   "his_cell": "20.1",
+   "chain": [
+    "2B4",
+    "327",
+    "31D",
+    "BD"
+   ],
+   "chain_source": "T-621 chain GF-WC-CORE-245 (merged e8709e09), re-measured",
+   "face_lm": "6.809808",
+   "open": [],
+   "H": "3.65",
+   "H_source": "Q-48 A tile top; owner formula 4.50 - 0.85 = 3.65 (G1)",
+   "openings": [
+    {
+     "id": "W06",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "2B4",
+      "2B4",
+      "2B3"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    },
+    {
+     "id": "D-GF-12",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "31D",
+      "31D",
+      "31C"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "24.855799",
+   "own_net": "22.615799",
+   "line_minus_own": "0.000701"
+  },
+  {
+   "room": "GF-14",
+   "statement_room": "GF-14 wash lobby, 2 basins",
+   "line_id": "L-fa408571a8adcfaf1a1f",
+   "line": "26.6544",
+   "his_cell": "28.5",
+   "chain": [
+    "31B",
+    "31A",
+    "324",
+    "318",
+    "BE",
+    "D2",
+    "222"
+   ],
+   "chain_source": "T-621 chain GF-LOBBY-WASH (merged e8709e09), re-measured",
+   "face_lm": "8.243203",
+   "open": [
+    {
+     "handle": "2DB",
+     "layer": "2",
+     "lm": "1.255652",
+     "on_edge": "D2"
+    }
+   ],
+   "H": "3.65",
+   "H_source": "Q-48 A tile top; owner formula 4.50 - 0.85 = 3.65 (G1)",
+   "openings": [
+    {
+     "id": "D-GF-11",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "31A",
+      "31B",
+      "31A"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    },
+    {
+     "id": "D-GF-12",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "31A",
+      "31A",
+      "317"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "30.087691",
+   "own_net": "26.567691",
+   "line_minus_own": "0.086709"
+  },
+  {
+   "room": "GF-16",
+   "statement_room": "GF-16 master bath",
+   "line_id": "L-ca4e74c59364f665b102",
+   "line": "25.5912",
+   "his_cell": "22.8",
+   "chain": [
+    "273",
+    "2DD",
+    "2E5",
+    "325",
+    "2DF"
+   ],
+   "chain_source": "T-621 chain GF-MASTER-BATH (merged e8709e09), re-measured",
+   "face_lm": "7.624665",
+   "open": [],
+   "H": "3.65",
+   "H_source": "Q-48 A tile top; owner formula 4.50 - 0.85 = 3.65 (G1)",
+   "openings": [
+    {
+     "id": "W07",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "273",
+      "272",
+      "273"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    },
+    {
+     "id": "D-GF-14",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "2E5",
+      "2E6",
+      "2E5"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "27.830027",
+   "own_net": "25.590027",
+   "line_minus_own": "0.001173"
+  },
+  {
+   "room": "1F-02",
+   "statement_room": "1F-02 west bath upper 245 x 205",
+   "line_id": "L-a34d09209fb5aad3eb63",
+   "line": "27.9101",
+   "his_cell": "27",
+   "chain": [
+    "AE4",
+    "C23",
+    "C27",
+    "B3E"
+   ],
+   "chain_source": "T-621 chain 1F-WBATH-2 (merged e8709e09), re-measured",
+   "face_lm": "9.0",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "W20",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "AE4",
+      "AE4",
+      "AE5"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    },
+    {
+     "id": "D-1F-04",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "C27",
+      "C27",
+      "C28"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "30.150000",
+   "own_net": "27.910000",
+   "line_minus_own": "0.000100"
+  },
+  {
+   "room": "1F-03",
+   "statement_room": "1F-03 west bath lower 245 x 205",
+   "line_id": "L-88ed2535c1975adb702e",
+   "line": "27.9100",
+   "his_cell": "26.7",
+   "chain": [
+    "C1C",
+    "C26",
+    "C22",
+    "C25"
+   ],
+   "chain_source": "T-621 chain 1F-WBATH-1 (merged e8709e09), re-measured",
+   "face_lm": "9.0",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "D-1F-01",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "C1C",
+      "C1B",
+      "C1C"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    },
+    {
+     "id": "W19",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "C25",
+      "C25"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    }
+   ],
+   "own_gross": "30.150000",
+   "own_net": "27.910000",
+   "line_minus_own": "0.000000"
+  },
+  {
+   "room": "1F-07",
+   "statement_room": "1F-07 laundry",
+   "line_id": "L-b2077eee5a71a975bd74",
+   "line": "52.5290",
+   "his_cell": "50.55",
+   "chain": [
+    "ADB",
+    "B07",
+    "ACF",
+    "B0F",
+    "B17",
+    "B06",
+    "B14",
+    "B12"
+   ],
+   "chain_source": "T-621 chain 1F-LAUNDRY (merged e8709e09), re-measured",
+   "face_lm": "16.94",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "W21",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "ADB",
+      "ADC",
+      "ADB"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    },
+    {
+     "id": "D-1F-06",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "ACF",
+      "ACF",
+      "AD2"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    },
+    {
+     "id": "D-1F-05",
+     "kind": "door",
+     "w": "0.9",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "B17",
+      "B17",
+      "B18"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "56.749000",
+   "own_net": "52.529000",
+   "line_minus_own": "0.000000"
+  },
+  {
+   "room": "1F-08",
+   "statement_room": "1F-08 W.C. 147 x 180",
+   "line_id": "L-1090bb5c8226afec2235",
+   "line": "19.6691",
+   "his_cell": "19.44",
+   "chain": [
+    "AD3",
+    "B0E",
+    "ADA",
+    "B05"
+   ],
+   "chain_source": "T-621 chain 1F-WC-LAUNDRY (merged e8709e09), re-measured",
+   "face_lm": "6.54",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "D-1F-06",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "AD3",
+      "AD3",
+      "AD7"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    },
+    {
+     "id": "W22",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "ADA",
+      "ADA"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    }
+   ],
+   "own_gross": "21.909000",
+   "own_net": "19.669000",
+   "line_minus_own": "0.000100"
+  },
+  {
+   "room": "1F-09",
+   "statement_room": "1F-09 bath by the laundry",
+   "line_id": "L-086e72207311265f81ab",
+   "line": "23.2201",
+   "his_cell": "22.8",
+   "chain": [
+    "B02",
+    "B1F",
+    "B09",
+    "AD6"
+   ],
+   "chain_source": "T-621 chain 1F-BATH-LAUNDRY (merged e8709e09), re-measured",
+   "face_lm": "7.6",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "D-1F-07",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "B02",
+      "B02",
+      "B01"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    },
+    {
+     "id": "W23",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "B1F",
+      "B1F",
+      "B1E"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    }
+   ],
+   "own_gross": "25.460000",
+   "own_net": "23.220000",
+   "line_minus_own": "0.000100"
+  },
+  {
+   "room": "1F-12",
+   "statement_room": "1F-12 east bath 210 x 225",
+   "line_id": "L-82cd58d4a16fb94ddfc6",
+   "line": "26.3051",
+   "his_cell": "26.1",
+   "chain": [
+    "B69",
+    "C0C",
+    "C0E",
+    "B1B"
+   ],
+   "chain_source": "T-621 chain 1F-EAST-BATH (merged e8709e09), re-measured",
+   "face_lm": "8.7",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "W18",
+     "kind": "window",
+     "w": "0.5",
+     "sill": "0.84",
+     "head": "3.00",
+     "handles": [
+      "B69",
+      "B69",
+      "B6A"
+     ],
+     "height_source": "printed on the NW elevation chain, DIMENSIONs 2EEC / 2EFA (84 / 216; drawn 0.83927 / 2.16073)"
+    },
+    {
+     "id": "D-1F-10",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "C0E",
+      "C0E",
+      "C0D"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "29.145000",
+   "own_net": "26.305000",
+   "line_minus_own": "0.000100"
+  },
+  {
+   "room": "2F-02",
+   "statement_room": "2F-02 roof-floor W.C. 300 x 185",
+   "line_id": "L-065bafe1b98e3a43881c",
+   "line": "30.2550",
+   "his_cell": "29.25",
+   "chain": [
+    "127B",
+    "1296",
+    "1298",
+    "1290"
+   ],
+   "chain_source": "T-621 chain 2F-ROOF-WC (merged e8709e09), re-measured",
+   "face_lm": "9.7",
+   "open": [],
+   "H": "3.35",
+   "H_source": "Q-48 A tile top; owner formula 4.20 - 0.85 = 3.35 (G1)",
+   "openings": [
+    {
+     "id": "W28",
+     "kind": "window",
+     "w": "0.6",
+     "sill": "1.70",
+     "head": "2.50",
+     "handles": [
+      "127B",
+      "127B",
+      "127C"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (elevation, drawn geometry): sill 1.70 / head 2.50 above the floor"
+    },
+    {
+     "id": "D-2F-03",
+     "kind": "door",
+     "w": "0.8",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "1290",
+      "1290",
+      "128F"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "32.495000",
+   "own_net": "30.255000",
+   "line_minus_own": "0.000000"
+  },
+  {
+   "room": "GF-07",
+   "statement_room": "GF-07 open pantry (wet, Q-37 A)",
+   "line_id": "L-f5c5a1a9c9ee2b644cb5",
+   "line": "32.3422",
+   "his_cell": null,
+   "chain": [
+    "AE",
+    "A6",
+    "B3",
+    "158"
+   ],
+   "chain_source": "new chain (T-622)",
+   "face_lm": "10.5",
+   "open": [
+    {
+     "handle": "B3",
+     "layer": "5",
+     "lm": "4.5",
+     "on_edge": "B3"
+    }
+   ],
+   "H": "3.65",
+   "H_source": "Q-48 A tile top; owner formula 4.50 - 0.85 = 3.65 (G1)",
+   "openings": [
+    {
+     "id": "W09",
+     "kind": "window",
+     "w": "1.5",
+     "sill": "1.00",
+     "head": "2.50",
+     "handles": [
+      "AE",
+      "AE",
+      "AF"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (section A-A): sill 1.00 / head 2.50 above +1.00"
+    },
+    {
+     "id": "W10",
+     "kind": "window",
+     "w": "1.0",
+     "sill": "1.00",
+     "head": "2.50",
+     "handles": [
+      "AE",
+      "AF",
+      "B0"
+     ],
+     "height_source": "T-201 DRAWING-CONFIRMED (section A-A): sill 1.00 / head 2.50 above +1.00"
+    },
+    {
+     "id": "D-GF-06",
+     "kind": "door",
+     "w": "1.0",
+     "sill": "0",
+     "head": "2.20",
+     "handles": [
+      "158",
+      "159",
+      "158"
+     ],
+     "height_source": "Q-55 C door head 2.20 (ASSUMED - OWNER-APPROVED); width drawn"
+    }
+   ],
+   "own_gross": "38.325000",
+   "own_net": "32.375000",
+   "line_minus_own": "-0.032800",
+   "box": {
+    "handles": [
+     "5D5",
+     "5E1"
+    ],
+    "values": [
+     "3.0",
+     "4.5"
+    ]
+   }
+  }
+ ],
+ "held_rows": [
+  {
+   "row": 47,
+   "name": "GF-02 wash by the dewaneya: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "21.6",
+   "status": "HELD (untouched)",
+   "waits_on": "annex tile top: +4.30 is a roof mark (G2, Q-54 B HOLD, D-39); arch A-GF-01 head not printed"
+  },
+  {
+   "row": 48,
+   "name": "GF-03 W.C. by the dewaneya: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "22.5",
+   "status": "HELD (untouched)",
+   "waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "row": 49,
+   "name": "GF-05 driver W.C.: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "16.74",
+   "status": "HELD (untouched)",
+   "waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "row": 50,
+   "name": "GF-06 kitchen: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "43.05",
+   "status": "HELD (untouched)",
+   "waits_on": "annex tile top: +4.30 roof mark (G2, Q-54 B HOLD, D-39)"
+  },
+  {
+   "row": 51,
+   "name": "GF-10 W.C. 175 x 135 by the stair: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "18.6",
+   "status": "HELD (untouched)",
+   "waits_on": "room floor level +0.30 or +1.00 not drawn (T-088)"
+  },
+  {
+   "row": 52,
+   "name": "GF-11 basin space 110 x 135: engine line HELD (blank, never 0); his cell has no engine counterpart",
+   "delta": "15.9",
+   "status": "HELD (untouched)",
+   "waits_on": "room floor level +0.30 or +1.00 not drawn (T-088); doorway P-GF-01 head not printed"
+  }
+ ],
+ "reveal_not_in_line": {
+  "GF-14 wall end BC": "0.15 m jamb face at the open side to the stair hall; a reveal, measured separately (Q-73 answer), not in the face chain"
+ },
+ "sanitary_sheet": "Drive 'Alsenan chalet project' / sanitary-7757.pdf, 3 pages (GF / 1F / 2F drainage plans): fixtures and floor drains only; no tile height and no fixed unit excluding tile printed"
+}

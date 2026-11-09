@@ -1,0 +1,840 @@
+{
+ "beside_t571_identity": {
+  "closure_nr": 6,
+  "engine_right_nr": [
+   3,
+   5
+  ],
+  "ours_only": {
+   "1F_15": {
+    "firm": [
+     "P-1F-01"
+    ],
+    "possible": [
+     "A-1F-01",
+     "D-1F-01",
+     "D-1F-02",
+     "D-1F-03",
+     "D-1F-04",
+     "D-1F-06",
+     "D-1F-07",
+     "D-1F-10"
+    ]
+   },
+   "GF_15": {
+    "firm": [],
+    "possible": [
+     "A-GF-01",
+     "D-GF-13"
+    ]
+   },
+   "GF_EXT": {
+    "firm": [
+     "D-GF-05"
+    ],
+    "possible": []
+   },
+   "SHAFT_20": {
+    "firm": [],
+    "possible": [
+     "D-GF-08",
+     "L-1F-01",
+     "L-2F-01",
+     "L-GF-01"
+    ]
+   }
+  },
+  "why": "admissible, not chosen: his 20 cm rows repeat the same five shaft lengths on all three storeys (a stacked shaft); P-GF-01's wall GF-W14 is not stacked, D-GF-08 sits in the lift-front GF-W08"
+ },
+ "closure_nr": 6,
+ "difference_nr": 6,
+ "drawn_source": "T-581 s.2 (26 frame-block doors + 2 arch blocks, both faces) / T-601 s.2 (doorless + lift gaps)",
+ "groups": [
+  {
+   "admissible_sets": [
+    []
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "2F_EXT",
+   "keyed": [
+    {
+     "ours": "D-2F-01",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "W26",
+     "theirs_w": 1.2
+    },
+    {
+     "ours": "W27",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "W28",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W29",
+     "theirs_w": 1.2
+    }
+   ],
+   "nr": 0,
+   "ours_counted": 5,
+   "ours_only_firm": [],
+   "ours_only_k": 0,
+   "ours_only_possible": [],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 5,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    [
+     "D-GF-05"
+    ]
+   ],
+   "carried_no_lintel_unpaired": [
+    "D-GF-15",
+    "P-GF-05",
+    "SX-01",
+    "SX-03",
+    "U-01",
+    "W02",
+    "W03"
+   ],
+   "group": "GF_EXT",
+   "keyed": [
+    {
+     "ours": "D-GF-01",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "D-GF-03",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "D-GF-06",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "D-GF-09",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "W01",
+     "theirs_w": 1.2
+    },
+    {
+     "ours": "W04",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W05",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W06",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W07",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W08",
+     "theirs_w": 1.5
+    },
+    {
+     "ours": "W09",
+     "theirs_w": 1.5
+    },
+    {
+     "ours": "W10",
+     "theirs_w": 1.0
+    },
+    {
+     "ours": "W11",
+     "theirs_w": 1.95
+    },
+    {
+     "ours": "W12",
+     "theirs_w": 1.95
+    }
+   ],
+   "nr": 1,
+   "ours_counted": 16,
+   "ours_only_firm": [
+    "D-GF-05"
+   ],
+   "ours_only_k": 1,
+   "ours_only_possible": [],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 15,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    []
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "1F_EXT",
+   "keyed": [
+    {
+     "ours": "W13",
+     "theirs_w": 1.2
+    },
+    {
+     "ours": "W14",
+     "theirs_w": 2.45
+    },
+    {
+     "ours": "W15",
+     "theirs_w": 1.55
+    },
+    {
+     "ours": "W16",
+     "theirs_w": 1.55
+    },
+    {
+     "ours": "W17",
+     "theirs_w": 3.15
+    },
+    {
+     "ours": "W18",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W19",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W20",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W21",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W22",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W23",
+     "theirs_w": 0.6
+    },
+    {
+     "ours": "W24",
+     "theirs_w": 1.55
+    },
+    {
+     "ours": "W25",
+     "theirs_w": 1.0
+    }
+   ],
+   "nr": -1,
+   "ours_counted": 12,
+   "ours_only_firm": [],
+   "ours_only_k": 0,
+   "ours_only_possible": [],
+   "paired_no_lintel_ours": [
+    {
+     "ours": "W17",
+     "theirs_w": 3.15
+    }
+   ],
+   "theirs_n": 13,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    [
+     "A-1F-01",
+     "D-1F-01",
+     "D-1F-02",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-01",
+     "D-1F-03",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-02",
+     "D-1F-03",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-02",
+     "D-1F-04",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-02",
+     "D-1F-06",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-02",
+     "D-1F-07",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-02",
+     "D-1F-10",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-03",
+     "D-1F-04",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-03",
+     "D-1F-06",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-03",
+     "D-1F-07",
+     "P-1F-01"
+    ],
+    [
+     "A-1F-01",
+     "D-1F-03",
+     "D-1F-10",
+     "P-1F-01"
+    ],
+    [
+     "D-1F-01",
+     "D-1F-02",
+     "D-1F-03",
+     "P-1F-01"
+    ],
+    [
+     "D-1F-02",
+     "D-1F-03",
+     "D-1F-04",
+     "P-1F-01"
+    ],
+    [
+     "D-1F-02",
+     "D-1F-03",
+     "D-1F-06",
+     "P-1F-01"
+    ],
+    [
+     "D-1F-02",
+     "D-1F-03",
+     "D-1F-07",
+     "P-1F-01"
+    ],
+    [
+     "D-1F-02",
+     "D-1F-03",
+     "D-1F-10",
+     "P-1F-01"
+    ]
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "1F_15",
+   "keyed": [],
+   "nr": 4,
+   "ours_counted": 12,
+   "ours_only_firm": [
+    "P-1F-01"
+   ],
+   "ours_only_k": 4,
+   "ours_only_possible": [
+    "A-1F-01",
+    "D-1F-01",
+    "D-1F-02",
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-06",
+    "D-1F-07",
+    "D-1F-10"
+   ],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 8,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    []
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "2F_15",
+   "keyed": [],
+   "nr": 0,
+   "ours_counted": 2,
+   "ours_only_firm": [],
+   "ours_only_k": 0,
+   "ours_only_possible": [],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 2,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    [
+     "A-GF-01",
+     "P-GF-01"
+    ],
+    [
+     "D-GF-13",
+     "P-GF-01"
+    ]
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "GF_15",
+   "keyed": [],
+   "nr": 2,
+   "ours_counted": 9,
+   "ours_only_firm": [
+    "P-GF-01"
+   ],
+   "ours_only_k": 2,
+   "ours_only_possible": [
+    "A-GF-01",
+    "D-GF-13"
+   ],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 7,
+   "theirs_only": 0
+  },
+  {
+   "admissible_sets": [
+    []
+   ],
+   "carried_no_lintel_unpaired": [],
+   "group": "SHAFT_20",
+   "keyed": [],
+   "nr": 0,
+   "ours_counted": 4,
+   "ours_only_firm": [],
+   "ours_only_k": 0,
+   "ours_only_possible": [],
+   "paired_no_lintel_ours": [],
+   "theirs_n": 4,
+   "theirs_only": 0
+  }
+ ],
+ "inputs": {
+  "census": {
+   "path": "research/agents_t198/OPENINGS_T198.csv",
+   "sha16": "d79e6aa5d23edc0e"
+  },
+  "ledger": {
+   "path": "research/agents_t453/out/MATERIAL_LEDGER_T453.json",
+   "sha16": "ad9bceee3bfdbc12"
+  },
+  "t571": {
+   "path": "research/agents_t571/out/T571_LINTEL_COUNT.json",
+   "sha16": "ede7c1fd982e42f9"
+  }
+ },
+ "keys_skipped": [
+  {
+   "id": "W02",
+   "key": "ALU-GF-W6.33",
+   "w": 6.33,
+   "why": "his aluminium-workbook key width is not in his deduction list of this group"
+  },
+  {
+   "id": "W03",
+   "key": "ALU-GF-W6.57",
+   "w": 6.57,
+   "why": "his aluminium-workbook key width is not in his deduction list of this group"
+  }
+ ],
+ "keys_used": [
+  "D-2F-01",
+  "D-GF-01",
+  "D-GF-03",
+  "D-GF-06",
+  "D-GF-09",
+  "W01",
+  "W04",
+  "W05",
+  "W06",
+  "W07",
+  "W08",
+  "W09",
+  "W10",
+  "W11",
+  "W12",
+  "W13",
+  "W14",
+  "W15",
+  "W16",
+  "W17",
+  "W18",
+  "W19",
+  "W20",
+  "W21",
+  "W22",
+  "W23",
+  "W24",
+  "W25",
+  "W26",
+  "W27",
+  "W28",
+  "W29"
+ ],
+ "ours_nr": 60,
+ "ours_only_firm": [
+  "D-GF-05",
+  "P-1F-01",
+  "P-GF-01"
+ ],
+ "ours_only_possible": [
+  "A-1F-01",
+  "A-GF-01",
+  "D-1F-01",
+  "D-1F-02",
+  "D-1F-03",
+  "D-1F-04",
+  "D-1F-06",
+  "D-1F-07",
+  "D-1F-10",
+  "D-GF-13"
+ ],
+ "requirement": {
+  "A-1F-01": {
+   "beam_source": "S8.6 LT-OP-1F-018 (faces AD0/AD1/AD4/AD5): both bearings drawn masonry >= 400 mm, no beam band",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W16",
+   "kind": "OPENING",
+   "ledger_decision": "HELD",
+   "lo": 1,
+   "piece_m": 1.5,
+   "wall_t_m": 0.15,
+   "why": "masonry host, bounded head (ARCH_DRAWN), no member over it"
+  },
+  "A-GF-01": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "GF-W26",
+   "kind": "OPENING",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.5,
+   "wall_t_m": 0.15,
+   "why": "head ARCH_DRAWN / member over it UNKNOWN: not established"
+  },
+  "D-1F-01": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "1F-W11",
+   "kind": "DOOR",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.2,
+   "wall_t_m": 0.15,
+   "why": "head DOOR_FRAME / member over it UNKNOWN: not established"
+  },
+  "D-1F-02": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W23",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.5,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 0.99 m to spare after the lintel depth"
+  },
+  "D-1F-03": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W12",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.5,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 1.24 m to spare after the lintel depth"
+  },
+  "D-1F-04": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W23",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.2,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 0.99 m to spare after the lintel depth"
+  },
+  "D-1F-06": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "1F-W16",
+   "kind": "DOOR",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.2,
+   "wall_t_m": 0.15,
+   "why": "head DOOR_FRAME / member over it UNKNOWN: not established"
+  },
+  "D-1F-07": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W19",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.2,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 1.58 m to spare after the lintel depth"
+  },
+  "D-1F-10": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W17",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.2,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 1.24 m to spare after the lintel depth"
+  },
+  "D-GF-05": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "GF-W17",
+   "kind": "DOOR",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.5,
+   "wall_t_m": 0.2,
+   "why": "head DOOR_FRAME / member over it UNKNOWN: not established"
+  },
+  "D-GF-13": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "GF-W28",
+   "kind": "DOOR",
+   "ledger_decision": "REQUIRED",
+   "lo": 1,
+   "piece_m": 1.5,
+   "wall_t_m": 0.15,
+   "why": "door head below the lowest soffit with 1.29 m to spare after the lintel depth"
+  },
+  "L-GF-01": {
+   "beam_source": "no trace of the member over the opening in a record",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "GF-W08",
+   "kind": "LIFT",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.5,
+   "wall_t_m": 0.2,
+   "why": "head NONE / member over it UNKNOWN: not established"
+  },
+  "P-1F-01": {
+   "beam_source": "S8.6 LT-OP-1F-021 (faces C09-C0C): L2 under no structural member; T-198: lintel + masonry to the soffit built above it",
+   "decision": "REQUIRED",
+   "hi": 1,
+   "host_wall": "1F-W14 + 1F-W15",
+   "kind": "OPENING",
+   "ledger_decision": "HELD",
+   "lo": 1,
+   "piece_m": 2.5,
+   "wall_t_m": 0.15,
+   "why": "masonry host, bounded head (HEADER_LINES), no member over it"
+  },
+  "P-GF-01": {
+   "beam_source": "S8.6 OP-GF-020 / T-198: an S1 beam band over the whole width, head not printed (Q-HEAD-UNDER-BEAM)",
+   "decision": "UNRESOLVED",
+   "hi": 1,
+   "host_wall": "GF-W14",
+   "kind": "OPENING",
+   "ledger_decision": "HELD",
+   "lo": 0,
+   "piece_m": 1.2,
+   "wall_t_m": 0.2,
+   "why": "a structural member over the full width, head not printed: at its soffit 0, below it 1"
+  },
+  "W17": {
+   "decision": "NO_STRAIGHT_PIECE",
+   "hi": 0,
+   "kind": "WINDOW",
+   "ledger_decision": "NO_LINTEL",
+   "lo": 0,
+   "note": "T-302: elevation draws wall round the hole; head vs CB12 (0.75) soffit = DCR-3; the head support (CB12 or a curved cast element) stays HELD by name, never a piece",
+   "sagitta_m": 0.711,
+   "why": "curved on plan: chord sagitta 0.711 m > band room 0.000 m; head support is a design item (HELD by name), never a stock piece"
+  }
+ },
+ "rule": "R-T616-1",
+ "statement_row": "T-571/lintel-count-implied (V10): his 54 vs engine 60 AT_MOST, -6 nr",
+ "summary": {
+  "at_most_basis": "every ours-only candidate is a drawn opening in a masonry wall: ENGINE_RIGHT; W17 takes no straight piece: ENGINE_RIGHT; residual 0 nr on the AT_MOST basis",
+  "established_basis_ours_only_engine_right_nr": [
+   3,
+   5
+  ],
+  "established_basis_unresolved_nr": [
+   2,
+   4
+  ],
+  "statement_sign_his_minus_ours": {
+   "ENGINE_RIGHT": [
+    -4,
+    -2
+   ],
+   "UNRESOLVED": [
+    -4,
+    -2
+   ],
+   "total": -6
+  },
+  "their_piece_engine_right_nr": 1
+ },
+ "t571_engine_only": [
+  "A-1F-01",
+  "D-1F-02",
+  "D-1F-03",
+  "D-GF-05",
+  "D-GF-13",
+  "L-GF-01",
+  "P-1F-01"
+ ],
+ "theirs_nr": 54,
+ "verdicts": [
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    0
+   ],
+   "group": "2F_EXT",
+   "ours_only_k": 0,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    0,
+    0
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    0
+   ],
+   "group": "GF_EXT",
+   "ours_only_k": 1,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    1,
+    1
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    0
+   ],
+   "group": "1F_EXT",
+   "ours_only_k": 0,
+   "their_piece_on_no_lintel": [
+    {
+     "decision": "NO_STRAIGHT_PIECE",
+     "ours": "W17",
+     "verdict": "ENGINE_RIGHT"
+    }
+   ],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    0,
+    0
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    3,
+    4
+   ],
+   "group": "1F_15",
+   "ours_only_k": 4,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    0,
+    1
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    0
+   ],
+   "group": "2F_15",
+   "ours_only_k": 0,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    0,
+    0
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    1
+   ],
+   "group": "GF_15",
+   "ours_only_k": 2,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    1,
+    2
+   ]
+  },
+  {
+   "at_most_verdict": "ENGINE_RIGHT",
+   "engine_right_nr": [
+    0,
+    0
+   ],
+   "group": "SHAFT_20",
+   "ours_only_k": 0,
+   "their_piece_on_no_lintel": [],
+   "theirs_only_unresolved": 0,
+   "unresolved_nr": [
+    0,
+    0
+   ]
+  }
+ ]
+}

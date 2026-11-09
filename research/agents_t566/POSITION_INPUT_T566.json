@@ -1,0 +1,2408 @@
+{
+ "schema": "T566_POSITION_INPUT_V1",
+ "source_file": {
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (Drive 'Alsenan chalet project')"
+ },
+ "binding": "own read: per-sheet minimum-total-distance label -> outline assignment; positions = FP outlines",
+ "pitch_mm": 38724.0,
+ "frame_shift_onto_FP_mm": {
+  "FP": 0.0,
+  "CAP": -38724.0,
+  "CAP_votes": 34,
+  "GBP": 38724.0,
+  "GBP_votes": 29,
+  "GFRS": 77449.0,
+  "GFRS_votes": 5,
+  "FFRS": 116173.0,
+  "FFRS_votes": 5,
+  "SFRS": 154898.0,
+  "SFRS_votes": 3
+ },
+ "counts": {
+  "FP": 36,
+  "CAP": 35,
+  "GBP": 36,
+  "GFRS": 34,
+  "FFRS": 21,
+  "SFRS": 9
+ },
+ "labels_unbound": {
+  "FP": [],
+  "CAP": [
+   "1B82"
+  ],
+  "GBP": []
+ },
+ "slab_frame_mark_like_texts": {
+  "GFRS": [
+   {
+    "text": "C",
+    "handle": "173A",
+    "layer": "S-SEC-TEXT"
+   }
+  ],
+  "FFRS": [],
+  "SFRS": []
+ },
+ "schedule": {
+  "C": {
+   "handle": "1D03",
+   "bands": {
+    "FOU": [
+     30,
+     50
+    ],
+    "GR": [
+     20,
+     50
+    ],
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "C1": {
+   "handle": "1D32",
+   "bands": {
+    "FOU": [
+     30,
+     50
+    ],
+    "GR": [
+     20,
+     50
+    ],
+    "1ST": [
+     20,
+     50
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C2": {
+   "handle": "1D46",
+   "bands": {
+    "FOU": [
+     30,
+     50
+    ],
+    "GR": [
+     20,
+     50
+    ],
+    "1ST": [
+     20,
+     50
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C3": {
+   "handle": "1D5A",
+   "bands": {
+    "FOU": [
+     30,
+     50
+    ],
+    "GR": [
+     25,
+     50
+    ],
+    "1ST": [
+     20,
+     50
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C4": {
+   "handle": "1D6E",
+   "bands": {
+    "FOU": [
+     30,
+     50
+    ],
+    "GR": [
+     25,
+     50
+    ],
+    "1ST": [
+     20,
+     50
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C5": {
+   "handle": "1D82",
+   "bands": {
+    "FOU": [
+     30,
+     60
+    ],
+    "GR": [
+     25,
+     60
+    ],
+    "1ST": [
+     20,
+     50
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C6": {
+   "handle": "1D96",
+   "bands": {
+    "FOU": [
+     30,
+     70
+    ],
+    "GR": [
+     25,
+     70
+    ],
+    "1ST": [
+     20,
+     60
+    ],
+    "2ND": [
+     20,
+     50
+    ]
+   }
+  },
+  "C7": {
+   "handle": "1DAA",
+   "bands": {
+    "FOU": [
+     30,
+     80
+    ],
+    "GR": [
+     25,
+     80
+    ],
+    "1ST": [
+     20,
+     80
+    ],
+    "2ND": [
+     20,
+     60
+    ]
+   }
+  },
+  "C8": {
+   "handle": "1DBE",
+   "bands": {
+    "FOU": [
+     30,
+     90
+    ],
+    "GR": [
+     25,
+     90
+    ],
+    "1ST": [
+     20,
+     90
+    ],
+    "2ND": [
+     20,
+     70
+    ]
+   }
+  },
+  "C9": {
+   "handle": "1DD2",
+   "bands": {
+    "FOU": [
+     30,
+     100
+    ],
+    "GR": [
+     25,
+     100
+    ],
+    "1ST": [
+     20,
+     90
+    ],
+    "2ND": [
+     20,
+     70
+    ]
+   }
+  },
+  "C10": {
+   "handle": "1DE6",
+   "bands": {
+    "FOU": [
+     30,
+     70
+    ],
+    "GR": [
+     25,
+     70
+    ],
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "C11": {
+   "handle": "1DFA",
+   "bands": {
+    "FOU": [
+     30,
+     110
+    ],
+    "GR": [
+     25,
+     110
+    ],
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "CN": {
+   "handle": "TEXT row (T-075)",
+   "bands": {
+    "FOU": [
+     30,
+     30
+    ],
+    "GR": null,
+    "1ST": null,
+    "2ND": null
+   }
+  }
+ },
+ "positions": [
+  {
+   "position": "1084",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C2/F2",
+     "mark": "C2",
+     "handle": "1675",
+     "outline": "1084",
+     "dist_mm": 970.0
+    },
+    "CAP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1061",
+     "outline": "817",
+     "dist_mm": 1700.0
+    },
+    "GBP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1DD",
+     "outline": "1DC",
+     "dist_mm": 1010.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1062",
+    "dist_mm": 2100.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "32C",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "66D",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "40F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1084",
+    "CAP": "817",
+    "GBP": "1DC"
+   }
+  },
+  {
+   "position": "1087",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C2/F2",
+     "mark": "C2",
+     "handle": "1674",
+     "outline": "1087",
+     "dist_mm": 920.0
+    },
+    "CAP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1063",
+     "outline": "821",
+     "dist_mm": 620.0
+    },
+    "GBP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1E1",
+     "outline": "1E0",
+     "dist_mm": 370.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1064",
+    "dist_mm": 330.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "32F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "670",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "412",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1087",
+    "CAP": "821",
+    "GBP": "1E0"
+   }
+  },
+  {
+   "position": "108A",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "labels": {
+    "FP": {
+     "text": "C5/F5",
+     "mark": "C5",
+     "handle": "1673",
+     "outline": "108A",
+     "dist_mm": 880.0
+    },
+    "CAP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "1069",
+     "outline": "826",
+     "dist_mm": 680.0
+    },
+    "GBP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "1E5",
+     "outline": "1E4",
+     "dist_mm": 670.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 60,
+    "handle": "106A",
+    "dist_mm": 1220.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "332",
+     "section_mm": [
+      250,
+      600
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "673",
+     "section_mm": [
+      250,
+      600
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "415",
+     "section_mm": [
+      200,
+      600
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "108A",
+    "CAP": "826",
+    "GBP": "1E4"
+   }
+  },
+  {
+   "position": "108D",
+   "neck_drawn_mm": [
+    250,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C4/F4",
+     "mark": "C4",
+     "handle": "1671",
+     "outline": "108D",
+     "dist_mm": 910.0
+    },
+    "CAP": {
+     "text": "C4",
+     "mark": "C4",
+     "handle": "1067",
+     "outline": "82A",
+     "dist_mm": 1010.0
+    },
+    "GBP": {
+     "text": "C4",
+     "mark": "C4",
+     "handle": "1E9",
+     "outline": "1E8",
+     "dist_mm": 720.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1068",
+    "dist_mm": 890.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "335",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "676",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "108D",
+    "CAP": "82A",
+    "GBP": "1E8"
+   }
+  },
+  {
+   "position": "1090",
+   "neck_drawn_mm": [
+    250,
+    1000
+   ],
+   "labels": {
+    "FP": {
+     "text": "C9",
+     "mark": "C9",
+     "handle": "109A",
+     "outline": "1090",
+     "dist_mm": 800.0
+    },
+    "CAP": {
+     "text": "C9",
+     "mark": "C9",
+     "handle": "1075",
+     "outline": "82E",
+     "dist_mm": 590.0
+    },
+    "GBP": {
+     "text": "C9",
+     "mark": "C9",
+     "handle": "1F6",
+     "outline": "1EC",
+     "dist_mm": 800.0
+    }
+   },
+   "size_text_cm": {
+    "W": 25,
+    "D": 100,
+    "handle": "1076",
+    "dist_mm": 440.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "338",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "679",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "418",
+     "section_mm": [
+      200,
+      700
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1090",
+    "CAP": "82E",
+    "GBP": "1EC"
+   }
+  },
+  {
+   "position": "1093",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "109C",
+     "outline": "1093",
+     "dist_mm": 800.0
+    },
+    "CAP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1077",
+     "outline": "831",
+     "dist_mm": 740.0
+    },
+    "GBP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1F8",
+     "outline": "1EF",
+     "dist_mm": 800.0
+    }
+   },
+   "size_text_cm": {
+    "W": 20,
+    "D": 50,
+    "handle": "1078",
+    "dist_mm": 250.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "33B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "67C",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "41B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1093",
+    "CAP": "831",
+    "GBP": "1EF"
+   }
+  },
+  {
+   "position": "1096",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "109B",
+     "outline": "1096",
+     "dist_mm": 110.0
+    },
+    "CAP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "107B",
+     "outline": "834",
+     "dist_mm": 840.0
+    },
+    "GBP": {
+     "text": "C2",
+     "mark": "C2",
+     "handle": "1F7",
+     "outline": "1F2",
+     "dist_mm": 110.0
+    }
+   },
+   "size_text_cm": {
+    "W": 20,
+    "D": 50,
+    "handle": "107C",
+    "dist_mm": 1370.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "33E",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "67F",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "41E",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1096",
+    "CAP": "834",
+    "GBP": "1F2"
+   }
+  },
+  {
+   "position": "1099",
+   "neck_drawn_mm": [
+    200,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C1",
+     "mark": "C1",
+     "handle": "109D",
+     "outline": "1099",
+     "dist_mm": 350.0
+    },
+    "CAP": {
+     "text": "C1",
+     "mark": "C1",
+     "handle": "1079",
+     "outline": "837",
+     "dist_mm": 1530.0
+    },
+    "GBP": {
+     "text": "C1",
+     "mark": "C1",
+     "handle": "1F9",
+     "outline": "1F5",
+     "dist_mm": 350.0
+    }
+   },
+   "size_text_cm": {
+    "W": 20,
+    "D": 50,
+    "handle": "107A",
+    "dist_mm": 1280.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "341",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "682",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "421",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "1099",
+    "CAP": "837",
+    "GBP": "1F5"
+   }
+  },
+  {
+   "position": "10A0",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "10A1",
+     "outline": "10A0",
+     "dist_mm": 840.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "106F",
+     "outline": "83C",
+     "dist_mm": 740.0
+    },
+    "GBP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "1FD",
+     "outline": "1FC",
+     "dist_mm": 1020.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1070",
+    "dist_mm": 1270.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "344",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10A0",
+    "CAP": "83C",
+    "GBP": "1FC"
+   }
+  },
+  {
+   "position": "10A4",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "166E",
+     "outline": "10A4",
+     "dist_mm": 230.0
+    },
+    "CAP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "105B",
+     "outline": "840",
+     "dist_mm": 1600.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "201",
+     "outline": "200",
+     "dist_mm": 720.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "105C",
+    "dist_mm": 1290.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "347",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10A4",
+    "CAP": "840",
+    "GBP": "200"
+   }
+  },
+  {
+   "position": "10A8",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C/F",
+     "mark": "C",
+     "handle": "blk:167F",
+     "outline": "10A8",
+     "dist_mm": 290.0
+    },
+    "CAP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "84D",
+     "outline": "844",
+     "dist_mm": 840.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "20C",
+     "outline": "204",
+     "dist_mm": 440.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1003",
+    "dist_mm": 1390.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "34A",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10A8",
+    "CAP": "844",
+    "GBP": "204"
+   }
+  },
+  {
+   "position": "10AB",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C/F",
+     "mark": "C",
+     "handle": "blk:1680",
+     "outline": "10AB",
+     "dist_mm": 320.0
+    },
+    "CAP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "1008",
+     "outline": "849",
+     "dist_mm": 830.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "208",
+     "outline": "207",
+     "dist_mm": 230.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1009",
+    "dist_mm": 400.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "34D",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10AB",
+    "CAP": "849",
+    "GBP": "207"
+   }
+  },
+  {
+   "position": "10AE",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "1681",
+     "outline": "10AE",
+     "dist_mm": 550.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "100A",
+     "outline": "84C",
+     "dist_mm": 820.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "20D",
+     "outline": "20B",
+     "dist_mm": 260.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "100B",
+    "dist_mm": 380.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "350",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10AE",
+    "CAP": "84C",
+    "GBP": "20B"
+   }
+  },
+  {
+   "position": "10B1",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3/F3",
+     "mark": "C3",
+     "handle": "168F",
+     "outline": "10B1",
+     "dist_mm": 760.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "1006",
+     "outline": "853",
+     "dist_mm": 830.0
+    },
+    "GBP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "20E",
+     "outline": "211",
+     "dist_mm": 320.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1007",
+    "dist_mm": 1380.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "353",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10B1",
+    "CAP": "853",
+    "GBP": "211"
+   }
+  },
+  {
+   "position": "10B4",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C/F",
+     "mark": "C",
+     "handle": "blk:1678",
+     "outline": "10B4",
+     "dist_mm": 610.0
+    },
+    "CAP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "1004",
+     "outline": "856",
+     "dist_mm": 1180.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "215",
+     "outline": "214",
+     "dist_mm": 640.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1005",
+    "dist_mm": 570.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "356",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10B4",
+    "CAP": "856",
+    "GBP": "214"
+   }
+  },
+  {
+   "position": "10B7",
+   "neck_drawn_mm": [
+    300,
+    400
+   ],
+   "labels": {
+    "FP": {
+     "text": "C/F",
+     "mark": "C",
+     "handle": "blk:1682",
+     "outline": "10B7",
+     "dist_mm": 520.0
+    },
+    "CAP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "100C",
+     "outline": "85B",
+     "dist_mm": 1010.0
+    },
+    "GBP": {
+     "text": "C",
+     "mark": "C",
+     "handle": "blk:219",
+     "outline": "218",
+     "dist_mm": 230.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "100D",
+    "dist_mm": 420.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "359",
+     "section_mm": [
+      200,
+      400
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10B7",
+    "CAP": "85B",
+    "GBP": "218"
+   }
+  },
+  {
+   "position": "10BA",
+   "neck_drawn_mm": [
+    300,
+    1100
+   ],
+   "labels": {
+    "FP": {
+     "text": "C11",
+     "mark": "C11",
+     "handle": "10BF",
+     "outline": "10BA",
+     "dist_mm": 760.0
+    },
+    "CAP": {
+     "text": "C11",
+     "mark": "C11",
+     "handle": "1012",
+     "outline": "85E",
+     "dist_mm": 700.0
+    },
+    "GBP": {
+     "text": "C11",
+     "mark": "C11",
+     "handle": "225",
+     "outline": "220",
+     "dist_mm": 570.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 110,
+    "handle": "1013",
+    "dist_mm": 1240.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "35C",
+     "section_mm": [
+      250,
+      1100
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10BA",
+    "CAP": "85E",
+    "GBP": "220"
+   }
+  },
+  {
+   "position": "10BD",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "labels": {
+    "FP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "10BE",
+     "outline": "10BD",
+     "dist_mm": 1010.0
+    },
+    "CAP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "1010",
+     "outline": "862",
+     "dist_mm": 1780.0
+    },
+    "GBP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "224",
+     "outline": "223",
+     "dist_mm": 1010.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 60,
+    "handle": "1011",
+    "dist_mm": 2170.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "35F",
+     "section_mm": [
+      250,
+      600
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "685",
+     "section_mm": [
+      200,
+      600
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10BD",
+    "CAP": "862",
+    "GBP": "223"
+   }
+  },
+  {
+   "position": "10C2",
+   "neck_drawn_mm": [
+    300,
+    700
+   ],
+   "labels": {
+    "FP": {
+     "text": "C6/F6",
+     "mark": "C6",
+     "handle": "168D",
+     "outline": "10C2",
+     "dist_mm": 1000.0
+    },
+    "CAP": {
+     "text": "C6",
+     "mark": "C6",
+     "handle": "1014",
+     "outline": "865",
+     "dist_mm": 750.0
+    },
+    "GBP": {
+     "text": "C6",
+     "mark": "C6",
+     "handle": "229",
+     "outline": "228",
+     "dist_mm": 280.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 70,
+    "handle": "1015",
+    "dist_mm": 380.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "362",
+     "section_mm": [
+      250,
+      700
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "688",
+     "section_mm": [
+      250,
+      700
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10C2",
+    "CAP": "865",
+    "GBP": "228"
+   }
+  },
+  {
+   "position": "10C5",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3/F3",
+     "mark": "C3",
+     "handle": "168E",
+     "outline": "10C5",
+     "dist_mm": 750.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "100E",
+     "outline": "868",
+     "dist_mm": 1920.0
+    },
+    "GBP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "22D",
+     "outline": "22C",
+     "dist_mm": 390.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "100F",
+    "dist_mm": 2240.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "365",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "68B",
+     "section_mm": [
+      200,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10C5",
+    "CAP": "868",
+    "GBP": "22C"
+   }
+  },
+  {
+   "position": "10C8",
+   "neck_drawn_mm": [
+    300,
+    800
+   ],
+   "labels": {
+    "FP": {
+     "text": "C7",
+     "mark": "C7",
+     "handle": "10C9",
+     "outline": "10C8",
+     "dist_mm": 620.0
+    },
+    "CAP": {
+     "text": "C7",
+     "mark": "C7",
+     "handle": "105D",
+     "outline": "86C",
+     "dist_mm": 780.0
+    },
+    "GBP": {
+     "text": "C7",
+     "mark": "C7",
+     "handle": "231",
+     "outline": "230",
+     "dist_mm": 460.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 80,
+    "handle": "105E",
+    "dist_mm": 1320.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "368",
+     "section_mm": [
+      250,
+      800
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "68E",
+     "section_mm": [
+      250,
+      800
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10C8",
+    "CAP": "86C",
+    "GBP": "230"
+   }
+  },
+  {
+   "position": "10CC",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "10CD",
+     "outline": "10CC",
+     "dist_mm": 790.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "105F",
+     "outline": "870",
+     "dist_mm": 1960.0
+    },
+    "GBP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "235",
+     "outline": "234",
+     "dist_mm": 870.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1060",
+    "dist_mm": 2270.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "36B",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "691",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "2F": {
+     "sheet": "SFRS",
+     "handle": "424",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10CC",
+    "CAP": "870",
+    "GBP": "234"
+   }
+  },
+  {
+   "position": "10D0",
+   "neck_drawn_mm": [
+    300,
+    900
+   ],
+   "labels": {
+    "FP": {
+     "text": "C8",
+     "mark": "C8",
+     "handle": "1670",
+     "outline": "10D0",
+     "dist_mm": 810.0
+    },
+    "CAP": {
+     "text": "C8",
+     "mark": "C8",
+     "handle": "106D",
+     "outline": "873",
+     "dist_mm": 1270.0
+    },
+    "GBP": {
+     "text": "C8",
+     "mark": "C8",
+     "handle": "239",
+     "outline": "238",
+     "dist_mm": 740.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 90,
+    "handle": "106E",
+    "dist_mm": 1800.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "36E",
+     "section_mm": [
+      250,
+      900
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "664",
+     "section_mm": [
+      200,
+      900
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10D0",
+    "CAP": "873",
+    "GBP": "238"
+   },
+   "starts_here": [
+    {
+     "sheet": "GFRS",
+     "handle": "31B",
+     "section_mm": [
+      200,
+      900
+     ],
+     "hatch": "PATTERN"
+    }
+   ]
+  },
+  {
+   "position": "10D3",
+   "neck_drawn_mm": [
+    300,
+    600
+   ],
+   "labels": {
+    "FP": {
+     "text": "C5/F5",
+     "mark": "C5",
+     "handle": "166F",
+     "outline": "10D3",
+     "dist_mm": 950.0
+    },
+    "CAP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "101C",
+     "outline": "878",
+     "dist_mm": 720.0
+    },
+    "GBP": {
+     "text": "C5",
+     "mark": "C5",
+     "handle": "23D",
+     "outline": "23C",
+     "dist_mm": 510.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 60,
+    "handle": "101D",
+    "dist_mm": 1260.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "374",
+     "section_mm": [
+      250,
+      600
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "694",
+     "section_mm": [
+      250,
+      600
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10D3",
+    "CAP": "878",
+    "GBP": "23C"
+   }
+  },
+  {
+   "position": "10D7",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C4/F4",
+     "mark": "C4",
+     "handle": "1672",
+     "outline": "10D7",
+     "dist_mm": 920.0
+    },
+    "CAP": {
+     "text": "C4",
+     "mark": "C4",
+     "handle": "1065",
+     "outline": "87C",
+     "dist_mm": 720.0
+    },
+    "GBP": {
+     "text": "C4",
+     "mark": "C4",
+     "handle": "242",
+     "outline": "241",
+     "dist_mm": 740.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1066",
+    "dist_mm": 1260.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "377",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "697",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10D7",
+    "CAP": "87C",
+    "GBP": "241"
+   }
+  },
+  {
+   "position": "10DA",
+   "neck_drawn_mm": [
+    300,
+    1000
+   ],
+   "labels": {
+    "FP": {
+     "text": "C9/F9",
+     "mark": "C9",
+     "handle": "1677",
+     "outline": "10DA",
+     "dist_mm": 950.0
+    },
+    "CAP": {
+     "text": "C9",
+     "mark": "C9",
+     "handle": "106B",
+     "outline": "880",
+     "dist_mm": 750.0
+    },
+    "GBP": {
+     "text": "C9",
+     "mark": "C9",
+     "handle": "246",
+     "outline": "245",
+     "dist_mm": 370.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 100,
+    "handle": "106C",
+    "dist_mm": 1300.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "37A",
+     "section_mm": [
+      250,
+      1000
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "667",
+     "section_mm": [
+      200,
+      1000
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10DA",
+    "CAP": "880",
+    "GBP": "245"
+   },
+   "starts_here": [
+    {
+     "sheet": "GFRS",
+     "handle": "322",
+     "section_mm": [
+      200,
+      1000
+     ],
+     "hatch": "PATTERN"
+    }
+   ]
+  },
+  {
+   "position": "10DD",
+   "neck_drawn_mm": [
+    300,
+    1100
+   ],
+   "labels": {
+    "FP": {
+     "text": "C11/F11",
+     "mark": "C11",
+     "handle": "blk:1684",
+     "outline": "10DD",
+     "dist_mm": 2600.0
+    },
+    "CAP": {
+     "text": "C11",
+     "mark": "C11",
+     "handle": "1016",
+     "outline": "883",
+     "dist_mm": 1440.0
+    },
+    "GBP": {
+     "text": "C11",
+     "mark": "C11",
+     "handle": "24A",
+     "outline": "249",
+     "dist_mm": 450.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 110,
+    "handle": "1017",
+    "dist_mm": 1210.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "37D",
+     "section_mm": [
+      250,
+      1100
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10DD",
+    "CAP": "883",
+    "GBP": "249"
+   }
+  },
+  {
+   "position": "10E0",
+   "neck_drawn_mm": [
+    300,
+    800
+   ],
+   "labels": {
+    "FP": {
+     "text": "C8",
+     "mark": "C8",
+     "handle": "10E1",
+     "outline": "10E0",
+     "dist_mm": 610.0
+    },
+    "CAP": {
+     "text": "C8",
+     "mark": "C8",
+     "handle": "101A",
+     "outline": "886",
+     "dist_mm": 1330.0
+    },
+    "GBP": {
+     "text": "C7",
+     "mark": "C7",
+     "handle": "24E",
+     "outline": "24D",
+     "dist_mm": 860.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 80,
+    "handle": "101B",
+    "dist_mm": 1180.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "380",
+     "section_mm": [
+      250,
+      800
+     ],
+     "hatch": "SOLID"
+    },
+    "1F": {
+     "sheet": "FFRS",
+     "handle": "69A",
+     "section_mm": [
+      250,
+      800
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10E0",
+    "CAP": "886",
+    "GBP": "24D"
+   }
+  },
+  {
+   "position": "10E4",
+   "neck_drawn_mm": [
+    300,
+    500
+   ],
+   "labels": {
+    "FP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "10E5",
+     "outline": "10E4",
+     "dist_mm": 980.0
+    },
+    "CAP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "1018",
+     "outline": "88A",
+     "dist_mm": 2370.0
+    },
+    "GBP": {
+     "text": "C3",
+     "mark": "C3",
+     "handle": "252",
+     "outline": "251",
+     "dist_mm": 980.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 50,
+    "handle": "1019",
+    "dist_mm": 2700.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "383",
+     "section_mm": [
+      250,
+      500
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10E4",
+    "CAP": "88A",
+    "GBP": "251"
+   }
+  },
+  {
+   "position": "10E8",
+   "neck_drawn_mm": [
+    300,
+    700
+   ],
+   "labels": {
+    "FP": {
+     "text": "C10",
+     "mark": "C10",
+     "handle": "10D4",
+     "outline": "10E8",
+     "dist_mm": 320.0
+    },
+    "CAP": {
+     "text": "C10",
+     "mark": "C10",
+     "handle": "1059",
+     "outline": "88D",
+     "dist_mm": 1430.0
+    },
+    "GBP": {
+     "text": "C10",
+     "mark": "C10",
+     "handle": "23E",
+     "outline": "255",
+     "dist_mm": 990.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 70,
+    "handle": "105A",
+    "dist_mm": 1330.0
+   },
+   "members": {
+    "GF": {
+     "sheet": "GFRS",
+     "handle": "371",
+     "section_mm": [
+      250,
+      700
+     ],
+     "hatch": "SOLID"
+    }
+   },
+   "drawn_on": {
+    "FP": "10E8",
+    "CAP": "88D",
+    "GBP": "255"
+   }
+  },
+  {
+   "position": "10EE",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "10ED",
+     "outline": "10EE",
+     "dist_mm": 500.0
+    },
+    "CAP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "1073",
+     "outline": "88F",
+     "dist_mm": 670.0
+    },
+    "GBP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "7EC",
+     "outline": "7ED",
+     "dist_mm": 980.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 30,
+    "handle": "1074",
+    "dist_mm": 680.0
+   },
+   "members": {},
+   "drawn_on": {
+    "FP": "10EE",
+    "CAP": "88F",
+    "GBP": "7ED"
+   }
+  },
+  {
+   "position": "10F6",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "10F5",
+     "outline": "10F6",
+     "dist_mm": 1150.0
+    },
+    "CAP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17B6",
+     "outline": "892",
+     "dist_mm": 660.0
+    },
+    "GBP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "7F4",
+     "outline": "7F5",
+     "dist_mm": 980.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 30,
+    "handle": "17B7",
+    "dist_mm": 680.0
+   },
+   "members": {},
+   "drawn_on": {
+    "FP": "10F6",
+    "CAP": "892",
+    "GBP": "7F5"
+   }
+  },
+  {
+   "position": "10FE",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "10FD",
+     "outline": "10FE",
+     "dist_mm": 840.0
+    },
+    "CAP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "1071",
+     "outline": "895",
+     "dist_mm": 1470.0
+    },
+    "GBP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "808",
+     "outline": "809",
+     "dist_mm": 2800.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 30,
+    "handle": "1072",
+    "dist_mm": 1200.0
+   },
+   "members": {},
+   "drawn_on": {
+    "FP": "10FE",
+    "CAP": "895",
+    "GBP": "809"
+   }
+  },
+  {
+   "position": "17C5",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17C9",
+     "outline": "17C5",
+     "dist_mm": 860.0
+    },
+    "CAP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17D2",
+     "outline": "17CC",
+     "dist_mm": 1350.0
+    },
+    "GBP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17C2",
+     "outline": "17BD",
+     "dist_mm": 760.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 30,
+    "handle": "17D3",
+    "dist_mm": 1590.0
+   },
+   "members": {},
+   "drawn_on": {
+    "FP": "17C5",
+    "CAP": "17CC",
+    "GBP": "17BD"
+   }
+  },
+  {
+   "position": "17C8",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17CA",
+     "outline": "17C8",
+     "dist_mm": 770.0
+    },
+    "CAP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17D0",
+     "outline": "17CF",
+     "dist_mm": 770.0
+    },
+    "GBP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17C3",
+     "outline": "17C0",
+     "dist_mm": 550.0
+    }
+   },
+   "size_text_cm": {
+    "W": 30,
+    "D": 30,
+    "handle": "17D1",
+    "dist_mm": 1300.0
+   },
+   "members": {},
+   "drawn_on": {
+    "FP": "17C8",
+    "CAP": "17CF",
+    "GBP": "17C0"
+   }
+  },
+  {
+   "position": "180A",
+   "neck_drawn_mm": [
+    300,
+    300
+   ],
+   "labels": {
+    "FP": {
+     "text": "CN/FN",
+     "mark": "CN",
+     "handle": "1810",
+     "outline": "180A",
+     "dist_mm": 180.0
+    },
+    "GBP": {
+     "text": "CN",
+     "mark": "CN",
+     "handle": "17B9",
+     "outline": "17BA",
+     "dist_mm": 850.0
+    }
+   },
+   "size_text_cm": null,
+   "members": {},
+   "drawn_on": {
+    "FP": "180A",
+    "GBP": "17BA"
+   }
+  }
+ ],
+ "slab_outlines_not_on_a_position": [
+  {
+   "sheet": "FFRS",
+   "handle": "66A",
+   "section_mm": [
+    200,
+    700
+   ],
+   "hatch": "SOLID"
+  },
+  {
+   "sheet": "FFRS",
+   "handle": "69D",
+   "section_mm": [
+    200,
+    500
+   ],
+   "hatch": "SOLID"
+  },
+  {
+   "sheet": "FFRS",
+   "handle": "77B",
+   "section_mm": [
+    200,
+    400
+   ],
+   "hatch": "PATTERN"
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "329",
+   "section_mm": [
+    200,
+    700
+   ],
+   "hatch": "PATTERN"
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "386",
+   "section_mm": [
+    200,
+    500
+   ],
+   "hatch": "PATTERN"
+  },
+  {
+   "sheet": "SFRS",
+   "handle": "778",
+   "section_mm": [
+    200,
+    400
+   ],
+   "hatch": "SOLID"
+  }
+ ]
+}

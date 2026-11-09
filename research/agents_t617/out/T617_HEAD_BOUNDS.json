@@ -1,0 +1,263 @@
+{
+ "findings": [
+  {
+   "id": "F-T617-1",
+   "what": "every landing-door head is bounded ABOVE by a drawn ring beam on the door side (GF roof B14 20x75, 1F roof B7 20x75, 2F roof B2 20x40; DXF marks 45F / 6CC / 78A, schedule p.10): GF <= 3.70 (3.75 at b = 0), 1F <= 3.40 (3.45), 2F <= 3.80 - r. No printed value bounds it BELOW: the height stays HELD, never a default"
+  },
+  {
+   "id": "F-T617-2",
+   "what": "the candidate paint / plaster lines (G1 face heights GF 3.65, 1F 3.35, 2F 3.35) all sit at or below those soffits: the drawn members do NOT narrow 1F-13 / 2F-01 / GF-08 (0.000 m2); only the note-19 GF tie-beam reading would (GF-08 low end +0.65 m2 per line) and its sides are not drawn (SCENARIO, structural RFI item 38)"
+  },
+  {
+   "id": "F-T617-3",
+   "what": "for T-558 (Q-72 plaster to the slab soffit): an opening under a member of overall depth D in a slab t can never deduct the (D - t) band: GF 0.59, 1F 0.59, 2F 0.24 m2 per landing face stay plastered whatever the head (1.00 m wide); independent of b / r"
+  },
+  {
+   "id": "F-T617-4",
+   "what": "T-608's text census could not see ST p.8 (raster) or ST p.14 (vector, no text layer): note 19 and the p.14 'Lift door' / 'As Per Lift Manufactures recommendations' leaders exist on the PDF only; a DXF-only census is not a census of the set (lesson row proposed)"
+  }
+ ],
+ "governing": [
+  "Q-72 (plaster to the slab underside, paint to the finished ceiling)",
+  "Q-73 (full deduction)",
+  "R-T608-1 (lift landing door: no door-trade fallback height)",
+  "R-T395-1 (FULL depth basis)",
+  "R-T556-1 (plaster height = interval - b - t)",
+  "UP-DOOR-HGT-001 (printed heights only)",
+  "ERS s.2 / s.3"
+ ],
+ "inputs": {
+  "DRAWN": "631c0fd0f72dbf62c3fcc73a2f94ea070d86b5dfadbb53697d1dc51e8edf4611",
+  "T401": "19415d86f664420ea520d6a06c1c91ce66e76d65d6e8d40b12ccfb710c059a0d",
+  "T556": "2fea7f2a855288f2fe1d485d196a64147dd740857408ceccc2b6a65488ab44a1",
+  "T608": "e138a0f3f7c6d9729f68399a10223ffb7ae6cfd9d859a7bca9a3a58befddd4a8"
+ },
+ "readings": {
+  "arch_sections": {
+   "_src": "architectural sheet 10 section A-A does not cut the shaft (T-608); sheet 9 = NORTH EAST ELEVATION (exterior only; the shaft is internal); P7757.dxf holds plans + SOUTH EAST / NORTH WEST elevations, no section through the shaft"
+  },
+  "b_floor_m": {
+   "_src": "T-214 floor build-up, Verifier re-measured (reused by T-556); bound b >= 0",
+   "v": "0.05"
+  },
+  "ffl": {
+   "1F": "5.50",
+   "2F": "9.70",
+   "GF": "1.00",
+   "ROOF": "13.90",
+   "_src": "architectural sheet 10 section A-A levels (T-556 table, Verifier-checked)"
+  },
+  "note19": {
+   "_src": "ST p.8 recommendation 19 (raster, Arabic): beams to tie the LIFT COLUMNS at a height of 3.00 m where the storey height exceeds 4.30 m; no section, no datum point, no sides drawn (no tie-beam label on any structural plan: DXF text search 'T.B' / 'TIE' = 0)",
+   "applies_if_interval_gt_m": "4.30",
+   "level_m": "3.00"
+  },
+  "p14": {
+   "_src": "ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING' (vector, no text layer): 'Lift door' leader at the F.F.L. on the shaft-front wall drawn 'AS PER PLAN' above the slab-on-grade, broken off above; pit depth 'As Per Lift Manufactures recommendations'; no landing-door height or head level"
+  },
+  "r_roof_m": {
+   "_src": "roof build-up NOT printed (D-39 / DCR-6); drawn-section scenario 0.05 (T-556); bound r >= 0",
+   "scenario": "0.05",
+   "v": null
+  },
+  "schedule_depth_m": {
+   "B1": "0.40",
+   "B14": "0.75",
+   "B2": "0.40",
+   "B7": "0.75",
+   "_src": "ST PDF p.10 'Schedule of Simple Beams', column D-(Depth) cm (B1 20x40, B2 20x40, B7 20x75, B14 20x75); overall depth with the slab inside it (FULL basis, R-T395-1)"
+  },
+  "slab_t_m": {
+   "_src": "ST p.8 note 18 (normal slab 16 cm unless stated) + 'T 16' on the GF / 1F roof plans at the shaft; the 2F roof plan marks T18 only on the tank panels",
+   "v": "0.16"
+  }
+ },
+ "rows": [
+  {
+   "blockwork": "no narrowing: the host-wall deduction bound (T-175 wall height) is below the beam soffit measured from the structural slab top (1F 4.20 - 0.75 = 3.45 >= 3.35; GF slab-on-grade top not printed, T-401 RFI 1; 2F >= 3.80 - r)",
+   "candidate_faces": {
+    "deduction_m2": [
+     "0.0000",
+     "3.6500"
+    ],
+    "face_h_G1_m": "3.650",
+    "lines": [
+     {
+      "held_high": "178.805",
+      "held_low": "152.0505",
+      "held_low_after": "152.0505",
+      "held_low_after_note19_scenario": "152.7005",
+      "item_code": "FIN.PLASTER",
+      "line_id": "L-8cecb1d010d5aafbf25d"
+     },
+     {
+      "held_high": "178.805",
+      "held_low": "152.0505",
+      "held_low_after": "152.0505",
+      "held_low_after_note19_scenario": "152.7005",
+      "item_code": "FIN.PAINT",
+      "line_id": "L-c0ac22c964a42e7d71b1"
+     }
+    ],
+    "narrowing_m2_per_line": "0.0000",
+    "narrowing_m2_per_line_note19": "0.6500"
+   },
+   "door_side_arch": "S",
+   "freelancer_2_40": "UNRESOLVED (admissible: 2.40 <= every drawn bound; printed nowhere, so neither ENGINE_RIGHT nor FREELANCER_RIGHT)",
+   "head": {
+    "high_at_drawn_buildup": "3.70",
+    "high_firm": "3.75",
+    "high_note19_scenario": "3.00",
+    "low": "0 (nothing printed; named)",
+    "printed": null,
+    "status": "BOUNDED (DRAWING-BOUNDED above; lower bound not printed)"
+   },
+   "interval_m": "4.50",
+   "lintel": "count 0 .. 1 unchanged: the head may meet the beam soffit (no lintel) or sit lower (lintel L1 under the masonry above); nothing drawn decides it",
+   "member_over_door": {
+    "depth_m": "0.75",
+    "dxf_handle": "45F",
+    "mark": "B14",
+    "plan": "GF_ROOF",
+    "src": "ST PDF p.10 'Schedule of Simple Beams', column D-(Depth) cm (B1 20x40, B2 20x40, B7 20x75, B14 20x75); overall depth with the slab inside it (FULL basis, R-T395-1)"
+   },
+   "opening": "GF OP-011 (L-GF-01)",
+   "q72_plaster_for_T558": {
+    "always_plastered_above_head_m2": "0.5900",
+    "check_D_minus_t": "0.59",
+    "deduction_cap_m2": "3.7000",
+    "face_h_m": "4.29",
+    "note19_scenario_m2": "1.2900"
+   },
+   "slab_top_term": "floor build-up b 0.05 (T-214; b >= 0)",
+   "storey": "GF"
+  },
+  {
+   "blockwork": "no narrowing: the host-wall deduction bound (T-175 wall height) is below the beam soffit measured from the structural slab top (1F 4.20 - 0.75 = 3.45 >= 3.35; GF slab-on-grade top not printed, T-401 RFI 1; 2F >= 3.80 - r)",
+   "candidate_faces": {
+    "deduction_m2": [
+     "0.0000",
+     "3.3500"
+    ],
+    "face_h_G1_m": "3.350",
+    "lines": [
+     {
+      "held_high": "114.3677",
+      "held_low": "111.0177",
+      "held_low_after": "111.0177",
+      "held_low_after_note19_scenario": "111.0177",
+      "item_code": "FIN.PLASTER",
+      "line_id": "L-9b4a7bab033d677e2017"
+     },
+     {
+      "held_high": "114.3677",
+      "held_low": "111.0177",
+      "held_low_after": "111.0177",
+      "held_low_after_note19_scenario": "111.0177",
+      "item_code": "FIN.PAINT",
+      "line_id": "L-be48ea84285be20645af"
+     }
+    ],
+    "narrowing_m2_per_line": "0.0000",
+    "narrowing_m2_per_line_note19": "0.0000"
+   },
+   "door_side_arch": "S",
+   "freelancer_2_40": "UNRESOLVED (admissible: 2.40 <= every drawn bound; printed nowhere, so neither ENGINE_RIGHT nor FREELANCER_RIGHT)",
+   "head": {
+    "high_at_drawn_buildup": "3.40",
+    "high_firm": "3.45",
+    "high_note19_scenario": null,
+    "low": "0 (nothing printed; named)",
+    "printed": null,
+    "status": "BOUNDED (DRAWING-BOUNDED above; lower bound not printed)"
+   },
+   "interval_m": "4.20",
+   "lintel": "count 0 .. 1 unchanged: the head may meet the beam soffit (no lintel) or sit lower (lintel L1 under the masonry above); nothing drawn decides it",
+   "member_over_door": {
+    "depth_m": "0.75",
+    "dxf_handle": "6CC",
+    "mark": "B7",
+    "plan": "1F_ROOF",
+    "src": "ST PDF p.10 'Schedule of Simple Beams', column D-(Depth) cm (B1 20x40, B2 20x40, B7 20x75, B14 20x75); overall depth with the slab inside it (FULL basis, R-T395-1)"
+   },
+   "opening": "1F OP-007 (L-1F-01)",
+   "q72_plaster_for_T558": {
+    "always_plastered_above_head_m2": "0.5900",
+    "check_D_minus_t": "0.59",
+    "deduction_cap_m2": "3.4000",
+    "face_h_m": "3.99",
+    "note19_scenario_m2": "0.5900"
+   },
+   "slab_top_term": "floor build-up b 0.05 (T-214; b >= 0)",
+   "storey": "1F"
+  },
+  {
+   "blockwork": "no narrowing: the host-wall deduction bound (T-175 wall height) is below the beam soffit measured from the structural slab top (1F 4.20 - 0.75 = 3.45 >= 3.35; GF slab-on-grade top not printed, T-401 RFI 1; 2F >= 3.80 - r)",
+   "candidate_faces": {
+    "deduction_m2": [
+     "0.0000",
+     "3.3500"
+    ],
+    "face_h_G1_m": "3.350",
+    "lines": [
+     {
+      "held_high": "26.0002",
+      "held_low": "22.6502",
+      "held_low_after": "22.6502",
+      "held_low_after_note19_scenario": "22.6502",
+      "item_code": "FIN.PLASTER",
+      "line_id": "L-ae0cdd794cc5fdbe0c29"
+     },
+     {
+      "held_high": "26.0002",
+      "held_low": "22.6502",
+      "held_low_after": "22.6502",
+      "held_low_after_note19_scenario": "22.6502",
+      "item_code": "FIN.PAINT",
+      "line_id": "L-c74cfb4e07bcc47bc5d6"
+     }
+    ],
+    "narrowing_m2_per_line": "0.0000",
+    "narrowing_m2_per_line_note19": "0.0000"
+   },
+   "door_side_arch": "S",
+   "freelancer_2_40": "UNRESOLVED (admissible: 2.40 <= every drawn bound; printed nowhere, so neither ENGINE_RIGHT nor FREELANCER_RIGHT)",
+   "head": {
+    "high_at_drawn_buildup": "3.75",
+    "high_firm": "3.80",
+    "high_note19_scenario": null,
+    "low": "0 (nothing printed; named)",
+    "printed": null,
+    "status": "BOUNDED (firm r >= 0; value at the ESTIMATED roof scenario)"
+   },
+   "interval_m": "4.20",
+   "lintel": "count 0 .. 1 unchanged: the head may meet the beam soffit (no lintel) or sit lower (lintel L1 under the masonry above); nothing drawn decides it",
+   "member_over_door": {
+    "depth_m": "0.40",
+    "dxf_handle": "78A",
+    "mark": "B2",
+    "plan": "2F_ROOF",
+    "src": "ST PDF p.10 'Schedule of Simple Beams', column D-(Depth) cm (B1 20x40, B2 20x40, B7 20x75, B14 20x75); overall depth with the slab inside it (FULL basis, R-T395-1)"
+   },
+   "opening": "2F OP-002 (L-2F-01)",
+   "q72_plaster_for_T558": {
+    "always_plastered_above_head_m2": "0.2400",
+    "check_D_minus_t": "0.24",
+    "deduction_cap_m2": "3.7500",
+    "face_h_m": "3.99",
+    "note19_scenario_m2": "0.2400"
+   },
+   "slab_top_term": "roof build-up r (not printed; scenario 0.05; r >= 0)",
+   "storey": "2F"
+  }
+ ],
+ "rule": "R-T617-1",
+ "schema": "T617_HEAD_BOUNDS_V1",
+ "summary": {
+  "candidate_files_touched": 0,
+  "candidate_m2_narrowed_all_lines": "0.0000",
+  "candidate_m2_narrowed_note19_scenario": "1.3000",
+  "released_quantities_changed": 0
+ },
+ "task": "T-617"
+}

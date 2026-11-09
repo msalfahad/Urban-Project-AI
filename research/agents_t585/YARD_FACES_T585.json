@@ -1,0 +1,533 @@
+{
+ "SCHEMA": "T585_YARD_FACES_V1",
+ "source": "Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip (architectural DXF, GF plan; layers 1 walls, S-COL.BON columns, W glazing, 5 fence / sills / thresholds; door blocks), p7757_arch_sheet03.pdf (GF plan, raster read in the court); read 2026-11-07 by worker 2 into .work/private only. Lengths are the drawn entity ends (handles cited); no coordinate committed.",
+ "zones": {
+  "WC": {
+   "finish": "ESTABLISHED",
+   "basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)"
+  },
+  "NS": {
+   "finish": "ESTABLISHED",
+   "basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house"
+  },
+  "PO": {
+   "finish": "HELD",
+   "basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1"
+  },
+  "PC": {
+   "finish": "HELD",
+   "basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1"
+  }
+ },
+ "yard_face": {
+  "area_m2": "177.1109",
+  "perimeter_lm": "98.629",
+  "how": "research/agents_t147/scripts/rooms.py on the GF plan, box = inner face of the plot walls +0.035 (as T-153; T-153 177.115 / T-071 177.299)",
+  "polygon_residual_lm": "0.1424",
+  "polygon_residual_cause": "the polygon's mitre / flattening at the dewaneya arc joint (its edges 71-90 2.687 vs the arc 2.042 + return 0.500 = 2.542 from the entities: +0.145) less a 0.003 overlap of window 3FD on wall 2B8"
+ },
+ "porch_envelope": "1F slab outline 4.60 x 4.30 over the GF porch (T-157 floor route); faces inside it are PO-*, the E1 flight and landing faces are stair-owned (E1-*)",
+ "base_evidence": [
+  "DXF: 268 TEXT / MTEXT / ATTRIB strings in model space and blocks read this run; none names a skirting, base, plinth or any floor / wall finish (room names, levels, dimensions, section marks, neighbour / street labels only)",
+  "DXF: the two elevations (NORTH WEST, SOUTH EAST) draw the wall feet with the ground / slab lines only: no base band at the foot of any house wall",
+  "sheet 3 (GF plan, court read at 150 dpi): court labels, levels +0.15 / +0.30, dimensions, section marks; no finish, base or skirting note",
+  "T-404 s.0: the fence section / elevation / plan (p.12) draw no hatch, base or note on any fence face",
+  "T-091 (0 finish notes on the plans), T-360 (0 of 675 DXF texts name a material), RFI-B-A12 (no finishes schedule or specification issued)"
+ ],
+ "faces": [
+  {
+   "id": "WC-01",
+   "zone": "WC",
+   "host": "FENCE",
+   "length": "5.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "street fence plot face 13A (T-404 F-STREET/PLOT solid part)"
+  },
+  {
+   "id": "WC-02",
+   "zone": "WC",
+   "host": "GATE",
+   "length": "2.500",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "gate G-01 (T-404 / T-361)"
+  },
+  {
+   "id": "WC-03",
+   "zone": "WC",
+   "host": "FENCE",
+   "length": "14.800",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "north fence plot face 13A from the street corner to the house NW corner line (T-153 split)"
+  },
+  {
+   "id": "WC-04",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "0.268",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "dewaneya street-side wall 10A beyond the fence face"
+  },
+  {
+   "id": "WC-05",
+   "zone": "WC",
+   "host": "DOOR",
+   "length": "1.000",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "dewaneya door D120 (10A / 10C gap)"
+  },
+  {
+   "id": "WC-06",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "1.632",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "dewaneya court face 10C"
+  },
+  {
+   "id": "WC-07",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "2.042",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "dewaneya corner arc 10D (outer face R1.30)"
+  },
+  {
+   "id": "WC-08",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "0.500",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex return 12C"
+  },
+  {
+   "id": "WC-09",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "1.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex court face 123"
+  },
+  {
+   "id": "WC-10",
+   "zone": "WC",
+   "host": "SILL_WINDOW",
+   "length": "0.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex window 3A5 (wash), sill not printed"
+  },
+  {
+   "id": "WC-11",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "0.150",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex court face 122"
+  },
+  {
+   "id": "WC-12",
+   "zone": "WC",
+   "host": "DOOR",
+   "length": "0.900",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "driver door d220 (122 / 121 gap; threshold 1C6)"
+  },
+  {
+   "id": "WC-13",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "0.850",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex court face 121"
+  },
+  {
+   "id": "WC-14",
+   "zone": "WC",
+   "host": "SILL_WINDOW",
+   "length": "1.500",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "kitchen window 3B1, sill not printed"
+  },
+  {
+   "id": "WC-15",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "0.400",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "annex court face 120 up to the porch envelope (1F slab edge)"
+  },
+  {
+   "id": "WC-16",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "1.250",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "house west face 9B (stair hall)"
+  },
+  {
+   "id": "WC-17",
+   "zone": "WC",
+   "host": "SILL_WINDOW",
+   "length": "1.200",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "house west window 351, sill not printed"
+  },
+  {
+   "id": "WC-18",
+   "zone": "WC",
+   "host": "WALL",
+   "length": "1.850",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: chalet open court = interlock (owner 23:20 choice)",
+   "base_note": null,
+   "ref": "house west face 9C up to the porch envelope"
+  },
+  {
+   "id": "PO-01",
+   "zone": "PO",
+   "host": "WALL",
+   "length": "0.400",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "annex face 120 + column 2FB1 inside the porch envelope"
+  },
+  {
+   "id": "PO-02",
+   "zone": "PO",
+   "host": "OPEN_EDGE",
+   "length": "1.200",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "side passage mouth (A2 / 9F), passage floor continues"
+  },
+  {
+   "id": "PO-03",
+   "zone": "PO",
+   "host": "WALL",
+   "length": "0.400",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "pantry face 15A west of the E1 flight"
+  },
+  {
+   "id": "PO-04",
+   "zone": "PO",
+   "host": "WALL",
+   "length": "0.400",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "stub west face 34D"
+  },
+  {
+   "id": "PO-05",
+   "zone": "PO",
+   "host": "WALL",
+   "length": "1.400",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "stub north face 338 + column 2FBA"
+  },
+  {
+   "id": "PO-06",
+   "zone": "PO",
+   "host": "WALL",
+   "length": "0.200",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: covered porch finish open (wood / ceramic / marble), OD-1",
+   "base_note": null,
+   "ref": "house west face 9C tail inside the porch envelope"
+  },
+  {
+   "id": "NS-01",
+   "zone": "NS",
+   "host": "FENCE",
+   "length": "16.170",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "north fence plot face 13A / BA along the strip"
+  },
+  {
+   "id": "NS-02",
+   "zone": "NS",
+   "host": "FENCE",
+   "length": "0.100",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "sea fence plot face B9"
+  },
+  {
+   "id": "NS-03",
+   "zone": "NS",
+   "host": "GATE",
+   "length": "1.000",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "gate G-02 (B9 / B8 gap)"
+  },
+  {
+   "id": "NS-04",
+   "zone": "NS",
+   "host": "FENCE",
+   "length": "0.200",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "sea fence plot face B8"
+  },
+  {
+   "id": "NS-05",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "1.6531",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "house north face 2B8 (+ column 2F7E flush)"
+  },
+  {
+   "id": "NS-06",
+   "zone": "NS",
+   "host": "SILL_WINDOW",
+   "length": "0.900",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "stair landing window 3FD, sill not printed (T-501 MS1-LD.N)"
+  },
+  {
+   "id": "NS-07",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "0.7219",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "house north face 2B9"
+  },
+  {
+   "id": "NS-08",
+   "zone": "NS",
+   "host": "SILL_WINDOW",
+   "length": "0.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "window 3D8, sill not printed"
+  },
+  {
+   "id": "NS-09",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "1.895",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "house north face 2BA"
+  },
+  {
+   "id": "NS-10",
+   "zone": "NS",
+   "host": "SILL_WINDOW",
+   "length": "0.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "window 3E5, sill not printed"
+  },
+  {
+   "id": "NS-11",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "1.000",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "house north face 2BB"
+  },
+  {
+   "id": "NS-12",
+   "zone": "NS",
+   "host": "SILL_WINDOW",
+   "length": "0.600",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "window 3F2, sill not printed"
+  },
+  {
+   "id": "NS-13",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "6.400",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "house north face 2BC"
+  },
+  {
+   "id": "NS-14",
+   "zone": "NS",
+   "host": "WALL",
+   "length": "0.500",
+   "finish": "ESTABLISHED",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 additions: side walk = porcelain, part of the house",
+   "base_note": null,
+   "ref": "column 2F87 north face"
+  },
+  {
+   "id": "PC-01",
+   "zone": "PC",
+   "host": "WALL",
+   "length": "0.800",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "column 2F87 east 0.250 + south 0.500 + 0.050 return"
+  },
+  {
+   "id": "PC-02",
+   "zone": "PC",
+   "host": "UNDRAWN",
+   "length": "0.080",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "junction of wall 274 and the glazing frame 280: no face line on this stretch"
+  },
+  {
+   "id": "PC-03",
+   "zone": "PC",
+   "host": "FLOOR_GLAZING",
+   "length": "6.9946",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "curved floor glazing W 280 (master bed room)"
+  },
+  {
+   "id": "PC-04",
+   "zone": "PC",
+   "host": "WALL",
+   "length": "0.530",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "wall 26C 0.080 + 94 0.450"
+  },
+  {
+   "id": "PC-05",
+   "zone": "PC",
+   "host": "WALL",
+   "length": "1.800",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "pool-court south face: column 2FC0 0.700 + wall E2 1.100"
+  },
+  {
+   "id": "PC-06",
+   "zone": "PC",
+   "host": "UNDRAWN",
+   "length": "0.200",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "sea side, no inner face line between B8 and B7"
+  },
+  {
+   "id": "PC-07",
+   "zone": "PC",
+   "host": "FENCE",
+   "length": "5.168",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "sea wall inner face B7"
+  },
+  {
+   "id": "PC-08",
+   "zone": "PC",
+   "host": "UNDRAWN",
+   "length": "0.232",
+   "finish": "HELD",
+   "finish_basis": "OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: pool deck HELD (owner not sure yet), OD-1",
+   "base_note": null,
+   "ref": "sea side, element 39D on a non-wall layer (role not established)"
+  }
+ ],
+ "stair_owned": [
+  {
+   "id": "E1-F",
+   "ref": "E1 flight wall side: pantry face 15A beside the 4 treads (plan 1.200, T-501 E1.S)",
+   "length": "1.200"
+  },
+  {
+   "id": "E1-L1",
+   "ref": "E1 landing: house west face 9D 0.900 + 9E 0.800 behind the landing (main door D200 2.000 deducted)",
+   "length": "1.700"
+  },
+  {
+   "id": "E1-L2",
+   "ref": "E1 landing: stub south face 34C",
+   "length": "1.400"
+  },
+  {
+   "id": "E1-L3",
+   "ref": "E1 landing: pantry face 15A 0.259 + 15B 0.141 (pantry door D120 1.000 deducted)",
+   "length": "0.400"
+  }
+ ],
+ "stair_owned_openings": [
+  {
+   "id": "E1-D1",
+   "ref": "main door D200",
+   "length": "2.000"
+  },
+  {
+   "id": "E1-D2",
+   "ref": "pantry door D120",
+   "length": "1.000"
+  }
+ ]
+}

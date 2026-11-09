@@ -1,0 +1,62 @@
+{
+ "rule": "R-T532-1 COLUMN_END_CENSUS_V3: junctions read on the ledger's own piece kinds by plan role (BEAM / FACE / NONE / BLOCK = masonry, COLUMN / ST_COLUMN = concrete, any other kind HELD by name); end classes from R-T526-1 unchanged",
+ "runs": 70,
+ "piece_kinds_on_census_runs": {
+  "BEAM": 212,
+  "COLUMN": 86,
+  "FACE": 50,
+  "NONE": 1
+ },
+ "v2_on_raw_kinds": {
+  "RUNS": 59,
+  "RAISES": 11,
+  "t355_rows_not_in_v3": 0,
+  "t317_v_columns_not_in_v3": 0
+ },
+ "end_junctions_by_class": {
+  "BEAM-END_COLUMN": 11,
+  "BEAM-PARTIAL_COLUMN": 1,
+  "FACE-END_COLUMN": 1
+ },
+ "interior_listed_by_class": {
+  "BEAM-COLUMN": 57,
+  "COLUMN-BEAM": 52,
+  "COLUMN-FACE": 5,
+  "COLUMN-NONE": 1,
+  "FACE-COLUMN": 3
+ },
+ "interior_held": [],
+ "interior_vs_t355": {
+  "RUN NOT IN LEDGER": 1,
+  "YES": 117
+ },
+ "interior_vs_t317_v": {
+  "RUN NOT IN LEDGER": 1,
+  "YES": 117
+ },
+ "interior_not_in_ledger_named": [],
+ "reconcile_t526": {
+  "listed_equal": true,
+  "held_equal": true,
+  "listed_n": 12,
+  "held_n": 1,
+  "only_v3": [],
+  "only_t526": [],
+  "carried_deltas": {
+   "d_length_m": 0.0,
+   "d_blockwork_m2": 0.0,
+   "d_blocks_nr": 0.0,
+   "d_mesh_owner_ml": 40.9,
+   "d_mesh_drawing_ml": 44.1,
+   "d_ties_nr": 30.0,
+   "d_perimeter_m3_1F-W09": 0.007021
+  }
+ },
+ "sha256_inputs": {
+  "T274_RUN_PIECES.csv": "c6d6a496e6beecacc057f7566f77c1fc7dc13395dfa341572e1e926b0eefe9f7",
+  "END_CENSUS_V2_T526.csv": "087aa664562049ab19a75098e89f019a744acbd1894b8da941dcb22f93b4b0e8",
+  "MISSED_ENDS_T526.csv": "83afc44d1984ae9db719471f8c5a5985b291ef45c453335b2f56dde636d01171",
+  "SHARMAT_T355.csv": "7b261f49a67cddda87065ccf97ac3c0165fca342fa986672cbc6d88e2091d6bf",
+  "JOINTS_T317.csv": "620f2565e5b186d803422ed6dec7e8fca6141949a470af789f45715a54024fe1"
+ }
+}

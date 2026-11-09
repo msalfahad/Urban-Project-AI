@@ -1,0 +1,9 @@
+[
+ {
+  "task": "T-507",
+  "merge_commit": "c94b35c16915af7c6794d6829732d8d204bfac0d",
+  "verdict_time": "2026-11-05 02:22 UTC",
+  "board_file": "BOARD.md",
+  "board_status_head": "MERGED (Verifier 2026-11-05T02:22Z per date -u, run session_01E6cPneQfeqVKH7ra8p8Dxy, lock checker; GATE B PASS, engine merge c94b35c1 on 21b5e7ec (T-515)"
+ }
+]

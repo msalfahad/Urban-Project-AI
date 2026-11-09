@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 20 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 723 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 725 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 4689 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
-| `rules/` | 64 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
+| `research/` | 5283 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `rules/` | 68 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 2222 | pytest suites, one folder per round. |
+| `tests/` | 2494 | pytest suites, one folder per round. |
 | `tools/` | 119 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (255 modules)
@@ -388,7 +388,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (370 modules)
+## `engine/source/` (372 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -458,7 +458,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v3055.py` | 788 | MEDIUM | 8 | ARCH_TAKEOFF_V3.0.55 (T-488, stream S): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.54 |
 | `arch_v3056.py` | 910 | MEDIUM | 7 | ARCH_TAKEOFF_V3.0.56 (T-508, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.55 |
 | `arch_v3057.py` | 823 | HIGH | 11 | ARCH_TAKEOFF_V3.0.57 (T-310, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.56 |
-| `arch_v3058.py` | 643 | MEDIUM | 5 | ARCH_TAKEOFF_V3.0.58 (T-507, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.57 |
+| `arch_v3058.py` | 643 | MEDIUM | 6 | ARCH_TAKEOFF_V3.0.58 (T-507, stream F): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.57 |
 | `arch_v3059.py` | 635 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.59 (T-498, stream S; r3 renumbered from V3.0.58 onto the merged T-507 V3.0.58, as r2 renumbered |
 | `arch_v306.py` | 700 | MEDIUM | 4 | ARCH_TAKEOFF_V3.0.6 (T-187): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.5 (engine.source.arch_v30, |
 | `arch_v307.py` | 751 | HIGH | 21 | ARCH_TAKEOFF_V3.0.7 (T-193): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.6 (engine.source.arch_v30, |
@@ -480,7 +480,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blockwork_basis_rules_v1.py` | 259 | MEDIUM | 2 | BLOCKWORK_BASIS_RULES_V1: drawing-derived blockwork (masonry) basis rules (A1 class A, T-449 round 3 = blockwork). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 170 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 171 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -553,7 +553,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `finish_materials_table_v2.py` | 105 | MEDIUM | 3 | FINISH MATERIALS TABLE V2 (task T-456, owner directive 2026-11-02 C1; opt-in, UNWIRED_PRODUCER: read by no released |
 | `finish_materials_table_v3.py` | 194 | MEDIUM | 3 | FINISH MATERIALS TABLE V3 (task T-457, owner directive 2026-11-02 C2 as re-scoped by the owner's site practice and |
 | `finish_materials_table_v4.py` | 376 | MEDIUM | 3 | FINISH MATERIALS TABLE V4 (task T-455, owner directive 2026-11-02 B3 'tiles purchase quantities' as corrected by the |
-| `finish_materials_table_v5.py` | 213 | MEDIUM | 1 | FINISH MATERIALS TABLE V5 (task T-499, from F-T496-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v5.py` | 213 | MEDIUM | 4 | FINISH MATERIALS TABLE V5 (task T-499, from F-T496-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v6.py` | 245 | MEDIUM | 4 | FINISH MATERIALS TABLE V6 (task T-521, from D-T518-1; opt-in, UNWIRED_PRODUCER: read by no released method and by |
+| `finish_materials_table_v7.py` | 236 | MEDIUM | 3 | FINISH MATERIALS TABLE V7 (task T-528, from Q-53 C; opt-in, UNWIRED_PRODUCER: read by no released method and by no |
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
@@ -675,7 +677,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `route_g_scope_v1.py` | 593 | MEDIUM | 4 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
 | `rule_store.py` | 124 | HIGH | 20 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
-| `rule_store_v2.py` | 186 | MEDIUM | 1 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
+| `rule_store_v2.py` | 186 | MEDIUM | 3 | RULE STORE V2 (T-461, owner directive 2026-11-02 C6 (d)) - registers and resolves every URBAN_RULES overlay version |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
@@ -759,7 +761,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `waterproofing_policy_v3.py` | 79 | MEDIUM | 2 | WATERPROOFING POLICY V3 (T-310) - the NEW version of waterproofing_policy_v2.py (T-458, kept unchanged as history). |
 | `waterproofing_system.py` | 998 | HIGH | 10 | WATERPROOFING SYSTEM (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the owner's membrane standards (knowledge registry |
 | `wet_room_evidence.py` | 464 | MEDIUM | 4 | WET ROOM EVIDENCE V1 (T-010) - is a space wet, dry or held? The architectural room label first, the sanitary |
-| `wp_applicability_rules_v1.py` | 177 | MEDIUM | 3 | WP_APPLICABILITY_RULES_V1: waterproofing applicability of exposed slab tops, by the physical surface (T-494). |
+| `wp_applicability_rules_v1.py` | 177 | MEDIUM | 6 | WP_APPLICABILITY_RULES_V1: waterproofing applicability of exposed slab tops, by the physical surface (T-494). |
 | `wp_geometry.py` | 317 | MEDIUM | 8 | WATERPROOFING BOUNDARY GEOMETRY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the boundary of a waterproofed area, |
 | `wp_install.py` | 1085 | MEDIUM | 4 | WATERPROOFING INSTALLATION LAYER (M9 Phase 2B-5, ARCH_TAKEOFF_V2.6 only) - what a membrane cutting plan means on |
 
@@ -811,7 +813,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
 | `boq_export_v1.py` | 1954 | HIGH | 19 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
-| `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
+| `codemap.py` | 951 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
 | `connect_firestore.py` | 85 | MEDIUM | 0 | Connect to the Urban Projects Manager Firestore and prove the link. |
 | `documents.py` | 187 | MEDIUM | 1 | Write a quotation or contract for a client (A7 + E22 + the renderer). |
@@ -827,7 +829,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `export_round6c.py` | 422 | MEDIUM | 2 | Freeze round 6C's P7757 register for independent audit. |
 | `export_round6d.py` | 331 | MEDIUM | 1 | Export round 6D: the register, the pantry, the stairs, hashed. |
 | `export_round6e.py` | 726 | MEDIUM | 0 | Export round 6E-A: the bundle an auditor can reproduce. |
-| `family_master_candidate.py` | 363 | HIGH | 54 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
+| `family_master_candidate.py` | 363 | HIGH | 55 | FAMILY MASTER CANDIDATE STATES (T-203): check the candidate-level state of every BOQ family in a family master that |
 | `firestore_sandbox.py` | 68 | MEDIUM | 1 | A guarded Firestore writer for Phase 0 — sandbox only. |
 | `freeze_new_source.py` | 136 | MEDIUM | 1 | Freeze and source-audit a NEW project's drawing. No measurement. |
 | `freeze_verify.py` | 676 | MEDIUM | 3 | Freeze integrity verifier (P2-00 Stage 1). Stdlib only. It never writes into the repository: every rebuild runs in a |
@@ -860,7 +862,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `m7_independent.py` | 162 | CRITICAL | 1 | M7 PER-ITEM INDEPENDENT CHECKS - a second method for each measured concrete item of a route-G run, so the release |
 | `m7_metamorphic.py` | 195 | CRITICAL | 2 | M7 METAMORPHIC HARNESS - properties a quantity engine must keep when the drawing changes in ways that do not change |
 | `m8_evaluate.py` | 288 | CRITICAL | 1 | M8 SCOPE EVALUATION - every scope element a synthetic villa draws (tools/synthetic_villa_m8), measured or bounded by |
-| `m9_rules_manifest.py` | 168 | MEDIUM | 0 | M9 RULE STORE MANIFEST - build or check rules/RULES_MANIFEST.json. |
+| `m9_rules_manifest.py` | 172 | MEDIUM | 2 | M9 RULE STORE MANIFEST - build or check rules/RULES_MANIFEST.json. |
 | `membrane_table.py` | 116 | MEDIUM | 0 | MEMBRANE TABLE (task T-072, opt-in) - writes the owner's membrane purchase table from the output files of an |
 | `parse_cost_export.py` | 158 | MEDIUM | 1 | Parse a Urban Projects Manager "Cost By Category" PDF into a RateLibrary. |
 | `pdf_evidence.py` | 446 | MEDIUM | 1 | PDF EVIDENCE (M3) - typical-detail evidence from a drawing PDF: native text first, then the vector check, then |
@@ -1481,7 +1483,136 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t510_band_gap_classes/` | 1 |
 | `tests/t511_cement_sand_census/` | 1 |
 | `tests/t512_held_totals/` | 1 |
+| `tests/t514_screed_bed_producers/` | 1 |
 | `tests/t515_lintel_bar_split/` | 2 |
+| `tests/t516_jamb_bearing/` | 2 |
+| `tests/t517_poolcourt_buildup/` | 1 |
+| `tests/t518_factor_census/` | 1 |
+| `tests/t519_lintel_pieces/` | 3 |
+| `tests/t520_perimeter_joint/` | 2 |
+| `tests/t521_bed_installed_procurement/` | 1 |
+| `tests/t522_ledge_window/` | 1 |
+| `tests/t523_binding_map_v2/` | 1 |
+| `tests/t524_lintel_end_ownership/` | 2 |
+| `tests/t525_registry_promotion/` | 1 |
+| `tests/t526_column_end_census/` | 2 |
+| `tests/t527_lintel_bearing_v3/` | 3 |
+| `tests/t528_stair_bed_1_3/` | 1 |
+| `tests/t529_ledge_exposure/` | 1 |
+| `tests/t530_wiring_manifest/` | 1 |
+| `tests/t531_lintel_bars_produced/` | 2 |
+| `tests/t532_end_census_v3/` | 2 |
+| `tests/t533_block_module/` | 2 |
+| `tests/t534_stair_bed/` | 1 |
+| `tests/t535_sand_procurement/` | 1 |
+| `tests/t536_wiring_manifest/` | 1 |
+| `tests/t537_ranged_face/` | 1 |
+| `tests/t538_wiring_manifest_v3/` | 1 |
+| `tests/t539_accessory_ledger_v2/` | 2 |
+| `tests/t540_sand_load_density/` | 1 |
+| `tests/t541_roof_wp_reconcile/` | 1 |
+| `tests/t542_stair_bed_classes/` | 1 |
+| `tests/t543_blockwork_reconcile/` | 1 |
+| `tests/t544_held_lintel_ceiling/` | 3 |
+| `tests/t545_beam_concrete_reconcile/` | 1 |
+| `tests/t546_wet_floor_wp_reconcile/` | 1 |
+| `tests/t547_wall_tile_reconcile/` | 1 |
+| `tests/t548_reconciled_statement/` | 1 |
+| `tests/t549_wiring_manifest_v4/` | 1 |
+| `tests/t550_parapet_split/` | 1 |
+| `tests/t551_column_footing_reconcile/` | 1 |
+| `tests/t552_plaster_reconcile/` | 1 |
+| `tests/t553_floor_tile_reconcile/` | 1 |
+| `tests/t554_statement_adapters/` | 1 |
+| `tests/t555_wiring_manifest_v5/` | 1 |
+| `tests/t556_plaster_height/` | 1 |
+| `tests/t557_statement_adapters/` | 1 |
+| `tests/t558_wiring_manifest_v6/` | 1 |
+| `tests/t559_leftover/` | 1 |
+| `tests/t560_rebar_reconcile/` | 1 |
+| `tests/t561_paint_reconcile/` | 1 |
+| `tests/t562_statement_adapters/` | 1 |
+| `tests/t564_wiring_manifest_v7/` | 1 |
+| `tests/t565_earthworks_reconcile/` | 1 |
+| `tests/t566_column_mark_registration/` | 1 |
+| `tests/t567_ext_plaster_reconcile/` | 1 |
+| `tests/t568_doors_windows/` | 1 |
+| `tests/t569_wiring_manifest_v8/` | 1 |
+| `tests/t570_statement_adapters/` | 1 |
+| `tests/t571_lintel_count/` | 2 |
+| `tests/t572_held_bounds/` | 1 |
+| `tests/t573_ceiling_reconcile/` | 1 |
+| `tests/t574_skirting_reconcile/` | 1 |
+| `tests/t575_dome_lift_rebar/` | 1 |
+| `tests/t576_column_causes/` | 1 |
+| `tests/t577_marble_reconcile/` | 1 |
+| `tests/t578_rail_nosing_reconcile/` | 1 |
+| `tests/t579_statement_v5/` | 1 |
+| `tests/t580_manifest_overlay/` | 1 |
+| `tests/t581_width_basis/` | 2 |
+| `tests/t582_gate_b_readiness/` | 1 |
+| `tests/t583_dome_lift_components/` | 1 |
+| `tests/t584_steps/` | 1 |
+| `tests/t585_skirting_followups/` | 1 |
+| `tests/t586_statement_v6/` | 1 |
+| `tests/t587_statement_v7/` | 1 |
+| `tests/t588_manifest_v9/` | 1 |
+| `tests/t589_closable_pack/` | 1 |
+| `tests/t590/` | 1 |
+| `tests/t591_rule_diff_provenance/` | 1 |
+| `tests/t592_door_step/` | 1 |
+| `tests/t593_manifest_v10/` | 1 |
+| `tests/t594_statement_v8/` | 1 |
+| `tests/t595/` | 1 |
+| `tests/t596_manifest_v11/` | 1 |
+| `tests/t597_pit_union/` | 1 |
+| `tests/t598_nosing_held_edges/` | 2 |
+| `tests/t599/` | 1 |
+| `tests/t600/` | 1 |
+| `tests/t601_doorless_jambs/` | 1 |
+| `tests/t602_door_steps/` | 1 |
+| `tests/t603_statement_v9/` | 1 |
+| `tests/t604_manifest_v12/` | 1 |
+| `tests/t605_footing_overlap/` | 1 |
+| `tests/t606_room_outline_causes/` | 1 |
+| `tests/t607_step_nosing_shared/` | 2 |
+| `tests/t608_lift_landing_scope/` | 1 |
+| `tests/t609_statement_v10/` | 1 |
+| `tests/t610_beam_overlap/` | 1 |
+| `tests/t611_manifest_v13/` | 1 |
+| `tests/t612_open_room_outline/` | 1 |
+| `tests/t613_scorecard/` | 1 |
+| `tests/t614_beam_end_column/` | 1 |
+| `tests/t615_block_module_015/` | 2 |
+| `tests/t616/` | 1 |
+| `tests/t617_lift_landing_head/` | 1 |
+| `tests/t618_residual_closure/` | 1 |
+| `tests/t619_manifest_v14/` | 1 |
+| `tests/t620_statement_v11/` | 1 |
+| `tests/t621_room_area_evidence/` | 1 |
+| `tests/t622_wall_tile_remeasure/` | 1 |
+| `tests/t623/` | 1 |
+| `tests/t624_beam_end_open_items/` | 1 |
+| `tests/t625_open_plan_boundary/` | 1 |
+| `tests/t626_wet_roof_wp_evidence/` | 1 |
+| `tests/t627_opening_area_evidence/` | 1 |
+| `tests/t628/` | 1 |
+| `tests/t629_manifest_v15/` | 1 |
+| `tests/t630/` | 1 |
+| `tests/t631_manifest_v16/` | 1 |
+| `tests/t632/` | 1 |
+| `tests/t634/` | 1 |
+| `tests/t636_trial_boq/` | 1 |
+| `tests/t637/` | 1 |
+| `tests/t638/` | 1 |
+| `tests/t639/` | 1 |
+| `tests/t640/` | 1 |
+| `tests/t641_manifest_v17/` | 1 |
+| `tests/t642/` | 1 |
+| `tests/t643/` | 1 |
+| `tests/t644/` | 1 |
+| `tests/t645/` | 1 |
+| `tests/t646/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1987,7 +2118,134 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t510/` | 4 |
 | `research/agents_t511/` | 4 |
 | `research/agents_t512/` | 2 |
+| `research/agents_t514/` | 5 |
 | `research/agents_t515/` | 3 |
+| `research/agents_t516/` | 5 |
+| `research/agents_t517/` | 4 |
+| `research/agents_t518/` | 4 |
+| `research/agents_t519/` | 3 |
+| `research/agents_t520/` | 8 |
+| `research/agents_t522/` | 4 |
+| `research/agents_t523/` | 2 |
+| `research/agents_t524/` | 2 |
+| `research/agents_t525/` | 8 |
+| `research/agents_t526/` | 8 |
+| `research/agents_t527/` | 7 |
+| `research/agents_t529/` | 4 |
+| `research/agents_t530/` | 2 |
+| `research/agents_t531/` | 3 |
+| `research/agents_t532/` | 6 |
+| `research/agents_t533/` | 6 |
+| `research/agents_t534/` | 6 |
+| `research/agents_t535/` | 3 |
+| `research/agents_t536/` | 2 |
+| `research/agents_t537/` | 3 |
+| `research/agents_t538/` | 3 |
+| `research/agents_t539/` | 9 |
+| `research/agents_t540/` | 3 |
+| `research/agents_t541/` | 4 |
+| `research/agents_t542/` | 5 |
+| `research/agents_t543/` | 5 |
+| `research/agents_t544/` | 8 |
+| `research/agents_t545/` | 4 |
+| `research/agents_t546/` | 3 |
+| `research/agents_t547/` | 4 |
+| `research/agents_t548/` | 6 |
+| `research/agents_t549/` | 3 |
+| `research/agents_t550/` | 5 |
+| `research/agents_t551/` | 4 |
+| `research/agents_t552/` | 5 |
+| `research/agents_t553/` | 5 |
+| `research/agents_t554/` | 5 |
+| `research/agents_t555/` | 3 |
+| `research/agents_t556/` | 5 |
+| `research/agents_t557/` | 5 |
+| `research/agents_t558/` | 3 |
+| `research/agents_t559/` | 4 |
+| `research/agents_t560/` | 4 |
+| `research/agents_t561/` | 5 |
+| `research/agents_t562/` | 5 |
+| `research/agents_t564/` | 4 |
+| `research/agents_t565/` | 4 |
+| `research/agents_t566/` | 6 |
+| `research/agents_t567/` | 8 |
+| `research/agents_t568/` | 4 |
+| `research/agents_t569/` | 3 |
+| `research/agents_t570/` | 5 |
+| `research/agents_t571/` | 3 |
+| `research/agents_t572/` | 4 |
+| `research/agents_t573/` | 4 |
+| `research/agents_t574/` | 4 |
+| `research/agents_t575/` | 4 |
+| `research/agents_t576/` | 4 |
+| `research/agents_t577/` | 4 |
+| `research/agents_t578/` | 4 |
+| `research/agents_t579/` | 5 |
+| `research/agents_t580/` | 5 |
+| `research/agents_t581/` | 3 |
+| `research/agents_t582/` | 3 |
+| `research/agents_t583/` | 4 |
+| `research/agents_t584/` | 6 |
+| `research/agents_t585/` | 5 |
+| `research/agents_t586/` | 5 |
+| `research/agents_t587/` | 5 |
+| `research/agents_t588/` | 3 |
+| `research/agents_t589/` | 5 |
+| `research/agents_t590/` | 5 |
+| `research/agents_t591/` | 5 |
+| `research/agents_t592/` | 6 |
+| `research/agents_t593/` | 3 |
+| `research/agents_t594/` | 5 |
+| `research/agents_t595/` | 4 |
+| `research/agents_t596/` | 3 |
+| `research/agents_t597/` | 4 |
+| `research/agents_t598/` | 4 |
+| `research/agents_t599/` | 3 |
+| `research/agents_t600/` | 5 |
+| `research/agents_t601/` | 7 |
+| `research/agents_t602/` | 7 |
+| `research/agents_t603/` | 5 |
+| `research/agents_t604/` | 3 |
+| `research/agents_t605/` | 4 |
+| `research/agents_t606/` | 6 |
+| `research/agents_t607/` | 6 |
+| `research/agents_t608/` | 7 |
+| `research/agents_t609/` | 5 |
+| `research/agents_t610/` | 5 |
+| `research/agents_t611/` | 3 |
+| `research/agents_t612/` | 6 |
+| `research/agents_t613/` | 4 |
+| `research/agents_t614/` | 5 |
+| `research/agents_t615/` | 5 |
+| `research/agents_t616/` | 4 |
+| `research/agents_t617/` | 7 |
+| `research/agents_t618/` | 7 |
+| `research/agents_t619/` | 3 |
+| `research/agents_t620/` | 6 |
+| `research/agents_t621/` | 6 |
+| `research/agents_t622/` | 6 |
+| `research/agents_t623/` | 4 |
+| `research/agents_t624/` | 5 |
+| `research/agents_t625/` | 6 |
+| `research/agents_t626/` | 7 |
+| `research/agents_t627/` | 7 |
+| `research/agents_t628/` | 4 |
+| `research/agents_t629/` | 3 |
+| `research/agents_t630/` | 3 |
+| `research/agents_t631/` | 3 |
+| `research/agents_t632/` | 4 |
+| `research/agents_t634/` | 6 |
+| `research/agents_t636/` | 4 |
+| `research/agents_t637/` | 4 |
+| `research/agents_t638/` | 5 |
+| `research/agents_t639/` | 5 |
+| `research/agents_t640/` | 5 |
+| `research/agents_t641/` | 3 |
+| `research/agents_t642/` | 8 |
+| `research/agents_t643/` | 5 |
+| `research/agents_t644/` | 5 |
+| `research/agents_t645/` | 5 |
+| `research/agents_t646/` | 5 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

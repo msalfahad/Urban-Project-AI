@@ -1,0 +1,1310 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-507 c94b35c1: V3.0.57 line index 25a8b406, 4,994 lines byte-identical, + 5 FIN.WP.ROOF / ROOF_UPTURN lines = 4,999)",
+ "candidate_files_touched": 0,
+ "candidate_lines_moved_v4_to_v5": 0,
+ "coverage": {
+  "covered": [
+   "T-544",
+   "T-545",
+   "T-546",
+   "T-547",
+   "T-549",
+   "T-552",
+   "T-554"
+  ],
+  "first_parent_merges": 7,
+  "range": [
+   "3f3b580c",
+   "47d74505"
+  ]
+ },
+ "findings": [
+  "F-T555-1: V4's 1F glue host (HELD blank) and AAC glue group (17.643906 .. 18.16227) are stale after T-544; a package wiring V4 would hold a host the drawing now bounds",
+  "F-T555-2: T-544 part 2 makes the staged glue ranges of L-6989349a / L-aa5532bb (legacy low ends) stale; V2 - V4 never named them, so no package would have rebound them",
+  "F-T555-3: T-552's ENGINE_WRONG on the dry FIN.PLASTER height has no owning wiring row; the plaster material bindings that read those lines are stale until it is wired"
+ ],
+ "glue_hosts": {
+  "bindings_stale": [
+   "T-453|L-2fdc0f971a94348ec855|glue_bags_25kg_net",
+   "T-453|L-2fdc0f971a94348ec855|glue_kg",
+   "T-453|L-541cf7210e52db0498bb|glue_bags_25kg_net",
+   "T-453|L-541cf7210e52db0498bb|glue_kg",
+   "T-453|L-b7b4d784fbe7fdbebe84|glue_bags_25kg_net",
+   "T-453|L-b7b4d784fbe7fdbebe84|glue_kg"
+  ],
+  "bindings_stale_new_vs_v4": [
+   "T-453|L-541cf7210e52db0498bb|glue_bags_25kg_net",
+   "T-453|L-541cf7210e52db0498bb|glue_kg",
+   "T-453|L-b7b4d784fbe7fdbebe84|glue_bags_25kg_net",
+   "T-453|L-b7b4d784fbe7fdbebe84|glue_kg"
+  ],
+  "glue_group": {
+   "open_members": [
+    "L-b7b4d784fbe7fdbebe84 (range) (loss HELD)",
+    "L-2fdc0f971a94348ec855 (range) (loss HELD)",
+    "L-9056ebed77701b50abfc",
+    "L-bbb82de298fecbafa11d",
+    "L-e90c9dd5ca08ffb64728",
+    "L-a3f88ecda2402f67c500 (range) (loss HELD)",
+    "L-541cf7210e52db0498bb (range) (loss HELD)",
+    "L-4e304f59db838d5fc7ec (loss HELD)",
+    "L-7503af7cc1eea4e6735d",
+    "L-ee857398614d817e6917"
+   ],
+   "v4_expected_after": {
+    "at_least": [
+     17.643906,
+     18.16227
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     18,
+     19
+    ]
+   },
+   "v5_expected_after": {
+    "at_least": [
+     34.891351,
+     36.226627
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     35,
+     37
+    ]
+   },
+   "v5_part1_only": {
+    "at_least": [
+     35.159227,
+     36.226627
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     36,
+     37
+    ]
+   },
+   "why": "the known part grows because the 1F host is bounded and the two FRESH part-2 hosts lose a low end that was no bound; still HELD (losses and open members)"
+  },
+  "hosts": [
+   {
+    "cause": "R-T544-1: the 4 held lintel ends measured (ceilings rounded up, shared piers once)",
+    "contract_net_m2": 101.976,
+    "face_sum_m2": [
+     1.61846,
+     4.66866
+    ],
+    "host_line_id": "L-2fdc0f971a94348ec855",
+    "kg_per_m2": 4.5,
+    "part": 1,
+    "stale": true,
+    "t498_stage_line": "L-4b9a29d424ea40e0af8a",
+    "v4_expected_after": {
+     "at_most_beside": 451.60893,
+     "range": null,
+     "state": "HELD",
+     "unit": "kg",
+     "value": null,
+     "why": "an open lintel face: the material is HELD blank by name, its upper end beside (AT_MOST)"
+    },
+    "v5_expected_after": {
+     "bags_25kg_net": {
+      "range": [
+       17.515321,
+       18.064357
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "bags_25kg_net",
+      "value": null
+     },
+     "base_m2": [
+      97.30734,
+      100.35754
+     ],
+     "glue_kg": {
+      "range": [
+       437.88303,
+       451.60893
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "kg",
+      "value": null
+     }
+    }
+   },
+   {
+    "cause": "unchanged by V5 pieces (T-537 r2 as in V4)",
+    "contract_net_m2": 5.59,
+    "host_line_id": "L-a3f88ecda2402f67c500",
+    "kg_per_m2": 4.5,
+    "part": null,
+    "stale": false,
+    "t498_stage_line": "L-d14c6c9b738045c797ec",
+    "v4_expected_after": {
+     "range": [
+      23.4459,
+      23.895
+     ],
+     "state": "BOUNDED_EXPOSURE",
+     "unit": "kg",
+     "value": null
+    },
+    "v5_expected_after": {
+     "bags_25kg_net": {
+      "range": [
+       0.937836,
+       0.9558
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "bags_25kg_net",
+      "value": null
+     },
+     "base_m2": [
+      5.2102,
+      5.31
+     ],
+     "glue_kg": {
+      "range": [
+       23.4459,
+       23.895
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "kg",
+      "value": null
+     }
+    }
+   },
+   {
+    "cause": "R-T544-1 part 2: the legacy D x (w + 0.80) low end is no bound (F-T537-1); high end unchanged",
+    "contract_net_m2": 44.2975,
+    "host_line_id": "L-541cf7210e52db0498bb",
+    "kg_per_m2": 4.5,
+    "part": 2,
+    "stale": true,
+    "t498_stage_line": "L-6989349aef1cd4fa0940",
+    "t523_fresh": "FRESH",
+    "v4_expected_after": {
+     "carried": "T-453 r1 legacy range (R-T498-1) via the T-523 binding",
+     "legacy_kg_range": [
+      194.02875,
+      199.33875
+     ],
+     "state": "NOT_STATED",
+     "value": null
+    },
+    "v5_expected_after": {
+     "bags_25kg_net": {
+      "range": [
+       7.637994,
+       7.97355
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "bags_25kg_net",
+      "value": null
+     },
+     "base_m2": [
+      42.4333,
+      44.2975
+     ],
+     "glue_kg": {
+      "range": [
+       190.94985,
+       199.33875
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "kg",
+      "value": null
+     }
+    }
+   },
+   {
+    "cause": "R-T544-1 part 2: the legacy D x (w + 0.80) low end is no bound (F-T537-1); high end unchanged",
+    "contract_net_m2": 46.836,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "kg_per_m2": 4.5,
+    "part": 2,
+    "stale": true,
+    "t498_stage_line": "L-aa5532bb971eceac1b76",
+    "t523_fresh": "FRESH",
+    "v4_expected_after": {
+     "carried": "T-453 r1 legacy range (R-T498-1) via the T-523 binding",
+     "legacy_kg_range": [
+      203.562,
+      210.762
+     ],
+     "state": "NOT_STATED",
+     "value": null
+    },
+    "v5_expected_after": {
+     "bags_25kg_net": {
+      "range": [
+       7.99776,
+       8.43048
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "bags_25kg_net",
+      "value": null
+     },
+     "base_m2": [
+      44.432,
+      46.836
+     ],
+     "glue_kg": {
+      "range": [
+       199.944,
+       210.762
+      ],
+      "state": "BOUNDED_EXPOSURE",
+      "unit": "kg",
+      "value": null
+     }
+    }
+   },
+   {
+    "cause": "stays HELD by name; range beside only",
+    "contract_net_m2": 15.9165,
+    "host_line_id": "L-bbb82de298fecbafa11d",
+    "kg_per_m2": 4.5,
+    "part": 2,
+    "stale": false,
+    "t498_stage_line": "L-4ccc5dc26bd2472b03ad",
+    "t523_fresh": "STALE_CLASS: read RELEASED, candidate HELD",
+    "v4_expected_after": {
+     "carried": "T-453 r1 legacy range (R-T498-1) via the T-523 binding",
+     "legacy_kg_range": [
+      65.14425,
+      71.62425
+     ],
+     "state": "NOT_STATED",
+     "value": null
+    },
+    "v5_expected_after": {
+     "glue_kg": {
+      "conditional_range_beside": [
+       63.82125,
+       71.62425
+      ],
+      "range": null,
+      "state": "HELD",
+      "value": null,
+      "why": "contract line HELD in the candidate (T-523 STALE_CLASS, 2F D-39): never a valued group member"
+     }
+    }
+   }
+  ],
+  "rule": "R-T544-1 1.0.0 on R-T498-2 1.0.0 r2",
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06 ~04:00Z GATE A PASS: own raw-DXF re-measure 8 / 8 ends AGREE <= 0.1 mm (1F), GF part 2 8 / 8 AGREE; 1F glue host RANGE, line stays HELD; PARTIAL 16 / 34 ends",
+    "merge": "2dbfaf95",
+    "task": "T-544"
+   }
+  ],
+  "stage_lines_stale": [
+   "L-4b9a29d424ea40e0af8a",
+   "L-6989349aef1cd4fa0940",
+   "L-aa5532bb971eceac1b76"
+  ]
+ },
+ "inputs": {
+  "research/agents_t523/t523_binding_map_v2.py": "183982ab1d9bbac1515e59ca048b26bc6031260bfa1e677e7f0a25ae38f55f7b",
+  "research/agents_t544/t544_apply.py": "986808f980d29331edc1830ed2a7dbe194dd8a1b798b2f57ada988fe96fbd96f",
+  "research/agents_t545/out/T545_BEAM_RECONCILE.json": "c9b914e5e0286aca5bd00ee80905235eda2e9a516d1dc2fcd325c2a1eacd941c",
+  "research/agents_t546/t546_inputs.py": "f753a347487b203ae7ecaa49c18a7c9339836f7ad8adf68841a05579ca0351e5",
+  "research/agents_t547/out/WALL_TILE_RECONCILE_T547.json": "648a1f011edd6649409277d55d1109541ba8f6e773a64091f22a979f8e45c723",
+  "research/agents_t549/WIRING_MANIFEST_V4.json": "b0a8c6736122522e44690f9b49d2781eb1508cf8be3514f472cc169d5e5fc387",
+  "research/agents_t552/out/T552_PLASTER_RECONCILE.json": "706ff9fde046462bf5c2a06a63c78bff865e803c492c45d8301fa7663b7c445e",
+  "research/agents_t554/out/RECONCILED_STATEMENT_T554.json": "089ee3e32e11b38bdf47c9897cfc3e56af3ee26daf76bfa55268d16abdec9a0c"
+ },
+ "lintel_ends": {
+  "candidate_lines_moved": 0,
+  "part1": [
+   {
+    "after": {
+     "B_D_m": [
+      0.2,
+      0.2
+     ],
+     "L_ceil_m": 3.28,
+     "at_most_beside_m3": 0.1312,
+     "class": "HELD",
+     "value": null
+    },
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-53ef44d8c490d1341b93",
+    "opening_id": "W16",
+    "why": "existence not established (head not printed, D-45): the ceiling bounds a lintel if built; never released, never 0"
+   },
+   {
+    "after": {
+     "B_D_m": [
+      0.2,
+      0.2
+     ],
+     "L_ceil_m": 2.2,
+     "at_most_beside_m3": 0.088,
+     "class": "HELD",
+     "value": null
+    },
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-6057028f3f666538a007",
+    "opening_id": "W19",
+    "why": "existence not established (head not printed, D-45): the ceiling bounds a lintel if built; never released, never 0"
+   },
+   {
+    "after": {
+     "B_D_m": [
+      0.2,
+      0.2
+     ],
+     "L_ceil_m": 2.487,
+     "at_most_beside_m3": 0.09948,
+     "class": "HELD",
+     "value": null
+    },
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-6692d02cd6cd25120300",
+    "opening_id": "W20",
+    "why": "existence not established (head not printed, D-45): the ceiling bounds a lintel if built; never released, never 0"
+   },
+   {
+    "after": {
+     "B_D_m": [
+      0.2,
+      0.2
+     ],
+     "L_ceil_m": 6.71,
+     "at_most_beside_m3": 0.2684,
+     "class": "HELD",
+     "value": null
+    },
+    "before": {
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-40e8c2597de12644e8e2",
+    "opening_id": "W24",
+    "why": "existence not established (head not printed, D-45): the ceiling bounds a lintel if built; never released, never 0"
+   }
+  ],
+  "part2_ceilings": [
+   {
+    "L_ceil_m": 2.501,
+    "face_hi_m2": 0.5002,
+    "host_line_id": "L-541cf7210e52db0498bb",
+    "opening_id": "D-GF-09"
+   },
+   {
+    "L_ceil_m": 2.87,
+    "face_hi_m2": 0.574,
+    "host_line_id": "L-541cf7210e52db0498bb",
+    "opening_id": "W05"
+   },
+   {
+    "L_ceil_m": 2.495,
+    "face_hi_m2": 0.499,
+    "host_line_id": "L-541cf7210e52db0498bb",
+    "opening_id": "W06"
+   },
+   {
+    "L_ceil_m": 3.35,
+    "face_hi_m2": 0.67,
+    "host_line_id": "L-541cf7210e52db0498bb",
+    "opening_id": "W07"
+   },
+   {
+    "L_ceil_m": 2.7,
+    "face_hi_m2": 0.54,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "opening_id": "W13"
+   },
+   {
+    "L_ceil_m": 2.87,
+    "face_hi_m2": 0.574,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "opening_id": "W21"
+   },
+   {
+    "L_ceil_m": 2.495,
+    "face_hi_m2": 0.499,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "opening_id": "W22"
+   },
+   {
+    "L_ceil_m": 3.35,
+    "face_hi_m2": 0.67,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "opening_id": "W23"
+   },
+   {
+    "L_ceil_m": 2.5,
+    "face_hi_m2": 0.5,
+    "host_line_id": "L-b7b4d784fbe7fdbebe84",
+    "opening_id": "W25"
+   },
+   {
+    "L_ceil_m": 2.7,
+    "face_hi_m2": 0.54,
+    "host_line_id": "L-bbb82de298fecbafa11d",
+    "opening_id": "W26"
+   },
+   {
+    "L_ceil_m": 2.5,
+    "face_hi_m2": 0.5,
+    "host_line_id": "L-bbb82de298fecbafa11d",
+    "opening_id": "W27"
+   },
+   {
+    "L_ceil_m": 2.27,
+    "face_hi_m2": 0.454,
+    "host_line_id": "L-bbb82de298fecbafa11d",
+    "opening_id": "W28"
+   },
+   {
+    "L_ceil_m": 2.495,
+    "face_hi_m2": 0.499,
+    "host_line_id": "L-bbb82de298fecbafa11d",
+    "opening_id": "W29"
+   }
+  ],
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06 ~04:00Z GATE A PASS: own raw-DXF re-measure 8 / 8 ends AGREE <= 0.1 mm (1F), GF part 2 8 / 8 AGREE; 1F glue host RANGE, line stays HELD; PARTIAL 16 / 34 ends",
+    "merge": "2dbfaf95",
+    "task": "T-544"
+   }
+  ],
+  "why_named": "V2 - V4 stated only the 16 released lintel lines; T-544 bounds 17 held ones beside"
+ },
+ "no_wiring": {
+  "T-545": "reconciliation vs the freelancer: moves no line; engine side = the candidate STR.CONC.BEAM lines (checked)",
+  "T-546": "reconciliation vs the freelancer: moves no line; engine side = the candidate FIN.WP.FLOOR / WALL_UPTURN",
+  "T-547": "reconciliation vs the freelancer: moves no line; engine side = the candidate FIN.WALL.TILE lines",
+  "T-549": "the V4 manifest itself: superseded by this V5 (every V4 statement carried unless listed in v4_to_v5)",
+  "T-554": "statement builder adapters: moves no line; its F-C-T548-1 ENGINE_WRONG is the V4 MS1-LD landing (T-502)"
+ },
+ "packages": {
+  "F package (V7 stair bed)": {
+   "v5_changes": [],
+   "why": "T-554 F-C-T548-1 ENGINE_WRONG 1.4375 m2 is the V4 MS1-LD landing part"
+  },
+  "T-363 / T-372 / T-513": {
+   "v5_changes": [],
+   "why": "no V5 piece moves masonry accessories, joints or band gaps"
+  },
+  "T-423 r2 (stream F, paint / skirting)": {
+   "blocked_by": "wrapper allow-list",
+   "v5_changes": [],
+   "why": "no V5 piece moves its F1 / F3 lines; T-552 corrects FIN.PLASTER only, never the FIN.PAINT lines T-423 touches (one owner)"
+  },
+  "T-498 (S package, stream S)": {
+   "blocked_by": "wrapper allow-list (T-498 / T-525)",
+   "unchanged": "steps 1-4, 6, 8 as V4",
+   "v5_changes": [
+    "step 5 host faces: 1F L-4b9a29d4 BOUNDED_EXPOSURE [437.88303, 451.60893] kg (V4: HELD blank, AT_MOST beside)",
+    "step 5 (new): stage glue lines L-6989349a (GF L-541cf721) and L-aa5532bb (1F L-b7b4d784) carry the T-544 part 2 ranges, not the legacy R-T498-1 low ends; L-4ccc5dc2 (2F L-bbb82de2) stays HELD",
+    "step 7 groups: AAC glue AT_LEAST [34.891351, 36.226627] bags HELD, >= [35, 37] (V4: 17.643906 .. 18.16227, >= 18 .. 19)",
+    "lintel lines: the 17 HELD lintels stay HELD; T-544 ceilings beside only"
+   ]
+  },
+  "T-509 (B1-04 disposal, stream S)": {
+   "blocked_by": "after T-498 (one candidate package at a time)",
+   "v5_changes": [],
+   "why": "no V5 piece touches B1 earthworks lines"
+  },
+  "plaster height correction (NO ROW)": {
+   "blocked_by": "no board row (Lead); wrapper allow-list",
+   "needs": [
+    "plaster_height"
+   ],
+   "order": [
+    "4 RELEASED dry FIN.PLASTER lines 217.2081 m2 -> HELD (BOUNDED) [261.77493, 269.32863] m2",
+    "7 HELD lines keep HELD, bounds from T-552",
+    "58 T-454 / T-489 plaster bindings rebound"
+   ]
+  }
+ },
+ "pieces_new": {
+  "T-544": {
+   "gate": "A",
+   "merge": "2dbfaf95",
+   "rules": [
+    "R-T544-1"
+   ],
+   "verdict": "Verifier 2026-11-06 ~04:00Z GATE A PASS: own raw-DXF re-measure 8 / 8 ends AGREE <= 0.1 mm (1F), GF part 2 8 / 8 AGREE; 1F glue host RANGE, line stays HELD; PARTIAL 16 / 34 ends"
+  },
+  "T-545": {
+   "gate": "A",
+   "merge": "e533bc87",
+   "rules": [
+    "R-T545-1",
+    "R-T545-2",
+    "R-T545-3"
+   ],
+   "verdict": "Verifier 2026-11-06 05:58Z GATE A PASS: beam concrete vs the freelancer by component; COUNT ENGINE_RIGHT (B27 own hand); no line status changes"
+  },
+  "T-546": {
+   "gate": "A",
+   "merge": "a615fa41",
+   "rules": [
+    "R-T546-1"
+   ],
+   "verdict": "Verifier 2026-11-06 ~04:15Z GATE A PASS: wet-room floor WP room by room; engine side from LINE_INDEX_V3_0_57 AGREE; his upturn is a length (F-T546-1)"
+  },
+  "T-547": {
+   "gate": "A",
+   "merge": "47d74505",
+   "rules": [
+    "R-T547-1"
+   ],
+   "verdict": "Verifier 2026-11-06 06:56Z GATE A PASS: wall tile 340.3038 vs 433.83 m2, residual 0; FIN.WALL.TILE PARTIALLY VERIFIED"
+  },
+  "T-549": {
+   "gate": "A",
+   "merge": "f91e917f",
+   "rules": [
+    "R-T549-1"
+   ],
+   "verdict": "Verifier 2026-11-06 ~04:10Z GATE A PASS: WIRING MANIFEST V4; STALE ON MERGE for T-544 -> V5"
+  },
+  "T-552": {
+   "gate": "A",
+   "merge": "0106dbfb",
+   "rules": [
+    "R-T552-1"
+   ],
+   "verdict": "Verifier 2026-11-06 05:58Z GATE A PASS: wall plaster by face class; height basis ENGINE_WRONG (candidate plaster = paint height, own check); +146.41 .. +171.23 m2 HELD"
+  },
+  "T-554": {
+   "gate": "A",
+   "merge": "82136421",
+   "rules": [
+    "R-T554-1"
+   ],
+   "verdict": "Verifier 2026-11-06 05:58Z GATE A PASS: statement adapters T-543 / T-546 / T-542 + F-C-T548-1 / F-C-T543-1 corrections; no quantity moves"
+  }
+ },
+ "plaster_height": {
+  "bindings_held_blank_unchanged": 74,
+  "bindings_stale": [
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+   "T-454|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+   "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+   "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|mortar_m3",
+   "T-454|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+   "T-454|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|mortar_m3",
+   "T-454|L-31db3c83552682d92ca3|WALL_PLASTER|mortar_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+   "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|mortar_m3",
+   "T-454|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+   "T-454|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+   "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|mortar_m3",
+   "T-454|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+   "T-454|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+   "T-454|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+   "T-454|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+   "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+   "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|mortar_m3",
+   "T-454|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|cement_bags",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|mortar_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|BOND_COAT|sand_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|cement_bags",
+   "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|mortar_m3",
+   "T-489|L-0d93f2209cd9bb827c0a|WALL_PLASTER|sand_m3",
+   "T-489|L-2ba8077ba9bb2e1ff0f6|WALL_PLASTER|mortar_m3",
+   "T-489|L-31db3c83552682d92ca3|WALL_PLASTER|mortar_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|cement_bags",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|mortar_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|BOND_COAT|sand_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|cement_bags",
+   "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|mortar_m3",
+   "T-489|L-4ce74fc37a08d4bdf0d8|WALL_PLASTER|sand_m3",
+   "T-489|L-8cecb1d010d5aafbf25d|WALL_PLASTER|mortar_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|cement_bags",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|mortar_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|BOND_COAT|sand_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|cement_bags",
+   "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|mortar_m3",
+   "T-489|L-971f0bdaf68d7fd0966c|WALL_PLASTER|sand_m3",
+   "T-489|L-9b4a7bab033d677e2017|WALL_PLASTER|mortar_m3",
+   "T-489|L-ae0cdd794cc5fdbe0c29|WALL_PLASTER|mortar_m3",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|cement_bags",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|mortar_m3",
+   "T-489|L-af9621f43bc316a871ea|BOND_COAT|sand_m3",
+   "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|cement_bags",
+   "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|mortar_m3",
+   "T-489|L-af9621f43bc316a871ea|WALL_PLASTER|sand_m3"
+  ],
+  "code_view": {
+   "FIN.PLASTER_released_after_m2": 363.3738,
+   "FIN.PLASTER_released_now_m2": 580.5819,
+   "moved_to_bounded_m2": [
+    261.77493,
+    269.32863
+   ]
+  },
+  "equals_released_paint_m2": 217.2081,
+  "finding": "T-552 ENGINE_WRONG (Q-72; owner 2026-11-02 plaster to the slab underside)",
+  "held_lines": 7,
+  "missing_total_m2": [
+   "146.41440",
+   "171.23040"
+  ],
+  "one_owner": "the FIN.PAINT lines keep the paint height (G1): only FIN.PLASTER moves; T-423 r2 (paint) must not carry this correction",
+  "owning_package": null,
+  "owning_package_state": "NONE: no board row wires the T-552 correction (Lead to name it; a released line moving to HELD (BOUNDED) is a Gate B change of its own, never inside another package)",
+  "released_after_bound_m2": [
+   261.77493,
+   269.32863
+  ],
+  "released_before_m2": 217.2081,
+  "released_lines": 4,
+  "rows": [
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "CB6 0.75"
+     ],
+     "bound_m2": [
+      57.62493,
+      75.08763
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.74",
+      "3.84"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.15 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-b152995525ed123ddac9",
+    "room": "GF-01",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      41.115,
+      44.255
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.74",
+      "3.84"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.15 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-1ddc23d5657b4c4e4d0d",
+    "room": "GF-04",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      68.71993,
+      70.87363
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "4.24",
+      "4.34"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.65 (= paint height)",
+     "class": "RELEASED",
+     "value": 56.0131
+    },
+    "line_id": "L-0d93f2209cd9bb827c0a",
+    "room": "GF-15",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.15)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B26 0.85",
+      "B27 0.85"
+     ],
+     "bound_m2": [
+      183.43142,
+      215.50472
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "4.24",
+      "4.34"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.65 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-8cecb1d010d5aafbf25d",
+    "room": "GF-08",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.61)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B6 0.50"
+     ],
+     "bound_m2": [
+      61.858,
+      63.628
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "RELEASED",
+     "value": 51.415
+    },
+    "line_id": "L-af9621f43bc316a871ea",
+    "room": "1F-01",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      62.271,
+      64.011
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "RELEASED",
+     "value": 52.005
+    },
+    "line_id": "L-971f0bdaf68d7fd0966c",
+    "room": "1F-04",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B19 0.75",
+      "B6 0.50"
+     ],
+     "bound_m2": [
+      58.498,
+      63.468
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-2ba8077ba9bb2e1ff0f6",
+    "room": "1F-10",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.59)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [],
+     "bound_m2": [
+      74.53051,
+      77.00051
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-31db3c83552682d92ca3",
+    "room": "1F-11",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B25 / CB12 0.75 on edges"
+     ],
+     "bound_m2": [
+      134.2932,
+      141.5882
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-9b4a7bab033d677e2017",
+    "room": "1F-13",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 0.57)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B2 0.40"
+     ],
+     "bound_m2": [
+      68.926,
+      70.816
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "RELEASED",
+     "value": 57.775
+    },
+    "line_id": "L-4ce74fc37a08d4bdf0d8",
+    "room": "2F-03",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   },
+   {
+    "after": {
+     "beam_end_sections_held": [
+      "B15 1.20"
+     ],
+     "bound_m2": [
+      27.96551,
+      32.21641
+     ],
+     "class": "HELD",
+     "plaster_height_m": [
+      "3.94",
+      "4.04"
+     ],
+     "state": "HELD (BOUNDED)",
+     "value": null
+    },
+    "before": {
+     "basis": "owner G1 3.35 (= paint height)",
+     "class": "HELD",
+     "value": null
+    },
+    "line_id": "L-ae0cdd794cc5fdbe0c29",
+    "room": "2F-01",
+    "status": "HELD (BOUNDED): build-up b not printed; PROVISIONAL-DATUM (under a roof, share 1.0)"
+   }
+  ],
+  "source": [
+   {
+    "checker": "Verifier 2026-11-06 05:58Z GATE A PASS: wall plaster by face class; height basis ENGINE_WRONG (candidate plaster = paint height, own check); +146.41 .. +171.23 m2 HELD",
+    "merge": "0106dbfb",
+    "task": "T-552"
+   }
+  ]
+ },
+ "reconciliation_consistency": {
+  "T-545": {
+   "candidate_lines_moved": 0,
+   "code": "STR.CONC.BEAM",
+   "engine_m3": 66.321054,
+   "excluded": 54,
+   "freelancer_m3": 66.093875,
+   "held": 27,
+   "released": 110
+  },
+  "T-546": {
+   "candidate_lines_moved": 0,
+   "codes": [
+    "FIN.WP.FLOOR",
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "floor_lines": 18,
+   "floor_m2": 85.57571,
+   "freelancer_upturn_lm": 144.61,
+   "upturn_held": 1,
+   "upturn_lines": 17,
+   "upturn_lm_at_rule_height": 126.072925,
+   "upturn_m2": 25.214585
+  },
+  "T-547": {
+   "candidate_lines_moved": 0,
+   "code": "FIN.WALL.TILE",
+   "engine_m2": 340.3038,
+   "freelancer_m2": 433.83,
+   "held": 6,
+   "held_bound_m2": [
+    102.2085,
+    144.1735
+   ],
+   "released": 12
+  },
+  "T-552": {
+   "candidate_lines_moved": 0,
+   "code": "FIN.PLASTER",
+   "engine_m2": 580.5819,
+   "excluded": 13,
+   "held": 20,
+   "pending_correction": "plaster_height",
+   "released": 42
+  },
+  "T-554": {
+   "candidate_lines_moved": 0,
+   "is_v4_part": "stair_beyond MS1-LD LANDING (T-502)",
+   "reports_covered": [
+    "T-541",
+    "T-534",
+    "T-543",
+    "T-546",
+    "T-542"
+   ],
+   "reports_pending": [
+    "T-545",
+    "T-547",
+    "T-550",
+    "T-551",
+    "T-552",
+    "T-553"
+   ],
+   "roof_sections": "engine side = the F package expected after (F-T549-1, V4), not V3.0.58",
+   "stair_engine_wrong_m2": 1.4375
+  }
+ },
+ "released_quantities_changed": 0,
+ "rule": "R-T549-1 MANIFEST COVERAGE (every villa; provenance F-C-T536-1 / T-538, T-549): a wiring manifest names its range (previous manifest base, this base] on the first-parent line; every 'Merge agents/task-T-<n>' in it is a source with that merge commit or a declared NO_WIRING piece with its reason; a merged piece missing from the manifest, a source outside the range or with another merge commit is refused. The range is pinned: a later merge belongs to the next manifest and never turns this one red.",
+ "schema": "URBAN_T555_WIRING_MANIFEST_V5",
+ "stage_ref": "e3e2ebb5",
+ "supersedes": "T-549 WIRING_MANIFEST_V4.json (every V4 / V3 / V2 statement carried unless listed in v4_to_v5)",
+ "task": "T-555",
+ "v4_to_v5": [
+  {
+   "cause": "T-544",
+   "v4": {
+    "at_most_beside": 451.60893,
+    "range": null,
+    "state": "HELD",
+    "unit": "kg",
+    "value": null,
+    "why": "an open lintel face: the material is HELD blank by name, its upper end beside (AT_MOST)"
+   },
+   "v5": {
+    "range": [
+     437.88303,
+     451.60893
+    ],
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "kg",
+    "value": null
+   },
+   "what": "glue host L-2fdc0f971a94348ec855 (stage L-4b9a29d424ea40e0af8a)"
+  },
+  {
+   "cause": "T-544",
+   "v4": {
+    "carried": "T-453 r1 legacy range (R-T498-1) via the T-523 binding",
+    "legacy_kg_range": [
+     194.02875,
+     199.33875
+    ],
+    "state": "NOT_STATED",
+    "value": null
+   },
+   "v5": {
+    "range": [
+     190.94985,
+     199.33875
+    ],
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "kg",
+    "value": null
+   },
+   "what": "glue host L-541cf7210e52db0498bb (stage L-6989349aef1cd4fa0940)"
+  },
+  {
+   "cause": "T-544",
+   "v4": {
+    "carried": "T-453 r1 legacy range (R-T498-1) via the T-523 binding",
+    "legacy_kg_range": [
+     203.562,
+     210.762
+    ],
+    "state": "NOT_STATED",
+    "value": null
+   },
+   "v5": {
+    "range": [
+     199.944,
+     210.762
+    ],
+    "state": "BOUNDED_EXPOSURE",
+    "unit": "kg",
+    "value": null
+   },
+   "what": "glue host L-b7b4d784fbe7fdbebe84 (stage L-aa5532bb971eceac1b76)"
+  },
+  {
+   "cause": "T-544 part 1 + 2",
+   "v4": {
+    "at_least": [
+     17.643906,
+     18.16227
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     18,
+     19
+    ]
+   },
+   "v5": {
+    "at_least": [
+     34.891351,
+     36.226627
+    ],
+    "status": "HELD",
+    "to_buy_at_least": [
+     35,
+     37
+    ]
+   },
+   "what": "AAC glue group"
+  },
+  {
+   "cause": "T-544 (ceiling beside; line unchanged)",
+   "v4": {
+    "class": "HELD",
+    "stated": false
+   },
+   "v5": {
+    "B_D_m": [
+     0.2,
+     0.2
+    ],
+    "L_ceil_m": 3.28,
+    "at_most_beside_m3": 0.1312,
+    "class": "HELD",
+    "value": null
+   },
+   "what": "lintel W16 L-53ef44d8c490d1341b93"
+  },
+  {
+   "cause": "T-544 (ceiling beside; line unchanged)",
+   "v4": {
+    "class": "HELD",
+    "stated": false
+   },
+   "v5": {
+    "B_D_m": [
+     0.2,
+     0.2
+    ],
+    "L_ceil_m": 2.2,
+    "at_most_beside_m3": 0.088,
+    "class": "HELD",
+    "value": null
+   },
+   "what": "lintel W19 L-6057028f3f666538a007"
+  },
+  {
+   "cause": "T-544 (ceiling beside; line unchanged)",
+   "v4": {
+    "class": "HELD",
+    "stated": false
+   },
+   "v5": {
+    "B_D_m": [
+     0.2,
+     0.2
+    ],
+    "L_ceil_m": 2.487,
+    "at_most_beside_m3": 0.09948,
+    "class": "HELD",
+    "value": null
+   },
+   "what": "lintel W20 L-6692d02cd6cd25120300"
+  },
+  {
+   "cause": "T-544 (ceiling beside; line unchanged)",
+   "v4": {
+    "class": "HELD",
+    "stated": false
+   },
+   "v5": {
+    "B_D_m": [
+     0.2,
+     0.2
+    ],
+    "L_ceil_m": 6.71,
+    "at_most_beside_m3": 0.2684,
+    "class": "HELD",
+    "value": null
+   },
+   "what": "lintel W24 L-40e8c2597de12644e8e2"
+  },
+  {
+   "cause": "T-552 ENGINE_WRONG (no owning package)",
+   "v4": {
+    "basis": "owner G1 3.65 (= paint height)",
+    "class": "RELEASED",
+    "stated": false,
+    "value": 56.0131
+   },
+   "v5": {
+    "beam_end_sections_held": [],
+    "bound_m2": [
+     68.71993,
+     70.87363
+    ],
+    "class": "HELD",
+    "plaster_height_m": [
+     "4.24",
+     "4.34"
+    ],
+    "state": "HELD (BOUNDED)",
+    "value": null
+   },
+   "what": "plaster GF-15 L-0d93f2209cd9bb827c0a"
+  },
+  {
+   "cause": "T-552 ENGINE_WRONG (no owning package)",
+   "v4": {
+    "basis": "owner G1 3.35 (= paint height)",
+    "class": "RELEASED",
+    "stated": false,
+    "value": 51.415
+   },
+   "v5": {
+    "beam_end_sections_held": [
+     "B6 0.50"
+    ],
+    "bound_m2": [
+     61.858,
+     63.628
+    ],
+    "class": "HELD",
+    "plaster_height_m": [
+     "3.94",
+     "4.04"
+    ],
+    "state": "HELD (BOUNDED)",
+    "value": null
+   },
+   "what": "plaster 1F-01 L-af9621f43bc316a871ea"
+  },
+  {
+   "cause": "T-552 ENGINE_WRONG (no owning package)",
+   "v4": {
+    "basis": "owner G1 3.35 (= paint height)",
+    "class": "RELEASED",
+    "stated": false,
+    "value": 52.005
+   },
+   "v5": {
+    "beam_end_sections_held": [],
+    "bound_m2": [
+     62.271,
+     64.011
+    ],
+    "class": "HELD",
+    "plaster_height_m": [
+     "3.94",
+     "4.04"
+    ],
+    "state": "HELD (BOUNDED)",
+    "value": null
+   },
+   "what": "plaster 1F-04 L-971f0bdaf68d7fd0966c"
+  },
+  {
+   "cause": "T-552 ENGINE_WRONG (no owning package)",
+   "v4": {
+    "basis": "owner G1 3.35 (= paint height)",
+    "class": "RELEASED",
+    "stated": false,
+    "value": 57.775
+   },
+   "v5": {
+    "beam_end_sections_held": [
+     "B2 0.40"
+    ],
+    "bound_m2": [
+     68.926,
+     70.816
+    ],
+    "class": "HELD",
+    "plaster_height_m": [
+     "3.94",
+     "4.04"
+    ],
+    "state": "HELD (BOUNDED)",
+    "value": null
+   },
+   "what": "plaster 2F-03 L-4ce74fc37a08d4bdf0d8"
+  }
+ ]
+}

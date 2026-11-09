@@ -1,0 +1,3785 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.58 (T-630 dry run, overlay V15)",
+ "part1": {
+  "by_decision": {
+   "DOWNGRADE": 4,
+   "KEEP": 10
+  },
+  "downgrade_proposals": [
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.58 (T-630 dry run)",
+    "checker": null,
+    "engine_qty": "39.822",
+    "evidence": [
+     {
+      "printed_value": "C2 2F: 6 ø 16 (count / diameter printed; the length is the interval, not printed)",
+      "sheet": "ST p.9 schedule of columns"
+     }
+    ],
+    "line_ids": [
+     "L-5fca13cebe2e259988bc"
+    ],
+    "proposal_id": "DGP-T643-fdb3ed374d73bff6",
+    "reason": "UNSUPPORTED BASIS: COL-2F-50 main bars 6 T16 x 4.2 m use the storey interval to the roof; LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project (D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND); the same member's concrete line L-0ede77cfd0badc4c7d62 is HELD on it (T-297 LB-10: one member, one datum status across trades)",
+    "resolved": false,
+    "schema": "URBAN_CHECKER_DOWNGRADE_V1 (PROPOSAL, not issued)",
+    "state": "HELD",
+    "unit": "kg"
+   },
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.58 (T-630 dry run)",
+    "checker": null,
+    "engine_qty": "39.822",
+    "evidence": [
+     {
+      "printed_value": "C2 2F: 6 ø 16 (count / diameter printed; the length is the interval, not printed)",
+      "sheet": "ST p.9 schedule of columns"
+     }
+    ],
+    "line_ids": [
+     "L-4247172eb6f60bb0b98b"
+    ],
+    "proposal_id": "DGP-T643-943b0c58b76cdde2",
+    "reason": "UNSUPPORTED BASIS: COL-2F-51 main bars 6 T16 x 4.2 m use the storey interval to the roof; LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project (D-39_ROOF_DATUM); the same member's concrete line L-919a5749ef79759e01ca is HELD on it (T-297 LB-10: one member, one datum status across trades)",
+    "resolved": false,
+    "schema": "URBAN_CHECKER_DOWNGRADE_V1 (PROPOSAL, not issued)",
+    "state": "HELD",
+    "unit": "kg"
+   },
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.58 (T-630 dry run)",
+    "checker": null,
+    "engine_qty": "39.822",
+    "evidence": [
+     {
+      "printed_value": "C1 2F: 6 ø 16 (count / diameter printed; the length is the interval, not printed)",
+      "sheet": "ST p.9 schedule of columns"
+     }
+    ],
+    "line_ids": [
+     "L-930151c44e50a06944a6"
+    ],
+    "proposal_id": "DGP-T643-ca59159efc4663e4",
+    "reason": "UNSUPPORTED BASIS: COL-2F-53 main bars 6 T16 x 4.2 m use the storey interval to the roof; LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project (D-39_ROOF_DATUM); the same member's concrete line L-d79d17d14f39d5148cb8 is HELD on it (T-297 LB-10: one member, one datum status across trades)",
+    "resolved": false,
+    "schema": "URBAN_CHECKER_DOWNGRADE_V1 (PROPOSAL, not issued)",
+    "state": "HELD",
+    "unit": "kg"
+   },
+   {
+    "candidate_version": "ARCH_TAKEOFF_V3.0.58 (T-630 dry run)",
+    "checker": null,
+    "engine_qty": "39.822",
+    "evidence": [
+     {
+      "printed_value": "C2 2F: 6 ø 16 (count / diameter printed; the length is the interval, not printed)",
+      "sheet": "ST p.9 schedule of columns"
+     }
+    ],
+    "line_ids": [
+     "L-57836098c8dc67817e1d"
+    ],
+    "proposal_id": "DGP-T643-196fcf58b2f70744",
+    "reason": "UNSUPPORTED BASIS: COL-2F-54 main bars 6 T16 x 4.2 m use the storey interval to the roof; LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project (D-39_ROOF_DATUM); the same member's concrete line L-26f6b6f2365c72e42291 is HELD on it (T-297 LB-10: one member, one datum status across trades)",
+    "resolved": false,
+    "schema": "URBAN_CHECKER_DOWNGRADE_V1 (PROPOSAL, not issued)",
+    "state": "HELD",
+    "unit": "kg"
+   }
+  ],
+  "kg_kept_released": "595.435",
+  "kg_proposed_held": "159.288",
+  "kg_total": "754.723",
+  "lines": [
+   {
+    "L_m": "4.2",
+    "bar_line": "L-5fca13cebe2e259988bc",
+    "cause": "R-COL-LEVEL-HEIGHT-1: LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project -> enters L of the bar population (facts LEVEL.STRUCTURAL_TOP.ROOF.MAIN)",
+    "column": "COL-2F-50",
+    "concrete_element": "P-C:COL:SH12:C2@247685,64087|2F",
+    "concrete_hold": {
+     "declared_levels": [],
+     "facts_h": null,
+     "facts_used": [
+      "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+     ],
+     "held_item": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND",
+     "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+     "high": null,
+     "low": null,
+     "rule": "R-COL-LEVEL-HEIGHT-1",
+     "task": "T-254",
+     "version": "ARCH_TAKEOFF_V3.0.17"
+    },
+    "concrete_line": "L-0ede77cfd0badc4c7d62",
+    "d_mm": 16,
+    "decision": "DOWNGRADE",
+    "inputs_entered": [
+     "L"
+    ],
+    "kg_withdrawn": "39.822222",
+    "mark": "C2",
+    "n": 6,
+    "released_kg": "39.822",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 6,
+     "d_mm": 16
+    },
+    "storey": "2F",
+    "t119": {
+     "D_ctrl": "0.40..1.20",
+     "height": "3.00..3.80",
+     "hold_cause": "UPSTAND_DOWNSTAND_D44",
+     "interval": "4.2",
+     "status": "HELD"
+    },
+    "t297_length_datum": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND (V3.0.17 concrete line L-0ede77cfd0badc4c7d62 HELD)",
+    "to": "HELD"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-4247172eb6f60bb0b98b",
+    "cause": "R-COL-LEVEL-HEIGHT-1: LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project -> enters L of the bar population (facts LEVEL.STRUCTURAL_TOP.ROOF.MAIN)",
+    "column": "COL-2F-51",
+    "concrete_element": "P-C:COL:SH12:C2@252679,64225|2F",
+    "concrete_hold": {
+     "declared_levels": [],
+     "facts_h": null,
+     "facts_used": [
+      "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+     ],
+     "held_item": "D-39_ROOF_DATUM",
+     "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+     "high": null,
+     "low": null,
+     "rule": "R-COL-LEVEL-HEIGHT-1",
+     "task": "T-254",
+     "version": "ARCH_TAKEOFF_V3.0.17"
+    },
+    "concrete_line": "L-919a5749ef79759e01ca",
+    "d_mm": 16,
+    "decision": "DOWNGRADE",
+    "inputs_entered": [
+     "L"
+    ],
+    "kg_withdrawn": "39.822222",
+    "mark": "C2",
+    "n": 6,
+    "released_kg": "39.822",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 6,
+     "d_mm": 16
+    },
+    "storey": "2F",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.45",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-919a5749ef79759e01ca HELD)",
+    "to": "HELD"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-930151c44e50a06944a6",
+    "cause": "R-COL-LEVEL-HEIGHT-1: LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project -> enters L of the bar population (facts LEVEL.STRUCTURAL_TOP.ROOF.MAIN)",
+    "column": "COL-2F-53",
+    "concrete_element": "P-C:COL:SH12:C1@251701,62344|2F",
+    "concrete_hold": {
+     "declared_levels": [],
+     "facts_h": null,
+     "facts_used": [
+      "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+     ],
+     "held_item": "D-39_ROOF_DATUM",
+     "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+     "high": null,
+     "low": null,
+     "rule": "R-COL-LEVEL-HEIGHT-1",
+     "task": "T-254",
+     "version": "ARCH_TAKEOFF_V3.0.17"
+    },
+    "concrete_line": "L-d79d17d14f39d5148cb8",
+    "d_mm": 16,
+    "decision": "DOWNGRADE",
+    "inputs_entered": [
+     "L"
+    ],
+    "kg_withdrawn": "39.822222",
+    "mark": "C1",
+    "n": 6,
+    "released_kg": "39.822",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 6,
+     "d_mm": 16
+    },
+    "storey": "2F",
+    "t119": {
+     "D_ctrl": "0.40",
+     "height": "3.80",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-d79d17d14f39d5148cb8 HELD)",
+    "to": "HELD"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-57836098c8dc67817e1d",
+    "cause": "R-COL-LEVEL-HEIGHT-1: LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project -> enters L of the bar population (facts LEVEL.STRUCTURAL_TOP.ROOF.MAIN)",
+    "column": "COL-2F-54",
+    "concrete_element": "P-C:COL:SH12:C2@254644,61274|2F",
+    "concrete_hold": {
+     "declared_levels": [],
+     "facts_h": null,
+     "facts_used": [
+      "LEVEL.STRUCTURAL_TOP.ROOF.MAIN"
+     ],
+     "held_item": "D-39_ROOF_DATUM",
+     "held_reason": "LEVEL.STRUCTURAL_TOP.ROOF.MAIN: not declared for this project",
+     "high": null,
+     "low": null,
+     "rule": "R-COL-LEVEL-HEIGHT-1",
+     "task": "T-254",
+     "version": "ARCH_TAKEOFF_V3.0.17"
+    },
+    "concrete_line": "L-26f6b6f2365c72e42291",
+    "d_mm": 16,
+    "decision": "DOWNGRADE",
+    "inputs_entered": [
+     "L"
+    ],
+    "kg_withdrawn": "39.822222",
+    "mark": "C2",
+    "n": 6,
+    "released_kg": "39.822",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 6,
+     "d_mm": 16
+    },
+    "storey": "2F",
+    "t119": {
+     "D_ctrl": "0.40",
+     "height": "3.80",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-26f6b6f2365c72e42291 HELD)",
+    "to": "HELD"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-4efdb15c15671844fffa",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-31",
+    "concrete_element": "P-C:COL:SH12:C4@264812,63850|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.525,
+     "low": 0.42,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-8f8ad257d9b2cb9e027f",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "53.096296",
+    "mark": "C4",
+    "n": 8,
+    "released_kg": "53.096",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.45",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-ccc12adf0c166afff0dc",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-32",
+    "concrete_element": "P-C:COL:SH12:C5@255627,63526|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.63,
+     "low": 0.42,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-c677b628a776d3b87b02",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "53.096296",
+    "mark": "C5",
+    "n": 8,
+    "released_kg": "53.096",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.50",
+     "height": "3.70",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-48a8faaaf4244de95a29",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-33",
+    "concrete_element": "P-C:COL:SH12:C4@259526,63482|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.525,
+     "low": 0.42,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-e112e2add2f8979a6c39",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "53.096296",
+    "mark": "C4",
+    "n": 8,
+    "released_kg": "53.096",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.50",
+     "height": "3.70",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-5fe86515ea2a69a25107",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 12 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-39",
+    "concrete_element": "P-C:COL:SH12:C9@259284,59442|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.84,
+     "low": 0.756,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-4aed92c117a7ab1c90ee",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "79.644444",
+    "mark": "C9",
+    "n": 12,
+    "released_kg": "79.644",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 12,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.45",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-149725e2e49ee3a25aa3",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 12 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-41",
+    "concrete_element": "P-C:COL:SH12:C9@254644,59429|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 1.05,
+     "low": 0.756,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-755eb56b55e86301b488",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "79.644444",
+    "mark": "C9",
+    "n": 12,
+    "released_kg": "79.644",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 12,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.45",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-8fa8465df240752082ea",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-44",
+    "concrete_element": "P-C:COL:SH12:C6@250087,56100|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.735,
+     "low": 0.504,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-a87ea657a42a311cb851",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "53.096296",
+    "mark": "C6",
+    "n": 8,
+    "released_kg": "53.096",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.50",
+     "height": "3.70",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.2",
+    "bar_line": "L-a1dde1e762efc8159fdd",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.2 = declared interval facts_h 4.2 (LEVEL.STRUCTURAL_TOP.1F.MAIN -> LEVEL.STRUCTURAL_TOP.2F.MAIN)",
+    "column": "COL-1F-47",
+    "concrete_element": "P-C:COL:SH12:C5@259715,51786|1F",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN",
+      "LEVEL.STRUCTURAL_TOP.2F.MAIN"
+     ],
+     "facts_h": 4.2,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.63,
+     "low": 0.42,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-831f6fe3de133294bb8f",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "53.096296",
+    "mark": "C5",
+    "n": 8,
+    "released_kg": "53.096",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "1F",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.45",
+     "hold_cause": "",
+     "interval": "4.2",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.5",
+    "bar_line": "L-8a5b814264d24d01eb6f",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.5 = declared interval facts_h 4.5 (LEVEL.STRUCTURAL_TOP.GF.MAIN -> LEVEL.STRUCTURAL_TOP.1F.MAIN)",
+    "column": "COL-GF-14",
+    "concrete_element": "P-C:COL:SH12:C3@265215,57750|GF",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+     ],
+     "facts_h": 4.5,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.5625,
+     "low": 0.45,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-8de64040a1c3ae6cf137",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "56.888889",
+    "mark": "C3",
+    "n": 8,
+    "released_kg": "56.889",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "GF",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.75",
+     "hold_cause": "",
+     "interval": "4.5",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.5",
+    "bar_line": "L-cf09b7451466b44e7e9f",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.5 = declared interval facts_h 4.5 (LEVEL.STRUCTURAL_TOP.GF.MAIN -> LEVEL.STRUCTURAL_TOP.1F.MAIN)",
+    "column": "COL-GF-24",
+    "concrete_element": "P-C:COL:SH12:C@265272,52633|GF",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+     ],
+     "facts_h": 4.5,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.45,
+     "low": 0.36,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-43dae3d6dfec957b26a8",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "56.888889",
+    "mark": "C",
+    "n": 8,
+    "released_kg": "56.889",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "GF",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.75",
+     "hold_cause": "",
+     "interval": "4.5",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   },
+   {
+    "L_m": "4.5",
+    "bar_line": "L-d0c5502737f2b802f470",
+    "cause": "R-COL-SECTION-CONFLICT-1 rests on the cross-section only (facts_used none); n 8 and d 16 from the schedule row of the printed mark, L 4.5 = declared interval facts_h 4.5 (LEVEL.STRUCTURAL_TOP.GF.MAIN -> LEVEL.STRUCTURAL_TOP.1F.MAIN)",
+    "column": "COL-GF-30",
+    "concrete_element": "P-C:COL:SH12:C@247429,51302|GF",
+    "concrete_hold": {
+     "declared_levels": [
+      "LEVEL.STRUCTURAL_TOP.GF.MAIN",
+      "LEVEL.STRUCTURAL_TOP.1F.MAIN"
+     ],
+     "facts_h": 4.5,
+     "facts_used": [],
+     "held_item": null,
+     "held_reason": "column-band item (printed schedule vs drawn outline, T-256 designer list; D-63)",
+     "high": 0.45,
+     "low": 0.36,
+     "rule": "R-COL-SECTION-CONFLICT-1",
+     "task": "T-397",
+     "version": "ARCH_TAKEOFF_V3.0.33"
+    },
+    "concrete_line": "L-9cb26d86575a92694880",
+    "d_mm": 16,
+    "decision": "KEEP",
+    "inputs_entered": [],
+    "kg_kept": "56.888889",
+    "mark": "C",
+    "n": 8,
+    "released_kg": "56.889",
+    "schedule_reread": {
+     "agrees": true,
+     "bars": 8,
+     "d_mm": 16
+    },
+    "storey": "GF",
+    "t119": {
+     "D_ctrl": "0.75",
+     "height": "3.75",
+     "hold_cause": "",
+     "interval": "4.5",
+     "status": "DRAWING-CONFIRMED"
+    },
+    "t297_length_datum": null,
+    "to": "RELEASED"
+   }
+  ],
+  "n": 14,
+  "released_B11_before_kg": "9375.305760",
+  "released_B11_if_downgrades_applied_kg": "9216.017760"
+ },
+ "part2": {
+  "by_binding": {
+   "BOUND": 185,
+   "UNRESOLVED": 23
+  },
+  "by_binding_family_class": {
+   "BOUND|HL:BEAM_STEEL|EXCLUDED": 4,
+   "BOUND|HL:BEAM_STEEL|HELD": 3,
+   "BOUND|HL:BEAM_STEEL|RELEASED": 30,
+   "BOUND|HL:GROUND_SYSTEM_STEEL|HELD": 49,
+   "BOUND|HL:GROUND_SYSTEM_STEEL|RELEASED": 69,
+   "BOUND|HL:STAIR_POOL_TANK_STEEL|RELEASED": 30,
+   "UNRESOLVED|HL:GROUND_SYSTEM_STEEL|-": 13,
+   "UNRESOLVED|HL:STAIR_POOL_TANK_STEEL|-": 8,
+   "UNRESOLVED|LINTEL_BARS:FLAGGED|-": 1,
+   "UNRESOLVED|LINTEL_BARS:PRODUCED|-": 1
+  },
+  "lines": [
+   {
+    "basis": "BM-1F-001 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-2f97020ab26bff341fe4"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-001:R071:BOTTOM",
+    "line_id": "L-20fce49e329ec0a65e0d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "BM-1F-001 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-2f97020ab26bff341fe4"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-001:R071:TOP",
+    "line_id": "L-58c731c59aa8a7f5e935",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "BM-1F-002 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1a37f7e858c8c96bd5f6",
+     "L-7a4d5364c39aa3fe5850",
+     "L-fce03d2bd6dae64f2641"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-002:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_1",
+    "line_id": "L-ca840eee53c14faf281a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-1F-002 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1a37f7e858c8c96bd5f6",
+     "L-7a4d5364c39aa3fe5850",
+     "L-fce03d2bd6dae64f2641"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-002:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_2",
+    "line_id": "L-34819365a0c75ecc7aaf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-1F-005 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-415cfcdd1d775ee6251c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-005:R077:SIDE_BARS_2_12_30CM",
+    "line_id": "L-f62686bba56d86dbe9e5",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-1F-007 -> T-110 register band(s) -> concrete line(s); BAND0006.1 -> parent band BAND0006 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-b3c87fd2cd7cc45c329a"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-007:R079:SIDE_BARS_2_12_30CM",
+    "line_id": "L-32b1e3c98266f7dcdffb",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-1F-012 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-4299f559bf9509418385"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-012:R084:SIDE_BARS_2_12_30CM",
+    "line_id": "L-bd54cced88727f8468bb",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-1F-024 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9aa7efd6862439d6079"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-1F-024:R100:SIDE_BARS_2_12_30CM",
+    "line_id": "L-7ab2d70aa8fddccd1404",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-1F-034 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a9d5e7dc22013e24d691"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-1F-034:R113:ALL_BARS",
+    "line_id": "L-cf569e52c2c15fc761d5",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-1F-035 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-bb49e831f053bd30a6ce"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-1F-035:R114:ALL_BARS",
+    "line_id": "L-a2275d8785ce46372ee5",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-2F-002 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-84768dadb07330d74cbd"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-2F-002:R120:SIDE_BARS_2_12_30CM",
+    "line_id": "L-7c9978bb737a62ea7e54",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-2F-007 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-713bc64aaa210610e7fe"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-2F-007:R125:SIDE_BARS_2_12_30CM",
+    "line_id": "L-d56c5fdae57fab2ff30d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-2F-011 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-f4a95b8019ae333d81ae"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-2F-011:R130:SIDE_BARS_2_12_30CM",
+    "line_id": "L-280e145fdeb11c7b7e1c",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-2F-016 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d62d2fcf3d0023ad1ad1"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-2F-016:SIDE_BARS_2_12_30CM_CANDIDATE_MARKS",
+    "line_id": "L-699bb8cc0d3742a8a771",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_REGISTER_CONFLICT"
+   },
+   {
+    "basis": "BM-GF-015 -> T-110 register band(s) -> concrete line(s); BAND0016.1 -> parent band BAND0016 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-71144bbcfce0b1dbbdef"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-015:R015:BOTTOM",
+    "line_id": "L-cf9e8bd3321860d76fac",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "BM-GF-015 -> T-110 register band(s) -> concrete line(s); BAND0016.1 -> parent band BAND0016 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-71144bbcfce0b1dbbdef"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-015:R015:TOP",
+    "line_id": "L-da886d5047fb9b998e61",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "BM-GF-018 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c42aa4d2b8d8aa456a2c",
+     "L-c9044bed39bc76ca6b2f"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-018:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_1",
+    "line_id": "L-ca7f73c3f6aab49540bd",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-018 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c42aa4d2b8d8aa456a2c",
+     "L-c9044bed39bc76ca6b2f"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-018:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_2",
+    "line_id": "L-67418dc01f7c9c3f545a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-018 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c42aa4d2b8d8aa456a2c",
+     "L-c9044bed39bc76ca6b2f"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-018:R018:S1of3:SIDE_BARS_2_12_30CM",
+    "line_id": "L-27a93a724004ea5d7eaf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-018 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c42aa4d2b8d8aa456a2c",
+     "L-c9044bed39bc76ca6b2f"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-018:R019:S3of3:SIDE_BARS_2_12_30CM",
+    "line_id": "L-38f542a02493f9961f9e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-022 -> T-110 register band(s) -> concrete line(s); BAND0022.1 -> parent band BAND0022 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-9c4ad8b13b08f7063722"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-022:R024:SIDE_BARS_2_12_30CM",
+    "line_id": "L-968d7f6158340558dd19",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-026 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-4f30f08b15e9ab008e7a"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-026:R028:SIDE_BARS_2_12_30CM",
+    "line_id": "L-13139e3af2c5e873ed8f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-030 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-6bdfcf21ebb29773436e",
+     "L-75a0d6b933218568f685"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-030:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_1",
+    "line_id": "L-0a3e65cf46b25560fbd0",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-030 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-6bdfcf21ebb29773436e",
+     "L-75a0d6b933218568f685"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-030:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_2",
+    "line_id": "L-85afae53882ebc6936a7",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-030 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-6bdfcf21ebb29773436e",
+     "L-75a0d6b933218568f685"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-030:R032:S1of2:SIDE_BARS_2_12_30CM",
+    "line_id": "L-d7b7a70ba10bc9834aec",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-030 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-6bdfcf21ebb29773436e",
+     "L-75a0d6b933218568f685"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-030:R033:S2of2:SIDE_BARS_2_12_30CM",
+    "line_id": "L-a30c76f3dce96d9b54e4",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-035 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-ed3cf93a185c88b4ab5a"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-035:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_1",
+    "line_id": "L-4eacd532120075bcd99b",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-035 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-ed3cf93a185c88b4ab5a"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-035:END_SUPPORT_TOP_BARS_TYPICAL_DETAIL_0_3_LN2:END_2",
+    "line_id": "L-bd6b3fc12c3e0543e490",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "BM-GF-038 -> T-110 register band(s) -> concrete line(s); BAND0037.1 -> parent band BAND0037 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-89718e85f0f24c9cc08c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-038:R042:BOTTOM_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_S",
+    "line_id": "L-2339ab608b2495de2ac6",
+    "state": "BLANK",
+    "t639_class": "C",
+    "t639_kind": "C_NOTE9_OUTSIDE_GROUP"
+   },
+   {
+    "basis": "BM-GF-038 -> T-110 register band(s) -> concrete line(s); BAND0037.1 -> parent band BAND0037 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-89718e85f0f24c9cc08c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-038:R042:SIDE_BARS_2_16_20CM",
+    "line_id": "L-50fdb6abb61de936e65d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-038 -> T-110 register band(s) -> concrete line(s); BAND0037.1 -> parent band BAND0037 (not split in the candidate)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-89718e85f0f24c9cc08c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-038:R042:TOP_OVER_THE_END_COLUMN_INSIDE_THE_REGISTER_SPAN",
+    "line_id": "L-5e3af638f4bd909d0ae3",
+    "state": "BLANK",
+    "t639_class": "C",
+    "t639_kind": "C_NOTE9_OUTSIDE_GROUP"
+   },
+   {
+    "basis": "BM-GF-045 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7ca10403edee7eb03ce5"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-045:R052:SIDE_BARS_2_12_30CM",
+    "line_id": "L-429147c82fe6cdc075d3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-049 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-5bc1baae70fcc325abea"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:BEAM_STEEL:BM-GF-049:R056:SIDE_BARS_2_12_30CM",
+    "line_id": "L-70fa5e3cf721f563bc62",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-050 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "EXCLUDED",
+    "concrete_lines": [
+     "L-2f22d0aa400b1bd87f43"
+    ],
+    "effect": "also class A (concrete EXCLUDED); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-GF-050:R057:SIDE_BARS_2_12_30CM",
+    "line_id": "L-0aefe2ae2dc24d485af2",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-051 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "EXCLUDED",
+    "concrete_lines": [
+     "L-e71aa8f1d37bf3b2ae49"
+    ],
+    "effect": "also class A (concrete EXCLUDED); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-GF-051:R058:SIDE_BARS_2_12_30CM",
+    "line_id": "L-22661591858a049f28bd",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-052 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "EXCLUDED",
+    "concrete_lines": [
+     "L-c6fccf7cde9636d5a0f6"
+    ],
+    "effect": "also class A (concrete EXCLUDED); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-GF-052:R059:SIDE_BARS_2_12_30CM",
+    "line_id": "L-6eede6ebe9ab74c463ca",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "BM-GF-060 -> T-110 register band(s) -> concrete line(s)",
+    "binding": "BOUND",
+    "concrete_class": "EXCLUDED",
+    "concrete_lines": [
+     "L-e019aa51fc2dbb56b8b0"
+    ],
+    "effect": "also class A (concrete EXCLUDED); stays HELD on its own cause too",
+    "element_id": "HL:BEAM_STEEL:BM-GF-060:SIDE_BARS_2_12_30CM_CANDIDATE_MARKS",
+    "line_id": "L-90e02fced5508f892f1a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_REGISTER_CONFLICT"
+   },
+   {
+    "basis": "GSO-107-7CE-1 -> face-handle pair 107+7CE -> T-332 run(s) 107+7CE#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-ff727b2a52e39509a659"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-107-7CE-1:SIDE_2_T12_300",
+    "line_id": "L-c0da27ba31190ec86891",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-107-7CE-1 -> face-handle pair 107+7CE -> T-332 run(s) 107+7CE#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-ff727b2a52e39509a659"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-107-7CE-1:STIRRUP_T8_150",
+    "line_id": "L-7d674bac04662ad93b27",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-109-7CB-1 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-c0afbf6890d0b29dc824",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-109-7CB-1 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-a57efdf5772db0343d22",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-109-7CB-1 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-1:SIDE_2_T12_300",
+    "line_id": "L-44ef5762adcdfacc40ff",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-109-7CB-1 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-1:STIRRUP",
+    "line_id": "L-6858c6809c24f4434f1e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-109-7CB-2 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-2:SIDE_2_T12_300",
+    "line_id": "L-6575b09e9050c5c41219",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-109-7CB-2 -> face-handle pair 109+7CB -> T-332 run(s) 109+7CB#1, 109+7CB#2, 109+7CB#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-27d104ca6fc3556d16e6",
+     "L-46f25f72b44e8bc3e2e0",
+     "L-fadb548a6843001d45b0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-109-7CB-2:STIRRUP_T8_150",
+    "line_id": "L-4d092949b9c05f3eda61",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-10A-7C9-1 -> face-handle pair 10A+7C9 -> T-332 run(s) 10A+7C9#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-62f712462a36d4ad1b32"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10A-7C9-1:SIDE_2_T12_300",
+    "line_id": "L-68c5ba1236d0bcc16189",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-10A-7C9-1 -> face-handle pair 10A+7C9 -> T-332 run(s) 10A+7C9#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-62f712462a36d4ad1b32"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10A-7C9-1:STIRRUP_T8_150",
+    "line_id": "L-e36aaf051159ad3a50fc",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-10B-7D1-1 -> face-handle pair 10B+7D1 -> T-332 run(s) 10B+7D1#1, 10B+7D1#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-3284f44000c02179ace7",
+     "L-6bf14711798e5af93594"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10B-7D1-1:SIDE_2_T12_300",
+    "line_id": "L-ae65f4f431cfe87e6a76",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-10B-7D1-1 -> face-handle pair 10B+7D1 -> T-332 run(s) 10B+7D1#1, 10B+7D1#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-3284f44000c02179ace7",
+     "L-6bf14711798e5af93594"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10B-7D1-1:STIRRUP",
+    "line_id": "L-2e419ac70053ae5c8972",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-10B-7D1-2 -> face-handle pair 10B+7D1 -> T-332 run(s) 10B+7D1#1, 10B+7D1#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-3284f44000c02179ace7",
+     "L-6bf14711798e5af93594"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10B-7D1-2:SIDE_2_T12_300",
+    "line_id": "L-5211d26b4620940f62e3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-10B-7D1-2 -> face-handle pair 10B+7D1 -> T-332 run(s) 10B+7D1#1, 10B+7D1#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-3284f44000c02179ace7",
+     "L-6bf14711798e5af93594"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-10B-7D1-2:STIRRUP_T8_150",
+    "line_id": "L-35f4e12ae72dbcb33c16",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-136-7D5-1 -> face-handle pair 136+7D5 -> T-332 run(s) 136+7D5#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-4783c6e18002c3a8a37e"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-136-7D5-1:SIDE_2_T12_300",
+    "line_id": "L-4cefb9ec45fed9ab876f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-136-7D5-1 -> face-handle pair 136+7D5 -> T-332 run(s) 136+7D5#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-4783c6e18002c3a8a37e"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-136-7D5-1:STIRRUP_T8_150",
+    "line_id": "L-d0bbd0fc091a6d48974d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-137-138-1 -> face-handle pair 137+138 -> T-332 run(s) 137+138#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-00465df980165c529476"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-137-138-1:SIDE_2_T12_300",
+    "line_id": "L-2086fce0fb44e289549f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-137-138-1 -> face-handle pair 137+138 -> T-332 run(s) 137+138#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-00465df980165c529476"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-137-138-1:STIRRUP_T8_150",
+    "line_id": "L-d182cce99f49836abdf3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-13C-7D9-1 -> face-handle pair 13C+7D9 -> T-332 run(s) 13C+7D9#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-81444e222487437e257e"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13C-7D9-1:STIRRUP",
+    "line_id": "L-9889295cb1b8e7d2cdf1",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-13D-7D2-1 -> face-handle pair 13D+7D2 -> T-332 run(s) 13D+7D2#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d8b98b143e293d30833b"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13D-7D2-1:SIDE_2_T12_300",
+    "line_id": "L-44088c3afaed4397bc69",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-13D-7D2-1 -> face-handle pair 13D+7D2 -> T-332 run(s) 13D+7D2#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d8b98b143e293d30833b"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13D-7D2-1:STIRRUP_T8_150",
+    "line_id": "L-d29359fbe85a070c2fa5",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-13F-7D3-1 -> face-handle pair 13F+7D3 -> T-332 run(s) 13F+7D3#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-760f6c369aa655adc84d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13F-7D3-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-7b4e8bd66da343636dbe",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-13F-7D3-1 -> face-handle pair 13F+7D3 -> T-332 run(s) 13F+7D3#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-760f6c369aa655adc84d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13F-7D3-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-a1e4ff8887b730d7bcee",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-13F-7D3-1 -> face-handle pair 13F+7D3 -> T-332 run(s) 13F+7D3#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-760f6c369aa655adc84d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13F-7D3-1:STIRRUP",
+    "line_id": "L-103462f971ea1c81ac90",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-140-7D7-1 -> face-handle pair 140+7D7 -> T-332 run(s) 140+7D7#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-3e7ea87496653eb75704"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-140-7D7-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-49628c38d25f70168490",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-140-7D7-1 -> face-handle pair 140+7D7 -> T-332 run(s) 140+7D7#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-3e7ea87496653eb75704"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-140-7D7-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-19af06c8a24e77baa12f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-140-7D7-1 -> face-handle pair 140+7D7 -> T-332 run(s) 140+7D7#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-3e7ea87496653eb75704"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-140-7D7-1:STIRRUP",
+    "line_id": "L-cea725c32445046f1732",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-141-7DA-1 -> face-handle pair 141+7DA -> T-332 run(s) 141+7DA#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-e2134034441cb7db7bd7"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-141-7DA-1:STIRRUP",
+    "line_id": "L-c3afdc8a406a3c66edad",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-142-7D8-1 -> face-handle pair 142+7D8 -> T-332 run(s) 142+7D8#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-1487bdda099006e0c4ba"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-142-7D8-1:STIRRUP",
+    "line_id": "L-2b227b1dc30d6d054a45",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-145-7CA-1 -> face-handle pair 145+7CA -> T-332 run(s) 145+7CA#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-26fcfbbb143269e7bb58"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-145-7CA-1:SIDE_2_T12_300",
+    "line_id": "L-15c031e5858cff975cf4",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-145-7CA-1 -> face-handle pair 145+7CA -> T-332 run(s) 145+7CA#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-26fcfbbb143269e7bb58"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-145-7CA-1:STIRRUP",
+    "line_id": "L-4a5ee2c964a3c49f738e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-145-7CA-2 -> face-handle pair 145+7CA -> T-332 run(s) 145+7CA#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-26fcfbbb143269e7bb58"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-145-7CA-2:SIDE_2_T12_300",
+    "line_id": "L-b1f0312ac1f09da4b5ae",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-145-7CA-2 -> face-handle pair 145+7CA -> T-332 run(s) 145+7CA#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-26fcfbbb143269e7bb58"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-145-7CA-2:STIRRUP",
+    "line_id": "L-bcf2bf9540a4e53c331d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-15C-7CC-1 -> face-handle pair 15C+7CC -> T-332 run(s) 15C+7CC#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-0e852cca42fb8b765c58"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-15C-7CC-1:STIRRUP",
+    "line_id": "L-d53a1dde6213c8040faf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-15D-7C8-1 -> face-handle pair 15D+7C8 -> T-332 run(s) 15D+7C8#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-43d1d1031b3d3ddd1cc4"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-15D-7C8-1:STIRRUP",
+    "line_id": "L-6fefda710d62aee952bc",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-15E-15F-1 -> face-handle pair 15E+15F -> T-332 run(s) 15E+15F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-361f5e913c566c4fe2b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-15E-15F-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-929ceaf91c3c72ce7764",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-15E-15F-1 -> face-handle pair 15E+15F -> T-332 run(s) 15E+15F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-361f5e913c566c4fe2b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-15E-15F-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-141d2b78d619e46f1bce",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-15E-15F-1 -> face-handle pair 15E+15F -> T-332 run(s) 15E+15F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-361f5e913c566c4fe2b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-15E-15F-1:STIRRUP",
+    "line_id": "L-70560fd8e22756466479",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-16F-7FF-1 -> face-handle pair 16F+7FF -> T-332 run(s) 16F+7FF#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-0c5ede7fd2c9e425aa8d"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-16F-7FF-1:STIRRUP",
+    "line_id": "L-72645300804a02893c1d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-170-7C3-1 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-1:SIDE_2_T12_300",
+    "line_id": "L-811c9edfec6c1650f96b",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-170-7C3-1 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-1:STIRRUP_T8_150",
+    "line_id": "L-1183859ff686bf0918fd",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-170-7C3-2 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-2:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-2ec0a83f4e6ddb1a8b1c",
+    "state": "BLANK",
+    "t639_class": "C",
+    "t639_kind": "C_NOTE9_OUTSIDE_GROUP"
+   },
+   {
+    "basis": "GSO-170-7C3-2 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-2:SIDE_2_T12_300",
+    "line_id": "L-5cf6b4bd38c3875c3b0c",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-170-7C3-2 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-2:STIRRUP_T8_150",
+    "line_id": "L-2c7c37059d14b5ac2a1c",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-170-7C3-3 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-3:SIDE_2_T12_300",
+    "line_id": "L-ee3a453132d56b74fd65",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-170-7C3-3 -> face-handle pair 170+7C3 -> T-332 run(s) 170+7C3#1, 170+7C3#2, 170+7C3#3, 170+7C3#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-1146bdecd41491ce9382",
+     "L-bde0257c24588948167f",
+     "L-dac43ee18f55433b57e7",
+     "L-efbed17455bb224e126e"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-170-7C3-3:STIRRUP_T8_150",
+    "line_id": "L-9984b2e441ae158c97bb",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-175-7DE-1 -> face-handle pair 175+7DE -> T-332 run(s) 175+7DE#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-4129e781d6133b963bf7"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-175-7DE-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-8af951528a8a5b2e4dbc",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-175-7DE-1 -> face-handle pair 175+7DE -> T-332 run(s) 175+7DE#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-4129e781d6133b963bf7"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-175-7DE-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-a0d6e5f422ec78fe9972",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-175-7DE-1 -> face-handle pair 175+7DE -> T-332 run(s) 175+7DE#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-4129e781d6133b963bf7"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-175-7DE-1:STIRRUP",
+    "line_id": "L-b9a39abf97bb78422dd8",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-176-7E6-1 -> face-handle pair 176+7E6 -> T-332 run(s) 176+7E6#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-151a282bcf2d5324a618"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-176-7E6-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-5e113de1e3e130aa1501",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-176-7E6-1 -> face-handle pair 176+7E6 -> T-332 run(s) 176+7E6#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-151a282bcf2d5324a618"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-176-7E6-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-5b089dfa9196e8d293a6",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-176-7E6-1 -> face-handle pair 176+7E6 -> T-332 run(s) 176+7E6#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-151a282bcf2d5324a618"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-176-7E6-1:STIRRUP",
+    "line_id": "L-340f895533a5d0ad1faa",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-177-7CD-1 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-a96051f0325e21b03f51",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-177-7CD-1 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-72c0f325af3af108e357",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-177-7CD-1 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-1:STIRRUP",
+    "line_id": "L-a746a8218cafaaf1dbaa",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-177-7CD-2 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-2:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-cc2a93d7a0893ca2a4d3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-177-7CD-2 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-2:LONGITUDINAL",
+    "line_id": "L-ef099610247b362bf20e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-177-7CD-2 -> face-handle pair 177+7CD -> T-332 run(s) 177+7CD#1, 177+7CD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-d53e5eb08e2c6c668254",
+     "L-e24946df436cbc25fca6"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-177-7CD-2:STIRRUP",
+    "line_id": "L-a3a959d0471ef66f0896",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-178-7DB-1 -> face-handle pair 178+7DB -> T-332 run(s) 178+7DB#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-21795b350fbd09150c43"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-178-7DB-1:SIDE_2_T12_300",
+    "line_id": "L-ba6a5960ee2d682988a1",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-178-7DB-1 -> face-handle pair 178+7DB -> T-332 run(s) 178+7DB#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-21795b350fbd09150c43"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-178-7DB-1:STIRRUP_T8_150",
+    "line_id": "L-5bff4c103dc39345fbdf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-17B-7E5-1 -> face-handle pair 17B+7E5 -> T-332 run(s) 17B+7E5#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-f0e25ad2cf73bf2a35ea"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17B-7E5-1:STIRRUP",
+    "line_id": "L-4be7a0ee7faf1bb5c234",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-17C-7E3-1 -> face-handle pair 17C+7E3 -> T-332 run(s) 17C+7E3#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c5902fd02c58b85a5df1"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17C-7E3-1:STIRRUP",
+    "line_id": "L-8166f49e862202378fdf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-17D-7E4-1 -> face-handle pair 17D+7E4 -> T-332 run(s) 17D+7E4#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-bf5eb56348883cb2776d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17D-7E4-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-06882807d78b39f29c9f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-17D-7E4-1 -> face-handle pair 17D+7E4 -> T-332 run(s) 17D+7E4#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-bf5eb56348883cb2776d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17D-7E4-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-c4f20ec4943152143229",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-17D-7E4-1 -> face-handle pair 17D+7E4 -> T-332 run(s) 17D+7E4#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-bf5eb56348883cb2776d"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17D-7E4-1:STIRRUP",
+    "line_id": "L-b383642a69ff8ecdeaf8",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-17E-17F-1 -> face-handle pair 17E+17F -> T-332 run(s) 17E+17F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-0bb78accf8c0a0fbdbaf"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17E-17F-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-6a16b2907b2d7815320d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-17E-17F-1 -> face-handle pair 17E+17F -> T-332 run(s) 17E+17F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-0bb78accf8c0a0fbdbaf"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17E-17F-1:LONGITUDINAL",
+    "line_id": "L-9af10585b587bce13488",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-17E-17F-1 -> face-handle pair 17E+17F -> T-332 run(s) 17E+17F#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-0bb78accf8c0a0fbdbaf"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-17E-17F-1:STIRRUP",
+    "line_id": "L-12578ac6a254df06e63a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-180-181-1 -> face-handle pair 180+181 -> T-332 run(s) 180+181#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-970bac563cbcd69e2a30"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-180-181-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-45acfc6ec3c1f2e38b0b",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-180-181-1 -> face-handle pair 180+181 -> T-332 run(s) 180+181#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-970bac563cbcd69e2a30"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-180-181-1:LONGITUDINAL",
+    "line_id": "L-9b1ca717378cdce29bef",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-180-181-1 -> face-handle pair 180+181 -> T-332 run(s) 180+181#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-970bac563cbcd69e2a30"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-180-181-1:STIRRUP",
+    "line_id": "L-849dbe73d21f373e7f5a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-180D-180E-1 -> face-handle pair 180D+180E -> T-332 run(s) 180D+180E#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a8c5c32c7a785c1e3f05"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-180D-180E-1:SIDE_2_T12_300",
+    "line_id": "L-8a51189d648654f13a54",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-180D-180E-1 -> face-handle pair 180D+180E -> T-332 run(s) 180D+180E#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a8c5c32c7a785c1e3f05"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-180D-180E-1:STIRRUP",
+    "line_id": "L-850d31abaea81b48394e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-1811-1812-1 -> face-handle pair 1811+1812 -> T-332 run(s) 1811+1812#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a55bfa01b726ef11650c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-1811-1812-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-c7ec3aacecdc5bc35e47",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-1811-1812-1 -> face-handle pair 1811+1812 -> T-332 run(s) 1811+1812#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a55bfa01b726ef11650c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-1811-1812-1:LONGITUDINAL",
+    "line_id": "L-4616456aa1f28c0f4499",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-1811-1812-1 -> face-handle pair 1811+1812 -> T-332 run(s) 1811+1812#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a55bfa01b726ef11650c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-1811-1812-1:SIDE_2_T12_300",
+    "line_id": "L-4467552061bb7d7fd550",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-1811-1812-1 -> face-handle pair 1811+1812 -> T-332 run(s) 1811+1812#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-a55bfa01b726ef11650c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-1811-1812-1:STIRRUP",
+    "line_id": "L-309b5eb25cd8862456fe",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-182-183-1 -> face-handle pair 182+183 -> T-332 run(s) 182+183#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-f24cf117a9ce1e875785"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-182-183-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-68e683b5e085ee370db4",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-182-183-1 -> face-handle pair 182+183 -> T-332 run(s) 182+183#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-f24cf117a9ce1e875785"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-182-183-1:LONGITUDINAL",
+    "line_id": "L-79aa09c7438f9843f294",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-182-183-1 -> face-handle pair 182+183 -> T-332 run(s) 182+183#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-f24cf117a9ce1e875785"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-182-183-1:STIRRUP",
+    "line_id": "L-84934b676e38fe93d769",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-185-7C7-1 -> face-handle pair 185+7C7 -> T-332 run(s) 185+7C7#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-62243c74c430d383be86"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-185-7C7-1:SIDE_2_T12_300",
+    "line_id": "L-ed5614c691c0e6ea75d1",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-185-7C7-1 -> face-handle pair 185+7C7 -> T-332 run(s) 185+7C7#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-62243c74c430d383be86"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-185-7C7-1:STIRRUP_T8_150",
+    "line_id": "L-c824fad16eb1ede37049",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-1 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-1:SIDE_2_T12_300",
+    "line_id": "L-aa2bcf7e3b97e13f9689",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-1 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-1:STIRRUP_T8_150",
+    "line_id": "L-c30d880b7eda0d991075",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-2 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-2:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-5a9ede10639b86ade936",
+    "state": "BLANK",
+    "t639_class": "C",
+    "t639_kind": "C_NOTE9_OUTSIDE_GROUP"
+   },
+   {
+    "basis": "GSO-7D0-FC-2 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-2:SIDE_2_T12_300",
+    "line_id": "L-5b9637c1c72d55e537de",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-2 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-2:STIRRUP_T8_150",
+    "line_id": "L-f1994e91e25bb59ed7ee",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-3 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-3:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-ab613fcf3c264a905579",
+    "state": "BLANK",
+    "t639_class": "C",
+    "t639_kind": "C_NOTE9_OUTSIDE_GROUP"
+   },
+   {
+    "basis": "GSO-7D0-FC-3 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-3:SIDE_2_T12_300",
+    "line_id": "L-0717fb30ba65b637df12",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-3 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-3:STIRRUP_T8_150",
+    "line_id": "L-b01e5d271a98893ffcc0",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-4 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-4:SIDE_2_T12_300",
+    "line_id": "L-00f85cd7864ec572e79e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D0-FC-4 -> face-handle pair 7D0+FC -> T-332 run(s) 7D0+FC#1, 7D0+FC#2, 7D0+FC#3, 7D0+FC#4 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-c9bb2eca50a2a2c8b569",
+     "L-cc6aaa99e1892f34b92f",
+     "L-e8536bc4f2699a24e2ab",
+     "L-e9a885323ad6ec3ea32b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D0-FC-4:STIRRUP_T8_150",
+    "line_id": "L-c9d243e6efa8286fa23d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D4-F8-1 -> face-handle pair 7D4+F8 -> T-332 run(s) 7D4+F8#1, 7D4+F8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-402dbe61d1c924144a3c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D4-F8-1:SIDE_2_T12_300",
+    "line_id": "L-4e862031b89397bd6f06",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D4-F8-1 -> face-handle pair 7D4+F8 -> T-332 run(s) 7D4+F8#1, 7D4+F8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-402dbe61d1c924144a3c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D4-F8-1:STIRRUP_T8_150",
+    "line_id": "L-d30ed77e477e178e4ca7",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D4-F8-2 -> face-handle pair 7D4+F8 -> T-332 run(s) 7D4+F8#1, 7D4+F8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-402dbe61d1c924144a3c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D4-F8-2:SIDE_2_T12_300",
+    "line_id": "L-a812d1c573e52e727ec2",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7D4-F8-2 -> face-handle pair 7D4+F8 -> T-332 run(s) 7D4+F8#1, 7D4+F8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-402dbe61d1c924144a3c"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7D4-F8-2:STIRRUP_T8_150",
+    "line_id": "L-d8598c759a96c57a3860",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7DC-7DD-1 -> face-handle pair 7DC+7DD -> T-332 run(s) 7DC+7DD#1, 7DC+7DD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-fe78ae283abfb6256358"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7DC-7DD-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-e25cdb6b94f932132daf",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7DC-7DD-1 -> face-handle pair 7DC+7DD -> T-332 run(s) 7DC+7DD#1, 7DC+7DD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-fe78ae283abfb6256358"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7DC-7DD-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-79484c25867d95814786",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7DC-7DD-1 -> face-handle pair 7DC+7DD -> T-332 run(s) 7DC+7DD#1, 7DC+7DD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-fe78ae283abfb6256358"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7DC-7DD-1:STIRRUP",
+    "line_id": "L-8b7db412f7a3c646fa3f",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-7E0-FD-1 -> face-handle pair 7E0+FD -> T-332 run(s) 7E0+FD#1, 7E0+FD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-9e28c7012784a8dc33c8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E0-FD-1:SIDE_2_T12_300",
+    "line_id": "L-119b262d884eb0af72ef",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7E0-FD-1 -> face-handle pair 7E0+FD -> T-332 run(s) 7E0+FD#1, 7E0+FD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-9e28c7012784a8dc33c8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E0-FD-1:STIRRUP_T8_150",
+    "line_id": "L-d6393f82e8c9db63a331",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7E0-FD-2 -> face-handle pair 7E0+FD -> T-332 run(s) 7E0+FD#1, 7E0+FD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-9e28c7012784a8dc33c8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E0-FD-2:SIDE_2_T12_300",
+    "line_id": "L-2498406141f42514f7c3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7E0-FD-2 -> face-handle pair 7E0+FD -> T-332 run(s) 7E0+FD#1, 7E0+FD#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-9e28c7012784a8dc33c8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E0-FD-2:STIRRUP_T8_150",
+    "line_id": "L-a72854985a8b6327e2bb",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-7E1-7E2-1 -> face-handle pair 7E1+7E2 -> T-332 run(s) 7E1+7E2#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7afad512258c1bad8519"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E1-7E2-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-7b74ba2a03a6bb050ca3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7E1-7E2-1 -> face-handle pair 7E1+7E2 -> T-332 run(s) 7E1+7E2#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7afad512258c1bad8519"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E1-7E2-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-b28043b1d402970fbc51",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7E1-7E2-1 -> face-handle pair 7E1+7E2 -> T-332 run(s) 7E1+7E2#1 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7afad512258c1bad8519"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E1-7E2-1:STIRRUP",
+    "line_id": "L-4ef6ea9842575b9db2a8",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-7E7-7E8-2 -> face-handle pair 7E7+7E8 -> T-332 run(s) 7E7+7E8#1, 7E7+7E8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-0e30aadba2eebc6c3ede"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E7-7E8-2:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-08e1360e0f118de623d6",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7E7-7E8-2 -> face-handle pair 7E7+7E8 -> T-332 run(s) 7E7+7E8#1, 7E7+7E8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-0e30aadba2eebc6c3ede"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E7-7E8-2:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-207037f5a781e942296e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-7E7-7E8-2 -> face-handle pair 7E7+7E8 -> T-332 run(s) 7E7+7E8#1, 7E7+7E8#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-0e30aadba2eebc6c3ede"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-7E7-7E8-2:STIRRUP",
+    "line_id": "L-1ba60530ba8f7ceb862d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "GSO-A-139-13A-1 -> face-handle pair ARC:139+13A -> T-332 run(s) ARC:139+13A -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-be6708e07b40efa02779",
+     "L-e16c98075f69532a3dc7"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-139-13A-1:SIDE_2_T12_300",
+    "line_id": "L-a836d1247ee6441b5c57",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-A-139-13A-1 -> face-handle pair ARC:139+13A -> T-332 run(s) ARC:139+13A -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-be6708e07b40efa02779",
+     "L-e16c98075f69532a3dc7"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-139-13A-1:STIRRUP_T8_150",
+    "line_id": "L-f3e92664c05c00ab3ea1",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-A-157-158-1 -> face-handle pair ARC:157+158 -> T-332 run(s) ARC:157+158 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7076482d75ca42691468"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-157-158-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-9bd15f45a4107657e683",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "basis": "GSO-A-157-158-1 -> face-handle pair ARC:157+158 -> T-332 run(s) ARC:157+158 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7076482d75ca42691468"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-157-158-1:LONGITUDINAL",
+    "line_id": "L-1621c2269a1cf9a38da6",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_HELD_UNQUANTIFIED"
+   },
+   {
+    "basis": "GSO-A-157-158-1 -> face-handle pair ARC:157+158 -> T-332 run(s) ARC:157+158 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7076482d75ca42691468"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-157-158-1:SIDE_2_T12_300",
+    "line_id": "L-a77dd440899884463802",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "basis": "GSO-A-157-158-1 -> face-handle pair ARC:157+158 -> T-332 run(s) ARC:157+158 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-7076482d75ca42691468"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-A-157-158-1:STIRRUP",
+    "line_id": "L-445be64d0b1e0a53b256",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "basis": "strap SB1 -> HL:STRAP_CONCRETE:SB1 (span + in-footing parts; the bars run over the footings)",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-abd65e1b745315dd17c2",
+     "L-cb4d0756fba483b7787b"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:SB1:BARS_OVER_THE_FOOTINGS",
+    "line_id": "L-2329bf0955ce0aa3305b",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "strap SB2 -> HL:STRAP_CONCRETE:SB2 (span + in-footing parts; the bars run over the footings)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-d43bea72f2c8e939b663"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:SB2:BARS_OVER_THE_FOOTINGS",
+    "line_id": "L-b2aec7f7e995902789e3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "strap SB3 -> HL:STRAP_CONCRETE:SB3 (span + in-footing parts; the bars run over the footings)",
+    "binding": "BOUND",
+    "concrete_class": "HELD",
+    "concrete_lines": [
+     "L-b3a779187950eef0fcb6",
+     "L-c823e0dbd81e30c66aa5"
+    ],
+    "effect": "also class A (concrete HELD); stays HELD on its own cause too",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:SB3:BARS_OVER_THE_FOOTINGS",
+    "line_id": "L-f9fa2b329af5c7714c91",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "pool zone R1 (CORNER_BARS_FLOOR_WALL) -> the one pool POOL-1: WALLS + BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894",
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:CORNER_BARS_FLOOR_WALL",
+    "line_id": "L-28ba7552054d9144c4b7",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (FLOOR_BOTTOM_DOT_ROW_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:FLOOR_BOTTOM_DOT_ROW_BARS",
+    "line_id": "L-52988d051ff7bb326214",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (FLOOR_BOTTOM_SECTION_LINE_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:FLOOR_BOTTOM_SECTION_LINE_BARS",
+    "line_id": "L-9862c8cdf2fb021e80d6",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (FLOOR_TOP_DOT_ROW_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:FLOOR_TOP_DOT_ROW_BARS",
+    "line_id": "L-c063a580c41d274cd539",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (FLOOR_TOP_SECTION_LINE_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:FLOOR_TOP_SECTION_LINE_BARS",
+    "line_id": "L-ad66fe593e7a26787988",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (RIM_BARS_AT_THE_WALL_TOP) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:RIM_BARS_AT_THE_WALL_TOP",
+    "line_id": "L-b7f9b5b4b7ff3acb068b",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (WALL_HORIZONTAL_HOOPS_INNER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:WALL_HORIZONTAL_HOOPS_INNER_FACE",
+    "line_id": "L-b599f03948d5245b5f70",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (WALL_HORIZONTAL_HOOPS_OUTER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:WALL_HORIZONTAL_HOOPS_OUTER_FACE",
+    "line_id": "L-9ccb7c130df47b19efef",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (WALL_VERTICAL_INNER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:WALL_VERTICAL_INNER_FACE",
+    "line_id": "L-07cf9babb8890bfe8831",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R1 (WALL_VERTICAL_OUTER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R1:WALL_VERTICAL_OUTER_FACE",
+    "line_id": "L-f8c4d9ed9c3528e2f68a",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (CORNER_BARS_FLOOR_WALL) -> the one pool POOL-1: WALLS + BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894",
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:CORNER_BARS_FLOOR_WALL",
+    "line_id": "L-f2a8e2cc21563fec92e3",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (FLOOR_BOTTOM_DOT_ROW_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:FLOOR_BOTTOM_DOT_ROW_BARS",
+    "line_id": "L-0df43691b3f38fe79215",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (FLOOR_BOTTOM_SECTION_LINE_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:FLOOR_BOTTOM_SECTION_LINE_BARS",
+    "line_id": "L-3e5689728c73b9f6f2e6",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (FLOOR_TOP_DOT_ROW_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:FLOOR_TOP_DOT_ROW_BARS",
+    "line_id": "L-fc7fe81c808505ec4b04",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (FLOOR_TOP_SECTION_LINE_BARS) -> the one pool POOL-1: BASE (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-36efa902da4263479e0b"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:FLOOR_TOP_SECTION_LINE_BARS",
+    "line_id": "L-6a9cb5bf1f0ad8966270",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (RIM_BARS_AT_THE_WALL_TOP) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:RIM_BARS_AT_THE_WALL_TOP",
+    "line_id": "L-f68018703e06125f346e",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NO_BARS_PRINTED"
+   },
+   {
+    "basis": "pool zone R2 (WALL_HORIZONTAL_HOOPS_INNER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:WALL_HORIZONTAL_HOOPS_INNER_FACE",
+    "line_id": "L-f6975fab5aa2f79ff8d8",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (WALL_HORIZONTAL_HOOPS_OUTER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:WALL_HORIZONTAL_HOOPS_OUTER_FACE",
+    "line_id": "L-0dd1ea9b26a8b27847c5",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (WALL_VERTICAL_INNER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:WALL_VERTICAL_INNER_FACE",
+    "line_id": "L-e1b9f9b96ed2616ae599",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "pool zone R2 (WALL_VERTICAL_OUTER_FACE) -> the one pool POOL-1: WALLS (p.7 prints R1 / R2 as zones of one pool)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-15a128c38982af899894"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:POOL:R2:WALL_VERTICAL_OUTER_FACE",
+    "line_id": "L-1f7186abea29e6d746f7",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_POOL_DESIGNER"
+   },
+   {
+    "basis": "ST-01 MS1-U -> P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS#CLOSABLE:VERIFIED_MS1_LD___MS1_U (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-e37d81a8be8e0aa0010c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS1-U:TOP_BARS_AT_THE_FOOT",
+    "line_id": "L-2344f7e714d056343910",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-01 MS1-U -> P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS#CLOSABLE:VERIFIED_MS1_LD___MS1_U (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-e37d81a8be8e0aa0010c"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS1-U:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-8d2a8a896d26cfd363d4",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-01 MS2-L -> HL:STAIR_CONCRETE:ST-01:MS2_L (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-67e4b0485135f84acc46"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS2-L:TOP_BARS_AT_THE_FOOT",
+    "line_id": "L-2ec42b3a686c14021539",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-01 MS2-L -> HL:STAIR_CONCRETE:ST-01:MS2_L (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-67e4b0485135f84acc46"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS2-L:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-63147a74fc715d96a86c",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-01 MS2-U -> HL:STAIR_CONCRETE:ST-01:MS2_U (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-bb0e57b1948175a3d5b8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS2-U:TOP_BARS_AT_THE_FOOT",
+    "line_id": "L-aa35e7fec010f48d132d",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-01 MS2-U -> HL:STAIR_CONCRETE:ST-01:MS2_U (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-bb0e57b1948175a3d5b8"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS2-U:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-38c1c4d4cb52ea625027",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-02 RS-A -> P-C:STAIRS:GROUND:SITE-4df8fcd99d130701#CLOSABLE:OWNER_APPROVED_RS_S___RS_LD___RS_A (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-056402f98a6dbbcde0a0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-02:RS-A:TOP_BARS_AT_THE_FOOT",
+    "line_id": "L-620bb0eac2f918b0f1df",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-02 RS-A -> P-C:STAIRS:GROUND:SITE-4df8fcd99d130701#CLOSABLE:OWNER_APPROVED_RS_S___RS_LD___RS_A (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-056402f98a6dbbcde0a0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-02:RS-A:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-61ece0b9d08c6104bfae",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "basis": "ST-02 RS-LD -> P-C:STAIRS:GROUND:SITE-4df8fcd99d130701#CLOSABLE:OWNER_APPROVED_RS_S___RS_LD___RS_A (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-056402f98a6dbbcde0a0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-02:RS-LD:BOTTOM_BARS",
+    "line_id": "L-84c4f207d4147f00f3a7",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "basis": "ST-02 RS-S -> P-C:STAIRS:GROUND:SITE-4df8fcd99d130701#CLOSABLE:OWNER_APPROVED_RS_S___RS_LD___RS_A (the line names the part)",
+    "binding": "BOUND",
+    "concrete_class": "RELEASED",
+    "concrete_lines": [
+     "L-056402f98a6dbbcde0a0"
+    ],
+    "effect": "stays HELD on its own T-639 cause (concrete RELEASED)",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-02:RS-S:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-60011aa70f35255a1136",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-c0b7102a36344a0349f5",
+     "L-d08e7a9d809a56733ff9"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-114-115-7DF-1:SIDE_2_T12_300",
+    "line_id": "L-d8ca6ea48dbb512a393b",
+    "reason": "GSO-114-115-7DF-1 -> face-handle pair 114+115+7DF -> T-332 run(s) 114+115+7DF#1, 114+115+7DF#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-c0b7102a36344a0349f5",
+     "L-d08e7a9d809a56733ff9"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-114-115-7DF-1:STIRRUP",
+    "line_id": "L-f087edab4e2d055b7815",
+    "reason": "GSO-114-115-7DF-1 -> face-handle pair 114+115+7DF -> T-332 run(s) 114+115+7DF#1, 114+115+7DF#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-c0b7102a36344a0349f5",
+     "L-d08e7a9d809a56733ff9"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-114-115-7DF-2:SIDE_2_T12_300",
+    "line_id": "L-3c121ff2833b0d6a0455",
+    "reason": "GSO-114-115-7DF-2 -> face-handle pair 114+115+7DF -> T-332 run(s) 114+115+7DF#1, 114+115+7DF#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-c0b7102a36344a0349f5",
+     "L-d08e7a9d809a56733ff9"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-114-115-7DF-2:STIRRUP_T8_150",
+    "line_id": "L-5ec77d99b84765cfc81a",
+    "reason": "GSO-114-115-7DF-2 -> face-handle pair 114+115+7DF -> T-332 run(s) 114+115+7DF#1, 114+115+7DF#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_Q71_NOTATION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-b4a13a43967ee4765662",
+     "L-fb53ac7edf5914afd6f5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13E-7D6-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-ac820dfea4fac40d8e9c",
+    "reason": "GSO-13E-7D6-1 -> face-handle pair 13E+7D6 -> T-332 run(s) 13E+7D6#1, 13E+7D6#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-b4a13a43967ee4765662",
+     "L-fb53ac7edf5914afd6f5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13E-7D6-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-cc5a7483cc93aa9a6085",
+    "reason": "GSO-13E-7D6-1 -> face-handle pair 13E+7D6 -> T-332 run(s) 13E+7D6#1, 13E+7D6#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-b4a13a43967ee4765662",
+     "L-fb53ac7edf5914afd6f5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-13E-7D6-1:STIRRUP",
+    "line_id": "L-44c918dabdb3aab55633",
+    "reason": "GSO-13E-7D6-1 -> face-handle pair 13E+7D6 -> T-332 run(s) 13E+7D6#1, 13E+7D6#2 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-1:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-7ad6b3045fa47f3493ea",
+    "reason": "GSO-184-7CF-1 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-1:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-6bc77808b71ba9944ce5",
+    "reason": "GSO-184-7CF-1 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-1:STIRRUP",
+    "line_id": "L-cf7da39b492d77efa776",
+    "reason": "GSO-184-7CF-1 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-3:BAR_ENDS_DEVELOPMENT_40D_70D_NOTE_9",
+    "line_id": "L-cf2aa57bc43afaf1eba1",
+    "reason": "GSO-184-7CF-3 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-3:LONGITUDINAL_SECTION_CANDIDATES",
+    "line_id": "L-02a08d625f20b805b97b",
+    "reason": "GSO-184-7CF-3 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_CANDIDATE_SECTION"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [
+     "L-131df76e442a8b7cc2e9",
+     "L-5af89b9f1e5b90daf8f5",
+     "L-9f49f5fafcb9322c90b5"
+    ],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:GROUND_SYSTEM_STEEL:GSO-184-7CF-3:STIRRUP",
+    "line_id": "L-a9b0490642b1117e4b85",
+    "reason": "GSO-184-7CF-3 -> face-handle pair 184+7CF -> T-332 run(s) 184+7CF#1, 184+7CF#2, 184+7CF#3 -> concrete line(s); T-138 span numbering (-n) is not the T-242 run numbering (#k), so the binding is to the band of the pair: the group's pieces are HELD/RELEASED and the register does not say which piece carries this bar line",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_LINK_RULE_GAP"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:1F-STRIP:FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP",
+    "line_id": "L-a80854555b12d8cba683",
+    "reason": "landing strip: which concrete line carries it is not recorded",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:GF-STRIP:FLIGHT_BARS_RUNNING_THROUGH_THE_STRIP",
+    "line_id": "L-0132c14a2c7fb194aff1",
+    "reason": "landing strip: which concrete line carries it is not recorded",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS1-L:TOP_BARS_AT_THE_HEAD",
+    "line_id": "L-3a1d5323534cc90b12f3",
+    "reason": "no concrete line names MS1-L; candidate: the remainder line P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS (HELD) after the MS1_LD / MS1_U closure (inferred, not recorded)",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_DETAIL_NOT_DIMENSIONED"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01:MS1-T:STEP_NOSING_BARS",
+    "line_id": "L-84b60a69085ee8dcce2a",
+    "reason": "turn MS1-T has no concrete line of its own (T-111 turn HELD); MS2_TR is the other flight's",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-01b:D1:ALL_FAMILIES",
+    "line_id": "L-4f541ae2483c3eec684f",
+    "reason": "no line names ST-01b; candidate: DG5:ST-01:LOBBY#CLOSABLE:DRAWING_CONFIRMED_D1_steps (RELEASED; lobby D1 steps, stair id differs: inferred, not recorded)",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-02:RS-C:ALL_FAMILIES",
+    "line_id": "L-eec8f8667e177eab7682",
+    "reason": "curved part (owner Q-50 HELD): candidate the remainder line P-C:STAIRS:GROUND:SITE-4df8fcd99d130701 (HELD) after the RS_S / RS_LD / RS_A closure (inferred, not recorded)",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:ST-03:E1:ALL_FAMILIES",
+    "line_id": "L-0a842ddb54c21eafae11",
+    "reason": "court stair on no slab plan: no concrete line in the candidate",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "HL:STAIR_POOL_TANK_STEEL:TANK:2F:ALL_FAMILIES",
+    "line_id": "L-fda709fa82222abc19df",
+    "reason": "water tank: only 'WATER TANK PLACE' printed; no concrete element in the candidate",
+    "state": "BLANK",
+    "t639_class": "B",
+    "t639_kind": "B_NOT_DRAWN"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "LINTEL_BARS:FLAGGED",
+    "line_id": "NEW:STR.REBAR:LINTEL_BARS:FLAGGED",
+    "reason": "LINTEL_BARS:FLAGGED is one aggregate over the lintel population; the STR.CONC.LINTEL lines are 16 RELEASED / 44 HELD and the line carries no per-lintel split",
+    "state": "OPEN_HIGH",
+    "t639_class": "B",
+    "t639_kind": "B_OPEN_HIGH_DETAIL"
+   },
+   {
+    "binding": "UNRESOLVED",
+    "concrete_class": null,
+    "concrete_lines": [],
+    "effect": "stays HELD on its own T-639 cause; binding gap named",
+    "element_id": "LINTEL_BARS:PRODUCED",
+    "line_id": "NEW:STR.REBAR:LINTEL_BARS:PRODUCED",
+    "reason": "LINTEL_BARS:PRODUCED is one aggregate over the lintel population; the STR.CONC.LINTEL lines are 16 RELEASED / 44 HELD and the line carries no per-lintel split",
+    "state": "OPEN_HIGH",
+    "t639_class": "B",
+    "t639_kind": "B_OPEN_HIGH_DETAIL"
+   }
+  ],
+  "n": 208,
+  "newly_class_A": 56,
+  "unresolved_reasons": {
+   "* -> face-handle pair * -> T-332 run(s) *, * -> concrete line(s); T-138 span numbering (-n) is not the T-242 r": 7,
+   "* -> face-handle pair * -> T-332 run(s) *, *, * -> concrete line(s); T-138 span numbering (-n) is not the T-24": 6,
+   "LINTEL_BARS:FLAGGED is one aggregate over the lintel population; the STR.CONC.LINTEL lines are 16 RELEASED / 4": 1,
+   "LINTEL_BARS:PRODUCED is one aggregate over the lintel population; the STR.CONC.LINTEL lines are 16 RELEASED / ": 1,
+   "court stair on no slab plan: no concrete line in the candidate": 1,
+   "curved part (owner Q-50 HELD): candidate the remainder line P-C:STAIRS:GROUND:SITE-4df8fcd99d130701 (HELD) aft": 1,
+   "landing strip: which concrete line carries it is not recorded": 2,
+   "no concrete line names MS1-L; candidate: the remainder line P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS (HELD) a": 1,
+   "no line names ST-01b; candidate: DG5:ST-01:LOBBY#CLOSABLE:DRAWING_CONFIRMED_D1_steps (RELEASED; lobby D1 steps": 1,
+   "turn MS1-T has no concrete line of its own (T-111 turn HELD); MS2_TR is the other flight's": 1,
+   "water tank: only 'WATER TANK PLACE' printed; no concrete element in the candidate": 1
+  }
+ },
+ "pins": {
+  "research/agents_t110/BEAM_MEMBER_REGISTER.csv": "368d0fa2d690fb02",
+  "research/agents_t119/COLUMNS_TO_CONTROLLING_MEMBER.csv": "dbe1ce155c7d7356",
+  "research/agents_t297/CANDIDATE_V3016_REBAR_LINES.json": "2f28367b81fe362d",
+  "research/agents_t297/DATUM_JOIN_T297.json": "af5bba3f98ec6352",
+  "research/agents_t332/FORMWORK_T332_BY_FACE.csv": "15c188724a60d580",
+  "research/agents_t449/out/CORRECTION_REGISTER_CONCRETE_T449.json": "a15bb04b2109e29a",
+  "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9",
+  "research/agents_t630/out/E2E_BOQ_DRY_RUN_T630.json": "e5dde7867c8fe6ad",
+  "research/agents_t639/out/REBAR_HOLD_CENSUS_T639.json": "0555f732893dd7d3"
+ },
+ "released": "NOTHING RELEASED OR ADDED; no candidate, engine, rule / knowledge version or registry file changed; the DOWNGRADE rows are downgrade-only record proposals for the Checker (owner 2026-10-24 23:57)",
+ "rule": "R-T643-1",
+ "schema": "URBAN_T643_REBAR_ON_HELD_CONCRETE_V1",
+ "task": "T-643"
+}

@@ -1,0 +1,2243 @@
+{
+ "classes": [
+  "ENGINE_RIGHT",
+  "ENGINE_WRONG",
+  "RULE_DIFFERENCE",
+  "HELD",
+  "TOLERANCE",
+  "UNRESOLVED"
+ ],
+ "provenance": {
+  "corrections_applied": [
+   "F-C-T548-1",
+   "F-C-T543-1"
+  ],
+  "inputs": {
+   "research/agents_t507/out/LINE_INDEX_V3_0_57.json": "fed5141ea31bfdd9c5f3d89c7fb1fa01365ddbf07b797002780a22016a7f5738",
+   "research/agents_t534/out/T534_STAIR_BED_RECONCILE.json": "a79bb0f45544b2f31e961ccd193c6234782495057a22f8f1dcd5dc2719fbee4a",
+   "research/agents_t541/out/T541_ROOF_WP_RECONCILE.json": "4f7c76ddde1a21a970eb68f3ea27c56e8df442096f8daf22b3cf085253e310fc",
+   "research/agents_t541/t541_inputs.py": "2b151bf7a59a9bd920fdfb3f14a3d1a6ecd67c24a432961b789233b7cac49d4c",
+   "research/agents_t542/out/T542_STAIR_BED_CLASSES.json": "d9d1bad4fcd67d128faccde03ed74447e7322ccdadce58fb379e9242d4786ffc",
+   "research/agents_t543/out/T543_BLOCKWORK_RECONCILE.json": "a4cfcdeb01aab26e38b543fa73c89c2999b54cbad85916d9fe6023aa0af4f721",
+   "research/agents_t543/t543_inputs.py": "37f15b442b00221a039316e849fe5bcff466861c96fc0cc31a7f1942869ebc4b",
+   "research/agents_t546/t546_inputs.py": "f753a347487b203ae7ecaa49c18a7c9339836f7ad8adf68841a05579ca0351e5",
+   "research/agents_t548/adapters.py": "0db7927145a817668fd868fa6e717a706fe1a9083724718c0f38e3bc8889a263",
+   "research/agents_t548/statement.py": "86ec3a022ffbe2f9569794a3150b0b04d25d9c852f99b45fb2d707d4dfe125f0"
+  },
+  "valued_lines_not_in_V3_0_57_index": {
+   "T-534/stair-bed": [],
+   "T-541/membrane": [
+    "L-eff54f96bfcfcf175d58",
+    "L-2361d6ec13c952bd2ae3"
+   ],
+   "T-541/upturn": [
+    "L-cf8d5ed40b0d546427d6",
+    "L-1954878bb02c91139e1b",
+    "L-d7d1bf8c5991ccf69ea2"
+   ],
+   "T-543/blockwork": [],
+   "T-546/floor": [],
+   "T-546/upturn": []
+  }
+ },
+ "released_quantities_changed": 0,
+ "reports_covered": [
+  "T-541",
+  "T-534",
+  "T-543",
+  "T-546",
+  "T-542"
+ ],
+ "reports_pending": [
+  "T-545",
+  "T-547",
+  "T-550",
+  "T-551",
+  "T-552",
+  "T-553"
+ ],
+ "rule": "R-T548-1 + R-T554-1",
+ "schema": "URBAN_T548_RECONCILED_STATEMENT_V1",
+ "sections": [
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-5.54644",
+    "ENGINE_WRONG": "0",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "difference": "75.34156",
+   "difference_pct_of_reference": "26.44",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "209.65844"
+   },
+   "engine_valued": "209.65844",
+   "excluded_count": 0,
+   "freelancer_total": "285",
+   "held_count": 1,
+   "held_count_own_family": 1,
+   "held_cross_family": [],
+   "item_codes": [
+    "FIN.WP.ROOF"
+   ],
+   "reference_basis": "freelancer waterproofing sheet, one typed row 'roofs and annexes' (T-541 s.1, F-T541-1; Drive 'Alsenan chalet project'); no sub-rows",
+   "reference_kind": "FREELANCER",
+   "reference_total": "285",
+   "report": "T-541",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "34.390242",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-3e8fe55da71851816dd4"
+     ],
+     "name": "2F block top roof +13.90 inside the parapet inner faces, less the third dome (Q-29 skylight)",
+     "note": "49.665000 - 15.274758; engine lines L-3e8fe55d / L-aac1f35e HELD, never 0",
+     "source": "P7757.dxf handles (re-read T-541); Q-34 parked",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "15.274758",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "third dome footprint on the +13.90 roof",
+     "note": "inside the HELD roof; his row does not deduct it (hypothesis H1)",
+     "source": "P7757.dxf handles (re-read T-541) 1300; Q-29 client change (open skylight)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "30.718026",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "two +9.70 dome footprints (circles)",
+     "note": "engine stops the membrane at each skylight opening (owner Q-29); a design-scope count keeps it",
+     "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 / Q-29",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.018026",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "engine arc discretisation of the two +9.70 dome deductions",
+     "note": "polygon chords; 0.016 % of the line; not a defect",
+     "source": "T-321 closure AT379 (146.532 - 115.832 = 30.700 vs circles)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-5.54644",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "pool-court slab +5.50 and its ledge (T-507 / T-529)",
+     "note": "exposed slab top; his row has no sub-row: whether his lump holds it is not printed",
+     "source": "candidate lines L-eff54f96 / L-2361d6ec (Checker 4.9069 AGREE)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "0.523",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RESIDUAL",
+     "note": "",
+     "source": "freelancer row total minus every named component",
+     "source_cause": "UNRESOLVED"
+    }
+   ],
+   "section_id": "T-541/membrane",
+   "trade": "B8 roof waterproofing",
+   "unit": "m2",
+   "valued_count": 5
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-6.24516",
+    "ENGINE_WRONG": "0",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   },
+   "difference": "6.16584",
+   "difference_pct_of_reference": "3.18",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "187.83416"
+   },
+   "engine_valued": "187.83416",
+   "excluded_count": 0,
+   "freelancer_total": "194",
+   "held_count": 1,
+   "held_count_own_family": 1,
+   "held_cross_family": [],
+   "item_codes": [
+    "FIN.WP.ROOF_UPTURN"
+   ],
+   "reference_basis": "freelancer waterproofing sheet, one typed row 'roofs and annexes' (T-541 s.1, F-T541-1; Drive 'Alsenan chalet project'); no sub-rows",
+   "reference_kind": "FREELANCER",
+   "reference_total": "194",
+   "report": "T-541",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "28.3",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-aac1f35e08f85b643692"
+     ],
+     "name": "2F block top roof parapet inner faces",
+     "note": "engine line L-aac1f35e HELD",
+     "source": "P7757.dxf handles (re-read T-541); T-311 2F 28.300; Q-34 parked",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-27.785396",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "two +9.70 dome rings (circles)",
+     "note": "in the engine, not in a basis that keeps the domes in the area",
+     "source": "P7757.dxf handles (re-read T-541) 12EB / 2F33; Q-24 answer (0.20 m round a skylight)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.003396",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "engine arc discretisation of the two rings",
+     "note": "",
+     "source": "T-071 ring 27.782 vs circles 27.785396",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-6.24516",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "pool-court upturns, bath-window face and ledge (T-507 / T-529)",
+     "note": "5.193544 + 0.500002 + 0.551614",
+     "source": "candidate lines L-cf8d5ed4 / L-1954878b / L-d7d1bf8c",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "11.893",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RESIDUAL",
+     "note": "",
+     "source": "freelancer row total minus every named component",
+     "source_cause": "UNRESOLVED"
+    }
+   ],
+   "section_id": "T-541/upturn",
+   "trade": "B8 roof waterproofing",
+   "unit": "lm",
+   "valued_count": 6
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "4.08",
+    "ENGINE_WRONG": "1.4375",
+    "HELD": "13.405",
+    "RULE_DIFFERENCE": "-14.8694",
+    "TOLERANCE": "0.0006",
+    "UNRESOLVED": "0"
+   },
+   "difference": "4.0537",
+   "difference_pct_of_reference": "10.27",
+   "drawing_derived_beside": {
+    "attached_to": "T-534/stair-bed",
+    "beyond_parts": [
+     {
+      "drawing_m2": "1.571667",
+      "fix_row": null,
+      "key": "MS1-L",
+      "landing_class": null,
+      "line_id": "L-ecc450d6cc865617f8f6",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "1.886",
+      "fix_row": null,
+      "key": "MS1-U",
+      "landing_class": null,
+      "line_id": "L-07e0855f961a839c1277",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "1.9044",
+      "fix_row": null,
+      "key": "MS2-L",
+      "landing_class": null,
+      "line_id": "L-0f060e9951c28c4cf074",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "1.9044",
+      "fix_row": null,
+      "key": "MS2-U",
+      "landing_class": null,
+      "line_id": "L-12f56cbfe750f8b30c41",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "0.667",
+      "fix_row": null,
+      "key": "D1",
+      "landing_class": null,
+      "line_id": "L-8938aa3b25bf605e4b9d",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "1.653536",
+      "fix_row": null,
+      "key": "RS-S",
+      "landing_class": null,
+      "line_id": "L-099fe9fcfa5667fb8b99",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "0.751607",
+      "fix_row": null,
+      "key": "RS-A",
+      "landing_class": null,
+      "line_id": "L-16e0c6682725260f28e7",
+      "state": "HELD_LINE",
+      "surface": "RISER"
+     },
+     {
+      "drawing_m2": "1.4375",
+      "fix_row": "T-502",
+      "key": "MS1-LD",
+      "landing_class": "STAIR_LANDING",
+      "line_id": null,
+      "state": "NO_CANDIDATE_LINE",
+      "surface": "LANDING"
+     },
+     {
+      "drawing_m2": "2.9325",
+      "fix_row": "T-502",
+      "key": "MS2-LD",
+      "landing_class": "STAIR_LANDING",
+      "line_id": null,
+      "state": "NO_CANDIDATE_LINE",
+      "surface": "LANDING"
+     },
+     {
+      "drawing_m2": "4.865",
+      "fix_row": "T-502",
+      "key": "2F-ARR",
+      "landing_class": "STAIR_ARRIVAL",
+      "line_id": null,
+      "state": "NO_CANDIDATE_LINE",
+      "surface": "LANDING"
+     },
+     {
+      "drawing_m2": "1.3525",
+      "fix_row": "T-502",
+      "key": "RS-LD",
+      "landing_class": "STAIR_LANDING",
+      "line_id": null,
+      "state": "NO_CANDIDATE_LINE",
+      "surface": "LANDING"
+     }
+    ],
+    "beyond_wire": "20.92611",
+    "candidate_wire_lines": "35.4313",
+    "cross_check": {
+     "MS1-LD_drawing_m2": "1.4375",
+     "note": "equals the F-C-T548-1 ENGINE_WRONG 1.4375 (Checker own re-measure)"
+    },
+    "floor_bed_family_beside": [
+     {
+      "beside_m2": 4.805,
+      "floor_bed_line": "L-3e451bfc3e11473a2cec",
+      "key": "GF-HALL"
+     },
+     {
+      "beside_m2": 1.3225,
+      "floor_bed_line": "L-faa974d23d90547f0b5b",
+      "key": "GF-LOBBY"
+     }
+    ],
+    "held_by_name": [
+     {
+      "beside_m2": 1.495,
+      "key": "MS1-T",
+      "line_id": "L-b4660de0ddd98ad0ffc2",
+      "surface": "TREAD"
+     },
+     {
+      "beside_m2": null,
+      "key": "MS1-T",
+      "line_id": "L-820baecf7f726b4d8f1e",
+      "surface": "RISER"
+     },
+     {
+      "beside_m2": 0.1587,
+      "key": "MS2-TR#held-risers",
+      "line_id": null,
+      "surface": "RISER"
+     },
+     {
+      "beside_m2": 0.345,
+      "key": "MS2-U#held-treads",
+      "line_id": null,
+      "surface": "TREAD"
+     },
+     {
+      "beside_m2": 4.094413,
+      "key": "RS-C",
+      "line_id": "L-fa534ec5f9dc14947899",
+      "surface": "TREAD"
+     },
+     {
+      "beside_m2": 1.803857,
+      "key": "RS-C",
+      "line_id": "L-913cda8eb6d73f6e28cc",
+      "surface": "RISER"
+     }
+    ],
+    "in_v7_wire": "35.4325",
+    "kind": "DRAWING_DERIVED_BESIDE (no reference figure; never in a total or an engine range)",
+    "polygon_residual": "0.0012",
+    "report": "T-542",
+    "unit": "m2",
+    "whole_at_least": "56.35861"
+   },
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "35.4313"
+   },
+   "engine_valued": "35.4313",
+   "excluded_count": 3,
+   "freelancer_total": null,
+   "held_count": 20,
+   "held_count_own_family": 20,
+   "held_cross_family": [],
+   "item_codes": [
+    "FIN.MARBLE.TREAD",
+    "FIN.MARBLE.RISER",
+    "FIN.MARBLE.LANDING"
+   ],
+   "reference_basis": "Q-53 text 39.49 m2 = the T-086 hand table (39.485); freelancer: no stair bed / cement / sand row (T-534 s.5, T-511 s.5)",
+   "reference_kind": "OWNER_QUESTION_FIGURE",
+   "reference_total": "39.485",
+   "report": "T-534",
+   "rows": [
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-4.9225",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F-ARR LANDING SCOPE",
+     "note": "Q-66 B answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.84",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-8938aa3b25bf605e4b9d"
+     ],
+     "name": "D1 RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "D1 TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.045",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "D1 TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.42",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 RISER DEPTH_OR_HEIGHT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "DEPTH_OR_HEIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.84",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.0006",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1 TREAD POLYGON",
+     "note": "candidate polygon 3.3594 vs printed 4 x 0.30 x 2.80 = 3.3600 (T-425 s.3.2 AGREE)",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "POLYGON"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-5.1794",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "E1-LD LANDING SCOPE",
+     "note": "reference counted the top E1 step as a tread, no entrance landing (T-534 s.5 scope)",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-ecc450d6cc865617f8f6"
+     ],
+     "name": "MS1-L RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-L TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.135",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-L TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "ENGINE_WRONG",
+     "correction": "F-C-T548-1",
+     "delta": "1.4375",
+     "engine_status": "NONE",
+     "fix_row": "T-502",
+     "held_line_ids": [],
+     "name": "MS1-LD LANDING SCOPE: drawn landing 1.250 x 1.150 with no candidate line",
+     "note": "F-C-T548-1: Checker own P7757.dxf re-measure 1.250 x 1.150 = 1.4375 (T-493 F-3 silent omission); T-542 drawing-derived MS1-LD 1.4375 STAIR_LANDING (Q-53 C)",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "correction": "F-C-T548-1",
+     "delta": "0.0625",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-LD LANDING SCOPE: reference size 1.20 x 1.25 vs drawn 1.25 x 1.15",
+     "note": "F-C-T548-1: the Q-53 / T-086 reference figure's own size (1.500 - 1.4375); not an engine error",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-07e0855f961a839c1277"
+     ],
+     "name": "MS1-U RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-U TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.165",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS1-U TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4192",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0f060e9951c28c4cf074"
+     ],
+     "name": "MS2-L RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.36",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-L TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.165",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-L TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "HELD",
+     "delta": "3.125",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-5d2be30dd8d2ffeacc42"
+     ],
+     "name": "MS2-LD LANDING SCOPE",
+     "note": "only inside the HELD 2F bound",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.2016",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0f060e9951c28c4cf074"
+     ],
+     "name": "MS2-TR RISER SCOPE",
+     "note": "closing riser inside the HELD MS2-L riser line; position HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.4192",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-12f56cbfe750f8b30c41"
+     ],
+     "name": "MS2-U RISER SCOPE",
+     "note": "candidate riser line HELD",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.72",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-U TREAD COUNT",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "COUNT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.15",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "MS2-U TREAD WIDTH",
+     "note": "",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "WIDTH"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-1.38",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RS-A TREAD SCOPE",
+     "note": "Q-50 A cond answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-3.45",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "RS-S TREAD SCOPE",
+     "note": "Q-50 A cond answered after the T-086 reference",
+     "source": "research/agents_t534/out RECONCILE_A_TO_B (T-534 s.3)",
+     "source_cause": "SCOPE"
+    }
+   ],
+   "section_id": "T-534/stair-bed",
+   "trade": "B7 stair marble bed",
+   "unit": "m2",
+   "valued_count": 11
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "41.05128",
+    "ENGINE_WRONG": "0",
+    "HELD": "582.807578",
+    "RULE_DIFFERENCE": "69.625508",
+    "TOLERANCE": "-2.0193005",
+    "UNRESOLVED": "101.4319345"
+   },
+   "difference": "792.897",
+   "difference_pct_of_reference": "62.89",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "467.7925"
+   },
+   "engine_valued": "467.7925",
+   "excluded_count": 0,
+   "freelancer_total": "1260.6895",
+   "held_count": 19,
+   "held_count_own_family": 15,
+   "held_cross_family": [
+    {
+     "item_code": "STR.CONC.PARAPET",
+     "line_id": "L-030538dda6a32c601c4c",
+     "reason": "2F_ROOF parapet element (RC + material Q-65 C) HELD blank",
+     "unit": "m3"
+    },
+    {
+     "item_code": "STR.CONC.PARAPET",
+     "line_id": "L-1d419b64e8ca1af30fb4",
+     "reason": "ANNEX_ROOF parapet element (RC + material Q-65 C) HELD blank",
+     "unit": "m3"
+    },
+    {
+     "item_code": "STR.CONC.PARAPET",
+     "line_id": "L-9a2c81164ec6499cc28c",
+     "reason": "1F_ROOF parapet element (RC + material Q-65 C) HELD blank",
+     "unit": "m3"
+    },
+    {
+     "item_code": "STR.CONC.PARAPET",
+     "line_id": "L-b5ffc172a354375ca107",
+     "reason": "GF_TERRACE parapet element (RC + material Q-65 C) HELD blank",
+     "unit": "m3"
+    }
+   ],
+   "item_codes": [
+    "MAS.BLOCK"
+   ],
+   "reference_basis": "freelancer masonry workbook, one sheet, exact sum of his row products 1,260.6895 (printed 1,260.69; sections 559.80 / 617.25 / 83.64) (T-543 s.1; Drive 'Alsenan chalet project')",
+   "reference_kind": "FREELANCER",
+   "reference_total": "1260.6895",
+   "report": "T-543",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "12.921",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0d9b9e89bb6455da475d"
+     ],
+     "name": "GF: HELD walls: CB2 width conflict (D-27)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "130.745",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0d9b9e89bb6455da475d",
+      "L-4165954ce4871eda30cc"
+     ],
+     "name": "GF: HELD walls: annex storey datum (Q-54 B / D-39)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "8.2725",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-4165954ce4871eda30cc"
+     ],
+     "name": "GF: HELD walls: held increment of a part-valued wall (member depth / shaft piece / dome ring)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "41.807",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0d9b9e89bb6455da475d",
+      "L-4165954ce4871eda30cc"
+     ],
+     "name": "GF: HELD walls: held opening",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "41.171",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-4165954ce4871eda30cc"
+     ],
+     "name": "GF: HELD walls: lift tie beam size (ST p.8 n.19)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "46.693",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0d9b9e89bb6455da475d",
+      "L-4165954ce4871eda30cc"
+     ],
+     "name": "GF: HELD walls: sunken-panel drop d (D-41)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.1204",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF: version drift of valued walls (V2 figure - V3.0.58 value)",
+     "note": "same walls, two merged versions",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "23.965545",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-0d9b9e89bb6455da475d",
+      "L-4165954ce4871eda30cc",
+      "L-ff06449b7f61f19c418d"
+     ],
+     "name": "GF: HELD length with no height (held pieces / length-only walls) x engine mean height",
+     "note": "held length 6.275 m x H_eng 3.819210 m",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "2.524107",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF: height convention: his flat storey heights vs the engine's clear height under each member",
+     "note": "(L_eng 126.567 + held 6.275) m x (H_his 3.838211 - H_eng 3.819210) m; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "-5.78",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF: openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+     "note": "his 48.4400 - engine 42.660 m2",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "5.519348",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+     "note": "(L_his 134.28 - 126.567 - 6.275) m x 3.838211 = 5.519348 m2 expected; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "HELD",
+     "delta": "2.2693",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-5ffa7157a2fe483dd008",
+      "L-c22e309433e7b671cf2d"
+     ],
+     "name": "1F: HELD walls: held increment of a part-valued wall (member depth / shaft piece / dome ring)",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "45.914",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-5ffa7157a2fe483dd008",
+      "L-c22e309433e7b671cf2d"
+     ],
+     "name": "1F: HELD walls: held opening",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "-0.872",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-c22e309433e7b671cf2d"
+     ],
+     "name": "1F: HELD walls: no member drawn above / no band",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-1.8989",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F: version drift of valued walls (V2 figure - V3.0.58 value)",
+     "note": "same walls, two merged versions",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "41.647484",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-5ffa7157a2fe483dd008",
+      "L-c22e309433e7b671cf2d"
+     ],
+     "name": "1F: HELD length with no height (held pieces / length-only walls) x engine mean height",
+     "note": "held length 11.162 m x H_eng 3.731185 m",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-7.298599",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F: height convention: his flat storey heights vs the engine's clear height under each member",
+     "note": "(L_eng 106.084 + held 11.162) m x (H_his 3.668934 - H_eng 3.731185) m; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "-8.499",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F: openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+     "note": "his 50.3500 - engine 41.851 m2",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "11.241615",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+     "note": "(L_his 120.31 - 106.084 - 11.162) m x 3.668934 = 11.241615 m2 expected; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "HELD",
+     "delta": "6.84",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-76a4d8e50423fb02b914",
+      "L-a6eedf5e4adec6d07618",
+      "L-afe984a62285e133ec2f",
+      "L-bbb82de298fecbafa11d",
+      "L-e90c9dd5ca08ffb64728"
+     ],
+     "name": "2F: HELD walls: held opening",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "104.791",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-246f3c09de4c6b90efe5",
+      "L-76a4d8e50423fb02b914",
+      "L-9056ebed77701b50abfc",
+      "L-a6eedf5e4adec6d07618",
+      "L-afe984a62285e133ec2f",
+      "L-bbb82de298fecbafa11d",
+      "L-e1e06ec149b44d4f6f8a",
+      "L-e90c9dd5ca08ffb64728"
+     ],
+     "name": "2F: HELD walls: roof datum b_r (D-39), 2F at the b_r = 0.05 what-if",
+     "note": "V2 carried figure (gross on established pieces - deductions - valued part), not a quantity",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "2F: version drift of valued walls (V2 figure - V3.0.58 value)",
+     "note": "same walls, two merged versions",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "20.706679",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-246f3c09de4c6b90efe5",
+      "L-76a4d8e50423fb02b914",
+      "L-9056ebed77701b50abfc",
+      "L-a6eedf5e4adec6d07618",
+      "L-afe984a62285e133ec2f",
+      "L-bbb82de298fecbafa11d",
+      "L-e1e06ec149b44d4f6f8a",
+      "L-e90c9dd5ca08ffb64728"
+     ],
+     "name": "2F: HELD length with no height (held pieces / length-only walls) x engine mean height",
+     "note": "held length 5.697 m x H_eng 3.634664 m",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "-4.476873",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-246f3c09de4c6b90efe5",
+      "L-76a4d8e50423fb02b914",
+      "L-9056ebed77701b50abfc",
+      "L-a6eedf5e4adec6d07618",
+      "L-afe984a62285e133ec2f",
+      "L-bbb82de298fecbafa11d",
+      "L-e1e06ec149b44d4f6f8a",
+      "L-e90c9dd5ca08ffb64728"
+     ],
+     "name": "2F: height convention: his flat storey heights vs the engine's clear height under each member",
+     "note": "(L_eng 33.903 + held 5.697) m x (H_his 3.521611 - H_eng 3.634664) m; F-T554-2: on HELD walls only (D-39 what-if height); RULE_DIFFERENCE once b_r is printed; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "-2.165",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "2F: openings census: his deductions vs the engine's (both deduct every opening, Q-73)",
+     "note": "his 13.7600 - engine 11.595 m2",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "-1.760806",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "2F: RESIDUAL: wall-length census (his length - engine length - held length) x H_his, + rounding",
+     "note": "(L_his 39.10 - 33.903 - 5.697) m x 3.521611 = -1.760806 m2 expected; F-C-T543-2: height (k) and length (m) are one 'height x length' cause: quote together",
+     "source": "T-543 s.2 storey-wall split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "74.4",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "boundary wall (his 15 cm section)",
+     "note": "family placement: the engine books it as EXT.FENCE.WALL (F-STREET 14.84 + F-NORTH 83.1305 valued, F-SEA / F-LOWER HELD); compared under the fence family",
+     "source": "LINE_INDEX_V3_0_57 (V3.0.58 MAS.BLOCK lines byte-identical, R-T507-1 (e)): EXT.FENCE.WALL F-STREET 14.84 + F-NORTH 83.1305 valued, F-SEA / F-LOWER HELD",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "60.412943",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-030538dda6a32c601c4c",
+      "L-1d419b64e8ca1af30fb4",
+      "L-9a2c81164ec6499cc28c",
+      "L-b5ffc172a354375ca107"
+     ],
+     "name": "parapets: parapet face above the RC upstand: block ALTERNATIVE (material HELD, Q-65 C designer), upper end",
+     "note": "V3_0_23_RUNS_T319 + T-488 PARAPET_RUN: sum of 25 runs [0, c x (h - 0.30)]; held with its element STR.CONC.PARAPET (material Q-65 C open); R-T554-1",
+     "source": "T-543 s.2 parapet split",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "correction": "F-C-T543-1",
+     "delta": "41.05128",
+     "depends_on": "H1",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "parapets: RC upstand 0.30 m above the slab on every run (concrete, STR.CONC.PARAPET; never masonry)",
+     "note": "ST7757.pdf p.14 P1 parapet detail: RC upstand 0.30 above the slab (T-319 / T-482 own reads); centreline 136.83760 m x 0.30; P1 detail: concrete, never masonry (0 masonry by the detail); rests on H1 (F-C-T543-1 / F-C-T548-2): his parapet heights read from the slab top (+0.50 / +0.63 over the printed heights above finish); if his base is the finish, only (upstand - b_edge) lies inside his face and that share is HELD (b_edge, D-39)",
+     "source": "T-543 s.2 parapet split",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.0000005",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "parapets: print rounding of the stored block alternatives (6 dp)",
+     "note": "face above finish - block alternative - RC upstand; ",
+     "source": "T-543 s.2 parapet split",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "71.4657775",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "parapets: RESIDUAL: parapet height below the finished roof (b_edge, HELD D-39) + length census",
+     "note": "engine runs above finish 101.46422250 m2 on 136.83760 m centreline; b_edge x 136.83760 m stays HELD; b_edge HELD (D-39); T-550 takes it to its cause",
+     "source": "T-543 s.2 parapet split",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "41.25",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F 'projections' row (his external section)",
+     "note": "no masonry element identified (T-543 s.3, T-225); T-550",
+     "source": "freelancer row; no engine element (MAS.BLOCK carries none)",
+     "source_cause": "UNRESOLVED"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "-9.84",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "his 20 cm openings with no floor",
+     "note": "his deduction with no floor; T-550",
+     "source": "freelancer section deduction",
+     "source_cause": "UNRESOLVED"
+    }
+   ],
+   "section_id": "T-543/blockwork",
+   "trade": "B9 blockwork",
+   "unit": "m2",
+   "valued_count": 13
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-0.307294",
+    "ENGINE_WRONG": "0",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-13.235",
+    "TOLERANCE": "-0.023416",
+    "UNRESOLVED": "0"
+   },
+   "difference": "-13.56571",
+   "difference_pct_of_reference": "-18.84",
+   "engine_bounded": {
+    "high": "85.57571",
+    "high_open": false,
+    "low_at_least": "85.57571"
+   },
+   "engine_valued": "85.57571",
+   "excluded_count": 0,
+   "freelancer_total": "72.01",
+   "held_count": 0,
+   "held_count_own_family": 0,
+   "held_cross_family": [],
+   "item_codes": [
+    "FIN.WP.FLOOR"
+   ],
+   "reference_basis": "freelancer waterproofing sheet H39 = SUM of 17 room floor cells (T-546 F-T546-1; Drive 'Alsenan chalet project')",
+   "reference_kind": "FREELANCER",
+   "reference_total": "72.01",
+   "report": "T-546",
+   "rows": [
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.000695",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF lobby wash (2 basins): 2-dp rounding",
+     "note": "T-074 hand table (MERGED): 10-edge trace 4.732",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.22",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF basin space by the stair: passage reveal 0.20 x 1.10 taken into his room (1.55 x 1.10)",
+     "note": "T-074 hand table (MERGED): printed 110 x 135; the reveal is the doorway / threshold piece (UP-WP-003), not room floor",
+     "source": "T-546 s.2 room table",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.005",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF basin space by the stair: his 1.705 truncated to 2 dp",
+     "note": "arithmetic of the reveal reading",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.017683",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF master bath: diagonal-wall corner 0.983 x 0.982 / 2 out of 2.10 x 2.00",
+     "note": "T-074 hand table (MERGED): 4.200 - 0.483 = 3.717 on the drawn faces",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.06761",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 245 x 167 (wedge): wedge room by shoelace on the drawn wall faces",
+     "note": "T-074 hand table (MERGED): 2.368 m2 / 6.810 lm",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.005221",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 289 x 167 (wedge): 2-dp truncation",
+     "note": "T-074 hand table (MERGED): shoelace 2.675",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.0025",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF stair-core W.C. 175 x 135: 2-dp truncation",
+     "note": "T-074 hand table (MERGED): printed 175 x 135",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.080001",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF kitchen: printed 300 x 270 + 105 x 150 less two drawn piers 0.045",
+     "note": "T-074 hand table (MERGED): 9.675 - 0.045 = 9.630 (0.000001 polygon); his 9.55 has no derivation",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.005",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF W.C. by the reception room: 2-dp truncation",
+     "note": "T-074 hand table (MERGED): printed 150 x 225",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.0175",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF wash by the reception room: column corner out of the printed 150 x 210",
+     "note": "T-074 hand table (MERGED) + T-310 ruling: a column is not floor (membrane turns up its face)",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.005",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F east bath 210 x 225: 2-dp truncation",
+     "note": "T-074 hand table (MERGED): printed 210 x 225",
+     "source": "T-546 s.2 room table",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.0225",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F bath by the laundry: drawn jamb 0.45 x 0.05 out of 2.00 x 1.80",
+     "note": "T-074 hand table (MERGED): 3.600 - 0.0225 on the drawn faces",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.056",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F W.C. by the laundry: printed 180 x 147 against his 1.80 x 1.44",
+     "note": "T-074 hand table (MERGED): 2.646",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.0225",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F west bath A 245 x 205: printed 245 x 205 against his 5.00",
+     "note": "T-074 hand table (MERGED): 5.0225",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.0225",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F west bath B 245 x 205: printed 245 x 205 against his 5.00",
+     "note": "T-074 hand table (MERGED): 5.0225",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.151",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F laundry: printed 347 x 300 / 185 with the W.C. corner, against his typed 10.00",
+     "note": "T-074 hand table (MERGED): 5.550 + 1.701 + 1.764 + 1.136 = 10.151",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.07",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "2F roof-floor W.C. 300 x 185: printed 185 against his 1.875",
+     "note": "T-074 hand table (MERGED): sheet 5, 300 x 185 = 5.550",
+     "source": "T-546 s.2 room table",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "-13.455",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF pantry (wet zone, Q-37 A): pantry box 4.50 x 3.00 less the column edge 0.900 x 0.050",
+     "note": "owner Q-37 A (pantry wet) + T-310 (P7757 AE / B3 / A6 / 158, DIMENSIONs 5D5 / 5E1, column 2FAE); he keeps the pantry in his dry reception row (T-153)",
+     "source": "T-546 s.2 room table",
+     "source_cause": "RULE_DIFFERENCE"
+    }
+   ],
+   "section_id": "T-546/floor",
+   "trade": "B8 wet-room waterproofing",
+   "unit": "m2",
+   "valued_count": 18
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-0.5183",
+    "ENGINE_WRONG": "0",
+    "HELD": "13.9",
+    "RULE_DIFFERENCE": "3.556",
+    "TOLERANCE": "-0.000625",
+    "UNRESOLVED": "1.6"
+   },
+   "difference": "18.537075",
+   "difference_pct_of_reference": "12.82",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "126.072925"
+   },
+   "engine_valued": "126.072925",
+   "excluded_count": 0,
+   "freelancer_total": "144.61",
+   "held_count": 15,
+   "held_count_own_family": 0,
+   "held_cross_family": [
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-07b084a5187a64634108",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-19908ce0b9a2bcadff80",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-19f6405a5e60a99c29f7",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-1c36054a8cadc0726e65",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-20400ca6dc38abb30c33",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-65194e5d4497f0882024",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-689197a4778b786de143",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-77a630d7e60ca6c404ba",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "line_id": "L-8090ff20f2b547d1bc96",
+     "reason": "upturn HELD: open side 4.49 m and the pantry door not bound (T-303 / T-310); not in his list",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-aed6f48195f99648c3f3",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-b46013c737051e5441fe",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-b4a23dc5fc953bc5a163",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-b5a04e7c058346b6f734",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-bec3b3df8ec830a46447",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    },
+    {
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-dfc4e74604047cb21407",
+     "reason": "doorway transition HELD (detail not printed, T-310 policy V3)",
+     "unit": "m2"
+    }
+   ],
+   "item_codes": [
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "reference_basis": "freelancer waterproofing sheet G40 = SUM of room perimeters (G = C x F, F = 1 is a multiplier, not a height); his summary row labels the unit 'm.l' (T-546 F-T546-1, Checker AGREE): a LENGTH, never m2",
+   "reference_kind": "FREELANCER",
+   "reference_label": "m.l",
+   "reference_total": "144.61",
+   "report": "T-546",
+   "rows": [
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-19908ce0b9a2bcadff80"
+     ],
+     "name": "GF lobby wash (2 basins): doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); OP-017 shared: held in GF core W.C. 289 (the lobby's own transition count record L-4bf0adee names OP-017)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "0.8",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF lobby wash (2 basins): doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); F-T554-1: second doorway: no transition record in this room (GF OP-018 of the core W.C. 245 is a candidate, not bound): no candidate line holds this segment (R-T554-1 (d); silent-omission candidate, T-493 F-3)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "1.256",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF lobby wash (2 basins): lobby to stair hall, no wall",
+     "note": "Q-35 C (upturn on walls only); T-303 open edges / T-074 trace",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.0002",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF lobby wash (2 basins): boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 9.5002",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.001",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF lobby wash (2 basins): engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-77a630d7e60ca6c404ba"
+     ],
+     "name": "GF basin space by the stair: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own closure D2:825|D2:417",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.9",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF basin space by the stair: basin space to passage, no wall",
+     "note": "Q-35 C (upturn on walls only); T-303 open edges / T-074 trace",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "0.4",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF basin space by the stair: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED): he takes the 0.20 reveal in (2 x 0.20 m)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.00296",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF basin space by the stair: engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-20400ca6dc38abb30c33"
+     ],
+     "name": "GF master bath: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own closure D2:820",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.0245",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF master bath: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 7.6245 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.000165",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF master bath: engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-65194e5d4497f0882024"
+     ],
+     "name": "GF core W.C. 245 x 167 (wedge): doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-018",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.1098",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 245 x 167 (wedge): boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 6.8098 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "0.0047",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 245 x 167 (wedge): engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-19908ce0b9a2bcadff80"
+     ],
+     "name": "GF core W.C. 289 x 167 (wedge): doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-017",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.014",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 289 x 167 (wedge): boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 7.414 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.00004",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF core W.C. 289 x 167 (wedge): engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-77a630d7e60ca6c404ba"
+     ],
+     "name": "GF stair-core W.C. 175 x 135: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); closure D2:825|D2:417 shared: held in the basin space, own transition L-e0c34550 EXCLUDED as the same closure",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "TOLERANCE",
+     "delta": "-0.00296",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF stair-core W.C. 175 x 135: engine run vs hand boundary less segments (closure / door block width)",
+     "note": "T-303 item 6 named residuals; drawn door block width vs walked jamb gap",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "TOLERANCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "1",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-b46013c737051e5441fe"
+     ],
+     "name": "GF kitchen: doorway segment 1.00 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-025 (1.00)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.15",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF kitchen: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 14.5 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-b4a23dc5fc953bc5a163"
+     ],
+     "name": "GF driver W.C.: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-026",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.02",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF driver W.C.: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 5.6 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-1c36054a8cadc0726e65"
+     ],
+     "name": "GF W.C. by the reception room: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own closure D2:495|D2:417",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-1c36054a8cadc0726e65"
+     ],
+     "name": "GF wash by the reception room: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); closure D2:495|D2:417 shared: held in the W.C. by the reception room, own transition L-b60811f6 EXCLUDED as the same closure",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "RULE_DIFFERENCE",
+     "delta": "1",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "GF wash by the reception room: arch to the reception room, no leaf, no wall",
+     "note": "Q-35 C (upturn on walls only); T-303 open edges / T-074 trace",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "RULE_DIFFERENCE"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-dfc4e74604047cb21407"
+     ],
+     "name": "1F east bath 210 x 225: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-018",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-19f6405a5e60a99c29f7"
+     ],
+     "name": "1F bath by the laundry: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-019",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "UNRESOLVED",
+     "delta": "0.8",
+     "engine_status": "NONE",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F W.C. by the laundry: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); F-T554-1: no transition record in this room (the laundry's OP-010 is a candidate, not bound): no candidate line holds this segment (R-T554-1 (d); silent-omission candidate, T-493 F-3)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.06",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F W.C. by the laundry: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 6.54 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-aed6f48195f99648c3f3"
+     ],
+     "name": "1F west bath A 245 x 205: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-004",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-07b084a5187a64634108"
+     ],
+     "name": "1F west bath B 245 x 205: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own closure D2:3118",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.1",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F west bath B 245 x 205: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 9.0 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.9",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-689197a4778b786de143"
+     ],
+     "name": "1F laundry: doorway segment 0.90 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-008 (0.90)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-bec3b3df8ec830a46447"
+     ],
+     "name": "1F laundry: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-010",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "-0.09",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "1F laundry: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 16.94 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    },
+    {
+     "class": "HELD",
+     "delta": "0.8",
+     "engine_status": "HELD",
+     "fix_row": null,
+     "held_line_ids": [
+      "L-b5a04e7c058346b6f734"
+     ],
+     "name": "2F roof-floor W.C. 300 x 185: doorway segment 0.80 m",
+     "note": "UP-WP-002 2.0.0 / T-310 policy V3: each doorway segment its own row, HELD (detail not printed); own OP-006",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "HELD"
+    },
+    {
+     "class": "ENGINE_RIGHT",
+     "delta": "0.05",
+     "engine_status": "VALUED",
+     "fix_row": null,
+     "held_line_ids": [],
+     "name": "2F roof-floor W.C. 300 x 185: boundary: hand reading vs his perimeter",
+     "note": "T-074 hand table (MERGED) hand boundary 9.7 (printed / drawn faces)",
+     "source": "T-546 s.3 upturn table (lm)",
+     "source_cause": "ENGINE_RIGHT"
+    }
+   ],
+   "section_id": "T-546/upturn",
+   "trade": "B8 wet-room waterproofing",
+   "unit": "lm",
+   "valued_count": 17
+  }
+ ],
+ "totals": [
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "4.08",
+    "ENGINE_WRONG": "1.4375",
+    "HELD": "13.405",
+    "RULE_DIFFERENCE": "-14.8694",
+    "TOLERANCE": "0.0006",
+    "UNRESOLVED": "0"
+   },
+   "difference": "4.0537",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "35.4313"
+   },
+   "engine_valued": "35.4313",
+   "freelancer_total": null,
+   "held_count": 20,
+   "reference_kind": "OWNER_QUESTION_FIGURE",
+   "reference_total": "39.485",
+   "sections": [
+    "T-534/stair-bed"
+   ],
+   "trade": "B7 stair marble bed",
+   "unit": "m2"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-6.24516",
+    "ENGINE_WRONG": "0",
+    "HELD": "28.3",
+    "RULE_DIFFERENCE": "-27.785396",
+    "TOLERANCE": "0.003396",
+    "UNRESOLVED": "11.893"
+   },
+   "difference": "6.16584",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "187.83416"
+   },
+   "engine_valued": "187.83416",
+   "freelancer_total": "194",
+   "held_count": 1,
+   "reference_kind": "FREELANCER",
+   "reference_total": "194",
+   "sections": [
+    "T-541/upturn"
+   ],
+   "trade": "B8 roof waterproofing",
+   "unit": "lm"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-5.54644",
+    "ENGINE_WRONG": "0",
+    "HELD": "34.390242",
+    "RULE_DIFFERENCE": "45.992784",
+    "TOLERANCE": "-0.018026",
+    "UNRESOLVED": "0.523"
+   },
+   "difference": "75.34156",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "209.65844"
+   },
+   "engine_valued": "209.65844",
+   "freelancer_total": "285",
+   "held_count": 1,
+   "reference_kind": "FREELANCER",
+   "reference_total": "285",
+   "sections": [
+    "T-541/membrane"
+   ],
+   "trade": "B8 roof waterproofing",
+   "unit": "m2"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-0.5183",
+    "ENGINE_WRONG": "0",
+    "HELD": "13.9",
+    "RULE_DIFFERENCE": "3.556",
+    "TOLERANCE": "-0.000625",
+    "UNRESOLVED": "1.6"
+   },
+   "difference": "18.537075",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "126.072925"
+   },
+   "engine_valued": "126.072925",
+   "freelancer_total": "144.61",
+   "held_count": 15,
+   "reference_kind": "FREELANCER",
+   "reference_total": "144.61",
+   "sections": [
+    "T-546/upturn"
+   ],
+   "trade": "B8 wet-room waterproofing",
+   "unit": "lm"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "-0.307294",
+    "ENGINE_WRONG": "0",
+    "HELD": "0",
+    "RULE_DIFFERENCE": "-13.235",
+    "TOLERANCE": "-0.023416",
+    "UNRESOLVED": "0"
+   },
+   "difference": "-13.56571",
+   "engine_bounded": {
+    "high": "85.57571",
+    "high_open": false,
+    "low_at_least": "85.57571"
+   },
+   "engine_valued": "85.57571",
+   "freelancer_total": "72.01",
+   "held_count": 0,
+   "reference_kind": "FREELANCER",
+   "reference_total": "72.01",
+   "sections": [
+    "T-546/floor"
+   ],
+   "trade": "B8 wet-room waterproofing",
+   "unit": "m2"
+  },
+  {
+   "by_class": {
+    "ENGINE_RIGHT": "41.05128",
+    "ENGINE_WRONG": "0",
+    "HELD": "582.807578",
+    "RULE_DIFFERENCE": "69.625508",
+    "TOLERANCE": "-2.0193005",
+    "UNRESOLVED": "101.4319345"
+   },
+   "difference": "792.897",
+   "engine_bounded": {
+    "high": null,
+    "high_open": true,
+    "low_at_least": "467.7925"
+   },
+   "engine_valued": "467.7925",
+   "freelancer_total": "1260.6895",
+   "held_count": 19,
+   "reference_kind": "FREELANCER",
+   "reference_total": "1260.6895",
+   "sections": [
+    "T-543/blockwork"
+   ],
+   "trade": "B9 blockwork",
+   "unit": "m2"
+  }
+ ]
+}
