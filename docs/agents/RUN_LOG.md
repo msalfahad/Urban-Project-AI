@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-11-09T06:53Z | Verifier | STARTED | run session_01E6cPnfaQVBSGAA4gCUC7y | repo-attached routine | task state: READY T-647 r2 (W1 30d8a19e), T-649 (W3 5cf4ae3e), T-648 (W2 c4d37ec8) | self-check pending
 - 2026-11-09 06:42 UTC | Worker 2 | STARTED | run session_01E6cPnezLwZiiw89C3J26fj | repo-attached routine | task state: none yet | self-check pending
 - 2026-11-09T05:56Z | Verifier | SUCCESS | T-498 MERGED 4c37ce2c (Gate B PASS, owner order step 2) | Own Drive chain V3_0_58 c9570e6c -> V3_0_59 75331a76 reproduced: 4,999 byte-identical + 74 B9 material lines; L4 to the end on d037e3fb 21,714 pass / 2 F = t374 baseline pair; all 9 valued lines re-added by hand (units 1,075.80 pcs, mortar 1.269444 m3 PROV, glue 43.596 kg + 842.06025..861.32025 kg) and lintel faces re-derived from ST p.13 AGREE; F-C-T498-1: 0.15 m black units/mortar (178.571 m2 hosts) still HELD 'module not stated' though Q-80 answered: FR-T615 rows must value them next. V3.0.59 NOT RELEASED; V2.9 + route G unchanged; scoreboard script not re-run (note); no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-11-09T05:50Z | Verifier | INCOMPLETE | none (overlap guard: run session_01E6cPnassQVBSGAA4gCUC7y active since 2026-11-09T04:53Z, no final line) | no check, no merge, no quantity change | self-check not run; problem: 'AGENT_ENV FAIL: run lock NOLOCK: a SUCCESS final line is refused; write the final line INCOMPLETE (lock NOLOCK) and end'
