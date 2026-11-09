@@ -83,7 +83,16 @@ research/agents_t314/v3060_apply.py` on that V3_0_59: **V3_0_60 c57a0a42, 5,088 
 (outside_rows_sha256 6e49b30b) + 3 CHANGED (the three storey lines, ids kept) + 15 ADDED + 0 removed**; every V3.0.10 ..
 V3.0.59 family check re-run on the result (A3059.integrate) passes; totals move only in FIN.EXT.FINISH|m2:
 'HELD (3 blank lines)' -> 'AT_LEAST 152.005 + HELD (14 lines: 13 bounded, 1 blank)'; 126 face rows, 38 holes, each once
-(check_faces). Per-line summary: out/summary_t314.json (ids, keys, states, quantities only).
+(check_faces). Per-line summary: out/summary_t314.json (ids, keys, states, quantities only). **Hub path** (`run
+research/agents_t314/v3060_run.py`, one hub call `--method ARCH_TAKEOFF_V3.0.60 --v3060-inputs`, every earlier wrapper
+and assert unchanged): V3_0_59 75331a76 -> **V3_0_60 c57a0a42**, the same file byte for byte as the apply path.
+
+Validation on 97725aae: tests/t314_facade_faces 15 pass; L3 set (t498, t507, t310, t131, t512, t485, t525): 6 red,
+all registry: 5 x 'the head carries engine/source/arch_v3060.py, newer than the registry's candidate' (as_of class,
+section 6) and t485 'T-498 still pending in the newest registry', which is RED ON THE WORKING BRANCH 4c37ce2c TOO
+(T-498 merged while BOQ_FAMILY_MASTER 1.58.0 lists it pending: a promotion gate fix, the T-525 precedent). L4 started
+and stopped at 10 % (2 cores shared with the chain; no failure up to there): to be run to the end on the r2 head.
+freeze 0, codemap stale none.
 
 ## 4a. Against the freelancer (T-567 bridge, merged; no new reading)
 
