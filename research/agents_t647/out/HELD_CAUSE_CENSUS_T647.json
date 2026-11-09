@@ -4,15 +4,203 @@
   "B10 FIX_ROW": 5,
   "B10 OWNER_DECISION": 4,
   "B11 DESIGNER_ITEM": 79,
-  "B11 FIX_ROW": 17,
-  "B11 PRINTED_VALUE_GAP": 42,
+  "B11 PRINTED_VALUE_GAP": 59,
   "B9 DEPENDENCY": 19,
   "B9 DESIGNER_ITEM": 7,
   "B9 PRINTED_VALUE_GAP": 6
  },
+ "count_convention_gaps": [
+  {
+   "bars_A": 18,
+   "bars_B": 19,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 15,
+   "edge_beam_ends_B": 15,
+   "element_id": "HL:SLAB_STEEL:SLAB:2F-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.481481",
+   "kg_B": "1.481481",
+   "line_id": "L-10830d7336f146563db7"
+  },
+  {
+   "bars_A": 18,
+   "bars_B": 19,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 17,
+   "edge_beam_ends_B": 17,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "4.827160",
+   "kg_B": "4.827160",
+   "line_id": "L-1fb436177adcab39b889"
+  },
+  {
+   "bars_A": 18,
+   "bars_B": 19,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 18,
+   "edge_beam_ends_B": 18,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-176:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "2.888889",
+   "kg_B": "2.888889",
+   "line_id": "L-2a6409765e31bc8e5067"
+  },
+  {
+   "bars_A": 22,
+   "bars_B": 23,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 11,
+   "edge_beam_ends_B": 11,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.086420",
+   "kg_B": "1.086420",
+   "line_id": "L-3dc3bd6711a18aa509f6"
+  },
+  {
+   "bars_A": 24,
+   "bars_B": 25,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 23,
+   "edge_beam_ends_B": 23,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-135:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "2.271605",
+   "kg_B": "2.271605",
+   "line_id": "L-41632c5ca115d9f1c6c8"
+  },
+  {
+   "bars_A": 12,
+   "bars_B": 13,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 11,
+   "edge_beam_ends_B": 11,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-086:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.765432",
+   "kg_B": "1.765432",
+   "line_id": "L-4daaaf798e7565c5e51c"
+  },
+  {
+   "bars_A": 15,
+   "bars_B": 16,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 10,
+   "edge_beam_ends_B": 10,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-172:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.604938",
+   "kg_B": "1.604938",
+   "line_id": "L-58e6656eec7e335e0d34"
+  },
+  {
+   "bars_A": 15,
+   "bars_B": 16,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 14,
+   "edge_beam_ends_B": 14,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-018:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.382716",
+   "kg_B": "1.382716",
+   "line_id": "L-6278bd88cd9fb0427185"
+  },
+  {
+   "bars_A": 12,
+   "bars_B": 13,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 10,
+   "edge_beam_ends_B": 10,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.604938",
+   "kg_B": "1.604938",
+   "line_id": "L-69649b0dc191e246b065"
+  },
+  {
+   "bars_A": 31,
+   "bars_B": 32,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 31,
+   "edge_beam_ends_B": 31,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-025:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "4.018519",
+   "kg_B": "4.018519",
+   "line_id": "L-803f01f36279b090c559"
+  },
+  {
+   "bars_A": 15,
+   "bars_B": 16,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 14,
+   "edge_beam_ends_B": 14,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-027:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.382716",
+   "kg_B": "1.382716",
+   "line_id": "L-9436e97d80c812e80680"
+  },
+  {
+   "bars_A": 35,
+   "bars_B": 36,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 28,
+   "edge_beam_ends_B": 28,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-124:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "7.950617",
+   "kg_B": "7.950617",
+   "line_id": "L-a257a6eaf8f711da24ad"
+  },
+  {
+   "bars_A": 10,
+   "bars_B": 11,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 8,
+   "edge_beam_ends_B": 8,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.037037",
+   "kg_B": "1.037037",
+   "line_id": "L-b02b44864adb25c57e6d"
+  },
+  {
+   "bars_A": 30,
+   "bars_B": 31,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 12,
+   "edge_beam_ends_B": 12,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "3.777778",
+   "kg_B": "3.777778",
+   "line_id": "L-bf020f67de170b6acac2"
+  },
+  {
+   "bars_A": 18,
+   "bars_B": 19,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 15,
+   "edge_beam_ends_B": 15,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-023:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "1.481481",
+   "kg_B": "1.481481",
+   "line_id": "L-d538bfb721dae421cfa4"
+  },
+  {
+   "bars_A": 31,
+   "bars_B": 32,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 31,
+   "edge_beam_ends_B": 31,
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-084:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "4.975309",
+   "kg_B": "4.975309",
+   "line_id": "L-db3c3412074d0a8fdda1"
+  },
+  {
+   "bars_A": 45,
+   "bars_B": 46,
+   "degenerate_bound": true,
+   "edge_beam_ends_A": 42,
+   "edge_beam_ends_B": 42,
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-134:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "kg_A": "8.037037",
+   "kg_B": "8.037037",
+   "line_id": "L-e16871cb1073e4592478"
+  }
+ ],
  "fix_row_effect_if_wired": {
   "b10_m3_released_if_wired": "0 (5 CN lines NOT_APPLICABLE: no member, not a value)",
-  "b11_kg_released_if_wired": "51.574073",
+  "b11_kg_released_if_wired": "0 (r2: no B11 fix row; the 17 degenerate-bound lines stay HELD on the count convention)",
   "census_without_fix_lines": {
    "B10 m3": {
     "bounded_high": "0",
@@ -21,10 +209,10 @@
     "held_bounded": 0
    },
    "B11 kg": {
-    "bounded_high": "1577.836",
-    "bounded_low": "650.384",
+    "bounded_high": "1629.410",
+    "bounded_low": "701.958",
     "held_blank": 0,
-    "held_bounded": 121
+    "held_bounded": 138
    },
    "B9 kg": {
     "bounded_high": "0",
@@ -51,183 +239,14 @@
     "held_bounded": 0
    }
   },
-  "lines_leaving_held": 22
+  "lines_leaving_held": 5
  },
  "fix_rows": [
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "15 edge-beam ends x (w - 0.040) summed = 2.400 m x 10^2/162 = 1.481481 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-6",
-   "kg": "1.481481",
-   "line_id": "L-10830d7336f146563db7",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.481481 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "17 edge-beam ends x (w - 0.040) summed = 7.820 m x 10^2/162 = 4.827160 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-7",
-   "kg": "4.827160",
-   "line_id": "L-1fb436177adcab39b889",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 4.827160 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "18 edge-beam ends x (w - 0.040) summed = 4.680 m x 10^2/162 = 2.888889 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-8",
-   "kg": "2.888889",
-   "line_id": "L-2a6409765e31bc8e5067",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 2.888889 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "11 edge-beam ends x (w - 0.040) summed = 1.760 m x 10^2/162 = 1.086420 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-9",
-   "kg": "1.086420",
-   "line_id": "L-3dc3bd6711a18aa509f6",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.086420 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "23 edge-beam ends x (w - 0.040) summed = 3.680 m x 10^2/162 = 2.271605 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-10",
-   "kg": "2.271605",
-   "line_id": "L-41632c5ca115d9f1c6c8",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 2.271605 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "11 edge-beam ends x (w - 0.040) summed = 2.860 m x 10^2/162 = 1.765432 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-11",
-   "kg": "1.765432",
-   "line_id": "L-4daaaf798e7565c5e51c",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.765432 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "10 edge-beam ends x (w - 0.040) summed = 2.600 m x 10^2/162 = 1.604938 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-12",
-   "kg": "1.604938",
-   "line_id": "L-58e6656eec7e335e0d34",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.604938 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "14 edge-beam ends x (w - 0.040) summed = 2.240 m x 10^2/162 = 1.382716 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-13",
-   "kg": "1.382716",
-   "line_id": "L-6278bd88cd9fb0427185",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.382716 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "10 edge-beam ends x (w - 0.040) summed = 2.600 m x 10^2/162 = 1.604938 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-14",
-   "kg": "1.604938",
-   "line_id": "L-69649b0dc191e246b065",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.604938 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "31 edge-beam ends x (w - 0.040) summed = 6.510 m x 10^2/162 = 4.018519 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-15",
-   "kg": "4.018519",
-   "line_id": "L-803f01f36279b090c559",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 4.018519 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "14 edge-beam ends x (w - 0.040) summed = 2.240 m x 10^2/162 = 1.382716 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-16",
-   "kg": "1.382716",
-   "line_id": "L-9436e97d80c812e80680",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.382716 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "28 edge-beam ends x (w - 0.040) summed = 12.880 m x 10^2/162 = 7.950617 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-17",
-   "kg": "7.950617",
-   "line_id": "L-a257a6eaf8f711da24ad",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 7.950617 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "8 edge-beam ends x (w - 0.040) summed = 1.680 m x 10^2/162 = 1.037037 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-18",
-   "kg": "1.037037",
-   "line_id": "L-b02b44864adb25c57e6d",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.037037 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "12 edge-beam ends x (w - 0.040) summed = 6.120 m x 10^2/162 = 3.777778 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-19",
-   "kg": "3.777778",
-   "line_id": "L-bf020f67de170b6acac2",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 3.777778 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "15 edge-beam ends x (w - 0.040) summed = 2.400 m x 10^2/162 = 1.481481 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-20",
-   "kg": "1.481481",
-   "line_id": "L-d538bfb721dae421cfa4",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 1.481481 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "31 edge-beam ends x (w - 0.040) summed = 8.060 m x 10^2/162 = 4.975309 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-21",
-   "kg": "4.975309",
-   "line_id": "L-db3c3412074d0a8fdda1",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 4.975309 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
-  {
-   "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-   "hand_calculation": "42 edge-beam ends x (w - 0.040) summed = 13.020 m x 10^2/162 = 8.037037 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-   "id": "FR-T647-22",
-   "kg": "8.037037",
-   "line_id": "L-e16871cb1073e4592478",
-   "proposed_state": "DRAWING-CONFIRMED measured_net 8.037037 kg (one value, no range)",
-   "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-   "wired": false
-  },
   {
    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
    "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
    "id": "FR-T647-1",
+   "inputs_printed": true,
    "line_id": "L-0d4cd54cb397f210d1fd",
    "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
@@ -237,6 +256,7 @@
    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
    "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
    "id": "FR-T647-2",
+   "inputs_printed": true,
    "line_id": "L-1850e27801a200419510",
    "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
@@ -246,6 +266,7 @@
    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
    "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
    "id": "FR-T647-3",
+   "inputs_printed": true,
    "line_id": "L-53a35abf19b1d8807f38",
    "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
@@ -255,6 +276,7 @@
    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
    "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
    "id": "FR-T647-4",
+   "inputs_printed": true,
    "line_id": "L-d33f749864d96dd236f0",
    "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
@@ -264,6 +286,7 @@
    "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
    "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
    "id": "FR-T647-5",
+   "inputs_printed": true,
    "line_id": "L-de9383f76f000503e1d7",
    "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
    "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
@@ -351,7 +374,7 @@
  "pinned_sources": {
   "research/agents_t075/T-075_SCHEDULE_TEXT_ROWS.md": "018dfb451a3a0d32ebb25094b2a3dae6be39065903094c3ba6485c372bee88c7",
   "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md": "82047bc424ad4e737389dfa0a48e24ccdb62c70cd827cd9a84337363f4258c66",
-  "research/agents_t307/BAR_END_DETAIL_T307.csv": "979fd749c3add6888e2ca748299cca6699c84d55bae7d5bab096a467c06b77e9",
+  "research/agents_t307/BAR_END_CENSUS_T307.csv": "47a387e413ecb7d764fa8583d8abffdc6a3c2fce9b4f5c605c4cec1143543c10",
   "research/agents_t307/LANE_I_CONSUMER_T307.csv": "bd8eb5ef12dbef873feb2564e78cc80e0b4e0e26b525b86a42ff17b98d839d6c",
   "research/agents_t307/T-307_SLAB_BAR_ENDS.md": "a6929a93de7f11d0f07cda31ff4847119006e3a45727dada7e8af77b442fc03d",
   "research/agents_t316/TOP_LINE_LEDGER_T316.csv": "5dee5cdc16e6af11c5b2700821ad423bfa2d751d56dd206b9dd9a83a0a0efee5",
@@ -383,6 +406,7 @@
    "fix_row": {
     "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
     "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "inputs_printed": true,
     "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
     "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
     "wired": false
@@ -422,6 +446,7 @@
    "fix_row": {
     "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
     "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "inputs_printed": true,
     "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
     "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
     "wired": false
@@ -461,6 +486,7 @@
    "fix_row": {
     "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
     "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "inputs_printed": true,
     "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
     "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
     "wired": false
@@ -500,6 +526,7 @@
    "fix_row": {
     "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
     "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "inputs_printed": true,
     "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
     "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
     "wired": false
@@ -539,6 +566,7 @@
    "fix_row": {
     "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
     "hand_calculation": "storeys printed for CN above the neck = 0 (GF, 1F, 2F struck) -> CN column concrete above GF = 0 storeys x 0.30 x 0.30 m: no column, no line (an absence printed on the schedule, not a missing value)",
+    "inputs_printed": true,
     "proposed_state": "NOT_APPLICABLE_WITH_EVIDENCE",
     "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; freelancer also 0 CN columns)",
     "wired": false
@@ -3780,941 +3808,6 @@
   },
   {
    "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-3f293afa65b8304cd35f"
-   ],
-   "bound_kg": {
-    "high": "1.481",
-    "low": "1.481"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:2F-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "15 edge-beam ends x (w - 0.040) summed = 2.400 m x 10^2/162 = 1.481481 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.481481",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.481481 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "15",
-     "kg": "1.481481481481481481481481481",
-     "sum_len_m": "2.400"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "15",
-     "kg": "1.481481481481481481481481481",
-     "sum_len_m": "2.400"
-    }
-   },
-   "held_high": 1.481,
-   "held_low": 1.481,
-   "item_code": "STR.REBAR",
-   "line_id": "L-10830d7336f146563db7",
-   "measured_net": null,
-   "parent_line_id": "L-3f293afa65b8304cd35f",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-6",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-3f293afa65b8304cd35f"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-7531297b7ae180618bef"
-   ],
-   "bound_kg": {
-    "high": "4.827",
-    "low": "4.827"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "17 edge-beam ends x (w - 0.040) summed = 7.820 m x 10^2/162 = 4.827160 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "4.827160",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 4.827160 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "17",
-     "kg": "4.827160493827160493827160494",
-     "sum_len_m": "7.820"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "17",
-     "kg": "4.827160493827160493827160494",
-     "sum_len_m": "7.820"
-    }
-   },
-   "held_high": 4.827,
-   "held_low": 4.827,
-   "item_code": "STR.REBAR",
-   "line_id": "L-1fb436177adcab39b889",
-   "measured_net": null,
-   "parent_line_id": "L-7531297b7ae180618bef",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-7",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-7531297b7ae180618bef"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-6716c2bcb3d4346884e5"
-   ],
-   "bound_kg": {
-    "high": "2.889",
-    "low": "2.889"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-176:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "18 edge-beam ends x (w - 0.040) summed = 4.680 m x 10^2/162 = 2.888889 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "2.888889",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 2.888889 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "18",
-     "kg": "2.888888888888888888888888889",
-     "sum_len_m": "4.680"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "18",
-     "kg": "2.888888888888888888888888889",
-     "sum_len_m": "4.680"
-    }
-   },
-   "held_high": 2.889,
-   "held_low": 2.889,
-   "item_code": "STR.REBAR",
-   "line_id": "L-2a6409765e31bc8e5067",
-   "measured_net": null,
-   "parent_line_id": "L-6716c2bcb3d4346884e5",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-8",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-6716c2bcb3d4346884e5"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-875c33c4bef7ae29e0a7"
-   ],
-   "bound_kg": {
-    "high": "1.086",
-    "low": "1.086"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "11 edge-beam ends x (w - 0.040) summed = 1.760 m x 10^2/162 = 1.086420 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.086420",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.086420 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "11",
-     "kg": "1.086419753086419753086419753",
-     "sum_len_m": "1.760"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "11",
-     "kg": "1.086419753086419753086419753",
-     "sum_len_m": "1.760"
-    }
-   },
-   "held_high": 1.086,
-   "held_low": 1.086,
-   "item_code": "STR.REBAR",
-   "line_id": "L-3dc3bd6711a18aa509f6",
-   "measured_net": null,
-   "parent_line_id": "L-875c33c4bef7ae29e0a7",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-9",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-875c33c4bef7ae29e0a7"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-c2313ad5d3cf3a0e7e95"
-   ],
-   "bound_kg": {
-    "high": "2.272",
-    "low": "2.272"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-135:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "23 edge-beam ends x (w - 0.040) summed = 3.680 m x 10^2/162 = 2.271605 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "2.271605",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 2.271605 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "23",
-     "kg": "2.271604938271604938271604938",
-     "sum_len_m": "3.680"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "23",
-     "kg": "2.271604938271604938271604938",
-     "sum_len_m": "3.680"
-    }
-   },
-   "held_high": 2.272,
-   "held_low": 2.272,
-   "item_code": "STR.REBAR",
-   "line_id": "L-41632c5ca115d9f1c6c8",
-   "measured_net": null,
-   "parent_line_id": "L-c2313ad5d3cf3a0e7e95",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-10",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-c2313ad5d3cf3a0e7e95"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-5d85fbe832fe3b5a8cab"
-   ],
-   "bound_kg": {
-    "high": "1.765",
-    "low": "1.765"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-086:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "11 edge-beam ends x (w - 0.040) summed = 2.860 m x 10^2/162 = 1.765432 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.765432",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.765432 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "11",
-     "kg": "1.765432098765432098765432099",
-     "sum_len_m": "2.860"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "11",
-     "kg": "1.765432098765432098765432099",
-     "sum_len_m": "2.860"
-    }
-   },
-   "held_high": 1.765,
-   "held_low": 1.765,
-   "item_code": "STR.REBAR",
-   "line_id": "L-4daaaf798e7565c5e51c",
-   "measured_net": null,
-   "parent_line_id": "L-5d85fbe832fe3b5a8cab",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-11",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-5d85fbe832fe3b5a8cab"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-73cc5305f8d9f3e87a28"
-   ],
-   "bound_kg": {
-    "high": "1.605",
-    "low": "1.605"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-172:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "10 edge-beam ends x (w - 0.040) summed = 2.600 m x 10^2/162 = 1.604938 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.604938",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.604938 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "10",
-     "kg": "1.604938271604938271604938272",
-     "sum_len_m": "2.600"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "10",
-     "kg": "1.604938271604938271604938272",
-     "sum_len_m": "2.600"
-    }
-   },
-   "held_high": 1.605,
-   "held_low": 1.605,
-   "item_code": "STR.REBAR",
-   "line_id": "L-58e6656eec7e335e0d34",
-   "measured_net": null,
-   "parent_line_id": "L-73cc5305f8d9f3e87a28",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-12",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-73cc5305f8d9f3e87a28"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-ecc20f4f4f06456add23"
-   ],
-   "bound_kg": {
-    "high": "1.383",
-    "low": "1.383"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-018:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "14 edge-beam ends x (w - 0.040) summed = 2.240 m x 10^2/162 = 1.382716 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.382716",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.382716 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "14",
-     "kg": "1.382716049382716049382716049",
-     "sum_len_m": "2.240"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "14",
-     "kg": "1.382716049382716049382716049",
-     "sum_len_m": "2.240"
-    }
-   },
-   "held_high": 1.383,
-   "held_low": 1.383,
-   "item_code": "STR.REBAR",
-   "line_id": "L-6278bd88cd9fb0427185",
-   "measured_net": null,
-   "parent_line_id": "L-ecc20f4f4f06456add23",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-13",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-ecc20f4f4f06456add23"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-03197ecd61fa42f5211d"
-   ],
-   "bound_kg": {
-    "high": "1.605",
-    "low": "1.605"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "10 edge-beam ends x (w - 0.040) summed = 2.600 m x 10^2/162 = 1.604938 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.604938",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.604938 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "10",
-     "kg": "1.604938271604938271604938272",
-     "sum_len_m": "2.600"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "10",
-     "kg": "1.604938271604938271604938272",
-     "sum_len_m": "2.600"
-    }
-   },
-   "held_high": 1.605,
-   "held_low": 1.605,
-   "item_code": "STR.REBAR",
-   "line_id": "L-69649b0dc191e246b065",
-   "measured_net": null,
-   "parent_line_id": "L-03197ecd61fa42f5211d",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-14",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-03197ecd61fa42f5211d"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-9d89418a35192f5715aa"
-   ],
-   "bound_kg": {
-    "high": "4.019",
-    "low": "4.019"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-025:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "31 edge-beam ends x (w - 0.040) summed = 6.510 m x 10^2/162 = 4.018519 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "4.018519",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 4.018519 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "31",
-     "kg": "4.018518518518518518518518519",
-     "sum_len_m": "6.510"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "31",
-     "kg": "4.018518518518518518518518519",
-     "sum_len_m": "6.510"
-    }
-   },
-   "held_high": 4.019,
-   "held_low": 4.019,
-   "item_code": "STR.REBAR",
-   "line_id": "L-803f01f36279b090c559",
-   "measured_net": null,
-   "parent_line_id": "L-9d89418a35192f5715aa",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-15",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-9d89418a35192f5715aa"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-80c34ce85488dc35b39a"
-   ],
-   "bound_kg": {
-    "high": "1.383",
-    "low": "1.383"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-027:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "14 edge-beam ends x (w - 0.040) summed = 2.240 m x 10^2/162 = 1.382716 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.382716",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.382716 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "14",
-     "kg": "1.382716049382716049382716049",
-     "sum_len_m": "2.240"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "14",
-     "kg": "1.382716049382716049382716049",
-     "sum_len_m": "2.240"
-    }
-   },
-   "held_high": 1.383,
-   "held_low": 1.383,
-   "item_code": "STR.REBAR",
-   "line_id": "L-9436e97d80c812e80680",
-   "measured_net": null,
-   "parent_line_id": "L-80c34ce85488dc35b39a",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-16",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-80c34ce85488dc35b39a"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-54bc5b06dd14584e55fb"
-   ],
-   "bound_kg": {
-    "high": "7.951",
-    "low": "7.951"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-124:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "28 edge-beam ends x (w - 0.040) summed = 12.880 m x 10^2/162 = 7.950617 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "7.950617",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 7.950617 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "28",
-     "kg": "7.950617283950617283950617284",
-     "sum_len_m": "12.880"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "28",
-     "kg": "7.950617283950617283950617284",
-     "sum_len_m": "12.880"
-    }
-   },
-   "held_high": 7.951,
-   "held_low": 7.951,
-   "item_code": "STR.REBAR",
-   "line_id": "L-a257a6eaf8f711da24ad",
-   "measured_net": null,
-   "parent_line_id": "L-54bc5b06dd14584e55fb",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-17",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-54bc5b06dd14584e55fb"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-17b5d850aeed0132c7c0"
-   ],
-   "bound_kg": {
-    "high": "1.037",
-    "low": "1.037"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "8 edge-beam ends x (w - 0.040) summed = 1.680 m x 10^2/162 = 1.037037 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.037037",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.037037 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "8",
-     "kg": "1.037037037037037037037037037",
-     "sum_len_m": "1.680"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "8",
-     "kg": "1.037037037037037037037037037",
-     "sum_len_m": "1.680"
-    }
-   },
-   "held_high": 1.037,
-   "held_low": 1.037,
-   "item_code": "STR.REBAR",
-   "line_id": "L-b02b44864adb25c57e6d",
-   "measured_net": null,
-   "parent_line_id": "L-17b5d850aeed0132c7c0",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-18",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-17b5d850aeed0132c7c0"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-98fc154ddae4d3d0be80"
-   ],
-   "bound_kg": {
-    "high": "3.778",
-    "low": "3.778"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "12 edge-beam ends x (w - 0.040) summed = 6.120 m x 10^2/162 = 3.777778 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "3.777778",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 3.777778 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "12",
-     "kg": "3.777777777777777777777777778",
-     "sum_len_m": "6.120"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "12",
-     "kg": "3.777777777777777777777777778",
-     "sum_len_m": "6.120"
-    }
-   },
-   "held_high": 3.778,
-   "held_low": 3.778,
-   "item_code": "STR.REBAR",
-   "line_id": "L-bf020f67de170b6acac2",
-   "measured_net": null,
-   "parent_line_id": "L-98fc154ddae4d3d0be80",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-19",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-98fc154ddae4d3d0be80"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-162a87cb17bfcacdbf1b"
-   ],
-   "bound_kg": {
-    "high": "1.481",
-    "low": "1.481"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-023:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "15 edge-beam ends x (w - 0.040) summed = 2.400 m x 10^2/162 = 1.481481 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "1.481481",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 1.481481 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "15",
-     "kg": "1.481481481481481481481481481",
-     "sum_len_m": "2.400"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "15",
-     "kg": "1.481481481481481481481481481",
-     "sum_len_m": "2.400"
-    }
-   },
-   "held_high": 1.481,
-   "held_low": 1.481,
-   "item_code": "STR.REBAR",
-   "line_id": "L-d538bfb721dae421cfa4",
-   "measured_net": null,
-   "parent_line_id": "L-162a87cb17bfcacdbf1b",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-20",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-162a87cb17bfcacdbf1b"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-b28f219ac313453a5a59"
-   ],
-   "bound_kg": {
-    "high": "4.975",
-    "low": "4.975"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:1F-084:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "31 edge-beam ends x (w - 0.040) summed = 8.060 m x 10^2/162 = 4.975309 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "4.975309",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 4.975309 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "31",
-     "kg": "4.975308641975308641975308642",
-     "sum_len_m": "8.060"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "31",
-     "kg": "4.975308641975308641975308642",
-     "sum_len_m": "8.060"
-    }
-   },
-   "held_high": 4.975,
-   "held_low": 4.975,
-   "item_code": "STR.REBAR",
-   "line_id": "L-db3c3412074d0a8fdda1",
-   "measured_net": null,
-   "parent_line_id": "L-b28f219ac313453a5a59",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-21",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-b28f219ac313453a5a59"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
-    "up-turn legs and undrawn ends stay BLANK on the parent L-6ccbfa133d500e80fdf9"
-   ],
-   "bound_kg": {
-    "high": "8.037",
-    "low": "8.037"
-   },
-   "cause": "degenerate bound: count A and count B give the same edge-beam ends, so the valued part is determinate; HELD only because every T-318 part line is booked BOUNDED_EXPOSURE (no record holds it on an open input)",
-   "cause_class": "FIX_ROW",
-   "element_id": "HL:SLAB_STEEL:SLAB:GF-134:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
-   "family": "B11-01",
-   "fix_row": {
-    "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by end here; count identical under both readings",
-    "hand_calculation": "42 edge-beam ends x (w - 0.040) summed = 13.020 m x 10^2/162 = 8.037037 kg (A = B; ST p.15 '40 CL.', widths drawn)",
-    "kg": "8.037037",
-    "proposed_state": "DRAWING-CONFIRMED measured_net 8.037037 kg (one value, no range)",
-    "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking artefact (release once wired)",
-    "wired": false
-   },
-   "group": "B11",
-   "hand_calculation": {
-    "A": {
-     "d_mm": "10",
-     "ends": "42",
-     "kg": "8.037037037037037037037037037",
-     "sum_len_m": "13.020"
-    },
-    "B": {
-     "d_mm": "10",
-     "ends": "42",
-     "kg": "8.037037037037037037037037037",
-     "sum_len_m": "13.020"
-    }
-   },
-   "held_high": 8.037,
-   "held_low": 8.037,
-   "item_code": "STR.REBAR",
-   "line_id": "L-e16871cb1073e4592478",
-   "measured_net": null,
-   "parent_line_id": "L-6ccbfa133d500e80fdf9",
-   "population": "DEVELOPMENT",
-   "ref": "FR-T647-22",
-   "sources": [
-    {
-     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
-     "read_on": "DRAWING-CONFIRMED (BOUND): the 59 development parts"
-    },
-    {
-     "file": "research/agents_t307/BAR_END_DETAIL_T307.csv",
-     "read_on": "L-6ccbfa133d500e80fdf9"
-    }
-   ],
-   "unit": "kg"
-  },
-  {
-   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-dd80e3566fe4a8bb1eb8 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -4728,12 +3821,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "18",
      "kg": "2.055555555555555555555555556",
      "sum_len_m": "3.330"
     },
     "B": {
+     "bars": "10",
      "d_mm": "10",
      "ends": "20",
      "kg": "2.283950617283950617283950617",
@@ -4775,12 +3870,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "17",
      "d_mm": "10",
      "ends": "16",
      "kg": "3.185185185185185185185185185",
      "sum_len_m": "5.160"
     },
     "B": {
+     "bars": "18",
      "d_mm": "10",
      "ends": "17",
      "kg": "3.283950617283950617283950617",
@@ -4809,6 +3906,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-3f293afa65b8304cd35f",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.481",
+    "low": "1.481"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:2F-016 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 18 or A + 1 = 19 (not printed); both readings put 15 ends on the edge beam (1.481481 kg at A, 1.481481 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.481 .. 1.481 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 18,
+    "bars_B": 19,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 15,
+    "edge_beam_ends_B": 15,
+    "kg_A": "1.481481",
+    "kg_B": "1.481481"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:2F-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "18",
+     "d_mm": "10",
+     "ends": "15",
+     "kg": "1.481481481481481481481481481",
+     "sum_len_m": "2.400"
+    },
+    "B": {
+     "bars": "19",
+     "d_mm": "10",
+     "ends": "15",
+     "kg": "1.481481481481481481481481481",
+     "sum_len_m": "2.400"
+    }
+   },
+   "held_high": 1.481,
+   "held_low": 1.481,
+   "item_code": "STR.REBAR",
+   "line_id": "L-10830d7336f146563db7",
+   "measured_net": null,
+   "parent_line_id": "L-3f293afa65b8304cd35f",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-3f293afa65b8304cd35f"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-aee8966b7f84038d60b7 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -4822,12 +3986,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "6",
      "kg": "0.7777777777777777777777777778",
      "sum_len_m": "1.260"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "7",
      "kg": "0.9074074074074074074074074074",
@@ -4869,12 +4035,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "23",
      "d_mm": "10",
      "ends": "15",
      "kg": "1.481481481481481481481481481",
      "sum_len_m": "2.400"
     },
     "B": {
+     "bars": "24",
      "d_mm": "10",
      "ends": "16",
      "kg": "1.580246913580246913580246914",
@@ -4916,12 +4084,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "18",
      "kg": "1.777777777777777777777777778",
      "sum_len_m": "2.880"
     },
     "B": {
+     "bars": "10",
      "d_mm": "10",
      "ends": "20",
      "kg": "1.975308641975308641975308642",
@@ -4963,12 +4133,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "23",
      "d_mm": "10",
      "ends": "21",
      "kg": "3.000",
      "sum_len_m": "4.860"
     },
     "B": {
+     "bars": "24",
      "d_mm": "10",
      "ends": "22",
      "kg": "3.098765432098765432098765432",
@@ -5010,12 +4182,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "15",
      "d_mm": "14",
      "ends": "15",
      "kg": "2.903703703703703703703703704",
      "sum_len_m": "2.400"
     },
     "B": {
+     "bars": "16",
      "d_mm": "14",
      "ends": "16",
      "kg": "3.097283950617283950617283951",
@@ -5057,12 +4231,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "18",
      "d_mm": "10",
      "ends": "18",
      "kg": "1.777777777777777777777777778",
      "sum_len_m": "2.880"
     },
     "B": {
+     "bars": "19",
      "d_mm": "10",
      "ends": "19",
      "kg": "1.876543209876543209876543210",
@@ -5091,6 +4267,140 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-7531297b7ae180618bef",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "4.827",
+    "low": "4.827"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-032 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 18 or A + 1 = 19 (not printed); both readings put 17 ends on the edge beam (4.827160 kg at A, 4.827160 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 4.827 .. 4.827 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 18,
+    "bars_B": 19,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 17,
+    "edge_beam_ends_B": 17,
+    "kg_A": "4.827160",
+    "kg_B": "4.827160"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "18",
+     "d_mm": "10",
+     "ends": "17",
+     "kg": "4.827160493827160493827160494",
+     "sum_len_m": "7.820"
+    },
+    "B": {
+     "bars": "19",
+     "d_mm": "10",
+     "ends": "17",
+     "kg": "4.827160493827160493827160494",
+     "sum_len_m": "7.820"
+    }
+   },
+   "held_high": 4.827,
+   "held_low": 4.827,
+   "item_code": "STR.REBAR",
+   "line_id": "L-1fb436177adcab39b889",
+   "measured_net": null,
+   "parent_line_id": "L-7531297b7ae180618bef",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-7531297b7ae180618bef"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-6716c2bcb3d4346884e5",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "2.889",
+    "low": "2.889"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-176 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 18 or A + 1 = 19 (not printed); both readings put 18 ends on the edge beam (2.888889 kg at A, 2.888889 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 2.889 .. 2.889 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 18,
+    "bars_B": 19,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 18,
+    "edge_beam_ends_B": 18,
+    "kg_A": "2.888889",
+    "kg_B": "2.888889"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-176:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "18",
+     "d_mm": "10",
+     "ends": "18",
+     "kg": "2.888888888888888888888888889",
+     "sum_len_m": "4.680"
+    },
+    "B": {
+     "bars": "19",
+     "d_mm": "10",
+     "ends": "18",
+     "kg": "2.888888888888888888888888889",
+     "sum_len_m": "4.680"
+    }
+   },
+   "held_high": 2.889,
+   "held_low": 2.889,
+   "item_code": "STR.REBAR",
+   "line_id": "L-2a6409765e31bc8e5067",
+   "measured_net": null,
+   "parent_line_id": "L-6716c2bcb3d4346884e5",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-6716c2bcb3d4346884e5"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-286e11cd584ff8acc86c (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5104,12 +4414,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "35",
      "d_mm": "10",
      "ends": "32",
      "kg": "3.160493827160493827160493827",
      "sum_len_m": "5.120"
     },
     "B": {
+     "bars": "36",
      "d_mm": "10",
      "ends": "33",
      "kg": "3.259259259259259259259259259",
@@ -5151,12 +4463,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "12",
      "d_mm": "10",
      "ends": "16",
      "kg": "1.580246913580246913580246914",
      "sum_len_m": "2.560"
     },
     "B": {
+     "bars": "13",
      "d_mm": "10",
      "ends": "17",
      "kg": "1.679012345679012345679012346",
@@ -5185,6 +4499,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-875c33c4bef7ae29e0a7",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.086",
+    "low": "1.086"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-032 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 22 or A + 1 = 23 (not printed); both readings put 11 ends on the edge beam (1.086420 kg at A, 1.086420 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.086 .. 1.086 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 22,
+    "bars_B": 23,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 11,
+    "edge_beam_ends_B": 11,
+    "kg_A": "1.086420",
+    "kg_B": "1.086420"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-032:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "22",
+     "d_mm": "10",
+     "ends": "11",
+     "kg": "1.086419753086419753086419753",
+     "sum_len_m": "1.760"
+    },
+    "B": {
+     "bars": "23",
+     "d_mm": "10",
+     "ends": "11",
+     "kg": "1.086419753086419753086419753",
+     "sum_len_m": "1.760"
+    }
+   },
+   "held_high": 1.086,
+   "held_low": 1.086,
+   "item_code": "STR.REBAR",
+   "line_id": "L-3dc3bd6711a18aa509f6",
+   "measured_net": null,
+   "parent_line_id": "L-875c33c4bef7ae29e0a7",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-875c33c4bef7ae29e0a7"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-fe6975723ee500261936 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5198,12 +4579,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "8",
      "d_mm": "10",
      "ends": "7",
      "kg": "0.6913580246913580246913580247",
      "sum_len_m": "1.120"
     },
     "B": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "8",
      "kg": "0.7901234567901234567901234568",
@@ -5245,12 +4628,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "9",
      "kg": "1.166666666666666666666666667",
      "sum_len_m": "1.890"
     },
     "B": {
+     "bars": "10",
      "d_mm": "10",
      "ends": "10",
      "kg": "1.296296296296296296296296296",
@@ -5279,6 +4664,140 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-c2313ad5d3cf3a0e7e95",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "2.272",
+    "low": "2.272"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-135 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 24 or A + 1 = 25 (not printed); both readings put 23 ends on the edge beam (2.271605 kg at A, 2.271605 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 2.272 .. 2.272 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 24,
+    "bars_B": 25,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 23,
+    "edge_beam_ends_B": 23,
+    "kg_A": "2.271605",
+    "kg_B": "2.271605"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-135:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "24",
+     "d_mm": "10",
+     "ends": "23",
+     "kg": "2.271604938271604938271604938",
+     "sum_len_m": "3.680"
+    },
+    "B": {
+     "bars": "25",
+     "d_mm": "10",
+     "ends": "23",
+     "kg": "2.271604938271604938271604938",
+     "sum_len_m": "3.680"
+    }
+   },
+   "held_high": 2.272,
+   "held_low": 2.272,
+   "item_code": "STR.REBAR",
+   "line_id": "L-41632c5ca115d9f1c6c8",
+   "measured_net": null,
+   "parent_line_id": "L-c2313ad5d3cf3a0e7e95",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-c2313ad5d3cf3a0e7e95"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-5d85fbe832fe3b5a8cab",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.765",
+    "low": "1.765"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-086 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 12 or A + 1 = 13 (not printed); both readings put 11 ends on the edge beam (1.765432 kg at A, 1.765432 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.765 .. 1.765 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 12,
+    "bars_B": 13,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 11,
+    "edge_beam_ends_B": 11,
+    "kg_A": "1.765432",
+    "kg_B": "1.765432"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-086:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "12",
+     "d_mm": "10",
+     "ends": "11",
+     "kg": "1.765432098765432098765432099",
+     "sum_len_m": "2.860"
+    },
+    "B": {
+     "bars": "13",
+     "d_mm": "10",
+     "ends": "11",
+     "kg": "1.765432098765432098765432099",
+     "sum_len_m": "2.860"
+    }
+   },
+   "held_high": 1.765,
+   "held_low": 1.765,
+   "item_code": "STR.REBAR",
+   "line_id": "L-4daaaf798e7565c5e51c",
+   "measured_net": null,
+   "parent_line_id": "L-5d85fbe832fe3b5a8cab",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-5d85fbe832fe3b5a8cab"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-5014d68a53dceedd00cb (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5292,12 +4811,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "22",
      "d_mm": "10",
      "ends": "28",
      "kg": "4.185185185185185185185185185",
      "sum_len_m": "6.780"
     },
     "B": {
+     "bars": "23",
      "d_mm": "10",
      "ends": "27",
      "kg": "4.055555555555555555555555556",
@@ -5339,12 +4860,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "11",
      "d_mm": "12",
      "ends": "11",
      "kg": "1.564444444444444444444444444",
      "sum_len_m": "1.760"
     },
     "B": {
+     "bars": "12",
      "d_mm": "12",
      "ends": "12",
      "kg": "1.706666666666666666666666667",
@@ -5373,6 +4896,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-73cc5305f8d9f3e87a28",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.605",
+    "low": "1.605"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-172 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 15 or A + 1 = 16 (not printed); both readings put 10 ends on the edge beam (1.604938 kg at A, 1.604938 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.605 .. 1.605 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 15,
+    "bars_B": 16,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 10,
+    "edge_beam_ends_B": 10,
+    "kg_A": "1.604938",
+    "kg_B": "1.604938"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-172:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "15",
+     "d_mm": "10",
+     "ends": "10",
+     "kg": "1.604938271604938271604938272",
+     "sum_len_m": "2.600"
+    },
+    "B": {
+     "bars": "16",
+     "d_mm": "10",
+     "ends": "10",
+     "kg": "1.604938271604938271604938272",
+     "sum_len_m": "2.600"
+    }
+   },
+   "held_high": 1.605,
+   "held_low": 1.605,
+   "item_code": "STR.REBAR",
+   "line_id": "L-58e6656eec7e335e0d34",
+   "measured_net": null,
+   "parent_line_id": "L-73cc5305f8d9f3e87a28",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-73cc5305f8d9f3e87a28"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-d888db0f083cd4174f31 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5386,12 +4976,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "8",
      "d_mm": "10",
      "ends": "8",
      "kg": "1.037037037037037037037037037",
      "sum_len_m": "1.680"
     },
     "B": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "9",
      "kg": "1.166666666666666666666666667",
@@ -5434,12 +5026,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "9",
      "kg": "2.000",
      "sum_len_m": "3.240"
     },
     "B": {
+     "bars": "10",
      "d_mm": "10",
      "ends": "10",
      "kg": "2.469135802469135802469135802",
@@ -5481,12 +5075,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "21",
      "d_mm": "10",
      "ends": "29",
      "kg": "3.172839506172839506172839506",
      "sum_len_m": "5.140"
     },
     "B": {
+     "bars": "22",
      "d_mm": "10",
      "ends": "30",
      "kg": "3.271604938271604938271604938",
@@ -5515,6 +5111,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-ecc20f4f4f06456add23",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.383",
+    "low": "1.383"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-018 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 15 or A + 1 = 16 (not printed); both readings put 14 ends on the edge beam (1.382716 kg at A, 1.382716 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.383 .. 1.383 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 15,
+    "bars_B": 16,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 14,
+    "edge_beam_ends_B": 14,
+    "kg_A": "1.382716",
+    "kg_B": "1.382716"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-018:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "15",
+     "d_mm": "10",
+     "ends": "14",
+     "kg": "1.382716049382716049382716049",
+     "sum_len_m": "2.240"
+    },
+    "B": {
+     "bars": "16",
+     "d_mm": "10",
+     "ends": "14",
+     "kg": "1.382716049382716049382716049",
+     "sum_len_m": "2.240"
+    }
+   },
+   "held_high": 1.383,
+   "held_low": 1.383,
+   "item_code": "STR.REBAR",
+   "line_id": "L-6278bd88cd9fb0427185",
+   "measured_net": null,
+   "parent_line_id": "L-ecc20f4f4f06456add23",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-ecc20f4f4f06456add23"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-c101fed8f1769227dd61 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5528,12 +5191,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "6",
      "kg": "0.5925925925925925925925925926",
      "sum_len_m": "0.960"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "7",
      "kg": "0.6913580246913580246913580247",
@@ -5575,12 +5240,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "9",
      "d_mm": "10",
      "ends": "9",
      "kg": "0.8888888888888888888888888889",
      "sum_len_m": "1.440"
     },
     "B": {
+     "bars": "10",
      "d_mm": "10",
      "ends": "10",
      "kg": "0.9876543209876543209876543210",
@@ -5609,6 +5276,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-03197ecd61fa42f5211d",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.605",
+    "low": "1.605"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-088 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 12 or A + 1 = 13 (not printed); both readings put 10 ends on the edge beam (1.604938 kg at A, 1.604938 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.605 .. 1.605 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 12,
+    "bars_B": 13,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 10,
+    "edge_beam_ends_B": 10,
+    "kg_A": "1.604938",
+    "kg_B": "1.604938"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "12",
+     "d_mm": "10",
+     "ends": "10",
+     "kg": "1.604938271604938271604938272",
+     "sum_len_m": "2.600"
+    },
+    "B": {
+     "bars": "13",
+     "d_mm": "10",
+     "ends": "10",
+     "kg": "1.604938271604938271604938272",
+     "sum_len_m": "2.600"
+    }
+   },
+   "held_high": 1.605,
+   "held_low": 1.605,
+   "item_code": "STR.REBAR",
+   "line_id": "L-69649b0dc191e246b065",
+   "measured_net": null,
+   "parent_line_id": "L-03197ecd61fa42f5211d",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-03197ecd61fa42f5211d"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-ca2a256e9d11e10ecc08 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5622,12 +5356,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "30",
      "d_mm": "10",
      "ends": "25",
      "kg": "5.432098765432098765432098765",
      "sum_len_m": "8.800"
     },
     "B": {
+     "bars": "31",
      "d_mm": "10",
      "ends": "28",
      "kg": "5.975308641975308641975308642",
@@ -5669,12 +5405,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "3",
      "kg": "0.3888888888888888888888888889",
      "sum_len_m": "0.630"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "4",
      "kg": "0.5185185185185185185185185185",
@@ -5703,6 +5441,140 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-9d89418a35192f5715aa",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "4.019",
+    "low": "4.019"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-025 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 31 or A + 1 = 32 (not printed); both readings put 31 ends on the edge beam (4.018519 kg at A, 4.018519 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 4.019 .. 4.019 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 31,
+    "bars_B": 32,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 31,
+    "edge_beam_ends_B": 31,
+    "kg_A": "4.018519",
+    "kg_B": "4.018519"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-025:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "31",
+     "d_mm": "10",
+     "ends": "31",
+     "kg": "4.018518518518518518518518519",
+     "sum_len_m": "6.510"
+    },
+    "B": {
+     "bars": "32",
+     "d_mm": "10",
+     "ends": "31",
+     "kg": "4.018518518518518518518518519",
+     "sum_len_m": "6.510"
+    }
+   },
+   "held_high": 4.019,
+   "held_low": 4.019,
+   "item_code": "STR.REBAR",
+   "line_id": "L-803f01f36279b090c559",
+   "measured_net": null,
+   "parent_line_id": "L-9d89418a35192f5715aa",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-9d89418a35192f5715aa"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-80c34ce85488dc35b39a",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.383",
+    "low": "1.383"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-027 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 15 or A + 1 = 16 (not printed); both readings put 14 ends on the edge beam (1.382716 kg at A, 1.382716 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.383 .. 1.383 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 15,
+    "bars_B": 16,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 14,
+    "edge_beam_ends_B": 14,
+    "kg_A": "1.382716",
+    "kg_B": "1.382716"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-027:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "15",
+     "d_mm": "10",
+     "ends": "14",
+     "kg": "1.382716049382716049382716049",
+     "sum_len_m": "2.240"
+    },
+    "B": {
+     "bars": "16",
+     "d_mm": "10",
+     "ends": "14",
+     "kg": "1.382716049382716049382716049",
+     "sum_len_m": "2.240"
+    }
+   },
+   "held_high": 1.383,
+   "held_low": 1.383,
+   "item_code": "STR.REBAR",
+   "line_id": "L-9436e97d80c812e80680",
+   "measured_net": null,
+   "parent_line_id": "L-80c34ce85488dc35b39a",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-80c34ce85488dc35b39a"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-ca4f5cc887406dffb29f (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5716,12 +5588,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "26",
      "d_mm": "10",
      "ends": "25",
      "kg": "4.783950617283950617283950617",
      "sum_len_m": "7.750"
     },
     "B": {
+     "bars": "27",
      "d_mm": "10",
      "ends": "26",
      "kg": "4.882716049382716049382716049",
@@ -5764,12 +5638,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "21",
      "d_mm": "10",
      "ends": "27",
      "kg": "5.598765432098765432098765432",
      "sum_len_m": "9.070"
     },
     "B": {
+     "bars": "22",
      "d_mm": "10",
      "ends": "28",
      "kg": "5.851851851851851851851851852",
@@ -5812,12 +5688,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "6",
      "kg": "1.148148148148148148148148148",
      "sum_len_m": "1.860"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "7",
      "kg": "1.339506172839506172839506173",
@@ -5846,6 +5724,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-54bc5b06dd14584e55fb",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "7.951",
+    "low": "7.951"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-124 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 35 or A + 1 = 36 (not printed); both readings put 28 ends on the edge beam (7.950617 kg at A, 7.950617 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 7.951 .. 7.951 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 35,
+    "bars_B": 36,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 28,
+    "edge_beam_ends_B": 28,
+    "kg_A": "7.950617",
+    "kg_B": "7.950617"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-124:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "35",
+     "d_mm": "10",
+     "ends": "28",
+     "kg": "7.950617283950617283950617284",
+     "sum_len_m": "12.880"
+    },
+    "B": {
+     "bars": "36",
+     "d_mm": "10",
+     "ends": "28",
+     "kg": "7.950617283950617283950617284",
+     "sum_len_m": "12.880"
+    }
+   },
+   "held_high": 7.951,
+   "held_low": 7.951,
+   "item_code": "STR.REBAR",
+   "line_id": "L-a257a6eaf8f711da24ad",
+   "measured_net": null,
+   "parent_line_id": "L-54bc5b06dd14584e55fb",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-54bc5b06dd14584e55fb"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-d28c5c87be0844a2a6f9 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -5859,12 +5804,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "6",
      "kg": "0.5925925925925925925925925926",
      "sum_len_m": "0.960"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "7",
      "kg": "0.6913580246913580246913580247",
@@ -5906,12 +5853,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "12",
      "d_mm": "10",
      "ends": "12",
      "kg": "1.185185185185185185185185185",
      "sum_len_m": "1.920"
     },
     "B": {
+     "bars": "13",
      "d_mm": "10",
      "ends": "13",
      "kg": "1.283950617283950617283950617",
@@ -5953,12 +5902,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "4",
      "kg": "0.6419753086419753086419753086",
      "sum_len_m": "1.040"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "5",
      "kg": "0.8024691358024691358024691358",
@@ -6000,12 +5951,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "6",
      "d_mm": "10",
      "ends": "2",
      "kg": "0.5061728395061728395061728395",
      "sum_len_m": "0.820"
     },
     "B": {
+     "bars": "7",
      "d_mm": "10",
      "ends": "3",
      "kg": "0.7592592592592592592592592593",
@@ -6047,12 +6000,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "15",
      "d_mm": "10",
      "ends": "15",
      "kg": "1.481481481481481481481481481",
      "sum_len_m": "2.400"
     },
     "B": {
+     "bars": "16",
      "d_mm": "10",
      "ends": "16",
      "kg": "1.580246913580246913580246914",
@@ -6081,6 +6036,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-17b5d850aeed0132c7c0",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.037",
+    "low": "1.037"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-016 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 10 or A + 1 = 11 (not printed); both readings put 8 ends on the edge beam (1.037037 kg at A, 1.037037 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.037 .. 1.037 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 10,
+    "bars_B": 11,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 8,
+    "edge_beam_ends_B": 8,
+    "kg_A": "1.037037",
+    "kg_B": "1.037037"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-016:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "10",
+     "d_mm": "10",
+     "ends": "8",
+     "kg": "1.037037037037037037037037037",
+     "sum_len_m": "1.680"
+    },
+    "B": {
+     "bars": "11",
+     "d_mm": "10",
+     "ends": "8",
+     "kg": "1.037037037037037037037037037",
+     "sum_len_m": "1.680"
+    }
+   },
+   "held_high": 1.037,
+   "held_low": 1.037,
+   "item_code": "STR.REBAR",
+   "line_id": "L-b02b44864adb25c57e6d",
+   "measured_net": null,
+   "parent_line_id": "L-17b5d850aeed0132c7c0",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-17b5d850aeed0132c7c0"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-9a60fdc369047a4754f0 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -6094,12 +6116,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "32",
      "d_mm": "10",
      "ends": "32",
      "kg": "3.160493827160493827160493827",
      "sum_len_m": "5.120"
     },
     "B": {
+     "bars": "33",
      "d_mm": "10",
      "ends": "33",
      "kg": "3.259259259259259259259259259",
@@ -6141,12 +6165,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "30",
      "d_mm": "12",
      "ends": "30",
      "kg": "4.266666666666666666666666667",
      "sum_len_m": "4.800"
     },
     "B": {
+     "bars": "31",
      "d_mm": "12",
      "ends": "31",
      "kg": "4.408888888888888888888888889",
@@ -6175,6 +6201,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-98fc154ddae4d3d0be80",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "3.778",
+    "low": "3.778"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-088 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 30 or A + 1 = 31 (not printed); both readings put 12 ends on the edge beam (3.777778 kg at A, 3.777778 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 3.778 .. 3.778 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 30,
+    "bars_B": 31,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 12,
+    "edge_beam_ends_B": 12,
+    "kg_A": "3.777778",
+    "kg_B": "3.777778"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-088:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "30",
+     "d_mm": "10",
+     "ends": "12",
+     "kg": "3.777777777777777777777777778",
+     "sum_len_m": "6.120"
+    },
+    "B": {
+     "bars": "31",
+     "d_mm": "10",
+     "ends": "12",
+     "kg": "3.777777777777777777777777778",
+     "sum_len_m": "6.120"
+    }
+   },
+   "held_high": 3.778,
+   "held_low": 3.778,
+   "item_code": "STR.REBAR",
+   "line_id": "L-bf020f67de170b6acac2",
+   "measured_net": null,
+   "parent_line_id": "L-98fc154ddae4d3d0be80",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-98fc154ddae4d3d0be80"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-c4abf86a93469a9c56f8 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -6188,12 +6281,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "18",
      "d_mm": "10",
      "ends": "32",
      "kg": "3.160493827160493827160493827",
      "sum_len_m": "5.120"
     },
     "B": {
+     "bars": "19",
      "d_mm": "10",
      "ends": "33",
      "kg": "3.259259259259259259259259259",
@@ -6235,12 +6330,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "33",
      "d_mm": "10",
      "ends": "46",
      "kg": "6.456790123456790123456790123",
      "sum_len_m": "10.460"
     },
     "B": {
+     "bars": "34",
      "d_mm": "10",
      "ends": "47",
      "kg": "6.555555555555555555555555556",
@@ -6282,12 +6379,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "13",
      "d_mm": "10",
      "ends": "13",
      "kg": "1.283950617283950617283950617",
      "sum_len_m": "2.080"
     },
     "B": {
+     "bars": "14",
      "d_mm": "10",
      "ends": "14",
      "kg": "1.382716049382716049382716049",
@@ -6316,6 +6415,73 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-162a87cb17bfcacdbf1b",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "1.481",
+    "low": "1.481"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-023 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 18 or A + 1 = 19 (not printed); both readings put 15 ends on the edge beam (1.481481 kg at A, 1.481481 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 1.481 .. 1.481 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 18,
+    "bars_B": 19,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 15,
+    "edge_beam_ends_B": 15,
+    "kg_A": "1.481481",
+    "kg_B": "1.481481"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-023:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "18",
+     "d_mm": "10",
+     "ends": "15",
+     "kg": "1.481481481481481481481481481",
+     "sum_len_m": "2.400"
+    },
+    "B": {
+     "bars": "19",
+     "d_mm": "10",
+     "ends": "15",
+     "kg": "1.481481481481481481481481481",
+     "sum_len_m": "2.400"
+    }
+   },
+   "held_high": 1.481,
+   "held_low": 1.481,
+   "item_code": "STR.REBAR",
+   "line_id": "L-d538bfb721dae421cfa4",
+   "measured_net": null,
+   "parent_line_id": "L-162a87cb17bfcacdbf1b",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-162a87cb17bfcacdbf1b"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-9c6ce4247bac3e1180be (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -6329,12 +6495,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "39",
      "d_mm": "10",
      "ends": "16",
      "kg": "2.567901234567901234567901235",
      "sum_len_m": "4.160"
     },
     "B": {
+     "bars": "40",
      "d_mm": "10",
      "ends": "17",
      "kg": "2.728395061728395061728395062",
@@ -6376,12 +6544,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "25",
      "d_mm": "10",
      "ends": "21",
      "kg": "2.074074074074074074074074074",
      "sum_len_m": "3.360"
     },
     "B": {
+     "bars": "26",
      "d_mm": "10",
      "ends": "22",
      "kg": "2.172839506172839506172839506",
@@ -6423,12 +6593,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "4",
      "d_mm": "10",
      "ends": "4",
      "kg": "0.6419753086419753086419753086",
      "sum_len_m": "1.040"
     },
     "B": {
+     "bars": "5",
      "d_mm": "10",
      "ends": "5",
      "kg": "0.8024691358024691358024691358",
@@ -6457,6 +6629,140 @@
   },
   {
    "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-b28f219ac313453a5a59",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "4.975",
+    "low": "4.975"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:1F-084 y: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 31 or A + 1 = 32 (not printed); both readings put 31 ends on the edge beam (4.975309 kg at A, 4.975309 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 4.975 .. 4.975 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 31,
+    "bars_B": 32,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 31,
+    "edge_beam_ends_B": 31,
+    "kg_A": "4.975309",
+    "kg_B": "4.975309"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:1F-084:DEVELOPMENT_ANCHORAGE:Y#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "31",
+     "d_mm": "10",
+     "ends": "31",
+     "kg": "4.975308641975308641975308642",
+     "sum_len_m": "8.060"
+    },
+    "B": {
+     "bars": "32",
+     "d_mm": "10",
+     "ends": "31",
+     "kg": "4.975308641975308641975308642",
+     "sum_len_m": "8.060"
+    }
+   },
+   "held_high": 4.975,
+   "held_low": 4.975,
+   "item_code": "STR.REBAR",
+   "line_id": "L-db3c3412074d0a8fdda1",
+   "measured_net": null,
+   "parent_line_id": "L-b28f219ac313453a5a59",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-b28f219ac313453a5a59"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
+    "up-turn legs and undrawn ends BLANK on the parent L-6ccbfa133d500e80fdf9",
+    "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"
+   ],
+   "bound_kg": {
+    "high": "8.037",
+    "low": "8.037"
+   },
+   "cause": "COUNT-CONVENTION GAP on SLAB:GF-134 x: the mesh is printed as a rate 'n o d/m' with no first / last bar position, so the total bar count is A = 45 or A + 1 = 46 (not printed); both readings put 42 ends on the edge beam (8.037037 kg at A, 8.037037 kg at A + 1), but that sub-count depends on the unprinted boundary-bar position, so the coincidence is not a determinate quantity: HELD bounded 8.037 .. 8.037 kg (never 0)",
+   "cause_class": "PRINTED_VALUE_GAP",
+   "count_convention": {
+    "bars_A": 45,
+    "bars_B": 46,
+    "degenerate_bound": true,
+    "edge_beam_ends_A": 42,
+    "edge_beam_ends_B": 42,
+    "kg_A": "8.037037",
+    "kg_B": "8.037037"
+   },
+   "element_id": "HL:SLAB_STEEL:SLAB:GF-134:DEVELOPMENT_ANCHORAGE:X#SLAB_BAR_ENDS:VALUED",
+   "family": "B11-01",
+   "group": "B11",
+   "hand_calculation": {
+    "A": {
+     "bars": "45",
+     "d_mm": "10",
+     "ends": "42",
+     "kg": "8.037037037037037037037037037",
+     "sum_len_m": "13.020"
+    },
+    "B": {
+     "bars": "46",
+     "d_mm": "10",
+     "ends": "42",
+     "kg": "8.037037037037037037037037037",
+     "sum_len_m": "13.020"
+    }
+   },
+   "held_high": 8.037,
+   "held_low": 8.037,
+   "item_code": "STR.REBAR",
+   "line_id": "L-e16871cb1073e4592478",
+   "measured_net": null,
+   "parent_line_id": "L-6ccbfa133d500e80fdf9",
+   "population": "DEVELOPMENT",
+   "ref": "ST p.4 / p.5 / p.6 slab plans (count convention)",
+   "sources": [
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "LB-2: a component is DRAWING_CONFIRMED only when"
+    },
+    {
+     "file": "research/agents_t306/T-306_SLAB_REBAR_BOUND_DECOMPOSITION.md",
+     "read_on": "a rate, never a count, R306-1"
+    },
+    {
+     "file": "research/agents_t318/T-318_SLAB_BAR_END_INTEGRATION.md",
+     "read_on": "VERIFIED: none (the count convention and the legs keep every line a bound)"
+    },
+    {
+     "file": "research/agents_t307/BAR_END_CENSUS_T307.csv",
+     "read_on": "L-6ccbfa133d500e80fdf9"
+    }
+   ],
+   "unit": "kg"
+  },
+  {
+   "also": [
     "up-turn legs and undrawn ends BLANK on the parent L-e1be3615b050994f0d17 (RFI-B-S10 (e))"
    ],
    "bound_kg": {
@@ -6470,12 +6776,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "22",
      "d_mm": "10",
      "ends": "10",
      "kg": "1.296296296296296296296296296",
      "sum_len_m": "2.100"
     },
     "B": {
+     "bars": "23",
      "d_mm": "10",
      "ends": "9",
      "kg": "1.166666666666666666666666667",
@@ -6517,12 +6825,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "4",
      "d_mm": "10",
      "ends": "4",
      "kg": "0.7654320987654320987654320988",
      "sum_len_m": "1.240"
     },
     "B": {
+     "bars": "5",
      "d_mm": "10",
      "ends": "5",
      "kg": "0.9567901234567901234567901235",
@@ -6564,12 +6874,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "18",
      "d_mm": "10",
      "ends": "35",
      "kg": "3.456790123456790123456790123",
      "sum_len_m": "5.600"
     },
     "B": {
+     "bars": "19",
      "d_mm": "10",
      "ends": "36",
      "kg": "3.555555555555555555555555556",
@@ -6611,12 +6923,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "24",
      "d_mm": "14",
      "ends": "20",
      "kg": "3.871604938271604938271604938",
      "sum_len_m": "3.200"
     },
     "B": {
+     "bars": "25",
      "d_mm": "14",
      "ends": "19",
      "kg": "3.678024691358024691358024691",
@@ -6658,12 +6972,14 @@
    "group": "B11",
    "hand_calculation": {
     "A": {
+     "bars": "24",
      "d_mm": "10",
      "ends": "15",
      "kg": "1.481481481481481481481481481",
      "sum_len_m": "2.400"
     },
     "B": {
+     "bars": "25",
      "d_mm": "10",
      "ends": "16",
      "kg": "1.580246913580246913580246914",
@@ -7498,6 +7814,7 @@
    "unit": "pcs"
   }
  ],
+ "revision": "r2 (Verifier 2026-11-09 01:54: 17 B11 FIX_ROWs reclassified HELD COUNT-CONVENTION GAP)",
  "rule": "R-T647-1",
  "schema": "URBAN_T647_HELD_CAUSE_CENSUS_V1",
  "scope": "F-T636-1 structural share (B9 32, B10 13, B11 138) of the 10 Nov trial BOQ (T-636, merged)",

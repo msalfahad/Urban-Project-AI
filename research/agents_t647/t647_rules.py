@@ -7,7 +7,13 @@ A cause record is accepted only when
   (b) it cites at least one committed source file AND the text it was read on (a cause with no source is invented:
       refused);
   (c) a DEPENDENCY names a host line that is itself HELD in the same census (a released host is not a cause);
-  (d) the line stays HELD: it carries no measured quantity, and HELD lines are never summed (held_total refuses).
+  (d) the line stays HELD: it carries no measured quantity, and HELD lines are never summed (held_total refuses);
+  (e) (r2, Verifier 2026-11-09 01:54) a FIX_ROW proposing DRAWING-CONFIRMED needs every input of the value PRINTED
+      (count AND length, T-306 LB-2): `inputs_printed` True and no `count_convention` record; two coincident readings
+      of an unprinted count bracket only the total count, never a sub-count on one support segment, so a degenerate
+      bound (low == high) on an unprinted count is refused as DRAWING-CONFIRMED and stays HELD (COUNT-CONVENTION GAP);
+  (f) a COUNT-CONVENTION GAP record states both total counts A and A + 1 and the kg at each end (never 0, never one
+      value chosen).
 Nothing here computes or changes a quantity; a FIX_ROW is a proposal beside the HELD line, never wired.
 """
 from __future__ import annotations
@@ -56,6 +62,23 @@ def check(rec: dict, held_ids: set | None = None) -> dict:
             raise CauseError(f"{lid}: a fix row without its own hand calculation and proposed state")
         if fr.get("wired"):
             raise CauseError(f"{lid}: a fix row is a proposal, never wired here")
+        if str(fr["proposed_state"]).startswith("DRAWING-CONFIRMED") and (
+                fr.get("inputs_printed") is not True or rec.get("count_convention")):
+            raise CauseError(f"{lid}: DRAWING-CONFIRMED needs every input printed (count AND length, T-306 LB-2); "
+                             "coincident readings of an unprinted count are not a printed count")
+    cc = rec.get("count_convention")
+    if cc is not None:
+        if cls == "FIX_ROW":
+            raise CauseError(f"{lid}: an unprinted count convention cannot carry a fix row value")
+        try:
+            a, b = int(cc["bars_A"]), int(cc["bars_B"])
+            ka, kb = float(cc["kg_A"]), float(cc["kg_B"])
+        except (KeyError, TypeError, ValueError):
+            raise CauseError(f"{lid}: a count-convention gap states bars and kg at both readings A and B") from None
+        if b != a + 1:
+            raise CauseError(f"{lid}: count convention is A .. A + 1, got {a} .. {b}")
+        if ka <= 0 or kb <= 0:
+            raise CauseError(f"{lid}: a count-convention bound end is never 0")
     return rec
 
 

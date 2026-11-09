@@ -19,8 +19,7 @@ T-307 end ledger (sum of (w - 0.040) over the edge-beam ends x d^2/162), 59 / 59
 | Trade | Class | Lines | Reference |
 |---|---|---|---|
 | B11 | DESIGNER_ITEM | 79 | RFI-B-S10: top-bar extent, plan note 2 vs ST p.15 (both readings differ on every line) |
-| B11 | PRINTED_VALUE_GAP | 39 + 3 | ST p.4 / p.5 / p.6: mesh rate, no first / last bar (count A .. B); 3 bare labels '5 o 10' |
-| B11 | FIX_ROW | 17 | FR-T647-6 .. 22: count A = B at the edge-beam ends, bound degenerate: 51.574073 kg determinate |
+| B11 | PRINTED_VALUE_GAP | 39 + 3 + 17 | ST p.4 / p.5 / p.6: mesh rate, no first / last bar (count A .. B); 3 bare labels '5 o 10'; 17 COUNT-CONVENTION GAP (r2) |
 | B10 | FIX_ROW | 5 | FR-T647-1 .. 5: CN columns, ST p.9 schedule CN GF / 1F / 2F struck (own re-read AGREE T-075): NOT_APPLICABLE |
 | B10 | DESIGNER_ITEM | 4 | D-21 dome DOME-3; D-33 two loaded ground-beam runs; RFI-A02 pool steps |
 | B10 | OWNER_DECISION | 4 | Q-65 C parapet material (+ D-39 edge build-up) |
@@ -29,17 +28,28 @@ T-307 end ledger (sum of (w - 0.040) over the edge-beam ends x d^2/162), 59 / 59
 | B9 | DEPENDENCY | 19 | material lines whose host block line is HELD (host cause named) |
 
 Census (trade x unit, unchanged): B11 kg 138 bounded 701.958 .. 1,629.410; B10 m3 10 blank + 3 bounded 1.134 .. 3.483;
-B9 32 blank. If the 22 fix rows are wired: B11 bounded 138 -> 121, +51.574073 kg released (0.051574 t); B10 5 lines
+B9 32 blank. If the 5 CN fix rows are wired: B11 unchanged (138 bounded, 0 kg released); B10 5 lines
 leave as NOT_APPLICABLE (no value; bounded 1.134 .. 3.483 m3 leaves the HELD census). Freelancer: 0 CN columns (agree);
 slab bar ends sit inside his single 5,400 kg slab lump (no line comparison).
 
+## r2 (Verifier 2026-11-09 01:54, Gate A f + h on FR-T647-6 .. 22)
+
+The 17 B11 development parts whose two readings coincide (low == high, 51.574073 kg over the 17 lines at either end)
+are NOT drawing-confirmed: the mesh is a printed rate (R306-1), the TOTAL bar count is A or A + 1 on every one of the
+17 parents (e.g. GF-016 y 10 / 11, 1F-025 x 31 / 32, GF-135 y 24 / 25), and which bars reach the edge-beam segment
+depends on the unprinted boundary-bar position, so a sub-count on that segment can be n or n + 1 under an admissible
+placement. Each line is now HELD, PRINTED_VALUE_GAP 'COUNT-CONVENTION GAP' with bars A, A + 1 and kg at each end
+(`count_convention_gaps` in the census); the r1 fix rows are withdrawn. Rule R-T647-1 (e) refuses a DRAWING-CONFIRMED
+fix row unless every input is printed (`inputs_printed`, no count convention attached); (f) a count-convention record
+states both counts and both kg, B = A + 1, never 0. Tests: normal (printed '12 T10' count passes) and adverse
+(coincident ends on an unprinted rate refused; missing flag refused; malformed / zero gap refused).
+
 ## Findings and lessons
 
-- F-T647-1: 17 slab development part lines carry low == high (count A and B reach the same edge-beam ends) yet are
-  booked BOUNDED_EXPOSURE by R-T318-1: a degenerate bound is a determinate value. Proposal for lane I: wire as
-  DRAWING-CONFIRMED values (FR-T647-6 .. 22).
+- F-T647-1 (r1) WITHDRAWN and REFUSED as a general rule by the Verifier (it would release unprinted counts on every
+  villa). Replacement lesson (ERS s.7 proposal): "Coincident endpoints of a bound prove a value only when the bracket
+  covers every admissible reading of THAT quantity; a total-count bracket (A, A + 1) does not bracket a sub-count on
+  one support segment; test that the inputs are printed, not that two readings agree." Scope every villa; provenance
+  T-306, T-318, Verifier 2026-11-09 01:54.
 - F-T647-2: 5 CN column lines HELD as TYPE_NOT_IN_SCHEDULE since the frozen reader; the schedule prints the member as
-  absent above ground (T-075 merged 2026-10-19, never wired).
-- Lesson (ERS s.7 proposal): "A bound whose two readings coincide on the line is not a hold: test low == high before
-  booking BOUNDED_EXPOSURE, and re-check old TYPE_NOT_IN_SCHEDULE holds against merged schedule readers." Scope every
-  villa; provenance T-318, T-075, this task.
+  absent above ground (T-075; CHECKER-CONFIRMED 2026-11-09: CN on no GF / 1F / 2F slab or roof plan).

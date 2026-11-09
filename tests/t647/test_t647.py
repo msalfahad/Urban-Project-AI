@@ -105,7 +105,7 @@ def test_every_structural_line_has_one_cause(census):
 def test_class_split(census):
     assert census["by_group_and_class"] == {
         "B10 DESIGNER_ITEM": 4, "B10 FIX_ROW": 5, "B10 OWNER_DECISION": 4,
-        "B11 DESIGNER_ITEM": 79, "B11 FIX_ROW": 17, "B11 PRINTED_VALUE_GAP": 42,
+        "B11 DESIGNER_ITEM": 79, "B11 PRINTED_VALUE_GAP": 59,
         "B9 DEPENDENCY": 19, "B9 DESIGNER_ITEM": 7, "B9 PRINTED_VALUE_GAP": 6}
 
 
@@ -131,7 +131,8 @@ def test_slab_parts_match_the_t318_split(census):
                 assert lo - 0.0015 <= min(ka, kb) and max(ka, kb) <= hi + 0.0015
                 continue
             assert abs(min(ka, kb) - lo) <= 0.0015 and abs(max(ka, kb) - hi) <= 0.0015
-            assert (r["cause_class"] == "FIX_ROW") == (r["bound_kg"]["low"] == r["bound_kg"]["high"])
+            assert r["cause_class"] == "PRINTED_VALUE_GAP"
+            assert ("count_convention" in r) == (r["bound_kg"]["low"] == r["bound_kg"]["high"])
 
 
 def test_adverse_dev_hand_matches_one_line_by_hand():
@@ -146,13 +147,69 @@ def test_adverse_dev_hand_matches_one_line_by_hand():
 
 def test_fix_rows_are_proposals(census):
     fr = census["fix_rows"]
-    assert sorted(f["id"] for f in fr) == sorted(f"FR-T647-{i}" for i in range(1, 23))
+    assert sorted(f["id"] for f in fr) == sorted(f"FR-T647-{i}" for i in range(1, 6))
     assert all(f["wired"] is False for f in fr)
-    assert sum(f["proposed_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" for f in fr) == 5
+    assert all(f["proposed_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" for f in fr)
     eff = census["fix_row_effect_if_wired"]
-    assert eff["lines_leaving_held"] == 22
-    assert eff["census_without_fix_lines"]["B11 kg"]["held_bounded"] == 121
+    assert eff["lines_leaving_held"] == 5
+    assert eff["census_without_fix_lines"]["B11 kg"]["held_bounded"] == 138
     assert eff["census_without_fix_lines"]["B10 m3"]["held_blank"] == census["held_census_before"]["B10 m3"]["held_blank"] - 2
+
+
+def test_r2_seventeen_degenerate_bounds_stay_held_on_the_count_convention(census):
+    """Verifier 2026-11-09 01:54: FR-T647-6 .. 22 withdrawn; each line HELD with A and A + 1 and kg at both ends."""
+    cc = census["count_convention_gaps"]
+    assert len(cc) == 17
+    tot = 0.0
+    for g in cc:
+        assert g["bars_B"] == g["bars_A"] + 1 and g["degenerate_bound"] is True
+        assert float(g["kg_A"]) > 0 and float(g["kg_B"]) > 0
+        tot += float(g["kg_A"])
+    assert abs(tot - 51.574073) <= 0.00002          # the r1 'released' kg, now a HELD bound, never summed into a total
+    rec = {r["line_id"]: r for r in census["records"]}
+    for g in cc:
+        r = rec[g["line_id"]]
+        assert r["cause_class"] == "PRINTED_VALUE_GAP" and "COUNT-CONVENTION GAP" in r["cause"]
+        assert f"A = {g['bars_A']}" in r["cause"] and f"A + 1 = {g['bars_B']}" in r["cause"]
+        assert r["measured_net"] is None and r["held_low"] is not None
+
+
+def test_r2_verifier_counts_reproduced(census):
+    """the Verifier's own reads from the T-307 end ledger: GF-016 y 10 / 11 bars and a 31 / 32 parent."""
+    gf016 = [g for g in census["count_convention_gaps"] if ":GF-016:" in g["element_id"] and g["element_id"].split("#")[0].endswith(":Y")]
+    assert len(gf016) == 1 and (gf016[0]["bars_A"], gf016[0]["bars_B"]) == (10, 11)
+    pairs = {(g["bars_A"], g["bars_B"]) for g in census["count_convention_gaps"]}
+    assert (10, 11) in pairs and (31, 32) in pairs and (24, 25) in pairs
+
+
+def test_adverse_unprinted_count_refused_as_drawing_confirmed():
+    """R-T647-1 (e): a coincident-end bound on an unprinted count is refused as DRAWING-CONFIRMED; a printed count
+    passes. Villa V647: slab S2 x, mesh '5 o 10/m' (rate, unprinted count) vs slab S3 schedule '12 T10' (printed)."""
+    base = dict(v647()[0], cause_class="FIX_ROW", ref="FR-T647-30")
+    unprinted = {"proposed_state": "DRAWING-CONFIRMED measured_net 1.481 kg", "hand_calculation": "15 ends x ...",
+                 "wired": False, "inputs_printed": False}
+    with pytest.raises(R.CauseError, match="every input printed"):
+        R.check(dict(base, fix_row=unprinted), HELD_V647)
+    with pytest.raises(R.CauseError, match="every input printed"):   # flag missing = not printed
+        R.check(dict(base, fix_row={k: v for k, v in unprinted.items() if k != "inputs_printed"}), HELD_V647)
+    with pytest.raises(R.CauseError):                                 # printed flag but a count convention attached
+        R.check(dict(base, fix_row=dict(unprinted, inputs_printed=True),
+                     count_convention={"bars_A": 15, "bars_B": 16, "kg_A": "1.481", "kg_B": "1.481"}), HELD_V647)
+    printed = dict(unprinted, inputs_printed=True)                    # normal: '12 T10' printed count and length
+    assert R.check(dict(base, fix_row=printed), HELD_V647)
+
+
+def test_adverse_count_convention_record_shape():
+    """R-T647-1 (f): both counts and kg at each end; A .. A + 1; never 0."""
+    base = dict(v647()[1], cause_class="PRINTED_VALUE_GAP", ref="ST p.4 slab plan (count convention)")
+    ok = {"bars_A": 10, "bars_B": 11, "kg_A": "2.1", "kg_B": "2.1"}
+    assert R.check(dict(base, count_convention=ok), HELD_V647)
+    with pytest.raises(R.CauseError, match="both readings"):
+        R.check(dict(base, count_convention={"bars_A": 10, "kg_A": "2.1"}), HELD_V647)
+    with pytest.raises(R.CauseError, match="A .. A \\+ 1"):
+        R.check(dict(base, count_convention=dict(ok, bars_B=10)), HELD_V647)
+    with pytest.raises(R.CauseError, match="never 0"):
+        R.check(dict(base, count_convention=dict(ok, kg_A="0")), HELD_V647)
 
 
 def test_dependencies_point_at_held_hosts_in_this_census(census):

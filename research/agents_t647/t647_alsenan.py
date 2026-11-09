@@ -10,7 +10,9 @@ source, read from merged ledgers by line id (never typed from memory; every cite
                                refused if the two readings are equal on the line (then the cause would be wrong);
              59 development    PRINTED_VALUE_GAP ST p.4 / p.5 / p.6: the mesh is printed as a rate 'n o d/m' with no
                                first / last bar position: count A = ceil(rate x W) .. B = A + 1 (T-306
-                               COUNT_CONVENTION); the p.15 straight length is drawing-derived; refused if low == high.
+                               COUNT_CONVENTION); the p.15 straight length is drawing-derived. r2: the 17 lines whose
+                               two readings coincide (low == high) stay HELD as COUNT-CONVENTION GAP with both total
+                               counts and kg at each end (Verifier 2026-11-09 01:54; R-T647-1 (e) / (f)).
   B10 13 / B9 8 work lines     one record each from the merged task that holds it (T-075, T-319, T-407, T-430, T-433,
                                T-482 / T-488 / T-543, T-638), the cited text checked in the file.
   B9 24 material lines         (T-498 stage rows, T-580 input): DEPENDENCY on the host block line by id when the host
@@ -74,7 +76,8 @@ def _cn(n, lid):
                                             "(an absence printed on the schedule, not a missing value)",
                         "evidence": "DRAWING-CONFIRMED (T-075 hand read on DXF and PDF p.9, merged, verifier 2026-10-19)",
                         "verdict_proposal": "ENGINE_WRONG (held lines for a member the schedule prints as absent; "
-                                            "freelancer also 0 CN columns)", "wired": False},
+                                            "freelancer also 0 CN columns)", "wired": False,
+                        "inputs_printed": True},
             "sources": [src("research/agents_t075/T-075_SCHEDULE_TEXT_ROWS.md", "NOT_PRESENT, NECK_ONLY_TYPE"),
                         src("research/agents_t433/summary_t433.json", lid),
                         src("research/agents_t387/BINDING_T387.csv", lid)]}
@@ -215,25 +218,30 @@ def slab_records(lines, index):
             if abs(min(ka, kb) - lo) > tol or abs(max(ka, kb) - hi) > tol:
                 raise R.CauseError(f"{p['line_id']}: hand re-add A {ka} / B {kb} != line {lo} .. {hi}")
             if hc["A"]["ends"] == hc["B"]["ends"] and hc["A"]["sum_len_m"] == hc["B"]["sum_len_m"]:
-                # the count convention does not reach the valued ends: the bound is degenerate (low == high)
-                kg = hc["A"]["kg"]
-                out.append(dict(base, cause_class="FIX_ROW", ref="FR-T647-?", population="DEVELOPMENT",
-                                cause="degenerate bound: count A and count B give the same edge-beam ends, so the valued "
-                                      "part is determinate; HELD only because every T-318 part line is booked "
-                                      "BOUNDED_EXPOSURE (no record holds it on an open input)",
-                                also=[f"up-turn legs and undrawn ends stay BLANK on the parent {parent['line_id']}"],
-                                fix_row={"proposed_state": f"DRAWING-CONFIRMED measured_net {q6(kg)} kg (one value, "
-                                                           f"no range)",
-                                         "hand_calculation": f"{hc['A']['ends']} edge-beam ends x (w - 0.040) summed "
-                                                             f"= {hc['A']['sum_len_m']} m x {hc['A']['d_mm']}^2/162 "
-                                                             f"= {q6(kg)} kg (A = B; ST p.15 '40 CL.', widths drawn)",
-                                         "evidence": "DRAWING-DERIVED length (T-307, Checker Gate A PASS) re-added end by "
-                                                     "end here; count identical under both readings",
-                                         "verdict_proposal": "ENGINE_RIGHT on the value; the HELD state is a booking "
-                                                             "artefact (release once wired)",
-                                         "kg": str(q6(kg)), "wired": False},
-                                sources=[src(T318, "DRAWING-CONFIRMED (BOUND): the 59 development parts"),
-                                         src("research/agents_t307/BAR_END_DETAIL_T307.csv", parent["line_id"])]))
+                # r2 (Verifier 2026-11-09 01:54, REJECTED FR-T647-6 .. 22): the two declared readings coincide on the
+                # edge-beam ends, but the TOTAL count is A or A + 1 (not printed) and which bars reach this support
+                # segment depends on the unprinted boundary-bar position: a sub-count can be n or n + 1 under an
+                # admissible placement. Coincident ends of a total-count bracket are not a printed value: HELD.
+                cc = {"bars_A": hc["A"]["bars"], "bars_B": hc["B"]["bars"],
+                      "kg_A": str(q6(hc["A"]["kg"])), "kg_B": str(q6(hc["B"]["kg"])),
+                      "edge_beam_ends_A": hc["A"]["ends"], "edge_beam_ends_B": hc["B"]["ends"],
+                      "degenerate_bound": True}
+                out.append(dict(base, cause_class="PRINTED_VALUE_GAP",
+                                ref="ST p.4 / p.5 / p.6 slab plans (count convention)", population="DEVELOPMENT",
+                                count_convention=cc,
+                                cause=f"COUNT-CONVENTION GAP on {r['element']} {r['direction']}: the mesh is printed as a "
+                                      "rate 'n o d/m' with no first / last bar position, so the total bar count is "
+                                      f"A = {cc['bars_A']} or A + 1 = {cc['bars_B']} (not printed); both readings put "
+                                      f"{cc['edge_beam_ends_A']} ends on the edge beam ({cc['kg_A']} kg at A, "
+                                      f"{cc['kg_B']} kg at A + 1), but that sub-count depends on the unprinted "
+                                      "boundary-bar position, so the coincidence is not a determinate quantity: "
+                                      f"HELD bounded {lo} .. {hi} kg (never 0)",
+                                also=[f"up-turn legs and undrawn ends BLANK on the parent {parent['line_id']}",
+                                      "r1 FIX_ROW withdrawn (Verifier 2026-11-09 01:54, Gate A f + h)"],
+                                sources=[src(T306, "LB-2: a component is DRAWING_CONFIRMED only when"),
+                                         src(T306, "a rate, never a count, R306-1"),
+                                         src(T318, "VERIFIED: none (the count convention and the legs keep every line a bound)"),
+                                         src("research/agents_t307/BAR_END_CENSUS_T307.csv", parent["line_id"])]))
                 continue
             out.append(dict(base, cause_class="PRINTED_VALUE_GAP", ref="ST p.4 / p.5 / p.6 slab plans",
                             population="DEVELOPMENT",
@@ -263,12 +271,15 @@ def dev_hand(parent_id):
             _DET.setdefault(r["line_id"], []).append(r)
         for r in csv.DictReader((ROOT / "research/agents_t307/BAR_END_CENSUS_T307.csv").open(encoding="utf-8")):
             _DET.setdefault(("d", r["line_id"]), int(r["d_mm"]))
+            _DET.setdefault(("barsA", r["line_id"]), int(r["bars_A"]))
+            _DET.setdefault(("barsB", r["line_id"]), int(r["bars_B"]))
     d = _DET[("d", parent_id)]
     out = {}
     for rd in "AB":
         ends = [r for r in _DET.get(parent_id, ()) if r["reading"] == rd and r["support"] == "EDGE_BEAM"]
         s = sum((D(r["width_m"]) - D("0.040") for r in ends), Decimal(0))
-        out[rd] = {"ends": len(ends), "sum_len_m": s, "d_mm": d, "kg": s * D(d * d) / D(162)}
+        out[rd] = {"ends": len(ends), "sum_len_m": s, "d_mm": d, "kg": s * D(d * d) / D(162),
+                   "bars": _DET[("bars" + rd, parent_id)]}
     return out
 
 
@@ -358,8 +369,8 @@ def build():
     slab = slab_records(lines, index)
     own = {r["line_id"] for r in work} | {r["line_id"] for r in slab}
     mat = material_records(lines, trial, own)
-    for n, r in enumerate(sorted((r for r in slab if r["cause_class"] == "FIX_ROW"), key=lambda r: r["line_id"]), 6):
-        r["ref"] = f"FR-T647-{n}"
+    if any(r["cause_class"] == "FIX_ROW" for r in slab):   # r2: no slab bar-end line is a fix row (count unprinted)
+        raise R.CauseError("a slab bar-end part on an unprinted count proposed as a fix row")
     recs = slab + work + mat
     ids = [r["line_id"] for r in recs]
     if sorted(ids) != sorted(p["line_id"] for p in lines) or len(set(ids)) != len(ids):
@@ -386,15 +397,17 @@ def build():
     return {
         "schema": SCHEMA, "rule": RULE, "task": "T-647",
         "scope": "F-T636-1 structural share (B9 32, B10 13, B11 138) of the 10 Nov trial BOQ (T-636, merged)",
+        "revision": "r2 (Verifier 2026-11-09 01:54: 17 B11 FIX_ROWs reclassified HELD COUNT-CONVENTION GAP)",
+        "count_convention_gaps": [{"line_id": r["line_id"], "element_id": r["element_id"], **r["count_convention"]}
+                                  for r in recs if r.get("count_convention")],
         "lines": len(recs), "with_cause": sum(1 for r in recs if r.get("cause")),
         "by_group_and_class": {f"{g} {c}": n for (g, c), n in sorted(by.items())},
         "held_census_before": before, "held_census_after": after,
         "fix_rows": [{"id": r["ref"], "line_id": r["line_id"], **r["fix_row"]} for r in recs if r["cause_class"] == "FIX_ROW"],
         "fix_row_effect_if_wired": {"lines_leaving_held": len(fix),
                                     "census_without_fix_lines": census(lines, fix),
-                                    "b11_kg_released_if_wired": str(sum((D(r["fix_row"]["kg"]) for r in recs
-                                                                         if r["cause_class"] == "FIX_ROW"
-                                                                         and r["group"] == "B11"), Decimal(0))),
+                                    "b11_kg_released_if_wired": "0 (r2: no B11 fix row; the 17 degenerate-bound "
+                                                                    "lines stay HELD on the count convention)",
                                     "b10_m3_released_if_wired": "0 (5 CN lines NOT_APPLICABLE: no member, not a value)"},
         "pinned_sources": pins,
         "records": sorted(recs, key=lambda r: (r["group"], r["item_code"], r["cause_class"], r["line_id"])),
@@ -415,7 +428,7 @@ def report(o):
           "| Trade unit | HELD blank | HELD bounded | bounded low .. high |", "|---|---|---|---|"]
     L += [f"| {k} | {v['held_blank']} | {v['held_bounded']} | {v['bounded_low']} .. {v['bounded_high']} |"
           for k, v in o["held_census_before"].items()]
-    L += ["", "## Fix rows (DRAWING-CONFIRMED proposals, not wired)", ""]
+    L += ["", "## Fix rows (proposals, not wired)", ""]
     L += [f"- {f['id']} {f['line_id']}: {f['proposed_state']}; {f['hand_calculation']}; {f['verdict_proposal']}"
           for f in o["fix_rows"]]
     L += ["", "## Every line", "", "| Line | Trade | Item | Class | Ref | Cause |", "|---|---|---|---|---|---|"]
