@@ -92,6 +92,12 @@ quantity.
   curved wall band (1F W17 over the pool, sagitta 0.711 m on its chord) takes NO straight precast stock lintel; its head is
   FLAGGED cast-in-situ / design under the owner lintel rule 2026-11-02 and is owned by the structural line that carries the
   band, never by STR.CONC.LINTEL pieces. Lintel count residual his 54 vs engine 60 split by opening (R-T616-1).
+- PRECAST LINTEL PAYABLE FORM RESTATED (Lead 2026-11-09 00:15; system ruling F-T644-1, for T-650; supersedes the 20:15
+  wording below where they differ): the AGENT_BRIEF resolution order (drawings before OWNER CONFIRMED company rules)
+  governs: where the printed ST p.13 RC lintel schedule covers an opening (R-T519-1 PROJECT_RC) the lintel is an RC
+  lintel cast to the printed length (m3 + its bars, B9-02) and the RC LINTEL entry (3 Nov) stands; the owner precast
+  rule (pcs by standard length, 0.15 m bearing) applies only to openings the schedule does not cover. One opening, one
+  payable form, one owner line; never both pcs and m3. FLAGGED heads stay with the structural line that carries them.
 - PRECAST LINTEL PAYABLE FORM (Lead 2026-11-08 20:15; T-630 table, for T-644): OWNER TRADE B9 (B9-02). Under the owner
   lintel rule 2026-11-02 a lintel is ONE precast piece per masonry opening, counted in pcs by standard length; the
   STR.CONC.LINTEL m3 lines are not the payable form and stay HELD with that cause (never 0, never re-added with the pcs).
