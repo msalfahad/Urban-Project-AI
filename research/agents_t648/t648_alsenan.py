@@ -348,8 +348,11 @@ def r_threshold(r, el, ctx):
                  depends_on="L-c57860d79f54a4c1c4b3")
     if lid == "L-868aee125705bb8d17f6":
         fx = {"kind": "SET", "status": DC, "wired": False,
-              "terms": {"clear_width_m": ("1.0", "T-325 ledger A-GF-01 (strip line inputs, geometry_verified True)"),
-                        "wall_depth_m": ("0.15", "T-325 ledger A-GF-01 depth (P7757 wall faces)")},
+              "terms": {"clear_width_m": ("1.0", "own read P7757 DXF (sha ab54dd55, mm): GF-W26 faces 127 / 128 (x -150) "
+                                                 "and 12A / 12B (x 0) stop at y -500 / +500 of insert 1F8 arch120 rot "
+                                                 "180: gap 1000 mm; = T-325 ledger A-GF-01"),
+                        "wall_depth_m": ("0.15", "own read P7757 DXF: face pair 127 / 12A 150 mm apart (= block 150 "
+                                                 "x 1000 jamb lines); = T-325 ledger depth")},
               "value": "0.15", "unit": "m2",
               "basis": "A-GF-01 arch opening OP-027: floor strip through the opening (the floor finish continues, "
                        "UP-THR-001), 1.000 x 0.150 = 0.150 m2; T-340 FILL row (MERGED) states the same; the WP membrane "

@@ -21,7 +21,8 @@ committed cause per trade and unit: before 198, after 0 (table in out/FINISH_HOL
 
 Fix row (DRAWING-CONFIRMED, not wired): L-868aee12 ARCH.THRESHOLD A-GF-01 (OP-027, floor continues, UP-THR-001)
 1.000 x 0.150 = **0.150 m2**; the merged T-340 FILL row states the same value but no overlay ever carried it (blank in the
-trial BOQ). No other line has every term printed: the exterior sill areas are printed but their finish is not (D-10).
+trial BOQ). Own DXF read this run (P7757, mm): GF-W26 faces 127 / 128 and 12A / 12B stop 1000 mm apart at insert 1F8
+(arch120, rot 180), faces 150 mm apart: AGREE. No other line has every term printed: the exterior sill areas are printed but their finish is not (D-10).
 
 ## What I learned / for the Lead
 

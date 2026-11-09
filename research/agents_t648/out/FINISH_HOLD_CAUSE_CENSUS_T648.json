@@ -204,11 +204,11 @@
    "terms": {
     "clear_width_m": [
      "1.0",
-     "T-325 ledger A-GF-01 (strip line inputs, geometry_verified True)"
+     "own read P7757 DXF (sha ab54dd55, mm): GF-W26 faces 127 / 128 (x -150) and 12A / 12B (x 0) stop at y -500 / +500 of insert 1F8 arch120 rot 180: gap 1000 mm; = T-325 ledger A-GF-01"
     ],
     "wall_depth_m": [
      "0.15",
-     "T-325 ledger A-GF-01 depth (P7757 wall faces)"
+     "own read P7757 DXF: face pair 127 / 12A 150 mm apart (= block 150 x 1000 jamb lines); = T-325 ledger depth"
     ]
    },
    "unit": "m2",
@@ -627,11 +627,11 @@
     "terms": {
      "clear_width_m": [
       "1.0",
-      "T-325 ledger A-GF-01 (strip line inputs, geometry_verified True)"
+      "own read P7757 DXF (sha ab54dd55, mm): GF-W26 faces 127 / 128 (x -150) and 12A / 12B (x 0) stop at y -500 / +500 of insert 1F8 arch120 rot 180: gap 1000 mm; = T-325 ledger A-GF-01"
      ],
      "wall_depth_m": [
       "0.15",
-      "T-325 ledger A-GF-01 depth (P7757 wall faces)"
+      "own read P7757 DXF: face pair 127 / 12A 150 mm apart (= block 150 x 1000 jamb lines); = T-325 ledger depth"
      ]
     },
     "unit": "m2",
