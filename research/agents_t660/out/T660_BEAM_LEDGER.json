@@ -1,0 +1,734 @@
+{
+ "schema": "T660_BEAM_LEDGER_V1",
+ "candidate": "trial BOQ r4 T-654 per_line (STR.CONC.BEAM HELD); NOT RELEASED, nothing wired",
+ "note": "engine figures, bounds, plan areas and drawing bases only; no freelancer row or count",
+ "totals": {
+  "lines": 27,
+  "before_r4": {
+   "bounded": 22,
+   "blank": 5,
+   "low_m3": "8.332829",
+   "high_m3": "13.684510"
+  },
+  "after": {
+   "valued": 1,
+   "valued_m3": "0.549624",
+   "bounded_as_drawn": 14,
+   "bounded_low_m3": "5.983085",
+   "bounded_high_m3": "8.412278",
+   "held_no_drawn_depth": 12,
+   "held_no_drawn_depth_plan_m2": "8.746400",
+   "trial_range_beside_not_drawn_low_m3": "1.975000",
+   "trial_range_beside_not_drawn_high_m3": "4.709500"
+  },
+  "by_class": {
+   "DEPTH_COMPANION": 1,
+   "PROJECTION": 11,
+   "RING": 1,
+   "TWO_MARKS": 1,
+   "UNLABELLED": 5,
+   "UNLABELLED_SECTIONED": 1,
+   "WIDTH": 7
+  },
+  "reconciliation": {
+   "low": {
+    "before": "8.332829",
+    "after_bounded": "5.983085",
+    "valued_line_old_bound": "0.375000",
+    "projection_ranges_set_aside": "1.975000",
+    "unlabelled_face_to_face_length_term": "0.000256"
+   },
+   "high": {
+    "before": "13.684510",
+    "after_bounded": "8.412278",
+    "valued_line_old_bound": "0.562500",
+    "projection_ranges_set_aside": "4.709500",
+    "unlabelled_face_to_face_length_term": "-0.000232"
+   }
+  }
+ },
+ "beams": [
+  {
+   "line_id": "L-17c4238c0ef76656d06e",
+   "before_r4": {
+    "low": null,
+    "high": null
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "2F",
+   "mark": "(none)",
+   "designer_item": "D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-019#2F-031",
+   "drawn_width_m": "0.1",
+   "f2f_length_m": "4.35",
+   "edge_handles": null,
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.435000",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": null
+  },
+  {
+   "line_id": "L-1fd49f3e7c5a7dd19d4d",
+   "before_r4": {
+    "low": "2.262872",
+    "high": "2.545691"
+   },
+   "m3_value": null,
+   "m3_low": "2.262872",
+   "m3_high": "2.545691",
+   "floor": "GF",
+   "mark": "B21",
+   "designer_item": "D-27",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-056#BAND0042",
+   "drawn_width_m": "0.4",
+   "f2f_length_m": "7.4819",
+   "edge_handles": "434 433",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.45 (p.10 row B21) vs drawn 0.400 measured square to the inclined axis (433 / 434); no section; columns 322 / 37A (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "2.26337",
+    "T402_own_high": "2.546291",
+    "slab_pairing": "OVERLAP 0.022400 .. 0.059855 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 6.90..7.48 / 2.80..7.28 m; w- SLAB 6.90, UNDETERMINED 0.58; w+ SLAB 2.80, NO_EVIDENCE_4M 1.65, HELD_NEIGH 0.20, UNDETERMINED 2.83)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "0.220716 .. 0.258171",
+    "schedule_reading_is_wider": true
+   }
+  },
+  {
+   "line_id": "L-2c7b0b1e1a439d9ffd1e",
+   "before_r4": {
+    "low": "0.347000",
+    "high": "0.433800"
+   },
+   "m3_value": null,
+   "m3_low": "0.347000",
+   "m3_high": "0.433800",
+   "floor": "GF",
+   "mark": "CB2",
+   "designer_item": "D-27",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.1",
+   "drawn_width_m": "0.2502",
+   "f2f_length_m": "3.4692",
+   "edge_handles": "274 278",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.20 (p.11 row CB2) vs drawn 0.250 (274 / 278); no section cuts it; between columns 32F / 332 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "0.34692",
+    "T402_own_high": "0.433997",
+    "slab_pairing": "GAP 0.000000 .. 0.027710 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 3.35..3.45 / 0.00..3.45 m; w- SLAB 3.35, UNDETERMINED 0.10; w+ UNDETERMINED 3.45)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "-0.087077 .. -0.059367",
+    "schedule_reading_is_wider": false
+   }
+  },
+  {
+   "line_id": "L-331d4bbef719a7f0bbca",
+   "before_r4": {
+    "low": "0.042000",
+    "high": "0.126000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "GF",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.2",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "0.5251",
+   "edge_handles": "2C6 2C7",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.105000",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.042000",
+    "high": "0.126000"
+   }
+  },
+  {
+   "line_id": "L-377cb988b2271c2e2e4d",
+   "before_r4": {
+    "low": null,
+    "high": null
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-038",
+   "drawn_width_m": "0.1",
+   "f2f_length_m": "5.69",
+   "edge_handles": null,
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.569000",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": null
+  },
+  {
+   "line_id": "L-39ca5340879eafc35355",
+   "before_r4": {
+    "low": "0.442550",
+    "high": "0.553230"
+   },
+   "m3_value": null,
+   "m3_low": "0.442550",
+   "m3_high": "0.553230",
+   "floor": "1F",
+   "mark": "B6",
+   "designer_item": "D-27",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-030#BAND0009",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "4.4147",
+   "edge_handles": "5CD 5CC",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.25 (p.10 row B6) vs drawn 0.200 (5CC / 5CD) on this span, the other four B6 spans drawn 0.25; no section; column 77B (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "0.44227",
+    "T402_own_high": "0.552837",
+    "slab_pairing": "OVERLAP 0.033600 .. 0.035200 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 4.20..4.40 / 4.35..4.40 m; w- SLAB 4.20, UNDETERMINED 0.20; w+ SLAB 4.35, UNDETERMINED 0.05)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "0.075167 .. 0.076767",
+    "schedule_reading_is_wider": true
+   }
+  },
+  {
+   "line_id": "L-43e804ba4a4c07529fd5",
+   "before_r4": {
+    "low": "0.456300",
+    "high": "0.547500"
+   },
+   "m3_value": null,
+   "m3_low": "0.456300",
+   "m3_high": "0.547500",
+   "floor": "1F",
+   "mark": "CB10",
+   "designer_item": "D-02",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.2",
+   "drawn_width_m": "0.3",
+   "f2f_length_m": "3.6506",
+   "edge_handles": "5E7 5E8",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.25 vs drawn 0.300 (5E7 / 5E8); no section; column 685 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "0.456325",
+    "T402_own_high": "0.54759",
+    "slab_pairing": "GAP 0.000000 .. 0.019200 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 0.00..0.00 / 1.00..2.40 m; w- HELD_NEIGH 3.65; w+ SLAB 1.00, OPEN 1.25, NO_EVIDENCE_4M 1.40)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "-0.091265 .. -0.072065",
+    "schedule_reading_is_wider": false
+   }
+  },
+  {
+   "line_id": "L-50667f69855b6d588011",
+   "before_r4": {
+    "low": "0.287500",
+    "high": "0.345000"
+   },
+   "m3_value": null,
+   "m3_low": "0.287500",
+   "m3_high": "0.345000",
+   "floor": "1F",
+   "mark": "CB10",
+   "designer_item": "D-02",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-031#BAND0026.1",
+   "drawn_width_m": "0.3",
+   "f2f_length_m": "2.301",
+   "edge_handles": "5E7 5E8",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.25 (p.11 row CB10) vs drawn 0.300 (5E7 / 5E8); mirror CB13 printed 0.30 = drawn; no section; columns 685 / 68B (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "0.287625",
+    "T402_own_high": "0.34515",
+    "slab_pairing": "GAP 0.000000 .. 0.018400 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 1.00..2.30 / 0.00..0.00 m; w- SLAB 1.00, NO_EVIDENCE_4M 1.30; w+ HELD_NEIGH 2.30)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "-0.057525 .. -0.039125",
+    "schedule_reading_is_wider": false
+   }
+  },
+  {
+   "line_id": "L-54e397fe7b1485b2e8fe",
+   "before_r4": {
+    "low": "0.042000",
+    "high": "0.126000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.2",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "0.5238",
+   "edge_handles": "5E1 5E6",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.104800",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.042000",
+    "high": "0.126000"
+   }
+  },
+  {
+   "line_id": "L-56d278bedc8dda2837a9",
+   "before_r4": {
+    "low": "0.676000",
+    "high": "1.015000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-036#BAND0025",
+   "drawn_width_m": "0.2985",
+   "f2f_length_m": "4.2845",
+   "edge_handles": "5DE 629",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "1.544100",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.676000",
+    "high": "1.015000"
+   }
+  },
+  {
+   "line_id": "L-60f09eece6568b15f6ce",
+   "before_r4": {
+    "low": "0.335000",
+    "high": "0.418800"
+   },
+   "m3_value": null,
+   "m3_low": "0.335000",
+   "m3_high": "0.418800",
+   "floor": "GF",
+   "mark": "CB2",
+   "designer_item": "D-27",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-055#BAND0036.2",
+   "drawn_width_m": "0.2502",
+   "f2f_length_m": "3.3508",
+   "edge_handles": "274 278",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.20 vs drawn 0.250 (274 / 278); no section; columns 332 / 377 (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "0.33508",
+    "T402_own_high": "0.419185",
+    "slab_pairing": "GAP 0.000000 .. 0.026907 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 3.35..3.35 / 0.00..3.35 m; w- SLAB 3.35; w+ UNDETERMINED 3.35)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "-0.084105 .. -0.057198",
+    "schedule_reading_is_wider": false
+   }
+  },
+  {
+   "line_id": "L-634cefe5e8a7fb458e16",
+   "before_r4": {
+    "low": "0.240000",
+    "high": "0.720000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "GF",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-058#BAND0031.1",
+   "drawn_width_m": "0.1999",
+   "f2f_length_m": "3.0005",
+   "edge_handles": "2C6 2C7",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.599800",
+   "basis": "A-A (cut 55A) crosses it; outline 0.40 ends at B20's outer face 2C6; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.240000",
+    "high": "0.720000"
+   }
+  },
+  {
+   "line_id": "L-67f3d325019e618328eb",
+   "before_r4": {
+    "low": "0.240000",
+    "high": "0.720000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-033#BAND0013.1",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "2.9987",
+   "edge_handles": "5E1 5E6",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.599700",
+   "basis": "B-B (cut 76E) crosses it; outline 0.45 ends at B23's outer face 5E1; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.240000",
+    "high": "0.720000"
+   }
+  },
+  {
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "before_r4": {
+    "low": "0.112000",
+    "high": "0.336000"
+   },
+   "m3_value": null,
+   "m3_low": "0.111944",
+   "m3_high": "0.335832",
+   "floor": "2F",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED",
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "1.3993",
+   "edge_handles": "39E 3A1",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "no mark, no section crosses it; drawn width 0.2 x f2f 1.3993 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))"
+  },
+  {
+   "line_id": "L-88ccf8d4505411deb9e5",
+   "before_r4": {
+    "low": "0.212000",
+    "high": "0.397500"
+   },
+   "m3_value": null,
+   "m3_low": "0.212000",
+   "m3_high": "0.397500",
+   "floor": "GF",
+   "mark": "CB3|B3",
+   "designer_item": "D-03",
+   "cls": "TWO_MARKS",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-057#BAND0019.2",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "2.6495",
+   "edge_handles": "27E 283",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "B3 20x40 (p.10, label 'B3 (With Stair)' 0.15 m north of span 2) vs CB3 20x75 (p.11 three-span row, CB3 printed under all three spans); never both (Q-61 C(2), R-T660-4)",
+   "evidence": {
+    "count_agrees": true,
+    "diffs": [
+     "0.270",
+     "0.050",
+     "0.050"
+    ],
+    "within_tol": [
+     false,
+     true,
+     true
+    ],
+    "printed": [
+     "3.4",
+     "3.3",
+     "3.8"
+    ],
+    "drawn_cc": [
+     "3.670",
+     "3.350",
+     "3.850"
+    ],
+    "note": "3 printed spans = 3 drawn spans; span 2 within 0.05, span 3 within 0.05, span 1 +0.27: evidence for the Checker (B-S18 schedule over plan annotation), never a selection here"
+   }
+  },
+  {
+   "line_id": "L-8d031491396379f0cbb1",
+   "before_r4": {
+    "low": "0.090000",
+    "high": "0.271000"
+   },
+   "m3_value": null,
+   "m3_low": "0.090376",
+   "m3_high": "0.271128",
+   "floor": "2F",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED",
+   "element_id": "HL:BEAM_LEDGER:2F:BM-2F-015#BAND0001.3",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "1.1297",
+   "edge_handles": "38D 38E",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "no mark, no section crosses it; drawn width 0.2 x f2f 1.1297 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))"
+  },
+  {
+   "line_id": "L-8ea71184fff91b4357b7",
+   "before_r4": {
+    "low": "0.375000",
+    "high": "0.562500"
+   },
+   "m3_value": "0.549624",
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "GF",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED_SECTIONED",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-059#BAND0046.2",
+   "drawn_width_m": "0.4996",
+   "f2f_length_m": "1.5003",
+   "edge_handles": "274 277",
+   "status": "VALUED_AS_DRAWN",
+   "basis": "section D-D (cut 181D crosses the piece) prints 1785 '55' + 1777 '20' = 0.75 closing the outline, round 1777 / 17A3 '20' x '20'; width from plan edges 274 / 277 = 0.500 (D-D width undimensioned); length column 335 east face x 71.9634 .. end line 2A8 x 73.4634 = 1.500 (R-T660-1)",
+   "beside": {
+    "T402_r2_value": "0.549284",
+    "without_round": "0.562500"
+   }
+  },
+  {
+   "line_id": "L-9e4895663f76d7f03ac9",
+   "before_r4": {
+    "low": "1.013607",
+    "high": "1.266989"
+   },
+   "m3_value": null,
+   "m3_low": "1.013607",
+   "m3_high": "1.266989",
+   "floor": "GF",
+   "mark": "B29",
+   "designer_item": "D-27",
+   "cls": "WIDTH",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-054#BAND0008",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "6.7403",
+   "edge_handles": "2CE 463",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "schedule b 0.25 (p.10 row B29) vs drawn edges 0.200 (463 / 2CE); no section cuts it; ends on B22 face and the B21 face (oblique) (Q-61 C(1) CONFLICT: pair of readings, R-T660-5)",
+   "beside": {
+    "T402_own_low": "1.013445",
+    "T402_own_high": "1.266806",
+    "slab_pairing": "OVERLAP 0.004800 .. 0.053922 m3 (slab net of the drawn faces; t 0.16; faces slab-seeing 5.45..6.74 / 0.60..0.99 m; w- SLAB 5.45, UNDETERMINED 1.29; w+ SLAB 0.60, OPEN 5.75, UNDETERMINED 0.39)",
+    "net_concrete_shift_schedule_minus_drawn_m3": "0.198839 .. 0.247961",
+    "schedule_reading_is_wider": true
+   }
+  },
+  {
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "before_r4": {
+    "low": "0.600000",
+    "high": "1.800000"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "7.4996",
+   "edge_handles": "5E7 5E5",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "1.499900",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.600000",
+    "high": "1.800000"
+   }
+  },
+  {
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "before_r4": {
+    "low": null,
+    "high": null
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-28",
+   "cls": "RING",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "drawn_width_m": null,
+   "f2f_length_m": null,
+   "edge_handles": null,
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "1.799300",
+   "basis": "no section crosses it; no mark, no bars, depth not printed; dome detail ring depth 'AS PER ARCH', no B4 mark on the east ring (Q-61 C(3)) (R-T660-3)",
+   "guard": null,
+   "parapet_note": null,
+   "trial_range_beside_not_drawn": null
+  },
+  {
+   "line_id": "L-aba59a2157a48a69e2fb",
+   "before_r4": {
+    "low": null,
+    "high": null
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "GF",
+   "mark": "(none)",
+   "designer_item": "D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:GF:BM-GF-061",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "4.1",
+   "edge_handles": null,
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.820000",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": null
+  },
+  {
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "before_r4": {
+    "low": "0.135000",
+    "high": "0.202500"
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-05/D-26",
+   "cls": "PROJECTION",
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "drawn_width_m": "0.3",
+   "f2f_length_m": "0.8994",
+   "edge_handles": "5C1 619",
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.269800",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": {
+    "low": "0.135000",
+    "high": "0.202500"
+   }
+  },
+  {
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "before_r4": {
+    "low": "0.248000",
+    "high": "0.744000"
+   },
+   "m3_value": null,
+   "m3_low": "0.247976",
+   "m3_high": "0.743928",
+   "floor": "2F",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED",
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "3.0997",
+   "edge_handles": "397 3AD",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "no mark, no section crosses it; drawn width 0.2 x f2f 3.0997 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))"
+  },
+  {
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "before_r4": {
+    "low": "0.112000",
+    "high": "0.336000"
+   },
+   "m3_value": null,
+   "m3_low": "0.111944",
+   "m3_high": "0.335832",
+   "floor": "2F",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED",
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "1.3993",
+   "edge_handles": "399 39C",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "no mark, no section crosses it; drawn width 0.2 x f2f 1.3993 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))"
+  },
+  {
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "before_r4": {
+    "low": "0.064000",
+    "high": "0.192000"
+   },
+   "m3_value": null,
+   "m3_low": "0.064016",
+   "m3_high": "0.192048",
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-04",
+   "cls": "UNLABELLED",
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "drawn_width_m": "0.2",
+   "f2f_length_m": "0.8002",
+   "edge_handles": "5C6 5E3",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "no mark, no section crosses it; drawn width 0.2 x f2f 0.8002 x scheduled depths of breadth-0.20 rows 0.40 .. 1.20 (R-T660-2, Q-61 C(4))"
+  },
+  {
+   "line_id": "L-fbb65dfd2a66a16714ac",
+   "before_r4": {
+    "low": null,
+    "high": null
+   },
+   "m3_value": null,
+   "m3_low": null,
+   "m3_high": null,
+   "floor": "1F",
+   "mark": "(none)",
+   "designer_item": "D-26",
+   "cls": "PROJECTION",
+   "element_id": "HL:BEAM_LEDGER:1F:BM-1F-037",
+   "drawn_width_m": "0.4",
+   "f2f_length_m": "1.0",
+   "edge_handles": null,
+   "status": "HELD_NO_DRAWN_DEPTH",
+   "plan_area_m2": "0.400000",
+   "basis": "no section crosses it; no mark, no bars, depth not printed (R-T660-3)",
+   "guard": "valued in ONE family only (beam or parapet)",
+   "parapet_note": "roof-slab plans GF / 1F / 2F: 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'; candidate PARAPET_FOOTPRINT reading beside the parapet family (T-311 / T-659): value in ONE family only",
+   "trial_range_beside_not_drawn": null
+  },
+  {
+   "line_id": "NEW:STR.CONC.BEAM:U-C:BEAMS:GF:BAND0030.2~T642_DEPTH_B4_B7",
+   "before_r4": {
+    "low": "0.000000",
+    "high": "0.025000"
+   },
+   "m3_value": null,
+   "m3_low": "0.000000",
+   "m3_high": "0.025000",
+   "cls": "DEPTH_COMPANION",
+   "floor": "GF",
+   "mark": "B4|B7",
+   "designer_item": "-",
+   "status": "HELD_BOUNDED_AS_DRAWN",
+   "basis": "T-642 FR-T642-2: 0.050 released at B4 0.50; companion 0 .. 0.025 = B7 0.75 alternative (faces 2B2 / 2B3, R-T619-1); unchanged"
+  }
+ ]
+}
