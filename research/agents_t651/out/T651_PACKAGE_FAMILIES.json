@@ -1,0 +1,80 @@
+{
+ "schema": "URBAN_T485_PACKAGE_FAMILIES_V1",
+ "registry": "1.58.0",
+ "chain": [
+  "ARCH_TAKEOFF_V3.0.58",
+  "ARCH_TAKEOFF_V3.0.59"
+ ],
+ "versions": {
+  "ARCH_TAKEOFF_V3.0.58": {
+   "lines": 4999,
+   "lines_sha256": "c9570e6c02e92f101f937b8982f25005df37c422b274836145d111eaba4058fe"
+  },
+  "ARCH_TAKEOFF_V3.0.59": {
+   "lines": 5073,
+   "lines_sha256": "75331a76e688b89fd5286f5358fbe7477822a4b555971d5f983dc3a6e5e57cb1",
+   "previous": "ARCH_TAKEOFF_V3.0.58",
+   "item_codes": {
+    "MAS.GLUE.AAC": {
+     "added": 17,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.MORTAR.BLACK": {
+     "added": 20,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.UNITS.BLACK": {
+     "added": 20,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    },
+    "MAS.UNITS.WHITE": {
+     "added": 17,
+     "removed": 0,
+     "changed": 0,
+     "record": 0
+    }
+   },
+   "families": {
+    "B9-01": {
+     "MAS.UNITS.BLACK": {
+      "added": 20,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MAS.UNITS.WHITE": {
+      "added": 17,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    },
+    "B9-04": {
+     "MAS.GLUE.AAC": {
+      "added": 17,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     },
+     "MAS.MORTAR.BLACK": {
+      "added": 20,
+      "removed": 0,
+      "changed": 0,
+      "record": 0
+     }
+    }
+   },
+   "apart": [],
+   "record_families": [],
+   "record_apart": [],
+   "touched": 74,
+   "record_only": 0
+  }
+ }
+}
